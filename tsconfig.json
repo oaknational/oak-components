@@ -16,6 +16,7 @@
     },
     "exclude": [
       "dist",
+      "types",
       "node_modules",
       "src/**/*.test.tsx",
       "src/**/*.stories.tsx"

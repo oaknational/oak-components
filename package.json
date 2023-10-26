@@ -10,7 +10,7 @@
     "build": "rollup -c --bundleConfigAsCjs",
     "test": "jest --watch --collectCoverage=false",
     "test:ci": "jest",
-    "check-types": "tsc --noEmit",
+    "check-types": "tsc",
     "format": "prettier '**/*.{j,t}{s,sx}' --write",
     "format:precommit": "prettier --write",
     "format:check": "prettier '**/*.{j,t}{s,sx}' --check",
