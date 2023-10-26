@@ -1,18 +1,33 @@
 {
   "name": "oak-components",
   "version": "1.0.0",
+  "licence": "MIT",
   "description": "Shared components for oak applications",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs",
-    "test": "jest",
+    "test": "jest --watch --collectCoverage=false",
+    "test:ci": "jest",
+    "check-types": "tsc --noEmit",
+    "format": "prettier '**/*.{j,t}{s,sx}' --write",
+    "format:precommit": "prettier --write",
+    "format:check": "prettier '**/*.{j,t}{s,sx}' --check",
+    "lint": "eslint src/**/*",
+    "lint:precommit": "eslint src/**/* --fix",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "styled-components": "^6.1.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
@@ -32,8 +47,18 @@
     "@types/jest": "^29.5.6",
     "@types/react": "^18.2.31",
     "@types/styled-components": "^5.1.29",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "eslint": "^8.52.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-storybook": "^0.6.15",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
+    "prettier": "^3.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup": "^4.1.4",

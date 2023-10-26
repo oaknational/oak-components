@@ -1,0 +1,9 @@
+# Node files
+node_modules
+package-lock.json
+
+# Generated files
+storybook-static
+
+# Test coverage
+coverage
