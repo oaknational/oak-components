@@ -18,12 +18,12 @@ const breakpointsByName = {
 };
 
 export const breakpoints = Object.values(breakpointsByName).sort((a, b) =>
-  a > b ? 1 : -1
+  a > b ? 1 : -1,
 );
 export type BreakpointName = keyof typeof breakpointsByName;
 
 export const getBreakpoint = (
-  breakpointName: keyof typeof breakpointsByName
+  breakpointName: keyof typeof breakpointsByName,
 ) => {
   return breakpointsByName[breakpointName];
 };
@@ -44,19 +44,14 @@ export const getMediaQuery = (device: Device) => {
 
 export type ResponsiveValues<Value> = (Value | null) | (Value | null)[];
 
-type OakSpacings =
-  | OakAllSpacing
-  | OakInnerPadding
-  | OakSpaceBetween
-  | undefined
-  | null;
+type OakSpacings = OakAllSpacing | OakInnerPadding | OakSpaceBetween;
 
 const responsive =
-  <Props, T extends OakSpacings>(
+  <Props, T extends OakSpacings | undefined | null>(
     attr: string,
-    getValues: (props: Props) => ResponsiveValues<T>,
+    getValues: (props: Props) => ResponsiveValues<T | undefined | null>,
     parse: // parse callback is used to convert the value to a string or number
-    (unparsed: T) => string | number | undefined | null
+    (unparsed: T) => string | number | undefined | null,
     // TODO: stripped out theme based callback for now
   ) =>
   (props: Props): Interpolation<ThemedStyledProps<Props, DefaultTheme>> => {
