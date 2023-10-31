@@ -42,3 +42,20 @@ export const oakSpaceBetweenAllSpacing = {
 };
 
 export type OakSpaceBetween = keyof typeof oakSpaceBetweenAllSpacing;
+
+type AdditionalSpacingTypes =
+  | "100%"
+  | 0
+  | "100vh"
+  | "100vw"
+  | "auto"
+  | "fit-content"
+  | "inherit"
+  | "initial"
+  | "unset";
+
+export type OakParsableSpacing =
+  | OakAllSpacing
+  | OakInnerPadding
+  | OakSpaceBetween
+  | AdditionalSpacingTypes;
