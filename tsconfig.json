@@ -20,7 +20,6 @@
       "resolveJsonModule": true,
       "isolatedModules": true,
       "jsx": "react",
-      "incremental": true,
       "noUncheckedIndexedAccess": true,
       "noImplicitAny": true,
       "downlevelIteration": true,
