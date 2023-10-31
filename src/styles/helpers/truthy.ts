@@ -9,6 +9,6 @@ export type Truthy<T> = T extends false | "" | 0 | null | undefined ? never : T;
  * Typescript compiler needs a hint to realise there aren't any more null values.
  * [{ foo: "bar" }, null]<Record | null>[].filter(truthy) // [{ foo: "bar"}]<Record>[]
  */
-export default function truthy<T>(value: T): value is Truthy<T> {
+export function truthy<T>(value: T): value is Truthy<T> {
   return !!value;
 }
