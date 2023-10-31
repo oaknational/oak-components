@@ -12,7 +12,7 @@ import { render } from "@testing-library/react";
 import responsive from "./responsive";
 
 import { oakAllColorsHex, OakColor, OakUiRole } from "@/styles/theme/color";
-import renderWithTheme from "@/__tests__/__helpers__/renderWithTheme";
+import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 type TestProps = {
   [k: string]: OakColor | string | string[] | number | number[];
@@ -27,7 +27,7 @@ type TestProps = {
 const stringify = (
   cssArray:
     | FlattenSimpleInterpolation
-    | Interpolation<ThemedStyledProps<TestProps, DefaultTheme>>,
+    | Interpolation<ThemedStyledProps<TestProps, DefaultTheme>>
 ) =>
   (Array.isArray(cssArray) ? cssArray : [cssArray])
     ?.flatMap((str: unknown) => (typeof str === "string" ? str.trim() : str))
@@ -50,13 +50,13 @@ describe("responsive", () => {
     const styles = responsive(
       "padding-left",
       (props: TestProps) => props.pl,
-      pxOrUndefined,
+      pxOrUndefined
     )(props);
     const StyledComponent = styled.div`
       ${styles}
     `;
     const { getByTestId } = render(
-      <StyledComponent data-testid="test" $pl={12} />,
+      <StyledComponent data-testid="test" $pl={12} />
     );
 
     expect(getByTestId("test")).toHaveStyle("padding-left: 12px");
@@ -69,7 +69,7 @@ describe("responsive", () => {
     const actual = responsive(
       "padding-left",
       (props: TestProps) => props.pl,
-      pxOrUndefined,
+      pxOrUndefined
     )(props);
     const expected = css`
       padding-left: 0px;
@@ -89,7 +89,7 @@ describe("responsive", () => {
     const actual = responsive(
       "padding-left",
       (props: TestProps) => props.pl,
-      pxOrUndefined,
+      pxOrUndefined
     )(props);
     const expected = css`
       padding-left: 36px;
@@ -111,7 +111,7 @@ describe("responsive", () => {
 
     const actual = responsive(
       "padding-left",
-      (props: TestProps) => props.pl,
+      (props: TestProps) => props.pl
     )(props);
     const expected = css`
       padding-left: 0.5em;
@@ -128,11 +128,11 @@ describe("responsive", () => {
           if (!colorUiRole) return undefined;
           const oakColor = props.theme.uiColors[colorUiRole];
           return oakColor ? oakAllColorsHex[oakColor] : undefined;
-        },
+        }
       )}
     `;
     const { getByTestId } = renderWithTheme(
-      <StyledComponent data-testid="test" $color="text-error" />,
+      <StyledComponent data-testid="test" $color="text-error" />
     );
 
     expect(getByTestId("test")).toHaveStyle("color: #dd0035");
