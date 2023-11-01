@@ -37,6 +37,10 @@ describe("positionStyle", () => {
     ["$overflow", "visible", "overflow: visible;"],
     ["$overflowX", "visible", "overflow-x: visible;"],
     ["$overflowY", "visible", "overflow-y: visible;"],
+    ["$objectFit", "none", "object-fit: none;"],
+    ["$objectPosition", "none", "object-position: none;"],
+    ["$pointerEvents", "none", "pointer-events: none;"],
+    ["$visibility", "none", "visibility: none;"],
   ])("should correctly handle props", (prop, value, expected) => {
     const props = {
       [prop]: value,
