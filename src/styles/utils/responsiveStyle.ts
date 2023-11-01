@@ -14,13 +14,13 @@ const breakpointsByName = {
 };
 
 export const breakpoints = Object.values(breakpointsByName).sort((a, b) =>
-  a > b ? 1 : -1,
+  a > b ? 1 : -1
 );
 
 export type BreakpointName = keyof typeof breakpointsByName;
 
 export const getBreakpoint = (
-  breakpointName: keyof typeof breakpointsByName,
+  breakpointName: keyof typeof breakpointsByName
 ) => {
   return breakpointsByName[breakpointName];
 };
@@ -43,15 +43,15 @@ export type ResponsiveValues<Value> = (Value | null) | (Value | null)[];
 
 type Generic = string | number | undefined | null;
 
-const responsive =
+export const responsiveStyle =
   <Props, T extends Generic>(
     attr: string,
     getValues: (props: Props) => ResponsiveValues<T | undefined | null>,
     parse:
       | ((unparsed: T | undefined | null) => Generic)
       | ((
-          unparsed: T | undefined | null,
-        ) => (props: PropsWithTheme) => Generic) = (x) => x,
+          unparsed: T | undefined | null
+        ) => (props: PropsWithTheme) => Generic) = (x) => x
   ) =>
   (props: Props): Interpolation<ThemedStyledProps<Props, DefaultTheme>> => {
     const attrCss = (value: T | undefined | null) =>
@@ -97,5 +97,3 @@ const responsive =
         .filter(truthy),
     ];
   };
-
-export default responsive;

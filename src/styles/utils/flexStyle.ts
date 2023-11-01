@@ -1,7 +1,7 @@
 import { CSSProperties } from "react";
 import { css } from "styled-components";
 
-import responsive, { ResponsiveValues } from "./responsive";
+import { responsiveStyle, ResponsiveValues } from "./responsiveStyle";
 
 import { OakAllSpacing, OakSpaceBetween } from "@/styles/theme/spacing";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
@@ -19,6 +19,7 @@ export type FlexCssProps = {
   $alignSelf?: ResponsiveValues<CSSProperties["alignSelf"]>;
   $flexGrow?: ResponsiveValues<CSSProperties["flexGrow"]>;
   $flexShrink?: ResponsiveValues<CSSProperties["flexShrink"]>;
+  $order?: ResponsiveValues<CSSProperties["order"]>;
   $flexBasis?: ResponsiveValues<
     OakAllSpacing | OakSpaceBetween | null | undefined
   >;
@@ -31,17 +32,18 @@ export type FlexCssProps = {
   >;
 };
 
-export const flex = css<FlexCssProps>`
-  ${responsive("flex-direction", (props) => props.$flexDirection)}
-  ${responsive("flex-wrap", (props) => props.$flexWrap)}
-  ${responsive("align-items", (props) => props.$alignItems)}
-  ${responsive("align-content", (props) => props.$alignContent)}
-  ${responsive("justify-content", (props) => props.$justifyContent)}
-  ${responsive("align-self", (props) => props.$alignSelf)}
-  ${responsive("flex-grow", (props) => props.$flexGrow)}
-  ${responsive("flex-shrink", (props) => props.$flexShrink)}
-  ${responsive("flex-basis", (props) => props.$flexBasis, parseSpacing)}
-  ${responsive("gap", (props) => props.$gap, parseSpacing)}
-  ${responsive("column-gap", (props) => props.$columnGap, parseSpacing)}
-  ${responsive("row-gap", (props) => props.$rowGap, parseSpacing)}
+export const flexStyle = css<FlexCssProps>`
+  ${responsiveStyle("flex-direction", (props) => props.$flexDirection)}
+  ${responsiveStyle("flex-wrap", (props) => props.$flexWrap)}
+  ${responsiveStyle("align-items", (props) => props.$alignItems)}
+  ${responsiveStyle("align-content", (props) => props.$alignContent)}
+  ${responsiveStyle("justify-content", (props) => props.$justifyContent)}
+  ${responsiveStyle("align-self", (props) => props.$alignSelf)}
+  ${responsiveStyle("order", (props) => props.$order)}
+  ${responsiveStyle("flex-grow", (props) => props.$flexGrow)}
+  ${responsiveStyle("flex-shrink", (props) => props.$flexShrink)}
+  ${responsiveStyle("flex-basis", (props) => props.$flexBasis, parseSpacing)}
+  ${responsiveStyle("gap", (props) => props.$gap, parseSpacing)}
+  ${responsiveStyle("column-gap", (props) => props.$columnGap, parseSpacing)}
+  ${responsiveStyle("row-gap", (props) => props.$rowGap, parseSpacing)}
 `;
