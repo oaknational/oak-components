@@ -27,7 +27,7 @@ type TestProps = {
 const stringify = (
   cssArray:
     | FlattenSimpleInterpolation
-    | Interpolation<ThemedStyledProps<TestProps, DefaultTheme>>
+    | Interpolation<ThemedStyledProps<TestProps, DefaultTheme>>,
 ) =>
   (Array.isArray(cssArray) ? cssArray : [cssArray])
     ?.flatMap((str: unknown) => (typeof str === "string" ? str.trim() : str))
@@ -50,13 +50,13 @@ describe("responsiveStyle", () => {
     const styles = responsiveStyle(
       "padding-left",
       (props: TestProps) => props.pl,
-      pxOrUndefined
+      pxOrUndefined,
     )(props);
     const StyledComponent = styled.div`
       ${styles}
     `;
     const { getByTestId } = render(
-      <StyledComponent data-testid="test" $pl={12} />
+      <StyledComponent data-testid="test" $pl={12} />,
     );
 
     expect(getByTestId("test")).toHaveStyle("padding-left: 12px");
@@ -69,7 +69,7 @@ describe("responsiveStyle", () => {
     const actual = responsiveStyle(
       "padding-left",
       (props: TestProps) => props.pl,
-      pxOrUndefined
+      pxOrUndefined,
     )(props);
     const expected = css`
       padding-left: 0px;
@@ -89,7 +89,7 @@ describe("responsiveStyle", () => {
     const actual = responsiveStyle(
       "padding-left",
       (props: TestProps) => props.pl,
-      pxOrUndefined
+      pxOrUndefined,
     )(props);
     const expected = css`
       padding-left: 36px;
@@ -111,7 +111,7 @@ describe("responsiveStyle", () => {
 
     const actual = responsiveStyle(
       "padding-left",
-      (props: TestProps) => props.pl
+      (props: TestProps) => props.pl,
     )(props);
     const expected = css`
       padding-left: 0.5em;
@@ -128,11 +128,11 @@ describe("responsiveStyle", () => {
           if (!colorUiRole) return undefined;
           const oakColor = props.theme.uiColors[colorUiRole];
           return oakColor ? oakAllColorsHex[oakColor] : undefined;
-        }
+        },
       )}
     `;
     const { getByTestId } = renderWithTheme(
-      <StyledComponent data-testid="test" $color="text-error" />
+      <StyledComponent data-testid="test" $color="text-error" />,
     );
 
     expect(getByTestId("test")).toHaveStyle("color: #dd0035");
@@ -153,7 +153,7 @@ describe("responsiveStyle", () => {
 
     const actual = responsiveStyle(
       attr,
-      (props: TestProps) => props[prop]
+      (props: TestProps) => props[prop],
     )(props);
 
     expect(stringify(actual)).toEqual(stringify(expected));
