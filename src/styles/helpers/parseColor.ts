@@ -12,18 +12,27 @@ import { PropsWithTheme } from "@/styles/theme/theme";
  * - if an OakColor derives and returns the corresponding css value
  * - if an OakUiRole derives returns a function that takes the current theme and returns the corresponding css value
  */
-export function parseColor(value?: OakParsableColor | null) {
+function parseColor(): undefined;
+function parseColor(
+  value?: OakParsableColor | null,
+): (props: PropsWithTheme) => string;
+function parseColor(
+  value?: OakParsableColor | null,
+): ((props: PropsWithTheme) => string) | undefined;
+function parseColor(value?: OakParsableColor | null) {
   if (value === undefined || value === null) {
     return undefined;
   }
   if (value in oakAllColorsHex) {
-    return `#${oakAllColorsHex[value as OakColor]}`;
+    return oakAllColorsHex[value as OakColor];
   }
 
   if (oakUiRoles.includes(value as OakUiRole)) {
     return ({ theme }: PropsWithTheme) => {
       const c = theme.uiColors[value as OakUiRole];
-      return `#${oakAllColorsHex[c as OakColor]}`;
+      return oakAllColorsHex[c as OakColor];
     };
   }
 }
+
+export { parseColor };
