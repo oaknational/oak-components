@@ -28,7 +28,7 @@ describe("colorStyle", () => {
     expect(getByTestId("test")).toHaveStyle("color: #bef2bd");
   });
 
-  test("should correctly handle prop set to OakUiRole", async () => {
+  test("should correctly handle prop 'color' set to OakUiRole", async () => {
     const StyledComponent = styled.div<ColorProps>`
       ${colorStyle}
     `;
@@ -37,5 +37,33 @@ describe("colorStyle", () => {
     );
 
     expect(getByTestId("test")).toHaveStyle("color: #dd0035");
+  });
+
+  test("should correctly handle prop 'background' set to OakUiRole", async () => {
+    const StyledComponent = styled.div<ColorProps>`
+      ${colorStyle}
+    `;
+    const { getByTestId } = renderWithTheme(
+      <StyledComponent data-testid="test" $background={"text-error"} />,
+    );
+
+    expect(getByTestId("test")).toHaveStyle("background: #dd0035");
+  });
+
+  test("should correctly handle setting both background and color", async () => {
+    const StyledComponent = styled.div<ColorProps>`
+      ${colorStyle}
+    `;
+    const { getByTestId } = renderWithTheme(
+      <StyledComponent
+        data-testid="test"
+        $background={"mint"}
+        $color={"black"}
+      />,
+    );
+
+    expect(getByTestId("test")).toHaveStyle(
+      "background: #bef2bd; color: #222222",
+    );
   });
 });
