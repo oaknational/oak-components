@@ -4,8 +4,8 @@ import {
   OakUiRole,
   oakAllColorsHex,
   oakUiRoles,
-} from "../theme/color";
-import { PropsWithTheme } from "../theme/theme";
+} from "@/styles/theme/color";
+import { PropsWithTheme } from "@/styles/theme/theme";
 
 /**
  * - takes any of color token
@@ -17,9 +17,13 @@ export function parseColor(value?: OakParsableColor | null) {
     return undefined;
   }
   if (value in oakAllColorsHex) {
-    return oakAllColorsHex[value as OakColor];
+    return `#${oakAllColorsHex[value as OakColor]}`;
   }
-  if (value in oakUiRoles) {
-    return ({ theme }: PropsWithTheme) => theme.uiColors[value as OakUiRole];
+
+  if (oakUiRoles.includes(value as OakUiRole)) {
+    return ({ theme }: PropsWithTheme) => {
+      const c = theme.uiColors[value as OakUiRole];
+      return `#${oakAllColorsHex[c as OakColor]}`;
+    };
   }
 }
