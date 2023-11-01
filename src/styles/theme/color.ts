@@ -91,3 +91,5 @@ export const oakUiRoles = [
 export type OakUiRole = (typeof oakUiRoles)[number];
 
 export type OakColorTheme = Record<OakUiRole, OakColor | null | undefined>;
+
+export type OakParsableColor = OakColor | OakUiRole;
