@@ -12,5 +12,5 @@ export default meta;
 
 type Story = StoryObj<typeof TestImage>;
 
-export const Primary: Story = (args: {}) => <TestImage {...args} />;
+export const Primary: Story = () => <TestImage />;
 Primary.args = {};
