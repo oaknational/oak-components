@@ -26,6 +26,7 @@
     "@cloudinary/react": "^1.11.2",
     "@cloudinary/url-gen": "^1.12.0",
     "styled-components": "^6.1.0"
+    "zod": "^3.22.4"
   },
   "peerDependencies": {
     "react": "^18.2.0",
@@ -72,7 +73,7 @@
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "storybook": "^7.5.1",
-    "styled-components": "^6.1.0",
+    "styled-components": "^5.3.11",
     "ts-jest": "^29.1.1",
     "typescript": "^5.2.2"
   }

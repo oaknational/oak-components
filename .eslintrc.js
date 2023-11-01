@@ -15,25 +15,21 @@ const importRules = {
 /* eslint-env node */
 
 module.exports = {
-    root: true,
-    env: {
-      node: true,
-    },
-    parserOptions: {
-      ecmaVersion: 2020,
-    },
-    plugins: ["react", "react-hooks"],
-    extends: [
-      "eslint:recommended",
-      "plugin:import/recommended",
-      "prettier",
-    ],
-    rules: {
-      ...importRules,
-      "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
-      "react-hooks/exhaustive-deps": "error", // Checks effect dependencies
-      "react/self-closing-comp": ["error", { component: true, html: true }],
-    },
+  root: true,
+  env: {
+    node: true,
+  },
+  parserOptions: {
+    ecmaVersion: 2020,
+  },
+  plugins: ["react", "react-hooks"],
+  extends: ["eslint:recommended", "plugin:import/recommended", "prettier"],
+  rules: {
+    ...importRules,
+    "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+    "react-hooks/exhaustive-deps": "error", // Checks effect dependencies
+    "react/self-closing-comp": ["error", { component: true, html: true }],
+  },
   // Put the Typescript config in an override, so we can still lint js files.
   overrides: [
     {
@@ -66,6 +62,6 @@ module.exports = {
       env: {
         jest: true,
       },
-    }
+    },
   ],
 };
