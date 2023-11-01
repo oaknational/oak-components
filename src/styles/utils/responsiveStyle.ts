@@ -12,16 +12,21 @@ const breakpointsByName = {
   small: 750,
   large: 1280,
 };
+
 export const breakpoints = Object.values(breakpointsByName).sort((a, b) =>
   a > b ? 1 : -1,
 );
+
 export type BreakpointName = keyof typeof breakpointsByName;
+
 export const getBreakpoint = (
   breakpointName: keyof typeof breakpointsByName,
 ) => {
   return breakpointsByName[breakpointName];
 };
+
 export type Device = "mobile" | "tablet" | "desktop";
+
 const mediaQueries: Record<Device, string> = {
   mobile: `(max-width: ${getBreakpoint("small") - 1}px)`,
   tablet: `(min-width: ${getBreakpoint("small")}px and max-width: ${
@@ -29,14 +34,16 @@ const mediaQueries: Record<Device, string> = {
   }px)`,
   desktop: `(min-width: ${getBreakpoint("large")}px)`,
 };
+
 export const getMediaQuery = (device: Device) => {
   return mediaQueries[device];
 };
+
 export type ResponsiveValues<Value> = (Value | null) | (Value | null)[];
 
 type Generic = string | number | undefined | null;
 
-const responsive =
+export const responsiveStyle =
   <Props, T extends Generic>(
     attr: string,
     getValues: (props: Props) => ResponsiveValues<T | undefined | null>,
@@ -90,5 +97,3 @@ const responsive =
         .filter(truthy),
     ];
   };
-
-export default responsive;
