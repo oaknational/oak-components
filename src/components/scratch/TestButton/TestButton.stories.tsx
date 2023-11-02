@@ -6,7 +6,7 @@ import { TestButtonProps } from "./TestButton.types";
 
 const meta: Meta<typeof TestButton> = {
   component: TestButton,
-  title: "OakComponents/TestButton",
+  title: "OakComponents/scratch/TestButton",
   argTypes: {},
 };
 export default meta;
