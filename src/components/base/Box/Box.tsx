@@ -1,10 +1,16 @@
 import { MouseEventHandler } from "react";
 import styled, { css } from "styled-components";
 
-import { colorStyle, ColorProps } from "@/styles/utils/colorStyle";
-import { positionStyle, PositionProps } from "@/styles/utils/positionStyle";
-import { sizeStyle, SizeProps } from "@/styles/utils/sizeStyle";
-import { spacingStyle, SpacingProps } from "@/styles/utils/spacingStyle";
+import {
+  colorStyle,
+  ColorProps,
+  positionStyle,
+  PositionProps,
+  sizeStyle,
+  SizeProps,
+  spacingStyle,
+  SpacingProps,
+} from "@/styles";
 
 // TODO: these are not yet implemented
 // import border, { BorderProps } from "@/styles/utils/borderStyle";

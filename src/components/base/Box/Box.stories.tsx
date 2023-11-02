@@ -3,33 +3,30 @@ import { Meta, StoryObj } from "@storybook/react";
 
 import { Box, BoxProps } from "./Box";
 
-import { oakAllColorsHex } from "@/styles/theme/color";
-import { oakAllSpacingPx } from "@/styles/theme/spacing";
+import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
+import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
+import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
+import { positionArgTypes } from "@/storybook-helpers/positionStyleHelpers";
 
 const meta: Meta<typeof Box> = {
   component: Box,
-  title: "OakComponents/base/Box",
+  tags: ["autodocs"],
+  title: "components/base/Box",
   argTypes: {
-    $background: {
-      options: Object.keys(oakAllColorsHex),
-      control: { type: "select" },
-    },
-    $color: {
-      options: Object.keys(oakAllColorsHex),
-      control: { type: "select" },
-    },
-    $width: {
-      options: Object.keys(oakAllSpacingPx),
-      control: { type: "select" },
-    },
-    $height: {
-      options: Object.keys(oakAllSpacingPx),
-      control: { type: "select" },
-    },
+    ...colorArgTypes,
+    ...sizeArgTypes,
+    ...spacingArgTypes,
+    ...positionArgTypes,
   },
   parameters: {
     controls: {
-      include: ["$background", "$color", "$width", "$height"],
+      include: [
+        ...Object.keys(colorArgTypes),
+        ...Object.keys(sizeArgTypes),
+        ...Object.keys(spacingArgTypes),
+        ...Object.keys(positionArgTypes),
+      ],
+      sort: "none",
     },
   },
 };
@@ -42,9 +39,29 @@ export const DefaultBox: Story = (args: Partial<BoxProps>) => (
     Test content
   </Box>
 );
+
 DefaultBox.args = {
   $background: "mint",
   $color: "black",
-  $width: "all-spacing-12",
-  $height: "all-spacing-12",
+  $width: "all-spacing-16",
+  $height: "all-spacing-16",
+  $pa: "inner-padding-m",
+};
+
+export const PositionedBox: Story = (args: Partial<BoxProps>) => (
+  <Box $background={"grey40"} $width={"100%"} $height={"100vh"}>
+    <Box data-testId="box-id" {...args}>
+      Test content
+    </Box>
+  </Box>
+);
+PositionedBox.args = {
+  $background: "mint",
+  $color: "black",
+  $width: "all-spacing-16",
+  $height: "all-spacing-16",
+  $position: "absolute",
+  $pa: "inner-padding-m",
+  $mt: "space-between-l",
+  $ml: "space-between-l",
 };
