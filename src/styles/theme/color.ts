@@ -8,9 +8,9 @@ export const oakAllColorsHex = {
   grey70: "#2d2d2d",
   black: "#222222",
   oakGreen: "#287c34",
-  mint: "bef2bd",
-  mint30: "ebfbeb",
-  mint50: "dff9de",
+  mint: "#bef2bd",
+  mint30: "#ebfbeb",
+  mint50: "#dff9de",
   aqua: "#b0e2de",
   aqua30: "#e7f6f5",
   aqua50: "#cee7e5",
@@ -91,3 +91,5 @@ export const oakUiRoles = [
 export type OakUiRole = (typeof oakUiRoles)[number];
 
 export type OakColorTheme = Record<OakUiRole, OakColor | null | undefined>;
+
+export type OakParsableColor = OakColor | OakUiRole;
