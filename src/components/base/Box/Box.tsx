@@ -24,8 +24,11 @@ type HTMLProps = {
 
 export type BoxProps = {
   children?: React.ReactNode;
-  $style?: PositionProps & SizeProps & SpacingProps & ColorProps;
-} & HTMLProps;
+} & PositionProps &
+  SizeProps &
+  SpacingProps &
+  ColorProps &
+  HTMLProps;
 
 export const box = css<BoxProps>`
   ${positionStyle}
