@@ -18,7 +18,10 @@ export type ZIndexProps = {
 };
 
 const parseZIndex = (value?: ZIndex | null) => {
-  return value ? zIndexMap[value] : value;
+  if (value === undefined || value === null) {
+    return undefined;
+  }
+  return zIndexMap[value];
 };
 
 export const zIndexStyle = css<ZIndexProps>`
