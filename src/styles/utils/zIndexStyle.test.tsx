@@ -5,7 +5,6 @@ import { render } from "@testing-library/react";
 
 import { zIndexStyle } from "./zIndexStyle";
 
-
 describe("zIndexStyle", () => {
   test("should correctly handle prop 'zIndex' as string", async () => {
     const StyledComponent = styled.div`
