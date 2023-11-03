@@ -17,7 +17,7 @@ export type ZIndexProps = {
   $zIndex?: ResponsiveValues<ZIndex>;
 };
 
-const parseZIndex = (value?: ZIndex | null) => {
+export const parseZIndex = (value?: ZIndex | null) => {
   if (value === undefined || value === null) {
     return undefined;
   }
