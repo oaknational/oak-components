@@ -5,7 +5,6 @@ import { render } from "@testing-library/react";
 
 import { transitionStyle } from "./transitionStyle";
 
-
 describe("transitionStyle", () => {
   test('should correctly handle prop "transition" as string', async () => {
     const StyledComponent = styled.div`

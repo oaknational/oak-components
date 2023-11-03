@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import "@testing-library/jest-dom";
+import { render } from "@testing-library/react";
 
 import { zIndexStyle } from "./zIndexStyle";
 
-import { render } from "@testing-library/react";
 
 describe("zIndexStyle", () => {
   test("should correctly handle prop 'zIndex' as string", async () => {

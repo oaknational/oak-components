@@ -5,7 +5,6 @@ import { render } from "@testing-library/react";
 
 import { dropShadowStyle } from "./dropShadowStyle";
 
-
 describe("dropShadowStyle", () => {
   test('should correctly handle prop "dropShadow" as string', async () => {
     const StyledComponent = styled.div`

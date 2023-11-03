@@ -5,7 +5,6 @@ import { render } from "@testing-library/react";
 
 import { transformStyle } from "./transformStyle";
 
-
 describe("transformStyle", () => {
   test('should correctly handle prop "transform" as string', async () => {
     const StyledComponent = styled.div`
