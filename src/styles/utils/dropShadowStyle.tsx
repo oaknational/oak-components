@@ -8,7 +8,7 @@ export type DropShadowProps = {
   $dropShadow?: ResponsiveValues<OakAllDropShadows>;
 };
 
-const parseDropShadow = (variant?: OakAllDropShadows | null) => {
+export const parseDropShadow = (variant?: OakAllDropShadows | null) => {
   if (!variant) {
     return;
   }
