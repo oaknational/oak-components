@@ -29,7 +29,7 @@ export type BorderProps = {
   $borderColor?: BorderColorProps;
   $borderRadius?: BorderRadiusProps;
 };
-const parseRadius = (value?: OakAllBorderRadius | null) => {
+export const parseRadius = (value?: OakAllBorderRadius | null) => {
   if (value === undefined || value === null) {
     return undefined;
   }
@@ -37,7 +37,7 @@ const parseRadius = (value?: OakAllBorderRadius | null) => {
     return `${pxToRem(oakAllBorderRadiusPX[value as OakAllBorderRadius])}rem`;
   }
 };
-const parseBorder = (value?: OakAllBorderWidths | null) => {
+export const parseBorder = (value?: OakAllBorderWidths | null) => {
   if (value === undefined || value === null) {
     return undefined;
   }

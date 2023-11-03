@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
-import { borderStyle } from "./borderStyle";
+import { borderStyle, parseBorder, parseRadius } from "./borderStyle";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
@@ -100,5 +100,17 @@ describe("borderStyle", () => {
       <StyledComponent data-testid="test" $borderStyle={"dashed"} />,
     );
     expect(getByTestId("test")).toHaveStyle("border-style: dashed");
+  });
+});
+describe("parseBorder", () => {
+  it("should return undefined if value is null or undefined", () => {
+    expect(parseBorder(null)).toBeUndefined();
+    expect(parseBorder()).toBeUndefined();
+  });
+});
+describe("parseRadius", () => {
+  it("should return undefined if value is null or undefined", () => {
+    expect(parseRadius(null)).toBeUndefined();
+    expect(parseRadius()).toBeUndefined();
   });
 });
