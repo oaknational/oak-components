@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
-import { borderStyle } from "./borderStyle";
+import { borderStyle } from "@/styles/utils/borderStyle";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
