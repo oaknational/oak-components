@@ -89,7 +89,15 @@ export const oakUiRoles = [
   "bg-decorative5-very-subdued",
   "icon-main",
   "icon-inverted",
-  ...oakUiBorderRoles,
+  "border-primary",
+  "border-inverted",
+  "border-neutral",
+  "border-decorative1",
+  "border-decorative2",
+  "border-decorative3",
+  "border-decorative4",
+  "border-decorative5",
+  "border-decorative6",
 ] as const;
 
 export type OakUiBorderRole = (typeof oakUiBorderRoles)[number];

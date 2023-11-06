@@ -13,7 +13,7 @@ describe("opacityStyle", () => {
         ${opacityStyle}
       `;
       const { getByTestId } = render(
-        <StyledComponent data-testid="test" $opacity={"opacity-5"} />,
+        <StyledComponent data-testid="test" $opacity={"semiOpaque"} />,
       );
 
       expect(getByTestId("test")).toHaveStyle(expected);

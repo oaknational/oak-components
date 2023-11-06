@@ -1,16 +1,12 @@
 import { CSSProperties, css } from "styled-components";
 
-import {
-  OakAllBorderRadius,
-  OakAllBorderWidths,
-  oakAllBorderRadiusPX,
-  oakAllBorderWidthsPx,
-} from "../theme/borderWidths";
+import { OakAllBorderRadius, OakAllBorderWidths } from "../theme/borders";
 import { OakUiBorderRole } from "../theme/color";
 import { parseColor } from "../helpers/parseColor";
-import pxToRem from "../helpers/pxToRem";
 
 import { ResponsiveValues, responsiveStyle } from "./responsiveStyle";
+import { parseBorder } from "../helpers/parseBorder";
+import { parseRadius } from "../helpers/parseRadius";
 
 type BorderWidth = ResponsiveValues<OakAllBorderWidths>;
 type BorderStyleProps = CSSProperties["borderStyle"];
@@ -28,24 +24,6 @@ export type BorderProps = {
   $borderStyle?: BorderStyleProps;
   $borderColor?: BorderColorProps;
   $borderRadius?: BorderRadiusProps;
-};
-export const parseRadius = (value?: OakAllBorderRadius | null) => {
-  if (value === undefined || value === null) {
-    return undefined;
-  }
-  if (value in oakAllBorderRadiusPX) {
-    return `${pxToRem(oakAllBorderRadiusPX[value as OakAllBorderRadius])}rem`;
-  }
-};
-export const parseBorder = (value?: OakAllBorderWidths | null) => {
-  if (value === undefined || value === null) {
-    return undefined;
-  }
-  if (value in oakAllBorderWidthsPx) {
-    return `${pxToRem(
-      oakAllBorderWidthsPx[value as OakAllBorderWidths],
-    )}rem solid`;
-  }
 };
 
 const borderAll = css<{ $ba?: BorderWidth }>`
