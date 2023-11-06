@@ -1,4 +1,4 @@
-import { parseSpacing } from "./parseSpacing";
+import { parseSpacing } from "@/styles/helpers/parseSpacing";
 
 describe("parseSpacing", () => {
   it("should return undefined if value is null or undefined", () => {

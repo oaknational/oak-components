@@ -1,4 +1,4 @@
-import { truthy } from "./truthy";
+import { truthy } from "@/styles/helpers/truthy";
 /**
  * Note this function is really just for types, which we're not testing here
  */

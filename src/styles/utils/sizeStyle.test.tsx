@@ -3,7 +3,7 @@ import styled from "styled-components";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 
-import { sizeStyle } from "./sizeStyle";
+import { sizeStyle } from "@/styles/utils/sizeStyle";
 
 describe("sizeStyle", () => {
   test.each([

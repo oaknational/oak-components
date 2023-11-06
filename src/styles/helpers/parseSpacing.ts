@@ -1,3 +1,4 @@
+import pxToRem from "@/styles/helpers/pxToRem";
 import {
   OakAllSpacing,
   OakInnerPadding,
@@ -7,13 +8,6 @@ import {
   oakInnerPaddingAllSpacing,
   oakSpaceBetweenAllSpacing,
 } from "@/styles/theme/spacing";
-
-const BASE_FONT_SIZE_PX = 16;
-export const REM_DP = 3;
-
-function pxToRem(px: number): number {
-  return Number((px / BASE_FONT_SIZE_PX).toFixed(REM_DP));
-}
 
 /**
  * - takes any of OakInnerPadding, OakSpaceBetween, OakAllSpacing, and other accepted values,
