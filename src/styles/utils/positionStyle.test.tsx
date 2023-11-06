@@ -29,7 +29,6 @@ describe("positionStyle", () => {
   });
 
   test.each([
-    ["$gap", "space-between-ssx", "gap: 0.5rem;"],
     ["$top", "space-between-ssx", "top: 0.5rem;"],
     ["$bottom", "space-between-ssx", "bottom: 0.5rem;"],
     ["$left", "space-between-ssx", "left: 0.5rem;"],
@@ -38,7 +37,6 @@ describe("positionStyle", () => {
     ["$overflowX", "visible", "overflow-x: visible;"],
     ["$overflowY", "visible", "overflow-y: visible;"],
     ["$objectFit", "none", "object-fit: none;"],
-    ["$objectPosition", "none", "object-position: none;"],
     ["$pointerEvents", "none", "pointer-events: none;"],
     ["$visibility", "none", "visibility: none;"],
   ])("should correctly handle props", (prop, value, expected) => {

@@ -5,7 +5,7 @@ import TestImage from "./TestImage";
 
 const meta: Meta<typeof TestImage> = {
   component: TestImage,
-  title: "OakComponents/TestImage",
+  title: "scratch/TestImage",
   argTypes: {},
 };
 export default meta;
