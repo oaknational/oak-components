@@ -1,21 +1,12 @@
 import { css } from "styled-components";
 
-import { OakAllDropShadows, oakAllDropShadows } from "../theme/dropShadow";
+import { OakAllDropShadows } from "../theme/dropShadow";
+import { parseDropShadow } from "../helpers/parseDropShadow";
 
 import { ResponsiveValues, responsiveStyle } from "./responsiveStyle";
 
 export type DropShadowProps = {
   $dropShadow?: ResponsiveValues<OakAllDropShadows>;
-};
-
-export const parseDropShadow = (variant?: OakAllDropShadows | null) => {
-  if (!variant) {
-    return;
-  }
-
-  if (variant in oakAllDropShadows) {
-    return oakAllDropShadows[variant as OakAllDropShadows];
-  }
 };
 
 export const dropShadowStyle = css<DropShadowProps>`

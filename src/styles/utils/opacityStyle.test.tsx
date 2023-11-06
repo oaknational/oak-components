@@ -6,18 +6,14 @@ import { render } from "@testing-library/react";
 import { opacityStyle } from "./opacityStyle";
 
 describe("opacityStyle", () => {
-  test.each([["$opacity", 0.5, "opacity: 0.5;"]])(
+  test.each([["opacity: 0.5;"]])(
     "should correctly handle props",
-    (prop, value, expected) => {
-      const props = {
-        [prop]: value,
-      };
-
+    (expected) => {
       const StyledComponent = styled.div`
         ${opacityStyle}
       `;
       const { getByTestId } = render(
-        <StyledComponent data-testid="test" {...props} />,
+        <StyledComponent data-testid="test" $opacity={"opacity-5"} />,
       );
 
       expect(getByTestId("test")).toHaveStyle(expected);

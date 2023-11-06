@@ -11,7 +11,7 @@ describe("transitionStyle", () => {
       ${transitionStyle}
     `;
     const { getByTestId } = render(
-      <StyledComponent data-testid="test" $transition="all 0.3s ease" />,
+      <StyledComponent data-testid="test" $transition={"transition-1"} />,
     );
     expect(getByTestId("test")).toHaveStyle("transition: all 0.3s ease");
   });
@@ -20,14 +20,11 @@ describe("transitionStyle", () => {
       ${transitionStyle}
     `;
     const { getByTestId } = render(
-      <StyledComponent
-        data-testid="test"
-        $transition={["all 0.3s ease", "all 0.5s ease"]}
-      />,
+      <StyledComponent data-testid="test" $transition={"transition-1"} />,
     );
     expect(getByTestId("test")).toHaveStyle("transition: all 0.3s ease");
   });
-  test.each([["$transition", "all 0.3s ease", "transition: all 0.3s ease;"]])(
+  test.each([["$transition", "transition-1", "transition: all 0.3s ease;"]])(
     "should correctly handle props",
     (prop, value, expected) => {
       const props = {
