@@ -14,7 +14,7 @@ describe("dropShadowStyle", () => {
       <StyledComponent data-testid="test" $dropShadow={"dropShadowStandard"} />,
     );
     expect(getByTestId("test")).toHaveStyle(
-      "box-shadow:  3px 3px 8px rgba(0,0,0,70%);",
+      "box-shadow:  0 8px 8px rgba(92,92,92,20%);",
     );
   });
 });
