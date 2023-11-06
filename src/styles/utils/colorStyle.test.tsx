@@ -3,7 +3,6 @@ import styled from "styled-components";
 import "@testing-library/jest-dom";
 
 import { colorStyle, ColorProps } from "@/styles/utils/colorStyle";
-
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("colorStyle", () => {

@@ -2,7 +2,6 @@ import { css } from "styled-components";
 
 import { OakAllOpacity } from "@/styles/theme/opacity";
 import { parseOpacity } from "@/styles/helpers/parseOpacity";
-
 import {
   ResponsiveValues,
   responsiveStyle,
