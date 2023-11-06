@@ -3,10 +3,10 @@ import { CSSProperties, css } from "styled-components";
 import { OakAllBorderRadius, OakAllBorderWidths } from "../theme/borders";
 import { OakUiBorderRole } from "../theme/color";
 import { parseColor } from "../helpers/parseColor";
-
-import { ResponsiveValues, responsiveStyle } from "./responsiveStyle";
 import { parseBorder } from "../helpers/parseBorder";
 import { parseRadius } from "../helpers/parseRadius";
+
+import { ResponsiveValues, responsiveStyle } from "./responsiveStyle";
 
 type BorderWidth = ResponsiveValues<OakAllBorderWidths>;
 type BorderStyleProps = CSSProperties["borderStyle"];
