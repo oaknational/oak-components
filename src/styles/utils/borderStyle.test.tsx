@@ -4,7 +4,6 @@ import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
 import { borderStyle } from "@/styles/utils/borderStyle";
-
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("borderStyle", () => {
