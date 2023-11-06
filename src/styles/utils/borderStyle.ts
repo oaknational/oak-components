@@ -1,16 +1,19 @@
 import { CSSProperties, css } from "styled-components";
 
-import { OakAllBorderRadius, OakAllBorderWidths } from "../theme/borders";
-import { OakUiBorderRole } from "../theme/color";
-import { parseColor } from "../helpers/parseColor";
-import { parseBorder } from "../helpers/parseBorder";
-import { parseRadius } from "../helpers/parseRadius";
+import { OakAllBorderRadius, OakAllBorderWidths } from "@/styles/theme/borders";
+import { OakUiRole } from "@/styles/theme/color";
+import { parseColor } from "@/styles/helpers/parseColor";
+import { parseBorder } from "@/styles/helpers/parseBorder";
+import { parseRadius } from "@/styles/helpers/parseBorderRadius";
 
-import { ResponsiveValues, responsiveStyle } from "./responsiveStyle";
+import {
+  ResponsiveValues,
+  responsiveStyle,
+} from "@/styles/utils/responsiveStyle";
 
 type BorderWidth = ResponsiveValues<OakAllBorderWidths>;
 type BorderStyleProps = CSSProperties["borderStyle"];
-type BorderColorProps = OakUiBorderRole;
+type BorderColorProps = OakUiRole;
 type BorderRadiusProps = ResponsiveValues<OakAllBorderRadius>;
 
 export type BorderProps = {

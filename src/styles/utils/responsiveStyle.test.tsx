@@ -9,7 +9,7 @@ import styled, {
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 
-import { responsiveStyle } from "./responsiveStyle";
+import { responsiveStyle } from "@/styles/utils/responsiveStyle";
 
 import { oakAllColorsHex, OakColor, OakUiRole } from "@/styles/theme/color";
 import renderWithTheme from "@/test-helpers/renderWithTheme";

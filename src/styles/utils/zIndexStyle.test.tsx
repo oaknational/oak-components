@@ -3,7 +3,7 @@ import styled from "styled-components";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 
-import { parseZIndex, zIndexStyle } from "./zIndexStyle";
+import { parseZIndex, zIndexStyle } from "@/styles/utils/zIndexStyle";
 
 describe("zIndexStyle", () => {
   test("should correctly handle prop 'zIndex' as string", async () => {

@@ -1,7 +1,10 @@
 import { CSSProperties } from "react";
 import { css } from "styled-components";
 
-import { responsiveStyle, ResponsiveValues } from "./responsiveStyle";
+import {
+  responsiveStyle,
+  ResponsiveValues,
+} from "@/styles/utils/responsiveStyle";
 
 import { OakAllSpacing, OakSpaceBetween } from "@/styles/theme/spacing";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";

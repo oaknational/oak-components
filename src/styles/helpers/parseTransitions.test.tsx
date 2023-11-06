@@ -1,4 +1,4 @@
-import { parseTransitions } from "./parseTransitions";
+import { parseTransitions } from "@/styles/helpers/parseTransitions";
 
 describe("parseDropShadow", () => {
   it("should return undefined if value is null or undefined", () => {

@@ -1,6 +1,9 @@
-import { OakAllBorderWidths, oakAllBorderWidthsPx } from "../theme/borders";
+import {
+  OakAllBorderWidths,
+  oakAllBorderWidthsPx,
+} from "@/styles/theme/borders";
 
-import pxToRem from "./pxToRem";
+import pxToRem from "@/styles/helpers/pxToRem";
 
 export const parseBorder = (value?: OakAllBorderWidths | null) => {
   if (value === undefined || value === null) {

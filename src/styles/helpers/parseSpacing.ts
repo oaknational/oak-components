@@ -1,4 +1,4 @@
-import pxToRem from "./pxToRem";
+import pxToRem from "@/styles/helpers/pxToRem";
 
 import {
   OakAllSpacing,

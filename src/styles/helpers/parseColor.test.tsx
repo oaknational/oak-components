@@ -1,6 +1,6 @@
 import { DefaultTheme, ThemeProps } from "styled-components";
 
-import { parseColor } from "./parseColor";
+import { parseColor } from "@/styles/helpers/parseColor";
 
 import { oakDefaultTheme } from "@/styles/theme/default.theme";
 

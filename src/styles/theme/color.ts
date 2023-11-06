@@ -38,18 +38,6 @@ export const oakAllColorsHex = {
 
 export type OakColor = keyof typeof oakAllColorsHex;
 
-export const oakUiBorderRoles = [
-  "border-primary",
-  "border-inverted",
-  "border-neutral",
-  "border-decorative1",
-  "border-decorative2",
-  "border-decorative3",
-  "border-decorative4",
-  "border-decorative5",
-  "border-decorative6",
-] as const;
-
 export const oakUiRoles = [
   "text-primary",
   "text-subdued",
@@ -99,8 +87,6 @@ export const oakUiRoles = [
   "border-decorative5",
   "border-decorative6",
 ] as const;
-
-export type OakUiBorderRole = (typeof oakUiBorderRoles)[number];
 
 export type OakUiRole = (typeof oakUiRoles)[number];
 

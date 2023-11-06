@@ -3,7 +3,7 @@ import styled from "styled-components";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 
-import { marginStyle, paddingStyle } from "./spacingStyle";
+import { marginStyle, paddingStyle } from "@/styles/utils/spacingStyle";
 
 describe("spacingStyle", () => {
   test("should correctly handle prop 'ma'", async () => {

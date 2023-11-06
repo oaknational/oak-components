@@ -1,8 +1,11 @@
 import { css } from "styled-components";
 
-import { parseColor } from "../helpers/parseColor";
+import { parseColor } from "@/styles/helpers/parseColor";
 
-import { responsiveStyle, ResponsiveValues } from "./responsiveStyle";
+import {
+  responsiveStyle,
+  ResponsiveValues,
+} from "@/styles/utils/responsiveStyle";
 
 import { OakParsableColor } from "@/styles/theme/color";
 

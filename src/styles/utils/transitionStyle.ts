@@ -1,9 +1,12 @@
 import { css } from "styled-components";
 
-import { OakAllTransitions } from "../theme/transitions";
-import { parseTransitions } from "../helpers/parseTransitions";
+import { OakAllTransitions } from "@/styles/theme/transitions";
+import { parseTransitions } from "@/styles/helpers/parseTransitions";
 
-import { ResponsiveValues, responsiveStyle } from "./responsiveStyle";
+import {
+  ResponsiveValues,
+  responsiveStyle,
+} from "@/styles/utils/responsiveStyle";
 
 type Transition = OakAllTransitions;
 type TransitionProps = {

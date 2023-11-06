@@ -3,7 +3,7 @@ import styled from "styled-components";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 
-import { opacityStyle } from "./opacityStyle";
+import { opacityStyle } from "@/styles/utils/opacityStyle";
 
 describe("opacityStyle", () => {
   test.each([["opacity: 0.5;"]])(

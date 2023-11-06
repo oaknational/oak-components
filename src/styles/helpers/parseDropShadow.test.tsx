@@ -1,4 +1,4 @@
-import { parseDropShadow } from "./parseDropShadow";
+import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 
 describe("parseDropShadow", () => {
   it("should return undefined if value is null or undefined", () => {

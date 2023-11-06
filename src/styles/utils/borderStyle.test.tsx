@@ -13,7 +13,7 @@ describe("borderStyle", () => {
       ${borderStyle}
     `;
     const { getByTestId } = render(
-      <StyledComponent data-testid="test" $ba={"solid-S"} />,
+      <StyledComponent data-testid="test" $ba={"border-solid-s"} />,
     );
     expect(getByTestId("test")).toHaveStyle("border: 0.063rem solid;");
   });
@@ -22,7 +22,7 @@ describe("borderStyle", () => {
       ${borderStyle}
     `;
     const { getByTestId } = render(
-      <StyledComponent data-testid="test" $bv={"solid-S"} />,
+      <StyledComponent data-testid="test" $bv={"border-solid-s"} />,
     );
     expect(getByTestId("test")).toHaveStyle("border-top: 0.063rem solid;");
     expect(getByTestId("test")).toHaveStyle("border-bottom: 0.063rem solid;");
@@ -32,27 +32,27 @@ describe("borderStyle", () => {
       ${borderStyle}
     `;
     const { getByTestId } = render(
-      <StyledComponent data-testid="test" $bh={"solid-S"} />,
+      <StyledComponent data-testid="test" $bh={"border-solid-s"} />,
     );
     expect(getByTestId("test")).toHaveStyle("border-left: 0.063rem solid;");
     expect(getByTestId("test")).toHaveStyle("border-right: 0.063rem solid;");
   });
   test.each([
-    ["$ba", "solid-S", "border: 0.063rem solid;"],
+    ["$ba", "border-solid-s", "border: 0.063rem solid;"],
     [
       "$bv",
-      "solid-S",
+      "border-solid-s",
       "border-top: 0.063rem solid; border-bottom: 0.063rem solid;",
     ],
     [
       "$bh",
-      "solid-S",
+      "border-solid-s",
       "border-left: 0.063rem solid; border-right: 0.063rem solid;",
     ],
-    ["$br", "solid-S", "border-right: 0.063rem solid"],
-    ["$bb", "solid-S", "border-bottom: 0.063rem solid"],
-    ["$bl", "solid-S", "border-left: 0.063rem solid"],
-    ["$bt", "solid-S", "border-top: 0.063rem solid"],
+    ["$br", "border-solid-s", "border-right: 0.063rem solid"],
+    ["$bb", "border-solid-s", "border-bottom: 0.063rem solid"],
+    ["$bl", "border-solid-s", "border-left: 0.063rem solid"],
+    ["$bt", "border-solid-s", "border-top: 0.063rem solid"],
   ])("should correctly handle props", (prop, value, expected) => {
     const props = {
       [prop]: value,
@@ -75,7 +75,7 @@ describe("borderStyle", () => {
       <StyledComponent
         data-testid="test"
         $borderColor={"border-primary"}
-        $ba={"solid-S"}
+        $ba={"border-solid-s"}
       />,
     );
 
@@ -87,7 +87,7 @@ describe("borderStyle", () => {
       ${borderStyle}
     `;
     const { getByTestId } = renderWithTheme(
-      <StyledComponent data-testid="test" $borderRadius={"Border-radius-S"} />,
+      <StyledComponent data-testid="test" $borderRadius={"border-radius-s"} />,
     );
 
     expect(getByTestId("test")).toHaveStyle("border-radius: 0.25rem");

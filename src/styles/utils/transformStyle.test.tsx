@@ -3,7 +3,7 @@ import styled from "styled-components";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 
-import { transformStyle } from "./transformStyle";
+import { transformStyle } from "@/styles/utils/transformStyle";
 
 describe("transformStyle", () => {
   test('should correctly handle prop "transform" as string', async () => {

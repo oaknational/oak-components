@@ -1,6 +1,9 @@
 import { CSSProperties, css } from "styled-components";
 
-import { ResponsiveValues, responsiveStyle } from "./responsiveStyle";
+import {
+  ResponsiveValues,
+  responsiveStyle,
+} from "@/styles/utils/responsiveStyle";
 
 export type TransformProps = {
   $transform?: ResponsiveValues<CSSProperties["transform"] | null>;

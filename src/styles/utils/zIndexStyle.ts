@@ -1,6 +1,9 @@
 import { css } from "styled-components";
 
-import { ResponsiveValues, responsiveStyle } from "./responsiveStyle";
+import {
+  ResponsiveValues,
+  responsiveStyle,
+} from "@/styles/utils/responsiveStyle";
 
 export const zIndexMap = {
   behind: -1,

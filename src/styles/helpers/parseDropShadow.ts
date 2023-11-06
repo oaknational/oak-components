@@ -1,4 +1,7 @@
-import { OakAllDropShadows, oakAllDropShadows } from "../theme/dropShadow";
+import {
+  OakAllDropShadows,
+  oakAllDropShadows,
+} from "@/styles/theme/dropShadow";
 
 export const parseDropShadow = (variant?: OakAllDropShadows | null) => {
   if (!variant) {

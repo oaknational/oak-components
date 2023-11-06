@@ -1,4 +1,4 @@
-import { OakAllOpacity, oakAllOpacity } from "../theme/opacity";
+import { OakAllOpacity, oakAllOpacity } from "@/styles/theme/opacity";
 
 export const parseOpacity = (variant?: OakAllOpacity | null) => {
   if (!variant) {

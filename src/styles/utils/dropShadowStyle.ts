@@ -1,9 +1,12 @@
 import { css } from "styled-components";
 
-import { OakAllDropShadows } from "../theme/dropShadow";
-import { parseDropShadow } from "../helpers/parseDropShadow";
+import { OakAllDropShadows } from "@/styles/theme/dropShadow";
+import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 
-import { ResponsiveValues, responsiveStyle } from "./responsiveStyle";
+import {
+  ResponsiveValues,
+  responsiveStyle,
+} from "@/styles/utils/responsiveStyle";
 
 export type DropShadowProps = {
   $dropShadow?: ResponsiveValues<OakAllDropShadows>;

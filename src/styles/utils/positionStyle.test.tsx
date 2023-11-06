@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
-import { positionStyle } from "./positionStyle";
+import { positionStyle } from "@/styles/utils/positionStyle";
 
 describe("positionStyle", () => {
   test("should correctly handle prop 'position' as string", async () => {

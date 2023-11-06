@@ -3,7 +3,7 @@ import styled from "styled-components";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 
-import { dropShadowStyle } from "./dropShadowStyle";
+import { dropShadowStyle } from "@/styles/utils/dropShadowStyle";
 
 describe("dropShadowStyle", () => {
   test('should correctly handle prop "dropShadow" as string', async () => {

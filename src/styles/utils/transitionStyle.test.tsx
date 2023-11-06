@@ -3,7 +3,7 @@ import styled from "styled-components";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 
-import { transitionStyle } from "./transitionStyle";
+import { transitionStyle } from "@/styles/utils/transitionStyle";
 
 describe("transitionStyle", () => {
   test('should correctly handle prop "transition" as string', async () => {

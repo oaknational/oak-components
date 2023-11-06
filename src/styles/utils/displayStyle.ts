@@ -1,7 +1,10 @@
 import { CSSProperties } from "react";
 import { css } from "styled-components";
 
-import { ResponsiveValues, responsiveStyle } from "./responsiveStyle";
+import {
+  ResponsiveValues,
+  responsiveStyle,
+} from "@/styles/utils/responsiveStyle";
 
 export type DisplayProps = {
   $display?: ResponsiveValues<CSSProperties["display"]>;

@@ -1,9 +1,12 @@
 import { css } from "styled-components";
 
-import { OakAllOpacity } from "../theme/opacity";
-import { parseOpacity } from "../helpers/parseOpacity";
+import { OakAllOpacity } from "@/styles/theme/opacity";
+import { parseOpacity } from "@/styles/helpers/parseOpacity";
 
-import { ResponsiveValues, responsiveStyle } from "./responsiveStyle";
+import {
+  ResponsiveValues,
+  responsiveStyle,
+} from "@/styles/utils/responsiveStyle";
 
 type OpacityProps = {
   $opacity?: ResponsiveValues<OakAllOpacity>;

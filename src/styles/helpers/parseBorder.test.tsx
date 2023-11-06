@@ -1,4 +1,4 @@
-import { parseBorder } from "./parseBorder";
+import { parseBorder } from "@/styles/helpers/parseBorder";
 
 describe("parseBorder", () => {
   it("should return undefined if value is null or undefined", () => {

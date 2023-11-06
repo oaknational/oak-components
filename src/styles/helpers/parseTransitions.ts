@@ -1,4 +1,7 @@
-import { OakAllTransitions, oakAllTransitions } from "../theme/transitions";
+import {
+  OakAllTransitions,
+  oakAllTransitions,
+} from "@/styles/theme/transitions";
 
 export const parseTransitions = (variant?: OakAllTransitions | null) => {
   if (!variant) {
