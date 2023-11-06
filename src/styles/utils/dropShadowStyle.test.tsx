@@ -11,10 +11,7 @@ describe("dropShadowStyle", () => {
       ${dropShadowStyle}
     `;
     const { getByTestId } = render(
-      <StyledComponent
-        data-testid="test"
-        $dropShadow={"interactiveCardHover"}
-      />,
+      <StyledComponent data-testid="test" $dropShadow={"dropShadowStandard"} />,
     );
     expect(getByTestId("test")).toHaveStyle(
       "box-shadow:  3px 3px 8px rgba(0,0,0,70%);",

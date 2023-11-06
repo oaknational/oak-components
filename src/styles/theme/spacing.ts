@@ -15,6 +15,13 @@ export const oakAllSpacingPx = {
   "all-spacing-14": 92,
   "all-spacing-15": 100,
   "all-spacing-16": 120,
+  "all-spacing-17": 160,
+  "all-spacing-18": 180,
+  "all-spacing-19": 240,
+  "all-spacing-20": 360,
+  "all-spacing-21": 480,
+  "all-spacing-22": 640,
+  "all-spacing-23": 960,
 };
 
 export type OakAllSpacing = keyof typeof oakAllSpacingPx;

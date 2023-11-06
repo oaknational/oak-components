@@ -1,17 +1,13 @@
 export const oakAllBorderWidthsPx = {
-  "border-width-1": 1,
-  "border-width-2": 2,
-  "border-width-3": 3,
-  "border-width-4": 5,
-  "border-width-5": 8,
+  "solid-S": 1,
+  "solid-M": 2,
 };
 
 export const oakAllBorderRadiusPX = {
-  "border-radius-1": 10,
-  "border-radius-2": 20,
-  "border-radius-3": 30,
-  "border-radius-4": 50,
-  "border-radius-5": 100,
+  "Border-square": 0,
+  "Border-radius-S": 4,
+  "Border-radius-M": 16,
+  "Border-radius-L": 100,
 };
 
 export type OakAllBorderRadius = keyof typeof oakAllBorderRadiusPX;

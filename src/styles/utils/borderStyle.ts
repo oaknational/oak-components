@@ -59,9 +59,6 @@ const borderRadius = css<{ $borderRadius?: BorderRadiusProps }>`
     parseRadius,
   )}
 `;
-const borderPattern = css<{ $borderStyle?: BorderStyleProps }>`
-  ${responsiveStyle("border-style", (props) => props.$borderStyle)}
-`;
 
 export const borderStyle = css<BorderProps>`
   ${borderAll}
@@ -73,5 +70,4 @@ export const borderStyle = css<BorderProps>`
     ${borderVertical}
     ${borderColor}
     ${borderRadius}
-    ${borderPattern}
 `;
