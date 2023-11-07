@@ -13,7 +13,6 @@ import {
   parseLetterSpacing,
   parseLineHeight,
 } from "@/styles//helpers/parseFont";
-
 import {
   ResponsiveValues,
   responsiveStyle,
