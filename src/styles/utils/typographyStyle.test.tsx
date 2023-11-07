@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 import { typography } from "@/styles/utils/typographyStyle";
 
-describe("typothgraphyStyle", () => {
+describe("typographyStyle", () => {
   test("should correctly handle prop 'font'", async () => {
     const StyledComponent = styled.div`
       ${typography}

@@ -11,11 +11,16 @@ export const oakAllFontSizes = {
   "font-size-10": 56,
 };
 
+export type OakAllFontSizes = keyof typeof oakAllFontSizes;
 export type FontWeight = 300 | 400 | 600 | 700;
-export type FontSize = 12 | 14 | 16 | 18 | 20 | 24 | 32 | 40 | 48 | 56;
 export type LineHeight = 16 | 20 | 24 | 28 | 32 | 40 | 48 | 56 | 64;
 export type LetterSpacing = "0.0115em" | "-0.005em";
-export type Font = readonly [FontSize, LineHeight, FontWeight, LetterSpacing];
+export type Font = readonly [
+  OakAllFontSizes,
+  LineHeight,
+  FontWeight,
+  LetterSpacing,
+];
 export const oakAllFonts = {
   "heading-1": ["font-size-10", 64, 600, "0.0115em"],
   "heading-2": ["font-size-9", 56, 600, "0.0115em"],
@@ -42,22 +47,34 @@ export const oakAllFonts = {
   "list-item-2": ["font-size-3", 24, 300, "-0.005em"],
 } as const;
 
-export type OakAllTextDecoration =
-  | "underline"
-  | "overline"
-  | "line-through"
-  | "none";
-
-export type OakAllWhiteSpaces =
-  | "normal"
-  | "nowrap"
-  | "pre"
-  | "pre-wrap"
-  | "pre-line"
-  | "break-spaces";
-
-export type OakAllWordWrap = "normal" | "break-word" | "initial" | "inherit";
-export type OakAllTextOverflow = "clip" | "ellipsis";
-
 export type OakAllFonts = keyof typeof oakAllFonts;
-export type OakAllFontSizes = keyof typeof oakAllFontSizes;
+
+export const oakAllTextDecoration = [
+  "underline",
+  "overline",
+  "line-through",
+  "none",
+] as const;
+
+export const oakAllWhiteSpaces = [
+  "normal",
+  "nowrap",
+  "pre",
+  "pre-wrap",
+  "pre-line",
+  "break-spaces",
+] as const;
+
+export const oakAllWordWrap = [
+  "normal",
+  "break-word",
+  "initial",
+  "inherit",
+] as const;
+
+const oakAllTextOverflow = ["clip", "ellipsis"] as const;
+
+export type OakAllTextDecoration = (typeof oakAllTextDecoration)[number];
+export type OakAllWhiteSpaces = (typeof oakAllWhiteSpaces)[number];
+export type OakAllWordWrap = (typeof oakAllWordWrap)[number];
+export type OakAllTextOverflow = (typeof oakAllTextOverflow)[number];
