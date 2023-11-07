@@ -28,7 +28,7 @@ type HTMLProps = {
   onClick?: MouseEventHandler;
 };
 
-export type BoxProps = {
+export type OakBoxProps = {
   children?: React.ReactNode;
 } & PositionProps &
   SizeProps &
@@ -36,7 +36,7 @@ export type BoxProps = {
   ColorProps &
   HTMLProps;
 
-export const box = css<BoxProps>`
+export const box = css<OakBoxProps>`
   ${positionStyle}
   ${sizeStyle}
   ${spacingStyle}
@@ -54,6 +54,6 @@ export const box = css<BoxProps>`
 /**
  * Box exposes position, size, spacing, and background props on a div.
  */
-export const Box = styled.div<BoxProps>`
+export const OakBox = styled.div<OakBoxProps>`
   ${box}
 `;

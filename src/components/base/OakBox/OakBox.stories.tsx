@@ -1,17 +1,17 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { Box, BoxProps } from "./Box";
+import { OakBox, OakBoxProps } from "./OakBox";
 
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
 import { positionArgTypes } from "@/storybook-helpers/positionStyleHelpers";
 
-const meta: Meta<typeof Box> = {
-  component: Box,
+const meta: Meta<typeof OakBox> = {
+  component: OakBox,
   tags: ["autodocs"],
-  title: "components/base/Box",
+  title: "components/base/OakBox",
   argTypes: {
     ...colorArgTypes,
     ...sizeArgTypes,
@@ -32,12 +32,12 @@ const meta: Meta<typeof Box> = {
 };
 export default meta;
 
-type Story = StoryObj<typeof Box>;
+type Story = StoryObj<typeof OakBox>;
 
-export const DefaultBox: Story = (args: Partial<BoxProps>) => (
-  <Box data-testId="box-id" {...args}>
+export const DefaultBox: Story = (args: Partial<OakBoxProps>) => (
+  <OakBox data-testId="box-id" {...args}>
     Test content
-  </Box>
+  </OakBox>
 );
 
 DefaultBox.args = {
@@ -48,12 +48,12 @@ DefaultBox.args = {
   $pa: "inner-padding-m",
 };
 
-export const PositionedBox: Story = (args: Partial<BoxProps>) => (
-  <Box $background={"grey40"} $width={"100%"} $height={"100vh"}>
-    <Box data-testId="box-id" {...args}>
+export const PositionedBox: Story = (args: Partial<OakBoxProps>) => (
+  <OakBox $background={"grey40"} $width={"100%"} $height={"100vh"}>
+    <OakBox data-testId="box-id" {...args}>
       Test content
-    </Box>
-  </Box>
+    </OakBox>
+  </OakBox>
 );
 PositionedBox.args = {
   $background: "mint",

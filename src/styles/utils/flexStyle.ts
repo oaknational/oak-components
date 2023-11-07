@@ -35,6 +35,7 @@ export type FlexCssProps = {
 };
 
 export const flexStyle = css<FlexCssProps>`
+  display: flex;
   ${responsiveStyle("flex-direction", (props) => props.$flexDirection)}
   ${responsiveStyle("flex-wrap", (props) => props.$flexWrap)}
   ${responsiveStyle("align-items", (props) => props.$alignItems)}
