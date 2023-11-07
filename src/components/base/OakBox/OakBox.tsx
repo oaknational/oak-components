@@ -36,7 +36,7 @@ export type OakBoxProps = {
   ColorProps &
   HTMLProps;
 
-export const box = css<OakBoxProps>`
+export const oakBoxCss = css<OakBoxProps>`
   ${positionStyle}
   ${sizeStyle}
   ${spacingStyle}
@@ -52,8 +52,8 @@ export const box = css<OakBoxProps>`
 `;
 
 /**
- * Box exposes position, size, spacing, and background props on a div.
+ * OakBox exposes position, size, spacing, and background props on a div.
  */
 export const OakBox = styled.div<OakBoxProps>`
-  ${box}
+  ${oakBoxCss}
 `;
