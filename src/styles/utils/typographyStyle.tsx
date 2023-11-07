@@ -1,23 +1,23 @@
 import { CSSProperties, css } from "styled-components";
+
 import {
-  FontWeight,
-  LetterSpacing,
   OakAllFonts,
   OakAllTextDecoration,
   OakAllTextOverflow,
   OakAllWhiteSpaces,
   OakAllWordWrap,
-  oakAllFontSizes,
-  oakAllFonts,
-} from "../theme/fonts";
-import { ResponsiveValues, responsiveStyle } from "./responsiveStyle";
-import pxToRem from "../helpers/pxToRem";
+} from "@/styles/theme/fonts";
 import {
   parseFontSize,
   parseFontWeight,
   parseLetterSpacing,
   parseLineHeight,
-} from "../helpers/parseFont";
+} from "@/styles//helpers/parseFont";
+
+import {
+  ResponsiveValues,
+  responsiveStyle,
+} from "@/styles/utils/responsiveStyle";
 
 export type FontProps = {
   $font?: ResponsiveValues<OakAllFonts>;

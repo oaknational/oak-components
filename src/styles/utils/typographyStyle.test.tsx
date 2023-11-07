@@ -2,7 +2,8 @@ import React from "react";
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import styled from "styled-components";
-import { typography } from "./typographyStyle";
+
+import { typography } from "@/styles/utils/typographyStyle";
 
 describe("typothgraphyStyle", () => {
   test("should correctly handle prop 'font'", async () => {

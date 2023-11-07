@@ -4,8 +4,9 @@ import {
   OakAllFonts,
   oakAllFontSizes,
   oakAllFonts,
-} from "../theme/fonts";
-import pxToRem from "./pxToRem";
+} from "@/styles/theme/fonts";
+
+import pxToRem from "@/styles/helpers/pxToRem";
 
 export const parseFontWeight = (
   font?: OakAllFonts | null,
