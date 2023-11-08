@@ -3,9 +3,9 @@ module.exports = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "res.cloudinary.com",
+        hostname: process.env.NEXT_PUBLIC_OAK_ASSETS_HOST,
         port: "",
-        pathname: "oak-web-application/**",
+        pathname: `${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/**`,
       },
     ],
   },

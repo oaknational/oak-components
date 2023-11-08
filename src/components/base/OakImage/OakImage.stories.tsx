@@ -52,7 +52,7 @@ export const RemoteImage: Story = (args: OakImageProps) => (
 
 RemoteImage.args = {
   alt: "Test image",
-  src: "https://res.cloudinary.com/oak-web-application/image/upload/v1698336494/samples/animals/cat.jpg",
+  src: `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336494/samples/animals/cat.jpg`,
 };
 
 export const ClickableImage: Story = (args: OakImageProps) => (
