@@ -1,31 +1,34 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
+// @ts-expect-error:  this is an image
+import testPic from "../../../../assets/oak-national-academy-logo-512.png";
+
 import { OakImage, OakImageProps } from "./OakImage";
 
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
-import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
-import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
-import { positionArgTypes } from "@/storybook-helpers/positionStyleHelpers";
+
+/**
+ *
+ * - A wrapper for NextJs's Image component.
+ * - Use this for all image types as well as icons.
+ * - Can accept remote urls provided they are whitelisted in next.config.js and relative urls for local images provided they begin with a "/".
+ * - Set the width and height of the image through the `$width` and `$height` props not the `width` and `height` props.
+ * - It also exposes the `positionStyle` and `spacingStyle` props.
+ * - The default behaviour is auto for both width and height. Setting one only will keep the original image ratio.
+ *
+ */
 
 const meta: Meta<typeof OakImage> = {
   component: OakImage,
   tags: ["autodocs"],
   title: "components/base/OakImage",
   argTypes: {
-    ...colorArgTypes,
     ...sizeArgTypes,
-    ...spacingArgTypes,
-    ...positionArgTypes,
   },
   parameters: {
     controls: {
-      include: [
-        ...Object.keys(colorArgTypes),
-        ...Object.keys(sizeArgTypes),
-        ...Object.keys(spacingArgTypes),
-        ...Object.keys(positionArgTypes),
-      ],
+      include: [...Object.keys(sizeArgTypes)],
       sort: "none",
     },
   },
@@ -34,11 +37,30 @@ export default meta;
 
 type Story = StoryObj<typeof OakImage>;
 
-export const DefaultImage: Story = (args: OakImageProps) => (
+export const LocalImage: Story = (args: OakImageProps) => (
   <OakImage {...args} />
 );
 
-DefaultImage.args = {
+LocalImage.args = {
   alt: "Test image",
-  src: "https://oaknationalacademy-res.cloudinary.com/image/upload/v1687374653/Trees.jpg",
+  src: testPic,
+};
+
+export const RemoteImage: Story = (args: OakImageProps) => (
+  <OakImage {...args} />
+);
+
+RemoteImage.args = {
+  alt: "Test image",
+  src: "https://res.cloudinary.com/oak-web-application/image/upload/v1698336494/samples/animals/cat.jpg",
+};
+
+export const ClickableImage: Story = (args: OakImageProps) => (
+  <OakImage {...args} />
+);
+
+ClickableImage.args = {
+  alt: "Test image",
+  src: testPic,
+  onClick: () => alert("clicked"),
 };

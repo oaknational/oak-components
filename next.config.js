@@ -3,9 +3,9 @@ module.exports = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "oaknationalacademy-res.cloudinary.com",
+        hostname: "res.cloudinary.com",
         port: "",
-        pathname: "image/upload/**",
+        pathname: "oak-web-application/**",
       },
     ],
   },
