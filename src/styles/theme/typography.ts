@@ -11,13 +11,13 @@ export const oakAllFontSizes = {
   "font-size-10": 56,
 };
 
-export type OakAllFontSizes = keyof typeof oakAllFontSizes;
+type OakAllFontSizes = keyof typeof oakAllFontSizes;
 const oakAllFontWeight = [300, 400, 600, 700] as const;
-export type OakAllFontWeight = (typeof oakAllFontWeight)[number];
+type OakAllFontWeight = (typeof oakAllFontWeight)[number];
 const oakAllLineHeight = [16, 20, 24, 28, 32, 40, 48, 56, 64] as const;
-export type OakAllLineHeight = (typeof oakAllLineHeight)[number];
+type OakAllLineHeight = (typeof oakAllLineHeight)[number];
 const oakAllLetterSpacing = ["0.0115em", "-0.005em"] as const;
-export type OakAllLetterSpacing = (typeof oakAllLetterSpacing)[number];
+type OakAllLetterSpacing = (typeof oakAllLetterSpacing)[number];
 export type Font = readonly [
   OakAllFontSizes,
   OakAllLineHeight,

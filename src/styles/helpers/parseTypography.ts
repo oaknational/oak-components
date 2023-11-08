@@ -1,15 +1,11 @@
 import {
-  OakAllLetterSpacing,
-  OakAllFontWeight,
   OakAllFonts,
   oakAllFontSizes,
   oakAllFonts,
 } from "@/styles/theme/typography";
 import pxToRem from "@/styles/helpers/pxToRem";
 
-export const parseFontWeight = (
-  font?: OakAllFonts | null,
-): OakAllFontWeight | undefined => {
+export const parseFontWeight = (font?: OakAllFonts | null) => {
   if (!font) return;
   return oakAllFonts[font][2];
 };
@@ -28,9 +24,7 @@ export const parseLineHeight = (
   const lineHeight = oakAllFonts[font][1];
   return `${pxToRem(lineHeight)}rem`;
 };
-export const parseLetterSpacing = (
-  font?: OakAllFonts | null,
-): OakAllLetterSpacing | undefined => {
+export const parseLetterSpacing = (font?: OakAllFonts | null) => {
   if (!font) return;
   return oakAllFonts[font][3];
 };
