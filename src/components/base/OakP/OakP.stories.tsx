@@ -31,7 +31,7 @@ export default meta;
 type Story = StoryObj<typeof OakP>;
 
 export const DefaultOakFlex: Story = (args: Partial<OakPProps>) => (
-  <OakP data-testId="OakFlex-id" {...args}>
+  <OakP data-testId="OakP-id" {...args}>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Id semper risus in
     hendrerit gravida rutrum quisque non tellus. Nibh praesent tristique magna
