@@ -27,7 +27,7 @@ export type FontProps = {
   $textOverflow?: ResponsiveValues<OakAllTextOverflow>;
 };
 
-export const typography = css<FontProps>`
+export const typographyStyle = css<FontProps>`
   font-family: Lexend, sans-serif;
   ${responsiveStyle("font-weight", (props) => props.$font, parseFontWeight)}
   ${responsiveStyle("font-size", (props) => props.$font, parseFontSize)}

@@ -75,7 +75,7 @@ export const oakAllWordWrap = [
   "inherit",
 ] as const;
 
-const oakAllTextOverflow = ["clip", "ellipsis"] as const;
+export const oakAllTextOverflow = ["clip", "ellipsis"] as const;
 
 export type OakAllTextDecoration = (typeof oakAllTextDecoration)[number];
 export type OakAllWhiteSpaces = (typeof oakAllWhiteSpaces)[number];
