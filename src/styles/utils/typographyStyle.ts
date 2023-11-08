@@ -6,13 +6,13 @@ import {
   OakAllTextOverflow,
   OakAllWhiteSpaces,
   OakAllWordWrap,
-} from "@/styles/theme/fonts";
+} from "@/styles/theme/typography";
 import {
   parseFontSize,
   parseFontWeight,
   parseLetterSpacing,
   parseLineHeight,
-} from "@/styles//helpers/parseFont";
+} from "@/styles/helpers/parseTypography";
 import {
   ResponsiveValues,
   responsiveStyle,

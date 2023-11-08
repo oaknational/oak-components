@@ -4,7 +4,7 @@ import {
   OakAllFonts,
   oakAllFontSizes,
   oakAllFonts,
-} from "@/styles/theme/fonts";
+} from "@/styles/theme/typography";
 import pxToRem from "@/styles/helpers/pxToRem";
 
 export const parseFontWeight = (

@@ -3,7 +3,7 @@ import {
   parseFontWeight,
   parseLetterSpacing,
   parseLineHeight,
-} from "./parseFont";
+} from "./parseTypography";
 
 describe("parseFontSize", () => {
   it("should return undefined if value is null or undefined", () => {
