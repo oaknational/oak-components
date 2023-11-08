@@ -7,7 +7,7 @@ import {
   responsiveStyle,
 } from "@/styles/utils/responsiveStyle";
 
-type OpacityProps = {
+export type OpacityProps = {
   $opacity?: ResponsiveValues<OakAllOpacity>;
 };
 
