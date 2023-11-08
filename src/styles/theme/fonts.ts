@@ -12,14 +12,17 @@ export const oakAllFontSizes = {
 };
 
 export type OakAllFontSizes = keyof typeof oakAllFontSizes;
-export type FontWeight = 300 | 400 | 600 | 700;
-export type LineHeight = 16 | 20 | 24 | 28 | 32 | 40 | 48 | 56 | 64;
-export type LetterSpacing = "0.0115em" | "-0.005em";
+const oakAllFontWeight = [300, 400, 600, 700] as const;
+export type OakAllFontWeight = (typeof oakAllFontWeight)[number];
+const oakAllLineHeight = [16, 20, 24, 28, 32, 40, 48, 56, 64] as const;
+export type OakAllLineHeight = (typeof oakAllLineHeight)[number];
+const oakAllLetterSpacing = ["0.0115em", "-0.005em"] as const;
+export type OakAllLetterSpacing = (typeof oakAllLetterSpacing)[number];
 export type Font = readonly [
   OakAllFontSizes,
-  LineHeight,
-  FontWeight,
-  LetterSpacing,
+  OakAllLineHeight,
+  OakAllFontWeight,
+  OakAllLetterSpacing,
 ];
 export const oakAllFonts = {
   "heading-1": ["font-size-10", 64, 600, "0.0115em"],

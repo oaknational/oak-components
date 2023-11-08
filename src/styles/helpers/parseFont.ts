@@ -1,6 +1,6 @@
 import {
-  FontWeight,
-  LetterSpacing,
+  OakAllLetterSpacing,
+  OakAllFontWeight,
   OakAllFonts,
   oakAllFontSizes,
   oakAllFonts,
@@ -9,7 +9,7 @@ import pxToRem from "@/styles/helpers/pxToRem";
 
 export const parseFontWeight = (
   font?: OakAllFonts | null,
-): FontWeight | undefined => {
+): OakAllFontWeight | undefined => {
   if (!font) return;
   return oakAllFonts[font][2];
 };
@@ -30,7 +30,7 @@ export const parseLineHeight = (
 };
 export const parseLetterSpacing = (
   font?: OakAllFonts | null,
-): LetterSpacing | undefined => {
+): OakAllLetterSpacing | undefined => {
   if (!font) return;
   return oakAllFonts[font][3];
 };
