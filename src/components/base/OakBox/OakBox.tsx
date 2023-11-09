@@ -1,6 +1,10 @@
 import { MouseEventHandler } from "react";
 import styled, { css } from "styled-components";
 
+/**
+ * OakBox exposes all the styles that are available styles on a div element.
+ */
+
 import {
   colorStyle,
   ColorProps,
@@ -10,18 +14,26 @@ import {
   SizeProps,
   spacingStyle,
   SpacingProps,
+  borderStyle,
+  BorderProps,
+  displayStyle,
+  DisplayProps,
+  dropShadowStyle,
+  DropShadowProps,
+  opacityStyle,
+  OpacityProps,
+  transformStyle,
+  TransformProps,
+  transitionStyle,
+  TransitionProps,
+  typographyStyle,
+  TypographyProps,
+  zIndexStyle,
+  ZIndexProps,
 } from "@/styles";
 
 // TODO: these are not yet implemented
-// import border, { BorderProps } from "@/styles/utils/borderStyle";
 // import cover, { CoverProps } from "@/styles/utils/coverStyle";
-// import display, { DisplayProps } from "@/styles/utils/displayStyle";
-// import dropShadow, { DropShadowProps } from "@/styles/utils/dropShadowStyle";
-// import opacity, { OpacityProps } from "@/styles/utils/opacityStyle";
-// import transform, { TransformProps } from "@/styles/utils/transformStyle";
-// import transition, { TransitionProps } from "@/styles/utils/transitionStyle";
-// import typography, { TypographyProps } from "@/styles/utils/typographyStyle";
-// import zIndex, { ZIndexProps } from "@/styles/utils/zIndexStyle";
 // import customScrollbar from "@/styles/utils/customScrollbarStyle";
 
 type HTMLProps = {
@@ -34,6 +46,14 @@ export type OakBoxProps = {
   SizeProps &
   SpacingProps &
   ColorProps &
+  BorderProps &
+  DisplayProps &
+  DropShadowProps &
+  OpacityProps &
+  TransformProps &
+  TransitionProps &
+  TypographyProps &
+  ZIndexProps &
   HTMLProps;
 
 export const oakBoxCss = css<OakBoxProps>`
@@ -41,6 +61,14 @@ export const oakBoxCss = css<OakBoxProps>`
   ${sizeStyle}
   ${spacingStyle}
   ${colorStyle}
+  ${borderStyle}
+  ${displayStyle}
+  ${dropShadowStyle}
+  ${opacityStyle}
+  ${transformStyle}
+  ${transitionStyle}
+  ${typographyStyle}
+  ${zIndexStyle}
   ${(props) =>
     /* onClick might be passed in the useClickableCard pattern */
     props.onClick &&
@@ -51,9 +79,6 @@ export const oakBoxCss = css<OakBoxProps>`
     `}
 `;
 
-/**
- * OakBox exposes position, size, spacing, and background props on a div.
- */
 export const OakBox = styled.div<OakBoxProps>`
   ${oakBoxCss}
 `;

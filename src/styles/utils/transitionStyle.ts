@@ -8,7 +8,7 @@ import {
 } from "@/styles/utils/responsiveStyle";
 
 type Transition = OakAllTransitions;
-type TransitionProps = {
+export type TransitionProps = {
   $transition?: ResponsiveValues<Transition>;
 };
 
