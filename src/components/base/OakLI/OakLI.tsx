@@ -3,14 +3,17 @@ import styled from "styled-components";
 import { oakBoxCss } from "../OakBox";
 import { OakFlexProps } from "../OakFlex";
 
-import { DisplayProps, flexStyle } from "@/styles";
+import { OakDisplayProps, flexStyle } from "@/styles";
 import { ListItemProps, listItemStyle } from "@/styles/utils/listStyle";
 import {
-  TypographyProps,
+  OakTypographyCssProps,
   typographyStyle,
 } from "@/styles/utils/typographyStyle";
 
-type OakLIProps = OakFlexProps & TypographyProps & ListItemProps & DisplayProps;
+type OakLIProps = OakFlexProps &
+  OakTypographyCssProps &
+  ListItemProps &
+  OakDisplayProps;
 /**
  * Styled `li` (list item) component.
  *

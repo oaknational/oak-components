@@ -1,7 +1,7 @@
 export const oakAllOpacity = {
   transparent: 0,
-  semiTransparent: 0.25,
-  semiOpaque: 0.5,
+  "semi-transparent": 0.25,
+  "semi-opaque": 0.5,
   opaque: 1,
 };
 

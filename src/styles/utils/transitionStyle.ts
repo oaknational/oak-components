@@ -8,11 +8,12 @@ import {
 } from "@/styles/utils/responsiveStyle";
 
 type Transition = OakAllTransitions;
-type TransitionProps = {
+
+export type OakTransitionProps = {
   $transition?: ResponsiveValues<Transition>;
 };
 
-export const transitionStyle = css<TransitionProps>`
+export const transitionStyle = css<OakTransitionProps>`
   ${responsiveStyle(
     "transition",
     (props) => props.$transition,

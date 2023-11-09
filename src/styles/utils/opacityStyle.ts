@@ -7,10 +7,10 @@ import {
   responsiveStyle,
 } from "@/styles/utils/responsiveStyle";
 
-export type OpacityProps = {
+export type OakOpacityProps = {
   $opacity?: ResponsiveValues<OakAllOpacity>;
 };
 
-export const opacityStyle = css<OpacityProps>`
+export const opacityStyle = css<OakOpacityProps>`
   ${responsiveStyle("opacity", (props) => props.$opacity, parseOpacity)}
 `;

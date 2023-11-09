@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 import { OakBox, OakBoxProps } from "@/components/base/OakBox";
-import { flexStyle, FlexCssProps } from "@/styles/utils/flexStyle";
+import { flexStyle, OakFlexCssProps } from "@/styles/utils/flexStyle";
 
-export type OakFlexProps = FlexCssProps & OakBoxProps;
+export type OakFlexProps = OakFlexCssProps & OakBoxProps;
 /**
  * Flex sets `display: flex;` and exposes various flex props, along with Box
  * props.

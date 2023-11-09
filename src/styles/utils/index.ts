@@ -10,3 +10,4 @@ export * from "./zIndexStyle";
 export * from "./dropShadowStyle";
 export * from "./displayStyle";
 export * from "./borderStyle";
+export * from "./typographyStyle";

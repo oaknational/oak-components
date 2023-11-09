@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-import { ColorProps, MarginProps, colorStyle, marginStyle } from "@/styles";
+import { OakColorProps, MarginProps, colorStyle, marginStyle } from "@/styles";
 
-export type OakOLProps = MarginProps & ColorProps;
+export type OakOLProps = MarginProps & OakColorProps;
 /**
  * Styled `ol` (ordered list) component.
  *

@@ -8,7 +8,8 @@ import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { OakInnerPadding, OakSpaceBetween } from "@/styles/theme/spacing";
 
 type PaddingValues = ResponsiveValues<OakInnerPadding | null | undefined>;
-export type PaddingProps = {
+
+export type OakPaddingProps = {
   $pa?: PaddingValues;
   $ph?: PaddingValues;
   $pv?: PaddingValues;
@@ -87,7 +88,7 @@ export const marginStyle = css<MarginProps>`
   ${marginBottom}
 `;
 
-export const paddingStyle = css<PaddingProps>`
+export const paddingStyle = css<OakPaddingProps>`
   ${paddingAll}
   ${paddingHorizontal}
   ${paddingVertical}
@@ -97,7 +98,7 @@ export const paddingStyle = css<PaddingProps>`
   ${paddingBottom}
 `;
 
-export type SpacingProps = PaddingProps & MarginProps;
+export type SpacingProps = OakPaddingProps & MarginProps;
 export const spacingStyle = css<SpacingProps>`
   ${paddingStyle}
   ${marginStyle}

@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 import {
-  TypographyProps,
+  OakTypographyCssProps,
   typographyStyle,
 } from "@/styles/utils/typographyStyle";
 
-export type OakLabelProps = TypographyProps;
+export type OakLabelProps = OakTypographyCssProps;
 /**
  * Label renders a `label` element, exposing all the typography props.
  * ## Usage

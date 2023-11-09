@@ -9,14 +9,17 @@ import { OakParsableColor } from "@/styles/theme/color";
 
 type OakColorName = ResponsiveValues<OakParsableColor | null>;
 
-export type ColorProps = { $color?: OakColorName; $background?: OakColorName };
-export const colorStyle = css<ColorProps>`
-  ${responsiveStyle<ColorProps, OakParsableColor>(
+export type OakColorProps = {
+  $color?: OakColorName;
+  $background?: OakColorName;
+};
+export const colorStyle = css<OakColorProps>`
+  ${responsiveStyle<OakColorProps, OakParsableColor>(
     "color",
     (props) => props.$color,
     parseColor,
   )}
-  ${responsiveStyle<ColorProps, OakParsableColor>(
+  ${responsiveStyle<OakColorProps, OakParsableColor>(
     "background",
     (props) => props.$background,
     parseColor,
