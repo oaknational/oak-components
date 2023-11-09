@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import OakHeading, { OakHeadingProps } from "./OakHeading";
+import { OakHeading, OakHeadingProps } from "./OakHeading";
 
 import {
   typographyArgTypes,

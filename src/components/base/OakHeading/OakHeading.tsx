@@ -46,11 +46,9 @@ export type OakHeadingProps = TypographyProps &
   OpacityProps &
   MarginProps;
 
-const OakHeading = styled(HeadingTagComponent)<OakHeadingProps>`
+export const OakHeading = styled(HeadingTagComponent)<OakHeadingProps>`
   ${typographyStyle}
   ${marginStyle}
   ${colorStyle}
   ${opacityStyle}
 `;
-
-export default OakHeading;

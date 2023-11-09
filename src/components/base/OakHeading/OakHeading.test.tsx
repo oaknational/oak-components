@@ -1,7 +1,9 @@
 import React from "react";
 import "@testing-library/jest-dom";
+import { create } from "react-test-renderer";
+import { render } from "@testing-library/react";
 
-import OakHeading, { OakHeadingTag } from "./OakHeading";
+import { OakHeading, OakHeadingTag } from "./OakHeading";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { OakAllFonts, oakAllFonts } from "@/styles/theme/typography";
@@ -13,16 +15,27 @@ import {
 } from "@/styles/helpers/parseTypography";
 
 describe("Heading", () => {
-  test.each([["h1"], ["h1"], ["h1"], ["h1"], ["h1"], ["h1"], ["h1"], ["h1"]])(
-    "should correctly render %s tag",
-    (tag) => {
-      const { getByRole } = renderWithTheme(
-        <OakHeading tag={tag as OakHeadingTag} />,
-      );
+  it("renders", () => {
+    const { getByTestId } = render(
+      <OakHeading tag={"h1"} data-testid="test" />,
+    );
+    expect(getByTestId("test")).toBeInTheDocument();
+  });
+  it("matches snapshot", () => {
+    const tree = create(<OakHeading tag={"h1"} />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  test.each([
+    ["h1", 1],
+    ["h2", 2],
+    ["h3", 3],
+  ])("should correctly render %s tag", (tag, level) => {
+    const { getByRole } = renderWithTheme(
+      <OakHeading tag={tag as OakHeadingTag} />,
+    );
 
-      expect(getByRole("heading", { level: 1 })).toBeTruthy();
-    },
-  );
+    expect(getByRole("heading", { level })).toBeTruthy();
+  });
   test.each(Object.keys(oakAllFonts))(
     'should correctly handle prop $font="%s"',
     async (font) => {

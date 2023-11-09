@@ -19,7 +19,10 @@ const OakP = styled.p<OakPProps>`
   ${marginStyle}
 
   a {
-    color: ${(props) => props.theme.uiColors["text-link-active"]};
+    color: ${(props) =>
+      props.theme &&
+      props.theme.uiColors &&
+      props.theme.uiColors["text-link-active"]};
   }
 `;
 

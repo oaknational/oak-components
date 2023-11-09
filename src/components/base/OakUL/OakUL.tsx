@@ -1,11 +1,10 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { OakBoxProps, oakBoxCss } from "../OakBox";
 
-import { FlexCssProps, flexStyle } from "@/styles";
-import { OakDefaultULProps, defaultULStyle } from "@/styles/utils/ulStyles";
-
-export type OakULProps = OakBoxProps & OakDefaultULProps;
+export type OakULProps = OakBoxProps & {
+  $reset?: boolean;
+};
 /**
  * Styled `ul` (unordered list) component.
  *
@@ -16,15 +15,14 @@ export type OakULProps = OakBoxProps & OakDefaultULProps;
  * */
 
 const OakUL = styled.ul<OakULProps>`
-  ${defaultULStyle}
+  ${(props) =>
+    props.$reset &&
+    css`
+      list-style: none;
+      padding: 0;
+    `}
+  margin: 0;
   ${oakBoxCss}
-`;
-
-/**
- * Styled 'ul' extended with properties of Flex
- */
-export const OakFlexList = styled(OakUL)<OakULProps & FlexCssProps>`
-  ${flexStyle}
 `;
 
 export default OakUL;
