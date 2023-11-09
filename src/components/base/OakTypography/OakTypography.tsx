@@ -1,15 +1,12 @@
 import styled from "styled-components";
 
-// import {
-//   typographyStyle,
-//   TypographyProps,
-// } from "@/styles/utils/typographyStyle";
-
+import {
+  typographyStyle,
+  OakTypographyCssProps,
+} from "@/styles/utils/typographyStyle";
 import { OakBox, OakBoxProps } from "@/components/base/OakBox";
 
-// TODO: Implement once typography is implemented
-// type TypographyComponent = OakBoxProps & TypographyProps;
-export type OakTypographyProps = OakBoxProps;
+export type OakTypographyProps = OakBoxProps & OakTypographyCssProps;
 
 /**
  * The Typography component sets a typography style context from which children
@@ -19,8 +16,6 @@ export type OakTypographyProps = OakBoxProps;
  * Use this component whenever you want to style blocks of 'body' text.
  */
 
-// const Typography = styled(OakBox)<TypographyComponent>`
-//   ${typography}
-// `;
-
-export const OakTypography = styled(OakBox)<OakTypographyProps>``;
+export const OakTypography = styled(OakBox)<OakTypographyProps>`
+  ${typographyStyle}
+`;

@@ -30,7 +30,7 @@ const meta: Meta<typeof OakSpan> = {
         ...Object.keys(colorArgTypes),
         ...Object.keys(sizeArgTypes),
         ...Object.keys(spacingArgTypes),
-        ...Object.keys(opacityArgTypes),
+        ...Object.keys(opacityArgTypes), // TODO:  add typography controls once they are implemented
       ],
       sort: "none",
     },

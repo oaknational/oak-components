@@ -1,10 +1,12 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
+import styled from "styled-components";
 
 import { OakFlex } from "../OakFlex";
 
-import { OakBox } from "./OakBox";
+import { OakBox, OakBoxProps } from "./OakBox";
 
+import { parseColor } from "@/styles/helpers/parseColor";
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
@@ -12,6 +14,7 @@ import { positionArgTypes } from "@/storybook-helpers/positionStyleHelpers";
 import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";
 import { opacityArgTypes } from "@/storybook-helpers/opacityStyleHelpers";
 import { zIndexArgTypes } from "@/storybook-helpers/zIndexStyleHelpers";
+import { transitionArgTypes } from "@/storybook-helpers/transitionStyleHelpers";
 
 const meta: Meta<typeof OakBox> = {
   component: OakBox,
@@ -25,6 +28,7 @@ const meta: Meta<typeof OakBox> = {
     ...borderArgTypes,
     ...opacityArgTypes,
     ...zIndexArgTypes,
+    ...transitionArgTypes,
   },
   parameters: {
     controls: {
@@ -176,6 +180,36 @@ export const OpacityAndZIndex: Story = {
         ...Object.keys(opacityArgTypes),
         ...Object.keys(zIndexArgTypes),
       ],
+    },
+  },
+};
+
+export const TransitionAndTransform: Story = {
+  render: (args) => {
+    const HoverBox = styled(OakBox)<OakBoxProps>`
+      &:hover {
+        transform: ${() => args.$transform};
+        background-color: ${() => parseColor(args.$background)};
+      }
+    `;
+    return (
+      <HoverBox
+        $pa="inner-padding-xl"
+        $width="all-spacing-18"
+        $background="mint"
+        $transition={args.$transition}
+      >
+        Hover over me to change
+      </HoverBox>
+    );
+  },
+  args: {
+    $background: "red",
+    $transform: "scale(1.2)",
+  },
+  parameters: {
+    controls: {
+      include: ["$transition", "$background", "$transform"],
     },
   },
 };
