@@ -39,7 +39,7 @@ type Story = StoryObj<typeof OakHeading>;
 
 export const DefaultOakFlex: Story = (args: Partial<OakHeadingProps>) => (
   <OakHeading data-testId="OakHeading-id" tag={"div"} {...args}>
-    HEADING
+    Heading
   </OakHeading>
 );
 
