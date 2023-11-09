@@ -10,7 +10,7 @@ import { parseSpacing } from "@/styles/helpers/parseSpacing";
 
 type PositionSpacing = OakAllSpacing | OakSpaceBetween | null | undefined;
 
-export type PositionProps = {
+export type OakPositionProps = {
   $position?: ResponsiveValues<CSSProperties["position"]>;
   $top?: ResponsiveValues<PositionSpacing>;
   $right?: ResponsiveValues<PositionSpacing>;
@@ -24,7 +24,7 @@ export type PositionProps = {
   $visibility?: ResponsiveValues<CSSProperties["visibility"]>;
 };
 
-export const positionStyle = css<PositionProps>`
+export const positionStyle = css<OakPositionProps>`
   ${responsiveStyle("position", (props) => props.$position)}
   ${responsiveStyle("top", (props) => props.$top, parseSpacing)} 
   ${responsiveStyle("right", (props) => props.$right, parseSpacing)} 

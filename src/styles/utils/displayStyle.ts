@@ -6,10 +6,10 @@ import {
   responsiveStyle,
 } from "@/styles/utils/responsiveStyle";
 
-export type DisplayProps = {
+export type OakDisplayProps = {
   $display?: ResponsiveValues<CSSProperties["display"]>;
 };
 
-export const displayStyle = css<DisplayProps>`
+export const displayStyle = css<OakDisplayProps>`
   ${responsiveStyle("display", (props) => props.$display)}
 `;

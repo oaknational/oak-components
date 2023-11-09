@@ -8,11 +8,7 @@ import {
 import { OakAllSpacing, OakSpaceBetween } from "@/styles/theme/spacing";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 
-/**
- *  QUESTION: Does this file belong here, it's similar to the more generic style utils but could be co-located with the flex component ?
- */
-
-export type FlexCssProps = {
+export type OakFlexCssProps = {
   $flexDirection?: ResponsiveValues<CSSProperties["flexDirection"]>;
   $flexWrap?: ResponsiveValues<CSSProperties["flexWrap"]>;
   $alignItems?: ResponsiveValues<CSSProperties["alignItems"]>;
@@ -34,7 +30,7 @@ export type FlexCssProps = {
   >;
 };
 
-export const flexStyle = css<FlexCssProps>`
+export const flexStyle = css<OakFlexCssProps>`
   display: flex;
   ${responsiveStyle("flex-direction", (props) => props.$flexDirection)}
   ${responsiveStyle("flex-wrap", (props) => props.$flexWrap)}

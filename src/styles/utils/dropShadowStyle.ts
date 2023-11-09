@@ -7,11 +7,11 @@ import {
   responsiveStyle,
 } from "@/styles/utils/responsiveStyle";
 
-export type DropShadowProps = {
+export type OakDropShadowProps = {
   $dropShadow?: ResponsiveValues<OakAllDropShadows>;
 };
 
-export const dropShadowStyle = css<DropShadowProps>`
+export const dropShadowStyle = css<OakDropShadowProps>`
   ${responsiveStyle(
     "box-shadow",
     (props) => props.$dropShadow,

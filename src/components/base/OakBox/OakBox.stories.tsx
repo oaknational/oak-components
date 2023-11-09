@@ -10,6 +10,7 @@ import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
 import { positionArgTypes } from "@/storybook-helpers/positionStyleHelpers";
 import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";
+import { opacityArgTypes } from "@/storybook-helpers/opacityStyleHelpers";
 
 const meta: Meta<typeof OakBox> = {
   component: OakBox,
@@ -21,16 +22,11 @@ const meta: Meta<typeof OakBox> = {
     ...spacingArgTypes,
     ...positionArgTypes,
     ...borderArgTypes,
+    ...opacityArgTypes,
   },
   parameters: {
     controls: {
-      include: [
-        ...Object.keys(colorArgTypes),
-        ...Object.keys(sizeArgTypes),
-        ...Object.keys(spacingArgTypes),
-        ...Object.keys(positionArgTypes),
-      ],
-      sort: "none",
+      include: [],
     },
   },
 };
@@ -148,32 +144,31 @@ export const DropShadow: Story = {
 export const OpacityAndZIndex: Story = {
   render: (args) => (
     <OakBox $width={"100%"} $height={"100vh"}>
-      <OakBox data-testId="box-id" {...args} $pa="inner-padding-xl">
-        Use controls to change border style
-      </OakBox>
-
-      <OakBox data-testId="box-id" $pa="inner-padding-xl" $ba="border-solid-s">
-        Border Solid Small
-      </OakBox>
-
-      <OakBox data-testId="box-id" $pa="inner-padding-xl" $ba="border-solid-m">
-        Border Solid Medium
-      </OakBox>
-
       <OakBox
-        data-testId="box-id"
         $pa="inner-padding-xl"
-        $ba="border-solid-m"
-        $borderRadius={"border-radius-m"}
+        $width="all-spacing-18"
+        $height="all-spacing-18"
+        $background="red"
+        $position="absolute"
+        $left="space-between-l"
+        $top="space-between-l"
       >
-        Border Radius Medium
+        Fixed Box
+      </OakBox>
+      <OakBox
+        {...args}
+        $pa="inner-padding-xl"
+        $width="all-spacing-18"
+        $height="all-spacing-18"
+        $background="blue"
+        $position="absolute"
+      >
+        Adjust the opacity and z-index using controls
       </OakBox>
     </OakBox>
   ),
-  args: {
-    $background: "mint",
-  },
+  args: {},
   parameters: {
-    controls: { include: [...Object.keys(borderArgTypes)] },
+    controls: { include: [...Object.keys(opacityArgTypes)] },
   },
 };

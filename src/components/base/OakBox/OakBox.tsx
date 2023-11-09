@@ -7,29 +7,29 @@ import styled, { css } from "styled-components";
 
 import {
   colorStyle,
-  ColorProps,
+  OakColorProps,
   positionStyle,
-  PositionProps,
+  OakPositionProps,
   sizeStyle,
-  SizeProps,
+  OakSizeProps,
   spacingStyle,
   SpacingProps,
   borderStyle,
   BorderProps,
   displayStyle,
-  DisplayProps,
+  OakDisplayProps,
   dropShadowStyle,
-  DropShadowProps,
+  OakDropShadowProps,
   opacityStyle,
-  OpacityProps,
+  OakOpacityProps,
   transformStyle,
-  TransformProps,
+  OakTransformProps,
   transitionStyle,
-  TransitionProps,
+  OakTransitionProps,
   typographyStyle,
-  TypographyProps,
+  OakTypographyProps,
   zIndexStyle,
-  ZIndexProps,
+  OakZIndexProps,
 } from "@/styles";
 
 // TODO: these are not yet implemented
@@ -42,18 +42,18 @@ type HTMLProps = {
 
 export type OakBoxProps = {
   children?: React.ReactNode;
-} & PositionProps &
-  SizeProps &
+} & OakPositionProps &
+  OakSizeProps &
   SpacingProps &
-  ColorProps &
+  OakColorProps &
   BorderProps &
-  DisplayProps &
-  DropShadowProps &
-  OpacityProps &
-  TransformProps &
-  TransitionProps &
-  TypographyProps &
-  ZIndexProps &
+  OakDisplayProps &
+  OakDropShadowProps &
+  OakOpacityProps &
+  OakTransformProps &
+  OakTransitionProps &
+  OakTypographyProps &
+  OakZIndexProps &
   HTMLProps;
 
 export const oakBoxCss = css<OakBoxProps>`
