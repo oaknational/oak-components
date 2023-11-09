@@ -10,7 +10,6 @@ import {
   typographyStyle,
 } from "@/styles/utils/typographyStyle";
 
-
 type OakLIProps = OakFlexProps & TypographyProps & ListItemProps & DisplayProps;
 /**
  * Styled `li` (list item) component.

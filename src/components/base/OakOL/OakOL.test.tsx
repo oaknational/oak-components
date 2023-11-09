@@ -1,9 +1,10 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { create } from "react-test-renderer";
 
 import OakOL from "./OakOL";
+
+import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("Component OakOL", () => {
   it("renders", () => {
