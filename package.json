@@ -9,6 +9,7 @@
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs",
     "test": "jest --watch --collectCoverage=false",
+    "test:snapshot": "jest --collectCoverage=false --updateSnapshot",
     "test:ci": "jest",
     "check-types": "tsc",
     "format": "prettier '**/*.{j,t}{s,sx}' --write",
