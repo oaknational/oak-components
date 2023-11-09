@@ -4,3 +4,4 @@ export * from "./OakBaseCard";
 export * from "./OakSpan";
 export * from "./OakForm";
 export * from "./OakImage";
+export * from "./OakTypography";

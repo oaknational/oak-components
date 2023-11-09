@@ -11,6 +11,7 @@ import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
 import { positionArgTypes } from "@/storybook-helpers/positionStyleHelpers";
 import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";
 import { opacityArgTypes } from "@/storybook-helpers/opacityStyleHelpers";
+import { zIndexArgTypes } from "@/storybook-helpers/zIndexStyleHelpers";
 
 const meta: Meta<typeof OakBox> = {
   component: OakBox,
@@ -23,6 +24,7 @@ const meta: Meta<typeof OakBox> = {
     ...positionArgTypes,
     ...borderArgTypes,
     ...opacityArgTypes,
+    ...zIndexArgTypes,
   },
   parameters: {
     controls: {
@@ -169,6 +171,11 @@ export const OpacityAndZIndex: Story = {
   ),
   args: {},
   parameters: {
-    controls: { include: [...Object.keys(opacityArgTypes)] },
+    controls: {
+      include: [
+        ...Object.keys(opacityArgTypes),
+        ...Object.keys(zIndexArgTypes),
+      ],
+    },
   },
 };

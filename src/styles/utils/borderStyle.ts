@@ -15,7 +15,7 @@ type BorderStyleProps = ResponsiveValues<CSSProperties["borderStyle"]>;
 type BorderColorProps = ResponsiveValues<OakUiRole | OakColor>;
 type BorderRadiusProps = ResponsiveValues<OakAllBorderRadius>;
 
-export type BorderProps = {
+export type OakBorderProps = {
   $ba?: BorderWidth;
   $bt?: BorderWidth;
   $br?: BorderWidth;
@@ -62,7 +62,7 @@ const borderRadius = css<{ $borderRadius?: BorderRadiusProps }>`
   )}
 `;
 
-export const borderStyle = css<BorderProps>`
+export const borderStyle = css<OakBorderProps>`
   ${borderAll}
   ${borderTop}
   ${borderRight}

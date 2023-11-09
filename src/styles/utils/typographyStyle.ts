@@ -18,7 +18,7 @@ import {
   responsiveStyle,
 } from "@/styles/utils/responsiveStyle";
 
-export type OakTypographyProps = {
+export type OakTypographyCssProps = {
   $font?: ResponsiveValues<OakAllFonts>;
   $textDecoration?: ResponsiveValues<OakAllTextDecoration>;
   $textAlign?: ResponsiveValues<CSSProperties["textAlign"]>;
@@ -27,7 +27,7 @@ export type OakTypographyProps = {
   $textOverflow?: ResponsiveValues<OakAllTextOverflow>;
 };
 
-export const typographyStyle = css<OakTypographyProps>`
+export const typographyStyle = css<OakTypographyCssProps>`
   font-family: Lexend, sans-serif;
   ${responsiveStyle("font-weight", (props) => props.$font, parseFontWeight)}
   ${responsiveStyle("font-size", (props) => props.$font, parseFontSize)}

@@ -15,7 +15,7 @@ import {
   spacingStyle,
   SpacingProps,
   borderStyle,
-  BorderProps,
+  OakBorderProps,
   displayStyle,
   OakDisplayProps,
   dropShadowStyle,
@@ -27,7 +27,7 @@ import {
   transitionStyle,
   OakTransitionProps,
   typographyStyle,
-  OakTypographyProps,
+  OakTypographyCssProps,
   zIndexStyle,
   OakZIndexProps,
 } from "@/styles";
@@ -46,13 +46,13 @@ export type OakBoxProps = {
   OakSizeProps &
   SpacingProps &
   OakColorProps &
-  BorderProps &
+  OakBorderProps &
   OakDisplayProps &
   OakDropShadowProps &
   OakOpacityProps &
   OakTransformProps &
   OakTransitionProps &
-  OakTypographyProps &
+  OakTypographyCssProps &
   OakZIndexProps &
   HTMLProps;
 
