@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakImage matches snapshot 1`] = `
+<img
+  alt="a test image"
+  className="sc-aXZVg iLZleo"
+  data-nimg="1"
+  decoding="async"
+  height={0}
+  loading="lazy"
+  onError={[Function]}
+  onLoad={[Function]}
+  src="/_next/image?url=%2F..%2F..%2F..%2F..%2Fassets%2Foak-national-academy-logo-512.png&w=16&q=75"
+  srcSet="/_next/image?url=%2F..%2F..%2F..%2F..%2Fassets%2Foak-national-academy-logo-512.png&w=16&q=75 1x"
+  style={
+    {
+      "color": "transparent",
+    }
+  }
+  width={0}
+/>
+`;

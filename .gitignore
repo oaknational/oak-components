@@ -3,3 +3,5 @@ dist
 coverage
 types
 tsconfig.tsbuildinfo
+.DS_Store
+.env.local

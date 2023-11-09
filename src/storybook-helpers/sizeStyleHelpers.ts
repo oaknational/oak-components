@@ -1,7 +1,7 @@
 import { oakAllSpacingPx } from "@/styles/theme/spacing";
 
 const sizeCtl = {
-  options: Object.keys(oakAllSpacingPx),
+  options: [...Object.keys(oakAllSpacingPx), "auto"],
   control: { type: "select" },
 };
 
