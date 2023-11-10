@@ -45,6 +45,7 @@ export type OakBaseButtonProps = StyledButtonProps & {
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
     duration: number,
   ) => void;
+  children?: React.ReactNode;
 };
 
 export const OakBaseButton = (props: OakBaseButtonProps) => {
@@ -60,6 +61,7 @@ export const OakBaseButton = (props: OakBaseButtonProps) => {
 
   const handleMouseEnter = () => {
     hoverStart.current = Date.now();
+    console.log("handleMouseEnter", hoverStart.current);
   };
 
   const handleMouseLeave = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -76,7 +78,7 @@ export const OakBaseButton = (props: OakBaseButtonProps) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      Some text
+      {props.children}
     </StyledButton>
   );
 };

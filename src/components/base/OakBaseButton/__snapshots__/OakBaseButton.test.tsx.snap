@@ -7,6 +7,6 @@ exports[`OakBaseButton matches snapshot 1`] = `
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
-  Some text
+  Click Me
 </button>
 `;
