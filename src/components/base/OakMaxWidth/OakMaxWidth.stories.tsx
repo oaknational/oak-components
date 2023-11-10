@@ -8,7 +8,7 @@ import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
 import { flexArgTypes } from "@/storybook-helpers/flexStyleHelpers";
 /**
  *
- * OakFlex extends OakBox by exposing flexbox related props.
+ * OakMaxWidth is a OakFlex with default max-width and paddings set it also exposes flexbox related props.
  * All size, color, spacing and position props are available but not displayed in the controls here.
  *
  */
@@ -34,8 +34,8 @@ export default meta;
 type Story = StoryObj<typeof OakMaxWidth>;
 
 export const DefaultOakMaxWidth: Story = (args: Partial<OakMaxWidthProps>) => (
-  <OakMaxWidth data-testId="OakFlex-id" {...args}>
-    A simple flex container without nested content
+  <OakMaxWidth data-testId="OakMaxWidth-id" {...args}>
+    A simple flex container with pre set padding and max width
   </OakMaxWidth>
 );
 
