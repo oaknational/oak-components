@@ -1,0 +1,1 @@
+export { OakAspectRatio } from "./OakAspectRatio";
