@@ -1,12 +1,9 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakHeading, OakHeadingProps } from "./OakHeading";
+import { OakHeading, OakHeadingProps, oakHeadingTags } from "./OakHeading";
 
-import {
-  typographyArgTypes,
-  tagArgTypes,
-} from "@/storybook-helpers/typographyStyleHelpers";
+import { typographyArgTypes } from "@/storybook-helpers/typographyStyleHelpers";
 
 /**
  *
@@ -21,14 +18,14 @@ const meta: Meta<typeof OakHeading> = {
   title: "components/base/OakHeading",
   argTypes: {
     ...typographyArgTypes,
-    ...tagArgTypes,
+    tag: {
+      options: oakHeadingTags,
+      control: { type: "select" },
+    },
   },
   parameters: {
     controls: {
-      include: [
-        ...Object.keys(typographyArgTypes),
-        ...Object.keys(tagArgTypes),
-      ],
+      include: ["tag", ...Object.keys(typographyArgTypes)],
       sort: "none",
     },
   },
@@ -38,12 +35,12 @@ export default meta;
 type Story = StoryObj<typeof OakHeading>;
 
 export const DefaultOakFlex: Story = (args: Partial<OakHeadingProps>) => (
-  <OakHeading data-testId="OakHeading-id" tag={"div"} {...args}>
+  <OakHeading data-testId="OakHeading-id" {...args} tag={args.tag ?? "div"}>
     Heading
   </OakHeading>
 );
 
 DefaultOakFlex.args = {
-  $color: "black",
   $font: "heading-1",
+  tag: "h1",
 };

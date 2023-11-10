@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import OakP, { OakPProps } from "./OakP";
+import { OakP, OakPProps } from "./OakP";
 
 import { typographyArgTypes } from "@/storybook-helpers/typographyStyleHelpers";
 

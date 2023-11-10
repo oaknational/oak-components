@@ -10,10 +10,11 @@ import {
   typographyStyle,
 } from "@/styles/utils/typographyStyle";
 
-type OakLIProps = OakFlexProps &
+export type OakLIProps = OakFlexProps &
   OakTypographyCssProps &
   ListItemProps &
   OakDisplayProps;
+
 /**
  * Styled `li` (list item) component.
  *
@@ -21,8 +22,9 @@ type OakLIProps = OakFlexProps &
  *
  * Places where we directly want to style a list item
  *
- * */
-const OakLI = styled.li<OakLIProps>`
+ **/
+
+export const OakLI = styled.li<OakLIProps>`
   ${oakBoxCss}
   ${flexStyle}
   ${typographyStyle}
@@ -32,5 +34,3 @@ const OakLI = styled.li<OakLIProps>`
 OakLI.defaultProps = {
   $display: "revert",
 };
-
-export default OakLI;

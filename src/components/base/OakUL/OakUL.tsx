@@ -5,6 +5,7 @@ import { OakBoxProps, oakBoxCss } from "../OakBox";
 export type OakULProps = OakBoxProps & {
   $reset?: boolean;
 };
+
 /**
  * Styled `ul` (unordered list) component.
  *
@@ -14,7 +15,7 @@ export type OakULProps = OakBoxProps & {
  *
  * */
 
-const OakUL = styled.ul<OakULProps>`
+export const OakUL = styled.ul<OakULProps>`
   ${(props) =>
     props.$reset &&
     css`
@@ -24,5 +25,3 @@ const OakUL = styled.ul<OakULProps>`
   margin: 0;
   ${oakBoxCss}
 `;
-
-export default OakUL;

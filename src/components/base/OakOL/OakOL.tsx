@@ -1,8 +1,16 @@
 import styled from "styled-components";
 
-import { OakColorProps, MarginProps, colorStyle, marginStyle } from "@/styles";
+import {
+  OakColorProps,
+  colorStyle,
+  MarginProps,
+  marginStyle,
+  typographyStyle,
+  OakTypographyCssProps,
+} from "@/styles";
 
-export type OakOLProps = MarginProps & OakColorProps;
+export type OakOLProps = MarginProps & OakColorProps & OakTypographyCssProps;
+
 /**
  * Styled `ol` (ordered list) component.
  *
@@ -11,9 +19,7 @@ export type OakOLProps = MarginProps & OakColorProps;
  * Use where we have an ordered list to ensure numbers are styled
  *
  * */
-const OakOL = styled.ol<OakOLProps>`
-  ${marginStyle}
-  ${colorStyle}
+export const OakOL = styled.ol<OakOLProps>`
   counter-reset: item;
   padding: 0;
 
@@ -44,7 +50,8 @@ const OakOL = styled.ol<OakOLProps>`
       props.theme &&
       props.theme.uiColors &&
       props.theme.uiColors["text-link-active"]};
-  }w
+  }
+  ${marginStyle}
+  ${colorStyle}
+  ${typographyStyle}
 `;
-
-export default OakOL;

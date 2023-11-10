@@ -1,17 +1,16 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import OakLabel, { OakLabelProps } from "./OakLabel";
+import { OakLabel, OakLabelProps } from "./OakLabel";
 
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
-import { opacityArgTypes } from "@/storybook-helpers/opacityStyleHelpers";
 import { typographyArgTypes } from "@/storybook-helpers/typographyStyleHelpers";
 
 /**
  *
- * OakSpan applies the Oak typography styles to the text content in addition to color, opacity, margin, padding and border styles.
+ * Applies typography styles to a label element in addition to color, opacity, margin, padding and border styles.
  *
  */
 
@@ -24,7 +23,6 @@ const meta: Meta<typeof OakLabel> = {
     ...colorArgTypes,
     ...sizeArgTypes,
     ...spacingArgTypes,
-    ...opacityArgTypes,
   },
   parameters: {
     controls: {
@@ -33,7 +31,6 @@ const meta: Meta<typeof OakLabel> = {
         ...Object.keys(colorArgTypes),
         ...Object.keys(sizeArgTypes),
         ...Object.keys(spacingArgTypes),
-        ...Object.keys(opacityArgTypes),
       ],
       sort: "none",
     },

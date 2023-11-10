@@ -1,4 +1,3 @@
-import { oakHeadingTags } from "@/components/base/OakHeading/OakHeading";
 import {
   oakAllFonts,
   oakAllTextDecoration,
@@ -6,13 +5,6 @@ import {
   oakAllWhiteSpaces,
   oakAllWordWrap,
 } from "@/styles/theme/typography";
-
-export const tagArgTypes = {
-  tag: {
-    options: oakHeadingTags,
-    control: { type: "select" },
-  },
-};
 
 export const typographyArgTypes = {
   $font: {
