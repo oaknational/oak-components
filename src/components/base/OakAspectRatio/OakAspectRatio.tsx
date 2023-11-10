@@ -6,11 +6,11 @@ import {
   responsiveStyle,
 } from "@/styles/utils/responsiveStyle";
 
-export const oakAllApectRatios = ["7:8", "2:3", "1:1", "3:2", "16:9"] as const;
-export type OakAllApectRatios = (typeof oakAllApectRatios)[number];
+const oakAllApectRatios = ["7:8", "2:3", "1:1", "3:2", "16:9"] as const;
+type OakAllApectRatios = (typeof oakAllApectRatios)[number];
 
 const oakAllApecPercentages = [114, 150, 100, 66.66, 56.25] as const;
-export type OakAllApecPercentages = (typeof oakAllApecPercentages)[number];
+type OakAllApecPercentages = (typeof oakAllApecPercentages)[number];
 
 const oakAspectRatioPercentage: Record<
   OakAllApectRatios,
@@ -26,7 +26,7 @@ const oakAspectRatioPercentage: Record<
 const parseRatioToPercentage = (ratio?: OakAllApectRatios | null) =>
   ratio ? `${oakAspectRatioPercentage[ratio]}%` : undefined;
 
-export type OakAspectRatioValues = ResponsiveValues<OakAllApectRatios>;
+type OakAspectRatioValues = ResponsiveValues<OakAllApectRatios>;
 type OakAspectRatioOuterProps = {
   ratio: OakAspectRatioValues;
 };
@@ -50,7 +50,7 @@ const OakAspectRatioInner = styled.div`
   top: 0;
 `;
 
-type OakAspectRatioProps = {
+export type OakAspectRatioProps = {
   children?: React.ReactNode;
 } & OakAspectRatioOuterProps;
 /**

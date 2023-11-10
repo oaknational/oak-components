@@ -1,1 +1,1 @@
-export { OakAspectRatio } from "./OakAspectRatio";
+export * from "./OakAspectRatio";

@@ -1,1 +1,1 @@
-export { OakAnchorTarget } from "./OakAnchorTarget";
+export * from "./OakAnchorTarget";

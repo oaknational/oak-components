@@ -13,7 +13,7 @@ import { responsiveStyle } from "@/styles/utils/responsiveStyle";
  *
  * */
 
-type AnchorTargetProps = OakPaddingProps;
+export type AnchorTargetProps = OakPaddingProps;
 
 export const OakAnchorTarget = styled.span<AnchorTargetProps>`
   position: absolute;

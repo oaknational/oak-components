@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { OakFlex } from "../OakFlex";
+import { OakFlex, OakFlexProps } from "../OakFlex";
 
 /**
  * This component will provide a default maxWidth and ph value, it take Flex props.
@@ -9,6 +9,7 @@ import { OakFlex } from "../OakFlex";
  * This will make it easier to create full browser width or custom width containers on the same page
  * with different background colors / image url.
  */
+export type OakMaxWidthProps = OakFlexProps;
 export const OakMaxWidth = styled(OakFlex)``;
 
 OakMaxWidth.defaultProps = {

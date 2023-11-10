@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const screenReaderStyle = css`
+const screenReaderStyle = css`
   position: absolute;
   width: 1px;
   height: 1px;
