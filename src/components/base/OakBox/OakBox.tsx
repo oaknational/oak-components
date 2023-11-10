@@ -13,7 +13,7 @@ import {
   sizeStyle,
   OakSizeProps,
   spacingStyle,
-  SpacingProps,
+  OakSpacingProps,
   borderStyle,
   OakBorderProps,
   displayStyle,
@@ -44,7 +44,7 @@ export type OakBoxProps = {
   children?: React.ReactNode;
 } & OakPositionProps &
   OakSizeProps &
-  SpacingProps &
+  OakSpacingProps &
   OakColorProps &
   OakBorderProps &
   OakDisplayProps &

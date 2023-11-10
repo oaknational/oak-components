@@ -2,10 +2,15 @@ import styled from "styled-components";
 
 import { OakTypographyProps } from "../OakTypography";
 
-import { OakColorProps, MarginProps, colorStyle, marginStyle } from "@/styles";
+import {
+  OakColorProps,
+  OakMarginProps,
+  colorStyle,
+  marginStyle,
+} from "@/styles";
 import { typographyStyle } from "@/styles/utils/typographyStyle";
 
-export type OakPProps = MarginProps & OakTypographyProps & OakColorProps;
+export type OakPProps = OakMarginProps & OakTypographyProps & OakColorProps;
 
 /**
  * Styled `p` (paragraph) component.
