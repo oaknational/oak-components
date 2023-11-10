@@ -6,9 +6,8 @@ import { OakTypography, OakTypographyProps } from "./OakTypography";
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
-import { opacityArgTypes } from "@/storybook-helpers/opacityStyleHelpers";
-
-// TODO: missing Typograpphy args . Implement once typography is implemented
+import { typographyArgTypes } from "@/storybook-helpers/typographyStyleHelpers";
+import { positionArgTypes } from "@/storybook-helpers/positionStyleHelpers";
 
 /**
  *
@@ -25,18 +24,21 @@ const meta: Meta<typeof OakTypography> = {
   tags: ["autodocs"],
   title: "components/base/OakTypography",
   argTypes: {
+    ...typographyArgTypes,
     ...colorArgTypes,
     ...sizeArgTypes,
     ...spacingArgTypes,
-    ...opacityArgTypes,
+    ...positionArgTypes,
   },
   parameters: {
     controls: {
       include: [
-        ...Object.keys(colorArgTypes),
-        ...Object.keys(sizeArgTypes),
-        ...Object.keys(spacingArgTypes),
-        ...Object.keys(opacityArgTypes),
+        ...Object.keys(typographyArgTypes),
+        "$width",
+        "$height",
+        "$overflow",
+        "$overflowX",
+        "$overflowY",
       ],
       sort: "none",
     },
@@ -60,4 +62,7 @@ export const DefaultOakTypography: Story = (
   </OakTypography>
 );
 
-DefaultOakTypography.args = {};
+DefaultOakTypography.args = {
+  $font: "body-1",
+  $overflow: null,
+};

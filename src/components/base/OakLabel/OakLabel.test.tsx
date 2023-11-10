@@ -3,7 +3,7 @@ import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 import { create } from "react-test-renderer";
 
-import OakLabel from "./OakLabel";
+import { OakLabel } from "./OakLabel";
 
 describe("Component OakLabel", () => {
   it("renders", () => {

@@ -3,7 +3,7 @@ import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 import { create } from "react-test-renderer";
 
-import OakLI from "./OakLI";
+import { OakLI } from "./OakLI";
 
 describe("Component OakLI", () => {
   it("renders", () => {

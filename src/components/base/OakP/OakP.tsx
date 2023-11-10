@@ -6,6 +6,7 @@ import { OakColorProps, MarginProps, colorStyle, marginStyle } from "@/styles";
 import { typographyStyle } from "@/styles/utils/typographyStyle";
 
 export type OakPProps = MarginProps & OakTypographyProps & OakColorProps;
+
 /**
  * Styled `p` (paragraph) component.
  * ## Usage
@@ -13,7 +14,7 @@ export type OakPProps = MarginProps & OakTypographyProps & OakColorProps;
  * However, if you want different styles for a particular paragraph,
  * you can use this component to apply additional styles.
  */
-const OakP = styled.p<OakPProps>`
+export const OakP = styled.p<OakPProps>`
   ${typographyStyle}
   ${colorStyle}
   ${marginStyle}
@@ -25,5 +26,3 @@ const OakP = styled.p<OakPProps>`
       props.theme.uiColors["text-link-active"]};
   }
 `;
-
-export default OakP;

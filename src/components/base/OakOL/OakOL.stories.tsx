@@ -1,15 +1,14 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import OakOL, { OakOLProps } from "../OakOL/OakOL";
-import OakLI from "../OakLI/OakLI";
+import { OakOL, OakOLProps } from "../OakOL/OakOL";
+import { OakLI } from "../OakLI/OakLI";
 
-import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
-import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
+import { typographyArgTypes } from "@/storybook-helpers/typographyStyleHelpers";
 
 /**
  *
- * OakOL is a style ol tag.
+ * OakOL is a styled ol tag.
  * Use the controls to view different font styles.
  *
  */
@@ -19,12 +18,11 @@ const meta: Meta<typeof OakOL> = {
   tags: ["autodocs"],
   title: "components/base/OakOL",
   argTypes: {
-    ...colorArgTypes,
-    ...spacingArgTypes,
+    ...typographyArgTypes,
   },
   parameters: {
     controls: {
-      include: [...Object.keys(colorArgTypes), ...Object.keys(spacingArgTypes)],
+      include: [...Object.keys(typographyArgTypes)],
       sort: "none",
     },
   },
@@ -41,6 +39,4 @@ export const DefaultOakOL: Story = (args: Partial<OakOLProps>) => (
   </OakOL>
 );
 
-DefaultOakOL.args = {
-  $color: "black",
-};
+DefaultOakOL.args = { $font: "list-item-1" };

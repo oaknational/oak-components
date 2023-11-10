@@ -23,7 +23,9 @@ export const oakHeadingTags = [
   "h5",
   "h6",
 ] as const;
+
 export type OakHeadingTag = (typeof oakHeadingTags)[number];
+
 type OakHeadingTagProps = {
   children?: React.ReactNode;
   id?: string;

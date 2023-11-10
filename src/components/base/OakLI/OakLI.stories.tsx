@@ -1,36 +1,29 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakUL, OakULProps } from "../OakUL/OakUL";
-import { OakLI } from "../OakLI/OakLI";
+import { OakLI } from "./OakLI";
 
+import { OakUL, OakULProps } from "@/components/base/OakUL";
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
-import { typographyArgTypes } from "@/storybook-helpers/typographyStyleHelpers";
 
 /**
  *
- * OakUL is a style ol tag.
- * Use the controls to view different font styles.
+ * A styled LI tag. To be used inside OakUL or OakOL.
  *
  */
 
 const meta: Meta<typeof OakUL> = {
-  component: OakUL,
+  component: OakLI,
   tags: ["autodocs"],
-  title: "components/base/OakUL",
+  title: "components/base/OakLI",
   argTypes: {
     ...colorArgTypes,
     ...spacingArgTypes,
-    ...typographyArgTypes,
   },
   parameters: {
     controls: {
-      include: [
-        ...Object.keys(colorArgTypes),
-        ...Object.keys(typographyArgTypes),
-      ],
-      sort: "none",
+      include: [],
     },
   },
 };
@@ -46,7 +39,4 @@ export const DefaultOakUL: Story = (args: Partial<OakULProps>) => (
   </OakUL>
 );
 
-DefaultOakUL.args = {
-  $color: "black",
-  $font: "list-item-1",
-};
+DefaultOakUL.args = { $font: "list-item-1" };
