@@ -5,32 +5,33 @@ import styled, { css } from "styled-components";
  * OakBox exposes all the styles that are available styles on a div element.
  */
 
+import { colorStyle, ColorStyleProps } from "@/styles/utils/colorStyle";
 import {
-  colorStyle,
-  OakColorProps,
   positionStyle,
-  OakPositionProps,
-  sizeStyle,
-  OakSizeProps,
-  spacingStyle,
-  OakSpacingProps,
-  borderStyle,
-  OakBorderProps,
-  displayStyle,
-  OakDisplayProps,
+  PositionStyleProps,
+} from "@/styles/utils/positionStyle";
+import { sizeStyle, SizeStyleProps } from "@/styles/utils/sizeStyle";
+import { spacingStyle, SpacingStyleProps } from "@/styles/utils/spacingStyle";
+import { borderStyle, BorderStyleProps } from "@/styles/utils/borderStyle";
+import { displayStyle, DisplayStyleProps } from "@/styles/utils/displayStyle";
+import {
   dropShadowStyle,
-  OakDropShadowProps,
-  opacityStyle,
-  OakOpacityProps,
+  DropShadowStyleProps,
+} from "@/styles/utils/dropShadowStyle";
+import { opacityStyle, OpacityStyleProps } from "@/styles/utils/opacityStyle";
+import {
   transformStyle,
-  OakTransformProps,
+  TransformStyleProps,
+} from "@/styles/utils/transformStyle";
+import {
   transitionStyle,
-  OakTransitionProps,
+  TransitionStyleProps,
+} from "@/styles/utils/transitionStyle";
+import {
   typographyStyle,
-  OakTypographyCssProps,
-  zIndexStyle,
-  OakZIndexProps,
-} from "@/styles";
+  TypographyStyleProps,
+} from "@/styles/utils/typographyStyle";
+import { zIndexStyle, ZIndexStyleProps } from "@/styles/utils/zIndexStyle";
 
 // TODO: these are not yet implemented
 // import cover, { CoverProps } from "@/styles/utils/coverStyle";
@@ -42,18 +43,18 @@ type HTMLProps = {
 
 export type OakBoxProps = {
   children?: React.ReactNode;
-} & OakPositionProps &
-  OakSizeProps &
-  OakSpacingProps &
-  OakColorProps &
-  OakBorderProps &
-  OakDisplayProps &
-  OakDropShadowProps &
-  OakOpacityProps &
-  OakTransformProps &
-  OakTransitionProps &
-  OakTypographyCssProps &
-  OakZIndexProps &
+} & PositionStyleProps &
+  SizeStyleProps &
+  SpacingStyleProps &
+  ColorStyleProps &
+  BorderStyleProps &
+  DisplayStyleProps &
+  DropShadowStyleProps &
+  OpacityStyleProps &
+  TransformStyleProps &
+  TransitionStyleProps &
+  TypographyStyleProps &
+  ZIndexStyleProps &
   HTMLProps;
 
 export const oakBoxCss = css<OakBoxProps>`

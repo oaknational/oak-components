@@ -3,17 +3,17 @@ import styled from "styled-components";
 import { oakBoxCss } from "../OakBox";
 import { OakFlexProps } from "../OakFlex";
 
-import { OakDisplayProps, flexStyle } from "@/styles";
-import { ListItemProps, listItemStyle } from "@/styles/utils/listStyle";
+import { DisplayStyleProps, displayStyle } from "@/styles/utils/displayStyle";
+import { ListStyleProps, listStyle } from "@/styles/utils/listStyle";
 import {
-  OakTypographyCssProps,
+  TypographyStyleProps,
   typographyStyle,
 } from "@/styles/utils/typographyStyle";
 
 export type OakLIProps = OakFlexProps &
-  OakTypographyCssProps &
-  ListItemProps &
-  OakDisplayProps;
+  TypographyStyleProps &
+  ListStyleProps &
+  DisplayStyleProps;
 
 /**
  * Styled `li` (list item) component.
@@ -26,9 +26,9 @@ export type OakLIProps = OakFlexProps &
 
 export const OakLI = styled.li<OakLIProps>`
   ${oakBoxCss}
-  ${flexStyle}
   ${typographyStyle}
-  ${listItemStyle}
+  ${listStyle}
+  ${displayStyle}
 `;
 
 OakLI.defaultProps = {

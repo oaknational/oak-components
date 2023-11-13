@@ -3,22 +3,22 @@ import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 import { create } from "react-test-renderer";
 
-import { OakBaseTextInput } from "./OakBaseTextInput";
+import { InternalTextInput } from "./InternalTextInput";
 
-describe("OakBaseTextInput", () => {
+describe("InternalTextInput", () => {
   it("renders", () => {
-    const { getByTestId } = render(<OakBaseTextInput data-testid="test" />);
+    const { getByTestId } = render(<InternalTextInput data-testid="test" />);
     expect(getByTestId("test")).toBeInTheDocument();
   });
 
   it("matches snapshot", () => {
-    const tree = create(<OakBaseTextInput />).toJSON();
+    const tree = create(<InternalTextInput />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it("renders with placeholder", () => {
     const { getByPlaceholderText } = render(
-      <OakBaseTextInput placeholder="placeholder text" />,
+      <InternalTextInput placeholder="placeholder text" />,
     );
     expect(getByPlaceholderText("placeholder text")).toBeInTheDocument();
   });
@@ -26,7 +26,7 @@ describe("OakBaseTextInput", () => {
   it("calls onFocus when focused", () => {
     const onFocus = jest.fn();
     const { getByTestId } = render(
-      <OakBaseTextInput data-testid="test" onFocus={onFocus} />,
+      <InternalTextInput data-testid="test" onFocus={onFocus} />,
     );
     getByTestId("test").focus();
     getByTestId("test").blur();
@@ -39,7 +39,7 @@ describe("OakBaseTextInput", () => {
   it("calls onBlur when blurred", () => {
     const onBlur = jest.fn();
     const { getByTestId } = render(
-      <OakBaseTextInput data-testid="test" onBlur={onBlur} />,
+      <InternalTextInput data-testid="test" onBlur={onBlur} />,
     );
     getByTestId("test").focus();
     getByTestId("test").blur();
@@ -49,7 +49,7 @@ describe("OakBaseTextInput", () => {
   it("calls onInitialFocus when focused for the first time", () => {
     const onInitialFocus = jest.fn();
     const { getByTestId } = render(
-      <OakBaseTextInput data-testid="test" onInitialFocus={onInitialFocus} />,
+      <InternalTextInput data-testid="test" onInitialFocus={onInitialFocus} />,
     );
     getByTestId("test").focus();
     expect(onInitialFocus).toHaveBeenCalled();
@@ -58,7 +58,7 @@ describe("OakBaseTextInput", () => {
   it("doesn't call onInitialFocus only when focused for subsequent times", () => {
     const onInitialFocus = jest.fn();
     const { getByTestId } = render(
-      <OakBaseTextInput data-testid="test" onInitialFocus={onInitialFocus} />,
+      <InternalTextInput data-testid="test" onInitialFocus={onInitialFocus} />,
     );
     getByTestId("test").focus();
     getByTestId("test").blur();

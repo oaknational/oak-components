@@ -1,10 +1,10 @@
 import {
-  oakAllBorderRadiusPx,
-  oakAllBorderWidthsPx,
+  oakBorderRadiusTokens,
+  oakBorderWidthTokens,
 } from "@/styles/theme/borders";
 
 const borderWidthCtl = {
-  options: [...Object.keys(oakAllBorderWidthsPx), null],
+  options: [...Object.keys(oakBorderWidthTokens), null],
   control: { type: "select" },
 };
 
@@ -15,7 +15,7 @@ export const borderArgTypes = {
   $bl: borderWidthCtl,
   $br: borderWidthCtl,
   $borderRadius: {
-    options: Object.keys(oakAllBorderRadiusPx),
+    options: Object.keys(oakBorderRadiusTokens),
     control: { type: "select" },
   },
 };

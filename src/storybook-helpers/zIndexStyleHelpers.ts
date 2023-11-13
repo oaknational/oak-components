@@ -1,8 +1,8 @@
-import { oakAllZIndex } from "@/styles/theme/zIndex";
+import { oakZIndexTokens } from "@/styles/theme/zIndex";
 
 export const zIndexArgTypes = {
   $zIndex: {
-    options: Object.keys(oakAllZIndex),
+    options: Object.keys(oakZIndexTokens),
     control: { type: "select" },
   },
 };

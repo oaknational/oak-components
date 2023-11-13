@@ -1,4 +1,4 @@
-export const oakAllSpacingPx = {
+export const oakAllSpacingTokens = {
   "all-spacing-0": 0,
   "all-spacing-1": 4,
   "all-spacing-2": 8,
@@ -26,9 +26,9 @@ export const oakAllSpacingPx = {
   "all-spacing-24": 1280,
 };
 
-export type OakAllSpacing = keyof typeof oakAllSpacingPx;
+export type OakAllSpacingToken = keyof typeof oakAllSpacingTokens;
 
-export const oakInnerPaddingAllSpacing = {
+export const oakInnerPaddingTokens = {
   "inner-padding-none": "all-spacing-0",
   "inner-padding-xs": "all-spacing-2",
   "inner-padding-s": "all-spacing-3",
@@ -37,9 +37,9 @@ export const oakInnerPaddingAllSpacing = {
   "inner-padding-xl": "all-spacing-6",
 };
 
-export type OakInnerPadding = keyof typeof oakInnerPaddingAllSpacing;
+export type OakInnerPaddingToken = keyof typeof oakInnerPaddingTokens;
 
-export const oakSpaceBetweenAllSpacing = {
+export const oakSpaceBetweenTokens = {
   "space-between-none": "all-spacing-0",
   "space-between-ssx": "all-spacing-2",
   "space-between-xs": "all-spacing-3",
@@ -52,7 +52,7 @@ export const oakSpaceBetweenAllSpacing = {
   "space-between-xxxl": "all-spacing-13",
 };
 
-export type OakSpaceBetween = keyof typeof oakSpaceBetweenAllSpacing;
+export type OakSpaceBetweenToken = keyof typeof oakSpaceBetweenTokens;
 
 type AdditionalSpacingTypes =
   | "100%"
@@ -65,8 +65,8 @@ type AdditionalSpacingTypes =
   | "initial"
   | "unset";
 
-export type OakParsableSpacing =
-  | OakAllSpacing
-  | OakInnerPadding
-  | OakSpaceBetween
+export type OakCombinedSpacingToken =
+  | OakAllSpacingToken
+  | OakInnerPaddingToken
+  | OakSpaceBetweenToken
   | AdditionalSpacingTypes;

@@ -3,9 +3,9 @@ import "@testing-library/jest-dom";
 import { render, fireEvent } from "@testing-library/react";
 import { create } from "react-test-renderer";
 
-import { OakBaseButton } from "./OakBaseButton";
+import { InternalButton } from "./InternalButton";
 
-describe("OakBaseButton", () => {
+describe("InternalButton", () => {
   afterEach(() => {
     jest.runOnlyPendingTimers();
     jest.useRealTimers();
@@ -13,27 +13,27 @@ describe("OakBaseButton", () => {
 
   it("renders", () => {
     const { getByTestId } = render(
-      <OakBaseButton data-testid="test">Click</OakBaseButton>,
+      <InternalButton data-testid="test">Click</InternalButton>,
     );
     expect(getByTestId("test")).toBeInTheDocument();
   });
 
   it("matches snapshot", () => {
-    const tree = create(<OakBaseButton>Click Me</OakBaseButton>).toJSON();
+    const tree = create(<InternalButton>Click Me</InternalButton>).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it("renders the chidren", () => {
-    const { getByText } = render(<OakBaseButton>Click</OakBaseButton>);
+    const { getByText } = render(<InternalButton>Click</InternalButton>);
     expect(getByText("Click")).toBeInTheDocument();
   });
 
   it("calls onClick method", () => {
     const onClick = jest.fn();
     const { getByTestId } = render(
-      <OakBaseButton data-testid="test" onClick={onClick}>
+      <InternalButton data-testid="test" onClick={onClick}>
         Click
-      </OakBaseButton>,
+      </InternalButton>,
     );
     getByTestId("test").click();
     expect(onClick).toHaveBeenCalled();
@@ -42,9 +42,9 @@ describe("OakBaseButton", () => {
   it("calls onHovered method when a mouseover and mouseout event has happened", () => {
     const onHovered = jest.fn();
     const { getByTestId } = render(
-      <OakBaseButton data-testid="test" onHovered={onHovered}>
+      <InternalButton data-testid="test" onHovered={onHovered}>
         Click
-      </OakBaseButton>,
+      </InternalButton>,
     );
     fireEvent.mouseEnter(getByTestId("test"));
     fireEvent.mouseLeave(getByTestId("test"));
@@ -54,9 +54,9 @@ describe("OakBaseButton", () => {
   it("calls doesn't call onHovered method before a mouseout event happens", () => {
     const onHovered = jest.fn();
     const { getByTestId } = render(
-      <OakBaseButton data-testid="test" onHovered={onHovered}>
+      <InternalButton data-testid="test" onHovered={onHovered}>
         Click
-      </OakBaseButton>,
+      </InternalButton>,
     );
     fireEvent.mouseEnter(getByTestId("test"));
     expect(onHovered).not.toHaveBeenCalled();
@@ -68,9 +68,9 @@ describe("OakBaseButton", () => {
     jest.useFakeTimers();
     const onHovered = jest.fn();
     const { getByTestId } = render(
-      <OakBaseButton data-testid="test" onHovered={onHovered}>
+      <InternalButton data-testid="test" onHovered={onHovered}>
         Click
-      </OakBaseButton>,
+      </InternalButton>,
     );
     fireEvent.mouseEnter(getByTestId("test"));
     jest.advanceTimersByTime(1000);

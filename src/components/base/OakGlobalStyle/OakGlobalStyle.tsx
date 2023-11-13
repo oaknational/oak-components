@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
-import { resetStyles } from "@/styles/global/reset.styles";
-import { oakStyles } from "@/styles/global/oak.styles";
+import { resetGlobalCss } from "@/styles/global/reset.styles";
+import { oakGlobalCss } from "@/styles/global/oak.styles";
 
 /**
  *
@@ -10,6 +10,6 @@ import { oakStyles } from "@/styles/global/oak.styles";
  */
 
 export const OakGlobalStyle = createGlobalStyle`
-  ${resetStyles}
-  ${oakStyles}
+  ${resetGlobalCss}
+  ${oakGlobalCss}
 `;

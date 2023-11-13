@@ -1,7 +1,7 @@
-import { oakAllColorsHex } from "@/styles/theme/color";
+import { oakColorTokens } from "@/styles/theme/color";
 
 const colorCtl = {
-  options: Object.keys(oakAllColorsHex),
+  options: Object.keys(oakColorTokens),
   control: { type: "select" },
 };
 

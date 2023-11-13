@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakBaseCard } from "@/components/base/OakBaseCard";
+import { InternalCard } from "@/components/base/InternalCard";
 import {
   OakAnchorTarget,
   OakAnchorTargetProps,
@@ -34,10 +34,10 @@ type Story = StoryObj<typeof OakAnchorTarget>;
 export const DefaultOakAnchorTarget: Story = (
   args: Partial<OakAnchorTargetProps>,
 ) => (
-  <OakBaseCard data-testId="OakBaseCard-id" {...args}>
+  <InternalCard data-testId="InternalCard-id" {...args}>
     This card has an anchor target component inside it
     <OakAnchorTarget id="anchor-target" />
-  </OakBaseCard>
+  </InternalCard>
 );
 
 DefaultOakAnchorTarget.args = {};

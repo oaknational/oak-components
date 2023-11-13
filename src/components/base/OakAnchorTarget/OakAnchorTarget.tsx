@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { OakPaddingProps } from "@/styles";
+import { PaddingStyleProps } from "@/styles/utils/spacingStyle";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { responsiveStyle } from "@/styles/utils/responsiveStyle";
 
@@ -16,7 +16,7 @@ import { responsiveStyle } from "@/styles/utils/responsiveStyle";
  *
  * */
 
-export type OakAnchorTargetProps = OakPaddingProps;
+export type OakAnchorTargetProps = PaddingStyleProps;
 
 export const OakAnchorTarget = styled.span<OakAnchorTargetProps>`
   position: absolute;

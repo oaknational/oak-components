@@ -5,10 +5,13 @@ import {
   responsiveStyle,
   ResponsiveValues,
 } from "@/styles/utils/responsiveStyle";
-import { OakAllSpacing, OakSpaceBetween } from "@/styles/theme/spacing";
+import {
+  OakAllSpacingToken,
+  OakSpaceBetweenToken,
+} from "@/styles/theme/spacing";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 
-export type OakFlexCssProps = {
+export type FlexStyleProps = {
   $flexDirection?: ResponsiveValues<CSSProperties["flexDirection"]>;
   $flexWrap?: ResponsiveValues<CSSProperties["flexWrap"]>;
   $alignItems?: ResponsiveValues<CSSProperties["alignItems"]>;
@@ -19,18 +22,20 @@ export type OakFlexCssProps = {
   $flexShrink?: ResponsiveValues<CSSProperties["flexShrink"]>;
   $order?: ResponsiveValues<CSSProperties["order"]>;
   $flexBasis?: ResponsiveValues<
-    OakAllSpacing | OakSpaceBetween | null | undefined
+    OakAllSpacingToken | OakSpaceBetweenToken | null | undefined
   >;
-  $gap?: ResponsiveValues<OakAllSpacing | OakSpaceBetween | null | undefined>;
+  $gap?: ResponsiveValues<
+    OakAllSpacingToken | OakSpaceBetweenToken | null | undefined
+  >;
   $columnGap?: ResponsiveValues<
-    OakAllSpacing | OakSpaceBetween | null | undefined
+    OakAllSpacingToken | OakSpaceBetweenToken | null | undefined
   >;
   $rowGap?: ResponsiveValues<
-    OakAllSpacing | OakSpaceBetween | null | undefined
+    OakAllSpacingToken | OakSpaceBetweenToken | null | undefined
   >;
 };
 
-export const flexStyle = css<OakFlexCssProps>`
+export const flexStyle = css<FlexStyleProps>`
   display: flex;
   ${responsiveStyle("flex-direction", (props) => props.$flexDirection)}
   ${responsiveStyle("flex-wrap", (props) => props.$flexWrap)}

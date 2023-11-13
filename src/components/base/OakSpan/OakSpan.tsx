@@ -1,25 +1,25 @@
 import styled from "styled-components";
 
-import { colorStyle, OakColorProps } from "@/styles/utils/colorStyle";
-import { opacityStyle, OakOpacityProps } from "@/styles/utils/opacityStyle";
+import { colorStyle, ColorStyleProps } from "@/styles/utils/colorStyle";
+import { opacityStyle, OpacityStyleProps } from "@/styles/utils/opacityStyle";
 import {
   marginStyle,
-  OakMarginProps,
+  MarginStyleProps,
   paddingStyle,
-  OakPaddingProps,
+  PaddingStyleProps,
 } from "@/styles/utils/spacingStyle";
 import {
   typographyStyle,
-  OakTypographyCssProps,
+  TypographyStyleProps,
 } from "@/styles/utils/typographyStyle";
-import { borderStyle, OakBorderProps } from "@/styles/utils/borderStyle";
+import { borderStyle, BorderStyleProps } from "@/styles/utils/borderStyle";
 
-export type OakSpanProps = OakColorProps &
-  OakOpacityProps &
-  OakMarginProps &
-  OakPaddingProps &
-  OakBorderProps &
-  OakTypographyCssProps;
+export type OakSpanProps = ColorStyleProps &
+  OpacityStyleProps &
+  MarginStyleProps &
+  PaddingStyleProps &
+  BorderStyleProps &
+  TypographyStyleProps;
 /**
  * Span renders a `span` (inline text) component, exposing all the typography props.
  * ## Usage

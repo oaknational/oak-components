@@ -1,15 +1,15 @@
 import {
-  oakInnerPaddingAllSpacing,
-  oakSpaceBetweenAllSpacing,
+  oakInnerPaddingTokens,
+  oakSpaceBetweenTokens,
 } from "@/styles/theme/spacing";
 
 const paddingCtl = {
-  options: Object.keys(oakInnerPaddingAllSpacing),
+  options: Object.keys(oakInnerPaddingTokens),
   control: { type: "select" },
 };
 
 const marginCtl = {
-  options: Object.keys(oakSpaceBetweenAllSpacing),
+  options: Object.keys(oakSpaceBetweenTokens),
   control: { type: "select" },
 };
 

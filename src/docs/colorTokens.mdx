@@ -1,0 +1,12 @@
+import { oakColorTokens } from "@/styles/theme";
+import { Meta, ColorPalette, ColorItem } from "@storybook/blocks";
+
+<Meta title="StyleTokens/OakColorTokens" />
+
+# OakColorTokens
+
+<ColorPalette>
+  {Object.entries(oakColorTokens).map((token, i) => {
+    return <ColorItem key={i} title={token[0]} colors={[token[1]]} />;
+  })}
+</ColorPalette>

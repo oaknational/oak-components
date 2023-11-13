@@ -1,8 +1,8 @@
-import { oakAllTransitions } from "@/styles/theme/transitions";
+import { oakTransitionTokens } from "@/styles/theme/transitions";
 
 export const transitionArgTypes = {
   $transition: {
-    options: Object.keys(oakAllTransitions),
+    options: Object.keys(oakTransitionTokens),
     control: { type: "select" },
   },
 };

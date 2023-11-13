@@ -1,9 +1,9 @@
 import {
-  OakColor,
-  OakParsableColor,
-  OakUiRole,
-  oakAllColorsHex,
-  oakUiRoles,
+  OakColorToken,
+  OakCombinedColorToken,
+  OakUiRoleToken,
+  oakColorTokens,
+  oakUiRoleTokens,
 } from "@/styles/theme/color";
 import { PropsWithTheme } from "@/styles/theme/theme";
 
@@ -14,23 +14,23 @@ import { PropsWithTheme } from "@/styles/theme/theme";
  */
 function parseColor(): undefined;
 function parseColor(
-  value?: OakParsableColor | null,
+  value?: OakCombinedColorToken | null,
 ): (props: PropsWithTheme) => string;
 function parseColor(
-  value?: OakParsableColor | null,
+  value?: OakCombinedColorToken | null,
 ): ((props: PropsWithTheme) => string) | undefined;
-function parseColor(value?: OakParsableColor | null) {
+function parseColor(value?: OakCombinedColorToken | null) {
   if (value === undefined || value === null) {
     return undefined;
   }
-  if (value in oakAllColorsHex) {
-    return oakAllColorsHex[value as OakColor];
+  if (value in oakColorTokens) {
+    return oakColorTokens[value as OakColorToken];
   }
 
-  if (oakUiRoles.includes(value as OakUiRole)) {
+  if (oakUiRoleTokens.includes(value as OakUiRoleToken)) {
     return ({ theme }: PropsWithTheme) => {
-      const c = theme.uiColors[value as OakUiRole];
-      return oakAllColorsHex[c as OakColor];
+      const c = theme.uiColors[value as OakUiRoleToken];
+      return oakColorTokens[c as OakColorToken];
     };
   }
 }

@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 import { OakFlex, OakFlexProps } from "@/components/base/OakFlex";
 
-export type OakBaseCardProps = OakFlexProps;
-const OakBaseCard = styled(OakFlex)``;
+export type InternalCardProps = OakFlexProps;
+const InternalCard = styled(OakFlex)``;
 
-OakBaseCard.defaultProps = {
+InternalCard.defaultProps = {
   $pa: "inner-padding-xl",
   $flexDirection: "column",
   $flexGrow: 1,
   $position: "relative",
 };
 
-export { OakBaseCard };
+export { InternalCard };

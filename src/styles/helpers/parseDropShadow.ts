@@ -1,14 +1,14 @@
 import {
-  OakAllDropShadows,
-  oakAllDropShadows,
+  OakDropShadowToken,
+  oakDropShadowTokens,
 } from "@/styles/theme/dropShadow";
 
-export const parseDropShadow = (variant?: OakAllDropShadows | null) => {
+export const parseDropShadow = (variant?: OakDropShadowToken | null) => {
   if (!variant) {
     return;
   }
 
-  if (variant in oakAllDropShadows) {
-    return oakAllDropShadows[variant as OakAllDropShadows];
+  if (variant in oakDropShadowTokens) {
+    return oakDropShadowTokens[variant as OakDropShadowToken];
   }
 };

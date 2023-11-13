@@ -1,19 +1,19 @@
 import { css } from "styled-components";
 
-import { OakAllTransitions } from "@/styles/theme/transitions";
+import { OakTransitionToken } from "@/styles/theme/transitions";
 import { parseTransitions } from "@/styles/helpers/parseTransitions";
 import {
   ResponsiveValues,
   responsiveStyle,
 } from "@/styles/utils/responsiveStyle";
 
-type Transition = OakAllTransitions;
+type Transition = OakTransitionToken;
 
-export type OakTransitionProps = {
+export type TransitionStyleProps = {
   $transition?: ResponsiveValues<Transition>;
 };
 
-export const transitionStyle = css<OakTransitionProps>`
+export const transitionStyle = css<TransitionStyleProps>`
   ${responsiveStyle(
     "transition",
     (props) => props.$transition,

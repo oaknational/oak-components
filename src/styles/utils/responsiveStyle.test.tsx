@@ -10,11 +10,15 @@ import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 
 import { responsiveStyle } from "@/styles/utils/responsiveStyle";
-import { oakAllColorsHex, OakColor, OakUiRole } from "@/styles/theme/color";
+import {
+  oakColorTokens,
+  OakColorToken,
+  OakUiRoleToken,
+} from "@/styles/theme/color";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 type TestProps = {
-  [k: string]: OakColor | string | string[] | number | number[];
+  [k: string]: OakColorToken | string | string[] | number | number[];
 };
 /**
  *
@@ -119,14 +123,14 @@ describe("responsiveStyle", () => {
   });
 
   test("should handle when parse fn gets from theme", async () => {
-    const StyledComponent = styled.div<{ $color?: OakUiRole }>`
+    const StyledComponent = styled.div<{ $color?: OakUiRoleToken }>`
       ${responsiveStyle(
         "color",
         (props) => props.$color,
         (colorUiRole) => (props) => {
           if (!colorUiRole) return undefined;
           const oakColor = props.theme.uiColors[colorUiRole];
-          return oakColor ? oakAllColorsHex[oakColor] : undefined;
+          return oakColor ? oakColorTokens[oakColor] : undefined;
         },
       )}
     `;

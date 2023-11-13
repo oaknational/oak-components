@@ -5,21 +5,21 @@ import {
   responsiveStyle,
   ResponsiveValues,
 } from "@/styles/utils/responsiveStyle";
-import { OakParsableColor } from "@/styles/theme/color";
+import { OakCombinedColorToken } from "@/styles/theme/color";
 
-type OakColorName = ResponsiveValues<OakParsableColor | null>;
+type ColorToken = ResponsiveValues<OakCombinedColorToken | null>;
 
-export type OakColorProps = {
-  $color?: OakColorName;
-  $background?: OakColorName;
+export type ColorStyleProps = {
+  $color?: ColorToken;
+  $background?: ColorToken;
 };
-export const colorStyle = css<OakColorProps>`
-  ${responsiveStyle<OakColorProps, OakParsableColor>(
+export const colorStyle = css<ColorStyleProps>`
+  ${responsiveStyle<ColorStyleProps, OakCombinedColorToken>(
     "color",
     (props) => props.$color,
     parseColor,
   )}
-  ${responsiveStyle<OakColorProps, OakParsableColor>(
+  ${responsiveStyle<ColorStyleProps, OakCombinedColorToken>(
     "background",
     (props) => props.$background,
     parseColor,

@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import "@testing-library/jest-dom";
 
-import { colorStyle, OakColorProps } from "@/styles/utils/colorStyle";
+import { colorStyle, ColorStyleProps } from "@/styles/utils/colorStyle";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("colorStyle", () => {
   test("should correctly handle prop color set to OakColor", async () => {
-    const StyledComponent = styled.div<OakColorProps>`
+    const StyledComponent = styled.div<ColorStyleProps>`
       ${colorStyle}
     `;
     const { getByTestId } = renderWithTheme(
@@ -17,7 +17,7 @@ describe("colorStyle", () => {
     expect(getByTestId("test")).toHaveStyle("color: #bef2bd");
   });
   test("should correctly handle prop 'color' as array", async () => {
-    const StyledComponent = styled.div<OakColorProps>`
+    const StyledComponent = styled.div<ColorStyleProps>`
       ${colorStyle}
     `;
     const { getByTestId } = renderWithTheme(
@@ -28,7 +28,7 @@ describe("colorStyle", () => {
   });
 
   test("should correctly handle prop 'color' set to OakUiRole", async () => {
-    const StyledComponent = styled.div<OakColorProps>`
+    const StyledComponent = styled.div<ColorStyleProps>`
       ${colorStyle}
     `;
     const { getByTestId } = renderWithTheme(
@@ -39,7 +39,7 @@ describe("colorStyle", () => {
   });
 
   test("should correctly handle prop 'background' set to OakUiRole", async () => {
-    const StyledComponent = styled.div<OakColorProps>`
+    const StyledComponent = styled.div<ColorStyleProps>`
       ${colorStyle}
     `;
     const { getByTestId } = renderWithTheme(
@@ -50,7 +50,7 @@ describe("colorStyle", () => {
   });
 
   test("should correctly handle setting both background and color", async () => {
-    const StyledComponent = styled.div<OakColorProps>`
+    const StyledComponent = styled.div<ColorStyleProps>`
       ${colorStyle}
     `;
     const { getByTestId } = renderWithTheme(

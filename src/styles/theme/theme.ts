@@ -1,10 +1,10 @@
 import { ThemedStyledProps, DefaultTheme } from "styled-components";
 
-import { OakColorTheme } from "./color";
+import { UiRoleMap } from "./color";
 
 export type OakTheme = {
   name: string;
-  uiColors: OakColorTheme;
+  uiColors: UiRoleMap;
 };
 
 export type PropsWithTheme<Props = unknown> = ThemedStyledProps<

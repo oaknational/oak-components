@@ -5,12 +5,12 @@ import {
   responsiveStyle,
 } from "@/styles/utils/responsiveStyle";
 
-export type OakTransformProps = {
+export type TransformStyleProps = {
   $transform?: ResponsiveValues<CSSProperties["transform"] | null>;
   $transformOrigin?: ResponsiveValues<CSSProperties["transformOrigin"] | null>;
 };
 
-export const transformStyle = css<OakTransformProps>`
+export const transformStyle = css<TransformStyleProps>`
   ${responsiveStyle("transform", (props) => props.$transform)}
   ${responsiveStyle("transform-origin", (props) => props.$transformOrigin)}
 `;

@@ -4,21 +4,19 @@ import styled, { css } from "styled-components";
 
 import {
   positionStyle,
-  OakPositionProps,
-  sizeStyle,
-  OakSizeProps,
-  spacingStyle,
-  OakSpacingProps,
-} from "@/styles";
+  PositionStyleProps,
+} from "@/styles/utils/positionStyle";
+import { sizeStyle, SizeStyleProps } from "@/styles/utils/sizeStyle";
+import { spacingStyle, SpacingStyleProps } from "@/styles/utils/spacingStyle";
 
 type HTMLProps = {
   onClick?: MouseEventHandler;
 };
 
 export type OakImageProps = Omit<ImageProps, "width" | "height"> &
-  OakPositionProps &
-  OakSizeProps &
-  OakSpacingProps &
+  PositionStyleProps &
+  SizeStyleProps &
+  SpacingStyleProps &
   HTMLProps;
 
 /**

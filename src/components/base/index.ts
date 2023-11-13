@@ -1,6 +1,6 @@
 export * from "./OakBox";
 export * from "./OakFlex";
-export * from "./OakBaseCard";
+export * from "./InternalCard";
 export * from "./OakSpan";
 export * from "./OakForm";
 export * from "./OakImage";
@@ -11,5 +11,5 @@ export * from "./OakUL";
 export * from "./OakOL";
 export * from "./OakLI";
 export * from "./OakLabel";
-export * from "./OakBaseTextInput";
-export * from "./OakBaseButton";
+export * from "./InternalTextInput";
+export * from "./InternalButton";

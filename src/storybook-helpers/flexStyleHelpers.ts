@@ -1,4 +1,4 @@
-import { oakSpaceBetweenAllSpacing } from "@/styles/theme/spacing";
+import { oakSpaceBetweenTokens } from "@/styles/theme/spacing";
 
 const positionCtlJustify = {
   options: [
@@ -15,7 +15,7 @@ const positionCtlJustify = {
 };
 
 const spacingCtl = {
-  options: Object.keys(oakSpaceBetweenAllSpacing),
+  options: Object.keys(oakSpaceBetweenTokens),
   control: { type: "select" },
 };
 
