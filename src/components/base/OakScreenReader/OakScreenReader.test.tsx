@@ -15,4 +15,8 @@ describe("OakScreenReader", () => {
     const tree = create(<OakScreenReader />).toJSON();
     expect(tree).toMatchSnapshot();
   });
+  it("component is not inaccesible", () => {
+    const { getByTestId } = render(<OakScreenReader data-testid="test" />);
+    expect(getByTestId("test")).not.toHaveAttribute("aria-hidden");
+  });
 });

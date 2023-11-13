@@ -15,7 +15,7 @@ describe("OakMaxWidth", () => {
     const tree = create(<OakMaxWidth />).toJSON();
     expect(tree).toMatchSnapshot();
   });
-  it("has has max-width when screen width is large", () => {
+  it("has has max-width: 30rem when screen width is large", () => {
     const { getByTestId } = render(<OakMaxWidth data-testid="test" />);
     expect(getByTestId("test")).toHaveStyle("max-width: 30rem");
   });

@@ -35,7 +35,7 @@ export const DefaultOakSpan: Story = (args: Partial<OakSpanProps>) => (
   <OakSpan data-testId="OakScreenReader-id" {...args}>
     Use a screen reader to hear invisible text.
     <OakScreenReader>
-      The screen reader reads this bit out for accessaility.
+      The screen reader reads this bit out for accessibility.
     </OakScreenReader>
   </OakSpan>
 );
