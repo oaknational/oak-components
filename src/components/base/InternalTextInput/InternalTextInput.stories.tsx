@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakBaseTextInput } from "./OakBaseTextInput";
+import { InternalTextInput } from "./InternalTextInput";
 
 /**
  *
@@ -18,10 +18,10 @@ import { OakBaseTextInput } from "./OakBaseTextInput";
  *
  */
 
-const meta: Meta<typeof OakBaseTextInput> = {
-  component: OakBaseTextInput,
+const meta: Meta<typeof InternalTextInput> = {
+  component: InternalTextInput,
   tags: ["autodocs"],
-  title: "components/base/OakBaseTextInput",
+  title: "components/base/InternalTextInput",
   argTypes: {},
   parameters: {
     controls: {
@@ -31,11 +31,11 @@ const meta: Meta<typeof OakBaseTextInput> = {
 };
 export default meta;
 
-type Story = StoryObj<typeof OakBaseTextInput>;
+type Story = StoryObj<typeof InternalTextInput>;
 
 export const Default: Story = {
   render: (args) => (
-    <OakBaseTextInput {...args} placeholder="placeholder text" type="text" />
+    <InternalTextInput {...args} placeholder="placeholder text" type="text" />
   ),
   args: {},
   parameters: {

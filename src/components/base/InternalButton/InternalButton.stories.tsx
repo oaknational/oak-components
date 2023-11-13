@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakBaseButton } from "./OakBaseButton";
+import { InternalButton } from "./InternalButton";
 
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
@@ -20,10 +20,10 @@ import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";
  *  called after a mouseEnter and mouseLeave event has happened
  */
 
-const meta: Meta<typeof OakBaseButton> = {
-  component: OakBaseButton,
+const meta: Meta<typeof InternalButton> = {
+  component: InternalButton,
   tags: ["autodocs"],
-  title: "components/base/OakBaseButton",
+  title: "components/base/InternalButton",
   argTypes: {
     ...colorArgTypes,
     ...spacingArgTypes,
@@ -41,10 +41,10 @@ const meta: Meta<typeof OakBaseButton> = {
 };
 export default meta;
 
-type Story = StoryObj<typeof OakBaseButton>;
+type Story = StoryObj<typeof InternalButton>;
 
 export const Default: Story = {
-  render: (args) => <OakBaseButton {...args}>Click Me!</OakBaseButton>,
+  render: (args) => <InternalButton {...args}>Click Me!</InternalButton>,
   args: {
     $background: "bg-btn-primary",
     $color: "white",

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OakBaseTextInput matches snapshot 1`] = `
+exports[`InternalTextInput matches snapshot 1`] = `
 <input
   className="sc-aXZVg dVeUxO"
   onBlur={[Function]}

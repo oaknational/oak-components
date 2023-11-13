@@ -45,13 +45,13 @@ const StyledInput = styled.input`
   }
 `;
 
-export type OakBaseTextInputProps = StyledInputProps & {
+export type InternalTextInputProps = StyledInputProps & {
   onFocus?: (e: FocusEvent<HTMLInputElement>) => void;
   onBlur?: (e: FocusEvent<HTMLInputElement>) => void;
   onInitialFocus?: (e: FocusEvent<HTMLInputElement>) => void;
 };
 
-export const OakBaseTextInput = (props: OakBaseTextInputProps) => {
+export const InternalTextInput = (props: InternalTextInputProps) => {
   const { onInitialFocus, onBlur, onFocus, ...rest } = props;
 
   const hadInitialFocused = useRef(false);

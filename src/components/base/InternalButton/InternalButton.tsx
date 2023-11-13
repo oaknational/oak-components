@@ -38,7 +38,7 @@ const StyledButton = styled.button<StyledButtonProps>`
   ${dropShadowStyle}
 `;
 
-export type OakBaseButtonProps = StyledButtonProps & {
+export type InternalButtonProps = StyledButtonProps & {
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   onHovered?: (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
@@ -47,7 +47,7 @@ export type OakBaseButtonProps = StyledButtonProps & {
   children?: React.ReactNode;
 };
 
-export const OakBaseButton = (props: OakBaseButtonProps) => {
+export const InternalButton = (props: InternalButtonProps) => {
   const { onClick, onHovered, ...rest } = props;
 
   const hoverStart = useRef(Date.now());
