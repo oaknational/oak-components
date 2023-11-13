@@ -8,7 +8,7 @@ import {
   sizeStyle,
   OakSizeProps,
   spacingStyle,
-  SpacingProps,
+  OakSpacingProps,
 } from "@/styles";
 
 type HTMLProps = {
@@ -18,7 +18,7 @@ type HTMLProps = {
 export type OakImageProps = Omit<ImageProps, "width" | "height"> &
   OakPositionProps &
   OakSizeProps &
-  SpacingProps &
+  OakSpacingProps &
   HTMLProps;
 
 /**

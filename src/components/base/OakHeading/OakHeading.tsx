@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import {
   OakColorProps,
-  MarginProps,
+  OakMarginProps,
   OakOpacityProps,
   colorStyle,
   marginStyle,
@@ -46,7 +46,7 @@ export type OakHeadingProps = OakTypographyCssProps &
   OakHeadingTagProps &
   OakColorProps &
   OakOpacityProps &
-  MarginProps;
+  OakMarginProps;
 
 export const OakHeading = styled(HeadingTagComponent)<OakHeadingProps>`
   ${typographyStyle}

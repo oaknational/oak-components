@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakBaseButton matches snapshot 1`] = `
+<button
+  className="sc-aXZVg jxlkHt"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  Click Me
+</button>
+`;

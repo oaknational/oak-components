@@ -4,7 +4,7 @@ import { colorStyle, OakColorProps } from "@/styles/utils/colorStyle";
 import { opacityStyle, OakOpacityProps } from "@/styles/utils/opacityStyle";
 import {
   marginStyle,
-  MarginProps,
+  OakMarginProps,
   paddingStyle,
   OakPaddingProps,
 } from "@/styles/utils/spacingStyle";
@@ -16,7 +16,7 @@ import { borderStyle, OakBorderProps } from "@/styles/utils/borderStyle";
 
 export type OakSpanProps = OakColorProps &
   OakOpacityProps &
-  MarginProps &
+  OakMarginProps &
   OakPaddingProps &
   OakBorderProps &
   OakTypographyCssProps;
