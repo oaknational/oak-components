@@ -9,11 +9,10 @@ import {
   TypographyStyleProps,
 } from "@/styles/utils/typographyStyle";
 import {
-  borderStyle,
   dropShadowStyle,
-  BorderStyleProps,
   DropShadowStyleProps,
-} from "@/styles";
+} from "@/styles/utils/dropShadowStyle";
+import { borderStyle, BorderStyleProps } from "@/styles/utils/borderStyle";
 
 type StyledButtonProps = TypographyStyleProps &
   SpacingStyleProps &

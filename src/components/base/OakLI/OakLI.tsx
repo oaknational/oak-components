@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { oakBoxCss } from "../OakBox";
 import { OakFlexProps } from "../OakFlex";
 
-import { DisplayStyleProps, flexStyle } from "@/styles";
+import { DisplayStyleProps, displayStyle } from "@/styles/utils/displayStyle";
 import { ListStyleProps, listStyle } from "@/styles/utils/listStyle";
 import {
   TypographyStyleProps,
@@ -26,9 +26,9 @@ export type OakLIProps = OakFlexProps &
 
 export const OakLI = styled.li<OakLIProps>`
   ${oakBoxCss}
-  ${flexStyle}
   ${typographyStyle}
   ${listStyle}
+  ${displayStyle}
 `;
 
 OakLI.defaultProps = {

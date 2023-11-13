@@ -5,32 +5,33 @@ import styled, { css } from "styled-components";
  * OakBox exposes all the styles that are available styles on a div element.
  */
 
+import { colorStyle, ColorStyleProps } from "@/styles/utils/colorStyle";
 import {
-  colorStyle,
-  ColorStyleProps,
   positionStyle,
   PositionStyleProps,
-  sizeStyle,
-  SizeStyleProps,
-  spacingStyle,
-  SpacingStyleProps,
-  borderStyle,
-  BorderStyleProps,
-  displayStyle,
-  DisplayStyleProps,
+} from "@/styles/utils/positionStyle";
+import { sizeStyle, SizeStyleProps } from "@/styles/utils/sizeStyle";
+import { spacingStyle, SpacingStyleProps } from "@/styles/utils/spacingStyle";
+import { borderStyle, BorderStyleProps } from "@/styles/utils/borderStyle";
+import { displayStyle, DisplayStyleProps } from "@/styles/utils/displayStyle";
+import {
   dropShadowStyle,
   DropShadowStyleProps,
-  opacityStyle,
-  OpacityStyleProps,
+} from "@/styles/utils/dropShadowStyle";
+import { opacityStyle, OpacityStyleProps } from "@/styles/utils/opacityStyle";
+import {
   transformStyle,
   TransformStyleProps,
+} from "@/styles/utils/transformStyle";
+import {
   transitionStyle,
   TransitionStyleProps,
+} from "@/styles/utils/transitionStyle";
+import {
   typographyStyle,
   TypographyStyleProps,
-  zIndexStyle,
-  ZIndexStyleProps,
-} from "@/styles";
+} from "@/styles/utils/typographyStyle";
+import { zIndexStyle, ZIndexStyleProps } from "@/styles/utils/zIndexStyle";
 
 // TODO: these are not yet implemented
 // import cover, { CoverProps } from "@/styles/utils/coverStyle";

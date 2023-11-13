@@ -1,13 +1,11 @@
 import styled from "styled-components";
 
+import { colorStyle, ColorStyleProps } from "@/styles/utils/colorStyle";
+import { marginStyle, MarginStyleProps } from "@/styles/utils/spacingStyle";
 import {
-  ColorStyleProps,
-  colorStyle,
-  MarginStyleProps,
-  marginStyle,
   typographyStyle,
   TypographyStyleProps,
-} from "@/styles";
+} from "@/styles/utils/typographyStyle";
 
 export type OakOLProps = MarginStyleProps &
   ColorStyleProps &

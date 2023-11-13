@@ -5,11 +5,9 @@ import styled, { css } from "styled-components";
 import {
   positionStyle,
   PositionStyleProps,
-  sizeStyle,
-  SizeStyleProps,
-  spacingStyle,
-  SpacingStyleProps,
-} from "@/styles";
+} from "@/styles/utils/positionStyle";
+import { sizeStyle, SizeStyleProps } from "@/styles/utils/sizeStyle";
+import { spacingStyle, SpacingStyleProps } from "@/styles/utils/spacingStyle";
 
 type HTMLProps = {
   onClick?: MouseEventHandler;

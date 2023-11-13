@@ -1,14 +1,9 @@
 import React, { FC } from "react";
 import styled from "styled-components";
 
-import {
-  ColorStyleProps,
-  MarginStyleProps,
-  OpacityStyleProps,
-  colorStyle,
-  marginStyle,
-  opacityStyle,
-} from "@/styles";
+import { ColorStyleProps, colorStyle } from "@/styles/utils/colorStyle";
+import { MarginStyleProps, marginStyle } from "@/styles/utils/spacingStyle";
+import { OpacityStyleProps, opacityStyle } from "@/styles/utils/opacityStyle";
 import {
   TypographyStyleProps,
   typographyStyle,
