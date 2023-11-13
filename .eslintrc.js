@@ -16,6 +16,7 @@ const importRules = {
 
 module.exports = {
   root: true,
+  ignorePatterns: ["src/**/*.mdx"],
   env: {
     node: true,
   },

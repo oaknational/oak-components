@@ -1,0 +1,18 @@
+import { oakFontTokens, oakFontSizeTokens } from "@/styles/theme";
+import { Meta, Typeset, Title, Subtitle } from "@storybook/blocks";
+
+<Meta title="StyleTokens/OakTypography" />
+
+# OakTypography
+
+## Fonts
+
+{
+Object.entries(oakFontTokens).map((token, i) => <Typeset
+        fontSizes={[oakFontSizeTokens[token[1][0]]]}
+        fontWeight={token[1][2]}
+        sampleText={token[0]}
+        fontFamily="Lexend, sans-serif"
+        />
+)
+}

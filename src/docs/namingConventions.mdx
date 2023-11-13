@@ -1,0 +1,29 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Docs/NamingConventions" />
+
+# Naming Conventions and Exports
+
+## Export Naming Conventions
+
+- Any items prefixed with "Oak" are exported
+- Any other items are not to be exported
+
+## Component Naming Conventions
+
+*Oak*ComponentName = any exported component<br/>
+_Sub_[Parent]ComponentName = a sub component of an exported component
+*Internal*ComponentName = a non exported component which supports several exported Components
+
+- Sub components should be nested in their parent component's folder
+- Sub components should not have stories
+- Internal components should not be nested
+- Internal components should have stories
+
+## Style Name Conventions
+
+TBD
+
+## Additional Notes
+
+[more info](https://www.figma.com/file/0BvnFfbkI7VbRxQDZg7D1g/Oak-Components-Nomenclature?type=whiteboard&node-id=0%3A1&t=KKSLVZkXCpIBbSzj-1)

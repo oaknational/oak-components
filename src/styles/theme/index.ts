@@ -33,4 +33,7 @@ export type { OakBorderRadiusToken, OakBorderWidthToken } from "./borders";
 
 export type { OakTheme } from "./theme";
 
+export { oakFontTokens, oakFontSizeTokens } from "./typography";
+export type { OakFontToken, OakFontSizeToken } from "./typography";
+
 export { oakDefaultTheme } from "./default.theme";

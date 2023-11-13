@@ -10,7 +10,7 @@ export const oakFontSizeTokens = {
   "font-size-9": 48,
   "font-size-10": 56,
 };
-type OakFontSizeToken = keyof typeof oakFontSizeTokens;
+export type OakFontSizeToken = keyof typeof oakFontSizeTokens;
 
 const fontWeights = [300, 400, 600, 700] as const;
 type FontWeight = (typeof fontWeights)[number];
