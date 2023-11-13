@@ -1,30 +1,33 @@
 import {
-  OakAllFonts,
-  oakAllFontSizes,
-  oakAllFonts,
+  OakFontToken,
+  oakFontSizeTokens,
+  oakFontTokens,
 } from "@/styles/theme/typography";
 import pxToRem from "@/styles/helpers/pxToRem";
 
-export const parseFontWeight = (font?: OakAllFonts | null) => {
+export const parseFontWeight = (font?: OakFontToken | null) => {
   if (!font) return;
-  return oakAllFonts[font][2];
+  return oakFontTokens[font]?.[2];
 };
 
 export const parseFontSize = (
-  font?: OakAllFonts | null,
+  font?: OakFontToken | null,
 ): string | null | undefined => {
   if (!font) return;
-  const fontSizePx = oakAllFontSizes[oakAllFonts[font][0]];
+  const fontSize = oakFontTokens[font]?.[0];
+  if (!fontSize) return;
+  const fontSizePx = oakFontSizeTokens[fontSize];
   return `${pxToRem(fontSizePx)}rem`;
 };
 export const parseLineHeight = (
-  font?: OakAllFonts | null,
+  font?: OakFontToken | null,
 ): string | null | undefined => {
   if (!font) return;
-  const lineHeight = oakAllFonts[font][1];
+  const lineHeight = oakFontTokens[font]?.[1];
+  if (!lineHeight) return;
   return `${pxToRem(lineHeight)}rem`;
 };
-export const parseLetterSpacing = (font?: OakAllFonts | null) => {
+export const parseLetterSpacing = (font?: OakFontToken | null) => {
   if (!font) return;
-  return oakAllFonts[font][3];
+  return oakFontTokens[font]?.[3];
 };

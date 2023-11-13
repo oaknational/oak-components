@@ -1,4 +1,4 @@
-export const oakAllZIndex = {
+export const oakZIndexTokens = {
   behind: -1,
   neutral: 0,
   "in-front": 1,
@@ -8,4 +8,4 @@ export const oakAllZIndex = {
   "modal-dialog": 300,
 } as const;
 
-export type OakAllZIndex = keyof typeof oakAllZIndex | null;
+export type OakZIndexToken = keyof typeof oakZIndexTokens | null;

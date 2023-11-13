@@ -1,18 +1,18 @@
 import {
-  oakAllFonts,
-  oakAllTextDecoration,
-  oakAllTextOverflow,
-  oakAllWhiteSpaces,
-  oakAllWordWrap,
+  oakFontTokens,
+  oakTextDecorations,
+  oakTextOverflows,
+  oakWhiteSpaces,
+  oakWordWraps,
 } from "@/styles/theme/typography";
 
 export const typographyArgTypes = {
   $font: {
-    options: Object.keys(oakAllFonts),
+    options: Object.keys(oakFontTokens),
     control: { type: "select" },
   },
   $textDecoration: {
-    options: oakAllTextDecoration,
+    options: oakTextDecorations,
     control: { type: "select" },
   },
   $textAlign: {
@@ -20,15 +20,15 @@ export const typographyArgTypes = {
     control: { type: "select" },
   },
   $whiteSpace: {
-    options: oakAllWhiteSpaces,
+    options: oakWhiteSpaces,
     control: { type: "select" },
   },
   $wordWrap: {
-    options: oakAllWordWrap,
+    options: oakWordWraps,
     control: { type: "select" },
   },
   $textOverflow: {
-    options: oakAllTextOverflow,
+    options: oakTextOverflows,
     control: { type: "select" },
   },
 };

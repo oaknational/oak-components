@@ -1,11 +1,11 @@
 import { CSSProperties, css } from "styled-components";
 
 import {
-  OakAllFonts,
-  OakAllTextDecoration,
-  OakAllTextOverflow,
-  OakAllWhiteSpaces,
-  OakAllWordWrap,
+  OakFontToken,
+  OakTextDecoration,
+  OakTextOverflow,
+  OakWhiteSpace,
+  OakWordWrap,
 } from "@/styles/theme/typography";
 import {
   parseFontSize,
@@ -18,16 +18,16 @@ import {
   responsiveStyle,
 } from "@/styles/utils/responsiveStyle";
 
-export type OakTypographyCssProps = {
-  $font?: ResponsiveValues<OakAllFonts>;
-  $textDecoration?: ResponsiveValues<OakAllTextDecoration>;
+export type TypographyStyleProps = {
+  $font?: ResponsiveValues<OakFontToken>;
+  $textDecoration?: ResponsiveValues<OakTextDecoration>;
   $textAlign?: ResponsiveValues<CSSProperties["textAlign"]>;
-  $whiteSpace?: ResponsiveValues<OakAllWhiteSpaces>;
-  $wordWrap?: ResponsiveValues<OakAllWordWrap>;
-  $textOverflow?: ResponsiveValues<OakAllTextOverflow>;
+  $whiteSpace?: ResponsiveValues<OakWhiteSpace>;
+  $wordWrap?: ResponsiveValues<OakWordWrap>;
+  $textOverflow?: ResponsiveValues<OakTextOverflow>;
 };
 
-export const typographyStyle = css<OakTypographyCssProps>`
+export const typographyStyle = css<TypographyStyleProps>`
   font-family: Lexend, sans-serif;
   ${responsiveStyle("font-weight", (props) => props.$font, parseFontWeight)}
   ${responsiveStyle("font-size", (props) => props.$font, parseFontSize)}

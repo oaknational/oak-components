@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 import {
   typographyStyle,
-  OakTypographyCssProps,
+  TypographyStyleProps,
 } from "@/styles/utils/typographyStyle";
 import { OakBox, OakBoxProps } from "@/components/base/OakBox";
 
-export type OakTypographyProps = OakBoxProps & OakTypographyCssProps;
+export type OakTypographyProps = OakBoxProps & TypographyStyleProps;
 
 /**
  * The Typography component sets a typography style context from which children

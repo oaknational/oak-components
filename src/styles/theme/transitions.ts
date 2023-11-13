@@ -1,5 +1,5 @@
-export const oakAllTransitions = {
+export const oakTransitionTokens = {
   "standard-ease": "all 0.3s ease",
 };
 
-export type OakAllTransitions = keyof typeof oakAllTransitions;
+export type OakTransitionToken = keyof typeof oakTransitionTokens;

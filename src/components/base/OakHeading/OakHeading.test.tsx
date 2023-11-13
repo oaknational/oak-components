@@ -6,7 +6,7 @@ import { render } from "@testing-library/react";
 import { OakHeading, OakHeadingTag } from "./OakHeading";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { OakAllFonts, oakAllFonts } from "@/styles/theme/typography";
+import { OakFontToken, oakFontTokens } from "@/styles/theme/typography";
 import {
   parseFontSize,
   parseFontWeight,
@@ -36,29 +36,29 @@ describe("Heading", () => {
 
     expect(getByRole("heading", { level })).toBeTruthy();
   });
-  test.each(Object.keys(oakAllFonts))(
+  test.each(Object.keys(oakFontTokens))(
     'should correctly handle prop $font="%s"',
     async (font) => {
       const { getByTestId } = renderWithTheme(
         <OakHeading
           tag={"h1"}
           data-testid="test"
-          $font={font as OakAllFonts}
+          $font={font as OakFontToken}
         />,
       );
 
       expect(getByTestId("test")).toHaveStyle("font-family: Lexend,sans-serif");
       expect(getByTestId("test")).toHaveStyle(
-        `font-size: ${parseFontSize(font as OakAllFonts)}`,
+        `font-size: ${parseFontSize(font as OakFontToken)}`,
       );
       expect(getByTestId("test")).toHaveStyle(
-        `line-height: ${parseLineHeight(font as OakAllFonts)}`,
+        `line-height: ${parseLineHeight(font as OakFontToken)}`,
       );
       expect(getByTestId("test")).toHaveStyle(
-        `font-weight: ${parseFontWeight(font as OakAllFonts)}`,
+        `font-weight: ${parseFontWeight(font as OakFontToken)}`,
       );
       expect(getByTestId("test")).toHaveStyle(
-        `letter-spacing: ${parseLetterSpacing(font as OakAllFonts)}`,
+        `letter-spacing: ${parseLetterSpacing(font as OakFontToken)}`,
       );
     },
   );

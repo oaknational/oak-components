@@ -5,12 +5,19 @@ import {
   responsiveStyle,
   ResponsiveValues,
 } from "@/styles/utils/responsiveStyle";
-import { OakAllSpacing, OakSpaceBetween } from "@/styles/theme/spacing";
+import {
+  OakAllSpacingToken,
+  OakSpaceBetweenToken,
+} from "@/styles/theme/spacing";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 
-type PositionSpacing = OakAllSpacing | OakSpaceBetween | null | undefined;
+type PositionSpacing =
+  | OakAllSpacingToken
+  | OakSpaceBetweenToken
+  | null
+  | undefined;
 
-export type OakPositionProps = {
+export type PositionStyleProps = {
   $position?: ResponsiveValues<CSSProperties["position"]>;
   $top?: ResponsiveValues<PositionSpacing>;
   $right?: ResponsiveValues<PositionSpacing>;
@@ -24,7 +31,7 @@ export type OakPositionProps = {
   $visibility?: ResponsiveValues<CSSProperties["visibility"]>;
 };
 
-export const positionStyle = css<OakPositionProps>`
+export const positionStyle = css<PositionStyleProps>`
   ${responsiveStyle("position", (props) => props.$position)}
   ${responsiveStyle("top", (props) => props.$top, parseSpacing)} 
   ${responsiveStyle("right", (props) => props.$right, parseSpacing)} 

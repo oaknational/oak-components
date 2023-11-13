@@ -5,11 +5,14 @@ import {
   ResponsiveValues,
 } from "@/styles/utils/responsiveStyle";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
-import { OakInnerPadding, OakSpaceBetween } from "@/styles/theme/spacing";
+import {
+  OakInnerPaddingToken,
+  OakSpaceBetweenToken,
+} from "@/styles/theme/spacing";
 
-type PaddingValues = ResponsiveValues<OakInnerPadding | null | undefined>;
+type PaddingValues = ResponsiveValues<OakInnerPaddingToken | null | undefined>;
 
-export type OakPaddingProps = {
+export type PaddingStyleProps = {
   $pa?: PaddingValues;
   $ph?: PaddingValues;
   $pv?: PaddingValues;
@@ -19,10 +22,10 @@ export type OakPaddingProps = {
   $pb?: PaddingValues;
 };
 
-type MarginValue = "auto" | OakSpaceBetween | null | undefined;
+type MarginValue = "auto" | OakSpaceBetweenToken | null | undefined;
 type MarginValues = ResponsiveValues<MarginValue>;
 
-export type OakMarginProps = {
+export type MarginStyleProps = {
   $ma?: MarginValues;
   $mh?: MarginValues;
   $mv?: MarginValues;
@@ -79,7 +82,7 @@ const marginBottom = css<{ $mb?: MarginValues }>`
   ${responsiveStyle("margin-bottom", (props) => props.$mb, parseSpacing)}
 `;
 
-export const marginStyle = css<OakMarginProps>`
+export const marginStyle = css<MarginStyleProps>`
   ${marginAll}
   ${marginHorizontal}
   ${marginVertical}
@@ -89,7 +92,7 @@ export const marginStyle = css<OakMarginProps>`
   ${marginBottom}
 `;
 
-export const paddingStyle = css<OakPaddingProps>`
+export const paddingStyle = css<PaddingStyleProps>`
   ${paddingAll}
   ${paddingHorizontal}
   ${paddingVertical}
@@ -99,8 +102,8 @@ export const paddingStyle = css<OakPaddingProps>`
   ${paddingBottom}
 `;
 
-export type OakSpacingProps = OakPaddingProps & OakMarginProps;
-export const spacingStyle = css<OakSpacingProps>`
+export type SpacingStyleProps = PaddingStyleProps & MarginStyleProps;
+export const spacingStyle = css<SpacingStyleProps>`
   ${paddingStyle}
   ${marginStyle}
 `;

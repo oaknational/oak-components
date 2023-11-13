@@ -4,11 +4,11 @@ import styled, { css } from "styled-components";
 
 import {
   positionStyle,
-  OakPositionProps,
+  PositionStyleProps,
   sizeStyle,
-  OakSizeProps,
+  SizeStyleProps,
   spacingStyle,
-  OakSpacingProps,
+  SpacingStyleProps,
 } from "@/styles";
 
 type HTMLProps = {
@@ -16,9 +16,9 @@ type HTMLProps = {
 };
 
 export type OakImageProps = Omit<ImageProps, "width" | "height"> &
-  OakPositionProps &
-  OakSizeProps &
-  OakSpacingProps &
+  PositionStyleProps &
+  SizeStyleProps &
+  SpacingStyleProps &
   HTMLProps;
 
 /**

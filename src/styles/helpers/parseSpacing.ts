@@ -1,12 +1,12 @@
 import pxToRem from "@/styles/helpers/pxToRem";
 import {
-  OakAllSpacing,
-  OakInnerPadding,
-  OakSpaceBetween,
-  OakParsableSpacing,
-  oakAllSpacingPx,
-  oakInnerPaddingAllSpacing,
-  oakSpaceBetweenAllSpacing,
+  OakAllSpacingToken,
+  OakInnerPaddingToken,
+  OakSpaceBetweenToken,
+  OakCombinedSpacingToken,
+  oakAllSpacingTokens,
+  oakInnerPaddingTokens,
+  oakSpaceBetweenTokens,
 } from "@/styles/theme/spacing";
 
 /**
@@ -14,25 +14,25 @@ import {
  * - derives and returns the corresponding css value
  * - converting to rem where necessary
  */
-export function parseSpacing(value?: OakParsableSpacing | null) {
+export function parseSpacing(value?: OakCombinedSpacingToken | null) {
   // if value is null or undefined, return undefined
   if (value === undefined || value === null) {
     return undefined;
   }
 
   // mapped values
-  if (value in oakAllSpacingPx) {
-    return `${pxToRem(oakAllSpacingPx[value as OakAllSpacing])}rem`; // NB. type assertion is necessary because the OakAllSpacing type is dervied from oakAllSpacingPx
+  if (value in oakAllSpacingTokens) {
+    return `${pxToRem(oakAllSpacingTokens[value as OakAllSpacingToken])}rem`; // NB. type assertion is necessary because the OakAllSpacing type is dervied from oakAllSpacingPx
   }
 
-  if (value in oakInnerPaddingAllSpacing) {
-    const v = oakInnerPaddingAllSpacing[value as OakInnerPadding];
-    return `${pxToRem(oakAllSpacingPx[v as OakAllSpacing])}rem`;
+  if (value in oakInnerPaddingTokens) {
+    const v = oakInnerPaddingTokens[value as OakInnerPaddingToken];
+    return `${pxToRem(oakAllSpacingTokens[v as OakAllSpacingToken])}rem`;
   }
 
-  if (value in oakSpaceBetweenAllSpacing) {
-    const v = oakSpaceBetweenAllSpacing[value as OakSpaceBetween];
-    return `${pxToRem(oakAllSpacingPx[v as OakAllSpacing])}rem`;
+  if (value in oakSpaceBetweenTokens) {
+    const v = oakSpaceBetweenTokens[value as OakSpaceBetweenToken];
+    return `${pxToRem(oakAllSpacingTokens[v as OakAllSpacingToken])}rem`;
   }
 
   // value is a number, percentage or css value

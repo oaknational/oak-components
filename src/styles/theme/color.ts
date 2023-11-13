@@ -1,4 +1,4 @@
-export const oakAllColorsHex = {
+export const oakColorTokens = {
   white: "#ffffff",
   grey20: "#f2f2f2",
   grey30: "#e4e4e4",
@@ -36,9 +36,9 @@ export const oakAllColorsHex = {
   teal: "#037b7d",
 };
 
-export type OakColor = keyof typeof oakAllColorsHex;
+export type OakColorToken = keyof typeof oakColorTokens;
 
-export const oakUiRoles = [
+export const oakUiRoleTokens = [
   "text-primary",
   "text-subdued",
   "text-error",
@@ -88,8 +88,11 @@ export const oakUiRoles = [
   "border-decorative6",
 ] as const;
 
-export type OakUiRole = (typeof oakUiRoles)[number];
+export type OakUiRoleToken = (typeof oakUiRoleTokens)[number];
 
-export type OakColorTheme = Record<OakUiRole, OakColor | null | undefined>;
+export type UiRoleMap = Record<
+  OakUiRoleToken,
+  OakColorToken | null | undefined
+>;
 
-export type OakParsableColor = OakColor | OakUiRole;
+export type OakCombinedColorToken = OakColorToken | OakUiRoleToken;

@@ -1,5 +1,5 @@
 import { parseZIndex } from "@/styles/helpers/parseZIndex";
-import { OakAllZIndex } from "@/styles/theme/zIndex";
+import { OakZIndexToken } from "@/styles/theme/zIndex";
 
 describe("parseZindex", () => {
   it("should return undefined if value is null or undefined", () => {
@@ -11,6 +11,6 @@ describe("parseZindex", () => {
     ["in-front", 1],
     ["mobile-filters", 2],
   ])("should correctly handle props", (value, expected) => {
-    expect(parseZIndex(value as OakAllZIndex)).toBe(expected);
+    expect(parseZIndex(value as OakZIndexToken)).toBe(expected);
   });
 });

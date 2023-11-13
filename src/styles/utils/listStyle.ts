@@ -5,10 +5,10 @@ import {
   responsiveStyle,
 } from "@/styles/utils/responsiveStyle";
 
-export type ListItemProps = {
+export type ListStyleProps = {
   $listStyle?: ResponsiveValues<CSSProperties["listStyle"]>;
 };
 
-export const listItemStyle = css<ListItemProps>`
+export const listStyle = css<ListStyleProps>`
   ${responsiveStyle("list-style", (props) => props.$listStyle)}
 `;

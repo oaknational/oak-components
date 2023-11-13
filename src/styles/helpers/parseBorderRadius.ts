@@ -1,15 +1,17 @@
 import pxToRem from "./pxToRem";
 
 import {
-  OakAllBorderRadius,
-  oakAllBorderRadiusPx,
+  OakBorderRadiusToken,
+  oakBorderRadiusTokens,
 } from "@/styles/theme/borders";
 
-export const parseRadius = (value?: OakAllBorderRadius | null) => {
+export const parseRadius = (value?: OakBorderRadiusToken | null) => {
   if (value === undefined || value === null) {
     return undefined;
   }
-  if (value in oakAllBorderRadiusPx) {
-    return `${pxToRem(oakAllBorderRadiusPx[value as OakAllBorderRadius])}rem`;
+  if (value in oakBorderRadiusTokens) {
+    return `${pxToRem(
+      oakBorderRadiusTokens[value as OakBorderRadiusToken],
+    )}rem`;
   }
 };

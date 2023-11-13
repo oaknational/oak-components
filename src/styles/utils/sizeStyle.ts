@@ -4,12 +4,12 @@ import {
   responsiveStyle,
   ResponsiveValues,
 } from "@/styles/utils/responsiveStyle";
-import { OakParsableSpacing } from "@/styles/theme/spacing";
+import { OakCombinedSpacingToken } from "@/styles/theme/spacing";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 
-type SizeValues = ResponsiveValues<OakParsableSpacing | null | undefined>;
+type SizeValues = ResponsiveValues<OakCombinedSpacingToken | null | undefined>;
 
-export type OakSizeProps = {
+export type SizeStyleProps = {
   $width?: SizeValues;
   $minWidth?: SizeValues;
   $maxWidth?: SizeValues;
@@ -18,7 +18,7 @@ export type OakSizeProps = {
   $maxHeight?: SizeValues;
 };
 
-export const sizeStyle = css<OakSizeProps>`
+export const sizeStyle = css<SizeStyleProps>`
   ${responsiveStyle("width", (props) => props.$width, parseSpacing)}
   ${responsiveStyle("min-width", (props) => props.$minWidth, parseSpacing)}
   ${responsiveStyle("max-width", (props) => props.$maxWidth, parseSpacing)}

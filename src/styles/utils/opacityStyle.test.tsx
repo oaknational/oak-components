@@ -4,7 +4,7 @@ import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 
 import { opacityStyle } from "@/styles/utils/opacityStyle";
-import { OakAllOpacity } from "@/styles/theme";
+import { OakOpacityToken } from "@/styles/theme";
 
 describe("opacityStyle", () => {
   test.each([
@@ -12,7 +12,7 @@ describe("opacityStyle", () => {
     ["semi-transparent", "opacity: 0.25"],
   ])("should correctly handle props", (value, expected) => {
     const props = {
-      $opacity: value as OakAllOpacity,
+      $opacity: value as OakOpacityToken,
     };
 
     const StyledComponent = styled.div`

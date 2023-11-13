@@ -5,7 +5,7 @@
 
 import { css } from "styled-components";
 
-export const resetStyles = css`
+export const resetGlobalCss = css`
   /* Box sizing rules */
   *,
   *::before,
@@ -91,4 +91,4 @@ export const resetStyles = css`
   }
 `;
 
-export default resetStyles;
+export default resetGlobalCss;

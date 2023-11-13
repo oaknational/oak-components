@@ -2,15 +2,15 @@ import React, { FC } from "react";
 import styled from "styled-components";
 
 import {
-  OakColorProps,
-  OakMarginProps,
-  OakOpacityProps,
+  ColorStyleProps,
+  MarginStyleProps,
+  OpacityStyleProps,
   colorStyle,
   marginStyle,
   opacityStyle,
 } from "@/styles";
 import {
-  OakTypographyCssProps,
+  TypographyStyleProps,
   typographyStyle,
 } from "@/styles/utils/typographyStyle";
 
@@ -42,11 +42,11 @@ export const HeadingTagComponent: FC<OakHeadingTagProps> = (props) => {
   );
 };
 
-export type OakHeadingProps = OakTypographyCssProps &
+export type OakHeadingProps = TypographyStyleProps &
   OakHeadingTagProps &
-  OakColorProps &
-  OakOpacityProps &
-  OakMarginProps;
+  ColorStyleProps &
+  OpacityStyleProps &
+  MarginStyleProps;
 
 export const OakHeading = styled(HeadingTagComponent)<OakHeadingProps>`
   ${typographyStyle}

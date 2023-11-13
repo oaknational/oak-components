@@ -8,7 +8,7 @@
 
 import { css } from "styled-components";
 
-export const oakStyles = css`
+export const oakGlobalCss = css`
   html,
   body {
     padding: 0;

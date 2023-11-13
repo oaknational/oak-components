@@ -1,8 +1,8 @@
-import { oakAllOpacity } from "@/styles/theme/opacity";
+import { oakOpacityTokens } from "@/styles/theme/opacity";
 
 export const opacityArgTypes = {
   $opacity: {
-    options: Object.keys(oakAllOpacity),
+    options: Object.keys(oakOpacityTokens),
     control: { type: "select" },
   },
 };

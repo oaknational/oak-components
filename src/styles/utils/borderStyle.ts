@@ -1,7 +1,10 @@
 import { CSSProperties, css } from "styled-components";
 
-import { OakAllBorderRadius, OakAllBorderWidths } from "@/styles/theme/borders";
-import { OakColor, OakUiRole } from "@/styles/theme/color";
+import {
+  OakBorderRadiusToken,
+  OakBorderWidthToken,
+} from "@/styles/theme/borders";
+import { OakColorToken, OakUiRoleToken } from "@/styles/theme/color";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseBorder } from "@/styles/helpers/parseBorder";
 import { parseRadius } from "@/styles/helpers/parseBorderRadius";
@@ -10,12 +13,12 @@ import {
   responsiveStyle,
 } from "@/styles/utils/responsiveStyle";
 
-type BorderWidth = ResponsiveValues<OakAllBorderWidths>;
-type BorderStyleProps = ResponsiveValues<CSSProperties["borderStyle"]>;
-type BorderColorProps = ResponsiveValues<OakUiRole | OakColor>;
-type BorderRadiusProps = ResponsiveValues<OakAllBorderRadius>;
+type BorderWidth = ResponsiveValues<OakBorderWidthToken>;
+type _BorderStyleProps = ResponsiveValues<CSSProperties["borderStyle"]>;
+type BorderColorProps = ResponsiveValues<OakUiRoleToken | OakColorToken>;
+type BorderRadiusProps = ResponsiveValues<OakBorderRadiusToken>;
 
-export type OakBorderProps = {
+export type BorderStyleProps = {
   $ba?: BorderWidth;
   $bt?: BorderWidth;
   $br?: BorderWidth;
@@ -23,7 +26,7 @@ export type OakBorderProps = {
   $bl?: BorderWidth;
   $bh?: BorderWidth;
   $bv?: BorderWidth;
-  $borderStyle?: BorderStyleProps;
+  $borderStyle?: _BorderStyleProps;
   $borderColor?: BorderColorProps;
   $borderRadius?: BorderRadiusProps;
 };
@@ -62,7 +65,7 @@ const borderRadius = css<{ $borderRadius?: BorderRadiusProps }>`
   )}
 `;
 
-export const borderStyle = css<OakBorderProps>`
+export const borderStyle = css<BorderStyleProps>`
   ${borderAll}
   ${borderTop}
   ${borderRight}

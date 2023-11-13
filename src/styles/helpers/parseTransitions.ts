@@ -1,14 +1,14 @@
 import {
-  OakAllTransitions,
-  oakAllTransitions,
+  OakTransitionToken,
+  oakTransitionTokens,
 } from "@/styles/theme/transitions";
 
-export const parseTransitions = (variant?: OakAllTransitions | null) => {
+export const parseTransitions = (variant?: OakTransitionToken | null) => {
   if (!variant) {
     return;
   }
 
-  if (variant in oakAllTransitions) {
-    return oakAllTransitions[variant as OakAllTransitions];
+  if (variant in oakTransitionTokens) {
+    return oakTransitionTokens[variant as OakTransitionToken];
   }
 };

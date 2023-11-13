@@ -1,26 +1,26 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
 
-import { colorStyle, OakColorProps } from "@/styles/utils/colorStyle";
-import { displayStyle, OakDisplayProps } from "@/styles/utils/displayStyle";
-import { spacingStyle, OakSpacingProps } from "@/styles/utils/spacingStyle";
+import { colorStyle, ColorStyleProps } from "@/styles/utils/colorStyle";
+import { displayStyle, DisplayStyleProps } from "@/styles/utils/displayStyle";
+import { spacingStyle, SpacingStyleProps } from "@/styles/utils/spacingStyle";
 import {
   typographyStyle,
-  OakTypographyCssProps,
+  TypographyStyleProps,
 } from "@/styles/utils/typographyStyle";
 import {
   borderStyle,
   dropShadowStyle,
-  OakBorderProps,
-  OakDropShadowProps,
+  BorderStyleProps,
+  DropShadowStyleProps,
 } from "@/styles";
 
-type StyledButtonProps = OakTypographyCssProps &
-  OakSpacingProps &
-  OakColorProps &
-  OakDisplayProps &
-  OakBorderProps &
-  OakDropShadowProps;
+type StyledButtonProps = TypographyStyleProps &
+  SpacingStyleProps &
+  ColorStyleProps &
+  DisplayStyleProps &
+  BorderStyleProps &
+  DropShadowStyleProps;
 
 const StyledButton = styled.button<StyledButtonProps>`
   background: none;
