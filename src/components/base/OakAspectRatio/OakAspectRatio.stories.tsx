@@ -8,7 +8,6 @@ import { OakAspectRatio, OakAspectRatioProps } from "./OakAspectRatio";
 
 import { OakImage } from "@/components/base/OakImage";
 
-
 /**
  *
  * AspectRatio provides a container of fixed aspect ratio
