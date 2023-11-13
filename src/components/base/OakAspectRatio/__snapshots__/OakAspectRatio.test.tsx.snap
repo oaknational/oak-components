@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakAspectRatio matches snapshot 1`] = `
+<div
+  className="sc-aXZVg csaaPj"
+>
+  <div
+    className="sc-gEvEer fXDPyo"
+  />
+</div>
+`;
