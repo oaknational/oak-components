@@ -60,7 +60,6 @@ export const InternalButton = (props: InternalButtonProps) => {
 
   const handleMouseEnter = () => {
     hoverStart.current = Date.now();
-    console.log("handleMouseEnter", hoverStart.current);
   };
 
   const handleMouseLeave = (event: React.MouseEvent<HTMLButtonElement>) => {

@@ -6,6 +6,10 @@ import { create } from "react-test-renderer";
 import { InternalButton } from "./InternalButton";
 
 describe("InternalButton", () => {
+  beforeEach(() => {
+    jest.useFakeTimers();
+  });
+
   afterEach(() => {
     jest.runOnlyPendingTimers();
     jest.useRealTimers();
@@ -65,7 +69,6 @@ describe("InternalButton", () => {
   });
 
   it("correctly captures the duration of the hover event", () => {
-    jest.useFakeTimers();
     const onHovered = jest.fn();
     const { getByTestId } = render(
       <InternalButton data-testid="test" onHovered={onHovered}>
