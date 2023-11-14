@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/react";
 
 import { OakIcon, OakIconProps, oakIconNames } from "./OakIcon";
 
-import { OakFlex } from "@/components/base";
+import { OakFlex, OakTypography } from "@/components/base";
 
 /**
  * OakIcon
@@ -25,9 +25,14 @@ export default meta;
 type Story = StoryObj<typeof OakIcon>;
 
 export const HomeIcon: Story = (args: OakIconProps) => (
-  <OakFlex>
+  <OakFlex $flexDirection={"column"}>
     {oakIconNames.map((iconName) => {
-      return <OakIcon {...args} iconName={iconName} />;
+      return (
+        <OakFlex $gap={"space-between-s"}>
+          <OakIcon {...args} iconName={iconName} />
+          <OakTypography>{iconName}</OakTypography>
+        </OakFlex>
+      );
     })}
   </OakFlex>
 );
