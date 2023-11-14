@@ -12,31 +12,35 @@ const importRules = {
   "@typescript-eslint/no-unused-vars": ["error", { ignoreRestSiblings: true }],
 };
 
-/* eslint-env node */
-
-module.exports = {
-  root: true,
-  ignorePatterns: ["src/**/*.mdx"],
-  env: {
-    node: true,
-  },
-  parserOptions: {
-    ecmaVersion: 2020,
-  },
+const defaultConfig = {
   plugins: ["react", "react-hooks"],
-  extends: ["eslint:recommended", "plugin:import/recommended", "prettier"],
+  extends: ["eslint:recommended", "plugin:import/recommended",  "prettier"],
   rules: {
     ...importRules,
     "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
     "react-hooks/exhaustive-deps": "error", // Checks effect dependencies
     "react/self-closing-comp": ["error", { component: true, html: true }],
   },
+};
+
+/* eslint-env node */
+
+module.exports = {
+  root: true,
+  env: {
+    node: true,
+  },
+  parserOptions: {
+    ecmaVersion: 2020,
+  },
+
   // Put the Typescript config in an override, so we can still lint js files.
   overrides: [
     {
       files: ["src/**/*.{ts,tsx}"],
-      plugins: ["@typescript-eslint"],
+      plugins: [...defaultConfig.plugins, "@typescript-eslint"],
       extends: [
+        ...defaultConfig.extends,
         "plugin:@typescript-eslint/recommended",
         "plugin:import/recommended",
         "plugin:import/typescript",
@@ -64,5 +68,15 @@ module.exports = {
         jest: true,
       },
     },
+    {
+      files: ["src/**/*.mdx"],
+      extends: ["plugin:mdx/recommended"],
+      settings: {
+        "mdx/code-blocks": true,
+        // optional, if you want to disable language mapper, set it to `false`
+        // if you want to override the default language mapper inside, you can provide your own
+        "mdx/language-mapper": {}
+      }
+    }
   ],
 };
