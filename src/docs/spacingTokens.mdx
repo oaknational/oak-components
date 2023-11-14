@@ -1,7 +1,31 @@
 import { Meta } from "@storybook/blocks";
 
+import { oakAllSpacingTokens, oakSpaceBetweenTokens, oakInnerPaddingTokens } from "@/styles/theme";
+import { parseSpacing } from "@/styles/helpers/parseSpacing";
+import { OakLI, OakUL } from "@/components/base";
+
 <Meta title="StyleTokens/OakSpacingTokens" />
 
 # OakSpacingTokens
 
-TBD
+### oakAllSpacingTokens
+<OakUL>
+{
+Object.entries(oakAllSpacingTokens).map((token, i) => <OakLI>{token[0]}, {token[1]}px, {parseSpacing(token[0])}</OakLI>)
+}
+</OakUL>
+
+### oakSpaceBetweenTokens
+<OakUL>
+{
+Object.entries(oakSpaceBetweenTokens).map((token, i) => <OakLI>{token[0]}, {token[1]}, {oakAllSpacingTokens[token[1]]}px, {parseSpacing(token[0])}</OakLI>)
+}
+</OakUL>
+
+### oakInnerPaddingTokens
+<OakUL>
+{
+Object.entries(oakInnerPaddingTokens).map((token, i) => <OakLI>{token[0]}, {token[1]}, {oakAllSpacingTokens[token[1]]}px, {parseSpacing(token[0])}</OakLI>)
+}
+</OakUL>
+
