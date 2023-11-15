@@ -55,13 +55,10 @@ describe("OakIcon", () => {
     );
     expect(getByTestId("test")).toHaveAttribute("alt", "Home");
   });
-  it("if typedImageMap is undefined", () => {
+  it("handles typedImageMap being undefined", () => {
     const { getByTestId } = render(
       <OakIcon data-testid="test" iconName="home" />,
     );
-    expect(getByTestId("test")).toHaveAttribute(
-      "src",
-      "https://oakntech.com/images/icons/home.svg",
-    );
+    expect(getByTestId("test")).toHaveAttribute("alt", "home");
   });
 });

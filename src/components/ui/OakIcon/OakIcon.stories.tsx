@@ -4,6 +4,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { OakIcon, OakIconProps, oakIconNames } from "./OakIcon";
 
 import { OakFlex, OakTypography } from "@/components/base";
+import { colorFilterArgTypes } from "@/storybook-helpers/colorFilterStyleHelpers";
 
 /**
  * A wrapper around OakImage which uses the image-map.json file to map icon names to image paths.
@@ -18,10 +19,11 @@ const meta: Meta<typeof OakIcon> = {
       options: oakIconNames,
       control: { type: "select" },
     },
+    ...colorFilterArgTypes,
   },
   parameters: {
     controls: {
-      include: ["iconName"],
+      include: ["iconName", ...Object.keys(colorFilterArgTypes)],
     },
   },
 };
@@ -42,10 +44,11 @@ export const AllIcons: Story = {
       })}
     </OakFlex>
   ),
-  args: {},
+  args: { $filter: "black" },
   parameters: {
     controls: {
-      include: [],
+      include: [...Object.keys(colorFilterArgTypes)],
+      sort: "none",
     },
   },
 };
@@ -57,7 +60,7 @@ export const PickIcon: Story = {
   },
   parameters: {
     controls: {
-      include: ["iconName"],
+      include: ["iconName", ...Object.keys(colorFilterArgTypes)],
     },
   },
 };
