@@ -17,7 +17,7 @@ describe("dropShadowStyle", () => {
       />,
     );
     expect(getByTestId("test")).toHaveStyle(
-      "box-shadow:  0 8px 8px rgba(92,92,92,20%);",
+      "box-shadow:  0 0.5rem 0.5rem rgba(92,92,92,20%);",
     );
   });
 });
