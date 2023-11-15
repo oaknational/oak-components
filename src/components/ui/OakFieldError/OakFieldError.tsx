@@ -1,7 +1,7 @@
 import React from "react";
 
-import { OakFlex } from "../OakFlex";
-import { OakSpan } from "../OakSpan";
+import { OakFlex } from "../../base/OakFlex";
+import { OakSpan } from "../../base/OakSpan";
 
 import { OakIcon } from "@/components/ui";
 
@@ -20,7 +20,7 @@ export const OakFieldError = (props: OakFieldErrorProps) => {
   return (
     <OakFlex $alignItems={"center"} $flexDirection={"row"}>
       <OakFlex $alignSelf={"flex-start"} $mr={"space-between-s"}>
-        <OakIcon iconName="content-guidance" $filter={"red"} />
+        <OakIcon iconName="content-guidance" $colorFilter={"red"} />
       </OakFlex>
       <OakSpan $color="red">{children}</OakSpan>
     </OakFlex>

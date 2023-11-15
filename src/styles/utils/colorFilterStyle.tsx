@@ -1,6 +1,6 @@
 import { css } from "styled-components";
 
-import { parseColorFilter } from "../helpers/parseColorFilter";
+import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
 
 import {
   responsiveStyle,
@@ -11,12 +11,12 @@ import { OakColorFilterToken } from "@/styles/theme/color";
 type ColorToken = ResponsiveValues<OakColorFilterToken | null>;
 
 export type ColorFilterStyleProps = {
-  $filter?: ColorToken;
+  $colorFilter?: ColorToken;
 };
 export const colorFilterStyle = css<ColorFilterStyleProps>`
   ${responsiveStyle<ColorFilterStyleProps, OakColorFilterToken>(
     "filter",
-    (props) => props.$filter,
+    (props) => props.$colorFilter,
     parseColorFilter,
   )}
 `;

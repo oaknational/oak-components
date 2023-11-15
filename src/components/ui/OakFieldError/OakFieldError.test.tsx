@@ -17,4 +17,9 @@ describe("OakFieldError", () => {
     const tree = create(<OakFieldError />).toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it("renders nothing when there's no children", () => {
+    const { container } = render(<OakFieldError />);
+    expect(container).toBeEmptyDOMElement();
+  });
 });

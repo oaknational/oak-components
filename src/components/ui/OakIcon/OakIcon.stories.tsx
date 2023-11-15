@@ -44,7 +44,7 @@ export const AllIcons: Story = {
       })}
     </OakFlex>
   ),
-  args: { $filter: "black" },
+  args: { $colorFilter: "black" },
   parameters: {
     controls: {
       include: [...Object.keys(colorFilterArgTypes)],

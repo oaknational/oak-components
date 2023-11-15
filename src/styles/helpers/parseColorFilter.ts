@@ -1,11 +1,11 @@
-import { OakCombinedColorToken } from "../theme";
+import { OakCombinedColorToken } from "@/styles/theme";
 import {
   OakColorFilterToken,
   OakUiRoleToken,
   oakColorFilterTokens,
   oakUiRoleTokens,
 } from "../theme/color";
-import { PropsWithTheme } from "../theme/theme";
+import { PropsWithTheme } from "@/styles/theme/theme";
 
 function parseColorFilter(
   value?: OakCombinedColorToken | null,

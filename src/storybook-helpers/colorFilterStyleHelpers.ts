@@ -1,7 +1,7 @@
 import { oakColorFilterTokens } from "@/styles/theme/color";
 
 export const colorFilterArgTypes = {
-  $filter: {
+  $colorFilter: {
     options: Object.keys(oakColorFilterTokens),
     control: { type: "select" },
   },
