@@ -48,4 +48,11 @@ describe("OakIcon", () => {
     );
     expect(getByTestId("test")).toHaveAttribute("alt", "home");
   });
+
+  it("sets the alt text", () => {
+    const { getByTestId } = render(
+      <OakIcon data-testid="test" iconName="home" alt="Home" />,
+    );
+    expect(getByTestId("test")).toHaveAttribute("alt", "Home");
+  });
 });
