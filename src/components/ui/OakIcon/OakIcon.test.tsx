@@ -27,6 +27,20 @@ describe("OakIcon", () => {
       height: "2rem",
     });
   });
+  it("sets the width and height", () => {
+    const { getByTestId } = render(
+      <OakIcon
+        data-testid="test"
+        iconName="home"
+        $width="all-spacing-5"
+        $height="all-spacing-5"
+      />,
+    );
+    expect(getByTestId("test")).toHaveStyle({
+      width: "1.25rem",
+      height: "1.25rem",
+    });
+  });
 
   it("defaults the alt text to the icon name", () => {
     const { getByTestId } = render(
