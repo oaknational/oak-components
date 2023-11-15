@@ -30,6 +30,7 @@ const internalButtonCss = css<StyledButtonProps>`
   cursor: pointer;
   text-align: left;
   font-family: unset;
+  outline: none;
   ${typographyStyle}
   ${colorStyle}
   ${spacingStyle}

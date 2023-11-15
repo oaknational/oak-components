@@ -1,9 +1,10 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakMainButton } from "./OakMainButton";
+import { OakSecondaryButton } from "./OakSecondaryButton";
 
 import { oakIconNames } from "@/components/ui/OakIcon";
+import { OakFlex } from "@/components/base";
 
 /**
  *
@@ -20,10 +21,10 @@ import { oakIconNames } from "@/components/ui/OakIcon";
 
 const controlIconNames = [...oakIconNames].sort();
 
-const meta: Meta<typeof OakMainButton> = {
-  component: OakMainButton,
+const meta: Meta<typeof OakSecondaryButton> = {
+  component: OakSecondaryButton,
   tags: ["autodocs"],
-  title: "components/ui/OakMainButton",
+  title: "components/ui/OakSecondaryButton",
   argTypes: {
     iconName: {
       options: controlIconNames,
@@ -41,10 +42,15 @@ const meta: Meta<typeof OakMainButton> = {
 };
 export default meta;
 
-type Story = StoryObj<typeof OakMainButton>;
+type Story = StoryObj<typeof OakSecondaryButton>;
 
 export const Default: Story = {
-  render: (args) => <OakMainButton {...args}>Button</OakMainButton>,
+  render: (args) => (
+    <OakFlex $gap="space-between-m">
+      <OakSecondaryButton {...args}>Button</OakSecondaryButton>
+      <OakSecondaryButton {...args}>Button</OakSecondaryButton>
+    </OakFlex>
+  ),
   args: {
     $background: "white",
     $color: "black",
