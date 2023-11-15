@@ -29,7 +29,7 @@ export const HomeIcon: Story = (args: OakIconProps) => (
     {oakIconNames.map((iconName) => {
       return (
         <OakFlex $gap={"space-between-s"}>
-          <OakIcon {...args} iconName={iconName} />
+          <OakIcon {...args} iconName={iconName} $filter={"red"} />
           <OakTypography>{iconName}</OakTypography>
         </OakFlex>
       );
