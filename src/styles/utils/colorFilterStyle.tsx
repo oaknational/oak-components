@@ -1,7 +1,6 @@
 import { css } from "styled-components";
 
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
-
 import {
   responsiveStyle,
   ResponsiveValues,

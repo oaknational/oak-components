@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import "@testing-library/jest-dom";
+
 import { colorFilterStyle } from "./colorFilterStyle";
+
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("colorFilterStyle", () => {
