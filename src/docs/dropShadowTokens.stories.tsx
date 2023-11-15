@@ -61,7 +61,7 @@ export const DoubleShadow: Story = {
     >
       <OakBox
         $ba={"border-solid-m"}
-        $pa={"inner-padding-l"}
+        $pa={"inner-padding-m"}
         $borderRadius={"border-radius-s"}
         $dropShadow={"drop-shadow-centered-yellow"}
         $position={"relative"}
@@ -74,6 +74,27 @@ export const DoubleShadow: Story = {
           $width={"100%"}
           $height={"100%"}
           $dropShadow={"drop-shadow-centered-grey"}
+          $borderRadius={"border-radius-s"}
+          $zIndex={"behind"}
+        ></OakBox>
+        inner content
+      </OakBox>
+
+      <OakBox
+        $ba={"border-solid-m"}
+        $pa={"inner-padding-m"}
+        $borderRadius={"border-radius-s"}
+        $dropShadow={"drop-shadow-yellow"}
+        $position={"relative"}
+        $background={"white"}
+      >
+        <OakBox
+          $position={"absolute"}
+          $top={"space-between-none"}
+          $left={"space-between-none"}
+          $width={"100%"}
+          $height={"100%"}
+          $dropShadow={"drop-shadow-grey"}
           $borderRadius={"border-radius-s"}
           $zIndex={"behind"}
         ></OakBox>
