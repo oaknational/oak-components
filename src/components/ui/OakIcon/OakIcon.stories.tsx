@@ -4,10 +4,13 @@ import { Meta, StoryObj } from "@storybook/react";
 import { OakIcon, OakIconProps, oakIconNames } from "./OakIcon";
 
 import { OakFlex, OakTypography } from "@/components/base";
+import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 
 /**
  * A wrapper around OakImage which uses the image-map.json file to map icon names to image paths.
  */
+
+const controlIconNames = [...oakIconNames].sort();
 
 const meta: Meta<typeof OakIcon> = {
   component: OakIcon,
@@ -15,13 +18,14 @@ const meta: Meta<typeof OakIcon> = {
   title: "components/ui/OakIcon",
   argTypes: {
     iconName: {
-      options: oakIconNames,
+      options: controlIconNames,
       control: { type: "select" },
     },
+    ...sizeArgTypes,
   },
   parameters: {
     controls: {
-      include: ["iconName"],
+      include: ["iconName", "$width", "$height"],
     },
   },
 };
@@ -57,7 +61,7 @@ export const PickIcon: Story = {
   },
   parameters: {
     controls: {
-      include: ["iconName"],
+      include: ["iconName", "$width", "$height"],
     },
   },
 };

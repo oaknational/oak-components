@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { colorStyle, ColorStyleProps } from "@/styles/utils/colorStyle";
 import { displayStyle, DisplayStyleProps } from "@/styles/utils/displayStyle";
@@ -21,7 +21,7 @@ type StyledButtonProps = TypographyStyleProps &
   BorderStyleProps &
   DropShadowStyleProps;
 
-const StyledButton = styled.button<StyledButtonProps>`
+const internalButtonCss = css<StyledButtonProps>`
   background: none;
   color: inherit;
   border: none;
@@ -45,9 +45,10 @@ export type InternalButtonProps = StyledButtonProps & {
     duration: number,
   ) => void;
   children?: React.ReactNode;
+  className?: string;
 };
 
-export const InternalButton = (props: InternalButtonProps) => {
+const UnstyledInternalButton = (props: InternalButtonProps) => {
   const { onClick, onHovered, ...rest } = props;
 
   const hoverStart = useRef(Date.now());
@@ -70,13 +71,18 @@ export const InternalButton = (props: InternalButtonProps) => {
   };
 
   return (
-    <StyledButton
+    <button
       {...rest}
       onClick={handleClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       {props.children}
-    </StyledButton>
+    </button>
   );
 };
+
+// NB. We must export a styled component for it to be inheritable
+export const InternalButton = styled(UnstyledInternalButton)`
+  ${internalButtonCss}
+`;
