@@ -19,7 +19,9 @@ type StyledButtonProps = TypographyStyleProps &
   ColorStyleProps &
   DisplayStyleProps &
   BorderStyleProps &
-  DropShadowStyleProps;
+  DropShadowStyleProps & {
+    isLoading?: boolean;
+  };
 
 const internalButtonCss = css<StyledButtonProps>`
   background: none;
