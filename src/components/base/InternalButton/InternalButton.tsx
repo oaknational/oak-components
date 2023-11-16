@@ -37,6 +37,10 @@ const internalButtonCss = css<StyledButtonProps>`
   ${displayStyle}
   ${borderStyle}
   ${dropShadowStyle}
+  &:disabled {
+    pointer-events: none;
+    cursor: default;
+  }
 `;
 
 export type InternalButtonProps = StyledButtonProps & {
@@ -47,6 +51,7 @@ export type InternalButtonProps = StyledButtonProps & {
   ) => void;
   children?: React.ReactNode;
   className?: string;
+  disabled?: boolean;
 };
 
 const UnstyledInternalButton = (props: InternalButtonProps) => {

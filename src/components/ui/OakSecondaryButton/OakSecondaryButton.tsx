@@ -18,7 +18,7 @@ import { parseColor } from "@/styles/helpers/parseColor";
 
 export type OakSecondaryButtonProps = Omit<
   InternalButtonProps,
-  "$pa" | "$borderRadius" | "$ba"
+  "$pa" | "$ph" | "$pv" | "$borderRadius" | "$ba"
 > & {
   iconName?: OakIconName;
   isTrailingIcon?: boolean;
@@ -35,6 +35,11 @@ const StyledInternalButton = styled(InternalButton)<OakSecondaryButtonProps>`
   }
   &:active {
     box-shadow: ${parseDropShadow("drop-shadow-yellow")};
+  }
+  &:disabled {
+    background: ${parseColor("bg-btn-secondary-disabled")};
+    border-color: ${parseColor("border-neutral")};
+    color: ${parseColor("text-disabled")};
   }
   ${positionStyle}
 `;
@@ -61,6 +66,7 @@ export const OakSecondaryButton = (props: OakSecondaryButtonProps) => {
       $ba={"border-solid-m"}
       $borderRadius={"border-radius-s"}
       $position={"relative"}
+      disabled={props.disabled}
     >
       <StyledOuterShadow
         $position={"absolute"}

@@ -48,7 +48,9 @@ export const Default: Story = {
   render: (args) => (
     <OakFlex $gap="space-between-m">
       <OakSecondaryButton {...args}>Button</OakSecondaryButton>
-      <OakSecondaryButton {...args}>Button</OakSecondaryButton>
+      <OakSecondaryButton {...args} disabled>
+        Button
+      </OakSecondaryButton>
     </OakFlex>
   ),
   args: {
