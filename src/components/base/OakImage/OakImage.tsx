@@ -8,12 +8,17 @@ import {
 } from "@/styles/utils/positionStyle";
 import { sizeStyle, SizeStyleProps } from "@/styles/utils/sizeStyle";
 import { spacingStyle, SpacingStyleProps } from "@/styles/utils/spacingStyle";
+import {
+  colorFilterStyle,
+  ColorFilterStyleProps,
+} from "@/styles/utils/colorFilterStyle";
 
 type HTMLProps = {
   onClick?: MouseEventHandler;
 };
 
 export type OakImageProps = Omit<ImageProps, "width" | "height"> &
+  ColorFilterStyleProps &
   PositionStyleProps &
   SizeStyleProps &
   SpacingStyleProps &
@@ -27,6 +32,7 @@ const StyledImage = styled(Image)<OakImageProps>`
   ${positionStyle}
   ${sizeStyle}
   ${spacingStyle}
+  ${colorFilterStyle}
   ${(props) =>
     /* onClick might be passed in the useClickableCard pattern */
     props.onClick &&

@@ -38,6 +38,16 @@ export const oakColorTokens = {
 
 export type OakColorToken = keyof typeof oakColorTokens;
 
+export const oakColorFilterTokens = {
+  black:
+    "invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%)",
+  red: "invert(13%) sepia(78%) saturate(5255%) hue-rotate(337deg) brightness(88%) contrast(111%)",
+  white:
+    "invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%)",
+};
+
+export type OakColorFilterToken = keyof typeof oakColorFilterTokens;
+
 export const oakUiRoleTokens = [
   "text-primary",
   "text-subdued",
