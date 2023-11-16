@@ -87,6 +87,7 @@ export const OakSecondaryButton = (props: OakSecondaryButtonProps) => {
             iconName={iconName}
             $width={"all-spacing-7"}
             $height={"all-spacing-7"}
+            $colorFilter={props.disabled ? "grey50" : undefined}
           />
         )}
         <OakSpan $font={"body-1-bold"}>{children}</OakSpan>
@@ -95,6 +96,7 @@ export const OakSecondaryButton = (props: OakSecondaryButtonProps) => {
             iconName={iconName}
             $width={"all-spacing-7"}
             $height={"all-spacing-7"}
+            $colorFilter={props.disabled ? "grey50" : undefined}
           />
         )}
       </OakFlex>
