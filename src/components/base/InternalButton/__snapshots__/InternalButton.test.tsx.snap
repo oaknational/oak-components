@@ -2,7 +2,7 @@
 
 exports[`InternalButton matches snapshot 1`] = `
 <button
-  className="sc-aXZVg jNlnwH"
+  className="sc-aXZVg fYDmgP"
   onClick={[Function]}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
