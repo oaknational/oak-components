@@ -54,10 +54,11 @@ export type InternalButtonProps = StyledButtonProps & {
   children?: React.ReactNode;
   className?: string;
   disabled?: boolean;
+  "data-testid"?: string;
 };
 
 const UnstyledInternalButton = (props: InternalButtonProps) => {
-  const { onClick, onHovered, ...rest } = props;
+  const { onClick, onHovered } = props;
 
   const hoverStart = useRef(Date.now());
 
@@ -80,7 +81,9 @@ const UnstyledInternalButton = (props: InternalButtonProps) => {
 
   return (
     <button
-      {...rest}
+      className={props.className}
+      data-testid={props["data-testid"]}
+      disabled={props.disabled}
       onClick={handleClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}

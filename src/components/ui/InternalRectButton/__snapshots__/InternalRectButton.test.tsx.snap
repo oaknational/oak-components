@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InternalRectButton matches snapshot 1`] = `
+<button
+  className="sc-dAlyuH sc-jEACwC UAVSl yGhfD oak-secondary-button"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <div
+    className="sc-aXZVg sc-cPiKLX kpsnZC loNSME"
+  />
+  <div
+    className="sc-aXZVg sc-gEvEer goWQoj OzInM"
+  >
+    <img
+      alt="arrow-right"
+      className="sc-dcJsrY eCGqBl"
+      data-nimg="1"
+      decoding="async"
+      height={0}
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="https://undefined/undefined/v1699895398/icons/fv0z57zerrioft52dd9n.svg"
+      style={
+        {
+          "color": "transparent",
+        }
+      }
+      width={0}
+    />
+    <span
+      className="sc-eqUAAy gXELRB"
+    >
+      Click Me
+    </span>
+  </div>
+</button>
+`;
