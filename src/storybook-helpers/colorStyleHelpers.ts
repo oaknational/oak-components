@@ -1,7 +1,7 @@
 import { oakColorTokens } from "@/styles/theme/color";
 
 const colorCtl = {
-  options: Object.keys(oakColorTokens),
+  options: [...Object.keys(oakColorTokens), null],
   control: { type: "select" },
 };
 
