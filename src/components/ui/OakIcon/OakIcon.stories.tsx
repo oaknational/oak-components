@@ -5,6 +5,7 @@ import { OakIcon, OakIconProps, oakIconNames } from "./OakIcon";
 
 import { OakFlex, OakTypography } from "@/components/base";
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
+import { colorFilterArgTypes } from "@/storybook-helpers/colorFilterStyleHelpers";
 
 /**
  * A wrapper around OakImage which uses the image-map.json file to map icon names to image paths.
@@ -22,10 +23,16 @@ const meta: Meta<typeof OakIcon> = {
       control: { type: "select" },
     },
     ...sizeArgTypes,
+    ...colorFilterArgTypes,
   },
   parameters: {
     controls: {
-      include: ["iconName", "$width", "$height"],
+      include: [
+        "iconName",
+        "$width",
+        "$height",
+        ...Object.keys(colorFilterArgTypes),
+      ],
     },
   },
 };
@@ -46,10 +53,11 @@ export const AllIcons: Story = {
       })}
     </OakFlex>
   ),
-  args: {},
+  args: { $colorFilter: "black" },
   parameters: {
     controls: {
-      include: [],
+      include: [...Object.keys(colorFilterArgTypes)],
+      sort: "none",
     },
   },
 };
@@ -61,7 +69,12 @@ export const PickIcon: Story = {
   },
   parameters: {
     controls: {
-      include: ["iconName", "$width", "$height"],
+      include: [
+        "iconName",
+        "$width",
+        "$height",
+        ...Object.keys(colorFilterArgTypes),
+      ],
     },
   },
 };

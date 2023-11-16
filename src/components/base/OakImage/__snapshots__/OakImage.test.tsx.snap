@@ -3,7 +3,7 @@
 exports[`OakImage matches snapshot 1`] = `
 <img
   alt="a test image"
-  className="sc-aXZVg iLZleo"
+  className="sc-aXZVg ejTGXm"
   data-nimg="1"
   decoding="async"
   height={0}
