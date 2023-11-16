@@ -6,6 +6,7 @@ import { OakFieldError, OakFieldErrorProps } from "./OakFieldError";
 /**
  *
  *
+ * OakFieldError renders a error message when passed children.
  *
  */
 

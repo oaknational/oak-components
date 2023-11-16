@@ -3,7 +3,7 @@ import {
   OakUiRoleToken,
   oakColorFilterTokens,
   oakUiRoleTokens,
-} from "../theme/color";
+} from "@/styles/theme/color";
 
 import { OakCombinedColorToken } from "@/styles/theme";
 import { PropsWithTheme } from "@/styles/theme/theme";
