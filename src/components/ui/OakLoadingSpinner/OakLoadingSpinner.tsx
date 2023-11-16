@@ -28,7 +28,7 @@ const StyledLoadingSpinner = styled.span<OakLoadingSpinnerProps>`
           --width: 1.25rem;
         `}
   --inner-width: calc(var(--width) / 10 * 8);
-  --thickness: calc(var(--width) / 10);
+  --thickness: calc(var(--width) / 12);
 
   position: absolute;
   display: inline-flex;
@@ -43,10 +43,9 @@ const StyledLoadingSpinner = styled.span<OakLoadingSpinnerProps>`
     margin: var(--thickness);
     border-radius: 50%;
     border: var(--thickness) solid currentcolor;
-    border-color: currentcolor transparent;
+    border-color: currentcolor currentcolor currentcolor transparent;
     animation: ${SpinnerKeyframe} 1.2s linear infinite;
   }
-
   ${colorStyle}
 `;
 
