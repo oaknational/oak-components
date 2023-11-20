@@ -33,8 +33,10 @@ const meta: Meta<typeof OakRadioGroup> = {
   parameters: {
     controls: {
       include: [
-        ...Object.keys(flexArgTypes),
-        ...Object.keys(typographyArgTypes),
+        "$flexDirection",
+        "$gap",
+        "$alignItems",
+        "$font",
         ...Object.keys(radioInputArgTypes),
         ...Object.keys(colorArgTypes),
       ],
@@ -50,29 +52,15 @@ export const Default: Story = {
     return (
       <>
         <OakRadioGroup {...args}>
-          <OakRadioButton
-            value="1"
-            label="Option 1"
-            $inputCheckedColor={"black"}
-            $inputHoverColor={"lemon"}
-          />
-          <OakRadioButton
-            value="2"
-            label="Option 2"
-            $inputCheckedColor={"black"}
-            $inputHoverColor={"lemon"}
-          />
-          <OakRadioButton
-            value="3"
-            label="Option 3"
-            $inputCheckedColor={"black"}
-            $inputHoverColor={"lemon"}
-          />
+          <OakRadioButton value="1" label="Option 1" />
+          <OakRadioButton value="2" label="Option 2" />
+          <OakRadioButton value="3" label="Option 3" />
         </OakRadioGroup>
       </>
     );
   },
   args: {
     name: "test",
+    label: "Radio group",
   },
 };

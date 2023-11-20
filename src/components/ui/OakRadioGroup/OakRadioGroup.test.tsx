@@ -13,24 +13,9 @@ describe("RadioGroup", () => {
   it("renders a RadioGroup", () => {
     renderWithTheme(
       <OakRadioGroup name={"test"}>
-        <OakRadioButton
-          value="1"
-          label="Option 1"
-          $inputCheckedColor={"black"}
-          $inputHoverColor={"lemon"}
-        />
-        <OakRadioButton
-          value="2"
-          label="Option 2"
-          $inputCheckedColor={"black"}
-          $inputHoverColor={"lemon"}
-        />
-        <OakRadioButton
-          value="3"
-          label="Option 3"
-          $inputCheckedColor={"black"}
-          $inputHoverColor={"lemon"}
-        />
+        <OakRadioButton value="1" label="Option 1" />
+        <OakRadioButton value="2" label="Option 2" />
+        <OakRadioButton value="3" label="Option 3" />
       </OakRadioGroup>,
     );
 
@@ -41,24 +26,9 @@ describe("RadioGroup", () => {
   it("renders a label", () => {
     renderWithTheme(
       <OakRadioGroup name={"test"} label={"Select one of the following:"}>
-        <OakRadioButton
-          value="1"
-          label="Option 1"
-          $inputCheckedColor={"black"}
-          $inputHoverColor={"lemon"}
-        />
-        <OakRadioButton
-          value="2"
-          label="Option 2"
-          $inputCheckedColor={"black"}
-          $inputHoverColor={"lemon"}
-        />
-        <OakRadioButton
-          value="3"
-          label="Option 3"
-          $inputCheckedColor={"black"}
-          $inputHoverColor={"lemon"}
-        />
+        <OakRadioButton value="1" label="Option 1" />
+        <OakRadioButton value="2" label="Option 2" />
+        <OakRadioButton value="3" label="Option 3" />
       </OakRadioGroup>,
     );
 
@@ -70,27 +40,9 @@ describe("RadioGroup", () => {
   it("allows you to select a radio on click of label", async () => {
     const { getAllByTestId, rerender } = renderWithTheme(
       <OakRadioGroup name={"test"}>
-        <OakRadioButton
-          value="1"
-          label="Option 1"
-          $inputCheckedColor={"black"}
-          $inputHoverColor={"lemon"}
-          data-testid={"radio-1"}
-        />
-        <OakRadioButton
-          value="2"
-          label="Option 2"
-          $inputCheckedColor={"black"}
-          $inputHoverColor={"lemon"}
-          data-testid={"radio-2"}
-        />
-        <OakRadioButton
-          value="3"
-          label="Option 3"
-          $inputCheckedColor={"black"}
-          $inputHoverColor={"lemon"}
-          data-testid={"radio-3"}
-        />
+        <OakRadioButton value="1" label="Option 1" data-testid={"radio-1"} />
+        <OakRadioButton value="2" label="Option 2" data-testid={"radio-2"} />
+        <OakRadioButton value="3" label="Option 3" data-testid={"radio-3"} />
       </OakRadioGroup>,
     );
 
@@ -103,27 +55,9 @@ describe("RadioGroup", () => {
 
     rerender(
       <OakRadioGroup name={"test"}>
-        <OakRadioButton
-          value="1"
-          label="Option 1"
-          $inputCheckedColor={"black"}
-          $inputHoverColor={"lemon"}
-          data-testid={"radio-1"}
-        />
-        <OakRadioButton
-          value="2"
-          label="Option 2"
-          $inputCheckedColor={"black"}
-          $inputHoverColor={"lemon"}
-          data-testid={"radio-2"}
-        />
-        <OakRadioButton
-          value="3"
-          label="Option 3"
-          $inputCheckedColor={"black"}
-          $inputHoverColor={"lemon"}
-          data-testid={"radio-3"}
-        />
+        <OakRadioButton value="1" label="Option 1" data-testid={"radio-1"} />
+        <OakRadioButton value="2" label="Option 2" data-testid={"radio-2"} />
+        <OakRadioButton value="3" label="Option 3" data-testid={"radio-3"} />
       </OakRadioGroup>,
     );
 
@@ -134,27 +68,9 @@ describe("RadioGroup", () => {
   it("changes on keyboard input", async () => {
     const { rerender, getAllByTestId } = renderWithTheme(
       <OakRadioGroup name={"test"}>
-        <OakRadioButton
-          value="1"
-          label="Option 1"
-          $inputCheckedColor={"black"}
-          $inputHoverColor={"lemon"}
-          data-testid={"radio-1"}
-        />
-        <OakRadioButton
-          value="2"
-          label="Option 2"
-          $inputCheckedColor={"black"}
-          $inputHoverColor={"lemon"}
-          data-testid={"radio-2"}
-        />
-        <OakRadioButton
-          value="3"
-          label="Option 3"
-          $inputCheckedColor={"black"}
-          $inputHoverColor={"lemon"}
-          data-testid={"radio-3"}
-        />
+        <OakRadioButton value="1" label="Option 1" data-testid={"radio-1"} />
+        <OakRadioButton value="2" label="Option 2" data-testid={"radio-2"} />
+        <OakRadioButton value="3" label="Option 3" data-testid={"radio-3"} />
       </OakRadioGroup>,
     );
 
@@ -174,27 +90,9 @@ describe("RadioGroup", () => {
 
     rerender(
       <OakRadioGroup name={"test"}>
-        <OakRadioButton
-          value="1"
-          label="Option 1"
-          $inputCheckedColor={"black"}
-          $inputHoverColor={"lemon"}
-          data-testid={"radio-1"}
-        />
-        <OakRadioButton
-          value="2"
-          label="Option 2"
-          $inputCheckedColor={"black"}
-          $inputHoverColor={"lemon"}
-          data-testid={"radio-2"}
-        />
-        <OakRadioButton
-          value="3"
-          label="Option 3"
-          $inputCheckedColor={"black"}
-          $inputHoverColor={"lemon"}
-          data-testid={"radio-3"}
-        />
+        <OakRadioButton value="1" label="Option 1" data-testid={"radio-1"} />
+        <OakRadioButton value="2" label="Option 2" data-testid={"radio-2"} />
+        <OakRadioButton value="3" label="Option 3" data-testid={"radio-3"} />
       </OakRadioGroup>,
     );
 

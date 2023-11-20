@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import React, { createContext, useState } from "react";
 
 import { TypographyStyleProps } from "@/styles/utils/typographyStyle";
 import { ColorStyleProps } from "@/styles/utils/colorStyle";
@@ -21,14 +21,22 @@ export type OakRadioGroupProps = {
   name: string;
   children: React.ReactNode;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-} & TypographyStyleProps &
+} & Pick<TypographyStyleProps, "$font"> &
   ColorStyleProps &
-  FlexStyleProps;
+  Pick<FlexStyleProps, "$flexDirection" | "$alignItems" | "$gap">;
 
 export const OakRadioGroup = (props: OakRadioGroupProps) => {
-  const { name, children, label, onChange, ...styleProps } = props;
+  const {
+    name,
+    children,
+    label,
+    onChange,
+    $font = "body-1-bold",
+    $gap = "space-between-s",
+    ...rest
+  } = props;
 
-  const [value, setValue] = React.useState("");
+  const [value, setValue] = useState("");
 
   const handleValueUpdated = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);
@@ -38,8 +46,8 @@ export const OakRadioGroup = (props: OakRadioGroupProps) => {
   };
 
   return (
-    <OakFlex role="radiogroup" {...styleProps}>
-      <OakLabel {...styleProps}>{label}</OakLabel>
+    <OakFlex role="radiogroup" $gap={$gap} {...rest}>
+      <OakLabel $font={$font}>{label}</OakLabel>
       <RadioContext.Provider
         value={{
           currentValue: value,

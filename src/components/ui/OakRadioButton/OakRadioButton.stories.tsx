@@ -1,18 +1,20 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
+import { OakRadioGroup } from "../OakRadioGroup";
+
 import { OakRadioButton } from "./OakRadioButton";
 
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 import { typographyArgTypes } from "@/storybook-helpers/typographyStyleHelpers";
 import { radioInputArgTypes } from "@/storybook-helpers/radioInputHelpers";
-import { flexArgTypes } from "@/storybook-helpers/flexStyleHelpers";
 
 /**
  *
- * OakRadioGroup allow users to select a single item from a list of mutually exclusive options .
- * OakRadioGroup consists of a set of OakRadioButtons, and a label. Each radio includes a label and a visual selection indicator. A single radio button within the group can be selected at a time. Users may click or touch a radio button to select it, or use the Tab key to navigate to the group, the arrow keys to navigate within the group, and the Space key to select an option.
+
  * ## Usage
+ *
+ * Use withing OakRadioGroup component.
  *
  *
  */
@@ -22,7 +24,6 @@ const meta: Meta<typeof OakRadioButton> = {
   tags: ["autodocs"],
   title: "components/ui/OakRadioButton",
   argTypes: {
-    ...flexArgTypes,
     ...colorArgTypes,
     ...typographyArgTypes,
     ...radioInputArgTypes,
@@ -30,8 +31,7 @@ const meta: Meta<typeof OakRadioButton> = {
   parameters: {
     controls: {
       include: [
-        ...Object.keys(flexArgTypes),
-        ...Object.keys(typographyArgTypes),
+        "$font",
         ...Object.keys(radioInputArgTypes),
         ...Object.keys(colorArgTypes),
       ],
@@ -45,12 +45,12 @@ type Story = StoryObj<typeof OakRadioButton>;
 
 export const Default: Story = {
   render: (args) => {
-    return <OakRadioButton {...args} />;
+    return (
+      <OakRadioGroup name="test">
+        <OakRadioButton {...args} label={"Option 1"} value={"1"} />
+        <OakRadioButton {...args} label={"Option 2"} value={"2"} />
+      </OakRadioGroup>
+    );
   },
-  args: {
-    label: "Option 1",
-    value: "1",
-    $inputCheckedColor: "black",
-    $inputHoverColor: "lemon",
-  },
+  args: {},
 };
