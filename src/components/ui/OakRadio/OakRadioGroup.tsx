@@ -2,7 +2,7 @@ import React, { createContext } from "react";
 
 import { TypographyStyleProps } from "@/styles/utils/typographyStyle";
 import { ColorStyleProps } from "@/styles/utils/colorStyle";
-import { OakFlex } from "@/components/base";
+import { OakFlex, OakLabel } from "@/components/base";
 import { FlexStyleProps } from "@/styles/utils/flexStyle";
 
 export const RadioContext = createContext({
@@ -29,7 +29,7 @@ export const OakRadioGroup = (props: OakRadioGroupProps) => {
 
   return (
     <OakFlex role="radiogroup" {...styleProps}>
-      <span>{label}</span>
+      <OakLabel {...styleProps}>{label}</OakLabel>
       <RadioContext.Provider value={{ state, name, setState }}>
         {" "}
         {children}
