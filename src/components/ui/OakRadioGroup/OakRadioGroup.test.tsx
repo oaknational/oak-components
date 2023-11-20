@@ -3,17 +3,16 @@ import { screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom";
 
+import { OakRadioButton } from "../OakRadioButton/OakRadioButton";
+
 import { OakRadioGroup } from "./OakRadioGroup";
-import { OakRadioButton } from "./OakRadioButton";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("RadioGroup", () => {
   it("renders a RadioGroup", () => {
-    const setState = jest.fn();
-    const state = "1";
     renderWithTheme(
-      <OakRadioGroup state={state} setState={setState} name={"test"}>
+      <OakRadioGroup name={"test"}>
         <OakRadioButton
           value="1"
           label="Option 1"

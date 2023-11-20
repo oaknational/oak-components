@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 
-import { RadioContext } from "./OakRadioGroup";
+import { RadioContext } from "../OakRadioGroup/OakRadioGroup";
 
 import { parseColor } from "@/styles/helpers/parseColor";
 import { flexStyle } from "@/styles/utils/flexStyle";
@@ -69,7 +69,7 @@ const CustomRadioButton = styled.span<CustomRadioInputStyleProps>`
 `;
 
 export const OakRadioButton = (props: OakRadioButtonProps) => {
-  const { state, name, setState } = useContext(RadioContext);
+  const { currentValue, name, onValueUpdated } = useContext(RadioContext);
   const { label, value, tabIndex, ...styleProps } = props;
   return (
     <RadioButtonLabel htmlFor={value} {...styleProps}>
@@ -77,8 +77,8 @@ export const OakRadioButton = (props: OakRadioButtonProps) => {
         name={name}
         id={value}
         value={value}
-        onChange={(e) => setState(e.target.value)}
-        checked={value === state}
+        onChange={onValueUpdated}
+        checked={value === currentValue}
         tabIndex={tabIndex}
       />
       <CustomRadioButton {...styleProps} />

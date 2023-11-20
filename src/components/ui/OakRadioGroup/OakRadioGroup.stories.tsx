@@ -1,7 +1,8 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakRadioButton } from "./OakRadioButton";
+import { OakRadioButton } from "../OakRadioButton/OakRadioButton";
+
 import { OakRadioGroup } from "./OakRadioGroup";
 
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
@@ -46,10 +47,9 @@ type Story = StoryObj<typeof OakRadioGroup>;
 
 export const Default: Story = {
   render: (args) => {
-    const [value, setValue] = React.useState("1");
     return (
       <>
-        <OakRadioGroup {...args} state={value} setState={setValue}>
+        <OakRadioGroup {...args}>
           <OakRadioButton
             value="1"
             label="Option 1"

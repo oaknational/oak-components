@@ -5,19 +5,19 @@ import { ColorStyleProps } from "@/styles/utils/colorStyle";
 import { OakFlex, OakLabel } from "@/components/base";
 import { FlexStyleProps } from "@/styles/utils/flexStyle";
 
-export const RadioContext = createContext({
-  state: "",
-  name: "",
-  setState: (state: string) => {
-    state;
-    return;
-  },
+type RadioContextType = {
+  currentValue: string;
+  name: string;
+  onValueUpdated?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+};
+
+export const RadioContext = createContext<RadioContextType>({
+  currentValue: "default",
+  name: "default",
 });
 
 export type OakRadioGroupProps = {
   label?: string;
-  state: string;
-  setState: (state: string) => void;
   name: string;
   children: React.ReactNode;
 } & TypographyStyleProps &
@@ -25,13 +25,24 @@ export type OakRadioGroupProps = {
   FlexStyleProps;
 
 export const OakRadioGroup = (props: OakRadioGroupProps) => {
-  const { state, setState, name, children, label, ...styleProps } = props;
+  const { name, children, label, ...styleProps } = props;
+
+  const [value, setValue] = React.useState("");
+
+  const handleValueUpdated = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(event.target.value);
+  };
 
   return (
     <OakFlex role="radiogroup" {...styleProps}>
       <OakLabel {...styleProps}>{label}</OakLabel>
-      <RadioContext.Provider value={{ state, name, setState }}>
-        {" "}
+      <RadioContext.Provider
+        value={{
+          currentValue: value,
+          name,
+          onValueUpdated: handleValueUpdated,
+        }}
+      >
         {children}
       </RadioContext.Provider>
     </OakFlex>
