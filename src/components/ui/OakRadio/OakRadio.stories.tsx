@@ -11,15 +11,12 @@ import { flexArgTypes } from "@/storybook-helpers/flexStyleHelpers";
 
 /**
  *
- * An unstyled button to be used as a basis for all UI button components.
- * The following callbacks are available for tracking focus events:
+ * OakRadioGroup allow users to select a single item from a list of mutually exclusive options .
+ * OakRadioGroup consists of a set of OakRadioButtons, and a label. Each radio includes a label and a visual selection indicator. A single radio button within the group can be selected at a time. Users may click or touch a radio button to select it, or use the Tab key to navigate to the group, the arrow keys to navigate within the group, and the Space key to select an option.
+ * ## Usage
  *
- * ### onClick
- * `onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;`
-
- * ### onHovered
- *  `onHovered?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, duration: number) => void;`<br>
- *  called after a mouseEnter and mouseLeave event has happened
+ * Add state={setValue} setState={setValue} to radio group and 'Radio' component as children for each button.
+ *
  */
 
 const meta: Meta<typeof OakRadioGroup> = {
