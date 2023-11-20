@@ -29,7 +29,7 @@ describe("parseLetterSpacing", () => {
     expect(parseLetterSpacing()).toBeUndefined();
   });
   it("should return correct string for value", () => {
-    expect(parseLetterSpacing("heading-1")).toBe("0.0115em");
+    expect(parseLetterSpacing("heading-1")).toBe("0.0115rem");
   });
 });
 describe("parseFontWeight", () => {

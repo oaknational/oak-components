@@ -24,7 +24,10 @@ function parseColorFilter(value?: OakCombinedColorToken | null) {
   if (oakUiRoleTokens.includes(value as OakUiRoleToken)) {
     return ({ theme }: PropsWithTheme) => {
       const c = theme.uiColors[value as OakUiRoleToken];
-      return oakColorFilterTokens[c as OakColorFilterToken];
+      if (c && c in oakColorFilterTokens) {
+        return oakColorFilterTokens[c as OakColorFilterToken];
+      }
+      return undefined;
     };
   }
 }

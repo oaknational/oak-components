@@ -5,7 +5,6 @@ import { OakFieldError, OakFieldErrorProps } from "./OakFieldError";
 
 /**
  *
- *
  * OakFieldError renders a error message when passed children.
  *
  */
@@ -27,10 +26,6 @@ type Story = StoryObj<typeof OakFieldError>;
 
 export const DefaultOakFieldError: Story = (
   args: Partial<OakFieldErrorProps>,
-) => (
-  <OakFieldError data-testId="OakMaxWidth-id" {...args}>
-    A simple flex container with pre set padding and max width
-  </OakFieldError>
-);
+) => <OakFieldError {...args}>Error message goes here ...</OakFieldError>;
 
 DefaultOakFieldError.args = {};
