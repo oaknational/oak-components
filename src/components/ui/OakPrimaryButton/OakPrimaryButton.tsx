@@ -21,9 +21,6 @@ export type OakPrimaryButtonProps = Pick<
 export const OakPrimaryButton = (props: OakPrimaryButtonProps) => {
   return (
     <InternalRectButton
-      $background="white"
-      $color="black"
-      $ba="border-solid-m"
       defaultBorderColor="bg-btn-primary"
       defaultBackground="bg-btn-primary"
       defaultTextColor="text-inverted"

@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/react";
 
 import { InternalRectButton } from "./InternalRectButton";
 
-import { oakIconNames } from "@/components/ui/OakIcon";
+import { oakIconNames } from "@/components/base/OakIcon";
 import { OakFlex } from "@/components/base";
 import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
@@ -56,7 +56,6 @@ const meta: Meta<typeof InternalRectButton> = {
         "iconName",
         "isTrailingIcon",
         "isLoading",
-        "$ba",
         "defaultBackground",
         "defaultTextColor",
         "defaultBorderColor",
@@ -87,9 +86,6 @@ export const Default: Story = {
     </OakFlex>
   ),
   args: {
-    $background: "white",
-    $color: "black",
-    $ba: "border-solid-m",
     iconName: "arrow-right",
     defaultBackground: "bg-btn-secondary",
     defaultTextColor: "text-primary",

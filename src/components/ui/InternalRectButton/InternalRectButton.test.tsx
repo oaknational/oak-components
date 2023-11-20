@@ -11,19 +11,16 @@ import {
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 const defaultArgs: InternalRectButtonProps = {
-  $background: "white",
-  $color: "black",
-  $ba: "border-solid-m",
   iconName: "arrow-right",
-  defaultBackground: "white",
-  defaultTextColor: "black",
-  defaultBorderColor: "black",
-  hoverBackground: "grey50",
-  hoverBorderColor: "grey50",
-  hoverTextColor: "black",
-  disabledBackground: "grey50",
-  disabledBorderColor: "grey50",
-  disabledTextColor: "grey50",
+  defaultBackground: "mint",
+  defaultTextColor: "mint30",
+  defaultBorderColor: "mint50",
+  hoverBackground: "lemon",
+  hoverBorderColor: "lemon30",
+  hoverTextColor: "lemon50",
+  disabledBackground: "grey20",
+  disabledBorderColor: "grey30",
+  disabledTextColor: "grey40",
 };
 
 describe("InternalRectButton", () => {
@@ -101,6 +98,21 @@ describe("InternalRectButton", () => {
     expect(onHovered).not.toHaveBeenCalled();
     fireEvent.mouseLeave(getByTestId("test"));
     expect(onHovered).toHaveBeenCalledTimes(1);
+  });
+
+  it("correctly applies default styles", () => {
+    const { getByTestId } = renderWithTheme(
+      <InternalRectButton {...defaultArgs} data-testid="test">
+        Click
+      </InternalRectButton>,
+    );
+    fireEvent.mouseEnter(getByTestId("test"));
+
+    expect(getByTestId("test")).toHaveStyle({
+      "background-color": "#bef2bd",
+      color: "#ebfbeb",
+      "border-color": "#dff9de",
+    });
   });
 
   it("correctly captures the duration of the hover event", () => {

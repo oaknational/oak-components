@@ -1,14 +1,14 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakPrimaryButton } from "./OakPrimaryButton";
+import { OakSecondaryButton } from "./OakSecondaryButton";
 
 import { oakIconNames } from "@/components/base/OakIcon";
 import { OakFlex } from "@/components/base";
 
 /**
  *
- * An Styled button used by the OakPrimaryButton and OakSecondaryButton components.
+ * An Styled button used by the OakSecondaryButton and OakSecondaryButton components.
  *
  * The following callbacks are available for tracking focus events:
  *
@@ -22,10 +22,10 @@ import { OakFlex } from "@/components/base";
 
 const controlIconNames = [...oakIconNames].sort();
 
-const meta: Meta<typeof OakPrimaryButton> = {
-  component: OakPrimaryButton,
+const meta: Meta<typeof OakSecondaryButton> = {
+  component: OakSecondaryButton,
   tags: ["autodocs"],
-  title: "components/ui/OakPrimaryButton",
+  title: "components/ui/OakSecondaryButton",
   argTypes: {
     iconName: {
       options: controlIconNames,
@@ -46,18 +46,18 @@ const meta: Meta<typeof OakPrimaryButton> = {
 };
 export default meta;
 
-type Story = StoryObj<typeof OakPrimaryButton>;
+type Story = StoryObj<typeof OakSecondaryButton>;
 
 export const Default: Story = {
   render: (args) => (
     <OakFlex $gap="space-between-m">
-      <OakPrimaryButton {...args}>Primary Button</OakPrimaryButton>
-      <OakPrimaryButton {...args} disabled>
+      <OakSecondaryButton {...args}>Secondary Button</OakSecondaryButton>
+      <OakSecondaryButton {...args} disabled>
         Disabled Button
-      </OakPrimaryButton>
-      <OakPrimaryButton {...args} isLoading>
+      </OakSecondaryButton>
+      <OakSecondaryButton {...args} isLoading>
         Loading Button
-      </OakPrimaryButton>
+      </OakSecondaryButton>
     </OakFlex>
   ),
   args: {

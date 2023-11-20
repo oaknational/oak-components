@@ -6,7 +6,7 @@ import {
   InternalButton,
   InternalButtonProps,
 } from "@/components/base/InternalButton";
-import { OakIcon, OakIconName } from "@/components/ui/OakIcon";
+import { OakIcon, OakIconName } from "@/components/base/OakIcon";
 import { OakLoadingSpinner } from "@/components/ui/OakLoadingSpinner";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import {
@@ -18,7 +18,14 @@ import { OakCombinedColorToken } from "@/styles";
 
 export type InternalRectButtonProps = Omit<
   InternalButtonProps,
-  "$pa" | "$ph" | "$pv" | "$borderRadius"
+  | "$pa"
+  | "$ph"
+  | "$pv"
+  | "$ba"
+  | "$borderRadius"
+  | "$borderColor"
+  | "$background"
+  | "$color"
 > & {
   iconName?: OakIconName;
   isTrailingIcon?: boolean;
@@ -101,6 +108,7 @@ export const InternalRectButton = (props: InternalRectButtonProps) => {
     <StyledInternalButton
       className="oak-secondary-button"
       {...rest}
+      $ba={"border-solid-m"}
       $color={props.defaultTextColor}
       $background={props.defaultBackground}
       $borderColor={props.defaultBorderColor}
