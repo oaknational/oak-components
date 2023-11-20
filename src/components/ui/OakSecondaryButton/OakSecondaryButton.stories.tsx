@@ -6,9 +6,11 @@ import { OakSecondaryButton } from "./OakSecondaryButton";
 import { oakIconNames } from "@/components/base/OakIcon";
 import { OakFlex } from "@/components/base";
 
+const controlIconNames = [...oakIconNames].sort();
+
 /**
  *
- * An Styled button used by the OakSecondaryButton and OakSecondaryButton components.
+ * A specific implementation of InternalRectButton
  *
  * The following callbacks are available for tracking focus events:
  *
@@ -19,8 +21,6 @@ import { OakFlex } from "@/components/base";
  *  `onHovered?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, duration: number) => void;`<br>
  *  called after a mouseEnter and mouseLeave event has happened
  */
-
-const controlIconNames = [...oakIconNames].sort();
 
 const meta: Meta<typeof OakSecondaryButton> = {
   component: OakSecondaryButton,

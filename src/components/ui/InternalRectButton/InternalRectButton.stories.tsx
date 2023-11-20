@@ -8,21 +8,22 @@ import { OakFlex } from "@/components/base";
 import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 
+const controlIconNames = [...oakIconNames].sort();
+
 /**
  *
- * An Styled button used by the OakPrimaryButton and OakSecondaryButton components.
- *
+ * A styled rectangular button, not intended to be used directly. 
+ * Instead used by OakPrimaryButton and OakSecondaryButton.
+ * 
  * The following callbacks are available for tracking focus events:
  *
  * ### onClick
  * `onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;`
- *
+
  * ### onHovered
  *  `onHovered?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, duration: number) => void;`<br>
  *  called after a mouseEnter and mouseLeave event has happened
  */
-
-const controlIconNames = [...oakIconNames].sort();
 
 const meta: Meta<typeof InternalRectButton> = {
   component: InternalRectButton,
