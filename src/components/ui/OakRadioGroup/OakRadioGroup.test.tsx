@@ -35,20 +35,12 @@ describe("RadioGroup", () => {
     );
 
     const radioGroup = screen.getByRole("radiogroup");
-    console.log(radioGroup);
     expect(radioGroup).toBeInTheDocument();
   });
 
   it("renders a label", () => {
-    const setState = jest.fn();
-    const state = "1";
     renderWithTheme(
-      <OakRadioGroup
-        state={state}
-        setState={setState}
-        name={"test"}
-        label={"Select one of the following:"}
-      >
+      <OakRadioGroup name={"test"} label={"Select one of the following:"}>
         <OakRadioButton
           value="1"
           label="Option 1"
@@ -76,15 +68,8 @@ describe("RadioGroup", () => {
   });
 
   it("allows you to select a radio on click of label", async () => {
-    // const setState = jest.fn();
-    // const state = "1";
-    let state = "1";
-
-    const setState = (value: string) => {
-      state = value;
-    };
     const { getAllByTestId, rerender } = renderWithTheme(
-      <OakRadioGroup state={state} setState={setState} name={"test"}>
+      <OakRadioGroup name={"test"}>
         <OakRadioButton
           value="1"
           label="Option 1"
@@ -117,7 +102,7 @@ describe("RadioGroup", () => {
     await userEvent.click(within(firstRadio).getByRole("radio"));
 
     rerender(
-      <OakRadioGroup state={state} setState={setState} name={"test"}>
+      <OakRadioGroup name={"test"}>
         <OakRadioButton
           value="1"
           label="Option 1"
@@ -147,13 +132,8 @@ describe("RadioGroup", () => {
   });
 
   it("changes on keyboard input", async () => {
-    let state = "";
-
-    const setState = (value: string) => {
-      state = value;
-    };
     const { rerender, getAllByTestId } = renderWithTheme(
-      <OakRadioGroup state={state} setState={setState} name={"test"}>
+      <OakRadioGroup name={"test"}>
         <OakRadioButton
           value="1"
           label="Option 1"
@@ -193,7 +173,7 @@ describe("RadioGroup", () => {
     await user.keyboard(" ");
 
     rerender(
-      <OakRadioGroup state={state} setState={setState} name={"test"}>
+      <OakRadioGroup name={"test"}>
         <OakRadioButton
           value="1"
           label="Option 1"

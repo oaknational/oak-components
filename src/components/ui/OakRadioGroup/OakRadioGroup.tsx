@@ -20,17 +20,21 @@ export type OakRadioGroupProps = {
   label?: string;
   name: string;
   children: React.ReactNode;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 } & TypographyStyleProps &
   ColorStyleProps &
   FlexStyleProps;
 
 export const OakRadioGroup = (props: OakRadioGroupProps) => {
-  const { name, children, label, ...styleProps } = props;
+  const { name, children, label, onChange, ...styleProps } = props;
 
   const [value, setValue] = React.useState("");
 
   const handleValueUpdated = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);
+    if (onChange) {
+      onChange(event);
+    }
   };
 
   return (

@@ -4,62 +4,59 @@ import styled from "styled-components";
 import { RadioContext } from "../OakRadioGroup/OakRadioGroup";
 
 import { parseColor } from "@/styles/helpers/parseColor";
-import { flexStyle } from "@/styles/utils/flexStyle";
-import { OakFlexProps } from "@/components/base";
 import { OakColorToken } from "@/styles";
+import { parseSpacing } from "@/styles/helpers/parseSpacing";
+import { parseBorder } from "@/styles/helpers/parseBorder";
 
-export type RadioInputStyleProps = {
+type CustomRadioInputStyleProps = {
   $inputCheckedColor?: OakColorToken;
   $inputHoverColor?: OakColorToken;
 };
-type CustomRadioInputStyleProps = RadioInputStyleProps;
-type RadioButtonLableStyleProps = OakFlexProps & CustomRadioInputStyleProps;
+// type RadioButtonLableStyleProps = CustomRadioInputStyleProps;
 
 type OakRadioButtonProps = {
   label: string;
   value: string;
   tabIndex?: number;
-} & RadioButtonLableStyleProps;
+} & CustomRadioInputStyleProps;
 
-const RadioButtonLabel = styled.label<RadioButtonLableStyleProps>`
+const RadioButtonLabel = styled.label`
   cursor: pointer;
+  display: flex;
   align-items: center;
-  ${flexStyle}
 `;
 
-const RadioButtonInput = styled.input.attrs({
+const HiddenRadioButtonInput = styled.input.attrs({
   type: "radio",
 })`
   opacity: 0;
+  position: absolute;
 `;
 
-const CustomRadioButton = styled.span<CustomRadioInputStyleProps>`
-  height: 24px;
-  width: 24px;
+const VisibleRadioButtonInput = styled.span<CustomRadioInputStyleProps>`
+  height: ${parseSpacing("all-spacing-6")};
+  width: ${parseSpacing("all-spacing-6")};
   border-radius: 50%;
   cursor: pointer;
   display: inline-block;
-  border: 2px solid ${parseColor("black")};
+  border: ${parseBorder("border-solid-m")} ${parseColor("black")};
 
   display: flex;
   flex-grow: 0;
   flex-shrink: 0;
   align-items: center;
-  background: white;
+  background: ${parseColor("white")};
   justify-content: center;
   cursor: pointer;
-  margin-right: 16px;
-  ${RadioButtonInput}:focus ~ & {
-    box-shadow: ${(props) => `0 0 0 3px ${parseColor(props.$inputHoverColor)}`};
-  }
-  ${RadioButtonInput}:hover ~ & {
+  margin-right: ${parseSpacing("all-spacing-4")};
+  ${HiddenRadioButtonInput}:focus-visible ~ & {
     box-shadow: ${(props) => `0 0 0 3px ${parseColor(props.$inputHoverColor)}`};
   }
 
-  ${RadioButtonInput}:checked ~ &::after {
+  ${HiddenRadioButtonInput}:checked ~ &::after {
     content: "";
-    height: 20px;
-    width: 20px;
+    height: ${parseSpacing("all-spacing-5")};
+    width: ${parseSpacing("all-spacing-5")};
     background: ${(props) => parseColor(props.$inputCheckedColor)};
     display: block;
     position: absolute;
@@ -69,21 +66,24 @@ const CustomRadioButton = styled.span<CustomRadioInputStyleProps>`
 `;
 
 export const OakRadioButton = (props: OakRadioButtonProps) => {
-  const { currentValue, name, onValueUpdated } = useContext(RadioContext);
+  const radioContext = useContext(RadioContext);
+  const { currentValue, name, onValueUpdated } = radioContext;
   const { label, value, tabIndex, ...styleProps } = props;
   return (
-    <RadioButtonLabel htmlFor={value} {...styleProps}>
-      <RadioButtonInput
-        name={name}
-        id={value}
-        value={value}
-        onChange={onValueUpdated}
-        checked={value === currentValue}
-        tabIndex={tabIndex}
-      />
-      <CustomRadioButton {...styleProps} />
-      {label}
-    </RadioButtonLabel>
+    <>
+      <RadioButtonLabel htmlFor={value} {...styleProps}>
+        <HiddenRadioButtonInput
+          name={name}
+          id={value}
+          value={value}
+          onChange={onValueUpdated}
+          checked={value === currentValue}
+          tabIndex={tabIndex}
+        />
+        <VisibleRadioButtonInput {...styleProps} />
+        {label}
+      </RadioButtonLabel>
+    </>
   );
 };
 
