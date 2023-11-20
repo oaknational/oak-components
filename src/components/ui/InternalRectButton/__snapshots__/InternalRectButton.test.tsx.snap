@@ -15,7 +15,7 @@ exports[`InternalRectButton matches snapshot 1`] = `
   >
     <img
       alt="arrow-right"
-      className="sc-dcJsrY gIuzdA"
+      className="sc-dcJsrY vFLns"
       data-nimg="1"
       decoding="async"
       height={0}

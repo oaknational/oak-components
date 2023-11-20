@@ -15,7 +15,7 @@ exports[`OakSecondaryButton matches snapshot 1`] = `
   >
     <img
       alt="arrow-right"
-      className="sc-dcJsrY gGtIIs"
+      className="sc-dcJsrY gLlfsI"
       data-nimg="1"
       decoding="async"
       height={0}
