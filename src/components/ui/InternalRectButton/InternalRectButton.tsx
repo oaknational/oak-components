@@ -86,8 +86,8 @@ export const InternalRectButton = (props: InternalRectButtonProps) => {
       {iconName && (
         <OakIcon
           iconName={iconName}
-          $width={"all-spacing-7"}
-          $height={"all-spacing-7"}
+          $width={"all-spacing-6"}
+          $height={"all-spacing-6"}
           $colorFilter={
             props.disabled ? props.disabledTextColor : props.defaultTextColor
           }

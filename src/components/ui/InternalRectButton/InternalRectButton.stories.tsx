@@ -8,7 +8,7 @@ import { OakFlex } from "@/components/base";
 import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 
-const controlIconNames = [...oakIconNames].sort();
+const controlIconNames = [null, [...oakIconNames].sort()].flat();
 
 /**
  *

@@ -6,7 +6,7 @@ import { OakPrimaryButton } from "./OakPrimaryButton";
 import { oakIconNames } from "@/components/base/OakIcon";
 import { OakFlex } from "@/components/base";
 
-const controlIconNames = [...oakIconNames].sort();
+const controlIconNames = [null, [...oakIconNames].sort()].flat();
 
 /**
  *
