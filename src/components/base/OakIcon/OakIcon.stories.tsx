@@ -16,7 +16,7 @@ const controlIconNames = [...oakIconNames].sort();
 const meta: Meta<typeof OakIcon> = {
   component: OakIcon,
   tags: ["autodocs"],
-  title: "components/ui/OakIcon",
+  title: "components/base/OakIcon",
   argTypes: {
     iconName: {
       options: controlIconNames,
