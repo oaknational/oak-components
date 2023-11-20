@@ -22,9 +22,12 @@ export type InternalRectButtonProps = Omit<
 > & {
   iconName?: OakIconName;
   isTrailingIcon?: boolean;
-  defaultTextColor?: OakCombinedColorToken;
+  defaultTextColor: OakCombinedColorToken;
   defaultBackground: OakCombinedColorToken;
+  defaultBorderColor: OakCombinedColorToken;
+  hoverTextColor: OakCombinedColorToken;
   hoverBackground: OakCombinedColorToken;
+  hoverBorderColor: OakCombinedColorToken;
   disabledBackground: OakCombinedColorToken;
   disabledBorderColor: OakCombinedColorToken;
   disabledTextColor: OakCombinedColorToken;
@@ -36,7 +39,9 @@ const StyledInternalButton = styled(InternalButton)<InternalRectButtonProps>`
     &:hover {
       text-decoration: underline;
       box-shadow: ${parseDropShadow("drop-shadow-yellow")};
+      color: ${parseColor(props.hoverTextColor)};
       background: ${parseColor(props.hoverBackground)};
+      border-color: ${parseColor(props.hoverBorderColor)};
     }
 
     &:focus-visible {
@@ -44,6 +49,9 @@ const StyledInternalButton = styled(InternalButton)<InternalRectButtonProps>`
     }
     &:active {
       box-shadow: ${parseDropShadow("drop-shadow-yellow")};
+      background: ${parseColor(props.defaultBackground)};
+      border-color: ${parseColor(props.defaultBorderColor)};
+      color: ${parseColor(props.defaultTextColor)};
     }
     &:disabled {
       background: ${parseColor(props.disabledBackground)};
@@ -73,15 +81,17 @@ export const InternalRectButton = (props: InternalRectButtonProps) => {
           iconName={iconName}
           $width={"all-spacing-7"}
           $height={"all-spacing-7"}
-          $colorFilter={props.disabled ? props.disabledTextColor : undefined}
+          $colorFilter={
+            props.disabled ? props.disabledTextColor : props.defaultTextColor
+          }
         />
       )}
     </>
   );
 
   const loader = (
-    <OakBox $width={"all-spacing-7"} $height={"all-spacing-7"}>
-      <OakLoadingSpinner $width={"all-spacing-7"} />
+    <OakBox $width={"all-spacing-6"} $height={"all-spacing-6"}>
+      <OakLoadingSpinner $width={"all-spacing-6"} />
     </OakBox>
   );
 
@@ -91,7 +101,9 @@ export const InternalRectButton = (props: InternalRectButtonProps) => {
     <StyledInternalButton
       className="oak-secondary-button"
       {...rest}
+      $color={props.defaultTextColor}
       $background={props.defaultBackground}
+      $borderColor={props.defaultBorderColor}
       $pv={"inner-padding-xs"}
       $ph={"inner-padding-s"}
       $borderRadius={"border-radius-s"}

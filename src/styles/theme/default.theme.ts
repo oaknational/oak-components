@@ -17,7 +17,7 @@ export const oakDefaultTheme: OakTheme = {
     "bg-neutral": "grey20",
     "bg-neutral-stronger": "grey30",
     "bg-btn-primary": "black",
-    "bg-btn-primary-hover": undefined,
+    "bg-btn-primary-hover": "grey60",
     "bg-btn-primary-disabled": "grey50",
     "bg-btn-secondary": "white",
     "bg-btn-secondary-hover": "grey20",

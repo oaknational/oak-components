@@ -42,7 +42,10 @@ const meta: Meta<typeof InternalRectButton> = {
     ...borderArgTypes,
     defaultBackground: colorArgTypes.$color,
     defaultTextColor: colorArgTypes.$color,
+    defaultBorderColor: colorArgTypes.$color,
     hoverBackground: colorArgTypes.$color,
+    hoverBorderColor: colorArgTypes.$color,
+    hoverTextColor: colorArgTypes.$color,
     disabledBackground: colorArgTypes.$color,
     disabledBorderColor: colorArgTypes.$color,
     disabledTextColor: colorArgTypes.$color,
@@ -55,7 +58,11 @@ const meta: Meta<typeof InternalRectButton> = {
         "isLoading",
         "$ba",
         "defaultBackground",
+        "defaultTextColor",
+        "defaultBorderColor",
+        "hoverTextColor",
         "hoverBackground",
+        "hoverBorderColor",
         "disabledBackground",
         "disabledBorderColor",
         "disabledTextColor",
@@ -72,10 +79,10 @@ export const Default: Story = {
     <OakFlex $gap="space-between-m">
       <InternalRectButton {...args}>Button</InternalRectButton>
       <InternalRectButton {...args} disabled>
-        Button
+        Disabled Button
       </InternalRectButton>
       <InternalRectButton {...args} isLoading>
-        Button
+        Loading Button
       </InternalRectButton>
     </OakFlex>
   ),
@@ -86,7 +93,10 @@ export const Default: Story = {
     iconName: "arrow-right",
     defaultBackground: "bg-btn-secondary",
     defaultTextColor: "text-primary",
+    defaultBorderColor: "text-primary",
     hoverBackground: "bg-btn-secondary-hover",
+    hoverTextColor: "text-primary",
+    hoverBorderColor: "text-primary",
     disabledBackground: "bg-btn-secondary-disabled",
     disabledBorderColor: "text-disabled",
     disabledTextColor: "text-disabled",

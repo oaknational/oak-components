@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InternalRectButton matches snapshot 1`] = `
+exports[`OakPrimaryButton matches snapshot 1`] = `
 <button
-  className="sc-dAlyuH sc-jEACwC jzVPhz guGOpt oak-secondary-button"
+  className="sc-dAlyuH sc-jEACwC dsMZzr gIPLWh oak-secondary-button"
   onClick={[Function]}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
@@ -15,7 +15,7 @@ exports[`InternalRectButton matches snapshot 1`] = `
   >
     <img
       alt="arrow-right"
-      className="sc-dcJsrY gGtIIs"
+      className="sc-dcJsrY gvdDAo"
       data-nimg="1"
       decoding="async"
       height={0}
