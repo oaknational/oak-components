@@ -5,4 +5,8 @@ export const radioInputArgTypes = {
     options: Object.keys(oakColorTokens),
     control: { type: "select" },
   },
+  $inputHoverColor: {
+    options: Object.keys(oakColorTokens),
+    control: { type: "select" },
+  },
 };

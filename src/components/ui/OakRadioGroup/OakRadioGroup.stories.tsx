@@ -57,20 +57,20 @@ export const Default: Story = {
           <OakRadioButton
             value="1"
             label="Option 1"
-            // tabIndex={0}
-            $inputCheckedColor={"red"}
+            $inputCheckedColor={"black"}
+            $inputHoverColor={"lemon"}
           />
           <OakRadioButton
             value="2"
             label="Option 2"
-            // tabIndex={1}
-            $inputCheckedColor={"red"}
+            $inputCheckedColor={"black"}
+            $inputHoverColor={"lemon"}
           />
           <OakRadioButton
             value="3"
             label="Option 3"
-            // tabIndex={2}
-            $inputCheckedColor={"red"}
+            $inputCheckedColor={"black"}
+            $inputHoverColor={"lemon"}
           />
         </OakRadioGroup>
       </>

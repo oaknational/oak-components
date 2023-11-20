@@ -4,10 +4,15 @@ import styled from "styled-components";
 import { RadioContext } from "../OakRadioGroup/OakRadioGroup";
 
 import { parseColor } from "@/styles/helpers/parseColor";
-import { RadioInputStyleProps } from "@/styles/utils/radioInputStyles";
+// import { RadioInputStyleProps } from "@/styles/utils/radioInputStyles";
 import { flexStyle } from "@/styles/utils/flexStyle";
 import { OakFlexProps } from "@/components/base";
+import { OakColorToken } from "@/styles";
 
+export type RadioInputStyleProps = {
+  $inputCheckedColor?: OakColorToken;
+  $inputHoverColor?: OakColorToken;
+};
 type CustomRadioInputStyleProps = RadioInputStyleProps;
 type RadioButtonLableStyleProps = OakFlexProps & CustomRadioInputStyleProps;
 
@@ -19,6 +24,7 @@ type OakRadioButtonProps = {
 
 const RadioButtonLabel = styled.label<RadioButtonLableStyleProps>`
   cursor: pointer;
+  align-items: center;
   ${flexStyle}
 `;
 
@@ -44,11 +50,11 @@ const CustomRadioButton = styled.span<CustomRadioInputStyleProps>`
   justify-content: center;
   cursor: pointer;
   margin-right: 16px;
-  &:hover {
-    box-shadow: 0 0 0 3px ${parseColor("lemon")};
+  ${RadioButtonInput}:focus ~ & {
+    box-shadow: ${(props) => `0 0 0 3px ${parseColor(props.$inputHoverColor)}`};
   }
-  ${RadioButtonLabel}:hover {
-    box-shadow: 0 0 0 3px ${parseColor("lemon")};
+  ${RadioButtonInput}:hover ~ & {
+    box-shadow: ${(props) => `0 0 0 3px ${parseColor(props.$inputHoverColor)}`};
   }
 
   ${RadioButtonInput}:checked ~ &::after {
@@ -60,19 +66,6 @@ const CustomRadioButton = styled.span<CustomRadioInputStyleProps>`
     position: absolute;
     border-radius: 50%;
     border: 2px solid ${parseColor("white")};
-    box-shadow: 0 0 0 3px ${parseColor("lemon")};
-  }
-
-  ${RadioButtonInput}:focus ~ &::after {
-    content: "";
-    height: 20px;
-    width: 20px;
-    background: ${(props) => parseColor(props.$inputCheckedColor)};
-    display: block;
-    position: absolute;
-    border-radius: 50%;
-    border: 2px solid ${parseColor("white")};
-    box-shadow: 0 0 0 3px ${parseColor("lemon")};
   }
 `;
 
