@@ -3,7 +3,7 @@ import { screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom";
 
-import { OakRadioGroup } from "../OakRadioGroup/OakRadioGroup";
+import { OakRadioGroup } from "./OakRadioGroup";
 
 import { OakRadioButton } from "./OakRadioButton";
 

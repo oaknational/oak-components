@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 
-import { RadioContext } from "../OakRadioGroup/OakRadioGroup";
+import { RadioContext } from "./OakRadioGroup";
 
 import { parseColor } from "@/styles/helpers/parseColor";
 // import { RadioInputStyleProps } from "@/styles/utils/radioInputStyles";

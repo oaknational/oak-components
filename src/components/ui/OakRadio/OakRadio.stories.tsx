@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakRadioButton } from "../OakRadioButton/OakRadioButton";
+import { OakRadioButton } from "./OakRadioButton";
 
 import { OakRadioGroup } from "./OakRadioGroup";
 
