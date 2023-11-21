@@ -4,9 +4,7 @@ import userEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom";
 
 import { OakRadioButton } from "@/components/ui/OakRadioButton";
-
 import { OakRadioGroup } from "@/components/ui/OakRadioGroup";
-
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("RadioGroup", () => {
