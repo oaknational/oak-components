@@ -82,6 +82,7 @@ export const OakRadioButton = (props: OakRadioButtonProps) => {
     $font = "body-1",
     $color = "black",
     $background,
+    ...rest
   } = props;
   return (
     <RadioButtonLabel
@@ -102,6 +103,7 @@ export const OakRadioButton = (props: OakRadioButtonProps) => {
         tabIndex={tabIndex}
         $opacity={"transparent"}
         $position={"absolute"}
+        {...rest}
       />
       <VisibleRadioButtonInput
         $height={"all-spacing-6"}

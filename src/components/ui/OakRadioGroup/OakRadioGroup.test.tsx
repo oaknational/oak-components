@@ -1,5 +1,5 @@
 import React from "react";
-import { screen, within } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom";
 
@@ -51,8 +51,7 @@ describe("RadioGroup", () => {
     const firstRadio = radio1[0] as HTMLElement;
     const secondRadio = radio2[0] as HTMLElement;
 
-    await userEvent.click(within(firstRadio).getByRole("radio"));
-
+    await userEvent.click(firstRadio);
     rerender(
       <OakRadioGroup name={"test"}>
         <OakRadioButton value="1" label="Option 1" data-testid={"radio-1"} />
@@ -61,8 +60,8 @@ describe("RadioGroup", () => {
       </OakRadioGroup>,
     );
 
-    expect(within(firstRadio).getByRole("radio")).toBeChecked();
-    expect(within(secondRadio).getByRole("radio")).not.toBeChecked();
+    expect(firstRadio).toBeChecked();
+    expect(secondRadio).not.toBeChecked();
   });
 
   it("changes on keyboard input", async () => {
@@ -81,8 +80,8 @@ describe("RadioGroup", () => {
 
     const user = userEvent.setup();
 
-    expect(within(firstRadio).getByRole("radio")).not.toBeChecked();
-    expect(within(secondRadio).getByRole("radio")).not.toBeChecked();
+    expect(firstRadio).not.toBeChecked();
+    expect(secondRadio).not.toBeChecked();
 
     await user.tab();
     await user.keyboard("[ArrowDown]");
@@ -96,7 +95,7 @@ describe("RadioGroup", () => {
       </OakRadioGroup>,
     );
 
-    expect(within(firstRadio).getByRole("radio")).not.toBeChecked();
-    expect(within(secondRadio).getByRole("radio")).toBeChecked();
+    expect(firstRadio).not.toBeChecked();
+    expect(secondRadio).toBeChecked();
   });
 });
