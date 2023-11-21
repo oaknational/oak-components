@@ -1,8 +1,11 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import renderWithTheme from "@/test-helpers/renderWithTheme";
+
 import { OakRadioGroup } from "../OakRadioGroup";
+
 import { OakRadioButton } from "./OakRadioButton";
+
+import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("RadioGroup", () => {
   it("renders a RadioGroup", () => {
