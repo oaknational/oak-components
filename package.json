@@ -25,7 +25,8 @@
   "license": "ISC",
   "dependencies": {
     "@cloudinary/react": "^1.11.2",
-    "@cloudinary/url-gen": "^1.12.0"
+    "@cloudinary/url-gen": "^1.12.0",
+    "storybook-react-context": "^0.6.0"
   },
   "peerDependencies": {
     "react": "^18.2.0",

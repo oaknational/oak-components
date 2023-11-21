@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioGroup matches snapshot 1`] = `
+<div
+  className="sc-aXZVg sc-gEvEer goWQoj hnMCey"
+  role="radiogroup"
+>
+  <label
+    className="sc-dAlyuH ghbrnd"
+  />
+  <label
+    className="sc-dAlyuH sc-jEACwC ghbrnd iWLZuP"
+    data-testid="radio-1"
+    htmlFor="1"
+  >
+    <input
+      checked={false}
+      className="sc-cPiKLX gNhUTn"
+      data-testid="radio-1"
+      id="1"
+      name="test"
+      onChange={[Function]}
+      type="radio"
+      value="1"
+    />
+    <div
+      className="sc-aXZVg sc-gEvEer sc-dLMFU ipCwrb eIypJK csSkYD"
+    />
+    Option 1
+  </label>
+  <label
+    className="sc-dAlyuH sc-jEACwC ghbrnd iWLZuP"
+    htmlFor="2"
+  >
+    <input
+      checked={false}
+      className="sc-cPiKLX gNhUTn"
+      id="2"
+      name="test"
+      onChange={[Function]}
+      type="radio"
+      value="2"
+    />
+    <div
+      className="sc-aXZVg sc-gEvEer sc-dLMFU ipCwrb eIypJK csSkYD"
+    />
+    Option 2
+  </label>
+  <label
+    className="sc-dAlyuH sc-jEACwC ghbrnd iWLZuP"
+    htmlFor="3"
+  >
+    <input
+      checked={false}
+      className="sc-cPiKLX gNhUTn"
+      id="3"
+      name="test"
+      onChange={[Function]}
+      type="radio"
+      value="3"
+    />
+    <div
+      className="sc-aXZVg sc-gEvEer sc-dLMFU ipCwrb eIypJK csSkYD"
+    />
+    Option 3
+  </label>
+</div>
+`;
