@@ -115,4 +115,22 @@ describe("RadioGroup", () => {
 
     expect(onChange).toHaveBeenCalled();
   });
+  it("handles $font and $gap as props and return expexted style", () => {
+    const { getAllByTestId } = renderWithTheme(
+      <OakRadioGroup name={"test"} $font={"body-1"} $gap={"space-between-m"}>
+        <OakRadioButton value="1" label="Option 1" data-testid={"radio-1"} />
+        <OakRadioButton value="2" label="Option 2" data-testid={"radio-2"} />
+        <OakRadioButton value="3" label="Option 3" data-testid={"radio-3"} />
+      </OakRadioGroup>,
+    );
+
+    const radio1 = getAllByTestId("radio-1");
+    const firstRadio = radio1[0] as HTMLElement;
+
+    expect(firstRadio).toHaveStyle("font-weight: ");
+    expect(firstRadio).toHaveStyle("font-size: ");
+    expect(firstRadio).toHaveStyle("line-height: normal");
+    expect(firstRadio).toHaveStyle("letter-spacing: normal");
+    expect(firstRadio).toHaveStyle("gap: ");
+  });
 });
