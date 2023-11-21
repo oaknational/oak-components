@@ -3,9 +3,9 @@ import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom";
 
-import { OakRadioButton } from "../OakRadioButton/OakRadioButton";
+import { OakRadioButton } from "@/components/ui/OakRadioButton";
 
-import { OakRadioGroup } from "./OakRadioGroup";
+import { OakRadioGroup } from "@/components/ui/OakRadioGroup";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 

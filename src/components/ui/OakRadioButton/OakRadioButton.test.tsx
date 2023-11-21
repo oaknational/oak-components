@@ -1,9 +1,9 @@
 import React from "react";
 import "@testing-library/jest-dom";
 
-import { OakRadioGroup } from "../OakRadioGroup";
+import { OakRadioGroup } from "@/components/ui/OakRadioGroup";
 
-import { OakRadioButton } from "./OakRadioButton";
+import { OakRadioButton } from "@/components/ui/OakRadioButton";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
