@@ -2,6 +2,7 @@ import React from "react";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom";
+import { create } from "react-test-renderer";
 
 import { OakRadioButton } from "@/components/ui/OakRadioButton";
 import { OakRadioGroup } from "@/components/ui/OakRadioGroup";
@@ -34,7 +35,35 @@ describe("RadioGroup", () => {
 
     expect(label).toBeInTheDocument();
   });
-
+  it("matches snapshot", () => {
+    const tree = create(
+      <OakRadioGroup name={"test"}>
+        <OakRadioButton
+          value="1"
+          label="Option 1"
+          $gap="space-between-m"
+          $font="body-1-bold"
+          $color="black"
+          data-testid={"radio-1"}
+        />
+        <OakRadioButton
+          value="2"
+          label="Option 2"
+          $gap="space-between-m"
+          $font="body-1-bold"
+          $color="black"
+        />
+        <OakRadioButton
+          value="3"
+          label="Option 3"
+          $gap="space-between-m"
+          $font="body-1-bold"
+          $color="black"
+        />
+      </OakRadioGroup>,
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
   it("allows you to select a radio on click of label", async () => {
     const { getAllByTestId, rerender } = renderWithTheme(
       <OakRadioGroup name={"test"}>
@@ -46,8 +75,8 @@ describe("RadioGroup", () => {
 
     const radio1 = getAllByTestId("radio-1");
     const radio2 = getAllByTestId("radio-2");
-    const firstRadio = radio1[0] as HTMLElement;
-    const secondRadio = radio2[0] as HTMLElement;
+    const firstRadio = radio1[1] as HTMLElement;
+    const secondRadio = radio2[1] as HTMLElement;
 
     await userEvent.click(firstRadio);
     rerender(
@@ -73,8 +102,8 @@ describe("RadioGroup", () => {
 
     const radio1 = getAllByTestId("radio-1");
     const radio2 = getAllByTestId("radio-2");
-    const firstRadio = radio1[0] as HTMLElement;
-    const secondRadio = radio2[0] as HTMLElement;
+    const firstRadio = radio1[1] as HTMLElement;
+    const secondRadio = radio2[1] as HTMLElement;
 
     const user = userEvent.setup();
 
@@ -96,7 +125,7 @@ describe("RadioGroup", () => {
     expect(firstRadio).not.toBeChecked();
     expect(secondRadio).toBeChecked();
   });
-  it("input change fires onChange", async () => {
+  it("fires onChange when the input changes", async () => {
     const onChange = jest.fn();
     const { getAllByTestId } = renderWithTheme(
       <OakRadioGroup name={"test"} onChange={onChange}>
@@ -113,7 +142,7 @@ describe("RadioGroup", () => {
 
     expect(onChange).toHaveBeenCalled();
   });
-  it("handles $font and $gap as props and return expexted style", () => {
+  it("handles $font and $gap as props and return expected style", () => {
     const { getAllByTestId } = renderWithTheme(
       <OakRadioGroup name={"test"} $font={"body-1"} $gap={"space-between-m"}>
         <OakRadioButton value="1" label="Option 1" data-testid={"radio-1"} />
@@ -125,10 +154,10 @@ describe("RadioGroup", () => {
     const radio1 = getAllByTestId("radio-1");
     const firstRadio = radio1[0] as HTMLElement;
 
-    expect(firstRadio).toHaveStyle("font-weight: ");
-    expect(firstRadio).toHaveStyle("font-size: ");
-    expect(firstRadio).toHaveStyle("line-height: normal");
-    expect(firstRadio).toHaveStyle("letter-spacing: normal");
-    expect(firstRadio).toHaveStyle("gap: ");
+    expect(firstRadio).toHaveStyle("font-weight: 300");
+    expect(firstRadio).toHaveStyle("font-size: 1rem");
+    expect(firstRadio).toHaveStyle("line-height: 1.75rem");
+    expect(firstRadio).toHaveStyle("letter-spacing: -0.005em");
+    expect(firstRadio).toHaveStyle("gap: 0.5rem");
   });
 });

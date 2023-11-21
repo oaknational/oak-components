@@ -12,7 +12,7 @@ import { flexArgTypes } from "@/storybook-helpers/flexStyleHelpers";
 
  * ## Usage
  *
- * Use withing OakRadioGroup component.
+ * Use within OakRadioGroup component.
  *
  *
  */

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 
-import { RadioContext } from "@/components/ui/OakRadioGroup";
+import { RadioContext } from "@/components/ui/OakRadioGroup/OakRadioGroup";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { parseBorder } from "@/styles/helpers/parseBorder";
@@ -29,6 +29,7 @@ type OakRadioButtonProps = {
   label: string;
   value: string;
   tabIndex?: number;
+  "data-testid"?: string;
 } & VisibleRadioInputStyleProps &
   RadioButtonLabelProps;
 
@@ -81,7 +82,7 @@ export const OakRadioButton = (props: OakRadioButtonProps) => {
     $font = "body-1",
     $color = "black",
     $background,
-    ...rest
+    "data-testid": dataTestId,
   } = props;
   return (
     <RadioButtonLabel
@@ -92,6 +93,7 @@ export const OakRadioButton = (props: OakRadioButtonProps) => {
       $alignItems={"center"}
       $color={$color}
       $background={$background}
+      data-testid={dataTestId}
     >
       <HiddenRadioButtonInput
         name={name}
@@ -102,7 +104,7 @@ export const OakRadioButton = (props: OakRadioButtonProps) => {
         tabIndex={tabIndex}
         $opacity={"transparent"}
         $position={"absolute"}
-        {...rest}
+        data-testid={dataTestId}
       />
       <VisibleRadioButtonInput
         $height={"all-spacing-6"}
