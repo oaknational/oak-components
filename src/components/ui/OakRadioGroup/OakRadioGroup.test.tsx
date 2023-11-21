@@ -98,4 +98,21 @@ describe("RadioGroup", () => {
     expect(firstRadio).not.toBeChecked();
     expect(secondRadio).toBeChecked();
   });
+  it("input change fires onChange", async () => {
+    const onChange = jest.fn();
+    const { getAllByTestId } = renderWithTheme(
+      <OakRadioGroup name={"test"} onChange={onChange}>
+        <OakRadioButton value="1" label="Option 1" data-testid={"radio-1"} />
+        <OakRadioButton value="2" label="Option 2" data-testid={"radio-2"} />
+        <OakRadioButton value="3" label="Option 3" data-testid={"radio-3"} />
+      </OakRadioGroup>,
+    );
+
+    const radio1 = getAllByTestId("radio-1");
+    const firstRadio = radio1[0] as HTMLElement;
+
+    await userEvent.click(firstRadio);
+
+    expect(onChange).toHaveBeenCalled();
+  });
 });
