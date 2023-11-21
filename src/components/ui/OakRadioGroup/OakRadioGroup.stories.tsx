@@ -5,7 +5,6 @@ import { OakRadioButton } from "@/components/ui/OakRadioButton";
 import { OakRadioGroup } from "@/components/ui/OakRadioGroup";
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 import { typographyArgTypes } from "@/storybook-helpers/typographyStyleHelpers";
-import { radioInputArgTypes } from "@/storybook-helpers/radioInputHelpers";
 import { flexArgTypes } from "@/storybook-helpers/flexStyleHelpers";
 
 /**
@@ -26,7 +25,6 @@ const meta: Meta<typeof OakRadioGroup> = {
     ...flexArgTypes,
     ...colorArgTypes,
     ...typographyArgTypes,
-    ...radioInputArgTypes,
   },
   parameters: {
     controls: {
@@ -35,7 +33,6 @@ const meta: Meta<typeof OakRadioGroup> = {
         "$gap",
         "$alignItems",
         "$font",
-        ...Object.keys(radioInputArgTypes),
         ...Object.keys(colorArgTypes),
       ],
     },
