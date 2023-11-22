@@ -1,9 +1,8 @@
 {
   "name": "@oak-academy/oak-components",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "licence": "MIT",
   "description": "Shared components for oak applications",
-  "main": "dist/esm/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types.d.ts",
   "files": [
