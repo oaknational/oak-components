@@ -1,7 +1,7 @@
 import React from "react";
 
 import { OakImage, OakImageProps } from "@/components/base";
-import * as imageMap from "@/image-map.json";
+import * as imageMap from "../../../image-map.json";
 
 export const oakIconNames = [
   "home",
