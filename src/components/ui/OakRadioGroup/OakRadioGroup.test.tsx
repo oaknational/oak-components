@@ -157,7 +157,7 @@ describe("RadioGroup", () => {
     expect(firstRadio).toHaveStyle("font-weight: 300");
     expect(firstRadio).toHaveStyle("font-size: 1rem");
     expect(firstRadio).toHaveStyle("line-height: 1.75rem");
-    expect(firstRadio).toHaveStyle("letter-spacing: -0.005em");
+    expect(firstRadio).toHaveStyle("letter-spacing: -0.005rem");
     expect(firstRadio).toHaveStyle("gap: 0.5rem");
   });
 });
