@@ -6,16 +6,16 @@ exports[`RadioGroup matches snapshot 1`] = `
   role="radiogroup"
 >
   <label
-    className="sc-dAlyuH ghbrnd"
+    className="sc-kpDqfm fBjapb"
   />
   <label
-    className="sc-dAlyuH sc-jEACwC ghbrnd iWLZuP"
+    className="sc-kpDqfm sc-dAlyuH fBjapb iqAwMf"
     data-testid="radio-1"
     htmlFor="1"
   >
     <input
       checked={false}
-      className="sc-cPiKLX gNhUTn"
+      className="sc-jlZhew esNJok"
       data-testid="radio-1"
       id="1"
       name="test"
@@ -24,17 +24,17 @@ exports[`RadioGroup matches snapshot 1`] = `
       value="1"
     />
     <div
-      className="sc-aXZVg sc-gEvEer sc-dLMFU ipCwrb eIypJK csSkYD"
+      className="sc-aXZVg sc-gEvEer sc-cwHptR ipCwrb eIypJK lcKWBD"
     />
     Option 1
   </label>
   <label
-    className="sc-dAlyuH sc-jEACwC ghbrnd iWLZuP"
+    className="sc-kpDqfm sc-dAlyuH fBjapb iqAwMf"
     htmlFor="2"
   >
     <input
       checked={false}
-      className="sc-cPiKLX gNhUTn"
+      className="sc-jlZhew esNJok"
       id="2"
       name="test"
       onChange={[Function]}
@@ -42,17 +42,17 @@ exports[`RadioGroup matches snapshot 1`] = `
       value="2"
     />
     <div
-      className="sc-aXZVg sc-gEvEer sc-dLMFU ipCwrb eIypJK csSkYD"
+      className="sc-aXZVg sc-gEvEer sc-cwHptR ipCwrb eIypJK lcKWBD"
     />
     Option 2
   </label>
   <label
-    className="sc-dAlyuH sc-jEACwC ghbrnd iWLZuP"
+    className="sc-kpDqfm sc-dAlyuH fBjapb iqAwMf"
     htmlFor="3"
   >
     <input
       checked={false}
-      className="sc-cPiKLX gNhUTn"
+      className="sc-jlZhew esNJok"
       id="3"
       name="test"
       onChange={[Function]}
@@ -60,7 +60,7 @@ exports[`RadioGroup matches snapshot 1`] = `
       value="3"
     />
     <div
-      className="sc-aXZVg sc-gEvEer sc-dLMFU ipCwrb eIypJK csSkYD"
+      className="sc-aXZVg sc-gEvEer sc-cwHptR ipCwrb eIypJK lcKWBD"
     />
     Option 3
   </label>
