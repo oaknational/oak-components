@@ -5,7 +5,7 @@ import dts from "rollup-plugin-dts";
 import terser from "@rollup/plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import { typescriptPaths } from "rollup-plugin-typescript-paths";
-import json from '@rollup/plugin-json';
+import json from "@rollup/plugin-json";
 
 const packageJson = require("./package.json");
 
@@ -39,5 +39,4 @@ export default [
     output: [{ file: "dist/types.d.ts", format: "es" }],
     plugins: [typescriptPaths({ preserveExtensions: true }), dts.default()],
   },
-
 ];
