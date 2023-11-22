@@ -1,11 +1,11 @@
 {
-  "name": "oak-components",
-  "version": "1.0.0",
+  "name": "@oak-academy/oak-components",
+  "version": "0.0.1",
   "licence": "MIT",
   "description": "Shared components for oak applications",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/types.d.ts",
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs",
     "test": "jest --watch --collectCoverage=false",
@@ -80,5 +80,16 @@
     "styled-components": "^5.3.11",
     "ts-jest": "^29.1.1",
     "typescript": "^5.2.2"
-  }
+  },
+  "directories": {
+    "example": "examples"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oaknational/oak-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oaknational/oak-components/issues"
+  },
+  "homepage": "https://github.com/oaknational/oak-components#readme"
 }
