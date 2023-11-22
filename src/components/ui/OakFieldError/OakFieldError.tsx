@@ -3,7 +3,7 @@ import React from "react";
 import { OakFlex } from "../../base/OakFlex";
 import { OakSpan } from "../../base/OakSpan";
 
-import { OakIcon } from "@/components/ui";
+import { OakIcon } from "@/components/base/OakIcon";
 
 export type OakFieldErrorProps = {
   children?: React.ReactNode;
