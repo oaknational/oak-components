@@ -17,18 +17,21 @@ export default [
         file: packageJson.module,
         format: "esm",
         sourcemap: true,
+        interop: "compat", // https://rollupjs.org/configuration-options/#output-interop - needed for nextjs
       },
       {
         file: packageJson.main,
         format: "cjs",
+        sourcemap: true,
+        interop: "compat", // https://rollupjs.org/configuration-options/#output-interop - needed for nextjs
       },
     ],
     plugins: [
       peerDepsExternal(),
       nodeResolve({ preferBuiltins: true }),
-      commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
       terser(),
+      commonjs(),
       json(),
     ],
     external: ["react", "react-dom", "styled-components"],
