@@ -1,4 +1,4 @@
-import resolve from "@rollup/plugin-node-resolve";
+import { nodeResolve } from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
@@ -18,10 +18,14 @@ export default [
         format: "esm",
         sourcemap: true,
       },
+      {
+        file: packageJson.main,
+        format: "cjs",
+      },
     ],
     plugins: [
       peerDepsExternal(),
-      resolve(),
+      nodeResolve({ preferBuiltins: true }),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
       terser(),
