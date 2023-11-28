@@ -11,3 +11,4 @@ export * from "./OakOL";
 export * from "./OakLI";
 export * from "./OakLabel";
 export * from "./OakIcon";
+export * from "./OakThemeProvider";
