@@ -12,6 +12,7 @@ import {
   colorFilterStyle,
   ColorFilterStyleProps,
 } from "@/styles/utils/colorFilterStyle";
+import { OakBox } from "@/components/base/OakBox";
 
 type HTMLProps = {
   onClick?: MouseEventHandler;
@@ -29,9 +30,6 @@ export type OakImageProps = Omit<ImageProps, "width" | "height"> &
  * props to the api
  */
 const StyledImage = styled(Image)<OakImageProps>`
-  ${positionStyle}
-  ${sizeStyle}
-  ${spacingStyle}
   ${colorFilterStyle}
   ${(props) =>
     /* onClick might be passed in the useClickableCard pattern */
@@ -41,20 +39,39 @@ const StyledImage = styled(Image)<OakImageProps>`
         cursor: pointer;
       }
     `}
+  object-fit: contain;
+`;
+
+const StyledBox = styled(OakBox)<Omit<OakImageProps, "alt" | "src">>`
+  ${positionStyle}
+  ${sizeStyle}
+  ${spacingStyle}
 `;
 
 export const OakImage = (props: OakImageProps) => {
-  const { src, alt, $width = "auto", $height = "auto", ...rest } = props;
+  const {
+    src,
+    alt,
+    $width = "100%",
+    $height = "100%",
+    $minWidth = "all-spacing-4",
+    $minHeight = "all-spacing-4",
+    $position = "relative",
+    $colorFilter,
+
+    ...rest
+  } = props;
 
   return (
-    <StyledImage
-      src={src}
-      alt={alt}
-      width={0}
-      height={0}
+    <StyledBox
+      $position={$position}
       $width={$width}
       $height={$height}
+      $minWidth={$minWidth}
+      $minHeight={$minHeight}
       {...rest}
-    />
+    >
+      <StyledImage src={src} alt={alt} fill $colorFilter={$colorFilter} />
+    </StyledBox>
   );
 };

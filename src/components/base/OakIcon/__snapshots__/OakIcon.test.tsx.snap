@@ -1,21 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakIcon matches snapshot 1`] = `
-<img
-  alt="home"
-  className="sc-aXZVg gtGiky"
-  data-nimg="1"
-  decoding="async"
-  height={0}
-  loading="lazy"
-  onError={[Function]}
-  onLoad={[Function]}
-  src="https://undefined/undefined/v1699887218/icons/gvqxjxcw07ei2kkmwnes.svg"
-  style={
-    {
-      "color": "transparent",
+<div
+  className="sc-aXZVg sc-eqUAAy bSRVBb eEZTmt"
+>
+  <img
+    alt="home"
+    className="sc-gEvEer ekQEFr"
+    data-nimg="fill"
+    decoding="async"
+    loading="lazy"
+    onError={[Function]}
+    onLoad={[Function]}
+    src="https://undefined/undefined/v1699887218/icons/gvqxjxcw07ei2kkmwnes.svg"
+    style={
+      {
+        "bottom": 0,
+        "color": "transparent",
+        "height": "100%",
+        "left": 0,
+        "objectFit": undefined,
+        "objectPosition": undefined,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "width": "100%",
+      }
     }
-  }
-  width={0}
-/>
+  />
+</div>
 `;

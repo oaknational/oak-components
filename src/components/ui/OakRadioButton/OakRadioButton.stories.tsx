@@ -41,8 +41,18 @@ export const Default: Story = {
   render: (args) => {
     return (
       <OakRadioGroup name="test">
-        <OakRadioButton {...args} label={"Option 1"} value={"1"} />
-        <OakRadioButton {...args} label={"Option 2"} value={"2"} />
+        <OakRadioButton
+          {...args}
+          id="option-1"
+          label={"Option 1"}
+          value={"1"}
+        />
+        <OakRadioButton
+          {...args}
+          id="option-2"
+          label={"Option 2"}
+          value={"2"}
+        />
       </OakRadioGroup>
     );
   },

@@ -27,7 +27,7 @@ describe("OakImage", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("defaults to auto width and height", () => {
+  it("defaults to 100% width and height", () => {
     const { getByTestId } = render(
       <OakImage
         data-testid="test"
@@ -36,8 +36,8 @@ describe("OakImage", () => {
       />,
     );
     expect(getByTestId("test")).toHaveStyle({
-      width: "auto",
-      height: "auto",
+      width: "100%",
+      height: "100%",
     });
   });
 });

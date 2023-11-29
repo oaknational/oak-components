@@ -26,6 +26,7 @@ type RadioButtonLabelProps = Pick<FlexStyleProps, "$gap" | "$alignItems"> &
 type HiddenRadioInputStyleProps = Pick<OakBoxProps, "$opacity" | "$position">;
 
 type OakRadioButtonProps = {
+  id: string;
   label: string;
   value: string;
   tabIndex?: number;
@@ -75,6 +76,7 @@ export const OakRadioButton = (props: OakRadioButtonProps) => {
   const radioContext = useContext(RadioContext);
   const { currentValue, name, onValueUpdated } = radioContext;
   const {
+    id,
     label,
     value,
     tabIndex,
@@ -86,7 +88,7 @@ export const OakRadioButton = (props: OakRadioButtonProps) => {
   } = props;
   return (
     <RadioButtonLabel
-      htmlFor={value}
+      htmlFor={id}
       $gap={$gap}
       $font={$font}
       $display={"flex"}
@@ -97,7 +99,7 @@ export const OakRadioButton = (props: OakRadioButtonProps) => {
     >
       <HiddenRadioButtonInput
         name={name}
-        id={value}
+        id={id}
         value={value}
         onChange={onValueUpdated}
         checked={value === currentValue}
