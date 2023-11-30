@@ -2,34 +2,45 @@
 
 exports[`OakSecondaryButton matches snapshot 1`] = `
 <button
-  className="sc-dAlyuH sc-jEACwC jzVPhz kja-DMQ oak-secondary-button"
+  className="sc-cwHptR sc-dLMFU dFuOhg juPPGn oak-secondary-button"
   onClick={[Function]}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
   <div
-    className="sc-aXZVg sc-cPiKLX kpsnZC loNSME"
+    className="sc-aXZVg sc-eDPEul kpsnZC kJiwEg"
   />
   <div
     className="sc-aXZVg sc-gEvEer goWQoj OzInM"
   >
-    <img
-      alt="arrow-right"
-      className="sc-dcJsrY gLlfsI"
-      data-nimg="1"
-      decoding="async"
-      height={0}
-      loading="lazy"
-      onError={[Function]}
-      onLoad={[Function]}
-      src="https://undefined/undefined/v1699895398/icons/fv0z57zerrioft52dd9n.svg"
-      style={
-        {
-          "color": "transparent",
+    <div
+      className="sc-aXZVg sc-gsFSXq gCbvTQ dJNvkK"
+    >
+      <img
+        alt="arrow-right"
+        className="sc-dcJsrY giMUDV"
+        data-nimg="fill"
+        decoding="async"
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="https://undefined/undefined/v1699895398/icons/fv0z57zerrioft52dd9n.svg"
+        style={
+          {
+            "bottom": 0,
+            "color": "transparent",
+            "height": "100%",
+            "left": 0,
+            "objectFit": undefined,
+            "objectPosition": undefined,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          }
         }
-      }
-      width={0}
-    />
+      />
+    </div>
     <span
       className="sc-eqUAAy gXELRB"
     >

@@ -78,6 +78,7 @@ export const OakIcon = (props: OakIconProps) => {
       alt={_alt}
       $width={$width}
       $height={$height}
+      $background="red"
       {...rest}
     />
   );

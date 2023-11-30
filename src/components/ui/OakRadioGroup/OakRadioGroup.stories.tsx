@@ -45,13 +45,11 @@ type Story = StoryObj<typeof OakRadioGroup>;
 export const Default: Story = {
   render: (args) => {
     return (
-      <>
-        <OakRadioGroup {...args}>
-          <OakRadioButton value="1" label="Option 1" />
-          <OakRadioButton value="2" label="Option 2" />
-          <OakRadioButton value="3" label="Option 3" />
-        </OakRadioGroup>
-      </>
+      <OakRadioGroup {...args}>
+        <OakRadioButton id="radio-1" value="1" label="Option 1" />
+        <OakRadioButton id="radio-2" value="2" label="Option 2" />
+        <OakRadioButton id="radio-3" value="3" label="Option 3" />
+      </OakRadioGroup>
     );
   },
   args: {
