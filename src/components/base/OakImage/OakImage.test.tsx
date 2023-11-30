@@ -27,17 +27,24 @@ describe("OakImage", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("defaults to 100% width and height", () => {
-    const { getByTestId } = render(
+  it("defaults to 100% width and auto height when aspect ratio props are provide and sets minWidth on container", () => {
+    const { getByTestId, getByRole } = render(
       <OakImage
         data-testid="test"
         src="/../../../../assets/oak-national-academy-logo-512.png"
+        width={512}
+        height={512}
+        $minWidth={"all-spacing-16"}
         alt="a test image"
       />,
     );
+
     expect(getByTestId("test")).toHaveStyle({
+      "min-width": "7.5rem",
+    });
+    expect(getByRole("img")).toHaveStyle({
       width: "100%",
-      height: "100%",
+      height: "auto",
     });
   });
 });

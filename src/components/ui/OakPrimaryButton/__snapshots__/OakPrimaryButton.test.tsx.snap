@@ -2,23 +2,23 @@
 
 exports[`OakPrimaryButton matches snapshot 1`] = `
 <button
-  className="sc-jlZhew sc-cPiKLX cuFhvQ fEipsZ oak-secondary-button"
+  className="sc-cwHptR sc-dLMFU evvJac bpolQa oak-secondary-button"
   onClick={[Function]}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
   <div
-    className="sc-aXZVg sc-dLMFU kpsnZC gwnChz"
+    className="sc-aXZVg sc-eDPEul kpsnZC kJiwEg"
   />
   <div
     className="sc-aXZVg sc-gEvEer goWQoj OzInM"
   >
     <div
-      className="sc-aXZVg sc-iGgWBj cwplYv fUdvGT"
+      className="sc-aXZVg sc-gsFSXq gCbvTQ dJNvkK"
     >
       <img
         alt="arrow-right"
-        className="sc-dcJsrY dCKSRZ"
+        className="sc-dcJsrY eRtzRJ"
         data-nimg="fill"
         decoding="async"
         loading="lazy"

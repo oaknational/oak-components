@@ -2,11 +2,11 @@
 
 exports[`OakImage matches snapshot 1`] = `
 <div
-  className="sc-aXZVg sc-eqUAAy cFfpNr fcvJGJ"
+  className="sc-aXZVg sc-fqkvVR PqAkw fECGkY"
 >
   <img
     alt="a test image"
-    className="sc-gEvEer ekQEFr"
+    className="sc-gEvEer hAbnnj"
     data-nimg="fill"
     decoding="async"
     loading="lazy"
