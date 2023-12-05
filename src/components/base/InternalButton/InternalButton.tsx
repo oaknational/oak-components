@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { colorStyle, ColorStyleProps } from "@/styles/utils/colorStyle";
 import { displayStyle, DisplayStyleProps } from "@/styles/utils/displayStyle";
@@ -19,9 +19,11 @@ type StyledButtonProps = TypographyStyleProps &
   ColorStyleProps &
   DisplayStyleProps &
   BorderStyleProps &
-  DropShadowStyleProps;
+  DropShadowStyleProps & {
+    isLoading?: boolean;
+  };
 
-const StyledButton = styled.button<StyledButtonProps>`
+const internalButtonCss = css<StyledButtonProps>`
   background: none;
   color: inherit;
   border: none;
@@ -30,12 +32,17 @@ const StyledButton = styled.button<StyledButtonProps>`
   cursor: pointer;
   text-align: left;
   font-family: unset;
+  outline: none;
   ${typographyStyle}
   ${colorStyle}
   ${spacingStyle}
   ${displayStyle}
   ${borderStyle}
   ${dropShadowStyle}
+  &:disabled {
+    pointer-events: none;
+    cursor: default;
+  }
 `;
 
 export type InternalButtonProps = StyledButtonProps & {
@@ -45,10 +52,13 @@ export type InternalButtonProps = StyledButtonProps & {
     duration: number,
   ) => void;
   children?: React.ReactNode;
+  className?: string;
+  disabled?: boolean;
+  "data-testid"?: string;
 };
 
-export const InternalButton = (props: InternalButtonProps) => {
-  const { onClick, onHovered, ...rest } = props;
+const UnstyledInternalButton = (props: InternalButtonProps) => {
+  const { onClick, onHovered } = props;
 
   const hoverStart = useRef(Date.now());
 
@@ -70,13 +80,20 @@ export const InternalButton = (props: InternalButtonProps) => {
   };
 
   return (
-    <StyledButton
-      {...rest}
+    <button
+      className={props.className}
+      data-testid={props["data-testid"]}
+      disabled={props.disabled}
       onClick={handleClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       {props.children}
-    </StyledButton>
+    </button>
   );
 };
+
+// NB. We must export a styled component for it to be inheritable
+export const InternalButton = styled(UnstyledInternalButton)`
+  ${internalButtonCss}
+`;

@@ -4,26 +4,35 @@ import { Meta, StoryObj } from "@storybook/react";
 import { OakIcon, OakIconProps, oakIconNames } from "./OakIcon";
 
 import { OakFlex, OakTypography } from "@/components/base";
+import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 import { colorFilterArgTypes } from "@/storybook-helpers/colorFilterStyleHelpers";
 
 /**
  * A wrapper around OakImage which uses the image-map.json file to map icon names to image paths.
  */
 
+const controlIconNames = [...oakIconNames].sort();
+
 const meta: Meta<typeof OakIcon> = {
   component: OakIcon,
   tags: ["autodocs"],
-  title: "components/ui/OakIcon",
+  title: "components/base/OakIcon",
   argTypes: {
     iconName: {
-      options: oakIconNames,
+      options: controlIconNames,
       control: { type: "select" },
     },
+    ...sizeArgTypes,
     ...colorFilterArgTypes,
   },
   parameters: {
     controls: {
-      include: ["iconName", ...Object.keys(colorFilterArgTypes)],
+      include: [
+        "iconName",
+        "$width",
+        "$height",
+        ...Object.keys(colorFilterArgTypes),
+      ],
     },
   },
 };
@@ -60,7 +69,12 @@ export const PickIcon: Story = {
   },
   parameters: {
     controls: {
-      include: ["iconName", ...Object.keys(colorFilterArgTypes)],
+      include: [
+        "iconName",
+        "$width",
+        "$height",
+        ...Object.keys(colorFilterArgTypes),
+      ],
     },
   },
 };

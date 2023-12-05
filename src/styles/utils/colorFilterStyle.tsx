@@ -5,15 +5,15 @@ import {
   responsiveStyle,
   ResponsiveValues,
 } from "@/styles/utils/responsiveStyle";
-import { OakColorFilterToken } from "@/styles/theme/color";
+import { OakCombinedColorToken } from "@/styles/theme/color";
 
-type ColorToken = ResponsiveValues<OakColorFilterToken | null>;
+type ColorFilterToken = ResponsiveValues<OakCombinedColorToken | null>;
 
 export type ColorFilterStyleProps = {
-  $colorFilter?: ColorToken;
+  $colorFilter?: ColorFilterToken;
 };
 export const colorFilterStyle = css<ColorFilterStyleProps>`
-  ${responsiveStyle<ColorFilterStyleProps, OakColorFilterToken>(
+  ${responsiveStyle<ColorFilterStyleProps, OakCombinedColorToken>(
     "filter",
     (props) => props.$colorFilter,
     parseColorFilter,

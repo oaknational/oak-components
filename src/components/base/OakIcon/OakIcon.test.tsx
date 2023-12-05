@@ -43,22 +43,22 @@ describe("OakIcon", () => {
   });
 
   it("defaults the alt text to the icon name", () => {
-    const { getByTestId } = render(
+    const { getByRole } = render(
       <OakIcon data-testid="test" iconName="home" />,
     );
-    expect(getByTestId("test")).toHaveAttribute("alt", "home");
+    expect(getByRole("img")).toHaveAttribute("alt", "home");
   });
 
   it("sets the alt text", () => {
-    const { getByTestId } = render(
+    const { getByRole } = render(
       <OakIcon data-testid="test" iconName="home" alt="Home" />,
     );
-    expect(getByTestId("test")).toHaveAttribute("alt", "Home");
+    expect(getByRole("img")).toHaveAttribute("alt", "Home");
   });
   it("handles typedImageMap being undefined", () => {
-    const { getByTestId } = render(
+    const { getByRole } = render(
       <OakIcon data-testid="test" iconName="home" />,
     );
-    expect(getByTestId("test")).toHaveAttribute("alt", "home");
+    expect(getByRole("img")).toHaveAttribute("alt", "home");
   });
 });

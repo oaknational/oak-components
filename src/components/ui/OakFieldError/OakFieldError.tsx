@@ -1,9 +1,8 @@
 import React from "react";
 
-import { OakFlex } from "../../base/OakFlex";
-import { OakSpan } from "../../base/OakSpan";
-
-import { OakIcon } from "@/components/ui";
+import { OakFlex } from "@/components/base/OakFlex";
+import { OakSpan } from "@/components/base/OakSpan";
+import { OakIcon } from "@/components/base/OakIcon";
 
 export type OakFieldErrorProps = {
   children?: React.ReactNode;

@@ -38,12 +38,22 @@ export const oakColorTokens = {
 
 export type OakColorToken = keyof typeof oakColorTokens;
 
+/**
+ *
+ *  Use this tool to convert Hex to color filter values https://codepen.io/sosuke/pen/Pjoqqp
+ *
+ */
+
 export const oakColorFilterTokens = {
   black:
     "invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%)",
   red: "invert(13%) sepia(78%) saturate(5255%) hue-rotate(337deg) brightness(88%) contrast(111%)",
   white:
     "invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%)",
+  grey40:
+    "invert(92%) sepia(0%) saturate(581%) hue-rotate(147deg) brightness(94%) contrast(80%)",
+  grey50:
+    "invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%)",
 };
 
 export type OakColorFilterToken = keyof typeof oakColorFilterTokens;
