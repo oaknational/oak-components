@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakCheckbox } from "./OakCheckBox";
+import { OakQuizCheckbox } from "./OakQuizCheckBox";
 
 // import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 // import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
@@ -20,10 +20,10 @@ import { OakCheckbox } from "./OakCheckBox";
  *  called after a mouseEnter and mouseLeave event has happened
  */
 
-const meta: Meta<typeof OakCheckbox> = {
-  component: OakCheckbox,
+const meta: Meta<typeof OakQuizCheckbox> = {
+  component: OakQuizCheckbox,
   tags: ["autodocs"],
-  title: "components/ui/OakCheckbox",
+  title: "components/integrated/OakQuizCheckbox",
   argTypes: {
     // ...colorArgTypes,
     // ...spacingArgTypes,
@@ -41,10 +41,10 @@ const meta: Meta<typeof OakCheckbox> = {
 };
 export default meta;
 
-type Story = StoryObj<typeof OakCheckbox>;
+type Story = StoryObj<typeof OakQuizCheckbox>;
 
 export const Default: Story = {
-  render: (args) => <OakCheckbox {...args} />,
+  render: (args) => <OakQuizCheckbox {...args} />,
   args: {
     // $background: "bg-btn-primary",
     // $color: "white",
