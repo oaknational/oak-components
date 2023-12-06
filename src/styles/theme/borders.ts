@@ -1,13 +1,18 @@
 export const oakBorderWidthTokens = {
+  "border-solid-none": 0,
   "border-solid-s": 1,
   "border-solid-m": 2,
+  "border-solid-l": 3,
+  "border-solid-xl": 4,
 };
 
 export const oakBorderRadiusTokens = {
-  "border-square": 0,
+  "border-radius-square": 0,
   "border-radius-s": 4,
-  "border-radius-m": 16,
-  "border-radius-l": 100,
+  "border-radius-m": 8,
+  "border-radius-l": 16,
+  "border-radius-xl": 24,
+  "border-radius-circle": 100,
 };
 
 export type OakBorderRadiusToken = keyof typeof oakBorderRadiusTokens;
