@@ -1,51 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakPrimaryButton matches snapshot 1`] = `
-<button
-  className="sc-cwHptR sc-dLMFU evvJac bpolQa oak-secondary-button"
-  onClick={[Function]}
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
+<div
+  className="sc-aXZVg sc-eDPEul cKKnNr hPNaOd button-wrapper"
 >
   <div
-    className="sc-aXZVg sc-eDPEul kpsnZC kJiwEg"
+    className="sc-aXZVg gEUKeC grey-shadow"
   />
   <div
-    className="sc-aXZVg sc-gEvEer goWQoj OzInM"
+    className="sc-aXZVg gEUKeC yellow-shadow"
+  />
+  <button
+    className="sc-cwHptR sc-dLMFU evvJac dvXnfT internal-button"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
-      className="sc-aXZVg sc-gsFSXq dTLJnG iRYSeg"
+      className="sc-aXZVg sc-gEvEer goWQoj OzInM"
     >
-      <img
-        alt="arrow-right"
-        className="sc-dcJsrY eRtzRJ"
-        data-nimg="fill"
-        decoding="async"
-        loading="lazy"
-        onError={[Function]}
-        onLoad={[Function]}
-        src="https://undefined/undefined/v1699895398/icons/fv0z57zerrioft52dd9n.svg"
-        style={
-          {
-            "bottom": 0,
-            "color": "transparent",
-            "height": "100%",
-            "left": 0,
-            "objectFit": undefined,
-            "objectPosition": undefined,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-            "width": "100%",
+      <div
+        className="sc-aXZVg sc-gsFSXq dTLJnG iRYSeg"
+      >
+        <img
+          alt="arrow-right"
+          className="sc-dcJsrY eRtzRJ"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="https://undefined/undefined/v1699895398/icons/fv0z57zerrioft52dd9n.svg"
+          style={
+            {
+              "bottom": 0,
+              "color": "transparent",
+              "height": "100%",
+              "left": 0,
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
+            }
           }
-        }
-      />
+        />
+      </div>
+      <span
+        className="sc-eqUAAy gXELRB"
+      >
+        Click Me
+      </span>
     </div>
-    <span
-      className="sc-eqUAAy gXELRB"
-    >
-      Click Me
-    </span>
-  </div>
-</button>
+  </button>
+</div>
 `;
