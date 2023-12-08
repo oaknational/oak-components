@@ -25,10 +25,12 @@ const meta: Meta<typeof OakRadioGroup> = {
     ...flexArgTypes,
     ...colorArgTypes,
     ...typographyArgTypes,
+    disabled: { boolean: true },
   },
   parameters: {
     controls: {
       include: [
+        "disabled",
         "$flexDirection",
         "$gap",
         "$alignItems",

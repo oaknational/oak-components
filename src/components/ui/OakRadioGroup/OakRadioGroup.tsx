@@ -8,6 +8,7 @@ import { FlexStyleProps } from "@/styles/utils/flexStyle";
 type RadioContextType = {
   currentValue: string;
   name: string;
+  disabled?: boolean;
   onValueUpdated?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
@@ -19,6 +20,7 @@ export const RadioContext = createContext<RadioContextType>({
 export type OakRadioGroupProps = {
   label?: string;
   name: string;
+  disabled?: boolean;
   children: React.ReactNode;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 } & Pick<TypographyStyleProps, "$font"> &
@@ -33,6 +35,7 @@ export const OakRadioGroup = (props: OakRadioGroupProps) => {
     onChange,
     $font = "body-1-bold",
     $gap = "space-between-s",
+    disabled,
     ...rest
   } = props;
 
@@ -52,6 +55,7 @@ export const OakRadioGroup = (props: OakRadioGroupProps) => {
         value={{
           currentValue: value,
           name,
+          disabled: disabled,
           onValueUpdated: handleValueUpdated,
         }}
       >
