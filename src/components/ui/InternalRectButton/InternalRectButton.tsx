@@ -45,17 +45,11 @@ const StyledInternalButton = styled(InternalButton)<InternalRectButtonProps>`
   ${(props) => css`
     &:hover {
       text-decoration: underline;
-      box-shadow: ${parseDropShadow("drop-shadow-yellow")};
       color: ${parseColor(props.hoverTextColor)};
       background: ${parseColor(props.hoverBackground)};
       border-color: ${parseColor(props.hoverBorderColor)};
     }
-
-    &:focus-visible {
-      box-shadow: ${parseDropShadow("drop-shadow-centered-yellow")};
-    }
     &:active {
-      box-shadow: ${parseDropShadow("drop-shadow-yellow")};
       background: ${parseColor(props.defaultBackground)};
       border-color: ${parseColor(props.defaultBorderColor)};
       color: ${parseColor(props.defaultTextColor)};
@@ -68,12 +62,24 @@ const StyledInternalButton = styled(InternalButton)<InternalRectButtonProps>`
   `}
 `;
 
-const StyledOuterShadow = styled(OakBox)`
-  .oak-secondary-button:focus-visible & {
+const StyledButtonWrapper = styled(OakBox)`
+  .grey-shadow:has(+ * + .internal-button:focus-visible) {
     box-shadow: ${parseDropShadow("drop-shadow-centered-grey")};
   }
-  .oak-secondary-button:active & {
+  .yellow-shadow:has(+ .internal-button:focus-visible) {
+    box-shadow: ${parseDropShadow("drop-shadow-centered-yellow")};
+  }
+  .yellow-shadow:has(+ .internal-button:hover) {
+    box-shadow: ${parseDropShadow("drop-shadow-yellow")};
+  }
+  .grey-shadow:has(+ * + .internal-button:hover) {
+    box-shadow: none;
+  }
+  .grey-shadow:has(+ * + .internal-button:active) {
     box-shadow: ${parseDropShadow("drop-shadow-grey")};
+  }
+  .yellow-shadow:has(+ .internal-button:active) {
+    box-shadow: ${parseDropShadow("drop-shadow-yellow")};
   }
 `;
 
@@ -105,37 +111,46 @@ export const InternalRectButton = (props: InternalRectButtonProps) => {
   const iconLogic = <>{isLoading && !disabled ? loader : icon}</>;
 
   return (
-    <StyledInternalButton
-      className="oak-secondary-button"
-      {...rest}
-      $ba={"border-solid-m"}
-      $color={props.defaultTextColor}
-      $background={props.defaultBackground}
-      $borderColor={props.defaultBorderColor}
-      $pv={"inner-padding-xs"}
-      $ph={"inner-padding-s"}
-      $borderRadius={"border-radius-s"}
-      $position={"relative"}
-      disabled={disabled || isLoading}
-    >
-      <StyledOuterShadow
+    <StyledButtonWrapper className="button-wrapper" $position={"relative"}>
+      <OakBox
+        className="grey-shadow"
         $position={"absolute"}
-        $top={"space-between-none"}
-        $left={"space-between-none"}
+        $borderRadius={"border-radius-s"}
         $width={"100%"}
         $height={"100%"}
+      />
+
+      <OakBox
+        className="yellow-shadow"
+        $position={"absolute"}
         $borderRadius={"border-radius-s"}
-        $zIndex={"behind"}
-      ></StyledOuterShadow>
-      <OakFlex
-        $flexDirection={"row"}
-        $alignItems={"center"}
-        $gap="space-between-ssx"
+        $width={"100%"}
+        $height={"100%"}
+      />
+
+      <StyledInternalButton
+        className="internal-button"
+        {...rest}
+        $ba={"border-solid-m"}
+        $background={props.defaultBackground}
+        $borderColor={props.defaultBorderColor}
+        $color={props.defaultTextColor}
+        $pv={"inner-padding-xs"}
+        $ph={"inner-padding-s"}
+        $borderRadius={"border-radius-s"}
+        $position={"relative"}
+        disabled={disabled || isLoading}
       >
-        {!isTrailingIcon && iconLogic}
-        <OakSpan $font={"body-1-bold"}>{children}</OakSpan>
-        {isTrailingIcon && iconLogic}
-      </OakFlex>
-    </StyledInternalButton>
+        <OakFlex
+          $flexDirection={"row"}
+          $alignItems={"center"}
+          $gap="space-between-ssx"
+        >
+          {!isTrailingIcon && iconLogic}
+          <OakSpan $font={"body-1-bold"}>{children}</OakSpan>
+          {isTrailingIcon && iconLogic}
+        </OakFlex>
+      </StyledInternalButton>
+    </StyledButtonWrapper>
   );
 };
