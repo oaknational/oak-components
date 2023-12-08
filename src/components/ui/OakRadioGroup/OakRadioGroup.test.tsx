@@ -35,6 +35,7 @@ describe("RadioGroup", () => {
 
     expect(label).toBeInTheDocument();
   });
+
   it("matches snapshot", () => {
     const tree = create(
       <OakRadioGroup name={"test"}>
@@ -42,7 +43,7 @@ describe("RadioGroup", () => {
           value="1"
           id="radio-1"
           label="Option 1"
-          $gap="space-between-m"
+          $labelGap="space-between-m"
           $font="body-1-bold"
           $color="black"
           data-testid={"radio-1"}
@@ -51,7 +52,7 @@ describe("RadioGroup", () => {
           value="2"
           id="radio-2"
           label="Option 2"
-          $gap="space-between-m"
+          $labelGap="space-between-m"
           $font="body-1-bold"
           $color="black"
         />
@@ -59,7 +60,7 @@ describe("RadioGroup", () => {
           value="3"
           id="radio-3"
           label="Option 3"
-          $gap="space-between-m"
+          $labelGap="space-between-m"
           $font="body-1-bold"
           $color="black"
         />
@@ -67,8 +68,9 @@ describe("RadioGroup", () => {
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
+
   it("allows you to select a radio on click of label", async () => {
-    const { getAllByTestId, rerender } = renderWithTheme(
+    const { getByLabelText, rerender } = renderWithTheme(
       <OakRadioGroup name={"test"}>
         <OakRadioButton
           id="radio-1"
@@ -91,12 +93,10 @@ describe("RadioGroup", () => {
       </OakRadioGroup>,
     );
 
-    const radio1 = getAllByTestId("radio-1");
-    const radio2 = getAllByTestId("radio-2");
-    const firstRadio = radio1[1] as HTMLElement;
-    const secondRadio = radio2[1] as HTMLElement;
+    const radio1 = getByLabelText("Option 1");
+    const radio2 = getByLabelText("Option 2");
 
-    await userEvent.click(firstRadio);
+    await userEvent.click(radio1);
     rerender(
       <OakRadioGroup name={"test"}>
         <OakRadioButton
@@ -120,12 +120,12 @@ describe("RadioGroup", () => {
       </OakRadioGroup>,
     );
 
-    expect(firstRadio).toBeChecked();
-    expect(secondRadio).not.toBeChecked();
+    expect(radio1).toBeChecked();
+    expect(radio2).not.toBeChecked();
   });
 
   it("changes on keyboard input", async () => {
-    const { rerender, getAllByTestId } = renderWithTheme(
+    const { rerender, getByLabelText } = renderWithTheme(
       <OakRadioGroup name={"test"}>
         <OakRadioButton
           id="radio-1"
@@ -148,15 +148,13 @@ describe("RadioGroup", () => {
       </OakRadioGroup>,
     );
 
-    const radio1 = getAllByTestId("radio-1");
-    const radio2 = getAllByTestId("radio-2");
-    const firstRadio = radio1[1] as HTMLElement;
-    const secondRadio = radio2[1] as HTMLElement;
+    const radio1 = getByLabelText("Option 1");
+    const radio2 = getByLabelText("Option 2");
 
     const user = userEvent.setup();
 
-    expect(firstRadio).not.toBeChecked();
-    expect(secondRadio).not.toBeChecked();
+    expect(radio1).not.toBeChecked();
+    expect(radio2).not.toBeChecked();
 
     await user.tab();
     await user.keyboard("[ArrowDown]");
@@ -185,12 +183,13 @@ describe("RadioGroup", () => {
       </OakRadioGroup>,
     );
 
-    expect(firstRadio).not.toBeChecked();
-    expect(secondRadio).toBeChecked();
+    expect(radio1).not.toBeChecked();
+    expect(radio2).toBeChecked();
   });
+
   it("fires onChange when the input changes", async () => {
     const onChange = jest.fn();
-    const { getAllByTestId } = renderWithTheme(
+    const { getByTestId } = renderWithTheme(
       <OakRadioGroup name={"test"} onChange={onChange}>
         <OakRadioButton
           id="radio-1"
@@ -213,44 +212,38 @@ describe("RadioGroup", () => {
       </OakRadioGroup>,
     );
 
-    const radio1 = getAllByTestId("radio-1");
-    const firstRadio = radio1[0] as HTMLElement;
+    const radio1 = getByTestId("radio-1");
 
-    await userEvent.click(firstRadio);
+    await userEvent.click(radio1);
 
     expect(onChange).toHaveBeenCalled();
   });
-  it("handles $font and $gap as props and return expected style", () => {
-    const { getAllByTestId } = renderWithTheme(
-      <OakRadioGroup name={"test"} $font={"body-1"} $gap={"space-between-m"}>
-        <OakRadioButton
-          id="radio-1"
-          value="1"
-          label="Option 1"
-          data-testid={"radio-1"}
-        />
-        <OakRadioButton
-          id="radio-2"
-          value="2"
-          label="Option 2"
-          data-testid={"radio-2"}
-        />
-        <OakRadioButton
-          id="radio-3"
-          value="3"
-          label="Option 3"
-          data-testid={"radio-3"}
-        />
+
+  it("handles $font and $labelGap as props and return expected style", () => {
+    const { getByTestId, getByText } = renderWithTheme(
+      <OakRadioGroup
+        name={"test"}
+        $font={"body-1-bold"}
+        $gap={"space-between-m"}
+        label="Select one of the following:"
+        data-testid="radio-group"
+      >
+        <OakRadioButton id="radio-1" value="1" label="Option 1" />
+        <OakRadioButton id="radio-2" value="2" label="Option 2" />
+        <OakRadioButton id="radio-3" value="3" label="Option 3" />
       </OakRadioGroup>,
     );
 
-    const radio1 = getAllByTestId("radio-1");
-    const firstRadio = radio1[0] as HTMLElement;
+    const radioGroupLabel = getByText("Select one of the following:");
 
-    expect(firstRadio).toHaveStyle("font-weight: 300");
-    expect(firstRadio).toHaveStyle("font-size: 1rem");
-    expect(firstRadio).toHaveStyle("line-height: 1.75rem");
-    expect(firstRadio).toHaveStyle("letter-spacing: -0.005rem");
-    expect(firstRadio).toHaveStyle("gap: 0.5rem");
+    expect(radioGroupLabel).toHaveStyle("font-size: 1rem");
+    expect(radioGroupLabel).toHaveStyle("font-weight: 700");
+    expect(radioGroupLabel).toHaveStyle("line-height: 1.75rem");
+    expect(radioGroupLabel).toHaveStyle("letter-spacing: -0.005rem");
+
+    const radioGroup = getByTestId("radio-group");
+    expect(radioGroup).toHaveStyle("gap: 1.5rem");
   });
+
+  it.todo("disables all radios when disabled prop is passed to RadioGroup");
 });
