@@ -22,7 +22,10 @@
     "lint:precommit": "eslint src/**/* --fix",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "publish": "npm run build && npm publish",
+    "prepublishOnly": "./scripts/prepublish.sh",
+    "postpublish": "./scripts/postpublish.sh"
   },
   "author": "",
   "license": "ISC",
