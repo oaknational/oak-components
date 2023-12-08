@@ -1,6 +1,6 @@
 {
   "name": "@oak-academy/oak-components",
-  "version": "0.0.16",
+  "version": "0.0.15",
   "licence": "MIT",
   "description": "Shared components for oak applications",
   "main": "dist/cjs/index.js",
@@ -25,7 +25,7 @@
     "prepare": "husky install",
     "prepublishOnly": "./scripts/prepublish.sh",
     "postpublish": "./scripts/postpublish.sh",
-    "publish:local": "yalc publish --no-scripts"
+    "publish:local": "npm run build && yalc publish --no-scripts"
   },
   "author": "",
   "license": "ISC",
