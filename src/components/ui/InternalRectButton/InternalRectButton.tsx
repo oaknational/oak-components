@@ -15,6 +15,7 @@ import {
 } from "@/styles/utils/positionStyle";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { OakCombinedColorToken } from "@/styles";
+import { SizeStyleProps, sizeStyle } from "@/styles/utils/sizeStyle";
 
 export type InternalRectButtonProps = Omit<
   InternalButtonProps,
@@ -40,8 +41,11 @@ export type InternalRectButtonProps = Omit<
   disabledTextColor: OakCombinedColorToken;
 } & PositionStyleProps;
 
-const StyledInternalButton = styled(InternalButton)<InternalRectButtonProps>`
+const StyledInternalButton = styled(InternalButton)<
+  InternalRectButtonProps & SizeStyleProps
+>`
   ${positionStyle}
+  ${sizeStyle}
   ${(props) => css`
     &:hover {
       text-decoration: underline;
@@ -140,6 +144,8 @@ export const InternalRectButton = (props: InternalRectButtonProps) => {
         $borderRadius={"border-radius-s"}
         $position={"relative"}
         disabled={disabled || isLoading}
+        $width={"100%"}
+        $height={"100%"}
       >
         <OakFlex
           $flexDirection={"row"}

@@ -11,7 +11,7 @@ exports[`OakSecondaryButton matches snapshot 1`] = `
     className="sc-aXZVg gEUKeC yellow-shadow"
   />
   <button
-    className="sc-cwHptR sc-dLMFU dFuOhg jDcQoK internal-button"
+    className="sc-cwHptR sc-dLMFU dFuOhg gRcKWK internal-button"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}

@@ -11,7 +11,7 @@ exports[`InternalRectButton matches snapshot 1`] = `
     className="sc-aXZVg gEUKeC yellow-shadow"
   />
   <button
-    className="sc-cwHptR sc-dLMFU cQfeRJ bugvMM internal-button"
+    className="sc-cwHptR sc-dLMFU cQfeRJ iWYkzI internal-button"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
