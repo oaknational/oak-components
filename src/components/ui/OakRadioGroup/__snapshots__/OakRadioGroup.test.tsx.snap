@@ -12,13 +12,13 @@ exports[`RadioGroup matches snapshot 1`] = `
     className="sc-aXZVg dXUUHk"
   >
     <label
-      className="sc-jlZhew sc-cwHptR dmkqds dHxBhb"
+      className="sc-jlZhew sc-cwHptR dmkqds cRpmcS"
       data-testid="radio-1"
       htmlFor="radio-1"
     >
       <input
         checked={false}
-        className="sc-jEACwC hOFWxo"
+        className="sc-jEACwC wHCZN"
         id="radio-1"
         name="test"
         onChange={[Function]}
@@ -26,7 +26,7 @@ exports[`RadioGroup matches snapshot 1`] = `
         value="1"
       />
       <div
-        className="sc-aXZVg sc-gEvEer sc-cPiKLX ipCwrb eIypJK eAuwZ"
+        className="sc-aXZVg sc-gEvEer sc-cPiKLX ipCwrb eIypJK gRoZNt"
       />
       Option 1
     </label>
@@ -35,12 +35,12 @@ exports[`RadioGroup matches snapshot 1`] = `
     className="sc-aXZVg dXUUHk"
   >
     <label
-      className="sc-jlZhew sc-cwHptR dmkqds dHxBhb"
+      className="sc-jlZhew sc-cwHptR dmkqds cRpmcS"
       htmlFor="radio-2"
     >
       <input
         checked={false}
-        className="sc-jEACwC hOFWxo"
+        className="sc-jEACwC wHCZN"
         id="radio-2"
         name="test"
         onChange={[Function]}
@@ -48,7 +48,7 @@ exports[`RadioGroup matches snapshot 1`] = `
         value="2"
       />
       <div
-        className="sc-aXZVg sc-gEvEer sc-cPiKLX ipCwrb eIypJK eAuwZ"
+        className="sc-aXZVg sc-gEvEer sc-cPiKLX ipCwrb eIypJK gRoZNt"
       />
       Option 2
     </label>
@@ -57,12 +57,12 @@ exports[`RadioGroup matches snapshot 1`] = `
     className="sc-aXZVg dXUUHk"
   >
     <label
-      className="sc-jlZhew sc-cwHptR dmkqds dHxBhb"
+      className="sc-jlZhew sc-cwHptR dmkqds cRpmcS"
       htmlFor="radio-3"
     >
       <input
         checked={false}
-        className="sc-jEACwC hOFWxo"
+        className="sc-jEACwC wHCZN"
         id="radio-3"
         name="test"
         onChange={[Function]}
@@ -70,7 +70,7 @@ exports[`RadioGroup matches snapshot 1`] = `
         value="3"
       />
       <div
-        className="sc-aXZVg sc-gEvEer sc-cPiKLX ipCwrb eIypJK eAuwZ"
+        className="sc-aXZVg sc-gEvEer sc-cPiKLX ipCwrb eIypJK gRoZNt"
       />
       Option 3
     </label>
