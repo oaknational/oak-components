@@ -8,8 +8,10 @@ export const oakBorderWidthTokens = {
 
 export const oakBorderRadiusTokens = {
   "border-radius-square": 0,
+  "border-radius-xs": 2,
   "border-radius-s": 4,
-  "border-radius-m": 8,
+  "border-radius-m": 6,
+  "border-radius-m2": 8,
   "border-radius-l": 16,
   "border-radius-xl": 24,
   "border-radius-circle": 100,
