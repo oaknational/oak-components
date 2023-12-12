@@ -59,14 +59,7 @@ export const DoubleShadow: Story = {
       {...args}
       $alignItems="start"
     >
-      <OakBox
-        $ba={"border-solid-m"}
-        $pa={"inner-padding-m"}
-        $borderRadius={"border-radius-s"}
-        $dropShadow={"drop-shadow-centered-yellow"}
-        $position={"relative"}
-        $background={"white"}
-      >
+      <OakBox $position={"relative"}>
         <OakBox
           $position={"absolute"}
           $top={"space-between-none"}
@@ -75,19 +68,26 @@ export const DoubleShadow: Story = {
           $height={"100%"}
           $dropShadow={"drop-shadow-centered-grey"}
           $borderRadius={"border-radius-s"}
-          $zIndex={"behind"}
-        ></OakBox>
-        inner content
+        />
+        <OakBox
+          $borderRadius={"border-radius-s"}
+          $dropShadow={"drop-shadow-centered-yellow"}
+          $position={"absolute"}
+          $top={"space-between-none"}
+          $left={"space-between-none"}
+          $width={"100%"}
+          $height={"100%"}
+        />
+        <OakBox
+          $pa="inner-padding-m"
+          $ba="border-solid-m"
+          $borderRadius="border-radius-s"
+        >
+          inner content
+        </OakBox>
       </OakBox>
 
-      <OakBox
-        $ba={"border-solid-m"}
-        $pa={"inner-padding-m"}
-        $borderRadius={"border-radius-s"}
-        $dropShadow={"drop-shadow-yellow"}
-        $position={"relative"}
-        $background={"white"}
-      >
+      <OakBox $position={"relative"}>
         <OakBox
           $position={"absolute"}
           $top={"space-between-none"}
@@ -96,9 +96,23 @@ export const DoubleShadow: Story = {
           $height={"100%"}
           $dropShadow={"drop-shadow-grey"}
           $borderRadius={"border-radius-s"}
-          $zIndex={"behind"}
-        ></OakBox>
-        inner content
+        />
+        <OakBox
+          $borderRadius={"border-radius-s"}
+          $dropShadow={"drop-shadow-yellow"}
+          $position={"absolute"}
+          $top={"space-between-none"}
+          $left={"space-between-none"}
+          $width={"100%"}
+          $height={"100%"}
+        />
+        <OakBox
+          $pa="inner-padding-m"
+          $ba="border-solid-m"
+          $borderRadius="border-radius-s"
+        >
+          inner content
+        </OakBox>
       </OakBox>
     </OakFlex>
   ),
