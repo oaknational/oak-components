@@ -1,53 +1,57 @@
 import React, { useContext } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { RadioContext } from "@/components/ui/OakRadioGroup/OakRadioGroup";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { parseBorder } from "@/styles/helpers/parseBorder";
-import { FlexStyleProps, flexStyle } from "@/styles/utils/flexStyle";
+import { FlexStyleProps } from "@/styles/utils/flexStyle";
+import { responsiveStyle } from "@/styles/utils/responsiveStyle";
 import {
+  OakBox,
   OakBoxProps,
   OakFlex,
+  OakFlexProps,
   OakLabel,
   OakLabelProps,
-  oakBoxCss,
 } from "@/components/base";
-import { DisplayStyleProps } from "@/styles/utils/displayStyle";
-import { ColorStyleProps, colorStyle } from "@/styles/utils/colorStyle";
 
-type VisibleRadioInputStyleProps = FlexStyleProps;
-
-type RadioButtonLabelProps = Pick<FlexStyleProps, "$gap" | "$alignItems"> &
-  Pick<OakLabelProps, "$font"> &
-  DisplayStyleProps &
-  ColorStyleProps;
-
-type HiddenRadioInputStyleProps = Pick<OakBoxProps, "$opacity" | "$position">;
-
-type OakRadioButtonProps = {
-  id: string;
-  label: string;
-  value: string;
-  tabIndex?: number;
-  "data-testid"?: string;
-} & VisibleRadioInputStyleProps &
-  RadioButtonLabelProps;
+type RadioButtonLabelProps = {
+  $labelAlignItems?: FlexStyleProps["$alignItems"];
+  $labelGap?: FlexStyleProps["$gap"];
+  disabled?: boolean;
+} & OakLabelProps;
 
 const RadioButtonLabel = styled(OakLabel)<RadioButtonLabelProps>`
-  cursor: pointer;
-  ${flexStyle}
-  ${colorStyle}
+  ${(props) =>
+    !props.disabled &&
+    css`
+      cursor: pointer;
+    `}
+
+  display: flex;
+  ${responsiveStyle("gap", (props) => props.$labelGap, parseSpacing)}
+  ${responsiveStyle("align-items", (props) => props.$labelAlignItems)}
 `;
 
 const HiddenRadioButtonInput = styled.input.attrs({
   type: "radio",
-})<HiddenRadioInputStyleProps>`
-  ${oakBoxCss}
+})`
+  position: absolute;
+  opacity: 0;
+  ${(props) =>
+    !props.disabled &&
+    css`
+      cursor: pointer;
+    `}
 `;
 
-const VisibleRadioButtonInput = styled(OakFlex)<VisibleRadioInputStyleProps>`
- 
+type VisibleRadioButtonInputProps = OakFlexProps & {
+  disabled?: boolean;
+};
+
+const VisibleRadioButtonInput = styled(OakFlex)<VisibleRadioButtonInputProps>`
+
   ${HiddenRadioButtonInput}:focus-visible ~ &::before {
     content: "";
     height: ${parseSpacing("all-spacing-7")};
@@ -59,18 +63,43 @@ const VisibleRadioButtonInput = styled(OakFlex)<VisibleRadioInputStyleProps>`
     border: ${parseBorder("border-solid-m")} ${parseColor("grey60")};
     box-shadow: ${`inset 0 0 0 0.13rem ${parseColor("lemon")}`};
   }
-  }
+
   ${HiddenRadioButtonInput}:checked ~ &::after {
     content: "";
     height: ${parseSpacing("all-spacing-4")};
     width: ${parseSpacing("all-spacing-4")};
     background: ${parseColor("black")};
-    display: block;
+    lay: block;
+    position: absolute;
+    border-radius: 50%;
+    border: ${parseBorder("border-solid-m")} ${parseColor("white")};
+  }
+      
+`;
+
+// This is a hack to force React to rerender when the disabled prop is changed. Otherwise the pseudo element is not updated.
+const DisabledVisibleRadioButtonInput = styled(VisibleRadioButtonInput)`
+  ${HiddenRadioButtonInput}:checked ~ &::after {
+    content: "";
+    height: ${parseSpacing("all-spacing-4")};
+    width: ${parseSpacing("all-spacing-4")};
+    background: ${parseColor("bg-btn-primary-disabled")};
+    lay: block;
     position: absolute;
     border-radius: 50%;
     border: ${parseBorder("border-solid-m")} ${parseColor("white")};
   }
 `;
+
+type OakRadioButtonProps = {
+  id: string;
+  label: string;
+  value: string;
+  tabIndex?: number;
+  "data-testid"?: string;
+  disabled?: boolean;
+} & OakBoxProps &
+  RadioButtonLabelProps;
 
 export const OakRadioButton = (props: OakRadioButtonProps) => {
   const radioContext = useContext(RadioContext);
@@ -80,48 +109,65 @@ export const OakRadioButton = (props: OakRadioButtonProps) => {
     label,
     value,
     tabIndex,
-    $gap = "space-between-ssx",
+    disabled,
+    $labelGap = "space-between-ssx",
+    $labelAlignItems = "center",
     $font = "body-1",
-    $color = "black",
-    $background,
     "data-testid": dataTestId,
+    ...rest
   } = props;
+
+  const anyDisabled = disabled || radioContext.disabled;
+
   return (
-    <RadioButtonLabel
-      htmlFor={id}
-      $gap={$gap}
-      $font={$font}
-      $display={"flex"}
-      $alignItems={"center"}
-      $color={$color}
-      $background={$background}
-      data-testid={dataTestId}
-    >
-      <HiddenRadioButtonInput
-        name={name}
-        id={id}
-        value={value}
-        onChange={onValueUpdated}
-        checked={value === currentValue}
-        tabIndex={tabIndex}
-        $opacity={"transparent"}
-        $position={"absolute"}
+    <OakBox {...rest}>
+      <RadioButtonLabel
+        htmlFor={id}
+        $labelAlignItems={$labelAlignItems}
+        $labelGap={$labelGap}
+        $font={$font}
         data-testid={dataTestId}
-      />
-      <VisibleRadioButtonInput
-        $height={"all-spacing-6"}
-        $width={"all-spacing-6"}
-        $borderRadius={"border-radius-l"}
-        $ba={"border-solid-m"}
-        $borderColor={"black"}
-        $flexGrow={0}
-        $flexShrink={0}
-        $alignItems={"center"}
-        $justifyContent={"center"}
-        $background={"white"}
-      />
-      {label}
-    </RadioButtonLabel>
+        disabled={anyDisabled}
+      >
+        <HiddenRadioButtonInput
+          name={name}
+          id={id}
+          value={value}
+          onChange={onValueUpdated}
+          checked={value === currentValue}
+          tabIndex={tabIndex}
+          disabled={anyDisabled}
+        />
+        {!anyDisabled ? (
+          <VisibleRadioButtonInput
+            $height={"all-spacing-6"}
+            $width={"all-spacing-6"}
+            $borderRadius={"border-radius-l"}
+            $ba={"border-solid-m"}
+            $borderColor={"black"}
+            $flexGrow={0}
+            $flexShrink={0}
+            $alignItems={"center"}
+            $justifyContent={"center"}
+            $background={"white"}
+          />
+        ) : (
+          <DisabledVisibleRadioButtonInput
+            $height={"all-spacing-6"}
+            $width={"all-spacing-6"}
+            $borderRadius={"border-radius-l"}
+            $ba={"border-solid-m"}
+            $borderColor={"bg-btn-primary-disabled"}
+            $flexGrow={0}
+            $flexShrink={0}
+            $alignItems={"center"}
+            $justifyContent={"center"}
+            $background={"white"}
+          />
+        )}
+        {label}
+      </RadioButtonLabel>
+    </OakBox>
   );
 };
 

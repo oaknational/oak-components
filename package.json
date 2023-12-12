@@ -1,6 +1,6 @@
 {
   "name": "@oak-academy/oak-components",
-  "version": "0.0.8",
+  "version": "0.0.16",
   "licence": "MIT",
   "description": "Shared components for oak applications",
   "main": "dist/cjs/index.js",
@@ -22,7 +22,10 @@
     "lint:precommit": "eslint src/**/* --fix",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prepublishOnly": "./scripts/prepublish.sh",
+    "postpublish": "./scripts/postpublish.sh",
+    "publish:local": "npm run build && yalc publish --no-scripts"
   },
   "author": "",
   "license": "ISC",

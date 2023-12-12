@@ -26,7 +26,7 @@ describe("RadioGroup", () => {
           value="1"
           id="radio-1"
           label="Option 1"
-          $gap="space-between-m"
+          $labelGap="space-between-m"
           $font="body-1-bold"
           $color="black"
           data-testid={"radio-1"}
@@ -35,7 +35,7 @@ describe("RadioGroup", () => {
           value="2"
           id="radio-2"
           label="Option 2"
-          $gap="space-between-m"
+          $labelGap="space-between-m"
           $font="body-1-bold"
           $color="black"
         />
@@ -43,7 +43,7 @@ describe("RadioGroup", () => {
           value="3"
           id="radio-3"
           label="Option 3"
-          $gap="space-between-m"
+          $labelGap="space-between-m"
           $font="body-1-bold"
           $color="black"
         />
@@ -51,14 +51,14 @@ describe("RadioGroup", () => {
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
-  it("handles $gap, $font and $color as props", () => {
+  it("handles $labelGap, $font and $color as props", () => {
     const { getAllByTestId } = renderWithTheme(
       <OakRadioGroup name={"test"}>
         <OakRadioButton
           value="1"
           id="radio-1"
           label="Option 1"
-          $gap="space-between-m"
+          $labelGap="space-between-m"
           $font="body-1-bold"
           $color="black"
           data-testid={"radio-1"}
@@ -67,7 +67,7 @@ describe("RadioGroup", () => {
           value="2"
           id="radio-2"
           label="Option 2"
-          $gap="space-between-m"
+          $labelGap="space-between-m"
           $font="body-1-bold"
           $color="black"
         />
@@ -75,7 +75,7 @@ describe("RadioGroup", () => {
           value="3"
           id="radio-3"
           label="Option 3"
-          $gap="space-between-m"
+          $labelGap="space-between-m"
           $font="body-1-bold"
           $color="black"
         />
@@ -91,4 +91,6 @@ describe("RadioGroup", () => {
     expect(firstRadio).toHaveStyle("letter-spacing: -0.005rem");
     expect(firstRadio).toHaveStyle("gap: 1.5rem");
   });
+
+  it.todo("disables the radio when the disabled prop is passed");
 });

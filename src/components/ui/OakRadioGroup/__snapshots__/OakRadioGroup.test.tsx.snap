@@ -8,61 +8,72 @@ exports[`RadioGroup matches snapshot 1`] = `
   <label
     className="sc-jlZhew dmkqds"
   />
-  <label
-    className="sc-jlZhew sc-cwHptR dmkqds hhokvw"
-    data-testid="radio-1"
-    htmlFor="radio-1"
+  <div
+    className="sc-aXZVg dXUUHk"
   >
-    <input
-      checked={false}
-      className="sc-jEACwC fdzSWn"
+    <label
+      className="sc-jlZhew sc-cwHptR dmkqds cRpmcS"
       data-testid="radio-1"
-      id="radio-1"
-      name="test"
-      onChange={[Function]}
-      type="radio"
-      value="1"
-    />
-    <div
-      className="sc-aXZVg sc-gEvEer sc-cPiKLX bEbznh eIypJK ieENcE"
-    />
-    Option 1
-  </label>
-  <label
-    className="sc-jlZhew sc-cwHptR dmkqds hhokvw"
-    htmlFor="radio-2"
+      htmlFor="radio-1"
+    >
+      <input
+        checked={false}
+        className="sc-jEACwC wHCZN"
+        id="radio-1"
+        name="test"
+        onChange={[Function]}
+        type="radio"
+        value="1"
+      />
+      <div
+        className="sc-aXZVg sc-gEvEer sc-cPiKLX bEbznh eIypJK gRoZNt"
+      />
+      Option 1
+    </label>
+  </div>
+  <div
+    className="sc-aXZVg dXUUHk"
   >
-    <input
-      checked={false}
-      className="sc-jEACwC fdzSWn"
-      id="radio-2"
-      name="test"
-      onChange={[Function]}
-      type="radio"
-      value="2"
-    />
-    <div
-      className="sc-aXZVg sc-gEvEer sc-cPiKLX bEbznh eIypJK ieENcE"
-    />
-    Option 2
-  </label>
-  <label
-    className="sc-jlZhew sc-cwHptR dmkqds hhokvw"
-    htmlFor="radio-3"
+    <label
+      className="sc-jlZhew sc-cwHptR dmkqds cRpmcS"
+      htmlFor="radio-2"
+    >
+      <input
+        checked={false}
+        className="sc-jEACwC wHCZN"
+        id="radio-2"
+        name="test"
+        onChange={[Function]}
+        type="radio"
+        value="2"
+      />
+      <div
+        className="sc-aXZVg sc-gEvEer sc-cPiKLX bEbznh eIypJK gRoZNt"
+      />
+      Option 2
+    </label>
+  </div>
+  <div
+    className="sc-aXZVg dXUUHk"
   >
-    <input
-      checked={false}
-      className="sc-jEACwC fdzSWn"
-      id="radio-3"
-      name="test"
-      onChange={[Function]}
-      type="radio"
-      value="3"
-    />
-    <div
-      className="sc-aXZVg sc-gEvEer sc-cPiKLX bEbznh eIypJK ieENcE"
-    />
-    Option 3
-  </label>
+    <label
+      className="sc-jlZhew sc-cwHptR dmkqds cRpmcS"
+      htmlFor="radio-3"
+    >
+      <input
+        checked={false}
+        className="sc-jEACwC wHCZN"
+        id="radio-3"
+        name="test"
+        onChange={[Function]}
+        type="radio"
+        value="3"
+      />
+      <div
+        className="sc-aXZVg sc-gEvEer sc-cPiKLX bEbznh eIypJK gRoZNt"
+      />
+      Option 3
+    </label>
+  </div>
 </div>
 `;
