@@ -26,7 +26,7 @@ exports[`RadioGroup matches snapshot 1`] = `
         value="1"
       />
       <div
-        className="sc-aXZVg sc-gEvEer sc-cPiKLX ipCwrb eIypJK gRoZNt"
+        className="sc-aXZVg sc-gEvEer sc-cPiKLX bEbznh eIypJK gRoZNt"
       />
       Option 1
     </label>
@@ -48,7 +48,7 @@ exports[`RadioGroup matches snapshot 1`] = `
         value="2"
       />
       <div
-        className="sc-aXZVg sc-gEvEer sc-cPiKLX ipCwrb eIypJK gRoZNt"
+        className="sc-aXZVg sc-gEvEer sc-cPiKLX bEbznh eIypJK gRoZNt"
       />
       Option 2
     </label>
@@ -70,7 +70,7 @@ exports[`RadioGroup matches snapshot 1`] = `
         value="3"
       />
       <div
-        className="sc-aXZVg sc-gEvEer sc-cPiKLX ipCwrb eIypJK gRoZNt"
+        className="sc-aXZVg sc-gEvEer sc-cPiKLX bEbznh eIypJK gRoZNt"
       />
       Option 3
     </label>

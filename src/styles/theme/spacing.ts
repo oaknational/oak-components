@@ -30,6 +30,7 @@ export type OakAllSpacingToken = keyof typeof oakAllSpacingTokens;
 
 export const oakInnerPaddingTokens = {
   "inner-padding-none": "all-spacing-0",
+  "inner-padding-ssx": "all-spacing-1",
   "inner-padding-xs": "all-spacing-2",
   "inner-padding-s": "all-spacing-3",
   "inner-padding-m": "all-spacing-4",
@@ -41,6 +42,7 @@ export type OakInnerPaddingToken = keyof typeof oakInnerPaddingTokens;
 
 export const oakSpaceBetweenTokens = {
   "space-between-none": "all-spacing-0",
+  "space-between-sssx": "all-spacing-1",
   "space-between-ssx": "all-spacing-2",
   "space-between-xs": "all-spacing-3",
   "space-between-s": "all-spacing-4",
