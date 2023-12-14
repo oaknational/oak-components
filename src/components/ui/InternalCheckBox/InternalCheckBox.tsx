@@ -26,6 +26,7 @@ type StyledCheckboxProps = ColorStyleProps &
     checkedBackground: OakCombinedColorToken | null;
     hoverBorderRadius: OakBorderRadiusToken;
     hoverCenterFill: boolean;
+    showFocus: boolean;
   };
 
 const StyledCheckbox = styled.input.attrs({
@@ -70,7 +71,11 @@ const StyledCheckbox = styled.input.attrs({
   }
 
   &:focus-visible {
-    box-shadow: ${parseDropShadow("drop-shadow-centered-yellow")};
+    ${(props) => css`
+      box-shadow: ${props.showFocus
+        ? parseDropShadow("drop-shadow-centered-yellow")
+        : "none"};
+    `}
   }
 
   &:disabled {
@@ -103,6 +108,7 @@ export type InternalCheckBoxProps = {
   hoverCenterFill?: boolean;
   hoverBorderRadius?: OakBorderRadiusToken;
   iconPadding?: OakInnerPaddingToken;
+  showFocus?: boolean;
   onHovered?: (value: string, id: string, duration: number) => void;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
@@ -110,7 +116,7 @@ export type InternalCheckBoxProps = {
   "data-testid"?: string;
 };
 
-export const InternalCheckBox = (props: InternalCheckBoxProps) => {
+const CheckBox = (props: InternalCheckBoxProps) => {
   const {
     id,
     value,
@@ -128,6 +134,7 @@ export const InternalCheckBox = (props: InternalCheckBoxProps) => {
     iconPadding = "inner-padding-none",
     hoverBorderRadius = "border-radius-xs",
     hoverCenterFill = true,
+    showFocus = true,
   } = props;
 
   const {
@@ -175,6 +182,7 @@ export const InternalCheckBox = (props: InternalCheckBoxProps) => {
         defaultChecked={defaultChecked}
         disabled={disabled}
         name={id}
+        showFocus={showFocus}
       />
 
       <StyledIconContainer
@@ -190,3 +198,5 @@ export const InternalCheckBox = (props: InternalCheckBoxProps) => {
     </OakBox>
   );
 };
+
+export const InternalCheckBox = styled(CheckBox)``;

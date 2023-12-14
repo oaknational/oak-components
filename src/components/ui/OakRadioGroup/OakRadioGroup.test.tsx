@@ -236,7 +236,7 @@ describe("RadioGroup", () => {
 
     const radioGroupLabel = getByText("Select one of the following:");
 
-    expect(radioGroupLabel).toHaveStyle("font-size: 1rem");
+    expect(radioGroupLabel).toHaveStyle("font-size: 1.125rem");
     expect(radioGroupLabel).toHaveStyle("font-weight: 700");
     expect(radioGroupLabel).toHaveStyle("line-height: 1.75rem");
     expect(radioGroupLabel).toHaveStyle("letter-spacing: -0.005rem");

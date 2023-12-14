@@ -41,14 +41,14 @@ export const oakFontTokens: Record<string, FontParameters> = {
   "heading-light-5": ["font-size-6", 32, 400, "0.0115rem"],
   "heading-light-6": ["font-size-5", 24, 400, "0.0115rem"],
   "heading-light-7": ["font-size-3", 20, 400, "0.0115rem"],
-  "body-1": ["font-size-3", 28, 300, "-0.005rem"],
+  "body-1": ["font-size-4", 28, 300, "-0.005rem"],
   "body-2": ["font-size-3", 24, 300, "-0.005rem"],
   "body-3": ["font-size-2", 20, 300, "-0.005rem"],
   "body-4": ["font-size-1", 16, 300, "-0.005rem"],
-  "body-1-bold": ["font-size-3", 28, 700, "-0.005rem"],
+  "body-1-bold": ["font-size-4", 28, 700, "-0.005rem"],
   "body-2-bold": ["font-size-3", 24, 700, "-0.005rem"],
   "body-3-bold": ["font-size-2", 20, 700, "-0.005rem"],
-  "list-item-1": ["font-size-3", 32, 300, "-0.005rem"],
+  "list-item-1": ["font-size-4", 32, 300, "-0.005rem"],
   "list-item-2": ["font-size-3", 24, 300, "-0.005rem"],
 } as const;
 

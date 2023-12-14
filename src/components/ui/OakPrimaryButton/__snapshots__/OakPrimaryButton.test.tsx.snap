@@ -48,7 +48,7 @@ exports[`OakPrimaryButton matches snapshot 1`] = `
         />
       </div>
       <span
-        className="sc-eqUAAy gXELRB"
+        className="sc-eqUAAy jqQzuF"
       >
         Click Me
       </span>

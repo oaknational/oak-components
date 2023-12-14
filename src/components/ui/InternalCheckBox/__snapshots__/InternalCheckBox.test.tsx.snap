@@ -5,7 +5,7 @@ exports[`InternalCheckBox matches snapshot 1`] = `
   className="sc-aXZVg dTLJnG"
 >
   <input
-    className="sc-cwHptR fIgcZu"
+    className="sc-cwHptR dgwVKq"
     defaultChecked={false}
     disabled={false}
     id="checkbox-1"

@@ -12,7 +12,7 @@ exports[`OakCheckBox matches snapshot 1`] = `
     className="sc-aXZVg dTLJnG"
   >
     <input
-      className="sc-cPiKLX eTDufB"
+      className="sc-cPiKLX fBZrOV"
       defaultChecked={false}
       disabled={false}
       id="checkbox-1"

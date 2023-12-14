@@ -6,13 +6,13 @@ exports[`RadioGroup matches snapshot 1`] = `
   role="radiogroup"
 >
   <label
-    className="sc-jlZhew lhHcsH"
+    className="sc-jlZhew hELqFL"
   />
   <div
     className="sc-aXZVg dXUUHk"
   >
     <label
-      className="sc-jlZhew sc-cwHptR lhHcsH cRpmcS"
+      className="sc-jlZhew sc-cwHptR hELqFL cRpmcS"
       data-testid="radio-1"
       htmlFor="radio-1"
     >
@@ -35,7 +35,7 @@ exports[`RadioGroup matches snapshot 1`] = `
     className="sc-aXZVg dXUUHk"
   >
     <label
-      className="sc-jlZhew sc-cwHptR lhHcsH cRpmcS"
+      className="sc-jlZhew sc-cwHptR hELqFL cRpmcS"
       htmlFor="radio-2"
     >
       <input
@@ -57,7 +57,7 @@ exports[`RadioGroup matches snapshot 1`] = `
     className="sc-aXZVg dXUUHk"
   >
     <label
-      className="sc-jlZhew sc-cwHptR lhHcsH cRpmcS"
+      className="sc-jlZhew sc-cwHptR hELqFL cRpmcS"
       htmlFor="radio-3"
     >
       <input
