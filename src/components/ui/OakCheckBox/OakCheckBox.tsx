@@ -57,21 +57,25 @@ const StyledCheckbox = styled.input.attrs({
     `};
   }
 
-  &:hover:not(&:checked):not(&:disabled)::after {
-    content: "";
-    display: ${(props) => (props.hoverCenterFill ? "block" : "none")};
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 60%;
-    height: 60%;
-    transform: translate(-50%, -50%);
-    border-radius: ${(props) => css`
-      ${parseBorderRadius(props.hoverBorderRadius)}
-    `};
-    background: ${(props) => css`
-      ${parseColor(props.checkedBackground)}
-    `};
+  /* @media wrapper is required to prevent hover effect on iOS Safari */
+
+  @media (hover: hover) {
+    &:hover:not(&:checked):not(&:disabled)::after {
+      content: "";
+      display: ${(props) => (props.hoverCenterFill ? "block" : "none")};
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 60%;
+      height: 60%;
+      transform: translate(-50%, -50%);
+      border-radius: ${(props) => css`
+        ${parseBorderRadius(props.hoverBorderRadius)}
+      `};
+      background: ${(props) => css`
+        ${parseColor(props.checkedBackground)}
+      `};
+    }
   }
 
   &:focus-visible {

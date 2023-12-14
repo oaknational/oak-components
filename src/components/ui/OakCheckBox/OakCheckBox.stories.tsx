@@ -81,7 +81,7 @@ type Story = StoryObj<typeof OakCheckBox>;
 export const Default: Story = {
   render: (args) => <OakCheckBox {...args} />,
   args: {
-    id: "checkbox-test",
+    id: "checkbox-test-default",
     value: "a test value",
   },
 };
@@ -89,7 +89,7 @@ export const Default: Story = {
 export const WithStyling: Story = {
   render: (args) => <OakCheckBox {...args} />,
   args: {
-    id: "checkbox-test",
+    id: "checkbox-test-with-styling",
     value: "a test value",
     checkboxSize: "all-spacing-7",
     checkboxBorder: "border-solid-l",
@@ -106,7 +106,7 @@ export const WithStyling: Story = {
 export const CustomIcon: Story = {
   render: (args) => <OakCheckBox {...args} />,
   args: {
-    id: "checkbox-test",
+    id: "checkbox-test-custom",
     value: "a test value",
     iconPadding: "inner-padding-ssx",
     checkedBackgroundFill: false,
@@ -122,14 +122,26 @@ export const CustomIcon: Story = {
 };
 
 export const PreChecked: Story = {
-  render: (args) => (
-    <OakFlex $gap="space-between-m">
-      <OakCheckBox {...args} value="pre-checked and not disabled" />
-      <OakCheckBox {...args} value="pre-checked and disabled" disabled />
-    </OakFlex>
-  ),
+  render: (args) => {
+    const { id, ...rest } = args;
+
+    return (
+      <OakFlex $gap="space-between-m">
+        <OakCheckBox
+          id="checkbox-test-prechecked-1"
+          {...rest}
+          value="pre-checked and not disabled"
+        />
+        <OakCheckBox
+          id="checkbox-test-prechecked-2"
+          {...rest}
+          value="pre-checked and disabled"
+          disabled
+        />
+      </OakFlex>
+    );
+  },
   args: {
-    id: "checkbox-test",
     defaultChecked: true,
   },
   parameters: {
