@@ -7,7 +7,7 @@ import {
 import { OakColorToken, OakUiRoleToken } from "@/styles/theme/color";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseBorder } from "@/styles/helpers/parseBorder";
-import { parseRadius } from "@/styles/helpers/parseBorderRadius";
+import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 import {
   ResponsiveValues,
   responsiveStyle,
@@ -61,7 +61,7 @@ const borderRadius = css<{ $borderRadius?: BorderRadiusProps }>`
   ${responsiveStyle(
     "border-radius",
     (props) => props.$borderRadius,
-    parseRadius,
+    parseBorderRadius,
   )}
 `;
 

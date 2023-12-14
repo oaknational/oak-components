@@ -1,8 +1,8 @@
-import { parseRadius } from "@/styles/helpers/parseBorderRadius";
+import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 
-describe("parseRadius", () => {
+describe("parseBorderRadius", () => {
   it("should return undefined if value is null or undefined", () => {
-    expect(parseRadius(null)).toBeUndefined();
-    expect(parseRadius()).toBeUndefined();
+    expect(parseBorderRadius(null)).toBeUndefined();
+    expect(parseBorderRadius()).toBeUndefined();
   });
 });

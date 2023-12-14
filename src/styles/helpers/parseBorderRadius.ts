@@ -5,7 +5,7 @@ import {
   oakBorderRadiusTokens,
 } from "@/styles/theme/borders";
 
-export const parseRadius = (value?: OakBorderRadiusToken | null) => {
+export const parseBorderRadius = (value?: OakBorderRadiusToken | null) => {
   if (value === undefined || value === null) {
     return undefined;
   }

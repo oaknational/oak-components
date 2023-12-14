@@ -4,3 +4,4 @@ export * from "./OakPrimaryButton";
 export * from "./OakSecondaryButton";
 export * from "./OakRadioButton";
 export * from "./OakRadioGroup";
+export * from "./OakCheckBox";
