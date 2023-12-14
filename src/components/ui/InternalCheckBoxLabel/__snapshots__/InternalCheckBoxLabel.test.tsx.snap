@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InternalCheckBoxLabel matches snapshot 1`] = `
+<label
+  className="sc-jlZhew sc-cwHptR eFqsWf iIbpME"
+  data-testid="test-1"
+  htmlFor="checkbox-1"
+>
+  Value
+</label>
+`;

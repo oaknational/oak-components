@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InternalCheckBox matches snapshot 1`] = `
+<div
+  className="sc-aXZVg dTLJnG"
+>
+  <input
+    className="sc-cwHptR fIgcZu"
+    defaultChecked={false}
+    disabled={false}
+    id="checkbox-1"
+    name="checkbox-1"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    type="checkbox"
+    value="Option 1"
+  />
+  <div
+    className="sc-aXZVg sc-jEACwC dvhqmT jwknxw"
+  >
+    <div
+      className="sc-aXZVg sc-gsFSXq wnZli gpWgiw"
+    >
+      <img
+        alt="tick"
+        className="sc-dcJsrY eRtzRJ"
+        data-nimg="fill"
+        decoding="async"
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="https://undefined/undefined/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
+        style={
+          {
+            "bottom": 0,
+            "color": "transparent",
+            "height": "100%",
+            "left": 0,
+            "objectFit": undefined,
+            "objectPosition": undefined,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -1,11 +1,7 @@
 import React, { useRef } from "react";
 import styled, { css } from "styled-components";
 
-import { OakBox, OakBoxProps, OakFlex, OakIcon } from "@/components/base";
-import {
-  InternalCheckBoxLabel,
-  InternalCheckBoxLabelProps,
-} from "@/components/ui/InternalCheckBoxLabel";
+import { OakBox, OakBoxProps, OakIcon } from "@/components/base";
 import { ColorStyleProps, colorStyle } from "@/styles/utils/colorStyle";
 import { SpacingStyleProps, spacingStyle } from "@/styles/utils/spacingStyle";
 import { BorderStyleProps, borderStyle } from "@/styles/utils/borderStyle";
@@ -20,13 +16,14 @@ import {
   OakInnerPaddingToken,
 } from "@/styles";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
+import { ResponsiveValues } from "@/styles/utils/responsiveStyle";
 
 type StyledCheckboxProps = ColorStyleProps &
   SpacingStyleProps &
   BorderStyleProps &
   SizeStyleProps & {
     disabled: boolean;
-    checkedBackground: OakCombinedColorToken | null;
+    checkedBackground: OakCombinedColorToken;
     hoverBorderRadius: OakBorderRadiusToken;
     hoverCenterFill: boolean;
   };
@@ -92,49 +89,45 @@ const StyledIconContainer = styled(OakBox)<
   }
 `;
 
-export type OakCheckBoxProps = {
+export type InternalCheckBoxProps = {
   id: string;
   disabled?: boolean;
   value: string;
   defaultChecked?: boolean;
-  checkboxSize?: OakAllSpacingToken;
-  checkboxBorder?: OakBorderWidthToken;
-  checkboxBorderRadius?: OakBorderRadiusToken;
+  $size?: ResponsiveValues<OakAllSpacingToken>;
+  $border?: ResponsiveValues<OakBorderWidthToken>;
+  $borderRadius?: ResponsiveValues<OakBorderRadiusToken>;
+  borderColor?: OakCombinedColorToken;
+  checkedBackground?: OakCombinedColorToken;
   checkedIcon?: React.JSX.Element;
   hoverCenterFill?: boolean;
-  checkedBackgroundFill?: boolean;
   hoverBorderRadius?: OakBorderRadiusToken;
   iconPadding?: OakInnerPaddingToken;
-  defaultColor?: OakCombinedColorToken;
-  disabledColor?: OakCombinedColorToken;
   onHovered?: (value: string, id: string, duration: number) => void;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
   onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
   "data-testid"?: string;
-} & InternalCheckBoxLabelProps;
+};
 
-export const OakCheckBox = (props: OakCheckBoxProps) => {
+export const InternalCheckBox = (props: InternalCheckBoxProps) => {
   const {
     id,
     value,
     disabled = false,
     defaultChecked = false,
-    checkboxSize = "all-spacing-6",
-    defaultColor = "text-primary",
-    disabledColor = "text-disabled",
+    $size = "all-spacing-6",
     onChange,
     onFocus,
     onBlur,
     onHovered,
-    labelGap = "space-between-s",
-    labelAlignItems = "center",
-    checkboxBorder = "border-solid-m",
-    checkboxBorderRadius = "border-radius-xs",
+    $border = "border-solid-m",
+    $borderRadius = "border-radius-xs",
+    borderColor = "text-primary",
+    checkedBackground = "text-primary",
     iconPadding = "inner-padding-none",
     hoverBorderRadius = "border-radius-xs",
     hoverCenterFill = true,
-    checkedBackgroundFill = true,
   } = props;
 
   const {
@@ -150,18 +143,6 @@ export const OakCheckBox = (props: OakCheckBoxProps) => {
 
   const hoverStart = useRef(Date.now());
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (onChange) onChange(event);
-  };
-
-  const handleFocus = (event: React.FocusEvent<HTMLInputElement>) => {
-    if (onFocus) onFocus(event);
-  };
-
-  const handleBlur = (event: React.FocusEvent<HTMLInputElement>) => {
-    if (onBlur) onBlur(event);
-  };
-
   const handleMouseEnter = () => {
     hoverStart.current = Date.now();
   };
@@ -173,49 +154,39 @@ export const OakCheckBox = (props: OakCheckBoxProps) => {
     }
   };
 
-  const currentColor = disabled ? disabledColor : defaultColor;
-
   return (
-    <InternalCheckBoxLabel
-      htmlFor={id}
-      labelGap={labelGap}
-      labelAlignItems={labelAlignItems}
-      $color={currentColor}
-      disabled={disabled}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      data-testid={props["data-testid"]}
-    >
-      <OakFlex $position="relative" $flexShrink={1}>
-        <StyledCheckbox
-          id={id}
-          value={value}
-          $width={checkboxSize}
-          $height={checkboxSize}
-          $ba={checkboxBorder}
-          $borderRadius={checkboxBorderRadius}
-          $borderColor={currentColor}
-          checkedBackground={checkedBackgroundFill ? currentColor : null}
-          hoverBorderRadius={hoverBorderRadius}
-          hoverCenterFill={hoverCenterFill}
-          onChange={handleChange}
-          onFocus={handleFocus}
-          onBlur={handleBlur}
-          defaultChecked={defaultChecked}
-          disabled={disabled}
-          name={id}
-        />
+    <OakBox $position="relative" $width={$size} $height={$size}>
+      <StyledCheckbox
+        id={id}
+        value={value}
+        $width={$size}
+        $height={$size}
+        $ba={$border}
+        $borderRadius={$borderRadius}
+        $borderColor={borderColor}
+        checkedBackground={checkedBackground}
+        hoverBorderRadius={hoverBorderRadius}
+        hoverCenterFill={hoverCenterFill}
+        onChange={onChange}
+        onFocus={onFocus}
+        onBlur={onBlur}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        defaultChecked={defaultChecked}
+        disabled={disabled}
+        name={id}
+      />
 
-        <StyledIconContainer
-          $position={"absolute"}
-          $pa={iconPadding}
-          $width={checkboxSize}
-          $height={checkboxSize}
-        >
-          {checkedIcon}
-        </StyledIconContainer>
-      </OakFlex>
-      {value}
-    </InternalCheckBoxLabel>
+      <StyledIconContainer
+        $position={"absolute"}
+        $top={"all-spacing-0"}
+        $left={"all-spacing-0"}
+        $pa={iconPadding}
+        $width={$size}
+        $height={$size}
+      >
+        {checkedIcon}
+      </StyledIconContainer>
+    </OakBox>
   );
 };
