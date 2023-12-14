@@ -74,7 +74,7 @@ const StyledCheckbox = styled.input.attrs({
     `};
   }
 
-  &:focus {
+  &:focus-visible {
     box-shadow: ${parseDropShadow("drop-shadow-centered-yellow")};
   }
 
