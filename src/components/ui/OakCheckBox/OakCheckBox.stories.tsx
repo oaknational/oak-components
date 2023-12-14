@@ -1,9 +1,9 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakCheckbox } from "./OakCheckBox";
+import { OakCheckBox } from "./OakCheckBox";
 
-import { OakFlex } from "@/components/base";
+import { OakBox, OakFlex } from "@/components/base";
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
 import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";
@@ -33,10 +33,10 @@ import { flexArgTypes } from "@/storybook-helpers/flexStyleHelpers";
  *
  */
 
-const meta: Meta<typeof OakCheckbox> = {
-  component: OakCheckbox,
+const meta: Meta<typeof OakCheckBox> = {
+  component: OakCheckBox,
   tags: ["autodocs"],
-  title: "components/ui/OakCheckbox",
+  title: "components/ui/OakCheckBox",
   argTypes: {
     disabled: {
       control: { type: "boolean" },
@@ -52,6 +52,9 @@ const meta: Meta<typeof OakCheckbox> = {
     iconPadding: spacingArgTypes.$pa,
     defaultColor: colorArgTypes.$color,
     disabledColor: colorArgTypes.$color,
+    hoverCenterFill: {
+      control: { type: "boolean" },
+    },
   },
   parameters: {
     controls: {
@@ -66,16 +69,17 @@ const meta: Meta<typeof OakCheckbox> = {
         "labelGap",
         "labelAlignItems",
         "disabled",
+        "hoverCenterFill",
       ],
     },
   },
 };
 export default meta;
 
-type Story = StoryObj<typeof OakCheckbox>;
+type Story = StoryObj<typeof OakCheckBox>;
 
 export const Default: Story = {
-  render: (args) => <OakCheckbox {...args} />,
+  render: (args) => <OakCheckBox {...args} />,
   args: {
     id: "checkbox-test",
     value: "a test value",
@@ -83,7 +87,7 @@ export const Default: Story = {
 };
 
 export const WithStyling: Story = {
-  render: (args) => <OakCheckbox {...args} />,
+  render: (args) => <OakCheckBox {...args} />,
   args: {
     id: "checkbox-test",
     value: "a test value",
@@ -99,11 +103,29 @@ export const WithStyling: Story = {
   },
 };
 
+export const CustomIcon: Story = {
+  render: (args) => <OakCheckBox {...args} />,
+  args: {
+    id: "checkbox-test",
+    value: "a test value",
+    iconPadding: "inner-padding-ssx",
+    checkedBackgroundFill: false,
+    checkedIcon: (
+      <OakBox
+        $width="100%"
+        $height="100%"
+        $borderRadius="border-radius-xs"
+        $background="black"
+      ></OakBox>
+    ),
+  },
+};
+
 export const PreChecked: Story = {
   render: (args) => (
     <OakFlex $gap="space-between-m">
-      <OakCheckbox {...args} value="pre-checked and not disabled" />
-      <OakCheckbox {...args} value="pre-checked and disabled" disabled />
+      <OakCheckBox {...args} value="pre-checked and not disabled" />
+      <OakCheckBox {...args} value="pre-checked and disabled" disabled />
     </OakFlex>
   ),
   args: {

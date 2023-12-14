@@ -32,8 +32,9 @@ type StyledCheckboxProps = ColorStyleProps &
   BorderStyleProps &
   SizeStyleProps & {
     disabled: boolean;
-    checkedBackground: OakCombinedColorToken;
+    checkedBackground: OakCombinedColorToken | null;
     hoverBorderRadius: OakBorderRadiusToken;
+    hoverCenterFill: boolean;
   };
 
 const StyledCheckbox = styled.input.attrs({
@@ -58,7 +59,7 @@ const StyledCheckbox = styled.input.attrs({
 
   &:hover:not(&:checked):not(&:disabled)::after {
     content: "";
-    display: block;
+    display: ${(props) => (props.hoverCenterFill ? "block" : "none")};
     position: absolute;
     top: 50%;
     left: 50%;
@@ -115,7 +116,7 @@ const CheckboxLabel = styled(OakLabel)<CheckboxLabelProps>`
   ${responsiveStyle("align-items", (props) => props.labelAlignItems)}
 `;
 
-export type OakCheckboxProps = {
+export type OakCheckBoxProps = {
   id: string;
   disabled?: boolean;
   value: string;
@@ -123,6 +124,9 @@ export type OakCheckboxProps = {
   checkboxSize?: OakAllSpacingToken;
   checkboxBorder?: OakBorderWidthToken;
   checkboxBorderRadius?: OakBorderRadiusToken;
+  checkedIcon?: React.JSX.Element;
+  hoverCenterFill?: boolean;
+  checkedBackgroundFill?: boolean;
   hoverBorderRadius?: OakBorderRadiusToken;
   iconPadding?: OakInnerPaddingToken;
   defaultColor?: OakCombinedColorToken;
@@ -131,9 +135,10 @@ export type OakCheckboxProps = {
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
   onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
+  "data-testid"?: string;
 } & CheckboxLabelProps;
 
-export const OakCheckbox = (props: OakCheckboxProps) => {
+export const OakCheckBox = (props: OakCheckBoxProps) => {
   const {
     id,
     value,
@@ -152,6 +157,19 @@ export const OakCheckbox = (props: OakCheckboxProps) => {
     checkboxBorderRadius = "border-radius-xs",
     iconPadding = "inner-padding-none",
     hoverBorderRadius = "border-radius-xs",
+    hoverCenterFill = true,
+    checkedBackgroundFill = true,
+  } = props;
+
+  const {
+    checkedIcon = (
+      <OakIcon
+        iconName="tick"
+        $width={"100%"}
+        $height={"100%"}
+        $colorFilter={"white"}
+      />
+    ),
   } = props;
 
   const hoverStart = useRef(Date.now());
@@ -190,6 +208,7 @@ export const OakCheckbox = (props: OakCheckboxProps) => {
       disabled={disabled}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      data-testid={props["data-testid"]}
     >
       <OakFlex $position="relative" $flexShrink={1}>
         <StyledCheckbox
@@ -200,13 +219,15 @@ export const OakCheckbox = (props: OakCheckboxProps) => {
           $ba={checkboxBorder}
           $borderRadius={checkboxBorderRadius}
           $borderColor={currentColor}
-          checkedBackground={currentColor}
+          checkedBackground={checkedBackgroundFill ? currentColor : null}
           hoverBorderRadius={hoverBorderRadius}
+          hoverCenterFill={hoverCenterFill}
           onChange={handleChange}
           onFocus={handleFocus}
           onBlur={handleBlur}
           defaultChecked={defaultChecked}
           disabled={disabled}
+          name={id}
         />
 
         <StyledIconContainer
@@ -215,12 +236,7 @@ export const OakCheckbox = (props: OakCheckboxProps) => {
           $width={checkboxSize}
           $height={checkboxSize}
         >
-          <OakIcon
-            iconName="tick"
-            $width={"100%"}
-            $height={"100%"}
-            $colorFilter={"white"}
-          />
+          {checkedIcon}
         </StyledIconContainer>
       </OakFlex>
       {value}
