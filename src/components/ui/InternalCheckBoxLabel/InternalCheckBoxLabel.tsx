@@ -17,6 +17,11 @@ export const InternalCheckBoxLabel = styled(
 )<InternalCheckBoxLabelProps>`
   display: flex;
   align-items: center;
+  ${responsiveStyle("gap", (props) => props.labelGap, parseSpacing)}
+  ${responsiveStyle("align-items", (props) => props.labelAlignItems)}
+`;
+
+export const InternalCheckBoxLabelHoverDecor = styled(InternalCheckBoxLabel)`
   ${(props) =>
     props.disabled
       ? css`
@@ -25,9 +30,7 @@ export const InternalCheckBoxLabel = styled(
       : css`
           cursor: pointer;
         `}
-  ${responsiveStyle("gap", (props) => props.labelGap, parseSpacing)}
-  ${responsiveStyle("align-items", (props) => props.labelAlignItems)}
-    @media (hover: hover) {
+  @media (hover: hover) {
     &:hover {
       text-decoration: ${(props) => (props.disabled ? "none" : "underline")};
     }

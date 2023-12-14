@@ -1,17 +1,10 @@
 import React, { useRef } from "react";
-import styled, { css } from "styled-components";
 
-import { OakBox, OakBoxProps, OakFlex, OakIcon } from "@/components/base";
 import {
   InternalCheckBoxLabel,
   InternalCheckBoxLabelProps,
 } from "@/components/ui/InternalCheckBoxLabel";
-import { ColorStyleProps, colorStyle } from "@/styles/utils/colorStyle";
-import { SpacingStyleProps, spacingStyle } from "@/styles/utils/spacingStyle";
-import { BorderStyleProps, borderStyle } from "@/styles/utils/borderStyle";
-import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
-import { SizeStyleProps, sizeStyle } from "@/styles/utils/sizeStyle";
-import { parseColor } from "@/styles/helpers/parseColor";
+import { InternalCheckBox } from "@/components/ui/InternalCheckBox";
 import {
   OakAllSpacingToken,
   OakBorderRadiusToken,
@@ -19,78 +12,6 @@ import {
   OakCombinedColorToken,
   OakInnerPaddingToken,
 } from "@/styles";
-import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
-
-type StyledCheckboxProps = ColorStyleProps &
-  SpacingStyleProps &
-  BorderStyleProps &
-  SizeStyleProps & {
-    disabled: boolean;
-    checkedBackground: OakCombinedColorToken | null;
-    hoverBorderRadius: OakBorderRadiusToken;
-    hoverCenterFill: boolean;
-  };
-
-const StyledCheckbox = styled.input.attrs({
-  type: "checkbox",
-})<StyledCheckboxProps>`
-  /* removing default appearance */
-  -webkit-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  margin: 0;
-  outline: none;
-  ${borderStyle}
-  ${colorStyle}
-  ${spacingStyle}
-  ${sizeStyle}
-
-  &:checked {
-    ${(props) => css`
-      background: ${parseColor(props.checkedBackground)};
-    `};
-  }
-
-  /* @media wrapper is required to prevent hover effect on iOS Safari */
-
-  @media (hover: hover) {
-    &:hover:not(&:checked):not(&:disabled)::after {
-      content: "";
-      display: ${(props) => (props.hoverCenterFill ? "block" : "none")};
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 60%;
-      height: 60%;
-      transform: translate(-50%, -50%);
-      border-radius: ${(props) => css`
-        ${parseBorderRadius(props.hoverBorderRadius)}
-      `};
-      background: ${(props) => css`
-        ${parseColor(props.checkedBackground)}
-      `};
-    }
-  }
-
-  &:focus-visible {
-    box-shadow: ${parseDropShadow("drop-shadow-centered-yellow")};
-  }
-
-  &:disabled {
-    pointer-events: none;
-  }
-`;
-
-const StyledIconContainer = styled(OakBox)<
-  OakBoxProps & { disabled?: boolean }
->`
-  pointer-events: none;
-  opacity: 0;
-
-  ${StyledCheckbox}:checked + & {
-    opacity: 1;
-  }
-`;
 
 export type OakCheckBoxProps = {
   id: string;
@@ -135,32 +56,10 @@ export const OakCheckBox = (props: OakCheckBoxProps) => {
     hoverBorderRadius = "border-radius-xs",
     hoverCenterFill = true,
     checkedBackgroundFill = true,
-  } = props;
-
-  const {
-    checkedIcon = (
-      <OakIcon
-        iconName="tick"
-        $width={"100%"}
-        $height={"100%"}
-        $colorFilter={"white"}
-      />
-    ),
+    checkedIcon,
   } = props;
 
   const hoverStart = useRef(Date.now());
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (onChange) onChange(event);
-  };
-
-  const handleFocus = (event: React.FocusEvent<HTMLInputElement>) => {
-    if (onFocus) onFocus(event);
-  };
-
-  const handleBlur = (event: React.FocusEvent<HTMLInputElement>) => {
-    if (onBlur) onBlur(event);
-  };
 
   const handleMouseEnter = () => {
     hoverStart.current = Date.now();
@@ -186,35 +85,24 @@ export const OakCheckBox = (props: OakCheckBoxProps) => {
       onMouseLeave={handleMouseLeave}
       data-testid={props["data-testid"]}
     >
-      <OakFlex $position="relative" $flexShrink={1}>
-        <StyledCheckbox
-          id={id}
-          value={value}
-          $width={checkboxSize}
-          $height={checkboxSize}
-          $ba={checkboxBorder}
-          $borderRadius={checkboxBorderRadius}
-          $borderColor={currentColor}
-          checkedBackground={checkedBackgroundFill ? currentColor : null}
-          hoverBorderRadius={hoverBorderRadius}
-          hoverCenterFill={hoverCenterFill}
-          onChange={handleChange}
-          onFocus={handleFocus}
-          onBlur={handleBlur}
-          defaultChecked={defaultChecked}
-          disabled={disabled}
-          name={id}
-        />
-
-        <StyledIconContainer
-          $position={"absolute"}
-          $pa={iconPadding}
-          $width={checkboxSize}
-          $height={checkboxSize}
-        >
-          {checkedIcon}
-        </StyledIconContainer>
-      </OakFlex>
+      <InternalCheckBox
+        id={id}
+        value={value}
+        $size={checkboxSize}
+        $border={checkboxBorder}
+        $borderRadius={checkboxBorderRadius}
+        borderColor={currentColor}
+        checkedBackground={checkedBackgroundFill ? currentColor : null}
+        hoverBorderRadius={hoverBorderRadius}
+        hoverCenterFill={hoverCenterFill}
+        onChange={onChange}
+        onFocus={onFocus}
+        onBlur={onBlur}
+        defaultChecked={defaultChecked}
+        disabled={disabled}
+        checkedIcon={checkedIcon}
+        iconPadding={iconPadding}
+      />
       {value}
     </InternalCheckBoxLabel>
   );

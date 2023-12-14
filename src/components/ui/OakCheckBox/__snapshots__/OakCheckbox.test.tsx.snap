@@ -2,29 +2,28 @@
 
 exports[`OakCheckBox matches snapshot 1`] = `
 <label
-  className="sc-jlZhew sc-cPiKLX etnkYY bCUUeC"
+  className="sc-jlZhew sc-cwHptR etnkYY fCdzRU"
   disabled={false}
   htmlFor="checkbox-1"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
   <div
-    className="sc-aXZVg sc-gEvEer cKKnNr PtMXh"
+    className="sc-aXZVg dTLJnG"
   >
     <input
-      className="sc-cwHptR fIgcZu"
+      className="sc-cPiKLX eTDufB"
       defaultChecked={false}
       disabled={false}
       id="checkbox-1"
       name="checkbox-1"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
       type="checkbox"
       value="Option 1"
     />
     <div
-      className="sc-aXZVg sc-jEACwC fsOOxb jwknxw"
+      className="sc-aXZVg sc-dLMFU dvhqmT jeTVMQ"
     >
       <div
         className="sc-aXZVg sc-gsFSXq wnZli gpWgiw"

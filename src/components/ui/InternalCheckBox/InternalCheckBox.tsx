@@ -23,7 +23,7 @@ type StyledCheckboxProps = ColorStyleProps &
   BorderStyleProps &
   SizeStyleProps & {
     disabled: boolean;
-    checkedBackground: OakCombinedColorToken;
+    checkedBackground: OakCombinedColorToken | null;
     hoverBorderRadius: OakBorderRadiusToken;
     hoverCenterFill: boolean;
   };
@@ -98,7 +98,7 @@ export type InternalCheckBoxProps = {
   $border?: ResponsiveValues<OakBorderWidthToken>;
   $borderRadius?: ResponsiveValues<OakBorderRadiusToken>;
   borderColor?: OakCombinedColorToken;
-  checkedBackground?: OakCombinedColorToken;
+  checkedBackground?: OakCombinedColorToken | null;
   checkedIcon?: React.JSX.Element;
   hoverCenterFill?: boolean;
   hoverBorderRadius?: OakBorderRadiusToken;
