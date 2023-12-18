@@ -52,8 +52,9 @@ const meta: Meta<typeof OakCheckBox> = {
     iconPadding: spacingArgTypes.$pa,
     defaultColor: colorArgTypes.$color,
     disabledColor: colorArgTypes.$color,
-    hoverCenterFill: {
-      control: { type: "boolean" },
+    decor: {
+      control: { type: "select" },
+      options: ["hover", "focus", "hover-focus", "none"],
     },
   },
   parameters: {
@@ -69,7 +70,7 @@ const meta: Meta<typeof OakCheckBox> = {
         "labelGap",
         "labelAlignItems",
         "disabled",
-        "hoverCenterFill",
+        "decor",
       ],
     },
   },
@@ -83,6 +84,7 @@ export const Default: Story = {
   args: {
     id: "checkbox-test-default",
     value: "a test value",
+    decor: "hover-focus",
   },
 };
 

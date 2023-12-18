@@ -2,12 +2,10 @@
 
 exports[`InternalCheckBox matches snapshot 1`] = `
 <div
-  className="sc-aXZVg dTLJnG"
+  className="sc-dcJsrY aPspN"
 >
   <input
-    className="sc-cwHptR dgwVKq"
-    defaultChecked={false}
-    disabled={false}
+    className="sc-aXZVg lbxHic sc-eldPxv"
     id="checkbox-1"
     name="checkbox-1"
     onMouseEnter={[Function]}
@@ -16,14 +14,14 @@ exports[`InternalCheckBox matches snapshot 1`] = `
     value="Option 1"
   />
   <div
-    className="sc-aXZVg sc-jEACwC dvhqmT jwknxw"
+    className="sc-dcJsrY sc-eDPEul fiBLHw bmKjeQ"
   >
     <div
-      className="sc-aXZVg sc-gsFSXq wnZli gpWgiw"
+      className="sc-dcJsrY sc-dhKdcB hDOZRN iYKIFW"
     >
       <img
         alt="tick"
-        className="sc-dcJsrY eRtzRJ"
+        className="sc-imWYAI riIre"
         data-nimg="fill"
         decoding="async"
         loading="lazy"

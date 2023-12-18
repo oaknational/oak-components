@@ -12,27 +12,22 @@ import {
   OakCombinedColorToken,
   OakInnerPaddingToken,
 } from "@/styles";
+import {
+  SubBaseCheckBoxProps,
+  SubStyledCheckBoxDecor,
+} from "@/components/ui/InternalCheckBox/SubStyledCheckBox";
 
-export type OakCheckBoxProps = {
-  id: string;
-  disabled?: boolean;
-  value: string;
-  defaultChecked?: boolean;
+export type OakCheckBoxProps = SubBaseCheckBoxProps & {
+  decor?: SubStyledCheckBoxDecor;
   checkboxSize?: OakAllSpacingToken;
   checkboxBorder?: OakBorderWidthToken;
   checkboxBorderRadius?: OakBorderRadiusToken;
   checkedIcon?: React.JSX.Element;
-  hoverCenterFill?: boolean;
   checkedBackgroundFill?: boolean;
   hoverBorderRadius?: OakBorderRadiusToken;
   iconPadding?: OakInnerPaddingToken;
   defaultColor?: OakCombinedColorToken;
   disabledColor?: OakCombinedColorToken;
-  onHovered?: (value: string, id: string, duration: number) => void;
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
-  onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
-  "data-testid"?: string;
 } & InternalCheckBoxLabelProps;
 
 export const OakCheckBox = (props: OakCheckBoxProps) => {
@@ -41,20 +36,20 @@ export const OakCheckBox = (props: OakCheckBoxProps) => {
     value,
     disabled = false,
     defaultChecked = false,
-    checkboxSize = "all-spacing-6",
-    defaultColor = "text-primary",
-    disabledColor = "text-disabled",
     onChange,
     onFocus,
     onBlur,
     onHovered,
-    labelGap = "space-between-s",
-    labelAlignItems = "center",
-    checkboxBorder = "border-solid-m",
-    checkboxBorderRadius = "border-radius-xs",
+    decor,
     iconPadding = "inner-padding-none",
     hoverBorderRadius = "border-radius-xs",
-    hoverCenterFill = true,
+    checkboxSize = "all-spacing-6",
+    checkboxBorder = "border-solid-m",
+    checkboxBorderRadius = "border-radius-xs",
+    defaultColor = "text-primary",
+    disabledColor = "text-disabled",
+    labelGap = "space-between-s",
+    labelAlignItems = "center",
     checkedBackgroundFill = true,
     checkedIcon,
   } = props;
@@ -88,13 +83,13 @@ export const OakCheckBox = (props: OakCheckBoxProps) => {
       <InternalCheckBox
         id={id}
         value={value}
-        $size={checkboxSize}
-        $border={checkboxBorder}
-        $borderRadius={checkboxBorderRadius}
+        size={checkboxSize}
+        decor={decor}
+        border={checkboxBorder}
+        borderRadius={checkboxBorderRadius}
         borderColor={currentColor}
         checkedBackground={checkedBackgroundFill ? currentColor : null}
         hoverBorderRadius={hoverBorderRadius}
-        hoverCenterFill={hoverCenterFill}
         onChange={onChange}
         onFocus={onFocus}
         onBlur={onBlur}

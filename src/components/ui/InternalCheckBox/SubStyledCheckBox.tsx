@@ -145,6 +145,7 @@ export const SubStyledCheckBox = (props: SubStyledCheckBoxProps) => {
     case "focus":
       return (
         <SubStyledCheckBoxFocus
+          name={props.id}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           {...rest}
@@ -153,6 +154,7 @@ export const SubStyledCheckBox = (props: SubStyledCheckBoxProps) => {
     case "hover":
       return (
         <StyledCheckBoxHover
+          name={props.id}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           {...rest}
@@ -161,6 +163,7 @@ export const SubStyledCheckBox = (props: SubStyledCheckBoxProps) => {
     case "hover-focus":
       return (
         <SubStyledCheckBoxHoverFocus
+          name={props.id}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           {...rest}
@@ -169,6 +172,7 @@ export const SubStyledCheckBox = (props: SubStyledCheckBoxProps) => {
     default:
       return (
         <StyledCheckBox
+          name={props.id}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           {...rest}

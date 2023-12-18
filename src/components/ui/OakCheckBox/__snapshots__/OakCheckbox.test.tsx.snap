@@ -12,7 +12,7 @@ exports[`OakCheckBox matches snapshot 1`] = `
     className="sc-aXZVg dTLJnG"
   >
     <input
-      className="sc-cPiKLX fBZrOV"
+      className="sc-cPiKLX jpFVPH sc-gFqAkR"
       defaultChecked={false}
       disabled={false}
       id="checkbox-1"
@@ -23,7 +23,7 @@ exports[`OakCheckBox matches snapshot 1`] = `
       value="Option 1"
     />
     <div
-      className="sc-aXZVg sc-dLMFU dvhqmT jeTVMQ"
+      className="sc-aXZVg sc-fPXMVe dvhqmT epCavt"
     >
       <div
         className="sc-aXZVg sc-gsFSXq wnZli gpWgiw"
