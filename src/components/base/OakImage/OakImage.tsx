@@ -3,28 +3,18 @@ import Image, { ImageProps } from "next/image";
 import styled, { css } from "styled-components";
 
 import {
-  positionStyle,
-  PositionStyleProps,
-} from "@/styles/utils/positionStyle";
-import { sizeStyle, SizeStyleProps } from "@/styles/utils/sizeStyle";
-import { spacingStyle, SpacingStyleProps } from "@/styles/utils/spacingStyle";
-import {
-  colorFilterStyle,
   ColorFilterStyleProps,
+  colorFilterStyle,
 } from "@/styles/utils/colorFilterStyle";
-import { OakBox } from "@/components/base/OakBox";
-import { colorStyle, ColorStyleProps } from "@/styles/utils/colorStyle";
+import { OakBox, OakBoxProps } from "@/components/base/OakBox";
 
 type HTMLProps = {
   onClick?: MouseEventHandler;
 };
 
 export type OakImageProps = ImageProps &
+  OakBoxProps &
   ColorFilterStyleProps &
-  PositionStyleProps &
-  SizeStyleProps &
-  SpacingStyleProps &
-  ColorStyleProps &
   HTMLProps;
 
 /**
@@ -58,13 +48,6 @@ const StyledResponsiveImage = styled(Image)<OakImageProps>`
   height: auto;
 `;
 
-const StyledBox = styled(OakBox)<Omit<OakImageProps, "alt" | "src">>`
-  ${positionStyle}
-  ${sizeStyle}
-  ${spacingStyle}
-  ${colorStyle}
-`;
-
 export const OakImage = (props: OakImageProps) => {
   const {
     src,
@@ -83,7 +66,7 @@ export const OakImage = (props: OakImageProps) => {
 
   if (!width || !height) {
     return (
-      <StyledBox $position={$position} $width={$width} {...rest}>
+      <OakBox $position={$position} $width={$width} {...rest}>
         <StyledFillImage
           src={src}
           alt={alt}
@@ -91,7 +74,7 @@ export const OakImage = (props: OakImageProps) => {
           fill
           $colorFilter={$colorFilter}
         />
-      </StyledBox>
+      </OakBox>
     );
   }
 
@@ -99,7 +82,7 @@ export const OakImage = (props: OakImageProps) => {
   // Use $minWidth to set the width with auto height
 
   return (
-    <StyledBox $maxWidth={"all-spacing-0"} $position={$position} {...rest}>
+    <OakBox $maxWidth={"all-spacing-0"} $position={$position} {...rest}>
       <StyledResponsiveImage
         src={src}
         alt={alt}
@@ -108,6 +91,6 @@ export const OakImage = (props: OakImageProps) => {
         sizes={sizes}
         $colorFilter={$colorFilter}
       />
-    </StyledBox>
+    </OakBox>
   );
 };

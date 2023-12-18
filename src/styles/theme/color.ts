@@ -56,6 +56,8 @@ export const oakColorFilterTokens = {
   black:
     "invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%)",
   red: "invert(13%) sepia(78%) saturate(5255%) hue-rotate(337deg) brightness(88%) contrast(111%)",
+  oakGreen:
+    "invert(37%) sepia(16%) saturate(1947%) hue-rotate(77deg) brightness(100%) contrast(88%)",
   white:
     "invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%)",
   grey40:
