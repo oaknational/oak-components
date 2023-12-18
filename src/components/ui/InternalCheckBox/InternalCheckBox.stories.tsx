@@ -39,30 +39,33 @@ const meta: Meta<typeof InternalCheckBox> = {
     disabled: {
       control: { type: "boolean" },
     },
-    $size: {
+    size: {
       options: ["all-spacing-6", "all-spacing-7", "all-spacing-8"],
       control: { type: "select" },
     },
-    $border: borderArgTypes.$ba,
-    $borderRadius: borderArgTypes.$borderRadius,
-    borderColor: colorArgTypes.$color,
-    iconPadding: spacingArgTypes.$pa,
-    hoverCenterFill: {
-      control: { type: "boolean" },
+    decor: {
+      control: { type: "select" },
+      options: ["hover", "focus", "hover-focus", "none"],
     },
+    border: borderArgTypes.$ba,
+    borderRadius: borderArgTypes.$borderRadius,
+    borderColor: colorArgTypes.$color,
+    hoverBorderRadius: borderArgTypes.$borderRadius,
+    checkedBackground: colorArgTypes.$color,
+    iconPadding: spacingArgTypes.$pa,
   },
   parameters: {
     controls: {
       include: [
-        "defaultColor",
-        "disabledColor",
-        "checkboxSize",
-        "checkboxBorder",
-        "checkboxBorderRadius",
-        "hoverBorderRadius",
-        "iconPadding",
+        "decor",
+        "size",
         "disabled",
-        "hoverCenterFill",
+        "border",
+        "borderRadius",
+        "borderColor",
+        "hoverBorderRadius",
+        "checkedBackground",
+        "iconPadding",
       ],
     },
   },
@@ -76,5 +79,6 @@ export const Default: Story = {
   args: {
     id: "checkbox-test-default",
     value: "a test value",
+    decor: "hover-focus",
   },
 };
