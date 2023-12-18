@@ -2,7 +2,7 @@
 
 exports[`InternalCheckBoxLabel matches snapshot 1`] = `
 <label
-  className="sc-jlZhew sc-cwHptR eFqsWf gGVTek"
+  className="sc-dAlyuH sc-jlZhew iDHxRc jGsLfY"
   data-testid="test-1"
   htmlFor="checkbox-1"
 >

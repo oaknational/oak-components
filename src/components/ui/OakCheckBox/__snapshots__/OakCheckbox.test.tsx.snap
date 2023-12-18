@@ -2,7 +2,7 @@
 
 exports[`OakCheckBox matches snapshot 1`] = `
 <label
-  className="sc-jlZhew sc-cwHptR etnkYY fCdzRU"
+  className="sc-dAlyuH sc-jlZhew hdXiar firWXI"
   disabled={false}
   htmlFor="checkbox-1"
   onMouseEnter={[Function]}
@@ -12,7 +12,7 @@ exports[`OakCheckBox matches snapshot 1`] = `
     className="sc-aXZVg dTLJnG"
   >
     <input
-      className="sc-cPiKLX jpFVPH sc-gFqAkR"
+      className="sc-jEACwC bmsJIH sc-fPXMVe"
       defaultChecked={false}
       disabled={false}
       id="checkbox-1"
@@ -23,10 +23,10 @@ exports[`OakCheckBox matches snapshot 1`] = `
       value="Option 1"
     />
     <div
-      className="sc-aXZVg sc-fPXMVe dvhqmT epCavt"
+      className="sc-aXZVg sc-eldPxv dvhqmT cCzUhO"
     >
       <div
-        className="sc-aXZVg sc-gsFSXq wnZli gpWgiw"
+        className="sc-aXZVg wnZli"
       >
         <img
           alt="tick"

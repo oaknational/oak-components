@@ -5,7 +5,7 @@ exports[`InternalCheckBox matches snapshot 1`] = `
   className="sc-dcJsrY aPspN"
 >
   <input
-    className="sc-aXZVg lbxHic sc-eldPxv"
+    className="sc-aXZVg lbxHic sc-eDPEul"
     id="checkbox-1"
     name="checkbox-1"
     onMouseEnter={[Function]}
@@ -14,10 +14,10 @@ exports[`InternalCheckBox matches snapshot 1`] = `
     value="Option 1"
   />
   <div
-    className="sc-dcJsrY sc-eDPEul fiBLHw bmKjeQ"
+    className="sc-dcJsrY sc-dLMFU fiBLHw bNoilv"
   >
     <div
-      className="sc-dcJsrY sc-dhKdcB hDOZRN iYKIFW"
+      className="sc-dcJsrY hDOZRN"
     >
       <img
         alt="tick"

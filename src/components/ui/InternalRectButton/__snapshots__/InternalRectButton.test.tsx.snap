@@ -2,7 +2,7 @@
 
 exports[`InternalRectButton matches snapshot 1`] = `
 <div
-  className="sc-aXZVg sc-eDPEul cKKnNr hPNaOd button-wrapper"
+  className="sc-aXZVg sc-dLMFU cKKnNr hiGqQW button-wrapper"
 >
   <div
     className="sc-aXZVg gEUKeC grey-shadow"
@@ -11,7 +11,7 @@ exports[`InternalRectButton matches snapshot 1`] = `
     className="sc-aXZVg gEUKeC yellow-shadow"
   />
   <button
-    className="sc-cwHptR sc-dLMFU cQfeRJ iWYkzI internal-button"
+    className="sc-jlZhew sc-cPiKLX jEuXUl jgnbzH internal-button"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -20,7 +20,7 @@ exports[`InternalRectButton matches snapshot 1`] = `
       className="sc-aXZVg sc-gEvEer goWQoj OzInM"
     >
       <div
-        className="sc-aXZVg sc-gsFSXq dTLJnG iRYSeg"
+        className="sc-aXZVg dTLJnG"
       >
         <img
           alt="arrow-right"
