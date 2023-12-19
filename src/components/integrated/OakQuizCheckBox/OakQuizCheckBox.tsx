@@ -23,6 +23,12 @@ const StyledInternalCheckBox = styled(InternalCheckBox)`
     border: ${parseBorder("border-solid-l")};
     border-color: ${parseColor("text-disabled")};
   }
+
+  @media (hover: hover) {
+    &:hover:not(:disabled) {
+      background: ${parseColor("bg-primary")};
+    }
+  }
 `;
 
 const StyledFlexBox = styled(OakFlex)`
@@ -201,11 +207,11 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
         $ba="border-solid-l"
         $borderRadius={"border-radius-m2"}
         $borderColor={isCorrect ? "border-success" : "border-error"}
-      ></OakBox>
+      />
       <OakIcon
         iconName={isCorrect ? "tick" : "cross"}
         $colorFilter={isCorrect ? "icon-success" : "icon-error"}
-      ></OakIcon>
+      />
       {image ? imageContainer : value}
     </OakFlex>
   );

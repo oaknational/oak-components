@@ -22,7 +22,7 @@ exports[`OakQuizCheckBox matches snapshot 1`] = `
           className="sc-aXZVg bUOWba"
         >
           <input
-            className="sc-cPiKLX sc-fPXMVe hmjKFt dlKvPm"
+            className="sc-cPiKLX sc-fPXMVe hmjKFt gWbGHr"
             id="checkbox-1"
             name="checkbox-1"
             onMouseEnter={[Function]}

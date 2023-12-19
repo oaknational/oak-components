@@ -44,7 +44,7 @@ export const WithImage: Story = {
     </OakFlex>
   ),
   args: {
-    id: "checkbox-test-default",
+    id: "checkbox-test-default-1",
     value: "a test value",
     image: (
       <OakImage
@@ -87,7 +87,7 @@ export const WithImageNoDims: Story = {
       />
       <OakQuizCheckBox
         {...args}
-        id="checkbox-test-default-2"
+        id="checkbox-test-default-3"
         value="a test value again"
         image={
           <OakImage
@@ -119,20 +119,20 @@ export const PreChecked: Story = {
     >
       <OakQuizCheckBox
         {...args}
-        id="checkbox-test-default-2"
+        id="checkbox-test-default-4"
         defaultChecked={true}
         value="default checked"
       />
       <OakQuizCheckBox
         {...args}
-        id="checkbox-test-default-3"
+        id="checkbox-test-default-5"
         defaultChecked={true}
         disabled={true}
         value="default checked disabled"
       />
       <OakQuizCheckBox
         {...args}
-        id="checkbox-test-default"
+        id="checkbox-test-default-6"
         value="dynamic default doesn't work past first render"
       />
     </OakFlex>
