@@ -93,14 +93,14 @@ describe("OakQuizCheckBox", () => {
     const { getByAltText } = renderWithTheme(
       <OakQuizCheckBox id="checkbox-1" value="Option 1" isCorrect isFeedback />,
     );
-    expect(getByAltText("tick")).toBeInTheDocument();
+    expect(getByAltText("Correct")).toBeInTheDocument();
   });
 
   it("renders a cross when isCorrect is false and isFeedback is true", () => {
     const { getByAltText } = renderWithTheme(
       <OakQuizCheckBox id="checkbox-1" value="Option 1" isFeedback />,
     );
-    expect(getByAltText("cross")).toBeInTheDocument();
+    expect(getByAltText("Incorrect")).toBeInTheDocument();
   });
 
   it("does not render a checkbox when in feedback mode", () => {

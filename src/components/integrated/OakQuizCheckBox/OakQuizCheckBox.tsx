@@ -119,16 +119,7 @@ const StyledOverlay = styled(OakBox)`
 `;
 
 export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
-  const {
-    id,
-    value,
-    isFeedback,
-    isCorrect,
-    image,
-    disabled,
-    defaultChecked,
-    ...rest
-  } = props;
+  const { id, value, isFeedback, isCorrect, image, disabled, ...rest } = props;
 
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -245,6 +236,7 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
       <OakIcon
         iconName={isCorrect ? "tick" : "cross"}
         $colorFilter={isCorrect ? "icon-success" : "icon-error"}
+        alt={isCorrect ? "Correct" : "Incorrect"}
       />
       {image ? imageContainer : value}
     </OakFlex>

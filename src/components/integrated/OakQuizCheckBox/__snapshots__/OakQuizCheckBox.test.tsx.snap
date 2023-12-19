@@ -6,7 +6,8 @@ exports[`OakQuizCheckBox matches snapshot 1`] = `
     className="sc-aXZVg sc-gEvEer PqAkw dnJeoC"
   >
     <div
-      className="sc-aXZVg sc-gEvEer sc-gFqAkR dmgiEW ksSdnF kkGeQb"
+      className="sc-aXZVg sc-gEvEer sc-gFqAkR ilPKdM ksSdnF gNeVuR"
+      onClick={[Function]}
     >
       <div
         className="sc-aXZVg sc-ikkxIA SmuNI kXIQBz grey-shadow"
