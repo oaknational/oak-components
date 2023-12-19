@@ -1,10 +1,14 @@
 import React, { useRef } from "react";
 
 import {
+  BaseCheckBoxProps,
+  InternalCheckBoxHoverFocus,
+} from "@/components/base/InternalCheckBox/InternalCheckBox";
+import {
   InternalCheckBoxLabel,
   InternalCheckBoxLabelProps,
-} from "@/components/ui/InternalCheckBoxLabel";
-import { InternalCheckBox } from "@/components/ui/InternalCheckBox";
+} from "@/components/base/InternalCheckBoxLabel";
+import { InternalCheckBoxWrapper } from "@/components/base/InternalCheckBoxWrapper";
 import {
   OakAllSpacingToken,
   OakBorderRadiusToken,
@@ -12,13 +16,8 @@ import {
   OakCombinedColorToken,
   OakInnerPaddingToken,
 } from "@/styles";
-import {
-  SubBaseCheckBoxProps,
-  SubStyledCheckBoxDecor,
-} from "@/components/ui/InternalCheckBox/SubStyledCheckBox";
 
-export type OakCheckBoxProps = SubBaseCheckBoxProps & {
-  decor?: SubStyledCheckBoxDecor;
+export type OakCheckBoxProps = BaseCheckBoxProps & {
   checkboxSize?: OakAllSpacingToken;
   checkboxBorder?: OakBorderWidthToken;
   checkboxBorderRadius?: OakBorderRadiusToken;
@@ -40,7 +39,6 @@ export const OakCheckBox = (props: OakCheckBoxProps) => {
     onFocus,
     onBlur,
     onHovered,
-    decor,
     iconPadding = "inner-padding-none",
     hoverBorderRadius = "border-radius-xs",
     checkboxSize = "all-spacing-6",
@@ -80,21 +78,26 @@ export const OakCheckBox = (props: OakCheckBoxProps) => {
       onMouseLeave={handleMouseLeave}
       data-testid={props["data-testid"]}
     >
-      <InternalCheckBox
-        id={id}
-        value={value}
+      <InternalCheckBoxWrapper
         size={checkboxSize}
-        decor={decor}
-        border={checkboxBorder}
-        borderRadius={checkboxBorderRadius}
-        borderColor={currentColor}
-        checkedBackground={checkedBackgroundFill ? currentColor : null}
-        hoverBorderRadius={hoverBorderRadius}
-        onChange={onChange}
-        onFocus={onFocus}
-        onBlur={onBlur}
-        defaultChecked={defaultChecked}
-        disabled={disabled}
+        internalCheckbox={
+          <InternalCheckBoxHoverFocus
+            id={id}
+            value={value}
+            $width={checkboxSize}
+            $height={checkboxSize}
+            $ba={checkboxBorder}
+            $borderRadius={checkboxBorderRadius}
+            $borderColor={currentColor}
+            $checkedBackground={checkedBackgroundFill ? currentColor : null}
+            $hoverBorderRadius={hoverBorderRadius}
+            onChange={onChange}
+            onFocus={onFocus}
+            onBlur={onBlur}
+            defaultChecked={defaultChecked}
+            disabled={disabled}
+          />
+        }
         checkedIcon={checkedIcon}
         iconPadding={iconPadding}
       />

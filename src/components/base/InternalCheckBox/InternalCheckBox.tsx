@@ -12,11 +12,20 @@ import { SpacingStyleProps, spacingStyle } from "@/styles/utils/spacingStyle";
 
 /**
  *
- * Extra decor styles for the checkbox can be created here and then added to SubStyledCheckBoxDecor
+ * These components can be used with InternalCheckBoxWrapper which allows for customisable icons
+ *
+ * Several flavours of checkbox are created here:
+ *  - Default
+ *  - Hover decorations
+ *  - Focus decorations
+ *  - Hover + Focus decorations
+ *
+ * As they are styled components they can be further customised in implementation. Alternatively additional
+ * components can be created here.
  *
  */
 
-export type SubBaseCheckBoxProps = {
+export type BaseCheckBoxProps = {
   id: string;
   disabled?: boolean;
   value: string;
@@ -28,21 +37,46 @@ export type SubBaseCheckBoxProps = {
   "data-testid"?: string;
 };
 
-type StyledCheckBoxProps = SubBaseCheckBoxProps &
+const BaseCheckBox = (props: BaseCheckBoxProps) => {
+  const { onHovered, ...rest } = props;
+
+  const hoverStart = useRef(Date.now());
+
+  const handleMouseEnter = () => {
+    hoverStart.current = Date.now();
+  };
+
+  const handleMouseLeave = () => {
+    const delta = Date.now() - hoverStart.current;
+    if (onHovered) {
+      onHovered(props.value, props.id, delta);
+    }
+  };
+
+  return (
+    <input
+      type="checkbox"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      {...rest}
+      name={props.id}
+    />
+  );
+};
+
+type StyledBaseCheckBoxProps = BaseCheckBoxProps &
   ColorStyleProps &
   SpacingStyleProps &
   BorderStyleProps &
   SizeStyleProps & {
-    $checkedBackground: OakCombinedColorToken | null;
+    $checkedBackground?: OakCombinedColorToken | null;
   };
 
-type HoverProps = {
+type HoverBaseCheckBoxProps = {
   $hoverBorderRadius: OakBorderRadiusToken;
 };
 
-const StyledCheckBox = styled.input.attrs({
-  type: "checkbox",
-})<StyledCheckBoxProps>`
+export const InternalCheckBox = styled(BaseCheckBox)<StyledBaseCheckBoxProps>`
   /* removing default appearance */
   -webkit-appearance: none;
   appearance: none;
@@ -65,15 +99,15 @@ const StyledCheckBox = styled.input.attrs({
   }
 `;
 
-StyledCheckBox.defaultProps = {
+InternalCheckBox.defaultProps = {
   $borderRadius: "border-radius-xs",
   $ba: "border-solid-m",
   $borderColor: "text-primary",
   $checkedBackground: "text-primary",
 };
 
-const StyledCheckBoxHover = styled(StyledCheckBox)<
-  StyledCheckBoxProps & HoverProps
+export const InternalCheckBoxHover = styled(InternalCheckBox)<
+  StyledBaseCheckBoxProps & HoverBaseCheckBoxProps
 >`
   /* @media wrapper is required to prevent hover effect on iOS Safari */
 
@@ -96,7 +130,7 @@ const StyledCheckBoxHover = styled(StyledCheckBox)<
   }
 `;
 
-StyledCheckBoxHover.defaultProps = {
+InternalCheckBoxHover.defaultProps = {
   $hoverBorderRadius: "border-radius-xs",
 };
 
@@ -106,77 +140,14 @@ const focusStyle = css`
   }
 `;
 
-export const SubStyledCheckBoxFocus = styled(
-  StyledCheckBox,
-)<StyledCheckBoxProps>`
+export const InternalCheckBoxFocus = styled(
+  InternalCheckBox,
+)<StyledBaseCheckBoxProps>`
   ${focusStyle}
 `;
 
-export const SubStyledCheckBoxHoverFocus = styled(StyledCheckBoxHover)<
-  StyledCheckBoxProps & HoverProps
+export const InternalCheckBoxHoverFocus = styled(InternalCheckBoxHover)<
+  StyledBaseCheckBoxProps & HoverBaseCheckBoxProps
 >`
   ${focusStyle}
 `;
-
-export type SubStyledCheckBoxDecor = "focus" | "hover" | "hover-focus" | "none";
-
-export type SubStyledCheckBoxProps = {
-  decor?: SubStyledCheckBoxDecor;
-} & StyledCheckBoxProps &
-  HoverProps;
-
-export const SubStyledCheckBox = (props: SubStyledCheckBoxProps) => {
-  const { decor = "none", onHovered, ...rest } = props;
-
-  const hoverStart = useRef(Date.now());
-
-  const handleMouseEnter = () => {
-    hoverStart.current = Date.now();
-  };
-
-  const handleMouseLeave = () => {
-    const delta = Date.now() - hoverStart.current;
-    if (onHovered) {
-      onHovered(props.value, props.id, delta);
-    }
-  };
-
-  switch (decor) {
-    case "focus":
-      return (
-        <SubStyledCheckBoxFocus
-          name={props.id}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          {...rest}
-        />
-      );
-    case "hover":
-      return (
-        <StyledCheckBoxHover
-          name={props.id}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          {...rest}
-        />
-      );
-    case "hover-focus":
-      return (
-        <SubStyledCheckBoxHoverFocus
-          name={props.id}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          {...rest}
-        />
-      );
-    default:
-      return (
-        <StyledCheckBox
-          name={props.id}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          {...rest}
-        />
-      );
-  }
-};

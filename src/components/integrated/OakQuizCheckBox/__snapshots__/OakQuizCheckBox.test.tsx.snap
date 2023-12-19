@@ -6,23 +6,23 @@ exports[`OakQuizCheckBox matches snapshot 1`] = `
     className="sc-aXZVg sc-gEvEer PqAkw dnJeoC"
   >
     <div
-      className="sc-aXZVg sc-gEvEer sc-gFqAkR dmgiEW ksSdnF kMdYEx"
+      className="sc-aXZVg sc-gEvEer sc-fPXMVe dmgiEW ksSdnF eMcybk"
     >
       <div
-        className="sc-aXZVg sc-ikkxIA SmuNI kXIQBz grey-shadow"
+        className="sc-aXZVg sc-gFqAkR SmuNI hHYdLq grey-shadow"
       />
       <div
-        className="sc-aXZVg sc-ikkxIA SmuNI kXIQBz yellow-shadow"
+        className="sc-aXZVg sc-gFqAkR SmuNI hHYdLq yellow-shadow"
       />
       <label
-        className="sc-dAlyuH sc-eldPxv sc-fPXMVe gNoDGX ccIjjF dtDdrS"
+        className="sc-dAlyuH sc-cwHptR sc-jEACwC gNoDGX fCdzRU ksabAH"
         htmlFor="checkbox-1"
       >
         <div
           className="sc-aXZVg bUOWba"
         >
           <input
-            className="sc-jlZhew dqpZDO sc-eDPEul"
+            className="sc-cPiKLX hmjKFt"
             id="checkbox-1"
             name="checkbox-1"
             onMouseEnter={[Function]}
@@ -31,7 +31,7 @@ exports[`OakQuizCheckBox matches snapshot 1`] = `
             value="Option 1"
           />
           <div
-            className="sc-aXZVg sc-dLMFU hvDZPq bNoilv"
+            className="sc-aXZVg sc-jlZhew hvDZPq nsmqb"
           >
             <div
               className="sc-aXZVg gPYGme"

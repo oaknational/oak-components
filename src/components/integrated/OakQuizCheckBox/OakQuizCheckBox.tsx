@@ -2,13 +2,16 @@ import React from "react";
 import styled from "styled-components";
 
 import { OakBox, OakFlex, OakIcon } from "@/components/base";
-import { InternalCheckBox } from "@/components/ui/InternalCheckBox";
-import { InternalCheckBoxLabelHoverDecor } from "@/components/ui/InternalCheckBoxLabel";
+import { InternalCheckBoxWrapper } from "@/components/base/InternalCheckBoxWrapper";
+import { InternalCheckBoxLabelHoverDecor } from "@/components/base/InternalCheckBoxLabel";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseBorder } from "@/styles/helpers/parseBorder";
 import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
-import { SubBaseCheckBoxProps } from "@/components/ui/InternalCheckBox/SubStyledCheckBox";
+import {
+  BaseCheckBoxProps,
+  InternalCheckBox,
+} from "@/components/base/InternalCheckBox/InternalCheckBox";
 
 const StyledFlexBox = styled(OakFlex)`
   @media (hover: hover) {
@@ -83,7 +86,7 @@ const StyledFlexBox = styled(OakFlex)`
 
 `;
 
-export type OakQuizCheckBoxProps = SubBaseCheckBoxProps & {
+export type OakQuizCheckBoxProps = BaseCheckBoxProps & {
   isFeedback?: boolean;
   isCorrect?: boolean;
   image?: React.JSX.Element;
@@ -142,17 +145,9 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
         $font={"body-1"}
         disabled={disabled}
       >
-        <InternalCheckBox
-          id={id}
-          value={value}
-          disabled={disabled}
-          {...rest}
-          border={"border-solid-m"}
-          borderColor="border-neutral"
-          iconPadding="inner-padding-ssx"
-          borderRadius={"border-radius-s"}
+        <InternalCheckBoxWrapper
           size={"all-spacing-7"}
-          checkedBackground={null}
+          iconPadding="inner-padding-ssx"
           checkedIcon={
             <OakBox
               $width="100%"
@@ -167,7 +162,22 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
               />
             </OakBox>
           }
+          internalCheckbox={
+            <InternalCheckBox
+              id={id}
+              value={value}
+              disabled={disabled}
+              {...rest}
+              $width={"all-spacing-7"}
+              $height={"all-spacing-7"}
+              $ba={"border-solid-m"}
+              $borderColor="border-neutral"
+              $borderRadius={"border-radius-s"}
+              $checkedBackground={null}
+            />
+          }
         />
+
         {image ? imageContainer : value}
       </InternalCheckBoxLabelHoverDecor>
     </StyledFlexBox>

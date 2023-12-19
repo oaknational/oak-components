@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InternalCheckBoxWrapper matches snapshot 1`] = `
+[
+  <div
+    className="sc-aXZVg dTLJnG"
+  >
+    <input
+      data-testid="test-input"
+      id="checkbox-1"
+      type="checkbox"
+      value="Option 1"
+    />
+    <div
+      className="sc-aXZVg sc-jlZhew dvhqmT nsmqb"
+    >
+      <div
+        data-testid="test-icon"
+      >
+        Checked
+      </div>
+    </div>
+  </div>,
+  ",",
+]
+`;
