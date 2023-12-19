@@ -2,7 +2,7 @@
 
 exports[`OakImage matches snapshot 1`] = `
 <div
-  className="sc-aXZVg sc-fqkvVR PqAkw fECGkY"
+  className="sc-aXZVg PqAkw"
 >
   <img
     alt="a test image"

@@ -52,9 +52,6 @@ const meta: Meta<typeof OakCheckBox> = {
     iconPadding: spacingArgTypes.$pa,
     defaultColor: colorArgTypes.$color,
     disabledColor: colorArgTypes.$color,
-    hoverCenterFill: {
-      control: { type: "boolean" },
-    },
   },
   parameters: {
     controls: {
@@ -69,7 +66,7 @@ const meta: Meta<typeof OakCheckBox> = {
         "labelGap",
         "labelAlignItems",
         "disabled",
-        "hoverCenterFill",
+        "decor",
       ],
     },
   },

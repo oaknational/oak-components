@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InternalCheckBox matches snapshot 1`] = `
+<input
+  className="sc-aXZVg gPLtAZ"
+  id="checkbox-1"
+  name="checkbox-1"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  type="checkbox"
+  value="Option 1"
+/>
+`;

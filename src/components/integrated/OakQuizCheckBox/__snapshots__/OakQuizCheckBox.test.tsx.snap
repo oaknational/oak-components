@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakQuizCheckBox matches snapshot 1`] = `
+[
+  <div
+    className="sc-aXZVg sc-gEvEer PqAkw dnJeoC"
+  >
+    <div
+      className="sc-aXZVg sc-gEvEer sc-gFqAkR ilPKdM ksSdnF gNeVuR"
+      onClick={[Function]}
+    >
+      <div
+        className="sc-aXZVg sc-ikkxIA SmuNI kXIQBz grey-shadow"
+      />
+      <div
+        className="sc-aXZVg sc-ikkxIA SmuNI kXIQBz yellow-shadow"
+      />
+      <label
+        className="sc-dAlyuH sc-cwHptR sc-jEACwC gNoDGX fCdzRU ksabAH"
+        htmlFor="checkbox-1"
+      >
+        <div
+          className="sc-aXZVg bUOWba"
+        >
+          <input
+            className="sc-cPiKLX sc-fPXMVe hmjKFt gWbGHr"
+            id="checkbox-1"
+            name="checkbox-1"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            type="checkbox"
+            value="Option 1"
+          />
+          <div
+            className="sc-aXZVg sc-jlZhew hvDZPq nsmqb"
+          >
+            <div
+              className="sc-aXZVg gPYGme"
+            >
+              <div
+                className="sc-aXZVg hkPfcm"
+              />
+            </div>
+          </div>
+        </div>
+        Option 1
+      </label>
+    </div>
+  </div>,
+  ",",
+]
+`;
