@@ -1,0 +1,51 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Docs/HowToDesignComponents" />
+
+# How To Design New Components
+
+## Where to put new components ?
+
+This library is built using the [atomic design methodology](https://bradfrost.com/blog/post/atomic-web-design/). This means that components are grouped into folders based on their level of abstraction.
+
+In our case:
+
+* [base](/docs/components-base-readme--docs) = atoms
+* [ui](/docs/components-ui-readme--docs) = molecules
+* [integrated](/docs/components-integrated-readme--docs) = organisms
+
+Read the docs at the head of each folder to understand what components belong there. The decision of where to put a component is not always clear cut, the important thing is to have a rationale for your decision.
+
+## How to name new components ?
+
+Read the [naming conventions](/docs/docs-namingconventions--docs) section of this storybook carefully.
+
+## What is the $ for ?
+The $ prefix is used to denote a styled component prop. This is a convention used by the styled-components library. 
+
+NB. props which are prefixed with $ are not passed to the underlying DOM element / React function component so be careful not to use them for other props.
+
+## Heuristics for Component Design
+
+Not hard rules, rather principles to aim for:
+
+**Fewer props more components**<br/> 
+Implement variations by creating separate components **NOT** through props and logic.
+
+**Only expose props which are variable**<br/>
+If it doesn't need to change it doesn't need to be a prop.
+
+**Employ inheritance and composition for code reuse**<br/>
+Styled components allows for inheritance of style and Typescript allows the extension of prop types. You can also, pass components as children, pass components as props, or return components from functions.
+
+**Follow single responsibility principle**<br/>
+Components should do one thing and do it well. This also applies to files.
+
+**Use what is already there**<br/>
+Make sure you aren't duplicating functionality that already exists. Don't hard code style when utils are available.
+
+**Call things what they are (even when they are long)**<br/>
+Long names are better than ambiguous names.
+
+
+
