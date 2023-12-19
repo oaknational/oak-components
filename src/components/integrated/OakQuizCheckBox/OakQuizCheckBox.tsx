@@ -122,21 +122,21 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
   const { id, value, isFeedback, isCorrect, image, disabled, ...rest } = props;
 
   const inputRef = useRef<HTMLInputElement>(null);
+  const handleContainerClick = () => {
+    inputRef.current?.click();
+  };
 
   const imageContainer = (
     <OakFlex
       $flexDirection="column"
       $minWidth={"all-spacing-20"}
       $gap={"space-between-s"}
+      onClick={handleContainerClick}
     >
       <OakBox>{image}</OakBox>
       {value}
     </OakFlex>
   );
-
-  const handleContainerClick = () => {
-    inputRef.current?.click();
-  };
 
   const inputCheckbox = (
     <StyledFlexBox
