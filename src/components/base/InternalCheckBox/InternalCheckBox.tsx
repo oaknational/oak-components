@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { forwardRef, useRef } from "react";
 import styled, { css } from "styled-components";
 
 import { OakBorderRadiusToken, OakCombinedColorToken } from "@/styles";
@@ -37,32 +37,35 @@ export type BaseCheckBoxProps = {
   "data-testid"?: string;
 };
 
-const BaseCheckBox = (props: BaseCheckBoxProps) => {
-  const { onHovered, ...rest } = props;
+const BaseCheckBox = forwardRef(
+  (props: BaseCheckBoxProps, ref?: React.Ref<HTMLInputElement>) => {
+    const { onHovered, ...rest } = props;
 
-  const hoverStart = useRef(Date.now());
+    const hoverStart = useRef(Date.now());
 
-  const handleMouseEnter = () => {
-    hoverStart.current = Date.now();
-  };
+    const handleMouseEnter = () => {
+      hoverStart.current = Date.now();
+    };
 
-  const handleMouseLeave = () => {
-    const delta = Date.now() - hoverStart.current;
-    if (onHovered) {
-      onHovered(props.value, props.id, delta);
-    }
-  };
+    const handleMouseLeave = () => {
+      const delta = Date.now() - hoverStart.current;
+      if (onHovered) {
+        onHovered(props.value, props.id, delta);
+      }
+    };
 
-  return (
-    <input
-      type="checkbox"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      {...rest}
-      name={props.id}
-    />
-  );
-};
+    return (
+      <input
+        ref={ref}
+        type="checkbox"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        {...rest}
+        name={props.id}
+      />
+    );
+  },
+);
 
 type StyledBaseCheckBoxProps = BaseCheckBoxProps &
   ColorStyleProps &

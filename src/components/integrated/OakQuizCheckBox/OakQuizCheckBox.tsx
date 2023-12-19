@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 
 import { OakBox, OakFlex, OakIcon } from "@/components/base";
@@ -32,9 +32,26 @@ const StyledInternalCheckBox = styled(InternalCheckBox)`
 `;
 
 const StyledFlexBox = styled(OakFlex)`
+  &:has(input:not(:disabled)) {
+    cursor: pointer;
+  }
+
+  &:has(input:disabled) {
+    pointer-events: none;
+    cursor: none;
+  }
+
   @media (hover: hover) {
     &:hover:has(input:not(:disabled)){
       background-color: ${parseColor("bg-decorative1-subdued")};
+    }
+
+    &:hover input:not(:disabled) {
+      background: ${parseColor("bg-primary")};
+    }
+
+    &:hover:has(input:not(:disabled)) ${InternalCheckBoxLabelHoverDecor} {
+      text-decoration: underline;
     }
 
     &:hover:has(
@@ -102,7 +119,18 @@ const StyledOverlay = styled(OakBox)`
 `;
 
 export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
-  const { id, value, isFeedback, isCorrect, image, disabled, ...rest } = props;
+  const {
+    id,
+    value,
+    isFeedback,
+    isCorrect,
+    image,
+    disabled,
+    defaultChecked,
+    ...rest
+  } = props;
+
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const imageContainer = (
     <OakFlex
@@ -115,6 +143,10 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
     </OakFlex>
   );
 
+  const handleContainerClick = () => {
+    inputRef.current?.click();
+  };
+
   const inputCheckbox = (
     <StyledFlexBox
       $pa="inner-padding-l"
@@ -122,6 +154,7 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
       $borderColor={"border-primary"}
       $background={disabled ? "bg-neutral-stronger" : "bg-primary"}
       $flexGrow={1}
+      onClick={handleContainerClick}
     >
       <StyledOverlay
         className="grey-shadow"
@@ -180,6 +213,7 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
               $borderColor="border-neutral"
               $borderRadius={"border-radius-s"}
               $checkedBackground={null}
+              ref={inputRef}
             />
           }
         />

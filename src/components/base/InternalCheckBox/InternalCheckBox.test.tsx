@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createRef } from "react";
 import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
 import { fireEvent } from "@testing-library/react";
@@ -53,6 +53,17 @@ describe("InternalCheckBox", () => {
     getByRole("checkbox").click();
     expect(getByRole("checkbox")).toBeChecked();
     getByRole("checkbox").click();
+    expect(getByRole("checkbox")).not.toBeChecked();
+  });
+
+  it("can be clicked through its ref", () => {
+    const ref = createRef<HTMLInputElement>();
+    const { getByRole } = renderWithTheme(
+      <InternalCheckBox id="checkbox-1" value="Option 1" ref={ref} />,
+    );
+    ref.current?.click();
+    expect(getByRole("checkbox")).toBeChecked();
+    ref.current?.click();
     expect(getByRole("checkbox")).not.toBeChecked();
   });
 
