@@ -6,17 +6,17 @@ exports[`OakQuizCheckBox matches snapshot 1`] = `
     className="sc-aXZVg sc-gEvEer PqAkw dnJeoC"
   >
     <div
-      className="sc-aXZVg sc-gEvEer sc-gFqAkR ilPKdM ksSdnF gNeVuR"
+      className="sc-aXZVg sc-gEvEer sc-ikkxIA ilPKdM ksSdnF kpNdsI"
       onClick={[Function]}
     >
       <div
-        className="sc-aXZVg sc-ikkxIA SmuNI kXIQBz grey-shadow"
+        className="sc-aXZVg sc-dAbbOL SmuNI cyAgdo grey-shadow"
       />
       <div
-        className="sc-aXZVg sc-ikkxIA SmuNI kXIQBz yellow-shadow"
+        className="sc-aXZVg sc-dAbbOL SmuNI cyAgdo yellow-shadow"
       />
       <label
-        className="sc-dAlyuH sc-cwHptR sc-jEACwC gNoDGX fCdzRU ksabAH"
+        className="sc-dAlyuH sc-cwHptR sc-jEACwC sc-gFqAkR gNoDGX fCdzRU ksabAH gerWxj"
         htmlFor="checkbox-1"
       >
         <div
