@@ -13,6 +13,18 @@ import {
   InternalCheckBox,
 } from "@/components/base/InternalCheckBox/InternalCheckBox";
 
+const StyledInternalCheckBox = styled(InternalCheckBox)`
+  &:checked:not(:disabled) {
+    border: ${parseBorder("border-solid-l")};
+    border-color: ${parseColor("border-primary")};
+  }
+
+  &:checked:disabled {
+    border: ${parseBorder("border-solid-l")};
+    border-color: ${parseColor("text-disabled")};
+  }
+`;
+
 const StyledFlexBox = styled(OakFlex)`
   @media (hover: hover) {
     &:hover:has(input:not(:disabled)){
@@ -33,7 +45,6 @@ const StyledFlexBox = styled(OakFlex)`
       border-radius: ${parseBorderRadius("border-radius-m2")};
     }
 
-
     &
       .yellow-shadow:has(
         + ${InternalCheckBoxLabelHoverDecor} input:focus-visible
@@ -47,17 +58,7 @@ const StyledFlexBox = styled(OakFlex)`
       ) {
       box-shadow: ${parseDropShadow("drop-shadow-centered-grey")};
     }
-
-    & input:checked:not(:disabled) {
-      border: ${parseBorder("border-solid-l")};
-      border-color: ${parseColor("border-primary")};
-    }
-
-    & input:checked:disabled {
-      border: ${parseBorder("border-solid-l")};
-      border-color: ${parseColor("text-disabled")};
-    }
-
+  
     &:has(input:checked:not(:disabled))::after {
       content: "";
       top: 0;
@@ -82,8 +83,6 @@ const StyledFlexBox = styled(OakFlex)`
       border-radius: ${parseBorderRadius("border-radius-m2")};
       border-color: ${parseColor("text-disabled")};
   }
-
-
 `;
 
 export type OakQuizCheckBoxProps = BaseCheckBoxProps & {
@@ -137,6 +136,7 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
         $width={"100%"}
         $height={"100%"}
       />
+
       <InternalCheckBoxLabelHoverDecor
         htmlFor={id}
         labelGap={"space-between-s"}
@@ -163,7 +163,7 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
             </OakBox>
           }
           internalCheckbox={
-            <InternalCheckBox
+            <StyledInternalCheckBox
               id={id}
               value={value}
               disabled={disabled}
@@ -177,7 +177,6 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
             />
           }
         />
-
         {image ? imageContainer : value}
       </InternalCheckBoxLabelHoverDecor>
     </StyledFlexBox>
