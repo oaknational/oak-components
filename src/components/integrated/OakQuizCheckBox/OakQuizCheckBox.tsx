@@ -31,6 +31,12 @@ const StyledInternalCheckBox = styled(InternalCheckBox)`
   }
 `;
 
+const StyledInternalCheckBoxLabelHoverDecor = styled(
+  InternalCheckBoxLabelHoverDecor,
+)`
+  pointer-events: none; // To prevent the label from stealing the click event from the input
+`;
+
 const StyledFlexBox = styled(OakFlex)`
   &:has(input:not(:disabled)) {
     cursor: pointer;
@@ -122,8 +128,17 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
   const { id, value, isFeedback, isCorrect, image, disabled, ...rest } = props;
 
   const inputRef = useRef<HTMLInputElement>(null);
-  const handleContainerClick = () => {
-    inputRef.current?.click();
+  const handleContainerClick = (
+    e:
+      | React.MouseEvent<HTMLDivElement>
+      | React.MouseEvent<HTMLInputElement>
+      | React.MouseEvent<HTMLLabelElement>,
+  ) => {
+    const inputId = (e.target as HTMLInputElement).id;
+
+    if (inputId !== id) {
+      inputRef.current?.click();
+    }
   };
 
   const imageContainer = (
@@ -131,7 +146,6 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
       $flexDirection="column"
       $minWidth={"all-spacing-20"}
       $gap={"space-between-s"}
-      onClick={handleContainerClick}
     >
       <OakBox>{image}</OakBox>
       {value}
@@ -167,7 +181,7 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
         $height={"100%"}
       />
 
-      <InternalCheckBoxLabelHoverDecor
+      <StyledInternalCheckBoxLabelHoverDecor
         htmlFor={id}
         labelGap={"space-between-s"}
         labelAlignItems={"center"}
@@ -209,7 +223,7 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
           }
         />
         {image ? imageContainer : value}
-      </InternalCheckBoxLabelHoverDecor>
+      </StyledInternalCheckBoxLabelHoverDecor>
     </StyledFlexBox>
   );
 
