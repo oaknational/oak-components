@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createRef } from "react";
 import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
 import { fireEvent } from "@testing-library/react";
@@ -115,5 +115,16 @@ describe("OakQuizCheckBox", () => {
       <OakQuizCheckBox id="checkbox-1" value="Option 1" defaultChecked />,
     );
     expect(getByRole("checkbox")).toBeChecked();
+  });
+
+  it("can be checked and unchecked using a ref", () => {
+    const ref = createRef<HTMLInputElement>();
+    const { getByRole } = renderWithTheme(
+      <OakQuizCheckBox id="checkbox-1" value="Option 1" innerRef={ref} />,
+    );
+    ref.current?.click();
+    expect(getByRole("checkbox")).toBeChecked();
+    ref.current?.click();
+    expect(getByRole("checkbox")).not.toBeChecked();
   });
 });

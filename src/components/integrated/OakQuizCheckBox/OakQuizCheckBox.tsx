@@ -118,6 +118,7 @@ export type OakQuizCheckBoxProps = BaseCheckBoxProps & {
   isFeedback?: boolean;
   isCorrect?: boolean;
   image?: React.JSX.Element;
+  innerRef?: React.RefObject<HTMLInputElement>;
 };
 
 const StyledOverlay = styled(OakBox)`
@@ -125,9 +126,19 @@ const StyledOverlay = styled(OakBox)`
 `;
 
 export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
-  const { id, value, isFeedback, isCorrect, image, disabled, ...rest } = props;
+  const {
+    id,
+    value,
+    isFeedback,
+    isCorrect,
+    image,
+    disabled,
+    innerRef,
+    ...rest
+  } = props;
 
-  const inputRef = useRef<HTMLInputElement>(null);
+  const defaultRef = useRef<HTMLInputElement>(null);
+  const inputRef = innerRef ?? defaultRef;
   const handleContainerClick = (
     e:
       | React.MouseEvent<HTMLDivElement>
