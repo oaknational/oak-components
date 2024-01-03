@@ -187,7 +187,7 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
   );
 
   const backgroundColor: OakCombinedColorToken =
-    disabled && !isFeedback ? "bg-primary" : "bg-neutral-stronger";
+    disabled && !isFeedback ? "bg-neutral-stronger" : "bg-primary";
 
   const feedbackBgColor: OakCombinedColorToken = isCorrect
     ? "bg-correct"
