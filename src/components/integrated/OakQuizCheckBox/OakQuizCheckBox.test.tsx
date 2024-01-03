@@ -103,11 +103,18 @@ describe("OakQuizCheckBox", () => {
     expect(getByAltText("Incorrect")).toBeInTheDocument();
   });
 
-  it("does not render a checkbox when in feedback mode", () => {
-    const { queryByRole } = renderWithTheme(
-      <OakQuizCheckBox id="checkbox-1" value="Option 1" isFeedback />,
+  it("is disabled when in feedback mode ", () => {
+    const onChange = jest.fn();
+    const { getByRole } = renderWithTheme(
+      <OakQuizCheckBox
+        id="checkbox-1"
+        value="Option 1"
+        isFeedback
+        onChange={onChange}
+      />,
     );
-    expect(queryByRole("checkbox")).not.toBeInTheDocument();
+    getByRole("checkbox").click();
+    expect(onChange).not.toHaveBeenCalled();
   });
 
   it("is initially checked when defaultChecked is true", () => {

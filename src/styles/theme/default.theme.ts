@@ -40,6 +40,8 @@ export const oakDefaultTheme: OakTheme = {
     "bg-decorative5-main": "lemon",
     "bg-decorative5-subdued": "lemon50",
     "bg-decorative5-very-subdued": "lemon30",
+    "bg-correct": "mint50",
+    "bg-incorrect": "red30",
     "icon-main": "white",
     "icon-inverted": "black",
     "icon-disabled": "grey50",

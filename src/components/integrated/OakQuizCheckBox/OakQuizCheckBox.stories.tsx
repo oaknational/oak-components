@@ -147,3 +147,48 @@ export const PreChecked: Story = {
     },
   },
 };
+
+export const Feedback: Story = {
+  render: (args) => (
+    <OakFlex
+      $pa="inner-padding-l"
+      $background={"bg-neutral"}
+      $flexDirection={"column"}
+      $gap={"space-between-m"}
+    >
+      <OakQuizCheckBox
+        {...args}
+        id="checkbox-test-default-7"
+        isFeedback={true}
+        defaultChecked={true}
+        isCorrect={true}
+        value="correctly selected"
+      />
+      <OakQuizCheckBox
+        {...args}
+        id="checkbox-test-default-8"
+        isFeedback={true}
+        defaultChecked={true}
+        disabled={true}
+        value="incorrectly selected"
+      />
+      <OakQuizCheckBox
+        {...args}
+        id="checkbox-test-default-9"
+        isFeedback={true}
+        isCorrect={true}
+        value="correctly not selected"
+      />
+      <OakQuizCheckBox
+        {...args}
+        id="checkbox-test-default-10"
+        isFeedback={true}
+        value="incorrectly not selected"
+      />
+    </OakFlex>
+  ),
+  args: {},
+  parameters: {
+    controls: {},
+  },
+};

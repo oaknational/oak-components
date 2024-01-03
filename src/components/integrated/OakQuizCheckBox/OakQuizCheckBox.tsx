@@ -1,17 +1,18 @@
 import React, { useRef } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-import { OakBox, OakFlex, OakIcon } from "@/components/base";
+import { OakBox, OakFlex, OakFlexProps, OakIcon } from "@/components/base";
 import { InternalCheckBoxWrapper } from "@/components/base/InternalCheckBoxWrapper";
 import { InternalCheckBoxLabelHoverDecor } from "@/components/base/InternalCheckBoxLabel";
-import { parseColor } from "@/styles/helpers/parseColor";
-import { parseBorder } from "@/styles/helpers/parseBorder";
-import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
-import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import {
   BaseCheckBoxProps,
   InternalCheckBox,
 } from "@/components/base/InternalCheckBox/InternalCheckBox";
+import { parseColor } from "@/styles/helpers/parseColor";
+import { parseBorder } from "@/styles/helpers/parseBorder";
+import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
+import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
+import { OakCombinedColorToken } from "@/styles";
 
 const StyledInternalCheckBox = styled(InternalCheckBox)`
   &:checked:not(:disabled) {
@@ -37,7 +38,12 @@ const StyledInternalCheckBoxLabelHoverDecor = styled(
   pointer-events: none; // To prevent the label from stealing the click event from the input
 `;
 
-const StyledFlexBox = styled(OakFlex)`
+type StyledFlexBoxProps = OakFlexProps & {
+  overlayBorderColor?: OakCombinedColorToken;
+  feedbackBgColor?: OakCombinedColorToken;
+};
+
+const StyledFlexBox = styled(OakFlex)<StyledFlexBoxProps>`
   &:has(input:not(:disabled)) {
     cursor: pointer;
   }
@@ -110,8 +116,25 @@ const StyledFlexBox = styled(OakFlex)`
       position: absolute;
       border: ${parseBorder("border-solid-l")};
       border-radius: ${parseBorderRadius("border-radius-m2")};
-      border-color: ${parseColor("text-disabled")};
+      border-color: ${(props) => css`
+        ${parseColor(props.overlayBorderColor ?? "text-disabled")}
+      `};
   }
+
+  &:has(input:disabled:not(:checked)) {
+     ${(props) =>
+       props.feedbackBgColor
+         ? css`
+             background-color: ${props.feedbackBgColor};
+           `
+         : undefined}
+  }
+
+  &:has(input:disabled:checked) {
+    ${(props) => css`
+      background-color: ${parseColor(props.feedbackBgColor)};
+    `};
+ }
 `;
 
 export type OakQuizCheckBoxProps = BaseCheckBoxProps & {
@@ -163,14 +186,25 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
     </OakFlex>
   );
 
+  const backgroundColor: OakCombinedColorToken =
+    disabled && !isFeedback ? "bg-primary" : "bg-neutral-stronger";
+
+  const feedbackBgColor: OakCombinedColorToken = isCorrect
+    ? "bg-correct"
+    : "bg-incorrect";
+
+  const feedbackBorderColor = isCorrect ? "border-success" : "border-error";
+
   const inputCheckbox = (
     <StyledFlexBox
       $pa="inner-padding-l"
       $borderRadius={"border-radius-m2"}
       $borderColor={"border-primary"}
-      $background={disabled ? "bg-neutral-stronger" : "bg-primary"}
+      $background={backgroundColor}
       $flexGrow={1}
       onClick={handleContainerClick}
+      overlayBorderColor={isFeedback ? feedbackBorderColor : undefined}
+      feedbackBgColor={isFeedback ? feedbackBgColor : undefined}
     >
       <StyledOverlay
         className="grey-shadow"
@@ -196,7 +230,7 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
         htmlFor={id}
         labelGap={"space-between-s"}
         labelAlignItems={"center"}
-        $color={disabled ? "text-disabled" : "text-primary"}
+        $color={disabled || isFeedback ? "text-disabled" : "text-primary"}
         $font={"body-1"}
         disabled={disabled}
       >
@@ -207,7 +241,9 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
             <OakBox
               $width="100%"
               $height="100%"
-              $background={disabled ? "text-disabled" : "text-primary"}
+              $background={
+                disabled || isFeedback ? "text-disabled" : "text-primary"
+              }
             >
               <OakBox
                 $ba={"border-solid-m"}
@@ -221,7 +257,7 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
             <StyledInternalCheckBox
               id={id}
               value={value}
-              disabled={disabled}
+              disabled={disabled || isFeedback}
               {...rest}
               $width={"all-spacing-7"}
               $height={"all-spacing-7"}
@@ -235,41 +271,25 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
         />
         {image ? imageContainer : value}
       </StyledInternalCheckBoxLabelHoverDecor>
+      {isFeedback && (
+        <OakFlex
+          className="feedbackIconWrapper"
+          $flexGrow={1}
+          $justifyContent={"flex-end"}
+        >
+          <OakIcon
+            iconName={isCorrect ? "tick" : "cross"}
+            $colorFilter={isCorrect ? "icon-success" : "icon-error"}
+            alt={isCorrect ? "Correct" : "Incorrect"}
+          />
+        </OakFlex>
+      )}
     </StyledFlexBox>
-  );
-
-  const feedbackCheckbox = (
-    <OakFlex
-      $pa="inner-padding-l"
-      $background={"bg-primary"}
-      $flexGrow={1}
-      $gap={"space-between-s"}
-      $borderRadius={"border-radius-m2"}
-      $alignItems={"center"}
-      $font={"body-1"}
-    >
-      <OakBox
-        $position="absolute"
-        $top="all-spacing-0"
-        $left="all-spacing-0"
-        $width="100%"
-        $height="100%"
-        $ba="border-solid-l"
-        $borderRadius={"border-radius-m2"}
-        $borderColor={isCorrect ? "border-success" : "border-error"}
-      />
-      <OakIcon
-        iconName={isCorrect ? "tick" : "cross"}
-        $colorFilter={isCorrect ? "icon-success" : "icon-error"}
-        alt={isCorrect ? "Correct" : "Incorrect"}
-      />
-      {image ? imageContainer : value}
-    </OakFlex>
   );
 
   return (
     <OakFlex $width={"100%"} $position={"relative"}>
-      {isFeedback ? feedbackCheckbox : inputCheckbox}
+      {inputCheckbox}
     </OakFlex>
   );
 };
