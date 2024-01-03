@@ -169,7 +169,6 @@ export const Feedback: Story = {
         id="checkbox-test-default-8"
         isFeedback={true}
         defaultChecked={true}
-        disabled={true}
         value="incorrectly selected"
       />
       <OakQuizCheckBox

@@ -230,7 +230,7 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
         htmlFor={id}
         labelGap={"space-between-s"}
         labelAlignItems={"center"}
-        $color={disabled || isFeedback ? "text-disabled" : "text-primary"}
+        $color={disabled && !isFeedback ? "text-disabled" : "text-primary"}
         $font={"body-1"}
         disabled={disabled}
       >
