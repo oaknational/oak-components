@@ -10,9 +10,11 @@ TODO: Instructions for how to add Oak Components to a React App
 
 ## Install for development
 
-1. run `nvm use`
-2. run `npm install`
-3. To view the storybook run `npm run storybook`
+1. Copy the example env config `cp .env.example .env`
+2. Ask a colleague for the values to populate `.env`
+3. run `nvm use`
+4. run `npm install`
+5. To view the storybook run `npm run storybook`
 
 ## Structure
 
