@@ -51,6 +51,9 @@ export type OakTextInputProps = Pick<
     "data-testid"?: string;
     placeholder?: string;
     onChange?: ChangeEventHandler<HTMLInputElement>;
+    validity?: "valid" | "invalid";
+    $validBorderColor?: OakCombinedColorToken;
+    $invalidBorderColor?: OakCombinedColorToken;
   };
 
 const StyledTextInputWrapper = styled(OakFlex)<StyledTextInputWrapperProps>`
@@ -97,8 +100,25 @@ export const OakTextInput = ({
   $color = "text-primary",
   $disabledColor = "text-disabled",
   $readOnlyColor = "text-subdued",
+  validity,
+  $validBorderColor = "border-success",
+  $invalidBorderColor = "border-error",
   ...props
 }: OakTextInputProps) => {
+  let borderColor: OakCombinedColorToken;
+
+  switch (validity) {
+    case "valid":
+      borderColor = $validBorderColor;
+      break;
+    case "invalid":
+      borderColor = $invalidBorderColor;
+      break;
+    default:
+      borderColor = $borderColor;
+      break;
+  }
+
   return (
     <StyledTextInputWrapper
       $width="fit-content"
@@ -106,7 +126,7 @@ export const OakTextInput = ({
       $borderStyle="solid"
       $borderRadius="border-radius-s"
       $ba="border-solid-m"
-      $borderColor={$borderColor}
+      $borderColor={borderColor}
       $focusRingDropShadows={$focusRingDropShadows}
       $background={$background}
       $hoverBackground={$hoverBackground}

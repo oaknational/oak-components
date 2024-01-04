@@ -48,3 +48,15 @@ export const ReadOnly: Story = {
     <OakTextInput {...args} readOnly value="A fine text value" />
   ),
 };
+
+export const Valid: Story = {
+  render: (args) => (
+    <OakTextInput {...args} validity="valid" value="A fine text value" />
+  ),
+};
+
+export const Invalid: Story = {
+  render: (args) => (
+    <OakTextInput {...args} validity="invalid" value="A fine text value" />
+  ),
+};
