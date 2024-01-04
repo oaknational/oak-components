@@ -6,7 +6,7 @@ exports[`OakQuizCheckBox matches snapshot 1`] = `
     className="sc-aXZVg sc-gEvEer PqAkw dnJeoC"
   >
     <div
-      className="sc-aXZVg sc-gEvEer sc-ikkxIA ilPKdM ksSdnF kpNdsI"
+      className="sc-aXZVg sc-gEvEer sc-ikkxIA ilPKdM ksSdnF fQHFKu"
       onClick={[Function]}
     >
       <div
@@ -24,6 +24,7 @@ exports[`OakQuizCheckBox matches snapshot 1`] = `
         >
           <input
             className="sc-cPiKLX sc-fPXMVe hmjKFt gWbGHr"
+            disabled={false}
             id="checkbox-1"
             name="checkbox-1"
             onMouseEnter={[Function]}

@@ -106,6 +106,8 @@ export const oakUiRoleTokens = [
   "bg-decorative5-main",
   "bg-decorative5-subdued",
   "bg-decorative5-very-subdued",
+  "bg-correct",
+  "bg-incorrect",
   "icon-main",
   "icon-inverted",
   "icon-disabled",
