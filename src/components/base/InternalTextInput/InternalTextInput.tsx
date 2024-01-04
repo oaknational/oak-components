@@ -33,6 +33,7 @@ const StyledInput = styled.input`
   font-family: inherit;
   background: transparent;
   outline: none;
+  color: inherit;
 
   @media (max-width: ${getBreakpoint("small")}px) {
     /* iOS zooms in on inputs with font sizes <16px on mobile */
@@ -68,7 +69,7 @@ export type InternalTextInputProps = StyledInputProps & {
  * An unstyled input to be used as a basis for UI input components.
  * Supports all the props of a regular `HTMLInputElement`
  *
- * The CSS `outline` is disabled so a focus ring must be applied by the consuming component.
+ * 🚨 The CSS `outline` is disabled so a focus ring must be applied by the consuming component.
  *
  * The following callbacks are available for tracking focus events:
  *

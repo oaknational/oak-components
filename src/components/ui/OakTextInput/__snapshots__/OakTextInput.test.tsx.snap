@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakTextInput matches snapshot 1`] = `
+[
+  <div
+    className="sc-gEvEer sc-eqUAAy sc-cwHptR jLJXtS fLZnXM jWXwGR"
+  >
+    <input
+      className="sc-aXZVg cWXowl"
+      defaultValue="A nice text value"
+      onFocus={[Function]}
+      type="text"
+    />
+  </div>,
+  ",",
+]
+`;
