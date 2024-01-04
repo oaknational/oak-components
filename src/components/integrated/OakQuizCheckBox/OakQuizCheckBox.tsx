@@ -138,8 +138,7 @@ const StyledFlexBox = styled(OakFlex)<StyledFlexBoxProps>`
 `;
 
 export type OakQuizCheckBoxProps = BaseCheckBoxProps & {
-  isFeedback?: boolean;
-  isCorrect?: boolean;
+  feedback?: "correct" | "incorrect" | null;
   image?: React.JSX.Element;
   innerRef?: React.RefObject<HTMLInputElement>;
 };
@@ -149,16 +148,10 @@ const StyledOverlay = styled(OakBox)`
 `;
 
 export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
-  const {
-    id,
-    value,
-    isFeedback,
-    isCorrect,
-    image,
-    disabled,
-    innerRef,
-    ...rest
-  } = props;
+  const { id, value, feedback, image, disabled, innerRef, ...rest } = props;
+
+  const isFeedback = !!feedback;
+  const isCorrect = feedback === "correct";
 
   const defaultRef = useRef<HTMLInputElement>(null);
   const inputRef = innerRef ?? defaultRef;

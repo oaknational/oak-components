@@ -91,14 +91,18 @@ describe("OakQuizCheckBox", () => {
 
   it("renders a tick when isCorrect is true and isFeedback is true", () => {
     const { getByAltText } = renderWithTheme(
-      <OakQuizCheckBox id="checkbox-1" value="Option 1" isCorrect isFeedback />,
+      <OakQuizCheckBox id="checkbox-1" value="Option 1" feedback={"correct"} />,
     );
     expect(getByAltText("Correct")).toBeInTheDocument();
   });
 
   it("renders a cross when isCorrect is false and isFeedback is true", () => {
     const { getByAltText } = renderWithTheme(
-      <OakQuizCheckBox id="checkbox-1" value="Option 1" isFeedback />,
+      <OakQuizCheckBox
+        id="checkbox-1"
+        value="Option 1"
+        feedback={"incorrect"}
+      />,
     );
     expect(getByAltText("Incorrect")).toBeInTheDocument();
   });
@@ -109,7 +113,7 @@ describe("OakQuizCheckBox", () => {
       <OakQuizCheckBox
         id="checkbox-1"
         value="Option 1"
-        isFeedback
+        feedback={"incorrect"}
         onChange={onChange}
       />,
     );

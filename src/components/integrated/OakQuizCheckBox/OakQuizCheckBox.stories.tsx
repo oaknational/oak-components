@@ -9,10 +9,15 @@ const meta: Meta<typeof OakQuizCheckBox> = {
   component: OakQuizCheckBox,
   tags: ["autodocs"],
   title: "components/integrated/OakQuizCheckBox",
-  argTypes: {},
+  argTypes: {
+    feedback: {
+      options: ["correct", "incorrect", null],
+      control: { type: "select" },
+    },
+  },
   parameters: {
     controls: {
-      include: ["isFeedback", "isCorrect", "disabled", "defaultChecked"],
+      include: ["feedback", "disabled", "defaultChecked"],
     },
   },
 };
@@ -32,7 +37,7 @@ export const Default: Story = {
   },
   parameters: {
     controls: {
-      include: ["isFeedback", "isCorrect", "disabled", "defaultChecked"],
+      include: ["disabled", "defaultChecked", "feedback"],
     },
   },
 };
@@ -58,7 +63,7 @@ export const WithImage: Story = {
   },
   parameters: {
     controls: {
-      include: ["isFeedback", "isCorrect", "disabled"],
+      include: ["disabled", "feedback"],
     },
   },
 };
@@ -104,7 +109,7 @@ export const WithImageNoDims: Story = {
   args: {},
   parameters: {
     controls: {
-      include: ["isFeedback", "isCorrect", "disabled"],
+      include: ["disabled", "feedback"],
     },
   },
 };
@@ -159,35 +164,35 @@ export const Feedback: Story = {
       <OakQuizCheckBox
         {...args}
         id="checkbox-test-default-7"
-        isFeedback={true}
         defaultChecked={true}
-        isCorrect={true}
+        feedback={"correct"}
         value="correctly selected"
       />
       <OakQuizCheckBox
         {...args}
         id="checkbox-test-default-8"
-        isFeedback={true}
         defaultChecked={true}
+        feedback={"incorrect"}
         value="incorrectly selected"
       />
       <OakQuizCheckBox
         {...args}
         id="checkbox-test-default-9"
-        isFeedback={true}
-        isCorrect={true}
+        feedback={"correct"}
         value="correctly not selected"
       />
       <OakQuizCheckBox
         {...args}
         id="checkbox-test-default-10"
-        isFeedback={true}
+        feedback={"incorrect"}
         value="incorrectly not selected"
       />
     </OakFlex>
   ),
   args: {},
   parameters: {
-    controls: {},
+    controls: {
+      include: [],
+    },
   },
 };
