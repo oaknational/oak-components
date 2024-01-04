@@ -69,7 +69,6 @@ export const RemoteImage: Story = (args: OakImageProps) => (
 
 RemoteImage.args = {
   alt: "Image of a cat",
-  //src: `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336494/samples/animals/cat.jpg`,
   $height: "all-spacing-16",
 };
 
