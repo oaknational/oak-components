@@ -6,7 +6,7 @@ import {
   InternalTextInput,
   InternalTextInputProps,
 } from "@/components/base/InternalTextInput";
-import { OakFlex } from "@/components/base";
+import { OakFlex, OakIcon, OakIconName } from "@/components/base";
 import { OakCombinedColorToken, OakDropShadowToken } from "@/styles";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 
@@ -30,11 +30,11 @@ export type OakTextInputProps = Pick<
     id?: string;
     type?: "text" | "password" | "number" | "email" | "tel";
     /**
-     * Disables input updating the appearance accordingly.
+     * Disables user input and updates the appearance accordingly.
      */
     disabled?: boolean;
     /**
-     * Marks the input as read-only. Preventing the user from changing the value.
+     * Makes the input read-only. Preventing the user from changing the value.
      */
     readOnly?: boolean;
     /**
@@ -51,13 +51,24 @@ export type OakTextInputProps = Pick<
     "data-testid"?: string;
     placeholder?: string;
     onChange?: ChangeEventHandler<HTMLInputElement>;
+    /**
+     * Alters the appearance of the input field to indicate whether the input is valid or invalid.
+     */
     validity?: "valid" | "invalid";
+    $iconColor?: OakCombinedColorToken;
     $validBorderColor?: OakCombinedColorToken;
     $invalidBorderColor?: OakCombinedColorToken;
+    $validIconColor?: OakCombinedColorToken;
+    $invalidIconColor?: OakCombinedColorToken;
+    startEnhancerIconName?: OakIconName;
+    endEnhancerIconName?: OakIconName;
   };
 
 const StyledTextInputWrapper = styled(OakFlex)<StyledTextInputWrapperProps>`
-  &:focus-within:not(:has(:disabled, :read-only)) {
+  cursor: default;
+
+  &:focus-within:not(:has(input:disabled, input:read-only)) {
+    cursor: text;
     box-shadow: ${(props) =>
       props.$focusRingDropShadows
         .map((dropShadow) => parseDropShadow(dropShadow))
@@ -67,17 +78,18 @@ const StyledTextInputWrapper = styled(OakFlex)<StyledTextInputWrapperProps>`
   background: ${(props) => parseColor(props.$background)};
 
   @media (hover: hover) {
-    &:hover:not(:focus-within, :has(:read-only)) {
+    &:hover:not(:focus-within, :has(input:read-only)) {
+      cursor: text;
       background: ${(props) => parseColor(props.$hoverBackground)};
     }
   }
 
-  &:has(:read-only) {
+  &:has(input:read-only) {
     border-color: ${(props) => parseColor(props.$readOnlyBorderColor)};
     color: ${(props) => parseColor(props.$readOnlyColor)};
   }
 
-  &:has(:disabled) {
+  &:has(input:disabled) {
     background: ${(props) => parseColor(props.$disabledBackgroundColor)};
     color: ${(props) => parseColor(props.$disabledColor)};
   }
@@ -101,21 +113,30 @@ export const OakTextInput = ({
   $disabledColor = "text-disabled",
   $readOnlyColor = "text-subdued",
   validity,
+  $iconColor = "icon-inverted",
   $validBorderColor = "border-success",
   $invalidBorderColor = "border-error",
+  $validIconColor = "icon-success",
+  $invalidIconColor = "border-error",
+  startEnhancerIconName,
+  endEnhancerIconName,
   ...props
 }: OakTextInputProps) => {
   let borderColor: OakCombinedColorToken;
+  let iconColor: OakCombinedColorToken;
 
   switch (validity) {
     case "valid":
       borderColor = $validBorderColor;
+      iconColor = $validIconColor;
       break;
     case "invalid":
       borderColor = $invalidBorderColor;
+      iconColor = $invalidIconColor;
       break;
     default:
       borderColor = $borderColor;
+      iconColor = $iconColor;
       break;
   }
 
@@ -135,13 +156,34 @@ export const OakTextInput = ({
       $disabledColor={$disabledColor}
       $readOnlyColor={$readOnlyColor}
       $color={$color}
+      $alignItems="center"
+      $position="relative"
+      $gap="space-between-s"
+      $ph="inner-padding-s"
+      onClick={(event) => {
+        event.currentTarget.querySelector("input")?.focus();
+      }}
     >
+      {startEnhancerIconName && (
+        <OakIcon
+          iconName={startEnhancerIconName}
+          $colorFilter={iconColor}
+          $pointerEvents="none"
+        />
+      )}
       <InternalTextInput
         type={type}
         {...props}
-        $pa="inner-padding-l"
+        $pv="inner-padding-l"
         $height="all-spacing-12"
       />
+      {endEnhancerIconName && (
+        <OakIcon
+          iconName={endEnhancerIconName}
+          $colorFilter={iconColor}
+          $pointerEvents="none"
+        />
+      )}
     </StyledTextInputWrapper>
   );
 };

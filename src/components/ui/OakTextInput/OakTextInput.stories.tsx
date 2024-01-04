@@ -25,6 +25,26 @@ export const Default: Story = {
   render: (args) => <OakTextInput {...args} />,
 };
 
+export const WithStartEnhancer: Story = {
+  render: (args) => (
+    <OakTextInput
+      {...args}
+      value="A fine text value"
+      startEnhancerIconName="search"
+    />
+  ),
+};
+
+export const WithEndEnhancer: Story = {
+  render: (args) => (
+    <OakTextInput
+      {...args}
+      value="A fine text value"
+      endEnhancerIconName="search"
+    />
+  ),
+};
+
 export const WithStyling: Story = {
   render: (args) => <OakTextInput {...args} />,
   args: {
@@ -58,5 +78,27 @@ export const Valid: Story = {
 export const Invalid: Story = {
   render: (args) => (
     <OakTextInput {...args} validity="invalid" value="A fine text value" />
+  ),
+};
+
+export const ValidWithStartEnhancer: Story = {
+  render: (args) => (
+    <OakTextInput
+      {...args}
+      validity="valid"
+      value="A fine text value"
+      startEnhancerIconName="tick"
+    />
+  ),
+};
+
+export const InvalidWithEndEnhancer: Story = {
+  render: (args) => (
+    <OakTextInput
+      {...args}
+      validity="invalid"
+      value="A fine text value"
+      endEnhancerIconName="cross"
+    />
   ),
 };
