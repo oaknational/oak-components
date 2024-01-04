@@ -3,6 +3,7 @@ import { Meta, StoryObj } from "@storybook/react";
 
 // @ts-expect-error:  this is an image
 import testPic from "../../../../assets/oak-national-academy-logo-512.png";
+import { OakFlex } from "../OakFlex";
 
 import { OakImage, OakImageProps } from "./OakImage";
 
@@ -52,12 +53,23 @@ LocalImage.args = {
 };
 
 export const RemoteImage: Story = (args: OakImageProps) => (
-  <OakImage {...args} />
+  <OakFlex $flexDirection="column" $gap="space-between-s">
+    <OakImage
+      {...args}
+      src={`https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336494/samples/animals/cat.jpg`}
+    />
+    <OakImage
+      {...args}
+      src={
+        "https://oaknationalacademy-res.cloudinary.com/image/upload/v1687374653/Trees.jpg"
+      }
+    />
+  </OakFlex>
 );
 
 RemoteImage.args = {
   alt: "Image of a cat",
-  src: `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336494/samples/animals/cat.jpg`,
+  //src: `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336494/samples/animals/cat.jpg`,
   $height: "all-spacing-16",
 };
 

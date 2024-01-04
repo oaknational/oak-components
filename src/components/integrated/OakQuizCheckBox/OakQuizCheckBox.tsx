@@ -269,6 +269,8 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
           className="feedbackIconWrapper"
           $flexGrow={1}
           $justifyContent={"flex-end"}
+          $alignItems={"flex-end"}
+          $height={"100%"}
         >
           <OakIcon
             iconName={isCorrect ? "tick" : "cross"}
