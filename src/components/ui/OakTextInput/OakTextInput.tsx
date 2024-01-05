@@ -52,13 +52,15 @@ export type OakTextInputProps = {
    */
   validity?: "valid" | "invalid";
   /**
-   * Displays an icon at the start of the input.
+   * Adds an icon to the input
+   *
+   * Defaults to the start of the input
    */
-  startEnhancerIconName?: OakIconName;
+  iconName?: OakIconName;
   /**
-   * Displays an icon at the end of the input.
+   * Position the icon at the end of the input
    */
-  endEnhancerIconName?: OakIconName;
+  isTrailingIcon?: boolean;
   iconColor?: OakCombinedColorToken;
   validBorderColor?: OakCombinedColorToken;
   invalidBorderColor?: OakCombinedColorToken;
@@ -131,8 +133,8 @@ export const OakTextInput = ({
   invalidBorderColor = "border-error",
   validIconColor = "icon-success",
   invalidIconColor = "border-error",
-  startEnhancerIconName,
-  endEnhancerIconName,
+  iconName,
+  isTrailingIcon = false,
   width,
   maxWidth,
   ...props
@@ -183,9 +185,9 @@ export const OakTextInput = ({
         event.currentTarget.querySelector("input")?.focus();
       }}
     >
-      {startEnhancerIconName && (
+      {!isTrailingIcon && iconName && (
         <OakIcon
-          iconName={startEnhancerIconName}
+          iconName={iconName}
           $colorFilter={finalIconColor}
           $pointerEvents="none"
         />
@@ -198,9 +200,9 @@ export const OakTextInput = ({
         $pv="inner-padding-l"
         $height="all-spacing-12"
       />
-      {endEnhancerIconName && (
+      {isTrailingIcon && iconName && (
         <OakIcon
-          iconName={endEnhancerIconName}
+          iconName={iconName}
           $colorFilter={finalIconColor}
           $pointerEvents="none"
         />

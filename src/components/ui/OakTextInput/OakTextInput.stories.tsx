@@ -21,8 +21,8 @@ const meta: Meta<typeof OakTextInput> = {
         "disabled",
         "readOnly",
         "width",
-        "endEnhancerIconName",
-        "startEnhancerIconName",
+        "iconName",
+        "isTrailingIcon",
       ],
     },
   },
@@ -38,23 +38,15 @@ export const Default: Story = {
   render: (args) => <OakTextInput {...args} />,
 };
 
-export const WithStartEnhancer: Story = {
+export const WithIcon: Story = {
   render: (args) => (
-    <OakTextInput
-      {...args}
-      value="A fine text value"
-      startEnhancerIconName="search"
-    />
+    <OakTextInput {...args} value="A fine text value" iconName="search" />
   ),
 };
 
-export const WithEndEnhancer: Story = {
+export const WithTrailingIcon: Story = {
   render: (args) => (
-    <OakTextInput
-      {...args}
-      value="A fine text value"
-      endEnhancerIconName="search"
-    />
+    <OakTextInput {...args} value="A fine text value" iconName="search" />
   ),
 };
 
@@ -86,44 +78,41 @@ export const Invalid: Story = {
   render: () => <OakTextInput validity="invalid" value="A fine text value" />,
 };
 
-export const ValidWithStartEnhancer: Story = {
+export const ValidWithIcon: Story = {
   render: () => (
-    <OakTextInput
-      validity="valid"
-      value="A fine text value"
-      startEnhancerIconName="tick"
-    />
+    <OakTextInput validity="valid" value="A fine text value" iconName="tick" />
   ),
 };
 
-export const InvalidWithEndEnhancer: Story = {
+export const InvalidWithIcon: Story = {
   render: () => (
     <OakTextInput
       validity="invalid"
       value="A fine text value"
-      endEnhancerIconName="cross"
+      iconName="cross"
     />
   ),
 };
 
-export const ReadOnlyValidWithStartEnhancer: Story = {
+export const ReadOnlyValidWithIcon: Story = {
   render: () => (
     <OakTextInput
       validity="valid"
       value="A fine text value"
-      startEnhancerIconName="tick"
+      iconName="tick"
       readOnly
     />
   ),
 };
 
-export const ReadOnlyInvalidWithEndEnhancer: Story = {
+export const ReadOnlyInvalidTrailingIcon: Story = {
   render: (args) => (
     <OakTextInput
       {...args}
       validity="invalid"
       value="A fine text value"
-      endEnhancerIconName="cross"
+      iconName="cross"
+      isTrailingIcon
       readOnly
     />
   ),
