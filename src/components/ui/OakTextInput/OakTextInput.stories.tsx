@@ -58,33 +58,24 @@ export const WithStyling: Story = {
 };
 
 export const Disabled: Story = {
-  render: (args) => (
-    <OakTextInput {...args} disabled value="A fine text value" />
-  ),
+  render: () => <OakTextInput disabled value="A fine text value" />,
 };
 
 export const ReadOnly: Story = {
-  render: (args) => (
-    <OakTextInput {...args} readOnly value="A fine text value" />
-  ),
+  render: () => <OakTextInput readOnly value="A fine text value" />,
 };
 
 export const Valid: Story = {
-  render: (args) => (
-    <OakTextInput {...args} validity="valid" value="A fine text value" />
-  ),
+  render: () => <OakTextInput validity="valid" value="A fine text value" />,
 };
 
 export const Invalid: Story = {
-  render: (args) => (
-    <OakTextInput {...args} validity="invalid" value="A fine text value" />
-  ),
+  render: () => <OakTextInput validity="invalid" value="A fine text value" />,
 };
 
 export const ValidWithStartEnhancer: Story = {
-  render: (args) => (
+  render: () => (
     <OakTextInput
-      {...args}
       validity="valid"
       value="A fine text value"
       startEnhancerIconName="tick"
@@ -93,12 +84,34 @@ export const ValidWithStartEnhancer: Story = {
 };
 
 export const InvalidWithEndEnhancer: Story = {
+  render: () => (
+    <OakTextInput
+      validity="invalid"
+      value="A fine text value"
+      endEnhancerIconName="cross"
+    />
+  ),
+};
+
+export const ReadOnlyValidWithStartEnhancer: Story = {
+  render: () => (
+    <OakTextInput
+      validity="valid"
+      value="A fine text value"
+      startEnhancerIconName="tick"
+      readOnly
+    />
+  ),
+};
+
+export const ReadOnlyInvalidWithEndEnhancer: Story = {
   render: (args) => (
     <OakTextInput
       {...args}
       validity="invalid"
       value="A fine text value"
       endEnhancerIconName="cross"
+      readOnly
     />
   ),
 };

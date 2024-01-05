@@ -124,19 +124,23 @@ export const OakTextInput = ({
 }: OakTextInputProps) => {
   let borderColor: OakCombinedColorToken;
   let iconColor: OakCombinedColorToken;
+  let readOnlyBorderColor: OakCombinedColorToken;
 
   switch (validity) {
     case "valid":
       borderColor = $validBorderColor;
       iconColor = $validIconColor;
+      readOnlyBorderColor = $validBorderColor;
       break;
     case "invalid":
       borderColor = $invalidBorderColor;
       iconColor = $invalidIconColor;
+      readOnlyBorderColor = $invalidBorderColor;
       break;
     default:
       borderColor = $borderColor;
       iconColor = $iconColor;
+      readOnlyBorderColor = $readOnlyBorderColor;
       break;
   }
 
@@ -152,7 +156,7 @@ export const OakTextInput = ({
       $background={$background}
       $hoverBackground={$hoverBackground}
       $disabledBackgroundColor={$disabledBackgroundColor}
-      $readOnlyBorderColor={$readOnlyBorderColor}
+      $readOnlyBorderColor={readOnlyBorderColor}
       $disabledColor={$disabledColor}
       $readOnlyColor={$readOnlyColor}
       $color={$color}
