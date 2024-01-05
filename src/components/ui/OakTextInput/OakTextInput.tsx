@@ -84,7 +84,7 @@ const StyledTextInputWrapper = styled(OakFlex)<StyledTextInputWrapperProps>`
     cursor: text;
   }
 
-  &:focus-within:not(:has(input:disabled, input:read-only)) {
+  &:focus-within {
     box-shadow: ${(props) =>
       props.$focusRingDropShadows
         .map((dropShadow) => parseDropShadow(dropShadow))
@@ -94,7 +94,7 @@ const StyledTextInputWrapper = styled(OakFlex)<StyledTextInputWrapperProps>`
   background: ${(props) => parseColor(props.$background)};
 
   @media (hover: hover) {
-    &:hover:not(:focus-within, :has(input:read-only)) {
+    &:hover:not(:focus-within) {
       background: ${(props) => parseColor(props.$hoverBackground)};
     }
   }
