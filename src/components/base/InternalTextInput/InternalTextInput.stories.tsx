@@ -3,16 +3,14 @@ import { Meta, StoryObj } from "@storybook/react";
 
 import { InternalTextInput } from "./InternalTextInput";
 
-import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
-import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
-
 const meta: Meta<typeof InternalTextInput> = {
   component: InternalTextInput,
   tags: ["autodocs"],
   title: "components/base/InternalTextInput",
-  argTypes: {
-    ...sizeArgTypes,
-    ...spacingArgTypes,
+  parameters: {
+    controls: {
+      include: [],
+    },
   },
 };
 export default meta;

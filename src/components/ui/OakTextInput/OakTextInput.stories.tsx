@@ -11,7 +11,20 @@ const meta: Meta<typeof OakTextInput> = {
   title: "components/ui/OakTextInput",
   argTypes: {
     width: sizeArgTypes["$width"],
-    maxWidth: sizeArgTypes["$maxWidth"],
+  },
+  parameters: {
+    controls: {
+      include: [
+        "placeholder",
+        "value",
+        "validity",
+        "disabled",
+        "readOnly",
+        "width",
+        "endEnhancerIconName",
+        "startEnhancerIconName",
+      ],
+    },
   },
   args: {
     placeholder: "Placeholder text",

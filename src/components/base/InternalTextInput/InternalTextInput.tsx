@@ -56,7 +56,10 @@ const StyledInput = styled.input`
   ${sizeStyle}
 `;
 
-export type InternalTextInputProps = StyledInputProps & {
+export type InternalTextInputProps = Omit<StyledInputProps, "placeholder"> & {
+  /**
+   * A textual hint or example to display before a value has been entered
+   */
   placeholder?: string;
   /**
    * Fired only when the input is focused for the first time
