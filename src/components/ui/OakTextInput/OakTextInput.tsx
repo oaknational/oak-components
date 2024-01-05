@@ -22,53 +22,57 @@ type StyledTextInputWrapperProps = {
   $readOnlyColor: OakCombinedColorToken;
 };
 
-export type OakTextInputProps = Pick<
-  InternalTextInputProps,
-  "$width" | "$maxWidth" | "onInitialFocus"
-> &
-  Partial<StyledTextInputWrapperProps> & {
-    id?: string;
-    type?: "text" | "password" | "number" | "email" | "tel";
-    /**
-     * Disables user input and updates the appearance accordingly.
-     */
-    disabled?: boolean;
-    /**
-     * Makes the input read-only. Preventing the user from changing the value.
-     */
-    readOnly?: boolean;
-    /**
-     * Sets the value. Use this in controlled components;
-     */
-    value?: string;
-    /**
-     * Sets the initial value. Use this for an uncontrolled component;
-     */
-    defaultValue?: string;
-    /**
-     * Used to target the input element in tests.
-     */
-    "data-testid"?: string;
-    placeholder?: string;
-    onChange?: ChangeEventHandler<HTMLInputElement>;
-    /**
-     * Alters the appearance of the input field to indicate whether the input is valid or invalid.
-     */
-    validity?: "valid" | "invalid";
-    $iconColor?: OakCombinedColorToken;
-    $validBorderColor?: OakCombinedColorToken;
-    $invalidBorderColor?: OakCombinedColorToken;
-    $validIconColor?: OakCombinedColorToken;
-    $invalidIconColor?: OakCombinedColorToken;
-    startEnhancerIconName?: OakIconName;
-    endEnhancerIconName?: OakIconName;
-  };
+export type OakTextInputProps = {
+  id?: string;
+  type?: "text" | "password" | "number" | "email" | "tel";
+  /**
+   * Disables user input and updates the appearance accordingly.
+   */
+  disabled?: boolean;
+  /**
+   * Makes the input read-only. Preventing the user from changing the value.
+   */
+  readOnly?: boolean;
+  /**
+   * Sets the value. Use this in controlled components;
+   */
+  value?: string;
+  /**
+   * Sets the initial value. Use this for an uncontrolled component;
+   */
+  defaultValue?: string;
+  /**
+   * Used to target the input element in tests.
+   */
+  "data-testid"?: string;
+  placeholder?: string;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
+  /**
+   * Alters the appearance of the input field to indicate whether the input is valid or invalid.
+   */
+  validity?: "valid" | "invalid";
+  /**
+   * Displays an icon at the start of the input.
+   */
+  startEnhancerIconName?: OakIconName;
+  /**
+   * Displays an icon at the end of the input.
+   */
+  endEnhancerIconName?: OakIconName;
+  $iconColor?: OakCombinedColorToken;
+  $validBorderColor?: OakCombinedColorToken;
+  $invalidBorderColor?: OakCombinedColorToken;
+  $validIconColor?: OakCombinedColorToken;
+  $invalidIconColor?: OakCombinedColorToken;
+} & Partial<StyledTextInputWrapperProps> &
+  Pick<InternalTextInputProps, "$width" | "$maxWidth" | "onInitialFocus">;
 
 const StyledTextInputWrapper = styled(OakFlex)<StyledTextInputWrapperProps>`
-  cursor: default;
+  &:hover {
+    cursor: text;
+  }
 
   &:focus-within:not(:has(input:disabled, input:read-only)) {
-    cursor: text;
     box-shadow: ${(props) =>
       props.$focusRingDropShadows
         .map((dropShadow) => parseDropShadow(dropShadow))
@@ -79,7 +83,6 @@ const StyledTextInputWrapper = styled(OakFlex)<StyledTextInputWrapperProps>`
 
   @media (hover: hover) {
     &:hover:not(:focus-within, :has(input:read-only)) {
-      cursor: text;
       background: ${(props) => parseColor(props.$hoverBackground)};
     }
   }
@@ -163,7 +166,7 @@ export const OakTextInput = ({
       $alignItems="center"
       $position="relative"
       $gap="space-between-s"
-      $ph="inner-padding-s"
+      $ph="inner-padding-l"
       onClick={(event) => {
         event.currentTarget.querySelector("input")?.focus();
       }}
