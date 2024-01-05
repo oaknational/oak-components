@@ -10,8 +10,8 @@ const meta: Meta<typeof OakTextInput> = {
   tags: ["autodocs"],
   title: "components/ui/OakTextInput",
   argTypes: {
-    $width: sizeArgTypes["$width"],
-    $maxWidth: sizeArgTypes["$maxWidth"],
+    width: sizeArgTypes["$width"],
+    maxWidth: sizeArgTypes["$maxWidth"],
   },
   args: {
     placeholder: "Placeholder text",
@@ -49,11 +49,11 @@ export const WithStyling: Story = {
   render: (args) => <OakTextInput {...args} />,
   args: {
     value: "a test value",
-    $background: "aqua",
-    $color: "blue",
-    $borderColor: "blue",
-    $hoverBackground: "aqua110",
-    $focusRingDropShadows: ["drop-shadow-wide-yellow"],
+    background: "aqua",
+    color: "blue",
+    borderColor: "blue",
+    hoverBackground: "aqua110",
+    focusRingDropShadows: ["drop-shadow-wide-yellow"],
   },
 };
 

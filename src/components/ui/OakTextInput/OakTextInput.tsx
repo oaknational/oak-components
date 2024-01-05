@@ -9,6 +9,7 @@ import {
 import { OakFlex, OakIcon, OakIconName } from "@/components/base";
 import { OakCombinedColorToken, OakDropShadowToken } from "@/styles";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
+import { SizeStyleProps } from "@/styles/utils/sizeStyle";
 
 type StyledTextInputWrapperProps = {
   $color: OakCombinedColorToken;
@@ -45,7 +46,6 @@ export type OakTextInputProps = {
    * Used to target the input element in tests.
    */
   "data-testid"?: string;
-  placeholder?: string;
   onChange?: ChangeEventHandler<HTMLInputElement>;
   /**
    * Alters the appearance of the input field to indicate whether the input is valid or invalid.
@@ -59,13 +59,23 @@ export type OakTextInputProps = {
    * Displays an icon at the end of the input.
    */
   endEnhancerIconName?: OakIconName;
-  $iconColor?: OakCombinedColorToken;
-  $validBorderColor?: OakCombinedColorToken;
-  $invalidBorderColor?: OakCombinedColorToken;
-  $validIconColor?: OakCombinedColorToken;
-  $invalidIconColor?: OakCombinedColorToken;
-} & Partial<StyledTextInputWrapperProps> &
-  Pick<InternalTextInputProps, "$width" | "$maxWidth" | "onInitialFocus">;
+  iconColor?: OakCombinedColorToken;
+  validBorderColor?: OakCombinedColorToken;
+  invalidBorderColor?: OakCombinedColorToken;
+  validIconColor?: OakCombinedColorToken;
+  invalidIconColor?: OakCombinedColorToken;
+  color?: OakCombinedColorToken;
+  hoverBackground?: OakCombinedColorToken;
+  background?: OakCombinedColorToken;
+  borderColor?: OakCombinedColorToken;
+  focusRingDropShadows?: OakDropShadowToken[];
+  disabledBackgroundColor?: OakCombinedColorToken;
+  readOnlyBorderColor?: OakCombinedColorToken;
+  disabledColor?: OakCombinedColorToken;
+  readOnlyColor?: OakCombinedColorToken;
+  width?: SizeStyleProps["$width"];
+  maxWidth?: SizeStyleProps["$maxWidth"];
+} & Pick<InternalTextInputProps, "onInitialFocus" | "placeholder">;
 
 const StyledTextInputWrapper = styled(OakFlex)<StyledTextInputWrapperProps>`
   &:hover {
@@ -103,47 +113,49 @@ const StyledTextInputWrapper = styled(OakFlex)<StyledTextInputWrapperProps>`
  */
 export const OakTextInput = ({
   type = "text",
-  $borderColor = "border-primary",
-  $readOnlyBorderColor = "border-neutral",
-  $focusRingDropShadows = [
+  borderColor = "border-primary",
+  readOnlyBorderColor = "border-neutral",
+  focusRingDropShadows = [
     "drop-shadow-centered-yellow",
     "drop-shadow-centered-grey",
   ],
-  $background = "bg-primary",
-  $hoverBackground = "bg-neutral",
-  $disabledBackgroundColor = "bg-neutral",
-  $color = "text-primary",
-  $disabledColor = "text-disabled",
-  $readOnlyColor = "text-subdued",
+  background = "bg-primary",
+  hoverBackground = "bg-neutral",
+  disabledBackgroundColor = "bg-neutral",
+  color = "text-primary",
+  disabledColor = "text-disabled",
+  readOnlyColor = "text-subdued",
   validity,
-  $iconColor = "icon-inverted",
-  $validBorderColor = "border-success",
-  $invalidBorderColor = "border-error",
-  $validIconColor = "icon-success",
-  $invalidIconColor = "border-error",
+  iconColor = "icon-inverted",
+  validBorderColor = "border-success",
+  invalidBorderColor = "border-error",
+  validIconColor = "icon-success",
+  invalidIconColor = "border-error",
   startEnhancerIconName,
   endEnhancerIconName,
+  width,
+  maxWidth,
   ...props
 }: OakTextInputProps) => {
-  let borderColor: OakCombinedColorToken;
-  let iconColor: OakCombinedColorToken;
-  let readOnlyBorderColor: OakCombinedColorToken;
+  let finalBorderColor: OakCombinedColorToken;
+  let finalIconColor: OakCombinedColorToken;
+  let finalReadOnlyBorderColor: OakCombinedColorToken;
 
   switch (validity) {
     case "valid":
-      borderColor = $validBorderColor;
-      iconColor = $validIconColor;
-      readOnlyBorderColor = $validBorderColor;
+      finalBorderColor = validBorderColor;
+      finalIconColor = validIconColor;
+      finalReadOnlyBorderColor = validBorderColor;
       break;
     case "invalid":
-      borderColor = $invalidBorderColor;
-      iconColor = $invalidIconColor;
-      readOnlyBorderColor = $invalidBorderColor;
+      finalBorderColor = invalidBorderColor;
+      finalIconColor = invalidIconColor;
+      finalReadOnlyBorderColor = invalidBorderColor;
       break;
     default:
-      borderColor = $borderColor;
-      iconColor = $iconColor;
-      readOnlyBorderColor = $readOnlyBorderColor;
+      finalBorderColor = borderColor;
+      finalIconColor = iconColor;
+      finalReadOnlyBorderColor = readOnlyBorderColor;
       break;
   }
 
@@ -154,15 +166,15 @@ export const OakTextInput = ({
       $borderStyle="solid"
       $borderRadius="border-radius-s"
       $ba="border-solid-m"
-      $borderColor={borderColor}
-      $focusRingDropShadows={$focusRingDropShadows}
-      $background={$background}
-      $hoverBackground={$hoverBackground}
-      $disabledBackgroundColor={$disabledBackgroundColor}
-      $readOnlyBorderColor={readOnlyBorderColor}
-      $disabledColor={$disabledColor}
-      $readOnlyColor={$readOnlyColor}
-      $color={$color}
+      $borderColor={finalBorderColor}
+      $focusRingDropShadows={focusRingDropShadows}
+      $background={background}
+      $hoverBackground={hoverBackground}
+      $disabledBackgroundColor={disabledBackgroundColor}
+      $readOnlyBorderColor={finalReadOnlyBorderColor}
+      $disabledColor={disabledColor}
+      $readOnlyColor={readOnlyColor}
+      $color={color}
       $alignItems="center"
       $position="relative"
       $gap="space-between-s"
@@ -174,20 +186,22 @@ export const OakTextInput = ({
       {startEnhancerIconName && (
         <OakIcon
           iconName={startEnhancerIconName}
-          $colorFilter={iconColor}
+          $colorFilter={finalIconColor}
           $pointerEvents="none"
         />
       )}
       <InternalTextInput
         type={type}
         {...props}
+        $width={width}
+        $maxWidth={maxWidth}
         $pv="inner-padding-l"
         $height="all-spacing-12"
       />
       {endEnhancerIconName && (
         <OakIcon
           iconName={endEnhancerIconName}
-          $colorFilter={iconColor}
+          $colorFilter={finalIconColor}
           $pointerEvents="none"
         />
       )}
