@@ -91,7 +91,9 @@ export const InternalTextInput = (props: InternalTextInputProps) => {
     if (!hadInitialFocused.current && props.onInitialFocus) {
       props.onInitialFocus(e);
       hadInitialFocused.current = true;
-    } else if (props.onFocus) {
+    }
+
+    if (props.onFocus) {
       props.onFocus(e);
     }
   };

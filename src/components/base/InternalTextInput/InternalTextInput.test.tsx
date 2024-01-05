@@ -55,6 +55,20 @@ describe("InternalTextInput", () => {
     expect(onInitialFocus).toHaveBeenCalled();
   });
 
+  it("calls onFocus when onInitialFocus is also defined", () => {
+    const onFocus = jest.fn();
+    const onInitialFocus = jest.fn();
+    const { getByTestId } = render(
+      <InternalTextInput
+        data-testid="test"
+        onFocus={onFocus}
+        onInitialFocus={onInitialFocus}
+      />,
+    );
+    getByTestId("test").focus();
+    expect(onFocus).toHaveBeenCalled();
+  });
+
   it("doesn't call onInitialFocus only when focused for subsequent times", () => {
     const onInitialFocus = jest.fn();
     const { getByTestId } = render(
