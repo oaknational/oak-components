@@ -1,5 +1,5 @@
 import React, { ChangeEventHandler } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { parseColor } from "@/styles/helpers/parseColor";
 import {
@@ -21,6 +21,8 @@ type StyledTextInputWrapperProps = {
   $readOnlyBorderColor: OakCombinedColorToken;
   $disabledColor: OakCombinedColorToken;
   $readOnlyColor: OakCombinedColorToken;
+  $disabled: boolean;
+  $readOnly: boolean;
 };
 
 export type OakTextInputProps = {
@@ -99,15 +101,19 @@ const StyledTextInputWrapper = styled(OakFlex)<StyledTextInputWrapperProps>`
     }
   }
 
-  &:has(input:read-only) {
-    border-color: ${(props) => parseColor(props.$readOnlyBorderColor)};
-    color: ${(props) => parseColor(props.$readOnlyColor)};
-  }
+  ${(props) =>
+    props.$readOnly &&
+    css`
+      border-color: ${parseColor(props.$readOnlyBorderColor)};
+      color: ${parseColor(props.$readOnlyColor)};
+    `}
 
-  &:has(input:disabled) {
-    background: ${(props) => parseColor(props.$disabledBackgroundColor)};
-    color: ${(props) => parseColor(props.$disabledColor)};
-  }
+  ${(props) =>
+    props.$disabled &&
+    css`
+      background: ${parseColor(props.$disabledBackgroundColor)};
+      color: ${parseColor(props.$disabledColor)};
+    `}
 `;
 
 /**
@@ -181,6 +187,8 @@ export const OakTextInput = ({
       $position="relative"
       $gap="space-between-s"
       $ph="inner-padding-l"
+      $disabled={!!props.disabled}
+      $readOnly={!!props.readOnly}
       onClick={(event) => {
         event.currentTarget.querySelector("input")?.focus();
       }}
