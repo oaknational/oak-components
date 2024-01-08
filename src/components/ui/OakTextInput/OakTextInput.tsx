@@ -26,8 +26,6 @@ type StyledTextInputWrapperProps = {
 };
 
 export type OakTextInputProps = {
-  id?: string;
-  type?: "text" | "password" | "number" | "email" | "tel";
   /**
    * Disables user input and updates the appearance accordingly.
    */
@@ -79,7 +77,8 @@ export type OakTextInputProps = {
   readOnlyColor?: OakCombinedColorToken;
   width?: SizeStyleProps["$width"];
   maxWidth?: SizeStyleProps["$maxWidth"];
-} & Pick<InternalTextInputProps, "onInitialFocus" | "placeholder">;
+  iconAlt?: string;
+} & InternalTextInputProps;
 
 const StyledTextInputWrapper = styled(OakFlex)<StyledTextInputWrapperProps>`
   &:hover {
@@ -95,11 +94,15 @@ const StyledTextInputWrapper = styled(OakFlex)<StyledTextInputWrapperProps>`
 
   background: ${(props) => parseColor(props.$background)};
 
-  @media (hover: hover) {
-    &:hover:not(:focus-within) {
-      background: ${(props) => parseColor(props.$hoverBackground)};
-    }
-  }
+  ${(props) =>
+    !props.$readOnly &&
+    css`
+      @media (hover: hover) {
+        &:hover:not(:focus-within) {
+          background: ${parseColor(props.$hoverBackground)};
+        }
+      }
+    `}
 
   ${(props) =>
     props.$readOnly &&
@@ -143,6 +146,7 @@ export const OakTextInput = ({
   validIconColor = "icon-success",
   invalidIconColor = "border-error",
   iconName,
+  iconAlt,
   isTrailingIcon = false,
   width,
   maxWidth,
@@ -201,6 +205,7 @@ export const OakTextInput = ({
           iconName={iconName}
           $colorFilter={finalIconColor}
           $pointerEvents="none"
+          alt={iconAlt}
         />
       )}
       <InternalTextInput
@@ -216,6 +221,7 @@ export const OakTextInput = ({
           iconName={iconName}
           $colorFilter={finalIconColor}
           $pointerEvents="none"
+          alt={iconAlt}
         />
       )}
     </StyledTextInputWrapper>

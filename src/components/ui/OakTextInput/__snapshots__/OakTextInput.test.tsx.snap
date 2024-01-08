@@ -3,11 +3,11 @@
 exports[`OakTextInput matches snapshot 1`] = `
 [
   <div
-    className="sc-gEvEer sc-eqUAAy sc-cwHptR eJgbvX kUreFU cxqUUM"
+    className="sc-gEvEer sc-eqUAAy sc-cwHptR eJgbvX kUreFU bmxVLQ"
     onClick={[Function]}
   >
     <input
-      className="sc-aXZVg llBHGf"
+      className="sc-aXZVg htVdEQ"
       defaultValue="A nice text value"
       onFocus={[Function]}
       type="text"
