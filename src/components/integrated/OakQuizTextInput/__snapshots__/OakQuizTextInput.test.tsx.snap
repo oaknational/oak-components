@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakQuizTextInput matches snapshot 1`] = `
+[
+  <div
+    className="sc-aXZVg sc-gEvEer sc-jsJBEP cTDiqX ftzkJO dAGEQO"
+    onClick={[Function]}
+  >
+    <input
+      className="sc-bXCLTC gAiXpM"
+      defaultValue="An answer to a question"
+      onFocus={[Function]}
+      readOnly={false}
+      type="text"
+    />
+  </div>,
+  ",",
+]
+`;

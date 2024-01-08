@@ -2,7 +2,7 @@
 
 exports[`InternalTextInput matches snapshot 1`] = `
 <input
-  className="sc-aXZVg gKrgSR"
+  className="sc-aXZVg bTMTZW"
   onFocus={[Function]}
 />
 `;
