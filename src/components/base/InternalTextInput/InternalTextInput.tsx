@@ -52,6 +52,10 @@ const StyledInput = styled.input`
     appearance: none;
   }
 
+  :disabled {
+    cursor: not-allowed;
+  }
+
   ${spacingStyle}
   ${sizeStyle}
 `;
