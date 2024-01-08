@@ -2,8 +2,7 @@
 
 exports[`InternalTextInput matches snapshot 1`] = `
 <input
-  className="sc-aXZVg dVeUxO"
-  onBlur={[Function]}
+  className="sc-aXZVg gKrgSR"
   onFocus={[Function]}
 />
 `;
