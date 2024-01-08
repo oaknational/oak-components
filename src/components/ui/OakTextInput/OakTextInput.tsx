@@ -113,6 +113,9 @@ const StyledTextInputWrapper = styled(OakFlex)<StyledTextInputWrapperProps>`
     css`
       background: ${parseColor(props.$disabledBackgroundColor)};
       color: ${parseColor(props.$disabledColor)};
+      &:hover {
+        cursor: not-allowed;
+      }
     `}
 `;
 
