@@ -1,8 +1,96 @@
-node_modules
-dist
-coverage
-types
-tsconfig.tsbuildinfo
-.DS_Store
-.env.local
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+# Cope with nested Node modules because of Netlify plugins doing funnny things.
+**/node_modules/**
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+playwright-report/
+test-results/
+npm_audit.json
+audit.json
 .local-pack/
+
+# Browserstack Local log
+local.log
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+dist
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.production
+
+# local config
+oak.config.js
+oak.config.json
+oak.config.ts
+oak.config.old.json
+oak.config.production.json
+.local-pack/
+
+
+# live oak-config (see push_config script)
+oak-config/live
+
+# vercel
+.vercel
+
+# firebase
+firebase-debug.log
+.firebase
+
+# Local Netlify folder
+.netlify
+
+# typescript
+*.tsbuildinfo
+
+# tool files to ignore
+.eslintcache
+
+# storybook
+/storybook-static
+
+# asdf version manager
+.tool-versions
+
+# built files to igore
+public/robots.txt
+public/sitemap*.xml
+
+# Local Netlify folder
+.netlify
+
+# Images/graphics protected by IP
+public/images/sprite/*
+!public/images/sprite/README.md
+public/images/favicons/*
+public/images/sharing/*
+src/image-data/generated/*.svg
+
+#yalc
+.yalc/
+yalc.lock
