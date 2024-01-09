@@ -44,7 +44,6 @@ exports[`OakQuizCheckBox matches snapshot 1`] = `
             </div>
           </div>
         </div>
-        Option 1
       </label>
     </div>
   </div>,
