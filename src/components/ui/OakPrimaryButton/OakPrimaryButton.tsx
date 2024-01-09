@@ -16,6 +16,7 @@ export type OakPrimaryButtonProps = Pick<
   | "isLoading"
   | "iconName"
   | "isTrailingIcon"
+  | "type"
 >;
 
 export const OakPrimaryButton = (props: OakPrimaryButtonProps) => {

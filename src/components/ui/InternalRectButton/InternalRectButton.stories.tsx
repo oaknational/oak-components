@@ -66,6 +66,7 @@ const meta: Meta<typeof InternalRectButton> = {
         "disabledBackground",
         "disabledBorderColor",
         "disabledTextColor",
+        "type",
       ],
     },
   },

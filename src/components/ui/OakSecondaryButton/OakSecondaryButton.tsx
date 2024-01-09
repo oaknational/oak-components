@@ -16,6 +16,7 @@ export type OakSecondaryButtonProps = Pick<
   | "isLoading"
   | "iconName"
   | "isTrailingIcon"
+  | "type"
 >;
 
 export const OakSecondaryButton = (props: OakSecondaryButtonProps) => {

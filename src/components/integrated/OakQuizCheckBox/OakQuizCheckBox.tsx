@@ -141,6 +141,7 @@ export type OakQuizCheckBoxProps = BaseCheckBoxProps & {
   feedback?: "correct" | "incorrect" | null;
   image?: React.JSX.Element;
   innerRef?: React.RefObject<HTMLInputElement>;
+  displayValue?: string;
 };
 
 const StyledOverlay = styled(OakBox)`
@@ -148,7 +149,17 @@ const StyledOverlay = styled(OakBox)`
 `;
 
 export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
-  const { id, value, feedback, image, disabled, innerRef, ...rest } = props;
+  const {
+    id,
+    value,
+    feedback,
+    image,
+    disabled,
+    innerRef,
+    /* defaults to value if displayValue is not provided */
+    displayValue = value,
+    ...rest
+  } = props;
 
   const isFeedback = !!feedback;
   const isCorrect = feedback === "correct";
@@ -175,7 +186,7 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
       $gap={"space-between-s"}
     >
       <OakBox>{image}</OakBox>
-      {value}
+      {displayValue}
     </OakFlex>
   );
 
@@ -262,7 +273,7 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
             />
           }
         />
-        {image ? imageContainer : value}
+        {image ? imageContainer : displayValue}
       </StyledInternalCheckBoxLabelHoverDecor>
       {isFeedback && (
         <OakFlex

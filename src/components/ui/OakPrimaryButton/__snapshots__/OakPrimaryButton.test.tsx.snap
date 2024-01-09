@@ -15,6 +15,7 @@ exports[`OakPrimaryButton matches snapshot 1`] = `
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
+    type="button"
   >
     <div
       className="sc-aXZVg sc-gEvEer goWQoj OzInM"

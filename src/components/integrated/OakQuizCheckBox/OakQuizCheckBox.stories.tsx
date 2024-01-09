@@ -17,7 +17,13 @@ const meta: Meta<typeof OakQuizCheckBox> = {
   },
   parameters: {
     controls: {
-      include: ["feedback", "disabled", "defaultChecked"],
+      include: [
+        "feedback",
+        "disabled",
+        "defaultChecked",
+        "displayValue",
+        "value",
+      ],
     },
   },
 };
@@ -37,7 +43,13 @@ export const Default: Story = {
   },
   parameters: {
     controls: {
-      include: ["disabled", "defaultChecked", "feedback"],
+      include: [
+        "disabled",
+        "defaultChecked",
+        "feedback",
+        "displayValue",
+        "value",
+      ],
     },
   },
 };
@@ -50,7 +62,8 @@ export const WithImage: Story = {
   ),
   args: {
     id: "checkbox-test-default-1",
-    value: "a test value",
+    displayValue: "a test value",
+    value: "test-default",
     image: (
       <OakImage
         alt="Some trees"
@@ -79,7 +92,8 @@ export const WithImageNoDims: Story = {
       <OakQuizCheckBox
         {...args}
         id="checkbox-test-default-2"
-        value="a test value"
+        value="test"
+        displayValue="a test display value"
         image={
           <OakImage
             alt="Some trees"
@@ -93,7 +107,8 @@ export const WithImageNoDims: Story = {
       <OakQuizCheckBox
         {...args}
         id="checkbox-test-default-3"
-        value="a test value again"
+        value="test-2"
+        displayValue="a test display value"
         image={
           <OakImage
             alt="Some trees"
@@ -126,19 +141,22 @@ export const PreChecked: Story = {
         {...args}
         id="checkbox-test-default-4"
         defaultChecked={true}
-        value="default checked"
+        value="test-3"
+        displayValue="default checked"
       />
       <OakQuizCheckBox
         {...args}
         id="checkbox-test-default-5"
         defaultChecked={true}
         disabled={true}
-        value="default checked disabled"
+        value="test-4"
+        displayValue="default checked"
       />
       <OakQuizCheckBox
         {...args}
         id="checkbox-test-default-6"
-        value="dynamic default doesn't work past first render"
+        value="test-5"
+        displayValue="dynamic default doesn't work past first render"
       />
     </OakFlex>
   ),
@@ -166,26 +184,30 @@ export const Feedback: Story = {
         id="checkbox-test-default-7"
         defaultChecked={true}
         feedback={"correct"}
-        value="correctly selected"
+        value="test-6"
+        displayValue="correctly selected"
       />
       <OakQuizCheckBox
         {...args}
         id="checkbox-test-default-8"
         defaultChecked={true}
         feedback={"incorrect"}
-        value="incorrectly selected"
+        value="test-7"
+        displayValue="incorrectly selected"
       />
       <OakQuizCheckBox
         {...args}
         id="checkbox-test-default-9"
         feedback={"correct"}
-        value="correctly not selected"
+        value="test-8"
+        displayValue="correctly not selected"
       />
       <OakQuizCheckBox
         {...args}
         id="checkbox-test-default-10"
         feedback={"incorrect"}
-        value="incorrectly not selected"
+        value="test-9"
+        displayValue="incorrectly not selected"
       />
     </OakFlex>
   ),

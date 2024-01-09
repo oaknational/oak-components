@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { forwardRef, useContext } from "react";
 import styled, { css } from "styled-components";
 
 import { RadioContext } from "@/components/ui/OakRadioGroup/OakRadioGroup";
@@ -101,74 +101,77 @@ type OakRadioButtonProps = {
 } & OakBoxProps &
   RadioButtonLabelProps;
 
-export const OakRadioButton = (props: OakRadioButtonProps) => {
-  const radioContext = useContext(RadioContext);
-  const { currentValue, name, onValueUpdated } = radioContext;
-  const {
-    id,
-    label,
-    value,
-    tabIndex,
-    disabled,
-    $labelGap = "space-between-ssx",
-    $labelAlignItems = "center",
-    $font = "body-1",
-    "data-testid": dataTestId,
-    ...rest
-  } = props;
+export const OakRadioButton = forwardRef<HTMLInputElement, OakRadioButtonProps>(
+  (props, ref) => {
+    const radioContext = useContext(RadioContext);
+    const { currentValue, name, onValueUpdated } = radioContext;
+    const {
+      id,
+      label,
+      value,
+      tabIndex,
+      disabled,
+      $labelGap = "space-between-ssx",
+      $labelAlignItems = "center",
+      $font = "body-1",
+      "data-testid": dataTestId,
+      ...rest
+    } = props;
 
-  const anyDisabled = disabled || radioContext.disabled;
+    const anyDisabled = disabled || radioContext.disabled;
 
-  return (
-    <OakBox {...rest}>
-      <RadioButtonLabel
-        htmlFor={id}
-        $labelAlignItems={$labelAlignItems}
-        $labelGap={$labelGap}
-        $font={$font}
-        data-testid={dataTestId}
-        disabled={anyDisabled}
-      >
-        <HiddenRadioButtonInput
-          name={name}
-          id={id}
-          value={value}
-          onChange={onValueUpdated}
-          checked={value === currentValue}
-          tabIndex={tabIndex}
+    return (
+      <OakBox {...rest}>
+        <RadioButtonLabel
+          htmlFor={id}
+          $labelAlignItems={$labelAlignItems}
+          $labelGap={$labelGap}
+          $font={$font}
+          data-testid={dataTestId}
           disabled={anyDisabled}
-        />
-        {!anyDisabled ? (
-          <VisibleRadioButtonInput
-            $height={"all-spacing-6"}
-            $width={"all-spacing-6"}
-            $borderRadius={"border-radius-l"}
-            $ba={"border-solid-m"}
-            $borderColor={"black"}
-            $flexGrow={0}
-            $flexShrink={0}
-            $alignItems={"center"}
-            $justifyContent={"center"}
-            $background={"white"}
+        >
+          <HiddenRadioButtonInput
+            name={name}
+            id={id}
+            value={value}
+            onChange={onValueUpdated}
+            checked={value === currentValue}
+            tabIndex={tabIndex}
+            disabled={anyDisabled}
+            ref={ref}
           />
-        ) : (
-          <DisabledVisibleRadioButtonInput
-            $height={"all-spacing-6"}
-            $width={"all-spacing-6"}
-            $borderRadius={"border-radius-l"}
-            $ba={"border-solid-m"}
-            $borderColor={"bg-btn-primary-disabled"}
-            $flexGrow={0}
-            $flexShrink={0}
-            $alignItems={"center"}
-            $justifyContent={"center"}
-            $background={"white"}
-          />
-        )}
-        {label}
-      </RadioButtonLabel>
-    </OakBox>
-  );
-};
+          {!anyDisabled ? (
+            <VisibleRadioButtonInput
+              $height={"all-spacing-6"}
+              $width={"all-spacing-6"}
+              $borderRadius={"border-radius-l"}
+              $ba={"border-solid-m"}
+              $borderColor={"black"}
+              $flexGrow={0}
+              $flexShrink={0}
+              $alignItems={"center"}
+              $justifyContent={"center"}
+              $background={"white"}
+            />
+          ) : (
+            <DisabledVisibleRadioButtonInput
+              $height={"all-spacing-6"}
+              $width={"all-spacing-6"}
+              $borderRadius={"border-radius-l"}
+              $ba={"border-solid-m"}
+              $borderColor={"bg-btn-primary-disabled"}
+              $flexGrow={0}
+              $flexShrink={0}
+              $alignItems={"center"}
+              $justifyContent={"center"}
+              $background={"white"}
+            />
+          )}
+          {label}
+        </RadioButtonLabel>
+      </OakBox>
+    );
+  },
+);
 
 export type OakRadioButtonType = typeof OakRadioButton;

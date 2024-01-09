@@ -40,7 +40,7 @@ const meta: Meta<typeof OakPrimaryButton> = {
   },
   parameters: {
     controls: {
-      include: ["iconName", "isTrailingIcon", "isLoading"],
+      include: ["iconName", "isTrailingIcon", "isLoading", "type"],
     },
   },
 };

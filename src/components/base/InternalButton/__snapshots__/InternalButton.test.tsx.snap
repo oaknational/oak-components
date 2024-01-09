@@ -6,6 +6,7 @@ exports[`InternalButton matches snapshot 1`] = `
   onClick={[Function]}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
+  type="button"
 >
   Click Me
 </button>
