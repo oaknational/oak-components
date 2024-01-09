@@ -156,8 +156,7 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
     image,
     disabled,
     innerRef,
-    /* defaults to value if displayValue is not provided */
-    displayValue = value,
+    displayValue,
     ...rest
   } = props;
 
