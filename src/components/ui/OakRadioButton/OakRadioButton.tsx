@@ -47,22 +47,25 @@ const HiddenRadioButtonInput = styled.input.attrs({
 `;
 
 type VisibleRadioButtonInputProps = OakFlexProps & {
+  $disableFocusRing: boolean;
   disabled?: boolean;
 };
 
 const VisibleRadioButtonInput = styled(OakFlex)<VisibleRadioButtonInputProps>`
-
-  ${HiddenRadioButtonInput}:focus-visible ~ &::before {
-    content: "";
-    height: ${parseSpacing("all-spacing-7")};
-    width: ${parseSpacing("all-spacing-7")};
-    background: "transparent"
-    display: block;
-    position: absolute;
-    border-radius: 50%;
-    border: ${parseBorder("border-solid-m")} ${parseColor("grey60")};
-    box-shadow: ${`inset 0 0 0 0.13rem ${parseColor("lemon")}`};
-  }
+  ${(props) =>
+    !props.$disableFocusRing &&
+    css`
+      ${HiddenRadioButtonInput}:focus-visible ~ &::before {
+        content: "";
+        height: ${parseSpacing("all-spacing-7")};
+        width: ${parseSpacing("all-spacing-7")};
+        background: "transparent"
+        display: block;
+        position: absolute;
+        border-radius: 50%;
+        border: ${parseBorder("border-solid-m")} ${parseColor("grey60")};
+        box-shadow: ${`inset 0 0 0 0.13rem ${parseColor("lemon")}`};
+      }`}
 
   ${HiddenRadioButtonInput}:checked ~ &::after {
     content: "";
@@ -74,7 +77,6 @@ const VisibleRadioButtonInput = styled(OakFlex)<VisibleRadioButtonInputProps>`
     border-radius: 50%;
     border: ${parseBorder("border-solid-m")} ${parseColor("white")};
   }
-      
 `;
 
 // This is a hack to force React to rerender when the disabled prop is changed. Otherwise the pseudo element is not updated.
@@ -91,13 +93,18 @@ const DisabledVisibleRadioButtonInput = styled(VisibleRadioButtonInput)`
   }
 `;
 
-type OakRadioButtonProps = {
+export type OakRadioButtonProps = {
   id: string;
   label: string;
   value: string;
   tabIndex?: number;
   "data-testid"?: string;
   disabled?: boolean;
+  /**
+   * Allows the focus ring to be disabled. This is useful when focus is indicated
+   * by other means, such as a border or background color change.
+   */
+  disableFocusRing?: boolean;
 } & OakBoxProps &
   RadioButtonLabelProps;
 
@@ -115,6 +122,7 @@ export const OakRadioButton = forwardRef<HTMLInputElement, OakRadioButtonProps>(
       $labelAlignItems = "center",
       $font = "body-1",
       "data-testid": dataTestId,
+      disableFocusRing,
       ...rest
     } = props;
 
@@ -152,6 +160,7 @@ export const OakRadioButton = forwardRef<HTMLInputElement, OakRadioButtonProps>(
               $alignItems={"center"}
               $justifyContent={"center"}
               $background={"white"}
+              $disableFocusRing={!!disableFocusRing}
             />
           ) : (
             <DisabledVisibleRadioButtonInput
@@ -165,6 +174,7 @@ export const OakRadioButton = forwardRef<HTMLInputElement, OakRadioButtonProps>(
               $alignItems={"center"}
               $justifyContent={"center"}
               $background={"white"}
+              $disableFocusRing={!!disableFocusRing}
             />
           )}
           {label}
