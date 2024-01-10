@@ -46,7 +46,12 @@ export const WithIcon: Story = {
 
 export const WithTrailingIcon: Story = {
   render: (args) => (
-    <OakTextInput {...args} value="A fine text value" iconName="search" />
+    <OakTextInput
+      {...args}
+      value="A fine text value"
+      iconName="search"
+      isTrailingIcon
+    />
   ),
 };
 
@@ -89,7 +94,7 @@ export const InvalidWithIcon: Story = {
     <OakTextInput
       validity="invalid"
       value="A fine text value"
-      iconName="cross"
+      iconName="warning"
     />
   ),
 };
@@ -111,7 +116,7 @@ export const ReadOnlyInvalidTrailingIcon: Story = {
       {...args}
       validity="invalid"
       value="A fine text value"
-      iconName="cross"
+      iconName="warning"
       isTrailingIcon
       readOnly
     />
