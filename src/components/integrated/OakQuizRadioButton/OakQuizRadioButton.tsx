@@ -46,6 +46,7 @@ const StyledOakFlex = styled(OakFlex)<StyledOakFlexProps>`
     css`
       &:hover {
         background-color: ${parseColor("bg-decorative1-subdued")};
+        text-decoration: underline;
       }
     `}
 
