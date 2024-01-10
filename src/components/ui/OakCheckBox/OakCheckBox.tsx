@@ -27,12 +27,14 @@ export type OakCheckBoxProps = BaseCheckBoxProps & {
   iconPadding?: OakInnerPaddingToken;
   defaultColor?: OakCombinedColorToken;
   disabledColor?: OakCombinedColorToken;
+  displayValue?: string;
 } & InternalCheckBoxLabelProps;
 
 export const OakCheckBox = (props: OakCheckBoxProps) => {
   const {
     id,
     value,
+    displayValue = value,
     disabled = false,
     defaultChecked = false,
     onChange,
@@ -101,7 +103,7 @@ export const OakCheckBox = (props: OakCheckBoxProps) => {
         checkedIcon={checkedIcon}
         iconPadding={iconPadding}
       />
-      {value}
+      {displayValue}
     </InternalCheckBoxLabel>
   );
 };

@@ -35,6 +35,7 @@ const meta: Meta<typeof InternalButton> = {
         ...Object.keys(colorArgTypes),
         ...Object.keys(spacingArgTypes),
         ...Object.keys(borderArgTypes),
+        "type",
       ],
     },
   },

@@ -28,7 +28,7 @@ describe("OakQuizCheckBox", () => {
 
   it("has a label", () => {
     const { getByLabelText } = renderWithTheme(
-      <OakQuizCheckBox id="checkbox-1" value="Option 1" />,
+      <OakQuizCheckBox id="checkbox-1" displayValue="Option 1" value="1" />,
     );
     expect(getByLabelText("Option 1")).toBeInTheDocument();
   });

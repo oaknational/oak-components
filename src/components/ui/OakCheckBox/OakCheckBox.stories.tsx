@@ -12,6 +12,7 @@ import { flexArgTypes } from "@/storybook-helpers/flexStyleHelpers";
 /**
  *
  * Default checkbox which can be extended to create specialised checkboxes.
+ * - if provided, displayValue is used to display a different value to the value prop.
  *
  *
  * ## Events
@@ -56,6 +57,8 @@ const meta: Meta<typeof OakCheckBox> = {
   parameters: {
     controls: {
       include: [
+        "value",
+        "displayValue",
         "defaultColor",
         "disabledColor",
         "checkboxSize",
