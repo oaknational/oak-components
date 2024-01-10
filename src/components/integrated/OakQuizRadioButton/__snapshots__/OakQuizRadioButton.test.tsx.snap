@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakQuizRadioButton matches snapshot 1`] = `
+<div
+  className="sc-aXZVg sc-gEvEer sc-dLMFU iuOtXm jLIaXR dulAEB"
+  onClick={[Function]}
+>
+  <div
+    className="sc-aXZVg goWQoj"
+  >
+    <label
+      className="sc-dAlyuH sc-jlZhew fNvgLA epcIrp"
+      htmlFor="checkbox-1"
+    >
+      <input
+        checked={false}
+        className="sc-cwHptR frvrbm"
+        id="checkbox-1"
+        name="default"
+        type="radio"
+        value="Option 1"
+      />
+      <div
+        className="sc-aXZVg sc-gEvEer sc-jEACwC eiBoAG eIypJK iXjILk"
+      />
+      Radio option
+    </label>
+  </div>
+</div>
+`;
