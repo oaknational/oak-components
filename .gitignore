@@ -2,32 +2,23 @@
 
 # dependencies
 # Cope with nested Node modules because of Netlify plugins doing funnny things.
+node_modules/**
 **/node_modules/**
 /.pnp
 .pnp.js
 
 # testing
 /coverage
-playwright-report/
-test-results/
 npm_audit.json
 audit.json
 .local-pack/
 
-# Browserstack Local log
-local.log
-
-# next.js
-/.next/
-/out/
-
 # production
-/build
+/dist
 
 # misc
 .DS_Store
 *.pem
-dist
 
 # debug
 npm-debug.log*
@@ -44,29 +35,12 @@ yarn-error.log*
 .env.production
 
 # local config
-oak.config.js
-oak.config.json
-oak.config.ts
-oak.config.old.json
-oak.config.production.json
 .local-pack/
 
 
-# live oak-config (see push_config script)
-oak-config/live
-
-# vercel
-.vercel
-
-# firebase
-firebase-debug.log
-.firebase
-
-# Local Netlify folder
-.netlify
-
 # typescript
 *.tsbuildinfo
+types
 
 # tool files to ignore
 .eslintcache
@@ -76,21 +50,3 @@ firebase-debug.log
 
 # asdf version manager
 .tool-versions
-
-# built files to igore
-public/robots.txt
-public/sitemap*.xml
-
-# Local Netlify folder
-.netlify
-
-# Images/graphics protected by IP
-public/images/sprite/*
-!public/images/sprite/README.md
-public/images/favicons/*
-public/images/sharing/*
-src/image-data/generated/*.svg
-
-#yalc
-.yalc/
-yalc.lock
