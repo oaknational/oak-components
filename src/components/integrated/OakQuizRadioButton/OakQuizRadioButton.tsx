@@ -130,11 +130,13 @@ export const OakQuizRadioButton = (props: OakQuizRadioButtonProps) => {
         {...rest}
       />
       {showFeedback && (
-        <OakIcon
-          iconName={isCorrect ? "tick" : "cross"}
-          $colorFilter={isCorrect ? "icon-success" : "icon-error"}
-          alt={isCorrect ? "Correct" : "Incorrect"}
-        />
+        <OakFlex $alignSelf="flex-end">
+          <OakIcon
+            iconName={isCorrect ? "tick" : "cross"}
+            $colorFilter={isCorrect ? "icon-success" : "icon-error"}
+            alt={isCorrect ? "Correct" : "Incorrect"}
+          />
+        </OakFlex>
       )}
     </StyledOakFlex>
   );
