@@ -1,4 +1,4 @@
-import React, { forwardRef, useContext } from "react";
+import React, { ReactNode, forwardRef, useContext } from "react";
 import styled, { css } from "styled-components";
 
 import { RadioContext } from "@/components/ui/OakRadioGroup/OakRadioGroup";
@@ -15,6 +15,7 @@ import {
   OakLabel,
   OakLabelProps,
 } from "@/components/base";
+import { OakAllSpacingToken, OakBorderWidthToken } from "@/styles";
 
 type RadioButtonLabelProps = {
   $labelAlignItems?: FlexStyleProps["$alignItems"];
@@ -48,10 +49,13 @@ const HiddenRadioButtonInput = styled.input.attrs({
 
 type VisibleRadioButtonInputProps = OakFlexProps & {
   $disableFocusRing: boolean;
+  $radioInnerSize: OakAllSpacingToken;
   disabled?: boolean;
 };
 
 const VisibleRadioButtonInput = styled(OakFlex)<VisibleRadioButtonInputProps>`
+  border-radius: 50%;
+
   ${(props) =>
     !props.$disableFocusRing &&
     css`
@@ -69,10 +73,9 @@ const VisibleRadioButtonInput = styled(OakFlex)<VisibleRadioButtonInputProps>`
 
   ${HiddenRadioButtonInput}:checked ~ &::after {
     content: "";
-    height: ${parseSpacing("all-spacing-4")};
-    width: ${parseSpacing("all-spacing-4")};
+    height: ${(props) => parseSpacing(props.$radioInnerSize)};
+    width: ${(props) => parseSpacing(props.$radioInnerSize)};
     background: ${parseColor("black")};
-    lay: block;
     position: absolute;
     border-radius: 50%;
     border: ${parseBorder("border-solid-m")} ${parseColor("white")};
@@ -83,10 +86,9 @@ const VisibleRadioButtonInput = styled(OakFlex)<VisibleRadioButtonInputProps>`
 const DisabledVisibleRadioButtonInput = styled(VisibleRadioButtonInput)`
   ${HiddenRadioButtonInput}:checked ~ &::after {
     content: "";
-    height: ${parseSpacing("all-spacing-4")};
-    width: ${parseSpacing("all-spacing-4")};
+    height: ${(props) => parseSpacing(props.$radioInnerSize)};
+    width: ${(props) => parseSpacing(props.$radioInnerSize)};
     background: ${parseColor("bg-btn-primary-disabled")};
-    lay: block;
     position: absolute;
     border-radius: 50%;
     border: ${parseBorder("border-solid-m")} ${parseColor("white")};
@@ -95,7 +97,7 @@ const DisabledVisibleRadioButtonInput = styled(VisibleRadioButtonInput)`
 
 export type OakRadioButtonProps = {
   id: string;
-  label: string;
+  label: ReactNode;
   value: string;
   tabIndex?: number;
   "data-testid"?: string;
@@ -105,6 +107,22 @@ export type OakRadioButtonProps = {
    * by other means, such as a border or background color change.
    */
   disableFocusRing?: boolean;
+  /**
+   * Allows the size of the radio button to be customized.
+   */
+  radioOuterSize?: OakAllSpacingToken;
+  /**
+   * Allows the size of the inner "checked" circle of the radio button to be customized.
+   */
+  radioInnerSize?: OakAllSpacingToken;
+  /**
+   * Allows the width of the radio button border to be customized.
+   */
+  radioBorderWidth?: OakBorderWidthToken;
+  /**
+   * Allows the width of the radio button border to be customized when the radio button is checked.
+   */
+  checkedRadioBorderWidth?: OakBorderWidthToken;
 } & OakBoxProps &
   RadioButtonLabelProps;
 
@@ -122,11 +140,18 @@ export const OakRadioButton = forwardRef<HTMLInputElement, OakRadioButtonProps>(
       $labelAlignItems = "center",
       $font = "body-1",
       "data-testid": dataTestId,
-      disableFocusRing,
+      disableFocusRing = false,
+      radioInnerSize = "all-spacing-4",
+      radioOuterSize = "all-spacing-6",
+      radioBorderWidth = "border-solid-m",
+      checkedRadioBorderWidth = "border-solid-m",
       ...rest
     } = props;
-
+    const checked = value === currentValue;
     const anyDisabled = disabled || radioContext.disabled;
+    const finalRadioBorderWidth = checked
+      ? checkedRadioBorderWidth
+      : radioBorderWidth;
 
     return (
       <OakBox {...rest}>
@@ -150,10 +175,9 @@ export const OakRadioButton = forwardRef<HTMLInputElement, OakRadioButtonProps>(
           />
           {!anyDisabled ? (
             <VisibleRadioButtonInput
-              $height={"all-spacing-6"}
-              $width={"all-spacing-6"}
-              $borderRadius={"border-radius-l"}
-              $ba={"border-solid-m"}
+              $height={radioOuterSize}
+              $width={radioOuterSize}
+              $ba={finalRadioBorderWidth}
               $borderColor={"black"}
               $flexGrow={0}
               $flexShrink={0}
@@ -161,13 +185,13 @@ export const OakRadioButton = forwardRef<HTMLInputElement, OakRadioButtonProps>(
               $justifyContent={"center"}
               $background={"white"}
               $disableFocusRing={!!disableFocusRing}
+              $radioInnerSize={radioInnerSize}
             />
           ) : (
             <DisabledVisibleRadioButtonInput
-              $height={"all-spacing-6"}
-              $width={"all-spacing-6"}
-              $borderRadius={"border-radius-l"}
-              $ba={"border-solid-m"}
+              $height={radioOuterSize}
+              $width={radioOuterSize}
+              $ba={finalRadioBorderWidth}
               $borderColor={"bg-btn-primary-disabled"}
               $flexGrow={0}
               $flexShrink={0}
@@ -175,6 +199,7 @@ export const OakRadioButton = forwardRef<HTMLInputElement, OakRadioButtonProps>(
               $justifyContent={"center"}
               $background={"white"}
               $disableFocusRing={!!disableFocusRing}
+              $radioInnerSize={radioInnerSize}
             />
           )}
           {label}
