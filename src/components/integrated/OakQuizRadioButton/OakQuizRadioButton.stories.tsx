@@ -11,7 +11,7 @@ const meta: Meta<typeof OakQuizRadioButton> = {
   tags: ["autodocs"],
   title: "components/integrated/OakQuizRadioButton",
   args: {
-    label: "Radio option",
+    label: "Option label",
     value: "Option 1",
   },
   parameters: {
@@ -37,91 +37,134 @@ export const Default: Story = {
 
 export const Selected: Story = {
   render: (args) => (
-    <OakRadioGroup
-      name="radio-group-2"
-      value="Option 1"
-      $flexDirection="column"
-    >
-      <OakQuizRadioButton {...args} />
-    </OakRadioGroup>
+    <>
+      <OakRadioGroup
+        name="radio-group-2"
+        value="Option 1"
+        $flexDirection="column"
+      >
+        <OakQuizRadioButton {...args} />
+      </OakRadioGroup>
+      <OakRadioGroup
+        name="radio-group-3"
+        value="Option 1"
+        $flexDirection="column"
+      >
+        <OakQuizRadioButton {...args} disabled label="Disabled" />
+      </OakRadioGroup>
+    </>
   ),
 };
 
-export const SelectedCorrect: Story = {
+export const NotSelected: Story = {
   render: (args) => (
-    <OakRadioGroup
-      name="radio-group-3"
-      value="Option 1"
-      $flexDirection="column"
-    >
-      <OakQuizRadioButton {...args} feedback="correct" />
-    </OakRadioGroup>
+    <>
+      <OakRadioGroup name="radio-group-4" value="" $flexDirection="column">
+        <OakQuizRadioButton {...args} />
+      </OakRadioGroup>
+      <OakRadioGroup name="radio-group-5" value="" $flexDirection="column">
+        <OakQuizRadioButton {...args} disabled label="Disabled" />
+      </OakRadioGroup>
+    </>
   ),
 };
 
-export const SelectedIncorrect: Story = {
+export const WithFeedback: Story = {
   render: (args) => (
-    <OakRadioGroup
-      name="radio-group-4"
-      value="Option 1"
-      $flexDirection="column"
-    >
-      <OakQuizRadioButton {...args} feedback="incorrect" />
-    </OakRadioGroup>
-  ),
-};
-
-export const Correct: Story = {
-  render: (args) => (
-    <OakRadioGroup name="radio-group-5" $flexDirection="column">
-      <OakQuizRadioButton {...args} feedback="correct" />
-    </OakRadioGroup>
-  ),
-};
-
-export const Incorrect: Story = {
-  render: (args) => (
-    <OakRadioGroup name="radio-group-6" $flexDirection="column">
-      <OakQuizRadioButton {...args} feedback="incorrect" />
-    </OakRadioGroup>
-  ),
-};
-
-export const Disabled: Story = {
-  render: (args) => (
-    <OakRadioGroup name="radio-group-7" $flexDirection="column">
-      <OakQuizRadioButton {...args} disabled />
-    </OakRadioGroup>
-  ),
-};
-
-export const SelectedDisabled: Story = {
-  render: (args) => (
-    <OakRadioGroup
-      name="radio-group-8"
-      value="Option 1"
-      $flexDirection="column"
-    >
-      <OakQuizRadioButton {...args} disabled />
-    </OakRadioGroup>
+    <>
+      <OakRadioGroup
+        name="radio-group-6"
+        value="Option 1"
+        $flexDirection="column"
+      >
+        <OakQuizRadioButton
+          {...args}
+          feedback="correct"
+          label="Correctly selected"
+        />
+      </OakRadioGroup>
+      <OakRadioGroup
+        name="radio-group-7"
+        value="Option 1"
+        $flexDirection="column"
+      >
+        <OakQuizRadioButton
+          {...args}
+          feedback="incorrect"
+          label="Incorrectly selected"
+        />
+      </OakRadioGroup>
+      <OakRadioGroup name="radio-group-8" value="" $flexDirection="column">
+        <OakQuizRadioButton
+          {...args}
+          feedback="correct"
+          label="Correctly not selected"
+        />
+      </OakRadioGroup>
+      <OakRadioGroup name="radio-group-9" value="" $flexDirection="column">
+        <OakQuizRadioButton
+          {...args}
+          feedback="incorrect"
+          label="Incorrectly not selected"
+        />
+      </OakRadioGroup>
+    </>
   ),
 };
 
 export const WithImage: Story = {
   render: (args) => (
-    <OakRadioGroup name="radio-group-9" $flexDirection="column">
-      <OakQuizRadioButton
-        {...args}
-        image={
-          <OakImage
-            alt="Some trees"
-            src={`https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/sample.jpg`}
-            width={864}
-            height={576}
-            $minWidth={"all-spacing-19"}
-          />
-        }
-      />{" "}
-    </OakRadioGroup>
+    <>
+      <OakRadioGroup name="radio-group-10" $flexDirection="column">
+        <OakQuizRadioButton
+          {...args}
+          image={
+            <OakImage
+              alt="Some trees"
+              src={`https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/sample.jpg`}
+              width={864}
+              height={576}
+              $minWidth="all-spacing-19"
+            />
+          }
+        />
+      </OakRadioGroup>
+      <OakRadioGroup name="radio-group-11" $flexDirection="column">
+        <OakQuizRadioButton
+          {...args}
+          feedback="correct"
+          label="Image with feedback"
+          image={
+            <OakImage
+              alt="Some trees"
+              src={`https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/sample.jpg`}
+              width={864}
+              height={576}
+              $minWidth="all-spacing-19"
+            />
+          }
+        />
+      </OakRadioGroup>
+      <OakRadioGroup
+        name="radio-group-12"
+        value="Option 1"
+        $flexDirection="column"
+      >
+        <OakQuizRadioButton
+          {...args}
+          feedback="correct"
+          label="Selected image with feedback"
+          image={
+            <OakImage
+              alt="Some trees"
+              src={`https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/sample.jpg`}
+              width={864}
+              height={576}
+              $minWidth="all-spacing-19"
+            />
+          }
+        />
+      </OakRadioGroup>
+    </>
   ),
 };
