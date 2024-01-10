@@ -1,8 +1,52 @@
-node_modules
-dist
-coverage
-types
-tsconfig.tsbuildinfo
-.DS_Store
-.env.local
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+# Cope with nested Node modules because of Netlify plugins doing funnny things.
+node_modules/**
+**/node_modules/**
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+npm_audit.json
+audit.json
 .local-pack/
+
+# production
+/dist
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.production
+
+# local config
+.local-pack/
+
+
+# typescript
+*.tsbuildinfo
+types
+
+# tool files to ignore
+.eslintcache
+
+# storybook
+/storybook-static
+
+# asdf version manager
+.tool-versions
