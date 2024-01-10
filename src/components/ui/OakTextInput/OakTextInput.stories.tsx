@@ -46,7 +46,12 @@ export const WithIcon: Story = {
 
 export const WithTrailingIcon: Story = {
   render: (args) => (
-    <OakTextInput {...args} value="A fine text value" iconName="search" />
+    <OakTextInput
+      {...args}
+      value="A fine text value"
+      iconName="search"
+      isTrailingIcon
+    />
   ),
 };
 
