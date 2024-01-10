@@ -246,4 +246,31 @@ describe("RadioGroup", () => {
   });
 
   it.todo("disables all radios when disabled prop is passed to RadioGroup");
+
+  it("allows the initial value to be set with defaultValue", () => {
+    const { getByLabelText } = renderWithTheme(
+      <OakRadioGroup name="test" defaultValue="2">
+        <OakRadioButton id="radio-1" value="1" label="Option 1" />
+        <OakRadioButton id="radio-2" value="2" label="Option 2" />
+      </OakRadioGroup>,
+    );
+
+    expect(getByLabelText("Option 2")).toBeChecked();
+  });
+
+  it("value can be controlled by passing a `value` prop", async () => {
+    const { getByLabelText } = renderWithTheme(
+      <OakRadioGroup name="test" value="1">
+        <OakRadioButton id="radio-1" value="1" label="Option 1" />
+        <OakRadioButton id="radio-2" value="2" label="Option 2" />
+      </OakRadioGroup>,
+    );
+
+    const option2 = getByLabelText("Option 2");
+
+    await userEvent.click(option2);
+
+    // The `value` prop should prevent the value from changing
+    expect(getByLabelText("Option 1")).toBeChecked();
+  });
 });
