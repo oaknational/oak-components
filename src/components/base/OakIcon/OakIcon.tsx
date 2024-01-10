@@ -49,6 +49,7 @@ export const oakIconNames = [
   "instagram",
   "dot",
   "dot-png",
+  "warning",
 ] as const;
 
 export type OakIconName = (typeof oakIconNames)[number];
