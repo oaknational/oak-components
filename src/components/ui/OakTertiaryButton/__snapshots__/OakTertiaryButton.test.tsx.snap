@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakTertiaryButton matches snapshot 1`] = `
+<button
+  className="sc-jlZhew sc-cwHptR cxpleo hkrMvC"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  type="button"
+>
+  <div
+    className="sc-aXZVg sc-gEvEer idRvCw OzInM"
+  >
+    <span
+      className="sc-eqUAAy bIYHoz"
+    >
+      Click Me
+    </span>
+  </div>
+</button>
+`;
