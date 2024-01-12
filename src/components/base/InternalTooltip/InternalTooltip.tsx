@@ -35,7 +35,7 @@ const StyledSvg = styled.svg<StyledSvgProps>`
 `;
 
 /**
- * An primitive tooltip to be used as a basis for more opinionated UI components.
+ * A primitive tooltip to be used as a basis for more opinionated UI components.
  */
 export const InternalTooltip = ({
   isOpen,

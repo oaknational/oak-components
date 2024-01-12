@@ -112,7 +112,6 @@ const config = {
   // using ts-jest
   transform: {
     "^.+\\.(tsx?)$": "ts-jest",
-    "^.+\\.svg$": "jest-transformer-svg",
   },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
