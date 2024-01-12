@@ -2,17 +2,17 @@
 
 exports[`OakTertiaryButton matches snapshot 1`] = `
 <button
-  className="sc-jlZhew sc-cwHptR cxpleo hkrMvC"
+  className="sc-jlZhew sc-cwHptR dtToJh hkrMvC"
   onClick={[Function]}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
   type="button"
 >
   <div
-    className="sc-aXZVg sc-gEvEer idRvCw OzInM"
+    className="sc-aXZVg sc-gEvEer kEIIQV OzInM"
   >
     <span
-      className="sc-eqUAAy bIYHoz"
+      className="sc-eqUAAy bUYyl"
     >
       Click Me
     </span>

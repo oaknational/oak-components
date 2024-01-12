@@ -9,7 +9,7 @@ exports[`InternalTooltip matches snapshot 1`] = `
     role="tooltip"
   >
     <div
-      className="sc-aXZVg sc-gEvEer sc-eqUAAy eNpZhz dnJeoC hYnrwb"
+      className="sc-aXZVg sc-gEvEer sc-eqUAAy HjOnE dnJeoC hYnrwb"
     >
       Hello there
       <svg

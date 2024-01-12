@@ -3,7 +3,7 @@
 exports[`OakQuizTextInput matches snapshot 1`] = `
 [
   <div
-    className="sc-aXZVg sc-gEvEer sc-eeDRCY cTDiqX ftzkJO chFYLu"
+    className="sc-aXZVg sc-gEvEer sc-eeDRCY dyiMma ftzkJO chFYLu"
     onClick={[Function]}
   >
     <input

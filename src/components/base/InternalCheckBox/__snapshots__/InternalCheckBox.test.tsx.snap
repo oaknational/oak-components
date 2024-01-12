@@ -2,7 +2,7 @@
 
 exports[`InternalCheckBox matches snapshot 1`] = `
 <input
-  className="sc-aXZVg gPLtAZ"
+  className="sc-aXZVg biWKGi"
   id="checkbox-1"
   name="checkbox-1"
   onMouseEnter={[Function]}
