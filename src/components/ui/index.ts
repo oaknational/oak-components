@@ -6,3 +6,4 @@ export * from "./OakRadioButton";
 export * from "./OakRadioGroup";
 export * from "./OakCheckBox";
 export * from "./OakTextInput";
+export * from "./OakRoundIcon";
