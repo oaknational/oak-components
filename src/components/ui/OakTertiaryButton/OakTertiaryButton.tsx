@@ -69,7 +69,14 @@ export const OakTertiaryButton = ({
     icon = <OakRoundIcon iconName={iconName} {...iconProps} />;
   }
   if (iconSrc) {
-    icon = <OakRoundIcon src={iconSrc} {...iconProps} />;
+    icon = (
+      <OakRoundIcon
+        src={iconSrc}
+        {...iconProps}
+        $width={["all-spacing-8", "all-spacing-9"]}
+        $height={["all-spacing-8", "all-spacing-9"]}
+      />
+    );
   }
 
   return (
