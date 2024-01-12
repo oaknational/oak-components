@@ -34,12 +34,14 @@ const StyledSvg = styled.svg<StyledSvgProps>`
   )}
 `;
 
+/**
+ * An primitive tooltip to be used as a basis for more opinionated UI components.
+ */
 export const InternalTooltip = ({
   isOpen,
   children,
   tooltip,
   $background = "black",
-  $font = "heading-light-7",
   $color = "text-inverted",
   $borderRadius,
   ...props
@@ -61,7 +63,6 @@ export const InternalTooltip = ({
             $position="relative"
             $background={$background}
             $color={$color}
-            $font={$font}
             $btr={$borderRadius}
             $bbrr={$borderRadius}
             $maxWidth={["all-spacing-20", "all-spacing-22"]}
