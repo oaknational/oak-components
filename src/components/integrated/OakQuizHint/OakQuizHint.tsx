@@ -1,10 +1,5 @@
 import React, { MouseEventHandler, ReactNode, useState } from "react";
 
-// @ts-expect-error:  this is an svg
-import lightbulbOutlineIconSvg from "../../../../assets/light-bulb-outline.svg";
-// @ts-expect-error:  this is an svg
-import lightbulbWhiteOutlineSvg from "../../../../assets/light-bulb-with-white-outline.svg";
-
 import { OakTertiaryButton, OakTooltip } from "@/components/ui";
 
 export type OakQuizHintProps = {
@@ -26,9 +21,7 @@ export const OakQuizHint = ({ hint }: OakQuizHintProps) => {
   return (
     <OakTooltip tooltip={hint} isOpen={isOpen}>
       <OakTertiaryButton
-        iconSrc={
-          isOpen ? lightbulbWhiteOutlineSvg.src : lightbulbOutlineIconSvg.src
-        }
+        iconName={isOpen ? "lightbulb-yellow" : "lightbulb"}
         onClick={handleClick}
         iconBackground={isOpen ? "bg-icon" : "bg-decorative5-main"}
       >
