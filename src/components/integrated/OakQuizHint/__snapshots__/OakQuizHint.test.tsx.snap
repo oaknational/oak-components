@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakQuizHint matches snapshot 1`] = `
+[
+  <div
+    className="sc-aXZVg sc-gEvEer iBTklz dnJeoC"
+  >
+    <button
+      className="sc-jEACwC sc-eDPEul cxiCSm jIpyWh"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      type="button"
+    >
+      <div
+        className="sc-aXZVg sc-gEvEer kEIIQV OzInM"
+      >
+        <span
+          className="sc-eqUAAy bUYyl"
+        >
+          Need a hint?
+        </span>
+      </div>
+    </button>
+  </div>,
+  ",",
+]
+`;
