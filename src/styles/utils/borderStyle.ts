@@ -29,6 +29,12 @@ export type BorderStyleProps = {
   $borderStyle?: _BorderStyleProps;
   $borderColor?: BorderColorProps;
   $borderRadius?: BorderRadiusProps;
+  $btlr?: BorderRadiusProps;
+  $btrr?: BorderRadiusProps;
+  $bblr?: BorderRadiusProps;
+  $bbrr?: BorderRadiusProps;
+  $btr?: BorderRadiusProps;
+  $bbr?: BorderRadiusProps;
 };
 
 const borderAll = css<{ $ba?: BorderWidth }>`
@@ -64,6 +70,58 @@ const borderRadius = css<{ $borderRadius?: BorderRadiusProps }>`
     parseBorderRadius,
   )}
 `;
+const borderRadiusTopLeft = css<BorderStyleProps>`
+  ${responsiveStyle(
+    "border-top-left-radius",
+    (props) => props.$btlr,
+    parseBorderRadius,
+  )}
+`;
+const borderRadiusTopRight = css<BorderStyleProps>`
+  ${responsiveStyle(
+    "border-top-right-radius",
+    (props) => props.$btrr,
+    parseBorderRadius,
+  )}
+`;
+const borderRadiusBottomLeft = css<BorderStyleProps>`
+  ${responsiveStyle(
+    "border-bottom-left-radius",
+    (props) => props.$bblr,
+    parseBorderRadius,
+  )}
+`;
+const borderRadiusBottomRight = css<BorderStyleProps>`
+  ${responsiveStyle(
+    "border-bottom-right-radius",
+    (props) => props.$bbrr,
+    parseBorderRadius,
+  )}
+`;
+const borderRadiusTop = css<BorderStyleProps>`
+  ${responsiveStyle(
+    "border-top-left-radius",
+    (props) => props.$btr,
+    parseBorderRadius,
+  )}
+  ${responsiveStyle(
+    "border-top-right-radius",
+    (props) => props.$btr,
+    parseBorderRadius,
+  )}
+`;
+const borderRadiusBottom = css<BorderStyleProps>`
+  ${responsiveStyle(
+    "border-bottom-left-radius",
+    (props) => props.$bbr,
+    parseBorderRadius,
+  )}
+  ${responsiveStyle(
+    "border-bottom-right-radius",
+    (props) => props.$bbr,
+    parseBorderRadius,
+  )}
+`;
 
 export const borderStyle = css<BorderStyleProps>`
   ${borderAll}
@@ -75,4 +133,10 @@ export const borderStyle = css<BorderStyleProps>`
   ${borderVertical}
   ${borderColor}
   ${borderRadius}
+  ${borderRadiusTopLeft}
+  ${borderRadiusTopRight}
+  ${borderRadiusBottomLeft}
+  ${borderRadiusBottomRight}
+  ${borderRadiusTop}
+  ${borderRadiusBottom}
 `;

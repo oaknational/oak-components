@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakTooltip matches snapshot 1`] = `
+<div
+  className="sc-aXZVg sc-gEvEer iBTklz dnJeoC"
+>
+  <div
+    className="sc-aXZVg sc-gEvEer cBEgJK iQgtgu"
+    role="tooltip"
+  >
+    <div
+      className="sc-aXZVg sc-gEvEer sc-eqUAAy xkKAF dnJeoC hYnrwb"
+    >
+      Hello there
+      <svg
+        className="sc-fqkvVR kgkVhH"
+        height="16"
+        width="16"
+      >
+        <path
+          d="M0 0H16L8 8L0 16V0Z"
+        />
+      </svg>
+    </div>
+  </div>
+  Trigger!
+</div>
+`;

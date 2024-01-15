@@ -2,26 +2,26 @@
 
 exports[`OakPrimaryButton matches snapshot 1`] = `
 <div
-  className="sc-aXZVg sc-dLMFU cKKnNr hiGqQW button-wrapper"
+  className="sc-aXZVg sc-dLMFU gjBRlG hiGqQW button-wrapper"
 >
   <div
-    className="sc-aXZVg gEUKeC grey-shadow"
+    className="sc-aXZVg eMhXxX grey-shadow"
   />
   <div
-    className="sc-aXZVg gEUKeC yellow-shadow"
+    className="sc-aXZVg eMhXxX yellow-shadow"
   />
   <button
-    className="sc-jlZhew sc-cPiKLX cuFhvQ kLPvZM internal-button"
+    className="sc-jlZhew sc-cPiKLX fwbIkR kLPvZM internal-button"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     type="button"
   >
     <div
-      className="sc-aXZVg sc-gEvEer goWQoj OzInM"
+      className="sc-aXZVg sc-gEvEer dPEvkO OzInM"
     >
       <div
-        className="sc-aXZVg dTLJnG"
+        className="sc-aXZVg cgcTZj"
       >
         <img
           alt="arrow-right"
@@ -49,7 +49,7 @@ exports[`OakPrimaryButton matches snapshot 1`] = `
         />
       </div>
       <span
-        className="sc-eqUAAy jqQzuF"
+        className="sc-eqUAAy jHFWoD"
       >
         Click Me
       </span>

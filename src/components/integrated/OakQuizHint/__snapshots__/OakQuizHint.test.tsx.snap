@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakQuizHint matches snapshot 1`] = `
+[
+  <div
+    className="sc-aXZVg sc-gEvEer iBTklz dnJeoC"
+  >
+    <button
+      className="sc-jEACwC sc-eDPEul cxiCSm jIpyWh"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      type="button"
+    >
+      <div
+        className="sc-aXZVg sc-gEvEer kEIIQV OzInM"
+      >
+        <div
+          className="sc-aXZVg dNqVNp"
+        >
+          <div
+            className="sc-aXZVg jnxfJj"
+          >
+            <img
+              alt=""
+              className="sc-fqkvVR kHVsCf"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="https://undefined/undefined/v1705078631/icons/zldisxmbff36z68rwcef.svg"
+              style={
+                {
+                  "bottom": 0,
+                  "color": "transparent",
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
+        </div>
+        <span
+          className="sc-eqUAAy bUYyl"
+        >
+          Need a hint?
+        </span>
+      </div>
+    </button>
+  </div>,
+  ",",
+]
+`;

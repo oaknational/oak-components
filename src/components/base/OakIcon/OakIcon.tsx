@@ -50,6 +50,8 @@ export const oakIconNames = [
   "dot",
   "dot-png",
   "warning",
+  "lightbulb",
+  "lightbulb-yellow",
 ] as const;
 
 export type OakIconName = (typeof oakIconNames)[number];

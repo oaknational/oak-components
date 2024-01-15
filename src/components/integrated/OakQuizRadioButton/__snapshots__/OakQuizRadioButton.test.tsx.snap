@@ -2,11 +2,11 @@
 
 exports[`OakQuizRadioButton matches snapshot 1`] = `
 <div
-  className="sc-aXZVg sc-gEvEer sc-dLMFU iuOtXm jLIaXR dulAEB"
+  className="sc-aXZVg sc-gEvEer sc-dLMFU bodKXD jLIaXR dulAEB"
   onClick={[Function]}
 >
   <div
-    className="sc-aXZVg goWQoj"
+    className="sc-aXZVg dPEvkO"
   >
     <label
       className="sc-dAlyuH sc-jlZhew fNvgLA epcIrp"
@@ -21,7 +21,7 @@ exports[`OakQuizRadioButton matches snapshot 1`] = `
         value="Option 1"
       />
       <div
-        className="sc-aXZVg sc-gEvEer sc-jEACwC eiBoAG eIypJK iXjILk"
+        className="sc-aXZVg sc-gEvEer sc-jEACwC cSxuUX eIypJK iXjILk"
       />
       Radio option
     </label>

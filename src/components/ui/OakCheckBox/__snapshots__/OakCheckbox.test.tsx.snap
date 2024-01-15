@@ -9,10 +9,10 @@ exports[`OakCheckBox matches snapshot 1`] = `
   onMouseLeave={[Function]}
 >
   <div
-    className="sc-dcJsrY aPspN"
+    className="sc-dcJsrY hwgOs"
   >
     <input
-      className="sc-aXZVg sc-gEvEer sc-fqkvVR lbxHic gLsbmo tJZSL"
+      className="sc-aXZVg sc-gEvEer sc-fqkvVR eapjSX gLsbmo tJZSL"
       defaultChecked={false}
       disabled={false}
       id="checkbox-1"
@@ -23,10 +23,10 @@ exports[`OakCheckBox matches snapshot 1`] = `
       value="Option 1"
     />
     <div
-      className="sc-dcJsrY sc-eldPxv fiBLHw cCzUhO"
+      className="sc-dcJsrY sc-eldPxv dUhKlF cCzUhO"
     >
       <div
-        className="sc-dcJsrY hDOZRN"
+        className="sc-dcJsrY cOkRUk"
       >
         <img
           alt="tick"

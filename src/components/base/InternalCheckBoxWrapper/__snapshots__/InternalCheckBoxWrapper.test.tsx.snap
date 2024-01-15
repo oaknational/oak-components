@@ -3,7 +3,7 @@
 exports[`InternalCheckBoxWrapper matches snapshot 1`] = `
 [
   <div
-    className="sc-aXZVg dTLJnG"
+    className="sc-aXZVg cgcTZj"
   >
     <input
       data-testid="test-input"
@@ -12,7 +12,7 @@ exports[`InternalCheckBoxWrapper matches snapshot 1`] = `
       value="Option 1"
     />
     <div
-      className="sc-aXZVg sc-jlZhew dvhqmT nsmqb"
+      className="sc-aXZVg sc-jlZhew biXGJa nsmqb"
     >
       <div
         data-testid="test-icon"

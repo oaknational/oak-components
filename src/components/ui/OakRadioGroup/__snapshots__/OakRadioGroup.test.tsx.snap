@@ -2,14 +2,14 @@
 
 exports[`RadioGroup matches snapshot 1`] = `
 <div
-  className="sc-aXZVg sc-gEvEer goWQoj hnMCey"
+  className="sc-aXZVg sc-gEvEer dPEvkO hnMCey"
   role="radiogroup"
 >
   <label
     className="sc-dAlyuH bwhjDg"
   />
   <div
-    className="sc-aXZVg dXUUHk"
+    className="sc-aXZVg cCcRch"
   >
     <label
       className="sc-dAlyuH sc-jlZhew bwhjDg izhUcW"
@@ -26,13 +26,13 @@ exports[`RadioGroup matches snapshot 1`] = `
         value="1"
       />
       <div
-        className="sc-aXZVg sc-gEvEer sc-jEACwC RIWSy eIypJK estjvb"
+        className="sc-aXZVg sc-gEvEer sc-jEACwC kbYGZT eIypJK estjvb"
       />
       Option 1
     </label>
   </div>
   <div
-    className="sc-aXZVg dXUUHk"
+    className="sc-aXZVg cCcRch"
   >
     <label
       className="sc-dAlyuH sc-jlZhew bwhjDg izhUcW"
@@ -48,13 +48,13 @@ exports[`RadioGroup matches snapshot 1`] = `
         value="2"
       />
       <div
-        className="sc-aXZVg sc-gEvEer sc-jEACwC RIWSy eIypJK estjvb"
+        className="sc-aXZVg sc-gEvEer sc-jEACwC kbYGZT eIypJK estjvb"
       />
       Option 2
     </label>
   </div>
   <div
-    className="sc-aXZVg dXUUHk"
+    className="sc-aXZVg cCcRch"
   >
     <label
       className="sc-dAlyuH sc-jlZhew bwhjDg izhUcW"
@@ -70,7 +70,7 @@ exports[`RadioGroup matches snapshot 1`] = `
         value="3"
       />
       <div
-        className="sc-aXZVg sc-gEvEer sc-jEACwC RIWSy eIypJK estjvb"
+        className="sc-aXZVg sc-gEvEer sc-jEACwC kbYGZT eIypJK estjvb"
       />
       Option 3
     </label>

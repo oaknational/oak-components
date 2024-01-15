@@ -3,27 +3,27 @@
 exports[`OakQuizCheckBox matches snapshot 1`] = `
 [
   <div
-    className="sc-aXZVg sc-gEvEer PqAkw dnJeoC"
+    className="sc-aXZVg sc-gEvEer jBAFHB dnJeoC"
   >
     <div
-      className="sc-aXZVg sc-gEvEer sc-ikkxIA ilPKdM ksSdnF fQHFKu"
+      className="sc-aXZVg sc-gEvEer sc-ikkxIA cUJZzF ksSdnF fQHFKu"
       onClick={[Function]}
     >
       <div
-        className="sc-aXZVg sc-dAbbOL SmuNI cyAgdo grey-shadow"
+        className="sc-aXZVg sc-dAbbOL hzUdkx cyAgdo grey-shadow"
       />
       <div
-        className="sc-aXZVg sc-dAbbOL SmuNI cyAgdo yellow-shadow"
+        className="sc-aXZVg sc-dAbbOL hzUdkx cyAgdo yellow-shadow"
       />
       <label
         className="sc-dAlyuH sc-cwHptR sc-jEACwC sc-gFqAkR gNoDGX fCdzRU ksabAH gerWxj"
         htmlFor="checkbox-1"
       >
         <div
-          className="sc-aXZVg bUOWba"
+          className="sc-aXZVg gNRRHr"
         >
           <input
-            className="sc-cPiKLX sc-fPXMVe hmjKFt gWbGHr"
+            className="sc-cPiKLX sc-fPXMVe jugCJa gWbGHr"
             disabled={false}
             id="checkbox-1"
             name="checkbox-1"
@@ -33,13 +33,13 @@ exports[`OakQuizCheckBox matches snapshot 1`] = `
             value="Option 1"
           />
           <div
-            className="sc-aXZVg sc-jlZhew hvDZPq nsmqb"
+            className="sc-aXZVg sc-jlZhew hEtqXH nsmqb"
           >
             <div
-              className="sc-aXZVg gPYGme"
+              className="sc-aXZVg foENXr"
             >
               <div
-                className="sc-aXZVg hkPfcm"
+                className="sc-aXZVg UZQif"
               />
             </div>
           </div>

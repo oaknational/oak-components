@@ -1,0 +1,237 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakQuizBottomNav matches snapshot 1`] = `
+[
+  <div
+    className="sc-aXZVg sc-gEvEer sc-iHGNWf hctFYU iQpLSn clCXpd"
+  >
+    <div
+      className="sc-aXZVg sc-gEvEer iBTklz dnJeoC"
+    >
+      <button
+        className="sc-jEACwC sc-eDPEul cxiCSm jIpyWh"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        type="button"
+      >
+        <div
+          className="sc-aXZVg sc-gEvEer kEIIQV OzInM"
+        >
+          <div
+            className="sc-aXZVg dNqVNp"
+          >
+            <div
+              className="sc-aXZVg jnxfJj"
+            >
+              <img
+                alt=""
+                className="sc-fqkvVR kHVsCf"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="https://undefined/undefined/v1705078631/icons/zldisxmbff36z68rwcef.svg"
+                style={
+                  {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+              />
+            </div>
+          </div>
+          <span
+            className="sc-eqUAAy bUYyl"
+          >
+            Need a hint?
+          </span>
+        </div>
+      </button>
+    </div>
+    <div
+      className="sc-aXZVg sc-gEvEer haniGH kPptmY"
+    />
+  </div>,
+  <div
+    className="sc-aXZVg sc-gEvEer sc-iHGNWf hctFYU iQpLSn clCXpd"
+  >
+    <div
+      className="sc-aXZVg dPEvkO"
+    >
+      <div
+        className="sc-aXZVg sc-gEvEer dPEvkO lScBP"
+      >
+        <div
+          className="sc-aXZVg gSLHXh"
+        >
+          <div
+            className="sc-aXZVg jnxfJj"
+          >
+            <img
+              alt="tick"
+              className="sc-fqkvVR wpdFy"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="https://undefined/undefined/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
+              style={
+                {
+                  "bottom": 0,
+                  "color": "transparent",
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
+        </div>
+        <span
+          className="sc-eqUAAy fxSatT"
+        >
+          Correct
+        </span>
+      </div>
+      <p
+        className="sc-eqUAAy csTXOv"
+      >
+        Well done!
+      </p>
+    </div>
+    <div
+      className="sc-aXZVg sc-gEvEer haniGH kPptmY"
+    />
+  </div>,
+  <div
+    className="sc-aXZVg sc-gEvEer sc-iHGNWf hctFYU iQpLSn clCXpd"
+  >
+    <div
+      className="sc-aXZVg dPEvkO"
+    >
+      <div
+        className="sc-aXZVg sc-gEvEer dPEvkO lScBP"
+      >
+        <div
+          className="sc-aXZVg hUutdO"
+        >
+          <div
+            className="sc-aXZVg jnxfJj"
+          >
+            <img
+              alt="cross"
+              className="sc-fqkvVR wpdFy"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="https://undefined/undefined/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
+              style={
+                {
+                  "bottom": 0,
+                  "color": "transparent",
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
+        </div>
+        <span
+          className="sc-eqUAAy gOZZgo"
+        >
+          Incorrect
+        </span>
+      </div>
+      <p
+        className="sc-eqUAAy kPsyPT"
+      >
+        Keep trying
+      </p>
+    </div>
+    <div
+      className="sc-aXZVg sc-gEvEer haniGH kPptmY"
+    />
+  </div>,
+  <div
+    className="sc-aXZVg sc-gEvEer sc-iHGNWf hctFYU iQpLSn clCXpd"
+  >
+    <div
+      className="sc-aXZVg dPEvkO"
+    >
+      <div
+        className="sc-aXZVg sc-gEvEer dPEvkO lScBP"
+      >
+        <div
+          className="sc-aXZVg gSLHXh"
+        >
+          <div
+            className="sc-aXZVg jnxfJj"
+          >
+            <img
+              alt="tick"
+              className="sc-fqkvVR wpdFy"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="https://undefined/undefined/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
+              style={
+                {
+                  "bottom": 0,
+                  "color": "transparent",
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
+        </div>
+        <span
+          className="sc-eqUAAy fxSatT"
+        >
+          Correct
+        </span>
+      </div>
+      <p
+        className="sc-eqUAAy csTXOv"
+      >
+        Nearly there
+      </p>
+    </div>
+    <div
+      className="sc-aXZVg sc-gEvEer haniGH kPptmY"
+    />
+  </div>,
+]
+`;
