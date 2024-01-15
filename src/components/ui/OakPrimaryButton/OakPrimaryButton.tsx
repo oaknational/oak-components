@@ -17,6 +17,8 @@ export type OakPrimaryButtonProps = Pick<
   | "iconName"
   | "isTrailingIcon"
   | "type"
+  | "width"
+  | "maxWidth"
 >;
 
 export const OakPrimaryButton = (props: OakPrimaryButtonProps) => {

@@ -59,7 +59,7 @@ exports[`OakQuizBottomNav matches snapshot 1`] = `
       </button>
     </div>
     <div
-      className="sc-aXZVg sc-gEvEer haniGH kPptmY"
+      className="sc-aXZVg sc-gEvEer bkGhTK kPptmY"
     />
   </div>,
   <div
@@ -116,7 +116,7 @@ exports[`OakQuizBottomNav matches snapshot 1`] = `
       </p>
     </div>
     <div
-      className="sc-aXZVg sc-gEvEer haniGH kPptmY"
+      className="sc-aXZVg sc-gEvEer bkGhTK kPptmY"
     />
   </div>,
   <div
@@ -173,7 +173,7 @@ exports[`OakQuizBottomNav matches snapshot 1`] = `
       </p>
     </div>
     <div
-      className="sc-aXZVg sc-gEvEer haniGH kPptmY"
+      className="sc-aXZVg sc-gEvEer bkGhTK kPptmY"
     />
   </div>,
   <div
@@ -230,7 +230,7 @@ exports[`OakQuizBottomNav matches snapshot 1`] = `
       </p>
     </div>
     <div
-      className="sc-aXZVg sc-gEvEer haniGH kPptmY"
+      className="sc-aXZVg sc-gEvEer bkGhTK kPptmY"
     />
   </div>,
 ]
