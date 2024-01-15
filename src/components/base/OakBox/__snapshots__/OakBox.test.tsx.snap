@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component OakBox matches snapshot 1`] = `
+.c0 {
+  font-family: Lexend,sans-serif;
+}
+
 <div
-  className="sc-aXZVg dPEvkO"
+  className="c0"
 />
 `;

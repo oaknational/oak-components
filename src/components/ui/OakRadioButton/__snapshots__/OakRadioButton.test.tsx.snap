@@ -1,24 +1,127 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`RadioGroup matches snapshot 1`] = `
+.c0 {
+  font-family: Lexend,sans-serif;
+}
+
+.c3 {
+  color: #222222;
+  font-family: Lexend,sans-serif;
+}
+
+.c8 {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #ffffff;
+  border: 0.125rem solid;
+  border-color: #222222;
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.c2 {
+  font-family: Lexend,sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c4 {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c6 {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.c10 {
+  border-radius: 50%;
+}
+
+.c5:focus-visible ~ .c7::before {
+  content: "";
+  height: 2rem;
+  width: 2rem;
+  background: "transparent" display:block;
+  position: absolute;
+  border-radius: 50%;
+  border: 0.125rem solid #575757;
+  box-shadow: inset 0 0 0 0.13rem #ffe555;
+}
+
+.c5:checked ~ .c7::after {
+  content: "";
+  height: 1rem;
+  width: 1rem;
+  background: #222222;
+  position: absolute;
+  border-radius: 50%;
+  border: 0.125rem solid #ffffff;
+}
+
 <div
-  className="sc-aXZVg sc-gEvEer dPEvkO hnMCey"
+  className="c0 c1"
   role="radiogroup"
 >
   <label
-    className="sc-dAlyuH bwhjDg"
+    className="c2"
   />
   <div
-    className="sc-aXZVg cCcRch"
+    className="c3"
   >
     <label
-      className="sc-dAlyuH sc-jlZhew bwhjDg izhUcW"
+      className="c2 c4"
       data-testid="radio-1"
       htmlFor="radio-1"
     >
       <input
         checked={false}
-        className="sc-cwHptR frvrbm"
+        className="c5 c6"
         id="radio-1"
         name="test"
         onChange={[Function]}
@@ -26,21 +129,21 @@ exports[`RadioGroup matches snapshot 1`] = `
         value="1"
       />
       <div
-        className="sc-aXZVg sc-gEvEer sc-jEACwC kbYGZT eIypJK estjvb"
+        className="c7 c8 c9 c10"
       />
       Option 1
     </label>
   </div>
   <div
-    className="sc-aXZVg cCcRch"
+    className="c3"
   >
     <label
-      className="sc-dAlyuH sc-jlZhew bwhjDg izhUcW"
+      className="c2 c4"
       htmlFor="radio-2"
     >
       <input
         checked={false}
-        className="sc-cwHptR frvrbm"
+        className="c5 c6"
         id="radio-2"
         name="test"
         onChange={[Function]}
@@ -48,21 +151,21 @@ exports[`RadioGroup matches snapshot 1`] = `
         value="2"
       />
       <div
-        className="sc-aXZVg sc-gEvEer sc-jEACwC kbYGZT eIypJK estjvb"
+        className="c7 c8 c9 c10"
       />
       Option 2
     </label>
   </div>
   <div
-    className="sc-aXZVg cCcRch"
+    className="c3"
   >
     <label
-      className="sc-dAlyuH sc-jlZhew bwhjDg izhUcW"
+      className="c2 c4"
       htmlFor="radio-3"
     >
       <input
         checked={false}
-        className="sc-cwHptR frvrbm"
+        className="c5 c6"
         id="radio-3"
         name="test"
         onChange={[Function]}
@@ -70,7 +173,7 @@ exports[`RadioGroup matches snapshot 1`] = `
         value="3"
       />
       <div
-        className="sc-aXZVg sc-gEvEer sc-jEACwC kbYGZT eIypJK estjvb"
+        className="c7 c8 c9 c10"
       />
       Option 3
     </label>

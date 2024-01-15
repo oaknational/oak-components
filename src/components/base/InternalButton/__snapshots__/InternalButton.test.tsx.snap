@@ -1,8 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`InternalButton matches snapshot 1`] = `
+.c0 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: Lexend,sans-serif;
+}
+
+.c0:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
 <button
-  className="sc-aXZVg fCQWqS"
+  className="c0"
   onClick={[Function]}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
