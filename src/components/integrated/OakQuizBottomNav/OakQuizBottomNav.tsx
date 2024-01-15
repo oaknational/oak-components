@@ -63,6 +63,7 @@ export const OakQuizBottomNav = ({
         $height="fit-content"
         $alignSelf="flex-end"
         $justifyContent={["initial", "flex-end"]}
+        $width={["100%", "auto"]}
       >
         {children}
       </OakFlex>

@@ -39,6 +39,8 @@ export type InternalRectButtonProps = Omit<
   disabledBackground: OakCombinedColorToken;
   disabledBorderColor: OakCombinedColorToken;
   disabledTextColor: OakCombinedColorToken;
+  width?: SizeStyleProps["$width"];
+  maxWidth?: SizeStyleProps["$maxWidth"];
 } & PositionStyleProps;
 
 const StyledInternalButton = styled(InternalButton)<
@@ -88,8 +90,16 @@ const StyledButtonWrapper = styled(OakBox)`
 `;
 
 export const InternalRectButton = (props: InternalRectButtonProps) => {
-  const { children, iconName, isTrailingIcon, isLoading, disabled, ...rest } =
-    props;
+  const {
+    children,
+    iconName,
+    isTrailingIcon,
+    isLoading,
+    disabled,
+    width,
+    maxWidth,
+    ...rest
+  } = props;
 
   const icon = (
     <>
@@ -115,7 +125,12 @@ export const InternalRectButton = (props: InternalRectButtonProps) => {
   const iconLogic = <>{isLoading && !disabled ? loader : icon}</>;
 
   return (
-    <StyledButtonWrapper className="button-wrapper" $position={"relative"}>
+    <StyledButtonWrapper
+      className="button-wrapper"
+      $position={"relative"}
+      $width={width}
+      $maxWidth={maxWidth}
+    >
       <OakBox
         className="grey-shadow"
         $position={"absolute"}
@@ -151,6 +166,7 @@ export const InternalRectButton = (props: InternalRectButtonProps) => {
           $flexDirection={"row"}
           $alignItems={"center"}
           $gap="space-between-ssx"
+          $justifyContent="center"
         >
           {!isTrailingIcon && iconLogic}
           <OakSpan $font={"body-1-bold"}>{children}</OakSpan>

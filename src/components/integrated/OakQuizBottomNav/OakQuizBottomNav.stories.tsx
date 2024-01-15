@@ -50,7 +50,11 @@ export const Default: Story = {
 export const WithButton: Story = {
   render: (args) => (
     <OakQuizBottomNav {...args}>
-      <OakPrimaryButton iconName="arrow-right" isTrailingIcon>
+      <OakPrimaryButton
+        iconName="arrow-right"
+        isTrailingIcon
+        width={["100%", "auto"]}
+      >
         Continue
       </OakPrimaryButton>
     </OakQuizBottomNav>
@@ -60,7 +64,11 @@ export const WithButton: Story = {
 export const WithHintAndButton: Story = {
   render: (args) => (
     <OakQuizBottomNav {...args}>
-      <OakPrimaryButton iconName="arrow-right" isTrailingIcon>
+      <OakPrimaryButton
+        iconName="arrow-right"
+        isTrailingIcon
+        width={["100%", "auto"]}
+      >
         Continue
       </OakPrimaryButton>
     </OakQuizBottomNav>
@@ -74,17 +82,29 @@ export const WithFeedbackAndButton: Story = {
   render: (args) => (
     <>
       <OakQuizBottomNav {...args} feedback="correct">
-        <OakPrimaryButton iconName="arrow-right" isTrailingIcon>
+        <OakPrimaryButton
+          iconName="arrow-right"
+          isTrailingIcon
+          width={["100%", "auto"]}
+        >
           Continue
         </OakPrimaryButton>
       </OakQuizBottomNav>
       <OakQuizBottomNav {...args} feedback="incorrect">
-        <OakPrimaryButton iconName="arrow-right" isTrailingIcon>
+        <OakPrimaryButton
+          iconName="arrow-right"
+          isTrailingIcon
+          width={["100%", "auto"]}
+        >
           Continue
         </OakPrimaryButton>
       </OakQuizBottomNav>
       <OakQuizBottomNav {...args} feedback="partially-correct">
-        <OakPrimaryButton iconName="arrow-right" isTrailingIcon>
+        <OakPrimaryButton
+          iconName="arrow-right"
+          isTrailingIcon
+          width={["100%", "auto"]}
+        >
           Continue
         </OakPrimaryButton>
       </OakQuizBottomNav>

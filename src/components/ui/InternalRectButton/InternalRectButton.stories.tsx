@@ -7,6 +7,7 @@ import { oakIconNames } from "@/components/base/OakIcon";
 import { OakFlex } from "@/components/base";
 import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
+import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 
 const controlIconNames = [null, [...oakIconNames].sort()].flat();
 
@@ -50,6 +51,7 @@ const meta: Meta<typeof InternalRectButton> = {
     disabledBackground: colorArgTypes.$color,
     disabledBorderColor: colorArgTypes.$color,
     disabledTextColor: colorArgTypes.$color,
+    width: sizeArgTypes["$width"],
   },
   parameters: {
     controls: {
@@ -66,6 +68,7 @@ const meta: Meta<typeof InternalRectButton> = {
         "disabledBackground",
         "disabledBorderColor",
         "disabledTextColor",
+        "width",
         "type",
       ],
     },
