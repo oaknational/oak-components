@@ -2,8 +2,34 @@
 
 exports[`InternalCheckBoxWrapper matches snapshot 1`] = `
 [
-  <div
-    className="sc-aXZVg cgcTZj"
+  .c0 {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c2 {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c3 {
+  pointer-events: none;
+  opacity: 0;
+}
+
+input:checked + .c1 {
+  opacity: 1;
+}
+
+<div
+    className="c0"
   >
     <input
       data-testid="test-input"
@@ -12,7 +38,7 @@ exports[`InternalCheckBoxWrapper matches snapshot 1`] = `
       value="Option 1"
     />
     <div
-      className="sc-aXZVg sc-jlZhew biXGJa nsmqb"
+      className="c1 c2 c3"
     >
       <div
         data-testid="test-icon"

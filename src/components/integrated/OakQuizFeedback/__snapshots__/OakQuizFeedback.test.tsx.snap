@@ -2,21 +2,79 @@
 
 exports[`OakQuizFeedback matches snapshot 1`] = `
 [
-  <div
-    className="sc-aXZVg dPEvkO"
+  .c0 {
+  font-family: Lexend,sans-serif;
+}
+
+.c2 {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0rem;
+  background: #287c34;
+  border-radius: 6.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c3 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.c5 {
+  color: #287c34;
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c6 {
+  margin-top: 0.75rem;
+  font-family: Lexend,sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c4 {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  object-fit: contain;
+}
+
+<div
+    className="c0"
   >
     <div
-      className="sc-aXZVg sc-gEvEer dPEvkO lScBP"
+      className="c0 c1"
     >
       <div
-        className="sc-aXZVg gSLHXh"
+        className="c2"
       >
         <div
-          className="sc-aXZVg jnxfJj"
+          className="c3"
         >
           <img
             alt="tick"
-            className="sc-dcJsrY eRtzRJ"
+            className="c4"
             data-nimg="fill"
             decoding="async"
             loading="lazy"
@@ -41,32 +99,90 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
         </div>
       </div>
       <span
-        className="sc-eqUAAy fxSatT"
+        className="c5"
       >
         Correct
       </span>
     </div>
     <p
-      className="sc-eqUAAy csTXOv"
+      className="c6"
     >
       Well done!
     </p>
   </div>,
-  <div
-    className="sc-aXZVg dPEvkO"
+  .c0 {
+  font-family: Lexend,sans-serif;
+}
+
+.c3 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: Lexend,sans-serif;
+}
+
+.c2 {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0rem;
+  background: #dd0035;
+  border-radius: 6.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.c5 {
+  color: #dd0035;
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c6 {
+  margin-top: 0.75rem;
+  font-family: Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c4 {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  object-fit: contain;
+}
+
+<div
+    className="c0"
   >
     <div
-      className="sc-aXZVg sc-gEvEer dPEvkO lScBP"
+      className="c0 c1"
     >
       <div
-        className="sc-aXZVg hUutdO"
+        className="c2"
       >
         <div
-          className="sc-aXZVg jnxfJj"
+          className="c3"
         >
           <img
             alt="cross"
-            className="sc-dcJsrY eRtzRJ"
+            className="c4"
             data-nimg="fill"
             decoding="async"
             loading="lazy"
@@ -91,32 +207,90 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
         </div>
       </div>
       <span
-        className="sc-eqUAAy gOZZgo"
+        className="c5"
       >
         Incorrect
       </span>
     </div>
     <p
-      className="sc-eqUAAy kPsyPT"
+      className="c6"
     >
       Keep trying
     </p>
   </div>,
-  <div
-    className="sc-aXZVg dPEvkO"
+  .c0 {
+  font-family: Lexend,sans-serif;
+}
+
+.c2 {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0rem;
+  background: #287c34;
+  border-radius: 6.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c3 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.c5 {
+  color: #287c34;
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c6 {
+  margin-top: 0.75rem;
+  font-family: Lexend,sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c4 {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  object-fit: contain;
+}
+
+<div
+    className="c0"
   >
     <div
-      className="sc-aXZVg sc-gEvEer dPEvkO lScBP"
+      className="c0 c1"
     >
       <div
-        className="sc-aXZVg gSLHXh"
+        className="c2"
       >
         <div
-          className="sc-aXZVg jnxfJj"
+          className="c3"
         >
           <img
             alt="tick"
-            className="sc-dcJsrY eRtzRJ"
+            className="c4"
             data-nimg="fill"
             decoding="async"
             loading="lazy"
@@ -141,13 +315,13 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
         </div>
       </div>
       <span
-        className="sc-eqUAAy fxSatT"
+        className="c5"
       >
         Correct
       </span>
     </div>
     <p
-      className="sc-eqUAAy csTXOv"
+      className="c6"
     >
       Nearly there
     </p>

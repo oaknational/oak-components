@@ -1,18 +1,121 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakCheckBox matches snapshot 1`] = `
+.c4 {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  margin: 0;
+  outline: none;
+  border: 0.125rem solid;
+  border-color: #222222;
+  border-radius: 0.125rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.c4:checked {
+  background: #222222;
+}
+
+.c4:disabled {
+  pointer-events: none;
+}
+
+.c6:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
+}
+
+.c2 {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c8 {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c10 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: Lexend,sans-serif;
+}
+
+.c11 {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  object-fit: contain;
+}
+
+.c0 {
+  font-family: Lexend,sans-serif;
+  color: #222222;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c9 {
+  pointer-events: none;
+  opacity: 0;
+}
+
+input:checked + .c7 {
+  opacity: 1;
+}
+
+@media (hover:hover) {
+  .c5:hover:not(.c3:checked):not(.c3:disabled)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 60%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    border-radius: 0.125rem;
+    background: #222222;
+  }
+}
+
 <label
-  className="sc-cPiKLX sc-dLMFU drolBn dxcRFk"
+  className="c0 c1"
   disabled={false}
   htmlFor="checkbox-1"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
   <div
-    className="sc-dcJsrY hwgOs"
+    className="c2"
   >
     <input
-      className="sc-aXZVg sc-gEvEer sc-fqkvVR eapjSX gLsbmo tJZSL"
+      className="c3 c4 c5 c6"
       defaultChecked={false}
       disabled={false}
       id="checkbox-1"
@@ -23,14 +126,14 @@ exports[`OakCheckBox matches snapshot 1`] = `
       value="Option 1"
     />
     <div
-      className="sc-dcJsrY sc-eldPxv dUhKlF cCzUhO"
+      className="c7 c8 c9"
     >
       <div
-        className="sc-dcJsrY cOkRUk"
+        className="c10"
       >
         <img
           alt="tick"
-          className="sc-imWYAI riIre"
+          className="c11"
           data-nimg="fill"
           decoding="async"
           loading="lazy"

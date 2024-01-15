@@ -1,8 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`InternalCheckBoxLabel matches snapshot 1`] = `
+.c0 {
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 <label
-  className="sc-dAlyuH sc-jlZhew iDHxRc jGsLfY"
+  className="c0 c1"
   data-testid="test-1"
   htmlFor="checkbox-1"
 >

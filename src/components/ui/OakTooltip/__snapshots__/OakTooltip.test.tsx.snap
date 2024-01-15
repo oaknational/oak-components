@@ -1,19 +1,100 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakTooltip matches snapshot 1`] = `
+.c0 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-family: Lexend,sans-serif;
+}
+
+.c2 {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  -webkit-transform: translateY(calc(-100% - 16px));
+  -ms-transform: translateY(calc(-100% - 16px));
+  transform: translateY(calc(-100% - 16px));
+  font-family: Lexend,sans-serif;
+  z-index: 300;
+}
+
+.c4 {
+  position: relative;
+  max-width: 22.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #222222;
+  background: #ffe555;
+  border-bottom-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  font-family: Lexend,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c5 {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  pointer-events: none;
+}
+
+.c6 {
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  fill: #ffe555;
+}
+
+@media (min-width:750px) {
+  .c4 {
+    max-width: 40rem;
+  }
+}
+
 <div
-  className="sc-aXZVg sc-gEvEer iBTklz dnJeoC"
+  className="c0 c1"
 >
   <div
-    className="sc-aXZVg sc-gEvEer cBEgJK iQgtgu"
+    className="c2 c3"
     role="tooltip"
   >
     <div
-      className="sc-aXZVg sc-gEvEer sc-eqUAAy xkKAF dnJeoC hYnrwb"
+      className="c4 c1 c5"
     >
       Hello there
       <svg
-        className="sc-fqkvVR kgkVhH"
+        className="c6"
         height="16"
         width="16"
       >

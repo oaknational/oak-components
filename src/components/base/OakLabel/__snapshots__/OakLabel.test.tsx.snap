@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component OakLabel matches snapshot 1`] = `
+.c0 {
+  font-family: Lexend,sans-serif;
+}
+
 <label
-  className="sc-aXZVg dtQMNf"
+  className="c0"
 />
 `;

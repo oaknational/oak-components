@@ -1,27 +1,155 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakQuizRadioButton matches snapshot 1`] = `
+.c0 {
+  position: relative;
+  padding: 1.25rem;
+  background: #ffffff;
+  border-radius: 0.5rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c0:hover {
+  cursor: pointer;
+}
+
+.c3 {
+  font-family: Lexend,sans-serif;
+}
+
+.c9 {
+  width: 2rem;
+  height: 2rem;
+  background: #ffffff;
+  border: 0.125rem solid;
+  border-color: #222222;
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.c4 {
+  font-family: Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c5 {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c7 {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.c11 {
+  border-radius: 50%;
+}
+
+.c6:checked ~ .c8::after {
+  content: "";
+  height: 1.5rem;
+  width: 1.5rem;
+  background: #222222;
+  position: absolute;
+  border-radius: 50%;
+  border: 0.125rem solid #ffffff;
+}
+
+.c2:hover {
+  cursor: pointer;
+}
+
+.c2:focus-within {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c2:hover {
+  background-color: #dff9de;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c2:hover:not(:focus-within)::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 0.5rem;
+  border-bottom: 0.188rem solid #575757;
+}
+
 <div
-  className="sc-aXZVg sc-gEvEer sc-dLMFU bodKXD jLIaXR dulAEB"
+  className="c0 c1 c2"
   onClick={[Function]}
 >
   <div
-    className="sc-aXZVg dPEvkO"
+    className="c3"
   >
     <label
-      className="sc-dAlyuH sc-jlZhew fNvgLA epcIrp"
+      className="c4 c5"
       htmlFor="checkbox-1"
     >
       <input
         checked={false}
-        className="sc-cwHptR frvrbm"
+        className="c6 c7"
         id="checkbox-1"
         name="default"
         type="radio"
         value="Option 1"
       />
       <div
-        className="sc-aXZVg sc-gEvEer sc-jEACwC cSxuUX eIypJK iXjILk"
+        className="c8 c9 c10 c11"
       />
       Radio option
     </label>
