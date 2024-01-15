@@ -102,7 +102,7 @@ const StyledFlexBox = styled(OakFlex)<StyledFlexBoxProps>`
       height: 100%;
       pointer-events: none;
       position: absolute;
-      border: ${parseBorder("border-solid-l")};
+      outline: ${parseBorder("border-solid-xl")};
       border-radius: ${parseBorderRadius("border-radius-m2")};
    }
 
@@ -114,9 +114,9 @@ const StyledFlexBox = styled(OakFlex)<StyledFlexBoxProps>`
       height: 100%;
       pointer-events: none;
       position: absolute;
-      border: ${parseBorder("border-solid-l")};
+      outline: ${parseBorder("border-solid-xl")};
       border-radius: ${parseBorderRadius("border-radius-m2")};
-      border-color: ${(props) => css`
+      outline-color: ${(props) => css`
         ${parseColor(props.overlayBorderColor ?? "text-disabled")}
       `};
   }
