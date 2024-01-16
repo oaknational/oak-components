@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakBackLink matches snapshot 1`] = `
+.c1 {
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c2 {
+  object-fit: contain;
+}
+
+.c0 {
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: none;
+  padding: 0;
+  outline: none;
+}
+
+.c0 img {
+  pointer-events: none;
+}
+
+.c0:not(:disabled) {
+  cursor: pointer;
+}
+
+.c0:active {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.3rem 0.3rem 0 rgba(87,87,87,100%);
+}
+
+.c0:hover,
+.c0:focus-visible {
+  background: #222222;
+}
+
+.c0:hover img,
+.c0:focus-visible img {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+}
+
+.c0:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c0:disabled {
+  background: #808080;
+}
+
+.c0:disabled img {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+}
+
+<a
+  aria-label="Back"
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <img
+      alt=""
+      className="c2"
+      data-nimg="fill"
+      decoding="async"
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="https://undefined/undefined/v1699953962/icons/xpp10hijwzhyeqt6ylqf.svg"
+      style={
+        {
+          "bottom": 0,
+          "color": "transparent",
+          "height": "100%",
+          "left": 0,
+          "objectFit": undefined,
+          "objectPosition": undefined,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+</a>
+`;
