@@ -49,7 +49,9 @@ export const OakLessonTopNav = ({
 }: OakLessonTopNavProps) => {
   return (
     <OakFlex $gap="space-between-m" $alignItems="center">
-      {backLinkSlot}
+      <OakBox $pl={["inner-padding-none", "inner-padding-s"]}>
+        {backLinkSlot}
+      </OakBox>
       <OakFlex $flexGrow="none">
         <OakRoundIcon
           {...pickSectionIcon(lessonSectionName)}

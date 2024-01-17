@@ -50,10 +50,7 @@ export const OakLessonBottomNav = ({
   return (
     <StyledOakFlex
       $flexDirection={["column", "row"]}
-      $background={["bg-primary", "bg-decorative1-very-subdued"]}
       $pa="inner-padding-m"
-      $borderColor="border-inverted"
-      $bt="border-solid-xl"
       $minHeight="all-spacing-9"
       $gap="space-between-m"
     >

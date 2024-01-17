@@ -53,15 +53,18 @@ export const OakLessonLayout = ({
         $pt={["inner-padding-none", "inner-padding-m"]}
         $gap={["space-between-l", "space-between-xl"]}
       >
-        <OakBox
-          $pt="inner-padding-l"
-          $pb="inner-padding-l"
-          $pl={["inner-padding-m", "inner-padding-xs"]}
-          $pr={["inner-padding-m", "inner-padding-xl"]}
-          $background={["bg-primary", "transparent"]}
-        >
-          {topNavSlot}
-        </OakBox>
+        {topNavSlot && (
+          <OakBox
+            $pt="inner-padding-l"
+            $pb="inner-padding-l"
+            $pl={["inner-padding-m", "inner-padding-xs"]}
+            $pr={["inner-padding-m", "inner-padding-none"]}
+            $mr={["space-between-none", "space-between-l"]}
+            $background={["bg-primary", "transparent"]}
+          >
+            {topNavSlot}
+          </OakBox>
+        )}
         <OakFlex
           $flexGrow={1}
           $flexDirection="column"
@@ -69,9 +72,17 @@ export const OakLessonLayout = ({
         >
           {children}
         </OakFlex>
-        <StickyFooter $pt="inner-padding-ssx" $ph="inner-padding-ssx">
-          {bottomNavSlot}
-        </StickyFooter>
+        {bottomNavSlot && (
+          <StickyFooter
+            $pt="inner-padding-ssx"
+            $mh="space-between-sssx"
+            $borderColor="border-inverted"
+            $bt="border-solid-xl"
+            $background={["bg-primary", "bg-decorative1-very-subdued"]}
+          >
+            {bottomNavSlot}
+          </StickyFooter>
+        )}
       </OakFlex>
     </StyledLayoutBox>
   );
