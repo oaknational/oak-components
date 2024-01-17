@@ -129,8 +129,8 @@ export const InternalRoundButton = (props: InternalRoundButtonProps) => {
             props.disabled
               ? props.disabledIconColor
               : props.defaultIconColor
-              ? props.defaultIconColor
-              : null
+                ? props.defaultIconColor
+                : null
           }
         />
       )}
