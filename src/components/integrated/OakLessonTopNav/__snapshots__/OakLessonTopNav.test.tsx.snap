@@ -236,7 +236,7 @@ exports[`OakLessonTopNav matches snapshot 1`] = `
         className="c7"
       >
         <img
-          alt="signed-video-4"
+          alt="intro"
           className="c4"
           data-nimg="fill"
           decoding="async"

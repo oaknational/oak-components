@@ -78,22 +78,22 @@ function pickSectionIcon(
   switch (sectionName) {
     case "intro":
       return {
-        iconName: "signed-video-4",
+        iconName: "intro",
         $background: "aqua110",
       };
     case "starter-quiz":
       return {
-        iconName: "quiz-6",
+        iconName: "quiz",
         $background: "mint110",
       };
     case "video":
       return {
-        iconName: "video-3",
+        iconName: "video",
         $background: "pink110",
       };
     case "exit-quiz":
       return {
-        iconName: "quiz-6",
+        iconName: "quiz",
         $background: "lemon110",
       };
   }

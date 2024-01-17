@@ -52,9 +52,7 @@ export const oakIconNames = [
   "warning",
   "lightbulb",
   "lightbulb-yellow",
-  "signed-video-4",
-  "video-3",
-  "quiz-6",
+  "intro",
 ] as const;
 
 export type OakIconName = (typeof oakIconNames)[number];
