@@ -70,27 +70,22 @@ const StyledButtonWrapper = styled(OakBox)<{
   defaultIconBackground: OakCombinedColorToken;
   noHoverShadow?: boolean;
 }>`
-  .internal-button:focus-visible .grey-shadow {
-    box-shadow: ${parseDropShadow("drop-shadow-centered-grey")};
+  .internal-button:focus-visible .shadow {
+    box-shadow: ${parseDropShadow("drop-shadow-centered-yellow")},
+      ${parseDropShadow("drop-shadow-centered-grey")};
   }
-  .internal-button:hover .grey-shadow {
-    box-shadow: none;
-  }
-  .internal-button:active .grey-shadow {
-    box-shadow: ${parseDropShadow("drop-shadow-grey")};
-  }
-  .internal-button:focus-visible .yellow-shadow {
-    box-shadow: ${parseDropShadow("drop-shadow-centered-yellow")};
-  }
+
   ${(props) => css`
-    .internal-button:hover .yellow-shadow {
+    .internal-button:hover .shadow {
       box-shadow: ${props.noHoverShadow === true
         ? "none"
         : parseDropShadow("drop-shadow-yellow")};
     }
   `}
-  .internal-button:active .yellow-shadow {
-    box-shadow: ${parseDropShadow("drop-shadow-yellow")};
+
+  .internal-button:active .shadow {
+    box-shadow: ${parseDropShadow("drop-shadow-yellow")},
+      ${parseDropShadow("drop-shadow-grey")};
   }
 
   ${(props) => css`
@@ -129,8 +124,8 @@ export const InternalRoundButton = (props: InternalRoundButtonProps) => {
             props.disabled
               ? props.disabledIconColor
               : props.defaultIconColor
-                ? props.defaultIconColor
-                : null
+              ? props.defaultIconColor
+              : null
           }
         />
       )}
@@ -155,20 +150,13 @@ export const InternalRoundButton = (props: InternalRoundButtonProps) => {
       $minWidth={"all-spacing-8"}
     >
       <OakBox
-        className="grey-shadow"
+        className="shadow"
         $position={"absolute"}
         $borderRadius={"border-radius-circle"}
         $width={"100%"}
         $height={"100%"}
       />
 
-      <OakBox
-        className="yellow-shadow"
-        $position={"absolute"}
-        $borderRadius={"border-radius-circle"}
-        $width={"100%"}
-        $height={"100%"}
-      />
       {isLoading && !disabled ? loader : icon}
     </OakFlex>
   );
