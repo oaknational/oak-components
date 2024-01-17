@@ -16,7 +16,7 @@ const StyledOakFlex = styled(OakFlex)`
   box-sizing: content-box;
 `;
 
-export type OakQuizBottomNavProps = {
+export type OakLessonBottomNavProps = {
   children?: ReactNode;
   feedback?: OakQuizFeedbackProps["feedback"] | null;
   answerFeedback?: OakQuizFeedbackProps["answerFeedback"];
@@ -26,12 +26,12 @@ export type OakQuizBottomNavProps = {
 /**
  * Renders feedback for an answer and onward navigation buttons to continue the lesson
  */
-export const OakQuizBottomNav = ({
+export const OakLessonBottomNav = ({
   hint,
   feedback,
   answerFeedback,
   children,
-}: OakQuizBottomNavProps) => {
+}: OakLessonBottomNavProps) => {
   let content: ReactNode;
 
   switch (true) {
@@ -50,10 +50,7 @@ export const OakQuizBottomNav = ({
   return (
     <StyledOakFlex
       $flexDirection={["column", "row"]}
-      $background={["bg-primary", "bg-decorative1-very-subdued"]}
       $pa="inner-padding-m"
-      $borderColor="border-inverted"
-      $bt="border-solid-xl"
       $minHeight="all-spacing-9"
       $gap="space-between-m"
     >

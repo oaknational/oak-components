@@ -1,13 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OakQuizBottomNav matches snapshot 1`] = `
+exports[`OakLessonBottomNav matches snapshot 1`] = `
 [
   .c0 {
   min-height: 3rem;
   padding: 1rem;
-  background: #ffffff;
-  border-top: 0.25rem solid;
-  border-color: #ffffff;
   font-family: Lexend,sans-serif;
 }
 
@@ -146,12 +143,6 @@ exports[`OakQuizBottomNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c0 {
-    background: #ebfbeb;
-  }
-}
-
-@media (min-width:750px) {
   .c13 {
     width: auto;
   }
@@ -237,9 +228,6 @@ exports[`OakQuizBottomNav matches snapshot 1`] = `
   .c0 {
   min-height: 3rem;
   padding: 1rem;
-  background: #ffffff;
-  border-top: 0.25rem solid;
-  border-color: #ffffff;
   font-family: Lexend,sans-serif;
 }
 
@@ -343,12 +331,6 @@ exports[`OakQuizBottomNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c0 {
-    background: #ebfbeb;
-  }
-}
-
-@media (min-width:750px) {
   .c10 {
     width: auto;
   }
@@ -431,9 +413,6 @@ exports[`OakQuizBottomNav matches snapshot 1`] = `
   .c0 {
   min-height: 3rem;
   padding: 1rem;
-  background: #ffffff;
-  border-top: 0.25rem solid;
-  border-color: #ffffff;
   font-family: Lexend,sans-serif;
 }
 
@@ -537,12 +516,6 @@ exports[`OakQuizBottomNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c0 {
-    background: #ebfbeb;
-  }
-}
-
-@media (min-width:750px) {
   .c10 {
     width: auto;
   }
@@ -625,9 +598,6 @@ exports[`OakQuizBottomNav matches snapshot 1`] = `
   .c0 {
   min-height: 3rem;
   padding: 1rem;
-  background: #ffffff;
-  border-top: 0.25rem solid;
-  border-color: #ffffff;
   font-family: Lexend,sans-serif;
 }
 
@@ -728,12 +698,6 @@ exports[`OakQuizBottomNav matches snapshot 1`] = `
 
 .c2 {
   box-sizing: content-box;
-}
-
-@media (min-width:750px) {
-  .c0 {
-    background: #ebfbeb;
-  }
 }
 
 @media (min-width:750px) {

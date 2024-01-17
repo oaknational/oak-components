@@ -31,7 +31,7 @@ type Story = StoryObj<typeof OakThemeProvider>;
 export const DefaultOakThemeProvider: Story = () => (
   <OakThemeProvider theme={oakDefaultTheme}>
     <OakFlex
-      $background="bg-decorative1–main"
+      $background="bg-decorative1-main"
       $color="text-inverted"
       $ba="border-solid-m"
       $pa="inner-padding-xl"

@@ -25,7 +25,7 @@ export const oakDefaultTheme: OakTheme = {
     "bg-btn-secondary-disabled": "grey30",
     "bg-icon": "black",
     "bg-icon-hover": "grey60",
-    "bg-decorative1–main": "mint",
+    "bg-decorative1-main": "mint",
     "bg-decorative1-subdued": "mint50",
     "bg-decorative1-very-subdued": "mint30",
     "bg-decorative2-main": "aqua",
@@ -68,5 +68,6 @@ export const oakDefaultTheme: OakTheme = {
     "border-decorative5-stronger": "lemon110",
     "border-decorative6": "amber50",
     "border-decorative6-stronger": "amber",
+    transparent: "transparent",
   },
 };
