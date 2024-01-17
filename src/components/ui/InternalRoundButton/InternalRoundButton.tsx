@@ -33,7 +33,7 @@ export type InternalRoundButtonProps = Omit<
   iconName?: OakIconName;
   isTrailingIcon?: boolean;
   defaultTextColor: OakCombinedColorToken;
-  defaultIconBackground: OakRoundIconProps["$background"];
+  defaultIconBackground: OakCombinedColorToken;
   defaultIconColor?: OakRoundIconProps["$colorFilter"];
   hoverTextColor: OakCombinedColorToken;
   hoverIconBackground: OakCombinedColorToken;
@@ -67,6 +67,7 @@ const StyledInternalButton = styled(InternalButton)<
 const StyledButtonWrapper = styled(OakBox)<{
   disabledIconBackground: OakCombinedColorToken;
   hoverIconBackground: OakCombinedColorToken;
+  defaultIconBackground: OakCombinedColorToken;
   noHoverShadow?: boolean;
 }>`
   .internal-button:focus-visible .grey-shadow {
@@ -95,9 +96,12 @@ const StyledButtonWrapper = styled(OakBox)<{
   ${(props) => css`
     .internal-button:disabled .icon-container {
       background: ${parseColor(props.disabledIconBackground)};
-      .internal-button:hover .icon-container {
-        background: ${parseColor(props.hoverIconBackground)};
-        
+    }
+    .internal-button:hover .icon-container {
+      background: ${parseColor(props.hoverIconBackground)};
+    }
+    .internal-button:active .icon-container {
+      background: ${parseColor(props.defaultIconBackground)};
     }
   `}
 `;
@@ -125,8 +129,8 @@ export const InternalRoundButton = (props: InternalRoundButtonProps) => {
             props.disabled
               ? props.disabledIconColor
               : props.defaultIconColor
-                ? props.defaultIconColor
-                : null
+              ? props.defaultIconColor
+              : null
           }
         />
       )}
@@ -178,6 +182,7 @@ export const InternalRoundButton = (props: InternalRoundButtonProps) => {
       disabledIconBackground={props.disabledIconBackground}
       noHoverShadow={props.noHoverShadow}
       hoverIconBackground={props.hoverIconBackground}
+      defaultIconBackground={props.defaultIconBackground}
     >
       <StyledInternalButton
         className="internal-button"
