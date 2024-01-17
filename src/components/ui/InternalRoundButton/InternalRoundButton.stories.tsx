@@ -14,7 +14,7 @@ const controlIconNames = [null, [...oakIconNames].sort()].flat();
 /**
  *
  * A styled button with round icons, not intended to be used directly. 
- * Instead used by OakPrimaryButton and OakSecondaryButton.
+ * Instead used by OakTertiaryButton and OakHintButton.
  * 
  * The following callbacks are available for tracking focus events:
  *
