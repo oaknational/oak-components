@@ -1,0 +1,287 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakLessonTopNav matches snapshot 1`] = `
+.c0 {
+  font-family: Lexend,sans-serif;
+}
+
+.c3 {
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c6 {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.25rem;
+  background: #7cd8d0;
+  border-radius: 6.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c7 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: Lexend,sans-serif;
+}
+
+.c12 {
+  display: none;
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: none;
+  -webkit-flex-grow: none;
+  -ms-flex-positive: none;
+  flex-grow: none;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c9 {
+  font-family: Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c4 {
+  object-fit: contain;
+}
+
+.c8 {
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c2 {
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: none;
+  padding: 0;
+  outline: none;
+}
+
+.c2 img {
+  pointer-events: none;
+}
+
+.c2:not(:disabled) {
+  cursor: pointer;
+}
+
+.c2:active {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.3rem 0.3rem 0 rgba(87,87,87,100%);
+}
+
+.c2:hover,
+.c2:focus-visible {
+  background: #222222;
+}
+
+.c2:hover img,
+.c2:focus-visible img {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+}
+
+.c2:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c2:disabled {
+  background: #808080;
+}
+
+.c2:disabled img {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+}
+
+@media (min-width:750px) {
+  .c12 {
+    display: block;
+  }
+}
+
+@media (min-width:750px) {
+  .c8 {
+    font-weight: 600;
+  }
+}
+
+@media (min-width:750px) {
+  .c8 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c8 {
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c8 {
+    -webkit-letter-spacing: 0.0115rem;
+    -moz-letter-spacing: 0.0115rem;
+    -ms-letter-spacing: 0.0115rem;
+    letter-spacing: 0.0115rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c10 {
+    display: none;
+  }
+}
+
+<div
+  className="c0 c1"
+>
+  <a
+    aria-label="Back"
+    className="c2"
+    type="button"
+  >
+    <div
+      className="c3"
+    >
+      <img
+        alt=""
+        className="c4"
+        data-nimg="fill"
+        decoding="async"
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="https://undefined/undefined/v1699953962/icons/xpp10hijwzhyeqt6ylqf.svg"
+        style={
+          {
+            "bottom": 0,
+            "color": "transparent",
+            "height": "100%",
+            "left": 0,
+            "objectFit": undefined,
+            "objectPosition": undefined,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          }
+        }
+      />
+    </div>
+  </a>
+  <div
+    className="c0 c5"
+  >
+    <div
+      className="c6"
+    >
+      <div
+        className="c7"
+      >
+        <img
+          alt="intro"
+          className="c4"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="https://undefined/undefined/v1705416078/icons/dr0achdttjoe5b6lbcb7.svg"
+          style={
+            {
+              "bottom": 0,
+              "color": "transparent",
+              "height": "100%",
+              "left": 0,
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="c0"
+  >
+    <h1
+      className="c8"
+    >
+      Intro
+    </h1>
+    <span
+      className="c9 c10"
+    >
+      In progress&hellip;
+    </span>
+  </div>
+  <div
+    className="c0 c11"
+  >
+    <div
+      className="c12"
+    />
+  </div>
+</div>
+`;
