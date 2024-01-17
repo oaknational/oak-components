@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakHintButton matches snapshot 1`] = `
+<div
+  className="sc-aXZVg sc-dLMFU gjBRlG itOFWv button-wrapper"
+>
+  <button
+    className="sc-jlZhew sc-cPiKLX iUGYSi ePZxkz internal-button"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    type="button"
+  >
+    <div
+      className="sc-aXZVg sc-gEvEer dPEvkO joqyk"
+    >
+      <div
+        className="sc-aXZVg sc-gEvEer gaxuvh dxwVqi icon-container"
+      >
+        <div
+          className="sc-aXZVg fuRGYd grey-shadow"
+        />
+        <div
+          className="sc-aXZVg fuRGYd yellow-shadow"
+        />
+        <div
+          className="sc-aXZVg cgcTZj"
+        >
+          <img
+            alt="lightbulb"
+            className="sc-dcJsrY lrHNt"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="https://undefined/undefined/v1705078631/icons/zldisxmbff36z68rwcef.svg"
+            style={
+              {
+                "bottom": 0,
+                "color": "transparent",
+                "height": "100%",
+                "left": 0,
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": "100%",
+              }
+            }
+          />
+        </div>
+      </div>
+      <span
+        className="sc-eqUAAy jHFWoD"
+      >
+        Need a hint?
+      </span>
+    </div>
+  </button>
+</div>
+`;

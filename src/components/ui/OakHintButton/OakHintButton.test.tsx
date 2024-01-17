@@ -3,16 +3,14 @@ import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
 import { ThemeProvider } from "styled-components";
 
-import { OakTertiaryButton } from "./OakTertiaryButton";
+import { OakHintButton } from "./OakHintButton";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { oakDefaultTheme } from "@/styles";
 
-describe("OakTertiaryButton", () => {
+describe("OakHintButton", () => {
   it("renders", () => {
-    const { getByRole } = renderWithTheme(
-      <OakTertiaryButton>Click Me</OakTertiaryButton>,
-    );
+    const { getByRole } = renderWithTheme(<OakHintButton isOpen={false} />);
 
     expect(getByRole("button")).toBeInTheDocument();
   });
@@ -20,7 +18,7 @@ describe("OakTertiaryButton", () => {
   it("matches snapshot", () => {
     const tree = create(
       <ThemeProvider theme={oakDefaultTheme}>
-        <OakTertiaryButton>Click Me</OakTertiaryButton>
+        <OakHintButton isOpen={false} />
       </ThemeProvider>,
     ).toJSON();
 

@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InternalRoundButton matches snapshot 1`] = `
+<div
+  className="sc-aXZVg sc-dLMFU gjBRlG dVyrEX button-wrapper"
+>
+  <button
+    className="sc-jlZhew sc-cPiKLX FYAFW hGNMJN internal-button"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    type="button"
+  >
+    <div
+      className="sc-aXZVg sc-gEvEer dPEvkO joqyk"
+    >
+      <div
+        className="sc-aXZVg sc-gEvEer gxlaMs dxwVqi icon-container"
+      >
+        <div
+          className="sc-aXZVg fuRGYd grey-shadow"
+        />
+        <div
+          className="sc-aXZVg fuRGYd yellow-shadow"
+        />
+        <div
+          className="sc-aXZVg cgcTZj"
+        >
+          <img
+            alt="arrow-right"
+            className="sc-dcJsrY lrHNt"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="https://undefined/undefined/v1699895398/icons/fv0z57zerrioft52dd9n.svg"
+            style={
+              {
+                "bottom": 0,
+                "color": "transparent",
+                "height": "100%",
+                "left": 0,
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": "100%",
+              }
+            }
+          />
+        </div>
+      </div>
+      <span
+        className="sc-eqUAAy jHFWoD"
+      >
+        Click Me
+      </span>
+    </div>
+  </button>
+</div>
+`;

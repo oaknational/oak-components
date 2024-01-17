@@ -6,6 +6,7 @@ import { SizeStyleProps } from "@/styles/utils/sizeStyle";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { responsiveStyle } from "@/styles/utils/responsiveStyle";
 import { ColorStyleProps, colorStyle } from "@/styles/utils/colorStyle";
+import { OakCombinedColorToken } from "@/styles";
 
 const SpinnerKeyframe = keyframes`
   0% {
@@ -18,7 +19,7 @@ const SpinnerKeyframe = keyframes`
 `;
 
 export type OakLoadingSpinnerProps = Pick<SizeStyleProps, "$width"> &
-  ColorStyleProps;
+  ColorStyleProps & { loaderColor?: OakCombinedColorToken };
 
 const StyledLoadingSpinner = styled.span<OakLoadingSpinnerProps>`
   ${(props) =>
@@ -43,7 +44,15 @@ const StyledLoadingSpinner = styled.span<OakLoadingSpinnerProps>`
     margin: var(--thickness);
     border-radius: 50%;
     border: var(--thickness) solid currentcolor;
-    border-color: currentcolor currentcolor currentcolor transparent;
+    ${(props) =>
+      props.loaderColor
+        ? css`
+            border-color: ${props.loaderColor} ${props.loaderColor}
+              ${props.loaderColor} transparent;
+          `
+        : css`
+            border-color: currentcolor currentcolor currentcolor transparent;
+          `}
     animation: ${SpinnerKeyframe} 1.2s linear infinite;
   }
   ${colorStyle}

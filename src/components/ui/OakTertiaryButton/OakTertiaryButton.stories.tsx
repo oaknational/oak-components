@@ -12,7 +12,7 @@ const meta: Meta<typeof OakTertiaryButton> = {
   argTypes: {},
   parameters: {
     controls: {
-      include: ["iconName", "isTrailingIcon"],
+      include: ["iconName"],
     },
   },
   decorators: [(Story) => <OakFlex $gap="space-between-m">{Story()}</OakFlex>],
@@ -28,13 +28,9 @@ export const Default: Story = {
       <OakTertiaryButton {...args} disabled>
         Disabled Button
       </OakTertiaryButton>
-    </>
-  ),
-};
-
-export const WithIcon: Story = {
-  render: (args) => (
-    <>
+      <OakTertiaryButton {...args} isLoading>
+        Loading Button
+      </OakTertiaryButton>
       <OakTertiaryButton {...args}>Leading icon</OakTertiaryButton>
       <OakTertiaryButton {...args} isTrailingIcon>
         Trailing icon
@@ -42,6 +38,6 @@ export const WithIcon: Story = {
     </>
   ),
   args: {
-    iconName: "arrow-right",
+    iconName: "chevron-right",
   },
 };
