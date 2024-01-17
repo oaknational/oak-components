@@ -2,14 +2,6 @@
 
 exports[`OakQuizTextInput matches snapshot 1`] = `
 [
-<<<<<<< HEAD
-  <div
-    className="sc-aXZVg sc-gEvEer sc-koXPp dyiMma ftzkJO iiiHCi"
-    onClick={[Function]}
-  >
-    <input
-      className="sc-eeDRCY dgoclW"
-=======
   .c0 {
   position: relative;
   width: -webkit-fit-content;
@@ -120,7 +112,6 @@ exports[`OakQuizTextInput matches snapshot 1`] = `
   >
     <input
       className="c3"
->>>>>>> main
       defaultValue="An answer to a question"
       onFocus={[Function]}
       readOnly={false}

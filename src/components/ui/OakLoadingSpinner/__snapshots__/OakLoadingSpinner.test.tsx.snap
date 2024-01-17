@@ -41,11 +41,7 @@ exports[`OakLoadingSpinner matches snapshot 1`] = `
 }
 
 <span
-<<<<<<< HEAD
-  className="sc-gEvEer HCOsn"
-=======
   className="c0"
->>>>>>> main
 >
   <span
     className="c1"

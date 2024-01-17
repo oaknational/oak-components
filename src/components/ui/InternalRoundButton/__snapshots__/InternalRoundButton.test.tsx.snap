@@ -1,34 +1,186 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`InternalRoundButton matches snapshot 1`] = `
+.c0 {
+  position: relative;
+  font-family: Lexend,sans-serif;
+}
+
+.c4 {
+  font-family: Lexend,sans-serif;
+}
+
+.c6 {
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #ebfbeb;
+  background: #bef2bd;
+  border-radius: 6.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c8 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 6.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c9 {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c11 {
+  font-family: Lexend,sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c10 {
+  object-fit: contain;
+}
+
+.c2 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: Lexend,sans-serif;
+  color: #ebfbeb;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.c2:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c3 {
+  position: relative;
+}
+
+.c3:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: #f6e8a0;
+}
+
+.c3:active {
+  color: #ebfbeb;
+}
+
+.c3:disabled {
+  color: #cacaca;
+}
+
+.c1 .internal-button:focus-visible .grey-shadow {
+  box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c1 .internal-button:hover .grey-shadow {
+  box-shadow: none;
+}
+
+.c1 .internal-button:active .grey-shadow {
+  box-shadow: 0.3rem 0.3rem 0 rgba(87,87,87,100%);
+}
+
+.c1 .internal-button:focus-visible .yellow-shadow {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
+}
+
+.c1 .internal-button:hover .yellow-shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c1 .internal-button:active .yellow-shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c1 .internal-button:disabled .icon-container {
+  background: #f2f2f2;
+}
+
 <div
-  className="sc-aXZVg sc-dLMFU gjBRlG dVyrEX button-wrapper"
+  className="c0 c1 button-wrapper"
 >
   <button
-    className="sc-jlZhew sc-cPiKLX FYAFW hGNMJN internal-button"
+    className="c2 c3 internal-button"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     type="button"
   >
     <div
-      className="sc-aXZVg sc-gEvEer dPEvkO joqyk"
+      className="c4 c5"
     >
       <div
-        className="sc-aXZVg sc-gEvEer gxlaMs dxwVqi icon-container"
+        className="c6 c7 icon-container"
       >
         <div
-          className="sc-aXZVg fuRGYd grey-shadow"
+          className="c8 grey-shadow"
         />
         <div
-          className="sc-aXZVg fuRGYd yellow-shadow"
+          className="c8 yellow-shadow"
         />
         <div
-          className="sc-aXZVg cgcTZj"
+          className="c9"
         >
           <img
             alt="arrow-right"
-            className="sc-dcJsrY lrHNt"
+            className="c10"
             data-nimg="fill"
             decoding="async"
             loading="lazy"
@@ -53,7 +205,7 @@ exports[`InternalRoundButton matches snapshot 1`] = `
         </div>
       </div>
       <span
-        className="sc-eqUAAy jHFWoD"
+        className="c11"
       >
         Click Me
       </span>
