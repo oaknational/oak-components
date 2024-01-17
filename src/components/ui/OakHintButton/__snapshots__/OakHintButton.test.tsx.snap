@@ -154,7 +154,11 @@ exports[`OakHintButton matches snapshot 1`] = `
   background: #808080;
 }
 
-.c1 .internal-button:disabled .icon-container .internal-button:hover .icon-container {
+.c1 .internal-button:hover .icon-container {
+  background: #ffe555;
+}
+
+.c1 .internal-button:active .icon-container {
   background: #ffe555;
 }
 

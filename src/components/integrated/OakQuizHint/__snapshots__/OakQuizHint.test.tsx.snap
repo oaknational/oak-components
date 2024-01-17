@@ -175,8 +175,12 @@ exports[`OakQuizHint matches snapshot 1`] = `
   background: #808080;
 }
 
-.c3 .internal-button:disabled .icon-container .internal-button:hover .icon-container {
+.c3 .internal-button:hover .icon-container {
   background: #575757;
+}
+
+.c3 .internal-button:active .icon-container {
+  background: #222222;
 }
 
 <div

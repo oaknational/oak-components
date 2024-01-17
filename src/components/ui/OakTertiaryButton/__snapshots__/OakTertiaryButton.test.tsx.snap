@@ -143,8 +143,12 @@ exports[`OakTertiaryButton matches snapshot 1`] = `
   background: #808080;
 }
 
-.c1 .internal-button:disabled .icon-container .internal-button:hover .icon-container {
+.c1 .internal-button:hover .icon-container {
   background: #575757;
+}
+
+.c1 .internal-button:active .icon-container {
+  background: #222222;
 }
 
 <div

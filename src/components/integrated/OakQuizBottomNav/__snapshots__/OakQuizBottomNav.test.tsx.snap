@@ -221,8 +221,12 @@ exports[`OakQuizBottomNav matches snapshot 1`] = `
   background: #808080;
 }
 
-.c6 .internal-button:disabled .icon-container .internal-button:hover .icon-container {
+.c6 .internal-button:hover .icon-container {
   background: #575757;
+}
+
+.c6 .internal-button:active .icon-container {
+  background: #222222;
 }
 
 .c2 {
