@@ -42,6 +42,7 @@ export const oakColorTokens = {
   magenta: "#d02aa7",
   purple: "#845ad9",
   teal: "#037b7d",
+  transparent: "transparent",
 };
 
 export type OakColorToken = keyof typeof oakColorTokens;
@@ -91,7 +92,7 @@ export const oakUiRoleTokens = [
   "bg-btn-secondary-disabled",
   "bg-icon",
   "bg-icon-hover",
-  "bg-decorative1–main",
+  "bg-decorative1-main",
   "bg-decorative1-subdued",
   "bg-decorative1-very-subdued",
   "bg-decorative2-main",
@@ -134,6 +135,7 @@ export const oakUiRoleTokens = [
   "border-decorative5-stronger",
   "border-decorative6",
   "border-decorative6-stronger",
+  "transparent",
 ] as const;
 
 export type OakUiRoleToken = (typeof oakUiRoleTokens)[number];

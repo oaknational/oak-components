@@ -1,15 +1,15 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakQuizBottomNav } from "./OakQuizBottomNav";
+import { OakLessonBottomNav } from "./OakLessonBottomNav";
 
 import { OakFlex } from "@/components/base";
 import { OakPrimaryButton } from "@/components/ui";
 
-const meta: Meta<typeof OakQuizBottomNav> = {
-  component: OakQuizBottomNav,
+const meta: Meta<typeof OakLessonBottomNav> = {
+  component: OakLessonBottomNav,
   tags: ["autodocs"],
-  title: "components/integrated/OakQuizBottomNav",
+  title: "components/integrated/OakLessonBottomNav",
   decorators: [
     (Story) => (
       <OakFlex
@@ -41,15 +41,15 @@ const meta: Meta<typeof OakQuizBottomNav> = {
 };
 export default meta;
 
-type Story = StoryObj<typeof OakQuizBottomNav>;
+type Story = StoryObj<typeof OakLessonBottomNav>;
 
 export const Default: Story = {
-  render: (args) => <OakQuizBottomNav {...args} />,
+  render: (args) => <OakLessonBottomNav {...args} />,
 };
 
 export const WithButton: Story = {
   render: (args) => (
-    <OakQuizBottomNav {...args}>
+    <OakLessonBottomNav {...args}>
       <OakPrimaryButton
         iconName="arrow-right"
         isTrailingIcon
@@ -57,13 +57,13 @@ export const WithButton: Story = {
       >
         Continue
       </OakPrimaryButton>
-    </OakQuizBottomNav>
+    </OakLessonBottomNav>
   ),
 };
 
 export const WithHintAndButton: Story = {
   render: (args) => (
-    <OakQuizBottomNav {...args}>
+    <OakLessonBottomNav {...args}>
       <OakPrimaryButton
         iconName="arrow-right"
         isTrailingIcon
@@ -71,7 +71,7 @@ export const WithHintAndButton: Story = {
       >
         Continue
       </OakPrimaryButton>
-    </OakQuizBottomNav>
+    </OakLessonBottomNav>
   ),
   args: {
     hint: "A football and an orange are both sphere shaped, like Earth.",
@@ -81,7 +81,7 @@ export const WithHintAndButton: Story = {
 export const WithFeedbackAndButton: Story = {
   render: (args) => (
     <>
-      <OakQuizBottomNav {...args} feedback="correct">
+      <OakLessonBottomNav {...args} feedback="correct">
         <OakPrimaryButton
           iconName="arrow-right"
           isTrailingIcon
@@ -89,8 +89,8 @@ export const WithFeedbackAndButton: Story = {
         >
           Continue
         </OakPrimaryButton>
-      </OakQuizBottomNav>
-      <OakQuizBottomNav {...args} feedback="incorrect">
+      </OakLessonBottomNav>
+      <OakLessonBottomNav {...args} feedback="incorrect">
         <OakPrimaryButton
           iconName="arrow-right"
           isTrailingIcon
@@ -98,8 +98,8 @@ export const WithFeedbackAndButton: Story = {
         >
           Continue
         </OakPrimaryButton>
-      </OakQuizBottomNav>
-      <OakQuizBottomNav {...args} feedback="partially-correct">
+      </OakLessonBottomNav>
+      <OakLessonBottomNav {...args} feedback="partially-correct">
         <OakPrimaryButton
           iconName="arrow-right"
           isTrailingIcon
@@ -107,7 +107,7 @@ export const WithFeedbackAndButton: Story = {
         >
           Continue
         </OakPrimaryButton>
-      </OakQuizBottomNav>
+      </OakLessonBottomNav>
     </>
   ),
   args: {
