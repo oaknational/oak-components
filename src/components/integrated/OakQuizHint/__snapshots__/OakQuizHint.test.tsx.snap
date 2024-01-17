@@ -147,28 +147,16 @@ exports[`OakQuizHint matches snapshot 1`] = `
   color: #808080;
 }
 
-.c3 .internal-button:focus-visible .grey-shadow {
-  box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
+.c3 .internal-button:focus-visible .shadow {
+  box-shadow: 0 0 0 0.125rem #ffe555, 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c3 .internal-button:hover .grey-shadow {
-  box-shadow: none;
+.c3 .internal-button:hover .shadow {
+  box-shadow: 0.125rem 0.125rem 0 #ffe555;
 }
 
-.c3 .internal-button:active .grey-shadow {
-  box-shadow: 0.3rem 0.3rem 0 rgba(87,87,87,100%);
-}
-
-.c3 .internal-button:focus-visible .yellow-shadow {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
-}
-
-.c3 .internal-button:hover .yellow-shadow {
-  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
-}
-
-.c3 .internal-button:active .yellow-shadow {
-  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+.c3 .internal-button:active .shadow {
+  box-shadow: 0.125rem 0.125rem 0 #ffe555, 0.3rem 0.3rem 0 rgba(87,87,87,100%);
 }
 
 .c3 .internal-button:disabled .icon-container {
@@ -203,10 +191,7 @@ exports[`OakQuizHint matches snapshot 1`] = `
             className="c8 c9 icon-container"
           >
             <div
-              className="c10 grey-shadow"
-            />
-            <div
-              className="c10 yellow-shadow"
+              className="c10 shadow"
             />
             <div
               className="c11"

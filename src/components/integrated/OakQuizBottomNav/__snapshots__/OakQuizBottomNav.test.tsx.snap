@@ -193,28 +193,16 @@ exports[`OakQuizBottomNav matches snapshot 1`] = `
   color: #808080;
 }
 
-.c6 .internal-button:focus-visible .grey-shadow {
-  box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
+.c6 .internal-button:focus-visible .shadow {
+  box-shadow: 0 0 0 0.125rem #ffe555, 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c6 .internal-button:hover .grey-shadow {
-  box-shadow: none;
+.c6 .internal-button:hover .shadow {
+  box-shadow: 0.125rem 0.125rem 0 #ffe555;
 }
 
-.c6 .internal-button:active .grey-shadow {
-  box-shadow: 0.3rem 0.3rem 0 rgba(87,87,87,100%);
-}
-
-.c6 .internal-button:focus-visible .yellow-shadow {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
-}
-
-.c6 .internal-button:hover .yellow-shadow {
-  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
-}
-
-.c6 .internal-button:active .yellow-shadow {
-  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+.c6 .internal-button:active .shadow {
+  box-shadow: 0.125rem 0.125rem 0 #ffe555, 0.3rem 0.3rem 0 rgba(87,87,87,100%);
 }
 
 .c6 .internal-button:disabled .icon-container {
@@ -285,10 +273,7 @@ exports[`OakQuizBottomNav matches snapshot 1`] = `
               className="c11 c12 icon-container"
             >
               <div
-                className="c13 grey-shadow"
-              />
-              <div
-                className="c13 yellow-shadow"
+                className="c13 shadow"
               />
               <div
                 className="c14"

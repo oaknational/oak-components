@@ -25,7 +25,7 @@ exports[`OakCheckBox matches snapshot 1`] = `
 }
 
 .c6:focus-visible {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
+  box-shadow: 0 0 0 0.125rem #ffe555;
 }
 
 .c2 {
