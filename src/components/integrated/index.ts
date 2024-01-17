@@ -6,3 +6,4 @@ export * from "./OakLessonBottomNav";
 export * from "./OakLessonTopNav";
 export * from "./OakQuizFeedback";
 export * from "./OakQuizCounter";
+export * from "./OakLessonLayout";
