@@ -5,9 +5,10 @@ import { OakLessonTopNav } from "../OakLessonTopNav";
 import { OakLessonBottomNav } from "../OakLessonBottomNav";
 import { OakQuizCounter } from "../OakQuizCounter";
 
-import { OakLessonLayout } from "./OakLessonLayout";
+import { OakLessonLayout, OakLessonLayoutProps } from "./OakLessonLayout";
 
 import { OakBackLink, OakPrimaryButton } from "@/components/ui";
+import { OakBox } from "@/components/base";
 
 const meta: Meta<typeof OakLessonLayout> = {
   component: OakLessonLayout,
@@ -16,46 +17,72 @@ const meta: Meta<typeof OakLessonLayout> = {
   decorators: [(Story) => <Story />],
   parameters: {
     controls: {
-      include: ["contentHeight"],
+      include: ["lessonSectionName"],
     },
     layout: "fullscreen",
+  },
+  args: {
+    lessonSectionName: "intro",
   },
 };
 export default meta;
 
 type Story = StoryObj<typeof OakLessonLayout>;
 
+const headings: Record<
+  Exclude<OakLessonLayoutProps["lessonSectionName"], "overview">,
+  string
+> = {
+  intro: "Intro",
+  "starter-quiz": "Starter Quiz",
+  video: "Video",
+  "exit-quiz": "Exit Quiz",
+};
+
+const mobileSumamry: Record<
+  Exclude<OakLessonLayoutProps["lessonSectionName"], "overview">,
+  string
+> = {
+  intro: "In progress...",
+  "starter-quiz": "Question 1 of 6",
+  video: "In progress...",
+  "exit-quiz": "Question 1 of 6",
+};
+
 export const Default: Story = {
-  render: (args) => (
+  render: ({ lessonSectionName, ...args }) => (
     <OakLessonLayout
       {...args}
+      lessonSectionName={lessonSectionName}
       topNavSlot={
-        <OakLessonTopNav
-          lessonSectionName="intro"
-          backLinkSlot={<OakBackLink type="button" />}
-          heading="Intro"
-          mobileSummary="Introduction to the lesson"
-          counterSlot={<OakQuizCounter counter={1} total={6} />}
-        />
+        lessonSectionName !== "overview" ? (
+          <OakLessonTopNav
+            lessonSectionName={lessonSectionName}
+            backLinkSlot={<OakBackLink type="button" />}
+            heading={headings[lessonSectionName]}
+            mobileSummary={mobileSumamry[lessonSectionName]}
+            counterSlot={
+              lessonSectionName === "exit-quiz" ||
+              lessonSectionName === "starter-quiz" ? (
+                <OakQuizCounter counter={1} total={6} />
+              ) : null
+            }
+          />
+        ) : null
       }
       bottomNavSlot={
         <OakLessonBottomNav>
-          <OakPrimaryButton width={["100%", "auto"]}>
-            Start lesson
-          </OakPrimaryButton>
+          <OakPrimaryButton width={["100%", "auto"]}>Button</OakPrimaryButton>
         </OakLessonBottomNav>
       }
     >
-      {Array.from({ length: 20 }, (_, i) => (
-        <p key={i}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          rhoncus risus velit, vitae accumsan odio convallis sit amet. Sed dui
-          est, elementum a varius vitae, molestie at mi. Donec dignissim
-          scelerisque nulla ut posuere. Aliquam consequat consectetur lorem, ut
-          pellentesque tellus tincidunt pharetra. Nunc tempor ultricies risus
-          eget pharetra.
-        </p>
-      ))}
+      <OakBox
+        $height="all-spacing-24"
+        $ba="border-solid-xl"
+        $borderColor="black"
+      >
+        <p>Section content</p>
+      </OakBox>
     </OakLessonLayout>
   ),
 };
