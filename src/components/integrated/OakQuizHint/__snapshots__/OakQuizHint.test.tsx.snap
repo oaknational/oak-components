@@ -5,55 +5,65 @@ exports[`OakQuizHint matches snapshot 1`] = `
   <div
     className="sc-aXZVg sc-gEvEer iBTklz dnJeoC"
   >
-    <button
-      className="sc-jEACwC sc-eDPEul cxiCSm jIpyWh"
-      onClick={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      type="button"
+    <div
+      className="sc-aXZVg sc-eldPxv gjBRlG gGJweq button-wrapper"
     >
-      <div
-        className="sc-aXZVg sc-gEvEer kEIIQV OzInM"
+      <button
+        className="sc-jEACwC sc-eDPEul gXDRhl foLnqP internal-button"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        type="button"
       >
         <div
-          className="sc-aXZVg dNqVNp"
+          className="sc-aXZVg sc-gEvEer dPEvkO joqyk"
         >
           <div
-            className="sc-aXZVg jnxfJj"
+            className="sc-aXZVg sc-gEvEer ixCLal dxwVqi icon-container"
           >
-            <img
-              alt=""
-              className="sc-fqkvVR kHVsCf"
-              data-nimg="fill"
-              decoding="async"
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              src="https://undefined/undefined/v1705078631/icons/zldisxmbff36z68rwcef.svg"
-              style={
-                {
-                  "bottom": 0,
-                  "color": "transparent",
-                  "height": "100%",
-                  "left": 0,
-                  "objectFit": undefined,
-                  "objectPosition": undefined,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
+            <div
+              className="sc-aXZVg fuRGYd grey-shadow"
             />
+            <div
+              className="sc-aXZVg fuRGYd yellow-shadow"
+            />
+            <div
+              className="sc-aXZVg cgcTZj"
+            >
+              <img
+                alt="lightbulb"
+                className="sc-fqkvVR wpdFy"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="https://undefined/undefined/v1705078631/icons/zldisxmbff36z68rwcef.svg"
+                style={
+                  {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+              />
+            </div>
           </div>
+          <span
+            className="sc-eqUAAy jHFWoD"
+          >
+            Need a hint?
+          </span>
         </div>
-        <span
-          className="sc-eqUAAy bUYyl"
-        >
-          Need a hint?
-        </span>
-      </div>
-    </button>
+      </button>
+    </div>
   </div>,
   ",",
 ]

@@ -3,11 +3,11 @@
 exports[`OakQuizTextInput matches snapshot 1`] = `
 [
   <div
-    className="sc-aXZVg sc-gEvEer sc-eeDRCY dyiMma ftzkJO chFYLu"
+    className="sc-aXZVg sc-gEvEer sc-koXPp dyiMma ftzkJO iiiHCi"
     onClick={[Function]}
   >
     <input
-      className="sc-jsJBEP kpslra"
+      className="sc-eeDRCY dgoclW"
       defaultValue="An answer to a question"
       onFocus={[Function]}
       readOnly={false}
