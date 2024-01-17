@@ -1,8 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`InternalCheckBox matches snapshot 1`] = `
+.c0 {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  margin: 0;
+  outline: none;
+  border: 0.125rem solid;
+  border-color: #222222;
+  border-radius: 0.125rem;
+}
+
+.c0:checked {
+  background: #222222;
+}
+
+.c0:disabled {
+  pointer-events: none;
+}
+
 <input
-  className="sc-aXZVg biWKGi"
+  className="c0"
   id="checkbox-1"
   name="checkbox-1"
   onMouseEnter={[Function]}

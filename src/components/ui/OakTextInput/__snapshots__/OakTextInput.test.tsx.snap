@@ -2,12 +2,116 @@
 
 exports[`OakTextInput matches snapshot 1`] = `
 [
-  <div
-    className="sc-gEvEer sc-eqUAAy sc-cwHptR hEQZUC kUreFU bmxVLQ"
+  .c3 {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  border: 0;
+  border-radius: 0;
+  border-color: transparent;
+  box-shadow: none;
+  font-family: inherit;
+  background: transparent;
+  outline: none;
+  color: inherit;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  height: 4.5rem;
+}
+
+.c3::-webkit-input-placeholder {
+  color: #575757;
+}
+
+.c3::-moz-placeholder {
+  color: #575757;
+}
+
+.c3:-ms-input-placeholder {
+  color: #575757;
+}
+
+.c3::placeholder {
+  color: #575757;
+}
+
+.c3::-webkit-search-decoration,
+.c3::-webkit-search-cancel-button,
+.c3::-webkit-search-results-button,
+.c3::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c3:disabled {
+  cursor: not-allowed;
+}
+
+.c0 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  color: #222222;
+  background: #ffffff;
+  border: 0.125rem solid;
+  border-color: #222222;
+  border-radius: 0.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c0:hover {
+  cursor: pointer;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.c2 {
+  background: #ffffff;
+}
+
+.c2:hover {
+  cursor: text;
+}
+
+.c2:focus-within {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+@media (max-width:750px) {
+  .c3 {
+    font-size: 16px;
+  }
+}
+
+@media (hover:hover) {
+  .c2:hover:not(:focus-within) {
+    background: #f2f2f2;
+  }
+}
+
+<div
+    className="c0 c1 c2"
     onClick={[Function]}
   >
     <input
-      className="sc-aXZVg htVdEQ"
+      className="c3"
       defaultValue="A nice text value"
       onFocus={[Function]}
       type="text"

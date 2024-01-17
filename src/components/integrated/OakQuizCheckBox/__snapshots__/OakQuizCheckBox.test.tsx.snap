@@ -2,28 +2,266 @@
 
 exports[`OakQuizCheckBox matches snapshot 1`] = `
 [
-  <div
-    className="sc-aXZVg sc-gEvEer jBAFHB dnJeoC"
+  .c0 {
+  position: relative;
+  width: 100%;
+  font-family: Lexend,sans-serif;
+}
+
+.c2 {
+  padding: 1.25rem;
+  background: #ffffff;
+  border-color: #222222;
+  border-radius: 0.5rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c2:hover {
+  cursor: pointer;
+}
+
+.c5 {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c12 {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c16 {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c18 {
+  width: 100%;
+  height: 100%;
+  background: #222222;
+  font-family: Lexend,sans-serif;
+}
+
+.c19 {
+  width: 100%;
+  height: 100%;
+  border: 0.125rem solid;
+  border-color: #ffffff;
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c8 {
+  font-family: Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+  color: #222222;
+}
+
+.c17 {
+  pointer-events: none;
+  opacity: 0;
+}
+
+input:checked + .c15 {
+  opacity: 1;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c10 {
+  cursor: pointer;
+}
+
+.c13 {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  margin: 0;
+  outline: none;
+  border: 0.125rem solid;
+  border-color: #808080;
+  border-radius: 0.25rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.c13:disabled {
+  pointer-events: none;
+}
+
+.c14:checked:not(:disabled) {
+  border: 0.188rem solid;
+  border-color: #222222;
+}
+
+.c14:checked:disabled {
+  border: 0.188rem solid;
+  border-color: #808080;
+}
+
+.c11 {
+  pointer-events: none;
+}
+
+.c4:has(input:not(:disabled)) {
+  cursor: pointer;
+}
+
+.c4:has(input:disabled) {
+  pointer-events: none;
+  cursor: none;
+}
+
+.c6 {
+  pointer-events: none;
+}
+
+@media (hover:hover) {
+  .c10:hover {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+  }
+}
+
+@media (hover:hover) {
+  .c14:hover:not(:disabled) {
+    background: #ffffff;
+  }
+}
+
+@media (hover:hover) {
+  .c4:hover:has(input:not(:disabled)) {
+    background-color: #dff9de;
+  }
+
+  .c4:hover input:not(:disabled) {
+    background: #ffffff;
+  }
+
+  .c4:hover:has(input:not(:disabled)) .c7 {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+  }
+
+  .c4:hover:has( .c7 input:not(:focus-visible):not(:checked):not(:disabled) )::after {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    position: absolute;
+    border-bottom: 0.25rem solid;
+    border-radius: 0.5rem;
+  }
+
+  .c4 .yellow-shadow:has( + .c7 input:focus-visible ) {
+    box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
+  }
+
+  .c4 .grey-shadow:has( ~ .c7 input:focus-visible ) {
+    box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
+  }
+
+  .c4:has(input:checked:not(:disabled))::after {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    position: absolute;
+    outline: 0.25rem solid;
+    border-radius: 0.5rem;
+  }
+
+  .c4:has(input:checked:disabled)::after {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    position: absolute;
+    outline: 0.25rem solid;
+    border-radius: 0.5rem;
+    outline-color: #808080;
+  }
+}
+
+<div
+    className="c0 c1"
   >
     <div
-      className="sc-aXZVg sc-gEvEer sc-ikkxIA cUJZzF ksSdnF fQHFKu"
+      className="c2 c3 c4"
       onClick={[Function]}
     >
       <div
-        className="sc-aXZVg sc-dAbbOL hzUdkx cyAgdo grey-shadow"
+        className="c5 c6 grey-shadow"
       />
       <div
-        className="sc-aXZVg sc-dAbbOL hzUdkx cyAgdo yellow-shadow"
+        className="c5 c6 yellow-shadow"
       />
       <label
-        className="sc-dAlyuH sc-cwHptR sc-jEACwC sc-gFqAkR gNoDGX fCdzRU ksabAH gerWxj"
+        className="c7 c8 c9 c10 c11"
         htmlFor="checkbox-1"
       >
         <div
-          className="sc-aXZVg gNRRHr"
+          className="c12"
         >
           <input
-            className="sc-cPiKLX sc-fPXMVe jugCJa gWbGHr"
+            className="c13 c14"
             disabled={false}
             id="checkbox-1"
             name="checkbox-1"
@@ -33,13 +271,13 @@ exports[`OakQuizCheckBox matches snapshot 1`] = `
             value="Option 1"
           />
           <div
-            className="sc-aXZVg sc-jlZhew hEtqXH nsmqb"
+            className="c15 c16 c17"
           >
             <div
-              className="sc-aXZVg foENXr"
+              className="c18"
             >
               <div
-                className="sc-aXZVg UZQif"
+                className="c19"
               />
             </div>
           </div>

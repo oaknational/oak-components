@@ -1,7 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakAnchorTarget matches snapshot 1`] = `
+.c0 {
+  position: absolute;
+  top: 0;
+}
+
 <span
-  className="sc-aXZVg hiakbw"
+  className="c0"
 />
 `;

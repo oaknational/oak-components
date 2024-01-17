@@ -1,15 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakRoundIcon matches snapshot 1`] = `
+.c0 {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.25rem;
+  background: #ffe555;
+  border-radius: 6.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: Lexend,sans-serif;
+}
+
+.c2 {
+  object-fit: contain;
+}
+
 <div
-  className="sc-aXZVg dNqVNp"
+  className="c0"
 >
   <div
-    className="sc-aXZVg jnxfJj"
+    className="c1"
   >
     <img
       alt="home"
-      className="sc-dcJsrY iNyGVc"
+      className="c2"
       data-nimg="fill"
       decoding="async"
       loading="lazy"

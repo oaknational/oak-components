@@ -1,12 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakImage matches snapshot 1`] = `
+.c0 {
+  position: relative;
+  width: 100%;
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  object-fit: contain;
+}
+
 <div
-  className="sc-aXZVg jBAFHB"
+  className="c0"
 >
   <img
     alt="a test image"
-    className="sc-gEvEer hAbnnj"
+    className="c1"
     data-nimg="fill"
     decoding="async"
     loading="lazy"

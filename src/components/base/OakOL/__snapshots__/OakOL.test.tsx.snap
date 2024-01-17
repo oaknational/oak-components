@@ -1,7 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component OakOL matches snapshot 1`] = `
+.c0 {
+  counter-reset: item;
+  padding: 0;
+  font-family: Lexend,sans-serif;
+}
+
+.c0 li {
+  display: block;
+  counter-increment: item;
+  margin: 0;
+  padding: 0 0 0 16px;
+  text-indent: -16px;
+  list-style-type: none;
+  line-height: 32px;
+}
+
+.c0 li br {
+  content: "";
+  display: block;
+  margin-top: 8px;
+}
+
+.c0 li::before {
+  padding-right: 4px;
+  content: counter(item) ".";
+}
+
 <ol
-  className="sc-aXZVg hgUwxN"
+  className="c0"
 />
 `;

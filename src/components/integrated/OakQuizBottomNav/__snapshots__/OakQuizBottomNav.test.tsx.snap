@@ -2,12 +2,190 @@
 
 exports[`OakQuizBottomNav matches snapshot 1`] = `
 [
+<<<<<<< HEAD
   <div
     className="sc-aXZVg sc-gEvEer sc-dtBdUo hctFYU iQpLSn gpqEEY"
+=======
+  .c0 {
+  min-height: 3rem;
+  padding: 1rem;
+  background: #ffffff;
+  border-top: 0.25rem solid;
+  border-color: #ffffff;
+  font-family: Lexend,sans-serif;
+}
+
+.c3 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-family: Lexend,sans-serif;
+}
+
+.c7 {
+  height: 3rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c9 {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.25rem;
+  background: #ffe555;
+  border-radius: 6.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c10 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: Lexend,sans-serif;
+}
+
+.c13 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: initial;
+  -webkit-justify-content: initial;
+  -ms-flex-pack: initial;
+  justify-content: initial;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c12 {
+  color: #222222;
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c11 {
+  object-fit: contain;
+}
+
+.c5 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: Lexend,sans-serif;
+  border-radius: 0.25rem;
+}
+
+.c5:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c6:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c2 {
+  box-sizing: content-box;
+}
+
+@media (min-width:750px) {
+  .c0 {
+    background: #ebfbeb;
+  }
+}
+
+@media (min-width:750px) {
+  .c13 {
+    width: auto;
+  }
+}
+
+@media (min-width:750px) {
+  .c1 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:750px) {
+  .c14 {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+<div
+    className="c0 c1 c2"
+>>>>>>> main
   >
     <div
-      className="sc-aXZVg sc-gEvEer iBTklz dnJeoC"
+      className="c3 c4"
     >
+<<<<<<< HEAD
       <div
         className="sc-aXZVg sc-eldPxv gjBRlG gGJweq button-wrapper"
       >
@@ -26,6 +204,47 @@ exports[`OakQuizBottomNav matches snapshot 1`] = `
             >
               <div
                 className="sc-aXZVg fuRGYd grey-shadow"
+=======
+      <button
+        className="c5 c6"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        type="button"
+      >
+        <div
+          className="c7 c8"
+        >
+          <div
+            className="c9"
+          >
+            <div
+              className="c10"
+            >
+              <img
+                alt=""
+                className="c11"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="https://undefined/undefined/v1705078631/icons/zldisxmbff36z68rwcef.svg"
+                style={
+                  {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+>>>>>>> main
               />
               <div
                 className="sc-aXZVg fuRGYd yellow-shadow"
@@ -65,31 +284,183 @@ exports[`OakQuizBottomNav matches snapshot 1`] = `
               Need a hint?
             </span>
           </div>
+<<<<<<< HEAD
         </button>
       </div>
+=======
+          <span
+            className="c12"
+          >
+            Need a hint?
+          </span>
+        </div>
+      </button>
+>>>>>>> main
     </div>
     <div
-      className="sc-aXZVg sc-gEvEer bkGhTK kPptmY"
+      className="c13 c14"
     />
   </div>,
+<<<<<<< HEAD
   <div
     className="sc-aXZVg sc-gEvEer sc-dtBdUo hctFYU iQpLSn gpqEEY"
+=======
+  .c0 {
+  min-height: 3rem;
+  padding: 1rem;
+  background: #ffffff;
+  border-top: 0.25rem solid;
+  border-color: #ffffff;
+  font-family: Lexend,sans-serif;
+}
+
+.c6 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: Lexend,sans-serif;
+}
+
+.c10 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-family: Lexend,sans-serif;
+}
+
+.c3 {
+  font-family: Lexend,sans-serif;
+}
+
+.c5 {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0rem;
+  background: #287c34;
+  border-radius: 6.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: initial;
+  -webkit-justify-content: initial;
+  -ms-flex-pack: initial;
+  justify-content: initial;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.c8 {
+  color: #287c34;
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c9 {
+  margin-top: 0.75rem;
+  font-family: Lexend,sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c7 {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  object-fit: contain;
+}
+
+.c2 {
+  box-sizing: content-box;
+}
+
+@media (min-width:750px) {
+  .c0 {
+    background: #ebfbeb;
+  }
+}
+
+@media (min-width:750px) {
+  .c10 {
+    width: auto;
+  }
+}
+
+@media (min-width:750px) {
+  .c1 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:750px) {
+  .c11 {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+<div
+    className="c0 c1 c2"
+>>>>>>> main
   >
     <div
-      className="sc-aXZVg dPEvkO"
+      className="c3"
     >
       <div
-        className="sc-aXZVg sc-gEvEer dPEvkO lScBP"
+        className="c3 c4"
       >
         <div
-          className="sc-aXZVg gSLHXh"
+          className="c5"
         >
           <div
-            className="sc-aXZVg jnxfJj"
+            className="c6"
           >
             <img
               alt="tick"
-              className="sc-fqkvVR wpdFy"
+              className="c7"
               data-nimg="fill"
               decoding="async"
               loading="lazy"
@@ -114,39 +485,181 @@ exports[`OakQuizBottomNav matches snapshot 1`] = `
           </div>
         </div>
         <span
-          className="sc-eqUAAy fxSatT"
+          className="c8"
         >
           Correct
         </span>
       </div>
       <p
-        className="sc-eqUAAy csTXOv"
+        className="c9"
       >
         Well done!
       </p>
     </div>
     <div
-      className="sc-aXZVg sc-gEvEer bkGhTK kPptmY"
+      className="c10 c11"
     />
   </div>,
+<<<<<<< HEAD
   <div
     className="sc-aXZVg sc-gEvEer sc-dtBdUo hctFYU iQpLSn gpqEEY"
+=======
+  .c0 {
+  min-height: 3rem;
+  padding: 1rem;
+  background: #ffffff;
+  border-top: 0.25rem solid;
+  border-color: #ffffff;
+  font-family: Lexend,sans-serif;
+}
+
+.c6 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: Lexend,sans-serif;
+}
+
+.c10 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-family: Lexend,sans-serif;
+}
+
+.c3 {
+  font-family: Lexend,sans-serif;
+}
+
+.c5 {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0rem;
+  background: #dd0035;
+  border-radius: 6.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: initial;
+  -webkit-justify-content: initial;
+  -ms-flex-pack: initial;
+  justify-content: initial;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.c8 {
+  color: #dd0035;
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c9 {
+  margin-top: 0.75rem;
+  font-family: Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c7 {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  object-fit: contain;
+}
+
+.c2 {
+  box-sizing: content-box;
+}
+
+@media (min-width:750px) {
+  .c0 {
+    background: #ebfbeb;
+  }
+}
+
+@media (min-width:750px) {
+  .c10 {
+    width: auto;
+  }
+}
+
+@media (min-width:750px) {
+  .c1 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:750px) {
+  .c11 {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+<div
+    className="c0 c1 c2"
+>>>>>>> main
   >
     <div
-      className="sc-aXZVg dPEvkO"
+      className="c3"
     >
       <div
-        className="sc-aXZVg sc-gEvEer dPEvkO lScBP"
+        className="c3 c4"
       >
         <div
-          className="sc-aXZVg hUutdO"
+          className="c5"
         >
           <div
-            className="sc-aXZVg jnxfJj"
+            className="c6"
           >
             <img
               alt="cross"
-              className="sc-fqkvVR wpdFy"
+              className="c7"
               data-nimg="fill"
               decoding="async"
               loading="lazy"
@@ -171,39 +684,181 @@ exports[`OakQuizBottomNav matches snapshot 1`] = `
           </div>
         </div>
         <span
-          className="sc-eqUAAy gOZZgo"
+          className="c8"
         >
           Incorrect
         </span>
       </div>
       <p
-        className="sc-eqUAAy kPsyPT"
+        className="c9"
       >
         Keep trying
       </p>
     </div>
     <div
-      className="sc-aXZVg sc-gEvEer bkGhTK kPptmY"
+      className="c10 c11"
     />
   </div>,
+<<<<<<< HEAD
   <div
     className="sc-aXZVg sc-gEvEer sc-dtBdUo hctFYU iQpLSn gpqEEY"
+=======
+  .c0 {
+  min-height: 3rem;
+  padding: 1rem;
+  background: #ffffff;
+  border-top: 0.25rem solid;
+  border-color: #ffffff;
+  font-family: Lexend,sans-serif;
+}
+
+.c6 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: Lexend,sans-serif;
+}
+
+.c10 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-family: Lexend,sans-serif;
+}
+
+.c3 {
+  font-family: Lexend,sans-serif;
+}
+
+.c5 {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0rem;
+  background: #287c34;
+  border-radius: 6.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: initial;
+  -webkit-justify-content: initial;
+  -ms-flex-pack: initial;
+  justify-content: initial;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.c8 {
+  color: #287c34;
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c9 {
+  margin-top: 0.75rem;
+  font-family: Lexend,sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c7 {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  object-fit: contain;
+}
+
+.c2 {
+  box-sizing: content-box;
+}
+
+@media (min-width:750px) {
+  .c0 {
+    background: #ebfbeb;
+  }
+}
+
+@media (min-width:750px) {
+  .c10 {
+    width: auto;
+  }
+}
+
+@media (min-width:750px) {
+  .c1 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:750px) {
+  .c11 {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+<div
+    className="c0 c1 c2"
+>>>>>>> main
   >
     <div
-      className="sc-aXZVg dPEvkO"
+      className="c3"
     >
       <div
-        className="sc-aXZVg sc-gEvEer dPEvkO lScBP"
+        className="c3 c4"
       >
         <div
-          className="sc-aXZVg gSLHXh"
+          className="c5"
         >
           <div
-            className="sc-aXZVg jnxfJj"
+            className="c6"
           >
             <img
               alt="tick"
-              className="sc-fqkvVR wpdFy"
+              className="c7"
               data-nimg="fill"
               decoding="async"
               loading="lazy"
@@ -228,19 +883,19 @@ exports[`OakQuizBottomNav matches snapshot 1`] = `
           </div>
         </div>
         <span
-          className="sc-eqUAAy fxSatT"
+          className="c8"
         >
           Correct
         </span>
       </div>
       <p
-        className="sc-eqUAAy csTXOv"
+        className="c9"
       >
         Nearly there
       </p>
     </div>
     <div
-      className="sc-aXZVg sc-gEvEer bkGhTK kPptmY"
+      className="c10 c11"
     />
   </div>,
 ]

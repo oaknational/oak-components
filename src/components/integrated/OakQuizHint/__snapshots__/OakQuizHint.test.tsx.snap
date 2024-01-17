@@ -2,9 +2,103 @@
 
 exports[`OakQuizHint matches snapshot 1`] = `
 [
-  <div
-    className="sc-aXZVg sc-gEvEer iBTklz dnJeoC"
+  .c0 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-family: Lexend,sans-serif;
+}
+
+.c4 {
+  height: 3rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c6 {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.25rem;
+  background: #ffe555;
+  border-radius: 6.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c7 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.c9 {
+  color: #222222;
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c8 {
+  object-fit: contain;
+}
+
+.c2 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: Lexend,sans-serif;
+  border-radius: 0.25rem;
+}
+
+.c2:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c3:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+<div
+    className="c0 c1"
   >
+<<<<<<< HEAD
     <div
       className="sc-aXZVg sc-eldPxv gjBRlG gGJweq button-wrapper"
     >
@@ -23,6 +117,47 @@ exports[`OakQuizHint matches snapshot 1`] = `
           >
             <div
               className="sc-aXZVg fuRGYd grey-shadow"
+=======
+    <button
+      className="c2 c3"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      type="button"
+    >
+      <div
+        className="c4 c5"
+      >
+        <div
+          className="c6"
+        >
+          <div
+            className="c7"
+          >
+            <img
+              alt=""
+              className="c8"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="https://undefined/undefined/v1705078631/icons/zldisxmbff36z68rwcef.svg"
+              style={
+                {
+                  "bottom": 0,
+                  "color": "transparent",
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+>>>>>>> main
             />
             <div
               className="sc-aXZVg fuRGYd yellow-shadow"
@@ -62,8 +197,18 @@ exports[`OakQuizHint matches snapshot 1`] = `
             Need a hint?
           </span>
         </div>
+<<<<<<< HEAD
       </button>
     </div>
+=======
+        <span
+          className="c9"
+        >
+          Need a hint?
+        </span>
+      </div>
+    </button>
+>>>>>>> main
   </div>,
   ",",
 ]
