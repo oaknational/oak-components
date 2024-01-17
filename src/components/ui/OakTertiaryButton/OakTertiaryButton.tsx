@@ -14,7 +14,7 @@ type OakTertiaryButtonProps = InternalButtonProps & {
 };
 
 /**
- * A subtle button with no border and a round icon.
+ * An implementation of InternalRoundButton, its a subtle button with no border and a round icon.
  */
 
 export const OakTertiaryButton = ({
