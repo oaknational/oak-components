@@ -100,30 +100,3 @@ export const Default: Story = {
     disabledIconColor: "white",
   },
 };
-
-export const Tertiary: Story = {
-  render: (args) => (
-    <OakFlex $gap="space-between-m">
-      <InternalRoundButton {...args}>Button</InternalRoundButton>
-      <InternalRoundButton {...args} isTrailingIcon>
-        Button Trailing Button
-      </InternalRoundButton>
-      <InternalRoundButton {...args} disabled>
-        Disabled Button
-      </InternalRoundButton>
-      <InternalRoundButton {...args} isLoading>
-        Loading Button
-      </InternalRoundButton>
-    </OakFlex>
-  ),
-  args: {
-    iconName: "chevron-right",
-    defaultIconColor: "white",
-    defaultIconBackground: "black",
-    defaultTextColor: "text-primary",
-    hoverTextColor: "text-primary",
-    disabledIconBackground: "bg-btn-primary-disabled",
-    disabledTextColor: "text-disabled",
-    disabledIconColor: "white",
-  },
-};

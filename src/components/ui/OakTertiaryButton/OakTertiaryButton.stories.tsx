@@ -23,7 +23,7 @@ type Story = StoryObj<typeof OakTertiaryButton>;
 
 export const Default: Story = {
   render: (args) => (
-    <>
+    <OakFlex $flexWrap={"wrap"}>
       <OakTertiaryButton {...args}>Tertiary Button</OakTertiaryButton>
       <OakTertiaryButton {...args} disabled>
         Disabled Button
@@ -35,7 +35,7 @@ export const Default: Story = {
       <OakTertiaryButton {...args} isTrailingIcon>
         Trailing icon
       </OakTertiaryButton>
-    </>
+    </OakFlex>
   ),
   args: {
     iconName: "chevron-right",

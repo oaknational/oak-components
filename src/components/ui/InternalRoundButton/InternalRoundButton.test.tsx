@@ -17,6 +17,7 @@ const defaultArgs: InternalRoundButtonProps = {
   hoverTextColor: "lemon50",
   disabledIconBackground: "grey20",
   disabledTextColor: "grey40",
+  hoverIconBackground: "mint",
 };
 
 describe("InternalRoundButton", () => {

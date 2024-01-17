@@ -15,6 +15,7 @@ export const OakHintButton = (props: OakHintButtonProps) => {
     <InternalRoundButton
       iconName={isOpen && !disabled ? "lightbulb-yellow" : "lightbulb"}
       defaultIconBackground={isOpen ? "black" : "lemon"}
+      hoverIconBackground={isOpen ? "black" : "lemon"}
       defaultTextColor={"text-primary"}
       hoverTextColor={"text-primary"}
       disabledIconBackground={"bg-btn-primary-disabled"}
@@ -23,6 +24,7 @@ export const OakHintButton = (props: OakHintButtonProps) => {
       onClick={props.onClick}
       isLoading={props.isLoading}
       disabled={props.disabled}
+      noHoverShadow={true}
     >
       {!isOpen ? "Need a hint?" : "Close hint"}
     </InternalRoundButton>
