@@ -154,7 +154,7 @@ exports[`InternalRoundButton matches snapshot 1`] = `
   className="c0 c1 button-wrapper"
 >
   <button
-    className="c2 c3 internal-button"
+    className="c2 c3 "
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}

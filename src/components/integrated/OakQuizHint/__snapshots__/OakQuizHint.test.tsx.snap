@@ -178,7 +178,7 @@ exports[`OakQuizHint matches snapshot 1`] = `
       className="c2 c3 button-wrapper"
     >
       <button
-        className="c4 c5 internal-button"
+        className="c4 c5 "
         onClick={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
