@@ -1,7 +1,13 @@
-import React, { ComponentPropsWithoutRef, ElementType, ReactNode } from "react";
+import React, { ComponentPropsWithoutRef, ElementType } from "react";
 import styled, { css } from "styled-components";
 
-import { OakBox, OakFlex, OakIcon, OakIconName } from "@/components/base";
+import {
+  OakBox,
+  OakFlex,
+  OakIcon,
+  OakIconName,
+  OakSpan,
+} from "@/components/base";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { OakRoundIcon } from "@/components/ui";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
@@ -13,15 +19,6 @@ type LessonSectionName = "intro" | "starter-quiz" | "video" | "exit-quiz";
 
 type BaseOakLessonNavItemProps<C extends ElementType> = {
   as?: C;
-  /**
-   * Denotes the progress in the lesson section
-   */
-  progress: "not-started" | "in-progress" | "complete";
-  /**
-   * Optional accompanying text summarising the progress through the section
-   * if not provided preset text will be displayed
-   */
-  summary?: ReactNode;
   /**
    * Present the section as disabled.
    *
@@ -55,9 +52,15 @@ type IntroSectionProps = {
   lessonSectionName: "intro";
 };
 
+type SectionProps = {
+  /**
+   * Denotes the progress in the lesson section
+   */
+  progress: "not-started" | "in-progress" | "complete";
+} & (IntroSectionProps | QuizSectionProps | VideoSectionProps);
+
 export type OakLessonNavItemProps<C extends ElementType> =
-  BaseOakLessonNavItemProps<C> &
-    (IntroSectionProps | QuizSectionProps | VideoSectionProps);
+  BaseOakLessonNavItemProps<C> & SectionProps;
 
 const StyledLabel = styled(OakBox)``;
 
@@ -78,9 +81,10 @@ const StyledRoundIcon = styled(OakRoundIcon)<{
 
 const StyledLessonNavItem = styled(OakFlex)<{ $isDisabled?: boolean }>`
   outline: none;
+  text-align: initial;
 
   &:focus-visible {
-    box-shadow: ${parseDropShadow("drop-shadow-centered-yellow")},
+    box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
   }
 
@@ -89,6 +93,8 @@ const StyledLessonNavItem = styled(OakFlex)<{ $isDisabled?: boolean }>`
   ${(props) =>
     !props.$isDisabled &&
     css`
+      cursor: pointer;
+
       &:hover,
       &:active {
         ${StyledLabel} {
@@ -105,10 +111,14 @@ const StyledLessonNavItem = styled(OakFlex)<{ $isDisabled?: boolean }>`
       }
 
       &:active {
-        box-shadow: ${parseDropShadow("drop-shadow-yellow")},
+        box-shadow: ${parseDropShadow("drop-shadow-lemon")},
           ${parseDropShadow("drop-shadow-grey")};
       }
     `}
+`;
+
+const FlexedOakBox = styled(OakBox)`
+  flex: 1;
 `;
 
 /**
@@ -144,7 +154,7 @@ export const OakLessonNavItem = <C extends ElementType = "a">(
           $height="all-spacing-10"
         />
       </OakFlex>
-      <OakBox>
+      <FlexedOakBox>
         <StyledLabel
           as="strong"
           $font={["heading-6", "heading-5"]}
@@ -155,19 +165,36 @@ export const OakLessonNavItem = <C extends ElementType = "a">(
         <OakBox $font={["body-2", "body-1"]}>
           {pickSummaryForProgress(props)}
         </OakBox>
-      </OakBox>
-      <OakFlex
-        $flexBasis="space-between-none"
-        $flexDirection="column"
-        $flexGrow={1}
-      >
-        <OakFlex $alignSelf="flex-end">
-          <StyledRoundIcon iconName="chevron-right" $isDisabled={isDisabled} />
-        </OakFlex>
-      </OakFlex>
+      </FlexedOakBox>
+      {renderQuestionCounter(props)}
+      <StyledRoundIcon iconName="chevron-right" $isDisabled={isDisabled} />
     </StyledLessonNavItem>
   );
 };
+
+function renderQuestionCounter(props: SectionProps) {
+  if (props.progress !== "complete") {
+    return null;
+  }
+
+  /**
+   * The large answer counter is only rendered when on a non-mobile screen
+   */
+  switch (props.lessonSectionName) {
+    case "exit-quiz":
+    case "starter-quiz":
+      return (
+        <OakBox $display={["none", "block"]} $mr="space-between-xxxl">
+          <OakSpan $font="heading-4">{props.answerCount}</OakSpan>
+          <OakSpan $font="heading-6">
+            &nbsp;/&nbsp;{props.questionCount}
+          </OakSpan>
+        </OakBox>
+      );
+    default:
+      return null;
+  }
+}
 
 function pickIconForSection(sectionName: LessonSectionName): OakIconName {
   switch (sectionName) {
@@ -229,9 +256,7 @@ function pickLabelForSection(sectionName: LessonSectionName): string {
   }
 }
 
-function pickSummaryForProgress<C extends ElementType>(
-  props: OakLessonNavItemProps<C>,
-) {
+function pickSummaryForProgress(props: SectionProps) {
   switch (props.progress) {
     case "not-started":
       return pickSummaryForNotStarted(props);
@@ -251,9 +276,7 @@ function pickSummaryForProgress<C extends ElementType>(
   }
 }
 
-function pickSummaryForNotStarted<C extends ElementType>(
-  props: OakLessonNavItemProps<C>,
-) {
+function pickSummaryForNotStarted(props: SectionProps) {
   switch (props.lessonSectionName) {
     case "intro":
       return "Get ready";
@@ -266,15 +289,22 @@ function pickSummaryForNotStarted<C extends ElementType>(
   }
 }
 
-function pickSummaryForComplete<C extends ElementType>(
-  props: OakLessonNavItemProps<C>,
-) {
+function pickSummaryForComplete(props: SectionProps) {
   switch (props.lessonSectionName) {
     case "intro":
     case "video":
       return "Completed";
     case "starter-quiz":
     case "exit-quiz":
-      return `${props.answerCount}/${props.questionCount} correct`;
+      // The counter is rendered as the summary next
+      // when on a mobile device, so it is hidden on larger screens
+      return (
+        <>
+          <OakBox $display={["none", "block"]}>Completed</OakBox>
+          <OakBox $display={["block", "none"]}>
+            {props.answerCount}/{props.questionCount} correct
+          </OakBox>
+        </>
+      );
   }
 }

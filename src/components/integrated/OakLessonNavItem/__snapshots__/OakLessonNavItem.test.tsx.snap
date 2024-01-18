@@ -30,7 +30,7 @@ exports[`OakLessonNavItem matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c8 {
+.c9 {
   color: #222222;
   font-family: Lexend,sans-serif;
   font-weight: 600;
@@ -42,7 +42,7 @@ exports[`OakLessonNavItem matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c9 {
+.c10 {
   font-family: Lexend,sans-serif;
   font-weight: 300;
   font-size: 1rem;
@@ -53,7 +53,7 @@ exports[`OakLessonNavItem matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c12 {
+.c11 {
   width: 3rem;
   height: 3rem;
   padding: 0.25rem;
@@ -62,7 +62,7 @@ exports[`OakLessonNavItem matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c15 {
+.c14 {
   position: relative;
   width: 100%;
   height: 100%;
@@ -92,70 +92,51 @@ exports[`OakLessonNavItem matches snapshot 1`] = `
   justify-content: center;
 }
 
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-flex-basis: 0rem;
-  -ms-flex-preferred-size: 0rem;
-  flex-basis: 0rem;
-}
-
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-self: flex-end;
-  -ms-flex-item-align: end;
-  align-self: flex-end;
-}
-
 .c6 {
   object-fit: contain;
 }
 
-.c14 {
+.c13 {
   width: 2.5rem;
   height: 2.5rem;
   padding: 0;
   background: transparent;
 }
 
-.c14 img {
+.c13 img {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
 }
 
 .c2 {
   outline: none;
+  text-align: initial;
+  cursor: pointer;
 }
 
 .c2:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c2:hover .c13,
-.c2:active .c13 {
+.c2:hover .c12,
+.c2:active .c12 {
   background: #222222;
 }
 
-.c2:hover .c13 img,
-.c2:active .c13 img {
+.c2:hover .c12 img,
+.c2:active .c12 img {
   -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
 }
 
 .c2:active {
-  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.3rem 0.3rem 0 rgba(87,87,87,100%);
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+}
+
+.c8 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 @media (min-width:750px) {
@@ -171,25 +152,25 @@ exports[`OakLessonNavItem matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c8 {
+  .c9 {
     font-weight: 600;
   }
 }
 
 @media (min-width:750px) {
-  .c8 {
+  .c9 {
     font-size: 1.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c8 {
+  .c9 {
     line-height: 2rem;
   }
 }
 
 @media (min-width:750px) {
-  .c8 {
+  .c9 {
     -webkit-letter-spacing: 0.0115rem;
     -moz-letter-spacing: 0.0115rem;
     -ms-letter-spacing: 0.0115rem;
@@ -198,25 +179,25 @@ exports[`OakLessonNavItem matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c9 {
+  .c10 {
     font-weight: 300;
   }
 }
 
 @media (min-width:750px) {
-  .c9 {
+  .c10 {
     font-size: 1.125rem;
   }
 }
 
 @media (min-width:750px) {
-  .c9 {
+  .c10 {
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:750px) {
-  .c9 {
+  .c10 {
     -webkit-letter-spacing: -0.005rem;
     -moz-letter-spacing: -0.005rem;
     -ms-letter-spacing: -0.005rem;
@@ -260,57 +241,49 @@ exports[`OakLessonNavItem matches snapshot 1`] = `
       </div>
     </div>
     <div
-      className="c7"
+      className="c7 c8"
     >
       <strong
-        className="c8"
+        className="c9"
       >
         Intro
       </strong>
       <div
-        className="c9"
+        className="c10"
       >
         Get ready
       </div>
     </div>
     <div
-      className="c7 c10"
+      className="c11 c12 c13"
     >
       <div
-        className="c7 c11"
+        className="c14"
       >
-        <div
-          className="c12 c13 c14"
-        >
-          <div
-            className="c15"
-          >
-            <img
-              alt="chevron-right"
-              className="c6"
-              data-nimg="fill"
-              decoding="async"
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              src="https://undefined/undefined/v1699895475/icons/rhzft6wnpdp3nvsmlyei.svg"
-              style={
-                {
-                  "bottom": 0,
-                  "color": "transparent",
-                  "height": "100%",
-                  "left": 0,
-                  "objectFit": undefined,
-                  "objectPosition": undefined,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-            />
-          </div>
-        </div>
+        <img
+          alt="chevron-right"
+          className="c6"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="https://undefined/undefined/v1699895475/icons/rhzft6wnpdp3nvsmlyei.svg"
+          style={
+            {
+              "bottom": 0,
+              "color": "transparent",
+              "height": "100%",
+              "left": 0,
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
+            }
+          }
+        />
       </div>
     </div>
   </a>,

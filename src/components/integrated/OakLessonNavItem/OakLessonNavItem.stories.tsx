@@ -10,12 +10,20 @@ const meta: Meta<typeof OakLessonNavItem> = {
   tags: ["autodocs"],
   title: "components/integrated/OakLessonNavItem",
   argTypes: {
-    summary: {
+    numQuestions: {
       control: {
-        type: "text",
+        type: "number",
+      },
+    },
+    grade: {
+      control: {
+        type: "number",
       },
     },
     videoLength: {
+      control: {
+        type: "number",
+      },
       if: { arg: "lessonSectionName", eq: "video" },
     },
   },
@@ -55,6 +63,10 @@ type Story = StoryObj<typeof OakLessonNavItem>;
 
 export const Default: Story = {
   render: (args) => <OakLessonNavItem {...args} />,
+};
+
+export const AsAButton: Story = {
+  render: (args) => <OakLessonNavItem {...args} as="button" />,
 };
 
 export const NotStarted: Story = {
