@@ -33,11 +33,11 @@ type QuizSectionProps = {
   /**
    * The number of questions in the quiz
    */
-  questionCount: number;
+  numQuestions: number;
   /**
    * The number of questions answered correctly
    */
-  answerCount: number;
+  grade: number;
 };
 
 type VideoSectionProps = {
@@ -185,10 +185,8 @@ function renderQuestionCounter(props: SectionProps) {
     case "starter-quiz":
       return (
         <OakBox $display={["none", "block"]} $mr="space-between-xxxl">
-          <OakSpan $font="heading-4">{props.answerCount}</OakSpan>
-          <OakSpan $font="heading-6">
-            &nbsp;/&nbsp;{props.questionCount}
-          </OakSpan>
+          <OakSpan $font="heading-4">{props.grade}</OakSpan>
+          <OakSpan $font="heading-6">&nbsp;/&nbsp;{props.numQuestions}</OakSpan>
         </OakBox>
       );
     default:
@@ -281,9 +279,9 @@ function pickSummaryForNotStarted(props: SectionProps) {
     case "intro":
       return "Get ready";
     case "starter-quiz":
-      return `${props.questionCount} Questions`;
+      return `${props.numQuestions} Questions`;
     case "exit-quiz":
-      return `Practice ${props.questionCount} questions`;
+      return `Practice ${props.numQuestions} questions`;
     case "video":
       return `${props.videoLength} min`;
   }
@@ -302,7 +300,7 @@ function pickSummaryForComplete(props: SectionProps) {
         <>
           <OakBox $display={["none", "block"]}>Completed</OakBox>
           <OakBox $display={["block", "none"]}>
-            {props.answerCount}/{props.questionCount} correct
+            {props.grade}/{props.numQuestions} correct
           </OakBox>
         </>
       );

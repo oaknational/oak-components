@@ -31,8 +31,8 @@ describe(OakLessonNavItem, () => {
           data-testid="starter-quiz"
           lessonSectionName="starter-quiz"
           progress="not-started"
-          questionCount={6}
-          answerCount={0}
+          numQuestions={6}
+          grade={0}
         />
         <OakLessonNavItem
           data-testid="video"
@@ -44,8 +44,8 @@ describe(OakLessonNavItem, () => {
           data-testid="exit-quiz"
           lessonSectionName="exit-quiz"
           progress="not-started"
-          questionCount={6}
-          answerCount={5}
+          numQuestions={6}
+          grade={5}
         />
       </>,
     );
@@ -70,8 +70,8 @@ describe(OakLessonNavItem, () => {
           data-testid="starter-quiz"
           lessonSectionName="starter-quiz"
           progress="in-progress"
-          questionCount={6}
-          answerCount={0}
+          numQuestions={6}
+          grade={0}
         />
         <OakLessonNavItem
           data-testid="video"
@@ -83,8 +83,8 @@ describe(OakLessonNavItem, () => {
           data-testid="exit-quiz"
           lessonSectionName="exit-quiz"
           progress="in-progress"
-          questionCount={6}
-          answerCount={5}
+          numQuestions={6}
+          grade={5}
         />
       </>,
     );
@@ -107,8 +107,8 @@ describe(OakLessonNavItem, () => {
           data-testid="starter-quiz"
           lessonSectionName="starter-quiz"
           progress="complete"
-          questionCount={6}
-          answerCount={0}
+          numQuestions={6}
+          grade={0}
         />
         <OakLessonNavItem
           data-testid="video"
@@ -120,8 +120,8 @@ describe(OakLessonNavItem, () => {
           data-testid="exit-quiz"
           lessonSectionName="exit-quiz"
           progress="complete"
-          questionCount={6}
-          answerCount={5}
+          numQuestions={6}
+          grade={5}
         />
       </>,
     );

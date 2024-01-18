@@ -31,8 +31,8 @@ const meta: Meta<typeof OakLessonNavItem> = {
     lessonSectionName: "intro",
     progress: "not-started",
     href: "#",
-    answerCount: 4,
-    questionCount: 6,
+    grade: 4,
+    numQuestions: 6,
     videoLength: 20,
   },
   decorators: [
@@ -50,8 +50,8 @@ const meta: Meta<typeof OakLessonNavItem> = {
         "progress",
         "lessonSectionName",
         "isDisabled",
-        "answerCount",
-        "questionCount",
+        "grade",
+        "numQuestions",
         "videoLength",
       ],
     },
@@ -76,8 +76,8 @@ export const NotStarted: Story = {
       <OakLessonNavItem
         lessonSectionName="starter-quiz"
         progress="not-started"
-        questionCount={6}
-        answerCount={0}
+        numQuestions={6}
+        grade={0}
       />
       <OakLessonNavItem
         lessonSectionName="video"
@@ -87,8 +87,8 @@ export const NotStarted: Story = {
       <OakLessonNavItem
         lessonSectionName="exit-quiz"
         progress="not-started"
-        questionCount={4}
-        answerCount={0}
+        numQuestions={4}
+        grade={0}
       />
     </>
   ),
@@ -101,8 +101,8 @@ export const InProgress: Story = {
       <OakLessonNavItem
         lessonSectionName="starter-quiz"
         progress="in-progress"
-        questionCount={6}
-        answerCount={0}
+        numQuestions={6}
+        grade={0}
       />
       <OakLessonNavItem
         lessonSectionName="video"
@@ -112,8 +112,8 @@ export const InProgress: Story = {
       <OakLessonNavItem
         lessonSectionName="exit-quiz"
         progress="in-progress"
-        questionCount={6}
-        answerCount={0}
+        numQuestions={6}
+        grade={0}
       />
     </>
   ),
@@ -126,8 +126,8 @@ export const Complete: Story = {
       <OakLessonNavItem
         lessonSectionName="starter-quiz"
         progress="complete"
-        questionCount={6}
-        answerCount={5}
+        numQuestions={6}
+        grade={5}
       />
       <OakLessonNavItem
         lessonSectionName="video"
@@ -137,8 +137,8 @@ export const Complete: Story = {
       <OakLessonNavItem
         lessonSectionName="exit-quiz"
         progress="complete"
-        questionCount={4}
-        answerCount={4}
+        numQuestions={4}
+        grade={4}
       />
     </>
   ),
