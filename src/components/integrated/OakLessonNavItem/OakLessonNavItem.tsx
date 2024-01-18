@@ -11,17 +11,12 @@ import { OakCombinedColorToken } from "@/styles";
 
 type LessonSectionName = "intro" | "starter-quiz" | "video" | "exit-quiz";
 
-export type OakLessonNavItemProps<C extends ElementType> = {
+type BaseOakLessonNavItemProps<C extends ElementType> = {
   as?: C;
-  lessonSectionName: LessonSectionName;
   /**
    * Denotes the progress in the lesson section
    */
-  progress: "not-started" | "in-progress" | "completed";
-  /**
-   * Label for the section
-   */
-  label: ReactNode;
+  progress: "not-started" | "in-progress" | "complete";
   /**
    * Optional accompanying text summarising the progress through the section
    * if not provided preset text will be displayed
@@ -35,6 +30,34 @@ export type OakLessonNavItemProps<C extends ElementType> = {
    */
   isDisabled?: boolean;
 } & ComponentPropsWithoutRef<C>;
+
+type QuizSectionProps = {
+  lessonSectionName: "starter-quiz" | "exit-quiz";
+  /**
+   * The number of questions in the quiz
+   */
+  questionCount: number;
+  /**
+   * The number of questions answered correctly
+   */
+  answerCount: number;
+};
+
+type VideoSectionProps = {
+  lessonSectionName: "video";
+  /**
+   * The length of the video in minutes
+   */
+  videoLength: number;
+};
+
+type IntroSectionProps = {
+  lessonSectionName: "intro";
+};
+
+export type OakLessonNavItemProps<C extends ElementType> =
+  BaseOakLessonNavItemProps<C> &
+    (IntroSectionProps | QuizSectionProps | VideoSectionProps);
 
 const StyledLabel = styled(OakBox)``;
 
@@ -91,15 +114,10 @@ const StyledLessonNavItem = styled(OakFlex)<{ $isDisabled?: boolean }>`
 /**
  * Enables navigation to the given section of a lesson as well as displaying current progress
  */
-export const OakLessonNavItem = <C extends ElementType = "a">({
-  as,
-  lessonSectionName,
-  progress,
-  label,
-  summary,
-  isDisabled,
-  ...rest
-}: OakLessonNavItemProps<C>) => {
+export const OakLessonNavItem = <C extends ElementType = "a">(
+  props: OakLessonNavItemProps<C>,
+) => {
+  const { as, lessonSectionName, progress, isDisabled, ...rest } = props;
   const [notStartedBackgroundColor, backgroundColor, borderColor] =
     pickColorsForSection(lessonSectionName);
 
@@ -132,9 +150,11 @@ export const OakLessonNavItem = <C extends ElementType = "a">({
           $font={["heading-6", "heading-5"]}
           $color={isDisabled ? "text-disabled" : "text-primary"}
         >
-          {label}
+          {pickLabelForSection(lessonSectionName)}
         </StyledLabel>
-        <OakBox $font={["body-2", "body-1"]}>{summary}</OakBox>
+        <OakBox $font={["body-2", "body-1"]}>
+          {pickSummaryForProgress(props)}
+        </OakBox>
       </OakBox>
       <OakFlex
         $flexBasis="space-between-none"
@@ -193,5 +213,68 @@ function pickColorsForSection(
         "bg-decorative5-main",
         "border-decorative5-stronger",
       ];
+  }
+}
+
+function pickLabelForSection(sectionName: LessonSectionName): string {
+  switch (sectionName) {
+    case "intro":
+      return "Intro";
+    case "starter-quiz":
+      return "Starter quiz";
+    case "video":
+      return "Watch video";
+    case "exit-quiz":
+      return "Exit quiz";
+  }
+}
+
+function pickSummaryForProgress<C extends ElementType>(
+  props: OakLessonNavItemProps<C>,
+) {
+  switch (props.progress) {
+    case "not-started":
+      return pickSummaryForNotStarted(props);
+    case "in-progress":
+      return "In progress...";
+    case "complete":
+      return (
+        <OakFlex $gap="space-between-sssx" $alignItems="center">
+          <OakIcon
+            iconName="tick"
+            $width="all-spacing-6"
+            $height="all-spacing-6"
+          />
+          {pickSummaryForComplete(props)}
+        </OakFlex>
+      );
+  }
+}
+
+function pickSummaryForNotStarted<C extends ElementType>(
+  props: OakLessonNavItemProps<C>,
+) {
+  switch (props.lessonSectionName) {
+    case "intro":
+      return "Get ready";
+    case "starter-quiz":
+      return `${props.questionCount} Questions`;
+    case "exit-quiz":
+      return `Practice ${props.questionCount} questions`;
+    case "video":
+      return `${props.videoLength} min`;
+  }
+}
+
+function pickSummaryForComplete<C extends ElementType>(
+  props: OakLessonNavItemProps<C>,
+) {
+  switch (props.lessonSectionName) {
+    case "intro":
+    case "video":
+      return "Completed";
+    case "starter-quiz":
+    case "exit-quiz":
+      return `${props.answerCount}/${props.questionCount} correct`;
   }
 }

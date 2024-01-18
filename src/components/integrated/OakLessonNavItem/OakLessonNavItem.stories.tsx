@@ -10,32 +10,41 @@ const meta: Meta<typeof OakLessonNavItem> = {
   tags: ["autodocs"],
   title: "components/integrated/OakLessonNavItem",
   argTypes: {
-    label: {
-      control: {
-        type: "text",
-      },
-    },
     summary: {
       control: {
         type: "text",
       },
     },
+    videoLength: {
+      if: { arg: "lessonSectionName", eq: "video" },
+    },
   },
   args: {
     lessonSectionName: "intro",
     progress: "not-started",
-    label: "Intro",
-    summary: "Get ready",
     href: "#",
+    answerCount: 4,
+    questionCount: 6,
+    videoLength: 20,
   },
+  decorators: [
+    (Story) => {
+      return (
+        <OakFlex $flexDirection="column" $gap="space-between-m">
+          {Story()}
+        </OakFlex>
+      );
+    },
+  ],
   parameters: {
     controls: {
       include: [
-        "label",
-        "summary",
         "progress",
         "lessonSectionName",
         "isDisabled",
+        "answerCount",
+        "questionCount",
+        "videoLength",
       ],
     },
   },
@@ -51,40 +60,74 @@ export const Default: Story = {
 export const NotStarted: Story = {
   render: () => (
     <>
-      <OakLessonNavItem
-        lessonSectionName="intro"
-        progress="not-started"
-        label="Intro"
-      />
+      <OakLessonNavItem lessonSectionName="intro" progress="not-started" />
       <OakLessonNavItem
         lessonSectionName="starter-quiz"
         progress="not-started"
-        label="Starter quiz"
+        questionCount={6}
+        answerCount={0}
       />
       <OakLessonNavItem
         lessonSectionName="video"
         progress="not-started"
-        label="Video"
+        videoLength={20}
       />
       <OakLessonNavItem
         lessonSectionName="exit-quiz"
         progress="not-started"
-        label="Exit quiz"
+        questionCount={4}
+        answerCount={0}
       />
     </>
   ),
-  decorators: [
-    (Story) => {
-      return (
-        <OakFlex $flexDirection="column" $gap="space-between-m">
-          {Story()}
-        </OakFlex>
-      );
-    },
-  ],
-  parameters: {
-    controls: {
-      disable: true,
-    },
-  },
+};
+
+export const InProgress: Story = {
+  render: () => (
+    <>
+      <OakLessonNavItem lessonSectionName="intro" progress="in-progress" />
+      <OakLessonNavItem
+        lessonSectionName="starter-quiz"
+        progress="in-progress"
+        questionCount={6}
+        answerCount={0}
+      />
+      <OakLessonNavItem
+        lessonSectionName="video"
+        progress="in-progress"
+        videoLength={20}
+      />
+      <OakLessonNavItem
+        lessonSectionName="exit-quiz"
+        progress="in-progress"
+        questionCount={6}
+        answerCount={0}
+      />
+    </>
+  ),
+};
+
+export const Complete: Story = {
+  render: () => (
+    <>
+      <OakLessonNavItem lessonSectionName="intro" progress="complete" />
+      <OakLessonNavItem
+        lessonSectionName="starter-quiz"
+        progress="complete"
+        questionCount={6}
+        answerCount={5}
+      />
+      <OakLessonNavItem
+        lessonSectionName="video"
+        progress="complete"
+        videoLength={20}
+      />
+      <OakLessonNavItem
+        lessonSectionName="exit-quiz"
+        progress="complete"
+        questionCount={4}
+        answerCount={4}
+      />
+    </>
+  ),
 };
