@@ -119,11 +119,11 @@ exports[`OakSecondaryButton matches snapshot 1`] = `
 }
 
 .c1 .yellow-shadow:has(+ .internal-button:focus-visible) {
-  box-shadow: 0 0 0 0.125rem #ffe555;
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
 }
 
 .c1 .yellow-shadow:has(+ .internal-button:hover) {
-  box-shadow: 0.125rem 0.125rem 0 #ffe555;
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
 .c1 .grey-shadow:has(+ * + .internal-button:hover) {
@@ -131,11 +131,11 @@ exports[`OakSecondaryButton matches snapshot 1`] = `
 }
 
 .c1 .grey-shadow:has(+ * + .internal-button:active) {
-  box-shadow: 0.3rem 0.3rem 0 rgba(87,87,87,100%);
+  box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
 .c1 .yellow-shadow:has(+ .internal-button:active) {
-  box-shadow: 0.125rem 0.125rem 0 #ffe555;
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
 <div

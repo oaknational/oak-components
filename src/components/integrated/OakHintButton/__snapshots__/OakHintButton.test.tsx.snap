@@ -6,11 +6,11 @@ exports[`OakHintButton matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c4 {
+.c5 {
   font-family: Lexend,sans-serif;
 }
 
-.c6 {
+.c7 {
   position: relative;
   width: 2.5rem;
   min-width: 2.5rem;
@@ -21,7 +21,7 @@ exports[`OakHintButton matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c8 {
+.c9 {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -29,14 +29,14 @@ exports[`OakHintButton matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c9 {
+.c10 {
   position: relative;
   width: 1.5rem;
   height: 1.5rem;
   font-family: Lexend,sans-serif;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -55,7 +55,7 @@ exports[`OakHintButton matches snapshot 1`] = `
   gap: 0.75rem;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -70,7 +70,7 @@ exports[`OakHintButton matches snapshot 1`] = `
   justify-content: center;
 }
 
-.c11 {
+.c12 {
   font-family: Lexend,sans-serif;
   font-weight: 700;
   font-size: 1.125rem;
@@ -81,7 +81,7 @@ exports[`OakHintButton matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c10 {
+.c11 {
   object-fit: contain;
 }
 
@@ -126,55 +126,63 @@ exports[`OakHintButton matches snapshot 1`] = `
   color: #808080;
 }
 
-.c1 .internal-button:focus-visible .shadow {
-  box-shadow: 0 0 0 0.125rem #ffe555, 0 0 0 0.3rem rgba(87,87,87,100%);
+.c1 button:focus-visible .shadow {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c1 .internal-button:hover .shadow {
-  box-shadow: none;
+.c1 button:hover .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c1 .internal-button:active .shadow {
-  box-shadow: 0.125rem 0.125rem 0 #ffe555, 0.3rem 0.3rem 0 rgba(87,87,87,100%);
+.c1 button:active .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c1 .internal-button:disabled .icon-container {
+.c1 button:disabled .icon-container {
   background: #808080;
 }
 
-.c1 .internal-button:hover .icon-container {
+.c1 button:hover .icon-container {
   background: #ffe555;
 }
 
-.c1 .internal-button:active .icon-container {
+.c1 button:active .icon-container {
   background: #ffe555;
+}
+
+.c4:hover .shadow {
+  box-shadow: none !important;
+}
+
+.c4:active .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%) !important;
 }
 
 <div
   className="c0 c1 button-wrapper"
 >
   <button
-    className="c2 c3 internal-button"
+    className="c2 c3  c4"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     type="button"
   >
     <div
-      className="c4 c5"
+      className="c5 c6"
     >
       <div
-        className="c6 c7 icon-container"
+        className="c7 c8 icon-container"
       >
         <div
-          className="c8 shadow"
+          className="c9 shadow"
         />
         <div
-          className="c9"
+          className="c10"
         >
           <img
             alt="lightbulb"
-            className="c10"
+            className="c11"
             data-nimg="fill"
             decoding="async"
             loading="lazy"
@@ -199,7 +207,7 @@ exports[`OakHintButton matches snapshot 1`] = `
         </div>
       </div>
       <span
-        className="c11"
+        className="c12"
       >
         Need a hint?
       </span>

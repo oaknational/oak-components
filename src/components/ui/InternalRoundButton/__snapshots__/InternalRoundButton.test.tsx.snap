@@ -12,9 +12,9 @@ exports[`InternalRoundButton matches snapshot 1`] = `
 
 .c6 {
   position: relative;
-  width: 2.5rem;
-  min-width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
   color: #ebfbeb;
   background: #bef2bd;
   border-radius: 6.25rem;
@@ -126,27 +126,27 @@ exports[`InternalRoundButton matches snapshot 1`] = `
   color: #cacaca;
 }
 
-.c1 .internal-button:focus-visible .shadow {
-  box-shadow: 0 0 0 0.125rem #ffe555, 0 0 0 0.3rem rgba(87,87,87,100%);
+.c1 button:focus-visible .shadow {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c1 .internal-button:hover .shadow {
-  box-shadow: 0.125rem 0.125rem 0 #ffe555;
+.c1 button:hover .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c1 .internal-button:active .shadow {
-  box-shadow: 0.125rem 0.125rem 0 #ffe555, 0.3rem 0.3rem 0 rgba(87,87,87,100%);
+.c1 button:active .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c1 .internal-button:disabled .icon-container {
+.c1 button:disabled .icon-container {
   background: #f2f2f2;
 }
 
-.c1 .internal-button:hover .icon-container {
+.c1 button:hover .icon-container {
   background: #bef2bd;
 }
 
-.c1 .internal-button:active .icon-container {
+.c1 button:active .icon-container {
   background: #bef2bd;
 }
 
@@ -154,7 +154,7 @@ exports[`InternalRoundButton matches snapshot 1`] = `
   className="c0 c1 button-wrapper"
 >
   <button
-    className="c2 c3 internal-button"
+    className="c2 c3 "
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}

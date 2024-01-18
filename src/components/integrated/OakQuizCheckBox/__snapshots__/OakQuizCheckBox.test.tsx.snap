@@ -207,7 +207,7 @@ input:checked + .c15 {
   }
 
   .c4 .yellow-shadow:has( + .c7 input:focus-visible ) {
-    box-shadow: 0 0 0 0.125rem #ffe555;
+    box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
   }
 
   .c4 .grey-shadow:has( ~ .c7 input:focus-visible ) {

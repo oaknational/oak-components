@@ -30,9 +30,9 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 
 .c11 {
   position: relative;
-  width: 2.5rem;
-  min-width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
   color: #222222;
   background: #222222;
   border-radius: 6.25rem;
@@ -190,27 +190,27 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   color: #808080;
 }
 
-.c6 .internal-button:focus-visible .shadow {
-  box-shadow: 0 0 0 0.125rem #ffe555, 0 0 0 0.3rem rgba(87,87,87,100%);
+.c6 button:focus-visible .shadow {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c6 .internal-button:hover .shadow {
-  box-shadow: 0.125rem 0.125rem 0 #ffe555;
+.c6 button:hover .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c6 .internal-button:active .shadow {
-  box-shadow: 0.125rem 0.125rem 0 #ffe555, 0.3rem 0.3rem 0 rgba(87,87,87,100%);
+.c6 button:active .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c6 .internal-button:disabled .icon-container {
+.c6 button:disabled .icon-container {
   background: #808080;
 }
 
-.c6 .internal-button:hover .icon-container {
+.c6 button:hover .icon-container {
   background: #575757;
 }
 
-.c6 .internal-button:active .icon-container {
+.c6 button:active .icon-container {
   background: #222222;
 }
 
@@ -251,7 +251,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
         className="c5 c6 button-wrapper"
       >
         <button
-          className="c7 c8 internal-button"
+          className="c7 c8 "
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}

@@ -38,7 +38,7 @@ exports[`OakBackLink matches snapshot 1`] = `
 }
 
 .c0:active {
-  box-shadow: 0.125rem 0.125rem 0 #ffe555, 0.3rem 0.3rem 0 rgba(87,87,87,100%);
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
 .c0:hover,
@@ -53,7 +53,7 @@ exports[`OakBackLink matches snapshot 1`] = `
 }
 
 .c0:focus-visible {
-  box-shadow: 0 0 0 0.125rem #ffe555, 0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
 .c0:disabled {
