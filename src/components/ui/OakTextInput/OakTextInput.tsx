@@ -130,7 +130,7 @@ export const OakTextInput = ({
   borderColor = "border-primary",
   readOnlyBorderColor = "border-neutral",
   focusRingDropShadows = [
-    "drop-shadow-centered-yellow",
+    "drop-shadow-centered-lemon",
     "drop-shadow-centered-grey",
   ],
   background = "bg-primary",

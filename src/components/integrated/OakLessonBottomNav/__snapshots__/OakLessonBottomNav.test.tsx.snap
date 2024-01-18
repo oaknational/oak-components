@@ -19,28 +19,42 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c7 {
-  height: 3rem;
+.c5 {
+  position: relative;
   font-family: Lexend,sans-serif;
 }
 
 .c9 {
-  width: 3rem;
-  height: 3rem;
-  padding: 0.25rem;
-  background: #ffe555;
+  font-family: Lexend,sans-serif;
+}
+
+.c11 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  color: #222222;
+  background: #222222;
   border-radius: 6.25rem;
   font-family: Lexend,sans-serif;
 }
 
-.c10 {
-  position: relative;
+.c13 {
+  position: absolute;
   width: 100%;
   height: 100%;
+  border-radius: 6.25rem;
   font-family: Lexend,sans-serif;
 }
 
-.c13 {
+.c14 {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c17 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -66,7 +80,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   display: flex;
 }
 
-.c8 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -78,10 +92,29 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 0.5rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.75rem;
 }
 
-.c14 {
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -99,23 +132,24 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c12 {
-  color: #222222;
+.c16 {
   font-family: Lexend,sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
-  letter-spacing: 0.0115rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
 }
 
-.c11 {
+.c15 {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   object-fit: contain;
 }
 
-.c5 {
+.c7 {
   background: none;
   color: inherit;
   border: none;
@@ -126,16 +160,58 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: unset;
   outline: none;
   font-family: Lexend,sans-serif;
-  border-radius: 0.25rem;
+  color: #222222;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
-.c5:disabled {
+.c7:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c6:focus-visible {
+.c8 {
+  position: relative;
+}
+
+.c8:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: #575757;
+}
+
+.c8:active {
+  color: #222222;
+}
+
+.c8:disabled {
+  color: #808080;
+}
+
+.c6 button:focus-visible .shadow {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c6 button:hover .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c6 button:active .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+}
+
+.c6 button:disabled .icon-container {
+  background: #808080;
+}
+
+.c6 button:hover .icon-container {
+  background: #575757;
+}
+
+.c6 button:active .icon-container {
+  background: #222222;
 }
 
 .c2 {
@@ -143,7 +219,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c13 {
+  .c17 {
     width: auto;
   }
 }
@@ -157,7 +233,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c14 {
+  .c18 {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
@@ -171,58 +247,65 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
     <div
       className="c3 c4"
     >
-      <button
-        className="c5 c6"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        type="button"
+      <div
+        className="c5 c6 button-wrapper"
       >
-        <div
-          className="c7 c8"
+        <button
+          className="c7 c8 "
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          type="button"
         >
           <div
-            className="c9"
+            className="c9 c10"
           >
             <div
-              className="c10"
+              className="c11 c12 icon-container"
             >
-              <img
-                alt=""
-                className="c11"
-                data-nimg="fill"
-                decoding="async"
-                loading="lazy"
-                onError={[Function]}
-                onLoad={[Function]}
-                src="https://undefined/undefined/v1705078631/icons/zldisxmbff36z68rwcef.svg"
-                style={
-                  {
-                    "bottom": 0,
-                    "color": "transparent",
-                    "height": "100%",
-                    "left": 0,
-                    "objectFit": undefined,
-                    "objectPosition": undefined,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                    "width": "100%",
-                  }
-                }
+              <div
+                className="c13 shadow"
               />
+              <div
+                className="c14"
+              >
+                <img
+                  alt="lightbulb"
+                  className="c15"
+                  data-nimg="fill"
+                  decoding="async"
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="https://undefined/undefined/v1705078631/icons/zldisxmbff36z68rwcef.svg"
+                  style={
+                    {
+                      "bottom": 0,
+                      "color": "transparent",
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": undefined,
+                      "objectPosition": undefined,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                />
+              </div>
             </div>
+            <span
+              className="c16"
+            >
+              Need a hint?
+            </span>
           </div>
-          <span
-            className="c12"
-          >
-            Need a hint?
-          </span>
-        </div>
-      </button>
+        </button>
+      </div>
     </div>
     <div
-      className="c13 c14"
+      className="c17 c18"
     />
   </div>,
   .c0 {
@@ -231,10 +314,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c6 {
-  position: relative;
-  width: 100%;
-  height: 100%;
+.c3 {
   font-family: Lexend,sans-serif;
 }
 
@@ -246,16 +326,19 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c3 {
-  font-family: Lexend,sans-serif;
-}
-
 .c5 {
   width: 1.5rem;
   height: 1.5rem;
   padding: 0rem;
   background: #287c34;
   border-radius: 6.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c6 {
+  position: relative;
+  width: 100%;
+  height: 100%;
   font-family: Lexend,sans-serif;
 }
 
@@ -416,10 +499,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c6 {
-  position: relative;
-  width: 100%;
-  height: 100%;
+.c3 {
   font-family: Lexend,sans-serif;
 }
 
@@ -431,7 +511,10 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c3 {
+.c6 {
+  position: relative;
+  width: 100%;
+  height: 100%;
   font-family: Lexend,sans-serif;
 }
 
@@ -601,10 +684,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c6 {
-  position: relative;
-  width: 100%;
-  height: 100%;
+.c3 {
   font-family: Lexend,sans-serif;
 }
 
@@ -616,16 +696,19 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c3 {
-  font-family: Lexend,sans-serif;
-}
-
 .c5 {
   width: 1.5rem;
   height: 1.5rem;
   padding: 0rem;
   background: #287c34;
   border-radius: 6.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c6 {
+  position: relative;
+  width: 100%;
+  height: 100%;
   font-family: Lexend,sans-serif;
 }
 

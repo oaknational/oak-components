@@ -128,7 +128,7 @@ exports[`OakLessonTopNav matches snapshot 1`] = `
 }
 
 .c3:active {
-  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.3rem 0.3rem 0 rgba(87,87,87,100%);
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
 .c3:hover,

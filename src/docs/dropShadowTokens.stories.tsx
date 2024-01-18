@@ -71,7 +71,7 @@ export const DoubleShadow: Story = {
         />
         <OakBox
           $borderRadius={"border-radius-s"}
-          $dropShadow={"drop-shadow-centered-yellow"}
+          $dropShadow={"drop-shadow-centered-lemon"}
           $position={"absolute"}
           $top={"space-between-none"}
           $left={"space-between-none"}
@@ -99,7 +99,7 @@ export const DoubleShadow: Story = {
         />
         <OakBox
           $borderRadius={"border-radius-s"}
-          $dropShadow={"drop-shadow-yellow"}
+          $dropShadow={"drop-shadow-lemon"}
           $position={"absolute"}
           $top={"space-between-none"}
           $left={"space-between-none"}

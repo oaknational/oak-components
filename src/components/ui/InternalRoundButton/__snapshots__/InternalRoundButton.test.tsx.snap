@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OakTertiaryButton matches snapshot 1`] = `
+exports[`InternalRoundButton matches snapshot 1`] = `
 .c0 {
   position: relative;
   font-family: Lexend,sans-serif;
@@ -15,8 +15,8 @@ exports[`OakTertiaryButton matches snapshot 1`] = `
   width: 2rem;
   min-width: 2rem;
   height: 2rem;
-  color: #222222;
-  background: #222222;
+  color: #ebfbeb;
+  background: #bef2bd;
   border-radius: 6.25rem;
   font-family: Lexend,sans-serif;
 }
@@ -26,6 +26,13 @@ exports[`OakTertiaryButton matches snapshot 1`] = `
   width: 100%;
   height: 100%;
   border-radius: 6.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c9 {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
   font-family: Lexend,sans-serif;
 }
 
@@ -63,7 +70,7 @@ exports[`OakTertiaryButton matches snapshot 1`] = `
   justify-content: center;
 }
 
-.c9 {
+.c11 {
   font-family: Lexend,sans-serif;
   font-weight: 700;
   font-size: 1.125rem;
@@ -72,6 +79,10 @@ exports[`OakTertiaryButton matches snapshot 1`] = `
   -moz-letter-spacing: -0.005rem;
   -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
+}
+
+.c10 {
+  object-fit: contain;
 }
 
 .c2 {
@@ -85,7 +96,7 @@ exports[`OakTertiaryButton matches snapshot 1`] = `
   font-family: unset;
   outline: none;
   font-family: Lexend,sans-serif;
-  color: #222222;
+  color: #ebfbeb;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   padding-top: 0.5rem;
@@ -104,15 +115,15 @@ exports[`OakTertiaryButton matches snapshot 1`] = `
 .c3:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  color: #575757;
+  color: #f6e8a0;
 }
 
 .c3:active {
-  color: #222222;
+  color: #ebfbeb;
 }
 
 .c3:disabled {
-  color: #808080;
+  color: #cacaca;
 }
 
 .c1 button:focus-visible .shadow {
@@ -128,15 +139,15 @@ exports[`OakTertiaryButton matches snapshot 1`] = `
 }
 
 .c1 button:disabled .icon-container {
-  background: #808080;
+  background: #f2f2f2;
 }
 
 .c1 button:hover .icon-container {
-  background: #575757;
+  background: #bef2bd;
 }
 
 .c1 button:active .icon-container {
-  background: #222222;
+  background: #bef2bd;
 }
 
 <div
@@ -158,9 +169,37 @@ exports[`OakTertiaryButton matches snapshot 1`] = `
         <div
           className="c8 shadow"
         />
+        <div
+          className="c9"
+        >
+          <img
+            alt="arrow-right"
+            className="c10"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="https://undefined/undefined/v1699895398/icons/fv0z57zerrioft52dd9n.svg"
+            style={
+              {
+                "bottom": 0,
+                "color": "transparent",
+                "height": "100%",
+                "left": 0,
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": "100%",
+              }
+            }
+          />
+        </div>
       </div>
       <span
-        className="c9"
+        className="c11"
       >
         Click Me
       </span>

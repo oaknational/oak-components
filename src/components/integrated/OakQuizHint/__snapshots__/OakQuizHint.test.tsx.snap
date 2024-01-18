@@ -13,24 +13,38 @@ exports[`OakQuizHint matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c4 {
-  height: 3rem;
+.c2 {
+  position: relative;
   font-family: Lexend,sans-serif;
 }
 
 .c6 {
-  width: 3rem;
-  height: 3rem;
-  padding: 0.25rem;
-  background: #ffe555;
+  font-family: Lexend,sans-serif;
+}
+
+.c8 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  color: #222222;
+  background: #222222;
   border-radius: 6.25rem;
   font-family: Lexend,sans-serif;
 }
 
-.c7 {
-  position: relative;
+.c10 {
+  position: absolute;
   width: 100%;
   height: 100%;
+  border-radius: 6.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c11 {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
   font-family: Lexend,sans-serif;
 }
 
@@ -41,7 +55,7 @@ exports[`OakQuizHint matches snapshot 1`] = `
   display: flex;
 }
 
-.c5 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -53,26 +67,46 @@ exports[`OakQuizHint matches snapshot 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 0.5rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.75rem;
 }
 
 .c9 {
-  color: #222222;
-  font-family: Lexend,sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
-  letter-spacing: 0.0115rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
-.c8 {
+.c13 {
+  font-family: Lexend,sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c12 {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   object-fit: contain;
 }
 
-.c2 {
+.c4 {
   background: none;
   color: inherit;
   border: none;
@@ -83,70 +117,119 @@ exports[`OakQuizHint matches snapshot 1`] = `
   font-family: unset;
   outline: none;
   font-family: Lexend,sans-serif;
-  border-radius: 0.25rem;
+  color: #222222;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
-.c2:disabled {
+.c4:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c3:focus-visible {
+.c5 {
+  position: relative;
+}
+
+.c5:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: #575757;
+}
+
+.c5:active {
+  color: #222222;
+}
+
+.c5:disabled {
+  color: #808080;
+}
+
+.c3 button:focus-visible .shadow {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c3 button:hover .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c3 button:active .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+}
+
+.c3 button:disabled .icon-container {
+  background: #808080;
+}
+
+.c3 button:hover .icon-container {
+  background: #575757;
+}
+
+.c3 button:active .icon-container {
+  background: #222222;
 }
 
 <div
     className="c0 c1"
   >
-    <button
-      className="c2 c3"
-      onClick={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      type="button"
+    <div
+      className="c2 c3 button-wrapper"
     >
-      <div
-        className="c4 c5"
+      <button
+        className="c4 c5 "
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        type="button"
       >
         <div
-          className="c6"
+          className="c6 c7"
         >
           <div
-            className="c7"
+            className="c8 c9 icon-container"
           >
-            <img
-              alt=""
-              className="c8"
-              data-nimg="fill"
-              decoding="async"
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              src="https://undefined/undefined/v1705078631/icons/zldisxmbff36z68rwcef.svg"
-              style={
-                {
-                  "bottom": 0,
-                  "color": "transparent",
-                  "height": "100%",
-                  "left": 0,
-                  "objectFit": undefined,
-                  "objectPosition": undefined,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
+            <div
+              className="c10 shadow"
             />
+            <div
+              className="c11"
+            >
+              <img
+                alt="lightbulb"
+                className="c12"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="https://undefined/undefined/v1705078631/icons/zldisxmbff36z68rwcef.svg"
+                style={
+                  {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+              />
+            </div>
           </div>
+          <span
+            className="c13"
+          >
+            Need a hint?
+          </span>
         </div>
-        <span
-          className="c9"
-        >
-          Need a hint?
-        </span>
-      </div>
-    </button>
+      </button>
+    </div>
   </div>,
   ",",
 ]

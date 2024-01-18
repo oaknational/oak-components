@@ -84,7 +84,7 @@ const StyledFlexBox = styled(OakFlex)<StyledFlexBoxProps>`
       .yellow-shadow:has(
         + ${InternalCheckBoxLabelHoverDecor} input:focus-visible
       ) {
-      box-shadow: ${parseDropShadow("drop-shadow-centered-yellow")};
+      box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")};
     }
 
     &

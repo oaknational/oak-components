@@ -1,27 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OakTertiaryButton matches snapshot 1`] = `
+exports[`OakHintButton matches snapshot 1`] = `
 .c0 {
   position: relative;
   font-family: Lexend,sans-serif;
 }
 
-.c4 {
+.c5 {
   font-family: Lexend,sans-serif;
 }
 
-.c6 {
+.c7 {
   position: relative;
-  width: 2rem;
-  min-width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  min-width: 2.5rem;
+  height: 2.5rem;
   color: #222222;
-  background: #222222;
+  background: #ffe555;
   border-radius: 6.25rem;
   font-family: Lexend,sans-serif;
 }
 
-.c8 {
+.c9 {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -29,7 +29,14 @@ exports[`OakTertiaryButton matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c5 {
+.c10 {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -48,7 +55,7 @@ exports[`OakTertiaryButton matches snapshot 1`] = `
   gap: 0.75rem;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -63,7 +70,7 @@ exports[`OakTertiaryButton matches snapshot 1`] = `
   justify-content: center;
 }
 
-.c9 {
+.c12 {
   font-family: Lexend,sans-serif;
   font-weight: 700;
   font-size: 1.125rem;
@@ -72,6 +79,10 @@ exports[`OakTertiaryButton matches snapshot 1`] = `
   -moz-letter-spacing: -0.005rem;
   -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
+}
+
+.c11 {
+  object-fit: contain;
 }
 
 .c2 {
@@ -104,7 +115,7 @@ exports[`OakTertiaryButton matches snapshot 1`] = `
 .c3:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  color: #575757;
+  color: #222222;
 }
 
 .c3:active {
@@ -132,37 +143,73 @@ exports[`OakTertiaryButton matches snapshot 1`] = `
 }
 
 .c1 button:hover .icon-container {
-  background: #575757;
+  background: #ffe555;
 }
 
 .c1 button:active .icon-container {
-  background: #222222;
+  background: #ffe555;
+}
+
+.c4:hover .shadow {
+  box-shadow: none !important;
+}
+
+.c4:active .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%) !important;
 }
 
 <div
   className="c0 c1 button-wrapper"
 >
   <button
-    className="c2 c3 "
+    className="c2 c3  c4"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     type="button"
   >
     <div
-      className="c4 c5"
+      className="c5 c6"
     >
       <div
-        className="c6 c7 icon-container"
+        className="c7 c8 icon-container"
       >
         <div
-          className="c8 shadow"
+          className="c9 shadow"
         />
+        <div
+          className="c10"
+        >
+          <img
+            alt="lightbulb"
+            className="c11"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="https://undefined/undefined/v1705078631/icons/zldisxmbff36z68rwcef.svg"
+            style={
+              {
+                "bottom": 0,
+                "color": "transparent",
+                "height": "100%",
+                "left": 0,
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": "100%",
+              }
+            }
+          />
+        </div>
       </div>
       <span
-        className="c9"
+        className="c12"
       >
-        Click Me
+        Need a hint?
       </span>
     </div>
   </button>

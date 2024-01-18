@@ -131,7 +131,7 @@ exports[`OakPrimaryButton matches snapshot 1`] = `
 }
 
 .c1 .grey-shadow:has(+ * + .internal-button:active) {
-  box-shadow: 0.3rem 0.3rem 0 rgba(87,87,87,100%);
+  box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
 .c1 .yellow-shadow:has(+ .internal-button:active) {
