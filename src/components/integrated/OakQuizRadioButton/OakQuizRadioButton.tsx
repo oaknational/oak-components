@@ -37,7 +37,7 @@ const StyledOakFlex = styled(OakFlex)<StyledOakFlexProps>`
   }
 
   &:focus-within {
-    box-shadow: ${parseDropShadow("drop-shadow-centered-yellow")},
+    box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
   }
 

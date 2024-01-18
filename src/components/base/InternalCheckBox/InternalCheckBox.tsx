@@ -139,7 +139,7 @@ InternalCheckBoxHover.defaultProps = {
 
 const focusStyle = css`
   &:focus-visible {
-    box-shadow: ${parseDropShadow("drop-shadow-centered-yellow")};
+    box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")};
   }
 `;
 

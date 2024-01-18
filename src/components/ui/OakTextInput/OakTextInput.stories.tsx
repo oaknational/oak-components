@@ -63,7 +63,7 @@ export const WithStyling: Story = {
     color: "blue",
     borderColor: "blue",
     hoverBackground: "aqua110",
-    focusRingDropShadows: ["drop-shadow-wide-yellow"],
+    focusRingDropShadows: ["drop-shadow-wide-lemon"],
   },
 };
 

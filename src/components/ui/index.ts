@@ -9,5 +9,4 @@ export * from "./OakCheckBox";
 export * from "./OakTextInput";
 export * from "./OakRoundIcon";
 export * from "./OakTooltip";
-export * from "./OakHintButton";
 export * from "./OakBackLink";

@@ -31,13 +31,15 @@ export const OakTertiaryButton = ({
       isTrailingIcon={isTrailingIcon}
       iconName={iconName}
       defaultIconColor={"white"}
+      disabledIconColor="white"
+      disabledIconBackground="bg-btn-primary-disabled"
       defaultIconBackground="black"
       hoverIconBackground="bg-btn-primary-hover"
       defaultTextColor="text-primary"
       hoverTextColor="bg-btn-primary-hover"
-      disabledIconBackground="bg-btn-primary-disabled"
       disabledTextColor="text-disabled"
-      disabledIconColor="white"
+      iconBackgroundSize={"all-spacing-7"}
+      iconSize={"all-spacing-6"}
     >
       {children}
     </InternalRoundButton>

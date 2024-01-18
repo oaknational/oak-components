@@ -18,6 +18,8 @@ const defaultArgs: InternalRoundButtonProps = {
   disabledIconBackground: "grey20",
   disabledTextColor: "grey40",
   hoverIconBackground: "mint",
+  iconBackgroundSize: "all-spacing-7",
+  iconSize: "all-spacing-6",
 };
 
 describe("InternalRoundButton", () => {

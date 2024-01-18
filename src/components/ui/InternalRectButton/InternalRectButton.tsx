@@ -73,10 +73,10 @@ const StyledButtonWrapper = styled(OakBox)`
     box-shadow: ${parseDropShadow("drop-shadow-centered-grey")};
   }
   .yellow-shadow:has(+ .internal-button:focus-visible) {
-    box-shadow: ${parseDropShadow("drop-shadow-centered-yellow")};
+    box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")};
   }
   .yellow-shadow:has(+ .internal-button:hover) {
-    box-shadow: ${parseDropShadow("drop-shadow-yellow")};
+    box-shadow: ${parseDropShadow("drop-shadow-lemon")};
   }
   .grey-shadow:has(+ * + .internal-button:hover) {
     box-shadow: none;
@@ -85,7 +85,7 @@ const StyledButtonWrapper = styled(OakBox)`
     box-shadow: ${parseDropShadow("drop-shadow-grey")};
   }
   .yellow-shadow:has(+ .internal-button:active) {
-    box-shadow: ${parseDropShadow("drop-shadow-yellow")};
+    box-shadow: ${parseDropShadow("drop-shadow-lemon")};
   }
 `;
 

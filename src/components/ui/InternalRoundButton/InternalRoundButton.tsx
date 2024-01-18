@@ -33,20 +33,22 @@ export type InternalRoundButtonProps = Omit<
   iconName?: OakIconName;
   isTrailingIcon?: boolean;
   defaultTextColor: OakCombinedColorToken;
-  defaultIconBackground: OakCombinedColorToken;
-  defaultIconColor?: OakRoundIconProps["$colorFilter"];
   hoverTextColor: OakCombinedColorToken;
+  disabledTextColor: OakCombinedColorToken;
+  defaultIconBackground: OakCombinedColorToken;
   hoverIconBackground: OakCombinedColorToken;
   disabledIconBackground: OakCombinedColorToken;
-  disabledTextColor: OakCombinedColorToken;
+  defaultIconColor?: OakRoundIconProps["$colorFilter"];
+  disabledIconColor?: OakRoundIconProps["$colorFilter"];
   width?: SizeStyleProps["$width"];
   maxWidth?: SizeStyleProps["$maxWidth"];
-  disabledIconColor?: OakRoundIconProps["$colorFilter"];
-  noHoverShadow?: boolean;
+  iconBackgroundSize: SizeStyleProps["$width"];
+  iconSize: SizeStyleProps["$width"];
 } & PositionStyleProps;
 
 const StyledInternalButton = styled(InternalButton)<
-  InternalRoundButtonProps & SizeStyleProps
+  Omit<InternalRoundButtonProps, "iconBackgroundSize" | "iconSize"> &
+    SizeStyleProps
 >`
   ${positionStyle}
   ${sizeStyle}
@@ -68,40 +70,32 @@ const StyledButtonWrapper = styled(OakBox)<{
   disabledIconBackground: OakCombinedColorToken;
   hoverIconBackground: OakCombinedColorToken;
   defaultIconBackground: OakCombinedColorToken;
-  noHoverShadow?: boolean;
 }>`
-  .internal-button:focus-visible .shadow {
-    box-shadow: ${parseDropShadow("drop-shadow-centered-yellow")},
+  button:focus-visible .shadow {
+    box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
   }
-
-  ${(props) => css`
-    .internal-button:hover .shadow {
-      box-shadow: ${props.noHoverShadow === true
-        ? "none"
-        : parseDropShadow("drop-shadow-yellow")};
-    }
-  `}
-
-  .internal-button:active .shadow {
-    box-shadow: ${parseDropShadow("drop-shadow-yellow")},
+  button:hover .shadow {
+    box-shadow: ${parseDropShadow("drop-shadow-lemon")};
+  }
+  button:active .shadow {
+    box-shadow: ${parseDropShadow("drop-shadow-lemon")},
       ${parseDropShadow("drop-shadow-grey")};
   }
-
   ${(props) => css`
-    .internal-button:disabled .icon-container {
+    button:disabled .icon-container {
       background: ${parseColor(props.disabledIconBackground)};
     }
-    .internal-button:hover .icon-container {
+    button:hover .icon-container {
       background: ${parseColor(props.hoverIconBackground)};
     }
-    .internal-button:active .icon-container {
+    button:active .icon-container {
       background: ${parseColor(props.defaultIconBackground)};
     }
   `}
 `;
 
-export const InternalRoundButton = (props: InternalRoundButtonProps) => {
+const _InternalRoundButton = (props: InternalRoundButtonProps) => {
   const {
     children,
     iconName,
@@ -110,6 +104,8 @@ export const InternalRoundButton = (props: InternalRoundButtonProps) => {
     disabled,
     width,
     maxWidth,
+    iconBackgroundSize,
+    iconSize,
     ...rest
   } = props;
 
@@ -118,8 +114,8 @@ export const InternalRoundButton = (props: InternalRoundButtonProps) => {
       {iconName && (
         <OakIcon
           iconName={iconName}
-          $width={"all-spacing-6"}
-          $height={"all-spacing-6"}
+          $width={iconSize}
+          $height={iconSize}
           $colorFilter={
             props.disabled
               ? props.disabledIconColor
@@ -132,8 +128,8 @@ export const InternalRoundButton = (props: InternalRoundButtonProps) => {
     </>
   );
   const loader = (
-    <OakBox $width={"all-spacing-6"} $height={"all-spacing-6"}>
-      <OakLoadingSpinner $width={"all-spacing-6"} loaderColor="white" />
+    <OakBox $width={iconSize} $height={iconSize}>
+      <OakLoadingSpinner $width={iconSize} loaderColor="white" />
     </OakBox>
   );
   const iconLogic = (
@@ -143,11 +139,11 @@ export const InternalRoundButton = (props: InternalRoundButtonProps) => {
       $color={props.defaultTextColor}
       $borderRadius={"border-radius-circle"}
       $position={"relative"}
-      $width={"all-spacing-8"}
-      $height={"all-spacing-8"}
+      $width={iconBackgroundSize}
+      $height={iconBackgroundSize}
       $alignItems={"center"}
       $justifyContent={"center"}
-      $minWidth={"all-spacing-8"}
+      $minWidth={iconBackgroundSize}
     >
       <OakBox
         className="shadow"
@@ -168,12 +164,10 @@ export const InternalRoundButton = (props: InternalRoundButtonProps) => {
       $width={width}
       $maxWidth={maxWidth}
       disabledIconBackground={props.disabledIconBackground}
-      noHoverShadow={props.noHoverShadow}
       hoverIconBackground={props.hoverIconBackground}
       defaultIconBackground={props.defaultIconBackground}
     >
       <StyledInternalButton
-        className="internal-button"
         {...rest}
         $color={props.defaultTextColor}
         $pv={"inner-padding-xs"}
@@ -195,3 +189,5 @@ export const InternalRoundButton = (props: InternalRoundButtonProps) => {
     </StyledButtonWrapper>
   );
 };
+
+export const InternalRoundButton = styled(_InternalRoundButton)``;

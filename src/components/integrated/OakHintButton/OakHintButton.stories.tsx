@@ -3,7 +3,8 @@ import { Meta, StoryObj } from "@storybook/react";
 
 import { OakHintButton } from "./OakHintButton";
 
-import { OakFlex } from "@/components/base";
+import { OakFlex, OakThemeProvider } from "@/components/base";
+import { oakDefaultTheme } from "@/styles";
 
 /**
  *
@@ -22,7 +23,7 @@ import { OakFlex } from "@/components/base";
 const meta: Meta<typeof OakHintButton> = {
   component: OakHintButton,
   tags: ["autodocs"],
-  title: "components/ui/OakHintButton",
+  title: "components/integrated/OakHintButton",
   argTypes: {
     isOpen: {
       control: { type: "boolean" },
@@ -40,11 +41,13 @@ type Story = StoryObj<typeof OakHintButton>;
 
 export const Default: Story = {
   render: (args) => (
-    <OakFlex $gap="space-between-m">
-      <OakHintButton {...args} />
-      <OakHintButton {...args} disabled />
-      <OakHintButton {...args} isLoading />
-    </OakFlex>
+    <OakThemeProvider theme={oakDefaultTheme}>
+      <OakFlex $gap="space-between-m">
+        <OakHintButton {...args} />
+        <OakHintButton {...args} disabled />
+        <OakHintButton {...args} isLoading />
+      </OakFlex>
+    </OakThemeProvider>
   ),
   args: {
     isOpen: false,
