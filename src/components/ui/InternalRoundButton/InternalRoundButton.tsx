@@ -101,7 +101,7 @@ const StyledButtonWrapper = styled(OakBox)<{
   `}
 `;
 
-export const InternalRoundButton = (props: InternalRoundButtonProps) => {
+const _InternalRoundButton = (props: InternalRoundButtonProps) => {
   const {
     children,
     iconName,
@@ -145,9 +145,9 @@ export const InternalRoundButton = (props: InternalRoundButtonProps) => {
       $position={"relative"}
       $width={"all-spacing-8"}
       $height={"all-spacing-8"}
+      $minWidth={"all-spacing-8"}
       $alignItems={"center"}
       $justifyContent={"center"}
-      $minWidth={"all-spacing-8"}
     >
       <OakBox
         className="shadow"
@@ -195,3 +195,5 @@ export const InternalRoundButton = (props: InternalRoundButtonProps) => {
     </StyledButtonWrapper>
   );
 };
+
+export const InternalRoundButton = styled(_InternalRoundButton)``;

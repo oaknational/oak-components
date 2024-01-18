@@ -81,7 +81,9 @@ type Story = StoryObj<typeof InternalRoundButton>;
 export const Default: Story = {
   render: (args) => (
     <OakFlex $gap="space-between-m">
-      <InternalRoundButton {...args}>Button</InternalRoundButton>
+      <InternalRoundButton {...args}>
+        Button triuhit jnkjhnjiknij njoijnoi
+      </InternalRoundButton>
       <InternalRoundButton {...args} disabled>
         Disabled Button
       </InternalRoundButton>

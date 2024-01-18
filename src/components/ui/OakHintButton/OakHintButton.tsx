@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 import { InternalRoundButton } from "@/components/ui/InternalRoundButton";
 
@@ -9,13 +10,23 @@ export type OakHintButtonProps = {
   disabled?: boolean;
 };
 
+const StyledInternalRoundButton = styled(InternalRoundButton)`
+  .internal-button:hover .shadow {
+    box-shadow: none;
+  }
+
+  .internal-button:active .shadow {
+    box-shadow: none;
+  }
+`;
+
 export const OakHintButton = (props: OakHintButtonProps) => {
   const { isOpen, disabled } = props;
   return (
-    <InternalRoundButton
+    <StyledInternalRoundButton
       iconName={isOpen && !disabled ? "lightbulb-yellow" : "lightbulb"}
-      defaultIconBackground={isOpen ? "black" : "lemon"}
-      hoverIconBackground={isOpen ? "black" : "lemon"}
+      defaultIconBackground={isOpen ? "black" : "bg-decorative5-main"}
+      hoverIconBackground={isOpen ? "black" : "bg-decorative5-main"}
       defaultTextColor={"text-primary"}
       hoverTextColor={"text-primary"}
       disabledIconBackground={"bg-btn-primary-disabled"}
@@ -27,6 +38,6 @@ export const OakHintButton = (props: OakHintButtonProps) => {
       noHoverShadow={true}
     >
       {!isOpen ? "Need a hint?" : "Close hint"}
-    </InternalRoundButton>
+    </StyledInternalRoundButton>
   );
 };
