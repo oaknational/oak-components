@@ -1,0 +1,253 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakLessonNavItem matches snapshot 1`] = `
+[
+  .c0 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  background: #e7f6f5;
+  border: 0.188rem solid;
+  border-color: #7cd8d0;
+  border-radius: 1rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c3 {
+  width: 5rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c5 {
+  position: relative;
+  width: 3.5rem;
+  height: 3.5rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c7 {
+  font-family: Lexend,sans-serif;
+}
+
+.c8 {
+  color: #222222;
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c9 {
+  font-family: Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c12 {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.25rem;
+  background: #ffe555;
+  border-radius: 6.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c15 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: 0rem;
+  -ms-flex-preferred-size: 0rem;
+  flex-basis: 0rem;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+}
+
+.c6 {
+  object-fit: contain;
+}
+
+.c14 {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  background: transparent;
+}
+
+.c14 img {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+}
+
+.c2 {
+  outline: none;
+}
+
+.c2:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c2:hover .c13,
+.c2:active .c13 {
+  background: #222222;
+}
+
+.c2:hover .c13 img,
+.c2:active .c13 img {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+}
+
+.c2:active {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.3rem 0.3rem 0 rgba(87,87,87,100%);
+}
+
+<a
+    className="c0 c1 c2"
+  >
+    <div
+      className="c3 c4"
+    >
+      <div
+        className="c5"
+      >
+        <img
+          alt="intro"
+          className="c6"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="https://undefined/undefined/v1705416078/icons/dr0achdttjoe5b6lbcb7.svg"
+          style={
+            {
+              "bottom": 0,
+              "color": "transparent",
+              "height": "100%",
+              "left": 0,
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+    </div>
+    <div
+      className="c7"
+    >
+      <strong
+        className="c8"
+      >
+        Intro
+      </strong>
+      <div
+        className="c9"
+      >
+        Get ready
+      </div>
+    </div>
+    <div
+      className="c7 c10"
+    >
+      <div
+        className="c7 c11"
+      >
+        <div
+          className="c12 c13 c14"
+        >
+          <div
+            className="c15"
+          >
+            <img
+              alt="chevron-right"
+              className="c6"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="https://undefined/undefined/v1699895475/icons/rhzft6wnpdp3nvsmlyei.svg"
+              style={
+                {
+                  "bottom": 0,
+                  "color": "transparent",
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>,
+  ",",
+]
+`;
