@@ -30,7 +30,7 @@ export default meta;
 type Story = StoryObj<typeof OakLessonLayout>;
 
 const headings: Record<
-  Exclude<OakLessonLayoutProps["lessonSectionName"], "overview">,
+  Exclude<OakLessonLayoutProps["lessonSectionName"], "overview" | "review">,
   string
 > = {
   intro: "Intro",
@@ -40,7 +40,7 @@ const headings: Record<
 };
 
 const mobileSumamry: Record<
-  Exclude<OakLessonLayoutProps["lessonSectionName"], "overview">,
+  Exclude<OakLessonLayoutProps["lessonSectionName"], "overview" | "review">,
   string
 > = {
   intro: "In progress...",
@@ -55,7 +55,7 @@ export const Default: Story = {
       {...args}
       lessonSectionName={lessonSectionName}
       topNavSlot={
-        lessonSectionName !== "overview" ? (
+        lessonSectionName !== "overview" && lessonSectionName !== "review" ? (
           <OakLessonTopNav
             lessonSectionName={lessonSectionName}
             backLinkSlot={<OakBackLink type="button" />}

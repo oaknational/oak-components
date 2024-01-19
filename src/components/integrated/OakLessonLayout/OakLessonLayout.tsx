@@ -11,7 +11,8 @@ type LessonSectionName =
   | "intro"
   | "starter-quiz"
   | "video"
-  | "exit-quiz";
+  | "exit-quiz"
+  | "review";
 
 export type OakLessonLayoutProps = {
   lessonSectionName: LessonSectionName;
@@ -153,6 +154,13 @@ function pickSectionColours(
         "bg-decorative5-very-subdued",
         "border-inverted",
         "bg-decorative5-subdued",
+      ];
+    case "review":
+      return [
+        "bg-decorative4-subdued",
+        "bg-primary",
+        "border-decorative4",
+        "bg-primary",
       ];
   }
 }
