@@ -121,3 +121,15 @@ export const SVGImageResponsive: Story = {
     },
   },
 };
+
+export const HugeImageServedFromCloudinary: Story = {
+  render: (args: OakImageProps) => <OakImage {...args} />,
+  args: {
+    alt: "Huge image of a cat",
+    src: `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1705942058/test-images/Cat_August_2010-4_lklxsr.jpg`,
+    width: 3640,
+    height: 2226,
+    $minWidth: "all-spacing-22",
+    sizes: "(max-width: 768px) 100vw, 33vw",
+  },
+};
