@@ -83,6 +83,7 @@ export const OakIcon = (props: OakIconProps) => {
       $width={$width}
       $height={$height}
       sizes="5vw"
+      placeholder="empty"
       {...rest}
     />
   );
