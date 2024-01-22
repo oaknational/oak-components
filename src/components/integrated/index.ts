@@ -8,3 +8,4 @@ export * from "./OakQuizFeedback";
 export * from "./OakQuizCounter";
 export * from "./OakLessonLayout";
 export * from "./OakHintButton";
+export * from "./OakLessonNavItem";

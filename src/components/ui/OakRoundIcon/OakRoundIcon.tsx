@@ -28,6 +28,7 @@ export const OakRoundIcon = ({
   $width = "all-spacing-9",
   $height = "all-spacing-9",
   $pa = "inner-padding-ssx",
+  className,
   ...rest
 }: OakRoundIconProps) => {
   const icon = rest.iconName ? (
@@ -38,6 +39,7 @@ export const OakRoundIcon = ({
 
   return (
     <OakBox
+      className={className}
       $background={$background}
       $borderRadius={$borderRadius}
       $width={$width}
