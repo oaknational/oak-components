@@ -90,7 +90,7 @@ const UnstyledInternalButton = (props: InternalButtonProps) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       type={props.type ?? "button"}
-      form={props.form ? props.form : undefined}
+      form={props.form}
     >
       {props.children}
     </button>
