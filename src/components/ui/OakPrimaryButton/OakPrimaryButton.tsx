@@ -19,6 +19,7 @@ export type OakPrimaryButtonProps = Pick<
   | "type"
   | "width"
   | "maxWidth"
+  | "form"
 >;
 
 export const OakPrimaryButton = (props: OakPrimaryButtonProps) => {
