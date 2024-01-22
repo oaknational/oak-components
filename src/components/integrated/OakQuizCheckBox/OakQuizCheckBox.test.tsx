@@ -89,22 +89,52 @@ describe("OakQuizCheckBox", () => {
     expect(onChange).not.toHaveBeenCalled();
   });
 
-  it("renders a tick when isCorrect is true and isFeedback is true", () => {
+  it("renders a tick when is correct and is selected", () => {
     const { getByAltText } = renderWithTheme(
-      <OakQuizCheckBox id="checkbox-1" value="Option 1" feedback={"correct"} />,
+      <OakQuizCheckBox
+        id="checkbox-1"
+        value="Option 1"
+        feedback={"correct"}
+        defaultChecked={true}
+      />,
     );
     expect(getByAltText("Correct")).toBeInTheDocument();
   });
 
-  it("renders a cross when isCorrect is false and isFeedback is true", () => {
+  it("renders a cross feedback is incorrect and is selected", () => {
     const { getByAltText } = renderWithTheme(
       <OakQuizCheckBox
         id="checkbox-1"
         value="Option 1"
         feedback={"incorrect"}
+        defaultChecked={true}
       />,
     );
     expect(getByAltText("Incorrect")).toBeInTheDocument();
+  });
+
+  it("renders a tick when is incorrect but is not selected", () => {
+    const { getByAltText } = renderWithTheme(
+      <OakQuizCheckBox
+        id="checkbox-1"
+        value="Option 1"
+        feedback={"incorrect"}
+        defaultChecked={false}
+      />,
+    );
+    expect(getByAltText("Unselected correct choice")).toBeInTheDocument();
+  });
+
+  it("doesn't render a tick or cross when feedback is correct and unseleted", () => {
+    const { queryByRole } = renderWithTheme(
+      <OakQuizCheckBox
+        id="checkbox-1"
+        value="Option 1"
+        feedback={"correct"}
+        defaultChecked={false}
+      />,
+    );
+    expect(queryByRole("img")).not.toBeInTheDocument();
   });
 
   it("is disabled when in feedback mode ", () => {

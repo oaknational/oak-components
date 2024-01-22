@@ -198,16 +198,16 @@ export const Feedback: Story = {
       <OakQuizCheckBox
         {...args}
         id="checkbox-test-default-9"
-        feedback={"correct"}
+        feedback={"incorrect"}
         value="test-8"
-        displayValue="correctly not selected"
+        displayValue="unselected correct answer"
       />
       <OakQuizCheckBox
         {...args}
         id="checkbox-test-default-10"
-        feedback={"incorrect"}
+        feedback={"correct"}
         value="test-9"
-        displayValue="incorrectly not selected"
+        displayValue="unselected incorrect answer"
       />
     </OakFlex>
   ),

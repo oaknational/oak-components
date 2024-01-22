@@ -157,14 +157,20 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
     disabled,
     innerRef,
     displayValue,
+    defaultChecked,
     ...rest
   } = props;
 
   const isFeedback = !!feedback;
-  const isCorrect = feedback === "correct";
 
   const defaultRef = useRef<HTMLInputElement>(null);
   const inputRef = innerRef ?? defaultRef;
+  const showTick =
+    (feedback === "correct" && (inputRef.current?.checked || defaultChecked)) ||
+    (feedback === "incorrect" && !inputRef.current?.checked && !defaultChecked);
+  const showCross =
+    feedback === "incorrect" && (inputRef.current?.checked || defaultChecked);
+
   const handleContainerClick = (
     e:
       | React.MouseEvent<HTMLDivElement>
@@ -192,11 +198,11 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
   const backgroundColor: OakCombinedColorToken =
     disabled && !isFeedback ? "bg-neutral-stronger" : "bg-primary";
 
-  const feedbackBgColor: OakCombinedColorToken = isCorrect
+  const feedbackBgColor: OakCombinedColorToken = showTick
     ? "bg-correct"
     : "bg-incorrect";
 
-  const feedbackBorderColor = isCorrect ? "border-success" : "border-error";
+  const feedbackBorderColor = showTick ? "border-success" : "border-error";
 
   const inputCheckbox = (
     <StyledFlexBox
@@ -262,6 +268,7 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
               value={value}
               disabled={disabled || isFeedback}
               {...rest}
+              defaultChecked={defaultChecked}
               $width={"all-spacing-7"}
               $height={"all-spacing-7"}
               $ba={"border-solid-m"}
@@ -274,7 +281,7 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
         />
         {image ? imageContainer : displayValue}
       </StyledInternalCheckBoxLabelHoverDecor>
-      {isFeedback && (
+      {isFeedback && (showTick || showCross) && (
         <OakFlex
           className="feedbackIconWrapper"
           $flexGrow={1}
@@ -282,11 +289,22 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
           $alignItems={"flex-end"}
           $height={"100%"}
         >
-          <OakIcon
-            iconName={isCorrect ? "tick" : "cross"}
-            $colorFilter={isCorrect ? "icon-success" : "icon-error"}
-            alt={isCorrect ? "Correct" : "Incorrect"}
-          />
+          {showTick && (
+            <OakIcon
+              iconName={"tick"}
+              $colorFilter={"icon-success"}
+              alt={
+                feedback === "correct" ? "Correct" : "Unselected correct choice"
+              }
+            />
+          )}
+          {showCross && (
+            <OakIcon
+              iconName={"cross"}
+              $colorFilter={"icon-error"}
+              alt={"Incorrect"}
+            />
+          )}
         </OakFlex>
       )}
     </StyledFlexBox>
