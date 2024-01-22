@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakBulletList matches snapshot 1`] = `
+.c0 {
+  font-family: Lexend,sans-serif;
+}
+
+<span
+  className="c0"
+  data-testid="test"
+>
+  <span
+    className="c0"
+  >
+    <span
+      className="c0"
+    >
+      first
+    </span>
+  </span>
+  <span
+    className="c0"
+  >
+    <span
+      className="c0"
+    >
+       • 
+    </span>
+    <span
+      className="c0"
+    >
+      second
+    </span>
+  </span>
+  <span
+    className="c0"
+  >
+    <span
+      className="c0"
+    >
+       • 
+    </span>
+    <span
+      className="c0"
+    >
+      third
+    </span>
+  </span>
+</span>
+`;
