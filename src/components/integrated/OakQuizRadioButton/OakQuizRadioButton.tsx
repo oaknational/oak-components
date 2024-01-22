@@ -68,7 +68,6 @@ const StyledOakFlex = styled(OakFlex)<StyledOakFlexProps>`
 export const OakQuizRadioButton = (props: OakQuizRadioButtonProps) => {
   const { value, feedback, image, disabled, label, ...rest } = props;
   const showFeedback = !!feedback;
-  const isCorrect = feedback === "correct";
   // Give the input focus when the entire component is clicked
   const handleOnClick: MouseEventHandler<HTMLElement> = (event) => {
     event.currentTarget.querySelector("input")?.click();
@@ -76,6 +75,9 @@ export const OakQuizRadioButton = (props: OakQuizRadioButtonProps) => {
   const checked = useContext(RadioContext).currentValue === value;
   let outlineColor: OakUiRoleToken | undefined;
   let backgroundColor: OakUiRoleToken = "bg-primary";
+  let feedbackIcon: "tick" | "cross" | null = null;
+  let feedbackAltText: string | undefined;
+
   switch (true) {
     case disabled && !showFeedback:
       backgroundColor = "bg-neutral-stronger";
@@ -83,10 +85,18 @@ export const OakQuizRadioButton = (props: OakQuizRadioButtonProps) => {
     case feedback === "correct" && checked:
       outlineColor = "border-success";
       backgroundColor = "bg-correct";
+      feedbackIcon = "tick";
+      feedbackAltText = "Correct";
       break;
     case feedback === "incorrect" && checked:
       outlineColor = "border-error";
       backgroundColor = "bg-incorrect";
+      feedbackIcon = "cross";
+      feedbackAltText = "Incorrect";
+      break;
+    case feedback === "incorrect" && !checked:
+      feedbackIcon = "tick";
+      feedbackAltText = "Unselected correct choice";
       break;
     case checked && !disabled:
       outlineColor = "border-primary";
@@ -130,12 +140,14 @@ export const OakQuizRadioButton = (props: OakQuizRadioButtonProps) => {
         }
         {...rest}
       />
-      {showFeedback && (
+      {showFeedback && feedbackIcon && (
         <OakFlex $alignSelf="flex-end">
           <OakIcon
-            iconName={isCorrect ? "tick" : "cross"}
-            $colorFilter={isCorrect ? "icon-success" : "icon-error"}
-            alt={isCorrect ? "Correct" : "Incorrect"}
+            iconName={feedbackIcon}
+            $colorFilter={
+              feedbackIcon === "tick" ? "icon-success" : "icon-error"
+            }
+            alt={feedbackAltText}
           />
         </OakFlex>
       )}

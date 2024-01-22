@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Meta, StoryObj } from "@storybook/react";
+import { within } from "@storybook/testing-library";
 
 import { OakQuizCheckBox } from "./OakQuizCheckBox";
 
@@ -129,88 +130,66 @@ export const WithImageNoDims: Story = {
   },
 };
 
-export const PreChecked: Story = {
-  render: (args) => (
-    <OakFlex
-      $pa="inner-padding-l"
-      $background={"bg-neutral"}
-      $flexDirection={"column"}
-      $gap={"space-between-m"}
-    >
-      <OakQuizCheckBox
-        {...args}
-        id="checkbox-test-default-4"
-        defaultChecked={true}
-        value="test-3"
-        displayValue="default checked"
-      />
-      <OakQuizCheckBox
-        {...args}
-        id="checkbox-test-default-5"
-        defaultChecked={true}
-        disabled={true}
-        value="test-4"
-        displayValue="default checked"
-      />
-      <OakQuizCheckBox
-        {...args}
-        id="checkbox-test-default-6"
-        value="test-5"
-        displayValue="dynamic default doesn't work past first render"
-      />
-    </OakFlex>
-  ),
-  args: {
-    value: "a test value",
-    defaultChecked: false,
-  },
-  parameters: {
-    controls: {
-      include: ["defaultChecked"],
-    },
-  },
-};
-
 export const Feedback: Story = {
-  render: (args) => (
-    <OakFlex
-      $pa="inner-padding-l"
-      $background={"bg-neutral"}
-      $flexDirection={"column"}
-      $gap={"space-between-m"}
-    >
-      <OakQuizCheckBox
-        {...args}
-        id="checkbox-test-default-7"
-        defaultChecked={true}
-        feedback={"correct"}
-        value="test-6"
-        displayValue="correctly selected"
-      />
-      <OakQuizCheckBox
-        {...args}
-        id="checkbox-test-default-8"
-        defaultChecked={true}
-        feedback={"incorrect"}
-        value="test-7"
-        displayValue="incorrectly selected"
-      />
-      <OakQuizCheckBox
-        {...args}
-        id="checkbox-test-default-9"
-        feedback={"correct"}
-        value="test-8"
-        displayValue="correctly not selected"
-      />
-      <OakQuizCheckBox
-        {...args}
-        id="checkbox-test-default-10"
-        feedback={"incorrect"}
-        value="test-9"
-        displayValue="incorrectly not selected"
-      />
-    </OakFlex>
-  ),
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    canvas.getByLabelText("correctly selected").click(); // clicking the answers to select them in the story
+    canvas.getByLabelText("incorrectly selected").click();
+  },
+  render: (args) => {
+    // These states are just a way to demonstrate the various feedback states in the story
+    const [feedbackCorrect, setFeedbackCorrect] = useState<
+      "correct" | "incorrect" | null | undefined
+    >(null);
+
+    const [feedbackIncorrect, setFeedbackIncorrect] = useState<
+      "correct" | "incorrect" | null | undefined
+    >(null);
+
+    return (
+      <OakFlex
+        $pa="inner-padding-l"
+        $background={"bg-neutral"}
+        $flexDirection={"column"}
+        $gap={"space-between-m"}
+      >
+        <OakQuizCheckBox
+          {...args}
+          id="checkbox-test-default-7"
+          value="test-6"
+          displayValue="correctly selected"
+          feedback={feedbackCorrect}
+          onChange={() => {
+            setFeedbackCorrect("correct");
+          }}
+        />
+        <OakQuizCheckBox
+          {...args}
+          id="checkbox-test-default-8"
+          value="test-7"
+          displayValue="incorrectly selected"
+          feedback={feedbackIncorrect}
+          onChange={() => {
+            setFeedbackIncorrect("incorrect");
+          }}
+        />
+        <OakQuizCheckBox
+          {...args}
+          id="checkbox-test-default-9"
+          feedback={"incorrect"}
+          value="test-8"
+          displayValue="unselected correct answer"
+        />
+        <OakQuizCheckBox
+          {...args}
+          id="checkbox-test-default-10"
+          feedback={"correct"}
+          value="test-9"
+          displayValue="unselected incorrect answer"
+        />
+      </OakFlex>
+    );
+  },
   args: {},
   parameters: {
     controls: {

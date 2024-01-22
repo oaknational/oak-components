@@ -1,7 +1,7 @@
 import React, { createRef } from "react";
 import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
-import { fireEvent } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
 
 import { OakQuizCheckBox } from "./OakQuizCheckBox";
 
@@ -89,14 +89,49 @@ describe("OakQuizCheckBox", () => {
     expect(onChange).not.toHaveBeenCalled();
   });
 
-  it("renders a tick when isCorrect is true and isFeedback is true", () => {
-    const { getByAltText } = renderWithTheme(
-      <OakQuizCheckBox id="checkbox-1" value="Option 1" feedback={"correct"} />,
+  it("renders a tick when is correct and is selected", async () => {
+    const { getByAltText, getByRole, rerender } = render(
+      <OakThemeProvider theme={oakDefaultTheme}>
+        <OakQuizCheckBox id="checkbox-1" value="Option 1" />
+      </OakThemeProvider>,
+    );
+
+    await getByRole("checkbox").click();
+
+    rerender(
+      <OakThemeProvider theme={oakDefaultTheme}>
+        <OakQuizCheckBox
+          id="checkbox-1"
+          value="Option 1"
+          feedback={"correct"}
+        />
+      </OakThemeProvider>,
     );
     expect(getByAltText("Correct")).toBeInTheDocument();
   });
 
-  it("renders a cross when isCorrect is false and isFeedback is true", () => {
+  it("renders a cross feedback is incorrect and is selected", async () => {
+    const { getByAltText, getByRole, rerender } = render(
+      <OakThemeProvider theme={oakDefaultTheme}>
+        <OakQuizCheckBox id="checkbox-1" value="Option 1" />
+      </OakThemeProvider>,
+    );
+
+    await getByRole("checkbox").click();
+
+    rerender(
+      <OakThemeProvider theme={oakDefaultTheme}>
+        <OakQuizCheckBox
+          id="checkbox-1"
+          value="Option 1"
+          feedback={"incorrect"}
+        />
+      </OakThemeProvider>,
+    );
+    expect(getByAltText("Incorrect")).toBeInTheDocument();
+  });
+
+  it("renders a tick when is incorrect but is not selected", () => {
     const { getByAltText } = renderWithTheme(
       <OakQuizCheckBox
         id="checkbox-1"
@@ -104,7 +139,14 @@ describe("OakQuizCheckBox", () => {
         feedback={"incorrect"}
       />,
     );
-    expect(getByAltText("Incorrect")).toBeInTheDocument();
+    expect(getByAltText("Unselected correct choice")).toBeInTheDocument();
+  });
+
+  it("doesn't render a tick or cross when feedback is correct and unselected", () => {
+    const { queryByRole } = renderWithTheme(
+      <OakQuizCheckBox id="checkbox-1" value="Option 1" feedback={"correct"} />,
+    );
+    expect(queryByRole("img")).not.toBeInTheDocument();
   });
 
   it("is disabled when in feedback mode ", () => {
@@ -119,13 +161,6 @@ describe("OakQuizCheckBox", () => {
     );
     getByRole("checkbox").click();
     expect(onChange).not.toHaveBeenCalled();
-  });
-
-  it("is initially checked when defaultChecked is true", () => {
-    const { getByRole } = renderWithTheme(
-      <OakQuizCheckBox id="checkbox-1" value="Option 1" defaultChecked />,
-    );
-    expect(getByRole("checkbox")).toBeChecked();
   });
 
   it("can be checked and unchecked using a ref", () => {
