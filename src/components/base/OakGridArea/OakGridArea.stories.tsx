@@ -7,15 +7,6 @@ import { OakGrid } from "@/components/base/OakGrid";
 
 const colRowSpanCtl = { control: { type: "range", min: 0, max: 12 } };
 
-/**
- *
- * OakGridArea is a flex container that should be used inside OakGrid.
- *
- * - There is no nesting of OakGridAreas
- * - Column and row arrangements are achieved through $colSpan, $rowSpan, $colStart, $colEnd, $rowStart, $rowEnd
- *
- */
-
 const meta: Meta<typeof OakGridArea> = {
   component: OakGridArea,
   tags: ["autodocs"],

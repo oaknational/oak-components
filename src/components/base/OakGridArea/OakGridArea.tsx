@@ -46,7 +46,7 @@ const parseSpanStart = (value?: string | null) => {
   return `span ${span}`;
 };
 
-export const gridArea = css<OakGridAreaProps>`
+const gridArea = css<OakGridAreaProps>`
   flex-direction: column;
   ${responsiveStyle(
     "grid-column",
@@ -102,6 +102,15 @@ export const gridArea = css<OakGridAreaProps>`
   ${responsiveStyle("grid-column-end", (props) => props.$colEnd)}
   ${responsiveStyle("grid-row-start", (props) => props.$rowStart)}
 `;
+
+/**
+ *
+ * OakGridArea is a flex container that should be used inside OakGrid.
+ *
+ * - There is no nesting of OakGridAreas
+ * - Column and row arrangements are achieved through $colSpan, $rowSpan, $colStart, $colEnd, $rowStart, $rowEnd
+ *
+ */
 
 export const OakGridArea = styled(OakFlex)<OakGridAreaProps & OakFlexProps>`
   ${gridArea}
