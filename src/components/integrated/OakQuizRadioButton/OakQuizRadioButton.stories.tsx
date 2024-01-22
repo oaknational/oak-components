@@ -97,15 +97,15 @@ export const WithFeedback: Story = {
       <OakRadioGroup name="radio-group-8" value="" $flexDirection="column">
         <OakQuizRadioButton
           {...args}
-          feedback="correct"
-          label="Correctly not selected"
+          feedback="incorrect"
+          label="unselected correct answer"
         />
       </OakRadioGroup>
       <OakRadioGroup name="radio-group-9" value="" $flexDirection="column">
         <OakQuizRadioButton
           {...args}
-          feedback="incorrect"
-          label="Incorrectly not selected"
+          feedback="correct"
+          label="unselected incorrect answer"
         />
       </OakRadioGroup>
     </>
