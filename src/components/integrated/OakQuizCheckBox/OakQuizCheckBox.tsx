@@ -137,7 +137,7 @@ const StyledFlexBox = styled(OakFlex)<StyledFlexBoxProps>`
  }
 `;
 
-export type OakQuizCheckBoxProps = BaseCheckBoxProps & {
+export type OakQuizCheckBoxProps = Omit<BaseCheckBoxProps, "defaultChecked"> & {
   feedback?: "correct" | "incorrect" | null;
   image?: React.JSX.Element;
   innerRef?: React.RefObject<HTMLInputElement>;
@@ -157,7 +157,6 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
     disabled,
     innerRef,
     displayValue,
-    defaultChecked,
     ...rest
   } = props;
 
@@ -166,10 +165,9 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
   const defaultRef = useRef<HTMLInputElement>(null);
   const inputRef = innerRef ?? defaultRef;
   const showTick =
-    (feedback === "correct" && (inputRef.current?.checked || defaultChecked)) ||
-    (feedback === "incorrect" && !inputRef.current?.checked && !defaultChecked);
-  const showCross =
-    feedback === "incorrect" && (inputRef.current?.checked || defaultChecked);
+    (feedback === "correct" && inputRef.current?.checked) ||
+    (feedback === "incorrect" && !inputRef.current?.checked);
+  const showCross = feedback === "incorrect" && inputRef.current?.checked;
 
   const handleContainerClick = (
     e:
@@ -268,7 +266,6 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
               value={value}
               disabled={disabled || isFeedback}
               {...rest}
-              defaultChecked={defaultChecked}
               $width={"all-spacing-7"}
               $height={"all-spacing-7"}
               $ba={"border-solid-m"}
