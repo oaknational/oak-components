@@ -32,13 +32,12 @@ describe("OakGrid", () => {
     );
   });
 
-  it.skip("adjusts column gap via $cg", () => {
-    // FIXME: This test is failing as no css is injected by styled-components but the behavior is working in storybook
+  it("adjusts column gap via $cg", () => {
     const { getByTestId } = render(
       <OakGrid data-testid="oak-grid" $cg={"all-spacing-1"}>
         <OakGridArea $colSpan={1} />
       </OakGrid>,
     );
-    expect(getByTestId("oak-grid")).toHaveStyle("grid-column-gap: 0.25rem;");
+    expect(getByTestId("oak-grid")).toHaveStyle("column-gap: 0.25rem;");
   });
 });
