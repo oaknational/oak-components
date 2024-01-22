@@ -3,12 +3,12 @@ import {
   oakSpaceBetweenTokens,
 } from "@/styles/theme/spacing";
 
-const paddingCtl = {
+export const paddingCtl = {
   options: Object.keys(oakInnerPaddingTokens),
   control: { type: "select" },
 };
 
-const marginCtl = {
+export const marginCtl = {
   options: Object.keys(oakSpaceBetweenTokens),
   control: { type: "select" },
 };

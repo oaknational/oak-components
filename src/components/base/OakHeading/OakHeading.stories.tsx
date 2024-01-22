@@ -34,13 +34,13 @@ export default meta;
 
 type Story = StoryObj<typeof OakHeading>;
 
-export const DefaultOakFlex: Story = (args: Partial<OakHeadingProps>) => (
+export const Default: Story = (args: Partial<OakHeadingProps>) => (
   <OakHeading data-testId="OakHeading-id" {...args} tag={args.tag ?? "div"}>
     Heading
   </OakHeading>
 );
 
-DefaultOakFlex.args = {
+Default.args = {
   $font: "heading-1",
   tag: "h1",
 };

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakGrid matches snapshot 1`] = `
+.c0 {
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  width: 100%;
+}
+
+<div
+  className="c0 c1"
+/>
+`;
