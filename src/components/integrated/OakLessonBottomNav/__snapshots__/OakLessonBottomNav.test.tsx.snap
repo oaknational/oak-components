@@ -24,22 +24,22 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c9 {
+.c10 {
   font-family: Lexend,sans-serif;
 }
 
-.c11 {
+.c12 {
   position: relative;
-  width: 2rem;
-  min-width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  min-width: 2.5rem;
+  height: 2.5rem;
   color: #222222;
-  background: #222222;
+  background: #ffe555;
   border-radius: 6.25rem;
   font-family: Lexend,sans-serif;
 }
 
-.c13 {
+.c14 {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -47,14 +47,14 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c14 {
+.c15 {
   position: relative;
   width: 1.5rem;
   height: 1.5rem;
   font-family: Lexend,sans-serif;
 }
 
-.c17 {
+.c18 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -80,7 +80,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   display: flex;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -99,7 +99,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   gap: 0.75rem;
 }
 
-.c12 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -114,7 +114,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   justify-content: center;
 }
 
-.c18 {
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -132,7 +132,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c16 {
+.c17 {
   font-family: Lexend,sans-serif;
   font-weight: 700;
   font-size: 1.125rem;
@@ -143,9 +143,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c15 {
-  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
-  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+.c16 {
   object-fit: contain;
 }
 
@@ -179,7 +177,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 .c8:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  color: #575757;
+  color: #222222;
 }
 
 .c8:active {
@@ -207,11 +205,19 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 }
 
 .c6 button:hover .icon-container {
-  background: #575757;
+  background: #ffe555;
 }
 
 .c6 button:active .icon-container {
-  background: #222222;
+  background: #ffe555;
+}
+
+.c9:hover .shadow {
+  box-shadow: none !important;
+}
+
+.c9:active .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%) !important;
 }
 
 .c2 {
@@ -219,7 +225,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c17 {
+  .c18 {
     width: auto;
   }
 }
@@ -233,7 +239,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c18 {
+  .c19 {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
@@ -251,27 +257,27 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
         className="c5 c6 button-wrapper"
       >
         <button
-          className="c7 c8 "
+          className="c7 c8  c9"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           type="button"
         >
           <div
-            className="c9 c10"
+            className="c10 c11"
           >
             <div
-              className="c11 c12 icon-container"
+              className="c12 c13 icon-container"
             >
               <div
-                className="c13 shadow"
+                className="c14 shadow"
               />
               <div
-                className="c14"
+                className="c15"
               >
                 <img
                   alt="lightbulb"
-                  className="c15"
+                  className="c16"
                   data-nimg="fill"
                   decoding="async"
                   loading="lazy"
@@ -296,7 +302,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
               </div>
             </div>
             <span
-              className="c16"
+              className="c17"
             >
               Need a hint?
             </span>
@@ -305,7 +311,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
       </div>
     </div>
     <div
-      className="c17 c18"
+      className="c18 c19"
     />
   </div>,
   .c0 {

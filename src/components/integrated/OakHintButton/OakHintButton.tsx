@@ -1,4 +1,4 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 import styled from "styled-components";
 
 import { InternalRoundButton } from "@/components/ui/InternalRoundButton";
@@ -6,7 +6,7 @@ import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 
 export type OakHintButtonProps = {
   isOpen: boolean;
-  onClick?: () => void;
+  onClick?: MouseEventHandler;
   isLoading?: boolean;
   disabled?: boolean;
 };
