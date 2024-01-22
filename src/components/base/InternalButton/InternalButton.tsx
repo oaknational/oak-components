@@ -56,6 +56,7 @@ export type InternalButtonProps = StyledButtonProps & {
   disabled?: boolean;
   "data-testid"?: string;
   type?: "button" | "submit" | "reset";
+  form?: string;
 };
 
 const UnstyledInternalButton = (props: InternalButtonProps) => {
@@ -89,6 +90,7 @@ const UnstyledInternalButton = (props: InternalButtonProps) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       type={props.type ?? "button"}
+      form={props.form}
     >
       {props.children}
     </button>
