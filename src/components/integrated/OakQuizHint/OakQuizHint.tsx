@@ -1,6 +1,7 @@
 import React, { MouseEventHandler, ReactNode, useState } from "react";
 
-import { OakTertiaryButton, OakTooltip } from "@/components/ui";
+import { OakTooltip } from "@/components/ui";
+import { OakHintButton } from "@/components/integrated";
 
 export type OakQuizHintProps = {
   /**
@@ -20,13 +21,7 @@ export const OakQuizHint = ({ hint }: OakQuizHintProps) => {
 
   return (
     <OakTooltip tooltip={hint} isOpen={isOpen}>
-      <OakTertiaryButton
-        iconName={isOpen ? "lightbulb-yellow" : "lightbulb"}
-        onClick={handleClick}
-        iconBackground={isOpen ? "bg-icon" : "bg-decorative5-main"}
-      >
-        {isOpen ? "Close hint" : "Need a hint?"}
-      </OakTertiaryButton>
+      <OakHintButton isOpen={isOpen} onClick={handleClick} />
     </OakTooltip>
   );
 };
