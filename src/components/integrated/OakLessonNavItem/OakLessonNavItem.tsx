@@ -20,12 +20,9 @@ type LessonSectionName = "intro" | "starter-quiz" | "video" | "exit-quiz";
 type BaseOakLessonNavItemProps<C extends ElementType> = {
   as?: C;
   /**
-   * Present the section as disabled.
-   *
-   * If this is a button the `disabled` prop should also be set.
-   * For a link the anchor should be replaced with a non interactive element
+   * Disable the section preventing navigation to it.
    */
-  isDisabled?: boolean;
+  disabled?: boolean;
 } & ComponentPropsWithoutRef<C>;
 
 type QuizSectionProps = {
@@ -65,7 +62,7 @@ export type OakLessonNavItemProps<C extends ElementType> =
 const StyledLabel = styled(OakBox)``;
 
 const StyledRoundIcon = styled(OakRoundIcon)<{
-  $isDisabled?: boolean;
+  $disabled?: boolean;
 }>`
   width: ${parseSpacing("all-spacing-8")};
   height: ${parseSpacing("all-spacing-8")};
@@ -75,11 +72,11 @@ const StyledRoundIcon = styled(OakRoundIcon)<{
 
   img {
     filter: ${(props) =>
-      parseColorFilter(props.$isDisabled ? "icon-disabled" : "icon-inverted")};
+      parseColorFilter(props.$disabled ? "icon-disabled" : "icon-inverted")};
   }
 `;
 
-const StyledLessonNavItem = styled(OakFlex)<{ $isDisabled?: boolean }>`
+const StyledLessonNavItem = styled(OakFlex)<{ $disabled?: boolean }>`
   outline: none;
   text-align: initial;
 
@@ -88,10 +85,10 @@ const StyledLessonNavItem = styled(OakFlex)<{ $isDisabled?: boolean }>`
       ${parseDropShadow("drop-shadow-centered-grey")};
   }
 
-  ${(props) => props.$isDisabled && "cursor: default"}
+  ${(props) => props.$disabled && "cursor: default"}
 
   ${(props) =>
-    !props.$isDisabled &&
+    !props.$disabled &&
     css`
       cursor: pointer;
 
@@ -127,13 +124,14 @@ const FlexedOakBox = styled(OakBox)`
 export const OakLessonNavItem = <C extends ElementType = "a">(
   props: OakLessonNavItemProps<C>,
 ) => {
-  const { as, lessonSectionName, progress, isDisabled, ...rest } = props;
+  const { as, lessonSectionName, progress, disabled, href, onClick, ...rest } =
+    props;
   const [notStartedBackgroundColor, backgroundColor, borderColor] =
     pickColorsForSection(lessonSectionName);
 
   return (
     <StyledLessonNavItem
-      as={as ?? "a"}
+      as={disabled ? "div" : as ?? "a"}
       $gap="space-between-m"
       $alignItems="center"
       $background={
@@ -144,7 +142,9 @@ export const OakLessonNavItem = <C extends ElementType = "a">(
       $borderRadius="border-radius-l"
       $borderColor={borderColor}
       $ba="border-solid-l"
-      $isDisabled={isDisabled}
+      $disabled={disabled}
+      href={disabled ? undefined : href}
+      onClick={disabled ? undefined : onClick}
       {...rest}
     >
       <OakFlex $width="all-spacing-13" $justifyContent="center">
@@ -158,7 +158,7 @@ export const OakLessonNavItem = <C extends ElementType = "a">(
         <StyledLabel
           as="strong"
           $font={["heading-6", "heading-5"]}
-          $color={isDisabled ? "text-disabled" : "text-primary"}
+          $color={disabled ? "text-disabled" : "text-primary"}
         >
           {pickLabelForSection(lessonSectionName)}
         </StyledLabel>
@@ -167,7 +167,7 @@ export const OakLessonNavItem = <C extends ElementType = "a">(
         </OakBox>
       </FlexedOakBox>
       {renderQuestionCounter(props)}
-      <StyledRoundIcon iconName="chevron-right" $isDisabled={isDisabled} />
+      <StyledRoundIcon iconName="chevron-right" $disabled={disabled} />
     </StyledLessonNavItem>
   );
 };

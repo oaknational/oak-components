@@ -131,4 +131,19 @@ describe(OakLessonNavItem, () => {
     expect(getByTestId("exit-quiz").textContent).toContain("Completed");
     expect(getByTestId("video").textContent).toContain("Completed");
   });
+
+  it("renders a div when the item is disabled", () => {
+    const { getByTestId } = renderWithTheme(
+      <>
+        <OakLessonNavItem
+          data-testid="intro"
+          lessonSectionName="intro"
+          progress="complete"
+          disabled
+        />
+      </>,
+    );
+
+    expect(getByTestId("intro").tagName).toBe("DIV");
+  });
 });

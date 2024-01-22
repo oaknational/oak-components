@@ -49,7 +49,7 @@ const meta: Meta<typeof OakLessonNavItem> = {
       include: [
         "progress",
         "lessonSectionName",
-        "isDisabled",
+        "disabled",
         "grade",
         "numQuestions",
         "videoLength",
