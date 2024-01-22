@@ -9,8 +9,8 @@ import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { OakCombinedSpacingToken } from "@/styles";
 
 const gridStyle = css<OakGridProps>`
-  ${responsiveStyle("grid-row-gap", (props) => props.$rg, parseSpacing)}
-  ${responsiveStyle("grid-column-gap", (props) => props.$cg, parseSpacing)}
+  ${responsiveStyle("row-gap", (props) => props.$rg, parseSpacing)}
+  ${responsiveStyle("column-gap", (props) => props.$cg, parseSpacing)}
   ${responsiveStyle("grid-auto-rows", (props) => props.$gridAutoRows)}
   ${responsiveStyle("grid-template-areas", (props) => props.$gridTemplateAreas)}
   ${responsiveStyle(
