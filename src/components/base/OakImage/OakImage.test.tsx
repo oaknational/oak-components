@@ -47,4 +47,19 @@ describe("OakImage", () => {
       height: "auto",
     });
   });
+
+  describe("when the image is served from Cloudinary", () => {
+    it("uses the Cloudinary Image component", () => {
+      const { getByRole } = render(
+        <OakImage
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1608635688/image.jpg"
+          alt="a test image"
+        />,
+      );
+
+      expect(getByRole("img").getAttribute("src")).toEqual(
+        "https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/c_limit,w_3840/f_auto/q_auto/v1608635688/image?_a=BAVAfVAO0",
+      );
+    });
+  });
 });
