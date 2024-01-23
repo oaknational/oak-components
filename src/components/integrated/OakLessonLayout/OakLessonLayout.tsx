@@ -57,6 +57,7 @@ export const OakLessonLayout = ({
     <StyledLayoutBox
       $display={"flex"}
       $width="100%"
+      $minHeight={"100%"}
       $ph={["inner-padding-none", "inner-padding-xl"]}
       $background={pageBackgroundColor}
     >
