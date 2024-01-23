@@ -2,11 +2,7 @@ import React from "react";
 
 import * as imageMap from "../../../image-map.json";
 
-import {
-  cloudinaryRootUrl,
-  OakImage,
-  OakImageProps,
-} from "@/components/base/OakImage";
+import { OakImage, OakImageProps } from "@/components/base/OakImage";
 
 export const oakIconNames = [
   "home",
@@ -74,6 +70,7 @@ export const OakIcon = (props: OakIconProps) => {
     alt,
     $width = "all-spacing-7",
     $height = "all-spacing-7",
+    imageProps,
     ...rest
   } = props;
 
@@ -82,7 +79,7 @@ export const OakIcon = (props: OakIconProps) => {
 
   return (
     <OakImage
-      src={`${cloudinaryRootUrl}/${imagePath}`}
+      src={`https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/${imagePath}`}
       alt={_alt}
       $width={$width}
       $height={$height}
