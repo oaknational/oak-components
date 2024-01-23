@@ -80,20 +80,21 @@ describe("InternalButton", () => {
     fireEvent.mouseLeave(getByTestId("test"));
     expect(onHovered).toHaveBeenCalledWith(expect.anything(), 1000);
   });
+
   it("correctly fires for a form matching the id from its form props", () => {
     const onSubmit = jest.fn();
-    const { getByTestId } = render(
+    const { getByRole } = render(
       <div>
         <form id="test-form" onSubmit={onSubmit}>
           <input />
         </form>
-        ,
+
         <InternalButton data-testid="test" form="test-form" type="submit">
           Click
         </InternalButton>
       </div>,
     );
-    getByTestId("test").click();
+    getByRole("button").click();
     expect(onSubmit).toHaveBeenCalled();
   });
 });
