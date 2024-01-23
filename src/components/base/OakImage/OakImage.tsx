@@ -75,7 +75,7 @@ export const OakImage = (props: OakImageProps) => {
     $position = "relative",
     $colorFilter,
     placeholder = "oak",
-    unoptimized = false,
+    unoptimized = false || src.toString().endsWith(".svg"),
     ...rest
   } = props;
   const finalPlaceholder = placeholder === "oak" ? oakPlaceholder : placeholder;

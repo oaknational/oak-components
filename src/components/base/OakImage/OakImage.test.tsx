@@ -62,4 +62,17 @@ describe("OakImage", () => {
       );
     });
   });
+
+  it("does not attempt to optimize the image when it is an SVG", () => {
+    const { getByRole } = render(
+      <OakImage
+        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1608635688/image.svg"
+        alt="a test image"
+      />,
+    );
+
+    expect(getByRole("img").getAttribute("src")).toEqual(
+      "https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1608635688/image.svg",
+    );
+  });
 });
