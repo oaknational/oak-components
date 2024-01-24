@@ -176,7 +176,8 @@ export const OakTextInput = ({
 
   return (
     <StyledTextInputWrapper
-      $width="fit-content"
+      $width={width}
+      $maxWidth={maxWidth}
       $height="fit-content"
       $borderStyle="solid"
       $borderRadius="border-radius-s"
@@ -211,8 +212,8 @@ export const OakTextInput = ({
       <InternalTextInput
         type={type}
         {...props}
-        $width={width}
-        $maxWidth={maxWidth}
+        $width={"100%"}
+        $maxWidth={"100%"}
         $pv="inner-padding-l"
         $height="all-spacing-12"
       />
