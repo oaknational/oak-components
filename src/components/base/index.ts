@@ -15,3 +15,4 @@ export * from "./OakGrid";
 export * from "./OakGridArea";
 export * from "./OakThemeProvider";
 export * from "./OakMaxWidth";
+export * from "./OakCloudinaryImage";

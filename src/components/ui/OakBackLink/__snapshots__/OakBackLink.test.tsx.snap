@@ -80,7 +80,7 @@ exports[`OakBackLink matches snapshot 1`] = `
       loading="lazy"
       onError={[Function]}
       onLoad={[Function]}
-      src="https://undefined/undefined/v1699953962/icons/xpp10hijwzhyeqt6ylqf.svg"
+      src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953962/icons/xpp10hijwzhyeqt6ylqf.svg"
       style={
         {
           "bottom": 0,

@@ -4,7 +4,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { OakQuizRadioButton } from "./OakQuizRadioButton";
 
 import { OakRadioGroup } from "@/components/ui";
-import { OakImage } from "@/components/base";
+import { OakCloudinaryImage } from "@/components/base";
 
 const meta: Meta<typeof OakQuizRadioButton> = {
   component: OakQuizRadioButton,
@@ -119,9 +119,9 @@ export const WithImage: Story = {
         <OakQuizRadioButton
           {...args}
           image={
-            <OakImage
+            <OakCloudinaryImage
               alt="Some trees"
-              src={`https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/sample.jpg`}
+              cloudinaryId={`https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/sample.jpg`}
               width={864}
               height={576}
               $minWidth="all-spacing-19"
@@ -135,9 +135,9 @@ export const WithImage: Story = {
           feedback="correct"
           label="Image with feedback"
           image={
-            <OakImage
+            <OakCloudinaryImage
               alt="Some trees"
-              src={`https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/sample.jpg`}
+              cloudinaryId={`https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/sample.jpg`}
               width={864}
               height={576}
               $minWidth="all-spacing-19"
@@ -155,9 +155,9 @@ export const WithImage: Story = {
           feedback="correct"
           label="Selected image with feedback"
           image={
-            <OakImage
+            <OakCloudinaryImage
               alt="Some trees"
-              src={`https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/sample.jpg`}
+              cloudinaryId={`https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/sample.jpg`}
               width={864}
               height={576}
               $minWidth="all-spacing-19"

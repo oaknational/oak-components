@@ -4,7 +4,7 @@ import { within } from "@storybook/testing-library";
 
 import { OakQuizCheckBox } from "./OakQuizCheckBox";
 
-import { OakFlex, OakImage } from "@/components/base";
+import { OakFlex, OakCloudinaryImage } from "@/components/base";
 
 const meta: Meta<typeof OakQuizCheckBox> = {
   component: OakQuizCheckBox,
@@ -66,9 +66,9 @@ export const WithImage: Story = {
     displayValue: "a test value",
     value: "test-default",
     image: (
-      <OakImage
+      <OakCloudinaryImage
         alt="Some trees"
-        src={`https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/sample.jpg`}
+        cloudinaryId={`https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/sample.jpg`}
         width={864}
         height={576}
         $minWidth={"all-spacing-19"}
@@ -96,9 +96,9 @@ export const WithImageNoDims: Story = {
         value="test"
         displayValue="a test display value"
         image={
-          <OakImage
+          <OakCloudinaryImage
             alt="Some trees"
-            src={`https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/sample.jpg`}
+            cloudinaryId={`https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/sample.jpg`}
             $width={"all-spacing-19"}
             $height={"all-spacing-17"}
             $background={"bg-neutral"}
@@ -111,9 +111,9 @@ export const WithImageNoDims: Story = {
         value="test-2"
         displayValue="a test display value"
         image={
-          <OakImage
+          <OakCloudinaryImage
             alt="Some trees"
-            src={`https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336526/samples/dessert-on-a-plate.jpg`}
+            cloudinaryId={`https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336526/samples/dessert-on-a-plate.jpg`}
             $width={"all-spacing-19"}
             $height={"all-spacing-17"}
             $background={"bg-neutral"}
