@@ -2,7 +2,6 @@ import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
 import { OakCloudinaryImage } from "./OakCloudinaryImage";
-import { setCloudinaryConfig } from "./cloudinary";
 
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 import { colorFilterArgTypes } from "@/storybook-helpers/colorFilterStyleHelpers";
@@ -24,12 +23,6 @@ const meta: Meta<typeof OakCloudinaryImage> = {
 export default meta;
 
 type Story = StoryObj<typeof OakCloudinaryImage>;
-
-setCloudinaryConfig({
-  cloud: {
-    cloudName: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
-  },
-});
 
 export const Default: Story = {
   render: (args) => (

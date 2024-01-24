@@ -1,18 +1,14 @@
-import React from "react";
+import React, { createContext, useContext } from "react";
 import { CldImage, CldImageProps } from "next-cloudinary";
 
 import { OakImage, OakImageProps } from "../OakImage";
 
-import { getCloudinaryConfig, getCloudinaryIdFromUrl } from "./cloudinary";
+import { getCloudinaryIdFromUrl } from "./cloudinary";
 
 export type OakCloudinaryImageProps = Omit<
   OakImageProps<typeof CldImage>,
   "src" | "imageProps"
 > & {
-  /**
-   * Override the global cloudinary config set with `setCloudinaryConfig` for this image
-   */
-  config?: CldImageProps["config"];
   /**
    * The cloudinary image id or the full cloudinary URL
    *
@@ -21,19 +17,31 @@ export type OakCloudinaryImageProps = Omit<
   cloudinaryId: string;
 };
 
+const cloudinaryConfigContext = createContext<
+  CldImageProps["config"] | undefined
+>(undefined);
+
+/**
+ * Provides a Cloudinary config to all descendent `OakCloudinaryImage` elements.
+ *
+ * See https://cloudinary.com/documentation/cloudinary_sdks#configuration_parameters
+ * for documentation of the config object.
+ */
+export const OakCloudinaryConfigProvider = cloudinaryConfigContext.Provider;
+
 /**
  * OakCloudinaryImage wraps OakImage providing responsive images from Cloudinary
  * based on the `sizes` prop.
  *
- * Cloudinary config can be set globally with `setCloudinaryConfig` or per image with the `config` prop.
+ * Cloudinary cloud name can be set globally with `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME` or a config
+ * can be passed with `OakCloudinaryConfigProvider`.
  */
 export const OakCloudinaryImage = ({
-  config: incomingConfig,
   cloudinaryId,
   unoptimized = false || cloudinaryId.endsWith(".svg"),
   ...props
 }: OakCloudinaryImageProps) => {
-  const config = incomingConfig ?? getCloudinaryConfig();
+  const config = useContext(cloudinaryConfigContext);
   const src = getCloudinaryIdFromUrl(cloudinaryId, config);
 
   return (

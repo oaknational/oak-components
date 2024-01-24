@@ -17,13 +17,6 @@ exports[`OakCloudinaryImage matches snapshot 1`] = `
   <img
     alt="a test image"
     className="c1"
-    config={
-      {
-        "cloud": {
-          "cloudName": "mock-cloudinary-cloud",
-        },
-      }
-    }
     data-nimg="fill"
     decoding="async"
     loading="lazy"
