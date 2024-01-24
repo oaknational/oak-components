@@ -1,7 +1,7 @@
 import React, { MouseEventHandler, ReactNode, useState } from "react";
 
 import { OakTooltip } from "@/components/ui";
-import { OakHintButton } from "@/components/integrated";
+import { OakHintButton } from "@/components/integrated/OakHintButton";
 
 export type OakQuizHintProps = {
   /**

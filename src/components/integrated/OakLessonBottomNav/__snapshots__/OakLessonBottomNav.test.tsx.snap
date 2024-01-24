@@ -283,7 +283,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
                   loading="lazy"
                   onError={[Function]}
                   onLoad={[Function]}
-                  src="https://undefined/undefined/v1705078631/icons/zldisxmbff36z68rwcef.svg"
+                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1705078631/icons/zldisxmbff36z68rwcef.svg"
                   style={
                     {
                       "bottom": 0,
@@ -465,7 +465,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
               loading="lazy"
               onError={[Function]}
               onLoad={[Function]}
-              src="https://undefined/undefined/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
+              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
               style={
                 {
                   "bottom": 0,
@@ -650,7 +650,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
               loading="lazy"
               onError={[Function]}
               onLoad={[Function]}
-              src="https://undefined/undefined/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
+              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
               style={
                 {
                   "bottom": 0,
@@ -835,7 +835,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
               loading="lazy"
               onError={[Function]}
               onLoad={[Function]}
-              src="https://undefined/undefined/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
+              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
               style={
                 {
                   "bottom": 0,

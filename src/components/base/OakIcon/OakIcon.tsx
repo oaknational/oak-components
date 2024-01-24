@@ -70,6 +70,7 @@ export const OakIcon = (props: OakIconProps) => {
     alt,
     $width = "all-spacing-7",
     $height = "all-spacing-7",
+    imageProps,
     ...rest
   } = props;
 
@@ -82,8 +83,9 @@ export const OakIcon = (props: OakIconProps) => {
       alt={_alt}
       $width={$width}
       $height={$height}
-      sizes="5vw"
       placeholder="empty"
+      // Icons should not be optimised since the SVG is already as small as it can be and should be served directly
+      unoptimized
       {...rest}
     />
   );

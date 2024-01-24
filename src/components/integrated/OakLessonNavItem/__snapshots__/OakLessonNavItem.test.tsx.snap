@@ -222,7 +222,7 @@ exports[`OakLessonNavItem matches snapshot 1`] = `
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="https://undefined/undefined/v1705662092/icons/pl7bnmb13txese9yxkjv.svg"
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1705662092/icons/pl7bnmb13txese9yxkjv.svg"
           style={
             {
               "bottom": 0,
@@ -268,7 +268,7 @@ exports[`OakLessonNavItem matches snapshot 1`] = `
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="https://undefined/undefined/v1699895475/icons/rhzft6wnpdp3nvsmlyei.svg"
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895475/icons/rhzft6wnpdp3nvsmlyei.svg"
           style={
             {
               "bottom": 0,

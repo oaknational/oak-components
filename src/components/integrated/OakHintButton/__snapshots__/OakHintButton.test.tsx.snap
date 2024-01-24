@@ -188,7 +188,7 @@ exports[`OakHintButton matches snapshot 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="https://undefined/undefined/v1705078631/icons/zldisxmbff36z68rwcef.svg"
+            src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1705078631/icons/zldisxmbff36z68rwcef.svg"
             style={
               {
                 "bottom": 0,
