@@ -5,7 +5,7 @@ exports[`RadioGroup matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c3 {
+.c2 {
   color: #222222;
   font-family: Lexend,sans-serif;
 }
@@ -49,7 +49,7 @@ exports[`RadioGroup matches snapshot 1`] = `
   flex-shrink: 0;
 }
 
-.c2 {
+.c3 {
   font-family: Lexend,sans-serif;
   font-weight: 700;
   font-size: 1.125rem;
@@ -108,14 +108,11 @@ exports[`RadioGroup matches snapshot 1`] = `
   className="c0 c1"
   role="radiogroup"
 >
-  <label
-    className="c2"
-  />
   <div
-    className="c3"
+    className="c2"
   >
     <label
-      className="c2 c4"
+      className="c3 c4"
       data-testid="radio-1"
       htmlFor="radio-1"
     >
@@ -135,10 +132,10 @@ exports[`RadioGroup matches snapshot 1`] = `
     </label>
   </div>
   <div
-    className="c3"
+    className="c2"
   >
     <label
-      className="c2 c4"
+      className="c3 c4"
       htmlFor="radio-2"
     >
       <input
@@ -157,10 +154,10 @@ exports[`RadioGroup matches snapshot 1`] = `
     </label>
   </div>
   <div
-    className="c3"
+    className="c2"
   >
     <label
-      className="c2 c4"
+      className="c3 c4"
       htmlFor="radio-3"
     >
       <input
