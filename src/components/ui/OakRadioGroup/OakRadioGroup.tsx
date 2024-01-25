@@ -64,7 +64,7 @@ export const OakRadioGroup = (props: OakRadioGroupProps) => {
 
   return (
     <OakFlex role="radiogroup" $gap={$gap} {...rest}>
-      <OakLabel $font={$font}>{label}</OakLabel>
+      {label && <OakLabel $font={$font}>{label}</OakLabel>}
       <RadioContext.Provider
         value={{
           currentValue: value ?? currentValue,
