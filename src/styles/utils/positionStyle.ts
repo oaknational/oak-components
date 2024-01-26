@@ -23,6 +23,7 @@ export type PositionStyleProps = {
   $right?: ResponsiveValues<PositionSpacing>;
   $bottom?: ResponsiveValues<PositionSpacing>;
   $left?: ResponsiveValues<PositionSpacing>;
+  $inset?: ResponsiveValues<PositionSpacing>;
   $overflow?: ResponsiveValues<CSSProperties["overflow"]>;
   $overflowX?: ResponsiveValues<CSSProperties["overflowX"]>;
   $overflowY?: ResponsiveValues<CSSProperties["overflowY"]>;
@@ -37,6 +38,7 @@ export const positionStyle = css<PositionStyleProps>`
   ${responsiveStyle("right", (props) => props.$right, parseSpacing)} 
   ${responsiveStyle("bottom", (props) => props.$bottom, parseSpacing)} 
   ${responsiveStyle("left", (props) => props.$left, parseSpacing)} 
+  ${responsiveStyle("inset", (props) => props.$inset, parseSpacing)} 
   ${responsiveStyle("overflow", (props) => props.$overflow)}
   ${responsiveStyle("overflow-x", (props) => props.$overflowX)}
   ${responsiveStyle("overflow-y", (props) => props.$overflowY)}

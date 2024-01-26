@@ -39,6 +39,7 @@ describe("positionStyle", () => {
     ["$objectFit", "none", "object-fit: none;"],
     ["$pointerEvents", "none", "pointer-events: none;"],
     ["$visibility", "none", "visibility: none;"],
+    ["$inset", "space-between-ssx", "inset: 0.5rem;"],
   ])("should correctly handle props", (prop, value, expected) => {
     const props = {
       [prop]: value,

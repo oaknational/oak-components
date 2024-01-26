@@ -19,6 +19,7 @@ export const positionArgTypes = {
   $right: positionCtl,
   $bottom: positionCtl,
   $left: positionCtl,
+  $inset: positionCtl,
   $overflow: positionCtlScroll,
   $overflowX: positionCtlScroll,
   $overflowY: positionCtlScroll,
