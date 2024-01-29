@@ -1,30 +1,27 @@
-import React from "react";
+import React, { ElementType } from "react";
 
 import {
   InternalRectButton,
   InternalRectButtonProps,
 } from "@/components/ui/InternalRectButton";
 
-export type OakPrimaryButtonProps = Pick<
-  InternalRectButtonProps,
-  | "children"
-  | "className"
-  | "data-testid"
-  | "onClick"
-  | "onHovered"
-  | "disabled"
-  | "isLoading"
-  | "iconName"
-  | "isTrailingIcon"
-  | "type"
-  | "width"
-  | "maxWidth"
-  | "form"
->;
+export type OakPrimaryButtonProps<C extends ElementType = "button"> = Omit<
+  InternalRectButtonProps<C>,
+  "defaultBorderColor"
+  | "defaultBackground"
+  | "defaultTextColor"
+  | "hoverBackground"
+  | "hoverBorderColor"
+  | "hoverTextColor"
+  | "disabledBackground"
+  | "disabledBorderColor"
+  | "disabledTextColor"
+> & { as?: C };
 
-export const OakPrimaryButton = (props: OakPrimaryButtonProps) => {
+export const OakPrimaryButton = <C extends ElementType = "button">({ as, ...rest }: OakPrimaryButtonProps<C>) => {
   return (
     <InternalRectButton
+      as={as ?? "button"}
       defaultBorderColor="bg-btn-primary"
       defaultBackground="bg-btn-primary"
       defaultTextColor="text-inverted"
@@ -34,7 +31,7 @@ export const OakPrimaryButton = (props: OakPrimaryButtonProps) => {
       disabledBackground="bg-btn-primary-disabled"
       disabledBorderColor="text-disabled"
       disabledTextColor="text-inverted"
-      {...props}
+      {...rest}
     />
   );
 };

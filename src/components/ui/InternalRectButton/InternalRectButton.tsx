@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ElementType } from "react";
 import styled, { css } from "styled-components";
 
 import { OakBox, OakFlex, OakSpan } from "@/components/base";
@@ -17,8 +17,8 @@ import { parseColor } from "@/styles/helpers/parseColor";
 import { OakCombinedColorToken } from "@/styles";
 import { SizeStyleProps, sizeStyle } from "@/styles/utils/sizeStyle";
 
-export type InternalRectButtonProps = Omit<
-  InternalButtonProps,
+export type InternalRectButtonProps<C extends ElementType = "button"> = Omit<
+  InternalButtonProps<C>,
   | "$pa"
   | "$ph"
   | "$pv"
@@ -43,11 +43,12 @@ export type InternalRectButtonProps = Omit<
   maxWidth?: SizeStyleProps["$maxWidth"];
 } & PositionStyleProps;
 
-const StyledInternalButton = styled(InternalButton)<
+const StyledInternalButton = styled(InternalButton) <
   InternalRectButtonProps & SizeStyleProps
 >`
   ${positionStyle}
   ${sizeStyle}
+  display: inline-block;
   ${(props) => css`
     &:hover {
       text-decoration: underline;
@@ -89,8 +90,9 @@ const StyledButtonWrapper = styled(OakBox)`
   }
 `;
 
-export const InternalRectButton = (props: InternalRectButtonProps) => {
+export const InternalRectButton = <C extends ElementType = "button">(props: InternalRectButtonProps<C>) => {
   const {
+    as = "button",
     children,
     iconName,
     isTrailingIcon,
@@ -148,6 +150,7 @@ export const InternalRectButton = (props: InternalRectButtonProps) => {
       />
 
       <StyledInternalButton
+        as={as}
         className="internal-button"
         {...rest}
         $ba={"border-solid-m"}

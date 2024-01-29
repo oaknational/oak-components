@@ -48,17 +48,10 @@ const internalButtonCss = css<StyledButtonProps>`
 export type InternalButtonProps<C extends ElementType = "button"> =
   StyledButtonProps & {
     as?: C;
-    onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
     onHovered?: (
       event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
       duration: number,
     ) => void;
-    // children?: React.ReactNode;
-    // className?: string;
-    // disabled?: boolean;
-    // "data-testid"?: string;
-    // type?: "button" | "submit" | "reset";
-    // form?: string;
   } & ComponentPropsWithoutRef<C>;
 
 const UnstyledInternalButton = (props: InternalButtonProps) => {
@@ -85,14 +78,9 @@ const UnstyledInternalButton = (props: InternalButtonProps) => {
 
   return (
     <Component
-      className={props.className}
-      // data-testid={props["data-testid"]}
-      // disabled={props.disabled}
       onClick={handleClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      // type={props.type ?? "button"}
-      // form={props.form}
       {...rest}
     />
   );

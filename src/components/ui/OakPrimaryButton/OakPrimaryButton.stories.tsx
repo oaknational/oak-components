@@ -64,3 +64,17 @@ export const Default: Story = {
     iconName: "arrow-right",
   },
 };
+
+export const LinkStyledAsButton: Story = {
+  render: (args) => (
+    <OakFlex $gap="space-between-m">
+      <OakPrimaryButton {...args}>Link</OakPrimaryButton>
+    </OakFlex>
+  ),
+  args: {
+    as: "a",
+    href: "/",
+    iconName: "arrow-right",
+  },
+};
+
