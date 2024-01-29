@@ -163,6 +163,9 @@ exports[`OakHintButton matches snapshot 1`] = `
 >
   <button
     className="c2 c3 c4"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="c5 c6"

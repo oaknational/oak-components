@@ -144,6 +144,9 @@ exports[`OakTertiaryButton matches snapshot 1`] = `
 >
   <button
     className="c2 c3"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="c4 c5"

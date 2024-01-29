@@ -19,7 +19,7 @@ type OakTertiaryButtonProps = InternalButtonProps & {
  */
 
 export const OakTertiaryButton = <C extends ElementType = "button">({
-  as,
+  element,
   isTrailingIcon,
   iconName,
   children,
@@ -27,7 +27,7 @@ export const OakTertiaryButton = <C extends ElementType = "button">({
 }: OakTertiaryButtonProps & PolymorphicPropsWithoutRef<C>) => {
   return (
     <InternalRoundButton
-      as={as ?? "button"}
+      element={element ?? "button"}
       {...props}
       isTrailingIcon={isTrailingIcon}
       iconName={iconName}

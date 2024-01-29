@@ -56,7 +56,7 @@ export type InternalButtonProps = StyledButtonProps & {
 const UnstyledInternalButton = <C extends ElementType = "button">(
   props: InternalButtonProps & PolymorphicPropsWithoutRef<C>,
 ) => {
-  const { onClick, onHovered, as: Component = "button", ...rest } = props;
+  const { onClick, onHovered, element: Component = "button", ...rest } = props;
 
   const hoverStart = useRef(Date.now());
 
@@ -79,10 +79,10 @@ const UnstyledInternalButton = <C extends ElementType = "button">(
 
   return (
     <Component
+      {...rest}
       onClick={handleClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      {...rest}
     />
   );
 };

@@ -148,6 +148,9 @@ exports[`InternalRectButton matches snapshot 1`] = `
   />
   <button
     className="c3 c4 internal-button"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="c5 c6"

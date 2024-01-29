@@ -121,7 +121,6 @@ describe("InternalRectButton", () => {
     const { getByTestId } = render(
       <InternalRectButton
         {...defaultArgs}
-        as="button"
         data-testid="test"
         onHovered={onHovered}
       >

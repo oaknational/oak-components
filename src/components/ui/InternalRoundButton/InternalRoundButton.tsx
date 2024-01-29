@@ -56,21 +56,21 @@ const StyledInternalButton = styled(InternalButton)<
   ${(props) => css`
     &:hover {
       text-decoration: underline;
-      color: ${parseColor(props.hoverTextColor)};
+      color: ${parseColor(props.$hoverTextColor)};
     }
     &:active {
-      color: ${parseColor(props.defaultTextColor)};
+      color: ${parseColor(props.$defaultTextColor)};
     }
     &:disabled {
-      color: ${parseColor(props.disabledTextColor)};
+      color: ${parseColor(props.$disabledTextColor)};
     }
   `}
 `;
 
 const StyledButtonWrapper = styled(OakBox)<{
-  disabledIconBackground: OakCombinedColorToken;
-  hoverIconBackground: OakCombinedColorToken;
-  defaultIconBackground: OakCombinedColorToken;
+  $disabledIconBackground: OakCombinedColorToken;
+  $hoverIconBackground: OakCombinedColorToken;
+  $defaultIconBackground: OakCombinedColorToken;
 }>`
   button:focus-visible .shadow {
     box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
@@ -85,13 +85,13 @@ const StyledButtonWrapper = styled(OakBox)<{
   }
   ${(props) => css`
     button:disabled .icon-container {
-      background: ${parseColor(props.disabledIconBackground)};
+      background: ${parseColor(props.$disabledIconBackground)};
     }
     button:hover .icon-container {
-      background: ${parseColor(props.hoverIconBackground)};
+      background: ${parseColor(props.$hoverIconBackground)};
     }
     button:active .icon-container {
-      background: ${parseColor(props.defaultIconBackground)};
+      background: ${parseColor(props.$defaultIconBackground)};
     }
   `}
 `;
@@ -100,7 +100,7 @@ const _InternalRoundButton = <C extends ElementType = "button">(
   props: InternalRoundButtonProps & PolymorphicPropsWithoutRef<C>,
 ) => {
   const {
-    as = "button",
+    element = "button",
     children,
     iconName,
     isTrailingIcon,
@@ -110,6 +110,14 @@ const _InternalRoundButton = <C extends ElementType = "button">(
     maxWidth,
     iconBackgroundSize,
     iconSize,
+    disabledIconBackground,
+    disabledTextColor,
+    defaultIconColor,
+    hoverIconBackground,
+    defaultIconBackground,
+    disabledIconColor,
+    defaultTextColor,
+    hoverTextColor,
     ...rest
   } = props;
 
@@ -122,9 +130,9 @@ const _InternalRoundButton = <C extends ElementType = "button">(
           $height={iconSize}
           $colorFilter={
             props.disabled
-              ? props.disabledIconColor
-              : props.defaultIconColor
-                ? props.defaultIconColor
+              ? disabledIconColor
+              : defaultIconColor
+                ? defaultIconColor
                 : null
           }
         />
@@ -167,14 +175,17 @@ const _InternalRoundButton = <C extends ElementType = "button">(
       $position={"relative"}
       $width={width}
       $maxWidth={maxWidth}
-      disabledIconBackground={props.disabledIconBackground}
-      hoverIconBackground={props.hoverIconBackground}
-      defaultIconBackground={props.defaultIconBackground}
+      $disabledIconBackground={disabledIconBackground}
+      $hoverIconBackground={hoverIconBackground}
+      $defaultIconBackground={defaultIconBackground}
     >
       <StyledInternalButton
-        as={as ?? "button"}
+        element={element ?? "button"}
         {...rest}
-        $color={props.defaultTextColor}
+        $hoverTextColor={hoverTextColor}
+        $defaultTextColor={defaultTextColor}
+        $disabledTextColor={disabledTextColor}
+        $color={defaultTextColor}
         $pv={"inner-padding-xs"}
         $ph={"inner-padding-s"}
         $position={"relative"}

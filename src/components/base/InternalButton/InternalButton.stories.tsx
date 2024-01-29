@@ -60,7 +60,7 @@ export const LinkStyledAsButton: Story = {
     <InternalButton {...args}>Click Me, I'm a link!</InternalButton>
   ),
   args: {
-    as: "a",
+    element: "a",
     href: "/",
     $background: "bg-btn-primary",
     $color: "white",

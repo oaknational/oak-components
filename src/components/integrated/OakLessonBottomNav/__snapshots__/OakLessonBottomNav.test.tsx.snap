@@ -259,6 +259,8 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
         <button
           className="c7 c8 c9"
           onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <div
             className="c10 c11"

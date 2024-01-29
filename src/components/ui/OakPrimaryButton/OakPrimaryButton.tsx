@@ -20,12 +20,12 @@ export type OakPrimaryButtonProps = Omit<
 >;
 
 export const OakPrimaryButton = <C extends ElementType = "button">({
-  as,
+  element,
   ...rest
 }: OakPrimaryButtonProps & PolymorphicPropsWithoutRef<C>) => {
   return (
     <InternalRectButton
-      as={as ?? "button"}
+      element={element ?? "button"}
       defaultBorderColor="bg-btn-primary"
       defaultBackground="bg-btn-primary"
       defaultTextColor="text-inverted"

@@ -111,7 +111,7 @@ export const LinkStyledAsButton: Story = {
     </OakFlex>
   ),
   args: {
-    as: "a",
+    element: "a",
     href: "/",
     iconName: "arrow-right",
     defaultBackground: "bg-btn-secondary",
