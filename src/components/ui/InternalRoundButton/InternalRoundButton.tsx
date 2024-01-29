@@ -72,25 +72,25 @@ const StyledButtonWrapper = styled(OakBox)<{
   $hoverIconBackground: OakCombinedColorToken;
   $defaultIconBackground: OakCombinedColorToken;
 }>`
-  button:focus-visible .shadow {
+  > :first-child:focus-visible .shadow {
     box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
   }
-  button:hover .shadow {
+  > :first-child:hover .shadow {
     box-shadow: ${parseDropShadow("drop-shadow-lemon")};
   }
-  button:active .shadow {
+  > :first-child:active .shadow {
     box-shadow: ${parseDropShadow("drop-shadow-lemon")},
       ${parseDropShadow("drop-shadow-grey")};
   }
   ${(props) => css`
-    button:disabled .icon-container {
+    > :first-child:disabled .icon-container {
       background: ${parseColor(props.$disabledIconBackground)};
     }
-    button:hover .icon-container {
+    > :first-child:hover .icon-container {
       background: ${parseColor(props.$hoverIconBackground)};
     }
-    button:active .icon-container {
+    > :first-child:active .icon-container {
       background: ${parseColor(props.$defaultIconBackground)};
     }
   `}

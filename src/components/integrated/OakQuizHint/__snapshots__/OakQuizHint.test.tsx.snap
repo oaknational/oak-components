@@ -145,27 +145,27 @@ exports[`OakQuizHint matches snapshot 1`] = `
   color: #808080;
 }
 
-.c3 button:focus-visible .shadow {
+.c3 > :first-child:focus-visible .shadow {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c3 button:hover .shadow {
+.c3 > :first-child:hover .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c3 button:active .shadow {
+.c3 > :first-child:active .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c3 button:disabled .icon-container {
+.c3 > :first-child:disabled .icon-container {
   background: #808080;
 }
 
-.c3 button:hover .icon-container {
+.c3 > :first-child:hover .icon-container {
   background: #ffe555;
 }
 
-.c3 button:active .icon-container {
+.c3 > :first-child:active .icon-container {
   background: #ffe555;
 }
 
