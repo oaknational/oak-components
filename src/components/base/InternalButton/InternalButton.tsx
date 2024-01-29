@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { ElementType, useRef, ComponentPropsWithoutRef } from "react";
 import styled, { css } from "styled-components";
 
 import { colorStyle, ColorStyleProps } from "@/styles/utils/colorStyle";
@@ -45,22 +45,23 @@ const internalButtonCss = css<StyledButtonProps>`
   }
 `;
 
-export type InternalButtonProps = StyledButtonProps & {
+export type InternalButtonProps<C extends ElementType = "button"> = StyledButtonProps & {
+  as?: C;
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   onHovered?: (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
     duration: number,
   ) => void;
-  children?: React.ReactNode;
-  className?: string;
-  disabled?: boolean;
-  "data-testid"?: string;
-  type?: "button" | "submit" | "reset";
-  form?: string;
-};
+  // children?: React.ReactNode;
+  // className?: string;
+  // disabled?: boolean;
+  // "data-testid"?: string;
+  // type?: "button" | "submit" | "reset";
+  // form?: string;
+} & ComponentPropsWithoutRef<C>;
 
 const UnstyledInternalButton = (props: InternalButtonProps) => {
-  const { onClick, onHovered } = props;
+  const { onClick, onHovered, as: Component = "button", ...rest } = props;
 
   const hoverStart = useRef(Date.now());
 
@@ -82,18 +83,17 @@ const UnstyledInternalButton = (props: InternalButtonProps) => {
   };
 
   return (
-    <button
+    <Component
       className={props.className}
-      data-testid={props["data-testid"]}
-      disabled={props.disabled}
+      // data-testid={props["data-testid"]}
+      // disabled={props.disabled}
       onClick={handleClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      type={props.type ?? "button"}
-      form={props.form}
-    >
-      {props.children}
-    </button>
+      // type={props.type ?? "button"}
+      // form={props.form}
+      {...rest}
+    />
   );
 };
 

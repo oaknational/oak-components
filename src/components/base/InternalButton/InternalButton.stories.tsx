@@ -54,3 +54,16 @@ export const Default: Story = {
     $borderRadius: "border-radius-m",
   },
 };
+
+export const AsLink: Story = {
+  render: (args) => <InternalButton {...args}>Click Me, I'm a link!</InternalButton>,
+  args: {
+    as: "a",
+    href: "/",
+    $background: "bg-btn-primary",
+    $color: "white",
+    $ba: "border-solid-s",
+    $pa: "inner-padding-s",
+    $borderRadius: "border-radius-m",
+  },
+};
