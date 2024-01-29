@@ -16,9 +16,10 @@ import {
 import { parseColor } from "@/styles/helpers/parseColor";
 import { OakCombinedColorToken } from "@/styles";
 import { SizeStyleProps, sizeStyle } from "@/styles/utils/sizeStyle";
+import { PolymorphicPropsWithoutRef } from "@/components/utils/polymorphic";
 
-export type InternalRectButtonProps<C extends ElementType = "button"> = Omit<
-  InternalButtonProps<C>,
+export type InternalRectButtonProps = Omit<
+  InternalButtonProps,
   | "$pa"
   | "$ph"
   | "$pv"
@@ -43,7 +44,7 @@ export type InternalRectButtonProps<C extends ElementType = "button"> = Omit<
   maxWidth?: SizeStyleProps["$maxWidth"];
 } & PositionStyleProps;
 
-const StyledInternalButton = styled(InternalButton) <
+const StyledInternalButton = styled(InternalButton)<
   InternalRectButtonProps & SizeStyleProps
 >`
   ${positionStyle}
@@ -90,7 +91,9 @@ const StyledButtonWrapper = styled(OakBox)`
   }
 `;
 
-export const InternalRectButton = <C extends ElementType = "button">(props: InternalRectButtonProps<C>) => {
+export const InternalRectButton = <C extends ElementType = "button">(
+  props: InternalRectButtonProps & PolymorphicPropsWithoutRef<C>,
+) => {
   const {
     as = "button",
     children,

@@ -77,4 +77,3 @@ export const LinkStyledAsButton: Story = {
     iconName: "arrow-right",
   },
 };
-

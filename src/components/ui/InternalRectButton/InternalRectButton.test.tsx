@@ -121,7 +121,6 @@ describe("InternalRectButton", () => {
       <InternalRectButton
         {...defaultArgs}
         as="button"
-        href="/"
         data-testid="test"
         onHovered={onHovered}
       >

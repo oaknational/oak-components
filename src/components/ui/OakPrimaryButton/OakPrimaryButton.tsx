@@ -4,10 +4,11 @@ import {
   InternalRectButton,
   InternalRectButtonProps,
 } from "@/components/ui/InternalRectButton";
+import { PolymorphicPropsWithoutRef } from "@/components/utils/polymorphic";
 
-export type OakPrimaryButtonProps<C extends ElementType = "button"> = Omit<
-  InternalRectButtonProps<C>,
-  "defaultBorderColor"
+export type OakPrimaryButtonProps = Omit<
+  InternalRectButtonProps,
+  | "defaultBorderColor"
   | "defaultBackground"
   | "defaultTextColor"
   | "hoverBackground"
@@ -16,9 +17,12 @@ export type OakPrimaryButtonProps<C extends ElementType = "button"> = Omit<
   | "disabledBackground"
   | "disabledBorderColor"
   | "disabledTextColor"
-> & { as?: C };
+>;
 
-export const OakPrimaryButton = <C extends ElementType = "button">({ as, ...rest }: OakPrimaryButtonProps<C>) => {
+export const OakPrimaryButton = <C extends ElementType = "button">({
+  as,
+  ...rest
+}: OakPrimaryButtonProps & PolymorphicPropsWithoutRef<C>) => {
   return (
     <InternalRectButton
       as={as ?? "button"}
