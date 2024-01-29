@@ -82,7 +82,7 @@ describe("InternalButton", () => {
   });
 
   it("correctly fires for a form matching the id from its form props", () => {
-    const onSubmit = jest.fn();
+    const onSubmit = jest.fn((e) => e.preventDefault());
     const { getByRole } = render(
       <div>
         <form id="test-form" onSubmit={onSubmit}>

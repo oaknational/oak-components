@@ -1,30 +1,31 @@
-import React from "react";
+import React, { ElementType } from "react";
 
 import {
   InternalRectButton,
   InternalRectButtonProps,
 } from "@/components/ui/InternalRectButton";
+import { PolymorphicPropsWithoutRef } from "@/components/utils/polymorphic";
 
-export type OakSecondaryButtonProps = Pick<
+export type OakSecondaryButtonProps = Omit<
   InternalRectButtonProps,
-  | "children"
-  | "className"
-  | "data-testid"
-  | "onClick"
-  | "onHovered"
-  | "disabled"
-  | "isLoading"
-  | "iconName"
-  | "isTrailingIcon"
-  | "type"
-  | "width"
-  | "maxWidth"
-  | "form"
+  | "defaultBorderColor"
+  | "defaultBackground"
+  | "defaultTextColor"
+  | "hoverBackground"
+  | "hoverBorderColor"
+  | "hoverTextColor"
+  | "disabledBackground"
+  | "disabledBorderColor"
+  | "disabledTextColor"
 >;
 
-export const OakSecondaryButton = (props: OakSecondaryButtonProps) => {
+export const OakSecondaryButton = <C extends ElementType = "button">({
+  as,
+  ...rest
+}: OakSecondaryButtonProps & PolymorphicPropsWithoutRef<C>) => {
   return (
     <InternalRectButton
+      as={as ?? "button"}
       defaultBorderColor="text-primary"
       defaultBackground="bg-btn-secondary"
       defaultTextColor="text-primary"
@@ -34,7 +35,7 @@ export const OakSecondaryButton = (props: OakSecondaryButtonProps) => {
       disabledBackground="bg-btn-secondary-disabled"
       disabledBorderColor="text-disabled"
       disabledTextColor="text-disabled"
-      {...props}
+      {...rest}
     />
   );
 };

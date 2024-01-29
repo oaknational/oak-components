@@ -155,7 +155,6 @@ export const InternalRectButton = <C extends ElementType = "button">(
       <StyledInternalButton
         as={as}
         className="internal-button"
-        {...rest}
         $ba={"border-solid-m"}
         $background={props.defaultBackground}
         $borderColor={props.defaultBorderColor}
@@ -167,6 +166,7 @@ export const InternalRectButton = <C extends ElementType = "button">(
         disabled={disabled || isLoading}
         $width={"100%"}
         $height={"100%"}
+        {...rest}
       >
         <OakFlex
           $flexDirection={"row"}

@@ -41,3 +41,16 @@ export const Default: Story = {
     iconName: "chevron-right",
   },
 };
+
+export const LinkStyledAsButton: Story = {
+  render: (args) => (
+    <OakFlex $flexWrap={"wrap"}>
+      <OakTertiaryButton {...args}>Tertiary Link</OakTertiaryButton>
+    </OakFlex>
+  ),
+  args: {
+    as: "a",
+    href: "/",
+    iconName: "chevron-right",
+  },
+};

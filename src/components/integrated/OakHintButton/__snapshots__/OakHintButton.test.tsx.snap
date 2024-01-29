@@ -162,11 +162,7 @@ exports[`OakHintButton matches snapshot 1`] = `
   className="c0 c1 button-wrapper"
 >
   <button
-    className="c2 c3  c4"
-    onClick={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    type="button"
+    className="c2 c3 c4"
   >
     <div
       className="c5 c6"

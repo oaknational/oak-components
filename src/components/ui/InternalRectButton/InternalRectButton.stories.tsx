@@ -104,7 +104,7 @@ export const Default: Story = {
   },
 };
 
-export const LinkAsButton: Story = {
+export const LinkStyledAsButton: Story = {
   render: (args) => (
     <OakFlex $gap="space-between-m">
       <InternalRectButton {...args}>Link</InternalRectButton>

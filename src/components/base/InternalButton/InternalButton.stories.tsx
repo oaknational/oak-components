@@ -55,7 +55,7 @@ export const Default: Story = {
   },
 };
 
-export const AsLink: Story = {
+export const LinkStyledAsButton: Story = {
   render: (args) => (
     <InternalButton {...args}>Click Me, I'm a link!</InternalButton>
   ),

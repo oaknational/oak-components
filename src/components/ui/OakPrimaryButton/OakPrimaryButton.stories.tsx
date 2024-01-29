@@ -68,7 +68,7 @@ export const Default: Story = {
 export const LinkStyledAsButton: Story = {
   render: (args) => (
     <OakFlex $gap="space-between-m">
-      <OakPrimaryButton {...args}>Link</OakPrimaryButton>
+      <OakPrimaryButton {...args}>Primary Link</OakPrimaryButton>
     </OakFlex>
   ),
   args: {

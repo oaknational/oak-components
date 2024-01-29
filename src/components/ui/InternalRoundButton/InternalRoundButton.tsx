@@ -1,8 +1,9 @@
-import React from "react";
+import React, { ElementType } from "react";
 import styled, { css } from "styled-components";
 
 import { OakRoundIconProps } from "../OakRoundIcon";
 
+import { PolymorphicPropsWithoutRef } from "@/components/utils/polymorphic";
 import { OakBox, OakFlex, OakSpan } from "@/components/base";
 import {
   InternalButton,
@@ -95,8 +96,11 @@ const StyledButtonWrapper = styled(OakBox)<{
   `}
 `;
 
-const _InternalRoundButton = (props: InternalRoundButtonProps) => {
+const _InternalRoundButton = <C extends ElementType = "button">(
+  props: InternalRoundButtonProps & PolymorphicPropsWithoutRef<C>,
+) => {
   const {
+    as = "button",
     children,
     iconName,
     isTrailingIcon,
@@ -168,6 +172,7 @@ const _InternalRoundButton = (props: InternalRoundButtonProps) => {
       defaultIconBackground={props.defaultIconBackground}
     >
       <StyledInternalButton
+        as={as ?? "button"}
         {...rest}
         $color={props.defaultTextColor}
         $pv={"inner-padding-xs"}
@@ -190,4 +195,4 @@ const _InternalRoundButton = (props: InternalRoundButtonProps) => {
   );
 };
 
-export const InternalRoundButton = styled(_InternalRoundButton)``;
+export const InternalRoundButton = _InternalRoundButton;
