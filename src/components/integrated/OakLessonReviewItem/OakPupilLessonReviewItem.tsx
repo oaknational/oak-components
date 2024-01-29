@@ -1,13 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import {
-  OakBox,
-  OakFlex,
-  OakIcon,
-  OakIconName,
-  OakSpan,
-} from "@/components/base";
+import { OakBox, OakFlex, OakIcon, OakSpan } from "@/components/base";
 import { OakRoundIcon } from "@/components/ui";
 import { OakCombinedColorToken } from "@/styles";
 
@@ -46,6 +40,12 @@ export const OakLessonReviewItem = (props: OakLessonReviewItemProps) => {
   const { completed, lessonSectionName, ...rest } = props;
   const [completedBackgroundColor, borderColor, iconBackgroundColor] =
     pickColorsForSection(lessonSectionName);
+  const map = new Map();
+
+  map.set("intro", "intro");
+  map.set("starter-quiz", "quiz");
+  map.set("exit-quiz", "quiz");
+  map.set("video", "video");
 
   return (
     <StyledLessonReviewItem
@@ -61,7 +61,7 @@ export const OakLessonReviewItem = (props: OakLessonReviewItemProps) => {
       {...rest}
     >
       <OakRoundIcon
-        iconName={pickIconForSection(lessonSectionName)}
+        iconName={map.get(lessonSectionName)}
         $width="all-spacing-10"
         $height="all-spacing-10"
         $background={iconBackgroundColor}
@@ -79,25 +79,24 @@ export const OakLessonReviewItem = (props: OakLessonReviewItemProps) => {
   );
 };
 
-function pickSummaryForProgress(props: OakLessonReviewItemProps) {
-  switch (props.completed) {
-    case false:
-      return pickSummaryForIncomplete(props);
-    case true:
-      return (
-        <OakFlex $gap="space-between-sssx" $alignItems="center">
-          <OakIcon
-            iconName="tick"
-            $width="all-spacing-6"
-            $height="all-spacing-6"
-          />
-          Completed
-        </OakFlex>
-      );
+const pickSummaryForProgress = (props: OakLessonReviewItemProps) => {
+  if (props.completed === false) {
+    return pickSummaryForIncomplete(props);
+  } else {
+    return (
+      <OakFlex $gap="space-between-sssx" $alignItems="center">
+        <OakIcon
+          iconName="tick"
+          $width="all-spacing-6"
+          $height="all-spacing-6"
+        />
+        Completed
+      </OakFlex>
+    );
   }
-}
+};
 
-function pickSummaryForIncomplete(props: OakLessonReviewItemProps) {
+const pickSummaryForIncomplete = (props: OakLessonReviewItemProps) => {
   switch (props.lessonSectionName) {
     case "intro":
       return "Prepare";
@@ -108,9 +107,9 @@ function pickSummaryForIncomplete(props: OakLessonReviewItemProps) {
     case "video":
       return `Learn`;
   }
-}
+};
 
-function pickLabelForSection(sectionName: LessonSectionName): string {
+const pickLabelForSection = (sectionName: LessonSectionName): string => {
   switch (sectionName) {
     case "intro":
       return "Intro";
@@ -121,15 +120,15 @@ function pickLabelForSection(sectionName: LessonSectionName): string {
     case "exit-quiz":
       return "Exit quiz";
   }
-}
+};
 
-function pickColorsForSection(
+const pickColorsForSection = (
   sectionName: LessonSectionName,
 ): [
   completedBackgroundColor: OakCombinedColorToken,
   borderColor: OakCombinedColorToken,
   iconBackgroundColor: OakCombinedColorToken,
-] {
+] => {
   switch (sectionName) {
     case "intro":
       return ["bg-decorative2-very-subdued", "border-decorative2", "aqua"];
@@ -140,21 +139,9 @@ function pickColorsForSection(
     case "exit-quiz":
       return ["bg-decorative5-very-subdued", "border-decorative5", "lemon"];
   }
-}
+};
 
-function pickIconForSection(sectionName: LessonSectionName): OakIconName {
-  switch (sectionName) {
-    case "intro":
-      return "intro";
-    case "starter-quiz":
-    case "exit-quiz":
-      return "quiz";
-    case "video":
-      return "video";
-  }
-}
-
-function renderQuestionCounter(props: OakLessonReviewItemProps) {
+const renderQuestionCounter = (props: OakLessonReviewItemProps) => {
   if (props.completed === false) {
     return null;
   }
@@ -171,4 +158,4 @@ function renderQuestionCounter(props: OakLessonReviewItemProps) {
     default:
       return null;
   }
-}
+};
