@@ -9,3 +9,4 @@ export * from "./OakQuizCounter";
 export * from "./OakLessonLayout";
 export * from "./OakHintButton";
 export * from "./OakLessonNavItem";
+export * from "./OakLessonReviewItem";

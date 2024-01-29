@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakLessonReviewItem } from "./OakLessonReviewItem";
+import { OakLessonReviewItem } from "./OakPupilLessonReviewItem";
 
 import { OakFlex } from "@/components/base";
 

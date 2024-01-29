@@ -2,7 +2,7 @@ import React from "react";
 import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
 
-import { OakLessonReviewItem } from "./OakLessonReviewItem";
+import { OakLessonReviewItem } from "./OakPupilLessonReviewItem";
 
 import { OakThemeProvider } from "@/components/base";
 import { oakDefaultTheme } from "@/styles";
