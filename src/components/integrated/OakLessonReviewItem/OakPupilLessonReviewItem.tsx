@@ -6,7 +6,7 @@ import { OakRoundIcon } from "@/components/ui";
 import { OakCombinedColorToken } from "@/styles";
 
 type LessonSectionName = "intro" | "starter-quiz" | "video" | "exit-quiz";
-type BaseOakLessonReviewItenProps = {
+type BaseOakLessonReviewItemProps = {
   completed: boolean;
 };
 type QuizSectionProps = {
@@ -28,7 +28,7 @@ type IntroSectionProps = {
   lessonSectionName: "intro";
 };
 
-export type OakLessonReviewItemProps = BaseOakLessonReviewItenProps &
+export type OakLessonReviewItemProps = BaseOakLessonReviewItemProps &
   (IntroSectionProps | QuizSectionProps | VideoSectionProps);
 
 const StyledLessonReviewItem = styled(OakFlex)<{ completed: boolean }>`
@@ -40,12 +40,12 @@ export const OakLessonReviewItem = (props: OakLessonReviewItemProps) => {
   const { completed, lessonSectionName, ...rest } = props;
   const [completedBackgroundColor, borderColor, iconBackgroundColor] =
     pickColorsForSection(lessonSectionName);
-  const map = new Map();
+  const lessonSectionNameToIconMap = new Map();
 
-  map.set("intro", "intro");
-  map.set("starter-quiz", "quiz");
-  map.set("exit-quiz", "quiz");
-  map.set("video", "video");
+  lessonSectionNameToIconMap.set("intro", "intro");
+  lessonSectionNameToIconMap.set("starter-quiz", "quiz");
+  lessonSectionNameToIconMap.set("exit-quiz", "quiz");
+  lessonSectionNameToIconMap.set("video", "video");
 
   return (
     <StyledLessonReviewItem
@@ -61,7 +61,7 @@ export const OakLessonReviewItem = (props: OakLessonReviewItemProps) => {
       {...rest}
     >
       <OakRoundIcon
-        iconName={map.get(lessonSectionName)}
+        iconName={lessonSectionNameToIconMap.get(lessonSectionName)}
         $width="all-spacing-10"
         $height="all-spacing-10"
         $background={iconBackgroundColor}

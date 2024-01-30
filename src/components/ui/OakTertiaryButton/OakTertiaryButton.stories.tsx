@@ -23,7 +23,7 @@ type Story = StoryObj<typeof OakTertiaryButton>;
 
 export const Default: Story = {
   render: (args) => (
-    <OakFlex $flexWrap={"wrap"}>
+    <OakFlex $flexWrap={"wrap"} $gap={"space-between-m"}>
       <OakTertiaryButton {...args}>Tertiary Button</OakTertiaryButton>
       <OakTertiaryButton {...args} disabled>
         Disabled Button
