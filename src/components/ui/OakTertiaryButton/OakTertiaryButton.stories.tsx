@@ -49,7 +49,7 @@ export const LinkStyledAsButton: Story = {
     </OakFlex>
   ),
   args: {
-    as: "a",
+    element: "a",
     href: "/",
     iconName: "chevron-right",
   },
