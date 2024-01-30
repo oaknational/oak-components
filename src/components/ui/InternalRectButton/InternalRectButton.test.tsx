@@ -49,7 +49,7 @@ describe("InternalRectButton", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("renders the chidren", () => {
+  it("renders the children", () => {
     const { getByText } = render(
       <InternalRectButton {...defaultArgs}>Click</InternalRectButton>,
     );
@@ -78,6 +78,7 @@ describe("InternalRectButton", () => {
         Click
       </InternalRectButton>,
     );
+
     fireEvent.mouseEnter(getByTestId("test"));
     fireEvent.mouseLeave(getByTestId("test"));
     expect(onHovered).toHaveBeenCalledTimes(1);

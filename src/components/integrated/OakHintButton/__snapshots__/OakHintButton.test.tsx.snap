@@ -126,27 +126,27 @@ exports[`OakHintButton matches snapshot 1`] = `
   color: #808080;
 }
 
-.c1 button:focus-visible .shadow {
+.c1 > :first-child:focus-visible .shadow {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c1 button:hover .shadow {
+.c1 > :first-child:hover .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c1 button:active .shadow {
+.c1 > :first-child:active .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c1 button:disabled .icon-container {
+.c1 > :first-child:disabled .icon-container {
   background: #808080;
 }
 
-.c1 button:hover .icon-container {
+.c1 > :first-child:hover .icon-container {
   background: #ffe555;
 }
 
-.c1 button:active .icon-container {
+.c1 > :first-child:active .icon-container {
   background: #ffe555;
 }
 
@@ -162,11 +162,10 @@ exports[`OakHintButton matches snapshot 1`] = `
   className="c0 c1 button-wrapper"
 >
   <button
-    className="c2 c3  c4"
+    className="c2 c3 c4"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    type="button"
   >
     <div
       className="c5 c6"

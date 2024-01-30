@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ElementType } from "react";
 import styled, { css } from "styled-components";
 
 import { OakBox, OakFlex, OakSpan } from "@/components/base";
@@ -16,6 +16,7 @@ import {
 import { parseColor } from "@/styles/helpers/parseColor";
 import { OakCombinedColorToken } from "@/styles";
 import { SizeStyleProps, sizeStyle } from "@/styles/utils/sizeStyle";
+import { PolymorphicPropsWithoutRef } from "@/components/utils/polymorphic";
 
 export type InternalRectButtonProps = Omit<
   InternalButtonProps,
@@ -44,26 +45,37 @@ export type InternalRectButtonProps = Omit<
 } & PositionStyleProps;
 
 const StyledInternalButton = styled(InternalButton)<
-  InternalRectButtonProps & SizeStyleProps
+  SizeStyleProps & {
+    $defaultTextColor: OakCombinedColorToken;
+    $defaultBackground: OakCombinedColorToken;
+    $defaultBorderColor: OakCombinedColorToken;
+    $hoverTextColor: OakCombinedColorToken;
+    $hoverBackground: OakCombinedColorToken;
+    $hoverBorderColor: OakCombinedColorToken;
+    $disabledBackground: OakCombinedColorToken;
+    $disabledBorderColor: OakCombinedColorToken;
+    $disabledTextColor: OakCombinedColorToken;
+  }
 >`
   ${positionStyle}
   ${sizeStyle}
+  display: inline-block;
   ${(props) => css`
     &:hover {
       text-decoration: underline;
-      color: ${parseColor(props.hoverTextColor)};
-      background: ${parseColor(props.hoverBackground)};
-      border-color: ${parseColor(props.hoverBorderColor)};
+      color: ${parseColor(props.$hoverTextColor)};
+      background: ${parseColor(props.$hoverBackground)};
+      border-color: ${parseColor(props.$hoverBorderColor)};
     }
     &:active {
-      background: ${parseColor(props.defaultBackground)};
-      border-color: ${parseColor(props.defaultBorderColor)};
-      color: ${parseColor(props.defaultTextColor)};
+      background: ${parseColor(props.$defaultBackground)};
+      border-color: ${parseColor(props.$defaultBorderColor)};
+      color: ${parseColor(props.$defaultTextColor)};
     }
     &:disabled {
-      background: ${parseColor(props.disabledBackground)};
-      border-color: ${parseColor(props.disabledBorderColor)};
-      color: ${parseColor(props.disabledTextColor)};
+      background: ${parseColor(props.$disabledBackground)};
+      border-color: ${parseColor(props.$disabledBorderColor)};
+      color: ${parseColor(props.$disabledTextColor)};
     }
   `}
 `;
@@ -89,8 +101,11 @@ const StyledButtonWrapper = styled(OakBox)`
   }
 `;
 
-export const InternalRectButton = (props: InternalRectButtonProps) => {
+export const InternalRectButton = <C extends ElementType = "button">(
+  props: InternalRectButtonProps & PolymorphicPropsWithoutRef<C>,
+) => {
   const {
+    element = "button",
     children,
     iconName,
     isTrailingIcon,
@@ -98,6 +113,15 @@ export const InternalRectButton = (props: InternalRectButtonProps) => {
     disabled,
     width,
     maxWidth,
+    defaultBackground,
+    defaultBorderColor,
+    defaultTextColor,
+    disabledTextColor,
+    hoverTextColor,
+    hoverBackground,
+    hoverBorderColor,
+    disabledBackground,
+    disabledBorderColor,
     ...rest
   } = props;
 
@@ -108,9 +132,7 @@ export const InternalRectButton = (props: InternalRectButtonProps) => {
           iconName={iconName}
           $width={"all-spacing-6"}
           $height={"all-spacing-6"}
-          $colorFilter={
-            props.disabled ? props.disabledTextColor : props.defaultTextColor
-          }
+          $colorFilter={props.disabled ? disabledTextColor : defaultTextColor}
         />
       )}
     </>
@@ -148,12 +170,12 @@ export const InternalRectButton = (props: InternalRectButtonProps) => {
       />
 
       <StyledInternalButton
+        element={element}
         className="internal-button"
-        {...rest}
         $ba={"border-solid-m"}
-        $background={props.defaultBackground}
-        $borderColor={props.defaultBorderColor}
-        $color={props.defaultTextColor}
+        $background={defaultBackground}
+        $borderColor={defaultBorderColor}
+        $color={defaultTextColor}
         $pv={"inner-padding-xs"}
         $ph={"inner-padding-s"}
         $borderRadius={"border-radius-s"}
@@ -161,6 +183,16 @@ export const InternalRectButton = (props: InternalRectButtonProps) => {
         disabled={disabled || isLoading}
         $width={"100%"}
         $height={"100%"}
+        $hoverTextColor={hoverTextColor}
+        $hoverBackground={hoverBackground}
+        $hoverBorderColor={hoverBorderColor}
+        $defaultTextColor={defaultTextColor}
+        $defaultBackground={defaultBackground}
+        $defaultBorderColor={defaultBorderColor}
+        $disabledTextColor={disabledTextColor}
+        $disabledBackground={disabledBackground}
+        $disabledBorderColor={disabledBorderColor}
+        {...rest}
       >
         <OakFlex
           $flexDirection={"row"}

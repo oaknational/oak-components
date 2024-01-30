@@ -104,7 +104,31 @@ export const Default: Story = {
     disabledTextColor: "text-disabled",
     disabledIconColor: "white",
     defaultIconColor: "white",
-    hoverIconBackground: "mint40",
+    hoverIconBackground: "mint50",
+    width: "auto",
+    iconBackgroundSize: "all-spacing-7",
+    iconSize: "all-spacing-6",
+  },
+};
+
+export const LinkStyledAsButton: Story = {
+  render: (args) => (
+    <OakFlex $gap="space-between-m">
+      <InternalRoundButton {...args}>Link</InternalRoundButton>
+    </OakFlex>
+  ),
+  args: {
+    as: "a",
+    href: "/",
+    iconName: "lightbulb",
+    defaultIconBackground: "mint",
+    defaultTextColor: "text-primary",
+    hoverTextColor: "text-primary",
+    disabledIconBackground: "bg-btn-primary-disabled",
+    disabledTextColor: "text-disabled",
+    disabledIconColor: "white",
+    defaultIconColor: "white",
+    hoverIconBackground: "mint50",
     width: "auto",
     iconBackgroundSize: "all-spacing-7",
     iconSize: "all-spacing-6",
