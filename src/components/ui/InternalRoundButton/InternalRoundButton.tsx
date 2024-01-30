@@ -170,8 +170,8 @@ const _InternalRoundButton = (props: InternalRoundButtonProps) => {
       <StyledInternalButton
         {...rest}
         $color={props.defaultTextColor}
-        $pv={"inner-padding-xs"}
-        $ph={"inner-padding-s"}
+        // $pv={"inner-padding-xs"}
+        // $ph={"inner-padding-s"}
         $position={"relative"}
         disabled={disabled || isLoading}
       >
