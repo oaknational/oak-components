@@ -11,3 +11,4 @@ export * from "./OakRoundIcon";
 export * from "./OakTooltip";
 export * from "./OakBackLink";
 export * from "./OakBulletList";
+export * from "./OakHandDrawnCard";

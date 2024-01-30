@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InternalStyledSvg matches snapshot 1`] = `
+.c0 {
+  fill: #ffece0;
+  stroke: #ffc8a6;
+  stroke-width: 0.125rem;
+}
+
+<svg
+  className="c0"
+>
+  <path
+    d="M0 1 2 3Z"
+  />
+</svg>
+`;
