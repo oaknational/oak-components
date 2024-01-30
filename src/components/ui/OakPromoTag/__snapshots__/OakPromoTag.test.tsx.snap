@@ -7,7 +7,7 @@ exports[`OakPromoTag matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c5 {
+.c4 {
   position: absolute;
   inset: 0rem;
   font-family: Lexend,sans-serif;
@@ -28,7 +28,7 @@ exports[`OakPromoTag matches snapshot 1`] = `
   justify-content: center;
 }
 
-.c6 {
+.c5 {
   color: #ffe555;
   font-family: Lexend,sans-serif;
   font-weight: 700;
@@ -48,11 +48,6 @@ exports[`OakPromoTag matches snapshot 1`] = `
   aspect-ratio: 2 / 1;
 }
 
-.c4 {
-  -webkit-filter: drop-shadow(3px 3px 0px rgba(255,255,255,0.5));
-  filter: drop-shadow(3px 3px 0px rgba(255,255,255,0.5));
-}
-
 @media (min-width:750px) {
   .c0 {
     width: 3rem;
@@ -66,43 +61,43 @@ exports[`OakPromoTag matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c6 {
+  .c5 {
     font-weight: 700;
   }
 }
 
 @media (min-width:1280px) {
-  .c6 {
+  .c5 {
     font-weight: 600;
   }
 }
 
 @media (min-width:750px) {
-  .c6 {
+  .c5 {
     font-size: 0.875rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c6 {
+  .c5 {
     font-size: 1rem;
   }
 }
 
 @media (min-width:750px) {
-  .c6 {
+  .c5 {
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c6 {
+  .c5 {
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:750px) {
-  .c6 {
+  .c5 {
     -webkit-letter-spacing: -0.005rem;
     -moz-letter-spacing: -0.005rem;
     -ms-letter-spacing: -0.005rem;
@@ -111,7 +106,7 @@ exports[`OakPromoTag matches snapshot 1`] = `
 }
 
 @media (min-width:1280px) {
-  .c6 {
+  .c5 {
     -webkit-letter-spacing: 0.0115rem;
     -moz-letter-spacing: 0.0115rem;
     -ms-letter-spacing: 0.0115rem;
@@ -123,7 +118,7 @@ exports[`OakPromoTag matches snapshot 1`] = `
   className="c0 c1 c2"
 >
   <svg
-    className="c3 c4"
+    className="c3"
     height="100%"
     viewBox="0 0 56 27"
     width="100%"
@@ -134,10 +129,10 @@ exports[`OakPromoTag matches snapshot 1`] = `
     />
   </svg>
   <div
-    className="c5 c1"
+    className="c4 c1"
   >
     <span
-      className="c6"
+      className="c5"
     >
       New
     </span>

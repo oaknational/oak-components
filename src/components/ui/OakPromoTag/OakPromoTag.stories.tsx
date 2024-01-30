@@ -7,11 +7,6 @@ const meta: Meta<typeof OakPromoTag> = {
   component: OakPromoTag,
   tags: ["autodocs"],
   title: "components/ui/OakPromoTag",
-  parameters: {
-    backgrounds: {
-      default: "dark",
-    },
-  },
 };
 export default meta;
 
