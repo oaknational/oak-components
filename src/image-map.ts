@@ -75,14 +75,15 @@ export const icons = {
   "occupational-therapy": "subject-icons/therapy.svg",
   "subject-physical-development": "subject-icons/physical-development.svg",
   "subject-physical-education": "subject-icons/physical-education.svg",
-  "subject-physical-therapy": "subject-icons/therapy.svg",
+  "subject-physical-therapy": "subject-icons/physical-therapy.svg",
   "subject-physics": "subject-icons/physics.svg",
   "subject-religious-education": "subject-icons/religious-education.svg",
   "subject-rshe-pshe": "subject-icons/rshe-pshe.svg",
   "subject-science": "subject-icons/science.svg",
   "subject-sensory-integration": "subject-icons/sensory-integration.svg",
   "subject-spanish": "subject-icons/spanish.svg",
-  "subject-speech-and-language-therapy": "subject-icons/therapy.svg",
+  "subject-speech-and-language-therapy":
+    "subject-icons/speech-and-language.svg",
   "subject-therapy": "subject-icons/therapy.svg",
   "subject-understanding-the-world":
     "subject-icons/understanding-the-world.svg",
