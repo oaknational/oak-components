@@ -86,11 +86,7 @@ export const OakLessonLayout = ({
             {topNavSlot}
           </OakBox>
         )}
-        <OakFlex
-          $flexGrow={1}
-          $flexDirection="column"
-          $mh={["space-between-s", "space-between-l"]}
-        >
+        <OakFlex $flexGrow={1} $flexDirection="column">
           {children}
         </OakFlex>
         {bottomNavSlot && (
