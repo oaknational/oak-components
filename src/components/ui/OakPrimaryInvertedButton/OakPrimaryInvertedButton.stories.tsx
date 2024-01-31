@@ -8,20 +8,6 @@ import { OakFlex } from "@/components/base";
 
 const controlIconNames = [null, [...oakIconNames].sort()].flat();
 
-/**
- *
- * A specific implementation of InternalRectButton
- *
- * The following callbacks are available for tracking focus events:
- *
- * ### onClick
- * `onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;`
- *
- * ### onHovered
- *  `onHovered?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, duration: number) => void;`<br>
- *  called after a mouseEnter and mouseLeave event has happened
- */
-
 const meta: Meta<typeof OakPrimaryInvertedButton> = {
   component: OakPrimaryInvertedButton,
   tags: ["autodocs"],
@@ -41,6 +27,9 @@ const meta: Meta<typeof OakPrimaryInvertedButton> = {
   parameters: {
     controls: {
       include: ["iconName", "isTrailingIcon", "isLoading", "type"],
+    },
+    backgrounds: {
+      default: "light",
     },
   },
 };

@@ -92,12 +92,10 @@ const StyledButtonWrapper = styled(OakBox)<
   .yellow-shadow:has(+ .internal-button:focus-visible) {
     box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")};
   }
-  ${(props) => css`
-    .yellow-shadow:has(+ .internal-button:hover) {
-      box-shadow: ${parseDropShadow(props.$hoverShadow)};
-    }
-  `};
-
+  .yellow-shadow:has(+ .internal-button:hover),
+  .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible, :active)) {
+    box-shadow: ${(props) => parseDropShadow(props.$hoverShadow)};
+  }
   .grey-shadow:has(+ * + .internal-button:hover) {
     box-shadow: none;
   }

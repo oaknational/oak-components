@@ -4,6 +4,10 @@ import {
 } from "@/styles/theme/dropShadow";
 
 export const parseDropShadow = (variant?: OakDropShadowToken | null) => {
+  if (variant === null) {
+    return "none";
+  }
+
   if (!variant) {
     return;
   }
