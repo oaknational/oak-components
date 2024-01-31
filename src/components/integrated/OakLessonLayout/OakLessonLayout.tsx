@@ -158,9 +158,9 @@ function pickSectionColours(
       ];
     case "review":
       return [
-        "bg-decorative4-subdued",
+        "bg-decorative1-main",
         "bg-primary",
-        "border-decorative4",
+        "border-decorative1-stronger",
         "bg-primary",
       ];
   }

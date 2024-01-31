@@ -187,8 +187,6 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
         $defaultTextColor={defaultTextColor}
         $disabledTextColor={disabledTextColor}
         $color={defaultTextColor}
-        $pv={"inner-padding-xs"}
-        $ph={"inner-padding-s"}
         $position={"relative"}
         disabled={disabled || isLoading}
       >

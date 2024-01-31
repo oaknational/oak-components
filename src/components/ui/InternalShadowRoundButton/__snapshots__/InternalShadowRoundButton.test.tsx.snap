@@ -97,10 +97,6 @@ exports[`InternalShadowRoundButton matches snapshot 1`] = `
   outline: none;
   font-family: Lexend,sans-serif;
   color: #ebfbeb;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
 }
 
 .c2:disabled {
