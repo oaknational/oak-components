@@ -1,8 +1,9 @@
-import React from "react";
+import React, { ElementType } from "react";
 import styled, { css } from "styled-components";
 
 import { OakRoundIconProps } from "../OakRoundIcon";
 
+import { PolymorphicPropsWithoutRef } from "@/components/utils/polymorphic";
 import { OakBox, OakFlex, OakSpan } from "@/components/base";
 import {
   InternalButton,
@@ -55,48 +56,51 @@ const StyledInternalButton = styled(InternalButton)<
   ${(props) => css`
     &:hover {
       text-decoration: underline;
-      color: ${parseColor(props.hoverTextColor)};
+      color: ${parseColor(props.$hoverTextColor)};
     }
     &:active {
-      color: ${parseColor(props.defaultTextColor)};
+      color: ${parseColor(props.$defaultTextColor)};
     }
     &:disabled {
-      color: ${parseColor(props.disabledTextColor)};
+      color: ${parseColor(props.$disabledTextColor)};
     }
   `}
 `;
 
 const StyledButtonWrapper = styled(OakBox)<{
-  disabledIconBackground: OakCombinedColorToken;
-  hoverIconBackground: OakCombinedColorToken;
-  defaultIconBackground: OakCombinedColorToken;
+  $disabledIconBackground: OakCombinedColorToken;
+  $hoverIconBackground: OakCombinedColorToken;
+  $defaultIconBackground: OakCombinedColorToken;
 }>`
-  button:focus-visible .shadow {
+  > :first-child:focus-visible .shadow {
     box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
   }
-  button:hover .shadow {
+  > :first-child:hover .shadow {
     box-shadow: ${parseDropShadow("drop-shadow-lemon")};
   }
-  button:active .shadow {
+  > :first-child:active .shadow {
     box-shadow: ${parseDropShadow("drop-shadow-lemon")},
       ${parseDropShadow("drop-shadow-grey")};
   }
   ${(props) => css`
-    button:disabled .icon-container {
-      background: ${parseColor(props.disabledIconBackground)};
+    > :first-child:disabled .icon-container {
+      background: ${parseColor(props.$disabledIconBackground)};
     }
-    button:hover .icon-container {
-      background: ${parseColor(props.hoverIconBackground)};
+    > :first-child:hover .icon-container {
+      background: ${parseColor(props.$hoverIconBackground)};
     }
-    button:active .icon-container {
-      background: ${parseColor(props.defaultIconBackground)};
+    > :first-child:active .icon-container {
+      background: ${parseColor(props.$defaultIconBackground)};
     }
   `}
 `;
 
-const _InternalRoundButton = (props: InternalRoundButtonProps) => {
+const _InternalRoundButton = <C extends ElementType = "button">(
+  props: InternalRoundButtonProps & PolymorphicPropsWithoutRef<C>,
+) => {
   const {
+    element = "button",
     children,
     iconName,
     isTrailingIcon,
@@ -106,6 +110,14 @@ const _InternalRoundButton = (props: InternalRoundButtonProps) => {
     maxWidth,
     iconBackgroundSize,
     iconSize,
+    disabledIconBackground,
+    disabledTextColor,
+    defaultIconColor,
+    hoverIconBackground,
+    defaultIconBackground,
+    disabledIconColor,
+    defaultTextColor,
+    hoverTextColor,
     ...rest
   } = props;
 
@@ -118,9 +130,9 @@ const _InternalRoundButton = (props: InternalRoundButtonProps) => {
           $height={iconSize}
           $colorFilter={
             props.disabled
-              ? props.disabledIconColor
-              : props.defaultIconColor
-                ? props.defaultIconColor
+              ? disabledIconColor
+              : defaultIconColor
+                ? defaultIconColor
                 : null
           }
         />
@@ -163,15 +175,17 @@ const _InternalRoundButton = (props: InternalRoundButtonProps) => {
       $position={"relative"}
       $width={width}
       $maxWidth={maxWidth}
-      disabledIconBackground={props.disabledIconBackground}
-      hoverIconBackground={props.hoverIconBackground}
-      defaultIconBackground={props.defaultIconBackground}
+      $disabledIconBackground={disabledIconBackground}
+      $hoverIconBackground={hoverIconBackground}
+      $defaultIconBackground={defaultIconBackground}
     >
       <StyledInternalButton
+        element={element ?? "button"}
         {...rest}
-        $color={props.defaultTextColor}
-        // $pv={"inner-padding-xs"}
-        // $ph={"inner-padding-s"}
+        $hoverTextColor={hoverTextColor}
+        $defaultTextColor={defaultTextColor}
+        $disabledTextColor={disabledTextColor}
+        $color={defaultTextColor}
         $position={"relative"}
         disabled={disabled || isLoading}
       >
@@ -190,4 +204,4 @@ const _InternalRoundButton = (props: InternalRoundButtonProps) => {
   );
 };
 
-export const InternalRoundButton = styled(_InternalRoundButton)``;
+export const InternalRoundButton = _InternalRoundButton;

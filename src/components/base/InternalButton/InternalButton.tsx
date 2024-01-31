@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { ElementType, useRef } from "react";
 import styled, { css } from "styled-components";
 
 import { colorStyle, ColorStyleProps } from "@/styles/utils/colorStyle";
@@ -13,6 +13,7 @@ import {
   DropShadowStyleProps,
 } from "@/styles/utils/dropShadowStyle";
 import { borderStyle, BorderStyleProps } from "@/styles/utils/borderStyle";
+import { PolymorphicPropsWithoutRef } from "@/components/utils/polymorphic";
 
 type StyledButtonProps = TypographyStyleProps &
   SpacingStyleProps &
@@ -46,21 +47,16 @@ const internalButtonCss = css<StyledButtonProps>`
 `;
 
 export type InternalButtonProps = StyledButtonProps & {
-  onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   onHovered?: (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
     duration: number,
   ) => void;
-  children?: React.ReactNode;
-  className?: string;
-  disabled?: boolean;
-  "data-testid"?: string;
-  type?: "button" | "submit" | "reset";
-  form?: string;
 };
 
-const UnstyledInternalButton = (props: InternalButtonProps) => {
-  const { onClick, onHovered } = props;
+const UnstyledInternalButton = <C extends ElementType = "button">(
+  props: InternalButtonProps & PolymorphicPropsWithoutRef<C>,
+) => {
+  const { onClick, onHovered, element: Component = "button", ...rest } = props;
 
   const hoverStart = useRef(Date.now());
 
@@ -82,18 +78,12 @@ const UnstyledInternalButton = (props: InternalButtonProps) => {
   };
 
   return (
-    <button
-      className={props.className}
-      data-testid={props["data-testid"]}
-      disabled={props.disabled}
+    <Component
+      {...rest}
       onClick={handleClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      type={props.type ?? "button"}
-      form={props.form}
-    >
-      {props.children}
-    </button>
+    />
   );
 };
 

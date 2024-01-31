@@ -90,6 +90,7 @@ exports[`InternalRectButton matches snapshot 1`] = `
   position: relative;
   width: 100%;
   height: 100%;
+  display: inline-block;
 }
 
 .c4:hover {
@@ -150,7 +151,6 @@ exports[`InternalRectButton matches snapshot 1`] = `
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    type="button"
   >
     <div
       className="c5 c6"
