@@ -1,7 +1,7 @@
 import React, { MouseEventHandler } from "react";
 import styled from "styled-components";
 
-import { InternalRoundButton } from "@/components/ui/InternalRoundButton";
+import { InternalShadowRoundButton } from "@/components/ui/InternalShadowRoundButton";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 
 export type OakHintButtonProps = {
@@ -11,7 +11,7 @@ export type OakHintButtonProps = {
   disabled?: boolean;
 };
 
-const StyledInternalRoundButton = styled(InternalRoundButton)`
+const StyledInternalShadowRoundButton = styled(InternalShadowRoundButton)`
   &:hover .shadow {
     box-shadow: none !important;
   }
@@ -24,7 +24,7 @@ const StyledInternalRoundButton = styled(InternalRoundButton)`
 export const OakHintButton = (props: OakHintButtonProps) => {
   const { isOpen, disabled } = props;
   return (
-    <StyledInternalRoundButton
+    <StyledInternalShadowRoundButton
       iconName={isOpen && !disabled ? "lightbulb-yellow" : "lightbulb"}
       defaultIconBackground={isOpen ? "black" : "bg-decorative5-main"}
       hoverIconBackground={isOpen ? "black" : "bg-decorative5-main"}
@@ -40,6 +40,6 @@ export const OakHintButton = (props: OakHintButtonProps) => {
       iconSize={"all-spacing-6"}
     >
       {!isOpen ? "Need a hint?" : "Close hint"}
-    </StyledInternalRoundButton>
+    </StyledInternalShadowRoundButton>
   );
 };

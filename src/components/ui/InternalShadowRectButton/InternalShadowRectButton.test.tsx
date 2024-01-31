@@ -44,14 +44,18 @@ describe("InternalShadowRectButton", () => {
 
   it("matches snapshot", () => {
     const tree = create(
-      <InternalShadowRectButton {...defaultArgs}>Click Me</InternalShadowRectButton>,
+      <InternalShadowRectButton {...defaultArgs}>
+        Click Me
+      </InternalShadowRectButton>,
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it("renders the children", () => {
     const { getByText } = render(
-      <InternalShadowRectButton {...defaultArgs}>Click</InternalShadowRectButton>,
+      <InternalShadowRectButton {...defaultArgs}>
+        Click
+      </InternalShadowRectButton>,
     );
     expect(getByText("Click")).toBeInTheDocument();
   });
@@ -59,7 +63,11 @@ describe("InternalShadowRectButton", () => {
   it("calls onClick method", () => {
     const onClick = jest.fn();
     const { getByTestId } = render(
-      <InternalShadowRectButton {...defaultArgs} data-testid="test" onClick={onClick}>
+      <InternalShadowRectButton
+        {...defaultArgs}
+        data-testid="test"
+        onClick={onClick}
+      >
         Click
       </InternalShadowRectButton>,
     );

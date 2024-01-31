@@ -20,7 +20,7 @@ import { parseColor } from "@/styles/helpers/parseColor";
 import { OakCombinedColorToken } from "@/styles";
 import { SizeStyleProps, sizeStyle } from "@/styles/utils/sizeStyle";
 
-export type InternalRoundButtonProps = Omit<
+export type InternalShadowRoundButtonProps = Omit<
   InternalButtonProps,
   | "$pa"
   | "$ph"
@@ -47,9 +47,9 @@ export type InternalRoundButtonProps = Omit<
   iconSize: SizeStyleProps["$width"];
 } & PositionStyleProps;
 
-const StyledInternalButton = styled(InternalButton)<
-  Omit<InternalRoundButtonProps, "iconBackgroundSize" | "iconSize"> &
-    SizeStyleProps
+const StyledInternalButton = styled(InternalButton) <
+  Omit<InternalShadowRoundButtonProps, "iconBackgroundSize" | "iconSize"> &
+  SizeStyleProps
 >`
   ${positionStyle}
   ${sizeStyle}
@@ -67,7 +67,7 @@ const StyledInternalButton = styled(InternalButton)<
   `}
 `;
 
-const StyledButtonWrapper = styled(OakBox)<{
+const StyledButtonWrapper = styled(OakBox) <{
   $disabledIconBackground: OakCombinedColorToken;
   $hoverIconBackground: OakCombinedColorToken;
   $defaultIconBackground: OakCombinedColorToken;
@@ -96,8 +96,8 @@ const StyledButtonWrapper = styled(OakBox)<{
   `}
 `;
 
-const _InternalRoundButton = <C extends ElementType = "button">(
-  props: InternalRoundButtonProps & PolymorphicPropsWithoutRef<C>,
+export const InternalShadowRoundButton = <C extends ElementType = "button">(
+  props: InternalShadowRoundButtonProps & PolymorphicPropsWithoutRef<C>,
 ) => {
   const {
     element = "button",
@@ -205,5 +205,3 @@ const _InternalRoundButton = <C extends ElementType = "button">(
     </StyledButtonWrapper>
   );
 };
-
-export const InternalRoundButton = _InternalRoundButton;

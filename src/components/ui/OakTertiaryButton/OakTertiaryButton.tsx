@@ -1,7 +1,7 @@
 import React, { ElementType } from "react";
 
 import { OakRoundIconProps } from "../OakRoundIcon";
-import { InternalRoundButton } from "../InternalRoundButton";
+import { InternalShadowRoundButton } from "../InternalShadowRoundButton";
 
 import { OakIconName } from "@/components/base";
 import { InternalButtonProps } from "@/components/base/InternalButton";
@@ -15,7 +15,7 @@ type OakTertiaryButtonProps = InternalButtonProps & {
 };
 
 /**
- * An implementation of InternalRoundButton, its a subtle button with no border and a round icon.
+ * An implementation of InternalShadowRoundButton, its a subtle button with no border and a round icon.
  */
 
 export const OakTertiaryButton = <C extends ElementType = "button">({
@@ -26,7 +26,7 @@ export const OakTertiaryButton = <C extends ElementType = "button">({
   ...props
 }: OakTertiaryButtonProps & PolymorphicPropsWithoutRef<C>) => {
   return (
-    <InternalRoundButton
+    <InternalShadowRoundButton
       element={element ?? "button"}
       {...props}
       isTrailingIcon={isTrailingIcon}
@@ -43,6 +43,6 @@ export const OakTertiaryButton = <C extends ElementType = "button">({
       iconSize={"all-spacing-6"}
     >
       {children}
-    </InternalRoundButton>
+    </InternalShadowRoundButton>
   );
 };

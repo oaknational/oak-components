@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { InternalRoundButton } from "./InternalRoundButton";
+import { InternalShadowRoundButton } from "./InternalShadowRoundButton";
 
 import { oakIconNames } from "@/components/base/OakIcon";
 import { OakFlex } from "@/components/base";
@@ -26,10 +26,10 @@ const controlIconNames = [null, [...oakIconNames].sort()].flat();
  *  called after a mouseEnter and mouseLeave event has happened
  */
 
-const meta: Meta<typeof InternalRoundButton> = {
-  component: InternalRoundButton,
+const meta: Meta<typeof InternalShadowRoundButton> = {
+  component: InternalShadowRoundButton,
   tags: ["autodocs"],
-  title: "components/ui/InternalRoundButton",
+  title: "components/ui/InternalShadowRoundButton",
   argTypes: {
     iconName: {
       options: controlIconNames,
@@ -81,18 +81,18 @@ const meta: Meta<typeof InternalRoundButton> = {
 };
 export default meta;
 
-type Story = StoryObj<typeof InternalRoundButton>;
+type Story = StoryObj<typeof InternalShadowRoundButton>;
 
 export const Default: Story = {
   render: (args) => (
     <OakFlex $gap="space-between-m">
-      <InternalRoundButton {...args}>Button</InternalRoundButton>
-      <InternalRoundButton {...args} disabled>
+      <InternalShadowRoundButton {...args}>Button</InternalShadowRoundButton>
+      <InternalShadowRoundButton {...args} disabled>
         Disabled Button
-      </InternalRoundButton>
-      <InternalRoundButton {...args} isLoading>
+      </InternalShadowRoundButton>
+      <InternalShadowRoundButton {...args} isLoading>
         Loading Button
-      </InternalRoundButton>
+      </InternalShadowRoundButton>
     </OakFlex>
   ),
   args: {
@@ -114,7 +114,7 @@ export const Default: Story = {
 export const LinkStyledAsButton: Story = {
   render: (args) => (
     <OakFlex $gap="space-between-m">
-      <InternalRoundButton {...args}>Link</InternalRoundButton>
+      <InternalShadowRoundButton {...args}>Link</InternalShadowRoundButton>
     </OakFlex>
   ),
   args: {

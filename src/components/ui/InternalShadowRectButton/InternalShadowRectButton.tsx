@@ -44,7 +44,7 @@ export type InternalShadowRectButtonProps = Omit<
   maxWidth?: SizeStyleProps["$maxWidth"];
 } & PositionStyleProps;
 
-const StyledInternalButton = styled(InternalButton) <
+const StyledInternalButton = styled(InternalButton)<
   SizeStyleProps & {
     $defaultTextColor: OakCombinedColorToken;
     $defaultBackground: OakCombinedColorToken;
