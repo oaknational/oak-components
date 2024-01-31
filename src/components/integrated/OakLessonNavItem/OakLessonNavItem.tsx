@@ -184,7 +184,7 @@ function renderQuestionCounter(props: SectionProps) {
     case "exit-quiz":
     case "starter-quiz":
       return (
-        <OakBox $display={["none", "block"]} $mr="space-between-xxxl">
+        <OakBox $display={["none", "block"]} $mr="space-between-m">
           <OakSpan $font="heading-4">{props.grade}</OakSpan>
           <OakSpan $font="heading-6">&nbsp;/&nbsp;{props.numQuestions}</OakSpan>
         </OakBox>
