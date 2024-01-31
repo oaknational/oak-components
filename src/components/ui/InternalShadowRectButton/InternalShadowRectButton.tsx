@@ -18,7 +18,7 @@ import { OakCombinedColorToken } from "@/styles";
 import { SizeStyleProps, sizeStyle } from "@/styles/utils/sizeStyle";
 import { PolymorphicPropsWithoutRef } from "@/components/utils/polymorphic";
 
-export type InternalRectButtonProps = Omit<
+export type InternalShadowRectButtonProps = Omit<
   InternalButtonProps,
   | "$pa"
   | "$ph"
@@ -44,7 +44,7 @@ export type InternalRectButtonProps = Omit<
   maxWidth?: SizeStyleProps["$maxWidth"];
 } & PositionStyleProps;
 
-const StyledInternalButton = styled(InternalButton)<
+const StyledInternalButton = styled(InternalButton) <
   SizeStyleProps & {
     $defaultTextColor: OakCombinedColorToken;
     $defaultBackground: OakCombinedColorToken;
@@ -101,8 +101,8 @@ const StyledButtonWrapper = styled(OakBox)`
   }
 `;
 
-export const InternalRectButton = <C extends ElementType = "button">(
-  props: InternalRectButtonProps & PolymorphicPropsWithoutRef<C>,
+export const InternalShadowRectButton = <C extends ElementType = "button">(
+  props: InternalShadowRectButtonProps & PolymorphicPropsWithoutRef<C>,
 ) => {
   const {
     element = "button",

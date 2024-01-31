@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { InternalRectButton } from "./InternalRectButton";
+import { InternalShadowRectButton } from "./InternalShadowRectButton";
 
 import { oakIconNames } from "@/components/base/OakIcon";
 import { OakFlex } from "@/components/base";
@@ -26,10 +26,10 @@ const controlIconNames = [null, [...oakIconNames].sort()].flat();
  *  called after a mouseEnter and mouseLeave event has happened
  */
 
-const meta: Meta<typeof InternalRectButton> = {
-  component: InternalRectButton,
+const meta: Meta<typeof InternalShadowRectButton> = {
+  component: InternalShadowRectButton,
   tags: ["autodocs"],
-  title: "components/ui/InternalRectButton",
+  title: "components/ui/InternalShadowRectButton",
   argTypes: {
     iconName: {
       options: controlIconNames,
@@ -76,18 +76,18 @@ const meta: Meta<typeof InternalRectButton> = {
 };
 export default meta;
 
-type Story = StoryObj<typeof InternalRectButton>;
+type Story = StoryObj<typeof InternalShadowRectButton>;
 
 export const Default: Story = {
   render: (args) => (
     <OakFlex $gap="space-between-m">
-      <InternalRectButton {...args}>Button</InternalRectButton>
-      <InternalRectButton {...args} disabled>
+      <InternalShadowRectButton {...args}>Button</InternalShadowRectButton>
+      <InternalShadowRectButton {...args} disabled>
         Disabled Button
-      </InternalRectButton>
-      <InternalRectButton {...args} isLoading>
+      </InternalShadowRectButton>
+      <InternalShadowRectButton {...args} isLoading>
         Loading Button
-      </InternalRectButton>
+      </InternalShadowRectButton>
     </OakFlex>
   ),
   args: {
@@ -107,7 +107,7 @@ export const Default: Story = {
 export const LinkStyledAsButton: Story = {
   render: (args) => (
     <OakFlex $gap="space-between-m">
-      <InternalRectButton {...args}>Link</InternalRectButton>
+      <InternalShadowRectButton {...args}>Link</InternalShadowRectButton>
     </OakFlex>
   ),
   args: {

@@ -4,13 +4,13 @@ import { render, fireEvent } from "@testing-library/react";
 import { create } from "react-test-renderer";
 
 import {
-  InternalRectButton,
-  InternalRectButtonProps,
-} from "./InternalRectButton";
+  InternalShadowRectButton,
+  InternalShadowRectButtonProps,
+} from "./InternalShadowRectButton";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
-const defaultArgs: InternalRectButtonProps = {
+const defaultArgs: InternalShadowRectButtonProps = {
   iconName: "arrow-right",
   defaultBackground: "mint",
   defaultTextColor: "mint30",
@@ -23,7 +23,7 @@ const defaultArgs: InternalRectButtonProps = {
   disabledTextColor: "grey40",
 };
 
-describe("InternalRectButton", () => {
+describe("InternalShadowRectButton", () => {
   beforeEach(() => {
     jest.useFakeTimers();
   });
@@ -35,23 +35,23 @@ describe("InternalRectButton", () => {
 
   it("renders", () => {
     const { getByTestId } = renderWithTheme(
-      <InternalRectButton {...defaultArgs} data-testid="test">
+      <InternalShadowRectButton {...defaultArgs} data-testid="test">
         Click
-      </InternalRectButton>,
+      </InternalShadowRectButton>,
     );
     expect(getByTestId("test")).toBeInTheDocument();
   });
 
   it("matches snapshot", () => {
     const tree = create(
-      <InternalRectButton {...defaultArgs}>Click Me</InternalRectButton>,
+      <InternalShadowRectButton {...defaultArgs}>Click Me</InternalShadowRectButton>,
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it("renders the children", () => {
     const { getByText } = render(
-      <InternalRectButton {...defaultArgs}>Click</InternalRectButton>,
+      <InternalShadowRectButton {...defaultArgs}>Click</InternalShadowRectButton>,
     );
     expect(getByText("Click")).toBeInTheDocument();
   });
@@ -59,9 +59,9 @@ describe("InternalRectButton", () => {
   it("calls onClick method", () => {
     const onClick = jest.fn();
     const { getByTestId } = render(
-      <InternalRectButton {...defaultArgs} data-testid="test" onClick={onClick}>
+      <InternalShadowRectButton {...defaultArgs} data-testid="test" onClick={onClick}>
         Click
-      </InternalRectButton>,
+      </InternalShadowRectButton>,
     );
     getByTestId("test").click();
     expect(onClick).toHaveBeenCalled();
@@ -70,13 +70,13 @@ describe("InternalRectButton", () => {
   it("calls onHovered method when a mouseover and mouseout event has happened", () => {
     const onHovered = jest.fn();
     const { getByTestId } = render(
-      <InternalRectButton
+      <InternalShadowRectButton
         {...defaultArgs}
         data-testid="test"
         onHovered={onHovered}
       >
         Click
-      </InternalRectButton>,
+      </InternalShadowRectButton>,
     );
 
     fireEvent.mouseEnter(getByTestId("test"));
@@ -87,13 +87,13 @@ describe("InternalRectButton", () => {
   it("calls doesn't call onHovered method before a mouseout event happens", () => {
     const onHovered = jest.fn();
     const { getByTestId } = render(
-      <InternalRectButton
+      <InternalShadowRectButton
         {...defaultArgs}
         data-testid="test"
         onHovered={onHovered}
       >
         Click
-      </InternalRectButton>,
+      </InternalShadowRectButton>,
     );
     fireEvent.mouseEnter(getByTestId("test"));
     expect(onHovered).not.toHaveBeenCalled();
@@ -103,9 +103,9 @@ describe("InternalRectButton", () => {
 
   it("correctly applies default styles", () => {
     const { getByTestId } = renderWithTheme(
-      <InternalRectButton {...defaultArgs} data-testid="test">
+      <InternalShadowRectButton {...defaultArgs} data-testid="test">
         Click
-      </InternalRectButton>,
+      </InternalShadowRectButton>,
     );
     fireEvent.mouseEnter(getByTestId("test"));
 
@@ -119,13 +119,13 @@ describe("InternalRectButton", () => {
   it("correctly captures the duration of the hover event", () => {
     const onHovered = jest.fn();
     const { getByTestId } = render(
-      <InternalRectButton
+      <InternalShadowRectButton
         {...defaultArgs}
         data-testid="test"
         onHovered={onHovered}
       >
         Click
-      </InternalRectButton>,
+      </InternalShadowRectButton>,
     );
     fireEvent.mouseEnter(getByTestId("test"));
     jest.advanceTimersByTime(1000);
