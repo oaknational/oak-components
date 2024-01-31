@@ -9,6 +9,7 @@ export type OakHandDrawnBoxWithIconProps = Omit<
   "children"
 > & {
   iconName: OakIconProps["iconName"];
+  alt?: OakIconProps["alt"];
   iconColor?: OakIconProps["$colorFilter"];
   iconWidth?: OakIconProps["$width"];
   iconHeight?: OakIconProps["$height"];
@@ -22,6 +23,7 @@ export const OakHandDrawnCardWithIcon = ({
   iconColor = "text-primary",
   iconWidth = ["all-spacing-11", "all-spacing-16"],
   iconHeight = ["all-spacing-11", "all-spacing-16"],
+  alt,
   $width = ["all-spacing-13", "all-spacing-17"],
   $height = ["all-spacing-13", "all-spacing-17"],
   $alignItems = "center",
@@ -38,6 +40,7 @@ export const OakHandDrawnCardWithIcon = ({
     >
       <OakIcon
         iconName={iconName}
+        alt={alt}
         $height={iconHeight}
         $width={iconWidth}
         $colorFilter={iconColor}

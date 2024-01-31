@@ -7,10 +7,11 @@ import {
 } from "@/components/ui";
 import { OakBox } from "@/components/base";
 
-export type OakSubjectIconProps = {
-  iconName: OakHandDrawnBoxWithIconProps["iconName"] & `subject-${string}`;
-  fill?: OakHandDrawnBoxWithIconProps["fill"];
-  iconColor?: OakHandDrawnBoxWithIconProps["iconColor"];
+export type OakSubjectIconProps = Pick<
+  OakHandDrawnBoxWithIconProps,
+  "iconName" | "fill" | "iconColor" | "alt"
+> & {
+  iconName: `subject-${string}`;
   showPromoTag?: boolean;
 };
 
@@ -21,17 +22,11 @@ export type OakSubjectIconProps = {
  */
 export const OakSubjectIcon = ({
   showPromoTag,
-  fill,
-  iconColor,
-  iconName,
+  ...rest
 }: OakSubjectIconProps) => {
   return (
     <OakBox $width="fit-content" $height="fit-content" $position="relative">
-      <OakHandDrawnCardWithIcon
-        iconName={iconName}
-        iconColor={iconColor}
-        fill={fill}
-      />
+      <OakHandDrawnCardWithIcon {...rest} />
       {showPromoTag && (
         <OakBox
           $position="absolute"

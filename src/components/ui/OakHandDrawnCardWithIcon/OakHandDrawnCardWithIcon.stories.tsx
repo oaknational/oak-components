@@ -16,7 +16,7 @@ const meta: Meta<typeof OakHandDrawnCardWithIcon> = {
   },
   parameters: {
     controls: {
-      include: ["fill", "iconName", "iconColor"],
+      include: ["fill", "iconName", "iconColor", "alt"],
     },
   },
   args: {

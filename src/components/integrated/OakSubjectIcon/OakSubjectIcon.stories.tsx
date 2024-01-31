@@ -16,7 +16,7 @@ const meta: Meta<typeof OakSubjectIcon> = {
   },
   parameters: {
     controls: {
-      include: ["fill", "iconName", "iconColor", "showPromoTag"],
+      include: ["fill", "iconName", "iconColor", "showPromoTag", "alt"],
     },
   },
   args: {
