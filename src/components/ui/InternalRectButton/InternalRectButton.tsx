@@ -101,7 +101,7 @@ const StyledButtonWrapper = styled(OakBox)`
   }
 `;
 
-export const InternalRectButton = <C extends ElementType = "button">(
+const _InternalRectButton = <C extends ElementType = "button">(
   props: InternalRectButtonProps & PolymorphicPropsWithoutRef<C>,
 ) => {
   const {
@@ -208,3 +208,5 @@ export const InternalRectButton = <C extends ElementType = "button">(
     </StyledButtonWrapper>
   );
 };
+
+export const InternalRectButton = styled(_InternalRectButton)``;
