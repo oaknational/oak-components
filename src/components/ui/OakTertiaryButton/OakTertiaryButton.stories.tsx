@@ -42,6 +42,19 @@ export const Default: Story = {
   },
 };
 
+export const TertiaryButtonWithNoText: Story = {
+  render: (args) => (
+    <OakFlex $flexWrap={"wrap"} $gap={"space-between-m"}>
+      <OakTertiaryButton {...args} />
+      <OakTertiaryButton {...args} disabled />
+      <OakTertiaryButton {...args} isLoading />
+    </OakFlex>
+  ),
+  args: {
+    iconName: "chevron-right",
+  },
+};
+
 export const LinkStyledAsButton: Story = {
   render: (args) => (
     <OakFlex $flexWrap={"wrap"}>
