@@ -13,6 +13,13 @@ export type OakIconProps = Omit<OakImageProps, "alt" | "src"> & {
   alt?: string;
 };
 
+/**
+ * returns true if the given string is a valid `OakIconName`
+ */
+export function isValidIconName(iconName: string): iconName is OakIconName {
+  return oakIconNames.includes(iconName as OakIconName);
+}
+
 export const OakIcon = (props: OakIconProps) => {
   const {
     iconName,

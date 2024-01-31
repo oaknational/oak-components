@@ -3,7 +3,7 @@ import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 import { create } from "react-test-renderer";
 
-import { OakIcon } from "./OakIcon";
+import { OakIcon, isValidIconName } from "./OakIcon";
 
 describe("OakIcon", () => {
   it("renders", () => {
@@ -60,5 +60,12 @@ describe("OakIcon", () => {
       <OakIcon data-testid="test" iconName="home" />,
     );
     expect(getByRole("img")).toHaveAttribute("alt", "home");
+  });
+});
+
+describe("isValidIconName", () => {
+  it("is true when the string is a valid icon name", () => {
+    expect(isValidIconName("home")).toBe(true);
+    expect(isValidIconName("banana-sandwich")).toBe(false);
   });
 });
