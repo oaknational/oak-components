@@ -85,7 +85,7 @@ exports[`OakHintButton matches snapshot 1`] = `
   object-fit: contain;
 }
 
-.c2 {
+.c3 {
   background: none;
   color: inherit;
   border: none;
@@ -103,26 +103,26 @@ exports[`OakHintButton matches snapshot 1`] = `
   padding-bottom: 0.5rem;
 }
 
-.c2:disabled {
+.c3:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c3 {
+.c4 {
   position: relative;
 }
 
-.c3:hover {
+.c4:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #222222;
 }
 
-.c3:active {
+.c4:active {
   color: #222222;
 }
 
-.c3:disabled {
+.c4:disabled {
   color: #808080;
 }
 
@@ -150,19 +150,19 @@ exports[`OakHintButton matches snapshot 1`] = `
   background: #ffe555;
 }
 
-.c4:hover .shadow {
+.c2:hover .shadow {
   box-shadow: none !important;
 }
 
-.c4:active .shadow {
+.c2:active .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%) !important;
 }
 
 <div
-  className="c0 c1 button-wrapper"
+  className="c0 c1 c2"
 >
   <button
-    className="c2 c3 c4"
+    className="c3 c4"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}

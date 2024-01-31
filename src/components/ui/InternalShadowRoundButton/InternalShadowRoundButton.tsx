@@ -118,6 +118,7 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
     disabledIconColor,
     defaultTextColor,
     hoverTextColor,
+    className,
     ...rest
   } = props;
 
@@ -171,7 +172,7 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
 
   return (
     <StyledButtonWrapper
-      className="button-wrapper"
+      className={className}
       $position={"relative"}
       $width={width}
       $maxWidth={maxWidth}

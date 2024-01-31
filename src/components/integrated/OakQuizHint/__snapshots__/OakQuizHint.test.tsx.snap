@@ -104,7 +104,7 @@ exports[`OakQuizHint matches snapshot 1`] = `
   object-fit: contain;
 }
 
-.c4 {
+.c5 {
   background: none;
   color: inherit;
   border: none;
@@ -122,26 +122,26 @@ exports[`OakQuizHint matches snapshot 1`] = `
   padding-bottom: 0.5rem;
 }
 
-.c4:disabled {
+.c5:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c5 {
+.c6 {
   position: relative;
 }
 
-.c5:hover {
+.c6:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #222222;
 }
 
-.c5:active {
+.c6:active {
   color: #222222;
 }
 
-.c5:disabled {
+.c6:disabled {
   color: #808080;
 }
 
@@ -169,11 +169,11 @@ exports[`OakQuizHint matches snapshot 1`] = `
   background: #ffe555;
 }
 
-.c6:hover .shadow {
+.c4:hover .shadow {
   box-shadow: none !important;
 }
 
-.c6:active .shadow {
+.c4:active .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%) !important;
 }
 
@@ -181,10 +181,10 @@ exports[`OakQuizHint matches snapshot 1`] = `
     className="c0 c1"
   >
     <div
-      className="c2 c3 button-wrapper"
+      className="c2 c3 c4"
     >
       <button
-        className="c4 c5 c6"
+        className="c5 c6"
         onClick={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}

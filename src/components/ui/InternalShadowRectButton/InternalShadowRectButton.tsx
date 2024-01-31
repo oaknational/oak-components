@@ -130,6 +130,7 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
     hoverBorderColor,
     disabledBackground,
     disabledBorderColor,
+    className,
     hoverShadow = "drop-shadow-lemon",
     ...rest
   } = props;
@@ -157,7 +158,7 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
 
   return (
     <StyledButtonWrapper
-      className="button-wrapper"
+      className={className}
       $position={"relative"}
       $width={width}
       $maxWidth={maxWidth}

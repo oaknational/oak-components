@@ -138,7 +138,7 @@ exports[`InternalShadowRectButton matches snapshot 1`] = `
 }
 
 <div
-  className="c0 c1 button-wrapper"
+  className="c0 c1"
 >
   <div
     className="c2 grey-shadow"

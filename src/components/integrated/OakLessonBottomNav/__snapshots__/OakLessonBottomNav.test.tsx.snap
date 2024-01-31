@@ -147,7 +147,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   object-fit: contain;
 }
 
-.c7 {
+.c8 {
   background: none;
   color: inherit;
   border: none;
@@ -165,26 +165,26 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   padding-bottom: 0.5rem;
 }
 
-.c7:disabled {
+.c8:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c8 {
+.c9 {
   position: relative;
 }
 
-.c8:hover {
+.c9:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #222222;
 }
 
-.c8:active {
+.c9:active {
   color: #222222;
 }
 
-.c8:disabled {
+.c9:disabled {
   color: #808080;
 }
 
@@ -212,11 +212,11 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   background: #ffe555;
 }
 
-.c9:hover .shadow {
+.c7:hover .shadow {
   box-shadow: none !important;
 }
 
-.c9:active .shadow {
+.c7:active .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%) !important;
 }
 
@@ -254,10 +254,10 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
       className="c3 c4"
     >
       <div
-        className="c5 c6 button-wrapper"
+        className="c5 c6 c7"
       >
         <button
-          className="c7 c8 c9"
+          className="c8 c9"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
