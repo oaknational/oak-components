@@ -47,9 +47,9 @@ export type InternalShadowRoundButtonProps = Omit<
   iconSize: SizeStyleProps["$width"];
 } & PositionStyleProps;
 
-const StyledInternalButton = styled(InternalButton) <
+const StyledInternalButton = styled(InternalButton)<
   Omit<InternalShadowRoundButtonProps, "iconBackgroundSize" | "iconSize"> &
-  SizeStyleProps
+    SizeStyleProps
 >`
   ${positionStyle}
   ${sizeStyle}
@@ -67,7 +67,7 @@ const StyledInternalButton = styled(InternalButton) <
   `}
 `;
 
-const StyledButtonWrapper = styled(OakBox) <{
+const StyledButtonWrapper = styled(OakBox)<{
   $disabledIconBackground: OakCombinedColorToken;
   $hoverIconBackground: OakCombinedColorToken;
   $defaultIconBackground: OakCombinedColorToken;
