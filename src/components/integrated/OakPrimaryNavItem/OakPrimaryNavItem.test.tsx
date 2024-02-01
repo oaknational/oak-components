@@ -3,39 +3,30 @@ import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
 import { ThemeProvider } from "styled-components";
 
-import { OakBaseNavItem, OakBaseNavItemProps } from "./OakBaseNavItem";
+import { OakPrimaryNavItem, OakPrimaryNavItemProps } from "./OakPrimaryNavItem";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { oakDefaultTheme } from "@/styles";
 
-const defaultArgs: OakBaseNavItemProps = {
+const defaultArgs: OakPrimaryNavItemProps = {
   isCurrent: false,
   href: "/",
   shallow: true,
   label: "Base nav item",
 };
 
-describe("OakBaseNavItem", () => {
-  beforeEach(() => {
-    jest.useFakeTimers();
-  });
-
-  afterEach(() => {
-    jest.runOnlyPendingTimers();
-    jest.useRealTimers();
-  });
-
+describe("OakPrimaryNavItem", () => {
   it("renders", () => {
-    const { getByTestId } = renderWithTheme(
-      <OakBaseNavItem {...defaultArgs} data-testid="test" />,
+    const { getByLabelText } = renderWithTheme(
+      <OakPrimaryNavItem {...defaultArgs} />,
     );
-    expect(getByTestId("test")).toBeInTheDocument();
+    expect(getByLabelText("Base nav item")).toBeInTheDocument();
   });
 
   it("matches snapshot", () => {
     const tree = create(
       <ThemeProvider theme={oakDefaultTheme}>
-        <OakBaseNavItem {...defaultArgs} />
+        <OakPrimaryNavItem {...defaultArgs} />
       </ThemeProvider>,
     ).toJSON();
     expect(tree).toMatchSnapshot();

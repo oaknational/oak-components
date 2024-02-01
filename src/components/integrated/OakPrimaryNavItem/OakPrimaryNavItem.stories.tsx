@@ -1,14 +1,14 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakBaseNavItem } from "./OakBaseNavItem";
+import { OakPrimaryNavItem } from "./OakPrimaryNavItem";
 
 import { OakFlex } from "@/components/base";
 
-const meta: Meta<typeof OakBaseNavItem> = {
-  component: OakBaseNavItem,
+const meta: Meta<typeof OakPrimaryNavItem> = {
+  component: OakPrimaryNavItem,
   tags: ["autodocs"],
-  title: "components/ui/OakBaseNavItem",
+  title: "components/integrated/OakPrimaryNavItem",
   argTypes: {
     isCurrent: { type: "boolean" },
   },
@@ -23,13 +23,13 @@ const meta: Meta<typeof OakBaseNavItem> = {
 };
 export default meta;
 
-type Story = StoryObj<typeof OakBaseNavItem>;
+type Story = StoryObj<typeof OakPrimaryNavItem>;
 
 export const Default: Story = {
   render: (args) => (
     <OakFlex $gap="space-between-m">
       <OakFlex>
-        <OakBaseNavItem {...args} />
+        <OakPrimaryNavItem {...args} />
       </OakFlex>
     </OakFlex>
   ),
@@ -37,7 +37,7 @@ export const Default: Story = {
     isCurrent: false,
     href: "/",
     shallow: true,
-    label: "Base nav item",
+    label: "Primary nav item",
   },
 };
 
@@ -45,7 +45,7 @@ export const Current: Story = {
   render: (args) => (
     <OakFlex $gap="space-between-m">
       <OakFlex>
-        <OakBaseNavItem {...args} />
+        <OakPrimaryNavItem {...args} />
       </OakFlex>
     </OakFlex>
   ),
@@ -53,6 +53,6 @@ export const Current: Story = {
     isCurrent: true,
     href: "/",
     shallow: true,
-    label: "Base current nav item",
+    label: "Primary current nav item",
   },
 };

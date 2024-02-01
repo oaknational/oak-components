@@ -1,0 +1,160 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakPrimaryNavItem matches snapshot 1`] = `
+.c0 {
+  position: relative;
+  font-family: Lexend,sans-serif;
+}
+
+.c2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c5 {
+  font-family: Lexend,sans-serif;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.c7 {
+  font-family: Lexend,sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c3 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: Lexend,sans-serif;
+  color: #222222;
+  background: #ffffff;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border: 0.125rem solid;
+  border-color: #ffffff;
+  border-radius: 0.25rem;
+}
+
+.c3:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c4 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.c4:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: #222222;
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+.c4:active {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #222222;
+}
+
+.c4:disabled {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #808080;
+}
+
+.c1 .grey-shadow:has(+ * + .internal-button:focus-visible) {
+  box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c1 .yellow-shadow:has(+ .internal-button:focus-visible) {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
+}
+
+.c1 .yellow-shadow:has(+ .internal-button:hover),
+.c1 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
+  box-shadow: none;
+}
+
+.c1 .grey-shadow:has(+ * + .internal-button:hover) {
+  box-shadow: none;
+}
+
+.c1 .grey-shadow:has(+ * + .internal-button:active) {
+  box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+}
+
+.c1 .yellow-shadow:has(+ .internal-button:active) {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    className="c2 grey-shadow"
+  />
+  <div
+    className="c2 yellow-shadow"
+  />
+  <a
+    aria-disabled={false}
+    aria-label="Base nav item"
+    className="c3 c4 internal-button"
+    href="/"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onTouchStart={[Function]}
+  >
+    <div
+      className="c5 c6"
+    >
+      <span
+        className="c7"
+      >
+        Base nav item
+      </span>
+    </div>
+  </a>
+</div>
+`;

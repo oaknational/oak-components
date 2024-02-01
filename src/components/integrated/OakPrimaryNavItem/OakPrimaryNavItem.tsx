@@ -14,37 +14,36 @@ import {
 
 type Url = string | UrlObject;
 
-export type OakBaseNavItemProps = {
+export type OakPrimaryNavItemProps = {
   href: Url;
   isCurrent: boolean;
-  shallow: boolean;
+  shallow?: boolean;
   label: string;
 } & OakPrimaryButtonProps &
   OakPrimaryInvertedButtonProps;
 
 /**
  *
- * A specific implementation of OakPrimaryButton and OakPrimaryInvertedButton
+ * A specific implementation of OakPrimaryButton and OakPrimaryInvertedButton rendering
+ * relevant view depending on isCurrent prop
  *
  */
 
-export const OakBaseNavItem = ({
+export const OakPrimaryNavItem = ({
   href,
   isCurrent,
-  shallow,
+  shallow = true,
   label,
   ...rest
-}: OakBaseNavItemProps) => {
+}: OakPrimaryNavItemProps) => {
   return isCurrent ? (
     <OakPrimaryButton
       element={Link}
       href={href}
       shallow={shallow}
-      iconName={undefined}
-      role={"link"}
       aria-label={label}
       aria-disabled={isCurrent}
-      width={"100%"}
+      aria-current={"page"}
       {...rest}
     >
       {label}
@@ -54,12 +53,9 @@ export const OakBaseNavItem = ({
       element={Link}
       href={href}
       shallow={shallow}
-      iconName={undefined}
       isTrailingIcon={true}
-      role={"link"}
       aria-label={label}
       aria-disabled={isCurrent}
-      width={"100%"}
       {...rest}
     >
       {label}
