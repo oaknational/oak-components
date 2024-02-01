@@ -86,11 +86,7 @@ export const OakLessonLayout = ({
             {topNavSlot}
           </OakBox>
         )}
-        <OakFlex
-          $flexGrow={1}
-          $flexDirection="column"
-          $mh={["space-between-s", "space-between-l"]}
-        >
+        <OakFlex $flexGrow={1} $flexDirection="column">
           {children}
         </OakFlex>
         {bottomNavSlot && (
@@ -123,9 +119,9 @@ function pickSectionColours(
   switch (sectionName) {
     case "overview":
       return [
-        "bg-decorative4-subdued",
+        "bg-decorative1-main",
         "bg-primary",
-        "border-decorative4",
+        "border-decorative1-stronger",
         "bg-primary",
       ];
     case "intro":
