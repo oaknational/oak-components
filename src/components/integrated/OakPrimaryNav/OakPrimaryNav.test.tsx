@@ -56,4 +56,14 @@ describe("OakPrimaryNav", () => {
     const { getByRole } = renderWithTheme(<OakPrimaryNav {...defaultArgs} />);
     expect(getByRole("list").childElementCount).toEqual(4);
   });
+
+  it("renders correct aria-label if provided", () => {
+    const argsWithAriaLabel: OakPrimaryNavProps = {
+      navItems,
+      ariaLabel: "primary navigation"
+    };
+
+    const { getByRole } = renderWithTheme(<OakPrimaryNav {...argsWithAriaLabel} />);
+    expect(getByRole("navigation")).toHaveAttribute("aria-label", "primary navigation");
+  });
 });
