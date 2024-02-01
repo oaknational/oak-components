@@ -256,7 +256,6 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
           className="c5 yellow-shadow"
         />
         <a
-          aria-disabled={false}
           className="c6 c7 internal-button"
           href="/"
           onClick={[Function]}
@@ -320,7 +319,6 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
           className="c5 yellow-shadow"
         />
         <a
-          aria-disabled={false}
           className="c6 c7 internal-button"
           href="/"
           onClick={[Function]}
@@ -353,7 +351,6 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
           className="c5 yellow-shadow"
         />
         <a
-          aria-disabled={false}
           className="c6 c7 internal-button"
           href="/"
           onClick={[Function]}

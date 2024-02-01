@@ -30,7 +30,7 @@ export type OakPrimaryNavItemProps = {
  *
  */
 
-const OakPrimaryButtonAriaDisabled = styled(OakPrimaryButton)`
+const OakPrimaryButtonWithoutPointerEvents = styled(OakPrimaryButton)`
   pointer-events: none;
 `;
 
@@ -39,24 +39,20 @@ export const OakPrimaryNavItem = ({
   isCurrent = false,
   shallow = true,
   label,
-  ...rest
 }: OakPrimaryNavItemProps) => {
   return isCurrent ? (
-    <OakPrimaryButtonAriaDisabled
+    <OakPrimaryButtonWithoutPointerEvents
       element={"span"}
       aria-current={"page"}
-      {...rest}
     >
       {label}
-    </OakPrimaryButtonAriaDisabled>
+    </OakPrimaryButtonWithoutPointerEvents>
   ) : (
     <OakPrimaryInvertedButton
       element={Link}
       href={href}
       shallow={shallow}
       isTrailingIcon={true}
-      aria-disabled={isCurrent}
-      {...rest}
     >
       {label}
     </OakPrimaryInvertedButton>
