@@ -34,7 +34,6 @@ export const Default: Story = {
     </OakFlex>
   ),
   args: {
-    isCurrent: false,
     href: "/",
     shallow: true,
     label: "Primary nav item",

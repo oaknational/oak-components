@@ -16,7 +16,7 @@ type Url = string | UrlObject;
 
 export type OakPrimaryNavItemProps = {
   href: Url;
-  isCurrent: boolean;
+  isCurrent?: boolean;
   shallow?: boolean;
   label: string;
 } & OakPrimaryButtonProps &
@@ -31,7 +31,7 @@ export type OakPrimaryNavItemProps = {
 
 export const OakPrimaryNavItem = ({
   href,
-  isCurrent,
+  isCurrent = false,
   shallow = true,
   label,
   ...rest
