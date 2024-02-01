@@ -104,7 +104,7 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
   cursor: default;
 }
 
-.c12 {
+.c13 {
   background: none;
   color: inherit;
   border: none;
@@ -126,7 +126,7 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
   border-radius: 0.25rem;
 }
 
-.c12:disabled {
+.c13:disabled {
   pointer-events: none;
   cursor: default;
 }
@@ -158,14 +158,14 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
   color: #808080;
 }
 
-.c13 {
+.c14 {
   position: relative;
   width: 100%;
   height: 100%;
   display: inline-block;
 }
 
-.c13:hover {
+.c14:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #ffffff;
@@ -173,13 +173,13 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
   border-color: #575757;
 }
 
-.c13:active {
+.c14:active {
   background: #222222;
   border-color: #222222;
   color: #ffffff;
 }
 
-.c13:disabled {
+.c14:disabled {
   background: #808080;
   border-color: #808080;
   color: #ffffff;
@@ -235,6 +235,10 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
+.c12 {
+  pointer-events: none;
+}
+
 <nav>
   <ul
     className="c0 c1"
@@ -253,7 +257,6 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
         />
         <a
           aria-disabled={false}
-          aria-label="nav item 1"
           className="c6 c7 internal-button"
           href="/"
           onClick={[Function]}
@@ -277,7 +280,7 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
       className="c2"
     >
       <div
-        className="c3 c11"
+        className="c3 c11 c12"
       >
         <div
           className="c5 grey-shadow"
@@ -285,16 +288,12 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
         <div
           className="c5 yellow-shadow"
         />
-        <a
+        <span
           aria-current="page"
-          aria-disabled={true}
-          aria-label="nav item 2"
-          className="c12 c13 internal-button"
-          href="/"
+          className="c13 c14 internal-button"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
-          onTouchStart={[Function]}
         >
           <div
             className="c8 c9"
@@ -305,7 +304,7 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
               nav item 2
             </span>
           </div>
-        </a>
+        </span>
       </div>
     </li>
     <li
@@ -322,7 +321,6 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
         />
         <a
           aria-disabled={false}
-          aria-label="nav item 3"
           className="c6 c7 internal-button"
           href="/"
           onClick={[Function]}
@@ -356,7 +354,6 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
         />
         <a
           aria-disabled={false}
-          aria-label="nav item 4"
           className="c6 c7 internal-button"
           href="/"
           onClick={[Function]}

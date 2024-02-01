@@ -138,7 +138,6 @@ exports[`OakPrimaryNavItem matches snapshot 1`] = `
   />
   <a
     aria-disabled={false}
-    aria-label="Base nav item"
     className="c3 c4 internal-button"
     href="/"
     onClick={[Function]}

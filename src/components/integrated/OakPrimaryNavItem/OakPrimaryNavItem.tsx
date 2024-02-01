@@ -2,6 +2,7 @@ import type { UrlObject } from "url";
 
 import React from "react";
 import Link from "next/link";
+import styled from "styled-components";
 
 import {
   OakPrimaryButton,
@@ -29,6 +30,10 @@ export type OakPrimaryNavItemProps = {
  *
  */
 
+const OakPrimaryButtonAriaDisabled = styled(OakPrimaryButton)`
+  pointer-events: none;
+`;
+
 export const OakPrimaryNavItem = ({
   href,
   isCurrent = false,
@@ -37,24 +42,19 @@ export const OakPrimaryNavItem = ({
   ...rest
 }: OakPrimaryNavItemProps) => {
   return isCurrent ? (
-    <OakPrimaryButton
-      element={Link}
-      href={href}
-      shallow={shallow}
-      aria-label={label}
-      aria-disabled={isCurrent}
+    <OakPrimaryButtonAriaDisabled
+      element={"span"}
       aria-current={"page"}
       {...rest}
     >
       {label}
-    </OakPrimaryButton>
+    </OakPrimaryButtonAriaDisabled>
   ) : (
     <OakPrimaryInvertedButton
       element={Link}
       href={href}
       shallow={shallow}
       isTrailingIcon={true}
-      aria-label={label}
       aria-disabled={isCurrent}
       {...rest}
     >

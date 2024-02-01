@@ -17,10 +17,10 @@ const defaultArgs: OakPrimaryNavItemProps = {
 
 describe("OakPrimaryNavItem", () => {
   it("renders", () => {
-    const { getByLabelText } = renderWithTheme(
+    const { getByText } = renderWithTheme(
       <OakPrimaryNavItem {...defaultArgs} />,
     );
-    expect(getByLabelText("Base nav item")).toBeInTheDocument();
+    expect(getByText("Base nav item")).toBeInTheDocument();
   });
 
   it("matches snapshot", () => {
@@ -30,5 +30,29 @@ describe("OakPrimaryNavItem", () => {
       </ThemeProvider>,
     ).toJSON();
     expect(tree).toMatchSnapshot();
+  });
+
+  it("renders <a> tag for items with isCurrent set to false", () => {
+    const { getByRole } = renderWithTheme(
+      <OakPrimaryNavItem {...defaultArgs} />,
+    );
+    expect(getByRole("link")).toBeInTheDocument();
+  });
+
+  it("renders <span> for items with isCurrent set to true", () => {
+    const currentItem: OakPrimaryNavItemProps = {
+      isCurrent: true,
+      href: "/",
+      shallow: true,
+      label: "Current nav item",
+    };
+
+    const { getByText } = renderWithTheme(
+      <OakPrimaryNavItem {...currentItem} />,
+    );
+
+    const currentNavItem = getByText("Current nav item");
+    expect(currentNavItem).toBeInTheDocument();
+    expect(currentNavItem.tagName).toEqual("SPAN");
   });
 });
