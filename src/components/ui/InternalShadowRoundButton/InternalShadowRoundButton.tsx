@@ -20,7 +20,7 @@ import { parseColor } from "@/styles/helpers/parseColor";
 import { OakCombinedColorToken } from "@/styles";
 import { SizeStyleProps, sizeStyle } from "@/styles/utils/sizeStyle";
 
-export type InternalRoundButtonProps = Omit<
+export type InternalShadowRoundButtonProps = Omit<
   InternalButtonProps,
   | "$pa"
   | "$ph"
@@ -48,7 +48,7 @@ export type InternalRoundButtonProps = Omit<
 } & PositionStyleProps;
 
 const StyledInternalButton = styled(InternalButton)<
-  Omit<InternalRoundButtonProps, "iconBackgroundSize" | "iconSize"> &
+  Omit<InternalShadowRoundButtonProps, "iconBackgroundSize" | "iconSize"> &
     SizeStyleProps
 >`
   ${positionStyle}
@@ -96,8 +96,8 @@ const StyledButtonWrapper = styled(OakBox)<{
   `}
 `;
 
-const _InternalRoundButton = <C extends ElementType = "button">(
-  props: InternalRoundButtonProps & PolymorphicPropsWithoutRef<C>,
+export const InternalShadowRoundButton = <C extends ElementType = "button">(
+  props: InternalShadowRoundButtonProps & PolymorphicPropsWithoutRef<C>,
 ) => {
   const {
     element = "button",
@@ -118,6 +118,7 @@ const _InternalRoundButton = <C extends ElementType = "button">(
     disabledIconColor,
     defaultTextColor,
     hoverTextColor,
+    className,
     ...rest
   } = props;
 
@@ -171,7 +172,7 @@ const _InternalRoundButton = <C extends ElementType = "button">(
 
   return (
     <StyledButtonWrapper
-      className="button-wrapper"
+      className={className}
       $position={"relative"}
       $width={width}
       $maxWidth={maxWidth}
@@ -203,5 +204,3 @@ const _InternalRoundButton = <C extends ElementType = "button">(
     </StyledButtonWrapper>
   );
 };
-
-export const InternalRoundButton = _InternalRoundButton;

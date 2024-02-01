@@ -1,7 +1,7 @@
 import React, { ElementType } from "react";
 import styled, { css } from "styled-components";
 
-import { OakBox, OakFlex, OakSpan } from "@/components/base";
+import { OakBox, OakBoxProps, OakFlex, OakSpan } from "@/components/base";
 import {
   InternalButton,
   InternalButtonProps,
@@ -14,11 +14,11 @@ import {
   positionStyle,
 } from "@/styles/utils/positionStyle";
 import { parseColor } from "@/styles/helpers/parseColor";
-import { OakCombinedColorToken } from "@/styles";
+import { OakCombinedColorToken, OakDropShadowToken } from "@/styles";
 import { SizeStyleProps, sizeStyle } from "@/styles/utils/sizeStyle";
 import { PolymorphicPropsWithoutRef } from "@/components/utils/polymorphic";
 
-export type InternalRectButtonProps = Omit<
+export type InternalShadowRectButtonProps = Omit<
   InternalButtonProps,
   | "$pa"
   | "$ph"
@@ -42,6 +42,7 @@ export type InternalRectButtonProps = Omit<
   disabledTextColor: OakCombinedColorToken;
   width?: SizeStyleProps["$width"];
   maxWidth?: SizeStyleProps["$maxWidth"];
+  hoverShadow?: OakDropShadowToken | null;
 } & PositionStyleProps;
 
 const StyledInternalButton = styled(InternalButton)<
@@ -80,15 +81,20 @@ const StyledInternalButton = styled(InternalButton)<
   `}
 `;
 
-const StyledButtonWrapper = styled(OakBox)`
+const StyledButtonWrapper = styled(OakBox)<
+  OakBoxProps & {
+    $hoverShadow?: OakDropShadowToken | null;
+  }
+>`
   .grey-shadow:has(+ * + .internal-button:focus-visible) {
     box-shadow: ${parseDropShadow("drop-shadow-centered-grey")};
   }
   .yellow-shadow:has(+ .internal-button:focus-visible) {
     box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")};
   }
-  .yellow-shadow:has(+ .internal-button:hover) {
-    box-shadow: ${parseDropShadow("drop-shadow-lemon")};
+  .yellow-shadow:has(+ .internal-button:hover),
+  .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible, :active)) {
+    box-shadow: ${(props) => parseDropShadow(props.$hoverShadow)};
   }
   .grey-shadow:has(+ * + .internal-button:hover) {
     box-shadow: none;
@@ -101,8 +107,8 @@ const StyledButtonWrapper = styled(OakBox)`
   }
 `;
 
-export const InternalRectButton = <C extends ElementType = "button">(
-  props: InternalRectButtonProps & PolymorphicPropsWithoutRef<C>,
+export const InternalShadowRectButton = <C extends ElementType = "button">(
+  props: InternalShadowRectButtonProps & PolymorphicPropsWithoutRef<C>,
 ) => {
   const {
     element = "button",
@@ -122,6 +128,8 @@ export const InternalRectButton = <C extends ElementType = "button">(
     hoverBorderColor,
     disabledBackground,
     disabledBorderColor,
+    className,
+    hoverShadow = "drop-shadow-lemon",
     ...rest
   } = props;
 
@@ -148,10 +156,11 @@ export const InternalRectButton = <C extends ElementType = "button">(
 
   return (
     <StyledButtonWrapper
-      className="button-wrapper"
+      className={className}
       $position={"relative"}
       $width={width}
       $maxWidth={maxWidth}
+      $hoverShadow={hoverShadow}
     >
       <OakBox
         className="grey-shadow"

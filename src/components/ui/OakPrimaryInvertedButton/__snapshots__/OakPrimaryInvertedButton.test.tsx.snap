@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OakPrimaryButton matches snapshot 1`] = `
+exports[`OakPrimaryInvertedButton matches snapshot 1`] = `
 .c0 {
   position: relative;
   font-family: Lexend,sans-serif;
@@ -56,8 +56,8 @@ exports[`OakPrimaryButton matches snapshot 1`] = `
 }
 
 .c8 {
-  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
-  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
 }
 
@@ -72,14 +72,14 @@ exports[`OakPrimaryButton matches snapshot 1`] = `
   font-family: unset;
   outline: none;
   font-family: Lexend,sans-serif;
-  color: #ffffff;
-  background: #222222;
+  color: #222222;
+  background: #ffffff;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   border: 0.125rem solid;
-  border-color: #222222;
+  border-color: #ffffff;
   border-radius: 0.25rem;
 }
 
@@ -98,21 +98,21 @@ exports[`OakPrimaryButton matches snapshot 1`] = `
 .c4:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  color: #ffffff;
-  background: #575757;
-  border-color: #575757;
+  color: #222222;
+  background: #ffffff;
+  border-color: #ffffff;
 }
 
 .c4:active {
-  background: #222222;
-  border-color: #222222;
-  color: #ffffff;
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #222222;
 }
 
 .c4:disabled {
-  background: #808080;
-  border-color: #808080;
-  color: #ffffff;
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #808080;
 }
 
 .c1 .grey-shadow:has(+ * + .internal-button:focus-visible) {
@@ -125,7 +125,7 @@ exports[`OakPrimaryButton matches snapshot 1`] = `
 
 .c1 .yellow-shadow:has(+ .internal-button:hover),
 .c1 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
-  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+  box-shadow: none;
 }
 
 .c1 .grey-shadow:has(+ * + .internal-button:hover) {

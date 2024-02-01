@@ -1,8 +1,11 @@
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 
 describe("parseDropShadow", () => {
-  it("should return undefined if value is null or undefined", () => {
-    expect(parseDropShadow(null)).toBeUndefined();
+  it("should return none if value is null", () => {
+    expect(parseDropShadow(null)).toBe("none");
+  });
+
+  it("should return undefined if undefined", () => {
     expect(parseDropShadow()).toBeUndefined();
   });
 });

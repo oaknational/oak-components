@@ -123,7 +123,8 @@ exports[`OakSecondaryButton matches snapshot 1`] = `
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
 }
 
-.c1 .yellow-shadow:has(+ .internal-button:hover) {
+.c1 .yellow-shadow:has(+ .internal-button:hover),
+.c1 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
@@ -140,7 +141,7 @@ exports[`OakSecondaryButton matches snapshot 1`] = `
 }
 
 <div
-  className="c0 c1 button-wrapper"
+  className="c0 c1"
 >
   <div
     className="c2 grey-shadow"
