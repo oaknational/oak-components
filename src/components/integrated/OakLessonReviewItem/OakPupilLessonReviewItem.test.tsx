@@ -53,7 +53,9 @@ describe(OakLessonReviewItem, () => {
     expect(getByTestId("starter-quiz").textContent).toContain(
       "Activate - 6 questions",
     );
-    expect(getByTestId("exit-quiz").textContent).toContain("Check 6 questions");
+    expect(getByTestId("exit-quiz").textContent).toContain(
+      "Check - 6 questions",
+    );
     expect(getByTestId("video").textContent).toContain("Learn");
   });
 

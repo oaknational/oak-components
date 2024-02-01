@@ -103,7 +103,7 @@ const pickSummaryForIncomplete = (props: OakLessonReviewItemProps) => {
     case "starter-quiz":
       return `Activate - ${props.numQuestions} questions`;
     case "exit-quiz":
-      return `Check ${props.numQuestions} questions`;
+      return `Check - ${props.numQuestions} questions`;
     case "video":
       return `Learn`;
   }
