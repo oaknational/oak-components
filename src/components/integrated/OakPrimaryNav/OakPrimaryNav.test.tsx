@@ -60,10 +60,15 @@ describe("OakPrimaryNav", () => {
   it("renders correct aria-label if provided", () => {
     const argsWithAriaLabel: OakPrimaryNavProps = {
       navItems,
-      ariaLabel: "primary navigation"
+      ariaLabel: "primary navigation",
     };
 
-    const { getByRole } = renderWithTheme(<OakPrimaryNav {...argsWithAriaLabel} />);
-    expect(getByRole("navigation")).toHaveAttribute("aria-label", "primary navigation");
+    const { getByRole } = renderWithTheme(
+      <OakPrimaryNav {...argsWithAriaLabel} />,
+    );
+    expect(getByRole("navigation")).toHaveAttribute(
+      "aria-label",
+      "primary navigation",
+    );
   });
 });

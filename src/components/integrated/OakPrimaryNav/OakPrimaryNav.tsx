@@ -15,15 +15,17 @@ export type OakPrimaryNavProps = {
 export const OakPrimaryNav = ({ ariaLabel, navItems }: OakPrimaryNavProps) => {
   return (
     <nav aria-label={ariaLabel}>
-      <OakFlex as={"ul"}>
+      <OakFlex
+        as={"ul"}
+        $flexDirection={["row"]}
+        $gap={"space-between-m"}
+        $mh={"space-between-none"}
+        $mv={"space-between-none"}
+        $ph={"inner-padding-none"}
+      >
         {navItems.map(
           ({ href, isCurrent, label, ...rest }: OakPrimaryNavItemProps) => (
-            <OakLI
-              $listStyle={"none"}
-              $mr={["space-between-m", "space-between-m", "space-between-none"]}
-              $mb={["space-between-m", "space-between-m", "space-between-none"]}
-              key={label}
-            >
+            <OakLI $listStyle={"none"} key={label}>
               <OakPrimaryNavItem
                 href={href}
                 isCurrent={isCurrent}
