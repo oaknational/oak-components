@@ -12,13 +12,13 @@ const defaultArgs: OakPrimaryNavItemProps = {
   isCurrent: false,
   href: "/",
   shallow: true,
-  label: "Base nav item",
+  children: "Base nav item",
 };
 
 describe("OakPrimaryNavItem", () => {
   it("renders", () => {
     const { getByText } = renderWithTheme(
-      <OakPrimaryNavItem {...defaultArgs} />,
+      <OakPrimaryNavItem {...defaultArgs}>Base nav item</OakPrimaryNavItem>,
     );
     expect(getByText("Base nav item")).toBeInTheDocument();
   });
@@ -44,7 +44,7 @@ describe("OakPrimaryNavItem", () => {
       isCurrent: true,
       href: "/",
       shallow: true,
-      label: "Current nav item",
+      children: "Current nav item",
     };
 
     const { getByText } = renderWithTheme(

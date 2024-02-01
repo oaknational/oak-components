@@ -12,22 +12,22 @@ const navItems = [
   {
     href: "/",
     isCurrent: false,
-    label: "nav item 1",
+    children: "nav item 1",
   },
   {
     href: "/",
     isCurrent: true,
-    label: "nav item 2",
+    children: "nav item 2",
   },
   {
     href: "/",
     isCurrent: false,
-    label: "nav item 3",
+    children: "nav item 3",
   },
   {
     href: "/",
     isCurrent: false,
-    label: "nav item 4",
+    children: "nav item 4",
   },
 ];
 

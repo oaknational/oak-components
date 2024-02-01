@@ -24,14 +24,14 @@ export const OakPrimaryNav = ({ ariaLabel, navItems }: OakPrimaryNavProps) => {
         $ph={"inner-padding-none"}
       >
         {navItems.map(
-          ({ href, isCurrent, label, ...rest }: OakPrimaryNavItemProps) => (
-            <OakLI $listStyle={"none"} key={label}>
-              <OakPrimaryNavItem
-                href={href}
-                isCurrent={isCurrent}
-                label={label}
-                {...rest}
-              />
+          (
+            { href, isCurrent, children }: OakPrimaryNavItemProps,
+            index: number,
+          ) => (
+            <OakLI $listStyle={"none"} key={index}>
+              <OakPrimaryNavItem href={href} isCurrent={isCurrent}>
+                {children}
+              </OakPrimaryNavItem>
             </OakLI>
           ),
         )}

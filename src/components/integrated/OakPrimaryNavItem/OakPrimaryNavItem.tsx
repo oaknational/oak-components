@@ -1,6 +1,6 @@
 import type { UrlObject } from "url";
 
-import React from "react";
+import React, { ReactNode } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 
@@ -19,7 +19,7 @@ export type OakPrimaryNavItemProps = {
   href: Url;
   isCurrent?: boolean;
   shallow?: boolean;
-  label: string;
+  children: ReactNode;
 } & OakPrimaryButtonProps &
   OakPrimaryInvertedButtonProps;
 
@@ -38,14 +38,14 @@ export const OakPrimaryNavItem = ({
   href,
   isCurrent = false,
   shallow = true,
-  label,
+  children,
 }: OakPrimaryNavItemProps) => {
   return isCurrent ? (
     <OakPrimaryButtonWithoutPointerEvents
       element={"span"}
       aria-current={"page"}
     >
-      {label}
+      {children}
     </OakPrimaryButtonWithoutPointerEvents>
   ) : (
     <OakPrimaryInvertedButton
@@ -54,7 +54,7 @@ export const OakPrimaryNavItem = ({
       shallow={shallow}
       isTrailingIcon={true}
     >
-      {label}
+      {children}
     </OakPrimaryInvertedButton>
   );
 };

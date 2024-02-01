@@ -20,20 +20,20 @@ type Story = StoryObj<typeof OakPrimaryNav>;
 const navItems = [
   {
     href: "/",
-    label: "nav item 1",
+    children: "nav item 1",
   },
   {
     href: "/",
     isCurrent: true,
-    label: "nav item 2",
+    children: "nav item 2",
   },
   {
     href: "/",
-    label: "nav item 3",
+    children: "nav item 3",
   },
   {
     href: "/",
-    label: "nav item 4",
+    children: "nav item 4",
   },
 ];
 

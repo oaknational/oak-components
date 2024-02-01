@@ -29,14 +29,13 @@ export const Default: Story = {
   render: (args) => (
     <OakFlex $gap="space-between-m">
       <OakFlex>
-        <OakPrimaryNavItem {...args} />
+        <OakPrimaryNavItem {...args}>Primary nav item</OakPrimaryNavItem>
       </OakFlex>
     </OakFlex>
   ),
   args: {
     href: "/",
     shallow: true,
-    label: "Primary nav item",
   },
 };
 
@@ -44,7 +43,9 @@ export const Current: Story = {
   render: (args) => (
     <OakFlex $gap="space-between-m">
       <OakFlex>
-        <OakPrimaryNavItem {...args} />
+        <OakPrimaryNavItem {...args}>
+          Primary current nav item
+        </OakPrimaryNavItem>
       </OakFlex>
     </OakFlex>
   ),
@@ -52,6 +53,5 @@ export const Current: Story = {
     isCurrent: true,
     href: "/",
     shallow: true,
-    label: "Primary current nav item",
   },
 };
