@@ -193,7 +193,7 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
         <OakFlex
           $flexDirection={"row"}
           $alignItems={"center"}
-          $gap="space-between-xs"
+          $gap={children ? "space-between-xs" : "space-between-none"}
           $justifyContent="center"
         >
           {!isTrailingIcon && iconLogic}
