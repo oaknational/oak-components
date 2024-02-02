@@ -143,6 +143,7 @@ export const OakLessonNavItem = <C extends ElementType = "a">(
       $borderColor={borderColor}
       $ba="border-solid-l"
       $disabled={disabled}
+      $color="text-primary"
       href={disabled ? undefined : href}
       onClick={disabled ? undefined : onClick}
       {...rest}
