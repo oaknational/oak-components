@@ -1,4 +1,5 @@
 export const icons = {
+  "question-mark": "v1706872277/icons/question-mark.svg",
   home: "v1699887218/icons/gvqxjxcw07ei2kkmwnes.svg",
   send: "v1699893673/icons/rmvytilpjgvh3pgwc8ph.svg",
   rocket: "v1699894015/icons/u26xm5hteot875ozfnk9.svg",
