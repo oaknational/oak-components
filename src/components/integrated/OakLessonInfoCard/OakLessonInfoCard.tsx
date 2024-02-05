@@ -75,14 +75,15 @@ export const OakLessonInfoCard = (props: LessonInfoCardProps) => {
   );
 };
 
-export const OakStaticMessageCard = (props: LessonInfoCardProps) => {
+export const OakStaticMessageCard = (
+  props: Omit<LessonInfoCardProps, "onDownloadClick">,
+) => {
   const {
     iconName,
     infoCardTitle,
     infoCardDescription,
     tag,
     downloadLabel,
-    onDownloadClick,
     ...rest
   } = props;
 
@@ -111,18 +112,6 @@ export const OakStaticMessageCard = (props: LessonInfoCardProps) => {
             })
           ) : (
             <OakFlex>{infoCardDescription}</OakFlex>
-          )}
-          {onDownloadClick && downloadLabel && (
-            <OakFlex $justifyContent={"flex-end"}>
-              <OakPrimaryInvertedButton
-                onClick={onDownloadClick}
-                iconName="download"
-                isTrailingIcon
-                $font={"heading-7"}
-              >
-                {downloadLabel}
-              </OakPrimaryInvertedButton>
-            </OakFlex>
           )}
         </OakFlex>
       </OakFlex>
