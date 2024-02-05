@@ -40,3 +40,13 @@ export const WithIncorrectFeedback: Story = {
     <OakQuizTextInput value="An incorrect answer" feedback="incorrect" />
   ),
 };
+
+export const ResponsiveWidth: Story = {
+  render: () => (
+    <OakQuizTextInput
+      value="An incorrect answer"
+      feedback="incorrect"
+      wrapperWidth={["100%", "all-spacing-22"]}
+    />
+  ),
+};

@@ -75,8 +75,8 @@ export type OakTextInputProps = {
   readOnlyBorderColor?: OakCombinedColorToken;
   disabledColor?: OakCombinedColorToken;
   readOnlyColor?: OakCombinedColorToken;
-  width?: SizeStyleProps["$width"];
-  maxWidth?: SizeStyleProps["$maxWidth"];
+  wrapperWidth?: SizeStyleProps["$width"];
+  wrapperMaxWidth?: SizeStyleProps["$maxWidth"];
   iconAlt?: string;
 } & InternalTextInputProps;
 
@@ -148,8 +148,8 @@ export const OakTextInput = ({
   iconName,
   iconAlt,
   isTrailingIcon = false,
-  width,
-  maxWidth,
+  wrapperWidth,
+  wrapperMaxWidth,
   ...props
 }: OakTextInputProps) => {
   let finalBorderColor: OakCombinedColorToken;
@@ -176,8 +176,9 @@ export const OakTextInput = ({
 
   return (
     <StyledTextInputWrapper
-      $width="fit-content"
       $height="fit-content"
+      $width={wrapperWidth}
+      $maxWidth={wrapperMaxWidth}
       $borderStyle="solid"
       $borderRadius="border-radius-s"
       $ba="border-solid-m"
@@ -208,14 +209,15 @@ export const OakTextInput = ({
           alt={iconAlt}
         />
       )}
-      <InternalTextInput
-        type={type}
-        {...props}
-        $width={width}
-        $maxWidth={maxWidth}
-        $pv="inner-padding-l"
-        $height="all-spacing-12"
-      />
+      <OakFlex $flexGrow={1}>
+        <InternalTextInput
+          type={type}
+          {...props}
+          $width={"100%"}
+          $pv="inner-padding-l"
+          $height="all-spacing-12"
+        />
+      </OakFlex>
       {isTrailingIcon && iconName && (
         <OakIcon
           iconName={iconName}
