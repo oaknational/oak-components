@@ -15,4 +15,4 @@ export * from "./OakBulletList";
 export * from "./OakHandDrawnCard";
 export * from "./OakHandDrawnCardWithIcon";
 export * from "./OakPromoTag";
-export * from "../ui/OakLessonInfoCard";
+export * from "./OakLessonInfoCard";

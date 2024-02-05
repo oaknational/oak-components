@@ -7,7 +7,7 @@ import {
   OakIcon,
   OakIconName,
 } from "@/components/base";
-import { OakHandDrawnCard } from "@/components/ui";
+import { OakHandDrawnCard } from "@/components/ui/OakHandDrawnCard";
 
 export type OakInfoCardProps = {
   children: React.ReactNode;
