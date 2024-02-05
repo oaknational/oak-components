@@ -170,7 +170,7 @@ exports[`OakPrimaryInvertedButton matches snapshot 1`] = `
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895398/icons/fv0z57zerrioft52dd9n.svg"
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707149070/icons/fv0z57zerrioft52dd9n.svg"
           style={
             {
               "bottom": 0,

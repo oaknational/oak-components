@@ -222,7 +222,7 @@ exports[`OakLessonTopNav matches snapshot 1`] = `
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953962/icons/xpp10hijwzhyeqt6ylqf.svg"
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707146774/icons/xpp10hijwzhyeqt6ylqf.svg"
           style={
             {
               "bottom": 0,
