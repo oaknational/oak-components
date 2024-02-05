@@ -57,6 +57,8 @@ export const OakLessonVideoTranscript = ({
           id={id}
           $maxHeight="all-spacing-23"
           isOpen={showTranscript}
+          $font="body-1"
+          $color="text-primary"
         >
           {children}
         </OakCollapsibleContent>

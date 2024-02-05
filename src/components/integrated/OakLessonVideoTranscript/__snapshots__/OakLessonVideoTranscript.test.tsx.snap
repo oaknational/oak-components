@@ -249,9 +249,17 @@ exports[`OakLessonVideoTranscript matches snapshot 1`] = `
   padding-right: 1rem;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+  color: #222222;
   background: #e4e4e4;
   border-radius: 0.375rem;
   font-family: Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
 }
 
 .c3 {
