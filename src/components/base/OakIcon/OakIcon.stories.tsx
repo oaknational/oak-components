@@ -66,6 +66,8 @@ export const PickIcon: Story = {
   render: (args: OakIconProps) => <OakIcon {...args} />,
   args: {
     iconName: "home",
+    $width: "all-spacing-20",
+    $height: "all-spacing-20",
   },
   parameters: {
     controls: {
