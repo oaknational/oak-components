@@ -76,6 +76,16 @@ const StyledRoundIcon = styled(OakRoundIcon)<{
   }
 `;
 
+const activeIconStyles = css`
+  ${StyledRoundIcon} {
+    background: ${parseColor("bg-btn-primary")};
+
+    img {
+      filter: ${parseColorFilter("icon-main")};
+    }
+  }
+`;
+
 const StyledLessonNavItem = styled(OakFlex)<{ $disabled?: boolean }>`
   outline: none;
   text-align: initial;
@@ -92,24 +102,21 @@ const StyledLessonNavItem = styled(OakFlex)<{ $disabled?: boolean }>`
     css`
       cursor: pointer;
 
-      &:hover,
-      &:active {
-        ${StyledLabel} {
-          text-decoration: underline;
-        }
-
-        ${StyledRoundIcon} {
-          background: ${parseColor("bg-btn-primary")};
-
-          img {
-            filter: ${parseColorFilter("icon-main")};
+      /* Don't apply hover styles on touch devices */
+      @media (hover: hover) {
+        &:hover {
+          ${StyledLabel} {
+            text-decoration: underline;
           }
+
+          ${activeIconStyles}
         }
       }
 
       &:active {
         box-shadow: ${parseDropShadow("drop-shadow-lemon")},
           ${parseDropShadow("drop-shadow-grey")};
+        ${activeIconStyles}
       }
     `}
 `;
@@ -143,6 +150,7 @@ export const OakLessonNavItem = <C extends ElementType = "a">(
       $borderColor={borderColor}
       $ba="border-solid-l"
       $disabled={disabled}
+      $color="text-primary"
       href={disabled ? undefined : href}
       onClick={disabled ? undefined : onClick}
       {...rest}
