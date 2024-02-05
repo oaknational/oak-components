@@ -75,6 +75,9 @@ export type OakTextInputProps = {
   readOnlyBorderColor?: OakCombinedColorToken;
   disabledColor?: OakCombinedColorToken;
   readOnlyColor?: OakCombinedColorToken;
+  /**
+   * The width of the surrounding div - the input and icon will fill this
+   */
   wrapperWidth?: SizeStyleProps["$width"];
   wrapperMaxWidth?: SizeStyleProps["$maxWidth"];
   iconAlt?: string;
@@ -206,9 +209,11 @@ export const OakTextInput = ({
           iconName={iconName}
           $colorFilter={finalIconColor}
           $pointerEvents="none"
+          $width={"all-spacing-7"}
           alt={iconAlt}
         />
       )}
+
       <OakFlex $flexGrow={1}>
         <InternalTextInput
           type={type}
@@ -223,6 +228,7 @@ export const OakTextInput = ({
           iconName={iconName}
           $colorFilter={finalIconColor}
           $pointerEvents="none"
+          $width={"all-spacing-7"}
           alt={iconAlt}
         />
       )}
