@@ -187,8 +187,8 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
         $background={defaultBackground}
         $borderColor={defaultBorderColor}
         $color={defaultTextColor}
-        $pv={"inner-padding-xs"}
-        $ph={"inner-padding-s"}
+        $pv={"inner-padding-s"}
+        $ph={"inner-padding-m"}
         $borderRadius={"border-radius-s"}
         $position={"relative"}
         disabled={disabled || isLoading}
@@ -212,7 +212,7 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
           $justifyContent="center"
         >
           {!isTrailingIcon && iconLogic}
-          <OakSpan $font={"body-1-bold"}>{children}</OakSpan>
+          <OakSpan $font={"heading-7"}>{children}</OakSpan>
           {isTrailingIcon && iconLogic}
         </OakFlex>
       </StyledInternalButton>
