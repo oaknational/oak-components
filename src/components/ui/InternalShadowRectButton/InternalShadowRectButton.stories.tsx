@@ -4,7 +4,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { InternalShadowRectButton } from "./InternalShadowRectButton";
 
 import { oakIconNames } from "@/components/base/OakIcon";
-import { OakFlex } from "@/components/base";
+import { OakFlex, OakLI, OakUL } from "@/components/base";
 import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
@@ -136,6 +136,34 @@ export const LinkStyledAsButton: Story = {
   args: {
     element: "a",
     href: "/",
+    iconName: "arrow-right",
+    defaultBackground: "bg-btn-secondary",
+    defaultTextColor: "text-primary",
+    defaultBorderColor: "text-primary",
+    hoverBackground: "bg-btn-secondary-hover",
+    hoverTextColor: "text-primary",
+    hoverBorderColor: "text-primary",
+    disabledBackground: "bg-btn-secondary-disabled",
+    disabledBorderColor: "text-disabled",
+    disabledTextColor: "text-disabled",
+  },
+};
+
+export const ButtonInList: Story = {
+  render: (args) => (
+    <OakUL $width={"all-spacing-18"}>
+      <OakLI $pv={"inner-padding-s"}>
+        <InternalShadowRectButton {...args}>Link 1</InternalShadowRectButton>
+      </OakLI>
+      <OakLI $pv={"inner-padding-s"}>
+        <InternalShadowRectButton {...args}>Link 2</InternalShadowRectButton>
+      </OakLI>
+      <OakLI $pv={"inner-padding-s"}>
+        <InternalShadowRectButton {...args}>Link 3</InternalShadowRectButton>
+      </OakLI>
+    </OakUL>
+  ),
+  args: {
     iconName: "arrow-right",
     defaultBackground: "bg-btn-secondary",
     defaultTextColor: "text-primary",
