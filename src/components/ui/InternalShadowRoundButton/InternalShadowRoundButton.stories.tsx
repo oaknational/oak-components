@@ -4,7 +4,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { InternalShadowRoundButton } from "./InternalShadowRoundButton";
 
 import { oakIconNames } from "@/components/base/OakIcon";
-import { OakFlex } from "@/components/base";
+import { OakFlex, OakLI, OakUL } from "@/components/base";
 import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
@@ -132,5 +132,33 @@ export const LinkStyledAsButton: Story = {
     width: "auto",
     iconBackgroundSize: "all-spacing-7",
     iconSize: "all-spacing-6",
+  },
+};
+
+export const ButtonInList: Story = {
+  render: (args) => (
+    <OakUL $width={"all-spacing-18"}>
+      <OakLI $pv={"inner-padding-s"}>
+        <InternalShadowRoundButton {...args}>Link 1</InternalShadowRoundButton>
+      </OakLI>
+      <OakLI $pv={"inner-padding-s"}>
+        <InternalShadowRoundButton {...args}>Link 2</InternalShadowRoundButton>
+      </OakLI>
+      <OakLI $pv={"inner-padding-s"}>
+        <InternalShadowRoundButton {...args}>Link 3</InternalShadowRoundButton>
+      </OakLI>
+    </OakUL>
+  ),
+  args: {
+    iconName: "arrow-right",
+    defaultBackground: "bg-btn-secondary",
+    defaultTextColor: "text-primary",
+    defaultBorderColor: "text-primary",
+    hoverBackground: "bg-btn-secondary-hover",
+    hoverTextColor: "text-primary",
+    hoverBorderColor: "text-primary",
+    disabledBackground: "bg-btn-secondary-disabled",
+    disabledBorderColor: "text-disabled",
+    disabledTextColor: "text-disabled",
   },
 };

@@ -168,6 +168,7 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
         $borderRadius={"border-radius-s"}
         $width={"100%"}
         $height={"100%"}
+        $top="all-spacing-0"
       />
 
       <OakBox
@@ -176,6 +177,7 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
         $borderRadius={"border-radius-s"}
         $width={"100%"}
         $height={"100%"}
+        $top="all-spacing-0"
       />
 
       <StyledInternalButton

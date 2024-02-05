@@ -164,6 +164,7 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
         $borderRadius={"border-radius-circle"}
         $width={"100%"}
         $height={"100%"}
+        $top="all-spacing-0"
       />
 
       {isLoading && !disabled ? loader : icon}
