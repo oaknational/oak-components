@@ -10,11 +10,11 @@ const meta: Meta<typeof OakQuizTextInput> = {
   tags: ["autodocs"],
   title: "components/integrated/OakQuizTextInput",
   argTypes: {
-    width: sizeArgTypes["$width"],
+    wrapperWidth: sizeArgTypes["$width"],
   },
   parameters: {
     controls: {
-      include: ["feedback", "width", "disabled"],
+      include: ["feedback", "wrapperWidth", "disabled"],
     },
   },
   args: {
@@ -39,4 +39,24 @@ export const WithIncorrectFeedback: Story = {
   render: () => (
     <OakQuizTextInput value="An incorrect answer" feedback="incorrect" />
   ),
+};
+
+export const ResponsiveWidth: Story = {
+  render: (args) => (
+    <OakQuizTextInput
+      wrapperWidth={["100%", "all-spacing-20"]}
+      feedback={args.feedback}
+      defaultValue={args.defaultValue}
+    />
+  ),
+  args: {
+    feedback: "incorrect",
+    defaultValue:
+      "The pupil's answer which is longer than the width of the input",
+  },
+  parameters: {
+    controls: {
+      include: ["feedback"],
+    },
+  },
 };

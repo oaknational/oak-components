@@ -10,7 +10,8 @@ const meta: Meta<typeof OakTextInput> = {
   tags: ["autodocs"],
   title: "components/ui/OakTextInput",
   argTypes: {
-    width: sizeArgTypes["$width"],
+    wrapperWidth: sizeArgTypes["$width"],
+    wrapperMaxWidth: sizeArgTypes["$width"],
   },
   parameters: {
     controls: {
@@ -20,7 +21,8 @@ const meta: Meta<typeof OakTextInput> = {
         "validity",
         "disabled",
         "readOnly",
-        "width",
+        "wrapperWidth",
+        "wrapperMaxWidth",
         "iconName",
         "isTrailingIcon",
       ],

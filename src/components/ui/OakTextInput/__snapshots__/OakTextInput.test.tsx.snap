@@ -2,7 +2,7 @@
 
 exports[`OakTextInput matches snapshot 1`] = `
 [
-  .c3 {
+  .c5 {
   -webkit-appearance: none !important;
   -moz-appearance: none !important;
   appearance: none !important;
@@ -16,43 +16,41 @@ exports[`OakTextInput matches snapshot 1`] = `
   color: inherit;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+  width: 100%;
   height: 4.5rem;
 }
 
-.c3::-webkit-input-placeholder {
+.c5::-webkit-input-placeholder {
   color: #575757;
 }
 
-.c3::-moz-placeholder {
+.c5::-moz-placeholder {
   color: #575757;
 }
 
-.c3:-ms-input-placeholder {
+.c5:-ms-input-placeholder {
   color: #575757;
 }
 
-.c3::placeholder {
+.c5::placeholder {
   color: #575757;
 }
 
-.c3::-webkit-search-decoration,
-.c3::-webkit-search-cancel-button,
-.c3::-webkit-search-results-button,
-.c3::-webkit-search-results-decoration {
+.c5::-webkit-search-decoration,
+.c5::-webkit-search-cancel-button,
+.c5::-webkit-search-results-button,
+.c5::-webkit-search-results-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c3:disabled {
+.c5:disabled {
   cursor: not-allowed;
 }
 
 .c0 {
   position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -70,6 +68,10 @@ exports[`OakTextInput matches snapshot 1`] = `
   cursor: pointer;
 }
 
+.c3 {
+  font-family: Lexend,sans-serif;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -80,6 +82,17 @@ exports[`OakTextInput matches snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 1rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 .c2 {
@@ -95,7 +108,7 @@ exports[`OakTextInput matches snapshot 1`] = `
 }
 
 @media (max-width:750px) {
-  .c3 {
+  .c5 {
     font-size: 16px;
   }
 }
@@ -110,12 +123,16 @@ exports[`OakTextInput matches snapshot 1`] = `
     className="c0 c1 c2"
     onClick={[Function]}
   >
-    <input
-      className="c3"
-      defaultValue="A nice text value"
-      onFocus={[Function]}
-      type="text"
-    />
+    <div
+      className="c3 c4"
+    >
+      <input
+        className="c5"
+        defaultValue="A nice text value"
+        onFocus={[Function]}
+        type="text"
+      />
+    </div>
   </div>,
   ",",
 ]
