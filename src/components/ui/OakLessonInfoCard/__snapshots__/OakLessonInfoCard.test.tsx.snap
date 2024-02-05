@@ -19,10 +19,6 @@ exports[`OakLessonInfoCard component test matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c7 {
-  font-family: Lexend,sans-serif;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -44,24 +40,6 @@ exports[`OakLessonInfoCard component test matches snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.5rem;
-}
-
-.c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .c5 {
@@ -89,14 +67,14 @@ exports[`OakLessonInfoCard component test matches snapshot 1`] = `
       className="c4"
     >
       <img
-        alt="home"
+        alt="question-mark"
         className="c5"
         data-nimg="fill"
         decoding="async"
         loading="lazy"
         onError={[Function]}
         onLoad={[Function]}
-        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699887218/icons/gvqxjxcw07ei2kkmwnes.svg"
+        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1706872277/icons/question-mark.svg"
         style={
           {
             "bottom": 0,
@@ -116,17 +94,9 @@ exports[`OakLessonInfoCard component test matches snapshot 1`] = `
     <h1
       className="c6"
     >
-      Title
+      Header title
     </h1>
   </div>
-  <div
-    className="c7 c8"
-  >
-    <div
-      className="c2 c9"
-    >
-      the is the description
-    </div>
-  </div>
+  Children of the compoent goes here.
 </div>
 `;

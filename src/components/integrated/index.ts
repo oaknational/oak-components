@@ -11,6 +11,5 @@ export * from "./OakHintButton";
 export * from "./OakLessonNavItem";
 export * from "./OakLessonReviewItem";
 export * from "./OakSubjectIcon";
-export * from "./OakLessonInfoCard";
 export * from "./OakPrimaryNavItem";
 export * from "./OakPrimaryNav";
