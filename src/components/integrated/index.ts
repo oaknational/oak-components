@@ -13,3 +13,4 @@ export * from "./OakLessonReviewItem";
 export * from "./OakSubjectIcon";
 export * from "./OakPrimaryNavItem";
 export * from "./OakPrimaryNav";
+export * from "./OakLessonVideoTranscript";

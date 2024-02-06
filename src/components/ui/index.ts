@@ -16,3 +16,4 @@ export * from "./OakHandDrawnCard";
 export * from "./OakHandDrawnCardWithIcon";
 export * from "./OakPromoTag";
 export * from "./OakLessonInfoCard";
+export * from "./OakCollapsibleContent";
