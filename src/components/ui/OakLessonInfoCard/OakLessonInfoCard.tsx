@@ -53,7 +53,14 @@ export const OakStaticMessageCard = (props: OakInfoCardProps) => {
   const { children, ...rest } = props;
 
   return (
-    <OakHandDrawnCard {...rest} fill={"bg-decorative2-subdued"}>
+    <OakHandDrawnCard
+      {...rest}
+      fill={[
+        "bg-decorative2-very-subdued",
+        "bg-decorative2-subdued",
+        "bg-decorative2-subdued",
+      ]}
+    >
       <OakFlex
         $pa={"inner-padding-none"}
         $flexDirection={"column"}
