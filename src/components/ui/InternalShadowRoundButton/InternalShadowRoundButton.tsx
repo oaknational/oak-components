@@ -198,7 +198,7 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
           $justifyContent="center"
         >
           {!isTrailingIcon && iconLogic}
-          <OakSpan $font={"body-1-bold"}>{children}</OakSpan>
+          <OakSpan $font={"heading-7"}>{children}</OakSpan>
           {isTrailingIcon && iconLogic}
         </OakFlex>
       </StyledInternalButton>

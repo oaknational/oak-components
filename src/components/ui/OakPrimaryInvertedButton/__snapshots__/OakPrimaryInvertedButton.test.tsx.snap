@@ -47,13 +47,13 @@ exports[`OakPrimaryInvertedButton matches snapshot 1`] = `
 
 .c9 {
   font-family: Lexend,sans-serif;
-  font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
-  letter-spacing: -0.005rem;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
 }
 
 .c8 {
@@ -75,10 +75,10 @@ exports[`OakPrimaryInvertedButton matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
   color: #222222;
   background: #ffffff;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   border: 0.125rem solid;
   border-color: #ffffff;
   border-radius: 0.25rem;
