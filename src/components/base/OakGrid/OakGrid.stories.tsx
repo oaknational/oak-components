@@ -22,6 +22,9 @@ const meta: Meta<typeof OakGrid> = {
     $gridTemplateColumns: {
       control: { type: "text" },
     },
+    $gridTemplateRows: {
+      control: { type: "text" },
+    },
   },
   parameters: {
     controls: {
@@ -31,6 +34,7 @@ const meta: Meta<typeof OakGrid> = {
         "$gridAutoRows",
         "$gridTemplateAreas",
         "$gridTemplateColumns",
+        "$gridTemplateRows",
       ],
     },
   },
