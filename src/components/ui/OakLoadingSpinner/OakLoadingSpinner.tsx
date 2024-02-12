@@ -31,7 +31,6 @@ const StyledLoadingSpinner = styled.span<OakLoadingSpinnerProps>`
   --inner-width: calc(var(--width) / 10 * 8);
   --thickness: calc(var(--width) / 12);
 
-  position: absolute;
   display: inline-flex;
   width: var(--width);
   height: var(--width);
