@@ -12,7 +12,7 @@ const meta: Meta<typeof OakLink> = {
   },
   parameters: {
     controls: {
-      include: ["children"],
+      include: ["children", "iconName"],
     },
   },
   args: {
