@@ -17,6 +17,7 @@ const gridStyle = css<OakGridProps>`
     "grid-template-columns",
     (props) => props.$gridTemplateColumns,
   )}
+    ${responsiveStyle("grid-template-rows", (props) => props.$gridTemplateRows)}
 `;
 
 export type OakGridProps = OakBoxProps & {
@@ -26,6 +27,7 @@ export type OakGridProps = OakBoxProps & {
   $gridAutoRows?: ResponsiveValues<"1fr">;
   $gridTemplateAreas?: ResponsiveValues<string>;
   $gridTemplateColumns?: ResponsiveValues<string>;
+  $gridTemplateRows?: ResponsiveValues<string>;
 };
 
 export const OakGrid = styled(OakBox)<OakGridProps>`
