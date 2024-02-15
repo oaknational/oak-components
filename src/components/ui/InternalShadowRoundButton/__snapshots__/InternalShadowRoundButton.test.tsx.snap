@@ -106,6 +106,7 @@ exports[`InternalShadowRoundButton matches snapshot 1`] = `
 }
 
 .c3 {
+  display: inline-block;
   position: relative;
 }
 

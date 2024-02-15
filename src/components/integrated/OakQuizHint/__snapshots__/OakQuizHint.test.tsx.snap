@@ -125,6 +125,7 @@ exports[`OakQuizHint matches snapshot 1`] = `
 }
 
 .c6 {
+  display: inline-block;
   position: relative;
 }
 

@@ -168,6 +168,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 }
 
 .c9 {
+  display: inline-block;
   position: relative;
 }
 

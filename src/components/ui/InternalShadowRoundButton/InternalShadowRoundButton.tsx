@@ -51,6 +51,7 @@ const StyledInternalButton = styled(InternalButton)<
   Omit<InternalShadowRoundButtonProps, "iconBackgroundSize" | "iconSize"> &
     SizeStyleProps
 >`
+  display: inline-block;
   ${positionStyle}
   ${sizeStyle}
   ${(props) => css`

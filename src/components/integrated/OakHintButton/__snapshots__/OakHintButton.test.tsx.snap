@@ -106,6 +106,7 @@ exports[`OakHintButton matches snapshot 1`] = `
 }
 
 .c4 {
+  display: inline-block;
   position: relative;
 }
 
