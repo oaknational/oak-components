@@ -4,7 +4,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { InternalShadowRoundButton } from "./InternalShadowRoundButton";
 
 import { oakIconNames } from "@/components/base/OakIcon";
-import { OakFlex, OakLI, OakUL } from "@/components/base";
+import { OakBox, OakFlex, OakLI, OakUL } from "@/components/base";
 import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
@@ -113,9 +113,9 @@ export const Default: Story = {
 
 export const LinkStyledAsButton: Story = {
   render: (args) => (
-    <OakFlex $gap="space-between-m">
+    <OakBox>
       <InternalShadowRoundButton {...args}>Link</InternalShadowRoundButton>
-    </OakFlex>
+    </OakBox>
   ),
   args: {
     as: "a",
