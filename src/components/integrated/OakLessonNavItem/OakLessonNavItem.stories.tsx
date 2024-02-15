@@ -20,12 +20,6 @@ const meta: Meta<typeof OakLessonNavItem> = {
         type: "number",
       },
     },
-    videoLength: {
-      control: {
-        type: "number",
-      },
-      if: { arg: "lessonSectionName", eq: "video" },
-    },
   },
   args: {
     lessonSectionName: "intro",
@@ -33,7 +27,6 @@ const meta: Meta<typeof OakLessonNavItem> = {
     href: "#",
     grade: 4,
     numQuestions: 6,
-    videoLength: 20,
   },
   decorators: [
     (Story) => {
@@ -52,7 +45,6 @@ const meta: Meta<typeof OakLessonNavItem> = {
         "disabled",
         "grade",
         "numQuestions",
-        "videoLength",
       ],
     },
   },
@@ -79,11 +71,7 @@ export const NotStarted: Story = {
         numQuestions={6}
         grade={0}
       />
-      <OakLessonNavItem
-        lessonSectionName="video"
-        progress="not-started"
-        videoLength={20}
-      />
+      <OakLessonNavItem lessonSectionName="video" progress="not-started" />
       <OakLessonNavItem
         lessonSectionName="exit-quiz"
         progress="not-started"
@@ -104,11 +92,7 @@ export const InProgress: Story = {
         numQuestions={6}
         grade={0}
       />
-      <OakLessonNavItem
-        lessonSectionName="video"
-        progress="in-progress"
-        videoLength={20}
-      />
+      <OakLessonNavItem lessonSectionName="video" progress="in-progress" />
       <OakLessonNavItem
         lessonSectionName="exit-quiz"
         progress="in-progress"
@@ -129,11 +113,7 @@ export const Complete: Story = {
         numQuestions={6}
         grade={5}
       />
-      <OakLessonNavItem
-        lessonSectionName="video"
-        progress="complete"
-        videoLength={20}
-      />
+      <OakLessonNavItem lessonSectionName="video" progress="complete" />
       <OakLessonNavItem
         lessonSectionName="exit-quiz"
         progress="complete"

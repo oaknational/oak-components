@@ -105,14 +105,14 @@ const pickSummaryForIncomplete = (props: OakLessonReviewItemProps) => {
     case "exit-quiz":
       return `Check - ${props.numQuestions} questions`;
     case "video":
-      return `Learn`;
+      return "Learn";
   }
 };
 
 const pickLabelForSection = (sectionName: LessonSectionName): string => {
   switch (sectionName) {
     case "intro":
-      return "Intro";
+      return "Introduction";
     case "starter-quiz":
       return "Starter quiz";
     case "video":
