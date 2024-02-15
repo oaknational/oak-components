@@ -256,12 +256,12 @@ exports[`OakLessonNavItem matches snapshot 1`] = `
       <strong
         className="c9"
       >
-        Intro
+        Introduction
       </strong>
       <div
         className="c10"
       >
-        Get ready
+        Prepare
       </div>
     </div>
     <div

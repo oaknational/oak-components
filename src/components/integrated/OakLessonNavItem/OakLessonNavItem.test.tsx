@@ -38,7 +38,6 @@ describe(OakLessonNavItem, () => {
           data-testid="video"
           lessonSectionName="video"
           progress="not-started"
-          videoLength={20}
         />
         <OakLessonNavItem
           data-testid="exit-quiz"
@@ -50,12 +49,14 @@ describe(OakLessonNavItem, () => {
       </>,
     );
 
-    expect(getByTestId("intro").textContent).toContain("Get ready");
-    expect(getByTestId("starter-quiz").textContent).toContain("6 Questions");
-    expect(getByTestId("exit-quiz").textContent).toContain(
-      "Practice 6 questions",
+    expect(getByTestId("intro").textContent).toContain("Prepare");
+    expect(getByTestId("starter-quiz").textContent).toContain(
+      "Activate - 6 Questions",
     );
-    expect(getByTestId("video").textContent).toContain("20 min");
+    expect(getByTestId("exit-quiz").textContent).toContain(
+      "Check - 6 questions",
+    );
+    expect(getByTestId("video").textContent).toContain("Learn");
   });
 
   it("renders copy for each lesson section that has not been started", () => {
@@ -77,7 +78,6 @@ describe(OakLessonNavItem, () => {
           data-testid="video"
           lessonSectionName="video"
           progress="in-progress"
-          videoLength={20}
         />
         <OakLessonNavItem
           data-testid="exit-quiz"
@@ -114,7 +114,6 @@ describe(OakLessonNavItem, () => {
           data-testid="video"
           lessonSectionName="video"
           progress="complete"
-          videoLength={20}
         />
         <OakLessonNavItem
           data-testid="exit-quiz"

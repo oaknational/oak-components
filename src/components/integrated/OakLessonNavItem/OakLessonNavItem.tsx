@@ -39,10 +39,6 @@ type QuizSectionProps = {
 
 type VideoSectionProps = {
   lessonSectionName: "video";
-  /**
-   * The length of the video in minutes
-   */
-  videoLength: number;
 };
 
 type IntroSectionProps = {
@@ -252,11 +248,11 @@ function pickColorsForSection(
 function pickLabelForSection(sectionName: LessonSectionName): string {
   switch (sectionName) {
     case "intro":
-      return "Intro";
+      return "Introduction";
     case "starter-quiz":
       return "Starter quiz";
     case "video":
-      return "Watch video";
+      return "Lesson video";
     case "exit-quiz":
       return "Exit quiz";
   }
@@ -285,13 +281,13 @@ function pickSummaryForProgress(props: SectionProps) {
 function pickSummaryForNotStarted(props: SectionProps) {
   switch (props.lessonSectionName) {
     case "intro":
-      return "Get ready";
+      return "Prepare";
     case "starter-quiz":
-      return `${props.numQuestions} Questions`;
+      return `Activate - ${props.numQuestions} Questions`;
     case "exit-quiz":
-      return `Practice ${props.numQuestions} questions`;
+      return `Check - ${props.numQuestions} questions`;
     case "video":
-      return `${props.videoLength} min`;
+      return "Learn";
   }
 }
 
