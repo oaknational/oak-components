@@ -116,7 +116,7 @@ const pickLabelForSection = (sectionName: LessonSectionName): string => {
     case "starter-quiz":
       return "Starter quiz";
     case "video":
-      return "Watch video";
+      return "Lesson video";
     case "exit-quiz":
       return "Exit quiz";
   }
