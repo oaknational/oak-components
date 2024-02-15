@@ -50,6 +50,7 @@ export const OakCloudinaryImage = ({
       src={src}
       imageProps={{
         config,
+        flags: unoptimized ? undefined : ["keep_attribution"],
       }}
       unoptimized={unoptimized}
       {...props}
