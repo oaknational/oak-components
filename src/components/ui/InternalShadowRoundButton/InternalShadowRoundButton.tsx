@@ -107,7 +107,7 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
     isTrailingIcon,
     isLoading,
     disabled,
-    width,
+    width = "max-content",
     maxWidth,
     iconBackgroundSize,
     iconSize,

@@ -117,7 +117,7 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
     isTrailingIcon,
     isLoading,
     disabled,
-    width,
+    width = "max-content",
     maxWidth,
     defaultBackground,
     defaultBorderColor,
