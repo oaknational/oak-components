@@ -55,7 +55,7 @@ export const WithButton: Story = {
         isTrailingIcon
         width={["100%", "auto"]}
       >
-        Continue
+        Next question
       </OakPrimaryButton>
     </OakLessonBottomNav>
   ),
@@ -85,32 +85,50 @@ export const WithFeedbackAndButton: Story = {
         <OakPrimaryButton
           iconName="arrow-right"
           isTrailingIcon
-          width={["100%", "auto"]}
+          width={["100%", "max-content"]}
         >
-          Continue
+          Next question
         </OakPrimaryButton>
       </OakLessonBottomNav>
       <OakLessonBottomNav {...args} feedback="incorrect">
         <OakPrimaryButton
           iconName="arrow-right"
           isTrailingIcon
-          width={["100%", "auto"]}
+          width={["100%", "max-content"]}
         >
-          Continue
+          Next question
         </OakPrimaryButton>
       </OakLessonBottomNav>
       <OakLessonBottomNav {...args} feedback="partially-correct">
         <OakPrimaryButton
           iconName="arrow-right"
           isTrailingIcon
-          width={["100%", "auto"]}
+          width={["100%", "max-content"]}
         >
-          Continue
+          Next question
         </OakPrimaryButton>
       </OakLessonBottomNav>
     </>
   ),
   args: {
     answerFeedback: "Good work!",
+  },
+};
+
+export const WithLongFeedbackAndButton: Story = {
+  render: (args) => (
+    <OakLessonBottomNav {...args} feedback="incorrect">
+      <OakPrimaryButton
+        iconName="arrow-right"
+        isTrailingIcon
+        width={["100%", "max-content"]}
+      >
+        Next question
+      </OakPrimaryButton>
+    </OakLessonBottomNav>
+  ),
+  args: {
+    answerFeedback:
+      "Correct answer: George Orwell, a renowned British author, penned the dystopian masterpiece '1984' in 1949, depicting a totalitarian society under constant surveillance, influencing literature and pop culture for decades.",
   },
 };

@@ -3,6 +3,9 @@
 exports[`OakTertiaryButton matches snapshot 1`] = `
 .c0 {
   position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   font-family: Lexend,sans-serif;
 }
 

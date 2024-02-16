@@ -13,6 +13,9 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
 
 .c3 {
   position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   font-family: Lexend,sans-serif;
 }
 
