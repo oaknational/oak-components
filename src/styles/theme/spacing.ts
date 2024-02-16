@@ -63,6 +63,8 @@ type AdditionalSpacingTypes =
   | "100vw"
   | "auto"
   | "fit-content"
+  | "max-content"
+  | "min-content"
   | "inherit"
   | "initial"
   | "unset";
