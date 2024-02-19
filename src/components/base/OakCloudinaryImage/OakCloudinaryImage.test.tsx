@@ -1,27 +1,33 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { render } from "@testing-library/react";
 import { create } from "react-test-renderer";
+
+import { OakThemeProvider } from "../OakThemeProvider";
 
 import {
   OakCloudinaryConfigProvider,
   OakCloudinaryImage,
 } from "./OakCloudinaryImage";
 
+import renderWithTheme from "@/test-helpers/renderWithTheme";
+import { oakDefaultTheme } from "@/styles";
+
 describe(OakCloudinaryImage, () => {
   it("matches snapshot", () => {
     const tree = create(
-      <OakCloudinaryImage
-        cloudinaryId="v1688316547/xqvnpdqx9u2awiykyb8s.jpg"
-        alt="a test image"
-      />,
+      <OakThemeProvider theme={oakDefaultTheme}>
+        <OakCloudinaryImage
+          cloudinaryId="v1688316547/xqvnpdqx9u2awiykyb8s.jpg"
+          alt="a test image"
+        />
+      </OakThemeProvider>,
     ).toJSON();
 
     expect(tree).toMatchSnapshot();
   });
 
   it("respects the globally set config", () => {
-    const { getByRole } = render(
+    const { getByRole } = renderWithTheme(
       <OakCloudinaryImage
         cloudinaryId="v1608635688/image.jpg"
         alt="a test image"
@@ -34,7 +40,7 @@ describe(OakCloudinaryImage, () => {
   });
 
   it("accepts a cloudinary image id", () => {
-    const { getByRole } = render(
+    const { getByRole } = renderWithTheme(
       <OakCloudinaryImage
         cloudinaryId="v1608635688/image.jpg"
         alt="a test image"
@@ -47,7 +53,7 @@ describe(OakCloudinaryImage, () => {
   });
 
   it("accepts a full cloudinary url", () => {
-    const { getByRole } = render(
+    const { getByRole } = renderWithTheme(
       <OakCloudinaryImage
         cloudinaryId="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1608635688/image.jpg"
         alt="a test image"
@@ -60,7 +66,7 @@ describe(OakCloudinaryImage, () => {
   });
 
   it("does not attempt to optimize the image when it is an SVG", () => {
-    const { getByRole } = render(
+    const { getByRole } = renderWithTheme(
       <OakCloudinaryImage
         cloudinaryId="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1608635688/image.svg"
         alt="a test image"
@@ -74,7 +80,7 @@ describe(OakCloudinaryImage, () => {
 
   describe("private CDNs", () => {
     it("are respected when an id is passed", () => {
-      const { getByRole } = render(
+      const { getByRole } = renderWithTheme(
         <OakCloudinaryConfigProvider
           value={{
             cloud: {
@@ -98,7 +104,7 @@ describe(OakCloudinaryImage, () => {
     });
 
     it("are respected when an full URL is passed", () => {
-      const { getByRole } = render(
+      const { getByRole } = renderWithTheme(
         <OakCloudinaryConfigProvider
           value={{
             cloud: {

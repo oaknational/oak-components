@@ -1,13 +1,17 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { render } from "@testing-library/react";
 import { create } from "react-test-renderer";
+
+import { OakThemeProvider } from "../OakThemeProvider";
 
 import { OakImage } from "./OakImage";
 
+import renderWithTheme from "@/test-helpers/renderWithTheme";
+import { oakDefaultTheme } from "@/styles";
+
 describe("OakImage", () => {
   it("renders", () => {
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithTheme(
       <OakImage
         data-testid="test"
         src="/../../../../assets/oak-national-academy-logo-512.png"
@@ -19,16 +23,18 @@ describe("OakImage", () => {
 
   it("matches snapshot", () => {
     const tree = create(
-      <OakImage
-        src="/../../../../assets/oak-national-academy-logo-512.png"
-        alt="a test image"
-      />,
+      <OakThemeProvider theme={oakDefaultTheme}>
+        <OakImage
+          src="/../../../../assets/oak-national-academy-logo-512.png"
+          alt="a test image"
+        />
+      </OakThemeProvider>,
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it("defaults to 100% width and auto height when aspect ratio props are provide and sets minWidth on container", () => {
-    const { getByTestId, getByRole } = render(
+    const { getByTestId, getByRole } = renderWithTheme(
       <OakImage
         data-testid="test"
         src="/../../../../assets/oak-national-academy-logo-512.png"
