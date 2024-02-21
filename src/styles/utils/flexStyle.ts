@@ -1,6 +1,8 @@
 import { CSSProperties } from "react";
 import { css } from "styled-components";
 
+import type { DisplayStyleProps } from "./displayStyle";
+
 import {
   responsiveStyle,
   ResponsiveValues,
@@ -11,7 +13,7 @@ import {
 } from "@/styles/theme/spacing";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 
-export type FlexStyleProps = {
+export type FlexStyleProps = DisplayStyleProps & {
   $flexDirection?: ResponsiveValues<CSSProperties["flexDirection"]>;
   $flexWrap?: ResponsiveValues<CSSProperties["flexWrap"]>;
   $alignItems?: ResponsiveValues<CSSProperties["alignItems"]>;
@@ -36,7 +38,7 @@ export type FlexStyleProps = {
 };
 
 export const flexStyle = css<FlexStyleProps>`
-  display: flex;
+  ${responsiveStyle("display", (props) => props.$display ?? "flex")}
   ${responsiveStyle("flex-direction", (props) => props.$flexDirection)}
   ${responsiveStyle("flex-wrap", (props) => props.$flexWrap)}
   ${responsiveStyle("align-items", (props) => props.$alignItems)}

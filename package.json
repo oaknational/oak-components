@@ -98,5 +98,8 @@
   "bugs": {
     "url": "https://github.com/oaknational/oak-components/issues"
   },
-  "homepage": "https://github.com/oaknational/oak-components#readme"
+  "homepage": "https://github.com/oaknational/oak-components#readme",
+  "overrides": {
+    "jsdom": "24.0.0"
+  }
 }
