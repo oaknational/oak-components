@@ -6,7 +6,18 @@ import "@testing-library/jest-dom";
 import { flexStyle } from "@/styles/utils/flexStyle";
 
 describe("flexStyle", () => {
+  const StyledComponent = styled.div`
+    ${flexStyle}
+  `;
+
+  test("defaults to display: flex", () => {
+    const { getByTestId } = render(<StyledComponent data-testid="test" />);
+
+    expect(getByTestId("test")).toHaveStyle("display: flex;");
+  });
+
   test.each([
+    ["$display", "inline flex", "display: inline flex"],
     ["$flexDirection", "row", "flex-direction: row;"],
     ["$flexWrap", "wrap", "flex-wrap: wrap;"],
     ["$alignItems", "center", "align-items: center;"],
@@ -24,9 +35,6 @@ describe("flexStyle", () => {
       [prop]: value,
     };
 
-    const StyledComponent = styled.div`
-      ${flexStyle}
-    `;
     const { getByTestId } = render(
       <StyledComponent data-testid="test" {...props} />,
     );
