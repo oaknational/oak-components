@@ -1,3 +1,3 @@
-export * from "./base";
-export * from "./ui";
-export * from "./integrated";
+export * from "./atoms";
+export * from "./molecules";
+export * from "./organisms";

@@ -20,30 +20,30 @@ TODO: Instructions for how to add Oak Components to a React App
 
 Components are organised into a three tier hierarchical structure applying the following rules:
 
-### Base components
+### Atoms
 
-- Imports from other base components
-- Imports from Ui and Integrated components are forbidden!
+- Can import other atoms
+- Imports from molecules and organisms are forbidden!
 - Generic
 - Unstyled
 - Avoid embedded logic and state
 - No sub-components
   (eg. Box)
 
-### Ui components
+### Molecules
 
-- Imports from base components and Ui components
-- Imports from Integrated components are forbidden!
+- Imports from atoms components and other molecules
+- Imports from organisms are forbidden!
 - Generic
 - Styled
 - Avoid embedded logic and state
 - No sub-components
   (eg. IconButton)
 
-### Integrated components
+### Organisms
 
-- Imports from base components, Ui components and occasionally Integrated components
-- Combines multiple Ui components together
+- Imports from atoms, molecules and occasionally organisms
+- Combines multiple molecules together
 - Applicable to a limited range of contexts which might occur in multiple apps
 - Styled
 - May contain embedded logic or state
