@@ -6,11 +6,15 @@ import React, {
 import Image, { ImageProps } from "next/image";
 import styled, { css } from "styled-components";
 
+import { useShowPlaceholder } from "./useShowPlaceholder";
+
 import {
   ColorFilterStyleProps,
   colorFilterStyle,
 } from "@/styles/utils/colorFilterStyle";
 import { OakBox, OakBoxProps } from "@/components/base/OakBox";
+import { parseColor } from "@/styles/helpers/parseColor";
+import { parseSpacing } from "@/styles/helpers/parseSpacing";
 
 type HTMLProps = {
   onClick?: MouseEventHandler;
@@ -36,11 +40,14 @@ export type OakImageProps<C extends ElementType = typeof Image> = Omit<
     imageProps?: Partial<ComponentPropsWithoutRef<C>>;
   };
 
-const oakPlaceholder =
-  "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNjEiIGhlaWdodD0iMTUxIiBmaWxsPSJub25lIj48ZyBjbGlwLXBhdGg9InVybCgjYSkiPjxnIGNsaXAtcGF0aD0idXJsKCNiKSI+PGcgY2xpcC1wYXRoPSJ1cmwoI2MpIj48cGF0aCBmaWxsPSIjRTdGNkY1IiBkPSJNLTIwLTloMzAydjE3MC4wMTFILTIweiIvPjxwYXRoIGZpbGw9IiMyMjIiIGQ9Ik0xMjcuNzc5IDYzLjE4MWEyNy4xNDYgMjcuMTQ2IDAgMCAwLTMuOCAxLjYgMTYuNjk1IDE2LjY5NSAwIDAgMC03LjEgOC40YzAgLjEtLjEuMi0uMS4zLS43IDIuNC0uNiAyIDEuMyAyLjMgMS45LjMgMSAuNSAxIDEuMy0uMSA4LjggNC4xIDE1LjEgMTEuNCAxOS42YTEuNDk4IDEuNDk4IDAgMCAwIDEuNy4yYzUuNy0yLjYgOS4zLTcgMTAuMy0xMy4yYTEuMDAxIDEuMDAxIDAgMCAxIDEtMWwzLS4yYy44IDAgMS4zLjIgMS4yIDEuMmExNy45MDggMTcuOTA4IDAgMCAxLTMuMiA5LjIgMjMuNyAyMy43IDAgMCAxLTEwLjkgOS4xIDUuNDA2IDUuNDA2IDAgMCAxLTQuNS0uMiAyNi4yOSAyNi4yOSAwIDAgMS04LjUtNi42IDI1Ljg4OSAyNS44ODkgMCAwIDEtNi40LTE0LjRjMC0uNi0uMi0uNy0uOC0uOC0yLjUtLjQtMi41LS4xLTIuMy0yLjlhMTkuMjkgMTkuMjkgMCAwIDEgMTAuOC0xNi42IDM4Ljk1MyAzOC45NTMgMCAwIDEgNS43LTIuMWMuNDU3LS4zLjc4LS43NjYuOS0xLjNhMTQuMDk1IDE0LjA5NSAwIDAgMSAzLjUtNi4zbC4zLS4zYzEuOS0yIDIuNi0yIDQuMy4ybC40LjVjMS4xIDEuMSAxIDEuNS0uMSAyLjZhMTEuODgzIDExLjg4MyAwIDAgMC0zLjIgNC40YzIuNjQ1LjE2OCA1LjIxNS45NTYgNy41IDIuMyA1LjcgMy41IDkuMiA4LjMgOS45IDE1IC4wMTYuOTAxLS4wMTcgMS44MDMtLjEgMi43IDAgLjgtLjYgMS0xLjIgMS4yYTE2LjEgMTYuMSAwIDAgMS0xMS0uNyAxNy45IDE3LjkgMCAwIDEtMTAuOS0xMy42IDkuNzQyIDkuNzQyIDAgMCAxLS4xLTEuOVptMTguMSAxMi4yYy40LTUuNS02LjktMTIuNi0xMy0xMi4xLjUgNi41IDcuNiAxMi44IDEzIDEyLjFaIiBvcGFjaXR5PSIuMSIvPjwvZz48L2c+PC9nPjxkZWZzPjxjbGlwUGF0aCBpZD0iYSI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTAgMGgyNjF2MTUxSDB6Ii8+PC9jbGlwUGF0aD48Y2xpcFBhdGggaWQ9ImIiPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0tMjAtOWgzMDJ2MTcwLjAxMUgtMjB6Ii8+PC9jbGlwUGF0aD48Y2xpcFBhdGggaWQ9ImMiPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0tMjAtOWgzMDJ2MTcwLjAxMUgtMjB6Ii8+PC9jbGlwUGF0aD48L2RlZnM+PC9zdmc+";
+type StyledImageProps = Omit<OakImageProps, "as"> & {
+  $showOakPlaceholder: boolean;
+};
 
-const StyledFillImage = styled(Image)<Omit<OakImageProps, "as">>`
-  ${colorFilterStyle}
+const oakPlaceholder =
+  "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHBhdGggZmlsbD0iIzIyMiIgZD0iTTI4Ljc3OSAxOS4xNzZhMjcuMTkxIDI3LjE5MSAwIDAgMC0zLjggMS42IDE2LjcgMTYuNyAwIDAgMC03LjEgOC40YzAgLjEtLjEuMi0uMS4zLS43IDIuNC0uNiAyIDEuMyAyLjMgMS45LjMgMSAuNSAxIDEuMy0uMSA4LjggNC4xIDE1LjEgMTEuNCAxOS42YTEuNSAxLjUgMCAwIDAgMS43LjJjNS43LTIuNiA5LjMtNyAxMC4zLTEzLjJhMSAxIDAgMCAxIDEtMWwzLS4yYy44IDAgMS4zLjIgMS4yIDEuMmExNy45IDE3LjkgMCAwIDEtMy4yIDkuMiAyMy43IDIzLjcgMCAwIDEtMTAuOSA5LjEgNS40MDEgNS40MDEgMCAwIDEtNC41LS4yIDI2LjI5OCAyNi4yOTggMCAwIDEtOC41LTYuNiAyNS45IDI1LjkgMCAwIDEtNi40LTE0LjRjMC0uNi0uMi0uNy0uOC0uOC0yLjUtLjQtMi41LS4xLTIuMy0yLjlhMTkuMyAxOS4zIDAgMCAxIDEwLjgtMTYuNiAzOC45OTkgMzguOTk5IDAgMCAxIDUuNy0yLjEgMi4xIDIuMSAwIDAgMCAuOS0xLjMgMTQuMSAxNC4xIDAgMCAxIDMuNS02LjNsLjMtLjNjMS45LTIgMi42LTIgNC4zLjJsLjQuNWMxLjEgMS4xIDEgMS41LS4xIDIuNmExMS45IDExLjkgMCAwIDAtMy4yIDQuNCAxNi45IDE2LjkgMCAwIDEgNy41IDIuM2M1LjcgMy41IDkuMiA4LjMgOS45IDE1IC4wMTYuOTAxLS4wMTcgMS44MDItLjEgMi43IDAgLjgtLjYgMS0xLjIgMS4yYTE2LjEgMTYuMSAwIDAgMS0xMS0uNyAxNy45MDEgMTcuOTAxIDAgMCAxLTEwLjktMTMuNiA5Ljc5NiA5Ljc5NiAwIDAgMS0uMS0xLjlabTE4LjEgMTIuMmMuNC01LjUtNi45LTEyLjYtMTMtMTIuMS41IDYuNSA3LjYgMTIuOCAxMyAxMi4xWiIgb3BhY2l0eT0iLjEiLz48L3N2Zz4=";
+
+const clickStyles = css<{ onClick?: MouseEventHandler }>`
   ${(props) =>
     /* onClick might be passed in the useClickableCard pattern */
     props.onClick &&
@@ -49,19 +56,31 @@ const StyledFillImage = styled(Image)<Omit<OakImageProps, "as">>`
         cursor: pointer;
       }
     `}
-    object-fit: contain;
 `;
 
-const StyledResponsiveImage = styled(Image)<Omit<OakImageProps, "as">>`
-  ${colorFilterStyle}
+const placeholderStyles = css<StyledImageProps>`
   ${(props) =>
-    /* onClick might be passed in the useClickableCard pattern */
-    props.onClick &&
+    props.$showOakPlaceholder &&
     css`
-      :hover {
-        cursor: pointer;
-      }
+      background-image: url(${oakPlaceholder});
+      background-color: ${parseColor("bg-decorative2-very-subdued")};
+      background-size: ${parseSpacing("all-spacing-11")};
+      background-position: center;
+      background-repeat: no-repeat;
     `}
+`;
+
+const StyledFillImage = styled(Image)<StyledImageProps>`
+  ${colorFilterStyle}
+  ${clickStyles}
+  ${placeholderStyles}
+  object-fit: contain;
+`;
+
+const StyledResponsiveImage = styled(Image)<StyledImageProps>`
+  ${colorFilterStyle}
+  ${clickStyles}
+  ${placeholderStyles}
   width: 100%;
   height: auto;
 `;
@@ -86,16 +105,20 @@ export const OakImage = <C extends ElementType = typeof Image>({
     placeholder = "oak",
     unoptimized,
     imageProps,
+    onLoad,
+    onError,
     ...rest
   } = props;
-  const finalPlaceholder = placeholder === "oak" ? oakPlaceholder : placeholder;
+  const finalPlaceholder = placeholder === "oak" ? undefined : placeholder;
+  const { showPlaceholder, handleComplete, setImg } = useShowPlaceholder();
+
   // We don't know the aspect ratio of the image, so we must use fill and letterbox it to avoid stretching
   // Use $width and $height to set the width and height of the image container
-
   if (!width || !height) {
     return (
       <OakBox $position={$position} $width={$width} {...rest}>
         <StyledFillImage
+          ref={setImg}
           as={as ?? Image}
           src={src}
           alt={alt}
@@ -103,7 +126,10 @@ export const OakImage = <C extends ElementType = typeof Image>({
           fill
           $colorFilter={$colorFilter}
           placeholder={finalPlaceholder}
+          $showOakPlaceholder={placeholder === "oak" && showPlaceholder}
           unoptimized={unoptimized}
+          onLoad={handleComplete(onLoad)}
+          onError={handleComplete(onError)}
           {...imageProps}
         />
       </OakBox>
@@ -116,6 +142,7 @@ export const OakImage = <C extends ElementType = typeof Image>({
   return (
     <OakBox $maxWidth={"all-spacing-0"} $position={$position} {...rest}>
       <StyledResponsiveImage
+        ref={setImg}
         as={as ?? Image}
         src={src}
         alt={alt}
@@ -125,6 +152,9 @@ export const OakImage = <C extends ElementType = typeof Image>({
         unoptimized={unoptimized}
         $colorFilter={$colorFilter}
         placeholder={finalPlaceholder}
+        $showOakPlaceholder={placeholder === "oak" && showPlaceholder}
+        onLoad={handleComplete(onLoad)}
+        onError={handleComplete(onError)}
         {...imageProps}
       />
     </OakBox>
