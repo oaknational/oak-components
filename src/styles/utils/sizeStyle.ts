@@ -1,4 +1,4 @@
-import { css } from "styled-components";
+import { css, CSSProperties } from "styled-components";
 
 import {
   responsiveStyle,
@@ -16,6 +16,8 @@ export type SizeStyleProps = {
   $height?: SizeValues;
   $minHeight?: SizeValues;
   $maxHeight?: SizeValues;
+  $aspectRatio?: ResponsiveValues<CSSProperties["aspectRatio"]>;
+  $boxSizing?: ResponsiveValues<CSSProperties["boxSizing"]>;
 };
 
 export const sizeStyle = css<SizeStyleProps>`
@@ -25,4 +27,6 @@ export const sizeStyle = css<SizeStyleProps>`
   ${responsiveStyle("height", (props) => props.$height, parseSpacing)}
   ${responsiveStyle("min-height", (props) => props.$minHeight, parseSpacing)}
   ${responsiveStyle("max-height", (props) => props.$maxHeight, parseSpacing)}
+  ${responsiveStyle("aspect-ratio", (props) => props.$aspectRatio)}
+  ${responsiveStyle("box-sizing", (props) => props.$boxSizing)}
 `;
