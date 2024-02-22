@@ -4,7 +4,7 @@ import {
   InternalShadowRectButton,
   InternalShadowRectButtonProps,
 } from "@/components/molecules/InternalShadowRectButton";
-import { PolymorphicPropsWithoutRef } from "@/components/utils/polymorphic";
+import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
 
 /**
  *

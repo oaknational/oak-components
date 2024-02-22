@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 
 import { OakRoundIconProps } from "../OakRoundIcon";
 
-import { PolymorphicPropsWithoutRef } from "@/components/utils/polymorphic";
+import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
 import { OakBox, OakFlex, OakSpan } from "@/components/atoms";
 import {
   InternalButton,

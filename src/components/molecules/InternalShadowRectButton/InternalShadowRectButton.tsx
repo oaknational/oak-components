@@ -16,7 +16,7 @@ import {
 import { parseColor } from "@/styles/helpers/parseColor";
 import { OakCombinedColorToken, OakDropShadowToken } from "@/styles";
 import { SizeStyleProps, sizeStyle } from "@/styles/utils/sizeStyle";
-import { PolymorphicPropsWithoutRef } from "@/components/utils/polymorphic";
+import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
 
 export type InternalShadowRectButtonProps = Omit<
   InternalButtonProps,

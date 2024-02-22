@@ -5,7 +5,7 @@ import { InternalShadowRoundButton } from "../InternalShadowRoundButton";
 
 import { OakIconName } from "@/components/atoms";
 import { InternalButtonProps } from "@/components/atoms/InternalButton";
-import { PolymorphicPropsWithoutRef } from "@/components/utils/polymorphic";
+import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
 
 type OakTertiaryButtonProps = InternalButtonProps & {
   iconBackground?: OakRoundIconProps["$background"];

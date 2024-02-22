@@ -13,7 +13,7 @@ import {
   DropShadowStyleProps,
 } from "@/styles/utils/dropShadowStyle";
 import { borderStyle, BorderStyleProps } from "@/styles/utils/borderStyle";
-import { PolymorphicPropsWithoutRef } from "@/components/utils/polymorphic";
+import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
 
 type StyledButtonProps = TypographyStyleProps &
   SpacingStyleProps &
