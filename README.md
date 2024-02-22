@@ -2,13 +2,15 @@
 
 ## Overview
 
-This is a React Typescript components library which supports React and Next applications produced by [Oak National Academy](https://www.thenational.academy/). A storybook for the components can be found [here](https://lively-meringue-8ebd43.netlify.app/) please consult OnePassword for access.
+This is a React Typescript components library which supports React and Next applications produced by [Oak National Academy](https://www.thenational.academy/). A Storybook for the components can be found [here](https://lively-meringue-8ebd43.netlify.app/) please consult 1Password for access.
 
-## Usage
+## Installation
 
-TODO: Instructions for how to add Oak Components to a React App
+This library is suitable for use in an app using React 18 and Next.js 13+
 
-## Install for development
+You can install it using `npm i @oaknational/oak-components` or any other package manager that supports the NPM registry.
+
+## Development
 
 1. Copy the example env config `cp .env.example .env`
 2. Ask a colleague for the values to populate `.env`
