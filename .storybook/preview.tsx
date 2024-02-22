@@ -3,7 +3,7 @@ import { ThemeProvider } from "styled-components";
 import type { Decorator, Preview } from "@storybook/react";
 
 import { oakDefaultTheme } from "../src/styles/theme/default.theme";
-import { OakGlobalStyle } from "../src/components/base/OakGlobalStyle/OakGlobalStyle";
+import { OakGlobalStyle } from "../src/components/atoms/OakGlobalStyle/OakGlobalStyle";
 
 const globalDecorator: Decorator = (Story, context) => {
   return (

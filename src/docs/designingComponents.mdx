@@ -8,12 +8,6 @@ import { Meta } from "@storybook/blocks";
 
 This library is built using the [atomic design methodology](https://bradfrost.com/blog/post/atomic-web-design/). This means that components are grouped into folders based on their level of abstraction.
 
-In our case:
-
-* [base](/docs/components-base-readme--docs) = atoms
-* [ui](/docs/components-ui-readme--docs) = molecules
-* [integrated](/docs/components-integrated-readme--docs) = organisms
-
 Read the docs at the head of each folder to understand what components belong there. The decision of where to put a component is not always clear cut, the important thing is to have a rationale for your decision.
 
 ## How to name new components ?
@@ -21,7 +15,8 @@ Read the docs at the head of each folder to understand what components belong th
 Read the [naming conventions](/docs/docs-namingconventions--docs) section of this storybook carefully.
 
 ## What is the $ for ?
-The $ prefix is used to denote a styled component prop. This is a convention used by the styled-components library. 
+
+The $ prefix is used to denote a styled component prop. This is a convention used by the styled-components library.
 
 NB. props which are prefixed with $ are not passed to the underlying DOM element / React function component so be careful not to use them for other props.
 
@@ -29,7 +24,7 @@ NB. props which are prefixed with $ are not passed to the underlying DOM element
 
 Not hard rules, rather principles to aim for:
 
-**Fewer props more components**<br/> 
+**Fewer props more components**<br/>
 Implement variations by creating separate components **NOT** through props and logic.
 
 **Only expose props which are variable**<br/>
@@ -46,6 +41,3 @@ Make sure you aren't duplicating functionality that already exists. Don't hard c
 
 **Call things what they are (even when they are long)**<br/>
 Long names are better than ambiguous names.
-
-
-
