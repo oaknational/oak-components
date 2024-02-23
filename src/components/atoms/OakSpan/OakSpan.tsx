@@ -20,6 +20,7 @@ export type OakSpanProps = ColorStyleProps &
   PaddingStyleProps &
   BorderStyleProps &
   TypographyStyleProps;
+
 /**
  * Span renders a `span` (inline text) component, exposing all the typography props.
  * ## Usage

@@ -57,6 +57,11 @@ const StyledLoadingSpinner = styled.span<OakLoadingSpinnerProps>`
   ${colorStyle}
 `;
 
+/**
+ *
+ * A loading spinner of variable size.
+ *
+ */
 export const OakLoadingSpinner = (props: OakLoadingSpinnerProps) => (
   <StyledLoadingSpinner {...props}>
     <OakScreenReader>Loading</OakScreenReader>

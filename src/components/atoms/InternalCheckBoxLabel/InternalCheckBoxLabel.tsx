@@ -12,6 +12,11 @@ export type InternalCheckBoxLabelProps = {
   "data-testid"?: string;
 } & OakLabelProps;
 
+/**
+ *
+ * Specialised Label Component can be used and extended to create various different versions of CheckboxLabels
+ *
+ */
 export const InternalCheckBoxLabel = styled(
   OakLabel,
 )<InternalCheckBoxLabelProps>`

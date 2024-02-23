@@ -6,15 +6,6 @@ import { InternalCheckBoxWrapper } from "./InternalCheckBoxWrapper";
 import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
 import { InternalCheckBoxHoverFocus } from "@/components/atoms/InternalCheckBox/InternalCheckBox";
 
-/**
- *
- * This component is a wrapper for the InternalCheckBox component. It allows for customisable icons.
- *
- * NB. size must have the same value as the InternalCheckBox width and height
- *
- *
- */
-
 const meta: Meta<typeof InternalCheckBoxWrapper> = {
   component: InternalCheckBoxWrapper,
   tags: ["autodocs"],

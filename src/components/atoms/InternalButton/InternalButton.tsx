@@ -87,7 +87,20 @@ const UnstyledInternalButton = <C extends ElementType = "button">(
   );
 };
 
-// NB. We must export a styled component for it to be inheritable
+/**
+ *
+ * An unstyled button to be used as a basis for all UI button components.
+ * The following callbacks are available for tracking focus events:
+ *
+ * ### onClick
+ * `onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;`
+
+ * ### onHovered
+ *  `onHovered?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, duration: number) => void;`<br>
+ *  called after a mouseEnter and mouseLeave event has happened
+ * 
+ * NB. We must export a styled component for it to be inheritable
+ */
 export const InternalButton = styled(UnstyledInternalButton)`
   ${internalButtonCss}
 `;

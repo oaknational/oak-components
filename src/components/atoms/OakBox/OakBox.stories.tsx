@@ -16,23 +16,6 @@ import { opacityArgTypes } from "@/storybook-helpers/opacityStyleHelpers";
 import { zIndexArgTypes } from "@/storybook-helpers/zIndexStyleHelpers";
 import { transitionArgTypes } from "@/storybook-helpers/transitionStyleHelpers";
 
-/**
- * OakBox exposes all the styles that are available styles on a div tag. These include:
- * - color
- * - size
- * - display
- * - spacing
- * - position
- * - border
- * - opacity
- * - z-index
- * - typography
- * - transition
- * - transform
- * - drop-shadow
- *
- */
-
 const meta: Meta<typeof OakBox> = {
   component: OakBox,
   tags: ["autodocs"],

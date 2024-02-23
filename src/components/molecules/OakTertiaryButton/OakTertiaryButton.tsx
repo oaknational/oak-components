@@ -17,7 +17,6 @@ type OakTertiaryButtonProps = InternalButtonProps & {
 /**
  * An implementation of InternalShadowRoundButton, its a subtle button with no border and a round icon.
  */
-
 export const OakTertiaryButton = <C extends ElementType = "button">({
   element,
   isTrailingIcon,

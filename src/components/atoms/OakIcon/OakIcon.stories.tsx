@@ -7,10 +7,6 @@ import { OakFlex, OakTypography } from "@/components/atoms";
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 import { colorFilterArgTypes } from "@/storybook-helpers/colorFilterStyleHelpers";
 
-/**
- * A wrapper around OakImage which uses the image-map.json file to map icon names to image paths.
- */
-
 const controlIconNames = [...oakIconNames].sort();
 
 const meta: Meta<typeof OakIcon> = {

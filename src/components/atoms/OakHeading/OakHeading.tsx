@@ -24,6 +24,11 @@ export type OakHeadingTag = (typeof oakHeadingTags)[number];
 type OakHeadingTagProps = {
   children?: React.ReactNode;
   id?: string;
+  /**
+   * HTML tag to be used for the heading
+   *
+   * Accepts a heading tag token
+   */
   tag: OakHeadingTag;
   ariaLabel?: string;
   ariaHidden?: boolean;
@@ -43,6 +48,12 @@ export type OakHeadingProps = TypographyStyleProps &
   OpacityStyleProps &
   MarginStyleProps;
 
+/**
+ *
+ * OakHeading can be one of the following style tags dependant on its role: "div" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6".
+ * Use the controls to view different font styles.
+ *
+ */
 export const OakHeading = styled(HeadingTagComponent)<OakHeadingProps>`
   ${typographyStyle}
   ${marginStyle}

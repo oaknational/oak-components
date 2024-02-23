@@ -6,12 +6,6 @@ import { OakThemeProvider } from "./OakThemeProvider";
 import { OakFlex } from "@/components/atoms/OakFlex";
 import { oakDefaultTheme } from "@/styles";
 
-/**
- *
- * OakThemeProvider wraps Styled Components ThemeProvider allowing the use of the custom type OakTheme.
- *
- */
-
 const meta: Meta<typeof OakThemeProvider> = {
   component: OakThemeProvider,
   tags: ["autodocs"],

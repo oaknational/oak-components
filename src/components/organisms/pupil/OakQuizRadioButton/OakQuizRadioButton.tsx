@@ -65,6 +65,11 @@ const StyledOakFlex = styled(OakFlex)<StyledOakFlexProps>`
     `}
 `;
 
+/**
+ * A radio button representing the options in a multiple choice question.
+ *
+ * Use with `OakRadioGroup` to create a group of radio buttons.
+ */
 export const OakQuizRadioButton = (props: OakQuizRadioButtonProps) => {
   const { value, feedback, image, disabled, label, ...rest } = props;
   const showFeedback = !!feedback;

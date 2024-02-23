@@ -9,16 +9,6 @@ import { flexArgTypes } from "@/storybook-helpers/flexStyleHelpers";
 import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
 import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";
 
-/**
- *
-
- * ## Usage
- *
- * Use within OakRadioGroup component.
- *
- *
- */
-
 const meta: Meta<typeof OakRadioButton> = {
   component: OakRadioButton,
   tags: ["autodocs"],

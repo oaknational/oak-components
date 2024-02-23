@@ -10,19 +10,6 @@ import { OakImage, OakImageProps } from "./OakImage";
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 import { colorFilterArgTypes } from "@/storybook-helpers/colorFilterStyleHelpers";
 
-/**
- *
- * - A wrapper for NextJs's Image component.
- * - Use this for all image types as well as icons.
- * - Can accept remote urls provided they are whitelisted in next.config.js and relative urls for local images provided they begin with a "/".
- * - Set the width and height of the image through the `$width` and `$height` props when the aspect ratio is not known. This will letterbox the image to avoid stretching.
- * - Alternatively pass `width` and `height` props when the aspect ratio is known and use $minWidth to set the rendered width, avoiding letter-boxing.
- * - NB. for letterboxed images, $background controls the color of the letterbox not the image.
- * - `positionStyle` and `spacingStyle` props are also exposed for container.
- * - sizes is exposed for further optimisation read Next docs for more info.
- *
- */
-
 const meta: Meta<typeof OakImage> = {
   component: OakImage,
   tags: ["autodocs"],

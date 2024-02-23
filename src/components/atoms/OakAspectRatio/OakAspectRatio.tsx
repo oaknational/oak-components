@@ -53,6 +53,7 @@ const OakAspectRatioInner = styled.div`
 export type OakAspectRatioProps = {
   children?: React.ReactNode;
 } & OakAspectRatioOuterProps;
+
 /**
  *
  * AspectRatio provides a container of fixed aspect ratio

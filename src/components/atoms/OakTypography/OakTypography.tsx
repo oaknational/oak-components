@@ -15,7 +15,6 @@ export type OakTypographyProps = OakBoxProps & TypographyStyleProps;
  * This should be the primary component to set a typography context.
  * Use this component whenever you want to style blocks of 'body' text.
  */
-
 export const OakTypography = styled(OakBox)<OakTypographyProps>`
   ${typographyStyle}
 `;

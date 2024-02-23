@@ -6,12 +6,6 @@ import { OakLoadingSpinner, OakLoadingSpinnerProps } from "./OakLoadingSpinner";
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 
-/**
- *
- * A loading spinner of variable size.
- *
- */
-
 const meta: Meta<typeof OakLoadingSpinner> = {
   component: OakLoadingSpinner,
   tags: ["autodocs"],

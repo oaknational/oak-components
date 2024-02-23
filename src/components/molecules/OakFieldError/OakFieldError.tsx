@@ -8,6 +8,11 @@ export type OakFieldErrorProps = {
   children?: React.ReactNode;
 };
 
+/**
+ *
+ * OakFieldError renders a error message when passed children.
+ *
+ */
 export const OakFieldError = (props: OakFieldErrorProps) => {
   const { children } = props;
   if (!children) {

@@ -13,6 +13,9 @@ type OakQuizTextInputProps = Omit<
   feedback?: "correct" | "incorrect" | null;
 };
 
+/**
+ * A text input for a free-text question in a quiz
+ */
 export const OakQuizTextInput = ({
   feedback,
   readOnly,

@@ -11,12 +11,6 @@ import {
 import { OakFlex, OakP } from "@/components/atoms";
 import { OakPrimaryInvertedButton } from "@/components/molecules";
 
-/**
- *
- * OakLessonInfoCards are created using the custom card either oakLessoninfoCard or oakStaticMessageCard and the content is added as children. And use the oakCardHeader to create the header of the card.
- *
- */
-
 const meta: Meta<typeof OakLessonInfoCard> = {
   component: OakLessonInfoCard,
   tags: ["autodocs"],

@@ -126,6 +126,11 @@ export type OakRadioButtonProps = {
 } & OakBoxProps &
   RadioButtonLabelProps;
 
+/**
+ * A radio button component.
+ *
+ * Use within `OakRadioGroup` component.
+ */
 export const OakRadioButton = forwardRef<HTMLInputElement, OakRadioButtonProps>(
   (props, ref) => {
     const radioContext = useContext(RadioContext);

@@ -23,7 +23,6 @@ export type OakLIProps = OakFlexProps &
  * Places where we directly want to style a list item
  *
  **/
-
 export const OakLI = styled.li<OakLIProps>`
   ${oakBoxCss}
   ${typographyStyle}

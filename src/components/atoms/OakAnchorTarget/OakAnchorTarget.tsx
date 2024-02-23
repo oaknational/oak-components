@@ -4,6 +4,8 @@ import { PaddingStyleProps } from "@/styles/utils/spacingStyle";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { responsiveStyle } from "@/styles/utils/responsiveStyle";
 
+export type OakAnchorTargetProps = PaddingStyleProps;
+
 /**
  *  * AnchorTarget is a component to enable in-page linking to a particular section
  *
@@ -15,9 +17,6 @@ import { responsiveStyle } from "@/styles/utils/responsiveStyle";
  * it a unique 'id'. Then link it elsewhere using `<a href='#${id}' />`.
  *
  * */
-
-export type OakAnchorTargetProps = PaddingStyleProps;
-
 export const OakAnchorTarget = styled.span<OakAnchorTargetProps>`
   position: absolute;
   top: 0;

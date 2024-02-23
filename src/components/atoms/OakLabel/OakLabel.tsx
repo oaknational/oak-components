@@ -7,6 +7,7 @@ import {
 import { ColorStyleProps, colorStyle } from "@/styles/utils/colorStyle";
 
 export type OakLabelProps = TypographyStyleProps & ColorStyleProps;
+
 /**
  * Label renders a `label` element, exposing all the typography props.
  * ## Usage

@@ -21,6 +21,19 @@ const StyledInternalShadowRoundButton = styled(InternalShadowRoundButton)`
   }
 `;
 
+/**
+ *
+ * A specific implementation of InternalShadowRoundButton
+ *
+ * The following callbacks are available for tracking focus events:
+ *
+ * ### onClick
+ * `onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;`
+ *
+ * ### onHovered
+ *  `onHovered?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, duration: number) => void;`<br>
+ *  called after a mouseEnter and mouseLeave event has happened
+ */
 export const OakHintButton = (props: OakHintButtonProps) => {
   const { isOpen, disabled } = props;
   return (

@@ -6,6 +6,10 @@ export type OakQuizCounterProps = {
   counter: number;
   total: number;
 };
+
+/**
+ * A counter representing progress through the questions in a quiz
+ */
 export const OakQuizCounter = (props: OakQuizCounterProps) => {
   const { counter, total } = props;
   return (
