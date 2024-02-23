@@ -1,4 +1,4 @@
-<img alt="Oak National Academy" src="https://github.com/oaknational/oak-components/assets/122096/3b34c863-ff79-403a-a38e-0c997003909c" width="300" />
+<img alt="Oak National Academy" src="https://github.com/oaknational/oak-components/assets/122096/3b34c863-ff79-403a-a38e-0c997003909c" width="300" style="margin-bottom: 2rem" />
 
 # Oak Components
 
@@ -19,6 +19,20 @@ You can install it using `npm i @oaknational/oak-components` or any other packag
 3. run `nvm use`
 4. run `npm install`
 5. To view the storybook run `npm run storybook`
+
+## Testing components inside a host app like OWA
+
+Sometimes it isn't enough to develop entirely inside Storybook and it might be necessary to try local changes inside a target app. You can do this with [yalc](https://github.com/wclr/yalc)
+
+1. Install yalc `npm i yalc -g`
+2. Run `npm run publish:local` to add the package to yalc's local registry.
+3. Inside the target app run `yalc add @oaknational/oak-components` — this will install the package from the local registry like it would from NPM
+   - 🚨 if you're an Oak engineer developing in OWA there is a convenience script and you should use `npm run use-local-components` instead
+     as it will perform some additional work to remove any existing installation of the package.
+4. Now when you start your target app you should have access to the locally packaged version of the library
+5. To uninstall the local package you can run `yalc remove @oaknational/oak-components` inside the target app
+   - 🚨 if you're an Oak engineer developing in OWA there is a convenience script and you should use `npm run remove-local-components` instead
+     as it will automaticallyt re-install the library from NPM.
 
 ## Structure
 
