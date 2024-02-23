@@ -31,10 +31,10 @@
   "license": "ISC",
   "peerDependencies": {
     "next": "13.4.4 - 14",
+    "next-cloudinary": "^5.20.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "styled-components": "^5.3.11",
-    "next-cloudinary": "^5.20.0"
+    "styled-components": "^5.3.11"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.4",
@@ -44,6 +44,8 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.5",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^11.0.2",
     "@storybook/addon-a11y": "^7.6.7",
     "@storybook/addon-essentials": "^7.6.7",
     "@storybook/addon-interactions": "^7.6.7",
@@ -99,6 +101,25 @@
     "url": "https://github.com/oaknational/oak-components/issues"
   },
   "homepage": "https://github.com/oaknational/oak-components#readme",
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json"
+          ],
+          "message": "build(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
+    ]
+  },
   "overrides": {
     "jsdom": "24.0.0"
   }
