@@ -37,6 +37,15 @@ export type OakRadioGroupProps = {
   ColorStyleProps &
   Pick<FlexStyleProps, "$flexDirection" | "$alignItems" | "$gap">;
 
+/**
+ *
+ * OakRadioGroup allow users to select a single item from a list of mutually exclusive options .
+ * OakRadioGroup consists of a set of OakRadioButtons, and a label. Each radio includes a label and a visual selection indicator. A single radio button within the group can be selected at a time. Users may click or touch a radio button to select it, or use the Tab key to navigate to the group, the arrow keys to navigate within the group, and the Space key to select an option.
+ * ## Usage
+ *
+ * use the callback onChange to get the value of the selected radio button.
+ *
+ */
 export const OakRadioGroup = (props: OakRadioGroupProps) => {
   const {
     name,

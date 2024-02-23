@@ -11,21 +11,6 @@ import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 
 const controlIconNames = [null, [...oakIconNames].sort()].flat();
 
-/**
- *
- * A styled button with round icons, not intended to be used directly. 
- * Instead used by OakTertiaryButton and OakHintButton.
- * 
- * The following callbacks are available for tracking focus events:
- *
- * ### onClick
- * `onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;`
-
- * ### onHovered
- *  `onHovered?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, duration: number) => void;`<br>
- *  called after a mouseEnter and mouseLeave event has happened
- */
-
 const meta: Meta<typeof InternalShadowRoundButton> = {
   component: InternalShadowRoundButton,
   tags: ["autodocs"],

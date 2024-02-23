@@ -7,19 +7,6 @@ import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
 import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";
 
-/**
- *
- * An unstyled button to be used as a basis for all UI button components.
- * The following callbacks are available for tracking focus events:
- *
- * ### onClick
- * `onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;`
-
- * ### onHovered
- *  `onHovered?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, duration: number) => void;`<br>
- *  called after a mouseEnter and mouseLeave event has happened
- */
-
 const meta: Meta<typeof InternalButton> = {
   component: InternalButton,
   tags: ["autodocs"],

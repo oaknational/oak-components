@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 
 import { OakRoundIconProps } from "../OakRoundIcon";
 
-import { PolymorphicPropsWithoutRef } from "@/components/utils/polymorphic";
+import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
 import { OakBox, OakFlex, OakSpan } from "@/components/atoms";
 import {
   InternalButton,
@@ -97,6 +97,20 @@ const StyledButtonWrapper = styled(OakBox)<{
   `}
 `;
 
+/**
+ *
+ * A styled button with round icons, not intended to be used directly. 
+ * Instead used by OakTertiaryButton and OakHintButton.
+ * 
+ * The following callbacks are available for tracking focus events:
+ *
+ * ### onClick
+ * `onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;`
+
+ * ### onHovered
+ *  `onHovered?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, duration: number) => void;`<br>
+ *  called after a mouseEnter and mouseLeave event has happened
+ */
 export const InternalShadowRoundButton = <C extends ElementType = "button">(
   props: InternalShadowRoundButtonProps & PolymorphicPropsWithoutRef<C>,
 ) => {

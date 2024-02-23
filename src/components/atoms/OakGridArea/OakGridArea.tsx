@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css, CSSProperties } from "styled-components";
 
 import {
   responsiveStyle,
@@ -12,20 +12,38 @@ type ColRowSpan = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 export type OakGridAreaProps = {
   /**
    * Determines the number of columns the element should span.
+   *
+   * Accepts a value from 0-12 or a responsive value of 0-12.
    */
   $colSpan: ResponsiveValues<ColRowSpan>;
   /**
    * Determines the number of rows the element should span.
+   *
+   * Accepts a value from 0-12 or a responsive value of 0-12.
    */
   $rowSpan?: ResponsiveValues<ColRowSpan>;
-  $order?: ResponsiveValues<number>;
+  /**
+   * Sets the order of the element.
+   *
+   * Accepts a number or a responsive array of numbers.
+   */
+  $order?: ResponsiveValues<CSSProperties["order"]>;
   /**
    * The start column of the element.
+   *
+   * Accepts a value from 0-12 or a responsive value of 0-12.
    */
   $colStart?: ResponsiveValues<ColRowSpan>;
+  /**
+   * The end column of the element.
+   *
+   * Accepts a value from 0-12 or a responsive value of 0-12.
+   */
   $colEnd?: ResponsiveValues<ColRowSpan>;
   /**
    * The start row of the element.
+   *
+   * Accepts a value from 0-12 or a responsive value of 0-12.
    */
   $rowStart?: ResponsiveValues<ColRowSpan>;
 } & SpacingStyleProps;

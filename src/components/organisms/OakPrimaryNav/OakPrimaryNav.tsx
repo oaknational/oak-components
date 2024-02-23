@@ -12,6 +12,9 @@ export type OakPrimaryNavProps = {
   navItems: OakPrimaryNavItemProps[];
 };
 
+/**
+ * A row of buttons for navigating between different sections
+ */
 export const OakPrimaryNav = ({ ariaLabel, navItems }: OakPrimaryNavProps) => {
   return (
     <nav aria-label={ariaLabel}>

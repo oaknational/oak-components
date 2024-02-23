@@ -9,31 +9,6 @@ import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
 import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";
 import { flexArgTypes } from "@/storybook-helpers/flexStyleHelpers";
 
-/**
- *
- * Default checkbox which can be extended to create specialised checkboxes.
- * - if provided, displayValue is used to display a different value to the value prop.
- *
- *
- * ## Events
- * The following callbacks are available for tracking focus events:
- *
- * ### onChange
- * onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
- *
- * ### onFocus
- *   onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
- *
- * ### onBlur
- *    onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
- *
- * ### onHovered
- *  `onHovered?: (id, value, duration: number) => void;`<br>
- *  called after a mouseEnter and mouseLeave event has happened
- *
- *
- */
-
 const meta: Meta<typeof OakCheckBox> = {
   component: OakCheckBox,
   tags: ["autodocs"],

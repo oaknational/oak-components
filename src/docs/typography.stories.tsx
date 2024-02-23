@@ -2,7 +2,7 @@ import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
 import { OakFlex, OakSpan } from "@/components/atoms";
-import { oakFontTokens } from "@/styles/theme/typography";
+import { OakFontToken, oakFontTokens } from "@/styles/theme/typography";
 
 /**
  *
@@ -23,7 +23,7 @@ export const AllFonts: Story = {
   render: (args) => (
     <OakFlex $flexDirection={"column"} $gap="space-between-m" {...args}>
       {Object.keys(oakFontTokens).map((fontToken) => (
-        <OakSpan key={fontToken} $font={fontToken}>
+        <OakSpan key={fontToken} $font={fontToken as OakFontToken}>
           {fontToken}
         </OakSpan>
       ))}

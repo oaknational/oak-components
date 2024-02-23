@@ -148,6 +148,9 @@ const StyledOverlay = styled(OakBox)`
   pointer-events: none;
 `;
 
+/**
+ * A checkbox representing the options in a multiple choice question.
+ */
 export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
   const {
     id,

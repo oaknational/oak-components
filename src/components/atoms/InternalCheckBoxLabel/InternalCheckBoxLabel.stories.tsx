@@ -5,12 +5,6 @@ import { InternalCheckBoxLabel } from "./InternalCheckBoxLabel";
 
 import { flexArgTypes } from "@/storybook-helpers/flexStyleHelpers";
 
-/**
- *
- * Specialised Label Component can be used and extended to create various different versions of CheckboxLabels
- *
- */
-
 const meta: Meta<typeof InternalCheckBoxLabel> = {
   component: InternalCheckBoxLabel,
   tags: ["autodocs"],

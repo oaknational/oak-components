@@ -10,6 +10,11 @@ import {
 type Transition = OakTransitionToken;
 
 export type TransitionStyleProps = {
+  /**
+   * Sets the `transition` CSS property of the element.
+   *
+   * Accepts a transition token or a responsive array of transition tokens.
+   */
   $transition?: ResponsiveValues<Transition>;
 };
 

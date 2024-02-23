@@ -8,6 +8,11 @@ export type OakThemeProviderProps = {
   children: React.ReactNode;
 };
 
+/**
+ *
+ * OakThemeProvider wraps Styled Components ThemeProvider allowing the use of the custom type OakTheme.
+ *
+ */
 export const OakThemeProvider = ({
   theme,
   children,

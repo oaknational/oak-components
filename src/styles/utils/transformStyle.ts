@@ -6,7 +6,17 @@ import {
 } from "@/styles/utils/responsiveStyle";
 
 export type TransformStyleProps = {
+  /**
+   * Sets the `transform` CSS property of the element.
+   *
+   * Accepts a `transform` value or a responsive array of `transform` values. Can be nulled.
+   */
   $transform?: ResponsiveValues<CSSProperties["transform"] | null>;
+  /**
+   * Sets the `transform-origin` CSS property of the element.
+   *
+   * Accepts a `transform-origin` value or a responsive array of `transform-origin` values. Can be nulled.
+   */
   $transformOrigin?: ResponsiveValues<CSSProperties["transformOrigin"] | null>;
 };
 

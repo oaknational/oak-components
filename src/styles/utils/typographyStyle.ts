@@ -19,11 +19,41 @@ import {
 } from "@/styles/utils/responsiveStyle";
 
 export type TypographyStyleProps = {
+  /**
+   * Sets the `font-size`, `line-height`, `font-weight` and `letter-spacing` of the element.
+   *
+   * Accepts a font token or a responsive array of font tokens.
+   */
   $font?: ResponsiveValues<OakFontToken>;
+  /**
+   * Sets the `text-decoration` CSS property of the element.
+   *
+   * Accepts a text-decoration token or a responsive array of text-decoration tokens.
+   */
   $textDecoration?: ResponsiveValues<OakTextDecoration>;
+  /**
+   * Sets the `text-align` CSS property of the element.
+   *
+   * Accepts a `text-align` value or a responsive array of `text-align` values.
+   */
   $textAlign?: ResponsiveValues<CSSProperties["textAlign"]>;
+  /**
+   * Sets the `white-space` CSS property of the element.
+   *
+   *  Accepts a white-space token or a responsive array of white-space tokens.
+   */
   $whiteSpace?: ResponsiveValues<OakWhiteSpace>;
+  /**
+   * Sets the `word-wrap` CSS property of the element.
+   *
+   * Accepts a word-wrap token or a responsive array of word-wrap tokens.
+   */
   $wordWrap?: ResponsiveValues<OakWordWrap>;
+  /**
+   * Sets the `text-overflow` CSS property of the element.
+   *
+   * Accepts a text-overflow token or a responsive array of text-overflow tokens.
+   */
   $textOverflow?: ResponsiveValues<OakTextOverflow>;
 };
 

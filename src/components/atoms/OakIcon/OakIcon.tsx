@@ -9,6 +9,11 @@ export const oakIconNames = Object.keys(icons) as IconName[];
 export type OakIconName = IconName;
 
 export type OakIconProps = Omit<OakImageProps, "alt" | "src"> & {
+  /**
+   * The name of the icon to display
+   *
+   * Accepts an icon name token
+   */
   iconName: OakIconName;
   alt?: string;
 };
@@ -20,6 +25,9 @@ export function isValidIconName(iconName: string): iconName is OakIconName {
   return oakIconNames.includes(iconName as OakIconName);
 }
 
+/**
+ * A wrapper around OakImage which uses the image-map.json file to map icon names to image paths.
+ */
 export const OakIcon = (props: OakIconProps) => {
   const {
     iconName,

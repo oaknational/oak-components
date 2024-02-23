@@ -14,41 +14,6 @@ import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
 import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 
-/**
- *
- * These components can be used with InternalCheckBoxWrapper which allows for customisable icons
- *
- * Several flavours of checkbox are created here:
- *  - Default
- *  - Hover decorations
- *  - Focus decorations
- *  - Hover + Focus decorations
- *
- * NB. Hover decorations must be wrapped in a box with position relative to allow for the hover effect to work
- *
- * As they are styled components they can be further customised in implementation. Alternatively additional
- * components can be created here.
- *
- *
- * ## Events
- * The following callbacks are available for tracking focus events:
- *
- * ### onChange
- * onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
- *
- * ### onFocus
- *   onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
- *
- * ### onBlur
- *    onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
- *
- * ### onHovered
- *  `onHovered?: (id, value, duration: number) => void;`<br>
- *  called after a mouseEnter and mouseLeave event has happened
- *
- *
- */
-
 const meta: Meta<typeof InternalCheckBox> = {
   component: InternalCheckBox,
   tags: ["autodocs"],

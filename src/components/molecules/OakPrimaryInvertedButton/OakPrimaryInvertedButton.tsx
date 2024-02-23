@@ -4,21 +4,7 @@ import {
   InternalShadowRectButton,
   InternalShadowRectButtonProps,
 } from "@/components/molecules/InternalShadowRectButton";
-import { PolymorphicPropsWithoutRef } from "@/components/utils/polymorphic";
-
-/**
- *
- * A specific implementation of InternalRectButton
- *
- * The following callbacks are available for tracking focus events:
- *
- * ### onClick
- * `onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;`
- *
- * ### onHovered
- *  `onHovered?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, duration: number) => void;`<br>
- *  called after a mouseEnter and mouseLeave event has happened
- */
+import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
 
 export type OakPrimaryInvertedButtonProps = Omit<
   InternalShadowRectButtonProps,
@@ -33,6 +19,19 @@ export type OakPrimaryInvertedButtonProps = Omit<
   | "disabledTextColor"
 >;
 
+/**
+ *
+ * A specific implementation of InternalRectButton
+ *
+ * The following callbacks are available for tracking focus events:
+ *
+ * ### onClick
+ * `onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;`
+ *
+ * ### onHovered
+ *  `onHovered?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, duration: number) => void;`<br>
+ *  called after a mouseEnter and mouseLeave event has happened
+ */
 export const OakPrimaryInvertedButton = <C extends ElementType = "button">({
   element,
   ...rest

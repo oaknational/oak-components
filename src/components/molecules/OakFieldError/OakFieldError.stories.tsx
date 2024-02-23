@@ -3,12 +3,6 @@ import { Meta, StoryObj } from "@storybook/react";
 
 import { OakFieldError, OakFieldErrorProps } from "./OakFieldError";
 
-/**
- *
- * OakFieldError renders a error message when passed children.
- *
- */
-
 const meta: Meta<typeof OakFieldError> = {
   component: OakFieldError,
   tags: ["autodocs"],

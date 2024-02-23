@@ -23,6 +23,14 @@ export type InternalCheckBoxWrapperProps = {
   checkedIcon?: React.JSX.Element;
 };
 
+/**
+ *
+ * This component is a wrapper for the InternalCheckBox component. It allows for customisable icons.
+ *
+ * NB. size must have the same value as the InternalCheckBox width and height
+ *
+ *
+ */
 export const InternalCheckBoxWrapper = (
   props: InternalCheckBoxWrapperProps,
 ) => {

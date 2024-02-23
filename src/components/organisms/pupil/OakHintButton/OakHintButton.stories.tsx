@@ -6,20 +6,6 @@ import { OakHintButton } from "./OakHintButton";
 import { OakFlex, OakThemeProvider } from "@/components/atoms";
 import { oakDefaultTheme } from "@/styles";
 
-/**
- *
- * A specific implementation of InternalShadowRoundButton
- *
- * The following callbacks are available for tracking focus events:
- *
- * ### onClick
- * `onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;`
- *
- * ### onHovered
- *  `onHovered?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, duration: number) => void;`<br>
- *  called after a mouseEnter and mouseLeave event has happened
- */
-
 const meta: Meta<typeof OakHintButton> = {
   component: OakHintButton,
   tags: ["autodocs"],

@@ -80,6 +80,22 @@ export const oakBoxCss = css<OakBoxProps>`
     `}
 `;
 
+/**
+ * OakBox exposes all the styles that are available styles on a div tag. These include:
+ * - color
+ * - size
+ * - display
+ * - spacing
+ * - position
+ * - border
+ * - opacity
+ * - z-index
+ * - typography
+ * - transition
+ * - transform
+ * - drop-shadow
+ *
+ */
 export const OakBox = styled.div<OakBoxProps>`
   ${oakBoxCss}
 `;

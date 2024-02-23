@@ -6,7 +6,7 @@ import { OakLoadingSpinner } from "../OakLoadingSpinner";
 import {
   PolymorphicPropsWithRef,
   PolymorphicRef,
-} from "@/components/utils/polymorphic";
+} from "@/components/polymorphic";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";

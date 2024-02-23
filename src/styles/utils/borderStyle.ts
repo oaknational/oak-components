@@ -4,7 +4,7 @@ import {
   OakBorderRadiusToken,
   OakBorderWidthToken,
 } from "@/styles/theme/borders";
-import { OakColorToken, OakUiRoleToken } from "@/styles/theme/color";
+import { OakCombinedColorToken } from "@/styles/theme/color";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseBorder } from "@/styles/helpers/parseBorder";
 import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
@@ -15,25 +15,100 @@ import {
 
 type BorderWidth = ResponsiveValues<OakBorderWidthToken>;
 type _BorderStyleProps = ResponsiveValues<CSSProperties["borderStyle"]>;
-type BorderColorProps = ResponsiveValues<OakUiRoleToken | OakColorToken>;
+type BorderColorProps = ResponsiveValues<OakCombinedColorToken>;
 type BorderRadiusProps = ResponsiveValues<OakBorderRadiusToken>;
 
 export type BorderStyleProps = {
+  /**
+   * Apply border on all sides
+   *
+   * Accepts a border-width token or a responsive array of border-width tokens
+   */
   $ba?: BorderWidth;
+  /**
+   * Apply border to the top
+   *
+   * Accepts a border-width token or a responsive array of border-width tokens
+   */
   $bt?: BorderWidth;
+  /**
+   * Apply border to the right
+   *
+   * Accepts a border-width token or a responsive array of border-width tokens
+   */
   $br?: BorderWidth;
+  /**
+   * Apply border to the bottom
+   *
+   * Accepts a border-width token or a responsive array of border-width tokens
+   */
   $bb?: BorderWidth;
+  /**
+   * Apply border to the left
+   *
+   * Accepts a border-width token or a responsive array of border-width tokens
+   */
   $bl?: BorderWidth;
+  /**
+   * Apply border to the left and right
+   *
+   * Accepts a border-width token or a responsive array of border-width tokens
+   */
   $bh?: BorderWidth;
+  /**
+   * Apply border to the top and bottom
+   *
+   * Accepts a border-width token or a responsive array of border-width tokens
+   */
   $bv?: BorderWidth;
+  /**
+   * Apply `border-style` to the element
+   *
+   * Accepts a single value or a responsive array of values.
+   */
   $borderStyle?: _BorderStyleProps;
+  /**
+   * Apply a border color to all sides of the element
+   *
+   * Accepts a color token or a responsive array of color tokens.
+   */
   $borderColor?: BorderColorProps;
   $borderRadius?: BorderRadiusProps;
+  /**
+   * Apply border radius to the top left
+   *
+   * Accepts an `OakBorderRadiusToken` or a responsive array of `OakBorderRadiusToken`s.
+   */
   $btlr?: BorderRadiusProps;
+  /**
+   * Apply border radius to the top right
+   *
+   * Accepts a border-radius token or a responsive array of border-radius tokens.
+   */
   $btrr?: BorderRadiusProps;
+  /**
+   * Apply border radius to the bottom left
+   *
+   * Accepts a border-radius token or a responsive array of border-radius tokens.
+   */
   $bblr?: BorderRadiusProps;
+  /**
+   * Apply border radius to the bottom right
+   *
+   * Accepts a border-radius token or a responsive array of border-radius tokens.
+   */
   $bbrr?: BorderRadiusProps;
+  /**
+   * Apply border radius to the top right and top left
+   *
+   * Accepts a border-radius token or a responsive array of border-radius tokens.
+   */
   $btr?: BorderRadiusProps;
+  /**
+   * Apply border radius to the bottom right and bottom left
+   *
+   * Accepts a border-radius token or a responsive array of border-radius tokens
+   */
   $bbr?: BorderRadiusProps;
 };
 

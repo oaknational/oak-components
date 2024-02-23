@@ -5,13 +5,6 @@ import { OakHeading, OakHeadingProps, oakHeadingTags } from "./OakHeading";
 
 import { typographyArgTypes } from "@/storybook-helpers/typographyStyleHelpers";
 
-/**
- *
- * OakHeading can be one of the following style tags dependant on its role: "div" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6".
- * Use the controls to view different font styles.
- *
- */
-
 const meta: Meta<typeof OakHeading> = {
   component: OakHeading,
   tags: ["autodocs"],

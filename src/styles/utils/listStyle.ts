@@ -6,6 +6,11 @@ import {
 } from "@/styles/utils/responsiveStyle";
 
 export type ListStyleProps = {
+  /**
+   * Sets the `list-style` CSS property of the element.
+   *
+   * Accepts a `list-style` value or a responsive array of `list-style` values.
+   */
   $listStyle?: ResponsiveValues<CSSProperties["listStyle"]>;
 };
 

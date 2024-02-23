@@ -6,6 +6,9 @@ export type OakBulletListProps = {
   listItems: string[];
 } & OakSpanProps;
 
+/**
+ * An inline bulleted list
+ */
 export const OakBulletList = (props: OakBulletListProps) => {
   const { listItems, ...rest } = props;
   return (

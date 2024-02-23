@@ -1,14 +1,18 @@
+<img alt="Oak National Academy" src="https://github.com/oaknational/oak-components/assets/122096/3b34c863-ff79-403a-a38e-0c997003909c" width="300" style="margin-bottom: 2rem" />
+
 # Oak Components
 
 ## Overview
 
-This is a React Typescript components library which supports React and Next applications produced by [Oak National Academy](https://www.thenational.academy/). A storybook for the components can be found [here](https://lively-meringue-8ebd43.netlify.app/) please consult OnePassword for access.
+This is a React Typescript components library which supports React and Next applications produced by [Oak National Academy](https://www.thenational.academy/). A Storybook for the components can be found [here](https://lively-meringue-8ebd43.netlify.app/) please consult 1Password for access.
 
-## Usage
+## Installation
 
-TODO: Instructions for how to add Oak Components to a React App
+This library is suitable for use in an app using React 18 and Next.js 13+
 
-## Install for development
+You can install it using `npm i @oaknational/oak-components` or any other package manager that supports the NPM registry.
+
+## Development
 
 1. Copy the example env config `cp .env.example .env`
 2. Ask a colleague for the values to populate `.env`
@@ -16,7 +20,25 @@ TODO: Instructions for how to add Oak Components to a React App
 4. run `npm install`
 5. To view the storybook run `npm run storybook`
 
+## Testing components inside a host app like OWA
+
+Sometimes it isn't enough to develop entirely inside Storybook and it might be necessary to try local changes inside a target app. You can do this with [yalc](https://github.com/wclr/yalc)
+
+1. Install yalc `npm i yalc -g`
+2. Run `npm run publish:local` to add the package to yalc's local registry.
+3. Inside the target app run `yalc add @oaknational/oak-components` — this will install the package from the local registry like it would from NPM
+   - 🚨 if you're an Oak engineer developing in OWA there is a convenience script and you should use `npm run use-local-components` instead
+     as it will perform some additional work to remove any existing installation of the package.
+4. Now when you start your target app you should have access to the locally packaged version of the library
+5. To uninstall the local package you can run `yalc remove @oaknational/oak-components` inside the target app
+   - 🚨 if you're an Oak engineer developing in OWA there is a convenience script and you should use `npm run remove-local-components` instead
+     as it will automaticallyt re-install the library from NPM.
+
 ## Structure
+
+We're trying to follow the tenets of "Atomic design". [Brad Frost's book](https://atomicdesign.bradfrost.com/) is
+a great resource if you're just starting out building your first component for this library. It's also a great reference
+if you're in doubt as to where a component belongs (it can be a little fuzzy at times!).
 
 Components are organised into a three tier hierarchical structure applying the following rules:
 
@@ -28,7 +50,7 @@ Components are organised into a three tier hierarchical structure applying the f
 - Unstyled
 - Avoid embedded logic and state
 - No sub-components
-  (eg. Box)
+  (eg. `Box`)
 
 ### Molecules
 
@@ -38,7 +60,7 @@ Components are organised into a three tier hierarchical structure applying the f
 - Styled
 - Avoid embedded logic and state
 - No sub-components
-  (eg. IconButton)
+  (eg. `IconButton`)
 
 ### Organisms
 
@@ -48,6 +70,6 @@ Components are organised into a three tier hierarchical structure applying the f
 - Styled
 - May contain embedded logic or state
 - May be split into sub-components
-  (eg. SchoolInputForm)
+  (eg. `SchoolInputForm`)
 
   NB. these rules are a work in progress. Modifications may be required as the library builds.

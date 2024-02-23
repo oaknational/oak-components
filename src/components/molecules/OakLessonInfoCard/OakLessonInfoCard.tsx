@@ -32,6 +32,11 @@ export const OakCardHeader = (props: OakCardHeaderprops) => {
   );
 };
 
+/**
+ *
+ * OakLessonInfoCards are created using the custom card either oakLessoninfoCard or oakStaticMessageCard and the content is added as children. And use the oakCardHeader to create the header of the card.
+ *
+ */
 export const OakLessonInfoCard = (props: OakInfoCardProps) => {
   const { children, ...rest } = props;
 
