@@ -1,3 +1,5 @@
+<img alt="Oak National Academy" src="https://github.com/oaknational/oak-components/assets/122096/3b34c863-ff79-403a-a38e-0c997003909c" width="300" />
+
 # Oak Components
 
 ## Overview
@@ -20,6 +22,10 @@ You can install it using `npm i @oaknational/oak-components` or any other packag
 
 ## Structure
 
+We're trying to follow the tenets of "Atomic design". [Brad Frost's book](https://atomicdesign.bradfrost.com/) is
+a great resource if you're just starting out building your first component for this library. It's also a great reference
+if you're in doubt as to where a component belongs (it can be a little fuzzy at times!).
+
 Components are organised into a three tier hierarchical structure applying the following rules:
 
 ### Atoms
@@ -30,7 +36,7 @@ Components are organised into a three tier hierarchical structure applying the f
 - Unstyled
 - Avoid embedded logic and state
 - No sub-components
-  (eg. Box)
+  (eg. `Box`)
 
 ### Molecules
 
@@ -40,7 +46,7 @@ Components are organised into a three tier hierarchical structure applying the f
 - Styled
 - Avoid embedded logic and state
 - No sub-components
-  (eg. IconButton)
+  (eg. `IconButton`)
 
 ### Organisms
 
@@ -50,6 +56,6 @@ Components are organised into a three tier hierarchical structure applying the f
 - Styled
 - May contain embedded logic or state
 - May be split into sub-components
-  (eg. SchoolInputForm)
+  (eg. `SchoolInputForm`)
 
   NB. these rules are a work in progress. Modifications may be required as the library builds.
