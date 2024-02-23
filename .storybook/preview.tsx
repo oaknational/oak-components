@@ -4,6 +4,7 @@ import type { Decorator, Preview } from "@storybook/react";
 
 import { oakDefaultTheme } from "../src/styles/theme/default.theme";
 import { OakGlobalStyle } from "../src/components/atoms/OakGlobalStyle/OakGlobalStyle";
+import { oakStorybookTheme } from "./oakStorybookTheme";
 
 const globalDecorator: Decorator = (Story, context) => {
   return (
@@ -26,6 +27,9 @@ const preview: Preview = {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
+    },
+    docs: {
+      theme: oakStorybookTheme,
     },
   },
   decorators: [globalDecorator],
