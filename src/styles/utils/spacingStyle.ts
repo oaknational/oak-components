@@ -13,12 +13,47 @@ import {
 type PaddingValues = ResponsiveValues<OakInnerPaddingToken | null | undefined>;
 
 export type PaddingStyleProps = {
+  /**
+   * Applies `padding` to all sides of the element
+   *
+   * Accepts an inner padding token or a responsive array of inner padding tokens. Can be nulled.
+   */
   $pa?: PaddingValues;
+  /**
+   * Applies `padding`  to the left and right of the element
+   *
+   * Accepts an inner padding token or a responsive array of inner padding tokens. Can be nulled.
+   */
   $ph?: PaddingValues;
+  /**
+   * Applies `padding` to the top and bottom of the element
+   *
+   * Accepts an inner padding token or a responsive array of inner padding tokens. Can be nulled.
+   */
   $pv?: PaddingValues;
+  /**
+   * Applies `padding` to the left of the element
+   *
+   * Accepts an inner padding token or a responsive array of inner padding tokens. Can be nulled.
+   */
   $pl?: PaddingValues;
+  /**
+   * Applies `padding` to the right of the element
+   *
+   * Accepts an inner padding token or a responsive array of inner padding tokens. Can be nulled.
+   */
   $pr?: PaddingValues;
+  /**
+   * Applies `padding` to the top of the element
+   *
+   * Accepts an inner padding token or a responsive array of inner padding tokens. Can be nulled.
+   */
   $pt?: PaddingValues;
+  /**
+   * Applies `padding` to the bottom of the element
+   *
+   * Accepts an inner padding token or a responsive array of inner padding tokens. Can be nulled.
+   */
   $pb?: PaddingValues;
 };
 
@@ -26,12 +61,47 @@ type MarginValue = "auto" | OakSpaceBetweenToken | null | undefined;
 type MarginValues = ResponsiveValues<MarginValue>;
 
 export type MarginStyleProps = {
+  /**
+   * Applies `margin` to all sides of the element
+   *
+   * Accepts a space between token or a responsive array of space between tokens. Can be nulled.
+   */
   $ma?: MarginValues;
+  /**
+   * Applies `margin` to the left and right of the element
+   *
+   * Accepts a space between token or a responsive array of space between tokens. Can be nulled.
+   */
   $mh?: MarginValues;
+  /**
+   * Applies `margin` to the top and bottom of the element
+   *
+   * Accepts a space between token or a responsive array of space between tokens. Can be nulled.
+   */
   $mv?: MarginValues;
+  /**
+   * Applies `margin` to the left of the element
+   *
+   * Accepts a space between token or a responsive array of space between tokens. Can be nulled.
+   */
   $ml?: MarginValues;
+  /**
+   * Applies `margin` to the right of the element
+   *
+   * Accepts a space between token or a responsive array of space between tokens. Can be nulled.
+   */
   $mr?: MarginValues;
+  /**
+   * Applies `margin` to the top of the element
+   *
+   * Accepts a space between token or a responsive array of space between tokens. Can be nulled.
+   */
   $mt?: MarginValues;
+  /**
+   * Applies `margin` to the bottom of the element
+   *
+   * Accepts a space between token or a responsive array of space between tokens. Can be nulled.
+   */
   $mb?: MarginValues;
 };
 

@@ -8,6 +8,11 @@ import {
 } from "@/styles/utils/responsiveStyle";
 
 export type OpacityStyleProps = {
+  /**
+   * Sets the `opacity` CSS property of the element.
+   *
+   * Accepts an opacity token or a responsive array of opacity tokens.
+   */
   $opacity?: ResponsiveValues<OakOpacityToken>;
 };
 

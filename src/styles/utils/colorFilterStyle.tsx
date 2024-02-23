@@ -10,6 +10,11 @@ import { OakCombinedColorToken } from "@/styles/theme/color";
 type ColorFilterToken = ResponsiveValues<OakCombinedColorToken | null>;
 
 export type ColorFilterStyleProps = {
+  /**
+   * Applies a color-filter to the element.
+   *
+   * Accepts a color filter token or a responsive array of color tokens.
+   */
   $colorFilter?: ColorFilterToken;
 };
 export const colorFilterStyle = css<ColorFilterStyleProps>`

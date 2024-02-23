@@ -26,7 +26,7 @@ type FontParameters = readonly [
   LetterSpacing,
 ];
 
-export const oakFontTokens: Record<string, FontParameters> = {
+export const oakFontTokens = {
   "heading-1": ["font-size-10", 64, 600, "0.0115rem"],
   "heading-2": ["font-size-9", 56, 600, "0.0115rem"],
   "heading-3": ["font-size-8", 48, 600, "0.0115rem"],
@@ -50,7 +50,7 @@ export const oakFontTokens: Record<string, FontParameters> = {
   "body-3-bold": ["font-size-2", 20, 700, "-0.005rem"],
   "list-item-1": ["font-size-4", 32, 300, "-0.005rem"],
   "list-item-2": ["font-size-3", 24, 300, "-0.005rem"],
-} as const;
+} satisfies Record<string, FontParameters>;
 
 export type OakFontToken = keyof typeof oakFontTokens;
 

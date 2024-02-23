@@ -7,6 +7,11 @@ import {
 } from "@/styles/utils/responsiveStyle";
 
 export type DisplayStyleProps = {
+  /**
+   * Sets the `display` CSS property of the element.
+   *
+   * Accepts a `display` value or a responsive array of `display` values.
+   */
   $display?: ResponsiveValues<CSSProperties["display"]>;
 };
 

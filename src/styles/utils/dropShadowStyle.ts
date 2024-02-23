@@ -8,6 +8,11 @@ import {
 } from "@/styles/utils/responsiveStyle";
 
 export type DropShadowStyleProps = {
+  /**
+   * Applies a drop-shadow to the element.
+   *
+   * Accepts a drop-shadow token or a responsive array of drop-shadow tokens.
+   */
   $dropShadow?: ResponsiveValues<OakDropShadowToken>;
 };
 
