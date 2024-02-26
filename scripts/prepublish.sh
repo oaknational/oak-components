@@ -11,5 +11,3 @@ fi
 
 npm run test:ci
 npm run build
-
-git diff-index --quiet HEAD -- || (echo "Error: You have uncommitted changes. Please commit or stash them before pushing." && exit 1)
