@@ -28,7 +28,6 @@
     "publish:local": "npm run build && yalc publish --no-scripts"
   },
   "author": "",
-  "license": "ISC",
   "peerDependencies": {
     "next": "13.4.4 - 14",
     "next-cloudinary": "^5.20.0",
