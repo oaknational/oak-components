@@ -1,6 +1,11 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+if [ "$CI" == "true" ]; then
+  echo "Skipping pre-commit hook in CI"
+  exit 0
+fi
+
 npm run format:precommit
 npm run lint:precommit
 npm run check-types
