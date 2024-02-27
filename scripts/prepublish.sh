@@ -2,6 +2,11 @@
 
 echo "pre-publish"
 
+if [ "$CI" = "true" ]; then
+  echo "Skipping pre-publish checks on CI"
+  exit 0
+fi;
+
 branch="$(git rev-parse --abbrev-ref HEAD)"
 
 if [ "$branch" != "main" ]; then

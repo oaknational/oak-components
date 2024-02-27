@@ -24,7 +24,6 @@
     "build-storybook": "storybook build",
     "prepare": "husky install",
     "prepublishOnly": "./scripts/prepublish.sh",
-    "postpublish": "./scripts/postpublish.sh",
     "publish:local": "npm run build && yalc publish --no-scripts"
   },
   "author": "",
