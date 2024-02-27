@@ -52,6 +52,7 @@ describe("borderStyle", () => {
     ["$bb", "border-solid-s", "border-bottom: 0.063rem solid"],
     ["$bl", "border-solid-s", "border-left: 0.063rem solid"],
     ["$bt", "border-solid-s", "border-top: 0.063rem solid"],
+    ["$borderStyle", "dashed", "border-style: dashed;"],
   ])("should correctly handle props", (prop, value, expected) => {
     const props = {
       [prop]: value,
