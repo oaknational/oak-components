@@ -21,6 +21,12 @@ const StyledSortableItem = styled(OakFlex)`
     }
   }
 
+  &:focus-visible {
+    outline: none;
+    box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
+      ${parseDropShadow("drop-shadow-centered-grey")};
+  }
+
   &[data-active="true"] {
     cursor: move;
     background-color: ${parseColor("bg-decorative1-main")};
