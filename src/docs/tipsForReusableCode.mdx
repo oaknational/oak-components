@@ -46,6 +46,6 @@ In all cases your component will be a function composed of other atoms, molecule
 ### Decomposition
 - In the most complex cases you might want to decompose the existing component into smaller components. This will then allow you to recompose them, replacing only the parts you want to change.
 - An example of this is `OakCheckBox` and `OakQuizCheckBox` which are composed of `InternalCheckBox`,`InternalCheckBoxLabel` and `InternalCheckBoxWrapper` . This allows the `OakQuizCheckBox` to have a different layout and behaviour to the `OakCheckBox`, but with the same underlying functionality.
-- This is probably the most robust method but the most labour intensive as it involves refactoring the existing component.
+- This is probably the most robust method but the most labour-intensive, as it involves refactoring the existing component.
 - Some risks to look out for are:
     - poor discoverability: make sure the decomposed components are named in relation to what they should compose. Follow [naming conventions](/docs/docs-namingconventions--docs)
