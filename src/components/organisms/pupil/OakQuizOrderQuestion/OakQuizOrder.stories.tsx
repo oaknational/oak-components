@@ -29,11 +29,11 @@ type Story = StoryObj<typeof OakQuizOrder>;
 export const Default: Story = {
   args: {
     initialItems: [
-      { id: "2", children: "Grass" },
-      { id: "3", children: "Sunlight" },
-      { id: "4", children: "Mouse" },
-      { id: "5", children: "Hawk" },
-      { id: "9", children: "Grasshopper" },
+      { id: "2", label: "Grass" },
+      { id: "3", label: "Sunlight" },
+      { id: "4", label: "Mouse" },
+      { id: "5", label: "Hawk" },
+      { id: "9", label: "Grasshopper" },
     ],
   },
 };
@@ -41,16 +41,16 @@ export const Default: Story = {
 export const WithManyOptions: Story = {
   args: {
     initialItems: [
-      { id: "1", children: "Snake" },
-      { id: "2", children: "Grass" },
-      { id: "3", children: "Sunlight" },
-      { id: "4", children: "Mouse" },
-      { id: "5", children: "Hawk" },
-      { id: "6", children: "Rabbit" },
-      { id: "7", children: "Bear" },
-      { id: "8", children: "Fox" },
-      { id: "9", children: "Grasshopper" },
-      { id: "10", children: "Wolf" },
+      { id: "1", label: "Snake" },
+      { id: "2", label: "Grass" },
+      { id: "3", label: "Sunlight" },
+      { id: "4", label: "Mouse" },
+      { id: "5", label: "Hawk" },
+      { id: "6", label: "Rabbit" },
+      { id: "7", label: "Bear" },
+      { id: "8", label: "Fox" },
+      { id: "9", label: "Grasshopper" },
+      { id: "10", label: "Wolf" },
     ],
   },
 };

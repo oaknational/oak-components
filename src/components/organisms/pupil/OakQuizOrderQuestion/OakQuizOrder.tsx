@@ -9,6 +9,8 @@ import {
   DragEndEvent,
   DragOverlay,
   DragStartEvent,
+  UniqueIdentifier,
+  Announcements,
 } from "@dnd-kit/core";
 import {
   arrayMove,
@@ -27,7 +29,7 @@ import { OakSortableSlot } from "@/components/molecules/OakSortableSlot";
 
 type OakQuizOrderItem = {
   id: string;
-  children: ReactNode;
+  label: string;
 };
 
 export type OakQuizOrderProps = {
@@ -61,7 +63,7 @@ const ConnectedOakSortableItem = ({
   showGhost,
   moveOnRelease,
   id,
-  ...props
+  label,
 }: OakQuizOrderItem & {
   slotName: ReactNode;
   animation?: boolean;
@@ -109,8 +111,14 @@ const ConnectedOakSortableItem = ({
         isGhost={isGhostItem}
         {...attributes}
         {...listeners}
-        {...props}
-      />
+        aria-describedby={undefined}
+        aria-roledescription="order item"
+        aria-pressed={undefined}
+        aria-selected={!!attributes["aria-pressed"]}
+        role="option"
+      >
+        {label}
+      </OakSortableItem>
     </OakSortableSlot>
   );
 };
@@ -148,9 +156,17 @@ export const OakQuizOrder = ({
       modifiers={
         restrictToVerticalAxis ? [restrictToVerticalAxisModifier] : undefined
       }
+      accessibility={{
+        announcements: createAccouncements(items),
+      }}
     >
       <SortableContext items={items} strategy={verticalListSortingStrategy}>
-        <OakFlex as="ul" $gap="space-between-s" $flexDirection="column">
+        <OakFlex
+          as="ul"
+          $gap="space-between-s"
+          $flexDirection="column"
+          role="listbox"
+        >
           {items.map((item, i) => (
             <ConnectedOakSortableItem
               key={item.id}
@@ -164,7 +180,9 @@ export const OakQuizOrder = ({
         </OakFlex>
         {createPortal(
           <DragOverlay>
-            {activeItem && <OakSortableItem {...activeItem} isActive />}
+            {activeItem && (
+              <OakSortableItem isActive>{activeItem.label}</OakSortableItem>
+            )}
           </DragOverlay>,
           document.body,
         )}
@@ -192,3 +210,42 @@ export const OakQuizOrder = ({
     setActiveId(null);
   }
 };
+
+function createAccouncements(items: OakQuizOrderItem[]): Announcements {
+  const getPosition = (id: UniqueIdentifier) =>
+    items.findIndex((item) => item.id === id) + 1;
+  const getItemLabel = (id: UniqueIdentifier) =>
+    items.find((item) => item.id === id)?.label;
+  let firstAnnouncement = true;
+
+  return {
+    onDragStart() {
+      return undefined;
+    },
+    onDragOver({ active, over }) {
+      // Don't make an announcement for the first drag over since this is the initial position
+      if (over && !firstAnnouncement) {
+        return `Item ${getItemLabel(
+          active.id,
+        )} was moved into position ${getPosition(over.id)} of ${items.length}`;
+      }
+      firstAnnouncement = false;
+    },
+    onDragEnd({ active, over }) {
+      firstAnnouncement = true;
+      if (over) {
+        return `Item ${getItemLabel(
+          active.id,
+        )} was dropped into position ${getPosition(over.id)} of ${
+          items.length
+        }`;
+      }
+    },
+    onDragCancel({ active }) {
+      firstAnnouncement = true;
+      return `Dragging was cancelled. Item ${getItemLabel(
+        active.id,
+      )} was dropped.`;
+    },
+  };
+}
