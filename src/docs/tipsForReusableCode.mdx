@@ -13,7 +13,7 @@ You need a component to do a slightly different thing than the one you already h
 
 If the change is minor and likely to be useful to other consumers of the component, then you might add the functionality to the existing component and expose this via its props.
 
-Whilst this is probably the easiest to implement it comes with the following dangers.
+Whilst this is probably the easiest to implement, it comes with the following dangers:
 
 - A progressively more complex component which is harder to understand and maintain (the swiss army knife effect)
 - A risk of regressions to other components which use this component: check snapshots and tests carefully
