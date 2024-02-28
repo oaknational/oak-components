@@ -42,6 +42,13 @@ const StyledSortableItem = styled(OakFlex)`
   }
 `;
 
+/**
+ * A sortable list of items with drag and drop functionality
+ *
+ * Items can be dragged over named slots altering the order of items
+ *
+ * There are a few props to experiment with to tailor the UX to what works best for pupils
+ */
 export const OakSortableItem = forwardRef<
   HTMLDivElement,
   OakSortableItemProps & ComponentPropsWithoutRef<typeof OakFlex>

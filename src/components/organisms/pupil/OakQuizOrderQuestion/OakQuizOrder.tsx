@@ -115,6 +115,13 @@ const ConnectedOakSortableItem = ({
   );
 };
 
+/**
+ * A sortable list of items with drag and drop functionality. Items can be dragged over named slots to re-arrange them
+ *
+ * Keyboard navigation is supported with the `tab`, `space` and `arrow` keys
+ *
+ * There are a few props to experiment with to tailor the UX to what works best for pupils
+ */
 export const OakQuizOrder = ({
   initialItems,
   animation,
