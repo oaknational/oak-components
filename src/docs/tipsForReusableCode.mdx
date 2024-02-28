@@ -35,7 +35,7 @@ In all cases your component will be a function composed of other atoms, molecule
 - An example of this is `OakPrimaryButton` which is a specialised version of InternalShadowRectButton
 - This works when you only need to add additional functionality.
 
-### Quasi inheritance
+### Quasi-inheritance
 - If the consumed component is exported as a StyledComponent, you can use the `extend` method to create a new component with the same styles but with aspects overridden.
 - An example of this is `OakHintButton` which is a specialised version of `StyledInternalShadowRoundButton` . Here the shadow style is overridden to give a different behaviour from the parent.
 - This has the danger of breaking encapsulation of the parent component when the style relies on the internal structure of the parent component. Some mitigations are:
