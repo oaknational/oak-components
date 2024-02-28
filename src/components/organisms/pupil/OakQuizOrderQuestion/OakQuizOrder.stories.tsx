@@ -7,6 +7,33 @@ const meta: Meta<typeof OakQuizOrder> = {
   component: OakQuizOrder,
   tags: ["autodocs"],
   title: "components/organisms/pupil/OakQuizOrderQuestion",
+  parameters: {
+    controls: {
+      include: ["animation", "showGhost", "restrictToVerticalAxis"],
+    },
+    backgrounds: {
+      default: "light",
+    },
+  },
+  render: (args) => <OakQuizOrder {...args} />,
+};
+export default meta;
+
+type Story = StoryObj<typeof OakQuizOrder>;
+
+export const Default: Story = {
+  args: {
+    initialItems: [
+      { id: "2", children: "Grass" },
+      { id: "3", children: "Sunlight" },
+      { id: "4", children: "Mouse" },
+      { id: "5", children: "Hawk" },
+      { id: "9", children: "Grasshopper" },
+    ],
+  },
+};
+
+export const WithManyOptions: Story = {
   args: {
     initialItems: [
       { id: "1", children: "Snake" },
@@ -21,19 +48,4 @@ const meta: Meta<typeof OakQuizOrder> = {
       { id: "10", children: "Wolf" },
     ],
   },
-  parameters: {
-    controls: {
-      include: ["animation"],
-    },
-    backgrounds: {
-      default: "light",
-    },
-  },
-};
-export default meta;
-
-type Story = StoryObj<typeof OakQuizOrder>;
-
-export const Default: Story = {
-  render: (args) => <OakQuizOrder {...args} />,
 };

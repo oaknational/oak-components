@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { ReactNode, useState } from "react";
 import {
   DndContext,
   closestCenter,
@@ -18,48 +18,86 @@ import {
   verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
+import { createPortal } from "react-dom";
+import { restrictToVerticalAxis as restrictToVerticalAxisModifier } from "@dnd-kit/modifiers";
 
-import {
-  OakSortableItem,
-  OakSortableItemProps,
-} from "@/components/molecules/OakSortableItem";
-import { OakBox, OakFlex } from "@/components/atoms";
+import { OakSortableItem } from "@/components/molecules/OakSortableItem";
+import { OakFlex } from "@/components/atoms";
+import { OakSortableSlot } from "@/components/molecules/OakSortableSlot";
+
+type OakQuizOrderItem = {
+  id: string;
+  children: ReactNode;
+};
 
 export type OakQuizOrderProps = {
-  initialItems: OakSortableItemProps[];
+  initialItems: OakQuizOrderItem[];
   /**
    * Animate the sorting of items
    */
   animation?: boolean;
+  /**
+   * Show a semi-opaque ghost of the item being dragged
+   *
+   * This provides a visual indication of where the item will be placed
+   */
+  showGhost?: boolean;
+  /**
+   * Restrict to dragging vertically
+   */
+  restrictToVerticalAxis?: boolean;
 };
 
-const ConnectedOakSortableItem = (
-  props: OakSortableItemProps & { animation?: boolean },
-) => {
-  const { attributes, listeners, setNodeRef, transform, transition } =
-    useSortable({ id: props.id });
+const ConnectedOakSortableItem = ({
+  slotName,
+  animation,
+  showGhost,
+  id,
+  ...props
+}: OakQuizOrderItem & {
+  slotName: ReactNode;
+  animation?: boolean;
+  showGhost?: boolean;
+}) => {
+  const {
+    attributes,
+    listeners,
+    setNodeRef,
+    transform,
+    transition,
+    active,
+    over,
+  } = useSortable({ id });
 
   const style = {
     transform: CSS.Transform.toString(transform),
-    transition: props.animation ? transition : undefined,
+    transition: animation ? transition : undefined,
+    opacity: active?.id === id && !showGhost ? 0 : 1,
   };
+  const isGhostItem = active?.id === id && showGhost;
+  const isGhostSlot = over?.id === id && showGhost;
 
   return (
-    <OakSortableItem
-      ref={setNodeRef}
-      style={style}
-      {...attributes}
-      {...listeners}
-      {...props}
-    />
+    <OakSortableSlot slotName={slotName} isGhost={isGhostSlot}>
+      <OakSortableItem
+        ref={setNodeRef}
+        style={style}
+        isGhost={isGhostItem}
+        {...attributes}
+        {...listeners}
+        {...props}
+      />
+    </OakSortableSlot>
   );
 };
 
 export const OakQuizOrder = ({
   initialItems,
   animation,
+  showGhost,
+  restrictToVerticalAxis,
 }: OakQuizOrderProps) => {
-  const [items, setItems] = useState<OakSortableItemProps[]>(initialItems);
+  const [items, setItems] = useState<OakQuizOrderItem[]>(initialItems);
   const [activeId, setActiveId] = useState<string | null>(null);
   const activeItem = items.find((item) => item.id === activeId);
   const sensors = useSensors(
@@ -75,50 +113,28 @@ export const OakQuizOrder = ({
       collisionDetection={closestCenter}
       onDragEnd={handleDragEnd}
       onDragStart={handleDragStart}
+      modifiers={
+        restrictToVerticalAxis ? [restrictToVerticalAxisModifier] : undefined
+      }
     >
       <SortableContext items={items} strategy={verticalListSortingStrategy}>
         <OakFlex as="ul" $gap="space-between-s" $flexDirection="column">
           {items.map((item, i) => (
-            <OakFlex
-              as="li"
-              key={i}
-              $gap="space-between-s"
-              $background="bg-decorative2-subdued"
-              $pa="inner-padding-m"
-              $borderRadius="border-radius-m"
-              $flexGrow={1}
-            >
-              <OakFlex
-                $width="all-spacing-14"
-                $background="bg-decorative2-very-subdued"
-                $borderRadius="border-radius-m"
-                $alignItems="center"
-                $justifyContent="center"
-                $font="heading-3"
-              >
-                {i + 1}
-              </OakFlex>
-              <OakBox
-                $background="bg-neutral"
-                $pa="inner-padding-xs"
-                $borderRadius="border-radius-m"
-                $ba="border-solid-l"
-                $borderStyle="dashed"
-                $borderColor="border-primary"
-                $width="100%"
-              >
-                <ConnectedOakSortableItem
-                  key={item.id}
-                  animation={animation}
-                  {...item}
-                />
-              </OakBox>
-            </OakFlex>
+            <ConnectedOakSortableItem
+              key={item.id}
+              slotName={i + 1}
+              animation={animation}
+              showGhost={showGhost}
+              {...item}
+            />
           ))}
         </OakFlex>
-        <DragOverlay>
-          {activeItem && <OakSortableItem {...activeItem} />}
-        </DragOverlay>
+        {createPortal(
+          <DragOverlay>
+            {activeItem && <OakSortableItem {...activeItem} isActive />}
+          </DragOverlay>,
+          document.body,
+        )}
       </SortableContext>
     </DndContext>
   );
