@@ -1,0 +1,51 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Docs/ReusableCode" />
+
+# Tips for writing resuable code
+
+## Context
+
+You need a component to do a slightly different thing than the one you already have, but you want to avoid duplicating code. What should you do? There's no single correct answer. This guide will show you the options and help you appreciate the trade-offs.
+
+
+## Should I modify the existing component ?
+
+If the change is minor and likely to be useful to other consumers of the component, then you might add the functionality to the existing component and expose this via its props.
+
+Whilst this is probably the easiest to implement, it comes with the following dangers:
+
+- A progressively more complex component which is harder to understand and maintain (the swiss army knife effect)
+- A risk of regressions to other components which use this component; check snapshots and tests carefully
+
+## Should I create a new component ?
+
+In most most cases this is the better option and it follows the [oak components heuristics](/docs/docs-howtodesigncomponents--docs#heuristics-for-component-design) . The key risks to look out for are:
+
+- code duplication: check that there isn't an existing component which does what you need
+- poor discoverability: make sure your component is well named using the [naming conventions](/docs/docs-namingconventions--docs)
+- divergence of components: use patterns of composition and inheritance to avoid this
+
+## Approaches to code reuse
+
+In all cases your component will be a function composed of other atoms, molecules and perhaps organisms. When you want to use the majority of the existing component but with a few changes, you have a few options:
+
+### Pure composition 
+- Simply return the existing component perhaps with some props fixed at certain values or with some extra functionality added in the body of the component. 
+- An example of this is `OakPrimaryButton` which is a specialised version of InternalShadowRectButton
+- This works when you only need to add additional functionality.
+
+### Quasi-inheritance
+- If the consumed component is exported as a StyledComponent, you can use the `extend` method to create a new component with the same styles but with aspects overridden.
+- An example of this is `OakHintButton` which is a specialised version of `StyledInternalShadowRoundButton` . Here the shadow style is overridden to give a different behaviour from the parent.
+- This has the danger of breaking encapsulation of the parent component when the style relies on the internal structure of the parent component. Some mitigations are:
+    - prefix any classnames in the parent component which are used in the child component with `oak-` to indicate that they are part of the public API of the parent component
+    - avoid classnames and use data-attributes instead as css selectors
+    - make sure all of this is explicitly documented in the parent component
+
+### Decomposition
+- In the most complex cases you might want to decompose the existing component into smaller components. This will then allow you to recompose them, replacing only the parts you want to change.
+- An example of this is `OakCheckBox` and `OakQuizCheckBox` which are composed of `InternalCheckBox`,`InternalCheckBoxLabel` and `InternalCheckBoxWrapper` . This allows the `OakQuizCheckBox` to have a different layout and behaviour to the `OakCheckBox`, but with the same underlying functionality.
+- This is probably the most robust method but the most labour-intensive, as it involves refactoring the existing component.
+- Some risks to look out for are:
+    - poor discoverability: make sure the decomposed components are named in relation to what they should compose. Follow [naming conventions](/docs/docs-namingconventions--docs)
