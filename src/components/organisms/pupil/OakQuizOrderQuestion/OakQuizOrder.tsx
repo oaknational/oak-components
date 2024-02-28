@@ -46,18 +46,27 @@ export type OakQuizOrderProps = {
    * Restrict to dragging vertically
    */
   restrictToVerticalAxis?: boolean;
+  /**
+   * Move the item into position when the drag ends
+   *
+   * This does not provide a visual indication of which slot the unseated item will be moved to
+   * only which item will be replaced
+   */
+  moveOnRelease?: boolean;
 };
 
 const ConnectedOakSortableItem = ({
   slotName,
   animation,
   showGhost,
+  moveOnRelease,
   id,
   ...props
 }: OakQuizOrderItem & {
   slotName: ReactNode;
   animation?: boolean;
   showGhost?: boolean;
+  moveOnRelease?: boolean;
 }) => {
   const {
     attributes,
@@ -69,12 +78,27 @@ const ConnectedOakSortableItem = ({
     over,
   } = useSortable({ id });
 
+  const isGhostItem = (() => {
+    if (moveOnRelease) {
+      return over?.id === id && showGhost;
+    }
+
+    return active?.id === id && showGhost;
+  })();
+  const opacity = (() => {
+    if (moveOnRelease) {
+      return active?.id === id ? 0 : 1;
+    }
+
+    return active?.id === id && !showGhost ? 0 : 1;
+  })();
+
   const style = {
-    transform: CSS.Transform.toString(transform),
-    transition: animation ? transition : undefined,
-    opacity: active?.id === id && !showGhost ? 0 : 1,
+    transform: !moveOnRelease && CSS.Transform.toString(transform),
+    transition: !moveOnRelease && animation ? transition : undefined,
+    opacity,
   };
-  const isGhostItem = active?.id === id && showGhost;
+
   const isGhostSlot = over?.id === id && showGhost;
 
   return (
@@ -96,6 +120,7 @@ export const OakQuizOrder = ({
   animation,
   showGhost,
   restrictToVerticalAxis,
+  moveOnRelease,
 }: OakQuizOrderProps) => {
   const [items, setItems] = useState<OakQuizOrderItem[]>(initialItems);
   const [activeId, setActiveId] = useState<string | null>(null);
@@ -125,6 +150,7 @@ export const OakQuizOrder = ({
               slotName={i + 1}
               animation={animation}
               showGhost={showGhost}
+              moveOnRelease={moveOnRelease}
               {...item}
             />
           ))}
