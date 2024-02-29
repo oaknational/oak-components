@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakKbd matches snapshot 1`] = `
+.c0 {
+  background: #e4e4e4;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  border: 0.125rem solid;
+  border-color: #808080;
+  border-radius: 0.375rem;
+  font-family: Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+<kbd
+  className="c0"
+>
+  Tab
+</kbd>
+`;
