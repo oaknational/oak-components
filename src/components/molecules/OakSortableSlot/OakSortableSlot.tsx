@@ -11,20 +11,26 @@ export type OakSortableSlotProps = {
    */
   slotName: ReactNode;
   /**
-   * Indicates whether the slot is displaying the ghost of a dragged item
+   * Indicates whether the slot is active
    */
-  isGhost?: boolean;
+  isActive?: boolean;
   children: ReactNode;
 };
 
 const StyledBox = styled(OakBox)`
   outline: ${parseBorder("border-solid-l")} ${parseColor("border-primary")};
   outline-style: dashed;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: ${parseColor("bg-primary")};
+    }
+  }
 `;
 
 export const OakSortableSlot = ({
   children,
-  isGhost,
+  isActive,
   slotName,
 }: OakSortableSlotProps) => {
   return (
@@ -37,7 +43,7 @@ export const OakSortableSlot = ({
       $flexGrow={1}
     >
       <OakFlex
-        $width="all-spacing-14"
+        $minWidth="all-spacing-14"
         $background="bg-decorative2-very-subdued"
         $borderRadius="border-radius-m"
         $alignItems="center"
@@ -47,10 +53,11 @@ export const OakSortableSlot = ({
         {slotName}
       </OakFlex>
       <StyledBox
-        $background={isGhost ? "bg-primary" : "bg-neutral"}
+        $background={isActive ? "bg-primary" : "bg-neutral"}
         $pa="inner-padding-xs"
         $borderRadius="border-radius-m"
         $width="100%"
+        $minHeight="all-spacing-14"
       >
         {children}
       </StyledBox>

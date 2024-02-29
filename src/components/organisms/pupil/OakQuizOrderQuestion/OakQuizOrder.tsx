@@ -104,7 +104,7 @@ const ConnectedOakSortableItem = ({
   const isGhostSlot = over?.id === id && showGhost;
 
   return (
-    <OakSortableSlot slotName={slotName} isGhost={isGhostSlot}>
+    <OakSortableSlot slotName={slotName} isActive={isGhostSlot}>
       <OakSortableItem
         ref={setNodeRef}
         style={style}
