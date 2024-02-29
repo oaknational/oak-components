@@ -3,6 +3,213 @@
 exports[`OakQuizOrder matches snapshot 1`] = `
 [
   .c0 {
+  margin-bottom: 2rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c2 {
+  font-family: Lexend,sans-serif;
+}
+
+.c4 {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c6 {
+  font-family: Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c9 {
+  margin-bottom: 0.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.c10 {
+  background: #e4e4e4;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  border: 0.125rem solid;
+  border-color: #808080;
+  border-radius: 0.375rem;
+  font-family: Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c5 {
+  object-fit: contain;
+}
+
+@media (hover:hover) {
+
+}
+
+@media (hover:hover) {
+
+}
+
+@media (pointer:coarse) {
+  .c8 {
+    display: none;
+  }
+}
+
+@media (hover:hover) and (pointer:fine) {
+  .c11 {
+    display: none;
+  }
+}
+
+<div
+    className="c0 c1"
+  >
+    <div
+      className="c2 c3"
+    >
+      <div
+        className="c4"
+      >
+        <img
+          alt="move-arrows"
+          className="c5"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/hoddjsgpzkszgvnmn91q.svg"
+          style={
+            {
+              "bottom": 0,
+              "color": "transparent",
+              "height": "100%",
+              "left": 0,
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+    </div>
+    <div
+      className="c6 c7"
+    >
+      <div
+        className="c2 c8"
+      >
+        <div
+          className="c9"
+        >
+          Where you see this, you can click and move things around by dragging them or by pressing the
+        </div>
+        <div
+          className="c2"
+        >
+          <kbd
+            className="c10"
+          >
+            Tab
+          </kbd>
+           , 
+          <kbd
+            className="c10"
+          >
+            Space
+          </kbd>
+           and the
+           
+          <kbd
+            className="c10"
+          >
+            ←
+          </kbd>
+           
+          <kbd
+            className="c10"
+          >
+            ↑
+          </kbd>
+           
+          <kbd
+            className="c10"
+          >
+            ↓
+          </kbd>
+           
+          <kbd
+            className="c10"
+          >
+            →
+          </kbd>
+           arrows on your keyboard
+        </div>
+      </div>
+      <div
+        className="c2 c11"
+      >
+        Where you see this, you can click and move things around by dragging them!
+      </div>
+    </div>
+  </div>,
+  .c0 {
+  font-family: Lexend,sans-serif;
+}
+
+.c10 {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
   font-family: Lexend,sans-serif;
 }
 
@@ -14,30 +221,16 @@ exports[`OakQuizOrder matches snapshot 1`] = `
 }
 
 .c4 {
-  min-width: 5.75rem;
-  background: #e7f6f5;
-  border-radius: 0.375rem;
-  font-family: Lexend,sans-serif;
-  font-weight: 600;
-  font-size: 2.5rem;
-  line-height: 3rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
-  letter-spacing: 0.0115rem;
-}
-
-.c6 {
   width: 100%;
-  min-height: 5.75rem;
+  min-height: 4.5rem;
   padding: 0.5rem;
   background: #f2f2f2;
   border-radius: 0.375rem;
   font-family: Lexend,sans-serif;
 }
 
-.c8 {
-  min-height: 5rem;
+.c6 {
+  min-height: 3.5rem;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   padding-top: 1.25rem;
@@ -47,22 +240,15 @@ exports[`OakQuizOrder matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c11 {
-  position: relative;
-  width: 2rem;
-  height: 2rem;
+.c12 {
   font-family: Lexend,sans-serif;
-}
-
-.c13 {
-  font-family: Lexend,sans-serif;
-  font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
-  letter-spacing: 0.0115rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
 }
 
 .c1 {
@@ -88,22 +274,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
   gap: 1rem;
 }
 
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -115,49 +286,53 @@ exports[`OakQuizOrder matches snapshot 1`] = `
   gap: 1rem;
 }
 
-.c14 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c12 {
+.c11 {
   object-fit: contain;
 }
 
-.c10 {
+.c7 {
   border-bottom: 0.25rem solid transparent;
   cursor: -webkit-grab;
   cursor: -moz-grab;
   cursor: grab;
 }
 
-.c10:focus-visible {
+.c7:focus-visible {
   outline: none;
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c10[data-active="true"] {
+.c7[data-active="true"] {
   cursor: move;
   background-color: #bef2bd;
   border: 0.25rem solid #222222;
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c10[data-ghost="true"] {
+.c7[data-ghost="true"] {
   cursor: default;
   background-color: #f2f2f2;
   color: #808080;
 }
 
-.c7 {
+.c9 {
+  margin-block: -0.5rem;
+}
+
+.c5 {
   outline: 0.188rem solid #222222;
   outline-style: dashed;
 }
 
 @media (hover:hover) {
-  .c10:hover:not([data-active="true"]):not([data-ghost="true"]) {
+  .c7:hover:not([data-active="true"]):not([data-ghost="true"]) {
     background-color: #dff9de;
     box-shadow: 0 0.5rem 0.5rem rgba(92,92,92,20%);
     border-bottom: 0.25rem solid #222222;
@@ -165,31 +340,34 @@ exports[`OakQuizOrder matches snapshot 1`] = `
 }
 
 @media (hover:hover) {
-  .c7:hover {
+  .c5:hover {
     background-color: #ffffff;
   }
 }
 
-<ul
+@media (pointer:coarse) {
+
+}
+
+@media (hover:hover) and (pointer:fine) {
+
+}
+
+<div
     className="c0 c1"
     role="listbox"
   >
-    <li
+    <div
       className="c2 c3"
     >
       <div
         className="c4 c5"
       >
-        1
-      </div>
-      <div
-        className="c6 c7"
-      >
         <div
           aria-disabled={false}
           aria-roledescription="order item"
           aria-selected={false}
-          className="c8 c9 c10"
+          className="c6 c7"
           data-ghost={false}
           onKeyDown={[Function]}
           onPointerDown={[Function]}
@@ -203,57 +381,56 @@ exports[`OakQuizOrder matches snapshot 1`] = `
           tabIndex={0}
         >
           <div
-            className="c11"
+            className="c0 c8 c9"
           >
-            <img
-              alt=""
-              className="c12"
-              data-nimg="fill"
-              decoding="async"
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/hoddjsgpzkszgvnmn91q.svg"
-              style={
-                {
-                  "bottom": 0,
-                  "color": "transparent",
-                  "height": "100%",
-                  "left": 0,
-                  "objectFit": undefined,
-                  "objectPosition": undefined,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
+            <div
+              className="c10"
+            >
+              <img
+                alt=""
+                className="c11"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/hoddjsgpzkszgvnmn91q.svg"
+                style={
+                  {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
                 }
-              }
-            />
-          </div>
-          <div
-            className="c13 c14"
-          >
-            Mouse
+              />
+            </div>
+            <div
+              className="c12 c13"
+            >
+              Mouse
+            </div>
           </div>
         </div>
       </div>
-    </li>
-    <li
+    </div>
+    <div
       className="c2 c3"
     >
       <div
         className="c4 c5"
       >
-        2
-      </div>
-      <div
-        className="c6 c7"
-      >
         <div
           aria-disabled={false}
           aria-roledescription="order item"
           aria-selected={false}
-          className="c8 c9 c10"
+          className="c6 c7"
           data-ghost={false}
           onKeyDown={[Function]}
           onPointerDown={[Function]}
@@ -267,57 +444,56 @@ exports[`OakQuizOrder matches snapshot 1`] = `
           tabIndex={0}
         >
           <div
-            className="c11"
+            className="c0 c8 c9"
           >
-            <img
-              alt=""
-              className="c12"
-              data-nimg="fill"
-              decoding="async"
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/hoddjsgpzkszgvnmn91q.svg"
-              style={
-                {
-                  "bottom": 0,
-                  "color": "transparent",
-                  "height": "100%",
-                  "left": 0,
-                  "objectFit": undefined,
-                  "objectPosition": undefined,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
+            <div
+              className="c10"
+            >
+              <img
+                alt=""
+                className="c11"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/hoddjsgpzkszgvnmn91q.svg"
+                style={
+                  {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
                 }
-              }
-            />
-          </div>
-          <div
-            className="c13 c14"
-          >
-            Hawk
+              />
+            </div>
+            <div
+              className="c12 c13"
+            >
+              Hawk
+            </div>
           </div>
         </div>
       </div>
-    </li>
-    <li
+    </div>
+    <div
       className="c2 c3"
     >
       <div
         className="c4 c5"
       >
-        3
-      </div>
-      <div
-        className="c6 c7"
-      >
         <div
           aria-disabled={false}
           aria-roledescription="order item"
           aria-selected={false}
-          className="c8 c9 c10"
+          className="c6 c7"
           data-ghost={false}
           onKeyDown={[Function]}
           onPointerDown={[Function]}
@@ -331,47 +507,59 @@ exports[`OakQuizOrder matches snapshot 1`] = `
           tabIndex={0}
         >
           <div
-            className="c11"
+            className="c0 c8 c9"
           >
-            <img
-              alt=""
-              className="c12"
-              data-nimg="fill"
-              decoding="async"
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/hoddjsgpzkszgvnmn91q.svg"
-              style={
-                {
-                  "bottom": 0,
-                  "color": "transparent",
-                  "height": "100%",
-                  "left": 0,
-                  "objectFit": undefined,
-                  "objectPosition": undefined,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
+            <div
+              className="c10"
+            >
+              <img
+                alt=""
+                className="c11"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/hoddjsgpzkszgvnmn91q.svg"
+                style={
+                  {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
                 }
-              }
-            />
-          </div>
-          <div
-            className="c13 c14"
-          >
-            Grasshopper
+              />
+            </div>
+            <div
+              className="c12 c13"
+            >
+              Grasshopper
+            </div>
           </div>
         </div>
       </div>
-    </li>
-  </ul>,
+    </div>
+  </div>,
   @media (hover:hover) {
 
 }
 
 @media (hover:hover) {
+
+}
+
+@media (pointer:coarse) {
+
+}
+
+@media (hover:hover) and (pointer:fine) {
 
 }
 
@@ -394,6 +582,14 @@ exports[`OakQuizOrder matches snapshot 1`] = `
 }
 
 @media (hover:hover) {
+
+}
+
+@media (pointer:coarse) {
+
+}
+
+@media (hover:hover) and (pointer:fine) {
 
 }
 

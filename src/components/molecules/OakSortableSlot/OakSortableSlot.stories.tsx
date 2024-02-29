@@ -9,12 +9,9 @@ const meta: Meta<typeof OakSortableSlot> = {
   component: OakSortableSlot,
   tags: ["autodocs"],
   title: "components/molecules/OakSortableSlot",
-  args: {
-    slotName: "1",
-  },
   parameters: {
     controls: {
-      include: ["slotName", "children", "isActive"],
+      include: ["children", "isActive"],
     },
     backgrounds: {
       default: "light",

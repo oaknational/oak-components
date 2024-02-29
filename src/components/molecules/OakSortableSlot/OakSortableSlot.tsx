@@ -7,10 +7,6 @@ import { parseColor } from "@/styles/helpers/parseColor";
 
 export type OakSortableSlotProps = {
   /**
-   * The value to display for the slot
-   */
-  slotName: ReactNode;
-  /**
    * Indicates whether the slot is active
    */
   isActive?: boolean;
@@ -36,33 +32,21 @@ const StyledBox = styled(OakBox)`
 export const OakSortableSlot = ({
   children,
   isActive,
-  slotName,
 }: OakSortableSlotProps) => {
   return (
     <OakFlex
-      as="li"
       $gap="space-between-s"
       $background="bg-decorative2-subdued"
       $pa="inner-padding-m"
       $borderRadius="border-radius-m"
       $flexGrow={1}
     >
-      <OakFlex
-        $minWidth="all-spacing-14"
-        $background="bg-decorative2-very-subdued"
-        $borderRadius="border-radius-m"
-        $alignItems="center"
-        $justifyContent="center"
-        $font="heading-3"
-      >
-        {slotName}
-      </OakFlex>
       <StyledBox
         $background={isActive ? "bg-primary" : "bg-neutral"}
         $pa="inner-padding-xs"
         $borderRadius="border-radius-m"
         $width="100%"
-        $minHeight="all-spacing-14"
+        $minHeight="all-spacing-12"
       >
         {children}
       </StyledBox>

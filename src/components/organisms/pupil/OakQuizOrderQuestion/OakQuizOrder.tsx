@@ -1,10 +1,4 @@
-import React, {
-  FC,
-  ReactNode,
-  createContext,
-  useContext,
-  useState,
-} from "react";
+import React, { FC, createContext, useContext, useState } from "react";
 import {
   DndContext,
   closestCenter,
@@ -43,13 +37,7 @@ export type OakQuizOrderProps = {
   initialItems: OakQuizOrderItem[];
 };
 
-const ConnectedOakSortableItem = ({
-  slotName,
-  id,
-  label,
-}: OakQuizOrderItem & {
-  slotName: ReactNode;
-}) => {
+const ConnectedOakSortableItem = ({ id, label }: OakQuizOrderItem) => {
   const {
     attributes,
     listeners,
@@ -67,7 +55,7 @@ const ConnectedOakSortableItem = ({
   };
 
   return (
-    <OakSortableSlot slotName={slotName} isActive={isGhostSlot}>
+    <OakSortableSlot isActive={isGhostSlot}>
       <OakSortableItem
         ref={setNodeRef}
         style={style}
@@ -126,12 +114,8 @@ export const OakQuizOrder = ({ initialItems }: OakQuizOrderProps) => {
             $flexDirection="column"
             role="listbox"
           >
-            {items.map((item, i) => (
-              <ConnectedOakSortableItem
-                key={item.id}
-                slotName={i + 1}
-                {...item}
-              />
+            {items.map((item) => (
+              <ConnectedOakSortableItem key={item.id} {...item} />
             ))}
           </OakFlex>
           {createPortal(

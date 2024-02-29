@@ -6,10 +6,11 @@ import React, {
 } from "react";
 import styled from "styled-components";
 
-import { OakFlex, OakIcon } from "@/components/atoms";
+import { OakBox, OakFlex, OakIcon } from "@/components/atoms";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseBorder } from "@/styles/helpers/parseBorder";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
+import { parseSpacing } from "@/styles/helpers/parseSpacing";
 
 type OakSortableItemProps = {
   /**
@@ -22,7 +23,7 @@ type OakSortableItemProps = {
   isGhost?: boolean;
 };
 
-const StyledSortableItem = styled(OakFlex)`
+const StyledSortableItem = styled(OakBox)`
   border-bottom: ${parseBorder("border-solid-xl")} ${parseColor("transparent")};
   cursor: grab;
 
@@ -56,38 +57,42 @@ const StyledSortableItem = styled(OakFlex)`
   }
 `;
 
+const StyledFlex = styled(OakFlex)`
+  margin-block: -${parseSpacing("space-between-ssx")};
+`;
+
 /**
  * A sortable list of items with drag and drop functionality
  *
  * Items can be dragged over named slots altering the order of items
  */
 export const OakSortableItem: FC<
-  ComponentPropsWithRef<OakSortableItemProps & typeof OakFlex>
+  ComponentPropsWithRef<OakSortableItemProps & typeof OakBox>
 > = forwardRef<
   HTMLDivElement,
-  ComponentPropsWithoutRef<OakSortableItemProps & typeof OakFlex>
+  ComponentPropsWithoutRef<OakSortableItemProps & typeof OakBox>
 >(({ children, ...props }, ref) => {
   return (
     <StyledSortableItem
       ref={ref}
-      $gap="space-between-s"
       $pv="inner-padding-l"
       $ph="inner-padding-s"
       $background="bg-primary"
-      $alignItems="center"
       $borderRadius="border-radius-m2"
-      $minHeight="all-spacing-13"
+      $minHeight="all-spacing-10"
       data-active={props.isActive}
       data-ghost={props.isGhost}
       {...props}
     >
-      <OakIcon
-        iconName="move-arrows"
-        $width="all-spacing-7"
-        $height="all-spacing-7"
-        alt=""
-      />
-      <OakFlex $font="heading-6">{children}</OakFlex>
+      <StyledFlex $gap="space-between-s" $alignItems="center">
+        <OakIcon
+          iconName="move-arrows"
+          $width="all-spacing-7"
+          $height="all-spacing-7"
+          alt=""
+        />
+        <OakFlex $font="body-1-bold">{children}</OakFlex>
+      </StyledFlex>
     </StyledSortableItem>
   );
 });

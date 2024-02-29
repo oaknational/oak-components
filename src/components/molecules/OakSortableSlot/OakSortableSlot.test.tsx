@@ -10,7 +10,7 @@ describe(OakSortableSlot, () => {
   it("matches snapshot", () => {
     const tree = create(
       <ThemeProvider theme={oakDefaultTheme}>
-        <OakSortableSlot slotName="1">Children</OakSortableSlot>
+        <OakSortableSlot>Children</OakSortableSlot>
       </ThemeProvider>,
     ).toJSON();
 
