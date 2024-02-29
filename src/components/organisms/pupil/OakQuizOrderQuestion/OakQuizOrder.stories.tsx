@@ -9,12 +9,7 @@ const meta: Meta<typeof OakQuizOrder> = {
   title: "components/organisms/pupil/OakQuizOrderQuestion",
   parameters: {
     controls: {
-      include: [
-        "animation",
-        "showGhost",
-        "restrictToVerticalAxis",
-        "moveOnRelease",
-      ],
+      include: [],
     },
     backgrounds: {
       default: "light",

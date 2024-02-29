@@ -21,7 +21,6 @@ import {
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import { createPortal } from "react-dom";
-import { restrictToVerticalAxis as restrictToVerticalAxisModifier } from "@dnd-kit/modifiers";
 
 import { OakSortableItem } from "@/components/molecules/OakSortableItem";
 import { OakFlex } from "@/components/atoms";
@@ -34,41 +33,14 @@ type OakQuizOrderItem = {
 
 export type OakQuizOrderProps = {
   initialItems: OakQuizOrderItem[];
-  /**
-   * Animate the sorting of items
-   */
-  animation?: boolean;
-  /**
-   * Show a semi-opaque ghost of the item being dragged
-   *
-   * This provides a visual indication of where the item will be placed
-   */
-  showGhost?: boolean;
-  /**
-   * Restrict to dragging vertically
-   */
-  restrictToVerticalAxis?: boolean;
-  /**
-   * Move the item into position when the drag ends
-   *
-   * This does not provide a visual indication of which slot the unseated item will be moved to
-   * only which item will be replaced
-   */
-  moveOnRelease?: boolean;
 };
 
 const ConnectedOakSortableItem = ({
   slotName,
-  animation,
-  showGhost,
-  moveOnRelease,
   id,
   label,
 }: OakQuizOrderItem & {
   slotName: ReactNode;
-  animation?: boolean;
-  showGhost?: boolean;
-  moveOnRelease?: boolean;
 }) => {
   const {
     attributes,
@@ -79,29 +51,12 @@ const ConnectedOakSortableItem = ({
     active,
     over,
   } = useSortable({ id });
-
-  const isGhostItem = (() => {
-    if (moveOnRelease) {
-      return over?.id === id && showGhost;
-    }
-
-    return active?.id === id && showGhost;
-  })();
-  const opacity = (() => {
-    if (moveOnRelease) {
-      return active?.id === id ? 0 : 1;
-    }
-
-    return active?.id === id && !showGhost ? 0 : 1;
-  })();
-
+  const isGhostItem = active?.id === id;
+  const isGhostSlot = over?.id === id;
   const style = {
-    transform: !moveOnRelease && CSS.Transform.toString(transform),
-    transition: !moveOnRelease && animation ? transition : undefined,
-    opacity,
+    transform: CSS.Transform.toString(transform),
+    transition,
   };
-
-  const isGhostSlot = over?.id === id && showGhost;
 
   return (
     <OakSortableSlot slotName={slotName} isActive={isGhostSlot}>
@@ -127,16 +82,8 @@ const ConnectedOakSortableItem = ({
  * A sortable list of items with drag and drop functionality. Items can be dragged over named slots to re-arrange them
  *
  * Keyboard navigation is supported with the `tab`, `space` and `arrow` keys
- *
- * There are a few props to experiment with to tailor the UX to what works best for pupils
  */
-export const OakQuizOrder = ({
-  initialItems,
-  animation,
-  showGhost,
-  restrictToVerticalAxis,
-  moveOnRelease,
-}: OakQuizOrderProps) => {
+export const OakQuizOrder = ({ initialItems }: OakQuizOrderProps) => {
   const [items, setItems] = useState<OakQuizOrderItem[]>(initialItems);
   const [activeId, setActiveId] = useState<string | null>(null);
   const activeItem = items.find((item) => item.id === activeId);
@@ -153,9 +100,6 @@ export const OakQuizOrder = ({
       collisionDetection={closestCenter}
       onDragEnd={handleDragEnd}
       onDragStart={handleDragStart}
-      modifiers={
-        restrictToVerticalAxis ? [restrictToVerticalAxisModifier] : undefined
-      }
       accessibility={{
         announcements: createAccouncements(items),
       }}
@@ -171,9 +115,6 @@ export const OakQuizOrder = ({
             <ConnectedOakSortableItem
               key={item.id}
               slotName={i + 1}
-              animation={animation}
-              showGhost={showGhost}
-              moveOnRelease={moveOnRelease}
               {...item}
             />
           ))}
