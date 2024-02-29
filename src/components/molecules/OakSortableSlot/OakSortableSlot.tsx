@@ -14,7 +14,7 @@ export type OakSortableSlotProps = {
    * Indicates whether the slot is active
    */
   isActive?: boolean;
-  children: ReactNode;
+  children?: ReactNode;
 };
 
 const StyledBox = styled(OakBox)`
@@ -29,9 +29,9 @@ const StyledBox = styled(OakBox)`
 `;
 
 /**
+ * A slot for a sortable list
  *
- * @param param0
- * @returns
+ * Can be filled with a sortable item
  */
 export const OakSortableSlot = ({
   children,

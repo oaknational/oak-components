@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakSortableItem matches snapshot 1`] = `
+.c0 {
+  min-height: 5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  background: #ffffff;
+  border-radius: 0.5rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c3 {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c5 {
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c4 {
+  object-fit: contain;
+}
+
+.c2 {
+  border-bottom: 0.25rem solid transparent;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+}
+
+.c2:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c2[data-active="true"] {
+  cursor: move;
+  background-color: #bef2bd;
+  border: 0.25rem solid #222222;
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+}
+
+.c2[data-ghost="true"] {
+  cursor: default;
+  background-color: #f2f2f2;
+  color: #808080;
+}
+
+@media (hover:hover) {
+  .c2:hover:not([data-active="true"]):not([data-ghost="true"]) {
+    background-color: #dff9de;
+    box-shadow: 0 0.5rem 0.5rem rgba(92,92,92,20%);
+    border-bottom: 0.25rem solid #222222;
+  }
+}
+
+<div
+  className="c0 c1 c2"
+>
+  <div
+    className="c3"
+  >
+    <img
+      alt=""
+      className="c4"
+      data-nimg="fill"
+      decoding="async"
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/hoddjsgpzkszgvnmn91q.svg"
+      style={
+        {
+          "bottom": 0,
+          "color": "transparent",
+          "height": "100%",
+          "left": 0,
+          "objectFit": undefined,
+          "objectPosition": undefined,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+  <div
+    className="c5 c6"
+  >
+    Elephant
+  </div>
+</div>
+`;

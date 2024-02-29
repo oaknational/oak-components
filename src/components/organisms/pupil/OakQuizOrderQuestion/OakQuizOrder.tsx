@@ -1,4 +1,10 @@
-import React, { ReactNode, useState } from "react";
+import React, {
+  FC,
+  ReactNode,
+  createContext,
+  useContext,
+  useState,
+} from "react";
 import {
   DndContext,
   closestCenter,
@@ -11,6 +17,7 @@ import {
   DragStartEvent,
   UniqueIdentifier,
   Announcements,
+  DndContextProps,
 } from "@dnd-kit/core";
 import {
   arrayMove,
@@ -79,6 +86,11 @@ const ConnectedOakSortableItem = ({
 };
 
 /**
+ * Facilitates DI for the DndContext
+ */
+export const injectDndContext = createContext<FC<DndContextProps>>(DndContext);
+
+/**
  * A sortable list of items with drag and drop functionality. Items can be dragged over named slots to re-arrange them
  *
  * Keyboard navigation is supported with the `tab`, `space` and `arrow` keys
@@ -93,6 +105,7 @@ export const OakQuizOrder = ({ initialItems }: OakQuizOrderProps) => {
       coordinateGetter: sortableKeyboardCoordinates,
     }),
   );
+  const DndContext = useContext(injectDndContext);
 
   return (
     <DndContext
