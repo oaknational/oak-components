@@ -35,6 +35,7 @@ type OakQuizOrderItem = {
 
 export type OakQuizOrderProps = {
   initialItems: OakQuizOrderItem[];
+  onChange?: (items: OakQuizOrderItem[]) => void;
 };
 
 const ConnectedOakSortableItem = ({ id, label }: OakQuizOrderItem) => {
@@ -84,7 +85,7 @@ export const injectDndContext = createContext<FC<DndContextProps>>(DndContext);
  *
  * Keyboard navigation is supported with the `tab`, `space` and `arrow` keys
  */
-export const OakQuizOrder = ({ initialItems }: OakQuizOrderProps) => {
+export const OakQuizOrder = ({ initialItems, onChange }: OakQuizOrderProps) => {
   const [items, setItems] = useState<OakQuizOrderItem[]>(initialItems);
   const [activeId, setActiveId] = useState<string | null>(null);
   const activeItem = items.find((item) => item.id === activeId);
@@ -143,8 +144,11 @@ export const OakQuizOrder = ({ initialItems }: OakQuizOrderProps) => {
       setItems((items) => {
         const oldIndex = items.findIndex((item) => item.id === active.id);
         const newIndex = items.findIndex((item) => item.id === over?.id);
+        const newItems = arrayMove(items, oldIndex, newIndex);
 
-        return arrayMove(items, oldIndex, newIndex);
+        onChange?.(newItems);
+
+        return newItems;
       });
     }
 

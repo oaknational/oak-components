@@ -40,10 +40,11 @@ describe(OakQuizOrder, () => {
       dndProps = props;
       return <DndContext {...props} />;
     };
+    const onChangeSpy = jest.fn();
 
     const { getAllByRole } = renderWithTheme(
       <injectDndContext.Provider value={MockDndContext}>
-        <OakQuizOrder initialItems={initialItems} />
+        <OakQuizOrder initialItems={initialItems} onChange={onChangeSpy} />
       </injectDndContext.Provider>,
     );
 
@@ -63,6 +64,20 @@ describe(OakQuizOrder, () => {
       "Hawk",
       "Mouse",
       "Grasshopper",
+    ]);
+    expect(onChangeSpy).toHaveBeenCalledWith([
+      {
+        id: "2",
+        label: "Hawk",
+      },
+      {
+        id: "1",
+        label: "Mouse",
+      },
+      {
+        id: "3",
+        label: "Grasshopper",
+      },
     ]);
   });
 });
