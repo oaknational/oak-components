@@ -1,4 +1,9 @@
-import React, { ComponentPropsWithoutRef, forwardRef } from "react";
+import React, {
+  ComponentPropsWithRef,
+  ComponentPropsWithoutRef,
+  FC,
+  forwardRef,
+} from "react";
 import styled from "styled-components";
 
 import { OakFlex, OakIcon } from "@/components/atoms";
@@ -6,7 +11,16 @@ import { parseColor } from "@/styles/helpers/parseColor";
 import { parseBorder } from "@/styles/helpers/parseBorder";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 
-type OakSortableItemProps = { isActive?: boolean; isGhost?: boolean };
+type OakSortableItemProps = {
+  /**
+   * Whether the item is currently being dragged
+   */
+  isActive?: boolean;
+  /**
+   * Present the element in a subdued state
+   */
+  isGhost?: boolean;
+};
 
 const StyledSortableItem = styled(OakFlex)`
   border-bottom: ${parseBorder("border-solid-xl")} ${parseColor("transparent")};
@@ -46,12 +60,12 @@ const StyledSortableItem = styled(OakFlex)`
  * A sortable list of items with drag and drop functionality
  *
  * Items can be dragged over named slots altering the order of items
- *
- * There are a few props to experiment with to tailor the UX to what works best for pupils
  */
-export const OakSortableItem = forwardRef<
+export const OakSortableItem: FC<
+  ComponentPropsWithRef<OakSortableItemProps & typeof OakFlex>
+> = forwardRef<
   HTMLDivElement,
-  OakSortableItemProps & ComponentPropsWithoutRef<typeof OakFlex>
+  ComponentPropsWithoutRef<OakSortableItemProps & typeof OakFlex>
 >(({ children, ...props }, ref) => {
   return (
     <StyledSortableItem

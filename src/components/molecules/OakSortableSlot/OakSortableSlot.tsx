@@ -28,6 +28,11 @@ const StyledBox = styled(OakBox)`
   }
 `;
 
+/**
+ *
+ * @param param0
+ * @returns
+ */
 export const OakSortableSlot = ({
   children,
   isActive,

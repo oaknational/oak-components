@@ -1,6 +1,8 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
+import { OakSortableItem } from "../OakSortableItem";
+
 import { OakSortableSlot } from "./OakSortableSlot";
 
 const meta: Meta<typeof OakSortableSlot> = {
@@ -12,21 +14,28 @@ const meta: Meta<typeof OakSortableSlot> = {
   },
   parameters: {
     controls: {
-      include: ["children"],
+      include: ["slotName", "children", "isActive"],
     },
     backgrounds: {
       default: "light",
     },
   },
+  render: (args) => <OakSortableSlot {...args} />,
 };
 export default meta;
 
 type Story = StoryObj<typeof OakSortableSlot>;
 
-export const Default: Story = {
-  render: (args) => <OakSortableSlot {...args} />,
-};
+export const Default: Story = {};
 
 export const Active: Story = {
-  render: (args) => <OakSortableSlot {...args} isActive />,
+  args: {
+    isActive: true,
+  },
+};
+
+export const Occupied: Story = {
+  args: {
+    children: <OakSortableItem>Elephant</OakSortableItem>,
+  },
 };

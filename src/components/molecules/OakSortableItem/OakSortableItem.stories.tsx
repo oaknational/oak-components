@@ -7,30 +7,36 @@ const meta: Meta<typeof OakSortableItem> = {
   component: OakSortableItem,
   tags: ["autodocs"],
   title: "components/molecules/OakSortableItem",
+  argTypes: {
+    children: { type: "string" },
+  },
   args: {
     children: "A bunch of balloons landed on the moon.",
   },
   parameters: {
     controls: {
-      include: ["children"],
+      include: ["isActive", "isGhost", "children"],
     },
     backgrounds: {
       default: "light",
     },
   },
+  render: (args) => <OakSortableItem {...args} tabIndex={0} />,
 };
 export default meta;
 
 type Story = StoryObj<typeof OakSortableItem>;
 
-export const Default: Story = {
-  render: (args) => <OakSortableItem {...args} tabIndex={0} />,
-};
+export const Default: Story = {};
 
 export const Active: Story = {
-  render: (args) => <OakSortableItem {...args} tabIndex={0} isActive />,
+  args: {
+    isActive: true,
+  },
 };
 
 export const Ghost: Story = {
-  render: (args) => <OakSortableItem {...args} tabIndex={0} isGhost />,
+  args: {
+    isGhost: true,
+  },
 };
