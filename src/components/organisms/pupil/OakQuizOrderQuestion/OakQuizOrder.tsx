@@ -32,6 +32,7 @@ import { createPortal } from "react-dom";
 import { OakSortableItem } from "@/components/molecules/OakSortableItem";
 import { OakFlex } from "@/components/atoms";
 import { OakSortableSlot } from "@/components/molecules/OakSortableSlot";
+import { OakDragAndDropInstructions } from "@/components/molecules/OakDragAndDropInstructions";
 
 type OakQuizOrderItem = {
   id: string;
@@ -108,40 +109,42 @@ export const OakQuizOrder = ({ initialItems }: OakQuizOrderProps) => {
   const DndContext = useContext(injectDndContext);
 
   return (
-    <DndContext
-      sensors={sensors}
-      collisionDetection={closestCenter}
-      onDragEnd={handleDragEnd}
-      onDragStart={handleDragStart}
-      accessibility={{
-        announcements: createAccouncements(items),
-      }}
-    >
-      <SortableContext items={items} strategy={verticalListSortingStrategy}>
-        <OakFlex
-          as="ul"
-          $gap="space-between-s"
-          $flexDirection="column"
-          role="listbox"
-        >
-          {items.map((item, i) => (
-            <ConnectedOakSortableItem
-              key={item.id}
-              slotName={i + 1}
-              {...item}
-            />
-          ))}
-        </OakFlex>
-        {createPortal(
-          <DragOverlay>
-            {activeItem && (
-              <OakSortableItem isActive>{activeItem.label}</OakSortableItem>
-            )}
-          </DragOverlay>,
-          document.body,
-        )}
-      </SortableContext>
-    </DndContext>
+    <>
+      <OakDragAndDropInstructions $mb="space-between-m2" />
+      <DndContext
+        sensors={sensors}
+        collisionDetection={closestCenter}
+        onDragEnd={handleDragEnd}
+        onDragStart={handleDragStart}
+        accessibility={{
+          announcements: createAccouncements(items),
+        }}
+      >
+        <SortableContext items={items} strategy={verticalListSortingStrategy}>
+          <OakFlex
+            $gap="space-between-s"
+            $flexDirection="column"
+            role="listbox"
+          >
+            {items.map((item, i) => (
+              <ConnectedOakSortableItem
+                key={item.id}
+                slotName={i + 1}
+                {...item}
+              />
+            ))}
+          </OakFlex>
+          {createPortal(
+            <DragOverlay>
+              {activeItem && (
+                <OakSortableItem isActive>{activeItem.label}</OakSortableItem>
+              )}
+            </DragOverlay>,
+            document.body,
+          )}
+        </SortableContext>
+      </DndContext>
+    </>
   );
 
   function handleDragStart(event: DragStartEvent) {

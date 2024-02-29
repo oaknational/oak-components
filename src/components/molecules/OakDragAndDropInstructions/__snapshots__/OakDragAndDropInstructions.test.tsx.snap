@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakDragAndDropInstructions matches snapshot 1`] = `
+.c0 {
+  font-family: Lexend,sans-serif;
+}
+
+.c3 {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c5 {
+  font-family: Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c8 {
+  margin-bottom: 0.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.c9 {
+  background: #e4e4e4;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  border: 0.125rem solid;
+  border-color: #808080;
+  border-radius: 0.375rem;
+  font-family: Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c4 {
+  object-fit: contain;
+}
+
+@media (pointer:coarse) {
+  .c7 {
+    display: none;
+  }
+}
+
+@media (hover:hover) and (pointer:fine) {
+  .c10 {
+    display: none;
+  }
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    className="c0 c2"
+  >
+    <div
+      className="c3"
+    >
+      <img
+        alt="move-arrows"
+        className="c4"
+        data-nimg="fill"
+        decoding="async"
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/hoddjsgpzkszgvnmn91q.svg"
+        style={
+          {
+            "bottom": 0,
+            "color": "transparent",
+            "height": "100%",
+            "left": 0,
+            "objectFit": undefined,
+            "objectPosition": undefined,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="c5 c6"
+  >
+    <div
+      className="c0 c7"
+    >
+      <div
+        className="c8"
+      >
+        Where you see this, you can click and move things around by dragging them or by pressing the
+      </div>
+      <div
+        className="c0"
+      >
+        <kbd
+          className="c9"
+        >
+          Tab
+        </kbd>
+         , 
+        <kbd
+          className="c9"
+        >
+          Space
+        </kbd>
+         and the
+         
+        <kbd
+          className="c9"
+        >
+          ←
+        </kbd>
+         
+        <kbd
+          className="c9"
+        >
+          ↑
+        </kbd>
+         
+        <kbd
+          className="c9"
+        >
+          ↓
+        </kbd>
+         
+        <kbd
+          className="c9"
+        >
+          →
+        </kbd>
+         arrows on your keyboard
+      </div>
+    </div>
+    <div
+      className="c0 c10"
+    >
+      Where you see this, you can click and move things around by dragging them!
+    </div>
+  </div>
+</div>
+`;
