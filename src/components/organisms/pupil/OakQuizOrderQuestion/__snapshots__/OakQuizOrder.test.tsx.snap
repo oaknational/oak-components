@@ -302,6 +302,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
   cursor: -webkit-grab;
   cursor: -moz-grab;
   cursor: grab;
+  touch-action: none;
 }
 
 .c7:focus-visible {

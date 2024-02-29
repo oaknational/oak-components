@@ -62,6 +62,7 @@ exports[`OakSortableItem matches snapshot 1`] = `
   cursor: -webkit-grab;
   cursor: -moz-grab;
   cursor: grab;
+  touch-action: none;
 }
 
 .c1:focus-visible {

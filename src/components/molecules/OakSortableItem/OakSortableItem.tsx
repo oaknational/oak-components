@@ -26,6 +26,7 @@ type OakSortableItemProps = {
 const StyledSortableItem = styled(OakBox)`
   border-bottom: ${parseBorder("border-solid-xl")} ${parseColor("transparent")};
   cursor: grab;
+  touch-action: none;
 
   @media (hover: hover) {
     &:hover:not([data-active="true"]):not([data-ghost="true"]) {
