@@ -1,7 +1,6 @@
 import React, {
   FC,
   createContext,
-  memo,
   useContext,
   useEffect,
   useState,
@@ -56,7 +55,7 @@ export type OakQuizOrderProps = {
   onChange?: (items: OakQuizOrderItem[]) => void;
 };
 
-const ConnectedDraggable = memo(({ id, label }: OakQuizOrderItem) => {
+const ConnectedDraggable = ({ id, label }: OakQuizOrderItem) => {
   const {
     attributes,
     listeners,
@@ -91,7 +90,7 @@ const ConnectedDraggable = memo(({ id, label }: OakQuizOrderItem) => {
       </OakDraggable>
     </OakDroppable>
   );
-});
+};
 
 /**
  * Facilitates DI for the DndContext
