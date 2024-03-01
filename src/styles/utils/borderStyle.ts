@@ -197,7 +197,9 @@ const borderRadiusBottom = css<BorderStyleProps>`
     parseBorderRadius,
   )}
 `;
-
+const borderStrokeStyle = css<BorderStyleProps>`
+  ${responsiveStyle("border-style", (props) => props.$borderStyle)};
+`;
 export const borderStyle = css<BorderStyleProps>`
   ${borderAll}
   ${borderTop}
@@ -214,4 +216,5 @@ export const borderStyle = css<BorderStyleProps>`
   ${borderRadiusBottomRight}
   ${borderRadiusTop}
   ${borderRadiusBottom}
+  ${borderStrokeStyle}
 `;

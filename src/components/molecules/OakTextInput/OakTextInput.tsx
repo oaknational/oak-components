@@ -182,7 +182,6 @@ export const OakTextInput = ({
       $height="fit-content"
       $width={wrapperWidth}
       $maxWidth={wrapperMaxWidth}
-      $borderStyle="solid"
       $borderRadius="border-radius-s"
       $ba="border-solid-m"
       $borderColor={finalBorderColor}
