@@ -3,10 +3,10 @@
 exports[`OakDraggable matches snapshot 1`] = `
 .c0 {
   min-height: 3.5rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+  padding-left: 0.75rem;
+  padding-right: 1rem;
   background: #ffffff;
   border-bottom: 0.25rem solid;
   border-color: transparent;

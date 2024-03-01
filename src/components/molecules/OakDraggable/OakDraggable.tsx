@@ -109,7 +109,8 @@ export const OakDraggable: FC<
       <StyledDraggable
         ref={ref}
         $pv="inner-padding-l"
-        $ph="inner-padding-s"
+        $pl="inner-padding-s"
+        $pr="inner-padding-m"
         $background="bg-primary"
         $borderRadius="border-radius-m2"
         $borderColor={$borderColor}

@@ -7,7 +7,7 @@ import React, {
 } from "react";
 import styled from "styled-components";
 
-import { OakBox, OakFlex } from "@/components/atoms";
+import { OakBox } from "@/components/atoms";
 import { parseBorder } from "@/styles/helpers/parseBorder";
 import { parseColor } from "@/styles/helpers/parseColor";
 
@@ -40,27 +40,25 @@ export const OakDroppable: FC<
   OakDroppableProps & ComponentPropsWithRef<typeof OakBox>
 > = forwardRef<
   HTMLDivElement,
-  OakDroppableProps & ComponentPropsWithoutRef<typeof OakFlex>
+  OakDroppableProps & ComponentPropsWithoutRef<typeof OakBox>
 >(({ children, isOver, ...props }, ref) => {
   return (
-    <OakFlex
+    <OakBox
       ref={ref}
-      $gap="space-between-s"
       $background="bg-decorative2-subdued"
       $pa="inner-padding-m"
       $borderRadius="border-radius-m"
-      $flexGrow={1}
       {...props}
     >
       <StyledBox
         $background={isOver ? "bg-primary" : "bg-neutral"}
-        $pa="inner-padding-xs"
+        $pa="inner-padding-ssx"
         $borderRadius="border-radius-m"
         $width="100%"
-        $minHeight="all-spacing-12"
+        $minHeight="all-spacing-11"
       >
         {children}
       </StyledBox>
-    </OakFlex>
+    </OakBox>
   );
 });

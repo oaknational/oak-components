@@ -236,7 +236,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c10 {
+.c9 {
   position: relative;
   width: 2rem;
   height: 2rem;
@@ -250,21 +250,21 @@ exports[`OakQuizOrder matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c4 {
+.c3 {
   width: 100%;
-  min-height: 4.5rem;
-  padding: 0.5rem;
+  min-height: 4rem;
+  padding: 0.25rem;
   background: #f2f2f2;
   border-radius: 0.375rem;
   font-family: Lexend,sans-serif;
 }
 
-.c6 {
+.c5 {
   min-height: 3.5rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+  padding-left: 0.75rem;
+  padding-right: 1rem;
   background: #ffffff;
   border-bottom: 0.25rem solid;
   border-color: transparent;
@@ -272,7 +272,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c12 {
+.c11 {
   font-family: Lexend,sans-serif;
   font-weight: 700;
   font-size: 1.125rem;
@@ -294,19 +294,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
   gap: 1rem;
 }
 
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  gap: 1rem;
-}
-
-.c8 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -318,50 +306,50 @@ exports[`OakQuizOrder matches snapshot 1`] = `
   gap: 1rem;
 }
 
-.c13 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c11 {
+.c10 {
   object-fit: contain;
 }
 
-.c7 {
+.c6 {
   cursor: -webkit-grab;
   cursor: -moz-grab;
   cursor: grab;
   outline: none;
 }
 
-.c7:focus-visible:not([data-dragging="true"]):not([data-disabled="true"]) {
+.c6:focus-visible:not([data-dragging="true"]):not([data-disabled="true"]) {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c7[data-dragging="true"] {
+.c6[data-dragging="true"] {
   cursor: move;
   background-color: #bef2bd;
   border: 0.25rem solid #222222;
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c7[data-disabled="true"] {
+.c6[data-disabled="true"] {
   cursor: default;
   background-color: #f2f2f2;
   color: #808080;
 }
 
-.c7[data-readonly="true"] {
+.c6[data-readonly="true"] {
   cursor: default;
 }
 
-.c9 {
+.c8 {
   margin-block: -0.5rem;
 }
 
-.c5 {
+.c4 {
   outline: 0.188rem solid #222222;
   outline-style: dashed;
 }
@@ -375,7 +363,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
 }
 
 @media (hover:hover) {
-  .c7:hover:not([data-dragging="true"]):not([data-disabled="true"]):not( [data-readonly="true"] ) {
+  .c6:hover:not([data-dragging="true"]):not([data-disabled="true"]):not( [data-readonly="true"] ) {
     background-color: #dff9de;
     box-shadow: 0 0.5rem 0.5rem rgba(92,92,92,20%);
     border-bottom: 0.25rem solid #222222;
@@ -383,7 +371,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
 }
 
 @media (hover:hover) {
-  .c5:hover {
+  .c4:hover {
     background-color: #ffffff;
   }
 }
@@ -393,16 +381,16 @@ exports[`OakQuizOrder matches snapshot 1`] = `
     role="listbox"
   >
     <div
-      className="c2 c3"
+      className="c2"
     >
       <div
-        className="c4 c5"
+        className="c3 c4"
       >
         <div
           aria-disabled={false}
           aria-roledescription="sortable item"
           aria-selected={false}
-          className="c6 c7"
+          className="c5 c6"
           data-disabled={false}
           onKeyDown={[Function]}
           onMouseDown={[Function]}
@@ -417,14 +405,14 @@ exports[`OakQuizOrder matches snapshot 1`] = `
           tabIndex={0}
         >
           <div
-            className="c0 c8 c9"
+            className="c0 c7 c8"
           >
             <div
-              className="c10"
+              className="c9"
             >
               <img
                 alt=""
-                className="c11"
+                className="c10"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"
@@ -448,7 +436,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
               />
             </div>
             <div
-              className="c12 c13"
+              className="c11 c12"
             >
               Mouse
             </div>
@@ -457,16 +445,16 @@ exports[`OakQuizOrder matches snapshot 1`] = `
       </div>
     </div>
     <div
-      className="c2 c3"
+      className="c2"
     >
       <div
-        className="c4 c5"
+        className="c3 c4"
       >
         <div
           aria-disabled={false}
           aria-roledescription="sortable item"
           aria-selected={false}
-          className="c6 c7"
+          className="c5 c6"
           data-disabled={false}
           onKeyDown={[Function]}
           onMouseDown={[Function]}
@@ -481,14 +469,14 @@ exports[`OakQuizOrder matches snapshot 1`] = `
           tabIndex={0}
         >
           <div
-            className="c0 c8 c9"
+            className="c0 c7 c8"
           >
             <div
-              className="c10"
+              className="c9"
             >
               <img
                 alt=""
-                className="c11"
+                className="c10"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"
@@ -512,7 +500,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
               />
             </div>
             <div
-              className="c12 c13"
+              className="c11 c12"
             >
               Hawk
             </div>
@@ -521,16 +509,16 @@ exports[`OakQuizOrder matches snapshot 1`] = `
       </div>
     </div>
     <div
-      className="c2 c3"
+      className="c2"
     >
       <div
-        className="c4 c5"
+        className="c3 c4"
       >
         <div
           aria-disabled={false}
           aria-roledescription="sortable item"
           aria-selected={false}
-          className="c6 c7"
+          className="c5 c6"
           data-disabled={false}
           onKeyDown={[Function]}
           onMouseDown={[Function]}
@@ -545,14 +533,14 @@ exports[`OakQuizOrder matches snapshot 1`] = `
           tabIndex={0}
         >
           <div
-            className="c0 c8 c9"
+            className="c0 c7 c8"
           >
             <div
-              className="c10"
+              className="c9"
             >
               <img
                 alt=""
-                className="c11"
+                className="c10"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"
@@ -576,7 +564,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
               />
             </div>
             <div
-              className="c12 c13"
+              className="c11 c12"
             >
               Grasshopper
             </div>
