@@ -135,14 +135,20 @@ exports[`OakDragAndDropInstructions matches snapshot 1`] = `
     <div
       className="c0 c8"
     >
-      Where you see this, you can click and move things around by dragging them, or by pressing the 
+      Where you see this, you can click and move things around by dragging them, or by pressing the
+       
       <kbd
         className="c9"
       >
-        ↹ Tab
+        <span
+          aria-hidden="true"
+        >
+          ↹
+        </span>
+         Tab
       </kbd>
-       and
        
+      and 
       <kbd
         className="c9"
       >
@@ -177,14 +183,20 @@ exports[`OakDragAndDropInstructions matches snapshot 1`] = `
     <div
       className="c0 c10"
     >
-      Where you see this, you can click and move things around by dragging them. If you're using a keyboard, press the 
+      Where you see this, you can click and move things around by dragging them. If you're using a keyboard, press the
+       
       <kbd
         className="c9"
       >
-        ↹ Tab
+        <span
+          aria-hidden="true"
+        >
+          ↹
+        </span>
+         Tab
       </kbd>
-       and
        
+      and 
       <kbd
         className="c9"
       >

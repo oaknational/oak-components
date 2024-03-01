@@ -149,14 +149,20 @@ exports[`OakQuizOrder matches snapshot 1`] = `
       <div
         className="c2 c9"
       >
-        Where you see this, you can click and move things around by dragging them, or by pressing the 
+        Where you see this, you can click and move things around by dragging them, or by pressing the
+         
         <kbd
           className="c10"
         >
-          ↹ Tab
+          <span
+            aria-hidden="true"
+          >
+            ↹
+          </span>
+           Tab
         </kbd>
-         and
          
+        and 
         <kbd
           className="c10"
         >
@@ -191,14 +197,20 @@ exports[`OakQuizOrder matches snapshot 1`] = `
       <div
         className="c2 c11"
       >
-        Where you see this, you can click and move things around by dragging them. If you're using a keyboard, press the 
+        Where you see this, you can click and move things around by dragging them. If you're using a keyboard, press the
+         
         <kbd
           className="c10"
         >
-          ↹ Tab
+          <span
+            aria-hidden="true"
+          >
+            ↹
+          </span>
+           Tab
         </kbd>
-         and
          
+        and 
         <kbd
           className="c10"
         >

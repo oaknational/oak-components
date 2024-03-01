@@ -46,15 +46,21 @@ export const OakDragAndDropInstructions = (
       >
         <KeyboardInstructions>
           Where you see this, you can click and move things around by dragging
-          them, or by pressing the <OakKbd>↹ Tab</OakKbd> and{" "}
-          <OakKbd>Space</OakKbd> keys and the <OakKbd>←</OakKbd>{" "}
+          them, or by pressing the{" "}
+          <OakKbd>
+            <span aria-hidden="true">↹</span> Tab
+          </OakKbd>{" "}
+          and <OakKbd>Space</OakKbd> keys and the <OakKbd>←</OakKbd>{" "}
           <OakKbd>↑</OakKbd> <OakKbd>↓</OakKbd> <OakKbd>→</OakKbd> arrows on
           your keyboard
         </KeyboardInstructions>
         <TouchInstructions>
           Where you see this, you can click and move things around by dragging
-          them. If you're using a keyboard, press the <OakKbd>↹ Tab</OakKbd> and{" "}
-          <OakKbd>Space</OakKbd> keys and the <OakKbd>←</OakKbd>{" "}
+          them. If you're using a keyboard, press the{" "}
+          <OakKbd>
+            <span aria-hidden="true">↹</span> Tab
+          </OakKbd>{" "}
+          and <OakKbd>Space</OakKbd> keys and the <OakKbd>←</OakKbd>{" "}
           <OakKbd>↑</OakKbd> <OakKbd>↓</OakKbd> <OakKbd>→</OakKbd> arrows on
           your keyboard to select and move items.
         </TouchInstructions>
