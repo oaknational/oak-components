@@ -87,14 +87,6 @@ exports[`OakQuizOrder matches snapshot 1`] = `
   object-fit: contain;
 }
 
-@media (hover:hover) {
-
-}
-
-@media (hover:hover) {
-
-}
-
 @media (pointer:coarse) {
   .c8 {
     display: none;
@@ -105,6 +97,14 @@ exports[`OakQuizOrder matches snapshot 1`] = `
   .c11 {
     display: none;
   }
+}
+
+@media (hover:hover) {
+
+}
+
+@media (hover:hover) {
+
 }
 
 <div
@@ -336,6 +336,14 @@ exports[`OakQuizOrder matches snapshot 1`] = `
   outline-style: dashed;
 }
 
+@media (pointer:coarse) {
+
+}
+
+@media (hover:hover) and (pointer:fine) {
+
+}
+
 @media (hover:hover) {
   .c7:hover:not([data-dragging="true"]):not([data-disabled="true"]):not( [data-readonly="true"] ) {
     background-color: #dff9de;
@@ -348,14 +356,6 @@ exports[`OakQuizOrder matches snapshot 1`] = `
   .c5:hover {
     background-color: #ffffff;
   }
-}
-
-@media (pointer:coarse) {
-
-}
-
-@media (hover:hover) and (pointer:fine) {
-
 }
 
 <div
@@ -555,7 +555,11 @@ exports[`OakQuizOrder matches snapshot 1`] = `
       </div>
     </div>
   </div>,
-  @media (hover:hover) {
+  @media (pointer:coarse) {
+
+}
+
+@media (hover:hover) and (pointer:fine) {
 
 }
 
@@ -563,11 +567,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
 
 }
 
-@media (pointer:coarse) {
-
-}
-
-@media (hover:hover) and (pointer:fine) {
+@media (hover:hover) {
 
 }
 
@@ -585,7 +585,11 @@ exports[`OakQuizOrder matches snapshot 1`] = `
     Press space again to drop the item in its new position, or press escape to cancel.
   
   </div>,
-  @media (hover:hover) {
+  @media (pointer:coarse) {
+
+}
+
+@media (hover:hover) and (pointer:fine) {
 
 }
 
@@ -593,11 +597,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
 
 }
 
-@media (pointer:coarse) {
-
-}
-
-@media (hover:hover) and (pointer:fine) {
+@media (hover:hover) {
 
 }
 

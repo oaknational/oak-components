@@ -18,3 +18,7 @@ export * from "./OakPromoTag";
 export * from "./OakLessonInfoCard";
 export * from "./OakCollapsibleContent";
 export * from "./OakLink";
+export * from "./OakDragAndDropInstructions";
+export * from "./OakDraggable";
+export * from "./OakDroppable";
+export * from "./OakDraggableFeedback";

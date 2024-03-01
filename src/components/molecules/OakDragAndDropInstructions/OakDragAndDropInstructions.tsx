@@ -1,8 +1,7 @@
 import React, { ComponentPropsWithoutRef } from "react";
 import styled from "styled-components";
 
-import { OakBox, OakFlex, OakIcon } from "@/components/atoms";
-import { OakKbd } from "@/components/atoms/OakKbd";
+import { OakBox, OakFlex, OakIcon, OakKbd } from "@/components/atoms";
 
 const KeyboardInstructions = styled(OakBox)`
   @media (pointer: coarse) {

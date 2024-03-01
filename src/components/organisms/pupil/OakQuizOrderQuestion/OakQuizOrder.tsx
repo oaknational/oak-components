@@ -31,10 +31,12 @@ import {
 import { CSS } from "@dnd-kit/utilities";
 import { createPortal } from "react-dom";
 
-import { OakDraggable } from "@/components/molecules/OakDraggable";
-import { OakDroppable } from "@/components/molecules/OakDroppable";
 import { OakFlex } from "@/components/atoms";
-import { OakDragAndDropInstructions } from "@/components/molecules/OakDragAndDropInstructions";
+import {
+  OakDragAndDropInstructions,
+  OakDraggable,
+  OakDroppable,
+} from "@/components/molecules";
 
 type OakQuizOrderItem = {
   id: string;

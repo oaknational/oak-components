@@ -1,6 +1,6 @@
 import React, { ComponentPropsWithoutRef } from "react";
 
-import { OakDraggable } from "../OakDraggable";
+import { OakDraggable } from "@/components";
 
 type OakDraggableFeedbackProps = ComponentPropsWithoutRef<
   typeof OakDraggable
