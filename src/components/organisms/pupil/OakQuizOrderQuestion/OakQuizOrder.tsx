@@ -152,6 +152,7 @@ export const OakQuizOrder = ({ initialItems, onChange }: OakQuizOrderProps) => {
             $gap="space-between-s"
             $flexDirection="column"
             role="listbox"
+            aria-label="Sortable items"
           >
             {items.map((item) => (
               <ConnectedDraggable key={item.id} {...item} />

@@ -377,6 +377,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
 }
 
 <div
+    aria-label="Sortable items"
     className="c0 c1"
     role="listbox"
   >
