@@ -20,6 +20,7 @@ export const OakKbd = ({ children }: OakKbdProps) => {
       $ba="border-solid-m"
       $ph="inner-padding-xs"
       $pv="inner-padding-ssx"
+      $whiteSpace="nowrap"
     >
       {children}
     </OakSpan>
