@@ -312,14 +312,12 @@ exports[`OakQuizOrder matches snapshot 1`] = `
 
 .c7[data-active="true"] {
   cursor: move;
-  background-color: #bef2bd;
   border: 0.25rem solid #222222;
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
 .c7[data-ghost="true"] {
   cursor: default;
-  background-color: #f2f2f2;
   color: #808080;
 }
 

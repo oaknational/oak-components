@@ -1,15 +1,21 @@
-import React, { ReactNode } from "react";
+import React, {
+  ComponentPropsWithRef,
+  ComponentPropsWithoutRef,
+  FC,
+  ReactNode,
+  forwardRef,
+} from "react";
 import styled from "styled-components";
 
 import { OakBox, OakFlex } from "@/components/atoms";
 import { parseBorder } from "@/styles/helpers/parseBorder";
 import { parseColor } from "@/styles/helpers/parseColor";
 
-export type OakSortableSlotProps = {
+export type OakDroppableProps = {
   /**
-   * Indicates whether the slot is active
+   * Indicates whether a draggable is currently being dragged over the droppable
    */
-  isActive?: boolean;
+  isOver?: boolean;
   children?: ReactNode;
 };
 
@@ -25,24 +31,29 @@ const StyledBox = styled(OakBox)`
 `;
 
 /**
- * A slot for a sortable list
+ * A drop zone for a draggable
  *
- * Can be filled with a sortable item
+ * Has no intrinsic drop functionality.
+ * It is intended to be used with `useDraggable` from `@dnd-kit/core`
  */
-export const OakSortableSlot = ({
-  children,
-  isActive,
-}: OakSortableSlotProps) => {
+export const OakDroppable: FC<
+  OakDroppableProps & ComponentPropsWithRef<typeof OakBox>
+> = forwardRef<
+  HTMLDivElement,
+  OakDroppableProps & ComponentPropsWithoutRef<typeof OakFlex>
+>(({ children, isOver, ...props }, ref) => {
   return (
     <OakFlex
+      ref={ref}
       $gap="space-between-s"
       $background="bg-decorative2-subdued"
       $pa="inner-padding-m"
       $borderRadius="border-radius-m"
       $flexGrow={1}
+      {...props}
     >
       <StyledBox
-        $background={isActive ? "bg-primary" : "bg-neutral"}
+        $background={isOver ? "bg-primary" : "bg-neutral"}
         $pa="inner-padding-xs"
         $borderRadius="border-radius-m"
         $width="100%"
@@ -52,4 +63,4 @@ export const OakSortableSlot = ({
       </StyledBox>
     </OakFlex>
   );
-};
+});

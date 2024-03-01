@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OakSortableSlot matches snapshot 1`] = `
+exports[`OakDroppable matches snapshot 1`] = `
 .c0 {
   padding: 1rem;
   background: #cee7e5;

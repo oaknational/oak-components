@@ -12,24 +12,24 @@ import { parseBorder } from "@/styles/helpers/parseBorder";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 
-type OakSortableItemProps = {
+type OakDraggableProps = {
   /**
    * Whether the item is currently being dragged
    */
-  isActive?: boolean;
+  isDragging?: boolean;
   /**
    * Present the element in a subdued state
    */
-  isGhost?: boolean;
+  isDisabled?: boolean;
 };
 
-const StyledSortableItem = styled(OakBox)`
+const StyledDraggable = styled(OakBox)`
   border-bottom: ${parseBorder("border-solid-xl")} ${parseColor("transparent")};
   cursor: grab;
-  touch-action: none;
+  outline: none;
 
   @media (hover: hover) {
-    &:hover:not([data-active="true"]):not([data-ghost="true"]) {
+    &:hover:not([data-dragging="true"]):not([data-disabled="true"]) {
       background-color: ${parseColor("bg-decorative1-subdued")};
       box-shadow: ${parseDropShadow("drop-shadow-standard")};
       border-bottom: ${parseBorder("border-solid-xl")}
@@ -37,13 +37,12 @@ const StyledSortableItem = styled(OakBox)`
     }
   }
 
-  &:focus-visible {
-    outline: none;
+  &:focus-visible:not([data-dragging="true"]):not([data-disabled="true"]) {
     box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
   }
 
-  &[data-active="true"] {
+  &[data-dragging="true"] {
     cursor: move;
     background-color: ${parseColor("bg-decorative1-main")};
     border: ${parseBorder("border-solid-xl")} ${parseColor("border-primary")};
@@ -51,7 +50,7 @@ const StyledSortableItem = styled(OakBox)`
       ${parseDropShadow("drop-shadow-grey")};
   }
 
-  &[data-ghost="true"] {
+  &[data-disabled="true"] {
     cursor: default;
     background-color: ${parseColor("bg-neutral")};
     color: ${parseColor("text-disabled")};
@@ -63,26 +62,25 @@ const StyledFlex = styled(OakFlex)`
 `;
 
 /**
- * A sortable list of items with drag and drop functionality
- *
- * Items can be dragged over named slots altering the order of items
+ * The component has no intrinsic draggable functionality.
+ * It is intended to be used with `useDraggable` from `@dnd-kit/core`
  */
-export const OakSortableItem: FC<
-  ComponentPropsWithRef<OakSortableItemProps & typeof OakBox>
+export const OakDraggable: FC<
+  ComponentPropsWithRef<OakDraggableProps & typeof OakBox>
 > = forwardRef<
   HTMLDivElement,
-  ComponentPropsWithoutRef<OakSortableItemProps & typeof OakBox>
->(({ children, ...props }, ref) => {
+  ComponentPropsWithoutRef<OakDraggableProps & typeof OakBox>
+>(({ children, isDragging, isDisabled, ...props }, ref) => {
   return (
-    <StyledSortableItem
+    <StyledDraggable
       ref={ref}
       $pv="inner-padding-l"
       $ph="inner-padding-s"
       $background="bg-primary"
       $borderRadius="border-radius-m2"
       $minHeight="all-spacing-10"
-      data-active={props.isActive}
-      data-ghost={props.isGhost}
+      data-dragging={isDragging}
+      data-disabled={isDisabled}
       {...props}
     >
       <StyledFlex $gap="space-between-s" $alignItems="center">
@@ -94,6 +92,6 @@ export const OakSortableItem: FC<
         />
         <OakFlex $font="body-1-bold">{children}</OakFlex>
       </StyledFlex>
-    </StyledSortableItem>
+    </StyledDraggable>
   );
 });

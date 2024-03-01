@@ -23,9 +23,9 @@ import {
 import { CSS } from "@dnd-kit/utilities";
 import { createPortal } from "react-dom";
 
-import { OakSortableItem } from "@/components/molecules/OakSortableItem";
+import { OakDraggable } from "@/components/molecules/OakDraggable";
+import { OakDroppable } from "@/components/molecules/OakDroppable";
 import { OakFlex } from "@/components/atoms";
-import { OakSortableSlot } from "@/components/molecules/OakSortableSlot";
 import { OakDragAndDropInstructions } from "@/components/molecules/OakDragAndDropInstructions";
 
 type OakQuizOrderItem = {
@@ -38,7 +38,7 @@ export type OakQuizOrderProps = {
   onChange?: (items: OakQuizOrderItem[]) => void;
 };
 
-const ConnectedOakSortableItem = ({ id, label }: OakQuizOrderItem) => {
+const ConnectedDraggable = ({ id, label }: OakQuizOrderItem) => {
   const {
     attributes,
     listeners,
@@ -56,11 +56,11 @@ const ConnectedOakSortableItem = ({ id, label }: OakQuizOrderItem) => {
   };
 
   return (
-    <OakSortableSlot isActive={isGhostSlot}>
-      <OakSortableItem
+    <OakDroppable isOver={isGhostSlot}>
+      <OakDraggable
         ref={setNodeRef}
         style={style}
-        isGhost={isGhostItem}
+        isDisabled={isGhostItem}
         {...attributes}
         {...listeners}
         aria-describedby={undefined}
@@ -70,8 +70,8 @@ const ConnectedOakSortableItem = ({ id, label }: OakQuizOrderItem) => {
         role="option"
       >
         {label}
-      </OakSortableItem>
-    </OakSortableSlot>
+      </OakDraggable>
+    </OakDroppable>
   );
 };
 
@@ -116,13 +116,13 @@ export const OakQuizOrder = ({ initialItems, onChange }: OakQuizOrderProps) => {
             role="listbox"
           >
             {items.map((item) => (
-              <ConnectedOakSortableItem key={item.id} {...item} />
+              <ConnectedDraggable key={item.id} {...item} />
             ))}
           </OakFlex>
           {createPortal(
             <DragOverlay>
               {activeItem && (
-                <OakSortableItem isActive>{activeItem.label}</OakSortableItem>
+                <OakDraggable isDragging>{activeItem.label}</OakDraggable>
               )}
             </DragOverlay>,
             document.body,
