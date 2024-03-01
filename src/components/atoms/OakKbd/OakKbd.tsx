@@ -12,10 +12,10 @@ export type OakKbdProps = {
 export const OakKbd = ({ children }: OakKbdProps) => {
   return (
     <OakSpan
-      $font="body-3"
+      $font="body-3-bold"
       as="kbd"
-      $borderColor="border-neutral"
-      $background="bg-neutral-stronger"
+      $borderColor="border-decorative3-stronger"
+      $background="bg-primary"
       $borderRadius="border-radius-m"
       $ba="border-solid-m"
       $ph="inner-padding-xs"

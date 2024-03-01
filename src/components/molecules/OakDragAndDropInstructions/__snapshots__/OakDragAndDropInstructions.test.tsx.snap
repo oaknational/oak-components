@@ -59,16 +59,16 @@ exports[`OakDragAndDropInstructions matches snapshot 1`] = `
 }
 
 .c9 {
-  background: #e4e4e4;
+  background: #ffffff;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   border: 0.125rem solid;
-  border-color: #808080;
+  border-color: #7c9aec;
   border-radius: 0.375rem;
   font-family: Lexend,sans-serif;
-  font-weight: 300;
+  font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.25rem;
   -webkit-letter-spacing: -0.005rem;
@@ -145,7 +145,7 @@ exports[`OakDragAndDropInstructions matches snapshot 1`] = `
         <kbd
           className="c9"
         >
-          Tab
+          ↹ Tab
         </kbd>
          , 
         <kbd

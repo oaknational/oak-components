@@ -34,7 +34,7 @@ export const OakDragAndDropInstructions = (
             them or by pressing the
           </OakBox>
           <OakBox>
-            <OakKbd>Tab</OakKbd> , <OakKbd>Space</OakKbd> and the{" "}
+            <OakKbd>↹ Tab</OakKbd> , <OakKbd>Space</OakKbd> and the{" "}
             <OakKbd>←</OakKbd> <OakKbd>↑</OakKbd> <OakKbd>↓</OakKbd>{" "}
             <OakKbd>→</OakKbd> arrows on your keyboard
           </OakBox>
