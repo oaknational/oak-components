@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 
-import { OakSpan } from "../OakSpan";
+import { OakSpan } from "@/components/atoms";
 
 export type OakKbdProps = {
   children: ReactNode;
