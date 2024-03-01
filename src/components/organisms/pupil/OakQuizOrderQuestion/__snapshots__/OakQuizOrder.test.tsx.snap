@@ -236,6 +236,8 @@ exports[`OakQuizOrder matches snapshot 1`] = `
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   background: #ffffff;
+  border-bottom: 0.25rem solid;
+  border-color: transparent;
   border-radius: 0.5rem;
   font-family: Lexend,sans-serif;
 }
@@ -298,27 +300,31 @@ exports[`OakQuizOrder matches snapshot 1`] = `
 }
 
 .c7 {
-  border-bottom: 0.25rem solid transparent;
   cursor: -webkit-grab;
   cursor: -moz-grab;
   cursor: grab;
-  touch-action: none;
+  outline: none;
 }
 
-.c7:focus-visible {
-  outline: none;
+.c7:focus-visible:not([data-dragging="true"]):not([data-disabled="true"]) {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c7[data-active="true"] {
+.c7[data-dragging="true"] {
   cursor: move;
+  background-color: #bef2bd;
   border: 0.25rem solid #222222;
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c7[data-ghost="true"] {
+.c7[data-disabled="true"] {
   cursor: default;
+  background-color: #f2f2f2;
   color: #808080;
+}
+
+.c7[data-readonly="true"] {
+  cursor: default;
 }
 
 .c9 {
@@ -331,7 +337,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
 }
 
 @media (hover:hover) {
-  .c7:hover:not([data-active="true"]):not([data-ghost="true"]) {
+  .c7:hover:not([data-dragging="true"]):not([data-disabled="true"]):not( [data-readonly="true"] ) {
     background-color: #dff9de;
     box-shadow: 0 0.5rem 0.5rem rgba(92,92,92,20%);
     border-bottom: 0.25rem solid #222222;
@@ -364,12 +370,13 @@ exports[`OakQuizOrder matches snapshot 1`] = `
       >
         <div
           aria-disabled={false}
-          aria-roledescription="order item"
+          aria-roledescription="sortable item"
           aria-selected={false}
           className="c6 c7"
-          data-ghost={false}
+          data-disabled={false}
           onKeyDown={[Function]}
-          onPointerDown={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
           role="option"
           style={
             {
@@ -427,12 +434,13 @@ exports[`OakQuizOrder matches snapshot 1`] = `
       >
         <div
           aria-disabled={false}
-          aria-roledescription="order item"
+          aria-roledescription="sortable item"
           aria-selected={false}
           className="c6 c7"
-          data-ghost={false}
+          data-disabled={false}
           onKeyDown={[Function]}
-          onPointerDown={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
           role="option"
           style={
             {
@@ -490,12 +498,13 @@ exports[`OakQuizOrder matches snapshot 1`] = `
       >
         <div
           aria-disabled={false}
-          aria-roledescription="order item"
+          aria-roledescription="sortable item"
           aria-selected={false}
           className="c6 c7"
-          data-ghost={false}
+          data-disabled={false}
           onKeyDown={[Function]}
-          onPointerDown={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
           role="option"
           style={
             {

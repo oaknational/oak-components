@@ -8,6 +8,8 @@ exports[`OakDraggable matches snapshot 1`] = `
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   background: #ffffff;
+  border-bottom: 0.25rem solid;
+  border-color: transparent;
   border-radius: 0.5rem;
   font-family: Lexend,sans-serif;
 }
@@ -58,27 +60,31 @@ exports[`OakDraggable matches snapshot 1`] = `
 }
 
 .c1 {
-  border-bottom: 0.25rem solid transparent;
   cursor: -webkit-grab;
   cursor: -moz-grab;
   cursor: grab;
-  touch-action: none;
+  outline: none;
 }
 
-.c1:focus-visible {
-  outline: none;
+.c1:focus-visible:not([data-dragging="true"]):not([data-disabled="true"]) {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c1[data-active="true"] {
+.c1[data-dragging="true"] {
   cursor: move;
+  background-color: #bef2bd;
   border: 0.25rem solid #222222;
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c1[data-ghost="true"] {
+.c1[data-disabled="true"] {
   cursor: default;
+  background-color: #f2f2f2;
   color: #808080;
+}
+
+.c1[data-readonly="true"] {
+  cursor: default;
 }
 
 .c4 {
@@ -86,7 +92,7 @@ exports[`OakDraggable matches snapshot 1`] = `
 }
 
 @media (hover:hover) {
-  .c1:hover:not([data-active="true"]):not([data-ghost="true"]) {
+  .c1:hover:not([data-dragging="true"]):not([data-disabled="true"]):not( [data-readonly="true"] ) {
     background-color: #dff9de;
     box-shadow: 0 0.5rem 0.5rem rgba(92,92,92,20%);
     border-bottom: 0.25rem solid #222222;

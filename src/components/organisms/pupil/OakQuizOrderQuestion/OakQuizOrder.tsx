@@ -72,7 +72,7 @@ const ConnectedDraggable = memo(({ id, label }: OakQuizOrderItem) => {
         {...attributes}
         {...listeners}
         aria-describedby={undefined}
-        aria-roledescription="order item"
+        aria-roledescription="sortable item"
         aria-pressed={undefined}
         aria-selected={!!attributes["aria-pressed"]}
         role="option"
@@ -199,7 +199,7 @@ function createAccouncements(items: OakQuizOrderItem[]): Announcements {
     onDragOver({ active, over }) {
       // Don't make an announcement for the first drag over since this is the initial position
       if (over && !firstAnnouncement) {
-        return `Item ${getItemLabel(
+        return `Sortable item ${getItemLabel(
           active.id,
         )} was moved into position ${getPosition(over.id)} of ${items.length}`;
       }
@@ -208,7 +208,7 @@ function createAccouncements(items: OakQuizOrderItem[]): Announcements {
     onDragEnd({ active, over }) {
       firstAnnouncement = true;
       if (over) {
-        return `Item ${getItemLabel(
+        return `Sortable item ${getItemLabel(
           active.id,
         )} was dropped into position ${getPosition(over.id)} of ${
           items.length
@@ -217,7 +217,7 @@ function createAccouncements(items: OakQuizOrderItem[]): Announcements {
     },
     onDragCancel({ active }) {
       firstAnnouncement = true;
-      return `Dragging was cancelled. Item ${getItemLabel(
+      return `Dragging was cancelled. Sortable item ${getItemLabel(
         active.id,
       )} was dropped.`;
     },
