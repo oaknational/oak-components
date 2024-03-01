@@ -1,9 +1,15 @@
-import React, { FC, createContext, useContext, useState } from "react";
+import React, {
+  FC,
+  createContext,
+  memo,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 import {
   DndContext,
   closestCenter,
   KeyboardSensor,
-  PointerSensor,
   useSensor,
   useSensors,
   DragEndEvent,
@@ -12,6 +18,8 @@ import {
   UniqueIdentifier,
   Announcements,
   DndContextProps,
+  MouseSensor,
+  TouchSensor,
 } from "@dnd-kit/core";
 import {
   arrayMove,
@@ -38,7 +46,7 @@ export type OakQuizOrderProps = {
   onChange?: (items: OakQuizOrderItem[]) => void;
 };
 
-const ConnectedDraggable = ({ id, label }: OakQuizOrderItem) => {
+const ConnectedDraggable = memo(({ id, label }: OakQuizOrderItem) => {
   const {
     attributes,
     listeners,
@@ -73,7 +81,7 @@ const ConnectedDraggable = ({ id, label }: OakQuizOrderItem) => {
       </OakDraggable>
     </OakDroppable>
   );
-};
+});
 
 /**
  * Facilitates DI for the DndContext
@@ -89,13 +97,34 @@ export const OakQuizOrder = ({ initialItems, onChange }: OakQuizOrderProps) => {
   const [items, setItems] = useState<OakQuizOrderItem[]>(initialItems);
   const [activeId, setActiveId] = useState<string | null>(null);
   const activeItem = items.find((item) => item.id === activeId);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
   const sensors = useSensors(
-    useSensor(PointerSensor),
+    useSensor(MouseSensor),
+    useSensor(TouchSensor),
     useSensor(KeyboardSensor, {
       coordinateGetter: sortableKeyboardCoordinates,
+      scrollBehavior: prefersReducedMotion ? "instant" : "smooth",
     }),
   );
   const DndContext = useContext(injectDndContext);
+
+  /**
+   * Disable smooth scrolling during drag to ensure that the dragged item is always visible
+   */
+  useEffect(() => {
+    const originalScrollingBehaviour =
+      document.documentElement.style.scrollBehavior;
+    document.documentElement.style.scrollBehavior = "auto";
+
+    setPrefersReducedMotion(
+      window.matchMedia("(prefers-reduced-motion)").matches,
+    );
+
+    return () => {
+      document.documentElement.style.scrollBehavior =
+        originalScrollingBehaviour;
+    };
+  });
 
   return (
     <>
