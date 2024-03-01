@@ -42,7 +42,15 @@ type OakQuizOrderItem = {
 };
 
 export type OakQuizOrderProps = {
+  /**
+   * The initial order of items
+   *
+   * this cannot be updated on subsequent renders
+   */
   initialItems: OakQuizOrderItem[];
+  /**
+   * Notified the consumer when the order of items has changed
+   */
   onChange?: (items: OakQuizOrderItem[]) => void;
 };
 
