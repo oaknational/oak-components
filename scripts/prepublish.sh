@@ -2,11 +2,6 @@
 
 echo "pre-publish"
 
-if [ "$CI" = "true" ]; then
-  echo "Skipping pre-publish checks on CI"
-  exit 0
-fi;
-
 branch="$(git rev-parse --abbrev-ref HEAD)"
 
 if [ "$branch" != "main" ]; then
@@ -14,5 +9,9 @@ if [ "$branch" != "main" ]; then
   exit 1
 fi
 
-npm run test:ci
+# If we're not on CI, run the tests
+if [ "$CI" != "true" ]; then
+  npm run test:ci
+fi;
+
 npm run build
