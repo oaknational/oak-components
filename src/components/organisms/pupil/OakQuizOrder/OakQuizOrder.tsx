@@ -1,12 +1,5 @@
-import React, {
-  FC,
-  createContext,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
+import React, { useState } from "react";
 import {
-  DndContext,
   closestCenter,
   KeyboardSensor,
   useSensor,
@@ -16,7 +9,6 @@ import {
   DragStartEvent,
   UniqueIdentifier,
   Announcements,
-  DndContextProps,
   MouseSensor,
   TouchSensor,
 } from "@dnd-kit/core";
@@ -36,6 +28,8 @@ import {
   OakDraggable,
   OakDroppable,
 } from "@/components/molecules";
+import { InternalDndContext } from "@/components/atoms/InternalDndContext/InternalDndContext";
+import { usePrefersReducedMotion } from "@/animation/usePrefersReducedMotion";
 
 type OakQuizOrderItem = {
   id: string;
@@ -93,11 +87,6 @@ const ConnectedDraggable = ({ id, label }: OakQuizOrderItem) => {
 };
 
 /**
- * Facilitates DI for the DndContext
- */
-export const injectDndContext = createContext<FC<DndContextProps>>(DndContext);
-
-/**
  * A sortable list of items with drag and drop functionality. Items can be dragged over named slots to re-arrange them
  *
  * Keyboard navigation is supported with the `tab`, `space` and `arrow` keys
@@ -106,39 +95,19 @@ export const OakQuizOrder = ({ initialItems, onChange }: OakQuizOrderProps) => {
   const [items, setItems] = useState<OakQuizOrderItem[]>(initialItems);
   const [activeId, setActiveId] = useState<string | null>(null);
   const activeItem = items.find((item) => item.id === activeId);
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
   const sensors = useSensors(
     useSensor(MouseSensor),
     useSensor(TouchSensor),
     useSensor(KeyboardSensor, {
       coordinateGetter: sortableKeyboardCoordinates,
-      scrollBehavior: prefersReducedMotion ? "instant" : "smooth",
+      scrollBehavior: usePrefersReducedMotion() ? "instant" : "smooth",
     }),
   );
-  const DndContext = useContext(injectDndContext);
-
-  /**
-   * Disable smooth scrolling during drag to ensure that the dragged item is always visible
-   */
-  useEffect(() => {
-    const originalScrollingBehaviour =
-      document.documentElement.style.scrollBehavior;
-    document.documentElement.style.scrollBehavior = "auto";
-
-    setPrefersReducedMotion(
-      window.matchMedia("(prefers-reduced-motion)").matches,
-    );
-
-    return () => {
-      document.documentElement.style.scrollBehavior =
-        originalScrollingBehaviour;
-    };
-  });
 
   return (
     <>
       <OakDragAndDropInstructions $mb="space-between-m2" />
-      <DndContext
+      <InternalDndContext
         sensors={sensors}
         collisionDetection={closestCenter}
         onDragEnd={handleDragEnd}
@@ -167,7 +136,7 @@ export const OakQuizOrder = ({ initialItems, onChange }: OakQuizOrderProps) => {
             document.body,
           )}
         </SortableContext>
-      </DndContext>
+      </InternalDndContext>
     </>
   );
 
