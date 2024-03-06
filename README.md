@@ -4,7 +4,7 @@
 
 ## Overview
 
-This is a React Typescript components library which supports React and Next applications produced by [Oak National Academy](https://www.thenational.academy/). A Storybook for the components can be found [here](https://lively-meringue-8ebd43.netlify.app/) please consult 1Password for access.
+This is a React Typescript components library which supports React and Next applications produced by [Oak National Academy](https://www.thenational.academy/). A Storybook for the components can be found [here](https://components.thenational.academy/) please consult 1Password for access.
 
 ## Installation
 
