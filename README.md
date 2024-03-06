@@ -12,6 +12,37 @@ This library is suitable for use in an app using React 18 and Next.js 13+
 
 You can install it using `npm i @oaknational/oak-components` or any other package manager that supports the NPM registry.
 
+### Theming, global styles and fonts
+
+For components to be styled correctly they will need access to a theme, some global styles and the Lexend font.
+
+You can add those to your app using something like:
+
+```typescript
+import { OakThemeProvider, oakDefaultTheme } from "@oaknational/oak-components";
+import Head from "next/head";
+import { Lexend } from "next/font/google";
+
+const lexend = Lexend({ subsets: ['latin'] });
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <Head>
+        <OakGlobalStyles />
+      </Head>
+      <body className={lexend.className}>
+        <OakThemeProvider theme={oakDefaultTheme}>{children}</OakThemeProvider>
+      </body>
+    </html>
+  );
+}
+```
+
+### TypeScript
+
+If you're using TypeScript you might want to add `@types/styled-components` to your development dependencies (`npm i -D @types/styled-components`). This will ensure that all components are properly type hinted in your IDE.
+
 ## Development
 
 1. Copy the example env config `cp .env.example .env`
