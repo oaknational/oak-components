@@ -11,4 +11,4 @@ export * from "./OakHintButton";
 export * from "./OakLessonNavItem";
 export * from "./OakLessonReviewItem";
 export * from "./OakLessonVideoTranscript";
-export * from "./OakQuizOrderQuestion";
+export * from "./OakQuizOrder";
