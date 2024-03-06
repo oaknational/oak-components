@@ -51,6 +51,12 @@ If you're using TypeScript you might want to add `@types/styled-components` to y
 4. run `npm install`
 5. To view the storybook run `npm run storybook`
 
+## Making changes
+
+We use [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) and [semantic versioning](https://semver.org/). Releases are managed by [Semantic Release](https://github.com/semantic-release/semantic-release) and are automatically published to [NPM](https://www.npmjs.com/package/@oaknational/oak-components) on every merge to `main`
+
+Changes should go through a pull-request to `main` and require approval by at least 1 reviewer. You should seek reviews from a QA/designer/PM when necessary.
+
 ## Testing components inside a host app like OWA
 
 Sometimes it isn't enough to develop entirely inside Storybook and it might be necessary to try local changes inside a target app. You can do this with [yalc](https://github.com/wclr/yalc)
@@ -63,7 +69,7 @@ Sometimes it isn't enough to develop entirely inside Storybook and it might be n
 4. Now when you start your target app you should have access to the locally packaged version of the library
 5. To uninstall the local package you can run `yalc remove @oaknational/oak-components` inside the target app
    - 🚨 if you're an Oak engineer developing in OWA there is a convenience script and you should use `npm run remove-local-components` instead
-     as it will automaticallyt re-install the library from NPM.
+     as it will automatically re-install the library from NPM.
 
 ## Structure
 
