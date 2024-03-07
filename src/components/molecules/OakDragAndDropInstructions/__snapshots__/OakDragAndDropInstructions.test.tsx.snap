@@ -42,18 +42,7 @@ exports[`OakDragAndDropInstructions matches snapshot 1`] = `
   flex-grow: 0;
 }
 
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.c9 {
+.c7 {
   background: #ffffff;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -77,21 +66,9 @@ exports[`OakDragAndDropInstructions matches snapshot 1`] = `
   object-fit: contain;
 }
 
-.c7 {
+.c6 {
   margin-block: calc(-0.5rem / 2);
   line-height: calc(1.5rem + 0.5rem);
-}
-
-@media (pointer:coarse) {
-  .c8 {
-    display: none;
-  }
-}
-
-@media (hover:hover) and (pointer:fine) {
-  .c10 {
-    display: none;
-  }
 }
 
 <div
@@ -130,104 +107,40 @@ exports[`OakDragAndDropInstructions matches snapshot 1`] = `
     </div>
   </div>
   <div
-    className="c5 c6 c7"
+    className="c5 c6"
   >
-    <div
-      className="c0 c8"
+    Click and drag answers to change the order, or select using
+     
+    <kbd
+      className="c7"
     >
-      Where you see this, you can click and move things around by dragging them, or by pressing the
-       
-      <kbd
-        className="c9"
+      <span
+        aria-hidden="true"
       >
-        <span
-          aria-hidden="true"
-        >
-          ↹
-        </span>
-         Tab
-      </kbd>
-       
-      and 
-      <kbd
-        className="c9"
-      >
-        Space
-      </kbd>
-       keys and the 
-      <kbd
-        className="c9"
-      >
-        ←
-      </kbd>
-       
-      <kbd
-        className="c9"
-      >
-        ↑
-      </kbd>
-       
-      <kbd
-        className="c9"
-      >
-        ↓
-      </kbd>
-       
-      <kbd
-        className="c9"
-      >
-        →
-      </kbd>
-       arrows on your keyboard
-    </div>
-    <div
-      className="c0 c10"
+        ↹
+      </span>
+       Tab
+    </kbd>
+     
+    then move by pressing 
+    <kbd
+      className="c7"
     >
-      Where you see this, you can click and move things around by dragging them. If you're using a keyboard, press the
-       
-      <kbd
-        className="c9"
-      >
-        <span
-          aria-hidden="true"
-        >
-          ↹
-        </span>
-         Tab
-      </kbd>
-       
-      and 
-      <kbd
-        className="c9"
-      >
-        Space
-      </kbd>
-       keys and the 
-      <kbd
-        className="c9"
-      >
-        ←
-      </kbd>
-       
-      <kbd
-        className="c9"
-      >
-        ↑
-      </kbd>
-       
-      <kbd
-        className="c9"
-      >
-        ↓
-      </kbd>
-       
-      <kbd
-        className="c9"
-      >
-        →
-      </kbd>
-       arrows on your keyboard to select and move items.
-    </div>
+      Space
+    </kbd>
+     and the 
+    <kbd
+      className="c7"
+    >
+      ↑
+    </kbd>
+     
+    <kbd
+      className="c7"
+    >
+      ↓
+    </kbd>
+     arrows on your keyboard.
   </div>
 </div>
 `;

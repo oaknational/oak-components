@@ -48,18 +48,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
   flex-grow: 0;
 }
 
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.c10 {
+.c8 {
   background: #ffffff;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -83,21 +72,9 @@ exports[`OakQuizOrder matches snapshot 1`] = `
   object-fit: contain;
 }
 
-.c8 {
+.c7 {
   margin-block: calc(-0.5rem / 2);
   line-height: calc(1.5rem + 0.5rem);
-}
-
-@media (pointer:coarse) {
-  .c9 {
-    display: none;
-  }
-}
-
-@media (hover:hover) and (pointer:fine) {
-  .c11 {
-    display: none;
-  }
 }
 
 @media (hover:hover) {
@@ -144,104 +121,40 @@ exports[`OakQuizOrder matches snapshot 1`] = `
       </div>
     </div>
     <div
-      className="c6 c7 c8"
+      className="c6 c7"
     >
-      <div
-        className="c2 c9"
+      Click and drag answers to change the order, or select using
+       
+      <kbd
+        className="c8"
       >
-        Where you see this, you can click and move things around by dragging them, or by pressing the
-         
-        <kbd
-          className="c10"
+        <span
+          aria-hidden="true"
         >
-          <span
-            aria-hidden="true"
-          >
-            ↹
-          </span>
-           Tab
-        </kbd>
-         
-        and 
-        <kbd
-          className="c10"
-        >
-          Space
-        </kbd>
-         keys and the 
-        <kbd
-          className="c10"
-        >
-          ←
-        </kbd>
-         
-        <kbd
-          className="c10"
-        >
-          ↑
-        </kbd>
-         
-        <kbd
-          className="c10"
-        >
-          ↓
-        </kbd>
-         
-        <kbd
-          className="c10"
-        >
-          →
-        </kbd>
-         arrows on your keyboard
-      </div>
-      <div
-        className="c2 c11"
+          ↹
+        </span>
+         Tab
+      </kbd>
+       
+      then move by pressing 
+      <kbd
+        className="c8"
       >
-        Where you see this, you can click and move things around by dragging them. If you're using a keyboard, press the
-         
-        <kbd
-          className="c10"
-        >
-          <span
-            aria-hidden="true"
-          >
-            ↹
-          </span>
-           Tab
-        </kbd>
-         
-        and 
-        <kbd
-          className="c10"
-        >
-          Space
-        </kbd>
-         keys and the 
-        <kbd
-          className="c10"
-        >
-          ←
-        </kbd>
-         
-        <kbd
-          className="c10"
-        >
-          ↑
-        </kbd>
-         
-        <kbd
-          className="c10"
-        >
-          ↓
-        </kbd>
-         
-        <kbd
-          className="c10"
-        >
-          →
-        </kbd>
-         arrows on your keyboard to select and move items.
-      </div>
+        Space
+      </kbd>
+       and the 
+      <kbd
+        className="c8"
+      >
+        ↑
+      </kbd>
+       
+      <kbd
+        className="c8"
+      >
+        ↓
+      </kbd>
+       arrows on your keyboard.
     </div>
   </div>,
   .c0 {
@@ -364,14 +277,6 @@ exports[`OakQuizOrder matches snapshot 1`] = `
 .c4 {
   outline: 0.188rem solid #222222;
   outline-style: dashed;
-}
-
-@media (pointer:coarse) {
-
-}
-
-@media (hover:hover) and (pointer:fine) {
-
 }
 
 @media (hover:hover) {
@@ -586,15 +491,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
       </div>
     </div>
   </div>,
-  @media (pointer:coarse) {
-
-}
-
-@media (hover:hover) and (pointer:fine) {
-
-}
-
-@media (hover:hover) {
+  @media (hover:hover) {
 
 }
 
@@ -616,15 +513,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
     Press space again to drop the item in its new position, or press escape to cancel.
   
   </div>,
-  @media (pointer:coarse) {
-
-}
-
-@media (hover:hover) and (pointer:fine) {
-
-}
-
-@media (hover:hover) {
+  @media (hover:hover) {
 
 }
 
