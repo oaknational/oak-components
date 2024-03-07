@@ -48,3 +48,11 @@ export const ReadOnly: Story = {
     isReadOnly: true,
   },
 };
+
+export const WithColors: Story = {
+  args: {
+    color: "text-inverted",
+    background: "bg-btn-primary",
+    iconColor: "icon-main",
+  },
+};
