@@ -4,13 +4,44 @@
 
 ## Overview
 
-This is a React Typescript components library which supports React and Next applications produced by [Oak National Academy](https://www.thenational.academy/). A Storybook for the components can be found [here](https://lively-meringue-8ebd43.netlify.app/) please consult 1Password for access.
+This is a React Typescript components library which supports React and Next applications produced by [Oak National Academy](https://www.thenational.academy/). A Storybook for the components can be found [here](https://components.thenational.academy/) please consult 1Password for access.
 
 ## Installation
 
 This library is suitable for use in an app using React 18 and Next.js 13+
 
 You can install it using `npm i @oaknational/oak-components` or any other package manager that supports the NPM registry.
+
+### Theming, global styles and fonts
+
+For components to be styled correctly they will need access to a theme, some global styles and the Lexend font.
+
+You can add those to your app using something like:
+
+```typescript
+import { OakThemeProvider, oakDefaultTheme } from "@oaknational/oak-components";
+import Head from "next/head";
+import { Lexend } from "next/font/google";
+
+const lexend = Lexend({ subsets: ['latin'] });
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <Head>
+        <OakGlobalStyles />
+      </Head>
+      <body className={lexend.className}>
+        <OakThemeProvider theme={oakDefaultTheme}>{children}</OakThemeProvider>
+      </body>
+    </html>
+  );
+}
+```
+
+### TypeScript
+
+If you're using TypeScript you might want to add `@types/styled-components` to your development dependencies (`npm i -D @types/styled-components`). This will ensure that all components are properly type hinted in your IDE.
 
 ## Development
 
@@ -19,6 +50,12 @@ You can install it using `npm i @oaknational/oak-components` or any other packag
 3. run `nvm use`
 4. run `npm install`
 5. To view the storybook run `npm run storybook`
+
+## Making changes
+
+We use [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) and [semantic versioning](https://semver.org/). Releases are managed by [Semantic Release](https://github.com/semantic-release/semantic-release) and are automatically published to [NPM](https://www.npmjs.com/package/@oaknational/oak-components) on every merge to `main`
+
+Changes should go through a pull-request to `main` and require approval by at least 1 reviewer. You should seek reviews from a QA/designer/PM when necessary.
 
 ## Testing components inside a host app like OWA
 
@@ -32,7 +69,7 @@ Sometimes it isn't enough to develop entirely inside Storybook and it might be n
 4. Now when you start your target app you should have access to the locally packaged version of the library
 5. To uninstall the local package you can run `yalc remove @oaknational/oak-components` inside the target app
    - 🚨 if you're an Oak engineer developing in OWA there is a convenience script and you should use `npm run remove-local-components` instead
-     as it will automaticallyt re-install the library from NPM.
+     as it will automatically re-install the library from NPM.
 
 ## Structure
 
