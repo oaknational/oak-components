@@ -96,6 +96,7 @@ export const OakDroppable: FC<
           $flexBasis="100%"
           $width="100%"
           $alignSelf="center"
+          data-testid="label"
         >
           {labelSlot}
         </OakFlex>
