@@ -14,6 +14,7 @@ import {
   useDroppable,
 } from "@dnd-kit/core";
 import { createPortal } from "react-dom";
+import { sortableKeyboardCoordinates } from "@dnd-kit/sortable";
 
 import { InternalDroppableHoldingPen } from "../InternalDroppableHoldingPen";
 
@@ -159,6 +160,7 @@ export const OakQuizMatch = ({
     useSensor(MouseSensor),
     useSensor(TouchSensor),
     useSensor(KeyboardSensor, {
+      coordinateGetter: sortableKeyboardCoordinates,
       scrollBehavior: prefersReducedMotion ? "instant" : "smooth",
     }),
   );
