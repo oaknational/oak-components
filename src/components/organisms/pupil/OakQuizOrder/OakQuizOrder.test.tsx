@@ -9,9 +9,11 @@ import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { injectDndContext } from "@/components/atoms/InternalDndContext/InternalDndContext";
 
-window.matchMedia = jest.fn().mockReturnValue({
-  matches: false,
-});
+window.matchMedia =
+  window.matchMedia ??
+  jest.fn().mockReturnValue({
+    matches: false,
+  });
 
 describe(OakQuizOrder, () => {
   const initialItems = [

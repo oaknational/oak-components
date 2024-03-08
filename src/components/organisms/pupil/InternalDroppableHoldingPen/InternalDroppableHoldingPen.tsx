@@ -3,13 +3,15 @@ import React, {
   ComponentPropsWithoutRef,
   FC,
   forwardRef,
+  useLayoutEffect,
+  useState,
 } from "react";
 import styled from "styled-components";
 
-import { OakFlex } from "@/components/atoms";
+import { OakBox, OakFlex } from "@/components/atoms";
 import { parseColor } from "@/styles/helpers/parseColor";
 
-const StyledOakFlex = styled(OakFlex)`
+const StyledOakBox = styled(OakBox)`
   background-color: ${parseColor("grey20")};
   background-color: color-mix(in lch, ${parseColor("black")} 5%, transparent);
 
@@ -41,18 +43,58 @@ export const InternalDroppableHoldingPen: FC<
 > = forwardRef<
   HTMLDivElement,
   InternalDroppableHoldingPenProps & ComponentPropsWithoutRef<typeof OakFlex>
->(({ isOver, ...props }, ref) => {
+>(({ isOver, children, ...props }, ref) => {
+  const [domContent, setContentBox] = useState<HTMLDivElement | null>(null);
+  const [minHeight, setMinHeight] = useState<number>(0);
+
+  useLayoutEffect(() => {
+    if (!domContent) {
+      return;
+    }
+
+    // Prevents the holding area from shrinking when an item is removed
+    // avoiding layout shift
+    const observer = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        setMinHeight((currentHeight) =>
+          Math.max(entry.borderBoxSize[0]?.blockSize ?? 0, currentHeight),
+        );
+      }
+    });
+
+    observer.observe(domContent);
+
+    // Reset min height when the window is resized so that the holding pen can shrink
+    function resetMinHeight() {
+      setMinHeight(0);
+    }
+    window.addEventListener("resize", resetMinHeight);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", resetMinHeight);
+    };
+  }, [domContent]);
+
   return (
-    <StyledOakFlex
+    <StyledOakBox
       ref={ref}
-      $pa="inner-padding-s"
       $mb="space-between-m2"
-      $gap="space-between-xs"
       $borderRadius="border-radius-l"
-      $flexWrap="wrap"
-      $minHeight="all-spacing-13"
       data-over={isOver}
+      style={{ minHeight: minHeight === 0 ? "auto" : minHeight }}
       {...props}
-    />
+    >
+      <OakFlex
+        $alignItems="flex-start"
+        $minHeight="all-spacing-13"
+        $pa="inner-padding-s"
+        $gap="space-between-xs"
+        $flexWrap="wrap"
+        ref={setContentBox}
+      >
+        {children}
+      </OakFlex>
+    </StyledOakBox>
   );
 });

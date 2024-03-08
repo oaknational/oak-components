@@ -17,9 +17,20 @@ import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { injectDndContext } from "@/components/atoms/InternalDndContext/InternalDndContext";
 
-window.matchMedia = jest.fn().mockReturnValue({
-  matches: false,
-});
+// Not currently implemented by JSDOM so we can provide stubs
+window.matchMedia =
+  window.matchMedia ??
+  jest.fn().mockReturnValue({
+    matches: false,
+  });
+
+class MockResizeObserver implements ResizeObserver {
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+}
+
+window.ResizeObserver = window.ResizeObserver ?? MockResizeObserver;
 
 const options = [
   { id: "1", label: "Exclamation mark" },
