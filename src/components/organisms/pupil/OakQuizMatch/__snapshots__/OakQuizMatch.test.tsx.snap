@@ -316,6 +316,7 @@ exports[`OakQuizMatch matches snapshot 1`] = `
 }
 
 <div
+    aria-label="Available items"
     className="c0 c1"
     data-over={false}
     data-testid="holding-pen"
@@ -615,12 +616,11 @@ exports[`OakQuizMatch matches snapshot 1`] = `
 }
 
 <div
-    aria-label="Match items"
+    aria-label="Matched items"
     className="c0 c1"
     role="listbox"
   >
     <div
-      aria-roledescription="droppable slot"
       className="c2 c3"
       data-testid="slot"
       id="1"
@@ -641,7 +641,6 @@ exports[`OakQuizMatch matches snapshot 1`] = `
       </div>
     </div>
     <div
-      aria-roledescription="droppable slot"
       className="c2 c3"
       data-testid="slot"
       id="2"
@@ -662,7 +661,6 @@ exports[`OakQuizMatch matches snapshot 1`] = `
       </div>
     </div>
     <div
-      aria-roledescription="droppable slot"
       className="c2 c3"
       data-testid="slot"
       id="3"

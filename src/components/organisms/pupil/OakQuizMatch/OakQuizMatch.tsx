@@ -81,12 +81,12 @@ const ConnectedDraggable = ({
       iconColor="icon-main"
       {...attributes}
       {...listeners}
+      role="option"
       aria-describedby={undefined}
       aria-roledescription="draggable item"
       aria-pressed={undefined}
       aria-selected={!!attributes["aria-pressed"]}
       style={{ opacity: isDragging ? 0 : 1 }}
-      role="option"
     >
       {label}
     </OakDraggable>
@@ -107,8 +107,9 @@ const ConnectedDroppableHoldingPen = ({
     <InternalDroppableHoldingPen
       ref={setNodeRef}
       isOver={isOver}
-      role="listbox"
+      aria-label="Available items"
       data-testid="holding-pen"
+      role="listbox"
     >
       {children}
     </InternalDroppableHoldingPen>
@@ -130,7 +131,6 @@ const ConnectedDroppable = ({
       isOver={isOver}
       isDisabled={!active}
       ref={setNodeRef}
-      aria-roledescription="droppable slot"
       id={id}
       labelSlot={label}
       data-testid="slot"
@@ -186,8 +186,8 @@ export const OakQuizMatch = ({
         <OakFlex
           $gap="space-between-s"
           $flexDirection="column"
+          aria-label="Matched items"
           role="listbox"
-          aria-label="Match items"
         >
           {droppables.map((droppable) => (
             <ConnectedDroppable
@@ -246,7 +246,7 @@ const announcements: Announcements = {
   },
   onDragOver({ active, over }) {
     if (over?.data.current && active.data?.current) {
-      return `Item ${active.data.current.label} was moved over ${over.data.current.label}`;
+      return `Item ${active.data.current.label} is over ${over.data.current.label}`;
     }
   },
   onDragEnd({ active, over }) {

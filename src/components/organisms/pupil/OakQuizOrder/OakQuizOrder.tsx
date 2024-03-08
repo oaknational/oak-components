@@ -167,23 +167,19 @@ function createAccouncements(items: OakQuizOrderItem[]): Announcements {
     items.findIndex((item) => item.id === id) + 1;
   const getItemLabel = (id: UniqueIdentifier) =>
     items.find((item) => item.id === id)?.label;
-  let firstAnnouncement = true;
 
   return {
     onDragStart() {
       return undefined;
     },
     onDragOver({ active, over }) {
-      // Don't make an announcement for the first drag over since this is the initial position
-      if (over && !firstAnnouncement) {
+      if (over) {
         return `Sortable item ${getItemLabel(
           active.id,
-        )} was moved into position ${getPosition(over.id)} of ${items.length}`;
+        )} is in position ${getPosition(over.id)} of ${items.length}`;
       }
-      firstAnnouncement = false;
     },
     onDragEnd({ active, over }) {
-      firstAnnouncement = true;
       if (over) {
         return `Sortable item ${getItemLabel(
           active.id,
@@ -193,7 +189,6 @@ function createAccouncements(items: OakQuizOrderItem[]): Announcements {
       }
     },
     onDragCancel({ active }) {
-      firstAnnouncement = true;
       return `Dragging was cancelled. Sortable item ${getItemLabel(
         active.id,
       )} was dropped.`;
