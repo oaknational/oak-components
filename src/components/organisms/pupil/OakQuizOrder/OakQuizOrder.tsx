@@ -56,22 +56,20 @@ const ConnectedDraggable = ({ id, label }: OakQuizOrderItem) => {
     setNodeRef,
     transform,
     transition,
-    active,
-    over,
+    isOver,
+    isDragging,
   } = useSortable({ id });
-  const isGhostItem = active?.id === id;
-  const isGhostSlot = over?.id === id;
   const style = {
     transform: CSS.Transform.toString(transform),
     transition,
   };
 
   return (
-    <OakDroppable isOver={isGhostSlot}>
+    <OakDroppable isOver={isOver}>
       <OakDraggable
         ref={setNodeRef}
         style={style}
-        isDisabled={isGhostItem}
+        isDisabled={isDragging}
         {...attributes}
         {...listeners}
         aria-describedby={undefined}

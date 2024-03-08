@@ -17,6 +17,10 @@ export type OakDroppableProps = {
    */
   isOver?: boolean;
   /**
+   * Present the element in a state making it clear that it can be dropped into
+   */
+  isDisabled?: boolean;
+  /**
    * A slot for a label to be displayed to the RHS of the droppable
    *
    * useful for giving the user a hint about what to drop
@@ -31,6 +35,10 @@ export type OakDroppableProps = {
 const StyledFlex = styled(OakFlex)`
   outline: ${parseBorder("border-solid-l")} ${parseColor("border-primary")};
   outline-style: dashed;
+
+  &[data-disabled="true"] {
+    outline-color: ${parseColor("border-neutral")};
+  }
 `;
 
 /**
@@ -44,7 +52,18 @@ export const OakDroppable: FC<
 > = forwardRef<
   HTMLDivElement,
   OakDroppableProps & ComponentPropsWithoutRef<typeof OakFlex>
->(({ children, labelSlot, isOver, ...props }, ref) => {
+>(({ children, labelSlot, isOver, isDisabled, ...props }, ref) => {
+  const slotBackground = (() => {
+    if (isOver) {
+      return "bg-primary";
+    }
+    if (!isDisabled) {
+      return "bg-neutral";
+    }
+
+    return "transparent";
+  })();
+
   return (
     <OakFlex
       ref={ref}
@@ -56,11 +75,12 @@ export const OakDroppable: FC<
       {...props}
     >
       <StyledFlex
-        $background={isOver ? "bg-primary" : "bg-neutral"}
+        $background={slotBackground}
         $pa="inner-padding-ssx"
         $borderRadius="border-radius-m2"
         $minHeight="all-spacing-11"
         $flexBasis="100%"
+        data-disabled={isDisabled}
       >
         <OakBox $width="100%">{children}</OakBox>
       </StyledFlex>
