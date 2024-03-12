@@ -58,13 +58,15 @@ export const OakQuizFeedback = ({
           {feedbackLabel}
         </OakSpan>
       </OakFlex>
-      <OakSpan
-        as="p"
-        $mt="space-between-xs"
-        $font={feedback === "correct" ? "body-2-bold" : "body-2"}
-      >
-        {answerFeedback}
-      </OakSpan>
+      {answerFeedback && (
+        <OakSpan
+          as="p"
+          $mt="space-between-xs"
+          $font={feedback === "correct" ? "body-2-bold" : "body-2"}
+        >
+          {answerFeedback}
+        </OakSpan>
+      )}
     </OakBox>
   );
 };

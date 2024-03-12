@@ -60,3 +60,10 @@ export const AllFeedback: Story = {
     answerFeedback: "Good work!",
   },
 };
+
+export const WithNoAnswerFeedback: Story = {
+  args: {
+    feedback: "partially-correct",
+    answerFeedback: undefined,
+  },
+};

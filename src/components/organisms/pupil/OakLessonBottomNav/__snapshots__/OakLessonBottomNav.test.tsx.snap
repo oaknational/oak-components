@@ -9,6 +9,10 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 }
 
 .c3 {
+  font-family: Lexend,sans-serif;
+}
+
+.c5 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -19,7 +23,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c5 {
+.c7 {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -27,11 +31,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c10 {
-  font-family: Lexend,sans-serif;
-}
-
-.c12 {
+.c13 {
   position: relative;
   width: 2.5rem;
   min-width: 2.5rem;
@@ -42,7 +42,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c14 {
+.c15 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -51,14 +51,14 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c15 {
+.c16 {
   position: relative;
   width: 1.5rem;
   height: 1.5rem;
   font-family: Lexend,sans-serif;
 }
 
-.c18 {
+.c19 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -82,9 +82,20 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.c11 {
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -103,7 +114,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   gap: 0.75rem;
 }
 
-.c13 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -118,7 +129,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   justify-content: center;
 }
 
-.c19 {
+.c20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -136,7 +147,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c17 {
+.c18 {
   font-family: Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -147,11 +158,11 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c16 {
+.c17 {
   object-fit: contain;
 }
 
-.c8 {
+.c10 {
   background: none;
   color: inherit;
   border: none;
@@ -165,59 +176,59 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   color: #222222;
 }
 
-.c8:disabled {
+.c10:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c9 {
+.c11 {
   display: inline-block;
   position: relative;
 }
 
-.c9:hover {
+.c11:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #222222;
 }
 
-.c9:active {
+.c11:active {
   color: #222222;
 }
 
-.c9:disabled {
+.c11:disabled {
   color: #808080;
 }
 
-.c6 > :first-child:focus-visible .shadow {
+.c8 > :first-child:focus-visible .shadow {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c6 > :first-child:hover .shadow {
+.c8 > :first-child:hover .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c6 > :first-child:active .shadow {
+.c8 > :first-child:active .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c6 > :first-child:disabled .icon-container {
+.c8 > :first-child:disabled .icon-container {
   background: #808080;
 }
 
-.c6 > :first-child:hover .icon-container {
+.c8 > :first-child:hover .icon-container {
   background: #ffe555;
 }
 
-.c6 > :first-child:active .icon-container {
+.c8 > :first-child:active .icon-container {
   background: #ffe555;
 }
 
-.c7:hover .shadow {
+.c9:hover .shadow {
   box-shadow: none !important;
 }
 
-.c7:active .shadow {
+.c9:active .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%) !important;
 }
 
@@ -226,7 +237,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c18 {
+  .c19 {
     width: auto;
   }
 }
@@ -240,7 +251,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c19 {
+  .c20 {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
@@ -255,63 +266,67 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
       className="c3 c4"
     >
       <div
-        className="c5 c6 c7"
+        className="c5 c6"
       >
-        <button
-          className="c8 c9"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
+        <div
+          className="c7 c8 c9"
         >
-          <div
+          <button
             className="c10 c11"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
             <div
-              className="c12 c13 icon-container"
+              className="c3 c12"
             >
               <div
-                className="c14 shadow"
-              />
-              <div
-                className="c15"
+                className="c13 c14 icon-container"
               >
-                <img
-                  alt="lightbulb"
-                  className="c16"
-                  data-nimg="fill"
-                  decoding="async"
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1705078631/icons/zldisxmbff36z68rwcef.svg"
-                  style={
-                    {
-                      "bottom": 0,
-                      "color": "transparent",
-                      "height": "100%",
-                      "left": 0,
-                      "objectFit": undefined,
-                      "objectPosition": undefined,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                      "width": "100%",
-                    }
-                  }
+                <div
+                  className="c15 shadow"
                 />
+                <div
+                  className="c16"
+                >
+                  <img
+                    alt="lightbulb"
+                    className="c17"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    onError={[Function]}
+                    onLoad={[Function]}
+                    src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1705078631/icons/zldisxmbff36z68rwcef.svg"
+                    style={
+                      {
+                        "bottom": 0,
+                        "color": "transparent",
+                        "height": "100%",
+                        "left": 0,
+                        "objectFit": undefined,
+                        "objectPosition": undefined,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </div>
               </div>
+              <span
+                className="c18"
+              >
+                Need a hint?
+              </span>
             </div>
-            <span
-              className="c17"
-            >
-              Need a hint?
-            </span>
-          </div>
-        </button>
+          </button>
+        </div>
       </div>
     </div>
     <div
-      className="c18 c19"
+      className="c19 c20"
     />
   </div>,
   .c0 {
@@ -324,7 +339,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c10 {
+.c11 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -332,7 +347,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c5 {
+.c6 {
   width: 1.5rem;
   height: 1.5rem;
   padding: 0rem;
@@ -341,7 +356,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c6 {
+.c7 {
   position: relative;
   width: 100%;
   height: 100%;
@@ -359,7 +374,18 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   gap: 1.5rem;
 }
 
-.c11 {
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -377,7 +403,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c4 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -385,7 +411,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   gap: 0.75rem;
 }
 
-.c8 {
+.c9 {
   color: #287c34;
   font-family: Lexend,sans-serif;
   font-weight: 600;
@@ -397,7 +423,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c9 {
+.c10 {
   margin-top: 0.75rem;
   font-family: Lexend,sans-serif;
   font-weight: 700;
@@ -409,7 +435,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c7 {
+.c8 {
   -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   object-fit: contain;
@@ -420,7 +446,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c10 {
+  .c11 {
     width: auto;
   }
 }
@@ -434,7 +460,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c11 {
+  .c12 {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
@@ -446,57 +472,61 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
     className="c0 c1 c2"
   >
     <div
-      className="c3"
+      className="c3 c4"
     >
       <div
-        className="c3 c4"
+        className="c3"
       >
         <div
-          className="c5"
+          className="c3 c5"
         >
           <div
             className="c6"
           >
-            <img
-              alt="tick"
+            <div
               className="c7"
-              data-nimg="fill"
-              decoding="async"
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
-              style={
-                {
-                  "bottom": 0,
-                  "color": "transparent",
-                  "height": "100%",
-                  "left": 0,
-                  "objectFit": undefined,
-                  "objectPosition": undefined,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
+            >
+              <img
+                alt="tick"
+                className="c8"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
+                style={
+                  {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
                 }
-              }
-            />
+              />
+            </div>
           </div>
+          <span
+            className="c9"
+          >
+            Correct
+          </span>
         </div>
-        <span
-          className="c8"
+        <p
+          className="c10"
         >
-          Correct
-        </span>
+          Well done!
+        </p>
       </div>
-      <p
-        className="c9"
-      >
-        Well done!
-      </p>
     </div>
     <div
-      className="c10 c11"
+      className="c11 c12"
     />
   </div>,
   .c0 {
@@ -509,7 +539,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c10 {
+.c11 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -517,14 +547,14 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c6 {
+.c7 {
   position: relative;
   width: 100%;
   height: 100%;
   font-family: Lexend,sans-serif;
 }
 
-.c5 {
+.c6 {
   width: 1.5rem;
   height: 1.5rem;
   padding: 0rem;
@@ -544,7 +574,18 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   gap: 1.5rem;
 }
 
-.c11 {
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -562,7 +603,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c4 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -570,7 +611,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   gap: 0.75rem;
 }
 
-.c8 {
+.c9 {
   color: #dd0035;
   font-family: Lexend,sans-serif;
   font-weight: 600;
@@ -582,7 +623,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c9 {
+.c10 {
   margin-top: 0.75rem;
   font-family: Lexend,sans-serif;
   font-weight: 300;
@@ -594,7 +635,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c7 {
+.c8 {
   -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   object-fit: contain;
@@ -605,7 +646,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c10 {
+  .c11 {
     width: auto;
   }
 }
@@ -619,7 +660,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c11 {
+  .c12 {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
@@ -631,57 +672,61 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
     className="c0 c1 c2"
   >
     <div
-      className="c3"
+      className="c3 c4"
     >
       <div
-        className="c3 c4"
+        className="c3"
       >
         <div
-          className="c5"
+          className="c3 c5"
         >
           <div
             className="c6"
           >
-            <img
-              alt="cross"
+            <div
               className="c7"
-              data-nimg="fill"
-              decoding="async"
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
-              style={
-                {
-                  "bottom": 0,
-                  "color": "transparent",
-                  "height": "100%",
-                  "left": 0,
-                  "objectFit": undefined,
-                  "objectPosition": undefined,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
+            >
+              <img
+                alt="cross"
+                className="c8"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
+                style={
+                  {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
                 }
-              }
-            />
+              />
+            </div>
           </div>
+          <span
+            className="c9"
+          >
+            Incorrect
+          </span>
         </div>
-        <span
-          className="c8"
+        <p
+          className="c10"
         >
-          Incorrect
-        </span>
+          Keep trying
+        </p>
       </div>
-      <p
-        className="c9"
-      >
-        Keep trying
-      </p>
     </div>
     <div
-      className="c10 c11"
+      className="c11 c12"
     />
   </div>,
   .c0 {
@@ -694,7 +739,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c10 {
+.c11 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -702,7 +747,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c5 {
+.c6 {
   width: 1.5rem;
   height: 1.5rem;
   padding: 0rem;
@@ -711,7 +756,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c6 {
+.c7 {
   position: relative;
   width: 100%;
   height: 100%;
@@ -729,7 +774,18 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   gap: 1.5rem;
 }
 
-.c11 {
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -747,7 +803,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c4 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -755,7 +811,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   gap: 0.75rem;
 }
 
-.c8 {
+.c9 {
   color: #287c34;
   font-family: Lexend,sans-serif;
   font-weight: 600;
@@ -767,7 +823,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c9 {
+.c10 {
   margin-top: 0.75rem;
   font-family: Lexend,sans-serif;
   font-weight: 700;
@@ -779,7 +835,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c7 {
+.c8 {
   -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   object-fit: contain;
@@ -790,7 +846,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c10 {
+  .c11 {
     width: auto;
   }
 }
@@ -804,7 +860,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c11 {
+  .c12 {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
@@ -816,57 +872,61 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
     className="c0 c1 c2"
   >
     <div
-      className="c3"
+      className="c3 c4"
     >
       <div
-        className="c3 c4"
+        className="c3"
       >
         <div
-          className="c5"
+          className="c3 c5"
         >
           <div
             className="c6"
           >
-            <img
-              alt="tick"
+            <div
               className="c7"
-              data-nimg="fill"
-              decoding="async"
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
-              style={
-                {
-                  "bottom": 0,
-                  "color": "transparent",
-                  "height": "100%",
-                  "left": 0,
-                  "objectFit": undefined,
-                  "objectPosition": undefined,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
+            >
+              <img
+                alt="tick"
+                className="c8"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
+                style={
+                  {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
                 }
-              }
-            />
+              />
+            </div>
           </div>
+          <span
+            className="c9"
+          >
+            Correct
+          </span>
         </div>
-        <span
-          className="c8"
+        <p
+          className="c10"
         >
-          Correct
-        </span>
+          Nearly there
+        </p>
       </div>
-      <p
-        className="c9"
-      >
-        Nearly there
-      </p>
     </div>
     <div
-      className="c10 c11"
+      className="c11 c12"
     />
   </div>,
 ]

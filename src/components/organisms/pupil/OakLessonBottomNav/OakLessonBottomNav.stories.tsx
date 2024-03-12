@@ -38,6 +38,7 @@ const meta: Meta<typeof OakLessonBottomNav> = {
       default: "light",
     },
   },
+  render: (args) => <OakLessonBottomNav {...args} />,
 };
 export default meta;
 
@@ -117,7 +118,7 @@ export const WithFeedbackAndButton: Story = {
 
 export const WithLongFeedbackAndButton: Story = {
   render: (args) => (
-    <OakLessonBottomNav {...args} feedback="incorrect">
+    <OakLessonBottomNav {...args}>
       <OakPrimaryButton
         iconName="arrow-right"
         isTrailingIcon
@@ -128,7 +129,25 @@ export const WithLongFeedbackAndButton: Story = {
     </OakLessonBottomNav>
   ),
   args: {
+    feedback: "incorrect",
     answerFeedback:
       "Correct answer: George Orwell, a renowned British author, penned the dystopian masterpiece '1984' in 1949, depicting a totalitarian society under constant surveillance, influencing literature and pop culture for decades.",
+  },
+};
+
+export const WithNoAnswerFeedbackAndButton: Story = {
+  render: (args) => (
+    <OakLessonBottomNav {...args}>
+      <OakPrimaryButton
+        iconName="arrow-right"
+        isTrailingIcon
+        width={["100%", "max-content"]}
+      >
+        Next question
+      </OakPrimaryButton>
+    </OakLessonBottomNav>
+  ),
+  args: {
+    feedback: "incorrect",
   },
 };
