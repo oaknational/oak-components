@@ -40,6 +40,10 @@ type OakDraggableProps = {
    */
   iconColor?: OakCombinedColorToken;
   /**
+   * The alt text for the icon
+   */
+  iconAlt?: string;
+  /**
    * The background color of the draggable when not being dragged or hovered
    */
   background?: OakCombinedColorToken;
@@ -132,6 +136,7 @@ export const OakDraggable: FC<
       children,
       iconName = "move-arrows",
       iconColor = "icon-inverted",
+      iconAlt = "",
       color = "text-primary",
       background = "bg-primary",
       isDragging,
@@ -162,7 +167,7 @@ export const OakDraggable: FC<
             iconName={iconName}
             $width="all-spacing-7"
             $height="all-spacing-7"
-            alt=""
+            alt={iconAlt}
           />
           <OakFlex $font="body-1-bold">{children}</OakFlex>
         </StyledFlex>

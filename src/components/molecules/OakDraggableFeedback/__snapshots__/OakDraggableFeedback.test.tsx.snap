@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakDraggableFeedback matches snapshot 1`] = `
+.c0 {
+  min-height: 3.5rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 0.75rem;
+  padding-right: 1rem;
+  color: #222222;
+  background: #dff9de;
+  border: 0.25rem solid;
+  border-color: #287c34;
+  border-radius: 0.5rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c2 {
+  font-family: Lexend,sans-serif;
+}
+
+.c5 {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c7 {
+  font-family: Lexend,sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c6 {
+  object-fit: contain;
+}
+
+.c1 {
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c1:focus-visible:not([data-dragging="true"]):not([data-disabled="true"]) {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c1[data-dragging="true"] {
+  cursor: move;
+  background-color: #bef2bd;
+  color: #222222;
+  outline: 0.25rem solid #222222;
+  outline-offset: -0.25rem;
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1[data-disabled="true"] {
+  cursor: default;
+  background-color: #f2f2f2;
+  color: #808080;
+}
+
+.c1[data-readonly="true"] {
+  cursor: default;
+}
+
+.c4 {
+  margin-block: -0.5rem;
+}
+
+@media (hover:hover) {
+  .c1:hover:not([data-dragging="true"]):not([data-disabled="true"]):not( [data-readonly="true"] ) {
+    background-color: #dff9de;
+    color: #222222;
+    box-shadow: 0 0.5rem 0.5rem rgba(92,92,92,20%);
+    border-bottom: 0.25rem solid #222222;
+    padding-bottom: 1rem;
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+  }
+}
+
+<div
+  className="c0 c1"
+  data-readonly={true}
+>
+  <div
+    className="c2 c3 c4"
+  >
+    <div
+      className="c5 "
+    >
+      <img
+        alt="correct"
+        className="c6"
+        data-nimg="fill"
+        decoding="async"
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
+        style={
+          {
+            "bottom": 0,
+            "color": "transparent",
+            "height": "100%",
+            "left": 0,
+            "objectFit": undefined,
+            "objectPosition": undefined,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          }
+        }
+      />
+    </div>
+    <div
+      className="c7 c8"
+    >
+      Elephant
+    </div>
+  </div>
+</div>
+`;
