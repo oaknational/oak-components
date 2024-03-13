@@ -41,10 +41,11 @@ export const OakQuizFeedback = ({
   }
 
   return (
-    <OakBox>
+    <OakBox aria-live="polite">
       <OakFlex $gap="space-between-xs">
         <OakRoundIcon
           iconName={feedback === "correct" ? "tick" : "cross"}
+          alt=""
           $pa="inner-padding-none"
           $background={feedback === "correct" ? "icon-success" : "icon-error"}
           $colorFilter="text-inverted"

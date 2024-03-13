@@ -475,6 +475,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
       className="c3 c4"
     >
       <div
+        aria-live="polite"
         className="c3"
       >
         <div
@@ -487,7 +488,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
               className="c7"
             >
               <img
-                alt="tick"
+                alt=""
                 className="c8"
                 data-nimg="fill"
                 decoding="async"
@@ -675,6 +676,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
       className="c3 c4"
     >
       <div
+        aria-live="polite"
         className="c3"
       >
         <div
@@ -687,7 +689,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
               className="c7"
             >
               <img
-                alt="cross"
+                alt=""
                 className="c8"
                 data-nimg="fill"
                 decoding="async"
@@ -875,6 +877,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
       className="c3 c4"
     >
       <div
+        aria-live="polite"
         className="c3"
       >
         <div
@@ -887,7 +890,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
               className="c7"
             >
               <img
-                alt="tick"
+                alt=""
                 className="c8"
                 data-nimg="fill"
                 decoding="async"
