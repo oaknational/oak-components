@@ -4,7 +4,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { OakQuizRadioButton } from "./OakQuizRadioButton";
 
 import { OakRadioGroup } from "@/components/molecules";
-import { OakCloudinaryImage } from "@/components/atoms";
+import { OakCloudinaryImage, OakFlex } from "@/components/atoms";
 
 const meta: Meta<typeof OakQuizRadioButton> = {
   component: OakQuizRadioButton,
@@ -16,28 +16,27 @@ const meta: Meta<typeof OakQuizRadioButton> = {
   },
   parameters: {
     controls: {
-      include: ["feedback", "disabled"],
+      include: ["feedback", "disabled", "isHighlighted"],
     },
     backgrounds: {
       default: "light",
     },
   },
-};
-export default meta;
-
-type Story = StoryObj<typeof OakQuizRadioButton>;
-
-export const Default: Story = {
   render: (args) => (
     <OakRadioGroup name="radio-group-1" $flexDirection="column">
       <OakQuizRadioButton {...args} />
     </OakRadioGroup>
   ),
 };
+export default meta;
+
+type Story = StoryObj<typeof OakQuizRadioButton>;
+
+export const Default: Story = {};
 
 export const Selected: Story = {
   render: (args) => (
-    <>
+    <OakFlex $gap="space-between-m" $flexDirection="column">
       <OakRadioGroup
         name="radio-group-2"
         value="Option 1"
@@ -52,26 +51,32 @@ export const Selected: Story = {
       >
         <OakQuizRadioButton {...args} disabled label="Disabled" />
       </OakRadioGroup>
-    </>
+    </OakFlex>
   ),
 };
 
 export const NotSelected: Story = {
   render: (args) => (
-    <>
+    <OakFlex $gap="space-between-m" $flexDirection="column">
       <OakRadioGroup name="radio-group-4" value="" $flexDirection="column">
         <OakQuizRadioButton {...args} />
       </OakRadioGroup>
       <OakRadioGroup name="radio-group-5" value="" $flexDirection="column">
         <OakQuizRadioButton {...args} disabled label="Disabled" />
       </OakRadioGroup>
-    </>
+    </OakFlex>
   ),
+};
+
+export const Highlighted: Story = {
+  args: {
+    isHighlighted: true,
+  },
 };
 
 export const WithFeedback: Story = {
   render: (args) => (
-    <>
+    <OakFlex $gap="space-between-m" $flexDirection="column">
       <OakRadioGroup
         name="radio-group-6"
         value="Option 1"
@@ -108,13 +113,13 @@ export const WithFeedback: Story = {
           label="unselected incorrect answer"
         />
       </OakRadioGroup>
-    </>
+    </OakFlex>
   ),
 };
 
 export const WithImage: Story = {
   render: (args) => (
-    <>
+    <OakFlex $gap="space-between-m" $flexDirection="column">
       <OakRadioGroup name="radio-group-10" $flexDirection="column">
         <OakQuizRadioButton
           {...args}
@@ -165,6 +170,6 @@ export const WithImage: Story = {
           }
         />
       </OakRadioGroup>
-    </>
+    </OakFlex>
   ),
 };

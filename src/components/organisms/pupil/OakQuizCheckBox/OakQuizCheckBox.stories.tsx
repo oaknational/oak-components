@@ -17,6 +17,9 @@ const meta: Meta<typeof OakQuizCheckBox> = {
     },
   },
   parameters: {
+    backgrounds: {
+      default: "light",
+    },
     controls: {
       include: [
         "feedback",
@@ -24,6 +27,7 @@ const meta: Meta<typeof OakQuizCheckBox> = {
         "defaultChecked",
         "displayValue",
         "value",
+        "isHighlighted",
       ],
     },
   },
@@ -33,11 +37,7 @@ export default meta;
 type Story = StoryObj<typeof OakQuizCheckBox>;
 
 export const Default: Story = {
-  render: (args) => (
-    <OakFlex $pa="inner-padding-l" $background={"bg-neutral"}>
-      <OakQuizCheckBox {...args} />
-    </OakFlex>
-  ),
+  render: (args) => <OakQuizCheckBox {...args} />,
   args: {
     id: "checkbox-test-default",
     value: "a test value",
@@ -56,11 +56,7 @@ export const Default: Story = {
 };
 
 export const WithImage: Story = {
-  render: (args) => (
-    <OakFlex $pa="inner-padding-l" $background={"bg-neutral"}>
-      <OakQuizCheckBox {...args} />
-    </OakFlex>
-  ),
+  render: (args) => <OakQuizCheckBox {...args} />,
   args: {
     id: "checkbox-test-default-1",
     displayValue: "a test value",
@@ -84,12 +80,7 @@ export const WithImage: Story = {
 
 export const WithImageNoDims: Story = {
   render: (args) => (
-    <OakFlex
-      $pa="inner-padding-l"
-      $background={"bg-neutral"}
-      $gap={"space-between-m"}
-      $flexDirection={"column"}
-    >
+    <OakFlex $gap={"space-between-m"} $flexDirection={"column"}>
       <OakQuizCheckBox
         {...args}
         id="checkbox-test-default-2"
@@ -147,12 +138,7 @@ export const Feedback: Story = {
     >(null);
 
     return (
-      <OakFlex
-        $pa="inner-padding-l"
-        $background={"bg-neutral"}
-        $flexDirection={"column"}
-        $gap={"space-between-m"}
-      >
+      <OakFlex $flexDirection={"column"} $gap={"space-between-m"}>
         <OakQuizCheckBox
           {...args}
           id="checkbox-test-default-7"
@@ -195,5 +181,13 @@ export const Feedback: Story = {
     controls: {
       include: [],
     },
+  },
+};
+
+export const Highlighted: Story = {
+  args: {
+    id: "checkbox-test-default-1",
+    displayValue: "a test value",
+    isHighlighted: true,
   },
 };
