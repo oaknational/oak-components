@@ -3,14 +3,17 @@ import { ThemeProvider } from "styled-components";
 import React from "react";
 import { DndContext, DndContextProps, UniqueIdentifier } from "@dnd-kit/core";
 
-import { OakQuizOrder, injectDndContext } from "./OakQuizOrder";
+import { OakQuizOrder } from "./OakQuizOrder";
 
 import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
+import { injectDndContext } from "@/components/atoms/InternalDndContext/InternalDndContext";
 
-window.matchMedia = jest.fn().mockReturnValue({
-  matches: false,
-});
+window.matchMedia =
+  window.matchMedia ??
+  jest.fn().mockReturnValue({
+    matches: false,
+  });
 
 describe(OakQuizOrder, () => {
   const initialItems = [

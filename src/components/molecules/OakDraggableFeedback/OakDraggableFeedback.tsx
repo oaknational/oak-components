@@ -23,6 +23,7 @@ export const OakDraggableFeedback = ({
       {...props}
       iconName={feedback === "correct" ? "tick" : "cross"}
       iconColor={feedback === "correct" ? "icon-success" : "icon-error"}
+      iconAlt={feedback === "correct" ? "correct" : "incorrect"}
       $ba="border-solid-xl"
       $borderColor={feedback === "correct" ? "border-success" : "border-error"}
       $background={feedback === "correct" ? "bg-correct" : "bg-incorrect"}

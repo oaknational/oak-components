@@ -9,6 +9,7 @@ import {
 } from "@/styles/utils/responsiveStyle";
 import {
   OakAllSpacingToken,
+  OakCombinedSpacingToken,
   OakSpaceBetweenToken,
 } from "@/styles/theme/spacing";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
@@ -73,9 +74,7 @@ export type FlexStyleProps = DisplayStyleProps & {
    *
    * Accepts a spacing token or a responsive array of spacing tokens. Can be nulled.
    */
-  $flexBasis?: ResponsiveValues<
-    OakAllSpacingToken | OakSpaceBetweenToken | null | undefined
-  >;
+  $flexBasis?: ResponsiveValues<OakCombinedSpacingToken | null | undefined>;
   /**
    * Sets the `gap` CSS property of the element.
    *

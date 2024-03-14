@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InternalDroppableHoldingPen matches snapshot 1`] = `
+.c0 {
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c2 {
+  min-height: 5rem;
+  padding: 0.75rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.c1 {
+  background-color: #f2f2f2;
+  background-color: color-mix(in lch,#222222 5%,transparent);
+}
+
+.c1[data-over="true"] {
+  background-color: #ffffff;
+  background-color: color-mix( in lch, #ffffff 60%, transparent );
+}
+
+<div
+  className="c0 c1"
+  style={
+    {
+      "minHeight": "auto",
+    }
+  }
+>
+  <div
+    className="c2 c3"
+  />
+</div>
+`;

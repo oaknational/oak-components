@@ -61,6 +61,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
 }
 
 <div
+    aria-live="polite"
     className="c0"
   >
     <div
@@ -73,7 +74,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
           className="c3"
         >
           <img
-            alt="tick"
+            alt=""
             className="c4"
             data-nimg="fill"
             decoding="async"
@@ -169,6 +170,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
 }
 
 <div
+    aria-live="polite"
     className="c0"
   >
     <div
@@ -181,7 +183,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
           className="c3"
         >
           <img
-            alt="cross"
+            alt=""
             className="c4"
             data-nimg="fill"
             decoding="async"
@@ -277,6 +279,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
 }
 
 <div
+    aria-live="polite"
     className="c0"
   >
     <div
@@ -289,7 +292,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
           className="c3"
         >
           <img
-            alt="tick"
+            alt=""
             className="c4"
             data-nimg="fill"
             decoding="async"

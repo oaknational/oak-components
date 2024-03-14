@@ -54,7 +54,7 @@ export const OakLessonBottomNav = ({
       $minHeight="all-spacing-9"
       $gap="space-between-m"
     >
-      {content}
+      <OakFlex $alignItems="center">{content}</OakFlex>
       <OakFlex
         $flexGrow="1"
         $height="fit-content"

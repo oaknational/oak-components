@@ -41,10 +41,11 @@ export const OakQuizFeedback = ({
   }
 
   return (
-    <OakBox>
+    <OakBox aria-live="polite">
       <OakFlex $gap="space-between-xs">
         <OakRoundIcon
           iconName={feedback === "correct" ? "tick" : "cross"}
+          alt=""
           $pa="inner-padding-none"
           $background={feedback === "correct" ? "icon-success" : "icon-error"}
           $colorFilter="text-inverted"
@@ -58,13 +59,15 @@ export const OakQuizFeedback = ({
           {feedbackLabel}
         </OakSpan>
       </OakFlex>
-      <OakSpan
-        as="p"
-        $mt="space-between-xs"
-        $font={feedback === "correct" ? "body-2-bold" : "body-2"}
-      >
-        {answerFeedback}
-      </OakSpan>
+      {answerFeedback && (
+        <OakSpan
+          as="p"
+          $mt="space-between-xs"
+          $font={feedback === "correct" ? "body-2-bold" : "body-2"}
+        >
+          {answerFeedback}
+        </OakSpan>
+      )}
     </OakBox>
   );
 };
