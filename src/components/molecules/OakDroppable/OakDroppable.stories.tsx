@@ -12,11 +12,16 @@ const meta: Meta<typeof OakDroppable> = {
   argTypes: {
     children: { type: "string" },
     labelSlot: { type: "string" },
-    isOver: { type: "boolean" },
   },
   parameters: {
     controls: {
-      include: ["children", "labelSlot", "isOver"],
+      include: [
+        "children",
+        "labelSlot",
+        "isOver",
+        "isHighlighted",
+        "isDisabled",
+      ],
     },
     backgrounds: {
       default: "light",
@@ -49,6 +54,12 @@ export const Occupied: Story = {
   args: {
     canDrop: true,
     children: <OakDraggable>Elephant</OakDraggable>,
+  },
+};
+
+export const Highlighted: Story = {
+  args: {
+    isHighlighted: true,
   },
 };
 
