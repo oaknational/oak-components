@@ -61,6 +61,10 @@ export type OakTextInputProps = {
    * Position the icon at the end of the input
    */
   isTrailingIcon?: boolean;
+  /**
+   * Give the field a highlight to draw attention to it
+   */
+  isHighlighted?: boolean;
   iconColor?: OakCombinedColorToken;
   validBorderColor?: OakCombinedColorToken;
   invalidBorderColor?: OakCombinedColorToken;
@@ -75,6 +79,7 @@ export type OakTextInputProps = {
   readOnlyBorderColor?: OakCombinedColorToken;
   disabledColor?: OakCombinedColorToken;
   readOnlyColor?: OakCombinedColorToken;
+  highlightBackgroundColor?: OakCombinedColorToken;
   /**
    * The width of the surrounding div - the input and icon will fill this
    */
@@ -139,6 +144,7 @@ export const OakTextInput = ({
   background = "bg-primary",
   hoverBackground = "bg-neutral",
   disabledBackgroundColor = "bg-neutral",
+  highlightBackgroundColor = "bg-decorative5-main",
   color = "text-primary",
   disabledColor = "text-disabled",
   readOnlyColor = "text-subdued",
@@ -151,29 +157,29 @@ export const OakTextInput = ({
   iconName,
   iconAlt,
   isTrailingIcon = false,
+  isHighlighted = false,
   wrapperWidth,
   wrapperMaxWidth,
   ...props
 }: OakTextInputProps) => {
-  let finalBorderColor: OakCombinedColorToken;
-  let finalIconColor: OakCombinedColorToken;
-  let finalReadOnlyBorderColor: OakCombinedColorToken;
+  let finalBackgroundColor = background;
+  let finalBorderColor = borderColor;
+  let finalIconColor = iconColor;
+  let finalReadOnlyBorderColor = readOnlyBorderColor;
 
-  switch (validity) {
-    case "valid":
+  switch (true) {
+    case validity === "valid":
       finalBorderColor = validBorderColor;
       finalIconColor = validIconColor;
       finalReadOnlyBorderColor = validBorderColor;
       break;
-    case "invalid":
+    case validity === "invalid":
       finalBorderColor = invalidBorderColor;
       finalIconColor = invalidIconColor;
       finalReadOnlyBorderColor = invalidBorderColor;
       break;
-    default:
-      finalBorderColor = borderColor;
-      finalIconColor = iconColor;
-      finalReadOnlyBorderColor = readOnlyBorderColor;
+    case isHighlighted:
+      finalBackgroundColor = highlightBackgroundColor;
       break;
   }
 
@@ -186,7 +192,7 @@ export const OakTextInput = ({
       $ba="border-solid-m"
       $borderColor={finalBorderColor}
       $focusRingDropShadows={focusRingDropShadows}
-      $background={background}
+      $background={finalBackgroundColor}
       $hoverBackground={hoverBackground}
       $disabledBackgroundColor={disabledBackgroundColor}
       $readOnlyBorderColor={finalReadOnlyBorderColor}
