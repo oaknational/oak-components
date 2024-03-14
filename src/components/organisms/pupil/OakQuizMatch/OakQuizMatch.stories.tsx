@@ -15,13 +15,6 @@ const meta: Meta<typeof OakQuizMatch> = {
       default: "light",
     },
   },
-  render: (args) => <OakQuizMatch {...args} />,
-};
-export default meta;
-
-type Story = StoryObj<typeof OakQuizMatch>;
-
-export const Default: Story = {
   args: {
     initialOptions: [
       { id: "1", label: "Comma" },
@@ -37,6 +30,18 @@ export const Default: Story = {
       { id: "4", label: "separates a main clause and a subordinate clause" },
       { id: "5", label: "shows belonging" },
     ],
+  },
+  render: (args) => <OakQuizMatch {...args} />,
+};
+export default meta;
+
+type Story = StoryObj<typeof OakQuizMatch>;
+
+export const Default: Story = {};
+
+export const Highlighted: Story = {
+  args: {
+    isHighlighted: true,
   },
 };
 

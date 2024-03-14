@@ -47,9 +47,17 @@ export type OakQuizOrderProps = {
    * Notified the consumer when the order of items has changed
    */
   onChange?: (items: OakQuizOrderItem[]) => void;
+  /**
+   * Highlight all items to indicate that they can be interacted with
+   */
+  isHighlighted?: boolean;
 };
 
-const ConnectedDraggable = ({ id, label }: OakQuizOrderItem) => {
+const ConnectedDraggable = ({
+  id,
+  label,
+  isHighlighted,
+}: OakQuizOrderItem & { isHighlighted?: boolean }) => {
   const {
     attributes,
     listeners,
@@ -65,7 +73,7 @@ const ConnectedDraggable = ({ id, label }: OakQuizOrderItem) => {
   };
 
   return (
-    <OakDroppable isOver={isOver}>
+    <OakDroppable isOver={isOver} isHighlighted={isHighlighted}>
       <OakDraggable
         ref={setNodeRef}
         style={style}
@@ -89,7 +97,11 @@ const ConnectedDraggable = ({ id, label }: OakQuizOrderItem) => {
  *
  * Keyboard navigation is supported with the `tab`, `space` and `arrow` keys
  */
-export const OakQuizOrder = ({ initialItems, onChange }: OakQuizOrderProps) => {
+export const OakQuizOrder = ({
+  initialItems,
+  onChange,
+  isHighlighted,
+}: OakQuizOrderProps) => {
   const [items, setItems] = useState<OakQuizOrderItem[]>(initialItems);
   const [activeId, setActiveId] = useState<string | null>(null);
   const activeItem = items.find((item) => item.id === activeId);
@@ -122,7 +134,11 @@ export const OakQuizOrder = ({ initialItems, onChange }: OakQuizOrderProps) => {
             aria-label="Sortable items"
           >
             {items.map((item) => (
-              <ConnectedDraggable key={item.id} {...item} />
+              <ConnectedDraggable
+                key={item.id}
+                {...item}
+                isHighlighted={isHighlighted}
+              />
             ))}
           </OakFlex>
           {createPortal(

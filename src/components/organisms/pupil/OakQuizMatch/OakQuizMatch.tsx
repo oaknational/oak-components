@@ -60,6 +60,10 @@ export type OakQuizMatchProps = {
    * Notify the consumer when matches have changed
    */
   onChange?: (matches: Matches) => void;
+  /**
+   * Highlight the droppable slots
+   */
+  isHighlighted?: boolean;
 };
 
 const ConnectedDraggable = ({
@@ -120,7 +124,8 @@ const ConnectedDroppable = ({
   id,
   label,
   match,
-}: DroppableItem & { match?: DraggableItem }) => {
+  isHighlighted,
+}: DroppableItem & { match?: DraggableItem; isHighlighted?: boolean }) => {
   const { setNodeRef, isOver, active } = useDroppable({
     id,
     data: { id, label },
@@ -134,6 +139,7 @@ const ConnectedDroppable = ({
       id={id}
       labelSlot={label}
       data-testid="slot"
+      isHighlighted={isHighlighted}
     >
       {match && <ConnectedDraggable {...match} isOver={isOver} />}
     </OakDroppable>
@@ -148,6 +154,7 @@ const ConnectedDroppable = ({
 export const OakQuizMatch = ({
   initialOptions,
   initialSlots,
+  isHighlighted,
   onChange,
 }: OakQuizMatchProps) => {
   const [matches, setMatches] = useState<Matches>({});
@@ -193,6 +200,7 @@ export const OakQuizMatch = ({
             <ConnectedDroppable
               key={droppable.id}
               {...droppable}
+              isHighlighted={isHighlighted}
               match={matches[droppable.id]}
             />
           ))}
