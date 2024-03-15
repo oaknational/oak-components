@@ -31,6 +31,7 @@ const meta: Meta<typeof InternalTooltip> = {
       include: [
         "isOpen",
         "tooltip",
+        "tooltipPosition",
         ...Object.keys(colorArgTypes),
         ...Object.keys(spacingArgTypes),
         ...Object.keys(borderArgTypes),
@@ -40,7 +41,7 @@ const meta: Meta<typeof InternalTooltip> = {
   },
   decorators: [
     (Story) => (
-      <OakBox $mt="space-between-xxl">
+      <OakBox $ma="space-between-xxl">
         <Story />
       </OakBox>
     ),
@@ -48,6 +49,7 @@ const meta: Meta<typeof InternalTooltip> = {
   args: {
     isOpen: true,
     tooltip: "Hello there",
+    tooltipPosition: "bottom-left",
     children: <InternalButton>Target</InternalButton>,
   },
 };

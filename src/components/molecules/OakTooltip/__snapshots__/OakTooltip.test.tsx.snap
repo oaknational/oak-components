@@ -14,11 +14,11 @@ exports[`OakTooltip matches snapshot 1`] = `
 
 .c2 {
   position: absolute;
-  top: 0rem;
+  bottom: 0rem;
   left: 0rem;
-  -webkit-transform: translateY(calc(-100% - 16px));
-  -ms-transform: translateY(calc(-100% - 16px));
-  transform: translateY(calc(-100% - 16px));
+  -webkit-transform: translateY(calc(100% + 1rem));
+  -ms-transform: translateY(calc(100% + 1rem));
+  transform: translateY(calc(100% + 1rem));
   font-family: Lexend,sans-serif;
   z-index: 300;
 }
@@ -32,9 +32,8 @@ exports[`OakTooltip matches snapshot 1`] = `
   padding-bottom: 1rem;
   color: #222222;
   background: #ffe555;
-  border-bottom-right-radius: 0.5rem;
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
+  border-radius: 0.375rem;
+  border-top-left-radius: 0rem;
   font-family: Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -71,8 +70,11 @@ exports[`OakTooltip matches snapshot 1`] = `
 
 .c6 {
   position: absolute;
-  bottom: -16px;
-  left: 0;
+  top: -1rem;
+  left: 0rem;
+  -webkit-transform: scaleY(-1);
+  -ms-transform: scaleY(-1);
+  transform: scaleY(-1);
   fill: #ffe555;
 }
 

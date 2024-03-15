@@ -9,8 +9,30 @@ import {
  * A tooltip with oven-ready styling
  */
 export const OakTooltip = ({
+  tooltipPosition,
   ...props
-}: Pick<InternalTooltipProps, "isOpen" | "tooltip" | "children">) => {
+}: Pick<
+  InternalTooltipProps,
+  "isOpen" | "tooltip" | "children" | "tooltipPosition"
+>) => {
+  const squaredCornerRadiusProp: keyof InternalTooltipProps = (() => {
+    switch (tooltipPosition) {
+      case "bottom-right":
+        return "$btrr";
+      case "top-right":
+        return "$bbrr";
+      case "top-left":
+        return "$bblr";
+      default:
+        return "$btlr";
+    }
+  })();
+
+  const borderRadiusProps: Partial<InternalTooltipProps> = {
+    $borderRadius: "border-radius-m",
+    [squaredCornerRadiusProp]: "border-radius-square",
+  };
+
   return (
     <InternalTooltip
       $background="bg-decorative5-main"
@@ -18,8 +40,9 @@ export const OakTooltip = ({
       $pv="inner-padding-m"
       $ph="inner-padding-xl"
       $font="heading-light-7"
-      $borderRadius="border-radius-m2"
+      tooltipPosition={tooltipPosition}
       {...props}
+      {...borderRadiusProps}
     />
   );
 };
