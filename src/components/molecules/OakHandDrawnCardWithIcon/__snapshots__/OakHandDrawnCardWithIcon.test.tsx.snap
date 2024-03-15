@@ -23,7 +23,9 @@ exports[`OakHandDrawnCardWithIcon matches snapshot 1`] = `
 .c6 {
   position: relative;
   width: 4rem;
+  min-width: 4rem;
   height: 4rem;
+  min-height: 4rem;
   font-family: Lexend,sans-serif;
 }
 
@@ -84,7 +86,19 @@ exports[`OakHandDrawnCardWithIcon matches snapshot 1`] = `
 
 @media (min-width:750px) {
   .c6 {
+    min-width: 7.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c6 {
     height: 7.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c6 {
+    min-height: 7.5rem;
   }
 }
 

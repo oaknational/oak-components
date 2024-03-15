@@ -14,7 +14,9 @@ exports[`OakQuizOrder matches snapshot 1`] = `
 .c4 {
   position: relative;
   width: 2rem;
+  min-width: 2rem;
   height: 2rem;
+  min-height: 2rem;
   font-family: Lexend,sans-serif;
 }
 
@@ -168,7 +170,9 @@ exports[`OakQuizOrder matches snapshot 1`] = `
 .c12 {
   position: relative;
   width: 2rem;
+  min-width: 2rem;
   height: 2rem;
+  min-height: 2rem;
   font-family: Lexend,sans-serif;
 }
 
