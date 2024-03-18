@@ -36,7 +36,9 @@ exports[`OakHintButton matches snapshot 1`] = `
 .c10 {
   position: relative;
   width: 1.5rem;
+  min-width: 1.5rem;
   height: 1.5rem;
+  min-height: 1.5rem;
   font-family: Lexend,sans-serif;
 }
 

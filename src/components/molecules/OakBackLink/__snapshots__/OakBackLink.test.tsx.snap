@@ -4,7 +4,9 @@ exports[`OakBackLink matches snapshot 1`] = `
 .c1 {
   position: relative;
   width: 2.5rem;
+  min-width: 2.5rem;
   height: 2.5rem;
+  min-height: 2.5rem;
   font-family: Lexend,sans-serif;
 }
 

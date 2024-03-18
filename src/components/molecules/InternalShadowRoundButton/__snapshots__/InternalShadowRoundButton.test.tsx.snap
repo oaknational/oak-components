@@ -36,7 +36,9 @@ exports[`InternalShadowRoundButton matches snapshot 1`] = `
 .c9 {
   position: relative;
   width: 1.5rem;
+  min-width: 1.5rem;
   height: 1.5rem;
+  min-height: 1.5rem;
   font-family: Lexend,sans-serif;
 }
 
