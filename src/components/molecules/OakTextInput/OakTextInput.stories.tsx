@@ -31,19 +31,25 @@ const meta: Meta<typeof OakTextInput> = {
   args: {
     placeholder: "Placeholder text",
   },
+  render: (args) => <OakTextInput {...args} />,
 };
 export default meta;
 
 type Story = StoryObj<typeof OakTextInput>;
 
-export const Default: Story = {
-  render: (args) => <OakTextInput {...args} />,
+export const Default: Story = {};
+
+export const Highlighted: Story = {
+  args: {
+    isHighlighted: true,
+  },
 };
 
 export const WithIcon: Story = {
-  render: (args) => (
-    <OakTextInput {...args} value="A fine text value" iconName="search" />
-  ),
+  args: {
+    value: "A fine text value",
+    iconName: "search",
+  },
 };
 
 export const WithTrailingIcon: Story = {
@@ -58,7 +64,6 @@ export const WithTrailingIcon: Story = {
 };
 
 export const WithStyling: Story = {
-  render: (args) => <OakTextInput {...args} />,
   args: {
     value: "a test value",
     background: "aqua",
@@ -70,57 +75,63 @@ export const WithStyling: Story = {
 };
 
 export const Disabled: Story = {
-  render: () => <OakTextInput disabled value="A fine text value" />,
+  args: {
+    value: "A fine text value",
+    disabled: true,
+  },
 };
 
 export const ReadOnly: Story = {
-  render: () => <OakTextInput readOnly value="A fine text value" />,
+  args: {
+    value: "A fine text value",
+    readOnly: true,
+  },
 };
 
 export const Valid: Story = {
-  render: () => <OakTextInput validity="valid" value="A fine text value" />,
+  args: {
+    value: "A fine text value",
+    validity: "valid",
+  },
 };
 
 export const Invalid: Story = {
-  render: () => <OakTextInput validity="invalid" value="A fine text value" />,
+  args: {
+    value: "A fine text value",
+    validity: "invalid",
+  },
 };
 
 export const ValidWithIcon: Story = {
-  render: () => (
-    <OakTextInput validity="valid" value="A fine text value" iconName="tick" />
-  ),
+  args: {
+    value: "A fine text value",
+    validity: "valid",
+    iconName: "tick",
+  },
 };
 
 export const InvalidWithIcon: Story = {
-  render: () => (
-    <OakTextInput
-      validity="invalid"
-      value="A fine text value"
-      iconName="warning"
-    />
-  ),
+  args: {
+    value: "A fine text value",
+    validity: "invalid",
+    iconName: "warning",
+  },
 };
 
 export const ReadOnlyValidWithIcon: Story = {
-  render: () => (
-    <OakTextInput
-      validity="valid"
-      value="A fine text value"
-      iconName="tick"
-      readOnly
-    />
-  ),
+  args: {
+    value: "A fine text value",
+    validity: "valid",
+    iconName: "tick",
+    readOnly: true,
+  },
 };
 
 export const ReadOnlyInvalidTrailingIcon: Story = {
-  render: (args) => (
-    <OakTextInput
-      {...args}
-      validity="invalid"
-      value="A fine text value"
-      iconName="warning"
-      isTrailingIcon
-      readOnly
-    />
-  ),
+  args: {
+    value: "A fine text value",
+    validity: "invalid",
+    iconName: "warning",
+    readOnly: true,
+  },
 };

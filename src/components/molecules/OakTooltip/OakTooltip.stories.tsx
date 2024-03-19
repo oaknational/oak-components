@@ -20,12 +20,12 @@ const meta: Meta<typeof OakTooltip> = {
   },
   parameters: {
     controls: {
-      include: ["isOpen", "tooltip"],
+      include: ["isOpen", "tooltip", "tooltipPosition"],
     },
   },
   decorators: [
     (Story) => (
-      <OakBox $mt="space-between-xxl">
+      <OakBox $ma="space-between-xxl">
         <Story />
       </OakBox>
     ),
@@ -33,6 +33,7 @@ const meta: Meta<typeof OakTooltip> = {
   args: {
     isOpen: true,
     tooltip: "Hello there",
+    tooltipPosition: "bottom-left",
     children: <OakTertiaryButton>Target</OakTertiaryButton>,
   },
 };

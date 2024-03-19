@@ -20,36 +20,37 @@ const meta: Meta<typeof OakQuizTextInput> = {
   args: {
     placeholder: "Placeholder text",
   },
+  render: (args) => <OakQuizTextInput {...args} />,
 };
 export default meta;
 
 type Story = StoryObj<typeof OakQuizTextInput>;
 
-export const Default: Story = {
-  render: (args) => <OakQuizTextInput {...args} />,
-};
+export const Default: Story = {};
 
 export const WithCorrectFeedback: Story = {
-  render: () => (
-    <OakQuizTextInput value="A correct answer" feedback="correct" />
-  ),
+  args: {
+    value: "A correct answer",
+    feedback: "correct",
+  },
 };
 
 export const WithIncorrectFeedback: Story = {
-  render: () => (
-    <OakQuizTextInput value="An incorrect answer" feedback="incorrect" />
-  ),
+  args: {
+    value: "An incorrect answer",
+    feedback: "incorrect",
+  },
+};
+
+export const Highlighted: Story = {
+  args: {
+    isHighlighted: true,
+  },
 };
 
 export const ResponsiveWidth: Story = {
-  render: (args) => (
-    <OakQuizTextInput
-      wrapperWidth={["100%", "all-spacing-20"]}
-      feedback={args.feedback}
-      defaultValue={args.defaultValue}
-    />
-  ),
   args: {
+    wrapperWidth: ["100%", "all-spacing-20"],
     feedback: "incorrect",
     defaultValue:
       "The pupil's answer which is longer than the width of the input",

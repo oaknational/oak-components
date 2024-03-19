@@ -14,8 +14,18 @@ import { RadioContext } from "@/components/molecules/OakRadioGroup/OakRadioGroup
 import { OakUiRoleToken } from "@/styles";
 
 export type OakQuizRadioButtonProps = OakRadioButtonProps & {
+  /**
+   * Present the element with answer feedback
+   */
   feedback?: "correct" | "incorrect" | null;
+  /**
+   * An image to display above the label
+   */
   image?: JSX.Element;
+  /**
+   * Give the field a highlight to draw attention to it
+   */
+  isHighlighted?: boolean;
 };
 
 type StyledOakFlexProps = {
@@ -25,12 +35,14 @@ type StyledOakFlexProps = {
 };
 
 const StyledOakFlex = styled(OakFlex)<StyledOakFlexProps>`
-  ${(props) =>
-    !!props.$outlineColor &&
-    css`
-      outline: ${parseBorder("border-solid-xl")}
-        ${parseColor(props.$outlineColor)};
-    `}
+  &:not(:focus-within) {
+    ${(props) =>
+      !!props.$outlineColor &&
+      css`
+        outline: ${parseBorder("border-solid-xl")}
+          ${parseColor(props.$outlineColor)};
+      `}
+  }
 
   &:hover {
     cursor: ${(props) => (props.$disabled ? "default" : "pointer")};
@@ -71,7 +83,8 @@ const StyledOakFlex = styled(OakFlex)<StyledOakFlexProps>`
  * Use with `OakRadioGroup` to create a group of radio buttons.
  */
 export const OakQuizRadioButton = (props: OakQuizRadioButtonProps) => {
-  const { value, feedback, image, disabled, label, ...rest } = props;
+  const { value, feedback, image, disabled, isHighlighted, label, ...rest } =
+    props;
   const showFeedback = !!feedback;
   // Give the input focus when the entire component is clicked
   const handleOnClick: MouseEventHandler<HTMLElement> = (event) => {
@@ -82,6 +95,7 @@ export const OakQuizRadioButton = (props: OakQuizRadioButtonProps) => {
   let backgroundColor: OakUiRoleToken = "bg-primary";
   let feedbackIcon: "tick" | "cross" | null = null;
   let feedbackAltText: string | undefined;
+  let radioBackground: OakUiRoleToken = "bg-primary";
 
   switch (true) {
     case disabled && !showFeedback:
@@ -102,6 +116,10 @@ export const OakQuizRadioButton = (props: OakQuizRadioButtonProps) => {
     case feedback === "incorrect" && !checked:
       feedbackIcon = "tick";
       feedbackAltText = "Unselected correct choice";
+      break;
+    case isHighlighted:
+      radioBackground = "bg-decorative5-main";
+      outlineColor = "border-decorative5-stronger";
       break;
     case checked && !disabled:
       outlineColor = "border-primary";
@@ -128,6 +146,7 @@ export const OakQuizRadioButton = (props: OakQuizRadioButtonProps) => {
         disableFocusRing
         radioInnerSize="all-spacing-6"
         radioOuterSize="all-spacing-7"
+        radioBackground={radioBackground}
         checkedRadioBorderWidth="border-solid-l"
         label={
           image ? (

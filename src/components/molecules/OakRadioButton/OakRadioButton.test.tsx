@@ -5,6 +5,8 @@ import { create } from "react-test-renderer";
 import { OakRadioGroup } from "@/components/molecules/OakRadioGroup";
 import { OakRadioButton } from "@/components/molecules/OakRadioButton";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
+import { OakThemeProvider } from "@/components/atoms";
+import { oakDefaultTheme } from "@/styles";
 
 describe("RadioGroup", () => {
   it("renders a RadioGroup", () => {
@@ -21,33 +23,35 @@ describe("RadioGroup", () => {
   });
   it("matches snapshot", () => {
     const tree = create(
-      <OakRadioGroup name={"test"}>
-        <OakRadioButton
-          value="1"
-          id="radio-1"
-          label="Option 1"
-          $labelGap="space-between-m"
-          $font="body-1-bold"
-          $color="black"
-          data-testid={"radio-1"}
-        />
-        <OakRadioButton
-          value="2"
-          id="radio-2"
-          label="Option 2"
-          $labelGap="space-between-m"
-          $font="body-1-bold"
-          $color="black"
-        />
-        <OakRadioButton
-          value="3"
-          id="radio-3"
-          label="Option 3"
-          $labelGap="space-between-m"
-          $font="body-1-bold"
-          $color="black"
-        />
-      </OakRadioGroup>,
+      <OakThemeProvider theme={oakDefaultTheme}>
+        <OakRadioGroup name={"test"}>
+          <OakRadioButton
+            value="1"
+            id="radio-1"
+            label="Option 1"
+            $labelGap="space-between-m"
+            $font="body-1-bold"
+            $color="black"
+            data-testid={"radio-1"}
+          />
+          <OakRadioButton
+            value="2"
+            id="radio-2"
+            label="Option 2"
+            $labelGap="space-between-m"
+            $font="body-1-bold"
+            $color="black"
+          />
+          <OakRadioButton
+            value="3"
+            id="radio-3"
+            label="Option 3"
+            $labelGap="space-between-m"
+            $font="body-1-bold"
+            $color="black"
+          />
+        </OakRadioGroup>
+      </OakThemeProvider>,
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });

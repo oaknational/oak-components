@@ -15,7 +15,11 @@ import {
   OakLabel,
   OakLabelProps,
 } from "@/components/atoms";
-import { OakAllSpacingToken, OakBorderWidthToken } from "@/styles";
+import {
+  OakAllSpacingToken,
+  OakBorderWidthToken,
+  OakCombinedColorToken,
+} from "@/styles";
 
 type RadioButtonLabelProps = {
   $labelAlignItems?: FlexStyleProps["$alignItems"];
@@ -120,6 +124,10 @@ export type OakRadioButtonProps = {
    */
   radioBorderWidth?: OakBorderWidthToken;
   /**
+   * Allows the background color of the radio button to be customized.
+   */
+  radioBackground?: OakCombinedColorToken;
+  /**
    * Allows the width of the radio button border to be customized when the radio button is checked.
    */
   checkedRadioBorderWidth?: OakBorderWidthToken;
@@ -149,6 +157,7 @@ export const OakRadioButton = forwardRef<HTMLInputElement, OakRadioButtonProps>(
       radioInnerSize = "all-spacing-4",
       radioOuterSize = "all-spacing-6",
       radioBorderWidth = "border-solid-m",
+      radioBackground = "bg-primary",
       checkedRadioBorderWidth = "border-solid-m",
       ...rest
     } = props;
@@ -188,7 +197,7 @@ export const OakRadioButton = forwardRef<HTMLInputElement, OakRadioButtonProps>(
               $flexShrink={0}
               $alignItems={"center"}
               $justifyContent={"center"}
-              $background={"white"}
+              $background={radioBackground}
               $disableFocusRing={!!disableFocusRing}
               $radioInnerSize={radioInnerSize}
             />
@@ -202,7 +211,7 @@ export const OakRadioButton = forwardRef<HTMLInputElement, OakRadioButtonProps>(
               $flexShrink={0}
               $alignItems={"center"}
               $justifyContent={"center"}
-              $background={"white"}
+              $background={radioBackground}
               $disableFocusRing={!!disableFocusRing}
               $radioInnerSize={radioInnerSize}
             />

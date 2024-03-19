@@ -15,13 +15,6 @@ const meta: Meta<typeof OakQuizOrder> = {
       default: "light",
     },
   },
-  render: (args) => <OakQuizOrder {...args} />,
-};
-export default meta;
-
-type Story = StoryObj<typeof OakQuizOrder>;
-
-export const Default: Story = {
   args: {
     initialItems: [
       { id: "2", label: "Grass" },
@@ -30,6 +23,18 @@ export const Default: Story = {
       { id: "5", label: "Hawk" },
       { id: "9", label: "Grasshopper" },
     ],
+  },
+  render: (args) => <OakQuizOrder {...args} />,
+};
+export default meta;
+
+type Story = StoryObj<typeof OakQuizOrder>;
+
+export const Default: Story = {};
+
+export const Highlighted: Story = {
+  args: {
+    isHighlighted: true,
   },
 };
 

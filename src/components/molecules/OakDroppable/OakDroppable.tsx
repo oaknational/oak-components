@@ -21,6 +21,10 @@ export type OakDroppableProps = {
    */
   isDisabled?: boolean;
   /**
+   * Give the droppable a highlight to draw attention to it
+   */
+  isHighlighted?: boolean;
+  /**
    * A slot for a label to be displayed to the RHS of the droppable
    *
    * useful for giving the user a hint about what to drop
@@ -52,55 +56,70 @@ export const OakDroppable: FC<
 > = forwardRef<
   HTMLDivElement,
   OakDroppableProps & ComponentPropsWithoutRef<typeof OakFlex>
->(({ children, labelSlot, isOver, isDisabled, ...props }, ref) => {
-  const slotBackground = (() => {
-    if (isOver) {
-      return "bg-primary";
-    }
-    if (!isDisabled) {
-      return "bg-neutral";
-    }
+>(
+  (
+    { children, labelSlot, isOver, isHighlighted, isDisabled, ...props },
+    ref,
+  ) => {
+    const slotBackground = (() => {
+      switch (true) {
+        case isOver:
+          return "bg-primary";
+        case isDisabled:
+          return "bg-decorative2-subdued";
+        default:
+          return "bg-neutral";
+      }
+    })();
+    const background = (() => {
+      switch (true) {
+        case isOver:
+          return "bg-decorative2-main";
+        case isHighlighted:
+          return "bg-decorative5-main";
+        default:
+          return "bg-decorative2-subdued";
+      }
+    })();
 
-    return "transparent";
-  })();
-
-  return (
-    <OakFlex
-      ref={ref}
-      $background={isOver ? "bg-decorative2-main" : "bg-decorative2-subdued"}
-      $pa="inner-padding-m"
-      $borderRadius="border-radius-l"
-      $gap="space-between-s"
-      $flexDirection={["column", "row", "row"]}
-      {...props}
-    >
-      <StyledFlex
-        $background={slotBackground}
-        $pa="inner-padding-ssx"
-        $borderRadius="border-radius-m2"
-        $minHeight="all-spacing-11"
-        $flexBasis="100%"
-        data-disabled={isDisabled}
+    return (
+      <OakFlex
+        ref={ref}
+        $background={background}
+        $pa="inner-padding-m"
+        $borderRadius="border-radius-l"
+        $gap="space-between-s"
+        $flexDirection={["column", "row", "row"]}
+        {...props}
       >
-        <OakBox $width="100%">{children}</OakBox>
-      </StyledFlex>
-      {labelSlot && (
-        <OakFlex
-          $background={isOver ? "bg-primary" : "bg-decorative2-very-subdued"}
+        <StyledFlex
+          $background={slotBackground}
+          $pa="inner-padding-ssx"
           $borderRadius="border-radius-m2"
-          $alignItems="center"
-          $font="body-1"
-          $ph="inner-padding-l"
-          $minHeight="all-spacing-10"
-          $pv="inner-padding-ssx"
+          $minHeight="all-spacing-11"
           $flexBasis="100%"
-          $width="100%"
-          $alignSelf="center"
-          data-testid="label"
+          data-disabled={isDisabled}
         >
-          {labelSlot}
-        </OakFlex>
-      )}
-    </OakFlex>
-  );
-});
+          <OakBox $width="100%">{children}</OakBox>
+        </StyledFlex>
+        {labelSlot && (
+          <OakFlex
+            $background={isOver ? "bg-primary" : "bg-decorative2-very-subdued"}
+            $borderRadius="border-radius-m2"
+            $alignItems="center"
+            $font="body-1"
+            $ph="inner-padding-l"
+            $minHeight="all-spacing-10"
+            $pv="inner-padding-ssx"
+            $flexBasis="100%"
+            $width="100%"
+            $alignSelf="center"
+            data-testid="label"
+          >
+            {labelSlot}
+          </OakFlex>
+        )}
+      </OakFlex>
+    );
+  },
+);

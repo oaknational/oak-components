@@ -39,11 +39,21 @@ const StyledInternalCheckBoxLabelHoverDecor = styled(
 `;
 
 type StyledFlexBoxProps = OakFlexProps & {
-  overlayBorderColor?: OakCombinedColorToken;
-  feedbackBgColor?: OakCombinedColorToken;
+  $overlayBorderColor: OakCombinedColorToken;
+  $feedbackBgColor?: OakCombinedColorToken;
+  $outlineColor: OakCombinedColorToken;
 };
 
 const StyledFlexBox = styled(OakFlex)<StyledFlexBoxProps>`
+  &:not(:focus-within) {
+    ${(props) =>
+      !!props.$outlineColor &&
+      css`
+        outline: ${parseBorder("border-solid-xl")}
+          ${parseColor(props.$outlineColor)};
+      `}
+  }
+
   &:has(input:not(:disabled)) {
     cursor: pointer;
   }
@@ -51,6 +61,11 @@ const StyledFlexBox = styled(OakFlex)<StyledFlexBoxProps>`
   &:has(input:disabled) {
     pointer-events: none;
     cursor: none;
+  }
+
+  &:focus-within {
+    box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
+      ${parseDropShadow("drop-shadow-centered-grey")};
   }
 
   @media (hover: hover) {
@@ -70,69 +85,40 @@ const StyledFlexBox = styled(OakFlex)<StyledFlexBoxProps>`
         ${InternalCheckBoxLabelHoverDecor} input:not(:focus-visible):not(:checked):not(:disabled)
       )::after {
       content: "";
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      inset: 0;
       pointer-events: none;
       position: absolute;
       border-bottom: ${parseBorder("border-solid-xl")};
       border-radius: ${parseBorderRadius("border-radius-m2")};
     }
 
-    &
-      .yellow-shadow:has(
-        + ${InternalCheckBoxLabelHoverDecor} input:focus-visible
-      ) {
-      box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")};
+    &:focus-within {
+      box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
+        ${parseDropShadow("drop-shadow-centered-grey")};
     }
-
-    &
-      .grey-shadow:has(
-        ~ ${InternalCheckBoxLabelHoverDecor} input:focus-visible
-      ) {
-      box-shadow: ${parseDropShadow("drop-shadow-centered-grey")};
-    }
-  
-    &:has(input:checked:not(:disabled))::after {
-      content: "";
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      position: absolute;
+    
+    &:has(input:checked:not(:disabled)) {
       outline: ${parseBorder("border-solid-xl")};
-      border-radius: ${parseBorderRadius("border-radius-m2")};
    }
 
-   &:has(input:checked:disabled)::after {
-      content: "";
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      position: absolute;
-      outline: ${parseBorder("border-solid-xl")};
-      border-radius: ${parseBorderRadius("border-radius-m2")};
-      outline-color: ${(props) => css`
-        ${parseColor(props.overlayBorderColor ?? "text-disabled")}
-      `};
+   &:has(input:checked:disabled) {
+    outline-color: ${(props) => css`
+      ${parseColor(props.$overlayBorderColor)}
+    `};
   }
 
   &:has(input:disabled:not(:checked)) {
      ${(props) =>
-       props.feedbackBgColor
+       props.$feedbackBgColor
          ? css`
-             background-color: ${props.feedbackBgColor};
+             background-color: ${props.$feedbackBgColor};
            `
          : undefined}
   }
 
   &:has(input:disabled:checked) {
     ${(props) => css`
-      background-color: ${parseColor(props.feedbackBgColor)};
+      background-color: ${parseColor(props.$feedbackBgColor)};
     `};
  }
 `;
@@ -142,11 +128,11 @@ export type OakQuizCheckBoxProps = Omit<BaseCheckBoxProps, "defaultChecked"> & {
   image?: React.JSX.Element;
   innerRef?: React.RefObject<HTMLInputElement>;
   displayValue?: string;
+  /**
+   * Give the field a highlight to draw attention to it
+   */
+  isHighlighted?: boolean;
 };
-
-const StyledOverlay = styled(OakBox)`
-  pointer-events: none;
-`;
 
 /**
  * A checkbox representing the options in a multiple choice question.
@@ -160,6 +146,7 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
     disabled,
     innerRef,
     displayValue,
+    isHighlighted,
     ...rest
   } = props;
 
@@ -196,46 +183,27 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
     </OakFlex>
   );
 
-  const backgroundColor: OakCombinedColorToken =
-    disabled && !isFeedback ? "bg-neutral-stronger" : "bg-primary";
-
-  const feedbackBgColor: OakCombinedColorToken = showTick
-    ? "bg-correct"
-    : "bg-incorrect";
-
+  const feedbackBgColor = showTick ? "bg-correct" : "bg-incorrect";
   const feedbackBorderColor = showTick ? "border-success" : "border-error";
 
   const inputCheckbox = (
     <StyledFlexBox
       $pa="inner-padding-l"
       $borderRadius={"border-radius-m2"}
-      $borderColor={"border-primary"}
-      $background={backgroundColor}
+      $borderColor={
+        isHighlighted ? "border-decorative5-stronger" : "border-primary"
+      }
+      $background={
+        disabled && !isFeedback ? "bg-neutral-stronger" : "bg-primary"
+      }
       $flexGrow={1}
       onClick={handleContainerClick}
-      overlayBorderColor={isFeedback ? feedbackBorderColor : undefined}
-      feedbackBgColor={isFeedback ? feedbackBgColor : undefined}
+      $overlayBorderColor={isFeedback ? feedbackBorderColor : "text-disabled"}
+      $feedbackBgColor={isFeedback ? feedbackBgColor : undefined}
+      $outlineColor={
+        isHighlighted ? "border-decorative5-stronger" : "transparent"
+      }
     >
-      <StyledOverlay
-        className="grey-shadow"
-        $position={"absolute"}
-        $left={"space-between-none"}
-        $top={"space-between-none"}
-        $borderRadius={"border-radius-m2"}
-        $width={"100%"}
-        $height={"100%"}
-      />
-
-      <StyledOverlay
-        className="yellow-shadow"
-        $position={"absolute"}
-        $borderRadius={"border-radius-m2"}
-        $left={"space-between-none"}
-        $top={"space-between-none"}
-        $width={"100%"}
-        $height={"100%"}
-      />
-
       <StyledInternalCheckBoxLabelHoverDecor
         htmlFor={id}
         labelGap={"space-between-s"}
@@ -274,6 +242,7 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
               $ba={"border-solid-m"}
               $borderColor="border-neutral"
               $borderRadius={"border-radius-s"}
+              $background={isHighlighted ? "bg-decorative5-main" : "bg-primary"}
               $checkedBackground={null}
               ref={inputRef}
             />
