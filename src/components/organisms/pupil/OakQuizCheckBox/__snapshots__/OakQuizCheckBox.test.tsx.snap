@@ -20,24 +20,14 @@ exports[`OakQuizCheckBox matches snapshot 1`] = `
   cursor: pointer;
 }
 
-.c5 {
-  position: absolute;
-  top: 0rem;
-  left: 0rem;
-  width: 100%;
-  height: 100%;
-  border-radius: 0.5rem;
-  font-family: Lexend,sans-serif;
-}
-
-.c12 {
+.c10 {
   position: relative;
   width: 2rem;
   height: 2rem;
   font-family: Lexend,sans-serif;
 }
 
-.c16 {
+.c14 {
   position: absolute;
   top: 0rem;
   left: 0rem;
@@ -47,14 +37,14 @@ exports[`OakQuizCheckBox matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c18 {
+.c16 {
   width: 100%;
   height: 100%;
   background: #222222;
   font-family: Lexend,sans-serif;
 }
 
-.c19 {
+.c17 {
   width: 100%;
   height: 100%;
   border: 0.125rem solid;
@@ -80,7 +70,7 @@ exports[`OakQuizCheckBox matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c8 {
+.c6 {
   font-family: Lexend,sans-serif;
   font-weight: 300;
   font-size: 1.125rem;
@@ -92,16 +82,16 @@ exports[`OakQuizCheckBox matches snapshot 1`] = `
   color: #222222;
 }
 
-.c17 {
+.c15 {
   pointer-events: none;
   opacity: 0;
 }
 
-input:checked + .c15 {
+input:checked + .c13 {
   opacity: 1;
 }
 
-.c9 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -117,11 +107,11 @@ input:checked + .c15 {
   align-items: center;
 }
 
-.c10 {
+.c8 {
   cursor: pointer;
 }
 
-.c13 {
+.c11 {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -136,21 +126,21 @@ input:checked + .c15 {
   height: 2rem;
 }
 
-.c13:disabled {
+.c11:disabled {
   pointer-events: none;
 }
 
-.c14:checked:not(:disabled) {
+.c12:checked:not(:disabled) {
   border: 0.188rem solid;
   border-color: #222222;
 }
 
-.c14:checked:disabled {
+.c12:checked:disabled {
   border: 0.188rem solid;
   border-color: #808080;
 }
 
-.c11 {
+.c9 {
   pointer-events: none;
 }
 
@@ -163,19 +153,15 @@ input:checked + .c15 {
   cursor: none;
 }
 
-.c6 {
-  pointer-events: none;
-}
-
 @media (hover:hover) {
-  .c10:hover {
+  .c8:hover {
     -webkit-text-decoration: underline;
     text-decoration: underline;
   }
 }
 
 @media (hover:hover) {
-  .c14:hover:not(:disabled) {
+  .c12:hover:not(:disabled) {
     background: #ffffff;
   }
 }
@@ -189,12 +175,12 @@ input:checked + .c15 {
     background: #ffffff;
   }
 
-  .c4:hover:has(input:not(:disabled)) .c7 {
+  .c4:hover:has(input:not(:disabled)) .c5 {
     -webkit-text-decoration: underline;
     text-decoration: underline;
   }
 
-  .c4:hover:has( .c7 input:not(:focus-visible):not(:checked):not(:disabled) )::after {
+  .c4:hover:has( .c5 input:not(:focus-visible):not(:checked):not(:disabled) )::after {
     content: "";
     top: 0;
     left: 0;
@@ -206,12 +192,8 @@ input:checked + .c15 {
     border-radius: 0.5rem;
   }
 
-  .c4 .yellow-shadow:has( + .c7 input:focus-visible ) {
-    box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
-  }
-
-  .c4 .grey-shadow:has( ~ .c7 input:focus-visible ) {
-    box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
+  .c4:focus-within {
+    box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
   }
 
   .c4:has(input:checked:not(:disabled))::after {
@@ -247,21 +229,15 @@ input:checked + .c15 {
       className="c2 c3 c4"
       onClick={[Function]}
     >
-      <div
-        className="c5 c6 grey-shadow"
-      />
-      <div
-        className="c5 c6 yellow-shadow"
-      />
       <label
-        className="c7 c8 c9 c10 c11"
+        className="c5 c6 c7 c8 c9"
         htmlFor="checkbox-1"
       >
         <div
-          className="c12"
+          className="c10"
         >
           <input
-            className="c13 c14"
+            className="c11 c12"
             disabled={false}
             id="checkbox-1"
             name="checkbox-1"
@@ -271,13 +247,13 @@ input:checked + .c15 {
             value="Option 1"
           />
           <div
-            className="c15 c16 c17"
+            className="c13 c14 c15"
           >
             <div
-              className="c18"
+              className="c16"
             >
               <div
-                className="c19"
+                className="c17"
               />
             </div>
           </div>

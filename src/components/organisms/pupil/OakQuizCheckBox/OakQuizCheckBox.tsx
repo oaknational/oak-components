@@ -80,20 +80,11 @@ const StyledFlexBox = styled(OakFlex)<StyledFlexBoxProps>`
       border-radius: ${parseBorderRadius("border-radius-m2")};
     }
 
-    &
-      .yellow-shadow:has(
-        + ${InternalCheckBoxLabelHoverDecor} input:focus-visible
-      ) {
-      box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")};
+    &:focus-within {
+      box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
+        ${parseDropShadow("drop-shadow-centered-grey")};
     }
-
-    &
-      .grey-shadow:has(
-        ~ ${InternalCheckBoxLabelHoverDecor} input:focus-visible
-      ) {
-      box-shadow: ${parseDropShadow("drop-shadow-centered-grey")};
-    }
-  
+    
     &:has(input:checked:not(:disabled))::after {
       content: "";
       top: 0;
@@ -143,10 +134,6 @@ export type OakQuizCheckBoxProps = Omit<BaseCheckBoxProps, "defaultChecked"> & {
   innerRef?: React.RefObject<HTMLInputElement>;
   displayValue?: string;
 };
-
-const StyledOverlay = styled(OakBox)`
-  pointer-events: none;
-`;
 
 /**
  * A checkbox representing the options in a multiple choice question.
@@ -216,26 +203,6 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
       overlayBorderColor={isFeedback ? feedbackBorderColor : undefined}
       feedbackBgColor={isFeedback ? feedbackBgColor : undefined}
     >
-      <StyledOverlay
-        className="grey-shadow"
-        $position={"absolute"}
-        $left={"space-between-none"}
-        $top={"space-between-none"}
-        $borderRadius={"border-radius-m2"}
-        $width={"100%"}
-        $height={"100%"}
-      />
-
-      <StyledOverlay
-        className="yellow-shadow"
-        $position={"absolute"}
-        $borderRadius={"border-radius-m2"}
-        $left={"space-between-none"}
-        $top={"space-between-none"}
-        $width={"100%"}
-        $height={"100%"}
-      />
-
       <StyledInternalCheckBoxLabelHoverDecor
         htmlFor={id}
         labelGap={"space-between-s"}
