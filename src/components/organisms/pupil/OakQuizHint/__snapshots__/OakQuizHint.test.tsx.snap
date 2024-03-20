@@ -4,28 +4,17 @@ exports[`OakQuizHint matches snapshot 1`] = `
 [
   .c0 {
   position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  font-family: Lexend,sans-serif;
-}
-
-.c2 {
-  position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   font-family: Lexend,sans-serif;
 }
 
-.c7 {
+.c5 {
   font-family: Lexend,sans-serif;
 }
 
-.c9 {
+.c7 {
   position: relative;
   width: 2.5rem;
   min-width: 2.5rem;
@@ -36,7 +25,7 @@ exports[`OakQuizHint matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c11 {
+.c9 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -45,7 +34,7 @@ exports[`OakQuizHint matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c12 {
+.c10 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -54,14 +43,7 @@ exports[`OakQuizHint matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c8 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -80,7 +62,7 @@ exports[`OakQuizHint matches snapshot 1`] = `
   gap: 0.75rem;
 }
 
-.c10 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -95,7 +77,7 @@ exports[`OakQuizHint matches snapshot 1`] = `
   justify-content: center;
 }
 
-.c14 {
+.c12 {
   font-family: Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -106,11 +88,11 @@ exports[`OakQuizHint matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c13 {
+.c11 {
   object-fit: contain;
 }
 
-.c5 {
+.c3 {
   background: none;
   color: inherit;
   border: none;
@@ -124,89 +106,93 @@ exports[`OakQuizHint matches snapshot 1`] = `
   color: #222222;
 }
 
-.c5:disabled {
+.c3:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c6 {
+.c4 {
   display: inline-block;
   position: relative;
 }
 
-.c6:hover {
+.c4:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #222222;
 }
 
-.c6:active {
+.c4:active {
   color: #222222;
 }
 
-.c6:disabled {
+.c4:disabled {
   color: #808080;
 }
 
-.c3 > :first-child:focus-visible .shadow {
+.c1 > :first-child:focus-visible .shadow {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c3 > :first-child:hover .shadow {
+.c1 > :first-child:hover .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c3 > :first-child:active .shadow {
+.c1 > :first-child:active .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c3 > :first-child:disabled .icon-container {
+.c1 > :first-child:disabled .icon-container {
   background: #808080;
 }
 
-.c3 > :first-child:hover .icon-container {
+.c1 > :first-child:hover .icon-container {
   background: #ffe555;
 }
 
-.c3 > :first-child:active .icon-container {
+.c1 > :first-child:active .icon-container {
   background: #ffe555;
 }
 
-.c4:hover .shadow {
+.c2:hover .shadow {
   box-shadow: none !important;
 }
 
-.c4:active .shadow {
+.c2:active .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%) !important;
 }
 
 <div
-    className="c0 c1"
+    style={
+      {
+        "display": "contents",
+      }
+    }
   >
     <div
-      className="c2 c3 c4"
+      className="c0 c1 c2"
     >
       <button
-        className="c5 c6"
+        className="c3 c4"
         onClick={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
       >
         <div
-          className="c7 c8"
+          className="c5 c6"
         >
           <div
-            className="c9 c10 icon-container"
+            className="c7 c8 icon-container"
           >
             <div
-              className="c11 shadow"
+              className="c9 shadow"
             />
             <div
-              className="c12"
+              className="c10"
             >
               <img
                 alt="lightbulb"
-                className="c13"
+                className="c11"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"
@@ -231,7 +217,7 @@ exports[`OakQuizHint matches snapshot 1`] = `
             </div>
           </div>
           <span
-            className="c14"
+            className="c12"
           >
             Need a hint?
           </span>
