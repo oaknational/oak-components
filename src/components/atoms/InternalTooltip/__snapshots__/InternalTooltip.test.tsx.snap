@@ -3,28 +3,6 @@
 exports[`InternalTooltip matches snapshot 1`] = `
 .c0 {
   position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  font-family: Lexend,sans-serif;
-}
-
-.c2 {
-  position: absolute;
-  bottom: 0rem;
-  left: 0rem;
-  -webkit-transform: translateY(calc(100% + 1rem));
-  -ms-transform: translateY(calc(100% + 1rem));
-  transform: translateY(calc(100% + 1rem));
-  font-family: Lexend,sans-serif;
-  z-index: 300;
-}
-
-.c4 {
-  position: relative;
   max-width: 22.5rem;
   color: #ffffff;
   background: #222222;
@@ -38,24 +16,14 @@ exports[`InternalTooltip matches snapshot 1`] = `
   display: flex;
 }
 
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c5 {
+.c2 {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   pointer-events: none;
 }
 
-.c6 {
+.c3 {
   position: absolute;
   top: -1rem;
   left: 0rem;
@@ -66,33 +34,25 @@ exports[`InternalTooltip matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c4 {
+  .c0 {
     max-width: 40rem;
   }
 }
 
 <div
-  className="c0 c1"
+  className="c0 c1 c2"
+  role="tooltip"
 >
-  <div
-    className="c2 c3"
-    role="tooltip"
+  Hello there
+  <svg
+    className="c3"
+    data-testid="tooltip-arrow"
+    height="1rem"
+    width="1rem"
   >
-    <div
-      className="c4 c1 c5"
-    >
-      Hello there
-      <svg
-        className="c6"
-        height="16"
-        width="16"
-      >
-        <path
-          d="M0 0H16L8 8L0 16V0Z"
-        />
-      </svg>
-    </div>
-  </div>
-  Trigger!
+    <path
+      d="M0 0H16L8 8L0 16V0Z"
+    />
+  </svg>
 </div>
 `;

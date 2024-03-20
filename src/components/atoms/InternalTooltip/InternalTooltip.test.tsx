@@ -13,9 +13,7 @@ describe(InternalTooltip, () => {
   it("matches snapshot", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
-        <InternalTooltip tooltip="Hello there" isOpen>
-          Trigger!
-        </InternalTooltip>
+        <InternalTooltip>Hello there</InternalTooltip>
       </OakThemeProvider>,
     ).toJSON();
 
@@ -24,65 +22,43 @@ describe(InternalTooltip, () => {
 
   it("renders children", () => {
     const { getByText } = renderWithTheme(
-      <InternalTooltip tooltip="Hello there" isOpen={false}>
-        Trigger!
+      <InternalTooltip>Hello there</InternalTooltip>,
+    );
+
+    expect(getByText("Hello there")).toBeInTheDocument();
+  });
+
+  it('positions the arrow based on the "tooltipPosition" prop', () => {
+    const { rerender, getByTestId } = renderWithTheme(
+      <InternalTooltip>Hello there</InternalTooltip>,
+    );
+
+    expect(getByTestId("tooltip-arrow")).toHaveStyle("top: -1rem; left: 0rem");
+
+    rerender(
+      <InternalTooltip tooltipPosition="bottom-right">
+        Hello there
       </InternalTooltip>,
     );
 
-    expect(getByText("Trigger!")).toBeInTheDocument();
-  });
-
-  it("renders a tooltip when `isOpen` is true", () => {
-    const { rerender, queryByRole } = renderWithTheme(
-      <InternalTooltip tooltip="Hello there" isOpen={false} />,
-    );
-
-    expect(queryByRole("tooltip")).not.toBeInTheDocument();
+    expect(getByTestId("tooltip-arrow")).toHaveStyle("top: -1rem; right: 0rem");
 
     rerender(
-      <InternalTooltip tooltip="Hello there" isOpen>
-        Trigger!
+      <InternalTooltip tooltipPosition="top-right">
+        Hello there
       </InternalTooltip>,
     );
 
-    expect(queryByRole("tooltip")).toBeInTheDocument();
-  });
-
-  it('positions the tooltip based on the "tooltipPosition" prop', () => {
-    const { rerender, getByRole } = renderWithTheme(
-      <InternalTooltip tooltip="Hello there" isOpen />,
+    expect(getByTestId("tooltip-arrow")).toHaveStyle(
+      "bottom: -1rem; right: 0rem",
     );
-
-    expect(getByRole("tooltip")).toHaveStyle("bottom: 0rem; left: 0rem");
 
     rerender(
-      <InternalTooltip
-        tooltip="Hello there"
-        isOpen
-        tooltipPosition="bottom-right"
-      />,
+      <InternalTooltip tooltipPosition="top-left">Hello there</InternalTooltip>,
     );
 
-    expect(getByRole("tooltip")).toHaveStyle("bottom: 0rem; right: 0rem");
-
-    rerender(
-      <InternalTooltip
-        tooltip="Hello there"
-        isOpen
-        tooltipPosition="top-right"
-      />,
+    expect(getByTestId("tooltip-arrow")).toHaveStyle(
+      "bottom: -1rem; left: 0rem",
     );
-
-    expect(getByRole("tooltip")).toHaveStyle("top: 0rem; right: 0rem");
-
-    rerender(
-      <InternalTooltip
-        tooltip="Hello there"
-        isOpen
-        tooltipPosition="top-left"
-      />,
-    );
-
-    expect(getByRole("tooltip")).toHaveStyle("top: 0rem; left: 0rem");
   });
 });
