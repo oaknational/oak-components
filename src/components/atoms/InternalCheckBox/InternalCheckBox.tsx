@@ -29,7 +29,14 @@ export type BaseCheckBoxProps = {
   id: string;
   disabled?: boolean;
   value: string;
+  /**
+   * Uncontrolled checked state
+   */
   defaultChecked?: boolean;
+  /**
+   * Controlled checked state
+   */
+  checked?: boolean;
   onHovered?: (value: string, id: string, duration: number) => void;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;

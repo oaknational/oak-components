@@ -60,7 +60,8 @@ export const OakCheckBox = (props: OakCheckBoxProps) => {
     value,
     displayValue = value,
     disabled = false,
-    defaultChecked = false,
+    defaultChecked,
+    checked,
     onChange,
     onFocus,
     onBlur,
@@ -121,6 +122,7 @@ export const OakCheckBox = (props: OakCheckBoxProps) => {
             onFocus={onFocus}
             onBlur={onBlur}
             defaultChecked={defaultChecked}
+            checked={checked}
             disabled={disabled}
           />
         }
