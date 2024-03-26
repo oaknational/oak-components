@@ -14,24 +14,13 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 
 .c5 {
   position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  font-family: Lexend,sans-serif;
-}
-
-.c7 {
-  position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   font-family: Lexend,sans-serif;
 }
 
-.c13 {
+.c11 {
   position: relative;
   width: 2.5rem;
   min-width: 2.5rem;
@@ -42,7 +31,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c15 {
+.c13 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -51,7 +40,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c16 {
+.c14 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -60,7 +49,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c19 {
+.c17 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -90,14 +79,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   align-items: center;
 }
 
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c12 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -116,7 +98,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   gap: 0.75rem;
 }
 
-.c14 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -131,7 +113,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   justify-content: center;
 }
 
-.c20 {
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -149,7 +131,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c18 {
+.c16 {
   font-family: Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -160,11 +142,11 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c17 {
+.c15 {
   object-fit: contain;
 }
 
-.c10 {
+.c8 {
   background: none;
   color: inherit;
   border: none;
@@ -178,59 +160,59 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   color: #222222;
 }
 
-.c10:disabled {
+.c8:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c11 {
+.c9 {
   display: inline-block;
   position: relative;
 }
 
-.c11:hover {
+.c9:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #222222;
 }
 
-.c11:active {
+.c9:active {
   color: #222222;
 }
 
-.c11:disabled {
+.c9:disabled {
   color: #808080;
 }
 
-.c8 > :first-child:focus-visible .shadow {
+.c6 > :first-child:focus-visible .shadow {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c8 > :first-child:hover .shadow {
+.c6 > :first-child:hover .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c8 > :first-child:active .shadow {
+.c6 > :first-child:active .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c8 > :first-child:disabled .icon-container {
+.c6 > :first-child:disabled .icon-container {
   background: #808080;
 }
 
-.c8 > :first-child:hover .icon-container {
+.c6 > :first-child:hover .icon-container {
   background: #ffe555;
 }
 
-.c8 > :first-child:active .icon-container {
+.c6 > :first-child:active .icon-container {
   background: #ffe555;
 }
 
-.c9:hover .shadow {
+.c7:hover .shadow {
   box-shadow: none !important;
 }
 
-.c9:active .shadow {
+.c7:active .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%) !important;
 }
 
@@ -239,7 +221,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c19 {
+  .c17 {
     width: auto;
   }
 }
@@ -253,7 +235,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c20 {
+  .c18 {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
@@ -268,32 +250,36 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
       className="c3 c4"
     >
       <div
-        className="c5 c6"
+        style={
+          {
+            "display": "contents",
+          }
+        }
       >
         <div
-          className="c7 c8 c9"
+          className="c5 c6 c7"
         >
           <button
-            className="c10 c11"
+            className="c8 c9"
             onClick={[Function]}
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
           >
             <div
-              className="c3 c12"
+              className="c3 c10"
             >
               <div
-                className="c13 c14 icon-container"
+                className="c11 c12 icon-container"
               >
                 <div
-                  className="c15 shadow"
+                  className="c13 shadow"
                 />
                 <div
-                  className="c16"
+                  className="c14"
                 >
                   <img
                     alt="lightbulb"
-                    className="c17"
+                    className="c15"
                     data-nimg="fill"
                     decoding="async"
                     loading="lazy"
@@ -318,7 +304,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
                 </div>
               </div>
               <span
-                className="c18"
+                className="c16"
               >
                 Need a hint?
               </span>
@@ -328,7 +314,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
       </div>
     </div>
     <div
-      className="c19 c20"
+      className="c17 c18"
     />
   </div>,
   .c0 {

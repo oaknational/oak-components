@@ -1,7 +1,6 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { InternalButton } from "../InternalButton";
 import { OakBox } from "../OakBox";
 
 import { InternalTooltip } from "./InternalTooltip";
@@ -16,7 +15,7 @@ const meta: Meta<typeof InternalTooltip> = {
   tags: ["autodocs"],
   title: "components/atoms/InternalTooltip",
   argTypes: {
-    tooltip: {
+    children: {
       control: {
         type: "text",
       },
@@ -29,8 +28,7 @@ const meta: Meta<typeof InternalTooltip> = {
   parameters: {
     controls: {
       include: [
-        "isOpen",
-        "tooltip",
+        "children",
         "tooltipPosition",
         ...Object.keys(colorArgTypes),
         ...Object.keys(spacingArgTypes),
@@ -47,10 +45,8 @@ const meta: Meta<typeof InternalTooltip> = {
     ),
   ],
   args: {
-    isOpen: true,
-    tooltip: "Hello there",
+    children: "Hello there",
     tooltipPosition: "bottom-left",
-    children: <InternalButton>Target</InternalButton>,
   },
 };
 export default meta;
