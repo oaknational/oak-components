@@ -9,11 +9,11 @@ exports[`InternalShadowRoundButton matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c4 {
+.c5 {
   font-family: Lexend,sans-serif;
 }
 
-.c6 {
+.c7 {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -24,7 +24,7 @@ exports[`InternalShadowRoundButton matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c8 {
+.c9 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -33,7 +33,7 @@ exports[`InternalShadowRoundButton matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c9 {
+.c10 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -42,7 +42,14 @@ exports[`InternalShadowRoundButton matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c5 {
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -61,7 +68,7 @@ exports[`InternalShadowRoundButton matches snapshot 1`] = `
   gap: 0.75rem;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -76,7 +83,7 @@ exports[`InternalShadowRoundButton matches snapshot 1`] = `
   justify-content: center;
 }
 
-.c11 {
+.c12 {
   font-family: Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -87,11 +94,11 @@ exports[`InternalShadowRoundButton matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c10 {
+.c11 {
   object-fit: contain;
 }
 
-.c2 {
+.c3 {
   background: none;
   color: inherit;
   border: none;
@@ -105,78 +112,79 @@ exports[`InternalShadowRoundButton matches snapshot 1`] = `
   color: #ebfbeb;
 }
 
-.c2:disabled {
+.c3:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c3 {
+.c4 {
   display: inline-block;
   position: relative;
 }
 
-.c3:hover {
+.c4:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #f6e8a0;
 }
 
-.c3:active {
+.c4:active {
   color: #ebfbeb;
 }
 
-.c3:disabled {
+.c4:disabled {
   color: #cacaca;
 }
 
-.c1 > :first-child:focus-visible .shadow {
+.c2 > :first-child:focus-visible .shadow {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c1 > :first-child:hover .shadow {
+.c2 > :first-child:hover .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c1 > :first-child:active .shadow {
+.c2 > :first-child:active .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c1 > :first-child:disabled .icon-container {
+.c2 > :first-child:disabled .icon-container {
   background: #f2f2f2;
 }
 
-.c1 > :first-child:hover .icon-container {
+.c2 > :first-child:hover .icon-container {
   background: #bef2bd;
 }
 
-.c1 > :first-child:active .icon-container {
+.c2 > :first-child:active .icon-container {
   background: #bef2bd;
 }
 
 <div
-  className="c0 c1"
+  className="c0 c1 c2"
 >
   <button
-    className="c2 c3"
+    className="c3 c4"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
     <div
-      className="c4 c5"
+      className="c5 c6"
     >
       <div
-        className="c6 c7 icon-container"
+        className="c7 c8 icon-container"
       >
         <div
-          className="c8 shadow"
+          className="c9 shadow"
         />
         <div
-          className="c9"
+          className="c10"
+          data-icon-for="button"
         >
           <img
             alt="arrow-right"
-            className="c10"
+            className="c11"
             data-nimg="fill"
             decoding="async"
             loading="lazy"
@@ -201,7 +209,7 @@ exports[`InternalShadowRoundButton matches snapshot 1`] = `
         </div>
       </div>
       <span
-        className="c11"
+        className="c12"
       >
         Click Me
       </span>

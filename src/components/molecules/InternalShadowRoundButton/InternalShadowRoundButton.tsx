@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 
 import { OakRoundIconProps } from "../OakRoundIcon";
 
+import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
 import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
 import { OakBox, OakFlex, OakSpan } from "@/components/atoms";
 import {
@@ -38,6 +39,7 @@ export type InternalShadowRoundButtonProps = Omit<
   disabledTextColor: OakCombinedColorToken;
   defaultIconBackground: OakCombinedColorToken;
   hoverIconBackground: OakCombinedColorToken;
+  hoverIconColor?: OakCombinedColorToken;
   disabledIconBackground: OakCombinedColorToken;
   defaultIconColor?: OakRoundIconProps["$colorFilter"];
   disabledIconColor?: OakRoundIconProps["$colorFilter"];
@@ -48,8 +50,7 @@ export type InternalShadowRoundButtonProps = Omit<
 } & PositionStyleProps;
 
 const StyledInternalButton = styled(InternalButton)<
-  Omit<InternalShadowRoundButtonProps, "iconBackgroundSize" | "iconSize"> &
-    SizeStyleProps
+  InternalShadowRoundButtonProps & SizeStyleProps
 >`
   display: inline-block;
   ${positionStyle}
@@ -58,6 +59,12 @@ const StyledInternalButton = styled(InternalButton)<
     &:hover {
       text-decoration: underline;
       color: ${parseColor(props.$hoverTextColor)};
+
+      &:not(:active) [data-icon-for="button"] img {
+        filter: ${props.$hoverIconColor
+          ? parseColorFilter(props.$hoverIconColor)
+          : undefined};
+      }
     }
     &:active {
       color: ${parseColor(props.$defaultTextColor)};
@@ -68,7 +75,7 @@ const StyledInternalButton = styled(InternalButton)<
   `}
 `;
 
-const StyledButtonWrapper = styled(OakBox)<{
+const StyledButtonWrapper = styled(OakFlex)<{
   $disabledIconBackground: OakCombinedColorToken;
   $hoverIconBackground: OakCombinedColorToken;
   $defaultIconBackground: OakCombinedColorToken;
@@ -126,6 +133,7 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
     iconBackgroundSize,
     iconSize,
     disabledIconBackground,
+    hoverIconColor,
     disabledTextColor,
     defaultIconColor,
     hoverIconBackground,
@@ -151,6 +159,7 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
                 ? defaultIconColor
                 : null
           }
+          data-icon-for="button"
         />
       )}
     </>
@@ -200,6 +209,7 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
         element={element ?? "button"}
         {...rest}
         $hoverTextColor={hoverTextColor}
+        $hoverIconColor={hoverIconColor}
         $defaultTextColor={defaultTextColor}
         $disabledTextColor={disabledTextColor}
         $color={defaultTextColor}
