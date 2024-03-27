@@ -21,6 +21,19 @@ class MockResizeObserver implements ResizeObserver {
   unobserve() {}
 }
 window.ResizeObserver = window.ResizeObserver ?? MockResizeObserver;
+class MockIntersectionObserver implements IntersectionObserver {
+  root = document.documentElement;
+  rootMargin = "0px";
+  thresholds = [1];
+  takeRecords(): IntersectionObserverEntry[] {
+    throw new Error("Method not implemented.");
+  }
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+}
+window.IntersectionObserver =
+  window.IntersectionObserver ?? MockIntersectionObserver;
 
 describe(OakTooltip, () => {
   it("matches snapshot", () => {

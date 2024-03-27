@@ -46,6 +46,9 @@ export const OakTooltip = ({
   ...props
 }: OakTooltipProps) => {
   const [targetElement, setTargetElement] = useState<Element | null>(null);
+  const [isIntersecting, setIsIntersecting] = useState(true);
+  const isVisible = isOpen && isIntersecting;
+
   /**
    * The overlay is positioned on top of the target element in a portal.
    * It tracks the target's size and position.
@@ -80,33 +83,52 @@ export const OakTooltip = ({
     if (!targetElement) {
       return;
     }
-
+    let ticking = false;
     const updateOverlayStyle = () => {
-      const rect = targetElement.getBoundingClientRect();
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          ticking = false;
+          const rect = targetElement.getBoundingClientRect();
 
-      setOverlayStyle({
-        top: rect.top,
-        left: rect.left,
-        width: rect.width,
-        height: rect.height,
-      });
+          setOverlayStyle({
+            top: rect.top,
+            left: rect.left,
+            width: rect.width,
+            height: rect.height,
+          });
+        });
+        ticking = true;
+      }
     };
 
-    const observer = new ResizeObserver(updateOverlayStyle);
-    observer.observe(targetElement);
-    observer.observe(document.documentElement);
+    // We use an intersection observer to detect when the target element is no longer visible
+    const intersection = new IntersectionObserver((entries) => {
+      setIsIntersecting(entries.every((entry) => entry.isIntersecting));
+    });
+    intersection.observe(targetElement);
+
+    // We use a resize observer to detect when the target element's size changes
+    const resize = new ResizeObserver(updateOverlayStyle);
+    resize.observe(targetElement);
+
+    // Update the overlay position on scroll and resize
+    window.addEventListener("scroll", updateOverlayStyle, true);
+    window.addEventListener("resize", updateOverlayStyle);
 
     return () => {
-      observer.disconnect();
+      resize.disconnect();
+      intersection.disconnect();
+      window.removeEventListener("scroll", updateOverlayStyle, true);
+      window.removeEventListener("resize", updateOverlayStyle);
     };
   }, [targetElement]);
 
   return (
     <>
       {createPortal(
-        isOpen && (
+        isVisible && (
           <OakBox
-            $position="absolute"
+            $position="fixed"
             style={overlayStyle}
             $pointerEvents="none"
             $zIndex="modal-dialog"
