@@ -145,31 +145,27 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
     ...rest
   } = props;
 
-  const icon = (
-    <>
-      {iconName && (
-        <OakIcon
-          iconName={iconName}
-          $width={iconSize}
-          $height={iconSize}
-          $colorFilter={
-            props.disabled
-              ? disabledIconColor
-              : defaultIconColor
-                ? defaultIconColor
-                : null
-          }
-          data-icon-for="button"
-        />
-      )}
-    </>
+  const icon = iconName && (
+    <OakIcon
+      iconName={iconName}
+      $width={iconSize}
+      $height={iconSize}
+      $colorFilter={
+        props.disabled
+          ? disabledIconColor
+          : defaultIconColor
+            ? defaultIconColor
+            : null
+      }
+      data-icon-for="button"
+    />
   );
   const loader = (
     <OakBox $width={iconSize} $height={iconSize}>
       <OakLoadingSpinner $width={iconSize} loaderColor="white" />
     </OakBox>
   );
-  const iconLogic = (
+  const iconLogic = (isLoading || icon) && (
     <OakFlex
       className={"icon-container"}
       $background={props.defaultIconBackground}

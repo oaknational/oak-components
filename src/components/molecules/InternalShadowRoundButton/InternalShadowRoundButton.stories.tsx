@@ -63,12 +63,25 @@ const meta: Meta<typeof InternalShadowRoundButton> = {
       ],
     },
   },
-};
-export default meta;
-
-type Story = StoryObj<typeof InternalShadowRoundButton>;
-
-export const Default: Story = {
+  args: {
+    defaultIconBackground: "mint",
+    defaultTextColor: "text-primary",
+    hoverTextColor: "text-primary",
+    disabledIconBackground: "bg-btn-primary-disabled",
+    disabledBackground: "bg-btn-secondary-disabled",
+    disabledBorderColor: "text-disabled",
+    disabledTextColor: "text-disabled",
+    disabledIconColor: "white",
+    defaultIconColor: "white",
+    defaultBackground: "bg-btn-secondary",
+    defaultBorderColor: "text-primary",
+    hoverBackground: "bg-btn-secondary-hover",
+    hoverBorderColor: "text-primary",
+    hoverIconBackground: "mint50",
+    width: "auto",
+    iconBackgroundSize: "all-spacing-7",
+    iconSize: "all-spacing-6",
+  },
   render: (args) => (
     <OakFlex $gap="space-between-m">
       <InternalShadowRoundButton {...args}>Button</InternalShadowRoundButton>
@@ -80,21 +93,18 @@ export const Default: Story = {
       </InternalShadowRoundButton>
     </OakFlex>
   ),
+};
+export default meta;
+
+type Story = StoryObj<typeof InternalShadowRoundButton>;
+
+export const Default: Story = {
   args: {
     iconName: "lightbulb",
-    defaultIconBackground: "mint",
-    defaultTextColor: "text-primary",
-    hoverTextColor: "text-primary",
-    disabledIconBackground: "bg-btn-primary-disabled",
-    disabledTextColor: "text-disabled",
-    disabledIconColor: "white",
-    defaultIconColor: "white",
-    hoverIconBackground: "mint50",
-    width: "auto",
-    iconBackgroundSize: "all-spacing-7",
-    iconSize: "all-spacing-6",
   },
 };
+
+export const WithNoIcon: Story = {};
 
 export const LinkStyledAsButton: Story = {
   render: (args) => (
@@ -105,18 +115,6 @@ export const LinkStyledAsButton: Story = {
   args: {
     as: "a",
     href: "/",
-    iconName: "lightbulb",
-    defaultIconBackground: "mint",
-    defaultTextColor: "text-primary",
-    hoverTextColor: "text-primary",
-    disabledIconBackground: "bg-btn-primary-disabled",
-    disabledTextColor: "text-disabled",
-    disabledIconColor: "white",
-    defaultIconColor: "white",
-    hoverIconBackground: "mint50",
-    width: "auto",
-    iconBackgroundSize: "all-spacing-7",
-    iconSize: "all-spacing-6",
   },
 };
 
@@ -136,14 +134,5 @@ export const ButtonInList: Story = {
   ),
   args: {
     iconName: "arrow-right",
-    defaultBackground: "bg-btn-secondary",
-    defaultTextColor: "text-primary",
-    defaultBorderColor: "text-primary",
-    hoverBackground: "bg-btn-secondary-hover",
-    hoverTextColor: "text-primary",
-    hoverBorderColor: "text-primary",
-    disabledBackground: "bg-btn-secondary-disabled",
-    disabledBorderColor: "text-disabled",
-    disabledTextColor: "text-disabled",
   },
 };
