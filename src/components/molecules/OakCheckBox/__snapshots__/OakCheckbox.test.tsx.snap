@@ -118,7 +118,6 @@ input:checked + .c7 {
   >
     <input
       className="c3 c4 c5 c6"
-      defaultChecked={false}
       disabled={false}
       id="checkbox-1"
       name="checkbox-1"

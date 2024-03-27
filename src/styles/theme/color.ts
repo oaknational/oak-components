@@ -124,6 +124,7 @@ export const oakUiRoleTokens = [
   "border-primary",
   "border-inverted",
   "border-neutral",
+  "border-neutral-lighter",
   "border-brand",
   "border-success",
   "border-error",

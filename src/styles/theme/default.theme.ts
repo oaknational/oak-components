@@ -52,6 +52,7 @@ export const oakDefaultTheme: OakTheme = {
     "border-primary": "black",
     "border-inverted": "white",
     "border-neutral": "grey50",
+    "border-neutral-lighter": "grey40",
     "border-brand": "oakGreen",
     "border-success": "oakGreen",
     "border-error": "red",
