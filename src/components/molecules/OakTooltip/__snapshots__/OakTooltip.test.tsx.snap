@@ -3,7 +3,7 @@
 exports[`OakTooltip matches snapshot 1`] = `
 [
   .c0 {
-  position: absolute;
+  position: fixed;
   pointer-events: none;
   font-family: Lexend,sans-serif;
   z-index: 300;
