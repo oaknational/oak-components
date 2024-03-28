@@ -14,7 +14,7 @@ exports[`OakLessonVideoTranscript matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c8 {
+.c9 {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -25,7 +25,7 @@ exports[`OakLessonVideoTranscript matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c10 {
+.c11 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -34,7 +34,7 @@ exports[`OakLessonVideoTranscript matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c11 {
+.c12 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -57,7 +57,14 @@ exports[`OakLessonVideoTranscript matches snapshot 1`] = `
   justify-content: space-between;
 }
 
-.c6 {
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -76,7 +83,7 @@ exports[`OakLessonVideoTranscript matches snapshot 1`] = `
   gap: 0.75rem;
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -91,7 +98,7 @@ exports[`OakLessonVideoTranscript matches snapshot 1`] = `
   justify-content: center;
 }
 
-.c7 {
+.c8 {
   font-family: Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -102,13 +109,13 @@ exports[`OakLessonVideoTranscript matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c12 {
+.c13 {
   -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   object-fit: contain;
 }
 
-.c4 {
+.c5 {
   background: none;
   color: inherit;
   border: none;
@@ -123,51 +130,51 @@ exports[`OakLessonVideoTranscript matches snapshot 1`] = `
   margin-bottom: 1.5rem;
 }
 
-.c4:disabled {
+.c5:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c5 {
+.c6 {
   display: inline-block;
   position: relative;
 }
 
-.c5:hover {
+.c6:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #575757;
 }
 
-.c5:active {
+.c6:active {
   color: #222222;
 }
 
-.c5:disabled {
+.c6:disabled {
   color: #808080;
 }
 
-.c3 > :first-child:focus-visible .shadow {
+.c4 > :first-child:focus-visible .shadow {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c3 > :first-child:hover .shadow {
+.c4 > :first-child:hover .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c3 > :first-child:active .shadow {
+.c4 > :first-child:active .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c3 > :first-child:disabled .icon-container {
+.c4 > :first-child:disabled .icon-container {
   background: #808080;
 }
 
-.c3 > :first-child:hover .icon-container {
+.c4 > :first-child:hover .icon-container {
   background: #575757;
 }
 
-.c3 > :first-child:active .icon-container {
+.c4 > :first-child:active .icon-container {
   background: #222222;
 }
 
@@ -186,36 +193,37 @@ exports[`OakLessonVideoTranscript matches snapshot 1`] = `
       className="c0"
     >
       <div
-        className="c2 c3"
+        className="c2 c3 c4"
       >
         <button
           aria-controls="transcript-element"
           aria-expanded={false}
-          className="c4 c5"
+          className="c5 c6"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
           <div
-            className="c0 c6"
+            className="c0 c7"
           >
             <span
-              className="c7"
+              className="c8"
             >
               Show transcript
             </span>
             <div
-              className="c8 c9 icon-container"
+              className="c9 c10 icon-container"
             >
               <div
-                className="c10 shadow"
+                className="c11 shadow"
               />
               <div
-                className="c11"
+                className="c12"
+                data-icon-for="button"
               >
                 <img
                   alt="chevron-down"
-                  className="c12"
+                  className="c13"
                   data-nimg="fill"
                   decoding="async"
                   loading="lazy"

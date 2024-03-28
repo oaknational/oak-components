@@ -23,3 +23,4 @@ export * from "./OakDraggable";
 export * from "./OakDroppable";
 export * from "./OakDraggableFeedback";
 export * from "./OakAccordion";
+export * from "./OakModal";
