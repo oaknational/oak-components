@@ -14,6 +14,7 @@ import { InternalShadowRoundButton } from "../InternalShadowRoundButton";
 
 import { OakBox, OakFlex, OakImage } from "@/components/atoms";
 import { parseOpacity } from "@/styles/helpers/parseOpacity";
+import { parseSpacing } from "@/styles/helpers/parseSpacing";
 
 export type OakModalProps = {
   /**
@@ -58,6 +59,7 @@ const FadeOutBox = styled(OakBox)<{ $state: TransitionStatus }>`
 `;
 
 const SlideInFlex = styled(OakFlex)<{ $state: TransitionStatus }>`
+  max-width: calc(100vw - ${parseSpacing("inner-padding-l")});
   transform: ${({ $state }) => {
     switch ($state) {
       case "entered":
@@ -136,8 +138,7 @@ export const OakModal = ({
             $left="all-spacing-0"
             $top="all-spacing-0"
             $bottom="all-spacing-0"
-            $width="all-spacing-22"
-            $maxWidth="100vw"
+            $width={["all-spacing-22"]}
             $zIndex="modal-dialog"
             $flexDirection="column"
             $transition="standard-ease"
