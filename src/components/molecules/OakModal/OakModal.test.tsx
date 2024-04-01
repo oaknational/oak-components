@@ -8,7 +8,9 @@ import { OakModal } from "./OakModal";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { oakDefaultTheme } from "@/styles";
 import { OakThemeProvider } from "@/components/atoms";
-import "@/test-helpers/mockIntersectionObserver";
+import { installMockIntersectionObserver } from "@/test-helpers";
+
+installMockIntersectionObserver();
 
 jest.mock("react-dom", () => {
   return {
