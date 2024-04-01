@@ -69,6 +69,7 @@ export const OakAccordion = ({
       >
         <StyledOakFlex
           as="button"
+          type="button"
           onClick={() => setOpen(!isOpen)}
           $alignItems="center"
           $pa="inner-padding-m"
