@@ -8,6 +8,7 @@ import { OakModal } from "./OakModal";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { oakDefaultTheme } from "@/styles";
 import { OakThemeProvider } from "@/components/atoms";
+import "@/test-helpers/mockIntersectionObserver";
 
 jest.mock("react-dom", () => {
   return {
@@ -15,18 +16,6 @@ jest.mock("react-dom", () => {
     createPortal: (node: ReactNode) => node,
   };
 });
-
-global.IntersectionObserver =
-  global.IntersectionObserver ??
-  class IntersectionObserver {
-    constructor() {}
-    observe() {
-      return null;
-    }
-    disconnect() {
-      return null;
-    }
-  };
 
 describe(OakModal, () => {
   it("matches snapshot", () => {
