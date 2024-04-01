@@ -34,7 +34,6 @@ exports[`OakModal matches snapshot 1`] = `
   bottom: 0rem;
   left: 0rem;
   width: 40rem;
-  max-width: 100vw;
   background: #ffffff;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -275,6 +274,7 @@ exports[`OakModal matches snapshot 1`] = `
 }
 
 .c4 {
+  max-width: calc(100vw - 1.25rem);
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   transform: translateX(0);
