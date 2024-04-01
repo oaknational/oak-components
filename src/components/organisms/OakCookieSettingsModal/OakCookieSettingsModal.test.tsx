@@ -10,7 +10,9 @@ import {
 import { OakThemeProvider } from "@/components/atoms";
 import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import "@/test-helpers/mockIntersectionObserver";
+import { installMockIntersectionObserver } from "@/test-helpers";
+
+installMockIntersectionObserver();
 
 describe(OakCookieSettingsModal, () => {
   it("matches snapshot", () => {

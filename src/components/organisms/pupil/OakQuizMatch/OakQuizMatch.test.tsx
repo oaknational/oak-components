@@ -16,6 +16,7 @@ import { OakQuizMatch } from "./OakQuizMatch";
 import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { injectDndContext } from "@/components/atoms/InternalDndContext/InternalDndContext";
+import { installMockResizeObserver } from "@/test-helpers";
 
 // Not currently implemented by JSDOM so we can provide stubs
 window.matchMedia =
@@ -24,13 +25,7 @@ window.matchMedia =
     matches: false,
   });
 
-class MockResizeObserver implements ResizeObserver {
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-}
-
-window.ResizeObserver = window.ResizeObserver ?? MockResizeObserver;
+installMockResizeObserver();
 
 const options = [
   { id: "1", label: "Exclamation mark" },
