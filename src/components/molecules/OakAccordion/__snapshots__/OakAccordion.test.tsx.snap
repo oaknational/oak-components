@@ -112,6 +112,7 @@ exports[`OakAccordion matches snapshot 1`] = `
       className="c3 c4 c5"
       id="see-more"
       onClick={[Function]}
+      type="button"
     >
       <div
         className="c6"
