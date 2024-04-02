@@ -3,13 +3,13 @@ import React, { FormEvent, ReactNode } from "react";
 import {
   OakAccordion,
   OakCheckBox,
-  OakLink,
   OakModal,
   OakModalBody,
   OakModalFooter,
   OakModalProps,
   OakPrimaryButton,
   OakSecondaryButton,
+  OakSecondaryLink,
 } from "@/components/molecules";
 import { OakBox, OakHeading, OakP, OakSpan, OakUL } from "@/components/atoms";
 
@@ -135,9 +135,9 @@ export const OakCookieSettingsModal = ({
 
         <OakP $mb="space-between-l">
           For more information, view our{" "}
-          <OakLink href={policyURL} target="_blank">
+          <OakSecondaryLink href={policyURL} target="_blank">
             cookie policy
-          </OakLink>
+          </OakSecondaryLink>
           .
         </OakP>
         <OakBox $mb="space-between-xl">
@@ -188,13 +188,13 @@ export const OakCookieSettingsModal = ({
                         <OakUL $reset>
                           {policy.parties.map((party, index, all) => (
                             <OakBox as="li" key={index} $display="inline">
-                              <OakLink
+                              <OakSecondaryLink
                                 href={party.policyURL}
                                 target="_blank"
                                 rel="external nofollow"
                               >
                                 {party.name}
-                              </OakLink>
+                              </OakSecondaryLink>
                               {index < all.length - 1 && ", "}
                             </OakBox>
                           ))}
