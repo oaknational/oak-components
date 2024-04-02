@@ -133,13 +133,19 @@ export const OakCookieBanner = ({
                       $flexWrap={["wrap", "wrap", "nowrap"]}
                       $flexGrow={1}
                     >
-                      <OakTertiaryButton onClick={onReject}>
+                      <OakTertiaryButton
+                        onClick={onReject}
+                        data-testid="cookie-banner-reject"
+                      >
                         Reject non-essential cookies
                       </OakTertiaryButton>
                       <OakSecondaryButton onClick={onOpenSettings}>
                         Cookie settings
                       </OakSecondaryButton>
-                      <OakPrimaryButton onClick={onAccept}>
+                      <OakPrimaryButton
+                        onClick={onAccept}
+                        data-testid="cookie-banner-accept"
+                      >
                         Accept all cookies
                       </OakPrimaryButton>
                     </OakFlex>
