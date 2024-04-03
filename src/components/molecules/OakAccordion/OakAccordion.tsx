@@ -30,11 +30,11 @@ export type OakAccordionProps = {
 
 const StyledOakFlex = styled(OakFlex)`
   font: inherit;
+  color: inherit;
   border: none;
   background: none;
   appearance: none;
   margin: -${parseSpacing("inner-padding-m")};
-
   outline: none;
 
   &:focus-visible {

@@ -88,6 +88,7 @@ exports[`OakAccordion matches snapshot 1`] = `
 
 .c5 {
   font: inherit;
+  color: inherit;
   border: none;
   background: none;
   -webkit-appearance: none;
