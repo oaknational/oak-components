@@ -12,12 +12,6 @@ import { SpacingStyleProps } from "@/styles/utils/spacingStyle";
 
 const StyledOakFlex = styled(OakFlex)``;
 
-/**
- * A flexed horizontal rule with a hand-drawn filled background
- *
- * An optional `stroke` and `strokeWidth` can be applied to give the background a border
- */
-
 export type OakHandDrawnHRProps = {
   fill?: InternalStyledSvgProps["$fill"];
   stroke?: InternalStyledSvgProps["$stroke"];
@@ -25,6 +19,11 @@ export type OakHandDrawnHRProps = {
 } & SpacingStyleProps &
   SizeStyleProps;
 
+/**
+ * A Drawn HR svg inside a flex container
+ *
+ * An optional `stroke` and `strokeWidth` can be applied to give the background a border
+ */
 export const OakHandDrawnHR = (props: OakHandDrawnHRProps) => {
   const { fill, stroke, strokeWidth, ...flexProps } = props;
 
