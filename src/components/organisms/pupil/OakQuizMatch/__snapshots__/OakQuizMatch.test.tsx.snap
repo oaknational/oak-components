@@ -384,7 +384,7 @@ exports[`OakQuizMatch matches snapshot 1`] = `
           <div
             className="c11 c12"
           >
-            Exclamation mark
+            Question mark
           </div>
         </div>
       </div>
@@ -492,7 +492,7 @@ exports[`OakQuizMatch matches snapshot 1`] = `
           <div
             className="c11 c12"
           >
-            Question mark
+            Exclamation mark
           </div>
         </div>
       </div>

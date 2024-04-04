@@ -44,6 +44,14 @@ const slots = [
 ];
 
 describe(OakQuizMatch, () => {
+  beforeEach(() => {
+    // Seed Math.random so that the order of the options is predictable
+    const randomSpy = jest.spyOn(Math, "random");
+    for (let i = 0; i < 10; i++) {
+      randomSpy.mockReturnValueOnce(0.1 * i);
+    }
+  });
+
   it("matches snapshot", () => {
     const tree = create(
       <ThemeProvider theme={oakDefaultTheme}>
@@ -79,7 +87,7 @@ describe(OakQuizMatch, () => {
       getAllByRoleWithin(getByTestId("holding-pen"), "option").map(
         (item) => item.textContent,
       ),
-    ).toEqual(["Exclamation mark", "Full stop", "Question mark"]);
+    ).toEqual(["Question mark", "Full stop", "Exclamation mark"]);
 
     // Drag the first item into the first slot
     act(() => {
@@ -93,7 +101,7 @@ describe(OakQuizMatch, () => {
       getAllByRoleWithin(getByTestId("holding-pen"), "option").map(
         (item) => item.textContent,
       ),
-    ).toEqual(["Full stop", "Question mark"]);
+    ).toEqual(["Question mark", "Full stop"]);
     expect(getByTestIdWithin(firstSlot, "label").textContent).toEqual(
       "conveys intense emotion",
     );
@@ -113,7 +121,7 @@ describe(OakQuizMatch, () => {
       getAllByRoleWithin(getByTestId("holding-pen"), "option").map(
         (item) => item.textContent,
       ),
-    ).toEqual(["Exclamation mark", "Question mark"]);
+    ).toEqual(["Question mark", "Exclamation mark"]);
     // The first slot should now contain the second option
     expect(getByRoleWithin(firstSlot, "option").textContent).toEqual(
       "Full stop",
@@ -131,7 +139,7 @@ describe(OakQuizMatch, () => {
       getAllByRoleWithin(getByTestId("holding-pen"), "option").map(
         (item) => item.textContent,
       ),
-    ).toEqual(["Exclamation mark", "Full stop", "Question mark"]);
+    ).toEqual(["Question mark", "Full stop", "Exclamation mark"]);
     expect(getByTestIdWithin(firstSlot, "label").textContent).toEqual(
       "conveys intense emotion",
     );
