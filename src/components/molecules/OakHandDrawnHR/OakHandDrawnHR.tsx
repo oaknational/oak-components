@@ -1,16 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 
-import { OakFlex } from "../atoms";
+import { OakFlex } from "../../atoms";
 import {
   InternalStyledSvg,
   InternalStyledSvgProps,
-} from "../atoms/InternalStyledSvg";
+} from "../../atoms/InternalStyledSvg";
 
 import { SizeStyleProps } from "@/styles/utils/sizeStyle";
 import { SpacingStyleProps } from "@/styles/utils/spacingStyle";
 
 const StyledOakFlex = styled(OakFlex)``;
+
+/**
+ * A flexed horizontal rule with a hand-drawn filled background
+ *
+ * An optional `stroke` and `strokeWidth` can be applied to give the background a border
+ */
 
 export type OakHandDrawnHRProps = {
   fill?: InternalStyledSvgProps["$fill"];

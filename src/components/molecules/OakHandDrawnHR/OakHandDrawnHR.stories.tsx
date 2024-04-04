@@ -8,7 +8,7 @@ import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 import { drawingArgTypes } from "@/storybook-helpers/drawingStyleHelpers";
 
 const meta: Meta<typeof OakHandDrawnHR> = {
-  title: "Components/OakHandDrawnHR",
+  title: "Components/molecules/OakHandDrawnHR",
   component: OakHandDrawnHR,
   tags: ["autodocs"],
   argTypes: {
