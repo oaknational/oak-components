@@ -5,7 +5,6 @@ import {
   OakPrimaryButton,
   OakSecondaryButton,
   OakSecondaryLink,
-  OakTertiaryButton,
 } from "@/components/molecules";
 import { OakAllSpacingToken } from "@/styles";
 import { ResponsiveValues } from "@/styles/utils/responsiveStyle";
@@ -133,13 +132,27 @@ export const OakCookieBanner = ({
                       $flexWrap={["wrap", "wrap", "nowrap"]}
                       $flexGrow={1}
                     >
-                      <OakTertiaryButton onClick={onReject}>
-                        Reject non-essential cookies
-                      </OakTertiaryButton>
+                      <OakFlex
+                        $font="heading-7"
+                        $whiteSpace="nowrap"
+                        $alignItems="center"
+                      >
+                        <OakSecondaryLink
+                          element="button"
+                          type="button"
+                          onClick={onReject}
+                          data-testid="cookie-banner-reject"
+                        >
+                          Reject non-essential cookies
+                        </OakSecondaryLink>
+                      </OakFlex>
                       <OakSecondaryButton onClick={onOpenSettings}>
                         Cookie settings
                       </OakSecondaryButton>
-                      <OakPrimaryButton onClick={onAccept}>
+                      <OakPrimaryButton
+                        onClick={onAccept}
+                        data-testid="cookie-banner-accept"
+                      >
                         Accept all cookies
                       </OakPrimaryButton>
                     </OakFlex>
