@@ -6,7 +6,6 @@ import {
   InternalStyledSvg,
   InternalStyledSvgProps,
 } from "@/components/atoms/InternalStyledSvg";
-
 import { SizeStyleProps } from "@/styles/utils/sizeStyle";
 import { SpacingStyleProps } from "@/styles/utils/spacingStyle";
 
