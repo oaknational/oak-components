@@ -9,8 +9,8 @@ exports[`OakPupilJourneyHeader matches snapshot 1`] = `
 
 .c2 {
   position: relative;
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   padding: 1.5rem;
   font-family: Lexend,sans-serif;
 }
@@ -28,10 +28,10 @@ exports[`OakPupilJourneyHeader matches snapshot 1`] = `
 
 .c8 {
   position: relative;
-  width: 3.5rem;
-  min-width: 3.5rem;
-  height: 3.5rem;
-  min-height: 3.5rem;
+  width: 3rem;
+  min-width: 3rem;
+  height: 3rem;
+  min-height: 3rem;
   font-family: Lexend,sans-serif;
 }
 
@@ -92,8 +92,8 @@ exports[`OakPupilJourneyHeader matches snapshot 1`] = `
 .c11 {
   font-family: Lexend,sans-serif;
   font-weight: 600;
-  font-size: 2rem;
-  line-height: 2.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   -webkit-letter-spacing: 0.0115rem;
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
@@ -109,10 +109,71 @@ exports[`OakPupilJourneyHeader matches snapshot 1`] = `
   fill: #deb7d5;
 }
 
+@media (min-width:750px) {
+  .c2 {
+    width: 5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c2 {
+    height: 5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c8 {
+    width: 3.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c8 {
+    min-width: 3.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c8 {
+    height: 3.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c8 {
+    min-height: 3.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c11 {
+    font-weight: 600;
+  }
+}
+
+@media (min-width:750px) {
+  .c11 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c11 {
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c11 {
+    -webkit-letter-spacing: 0.0115rem;
+    -moz-letter-spacing: 0.0115rem;
+    -ms-letter-spacing: 0.0115rem;
+    letter-spacing: 0.0115rem;
+  }
+}
+
 <div
-    alt="icon"
     className="c0 c1"
-    title="Pupil Journey Header"
   >
     <div
       className="c2 c3"
