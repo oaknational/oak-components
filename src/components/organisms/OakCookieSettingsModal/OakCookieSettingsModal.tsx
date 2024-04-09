@@ -10,6 +10,7 @@ import {
   OakModalProps,
   OakPrimaryButton,
   OakSecondaryButton,
+  OakSecondaryLink,
 } from "@/components/molecules";
 import { OakBox, OakHeading, OakP, OakSpan, OakUL } from "@/components/atoms";
 
@@ -188,13 +189,13 @@ export const OakCookieSettingsModal = ({
                         <OakUL $reset>
                           {policy.parties.map((party, index, all) => (
                             <OakBox as="li" key={index} $display="inline">
-                              <OakLink
+                              <OakSecondaryLink
                                 href={party.policyURL}
                                 target="_blank"
                                 rel="external nofollow"
                               >
                                 {party.name}
-                              </OakLink>
+                              </OakSecondaryLink>
                               {index < all.length - 1 && ", "}
                             </OakBox>
                           ))}
