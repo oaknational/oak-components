@@ -158,7 +158,9 @@ export const OakQuizMatch = ({
   onChange,
 }: OakQuizMatchProps) => {
   const [matches, setMatches] = useState<Matches>({});
-  const draggables = useRef(initialOptions).current;
+  const draggables = useRef(
+    initialOptions.slice().sort(() => Math.random() - 0.5),
+  ).current;
   const droppables = useRef(initialSlots).current;
   const [activeId, setActiveId] = useState<DraggableId | null>(null);
   const activeDraggable = draggables.find((item) => item.id === activeId);
