@@ -12,9 +12,7 @@ const meta: Meta<typeof OakHandDrawnHR> = {
   tags: ["autodocs"],
   title: "Components/molecules/OakHandDrawnHR",
   argTypes: {
-    fill: drawingArgTypes["$fill"],
-    stroke: drawingArgTypes["$stroke"],
-    strokeWidth: drawingArgTypes["$strokeWidth"],
+    hrColor: drawingArgTypes["$fill"],
     ...spacingArgTypes,
     ...sizeArgTypes,
   },
@@ -22,8 +20,6 @@ const meta: Meta<typeof OakHandDrawnHR> = {
     controls: {
       include: [
         "fill",
-        "stroke",
-        "strokeWidth",
         ...Object.keys(spacingArgTypes),
         ...Object.keys(sizeArgTypes),
       ],

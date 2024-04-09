@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-import { OakFlex } from "../../atoms";
+import { OakFlex } from "@/components/atoms";
 import {
   InternalStyledSvg,
   InternalStyledSvgProps,
-} from "../../atoms/InternalStyledSvg";
+} from "@/components/atoms/InternalStyledSvg";
 
 import { SizeStyleProps } from "@/styles/utils/sizeStyle";
 import { SpacingStyleProps } from "@/styles/utils/spacingStyle";
@@ -13,9 +13,7 @@ import { SpacingStyleProps } from "@/styles/utils/spacingStyle";
 const StyledOakFlex = styled(OakFlex)``;
 
 export type OakHandDrawnHRProps = {
-  fill?: InternalStyledSvgProps["$fill"];
-  stroke?: InternalStyledSvgProps["$stroke"];
-  strokeWidth?: InternalStyledSvgProps["$strokeWidth"];
+  hrColor?: InternalStyledSvgProps["$fill"];
 } & SpacingStyleProps &
   SizeStyleProps;
 
@@ -25,7 +23,7 @@ export type OakHandDrawnHRProps = {
  * An optional `stroke` and `strokeWidth` can be applied to give the background a border
  */
 export const OakHandDrawnHR = (props: OakHandDrawnHRProps) => {
-  const { fill, stroke, strokeWidth, ...flexProps } = props;
+  const { hrColor, ...flexProps } = props;
 
   return (
     <StyledOakFlex {...flexProps}>
@@ -33,9 +31,7 @@ export const OakHandDrawnHR = (props: OakHandDrawnHRProps) => {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 866 8"
         preserveAspectRatio="none"
-        $fill={fill}
-        $stroke={stroke}
-        $strokeWidth={strokeWidth}
+        $fill={hrColor}
         height="100%"
         width="100%"
       >
@@ -45,11 +41,6 @@ export const OakHandDrawnHR = (props: OakHandDrawnHRProps) => {
             fill="inherit"
           />
         </g>
-        {/* <defs>
-          <clipPath id="clip0_175_6785">
-            <rect width="866" height="8" fill="white" />
-          </clipPath>
-        </defs> */}
       </InternalStyledSvg>
     </StyledOakFlex>
   );
