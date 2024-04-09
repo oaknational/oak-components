@@ -1,0 +1,610 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakCookieBanner matches snapshot 1`] = `
+.c0 {
+  background: #f2f2f2;
+  border-top: 0.063rem solid;
+  border-color: #808080;
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Lexend,sans-serif;
+}
+
+.c2 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c4 {
+  font-family: Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c6 {
+  font-family: Lexend,sans-serif;
+}
+
+.c8 {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: Lexend,sans-serif;
+}
+
+.c16 {
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  gap: 0.75rem;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.c19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.c5 {
+  font-family: Lexend,sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c14 {
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c11 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: Lexend,sans-serif;
+  color: #222222;
+}
+
+.c11:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c17 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: Lexend,sans-serif;
+  color: #222222;
+  background: #ffffff;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border: 0.125rem solid;
+  border-color: #222222;
+  border-radius: 0.25rem;
+}
+
+.c17:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c20 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: Lexend,sans-serif;
+  color: #ffffff;
+  background: #222222;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border: 0.125rem solid;
+  border-color: #222222;
+  border-radius: 0.25rem;
+}
+
+.c20:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c18 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.c18:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: #222222;
+  background: #f2f2f2;
+  border-color: #222222;
+}
+
+.c18:active {
+  background: #ffffff;
+  border-color: #222222;
+  color: #222222;
+}
+
+.c18:disabled {
+  background: #e4e4e4;
+  border-color: #808080;
+  color: #808080;
+}
+
+.c21 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.c21:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: #ffffff;
+  background: #575757;
+  border-color: #575757;
+}
+
+.c21:active {
+  background: #222222;
+  border-color: #222222;
+  color: #ffffff;
+}
+
+.c21:disabled {
+  background: #808080;
+  border-color: #808080;
+  color: #ffffff;
+}
+
+.c15 .grey-shadow:has(+ * + .internal-button:focus-visible) {
+  box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c15 .yellow-shadow:has(+ .internal-button:focus-visible) {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
+}
+
+.c15 .yellow-shadow:has(+ .internal-button:hover),
+.c15 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c15 .grey-shadow:has(+ * + .internal-button:hover) {
+  box-shadow: none;
+}
+
+.c15 .grey-shadow:has(+ * + .internal-button:active) {
+  box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+}
+
+.c15 .yellow-shadow:has(+ .internal-button:active) {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c12 {
+  display: inline-block;
+  position: relative;
+}
+
+.c12:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: #575757;
+}
+
+.c12:active {
+  color: #222222;
+}
+
+.c12:disabled {
+  color: #808080;
+}
+
+.c10 > :first-child:focus-visible .shadow {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c10 > :first-child:hover .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c10 > :first-child:active .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+}
+
+.c10 > :first-child:disabled .icon-container {
+  background: #808080;
+}
+
+.c10 > :first-child:hover .icon-container {
+  background: #575757;
+}
+
+.c10 > :first-child:active .icon-container {
+  background: #222222;
+}
+
+@media (min-width:750px) {
+  .c2 {
+    margin-left: 1.5rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c2 {
+    margin-left: 3.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c2 {
+    margin-right: 1.5rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c2 {
+    margin-right: 3.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c4 {
+    font-weight: 300;
+  }
+}
+
+@media (min-width:750px) {
+  .c4 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c4 {
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c4 {
+    -webkit-letter-spacing: -0.005rem;
+    -moz-letter-spacing: -0.005rem;
+    -ms-letter-spacing: -0.005rem;
+    letter-spacing: -0.005rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c3 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (min-width:1280px) {
+  .c3 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:750px) {
+  .c3 {
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width:1280px) {
+  .c3 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media (min-width:750px) {
+  .c3 {
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c3 {
+    gap: 2rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c7 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:750px) {
+  .c7 {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width:1280px) {
+  .c7 {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+}
+
+@media (min-width:750px) {
+  .c7 {
+    gap: 2rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c5 {
+    font-weight: 700;
+  }
+}
+
+@media (min-width:750px) {
+  .c5 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c5 {
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c5 {
+    -webkit-letter-spacing: -0.005rem;
+    -moz-letter-spacing: -0.005rem;
+    -ms-letter-spacing: -0.005rem;
+    letter-spacing: -0.005rem;
+  }
+}
+
+<div
+  className="c0"
+  data-testid="cookie-banner"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2 c3"
+    >
+      <div
+        className="c4"
+      >
+        <strong
+          className="c5"
+        >
+          This site uses cookies to store information on your computer.
+        </strong>
+         
+        Some of these cookies are essential, while others help us to improve your experience by providing insights into how the site is being used.
+      </div>
+      <div
+        className="c6 c7"
+      >
+        <div
+          className="c8 c9 c10"
+        >
+          <button
+            className="c11 c12"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            <div
+              className="c6 c13"
+            >
+              <span
+                className="c14"
+              >
+                Reject non-essential cookies
+              </span>
+            </div>
+          </button>
+        </div>
+        <div
+          className="c8 c15"
+        >
+          <div
+            className="c16 grey-shadow"
+          />
+          <div
+            className="c16 yellow-shadow"
+          />
+          <button
+            className="c17 c18 internal-button"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            <div
+              className="c6 c19"
+            >
+              <span
+                className="c14"
+              >
+                Cookie settings
+              </span>
+            </div>
+          </button>
+        </div>
+        <div
+          className="c8 c15"
+        >
+          <div
+            className="c16 grey-shadow"
+          />
+          <div
+            className="c16 yellow-shadow"
+          />
+          <button
+            className="c20 c21 internal-button"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            <div
+              className="c6 c19"
+            >
+              <span
+                className="c14"
+              >
+                Accept all cookies
+              </span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
