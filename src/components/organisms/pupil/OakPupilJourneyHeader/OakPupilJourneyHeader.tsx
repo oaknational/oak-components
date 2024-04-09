@@ -1,18 +1,20 @@
 import React from "react";
 
-import { OakFlex, OakHeading, OakIconProps } from "../../../atoms";
+import { OakFlex, OakHeading, OakIconProps } from "@/components/atoms";
 import {
   OakBulletList,
   OakBulletListProps,
   OakHandDrawnCardWithIcon,
 } from "../../../molecules";
+import { FlexStyleProps } from "@/styles/utils/flexStyle";
 
 export type OakPupilJourneyHeaderProps = {
   title: string;
   iconName: OakIconProps["iconName"];
   alt?: OakIconProps["alt"];
   iconBackground?: "primary" | "secondary";
-} & OakBulletListProps;
+  breadcrumbs: OakBulletListProps["listItems"];
+} & FlexStyleProps;
 
 /**
  * This component is the header for the pupil journey;
@@ -23,25 +25,29 @@ export type OakPupilJourneyHeaderProps = {
  */
 export const OakPupilJourneyHeader = ({
   iconBackground = "primary",
-  ...props
+  title,
+  iconName,
+  alt,
+  breadcrumbs,
+  ...flexProps
 }: OakPupilJourneyHeaderProps) => {
   return (
-    <OakFlex $flexDirection={"row"} $gap={"space-between-m"} {...props}>
+    <OakFlex $flexDirection={"row"} $gap={"space-between-m"} {...flexProps}>
       <OakHandDrawnCardWithIcon
         fill={getIconBackground(iconBackground)}
-        iconName={props.iconName}
+        iconName={iconName}
         $flexGrow={0}
-        iconHeight={"all-spacing-10"}
-        iconWidth={"all-spacing-10"}
-        $width={"all-spacing-13"}
-        $height={"all-spacing-13"}
-        alt={props.alt}
+        iconHeight={["all-spacing-9", "all-spacing-10"]}
+        iconWidth={["all-spacing-9", "all-spacing-10"]}
+        $width={["all-spacing-11", "all-spacing-13"]}
+        $height={["all-spacing-11", "all-spacing-13"]}
+        alt={alt}
       />
       <OakFlex $flexDirection={"column"} $gap={"space-between-s"}>
-        <OakHeading tag="h1" $font={"heading-4"}>
-          {props.title}
+        <OakHeading tag="h1" $font={["heading-5", "heading-4"]}>
+          {title}
         </OakHeading>
-        <OakBulletList listItems={props.listItems} />
+        <OakBulletList listItems={breadcrumbs} />
       </OakFlex>
     </OakFlex>
   );

@@ -13,14 +13,14 @@ const meta: Meta<typeof OakPupilJourneyHeader> = {
   },
   parameters: {
     controls: {
-      include: ["iconBackground", "iconName", "alt", "listItems", "title"],
+      include: ["iconBackground", "iconName", "alt", "breadcrumbs", "title"],
     },
   },
   args: {
     iconBackground: "primary",
     iconName: "subject-science",
     alt: "icon",
-    listItems: ["first", "second", "third", "fourth"],
+    breadcrumbs: ["first", "second", "third", "fourth"],
     title: "Pupil Journey Header",
   },
 };

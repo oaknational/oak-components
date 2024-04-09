@@ -16,7 +16,7 @@ describe("OakPupilJourneyHeader", () => {
           iconBackground="primary"
           iconName="subject-science"
           alt="icon"
-          listItems={["first", "second", "third", "fourth"]}
+          breadcrumbs={["first", "second", "third", "fourth"]}
           title="Pupil Journey Header"
           data-testid="test"
         />
@@ -33,7 +33,7 @@ describe("OakPupilJourneyHeader", () => {
           iconBackground="primary"
           iconName="subject-science"
           alt="icon"
-          listItems={["first", "second", "third", "fourth"]}
+          breadcrumbs={["first", "second", "third", "fourth"]}
           title="Pupil Journey Header"
         />
       </ThemeProvider>,

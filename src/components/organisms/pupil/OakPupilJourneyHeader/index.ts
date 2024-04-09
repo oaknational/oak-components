@@ -1,1 +1,1 @@
-export * from "./OakPupilJourneyHeader.js";
+export * from "./OakPupilJourneyHeader";
