@@ -30,10 +30,9 @@ export const OakPupilJourneyHeader = ({
   iconName,
   alt,
   breadcrumbs,
-  ...flexProps
 }: OakPupilJourneyHeaderProps) => {
   return (
-    <OakFlex $flexDirection={"row"} $gap={"space-between-m"} {...flexProps}>
+    <OakFlex $flexDirection={"row"} $gap={"space-between-m"}>
       <OakHandDrawnCardWithIcon
         fill={getIconBackground(iconBackground)}
         iconName={iconName}
