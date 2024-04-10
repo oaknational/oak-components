@@ -14,6 +14,13 @@ const meta: Meta<typeof OakPupilJourneyListItem> = {
     index: 1,
     href: "#",
   },
+  argTypes: {
+    title: { control: { type: "text" } },
+    index: { control: { type: "number" } },
+    numberOfLessons: { control: { type: "number" } },
+    disabled: { control: { type: "boolean" } },
+    unavailable: { control: { type: "boolean" } },
+  },
   decorators: [
     (Story) => {
       return (
@@ -30,7 +37,7 @@ const meta: Meta<typeof OakPupilJourneyListItem> = {
   ],
   parameters: {
     controls: {
-      include: [],
+      include: ["title", "index", "numberOfLessons", "disabled", "unavailable"],
     },
   },
 };
@@ -60,6 +67,9 @@ export const ReallyLongTitle: Story = {
 
 export const AsAButton: Story = {
   render: (args) => <OakPupilJourneyListItem {...args} as="button" />,
+  args: {
+    href: undefined,
+  },
 };
 
 export const Disabled: Story = {

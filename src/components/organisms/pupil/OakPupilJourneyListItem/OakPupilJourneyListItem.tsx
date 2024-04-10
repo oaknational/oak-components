@@ -104,12 +104,21 @@ const FlexedOakBox = styled(OakBox)`
 export const OakPupilJourneyListItem = <C extends ElementType = "a">(
   props: OakPupilJourneyListItemProps<C>,
 ) => {
-  const { as, lessonSectionName, progress, disabled, href, onClick, ...rest } =
-    props;
+  const {
+    as,
+    lessonSectionName,
+    progress,
+    disabled,
+    href,
+    unavailable,
+    onClick,
+    ...rest
+  } = props;
 
+  const disabledOrUnavailable = disabled || unavailable;
   return (
     <StyledLessonNavItem
-      as={disabled ? "div" : as ?? "a"}
+      as={disabledOrUnavailable ? "div" : as ?? "a"}
       $gap={["space-between-s", "space-between-m2"]}
       $alignItems="center"
       $justifyContent={"space-between"}
@@ -118,10 +127,10 @@ export const OakPupilJourneyListItem = <C extends ElementType = "a">(
       $pa={["inner-padding-l", "inner-padding-xl"]}
       $borderRadius="border-radius-m"
       $ba={"border-solid-none"}
-      $disabled={disabled}
+      $disabled={disabledOrUnavailable}
       $color="text-primary"
-      href={disabled ? undefined : href}
-      onClick={disabled ? undefined : onClick}
+      href={disabledOrUnavailable ? undefined : href}
+      onClick={disabledOrUnavailable ? undefined : onClick}
       {...rest}
     >
       <OakFlex $alignItems={"center"} $gap={["space-between-m2"]}>
@@ -138,7 +147,7 @@ export const OakPupilJourneyListItem = <C extends ElementType = "a">(
         <FlexedOakBox>
           <StyledLabel
             $font={["heading-6", "heading-5"]}
-            $color={disabled ? "text-disabled" : "text-primary"}
+            $color={disabledOrUnavailable ? "text-disabled" : "text-primary"}
           >
             {props.title}
           </StyledLabel>
@@ -155,7 +164,7 @@ export const OakPupilJourneyListItem = <C extends ElementType = "a">(
         {props.numberOfLessons && !props.unavailable && (
           <StyledLabel
             $font={"heading-7"}
-            $color={disabled ? "text-disabled" : "text-primary"}
+            $color={disabledOrUnavailable ? "text-disabled" : "text-primary"}
           >
             {props.numberOfLessons} lessons
           </StyledLabel>
@@ -163,37 +172,18 @@ export const OakPupilJourneyListItem = <C extends ElementType = "a">(
         {props.unavailable && (
           <StyledLabel
             $font={"heading-7"}
-            $color={disabled ? "text-disabled" : "text-primary"}
+            $color={disabledOrUnavailable ? "text-disabled" : "text-primary"}
           >
             Unavailable
           </StyledLabel>
         )}
         {!props.unavailable && (
-          <StyledRoundIcon iconName="chevron-right" $disabled={disabled} />
+          <StyledRoundIcon
+            iconName="chevron-right"
+            $disabled={disabledOrUnavailable}
+          />
         )}
       </OakFlex>
     </StyledLessonNavItem>
   );
 };
-
-// function renderQuestionCounter(props: SectionProps) {
-//   if (props.progress !== "complete") {
-//     return null;
-//   }
-
-//   /**
-//    * The large answer counter is only rendered when on a non-mobile screen
-//    */
-//   switch (props.lessonSectionName) {
-//     case "exit-quiz":
-//     case "starter-quiz":
-//       return (
-//         <OakBox $display={["none", "block"]} $mr="space-between-m">
-//           <OakSpan $font="heading-4">{props.grade}</OakSpan>
-//           <OakSpan $font="heading-6">&nbsp;/&nbsp;{props.numQuestions}</OakSpan>
-//         </OakBox>
-//       );
-//     default:
-//       return null;
-//   }
-// }
