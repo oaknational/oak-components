@@ -18,7 +18,9 @@ export type OakHandDrawnHRProps = {
 /**
  * A Drawn HR svg inside a flex container
  *
- * An optional `stroke` and `strokeWidth` can be applied to give the background a border
+ * use prop hrColor to change the color of the HR
+ *
+ * change the sizeProps of the flex container to change the size and dimentions of the HR
  */
 export const OakHandDrawnHR = (props: OakHandDrawnHRProps) => {
   const { hrColor, ...flexProps } = props;
