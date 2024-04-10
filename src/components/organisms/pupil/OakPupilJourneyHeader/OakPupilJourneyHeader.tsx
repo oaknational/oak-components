@@ -4,7 +4,7 @@ import {
   OakBulletList,
   OakBulletListProps,
   OakHandDrawnCardWithIcon,
-} from "../../../molecules";
+} from "@/components/molecules";
 
 import { OakFlex, OakHeading, OakIconProps } from "@/components/atoms";
 import { FlexStyleProps } from "@/styles/utils/flexStyle";
