@@ -12,6 +12,7 @@ const meta: Meta<typeof OakPupilJourneyListItem> = {
   args: {
     title: "Lesson 1",
     index: 1,
+    href: "#",
   },
   decorators: [
     (Story) => {
@@ -41,10 +42,20 @@ export const Default: Story = {
   render: (args) => <OakPupilJourneyListItem {...args} />,
 };
 
+export const Lessons: Story = {
+  render: (args) => <OakPupilJourneyListItem {...args} />,
+  args: {
+    numberOfLessons: 6,
+  },
+};
+
 export const AsAButton: Story = {
   render: (args) => <OakPupilJourneyListItem {...args} as="button" />,
 };
 
 export const Disabled: Story = {
   render: (args) => <OakPupilJourneyListItem {...args} />,
+  args: {
+    disabled: true,
+  },
 };

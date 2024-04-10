@@ -1,7 +1,7 @@
 import React, { ComponentPropsWithoutRef, ElementType } from "react";
 import styled, { css } from "styled-components";
 
-import { OakBox, OakFlex } from "@/components/atoms";
+import { OakBox, OakFlex, OakLabel } from "@/components/atoms";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { OakRoundIcon } from "@/components/molecules";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
@@ -16,6 +16,7 @@ type OakPupilJourneyListItemProps<C extends ElementType> = {
   disabled?: boolean;
   index: number;
   title: string;
+  numberOfLessons?: number;
 } & ComponentPropsWithoutRef<C>;
 
 const StyledLabel = styled(OakBox)``;
@@ -36,6 +37,13 @@ const StyledRoundIcon = styled(OakRoundIcon)<{
 `;
 
 const activeIconStyles = css`
+  ${StyledRoundIcon} {
+    box-shadow: ${parseDropShadow("drop-shadow-lemon")},
+      ${parseDropShadow("drop-shadow-grey")};
+  }
+`;
+
+const hoverIconStyles = css`
   ${StyledRoundIcon} {
     background: ${parseColor("bg-btn-primary")};
 
@@ -64,11 +72,12 @@ const StyledLessonNavItem = styled(OakFlex)<{ $disabled?: boolean }>`
       /* Don't apply hover styles on touch devices */
       @media (hover: hover) {
         &:hover {
+          background: ${parseColor("bg-decorative1-subdued")};
           ${StyledLabel} {
             text-decoration: underline;
           }
 
-          ${activeIconStyles}
+          ${hoverIconStyles}
         }
       }
 
@@ -76,6 +85,7 @@ const StyledLessonNavItem = styled(OakFlex)<{ $disabled?: boolean }>`
         box-shadow: ${parseDropShadow("drop-shadow-lemon")},
           ${parseDropShadow("drop-shadow-grey")};
         ${activeIconStyles}
+        ${hoverIconStyles}
       }
     `}
 `;
@@ -96,8 +106,10 @@ export const OakPupilJourneyListItem = <C extends ElementType = "a">(
   return (
     <StyledLessonNavItem
       as={disabled ? "div" : as ?? "a"}
-      $gap="space-between-m"
+      $gap="space-between-m2"
       $alignItems="center"
+      $justifyContent={"flex-end"}
+      $flexWrap={"wrap"}
       $background={"bg-primary"}
       $pa="inner-padding-xl"
       $borderRadius="border-radius-m"
@@ -108,25 +120,35 @@ export const OakPupilJourneyListItem = <C extends ElementType = "a">(
       onClick={disabled ? undefined : onClick}
       {...rest}
     >
-      <OakFlex $width="all-spacing-13" $justifyContent="center">
-        <StyledLabel
-          as="strong"
-          $font={["heading-6", "heading-5"]}
-          $color={disabled ? "text-disabled" : "text-primary"}
+      <OakFlex $justifyContent="center">
+        <OakLabel
+          $font={"heading-4"}
+          $color={"text-primary"}
+          $textDecoration={"none"}
         >
           {props.index}
-        </StyledLabel>
+        </OakLabel>
       </OakFlex>
       <FlexedOakBox>
         <StyledLabel
-          as="strong"
           $font={["heading-6", "heading-5"]}
           $color={disabled ? "text-disabled" : "text-primary"}
+          $whiteSpace={"nowrap"}
         >
           {props.title}
         </StyledLabel>
       </FlexedOakBox>
-      <StyledRoundIcon iconName="chevron-right" $disabled={disabled} />
+      <OakFlex $alignItems={"center"} $gap={"space-between-xs"}>
+        {props.numberOfLessons && (
+          <StyledLabel
+            $font={"heading-7"}
+            $color={disabled ? "text-disabled" : "text-primary"}
+          >
+            {props.numberOfLessons} lessons
+          </StyledLabel>
+        )}
+        <StyledRoundIcon iconName="chevron-right" $disabled={disabled} />
+      </OakFlex>
     </StyledLessonNavItem>
   );
 };
