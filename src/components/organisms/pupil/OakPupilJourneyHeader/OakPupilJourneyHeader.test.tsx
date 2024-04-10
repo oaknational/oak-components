@@ -10,7 +10,7 @@ import { oakDefaultTheme } from "@/styles";
 
 describe("OakPupilJourneyHeader", () => {
   it("renders", () => {
-    const { getByTestId } = renderWithTheme(
+    const { getByText } = renderWithTheme(
       <ThemeProvider theme={oakDefaultTheme}>
         <OakPupilJourneyHeader
           iconBackground="primary"
@@ -22,7 +22,7 @@ describe("OakPupilJourneyHeader", () => {
         />
       </ThemeProvider>,
     );
-    expect(getByTestId("test")).toBeInTheDocument();
+    expect(getByText("Pupil Journey Header")).toBeInTheDocument();
   });
 
   it("matches snapshot", () => {
