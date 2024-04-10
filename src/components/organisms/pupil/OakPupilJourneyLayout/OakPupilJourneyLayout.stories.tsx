@@ -4,6 +4,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { OakPupilJourneyLayout } from "./OakPupilJourneyLayout";
 
 import { OakBox, OakFlex, OakP } from "@/components/atoms";
+import { OakTertiaryButton } from "@/components/molecules";
 
 const meta: Meta<typeof OakPupilJourneyLayout> = {
   component: OakPupilJourneyLayout,
@@ -28,6 +29,11 @@ export const Default: Story = {
   render: ({ sectionName, ...args }) => (
     <OakPupilJourneyLayout
       {...args}
+      topNavSlot={
+        <OakTertiaryButton iconName="arrow-left" href={"#"} element="a">
+          View all units
+        </OakTertiaryButton>
+      }
       sectionName={sectionName}
       titleSlot={
         <OakFlex>
