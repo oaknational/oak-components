@@ -36,10 +36,10 @@ export const OakPupilJourneyHeader = ({
         fill={getIconBackground(iconBackground)}
         iconName={iconName}
         $flexGrow={0}
-        iconHeight={["all-spacing-9", "all-spacing-10"]}
-        iconWidth={["all-spacing-9", "all-spacing-10"]}
-        $width={["all-spacing-11", "all-spacing-13"]}
-        $height={["all-spacing-11", "all-spacing-13"]}
+        iconHeight={["all-spacing-9", "all-spacing-10", "all-spacing-10"]}
+        iconWidth={["all-spacing-9", "all-spacing-10", "all-spacing-10"]}
+        $width={["all-spacing-11", "all-spacing-13", "all-spacing-13"]}
+        $height={["all-spacing-11", "all-spacing-13", "all-spacing-13"]}
         alt={alt}
       />
       <OakFlex $flexDirection={"column"} $gap={"space-between-s"}>
