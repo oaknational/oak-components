@@ -49,6 +49,15 @@ export const Lessons: Story = {
   },
 };
 
+export const ReallyLongTitle: Story = {
+  render: (args) => <OakPupilJourneyListItem {...args} />,
+  args: {
+    title:
+      "This is a really long title that should wrap around to the next line",
+    numberOfLessons: 6,
+  },
+};
+
 export const AsAButton: Story = {
   render: (args) => <OakPupilJourneyListItem {...args} as="button" />,
 };
@@ -57,5 +66,13 @@ export const Disabled: Story = {
   render: (args) => <OakPupilJourneyListItem {...args} />,
   args: {
     disabled: true,
+  },
+};
+
+export const Unavailable: Story = {
+  render: (args) => <OakPupilJourneyListItem {...args} />,
+  args: {
+    disabled: true,
+    unavailable: true,
   },
 };

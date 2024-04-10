@@ -14,6 +14,10 @@ type OakPupilJourneyListItemProps<C extends ElementType> = {
    * Disable the section preventing navigation to it.
    */
   disabled?: boolean;
+  /**
+   * shows that a section is unavailable
+   */
+  unavailable?: boolean;
   index: number;
   title: string;
   numberOfLessons?: number;
@@ -62,7 +66,7 @@ const StyledLessonNavItem = styled(OakFlex)<{ $disabled?: boolean }>`
       ${parseDropShadow("drop-shadow-centered-grey")};
   }
 
-  ${(props) => props.$disabled && "cursor: default"}
+  ${(props) => props.$disabled && "cursor: not-allowed"}
 
   ${(props) =>
     !props.$disabled &&
@@ -106,12 +110,12 @@ export const OakPupilJourneyListItem = <C extends ElementType = "a">(
   return (
     <StyledLessonNavItem
       as={disabled ? "div" : as ?? "a"}
-      $gap="space-between-m2"
+      $gap={["space-between-s", "space-between-m2"]}
       $alignItems="center"
-      $justifyContent={"flex-end"}
+      $justifyContent={"space-between"}
       $flexWrap={"wrap"}
       $background={"bg-primary"}
-      $pa="inner-padding-xl"
+      $pa={["inner-padding-l", "inner-padding-xl"]}
       $borderRadius="border-radius-m"
       $ba={"border-solid-none"}
       $disabled={disabled}
@@ -120,26 +124,35 @@ export const OakPupilJourneyListItem = <C extends ElementType = "a">(
       onClick={disabled ? undefined : onClick}
       {...rest}
     >
-      <OakFlex $justifyContent="center">
-        <OakLabel
-          $font={"heading-4"}
-          $color={"text-primary"}
-          $textDecoration={"none"}
-        >
-          {props.index}
-        </OakLabel>
+      <OakFlex $alignItems={"center"} $gap={["space-between-m2"]}>
+        {" "}
+        <OakFlex $justifyContent="center">
+          <OakLabel
+            $font={["heading-5", "heading-4"]}
+            $color={props.unavailable ? "text-disabled" : "text-primary"}
+            $textDecoration={"none"}
+          >
+            {props.index}
+          </OakLabel>
+        </OakFlex>
+        <FlexedOakBox>
+          <StyledLabel
+            $font={["heading-6", "heading-5"]}
+            $color={disabled ? "text-disabled" : "text-primary"}
+          >
+            {props.title}
+          </StyledLabel>
+        </FlexedOakBox>
       </OakFlex>
-      <FlexedOakBox>
-        <StyledLabel
-          $font={["heading-6", "heading-5"]}
-          $color={disabled ? "text-disabled" : "text-primary"}
-          $whiteSpace={"nowrap"}
-        >
-          {props.title}
-        </StyledLabel>
-      </FlexedOakBox>
-      <OakFlex $alignItems={"center"} $gap={"space-between-xs"}>
-        {props.numberOfLessons && (
+
+      <OakFlex
+        $alignItems={"center"}
+        $gap={"space-between-xs"}
+        $flexBasis={"auto"}
+        $flexGrow={1}
+        $justifyContent={"flex-end"}
+      >
+        {props.numberOfLessons && !props.unavailable && (
           <StyledLabel
             $font={"heading-7"}
             $color={disabled ? "text-disabled" : "text-primary"}
@@ -147,7 +160,17 @@ export const OakPupilJourneyListItem = <C extends ElementType = "a">(
             {props.numberOfLessons} lessons
           </StyledLabel>
         )}
-        <StyledRoundIcon iconName="chevron-right" $disabled={disabled} />
+        {props.unavailable && (
+          <StyledLabel
+            $font={"heading-7"}
+            $color={disabled ? "text-disabled" : "text-primary"}
+          >
+            Unavailable
+          </StyledLabel>
+        )}
+        {!props.unavailable && (
+          <StyledRoundIcon iconName="chevron-right" $disabled={disabled} />
+        )}
       </OakFlex>
     </StyledLessonNavItem>
   );
