@@ -1,7 +1,7 @@
 import React, { ComponentPropsWithoutRef, ElementType } from "react";
 import styled, { css } from "styled-components";
 
-import { OakBox, OakFlex, OakLabel } from "@/components/atoms";
+import { OakBox, OakFlex } from "@/components/atoms";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { OakRoundIcon } from "@/components/molecules";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
@@ -123,26 +123,27 @@ export const OakPupilJourneyListItem = <C extends ElementType = "a">(
       $alignItems="center"
       $justifyContent={"space-between"}
       $flexWrap={"wrap"}
-      $background={"bg-primary"}
+      $background={unavailable ? "bg-neutral" : "bg-primary"}
       $pa={["inner-padding-l", "inner-padding-xl"]}
       $borderRadius="border-radius-m"
-      $ba={"border-solid-none"}
+      $ba={unavailable ? "border-solid-m" : "border-solid-none"}
+      $borderColor={unavailable ? "border-neutral-lighter" : "transparent"}
       $disabled={disabledOrUnavailable}
       $color="text-primary"
       href={disabledOrUnavailable ? undefined : href}
       onClick={disabledOrUnavailable ? undefined : onClick}
       {...rest}
     >
-      <OakFlex $alignItems={"center"} $gap={["space-between-m2"]}>
+      <OakFlex $alignItems={"baseline"} $gap={["space-between-m2"]}>
         {" "}
-        <OakFlex $justifyContent="center">
-          <OakLabel
+        <OakFlex>
+          <OakBox
             $font={["heading-5", "heading-4"]}
             $color={props.unavailable ? "text-disabled" : "text-primary"}
             $textDecoration={"none"}
           >
             {props.index}
-          </OakLabel>
+          </OakBox>
         </OakFlex>
         <FlexedOakBox>
           <StyledLabel
