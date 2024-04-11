@@ -30,11 +30,11 @@ export type OakAccordionProps = {
 
 const StyledOakFlex = styled(OakFlex)`
   font: inherit;
+  color: inherit;
   border: none;
   background: none;
   appearance: none;
   margin: -${parseSpacing("inner-padding-m")};
-
   outline: none;
 
   &:focus-visible {
@@ -69,6 +69,7 @@ export const OakAccordion = ({
       >
         <StyledOakFlex
           as="button"
+          type="button"
           onClick={() => setOpen(!isOpen)}
           $alignItems="center"
           $pa="inner-padding-m"

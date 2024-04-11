@@ -77,6 +77,8 @@ export const OakCheckBox = (props: OakCheckBoxProps) => {
     labelAlignItems = "center",
     checkedBackgroundFill = true,
     checkedIcon,
+    "data-testid": dataTestId,
+    ...rest
   } = props;
 
   const hoverStart = useRef(Date.now());
@@ -103,7 +105,7 @@ export const OakCheckBox = (props: OakCheckBoxProps) => {
       disabled={disabled}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      data-testid={props["data-testid"]}
+      data-testid={dataTestId}
     >
       <InternalCheckBoxWrapper
         size={checkboxSize}
@@ -124,6 +126,7 @@ export const OakCheckBox = (props: OakCheckBoxProps) => {
             defaultChecked={defaultChecked}
             checked={checked}
             disabled={disabled}
+            {...rest}
           />
         }
         checkedIcon={checkedIcon}

@@ -29,6 +29,7 @@ export type BaseCheckBoxProps = {
   id: string;
   disabled?: boolean;
   value: string;
+  name?: string;
   /**
    * Uncontrolled checked state
    */
@@ -41,6 +42,8 @@ export type BaseCheckBoxProps = {
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
   onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
+  "aria-label"?: string;
+  "aria-labelledby"?: string;
   "data-testid"?: string;
 };
 
@@ -67,8 +70,8 @@ const BaseCheckBox = forwardRef(
         type="checkbox"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        {...rest}
         name={props.id}
+        {...rest}
       />
     );
   },
