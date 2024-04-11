@@ -134,7 +134,7 @@ export const OakPupilJourneyListItem = <C extends ElementType = "a">(
       onClick={disabledOrUnavailable ? undefined : onClick}
       {...rest}
     >
-      <OakFlex $alignItems={"baseline"} $gap={["space-between-m2"]}>
+      <OakFlex $alignItems={"center"} $gap={["space-between-m2"]}>
         {" "}
         <OakFlex>
           <OakBox
