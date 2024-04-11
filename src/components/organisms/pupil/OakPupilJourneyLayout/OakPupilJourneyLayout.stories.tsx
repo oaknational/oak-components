@@ -1,9 +1,11 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
+import { OakPupilJourneyHeader } from "../OakPupilJourneyHeader";
+
 import { OakPupilJourneyLayout } from "./OakPupilJourneyLayout";
 
-import { OakBox, OakFlex, OakP } from "@/components/atoms";
+import { OakBox, OakFlex } from "@/components/atoms";
 import { OakTertiaryButton } from "@/components/molecules";
 
 const meta: Meta<typeof OakPupilJourneyLayout> = {
@@ -11,9 +13,17 @@ const meta: Meta<typeof OakPupilJourneyLayout> = {
   tags: ["autodocs"],
   title: "components/organisms/pupil/OakPupilJourneyLayout",
   decorators: [(Story) => <Story />],
+  argTypes: {
+    phase: {
+      control: {
+        type: "select",
+        options: ["primary", "secondary"],
+      },
+    },
+  },
   parameters: {
     controls: {
-      include: ["lessonSectionName"],
+      include: ["phase"],
     },
     layout: "fullscreen",
   },
@@ -37,15 +47,17 @@ export const Default: Story = {
       sectionName={sectionName}
       titleSlot={
         <OakFlex>
-          <OakP>hello</OakP>
+          <OakPupilJourneyHeader
+            iconBackground={args.phase}
+            iconName="subject-science"
+            alt="icon"
+            breadcrumbs={["first", "second", "third", "fourth"]}
+            title="Pupil Journey Header"
+          />
         </OakFlex>
       }
     >
-      <OakBox
-        $height="all-spacing-24"
-        $ba="border-solid-xl"
-        $borderColor="black"
-      >
+      <OakBox $background={"bg-neutral"}>
         <p>Section content</p>
       </OakBox>
     </OakPupilJourneyLayout>

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { OakFlex } from "@/components/atoms";
 import { getBreakpoint } from "@/styles/utils/responsiveStyle";
 import { OakCombinedColorToken } from "@/styles";
+import { OakHandDrawnHR } from "@/components/molecules/OakHandDrawnHR";
 
 type PupilJourneySectionName =
   | "tier-listing"
@@ -41,8 +42,8 @@ export const OakPupilJourneyLayout = ({
 }: OakPupilJourneyLayoutProps) => {
   const [
     pageBackgroundColor,
-    contentBackgroundColor,
-    mobileContentBackgroundColor,
+    // contentBackgroundColor,
+    // mobileContentBackgroundColor,
   ] = pickSectionColours(phase);
 
   return (
@@ -65,34 +66,38 @@ export const OakPupilJourneyLayout = ({
       )}
       <OakFlex
         $flexDirection="column"
-        $background={[mobileContentBackgroundColor, contentBackgroundColor]}
-        $maxWidth={["all-spacing-24"]}
-        $minWidth={["all-spacing-24"]}
+        $background={pageBackgroundColor}
+        $maxWidth={["100%", "all-spacing-22", "all-spacing-23"]}
+        $minWidth={["100%", "all-spacing-22", "all-spacing-23"]}
         $pt={["inner-padding-none", "inner-padding-m"]}
         $gap={["space-between-l", "space-between-xl"]}
+        $mb={["space-between-l", "space-between-l", "space-between-xl"]}
       >
         {titleSlot}
+        <OakHandDrawnHR hrColor={"white"} $height={"all-spacing-1"} />
         {children}
       </OakFlex>
     </StyledLayoutBox>
   );
 };
 
-function pickSectionColours(
-  phase: Phase,
-): [
+function pickSectionColours(phase: Phase): [
   pageBackgroundColor: OakCombinedColorToken,
-  contentBackgroundColor: OakCombinedColorToken,
-  mobileContentBackgroundColor: OakCombinedColorToken,
+  // contentBackgroundColor: OakCombinedColorToken,
+  // mobileContentBackgroundColor: OakCombinedColorToken,
 ] {
   switch (phase) {
     case "primary":
-      return ["bg-decorative4-very-subdued", "bg-primary", "bg-primary"];
+      return [
+        "bg-decorative4-very-subdued",
+        //  "bg-primary",
+        //  "bg-primary"
+      ];
     case "secondary":
       return [
         "bg-decorative3-very-subdued",
-        "bg-decorative2-very-subdued",
-        "bg-decorative2-subdued",
+        // "bg-decorative2-very-subdued",
+        // "bg-decorative2-subdued",
       ];
   }
 }
