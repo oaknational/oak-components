@@ -70,7 +70,7 @@ export const OakPupilJourneyLayout = ({
     >
       {topNavSlot && (
         <OakFlex
-          $height={"all-spacing-16"}
+          $height={["all-spacing-13", "all-spacing-14", "all-spacing-16"]}
           $background={"transparent"}
           $alignItems={"center"}
           $maxWidth={"100%"}
