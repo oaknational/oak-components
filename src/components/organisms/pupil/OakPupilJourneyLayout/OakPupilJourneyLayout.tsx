@@ -1,10 +1,9 @@
 import React, { ReactNode } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { OakFlex } from "@/components/atoms";
-import { getBreakpoint } from "@/styles/utils/responsiveStyle";
-import { OakCombinedColorToken } from "@/styles";
 import { OakHandDrawnHR } from "@/components/molecules/OakHandDrawnHR";
+import { getBreakpoint } from "@/styles/utils/responsiveStyle";
 
 type PupilJourneySectionName =
   | "tier-listing"
@@ -25,14 +24,54 @@ export type OakPupilJourneyLayoutProps = {
  * `OakBox` does not support space-between tokens on `padding` only `margin`, so we need to
  * set it here to apply appropriate padding to the top of the content.
  */
-const StyledLayoutBox = styled(OakFlex)`
-  @media (min-width: ${getBreakpoint("small")}px) {
-  }
+const StyledLayoutBox = styled(OakFlex)<{
+  sectionName: PupilJourneySectionName;
+  phase: Phase;
+}>`
+  @media (min-width: ${getBreakpoint("large")}px) {
+    
+    ${(props) =>
+      props.sectionName === "lesson-listing" &&
+      props.phase === "primary" &&
+      css`
+        background-image: url("https://res.cloudinary.com/oak-web-application/image/upload/v1699887218/pupil-journey/Confetti_Background_vatiqx.svg");
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-size: cover;
+      `}
+      ${(props) =>
+        props.sectionName === "lesson-listing" &&
+        props.phase === "secondary" &&
+        css`
+          background-image: url("https://res.cloudinary.com/oak-web-application/image/upload/v1699887218/pupil-journey/Confetti_Background_1_i6hsxn.svg");
+          background-repeat: no-repeat;
+          background-position-x: center;
+          background-size: cover;
+        `}
+        ${(props) =>
+          props.sectionName === "unit-listing" &&
+          props.phase === "primary" &&
+          css`
+            background-image: url("https://res.cloudinary.com/oak-web-application/image/upload/v1699887218/pupil-journey/Line_Background_1_q2dn7p.svg");
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-size: cover;
+          `}
+          ${(props) =>
+            props.sectionName === "unit-listing" &&
+            props.phase === "secondary" &&
+            css`
+              background-image: url("https://res.cloudinary.com/oak-web-application/image/upload/v1699887218/pupil-journey/Line_Background_toygyu.svg");
+              background-repeat: no-repeat;
+              background-position-x: center;
+              background-size: cover;
+            `}
 `;
 
 /**
  * Provides overall page layout and colours for the sections of a lesson.
  */
+
 export const OakPupilJourneyLayout = ({
   sectionName,
   titleSlot,
@@ -40,64 +79,44 @@ export const OakPupilJourneyLayout = ({
   phase,
   children,
 }: OakPupilJourneyLayoutProps) => {
-  const [
-    pageBackgroundColor,
-    // contentBackgroundColor,
-    // mobileContentBackgroundColor,
-  ] = pickSectionColours(phase);
-
   return (
     <StyledLayoutBox
       $ph={["inner-padding-s", "inner-padding-xl"]}
-      $background={pageBackgroundColor}
+      $background={
+        phase === "primary"
+          ? "bg-decorative4-very-subdued"
+          : "bg-decorative3-very-subdued"
+      }
       $flexDirection="column"
       $alignItems={"center"}
+      sectionName={sectionName}
+      phase={phase}
     >
-      {sectionName}
       {topNavSlot && (
         <OakFlex
           $height={"all-spacing-16"}
           $background={"transparent"}
           $alignItems={"center"}
-          $width="100%"
+          $maxWidth={"100%"}
+          $width={["100%", "100%", "all-spacing-24"]}
         >
           {topNavSlot}
         </OakFlex>
       )}
       <OakFlex
         $flexDirection="column"
-        $background={pageBackgroundColor}
-        $maxWidth={["100%", "all-spacing-22", "all-spacing-23"]}
+        $maxWidth={["100%", "all-spacing-22"]}
         $minWidth={["100%", "all-spacing-22", "all-spacing-23"]}
         $pt={["inner-padding-none", "inner-padding-m"]}
-        $gap={["space-between-l", "space-between-xl"]}
         $mb={["space-between-l", "space-between-l", "space-between-xl"]}
       >
-        {titleSlot}
-        <OakHandDrawnHR hrColor={"white"} $height={"all-spacing-1"} />
+        <OakFlex $flexDirection={"column"} $gap={["space-between-m2"]}>
+          {titleSlot}
+          <OakHandDrawnHR hrColor={"white"} $height={"all-spacing-1"} />
+        </OakFlex>
+
         {children}
       </OakFlex>
     </StyledLayoutBox>
   );
 };
-
-function pickSectionColours(phase: Phase): [
-  pageBackgroundColor: OakCombinedColorToken,
-  // contentBackgroundColor: OakCombinedColorToken,
-  // mobileContentBackgroundColor: OakCombinedColorToken,
-] {
-  switch (phase) {
-    case "primary":
-      return [
-        "bg-decorative4-very-subdued",
-        //  "bg-primary",
-        //  "bg-primary"
-      ];
-    case "secondary":
-      return [
-        "bg-decorative3-very-subdued",
-        // "bg-decorative2-very-subdued",
-        // "bg-decorative2-subdued",
-      ];
-  }
-}

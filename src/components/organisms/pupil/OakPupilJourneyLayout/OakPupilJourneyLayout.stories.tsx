@@ -20,15 +20,22 @@ const meta: Meta<typeof OakPupilJourneyLayout> = {
         options: ["primary", "secondary"],
       },
     },
+    sectionName: {
+      control: {
+        type: "select",
+        options: ["tier-listing", "unit-listing", "lesson-listing"],
+      },
+    },
   },
   parameters: {
     controls: {
-      include: ["phase"],
+      include: ["phase", "sectionName"],
     },
     layout: "fullscreen",
   },
   args: {
     phase: "primary",
+    sectionName: "lesson-listing",
   },
 };
 export default meta;
@@ -57,7 +64,7 @@ export const Default: Story = {
         </OakFlex>
       }
     >
-      <OakBox $background={"bg-neutral"}>
+      <OakBox $background={"bg-neutral"} $minHeight={"all-spacing-20"}>
         <p>Section content</p>
       </OakBox>
     </OakPupilJourneyLayout>
