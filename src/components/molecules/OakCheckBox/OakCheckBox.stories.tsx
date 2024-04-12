@@ -39,6 +39,8 @@ const meta: Meta<typeof OakCheckBox> = {
         "checkboxSize",
         "checkboxBorder",
         "checkboxBorderRadius",
+        "checkedBorderColor",
+        "uncheckedBorderColor",
         "hoverBorderRadius",
         "iconPadding",
         "labelGap",

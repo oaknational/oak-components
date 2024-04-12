@@ -83,6 +83,8 @@ type StyledBaseCheckBoxProps = BaseCheckBoxProps &
   BorderStyleProps &
   SizeStyleProps & {
     $checkedBackground?: OakCombinedColorToken | null;
+    $checkedBorderColor?: OakCombinedColorToken;
+    $uncheckedBorderColor?: OakCombinedColorToken;
   };
 
 type HoverBaseCheckBoxProps = {
@@ -135,14 +137,23 @@ export const InternalCheckBox = styled(BaseCheckBox)<StyledBaseCheckBoxProps>`
   ${spacingStyle}
   ${sizeStyle}
 
+  border-color: ${(props) => parseColor(props.$uncheckedBorderColor)};
+
   &:checked {
     ${(props) => css`
       background: ${parseColor(props.$checkedBackground)};
+      border-color: ${parseColor(props.$checkedBorderColor)};
     `};
   }
 
   &:disabled {
     pointer-events: none;
+  }
+
+  @media (hover: hover) {
+    &:hover:not(:disabled) {
+      border-color: ${(props) => parseColor(props.$checkedBackground)};
+    }
   }
 `;
 
@@ -167,12 +178,8 @@ export const InternalCheckBoxHover = styled(InternalCheckBox)<
       width: 60%;
       height: 60%;
       transform: translate(-50%, -50%);
-      border-radius: ${(props) => css`
-        ${parseBorderRadius(props.$hoverBorderRadius)}
-      `};
-      background: ${(props) => css`
-        ${parseColor(props.$checkedBackground)}
-      `};
+      border-radius: ${(props) => parseBorderRadius(props.$hoverBorderRadius)};
+      background: ${(props) => parseColor(props.$checkedBackground)};
     }
   }
 `;
