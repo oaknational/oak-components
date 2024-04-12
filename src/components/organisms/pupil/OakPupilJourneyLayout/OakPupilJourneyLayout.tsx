@@ -29,43 +29,15 @@ const StyledLayoutBox = styled(OakFlex)<{
   phase: Phase;
 }>`
   @media (min-width: ${getBreakpoint("large")}px) {
-    
-    ${(props) =>
-      props.sectionName === "lesson-listing" &&
-      props.phase === "primary" &&
-      css`
-        background-image: url("https://res.cloudinary.com/oak-web-application/image/upload/v1699887218/pupil-journey/Confetti_Background_vatiqx.svg");
-        background-repeat: no-repeat;
-        background-position-x: center;
-        background-size: cover;
-      `}
-      ${(props) =>
-        props.sectionName === "lesson-listing" &&
-        props.phase === "secondary" &&
-        css`
-          background-image: url("https://res.cloudinary.com/oak-web-application/image/upload/v1699887218/pupil-journey/Confetti_Background_1_i6hsxn.svg");
-          background-repeat: no-repeat;
-          background-position-x: center;
-          background-size: cover;
-        `}
-        ${(props) =>
-          props.sectionName === "unit-listing" &&
-          props.phase === "primary" &&
-          css`
-            background-image: url("https://res.cloudinary.com/oak-web-application/image/upload/v1699887218/pupil-journey/Line_Background_1_q2dn7p.svg");
-            background-repeat: no-repeat;
-            background-position-x: center;
-            background-size: cover;
-          `}
-          ${(props) =>
-            props.sectionName === "unit-listing" &&
-            props.phase === "secondary" &&
-            css`
-              background-image: url("https://res.cloudinary.com/oak-web-application/image/upload/v1699887218/pupil-journey/Line_Background_toygyu.svg");
-              background-repeat: no-repeat;
-              background-position-x: center;
-              background-size: cover;
-            `}
+    ${(props) => css`
+      background-image: url(${getBackgroundUrlForSection(
+        props.sectionName,
+        props.phase,
+      )});
+      background-repeat: no-repeat;
+      background-position-x: center;
+      background-size: cover;
+    `}
 `;
 
 /**
@@ -123,3 +95,21 @@ export const OakPupilJourneyLayout = ({
     </StyledLayoutBox>
   );
 };
+
+function getBackgroundUrlForSection(
+  sectionName: PupilJourneySectionName,
+  phase: Phase,
+) {
+  switch (sectionName) {
+    case "lesson-listing":
+      return phase === "primary"
+        ? "https://res.cloudinary.com/oak-web-application/image/upload/v1699887218/pupil-journey/Confetti_Background_vatiqx.svg"
+        : "https://res.cloudinary.com/oak-web-application/image/upload/v1699887218/pupil-journey/Confetti_Background_1_i6hsxn.svg";
+    case "unit-listing":
+      return phase === "primary"
+        ? "https://res.cloudinary.com/oak-web-application/image/upload/v1699887218/pupil-journey/Line_Background_1_q2dn7p.svg"
+        : "https://res.cloudinary.com/oak-web-application/image/upload/v1699887218/pupil-journey/Line_Background_toygyu.svg";
+    default:
+      return "";
+  }
+}
