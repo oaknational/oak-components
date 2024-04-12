@@ -69,7 +69,11 @@ const StyledLayoutBox = styled(OakFlex)<{
 `;
 
 /**
- * Provides overall page layout and colours for the sections of a lesson.
+ * Provides overall page layout and colours for the pupil journey
+ *
+ * Used for the unit, lesson and tiers/programme factor listing pages
+ *
+ * the sections of the page are passed in as props and children
  */
 
 export const OakPupilJourneyLayout = ({
@@ -114,7 +118,6 @@ export const OakPupilJourneyLayout = ({
           {titleSlot}
           <OakHandDrawnHR hrColor={"white"} $height={"all-spacing-1"} />
         </OakFlex>
-
         {children}
       </OakFlex>
     </StyledLayoutBox>
