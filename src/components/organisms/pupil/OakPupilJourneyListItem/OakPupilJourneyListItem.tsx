@@ -139,7 +139,7 @@ export const OakPupilJourneyListItem = <C extends ElementType = "a">(
         <OakFlex>
           <OakBox
             $font={["heading-5", "heading-4"]}
-            $color={props.unavailable ? "text-disabled" : "text-primary"}
+            $color={props.unavailable ? "text-subdued" : "text-primary"}
             $textDecoration={"none"}
           >
             {props.index}
@@ -148,7 +148,7 @@ export const OakPupilJourneyListItem = <C extends ElementType = "a">(
         <FlexedOakBox>
           <StyledLabel
             $font={["heading-6", "heading-5"]}
-            $color={disabledOrUnavailable ? "text-disabled" : "text-primary"}
+            $color={disabledOrUnavailable ? "text-subdued" : "text-primary"}
           >
             {props.title}
           </StyledLabel>
@@ -165,7 +165,7 @@ export const OakPupilJourneyListItem = <C extends ElementType = "a">(
         {props.numberOfLessons && !props.unavailable && (
           <StyledLabel
             $font={"heading-7"}
-            $color={disabledOrUnavailable ? "text-disabled" : "text-primary"}
+            $color={disabledOrUnavailable ? "text-subdued" : "text-primary"}
           >
             {props.numberOfLessons} lessons
           </StyledLabel>
@@ -173,7 +173,7 @@ export const OakPupilJourneyListItem = <C extends ElementType = "a">(
         {props.unavailable && (
           <StyledLabel
             $font={"heading-7"}
-            $color={disabledOrUnavailable ? "text-disabled" : "text-primary"}
+            $color={disabledOrUnavailable ? "text-subdued" : "text-primary"}
           >
             Unavailable
           </StyledLabel>
