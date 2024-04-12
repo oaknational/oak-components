@@ -3,6 +3,7 @@ import React, { FormEvent, ReactNode } from "react";
 import {
   OakAccordion,
   OakCheckBox,
+  OakLink,
   OakModal,
   OakModalBody,
   OakModalFooter,
@@ -135,9 +136,9 @@ export const OakCookieSettingsModal = ({
 
         <OakP $mb="space-between-l">
           For more information, view our{" "}
-          <OakSecondaryLink href={policyURL} target="_blank">
+          <OakLink href={policyURL} target="_blank">
             cookie policy
-          </OakSecondaryLink>
+          </OakLink>
           .
         </OakP>
         <OakBox $mb="space-between-xl">
