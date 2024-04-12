@@ -142,6 +142,7 @@ export const OakModal = ({
             $zIndex="modal-dialog"
             $flexDirection="column"
             $transition="standard-ease"
+            $color="text-primary"
             role="dialog"
             $state={state}
             {...rest}
