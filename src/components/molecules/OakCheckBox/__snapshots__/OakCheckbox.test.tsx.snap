@@ -14,10 +14,12 @@ exports[`OakCheckBox matches snapshot 1`] = `
   border-radius: 0.125rem;
   width: 1.5rem;
   height: 1.5rem;
+  border-color: #808080;
 }
 
 .c4:checked {
   background: #222222;
+  border-color: #222222;
 }
 
 .c4:disabled {
@@ -88,6 +90,12 @@ exports[`OakCheckBox matches snapshot 1`] = `
 
 input:checked + .c7 {
   opacity: 1;
+}
+
+@media (hover:hover) {
+  .c4:hover:not(:disabled) {
+    border-color: #222222;
+  }
 }
 
 @media (hover:hover) {

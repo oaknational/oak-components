@@ -22,6 +22,12 @@ exports[`InternalCheckBox matches snapshot 1`] = `
   pointer-events: none;
 }
 
+@media (hover:hover) {
+  .c0:hover:not(:disabled) {
+    border-color: #222222;
+  }
+}
+
 <input
   className="c0"
   id="checkbox-1"

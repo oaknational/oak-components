@@ -21,6 +21,8 @@ export type OakCheckBoxProps = BaseCheckBoxProps & {
   checkboxSize?: OakAllSpacingToken;
   checkboxBorder?: OakBorderWidthToken;
   checkboxBorderRadius?: OakBorderRadiusToken;
+  checkedBorderColor?: OakCombinedColorToken;
+  uncheckedBorderColor?: OakCombinedColorToken;
   checkedIcon?: React.JSX.Element;
   checkedBackgroundFill?: boolean;
   hoverBorderRadius?: OakBorderRadiusToken;
@@ -72,6 +74,14 @@ export const OakCheckBox = (props: OakCheckBoxProps) => {
     checkboxBorder = "border-solid-m",
     checkboxBorderRadius = "border-radius-xs",
     defaultColor = "text-primary",
+    /**
+     * The outer border color of the checkbox when unchecked.
+     */
+    uncheckedBorderColor = "border-neutral",
+    /**
+     * The outer border color of the checkbox when checked.
+     */
+    checkedBorderColor = "border-primary",
     disabledColor = "text-disabled",
     labelGap = "space-between-s",
     labelAlignItems = "center",
@@ -95,6 +105,12 @@ export const OakCheckBox = (props: OakCheckBoxProps) => {
   };
 
   const currentColor = disabled ? disabledColor : defaultColor;
+  const currentCheckedBackgroundFill = disabled
+    ? disabledColor
+    : checkedBorderColor;
+  const currentCheckedBorderColor = disabled
+    ? disabledColor
+    : checkedBorderColor;
 
   return (
     <InternalCheckBoxLabel
@@ -117,8 +133,12 @@ export const OakCheckBox = (props: OakCheckBoxProps) => {
             $height={checkboxSize}
             $ba={checkboxBorder}
             $borderRadius={checkboxBorderRadius}
-            $borderColor={currentColor}
-            $checkedBackground={checkedBackgroundFill ? currentColor : null}
+            $borderColor={defaultColor}
+            $checkedBackground={
+              checkedBackgroundFill ? currentCheckedBackgroundFill : null
+            }
+            $checkedBorderColor={currentCheckedBorderColor}
+            $uncheckedBorderColor={uncheckedBorderColor}
             $hoverBorderRadius={hoverBorderRadius}
             onChange={onChange}
             onFocus={onFocus}

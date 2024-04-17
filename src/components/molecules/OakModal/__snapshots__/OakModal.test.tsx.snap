@@ -34,6 +34,7 @@ exports[`OakModal matches snapshot 1`] = `
   bottom: 0rem;
   left: 0rem;
   width: 40rem;
+  color: #222222;
   background: #ffffff;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;

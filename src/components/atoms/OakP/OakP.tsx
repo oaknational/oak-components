@@ -22,11 +22,4 @@ export const OakP = styled.p<OakPProps>`
   ${typographyStyle}
   ${colorStyle}
   ${marginStyle}
-
-  a {
-    color: ${(props) =>
-      props.theme &&
-      props.theme.uiColors &&
-      props.theme.uiColors["text-link-active"]};
-  }
 `;
