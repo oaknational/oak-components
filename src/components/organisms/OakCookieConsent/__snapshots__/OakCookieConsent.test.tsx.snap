@@ -2,6 +2,7 @@
 
 exports[`OakCookieConsent matches snapshot 1`] = `
 .c0 {
+  color: #222222;
   background: #f2f2f2;
   border-top: 0.063rem solid;
   border-color: #808080;

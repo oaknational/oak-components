@@ -70,6 +70,7 @@ export const OakCookieBanner = ({
       $right={isFixed ? "all-spacing-0" : undefined}
       $left={isFixed ? "all-spacing-0" : undefined}
       $zIndex={isFixed ? "in-front" : undefined}
+      $color="text-primary"
       data-testid="cookie-banner"
     >
       <OakBox $maxWidth={innerMaxWidth} $mh="auto">
