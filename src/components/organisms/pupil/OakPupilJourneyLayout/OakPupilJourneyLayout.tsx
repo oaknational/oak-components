@@ -20,10 +20,6 @@ export type OakPupilJourneyLayoutProps = {
   children: ReactNode;
 };
 
-/**
- * `OakBox` does not support space-between tokens on `padding` only `margin`, so we need to
- * set it here to apply appropriate padding to the top of the content.
- */
 const StyledLayoutBox = styled(OakFlex)<{
   sectionName: PupilJourneySectionName;
   phase: Phase;
@@ -89,8 +85,8 @@ export const OakPupilJourneyLayout = ({
         <OakFlex $flexDirection={"column"} $gap={["space-between-m2"]}>
           {titleSlot}
           <OakHandDrawnHR hrColor={"white"} $height={"all-spacing-1"} />
+          {children}
         </OakFlex>
-        {children}
       </OakFlex>
     </StyledLayoutBox>
   );
