@@ -42,11 +42,14 @@ export const OakTooltip = ({
   children,
   tooltip,
   isOpen,
-  domContainer = document.body,
+  domContainer,
   ...props
 }: OakTooltipProps) => {
   const [targetElement, setTargetElement] = useState<Element | null>(null);
   const [isIntersecting, setIsIntersecting] = useState(true);
+  const [domContainerState, setDomContainerState] = useState<
+    Element | undefined
+  >(domContainer);
   const isVisible = isOpen && isIntersecting;
 
   /**
@@ -123,39 +126,47 @@ export const OakTooltip = ({
     };
   }, [targetElement]);
 
+  useLayoutEffect(() => {
+    if (domContainerState) {
+      return;
+    }
+    setDomContainerState(document.body);
+  }, [domContainerState]);
+
   return (
     <>
-      {createPortal(
-        isVisible && (
-          <OakBox
-            $position="fixed"
-            style={overlayStyle}
-            $pointerEvents="none"
-            $zIndex="modal-dialog"
-          >
+      {domContainerState &&
+        createPortal(
+          isVisible && (
             <OakBox
-              $width="fit-content"
-              $height="fit-content"
-              $position="absolute"
-              {...getTooltipPositionProps(tooltipPosition)}
+              $position="fixed"
+              style={overlayStyle}
+              $pointerEvents="none"
+              $zIndex="modal-dialog"
             >
-              <InternalTooltip
-                $background="bg-decorative5-main"
-                $color="text-primary"
-                $pv="inner-padding-m"
-                $ph="inner-padding-xl"
-                $font="heading-light-7"
-                tooltipPosition={tooltipPosition}
-                {...props}
-                {...borderRadiusProps}
+              <OakBox
+                $width="fit-content"
+                $height="fit-content"
+                $position="absolute"
+                {...getTooltipPositionProps(tooltipPosition)}
               >
-                {tooltip}
-              </InternalTooltip>
+                <InternalTooltip
+                  $background="bg-decorative5-main"
+                  $color="text-primary"
+                  $pv="inner-padding-m"
+                  $ph="inner-padding-xl"
+                  $font="heading-light-7"
+                  tooltipPosition={tooltipPosition}
+                  {...props}
+                  {...borderRadiusProps}
+                >
+                  {tooltip}
+                </InternalTooltip>
+              </OakBox>
             </OakBox>
-          </OakBox>
-        ),
-        domContainer,
-      )}
+          ),
+          domContainerState,
+        )}
       <div
         ref={(domElement) => {
           setTargetElement(domElement?.firstElementChild ?? null);
