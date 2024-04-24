@@ -12,7 +12,7 @@ import { parseBorder } from "@/styles/helpers/parseBorder";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
 
-// Converts to styled-components so it can be used in '&:checked:not(:disabled) + ${StyledOakIcon}' to change svg color.
+// Converted to styled-component so it can be used in '&:checked:not(:disabled) + ${StyledOakIcon}' to change svg color.
 const StyledOakIcon = styled(OakIcon)``;
 
 const StyledInternalCheckBox = styled(InternalCheckBox)`
