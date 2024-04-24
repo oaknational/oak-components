@@ -1,0 +1,219 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakSearchFilterCheckBox matches snapshot 1`] = `
+[
+  .c0 {
+  position: relative;
+  width: 100%;
+  font-family: Lexend,sans-serif;
+}
+
+.c2 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  background: #ffffff;
+  border-color: #cacaca;
+  border-radius: 0.25rem;
+  border-style: solid;
+  font-family: Lexend,sans-serif;
+}
+
+.c2:hover {
+  cursor: pointer;
+}
+
+.c7 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.c8 {
+  object-fit: contain;
+}
+
+.c9 {
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c11 {
+  cursor: pointer;
+}
+
+.c5 {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  margin: 0;
+  outline: none;
+  border: 0.125rem solid;
+  border-color: #222222;
+  border-radius: 0.125rem;
+}
+
+.c5:checked {
+  background: #222222;
+}
+
+.c5:disabled {
+  pointer-events: none;
+}
+
+.c6 {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.c6:checked:not(:disabled) {
+  border: 0.188rem solid;
+  border-color: #222222;
+}
+
+.c6:checked:disabled {
+  border: 0.188rem solid;
+  border-color: #808080;
+}
+
+.c4:has(input:not(:disabled)) {
+  cursor: pointer;
+}
+
+.c4:has(input:disabled) {
+  pointer-events: none;
+  cursor: none;
+}
+
+.c12 {
+  pointer-events: none;
+}
+
+@media (hover:hover) {
+  .c11:hover {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+  }
+}
+
+@media (hover:hover) {
+  .c5:hover:not(:disabled) {
+    border-color: #222222;
+  }
+}
+
+@media (hover:hover) {
+  .c6:hover:not(:disabled) {
+    background: #ffffff;
+  }
+}
+
+@media (hover:hover) {
+  .c4:hover:has(input:not(:disabled)) {
+    background-color: #f2f2f2;
+  }
+
+  .c4:focus-within {
+    box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+  }
+
+  .c4:has(input:checked:not(:disabled)) {
+    background-color: #222222;
+    color: #ffffff;
+  }
+}
+
+<div
+    className="c0 c1"
+  >
+    <div
+      className="c2 c3 c4"
+      onClick={[Function]}
+    >
+      <input
+        className="c5 c6"
+        id="checkbox-1"
+        name="checkbox-1"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        type="checkbox"
+        value="Option 1"
+      />
+      <div
+        className="c7 "
+      >
+        <img
+          alt="subject-history"
+          className="c8"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/subject-icons/history.svg"
+          style={
+            {
+              "bottom": 0,
+              "color": "transparent",
+              "height": "100%",
+              "left": 0,
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <label
+        className="c9 c10 c11 c12"
+        htmlFor="checkbox-1"
+      >
+        Option 1
+      </label>
+    </div>
+  </div>,
+  ",",
+]
+`;
