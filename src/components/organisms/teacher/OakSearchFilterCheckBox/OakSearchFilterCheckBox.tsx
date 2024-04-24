@@ -101,6 +101,7 @@ export type OakSearchFilterCheckBoxProps = Omit<
  * ### onHovered
  *  `onHovered?: (id, value, duration: number) => void;`<br>
  *  called after a mouseEnter and mouseLeave event has happened
+ *
  */
 export const OakSearchFilterCheckBox = (
   props: OakSearchFilterCheckBoxProps,
