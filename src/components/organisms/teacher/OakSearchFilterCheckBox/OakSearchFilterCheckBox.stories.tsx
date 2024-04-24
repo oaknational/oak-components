@@ -25,9 +25,9 @@ export const Default: Story = {
   args: {
     id: "checkbox-test-default",
     value: "a test value",
-    displayValue: "Art and Design",
+    displayValue: "Art and design",
     icon: "subject-art",
-    "aria-label": "Art and Design",
+    "aria-label": "Art and design",
   },
   parameters: {
     controls: {

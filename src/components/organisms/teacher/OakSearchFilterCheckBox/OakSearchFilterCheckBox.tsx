@@ -51,6 +51,10 @@ const StyledFlexBox = styled(OakFlex)`
     cursor: none;
   }
 
+  &:hover:has(input:not(:disabled)) ${InternalCheckBoxLabelHoverDecor} {
+    text-decoration: underline;
+  }
+
   @media (hover: hover) {
     &:hover:has(input:not(:disabled)) {
       background-color: ${parseColor("bg-neutral")};
@@ -123,27 +127,28 @@ export const OakSearchFilterCheckBox = (
     <OakFlex $width={"100%"} $position={"relative"}>
       <StyledFlexBox
         $borderRadius={"border-radius-s"}
-        $borderStyle={"solid"}
         $borderColor={"border-neutral-lighter"}
+        $ba="border-solid-s"
         $background={"white"}
         onClick={handleContainerClick}
         $ph={"inner-padding-s"}
         $pv={"inner-padding-ssx"}
         $gap={"space-between-sssx"}
       >
-        <StyledInternalCheckBox
-          id={id}
-          value={value}
-          disabled={disabled}
-          ref={inputRef}
-          {...rest}
-        />
-        <StyledOakIcon iconName={icon} />
         <InternalCheckBoxLabelHoverDecor
+          pointerEvents="none"
           htmlFor={id}
           $font={"heading-7"}
-          pointerEvents="none"
+          disabled={disabled}
         >
+          <StyledInternalCheckBox
+            id={id}
+            value={value}
+            disabled={disabled}
+            ref={inputRef}
+            {...rest}
+          />
+          <StyledOakIcon iconName={icon} />
           {displayValue}
         </InternalCheckBoxLabelHoverDecor>
       </StyledFlexBox>
