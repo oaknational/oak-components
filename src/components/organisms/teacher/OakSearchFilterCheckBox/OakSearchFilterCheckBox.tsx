@@ -80,7 +80,7 @@ export type OakSearchFilterCheckBoxProps = Omit<
 /**
  * A checkbox for search filters.
  *
- * Takes a displayValue and icon name to display next to the checkbox, for subject icons 'subject-[subjectSlug]' should be used.
+ * Takes a displayValue and icon name, for subject icons 'subject-[subjectSlug]' should be used.
  *
  * ## Events
  * The following callbacks are available for tracking focus events:
