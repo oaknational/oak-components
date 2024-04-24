@@ -77,16 +77,10 @@ export type OakSearchFilterCheckBoxProps = Omit<
   icon: OakIconName;
 };
 
-const StyledInternalCheckBoxLabelHoverDecor = styled(
-  InternalCheckBoxLabelHoverDecor,
-)`
-  pointer-events: none; // To prevent the label from stealing the click event from the input
-`;
-
 /**
  * A checkbox for search filters.
  *
- * Takes in an icon name to display next to the checkbox, for subject icons 'subject-[subjectSlug]' should be used.
+ * Takes a displayValue and icon name to display next to the checkbox, for subject icons 'subject-[subjectSlug]' should be used.
  *
  * ## Events
  * The following callbacks are available for tracking focus events:
@@ -145,9 +139,13 @@ export const OakSearchFilterCheckBox = (
           {...rest}
         />
         <StyledOakIcon iconName={icon} />
-        <StyledInternalCheckBoxLabelHoverDecor htmlFor={id} $font={"heading-7"}>
+        <InternalCheckBoxLabelHoverDecor
+          htmlFor={id}
+          $font={"heading-7"}
+          pointerEvents="none"
+        >
           {displayValue}
-        </StyledInternalCheckBoxLabelHoverDecor>
+        </InternalCheckBoxLabelHoverDecor>
       </StyledFlexBox>
     </OakFlex>
   );

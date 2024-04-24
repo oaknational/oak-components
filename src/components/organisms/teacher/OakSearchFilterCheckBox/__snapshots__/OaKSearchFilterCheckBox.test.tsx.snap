@@ -75,6 +75,7 @@ exports[`OakSearchFilterCheckBox matches snapshot 1`] = `
 }
 
 .c11 {
+  pointer-events: none;
   cursor: pointer;
 }
 
@@ -122,10 +123,6 @@ exports[`OakSearchFilterCheckBox matches snapshot 1`] = `
 .c4:has(input:disabled) {
   pointer-events: none;
   cursor: none;
-}
-
-.c12 {
-  pointer-events: none;
 }
 
 @media (hover:hover) {
@@ -207,8 +204,9 @@ exports[`OakSearchFilterCheckBox matches snapshot 1`] = `
         />
       </div>
       <label
-        className="c9 c10 c11 c12"
+        className="c9 c10 c11"
         htmlFor="checkbox-1"
+        pointerEvents="none"
       >
         Option 1
       </label>

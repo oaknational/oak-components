@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { CSSProperties } from "styled-components";
 
 import { OakLabel, OakLabelProps } from "@/components/atoms";
 import { responsiveStyle } from "@/styles/utils/responsiveStyle";
@@ -9,6 +9,7 @@ export type InternalCheckBoxLabelProps = {
   labelAlignItems?: FlexStyleProps["$alignItems"];
   labelGap?: FlexStyleProps["$gap"];
   disabled?: boolean;
+  pointerEvents?: CSSProperties["pointerEvents"];
   "data-testid"?: string;
 } & OakLabelProps;
 
@@ -27,14 +28,10 @@ export const InternalCheckBoxLabel = styled(
 `;
 
 export const InternalCheckBoxLabelHoverDecor = styled(InternalCheckBoxLabel)`
-  ${(props) =>
-    props.disabled
-      ? css`
-          pointer-events: none;
-        `
-      : css`
-          cursor: pointer;
-        `}
+  ${(props) => `
+    ${props.pointerEvents ? `pointer-events: ${props.pointerEvents};` : ""}
+    ${props.disabled ? `pointer-events: none;` : `cursor: pointer;`}
+  `}
   @media (hover: hover) {
     &:hover {
       text-decoration: ${(props) => (props.disabled ? "none" : "underline")};
