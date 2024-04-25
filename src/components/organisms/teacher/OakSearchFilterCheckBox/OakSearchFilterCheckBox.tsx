@@ -78,13 +78,13 @@ export type OakSearchFilterCheckBoxProps = Omit<
 > & {
   innerRef?: React.RefObject<HTMLInputElement>;
   displayValue: string;
-  icon: OakIconName;
+  icon?: OakIconName;
 };
 
 /**
  * A checkbox for search filters.
  *
- * Takes a displayValue and icon name, for subject icons 'subject-[subjectSlug]' should be used.
+ * Takes a displayValue and optional icon, for subject icons 'subject-[subjectSlug]' should be used.
  *
  * ## Events
  * The following callbacks are available for tracking focus events:
@@ -125,7 +125,7 @@ export const OakSearchFilterCheckBox = (
   };
 
   return (
-    <OakFlex $width={"100%"} $position={"relative"}>
+    <OakFlex $minHeight={"all-spacing-8"} $position={"relative"}>
       <StyledFlexBox
         $borderRadius={"border-radius-s"}
         $borderColor={"border-neutral-lighter"}
@@ -149,7 +149,7 @@ export const OakSearchFilterCheckBox = (
             ref={inputRef}
             {...rest}
           />
-          <StyledOakIcon iconName={icon} />
+          {icon && <StyledOakIcon iconName={icon} />}
           {displayValue}
         </InternalCheckBoxLabelHoverDecor>
       </StyledFlexBox>
