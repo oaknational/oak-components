@@ -4,7 +4,7 @@ exports[`OakSearchFilterCheckBox matches snapshot 1`] = `
 [
   .c0 {
   position: relative;
-  width: 100%;
+  min-height: 2.5rem;
   font-family: Lexend,sans-serif;
 }
 
@@ -24,7 +24,7 @@ exports[`OakSearchFilterCheckBox matches snapshot 1`] = `
   cursor: pointer;
 }
 
-.c11 {
+.c7 {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -48,11 +48,11 @@ exports[`OakSearchFilterCheckBox matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c12 {
+.c8 {
   object-fit: contain;
 }
 
-.c6 {
+.c10 {
   font-family: Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -63,7 +63,7 @@ exports[`OakSearchFilterCheckBox matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c7 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -74,12 +74,12 @@ exports[`OakSearchFilterCheckBox matches snapshot 1`] = `
   align-items: center;
 }
 
-.c8 {
+.c12 {
   pointer-events: none;
   cursor: pointer;
 }
 
-.c9 {
+.c5 {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -92,26 +92,26 @@ exports[`OakSearchFilterCheckBox matches snapshot 1`] = `
   border-radius: 0.125rem;
 }
 
-.c9:checked {
+.c5:checked {
   background: #222222;
 }
 
-.c9:disabled {
+.c5:disabled {
   pointer-events: none;
 }
 
-.c10 {
+.c6 {
   position: absolute;
   opacity: 0;
   pointer-events: none;
 }
 
-.c10:checked:not(:disabled) {
+.c6:checked:not(:disabled) {
   border: 0.188rem solid;
   border-color: #222222;
 }
 
-.c10:checked:disabled {
+.c6:checked:disabled {
   border: 0.188rem solid;
   border-color: #808080;
 }
@@ -125,26 +125,26 @@ exports[`OakSearchFilterCheckBox matches snapshot 1`] = `
   cursor: none;
 }
 
-.c4:hover:has(input:not(:disabled)) .c5 {
+.c4:hover:has(input:not(:disabled)) .c9 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
 @media (hover:hover) {
-  .c8:hover {
+  .c12:hover {
     -webkit-text-decoration: underline;
     text-decoration: underline;
   }
 }
 
 @media (hover:hover) {
-  .c9:hover:not(:disabled) {
+  .c5:hover:not(:disabled) {
     border-color: #222222;
   }
 }
 
 @media (hover:hover) {
-  .c10:hover:not(:disabled) {
+  .c6:hover:not(:disabled) {
     background: #ffffff;
   }
 }
@@ -171,48 +171,48 @@ exports[`OakSearchFilterCheckBox matches snapshot 1`] = `
       className="c2 c3 c4"
       onClick={[Function]}
     >
+      <input
+        className="c5 c6"
+        id="checkbox-1"
+        name="checkbox-1"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        type="checkbox"
+        value="Option 1"
+      />
+      <div
+        className="c7 "
+      >
+        <img
+          alt="subject-history"
+          className="c8"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/subject-icons/history.svg"
+          style={
+            {
+              "bottom": 0,
+              "color": "transparent",
+              "height": "100%",
+              "left": 0,
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
       <label
-        className="c5 c6 c7 c8"
+        className="c9 c10 c11 c12"
         htmlFor="checkbox-1"
         pointerEvents="none"
       >
-        <input
-          className="c9 c10"
-          id="checkbox-1"
-          name="checkbox-1"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          type="checkbox"
-          value="Option 1"
-        />
-        <div
-          className="c11 "
-        >
-          <img
-            alt="subject-history"
-            className="c12"
-            data-nimg="fill"
-            decoding="async"
-            loading="lazy"
-            onError={[Function]}
-            onLoad={[Function]}
-            src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/subject-icons/history.svg"
-            style={
-              {
-                "bottom": 0,
-                "color": "transparent",
-                "height": "100%",
-                "left": 0,
-                "objectFit": undefined,
-                "objectPosition": undefined,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-                "width": "100%",
-              }
-            }
-          />
-        </div>
         Option 1
       </label>
     </div>

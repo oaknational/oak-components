@@ -35,3 +35,18 @@ export const Default: Story = {
     },
   },
 };
+
+export const NoIcon: Story = {
+  render: (args) => <OakSearchFilterCheckBox {...args} />,
+  args: {
+    id: "checkbox-test-default",
+    value: "a test value",
+    displayValue: "Art and design",
+    "aria-label": "Art and design",
+  },
+  parameters: {
+    controls: {
+      include: ["disabled", "defaultChecked", "displayValue", "value", "icon"],
+    },
+  },
+};
