@@ -136,20 +136,20 @@ export const OakSearchFilterCheckBox = (
         $pv={"inner-padding-ssx"}
         $gap={"space-between-sssx"}
       >
+        <StyledInternalCheckBox
+          id={id}
+          value={value}
+          disabled={disabled}
+          ref={inputRef}
+          {...rest}
+        />
+        {icon && <StyledOakIcon iconName={icon} />}
         <InternalCheckBoxLabelHoverDecor
           pointerEvents="none"
           htmlFor={id}
           $font={"heading-7"}
           disabled={disabled}
         >
-          <StyledInternalCheckBox
-            id={id}
-            value={value}
-            disabled={disabled}
-            ref={inputRef}
-            {...rest}
-          />
-          {icon && <StyledOakIcon iconName={icon} />}
           {displayValue}
         </InternalCheckBoxLabelHoverDecor>
       </StyledFlexBox>
