@@ -4,7 +4,7 @@ exports[`OakSearchFilterCheckBox matches snapshot 1`] = `
 [
   .c0 {
   position: relative;
-  width: 100%;
+  min-height: 2.5rem;
   font-family: Lexend,sans-serif;
 }
 
