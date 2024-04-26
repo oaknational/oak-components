@@ -50,3 +50,20 @@ export const NoIcon: Story = {
     },
   },
 };
+
+export const KeepIconColor: Story = {
+  render: (args) => <OakSearchFilterCheckBox {...args} />,
+  args: {
+    id: "checkbox-test-default",
+    value: "a test value",
+    displayValue: "Lessons",
+    "aria-label": "Art and design",
+    icon: "teacher-unit",
+    keepIconColor: true,
+  },
+  parameters: {
+    controls: {
+      include: ["disabled", "defaultChecked", "displayValue", "value", "icon"],
+    },
+  },
+};
