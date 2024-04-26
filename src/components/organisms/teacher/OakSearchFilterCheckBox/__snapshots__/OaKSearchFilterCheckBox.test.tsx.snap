@@ -116,6 +116,10 @@ exports[`OakSearchFilterCheckBox matches snapshot 1`] = `
   border-color: #808080;
 }
 
+.c6:hover:not(:disabled) {
+  background: #ffffff;
+}
+
 .c4:has(input:not(:disabled)) {
   cursor: pointer;
 }
@@ -130,6 +134,19 @@ exports[`OakSearchFilterCheckBox matches snapshot 1`] = `
   text-decoration: underline;
 }
 
+.c4:hover:has(input:not(:disabled)) {
+  background-color: #f2f2f2;
+}
+
+.c4:focus-within {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c4:has(input:checked:not(:disabled)) {
+  background-color: #222222;
+  color: #ffffff;
+}
+
 @media (hover:hover) {
   .c12:hover {
     -webkit-text-decoration: underline;
@@ -140,27 +157,6 @@ exports[`OakSearchFilterCheckBox matches snapshot 1`] = `
 @media (hover:hover) {
   .c5:hover:not(:disabled) {
     border-color: #222222;
-  }
-}
-
-@media (hover:hover) {
-  .c6:hover:not(:disabled) {
-    background: #ffffff;
-  }
-}
-
-@media (hover:hover) {
-  .c4:hover:has(input:not(:disabled)) {
-    background-color: #f2f2f2;
-  }
-
-  .c4:focus-within {
-    box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
-  }
-
-  .c4:has(input:checked:not(:disabled)) {
-    background-color: #222222;
-    color: #ffffff;
   }
 }
 
