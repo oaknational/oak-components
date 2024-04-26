@@ -15,13 +15,16 @@ import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
 // Converted to styled-component so it can be used in '&:checked:not(:disabled) + ${StyledOakIcon}' to change svg color.
 const StyledOakIcon = styled(OakIcon)``;
 
-const StyledInternalCheckBox = styled(InternalCheckBox)`
+const StyledInternalCheckBox = styled(InternalCheckBox)<{
+  keepIconColor?: boolean;
+}>`
   position: absolute;
   opacity: 0;
   pointer-events: none;
 
   &:checked:not(:disabled) + ${StyledOakIcon} {
-    filter: ${parseColorFilter("white")};
+    filter: ${(props) =>
+      props.keepIconColor ? "none" : parseColorFilter("white")};
   }
 
   &:checked:not(:disabled) {
@@ -34,10 +37,8 @@ const StyledInternalCheckBox = styled(InternalCheckBox)`
     border-color: ${parseColor("text-disabled")};
   }
 
-  @media (hover: hover) {
-    &:hover:not(:disabled) {
-      background: ${parseColor("bg-primary")};
-    }
+  &:hover:not(:disabled) {
+    background: ${parseColor("bg-primary")};
   }
 `;
 
@@ -55,20 +56,18 @@ const StyledFlexBox = styled(OakFlex)`
     text-decoration: underline;
   }
 
-  @media (hover: hover) {
-    &:hover:has(input:not(:disabled)) {
-      background-color: ${parseColor("bg-neutral")};
-    }
+  &:hover:has(input:not(:disabled)) {
+    background-color: ${parseColor("bg-neutral")};
+  }
 
-    &:focus-within {
-      box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
-        ${parseDropShadow("drop-shadow-centered-grey")};
-    }
+  &:focus-within {
+    box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
+      ${parseDropShadow("drop-shadow-centered-grey")};
+  }
 
-    &:has(input:checked:not(:disabled)) {
-      background-color: ${parseColor("black")};
-      color: ${parseColor("white")};
-    }
+  &:has(input:checked:not(:disabled)) {
+    background-color: ${parseColor("black")};
+    color: ${parseColor("white")};
   }
 `;
 
@@ -79,6 +78,7 @@ export type OakSearchFilterCheckBoxProps = Omit<
   innerRef?: React.RefObject<HTMLInputElement>;
   displayValue: string;
   icon?: OakIconName;
+  keepIconColor?: boolean;
 };
 
 /**
