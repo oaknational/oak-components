@@ -143,7 +143,7 @@ export const OakSearchFilterCheckBox = (
           ref={inputRef}
           {...rest}
         />
-        {icon && <StyledOakIcon iconName={icon} />}
+        {icon && <StyledOakIcon alt="" iconName={icon} />}
         <InternalCheckBoxLabelHoverDecor
           pointerEvents="none"
           htmlFor={id}
