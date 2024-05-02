@@ -20,14 +20,14 @@ exports[`OakQuizCheckBox matches snapshot 1`] = `
   cursor: pointer;
 }
 
-.c10 {
+.c9 {
   position: relative;
   width: 2rem;
   height: 2rem;
   font-family: Lexend,sans-serif;
 }
 
-.c14 {
+.c13 {
   position: absolute;
   top: 0rem;
   left: 0rem;
@@ -37,14 +37,14 @@ exports[`OakQuizCheckBox matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c16 {
+.c15 {
   width: 100%;
   height: 100%;
   background: #222222;
   font-family: Lexend,sans-serif;
 }
 
-.c17 {
+.c16 {
   width: 100%;
   height: 100%;
   border: 0.125rem solid;
@@ -82,12 +82,12 @@ exports[`OakQuizCheckBox matches snapshot 1`] = `
   color: #222222;
 }
 
-.c15 {
+.c14 {
   pointer-events: none;
   opacity: 0;
 }
 
-input:checked + .c13 {
+input:checked + .c12 {
   opacity: 1;
 }
 
@@ -108,10 +108,11 @@ input:checked + .c13 {
 }
 
 .c8 {
+  pointer-events: none;
   cursor: pointer;
 }
 
-.c11 {
+.c10 {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -127,22 +128,18 @@ input:checked + .c13 {
   height: 2rem;
 }
 
-.c11:disabled {
+.c10:disabled {
   pointer-events: none;
 }
 
-.c12:checked:not(:disabled) {
+.c11:checked:not(:disabled) {
   border: 0.188rem solid;
   border-color: #222222;
 }
 
-.c12:checked:disabled {
+.c11:checked:disabled {
   border: 0.188rem solid;
   border-color: #808080;
-}
-
-.c9 {
-  pointer-events: none;
 }
 
 .c4:not(:focus-within) {
@@ -174,7 +171,7 @@ input:checked + .c13 {
 }
 
 @media (hover:hover) {
-  .c12:hover:not(:disabled) {
+  .c11:hover:not(:disabled) {
     background: #ffffff;
   }
 }
@@ -223,14 +220,15 @@ input:checked + .c13 {
       onClick={[Function]}
     >
       <label
-        className="c5 c6 c7 c8 c9"
+        className="c5 c6 c7 c8"
         htmlFor="checkbox-1"
+        pointerEvents="none"
       >
         <div
-          className="c10"
+          className="c9"
         >
           <input
-            className="c11 c12"
+            className="c10 c11"
             disabled={false}
             id="checkbox-1"
             name="checkbox-1"
@@ -240,13 +238,13 @@ input:checked + .c13 {
             value="Option 1"
           />
           <div
-            className="c13 c14 c15"
+            className="c12 c13 c14"
           >
             <div
-              className="c16"
+              className="c15"
             >
               <div
-                className="c17"
+                className="c16"
               />
             </div>
           </div>

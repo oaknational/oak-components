@@ -32,12 +32,6 @@ const StyledInternalCheckBox = styled(InternalCheckBox)`
   }
 `;
 
-const StyledInternalCheckBoxLabelHoverDecor = styled(
-  InternalCheckBoxLabelHoverDecor,
-)`
-  pointer-events: none; // To prevent the label from stealing the click event from the input
-`;
-
 type StyledFlexBoxProps = OakFlexProps & {
   $overlayBorderColor: OakCombinedColorToken;
   $feedbackBgColor?: OakCombinedColorToken;
@@ -69,7 +63,7 @@ const StyledFlexBox = styled(OakFlex)<StyledFlexBoxProps>`
   }
 
   @media (hover: hover) {
-    &:hover:has(input:not(:disabled)){
+    &:hover:has(input:not(:disabled)) {
       background-color: ${parseColor("bg-decorative1-subdued")};
     }
 
@@ -82,7 +76,8 @@ const StyledFlexBox = styled(OakFlex)<StyledFlexBoxProps>`
     }
 
     &:hover:has(
-        ${InternalCheckBoxLabelHoverDecor} input:not(:focus-visible):not(:checked):not(:disabled)
+        ${InternalCheckBoxLabelHoverDecor}
+          input:not(:focus-visible):not(:checked):not(:disabled)
       )::after {
       content: "";
       inset: 0;
@@ -96,31 +91,32 @@ const StyledFlexBox = styled(OakFlex)<StyledFlexBoxProps>`
       box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
         ${parseDropShadow("drop-shadow-centered-grey")};
     }
-    
+
     &:has(input:checked:not(:disabled)) {
       outline: ${parseBorder("border-solid-xl")};
-   }
+    }
 
-   &:has(input:checked:disabled) {
-    outline-color: ${(props) => css`
-      ${parseColor(props.$overlayBorderColor)}
-    `};
+    &:has(input:checked:disabled) {
+      outline-color: ${(props) => css`
+        ${parseColor(props.$overlayBorderColor)}
+      `};
+    }
+
+    &:has(input:disabled:not(:checked)) {
+      ${(props) =>
+        props.$feedbackBgColor
+          ? css`
+              background-color: ${props.$feedbackBgColor};
+            `
+          : undefined}
+    }
+
+    &:has(input:disabled:checked) {
+      ${(props) => css`
+        background-color: ${parseColor(props.$feedbackBgColor)};
+      `};
+    }
   }
-
-  &:has(input:disabled:not(:checked)) {
-     ${(props) =>
-       props.$feedbackBgColor
-         ? css`
-             background-color: ${props.$feedbackBgColor};
-           `
-         : undefined}
-  }
-
-  &:has(input:disabled:checked) {
-    ${(props) => css`
-      background-color: ${parseColor(props.$feedbackBgColor)};
-    `};
- }
 `;
 
 export type OakQuizCheckBoxProps = Omit<BaseCheckBoxProps, "defaultChecked"> & {
@@ -204,7 +200,8 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
         isHighlighted ? "border-decorative5-stronger" : "transparent"
       }
     >
-      <StyledInternalCheckBoxLabelHoverDecor
+      <InternalCheckBoxLabelHoverDecor
+        pointerEvents="none"
         htmlFor={id}
         labelGap={"space-between-s"}
         labelAlignItems={"center"}
@@ -249,7 +246,7 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
           }
         />
         {image ? imageContainer : displayValue}
-      </StyledInternalCheckBoxLabelHoverDecor>
+      </InternalCheckBoxLabelHoverDecor>
       {isFeedback && (showTick || showCross) && (
         <OakFlex
           className="feedbackIconWrapper"
