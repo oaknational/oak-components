@@ -11,7 +11,10 @@ import { oakDefaultTheme } from "@/styles";
 describe("OakPupilJourneySubjectButton", () => {
   it("renders", () => {
     const { getByRole } = renderWithTheme(
-      <OakPupilJourneySubjectButton phase="primary">
+      <OakPupilJourneySubjectButton
+        phase="primary"
+        subjectIconName="subject-english"
+      >
         Year 1
       </OakPupilJourneySubjectButton>,
     );
@@ -21,7 +24,10 @@ describe("OakPupilJourneySubjectButton", () => {
   it("matches snapshot", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
-        <OakPupilJourneySubjectButton phase="primary">
+        <OakPupilJourneySubjectButton
+          phase="primary"
+          subjectIconName="subject-english"
+        >
           Year 1
         </OakPupilJourneySubjectButton>
       </OakThemeProvider>,

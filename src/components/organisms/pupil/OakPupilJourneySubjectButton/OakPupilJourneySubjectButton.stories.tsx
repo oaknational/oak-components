@@ -41,5 +41,9 @@ export const Disabled: Story = {
       Subject
     </OakPupilJourneySubjectButton>
   ),
-  args: { disabled: true },
+  args: {
+    disabled: true,
+    subjectIconName: "subject-english",
+    phase: "primary",
+  },
 };
