@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakPreviousLessonsHeading matches snapshot 1`] = `
+[
+  " ",
+  .c0 {
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c3 {
+  font-family: Lexend,sans-serif;
+}
+
+.c2 {
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+@media (min-width:750px) {
+  .c2 {
+    font-weight: 600;
+  }
+}
+
+@media (min-width:750px) {
+  .c2 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c2 {
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c2 {
+    -webkit-letter-spacing: 0.0115rem;
+    -moz-letter-spacing: 0.0115rem;
+    -ms-letter-spacing: 0.0115rem;
+    letter-spacing: 0.0115rem;
+  }
+}
+
+<div
+    className="c0 c1"
+  >
+    <h1
+      className="c2"
+    >
+      Previously released lessons (5)
+    </h1>
+    <span
+      className="c3"
+    >
+      <span
+        className="c3"
+      >
+        <span
+          className="c3"
+        >
+          Year 7
+        </span>
+      </span>
+      <span
+        className="c3"
+      >
+        <span
+          className="c3"
+        >
+           • 
+        </span>
+        <span
+          className="c3"
+        >
+          Maths
+        </span>
+      </span>
+      <span
+        className="c3"
+      >
+        <span
+          className="c3"
+        >
+           • 
+        </span>
+        <span
+          className="c3"
+        >
+          Higher
+        </span>
+      </span>
+    </span>
+  </div>,
+]
+`;
