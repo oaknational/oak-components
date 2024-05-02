@@ -15,10 +15,10 @@ describe("OakPupilJourneySubjectButton", () => {
         phase="primary"
         subjectIconName="subject-english"
       >
-        Year 1
+        English
       </OakPupilJourneySubjectButton>,
     );
-    expect(getByRole("button", { name: "Year 1" })).toBeInTheDocument();
+    expect(getByRole("button", { name: /English/ })).toBeInTheDocument();
   });
 
   it("matches snapshot", () => {
@@ -28,7 +28,7 @@ describe("OakPupilJourneySubjectButton", () => {
           phase="primary"
           subjectIconName="subject-english"
         >
-          Year 1
+          English
         </OakPupilJourneySubjectButton>
       </OakThemeProvider>,
     ).toJSON();
