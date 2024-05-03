@@ -3,11 +3,12 @@ import { Meta, StoryObj } from "@storybook/react";
 
 import { InternalShadowRectButton } from "./InternalShadowRectButton";
 
-import { oakIconNames } from "@/components/atoms/OakIcon";
+import { OakIcon, oakIconNames } from "@/components/atoms/OakIcon";
 import { OakFlex, OakLI, OakUL } from "@/components/atoms";
 import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
+import { flexArgTypes } from "@/storybook-helpers/flexStyleHelpers";
 
 const controlIconNames = [null, [...oakIconNames].sort()].flat();
 
@@ -20,6 +21,8 @@ const meta: Meta<typeof InternalShadowRectButton> = {
       options: controlIconNames,
       control: { type: "select" },
     },
+    iconLayout: flexArgTypes["$flexDirection"],
+    iconGap: flexArgTypes["$gap"],
     isTrailingIcon: {
       control: { type: "boolean" },
     },
@@ -42,6 +45,9 @@ const meta: Meta<typeof InternalShadowRectButton> = {
     controls: {
       include: [
         "iconName",
+        "iconOverride",
+        "iconLayout",
+        "iconGap",
         "isTrailingIcon",
         "isLoading",
         "defaultBackground",
@@ -150,6 +156,61 @@ export const ButtonInList: Story = {
   ),
   args: {
     iconName: "arrow-right",
+    defaultBackground: "bg-btn-secondary",
+    defaultTextColor: "text-primary",
+    defaultBorderColor: "text-primary",
+    hoverBackground: "bg-btn-secondary-hover",
+    hoverTextColor: "text-primary",
+    hoverBorderColor: "text-primary",
+    disabledBackground: "bg-btn-secondary-disabled",
+    disabledBorderColor: "text-disabled",
+    disabledTextColor: "text-disabled",
+  },
+};
+
+export const VeritcalLayout: Story = {
+  render: (args) => (
+    <OakFlex $gap="space-between-m">
+      <InternalShadowRectButton {...args}>Button</InternalShadowRectButton>
+    </OakFlex>
+  ),
+  args: {
+    iconName: "bell",
+    iconLayout: "column",
+    defaultBackground: "bg-btn-secondary",
+    defaultTextColor: "text-primary",
+    defaultBorderColor: "text-primary",
+    hoverBackground: "bg-btn-secondary-hover",
+    hoverTextColor: "text-primary",
+    hoverBorderColor: "text-primary",
+    disabledBackground: "bg-btn-secondary-disabled",
+    disabledBorderColor: "text-disabled",
+    disabledTextColor: "text-disabled",
+  },
+};
+
+export const CustomIcon: Story = {
+  render: (args) => {
+    const customIcon = (
+      <OakIcon
+        iconName="books"
+        $pa={"inner-padding-m"}
+        $width={"all-spacing-14"}
+        $height={"all-spacing-14"}
+      />
+    );
+    return (
+      <OakFlex $gap="space-between-m">
+        <InternalShadowRectButton {...args} iconOverride={customIcon}>
+          Button
+        </InternalShadowRectButton>
+      </OakFlex>
+    );
+  },
+  args: {
+    iconLayout: "column",
+    iconGap: "space-between-m",
+    font: "heading-5",
     defaultBackground: "bg-btn-secondary",
     defaultTextColor: "text-primary",
     defaultBorderColor: "text-primary",

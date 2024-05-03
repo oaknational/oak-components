@@ -17,6 +17,9 @@ import { parseColor } from "@/styles/helpers/parseColor";
 import { OakCombinedColorToken, OakDropShadowToken } from "@/styles";
 import { SizeStyleProps, sizeStyle } from "@/styles/utils/sizeStyle";
 import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
+import { SpacingStyleProps } from "@/styles/utils/spacingStyle";
+import { FlexStyleProps } from "@/styles/utils/flexStyle";
+import { TypographyStyleProps } from "@/styles/utils/typographyStyle";
 
 export type InternalShadowRectButtonProps = Omit<
   InternalButtonProps,
@@ -30,7 +33,19 @@ export type InternalShadowRectButtonProps = Omit<
   | "$color"
 > & {
   iconName?: OakIconName;
+  /**
+   *  we can set a custom icon if we want different sizes and padding
+   */
+  iconOverride?: React.ReactNode;
   isTrailingIcon?: boolean;
+  /**
+   *  we can arrange the icon vertically or horizontally
+   */
+  iconLayout?: FlexStyleProps["$flexDirection"];
+  /**
+   *  we can adjust the gap between the icon and the text
+   */
+  iconGap?: FlexStyleProps["$gap"];
   defaultTextColor: OakCombinedColorToken;
   defaultBackground: OakCombinedColorToken;
   defaultBorderColor: OakCombinedColorToken;
@@ -43,6 +58,9 @@ export type InternalShadowRectButtonProps = Omit<
   width?: SizeStyleProps["$width"];
   maxWidth?: SizeStyleProps["$maxWidth"];
   hoverShadow?: OakDropShadowToken | null;
+  pv?: SpacingStyleProps["$pv"];
+  ph?: SpacingStyleProps["$ph"];
+  font?: TypographyStyleProps["$font"];
 } & PositionStyleProps;
 
 const StyledInternalButton = styled(InternalButton)<
@@ -144,10 +162,16 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
     disabledBorderColor,
     className,
     hoverShadow = "drop-shadow-lemon",
+    pv = "inner-padding-s",
+    ph = "inner-padding-m",
+    iconLayout = "row",
+    iconGap = "space-between-ssx",
+    iconOverride,
+    font = "heading-7",
     ...rest
   } = props;
 
-  const icon = (
+  const icon = iconOverride ?? (
     <>
       {iconName && (
         <OakIcon
@@ -201,8 +225,8 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
         $background={defaultBackground}
         $borderColor={defaultBorderColor}
         $color={defaultTextColor}
-        $pv={"inner-padding-s"}
-        $ph={"inner-padding-m"}
+        $pv={pv}
+        $ph={ph}
         $borderRadius={"border-radius-s"}
         $position={"relative"}
         disabled={disabled || isLoading}
@@ -220,13 +244,13 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
         {...rest}
       >
         <OakFlex
-          $flexDirection={"row"}
+          $flexDirection={iconLayout}
           $alignItems={"center"}
-          $gap="space-between-ssx"
+          $gap={iconGap}
           $justifyContent="center"
         >
           {!isTrailingIcon && iconLogic}
-          <OakSpan $font={"heading-7"}>{children}</OakSpan>
+          <OakSpan $font={font}>{children}</OakSpan>
           {isTrailingIcon && iconLogic}
         </OakFlex>
       </StyledInternalButton>
