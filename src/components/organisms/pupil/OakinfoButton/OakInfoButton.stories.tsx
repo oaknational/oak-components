@@ -10,14 +10,16 @@ const meta: Meta<typeof OakInfoButton> = {
   tags: ["autodocs"],
   title: "components/organisms/pupil/OakInfoButton",
   argTypes: {
-    hint: {
+    onClick: { action: "clicked" },
+    isLoading: {
       control: {
-        type: "text",
+        type: "boolean",
       },
     },
-    tooltipPosition: {
-      options: ["top-right", "bottom-left", "top-left", "top-right"],
-      control: { type: "select" },
+    isOpen: {
+      control: {
+        type: "boolean",
+      },
     },
   },
   decorators: [
@@ -28,8 +30,7 @@ const meta: Meta<typeof OakInfoButton> = {
     ),
   ],
   args: {
-    hint: "We've put the lessons in order helping you build on what you've learned before so it’s best to start with the first lesson of a unit.",
-    tooltipPosition: "top-left",
+    onClick: () => console.log("clicked"),
   },
 };
 export default meta;

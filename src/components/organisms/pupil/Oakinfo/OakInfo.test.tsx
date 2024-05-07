@@ -2,18 +2,16 @@ import React from "react";
 import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
 
-import { OakInfoButton } from "./OakInfoButton";
+import { OakInfo } from "./OakInfo";
 
 import { OakThemeProvider } from "@/components/atoms";
 import { oakDefaultTheme } from "@/styles";
 
-describe(OakInfoButton, () => {
+describe("OakInfo", () => {
   it("matches snapshot", () => {
-    const handleClick = () => jest.fn();
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
-        <OakInfoButton isOpen={false} isLoading={false} onClick={handleClick} />
-        ,
+        <OakInfo hint="The answer is right in front of your eyes" />,
       </OakThemeProvider>,
     ).toJSON();
 
