@@ -32,7 +32,7 @@ const StyledLayoutBox = styled(OakFlex)<{
       )});
       background-repeat: no-repeat;
       background-position-x: center;
-      background-size: cover;
+      background-size: 100%;
     `}
 `;
 
