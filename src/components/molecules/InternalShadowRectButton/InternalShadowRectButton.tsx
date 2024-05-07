@@ -26,6 +26,8 @@ export type InternalShadowRectButtonProps = Omit<
   | "$pa"
   | "$ph"
   | "$pv"
+  | "$pt"
+  | "$pb"
   | "$ba"
   | "$borderRadius"
   | "$borderColor"
@@ -61,6 +63,8 @@ export type InternalShadowRectButtonProps = Omit<
   pv?: SpacingStyleProps["$pv"];
   ph?: SpacingStyleProps["$ph"];
   font?: TypographyStyleProps["$font"];
+  innerWidth?: SizeStyleProps["$width"];
+  textAlign?: TypographyStyleProps["$textAlign"];
 } & PositionStyleProps;
 
 const StyledInternalButton = styled(InternalButton)<
@@ -151,6 +155,7 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
     disabled,
     width = "max-content",
     maxWidth,
+    innerWidth,
     defaultBackground,
     defaultBorderColor,
     defaultTextColor,
@@ -164,10 +169,13 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
     hoverShadow = "drop-shadow-lemon",
     pv = "inner-padding-s",
     ph = "inner-padding-m",
+    pt,
+    pb,
     iconLayout = "row",
     iconGap = "space-between-ssx",
     iconOverride,
     font = "heading-7",
+    textAlign = "left",
     ...rest
   } = props;
 
@@ -227,6 +235,8 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
         $color={defaultTextColor}
         $pv={pv}
         $ph={ph}
+        $pt={pt}
+        $pb={pb}
         $borderRadius={"border-radius-s"}
         $position={"relative"}
         disabled={disabled || isLoading}
@@ -248,9 +258,12 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
           $alignItems={"center"}
           $gap={iconGap}
           $justifyContent="center"
+          $width={innerWidth}
         >
           {!isTrailingIcon && iconLogic}
-          <OakSpan $font={font}>{children}</OakSpan>
+          <OakSpan $font={font} $textAlign={textAlign}>
+            {children}
+          </OakSpan>
           {isTrailingIcon && iconLogic}
         </OakFlex>
       </StyledInternalButton>
