@@ -1,46 +1,46 @@
 import React from "react";
 
-import { OakBulletList } from "@/components/molecules";
+import { OakBulletList, OakBulletListProps } from "@/components/molecules";
 import { OakFlex, OakHeading } from "@/components/atoms";
 
 export type OakPreviousLessonsHeadingProps = {
   numberOfLessons: number;
-  yearDescription: string;
-  subjectTitle: string;
-  tierDescription?: string;
-  examBoardDescription?: string;
-};
+} & OakBulletListProps;
 
 /**
- * This component is the header for the pupil journey;
+ * This component displays a heading for the previous lessons
  *
- * the icon, title and list of items are passed as props and change change depending on which page it is called
+ * numberOfLessons - The number of lessons that have been released
+ *
+ * listItems - add the a list of descriptions to be displayed
  *
  *
  */
 export const OakPreviousLessonsHeading = (
   props: OakPreviousLessonsHeadingProps,
 ) => {
-  const {
-    numberOfLessons,
-    yearDescription,
-    subjectTitle,
-    tierDescription,
-    examBoardDescription,
-  } = props;
-  const listItems = [yearDescription, subjectTitle];
-  if (tierDescription) {
-    listItems.push(tierDescription);
-  }
-  if (examBoardDescription) {
-    listItems.push(examBoardDescription);
-  }
+  const { numberOfLessons, listItems } = props;
+
   return (
-    <OakFlex $flexDirection={"row"} $justifyContent={"space-between"}>
+    <OakFlex
+      $flexDirection={["column", "row"]}
+      $flexWrap={"wrap"}
+      $justifyContent={"space-between"}
+      $alignItems={"flex-start"}
+      $gap={"space-between-m"}
+    >
       <OakHeading tag="h1" $font={["heading-6", "heading-6"]}>
         {`Previously released lessons (${numberOfLessons})`}
       </OakHeading>
-      <OakBulletList listItems={listItems} />
+      <OakBulletList
+        listItems={listItems}
+        $background={"bg-decorative5-very-subdued"}
+        $borderRadius={"border-radius-s"}
+        $borderColor={"border-decorative5"}
+        $ba={"border-solid-s"}
+        $ph={"inner-padding-xs"}
+        $pv={"inner-padding-ssx"}
+      />
     </OakFlex>
   );
 };

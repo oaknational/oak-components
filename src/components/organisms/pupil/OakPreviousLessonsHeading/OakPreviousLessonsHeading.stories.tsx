@@ -10,20 +10,12 @@ const meta: Meta<typeof OakPreviousLessonsHeading> = {
   argTypes: {},
   parameters: {
     controls: {
-      include: [
-        "numberOfLessons",
-        "yearDescription",
-        "subjectTitle",
-        "tierDescription",
-        "examBoardDescription",
-      ],
+      include: ["numberOfLessons", "listItems"],
     },
   },
   args: {
     numberOfLessons: 5,
-    yearDescription: "Year 7",
-    subjectTitle: "Maths",
-    tierDescription: "Higher",
+    listItems: ["Year 7", "Maths", "Higher"],
   },
 };
 

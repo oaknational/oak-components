@@ -14,9 +14,7 @@ describe("OakPreviousLessonsHeading", () => {
       <ThemeProvider theme={oakDefaultTheme}>
         <OakPreviousLessonsHeading
           numberOfLessons={5}
-          yearDescription={"Year 7"}
-          subjectTitle={"Maths"}
-          tierDescription="Higher"
+          listItems={["Year 7", "Maths", "Higher"]}
           data-testid="test"
         />
       </ThemeProvider>,
@@ -30,9 +28,7 @@ describe("OakPreviousLessonsHeading", () => {
         {" "}
         <OakPreviousLessonsHeading
           numberOfLessons={5}
-          yearDescription={"Year 7"}
-          subjectTitle={"Maths"}
-          tierDescription={"Higher"}
+          listItems={["Year 7", "Maths", "Higher"]}
         />
       </ThemeProvider>,
     ).toJSON();
