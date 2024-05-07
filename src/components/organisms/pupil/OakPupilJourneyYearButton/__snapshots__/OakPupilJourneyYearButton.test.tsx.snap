@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OakPrimaryNavItem matches snapshot 1`] = `
+exports[`OakPupilJourneyYearButton matches snapshot 1`] = `
 .c0 {
   position: relative;
   width: -webkit-max-content;
@@ -44,8 +44,8 @@ exports[`OakPrimaryNavItem matches snapshot 1`] = `
 .c7 {
   font-family: Lexend,sans-serif;
   font-weight: 600;
-  font-size: 1rem;
-  line-height: 1.25rem;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   -webkit-letter-spacing: 0.0115rem;
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
@@ -65,13 +65,13 @@ exports[`OakPrimaryNavItem matches snapshot 1`] = `
   outline: none;
   font-family: Lexend,sans-serif;
   color: #222222;
-  background: #ffffff;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  background: #f5e9f2;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   border: 0.125rem solid;
-  border-color: #ffffff;
+  border-color: #cf9cc3;
   border-radius: 0.25rem;
 }
 
@@ -91,20 +91,20 @@ exports[`OakPrimaryNavItem matches snapshot 1`] = `
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #222222;
-  background: #ffffff;
-  border-color: #ffffff;
+  background: #deb7d5;
+  border-color: #cf9cc3;
 }
 
 .c4:active {
-  background: #ffffff;
-  border-color: #ffffff;
+  background: #f5e9f2;
+  border-color: #cf9cc3;
   color: #222222;
 }
 
 .c4:disabled {
-  background: #ffffff;
-  border-color: #ffffff;
-  color: #808080;
+  background: #e4e4e4;
+  border-color: #cacaca;
+  color: #575757;
 }
 
 .c1 .grey-shadow:has(+ * + .internal-button:focus-visible) {
@@ -117,7 +117,7 @@ exports[`OakPrimaryNavItem matches snapshot 1`] = `
 
 .c1 .yellow-shadow:has(+ .internal-button:hover),
 .c1 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
-  box-shadow: none;
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
 .c1 .grey-shadow:has(+ * + .internal-button:hover) {
@@ -141,13 +141,11 @@ exports[`OakPrimaryNavItem matches snapshot 1`] = `
   <div
     className="c2 yellow-shadow"
   />
-  <a
+  <button
     className="c3 c4 internal-button"
-    href="/"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    onTouchStart={[Function]}
   >
     <div
       className="c5 c6"
@@ -155,9 +153,9 @@ exports[`OakPrimaryNavItem matches snapshot 1`] = `
       <span
         className="c7"
       >
-        Base nav item
+        Year 1
       </span>
     </div>
-  </a>
+  </button>
 </div>
 `;
