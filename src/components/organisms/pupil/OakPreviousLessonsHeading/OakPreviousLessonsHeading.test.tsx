@@ -19,7 +19,7 @@ describe("OakPreviousLessonsHeading", () => {
         />
       </ThemeProvider>,
     );
-    expect(getByText(`Previously released lessons (5)`)).toBeInTheDocument();
+    expect(getByText(`Previously released lessons`)).toBeInTheDocument();
   });
 
   it("matches snapshot", () => {
