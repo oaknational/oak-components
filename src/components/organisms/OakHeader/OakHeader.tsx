@@ -161,7 +161,7 @@ const UnstyledComponent = (props: OakHeaderProps) => {
  *
  * Oak Heading component with hero image, can be used for blog posts, articles, and other content pages.
  *
- * This Oak component can be passed the OWA breadcrumbs component as a prop.
+ * This Oak component can be passed the OWA breadcrumbs component as a prop. Currently this component does not exist in the component library.
  */
 export const OakHeader = styled(UnstyledComponent)`
   ${OakHeaderCss}
