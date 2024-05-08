@@ -4,18 +4,11 @@ import { create } from "react-test-renderer";
 
 import { OakHeader, OakHeaderProps } from "./OakHeader";
 
-import { OakLink } from "@/components/molecules/OakLink";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 const oakHeaderProps: OakHeaderProps = {
   headingTitle: "How to plan a lesson: a helpful guide for teachers",
   backgroundColour: "grey70",
-  breadcrumbs: (
-    <>
-      <OakLink href="/home">Home</OakLink> {">"}
-      <OakLink href="/lessons">Lessons</OakLink>
-    </>
-  ),
   authorTitle: "Head of School Support",
   authorName: "Rachel Storm",
   authorImageSrc: "https://via.placeholder.com/150",
@@ -33,9 +26,7 @@ describe("OakHeader", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <OakHeader {...oakHeaderProps}>Click Me</OakHeader>,
-    ).toJSON();
+    const tree = create(<OakHeader {...oakHeaderProps} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

@@ -20,7 +20,7 @@ export type OakHeaderProps = {
   authorName: string;
   authorTitle: string;
   subHeadingText: string;
-  breadcrumbs: ReactNode;
+  breadcrumbs?: ReactNode;
 } & ColorStyleProps;
 
 // By adding the style css utils to this components css your component will be able to accept corresponding props and prop values.
@@ -64,6 +64,7 @@ const UnstyledComponent = (props: OakHeaderProps) => {
       $alignItems={["center", null]}
       $minHeight={"all-spacing-20"}
       $zIndex={"behind"}
+      data-testid="test"
     >
       <OakFlex
         $alignSelf={"flex-start"}

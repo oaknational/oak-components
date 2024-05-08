@@ -1,7 +1,92 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CopyPasteThisComponent matches snapshot 1`] = `
+exports[`OakHeader matches snapshot 1`] = `
 .c0 {
+  width: 100%;
+  min-height: 22.5rem;
+  background: #2d2d2d;
+  font-family: Lexend,sans-serif;
+  z-index: -1;
+}
+
+.c2 {
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c4 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  display: none;
+  font-family: Lexend,sans-serif;
+}
+
+.c5 {
+  max-width: 40rem;
+  min-height: 22.5rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c8 {
+  margin-bottom: 1.5rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c10 {
+  position: relative;
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-right: 0.75rem;
+  background: #ffffff;
+  border-radius: 6.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c12 {
+  font-family: Lexend,sans-serif;
+}
+
+.c16 {
+  position: relative;
+  min-width: 11.25rem;
+  min-height: 11.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c18 {
+  position: relative;
+  width: 100%;
+  min-width: 7.5rem;
+  min-height: 7.5rem;
+  -webkit-transform: rotate(-2.025deg);
+  -ms-transform: rotate(-2.025deg);
+  transform: rotate(-2.025deg);
+  font-family: Lexend,sans-serif;
+  z-index: 1;
+}
+
+.c19 {
+  position: absolute;
+  top: 0rem;
+  bottom: 0rem;
+  width: 30rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c21 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-family: Lexend,sans-serif;
+}
+
+.c22 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-left: 1.5rem;
+  display: block;
   font-family: Lexend,sans-serif;
 }
 
@@ -10,15 +95,398 @@ exports[`CopyPasteThisComponent matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
 }
 
-.c2 {
-  width: 1.5rem;
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c23 {
+  display: block;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+.c11 {
+  object-fit: contain;
+}
+
+.c7 {
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+  margin-bottom: 1.5rem;
+  color: #1b1b1b;
+}
+
+.c13 {
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c14 {
+  font-family: Lexend,sans-serif;
+}
+
+.c15 {
+  font-family: Lexend,sans-serif;
+  margin-bottom: 3rem;
+}
+
+@media (min-width:750px) {
+  .c4 {
+    display: none;
+  }
+}
+
+@media (min-width:1280px) {
+  .c4 {
+    display: block;
+  }
+}
+
+@media (min-width:750px) {
+  .c16 {
+    min-width: 30rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c16 {
+    min-height: 30rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c18 {
+    min-width: 30rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c18 {
+    min-width: 30rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c18 {
+    min-height: 30rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c18 {
+    min-height: 22.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c19 {
+    width: 60rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c22 {
+    display: block;
+  }
+}
+
+@media (min-width:1280px) {
+  .c22 {
+    display: none;
+  }
+}
+
+@media (min-width:750px) {
+  .c1 {
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (min-width:1280px) {
+  .c1 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:750px) {
+
+}
+
+@media (min-width:750px) {
+  .c23 {
+    display: block;
+  }
+}
+
+@media (min-width:1280px) {
+  .c23 {
+    display: none;
+  }
+}
+
+@media (min-width:750px) {
+  .c7 {
+    font-weight: 600;
+  }
+}
+
+@media (min-width:750px) {
+  .c7 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c7 {
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c7 {
+    -webkit-letter-spacing: 0.0115rem;
+    -moz-letter-spacing: 0.0115rem;
+    -ms-letter-spacing: 0.0115rem;
+    letter-spacing: 0.0115rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c15 {
+    margin-bottom: 0rem;
+  }
 }
 
 <div
-  className="c0 c1 c2 "
+  className="c0 c1"
+  data-testid="test"
 >
-  Click Me
+  <div
+    className="c2 c3"
+  >
+    <div
+      className="c4"
+    />
+    <div
+      className="c5 c6"
+    >
+      <h2
+        className="c7"
+      >
+        How to plan a lesson: a helpful guide for teachers
+      </h2>
+      <div
+        className="c8 c9"
+      >
+        <div
+          className="c10"
+        >
+          <img
+            alt="Rachel Storm profile image"
+            className="c11"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            sizes="100vw"
+            src="/_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=3840&q=75"
+            srcSet="/_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=3840&q=75 3840w"
+            style={
+              {
+                "bottom": 0,
+                "color": "transparent",
+                "height": "100%",
+                "left": 0,
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": "100%",
+              }
+            }
+          />
+        </div>
+        <div
+          className="c12"
+        >
+          <h3
+            className="c13"
+          >
+            Rachel Storm
+          </h3>
+          <p
+            className="c14"
+          >
+            Head of School Support
+          </p>
+        </div>
+      </div>
+      <p
+        className="c15"
+      >
+        Body 1 Our guide for teachers, whether you're in your ITT, an ECT or a teacher of many years experience looking for a fresh look on lesson planning, is place to dive into expertise from across the sector.
+      </p>
+    </div>
+  </div>
+  <div
+    className="c16 c17"
+  >
+    <div
+      className="c18"
+    >
+      <img
+        alt="How to plan a lesson: a helpful guide for teachers hero image"
+        className="c11"
+        data-nimg="fill"
+        decoding="async"
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        sizes="100vw"
+        src="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336490%2Fsample.jpg&w=3840&q=75"
+        srcSet="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336490%2Fsample.jpg&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336490%2Fsample.jpg&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336490%2Fsample.jpg&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336490%2Fsample.jpg&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336490%2Fsample.jpg&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336490%2Fsample.jpg&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336490%2Fsample.jpg&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336490%2Fsample.jpg&w=3840&q=75 3840w"
+        style={
+          {
+            "bottom": 0,
+            "color": "transparent",
+            "height": "100%",
+            "left": 0,
+            "objectFit": undefined,
+            "objectPosition": undefined,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          }
+        }
+      />
+    </div>
+    <div
+      className="c19 c20"
+    >
+      <div
+        className="c21"
+      >
+        <img
+          alt="loopdown ui-graphic"
+          className="c11"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699887218/ui-graphics/loopdown?_a=BAVAfVAO0"
+          style={
+            {
+              "bottom": 0,
+              "color": "transparent",
+              "height": "100%",
+              "left": 0,
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="c22 c23"
+  />
 </div>
 `;
