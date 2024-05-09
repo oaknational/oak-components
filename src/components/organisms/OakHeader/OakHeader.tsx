@@ -47,7 +47,7 @@ const UnstyledComponent = (props: OakHeaderProps) => {
     authorImageSrc,
   } = props;
   return (
-    <OakMaxWidth $background={"lavender"} $zIndex={"behind"}>
+    <OakMaxWidth $background={"bg-decorative3-main"} $zIndex={"neutral"}>
       <OakFlex
         $minWidth={"100%"}
         $flexDirection={["column-reverse", "column-reverse", "row"]}
