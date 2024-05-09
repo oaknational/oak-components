@@ -37,6 +37,16 @@ describe("Component OakTertiaryOLNav", () => {
     expect(link1.closest("a")).toHaveAttribute("href", "#item1");
     expect(link2.closest("a")).toHaveAttribute("href", "#item2");
   });
+  it("renders anchor target if passed as prop", () => {
+    const { getByTestId } = renderWithTheme(
+      <OakTertiaryOLNav
+        {...baseProps}
+        anchorTarget="target"
+        data-testid="test"
+      />,
+    );
+    expect(getByTestId("test").querySelector("#target")).toBeInTheDocument();
+  });
 
   it("matches snapshot", () => {
     const tree = create(

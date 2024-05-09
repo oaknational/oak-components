@@ -6,7 +6,7 @@ import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { OakLI } from "@/components/atoms/OakLI";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
-import { OakBox, OakSpan } from "@/components/atoms";
+import { OakAnchorTarget, OakBox, OakSpan } from "@/components/atoms";
 
 const StyledNav = styled.nav`
   outline: none;
@@ -82,16 +82,19 @@ export type OakTertiaryOLNavProps = {
   title?: string;
   items: { title: string; href: string }[];
   ariaLabel?: string;
+  anchorTarget?: string;
 };
 
 export const OakTertiaryOLNav = ({
   items,
   ariaLabel,
   title,
+  anchorTarget,
   ...rest
 }: OakTertiaryOLNavProps) => {
   return (
     <StyledNav tabIndex={0} aria-label={ariaLabel} {...rest}>
+      {anchorTarget && <OakAnchorTarget id={anchorTarget} />}
       {title && (
         <OakBox $mb={"space-between-m"}>
           <OakSpan $font={"heading-light-7"}>{"Contents"}</OakSpan>
