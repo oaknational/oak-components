@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactElement, ReactNode } from "react";
 import styled, { css } from "styled-components";
 
 import {
@@ -18,7 +18,8 @@ export type OakHeaderProps = {
   authorName: string;
   authorTitle: string;
   subHeadingText: string;
-  breadcrumbs?: ReactNode;
+  breadcrumbs?: ReactElement;
+  children?: ReactNode;
 };
 
 // By adding the style css utils to this components css your component will be able to accept corresponding props and prop values.

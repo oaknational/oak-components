@@ -28,6 +28,8 @@ const meta: Meta<typeof OakHeader> = {
         "authorName",
         "authorTitle",
         "subHeadingText",
+        "heroImageSrc",
+        "imageSrc",
         "type",
       ],
     },
