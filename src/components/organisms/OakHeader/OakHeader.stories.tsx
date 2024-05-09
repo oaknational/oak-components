@@ -24,10 +24,10 @@ const meta: Meta<typeof OakHeader> = {
   parameters: {
     controls: {
       include: [
-        // include the argTypes from the storybook-helpers
-        // ...Object.keys(colorArgTypes),
-        // ...Object.keys(spacingArgTypes),
-        // ...Object.keys(borderArgTypes),
+        "headingTitle",
+        "authorName",
+        "authorTitle",
+        "subHeadingText",
         "type",
       ],
     },
@@ -45,6 +45,7 @@ const meta: Meta<typeof OakHeader> = {
     blogProfileAuthor: "Rachel Storm",
     authorTitle: "Head of School Support",
     authorName: "Rachel Storm",
+    authorImageSrc: `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/test-images/test_author.jpg`,
     subHeadingText:
       "Body 1 Our guide for teachers, whether you're in your ITT, an ECT or a teacher of many years experience looking for a fresh look on lesson planning, is place to dive into expertise from across the sector.",
     heroImageSrc: `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/sample.jpg`,

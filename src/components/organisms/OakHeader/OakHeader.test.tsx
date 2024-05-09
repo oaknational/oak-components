@@ -8,7 +8,6 @@ import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 const oakHeaderProps: OakHeaderProps = {
   headingTitle: "How to plan a lesson: a helpful guide for teachers",
-  backgroundColour: "grey70",
   authorTitle: "Head of School Support",
   authorName: "Rachel Storm",
   authorImageSrc: "https://via.placeholder.com/150",
