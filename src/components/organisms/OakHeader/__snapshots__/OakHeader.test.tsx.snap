@@ -10,7 +10,7 @@ exports[`OakHeader matches snapshot 1`] = `
   margin-right: auto;
   background: #a0b6f2;
   font-family: Lexend,sans-serif;
-  z-index: -1;
+  z-index: 0;
 }
 
 .c2 {
