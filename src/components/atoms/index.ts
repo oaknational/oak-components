@@ -18,3 +18,4 @@ export * from "./OakMaxWidth";
 export * from "./OakCloudinaryImage";
 export * from "./OakKbd";
 export * from "./OakGlobalStyle";
+export * from "./OakAnchorTarget";
