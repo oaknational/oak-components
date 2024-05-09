@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
 import styled, { css } from "styled-components";
 
+import { parseColor } from "@/styles/helpers/parseColor";
 import {
   OakFlex,
   OakP,
@@ -46,7 +47,7 @@ const UnstyledComponent = (props: OakHeaderProps) => {
     authorImageSrc,
   } = props;
   return (
-    <OakMaxWidth $background={"bg-decorative3-main"} $zIndex={"behind"}>
+    <OakMaxWidth $background={"lavender"} $zIndex={"behind"}>
       <OakFlex
         $minWidth={"100%"}
         $flexDirection={["column-reverse", "column-reverse", "row"]}
