@@ -6,7 +6,6 @@ import { OakHeader } from "./OakHeader";
 import { OakLink } from "@/components/molecules";
 
 const meta: Meta<typeof OakHeader> = {
-  //  "title" is the title of the story and where to look for compoent in the storybook
   title: "Components/organisms/OakHeader",
   component: OakHeader,
   tags: ["autodocs"],

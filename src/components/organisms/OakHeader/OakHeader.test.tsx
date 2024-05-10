@@ -18,10 +18,8 @@ const oakHeaderProps: OakHeaderProps = {
 
 describe("OakHeader", () => {
   it("renders", () => {
-    const { getByTestId } = renderWithTheme(
-      <OakHeader {...oakHeaderProps} data-testid="test" />,
-    );
-    expect(getByTestId("test")).toBeInTheDocument();
+    const { getByTestId } = renderWithTheme(<OakHeader {...oakHeaderProps} />);
+    expect(getByTestId("oak-header-component")).toBeInTheDocument();
   });
 
   it("matches snapshot", () => {
