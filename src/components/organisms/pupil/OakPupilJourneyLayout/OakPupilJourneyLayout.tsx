@@ -6,9 +6,10 @@ import { OakHandDrawnHR } from "@/components/molecules/OakHandDrawnHR";
 import { getBreakpoint } from "@/styles/utils/responsiveStyle";
 
 // TODO : This needs to be refactored into two components Layout and List
-// - the existing component can be adapted to include the title / header slot
-// - the existing component can also implement appropriate bottom padding
+// - the existing List component can be adapted to include the title / header slot
+// - the existing List component can also implement appropriate bottom padding
 // this will allow layout to be more easily reused for subject and year listings
+// Move the hard coded image urls into json data
 
 type PupilJourneySectionName =
   | "tier-listing"
