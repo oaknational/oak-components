@@ -1,6 +1,7 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
+import userEvent from "@testing-library/user-event";
 
 import { OakTertiaryOLNav, OakTertiaryOLNavProps } from "./OakTertiaryOLNav";
 
@@ -55,5 +56,17 @@ describe("Component OakTertiaryOLNav", () => {
       </OakThemeProvider>,
     ).toJSON();
     expect(tree).toMatchSnapshot();
+  });
+  it("applies aria-current to the current active link", async () => {
+    const { getByText } = renderWithTheme(<OakTertiaryOLNav {...baseProps} />);
+
+    const item1 = getByText("Item 1");
+    await userEvent.tab();
+    await userEvent.keyboard("{Enter}");
+
+    expect(item1.closest("a")).toHaveAttribute("aria-current", "true");
+
+    const item2 = getByText("Item 2");
+    expect(item2.closest("a")).not.toHaveAttribute("aria-current");
   });
 });

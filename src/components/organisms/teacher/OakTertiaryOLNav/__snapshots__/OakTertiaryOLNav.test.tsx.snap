@@ -153,19 +153,18 @@ exports[`Component OakTertiaryOLNav matches snapshot 1`] = `
 <nav
     aria-label="navigation"
     className="c0"
-    tabIndex={0}
   >
     <ol
       className="c1"
       role="list"
     >
       <li
-        aria-label="list item 1"
         className="c2 c3"
       >
         <a
           className="c4 c5"
           href="#item1"
+          onKeyDown={[Function]}
         >
           <span
             className="c6"
@@ -175,12 +174,12 @@ exports[`Component OakTertiaryOLNav matches snapshot 1`] = `
         </a>
       </li>
       <li
-        aria-label="list item 2"
         className="c2 c3"
       >
         <a
           className="c4 c5"
           href="#item2"
+          onKeyDown={[Function]}
         >
           <span
             className="c6"
