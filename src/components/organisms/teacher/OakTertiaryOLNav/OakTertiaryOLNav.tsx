@@ -83,6 +83,8 @@ export type OakTertiaryOLNavProps = {
   items: { title: string; href: string }[];
   ariaLabel?: string;
   anchorTarget?: string;
+  currentHref?: string | null;
+  onClick?: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
 };
 
 export const OakTertiaryOLNav = ({
@@ -90,24 +92,28 @@ export const OakTertiaryOLNav = ({
   ariaLabel,
   title,
   anchorTarget,
+  currentHref,
+  onClick,
   ...rest
 }: OakTertiaryOLNavProps) => {
   return (
-    <StyledNav tabIndex={0} aria-label={ariaLabel} {...rest}>
+    <StyledNav aria-label={ariaLabel} {...rest}>
       {anchorTarget && <OakAnchorTarget id={anchorTarget} />}
       {title && (
         <OakBox $mb={"space-between-m"}>
-          <OakSpan $font={"heading-light-7"}>{"Contents"}</OakSpan>
+          <OakSpan $font={"heading-light-7"}>{title}</OakSpan>
         </OakBox>
       )}
       <StyledOL role="list">
         {items.map((item, index) => (
-          <StyledOLItem
-            aria-label={`list item ${index + 1}`}
-            $font={"heading-7"}
-            key={index}
-          >
-            <StyledOakLink href={item.href}>{item.title}</StyledOakLink>
+          <StyledOLItem $font={"heading-7"} key={index}>
+            <StyledOakLink
+              aria-current={item.href === currentHref ? "true" : undefined}
+              onClick={onClick}
+              href={item.href}
+            >
+              {item.title}
+            </StyledOakLink>
           </StyledOLItem>
         ))}
       </StyledOL>

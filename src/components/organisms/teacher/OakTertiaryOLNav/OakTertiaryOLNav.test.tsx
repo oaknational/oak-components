@@ -56,4 +56,17 @@ describe("Component OakTertiaryOLNav", () => {
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
+  it("applies aria-current to the current active link", () => {
+    const currentHref = "#item1";
+    const { getByText } = renderWithTheme(
+      <OakTertiaryOLNav {...baseProps} currentHref={currentHref} />,
+    );
+
+    const item1 = getByText("Item 1");
+
+    expect(item1.closest("a")).toHaveAttribute("aria-current", "true");
+
+    const item2 = getByText("Item 2");
+    expect(item2.closest("a")).not.toHaveAttribute("aria-current");
+  });
 });
