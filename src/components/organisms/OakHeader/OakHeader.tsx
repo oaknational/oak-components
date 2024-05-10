@@ -8,6 +8,7 @@ import {
   OakBox,
   OakImage,
   OakThemeProvider,
+  OakMaxWidth,
 } from "@/components/atoms";
 import { oakDefaultTheme } from "@/styles";
 
@@ -30,7 +31,7 @@ const StyledOakImage = styled(OakImage)`
   height: 50px;
   margin-right: 12px;
   img {
-    border-radius: 69px;
+    border-radius: 50%;
   }
 `;
 
@@ -48,102 +49,117 @@ const UnstyledComponent = (props: OakHeaderProps) => {
   } = props;
   return (
     <OakThemeProvider theme={oakDefaultTheme}>
-      <OakFlex
-        $minWidth={"100%"}
-        $flexDirection={["column-reverse", "column-reverse", "row"]}
-        $alignItems={["center", null]}
-        $minHeight={"all-spacing-20"}
-        $background={"bg-decorative3-main"}
-        $zIndex={"neutral"}
-        $justifyContent={["space-evenly"]}
-        data-testid="oak-header-component"
-      >
-        <OakFlex
-          $alignSelf={"flex-start"}
-          $ph={"inner-padding-m"}
-          $height={"100%"}
-          $flexDirection={"column"}
-        >
-          <OakBox $display={["none", "none", "block"]} $pv={"inner-padding-xl"}>
-            {breadcrumbs}
-          </OakBox>
+      <OakBox $width={"100%"} $background={"bg-decorative3-main"}>
+        <OakMaxWidth>
           <OakFlex
-            $flexDirection={"column"}
-            $maxWidth={"all-spacing-22"}
+            $minWidth={"100%"}
+            $flexDirection={["column-reverse", "column-reverse", "row"]}
+            $alignItems={["center", null]}
             $minHeight={"all-spacing-20"}
-            $justifyContent={"center"}
+            $background={"bg-decorative3-main"}
+            $zIndex={"neutral"}
+            $justifyContent={["space-between"]}
+            data-testid="oak-header-component"
           >
-            <OakHeading
-              tag="h2"
-              $color={"grey80"}
-              $font={["heading-4", "heading-3"]}
-              $mb={"space-between-m"}
-            >
-              {headingTitle}
-            </OakHeading>
             <OakFlex
-              $mb={"space-between-m"}
-              $flexDirection={"row"}
-              $alignItems={"center"}
+              $alignSelf={"flex-start"}
+              $ph={"inner-padding-m"}
+              $height={"100%"}
+              $flexDirection={"column"}
             >
-              <StyledOakImage
-                alt={`${authorName} profile image`}
-                src={authorImageSrc}
+              <OakBox
+                $display={["none", "none", "block"]}
+                $pv={"inner-padding-xl"}
+              >
+                {breadcrumbs}
+              </OakBox>
+              <OakFlex
+                $flexDirection={"column"}
+                $maxWidth={"all-spacing-22"}
+                $minHeight={"all-spacing-20"}
+                $justifyContent={"center"}
+              >
+                <OakHeading
+                  tag="h2"
+                  $color={"grey80"}
+                  $font={["heading-4", "heading-3"]}
+                  $mb={"space-between-m"}
+                >
+                  {headingTitle}
+                </OakHeading>
+                <OakFlex
+                  $mb={"space-between-m"}
+                  $flexDirection={"row"}
+                  $alignItems={"center"}
+                >
+                  <StyledOakImage
+                    alt={`${authorName} profile image`}
+                    src={authorImageSrc}
+                    $zIndex={"in-front"}
+                  />
+                  <OakBox>
+                    <OakHeading tag="h3" $font={"heading-7"}>
+                      {authorName}
+                    </OakHeading>
+                    <OakP>{authorTitle}</OakP>
+                  </OakBox>
+                </OakFlex>
+                <OakP $mb={["space-between-l", "space-between-none"]}>
+                  {subHeadingText}
+                </OakP>
+              </OakFlex>
+            </OakFlex>
+
+            <OakFlex
+              $minWidth={["all-spacing-18", "all-spacing-21"]}
+              $minHeight={["all-spacing-18", "all-spacing-21"]}
+              $position={"relative"}
+              $alignItems={"center"}
+              $justifyContent={"center"}
+            >
+              <OakImage
+                $transform={"rotate(-2.025deg)"}
+                src={heroImageSrc}
+                $minHeight={[
+                  "all-spacing-16",
+                  "all-spacing-21",
+                  "all-spacing-20",
+                ]}
+                $minWidth={[
+                  "all-spacing-16",
+                  "all-spacing-21",
+                  "all-spacing-21",
+                ]}
+                alt={`${headingTitle} hero image`}
                 $zIndex={"in-front"}
               />
-              <OakBox>
-                <OakHeading tag="h3" $font={"heading-7"}>
-                  {authorName}
-                </OakHeading>
-                <OakP>{authorTitle}</OakP>
-              </OakBox>
+              <OakFlex
+                $position={"absolute"}
+                $top={"all-spacing-0"}
+                $bottom={"all-spacing-0"}
+                $width={["all-spacing-21", "all-spacing-23"]}
+              >
+                <OakImage
+                  src={
+                    "https://res.cloudinary.com/oak-web-application/image/upload/v1699887218/ui-graphics/loopdown.svg"
+                  }
+                  alt="loopdown ui-graphic"
+                  $position={"absolute"}
+                  $height={"100%"}
+                />
+              </OakFlex>
             </OakFlex>
-            <OakP $mb={["space-between-l", "space-between-none"]}>
-              {subHeadingText}
-            </OakP>
+            <OakFlex
+              $alignSelf={"flex-start"}
+              $ml={"space-between-m"}
+              $pv={"inner-padding-xl"}
+              $display={["block", "block", "none"]}
+            >
+              {breadcrumbs}
+            </OakFlex>
           </OakFlex>
-        </OakFlex>
-
-        <OakFlex
-          $minWidth={["all-spacing-18", "all-spacing-21"]}
-          $minHeight={["all-spacing-18", "all-spacing-21"]}
-          $position={"relative"}
-          $alignItems={"center"}
-          $justifyContent={"center"}
-        >
-          <OakImage
-            $transform={"rotate(-2.025deg)"}
-            src={heroImageSrc}
-            $minHeight={["all-spacing-16", "all-spacing-21", "all-spacing-20"]}
-            $minWidth={["all-spacing-16", "all-spacing-21", "all-spacing-21"]}
-            alt={`${headingTitle} hero image`}
-            $zIndex={"in-front"}
-          />
-          <OakFlex
-            $position={"absolute"}
-            $top={"all-spacing-0"}
-            $bottom={"all-spacing-0"}
-            $width={["all-spacing-21", "all-spacing-23"]}
-          >
-            <OakImage
-              src={
-                "https://res.cloudinary.com/oak-web-application/image/upload/v1699887218/ui-graphics/loopdown.svg"
-              }
-              alt="loopdown ui-graphic"
-              $position={"absolute"}
-              $height={"100%"}
-            />
-          </OakFlex>
-        </OakFlex>
-        <OakFlex
-          $alignSelf={"flex-start"}
-          $ml={"space-between-m"}
-          $pv={"inner-padding-xl"}
-          $display={["block", "block", "none"]}
-        >
-          {breadcrumbs}
-        </OakFlex>
-      </OakFlex>
+        </OakMaxWidth>
+      </OakBox>
     </OakThemeProvider>
   );
 };
