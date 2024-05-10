@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OakHeader matches snapshot 1`] = `
+exports[`OakHeaderHero matches snapshot 1`] = `
 .c0 {
   width: 100%;
   background: #a0b6f2;

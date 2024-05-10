@@ -1,19 +1,18 @@
 import React from "react";
 import { StoryObj, Meta } from "@storybook/react";
 
-import { OakHeader } from "./OakHeader";
+import { OakHeaderHero } from "./OakHeaderHero";
 
 import { OakLink } from "@/components/molecules";
 
-const meta: Meta<typeof OakHeader> = {
-  title: "Components/organisms/OakHeader",
-  component: OakHeader,
+const meta: Meta<typeof OakHeaderHero> = {
+  title: "Components/organisms/OakHeaderHero",
+  component: OakHeaderHero,
   tags: ["autodocs"],
   argTypes: {
     headingTitle: { type: "string" },
     authorName: { type: "string" },
     authorTitle: { type: "string" },
-    backgroundColour: { type: "string" },
     heroImageSrc: { type: "string" },
     heroImageAlt: { type: "string" },
     imageSrc: { type: "string" },
@@ -54,9 +53,9 @@ const meta: Meta<typeof OakHeader> = {
 
 export default meta;
 
-type Story = StoryObj<typeof OakHeader>;
+type Story = StoryObj<typeof OakHeaderHero>;
 
 export const Default: Story = {
-  render: (args) => <OakHeader {...args} />,
+  render: (args) => <OakHeaderHero {...args} />,
   args: {},
 };

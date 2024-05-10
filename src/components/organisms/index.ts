@@ -7,4 +7,4 @@ export * from "./OakCookieBanner";
 export * from "./OakCookieSettingsModal";
 export * from "./OakCookieConsentProvider";
 export * from "./OakCookieConsent";
-export * from "./OakHeader";
+export * from "./OakHeaderHero";
