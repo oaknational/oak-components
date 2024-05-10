@@ -84,7 +84,7 @@ exports[`OakHeader matches snapshot 1`] = `
   position: absolute;
   top: 0rem;
   bottom: 0rem;
-  width: 30rem;
+  width: 22.5rem;
   font-family: Lexend,sans-serif;
 }
 
@@ -354,6 +354,12 @@ exports[`OakHeader matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
+  .c23 {
+    width: 60rem;
+  }
+}
+
+@media (min-width:1280px) {
   .c23 {
     width: 60rem;
   }
