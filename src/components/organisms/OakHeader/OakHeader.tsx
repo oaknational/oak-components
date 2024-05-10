@@ -26,7 +26,7 @@ export type OakHeaderProps = {
 // By adding the style css utils to this components css your component will be able to accept corresponding props and prop values.
 // you can also add custom styles to the component by adding the styles to the css template literal below
 
-const StyledOakImage = styled(OakImage)`
+const StyledAutorImage = styled(OakImage)`
   width: 50px;
   height: 50px;
   margin-right: 12px;
@@ -101,7 +101,7 @@ const UnstyledComponent = (props: OakHeaderProps) => {
                   $flexDirection={"row"}
                   $alignItems={"center"}
                 >
-                  <StyledOakImage
+                  <StyledAutorImage
                     alt={`${authorName} profile image`}
                     src={authorImageSrc}
                     $zIndex={"in-front"}
@@ -123,7 +123,7 @@ const UnstyledComponent = (props: OakHeaderProps) => {
               $position={"relative"}
               $minHeight={[
                 "all-spacing-18",
-                "all-spacing-20",
+                "all-spacing-21",
                 "all-spacing-21",
               ]}
               $alignItems={"center"}
@@ -137,10 +137,15 @@ const UnstyledComponent = (props: OakHeaderProps) => {
               <OakImage
                 $transform={"rotate(-2.025deg)"}
                 src={heroImageSrc}
-                $minHeight={["all-spacing-16", "all-spacing-20"]}
-                $minWidth={[
-                  "all-spacing-16",
+                width={100}
+                $minHeight={[
+                  "all-spacing-19",
                   "all-spacing-20",
+                  "all-spacing-20",
+                ]}
+                $minWidth={[
+                  "all-spacing-19",
+                  "all-spacing-22",
                   "all-spacing-21",
                 ]}
                 alt={`${headingTitle} hero image`}
@@ -165,7 +170,8 @@ const UnstyledComponent = (props: OakHeaderProps) => {
             <OakFlex
               $alignSelf={"flex-start"}
               $ml={"space-between-m"}
-              $pv={"inner-padding-xl"}
+              $pt={"inner-padding-xl"}
+              $pb={[null, "inner-padding-xl"]}
               $display={["block", "block", "none"]}
             >
               {breadcrumbs}

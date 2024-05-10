@@ -71,8 +71,8 @@ exports[`OakHeader matches snapshot 1`] = `
 .c22 {
   position: relative;
   width: 100%;
-  min-width: 7.5rem;
-  min-height: 7.5rem;
+  min-width: 15rem;
+  min-height: 15rem;
   -webkit-transform: rotate(-2.025deg);
   -ms-transform: rotate(-2.025deg);
   transform: rotate(-2.025deg);
@@ -97,7 +97,6 @@ exports[`OakHeader matches snapshot 1`] = `
 
 .c26 {
   padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
   margin-left: 1.5rem;
   display: block;
   font-family: Lexend,sans-serif;
@@ -308,7 +307,7 @@ exports[`OakHeader matches snapshot 1`] = `
 
 @media (min-width:750px) {
   .c20 {
-    min-height: 22.5rem;
+    min-height: 30rem;
   }
 }
 
@@ -332,7 +331,7 @@ exports[`OakHeader matches snapshot 1`] = `
 
 @media (min-width:750px) {
   .c22 {
-    min-width: 22.5rem;
+    min-width: 40rem;
   }
 }
 
@@ -348,9 +347,21 @@ exports[`OakHeader matches snapshot 1`] = `
   }
 }
 
+@media (min-width:1280px) {
+  .c22 {
+    min-height: 22.5rem;
+  }
+}
+
 @media (min-width:750px) {
   .c23 {
     width: 60rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c26 {
+    padding-bottom: 1.5rem;
   }
 }
 
