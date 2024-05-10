@@ -97,7 +97,7 @@ export const OakTertiaryOLNav = ({
   const [currentHref, setCurrentHref] = useState<string | null>(null);
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLAnchorElement>) => {
-    if (event.key) {
+    if (event.key && event.key !== "Tab") {
       setCurrentHref(event.currentTarget.hash);
     }
   };
