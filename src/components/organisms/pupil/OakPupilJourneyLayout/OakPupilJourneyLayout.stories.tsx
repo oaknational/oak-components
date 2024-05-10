@@ -23,7 +23,13 @@ const meta: Meta<typeof OakPupilJourneyLayout> = {
     sectionName: {
       control: {
         type: "select",
-        options: ["tier-listing", "unit-listing", "lesson-listing"],
+        options: [
+          "tier-listing",
+          "unit-listing",
+          "lesson-listing",
+          "subject-listing",
+          "year-listing",
+        ],
       },
     },
   },
@@ -69,4 +75,38 @@ export const Default: Story = {
       </OakBox>
     </OakPupilJourneyLayout>
   ),
+};
+
+export const NoTitle: Story = {
+  render: ({ sectionName, ...args }) => (
+    <OakPupilJourneyLayout
+      {...args}
+      topNavSlot={
+        <OakTertiaryButton iconName="arrow-left" href={"#"} element="a">
+          Change year
+        </OakTertiaryButton>
+      }
+      sectionName={sectionName}
+    >
+      <OakBox $background={"bg-neutral"} $minHeight={"all-spacing-20"}>
+        <p>Section content</p>
+      </OakBox>
+    </OakPupilJourneyLayout>
+  ),
+  args: {
+    sectionName: "subject-listing",
+  },
+};
+
+export const NoTitleNoTopNav: Story = {
+  render: ({ sectionName, ...args }) => (
+    <OakPupilJourneyLayout {...args} sectionName={sectionName}>
+      <OakBox $background={"bg-neutral"} $minHeight={"all-spacing-20"}>
+        <p>Section content</p>
+      </OakBox>
+    </OakPupilJourneyLayout>
+  ),
+  args: {
+    sectionName: "subject-listing",
+  },
 };

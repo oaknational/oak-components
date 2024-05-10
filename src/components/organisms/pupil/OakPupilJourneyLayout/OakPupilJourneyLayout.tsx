@@ -1,34 +1,42 @@
 import React, { ReactNode } from "react";
 import styled, { css } from "styled-components";
 
-import { OakFlex } from "@/components/atoms";
+import { OakBox, OakFlex } from "@/components/atoms";
 import { OakHandDrawnHR } from "@/components/molecules/OakHandDrawnHR";
 import { getBreakpoint } from "@/styles/utils/responsiveStyle";
 
+// TODO : This needs to be refactored into two components Layout and List
+// - the existing component can be adapted to include the title / header slot
+// - the existing component can also implement appropriate bottom padding
+// this will allow layout to be more easily reused for subject and year listings
+
 type PupilJourneySectionName =
   | "tier-listing"
+  | "examboard-listing"
   | "unit-listing"
-  | "lesson-listing";
+  | "lesson-listing"
+  | "subject-listing"
+  | "year-listing";
 
 type Phase = "primary" | "secondary";
 
 export type OakPupilJourneyLayoutProps = {
   sectionName: PupilJourneySectionName;
-  topNavSlot: ReactNode;
-  titleSlot: ReactNode;
-  phase: Phase;
+  topNavSlot?: ReactNode;
+  titleSlot?: ReactNode;
+  phase?: Phase;
   children: ReactNode;
 };
 
 const StyledLayoutBox = styled(OakFlex)<{
   sectionName: PupilJourneySectionName;
-  phase: Phase;
+  phase?: Phase;
 }>`
   @media (min-width: ${getBreakpoint("large")}px) {
     ${(props) => css`
       background-image: url(${getBackgroundUrlForSection(
         props.sectionName,
-        props.phase,
+        props?.phase,
       )});
       background-repeat: no-repeat;
       background-position-x: center;
@@ -51,50 +59,61 @@ export const OakPupilJourneyLayout = ({
   phase,
   children,
 }: OakPupilJourneyLayoutProps) => {
+  const backgroundColor = (() => {
+    switch (true) {
+      case sectionName === "lesson-listing" && phase === "primary":
+        return "bg-decorative4-very-subdued";
+      case sectionName === "lesson-listing" && phase === "secondary":
+        return "bg-decorative3-very-subdued";
+      case sectionName === "unit-listing" && phase === "primary":
+        return "bg-decorative4-very-subdued";
+      case sectionName === "unit-listing" && phase === "secondary":
+        return "bg-decorative3-very-subdued";
+      case sectionName === "subject-listing":
+      case sectionName === "year-listing":
+        return "bg-decorative1-main";
+    }
+  })();
+
   return (
     <StyledLayoutBox
-      $ph={["inner-padding-s", "inner-padding-xl"]}
-      $background={
-        phase === "primary"
-          ? "bg-decorative4-very-subdued"
-          : "bg-decorative3-very-subdued"
-      }
+      $background={backgroundColor}
       $flexDirection="column"
       $alignItems={"center"}
+      $ph={["inner-padding-s", "inner-padding-xl"]}
       sectionName={sectionName}
       phase={phase}
     >
       {topNavSlot && (
         <OakFlex
           $height={["all-spacing-13", "all-spacing-14", "all-spacing-16"]}
-          $background={"transparent"}
           $alignItems={"center"}
-          $maxWidth={"100%"}
           $width={["100%", "100%", "all-spacing-24"]}
         >
           {topNavSlot}
         </OakFlex>
       )}
-      <OakFlex
-        $flexDirection="column"
-        $maxWidth={["100%", "all-spacing-22"]}
-        $minWidth={["100%", "all-spacing-22", "all-spacing-23"]}
-        $pt={["inner-padding-none", "inner-padding-m"]}
-        $mb={["space-between-l", "space-between-l", "space-between-xl"]}
-      >
-        <OakFlex $flexDirection={"column"} $gap={["space-between-m2"]}>
+      {titleSlot ? (
+        <OakFlex
+          $flexDirection={"column"}
+          $gap={["space-between-m2"]}
+          $width={["100%", "all-spacing-22", "all-spacing-23"]}
+          $pt={["inner-padding-none", "inner-padding-m"]}
+        >
           {titleSlot}
           <OakHandDrawnHR hrColor={"white"} $height={"all-spacing-1"} />
-          {children}
+          <OakBox $width={"100%"}>{children}</OakBox>
         </OakFlex>
-      </OakFlex>
+      ) : (
+        <OakBox $width={"100%"}>{children}</OakBox>
+      )}
     </StyledLayoutBox>
   );
 };
 
 function getBackgroundUrlForSection(
   sectionName: PupilJourneySectionName,
-  phase: Phase,
+  phase?: Phase,
 ) {
   switch (sectionName) {
     case "lesson-listing":
@@ -105,6 +124,10 @@ function getBackgroundUrlForSection(
       return phase === "primary"
         ? "https://res.cloudinary.com/oak-web-application/image/upload/v1699887218/pupil-journey/Line_Background_1_q2dn7p.svg"
         : "https://res.cloudinary.com/oak-web-application/image/upload/v1699887218/pupil-journey/Line_Background_toygyu.svg";
+    case "subject-listing":
+      return "https://res.cloudinary.com/oak-web-application/image/upload/v1715356384/pupil-journey/Line_Background_mint_rqnskp.svg";
+    case "year-listing":
+      return "https://res.cloudinary.com/oak-web-application/image/upload/v1715357422/pupil-journey/Confetti_Background_mint_chm1nv.svg";
     default:
       return "";
   }
