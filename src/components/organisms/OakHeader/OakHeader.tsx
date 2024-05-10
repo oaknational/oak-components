@@ -155,7 +155,7 @@ const UnstyledComponent = (props: OakHeaderProps) => {
                 $position={"absolute"}
                 $top={"all-spacing-0"}
                 $bottom={"all-spacing-0"}
-                $width={["all-spacing-21", "all-spacing-23"]}
+                $width={["all-spacing-20", "all-spacing-23", "all-spacing-23"]}
               >
                 <OakImage
                   src={
