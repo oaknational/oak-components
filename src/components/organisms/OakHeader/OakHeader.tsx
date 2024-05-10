@@ -23,9 +23,6 @@ export type OakHeaderProps = {
   children?: ReactNode;
 };
 
-// By adding the style css utils to this components css your component will be able to accept corresponding props and prop values.
-// you can also add custom styles to the component by adding the styles to the css template literal below
-
 const StyledAutorImage = styled(OakImage)`
   width: 50px;
   height: 50px;

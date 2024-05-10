@@ -35,7 +35,6 @@ const meta: Meta<typeof OakHeader> = {
   },
   args: {
     headingTitle: "How to plan a lesson: a helpful guide for teachers",
-    backgroundColour: "bg-decorative3-main",
     //Breadcrumb component doesn't exist in the storybook/component library
     breadcrumbs: (
       <>
