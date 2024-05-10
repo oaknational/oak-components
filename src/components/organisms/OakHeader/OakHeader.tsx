@@ -76,7 +76,16 @@ const UnstyledComponent = (props: OakHeaderProps) => {
               <OakFlex
                 $flexDirection={"column"}
                 $maxWidth={"all-spacing-22"}
-                $minHeight={"all-spacing-20"}
+                $minHeight={[
+                  "all-spacing-0",
+                  "all-spacing-0",
+                  "all-spacing-20",
+                ]}
+                $mb={[
+                  "space-between-none",
+                  "space-between-l",
+                  "space-between-none",
+                ]}
                 $justifyContent={"center"}
               >
                 <OakHeading
@@ -111,23 +120,27 @@ const UnstyledComponent = (props: OakHeaderProps) => {
             </OakFlex>
 
             <OakFlex
-              $minWidth={["all-spacing-18", "all-spacing-21"]}
-              $minHeight={["all-spacing-18", "all-spacing-21"]}
               $position={"relative"}
+              $minHeight={[
+                "all-spacing-18",
+                "all-spacing-20",
+                "all-spacing-21",
+              ]}
               $alignItems={"center"}
               $justifyContent={"center"}
+              $mb={[
+                "space-between-none",
+                "space-between-m2",
+                "space-between-none",
+              ]}
             >
               <OakImage
                 $transform={"rotate(-2.025deg)"}
                 src={heroImageSrc}
-                $minHeight={[
-                  "all-spacing-16",
-                  "all-spacing-21",
-                  "all-spacing-20",
-                ]}
+                $minHeight={["all-spacing-16", "all-spacing-20"]}
                 $minWidth={[
                   "all-spacing-16",
-                  "all-spacing-21",
+                  "all-spacing-20",
                   "all-spacing-21",
                 ]}
                 alt={`${headingTitle} hero image`}

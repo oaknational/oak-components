@@ -41,7 +41,8 @@ exports[`OakHeader matches snapshot 1`] = `
 
 .c8 {
   max-width: 40rem;
-  min-height: 22.5rem;
+  min-height: 0rem;
+  margin-bottom: 0rem;
   font-family: Lexend,sans-serif;
 }
 
@@ -62,8 +63,8 @@ exports[`OakHeader matches snapshot 1`] = `
 
 .c20 {
   position: relative;
-  min-width: 11.25rem;
   min-height: 11.25rem;
+  margin-bottom: 0rem;
   font-family: Lexend,sans-serif;
 }
 
@@ -282,20 +283,56 @@ exports[`OakHeader matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c20 {
-    min-width: 30rem;
+  .c8 {
+    min-height: 0rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c8 {
+    min-height: 22.5rem;
   }
 }
 
 @media (min-width:750px) {
+  .c8 {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c8 {
+    margin-bottom: 0rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c20 {
+    min-height: 22.5rem;
+  }
+}
+
+@media (min-width:1280px) {
   .c20 {
     min-height: 30rem;
   }
 }
 
 @media (min-width:750px) {
+  .c20 {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c20 {
+    margin-bottom: 0rem;
+  }
+}
+
+@media (min-width:750px) {
   .c22 {
-    min-width: 30rem;
+    min-width: 22.5rem;
   }
 }
 
@@ -306,12 +343,6 @@ exports[`OakHeader matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c22 {
-    min-height: 30rem;
-  }
-}
-
-@media (min-width:1280px) {
   .c22 {
     min-height: 22.5rem;
   }
