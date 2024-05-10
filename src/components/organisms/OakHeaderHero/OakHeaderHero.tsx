@@ -7,11 +7,9 @@ import {
   OakHeading,
   OakBox,
   OakImage,
-  OakThemeProvider,
   OakMaxWidth,
   OakIcon,
 } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
 
 export type OakHeaderHeroProps = {
   headingTitle: string;
