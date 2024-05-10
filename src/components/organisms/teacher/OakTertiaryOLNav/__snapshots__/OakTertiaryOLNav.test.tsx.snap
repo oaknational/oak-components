@@ -164,6 +164,7 @@ exports[`Component OakTertiaryOLNav matches snapshot 1`] = `
         <a
           className="c4 c5"
           href="#item1"
+          onKeyDown={[Function]}
         >
           <span
             className="c6"
@@ -178,6 +179,7 @@ exports[`Component OakTertiaryOLNav matches snapshot 1`] = `
         <a
           className="c4 c5"
           href="#item2"
+          onKeyDown={[Function]}
         >
           <span
             className="c6"

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
 import { OakTertiaryOLNav, OakTertiaryOLNavProps } from "./OakTertiaryOLNav";
@@ -53,14 +53,9 @@ type Story = StoryObj<typeof OakTertiaryOLNav>;
 
 export const Default: Story = {
   render: (args) => {
-    const [currentHref, setCurrentHref] = useState<string | null>(null);
     return (
       <>
-        <OakTertiaryOLNav
-          {...args}
-          currentHref={currentHref}
-          onClick={(e) => setCurrentHref(e.currentTarget.hash)}
-        />
+        <OakTertiaryOLNav {...args} />
         <OakFlex
           $flexDirection={"column"}
           $mt={"space-between-l"}
