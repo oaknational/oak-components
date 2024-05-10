@@ -6,6 +6,8 @@ import { OakHeaderHero, OakHeaderHeroProps } from "./OakHeaderHero";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { OakLink } from "@/components/molecules";
+import { OakThemeProvider } from "@/components/atoms";
+import { oakDefaultTheme } from "@/styles";
 
 const oakHeaderProps: OakHeaderHeroProps = {
   headingTitle: "How to plan a lesson: a helpful guide for teachers",
@@ -26,8 +28,12 @@ describe("OakHeaderHero", () => {
     expect(getByTestId("oak-header-component")).toBeInTheDocument();
   });
 
-  it.skip("matches snapshot", () => {
-    const tree = create(<OakHeaderHero {...oakHeaderProps} />).toJSON();
+  it("matches snapshot", () => {
+    const tree = create(
+      <OakThemeProvider theme={oakDefaultTheme}>
+        <OakHeaderHero {...oakHeaderProps} />
+      </OakThemeProvider>,
+    ).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

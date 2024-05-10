@@ -39,36 +39,36 @@ exports[`OakHeaderHero matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c8 {
+.c10 {
   max-width: 40rem;
   min-height: 0rem;
   margin-bottom: 0rem;
   font-family: Lexend,sans-serif;
 }
 
-.c11 {
+.c13 {
   margin-bottom: 1.5rem;
   font-family: Lexend,sans-serif;
 }
 
-.c13 {
+.c15 {
   position: relative;
   width: 100%;
   font-family: Lexend,sans-serif;
 }
 
-.c16 {
+.c18 {
   font-family: Lexend,sans-serif;
 }
 
-.c20 {
+.c22 {
   position: relative;
   min-height: 11.25rem;
   margin-bottom: 0rem;
   font-family: Lexend,sans-serif;
 }
 
-.c22 {
+.c24 {
   position: relative;
   width: 100%;
   min-width: 15rem;
@@ -80,7 +80,7 @@ exports[`OakHeaderHero matches snapshot 1`] = `
   z-index: 1;
 }
 
-.c23 {
+.c25 {
   position: absolute;
   top: 0rem;
   bottom: 0rem;
@@ -88,14 +88,16 @@ exports[`OakHeaderHero matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c25 {
+.c27 {
   position: absolute;
   width: 100%;
+  min-width: 100%;
   height: 100%;
+  min-height: 100%;
   font-family: Lexend,sans-serif;
 }
 
-.c26 {
+.c28 {
   padding-top: 1.5rem;
   margin-left: 1.5rem;
   display: block;
@@ -147,7 +149,7 @@ exports[`OakHeaderHero matches snapshot 1`] = `
   align-self: flex-start;
 }
 
-.c9 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -161,7 +163,7 @@ exports[`OakHeaderHero matches snapshot 1`] = `
   justify-content: center;
 }
 
-.c12 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -175,7 +177,7 @@ exports[`OakHeaderHero matches snapshot 1`] = `
   align-items: center;
 }
 
-.c21 {
+.c23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -190,25 +192,29 @@ exports[`OakHeaderHero matches snapshot 1`] = `
   justify-content: center;
 }
 
-.c24 {
+.c26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c27 {
+.c29 {
   display: block;
   -webkit-align-self: flex-start;
   -ms-flex-item-align: start;
   align-self: flex-start;
 }
 
-.c15 {
+.c9 {
+  font-family: Lexend,sans-serif;
+}
+
+.c17 {
   object-fit: contain;
 }
 
-.c10 {
+.c12 {
   font-family: Lexend,sans-serif;
   font-weight: 600;
   font-size: 2rem;
@@ -221,7 +227,7 @@ exports[`OakHeaderHero matches snapshot 1`] = `
   color: #1b1b1b;
 }
 
-.c17 {
+.c19 {
   font-family: Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -232,23 +238,66 @@ exports[`OakHeaderHero matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c18 {
+.c20 {
   font-family: Lexend,sans-serif;
 }
 
-.c19 {
+.c21 {
   font-family: Lexend,sans-serif;
   margin-bottom: 3rem;
 }
 
-.c14 {
+.c16 {
   width: 50px;
   height: 50px;
   margin-right: 12px;
 }
 
-.c14 img {
+.c16 img {
   border-radius: 50%;
+}
+
+.c8 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.25rem;
+  outline: none;
+  border-radius: 0.375rem;
+  padding: 0.25rem;
+  margin: -0.25rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font: inherit;
+  background: none;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #0d24c4;
+}
+
+.c8:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c8:visited {
+  color: #081676;
+}
+
+.c8:active {
+  color: #081676;
+}
+
+.c8[disabled] {
+  cursor: not-allowed;
+  color: #808080;
 }
 
 @media (min-width:750px) {
@@ -282,103 +331,103 @@ exports[`OakHeaderHero matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c8 {
+  .c10 {
     min-height: 0rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c8 {
+  .c10 {
     min-height: 22.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c8 {
+  .c10 {
     margin-bottom: 3rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c8 {
+  .c10 {
     margin-bottom: 0rem;
   }
 }
 
 @media (min-width:750px) {
-  .c20 {
+  .c22 {
     min-height: 30rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c20 {
+  .c22 {
     min-height: 30rem;
   }
 }
 
 @media (min-width:750px) {
-  .c20 {
+  .c22 {
     margin-bottom: 2rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c20 {
+  .c22 {
     margin-bottom: 0rem;
   }
 }
 
 @media (min-width:750px) {
-  .c22 {
+  .c24 {
     min-width: 40rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c22 {
+  .c24 {
     min-width: 30rem;
   }
 }
 
 @media (min-width:750px) {
-  .c22 {
+  .c24 {
     min-height: 22.5rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c22 {
+  .c24 {
     min-height: 22.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c23 {
+  .c25 {
     width: 60rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c23 {
+  .c25 {
     width: 60rem;
   }
 }
 
 @media (min-width:750px) {
-  .c26 {
+  .c28 {
     padding-bottom: 1.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c26 {
+  .c28 {
     display: block;
   }
 }
 
 @media (min-width:1280px) {
-  .c26 {
+  .c28 {
     display: none;
   }
 }
@@ -404,37 +453,37 @@ exports[`OakHeaderHero matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c27 {
+  .c29 {
     display: block;
   }
 }
 
 @media (min-width:1280px) {
-  .c27 {
+  .c29 {
     display: none;
   }
 }
 
 @media (min-width:750px) {
-  .c10 {
+  .c12 {
     font-weight: 600;
   }
 }
 
 @media (min-width:750px) {
-  .c10 {
+  .c12 {
     font-size: 2.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c10 {
+  .c12 {
     line-height: 3rem;
   }
 }
 
 @media (min-width:750px) {
-  .c10 {
+  .c12 {
     -webkit-letter-spacing: 0.0115rem;
     -moz-letter-spacing: 0.0115rem;
     -ms-letter-spacing: 0.0115rem;
@@ -443,8 +492,15 @@ exports[`OakHeaderHero matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c19 {
+  .c21 {
     margin-bottom: 0rem;
+  }
+}
+
+@media (hover:hover) {
+  .c8:hover,
+  .c8:visited:hover {
+    color: #0a1d9d;
   }
 }
 
@@ -463,24 +519,35 @@ exports[`OakHeaderHero matches snapshot 1`] = `
       >
         <div
           className="c7"
-        />
+        >
+          <a
+            className="c8"
+            href="/home"
+          >
+            <span
+              className="c9"
+            >
+              Home
+            </span>
+          </a>
+        </div>
         <div
-          className="c8 c9"
+          className="c10 c11"
         >
           <h2
-            className="c10"
+            className="c12"
           >
             How to plan a lesson: a helpful guide for teachers
           </h2>
           <div
-            className="c11 c12"
+            className="c13 c14"
           >
             <div
-              className="c13 c14"
+              className="c15 c16"
             >
               <img
                 alt="Rachel Storm profile image"
-                className="c15"
+                className="c17"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"
@@ -506,36 +573,36 @@ exports[`OakHeaderHero matches snapshot 1`] = `
               />
             </div>
             <div
-              className="c16"
+              className="c18"
             >
               <h3
-                className="c17"
+                className="c19"
               >
                 Rachel Storm
               </h3>
               <p
-                className="c18"
+                className="c20"
               >
                 Head of School Support
               </p>
             </div>
           </div>
           <p
-            className="c19"
+            className="c21"
           >
             Body 1 Our guide for teachers, whether you're in your ITT, an ECT or a teacher of many years experience looking for a fresh look on lesson planning, is place to dive into expertise from across the sector.
           </p>
         </div>
       </div>
       <div
-        className="c20 c21"
+        className="c22 c23"
       >
         <div
-          className="c22"
+          className="c24"
         >
           <img
             alt="How to plan a lesson: a helpful guide for teachers hero image"
-            className="c15"
+            className="c17"
             data-nimg="fill"
             decoding="async"
             loading="lazy"
@@ -561,20 +628,20 @@ exports[`OakHeaderHero matches snapshot 1`] = `
           />
         </div>
         <div
-          className="c23 c24"
+          className="c25 c26"
         >
           <div
-            className="c25"
+            className="c27"
           >
             <img
               alt="loopdown ui-graphic"
-              className="c15"
+              className="c17"
               data-nimg="fill"
               decoding="async"
               loading="lazy"
               onError={[Function]}
               onLoad={[Function]}
-              src="https://res.cloudinary.com/oak-web-application/image/upload/v1699887218/ui-graphics/loopdown.svg"
+              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699887218/ui-graphics/loopdown.svg"
               style={
                 {
                   "bottom": 0,
@@ -594,8 +661,19 @@ exports[`OakHeaderHero matches snapshot 1`] = `
         </div>
       </div>
       <div
-        className="c26 c27"
-      />
+        className="c28 c29"
+      >
+        <a
+          className="c8"
+          href="/home"
+        >
+          <span
+            className="c9"
+          >
+            Home
+          </span>
+        </a>
+      </div>
     </div>
   </div>
 </div>
