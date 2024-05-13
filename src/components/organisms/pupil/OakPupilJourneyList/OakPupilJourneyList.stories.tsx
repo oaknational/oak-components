@@ -1,12 +1,13 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
+import { OakPupilJourneyListCounter } from "../OakPupilJourneyListCounter";
+import { OakPupilJourneyPreviousLessons } from "../OakPupilJourneyPreviousLessons";
+
 import { OakPupilJourneyList } from "./OakPupilJourneyList";
 
 import { OakPupilJourneyListItem } from "@/components/organisms/pupil/OakPupilJourneyListItem";
 import { OakPupilJourneyHeader } from "@/components/organisms/pupil/OakPupilJourneyHeader";
-import { OakPupilJourneyListCounter } from "../OakPupilJourneyListCounter";
-import { OakPupilJourneyPreviousLessons } from "../OakPupilJourneyPreviousLessons";
 
 const meta: Meta<typeof OakPupilJourneyList> = {
   component: OakPupilJourneyList,
