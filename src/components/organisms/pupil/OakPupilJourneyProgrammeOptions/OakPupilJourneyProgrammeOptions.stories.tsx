@@ -38,7 +38,7 @@ export const Default: Story = {
         />
       }
       optionTitleSlot={
-        <OakHeading $font={"heading-6"} tag="h2" $textAlign={"center"}>
+        <OakHeading $font={"heading-6"} tag="h3" $textAlign={"center"}>
           Choose an exam board
         </OakHeading>
       }
