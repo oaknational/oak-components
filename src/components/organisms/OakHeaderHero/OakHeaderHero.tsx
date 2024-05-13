@@ -101,10 +101,13 @@ const UnstyledComponent = (props: OakHeaderHeroProps) => {
                   <OakHeading tag="h3" $font={"heading-7"}>
                     {authorName}
                   </OakHeading>
-                  <OakP $font={"body-1"}>{authorTitle}</OakP>
+                  <OakP $font={"body-3"}>{authorTitle}</OakP>
                 </OakBox>
               </OakFlex>
-              <OakP $mb={["space-between-l", "space-between-none"]}>
+              <OakP
+                $font={"body-1"}
+                $mb={["space-between-l", "space-between-none"]}
+              >
                 {subHeadingText}
               </OakP>
             </OakFlex>
