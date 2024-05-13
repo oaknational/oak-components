@@ -5,7 +5,7 @@ import { OakPupilJourneyListCounter } from "../OakPupilJourneyListCounter";
 import { OakBulletList, OakBulletListProps } from "@/components/molecules";
 import { OakFlex } from "@/components/atoms";
 
-export type OakPreviousLessonsHeadingProps = {
+export type OakPupilJourneyPreviousLessonsProps = {
   numberOfLessons: number;
 } & OakBulletListProps;
 
@@ -18,8 +18,8 @@ export type OakPreviousLessonsHeadingProps = {
  *
  *
  */
-export const OakPreviousLessonsHeading = (
-  props: OakPreviousLessonsHeadingProps,
+export const OakPupilJourneyPreviousLessons = (
+  props: OakPupilJourneyPreviousLessonsProps,
 ) => {
   const { numberOfLessons, listItems } = props;
 
@@ -28,7 +28,8 @@ export const OakPreviousLessonsHeading = (
       $flexDirection={["column", "row"]}
       $flexWrap={"wrap"}
       $justifyContent={"space-between"}
-      $alignItems={"flex-start"}
+      $flexGrow={[null, 1]}
+      $alignItems={["flex-start", "center"]}
       $gap={"space-between-m"}
       $mt={"space-between-m2"}
     >

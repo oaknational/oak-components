@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OakPreviousLessonsHeading matches snapshot 1`] = `
+exports[`OakPupilJourneyPreviousLessons matches snapshot 1`] = `
 [
   " ",
   .c0 {
@@ -73,6 +73,24 @@ exports[`OakPreviousLessonsHeading matches snapshot 1`] = `
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
+  }
+}
+
+@media (min-width:750px) {
+  .c1 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media (min-width:750px) {
+  .c1 {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
   }
 }
 

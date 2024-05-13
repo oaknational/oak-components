@@ -112,3 +112,14 @@ export const icons = {
 } as const;
 
 export type IconName = keyof typeof icons;
+
+export const backgrounds = {
+  "confetti-pink": "pupil-journey/confetti-pink.svg",
+  "confetti-lavender": "pupil-journey/confetti-lavender.svg",
+  "confetti-mint": "pupil-journey/confetti-mint.svg",
+  "line-pink": "pupil-journey/line-pink.svg",
+  "line-lavender": "pupil-journey/line-lavender.svg",
+  "line-mint": "pupil-journey/line-mint.svg",
+} as const;
+
+export type BackgroundName = keyof typeof backgrounds;

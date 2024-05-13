@@ -1,11 +1,9 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakPupilJourneyHeader } from "../OakPupilJourneyHeader";
-
 import { OakPupilJourneyLayout } from "./OakPupilJourneyLayout";
 
-import { OakBox, OakFlex } from "@/components/atoms";
+import { OakBox } from "@/components/atoms";
 import { OakTertiaryButton } from "@/components/molecules";
 
 const meta: Meta<typeof OakPupilJourneyLayout> = {
@@ -23,7 +21,13 @@ const meta: Meta<typeof OakPupilJourneyLayout> = {
     sectionName: {
       control: {
         type: "select",
-        options: ["tier-listing", "unit-listing", "lesson-listing"],
+        options: [
+          "tier-listing",
+          "unit-listing",
+          "lesson-listing",
+          "subject-listing",
+          "year-listing",
+        ],
       },
     },
   },
@@ -52,21 +56,28 @@ export const Default: Story = {
         </OakTertiaryButton>
       }
       sectionName={sectionName}
-      titleSlot={
-        <OakFlex>
-          <OakPupilJourneyHeader
-            iconBackground={args.phase}
-            iconName="subject-science"
-            alt="icon"
-            breadcrumbs={["first", "second", "third", "fourth"]}
-            title="Pupil Journey Header"
-          />
-        </OakFlex>
-      }
     >
+      <OakBox
+        $background={"bg-neutral"}
+        $width={["100%", "100%", "all-spacing-23"]}
+        $minHeight={"all-spacing-24"}
+        $mb="space-between-m"
+      >
+        <p>Section content</p>
+      </OakBox>
+    </OakPupilJourneyLayout>
+  ),
+};
+
+export const NoTopNav: Story = {
+  render: ({ sectionName, ...args }) => (
+    <OakPupilJourneyLayout {...args} sectionName={sectionName}>
       <OakBox $background={"bg-neutral"} $minHeight={"all-spacing-20"}>
         <p>Section content</p>
       </OakBox>
     </OakPupilJourneyLayout>
   ),
+  args: {
+    sectionName: "subject-listing",
+  },
 };

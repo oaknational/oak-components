@@ -2,33 +2,35 @@ import React, { ReactNode } from "react";
 import styled, { css } from "styled-components";
 
 import { OakFlex } from "@/components/atoms";
-import { OakHandDrawnHR } from "@/components/molecules/OakHandDrawnHR";
 import { getBreakpoint } from "@/styles/utils/responsiveStyle";
+import { backgrounds } from "@/image-map";
 
 type PupilJourneySectionName =
   | "tier-listing"
+  | "examboard-listing"
   | "unit-listing"
-  | "lesson-listing";
+  | "lesson-listing"
+  | "subject-listing"
+  | "year-listing";
 
 type Phase = "primary" | "secondary";
 
 export type OakPupilJourneyLayoutProps = {
   sectionName: PupilJourneySectionName;
-  topNavSlot: ReactNode;
-  titleSlot: ReactNode;
-  phase: Phase;
+  phase?: Phase;
+  topNavSlot?: ReactNode;
   children: ReactNode;
 };
 
 const StyledLayoutBox = styled(OakFlex)<{
   sectionName: PupilJourneySectionName;
-  phase: Phase;
+  phase?: Phase;
 }>`
   @media (min-width: ${getBreakpoint("large")}px) {
     ${(props) => css`
       background-image: url(${getBackgroundUrlForSection(
         props.sectionName,
-        props.phase,
+        props?.phase,
       )});
       background-repeat: no-repeat;
       background-position-x: center;
@@ -46,65 +48,68 @@ const StyledLayoutBox = styled(OakFlex)<{
 
 export const OakPupilJourneyLayout = ({
   sectionName,
-  titleSlot,
   topNavSlot,
   phase,
   children,
 }: OakPupilJourneyLayoutProps) => {
+  const backgroundColor = (() => {
+    switch (true) {
+      case sectionName === "lesson-listing" && phase === "primary":
+        return "bg-decorative4-very-subdued";
+      case sectionName === "lesson-listing" && phase === "secondary":
+        return "bg-decorative3-very-subdued";
+      case sectionName === "unit-listing" && phase === "primary":
+        return "bg-decorative4-very-subdued";
+      case sectionName === "unit-listing" && phase === "secondary":
+        return "bg-decorative3-very-subdued";
+      case sectionName === "subject-listing":
+      case sectionName === "year-listing":
+        return "bg-decorative1-main";
+    }
+  })();
+
   return (
     <StyledLayoutBox
-      $ph={["inner-padding-s", "inner-padding-xl"]}
-      $background={
-        phase === "primary"
-          ? "bg-decorative4-very-subdued"
-          : "bg-decorative3-very-subdued"
-      }
+      $background={backgroundColor}
       $flexDirection="column"
       $alignItems={"center"}
+      $ph={["inner-padding-s", "inner-padding-xl"]}
       sectionName={sectionName}
       phase={phase}
     >
       {topNavSlot && (
         <OakFlex
           $height={["all-spacing-13", "all-spacing-14", "all-spacing-16"]}
-          $background={"transparent"}
           $alignItems={"center"}
-          $maxWidth={"100%"}
           $width={["100%", "100%", "all-spacing-24"]}
         >
           {topNavSlot}
         </OakFlex>
       )}
-      <OakFlex
-        $flexDirection="column"
-        $maxWidth={["100%", "all-spacing-22"]}
-        $minWidth={["100%", "all-spacing-22", "all-spacing-23"]}
-        $pt={["inner-padding-none", "inner-padding-m"]}
-        $mb={["space-between-l", "space-between-l", "space-between-xl"]}
-      >
-        <OakFlex $flexDirection={"column"} $gap={["space-between-m2"]}>
-          {titleSlot}
-          <OakHandDrawnHR hrColor={"white"} $height={"all-spacing-1"} />
-          {children}
-        </OakFlex>
-      </OakFlex>
+
+      {children}
     </StyledLayoutBox>
   );
 };
 
 function getBackgroundUrlForSection(
   sectionName: PupilJourneySectionName,
-  phase: Phase,
+  phase?: Phase,
 ) {
+  const prefix = `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/`;
   switch (sectionName) {
     case "lesson-listing":
       return phase === "primary"
-        ? "https://res.cloudinary.com/oak-web-application/image/upload/v1699887218/pupil-journey/Confetti_Background_vatiqx.svg"
-        : "https://res.cloudinary.com/oak-web-application/image/upload/v1699887218/pupil-journey/Confetti_Background_1_i6hsxn.svg";
+        ? `${prefix}${backgrounds["confetti-pink"]}`
+        : `${prefix}${backgrounds["confetti-lavender"]}`;
     case "unit-listing":
       return phase === "primary"
-        ? "https://res.cloudinary.com/oak-web-application/image/upload/v1699887218/pupil-journey/Line_Background_1_q2dn7p.svg"
-        : "https://res.cloudinary.com/oak-web-application/image/upload/v1699887218/pupil-journey/Line_Background_toygyu.svg";
+        ? `${prefix}${backgrounds["line-pink"]}`
+        : `${prefix}${backgrounds["line-lavender"]}`;
+    case "subject-listing":
+      return `${prefix}${backgrounds["line-mint"]}`;
+    case "year-listing":
+      return `${prefix}${backgrounds["line-lavender"]}`;
     default:
       return "";
   }
