@@ -165,6 +165,7 @@ exports[`OakPupilJourneySubjectButton matches snapshot 1`] = `
       className="c5 c6"
     >
       <div
+        aria-hidden="true"
         className="c7"
       >
         <img
