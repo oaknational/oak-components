@@ -1,10 +1,12 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
+import { OakPupilJourneyYearButton } from "../OakPupilJourneyYearButton";
+
 import { OakPupilJourneyProgrammeOptions } from "./OakPupilJourneyProgrammeOptions";
+
 import { OakPupilJourneyHeader } from "@/components/organisms/pupil/OakPupilJourneyHeader";
 import { OakHeading } from "@/components/atoms";
-import { OakPupilJourneyYearButton } from "../OakPupilJourneyYearButton";
 
 const meta: Meta<typeof OakPupilJourneyProgrammeOptions> = {
   component: OakPupilJourneyProgrammeOptions,
