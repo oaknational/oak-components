@@ -4,6 +4,7 @@ exports[`OakPreviousLessonsHeading matches snapshot 1`] = `
 [
   " ",
   .c0 {
+  margin-top: 2rem;
   font-family: Lexend,sans-serif;
 }
 
