@@ -3,16 +3,16 @@ import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
 import { ThemeProvider } from "styled-components";
 
-import { OakPreviousLessonsHeading } from "./OakPreviousLessonsHeading";
+import { OakPupilJourneyPreviousLessons } from "./OakPupilJourneyPreviousLessons";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { oakDefaultTheme } from "@/styles";
 
-describe("OakPreviousLessonsHeading", () => {
+describe("OakPupilJourneyPreviousLessons", () => {
   it("renders", () => {
     const { getByText } = renderWithTheme(
       <ThemeProvider theme={oakDefaultTheme}>
-        <OakPreviousLessonsHeading
+        <OakPupilJourneyPreviousLessons
           numberOfLessons={5}
           listItems={["Year 7", "Maths", "Higher"]}
           data-testid="test"
@@ -26,7 +26,7 @@ describe("OakPreviousLessonsHeading", () => {
     const tree = create(
       <ThemeProvider theme={oakDefaultTheme}>
         {" "}
-        <OakPreviousLessonsHeading
+        <OakPupilJourneyPreviousLessons
           numberOfLessons={5}
           listItems={["Year 7", "Maths", "Higher"]}
         />

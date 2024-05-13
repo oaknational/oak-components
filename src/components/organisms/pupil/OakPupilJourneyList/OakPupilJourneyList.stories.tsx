@@ -5,6 +5,8 @@ import { OakPupilJourneyList } from "./OakPupilJourneyList";
 
 import { OakPupilJourneyListItem } from "@/components/organisms/pupil/OakPupilJourneyListItem";
 import { OakPupilJourneyHeader } from "@/components/organisms/pupil/OakPupilJourneyHeader";
+import { OakPupilJourneyListCounter } from "../OakPupilJourneyListCounter";
+import { OakPupilJourneyPreviousLessons } from "../OakPupilJourneyPreviousLessons";
 
 const meta: Meta<typeof OakPupilJourneyList> = {
   component: OakPupilJourneyList,
@@ -34,7 +36,13 @@ export const Default: Story = {
           breadcrumbs={["first", "second", "third"]}
         />
       }
-      counterSlot={<div>Counter Slot Here</div>}
+      counterSlot={
+        <OakPupilJourneyListCounter
+          count={10}
+          countHeader="New lessons"
+          tag={"h2"}
+        />
+      }
     >
       <OakPupilJourneyListItem title="Lesson 1" index={1} href="#" />
       <OakPupilJourneyListItem title="Lesson 2" index={2} href="#" />
@@ -49,7 +57,15 @@ export const Default: Story = {
 
 export const NoTitle: Story = {
   render: (args) => (
-    <OakPupilJourneyList {...args} counterSlot={<div>Counter Slot Here</div>}>
+    <OakPupilJourneyList
+      {...args}
+      counterSlot={
+        <OakPupilJourneyPreviousLessons
+          numberOfLessons={10}
+          listItems={["test 1", "test 2", "test 3"]}
+        />
+      }
+    >
       <OakPupilJourneyListItem title="Lesson 1" index={1} href="#" />
       <OakPupilJourneyListItem title="Lesson 2" index={2} href="#" />
       <OakPupilJourneyListItem title="Lesson 3" index={3} href="#" />

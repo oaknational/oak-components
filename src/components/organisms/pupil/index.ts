@@ -19,7 +19,7 @@ export * from "./OakinfoButton";
 export * from "./OakPupilJourneyListItem";
 export * from "./OakPupilJourneyYearButton";
 export * from "./OakPupilJourneySubjectButton";
-export * from "./OakPreviousLessonsHeading";
+export * from "./OakPupilJourneyPreviousLessons";
 export * from "./OakPupilJourneyList";
 export * from "./OakPupilJourneyHeader";
 export * from "./OakPupilJourneyListCounter";
