@@ -8,7 +8,7 @@ This is a React Typescript components library which supports React and Next appl
 
 ## Installation
 
-This library is suitable for use in an app using React 18 and Next.js 13+
+This library is suitable for use in an app using React 18 and Next.js 13.5+
 
 You can install it using `npm i @oaknational/oak-components` or any other package manager that supports the NPM registry.
 
