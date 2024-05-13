@@ -22,3 +22,4 @@ export * from "./OakPupilJourneySubjectButton";
 export * from "./OakPreviousLessonsHeading";
 export * from "./OakPupilJourneyList";
 export * from "./OakPupilJourneyHeader";
+export * from "./OakPupilJourneyListCounter";

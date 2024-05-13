@@ -34,6 +34,7 @@ export const OakPupilJourneyList = ({
       $flexDirection={"column"}
       $width={["100%", "all-spacing-22", "all-spacing-23"]}
       $background={outerBackgroundColor}
+      role="list"
     >
       {titleSlot && (
         <OakFlex

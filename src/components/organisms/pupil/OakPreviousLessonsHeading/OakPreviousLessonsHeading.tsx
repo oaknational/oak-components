@@ -1,7 +1,9 @@
 import React from "react";
 
+import { OakPupilJourneyListCounter } from "../OakPupilJourneyListCounter";
+
 import { OakBulletList, OakBulletListProps } from "@/components/molecules";
-import { OakFlex, OakHeading, OakSpan } from "@/components/atoms";
+import { OakFlex } from "@/components/atoms";
 
 export type OakPreviousLessonsHeadingProps = {
   numberOfLessons: number;
@@ -28,11 +30,13 @@ export const OakPreviousLessonsHeading = (
       $justifyContent={"space-between"}
       $alignItems={"flex-start"}
       $gap={"space-between-m"}
+      $mt={"space-between-m2"}
     >
-      <OakHeading tag="h1" $font={["heading-6", "heading-6"]}>
-        Previously released lessons
-        <OakSpan $font={"heading-light-6"}>{` (${numberOfLessons})`}</OakSpan>
-      </OakHeading>
+      <OakPupilJourneyListCounter
+        tag="h1"
+        count={numberOfLessons}
+        countHeader="Previously released lessons"
+      />
       <OakBulletList
         listItems={listItems}
         $background={"bg-decorative5-very-subdued"}

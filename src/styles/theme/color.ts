@@ -7,6 +7,7 @@ export const oakColorTokens = {
   grey50: "#808080",
   grey60: "#575757",
   grey70: "#2d2d2d",
+  grey80: "#1b1b1b",
   black: "#222222",
   oakGreen: "#287c34",
   mint: "#bef2bd",
