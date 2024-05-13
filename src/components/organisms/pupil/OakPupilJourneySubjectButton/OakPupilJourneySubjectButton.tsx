@@ -63,6 +63,7 @@ export const OakPupilJourneySubjectButton = <C extends ElementType = "button">({
       iconName={subjectIconName}
       $minWidth={"all-spacing-12"}
       $minHeight={"all-spacing-12"}
+      aria-hidden="true"
     />
   );
 
