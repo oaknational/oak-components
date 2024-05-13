@@ -11,7 +11,10 @@ import { oakDefaultTheme } from "@/styles";
 describe("OakPupilJourneyList", () => {
   it("should render successfully", () => {
     const { getByText } = renderWithTheme(
-      <OakPupilJourneyList phase="primary">
+      <OakPupilJourneyList
+        phase="primary"
+        counterSlot={<div>Counter Slot Here</div>}
+      >
         <p>Hello World</p>
       </OakPupilJourneyList>,
     );
@@ -21,7 +24,10 @@ describe("OakPupilJourneyList", () => {
   it("matches snapshot", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
-        <OakPupilJourneyList phase="primary">
+        <OakPupilJourneyList
+          phase="primary"
+          counterSlot={<div>Counter Slot Here</div>}
+        >
           <p>Hello World</p>
         </OakPupilJourneyList>
       </OakThemeProvider>,
