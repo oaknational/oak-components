@@ -27,6 +27,7 @@ export const OakPupilJourneyList = ({
       $background={backgroundColor}
       $borderRadius={"border-radius-l"}
       $gap={"space-between-s"}
+      role="list"
     >
       {children}
     </OakFlex>
