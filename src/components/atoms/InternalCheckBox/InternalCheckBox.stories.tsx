@@ -24,7 +24,7 @@ const meta: Meta<typeof InternalCheckBox> = {
     colorArgTypes,
     spacingArgTypes,
     disabled: {
-      control: { type: "boolean" },
+      control: "boolean",
     },
     $checkedBackground: colorArgTypes.$color,
   },

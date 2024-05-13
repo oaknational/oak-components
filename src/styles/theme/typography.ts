@@ -12,11 +12,11 @@ export const oakFontSizeTokens = {
 };
 export type OakFontSizeToken = keyof typeof oakFontSizeTokens;
 
-const fontWeights = [300, 400, 600, 700] as const;
+const fontWeights = [300, 400, 600, 700];
 type FontWeight = (typeof fontWeights)[number];
-const lineHeights = [16, 20, 24, 28, 32, 40, 48, 56, 64] as const;
+const lineHeights = [16, 20, 24, 28, 32, 40, 48, 56, 64];
 type LineHeight = (typeof lineHeights)[number];
-const letterSpacings = ["0.0115rem", "-0.005rem"] as const;
+const letterSpacings = ["0.0115rem", "-0.005rem"];
 type LetterSpacing = (typeof letterSpacings)[number];
 
 type FontParameters = readonly [
@@ -59,7 +59,7 @@ export const oakTextDecorations = [
   "overline",
   "line-through",
   "none",
-] as const;
+];
 
 export const oakWhiteSpaces = [
   "normal",
@@ -68,16 +68,11 @@ export const oakWhiteSpaces = [
   "pre-wrap",
   "pre-line",
   "break-spaces",
-] as const;
+];
 
-export const oakWordWraps = [
-  "normal",
-  "break-word",
-  "initial",
-  "inherit",
-] as const;
+export const oakWordWraps = ["normal", "break-word", "initial", "inherit"];
 
-export const oakTextOverflows = ["clip", "ellipsis"] as const;
+export const oakTextOverflows = ["clip", "ellipsis"];
 
 export type OakTextDecoration = (typeof oakTextDecorations)[number];
 export type OakWhiteSpace = (typeof oakWhiteSpaces)[number];

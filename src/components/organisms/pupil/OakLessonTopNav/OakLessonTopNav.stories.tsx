@@ -25,10 +25,10 @@ const meta: Meta<typeof OakLessonTopNav> = {
   ],
   argTypes: {
     heading: {
-      control: { type: "text" },
+      control: "text",
     },
     mobileSummary: {
-      control: { type: "text" },
+      control: "text",
     },
   },
   args: {

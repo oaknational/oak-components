@@ -11,7 +11,7 @@ const meta: Meta<typeof InternalCheckBoxLabel> = {
   title: "components/atoms/InternalCheckBoxLabel",
   argTypes: {
     disabled: {
-      control: { type: "boolean" },
+      control: "boolean",
     },
 
     labelGap: flexArgTypes.$gap,

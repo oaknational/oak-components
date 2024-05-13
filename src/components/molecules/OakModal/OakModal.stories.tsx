@@ -18,10 +18,10 @@ const meta: Meta<typeof OakModal> = {
   title: "components/molecules/OakModal",
   argTypes: {
     children: {
-      control: { type: "text" },
+      control: "text",
     },
     footerSlot: {
-      control: { type: "text" },
+      control: "text",
     },
   },
   parameters: {

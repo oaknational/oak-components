@@ -15,13 +15,12 @@ const meta: Meta<typeof OakPrimaryButton> = {
   argTypes: {
     iconName: {
       options: controlIconNames,
-      control: { type: "select" },
     },
     isTrailingIcon: {
-      control: { type: "boolean" },
+      control: "boolean",
     },
     isLoading: {
-      control: { type: "boolean" },
+      control: "boolean",
     },
   },
   parameters: {

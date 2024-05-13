@@ -13,7 +13,6 @@ const meta: Meta<typeof InternalCheckBoxWrapper> = {
   argTypes: {
     size: {
       options: ["all-spacing-6", "all-spacing-7", "all-spacing-8"],
-      control: { type: "select" },
     },
     iconPadding: spacingArgTypes.$pa,
   },

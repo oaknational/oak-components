@@ -12,7 +12,7 @@ const meta: Meta<typeof OakHintButton> = {
   title: "components/organisms/pupil/OakHintButton",
   argTypes: {
     isOpen: {
-      control: { type: "boolean" },
+      control: "boolean",
     },
   },
   parameters: {

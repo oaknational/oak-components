@@ -13,7 +13,6 @@ const meta: Meta<typeof OakQuizCheckBox> = {
   argTypes: {
     feedback: {
       options: ["correct", "incorrect", null],
-      control: { type: "select" },
     },
   },
   parameters: {

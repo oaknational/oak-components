@@ -16,7 +16,6 @@ const meta: Meta<typeof OakIcon> = {
   argTypes: {
     iconName: {
       options: controlIconNames,
-      control: { type: "select" },
     },
     ...sizeArgTypes,
     ...colorFilterArgTypes,
