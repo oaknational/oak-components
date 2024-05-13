@@ -48,6 +48,7 @@ export const icons = {
   quiz: "v1705416077/icons/kaaizjcudy0jfgfrrdel.svg",
   video: "v1705416078/icons/wzey1zfxrvv3apeebbf5.svg",
   intro: "v1705662092/icons/pl7bnmb13txese9yxkjv.svg",
+  loopdown: "v1699887218/ui-graphics/loopdown.svg",
   "teacher-lesson": "icons/teacher-lesson.svg",
   "teacher-unit": "icons/teacher-unit.svg",
   "move-arrows": "v1709052869/icons/hoddjsgpzkszgvnmn91q.svg",
