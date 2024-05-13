@@ -36,6 +36,13 @@ export const oakInnerPaddingTokens = {
   "inner-padding-m": "all-spacing-4",
   "inner-padding-l": "all-spacing-5",
   "inner-padding-xl": "all-spacing-6",
+  "inner-padding-xl2": "all-spacing-7",
+  "inner-padding-xl3": "all-spacing-8",
+  "inner-padding-xl4": "all-spacing-9",
+  "inner-padding-xl5": "all-spacing-10",
+  "inner-padding-xl6": "all-spacing-11",
+  "inner-padding-xl7": "all-spacing-12",
+  "inner-padding-xl8": "all-spacing-13",
 };
 
 export type OakInnerPaddingToken = keyof typeof oakInnerPaddingTokens;
