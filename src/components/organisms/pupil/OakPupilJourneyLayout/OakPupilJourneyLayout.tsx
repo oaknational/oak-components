@@ -113,7 +113,7 @@ function getBackgroundUrlForSection(
     case "subject-listing":
       return `${prefix}${backgrounds["line-mint"]}`;
     case "year-listing":
-      return `${prefix}${backgrounds["line-lavender"]}`;
+      return `${prefix}${backgrounds["confetti-mint"]}`;
     default:
       return "";
   }
