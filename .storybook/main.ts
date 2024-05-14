@@ -17,6 +17,13 @@ const config = {
     name: "@storybook/nextjs",
     options: {},
   },
+  // Config from here https://storybook.js.org/docs/configure/typescript#the-types-are-not-being-generated-for-my-component
+  typescript: {
+    reactDocgen: "react-docgen-typescript",
+    // Provide your own options if necessary.
+    // See https://storybook.js.org/docs/configure/typescript for more information.
+    reactDocgenTypescriptOptions: {},
+  },
   docs: {
     autodocs: "tag",
   },

@@ -6,11 +6,11 @@ import {
   responsiveStyle,
 } from "@/styles/utils/responsiveStyle";
 
-const oakAllApectRatios = ["7:8", "2:3", "1:1", "3:2", "16:9"];
-type OakAllApectRatios = (typeof oakAllApectRatios)[number];
+const oakAllApectRatiosConst = ["7:8", "2:3", "1:1", "3:2", "16:9"] as const;
+type OakAllApectRatios = (typeof oakAllApectRatiosConst)[number];
 
-const oakAllApecPercentages = [114, 150, 100, 66.66, 56.25];
-type OakAllApecPercentages = (typeof oakAllApecPercentages)[number];
+const oakAllApecPercentagesConst = [114, 150, 100, 66.66, 56.25] as const;
+type OakAllApecPercentages = (typeof oakAllApecPercentagesConst)[number];
 
 const oakAspectRatioPercentage: Record<
   OakAllApectRatios,
