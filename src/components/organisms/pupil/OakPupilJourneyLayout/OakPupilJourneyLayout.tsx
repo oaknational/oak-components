@@ -62,6 +62,10 @@ export const OakPupilJourneyLayout = ({
         return "bg-decorative4-very-subdued";
       case sectionName === "unit-listing" && phase === "secondary":
         return "bg-decorative3-very-subdued";
+      case sectionName === "tier-listing" && phase === "primary":
+        return "bg-decorative4-very-subdued";
+      case sectionName === "tier-listing" && phase === "secondary":
+        return "bg-decorative3-very-subdued";
       case sectionName === "subject-listing":
       case sectionName === "year-listing":
         return "bg-decorative1-main";

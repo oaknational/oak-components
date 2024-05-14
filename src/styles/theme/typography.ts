@@ -12,11 +12,11 @@ export const oakFontSizeTokens = {
 };
 export type OakFontSizeToken = keyof typeof oakFontSizeTokens;
 
-const fontWeights = [300, 400, 600, 700];
+const fontWeights = [300, 400, 600, 700] as const;
 type FontWeight = (typeof fontWeights)[number];
-const lineHeights = [16, 20, 24, 28, 32, 40, 48, 56, 64];
+const lineHeights = [16, 20, 24, 28, 32, 40, 48, 56, 64] as const;
 type LineHeight = (typeof lineHeights)[number];
-const letterSpacings = ["0.0115rem", "-0.005rem"];
+const letterSpacings = ["0.0115rem", "-0.005rem"] as const;
 type LetterSpacing = (typeof letterSpacings)[number];
 
 type FontParameters = readonly [
@@ -54,27 +54,37 @@ export const oakFontTokens = {
 
 export type OakFontToken = keyof typeof oakFontTokens;
 
-export const oakTextDecorations = [
+const oakTextDecorationsConst = [
   "underline",
   "overline",
   "line-through",
   "none",
-];
+] as const;
 
-export const oakWhiteSpaces = [
+const oakWhiteSpacesConst = [
   "normal",
   "nowrap",
   "pre",
   "pre-wrap",
   "pre-line",
   "break-spaces",
-];
+] as const;
 
-export const oakWordWraps = ["normal", "break-word", "initial", "inherit"];
+const oakWordWrapsConst = [
+  "normal",
+  "break-word",
+  "initial",
+  "inherit",
+] as const;
 
-export const oakTextOverflows = ["clip", "ellipsis"];
+const oakTextOverflowsConst = ["clip", "ellipsis"] as const;
 
-export type OakTextDecoration = (typeof oakTextDecorations)[number];
-export type OakWhiteSpace = (typeof oakWhiteSpaces)[number];
-export type OakWordWrap = (typeof oakWordWraps)[number];
-export type OakTextOverflow = (typeof oakTextOverflows)[number];
+export type OakTextDecoration = (typeof oakTextDecorationsConst)[number];
+export type OakWhiteSpace = (typeof oakWhiteSpacesConst)[number];
+export type OakWordWrap = (typeof oakWordWrapsConst)[number];
+export type OakTextOverflow = (typeof oakTextOverflowsConst)[number];
+
+export const oakTextDecorations = [...oakTextDecorationsConst];
+export const oakWhiteSpaces = [...oakWhiteSpacesConst];
+export const oakWordWraps = [...oakWordWrapsConst];
+export const oakTextOverflows = [...oakTextOverflowsConst];
