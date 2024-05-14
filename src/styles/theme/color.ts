@@ -75,7 +75,7 @@ export const oakColorFilterTokens = {
 
 export type OakColorFilterToken = keyof typeof oakColorFilterTokens;
 
-export const oakUiRoleTokens = [
+const oakUiRoleTokensConst = [
   "text-primary",
   "text-subdued",
   "text-error",
@@ -143,9 +143,11 @@ export const oakUiRoleTokens = [
   "border-decorative6",
   "border-decorative6-stronger",
   "transparent",
-];
+] as const;
 
-export type OakUiRoleToken = (typeof oakUiRoleTokens)[number];
+export type OakUiRoleToken = (typeof oakUiRoleTokensConst)[number];
+
+export const oakUiRoleTokens = [...oakUiRoleTokensConst];
 
 export type UiRoleMap = Record<
   OakUiRoleToken,
