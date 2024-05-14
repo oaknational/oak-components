@@ -9,9 +9,19 @@ import {
   typographyStyle,
 } from "@/styles/utils/typographyStyle";
 
-export const oakHeadingTags = ["div", "h1", "h2", "h3", "h4", "h5", "h6"];
+const oakHeadingTagsConst = [
+  "div",
+  "h1",
+  "h2",
+  "h3",
+  "h4",
+  "h5",
+  "h6",
+] as const;
 
-export type OakHeadingTag = (typeof oakHeadingTags)[number];
+export type OakHeadingTag = (typeof oakHeadingTagsConst)[number];
+
+export const oakHeadingTags = [...oakHeadingTagsConst];
 
 type OakHeadingTagProps = {
   children?: React.ReactNode;
