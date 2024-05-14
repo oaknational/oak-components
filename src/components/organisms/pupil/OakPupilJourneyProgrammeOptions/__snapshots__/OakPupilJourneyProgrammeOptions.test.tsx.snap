@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakPupilJourneyList matches snapshot 1`] = `
+.c0 {
+  width: 100%;
+  background: #f5e9f2;
+  font-family: Lexend,sans-serif;
+}
+
+.c2 {
+  padding: 1.5rem;
+  background: #ffffff;
+  border: 0.125rem solid;
+  border-color: #e5d1e0;
+  border-radius: 1rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c4 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c6 {
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media (min-width:750px) {
+  .c0 {
+    width: 40rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c0 {
+    width: 60rem;
+  }
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    className="c2 c3"
+  >
+    <div
+      className="c4 c5"
+    >
+      <div>
+        Option Title Slot Here
+      </div>
+      <div
+        className="c6 c7"
+      >
+        <p>
+          Hello World
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
