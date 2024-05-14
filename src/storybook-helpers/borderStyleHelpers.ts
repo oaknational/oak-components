@@ -7,12 +7,10 @@ import { BorderStyleProps } from "@/styles/utils/borderStyle";
 
 const borderWidthCtl = {
   options: [...Object.keys(oakBorderWidthTokens), null],
-  control: { type: "select" },
 };
 
 const borderRadiusCtl = {
   options: Object.keys(oakBorderRadiusTokens),
-  control: { type: "select" },
 };
 
 export const borderArgTypes: Partial<Record<keyof BorderStyleProps, object>> = {
@@ -32,6 +30,5 @@ export const borderArgTypes: Partial<Record<keyof BorderStyleProps, object>> = {
   $bbr: borderRadiusCtl,
   $borderColor: {
     options: [...Object.keys(oakColorTokens), ...oakUiRoleTokens],
-    control: { type: "select" },
   },
 };

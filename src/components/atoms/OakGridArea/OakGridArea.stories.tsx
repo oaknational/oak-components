@@ -5,7 +5,7 @@ import { OakGridArea } from "./OakGridArea";
 
 import { OakGrid } from "@/components/atoms/OakGrid";
 
-const colRowSpanCtl = { control: { type: "range", min: 0, max: 12 } };
+const colRowSpanCtl = { control: { type: "range" as const, min: 0, max: 12 } };
 
 const meta: Meta<typeof OakGridArea> = {
   component: OakGridArea,

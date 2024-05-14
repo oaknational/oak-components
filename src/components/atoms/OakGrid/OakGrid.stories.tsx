@@ -14,16 +14,16 @@ const meta: Meta<typeof OakGrid> = {
     $rg: marginCtl,
     $cg: marginCtl,
     $gridAutoRows: {
-      control: { type: "text" },
+      control: "text",
     },
     $gridTemplateAreas: {
-      control: { type: "text" },
+      control: "text",
     },
     $gridTemplateColumns: {
-      control: { type: "text" },
+      control: "text",
     },
     $gridTemplateRows: {
-      control: { type: "text" },
+      control: "text",
     },
   },
   parameters: {
