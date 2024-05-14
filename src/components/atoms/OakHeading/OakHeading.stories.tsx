@@ -13,6 +13,7 @@ const meta: Meta<typeof OakHeading> = {
     ...typographyArgTypes,
     tag: {
       options: oakHeadingTags,
+      control: "select",
     },
   },
   parameters: {
