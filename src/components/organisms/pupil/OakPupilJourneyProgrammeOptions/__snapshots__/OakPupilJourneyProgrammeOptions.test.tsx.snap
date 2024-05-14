@@ -91,7 +91,6 @@ exports[`OakPupilJourneyList matches snapshot 1`] = `
 
 <div
   className="c0 c1"
-  role="list"
 >
   <div
     className="c2 c3"
