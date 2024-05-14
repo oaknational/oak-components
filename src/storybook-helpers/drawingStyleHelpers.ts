@@ -3,11 +3,9 @@ import { oakColorTokens, oakUiRoleTokens } from "@/styles/theme/color";
 
 const colorCtl = {
   options: [...Object.keys(oakColorTokens), ...oakUiRoleTokens, null],
-  control: { type: "select" },
 };
 const strokeWidthCtl = {
   options: [...Object.keys(oakBorderWidthTokens), null],
-  control: { type: "select" },
 };
 
 export const drawingArgTypes = {

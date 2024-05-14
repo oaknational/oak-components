@@ -6,10 +6,10 @@ import {
   responsiveStyle,
 } from "@/styles/utils/responsiveStyle";
 
-const oakAllApectRatios = ["7:8", "2:3", "1:1", "3:2", "16:9"] as const;
+const oakAllApectRatios = ["7:8", "2:3", "1:1", "3:2", "16:9"];
 type OakAllApectRatios = (typeof oakAllApectRatios)[number];
 
-const oakAllApecPercentages = [114, 150, 100, 66.66, 56.25] as const;
+const oakAllApecPercentages = [114, 150, 100, 66.66, 56.25];
 type OakAllApecPercentages = (typeof oakAllApecPercentages)[number];
 
 const oakAspectRatioPercentage: Record<

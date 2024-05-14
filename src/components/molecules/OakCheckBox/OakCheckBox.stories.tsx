@@ -15,11 +15,10 @@ const meta: Meta<typeof OakCheckBox> = {
   title: "components/molecules/OakCheckBox",
   argTypes: {
     disabled: {
-      control: { type: "boolean" },
+      control: "boolean",
     },
     checkboxSize: {
       options: ["all-spacing-6", "all-spacing-7", "all-spacing-8"],
-      control: { type: "select" },
     },
     labelGap: flexArgTypes.$gap,
     labelAlignItems: flexArgTypes.$alignItems,

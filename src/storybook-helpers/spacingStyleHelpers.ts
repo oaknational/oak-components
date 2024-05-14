@@ -5,12 +5,10 @@ import {
 
 export const paddingCtl = {
   options: Object.keys(oakInnerPaddingTokens),
-  control: { type: "select" },
 };
 
 export const marginCtl = {
   options: Object.keys(oakSpaceBetweenTokens),
-  control: { type: "select" },
 };
 
 export const spacingArgTypes = {

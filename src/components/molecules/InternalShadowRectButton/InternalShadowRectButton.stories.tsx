@@ -19,15 +19,14 @@ const meta: Meta<typeof InternalShadowRectButton> = {
   argTypes: {
     iconName: {
       options: controlIconNames,
-      control: { type: "select" },
     },
     iconLayout: flexArgTypes["$flexDirection"],
     iconGap: flexArgTypes["$gap"],
     isTrailingIcon: {
-      control: { type: "boolean" },
+      control: "boolean",
     },
     isLoading: {
-      control: { type: "boolean" },
+      control: "boolean",
     },
     ...borderArgTypes,
     defaultBackground: colorArgTypes.$color,

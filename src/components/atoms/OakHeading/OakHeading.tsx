@@ -9,15 +9,7 @@ import {
   typographyStyle,
 } from "@/styles/utils/typographyStyle";
 
-export const oakHeadingTags = [
-  "div",
-  "h1",
-  "h2",
-  "h3",
-  "h4",
-  "h5",
-  "h6",
-] as const;
+export const oakHeadingTags = ["div", "h1", "h2", "h3", "h4", "h5", "h6"];
 
 export type OakHeadingTag = (typeof oakHeadingTags)[number];
 

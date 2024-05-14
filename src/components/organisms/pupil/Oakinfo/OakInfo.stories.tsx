@@ -17,7 +17,6 @@ const meta: Meta<typeof OakInfo> = {
     },
     tooltipPosition: {
       options: ["top-right", "bottom-left", "top-left", "top-right"],
-      control: { type: "select" },
     },
   },
   decorators: [

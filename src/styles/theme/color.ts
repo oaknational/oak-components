@@ -143,7 +143,7 @@ export const oakUiRoleTokens = [
   "border-decorative6",
   "border-decorative6-stronger",
   "transparent",
-] as const;
+];
 
 export type OakUiRoleToken = (typeof oakUiRoleTokens)[number];
 

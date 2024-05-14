@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import { within } from "@storybook/testing-library";
+import { within } from "@storybook/test";
 
 import { OakQuizCheckBox } from "./OakQuizCheckBox";
 
@@ -13,7 +13,6 @@ const meta: Meta<typeof OakQuizCheckBox> = {
   argTypes: {
     feedback: {
       options: ["correct", "incorrect", null],
-      control: { type: "select" },
     },
   },
   parameters: {
