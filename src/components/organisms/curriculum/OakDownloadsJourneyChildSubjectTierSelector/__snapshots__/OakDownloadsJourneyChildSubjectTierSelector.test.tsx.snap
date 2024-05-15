@@ -1,0 +1,484 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
+.c0 {
+  font-family: Lexend,sans-serif;
+}
+
+.c2 {
+  margin-bottom: 2rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c10 {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #ffffff;
+  border: 0.125rem solid;
+  border-color: #222222;
+  font-family: Lexend,sans-serif;
+}
+
+.c13 {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: Lexend,sans-serif;
+}
+
+.c15 {
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c20 {
+  position: relative;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  min-height: 1.5rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.c19 {
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+  text-align: left;
+}
+
+.c21 {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  object-fit: contain;
+}
+
+.c1 {
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+  margin-bottom: 1.5rem;
+}
+
+.c4 {
+  font-family: Lexend,sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c5 {
+  font-family: Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c16 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: Lexend,sans-serif;
+  color: #ffffff;
+  background: #222222;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  margin-top: 2rem;
+  border: 0.125rem solid;
+  border-color: #222222;
+  border-radius: 0.25rem;
+}
+
+.c16:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c17 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.c17:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: #ffffff;
+  background: #575757;
+  border-color: #575757;
+}
+
+.c17:active {
+  background: #222222;
+  border-color: #222222;
+  color: #ffffff;
+}
+
+.c17:disabled {
+  background: #808080;
+  border-color: #808080;
+  color: #ffffff;
+}
+
+.c14 .grey-shadow:has(+ * + .internal-button:focus-visible) {
+  box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c14 .yellow-shadow:has(+ .internal-button:focus-visible) {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
+}
+
+.c14 .yellow-shadow:has(+ .internal-button:hover),
+.c14 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c14 .grey-shadow:has(+ * + .internal-button:hover) {
+  box-shadow: none;
+}
+
+.c14 .grey-shadow:has(+ * + .internal-button:active) {
+  box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+}
+
+.c14 .yellow-shadow:has(+ .internal-button:active) {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c6 {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c8 {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.c12 {
+  border-radius: 50%;
+}
+
+.c7:focus-visible ~ .c9::before {
+  content: "";
+  height: 2rem;
+  width: 2rem;
+  background: "transparent" display:block;
+  position: absolute;
+  border-radius: 50%;
+  border: 0.125rem solid #575757;
+  box-shadow: inset 0 0 0 0.13rem #ffe555;
+}
+
+.c7:checked ~ .c9::after {
+  content: "";
+  height: 1rem;
+  width: 1rem;
+  background: #222222;
+  position: absolute;
+  border-radius: 50%;
+  border: 0.125rem solid #ffffff;
+}
+
+<div
+  className="c0"
+>
+  <h4
+    className="c1"
+  >
+    Download
+  </h4>
+  <div
+    className="c2"
+  >
+    <div
+      className="c0 c3"
+      data-testid="child-subject-selector"
+      role="radiogroup"
+    >
+      <label
+        className="c4"
+      >
+        Choose subject for KS4 units
+      </label>
+      <div
+        className="c0"
+      >
+        <label
+          className="c5 c6"
+          data-testid="child-subject-radio-button"
+          htmlFor="biology"
+        >
+          <input
+            checked={true}
+            className="c7 c8"
+            id="biology"
+            name="childSubjectRadio"
+            onChange={[Function]}
+            type="radio"
+            value="biology"
+          />
+          <div
+            className="c9 c10 c11 c12"
+          />
+          Biology
+        </label>
+      </div>
+      <div
+        className="c0"
+      >
+        <label
+          className="c5 c6"
+          data-testid="child-subject-radio-button"
+          htmlFor="physics"
+        >
+          <input
+            checked={false}
+            className="c7 c8"
+            id="physics"
+            name="childSubjectRadio"
+            onChange={[Function]}
+            type="radio"
+            value="physics"
+          />
+          <div
+            className="c9 c10 c11 c12"
+          />
+          Physics
+        </label>
+      </div>
+      <div
+        className="c0"
+      >
+        <label
+          className="c5 c6"
+          data-testid="child-subject-radio-button"
+          htmlFor="chemistry"
+        >
+          <input
+            checked={false}
+            className="c7 c8"
+            id="chemistry"
+            name="childSubjectRadio"
+            onChange={[Function]}
+            type="radio"
+            value="chemistry"
+          />
+          <div
+            className="c9 c10 c11 c12"
+          />
+          Chemistry
+        </label>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c0"
+    data-testid="tier-selector"
+  >
+    <div
+      className="c0 c3"
+      role="radiogroup"
+    >
+      <label
+        className="c4"
+      >
+        Choose learning tier for KS4 units
+      </label>
+      <div
+        className="c0"
+      >
+        <label
+          className="c5 c6"
+          data-testid="tier-radio-button"
+          htmlFor="foundation"
+        >
+          <input
+            checked={true}
+            className="c7 c8"
+            id="foundation"
+            name="tierRadio"
+            onChange={[Function]}
+            type="radio"
+            value="foundation"
+          />
+          <div
+            className="c9 c10 c11 c12"
+          />
+          Foundation
+        </label>
+      </div>
+      <div
+        className="c0"
+      >
+        <label
+          className="c5 c6"
+          data-testid="tier-radio-button"
+          htmlFor="higher"
+        >
+          <input
+            checked={false}
+            className="c7 c8"
+            id="higher"
+            name="tierRadio"
+            onChange={[Function]}
+            type="radio"
+            value="higher"
+          />
+          <div
+            className="c9 c10 c11 c12"
+          />
+          Higher
+        </label>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c13 c14"
+  >
+    <div
+      className="c15 grey-shadow"
+    />
+    <div
+      className="c15 yellow-shadow"
+    />
+    <button
+      className="c16 c17 internal-button"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <div
+        className="c0 c18"
+      >
+        <span
+          className="c19"
+        >
+          Next
+        </span>
+        <div
+          className="c20"
+        >
+          <img
+            alt="arrow-right"
+            className="c21"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707149070/icons/fv0z57zerrioft52dd9n.svg"
+            style={
+              {
+                "bottom": 0,
+                "color": "transparent",
+                "height": "100%",
+                "left": 0,
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": "100%",
+              }
+            }
+          />
+        </div>
+      </div>
+    </button>
+  </div>
+</div>
+`;
