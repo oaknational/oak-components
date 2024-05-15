@@ -1,5 +1,6 @@
 export * from "./pupil";
 export * from "./teacher";
+export * from "./curriculum";
 export * from "./OakSubjectIcon";
 export * from "./OakPrimaryNavItem";
 export * from "./OakPrimaryNav";
