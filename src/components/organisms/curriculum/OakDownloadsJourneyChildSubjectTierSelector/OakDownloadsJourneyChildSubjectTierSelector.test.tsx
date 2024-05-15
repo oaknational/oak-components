@@ -10,14 +10,14 @@ import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 const tiers = [
-  { tier: "Foundation", tier_slug: "foundation" },
-  { tier: "Higher", tier_slug: "higher" },
+  { tier: "Foundation", tierSlug: "foundation" },
+  { tier: "Higher", tierSlug: "higher" },
 ];
 
 const childSubjects = [
-  { subject: "Biology", subject_slug: "biology" },
-  { subject: "Physics", subject_slug: "physics" },
-  { subject: "Chemistry", subject_slug: "chemistry" },
+  { subject: "Biology", subjectSlug: "biology" },
+  { subject: "Physics", subjectSlug: "physics" },
+  { subject: "Chemistry", subjectSlug: "chemistry" },
 ];
 
 const getTierSubjectValues = jest.fn(() => {});

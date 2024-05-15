@@ -5,11 +5,6 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c2 {
-  margin-bottom: 2rem;
-  font-family: Lexend,sans-serif;
-}
-
 .c10 {
   width: 1.5rem;
   height: 1.5rem;
@@ -43,6 +38,17 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   height: 1.5rem;
   min-height: 1.5rem;
   font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .c3 {
@@ -115,7 +121,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   object-fit: contain;
 }
 
-.c1 {
+.c2 {
   font-family: Lexend,sans-serif;
   font-weight: 600;
   font-size: 2rem;
@@ -124,7 +130,6 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
-  margin-bottom: 1.5rem;
 }
 
 .c4 {
@@ -166,7 +171,6 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   padding-right: 1rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  margin-top: 2rem;
   border: 0.125rem solid;
   border-color: #222222;
   border-radius: 0.25rem;
@@ -274,156 +278,148 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 c1"
 >
   <h4
-    className="c1"
+    className="c2"
   >
     Download
   </h4>
   <div
-    className="c2"
+    className="c0 c3"
+    data-testid="child-subject-selector"
+    role="radiogroup"
   >
+    <label
+      className="c4"
+    >
+      Choose subject for KS4 units
+    </label>
     <div
-      className="c0 c3"
-      data-testid="child-subject-selector"
-      role="radiogroup"
+      className="c0"
     >
       <label
-        className="c4"
+        className="c5 c6"
+        data-testid="child-subject-radio-button"
+        htmlFor="biology"
       >
-        Choose subject for KS4 units
+        <input
+          checked={true}
+          className="c7 c8"
+          id="biology"
+          name="childSubjectRadio"
+          onChange={[Function]}
+          type="radio"
+          value="biology"
+        />
+        <div
+          className="c9 c10 c11 c12"
+        />
+        Biology
       </label>
-      <div
-        className="c0"
+    </div>
+    <div
+      className="c0"
+    >
+      <label
+        className="c5 c6"
+        data-testid="child-subject-radio-button"
+        htmlFor="physics"
       >
-        <label
-          className="c5 c6"
-          data-testid="child-subject-radio-button"
-          htmlFor="biology"
-        >
-          <input
-            checked={true}
-            className="c7 c8"
-            id="biology"
-            name="childSubjectRadio"
-            onChange={[Function]}
-            type="radio"
-            value="biology"
-          />
-          <div
-            className="c9 c10 c11 c12"
-          />
-          Biology
-        </label>
-      </div>
-      <div
-        className="c0"
+        <input
+          checked={false}
+          className="c7 c8"
+          id="physics"
+          name="childSubjectRadio"
+          onChange={[Function]}
+          type="radio"
+          value="physics"
+        />
+        <div
+          className="c9 c10 c11 c12"
+        />
+        Physics
+      </label>
+    </div>
+    <div
+      className="c0"
+    >
+      <label
+        className="c5 c6"
+        data-testid="child-subject-radio-button"
+        htmlFor="chemistry"
       >
-        <label
-          className="c5 c6"
-          data-testid="child-subject-radio-button"
-          htmlFor="physics"
-        >
-          <input
-            checked={false}
-            className="c7 c8"
-            id="physics"
-            name="childSubjectRadio"
-            onChange={[Function]}
-            type="radio"
-            value="physics"
-          />
-          <div
-            className="c9 c10 c11 c12"
-          />
-          Physics
-        </label>
-      </div>
-      <div
-        className="c0"
-      >
-        <label
-          className="c5 c6"
-          data-testid="child-subject-radio-button"
-          htmlFor="chemistry"
-        >
-          <input
-            checked={false}
-            className="c7 c8"
-            id="chemistry"
-            name="childSubjectRadio"
-            onChange={[Function]}
-            type="radio"
-            value="chemistry"
-          />
-          <div
-            className="c9 c10 c11 c12"
-          />
-          Chemistry
-        </label>
-      </div>
+        <input
+          checked={false}
+          className="c7 c8"
+          id="chemistry"
+          name="childSubjectRadio"
+          onChange={[Function]}
+          type="radio"
+          value="chemistry"
+        />
+        <div
+          className="c9 c10 c11 c12"
+        />
+        Chemistry
+      </label>
     </div>
   </div>
   <div
-    className="c0"
+    className="c0 c3"
     data-testid="tier-selector"
+    role="radiogroup"
   >
+    <label
+      className="c4"
+    >
+      Choose learning tier for KS4 units
+    </label>
     <div
-      className="c0 c3"
-      role="radiogroup"
+      className="c0"
     >
       <label
-        className="c4"
+        className="c5 c6"
+        data-testid="tier-radio-button"
+        htmlFor="foundation"
       >
-        Choose learning tier for KS4 units
+        <input
+          checked={true}
+          className="c7 c8"
+          id="foundation"
+          name="tierRadio"
+          onChange={[Function]}
+          type="radio"
+          value="foundation"
+        />
+        <div
+          className="c9 c10 c11 c12"
+        />
+        Foundation
       </label>
-      <div
-        className="c0"
+    </div>
+    <div
+      className="c0"
+    >
+      <label
+        className="c5 c6"
+        data-testid="tier-radio-button"
+        htmlFor="higher"
       >
-        <label
-          className="c5 c6"
-          data-testid="tier-radio-button"
-          htmlFor="foundation"
-        >
-          <input
-            checked={true}
-            className="c7 c8"
-            id="foundation"
-            name="tierRadio"
-            onChange={[Function]}
-            type="radio"
-            value="foundation"
-          />
-          <div
-            className="c9 c10 c11 c12"
-          />
-          Foundation
-        </label>
-      </div>
-      <div
-        className="c0"
-      >
-        <label
-          className="c5 c6"
-          data-testid="tier-radio-button"
-          htmlFor="higher"
-        >
-          <input
-            checked={false}
-            className="c7 c8"
-            id="higher"
-            name="tierRadio"
-            onChange={[Function]}
-            type="radio"
-            value="higher"
-          />
-          <div
-            className="c9 c10 c11 c12"
-          />
-          Higher
-        </label>
-      </div>
+        <input
+          checked={false}
+          className="c7 c8"
+          id="higher"
+          name="tierRadio"
+          onChange={[Function]}
+          type="radio"
+          value="higher"
+        />
+        <div
+          className="c9 c10 c11 c12"
+        />
+        Higher
+      </label>
     </div>
   </div>
   <div
