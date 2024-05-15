@@ -3,33 +3,48 @@ import { StoryObj, Meta } from "@storybook/react";
 
 import { OakDownloadsJourneyChildSubjectTierSelector } from "./OakDownloadsJourneyChildSubjectTierSelector";
 
-const meta: Meta<typeof OakDownloadsJourneyChildSubjectTierSelector> = {
-  tags: ["autodocs"],
-  title:
-    "Components/organisms/curriculum/OakDownloadsJourneyChildSubjectTierSelector",
-  component: OakDownloadsJourneyChildSubjectTierSelector,
-};
-
-export default meta;
-
-type Story = StoryObj<typeof OakDownloadsJourneyChildSubjectTierSelector>;
-
 const tiers = [
-  { tier: "Foundation", tier_slug: "foundation" },
-  { tier: "Higher", tier_slug: "higher" },
+  { tier: "Foundation", tierSlug: "foundation" },
+  { tier: "Higher", tierSlug: "higher" },
 ];
 
 const childSubjects = [
-  { subject: "Combined Science", subject_slug: "combined-science" },
-  { subject: "Physics", subject_slug: "physics" },
-  { subject: "Chemistry", subject_slug: "chemistry" },
-  { subject: "Biology", subject_slug: "biology" },
+  { subject: "Combined Science", subjectSlug: "combined-science" },
+  { subject: "Physics", subjectSlug: "physics" },
+  { subject: "Chemistry", subjectSlug: "chemistry" },
+  { subject: "Biology", subjectSlug: "biology" },
 ];
 
 function getTierSubjectValues(tier: string, childSubject?: string): void {
   // This is for James to test!
   console.log({ tier, childSubject });
 }
+
+const meta: Meta<typeof OakDownloadsJourneyChildSubjectTierSelector> = {
+  tags: ["autodocs"],
+  title:
+    "Components/organisms/curriculum/OakDownloadsJourneyChildSubjectTierSelector",
+  component: OakDownloadsJourneyChildSubjectTierSelector,
+  argTypes: {
+    tiers: {
+      control: { type: "object" },
+      description: "Foundation and higher as tier options",
+    },
+    childSubjects: {
+      options: ["none", "childSubjects"],
+      mapping: { none: undefined, childSubjects },
+      control: { type: "select" },
+      description: "None or Science",
+    },
+    getTierSubjectValues: {
+      control: { type: "object" },
+    },
+  },
+};
+
+export default meta;
+
+type Story = StoryObj<typeof OakDownloadsJourneyChildSubjectTierSelector>;
 
 export const Default: Story = {
   render: (args) => <OakDownloadsJourneyChildSubjectTierSelector {...args} />,
