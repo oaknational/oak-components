@@ -37,6 +37,7 @@ export const icons = {
   "arrow-down": "v1699954152/icons/wpfmbmwpyfinipg0d61y.svg",
   project: "v1699954186/icons/zofq5pheud6spnwjpewk.svg",
   "slide-deck": "v1699954241/icons/sjjy5f3g4eciwcuxxr33.svg",
+  "arrow-up": "v1699954152/icons/arrow-up.svg",
   "content-guidance": "v1699954277/icons/tm3uhcqenaznq4fxys7j.svg",
   tick: "v1699954310/icons/efd3esaor6zqk7seh6kt.svg",
   instagram: "v1699954343/icons/ayfeljric0kkimdymvva.svg",
