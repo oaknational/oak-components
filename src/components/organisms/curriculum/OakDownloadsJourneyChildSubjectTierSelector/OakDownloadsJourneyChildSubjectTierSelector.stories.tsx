@@ -39,11 +39,3 @@ export const Default: Story = {
     getTierSubjectValues,
   },
 };
-
-export const KS4MathsOnlyTier: Story = {
-  render: (args) => <OakDownloadsJourneyChildSubjectTierSelector {...args} />,
-  args: {
-    tiers,
-    getTierSubjectValues,
-  },
-};
