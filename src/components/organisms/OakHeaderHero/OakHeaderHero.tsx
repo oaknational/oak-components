@@ -45,9 +45,9 @@ const UnstyledComponent = (props: OakHeaderHeroProps) => {
   } = props;
   return (
     <OakBox
+      $overflowX={"hidden"}
       $width={"100%"}
       $background={"bg-decorative3-main"}
-      $overflowX={"hidden"}
     >
       <OakMaxWidth>
         <OakFlex
