@@ -46,29 +46,48 @@ exports[`OakModalCenter matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c9:hover {
-  cursor: pointer;
+.c10 {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: Lexend,sans-serif;
 }
 
-.c10 {
+.c15 {
+  font-family: Lexend,sans-serif;
+}
+
+.c17 {
+  position: relative;
   width: 2rem;
+  min-width: 2rem;
   height: 2rem;
-  padding: 0.25rem;
-  background: #222222;
+  color: transparent;
+  background: transparent;
   border-radius: 6.25rem;
   font-family: Lexend,sans-serif;
 }
 
-.c11 {
-  position: relative;
+.c18 {
+  position: absolute;
+  top: 0rem;
   width: 100%;
-  min-width: 100%;
   height: 100%;
-  min-height: 100%;
+  border-radius: 6.25rem;
   font-family: Lexend,sans-serif;
 }
 
-.c13 {
+.c19 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c22 {
   overflow: auto;
   padding-left: 3.5rem;
   padding-right: 3.5rem;
@@ -103,10 +122,114 @@ exports[`OakModalCenter matches snapshot 1`] = `
   flex-direction: column;
 }
 
-.c12 {
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0rem;
+}
+
+.c21 {
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c20 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  object-fit: contain;
+}
+
+.c13 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: Lexend,sans-serif;
+  color: transparent;
+}
+
+.c13:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c14 {
+  display: inline-block;
+  position: relative;
+}
+
+.c14:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: transparent;
+}
+
+.c14:hover:not(:active) [data-icon-for="button"] img {
   -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
-  object-fit: contain;
+}
+
+.c14:active {
+  color: transparent;
+}
+
+.c14:disabled {
+  color: transparent;
+}
+
+.c12 > :first-child:focus-visible .shadow {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c12 > :first-child:hover .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c12 > :first-child:active .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+}
+
+.c12 > :first-child:disabled .icon-container {
+  background: transparent;
+}
+
+.c12 > :first-child:hover .icon-container {
+  background: #222222;
+}
+
+.c12 > :first-child:active .icon-container {
+  background: transparent;
 }
 
 .c5 {
@@ -172,50 +295,79 @@ exports[`OakModalCenter matches snapshot 1`] = `
           className="c8"
         >
           <div
-            aria-label="Close Modal"
             className="c9"
-            data-testid="close-button"
-            onClick={[Function]}
-            role="button"
           >
             <div
-              className="c10"
+              className="c10 c11 c12"
             >
-              <div
-                className="c11"
+              <button
+                aria-label="Close Modal"
+                className="c13 c14"
+                data-testid="close-button"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
               >
-                <img
-                  alt="Cross Icon"
-                  className="c12"
-                  data-nimg="fill"
-                  decoding="async"
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
-                  style={
-                    {
-                      "bottom": 0,
-                      "color": "transparent",
-                      "height": "100%",
-                      "left": 0,
-                      "objectFit": undefined,
-                      "objectPosition": undefined,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                      "width": "100%",
-                    }
-                  }
-                />
-              </div>
+                <div
+                  className="c15 c16"
+                >
+                  <div
+                    className="c17 c1 icon-container"
+                  >
+                    <div
+                      className="c18 shadow"
+                    />
+                    <div
+                      className="c19"
+                      data-icon-for="button"
+                    >
+                      <img
+                        alt="cross"
+                        className="c20"
+                        data-nimg="fill"
+                        decoding="async"
+                        loading="lazy"
+                        onError={[Function]}
+                        onLoad={[Function]}
+                        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
+                        style={
+                          {
+                            "bottom": 0,
+                            "color": "transparent",
+                            "height": "100%",
+                            "left": 0,
+                            "objectFit": undefined,
+                            "objectPosition": undefined,
+                            "position": "absolute",
+                            "right": 0,
+                            "top": 0,
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                  <span
+                    className="c21"
+                  />
+                </div>
+              </button>
             </div>
           </div>
         </div>
         <div
-          className="c13 c7"
+          data-autofocus-inside={true}
+          style={
+            {
+              "display": "contents",
+            }
+          }
         >
-          Modal content
+          <div
+            className="c22 c7"
+          >
+            Modal content
+          </div>
         </div>
       </div>
     </div>

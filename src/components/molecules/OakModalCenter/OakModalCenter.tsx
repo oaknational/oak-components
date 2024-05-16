@@ -12,8 +12,9 @@ import { FocusOn } from "react-focus-on";
 import { Transition, TransitionStatus } from "react-transition-group";
 import styled from "styled-components";
 
+import { InternalShadowRoundButton } from "../InternalShadowRoundButton";
+
 import { OakBox, OakFlex, OakFlexProps, oakBoxCss } from "@/components/atoms";
-import { OakRoundIcon } from "@/components/molecules";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 
 export type OakModalCenterProps = {
@@ -205,40 +206,46 @@ export const OakModalCenter = ({
                       $position="absolute"
                       $top="all-spacing-3"
                       $right="all-spacing-3"
-                      role="button"
-                      aria-label="Close Modal"
-                      onClick={onClose}
-                      data-testid="close-button"
                     >
-                      <OakRoundIcon
-                        $background="black"
-                        iconName={"cross"}
-                        $colorFilter="white"
-                        alt={"Cross Icon"}
-                        $width="all-spacing-7"
-                        $height="all-spacing-7"
+                      <InternalShadowRoundButton
+                        onClick={onClose}
+                        aria-label="Close Modal"
+                        defaultIconBackground="transparent"
+                        defaultIconColor="black"
+                        defaultTextColor="transparent"
+                        hoverTextColor="transparent"
+                        disabledTextColor="transparent"
+                        hoverIconBackground="black"
+                        hoverIconColor="white"
+                        disabledIconBackground="transparent"
+                        iconBackgroundSize="all-spacing-7"
+                        iconSize="all-spacing-7"
+                        iconName="cross"
+                        data-testid="close-button"
                       />
                     </OakBox>
                   )}
                 </OakBox>
-                <OakFlex
-                  ref={scrollBoxRef}
-                  $overflow="auto"
-                  $flexDirection="column"
-                  $ph="inner-padding-xl5"
-                  $bt={
-                    scrollBorders.top ? "border-solid-s" : "border-solid-none"
-                  }
-                  $bb={
-                    scrollBorders.bottom
-                      ? "border-solid-s"
-                      : "border-solid-none"
-                  }
-                  $borderColor="border-neutral-lighter"
-                >
-                  {children}
-                </OakFlex>
-                {footerSlot}
+                <div style={{ display: "contents" }} data-autofocus-inside>
+                  <OakFlex
+                    ref={scrollBoxRef}
+                    $overflow="auto"
+                    $flexDirection="column"
+                    $ph="inner-padding-xl5"
+                    $bt={
+                      scrollBorders.top ? "border-solid-s" : "border-solid-none"
+                    }
+                    $bb={
+                      scrollBorders.bottom
+                        ? "border-solid-s"
+                        : "border-solid-none"
+                    }
+                    $borderColor="border-neutral-lighter"
+                  >
+                    {children}
+                  </OakFlex>
+                  {footerSlot}
+                </div>
               </OakFlex>
             </FocusOnBox>
           </OakFlex>
