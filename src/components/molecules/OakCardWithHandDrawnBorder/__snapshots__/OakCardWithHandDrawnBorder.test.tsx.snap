@@ -3,6 +3,9 @@
 exports[`OakCardWithHandDrawnBorder matches snapshot 1`] = `
 .c0 {
   position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   padding: 1.5rem;
   font-family: Lexend,sans-serif;
 }
