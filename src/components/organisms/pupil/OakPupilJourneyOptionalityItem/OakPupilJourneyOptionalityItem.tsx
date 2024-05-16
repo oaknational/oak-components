@@ -46,7 +46,11 @@ export const OakPupilJourneyOptionalityItem = (
           {props.title}
         </OakBox>
       </OakFlex>
-      <OakFlex $flexDirection={["column", "row"]} $gap={"space-between-xs"}>
+      <OakFlex
+        $flexDirection={["column", "row"]}
+        $gap={"space-between-xs"}
+        $flexWrap={"wrap"}
+      >
         {children}
       </OakFlex>
     </OakFlex>
