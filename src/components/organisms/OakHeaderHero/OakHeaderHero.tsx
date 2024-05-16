@@ -44,7 +44,11 @@ const UnstyledComponent = (props: OakHeaderHeroProps) => {
     authorImageSrc,
   } = props;
   return (
-    <OakBox $width={"100%"} $background={"bg-decorative3-main"}>
+    <OakBox
+      $width={"100%"}
+      $background={"bg-decorative3-main"}
+      $overflowX={"hidden"}
+    >
       <OakMaxWidth>
         <OakFlex
           $minWidth={"100%"}
