@@ -2,6 +2,7 @@
 
 exports[`OakHeaderHero matches snapshot 1`] = `
 .c0 {
+  overflow-x: hidden;
   width: 100%;
   background: #a0b6f2;
   font-family: Lexend,sans-serif;
