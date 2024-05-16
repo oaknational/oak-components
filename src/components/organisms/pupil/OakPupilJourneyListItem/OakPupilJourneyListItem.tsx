@@ -57,7 +57,7 @@ const hoverIconStyles = css`
   }
 `;
 
-const StyledLessonNavItem = styled(OakFlex)<{ $disabled?: boolean }>`
+const StyledPupilJourneyItem = styled(OakFlex)<{ $disabled?: boolean }>`
   outline: none;
   text-align: initial;
 
@@ -117,7 +117,7 @@ export const OakPupilJourneyListItem = <C extends ElementType = "a">(
 
   const disabledOrUnavailable = disabled || unavailable;
   return (
-    <StyledLessonNavItem
+    <StyledPupilJourneyItem
       as={disabledOrUnavailable ? "div" : as ?? "a"}
       $gap={["space-between-s", "space-between-m2"]}
       $alignItems="center"
@@ -185,6 +185,6 @@ export const OakPupilJourneyListItem = <C extends ElementType = "a">(
           />
         )}
       </OakFlex>
-    </StyledLessonNavItem>
+    </StyledPupilJourneyItem>
   );
 };
