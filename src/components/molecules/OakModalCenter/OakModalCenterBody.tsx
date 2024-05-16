@@ -37,6 +37,14 @@ export type OakModalCenterBodyProps = {
  * it provides a consistent layout for the body of the modal.
  * It includes an icon, a title, and the children passed to it.
  * The icon and title can be extended/overridden with the `iconOverride` and `headingOverride` props.
+ *
+ *  ## Props
+ *
+ * - **iconName** \-            The name of the icon to display. Accepts an icon name token
+ * - **title** \-               The title of the modal
+ * - **children** \-            The content of the modal body
+ * - **headingOverride** \-     Override HTMLAttributes & OakHEading props for the heading
+ * - **iconOverride** \-        Override HTMLAttributes & OakIcon props for the icon
  */
 export const OakModalCenterBody = ({
   children,

@@ -2,7 +2,7 @@ import { create } from "react-test-renderer";
 import React, { ReactNode } from "react";
 import "@testing-library/jest-dom";
 
-import { OakModalCenter, OakModalCenterBody } from ".";
+import { OakModalCenterBody } from ".";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { oakDefaultTheme } from "@/styles";
@@ -15,7 +15,7 @@ jest.mock("react-dom", () => {
   };
 });
 
-describe(OakModalCenter, () => {
+describe(OakModalCenterBody, () => {
   it("matches snapshot", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
