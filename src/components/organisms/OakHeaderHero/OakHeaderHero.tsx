@@ -18,6 +18,8 @@ export type OakHeaderHeroProps = {
   authorName: string;
   authorTitle: string;
   subHeadingText: string;
+  heroImageAlt: string;
+  authorImageAlt: string;
   breadcrumbs: ReactElement;
   children?: ReactNode;
 };
@@ -42,6 +44,8 @@ const UnstyledComponent = (props: OakHeaderHeroProps) => {
     subHeadingText,
     heroImageSrc,
     authorImageSrc,
+    heroImageAlt,
+    authorImageAlt,
   } = props;
   return (
     <OakBox
@@ -62,7 +66,7 @@ const UnstyledComponent = (props: OakHeaderHeroProps) => {
         >
           <OakFlex
             $alignSelf={"flex-start"}
-            $ph={"inner-padding-m"}
+            $ph={"inner-padding-s"}
             $height={"100%"}
             $flexDirection={"column"}
           >
@@ -97,7 +101,7 @@ const UnstyledComponent = (props: OakHeaderHeroProps) => {
                 $alignItems={"center"}
               >
                 <StyledAutorImage
-                  alt={`${authorName} profile image`}
+                  alt={authorImageAlt}
                   src={authorImageSrc}
                   $zIndex={"in-front"}
                 />
@@ -138,7 +142,7 @@ const UnstyledComponent = (props: OakHeaderHeroProps) => {
                 "all-spacing-20",
               ]}
               $minWidth={["all-spacing-19", "all-spacing-22", "all-spacing-21"]}
-              alt={`${headingTitle} hero image`}
+              alt={heroImageAlt}
               $zIndex={"in-front"}
             />
             <OakFlex

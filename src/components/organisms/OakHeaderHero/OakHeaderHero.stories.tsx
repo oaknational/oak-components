@@ -15,6 +15,7 @@ const meta: Meta<typeof OakHeaderHero> = {
     authorTitle: { type: "string" },
     heroImageSrc: { type: "string" },
     heroImageAlt: { type: "string" },
+    authorImageSrc: { type: "string" },
     imageSrc: { type: "string" },
     imageAlt: { type: "string" },
     subHeadingText: { type: "string" },
@@ -41,6 +42,8 @@ const meta: Meta<typeof OakHeaderHero> = {
         <OakLink href="/lessons">Lessons</OakLink>
       </>
     ),
+    heroImageAlt: "Hero image",
+    authorImageAlt: "Author image",
     blogProfileAuthor: "Rachel Storm",
     authorTitle: "Head of School Support",
     authorName: "Rachel Storm",
