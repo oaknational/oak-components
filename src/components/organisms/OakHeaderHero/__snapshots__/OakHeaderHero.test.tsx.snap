@@ -561,7 +561,7 @@ exports[`OakHeaderHero matches snapshot 1`] = `
               className="c15 c16"
             >
               <img
-                alt="Rachel Storm profile image"
+                alt="Author image"
                 className="c17"
                 data-nimg="fill"
                 decoding="async"
