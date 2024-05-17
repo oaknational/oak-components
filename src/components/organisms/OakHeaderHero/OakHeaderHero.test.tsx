@@ -12,8 +12,10 @@ import { oakDefaultTheme } from "@/styles";
 const oakHeaderProps: OakHeaderHeroProps = {
   headingTitle: "How to plan a lesson: a helpful guide for teachers",
   authorTitle: "Head of School Support",
+  heroImageAlt: "Hero image",
   authorName: "Rachel Storm",
   authorImageSrc: "https://via.placeholder.com/150",
+  authorImageAlt: "Author image",
   breadcrumbs: <OakLink href="/home">Home</OakLink>,
   subHeadingText:
     "Body 1 Our guide for teachers, whether you're in your ITT, an ECT or a teacher of many years experience looking for a fresh look on lesson planning, is place to dive into expertise from across the sector.",
