@@ -152,6 +152,6 @@ describe(OakModalCenter, () => {
       </OakModalCenter>,
     );
 
-    expect(getByRole("dialog")).toHaveAttribute("aria-label", ariaText);
+    expect(getByRole("alertdialog")).toHaveAttribute("aria-label", ariaText);
   });
 });

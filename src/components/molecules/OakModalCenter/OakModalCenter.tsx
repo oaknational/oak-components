@@ -198,7 +198,7 @@ export const OakModalCenter = ({
                 $borderColor="border-decorative1-stronger"
                 $width="100%"
                 $position="relative"
-                role="dialog"
+                role="alertdialog"
                 style={{
                   maxHeight: `calc(100vh - ${parseSpacing(
                     "inner-padding-xl5",

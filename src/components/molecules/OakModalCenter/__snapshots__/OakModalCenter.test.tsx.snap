@@ -284,7 +284,7 @@ exports[`OakModalCenter matches snapshot 1`] = `
     >
       <div
         className="c6 c7"
-        role="dialog"
+        role="alertdialog"
         style={
           {
             "maxHeight": "calc(100vh - 3.5rem - 3.5rem)",
