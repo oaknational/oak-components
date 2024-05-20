@@ -180,6 +180,7 @@ exports[`OakQuizHint matches snapshot 1`] = `
       className="c0 c1 c2 c3"
     >
       <button
+        aria-controls="info-tooltip"
         className="c4 c5"
         onClick={[Function]}
         onMouseEnter={[Function]}

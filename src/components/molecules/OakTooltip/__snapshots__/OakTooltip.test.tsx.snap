@@ -83,7 +83,9 @@ exports[`OakTooltip matches snapshot 1`] = `
       className="c1"
     >
       <div
+        aria-expanded={true}
         className="c2 c3 c4"
+        id="tooltip"
         role="tooltip"
       >
         Hello there
