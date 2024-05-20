@@ -365,6 +365,7 @@ exports[`OakModalCenter matches snapshot 1`] = `
         >
           <div
             className="c22 c7"
+            data-testid="modal-main-content"
           >
             Modal content
           </div>

@@ -119,6 +119,12 @@ export const OakModalCenter = ({
       return;
     }
 
+    if (scrollBoxElem.scrollHeight > scrollBoxElem.clientHeight) {
+      scrollBoxRef.current.tabIndex = 0;
+    } else {
+      scrollBoxRef.current.tabIndex = -1;
+    }
+
     setScrollBorders({
       top: scrollBoxElem.scrollTop > 0,
       bottom: scrollBoxElem.scrollHeight > scrollBoxElem.clientHeight,
@@ -229,6 +235,7 @@ export const OakModalCenter = ({
                 <div style={{ display: "contents" }} data-autofocus-inside>
                   <OakFlex
                     ref={scrollBoxRef}
+                    data-testid="modal-main-content"
                     $overflow="auto"
                     $flexDirection="column"
                     $ph="inner-padding-xl5"
