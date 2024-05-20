@@ -24,3 +24,5 @@ export * from "./OakPupilJourneyList";
 export * from "./OakPupilJourneyHeader";
 export * from "./OakPupilJourneyListCounter";
 export * from "./OakPupilJourneyProgrammeOptions";
+export * from "./OakPupilJourneyOptionalityItem";
+export * from "./OakPupilJourneyOptionalityButton";
