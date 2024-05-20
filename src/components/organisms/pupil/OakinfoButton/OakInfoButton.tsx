@@ -46,6 +46,7 @@ export const OakInfoButton = (props: OakInfoButtonProps) => {
       iconBackgroundSize={"all-spacing-8"}
       iconSize={"all-spacing-7"}
       onClick={onClick}
+      aria-controls="info-tooltip"
     />
   );
 };

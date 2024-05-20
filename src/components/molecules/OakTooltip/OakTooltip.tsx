@@ -32,6 +32,7 @@ export type OakTooltipProps = Pick<InternalTooltipProps, "tooltipPosition"> & {
    * @default document.body
    */
   domContainer?: Element;
+  id: string;
 };
 
 /**
@@ -43,6 +44,7 @@ export const OakTooltip = ({
   tooltip,
   isOpen,
   domContainer,
+  id,
   ...props
 }: OakTooltipProps) => {
   const [targetElement, setTargetElement] = useState<Element | null>(null);
@@ -159,6 +161,8 @@ export const OakTooltip = ({
                   tooltipPosition={tooltipPosition}
                   {...props}
                   {...borderRadiusProps}
+                  aria-expanded={isVisible}
+                  id={id}
                 >
                   {tooltip}
                 </InternalTooltip>

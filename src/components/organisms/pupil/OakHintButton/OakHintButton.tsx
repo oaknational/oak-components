@@ -51,6 +51,7 @@ export const OakHintButton = (props: OakHintButtonProps) => {
       disabled={props.disabled}
       iconBackgroundSize={"all-spacing-8"}
       iconSize={"all-spacing-6"}
+      aria-controls="info-tooltip"
     >
       {!isOpen ? "Need a hint?" : "Close hint"}
     </StyledInternalShadowRoundButton>
