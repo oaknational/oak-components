@@ -117,74 +117,76 @@ export const OakPupilJourneyListItem = <C extends ElementType = "a">(
 
   const disabledOrUnavailable = disabled || unavailable;
   return (
-    <StyledPupilJourneyItem
-      as={disabledOrUnavailable ? "div" : as ?? "a"}
-      $gap={["space-between-s", "space-between-m2"]}
-      $alignItems="center"
-      $justifyContent={"space-between"}
-      $flexWrap={"wrap"}
-      $background={unavailable ? "bg-neutral" : "bg-primary"}
-      $pa={["inner-padding-l", "inner-padding-xl"]}
-      $borderRadius="border-radius-m"
-      $ba={unavailable ? "border-solid-m" : "border-solid-none"}
-      $borderColor={unavailable ? "border-neutral-lighter" : "transparent"}
-      $disabled={disabledOrUnavailable}
-      $color="text-primary"
-      href={disabledOrUnavailable ? undefined : href}
-      onClick={disabledOrUnavailable ? undefined : onClick}
-      {...rest}
-    >
-      <OakFlex $alignItems={"center"} $gap={["space-between-m2"]}>
-        {" "}
-        <OakFlex>
-          <OakBox
-            $font={["heading-5", "heading-4"]}
-            $color={props.unavailable ? "text-subdued" : "text-primary"}
-            $textDecoration={"none"}
-          >
-            {props.index}
-          </OakBox>
-        </OakFlex>
-        <FlexedOakBox>
-          <StyledLabel
-            $font={["heading-6", "heading-5"]}
-            $color={disabledOrUnavailable ? "text-subdued" : "text-primary"}
-          >
-            {props.title}
-          </StyledLabel>
-        </FlexedOakBox>
-      </OakFlex>
-
-      <OakFlex
-        $alignItems={"center"}
-        $gap={"space-between-xs"}
-        $flexBasis={"auto"}
-        $flexGrow={1}
-        $justifyContent={"flex-end"}
+    <OakBox role="listitem">
+      <StyledPupilJourneyItem
+        as={disabledOrUnavailable ? "div" : as ?? "a"}
+        $gap={["space-between-s", "space-between-m2"]}
+        $alignItems="center"
+        $justifyContent={"space-between"}
+        $flexWrap={"wrap"}
+        $background={unavailable ? "bg-neutral" : "bg-primary"}
+        $pa={["inner-padding-l", "inner-padding-xl"]}
+        $borderRadius="border-radius-m"
+        $ba={unavailable ? "border-solid-m" : "border-solid-none"}
+        $borderColor={unavailable ? "border-neutral-lighter" : "transparent"}
+        $disabled={disabledOrUnavailable}
+        $color="text-primary"
+        href={disabledOrUnavailable ? undefined : href}
+        onClick={disabledOrUnavailable ? undefined : onClick}
+        {...rest}
       >
-        {props.numberOfLessons && !props.unavailable && (
-          <StyledLabel
-            $font={"heading-7"}
-            $color={disabledOrUnavailable ? "text-subdued" : "text-primary"}
-          >
-            {props.numberOfLessons} lessons
-          </StyledLabel>
-        )}
-        {props.unavailable && (
-          <StyledLabel
-            $font={"heading-7"}
-            $color={disabledOrUnavailable ? "text-subdued" : "text-primary"}
-          >
-            Unavailable
-          </StyledLabel>
-        )}
-        {!props.unavailable && (
-          <StyledRoundIcon
-            iconName="chevron-right"
-            $disabled={disabledOrUnavailable}
-          />
-        )}
-      </OakFlex>
-    </StyledPupilJourneyItem>
+        <OakFlex $alignItems={"center"} $gap={["space-between-m2"]}>
+          {" "}
+          <OakFlex>
+            <OakBox
+              $font={["heading-5", "heading-4"]}
+              $color={props.unavailable ? "text-subdued" : "text-primary"}
+              $textDecoration={"none"}
+            >
+              {props.index}
+            </OakBox>
+          </OakFlex>
+          <FlexedOakBox>
+            <StyledLabel
+              $font={["heading-6", "heading-5"]}
+              $color={disabledOrUnavailable ? "text-subdued" : "text-primary"}
+            >
+              {props.title}
+            </StyledLabel>
+          </FlexedOakBox>
+        </OakFlex>
+
+        <OakFlex
+          $alignItems={"center"}
+          $gap={"space-between-xs"}
+          $flexBasis={"auto"}
+          $flexGrow={1}
+          $justifyContent={"flex-end"}
+        >
+          {props.numberOfLessons && !props.unavailable && (
+            <StyledLabel
+              $font={"heading-7"}
+              $color={disabledOrUnavailable ? "text-subdued" : "text-primary"}
+            >
+              {props.numberOfLessons} lessons
+            </StyledLabel>
+          )}
+          {props.unavailable && (
+            <StyledLabel
+              $font={"heading-7"}
+              $color={disabledOrUnavailable ? "text-subdued" : "text-primary"}
+            >
+              Unavailable
+            </StyledLabel>
+          )}
+          {!props.unavailable && (
+            <StyledRoundIcon
+              iconName="chevron-right"
+              $disabled={disabledOrUnavailable}
+            />
+          )}
+        </OakFlex>
+      </StyledPupilJourneyItem>
+    </OakBox>
   );
 };
