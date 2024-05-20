@@ -121,8 +121,6 @@ export const OakModalCenter = ({
 
     if (scrollBoxElem.scrollHeight > scrollBoxElem.clientHeight) {
       scrollBoxRef.current.tabIndex = 0;
-    } else {
-      scrollBoxRef.current.tabIndex = -1;
     }
 
     setScrollBorders({

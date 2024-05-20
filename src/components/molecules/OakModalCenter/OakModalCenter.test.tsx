@@ -131,13 +131,14 @@ describe(OakModalCenter, () => {
     expect(onCloseSpy).toHaveBeenCalledTimes(0);
   });
 
-  it("gives the dialog main content focus", () => {
-    const { getByTestId } = renderWithTheme(
+  it("gives the first focusable element in the modal body focus", () => {
+    const { getByRole } = renderWithTheme(
       <OakModalCenter isOpen onClose={() => {}}>
         <input type="text" />
       </OakModalCenter>,
     );
-    expect(getByTestId("modal-main-content")).toHaveFocus();
+
+    expect(getByRole("textbox")).toHaveFocus();
   });
 
   it("passes aria label to modal", () => {
