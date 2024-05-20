@@ -109,7 +109,11 @@ export const ContentGuidence: Story = {
         title="This lesson contains conflict or violence."
         iconOverride={{ $colorFilter: "amber" }}
       >
-        <OakHeading tag="h2" $font="heading-light-6" $textAlign="center">
+        <OakHeading
+          tag="h2"
+          $font={["heading-light-7", "heading-light-7", "heading-light-6"]}
+          $textAlign="center"
+        >
           Adult supervision is suggested.
         </OakHeading>
       </OakModalCenterBody>

@@ -70,7 +70,7 @@ export const OakModalCenterBody = ({
         {...iconOverride}
       />
       <OakHeading
-        $font="heading-4"
+        $font={["heading-5", "heading-5", "heading-4"]}
         data-testid="OakHeading-id"
         tag="h1"
         $mb="space-between-m2"
