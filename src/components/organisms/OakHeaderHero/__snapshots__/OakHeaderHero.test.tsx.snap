@@ -2,6 +2,7 @@
 
 exports[`OakHeaderHero matches snapshot 1`] = `
 .c0 {
+  overflow-x: hidden;
   width: 100%;
   background: #a0b6f2;
   font-family: Lexend,sans-serif;
@@ -27,8 +28,8 @@ exports[`OakHeaderHero matches snapshot 1`] = `
 
 .c5 {
   height: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
   font-family: Lexend,sans-serif;
 }
 
@@ -560,7 +561,7 @@ exports[`OakHeaderHero matches snapshot 1`] = `
               className="c15 c16"
             >
               <img
-                alt="Rachel Storm profile image"
+                alt="Author image"
                 className="c17"
                 data-nimg="fill"
                 decoding="async"
@@ -615,7 +616,7 @@ exports[`OakHeaderHero matches snapshot 1`] = `
           className="c24"
         >
           <img
-            alt="How to plan a lesson: a helpful guide for teachers hero image"
+            alt="Hero image"
             className="c17"
             data-nimg="fill"
             decoding="async"

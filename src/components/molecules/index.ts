@@ -27,3 +27,4 @@ export * from "./OakDraggableFeedback";
 export * from "./OakAccordion";
 export * from "./OakModal";
 export * from "./OakModalCenter";
+export * from "./OakCardWithHandDrawnBorder";

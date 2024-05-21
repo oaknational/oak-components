@@ -53,7 +53,7 @@ If you're using TypeScript you might want to add `@types/styled-components` to y
 
 ## Making changes
 
-We use [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) and [semantic versioning](https://semver.org/). Releases are managed by [Semantic Release](https://github.com/semantic-release/semantic-release) and are automatically published to [NPM](https://www.npmjs.com/package/@oaknational/oak-components) on every merge to `main`
+We use [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) and [semantic versioning](https://semver.org/). Releases are managed by [Semantic Release](https://github.com/semantic-release/semantic-release) and are automatically published to [NPM](https://www.npmjs.com/package/@oaknational/oak-components) on every merge to `main`.
 
 Changes should go through a pull-request to `main` and require approval by at least 1 reviewer. You should seek reviews from a QA/designer/PM when necessary.
 

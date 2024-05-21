@@ -1,0 +1,144 @@
+import React, { useState } from "react";
+import styled, { css } from "styled-components";
+
+import { OakFlex, OakHeading } from "@/components/atoms";
+import {
+  OakPrimaryButton,
+  OakRadioButton,
+  OakRadioGroup,
+} from "@/components/molecules";
+
+export interface Tier {
+  tier: string;
+  tierSlug: string;
+}
+export interface Subject {
+  subject: string;
+  subjectSlug: string;
+}
+
+export type OakDownloadsJourneyChildSubjectTierSelectorProps = {
+  /* An array of Tier objects containing `tier` and `tierSlug` */
+  tiers: Tier[];
+  /* An array of Subject objects containing `subject` and `subjectSlug` */
+  childSubjects?: Subject[];
+  /* Callback function which returns the selected tier and subject once the Next button is pressed. */
+  getTierSubjectValues: (
+    tierSlug: string,
+    childSubjectSlug: string | null,
+  ) => void;
+};
+
+const OakDownloadsJourneyChildSubjectTierSelectorCss = css<OakDownloadsJourneyChildSubjectTierSelectorProps>``;
+
+const UnstyledComponent = (
+  props: OakDownloadsJourneyChildSubjectTierSelectorProps,
+) => {
+  const { childSubjects, tiers, getTierSubjectValues } = props;
+
+  const [childSubjectSelected, setChildSubjectSelected] = useState<
+    string | null
+  >(childSubjects && childSubjects[0] ? childSubjects[0]?.subjectSlug : null);
+  const [tierSelected, setTierSelected] = useState<string>("foundation");
+
+  function handleChildSubjectSelection(
+    e: React.ChangeEvent<HTMLInputElement>,
+  ): void {
+    const childSubjectSlug = e.currentTarget.value;
+    setChildSubjectSelected(childSubjectSlug);
+  }
+
+  function handleTierSelection(e: React.ChangeEvent<HTMLInputElement>): void {
+    const tierSlug = e.currentTarget.value;
+    setTierSelected(tierSlug);
+  }
+
+  function handleNextClick() {
+    getTierSubjectValues(tierSelected, childSubjectSelected);
+  }
+
+  return (
+    <OakFlex $flexDirection={"column"} $gap={"space-between-m"}>
+      <OakHeading $font={"heading-4"} tag="h4">
+        Download
+      </OakHeading>
+      {childSubjects && (
+        <OakRadioGroup
+          label="Choose subject for KS4 units"
+          name="childSubjectRadio"
+          onChange={handleChildSubjectSelection}
+          $flexDirection={"column"}
+          $gap={"space-between-s"}
+          defaultValue={childSubjectSelected || "combined-science"}
+          data-testid="child-subject-selector"
+        >
+          {childSubjects.map(
+            ({
+              subject,
+              subjectSlug,
+            }: {
+              subject: string;
+              subjectSlug: string;
+            }) => (
+              <OakRadioButton
+                id={subjectSlug}
+                label={subject}
+                value={subjectSlug}
+                data-testid="child-subject-radio-button"
+                key={subjectSlug}
+              />
+            ),
+          )}
+        </OakRadioGroup>
+      )}
+
+      {tiers && (
+        <OakRadioGroup
+          data-testid="tier-selector"
+          label="Choose learning tier for KS4 units"
+          name="tierRadio"
+          onChange={handleTierSelection}
+          $flexDirection={"column"}
+          $gap={"space-between-s"}
+          defaultValue={tierSelected}
+        >
+          {tiers.map(
+            ({ tier, tierSlug }: { tier: string; tierSlug: string }) => (
+              <OakRadioButton
+                id={tierSlug}
+                label={tier}
+                value={tierSlug}
+                data-testid="tier-radio-button"
+                key={tierSlug}
+              />
+            ),
+          )}
+        </OakRadioGroup>
+      )}
+
+      <OakPrimaryButton
+        iconName="arrow-right"
+        isTrailingIcon={true}
+        onClick={handleNextClick}
+      >
+        Next
+      </OakPrimaryButton>
+    </OakFlex>
+  );
+};
+
+/**
+ *
+ * The component is used in the Curriculum Downloads journey for KS4 Maths and Science, where a tier
+ * must be selected before download (Maths) as well as a child subject (Science).
+ *
+ * ### Callbacks
+ * `getTierSubjectValues(tier, childSubject)`: a callback function to retrieve the selected values
+ * once the Next button is pressed to continue on the Downloads journey.
+ *
+ */
+export const OakDownloadsJourneyChildSubjectTierSelector = styled(
+  UnstyledComponent,
+)`
+  ${OakDownloadsJourneyChildSubjectTierSelectorCss}
+`;
