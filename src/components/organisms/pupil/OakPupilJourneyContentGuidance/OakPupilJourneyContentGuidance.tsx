@@ -70,6 +70,7 @@ export const OakPupilJourneyContentGuidance = ({
   return (
     <OakModalCenter
       isOpen={isOpen}
+      modalFlexProps={{ "aria-label": "Content guidance modal" }}
       footerSlot={
         <OakFlex
           $alignItems="center"
