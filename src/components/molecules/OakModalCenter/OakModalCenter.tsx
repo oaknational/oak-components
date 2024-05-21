@@ -58,6 +58,10 @@ export type OakModalCenterProps = {
    * Slot for the footer of the modal
    */
   footerSlot?: ReactNode;
+  /**
+   * If true, the server will render the modal
+   */
+  shouldServerRender?: boolean;
 };
 
 const FocusOnBox = styled(FocusOn)`
@@ -92,6 +96,7 @@ const FadeInFlex = styled(OakFlex)<{ $state: TransitionStatus }>`
  * - **modalFlexProps?** \-         Override HTMLAttributes & OakFlex props for the modal container
  * - **backdropFlexProps?** \-      Override HTMLAttributes & OakFlex props for the backdrop container
  * - **footerSlot?** \-             Fixed area at the bottom of the modal, this will remain fixed in view if the content is scrollable
+ * - **shouldServerRender?** \-     If true, the server will render the modal
  */
 export const OakModalCenter = ({
   children,
@@ -104,6 +109,7 @@ export const OakModalCenter = ({
   modalFlexProps,
   backdropFlexProps,
   footerSlot,
+  shouldServerRender = false,
 }: OakModalCenterProps) => {
   const [scrollBorders, setScrollBorders] = useState({
     top: false,
@@ -146,7 +152,7 @@ export const OakModalCenter = ({
     };
   });
 
-  return isClientSide
+  return isClientSide || shouldServerRender
     ? createPortal(
         <Transition
           in={isOpen}

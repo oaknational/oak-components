@@ -20,7 +20,7 @@ describe(OakModalCenter, () => {
   it("matches snapshot", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
-        <OakModalCenter isOpen onClose={() => {}}>
+        <OakModalCenter isOpen onClose={() => {}} shouldServerRender={true}>
           Modal content
         </OakModalCenter>
       </OakThemeProvider>,
