@@ -58,10 +58,6 @@ export type OakModalCenterProps = {
    * Slot for the footer of the modal
    */
   footerSlot?: ReactNode;
-  /**
-   * If true, the server will render the modal
-   */
-  shouldServerRender?: boolean;
 };
 
 const FocusOnBox = styled(FocusOn)`
@@ -96,7 +92,6 @@ const FadeInFlex = styled(OakFlex)<{ $state: TransitionStatus }>`
  * - **modalFlexProps?** \-         Override HTMLAttributes & OakFlex props for the modal container
  * - **backdropFlexProps?** \-      Override HTMLAttributes & OakFlex props for the backdrop container
  * - **footerSlot?** \-             Fixed area at the bottom of the modal, this will remain fixed in view if the content is scrollable
- * - **shouldServerRender?** \-     If true, the server will render the modal
  */
 export const OakModalCenter = ({
   children,
@@ -109,13 +104,11 @@ export const OakModalCenter = ({
   modalFlexProps,
   backdropFlexProps,
   footerSlot,
-  shouldServerRender = false,
 }: OakModalCenterProps) => {
   const [scrollBorders, setScrollBorders] = useState({
     top: false,
     bottom: false,
   });
-  const [isClientSide, setIsClientSide] = useState(false);
   const transitionRef = useRef<HTMLDivElement>(null);
   const scrollBoxRef = useRef<HTMLDivElement>(null);
 
@@ -145,130 +138,132 @@ export const OakModalCenter = ({
   }, [isOpen]);
 
   useEffect(() => {
-    setIsClientSide(true);
     window.addEventListener("resize", checkForScroll);
     return () => {
       window.removeEventListener("resize", checkForScroll);
     };
   });
 
-  return isClientSide || shouldServerRender
-    ? createPortal(
-        <Transition
-          in={isOpen}
-          nodeRef={transitionRef}
-          addEndListener={(done) => {
-            transitionRef.current?.addEventListener("transitionend", done);
-          }}
-          timeout={0}
-          mountOnEnter
-          unmountOnExit
+  const isClientSide = typeof window !== "undefined";
+
+  const modal = (
+    <Transition
+      in={isOpen}
+      nodeRef={transitionRef}
+      addEndListener={(done) => {
+        transitionRef.current?.addEventListener("transitionend", done);
+      }}
+      timeout={0}
+      mountOnEnter
+      unmountOnExit
+    >
+      {(state) => (
+        <FadeInFlex
+          ref={transitionRef}
+          $state={state}
+          $position="fixed"
+          $inset="all-spacing-0"
+          $justifyContent="center"
+          $alignItems="center"
+          $zIndex="modal-dialog"
         >
-          {(state) => (
-            <FadeInFlex
-              ref={transitionRef}
-              $state={state}
-              $position="fixed"
-              $inset="all-spacing-0"
-              $justifyContent="center"
-              $alignItems="center"
-              $zIndex="modal-dialog"
+          <OakBox
+            $position="fixed"
+            $inset="all-spacing-0"
+            $zIndex="behind"
+            $background="blackSemiTransparent"
+            style={{ backdropFilter: `blur(3px)` }}
+            data-testid="backdrop"
+            {...backdropFlexProps}
+          />
+          <OakFlex
+            $alignItems="center"
+            $justifyContent="center"
+            $maxWidth="all-spacing-23"
+            $width="100%"
+            $pa="inner-padding-l"
+          >
+            <FocusOnBox
+              onEscapeKey={() => !disableEscapeKey && onClose()}
+              onClickOutside={() => !disableBackdropClick && onClose()}
+              returnFocus
+              autoFocus
+              $width="100%"
             >
-              <OakBox
-                $position="fixed"
-                $inset="all-spacing-0"
-                $zIndex="behind"
-                $background="blackSemiTransparent"
-                style={{ backdropFilter: `blur(3px)` }}
-                data-testid="backdrop"
-                {...backdropFlexProps}
-              />
               <OakFlex
-                $alignItems="center"
-                $justifyContent="center"
-                $maxWidth="all-spacing-23"
+                $flexDirection="column"
+                $background="white"
+                $borderRadius="border-radius-l"
+                $ba="border-solid-xl"
+                $borderColor="border-decorative1-stronger"
                 $width="100%"
-                $pa="inner-padding-l"
+                $position="relative"
+                role="alertdialog"
+                style={{
+                  maxHeight: `calc(100vh - ${parseSpacing(
+                    "inner-padding-xl5",
+                  )} - ${parseSpacing("inner-padding-xl5")})`,
+                }}
+                {...modalFlexProps}
               >
-                <FocusOnBox
-                  onEscapeKey={() => !disableEscapeKey && onClose()}
-                  onClickOutside={() => !disableBackdropClick && onClose()}
-                  returnFocus
-                  autoFocus
-                  $width="100%"
-                >
-                  <OakFlex
-                    $flexDirection="column"
-                    $background="white"
-                    $borderRadius="border-radius-l"
-                    $ba="border-solid-xl"
-                    $borderColor="border-decorative1-stronger"
-                    $width="100%"
-                    $position="relative"
-                    role="alertdialog"
-                    style={{
-                      maxHeight: `calc(100vh - ${parseSpacing(
-                        "inner-padding-xl5",
-                      )} - ${parseSpacing("inner-padding-xl5")})`,
-                    }}
-                    {...modalFlexProps}
-                  >
-                    <OakBox $minHeight="inner-padding-xl5" $position="relative">
-                      {!hideCloseButton && (
-                        <OakBox
-                          $position="absolute"
-                          $top="all-spacing-3"
-                          $right="all-spacing-3"
-                        >
-                          <InternalShadowRoundButton
-                            onClick={onClose}
-                            aria-label="Close Modal"
-                            defaultIconBackground="transparent"
-                            defaultIconColor="black"
-                            defaultTextColor="transparent"
-                            hoverTextColor="transparent"
-                            disabledTextColor="transparent"
-                            hoverIconBackground="black"
-                            hoverIconColor="white"
-                            disabledIconBackground="transparent"
-                            iconBackgroundSize="all-spacing-7"
-                            iconSize="all-spacing-7"
-                            iconName="cross"
-                            data-testid="close-button"
-                          />
-                        </OakBox>
-                      )}
+                <OakBox $minHeight="inner-padding-xl5" $position="relative">
+                  {!hideCloseButton && (
+                    <OakBox
+                      $position="absolute"
+                      $top="all-spacing-3"
+                      $right="all-spacing-3"
+                    >
+                      <InternalShadowRoundButton
+                        onClick={onClose}
+                        aria-label="Close Modal"
+                        defaultIconBackground="transparent"
+                        defaultIconColor="black"
+                        defaultTextColor="transparent"
+                        hoverTextColor="transparent"
+                        disabledTextColor="transparent"
+                        hoverIconBackground="black"
+                        hoverIconColor="white"
+                        disabledIconBackground="transparent"
+                        iconBackgroundSize="all-spacing-7"
+                        iconSize="all-spacing-7"
+                        iconName="cross"
+                        data-testid="close-button"
+                      />
                     </OakBox>
-                    <div style={{ display: "contents" }} data-autofocus-inside>
-                      <OakFlex
-                        ref={scrollBoxRef}
-                        data-testid="modal-main-content"
-                        $overflow="auto"
-                        $flexDirection="column"
-                        $ph="inner-padding-xl5"
-                        $bt={
-                          scrollBorders.top
-                            ? "border-solid-s"
-                            : "border-solid-none"
-                        }
-                        $bb={
-                          scrollBorders.bottom
-                            ? "border-solid-s"
-                            : "border-solid-none"
-                        }
-                        $borderColor="border-neutral-lighter"
-                      >
-                        {children}
-                      </OakFlex>
-                      {footerSlot}
-                    </div>
+                  )}
+                </OakBox>
+                <div style={{ display: "contents" }} data-autofocus-inside>
+                  <OakFlex
+                    ref={scrollBoxRef}
+                    data-testid="modal-main-content"
+                    $overflow="auto"
+                    $flexDirection="column"
+                    $ph="inner-padding-xl5"
+                    $bt={
+                      scrollBorders.top ? "border-solid-s" : "border-solid-none"
+                    }
+                    $bb={
+                      scrollBorders.bottom
+                        ? "border-solid-s"
+                        : "border-solid-none"
+                    }
+                    $borderColor="border-neutral-lighter"
+                  >
+                    {children}
                   </OakFlex>
-                </FocusOnBox>
+                  {footerSlot}
+                </div>
               </OakFlex>
-            </FadeInFlex>
-          )}
-        </Transition>,
-        domContainer || document.body,
-      )
-    : null;
+            </FocusOnBox>
+          </OakFlex>
+        </FadeInFlex>
+      )}
+    </Transition>
+  );
+
+  if (domContainer && isClientSide) {
+    return createPortal(modal, domContainer);
+  } else {
+    return modal;
+  }
 };

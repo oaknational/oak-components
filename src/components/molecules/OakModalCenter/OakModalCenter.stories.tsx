@@ -47,6 +47,7 @@ const meta: Meta<typeof OakModalCenter> = {
     hideCloseButton: false,
     disableBackdropClick: false,
     disableEscapeKey: false,
+    domContainer: document.body,
     children: (
       <OakModalCenterBody
         title="Modal Title"
