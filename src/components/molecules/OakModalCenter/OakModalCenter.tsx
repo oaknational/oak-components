@@ -49,7 +49,7 @@ export type OakModalCenterProps = {
   /**
    * Called when the modal is closed via the close button, backdrop click, or escape key
    */
-  onClose: () => void;
+  onClose?: () => void;
   /**
    * The DOM container to render the modal portal into.
    */
@@ -95,9 +95,9 @@ const FadeInFlex = styled(OakFlex)<{ $state: TransitionStatus }>`
  */
 export const OakModalCenter = ({
   children,
-  domContainer = document.body,
+  domContainer,
   isOpen,
-  onClose,
+  onClose = () => {},
   disableBackdropClick = false,
   disableEscapeKey = false,
   hideCloseButton = false,
@@ -109,6 +109,7 @@ export const OakModalCenter = ({
     top: false,
     bottom: false,
   });
+  const [isClientSide, setIsClientSide] = useState(false);
   const transitionRef = useRef<HTMLDivElement>(null);
   const scrollBoxRef = useRef<HTMLDivElement>(null);
 
@@ -138,125 +139,130 @@ export const OakModalCenter = ({
   }, [isOpen]);
 
   useEffect(() => {
+    setIsClientSide(true);
     window.addEventListener("resize", checkForScroll);
     return () => {
       window.removeEventListener("resize", checkForScroll);
     };
   });
 
-  return createPortal(
-    <Transition
-      in={isOpen}
-      nodeRef={transitionRef}
-      addEndListener={(done) => {
-        transitionRef.current?.addEventListener("transitionend", done);
-      }}
-      timeout={0}
-      mountOnEnter
-      unmountOnExit
-    >
-      {(state) => (
-        <FadeInFlex
-          ref={transitionRef}
-          $state={state}
-          $position="fixed"
-          $inset="all-spacing-0"
-          $justifyContent="center"
-          $alignItems="center"
-          $zIndex="modal-dialog"
+  return isClientSide
+    ? createPortal(
+        <Transition
+          in={isOpen}
+          nodeRef={transitionRef}
+          addEndListener={(done) => {
+            transitionRef.current?.addEventListener("transitionend", done);
+          }}
+          timeout={0}
+          mountOnEnter
+          unmountOnExit
         >
-          <OakBox
-            $position="fixed"
-            $inset="all-spacing-0"
-            $zIndex="behind"
-            $background="blackSemiTransparent"
-            style={{ backdropFilter: `blur(3px)` }}
-            data-testid="backdrop"
-            {...backdropFlexProps}
-          />
-          <OakFlex
-            $alignItems="center"
-            $justifyContent="center"
-            $maxWidth="all-spacing-23"
-            $width="100%"
-            $pa="inner-padding-l"
-          >
-            <FocusOnBox
-              onEscapeKey={() => !disableEscapeKey && onClose()}
-              onClickOutside={() => !disableBackdropClick && onClose()}
-              returnFocus
-              autoFocus
-              $width="100%"
+          {(state) => (
+            <FadeInFlex
+              ref={transitionRef}
+              $state={state}
+              $position="fixed"
+              $inset="all-spacing-0"
+              $justifyContent="center"
+              $alignItems="center"
+              $zIndex="modal-dialog"
             >
+              <OakBox
+                $position="fixed"
+                $inset="all-spacing-0"
+                $zIndex="behind"
+                $background="blackSemiTransparent"
+                style={{ backdropFilter: `blur(3px)` }}
+                data-testid="backdrop"
+                {...backdropFlexProps}
+              />
               <OakFlex
-                $flexDirection="column"
-                $background="white"
-                $borderRadius="border-radius-l"
-                $ba="border-solid-xl"
-                $borderColor="border-decorative1-stronger"
+                $alignItems="center"
+                $justifyContent="center"
+                $maxWidth="all-spacing-23"
                 $width="100%"
-                $position="relative"
-                role="alertdialog"
-                style={{
-                  maxHeight: `calc(100vh - ${parseSpacing(
-                    "inner-padding-xl5",
-                  )} - ${parseSpacing("inner-padding-xl5")})`,
-                }}
-                {...modalFlexProps}
+                $pa="inner-padding-l"
               >
-                <OakBox $minHeight="inner-padding-xl5" $position="relative">
-                  {!hideCloseButton && (
-                    <OakBox
-                      $position="absolute"
-                      $top="all-spacing-3"
-                      $right="all-spacing-3"
-                    >
-                      <InternalShadowRoundButton
-                        onClick={onClose}
-                        aria-label="Close Modal"
-                        defaultIconBackground="transparent"
-                        defaultIconColor="black"
-                        defaultTextColor="transparent"
-                        hoverTextColor="transparent"
-                        disabledTextColor="transparent"
-                        hoverIconBackground="black"
-                        hoverIconColor="white"
-                        disabledIconBackground="transparent"
-                        iconBackgroundSize="all-spacing-7"
-                        iconSize="all-spacing-7"
-                        iconName="cross"
-                        data-testid="close-button"
-                      />
-                    </OakBox>
-                  )}
-                </OakBox>
-                <div style={{ display: "contents" }} data-autofocus-inside>
+                <FocusOnBox
+                  onEscapeKey={() => !disableEscapeKey && onClose()}
+                  onClickOutside={() => !disableBackdropClick && onClose()}
+                  returnFocus
+                  autoFocus
+                  $width="100%"
+                >
                   <OakFlex
-                    ref={scrollBoxRef}
-                    data-testid="modal-main-content"
-                    $overflow="auto"
                     $flexDirection="column"
-                    $ph="inner-padding-xl5"
-                    $bt={
-                      scrollBorders.top ? "border-solid-s" : "border-solid-none"
-                    }
-                    $bb={
-                      scrollBorders.bottom
-                        ? "border-solid-s"
-                        : "border-solid-none"
-                    }
-                    $borderColor="border-neutral-lighter"
+                    $background="white"
+                    $borderRadius="border-radius-l"
+                    $ba="border-solid-xl"
+                    $borderColor="border-decorative1-stronger"
+                    $width="100%"
+                    $position="relative"
+                    role="alertdialog"
+                    style={{
+                      maxHeight: `calc(100vh - ${parseSpacing(
+                        "inner-padding-xl5",
+                      )} - ${parseSpacing("inner-padding-xl5")})`,
+                    }}
+                    {...modalFlexProps}
                   >
-                    {children}
+                    <OakBox $minHeight="inner-padding-xl5" $position="relative">
+                      {!hideCloseButton && (
+                        <OakBox
+                          $position="absolute"
+                          $top="all-spacing-3"
+                          $right="all-spacing-3"
+                        >
+                          <InternalShadowRoundButton
+                            onClick={onClose}
+                            aria-label="Close Modal"
+                            defaultIconBackground="transparent"
+                            defaultIconColor="black"
+                            defaultTextColor="transparent"
+                            hoverTextColor="transparent"
+                            disabledTextColor="transparent"
+                            hoverIconBackground="black"
+                            hoverIconColor="white"
+                            disabledIconBackground="transparent"
+                            iconBackgroundSize="all-spacing-7"
+                            iconSize="all-spacing-7"
+                            iconName="cross"
+                            data-testid="close-button"
+                          />
+                        </OakBox>
+                      )}
+                    </OakBox>
+                    <div style={{ display: "contents" }} data-autofocus-inside>
+                      <OakFlex
+                        ref={scrollBoxRef}
+                        data-testid="modal-main-content"
+                        $overflow="auto"
+                        $flexDirection="column"
+                        $ph="inner-padding-xl5"
+                        $bt={
+                          scrollBorders.top
+                            ? "border-solid-s"
+                            : "border-solid-none"
+                        }
+                        $bb={
+                          scrollBorders.bottom
+                            ? "border-solid-s"
+                            : "border-solid-none"
+                        }
+                        $borderColor="border-neutral-lighter"
+                      >
+                        {children}
+                      </OakFlex>
+                      {footerSlot}
+                    </div>
                   </OakFlex>
-                  {footerSlot}
-                </div>
+                </FocusOnBox>
               </OakFlex>
-            </FocusOnBox>
-          </OakFlex>
-        </FadeInFlex>
-      )}
-    </Transition>,
-    domContainer,
-  );
+            </FadeInFlex>
+          )}
+        </Transition>,
+        domContainer || document.body,
+      )
+    : null;
 };
