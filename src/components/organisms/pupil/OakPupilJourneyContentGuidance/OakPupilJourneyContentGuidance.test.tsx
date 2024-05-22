@@ -42,10 +42,10 @@ describe("OakPupilJourneyContentGuidance", () => {
     );
 
     expect(
-      getByText(contentGuidanceDescimination.contentguidanceLabel),
+      getByText(contentGuidanceDescimination.contentguidanceLabel as string),
     ).toBeInTheDocument();
     expect(
-      getByText(contentGuidanceUpsetting.contentguidanceLabel),
+      getByText(contentGuidanceUpsetting.contentguidanceLabel as string),
     ).toBeInTheDocument();
   });
 

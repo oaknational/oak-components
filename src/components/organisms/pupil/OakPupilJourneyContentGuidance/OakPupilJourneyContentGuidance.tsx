@@ -9,9 +9,9 @@ import {
 import { OakFlex, OakHeading } from "@/components/atoms";
 
 export type OakPupilContentGuidance = {
-  contentguidanceLabel: string;
-  contentguidanceDescription: string;
-  contentguidanceArea: string;
+  contentguidanceLabel: string | null;
+  contentguidanceDescription: string | null;
+  contentguidanceArea: string | null;
 };
 
 export type OakPupilJourneyContentGuidanceProps = {
@@ -30,15 +30,15 @@ export type OakPupilJourneyContentGuidanceProps = {
   /**
    * An array of objects containing the content guidance label, description and area
    */
-  contentGuidance?: OakPupilContentGuidance[] | undefined;
+  contentGuidance?: OakPupilContentGuidance[] | null;
   /**
    * The level of supervision required for the content
    */
-  supervisionLevel?: string | null | undefined;
+  supervisionLevel?: string | null;
 };
 
 export const removedGuidanceDuplicates = (
-  contentGuidance: OakPupilContentGuidance[] | undefined = [],
+  contentGuidance: OakPupilContentGuidance[] | null = [],
 ) => {
   return Array.from(
     new Set(
@@ -107,7 +107,7 @@ export const OakPupilJourneyContentGuidance = ({
       >
         <OakFlex $flexDirection="column" $rowGap="space-between-m2">
           {removedGuidanceDuplicates(contentGuidance).map(
-            (guidance: string, index: number) => (
+            (guidance, index: number) => (
               <OakHeading
                 key={index}
                 $font={[
