@@ -35,6 +35,14 @@ export type OakPupilJourneyContentGuidanceProps = {
    * The level of supervision required for the content
    */
   supervisionLevel?: string | null;
+  /**
+   * The text to be displayed on the accept button
+   */
+  acceptText?: string;
+  /**
+   * The text to be displayed on the decline button
+   */
+  declineText?: string;
 };
 
 export const removedGuidanceDuplicates = (
@@ -59,6 +67,8 @@ export const removedGuidanceDuplicates = (
  * - **onDecline** \-               Callback function to be called when the pupil declines the content guidance
  * - **contentGuidance** \-         An array of objects containing the content guidance label, description and area
  * - **supervisionLevel** \-        The level of supervision required for the content
+ * - **acceptText** \-              The text to be displayed on the accept button
+ * - **declineText** \-             The text to be displayed on the decline button
  */
 export const OakPupilJourneyContentGuidance = ({
   isOpen,
@@ -66,6 +76,8 @@ export const OakPupilJourneyContentGuidance = ({
   onDecline,
   contentGuidance,
   supervisionLevel = null,
+  acceptText = "I understand, continue",
+  declineText = "Take me back to lessons",
 }: OakPupilJourneyContentGuidanceProps) => {
   return (
     <OakModalCenter
@@ -84,7 +96,7 @@ export const OakPupilJourneyContentGuidance = ({
             onClick={onAccept}
             data-testid="acceptButton"
           >
-            I understand, continue
+            {acceptText}
           </OakPrimaryButton>
           <OakPrimaryInvertedButton
             $font="heading-7"
@@ -92,7 +104,7 @@ export const OakPupilJourneyContentGuidance = ({
             onClick={onDecline}
             data-testid="declineButton"
           >
-            Take me home
+            {declineText}
           </OakPrimaryInvertedButton>
         </OakFlex>
       }
