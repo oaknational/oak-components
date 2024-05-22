@@ -33,3 +33,8 @@ export const Default: Story = {
   render: (args) => <OakPupilJourneyHeader {...args} />,
   args: {},
 };
+
+export const WithOptionality: Story = {
+  render: (args) => <OakPupilJourneyHeader {...args} />,
+  args: { optionalityTitle: "Optional title" },
+};

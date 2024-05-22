@@ -14,6 +14,7 @@ export type OakPupilJourneyHeaderProps = {
   alt?: OakIconProps["alt"];
   iconBackground?: "primary" | "secondary";
   breadcrumbs: OakBulletListProps["listItems"];
+  optionalityTitle?: string;
 } & FlexStyleProps;
 
 /**
@@ -29,6 +30,7 @@ export const OakPupilJourneyHeader = ({
   iconName,
   alt,
   breadcrumbs,
+  optionalityTitle,
 }: OakPupilJourneyHeaderProps) => {
   return (
     <OakFlex $flexDirection={"row"} $gap={"space-between-m"}>
@@ -43,6 +45,11 @@ export const OakPupilJourneyHeader = ({
         alt={alt}
       />
       <OakFlex $flexDirection={"column"} $gap={"space-between-s"}>
+        {optionalityTitle && (
+          <OakHeading tag="h2" $font={["heading-7"]}>
+            {optionalityTitle}
+          </OakHeading>
+        )}
         <OakHeading tag="h1" $font={["heading-5", "heading-4"]}>
           {title}
         </OakHeading>

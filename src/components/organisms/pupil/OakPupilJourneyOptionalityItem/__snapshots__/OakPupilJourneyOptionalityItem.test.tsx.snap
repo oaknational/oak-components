@@ -136,20 +136,6 @@ exports[`OakPupilJourneyOptionalityItem component test matches snapshot 1`] = `
   display: flex;
 }
 
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
 .c9 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -202,6 +188,16 @@ exports[`OakPupilJourneyOptionalityItem component test matches snapshot 1`] = `
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
+}
+
+.c7 {
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  width: 100%;
+  row-gap: 0.75rem;
+  -webkit-column-gap: 0.75rem;
+  column-gap: 0.75rem;
+  grid-template-columns: repeat(1,1fr);
 }
 
 .c14 > * {
@@ -311,9 +307,7 @@ exports[`OakPupilJourneyOptionalityItem component test matches snapshot 1`] = `
 
 @media (min-width:750px) {
   .c7 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
+    grid-template-columns: repeat(2,1fr);
   }
 }
 
