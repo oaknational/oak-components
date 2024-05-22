@@ -172,7 +172,10 @@ export const OakModalCenter = ({
             $inset="all-spacing-0"
             $zIndex="behind"
             $background="blackSemiTransparent"
-            style={{ backdropFilter: `blur(3px)` }}
+            style={{
+              backdropFilter: `blur(3px)`,
+              WebkitBackdropFilter: `blur(3px)`,
+            }}
             data-testid="backdrop"
             {...backdropFlexProps}
           />

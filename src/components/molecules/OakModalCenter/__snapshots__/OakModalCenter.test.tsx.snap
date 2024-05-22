@@ -251,6 +251,7 @@ exports[`OakModalCenter matches snapshot 1`] = `
     data-testid="backdrop"
     style={
       {
+        "WebkitBackdropFilter": "blur(3px)",
         "backdropFilter": "blur(3px)",
       }
     }
