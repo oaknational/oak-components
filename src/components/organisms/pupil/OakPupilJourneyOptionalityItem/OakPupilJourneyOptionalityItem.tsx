@@ -47,7 +47,7 @@ export const OakPupilJourneyOptionalityItem = (
         </OakBox>
       </OakFlex>
       <OakGrid
-        $gridTemplateColumns={"repeat(2, 1fr)"}
+        $gridTemplateColumns={["repeat(1,1fr)", "repeat(2, 1fr)"]}
         $cg={"space-between-xs"}
         $rg={"space-between-xs"}
       >
