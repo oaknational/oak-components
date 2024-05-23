@@ -64,6 +64,10 @@ const FocusOnBox = styled(FocusOn)`
   ${oakBoxCss}
 `;
 
+const BlurredOakBox = styled(OakBox)`
+  backdrop-filter: blur(3px);
+`;
+
 const FadeInFlex = styled(OakFlex)<{ $state: TransitionStatus }>`
   opacity: ${({ $state }) => {
     switch ($state) {
@@ -167,15 +171,11 @@ export const OakModalCenter = ({
           $alignItems="center"
           $zIndex="modal-dialog"
         >
-          <OakBox
+          <BlurredOakBox
             $position="fixed"
             $inset="all-spacing-0"
             $zIndex="behind"
             $background="blackSemiTransparent"
-            style={{
-              backdropFilter: `blur(3px)`,
-              WebkitBackdropFilter: `blur(3px)`,
-            }}
             data-testid="backdrop"
             {...backdropFlexProps}
           />
