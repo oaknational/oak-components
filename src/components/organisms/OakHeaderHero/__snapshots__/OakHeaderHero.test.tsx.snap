@@ -28,8 +28,6 @@ exports[`OakHeaderHero matches snapshot 1`] = `
 
 .c5 {
   height: 100%;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
   font-family: Lexend,sans-serif;
 }
 
@@ -590,11 +588,11 @@ exports[`OakHeaderHero matches snapshot 1`] = `
             <div
               className="c18"
             >
-              <h3
+              <p
                 className="c19"
               >
                 Rachel Storm
-              </h3>
+              </p>
               <p
                 className="c20"
               >
