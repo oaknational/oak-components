@@ -3,7 +3,6 @@ import React, { MouseEventHandler, ReactNode, useState } from "react";
 import { OakInfoButton } from "../OakinfoButton";
 
 import { OakTooltip, OakTooltipProps } from "@/components/molecules";
-import { OakScreenReader } from "@/components/atoms/OakScreenReader";
 
 export type OakInfoProps = {
   /**
@@ -33,7 +32,6 @@ export const OakInfo = (props: OakInfoProps) => {
     >
       <>
         <OakInfoButton onClick={handleClick} isOpen={isOpen} />
-        <OakScreenReader>{props.hint}</OakScreenReader>
       </>
     </OakTooltip>
   );

@@ -78,6 +78,7 @@ export const InternalTooltip = ({
     <StyledFlex
       role="tooltip"
       id={id}
+      data-rac
       {...props}
       $position="relative"
       $background={$background}
