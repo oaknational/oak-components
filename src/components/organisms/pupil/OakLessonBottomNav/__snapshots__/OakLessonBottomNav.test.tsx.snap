@@ -267,7 +267,9 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
           className="c5 c6 c7 c8"
         >
           <button
+            aria-describedby="hint-tooltip"
             className="c9 c10"
+            data-rac={true}
             onClick={[Function]}
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
