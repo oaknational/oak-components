@@ -7,6 +7,10 @@ describe("parseZindex", () => {
     expect(parseZIndex()).toBeUndefined();
   });
 
+  it("should return the value if it is a number", () => {
+    expect(parseZIndex(123)).toBe(123);
+  });
+
   it.each([
     ["in-front", 1],
     ["mobile-filters", 2],

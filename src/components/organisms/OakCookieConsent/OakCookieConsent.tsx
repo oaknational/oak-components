@@ -11,7 +11,7 @@ export type OakCookieConsentProps = Pick<
   OakCookieSettingsModalProps,
   "policyURL"
 > &
-  Pick<OakCookieBannerProps, "isFixed" | "innerMaxWidth">;
+  Pick<OakCookieBannerProps, "isFixed" | "innerMaxWidth" | "zIndex">;
 
 /**
  * Connects `OakCookieBanner` and `OakCookieSettingsModal` to `OakCookieConsentProvider`.
@@ -20,6 +20,7 @@ export const OakCookieConsent = ({
   policyURL,
   isFixed,
   innerMaxWidth,
+  zIndex,
 }: OakCookieConsentProps) => {
   const {
     policies,
@@ -46,6 +47,7 @@ export const OakCookieConsent = ({
           state={bannerState}
           isFixed={isFixed}
           innerMaxWidth={innerMaxWidth}
+          zIndex={zIndex}
         />
       )}
       <OakCookieSettingsModal
