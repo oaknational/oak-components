@@ -43,6 +43,7 @@ export const oakColorTokens = {
   magenta: "#d02aa7",
   purple: "#845ad9",
   teal: "#037b7d",
+  blackSemiTransparent: "#22222240",
   transparent: "transparent",
 };
 
@@ -71,6 +72,8 @@ export const oakColorFilterTokens = {
     "invert(16%) sepia(72%) saturate(7176%) hue-rotate(239deg) brightness(61%) contrast(109%)",
   navy120:
     "invert(12%) sepia(79%) saturate(3172%) hue-rotate(231deg) brightness(82%) contrast(114%)",
+  amber:
+    "brightness(0) saturate(100%) invert(57%) sepia(99%) saturate(395%) hue-rotate(330deg) brightness(102%) contrast(101%);",
 };
 
 export type OakColorFilterToken = keyof typeof oakColorFilterTokens;
