@@ -1,6 +1,6 @@
 import React from "react";
 
-import { OakBox, OakFlex } from "@/components/atoms";
+import { OakBox, OakFlex, OakGrid } from "@/components/atoms";
 
 export type OakPupilJourneyOptionalityItemProps = {
   children: React.ReactNode;
@@ -46,13 +46,13 @@ export const OakPupilJourneyOptionalityItem = (
           {props.title}
         </OakBox>
       </OakFlex>
-      <OakFlex
-        $flexDirection={["column", "row"]}
-        $gap={"space-between-xs"}
-        $flexWrap={"wrap"}
+      <OakGrid
+        $gridTemplateColumns={["repeat(1,1fr)", "repeat(2, 1fr)"]}
+        $cg={"space-between-xs"}
+        $rg={"space-between-xs"}
       >
         {children}
-      </OakFlex>
+      </OakGrid>
     </OakFlex>
   );
 };

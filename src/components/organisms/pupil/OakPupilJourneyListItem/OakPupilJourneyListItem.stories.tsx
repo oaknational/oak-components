@@ -29,6 +29,7 @@ const meta: Meta<typeof OakPupilJourneyListItem> = {
           $gap="space-between-m"
           $background={"bg-decorative4-main"}
           $pa={"inner-padding-xl"}
+          role="list"
         >
           {Story()}
         </OakFlex>

@@ -66,7 +66,6 @@ const UnstyledComponent = (props: OakHeaderHeroProps) => {
         >
           <OakFlex
             $alignSelf={"flex-start"}
-            $ph={"inner-padding-s"}
             $height={"100%"}
             $flexDirection={"column"}
           >
@@ -106,9 +105,7 @@ const UnstyledComponent = (props: OakHeaderHeroProps) => {
                   $zIndex={"in-front"}
                 />
                 <OakBox>
-                  <OakHeading tag="h3" $font={"heading-7"}>
-                    {authorName}
-                  </OakHeading>
+                  <OakP $font={"heading-7"}>{authorName}</OakP>
                   <OakP $font={"body-3"}>{authorTitle}</OakP>
                 </OakBox>
               </OakFlex>
