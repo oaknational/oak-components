@@ -69,7 +69,7 @@ export const OakCookieBanner = ({
       $bottom={isFixed ? "all-spacing-0" : undefined}
       $right={isFixed ? "all-spacing-0" : undefined}
       $left={isFixed ? "all-spacing-0" : undefined}
-      $zIndex={isFixed ? "in-front" : undefined}
+      $zIndex={isFixed ? "always-on-top" : undefined}
       $color="text-primary"
       data-testid="cookie-banner"
     >
