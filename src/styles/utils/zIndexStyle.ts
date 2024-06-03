@@ -13,7 +13,7 @@ export type ZIndexStyleProps = {
    *
    * Accepts a z-index token or a responsive array of z-index tokens.
    */
-  $zIndex?: ResponsiveValues<OakZIndexToken>;
+  $zIndex?: ResponsiveValues<OakZIndexToken | number>;
 };
 
 export const zIndexStyle = css<ZIndexStyleProps>`

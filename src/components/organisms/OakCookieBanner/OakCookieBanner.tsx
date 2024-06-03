@@ -46,6 +46,10 @@ export type OakCookieBannerProps = {
    * @default false
    */
   isFixed?: boolean;
+  /**
+   * Optional z-index override of the banner.
+   */
+  zIndex?: number;
 };
 
 /**
@@ -59,6 +63,7 @@ export const OakCookieBanner = ({
   onAccept,
   onReject,
   isFixed = false,
+  zIndex,
 }: OakCookieBannerProps) => {
   return (
     <OakBox
@@ -69,7 +74,7 @@ export const OakCookieBanner = ({
       $bottom={isFixed ? "all-spacing-0" : undefined}
       $right={isFixed ? "all-spacing-0" : undefined}
       $left={isFixed ? "all-spacing-0" : undefined}
-      $zIndex={isFixed ? "in-front" : undefined}
+      $zIndex={zIndex ? zIndex : isFixed ? "always-on-top" : undefined}
       $color="text-primary"
       data-testid="cookie-banner"
     >
