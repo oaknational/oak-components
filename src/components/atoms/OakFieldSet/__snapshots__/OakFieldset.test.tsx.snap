@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component OakFieldset matches snapshot 1`] = `
+.c0 {
+  border: 0px;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+<fieldset
+  className="c0"
+/>
+`;

@@ -19,3 +19,4 @@ export * from "./OakCloudinaryImage";
 export * from "./OakKbd";
 export * from "./OakGlobalStyle";
 export * from "./OakAnchorTarget";
+export * from "./OakFieldSet";
