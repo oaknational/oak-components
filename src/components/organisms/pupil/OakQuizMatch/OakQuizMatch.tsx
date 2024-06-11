@@ -31,11 +31,11 @@ type DraggableId = string;
 type DroppableId = string;
 type DraggableItem = {
   id: DraggableId;
-  label: string;
+  label: ReactNode;
 };
 type DroppableItem = {
   id: DroppableId;
-  label: string;
+  label: ReactNode;
 };
 type Matches = Record<DroppableId, DraggableItem>;
 
