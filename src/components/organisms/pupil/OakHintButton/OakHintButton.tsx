@@ -1,7 +1,10 @@
-import React, { MouseEventHandler } from "react";
+import React, { HTMLAttributes, MouseEventHandler } from "react";
 import styled from "styled-components";
 
-import { InternalShadowRoundButton } from "@/components/molecules/InternalShadowRoundButton";
+import {
+  InternalShadowRoundButton,
+  InternalShadowRoundButtonProps,
+} from "@/components/molecules/InternalShadowRoundButton";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 
 export type OakHintButtonProps = {
@@ -9,6 +12,9 @@ export type OakHintButtonProps = {
   onClick?: MouseEventHandler;
   isLoading?: boolean;
   disabled?: boolean;
+  buttonProps?: Partial<
+    InternalShadowRoundButtonProps & HTMLAttributes<Element>
+  >;
 };
 
 const StyledInternalShadowRoundButton = styled(InternalShadowRoundButton)`
@@ -35,7 +41,7 @@ const StyledInternalShadowRoundButton = styled(InternalShadowRoundButton)`
  *  called after a mouseEnter and mouseLeave event has happened
  */
 export const OakHintButton = (props: OakHintButtonProps) => {
-  const { isOpen, disabled } = props;
+  const { isOpen, disabled, buttonProps } = props;
   return (
     <StyledInternalShadowRoundButton
       iconName={isOpen && !disabled ? "lightbulb-yellow" : "lightbulb"}
@@ -51,6 +57,9 @@ export const OakHintButton = (props: OakHintButtonProps) => {
       disabled={props.disabled}
       iconBackgroundSize={"all-spacing-8"}
       iconSize={"all-spacing-6"}
+      data-rac
+      // aria-describedby={describedby}
+      {...buttonProps}
     >
       {!isOpen ? "Need a hint?" : "Close hint"}
     </StyledInternalShadowRoundButton>

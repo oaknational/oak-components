@@ -26,7 +26,7 @@ describe(OakTooltip, () => {
   it("matches snapshot", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
-        <OakTooltip tooltip="Hello there" isOpen>
+        <OakTooltip tooltip="Hello there" isOpen id="tooltip">
           <div>Trigger!</div>
         </OakTooltip>
       </OakThemeProvider>,
@@ -37,7 +37,7 @@ describe(OakTooltip, () => {
 
   it("renders", () => {
     const { getByRole } = renderWithTheme(
-      <OakTooltip tooltip="Hello there" isOpen>
+      <OakTooltip tooltip="Hello there" isOpen id="tooltip">
         <div>Trigger!</div>
       </OakTooltip>,
     );

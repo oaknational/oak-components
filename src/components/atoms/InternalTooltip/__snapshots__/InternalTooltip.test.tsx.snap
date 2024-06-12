@@ -41,6 +41,8 @@ exports[`InternalTooltip matches snapshot 1`] = `
 
 <div
   className="c0 c1 c2"
+  data-rac={true}
+  id="tooltip"
   role="tooltip"
 >
   Hello there

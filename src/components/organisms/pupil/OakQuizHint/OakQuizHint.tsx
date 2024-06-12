@@ -20,8 +20,12 @@ export const OakQuizHint = ({ hint }: OakQuizHintProps) => {
   };
 
   return (
-    <OakTooltip tooltip={hint} isOpen={isOpen}>
-      <OakHintButton isOpen={isOpen} onClick={handleClick} />
+    <OakTooltip tooltip={hint} isOpen={isOpen} id="hint-tooltip">
+      <OakHintButton
+        isOpen={isOpen}
+        onClick={handleClick}
+        buttonProps={{ "aria-describedby": "hint-tooltip" }}
+      />
     </OakTooltip>
   );
 };

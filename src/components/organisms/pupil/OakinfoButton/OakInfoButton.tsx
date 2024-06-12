@@ -1,7 +1,10 @@
-import React, { MouseEventHandler } from "react";
+import React, { HTMLAttributes, MouseEventHandler } from "react";
 import styled from "styled-components";
 
-import { InternalShadowRoundButton } from "@/components/molecules/InternalShadowRoundButton";
+import {
+  InternalShadowRoundButton,
+  InternalShadowRoundButtonProps,
+} from "@/components/molecules/InternalShadowRoundButton";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 
 export type OakInfoButtonProps = {
@@ -9,6 +12,9 @@ export type OakInfoButtonProps = {
   isOpen: boolean;
   isLoading?: boolean;
   disabled?: boolean;
+  buttonProps?: Partial<
+    InternalShadowRoundButtonProps & HTMLAttributes<Element>
+  >;
 };
 
 const StyledInternalShadowRoundButton = styled(InternalShadowRoundButton)`
@@ -28,7 +34,7 @@ const StyledInternalShadowRoundButton = styled(InternalShadowRoundButton)`
  *
  */
 export const OakInfoButton = (props: OakInfoButtonProps) => {
-  const { isLoading, disabled, onClick, isOpen } = props;
+  const { isLoading, disabled, onClick, isOpen, buttonProps } = props;
 
   return (
     <StyledInternalShadowRoundButton
@@ -46,6 +52,8 @@ export const OakInfoButton = (props: OakInfoButtonProps) => {
       iconBackgroundSize={"all-spacing-8"}
       iconSize={"all-spacing-7"}
       onClick={onClick}
+      data-rac
+      {...buttonProps}
     />
   );
 };

@@ -12,6 +12,7 @@ import { parseSpacing } from "@/styles/helpers/parseSpacing";
 export type InternalTooltipProps = OakFlexProps & {
   children?: ReactNode;
   tooltipPosition?: "bottom-left" | "bottom-right" | "top-left" | "top-right";
+  id: string;
 };
 
 const StyledFlex = styled(OakFlex)`
@@ -70,11 +71,14 @@ export const InternalTooltip = ({
   $background = "black",
   $color = "text-inverted",
   tooltipPosition = "bottom-left",
+  id,
   ...props
 }: InternalTooltipProps) => {
   return (
     <StyledFlex
       role="tooltip"
+      id={id}
+      data-rac
       {...props}
       $position="relative"
       $background={$background}

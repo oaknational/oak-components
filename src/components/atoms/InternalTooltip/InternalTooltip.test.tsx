@@ -13,7 +13,7 @@ describe(InternalTooltip, () => {
   it("matches snapshot", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
-        <InternalTooltip>Hello there</InternalTooltip>
+        <InternalTooltip id={"tooltip"}>Hello there</InternalTooltip>
       </OakThemeProvider>,
     ).toJSON();
 
@@ -22,7 +22,7 @@ describe(InternalTooltip, () => {
 
   it("renders children", () => {
     const { getByText } = renderWithTheme(
-      <InternalTooltip>Hello there</InternalTooltip>,
+      <InternalTooltip id={"tooltip"}>Hello there</InternalTooltip>,
     );
 
     expect(getByText("Hello there")).toBeInTheDocument();
@@ -30,13 +30,13 @@ describe(InternalTooltip, () => {
 
   it('positions the arrow based on the "tooltipPosition" prop', () => {
     const { rerender, getByTestId } = renderWithTheme(
-      <InternalTooltip>Hello there</InternalTooltip>,
+      <InternalTooltip id={"tooltip"}>Hello there</InternalTooltip>,
     );
 
     expect(getByTestId("tooltip-arrow")).toHaveStyle("top: -1rem; left: 0rem");
 
     rerender(
-      <InternalTooltip tooltipPosition="bottom-right">
+      <InternalTooltip tooltipPosition="bottom-right" id={"tooltip"}>
         Hello there
       </InternalTooltip>,
     );
@@ -44,7 +44,7 @@ describe(InternalTooltip, () => {
     expect(getByTestId("tooltip-arrow")).toHaveStyle("top: -1rem; right: 0rem");
 
     rerender(
-      <InternalTooltip tooltipPosition="top-right">
+      <InternalTooltip tooltipPosition="top-right" id={"tooltip"}>
         Hello there
       </InternalTooltip>,
     );
@@ -54,7 +54,9 @@ describe(InternalTooltip, () => {
     );
 
     rerender(
-      <InternalTooltip tooltipPosition="top-left">Hello there</InternalTooltip>,
+      <InternalTooltip tooltipPosition="top-left" id={"tooltip"}>
+        Hello there
+      </InternalTooltip>,
     );
 
     expect(getByTestId("tooltip-arrow")).toHaveStyle(

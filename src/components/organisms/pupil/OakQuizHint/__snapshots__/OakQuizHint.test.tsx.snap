@@ -180,7 +180,9 @@ exports[`OakQuizHint matches snapshot 1`] = `
       className="c0 c1 c2 c3"
     >
       <button
+        aria-describedby="hint-tooltip"
         className="c4 c5"
+        data-rac={true}
         onClick={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}

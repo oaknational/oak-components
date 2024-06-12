@@ -11,7 +11,7 @@ export type OakInfoProps = {
   hint: ReactNode;
   isLoading?: boolean;
   disabled?: boolean;
-} & Omit<OakTooltipProps, "children" | "tooltip">;
+} & Omit<OakTooltipProps, "children" | "tooltip" | "id">;
 
 /**
  * Presents a button which will show a hint when clicked
@@ -24,8 +24,17 @@ export const OakInfo = (props: OakInfoProps) => {
   };
 
   return (
-    <OakTooltip tooltip={props.hint} isOpen={isOpen} {...tooltipProps}>
-      <OakInfoButton onClick={handleClick} isOpen={isOpen} />
+    <OakTooltip
+      tooltip={props.hint}
+      isOpen={isOpen}
+      id={"info-tooltip"}
+      {...tooltipProps}
+    >
+      <OakInfoButton
+        onClick={handleClick}
+        isOpen={isOpen}
+        buttonProps={{ "aria-describedby": "info-tooltip" }}
+      />
     </OakTooltip>
   );
 };

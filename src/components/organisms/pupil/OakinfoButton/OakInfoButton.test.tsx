@@ -12,7 +12,12 @@ describe(OakInfoButton, () => {
     const handleClick = () => jest.fn();
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
-        <OakInfoButton isOpen={false} isLoading={false} onClick={handleClick} />
+        <OakInfoButton
+          isOpen={false}
+          isLoading={false}
+          onClick={handleClick}
+          buttonProps={{ "aria-describedby": "info-tooltip" }}
+        />
         ,
       </OakThemeProvider>,
     ).toJSON();

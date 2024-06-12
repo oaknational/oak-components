@@ -18,7 +18,10 @@ describe("OakHintButton", () => {
   it("matches snapshot", () => {
     const tree = create(
       <ThemeProvider theme={oakDefaultTheme}>
-        <OakHintButton isOpen={false} />
+        <OakHintButton
+          isOpen={false}
+          buttonProps={{ "aria-describedby": "hint-tooltip" }}
+        />
       </ThemeProvider>,
     ).toJSON();
 
