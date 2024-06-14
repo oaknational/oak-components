@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { HTMLAttributes, ReactNode } from "react";
 import styled, { css } from "styled-components";
 
 import { OakFlex, OakFlexProps } from "../OakFlex";
@@ -9,11 +9,11 @@ import { ColorStyleProps } from "@/styles/utils/colorStyle";
 import { responsiveStyle } from "@/styles/utils/responsiveStyle";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 
-export type InternalTooltipProps = OakFlexProps & {
-  children?: ReactNode;
-  tooltipPosition?: "bottom-left" | "bottom-right" | "top-left" | "top-right";
-  id: string;
-};
+export type InternalTooltipProps = OakFlexProps &
+  HTMLAttributes<Element> & {
+    children?: ReactNode;
+    tooltipPosition?: "bottom-left" | "bottom-right" | "top-left" | "top-right";
+  };
 
 const StyledFlex = styled(OakFlex)`
   width: max-content;
@@ -71,19 +71,17 @@ export const InternalTooltip = ({
   $background = "black",
   $color = "text-inverted",
   tooltipPosition = "bottom-left",
-  id,
   ...props
 }: InternalTooltipProps) => {
   return (
     <StyledFlex
       role="tooltip"
-      id={id}
       data-rac
-      {...props}
       $position="relative"
       $background={$background}
       $color={$color}
       $maxWidth={["all-spacing-20", "all-spacing-22"]}
+      {...props}
     >
       {children}
       <StyledSvg
