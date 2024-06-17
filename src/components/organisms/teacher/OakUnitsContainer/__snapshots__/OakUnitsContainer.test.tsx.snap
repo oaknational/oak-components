@@ -1,23 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OakUnitsHeader matches snapshot 1`] = `
+exports[`OakUnitsContainer matches snapshot 1`] = `
 .c0 {
+  padding: 1rem;
+  background: #e3e9fb;
   font-family: Lexend,sans-serif;
 }
 
-.c5 {
+.c2 {
+  font-family: Lexend,sans-serif;
+}
+
+.c8 {
   position: relative;
   width: 2.5rem;
   font-family: Lexend,sans-serif;
 }
 
-.c9 {
+.c12 {
   position: absolute;
   inset: 0rem;
   font-family: Lexend,sans-serif;
 }
 
-.c11 {
+.c14 {
   font-family: Lexend,sans-serif;
   font-weight: 300;
   font-size: 1rem;
@@ -28,7 +34,7 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c13 {
+.c16 {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -36,7 +42,7 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c20 {
+.c23 {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -47,7 +53,7 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c21 {
+.c24 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -56,7 +62,7 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c22 {
+.c25 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -66,6 +72,21 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
 }
 
 .c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -81,7 +102,7 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c2 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -92,7 +113,7 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
   gap: 0.5rem;
 }
 
-.c3 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -100,7 +121,7 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
   gap: 0.5rem;
 }
 
-.c6 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -115,14 +136,14 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
   justify-content: center;
 }
 
-.c14 {
+.c17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c18 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -141,7 +162,7 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
   gap: 0.75rem;
 }
 
-.c10 {
+.c13 {
   color: #ffe555;
   font-family: Lexend,sans-serif;
   font-weight: 700;
@@ -153,7 +174,7 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c19 {
+.c22 {
   font-family: Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -164,13 +185,13 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c23 {
+.c26 {
   -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   object-fit: contain;
 }
 
-.c12 {
+.c15 {
   font-family: Lexend,sans-serif;
   font-weight: 300;
   font-size: 1rem;
@@ -181,7 +202,7 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c4 {
+.c7 {
   font-family: Lexend,sans-serif;
   font-weight: 600;
   font-size: 2rem;
@@ -192,7 +213,7 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c16 {
+.c19 {
   background: none;
   color: inherit;
   border: none;
@@ -206,112 +227,116 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
   color: #222222;
 }
 
-.c16:disabled {
+.c19:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c17 {
+.c20 {
   display: inline-block;
   position: relative;
 }
 
-.c17:hover {
+.c20:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #575757;
 }
 
-.c17:active {
+.c20:active {
   color: #222222;
 }
 
-.c17:disabled {
+.c20:disabled {
   color: #808080;
 }
 
-.c15 > :first-child:focus-visible .shadow {
+.c18 > :first-child:focus-visible .shadow {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c15 > :first-child:hover .shadow {
+.c18 > :first-child:hover .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c15 > :first-child:active .shadow {
+.c18 > :first-child:active .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c15 > :first-child:disabled .icon-container {
+.c18 > :first-child:disabled .icon-container {
   background: #808080;
 }
 
-.c15 > :first-child:hover .icon-container {
+.c18 > :first-child:hover .icon-container {
   background: #575757;
 }
 
-.c15 > :first-child:active .icon-container {
+.c18 > :first-child:active .icon-container {
   background: #222222;
 }
 
-.c8 {
+.c11 {
   fill: #222222;
 }
 
-.c7 {
+.c10 {
   aspect-ratio: 2 / 1;
 }
 
+.c4 {
+  width: 100%;
+}
+
 @media (min-width:750px) {
-  .c5 {
+  .c8 {
     width: 3rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c5 {
+  .c8 {
     width: 3.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c10 {
+  .c13 {
     font-weight: 700;
   }
 }
 
 @media (min-width:1280px) {
-  .c10 {
+  .c13 {
     font-weight: 600;
   }
 }
 
 @media (min-width:750px) {
-  .c10 {
+  .c13 {
     font-size: 0.875rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c10 {
+  .c13 {
     font-size: 1rem;
   }
 }
 
 @media (min-width:750px) {
-  .c10 {
+  .c13 {
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c10 {
+  .c13 {
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:750px) {
-  .c10 {
+  .c13 {
     -webkit-letter-spacing: -0.005rem;
     -moz-letter-spacing: -0.005rem;
     -ms-letter-spacing: -0.005rem;
@@ -320,7 +345,7 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
 }
 
 @media (min-width:1280px) {
-  .c10 {
+  .c13 {
     -webkit-letter-spacing: 0.0115rem;
     -moz-letter-spacing: 0.0115rem;
     -ms-letter-spacing: 0.0115rem;
@@ -332,103 +357,127 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
   className="c0 c1 "
 >
   <div
-    className="c0 c2"
+    className="c2 c3 c4"
   >
     <div
-      className="c0 c3"
-    >
-      <h4
-        className="c4"
-      >
-        Maths units
-      </h4>
-      <div
-        className="c5 c6 c7"
-      >
-        <svg
-          className="c8"
-          height="100%"
-          viewBox="0 0 56 27"
-          width="100%"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M6.421 0c8.661.839 17.303.834 26.16.714a89.843 89.843 0 0 1 4.834-.013c6.333.32 12.39.317 18.506-.275 0 1.26.178 2.352 0 3.44-.276 1.38-.829 2.759-1.342 4.15-.138.354-.532.706-.808 1.06-.445.248-.63.5-.553.753 1.598 1.093-.256 2.185 0 3.277.276 1.529 1.322 3.058 1.204 4.572-.138 1.771-1.046 3.543-1.973 5.312-.288.4-1.065.792-2.309 1.169-2.288.755-4.103 1.67-11.206 1.965-9.936.417-20.953.385-30.678-.09-2.447-.12-4.38-.532-5.209-.853-1.035-.458-1.52-.929-1.44-1.4C.937 18.988-.109 14.194.01 9.4c0-2.645 1.973-5.29 3.413-7.933.237-.424 1.697-.839 3-1.468Z"
-          />
-        </svg>
-        <div
-          className="c9 c6"
-        >
-          <span
-            className="c10"
-          >
-            New
-          </span>
-        </div>
-      </div>
-    </div>
-    <div
-      className="c11 c12"
-    >
-      Brand-new teaching resources, thoughtfully crafted by teachers for classroom needs.
-    </div>
-  </div>
-  <div
-    className="c13 c14 c15"
-  >
-    <a
-      className="c16 c17"
-      href="https://www.thenational.academy"
-      onClick={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
+      className="c2 c5"
     >
       <div
-        className="c0 c18"
+        className="c2 c6"
       >
-        <span
-          className="c19"
+        <h4
+          className="c7"
         >
-          Full secondary curriculum
-        </span>
+          Maths units
+        </h4>
         <div
-          className="c20 c6 icon-container"
+          className="c8 c9 c10"
         >
-          <div
-            className="c21 shadow"
-          />
-          <div
-            className="c22"
-            data-icon-for="button"
+          <svg
+            className="c11"
+            height="100%"
+            viewBox="0 0 56 27"
+            width="100%"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <img
-              alt="chevron-right"
-              className="c23"
-              data-nimg="fill"
-              decoding="async"
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
-              style={
-                {
-                  "bottom": 0,
-                  "color": "transparent",
-                  "height": "100%",
-                  "left": 0,
-                  "objectFit": undefined,
-                  "objectPosition": undefined,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
+            <path
+              d="M6.421 0c8.661.839 17.303.834 26.16.714a89.843 89.843 0 0 1 4.834-.013c6.333.32 12.39.317 18.506-.275 0 1.26.178 2.352 0 3.44-.276 1.38-.829 2.759-1.342 4.15-.138.354-.532.706-.808 1.06-.445.248-.63.5-.553.753 1.598 1.093-.256 2.185 0 3.277.276 1.529 1.322 3.058 1.204 4.572-.138 1.771-1.046 3.543-1.973 5.312-.288.4-1.065.792-2.309 1.169-2.288.755-4.103 1.67-11.206 1.965-9.936.417-20.953.385-30.678-.09-2.447-.12-4.38-.532-5.209-.853-1.035-.458-1.52-.929-1.44-1.4C.937 18.988-.109 14.194.01 9.4c0-2.645 1.973-5.29 3.413-7.933.237-.424 1.697-.839 3-1.468Z"
             />
+          </svg>
+          <div
+            className="c12 c9"
+          >
+            <span
+              className="c13"
+            >
+              New
+            </span>
           </div>
         </div>
       </div>
-    </a>
+      <div
+        className="c14 c15"
+      >
+        Brand-new teaching resources, thoughtfully crafted by teachers for classroom needs.
+      </div>
+    </div>
+    <div
+      className="c16 c17 c18"
+    >
+      <a
+        className="c19 c20"
+        href="https://www.thenational.academy"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <div
+          className="c2 c21"
+        >
+          <span
+            className="c22"
+          >
+            Full secondary curriculum
+          </span>
+          <div
+            className="c23 c9 icon-container"
+          >
+            <div
+              className="c24 shadow"
+            />
+            <div
+              className="c25"
+              data-icon-for="button"
+            >
+              <img
+                alt="chevron-right"
+                className="c26"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
+                style={
+                  {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+              />
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div
+    className="c2"
+  >
+    Unit 1 
+  </div>
+  <div
+    className="c2"
+  >
+    Unit 2 
+  </div>
+  <div
+    className="c2"
+  >
+    Unit 3 
+  </div>
+  <div
+    className="c2"
+  >
+    Unit 4 
   </div>
 </div>
 `;

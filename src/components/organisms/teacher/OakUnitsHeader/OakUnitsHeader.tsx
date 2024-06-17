@@ -3,18 +3,18 @@ import styled, { css } from "styled-components";
 
 import { OakFlex, OakHeading, OakTypography } from "@/components/atoms";
 import { OakPromoTag, OakTertiaryButton } from "@/components/molecules";
+import { SizeStyleProps, sizeStyle } from "@/styles/utils/sizeStyle";
 
 export type OakUnitsHeaderProps = {
   isLegacy: boolean;
   subject: string;
   phase: string;
   href: string;
-};
+} & SizeStyleProps;
 
-// By adding the style css utils to this components css your component will be able to accept corresponding props and prop values.
-// you can also add custom styles to the component by adding the styles to the css template literal below
-
-const OakUnitsHeaderCss = css<OakUnitsHeaderProps>``;
+const OakUnitsHeaderCss = css<OakUnitsHeaderProps>`
+  ${sizeStyle}
+`;
 
 const CurriculumDownloadButton = (props: {
   isLegacy: boolean;
@@ -40,7 +40,12 @@ const UnstyledComponent = (props: OakUnitsHeaderProps) => {
   const sentenceCaseSubject =
     subject.slice(0, 1).toUpperCase() + subject.slice(1).toLowerCase();
   return (
-    <OakFlex $gap="space-between-sssx" $alignItems="center" {...rest}>
+    <OakFlex
+      $gap="space-between-sssx"
+      $alignItems="center"
+      $justifyContent="space-between"
+      {...rest}
+    >
       <OakFlex $gap="space-between-ssx" $flexDirection="column">
         <OakFlex $gap="space-between-ssx">
           <OakHeading $font="heading-4" tag="h4">
