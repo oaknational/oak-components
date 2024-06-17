@@ -37,8 +37,14 @@ const CurriculumDownloadButton = (props: {
 
 const UnstyledComponent = (props: OakUnitsHeaderProps) => {
   const { subject, isLegacy, phase, href, ...rest } = props;
+
   const sentenceCaseSubject =
     subject.slice(0, 1).toUpperCase() + subject.slice(1).toLowerCase();
+
+  const subheading = isLegacy
+    ? "Resources made during the pandemic to support remote teaching."
+    : "Brand-new teaching resources, thoughtfully crafted by teachers for classroom needs.";
+
   return (
     <OakFlex
       $gap="space-between-sssx"
@@ -55,10 +61,7 @@ const UnstyledComponent = (props: OakUnitsHeaderProps) => {
           </OakHeading>
           {!isLegacy && <OakPromoTag />}
         </OakFlex>
-        <OakTypography $font="body-2">
-          Brand-new teaching resources, thoughtfully crafted by teachers for
-          classroom needs.
-        </OakTypography>
+        <OakTypography $font="body-2">{subheading}</OakTypography>
       </OakFlex>
       <CurriculumDownloadButton isLegacy={isLegacy} phase={phase} href={href} />
     </OakFlex>
