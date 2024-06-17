@@ -10,10 +10,12 @@ const meta: Meta<typeof OakUnitsHeader> = {
   argTypes: {
     isLegacy: { type: "boolean" },
     subject: { type: "string" },
+    phase: { type: "string" },
+    href: { type: "string" },
   },
   parameters: {
     controls: {
-      include: ["isLegacy", "subject"],
+      include: ["isLegacy", "subject", "phase", "href"],
     },
   },
 };
@@ -27,5 +29,7 @@ export const Default: Story = {
   args: {
     isLegacy: false,
     subject: "maths",
+    phase: "secondary",
+    href: "https://www.thenational.academy",
   },
 };
