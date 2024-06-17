@@ -44,7 +44,9 @@ const UnstyledComponent = (props: OakUnitsHeaderProps) => {
       <OakFlex $gap="space-between-ssx" $flexDirection="column">
         <OakFlex $gap="space-between-ssx">
           <OakHeading $font="heading-4" tag="h4">
-            {sentenceCaseSubject} units
+            {isLegacy
+              ? "Units released in 2020-22"
+              : `${sentenceCaseSubject} units`}
           </OakHeading>
           {!isLegacy && <OakPromoTag />}
         </OakFlex>

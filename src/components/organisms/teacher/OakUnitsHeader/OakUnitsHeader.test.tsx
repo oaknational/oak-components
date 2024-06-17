@@ -1,11 +1,11 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
+import { ThemeProvider } from "styled-components";
 
 import { OakUnitsHeader } from "./OakUnitsHeader";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { ThemeProvider } from "styled-components";
 import { oakDefaultTheme } from "@/styles";
 
 const props = {
