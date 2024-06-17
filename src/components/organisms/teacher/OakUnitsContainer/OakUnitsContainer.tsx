@@ -1,8 +1,9 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { OakFlex } from "@/components/atoms";
 import { OakUnitsHeader } from "../OakUnitsHeader";
+
+import { OakFlex } from "@/components/atoms";
 
 export type OakUnitsContainerProps = {
   isLegacy: boolean;
