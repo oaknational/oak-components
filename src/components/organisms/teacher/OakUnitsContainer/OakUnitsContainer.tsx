@@ -34,6 +34,7 @@ const UnstyledComponent = (props: OakUnitsContainerProps) => {
       $background={isLegacy ? "bg-neutral" : "bg-decorative3-very-subdued"}
       $flexDirection="column"
       $pa="inner-padding-m"
+      $borderRadius="border-radius-m"
     >
       {showHeader && (
         <OakUnitsHeader
