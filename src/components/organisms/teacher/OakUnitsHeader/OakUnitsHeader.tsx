@@ -27,6 +27,7 @@ const CurriculumDownloadButton = (props: {
       iconName="chevron-right"
       href={props.href}
       isTrailingIcon={true}
+      $pt={["inner-padding-xs", "inner-padding-none"]}
     >
       {props.isLegacy
         ? "Curriculum download"
@@ -48,8 +49,9 @@ const UnstyledComponent = (props: OakUnitsHeaderProps) => {
   return (
     <OakFlex
       $gap="space-between-sssx"
-      $alignItems="center"
+      $alignItems={["flex-start", "center"]}
       $justifyContent="space-between"
+      $flexDirection={["column", "row"]}
       {...rest}
     >
       <OakFlex $gap="space-between-ssx" $flexDirection="column">
