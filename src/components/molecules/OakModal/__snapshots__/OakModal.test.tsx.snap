@@ -1,23 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OakModal matches snapshot 1`] = `
-[
-  <div
-    data-focus-guard={true}
-    style={
-      {
-        "height": "0px",
-        "left": "1px",
-        "overflow": "hidden",
-        "padding": 0,
-        "position": "fixed",
-        "top": "1px",
-        "width": "1px",
-      }
-    }
-    tabIndex={-1}
-  />,
-  .c0 {
+exports[`OakModal matches snapshot when mounted 1`] = `
+.c0 {
   position: fixed;
   inset: 0rem;
   background: #222222;
@@ -193,13 +177,18 @@ exports[`OakModal matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c8 {
-  object-fit: contain;
-}
-
 .c20 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  object-fit: contain;
+}
+
+.c8 {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHBhdGggZmlsbD0iIzIyMiIgZD0iTTI4Ljc3OSAxOS4xNzZhMjcuMTkxIDI3LjE5MSAwIDAgMC0zLjggMS42IDE2LjcgMTYuNyAwIDAgMC03LjEgOC40YzAgLjEtLjEuMi0uMS4zLS43IDIuNC0uNiAyIDEuMyAyLjMgMS45LjMgMSAuNSAxIDEuMy0uMSA4LjggNC4xIDE1LjEgMTEuNCAxOS42YTEuNSAxLjUgMCAwIDAgMS43LjJjNS43LTIuNiA5LjMtNyAxMC4zLTEzLjJhMSAxIDAgMCAxIDEtMWwzLS4yYy44IDAgMS4zLjIgMS4yIDEuMmExNy45IDE3LjkgMCAwIDEtMy4yIDkuMiAyMy43IDIzLjcgMCAwIDEtMTAuOSA5LjEgNS40MDEgNS40MDEgMCAwIDEtNC41LS4yIDI2LjI5OCAyNi4yOTggMCAwIDEtOC41LTYuNiAyNS45IDI1LjkgMCAwIDEtNi40LTE0LjRjMC0uNi0uMi0uNy0uOC0uOC0yLjUtLjQtMi41LS4xLTIuMy0yLjlhMTkuMyAxOS4zIDAgMCAxIDEwLjgtMTYuNiAzOC45OTkgMzguOTk5IDAgMCAxIDUuNy0yLjEgMi4xIDIuMSAwIDAgMCAuOS0xLjMgMTQuMSAxNC4xIDAgMCAxIDMuNS02LjNsLjMtLjNjMS45LTIgMi42LTIgNC4zLjJsLjQuNWMxLjEgMS4xIDEgMS41LS4xIDIuNmExMS45IDExLjkgMCAwIDAtMy4yIDQuNCAxNi45IDE2LjkgMCAwIDEgNy41IDIuM2M1LjcgMy41IDkuMiA4LjMgOS45IDE1IC4wMTYuOTAxLS4wMTcgMS44MDItLjEgMi43IDAgLjgtLjYgMS0xLjIgMS4yYTE2LjEgMTYuMSAwIDAgMS0xMS0uNyAxNy45MDEgMTcuOTAxIDAgMCAxLTEwLjktMTMuNiA5Ljc5NiA5Ljc5NiAwIDAgMS0uMS0xLjlabTE4LjEgMTIuMmMuNC01LjUtNi45LTEyLjYtMTMtMTIuMS41IDYuNSA3LjYgMTIuOCAxMyAxMi4xWiIgb3BhY2l0eT0iLjEiLz48L3N2Zz4=);
+  background-color: #e7f6f5;
+  background-size: 4rem;
+  background-position: center;
+  background-repeat: no-repeat;
   object-fit: contain;
 }
 
@@ -281,140 +270,97 @@ exports[`OakModal matches snapshot 1`] = `
   transform: translateX(0);
 }
 
-<div
-    data-focus-lock-disabled="disabled"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onScrollCapture={[Function]}
-    onTouchMoveCapture={[Function]}
-    onWheelCapture={[Function]}
+<div>
+  <div
+    aria-hidden="true"
+    data-focus-guard="true"
+    data-focus-on-hidden="true"
+    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+    tabindex="0"
+  />
+  <div
+    data-focus-lock-disabled="false"
   >
     <div
-      className="c0 c1"
+      class="c0 c1"
     />
     <div
-      className="c2 c3 c4"
+      class="c2 c3 c4"
       role="dialog"
     >
       <div
-        className="c5 c6"
+        class="c5 c6"
       >
         <div
-          className="c7"
+          class="c7"
         >
           <img
             alt=""
-            className="c8"
+            class="c8"
             data-nimg="fill"
             decoding="async"
             loading="lazy"
-            onError={[Function]}
-            onLoad={[Function]}
             src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/logo-mark.svg"
-            style={
-              {
-                "bottom": 0,
-                "color": "transparent",
-                "height": "100%",
-                "left": 0,
-                "objectFit": undefined,
-                "objectPosition": undefined,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-                "width": "100%",
-              }
-            }
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
           />
         </div>
         <div
-          className="c9 c10 c11"
+          class="c9 c10 c11"
         >
           <button
             aria-label="Close"
-            className="c12 c13"
-            onClick={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
+            class="c12 c13"
           >
             <div
-              className="c14 c15"
+              class="c14 c15"
             >
               <div
-                className="c16 c17 icon-container"
+                class="c16 c17 icon-container"
               >
                 <div
-                  className="c18 shadow"
+                  class="c18 shadow"
                 />
                 <div
-                  className="c19"
+                  class="c19"
                   data-icon-for="button"
                 >
                   <img
                     alt="cross"
-                    className="c20"
+                    class="c20"
                     data-nimg="fill"
                     decoding="async"
                     loading="lazy"
-                    onError={[Function]}
-                    onLoad={[Function]}
                     src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
-                    style={
-                      {
-                        "bottom": 0,
-                        "color": "transparent",
-                        "height": "100%",
-                        "left": 0,
-                        "objectFit": undefined,
-                        "objectPosition": undefined,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
-                        "width": "100%",
-                      }
-                    }
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                   />
                 </div>
               </div>
               <span
-                className="c21"
+                class="c21"
               />
             </div>
           </button>
         </div>
       </div>
       <div
-        data-autofocus-inside={true}
-        style={
-          {
-            "display": "contents",
-          }
-        }
+        data-autofocus-inside="true"
+        style="display: contents;"
       >
         <div
-          className="c22 c23"
+          class="c22 c23"
         >
           <div />
           Modal content
         </div>
-        Modal footer
       </div>
     </div>
-  </div>,
+  </div>
   <div
-    data-focus-guard={true}
-    style={
-      {
-        "height": "0px",
-        "left": "1px",
-        "overflow": "hidden",
-        "padding": 0,
-        "position": "fixed",
-        "top": "1px",
-        "width": "1px",
-      }
-    }
-    tabIndex={-1}
-  />,
-]
+    aria-hidden="true"
+    data-focus-guard="true"
+    data-focus-on-hidden="true"
+    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+    tabindex="0"
+  />
+</div>
 `;

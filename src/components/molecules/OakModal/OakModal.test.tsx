@@ -20,16 +20,26 @@ jest.mock("react-dom", () => {
 });
 
 describe(OakModal, () => {
-  it("matches snapshot", () => {
+  it("does not render until mounted on the client", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
         <OakModal isOpen onClose={() => {}} footerSlot="Modal footer">
           Modal content
         </OakModal>
       </OakThemeProvider>,
-    ).toJSON();
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(tree.toJSON()).toBeNull();
+  });
+
+  it("matches snapshot when mounted", async () => {
+    const result = renderWithTheme(
+      <OakModal isOpen onClose={() => {}}>
+        Modal content
+      </OakModal>,
+    );
+
+    expect(result.container).toMatchSnapshot();
   });
 
   it("calls onClose when the close button is clicked", () => {
