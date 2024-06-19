@@ -1,6 +1,7 @@
 import React, {
   HTMLAttributes,
   ReactNode,
+  useEffect,
   useLayoutEffect,
   useRef,
   useState,
@@ -79,7 +80,7 @@ const logoSrc = `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.en
 export const OakModal = ({
   children,
   footerSlot,
-  domContainer = document.body,
+  domContainer,
   isOpen,
   onClose,
   ...rest
@@ -108,6 +109,17 @@ export const OakModal = ({
       observer.disconnect();
     };
   }, [canaryElement]);
+
+  // `createPortal` is not supported in SSR so we can only render when mounted on the client
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
 
   return createPortal(
     <Transition
@@ -193,6 +205,6 @@ export const OakModal = ({
         </FocusOn>
       )}
     </Transition>,
-    domContainer,
+    domContainer ?? document.body,
   );
 };
