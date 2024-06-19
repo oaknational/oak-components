@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 
 import { OakUnitsHeader } from "../OakUnitsHeader";
 
-import { OakFlex } from "@/components/atoms";
+import { OakFlex, OakUL } from "@/components/atoms";
 
 export type OakUnitsContainerProps = {
   isLegacy: boolean;
@@ -45,7 +45,9 @@ const UnstyledComponent = (props: OakUnitsContainerProps) => {
           $width="100%"
         />
       )}
-      {...unitCards}
+      <OakUL aria-label="A list of units" $reset $width="100%">
+        {...unitCards}
+      </OakUL>
     </OakFlex>
   );
 };
