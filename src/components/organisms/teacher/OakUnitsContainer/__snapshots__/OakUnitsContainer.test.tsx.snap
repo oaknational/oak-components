@@ -217,6 +217,14 @@ exports[`OakUnitsContainer matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
+.c27 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-family: Lexend,sans-serif;
+}
+
 .c19 {
   background: none;
   color: inherit;
@@ -487,25 +495,30 @@ exports[`OakUnitsContainer matches snapshot 1`] = `
       </a>
     </div>
   </div>
-  <div
-    className="c2"
+  <ul
+    aria-label="A list of units"
+    className="c27"
   >
-    Unit 1 
-  </div>
-  <div
-    className="c2"
-  >
-    Unit 2 
-  </div>
-  <div
-    className="c2"
-  >
-    Unit 3 
-  </div>
-  <div
-    className="c2"
-  >
-    Unit 4 
-  </div>
+    <div
+      className="c2"
+    >
+      Unit 1 
+    </div>
+    <div
+      className="c2"
+    >
+      Unit 2 
+    </div>
+    <div
+      className="c2"
+    >
+      Unit 3 
+    </div>
+    <div
+      className="c2"
+    >
+      Unit 4 
+    </div>
+  </ul>
 </div>
 `;
