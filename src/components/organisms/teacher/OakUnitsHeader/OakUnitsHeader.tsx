@@ -31,7 +31,7 @@ const CurriculumDownloadButton = (props: {
     >
       {props.isLegacy
         ? "Curriculum download"
-        : `Full ${props.phase} curriculum`}
+        : `Full ${props.phase.toLowerCase()} curriculum`}
     </OakTertiaryButton>
   );
 };
