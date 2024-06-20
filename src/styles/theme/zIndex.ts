@@ -6,7 +6,6 @@ export const oakZIndexTokens = {
   "fixed-header": 100,
   "modal-close-button": 150,
   "modal-dialog": 300,
-  "always-on-top": 9999,
 };
 
 export type OakZIndexToken = keyof typeof oakZIndexTokens | null;

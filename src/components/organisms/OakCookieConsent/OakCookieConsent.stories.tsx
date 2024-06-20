@@ -22,6 +22,7 @@ const meta: Meta<
   title: "components/organisms/OakCookieConsent",
   argTypes: {
     innerMaxWidth: sizeArgTypes["$maxWidth"],
+    zIndex: { control: "number" },
   },
   args: {
     isFixed: true,
@@ -77,6 +78,7 @@ const meta: Meta<
     currentConsents,
     isFixed,
     innerMaxWidth,
+    zIndex,
   }) => {
     const [, updateArgs] = useArgs();
 
@@ -93,6 +95,7 @@ const meta: Meta<
           policyURL={policyURL}
           isFixed={isFixed}
           innerMaxWidth={innerMaxWidth}
+          zIndex={zIndex}
         />
       </OakCookieConsentProvider>
     );

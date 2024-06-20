@@ -11,7 +11,12 @@ export type OakCookieConsentProps = Pick<
   OakCookieSettingsModalProps,
   "policyURL"
 > &
-  Pick<OakCookieBannerProps, "isFixed" | "innerMaxWidth" | "zIndex">;
+  Pick<OakCookieBannerProps, "isFixed" | "innerMaxWidth"> & {
+    /**
+     * Optional stacking context for the entire consent UI
+     */
+    zIndex?: number;
+  };
 
 /**
  * Connects `OakCookieBanner` and `OakCookieSettingsModal` to `OakCookieConsentProvider`.
@@ -59,6 +64,7 @@ export const OakCookieConsent = ({
         onConfirm={confirmModalConsents}
         onAccept={acceptModalConsents}
         initialConsents={currentConsents}
+        zIndex={zIndex}
       />
     </>
   );

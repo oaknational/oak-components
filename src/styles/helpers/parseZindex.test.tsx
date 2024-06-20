@@ -14,7 +14,6 @@ describe("parseZindex", () => {
   it.each([
     ["in-front", 1],
     ["mobile-filters", 2],
-    ["always-on-top", 9999],
   ])("should correctly handle props", (value, expected) => {
     expect(parseZIndex(value as OakZIndexToken)).toBe(expected);
   });

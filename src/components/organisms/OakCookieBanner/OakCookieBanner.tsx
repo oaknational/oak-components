@@ -48,6 +48,8 @@ export type OakCookieBannerProps = {
   isFixed?: boolean;
   /**
    * Optional z-index override of the banner.
+   *
+   * Defaults to token: `in-front`
    */
   zIndex?: number;
 };
@@ -74,7 +76,9 @@ export const OakCookieBanner = ({
       $bottom={isFixed ? "all-spacing-0" : undefined}
       $right={isFixed ? "all-spacing-0" : undefined}
       $left={isFixed ? "all-spacing-0" : undefined}
-      $zIndex={zIndex ? zIndex : isFixed ? "always-on-top" : undefined}
+      $zIndex={
+        typeof zIndex === "number" ? zIndex : isFixed ? "in-front" : undefined
+      }
       $color="text-primary"
       data-testid="cookie-banner"
     >

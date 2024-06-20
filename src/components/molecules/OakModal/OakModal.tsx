@@ -42,6 +42,14 @@ export type OakModalProps = {
    * @default document.body
    */
   domContainer?: Element;
+  /**
+   * Optional z-index override.
+   *
+   * Defaults to token: `modal-dialog`
+   *
+   * NB *The modal is rendered inside a portal so it will not respect the stacking context of its parent component*.
+   */
+  zIndex?: number;
 } & Pick<
   HTMLAttributes<Element>,
   "aria-label" | "aria-description" | "aria-labelledby" | "aria-describedby"
@@ -83,6 +91,7 @@ export const OakModal = ({
   domContainer,
   isOpen,
   onClose,
+  zIndex,
   ...rest
 }: OakModalProps) => {
   const [canaryElement, setCanaryElement] = useState<HTMLDivElement | null>(
@@ -121,6 +130,8 @@ export const OakModal = ({
     return null;
   }
 
+  const finalZIndex = typeof zIndex === "number" ? zIndex : "modal-dialog";
+
   return createPortal(
     <Transition
       in={isOpen}
@@ -137,7 +148,7 @@ export const OakModal = ({
           <FadeOutBox
             $position="fixed"
             $inset="all-spacing-0"
-            $zIndex="modal-dialog"
+            $zIndex={finalZIndex}
             $background="black"
             $opacity="semi-transparent"
             $state={state}
@@ -151,7 +162,7 @@ export const OakModal = ({
             $top="all-spacing-0"
             $bottom="all-spacing-0"
             $width={["all-spacing-22"]}
-            $zIndex="modal-dialog"
+            $zIndex={finalZIndex}
             $flexDirection="column"
             $transition="standard-ease"
             $color="text-primary"
