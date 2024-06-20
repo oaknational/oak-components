@@ -48,7 +48,7 @@ type Consents = {
 
 export type OakCookieSettingsModalProps = Pick<
   OakModalProps,
-  "isOpen" | "onClose"
+  "isOpen" | "onClose" | "zIndex"
 > & {
   /**
    * Triggered when the user rejects all non-essential cookies.
@@ -89,6 +89,7 @@ export const OakCookieSettingsModal = ({
   policyURL,
   policies,
   initialConsents,
+  zIndex,
 }: OakCookieSettingsModalProps) => {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -110,6 +111,7 @@ export const OakCookieSettingsModal = ({
     <OakModal
       isOpen={isOpen}
       onClose={onClose}
+      zIndex={zIndex}
       footerSlot={
         <OakModalFooter>
           <OakSecondaryButton onClick={onReject} width="100%">
