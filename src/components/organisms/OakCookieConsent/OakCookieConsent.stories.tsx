@@ -1,6 +1,7 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import { useArgs } from "@storybook/preview-api";
+import { action } from "@storybook/addon-actions";
 
 import { OakCookieConsentProvider } from "../OakCookieConsentProvider";
 import {
@@ -15,7 +16,7 @@ import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 
 const meta: Meta<
   OakCookieConsentProps &
-    Pick<OakCookieConsentProviderProps, "currentConsents" | "policies">
+    Pick<OakCookieConsentProviderProps, "policyConsents" | "onConsentChange">
 > = {
   component: OakCookieConsent,
   tags: ["autodocs"],
@@ -27,68 +28,58 @@ const meta: Meta<
   args: {
     isFixed: true,
     policyURL: "https://example.com/privacy-policy",
-    policies: [
+    policyConsents: [
       {
-        id: "1",
-        label: "Strictly necessary",
-        description:
+        policyId: "1",
+        policyLabel: "Strictly necessary",
+        policyDescription:
           "Any cookies required for the website to function properly.",
-        strictlyNecessary: true,
-        parties: [],
+        isStrictlyNecessary: true,
+        policyParties: [],
+        consentState: "granted",
       },
       {
-        id: "2",
-        label: "Embedded content",
-        description:
+        policyId: "2",
+        policyLabel: "Embedded content",
+        policyDescription:
           "Any cookies required for video or other embedded learning content to work.",
-        strictlyNecessary: false,
-        parties: [
+        isStrictlyNecessary: false,
+        policyParties: [
           {
             name: "Big Video",
-            policyURL: "https://example.com/party-2-policy",
+            url: "https://example.com/party-2-policy",
           },
         ],
+        consentState: "denied",
       },
       {
-        id: "3",
-        label: "Statistics",
-        description:
+        policyId: "3",
+        policyLabel: "Statistics",
+        policyDescription:
           "Statistics and analytics that allow us to see usage, find bugs and issues, and improve the service.",
-        strictlyNecessary: false,
-        parties: [
+        isStrictlyNecessary: false,
+        policyParties: [
           {
             name: "Bug jar",
-            policyURL: "https://example.com/party-3-policy",
+            url: "https://example.com/party-3-policy",
           },
           {
             name: "Captain Stats",
-            policyURL: "https://example.com/party-4-policy",
+            url: "https://example.com/party-4-policy",
           },
         ],
+        consentState: "pending",
       },
     ],
-    currentConsents: {
-      "1": "granted",
-      "2": "denied",
-    },
+    onConsentChange: action("onConsentChange"),
   },
-  render: ({
-    policies,
-    policyURL,
-    currentConsents,
-    isFixed,
-    innerMaxWidth,
-    zIndex,
-  }) => {
-    const [, updateArgs] = useArgs();
+  render: ({ policyConsents, policyURL, isFixed, innerMaxWidth, zIndex }) => {
+    const [{ onConsentChange }] = useArgs();
 
     return (
       <OakCookieConsentProvider
-        currentConsents={currentConsents}
-        policies={policies}
-        onConsentChange={(consents) => {
-          updateArgs({ currentConsents: consents });
-        }}
+        policyConsents={policyConsents}
+        onConsentChange={onConsentChange}
       >
         <ConsentBannerButton />
         <OakCookieConsent
@@ -115,8 +106,7 @@ function ConsentBannerButton() {
 export default meta;
 
 type Story = StoryObj<
-  OakCookieConsentProps &
-    Pick<OakCookieConsentProviderProps, "currentConsents" | "policies">
+  OakCookieConsentProps & Pick<OakCookieConsentProviderProps, "policyConsents">
 >;
 
 export const Default: Story = {};

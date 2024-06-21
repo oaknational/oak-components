@@ -28,14 +28,13 @@ export const OakCookieConsent = ({
   zIndex,
 }: OakCookieConsentProps) => {
   const {
-    policies,
+    policyConsents,
     acceptModalConsents,
     rejectModalConsents,
     confirmModalConsents,
     hideBanner,
     openSettings,
     closeSettings,
-    currentConsents,
     isSettingsModalOpen,
     acceptBannerConsents,
     rejectBannerConsents,
@@ -57,13 +56,12 @@ export const OakCookieConsent = ({
       )}
       <OakCookieSettingsModal
         policyURL={policyURL}
-        policies={policies}
+        policyConsents={policyConsents}
         isOpen={isSettingsModalOpen}
         onClose={closeSettings}
         onReject={rejectModalConsents}
         onConfirm={confirmModalConsents}
         onAccept={acceptModalConsents}
-        initialConsents={currentConsents}
         zIndex={zIndex}
       />
     </>

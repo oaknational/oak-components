@@ -1,4 +1,9 @@
-import React, { FormEvent, ReactNode } from "react";
+import React, { FormEvent } from "react";
+
+import {
+  Consent,
+  PolicyConsent,
+} from "../OakCookieConsentProvider/OakCookieConsentProvider";
 
 import {
   OakAccordion,
@@ -14,38 +19,6 @@ import {
 } from "@/components/molecules";
 import { OakBox, OakHeading, OakP, OakSpan, OakUL } from "@/components/atoms";
 
-type Party = {
-  name: ReactNode;
-  policyURL: string;
-};
-type Policy = {
-  /**
-   * Unique identifier for the policy.
-   */
-  id: string;
-  /**
-   * Label for the policy.
-   */
-  label: string;
-  /**
-   * Description of the policy. This should explain what the policy does and why it is needed.
-   */
-  description: ReactNode;
-  /**
-   * Whether the policy is strictly necessary for the site to function.
-   * If true, the policy will be enabled by default and cannot be disabled.
-   */
-  strictlyNecessary: boolean;
-  /**
-   * List of 3rd parties that the policy allows data to be shared with.
-   */
-  parties: Party[];
-};
-type ConsentState = "granted" | "denied";
-type Consents = {
-  [policyId: string]: ConsentState;
-};
-
 export type OakCookieSettingsModalProps = Pick<
   OakModalProps,
   "isOpen" | "onClose" | "zIndex"
@@ -58,7 +31,7 @@ export type OakCookieSettingsModalProps = Pick<
    * Triggered when the user confirms their cookie consent settings.
    * @param consents The user's chosen consent settings.
    */
-  onConfirm(consents: Consents): void;
+  onConfirm(consents: Consent[]): void;
   /**
    * Triggered when the user accepts all cookies.
    */
@@ -68,13 +41,9 @@ export type OakCookieSettingsModalProps = Pick<
    */
   policyURL: string;
   /**
-   * List of cookie policies.
+   * List of cookie policies with the current consent state.
    */
-  policies: Policy[];
-  /**
-   * The user's initial consent settings.
-   */
-  initialConsents: Consents;
+  policyConsents: PolicyConsent[];
 };
 
 /**
@@ -87,24 +56,29 @@ export const OakCookieSettingsModal = ({
   onConfirm,
   onAccept,
   policyURL,
-  policies,
-  initialConsents,
+  policyConsents,
   zIndex,
 }: OakCookieSettingsModalProps) => {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
-    const newConsents: Consents = {};
+    const newConsents: Record<string, Consent> = {};
 
-    for (const policy of policies) {
-      newConsents[policy.id] = policy.strictlyNecessary ? "granted" : "denied";
+    for (const { policyId, isStrictlyNecessary } of policyConsents) {
+      newConsents[policyId] = {
+        policyId,
+        consentState: isStrictlyNecessary ? "granted" : "denied",
+      };
     }
 
     for (const policyId of formData.getAll("consent")) {
-      newConsents[policyId.toString()] = "granted";
+      newConsents[policyId.toString()] = {
+        policyId: policyId.toString(),
+        consentState: "granted",
+      };
     }
 
-    onConfirm(newConsents);
+    onConfirm(Object.values(newConsents));
   };
 
   return (
@@ -157,42 +131,42 @@ export const OakCookieSettingsModal = ({
           <OakHeading tag="h3" $font="heading-6" $mb="space-between-m">
             Manage consent preferences
           </OakHeading>
-          {policies.map((policy) => {
+          {policyConsents.map((policy) => {
             return (
               <OakAccordion
-                key={policy.id}
+                key={policy.policyId}
                 header={
-                  <OakSpan id={`cookie-settings-${policy.id}-label`}>
-                    {policy.label}
+                  <OakSpan id={`cookie-settings-${policy.policyId}-label`}>
+                    {policy.policyLabel}
                   </OakSpan>
                 }
-                id={`cookies-settings-${policy.id}-accordion`}
+                id={`cookies-settings-${policy.policyId}-accordion`}
                 headerAfterSlot={
                   <OakCheckBox
-                    id={`cookies-settings-${policy.id}-checkbox`}
+                    id={`cookies-settings-${policy.policyId}-checkbox`}
                     name="consent"
                     displayValue=""
-                    value={policy.id}
+                    value={policy.policyId}
                     defaultChecked={
-                      policy.strictlyNecessary ||
-                      initialConsents[policy.id] === "granted"
+                      policy.isStrictlyNecessary ||
+                      policy.consentState === "granted"
                     }
-                    disabled={policy.strictlyNecessary}
-                    aria-labelledby={`cookie-settings-${policy.id}-label`}
+                    disabled={policy.isStrictlyNecessary}
+                    aria-labelledby={`cookie-settings-${policy.policyId}-label`}
                   />
                 }
               >
-                <OakP $mb="space-between-m2">{policy.description}</OakP>
+                <OakP $mb="space-between-m2">{policy.policyDescription}</OakP>
                 <OakBox as="dl" $pl="inner-padding-m">
-                  {policy.parties.length > 0 && (
+                  {policy.policyParties.length > 0 && (
                     <>
                       <dt>Who do we share data with?</dt>
                       <OakBox as="dd" $font="body-3-bold" $mb="space-between-s">
                         <OakUL $reset>
-                          {policy.parties.map((party, index, all) => (
+                          {policy.policyParties.map((party, index, all) => (
                             <OakBox as="li" key={index} $display="inline">
                               <OakSecondaryLink
-                                href={party.policyURL}
+                                href={party.url}
                                 target="_blank"
                                 rel="external nofollow"
                               >
