@@ -10,14 +10,6 @@ const StyledLessonLink = styled(OakSecondaryLink)`
   text-decoration: none;
 `;
 
-/**
- * ! TODO LIST:
- * ? - Fix the spacing between the internal elements
- * ? - Add tests for the component
- * ? - Make it properly responsive
- * ? refactor code to clean it up
- */
-
 const StyledUnitListItem = styled(OakFlex)<{ $disabled?: boolean }>`
   outline: none;
   text-align: initial;
@@ -57,13 +49,8 @@ export type OakUnitListItemProps<C extends ElementType> = {
   yearGroup: string;
   numberOfLessons?: number;
   isLegacy: boolean;
-  // href
+  href: string;
 } & ComponentPropsWithoutRef<C>;
-
-// By adding the style css utils to this components css your component will be able to accept corresponding props and prop values.
-// you can also add custom styles to the component by adding the styles to the css template literal below
-
-// const OakUnitListItemCss = css<OakUnitListItemProps>``;
 
 const UnstyledComponent = <C extends ElementType = "a">(
   props: OakUnitListItemProps<C>,
@@ -87,7 +74,6 @@ const UnstyledComponent = <C extends ElementType = "a">(
   return (
     <OakBox role="listitem">
       <StyledUnitListItem
-        // $minHeight={["all-spacing-17", "all-spacing-13"]}
         as={disabledOrUnavailable ? "div" : as ?? "a"}
         $alignItems={"center"}
         $background={unavailable ? "bg-neutral" : "bg-primary"}
@@ -172,12 +158,6 @@ const UnstyledComponent = <C extends ElementType = "a">(
 
 /**
  *
- * Add the description of the component here and it will appear on the story for the component
- * The following callbacks are available for tracking focus events:
- *
- * ### Callbacks
- * make sure to add descriptions and types for any callbacks for the component
- *
- * NB. We must export a styled component for it to be inheritable
+ * OakUnitListItem component used as links for unit cards
  */
 export const OakUnitListItem = styled(UnstyledComponent)``;

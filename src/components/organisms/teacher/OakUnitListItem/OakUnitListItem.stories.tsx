@@ -7,7 +7,7 @@ import { OakFlex, OakHeading } from "@/components/atoms";
 
 const meta: Meta<typeof OakUnitListItem> = {
   //  "title" is the title of the story and where to look for compoent in the storybook
-  title: "Components/OakUnitListItem",
+  title: "components/organisms/teacher/OakUnitListItem",
   component: OakUnitListItem,
   tags: ["autodocs"],
   args: {
@@ -56,12 +56,5 @@ type Story = StoryObj<typeof OakUnitListItem>;
 
 export const Default: Story = {
   render: (args) => <OakUnitListItem {...args} />,
-  args: {
-    // Define your component's default props here
-    //   $background: "bg-btn-primary",
-    //   $color: "white",
-    //   $ba: "border-solid-s",
-    //   $pa: "inner-padding-s",
-    //   $borderRadius: "border-radius-m",
-  },
+  args: {},
 };
