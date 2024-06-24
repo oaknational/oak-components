@@ -13,7 +13,7 @@ import {
 import { OakBox, OakBoxProps } from "@/components/atoms";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 
-export type OakTooltipProps = Pick<InternalTooltipProps, "tooltipPosition"> & {
+export type OakTooltipProps = InternalTooltipProps & {
   /**
    * The target element that triggers the tooltip
    */
@@ -32,7 +32,6 @@ export type OakTooltipProps = Pick<InternalTooltipProps, "tooltipPosition"> & {
    * @default document.body
    */
   domContainer?: Element;
-  id: string;
 };
 
 /**
@@ -44,7 +43,6 @@ export const OakTooltip = ({
   tooltip,
   isOpen,
   domContainer,
-  id,
   ...props
 }: OakTooltipProps) => {
   const [targetElement, setTargetElement] = useState<Element | null>(null);
@@ -159,10 +157,9 @@ export const OakTooltip = ({
                   $ph="inner-padding-xl"
                   $font="heading-light-7"
                   tooltipPosition={tooltipPosition}
-                  {...props}
-                  {...borderRadiusProps}
                   aria-expanded={isVisible}
-                  id={id}
+                  {...borderRadiusProps}
+                  {...props}
                 >
                   {tooltip}
                 </InternalTooltip>
