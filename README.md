@@ -18,8 +18,13 @@ For components to be styled correctly they will need access to a theme, some glo
 
 You can add those to your app using something like:
 
+
+> 🚨 This example is for the [Next.js App router](https://nextjs.org/docs/app) . If you're using the [Pages router](https://nextjs.org/docs/pages/building-your-application) these changes should be made inside your `_document.js` 
+
+
 ```typescript
-import { OakThemeProvider, oakDefaultTheme } from "@oaknational/oak-components";
+// layout.js 
+import { OakThemeProvider, oakDefaultTheme, OakGlobalStyle } from "@oaknational/oak-components";
 import Head from "next/head";
 import { Lexend } from "next/font/google";
 
@@ -29,7 +34,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
-        <OakGlobalStyles />
+        <OakGlobalStyle />
       </Head>
       <body className={lexend.className}>
         <OakThemeProvider theme={oakDefaultTheme}>{children}</OakThemeProvider>
