@@ -1,0 +1,436 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CopyPasteThisComponent matches snapshot 1`] = `
+.c0 {
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 {
+  width: 1.5rem;
+}
+
+<div
+  className="c0 c1 c2 "
+>
+  Click Me
+</div>
+`;
+
+exports[`OakUnitListItem matches snapshot 1`] = `
+[
+  .c0 {
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  background: #ffffff;
+  border: 0rem solid;
+  border-radius: 0.375rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c4 {
+  min-width: 4rem;
+  min-height: 10rem;
+  background: #a0b6f2;
+  font-family: Lexend,sans-serif;
+}
+
+.c8 {
+  width: 100%;
+  height: 100%;
+  padding: 1.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c10 {
+  max-width: 100%;
+  font-family: Lexend,sans-serif;
+}
+
+.c13 {
+  width: 100%;
+  font-family: Lexend,sans-serif;
+}
+
+.c20 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.c18 {
+  font-family: Lexend,sans-serif;
+}
+
+.c19 {
+  color: #222222;
+  font-family: Lexend,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c23 {
+  object-fit: contain;
+}
+
+.c7 {
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+  color: #222222;
+}
+
+.c12 {
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+  color: #222222;
+}
+
+.c15 {
+  font-family: Lexend,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+  color: #222222;
+}
+
+.c22 {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.c16 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.25rem;
+  outline: none;
+  border-radius: 0.375rem;
+  padding: 0.25rem;
+  margin: -0.25rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font: inherit;
+  background: none;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #222222;
+}
+
+.c16 .c21 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+}
+
+.c16:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c16:visited {
+  color: #575757;
+}
+
+.c16:active {
+  color: #222222;
+}
+
+.c16:active .c21 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+}
+
+.c16[disabled] {
+  cursor: not-allowed;
+  color: #808080;
+}
+
+.c16[disabled] .c21 {
+  -webkit-filter: invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%);
+  filter: invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%);
+}
+
+.c17 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3 {
+  outline: none;
+  text-align: initial;
+  cursor: pointer;
+}
+
+.c3:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c6 {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+@media (min-width:750px) {
+  .c4 {
+    min-height: 5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c8 {
+    padding: 1rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c10 {
+    max-width: 30rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c10 {
+    max-width: 30rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c13 {
+    width: auto;
+  }
+}
+
+@media (min-width:750px) {
+  .c9 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:750px) {
+  .c14 {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width:750px) {
+  .c14 {
+    gap: 2rem;
+  }
+}
+
+@media (hover:hover) {
+  .c16:hover,
+  .c16:visited:hover {
+    color: #222222;
+  }
+
+  .c16:hover .c21,
+  .c16:visited:hover .c21 {
+    -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+    filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  }
+}
+
+@media (hover:hover) {
+  .c3:hover {
+    background: #c6d1ef;
+  }
+}
+
+<div
+    className="c0"
+    role="listitem"
+  >
+    <a
+      className="c1 c2 c3 "
+      title="Lesson 1"
+    >
+      <div
+        className="c4 c5 c6"
+      >
+        <h3
+          className="c7"
+        >
+          1
+        </h3>
+      </div>
+      <div
+        className="c8 c9"
+      >
+        <div
+          className="c10 c11"
+        >
+          <p
+            className="c12"
+          >
+            Lesson 1
+          </p>
+        </div>
+        <div
+          className="c13 c14"
+        >
+          <p
+            className="c15"
+          />
+          <a
+            className="c16 c17"
+          >
+            <span
+              className="c18"
+            >
+              <span
+                className="c19"
+              >
+                 Lessons
+              </span>
+            </span>
+            <div
+              className="c20 c21 c22"
+            >
+              <img
+                alt="chevron-right"
+                className="c23"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
+                style={
+                  {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+              />
+            </div>
+          </a>
+        </div>
+      </div>
+    </a>
+  </div>,
+  ",",
+]
+`;
