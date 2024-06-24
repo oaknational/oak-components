@@ -28,25 +28,25 @@ describe("OakUnitListItem", () => {
 
   it("renders a div when the item is disabled", () => {
     const { getByTestId } = renderWithTheme(
-      <OakUnitListItem data-testid="intro" disabled />,
+      <OakUnitListItem data-testid="unit-card" disabled />,
     );
 
-    expect(getByTestId("intro").tagName).toBe("DIV");
+    expect(getByTestId("unit-card").tagName).toBe("DIV");
   });
 
   it("renders an anchor when the item is not disabled", () => {
     const { getByTestId } = renderWithTheme(
-      <OakUnitListItem data-testid="intro" />,
+      <OakUnitListItem data-testid="unit-card" />,
     );
 
-    expect(getByTestId("intro").tagName).toBe("A");
+    expect(getByTestId("unit-card").tagName).toBe("A");
   });
 
   it("renders the number of lessons when provided", () => {
     const { getByTestId } = renderWithTheme(
-      <OakUnitListItem data-testid="intro" numberOfLessons={6} />,
+      <OakUnitListItem data-testid="unit-card" numberOfLessons={6} />,
     );
 
-    expect(getByTestId("intro").textContent).toContain("6");
+    expect(getByTestId("unit-card").textContent).toContain("6");
   });
 });

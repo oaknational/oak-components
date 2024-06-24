@@ -115,7 +115,10 @@ const UnstyledComponent = <C extends ElementType = "a">(
           $pa={["inner-padding-l", "inner-padding-m"]}
           $gap={"space-between-s"}
         >
-          <OakFlex $maxWidth={["100%", "all-spacing-21", "all-spacing-21"]}>
+          <OakFlex
+            $alignItems={"center"}
+            $maxWidth={["100%", "all-spacing-21", "all-spacing-21"]}
+          >
             <OakP
               $font={"heading-7"}
               $color={disabledOrUnavailable ? "text-disabled" : "text-primary"}
@@ -128,6 +131,7 @@ const UnstyledComponent = <C extends ElementType = "a">(
             $width={["100%", "auto"]}
             $gap={["space-between-s", "space-between-m2"]}
             $justifyContent={["space-between", "flex-end"]}
+            $whiteSpace={"nowrap"}
           >
             <OakP
               $font={"heading-light-7"}
@@ -158,6 +162,6 @@ const UnstyledComponent = <C extends ElementType = "a">(
 
 /**
  *
- * OakUnitListItem component used as links for unit cards
+ * OakUnitsListItem component used as links for unit cards
  */
 export const OakUnitListItem = styled(UnstyledComponent)``;
