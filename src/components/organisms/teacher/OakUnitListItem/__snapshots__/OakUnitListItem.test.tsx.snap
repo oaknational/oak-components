@@ -32,12 +32,13 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c13 {
+.c12 {
   width: 100%;
   font-family: Lexend,sans-serif;
+  white-space: nowrap;
 }
 
-.c20 {
+.c19 {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -94,14 +95,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   gap: 1rem;
 }
 
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c14 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -117,11 +111,11 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   gap: 1rem;
 }
 
-.c18 {
+.c17 {
   font-family: Lexend,sans-serif;
 }
 
-.c19 {
+.c18 {
   color: #222222;
   font-family: Lexend,sans-serif;
   font-weight: 400;
@@ -133,7 +127,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c23 {
+.c22 {
   object-fit: contain;
 }
 
@@ -149,7 +143,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   color: #222222;
 }
 
-.c12 {
+.c11 {
   font-family: Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -161,7 +155,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   color: #222222;
 }
 
-.c15 {
+.c14 {
   font-family: Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -173,12 +167,12 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   color: #222222;
 }
 
-.c22 {
+.c21 {
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.c16 {
+.c15 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -204,39 +198,39 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   color: #222222;
 }
 
-.c16 .c21 {
+.c15 .c20 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
 }
 
-.c16:focus-visible {
+.c15:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c16:visited {
+.c15:visited {
   color: #575757;
 }
 
-.c16:active {
+.c15:active {
   color: #222222;
 }
 
-.c16:active .c21 {
+.c15:active .c20 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
 }
 
-.c16[disabled] {
+.c15[disabled] {
   cursor: not-allowed;
   color: #808080;
 }
 
-.c16[disabled] .c21 {
+.c15[disabled] .c20 {
   -webkit-filter: invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%);
   filter: invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%);
 }
 
-.c17 {
+.c16 {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -281,7 +275,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c13 {
+  .c12 {
     width: auto;
   }
 }
@@ -295,7 +289,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c14 {
+  .c13 {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
@@ -304,19 +298,19 @@ exports[`OakUnitListItem matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c14 {
+  .c13 {
     gap: 2rem;
   }
 }
 
 @media (hover:hover) {
-  .c16:hover,
-  .c16:visited:hover {
+  .c15:hover,
+  .c15:visited:hover {
     color: #222222;
   }
 
-  .c16:hover .c21,
-  .c16:visited:hover .c21 {
+  .c15:hover .c20,
+  .c15:visited:hover .c20 {
     -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
     filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   }
@@ -349,38 +343,38 @@ exports[`OakUnitListItem matches snapshot 1`] = `
         className="c8 c9"
       >
         <div
-          className="c10 c11"
+          className="c10 c2"
         >
           <p
-            className="c12"
+            className="c11"
           >
             Lesson 1
           </p>
         </div>
         <div
-          className="c13 c14"
+          className="c12 c13"
         >
           <p
-            className="c15"
+            className="c14"
           />
           <a
-            className="c16 c17"
+            className="c15 c16"
           >
             <span
-              className="c18"
+              className="c17"
             >
               <span
-                className="c19"
+                className="c18"
               >
                  Lessons
               </span>
             </span>
             <div
-              className="c20 c21 c22"
+              className="c19 c20 c21"
             >
               <img
                 alt="chevron-right"
-                className="c23"
+                className="c22"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"

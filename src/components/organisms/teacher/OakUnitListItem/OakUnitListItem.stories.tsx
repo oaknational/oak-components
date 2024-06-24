@@ -11,10 +11,11 @@ const meta: Meta<typeof OakUnitListItem> = {
   component: OakUnitListItem,
   tags: ["autodocs"],
   args: {
-    title: "Lesson 1",
+    title:
+      "Migration: What do sources tell us about the British Empire in India and Africa?",
     index: 1,
     href: "#",
-    yearGroup: "Year 1",
+    yearGroup: "Year 10",
     numberOfLessons: 10,
     isLegacy: false,
   },
