@@ -47,7 +47,7 @@ export type OakUnitListItemProps<C extends ElementType> = {
   index: number;
   title: string;
   yearGroup: string;
-  numberOfLessons?: number;
+  numberOfLessons: number;
   isLegacy: boolean;
   href: string;
 } & ComponentPropsWithoutRef<C>;
