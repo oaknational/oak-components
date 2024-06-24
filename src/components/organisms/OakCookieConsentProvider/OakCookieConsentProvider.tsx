@@ -14,35 +14,47 @@ import {
 
 type Party = {
   name: ReactNode;
-  policyURL: string;
+  url: string;
 };
-type Policy = {
+export type Consent = {
   /**
    * Unique identifier for the policy.
    */
-  id: string;
+  policyId: string;
+  /**
+   * The user's consent state for the policy.
+   */
+  consentState: ConsentState;
+};
+export type PolicyConsent = {
+  /**
+   * Unique identifier for the policy.
+   */
+  policyId: string;
   /**
    * Label for the policy.
    */
-  label: string;
+  policyLabel: string;
   /**
    * Description of the policy. This should explain what the policy does and why it is needed.
    */
-  description: ReactNode;
+  policyDescription: ReactNode;
   /**
    * Whether the policy is strictly necessary for the site to function.
    * If true, the policy will be enabled by default and cannot be disabled.
    */
-  strictlyNecessary: boolean;
+  isStrictlyNecessary: boolean;
   /**
    * List of 3rd parties that the policy allows data to be shared with.
    */
-  parties: Party[];
+  policyParties: Party[];
+  /**
+   * The current consent state of the policy
+   */
+  consentState: ConsentStateWithPending;
 };
-type ConsentState = "granted" | "denied";
-type Consents = {
-  [policyId: string]: ConsentState;
-};
+export type ConsentState = "granted" | "denied";
+export type ConsentStateWithPending = ConsentState | "pending";
 
 export type OakCookieConsentContextType = {
   /**
@@ -50,13 +62,9 @@ export type OakCookieConsentContextType = {
    */
   isSettingsModalOpen: boolean;
   /**
-   * List of cookie policies.
+   * List of cookie policies with the current consent state.
    */
-  policies: Policy[];
-  /**
-   * The user's current consent settings.
-   */
-  currentConsents: Consents;
+  policyConsents: PolicyConsent[];
   /**
    * Open the cookie settings modal.
    **/
@@ -81,7 +89,7 @@ export type OakCookieConsentContextType = {
    * Confirm the user's consent settings from the modal.
    * @param consents The user's chosen consent settings.
    */
-  confirmModalConsents(consents: Consents): void;
+  confirmModalConsents(consents: Consent[]): void;
   /**
    * Consent to all cookies from the modal.
    */
@@ -103,8 +111,7 @@ export type OakCookieConsentContextType = {
 export function getDefaultContextState(): OakCookieConsentContextType {
   return {
     isSettingsModalOpen: false,
-    policies: [],
-    currentConsents: {},
+    policyConsents: [],
     showBanner() {},
     hideBanner() {},
     openSettings() {},
@@ -123,18 +130,14 @@ export const OakCookieConsentContext =
 
 export type OakCookieConsentProviderProps = Pick<
   OakCookieConsentContextType,
-  "policies"
+  "policyConsents"
 > & {
   children: ReactNode;
-  /**
-   * The user's consent settings.
-   */
-  currentConsents: Consents;
   /**
    * Callback triggered when the user's consent settings change.
    * @param consents The user's updated consent settings.
    */
-  onConsentChange(consents: Consents): void;
+  onConsentChange(consents: Consent[]): void;
 };
 
 /**
@@ -161,8 +164,7 @@ export function useCookieConsent() {
  */
 export const OakCookieConsentProvider = ({
   children,
-  currentConsents,
-  policies,
+  policyConsents,
   onConsentChange,
 }: OakCookieConsentProviderProps) => {
   const [cookieConsentState, dispatch] = useReducer(
@@ -173,19 +175,20 @@ export const OakCookieConsentProvider = ({
   const closeSettings = useCallback(() => dispatch({ type: "closeModal" }), []);
   const acceptConsents = useCallback(() => {
     onConsentChange(
-      Object.fromEntries(policies.map((policy) => [policy.id, "granted"])),
+      policyConsents.map(({ policyId }) => ({
+        policyId,
+        consentState: "granted",
+      })),
     );
-  }, [onConsentChange, policies]);
+  }, [onConsentChange, policyConsents]);
   const rejectConsents = useCallback(() => {
     onConsentChange(
-      Object.fromEntries(
-        policies.map((policy) => [
-          policy.id,
-          policy.strictlyNecessary ? "granted" : "denied",
-        ]),
-      ),
+      policyConsents.map(({ policyId, isStrictlyNecessary }) => ({
+        policyId,
+        consentState: isStrictlyNecessary ? "granted" : "denied",
+      })),
     );
-  }, [onConsentChange, policies]);
+  }, [onConsentChange, policyConsents]);
   const hideBanner = useCallback(() => dispatch({ type: "hideBanner" }), []);
   const showBanner = useCallback(() => dispatch({ type: "showBanner" }), []);
   const openSettings = useCallback(() => dispatch({ type: "openModal" }), []);
@@ -206,7 +209,7 @@ export const OakCookieConsentProvider = ({
     dispatch({ type: "rejectModalConsents" });
   }, [rejectConsents, hideBanner]);
   const confirmModalConsents = useCallback(
-    (consents: Consents) => {
+    (consents: Consent[]) => {
       onConsentChange(consents);
       dispatch({ type: "confirmModalConsents" });
     },
@@ -218,8 +221,7 @@ export const OakCookieConsentProvider = ({
       value={{
         isSettingsModalOpen: cookieConsentState.isSettingsModalOpen,
         bannerState: cookieConsentState.bannerState,
-        policies,
-        currentConsents,
+        policyConsents,
         showBanner,
         hideBanner,
         openSettings,

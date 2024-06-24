@@ -17,18 +17,18 @@ describe(OakCookieConsentProvider, () => {
       });
 
       act(() => {
-        result.current.confirmModalConsents({
-          "1": "granted",
-          "2": "denied",
-          "3": "granted",
-        });
+        result.current.confirmModalConsents([
+          { policyId: "1", consentState: "granted" },
+          { policyId: "2", consentState: "denied" },
+          { policyId: "3", consentState: "granted" },
+        ]);
       });
 
-      expect(onConsentChange).toHaveBeenCalledWith({
-        "1": "granted",
-        "2": "denied",
-        "3": "granted",
-      });
+      expect(onConsentChange).toHaveBeenCalledWith([
+        { policyId: "1", consentState: "granted" },
+        { policyId: "2", consentState: "denied" },
+        { policyId: "3", consentState: "granted" },
+      ]);
     });
   });
 
@@ -43,11 +43,11 @@ describe(OakCookieConsentProvider, () => {
         result.current.acceptModalConsents();
       });
 
-      expect(onConsentChange).toHaveBeenCalledWith({
-        "1": "granted",
-        "2": "granted",
-        "3": "granted",
-      });
+      expect(onConsentChange).toHaveBeenCalledWith([
+        { policyId: "1", consentState: "granted" },
+        { policyId: "2", consentState: "granted" },
+        { policyId: "3", consentState: "granted" },
+      ]);
     });
   });
 
@@ -62,11 +62,11 @@ describe(OakCookieConsentProvider, () => {
         result.current.rejectModalConsents();
       });
 
-      expect(onConsentChange).toHaveBeenCalledWith({
-        "1": "granted",
-        "2": "denied",
-        "3": "denied",
-      });
+      expect(onConsentChange).toHaveBeenCalledWith([
+        { policyId: "1", consentState: "granted" },
+        { policyId: "2", consentState: "denied" },
+        { policyId: "3", consentState: "denied" },
+      ]);
     });
   });
 
@@ -81,11 +81,11 @@ describe(OakCookieConsentProvider, () => {
         result.current.acceptBannerConsents();
       });
 
-      expect(onConsentChange).toHaveBeenCalledWith({
-        "1": "granted",
-        "2": "granted",
-        "3": "granted",
-      });
+      expect(onConsentChange).toHaveBeenCalledWith([
+        { policyId: "1", consentState: "granted" },
+        { policyId: "2", consentState: "granted" },
+        { policyId: "3", consentState: "granted" },
+      ]);
     });
   });
 
@@ -100,11 +100,11 @@ describe(OakCookieConsentProvider, () => {
         result.current.rejectBannerConsents();
       });
 
-      expect(onConsentChange).toHaveBeenCalledWith({
-        "1": "granted",
-        "2": "denied",
-        "3": "denied",
-      });
+      expect(onConsentChange).toHaveBeenCalledWith([
+        { policyId: "1", consentState: "granted" },
+        { policyId: "2", consentState: "denied" },
+        { policyId: "3", consentState: "denied" },
+      ]);
     });
   });
 });
@@ -115,56 +115,54 @@ function wrapper(
   return <OakCookieConsentProvider {...createProps()} {...props} />;
 }
 
-const policies: OakCookieConsentContextType["policies"] = [
+const policyConsents: OakCookieConsentContextType["policyConsents"] = [
   {
-    id: "1",
-    label: "Strictly necessary",
-    description: "Any cookies required for the website to function properly.",
-    strictlyNecessary: true,
-    parties: [],
+    policyId: "1",
+    policyLabel: "Strictly necessary",
+    policyDescription:
+      "Any cookies required for the website to function properly.",
+    isStrictlyNecessary: true,
+    policyParties: [],
+    consentState: "granted",
   },
   {
-    id: "2",
-    label: "Embedded content",
-    description:
+    policyId: "2",
+    policyLabel: "Embedded content",
+    policyDescription:
       "Any cookies required for video or other embedded learning content to work.",
-    strictlyNecessary: false,
-    parties: [
+    isStrictlyNecessary: false,
+    policyParties: [
       {
         name: "Big Video",
-        policyURL: "https://example.com/party-2-policy",
+        url: "https://example.com/party-2-policy",
       },
     ],
+    consentState: "denied",
   },
   {
-    id: "3",
-    label: "Statistics",
-    description:
+    policyId: "3",
+    policyLabel: "Statistics",
+    policyDescription:
       "Statistics and analytics that allow us to see usage, find bugs and issues, and improve the service.",
-    strictlyNecessary: false,
-    parties: [
+    isStrictlyNecessary: false,
+    policyParties: [
       {
         name: "Bug jar",
-        policyURL: "https://example.com/party-3-policy",
+        url: "https://example.com/party-3-policy",
       },
       {
         name: "Captain Stats",
-        policyURL: "https://example.com/party-4-policy",
+        url: "https://example.com/party-4-policy",
       },
     ],
+    consentState: "pending",
   },
 ];
-
-const consents: OakCookieConsentContextType["currentConsents"] = {
-  "1": "granted",
-  "2": "denied",
-};
 
 export function createProps(): OakCookieConsentProviderProps {
   return {
     children: null,
-    policies,
-    currentConsents: consents,
+    policyConsents,
     onConsentChange: jest.fn(),
   };
 }

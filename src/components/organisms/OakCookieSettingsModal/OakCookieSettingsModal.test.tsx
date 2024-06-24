@@ -55,11 +55,11 @@ describe(OakCookieSettingsModal, () => {
       fireEvent.click(getByText("Confirm my choices"));
     });
 
-    expect(props.onConfirm).toHaveBeenCalledWith({
-      "1": "granted",
-      "2": "granted",
-      "3": "denied",
-    });
+    expect(props.onConfirm).toHaveBeenCalledWith([
+      { policyId: "1", consentState: "granted" },
+      { policyId: "2", consentState: "granted" },
+      { policyId: "3", consentState: "denied" },
+    ]);
   });
 });
 
@@ -69,50 +69,50 @@ export function createProps(
   return {
     isOpen: false,
     policyURL: "https://example.com/privacy-policy",
-    policies: [
+    policyConsents: [
       {
-        id: "1",
-        label: "Strictly necessary",
-        description:
+        policyId: "1",
+        policyLabel: "Strictly necessary",
+        policyDescription:
           "Any cookies required for the website to function properly.",
-        strictlyNecessary: true,
-        parties: [],
+        isStrictlyNecessary: true,
+        policyParties: [],
+        consentState: "granted",
       },
       {
-        id: "2",
-        label: "Embedded content",
-        description:
+        policyId: "2",
+        policyLabel: "Embedded content",
+        policyDescription:
           "Any cookies required for video or other embedded learning content to work.",
-        strictlyNecessary: false,
-        parties: [
+        isStrictlyNecessary: false,
+        policyParties: [
           {
             name: "Big Video",
-            policyURL: "https://example.com/party-2-policy",
+            url: "https://example.com/party-2-policy",
           },
         ],
+        consentState: "denied",
       },
       {
-        id: "3",
-        label: "Statistics",
-        description:
+        policyId: "3",
+        policyLabel: "Statistics",
+        policyDescription:
           "Statistics and analytics that allow us to see usage, find bugs and issues, and improve the service.",
-        strictlyNecessary: false,
-        parties: [
+        isStrictlyNecessary: false,
+        policyParties: [
           {
             name: "Bug jar",
-            policyURL: "https://example.com/party-3-policy",
+            url: "https://example.com/party-3-policy",
           },
           {
             name: "Captain Stats",
-            policyURL: "https://example.com/party-4-policy",
+            url: "https://example.com/party-4-policy",
           },
         ],
+        consentState: "pending",
       },
     ],
-    initialConsents: {
-      "1": "granted",
-      "2": "denied",
-    },
+
     onClose: jest.fn(),
     onReject: jest.fn(),
     onConfirm: jest.fn(),
