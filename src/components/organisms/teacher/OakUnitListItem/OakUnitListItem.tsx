@@ -78,7 +78,6 @@ const UnstyledComponent = <C extends ElementType = "a">(
         $alignItems={"center"}
         $background={unavailable ? "bg-neutral" : "bg-primary"}
         $borderRadius="border-radius-m"
-        $ba={unavailable ? "border-solid-m" : "border-solid-none"}
         $disabled={disabledOrUnavailable}
         href={disabledOrUnavailable ? undefined : href}
         onClick={disabledOrUnavailable ? undefined : onClick}

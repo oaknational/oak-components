@@ -3,7 +3,7 @@ import { StoryObj, Meta } from "@storybook/react";
 
 import { OakUnitListItem } from "./OakUnitListItem";
 
-import { OakFlex, OakHeading } from "@/components/atoms";
+import { OakBox, OakFlex, OakHeading, OakP } from "@/components/atoms";
 
 const meta: Meta<typeof OakUnitListItem> = {
   //  "title" is the title of the story and where to look for compoent in the storybook
@@ -38,8 +38,29 @@ const meta: Meta<typeof OakUnitListItem> = {
           $pa={"inner-padding-xl"}
           role="list"
         >
-          <OakHeading tag="h3">Unit</OakHeading>
+          <OakBox>
+            <OakHeading tag="h3" $font={"heading-4"}>
+              Maths Unit
+            </OakHeading>
+            <OakP>
+              Brand-new teaching resources, thoughtfully crafted by teachers for
+              classroom needs.
+            </OakP>
+          </OakBox>
           {Story()}
+          <OakUnitListItem
+            title={"Numerals 1-10"}
+            numberOfLessons={10}
+            index={2}
+            yearGroup="Year 10"
+          />
+          <OakUnitListItem
+            title={"'The Three Billy Goats Gruff': reading and writing"}
+            numberOfLessons={7}
+            index={3}
+            yearGroup="Year 10"
+            disabled={true}
+          />
         </OakFlex>
       );
     },
