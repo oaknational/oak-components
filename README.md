@@ -16,16 +16,11 @@ You can install it using `npm i @oaknational/oak-components` or any other packag
 
 For components to be styled correctly they will need access to a theme, some global styles and the Lexend font.
 
-You can add those to your app using something like:
-
-
-> 🚨 This example is for the [Next.js App router](https://nextjs.org/docs/app) . If you're using the [Pages router](https://nextjs.org/docs/pages/building-your-application) these changes should be made inside your `_document.js` 
-
+If you're using the Next.js App router your root layout should look something like:
 
 ```typescript
 // layout.js 
 import { OakThemeProvider, oakDefaultTheme, OakGlobalStyle } from "@oaknational/oak-components";
-import Head from "next/head";
 import { Lexend } from "next/font/google";
 
 const lexend = Lexend({ subsets: ['latin'] });
@@ -33,9 +28,7 @@ const lexend = Lexend({ subsets: ['latin'] });
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-        <OakGlobalStyle />
-      </Head>
+      <OakGlobalStyle />
       <body className={lexend.className}>
         <OakThemeProvider theme={oakDefaultTheme}>{children}</OakThemeProvider>
       </body>
@@ -43,6 +36,8 @@ export default function RootLayout({ children }) {
   );
 }
 ```
+
+To enable SSR of styles and avoid a flicker of unstyled content you'll need to configure your Next.js app to support [styled-components](https://nextjs.org/docs/app/building-your-application/styling/css-in-js#styled-components)
 
 ### TypeScript
 
