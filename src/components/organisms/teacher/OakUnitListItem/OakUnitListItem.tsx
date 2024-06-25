@@ -13,6 +13,8 @@ const StyledLessonLink = styled(OakSecondaryLink)`
 const StyledUnitListItem = styled(OakFlex)<{ $disabled?: boolean }>`
   outline: none;
   text-align: initial;
+  animation-timing-function: ease-out;
+  transition-duration: 300ms;
 
   &:focus-visible {
     box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
@@ -32,7 +34,12 @@ const StyledUnitListItem = styled(OakFlex)<{ $disabled?: boolean }>`
       }
     `}
 
-  ${(props) => props.$disabled && "cursor: not-allowed"}
+  ${(props) =>
+    props.$disabled &&
+    css`
+      cursor: not-allowed;
+      background: ${parseColor("bg-neutral")};
+    `}
 `;
 
 const StyledOakIndexBox = styled(OakFlex)`
@@ -111,7 +118,7 @@ const UnstyledComponent = <C extends ElementType = "a">(
           $justifyContent={"space-between"}
           $alignItems={"center"}
           $flexDirection={["column", "row"]}
-          $pa={["inner-padding-l", "inner-padding-m"]}
+          $pa={["inner-padding-l"]}
           $gap={"space-between-s"}
         >
           <OakFlex
@@ -128,16 +135,19 @@ const UnstyledComponent = <C extends ElementType = "a">(
           <OakFlex
             $alignItems={"center"}
             $width={["100%", "auto"]}
-            $gap={["space-between-s", "space-between-m2"]}
-            $justifyContent={["space-between", "flex-end"]}
+            $gap={["space-between-s", "space-between-xxl"]}
             $whiteSpace={"nowrap"}
           >
-            <OakP
-              $font={"heading-light-7"}
-              $color={disabledOrUnavailable ? "text-disabled" : "text-primary"}
-            >
-              {props.yearGroup}
-            </OakP>
+            <OakFlex $justifyContent={"flex-end"}>
+              <OakP
+                $font={"heading-light-7"}
+                $color={
+                  disabledOrUnavailable ? "text-disabled" : "text-primary"
+                }
+              >
+                {props.yearGroup}
+              </OakP>
+            </OakFlex>
             <StyledLessonLink
               isTrailingIcon
               iconName="chevron-right"

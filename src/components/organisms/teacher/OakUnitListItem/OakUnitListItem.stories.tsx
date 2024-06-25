@@ -6,7 +6,6 @@ import { OakUnitListItem } from "./OakUnitListItem";
 import { OakBox, OakFlex, OakHeading, OakP } from "@/components/atoms";
 
 const meta: Meta<typeof OakUnitListItem> = {
-  //  "title" is the title of the story and where to look for compoent in the storybook
   title: "components/organisms/teacher/OakUnitListItem",
   component: OakUnitListItem,
   tags: ["autodocs"],
@@ -49,9 +48,10 @@ const meta: Meta<typeof OakUnitListItem> = {
           </OakBox>
           {Story()}
           <OakUnitListItem
-            title={"Numerals 1-10"}
+            title={"Numerals 1-10 (Legacy example)"}
             numberOfLessons={10}
             index={2}
+            isLegacy={true}
             yearGroup="Year 10"
           />
           <OakUnitListItem
@@ -61,13 +61,40 @@ const meta: Meta<typeof OakUnitListItem> = {
             yearGroup="Year 10"
             disabled={true}
           />
+          <OakUnitListItem
+            title={"Test Unit"}
+            numberOfLessons={8}
+            index={4}
+            yearGroup="Year 9"
+          />
+          <OakUnitListItem
+            title={"Apple"}
+            numberOfLessons={41}
+            index={5}
+            yearGroup="Year 9"
+          />
+          <OakUnitListItem
+            title={
+              "'The Three Billy Goats Gruff': reading and writing 'The Three Billy Goats Gruff': reading and writing"
+            }
+            numberOfLessons={41}
+            index={5}
+            yearGroup="Year 9"
+          />
         </OakFlex>
       );
     },
   ],
   parameters: {
     controls: {
-      include: ["title", "index", "numberOfLessons", "disabled", "unavailable"],
+      include: [
+        "title",
+        "index",
+        "numberOfLessons",
+        "disabled",
+        "unavailable",
+        "isLegacy",
+      ],
     },
   },
 };
