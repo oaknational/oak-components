@@ -3,6 +3,17 @@
 exports[`OakInfo matches snapshot 1`] = `
 [
   .c0 {
+  display: none;
+  font-family: Lexend,sans-serif;
+}
+
+<div
+    className="c0"
+    id="info-tooltip"
+  >
+    The answer is right in front of your eyes
+  </div>,
+  .c0 {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
