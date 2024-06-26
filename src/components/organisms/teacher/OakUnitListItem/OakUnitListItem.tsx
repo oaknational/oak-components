@@ -16,6 +16,10 @@ const LessonDetailsWrapper = styled(OakFlex)`
   @media (max-width: 768px) {
     min-width: 100%;
   }
+
+  @media (max-width: 320px) {
+    flex-direction: column;
+  }
 `;
 
 const StyledUnitListItem = styled(OakFlex)<{ $disabled?: boolean }>`
@@ -147,13 +151,13 @@ const UnstyledComponent = <C extends ElementType = "a">(
             </OakP>
           </OakFlex>
           <LessonDetailsWrapper
-            $alignItems={"center"}
+            $alignItems={["center"]}
             $minWidth={"all-spacing-13"}
             $width={["100%", "auto"]}
             $justifyContent={"space-between"}
             $whiteSpace={"nowrap"}
           >
-            <OakFlex $justifyContent={"flex-end"}>
+            <OakFlex $justifyContent={["flex-start", "flex-end"]}>
               <OakP
                 $font={"heading-light-7"}
                 $color={

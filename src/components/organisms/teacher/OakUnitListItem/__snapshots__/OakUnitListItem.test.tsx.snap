@@ -125,10 +125,10 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 .c19 {
@@ -260,12 +260,10 @@ exports[`OakUnitListItem matches snapshot 1`] = `
 .c21 {
   -webkit-text-decoration: none;
   text-decoration: none;
-  margin-left: 16px;
 }
 
 .c16 {
   min-width: 260px;
-  margin-left: 16px;
 }
 
 .c3 {
@@ -314,6 +312,15 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   }
 }
 
+@media (min-width:750px) {
+  .c17 {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
 @media (hover:hover) {
   .c20:hover,
   .c20:visited:hover {
@@ -324,6 +331,20 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   .c20:visited:hover .c25 {
     -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
     filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  }
+}
+
+@media (max-width:768px) {
+  .c16 {
+    min-width: 100%;
+  }
+}
+
+@media (max-width:320px) {
+  .c16 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 
