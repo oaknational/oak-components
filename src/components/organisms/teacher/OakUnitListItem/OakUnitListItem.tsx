@@ -138,7 +138,7 @@ const UnstyledComponent = <C extends ElementType = "a">(
           $width={"100%"}
           $height={"100%"}
           $justifyContent={"space-between"}
-          $alignItems={"center"}
+          $alignItems={"left"}
           $flexDirection={["column", "row"]}
           $pa={["inner-padding-l"]}
           $gap={"space-between-s"}
