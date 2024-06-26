@@ -8,6 +8,12 @@ import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 
 const StyledLessonLink = styled(OakSecondaryLink)`
   text-decoration: none;
+  margin-left: 16px;
+`;
+
+const LessonDetailsWrapper = styled(OakFlex)`
+  min-width: 260px;
+  margin-left: 16px;
 `;
 
 const StyledUnitListItem = styled(OakFlex)<{ $disabled?: boolean }>`
@@ -28,6 +34,9 @@ const StyledUnitListItem = styled(OakFlex)<{ $disabled?: boolean }>`
       /* Don't apply hover styles on touch devices */
       @media (hover: hover) {
     &:hover {
+      ${StyledOakIndexBox} {
+        background: ${parseColor("lavender110")};
+      }
       background: ${parseColor("bg-decorative3-subdued")};
     }
   }
@@ -45,6 +54,13 @@ const StyledUnitListItem = styled(OakFlex)<{ $disabled?: boolean }>`
 const StyledOakIndexBox = styled(OakFlex)`
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
+  animation-timing-function: ease-out;
+  transition-duration: 300ms;
+  @media (hover: hover) {
+    &:hover {
+      background: ${parseColor("lavender110")};
+    }
+  }
 `;
 
 export type OakUnitListItemProps<C extends ElementType> = {
@@ -102,7 +118,6 @@ const UnstyledComponent = <C extends ElementType = "a">(
           $minWidth={"all-spacing-11"}
           $justifyContent={"center"}
           $alignItems={"center"}
-          $minHeight={["all-spacing-17", "all-spacing-13"]}
         >
           <OakHeading
             tag="h3"
@@ -121,10 +136,7 @@ const UnstyledComponent = <C extends ElementType = "a">(
           $pa={["inner-padding-l"]}
           $gap={"space-between-s"}
         >
-          <OakFlex
-            $alignItems={"center"}
-            $maxWidth={["100%", "all-spacing-21", "all-spacing-21"]}
-          >
+          <OakFlex $alignItems={["center", "left"]} $maxWidth={["100%"]}>
             <OakP
               $font={"heading-7"}
               $color={disabledOrUnavailable ? "text-disabled" : "text-primary"}
@@ -132,10 +144,11 @@ const UnstyledComponent = <C extends ElementType = "a">(
               {props.title}
             </OakP>
           </OakFlex>
-          <OakFlex
+          <LessonDetailsWrapper
             $alignItems={"center"}
+            $minWidth={"all-spacing-13"}
             $width={["100%", "auto"]}
-            $gap={["space-between-s", "space-between-xxl"]}
+            $justifyContent={"space-between"}
             $whiteSpace={"nowrap"}
           >
             <OakFlex $justifyContent={"flex-end"}>
@@ -148,21 +161,23 @@ const UnstyledComponent = <C extends ElementType = "a">(
                 {props.yearGroup}
               </OakP>
             </OakFlex>
-            <StyledLessonLink
-              isTrailingIcon
-              iconName="chevron-right"
-              disabled={disabledOrUnavailable}
-            >
-              <OakSpan
-                $font={"heading-light-7"}
-                $color={
-                  disabledOrUnavailable ? "text-disabled" : "text-primary"
-                }
+            <OakFlex>
+              <StyledLessonLink
+                isTrailingIcon
+                iconName="chevron-right"
+                disabled={disabledOrUnavailable}
               >
-                {numberOfLessons} Lessons
-              </OakSpan>
-            </StyledLessonLink>
-          </OakFlex>
+                <OakSpan
+                  $font={"heading-light-7"}
+                  $color={
+                    disabledOrUnavailable ? "text-disabled" : "text-primary"
+                  }
+                >
+                  {numberOfLessons} Lessons
+                </OakSpan>
+              </StyledLessonLink>
+            </OakFlex>
+          </LessonDetailsWrapper>
         </OakFlex>
       </StyledUnitListItem>
     </OakBox>

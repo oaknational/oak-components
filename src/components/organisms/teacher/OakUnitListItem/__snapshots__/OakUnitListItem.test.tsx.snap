@@ -12,32 +12,32 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c4 {
+.c5 {
   min-width: 4rem;
-  min-height: 10rem;
   background: #a0b6f2;
   font-family: Lexend,sans-serif;
 }
 
-.c8 {
+.c9 {
   width: 100%;
   height: 100%;
   padding: 1.25rem;
   font-family: Lexend,sans-serif;
 }
 
-.c10 {
+.c11 {
   max-width: 100%;
   font-family: Lexend,sans-serif;
 }
 
-.c12 {
+.c14 {
   width: 100%;
+  min-width: 5rem;
   font-family: Lexend,sans-serif;
   white-space: nowrap;
 }
 
-.c20 {
+.c24 {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -57,7 +57,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   align-items: center;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -75,7 +75,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   align-self: stretch;
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -94,7 +94,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   gap: 1rem;
 }
 
-.c13 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -103,10 +103,24 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 1rem;
 }
 
-.c14 {
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -117,11 +131,18 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   justify-content: flex-end;
 }
 
-.c18 {
+.c19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c22 {
   font-family: Lexend,sans-serif;
 }
 
-.c19 {
+.c23 {
   color: #222222;
   font-family: Lexend,sans-serif;
   font-weight: 400;
@@ -133,11 +154,11 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c23 {
+.c27 {
   object-fit: contain;
 }
 
-.c7 {
+.c8 {
   font-family: Lexend,sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
@@ -149,7 +170,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   color: #222222;
 }
 
-.c11 {
+.c13 {
   font-family: Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -161,7 +182,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   color: #222222;
 }
 
-.c15 {
+.c18 {
   font-family: Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -173,12 +194,12 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   color: #222222;
 }
 
-.c22 {
+.c26 {
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.c16 {
+.c20 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -204,41 +225,47 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   color: #222222;
 }
 
-.c16 .c21 {
+.c20 .c25 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
 }
 
-.c16:focus-visible {
+.c20:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c16:visited {
+.c20:visited {
   color: #575757;
 }
 
-.c16:active {
+.c20:active {
   color: #222222;
 }
 
-.c16:active .c21 {
+.c20:active .c25 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
 }
 
-.c16[disabled] {
+.c20[disabled] {
   cursor: not-allowed;
   color: #808080;
 }
 
-.c16[disabled] .c21 {
+.c20[disabled] .c25 {
   -webkit-filter: invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%);
   filter: invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%);
 }
 
-.c17 {
+.c21 {
   -webkit-text-decoration: none;
   text-decoration: none;
+  margin-left: 16px;
+}
+
+.c16 {
+  min-width: 260px;
+  margin-left: 16px;
 }
 
 .c3 {
@@ -255,37 +282,23 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c6 {
+.c7 {
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
 }
 
 @media (min-width:750px) {
-  .c4 {
-    min-height: 5rem;
-  }
-}
-
-@media (min-width:750px) {
-  .c10 {
-    max-width: 30rem;
-  }
-}
-
-@media (min-width:1280px) {
-  .c10 {
-    max-width: 30rem;
-  }
-}
-
-@media (min-width:750px) {
-  .c12 {
+  .c14 {
     width: auto;
   }
 }
 
 @media (min-width:750px) {
-  .c9 {
+  .c10 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -293,19 +306,22 @@ exports[`OakUnitListItem matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c13 {
-    gap: 4.5rem;
+  .c12 {
+    -webkit-align-items: left;
+    -webkit-box-align: left;
+    -ms-flex-align: left;
+    align-items: left;
   }
 }
 
 @media (hover:hover) {
-  .c16:hover,
-  .c16:visited:hover {
+  .c20:hover,
+  .c20:visited:hover {
     color: #222222;
   }
 
-  .c16:hover .c21,
-  .c16:visited:hover .c21 {
+  .c20:hover .c25,
+  .c20:visited:hover .c25 {
     -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
     filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   }
@@ -314,6 +330,16 @@ exports[`OakUnitListItem matches snapshot 1`] = `
 @media (hover:hover) {
   .c3:hover {
     background: #c6d1ef;
+  }
+
+  .c3:hover .c4 {
+    background: #7c9aec;
+  }
+}
+
+@media (hover:hover) {
+  .c7:hover {
+    background: #7c9aec;
   }
 }
 
@@ -326,77 +352,81 @@ exports[`OakUnitListItem matches snapshot 1`] = `
       title="Lesson 1"
     >
       <div
-        className="c4 c5 c6"
+        className="c4 c5 c6 c7"
       >
         <h3
-          className="c7"
+          className="c8"
         >
           1
         </h3>
       </div>
       <div
-        className="c8 c9"
+        className="c9 c10"
       >
         <div
-          className="c10 c2"
+          className="c11 c12"
         >
           <p
-            className="c11"
+            className="c13"
           >
             Lesson 1
           </p>
         </div>
         <div
-          className="c12 c13"
+          className="c14 c15 c16"
         >
           <div
-            className="c0 c14"
+            className="c0 c17"
           >
             <p
-              className="c15"
+              className="c18"
             />
           </div>
-          <a
-            className="c16 c17"
+          <div
+            className="c0 c19"
           >
-            <span
-              className="c18"
+            <a
+              className="c20 c21"
             >
               <span
-                className="c19"
+                className="c22"
               >
-                 Lessons
+                <span
+                  className="c23"
+                >
+                   Lessons
+                </span>
               </span>
-            </span>
-            <div
-              className="c20 c21 c22"
-            >
-              <img
-                alt="chevron-right"
-                className="c23"
-                data-nimg="fill"
-                decoding="async"
-                loading="lazy"
-                onError={[Function]}
-                onLoad={[Function]}
-                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
-                style={
-                  {
-                    "bottom": 0,
-                    "color": "transparent",
-                    "height": "100%",
-                    "left": 0,
-                    "objectFit": undefined,
-                    "objectPosition": undefined,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                    "width": "100%",
+              <div
+                className="c24 c25 c26"
+              >
+                <img
+                  alt="chevron-right"
+                  className="c27"
+                  data-nimg="fill"
+                  decoding="async"
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
+                  style={
+                    {
+                      "bottom": 0,
+                      "color": "transparent",
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": undefined,
+                      "objectPosition": undefined,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                      "width": "100%",
+                    }
                   }
-                }
-              />
-            </div>
-          </a>
+                />
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </a>
