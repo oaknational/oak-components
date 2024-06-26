@@ -13,11 +13,11 @@ const StyledLessonLink = styled(OakSecondaryLink)`
 const LessonDetailsWrapper = styled(OakFlex)`
   min-width: 260px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 650px) {
     min-width: 100%;
   }
 
-  @media (max-width: 320px) {
+  @media (max-width: 370px) {
     flex-direction: column;
     align-items: flex-start;
   }
