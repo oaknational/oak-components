@@ -8,12 +8,14 @@ import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 
 const StyledLessonLink = styled(OakSecondaryLink)`
   text-decoration: none;
-  margin-left: 16px;
 `;
 
 const LessonDetailsWrapper = styled(OakFlex)`
   min-width: 260px;
-  margin-left: 16px;
+
+  @media (max-width: 768px) {
+    min-width: 100%;
+  }
 `;
 
 const StyledUnitListItem = styled(OakFlex)<{ $disabled?: boolean }>`
