@@ -143,7 +143,7 @@ const UnstyledComponent = <C extends ElementType = "a">(
           $pa={["inner-padding-l"]}
           $gap={"space-between-s"}
         >
-          <OakFlex $alignItems={["center", "left"]} $maxWidth={["100%"]}>
+          <OakFlex $alignItems={["center"]} $maxWidth={["100%"]}>
             <OakP
               $font={"heading-7"}
               $color={disabledOrUnavailable ? "text-disabled" : "text-primary"}
