@@ -19,6 +19,7 @@ const LessonDetailsWrapper = styled(OakFlex)`
 
   @media (max-width: 320px) {
     flex-direction: column;
+    align-items: flex-start;
   }
 `;
 
