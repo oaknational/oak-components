@@ -12,6 +12,8 @@ This library is suitable for use in an app using React 18 and Next.js 13.5+
 
 You can install it using `npm i @oaknational/oak-components` or any other package manager that supports the NPM registry.
 
+👉 You'll need two environment variables to enable icons `NEXT_PUBLIC_OAK_ASSETS_HOST` and `NEXT_PUBLIC_OAK_ASSETS_PATH`. Values for these can be obtained from the `.env` config from OWA or from a fellow engineer.
+
 ### Theming, global styles and fonts
 
 For components to be styled correctly they will need access to a theme, some global styles and the Lexend font.
