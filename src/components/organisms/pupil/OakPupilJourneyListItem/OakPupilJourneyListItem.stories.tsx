@@ -85,5 +85,6 @@ export const Unavailable: Story = {
   args: {
     disabled: true,
     unavailable: true,
+    numberOfLessons: 14,
   },
 };

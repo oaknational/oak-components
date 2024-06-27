@@ -163,7 +163,7 @@ export const OakPupilJourneyListItem = <C extends ElementType = "a">(
           $flexGrow={1}
           $justifyContent={"flex-end"}
         >
-          {props.numberOfLessons && !props.unavailable && (
+          {props.numberOfLessons !== undefined && !props.unavailable && (
             <StyledLabel
               $font={"heading-7"}
               $color={disabledOrUnavailable ? "text-subdued" : "text-primary"}
