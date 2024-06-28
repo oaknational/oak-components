@@ -1,4 +1,4 @@
-import React, { ReactNode, useRef, useState } from "react";
+import React, { ReactNode, useEffect, useRef, useState } from "react";
 import {
   closestCenter,
   KeyboardSensor,
@@ -177,6 +177,16 @@ export const OakQuizMatch = ({
   const unmatchedDraggables = draggables.filter(
     (draggable) => !matchedDraggableIds.includes(draggable.id),
   );
+  // `createPortal` is not supported in SSR so we can only render when mounted on the client
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
   return (
     <>
       <OakDragAndDropInstructions $mb="space-between-m2" />
