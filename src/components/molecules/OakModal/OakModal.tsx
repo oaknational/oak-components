@@ -47,6 +47,9 @@ export type OakModalProps = {
    *
    * Defaults to token: `modal-dialog`
    *
+   * 🚨 This prop is intended for use by consumers that do not use
+   * the internal system of z-index tokens.
+   *
    * NB *The modal is rendered inside a portal so it will not respect the stacking context of its parent component*.
    */
   zIndex?: number;
