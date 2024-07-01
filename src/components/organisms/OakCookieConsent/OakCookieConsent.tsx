@@ -14,6 +14,9 @@ export type OakCookieConsentProps = Pick<
   Pick<OakCookieBannerProps, "isFixed" | "innerMaxWidth"> & {
     /**
      * Optional stacking context for the entire consent UI
+     *
+     * 🚨 This prop is intended for use by consumers that do not use
+     * the internal system of z-index tokens.
      */
     zIndex?: number;
   };
