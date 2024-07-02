@@ -15,6 +15,11 @@ const childSubjects = [
   { subject: "Biology", subjectSlug: "biology" },
 ];
 
+const childSubjects2 = [
+  { subject: "Cooking & nutrition", subjectSlug: "cooking-and-nutrition" },
+  { subject: "Design & technology ", subjectSlug: "design-and-technology" },
+];
+
 function getTierSubjectValues(tier: string, childSubject?: string): void {
   // This is for James to test!
   console.log({ tier, childSubject });
@@ -26,6 +31,12 @@ const meta: Meta<typeof OakDownloadsJourneyChildSubjectTierSelector> = {
     "Components/organisms/curriculum/OakDownloadsJourneyChildSubjectTierSelector",
   component: OakDownloadsJourneyChildSubjectTierSelector,
   argTypes: {
+    keyStage: {
+      options: ["none", "primary"],
+      mapping: { none: undefined, primary: "KS1-KS2" },
+      control: { type: "select" },
+      description: "",
+    },
     tiers: {
       control: { type: "object" },
       description: "Foundation and higher as tier options",
@@ -46,11 +57,22 @@ export default meta;
 
 type Story = StoryObj<typeof OakDownloadsJourneyChildSubjectTierSelector>;
 
-export const Default: Story = {
+export const Story1: Story = {
   render: (args) => <OakDownloadsJourneyChildSubjectTierSelector {...args} />,
   args: {
+    keyStage: "KS4",
     tiers,
     childSubjects,
+    getTierSubjectValues,
+  },
+};
+
+type Story2 = StoryObj<typeof OakDownloadsJourneyChildSubjectTierSelector>;
+
+export const Story2: Story2 = {
+  render: (args) => <OakDownloadsJourneyChildSubjectTierSelector {...args} />,
+  args: {
+    childSubjects: childSubjects2,
     getTierSubjectValues,
   },
 };
