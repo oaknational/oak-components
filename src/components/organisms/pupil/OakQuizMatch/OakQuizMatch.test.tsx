@@ -116,7 +116,7 @@ describe(OakQuizMatch, () => {
       getAllByRoleWithin(getByTestId("holding-pen"), "option").map(
         (item) => item.textContent,
       ),
-    ).toEqual(["Question mark", "Exclamation mark"]);
+    ).toEqual(["Exclamation mark", "Question mark"]);
     // The first slot should now contain the second option
     expect(getByRoleWithin(firstSlot, "option").textContent).toEqual(
       "Full stop",
@@ -134,7 +134,7 @@ describe(OakQuizMatch, () => {
       getAllByRoleWithin(getByTestId("holding-pen"), "option").map(
         (item) => item.textContent,
       ),
-    ).toEqual(["Question mark", "Full stop", "Exclamation mark"]);
+    ).toEqual(["Exclamation mark", "Full stop", "Question mark"]);
     expect(getByTestIdWithin(firstSlot, "label").textContent).toEqual(
       "conveys intense emotion",
     );
