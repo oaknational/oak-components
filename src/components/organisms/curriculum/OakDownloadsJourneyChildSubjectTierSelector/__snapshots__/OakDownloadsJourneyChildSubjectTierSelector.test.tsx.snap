@@ -293,7 +293,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
     <label
       className="c4"
     >
-      Choose subject for KS4 units
+      Choose subject
     </label>
     <div
       className="c0"

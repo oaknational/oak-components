@@ -18,13 +18,14 @@ export interface Subject {
 }
 
 export type OakDownloadsJourneyChildSubjectTierSelectorProps = {
+  keyStage?: string;
   /* An array of Tier objects containing `tier` and `tierSlug` */
-  tiers: Tier[];
+  tiers?: Tier[];
   /* An array of Subject objects containing `subject` and `subjectSlug` */
   childSubjects?: Subject[];
   /* Callback function which returns the selected tier and subject once the Next button is pressed. */
   getTierSubjectValues: (
-    tierSlug: string,
+    tierSlug: string | null,
     childSubjectSlug: string | null,
   ) => void;
 };
@@ -34,7 +35,7 @@ const OakDownloadsJourneyChildSubjectTierSelectorCss = css<OakDownloadsJourneyCh
 const UnstyledComponent = (
   props: OakDownloadsJourneyChildSubjectTierSelectorProps,
 ) => {
-  const { childSubjects, tiers, getTierSubjectValues } = props;
+  const { keyStage, childSubjects, tiers, getTierSubjectValues } = props;
 
   const [childSubjectSelected, setChildSubjectSelected] = useState<
     string | null
@@ -64,7 +65,9 @@ const UnstyledComponent = (
       </OakHeading>
       {childSubjects && (
         <OakRadioGroup
-          label="Choose subject for KS4 units"
+          label={
+            keyStage ? `Choose subject for ${keyStage} units` : "Choose subject"
+          }
           name="childSubjectRadio"
           onChange={handleChildSubjectSelection}
           $flexDirection={"column"}
