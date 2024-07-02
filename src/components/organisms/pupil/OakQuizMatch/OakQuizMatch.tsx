@@ -13,7 +13,6 @@ import {
   useDraggable,
   useDroppable,
 } from "@dnd-kit/core";
-import { createPortal } from "react-dom";
 import { sortableKeyboardCoordinates } from "@dnd-kit/sortable";
 
 import { InternalDroppableHoldingPen } from "../InternalDroppableHoldingPen";
@@ -26,6 +25,7 @@ import {
 } from "@/components/molecules";
 import { usePrefersReducedMotion } from "@/animation/usePrefersReducedMotion";
 import { InternalDndContext } from "@/components/atoms/InternalDndContext/InternalDndContext";
+import ClientPortal from "@/components/atoms/ClientPortal/ClientPortal";
 
 type DraggableId = string;
 type DroppableId = string;
@@ -158,9 +158,9 @@ export const OakQuizMatch = ({
   onChange,
 }: OakQuizMatchProps) => {
   const [matches, setMatches] = useState<Matches>({});
-  const draggables = useRef(
-    initialOptions.slice().sort(() => Math.random() - 0.5),
-  ).current;
+  const draggables = useRef(initialOptions.slice()).current;
+  const [shuffledDraggables, setShuffledDraggables] =
+    useState<DraggableItem[]>(draggables);
   const droppables = useRef(initialSlots).current;
   const [activeId, setActiveId] = useState<DraggableId | null>(null);
   const activeDraggable = draggables.find((item) => item.id === activeId);
@@ -173,20 +173,15 @@ export const OakQuizMatch = ({
       scrollBehavior: prefersReducedMotion ? "instant" : "smooth",
     }),
   );
-  const matchedDraggableIds = Object.values(matches).map((item) => item.id);
-  const unmatchedDraggables = draggables.filter(
-    (draggable) => !matchedDraggableIds.includes(draggable.id),
-  );
-  // `createPortal` is not supported in SSR so we can only render when mounted on the client
-  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    setIsMounted(true);
-  }, []);
+    const matchedDraggableIds = Object.values(matches).map((item) => item.id);
+    const unmatchedDraggables = draggables.filter(
+      (draggable) => !matchedDraggableIds.includes(draggable.id),
+    );
+    setShuffledDraggables(unmatchedDraggables.sort(() => Math.random() - 0.5));
+  }, [draggables, matches]);
 
-  if (!isMounted) {
-    return null;
-  }
   return (
     <>
       <OakDragAndDropInstructions $mb="space-between-m2" />
@@ -198,7 +193,7 @@ export const OakQuizMatch = ({
         accessibility={{ announcements }}
       >
         <ConnectedDroppableHoldingPen>
-          {unmatchedDraggables.map((item) => (
+          {shuffledDraggables.map((item) => (
             <ConnectedDraggable key={item.id} {...item} />
           ))}
         </ConnectedDroppableHoldingPen>
@@ -217,14 +212,13 @@ export const OakQuizMatch = ({
             />
           ))}
         </OakFlex>
-        {createPortal(
+        <ClientPortal show={true}>
           <DragOverlay dropAnimation={prefersReducedMotion ? null : undefined}>
             {activeDraggable && (
               <OakDraggable isDragging>{activeDraggable.label}</OakDraggable>
             )}
-          </DragOverlay>,
-          document.body,
-        )}
+          </DragOverlay>
+        </ClientPortal>
       </InternalDndContext>
     </>
   );
