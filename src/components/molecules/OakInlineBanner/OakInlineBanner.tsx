@@ -69,7 +69,7 @@ export const bannerTypes: BannerTypes = {
   info: {
     icon: "info",
     iconColorFilter: "black",
-    backgroundColour: "lavender50",
+    backgroundColour: "lavender30",
     borderColour: "lavender",
   },
   neutral: {
