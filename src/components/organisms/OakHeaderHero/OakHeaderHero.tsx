@@ -21,6 +21,7 @@ export type OakHeaderHeroProps = {
   heroImageAlt: string;
   authorImageAlt: string;
   breadcrumbs: ReactElement;
+  cmsImage?: ReactElement;
   children?: ReactNode;
 };
 
@@ -46,6 +47,7 @@ const UnstyledComponent = (props: OakHeaderHeroProps) => {
     authorImageSrc,
     heroImageAlt,
     authorImageAlt,
+    cmsImage,
   } = props;
   return (
     <OakBox
@@ -129,19 +131,27 @@ const UnstyledComponent = (props: OakHeaderHeroProps) => {
               "space-between-none",
             ]}
           >
-            <OakImage
-              $transform={"rotate(-2.025deg)"}
-              src={heroImageSrc}
-              width={100}
-              $minHeight={[
-                "all-spacing-19",
-                "all-spacing-20",
-                "all-spacing-20",
-              ]}
-              $minWidth={["all-spacing-19", "all-spacing-22", "all-spacing-21"]}
-              alt={heroImageAlt}
-              $zIndex={"in-front"}
-            />
+            {cmsImage ? (
+              cmsImage
+            ) : (
+              <OakImage
+                $transform={"rotate(-2.025deg)"}
+                src={heroImageSrc}
+                width={100}
+                $minHeight={[
+                  "all-spacing-19",
+                  "all-spacing-20",
+                  "all-spacing-20",
+                ]}
+                $minWidth={[
+                  "all-spacing-19",
+                  "all-spacing-22",
+                  "all-spacing-21",
+                ]}
+                alt={heroImageAlt}
+                $zIndex={"in-front"}
+              />
+            )}
             <OakFlex
               $position={"absolute"}
               $top={"all-spacing-0"}
