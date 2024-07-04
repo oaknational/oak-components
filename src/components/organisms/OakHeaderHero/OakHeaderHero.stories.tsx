@@ -4,6 +4,7 @@ import { StoryObj, Meta } from "@storybook/react";
 import { OakHeaderHero } from "./OakHeaderHero";
 
 import { OakLink } from "@/components/molecules";
+import { OakImage } from "@/components/atoms";
 
 const meta: Meta<typeof OakHeaderHero> = {
   title: "Components/organisms/OakHeaderHero",
@@ -60,5 +61,24 @@ type Story = StoryObj<typeof OakHeaderHero>;
 
 export const Default: Story = {
   render: (args) => <OakHeaderHero {...args} />,
+  args: {},
+};
+
+export const withCmsImageProp: Story = {
+  render: (args) => (
+    <OakHeaderHero
+      {...args}
+      cmsImage={
+        <OakImage
+          alt={""}
+          $transform={"rotate(-2.025deg)"}
+          $minHeight={["all-spacing-19", "all-spacing-20", "all-spacing-20"]}
+          $minWidth={["all-spacing-19", "all-spacing-22", "all-spacing-21"]}
+          $zIndex={"in-front"}
+          src={`https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/sample.jpg`}
+        />
+      }
+    />
+  ),
   args: {},
 };
