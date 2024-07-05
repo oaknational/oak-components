@@ -52,5 +52,6 @@ export const Default: Story = {
   },
   args: {
     name: "test",
+    defaultValue: "1",
   },
 };
