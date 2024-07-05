@@ -19,14 +19,7 @@ const meta: Meta<typeof OakButtonAsRadioGroup> = {
   },
   parameters: {
     controls: {
-      include: [
-        "disabled",
-        "$flexDirection",
-        "$gap",
-        "$alignItems",
-        "$font",
-        ...Object.keys(colorArgTypes),
-      ],
+      include: [],
     },
   },
 };
@@ -53,5 +46,6 @@ export const Default: Story = {
   args: {
     name: "test",
     defaultValue: "1",
+    ariaLabel: "test options",
   },
 };

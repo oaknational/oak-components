@@ -12,7 +12,7 @@ describe("OakSecondaryButtonAsRadio", () => {
   it("matches snapshot", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
-        <OakButtonAsRadioGroup name={"test"}>
+        <OakButtonAsRadioGroup name={"test"} ariaLabel="test">
           <OakSecondaryButtonAsRadio value="1">
             Display Value
           </OakSecondaryButtonAsRadio>

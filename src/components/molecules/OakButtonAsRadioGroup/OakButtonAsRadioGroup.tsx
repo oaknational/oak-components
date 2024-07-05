@@ -19,6 +19,8 @@ export const RadioContext = createContext<RadioContextType>({
 
 export type OakButtonAsRadioGroupProps = {
   label?: string;
+  ariaLabel?: string;
+  ariaLabelledby?: string;
   name: string;
   disabled?: boolean;
   children: React.ReactNode;
@@ -51,6 +53,8 @@ export const OakButtonAsRadioGroup = (props: OakButtonAsRadioGroupProps) => {
     name,
     children,
     label,
+    ariaLabel,
+    ariaLabelledby,
     onChange,
     $font = "body-1-bold",
     $gap = "space-between-s",
@@ -62,6 +66,12 @@ export const OakButtonAsRadioGroup = (props: OakButtonAsRadioGroupProps) => {
 
   const [currentValue, setValue] = useState(defaultValue);
 
+  if (!label && !ariaLabel && !ariaLabelledby) {
+    throw new Error(
+      "OakButtonAsRadioGroup: At least one of label, ariaLabel or ariaLabelledby is required",
+    );
+  }
+
   const handleValueUpdated = (newValue: string) => {
     if (value === undefined) {
       setValue(newValue);
@@ -72,7 +82,13 @@ export const OakButtonAsRadioGroup = (props: OakButtonAsRadioGroupProps) => {
   };
 
   return (
-    <OakFlex role="radiogroup" $gap={$gap} {...rest}>
+    <OakFlex
+      role="radiogroup"
+      $gap={$gap}
+      {...rest}
+      aria-label={ariaLabel}
+      aria-labelledby={ariaLabelledby}
+    >
       {label && <OakLabel $font={$font}>{label}</OakLabel>}
       <RadioContext.Provider
         value={{

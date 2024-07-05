@@ -141,6 +141,7 @@ exports[`OakSecondaryButtonAsRadio matches snapshot 1`] = `
 }
 
 <div
+  aria-label="test"
   className="c0 c1"
   role="radiogroup"
 >
