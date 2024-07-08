@@ -8,8 +8,7 @@ exports[`OakPupilJourneyList matches snapshot 1`] = `
 }
 
 .c2 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  padding-top: 1.5rem;
   font-family: Lexend,sans-serif;
 }
 
@@ -28,6 +27,7 @@ exports[`OakPupilJourneyList matches snapshot 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  gap: 1.5rem;
 }
 
 .c3 {
