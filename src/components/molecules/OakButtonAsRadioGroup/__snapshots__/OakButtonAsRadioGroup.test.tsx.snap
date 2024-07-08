@@ -155,6 +155,7 @@ exports[`OakButtonAsRadioGroup matches snapshot 1`] = `
       className="c4 yellow-shadow"
     />
     <button
+      aria-checked={false}
       className="c5 c6 internal-button"
       onClick={[Function]}
       onMouseEnter={[Function]}

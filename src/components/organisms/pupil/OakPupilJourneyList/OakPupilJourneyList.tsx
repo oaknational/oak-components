@@ -29,20 +29,14 @@ const Slots = ({
         <OakHandDrawnHR hrColor={"white"} $height={"all-spacing-1"} />
         <OakFlex $flexDirection={"column"} $gap={"space-between-m"}>
           {filterSlot && (
-            <OakFlex $background={"red50"} $justifyContent={"end"}>
-              {filterSlot}
-            </OakFlex>
+            <OakFlex $justifyContent={"end"}>{filterSlot}</OakFlex>
           )}
-          <OakFlex $background={"red50"}>{counterSlot}</OakFlex>
+          <OakFlex>{counterSlot}</OakFlex>
         </OakFlex>
       </OakFlex>
     );
   } else {
-    return (
-      <OakFlex $pt={"inner-padding-xl"} $background={"red50"}>
-        {counterSlot}
-      </OakFlex>
-    );
+    return <OakFlex $pt={"inner-padding-xl"}>{counterSlot}</OakFlex>;
   }
 };
 

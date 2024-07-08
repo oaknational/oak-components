@@ -142,6 +142,7 @@ exports[`OakSecondaryButtonAsRadio matches snapshot 1`] = `
     className="c2 yellow-shadow"
   />
   <button
+    aria-checked={false}
     className="c3 c4 internal-button"
     onClick={[Function]}
     onMouseEnter={[Function]}
