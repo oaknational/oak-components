@@ -9,6 +9,18 @@ export type OakSecondaryButtonAsRadioProps = {
   value: string;
 };
 
+/**
+ *
+ * To be used as a child of OakButtonAsRadioGroup.
+ * Highlights when the value matches the current value of the group.
+ * Changes the current value of the group when clicked.
+ *
+ * ## Usage
+ *
+ * See OakButtonAsRadioGroup.
+ *
+ */
+
 export const OakSecondaryButtonAsRadio = ({
   children,
   value,

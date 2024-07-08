@@ -41,13 +41,15 @@ export type OakButtonAsRadioGroupProps = {
 
 /**
  *
- * OakButtonAsRadioGroup allow users to select a single item from a list of mutually exclusive options (buttons) .
- * OakButtonAsRadioGroup consists of a set of OakButtonsAsRadios. Each radio includes a label and a visual selection indicator. A single radio button within the group can be selected at a time. Users may click or touch a radio button to select it, or use the Tab key to navigate to the group, the arrow keys to navigate within the group, and the Space key to select an option.
+ * A react context supporting a list of mutually exclusive options rendered as buttons.
+ *
  * ## Usage
  *
- * use the callback onChange to get the value of the selected radio button.
+ * the nested items should be OakSecondaryButtonAsRadio or implement the same logic.
+ * use the callback onChange to get the value of the clicked button.
  *
  */
+
 export const OakButtonAsRadioGroup = (props: OakButtonAsRadioGroupProps) => {
   const {
     name,
