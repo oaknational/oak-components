@@ -11,6 +11,16 @@ export type OakPupilJourneyListProps = {
   counterSlot: React.ReactNode;
 };
 
+/*
+ 
+FIXME: 
+This component falls into the swiss army knife trap. 
+Conditional logic is being used to handle a range of specific layout needs at a higher level in the tree.
+It would be better to decompose this component and recompose more specific components handling the specific layout needs.
+However, I do not want to introduce break changes in this PR.
+
+*/
+
 const Slots = ({
   titleSlot,
   filterSlot,
@@ -21,13 +31,13 @@ const Slots = ({
 >) => {
   if (titleSlot) {
     return (
-      <OakFlex
-        $flexDirection={"column"}
-        $gap={["space-between-m", "space-between-m2", "space-between-m2"]}
-      >
-        {titleSlot}
-        <OakHandDrawnHR hrColor={"white"} $height={"all-spacing-1"} />
-        <OakFlex $flexDirection={"column"} $gap={"space-between-m"}>
+      <OakFlex $flexDirection={"column"} $gap={"space-between-m"}>
+        <OakFlex $flexDirection={"column"} $gap={"space-between-m2"}>
+          {titleSlot}
+          <OakHandDrawnHR hrColor={"white"} $height={"all-spacing-1"} />
+        </OakFlex>
+
+        <OakFlex $flexDirection={"column"} $gap={"space-between-m2"}>
           {filterSlot && (
             <OakFlex $justifyContent={"end"}>{filterSlot}</OakFlex>
           )}
