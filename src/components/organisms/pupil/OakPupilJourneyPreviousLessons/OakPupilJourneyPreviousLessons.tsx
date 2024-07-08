@@ -31,7 +31,7 @@ export const OakPupilJourneyPreviousLessons = (
       $flexGrow={[null, 1]}
       $alignItems={["flex-start", "center"]}
       $gap={"space-between-m"}
-      $mt={"space-between-m2"}
+      $pt={"inner-padding-xl"}
     >
       <OakPupilJourneyListCounter
         tag="h1"
