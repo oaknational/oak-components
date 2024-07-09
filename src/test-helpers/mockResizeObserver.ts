@@ -8,8 +8,14 @@ export function installMockResizeObserver() {
   global.ResizeObserver =
     global.ResizeObserver ??
     class MockResizeObserver implements ResizeObserver {
-      disconnect() {}
-      observe() {}
-      unobserve() {}
+      disconnect() {
+        // Mock implementation of disconnect
+      }
+      observe() {
+        // Mock implementation of observe
+      }
+      unobserve() {
+        // Mock implementation of unobserve
+      }
     };
 }

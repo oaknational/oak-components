@@ -7,6 +7,8 @@ export function installMockIntersectionObserver() {
   global.IntersectionObserver =
     global.IntersectionObserver ??
     class MockIntersectionObserver implements IntersectionObserver {
+      private elements: Set<Element> = new Set();
+
       get root(): Element {
         throw new Error("Attribute not implemented.");
       }
@@ -19,8 +21,27 @@ export function installMockIntersectionObserver() {
       takeRecords(): IntersectionObserverEntry[] {
         throw new Error("Method not implemented.");
       }
-      unobserve() {}
-      observe() {}
-      disconnect() {}
+      observe(element: Element) {
+        this.elements.add(element);
+        console.log(`Observing element: ${this.describeElement(element)}`);
+      }
+      unobserve(element: Element) {
+        this.elements.delete(element);
+        console.log(`Stopped observing: ${this.describeElement(element)}}`);
+      }
+      disconnect() {
+        this.elements.clear();
+        console.log("Disconnected all observed elements.");
+      }
+      private describeElement(element: Element): string {
+        let description = element.tagName.toLowerCase();
+        if (element.id) {
+          description += "#" + element.id;
+        }
+        if (element.className) {
+          description += "." + element.className.replace(/\s+/g, ".");
+        }
+        return description;
+      }
     };
 }
