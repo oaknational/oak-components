@@ -89,7 +89,7 @@ const UnstyledComponent = (props: OakHeaderHeroProps) => {
               $justifyContent={"center"}
             >
               <OakHeading
-                tag="h2"
+                tag="h1"
                 $color={"grey80"}
                 $font={["heading-4", "heading-3"]}
                 $mb={"space-between-m"}
