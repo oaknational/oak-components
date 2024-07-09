@@ -2,6 +2,8 @@
 
 # Oak Components
 
+![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen)
+
 ## Overview
 
 This is a React Typescript components library which supports React and Next applications produced by [Oak National Academy](https://www.thenational.academy/). A Storybook for the components can be found [here](https://components.thenational.academy/) please consult 1Password for access.
@@ -112,3 +114,28 @@ Components are organised into a three tier hierarchical structure applying the f
   (eg. `SchoolInputForm`)
 
   NB. these rules are a work in progress. Modifications may be required as the library builds.
+
+## External Contributions
+
+### Security and Bug Bounty
+
+Please see our [security.txt](public/.well-known/security.txt) file.
+
+### Contributing to the Code
+
+We don't currently accept external contributions to the code base, but this is under review and we hope to find an approach the works for us and the community.
+
+## Open Source Acknowledgements
+
+As with all web projects we are dependent on open source libraries maintained by others. While it is not practical to acknowledge them all, we would nevertheless like to express our gratitude for the contributions and efforts of the OSS community. Our dependency list can be found in our [package.json](package.json) file.
+
+## License
+
+Unless stated otherwise, the codebase is released under the [MIT License][mit]. This covers both the codebase and any sample code in the documentation. Where any Oak National Academy trademarks or logos are included, these are not released under the [MIT License][mit], and should be used in line with [Oak National Academy brand guidelines][brand].
+
+Any documentation included is © [Oak National Academy][oak] and available under the terms of the [Open Government Licence v3.0][ogl], except where otherwise stated.
+
+[mit]: LICENCE
+[oak]: https://www.thenational.academy/
+[ogl]: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+[brand]: https://support.thenational.academy/using-the-oak-brand
