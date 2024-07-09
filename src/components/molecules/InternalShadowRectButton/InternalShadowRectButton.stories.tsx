@@ -10,7 +10,7 @@ import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 import { flexArgTypes } from "@/storybook-helpers/flexStyleHelpers";
 
-const controlIconNames = [null, [...oakIconNames].sort()].flat();
+const controlIconNames = [null, [...oakIconNames].sort((a, b) => a.localeCompare(b))].flat();
 
 const meta: Meta<typeof InternalShadowRectButton> = {
   component: InternalShadowRectButton,
