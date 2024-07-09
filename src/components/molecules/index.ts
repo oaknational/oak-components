@@ -28,5 +28,6 @@ export * from "./OakAccordion";
 export * from "./OakModal";
 export * from "./OakModalCenter";
 export * from "./OakCardWithHandDrawnBorder";
+export * from "./OakInlineBanner";
 export * from "./OakSecondaryButtonAsRadio";
 export * from "./OakButtonAsRadioGroup";
