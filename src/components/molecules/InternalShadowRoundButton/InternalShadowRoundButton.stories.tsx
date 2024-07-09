@@ -9,7 +9,10 @@ import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 
-const controlIconNames = [null, [...oakIconNames].sort((a, b) => a.localeCompare(b))].flat();
+const controlIconNames = [
+  null,
+  [...oakIconNames].sort((a, b) => a.localeCompare(b)),
+].flat();
 
 const meta: Meta<typeof InternalShadowRoundButton> = {
   component: InternalShadowRoundButton,
