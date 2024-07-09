@@ -547,11 +547,11 @@ exports[`OakHeaderHero matches snapshot 1`] = `
         <div
           className="c10 c11"
         >
-          <h2
+          <h1
             className="c12"
           >
             How to plan a lesson: a helpful guide for teachers
-          </h2>
+          </h1>
           <div
             className="c13 c14"
           >
