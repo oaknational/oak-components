@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakAccordion matches snapshot 1`] = `
+.c0 {
+  padding: 1rem;
+  background: #f2f2f2;
+  border: 0.063rem solid;
+  border-color: #cacaca;
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  font-family: Lexend,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c3 {
+  padding: 1rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c3:hover {
+  cursor: pointer;
+}
+
+.c6 {
+  position: relative;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  min-height: 1.5rem;
+  margin-right: 1rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c8 {
+  margin-left: 1.5rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c9 {
+  padding-left: 1rem;
+  margin-left: 1.5rem;
+  margin-top: 0.25rem;
+  font-family: Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c7 {
+  object-fit: contain;
+}
+
+.c5 {
+  font: inherit;
+  color: inherit;
+  border: none;
+  background: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: -1rem;
+  outline: none;
+}
+
+.c5:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+<div
+  className="c0"
+>
+  <h3
+    className="c1 c2"
+  >
+    <button
+      aria-expanded={true}
+      className="c3 c4 c5"
+      id="see-more"
+      onClick={[Function]}
+      type="button"
+    >
+      <div
+        className="c6"
+        style={
+          {
+            "transform": "rotate(180deg)",
+          }
+        }
+      >
+        <img
+          alt=""
+          className="c7"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+          style={
+            {
+              "bottom": 0,
+              "color": "transparent",
+              "height": "100%",
+              "left": 0,
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      See more
+    </button>
+    <div
+      className="c8 c2"
+    >
+      After
+    </div>
+  </h3>
+  <div
+    aria-labelledby="see-more"
+    className="c9"
+    hidden={false}
+    role="region"
+  >
+    Here it is
+  </div>
+</div>
+`;
