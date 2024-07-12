@@ -33,6 +33,7 @@ exports[`InternalAccordion matches snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   outline: none;
+  padding: 0;
 }
 
 <div
@@ -51,7 +52,7 @@ exports[`InternalAccordion matches snapshot 1`] = `
   </button>
   <div
     aria-labelledby="internal-accordion"
-    className="c0"
+    className="c0 "
     hidden={false}
     role="region"
   >

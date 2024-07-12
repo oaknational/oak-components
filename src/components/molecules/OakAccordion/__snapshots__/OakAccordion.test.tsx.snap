@@ -23,7 +23,6 @@ exports[`OakAccordion matches snapshot 1`] = `
 }
 
 .c3 {
-  padding: 1rem;
   font-family: Lexend,sans-serif;
 }
 
@@ -31,7 +30,7 @@ exports[`OakAccordion matches snapshot 1`] = `
   cursor: pointer;
 }
 
-.c6 {
+.c7 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -41,23 +40,13 @@ exports[`OakAccordion matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c8 {
+.c9 {
   margin-left: 1.5rem;
   font-family: Lexend,sans-serif;
 }
 
-.c9 {
-  padding-left: 1rem;
-  margin-left: 1.5rem;
-  margin-top: 0.25rem;
+.c10 {
   font-family: Lexend,sans-serif;
-  font-weight: 300;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
-  letter-spacing: -0.005rem;
 }
 
 .c2 {
@@ -72,17 +61,13 @@ exports[`OakAccordion matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
-.c7 {
+.c8 {
   object-fit: contain;
 }
 
@@ -94,29 +79,42 @@ exports[`OakAccordion matches snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: none;
+  padding: 0;
+}
+
+.c6 {
+  font: inherit;
+  color: inherit;
+  border: none;
+  background: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   margin: -1rem;
   outline: none;
 }
 
-.c5:focus-visible {
+.c6:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
 <div
   className="c0"
+  id="see-more"
 >
   <h3
     className="c1 c2"
   >
     <button
       aria-expanded={true}
-      className="c3 c4 c5"
+      className="c3 c4 c5  c6"
       id="see-more"
       onClick={[Function]}
       type="button"
     >
       <div
-        className="c6"
+        className="c7"
         style={
           {
             "transform": "rotate(180deg)",
@@ -125,7 +123,7 @@ exports[`OakAccordion matches snapshot 1`] = `
       >
         <img
           alt=""
-          className="c7"
+          className="c8"
           data-nimg="fill"
           decoding="async"
           loading="lazy"
@@ -151,14 +149,14 @@ exports[`OakAccordion matches snapshot 1`] = `
       See more
     </button>
     <div
-      className="c8 c2"
+      className="c9 c2"
     >
       After
     </div>
   </h3>
   <div
     aria-labelledby="see-more"
-    className="c9"
+    className="c10 "
     hidden={false}
     role="region"
   >

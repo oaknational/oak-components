@@ -3,6 +3,12 @@
 exports[`InternalShadowAccordion matches snapshot 1`] = `
 .c0 {
   position: relative;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   font-family: Lexend,sans-serif;
 }
 
@@ -20,7 +26,6 @@ exports[`InternalShadowAccordion matches snapshot 1`] = `
   min-width: 1.5rem;
   height: 1.5rem;
   min-height: 1.5rem;
-  margin-right: 1rem;
   font-family: Lexend,sans-serif;
 }
 
@@ -59,6 +64,7 @@ exports[`InternalShadowAccordion matches snapshot 1`] = `
   -moz-appearance: none;
   appearance: none;
   outline: none;
+  padding: 0;
 }
 
 .c12 {
@@ -83,6 +89,25 @@ exports[`InternalShadowAccordion matches snapshot 1`] = `
 .c6:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+.c1 {
+  position: relative;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Lexend,sans-serif;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .c1 .c11 {
@@ -145,7 +170,7 @@ exports[`InternalShadowAccordion matches snapshot 1`] = `
   </button>
   <div
     aria-labelledby="see-more"
-    className="c9"
+    className="c9 "
     hidden={true}
     role="region"
   >

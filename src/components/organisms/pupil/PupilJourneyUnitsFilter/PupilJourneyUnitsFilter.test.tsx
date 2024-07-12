@@ -42,7 +42,7 @@ describe("PupilJourneyUnitsFilter", () => {
     expect(tree).toMatchSnapshot();
   });
   it("renders 4 buttons with the correct text", () => {
-    const { getByText } = renderWithTheme(
+    const { getAllByText } = renderWithTheme(
       <PupilJourneyUnitsFilter
         menuItems={menuItems}
         selected={1}
@@ -51,11 +51,11 @@ describe("PupilJourneyUnitsFilter", () => {
       />,
     );
     menuItems.forEach((item) => {
-      expect(getByText(item.text)).toBeInTheDocument();
+      expect(getAllByText(item.text)[0]).toBeInTheDocument();
     });
   });
   it("renders the correct button as selected", () => {
-    const { getByText } = renderWithTheme(
+    const { getAllByText } = renderWithTheme(
       <PupilJourneyUnitsFilter
         menuItems={menuItems}
         selected={1}
@@ -63,11 +63,11 @@ describe("PupilJourneyUnitsFilter", () => {
         data-testid="test"
       />,
     );
-    expect(getByText("Biology").getAttribute("aria-checked") === "true");
+    expect(getAllByText("Biology")[0]?.getAttribute("aria-checked") === "true");
   });
   it("calls the onSelected callback when a button is clicked", () => {
     const onSelected = jest.fn();
-    const { getByText } = renderWithTheme(
+    const { getAllByText } = renderWithTheme(
       <PupilJourneyUnitsFilter
         menuItems={menuItems}
         selected={1}
@@ -75,7 +75,7 @@ describe("PupilJourneyUnitsFilter", () => {
         data-testid="test"
       />,
     );
-    getByText("Physics").click();
+    getAllByText("Physics")[0]?.click();
     expect(onSelected).toHaveBeenCalledWith({ text: "Physics", id: 3 });
   });
 });

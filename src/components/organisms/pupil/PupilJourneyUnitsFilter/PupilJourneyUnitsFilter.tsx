@@ -34,7 +34,6 @@ const UnstyledComponent = (props: PupilJourneyUnitsFilterProps) => {
       }}
       defaultValue={selected.toString()}
       $flexWrap={"wrap"}
-      {...rest}
     >
       {menuItems.map((item) => {
         return (
@@ -47,8 +46,7 @@ const UnstyledComponent = (props: PupilJourneyUnitsFilterProps) => {
   );
 
   return (
-    <>
-      {" "}
+    <OakBox {...rest}>
       <OakBox $display={["block", "none"]}>
         <OakOutlineAccordion
           id={"mobile-unit-filter-accordion"}
@@ -64,7 +62,7 @@ const UnstyledComponent = (props: PupilJourneyUnitsFilterProps) => {
         </OakOutlineAccordion>
       </OakBox>
       <OakBox $display={["none", "block"]}>{OakRadioGroup}</OakBox>
-    </>
+    </OakBox>
   );
 };
 
