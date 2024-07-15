@@ -3,7 +3,7 @@ import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
 import { ThemeProvider } from "styled-components";
 
-import { PupilJourneyUnitsFilter } from "./PupilJourneyUnitsFilter";
+import { OakPupilJourneyUnitsFilter } from "./OakPupilJourneyUnitsFilter";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { oakDefaultTheme } from "@/styles";
@@ -18,7 +18,7 @@ const menuItems = [
 describe("PupilJourneyUnitsFilter", () => {
   it("renders", () => {
     const { getByTestId } = renderWithTheme(
-      <PupilJourneyUnitsFilter
+      <OakPupilJourneyUnitsFilter
         menuItems={menuItems}
         selected={1}
         onSelected={() => null}
@@ -31,7 +31,7 @@ describe("PupilJourneyUnitsFilter", () => {
   it("matches snapshot", () => {
     const tree = create(
       <ThemeProvider theme={oakDefaultTheme}>
-        <PupilJourneyUnitsFilter
+        <OakPupilJourneyUnitsFilter
           menuItems={menuItems}
           selected={1}
           onSelected={() => null}
@@ -43,7 +43,7 @@ describe("PupilJourneyUnitsFilter", () => {
   });
   it("renders 4 buttons with the correct text", () => {
     const { getAllByText } = renderWithTheme(
-      <PupilJourneyUnitsFilter
+      <OakPupilJourneyUnitsFilter
         menuItems={menuItems}
         selected={1}
         onSelected={() => null}
@@ -56,7 +56,7 @@ describe("PupilJourneyUnitsFilter", () => {
   });
   it("renders the correct button as selected", () => {
     const { getAllByText } = renderWithTheme(
-      <PupilJourneyUnitsFilter
+      <OakPupilJourneyUnitsFilter
         menuItems={menuItems}
         selected={1}
         onSelected={() => null}
@@ -68,7 +68,7 @@ describe("PupilJourneyUnitsFilter", () => {
   it("calls the onSelected callback when a button is clicked", () => {
     const onSelected = jest.fn();
     const { getAllByText } = renderWithTheme(
-      <PupilJourneyUnitsFilter
+      <OakPupilJourneyUnitsFilter
         menuItems={menuItems}
         selected={1}
         onSelected={onSelected}

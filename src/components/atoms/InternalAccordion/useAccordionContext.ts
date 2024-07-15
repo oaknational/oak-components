@@ -1,6 +1,6 @@
 import { useContext } from "react";
 
-import { accordionContext } from "./AccordionProvider";
+import { accordionContext } from "./InternalAccordionProvider";
 
 const useAccordionContext = () => {
   const accordionValue = useContext(accordionContext);

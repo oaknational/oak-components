@@ -10,7 +10,7 @@ import {
   InternalAccordionContent,
 } from "@/components/atoms/InternalAccordion";
 import useAccordionContext from "@/components/atoms/InternalAccordion/useAccordionContext";
-import AccordionProvider from "@/components/atoms/InternalAccordion/AccordionProvider";
+import InternalAccordionProvider from "@/components/atoms/InternalAccordion/InternalAccordionProvider";
 
 export type OakAccordionProps = {
   /**
@@ -106,8 +106,8 @@ const Accordion = ({
 export const OakAccordion = (props: OakAccordionProps) => {
   const { initialOpen = false, ...rest } = props;
   return (
-    <AccordionProvider isInitialOpen={initialOpen}>
+    <InternalAccordionProvider isInitialOpen={initialOpen}>
       <Accordion {...rest} />
-    </AccordionProvider>
+    </InternalAccordionProvider>
   );
 };

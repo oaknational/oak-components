@@ -1,11 +1,11 @@
 import React from "react";
 import { StoryObj, Meta } from "@storybook/react";
 
-import { PupilJourneyUnitsFilter } from "./PupilJourneyUnitsFilter";
+import { OakPupilJourneyUnitsFilter } from "./OakPupilJourneyUnitsFilter";
 
-const meta: Meta<typeof PupilJourneyUnitsFilter> = {
-  title: "Components/organisms/pupil/PupilJourneyUnitsFilter",
-  component: PupilJourneyUnitsFilter,
+const meta: Meta<typeof OakPupilJourneyUnitsFilter> = {
+  title: "Components/organisms/pupil/OakPupilJourneyUnitsFilter",
+  component: OakPupilJourneyUnitsFilter,
   tags: ["autodocs"],
   argTypes: {
     menuItems: {
@@ -34,10 +34,10 @@ const meta: Meta<typeof PupilJourneyUnitsFilter> = {
 
 export default meta;
 
-type Story = StoryObj<typeof PupilJourneyUnitsFilter>;
+type Story = StoryObj<typeof OakPupilJourneyUnitsFilter>;
 
 export const Default: Story = {
-  render: (args) => <PupilJourneyUnitsFilter {...args} />,
+  render: (args) => <OakPupilJourneyUnitsFilter {...args} />,
   args: {
     menuItems: [
       { text: "All", id: 0 },

@@ -13,19 +13,19 @@ export type menuItem = {
   id: number;
 };
 
-export type PupilJourneyUnitsFilterProps = {
+export type OakPupilJourneyUnitsFilterProps = {
   menuItems: menuItem[];
   selected: number;
   onSelected: (arg0: menuItem) => void;
 };
 
-const UnstyledComponent = (props: PupilJourneyUnitsFilterProps) => {
+const UnstyledComponent = (props: OakPupilJourneyUnitsFilterProps) => {
   const { menuItems, selected, onSelected, ...rest } = props;
 
   const OakRadioGroup = (
     <OakButtonAsRadioGroup
-      name="PupilJourneyUnitsFilter"
-      ariaLabel="PupilJourneyUnitsFilter"
+      name="OakPupilJourneyUnitsFilter"
+      ariaLabel="OakPupilJourneyUnitsFilter"
       onChange={(value) => {
         const selectedItem = menuItems.find(
           (item) => item.id.toString() === value,
@@ -68,7 +68,7 @@ const UnstyledComponent = (props: PupilJourneyUnitsFilterProps) => {
 
 /**
  *
- * PupilJourneyUnitsFilter component is a radio group of buttons that can be used to filter pupil journey units
+ * OakPupilJourneyUnitsFilter component is a radio group of buttons that can be used to filter pupil journey units
  * add the menu items as an array of objects with text and id properties and provide a selected item id, and a callback function to handle the selection event.
  * The following callbacks are available for tracking focus events:
  *
@@ -76,4 +76,4 @@ const UnstyledComponent = (props: PupilJourneyUnitsFilterProps) => {
  * onSelected: Callback when a menu item is selected, takes the selected item as an argument
  *
  */
-export const PupilJourneyUnitsFilter = styled(UnstyledComponent)``;
+export const OakPupilJourneyUnitsFilter = styled(UnstyledComponent)``;

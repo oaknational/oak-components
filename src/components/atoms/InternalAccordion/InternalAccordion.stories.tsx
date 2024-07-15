@@ -6,7 +6,7 @@ import {
   InternalAccordionContent,
   InternalAccordion,
 } from "./InternalAccordion";
-import { AccordionProvider } from "./AccordionProvider";
+import { InternalAccordionProvider } from "./InternalAccordionProvider";
 
 const meta: Meta<typeof InternalAccordion> = {
   title: "Components/atoms/InternalAccordion",
@@ -26,7 +26,7 @@ type Story = StoryObj<typeof InternalAccordion>;
 
 export const Default: Story = {
   render: (args) => (
-    <AccordionProvider isInitialOpen={true}>
+    <InternalAccordionProvider isInitialOpen={true}>
       <InternalAccordion {...args}>
         <InternalAccordionButton {...args}>
           accordion button
@@ -35,7 +35,7 @@ export const Default: Story = {
           accordion content
         </InternalAccordionContent>
       </InternalAccordion>
-    </AccordionProvider>
+    </InternalAccordionProvider>
   ),
   args: {
     id: "generic-accordion",

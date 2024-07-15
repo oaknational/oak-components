@@ -8,7 +8,7 @@ type AccordionContext = {
 
 export const accordionContext = createContext<AccordionContext | null>(null);
 
-export const AccordionProvider: FC<{
+export const InternalAccordionProvider: FC<{
   isInitialOpen: boolean;
   children?: React.ReactNode;
 }> = ({ children, isInitialOpen }) => {
@@ -27,4 +27,4 @@ export const AccordionProvider: FC<{
   );
 };
 
-export default AccordionProvider;
+export default InternalAccordionProvider;

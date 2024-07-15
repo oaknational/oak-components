@@ -10,7 +10,7 @@ import {
   InternalAccordionContent,
 } from "@/components/atoms/InternalAccordion";
 import useAccordionContext from "@/components/atoms/InternalAccordion/useAccordionContext";
-import AccordionProvider from "@/components/atoms/InternalAccordion/AccordionProvider";
+import InternalAccordionProvider from "@/components/atoms/InternalAccordion/InternalAccordionProvider";
 import { InternalStyledSvgProps } from "@/components/atoms/InternalStyledSvg";
 import { FlexStyleProps, flexStyle } from "@/styles/utils/flexStyle";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
@@ -127,8 +127,8 @@ export const InternalShadowAccordion = (
   props: InternalShadowAccordionProps,
 ) => {
   return (
-    <AccordionProvider isInitialOpen={false}>
+    <InternalAccordionProvider isInitialOpen={false}>
       <Accordion {...props} />
-    </AccordionProvider>
+    </InternalAccordionProvider>
   );
 };

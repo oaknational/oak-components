@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { HandDrawnFocusUnderlineSvg } from "./HandDrawnFocusUnderlineSvg";
+import { HandDrawnFocusUnderlineSvg } from "./SubHandDrawnFocusUnderline";
 
 import { OakFlex } from "@/components/atoms";
 import { InternalStyledSvgProps } from "@/components/atoms/InternalStyledSvg";

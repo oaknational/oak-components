@@ -7,7 +7,7 @@ import {
   InternalAccordionButton,
   InternalAccordionContent,
 } from "./InternalAccordion";
-import AccordionProvider from "./AccordionProvider";
+import AccordionProvider from "./InternalAccordionProvider";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
