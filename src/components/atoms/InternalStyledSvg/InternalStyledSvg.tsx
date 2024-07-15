@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { OakBorderWidthToken, OakCombinedColorToken } from "@/styles";
 import {
@@ -14,15 +14,19 @@ export type InternalStyledSvgProps = {
   $strokeWidth?: ResponsiveValues<OakBorderWidthToken>;
 };
 
-/**
- * A styled SVG element with props to apply design tokens to the fill and stroke.
- */
-export const InternalStyledSvg = styled.svg<InternalStyledSvgProps>`
+export const colorFillStyle = css<InternalStyledSvgProps>`
   ${responsiveStyle<InternalStyledSvgProps, OakCombinedColorToken>(
     "fill",
     (props) => props.$fill,
     parseColor,
   )}
+`;
+
+/**
+ * A styled SVG element with props to apply design tokens to the fill and stroke.
+ */
+export const InternalStyledSvg = styled.svg<InternalStyledSvgProps>`
+  ${colorFillStyle}
   ${responsiveStyle<InternalStyledSvgProps, OakCombinedColorToken>(
     "stroke",
     (props) => props.$stroke,
