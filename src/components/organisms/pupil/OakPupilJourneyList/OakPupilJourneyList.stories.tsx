@@ -12,6 +12,7 @@ import {
   OakButtonAsRadioGroup,
   OakSecondaryButtonAsRadio,
 } from "@/components/molecules";
+import { OakFlex } from "@/components/atoms/OakFlex";
 
 const meta: Meta<typeof OakPupilJourneyList> = {
   component: OakPupilJourneyList,
@@ -101,12 +102,16 @@ export const WithFilter: Story = {
         />
       }
       filterSlot={
-        <OakButtonAsRadioGroup ariaLabelledby="test" name="test">
-          <OakSecondaryButtonAsRadio value="all">All</OakSecondaryButtonAsRadio>
-          <OakSecondaryButtonAsRadio value="1">
-            Option 1
-          </OakSecondaryButtonAsRadio>
-        </OakButtonAsRadioGroup>
+        <OakFlex $justifyContent={"end"}>
+          <OakButtonAsRadioGroup ariaLabelledby="test" name="test">
+            <OakSecondaryButtonAsRadio value="all">
+              All
+            </OakSecondaryButtonAsRadio>
+            <OakSecondaryButtonAsRadio value="1">
+              Option 1
+            </OakSecondaryButtonAsRadio>
+          </OakButtonAsRadioGroup>
+        </OakFlex>
       }
     >
       <OakPupilJourneyListItem title="Lesson 1" index={1} href="#" />

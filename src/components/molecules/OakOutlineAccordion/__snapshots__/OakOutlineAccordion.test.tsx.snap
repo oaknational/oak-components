@@ -3,10 +3,6 @@
 exports[`OakOutlineAccordion matches snapshot 1`] = `
 .c0 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   font-family: Lexend,sans-serif;
 }
 
@@ -137,12 +133,9 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   visibility: visible;
 }
 
-.c6 .c10:active ~ .c14 {
-  visibility: visible;
-}
-
 .c4 {
   height: 0.125rem;
+  width: 100%;
   bottom: 0.125rem;
 }
 

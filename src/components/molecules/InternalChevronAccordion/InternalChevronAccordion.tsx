@@ -16,7 +16,7 @@ import { FlexStyleProps, flexStyle } from "@/styles/utils/flexStyle";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { ColorStyleProps } from "@/styles/utils/colorStyle";
 
-export type InternalShadowAccordionProps = {
+export type InternalChevronAccordionProps = {
   /**
    * The header of the accordion
    */
@@ -55,18 +55,14 @@ export const StyledAccordionButton = styled(
   }
 `;
 
-export const StyledAccordion = styled(InternalAccordion)<
-  OakBoxProps & FlexStyleProps
->`
+const StyledAccordion = styled(InternalAccordion)<FlexStyleProps>`
   ${StyledAccordionUnderline} {
     visibility: hidden;
   }
   ${StyledAccordionButton}:focus-visible ~ ${StyledAccordionUnderline} {
     visibility: visible;
   }
-  ${StyledAccordionButton}:active ~ ${StyledAccordionUnderline} {
-    visibility: visible;
-  }
+
   ${oakBoxCss}
   ${flexStyle}
 `;
@@ -80,7 +76,7 @@ const Accordion = ({
   children,
   id,
   ...styleProps
-}: InternalShadowAccordionProps) => {
+}: InternalChevronAccordionProps) => {
   const { isOpen } = useAccordionContext();
 
   return (
@@ -123,8 +119,8 @@ const Accordion = ({
  * other flex, box and color style proops can be passed to the accordion as props
  */
 
-export const InternalShadowAccordion = (
-  props: InternalShadowAccordionProps,
+export const InternalChevronAccordion = (
+  props: InternalChevronAccordionProps,
 ) => {
   return (
     <InternalAccordionProvider isInitialOpen={false}>

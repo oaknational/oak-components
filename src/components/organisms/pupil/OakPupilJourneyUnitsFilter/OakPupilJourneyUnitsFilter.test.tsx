@@ -17,15 +17,14 @@ const menuItems = [
 
 describe("PupilJourneyUnitsFilter", () => {
   it("renders", () => {
-    const { getByTestId } = renderWithTheme(
+    const { getAllByLabelText } = renderWithTheme(
       <OakPupilJourneyUnitsFilter
         menuItems={menuItems}
         selected={"all"}
         onSelected={() => null}
-        data-testid="test"
       />,
     );
-    expect(getByTestId("test")).toBeInTheDocument();
+    expect(getAllByLabelText("OakPupilJourneyUnitsFilter")).toHaveLength(2);
   });
 
   it("matches snapshot", () => {

@@ -1,11 +1,10 @@
 import React from "react";
-import styled from "styled-components";
 
 import { OakButtonAsRadioGroup } from "@/components/molecules/OakButtonAsRadioGroup";
 import { OakSecondaryButtonAsRadio } from "@/components/molecules/OakSecondaryButtonAsRadio";
 import { OakOutlineAccordion } from "@/components/molecules/OakOutlineAccordion";
-import { OakBox } from "@/components/atoms/OakBox";
 import { OakHeading } from "@/components/atoms/OakHeading";
+import { OakFlex } from "@/components/atoms";
 
 type MenuItem = {
   displayText: string;
@@ -18,8 +17,21 @@ export type OakPupilJourneyUnitsFilterProps = {
   onSelected: (arg0: MenuItem) => void;
 };
 
-const UnstyledComponent = (props: OakPupilJourneyUnitsFilterProps) => {
-  const { menuItems, selected, onSelected, ...rest } = props;
+/**
+ *
+ * OakPupilJourneyUnitsFilter component is a radio group of buttons that can be used to filter pupil journey units
+ * add the menu items as an array of objects with text and id properties and provide a selected item id, and a callback function to handle the selection event.
+ * The following callbacks are available for tracking focus events:
+ *
+ * ### Callbacks
+ * onSelected: Callback when a menu item is selected, takes the selected item as an argument
+ *
+ */
+
+export const OakPupilJourneyUnitsFilter = (
+  props: OakPupilJourneyUnitsFilterProps,
+) => {
+  const { menuItems, selected, onSelected } = props;
 
   const OakRadioGroup = (
     <OakButtonAsRadioGroup
@@ -32,7 +44,8 @@ const UnstyledComponent = (props: OakPupilJourneyUnitsFilterProps) => {
         }
         onSelected(selectedItem);
       }}
-      defaultValue={selected.toString()}
+      defaultValue={selected}
+      $justifyContent={["start", "start", "end"]}
       $flexWrap={"wrap"}
     >
       {menuItems.map((item, i) => {
@@ -49,8 +62,8 @@ const UnstyledComponent = (props: OakPupilJourneyUnitsFilterProps) => {
   );
 
   return (
-    <OakBox {...rest}>
-      <OakBox $display={["block", "none"]}>
+    <>
+      <OakFlex $display={["block", "none"]}>
         <OakOutlineAccordion
           id={"mobile-unit-filter-accordion"}
           header={
@@ -63,20 +76,10 @@ const UnstyledComponent = (props: OakPupilJourneyUnitsFilterProps) => {
         >
           {OakRadioGroup}
         </OakOutlineAccordion>
-      </OakBox>
-      <OakBox $display={["none", "block"]}>{OakRadioGroup}</OakBox>
-    </OakBox>
+      </OakFlex>
+      <OakFlex $display={["none", "block"]} $flexGrow={1}>
+        {OakRadioGroup}
+      </OakFlex>
+    </>
   );
 };
-
-/**
- *
- * OakPupilJourneyUnitsFilter component is a radio group of buttons that can be used to filter pupil journey units
- * add the menu items as an array of objects with text and id properties and provide a selected item id, and a callback function to handle the selection event.
- * The following callbacks are available for tracking focus events:
- *
- * ### Callbacks
- * onSelected: Callback when a menu item is selected, takes the selected item as an argument
- *
- */
-export const OakPupilJourneyUnitsFilter = styled(UnstyledComponent)``;

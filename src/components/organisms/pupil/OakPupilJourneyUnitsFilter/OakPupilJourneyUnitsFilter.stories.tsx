@@ -40,12 +40,12 @@ export const Default: Story = {
   render: (args) => <OakPupilJourneyUnitsFilter {...args} />,
   args: {
     menuItems: [
-      { text: "All", id: 0 },
-      { text: "Biology", id: 1 },
-      { text: "Chemistry", id: 2 },
-      { text: "Physics", id: 3 },
+      { displayText: "All", value: "all" },
+      { displayText: "Biology", value: "biology" },
+      { displayText: "Chemistry", value: "chemistry" },
+      { displayText: "Physics", value: "physics" },
     ],
-    selected: 2,
-    onSelected: (menuItemId: number) => console.log(menuItemId),
+    selected: "all",
+    onSelected: (menuItem) => console.log(menuItem.value),
   },
 };
