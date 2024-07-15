@@ -2,6 +2,7 @@ import React from "react";
 import { StoryObj, Meta } from "@storybook/react";
 
 import { OakPupilJourneyUnitsFilter } from "./OakPupilJourneyUnitsFilter";
+import { OakFlex } from "@/components/atoms";
 
 const meta: Meta<typeof OakPupilJourneyUnitsFilter> = {
   title: "Components/organisms/pupil/OakPupilJourneyUnitsFilter",
@@ -37,7 +38,11 @@ export default meta;
 type Story = StoryObj<typeof OakPupilJourneyUnitsFilter>;
 
 export const Default: Story = {
-  render: (args) => <OakPupilJourneyUnitsFilter {...args} />,
+  render: (args) => (
+    <OakFlex>
+      <OakPupilJourneyUnitsFilter {...args} />
+    </OakFlex>
+  ),
   args: {
     menuItems: [
       { displayText: "All", value: "all" },

@@ -63,7 +63,7 @@ export const OakPupilJourneyUnitsFilter = (
 
   return (
     <>
-      <OakFlex $display={["block", "none"]}>
+      <OakFlex $display={["block", "none"]} $flexGrow={1}>
         <OakOutlineAccordion
           id={"mobile-unit-filter-accordion"}
           header={
