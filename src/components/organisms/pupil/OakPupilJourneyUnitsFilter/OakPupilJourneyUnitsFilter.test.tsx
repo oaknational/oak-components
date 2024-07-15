@@ -1,6 +1,6 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
+import { act, create } from "react-test-renderer";
 import { ThemeProvider } from "styled-components";
 
 import { OakPupilJourneyUnitsFilter } from "./OakPupilJourneyUnitsFilter";
@@ -20,7 +20,7 @@ describe("PupilJourneyUnitsFilter", () => {
     const { getByTestId } = renderWithTheme(
       <OakPupilJourneyUnitsFilter
         menuItems={menuItems}
-        selected={1}
+        selected={"all"}
         onSelected={() => null}
         data-testid="test"
       />,
@@ -33,7 +33,7 @@ describe("PupilJourneyUnitsFilter", () => {
       <ThemeProvider theme={oakDefaultTheme}>
         <OakPupilJourneyUnitsFilter
           menuItems={menuItems}
-          selected={1}
+          selected={"all"}
           onSelected={() => null}
           data-testid="test"
         />
@@ -45,7 +45,7 @@ describe("PupilJourneyUnitsFilter", () => {
     const { getAllByText } = renderWithTheme(
       <OakPupilJourneyUnitsFilter
         menuItems={menuItems}
-        selected={1}
+        selected={"all"}
         onSelected={() => null}
         data-testid="test"
       />,
@@ -58,7 +58,7 @@ describe("PupilJourneyUnitsFilter", () => {
     const { getAllByText } = renderWithTheme(
       <OakPupilJourneyUnitsFilter
         menuItems={menuItems}
-        selected={1}
+        selected={"biology"}
         onSelected={() => null}
         data-testid="test"
       />,
@@ -70,12 +70,14 @@ describe("PupilJourneyUnitsFilter", () => {
     const { getAllByText } = renderWithTheme(
       <OakPupilJourneyUnitsFilter
         menuItems={menuItems}
-        selected={1}
+        selected={"all"}
         onSelected={onSelected}
         data-testid="test"
       />,
     );
-    getAllByText("Physics")[0]?.click();
+    act(() => {
+      getAllByText("Physics")[0]?.click();
+    });
     expect(onSelected).toHaveBeenCalledWith({
       displayText: "Physics",
       value: "physics",

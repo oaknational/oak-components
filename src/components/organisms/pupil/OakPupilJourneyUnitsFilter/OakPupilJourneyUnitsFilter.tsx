@@ -14,7 +14,7 @@ type MenuItem = {
 
 export type OakPupilJourneyUnitsFilterProps = {
   menuItems: MenuItem[];
-  selected: number;
+  selected: string;
   onSelected: (arg0: MenuItem) => void;
 };
 

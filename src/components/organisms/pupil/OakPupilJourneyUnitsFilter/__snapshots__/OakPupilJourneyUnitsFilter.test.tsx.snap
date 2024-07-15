@@ -64,7 +64,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c27 {
+.c29 {
   display: none;
   font-family: Lexend,sans-serif;
 }
@@ -165,8 +165,8 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   font-family: unset;
   outline: none;
   font-family: Lexend,sans-serif;
-  color: #222222;
-  background: #ffffff;
+  color: #ffffff;
+  background: #222222;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.75rem;
@@ -181,6 +181,33 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   cursor: default;
 }
 
+.c24 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: Lexend,sans-serif;
+  color: #222222;
+  background: #ffffff;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border: 0.125rem solid;
+  border-color: #222222;
+  border-radius: 0.25rem;
+}
+
+.c24:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
 .c21 {
   position: relative;
   width: 100%;
@@ -191,18 +218,45 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 .c21:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+  color: #ffffff;
+  background: #575757;
+  border-color: #575757;
+}
+
+.c21:active {
+  background: #222222;
+  border-color: #222222;
+  color: #ffffff;
+}
+
+.c21:disabled {
+  background: #808080;
+  border-color: #808080;
+  color: #ffffff;
+}
+
+.c25 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.c25:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
   color: #222222;
   background: #f2f2f2;
   border-color: #222222;
 }
 
-.c21:active {
+.c25:active {
   background: #ffffff;
   border-color: #222222;
   color: #222222;
 }
 
-.c21:disabled {
+.c25:disabled {
   background: #e4e4e4;
   border-color: #808080;
   color: #808080;
@@ -245,7 +299,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   padding: 0;
 }
 
-.c25 {
+.c27 {
   position: absolute;
   width: 100%;
   bottom: -0.25rem;
@@ -288,15 +342,15 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   gap: 1.5rem;
 }
 
-.c7 .c24 {
+.c7 .c26 {
   visibility: hidden;
 }
 
-.c7 .c11:focus-visible ~ .c24 {
+.c7 .c11:focus-visible ~ .c26 {
   visibility: visible;
 }
 
-.c7 .c11:active ~ .c24 {
+.c7 .c11:active ~ .c26 {
   visibility: visible;
 }
 
@@ -305,7 +359,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   bottom: 0.125rem;
 }
 
-.c26 {
+.c28 {
   height: 0.125rem;
   position: absolute;
   width: 100%;
@@ -319,7 +373,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c27 {
+  .c29 {
     display: block;
   }
 }
@@ -426,7 +480,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
                 className="c19 yellow-shadow"
               />
               <button
-                aria-checked={false}
+                aria-checked={true}
                 className="c20 c21 internal-button"
                 onClick={[Function]}
                 onMouseEnter={[Function]}
@@ -455,7 +509,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
               />
               <button
                 aria-checked={false}
-                className="c20 c21 internal-button"
+                className="c24 c25 internal-button"
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
@@ -483,7 +537,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
               />
               <button
                 aria-checked={false}
-                className="c20 c21 internal-button"
+                className="c24 c25 internal-button"
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
@@ -511,7 +565,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
               />
               <button
                 aria-checked={false}
-                className="c20 c21 internal-button"
+                className="c24 c25 internal-button"
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
@@ -531,7 +585,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
           </div>
         </div>
         <div
-          className="c0 c4 c24 c25"
+          className="c0 c4 c26 c27"
         >
           <svg
             className=""
@@ -553,7 +607,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
         </div>
       </div>
       <div
-        className="c0 c4 c26"
+        className="c0 c4 c28"
       >
         <svg
           className=""
@@ -576,7 +630,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
     </div>
   </div>
   <div
-    className="c27"
+    className="c29"
   >
     <div
       aria-label="OakPupilJourneyUnitsFilter"
@@ -593,7 +647,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
           className="c19 yellow-shadow"
         />
         <button
-          aria-checked={false}
+          aria-checked={true}
           className="c20 c21 internal-button"
           onClick={[Function]}
           onMouseEnter={[Function]}
@@ -622,7 +676,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
         />
         <button
           aria-checked={false}
-          className="c20 c21 internal-button"
+          className="c24 c25 internal-button"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
@@ -650,7 +704,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
         />
         <button
           aria-checked={false}
-          className="c20 c21 internal-button"
+          className="c24 c25 internal-button"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
@@ -678,7 +732,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
         />
         <button
           aria-checked={false}
-          className="c20 c21 internal-button"
+          className="c24 c25 internal-button"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
