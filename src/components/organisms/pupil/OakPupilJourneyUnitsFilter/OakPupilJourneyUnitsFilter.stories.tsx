@@ -2,6 +2,7 @@ import React from "react";
 import { StoryObj, Meta } from "@storybook/react";
 
 import { OakPupilJourneyUnitsFilter } from "./OakPupilJourneyUnitsFilter";
+
 import { OakFlex } from "@/components/atoms";
 
 const meta: Meta<typeof OakPupilJourneyUnitsFilter> = {
@@ -16,10 +17,8 @@ const meta: Meta<typeof OakPupilJourneyUnitsFilter> = {
       },
     },
     selected: {
-      description: "Selected menu item",
-      control: {
-        type: "number",
-      },
+      control: { type: "select" },
+      options: ["all", "biology", "chemistry", "physics"],
     },
     onSelected: {
       description: "Function to be called when a menu item is selected",
