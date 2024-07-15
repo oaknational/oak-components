@@ -64,7 +64,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c29 {
+.c27 {
   display: none;
   font-family: Lexend,sans-serif;
 }
@@ -181,33 +181,6 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   cursor: default;
 }
 
-.c24 {
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  text-align: left;
-  font-family: unset;
-  outline: none;
-  font-family: Lexend,sans-serif;
-  color: #ffffff;
-  background: #222222;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  border: 0.125rem solid;
-  border-color: #222222;
-  border-radius: 0.25rem;
-}
-
-.c24:disabled {
-  pointer-events: none;
-  cursor: default;
-}
-
 .c21 {
   position: relative;
   width: 100%;
@@ -233,33 +206,6 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   background: #e4e4e4;
   border-color: #808080;
   color: #808080;
-}
-
-.c25 {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: inline-block;
-}
-
-.c25:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  color: #ffffff;
-  background: #575757;
-  border-color: #575757;
-}
-
-.c25:active {
-  background: #222222;
-  border-color: #222222;
-  color: #ffffff;
-}
-
-.c25:disabled {
-  background: #808080;
-  border-color: #808080;
-  color: #ffffff;
 }
 
 .c18 .grey-shadow:has(+ * + .internal-button:focus-visible) {
@@ -299,7 +245,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   padding: 0;
 }
 
-.c27 {
+.c25 {
   position: absolute;
   width: 100%;
   bottom: -0.25rem;
@@ -342,15 +288,15 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   gap: 1.5rem;
 }
 
-.c7 .c26 {
+.c7 .c24 {
   visibility: hidden;
 }
 
-.c7 .c11:focus-visible ~ .c26 {
+.c7 .c11:focus-visible ~ .c24 {
   visibility: visible;
 }
 
-.c7 .c11:active ~ .c26 {
+.c7 .c11:active ~ .c24 {
   visibility: visible;
 }
 
@@ -359,7 +305,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   bottom: 0.125rem;
 }
 
-.c28 {
+.c26 {
   height: 0.125rem;
   position: absolute;
   width: 100%;
@@ -373,7 +319,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c29 {
+  .c27 {
     display: block;
   }
 }
@@ -508,8 +454,8 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
                 className="c19 yellow-shadow"
               />
               <button
-                aria-checked={true}
-                className="c24 c25 internal-button"
+                aria-checked={false}
+                className="c20 c21 internal-button"
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
@@ -585,7 +531,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
           </div>
         </div>
         <div
-          className="c0 c4 c26 c27"
+          className="c0 c4 c24 c25"
         >
           <svg
             className=""
@@ -607,7 +553,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
         </div>
       </div>
       <div
-        className="c0 c4 c28"
+        className="c0 c4 c26"
       >
         <svg
           className=""
@@ -630,7 +576,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
     </div>
   </div>
   <div
-    className="c29"
+    className="c27"
   >
     <div
       aria-label="OakPupilJourneyUnitsFilter"
@@ -675,8 +621,8 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
           className="c19 yellow-shadow"
         />
         <button
-          aria-checked={true}
-          className="c24 c25 internal-button"
+          aria-checked={false}
+          className="c20 c21 internal-button"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}

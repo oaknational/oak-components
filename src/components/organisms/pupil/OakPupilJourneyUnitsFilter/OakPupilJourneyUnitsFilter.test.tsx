@@ -9,10 +9,10 @@ import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { oakDefaultTheme } from "@/styles";
 
 const menuItems = [
-  { text: "All", id: 0 },
-  { text: "Biology", id: 1 },
-  { text: "Chemistry", id: 2 },
-  { text: "Physics", id: 3 },
+  { displayText: "All", value: "all" },
+  { displayText: "Biology", value: "biology" },
+  { displayText: "Chemistry", value: "chemistry" },
+  { displayText: "Physics", value: "physics" },
 ];
 
 describe("PupilJourneyUnitsFilter", () => {
@@ -51,7 +51,7 @@ describe("PupilJourneyUnitsFilter", () => {
       />,
     );
     menuItems.forEach((item) => {
-      expect(getAllByText(item.text)[0]).toBeInTheDocument();
+      expect(getAllByText(item.displayText)[0]).toBeInTheDocument();
     });
   });
   it("renders the correct button as selected", () => {
@@ -76,6 +76,9 @@ describe("PupilJourneyUnitsFilter", () => {
       />,
     );
     getAllByText("Physics")[0]?.click();
-    expect(onSelected).toHaveBeenCalledWith({ text: "Physics", id: 3 });
+    expect(onSelected).toHaveBeenCalledWith({
+      displayText: "Physics",
+      value: "physics",
+    });
   });
 });

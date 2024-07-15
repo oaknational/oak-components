@@ -1,22 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 
-import {
-  OakButtonAsRadioGroup,
-  OakOutlineAccordion,
-  OakSecondaryButtonAsRadio,
-} from "../../../molecules";
-import { OakBox, OakHeading } from "../../../atoms";
+import { OakButtonAsRadioGroup } from "@/components/molecules/OakButtonAsRadioGroup";
+import { OakSecondaryButtonAsRadio } from "@/components/molecules/OakSecondaryButtonAsRadio";
+import { OakOutlineAccordion } from "@/components/molecules/OakOutlineAccordion";
+import { OakBox } from "@/components/atoms/OakBox";
+import { OakHeading } from "@/components/atoms/OakHeading";
 
-export type menuItem = {
-  text: string;
-  id: number;
+type MenuItem = {
+  displayText: string;
+  value: string;
 };
 
 export type OakPupilJourneyUnitsFilterProps = {
-  menuItems: menuItem[];
+  menuItems: MenuItem[];
   selected: number;
-  onSelected: (arg0: menuItem) => void;
+  onSelected: (arg0: MenuItem) => void;
 };
 
 const UnstyledComponent = (props: OakPupilJourneyUnitsFilterProps) => {
@@ -27,18 +26,22 @@ const UnstyledComponent = (props: OakPupilJourneyUnitsFilterProps) => {
       name="OakPupilJourneyUnitsFilter"
       ariaLabel="OakPupilJourneyUnitsFilter"
       onChange={(value) => {
-        const selectedItem = menuItems.find(
-          (item) => item.id.toString() === value,
-        );
-        onSelected(selectedItem || { text: "", id: 0 }); // Provide a default value for selectedItem
+        const selectedItem = menuItems.find((item) => item.value === value);
+        if (!selectedItem) {
+          throw new Error("Selected item not found");
+        }
+        onSelected(selectedItem);
       }}
       defaultValue={selected.toString()}
       $flexWrap={"wrap"}
     >
-      {menuItems.map((item) => {
+      {menuItems.map((item, i) => {
         return (
-          <OakSecondaryButtonAsRadio value={item.id.toString()}>
-            {item.text}
+          <OakSecondaryButtonAsRadio
+            key={item.value + "_" + i}
+            value={item.value}
+          >
+            {item.displayText}
           </OakSecondaryButtonAsRadio>
         );
       })}
