@@ -3,6 +3,8 @@ import { StoryObj, Meta } from "@storybook/react";
 
 import { OakPupilJourneyUnitsFilter } from "./OakPupilJourneyUnitsFilter";
 
+import { OakFlex } from "@/components/atoms";
+
 const meta: Meta<typeof OakPupilJourneyUnitsFilter> = {
   title: "Components/organisms/pupil/OakPupilJourneyUnitsFilter",
   component: OakPupilJourneyUnitsFilter,
@@ -15,10 +17,8 @@ const meta: Meta<typeof OakPupilJourneyUnitsFilter> = {
       },
     },
     selected: {
-      description: "Selected menu item",
-      control: {
-        type: "number",
-      },
+      control: { type: "select" },
+      options: ["all", "biology", "chemistry", "physics"],
     },
     onSelected: {
       description: "Function to be called when a menu item is selected",
@@ -37,15 +37,19 @@ export default meta;
 type Story = StoryObj<typeof OakPupilJourneyUnitsFilter>;
 
 export const Default: Story = {
-  render: (args) => <OakPupilJourneyUnitsFilter {...args} />,
+  render: (args) => (
+    <OakFlex>
+      <OakPupilJourneyUnitsFilter {...args} />
+    </OakFlex>
+  ),
   args: {
     menuItems: [
-      { text: "All", id: 0 },
-      { text: "Biology", id: 1 },
-      { text: "Chemistry", id: 2 },
-      { text: "Physics", id: 3 },
+      { displayText: "All", value: "all" },
+      { displayText: "Biology", value: "biology" },
+      { displayText: "Chemistry", value: "chemistry" },
+      { displayText: "Physics", value: "physics" },
     ],
-    selected: 2,
-    onSelected: (menuItemId: number) => console.log(menuItemId),
+    selected: "all",
+    onSelected: (menuItem) => console.log(menuItem.value),
   },
 };

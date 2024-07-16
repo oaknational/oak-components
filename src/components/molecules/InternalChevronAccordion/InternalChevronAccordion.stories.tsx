@@ -4,16 +4,16 @@ import styled from "styled-components";
 
 import { OakHandDrawnHR } from "../OakHandDrawnHR";
 
-import { InternalShadowAccordion } from "./InternalShadowAccordion";
+import { InternalChevronAccordion } from "./InternalChevronAccordion";
 
 import { OakFlex } from "@/components/atoms";
 import { PositionStyleProps } from "@/styles/utils/positionStyle";
 import { SizeStyleProps } from "@/styles/utils/sizeStyle";
 
-const meta: Meta<typeof InternalShadowAccordion> = {
-  component: InternalShadowAccordion,
+const meta: Meta<typeof InternalChevronAccordion> = {
+  component: InternalChevronAccordion,
   tags: ["autodocs"],
-  title: "components/molecules/InternalShadowAccordion",
+  title: "components/molecules/InternalChevronAccordion",
   parameters: {
     controls: {
       include: ["header", "headerAfterSlot", "children"],
@@ -37,11 +37,11 @@ const meta: Meta<typeof InternalShadowAccordion> = {
     children:
       "Any cookies required for video or other embedded learning content to work",
   },
-  render: (args) => <InternalShadowAccordion {...args} />,
+  render: (args) => <InternalChevronAccordion {...args} />,
 };
 export default meta;
 
-type Story = StoryObj<typeof InternalShadowAccordion>;
+type Story = StoryObj<typeof InternalChevronAccordion>;
 
 export const Default: Story = {};
 
@@ -54,7 +54,7 @@ const StyledHandDrawnHR = styled(OakHandDrawnHR)<
   bottom: 0.125rem;
 `;
 
-export const OutLineAccordion: Story = {
+export const OutlineAccordion: Story = {
   render: () => {
     return (
       <OakFlex
@@ -63,9 +63,9 @@ export const OutLineAccordion: Story = {
         $flexDirection={"column"}
       >
         <StyledHandDrawnHR />
-        <InternalShadowAccordion header={"Title"} id={"out-line-accordion"}>
+        <InternalChevronAccordion header={"Title"} id={"out-line-accordion"}>
           Subcopy area
-        </InternalShadowAccordion>
+        </InternalChevronAccordion>
         <StyledHandDrawnHR $position={"absolute"} $width={"100%"} />
       </OakFlex>
     );
@@ -76,14 +76,14 @@ export const OutLineAccordion: Story = {
 export const FillAccordion: Story = {
   render: () => {
     return (
-      <InternalShadowAccordion
+      <InternalChevronAccordion
         header={"Title"}
         id={"out-line-accordion"}
         $background={"bg-decorative4-very-subdued"}
         $borderRadius={"border-radius-s"}
       >
         Subcopy area
-      </InternalShadowAccordion>
+      </InternalChevronAccordion>
     );
   },
   args: {},
@@ -98,22 +98,22 @@ export const MultipleAccordions: Story = {
   render: () => {
     return (
       <>
-        <InternalShadowAccordion
+        <InternalChevronAccordion
           id="necessary-accordion"
           header="Strictly necessary"
         >
           Necessary for the website to function
-        </InternalShadowAccordion>
-        <InternalShadowAccordion
+        </InternalChevronAccordion>
+        <InternalChevronAccordion
           id="embedded-accordion"
           header="Embedded content"
         >
           Any cookies required for video or other embedded learning content to
           work
-        </InternalShadowAccordion>
-        <InternalShadowAccordion id="statistics-accordion" header="Statistics">
+        </InternalChevronAccordion>
+        <InternalChevronAccordion id="statistics-accordion" header="Statistics">
           Any cookies that may be used to track website usage
-        </InternalShadowAccordion>
+        </InternalChevronAccordion>
       </>
     );
   },

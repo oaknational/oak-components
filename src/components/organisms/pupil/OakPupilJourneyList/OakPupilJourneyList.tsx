@@ -38,9 +38,7 @@ const Slots = ({
         </OakFlex>
 
         <OakFlex $flexDirection={"column"} $gap={"space-between-m2"}>
-          {filterSlot && (
-            <OakFlex $justifyContent={"end"}>{filterSlot}</OakFlex>
-          )}
+          {filterSlot}
           <OakFlex>{counterSlot}</OakFlex>
         </OakFlex>
       </OakFlex>

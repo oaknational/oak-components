@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 import styled from "styled-components";
 
 import { OakHandDrawnHR } from "../OakHandDrawnHR";
-import { InternalShadowAccordion } from "../InternalShadowAccordion";
+import { InternalChevronAccordion } from "../InternalChevronAccordion";
 
 import { OakFlex } from "@/components/atoms";
 import { PositionStyleProps } from "@/styles/utils/positionStyle";
@@ -51,16 +51,16 @@ export const OakOutlineAccordion = ({
   ...styleProps
 }: OakOutlineAccordionProps) => {
   return (
-    <OakFlex $position={"relative"} $display={"flex"} $flexDirection={"column"}>
-      <StyledHandDrawnHR />
-      <InternalShadowAccordion
+    <OakFlex $position={"relative"} $flexDirection={"column"}>
+      <StyledHandDrawnHR $width={"100%"} />
+      <InternalChevronAccordion
         header={header}
         id={id}
         initialOpen={initialOpen}
         {...styleProps}
       >
         {children}
-      </InternalShadowAccordion>
+      </InternalChevronAccordion>
       <StyledHandDrawnHR $position={"absolute"} $width={"100%"} />
     </OakFlex>
   );
