@@ -5,15 +5,22 @@ exports[`InternalAccordion matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c1 {
+.c2 {
   font-family: Lexend,sans-serif;
 }
 
-.c1:hover {
+.c2:hover {
   cursor: pointer;
 }
 
-.c2 {
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -24,7 +31,7 @@ exports[`InternalAccordion matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c3 {
+.c4 {
   font: inherit;
   color: inherit;
   border: none;
@@ -37,13 +44,13 @@ exports[`InternalAccordion matches snapshot 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 c1"
   data-testid="test"
   id="internal-accordion"
 >
   <button
     aria-expanded={true}
-    className="c1 c2 c3 "
+    className="c2 c3 c4 "
     id="internal-accordion"
     onClick={[Function]}
     type="button"

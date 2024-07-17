@@ -25,7 +25,7 @@ import {
 } from "@/components/molecules";
 import { usePrefersReducedMotion } from "@/animation/usePrefersReducedMotion";
 import { InternalDndContext } from "@/components/atoms/InternalDndContext/InternalDndContext";
-import ClientPortal from "@/components/atoms/ClientPortal/ClientPortal";
+import { InternalClientPortal } from "@/components/atoms/InternalClientPortal";
 
 type DraggableId = string;
 type DroppableId = string;
@@ -212,13 +212,13 @@ export const OakQuizMatch = ({
             />
           ))}
         </OakFlex>
-        <ClientPortal show={true}>
+        <InternalClientPortal show={true}>
           <DragOverlay dropAnimation={prefersReducedMotion ? null : undefined}>
             {activeDraggable && (
               <OakDraggable isDragging>{activeDraggable.label}</OakDraggable>
             )}
           </DragOverlay>
-        </ClientPortal>
+        </InternalClientPortal>
       </InternalDndContext>
     </>
   );

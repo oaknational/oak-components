@@ -5,35 +5,42 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   position: relative;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-family: Lexend,sans-serif;
-}
-
-.c2 {
-  font-family: Lexend,sans-serif;
-}
-
-.c2:hover {
-  cursor: pointer;
-}
-
-.c7 {
-  position: relative;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  height: 1.5rem;
-  min-height: 1.5rem;
-  font-family: Lexend,sans-serif;
-}
-
-.c9 {
   font-family: Lexend,sans-serif;
 }
 
 .c3 {
+  font-family: Lexend,sans-serif;
+}
+
+.c3:hover {
+  cursor: pointer;
+}
+
+.c8 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c10 {
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -44,18 +51,18 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c8 {
+.c9 {
   object-fit: contain;
 }
 
-.c4 {
+.c5 {
   font: inherit;
   color: inherit;
   border: none;
@@ -67,17 +74,21 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   padding: 0;
 }
 
-.c12 {
+.c13 {
   position: absolute;
   width: 100%;
   bottom: -0.25rem;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -86,19 +97,15 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c6:hover {
+.c7:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c1 {
+.c2 {
   position: relative;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   font-family: Lexend,sans-serif;
   display: -webkit-box;
   display: -webkit-flex;
@@ -110,27 +117,27 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c1 .c11 {
+.c2 .c12 {
   visibility: hidden;
 }
 
-.c1 .c5:focus-visible ~ .c11 {
+.c2 .c6:focus-visible ~ .c12 {
   visibility: visible;
 }
 
 <div
-  className="c0 c1"
+  className="c0 c1 c2"
 >
   <button
     aria-expanded={false}
-    className="c2 c3 c4 c5  c6"
+    className="c3 c4 c5 c6  c7"
     id="see-more"
     onClick={[Function]}
     type="button"
   >
     See more
     <div
-      className="c7"
+      className="c8"
       style={
         {
           "transform": "none",
@@ -139,8 +146,8 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
       }
     >
       <img
-        alt=""
-        className="c8"
+        alt="An arrow to indicate whether the item is open or closed"
+        className="c9"
         data-nimg="fill"
         decoding="async"
         loading="lazy"
@@ -166,14 +173,14 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   </button>
   <div
     aria-labelledby="see-more"
-    className="c9 "
+    className="c10 "
     hidden={true}
     role="region"
   >
     Here it is
   </div>
   <div
-    className="c9 c10 c11 c12"
+    className="c10 c11 c12 c13"
   >
     <svg
       className=""
