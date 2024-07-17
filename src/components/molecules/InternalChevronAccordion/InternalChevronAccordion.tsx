@@ -92,12 +92,13 @@ const Accordion = ({
         id={id}
         $width={"100%"}
         $justifyContent={"space-between"}
+        $alignItems={"center"}
       >
         {header}
         <OakIcon
           iconName="chevron-down"
-          $width="all-spacing-6"
-          $height="all-spacing-6"
+          $width="all-spacing-8"
+          $height="all-spacing-8"
           alt=""
           style={{
             transform: isOpen ? "rotate(180deg)" : "none",
