@@ -11,7 +11,11 @@ describe(OakQuizHint, () => {
   it("matches snapshot", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
-        <OakQuizHint hint="The answer is right in front of your eyes" />,
+        <OakQuizHint
+          hint="The answer is right in front of your eyes"
+          id="quiz-hint"
+        />
+        ,
       </OakThemeProvider>,
     ).toJSON();
 
