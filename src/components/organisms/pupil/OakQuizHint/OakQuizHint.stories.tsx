@@ -25,6 +25,7 @@ const meta: Meta<typeof OakQuizHint> = {
   ],
   args: {
     hint: "A football and an orange are both sphere shaped, like Earth.",
+    id: "quiz-hint",
   },
 };
 export default meta;
