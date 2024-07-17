@@ -7,6 +7,14 @@ type AccordionContext = {
 };
 
 export const accordionContext = createContext<AccordionContext | null>(null);
+/**
+ *
+ * Decomposed component comprising InternalAccordionButton and InternalAccordionContent wrapped by InternalAccordionProvider
+ *
+ * - InternalAccordionButton will toggle InternalAccordionContent visibility
+ * - It is up to the user to arrange the InternalAccordionButton and InternalAccordionContent components in the desired order
+ *
+ */
 
 export const InternalAccordionProvider: FC<{
   isInitialOpen: boolean;

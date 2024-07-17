@@ -1,22 +1,11 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import useAccordionContext from "./useAccordionContext";
 
 import { OakBox, OakBoxProps, OakFlex, OakFlexProps } from "@/components/atoms";
 
-export type InternalAccordionProps = {
-  /**
-   * The content of the accordion
-   */
-  children: ReactNode;
-  /**
-   * The id of the accordion
-   */
-  id: string;
-};
-
-const StyledButton = styled(OakFlex)`
+const FlexWithReset = styled(OakFlex)`
   font: inherit;
   color: inherit;
   border: none;
@@ -28,52 +17,41 @@ const StyledButton = styled(OakFlex)`
 
 /**
  *
- *  An accordion component that can be used to show/hide content
+ * Content which will appear and disappear
  *
- *
- * Must call this coponent inside the AccordionProvider where you can also access the useAccordionContext hook
- *
- * Must use the InternalAccordionButton and InternalAccordionContent components as direct children of InternalAccordion
- *
+ * Must appear as a sibling of InternalAccordionButton
  *
  */
 
-export const InternalAccordion = styled(OakBox)``;
-
-const UnstyledAccordionContent = ({
+const AccordionContent = ({
   children,
-  id,
-  ...styleProps
-}: InternalAccordionProps & OakBoxProps) => {
+  ...rest
+}: OakBoxProps & { "aria-labelledby": string }) => {
   const { isOpen } = useAccordionContext();
 
   return (
-    <OakBox hidden={!isOpen} aria-labelledby={id} role="region" {...styleProps}>
+    <OakBox hidden={!isOpen} role="region" {...rest}>
       {children}
     </OakBox>
   );
 };
 
+export const InternalAccordionContent = styled(AccordionContent)``;
+
 /**
  *
- *  An accordion component that can be used to show/hide content
+ * User interface to toggle visibility of InternalAccordionContent
  *
- * InternalAccordionContent is a child component of InternalAccordion and sibling of InternalAccordionButton
- *
- * The children of InternalAccordionContent will be hidden or shown based on the state of the InternalAccordionButton
+ * Must appear as a sibling of InternalAccordionContent
  *
  */
 
-export const InternalAccordionContent = styled(UnstyledAccordionContent)``;
-
-const UnstyledAccordionButton = (
-  props: InternalAccordionProps & OakFlexProps & OakBoxProps,
-) => {
+const AccordionButton = (props: { id: string } & OakFlexProps) => {
   const { children, id, ...rest } = props;
   const { isOpen, setOpen } = useAccordionContext();
 
   return (
-    <StyledButton
+    <FlexWithReset
       as="button"
       type="button"
       onClick={() => setOpen(!isOpen)}
@@ -83,18 +61,8 @@ const UnstyledAccordionButton = (
       {...rest}
     >
       {children}
-    </StyledButton>
+    </FlexWithReset>
   );
 };
 
-/**
- *
- *  An accordion component that can be used to show/hide content
- *
- * InternalAccordionButton is a child component of InternalAccordion and sibling of InternalAccordionContent
- *
- * The children of InternalAccordianButton will be used as the button to toggle the visibility of the InternalAccordionContent
- *
- */
-
-export const InternalAccordionButton = styled(UnstyledAccordionButton)``;
+export const InternalAccordionButton = styled(AccordionButton)``;

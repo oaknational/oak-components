@@ -1,11 +1,10 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
 
-import { OakFlex, OakIcon } from "@/components/atoms";
+import { OakBox, OakFlex, OakIcon } from "@/components/atoms";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import {
-  InternalAccordion,
   InternalAccordionButton,
   InternalAccordionContent,
 } from "@/components/atoms/InternalAccordion";
@@ -59,7 +58,7 @@ const Accordion = ({
   const { isOpen } = useAccordionContext();
 
   return (
-    <InternalAccordion
+    <OakBox
       id={id}
       $borderColor="border-neutral-lighter"
       $ba="border-solid-s"
@@ -87,7 +86,7 @@ const Accordion = ({
         )}
       </OakFlex>
       <InternalAccordionContent
-        id={id}
+        aria-labelledby={id}
         $ml="space-between-m"
         $pl="inner-padding-m"
         $mt="space-between-sssx"
@@ -95,7 +94,7 @@ const Accordion = ({
       >
         {children}
       </InternalAccordionContent>
-    </InternalAccordion>
+    </OakBox>
   );
 };
 
