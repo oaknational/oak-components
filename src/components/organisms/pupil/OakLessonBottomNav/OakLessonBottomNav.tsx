@@ -41,7 +41,7 @@ export const OakLessonBottomNav = ({
       );
       break;
     case !!hint:
-      content = <OakQuizHint hint={hint} />;
+      content = <OakQuizHint hint={hint} id="quiz-hint" />;
       break;
     default:
       content = null;

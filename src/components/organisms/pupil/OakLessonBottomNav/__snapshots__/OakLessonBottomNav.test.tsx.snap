@@ -13,6 +13,11 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 }
 
 .c5 {
+  display: none;
+  font-family: Lexend,sans-serif;
+}
+
+.c6 {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -20,7 +25,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c12 {
+.c13 {
   position: relative;
   width: 2.5rem;
   min-width: 2.5rem;
@@ -31,7 +36,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c14 {
+.c15 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -40,7 +45,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c15 {
+.c16 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -49,7 +54,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c18 {
+.c19 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -79,14 +84,14 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   align-items: center;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c11 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -105,7 +110,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   gap: 0.75rem;
 }
 
-.c13 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -120,7 +125,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   justify-content: center;
 }
 
-.c19 {
+.c20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -138,7 +143,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c17 {
+.c18 {
   font-family: Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -149,11 +154,11 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c16 {
+.c17 {
   object-fit: contain;
 }
 
-.c9 {
+.c10 {
   background: none;
   color: inherit;
   border: none;
@@ -167,59 +172,59 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   color: #222222;
 }
 
-.c9:disabled {
+.c10:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c10 {
+.c11 {
   display: inline-block;
   position: relative;
 }
 
-.c10:hover {
+.c11:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #222222;
 }
 
-.c10:active {
+.c11:active {
   color: #222222;
 }
 
-.c10:disabled {
+.c11:disabled {
   color: #808080;
 }
 
-.c7 > :first-child:focus-visible .shadow {
+.c8 > :first-child:focus-visible .shadow {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c7 > :first-child:hover .shadow {
+.c8 > :first-child:hover .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c7 > :first-child:active .shadow {
+.c8 > :first-child:active .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c7 > :first-child:disabled .icon-container {
+.c8 > :first-child:disabled .icon-container {
   background: #808080;
 }
 
-.c7 > :first-child:hover .icon-container {
+.c8 > :first-child:hover .icon-container {
   background: #ffe555;
 }
 
-.c7 > :first-child:active .icon-container {
+.c8 > :first-child:active .icon-container {
   background: #ffe555;
 }
 
-.c8:hover .shadow {
+.c9:hover .shadow {
   box-shadow: none !important;
 }
 
-.c8:active .shadow {
+.c9:active .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%) !important;
 }
 
@@ -228,7 +233,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c18 {
+  .c19 {
     width: auto;
   }
 }
@@ -242,7 +247,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c19 {
+  .c20 {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
@@ -257,6 +262,12 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
       className="c3 c4"
     >
       <div
+        className="c5"
+        id="quiz-hint"
+      >
+        The answer is right in front of your eyes
+      </div>
+      <div
         style={
           {
             "display": "contents",
@@ -264,32 +275,32 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
         }
       >
         <div
-          className="c5 c6 c7 c8"
+          className="c6 c7 c8 c9"
         >
           <button
-            aria-describedby="hint-tooltip"
-            className="c9 c10"
+            aria-describedby="quiz-hint"
+            className="c10 c11"
             data-rac={true}
             onClick={[Function]}
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
           >
             <div
-              className="c3 c11"
+              className="c3 c12"
             >
               <div
-                className="c12 c13 icon-container"
+                className="c13 c14 icon-container"
               >
                 <div
-                  className="c14 shadow"
+                  className="c15 shadow"
                 />
                 <div
-                  className="c15"
+                  className="c16"
                   data-icon-for="button"
                 >
                   <img
                     alt="lightbulb"
-                    className="c16"
+                    className="c17"
                     data-nimg="fill"
                     decoding="async"
                     loading="lazy"
@@ -314,7 +325,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
                 </div>
               </div>
               <span
-                className="c17"
+                className="c18"
               >
                 Need a hint?
               </span>
@@ -324,7 +335,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
       </div>
     </div>
     <div
-      className="c18 c19"
+      className="c19 c20"
     />
   </div>,
   .c0 {
