@@ -35,3 +35,11 @@ type Story = StoryObj<typeof OakQuizCounter>;
 export const Default: Story = {
   render: (args) => <OakQuizCounter {...args} />,
 };
+
+export const MaxQuestions: Story = {
+  render: (args) => <OakQuizCounter {...args} />,
+  args: {
+    counter: 3,
+    total: 12,
+  },
+};
