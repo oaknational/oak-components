@@ -3,26 +3,26 @@ import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
 
 import {
-  InternalAccordion,
   InternalAccordionButton,
   InternalAccordionContent,
 } from "./InternalAccordion";
 import AccordionProvider from "./InternalAccordionProvider";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
+import { OakFlex } from "@/components/atoms/OakFlex";
 
 describe("InternalAccordion", () => {
   it("renders", () => {
     const { getByTestId } = renderWithTheme(
       <AccordionProvider isInitialOpen={true}>
-        <InternalAccordion id={"internal-accordion"} data-testid="test">
+        <OakFlex id={"internal-accordion"} data-testid="test">
           <InternalAccordionButton id={"internal-accordion"}>
             accordion button
           </InternalAccordionButton>
-          <InternalAccordionContent id={"internal-accordion"}>
+          <InternalAccordionContent aria-labelledby={"internal-accordion"}>
             accordion content
           </InternalAccordionContent>
-        </InternalAccordion>
+        </OakFlex>
       </AccordionProvider>,
     );
     expect(getByTestId("test")).toBeInTheDocument();
@@ -31,14 +31,14 @@ describe("InternalAccordion", () => {
   it("matches snapshot", () => {
     const tree = create(
       <AccordionProvider isInitialOpen={true}>
-        <InternalAccordion id={"internal-accordion"} data-testid="test">
+        <OakFlex id={"internal-accordion"} data-testid="test">
           <InternalAccordionButton id={"internal-accordion"}>
             accordion button
           </InternalAccordionButton>
-          <InternalAccordionContent id={"internal-accordion"}>
+          <InternalAccordionContent aria-labelledby={"internal-accordion"}>
             accordion content
           </InternalAccordionContent>
-        </InternalAccordion>
+        </OakFlex>
       </AccordionProvider>,
     ).toJSON();
     expect(tree).toMatchSnapshot();

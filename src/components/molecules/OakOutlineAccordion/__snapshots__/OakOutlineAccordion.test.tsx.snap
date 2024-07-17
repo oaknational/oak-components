@@ -14,22 +14,18 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   position: relative;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   font-family: Lexend,sans-serif;
 }
 
-.c7 {
+.c8 {
   font-family: Lexend,sans-serif;
 }
 
-.c7:hover {
+.c8:hover {
   cursor: pointer;
 }
 
-.c12 {
+.c13 {
   position: relative;
   width: 2.5rem;
   min-width: 2.5rem;
@@ -55,7 +51,18 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   display: flex;
 }
 
-.c8 {
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -66,11 +73,11 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c13 {
+.c14 {
   object-fit: contain;
 }
 
-.c9 {
+.c10 {
   font: inherit;
   color: inherit;
   border: none;
@@ -82,13 +89,13 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   padding: 0;
 }
 
-.c15 {
+.c16 {
   position: absolute;
   width: 100%;
   bottom: -0.25rem;
 }
 
-.c11 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -105,19 +112,15 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c11:hover {
+.c12:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c6 {
+.c7 {
   position: relative;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   font-family: Lexend,sans-serif;
   display: -webkit-box;
   display: -webkit-flex;
@@ -129,11 +132,11 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c6 .c14 {
+.c7 .c15 {
   visibility: hidden;
 }
 
-.c6 .c10:focus-visible ~ .c14 {
+.c7 .c11:focus-visible ~ .c15 {
   visibility: visible;
 }
 
@@ -143,7 +146,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   bottom: 0.125rem;
 }
 
-.c16 {
+.c17 {
   height: 0.125rem;
   position: absolute;
   width: 100%;
@@ -175,18 +178,18 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
     </svg>
   </div>
   <div
-    className="c5 c6"
+    className="c5 c6 c7"
   >
     <button
       aria-expanded={false}
-      className="c7 c8 c9 c10  c11"
+      className="c8 c9 c10 c11  c12"
       id="see-more"
       onClick={[Function]}
       type="button"
     >
       See more
       <div
-        className="c12"
+        className="c13"
         style={
           {
             "transform": "none",
@@ -196,7 +199,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
       >
         <img
           alt=""
-          className="c13"
+          className="c14"
           data-nimg="fill"
           decoding="async"
           loading="lazy"
@@ -229,7 +232,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
       Here it is
     </div>
     <div
-      className="c2 c3 c14 c15"
+      className="c2 c3 c15 c16"
     >
       <svg
         className=""
@@ -251,7 +254,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
     </div>
   </div>
   <div
-    className="c2 c3 c16"
+    className="c2 c3 c17"
   >
     <svg
       className=""

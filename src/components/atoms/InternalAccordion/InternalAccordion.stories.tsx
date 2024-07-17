@@ -4,40 +4,32 @@ import { StoryObj, Meta } from "@storybook/react";
 import {
   InternalAccordionButton,
   InternalAccordionContent,
-  InternalAccordion,
 } from "./InternalAccordion";
 import { InternalAccordionProvider } from "./InternalAccordionProvider";
 
-const meta: Meta<typeof InternalAccordion> = {
+import { OakFlex } from "@/components/atoms/OakFlex";
+
+const meta: Meta<typeof InternalAccordionProvider> = {
   title: "Components/atoms/InternalAccordion",
-  component: InternalAccordion,
+  component: InternalAccordionProvider,
   tags: ["autodocs"],
-  argTypes: {},
-  parameters: {
-    controls: {
-      include: ["type"],
-    },
-  },
 };
 
 export default meta;
 
-type Story = StoryObj<typeof InternalAccordion>;
+type Story = StoryObj<typeof InternalAccordionProvider>;
 
 export const Default: Story = {
-  render: (args) => (
-    <InternalAccordionProvider isInitialOpen={true}>
-      <InternalAccordion {...args}>
-        <InternalAccordionButton {...args}>
+  render: () => (
+    <InternalAccordionProvider isInitialOpen={false}>
+      <OakFlex $flexDirection={"column"}>
+        <InternalAccordionButton id={"generic-accordion"}>
           accordion button
         </InternalAccordionButton>
-        <InternalAccordionContent {...args}>
+        <InternalAccordionContent aria-labelledby={"generic-accordion"}>
           accordion content
         </InternalAccordionContent>
-      </InternalAccordion>
+      </OakFlex>
     </InternalAccordionProvider>
   ),
-  args: {
-    id: "generic-accordion",
-  },
 };
