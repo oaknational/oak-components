@@ -43,7 +43,9 @@ export const OakQuizCounter = (props: OakQuizCounterProps) => {
         </OakSpan>
         of {total}
       </OakSpan>
-      <OakFlex $gap={"space-between-ssx"}>{pills}</OakFlex>
+      <OakFlex $gap={"space-between-ssx"} $flexWrap={"wrap"}>
+        {pills}
+      </OakFlex>
     </OakFlex>
   );
 };
