@@ -33,10 +33,10 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 
 .c16 {
   position: relative;
-  width: 2.5rem;
-  min-width: 2.5rem;
-  height: 2.5rem;
-  min-height: 2.5rem;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
   font-family: Lexend,sans-serif;
 }
 
@@ -464,7 +464,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
             }
           >
             <img
-              alt=""
+              alt="An arrow to indicate whether the item is open or closed"
               className="c17"
               data-nimg="fill"
               decoding="async"
