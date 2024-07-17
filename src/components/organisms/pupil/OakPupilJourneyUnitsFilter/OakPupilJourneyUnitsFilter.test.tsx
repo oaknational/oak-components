@@ -1,6 +1,6 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
+import { act, create } from "react-test-renderer";
 import { ThemeProvider } from "styled-components";
 
 import { OakPupilJourneyUnitsFilter } from "./OakPupilJourneyUnitsFilter";
@@ -9,23 +9,22 @@ import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { oakDefaultTheme } from "@/styles";
 
 const menuItems = [
-  { text: "All", id: 0 },
-  { text: "Biology", id: 1 },
-  { text: "Chemistry", id: 2 },
-  { text: "Physics", id: 3 },
+  { displayText: "All", value: "all" },
+  { displayText: "Biology", value: "biology" },
+  { displayText: "Chemistry", value: "chemistry" },
+  { displayText: "Physics", value: "physics" },
 ];
 
 describe("PupilJourneyUnitsFilter", () => {
   it("renders", () => {
-    const { getByTestId } = renderWithTheme(
+    const { getAllByLabelText } = renderWithTheme(
       <OakPupilJourneyUnitsFilter
         menuItems={menuItems}
-        selected={1}
+        selected={"all"}
         onSelected={() => null}
-        data-testid="test"
       />,
     );
-    expect(getByTestId("test")).toBeInTheDocument();
+    expect(getAllByLabelText("OakPupilJourneyUnitsFilter")).toHaveLength(2);
   });
 
   it("matches snapshot", () => {
@@ -33,7 +32,7 @@ describe("PupilJourneyUnitsFilter", () => {
       <ThemeProvider theme={oakDefaultTheme}>
         <OakPupilJourneyUnitsFilter
           menuItems={menuItems}
-          selected={1}
+          selected={"all"}
           onSelected={() => null}
           data-testid="test"
         />
@@ -45,20 +44,20 @@ describe("PupilJourneyUnitsFilter", () => {
     const { getAllByText } = renderWithTheme(
       <OakPupilJourneyUnitsFilter
         menuItems={menuItems}
-        selected={1}
+        selected={"all"}
         onSelected={() => null}
         data-testid="test"
       />,
     );
     menuItems.forEach((item) => {
-      expect(getAllByText(item.text)[0]).toBeInTheDocument();
+      expect(getAllByText(item.displayText)[0]).toBeInTheDocument();
     });
   });
   it("renders the correct button as selected", () => {
     const { getAllByText } = renderWithTheme(
       <OakPupilJourneyUnitsFilter
         menuItems={menuItems}
-        selected={1}
+        selected={"biology"}
         onSelected={() => null}
         data-testid="test"
       />,
@@ -70,12 +69,17 @@ describe("PupilJourneyUnitsFilter", () => {
     const { getAllByText } = renderWithTheme(
       <OakPupilJourneyUnitsFilter
         menuItems={menuItems}
-        selected={1}
+        selected={"all"}
         onSelected={onSelected}
         data-testid="test"
       />,
     );
-    getAllByText("Physics")[0]?.click();
-    expect(onSelected).toHaveBeenCalledWith({ text: "Physics", id: 3 });
+    act(() => {
+      getAllByText("Physics")[0]?.click();
+    });
+    expect(onSelected).toHaveBeenCalledWith({
+      displayText: "Physics",
+      value: "physics",
+    });
   });
 });

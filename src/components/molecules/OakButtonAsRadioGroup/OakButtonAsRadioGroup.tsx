@@ -37,7 +37,10 @@ export type OakButtonAsRadioGroupProps = {
   defaultValue?: string;
 } & Pick<TypographyStyleProps, "$font"> &
   ColorStyleProps &
-  Pick<FlexStyleProps, "$flexDirection" | "$alignItems" | "$gap" | "$flexWrap">;
+  Pick<
+    FlexStyleProps,
+    "$flexDirection" | "$alignItems" | "$gap" | "$flexWrap" | "$justifyContent"
+  >;
 
 /**
  *

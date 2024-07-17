@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InternalShadowAccordion matches snapshot 1`] = `
+exports[`InternalChevronAccordion matches snapshot 1`] = `
 .c0 {
   position: relative;
   padding-top: 0.75rem;
@@ -115,10 +115,6 @@ exports[`InternalShadowAccordion matches snapshot 1`] = `
 }
 
 .c1 .c5:focus-visible ~ .c11 {
-  visibility: visible;
-}
-
-.c1 .c5:active ~ .c11 {
   visibility: visible;
 }
 
