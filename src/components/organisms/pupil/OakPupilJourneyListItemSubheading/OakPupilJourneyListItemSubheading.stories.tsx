@@ -9,10 +9,12 @@ const meta: Meta<typeof OakPupilJourneyListItemSubheading> = {
   title: "Components/organisms/pupil/OakPupilJourneyListItemSubheading",
   component: OakPupilJourneyListItemSubheading,
   tags: ["autodocs"],
-  argTypes: {},
+  argTypes: {
+    textSlot: { control: { type: "text" } },
+  },
   parameters: {
     controls: {
-      include: ["numberOfLessons", "listItems"],
+      include: ["textSlot", "listItems"],
     },
   },
   args: {
