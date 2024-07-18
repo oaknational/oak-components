@@ -13,7 +13,7 @@ describe("OakPupilJourneyList", () => {
     const { getByText } = renderWithTheme(
       <OakPupilJourneyList
         phase="primary"
-        counterSlot={<div>Counter Slot Here</div>}
+        subheadingSlot={<div>Subheading Slot Here</div>}
       >
         <p>Hello World</p>
       </OakPupilJourneyList>,
@@ -26,7 +26,7 @@ describe("OakPupilJourneyList", () => {
       <OakThemeProvider theme={oakDefaultTheme}>
         <OakPupilJourneyList
           phase="primary"
-          counterSlot={<div>Counter Slot Here</div>}
+          subheadingSlot={<div>Subheading Slot Here</div>}
         >
           <p>Hello World</p>
         </OakPupilJourneyList>

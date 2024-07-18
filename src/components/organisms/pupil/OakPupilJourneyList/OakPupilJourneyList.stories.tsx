@@ -23,7 +23,7 @@ const meta: Meta<typeof OakPupilJourneyList> = {
   },
   parameters: {
     controls: {
-      include: ["phase", "titleSlot", "counterSlot"],
+      include: ["phase", "titleSlot", "subheadingSlot"],
     },
   },
 };
@@ -42,7 +42,7 @@ export const Default: Story = {
           breadcrumbs={["first", "second", "third"]}
         />
       }
-      counterSlot={
+      subheadingSlot={
         <OakPupilJourneyListCounter
           count={10}
           countHeader="New lessons"
@@ -65,7 +65,7 @@ export const NoTitle: Story = {
   render: (args) => (
     <OakPupilJourneyList
       {...args}
-      counterSlot={
+      subheadingSlot={
         <OakPupilJourneyListItemSubheading
           textSlot={
             <OakPupilJourneyListCounter
@@ -100,7 +100,7 @@ export const WithFilter: Story = {
           breadcrumbs={["first", "second", "third"]}
         />
       }
-      counterSlot={
+      subheadingSlot={
         <OakPupilJourneyListCounter
           count={10}
           countHeader="New lessons"
