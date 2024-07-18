@@ -3,7 +3,7 @@ import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
 import { ThemeProvider } from "styled-components";
 
-import { OakPupilJourneyPreviousLessons } from "./OakPupilJourneyPreviousLessons";
+import { OakPupilJourneyPreviousLessons } from "./OakPupilJourneyListItemSubheading";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { oakDefaultTheme } from "@/styles";

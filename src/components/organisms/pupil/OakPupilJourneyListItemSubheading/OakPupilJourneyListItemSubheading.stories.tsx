@@ -1,7 +1,7 @@
 import React from "react";
 import { StoryObj, Meta } from "@storybook/react";
 
-import { OakPupilJourneyPreviousLessons } from "./OakPupilJourneyPreviousLessons";
+import { OakPupilJourneyPreviousLessons } from "./OakPupilJourneyListItemSubheading";
 
 import { OakPupilJourneyListCounter } from "@/components/organisms";
 
