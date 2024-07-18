@@ -2,7 +2,7 @@ import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
 import { OakPupilJourneyListCounter } from "../OakPupilJourneyListCounter";
-import { OakPupilJourneyPreviousLessons } from "../OakPupilJourneyListItemSubheading";
+import { OakPupilJourneyListItemSubheading } from "../OakPupilJourneyListItemSubheading";
 
 import { OakPupilJourneyList } from "./OakPupilJourneyList";
 
@@ -66,7 +66,7 @@ export const NoTitle: Story = {
     <OakPupilJourneyList
       {...args}
       counterSlot={
-        <OakPupilJourneyPreviousLessons
+        <OakPupilJourneyListItemSubheading
           textSlot={
             <OakPupilJourneyListCounter
               tag="h1"

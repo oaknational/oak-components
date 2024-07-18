@@ -3,17 +3,17 @@ import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
 import { ThemeProvider } from "styled-components";
 
-import { OakPupilJourneyPreviousLessons } from "./OakPupilJourneyListItemSubheading";
+import { OakPupilJourneyListItemSubheading } from "./OakPupilJourneyListItemSubheading";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { oakDefaultTheme } from "@/styles";
 import { OakPupilJourneyListCounter } from "@/components/organisms";
 
-describe("OakPupilJourneyPreviousLessons", () => {
+describe("OakPupilJourneyListItemSubheading", () => {
   it("renders", () => {
     const { getByText } = renderWithTheme(
       <ThemeProvider theme={oakDefaultTheme}>
-        <OakPupilJourneyPreviousLessons
+        <OakPupilJourneyListItemSubheading
           textSlot={
             <OakPupilJourneyListCounter
               tag="h1"
@@ -33,7 +33,7 @@ describe("OakPupilJourneyPreviousLessons", () => {
     const tree = create(
       <ThemeProvider theme={oakDefaultTheme}>
         {" "}
-        <OakPupilJourneyPreviousLessons
+        <OakPupilJourneyListItemSubheading
           textSlot={
             <OakPupilJourneyListCounter
               tag="h1"

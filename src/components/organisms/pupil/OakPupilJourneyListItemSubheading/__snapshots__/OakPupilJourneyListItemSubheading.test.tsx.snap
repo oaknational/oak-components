@@ -1,0 +1,179 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakPupilJourneyListItemSubheading matches snapshot 1`] = `
+[
+  " ",
+  .c0 {
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.c3 {
+  font-family: Lexend,sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c4 {
+  background: #fff7cc;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  border: 0.063rem solid;
+  border-color: #ffe555;
+  border-radius: 0.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c5 {
+  font-family: Lexend,sans-serif;
+}
+
+.c2 {
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+@media (min-width:750px) {
+  .c1 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:750px) {
+  .c1 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media (min-width:750px) {
+  .c1 {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+}
+
+@media (min-width:750px) {
+  .c2 {
+    font-weight: 600;
+  }
+}
+
+@media (min-width:750px) {
+  .c2 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c2 {
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c2 {
+    -webkit-letter-spacing: 0.0115rem;
+    -moz-letter-spacing: 0.0115rem;
+    -ms-letter-spacing: 0.0115rem;
+    letter-spacing: 0.0115rem;
+  }
+}
+
+<div
+    className="c0 c1"
+  >
+    <h1
+      className="c2"
+    >
+      Previously released lessons
+      <span
+        className="c3"
+      >
+         (5)
+      </span>
+    </h1>
+    <span
+      className="c4"
+    >
+      <span
+        className="c5"
+      >
+        <span
+          className="c5"
+        >
+          Year 7
+        </span>
+      </span>
+      <span
+        className="c5"
+      >
+        <span
+          className="c5"
+        >
+           • 
+        </span>
+        <span
+          className="c5"
+        >
+          Maths
+        </span>
+      </span>
+      <span
+        className="c5"
+      >
+        <span
+          className="c5"
+        >
+           • 
+        </span>
+        <span
+          className="c5"
+        >
+          Higher
+        </span>
+      </span>
+    </span>
+  </div>,
+]
+`;

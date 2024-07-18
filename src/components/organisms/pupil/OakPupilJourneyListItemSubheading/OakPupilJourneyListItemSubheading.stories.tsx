@@ -1,13 +1,13 @@
 import React from "react";
 import { StoryObj, Meta } from "@storybook/react";
 
-import { OakPupilJourneyPreviousLessons } from "./OakPupilJourneyListItemSubheading";
+import { OakPupilJourneyListItemSubheading } from "./OakPupilJourneyListItemSubheading";
 
 import { OakPupilJourneyListCounter } from "@/components/organisms";
 
-const meta: Meta<typeof OakPupilJourneyPreviousLessons> = {
-  title: "Components/organisms/pupil/OakPupilJourneyPreviousLessons",
-  component: OakPupilJourneyPreviousLessons,
+const meta: Meta<typeof OakPupilJourneyListItemSubheading> = {
+  title: "Components/organisms/pupil/OakPupilJourneyListItemSubheading",
+  component: OakPupilJourneyListItemSubheading,
   tags: ["autodocs"],
   argTypes: {},
   parameters: {
@@ -29,9 +29,9 @@ const meta: Meta<typeof OakPupilJourneyPreviousLessons> = {
 
 export default meta;
 
-type Story = StoryObj<typeof OakPupilJourneyPreviousLessons>;
+type Story = StoryObj<typeof OakPupilJourneyListItemSubheading>;
 
 export const Default: Story = {
-  render: (args) => <OakPupilJourneyPreviousLessons {...args} />,
+  render: (args) => <OakPupilJourneyListItemSubheading {...args} />,
   args: {},
 };

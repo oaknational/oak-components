@@ -3,7 +3,7 @@ import React from "react";
 import { OakBulletList, OakBulletListProps } from "@/components/molecules";
 import { OakFlex } from "@/components/atoms";
 
-export type OakPupilJourneyPreviousLessonsProps = {
+export type OakPupilJourneyListItemSubheadingProps = {
   textSlot?: React.ReactNode;
 } & OakBulletListProps;
 
@@ -15,8 +15,8 @@ export type OakPupilJourneyPreviousLessonsProps = {
  * textSlot? - Can pass if any react node, but <OakPupilJourneyListCounter /> is recommended
  *
  */
-export const OakPupilJourneyPreviousLessons = (
-  props: OakPupilJourneyPreviousLessonsProps,
+export const OakPupilJourneyListItemSubheading = (
+  props: OakPupilJourneyListItemSubheadingProps,
 ) => {
   const { textSlot, listItems } = props;
 
