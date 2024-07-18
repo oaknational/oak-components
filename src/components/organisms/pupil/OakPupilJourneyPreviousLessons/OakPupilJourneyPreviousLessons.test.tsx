@@ -7,13 +7,20 @@ import { OakPupilJourneyPreviousLessons } from "./OakPupilJourneyPreviousLessons
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { oakDefaultTheme } from "@/styles";
+import { OakPupilJourneyListCounter } from "@/components/organisms";
 
 describe("OakPupilJourneyPreviousLessons", () => {
   it("renders", () => {
     const { getByText } = renderWithTheme(
       <ThemeProvider theme={oakDefaultTheme}>
         <OakPupilJourneyPreviousLessons
-          numberOfLessons={5}
+          textSlot={
+            <OakPupilJourneyListCounter
+              tag="h1"
+              count={5}
+              countHeader="Previously released lessons"
+            />
+          }
           listItems={["Year 7", "Maths", "Higher"]}
           data-testid="test"
         />
@@ -27,7 +34,13 @@ describe("OakPupilJourneyPreviousLessons", () => {
       <ThemeProvider theme={oakDefaultTheme}>
         {" "}
         <OakPupilJourneyPreviousLessons
-          numberOfLessons={5}
+          textSlot={
+            <OakPupilJourneyListCounter
+              tag="h1"
+              count={5}
+              countHeader="Previously released lessons"
+            />
+          }
           listItems={["Year 7", "Maths", "Higher"]}
         />
       </ThemeProvider>,

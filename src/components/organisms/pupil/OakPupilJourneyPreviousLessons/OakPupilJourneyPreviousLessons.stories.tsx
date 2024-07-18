@@ -3,6 +3,8 @@ import { StoryObj, Meta } from "@storybook/react";
 
 import { OakPupilJourneyPreviousLessons } from "./OakPupilJourneyPreviousLessons";
 
+import { OakPupilJourneyListCounter } from "@/components/organisms";
+
 const meta: Meta<typeof OakPupilJourneyPreviousLessons> = {
   title: "Components/organisms/pupil/OakPupilJourneyPreviousLessons",
   component: OakPupilJourneyPreviousLessons,
@@ -14,7 +16,13 @@ const meta: Meta<typeof OakPupilJourneyPreviousLessons> = {
     },
   },
   args: {
-    numberOfLessons: 5,
+    textSlot: (
+      <OakPupilJourneyListCounter
+        tag="h1"
+        count={5}
+        countHeader="Previously released lessons"
+      />
+    ),
     listItems: ["Year 7", "Maths", "Higher"],
   },
 };

@@ -1,27 +1,24 @@
 import React from "react";
 
-import { OakPupilJourneyListCounter } from "../OakPupilJourneyListCounter";
-
 import { OakBulletList, OakBulletListProps } from "@/components/molecules";
 import { OakFlex } from "@/components/atoms";
 
 export type OakPupilJourneyPreviousLessonsProps = {
-  numberOfLessons: number;
+  textSlot?: React.ReactNode;
 } & OakBulletListProps;
 
 /**
  * This component displays a heading for the previous lessons
  *
- * numberOfLessons - The number of lessons that have been released
  *
- * listItems - add the a list of descriptions to be displayed
- *
+ * listItems - List of labels to be displayed
+ * textSlot? - Can pass if any react node, but <OakPupilJourneyListCounter /> is recommended
  *
  */
 export const OakPupilJourneyPreviousLessons = (
   props: OakPupilJourneyPreviousLessonsProps,
 ) => {
-  const { numberOfLessons, listItems } = props;
+  const { textSlot, listItems } = props;
 
   return (
     <OakFlex
@@ -31,13 +28,8 @@ export const OakPupilJourneyPreviousLessons = (
       $flexGrow={[null, 1]}
       $alignItems={["flex-start", "center"]}
       $gap={"space-between-m"}
-      $pt={"inner-padding-xl"}
     >
-      <OakPupilJourneyListCounter
-        tag="h1"
-        count={numberOfLessons}
-        countHeader="Previously released lessons"
-      />
+      {textSlot}
       <OakBulletList
         listItems={listItems}
         $background={"bg-decorative5-very-subdued"}

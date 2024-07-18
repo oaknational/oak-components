@@ -67,7 +67,13 @@ export const NoTitle: Story = {
       {...args}
       counterSlot={
         <OakPupilJourneyPreviousLessons
-          numberOfLessons={10}
+          textSlot={
+            <OakPupilJourneyListCounter
+              tag="h1"
+              count={10}
+              countHeader="Previously released lessons"
+            />
+          }
           listItems={["test 1", "test 2", "test 3"]}
         />
       }
