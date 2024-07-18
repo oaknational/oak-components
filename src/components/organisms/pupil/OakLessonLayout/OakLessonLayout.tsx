@@ -96,7 +96,9 @@ export const OakLessonLayout = ({
               fill={parseColor(contentBackgroundColor)({
                 theme: oakDefaultTheme,
               })}
-              stroke="white"
+              stroke={parseColor(contentBorderColor)({
+                theme: oakDefaultTheme,
+              })}
               stroke-width="8"
               mask="url(#wobbly_mask)"
             />
