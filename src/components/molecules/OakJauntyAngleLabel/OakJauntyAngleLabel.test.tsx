@@ -11,7 +11,7 @@ describe("OakjauntyAngleLabel", () => {
   it("matches snapshot", () => {
     const tree = create(
       <ThemeProvider theme={oakDefaultTheme}>
-        <OakJauntyAngleLabel type="starter" label="Select one answer" />
+        <OakJauntyAngleLabel label="Select one answer" />
       </ThemeProvider>,
     ).toJSON();
     expect(tree).toMatchSnapshot();
