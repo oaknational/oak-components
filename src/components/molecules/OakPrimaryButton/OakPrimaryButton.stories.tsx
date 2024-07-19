@@ -6,7 +6,10 @@ import { OakPrimaryButton } from "./OakPrimaryButton";
 import { oakIconNames } from "@/components/atoms/OakIcon";
 import { OakFlex } from "@/components/atoms";
 
-const controlIconNames = [null, [...oakIconNames].sort()].flat();
+const controlIconNames = [
+  null,
+  [...oakIconNames].sort((a, b) => a.localeCompare(b)),
+].flat();
 
 const meta: Meta<typeof OakPrimaryButton> = {
   component: OakPrimaryButton,
