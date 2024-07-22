@@ -3,17 +3,24 @@ import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
 import { ThemeProvider } from "styled-components";
 
-import { OakPupilJourneyPreviousLessons } from "./OakPupilJourneyPreviousLessons";
+import { OakPupilJourneyListItemSubheading } from "./OakPupilJourneyListItemSubheading";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { oakDefaultTheme } from "@/styles";
+import { OakPupilJourneyListCounter } from "@/components/organisms";
 
-describe("OakPupilJourneyPreviousLessons", () => {
+describe("OakPupilJourneyListItemSubheading", () => {
   it("renders", () => {
     const { getByText } = renderWithTheme(
       <ThemeProvider theme={oakDefaultTheme}>
-        <OakPupilJourneyPreviousLessons
-          numberOfLessons={5}
+        <OakPupilJourneyListItemSubheading
+          textSlot={
+            <OakPupilJourneyListCounter
+              tag="h1"
+              count={5}
+              countHeader="Previously released lessons"
+            />
+          }
           listItems={["Year 7", "Maths", "Higher"]}
           data-testid="test"
         />
@@ -26,8 +33,14 @@ describe("OakPupilJourneyPreviousLessons", () => {
     const tree = create(
       <ThemeProvider theme={oakDefaultTheme}>
         {" "}
-        <OakPupilJourneyPreviousLessons
-          numberOfLessons={5}
+        <OakPupilJourneyListItemSubheading
+          textSlot={
+            <OakPupilJourneyListCounter
+              tag="h1"
+              count={5}
+              countHeader="Previously released lessons"
+            />
+          }
           listItems={["Year 7", "Maths", "Higher"]}
         />
       </ThemeProvider>,

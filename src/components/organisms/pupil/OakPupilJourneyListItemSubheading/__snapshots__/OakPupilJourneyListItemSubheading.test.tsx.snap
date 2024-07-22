@@ -1,10 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OakPupilJourneyPreviousLessons matches snapshot 1`] = `
+exports[`OakPupilJourneyListItemSubheading matches snapshot 1`] = `
 [
   " ",
   .c0 {
-  padding-top: 1.5rem;
   font-family: Lexend,sans-serif;
 }
 
