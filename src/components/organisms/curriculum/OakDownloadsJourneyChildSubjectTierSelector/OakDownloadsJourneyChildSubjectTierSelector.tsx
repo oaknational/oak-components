@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 
 import { OakFlex, OakHeading } from "@/components/atoms";
 import {
+  OakInlineBanner,
   OakPrimaryButton,
   OakRadioButton,
   OakRadioGroup,
@@ -19,7 +20,7 @@ export interface Subject {
 
 export type OakDownloadsJourneyChildSubjectTierSelectorProps = {
   /* An array of Tier objects containing `tier` and `tierSlug` */
-  tiers: Tier[];
+  tiers?: Tier[];
   /* An array of Subject objects containing `subject` and `subjectSlug` */
   childSubjects?: Subject[];
   /* Callback function which returns the selected tier and subject once the Next button is pressed. */
@@ -41,6 +42,8 @@ const UnstyledComponent = (
   >(childSubjects && childSubjects[0] ? childSubjects[0]?.subjectSlug : null);
   const [tierSelected, setTierSelected] = useState<string>("foundation");
 
+  const tiersAvailable = tiers && tierSelected.length > 0;
+  const childSubjectsAvailable = childSubjects && childSubjects.length > 0;
   function handleChildSubjectSelection(
     e: React.ChangeEvent<HTMLInputElement>,
   ): void {
@@ -62,7 +65,15 @@ const UnstyledComponent = (
       <OakHeading $font={"heading-4"} tag="h4">
         Download
       </OakHeading>
-      {childSubjects && (
+
+      <OakInlineBanner
+        isOpen={true}
+        message={`Before downloading, choose ${
+          childSubjectsAvailable && tiersAvailable ? "options" : "an option"
+        } for KS4. The document will still display both KS3 and KS4.`}
+      />
+
+      {childSubjectsAvailable && (
         <OakRadioGroup
           label="Choose subject for KS4 units"
           name="childSubjectRadio"
@@ -92,7 +103,7 @@ const UnstyledComponent = (
         </OakRadioGroup>
       )}
 
-      {tiers && (
+      {tiersAvailable && (
         <OakRadioGroup
           data-testid="tier-selector"
           label="Choose learning tier for KS4 units"
