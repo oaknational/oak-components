@@ -17,9 +17,9 @@ export const lessonSectionNames: string[] = [
   "review",
 ];
 
-type Phase = "primary" | "secondary";
+export type LessonSectionName = (typeof lessonSectionNames)[number];
 
-type LessonSectionName = (typeof lessonSectionNames)[number];
+type Phase = "primary" | "secondary";
 
 export type OakLessonLayoutProps = {
   lessonSectionName: LessonSectionName;

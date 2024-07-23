@@ -75,13 +75,7 @@ export const Default: Story = {
       topNavSlot={
         lessonSectionName !== "overview" && lessonSectionName !== "review" ? (
           <OakLessonTopNav
-            lessonSectionName={
-              lessonSectionName as
-                | "intro"
-                | "starter-quiz"
-                | "video"
-                | "exit-quiz"
-            }
+            lessonSectionName={lessonSectionName}
             backLinkSlot={<OakBackLink type="button" />}
             heading={headings[lessonSectionName]}
             mobileSummary={mobileSumamry[lessonSectionName]}
