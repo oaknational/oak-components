@@ -8,7 +8,7 @@ export type OakPupilJourneyListProps = {
   phase: "primary" | "secondary";
   titleSlot?: React.ReactNode;
   filterSlot?: React.ReactNode;
-  counterSlot: React.ReactNode;
+  subheadingSlot: React.ReactNode;
 };
 
 /*
@@ -24,10 +24,10 @@ However, I do not want to introduce break changes in this PR.
 const Slots = ({
   titleSlot,
   filterSlot,
-  counterSlot,
+  subheadingSlot,
 }: Pick<
   OakPupilJourneyListProps,
-  "titleSlot" | "filterSlot" | "counterSlot"
+  "titleSlot" | "filterSlot" | "subheadingSlot"
 >) => {
   if (titleSlot) {
     return (
@@ -39,12 +39,12 @@ const Slots = ({
 
         <OakFlex $flexDirection={"column"} $gap={"space-between-m2"}>
           {filterSlot}
-          <OakFlex>{counterSlot}</OakFlex>
+          <OakFlex>{subheadingSlot}</OakFlex>
         </OakFlex>
       </OakFlex>
     );
   } else {
-    return <OakFlex $pt={"inner-padding-xl"}>{counterSlot}</OakFlex>;
+    return <OakFlex $pt={"inner-padding-xl"}>{subheadingSlot}</OakFlex>;
   }
 };
 
@@ -59,7 +59,7 @@ export const OakPupilJourneyList = ({
   children,
   phase,
   titleSlot,
-  counterSlot,
+  subheadingSlot,
   filterSlot,
 }: OakPupilJourneyListProps) => {
   const outerBackgroundColor =
@@ -79,7 +79,7 @@ export const OakPupilJourneyList = ({
       <Slots
         titleSlot={titleSlot}
         filterSlot={filterSlot}
-        counterSlot={counterSlot}
+        subheadingSlot={subheadingSlot}
       />
       <OakFlex
         $flexDirection={"column"}

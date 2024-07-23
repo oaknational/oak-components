@@ -2,7 +2,7 @@ import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
 import { OakPupilJourneyListCounter } from "../OakPupilJourneyListCounter";
-import { OakPupilJourneyPreviousLessons } from "../OakPupilJourneyPreviousLessons";
+import { OakPupilJourneyListItemSubheading } from "../OakPupilJourneyListItemSubheading";
 
 import { OakPupilJourneyList } from "./OakPupilJourneyList";
 
@@ -23,7 +23,7 @@ const meta: Meta<typeof OakPupilJourneyList> = {
   },
   parameters: {
     controls: {
-      include: ["phase", "titleSlot", "counterSlot"],
+      include: ["phase", "titleSlot", "subheadingSlot"],
     },
   },
 };
@@ -42,7 +42,7 @@ export const Default: Story = {
           breadcrumbs={["first", "second", "third"]}
         />
       }
-      counterSlot={
+      subheadingSlot={
         <OakPupilJourneyListCounter
           count={10}
           countHeader="New lessons"
@@ -65,9 +65,15 @@ export const NoTitle: Story = {
   render: (args) => (
     <OakPupilJourneyList
       {...args}
-      counterSlot={
-        <OakPupilJourneyPreviousLessons
-          numberOfLessons={10}
+      subheadingSlot={
+        <OakPupilJourneyListItemSubheading
+          textSlot={
+            <OakPupilJourneyListCounter
+              tag="h1"
+              count={10}
+              countHeader="Previously released lessons"
+            />
+          }
           listItems={["test 1", "test 2", "test 3"]}
         />
       }
@@ -94,7 +100,7 @@ export const WithFilter: Story = {
           breadcrumbs={["first", "second", "third"]}
         />
       }
-      counterSlot={
+      subheadingSlot={
         <OakPupilJourneyListCounter
           count={10}
           countHeader="New lessons"

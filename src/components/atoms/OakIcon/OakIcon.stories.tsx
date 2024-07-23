@@ -7,7 +7,7 @@ import { OakFlex, OakTypography } from "@/components/atoms";
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 import { colorFilterArgTypes } from "@/storybook-helpers/colorFilterStyleHelpers";
 
-const controlIconNames = [...oakIconNames].sort();
+const controlIconNames = [...oakIconNames].sort((a, b) => a.localeCompare(b));
 
 const meta: Meta<typeof OakIcon> = {
   component: OakIcon,

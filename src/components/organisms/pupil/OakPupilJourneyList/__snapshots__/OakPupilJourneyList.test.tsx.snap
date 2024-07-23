@@ -67,7 +67,7 @@ exports[`OakPupilJourneyList matches snapshot 1`] = `
     className="c2 c3"
   >
     <div>
-      Counter Slot Here
+      Subheading Slot Here
     </div>
   </div>
   <div
