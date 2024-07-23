@@ -32,3 +32,4 @@ export * from "./OakCardWithHandDrawnBorder";
 export * from "./OakInlineBanner";
 export * from "./OakSecondaryButtonAsRadio";
 export * from "./OakButtonAsRadioGroup";
+export * from "./OakJauntyAngleLabel";
