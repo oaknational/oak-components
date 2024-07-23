@@ -120,6 +120,13 @@ export const backgrounds = {
   "confetti-pink": "pupil-journey/confetti-pink.svg",
   "confetti-lavender": "pupil-journey/confetti-lavender.svg",
   "confetti-mint": "pupil-journey/confetti-mint.svg",
+  "lesson-confetti-green": "pupil-journey/lesson/lesson-confetti-green.svg",
+  "lesson-confetti-mint": "pupil-journey/lesson/lesson-confetti-mint.svg",
+  "lesson-confetti-pink": "pupil-journey/lesson/lesson-confetti-pink.svg",
+  "lesson-confetti-green-lemon":
+    "pupil-journey/lesson/lesson-confetti-green-lemon.svg",
+  "lesson-confetti-lavender":
+    "pupil-journey/lesson/lesson-confetti-lavender.svg",
   "line-pink": "pupil-journey/line-pink.svg",
   "line-lavender": "pupil-journey/line-lavender.svg",
   "line-mint": "pupil-journey/line-mint.svg",
