@@ -76,19 +76,23 @@ export type OakUnitListItemProps<C extends ElementType> = {
   unavailable?: boolean;
   index: number;
   title: string;
-  yearGroup: string;
-  numberOfLessons: number;
+  yearTitle?: string | null;
+  lessonCount: number | null;
   isLegacy: boolean;
   href: string;
 } & ComponentPropsWithoutRef<C>;
 
-const UnstyledComponent = <C extends ElementType = "a">(
+/**
+ *
+ * OakUnitsListItem component used as links for unit cards
+ */
+export const OakUnitListItem = <C extends ElementType = "a">(
   props: OakUnitListItemProps<C>,
 ) => {
   const {
     as,
     lessonSectionName,
-    numberOfLessons,
+    lessonCount,
     progress,
     disabled,
     href,
@@ -102,7 +106,7 @@ const UnstyledComponent = <C extends ElementType = "a">(
   const disabledOrUnavailable = disabled || unavailable;
 
   return (
-    <OakBox role="listitem">
+    <OakBox $width={"100%"} role="listitem">
       <StyledUnitListItem
         as={disabledOrUnavailable ? "div" : as ?? "a"}
         $alignItems={"center"}
@@ -165,7 +169,7 @@ const UnstyledComponent = <C extends ElementType = "a">(
                   disabledOrUnavailable ? "text-disabled" : "text-primary"
                 }
               >
-                {props.yearGroup}
+                {props.yearTitle}
               </OakP>
             </OakFlex>
             <OakFlex>
@@ -180,7 +184,7 @@ const UnstyledComponent = <C extends ElementType = "a">(
                     disabledOrUnavailable ? "text-disabled" : "text-primary"
                   }
                 >
-                  {numberOfLessons} Lessons
+                  {lessonCount} Lessons
                 </OakSpan>
               </StyledLessonLink>
             </OakFlex>
@@ -190,9 +194,3 @@ const UnstyledComponent = <C extends ElementType = "a">(
     </OakBox>
   );
 };
-
-/**
- *
- * OakUnitsListItem component used as links for unit cards
- */
-export const OakUnitListItem = styled(UnstyledComponent)``;

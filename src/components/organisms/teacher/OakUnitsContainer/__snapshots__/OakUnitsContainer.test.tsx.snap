@@ -300,6 +300,17 @@ exports[`OakUnitsContainer matches snapshot 1`] = `
   width: 100%;
 }
 
+.c28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
 @media (min-width:750px) {
   .c8 {
     width: 3rem;
@@ -497,7 +508,7 @@ exports[`OakUnitsContainer matches snapshot 1`] = `
   </div>
   <ul
     aria-label="A list of units"
-    className="c27"
+    className="c27 c28"
   >
     <div
       className="c2"

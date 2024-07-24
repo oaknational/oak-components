@@ -14,15 +14,15 @@ const meta: Meta<typeof OakUnitListItem> = {
       "Migration: What do sources tell us about the British Empire in India and Africa?",
     index: 1,
     href: "#",
-    yearGroup: "Year 10",
-    numberOfLessons: 10,
+    yearTitle: "Year 10",
+    lessonCount: 10,
     isLegacy: false,
   },
   argTypes: {
     title: { control: { type: "text" } },
-    yearGroup: { control: { type: "text" } },
+    yearTitle: { control: { type: "text" } },
     index: { control: { type: "number" } },
-    numberOfLessons: { control: { type: "number" } },
+    lessonCount: { control: { type: "number" } },
     disabled: { control: { type: "boolean" } },
     unavailable: { control: { type: "boolean" } },
     isLegacy: { control: { type: "boolean" } },
@@ -49,37 +49,46 @@ const meta: Meta<typeof OakUnitListItem> = {
           {Story()}
           <OakUnitListItem
             title={"Numerals 1-10 (Legacy example)"}
-            numberOfLessons={10}
+            lessonCount={10}
             index={2}
             isLegacy={true}
-            yearGroup="Year 10"
+            yearTitle="Year 10"
+            href={""}
           />
           <OakUnitListItem
             title={"'The Three Billy Goats Gruff': reading and writing"}
-            numberOfLessons={7}
+            lessonCount={7}
             index={3}
-            yearGroup="Year 10"
+            yearTitle="Year 10"
             disabled={true}
+            isLegacy={false}
+            href={""}
           />
           <OakUnitListItem
             title={"Test Unit"}
-            numberOfLessons={8}
+            lessonCount={8}
             index={4}
-            yearGroup="Year 9"
+            yearTitle="Year 9"
+            isLegacy={false}
+            href={""}
           />
           <OakUnitListItem
             title={"Apple"}
-            numberOfLessons={41}
+            lessonCount={41}
             index={5}
-            yearGroup="Year 9"
+            yearTitle="Year 9"
+            isLegacy={false}
+            href={""}
           />
           <OakUnitListItem
             title={
               "'The Three Billy Goats Gruff': reading and writing 'The Three Billy Goats Gruff': reading and writing"
             }
-            numberOfLessons={41}
+            lessonCount={41}
             index={5}
-            yearGroup="Year 9"
+            yearTitle="Year 9"
+            isLegacy={false}
+            href={""}
           />
         </OakFlex>
       );
@@ -90,7 +99,7 @@ const meta: Meta<typeof OakUnitListItem> = {
       include: [
         "title",
         "index",
-        "numberOfLessons",
+        "lessonCount",
         "disabled",
         "unavailable",
         "isLegacy",
