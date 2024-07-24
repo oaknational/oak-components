@@ -5,7 +5,11 @@ import { OakLessonTopNav } from "../OakLessonTopNav";
 import { OakLessonBottomNav } from "../OakLessonBottomNav";
 import { OakQuizCounter } from "../OakQuizCounter";
 
-import { OakLessonLayout, OakLessonLayoutProps } from "./OakLessonLayout";
+import {
+  OakLessonLayout,
+  OakLessonLayoutProps,
+  lessonSectionNames,
+} from "./OakLessonLayout";
 
 import { OakBackLink, OakPrimaryButton } from "@/components/molecules";
 import { OakBox } from "@/components/atoms";
@@ -15,14 +19,28 @@ const meta: Meta<typeof OakLessonLayout> = {
   tags: ["autodocs"],
   title: "components/organisms/pupil/OakLessonLayout",
   decorators: [(Story) => <Story />],
+  argTypes: {
+    lessonSectionName: {
+      options: [...lessonSectionNames],
+      control: { type: "radio" },
+    },
+    phase: {
+      options: ["primary", "secondary"],
+      control: { type: "radio" },
+    },
+    celebrate: {
+      control: { type: "boolean" },
+    },
+  },
   parameters: {
     controls: {
-      include: ["lessonSectionName"],
+      include: ["lessonSectionName", "celebrate", "phase"],
     },
     layout: "fullscreen",
   },
   args: {
-    lessonSectionName: "intro",
+    lessonSectionName: lessonSectionNames[0],
+    celebrate: false,
   },
 };
 export default meta;
