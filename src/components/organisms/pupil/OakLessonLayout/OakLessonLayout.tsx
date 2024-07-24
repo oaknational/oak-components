@@ -1,22 +1,30 @@
 import React, { ReactNode } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { OakBox, OakFlex } from "@/components/atoms";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { getBreakpoint } from "@/styles/utils/responsiveStyle";
 import { OakCombinedColorToken, oakDefaultTheme } from "@/styles";
+import { backgrounds } from "@/image-map";
 import { parseColor } from "@/styles/helpers/parseColor";
 
-type LessonSectionName =
-  | "overview"
-  | "intro"
-  | "starter-quiz"
-  | "video"
-  | "exit-quiz"
-  | "review";
+export const lessonSectionNames: string[] = [
+  "overview",
+  "intro",
+  "starter-quiz",
+  "video",
+  "exit-quiz",
+  "review",
+];
+
+export type LessonSectionName = (typeof lessonSectionNames)[number];
+
+type Phase = "primary" | "secondary";
 
 export type OakLessonLayoutProps = {
   lessonSectionName: LessonSectionName;
+  phase: Phase;
+  celebrate: boolean;
   topNavSlot: ReactNode;
   bottomNavSlot: ReactNode;
   children: ReactNode;
@@ -26,10 +34,24 @@ export type OakLessonLayoutProps = {
  * `OakBox` does not support space-between tokens on `padding` only `margin`, so we need to
  * set it here to apply appropriate padding to the top of the content.
  */
-const StyledLayoutBox = styled(OakBox)`
+const StyledLayoutBox = styled(OakBox)<{
+  sectionName: LessonSectionName;
+  phase: Phase;
+  celebrate: boolean;
+}>`
   @media (min-width: ${getBreakpoint("small")}px) {
     padding-top: ${parseSpacing("space-between-xl")};
   }
+  ${(props) => css`
+    ${getBackgroundUrlForLesson(
+      props.sectionName,
+      props.phase,
+      props.celebrate,
+    )}
+  `}
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: 100%;
 `;
 
 const StickyFooter = styled(OakBox)`
@@ -43,6 +65,8 @@ const StickyFooter = styled(OakBox)`
  */
 export const OakLessonLayout = ({
   lessonSectionName,
+  phase = "primary",
+  celebrate = false,
   topNavSlot,
   bottomNavSlot,
   children,
@@ -52,7 +76,7 @@ export const OakLessonLayout = ({
     contentBackgroundColor,
     contentBorderColor,
     mobileContentBackgroundColor,
-  ] = pickSectionColours(lessonSectionName);
+  ] = pickSectionColours(lessonSectionName, phase);
 
   return (
     <StyledLayoutBox
@@ -61,6 +85,9 @@ export const OakLessonLayout = ({
       $minHeight={"100%"}
       $ph={["inner-padding-none", "inner-padding-xl"]}
       $background={pageBackgroundColor}
+      sectionName={lessonSectionName}
+      celebrate={celebrate}
+      phase={phase}
     >
       <OakFlex
         $flexDirection="column"
@@ -148,6 +175,7 @@ export const OakLessonLayout = ({
 
 function pickSectionColours(
   sectionName: LessonSectionName,
+  phase: Phase,
 ): [
   pageBackgroundColor: OakCombinedColorToken,
   contentBackgroundColor: OakCombinedColorToken,
@@ -156,12 +184,19 @@ function pickSectionColours(
 ] {
   switch (sectionName) {
     case "overview":
-      return [
-        "bg-decorative1-main",
-        "bg-primary",
-        "border-decorative1-stronger",
-        "bg-primary",
-      ];
+      return phase === "secondary"
+        ? [
+            "bg-decorative3-subdued",
+            "bg-primary",
+            "border-decorative3",
+            "bg-primary",
+          ]
+        : [
+            "bg-decorative4-subdued",
+            "bg-primary",
+            "border-decorative4",
+            "bg-primary",
+          ];
     case "intro":
       return [
         "bg-decorative2-subdued",
@@ -191,11 +226,57 @@ function pickSectionColours(
         "bg-decorative5-subdued",
       ];
     case "review":
+      return phase === "secondary"
+        ? [
+            "bg-decorative3-subdued",
+            "bg-primary",
+            "border-decorative3",
+            "bg-primary",
+          ]
+        : [
+            "bg-decorative4-subdued",
+            "bg-primary",
+            "border-decorative4",
+            "bg-primary",
+          ];
+    default:
       return [
-        "bg-decorative1-main",
+        "bg-decorative3-subdued",
         "bg-primary",
-        "border-decorative1-stronger",
+        "border-decorative3",
         "bg-primary",
       ];
+  }
+}
+
+function getBackgroundUrlForLesson(
+  sectionName: LessonSectionName,
+  phase: Phase,
+  celebrate: boolean,
+) {
+  const prefix = `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/`;
+  switch (sectionName) {
+    case "overview":
+      return phase === "secondary"
+        ? `background-image: url(${prefix}${backgrounds["lesson-confetti-lavender"]});`
+        : `background-image: url(${prefix}${backgrounds["lesson-confetti-pink"]});`;
+    case "intro":
+      return `background-image: url(${prefix}${backgrounds["lesson-confetti-mint"]});`;
+    case "starter-quiz":
+      return celebrate
+        ? `background-image: url(${prefix}${backgrounds["lesson-confetti-green"]});`
+        : ``;
+    case "video":
+      return `background-image: url(${prefix}${backgrounds["lesson-confetti-pink"]});`;
+    case "exit-quiz":
+      return celebrate
+        ? `background-image: url(${prefix}${backgrounds["lesson-confetti-green-lemon"]});`
+        : ``;
+    case "review":
+      return phase === "secondary"
+        ? `background-image: url(${prefix}${backgrounds["lesson-confetti-lavender"]});`
+        : `background-image: url(${prefix}${backgrounds["lesson-confetti-pink"]});`;
+    default:
+      return "";
   }
 }

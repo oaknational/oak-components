@@ -1,6 +1,8 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
 
+import { LessonSectionName } from "../OakLessonLayout";
+
 import {
   OakBox,
   OakFlex,
@@ -11,7 +13,7 @@ import {
 import { OakRoundIcon } from "@/components/molecules";
 import { getBreakpoint } from "@/styles/utils/responsiveStyle";
 
-type LessonSectionName = "intro" | "starter-quiz" | "video" | "exit-quiz";
+type LessonTopNavSectionName = Omit<LessonSectionName, "overview" | "review">;
 
 const StyledMobileSummary = styled(OakSpan)`
   @media (min-width: ${getBreakpoint("small")}px) {
@@ -20,7 +22,7 @@ const StyledMobileSummary = styled(OakSpan)`
 `;
 
 export type OakLessonTopNavProps = {
-  lessonSectionName: LessonSectionName;
+  lessonSectionName: LessonTopNavSectionName;
   /**
    * Slot to render `OakBackLink` or similar
    */
@@ -75,7 +77,7 @@ export const OakLessonTopNav = ({
 };
 
 function pickSectionIcon(
-  sectionName: LessonSectionName,
+  sectionName: LessonTopNavSectionName,
 ): Pick<OakIconProps, "iconName" | "$background"> {
   switch (sectionName) {
     case "intro":
@@ -97,6 +99,11 @@ function pickSectionIcon(
       return {
         iconName: "quiz",
         $background: "lemon110",
+      };
+    default:
+      return {
+        iconName: "intro",
+        $background: "aqua110",
       };
   }
 }
