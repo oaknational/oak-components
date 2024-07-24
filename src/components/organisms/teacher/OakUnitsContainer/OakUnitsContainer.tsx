@@ -4,6 +4,13 @@ import styled, { css } from "styled-components";
 import { OakUnitsHeader } from "../OakUnitsHeader";
 
 import { OakFlex, OakUL } from "@/components/atoms";
+import { parseSpacing } from "@/styles/helpers/parseSpacing";
+
+const OakULFlex = styled(OakUL)`
+  display: flex;
+  flex-direction: column;
+  gap: ${parseSpacing("space-between-xs")};
+`;
 
 export type OakUnitsContainerProps = {
   isLegacy: boolean;
@@ -45,9 +52,9 @@ const UnstyledComponent = (props: OakUnitsContainerProps) => {
           $width="100%"
         />
       )}
-      <OakUL aria-label="A list of units" $reset $width="100%">
+      <OakULFlex aria-label="A list of units" $reset $width="100%">
         {...unitCards}
-      </OakUL>
+      </OakULFlex>
     </OakFlex>
   );
 };
