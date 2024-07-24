@@ -23,8 +23,8 @@ type Phase = "primary" | "secondary";
 
 export type OakLessonLayoutProps = {
   lessonSectionName: LessonSectionName;
-  phase: Phase;
-  celebrate: boolean;
+  phase?: Phase;
+  celebrate?: boolean;
   topNavSlot: ReactNode;
   bottomNavSlot: ReactNode;
   children: ReactNode;
