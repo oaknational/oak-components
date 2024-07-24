@@ -42,16 +42,18 @@ const StyledLayoutBox = styled(OakBox)<{
   @media (min-width: ${getBreakpoint("small")}px) {
     padding-top: ${parseSpacing("space-between-xl")};
   }
-  ${(props) => css`
-    ${getBackgroundUrlForLesson(
-      props.sectionName,
-      props.phase,
-      props.celebrate,
-    )}
-  `}
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-size: 100%;
+  @media (min-width: ${getBreakpoint("large")}px) {
+    ${(props) => css`
+      ${getBackgroundUrlForLesson(
+        props.sectionName,
+        props.phase,
+        props.celebrate,
+      )}
+    `}
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: 100%;
+  }
 `;
 
 const StickyFooter = styled(OakBox)`
