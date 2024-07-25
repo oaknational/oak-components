@@ -1,6 +1,5 @@
-import React, { RefObject, useEffect, useState } from "react";
+import React, { RefObject, useState } from "react";
 import styled, { css } from "styled-components";
-import { useRouter } from "next/router";
 
 import { OakFlex, OakIcon } from "@/components/atoms";
 import { InternalButton } from "@/components/atoms/InternalButton";
@@ -100,7 +99,6 @@ export const OakPagination = ({
   totalPages,
   nextHref,
   prevHref,
-  firstItemRef,
 }: OakPaginationProps) => {
   const generatePageNumbers = (activePage: number, totalPages: number) => {
     const pageNumbers: (number | string)[] = [];
@@ -138,14 +136,6 @@ export const OakPagination = ({
     }
     return pageNumbers;
   };
-
-  const router = useRouter();
-  useEffect(() => {
-    if (router.query.page && firstItemRef?.current) {
-      firstItemRef.current.focus();
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  }, [firstItemRef, router.query.page]);
 
   const [activePage, setActivePage] = useState(currentPage);
 
