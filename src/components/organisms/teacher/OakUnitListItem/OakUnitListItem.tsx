@@ -91,7 +91,7 @@ export type OakUnitListItemProps<C extends ElementType> = {
  *
  * OakUnitsListItem component used as links for unit cards
  */
-export const OakUnitListItem = <C extends ElementType = "a">(
+export const OakUnitListItem = <C extends ElementType>(
   props: OakUnitListItemProps<C>,
 ) => {
   const {
@@ -114,7 +114,6 @@ export const OakUnitListItem = <C extends ElementType = "a">(
   return (
     <OakBox $width={"100%"} role="listitem">
       <StyledUnitListItem
-        as={disabledOrUnavailable ? "div" : as ?? "a"}
         $alignItems={"center"}
         $background={unavailable ? "bg-neutral" : "bg-primary"}
         $borderRadius="border-radius-m"
@@ -122,6 +121,7 @@ export const OakUnitListItem = <C extends ElementType = "a">(
         href={disabledOrUnavailable ? undefined : href}
         onClick={disabledOrUnavailable ? undefined : onClick}
         ref={firstItemRef}
+        as={"a"}
         {...rest}
       >
         <StyledOakIndexBox

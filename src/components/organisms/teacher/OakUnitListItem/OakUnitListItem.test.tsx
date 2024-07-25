@@ -42,23 +42,6 @@ describe("OakUnitListItem", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("renders a div when the item is disabled", () => {
-    const { getByTestId } = renderWithTheme(
-      <OakUnitListItem
-        data-testid="unit-card"
-        disabled
-        index={0}
-        title={""}
-        yearTitle={""}
-        lessonCount={0}
-        isLegacy={false}
-        href={""}
-      />,
-    );
-
-    expect(getByTestId("unit-card").tagName).toBe("DIV");
-  });
-
   it("renders an anchor when the item is not disabled", () => {
     const { getByTestId } = renderWithTheme(
       <OakUnitListItem
