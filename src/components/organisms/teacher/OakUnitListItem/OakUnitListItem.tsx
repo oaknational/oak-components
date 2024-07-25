@@ -1,4 +1,8 @@
-import React, { ComponentPropsWithoutRef, ElementType } from "react";
+import React, {
+  ComponentPropsWithoutRef,
+  ElementType,
+  MutableRefObject,
+} from "react";
 import styled, { css } from "styled-components";
 
 import { OakFlex, OakBox, OakP, OakHeading, OakSpan } from "@/components/atoms";
@@ -80,6 +84,7 @@ export type OakUnitListItemProps<C extends ElementType> = {
   lessonCount: number | null;
   isLegacy: boolean;
   href: string;
+  firstItemRef?: MutableRefObject<HTMLAnchorElement | null> | null | undefined;
 } & ComponentPropsWithoutRef<C>;
 
 /**
@@ -100,6 +105,7 @@ export const OakUnitListItem = <C extends ElementType = "a">(
     onClick,
     index,
     isLegacy,
+    firstItemRef,
     ...rest
   } = props;
 
@@ -115,6 +121,7 @@ export const OakUnitListItem = <C extends ElementType = "a">(
         $disabled={disabledOrUnavailable}
         href={disabledOrUnavailable ? undefined : href}
         onClick={disabledOrUnavailable ? undefined : onClick}
+        ref={firstItemRef}
         {...rest}
       >
         <StyledOakIndexBox
