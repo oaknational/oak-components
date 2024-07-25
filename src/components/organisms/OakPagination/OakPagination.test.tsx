@@ -10,14 +10,24 @@ import renderWithTheme from "@/test-helpers/renderWithTheme";
 describe("OakPagination Component", () => {
   it("renders", () => {
     const { getByTestId } = renderWithTheme(
-      <OakPagination currentPage={1} totalPages={8} />,
+      <OakPagination
+        paginationHref={""}
+        pageName={"test"}
+        currentPage={1}
+        totalPages={8}
+      />,
     );
     expect(getByTestId("pagination")).toBeInTheDocument();
   });
 
   it("renders the correct number of pages", () => {
     const { getAllByTestId } = renderWithTheme(
-      <OakPagination currentPage={1} totalPages={7} />,
+      <OakPagination
+        paginationHref={""}
+        pageName={"test"}
+        currentPage={1}
+        totalPages={7}
+      />,
     );
 
     expect(getAllByTestId("page-number-component")).toHaveLength(7);
@@ -25,14 +35,24 @@ describe("OakPagination Component", () => {
 
   it("disables the backwards button when on the first page", () => {
     const { getByTestId } = renderWithTheme(
-      <OakPagination currentPage={1} totalPages={7} />,
+      <OakPagination
+        paginationHref={""}
+        pageName={"test"}
+        currentPage={1}
+        totalPages={7}
+      />,
     );
     expect(getByTestId("backwards-button")).toBeDisabled();
   });
 
   it("disables the backwards button when on the first page", () => {
     const { getByTestId } = renderWithTheme(
-      <OakPagination currentPage={7} totalPages={7} />,
+      <OakPagination
+        paginationHref={""}
+        pageName={"test"}
+        currentPage={7}
+        totalPages={7}
+      />,
     );
 
     const forwardsButton = getByTestId("forwards-button");
@@ -42,7 +62,12 @@ describe("OakPagination Component", () => {
 
   it.skip("matches snapshot", () => {
     const tree = create(
-      <OakPagination currentPage={1} totalPages={7} />,
+      <OakPagination
+        paginationHref={""}
+        pageName={"test"}
+        currentPage={1}
+        totalPages={7}
+      />,
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });

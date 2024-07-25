@@ -1,13 +1,14 @@
 import React, { RefObject, useState } from "react";
 import styled, { css } from "styled-components";
 
-import { OakFlex, OakIcon } from "@/components/atoms";
+import { OakFlex, OakIcon, OakLI, OakUL } from "@/components/atoms";
 import { InternalButton } from "@/components/atoms/InternalButton";
 
 /**
  * TODO: Pagination component
  * ! - refactor chevron button to OakIconButton component
  * ! - refactor code to make it clean
+ * ! - Add tests
  * ? - Create and OakIconButton compoent?
  */
 
@@ -17,6 +18,8 @@ export type OakPaginationProps = {
   firstItemRef?: RefObject<HTMLAnchorElement> | null;
   nextHref?: string;
   prevHref?: string;
+  paginationHref: string;
+  pageName: string;
 };
 
 type OakPageNumberProps = {
@@ -26,6 +29,7 @@ type OakPageNumberProps = {
   firstItemRef?: RefObject<HTMLAnchorElement> | null;
   href: string;
   onClick?: (event: React.MouseEvent) => void;
+  pageName: string;
 };
 
 const StyledChevronButton = styled(InternalButton)<{ disabledColor: string }>`
@@ -63,12 +67,13 @@ const OakPageNumber = ({
   pageIndex,
   onClick,
   href,
+  pageName,
 }: OakPageNumberProps) => {
   const isActive = currentPage === pageIndex;
   return (
     <StyledNumberButton
       data-testid="page-number-component"
-      aria-label={`Go to page ${pageIndex}`}
+      aria-label={`${pageName} page ${pageIndex}`}
       $font={"heading-7"}
       onClick={onClick}
       element="a"
@@ -99,6 +104,8 @@ export const OakPagination = ({
   totalPages,
   nextHref,
   prevHref,
+  paginationHref,
+  pageName,
 }: OakPaginationProps) => {
   const generatePageNumbers = (activePage: number, totalPages: number) => {
     const pageNumbers: (number | string)[] = [];
@@ -175,6 +182,7 @@ export const OakPagination = ({
             handleChevronClick("backwards");
           }}
           href={prevHref}
+          aria-disabled={isFirstPage}
           disabled={activePage <= 1}
           aria-label={isFirstPage ? "No previous pages" : "Go to previous page"}
         >
@@ -183,27 +191,32 @@ export const OakPagination = ({
             $colorFilter={isFirstPage ? "icon-disabled" : null}
           />
         </StyledChevronButton>
-        <OakFlex $gap={"space-between-s"}>
+        <OakUL $reset $display={"flex"}>
           {pageNumbers.map((pageIndex) => {
             if (typeof pageIndex === "number") {
               return (
-                <OakPageNumber
-                  key={pageIndex}
-                  pageIndex={pageIndex + 1}
-                  currentPage={activePage}
-                  href={`#`}
-                  onClick={() => handleNumberClick(pageIndex + 1)}
-                />
+                <OakLI key={pageIndex} $mh={"space-between-ssx"}>
+                  <OakPageNumber
+                    pageName={pageName}
+                    key={pageIndex}
+                    pageIndex={pageIndex + 1}
+                    currentPage={activePage}
+                    href={`${paginationHref}/${pageIndex + 1}`}
+                    onClick={() => handleNumberClick(pageIndex + 1)}
+                  />
+                </OakLI>
               );
             } else {
               return (
-                <OakFlex $alignSelf={"flex-end"}>
-                  <OakEllipsis key={pageIndex} />
-                </OakFlex>
+                <OakLI $mh={"space-between-ssx"} key={pageIndex}>
+                  <OakFlex $height={"100%"} $alignSelf={"center"}>
+                    <OakEllipsis />
+                  </OakFlex>
+                </OakLI>
               );
             }
           })}
-        </OakFlex>
+        </OakUL>
         <StyledChevronButton
           element={isLastPage ? "button" : "a"}
           data-testid="forwards-button"
@@ -211,6 +224,7 @@ export const OakPagination = ({
           onClick={() => {
             handleChevronClick("forwards");
           }}
+          aria-disabled={isLastPage}
           disabled={isLastPage}
           aria-label={isLastPage ? "No further pages" : "Go to next page"}
         >
