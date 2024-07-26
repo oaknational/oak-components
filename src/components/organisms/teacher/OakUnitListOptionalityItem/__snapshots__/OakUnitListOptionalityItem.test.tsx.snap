@@ -1,0 +1,275 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
+[
+  .c0 {
+  box-sizing: border-box;
+  font-family: Lexend,sans-serif;
+}
+
+.c2 {
+  padding: 1rem;
+  background: #e3e9fb;
+  border: 0.125rem solid;
+  border-color: #a0b6f2;
+  border-radius: 0.375rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c4 {
+  font-family: Lexend,sans-serif;
+}
+
+.c12 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c10 {
+  font-family: Lexend,sans-serif;
+}
+
+.c11 {
+  color: #222222;
+  font-family: Lexend,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c15 {
+  object-fit: contain;
+}
+
+.c6 {
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+  margin-bottom: 0.75rem;
+  color: #222222;
+}
+
+.c14 {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.c8 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.25rem;
+  outline: none;
+  border-radius: 0.375rem;
+  padding: 0.25rem;
+  margin: -0.25rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font: inherit;
+  background: none;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #222222;
+}
+
+.c8 .c13 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+}
+
+.c8:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c8:visited {
+  color: #575757;
+}
+
+.c8:active {
+  color: #222222;
+}
+
+.c8:active .c13 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+}
+
+.c8[disabled] {
+  cursor: not-allowed;
+  color: #808080;
+}
+
+.c8[disabled] .c13 {
+  -webkit-filter: invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%);
+  filter: invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%);
+}
+
+.c9 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3 {
+  outline: none;
+  text-align: initial;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
+  cursor: pointer;
+}
+
+.c3:focus-visible {
+  background: #ffffff;
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+@media (hover:hover) {
+  .c8:hover,
+  .c8:visited:hover {
+    color: #222222;
+  }
+
+  .c8:hover .c13,
+  .c8:visited:hover .c13 {
+    -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+    filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  }
+}
+
+@media (hover:hover) {
+  .c3:hover {
+    background: #a0b6f2;
+  }
+}
+
+<div
+    className="c0 c1"
+    role="listitem"
+  >
+    <a
+      className="c2 c1 c3"
+      href=""
+      title="Lesson 1"
+    >
+      <div
+        className="c4 c5"
+      >
+        <h3
+          className="c6"
+        >
+          Lesson 1
+        </h3>
+        <div
+          className="c4 c7"
+        >
+          <a
+            className="c8 c9"
+          >
+            <span
+              className="c10"
+            >
+              <span
+                className="c11"
+              >
+                0
+                 lessons
+              </span>
+            </span>
+            <div
+              className="c12 c13 c14"
+            >
+              <img
+                alt="chevron-right"
+                className="c15"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
+                style={
+                  {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+              />
+            </div>
+          </a>
+        </div>
+      </div>
+    </a>
+  </div>,
+  ",",
+]
+`;

@@ -78,7 +78,7 @@ export type OakUnitListItemProps<C extends ElementType> = {
   as?: C;
   disabled?: boolean;
   unavailable?: boolean;
-  index: number;
+  index?: number;
   title: string;
   yearTitle?: string | null;
   lessonCount: number | null;
@@ -124,27 +124,29 @@ export const OakUnitListItem = <C extends ElementType>(
         as={"a"}
         {...rest}
       >
-        <StyledOakIndexBox
-          $alignSelf={"stretch"}
-          $background={
-            disabledOrUnavailable
-              ? "bg-neutral-stronger"
-              : isLegacy
-                ? "lavender50"
-                : "lavender"
-          }
-          $minWidth={"all-spacing-11"}
-          $justifyContent={"center"}
-          $alignItems={"center"}
-        >
-          <OakHeading
-            tag="h3"
-            $font={"heading-5"}
-            $color={disabledOrUnavailable ? "text-disabled" : "text-primary"}
+        {index && (
+          <StyledOakIndexBox
+            $alignSelf={"stretch"}
+            $background={
+              disabledOrUnavailable
+                ? "bg-neutral-stronger"
+                : isLegacy
+                  ? "lavender50"
+                  : "lavender"
+            }
+            $minWidth={"all-spacing-11"}
+            $justifyContent={"center"}
+            $alignItems={"center"}
           >
-            {index}
-          </OakHeading>
-        </StyledOakIndexBox>
+            <OakHeading
+              tag="h3"
+              $font={"heading-5"}
+              $color={disabledOrUnavailable ? "text-disabled" : "text-primary"}
+            >
+              {index}
+            </OakHeading>
+          </StyledOakIndexBox>
+        )}
         <OakFlex
           $width={"100%"}
           $height={"100%"}
