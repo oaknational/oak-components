@@ -28,3 +28,4 @@ export * from "./OakPupilJourneyContentGuidance";
 export * from "./OakPupilJourneyOptionalityItem";
 export * from "./OakPupilJourneyOptionalityButton";
 export * from "./OakPupilJourneyUnitsFilter";
+export * from "./OakLessonExpandableReviewItem";

@@ -19,6 +19,7 @@ type QuizSectionProps = {
    * The number of questions answered correctly
    */
   grade: number;
+  resultSection?: React.ReactNode;
 };
 
 type VideoSectionProps = {
@@ -50,8 +51,7 @@ export const OakLessonReviewItem = (props: OakLessonReviewItemProps) => {
   return (
     <StyledLessonReviewItem
       completed={completed}
-      $gap="space-between-m"
-      $alignItems="center"
+      $flexDirection={"column"}
       $background={completed ? completedBackgroundColor : "white"}
       $ph={["inner-padding-m", "inner-padding-xl"]}
       $pv="inner-padding-l"
@@ -60,21 +60,24 @@ export const OakLessonReviewItem = (props: OakLessonReviewItemProps) => {
       $ba="border-solid-l"
       {...rest}
     >
-      <OakRoundIcon
-        iconName={lessonSectionNameToIconMap.get(lessonSectionName)}
-        $width="all-spacing-10"
-        $height="all-spacing-10"
-        $background={iconBackgroundColor}
-      />
-      <OakFlex $flexGrow={1} $flexShrink={1} $flexDirection={"column"}>
-        <OakBox $font={["heading-6", "heading-5"]} $color={"text-primary"}>
-          {pickLabelForSection(lessonSectionName)}
-        </OakBox>
-        <OakBox $font={["body-2", "body-1"]}>
-          {pickSummaryForProgress(props)}
-        </OakBox>
+      <OakFlex $gap="space-between-m" $alignItems="center" $width={"100%"}>
+        <OakRoundIcon
+          iconName={lessonSectionNameToIconMap.get(lessonSectionName)}
+          $width="all-spacing-10"
+          $height="all-spacing-10"
+          $background={iconBackgroundColor}
+        />
+        <OakFlex $flexGrow={1} $flexShrink={1} $flexDirection={"column"}>
+          <OakBox $font={["heading-6", "heading-5"]} $color={"text-primary"}>
+            {pickLabelForSection(lessonSectionName)}
+          </OakBox>
+          <OakBox $font={["body-2", "body-1"]}>
+            {pickSummaryForProgress(props)}
+          </OakBox>
+        </OakFlex>
+        {renderQuestionCounter(props)}
       </OakFlex>
-      {renderQuestionCounter(props)}
+      {renderQuizResults(props)}
     </StyledLessonReviewItem>
   );
 };
@@ -155,6 +158,20 @@ const renderQuestionCounter = (props: OakLessonReviewItemProps) => {
           <OakSpan $font="heading-6">&nbsp;/&nbsp;{props.numQuestions}</OakSpan>
         </OakBox>
       );
+    default:
+      return null;
+  }
+};
+
+const renderQuizResults = (props: OakLessonReviewItemProps) => {
+  if (props.completed === false) {
+    return null;
+  }
+
+  switch (props.lessonSectionName) {
+    case "exit-quiz":
+    case "starter-quiz":
+      return props.resultSection;
     default:
       return null;
   }
