@@ -112,13 +112,14 @@ export const OakPagination = ({
 
     if (totalPages <= 7) {
       return Array.from({ length: totalPages }, (_, i) => i);
-    }
-    if (totalPages > 7 && activePage <= 3) {
+    } else if (totalPages > 7 && activePage <= 3) {
       const pages = [0, 1, 2, 3, "...", totalPages - 1];
       return pages;
-    }
-
-    if (totalPages > 7 && activePage >= 4 && activePage < totalPages - 3) {
+    } else if (
+      totalPages > 7 &&
+      activePage >= 4 &&
+      activePage < totalPages - 3
+    ) {
       const pages = [
         0,
         "...",
@@ -128,9 +129,7 @@ export const OakPagination = ({
         totalPages - 1,
       ];
       return pages;
-    }
-
-    if (totalPages > 7 && activePage >= 5) {
+    } else if (totalPages > 7 && activePage >= 5) {
       const pages = [
         0,
         "...",
@@ -140,8 +139,9 @@ export const OakPagination = ({
         totalPages - 1,
       ];
       return pages;
+    } else {
+      return pageNumbers;
     }
-    return pageNumbers;
   };
 
   const [activePage, setActivePage] = useState(currentPage);
@@ -192,10 +192,10 @@ export const OakPagination = ({
           />
         </StyledChevronButton>
         <OakUL $reset $display={"flex"}>
-          {pageNumbers.map((pageIndex) => {
+          {pageNumbers.map((pageIndex, i) => {
             if (typeof pageIndex === "number") {
               return (
-                <OakLI key={pageIndex} $mh={"space-between-ssx"}>
+                <OakLI key={`${pageIndex} ${i}`} $mh={"space-between-ssx"}>
                   <OakPageNumber
                     pageName={pageName}
                     key={pageIndex}
@@ -208,7 +208,7 @@ export const OakPagination = ({
               );
             } else {
               return (
-                <OakLI $mh={"space-between-ssx"} key={pageIndex}>
+                <OakLI $mh={"space-between-ssx"} key={`${pageIndex} ${i}`}>
                   <OakFlex $height={"100%"} $alignSelf={"center"}>
                     <OakEllipsis />
                   </OakFlex>
