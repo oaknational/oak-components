@@ -31,7 +31,7 @@ describe(OakLessonExpandableReviewItem, () => {
       <OakLessonExpandableReviewItem
         header="See more"
         id="see-more"
-        initialOpen
+        initialOpen={false}
       >
         Here it is
       </OakLessonExpandableReviewItem>,

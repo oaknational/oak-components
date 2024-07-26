@@ -250,9 +250,9 @@ exports[`OakLessonExpandableReviewItem matches snapshot 1`] = `
 }
 
 .c7 .icon-container img {
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
@@ -264,7 +264,7 @@ exports[`OakLessonExpandableReviewItem matches snapshot 1`] = `
     className="c2 c3"
   >
     <button
-      aria-expanded={false}
+      aria-expanded={true}
       className="c4 c5 c6  c7"
       id="see-more"
       onClick={[Function]}
@@ -298,14 +298,14 @@ exports[`OakLessonExpandableReviewItem matches snapshot 1`] = `
                 data-icon-for="button"
               >
                 <img
-                  alt="chevron-down"
+                  alt="chevron-up"
                   className="c19"
                   data-nimg="fill"
                   decoding="async"
                   loading="lazy"
                   onError={[Function]}
                   onLoad={[Function]}
-                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954058/icons/pay71thmhhylj7z28sj1.svg"
                   style={
                     {
                       "bottom": 0,
@@ -331,7 +331,7 @@ exports[`OakLessonExpandableReviewItem matches snapshot 1`] = `
   <div
     aria-labelledby="see-more"
     className="c2 "
-    hidden={true}
+    hidden={false}
     role="region"
   >
     <div
