@@ -1,9 +1,10 @@
 import React from "react";
 
 import { OakFlex, OakIcon, OakImage, OakSpan } from "@/components/atoms";
+import { OakAllSpacingToken } from "@/styles";
 
-export type OakQuizResultItemProps = {
-  feedbackState: "correct" | "incorrect" | null;
+export type InternalQuizResultItemProps = {
+  feedbackState?: "correct" | "incorrect" | null;
   standardText?: string;
   boldPrefixText?: string;
   imageURL?: string;
@@ -13,10 +14,13 @@ export type OakQuizResultItemProps = {
 const DisplayText = ({
   boldPrefixText,
   standardText,
-}: Pick<OakQuizResultItemProps, "boldPrefixText" | "standardText">) => {
+  height = "all-spacing-5",
+}: Pick<InternalQuizResultItemProps, "boldPrefixText" | "standardText"> & {
+  height: OakAllSpacingToken;
+}) => {
   if (boldPrefixText && standardText) {
     return (
-      <OakFlex $color={"text-primary"}>
+      <OakFlex $color={"text-primary"} $height={height} $alignItems={"center"}>
         <OakSpan $font={"body-2-bold"}>{boldPrefixText}</OakSpan>
         <OakSpan $font={"body-2"}>
           {"\u00A0"}-{"\u00A0"}
@@ -26,9 +30,11 @@ const DisplayText = ({
     );
   } else if (standardText) {
     return (
-      <OakSpan $color={"text-primary"} $font={"body-2"}>
-        {standardText}
-      </OakSpan>
+      <OakFlex $alignItems={"center"} $height={height}>
+        <OakSpan $color={"text-primary"} $font={"body-2"}>
+          {standardText}
+        </OakSpan>
+      </OakFlex>
     );
   } else {
     return null;
@@ -45,13 +51,27 @@ const DisplayText = ({
  *
  * NB. We must export a styled component for it to be inheritable
  */
-export const OakQuizResultItem = ({
+export const InternalQuizResultItem = ({
   standardText,
   boldPrefixText,
   feedbackState,
   imageURL,
   imageAlt,
-}: OakQuizResultItemProps) => {
+}: InternalQuizResultItemProps) => {
+  if (boldPrefixText && !standardText) {
+    throw new Error(
+      "standardText must be provided if boldPrefixText is provided",
+    );
+  }
+
+  if (!standardText && !imageURL) {
+    throw new Error("Either standardText or imageURL must be provided");
+  }
+
+  if (imageURL && !imageAlt) {
+    throw new Error("Image URL provided without alt text");
+  }
+
   const background = (() => {
     if (feedbackState === "correct") {
       return "bg-decorative5-subdued";
@@ -87,6 +107,7 @@ export const OakQuizResultItem = ({
           />
         )}
         <DisplayText
+          height="all-spacing-7"
           standardText={standardText}
           boldPrefixText={boldPrefixText}
         />
