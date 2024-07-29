@@ -208,13 +208,14 @@ exports[`OakPagination Component matches snapshot 1`] = `
   <div
     className="c0 c1"
   >
-    <a
+    <button
       aria-disabled={true}
       aria-label="No previous pages"
       className="c2 c3"
       data-testid="backwards-button"
       disabled={true}
       onClick={[Function]}
+      onKeyDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       rel="prev"
@@ -249,7 +250,7 @@ exports[`OakPagination Component matches snapshot 1`] = `
           }
         />
       </div>
-    </a>
+    </button>
     <ul
       className="c7"
     >
@@ -380,6 +381,7 @@ exports[`OakPagination Component matches snapshot 1`] = `
       data-testid="forwards-button"
       disabled={false}
       onClick={[Function]}
+      onKeyDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       rel="next"
