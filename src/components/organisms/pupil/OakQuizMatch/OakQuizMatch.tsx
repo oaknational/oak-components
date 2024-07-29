@@ -176,6 +176,7 @@ export const OakQuizMatch = ({
 
   useEffect(() => {
     const matchedDraggableIds = Object.values(matches).map((item) => item.id);
+
     const unmatchedDraggables = draggables.filter(
       (draggable) => !matchedDraggableIds.includes(draggable.id),
     );
