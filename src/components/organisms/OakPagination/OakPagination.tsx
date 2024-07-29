@@ -147,11 +147,18 @@ export const OakPagination = ({
         $gap={["space-between-ssx", "space-between-s", "space-between-s"]}
       >
         <StyledChevronButton
-          element="a"
+          element={isFirstPage ? "button" : "a"}
           rel="prev"
           data-testid="backwards-button"
           onClick={() => {
             handleChevronClick("backwards");
+          }}
+          onKeyDown={(
+            e: React.KeyboardEvent<HTMLButtonElement | HTMLAnchorElement>,
+          ) => {
+            if (e.key === "Enter") {
+              handleChevronClick("backwards");
+            }
           }}
           tabIndex={isFirstPage ? -1 : 0}
           href={prevHref}
@@ -202,13 +209,20 @@ export const OakPagination = ({
           })}
         </OakUL>
         <StyledChevronButton
-          element="a"
+          element={isLastPage ? "button" : "a"}
           rel="next"
           tabIndex={isLastPage ? -1 : 0}
           data-testid="forwards-button"
           href={nextHref}
           onClick={() => {
             handleChevronClick("forwards");
+          }}
+          onKeyDown={(
+            e: React.KeyboardEvent<HTMLButtonElement | HTMLAnchorElement>,
+          ) => {
+            if (e.key === "Enter") {
+              handleChevronClick("forwards");
+            }
           }}
           aria-disabled={isLastPage}
           disabled={isLastPage}

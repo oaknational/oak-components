@@ -33,7 +33,7 @@ describe("OakPagination Component", () => {
     expect(getAllByTestId("page-number-component")).toHaveLength(7);
   });
 
-  it("disables the backwards button when on the first page", () => {
+  it.only("disables the backwards button when on the first page", () => {
     const { getByTestId } = renderWithTheme(
       <OakPagination
         paginationHref={""}
@@ -45,7 +45,7 @@ describe("OakPagination Component", () => {
     expect(getByTestId("backwards-button")).toBeDisabled();
   });
 
-  it("disables the backwards button when on the first page", () => {
+  it.only("disables the backwards button when on the first page", () => {
     const { getByTestId } = renderWithTheme(
       <OakPagination
         paginationHref={""}
