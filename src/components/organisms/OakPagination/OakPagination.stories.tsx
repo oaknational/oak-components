@@ -10,10 +10,11 @@ const meta: Meta<typeof OakPagination> = {
   argTypes: {
     totalPages: { type: "number" },
     paginationHref: { type: "string" },
+    pageName: { type: "string" },
   },
   parameters: {
     controls: {
-      include: ["totalPages", "paginationHref", "type"],
+      include: ["totalPages", "paginationHref", "pageName", "type"],
     },
   },
 };
@@ -28,5 +29,6 @@ export const Default: Story = {
     totalPages: 7,
     currentPage: 1,
     paginationHref: "#",
+    pageName: "test",
   },
 };
