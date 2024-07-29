@@ -114,7 +114,7 @@ export const OakPagination = ({
 }: OakPaginationProps) => {
   const [activePage, setActivePage] = useState(currentPage);
 
-  const pageNumbers = generatePageNumbers(activePage, totalPages);
+  const pages = generatePageNumbers(activePage, totalPages);
 
   const isFirstPage = activePage <= 1;
   const isLastPage = activePage >= totalPages;
@@ -151,11 +151,11 @@ export const OakPagination = ({
           <StyledIcon disabled={isFirstPage} iconName="chevron-left" />
         </StyledChevronButton>
         <OakUL $reset $display={"flex"}>
-          {pageNumbers.map((pageIndex, i) => {
-            if (typeof pageIndex === "number") {
+          {pages.map((page, i) => {
+            if (typeof page === "number") {
               return (
                 <OakLI
-                  key={`${pageIndex} ${i}`}
+                  key={`${page} ${i}`}
                   $mh={[
                     "space-between-sssx",
                     "space-between-ssx",
@@ -164,11 +164,11 @@ export const OakPagination = ({
                 >
                   <OakPageNumber
                     pageName={pageName}
-                    key={pageIndex}
-                    pageNumber={pageIndex + 1}
+                    key={page}
+                    pageNumber={page + 1}
                     currentPage={activePage}
-                    href={`${paginationHref}?page=${pageIndex + 1}`}
-                    onClick={() => handleNumberClick(pageIndex + 1)}
+                    href={`${paginationHref}?page=${page + 1}`}
+                    onClick={() => handleNumberClick(page + 1)}
                   />
                 </OakLI>
               );
@@ -180,7 +180,7 @@ export const OakPagination = ({
                     "space-between-ssx",
                     "space-between-ssx",
                   ]}
-                  key={`${pageIndex} ${i}`}
+                  key={`${page} ${i}`}
                 >
                   <OakFlex $height={"100%"} $alignSelf={"center"}>
                     <OakEllipsis />
