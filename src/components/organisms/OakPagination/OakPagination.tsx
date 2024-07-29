@@ -79,6 +79,10 @@ const StyledNumberButton = styled(OakLink)<{ selected: boolean }>`
       props.selected &&
       css`
         color: white;
+        @media (hover: hover) {
+    &:hover:not(:disabled) {
+      color: white;
+    }
       `}
   }
 `;

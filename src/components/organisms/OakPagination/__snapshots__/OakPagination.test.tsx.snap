@@ -234,6 +234,12 @@ exports[`OakPagination Component matches snapshot 1`] = `
   }
 }
 
+@media (hover:hover) {
+  .c10:hover:hover:not(:disabled) {
+    color: white;
+  }
+}
+
 <nav
   aria-label="pagination"
   data-testid="pagination"
