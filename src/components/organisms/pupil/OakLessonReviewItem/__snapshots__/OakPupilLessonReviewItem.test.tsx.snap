@@ -15,7 +15,6 @@ exports[`OakLessonReviewItem matches snapshot 1`] = `
 }
 
 .c3 {
-  width: 100%;
   font-family: Lexend,sans-serif;
 }
 
@@ -37,11 +36,7 @@ exports[`OakLessonReviewItem matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c8 {
-  font-family: Lexend,sans-serif;
-}
-
-.c10 {
+.c9 {
   color: #222222;
   font-family: Lexend,sans-serif;
   font-weight: 600;
@@ -53,7 +48,7 @@ exports[`OakLessonReviewItem matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c11 {
+.c10 {
   font-family: Lexend,sans-serif;
   font-weight: 300;
   font-size: 1rem;
@@ -72,6 +67,13 @@ exports[`OakLessonReviewItem matches snapshot 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .c4 {
@@ -86,7 +88,7 @@ exports[`OakLessonReviewItem matches snapshot 1`] = `
   gap: 1.5rem;
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -125,25 +127,25 @@ exports[`OakLessonReviewItem matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c10 {
+  .c9 {
     font-weight: 600;
   }
 }
 
 @media (min-width:750px) {
-  .c10 {
+  .c9 {
     font-size: 1.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c10 {
+  .c9 {
     line-height: 2rem;
   }
 }
 
 @media (min-width:750px) {
-  .c10 {
+  .c9 {
     -webkit-letter-spacing: 0.0115rem;
     -moz-letter-spacing: 0.0115rem;
     -ms-letter-spacing: 0.0115rem;
@@ -152,29 +154,45 @@ exports[`OakLessonReviewItem matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c11 {
+  .c10 {
     font-weight: 300;
   }
 }
 
 @media (min-width:750px) {
-  .c11 {
+  .c10 {
     font-size: 1.125rem;
   }
 }
 
 @media (min-width:750px) {
-  .c11 {
+  .c10 {
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:750px) {
-  .c11 {
+  .c10 {
     -webkit-letter-spacing: -0.005rem;
     -moz-letter-spacing: -0.005rem;
     -ms-letter-spacing: -0.005rem;
     letter-spacing: -0.005rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c1 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:1280px) {
+  .c1 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
 }
 
@@ -217,15 +235,15 @@ exports[`OakLessonReviewItem matches snapshot 1`] = `
         </div>
       </div>
       <div
-        className="c8 c9"
+        className="c3 c8"
       >
         <div
-          className="c10"
+          className="c9"
         >
           Introduction
         </div>
         <div
-          className="c11"
+          className="c10"
         >
           Prepare
         </div>

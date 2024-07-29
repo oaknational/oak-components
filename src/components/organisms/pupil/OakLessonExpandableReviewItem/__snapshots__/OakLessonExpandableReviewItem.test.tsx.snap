@@ -1,27 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakLessonExpandableReviewItem matches snapshot 1`] = `
-.c0 {
-  position: relative;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  background: transparent;
+[
+  .c0 {
+  padding-top: 1.25rem;
   font-family: Lexend,sans-serif;
 }
 
 .c2 {
-  font-family: Lexend,sans-serif;
-}
-
-.c4 {
-  font-family: Lexend,sans-serif;
-}
-
-.c4:hover {
-  cursor: pointer;
-}
-
-.c8 {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -29,7 +15,11 @@ exports[`OakLessonExpandableReviewItem matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c15 {
+.c8 {
+  font-family: Lexend,sans-serif;
+}
+
+.c11 {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -40,7 +30,7 @@ exports[`OakLessonExpandableReviewItem matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c17 {
+.c13 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -49,22 +39,12 @@ exports[`OakLessonExpandableReviewItem matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c18 {
+.c14 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
   height: 1.5rem;
   min-height: 1.5rem;
-  font-family: Lexend,sans-serif;
-}
-
-.c20 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-  background: #ffffff;
-  border-radius: 1rem;
   font-family: Lexend,sans-serif;
 }
 
@@ -76,7 +56,14 @@ exports[`OakLessonExpandableReviewItem matches snapshot 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 0.25rem;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .c3 {
@@ -84,34 +71,9 @@ exports[`OakLessonExpandableReviewItem matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
 }
 
 .c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -130,7 +92,7 @@ exports[`OakLessonExpandableReviewItem matches snapshot 1`] = `
   gap: 0.75rem;
 }
 
-.c16 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -145,7 +107,7 @@ exports[`OakLessonExpandableReviewItem matches snapshot 1`] = `
   justify-content: center;
 }
 
-.c14 {
+.c10 {
   font-family: Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -156,25 +118,13 @@ exports[`OakLessonExpandableReviewItem matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c19 {
+.c15 {
   -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   object-fit: contain;
 }
 
 .c6 {
-  font: inherit;
-  color: inherit;
-  border: none;
-  background: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: none;
-  padding: 0;
-}
-
-.c11 {
   background: none;
   color: inherit;
   border: none;
@@ -188,55 +138,55 @@ exports[`OakLessonExpandableReviewItem matches snapshot 1`] = `
   color: #222222;
 }
 
-.c11:disabled {
+.c6:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c12 {
+.c7 {
   display: inline-block;
   position: relative;
 }
 
-.c12:hover {
+.c7:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #222222;
 }
 
-.c12:active {
+.c7:active {
   color: #222222;
 }
 
-.c12:disabled {
+.c7:disabled {
   color: #808080;
 }
 
-.c10 > :first-child:focus-visible .shadow {
+.c4 > :first-child:focus-visible .shadow {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c10 > :first-child:hover .shadow {
+.c4 > :first-child:hover .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c10 > :first-child:active .shadow {
+.c4 > :first-child:active .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c10 > :first-child:disabled .icon-container {
+.c4 > :first-child:disabled .icon-container {
   background: transparent;
 }
 
-.c10 > :first-child:hover .icon-container {
+.c4 > :first-child:hover .icon-container {
   background: #222222;
 }
 
-.c10 > :first-child:active .icon-container {
+.c4 > :first-child:active .icon-container {
   background: #222222;
 }
 
-.c7 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -244,12 +194,11 @@ exports[`OakLessonExpandableReviewItem matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c7:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.c5:hover {
+  cursor: pointer;
 }
 
-.c7 .icon-container img {
+.c5 .icon-container img {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
@@ -257,88 +206,117 @@ exports[`OakLessonExpandableReviewItem matches snapshot 1`] = `
   transition: all 0.3s ease 0s;
 }
 
+@media (min-width:750px) {
+  .c0 {
+    padding-top: 0rem;
+  }
+}
+
 <div
-  className="c0 c1"
->
-  <div
-    className="c2 c3"
+    className="c0 c1"
   >
-    <button
-      aria-expanded={true}
-      className="c4 c5 c6  c7"
-      id="see-more"
-      onClick={[Function]}
-      type="button"
+    <div
+      className="c2 c3 c4 c5"
     >
-      <div
-        className="c8 c9 c10"
+      <button
+        aria-expanded={true}
+        className="c6 c7"
+        id="see-more"
+        isOpen={true}
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
       >
-        <button
-          className="c11 c12"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
+        <div
+          className="c8 c9"
         >
-          <div
-            className="c2 c13"
+          <span
+            className="c10"
           >
-            <span
-              className="c14"
-            >
-              See more
-            </span>
+            See more
+          </span>
+          <div
+            className="c11 c12 icon-container"
+          >
             <div
-              className="c15 c16 icon-container"
+              className="c13 shadow"
+            />
+            <div
+              className="c14"
+              data-icon-for="button"
             >
-              <div
-                className="c17 shadow"
-              />
-              <div
-                className="c18"
-                data-icon-for="button"
-              >
-                <img
-                  alt="chevron-up"
-                  className="c19"
-                  data-nimg="fill"
-                  decoding="async"
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954058/icons/pay71thmhhylj7z28sj1.svg"
-                  style={
-                    {
-                      "bottom": 0,
-                      "color": "transparent",
-                      "height": "100%",
-                      "left": 0,
-                      "objectFit": undefined,
-                      "objectPosition": undefined,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                      "width": "100%",
-                    }
+              <img
+                alt="chevron-down"
+                className="c15"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+                style={
+                  {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
                   }
-                />
-              </div>
+                }
+              />
             </div>
           </div>
-        </button>
-      </div>
-    </button>
-  </div>
-  <div
+        </div>
+      </button>
+    </div>
+  </div>,
+  .c0 {
+  font-family: Lexend,sans-serif;
+}
+
+.c2 {
+  min-width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  margin-top: 1.5rem;
+  background: #ffffff;
+  border-radius: 1rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 {
+  width: 100%;
+}
+
+@media (min-width:750px) {
+
+}
+
+<div
     aria-labelledby="see-more"
-    className="c2 "
+    className="c0  c1"
     hidden={false}
     role="region"
   >
     <div
-      className="c20 c9"
+      className="c2 c3"
     >
       Here it is
     </div>
-  </div>
-</div>
+  </div>,
+]
 `;
