@@ -15,7 +15,7 @@ describe(OakLessonExpandableReviewItem, () => {
       <OakThemeProvider theme={oakDefaultTheme}>
         <OakLessonExpandableReviewItem
           initialOpen
-          header="See more"
+          expandableLabel="See more"
           id="see-more"
         >
           Here it is
@@ -29,7 +29,7 @@ describe(OakLessonExpandableReviewItem, () => {
   it("toggles open and closed", () => {
     const { queryByRole, queryByText, getByText } = renderWithTheme(
       <OakLessonExpandableReviewItem
-        header="See more"
+        expandableLabel="See more"
         id="see-more"
         initialOpen={false}
       >

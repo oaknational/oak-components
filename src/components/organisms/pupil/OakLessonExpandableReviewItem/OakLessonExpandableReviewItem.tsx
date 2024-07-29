@@ -13,7 +13,7 @@ export type OakLessonExpandableReviewItemProps = {
   /**
    * The header of the accordion
    */
-  header: ReactNode;
+  expandableLabel: string;
   /**
    * Whether the accordion should be open initially
    */
@@ -52,7 +52,7 @@ export const StyledAccordionButton = styled(InternalShadowRoundButton)<
  */
 
 const Accordion = ({
-  header,
+  expandableLabel,
   children,
   id,
 }: OakLessonExpandableReviewItemProps) => {
@@ -83,7 +83,7 @@ const Accordion = ({
           defaultIconColor={"white"}
           isTrailingIcon={true}
         >
-          {header}
+          {expandableLabel}
         </StyledAccordionButton>
       </OakFlex>
 

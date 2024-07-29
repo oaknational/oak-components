@@ -11,7 +11,7 @@ const meta: Meta<typeof OakLessonExpandableReviewItem> = {
   title: "components/organisms/pupil/OakLessonExpandableReviewItem",
   parameters: {
     controls: {
-      include: ["header", "headerAfterSlot", "children"],
+      include: ["expandableLabel", "headerAfterSlot", "children"],
     },
   },
   argTypes: {
@@ -20,7 +20,7 @@ const meta: Meta<typeof OakLessonExpandableReviewItem> = {
         type: "text",
       },
     },
-    header: {
+    expandableLabel: {
       control: {
         type: "text",
       },
@@ -28,7 +28,7 @@ const meta: Meta<typeof OakLessonExpandableReviewItem> = {
   },
   args: {
     id: "accordion-1",
-    header: "Results",
+    expandableLabel: "Results",
     children: "In this space we can render the quiz results component",
     initialOpen: false,
   },
