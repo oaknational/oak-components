@@ -34,6 +34,10 @@ const StyledChevronButton = styled(InternalButton)<{ disabledColor: string }>`
       color: ${props.disabledColor};
       cursor: pointer;
     }
+    &:focus {
+      outline: 2px solid #374cf1;
+      outline-offset: 2px;
+    }
   `}
 `;
 
@@ -59,6 +63,10 @@ const StyledNumberButton = styled(InternalButton)<{ selected: boolean }>`
     background-color: ${props.selected ? "black" : "white"};
     color: ${props.selected ? "white" : "black"};
   `}
+  &:focus {
+    outline: 2px solid #374cf1;
+    outline-offset: 2px;
+  }
 `;
 
 const StyledEllipsis = styled(InternalButton)`
@@ -77,6 +85,7 @@ const OakPageNumber = ({
   const isActive = currentPage === pageNumber;
   return (
     <StyledNumberButton
+      element="a"
       data-testid="page-number-component"
       aria-label={`${pageName} page ${pageNumber}`}
       aria-current={isActive ? "page" : false}
@@ -138,11 +147,13 @@ export const OakPagination = ({
         $gap={["space-between-ssx", "space-between-s", "space-between-s"]}
       >
         <StyledChevronButton
-          element={isFirstPage ? "button" : "a"}
+          element="a"
+          rel="prev"
           data-testid="backwards-button"
           onClick={() => {
             handleChevronClick("backwards");
           }}
+          tabIndex={isFirstPage ? -1 : 0}
           href={prevHref}
           aria-disabled={isFirstPage}
           disabled={isFirstPage}
@@ -191,7 +202,9 @@ export const OakPagination = ({
           })}
         </OakUL>
         <StyledChevronButton
-          element={isLastPage ? "button" : "a"}
+          element="a"
+          rel="next"
+          tabIndex={isLastPage ? -1 : 0}
           data-testid="forwards-button"
           href={nextHref}
           onClick={() => {
