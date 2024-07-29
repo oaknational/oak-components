@@ -6,6 +6,8 @@ import { generatePageNumbers } from "./utils";
 import { OakFlex, OakIcon, OakLI, OakUL } from "@/components/atoms";
 import { InternalButton } from "@/components/atoms/InternalButton";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
+import { OakLink } from "@/components/molecules";
+import { typographyStyle } from "@/styles/utils/typographyStyle";
 
 export type OakPaginationProps = {
   currentPage: number;
@@ -27,16 +29,12 @@ type OakPageNumberProps = {
   pageName: string;
 };
 
-const StyledChevronButton = styled(InternalButton)<{ disabledColor: string }>`
+const StyledChevronButton = styled(OakLink)<{ disabledColor: string }>`
   display: inline-block;
   ${(props) => css`
     &:disabled {
       color: ${props.disabledColor};
       cursor: pointer;
-    }
-    &:focus {
-      outline: 2px solid #374cf1;
-      outline-offset: 2px;
     }
   `}
 `;
@@ -51,21 +49,37 @@ const StyledIcon = styled(OakIcon)<{ disabled: boolean }>`
   }}
 `;
 
-const StyledNumberButton = styled(InternalButton)<{ selected: boolean }>`
+const StyledNumberButton = styled(OakLink)<{ selected: boolean }>`
   height: 30px;
   width: 30px;
   border-radius: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
+  ${typographyStyle}
+  color: black;
 
   ${(props) => css`
     background-color: ${props.selected ? "black" : "white"};
-    color: ${props.selected ? "white" : "black"};
-  `}
-  &:focus {
-    outline: 2px solid #374cf1;
-    outline-offset: 2px;
+  `};
+
+  ${(props) =>
+    props.selected &&
+    css`
+      color: white;
+      &:visited {
+        color: white;
+      }
+    `}
+
+  &:hover {
+    text-decoration: underline;
+    ${(props) =>
+      props.selected &&
+      css`
+        color: white;
+      `}
   }
 `;
 
@@ -85,7 +99,6 @@ const OakPageNumber = ({
   const isActive = currentPage === pageNumber;
   return (
     <StyledNumberButton
-      element="a"
       data-testid="page-number-component"
       aria-label={`${pageName} page ${pageNumber}`}
       aria-current={isActive ? "page" : false}
@@ -144,6 +157,7 @@ export const OakPagination = ({
       <OakFlex
         $alignItems={"center"}
         $justifyContent={"center"}
+        $width={"100%"}
         $gap={["space-between-ssx", "space-between-s", "space-between-s"]}
       >
         <StyledChevronButton

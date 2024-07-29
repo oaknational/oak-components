@@ -6,28 +6,35 @@ import { OakPagination } from "./OakPagination";
 import { generatePageNumbers } from "./utils";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
+import { OakThemeProvider } from "@/components/atoms";
+import { oakDefaultTheme } from "@/styles";
 
 describe("OakPagination Component", () => {
   it("renders", () => {
     const { getByTestId } = renderWithTheme(
-      <OakPagination
-        paginationHref={""}
-        pageName={"test"}
-        currentPage={1}
-        totalPages={8}
-      />,
+      <OakThemeProvider theme={oakDefaultTheme}>
+        <OakPagination
+          paginationHref={""}
+          pageName={"test"}
+          currentPage={1}
+          totalPages={8}
+        />
+        ,
+      </OakThemeProvider>,
     );
     expect(getByTestId("pagination")).toBeInTheDocument();
   });
 
   it("renders the correct number of pages", () => {
     const { getAllByTestId } = renderWithTheme(
-      <OakPagination
-        paginationHref={""}
-        pageName={"test"}
-        currentPage={1}
-        totalPages={7}
-      />,
+      <OakThemeProvider theme={oakDefaultTheme}>
+        <OakPagination
+          paginationHref={""}
+          pageName={"test"}
+          currentPage={1}
+          totalPages={7}
+        />
+      </OakThemeProvider>,
     );
 
     expect(getAllByTestId("page-number-component")).toHaveLength(7);
@@ -35,24 +42,28 @@ describe("OakPagination Component", () => {
 
   it("disables the backwards button when on the first page", () => {
     const { getByTestId } = renderWithTheme(
-      <OakPagination
-        paginationHref={""}
-        pageName={"test"}
-        currentPage={1}
-        totalPages={7}
-      />,
+      <OakThemeProvider theme={oakDefaultTheme}>
+        <OakPagination
+          paginationHref={""}
+          pageName={"test"}
+          currentPage={1}
+          totalPages={7}
+        />
+      </OakThemeProvider>,
     );
     expect(getByTestId("backwards-button")).toBeDisabled();
   });
 
   it("disables the backwards button when on the first page", () => {
     const { getByTestId } = renderWithTheme(
-      <OakPagination
-        paginationHref={""}
-        pageName={"test"}
-        currentPage={7}
-        totalPages={7}
-      />,
+      <OakThemeProvider theme={oakDefaultTheme}>
+        <OakPagination
+          paginationHref={""}
+          pageName={"test"}
+          currentPage={7}
+          totalPages={7}
+        />
+      </OakThemeProvider>,
     );
 
     const forwardsButton = getByTestId("forwards-button");
@@ -62,12 +73,14 @@ describe("OakPagination Component", () => {
 
   it("matches snapshot", () => {
     const tree = create(
-      <OakPagination
-        paginationHref={""}
-        pageName={"test"}
-        currentPage={1}
-        totalPages={7}
-      />,
+      <OakThemeProvider theme={oakDefaultTheme}>
+        <OakPagination
+          paginationHref={""}
+          pageName={"test"}
+          currentPage={1}
+          totalPages={7}
+        />
+      </OakThemeProvider>,
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
