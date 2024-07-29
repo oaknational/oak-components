@@ -2,10 +2,7 @@ import React, { ReactNode } from "react";
 import styled, { css } from "styled-components";
 
 import { OakBoxProps, OakFlex, oakBoxCss } from "@/components/atoms";
-import {
-  InternalAccordionButton,
-  InternalAccordionContent,
-} from "@/components/atoms/InternalAccordion";
+import { InternalAccordionContent } from "@/components/atoms/InternalAccordion";
 import useAccordionContext from "@/components/atoms/InternalAccordion/useAccordionContext";
 import InternalAccordionProvider from "@/components/atoms/InternalAccordion/InternalAccordionProvider";
 import { FlexStyleProps, flexStyle } from "@/styles/utils/flexStyle";
@@ -33,14 +30,15 @@ export type OakLessonExpandableReviewItemProps = {
   OakBoxProps &
   ColorStyleProps;
 
-export const StyledAccordionButton = styled(InternalAccordionButton)<
+export const StyledAccordionContent = styled(InternalAccordionContent)`
+  width: 100%;
+`;
+
+export const StyledAccordionButton = styled(InternalShadowRoundButton)<
   FlexStyleProps & { isOpen: boolean }
 >`
   ${flexStyle}
   ${oakBoxCss}
-  &:hover {
-    text-decoration: underline;
-  }
   .icon-container img {
     ${(props) => css`
       transform: ${props.isOpen ? "rotate(180deg)" : "none"};
@@ -57,50 +55,51 @@ const Accordion = ({
   header,
   children,
   id,
-  ...styleProps
 }: OakLessonExpandableReviewItemProps) => {
-  const { isOpen } = useAccordionContext();
+  const { isOpen, setOpen } = useAccordionContext();
 
   return (
-    <OakFlex
-      $position={"relative"}
-      $pv={"inner-padding-s"}
-      $flexDirection={"column"}
-      $gap={"all-spacing-1"}
-      $background={"transparent"}
-      {...styleProps}
-    >
-      <OakFlex $flexDirection={"column"} $alignItems={"flex-end"}>
-        <StyledAccordionButton id={id} isOpen={isOpen}>
-          <InternalShadowRoundButton
-            iconName={isOpen ? "chevron-up" : "chevron-down"}
-            defaultTextColor={"text-primary"}
-            hoverTextColor={"text-primary"}
-            disabledTextColor={"text-disabled"}
-            defaultIconBackground={"black"}
-            hoverIconBackground={"black"}
-            disabledIconBackground={"transparent"}
-            iconBackgroundSize={"all-spacing-7"}
-            iconSize={"all-spacing-6"}
-            defaultIconColor={"white"}
-            isTrailingIcon={true}
-          >
-            {header}
-          </InternalShadowRoundButton>
+    <>
+      <OakFlex
+        $flexDirection={"column"}
+        $alignItems={"flex-end"}
+        $justifyContent={"center"}
+        $pt={["inner-padding-l", "inner-padding-none"]}
+      >
+        <StyledAccordionButton
+          isOpen={isOpen}
+          onClick={() => setOpen(!isOpen)}
+          aria-expanded={isOpen}
+          id={id}
+          iconName={"chevron-down"}
+          defaultTextColor={"text-primary"}
+          hoverTextColor={"text-primary"}
+          disabledTextColor={"text-disabled"}
+          defaultIconBackground={"black"}
+          hoverIconBackground={"black"}
+          disabledIconBackground={"transparent"}
+          iconBackgroundSize={"all-spacing-7"}
+          iconSize={"all-spacing-6"}
+          defaultIconColor={"white"}
+          isTrailingIcon={true}
+        >
+          {header}
         </StyledAccordionButton>
       </OakFlex>
 
-      <InternalAccordionContent aria-labelledby={id}>
+      <StyledAccordionContent aria-labelledby={id}>
         <OakFlex
           $background={"white"}
           $borderRadius={"border-radius-l"}
           $pv={"inner-padding-xl3"}
           $ph={"inner-padding-xl"}
+          $minWidth={"100%"}
+          $mt={"space-between-m"}
         >
           {children}
         </OakFlex>
-      </InternalAccordionContent>
-    </OakFlex>
+      </StyledAccordionContent>
+    </>
   );
 };
 

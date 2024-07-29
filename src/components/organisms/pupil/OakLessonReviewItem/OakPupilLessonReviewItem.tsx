@@ -51,7 +51,9 @@ export const OakLessonReviewItem = (props: OakLessonReviewItemProps) => {
   return (
     <StyledLessonReviewItem
       completed={completed}
-      $flexDirection={"column"}
+      $flexDirection={["column", "row", "row"]}
+      $justifyContent={"space-between"}
+      $flexWrap={"wrap"}
       $background={completed ? completedBackgroundColor : "white"}
       $ph={["inner-padding-m", "inner-padding-xl"]}
       $pv="inner-padding-l"
@@ -60,7 +62,7 @@ export const OakLessonReviewItem = (props: OakLessonReviewItemProps) => {
       $ba="border-solid-l"
       {...rest}
     >
-      <OakFlex $gap="space-between-m" $alignItems="center" $width={"100%"}>
+      <OakFlex $gap="space-between-m" $alignItems="center">
         <OakRoundIcon
           iconName={lessonSectionNameToIconMap.get(lessonSectionName)}
           $width="all-spacing-10"
