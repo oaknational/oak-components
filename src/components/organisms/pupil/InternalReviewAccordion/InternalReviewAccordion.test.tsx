@@ -3,23 +3,23 @@ import { create } from "react-test-renderer";
 import { act, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
-import { OakLessonExpandableReviewItem } from "./OakLessonExpandableReviewItem";
+import { InternalReviewAccordion } from "./InternalReviewAccordion";
 
 import { OakThemeProvider } from "@/components/atoms";
 import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
-describe(OakLessonExpandableReviewItem, () => {
+describe(InternalReviewAccordion, () => {
   it("matches snapshot", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
-        <OakLessonExpandableReviewItem
+        <InternalReviewAccordion
           initialOpen
           expandableLabel="See more"
           id="see-more"
         >
           Here it is
-        </OakLessonExpandableReviewItem>
+        </InternalReviewAccordion>
       </OakThemeProvider>,
     ).toJSON();
 
@@ -28,13 +28,13 @@ describe(OakLessonExpandableReviewItem, () => {
 
   it("toggles open and closed", () => {
     const { queryByRole, queryByText, getByText } = renderWithTheme(
-      <OakLessonExpandableReviewItem
+      <InternalReviewAccordion
         expandableLabel="See more"
         id="see-more"
         initialOpen={false}
       >
         Here it is
-      </OakLessonExpandableReviewItem>,
+      </InternalReviewAccordion>,
     );
 
     expect(queryByRole("region")).not.toBeInTheDocument();

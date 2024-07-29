@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OakLessonExpandableReviewItem matches snapshot 1`] = `
+exports[`InternalReviewAccordion matches snapshot 1`] = `
 [
   .c0 {
   padding-top: 1.25rem;

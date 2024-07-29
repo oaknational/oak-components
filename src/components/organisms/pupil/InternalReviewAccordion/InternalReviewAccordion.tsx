@@ -9,7 +9,7 @@ import { FlexStyleProps, flexStyle } from "@/styles/utils/flexStyle";
 import { ColorStyleProps } from "@/styles/utils/colorStyle";
 import { InternalShadowRoundButton } from "@/components/molecules/InternalShadowRoundButton";
 
-export type OakLessonExpandableReviewItemProps = {
+export type InternalReviewAccordionProps = {
   /**
    * The header of the accordion
    */
@@ -55,7 +55,7 @@ const Accordion = ({
   expandableLabel,
   children,
   id,
-}: OakLessonExpandableReviewItemProps) => {
+}: InternalReviewAccordionProps) => {
   const { isOpen, setOpen } = useAccordionContext();
 
   return (
@@ -110,8 +110,8 @@ const Accordion = ({
  * The children of this component is the is the results from the quiz.
  */
 
-export const OakLessonExpandableReviewItem = (
-  props: OakLessonExpandableReviewItemProps,
+export const InternalReviewAccordion = (
+  props: InternalReviewAccordionProps,
 ) => {
   return (
     <InternalAccordionProvider isInitialOpen={props.initialOpen}>

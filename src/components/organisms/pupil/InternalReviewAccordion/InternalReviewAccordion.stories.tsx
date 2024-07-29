@@ -1,14 +1,14 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakLessonExpandableReviewItem } from "./OakLessonExpandableReviewItem";
+import { InternalReviewAccordion } from "./InternalReviewAccordion";
 
 import { OakLessonReviewItem } from "@/components/organisms/pupil/OakLessonReviewItem";
 
-const meta: Meta<typeof OakLessonExpandableReviewItem> = {
-  component: OakLessonExpandableReviewItem,
+const meta: Meta<typeof InternalReviewAccordion> = {
+  component: InternalReviewAccordion,
   tags: ["autodocs"],
-  title: "components/organisms/pupil/OakLessonExpandableReviewItem",
+  title: "components/organisms/pupil/InternalReviewAccordion",
   parameters: {
     controls: {
       include: ["expandableLabel", "headerAfterSlot", "children"],
@@ -32,19 +32,11 @@ const meta: Meta<typeof OakLessonExpandableReviewItem> = {
     children: "In this space we can render the quiz results component",
     initialOpen: false,
   },
-  render: (args) => (
-    <OakLessonReviewItem
-      completed={true}
-      grade={4}
-      lessonSectionName="starter-quiz"
-      numQuestions={6}
-      expandableReviewSlot={<OakLessonExpandableReviewItem {...args} />}
-    />
-  ),
+  render: (args) => <InternalReviewAccordion {...args} />,
 };
 export default meta;
 
-type Story = StoryObj<typeof OakLessonExpandableReviewItem>;
+type Story = StoryObj<typeof InternalReviewAccordion>;
 
 export const Default: Story = {};
 
@@ -55,7 +47,7 @@ export const ExitQuiz: Story = {
       grade={4}
       lessonSectionName="exit-quiz"
       numQuestions={6}
-      expandableReviewSlot={<OakLessonExpandableReviewItem {...args} />}
+      expandableReviewSlot={<InternalReviewAccordion {...args} />}
     />
   ),
 };
@@ -67,7 +59,7 @@ export const StarterQuiz: Story = {
       grade={4}
       lessonSectionName="starter-quiz"
       numQuestions={6}
-      expandableReviewSlot={<OakLessonExpandableReviewItem {...args} />}
+      expandableReviewSlot={<InternalReviewAccordion {...args} />}
     />
   ),
 };

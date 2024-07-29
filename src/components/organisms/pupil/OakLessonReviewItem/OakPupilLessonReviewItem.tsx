@@ -32,13 +32,39 @@ type IntroSectionProps = {
   lessonSectionName: "intro";
 };
 
-export type OakLessonReviewItemProps = BaseOakLessonReviewItemProps &
-  (IntroSectionProps | QuizSectionProps | VideoSectionProps);
+export type OakLessonReviewItemProps = BaseOakLessonReviewItemProps & {
+  lessonSectionName: LessonSectionName;
+} & (IntroSectionProps | QuizSectionProps | VideoSectionProps);
 
-const StyledLessonReviewItem = styled(OakFlex)<{ completed: boolean }>`
+type OakLessonReviewItemContainerProps = {
+  $background?: OakCombinedColorToken;
+  $borderColor?: OakCombinedColorToken;
+  children: React.ReactNode;
+};
+
+const StyledLessonReviewItem = styled(OakFlex)`
   outline: none;
   text-align: initial;
 `;
+
+const ReviewItemContainer = (props: OakLessonReviewItemContainerProps) => {
+  const { children, ...rest } = props;
+
+  return (
+    <StyledLessonReviewItem
+      $flexDirection={["column", "row", "row"]}
+      $justifyContent={"space-between"}
+      $flexWrap={"wrap"}
+      $ph={["inner-padding-m", "inner-padding-xl"]}
+      $pv="inner-padding-l"
+      $borderRadius="border-radius-l"
+      $ba="border-solid-l"
+      {...rest}
+    >
+      {children}
+    </StyledLessonReviewItem>
+  );
+};
 
 export const OakLessonReviewItem = (props: OakLessonReviewItemProps) => {
   const { completed, lessonSectionName, ...rest } = props;
@@ -52,17 +78,9 @@ export const OakLessonReviewItem = (props: OakLessonReviewItemProps) => {
   lessonSectionNameToIconMap.set("video", "video");
 
   return (
-    <StyledLessonReviewItem
-      completed={completed}
-      $flexDirection={["column", "row", "row"]}
-      $justifyContent={"space-between"}
-      $flexWrap={"wrap"}
+    <ReviewItemContainer
       $background={completed ? completedBackgroundColor : "white"}
-      $ph={["inner-padding-m", "inner-padding-xl"]}
-      $pv="inner-padding-l"
-      $borderRadius="border-radius-l"
       $borderColor={completed ? completedBackgroundColor : borderColor}
-      $ba="border-solid-l"
       {...rest}
     >
       <OakFlex $gap="space-between-m" $alignItems="center">
@@ -83,7 +101,7 @@ export const OakLessonReviewItem = (props: OakLessonReviewItemProps) => {
         {renderQuestionCounter(props)}
       </OakFlex>
       {renderQuizResults(props)}
-    </StyledLessonReviewItem>
+    </ReviewItemContainer>
   );
 };
 
