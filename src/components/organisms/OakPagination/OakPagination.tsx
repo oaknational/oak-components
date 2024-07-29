@@ -1,16 +1,11 @@
 import React, { RefObject, useState } from "react";
 import styled, { css } from "styled-components";
 
+import { generatePageNumbers } from "./utils";
+
 import { OakFlex, OakIcon, OakLI, OakUL } from "@/components/atoms";
 import { InternalButton } from "@/components/atoms/InternalButton";
-
-/**
- * TODO: Pagination component
- * ! - refactor chevron button to OakIconButton component
- * ! - refactor code to make it clean
- * ! - Add tests
- * ? - Create and OakIconButton compoent?
- */
+import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
 
 export type OakPaginationProps = {
   currentPage: number;
@@ -40,6 +35,16 @@ const StyledChevronButton = styled(InternalButton)<{ disabledColor: string }>`
       cursor: pointer;
     }
   `}
+`;
+
+const StyledIcon = styled(OakIcon)<{ disabled: boolean }>`
+  ${(props) => {
+    if (props.disabled) {
+      return css`
+        filter: ${parseColorFilter("grey50")};
+      `;
+    }
+  }}
 `;
 
 const StyledNumberButton = styled(InternalButton)<{ selected: boolean }>`
@@ -74,9 +79,9 @@ const OakPageNumber = ({
     <StyledNumberButton
       data-testid="page-number-component"
       aria-label={`${pageName} page ${pageIndex}`}
+      aria-current={isActive ? "page" : false}
       $font={"heading-7"}
       onClick={onClick}
-      element="a"
       selected={isActive}
       href={href}
     >
@@ -107,43 +112,6 @@ export const OakPagination = ({
   paginationHref,
   pageName,
 }: OakPaginationProps) => {
-  const generatePageNumbers = (activePage: number, totalPages: number) => {
-    const pageNumbers: (number | string)[] = [];
-
-    if (totalPages <= 7) {
-      return Array.from({ length: totalPages }, (_, i) => i);
-    } else if (totalPages > 7 && activePage <= 3) {
-      const pages = [0, 1, 2, 3, "...", totalPages - 1];
-      return pages;
-    } else if (
-      totalPages > 7 &&
-      activePage >= 4 &&
-      activePage < totalPages - 3
-    ) {
-      const pages = [
-        0,
-        "...",
-        activePage - 1,
-        activePage,
-        "...",
-        totalPages - 1,
-      ];
-      return pages;
-    } else if (totalPages > 7 && activePage >= 5) {
-      const pages = [
-        0,
-        "...",
-        totalPages - 4,
-        totalPages - 3,
-        totalPages - 2,
-        totalPages - 1,
-      ];
-      return pages;
-    } else {
-      return pageNumbers;
-    }
-  };
-
   const [activePage, setActivePage] = useState(currentPage);
 
   const pageNumbers = generatePageNumbers(activePage, totalPages);
@@ -156,13 +124,7 @@ export const OakPagination = ({
   };
 
   const handleChevronClick = (direction: "backwards" | "forwards") => {
-    setActivePage((currNum) => {
-      if (direction === "backwards") {
-        return (currNum = currNum - 1);
-      } else {
-        return (currNum = currNum + 1);
-      }
-    });
+    setActivePage((currNum) => currNum + (direction === "backwards" ? -1 : 1));
   };
 
   if (currentPage === 1 && totalPages < 2) {
@@ -173,7 +135,7 @@ export const OakPagination = ({
       <OakFlex
         $alignItems={"center"}
         $justifyContent={"center"}
-        $gap={"space-between-s"}
+        $gap={["space-between-ssx", "space-between-s", "space-between-s"]}
       >
         <StyledChevronButton
           element={isFirstPage ? "button" : "a"}
@@ -186,29 +148,40 @@ export const OakPagination = ({
           disabled={activePage <= 1}
           aria-label={isFirstPage ? "No previous pages" : "Go to previous page"}
         >
-          <OakIcon
-            iconName="chevron-left"
-            $colorFilter={isFirstPage ? "icon-disabled" : null}
-          />
+          <StyledIcon disabled={isFirstPage} iconName="chevron-left" />
         </StyledChevronButton>
         <OakUL $reset $display={"flex"}>
           {pageNumbers.map((pageIndex, i) => {
             if (typeof pageIndex === "number") {
               return (
-                <OakLI key={`${pageIndex} ${i}`} $mh={"space-between-ssx"}>
+                <OakLI
+                  key={`${pageIndex} ${i}`}
+                  $mh={[
+                    "space-between-sssx",
+                    "space-between-ssx",
+                    "space-between-ssx",
+                  ]}
+                >
                   <OakPageNumber
                     pageName={pageName}
                     key={pageIndex}
                     pageIndex={pageIndex + 1}
                     currentPage={activePage}
-                    href={`${paginationHref}/${pageIndex + 1}`}
+                    href={`${paginationHref}?page=${pageIndex + 1}`}
                     onClick={() => handleNumberClick(pageIndex + 1)}
                   />
                 </OakLI>
               );
             } else {
               return (
-                <OakLI $mh={"space-between-ssx"} key={`${pageIndex} ${i}`}>
+                <OakLI
+                  $mh={[
+                    "space-between-sssx",
+                    "space-between-ssx",
+                    "space-between-ssx",
+                  ]}
+                  key={`${pageIndex} ${i}`}
+                >
                   <OakFlex $height={"100%"} $alignSelf={"center"}>
                     <OakEllipsis />
                   </OakFlex>
@@ -228,10 +201,7 @@ export const OakPagination = ({
           disabled={isLastPage}
           aria-label={isLastPage ? "No further pages" : "Go to next page"}
         >
-          <OakIcon
-            iconName="chevron-right"
-            $colorFilter={isLastPage ? "icon-disabled" : null}
-          />
+          <StyledIcon disabled={isLastPage} iconName="chevron-right" />
         </StyledChevronButton>
       </OakFlex>
     </nav>
@@ -242,6 +212,9 @@ export const OakPagination = ({
  *
  * Add the description of the component here and it will appear on the story for the component
  * The following callbacks are available for tracking focus events:
+ *
+ * Pagination component for navigating through pages
+ *
  *
  * ### Callbacks
  * make sure to add descriptions and types for any callbacks for the component

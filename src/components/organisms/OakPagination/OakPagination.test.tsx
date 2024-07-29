@@ -1,9 +1,9 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
-// import { fireEvent } from "@testing-library/react";
 
 import { OakPagination } from "./OakPagination";
+import { generatePageNumbers } from "./utils";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
@@ -60,7 +60,7 @@ describe("OakPagination Component", () => {
     expect(forwardsButton).toBeDisabled();
   });
 
-  it.skip("matches snapshot", () => {
+  it("matches snapshot", () => {
     const tree = create(
       <OakPagination
         paginationHref={""}
@@ -70,5 +70,27 @@ describe("OakPagination Component", () => {
       />,
     ).toJSON();
     expect(tree).toMatchSnapshot();
+  });
+
+  describe("generatePageNumbers", () => {
+    test("should return all page numbers if totalPages is less than or equal to 7", () => {
+      expect(generatePageNumbers(0, 5)).toEqual([0, 1, 2, 3, 4]);
+      expect(generatePageNumbers(3, 7)).toEqual([0, 1, 2, 3, 4, 5, 6]);
+    });
+
+    test("should return correct page numbers when activePage is less than or equal to 3", () => {
+      expect(generatePageNumbers(0, 10)).toEqual([0, 1, 2, 3, "...", 9]);
+      expect(generatePageNumbers(3, 10)).toEqual([0, 1, 2, 3, "...", 9]);
+    });
+
+    test("should return correct page numbers when activePage is between 4 and totalPages - 3", () => {
+      expect(generatePageNumbers(4, 10)).toEqual([0, "...", 3, 4, "...", 9]);
+      expect(generatePageNumbers(6, 10)).toEqual([0, "...", 5, 6, "...", 9]);
+    });
+
+    test("should return correct page numbers when activePage is greater than or equal to totalPages - 3", () => {
+      expect(generatePageNumbers(7, 10)).toEqual([0, "...", 6, 7, 8, 9]);
+      expect(generatePageNumbers(9, 10)).toEqual([0, "...", 6, 7, 8, 9]);
+    });
   });
 });

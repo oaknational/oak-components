@@ -1,0 +1,401 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakPagination Component matches snapshot 1`] = `
+.c0 {
+  font-family: Lexend,sans-serif;
+}
+
+.c4 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.c6 {
+  object-fit: contain;
+}
+
+.c7 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Lexend,sans-serif;
+}
+
+.c8 {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  display: revert;
+  font-family: Lexend,sans-serif;
+  font-family: Lexend,sans-serif;
+  display: revert;
+}
+
+.c2 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: Lexend,sans-serif;
+}
+
+.c2:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c9 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c9:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c3 {
+  display: inline-block;
+}
+
+.c3:disabled {
+  cursor: pointer;
+}
+
+.c5 {
+  -webkit-filter: invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%);
+  filter: invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%);
+}
+
+.c10 {
+  height: 30px;
+  width: 30px;
+  border-radius: 100px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+}
+
+.c11 {
+  height: 30px;
+  width: 30px;
+  border-radius: 100px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: white;
+  color: black;
+}
+
+@media (min-width:750px) {
+  .c1 {
+    gap: 1rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c1 {
+    gap: 1rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c8 {
+    margin-left: 0.5rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c8 {
+    margin-left: 0.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c8 {
+    margin-right: 0.5rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c8 {
+    margin-right: 0.5rem;
+  }
+}
+
+<nav
+  aria-label="pagination"
+  data-testid="pagination"
+>
+  <div
+    className="c0 c1"
+  >
+    <button
+      aria-disabled={true}
+      aria-label="No previous pages"
+      className="c2 c3"
+      data-testid="backwards-button"
+      disabled={true}
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <div
+        className="c4 c5"
+        disabled={true}
+      >
+        <img
+          alt="chevron-left"
+          className="c6"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/rbvzan0ozubmr4j0uqdn.svg"
+          style={
+            {
+              "bottom": 0,
+              "color": "transparent",
+              "height": "100%",
+              "left": 0,
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+    </button>
+    <ul
+      className="c7"
+    >
+      <li
+        className="c8"
+      >
+        <button
+          aria-current="page"
+          aria-label="test page 1"
+          className="c9 c10"
+          data-testid="page-number-component"
+          href="?page=1"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          selected={true}
+        >
+          1
+        </button>
+      </li>
+      <li
+        className="c8"
+      >
+        <button
+          aria-current={false}
+          aria-label="test page 2"
+          className="c9 c11"
+          data-testid="page-number-component"
+          href="?page=2"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          selected={false}
+        >
+          2
+        </button>
+      </li>
+      <li
+        className="c8"
+      >
+        <button
+          aria-current={false}
+          aria-label="test page 3"
+          className="c9 c11"
+          data-testid="page-number-component"
+          href="?page=3"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          selected={false}
+        >
+          3
+        </button>
+      </li>
+      <li
+        className="c8"
+      >
+        <button
+          aria-current={false}
+          aria-label="test page 4"
+          className="c9 c11"
+          data-testid="page-number-component"
+          href="?page=4"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          selected={false}
+        >
+          4
+        </button>
+      </li>
+      <li
+        className="c8"
+      >
+        <button
+          aria-current={false}
+          aria-label="test page 5"
+          className="c9 c11"
+          data-testid="page-number-component"
+          href="?page=5"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          selected={false}
+        >
+          5
+        </button>
+      </li>
+      <li
+        className="c8"
+      >
+        <button
+          aria-current={false}
+          aria-label="test page 6"
+          className="c9 c11"
+          data-testid="page-number-component"
+          href="?page=6"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          selected={false}
+        >
+          6
+        </button>
+      </li>
+      <li
+        className="c8"
+      >
+        <button
+          aria-current={false}
+          aria-label="test page 7"
+          className="c9 c11"
+          data-testid="page-number-component"
+          href="?page=7"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          selected={false}
+        >
+          7
+        </button>
+      </li>
+    </ul>
+    <a
+      aria-disabled={false}
+      aria-label="Go to next page"
+      className="c2 c3"
+      data-testid="forwards-button"
+      disabled={false}
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <div
+        className="c4 "
+        disabled={false}
+      >
+        <img
+          alt="chevron-right"
+          className="c6"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
+          style={
+            {
+              "bottom": 0,
+              "color": "transparent",
+              "height": "100%",
+              "left": 0,
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+    </a>
+  </div>
+</nav>
+`;
