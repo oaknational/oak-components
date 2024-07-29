@@ -19,7 +19,7 @@ export type OakPaginationProps = {
 
 type OakPageNumberProps = {
   currentPage: number;
-  pageIndex: number;
+  pageNumber: number;
   totalPages?: number;
   firstItemRef?: RefObject<HTMLAnchorElement> | null;
   href: string;
@@ -69,23 +69,23 @@ const StyledEllipsis = styled(InternalButton)`
 
 const OakPageNumber = ({
   currentPage,
-  pageIndex,
+  pageNumber,
   onClick,
   href,
   pageName,
 }: OakPageNumberProps) => {
-  const isActive = currentPage === pageIndex;
+  const isActive = currentPage === pageNumber;
   return (
     <StyledNumberButton
       data-testid="page-number-component"
-      aria-label={`${pageName} page ${pageIndex}`}
+      aria-label={`${pageName} page ${pageNumber}`}
       aria-current={isActive ? "page" : false}
       $font={"heading-7"}
       onClick={onClick}
       selected={isActive}
       href={href}
     >
-      {pageIndex}
+      {pageNumber}
     </StyledNumberButton>
   );
 };
@@ -145,7 +145,7 @@ export const OakPagination = ({
           }}
           href={prevHref}
           aria-disabled={isFirstPage}
-          disabled={activePage <= 1}
+          disabled={isFirstPage}
           aria-label={isFirstPage ? "No previous pages" : "Go to previous page"}
         >
           <StyledIcon disabled={isFirstPage} iconName="chevron-left" />
@@ -165,7 +165,7 @@ export const OakPagination = ({
                   <OakPageNumber
                     pageName={pageName}
                     key={pageIndex}
-                    pageIndex={pageIndex + 1}
+                    pageNumber={pageIndex + 1}
                     currentPage={activePage}
                     href={`${paginationHref}?page=${pageIndex + 1}`}
                     onClick={() => handleNumberClick(pageIndex + 1)}
