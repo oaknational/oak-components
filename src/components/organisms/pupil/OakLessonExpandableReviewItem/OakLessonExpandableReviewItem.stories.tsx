@@ -38,7 +38,7 @@ const meta: Meta<typeof OakLessonExpandableReviewItem> = {
       grade={4}
       lessonSectionName="starter-quiz"
       numQuestions={6}
-      resultSection={<OakLessonExpandableReviewItem {...args} />}
+      expandableReviewSlot={<OakLessonExpandableReviewItem {...args} />}
     />
   ),
 };
@@ -55,7 +55,7 @@ export const ExitQuiz: Story = {
       grade={4}
       lessonSectionName="exit-quiz"
       numQuestions={6}
-      resultSection={<OakLessonExpandableReviewItem {...args} />}
+      expandableReviewSlot={<OakLessonExpandableReviewItem {...args} />}
     />
   ),
 };
@@ -67,7 +67,7 @@ export const StarterQuiz: Story = {
       grade={4}
       lessonSectionName="starter-quiz"
       numQuestions={6}
-      resultSection={<OakLessonExpandableReviewItem {...args} />}
+      expandableReviewSlot={<OakLessonExpandableReviewItem {...args} />}
     />
   ),
 };

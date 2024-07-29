@@ -19,7 +19,10 @@ type QuizSectionProps = {
    * The number of questions answered correctly
    */
   grade: number;
-  resultSection?: React.ReactNode;
+  /**
+   * You MUST use the OakLessonExpandableReviewItem as the container component for this slot
+   */
+  expandableReviewSlot?: React.ReactNode;
 };
 
 type VideoSectionProps = {
@@ -173,7 +176,7 @@ const renderQuizResults = (props: OakLessonReviewItemProps) => {
   switch (props.lessonSectionName) {
     case "exit-quiz":
     case "starter-quiz":
-      return props.resultSection;
+      return props.expandableReviewSlot;
     default:
       return null;
   }

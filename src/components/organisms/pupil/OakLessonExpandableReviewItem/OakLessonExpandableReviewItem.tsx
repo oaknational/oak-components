@@ -104,7 +104,10 @@ const Accordion = ({
 };
 
 /**
- * OakLessonExpandableReviewItem has a white chevron icon that rotates when the accordion is open and uses InternalShadowRoundButton
+ *
+ * use this component in the expandableReviewItemSlot on the OakPupilLessonReviewItem component
+ *
+ * The children of this component is the is the results from the quiz.
  */
 
 export const OakLessonExpandableReviewItem = (
