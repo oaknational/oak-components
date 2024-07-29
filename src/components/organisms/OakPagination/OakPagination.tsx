@@ -215,9 +215,4 @@ export const OakPagination = ({
  *
  * Pagination component for navigating through pages
  *
- *
- * ### Callbacks
- * make sure to add descriptions and types for any callbacks for the component
- *
- * NB. We must export a styled component for it to be inheritable
  */
