@@ -13,11 +13,7 @@ describe(InternalReviewAccordion, () => {
   it("matches snapshot", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
-        <InternalReviewAccordion
-          initialOpen
-          expandableLabel="See more"
-          id="see-more"
-        >
+        <InternalReviewAccordion initialOpen id="see-more">
           Here it is
         </InternalReviewAccordion>
       </OakThemeProvider>,
@@ -28,11 +24,7 @@ describe(InternalReviewAccordion, () => {
 
   it("toggles open and closed", () => {
     const { queryByRole, queryByText, getByText } = renderWithTheme(
-      <InternalReviewAccordion
-        expandableLabel="See more"
-        id="see-more"
-        initialOpen={false}
-      >
+      <InternalReviewAccordion id="see-more" initialOpen={false}>
         Here it is
       </InternalReviewAccordion>,
     );

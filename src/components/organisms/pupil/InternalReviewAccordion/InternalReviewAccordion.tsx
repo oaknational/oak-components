@@ -11,10 +11,6 @@ import { InternalShadowRoundButton } from "@/components/molecules/InternalShadow
 
 export type InternalReviewAccordionProps = {
   /**
-   * The header of the accordion
-   */
-  expandableLabel: string;
-  /**
    * Whether the accordion should be open initially
    */
   initialOpen: boolean;
@@ -51,11 +47,7 @@ export const StyledAccordionButton = styled(InternalShadowRoundButton)<
  * An accordion component that can be used to show/hide content
  */
 
-const Accordion = ({
-  expandableLabel,
-  children,
-  id,
-}: InternalReviewAccordionProps) => {
+const Accordion = ({ children, id }: InternalReviewAccordionProps) => {
   const { isOpen, setOpen } = useAccordionContext();
 
   return (
@@ -83,7 +75,7 @@ const Accordion = ({
           defaultIconColor={"white"}
           isTrailingIcon={true}
         >
-          {expandableLabel}
+          Results
         </StyledAccordionButton>
       </OakFlex>
 

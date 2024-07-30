@@ -20,15 +20,9 @@ const meta: Meta<typeof InternalReviewAccordion> = {
         type: "text",
       },
     },
-    expandableLabel: {
-      control: {
-        type: "text",
-      },
-    },
   },
   args: {
     id: "accordion-1",
-    expandableLabel: "Results",
     children: "In this space we can render the quiz results component",
     initialOpen: false,
   },
