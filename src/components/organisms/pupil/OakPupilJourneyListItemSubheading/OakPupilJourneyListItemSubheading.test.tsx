@@ -7,7 +7,7 @@ import { OakPupilJourneyListItemSubheading } from "./OakPupilJourneyListItemSubh
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { oakDefaultTheme } from "@/styles";
-import { OakPupilJourneyListCounter } from "@/components/organisms";
+import { OakPupilJourneyListCounter } from "@/components/organisms/pupil";
 
 describe("OakPupilJourneyListItemSubheading", () => {
   it("renders", () => {
