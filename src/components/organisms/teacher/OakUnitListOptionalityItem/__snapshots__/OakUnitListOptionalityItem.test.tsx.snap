@@ -67,6 +67,9 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
 .c20 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  color: #222222;
   background: #f5e9f2;
   border: 0.063rem solid;
   border-color: #deb7d5;
@@ -183,6 +186,10 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -220,6 +227,13 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
 
 .c21 {
   font-family: Lexend,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
   color: #222222;
 }
 
@@ -484,7 +498,7 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
             />
           </div>
           <div
-            className="c17 c10"
+            className="c17 c8"
           >
             <span
               className="c19"

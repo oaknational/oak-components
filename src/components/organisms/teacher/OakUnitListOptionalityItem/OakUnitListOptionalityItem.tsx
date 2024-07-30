@@ -33,10 +33,15 @@ const StyledYearAndOptionCount = ({
     >
       {yearTitle}
     </OakSpan>
+
     <OakBox
       $ph={"inner-padding-xs"}
+      $pv={"inner-padding-ssx"}
       $ba={"border-solid-s"}
-      $borderColor={"bg-decorative4-main"}
+      $borderColor={
+        disabledOrUnavailable ? "border-neutral-lighter" : "bg-decorative4-main"
+      }
+      $color={disabledOrUnavailable ? "text-disabled" : "text-primary"}
       $background={
         disabledOrUnavailable
           ? "bg-neutral-stronger"
@@ -46,6 +51,7 @@ const StyledYearAndOptionCount = ({
       $ml={[null, "space-between-s"]}
     >
       <OakLabel
+        $font={"heading-light-7"}
         $color={disabledOrUnavailable ? "text-disabled" : "text-primary"}
       >{`${optionalityUnitsLength} unit options`}</OakLabel>
     </OakBox>
@@ -189,7 +195,7 @@ export const OakUnitListOptionalityItem = <C extends ElementType>(
               nullTitle={nullTitle}
               disabledOrUnavailable={disabledOrUnavailable}
             />
-            <OakFlex>
+            <OakFlex $alignItems={"center"}>
               <StyledYearAndOptionCount
                 yearTitle={props.yearTitle}
                 optionalityUnitsLength={optionalityUnits.length}
@@ -208,6 +214,7 @@ export const OakUnitListOptionalityItem = <C extends ElementType>(
           $display={["flex", "flex", "none"]}
           $mb={"space-between-s"}
           $justifyContent={"space-between"}
+          $alignItems={"center"}
         >
           <StyledYearAndOptionCount
             yearTitle={props.yearTitle}
