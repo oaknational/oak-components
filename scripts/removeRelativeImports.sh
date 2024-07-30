@@ -19,7 +19,7 @@ find src -type f \( -name "*.tsx" -o -name "*.ts" \) | while read -r file; do
             if [ -f "$absolute" ]; then
                 sed -i '' "s|\"$import\"|\"$alias\"|g" $file
             else
-                echo "File not found: $absolute"
+                echo "cannot alias import for $import"
             fi
         done
     fi
