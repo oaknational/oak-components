@@ -3,7 +3,7 @@ import { StoryObj, Meta } from "@storybook/react";
 
 import { OakUnitListOptionalityItem } from "./OakUnitListOptionalityItem";
 
-import { OakBox, OakFlex, OakHeading, OakP } from "@/components/atoms";
+import { OakFlex } from "@/components/atoms";
 
 const meta: Meta<typeof OakUnitListOptionalityItem> = {
   title: "components/organisms/teacher/OakUnitListOptionalityItem",
@@ -60,20 +60,11 @@ const meta: Meta<typeof OakUnitListOptionalityItem> = {
       return (
         <OakFlex
           $flexDirection="column"
-          $gap="space-between-m"
-          $background={"bg-decorative4-main"}
+          $gap="space-between-l"
+          $background={"grey20"}
           $pa={"inner-padding-xl"}
           role="list"
         >
-          <OakBox>
-            <OakHeading tag="h3" $font={"heading-4"}>
-              Maths Unit
-            </OakHeading>
-            <OakP>
-              Brand-new teaching resources, thoughtfully crafted by teachers for
-              classroom needs.
-            </OakP>
-          </OakBox>
           {Story()}
           <OakUnitListOptionalityItem
             nullTitle={"Numerals 1-10 (Legacy example) this is a long tite"}

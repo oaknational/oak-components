@@ -30,13 +30,7 @@ const meta: Meta<typeof OakUnitListOptionalityItemCard> = {
   decorators: [
     (Story) => {
       return (
-        <OakFlex
-          $flexDirection="column"
-          $gap="space-between-m"
-          $background={"bg-decorative4-main"}
-          $pa={"inner-padding-xl"}
-          role="list"
-        >
+        <OakFlex $background={"grey10"} $pa={"inner-padding-xl"} role="list">
           {Story()}
         </OakFlex>
       );

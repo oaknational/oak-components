@@ -14,7 +14,6 @@ describe("OakUnitListOptionalityItem", () => {
       <OakUnitListOptionalityItem
         data-testid="test"
         index={0}
-        title={""}
         yearTitle={""}
         lessonCount={0}
         href={""}
@@ -50,7 +49,6 @@ describe("OakUnitListOptionalityItem", () => {
         data-testid="unit-card-optionality"
         lessonCount={6}
         index={0}
-        title={""}
         yearTitle={""}
         href={""}
         nullTitle={""}
@@ -77,31 +75,12 @@ describe("OakUnitListOptionalityItem", () => {
       "2 unit options",
     );
   });
-  it("renders the year title", () => {
+  it("renders the year title and null title", () => {
     const { getByTestId } = renderWithTheme(
       <OakUnitListOptionalityItem
         data-testid="unit-card-optionality"
         lessonCount={6}
         index={0}
-        title={""}
-        yearTitle={"Year 4"}
-        href={""}
-        nullTitle={""}
-        optionalityUnits={[]}
-      />,
-    );
-
-    expect(getByTestId("unit-card-optionality").textContent).toContain(
-      "Year 4",
-    );
-  });
-  it("renders the null title", () => {
-    const { getByTestId } = renderWithTheme(
-      <OakUnitListOptionalityItem
-        data-testid="unit-card-optionality"
-        lessonCount={6}
-        index={0}
-        title={""}
         yearTitle={"Year 4"}
         href={""}
         nullTitle={"null title"}
@@ -110,16 +89,19 @@ describe("OakUnitListOptionalityItem", () => {
     );
 
     expect(getByTestId("unit-card-optionality").textContent).toContain(
+      "Year 4",
+    );
+    expect(getByTestId("unit-card-optionality").textContent).toContain(
       "null title",
     );
   });
+
   it("renders optional unit items", () => {
     const { getAllByText, getByText } = renderWithTheme(
       <OakUnitListOptionalityItem
         data-testid="unit-card-optionality"
         lessonCount={6}
         index={0}
-        title={""}
         yearTitle={"Year 4"}
         href={""}
         nullTitle={"null title"}
