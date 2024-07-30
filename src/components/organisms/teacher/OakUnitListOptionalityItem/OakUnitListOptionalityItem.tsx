@@ -180,7 +180,11 @@ export const OakUnitListOptionalityItem = <C extends ElementType>(
         $display={["none", "flex", "flex"]}
       />
 
-      <OakBox $background={"white"} $pa={"inner-padding-l"} $width={"100%"}>
+      <OakBox
+        $background={"white"}
+        $pa={["inner-padding-m", "inner-padding-l"]}
+        $width={"100%"}
+      >
         <OakFlex
           $alignItems={"center"}
           $mb={"space-between-s"}
