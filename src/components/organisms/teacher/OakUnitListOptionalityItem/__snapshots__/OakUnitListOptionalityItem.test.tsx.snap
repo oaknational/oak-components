@@ -49,7 +49,7 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
 
 .c14 {
   width: 100%;
-  padding: 1.25rem;
+  padding: 1rem;
   background: #ffffff;
   font-family: Lexend,sans-serif;
 }
@@ -313,6 +313,12 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+
+@media (min-width:750px) {
+  .c14 {
+    padding: 1.25rem;
   }
 }
 
