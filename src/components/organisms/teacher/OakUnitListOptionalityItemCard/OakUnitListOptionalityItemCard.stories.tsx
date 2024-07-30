@@ -38,14 +38,6 @@ const meta: Meta<typeof OakUnitListOptionalityItemCard> = {
           role="list"
         >
           {Story()}
-          {/* <OakUnitListOptionalityItemCard
-            title={"Numerals 1-10 (Legacy example)"}
-            lessonCount={10}
-            index={2}
-            isLegacy={true}
-            yearTitle="Year 10"
-            href={""}
-          /> */}
         </OakFlex>
       );
     },
