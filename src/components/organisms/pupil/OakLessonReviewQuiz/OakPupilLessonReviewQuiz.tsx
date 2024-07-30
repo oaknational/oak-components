@@ -43,7 +43,7 @@ export const ReviewItemContainer = (
 
   return (
     <StyledLessonReviewItem
-      $flexDirection={["column", "row", "row"]}
+      $flexDirection={["column", "column", "row"]}
       $justifyContent={"space-between"}
       $flexWrap={"wrap"}
       $ph={["inner-padding-m", "inner-padding-xl"]}
