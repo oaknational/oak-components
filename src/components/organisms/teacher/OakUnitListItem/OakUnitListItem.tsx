@@ -1,8 +1,4 @@
-import React, {
-  ComponentPropsWithoutRef,
-  ElementType,
-  MutableRefObject,
-} from "react";
+import React, { MutableRefObject } from "react";
 import styled, { css } from "styled-components";
 
 import { OakFlex, OakBox, OakP, OakHeading, OakSpan } from "@/components/atoms";
@@ -74,9 +70,7 @@ const StyledOakIndexBox = styled(OakFlex)`
   }
 `;
 
-export type OakUnitListItemProps<C extends ElementType> = {
-  as?: C;
-  disabled?: boolean;
+export type OakUnitListItemProps = {
   unavailable?: boolean;
   index: number;
   title: string;
@@ -85,21 +79,16 @@ export type OakUnitListItemProps<C extends ElementType> = {
   isLegacy: boolean;
   href: string;
   firstItemRef?: MutableRefObject<HTMLAnchorElement | null> | null | undefined;
-} & ComponentPropsWithoutRef<C>;
+  onClick?: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
+};
 
 /**
  *
  * OakUnitsListItem component used as links for unit cards
  */
-export const OakUnitListItem = <C extends ElementType>(
-  props: OakUnitListItemProps<C>,
-) => {
+export const OakUnitListItem = (props: OakUnitListItemProps) => {
   const {
-    as,
-    lessonSectionName,
     lessonCount,
-    progress,
-    disabled,
     href,
     unavailable,
     onClick,
@@ -109,17 +98,15 @@ export const OakUnitListItem = <C extends ElementType>(
     ...rest
   } = props;
 
-  const disabledOrUnavailable = disabled || unavailable;
-
   return (
     <OakBox $width={"100%"} role="listitem">
       <StyledUnitListItem
         $alignItems={"center"}
         $background={unavailable ? "bg-neutral" : "bg-primary"}
         $borderRadius="border-radius-m"
-        $disabled={disabledOrUnavailable}
-        href={disabledOrUnavailable ? undefined : href}
-        onClick={disabledOrUnavailable ? undefined : onClick}
+        $disabled={unavailable}
+        href={unavailable ? undefined : href}
+        onClick={unavailable ? undefined : onClick}
         ref={firstItemRef}
         as={"a"}
         {...rest}
@@ -127,7 +114,7 @@ export const OakUnitListItem = <C extends ElementType>(
         <StyledOakIndexBox
           $alignSelf={"stretch"}
           $background={
-            disabledOrUnavailable
+            unavailable
               ? "bg-neutral-stronger"
               : isLegacy
                 ? "lavender50"
@@ -140,7 +127,7 @@ export const OakUnitListItem = <C extends ElementType>(
           <OakHeading
             tag="h3"
             $font={"heading-5"}
-            $color={disabledOrUnavailable ? "text-disabled" : "text-primary"}
+            $color={unavailable ? "text-disabled" : "text-primary"}
           >
             {index}
           </OakHeading>
@@ -157,7 +144,7 @@ export const OakUnitListItem = <C extends ElementType>(
           <OakFlex $alignItems={["center"]} $maxWidth={["100%"]}>
             <OakP
               $font={"heading-7"}
-              $color={disabledOrUnavailable ? "text-disabled" : "text-primary"}
+              $color={unavailable ? "text-disabled" : "text-primary"}
             >
               {props.title}
             </OakP>
@@ -172,9 +159,7 @@ export const OakUnitListItem = <C extends ElementType>(
             <OakFlex $justifyContent={["flex-start", "flex-end"]}>
               <OakP
                 $font={"heading-light-7"}
-                $color={
-                  disabledOrUnavailable ? "text-disabled" : "text-primary"
-                }
+                $color={unavailable ? "text-disabled" : "text-primary"}
               >
                 {props.yearTitle}
               </OakP>
@@ -183,13 +168,11 @@ export const OakUnitListItem = <C extends ElementType>(
               <StyledLessonLink
                 isTrailingIcon
                 iconName="chevron-right"
-                disabled={disabledOrUnavailable}
+                disabled={unavailable}
               >
                 <OakSpan
                   $font={"heading-light-7"}
-                  $color={
-                    disabledOrUnavailable ? "text-disabled" : "text-primary"
-                  }
+                  $color={unavailable ? "text-disabled" : "text-primary"}
                 >
                   {lessonCount} Lessons
                 </OakSpan>

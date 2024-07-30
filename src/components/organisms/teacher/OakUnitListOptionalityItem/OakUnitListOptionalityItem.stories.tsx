@@ -12,10 +12,8 @@ const meta: Meta<typeof OakUnitListOptionalityItem> = {
   args: {
     nullTitle: "British Empire in India and Africa",
     index: 1,
-    href: "#",
     yearTitle: "Year 10",
-    lessonCount: 10,
-    isLegacy: false,
+    firstItemRef: undefined,
     optionalityUnits: [
       {
         title:
@@ -47,13 +45,10 @@ const meta: Meta<typeof OakUnitListOptionalityItem> = {
     ],
   },
   argTypes: {
-    title: { control: { type: "text" } },
     yearTitle: { control: { type: "text" } },
     index: { control: { type: "number" } },
     nullTitle: { control: { type: "text" } },
-    disabled: { control: { type: "boolean" } },
     unavailable: { control: { type: "boolean" } },
-    isLegacy: { control: { type: "boolean" } },
   },
   decorators: [
     (Story) => {
@@ -67,11 +62,12 @@ const meta: Meta<typeof OakUnitListOptionalityItem> = {
         >
           {Story()}
           <OakUnitListOptionalityItem
-            nullTitle={"Numerals 1-10 (Legacy example) this is a long tite"}
+            nullTitle={
+              "Numerals 1-10 this is a very long title (unavailable example) "
+            }
             index={2}
-            isLegacy={true}
             yearTitle="Year 10"
-            disabled={true}
+            unavailable={true}
             optionalityUnits={[
               {
                 title:
@@ -87,7 +83,15 @@ const meta: Meta<typeof OakUnitListOptionalityItem> = {
                 href: "#",
                 lessonCount: 10,
               },
+              {
+                title:
+                  "Migration: What do sources tell us about the British Empire in India and Africa?",
+
+                href: "#",
+                lessonCount: 10,
+              },
             ]}
+            firstItemRef={undefined}
           />
         </OakFlex>
       );

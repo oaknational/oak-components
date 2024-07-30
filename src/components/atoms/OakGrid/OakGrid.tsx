@@ -6,11 +6,7 @@ import {
 } from "@/styles/utils/responsiveStyle";
 import { OakBox, OakBoxProps } from "@/components/atoms/OakBox";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
-import {
-  OakAllSpacingToken,
-  OakCombinedSpacingToken,
-  OakSpaceBetweenToken,
-} from "@/styles";
+import { OakCombinedSpacingToken } from "@/styles";
 
 const gridStyle = css<OakGridProps>`
   ${responsiveStyle("row-gap", (props) => props.$rg, parseSpacing)}
@@ -22,7 +18,6 @@ const gridStyle = css<OakGridProps>`
     (props) => props.$gridTemplateColumns,
   )}
     ${responsiveStyle("grid-template-rows", (props) => props.$gridTemplateRows)}
-    ${responsiveStyle("grid-gap", (props) => props.$gridGap, parseSpacing)}
 `;
 
 export type OakGridProps = OakBoxProps & {
@@ -62,14 +57,6 @@ export type OakGridProps = OakBoxProps & {
    * Accepts a `grid-template-rows` value or a responsive array of `grid-template-rows` values.
    */
   $gridTemplateRows?: ResponsiveValues<CSSProperties["gridTemplateRows"]>;
-  /**
-   * Applies `grid-gap` to the grid.
-   *
-   * Accepts a spacing token or a responsive array of spacing tokens. Can be nulled.
-   */
-  $gridGap?: ResponsiveValues<
-    OakAllSpacingToken | OakSpaceBetweenToken | null | undefined
-  >;
 };
 
 /**

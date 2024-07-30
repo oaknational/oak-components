@@ -15,10 +15,9 @@ describe("OakUnitListOptionalityItem", () => {
         data-testid="test"
         index={0}
         yearTitle={""}
-        lessonCount={0}
-        href={""}
         optionalityUnits={[]}
         nullTitle={""}
+        firstItemRef={undefined}
       />,
     );
     expect(getByTestId("test")).toBeInTheDocument();
@@ -28,13 +27,11 @@ describe("OakUnitListOptionalityItem", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
         <OakUnitListOptionalityItem
-          title="Lesson 1"
           index={1}
           yearTitle={""}
-          lessonCount={0}
-          href={""}
           optionalityUnits={[]}
           nullTitle={""}
+          firstItemRef={undefined}
         />
         ,
       </OakThemeProvider>,
@@ -47,10 +44,8 @@ describe("OakUnitListOptionalityItem", () => {
     const { getByTestId } = renderWithTheme(
       <OakUnitListOptionalityItem
         data-testid="unit-card-optionality"
-        lessonCount={6}
         index={0}
         yearTitle={""}
-        href={""}
         nullTitle={""}
         optionalityUnits={[
           {
@@ -68,6 +63,7 @@ describe("OakUnitListOptionalityItem", () => {
             lessonCount: 0,
           },
         ]}
+        firstItemRef={undefined}
       />,
     );
 
@@ -79,12 +75,11 @@ describe("OakUnitListOptionalityItem", () => {
     const { getByTestId } = renderWithTheme(
       <OakUnitListOptionalityItem
         data-testid="unit-card-optionality"
-        lessonCount={6}
         index={0}
         yearTitle={"Year 4"}
-        href={""}
         nullTitle={"null title"}
         optionalityUnits={[]}
+        firstItemRef={undefined}
       />,
     );
 
@@ -100,10 +95,8 @@ describe("OakUnitListOptionalityItem", () => {
     const { getAllByText, getByText } = renderWithTheme(
       <OakUnitListOptionalityItem
         data-testid="unit-card-optionality"
-        lessonCount={6}
         index={0}
         yearTitle={"Year 4"}
-        href={""}
         nullTitle={"null title"}
         optionalityUnits={[
           {
@@ -121,6 +114,7 @@ describe("OakUnitListOptionalityItem", () => {
             lessonCount: 4,
           },
         ]}
+        firstItemRef={undefined}
       />,
     );
 
