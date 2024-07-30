@@ -45,14 +45,12 @@ describe(OakLessonReviewQuiz, () => {
       </>,
     );
 
-    expect(getByTestId("intro").textContent).toContain("Prepare");
     expect(getByTestId("starter-quiz").textContent).toContain(
       "Activate - 6 questions",
     );
     expect(getByTestId("exit-quiz").textContent).toContain(
       "Check - 6 questions",
     );
-    expect(getByTestId("video").textContent).toContain("Learn");
   });
 
   it("renders copy for each lesson section that has completed", () => {
@@ -75,10 +73,7 @@ describe(OakLessonReviewQuiz, () => {
         />
       </>,
     );
-
-    expect(getByTestId("intro").textContent).toContain("Completed");
     expect(getByTestId("starter-quiz").textContent).toContain("Completed");
     expect(getByTestId("exit-quiz").textContent).toContain("Completed");
-    expect(getByTestId("video").textContent).toContain("Completed");
   });
 });

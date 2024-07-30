@@ -32,14 +32,14 @@ describe(InternalReviewAccordion, () => {
     expect(queryByRole("region")).not.toBeInTheDocument();
 
     act(() => {
-      fireEvent.click(getByText("See more"));
+      fireEvent.click(getByText("Results"));
     });
 
     expect(queryByRole("region")).toBeVisible();
     expect(queryByText("Here it is")).toBeInTheDocument();
 
     act(() => {
-      fireEvent.click(getByText("See more"));
+      fireEvent.click(getByText("Results"));
     });
 
     expect(queryByRole("region")).not.toBeInTheDocument();
