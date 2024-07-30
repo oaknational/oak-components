@@ -20,7 +20,12 @@ const DisplayText = ({
 }) => {
   if (boldPrefixText && standardText) {
     return (
-      <OakFlex $color={"text-primary"} $height={height} $alignItems={"center"}>
+      <OakFlex
+        $color={"text-primary"}
+        $minHeight={height}
+        $alignItems={"center"}
+        $flexDirection={["column", "row"]}
+      >
         <OakSpan $font={"body-2-bold"}>{boldPrefixText}</OakSpan>
         <OakSpan $font={"body-2"}>
           {"\u00A0"}-{"\u00A0"}
