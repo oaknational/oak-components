@@ -3,8 +3,6 @@ import { Meta, StoryObj } from "@storybook/react";
 
 import { InternalReviewAccordion } from "./InternalReviewAccordion";
 
-import { OakLessonReviewItem } from "@/components/organisms/pupil/OakLessonReviewItem";
-
 const meta: Meta<typeof InternalReviewAccordion> = {
   component: InternalReviewAccordion,
   tags: ["autodocs"],
@@ -33,27 +31,3 @@ export default meta;
 type Story = StoryObj<typeof InternalReviewAccordion>;
 
 export const Default: Story = {};
-
-export const ExitQuiz: Story = {
-  render: (args) => (
-    <OakLessonReviewItem
-      completed={true}
-      grade={4}
-      lessonSectionName="exit-quiz"
-      numQuestions={6}
-      expandableReviewSlot={<InternalReviewAccordion {...args} />}
-    />
-  ),
-};
-
-export const StarterQuiz: Story = {
-  render: (args) => (
-    <OakLessonReviewItem
-      completed={true}
-      grade={4}
-      lessonSectionName="starter-quiz"
-      numQuestions={6}
-      expandableReviewSlot={<InternalReviewAccordion {...args} />}
-    />
-  ),
-};

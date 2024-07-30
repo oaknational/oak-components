@@ -19,10 +19,6 @@ type QuizSectionProps = {
    * The number of questions answered correctly
    */
   grade: number;
-  /**
-   * You MUST use the OakLessonExpandableReviewItem as the container component for this slot
-   */
-  expandableReviewSlot?: React.ReactNode;
 };
 
 type VideoSectionProps = {
@@ -32,39 +28,13 @@ type IntroSectionProps = {
   lessonSectionName: "intro";
 };
 
-export type OakLessonReviewItemProps = BaseOakLessonReviewItemProps & {
-  lessonSectionName: LessonSectionName;
-} & (IntroSectionProps | QuizSectionProps | VideoSectionProps);
+export type OakLessonReviewItemProps = BaseOakLessonReviewItemProps &
+  (IntroSectionProps | QuizSectionProps | VideoSectionProps);
 
-type OakLessonReviewItemContainerProps = {
-  $background?: OakCombinedColorToken;
-  $borderColor?: OakCombinedColorToken;
-  children: React.ReactNode;
-};
-
-const StyledLessonReviewItem = styled(OakFlex)`
+const StyledLessonReviewItem = styled(OakFlex)<{ completed: boolean }>`
   outline: none;
   text-align: initial;
 `;
-
-const ReviewItemContainer = (props: OakLessonReviewItemContainerProps) => {
-  const { children, ...rest } = props;
-
-  return (
-    <StyledLessonReviewItem
-      $flexDirection={["column", "row", "row"]}
-      $justifyContent={"space-between"}
-      $flexWrap={"wrap"}
-      $ph={["inner-padding-m", "inner-padding-xl"]}
-      $pv="inner-padding-l"
-      $borderRadius="border-radius-l"
-      $ba="border-solid-l"
-      {...rest}
-    >
-      {children}
-    </StyledLessonReviewItem>
-  );
-};
 
 export const OakLessonReviewItem = (props: OakLessonReviewItemProps) => {
   const { completed, lessonSectionName, ...rest } = props;
@@ -78,30 +48,34 @@ export const OakLessonReviewItem = (props: OakLessonReviewItemProps) => {
   lessonSectionNameToIconMap.set("video", "video");
 
   return (
-    <ReviewItemContainer
+    <StyledLessonReviewItem
+      completed={completed}
+      $gap="space-between-m"
+      $alignItems="center"
       $background={completed ? completedBackgroundColor : "white"}
+      $ph={["inner-padding-m", "inner-padding-xl"]}
+      $pv="inner-padding-l"
+      $borderRadius="border-radius-l"
       $borderColor={completed ? completedBackgroundColor : borderColor}
+      $ba="border-solid-l"
       {...rest}
     >
-      <OakFlex $gap="space-between-m" $alignItems="center">
-        <OakRoundIcon
-          iconName={lessonSectionNameToIconMap.get(lessonSectionName)}
-          $width="all-spacing-10"
-          $height="all-spacing-10"
-          $background={iconBackgroundColor}
-        />
-        <OakFlex $flexGrow={1} $flexShrink={1} $flexDirection={"column"}>
-          <OakBox $font={["heading-6", "heading-5"]} $color={"text-primary"}>
-            {pickLabelForSection(lessonSectionName)}
-          </OakBox>
-          <OakBox $font={["body-2", "body-1"]}>
-            {pickSummaryForProgress(props)}
-          </OakBox>
-        </OakFlex>
-        {renderQuestionCounter(props)}
+      <OakRoundIcon
+        iconName={lessonSectionNameToIconMap.get(lessonSectionName)}
+        $width="all-spacing-10"
+        $height="all-spacing-10"
+        $background={iconBackgroundColor}
+      />
+      <OakFlex $flexGrow={1} $flexShrink={1} $flexDirection={"column"}>
+        <OakBox $font={["heading-6", "heading-5"]} $color={"text-primary"}>
+          {pickLabelForSection(lessonSectionName)}
+        </OakBox>
+        <OakBox $font={["body-2", "body-1"]}>
+          {pickSummaryForProgress(props)}
+        </OakBox>
       </OakFlex>
-      {renderQuizResults(props)}
-    </ReviewItemContainer>
+      {renderQuestionCounter(props)}
+    </StyledLessonReviewItem>
   );
 };
 
@@ -181,20 +155,6 @@ const renderQuestionCounter = (props: OakLessonReviewItemProps) => {
           <OakSpan $font="heading-6">&nbsp;/&nbsp;{props.numQuestions}</OakSpan>
         </OakBox>
       );
-    default:
-      return null;
-  }
-};
-
-const renderQuizResults = (props: OakLessonReviewItemProps) => {
-  if (props.completed === false) {
-    return null;
-  }
-
-  switch (props.lessonSectionName) {
-    case "exit-quiz":
-    case "starter-quiz":
-      return props.expandableReviewSlot;
     default:
       return null;
   }
