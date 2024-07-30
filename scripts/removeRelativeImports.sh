@@ -16,16 +16,25 @@ find src -type f \( -name "*.tsx" -o -name "*.ts" \) | while read -r file; do
             
             absolute=$(realpath "$directory/$import")
             if [ -f "$absolute" ]; then
-                alias=$(echo "$absolute" | sed 's|.*src/|@/|')
-                if [ -z "$alias" ]; then
-                    echo "cannot alias import for $import"
-                else
-                    echo "Aliasing $import to $alias"
-                    sed -i '' "s|\"$import\"|\"$alias\"|g" $file
-                fi
-            else
-                echo "cannot find file for $import"
+                echo "cannot find file $absolute for $import"
+                continue
             fi
+                
+            if [[ "$absolute" != *"/src"* ]]; then
+                echo "cannot import file outside src directory for $import"
+                continue
+            fi
+
+                alias=$(echo "$absolute" | sed 's|.*src/|@/|')
+
+            if [ -z "$alias" ]; then
+                echo "cannot alias import for $import"
+                continue
+            fi
+
+            echo "Aliasing $import to $alias"
+            sed -i '' "s|\"$import\"|\"$alias\"|g" $file
+            
         done
     fi
 
