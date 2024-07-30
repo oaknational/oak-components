@@ -13,13 +13,18 @@ find src -type f \( -name "*.tsx" -o -name "*.ts" \) | while read -r file; do
         directory=$(dirname "$file")
         # Replace the pattern 'import ... from "../..."' with 'import ... from "..."' in the file
         for import in $imports; do
-            echo "Removing $import"
+            
             absolute=$(realpath "$directory/$import")
-            alias=$(echo "$absolute" | sed 's|.*src/|@/|')
             if [ -f "$absolute" ]; then
-                sed -i '' "s|\"$import\"|\"$alias\"|g" $file
+                alias=$(echo "$absolute" | sed 's|.*src/|@/|')
+                if [ -z "$alias" ]; then
+                    echo "cannot alias import for $import"
+                else
+                    echo "Aliasing $import to $alias"
+                    sed -i '' "s|\"$import\"|\"$alias\"|g" $file
+                fi
             else
-                echo "cannot alias import for $import"
+                echo "cannot find file for $import"
             fi
         done
     fi
