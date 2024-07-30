@@ -15,8 +15,7 @@ import {
 } from "@dnd-kit/core";
 import { sortableKeyboardCoordinates } from "@dnd-kit/sortable";
 
-import { InternalDroppableHoldingPen } from "../InternalDroppableHoldingPen";
-
+import { InternalDroppableHoldingPen } from "@/components/organisms/pupil/quiz/InternalDroppableHoldingPen";
 import { OakFlex } from "@/components/atoms";
 import {
   OakDragAndDropInstructions,

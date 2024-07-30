@@ -1,8 +1,7 @@
 import React, { ElementType } from "react";
 import styled, { css } from "styled-components";
 
-import { OakRoundIconProps } from "../OakRoundIcon";
-
+import { OakRoundIconProps } from "@/components/molecules/OakRoundIcon";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
 import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
 import { OakBox, OakFlex, OakSpan } from "@/components/atoms";

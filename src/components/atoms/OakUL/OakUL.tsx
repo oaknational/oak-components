@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { OakBoxProps, oakBoxCss } from "../OakBox";
+import { OakBoxProps, oakBoxCss } from "@/components/atoms/OakBox";
 
 export type OakULProps = OakBoxProps & {
   $reset?: boolean;

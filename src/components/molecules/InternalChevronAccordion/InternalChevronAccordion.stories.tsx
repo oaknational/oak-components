@@ -2,10 +2,9 @@ import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import styled from "styled-components";
 
-import { OakHandDrawnHR } from "../OakHandDrawnHR";
-
 import { InternalChevronAccordion } from "./InternalChevronAccordion";
 
+import { OakHandDrawnHR } from "@/components/molecules/OakHandDrawnHR";
 import { OakFlex } from "@/components/atoms";
 import { PositionStyleProps } from "@/styles/utils/positionStyle";
 import { SizeStyleProps } from "@/styles/utils/sizeStyle";

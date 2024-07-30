@@ -1,10 +1,9 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { InternalStyledSvg } from "../InternalStyledSvg";
-
 import { InternalCardWithBackgroundElement } from "./InternalCardWithBackgroundElement";
 
+import { InternalStyledSvg } from "@/components/atoms/InternalStyledSvg";
 import { flexArgTypes } from "@/storybook-helpers/flexStyleHelpers";
 import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
 

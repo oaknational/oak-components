@@ -3,10 +3,9 @@ import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 import { create } from "react-test-renderer";
 
-import { OakPupilJourneyOptionalityButton } from "../OakPupilJourneyOptionalityButton";
-
 import { OakPupilJourneyOptionalityItem } from "./OakPupilJourneyOptionalityItem";
 
+import { OakPupilJourneyOptionalityButton } from "@/components/organisms/pupil/browse/OakPupilJourneyOptionalityButton";
 import { OakThemeProvider } from "@/components/atoms";
 import { oakDefaultTheme } from "@/styles";
 

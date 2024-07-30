@@ -1,10 +1,9 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakPupilJourneyYearButton } from "../OakPupilJourneyYearButton";
-
 import { OakPupilJourneyProgrammeOptions } from "./OakPupilJourneyProgrammeOptions";
 
+import { OakPupilJourneyYearButton } from "@/components/organisms/pupil/browse/OakPupilJourneyYearButton";
 import { OakPupilJourneyHeader } from "@/components/organisms/pupil/browse/OakPupilJourneyHeader";
 import { OakHeading } from "@/components/atoms";
 

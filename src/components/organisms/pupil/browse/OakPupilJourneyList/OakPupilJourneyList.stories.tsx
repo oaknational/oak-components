@@ -1,11 +1,10 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakPupilJourneyListCounter } from "../OakPupilJourneyListCounter";
-import { OakPupilJourneyListItemSubheading } from "../OakPupilJourneyListItemSubheading";
-
 import { OakPupilJourneyList } from "./OakPupilJourneyList";
 
+import { OakPupilJourneyListCounter } from "@/components/organisms/pupil/browse/OakPupilJourneyListCounter";
+import { OakPupilJourneyListItemSubheading } from "@/components/organisms/pupil/browse/OakPupilJourneyListItemSubheading";
 import { OakPupilJourneyListItem } from "@/components/organisms/pupil/browse/OakPupilJourneyListItem";
 import { OakPupilJourneyHeader } from "@/components/organisms/pupil/browse/OakPupilJourneyHeader";
 import {

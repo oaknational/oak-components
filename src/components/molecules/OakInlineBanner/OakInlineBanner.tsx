@@ -1,7 +1,6 @@
 import React, { ReactNode } from "react";
 
-import { InternalShadowRoundButton } from "../InternalShadowRoundButton";
-
+import { InternalShadowRoundButton } from "@/components/molecules/InternalShadowRoundButton";
 import {
   OakBox,
   OakFlex,

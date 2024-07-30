@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { OakBoxProps, oakBoxCss } from "../OakBox";
+import { OakBoxProps, oakBoxCss } from "@/components/atoms/OakBox";
 
 /**
  *

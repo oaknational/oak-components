@@ -1,12 +1,14 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
 
-import { OakQuizHint, OakQuizHintProps } from "../../quiz/OakQuizHint";
+import {
+  OakQuizHint,
+  OakQuizHintProps,
+} from "@/components/organisms/pupil/quiz/OakQuizHint";
 import {
   OakQuizFeedback,
   OakQuizFeedbackProps,
-} from "../../quiz/OakQuizFeedback/OakQuizFeedback";
-
+} from "@/components/organisms/pupil/quiz/OakQuizFeedback/OakQuizFeedback";
 import { OakFlex } from "@/components/atoms";
 
 /**

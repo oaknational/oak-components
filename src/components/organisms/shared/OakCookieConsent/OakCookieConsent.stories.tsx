@@ -3,14 +3,13 @@ import { Meta, StoryObj } from "@storybook/react";
 import { useArgs } from "@storybook/preview-api";
 import { action } from "@storybook/addon-actions";
 
-import { OakCookieConsentProvider } from "../OakCookieConsentProvider";
+import { OakCookieConsent, OakCookieConsentProps } from "./OakCookieConsent";
+
+import { OakCookieConsentProvider } from "@/components/organisms/shared/OakCookieConsentProvider";
 import {
   OakCookieConsentProviderProps,
   useCookieConsent,
-} from "../OakCookieConsentProvider/OakCookieConsentProvider";
-
-import { OakCookieConsent, OakCookieConsentProps } from "./OakCookieConsent";
-
+} from "@/components/organisms/shared/OakCookieConsentProvider/OakCookieConsentProvider";
 import { OakSecondaryButton } from "@/components/molecules";
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 

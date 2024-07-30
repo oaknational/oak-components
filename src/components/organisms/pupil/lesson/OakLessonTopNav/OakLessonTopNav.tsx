@@ -1,8 +1,7 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
 
-import { LessonSectionName } from "../../lesson/OakLessonLayout";
-
+import { LessonSectionName } from "@/components/organisms/pupil/lesson/OakLessonLayout";
 import {
   OakBox,
   OakFlex,

@@ -1,7 +1,9 @@
 import React, { ElementType, forwardRef } from "react";
 
-import { InternalLink, InternalLinkProps } from "../InternalLink";
-
+import {
+  InternalLink,
+  InternalLinkProps,
+} from "@/components/molecules/InternalLink";
 import {
   PolymorphicPropsWithRef,
   PolymorphicRef,

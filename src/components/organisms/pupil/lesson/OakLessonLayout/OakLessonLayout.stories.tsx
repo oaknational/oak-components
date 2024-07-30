@@ -1,10 +1,6 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakLessonTopNav } from "../OakLessonTopNav";
-import { OakLessonBottomNav } from "../OakLessonBottomNav";
-import { OakQuizCounter } from "../../quiz/OakQuizCounter";
-
 import {
   OakLessonLayout,
   OakLessonLayoutProps,
@@ -13,6 +9,9 @@ import {
 
 import { OakBackLink, OakPrimaryButton } from "@/components/molecules";
 import { OakBox } from "@/components/atoms";
+import { OakLessonTopNav } from "@/components/organisms/pupil/lesson/OakLessonTopNav";
+import { OakLessonBottomNav } from "@/components/organisms/pupil/lesson/OakLessonBottomNav";
+import { OakQuizCounter } from "@/components/organisms/pupil/quiz/OakQuizCounter";
 
 const meta: Meta<typeof OakLessonLayout> = {
   component: OakLessonLayout,

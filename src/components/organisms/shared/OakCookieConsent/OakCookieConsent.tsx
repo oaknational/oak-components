@@ -1,11 +1,14 @@
 import React from "react";
 
-import { OakCookieBanner, OakCookieBannerProps } from "../OakCookieBanner";
 import {
   OakCookieSettingsModal,
   OakCookieSettingsModalProps,
-} from "../OakCookieSettingsModal";
-import { useInternalCookieConsent } from "../OakCookieConsentProvider/OakCookieConsentProvider";
+} from "@/components/organisms/shared/OakCookieSettingsModal";
+import { useInternalCookieConsent } from "@/components/organisms/shared/OakCookieConsentProvider/OakCookieConsentProvider";
+import {
+  OakCookieBanner,
+  OakCookieBannerProps,
+} from "@/components/organisms/shared/OakCookieBanner";
 
 export type OakCookieConsentProps = Pick<
   OakCookieSettingsModalProps,

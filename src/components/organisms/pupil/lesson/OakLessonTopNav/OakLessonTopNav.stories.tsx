@@ -1,10 +1,9 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakQuizCounter } from "../../quiz/OakQuizCounter";
-
 import { OakLessonTopNav } from "./OakLessonTopNav";
 
+import { OakQuizCounter } from "@/components/organisms/pupil/quiz/OakQuizCounter";
 import { OakFlex } from "@/components/atoms";
 import { OakBackLink } from "@/components/molecules";
 
