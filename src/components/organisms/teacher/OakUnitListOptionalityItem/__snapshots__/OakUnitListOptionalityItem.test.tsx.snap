@@ -3,29 +3,89 @@
 exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
 [
   .c0 {
-  box-sizing: border-box;
+  width: 100%;
   font-family: Lexend,sans-serif;
 }
 
 .c2 {
-  padding: 1rem;
-  background: #e3e9fb;
-  border: 0.125rem solid;
-  border-color: #a0b6f2;
-  border-radius: 0.375rem;
+  background: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   font-family: Lexend,sans-serif;
 }
 
 .c4 {
+  width: 4rem;
+  min-width: 4rem;
+  height: 4rem;
+  background: #a0b6f2;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c7 {
+  margin: 0.75rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c9 {
+  max-width: 30rem;
   font-family: Lexend,sans-serif;
 }
 
 .c12 {
-  position: relative;
-  width: 2rem;
-  min-width: 2rem;
-  height: 2rem;
-  min-height: 2rem;
+  width: 4rem;
+  min-width: 4rem;
+  height: 4rem;
+  background: #a0b6f2;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  display: none;
+  font-family: Lexend,sans-serif;
+}
+
+.c14 {
+  width: 100%;
+  padding: 1.25rem;
+  background: #ffffff;
+  font-family: Lexend,sans-serif;
+}
+
+.c15 {
+  margin-bottom: 1rem;
+  display: none;
+  font-family: Lexend,sans-serif;
+}
+
+.c17 {
+  font-family: Lexend,sans-serif;
+}
+
+.c20 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background: #f5e9f2;
+  border: 0.063rem solid;
+  border-color: #deb7d5;
+  border-radius: 0.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c22 {
+  margin-bottom: 1rem;
+  display: none;
+  font-family: Lexend,sans-serif;
+}
+
+.c23 {
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   font-family: Lexend,sans-serif;
 }
 
@@ -34,10 +94,16 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .c5 {
@@ -45,9 +111,63 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c13 {
+  display: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c16 {
+  display: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -58,38 +178,35 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c7 {
+.c24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
-.c10 {
-  font-family: Lexend,sans-serif;
-}
-
-.c11 {
+.c6 {
   color: #222222;
   font-family: Lexend,sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.25rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
   -webkit-letter-spacing: 0.0115rem;
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
 }
 
-.c15 {
-  object-fit: contain;
+.c19 {
+  color: #222222;
+  font-family: Lexend,sans-serif;
 }
 
-.c6 {
+.c11 {
   font-family: Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -98,177 +215,324 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
-  margin-bottom: 0.75rem;
   color: #222222;
 }
 
-.c14 {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-.c8 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.25rem;
-  outline: none;
-  border-radius: 0.375rem;
-  padding: 0.25rem;
-  margin: -0.25rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  font: inherit;
-  background: none;
-  border: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  cursor: pointer;
+.c21 {
+  font-family: Lexend,sans-serif;
   color: #222222;
 }
 
-.c8 .c13 {
-  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+.c25 {
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  width: 100%;
+  grid-gap: 0.75rem;
 }
 
-.c8:focus-visible {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
-}
-
-.c8:visited {
-  color: #575757;
-}
-
-.c8:active {
-  color: #222222;
-}
-
-.c8:active .c13 {
-  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-}
-
-.c8[disabled] {
-  cursor: not-allowed;
-  color: #808080;
-}
-
-.c8[disabled] .c13 {
-  -webkit-filter: invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%);
-  filter: invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%);
-}
-
-.c9 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c3 {
-  outline: none;
-  text-align: initial;
-  -webkit-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
-  -webkit-transition-duration: 300ms;
-  transition-duration: 300ms;
-  cursor: pointer;
-}
-
-.c3:focus-visible {
-  background: #ffffff;
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
-}
-
-@media (hover:hover) {
-  .c8:hover,
-  .c8:visited:hover {
-    color: #222222;
-  }
-
-  .c8:hover .c13,
-  .c8:visited:hover .c13 {
-    -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-    filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+@media (min-width:750px) {
+  .c2 {
+    display: none;
   }
 }
 
-@media (hover:hover) {
-  .c3:hover {
-    background: #a0b6f2;
+@media (min-width:750px) {
+  .c4 {
+    width: 4rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c4 {
+    width: auto;
+  }
+}
+
+@media (min-width:750px) {
+  .c4 {
+    height: auto;
+  }
+}
+
+@media (min-width:1280px) {
+  .c4 {
+    height: auto;
+  }
+}
+
+@media (min-width:750px) {
+  .c12 {
+    width: 4rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c12 {
+    width: auto;
+  }
+}
+
+@media (min-width:750px) {
+  .c12 {
+    height: auto;
+  }
+}
+
+@media (min-width:1280px) {
+  .c12 {
+    height: auto;
+  }
+}
+
+@media (min-width:750px) {
+  .c12 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:1280px) {
+  .c12 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:750px) {
+  .c15 {
+    display: none;
+  }
+}
+
+@media (min-width:1280px) {
+  .c15 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:750px) {
+  .c20 {
+    margin-left: 1rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c22 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:1280px) {
+  .c22 {
+    display: none;
+  }
+}
+
+@media (min-width:750px) {
+  .c23 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:1280px) {
+  .c23 {
+    display: none;
+  }
+}
+
+@media (min-width:750px) {
+  .c1 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:1280px) {
+  .c1 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:750px) {
+  .c3 {
+    display: none;
+  }
+}
+
+@media (min-width:750px) {
+  .c13 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:1280px) {
+  .c13 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:750px) {
+  .c16 {
+    display: none;
+  }
+}
+
+@media (min-width:1280px) {
+  .c16 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:750px) {
+  .c24 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:1280px) {
+  .c24 {
+    display: none;
+  }
+}
+
+@media (min-width:750px) {
+  .c19 {
+    margin-right: 5rem;
   }
 }
 
 <div
     className="c0 c1"
     role="listitem"
+    title="Lesson 1"
   >
-    <a
-      className="c2 c1 c3"
-      href=""
-      title="Lesson 1"
+    <div
+      className="c2 c3"
     >
       <div
         className="c4 c5"
       >
-        <h3
+        <span
           className="c6"
         >
-          Lesson 1
-        </h3>
+          1
+        </span>
+      </div>
+      <div
+        className="c7 c8"
+      >
         <div
-          className="c4 c7"
+          className="c9 c10"
         >
-          <a
-            className="c8 c9"
-          >
-            <span
-              className="c10"
-            >
-              <span
-                className="c11"
-              >
-                0
-                 lessons
-              </span>
-            </span>
-            <div
-              className="c12 c13 c14"
-            >
-              <img
-                alt="chevron-right"
-                className="c15"
-                data-nimg="fill"
-                decoding="async"
-                loading="lazy"
-                onError={[Function]}
-                onLoad={[Function]}
-                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
-                style={
-                  {
-                    "bottom": 0,
-                    "color": "transparent",
-                    "height": "100%",
-                    "left": 0,
-                    "objectFit": undefined,
-                    "objectPosition": undefined,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                    "width": "100%",
-                  }
-                }
-              />
-            </div>
-          </a>
+          <h3
+            className="c11"
+          />
         </div>
       </div>
-    </a>
+    </div>
+    <div
+      className="c12 c13"
+    >
+      <span
+        className="c6"
+      >
+        1
+      </span>
+    </div>
+    <div
+      className="c14"
+    >
+      <div
+        className="c15 c16"
+      >
+        <div
+          className="c17 c18"
+        >
+          <div
+            className="c9 c10"
+          >
+            <h3
+              className="c11"
+            />
+          </div>
+          <div
+            className="c17 c10"
+          >
+            <span
+              className="c19"
+            />
+            <div
+              className="c20"
+            >
+              <label
+                className="c21"
+              >
+                0 unit options
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="c22"
+      >
+        <div
+          className="c9 c10"
+        >
+          <h3
+            className="c11"
+          />
+        </div>
+      </div>
+      <div
+        className="c23 c24"
+      >
+        <span
+          className="c19"
+        />
+        <div
+          className="c20"
+        >
+          <label
+            className="c21"
+          >
+            0 unit options
+          </label>
+        </div>
+      </div>
+      <div
+        className="c17 c25"
+        role="list"
+      />
+    </div>
   </div>,
   ",",
 ]

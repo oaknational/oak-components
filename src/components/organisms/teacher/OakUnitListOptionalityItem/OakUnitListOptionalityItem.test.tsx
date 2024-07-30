@@ -17,8 +17,9 @@ describe("OakUnitListOptionalityItem", () => {
         title={""}
         yearTitle={""}
         lessonCount={0}
-        isLegacy={false}
         href={""}
+        optionalityUnits={[]}
+        nullTitle={""}
       />,
     );
     expect(getByTestId("test")).toBeInTheDocument();
@@ -32,8 +33,9 @@ describe("OakUnitListOptionalityItem", () => {
           index={1}
           yearTitle={""}
           lessonCount={0}
-          isLegacy={false}
           href={""}
+          optionalityUnits={[]}
+          nullTitle={""}
         />
         ,
       </OakThemeProvider>,
@@ -42,35 +44,110 @@ describe("OakUnitListOptionalityItem", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("renders an anchor when the item is not disabled", () => {
+  it("renders the number of optional units", () => {
     const { getByTestId } = renderWithTheme(
       <OakUnitListOptionalityItem
-        data-testid="unit-card"
-        index={0}
-        title={""}
-        yearTitle={""}
-        lessonCount={0}
-        isLegacy={false}
-        href={""}
-      />,
-    );
-
-    expect(getByTestId("unit-card").tagName).toBe("A");
-  });
-
-  it("renders the number of lessons when provided", () => {
-    const { getByTestId } = renderWithTheme(
-      <OakUnitListOptionalityItem
-        data-testid="unit-card"
+        data-testid="unit-card-optionality"
         lessonCount={6}
         index={0}
         title={""}
         yearTitle={""}
-        isLegacy={false}
         href={""}
+        nullTitle={""}
+        optionalityUnits={[
+          {
+            title:
+              "Migration: What do sources tell us about the British Empire in India and Africa?",
+            href: "#",
+
+            lessonCount: 0,
+          },
+          {
+            title:
+              "Migration: What do sources tell us about the British Empire in India and Africa?",
+            href: "#",
+
+            lessonCount: 0,
+          },
+        ]}
       />,
     );
 
-    expect(getByTestId("unit-card").textContent).toContain("6");
+    expect(getByTestId("unit-card-optionality").textContent).toContain(
+      "2 unit options",
+    );
+  });
+  it("renders the year title", () => {
+    const { getByTestId } = renderWithTheme(
+      <OakUnitListOptionalityItem
+        data-testid="unit-card-optionality"
+        lessonCount={6}
+        index={0}
+        title={""}
+        yearTitle={"Year 4"}
+        href={""}
+        nullTitle={""}
+        optionalityUnits={[]}
+      />,
+    );
+
+    expect(getByTestId("unit-card-optionality").textContent).toContain(
+      "Year 4",
+    );
+  });
+  it("renders the null title", () => {
+    const { getByTestId } = renderWithTheme(
+      <OakUnitListOptionalityItem
+        data-testid="unit-card-optionality"
+        lessonCount={6}
+        index={0}
+        title={""}
+        yearTitle={"Year 4"}
+        href={""}
+        nullTitle={"null title"}
+        optionalityUnits={[]}
+      />,
+    );
+
+    expect(getByTestId("unit-card-optionality").textContent).toContain(
+      "null title",
+    );
+  });
+  it("renders optional unit items", () => {
+    const { getAllByText, getByText } = renderWithTheme(
+      <OakUnitListOptionalityItem
+        data-testid="unit-card-optionality"
+        lessonCount={6}
+        index={0}
+        title={""}
+        yearTitle={"Year 4"}
+        href={""}
+        nullTitle={"null title"}
+        optionalityUnits={[
+          {
+            title:
+              "Migration: What do sources tell us about the British Empire in India and Africa?",
+            href: "#",
+
+            lessonCount: 10,
+          },
+          {
+            title:
+              "Migration: What do sources tell us about the British Empire in India and Africa?",
+            href: "#",
+
+            lessonCount: 4,
+          },
+        ]}
+      />,
+    );
+
+    expect(
+      getAllByText(
+        "Migration: What do sources tell us about the British Empire in India and Africa?",
+      ),
+    ).toHaveLength(2);
+    expect(getByText("4 lessons")).toBeInTheDocument();
+    expect(getByText("10 lessons")).toBeInTheDocument();
   });
 });

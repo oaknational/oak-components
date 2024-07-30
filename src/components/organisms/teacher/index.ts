@@ -3,4 +3,4 @@ export * from "./OakTertiaryOLNav";
 export * from "./OakUnitsContainer";
 export * from "./OakUnitsHeader";
 export * from "./OakUnitListItem";
-export * from "./OakUnitListOptionalityUnit";
+export * from "./OakUnitListOptionalityItem";

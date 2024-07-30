@@ -2,16 +2,16 @@ import React from "react";
 import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
 
-import { OakUnitListOptionalityItem } from "./OakUnitListOptionalityItem";
+import { OakUnitListOptionalityItemCard } from "./OakUnitListOptionalityItemCard";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { OakThemeProvider } from "@/components/atoms";
 import { oakDefaultTheme } from "@/styles";
 
-describe("OakUnitListOptionalityItem", () => {
+describe("OakUnitListOptionalityItemCard", () => {
   it("renders", () => {
     const { getByTestId } = renderWithTheme(
-      <OakUnitListOptionalityItem
+      <OakUnitListOptionalityItemCard
         data-testid="test"
         index={0}
         title={""}
@@ -27,7 +27,7 @@ describe("OakUnitListOptionalityItem", () => {
   it("matches snapshot", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
-        <OakUnitListOptionalityItem
+        <OakUnitListOptionalityItemCard
           title="Lesson 1"
           index={1}
           yearTitle={""}
@@ -44,7 +44,7 @@ describe("OakUnitListOptionalityItem", () => {
 
   it("renders an anchor when the item is not disabled", () => {
     const { getByTestId } = renderWithTheme(
-      <OakUnitListOptionalityItem
+      <OakUnitListOptionalityItemCard
         data-testid="unit-card"
         index={0}
         title={""}
@@ -60,7 +60,7 @@ describe("OakUnitListOptionalityItem", () => {
 
   it("renders the number of lessons when provided", () => {
     const { getByTestId } = renderWithTheme(
-      <OakUnitListOptionalityItem
+      <OakUnitListOptionalityItemCard
         data-testid="unit-card"
         lessonCount={6}
         index={0}
