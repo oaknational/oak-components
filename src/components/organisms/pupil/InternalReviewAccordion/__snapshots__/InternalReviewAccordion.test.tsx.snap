@@ -233,7 +233,7 @@ exports[`InternalReviewAccordion matches snapshot 1`] = `
           <span
             className="c10"
           >
-            See more
+            Results
           </span>
           <div
             className="c11 c12 icon-container"

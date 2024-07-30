@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OakLessonReviewItem matches snapshot 1`] = `
+exports[`OakLessonReviewIntroVideo matches snapshot 1`] = `
 [
   .c0 {
   padding-left: 1rem;
