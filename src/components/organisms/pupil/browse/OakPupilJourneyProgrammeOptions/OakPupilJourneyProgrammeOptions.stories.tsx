@@ -11,7 +11,7 @@ import { OakHeading } from "@/components/atoms";
 const meta: Meta<typeof OakPupilJourneyProgrammeOptions> = {
   component: OakPupilJourneyProgrammeOptions,
   tags: ["autodocs"],
-  title: "components/organisms/pupil/OakPupilJourneyProgrammeOptions",
+
   argTypes: {
     phase: { control: { options: ["primary", "secondary"] } },
   },

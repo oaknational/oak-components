@@ -4,7 +4,6 @@ import { StoryObj, Meta } from "@storybook/react";
 import { OakPupilJourneyHeader } from "./OakPupilJourneyHeader";
 
 const meta: Meta<typeof OakPupilJourneyHeader> = {
-  title: "Components/organisms/pupil/OakPupilJourneyHeader",
   component: OakPupilJourneyHeader,
   tags: ["autodocs"],
   argTypes: {
@@ -21,7 +20,6 @@ const meta: Meta<typeof OakPupilJourneyHeader> = {
     iconName: "subject-science",
     alt: "icon",
     breadcrumbs: ["first", "second", "third", "fourth"],
-    title: "Pupil Journey Header",
   },
 };
 

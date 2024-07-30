@@ -7,7 +7,6 @@ import { OakPupilJourneyContentGuidance } from "./OakPupilJourneyContentGuidance
 import { OakSecondaryButton } from "@/components/molecules";
 
 const meta: Meta<typeof OakPupilJourneyContentGuidance> = {
-  title: "Components/organisms/pupil/OakPupilJourneyContentGuidance",
   component: OakPupilJourneyContentGuidance,
   tags: ["autodocs"],
   parameters: {

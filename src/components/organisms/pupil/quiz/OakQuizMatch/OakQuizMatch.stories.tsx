@@ -6,7 +6,7 @@ import { OakQuizMatch } from "./OakQuizMatch";
 const meta: Meta<typeof OakQuizMatch> = {
   component: OakQuizMatch,
   tags: ["autodocs"],
-  title: "components/organisms/pupil/OakQuizMatch",
+
   parameters: {
     controls: {
       include: [],

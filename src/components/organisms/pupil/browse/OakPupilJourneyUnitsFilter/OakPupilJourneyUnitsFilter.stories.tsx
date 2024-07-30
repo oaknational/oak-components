@@ -6,7 +6,6 @@ import { OakPupilJourneyUnitsFilter } from "./OakPupilJourneyUnitsFilter";
 import { OakFlex } from "@/components/atoms";
 
 const meta: Meta<typeof OakPupilJourneyUnitsFilter> = {
-  title: "Components/organisms/pupil/OakPupilJourneyUnitsFilter",
   component: OakPupilJourneyUnitsFilter,
   tags: ["autodocs"],
   argTypes: {

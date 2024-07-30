@@ -8,7 +8,7 @@ import { OakFlex } from "@/components/atoms";
 const meta: Meta<typeof OakQuizFeedback> = {
   component: OakQuizFeedback,
   tags: ["autodocs"],
-  title: "components/organisms/pupil/OakQuizFeedback",
+
   argTypes: {
     answerFeedback: {
       control: {

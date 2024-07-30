@@ -11,7 +11,7 @@ import { OakBackLink } from "@/components/molecules";
 const meta: Meta<typeof OakLessonTopNav> = {
   component: OakLessonTopNav,
   tags: ["autodocs"],
-  title: "components/organisms/pupil/OakLessonTopNav",
+
   decorators: [
     (Story) => (
       <OakFlex

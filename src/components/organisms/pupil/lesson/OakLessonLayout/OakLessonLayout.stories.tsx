@@ -17,7 +17,7 @@ import { OakBox } from "@/components/atoms";
 const meta: Meta<typeof OakLessonLayout> = {
   component: OakLessonLayout,
   tags: ["autodocs"],
-  title: "components/organisms/pupil/OakLessonLayout",
+
   decorators: [(Story) => <Story />],
   argTypes: {
     lessonSectionName: {

@@ -4,7 +4,6 @@ import { StoryObj, Meta } from "@storybook/react";
 import { OakPupilJourneyListCounter } from "./OakPupilJourneyListCounter";
 
 const meta: Meta<typeof OakPupilJourneyListCounter> = {
-  title: "Components/organisms/pupil/OakPupilJourneyListCounter",
   component: OakPupilJourneyListCounter,
   tags: ["autodocs"],
   argTypes: {},

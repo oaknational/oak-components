@@ -9,7 +9,7 @@ import { oakDefaultTheme } from "@/styles";
 const meta: Meta<typeof OakHintButton> = {
   component: OakHintButton,
   tags: ["autodocs"],
-  title: "components/organisms/pupil/OakHintButton",
+
   argTypes: {
     isOpen: {
       control: "boolean",

@@ -8,7 +8,7 @@ import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 const meta: Meta<typeof OakQuizTextInput> = {
   component: OakQuizTextInput,
   tags: ["autodocs"],
-  title: "components/organisms/pupil/OakQuizTextInput",
+
   argTypes: {
     wrapperWidth: sizeArgTypes["$width"],
   },

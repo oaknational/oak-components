@@ -9,7 +9,7 @@ import { OakTertiaryButton } from "@/components/molecules";
 const meta: Meta<typeof OakLessonVideoTranscript> = {
   component: OakLessonVideoTranscript,
   tags: ["autodocs"],
-  title: "components/organisms/pupil/OakLessonVideoTranscript",
+
   parameters: {
     controls: {
       include: [],

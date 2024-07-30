@@ -9,13 +9,11 @@ import { OakPupilJourneyOptionalityButton } from "@/components/organisms/pupil/b
 const meta: Meta<typeof OakPupilJourneyOptionalityItem> = {
   component: OakPupilJourneyOptionalityItem,
   tags: ["autodocs"],
-  title: "components/organisms/pupil/OakPupilJourneyOptionalityItem",
+
   args: {
-    title: "Lesson 1",
     index: 1,
   },
   argTypes: {
-    title: { control: { type: "text" } }, // type: "text" is the default
     index: { control: { type: "number" } },
     disabled: { control: { type: "boolean" } },
     unavailable: { control: { type: "boolean" } },

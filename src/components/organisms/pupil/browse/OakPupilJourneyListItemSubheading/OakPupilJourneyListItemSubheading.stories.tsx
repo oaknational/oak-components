@@ -6,7 +6,6 @@ import { OakPupilJourneyListItemSubheading } from "./OakPupilJourneyListItemSubh
 import { OakPupilJourneyListCounter } from "@/components/organisms";
 
 const meta: Meta<typeof OakPupilJourneyListItemSubheading> = {
-  title: "Components/organisms/pupil/OakPupilJourneyListItemSubheading",
   component: OakPupilJourneyListItemSubheading,
   tags: ["autodocs"],
   argTypes: {

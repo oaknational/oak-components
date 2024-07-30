@@ -8,7 +8,7 @@ import { OakFlex } from "@/components/atoms";
 const meta: Meta<typeof OakLessonNavItem> = {
   component: OakLessonNavItem,
   tags: ["autodocs"],
-  title: "components/organisms/pupil/OakLessonNavItem",
+
   argTypes: {
     numQuestions: {
       control: {

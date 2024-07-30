@@ -8,7 +8,7 @@ import { OakBox } from "@/components/atoms";
 const meta: Meta<typeof OakInfo> = {
   component: OakInfo,
   tags: ["autodocs"],
-  title: "components/organisms/pupil/OakInfo",
+
   argTypes: {
     hint: {
       control: {

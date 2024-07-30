@@ -9,7 +9,7 @@ import { OakTertiaryButton } from "@/components/molecules";
 const meta: Meta<typeof OakPupilJourneyLayout> = {
   component: OakPupilJourneyLayout,
   tags: ["autodocs"],
-  title: "components/organisms/pupil/OakPupilJourneyLayout",
+
   decorators: [(Story) => <Story />],
   argTypes: {
     phase: {

@@ -9,7 +9,7 @@ import { OakPrimaryButton } from "@/components/molecules";
 const meta: Meta<typeof OakLessonBottomNav> = {
   component: OakLessonBottomNav,
   tags: ["autodocs"],
-  title: "components/organisms/pupil/OakLessonBottomNav",
+
   decorators: [
     (Story) => (
       <OakFlex

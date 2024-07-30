@@ -6,7 +6,6 @@ import { OakHeaderHero } from "./OakHeaderHero";
 import { OakLink } from "@/components/molecules";
 
 const meta: Meta<typeof OakHeaderHero> = {
-  title: "Components/organisms/OakHeaderHero",
   component: OakHeaderHero,
   tags: ["autodocs"],
   argTypes: {
