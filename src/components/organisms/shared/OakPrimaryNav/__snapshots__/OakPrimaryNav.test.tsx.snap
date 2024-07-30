@@ -1,0 +1,380 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakPrimaryNav matches snapshot 1`] = `
+.c0 {
+  padding-left: 0rem;
+  padding-right: 0rem;
+  margin-left: 0rem;
+  margin-right: 0rem;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c3 {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: Lexend,sans-serif;
+}
+
+.c5 {
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c8 {
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.c10 {
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+  text-align: left;
+}
+
+.c2 {
+  display: revert;
+  font-family: Lexend,sans-serif;
+  font-family: Lexend,sans-serif;
+  list-style: none;
+  display: revert;
+}
+
+.c6 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: Lexend,sans-serif;
+  color: #222222;
+  background: #ffffff;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border: 0.125rem solid;
+  border-color: #ffffff;
+  border-radius: 0.25rem;
+}
+
+.c6:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c13 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: Lexend,sans-serif;
+  color: #ffffff;
+  background: #222222;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border: 0.125rem solid;
+  border-color: #222222;
+  border-radius: 0.25rem;
+}
+
+.c13:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c7 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.c7:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: #222222;
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+.c7:active {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #222222;
+}
+
+.c7:disabled {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #808080;
+}
+
+.c14 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.c14:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: #ffffff;
+  background: #575757;
+  border-color: #575757;
+}
+
+.c14:active {
+  background: #222222;
+  border-color: #222222;
+  color: #ffffff;
+}
+
+.c14:disabled {
+  background: #808080;
+  border-color: #808080;
+  color: #ffffff;
+}
+
+.c4 .grey-shadow:has(+ * + .internal-button:focus-visible) {
+  box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c4 .yellow-shadow:has(+ .internal-button:focus-visible) {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
+}
+
+.c4 .yellow-shadow:has(+ .internal-button:hover),
+.c4 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
+  box-shadow: none;
+}
+
+.c4 .grey-shadow:has(+ * + .internal-button:hover) {
+  box-shadow: none;
+}
+
+.c4 .grey-shadow:has(+ * + .internal-button:active) {
+  box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+}
+
+.c4 .yellow-shadow:has(+ .internal-button:active) {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c11 .grey-shadow:has(+ * + .internal-button:focus-visible) {
+  box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c11 .yellow-shadow:has(+ .internal-button:focus-visible) {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
+}
+
+.c11 .yellow-shadow:has(+ .internal-button:hover),
+.c11 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c11 .grey-shadow:has(+ * + .internal-button:hover) {
+  box-shadow: none;
+}
+
+.c11 .grey-shadow:has(+ * + .internal-button:active) {
+  box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+}
+
+.c11 .yellow-shadow:has(+ .internal-button:active) {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c12 {
+  pointer-events: none;
+}
+
+<nav>
+  <ul
+    className="c0 c1"
+  >
+    <li
+      className="c2"
+    >
+      <div
+        className="c3 c4"
+      >
+        <div
+          className="c5 grey-shadow"
+        />
+        <div
+          className="c5 yellow-shadow"
+        />
+        <a
+          className="c6 c7 internal-button"
+          href="/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="c8 c9"
+          >
+            <span
+              className="c10"
+            >
+              nav item 1
+            </span>
+          </div>
+        </a>
+      </div>
+    </li>
+    <li
+      className="c2"
+    >
+      <div
+        className="c3 c11 c12"
+      >
+        <div
+          className="c5 grey-shadow"
+        />
+        <div
+          className="c5 yellow-shadow"
+        />
+        <span
+          aria-current="page"
+          className="c13 c14 internal-button"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <div
+            className="c8 c9"
+          >
+            <span
+              className="c10"
+            >
+              nav item 2
+            </span>
+          </div>
+        </span>
+      </div>
+    </li>
+    <li
+      className="c2"
+    >
+      <div
+        className="c3 c4"
+      >
+        <div
+          className="c5 grey-shadow"
+        />
+        <div
+          className="c5 yellow-shadow"
+        />
+        <a
+          className="c6 c7 internal-button"
+          href="/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="c8 c9"
+          >
+            <span
+              className="c10"
+            >
+              nav item 3
+            </span>
+          </div>
+        </a>
+      </div>
+    </li>
+    <li
+      className="c2"
+    >
+      <div
+        className="c3 c4"
+      >
+        <div
+          className="c5 grey-shadow"
+        />
+        <div
+          className="c5 yellow-shadow"
+        />
+        <a
+          className="c6 c7 internal-button"
+          href="/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="c8 c9"
+          >
+            <span
+              className="c10"
+            >
+              nav item 4
+            </span>
+          </div>
+        </a>
+      </div>
+    </li>
+  </ul>
+</nav>
+`;

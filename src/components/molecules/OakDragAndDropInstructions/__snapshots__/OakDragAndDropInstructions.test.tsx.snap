@@ -25,6 +25,10 @@ exports[`OakDragAndDropInstructions matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
+.c4 {
+  object-fit: contain;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -62,10 +66,6 @@ exports[`OakDragAndDropInstructions matches snapshot 1`] = `
   -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
   white-space: nowrap;
-}
-
-.c4 {
-  object-fit: contain;
 }
 
 .c6 {
