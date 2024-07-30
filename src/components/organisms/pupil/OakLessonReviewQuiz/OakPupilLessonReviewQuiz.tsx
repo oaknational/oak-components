@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import styled from "styled-components";
 
 import { InternalReviewAccordion } from "../InternalReviewAccordion";
@@ -57,6 +57,36 @@ export const ReviewItemContainer = (
   );
 };
 
+type ReviewItemTitleSectionProps = {
+  sectionHeader: string;
+  completed: boolean;
+  summaryForIncomplete: ReactNode;
+};
+export const ReviewItemTitleSection = (props: ReviewItemTitleSectionProps) => {
+  const { sectionHeader, completed, summaryForIncomplete } = props;
+  return (
+    <OakFlex $flexGrow={1} $flexShrink={1} $flexDirection={"column"}>
+      <OakBox $font={["heading-6", "heading-5"]} $color={"text-primary"}>
+        {sectionHeader}
+      </OakBox>
+      <OakBox $font={["body-2", "body-1"]}>
+        {completed === false ? (
+          summaryForIncomplete
+        ) : (
+          <OakFlex $gap="space-between-sssx" $alignItems="center">
+            <OakIcon
+              iconName="tick"
+              $width="all-spacing-6"
+              $height="all-spacing-6"
+            />
+            Completed
+          </OakFlex>
+        )}
+      </OakBox>
+    </OakFlex>
+  );
+};
+
 export const OakLessonReviewQuiz = (props: OakLessonReviewQuizProps) => {
   const { completed, lessonSectionName, resultsSlot, ...rest } = props;
   const [completedBackgroundColor, borderColor, iconBackgroundColor]: [
@@ -86,25 +116,13 @@ export const OakLessonReviewQuiz = (props: OakLessonReviewQuizProps) => {
           $height="all-spacing-10"
           $background={iconBackgroundColor}
         />
-        <OakFlex $flexGrow={1} $flexShrink={1} $flexDirection={"column"}>
-          <OakBox $font={["heading-6", "heading-5"]} $color={"text-primary"}>
-            {lessonSectionName === "exit-quiz" ? "Exit quiz" : "Starter quiz"}
-          </OakBox>
-          <OakBox $font={["body-2", "body-1"]}>
-            {completed === false ? (
-              summaryForIncomplete
-            ) : (
-              <OakFlex $gap="space-between-sssx" $alignItems="center">
-                <OakIcon
-                  iconName="tick"
-                  $width="all-spacing-6"
-                  $height="all-spacing-6"
-                />
-                Completed
-              </OakFlex>
-            )}
-          </OakBox>
-        </OakFlex>
+        <ReviewItemTitleSection
+          sectionHeader={
+            lessonSectionName === "exit-quiz" ? "Exit quiz" : "Starter quiz"
+          }
+          completed={completed}
+          summaryForIncomplete={summaryForIncomplete}
+        />
         {completed && (
           <OakBox>
             <OakSpan $font="heading-4">{props.grade}</OakSpan>
