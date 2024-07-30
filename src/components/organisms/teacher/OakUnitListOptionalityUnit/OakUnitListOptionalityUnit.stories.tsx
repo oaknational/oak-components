@@ -22,17 +22,13 @@ const meta: Meta<typeof OakUnitListOptionalityUnit> = {
           "Migration: What do sources tell us about the British Empire in India and Africa?",
 
         href: "#",
-
         lessonCount: 10,
-        isLegacy: false,
       },
       {
         title: "Migration: What do sources tell us about the ",
 
         href: "#",
-
         lessonCount: 10,
-        isLegacy: false,
       },
       {
         title: "Migration: What do sources tell us ?",
@@ -40,16 +36,13 @@ const meta: Meta<typeof OakUnitListOptionalityUnit> = {
         href: "#",
 
         lessonCount: 10,
-        isLegacy: false,
       },
       {
         title:
           "Migration: What do sources tell us about the British Empire in India and Africa?",
 
         href: "#",
-
         lessonCount: 10,
-        isLegacy: false,
       },
     ],
   },
@@ -92,18 +85,16 @@ const meta: Meta<typeof OakUnitListOptionalityUnit> = {
               {
                 title:
                   "Migration: What do sources tell us about the British Empire in India and Africa?",
-                index: 1,
+
                 href: "#",
                 lessonCount: 10,
-                isLegacy: false,
               },
               {
                 title:
                   "Migration: What do sources tell us about the British Empire in India and Africa?",
-                index: 1,
+
                 href: "#",
                 lessonCount: 10,
-                isLegacy: false,
               },
             ]}
           />

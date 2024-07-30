@@ -67,11 +67,9 @@ export type OakUnitListOptionalityItemProps<C extends ElementType> = {
   as?: C;
   disabled?: boolean;
   unavailable?: boolean;
-  index?: number;
   title: string;
-  yearTitle?: string | null;
   lessonCount: number | null;
-  isLegacy: boolean;
+
   href: string;
   firstItemRef?: MutableRefObject<HTMLAnchorElement | null> | null | undefined;
 } & ComponentPropsWithoutRef<C>;
@@ -93,7 +91,7 @@ export const OakUnitListOptionalityItem = <C extends ElementType>(
     unavailable,
     onClick,
     index,
-    isLegacy,
+
     firstItemRef,
     ...rest
   } = props;

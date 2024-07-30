@@ -17,7 +17,6 @@ describe("OakUnitListOptionalityUnit", () => {
         title={""}
         yearTitle={""}
         lessonCount={0}
-        isLegacy={false}
         href={""}
         optionalityUnits={[]}
         nullTitle={""}
@@ -34,7 +33,6 @@ describe("OakUnitListOptionalityUnit", () => {
           index={1}
           yearTitle={""}
           lessonCount={0}
-          isLegacy={false}
           href={""}
           optionalityUnits={[]}
           nullTitle={""}
@@ -54,27 +52,22 @@ describe("OakUnitListOptionalityUnit", () => {
         index={0}
         title={""}
         yearTitle={""}
-        isLegacy={false}
         href={""}
         nullTitle={""}
         optionalityUnits={[
           {
             title:
               "Migration: What do sources tell us about the British Empire in India and Africa?",
-            index: 1,
             href: "#",
-            yearTitle: "Year 10",
-            lessonCount: 10,
-            isLegacy: false,
+
+            lessonCount: 0,
           },
           {
             title:
               "Migration: What do sources tell us about the British Empire in India and Africa?",
-            index: 1,
             href: "#",
-            yearTitle: "Year 10",
-            lessonCount: 10,
-            isLegacy: false,
+
+            lessonCount: 0,
           },
         ]}
       />,
@@ -92,7 +85,6 @@ describe("OakUnitListOptionalityUnit", () => {
         index={0}
         title={""}
         yearTitle={"Year 4"}
-        isLegacy={false}
         href={""}
         nullTitle={""}
         optionalityUnits={[]}
@@ -111,7 +103,6 @@ describe("OakUnitListOptionalityUnit", () => {
         index={0}
         title={""}
         yearTitle={"Year 4"}
-        isLegacy={false}
         href={""}
         nullTitle={"null title"}
         optionalityUnits={[]}
@@ -130,27 +121,22 @@ describe("OakUnitListOptionalityUnit", () => {
         index={0}
         title={""}
         yearTitle={"Year 4"}
-        isLegacy={false}
         href={""}
         nullTitle={"null title"}
         optionalityUnits={[
           {
             title:
               "Migration: What do sources tell us about the British Empire in India and Africa?",
-            index: 1,
             href: "#",
-            yearTitle: "Year 10",
-            lessonCount: 10,
-            isLegacy: false,
+
+            lessonCount: 0,
           },
           {
             title:
               "Migration: What do sources tell us about the British Empire in India and Africa?",
-            index: 1,
             href: "#",
-            yearTitle: "Year 10",
-            lessonCount: 4,
-            isLegacy: false,
+
+            lessonCount: 0,
           },
         ]}
       />,

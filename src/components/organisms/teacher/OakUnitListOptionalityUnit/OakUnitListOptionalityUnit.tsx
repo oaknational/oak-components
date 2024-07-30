@@ -4,7 +4,6 @@ import React, {
   MutableRefObject,
 } from "react";
 
-import { OakUnitListItemProps } from "../OakUnitListItem";
 import { OakUnitListOptionalityItem } from "../OakUnitListOptionalityItem";
 
 import {
@@ -43,23 +42,15 @@ const StyledYearAndOptionCount = ({
 const StyledIndex = ({
   index,
   disabledOrUnavailable,
-  isLegacy,
   ...rest
 }: {
   index: number;
   disabledOrUnavailable?: boolean;
-  isLegacy: boolean;
 } & FlexStyleProps) => (
   <OakFlex
     $btlr={"border-radius-s"}
     $bblr={"border-radius-s"}
-    $background={
-      disabledOrUnavailable
-        ? "bg-neutral-stronger"
-        : isLegacy
-          ? "lavender50"
-          : "lavender"
-    }
+    $background={disabledOrUnavailable ? "bg-neutral-stronger" : "lavender"}
     $minWidth={"all-spacing-11"}
     $width={["all-spacing-11", "all-spacing-11", "auto"]}
     $height={["all-spacing-11", "auto", "auto"]}
@@ -76,7 +67,11 @@ const StyledIndex = ({
   </OakFlex>
 );
 
-const StyledUnitHeading = ({ nullTitle }: { nullTitle: string }) => (
+const StyledUnitHeading = ({
+  nullTitle,
+}: {
+  nullTitle: string | undefined;
+}) => (
   <OakBox $maxWidth={"all-spacing-21"}>
     <OakHeading $font={"heading-7"} tag="h3">
       {nullTitle}
@@ -89,11 +84,19 @@ export type OakUnitListOptionalityItemProps<C extends ElementType> = {
   disabled?: boolean;
   unavailable?: boolean;
   index: number;
-  nullTitle: string;
+  nullTitle: string | undefined;
   yearTitle?: string | null;
-  isLegacy: boolean;
-  firstItemRef?: MutableRefObject<HTMLAnchorElement | null> | null | undefined;
-  optionalityUnits: OakUnitListItemProps<C>[];
+
+  optionalityUnits: {
+    title: string;
+    href: string;
+
+    lessonCount: number;
+    firstItemRef?:
+      | MutableRefObject<HTMLAnchorElement | null>
+      | null
+      | undefined;
+  }[];
 } & ComponentPropsWithoutRef<C>;
 
 /**
@@ -113,7 +116,6 @@ export const OakUnitListOptionalityUnit = <C extends ElementType>(
     unavailable,
     onClick,
     index,
-    isLegacy,
     firstItemRef,
     optionalityUnits,
     nullTitle,
@@ -133,16 +135,16 @@ export const OakUnitListOptionalityUnit = <C extends ElementType>(
         <StyledIndex
           index={index}
           disabledOrUnavailable={disabledOrUnavailable}
-          isLegacy={false}
         />
-        <OakFlex $alignItems={"center"} $pl={"inner-padding-l"}>
-          <StyledUnitHeading nullTitle={nullTitle} />
-        </OakFlex>
+        {nullTitle && (
+          <OakFlex $alignItems={"center"} $pl={"inner-padding-l"}>
+            <StyledUnitHeading nullTitle={nullTitle} />
+          </OakFlex>
+        )}
       </OakFlex>
       <StyledIndex
         index={index}
         disabledOrUnavailable={disabledOrUnavailable}
-        isLegacy={false}
         $display={["none", "flex", "flex"]}
       />
 
@@ -176,18 +178,16 @@ export const OakUnitListOptionalityUnit = <C extends ElementType>(
           />
         </OakFlex>
         <OakGrid $gridGap={"space-between-s"} role="list">
-          {optionalityUnits.map(
-            (unit: OakUnitListItemProps<C>, index: number) => (
-              <OakGridArea key={`${unit.title}-${index}`} $colSpan={[12, 6]}>
-                <OakUnitListOptionalityItem
-                  key={unit.title}
-                  {...unit}
-                  disabled={disabledOrUnavailable}
-                  ref={index === 1 ? firstItemRef : null}
-                />
-              </OakGridArea>
-            ),
-          )}
+          {optionalityUnits.map((unit, index) => (
+            <OakGridArea key={`${unit.title}-${index}`} $colSpan={[12, 6]}>
+              <OakUnitListOptionalityItem
+                key={unit.title}
+                {...unit}
+                disabled={disabledOrUnavailable}
+                ref={index === 1 ? firstItemRef : null}
+              />
+            </OakGridArea>
+          ))}
         </OakGrid>
       </OakBox>
     </OakFlex>
