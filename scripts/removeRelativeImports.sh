@@ -16,17 +16,20 @@ find src -type f \( -name "*.tsx" -o -name "*.ts" \) | while read -r file; do
         # Replace the pattern 'import ... from "../..."' with 'import ... from "..."' in the file
         for import in $imports; do
             
-            # if the last two parts of absolute are the same then remove the last part
+            
             if [ "$(basename "$import")" = "$(basename "$(dirname "$import")")" ]; then
-                absolute=$(realpath "$directory/$(dirname import)")
-                echo "absolute: $absolute , import: $import, directory: $directory"
+                # if the last two parts of the import are the same then remove the last part
+                d_import=$(dirname "$import")
+                # calculate the absolute path of the import
+                absolute=$(realpath "$directory/$d_import")
             else
+                # calculate the absolute path of the import
                 absolute=$(realpath "$directory/$import")
             fi
 
         
             if [ -f "$absolute" ]; then
-                # this refers to the file not the folder remove the final part of the path
+                # this refers to a file not the folder then skip it
                 echo "$absolute refers to  file not a folder"
                 continue
             fi

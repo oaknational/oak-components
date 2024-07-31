@@ -2,13 +2,12 @@ import React from "react";
 import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
 
+import { OakCookieConsent } from "./OakCookieConsent";
+
 import {
   OakCookieConsentContext,
   getDefaultContextState,
-} from "../OakCookieConsentProvider/OakCookieConsentProvider";
-
-import { OakCookieConsent } from "./OakCookieConsent";
-
+} from "@/components/organisms/shared/OakCookieConsentProvider";
 import { oakDefaultTheme } from "@/styles";
 import { OakThemeProvider } from "@/components/atoms";
 import renderWithTheme from "@/test-helpers/renderWithTheme";

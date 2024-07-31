@@ -3,8 +3,7 @@ import React, { FormEvent } from "react";
 import {
   Consent,
   PolicyConsent,
-} from "../OakCookieConsentProvider/OakCookieConsentProvider";
-
+} from "@/components/organisms/shared/OakCookieConsentProvider";
 import {
   OakAccordion,
   OakCheckBox,
