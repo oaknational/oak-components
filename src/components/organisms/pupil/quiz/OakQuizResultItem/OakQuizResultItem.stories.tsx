@@ -1,7 +1,7 @@
 import React from "react";
 import { StoryObj, Meta } from "@storybook/react";
 
-import { InternalQuizResultItem } from "./InternalQuizResultItem";
+import { InternalQuizResultItem } from "./OakQuizResultItem";
 
 const meta: Meta<typeof InternalQuizResultItem> = {
   component: InternalQuizResultItem,
