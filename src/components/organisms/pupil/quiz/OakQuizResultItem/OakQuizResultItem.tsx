@@ -56,7 +56,7 @@ const DisplayText = ({
  *
  * NB. We must export a styled component for it to be inheritable
  */
-export const InternalQuizResultItem = ({
+export const OakQuizResultItem = ({
   standardText,
   boldPrefixText,
   feedbackState,

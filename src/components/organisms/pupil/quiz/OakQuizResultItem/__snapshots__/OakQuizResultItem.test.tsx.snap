@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InternalQuizResultItem matches snapshot 1`] = `
+exports[`OakQuizResultItem matches snapshot 1`] = `
 [
   .c0 {
   font-family: Lexend,sans-serif;

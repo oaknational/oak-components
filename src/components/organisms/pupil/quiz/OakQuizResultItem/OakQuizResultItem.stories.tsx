@@ -1,10 +1,10 @@
 import React from "react";
 import { StoryObj, Meta } from "@storybook/react";
 
-import { InternalQuizResultItem } from "./OakQuizResultItem";
+import { OakQuizResultItem } from "./OakQuizResultItem";
 
-const meta: Meta<typeof InternalQuizResultItem> = {
-  component: InternalQuizResultItem,
+const meta: Meta<typeof OakQuizResultItem> = {
+  component: OakQuizResultItem,
   tags: ["autodocs"],
   argTypes: {
     standardText: { control: "text" },
@@ -23,10 +23,10 @@ const meta: Meta<typeof InternalQuizResultItem> = {
 
 export default meta;
 
-type Story = StoryObj<typeof InternalQuizResultItem>;
+type Story = StoryObj<typeof OakQuizResultItem>;
 
 export const Default: Story = {
-  render: (args) => <InternalQuizResultItem {...args} />,
+  render: (args) => <OakQuizResultItem {...args} />,
   args: {
     standardText: "Matched answer",
     boldPrefixText: "Match item",
@@ -34,7 +34,7 @@ export const Default: Story = {
 };
 
 export const WithImage: Story = {
-  render: (args) => <InternalQuizResultItem {...args} />,
+  render: (args) => <OakQuizResultItem {...args} />,
   args: {
     standardText: "Matched answer",
     boldPrefixText: "Match item",
