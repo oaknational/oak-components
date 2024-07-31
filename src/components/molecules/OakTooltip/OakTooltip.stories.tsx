@@ -1,10 +1,9 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakTertiaryButton } from "../OakTertiaryButton";
-
 import { OakTooltip } from "./OakTooltip";
 
+import { OakTertiaryButton } from "@/components/molecules/OakTertiaryButton";
 import { OakBox } from "@/components/atoms";
 
 const meta: Meta<typeof OakTooltip> = {

@@ -2,14 +2,13 @@ import { Meta, StoryObj } from "@storybook/react";
 import { useArgs } from "@storybook/preview-api";
 import React, { Fragment } from "react";
 
-import { OakSecondaryButton } from "../OakSecondaryButton";
-import { OakPrimaryButton } from "../OakPrimaryButton";
-import { OakTextInput } from "../OakTextInput";
-
 import { OakModal } from "./OakModal";
 import { OakModalFooter } from "./OakModalFooter";
 import { OakModalBody } from "./OakModalBody";
 
+import { OakSecondaryButton } from "@/components/molecules/OakSecondaryButton";
+import { OakPrimaryButton } from "@/components/molecules/OakPrimaryButton";
+import { OakTextInput } from "@/components/molecules/OakTextInput";
 import { OakBox, OakP } from "@/components/atoms";
 
 const meta: Meta<typeof OakModal> = {

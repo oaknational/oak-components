@@ -1,0 +1,623 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakQuizOrder matches snapshot 1`] = `
+[
+  .c0 {
+  margin-bottom: 2rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c2 {
+  font-family: Lexend,sans-serif;
+}
+
+.c4 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c6 {
+  font-family: Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c5 {
+  object-fit: contain;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+}
+
+.c8 {
+  background: #ffffff;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  border: 0.125rem solid;
+  border-color: #7c9aec;
+  border-radius: 0.375rem;
+  font-family: Lexend,sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+  white-space: nowrap;
+}
+
+.c7 {
+  margin-block: calc(-0.5rem / 2);
+  line-height: calc(1.5rem + 0.5rem);
+}
+
+@media (min-width:750px) {
+
+}
+
+@media (min-width:1280px) {
+
+}
+
+@media (hover:hover) {
+
+}
+
+<div
+    className="c0 c1"
+  >
+    <div
+      className="c2 c3"
+    >
+      <div
+        className="c4"
+      >
+        <img
+          alt="move-arrows"
+          className="c5"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/hoddjsgpzkszgvnmn91q.svg"
+          style={
+            {
+              "bottom": 0,
+              "color": "transparent",
+              "height": "100%",
+              "left": 0,
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+    </div>
+    <div
+      className="c6 c7"
+    >
+      Click and drag answers to change the order, or select using
+       
+      <kbd
+        className="c8"
+      >
+        <span
+          aria-hidden="true"
+        >
+          ↹
+        </span>
+         Tab
+      </kbd>
+       
+      then move by pressing 
+      <kbd
+        className="c8"
+      >
+        Space
+      </kbd>
+       and the 
+      <kbd
+        className="c8"
+      >
+        ↑
+      </kbd>
+       
+      <kbd
+        className="c8"
+      >
+        ↓
+      </kbd>
+       arrows on your keyboard.
+    </div>
+  </div>,
+  .c0 {
+  font-family: Lexend,sans-serif;
+}
+
+.c12 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c2 {
+  padding: 1rem;
+  background: #cee7e5;
+  border-radius: 1rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c4 {
+  min-height: 4rem;
+  padding: 0.25rem;
+  background: #f2f2f2;
+  border-radius: 0.5rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c7 {
+  width: 100%;
+  font-family: Lexend,sans-serif;
+}
+
+.c8 {
+  min-height: 3.5rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 0.75rem;
+  padding-right: 1rem;
+  color: #222222;
+  background: #ffffff;
+  border-radius: 0.5rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c14 {
+  font-family: Lexend,sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c13 {
+  object-fit: contain;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c9 {
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c9:focus-visible:not([data-dragging="true"]):not([data-disabled="true"]) {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c9[data-dragging="true"] {
+  cursor: move;
+  background-color: #bef2bd;
+  color: #222222;
+  outline: 0.25rem solid #222222;
+  outline-offset: -0.25rem;
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c9[data-disabled="true"] {
+  cursor: default;
+  background-color: #f2f2f2;
+  color: #808080;
+}
+
+.c9[data-readonly="true"] {
+  cursor: default;
+}
+
+.c11 {
+  margin-block: -0.5rem;
+}
+
+.c6 {
+  outline: 0.188rem solid #222222;
+  outline-style: dashed;
+}
+
+.c6[data-disabled="true"] {
+  outline-color: #808080;
+}
+
+@media (min-width:750px) {
+  .c3 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:1280px) {
+  .c3 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (hover:hover) {
+  .c9:hover:not([data-dragging="true"]):not([data-disabled="true"]):not( [data-readonly="true"] ) {
+    background-color: #dff9de;
+    color: #222222;
+    box-shadow: 0 0.5rem 0.5rem rgba(92,92,92,20%);
+    border-bottom: 0.25rem solid #222222;
+    padding-bottom: 1rem;
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+  }
+}
+
+<div
+    aria-label="Sortable items"
+    className="c0 c1"
+    role="listbox"
+  >
+    <div
+      className="c2 c3"
+    >
+      <div
+        className="c4 c5 c6"
+      >
+        <div
+          className="c7"
+        >
+          <div
+            aria-disabled={false}
+            aria-roledescription="sortable item"
+            aria-selected={false}
+            className="c8 c9"
+            data-disabled={false}
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+            role="option"
+            style={
+              {
+                "transform": undefined,
+                "transition": undefined,
+              }
+            }
+            tabIndex={0}
+          >
+            <div
+              className="c0 c10 c11"
+            >
+              <div
+                className="c12 "
+              >
+                <img
+                  alt=""
+                  className="c13"
+                  data-nimg="fill"
+                  decoding="async"
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/hoddjsgpzkszgvnmn91q.svg"
+                  style={
+                    {
+                      "bottom": 0,
+                      "color": "transparent",
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": undefined,
+                      "objectPosition": undefined,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                />
+              </div>
+              <div
+                className="c14 c15"
+              >
+                Mouse
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="c2 c3"
+    >
+      <div
+        className="c4 c5 c6"
+      >
+        <div
+          className="c7"
+        >
+          <div
+            aria-disabled={false}
+            aria-roledescription="sortable item"
+            aria-selected={false}
+            className="c8 c9"
+            data-disabled={false}
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+            role="option"
+            style={
+              {
+                "transform": undefined,
+                "transition": undefined,
+              }
+            }
+            tabIndex={0}
+          >
+            <div
+              className="c0 c10 c11"
+            >
+              <div
+                className="c12 "
+              >
+                <img
+                  alt=""
+                  className="c13"
+                  data-nimg="fill"
+                  decoding="async"
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/hoddjsgpzkszgvnmn91q.svg"
+                  style={
+                    {
+                      "bottom": 0,
+                      "color": "transparent",
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": undefined,
+                      "objectPosition": undefined,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                />
+              </div>
+              <div
+                className="c14 c15"
+              >
+                Hawk
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="c2 c3"
+    >
+      <div
+        className="c4 c5 c6"
+      >
+        <div
+          className="c7"
+        >
+          <div
+            aria-disabled={false}
+            aria-roledescription="sortable item"
+            aria-selected={false}
+            className="c8 c9"
+            data-disabled={false}
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+            role="option"
+            style={
+              {
+                "transform": undefined,
+                "transition": undefined,
+              }
+            }
+            tabIndex={0}
+          >
+            <div
+              className="c0 c10 c11"
+            >
+              <div
+                className="c12 "
+              >
+                <img
+                  alt=""
+                  className="c13"
+                  data-nimg="fill"
+                  decoding="async"
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/hoddjsgpzkszgvnmn91q.svg"
+                  style={
+                    {
+                      "bottom": 0,
+                      "color": "transparent",
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": undefined,
+                      "objectPosition": undefined,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                />
+              </div>
+              <div
+                className="c14 c15"
+              >
+                Grasshopper
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  @media (min-width:750px) {
+
+}
+
+@media (min-width:1280px) {
+
+}
+
+@media (hover:hover) {
+
+}
+
+<div
+    id="DndDescribedBy-0"
+    style={
+      {
+        "display": "none",
+      }
+    }
+  >
+    
+    To pick up a draggable item, press the space bar.
+    While dragging, use the arrow keys to move the item.
+    Press space again to drop the item in its new position, or press escape to cancel.
+  
+  </div>,
+  @media (min-width:750px) {
+
+}
+
+@media (min-width:1280px) {
+
+}
+
+@media (hover:hover) {
+
+}
+
+<div
+    aria-atomic={true}
+    aria-live="assertive"
+    id="DndLiveRegion-0"
+    role="status"
+    style={
+      {
+        "border": 0,
+        "clip": "rect(0 0 0 0)",
+        "clipPath": "inset(100%)",
+        "height": 1,
+        "margin": -1,
+        "overflow": "hidden",
+        "padding": 0,
+        "position": "fixed",
+        "whiteSpace": "nowrap",
+        "width": 1,
+      }
+    }
+  />,
+]
+`;

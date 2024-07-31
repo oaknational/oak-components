@@ -1,10 +1,9 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakBox } from "../OakBox";
-
 import { InternalTooltip } from "./InternalTooltip";
 
+import { OakBox } from "@/components/atoms/OakBox";
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
 import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";

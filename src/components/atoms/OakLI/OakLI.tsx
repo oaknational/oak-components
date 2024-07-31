@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
-import { oakBoxCss } from "../OakBox";
-import { OakFlexProps } from "../OakFlex";
-
+import { oakBoxCss } from "@/components/atoms/OakBox";
+import { OakFlexProps } from "@/components/atoms/OakFlex";
 import { DisplayStyleProps, displayStyle } from "@/styles/utils/displayStyle";
 import { ListStyleProps, listStyle } from "@/styles/utils/listStyle";
 import {

@@ -97,6 +97,12 @@ exports[`OakModalCenter matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
+.c21 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  object-fit: contain;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -157,12 +163,6 @@ exports[`OakModalCenter matches snapshot 1`] = `
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
-}
-
-.c21 {
-  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-  object-fit: contain;
 }
 
 .c14 {

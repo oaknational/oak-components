@@ -72,6 +72,12 @@ exports[`OakUnitsContainer matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
+.c26 {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  object-fit: contain;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -166,6 +172,17 @@ exports[`OakUnitsContainer matches snapshot 1`] = `
   gap: 0.75rem;
 }
 
+.c7 {
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
 .c13 {
   color: #ffe555;
   font-family: Lexend,sans-serif;
@@ -189,12 +206,6 @@ exports[`OakUnitsContainer matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c26 {
-  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
-  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
-  object-fit: contain;
-}
-
 .c15 {
   font-family: Lexend,sans-serif;
   font-weight: 300;
@@ -206,23 +217,16 @@ exports[`OakUnitsContainer matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c7 {
-  font-family: Lexend,sans-serif;
-  font-weight: 600;
-  font-size: 2rem;
-  line-height: 2.5rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
-  letter-spacing: 0.0115rem;
-}
-
 .c27 {
   list-style: none;
   padding: 0;
   margin: 0;
   width: 100%;
   font-family: Lexend,sans-serif;
+}
+
+.c11 {
+  fill: #222222;
 }
 
 .c19 {
@@ -286,10 +290,6 @@ exports[`OakUnitsContainer matches snapshot 1`] = `
 
 .c18 > :first-child:active .icon-container {
   background: #222222;
-}
-
-.c11 {
-  fill: #222222;
 }
 
 .c10 {

@@ -1,8 +1,11 @@
 import React, { ReactElement } from "react";
 import styled from "styled-components";
 
-import { InternalCard, InternalCardProps } from "../InternalCard/InternalCard";
-import { OakBox } from "../OakBox";
+import {
+  InternalCard,
+  InternalCardProps,
+} from "@/components/atoms/InternalCard";
+import { OakBox } from "@/components/atoms/OakBox";
 
 export type InternalCardWithBackgroundElementProps = InternalCardProps & {
   backgroundElement: ReactElement;

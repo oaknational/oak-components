@@ -1,7 +1,9 @@
 import React from "react";
 
-import { OakHandDrawnCardProps, OakHandDrawnCard } from "../OakHandDrawnCard";
-
+import {
+  OakHandDrawnCardProps,
+  OakHandDrawnCard,
+} from "@/components/molecules/OakHandDrawnCard";
 import { OakIcon, OakIconProps } from "@/components/atoms";
 
 export type OakHandDrawnBoxWithIconProps = Omit<

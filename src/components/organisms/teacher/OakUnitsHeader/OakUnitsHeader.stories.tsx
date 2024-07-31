@@ -4,7 +4,6 @@ import { StoryObj, Meta } from "@storybook/react";
 import { OakUnitsHeader } from "./OakUnitsHeader";
 
 const meta: Meta<typeof OakUnitsHeader> = {
-  title: "Components/organisms/teacher/OakUnitsHeader",
   component: OakUnitsHeader,
   tags: ["autodocs"],
   argTypes: {

@@ -1,8 +1,7 @@
 import React, { ElementType, forwardRef } from "react";
 import styled from "styled-components";
 
-import { OakLoadingSpinner } from "../OakLoadingSpinner";
-
+import { OakLoadingSpinner } from "@/components/molecules/OakLoadingSpinner";
 import {
   PolymorphicPropsWithRef,
   PolymorphicRef,
