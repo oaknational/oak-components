@@ -1,9 +1,9 @@
 import React, { createContext, useContext } from "react";
 import { CldImage, CldImageProps } from "next-cloudinary";
 
-import { OakImage, OakImageProps } from "../OakImage";
-
 import { getCloudinaryIdFromUrl } from "./cloudinary";
+
+import { OakImage, OakImageProps } from "@/components/atoms/OakImage";
 
 export type OakCloudinaryImageProps = Omit<
   OakImageProps<typeof CldImage>,

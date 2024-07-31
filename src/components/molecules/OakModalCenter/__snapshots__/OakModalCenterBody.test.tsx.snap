@@ -17,6 +17,10 @@ exports[`OakModalCenterBody matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
+.c3 {
+  object-fit: contain;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -33,10 +37,6 @@ exports[`OakModalCenterBody matches snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-}
-
-.c3 {
-  object-fit: contain;
 }
 
 .c4 {

@@ -1,9 +1,9 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakDraggable } from "../OakDraggable";
-
 import { OakDroppable } from "./OakDroppable";
+
+import { OakDraggable } from "@/components/molecules/OakDraggable";
 
 const meta: Meta<typeof OakDroppable> = {
   component: OakDroppable,

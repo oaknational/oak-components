@@ -29,6 +29,10 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
+.c9 {
+  object-fit: contain;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -56,10 +60,6 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.c9 {
-  object-fit: contain;
 }
 
 .c5 {

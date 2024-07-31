@@ -42,6 +42,10 @@ exports[`InternalShadowRoundButton matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
+.c11 {
+  object-fit: contain;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -92,10 +96,6 @@ exports[`InternalShadowRoundButton matches snapshot 1`] = `
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
-}
-
-.c11 {
-  object-fit: contain;
 }
 
 .c3 {

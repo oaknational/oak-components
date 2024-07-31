@@ -6,7 +6,6 @@ import { OakUnitsContainer } from "./OakUnitsContainer";
 import { OakBox } from "@/components/atoms";
 
 const meta: Meta<typeof OakUnitsContainer> = {
-  title: "Components/organisms/teacher/OakUnitsContainer",
   component: OakUnitsContainer,
   tags: ["autodocs"],
   argTypes: {

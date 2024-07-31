@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakKbd } from "../OakKbd";
+import { OakKbd } from "@/components/atoms/OakKbd";
 
 const meta: Meta<typeof OakKbd> = {
   component: OakKbd,

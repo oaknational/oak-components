@@ -80,6 +80,16 @@ exports[`OakInlineBanner matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
+.c6 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  object-fit: contain;
+}
+
+.c25 {
+  object-fit: contain;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -173,6 +183,17 @@ exports[`OakInlineBanner matches snapshot 1`] = `
   justify-content: center;
 }
 
+.c8 {
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
 .c20 {
   font-family: Lexend,sans-serif;
   font-weight: 600;
@@ -186,27 +207,6 @@ exports[`OakInlineBanner matches snapshot 1`] = `
 
 .c22 {
   font-family: Lexend,sans-serif;
-}
-
-.c6 {
-  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-  object-fit: contain;
-}
-
-.c25 {
-  object-fit: contain;
-}
-
-.c8 {
-  font-family: Lexend,sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
-  letter-spacing: 0.0115rem;
 }
 
 .c13 {

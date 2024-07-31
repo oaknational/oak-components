@@ -1,8 +1,7 @@
 import React, { HTMLAttributes, ReactNode } from "react";
 import styled, { css } from "styled-components";
 
-import { OakFlex, OakFlexProps } from "../OakFlex";
-
+import { OakFlex, OakFlexProps } from "@/components/atoms/OakFlex";
 import { OakCombinedColorToken } from "@/styles";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { ColorStyleProps } from "@/styles/utils/colorStyle";

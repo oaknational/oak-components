@@ -3,10 +3,10 @@ import { Meta, StoryObj } from "@storybook/react";
 
 // @ts-expect-error:  this is an image
 import testPic from "../../../../assets/oak-national-academy-logo-512.png";
-import { OakFlex } from "../OakFlex";
 
 import { OakImage, OakImageProps } from "./OakImage";
 
+import { OakFlex } from "@/components/atoms/OakFlex";
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 import { colorFilterArgTypes } from "@/storybook-helpers/colorFilterStyleHelpers";
 
