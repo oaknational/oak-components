@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { OakFlex, OakFlexProps } from "../OakFlex";
+import { OakFlex, OakFlexProps } from "@/components/atoms/OakFlex";
 
 export type OakMaxWidthProps = OakFlexProps;
 

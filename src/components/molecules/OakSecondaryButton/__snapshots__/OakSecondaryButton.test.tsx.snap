@@ -31,6 +31,12 @@ exports[`OakSecondaryButton matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
+.c8 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  object-fit: contain;
+}
+
 .c6 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -60,12 +66,6 @@ exports[`OakSecondaryButton matches snapshot 1`] = `
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
   text-align: left;
-}
-
-.c8 {
-  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-  object-fit: contain;
 }
 
 .c3 {

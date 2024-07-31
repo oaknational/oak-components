@@ -2,10 +2,9 @@ import { create } from "react-test-renderer";
 import React from "react";
 import "@testing-library/jest-dom";
 
-import { OakThemeProvider } from "../OakThemeProvider";
-
 import { InternalTooltip } from "./InternalTooltip";
 
+import { OakThemeProvider } from "@/components/atoms/OakThemeProvider";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { oakDefaultTheme } from "@/styles";
 

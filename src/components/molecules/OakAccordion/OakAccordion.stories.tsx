@@ -1,9 +1,9 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakCheckBox } from "../OakCheckBox";
-
 import { OakAccordion } from "./OakAccordion";
+
+import { OakCheckBox } from "@/components/molecules/OakCheckBox";
 
 const meta: Meta<typeof OakAccordion> = {
   component: OakAccordion,

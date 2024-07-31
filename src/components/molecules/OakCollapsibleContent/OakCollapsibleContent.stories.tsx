@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakTertiaryButton } from "../OakTertiaryButton";
-
 import { OakCollapsibleContent } from "./OakCollapsibleContent";
 
+import { OakTertiaryButton } from "@/components/molecules/OakTertiaryButton";
 import { OakP } from "@/components/atoms";
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 

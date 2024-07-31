@@ -2,10 +2,9 @@ import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import styled from "styled-components";
 
-import { OakFlex } from "../OakFlex";
-
 import { OakBox, OakBoxProps } from "./OakBox";
 
+import { OakFlex } from "@/components/atoms/OakFlex";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";

@@ -30,3 +30,6 @@ export * from "./OakPupilJourneyOptionalityButton";
 export * from "./OakPupilJourneyUnitsFilter";
 export * from "./OakLessonReviewIntroVideo";
 export * from "./OakLessonReviewQuiz";
+export * from "./browse";
+export * from "./lesson";
+export * from "./quiz";

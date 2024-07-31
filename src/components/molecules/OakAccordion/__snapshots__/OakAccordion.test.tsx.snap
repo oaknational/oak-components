@@ -49,6 +49,10 @@ exports[`OakAccordion matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
+.c8 {
+  object-fit: contain;
+}
+
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -65,10 +69,6 @@ exports[`OakAccordion matches snapshot 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-}
-
-.c8 {
-  object-fit: contain;
 }
 
 .c5 {

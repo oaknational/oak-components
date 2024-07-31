@@ -65,6 +65,12 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
+.c23 {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  object-fit: contain;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -144,6 +150,17 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
   gap: 0.75rem;
 }
 
+.c4 {
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
 .c10 {
   color: #ffe555;
   font-family: Lexend,sans-serif;
@@ -167,12 +184,6 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c23 {
-  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
-  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
-  object-fit: contain;
-}
-
 .c12 {
   font-family: Lexend,sans-serif;
   font-weight: 300;
@@ -184,15 +195,8 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c4 {
-  font-family: Lexend,sans-serif;
-  font-weight: 600;
-  font-size: 2rem;
-  line-height: 2.5rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
-  letter-spacing: 0.0115rem;
+.c8 {
+  fill: #222222;
 }
 
 .c16 {
@@ -256,10 +260,6 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
 
 .c15 > :first-child:active .icon-container {
   background: #222222;
-}
-
-.c8 {
-  fill: #222222;
 }
 
 .c7 {

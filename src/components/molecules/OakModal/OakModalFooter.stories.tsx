@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from "@storybook/react";
 import React from "react";
 
-import { OakSecondaryButton } from "../OakSecondaryButton";
-import { OakPrimaryButton } from "../OakPrimaryButton";
-
 import { OakModalFooter } from "./OakModalFooter";
+
+import { OakSecondaryButton } from "@/components/molecules/OakSecondaryButton";
+import { OakPrimaryButton } from "@/components/molecules/OakPrimaryButton";
 
 const meta: Meta<typeof OakModalFooter> = {
   component: OakModalFooter,

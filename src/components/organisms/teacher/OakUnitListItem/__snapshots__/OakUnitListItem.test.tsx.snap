@@ -51,6 +51,10 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
+.c27 {
+  object-fit: contain;
+}
+
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -132,6 +136,18 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   display: flex;
 }
 
+.c8 {
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+  color: #222222;
+}
+
 .c22 {
   font-family: Lexend,sans-serif;
 }
@@ -146,22 +162,6 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
-}
-
-.c27 {
-  object-fit: contain;
-}
-
-.c8 {
-  font-family: Lexend,sans-serif;
-  font-weight: 600;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
-  letter-spacing: 0.0115rem;
-  color: #222222;
 }
 
 .c12 {

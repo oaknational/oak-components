@@ -1,8 +1,7 @@
 import React, { ElementType } from "react";
 
-import { OakRoundIconProps } from "../OakRoundIcon";
-import { InternalShadowRoundButton } from "../InternalShadowRoundButton";
-
+import { OakRoundIconProps } from "@/components/molecules/OakRoundIcon";
+import { InternalShadowRoundButton } from "@/components/molecules/InternalShadowRoundButton";
 import { OakIconName } from "@/components/atoms";
 import { InternalButtonProps } from "@/components/atoms/InternalButton";
 import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";

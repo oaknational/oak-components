@@ -1,10 +1,9 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakLI } from "../OakLI/OakLI";
-
 import { OakOL, OakOLProps } from "./OakOL";
 
+import { OakLI } from "@/components/atoms/OakLI";
 import { typographyArgTypes } from "@/storybook-helpers/typographyStyleHelpers";
 
 /**

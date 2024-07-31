@@ -1,8 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { OakUnitsHeader } from "../OakUnitsHeader";
-
+import { OakUnitsHeader } from "@/components/organisms/teacher/OakUnitsHeader";
 import { OakFlex, OakUL } from "@/components/atoms";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 

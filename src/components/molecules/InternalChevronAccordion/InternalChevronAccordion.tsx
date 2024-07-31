@@ -1,8 +1,7 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
 
-import { OakHandDrawnFocusUnderline } from "../OakHandDrawnFocusUnderline";
-
+import { OakHandDrawnFocusUnderline } from "@/components/molecules/OakHandDrawnFocusUnderline";
 import { OakBoxProps, OakFlex, OakIcon, oakBoxCss } from "@/components/atoms";
 import {
   InternalAccordionButton,

@@ -2,13 +2,12 @@ import React from "react";
 import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
 
-import { OakThemeProvider } from "../OakThemeProvider";
-
 import {
   OakCloudinaryConfigProvider,
   OakCloudinaryImage,
 } from "./OakCloudinaryImage";
 
+import { OakThemeProvider } from "@/components/atoms/OakThemeProvider";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { oakDefaultTheme } from "@/styles";
 

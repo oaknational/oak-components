@@ -12,8 +12,7 @@ import { FocusOn } from "react-focus-on";
 import { Transition, TransitionStatus } from "react-transition-group";
 import styled from "styled-components";
 
-import { InternalShadowRoundButton } from "../InternalShadowRoundButton";
-
+import { InternalShadowRoundButton } from "@/components/molecules/InternalShadowRoundButton";
 import { OakBox, OakFlex, OakFlexProps, oakBoxCss } from "@/components/atoms";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 
