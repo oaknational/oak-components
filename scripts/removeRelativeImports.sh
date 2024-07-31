@@ -4,9 +4,11 @@
 find src -type f \( -name "*.tsx" -o -name "*.ts" \) | while read -r file; do
 
     # Check if the file contains the pattern 'import ... from "../..."'
-    # Using awk to handle multiline import statements
     imports=$(grep -E '^import.*from\s"(../.*)";$' $file | awk -F'"' '{print $2}')
 
+    if [ -z $imports ]; then
+        imports=$(grep -E '^}\sfrom\s"(../.*)";$' $file | awk -F'"' '{print $2}')
+    fi
 
     if [ -n "$imports" ]; then
         echo "File: $file"
@@ -14,9 +16,23 @@ find src -type f \( -name "*.tsx" -o -name "*.ts" \) | while read -r file; do
         # Replace the pattern 'import ... from "../..."' with 'import ... from "..."' in the file
         for import in $imports; do
             
-            absolute=$(realpath "$directory/$import")
+            # if the last two parts of absolute are the same then remove the last part
+            if [ "$(basename "$import")" = "$(basename "$(dirname "$import")")" ]; then
+                absolute=$(realpath "$directory/$(dirname import)")
+                echo "absolute: $absolute , import: $import, directory: $directory"
+            else
+                absolute=$(realpath "$directory/$import")
+            fi
+
+        
             if [ -f "$absolute" ]; then
-                echo "cannot find file $absolute for $import"
+                # this refers to the file not the folder remove the final part of the path
+                echo "$absolute refers to  file not a folder"
+                continue
+            fi
+
+            if [ ! -d "$absolute" ]; then
+                echo "$absolute does not exist"
                 continue
             fi
                 
@@ -25,7 +41,7 @@ find src -type f \( -name "*.tsx" -o -name "*.ts" \) | while read -r file; do
                 continue
             fi
 
-                alias=$(echo "$absolute" | sed 's|.*src/|@/|')
+            alias=$(echo "$absolute" | sed 's|.*src/|@/|')
 
             if [ -z "$alias" ]; then
                 echo "cannot alias import for $import"
