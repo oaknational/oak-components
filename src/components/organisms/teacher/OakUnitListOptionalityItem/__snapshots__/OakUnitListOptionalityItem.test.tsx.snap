@@ -1,0 +1,559 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
+[
+  .c0 {
+  width: 100%;
+  font-family: Lexend,sans-serif;
+}
+
+.c2 {
+  background: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Lexend,sans-serif;
+}
+
+.c4 {
+  width: 4rem;
+  min-width: 4rem;
+  height: 4rem;
+  background: #a0b6f2;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c7 {
+  margin: 0.75rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c9 {
+  max-width: 30rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c12 {
+  width: 4rem;
+  min-width: 4rem;
+  height: 4rem;
+  background: #a0b6f2;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  display: none;
+  font-family: Lexend,sans-serif;
+}
+
+.c14 {
+  width: 100%;
+  padding: 1rem;
+  background: #ffffff;
+  font-family: Lexend,sans-serif;
+}
+
+.c15 {
+  margin-bottom: 1rem;
+  display: none;
+  font-family: Lexend,sans-serif;
+}
+
+.c17 {
+  font-family: Lexend,sans-serif;
+}
+
+.c20 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  color: #222222;
+  background: #f5e9f2;
+  border: 0.063rem solid;
+  border-color: #deb7d5;
+  border-radius: 0.25rem;
+  font-family: Lexend,sans-serif;
+}
+
+.c22 {
+  margin-bottom: 1rem;
+  display: none;
+  font-family: Lexend,sans-serif;
+}
+
+.c23 {
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c13 {
+  display: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c16 {
+  display: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c24 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c25 {
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  width: 100%;
+  row-gap: 0.75rem;
+  -webkit-column-gap: 0.75rem;
+  column-gap: 0.75rem;
+}
+
+.c11 {
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+  color: #222222;
+}
+
+.c6 {
+  color: #222222;
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c19 {
+  color: #222222;
+  font-family: Lexend,sans-serif;
+}
+
+.c21 {
+  font-family: Lexend,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+  color: #222222;
+}
+
+@media (min-width:750px) {
+  .c2 {
+    display: none;
+  }
+}
+
+@media (min-width:750px) {
+  .c4 {
+    width: 4rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c4 {
+    width: auto;
+  }
+}
+
+@media (min-width:750px) {
+  .c4 {
+    height: auto;
+  }
+}
+
+@media (min-width:1280px) {
+  .c4 {
+    height: auto;
+  }
+}
+
+@media (min-width:750px) {
+  .c12 {
+    width: 4rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c12 {
+    width: auto;
+  }
+}
+
+@media (min-width:750px) {
+  .c12 {
+    height: auto;
+  }
+}
+
+@media (min-width:1280px) {
+  .c12 {
+    height: auto;
+  }
+}
+
+@media (min-width:750px) {
+  .c12 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:1280px) {
+  .c12 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:750px) {
+  .c14 {
+    padding: 1.25rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c15 {
+    display: none;
+  }
+}
+
+@media (min-width:1280px) {
+  .c15 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:750px) {
+  .c20 {
+    margin-left: 1rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c22 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:1280px) {
+  .c22 {
+    display: none;
+  }
+}
+
+@media (min-width:750px) {
+  .c23 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:1280px) {
+  .c23 {
+    display: none;
+  }
+}
+
+@media (min-width:750px) {
+  .c1 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:1280px) {
+  .c1 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:750px) {
+  .c3 {
+    display: none;
+  }
+}
+
+@media (min-width:750px) {
+  .c13 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:1280px) {
+  .c13 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:750px) {
+  .c16 {
+    display: none;
+  }
+}
+
+@media (min-width:1280px) {
+  .c16 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:750px) {
+  .c24 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:1280px) {
+  .c24 {
+    display: none;
+  }
+}
+
+@media (min-width:750px) {
+  .c19 {
+    margin-right: 5rem;
+  }
+}
+
+<li
+    className="c0 c1"
+  >
+    <div
+      className="c2 c3"
+    >
+      <div
+        className="c4 c5"
+      >
+        <span
+          className="c6"
+        >
+          1
+        </span>
+      </div>
+      <div
+        className="c7 c8"
+      >
+        <div
+          className="c9 c10"
+        >
+          <h3
+            className="c11"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="c12 c13"
+    >
+      <span
+        className="c6"
+      >
+        1
+      </span>
+    </div>
+    <div
+      className="c14"
+    >
+      <div
+        className="c15 c16"
+      >
+        <div
+          className="c17 c18"
+        >
+          <div
+            className="c9 c10"
+          >
+            <h3
+              className="c11"
+            />
+          </div>
+          <div
+            className="c17 c8"
+          >
+            <span
+              className="c19"
+            />
+            <div
+              className="c20"
+            >
+              <label
+                className="c21"
+              >
+                0 unit options
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="c22"
+      >
+        <div
+          className="c9 c10"
+        >
+          <h3
+            className="c11"
+          />
+        </div>
+      </div>
+      <div
+        className="c23 c24"
+      >
+        <span
+          className="c19"
+        />
+        <div
+          className="c20"
+        >
+          <label
+            className="c21"
+          >
+            0 unit options
+          </label>
+        </div>
+      </div>
+      <div
+        className="c17 c25"
+        role="list"
+      />
+    </div>
+  </li>,
+  ",",
+]
+`;

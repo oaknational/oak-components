@@ -22,7 +22,6 @@ const meta: Meta<typeof OakUnitListItem> = {
     yearTitle: { control: { type: "text" } },
     index: { control: { type: "number" } },
     lessonCount: { control: { type: "number" } },
-    disabled: { control: { type: "boolean" } },
     unavailable: { control: { type: "boolean" } },
     isLegacy: { control: { type: "boolean" } },
   },
@@ -59,7 +58,7 @@ const meta: Meta<typeof OakUnitListItem> = {
             lessonCount={7}
             index={3}
             yearTitle="Year 10"
-            disabled={true}
+            unavailable={true}
             isLegacy={false}
             href={""}
           />
@@ -95,14 +94,7 @@ const meta: Meta<typeof OakUnitListItem> = {
   ],
   parameters: {
     controls: {
-      include: [
-        "title",
-        "index",
-        "lessonCount",
-        "disabled",
-        "unavailable",
-        "isLegacy",
-      ],
+      include: ["title", "index", "lessonCount", "unavailable", "isLegacy"],
     },
   },
 };
