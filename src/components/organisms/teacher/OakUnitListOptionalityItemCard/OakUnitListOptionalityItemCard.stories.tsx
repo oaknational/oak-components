@@ -12,20 +12,13 @@ const meta: Meta<typeof OakUnitListOptionalityItemCard> = {
   args: {
     title:
       "Migration: What do sources tell us about the British Empire in India and Africa?",
-    index: 1,
     href: "#",
-    yearTitle: "Year 10",
     lessonCount: 10,
-    isLegacy: false,
   },
   argTypes: {
     title: { control: { type: "text" } },
-    yearTitle: { control: { type: "text" } },
-    index: { control: { type: "number" } },
     lessonCount: { control: { type: "number" } },
-    disabled: { control: { type: "boolean" } },
     unavailable: { control: { type: "boolean" } },
-    isLegacy: { control: { type: "boolean" } },
   },
   decorators: [
     (Story) => {
