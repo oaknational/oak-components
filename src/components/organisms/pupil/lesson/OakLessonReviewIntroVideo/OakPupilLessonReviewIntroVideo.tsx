@@ -3,8 +3,7 @@ import React from "react";
 import {
   ReviewItemContainer,
   ReviewItemTitleSection,
-} from "../OakLessonReviewQuiz";
-
+} from "@/components/organisms/pupil/lesson/OakLessonReviewQuiz";
 import { OakFlex } from "@/components/atoms";
 import { OakRoundIcon } from "@/components/molecules";
 import { OakCombinedColorToken } from "@/styles";

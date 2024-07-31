@@ -63,7 +63,7 @@ const StyledOakIndexBox = styled(OakFlex)`
   }
 `;
 
-export type OakUnitListOptionalityItemProps<C extends ElementType> = {
+export type OakUnitListOptionalityItemCardProps<C extends ElementType> = {
   as?: C;
   disabled?: boolean;
   unavailable?: boolean;
@@ -78,7 +78,7 @@ export type OakUnitListOptionalityItemProps<C extends ElementType> = {
  * OakUnitsListItem component used as links for unit cards
  */
 export const OakUnitListOptionalityItemCard = <C extends ElementType>(
-  props: OakUnitListOptionalityItemProps<C>,
+  props: OakUnitListOptionalityItemCardProps<C>,
 ) => {
   const {
     as,

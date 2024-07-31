@@ -1,8 +1,7 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
 
-import { InternalReviewAccordion } from "../InternalReviewAccordion";
-
+import { InternalReviewAccordion } from "@/components/organisms/pupil/lesson/InternalReviewAccordion";
 import { OakBox, OakFlex, OakIcon, OakSpan } from "@/components/atoms";
 import { OakRoundIcon } from "@/components/molecules";
 import { OakCombinedColorToken } from "@/styles";

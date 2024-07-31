@@ -1,7 +1,6 @@
 import React, { MutableRefObject } from "react";
 
-import { OakUnitListOptionalityItemCard } from "../OakUnitListOptionalityItemCard";
-
+import { OakUnitListOptionalityItemCard } from "@/components/organisms/teacher/OakUnitListOptionalityItemCard";
 import {
   OakFlex,
   OakBox,
