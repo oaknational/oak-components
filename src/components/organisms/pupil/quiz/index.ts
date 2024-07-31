@@ -6,4 +6,5 @@ export * from "./OakQuizHint";
 export * from "./OakQuizMatch";
 export * from "./OakQuizOrder";
 export * from "./OakQuizRadioButton";
+export * from "./OakQuizResultItem";
 export * from "./OakQuizTextInput";

@@ -2,7 +2,7 @@ import React from "react";
 import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
 
-import { InternalQuizResultItem } from "./InternalQuizResultItem";
+import { InternalQuizResultItem } from "./OakQuizResultItem";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { OakThemeProvider } from "@/components/atoms";
