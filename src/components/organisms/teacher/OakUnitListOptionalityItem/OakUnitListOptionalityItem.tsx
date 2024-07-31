@@ -204,8 +204,8 @@ export const OakUnitListOptionalityItem = (
             <OakGridArea key={`${unit.title}-${index}`} $colSpan={[12, 6]}>
               <OakUnitListOptionalityItemCard
                 {...unit}
-                disabled={unavailable}
-                ref={index === 0 ? firstItemRef : null}
+                firstItemRef={index === 0 ? firstItemRef : null}
+                unavailable={unavailable}
               />
             </OakGridArea>
           ))}

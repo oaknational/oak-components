@@ -13,11 +13,8 @@ describe("OakUnitListOptionalityItemCard", () => {
     const { getByTestId } = renderWithTheme(
       <OakUnitListOptionalityItemCard
         data-testid="test"
-        index={0}
         title={""}
-        yearTitle={""}
         lessonCount={0}
-        isLegacy={false}
         href={""}
       />,
     );
@@ -29,10 +26,7 @@ describe("OakUnitListOptionalityItemCard", () => {
       <OakThemeProvider theme={oakDefaultTheme}>
         <OakUnitListOptionalityItemCard
           title="Lesson 1"
-          index={1}
-          yearTitle={""}
           lessonCount={0}
-          isLegacy={false}
           href={""}
         />
         ,
@@ -46,11 +40,8 @@ describe("OakUnitListOptionalityItemCard", () => {
     const { getByTestId } = renderWithTheme(
       <OakUnitListOptionalityItemCard
         data-testid="unit-card"
-        index={0}
         title={""}
-        yearTitle={""}
         lessonCount={0}
-        isLegacy={false}
         href={""}
       />,
     );
@@ -63,10 +54,7 @@ describe("OakUnitListOptionalityItemCard", () => {
       <OakUnitListOptionalityItemCard
         data-testid="unit-card"
         lessonCount={6}
-        index={0}
         title={""}
-        yearTitle={""}
-        isLegacy={false}
         href={""}
       />,
     );

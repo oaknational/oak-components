@@ -1,8 +1,4 @@
-import React, {
-  ComponentPropsWithoutRef,
-  ElementType,
-  MutableRefObject,
-} from "react";
+import React, { MutableRefObject } from "react";
 import styled, { css } from "styled-components";
 
 import { OakFlex, OakSpan, OakHeading } from "@/components/atoms";
@@ -63,39 +59,24 @@ const StyledOakIndexBox = styled(OakFlex)`
   }
 `;
 
-export type OakUnitListOptionalityItemCardProps<C extends ElementType> = {
-  as?: C;
-  disabled?: boolean;
+export type OakUnitListOptionalityItemCardProps = {
   unavailable?: boolean;
   title: string;
   lessonCount: number | null;
   href: string;
   firstItemRef?: MutableRefObject<HTMLAnchorElement | null> | null | undefined;
-} & ComponentPropsWithoutRef<C>;
+  onClick?: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
+};
 
 /**
  *
  * OakUnitsListItem component used as links for unit cards
  */
-export const OakUnitListOptionalityItemCard = <C extends ElementType>(
-  props: OakUnitListOptionalityItemCardProps<C>,
+export const OakUnitListOptionalityItemCard = (
+  props: OakUnitListOptionalityItemCardProps,
 ) => {
-  const {
-    as,
-    lessonSectionName,
-    lessonCount,
-    progress,
-    disabled,
-    href,
-    unavailable,
-    onClick,
-    index,
-
-    firstItemRef,
-    ...rest
-  } = props;
-
-  const disabledOrUnavailable = disabled || unavailable;
+  const { lessonCount, href, unavailable, firstItemRef, onClick, ...rest } =
+    props;
 
   return (
     <OakFlex $boxSizing={"border-box"} $flexGrow={1} role="listitem">
@@ -105,9 +86,9 @@ export const OakUnitListOptionalityItemCard = <C extends ElementType>(
         $borderRadius="border-radius-m"
         $borderColor={"border-decorative3"}
         $ba="border-solid-m"
-        $disabled={disabledOrUnavailable}
-        href={disabledOrUnavailable ? undefined : href}
-        onClick={disabledOrUnavailable ? undefined : onClick}
+        $disabled={unavailable}
+        href={unavailable ? undefined : href}
+        onClick={unavailable ? undefined : onClick}
         ref={firstItemRef}
         as={"a"}
         $flexGrow={1}
@@ -120,7 +101,7 @@ export const OakUnitListOptionalityItemCard = <C extends ElementType>(
         >
           <OakHeading
             $font={"heading-7"}
-            $color={disabledOrUnavailable ? "text-disabled" : "text-primary"}
+            $color={unavailable ? "text-disabled" : "text-primary"}
             tag={"h3"}
             $mb={"space-between-xs"}
           >
@@ -130,13 +111,11 @@ export const OakUnitListOptionalityItemCard = <C extends ElementType>(
             <StyledLessonLink
               isTrailingIcon
               iconName="chevron-right"
-              disabled={disabledOrUnavailable}
+              disabled={unavailable}
             >
               <OakSpan
                 $font={"heading-light-7"}
-                $color={
-                  disabledOrUnavailable ? "text-disabled" : "text-primary"
-                }
+                $color={unavailable ? "text-disabled" : "text-primary"}
               >
                 {lessonCount} lessons
               </OakSpan>
