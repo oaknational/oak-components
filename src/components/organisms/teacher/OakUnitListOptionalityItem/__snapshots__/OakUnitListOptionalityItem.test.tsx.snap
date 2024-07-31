@@ -196,6 +196,27 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
   justify-content: space-between;
 }
 
+.c25 {
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  width: 100%;
+  row-gap: 0.75rem;
+  -webkit-column-gap: 0.75rem;
+  column-gap: 0.75rem;
+}
+
+.c11 {
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+  color: #222222;
+}
+
 .c6 {
   color: #222222;
   font-family: Lexend,sans-serif;
@@ -213,18 +234,6 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c11 {
-  font-family: Lexend,sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
-  letter-spacing: 0.0115rem;
-  color: #222222;
-}
-
 .c21 {
   font-family: Lexend,sans-serif;
   font-weight: 400;
@@ -235,15 +244,6 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
   color: #222222;
-}
-
-.c25 {
-  display: grid;
-  grid-template-columns: repeat(12,1fr);
-  width: 100%;
-  row-gap: 0.75rem;
-  -webkit-column-gap: 0.75rem;
-  column-gap: 0.75rem;
 }
 
 @media (min-width:750px) {

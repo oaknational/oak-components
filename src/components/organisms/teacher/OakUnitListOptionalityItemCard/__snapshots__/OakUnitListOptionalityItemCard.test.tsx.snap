@@ -29,6 +29,10 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
+.c15 {
+  object-fit: contain;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -69,6 +73,19 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
   justify-content: flex-end;
 }
 
+.c6 {
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+  margin-bottom: 0.75rem;
+  color: #222222;
+}
+
 .c10 {
   font-family: Lexend,sans-serif;
 }
@@ -83,23 +100,6 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
-}
-
-.c15 {
-  object-fit: contain;
-}
-
-.c6 {
-  font-family: Lexend,sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
-  letter-spacing: 0.0115rem;
-  margin-bottom: 0.75rem;
-  color: #222222;
 }
 
 .c14 {
