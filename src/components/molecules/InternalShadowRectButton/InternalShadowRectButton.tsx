@@ -14,15 +14,21 @@ import {
   positionStyle,
 } from "@/styles/utils/positionStyle";
 import { parseColor } from "@/styles/helpers/parseColor";
-import { OakAllSpacingToken, OakCombinedColorToken, OakDropShadowToken } from "@/styles";
+import {
+  OakAllSpacingToken,
+  OakCombinedColorToken,
+  OakDropShadowToken,
+} from "@/styles";
 import { SizeStyleProps, sizeStyle } from "@/styles/utils/sizeStyle";
 import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
 import { SpacingStyleProps } from "@/styles/utils/spacingStyle";
 import { FlexStyleProps } from "@/styles/utils/flexStyle";
 import { TypographyStyleProps } from "@/styles/utils/typographyStyle";
 
-
-type OakLoadingSpinnerTokenSubset = Extract<OakAllSpacingToken, "all-spacing-5" | "all-spacing-6">;
+type OakLoadingSpinnerTokenSubset = Extract<
+  OakAllSpacingToken,
+  "all-spacing-5" | "all-spacing-6"
+>;
 
 export type InternalShadowRectButtonProps = Omit<
   InternalButtonProps,
