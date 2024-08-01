@@ -1,13 +1,19 @@
 import React, { MutableRefObject } from "react";
 import styled, { css } from "styled-components";
 
-import { OakFlex, OakSpan, OakHeading } from "@/components/atoms";
+import {
+  OakFlex,
+  OakSpan,
+  OakHeading,
+  OakLI,
+  OakIcon,
+} from "@/components/atoms";
 import { parseColor } from "@/styles/helpers/parseColor";
-import { OakSecondaryLink } from "@/components/molecules";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 
-const StyledLessonLink = styled(OakSecondaryLink)`
-  text-decoration: none;
+const OakLIFlex = styled(OakLI)`
+  display: flex;
+  flex-grow: 1;
 `;
 
 const StyledOptionalityListItem = styled(OakFlex)<{ $disabled?: boolean }>`
@@ -79,7 +85,7 @@ export const OakUnitListOptionalityItemCard = (
     props;
 
   return (
-    <OakFlex $boxSizing={"border-box"} $flexGrow={1} role="listitem">
+    <OakLIFlex $display={"flex"} $listStyle={"none"} $flexGrow={1}>
       <StyledOptionalityListItem
         $pa={"inner-padding-m"}
         $background={"bg-decorative3-very-subdued"}
@@ -107,22 +113,20 @@ export const OakUnitListOptionalityItemCard = (
           >
             {props.title}
           </OakHeading>
-          <OakFlex $justifyContent={"flex-end"}>
-            <StyledLessonLink
-              isTrailingIcon
-              iconName="chevron-right"
-              disabled={unavailable}
+          <OakFlex $alignItems={"center"} $justifyContent={"flex-end"}>
+            <OakSpan
+              $color={unavailable ? "text-disabled" : "text-primary"}
+              $font={"heading-light-7"}
             >
-              <OakSpan
-                $font={"heading-light-7"}
-                $color={unavailable ? "text-disabled" : "text-primary"}
-              >
-                {lessonCount} lessons
-              </OakSpan>
-            </StyledLessonLink>
+              {`${lessonCount} Lessons`}
+            </OakSpan>
+            <OakIcon
+              iconName="chevron-right"
+              $colorFilter={unavailable ? "text-disabled" : "text-primary"}
+            />
           </OakFlex>
         </OakFlex>
       </StyledOptionalityListItem>
-    </OakFlex>
+    </OakLIFlex>
   );
 };
