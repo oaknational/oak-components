@@ -169,6 +169,7 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
                 isTrailingIcon
                 iconName="chevron-right"
                 disabled={unavailable}
+                element="span"
               >
                 <OakSpan
                   $font={"heading-light-7"}

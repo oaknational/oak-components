@@ -112,6 +112,7 @@ export const OakUnitListOptionalityItemCard = (
               isTrailingIcon
               iconName="chevron-right"
               disabled={unavailable}
+              element="span"
             >
               <OakSpan
                 $font={"heading-light-7"}
