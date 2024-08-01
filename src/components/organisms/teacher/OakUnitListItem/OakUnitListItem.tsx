@@ -171,7 +171,7 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
                 $font={"heading-light-7"}
                 $color={unavailable ? "text-disabled" : "text-primary"}
               >
-                {lessonCount} Lessons
+                {lessonCount} lessons
               </OakSpan>
               <OakIcon
                 $colorFilter={unavailable ? "text-disabled" : "text-primary"}

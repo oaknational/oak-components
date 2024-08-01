@@ -118,7 +118,7 @@ export const OakUnitListOptionalityItemCard = (
               $color={unavailable ? "text-disabled" : "text-primary"}
               $font={"heading-light-7"}
             >
-              {`${lessonCount} Lessons`}
+              {`${lessonCount} lessons`}
             </OakSpan>
             <OakIcon
               iconName="chevron-right"
