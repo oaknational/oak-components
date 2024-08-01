@@ -88,4 +88,22 @@ describe("OakUnitListItem", () => {
 
     expect(getByTestId("unit-card").textContent).toContain("Year 4");
   });
+  it("applies disabled styles when unavailable", () => {
+    const { getByTestId } = renderWithTheme(
+      <OakUnitListItem
+        data-testid="unit-card"
+        index={0}
+        title={""}
+        yearTitle={""}
+        lessonCount={0}
+        isLegacy={false}
+        href={""}
+        unavailable
+      />,
+    );
+
+    const unitCard = getByTestId("unit-card");
+    expect(unitCard).toHaveStyleRule("cursor", "not-allowed");
+    expect(unitCard).toHaveStyleRule("background", "#f2f2f2");
+  });
 });

@@ -1,14 +1,16 @@
 import React, { MutableRefObject } from "react";
 import styled, { css } from "styled-components";
 
-import { OakFlex, OakBox, OakP, OakHeading, OakSpan } from "@/components/atoms";
+import {
+  OakFlex,
+  OakP,
+  OakHeading,
+  OakSpan,
+  OakIcon,
+  OakLI,
+} from "@/components/atoms";
 import { parseColor } from "@/styles/helpers/parseColor";
-import { OakSecondaryLink } from "@/components/molecules";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
-
-const StyledLessonLink = styled(OakSecondaryLink)`
-  text-decoration: none;
-`;
 
 const LessonDetailsWrapper = styled(OakFlex)`
   min-width: 260px;
@@ -99,7 +101,7 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
   } = props;
 
   return (
-    <OakBox $width={"100%"} role="listitem">
+    <OakLI $listStyle={"none"} $width={"100%"}>
       <StyledUnitListItem
         $alignItems={"center"}
         $background={unavailable ? "bg-neutral" : "bg-primary"}
@@ -164,23 +166,21 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
                 {props.yearTitle}
               </OakP>
             </OakFlex>
-            <OakFlex>
-              <StyledLessonLink
-                isTrailingIcon
-                iconName="chevron-right"
-                disabled={unavailable}
+            <OakFlex $alignItems={"center"}>
+              <OakSpan
+                $font={"heading-light-7"}
+                $color={unavailable ? "text-disabled" : "text-primary"}
               >
-                <OakSpan
-                  $font={"heading-light-7"}
-                  $color={unavailable ? "text-disabled" : "text-primary"}
-                >
-                  {lessonCount} Lessons
-                </OakSpan>
-              </StyledLessonLink>
+                {lessonCount} lessons
+              </OakSpan>
+              <OakIcon
+                $colorFilter={unavailable ? "text-disabled" : "text-primary"}
+                iconName="chevron-right"
+              />
             </OakFlex>
           </LessonDetailsWrapper>
         </OakFlex>
       </StyledUnitListItem>
-    </OakBox>
+    </OakLI>
   );
 };
