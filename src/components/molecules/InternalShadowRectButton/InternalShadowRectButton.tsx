@@ -14,12 +14,15 @@ import {
   positionStyle,
 } from "@/styles/utils/positionStyle";
 import { parseColor } from "@/styles/helpers/parseColor";
-import { OakCombinedColorToken, OakDropShadowToken } from "@/styles";
+import { OakAllSpacingToken, OakCombinedColorToken, OakDropShadowToken } from "@/styles";
 import { SizeStyleProps, sizeStyle } from "@/styles/utils/sizeStyle";
 import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
 import { SpacingStyleProps } from "@/styles/utils/spacingStyle";
 import { FlexStyleProps } from "@/styles/utils/flexStyle";
 import { TypographyStyleProps } from "@/styles/utils/typographyStyle";
+
+
+type OakLoadingSpinnerTokenSubset = Extract<OakAllSpacingToken, "all-spacing-5" | "all-spacing-6">;
 
 export type InternalShadowRectButtonProps = Omit<
   InternalButtonProps,
@@ -47,6 +50,7 @@ export type InternalShadowRectButtonProps = Omit<
   /**
    *  we can adjust the gap between the icon and the text
    */
+  loadingSpinnerSize?: OakLoadingSpinnerTokenSubset;
   iconGap?: FlexStyleProps["$gap"];
   defaultTextColor: OakCombinedColorToken;
   defaultBackground: OakCombinedColorToken;
@@ -176,6 +180,7 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
     iconOverride,
     font = "heading-7",
     textAlign = "left",
+    loadingSpinnerSize = "all-spacing-6",
     ...rest
   } = props;
 
@@ -193,8 +198,8 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
   );
 
   const loader = (
-    <OakBox $width={"all-spacing-6"} $height={"all-spacing-6"}>
-      <OakLoadingSpinner $width={"all-spacing-6"} />
+    <OakBox $width={loadingSpinnerSize} $height={loadingSpinnerSize}>
+      <OakLoadingSpinner $width={loadingSpinnerSize} />
     </OakBox>
   );
 

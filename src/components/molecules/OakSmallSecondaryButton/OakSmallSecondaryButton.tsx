@@ -54,6 +54,7 @@ export const OakSmallSecondaryButton = <C extends ElementType = "button">({
       font="body-3-bold"
       pv="inner-padding-ssx"
       ph="inner-padding-xs"
+      loadingSpinnerSize="all-spacing-5"
       {...rest}
     />
   );
