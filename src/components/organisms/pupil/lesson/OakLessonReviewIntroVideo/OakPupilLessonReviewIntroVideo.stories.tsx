@@ -8,7 +8,6 @@ import { OakFlex } from "@/components/atoms";
 const meta: Meta<typeof OakLessonReviewIntroVideo> = {
   component: OakLessonReviewIntroVideo,
   tags: ["autodocs"],
-  title: "components/organisms/pupil/OakLessonReviewIntroVideo",
   args: {
     lessonSectionName: "intro",
     completed: false,

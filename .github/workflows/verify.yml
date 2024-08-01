@@ -9,7 +9,7 @@ on:
 
 jobs:
   format_and_test:
-    name: format, lint, type-check and test
+    name: format, lint, type-check, test and scan
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -24,3 +24,8 @@ jobs:
       - run: npm run lint
       - run: npm run check-types
       - run: npm run test:ci
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
