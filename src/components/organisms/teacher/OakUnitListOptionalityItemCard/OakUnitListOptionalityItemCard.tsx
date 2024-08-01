@@ -85,7 +85,7 @@ export const OakUnitListOptionalityItemCard = (
     props;
 
   return (
-    <OakLIFlex $display={"flex"} $listStyle={"none"} $flexGrow={1}>
+    <OakLIFlex $listStyle={"none"}>
       <StyledOptionalityListItem
         $pa={"inner-padding-m"}
         $background={"bg-decorative3-very-subdued"}
