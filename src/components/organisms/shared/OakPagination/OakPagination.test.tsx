@@ -56,7 +56,7 @@ describe("OakPagination Component", () => {
   });
 
   it("should not render when no additional pages", () => {
-    const { queryByTestId } = renderWithTheme(
+    const { queryByTestId, container } = renderWithTheme(
       <OakThemeProvider theme={oakDefaultTheme}>
         <OakPagination
           paginationHref={""}
@@ -68,6 +68,7 @@ describe("OakPagination Component", () => {
       </OakThemeProvider>,
     );
     expect(queryByTestId("pagination")).not.toBeInTheDocument();
+    expect(container.firstChild).toBeNull();
   });
 
   it("renders the correct number of pages", () => {
@@ -197,7 +198,7 @@ describe("OakPagination Component", () => {
     });
   });
 
-  it.only("should focus the first item and scroll to top when router.query.page changes", () => {
+  it("should focus the first item and scroll to top when router.query.page changes", () => {
     const mockRouter = {
       query: { page: "3" },
       push: jest.fn(),
