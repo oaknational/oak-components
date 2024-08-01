@@ -55,6 +55,7 @@ export const OakSmallPrimaryButton = <C extends ElementType = "button">({
       pv="inner-padding-ssx"
       ph="inner-padding-xs"
       loadingSpinnerSize="all-spacing-5"
+      iconGap="space-between-sssx"
       {...rest}
     />
   );
