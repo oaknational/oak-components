@@ -2,7 +2,7 @@ import { ParsedUrlQuery } from "querystring";
 
 import React from "react";
 import { StoryObj, Meta } from "@storybook/react";
-import { NextRouter } from "@storybook/nextjs/router.mock";
+import { NextRouter } from "next/router";
 
 import { OakPagination } from "./OakPagination";
 
