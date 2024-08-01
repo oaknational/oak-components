@@ -61,4 +61,19 @@ describe("OakUnitListOptionalityItemCard", () => {
 
     expect(getByTestId("unit-card").textContent).toContain("6");
   });
+  it("applies disabled styles when unavailable", () => {
+    const { getByTestId } = renderWithTheme(
+      <OakUnitListOptionalityItemCard
+        data-testid="unit-card"
+        title={""}
+        lessonCount={0}
+        href={""}
+        unavailable
+      />,
+    );
+
+    const unitCard = getByTestId("unit-card");
+    expect(unitCard).toHaveStyleRule("cursor", "not-allowed");
+    expect(unitCard).toHaveStyleRule("background", "#f2f2f2");
+  });
 });
