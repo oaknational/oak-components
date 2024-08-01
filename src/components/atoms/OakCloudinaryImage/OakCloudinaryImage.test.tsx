@@ -11,7 +11,7 @@ import { OakThemeProvider } from "@/components/atoms/OakThemeProvider";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { oakDefaultTheme } from "@/styles";
 
-describe.skip(OakCloudinaryImage, () => {
+describe(OakCloudinaryImage, () => {
   it("matches snapshot", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
@@ -77,7 +77,7 @@ describe.skip(OakCloudinaryImage, () => {
     );
   });
 
-  describe.skip("private CDNs", () => {
+  describe("private CDNs", () => {
     it("are respected when an id is passed", () => {
       const { getByRole } = renderWithTheme(
         <OakCloudinaryConfigProvider
