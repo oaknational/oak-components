@@ -4,7 +4,7 @@ import { StoryObj, Meta } from "@storybook/react";
 import { OakPagination } from "./OakPagination";
 
 const meta: Meta<typeof OakPagination> = {
-  title: "Components/organisms/OakPagination",
+  title: "Components/organisms/shared/OakPagination",
   component: OakPagination,
   tags: ["autodocs"],
   argTypes: {

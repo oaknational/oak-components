@@ -1,6 +1,7 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
+import { NextRouter } from "next/router";
 
 import { OakPagination } from "./OakPagination";
 import { generatePageNumbers } from "./utils";
@@ -9,7 +10,35 @@ import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { OakThemeProvider } from "@/components/atoms";
 import { oakDefaultTheme } from "@/styles";
 
+jest.mock("next/router", () => ({
+  useRouter: jest.fn(),
+}));
+
+const mockRouter: Partial<NextRouter> = {
+  pathname: "/",
+  route: "/",
+  query: {},
+  asPath: "/",
+  push: jest.fn(),
+  replace: jest.fn(),
+  reload: jest.fn(),
+  back: jest.fn(),
+  prefetch: jest.fn().mockResolvedValue(undefined),
+  beforePopState: jest.fn(),
+  events: {
+    on: jest.fn(),
+    off: jest.fn(),
+    emit: jest.fn(),
+  },
+  isFallback: false,
+};
+
 describe("OakPagination Component", () => {
+  beforeEach(() => {
+    // Mock the useRouter hook to return the mockRouter
+    // (useRouter as jest.Mock).mockReturnValue(mockRouter);
+  });
+
   it("renders", () => {
     const { getByTestId } = renderWithTheme(
       <OakThemeProvider theme={oakDefaultTheme}>
@@ -18,6 +47,7 @@ describe("OakPagination Component", () => {
           pageName={"test"}
           currentPage={1}
           totalPages={8}
+          router={mockRouter as NextRouter}
         />
         ,
       </OakThemeProvider>,
@@ -33,6 +63,7 @@ describe("OakPagination Component", () => {
           pageName={"test"}
           currentPage={1}
           totalPages={7}
+          router={mockRouter as NextRouter}
         />
       </OakThemeProvider>,
     );
@@ -48,6 +79,7 @@ describe("OakPagination Component", () => {
           pageName={"test"}
           currentPage={1}
           totalPages={7}
+          router={mockRouter as NextRouter}
         />
       </OakThemeProvider>,
     );
@@ -62,6 +94,7 @@ describe("OakPagination Component", () => {
           pageName={"test"}
           currentPage={7}
           totalPages={7}
+          router={mockRouter as NextRouter}
         />
       </OakThemeProvider>,
     );
@@ -79,6 +112,7 @@ describe("OakPagination Component", () => {
           pageName={"test"}
           currentPage={1}
           totalPages={7}
+          router={mockRouter as NextRouter}
         />
       </OakThemeProvider>,
     ).toJSON();

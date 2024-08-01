@@ -1,5 +1,6 @@
-import React, { RefObject, useState } from "react";
+import React, { RefObject, useEffect, useState } from "react";
 import styled, { css } from "styled-components";
+import { NextRouter } from "next/router";
 
 import { generatePageNumbers } from "./utils";
 
@@ -17,6 +18,8 @@ export type OakPaginationProps = {
   prevHref?: string;
   paginationHref: string;
   pageName: string;
+  router: NextRouter;
+  shouldAppendQuery?: boolean;
 };
 
 type OakPageNumberProps = {
@@ -137,7 +140,17 @@ export const OakPagination = ({
   prevHref,
   paginationHref,
   pageName,
+  firstItemRef,
+  router,
+  shouldAppendQuery,
 }: OakPaginationProps) => {
+  useEffect(() => {
+    if (router.query.page && firstItemRef?.current) {
+      firstItemRef.current.focus();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [firstItemRef, router.query.page]);
+
   const [activePage, setActivePage] = useState(currentPage);
 
   const pages = generatePageNumbers(activePage, totalPages);
@@ -145,12 +158,35 @@ export const OakPagination = ({
   const isFirstPage = activePage <= 1;
   const isLastPage = activePage >= totalPages;
 
-  const handleNumberClick = (num: number) => {
+  const handleNumberClick = (num: number, event: React.MouseEvent) => {
+    event.preventDefault();
     setActivePage(num);
+
+    shouldAppendQuery
+      ? router.push(`${paginationHref}&page=${num}`, undefined, {
+          shallow: true,
+        })
+      : router.push(`${paginationHref}?page=${num}`, undefined, {
+          shallow: true,
+        });
   };
 
-  const handleChevronClick = (direction: "backwards" | "forwards") => {
-    setActivePage((currNum) => currNum + (direction === "backwards" ? -1 : 1));
+  const handleChevronClick = (
+    direction: "backwards" | "forwards",
+    event:
+      | React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
+      | React.KeyboardEvent<HTMLButtonElement | HTMLAnchorElement>,
+  ) => {
+    event.preventDefault();
+    const newPage = currentPage + (direction === "backwards" ? -1 : 1);
+    shouldAppendQuery
+      ? router.push(`${paginationHref}&page=${newPage}`, undefined, {
+          shallow: true,
+        })
+      : router.push(`${paginationHref}?page=${newPage}`, undefined, {
+          shallow: true,
+        });
+    setActivePage(newPage);
   };
 
   if (currentPage === 1 && totalPages < 2) {
@@ -167,19 +203,22 @@ export const OakPagination = ({
         <StyledChevronButton
           element={isFirstPage ? "button" : "a"}
           rel="prev"
+          href={prevHref}
           data-testid="backwards-button"
-          onClick={() => {
-            handleChevronClick("backwards");
+          onClick={(
+            e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>,
+          ) => {
+            e.preventDefault();
+            handleChevronClick("backwards", e);
           }}
           onKeyDown={(
             e: React.KeyboardEvent<HTMLButtonElement | HTMLAnchorElement>,
           ) => {
             if (e.key === "Enter") {
-              handleChevronClick("backwards");
+              handleChevronClick("backwards", e);
             }
           }}
           tabIndex={isFirstPage ? -1 : 0}
-          href={prevHref}
           aria-disabled={isFirstPage}
           disabled={isFirstPage}
           aria-label={isFirstPage ? "No previous pages" : "Go to previous page"}
@@ -204,7 +243,9 @@ export const OakPagination = ({
                     pageNumber={page + 1}
                     currentPage={activePage}
                     href={`${paginationHref}?page=${page + 1}`}
-                    onClick={() => handleNumberClick(page + 1)}
+                    onClick={(e: React.MouseEvent) =>
+                      handleNumberClick(page + 1, e)
+                    }
                   />
                 </OakLI>
               );
@@ -232,14 +273,16 @@ export const OakPagination = ({
           tabIndex={isLastPage ? -1 : 0}
           data-testid="forwards-button"
           href={nextHref}
-          onClick={() => {
-            handleChevronClick("forwards");
+          onClick={(
+            e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>,
+          ) => {
+            handleChevronClick("forwards", e);
           }}
           onKeyDown={(
             e: React.KeyboardEvent<HTMLButtonElement | HTMLAnchorElement>,
           ) => {
             if (e.key === "Enter") {
-              handleChevronClick("forwards");
+              handleChevronClick("forwards", e);
             }
           }}
           aria-disabled={isLastPage}
@@ -259,5 +302,15 @@ export const OakPagination = ({
  * The following callbacks are available for tracking focus events:
  *
  * Pagination component for navigating through pages
+ *
+ * @param router - Next.js router object
+ * @param currentPage - Current page number
+ * @param totalPages - Total number of pages
+ * @param nextHref - URL for the next page
+ * @param prevHref - URL for the previous page
+ * @param paginationHref - Base URL for the pagination
+ * @param pageName - Name of the page
+ * @param firstItemRef - Ref object for the first item in the list
+ * @param shouldAppendQuery - Should the query be appended to the URL i.e. /teachers/search?term=maths&page=2
  *
  */
