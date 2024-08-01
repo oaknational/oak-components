@@ -46,6 +46,7 @@ exports[`OakPagination Component matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
   font-family: Lexend,sans-serif;
   display: revert;
+  display: revert;
 }
 
 .c8 {

@@ -157,6 +157,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
   list-style: none;
   display: revert;
+  display: revert;
 }
 
 .c12 {

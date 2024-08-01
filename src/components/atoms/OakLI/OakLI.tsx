@@ -8,6 +8,7 @@ import {
   TypographyStyleProps,
   typographyStyle,
 } from "@/styles/utils/typographyStyle";
+import { flexStyle } from "@/styles/utils/flexStyle";
 
 export type OakLIProps = OakFlexProps &
   TypographyStyleProps &
@@ -27,6 +28,7 @@ export const OakLI = styled.li<OakLIProps>`
   ${typographyStyle}
   ${listStyle}
   ${displayStyle}
+  ${flexStyle}
 `;
 
 OakLI.defaultProps = {

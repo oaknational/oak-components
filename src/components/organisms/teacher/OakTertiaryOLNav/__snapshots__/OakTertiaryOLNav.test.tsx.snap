@@ -25,6 +25,7 @@ exports[`Component OakTertiaryOLNav matches snapshot 1`] = `
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
   display: revert;
+  display: revert;
 }
 
 .c4 {

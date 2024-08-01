@@ -11,11 +11,6 @@ import {
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 
-const OakLIFlex = styled(OakLI)`
-  display: flex;
-  flex-grow: 1;
-`;
-
 const StyledOptionalityListItem = styled(OakFlex)<{ $disabled?: boolean }>`
   outline: none;
   text-align: initial;
@@ -85,7 +80,7 @@ export const OakUnitListOptionalityItemCard = (
     props;
 
   return (
-    <OakLIFlex $listStyle={"none"}>
+    <OakLI $display={"flex"} $listStyle={"none"} $flexGrow={1}>
       <StyledOptionalityListItem
         $pa={"inner-padding-m"}
         $background={"bg-decorative3-very-subdued"}
@@ -127,6 +122,6 @@ export const OakUnitListOptionalityItemCard = (
           </OakFlex>
         </OakFlex>
       </StyledOptionalityListItem>
-    </OakLIFlex>
+    </OakLI>
   );
 };
