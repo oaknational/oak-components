@@ -1,7 +1,6 @@
-import React, { RefObject } from "react";
+import React from "react";
 import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
-import { act, fireEvent } from "@testing-library/react";
 
 import { OakPagination } from "./OakPagination";
 import { generatePageNumbers } from "./utils";
