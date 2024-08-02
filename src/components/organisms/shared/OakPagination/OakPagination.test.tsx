@@ -8,6 +8,7 @@ import { generatePageNumbers } from "./utils";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { OakThemeProvider } from "@/components/atoms";
 import { oakDefaultTheme } from "@/styles";
+import { fireEvent } from "@testing-library/react";
 
 describe("OakPagination Component", () => {
   beforeEach(() => {
@@ -93,6 +94,52 @@ describe("OakPagination Component", () => {
     const forwardsButton = getByTestId("forwards-button");
 
     expect(forwardsButton).toBeDisabled();
+  });
+
+  it("handleChevronClick function", () => {
+    const onPageChangeMock = jest.fn();
+    const initialPage = 2;
+
+    const { getByTestId } = renderWithTheme(
+      <OakPagination
+        totalPages={5}
+        initialPage={initialPage}
+        onPageChange={onPageChangeMock}
+        paginationHref="/#"
+        pageName="test"
+      />,
+    );
+
+    const backwardsButton = getByTestId("backwards-button");
+    const forwardsButton = getByTestId("forwards-button");
+
+    fireEvent.click(backwardsButton);
+    expect(onPageChangeMock).toHaveBeenCalledWith(initialPage - 1);
+
+    fireEvent.click(forwardsButton);
+    expect(onPageChangeMock).toHaveBeenCalledWith(initialPage);
+  });
+
+  it("handleNumberClick function", () => {
+    const onPageChangeMock = jest.fn();
+    const initialPage = 2;
+
+    const { getAllByTestId } = renderWithTheme(
+      <OakPagination
+        totalPages={5}
+        initialPage={initialPage}
+        onPageChange={onPageChangeMock}
+        paginationHref="/#"
+        pageName="test"
+      />,
+    );
+
+    const numberButtons = getAllByTestId("page-number-component");
+
+    numberButtons.forEach((button, i) => {
+      fireEvent.click(button);
+      expect(onPageChangeMock).toHaveBeenCalledWith(i + 1);
+    });
   });
 
   it("matches snapshot", () => {
