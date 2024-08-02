@@ -16,6 +16,7 @@ const meta: Meta<typeof OakUnitListItem> = {
     yearTitle: "Year 10",
     lessonCount: 10,
     isLegacy: false,
+    onClick: () => console.log("onClick!"),
   },
   argTypes: {
     title: { control: { type: "text" } },

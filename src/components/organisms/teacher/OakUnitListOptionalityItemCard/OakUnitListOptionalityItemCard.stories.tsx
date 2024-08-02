@@ -12,8 +12,9 @@ const meta: Meta<typeof OakUnitListOptionalityItemCard> = {
   args: {
     title:
       "Migration: What do sources tell us about the British Empire in India and Africa?",
-    href: "#",
+    href: "/",
     lessonCount: 10,
+    onClick: () => console.log("onClick!"),
   },
   argTypes: {
     title: { control: { type: "text" } },

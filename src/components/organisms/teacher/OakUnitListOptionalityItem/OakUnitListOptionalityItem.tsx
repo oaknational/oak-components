@@ -109,6 +109,7 @@ export type OakUnitListOptionalityItemProps = {
     title: string;
     href: string;
     lessonCount: number;
+    onClick?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
     firstItemRef?:
       | MutableRefObject<HTMLAnchorElement | null>
       | null
@@ -136,7 +137,6 @@ export const OakUnitListOptionalityItem = (
     <OakFlex
       $flexDirection={["column", "row", "row"]}
       $width={"100%"}
-      as={"li"}
       {...rest}
     >
       <OakFlex $display={["flex", "none"]} $background={"white"}>

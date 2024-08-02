@@ -28,6 +28,7 @@ export const OakLI = styled.li<OakLIProps>`
   ${typographyStyle}
   ${listStyle}
   ${displayStyle}
+  // FIXME - Flex props will only work when display is set to flex, can we conditionally apply this + props above ? 
   ${flexStyle}
 `;
 
