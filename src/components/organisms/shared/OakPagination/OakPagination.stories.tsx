@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { StoryObj, Meta } from "@storybook/react";
 
-import { OakPagination } from "./OakPagination";
+import { OakPagination, OakPaginationProps } from "./OakPagination";
 
 const meta: Meta<typeof OakPagination> = {
   title: "Components/organisms/shared/OakPagination",
@@ -23,26 +23,30 @@ export default meta;
 
 type Story = StoryObj<typeof OakPagination>;
 
+const PaginationComponent = (args: OakPaginationProps) => {
+  const [currentPage, setCurrentPage] = useState(args.initialPage);
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+  };
+
+  return (
+    <OakPagination
+      {...args}
+      initialPage={currentPage}
+      onPageChange={handlePageChange}
+    />
+  );
+};
+
 export const Default: Story = {
-  render: (args) => {
-    const [currentPage, setCurrentPage] = useState(args.initialPage);
-
-    const handlePageChange = (page: number) => {
-      setCurrentPage(page);
-    };
-
-    return (
-      <OakPagination
-        {...args}
-        initialPage={currentPage}
-        onPageChange={handlePageChange}
-      />
-    );
-  },
-  args: {
-    totalPages: 7,
-    initialPage: 1,
-    paginationHref: "/#",
-    pageName: "test",
-  },
+  render: (args) => (
+    <PaginationComponent
+      initialPage={1}
+      totalPages={args.totalPages}
+      paginationHref="#"
+      pageName={args.pageName}
+      onPageChange={() => {}}
+    />
+  ),
 };
