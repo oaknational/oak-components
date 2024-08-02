@@ -1,6 +1,7 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
+import { fireEvent } from "@testing-library/react";
 
 import { OakPagination } from "./OakPagination";
 import { generatePageNumbers } from "./utils";
@@ -8,7 +9,6 @@ import { generatePageNumbers } from "./utils";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { OakThemeProvider } from "@/components/atoms";
 import { oakDefaultTheme } from "@/styles";
-import { fireEvent } from "@testing-library/react";
 
 describe("OakPagination Component", () => {
   beforeEach(() => {
