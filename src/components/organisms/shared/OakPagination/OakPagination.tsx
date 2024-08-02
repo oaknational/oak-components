@@ -1,6 +1,5 @@
-import React, { RefObject, useEffect, useState } from "react";
+import React, { RefObject, useState } from "react";
 import styled, { css } from "styled-components";
-import { NextRouter } from "next/router";
 
 import { generatePageNumbers } from "./utils";
 
@@ -11,15 +10,14 @@ import { OakLink } from "@/components/molecules";
 import { typographyStyle } from "@/styles/utils/typographyStyle";
 
 export type OakPaginationProps = {
-  currentPage: number;
+  initialPage: number;
   totalPages: number;
   firstItemRef?: RefObject<HTMLAnchorElement> | null;
   nextHref?: string;
   prevHref?: string;
   paginationHref: string;
   pageName: string;
-  router: NextRouter;
-  shouldAppendQuery?: boolean;
+  onPageChange: (page: number) => void;
 };
 
 type OakPageNumberProps = {
@@ -134,24 +132,15 @@ const OakEllipsis = () => {
 };
 
 export const OakPagination = ({
-  currentPage,
+  initialPage,
   totalPages,
   nextHref,
   prevHref,
   paginationHref,
   pageName,
-  firstItemRef,
-  router,
-  shouldAppendQuery,
+  onPageChange,
 }: OakPaginationProps) => {
-  useEffect(() => {
-    if (router.query.page && firstItemRef?.current) {
-      firstItemRef.current.focus();
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  }, [firstItemRef, router.query.page]);
-
-  const [activePage, setActivePage] = useState(currentPage);
+  const [activePage, setActivePage] = useState(initialPage);
 
   const pages = generatePageNumbers(activePage, totalPages);
 
@@ -161,14 +150,7 @@ export const OakPagination = ({
   const handleNumberClick = (num: number, event: React.MouseEvent) => {
     event.preventDefault();
     setActivePage(num);
-
-    shouldAppendQuery
-      ? router.push(`${paginationHref}&page=${num}`, undefined, {
-          shallow: true,
-        })
-      : router.push(`${paginationHref}?page=${num}`, undefined, {
-          shallow: true,
-        });
+    onPageChange(num);
   };
 
   const handleChevronClick = (
@@ -179,17 +161,11 @@ export const OakPagination = ({
   ) => {
     event.preventDefault();
     const newPage = activePage + (direction === "backwards" ? -1 : 1);
-    shouldAppendQuery
-      ? router.push(`${paginationHref}&page=${newPage}`, undefined, {
-          shallow: true,
-        })
-      : router.push(`${paginationHref}?page=${newPage}`, undefined, {
-          shallow: true,
-        });
+    onPageChange(newPage);
     setActivePage(newPage);
   };
 
-  if (currentPage === 1 && totalPages < 2) {
+  if (initialPage === 1 && totalPages < 2) {
     return null;
   }
   return (
@@ -304,13 +280,12 @@ export const OakPagination = ({
  * Pagination component for navigating through pages
  *
  * @param router - Next.js router object
- * @param currentPage - Current page number
+ * @param initialPage - Current page number
  * @param totalPages - Total number of pages
  * @param nextHref - URL for the next page
  * @param prevHref - URL for the previous page
  * @param paginationHref - Base URL for the pagination
  * @param pageName - Name of the page
- * @param firstItemRef - Ref object for the first item in the list
- * @param shouldAppendQuery - Should the query be appended to the URL i.e. /teachers/search?term=maths&page=2
+ * @param onPageChange - Callback function for iterating through pages
  *
  */
