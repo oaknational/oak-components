@@ -23,7 +23,7 @@ const DisplayText = ({
       <OakFlex
         $color={"text-primary"}
         $minHeight={height}
-        $alignItems={"center"}
+        $alignItems={"start"}
         $flexDirection={["column", "row"]}
       >
         <OakSpan $font={"body-2-bold"}>{boldPrefixText}</OakSpan>
@@ -35,7 +35,7 @@ const DisplayText = ({
     );
   } else if (standardText) {
     return (
-      <OakFlex $alignItems={"center"} $height={height}>
+      <OakFlex $minHeight={height}>
         <OakSpan $color={"text-primary"} $font={"body-2"}>
           {standardText}
         </OakSpan>
