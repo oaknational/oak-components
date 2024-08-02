@@ -451,7 +451,7 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
   }
 }
 
-<li
+<div
     className="c0 c1"
   >
     <div
@@ -553,7 +553,7 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
         role="list"
       />
     </div>
-  </li>,
+  </div>,
   ",",
 ]
 `;

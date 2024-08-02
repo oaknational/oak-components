@@ -1,13 +1,7 @@
 import React, { MutableRefObject } from "react";
 import styled, { css } from "styled-components";
 
-import {
-  OakFlex,
-  OakSpan,
-  OakHeading,
-  OakLI,
-  OakIcon,
-} from "@/components/atoms";
+import { OakFlex, OakSpan, OakHeading, OakIcon } from "@/components/atoms";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 
@@ -80,7 +74,7 @@ export const OakUnitListOptionalityItemCard = (
     props;
 
   return (
-    <OakLI $display={"flex"} $listStyle={"none"} $flexGrow={1}>
+    <OakFlex $display={"flex"} $flexGrow={1}>
       <StyledOptionalityListItem
         $pa={"inner-padding-m"}
         $background={"bg-decorative3-very-subdued"}
@@ -122,6 +116,6 @@ export const OakUnitListOptionalityItemCard = (
           </OakFlex>
         </OakFlex>
       </StyledOptionalityListItem>
-    </OakLI>
+    </OakFlex>
   );
 };

@@ -18,27 +18,26 @@ const meta: Meta<typeof OakUnitListOptionalityItem> = {
       {
         title:
           "Migration: What do sources tell us about the British Empire in India and Africa?",
-
         href: "#",
         lessonCount: 10,
+        onClick: () => console.log("onClick!"),
       },
       {
         title: "Migration: What do sources tell us about the ",
-
         href: "#",
         lessonCount: 10,
+        onClick: () => console.log("onClick!"),
       },
       {
         title: "Migration: What do sources tell us ?",
-
+        onClick: () => console.log("onClick!"),
         href: "#",
-
         lessonCount: 10,
       },
       {
         title:
           "Migration: What do sources tell us about the British Empire in India and Africa?",
-
+        onClick: () => console.log("onClick!"),
         href: "#",
         lessonCount: 10,
       },
