@@ -178,7 +178,7 @@ export const OakPagination = ({
       | React.KeyboardEvent<HTMLButtonElement | HTMLAnchorElement>,
   ) => {
     event.preventDefault();
-    const newPage = currentPage + (direction === "backwards" ? -1 : 1);
+    const newPage = activePage + (direction === "backwards" ? -1 : 1);
     shouldAppendQuery
       ? router.push(`${paginationHref}&page=${newPage}`, undefined, {
           shallow: true,

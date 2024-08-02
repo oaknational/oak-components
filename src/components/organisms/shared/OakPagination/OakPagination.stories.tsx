@@ -43,15 +43,6 @@ const meta: Meta<typeof OakPagination> = {
     pageName: { type: "string" },
   },
   parameters: {
-    nextjs: {
-      router: {
-        asPath: "/",
-        pathname: "/",
-        query: {
-          page: 1,
-        },
-      },
-    },
     controls: {
       include: ["totalPages", "paginationHref", "pageName", "type"],
     },
@@ -70,5 +61,6 @@ export const Default: Story = {
     paginationHref: "/#",
     pageName: "test",
     router: mockRouter,
+    shouldAppendQuery: true,
   },
 };
