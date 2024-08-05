@@ -1,6 +1,12 @@
 import React from "react";
 
-import { OakFlex, OakIcon, OakImage, OakSpan } from "@/components/atoms";
+import {
+  OakBox,
+  OakFlex,
+  OakIcon,
+  OakImage,
+  OakSpan,
+} from "@/components/atoms";
 import { OakAllSpacingToken } from "@/styles";
 
 export type InternalQuizResultItemProps = {
@@ -24,18 +30,19 @@ const DisplayText = ({
         $color={"text-primary"}
         $minHeight={height}
         $alignItems={"center"}
-        $flexDirection={["column", "row"]}
       >
-        <OakSpan $font={"body-2-bold"}>{boldPrefixText}</OakSpan>
-        <OakSpan $font={"body-2"}>
-          {"\u00A0"}-{"\u00A0"}
-          {standardText}
-        </OakSpan>
+        <OakBox>
+          <OakSpan $font={"body-2-bold"}>{boldPrefixText}</OakSpan>
+          <OakSpan $font={"body-2"}>
+            {"\u00A0"}-{"\u00A0"}
+            {standardText}
+          </OakSpan>
+        </OakBox>
       </OakFlex>
     );
   } else if (standardText) {
     return (
-      <OakFlex $alignItems={"center"} $height={height}>
+      <OakFlex $minHeight={height} $alignItems={"center"}>
         <OakSpan $color={"text-primary"} $font={"body-2"}>
           {standardText}
         </OakSpan>

@@ -16,7 +16,7 @@ exports[`OakQuizResultItem matches snapshot 1`] = `
 }
 
 .c4 {
-  height: 2rem;
+  min-height: 2rem;
   font-family: Lexend,sans-serif;
 }
 
