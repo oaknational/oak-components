@@ -1,6 +1,7 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
+import { fireEvent } from "@testing-library/react";
 
 import { OakPagination } from "./OakPagination";
 import { generatePageNumbers } from "./utils";
@@ -10,14 +11,19 @@ import { OakThemeProvider } from "@/components/atoms";
 import { oakDefaultTheme } from "@/styles";
 
 describe("OakPagination Component", () => {
+  beforeEach(() => {
+    jest.resetAllMocks();
+  });
+
   it("renders", () => {
     const { getByTestId } = renderWithTheme(
       <OakThemeProvider theme={oakDefaultTheme}>
         <OakPagination
           paginationHref={""}
           pageName={"test"}
-          currentPage={1}
+          initialPage={1}
           totalPages={8}
+          onPageChange={() => {}}
         />
         ,
       </OakThemeProvider>,
@@ -25,13 +31,30 @@ describe("OakPagination Component", () => {
     expect(getByTestId("pagination")).toBeInTheDocument();
   });
 
+  it("should not render when no additional pages", () => {
+    const { queryByTestId, container } = renderWithTheme(
+      <OakThemeProvider theme={oakDefaultTheme}>
+        <OakPagination
+          paginationHref={""}
+          pageName={"test"}
+          initialPage={1}
+          totalPages={1}
+          onPageChange={() => {}}
+        />
+      </OakThemeProvider>,
+    );
+    expect(queryByTestId("pagination")).not.toBeInTheDocument();
+    expect(container.firstChild).toBeNull();
+  });
+
   it("renders the correct number of pages", () => {
     const { getAllByTestId } = renderWithTheme(
       <OakThemeProvider theme={oakDefaultTheme}>
         <OakPagination
           paginationHref={""}
+          onPageChange={() => {}}
           pageName={"test"}
-          currentPage={1}
+          initialPage={1}
           totalPages={7}
         />
       </OakThemeProvider>,
@@ -46,7 +69,8 @@ describe("OakPagination Component", () => {
         <OakPagination
           paginationHref={""}
           pageName={"test"}
-          currentPage={1}
+          initialPage={1}
+          onPageChange={() => {}}
           totalPages={7}
         />
       </OakThemeProvider>,
@@ -60,7 +84,8 @@ describe("OakPagination Component", () => {
         <OakPagination
           paginationHref={""}
           pageName={"test"}
-          currentPage={7}
+          initialPage={7}
+          onPageChange={() => {}}
           totalPages={7}
         />
       </OakThemeProvider>,
@@ -71,14 +96,61 @@ describe("OakPagination Component", () => {
     expect(forwardsButton).toBeDisabled();
   });
 
+  it("changes the page back and forward buttons are clicked", () => {
+    const onPageChangeMock = jest.fn();
+    const initialPage = 2;
+
+    const { getByTestId } = renderWithTheme(
+      <OakPagination
+        totalPages={5}
+        initialPage={initialPage}
+        onPageChange={onPageChangeMock}
+        paginationHref="/#"
+        pageName="test"
+      />,
+    );
+
+    const backwardsButton = getByTestId("backwards-button");
+    const forwardsButton = getByTestId("forwards-button");
+
+    fireEvent.click(backwardsButton);
+    expect(onPageChangeMock).toHaveBeenCalledWith(initialPage - 1);
+
+    fireEvent.click(forwardsButton);
+    expect(onPageChangeMock).toHaveBeenCalledWith(initialPage);
+  });
+
+  it("changes the page when page number is clicked", () => {
+    const onPageChangeMock = jest.fn();
+    const initialPage = 2;
+
+    const { getAllByTestId } = renderWithTheme(
+      <OakPagination
+        totalPages={5}
+        initialPage={initialPage}
+        onPageChange={onPageChangeMock}
+        paginationHref="/#"
+        pageName="test"
+      />,
+    );
+
+    const numberButtons = getAllByTestId("page-number-component");
+    expect(numberButtons).toHaveLength(5);
+    numberButtons.forEach((button, i) => {
+      fireEvent.click(button);
+      expect(onPageChangeMock).toHaveBeenCalledWith(i + 1);
+    });
+  });
+
   it("matches snapshot", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
         <OakPagination
           paginationHref={""}
           pageName={"test"}
-          currentPage={1}
+          initialPage={1}
           totalPages={7}
+          onPageChange={() => {}}
         />
       </OakThemeProvider>,
     ).toJSON();

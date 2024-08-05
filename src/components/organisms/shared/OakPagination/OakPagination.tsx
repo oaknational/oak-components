@@ -10,13 +10,14 @@ import { OakLink } from "@/components/molecules";
 import { typographyStyle } from "@/styles/utils/typographyStyle";
 
 export type OakPaginationProps = {
-  currentPage: number;
+  initialPage: number;
   totalPages: number;
   firstItemRef?: RefObject<HTMLAnchorElement> | null;
   nextHref?: string;
   prevHref?: string;
   paginationHref: string;
   pageName: string;
+  onPageChange: (page: number) => void;
 };
 
 type OakPageNumberProps = {
@@ -131,29 +132,38 @@ const OakEllipsis = () => {
 };
 
 export const OakPagination = ({
-  currentPage,
+  initialPage,
   totalPages,
   nextHref,
   prevHref,
   paginationHref,
   pageName,
+  onPageChange,
 }: OakPaginationProps) => {
-  const [activePage, setActivePage] = useState(currentPage);
+  const [activePage, setActivePage] = useState(initialPage);
 
   const pages = generatePageNumbers(activePage, totalPages);
 
   const isFirstPage = activePage <= 1;
   const isLastPage = activePage >= totalPages;
 
-  const handleNumberClick = (num: number) => {
+  const handleNumberClick = (num: number, event: React.MouseEvent) => {
+    event.preventDefault();
     setActivePage(num);
+    onPageChange(num);
   };
 
-  const handleChevronClick = (direction: "backwards" | "forwards") => {
-    setActivePage((currNum) => currNum + (direction === "backwards" ? -1 : 1));
+  const handleChevronClick = (
+    direction: "backwards" | "forwards",
+    event: React.UIEvent,
+  ) => {
+    event.preventDefault();
+    const newPage = activePage + (direction === "backwards" ? -1 : 1);
+    onPageChange(newPage);
+    setActivePage(newPage);
   };
 
-  if (currentPage === 1 && totalPages < 2) {
+  if (initialPage === 1 && totalPages < 2) {
     return null;
   }
   return (
@@ -167,19 +177,22 @@ export const OakPagination = ({
         <StyledChevronButton
           element={isFirstPage ? "button" : "a"}
           rel="prev"
+          href={prevHref}
           data-testid="backwards-button"
-          onClick={() => {
-            handleChevronClick("backwards");
+          onClick={(
+            e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>,
+          ) => {
+            e.preventDefault();
+            handleChevronClick("backwards", e);
           }}
           onKeyDown={(
             e: React.KeyboardEvent<HTMLButtonElement | HTMLAnchorElement>,
           ) => {
             if (e.key === "Enter") {
-              handleChevronClick("backwards");
+              handleChevronClick("backwards", e);
             }
           }}
           tabIndex={isFirstPage ? -1 : 0}
-          href={prevHref}
           aria-disabled={isFirstPage}
           disabled={isFirstPage}
           aria-label={isFirstPage ? "No previous pages" : "Go to previous page"}
@@ -204,7 +217,9 @@ export const OakPagination = ({
                     pageNumber={page + 1}
                     currentPage={activePage}
                     href={`${paginationHref}?page=${page + 1}`}
-                    onClick={() => handleNumberClick(page + 1)}
+                    onClick={(e: React.MouseEvent) =>
+                      handleNumberClick(page + 1, e)
+                    }
                   />
                 </OakLI>
               );
@@ -232,14 +247,16 @@ export const OakPagination = ({
           tabIndex={isLastPage ? -1 : 0}
           data-testid="forwards-button"
           href={nextHref}
-          onClick={() => {
-            handleChevronClick("forwards");
+          onClick={(
+            e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>,
+          ) => {
+            handleChevronClick("forwards", e);
           }}
           onKeyDown={(
             e: React.KeyboardEvent<HTMLButtonElement | HTMLAnchorElement>,
           ) => {
             if (e.key === "Enter") {
-              handleChevronClick("forwards");
+              handleChevronClick("forwards", e);
             }
           }}
           aria-disabled={isLastPage}
@@ -259,5 +276,14 @@ export const OakPagination = ({
  * The following callbacks are available for tracking focus events:
  *
  * Pagination component for navigating through pages
+ *
+ * @param router - Next.js router object
+ * @param initialPage - Current page number
+ * @param totalPages - Total number of pages
+ * @param nextHref - URL for the next page
+ * @param prevHref - URL for the previous page
+ * @param paginationHref - Base URL for the pagination
+ * @param pageName - Name of the page
+ * @param onPageChange - Callback function for iterating through pages
  *
  */
