@@ -155,9 +155,7 @@ export const OakPagination = ({
 
   const handleChevronClick = (
     direction: "backwards" | "forwards",
-    event:
-      | React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
-      | React.KeyboardEvent<HTMLButtonElement | HTMLAnchorElement>,
+    event: React.UIEvent,
   ) => {
     event.preventDefault();
     const newPage = activePage + (direction === "backwards" ? -1 : 1);
