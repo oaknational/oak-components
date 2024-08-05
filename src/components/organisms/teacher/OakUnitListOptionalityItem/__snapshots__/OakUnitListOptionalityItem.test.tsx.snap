@@ -232,6 +232,13 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
 .c19 {
   color: #222222;
   font-family: Lexend,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
 }
 
 .c21 {
@@ -336,12 +343,6 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-  }
-}
-
-@media (min-width:750px) {
-  .c20 {
-    margin-left: 1rem;
   }
 }
 
