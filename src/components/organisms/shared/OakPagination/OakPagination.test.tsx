@@ -96,7 +96,7 @@ describe("OakPagination Component", () => {
     expect(forwardsButton).toBeDisabled();
   });
 
-  it("handleChevronClick function", () => {
+  it("changes the page back and forward buttons are clicked", () => {
     const onPageChangeMock = jest.fn();
     const initialPage = 2;
 
@@ -120,7 +120,7 @@ describe("OakPagination Component", () => {
     expect(onPageChangeMock).toHaveBeenCalledWith(initialPage);
   });
 
-  it("handleNumberClick function", () => {
+  it("changes the page when page number is clicked", () => {
     const onPageChangeMock = jest.fn();
     const initialPage = 2;
 
@@ -135,7 +135,7 @@ describe("OakPagination Component", () => {
     );
 
     const numberButtons = getAllByTestId("page-number-component");
-
+    expect(numberButtons).toHaveLength(5);
     numberButtons.forEach((button, i) => {
       fireEvent.click(button);
       expect(onPageChangeMock).toHaveBeenCalledWith(i + 1);
