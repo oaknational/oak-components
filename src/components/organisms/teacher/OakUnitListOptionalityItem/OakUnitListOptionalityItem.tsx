@@ -12,7 +12,7 @@ import {
 } from "@/components/atoms";
 import { FlexStyleProps } from "@/styles/utils/flexStyle";
 
-const StyledYearAndOptionCount = ({
+const UnitYearAndOptionCount = ({
   yearTitle,
   optionalityUnitsLength,
   unavailable,
@@ -25,6 +25,7 @@ const StyledYearAndOptionCount = ({
     <OakSpan
       $color={unavailable ? "text-disabled" : "text-primary"}
       $mr={[null, "space-between-xxxl"]}
+      $font={"heading-light-7"}
     >
       {yearTitle}
     </OakSpan>
@@ -41,7 +42,6 @@ const StyledYearAndOptionCount = ({
         unavailable ? "bg-neutral-stronger" : "bg-decorative4-very-subdued"
       }
       $borderRadius={"border-radius-s"}
-      $ml={[null, "space-between-s"]}
     >
       <OakLabel
         $font={"heading-light-7"}
@@ -51,7 +51,7 @@ const StyledYearAndOptionCount = ({
   </>
 );
 
-const StyledIndex = ({
+const UnitIndex = ({
   children,
   unavailable,
   ...rest
@@ -140,7 +140,7 @@ export const OakUnitListOptionalityItem = (
       {...rest}
     >
       <OakFlex $display={["flex", "none"]} $background={"white"}>
-        <StyledIndex unavailable={unavailable}>{index}</StyledIndex>
+        <UnitIndex unavailable={unavailable}>{index}</UnitIndex>
 
         <OakFlex $alignItems={"center"} $ma={"space-between-xs"}>
           <StyledUnitHeading unavailable={unavailable}>
@@ -148,12 +148,9 @@ export const OakUnitListOptionalityItem = (
           </StyledUnitHeading>
         </OakFlex>
       </OakFlex>
-      <StyledIndex
-        unavailable={unavailable}
-        $display={["none", "flex", "flex"]}
-      >
+      <UnitIndex unavailable={unavailable} $display={["none", "flex", "flex"]}>
         {index}
-      </StyledIndex>
+      </UnitIndex>
 
       <OakBox
         $background={"white"}
@@ -174,7 +171,7 @@ export const OakUnitListOptionalityItem = (
               {nullTitle}
             </StyledUnitHeading>
             <OakFlex $alignItems={"center"}>
-              <StyledYearAndOptionCount
+              <UnitYearAndOptionCount
                 yearTitle={props.yearTitle}
                 optionalityUnitsLength={optionalityUnits.length}
                 unavailable={unavailable}
@@ -193,7 +190,7 @@ export const OakUnitListOptionalityItem = (
           $justifyContent={"space-between"}
           $alignItems={"center"}
         >
-          <StyledYearAndOptionCount
+          <UnitYearAndOptionCount
             yearTitle={props.yearTitle}
             optionalityUnitsLength={optionalityUnits.length}
             unavailable={unavailable}
