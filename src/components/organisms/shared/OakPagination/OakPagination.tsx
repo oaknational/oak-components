@@ -1,4 +1,4 @@
-import React, { RefObject, useState } from "react";
+import React, { RefObject } from "react";
 import styled, { css } from "styled-components";
 
 import { generatePageNumbers } from "./utils";
@@ -10,7 +10,7 @@ import { OakLink } from "@/components/molecules";
 import { typographyStyle } from "@/styles/utils/typographyStyle";
 
 export type OakPaginationProps = {
-  initialPage: number;
+  currentPage: number;
   totalPages: number;
   firstItemRef?: RefObject<HTMLAnchorElement> | null;
   nextHref?: string;
@@ -132,24 +132,21 @@ const OakEllipsis = () => {
 };
 
 export const OakPagination = ({
-  initialPage,
   totalPages,
   nextHref,
   prevHref,
   paginationHref,
   pageName,
   onPageChange,
+  currentPage,
 }: OakPaginationProps) => {
-  const [activePage, setActivePage] = useState(initialPage);
+  const pages = generatePageNumbers(currentPage, totalPages);
 
-  const pages = generatePageNumbers(activePage, totalPages);
-
-  const isFirstPage = activePage <= 1;
-  const isLastPage = activePage >= totalPages;
+  const isFirstPage = currentPage <= 1;
+  const isLastPage = currentPage >= totalPages;
 
   const handleNumberClick = (num: number, event: React.MouseEvent) => {
     event.preventDefault();
-    setActivePage(num);
     onPageChange(num);
   };
 
@@ -158,12 +155,11 @@ export const OakPagination = ({
     event: React.UIEvent,
   ) => {
     event.preventDefault();
-    const newPage = activePage + (direction === "backwards" ? -1 : 1);
+    const newPage = currentPage + (direction === "backwards" ? -1 : 1);
     onPageChange(newPage);
-    setActivePage(newPage);
   };
 
-  if (initialPage === 1 && totalPages < 2) {
+  if (currentPage === 1 && totalPages < 2) {
     return null;
   }
   return (
@@ -215,7 +211,7 @@ export const OakPagination = ({
                     pageName={pageName}
                     key={page}
                     pageNumber={page + 1}
-                    currentPage={activePage}
+                    currentPage={currentPage}
                     href={`${paginationHref}?page=${page + 1}`}
                     onClick={(e: React.MouseEvent) =>
                       handleNumberClick(page + 1, e)
@@ -278,7 +274,7 @@ export const OakPagination = ({
  * Pagination component for navigating through pages
  *
  * @param router - Next.js router object
- * @param initialPage - Current page number
+ * @param currentPage - Current page number
  * @param totalPages - Total number of pages
  * @param nextHref - URL for the next page
  * @param prevHref - URL for the previous page
