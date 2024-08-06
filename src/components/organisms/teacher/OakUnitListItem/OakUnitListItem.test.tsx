@@ -106,4 +106,58 @@ describe("OakUnitListItem", () => {
     expect(unitCard).toHaveStyleRule("cursor", "not-allowed");
     expect(unitCard).toHaveStyleRule("background", "#f2f2f2");
   });
+  it("applies shows expired lesson counts correctly - 1/4 lessons", () => {
+    const { getByText } = renderWithTheme(
+      <OakUnitListItem
+        data-testid="unit-card"
+        index={0}
+        title={""}
+        yearTitle={""}
+        lessonCount={4}
+        expiredLessonCount={3}
+        isLegacy={false}
+        href={""}
+        unavailable
+      />,
+    );
+
+    const lessonCount = getByText("1/4 lessons");
+    expect(lessonCount).toBeInTheDocument();
+  });
+  it("applies shows expired lesson counts correctly - 0/1 lesson", () => {
+    const { getByText } = renderWithTheme(
+      <OakUnitListItem
+        data-testid="unit-card"
+        index={0}
+        title={""}
+        yearTitle={""}
+        lessonCount={1}
+        expiredLessonCount={1}
+        isLegacy={false}
+        href={""}
+        unavailable
+      />,
+    );
+
+    const lessonCount = getByText("0/1 lesson");
+    expect(lessonCount).toBeInTheDocument();
+  });
+  it("applies shows expired lesson counts correctly - 1 lesson", () => {
+    const { getByText } = renderWithTheme(
+      <OakUnitListItem
+        data-testid="unit-card"
+        index={0}
+        title={""}
+        yearTitle={""}
+        lessonCount={1}
+        expiredLessonCount={null}
+        isLegacy={false}
+        href={""}
+        unavailable
+      />,
+    );
+
+    const lessonCount = getByText("1 lesson");
+    expect(lessonCount).toBeInTheDocument();
+  });
 });

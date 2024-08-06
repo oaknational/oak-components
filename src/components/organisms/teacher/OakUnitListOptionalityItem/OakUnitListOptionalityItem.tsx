@@ -137,6 +137,7 @@ export const OakUnitListOptionalityItem = (
     <OakFlex
       $flexDirection={["column", "row", "row"]}
       $width={"100%"}
+      as={"li"}
       {...rest}
     >
       <OakFlex $display={["flex", "none"]} $background={"white"}>
