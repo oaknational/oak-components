@@ -153,8 +153,8 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
 .c4 {
   font-family: Lexend,sans-serif;
   font-weight: 600;
-  font-size: 3rem;
-  line-height: 3.5rem;
+  font-size: 2rem;
+  line-height: 2.5rem;
   -webkit-letter-spacing: 0.0115rem;
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
@@ -364,11 +364,11 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
     <div
       className="c0 c3"
     >
-      <h4
+      <h2
         className="c4"
       >
         Maths units
-      </h4>
+      </h2>
       <div
         className="c5 c6 c7"
       >

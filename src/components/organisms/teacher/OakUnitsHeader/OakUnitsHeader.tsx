@@ -56,7 +56,7 @@ const UnstyledComponent = (props: OakUnitsHeaderProps) => {
     >
       <OakFlex $gap="space-between-ssx" $flexDirection="column">
         <OakFlex $gap="space-between-ssx">
-          <OakHeading $font="heading-2" tag="h4">
+          <OakHeading $font="heading-4" tag="h2">
             {isLegacy
               ? "Units released in 2020-22"
               : `${sentenceCaseSubject} units`}
