@@ -175,8 +175,8 @@ exports[`OakUnitsContainer matches snapshot 1`] = `
 .c7 {
   font-family: Lexend,sans-serif;
   font-weight: 600;
-  font-size: 2rem;
-  line-height: 2.5rem;
+  font-size: 3rem;
+  line-height: 3.5rem;
   -webkit-letter-spacing: 0.0115rem;
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
