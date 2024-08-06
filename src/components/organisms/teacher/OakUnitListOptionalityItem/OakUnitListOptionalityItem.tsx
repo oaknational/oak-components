@@ -197,7 +197,7 @@ export const OakUnitListOptionalityItem = (
             unavailable={unavailable}
           />
         </OakFlex>
-        <OakGrid $rg={"space-between-xs"} $cg={"space-between-xs"} role="list">
+        <OakGrid $rg={"space-between-xs"} $cg={"space-between-xs"}>
           {optionalityUnits.map((unit, index) => (
             <OakGridArea key={`${unit.title}-${index}`} $colSpan={[12, 6]}>
               <OakUnitListOptionalityItemCard
