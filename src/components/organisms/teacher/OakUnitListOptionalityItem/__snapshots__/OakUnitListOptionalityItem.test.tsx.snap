@@ -551,7 +551,6 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
       </div>
       <div
         className="c17 c25"
-        role="list"
       />
     </div>
   </li>,
