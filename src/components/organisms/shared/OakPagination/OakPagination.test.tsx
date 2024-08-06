@@ -96,7 +96,7 @@ describe("OakPagination Component", () => {
     expect(forwardsButton).toBeDisabled();
   });
 
-  it.only("changes the page back and forward buttons are clicked", () => {
+  it("changes the page back and forward buttons are clicked", () => {
     const onPageChangeMock = jest.fn();
     const currentPage = 2;
 
