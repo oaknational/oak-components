@@ -11,6 +11,7 @@ const meta: Meta<typeof OakPagination> = {
     totalPages: { type: "number" },
     paginationHref: { type: "string" },
     pageName: { type: "string" },
+    currentPage: { type: "number" },
   },
   parameters: {
     controls: {
@@ -24,8 +25,7 @@ export default meta;
 type Story = StoryObj<typeof OakPagination>;
 
 const PaginationComponent = (args: OakPaginationProps) => {
-  const [currentPage, setCurrentPage] = useState(args.initialPage);
-
+  const [currentPage, setCurrentPage] = useState(1);
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
   };
@@ -33,7 +33,7 @@ const PaginationComponent = (args: OakPaginationProps) => {
   return (
     <OakPagination
       {...args}
-      initialPage={currentPage}
+      currentPage={currentPage}
       onPageChange={handlePageChange}
     />
   );
@@ -42,11 +42,11 @@ const PaginationComponent = (args: OakPaginationProps) => {
 export const Default: Story = {
   render: (args) => (
     <PaginationComponent
-      initialPage={1}
-      totalPages={args.totalPages}
+      totalPages={args.totalPages || 7}
       paginationHref="#"
       pageName={args.pageName}
-      onPageChange={() => {}}
+      onPageChange={args.onPageChange}
+      currentPage={args.currentPage}
     />
   ),
 };

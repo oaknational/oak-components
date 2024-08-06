@@ -21,7 +21,7 @@ describe("OakPagination Component", () => {
         <OakPagination
           paginationHref={""}
           pageName={"test"}
-          initialPage={1}
+          currentPage={1}
           totalPages={8}
           onPageChange={() => {}}
         />
@@ -37,7 +37,7 @@ describe("OakPagination Component", () => {
         <OakPagination
           paginationHref={""}
           pageName={"test"}
-          initialPage={1}
+          currentPage={1}
           totalPages={1}
           onPageChange={() => {}}
         />
@@ -54,7 +54,7 @@ describe("OakPagination Component", () => {
           paginationHref={""}
           onPageChange={() => {}}
           pageName={"test"}
-          initialPage={1}
+          currentPage={1}
           totalPages={7}
         />
       </OakThemeProvider>,
@@ -69,7 +69,7 @@ describe("OakPagination Component", () => {
         <OakPagination
           paginationHref={""}
           pageName={"test"}
-          initialPage={1}
+          currentPage={1}
           onPageChange={() => {}}
           totalPages={7}
         />
@@ -84,7 +84,7 @@ describe("OakPagination Component", () => {
         <OakPagination
           paginationHref={""}
           pageName={"test"}
-          initialPage={7}
+          currentPage={7}
           onPageChange={() => {}}
           totalPages={7}
         />
@@ -98,12 +98,12 @@ describe("OakPagination Component", () => {
 
   it("changes the page back and forward buttons are clicked", () => {
     const onPageChangeMock = jest.fn();
-    const initialPage = 2;
+    const currentPage = 2;
 
     const { getByTestId } = renderWithTheme(
       <OakPagination
         totalPages={5}
-        initialPage={initialPage}
+        currentPage={currentPage}
         onPageChange={onPageChangeMock}
         paginationHref="/#"
         pageName="test"
@@ -114,20 +114,20 @@ describe("OakPagination Component", () => {
     const forwardsButton = getByTestId("forwards-button");
 
     fireEvent.click(backwardsButton);
-    expect(onPageChangeMock).toHaveBeenCalledWith(initialPage - 1);
+    expect(onPageChangeMock).toHaveBeenCalledWith(currentPage - 1);
 
     fireEvent.click(forwardsButton);
-    expect(onPageChangeMock).toHaveBeenCalledWith(initialPage);
+    expect(onPageChangeMock).toHaveBeenCalledWith(currentPage);
   });
 
   it("changes the page when page number is clicked", () => {
     const onPageChangeMock = jest.fn();
-    const initialPage = 2;
+    const currentPage = 2;
 
     const { getAllByTestId } = renderWithTheme(
       <OakPagination
         totalPages={5}
-        initialPage={initialPage}
+        currentPage={currentPage}
         onPageChange={onPageChangeMock}
         paginationHref="/#"
         pageName="test"
@@ -148,7 +148,7 @@ describe("OakPagination Component", () => {
         <OakPagination
           paginationHref={""}
           pageName={"test"}
-          initialPage={1}
+          currentPage={1}
           totalPages={7}
           onPageChange={() => {}}
         />
