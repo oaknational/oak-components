@@ -160,4 +160,22 @@ describe("OakUnitListItem", () => {
     const lessonCount = getByText("1 lesson");
     expect(lessonCount).toBeInTheDocument();
   });
+  it("applies shows expired lesson counts correctly - 0 lesson", () => {
+    const { getByText } = renderWithTheme(
+      <OakUnitListItem
+        data-testid="unit-card"
+        index={0}
+        title={""}
+        yearTitle={""}
+        lessonCount={1}
+        expiredLessonCount={2}
+        isLegacy={false}
+        href={""}
+        unavailable
+      />,
+    );
+
+    const lessonCount = getByText("0 lessons");
+    expect(lessonCount).toBeInTheDocument();
+  });
 });

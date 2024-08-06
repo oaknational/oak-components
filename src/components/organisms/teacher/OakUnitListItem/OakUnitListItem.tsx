@@ -115,6 +115,10 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
             lessonCount > 1 ? "lessons" : "lesson"
           }`
         : `${lessonCount} ${lessonCount > 1 ? "lessons" : "lesson"}`;
+
+    if (expiredLessonCount && expiredLessonCount > lessonCount) {
+      unitLessonCount = `0 lessons`;
+    }
   }
 
   return (

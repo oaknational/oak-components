@@ -91,6 +91,17 @@ export const Default: Story = {
         isLegacy={false}
         href={"#"}
       />,
+      <OakUnitListItem
+        index={4}
+        title={
+          "Lesson 4 - English  - a lesson with a longer title, a lesson with a longer title"
+        }
+        yearTitle={"Year 11"}
+        lessonCount={3}
+        expiredLessonCount={2}
+        isLegacy={false}
+        href={"#"}
+      />,
     ],
     subject: "maths",
     phase: "secondary",
