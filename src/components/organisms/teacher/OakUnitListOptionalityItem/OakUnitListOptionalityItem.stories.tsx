@@ -4,6 +4,7 @@ import { StoryObj, Meta } from "@storybook/react";
 import { OakUnitListOptionalityItem } from "./OakUnitListOptionalityItem";
 
 import { OakFlex } from "@/components/atoms";
+import { OakUnitListItem } from "@/components/organisms/teacher/OakUnitListItem";
 
 const meta: Meta<typeof OakUnitListOptionalityItem> = {
   title: "components/organisms/teacher/OakUnitListOptionalityItem",
@@ -59,6 +60,14 @@ const meta: Meta<typeof OakUnitListOptionalityItem> = {
           $pa={"inner-padding-xl"}
           role="list"
         >
+          <OakUnitListItem
+            index={1}
+            title={"Test lesson 1"}
+            lessonCount={8}
+            isLegacy={false}
+            href={"#"}
+            yearTitle={"Year 10"}
+          />
           {Story()}
           <OakUnitListOptionalityItem
             nullTitle={
