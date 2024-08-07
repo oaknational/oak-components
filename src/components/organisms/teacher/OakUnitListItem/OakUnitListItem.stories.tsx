@@ -15,6 +15,7 @@ const meta: Meta<typeof OakUnitListItem> = {
     href: "#",
     yearTitle: "Year 10",
     lessonCount: 10,
+    expiredLessonCount: null,
     isLegacy: false,
     onClick: () => console.log("onClick!"),
   },
@@ -23,6 +24,7 @@ const meta: Meta<typeof OakUnitListItem> = {
     yearTitle: { control: { type: "text" } },
     index: { control: { type: "number" } },
     lessonCount: { control: { type: "number" } },
+    expiredLessonCount: { control: { type: "number" } },
     unavailable: { control: { type: "boolean" } },
     isLegacy: { control: { type: "boolean" } },
   },
@@ -89,13 +91,31 @@ const meta: Meta<typeof OakUnitListItem> = {
             isLegacy={false}
             href={""}
           />
+          <OakUnitListItem
+            title={
+              "'The Three Billy Goats Gruff': reading and writing 'The Three Billy Goats Gruff': reading and writing"
+            }
+            lessonCount={10}
+            expiredLessonCount={2}
+            index={5}
+            yearTitle="Year 9"
+            isLegacy={false}
+            href={""}
+          />
         </OakFlex>
       );
     },
   ],
   parameters: {
     controls: {
-      include: ["title", "index", "lessonCount", "unavailable", "isLegacy"],
+      include: [
+        "title",
+        "index",
+        "lessonCount",
+        "unavailable",
+        "isLegacy",
+        "expiredLessonCount",
+      ],
     },
   },
 };

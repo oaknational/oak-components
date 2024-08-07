@@ -78,6 +78,7 @@ export type OakUnitListItemProps = {
   title: string;
   yearTitle?: string | null;
   lessonCount: number | null;
+  expiredLessonCount?: number | null;
   isLegacy: boolean;
   href: string;
   firstItemRef?: MutableRefObject<HTMLAnchorElement | null> | null | undefined;
@@ -91,6 +92,7 @@ export type OakUnitListItemProps = {
 export const OakUnitListItem = (props: OakUnitListItemProps) => {
   const {
     lessonCount,
+    expiredLessonCount,
     href,
     unavailable,
     onClick,
@@ -99,6 +101,25 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
     firstItemRef,
     ...rest
   } = props;
+
+  let unitLessonCount;
+
+  if (lessonCount) {
+    const expiredLessonsInUnitCount =
+      expiredLessonCount && lessonCount
+        ? lessonCount - expiredLessonCount
+        : null;
+    unitLessonCount =
+      expiredLessonsInUnitCount !== null
+        ? `${expiredLessonsInUnitCount}/${lessonCount} ${
+            lessonCount > 1 ? "lessons" : "lesson"
+          }`
+        : `${lessonCount} ${lessonCount > 1 ? "lessons" : "lesson"}`;
+
+    if (expiredLessonCount && expiredLessonCount > lessonCount) {
+      unitLessonCount = `0 lessons`;
+    }
+  }
 
   return (
     <OakLI $listStyle={"none"} $width={"100%"}>
@@ -166,12 +187,13 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
                 {props.yearTitle}
               </OakP>
             </OakFlex>
+
             <OakFlex $alignItems={"center"}>
               <OakSpan
                 $font={"heading-light-7"}
                 $color={unavailable ? "text-disabled" : "text-primary"}
               >
-                {lessonCount} lessons
+                {unitLessonCount}
               </OakSpan>
               <OakIcon
                 $colorFilter={unavailable ? "text-disabled" : "text-primary"}
