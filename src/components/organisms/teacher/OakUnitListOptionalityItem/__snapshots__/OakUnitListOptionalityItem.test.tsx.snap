@@ -64,7 +64,12 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c20 {
+.c19 {
+  width: 100%;
+  font-family: Lexend,sans-serif;
+}
+
+.c23 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.25rem;
@@ -77,18 +82,19 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
   font-family: Lexend,sans-serif;
 }
 
-.c22 {
-  margin-bottom: 1rem;
-  display: none;
-  font-family: Lexend,sans-serif;
-}
-
-.c23 {
-  margin-bottom: 1rem;
+.c25 {
+  width: 100%;
+  margin-bottom: 1.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  font-family: Lexend,sans-serif;
+}
+
+.c27 {
+  margin-right: 1.5rem;
+  display: none;
   font-family: Lexend,sans-serif;
 }
 
@@ -181,7 +187,7 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c24 {
+.c20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -196,7 +202,22 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
   justify-content: space-between;
 }
 
-.c25 {
+.c26 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c28 {
   display: grid;
   grid-template-columns: repeat(12,1fr);
   width: 100%;
@@ -229,7 +250,7 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c19 {
+.c22 {
   color: #222222;
   font-family: Lexend,sans-serif;
   font-weight: 400;
@@ -241,7 +262,7 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c21 {
+.c24 {
   font-family: Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -333,12 +354,6 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
 
 @media (min-width:750px) {
   .c15 {
-    display: none;
-  }
-}
-
-@media (min-width:1280px) {
-  .c15 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -347,32 +362,32 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c22 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+  .c19 {
+    width: 15rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c25 {
+    display: none;
   }
 }
 
 @media (min-width:1280px) {
-  .c22 {
+  .c25 {
     display: none;
   }
 }
 
 @media (min-width:750px) {
-  .c23 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+  .c27 {
+    display: auto;
   }
 }
 
 @media (min-width:1280px) {
-  .c23 {
-    display: none;
+  .c27 {
+    display: auto;
   }
 }
 
@@ -418,12 +433,6 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
 
 @media (min-width:750px) {
   .c16 {
-    display: none;
-  }
-}
-
-@media (min-width:1280px) {
-  .c16 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -432,23 +441,20 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c24 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-@media (min-width:1280px) {
-  .c24 {
+  .c26 {
     display: none;
   }
 }
 
-@media (min-width:750px) {
-  .c19 {
-    margin-right: 5rem;
+@media (min-width:1280px) {
+  .c26 {
+    display: none;
+  }
+}
+
+@media (min-width:356px) {
+  .c21 {
+    min-width: 260px;
   }
 }
 
@@ -507,50 +513,58 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
           <div
             className="c17 c8"
           >
-            <span
-              className="c19"
-            />
             <div
-              className="c20"
+              className="c19 c20 c21"
             >
-              <label
-                className="c21"
+              <span
+                className="c22"
+              />
+              <div
+                className="c23"
               >
-                0 unit options
-              </label>
+                <label
+                  className="c24"
+                >
+                  0 unit options
+                </label>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div
-        className="c22"
+        className="c25 c26"
       >
         <div
-          className="c9 c10"
+          className="c27"
         >
-          <h3
-            className="c11"
-          />
-        </div>
-      </div>
-      <div
-        className="c23 c24"
-      >
-        <span
-          className="c19"
-        />
-        <div
-          className="c20"
-        >
-          <label
-            className="c21"
+          <div
+            className="c9 c10"
           >
-            0 unit options
-          </label>
+            <h3
+              className="c11"
+            />
+          </div>
+        </div>
+        <div
+          className="c19 c20 c21"
+        >
+          <span
+            className="c22"
+          />
+          <div
+            className="c23"
+          >
+            <label
+              className="c24"
+            >
+              0 unit options
+            </label>
+          </div>
         </div>
       </div>
       <div
-        className="c17 c25"
+        className="c17 c28"
         role="list"
       />
     </div>
