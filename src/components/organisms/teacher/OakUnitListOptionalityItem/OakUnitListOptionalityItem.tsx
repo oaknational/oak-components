@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import React, { MutableRefObject } from "react";
 
 import { OakUnitListOptionalityItemCard } from "@/components/organisms/teacher/OakUnitListOptionalityItemCard";
@@ -12,6 +13,12 @@ import {
 } from "@/components/atoms";
 import { FlexStyleProps } from "@/styles/utils/flexStyle";
 
+const StyledYearAndOptionFlex = styled(OakFlex)`
+  @media (min-width: 356px) {
+    min-width: 260px;
+  }
+`;
+
 const UnitYearAndOptionCount = ({
   yearTitle,
   optionalityUnitsLength,
@@ -21,10 +28,14 @@ const UnitYearAndOptionCount = ({
   optionalityUnitsLength: number;
   unavailable: boolean | undefined;
 }) => (
-  <>
+  <StyledYearAndOptionFlex
+    $width={["100%", "all-spacing-19"]}
+    $justifyContent={["space-between"]}
+    $alignItems={"center"}
+  >
     <OakSpan
       $color={unavailable ? "text-disabled" : "text-primary"}
-      $mr={[null, "space-between-xxxl"]}
+      // $mr={[null, "space-between-xxxl"]}
       $font={"heading-light-7"}
     >
       {yearTitle}
@@ -48,7 +59,7 @@ const UnitYearAndOptionCount = ({
         $color={unavailable ? "text-disabled" : "text-primary"}
       >{`${optionalityUnitsLength} unit options`}</OakLabel>
     </OakBox>
-  </>
+  </StyledYearAndOptionFlex>
 );
 
 const UnitIndex = ({
@@ -141,7 +152,6 @@ export const OakUnitListOptionalityItem = (
     >
       <OakFlex $display={["flex", "none"]} $background={"white"}>
         <UnitIndex unavailable={unavailable}>{index}</UnitIndex>
-
         <OakFlex $alignItems={"center"} $ma={"space-between-xs"}>
           <StyledUnitHeading unavailable={unavailable}>
             {nullTitle}
@@ -160,7 +170,7 @@ export const OakUnitListOptionalityItem = (
         <OakFlex
           $alignItems={"center"}
           $mb={"space-between-s"}
-          $display={["none", "none", "flex"]}
+          $display={["none", "flex"]}
         >
           <OakFlex
             $flexGrow={1}
@@ -179,17 +189,19 @@ export const OakUnitListOptionalityItem = (
             </OakFlex>
           </OakFlex>
         </OakFlex>
-        <OakBox $mb={"space-between-s"} $display={["none", "flex", "none"]}>
-          <StyledUnitHeading unavailable={unavailable}>
-            {nullTitle}
-          </StyledUnitHeading>
-        </OakBox>
         <OakFlex
-          $display={["flex", "flex", "none"]}
-          $mb={"space-between-s"}
-          $justifyContent={"space-between"}
           $alignItems={"center"}
+          $justifyContent={"space-between"}
+          $mb={"space-between-m"}
+          $display={["flex", "none", "none"]}
+          $width={"100%"}
         >
+          <OakBox $display={["none", "auto", "auto"]} $mr={"space-between-m"}>
+            <StyledUnitHeading unavailable={unavailable}>
+              {nullTitle}
+            </StyledUnitHeading>
+          </OakBox>
+
           <UnitYearAndOptionCount
             yearTitle={props.yearTitle}
             optionalityUnitsLength={optionalityUnits.length}

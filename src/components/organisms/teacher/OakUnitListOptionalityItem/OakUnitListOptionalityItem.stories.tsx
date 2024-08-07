@@ -4,6 +4,7 @@ import { StoryObj, Meta } from "@storybook/react";
 import { OakUnitListOptionalityItem } from "./OakUnitListOptionalityItem";
 
 import { OakFlex } from "@/components/atoms";
+import { OakUnitListItem } from "@/components/organisms/teacher/OakUnitListItem";
 
 const meta: Meta<typeof OakUnitListOptionalityItem> = {
   title: "components/organisms/teacher/OakUnitListOptionalityItem",
@@ -11,7 +12,7 @@ const meta: Meta<typeof OakUnitListOptionalityItem> = {
   tags: ["autodocs"],
   args: {
     nullTitle: "British Empire in India and Africa",
-    index: 1,
+    index: 2,
     yearTitle: "Year 10",
     firstItemRef: undefined,
     optionalityUnits: [
@@ -59,12 +60,20 @@ const meta: Meta<typeof OakUnitListOptionalityItem> = {
           $pa={"inner-padding-xl"}
           role="list"
         >
+          <OakUnitListItem
+            index={1}
+            title={"Test Lesson"}
+            lessonCount={10}
+            isLegacy={false}
+            yearTitle="Year 10"
+            href="#"
+          />
           {Story()}
           <OakUnitListOptionalityItem
             nullTitle={
               "Numerals 1-10 this is a very long title (unavailable example) "
             }
-            index={2}
+            index={3}
             yearTitle="Year 10"
             unavailable={true}
             optionalityUnits={[
