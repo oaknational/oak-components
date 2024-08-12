@@ -3,8 +3,8 @@
 exports[`Component OakLI matches snapshot 1`] = `
 .c0 {
   display: revert;
-  font-family: Lexend,sans-serif;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
   display: revert;
   display: revert;
 }

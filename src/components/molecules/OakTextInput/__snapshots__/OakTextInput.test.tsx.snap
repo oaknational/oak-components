@@ -61,7 +61,7 @@ exports[`OakTextInput matches snapshot 1`] = `
   border: 0.125rem solid;
   border-color: #222222;
   border-radius: 0.25rem;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c0:hover {
@@ -69,7 +69,7 @@ exports[`OakTextInput matches snapshot 1`] = `
 }
 
 .c3 {
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c1 {

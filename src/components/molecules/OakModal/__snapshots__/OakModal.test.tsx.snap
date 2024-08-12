@@ -8,7 +8,7 @@ exports[`OakModal matches snapshot when mounted 1`] = `
   opacity: 0.25;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
   z-index: 300;
 }
 
@@ -22,20 +22,20 @@ exports[`OakModal matches snapshot when mounted 1`] = `
   background: #ffffff;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
   z-index: 300;
 }
 
 .c5 {
   margin: 1rem;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c7 {
   position: relative;
   width: 2rem;
   height: 2.5rem;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c9 {
@@ -43,11 +43,11 @@ exports[`OakModal matches snapshot when mounted 1`] = `
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c14 {
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c16 {
@@ -58,7 +58,7 @@ exports[`OakModal matches snapshot when mounted 1`] = `
   color: transparent;
   background: transparent;
   border-radius: 6.25rem;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c18 {
@@ -67,7 +67,7 @@ exports[`OakModal matches snapshot when mounted 1`] = `
   width: 100%;
   height: 100%;
   border-radius: 6.25rem;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c19 {
@@ -76,14 +76,14 @@ exports[`OakModal matches snapshot when mounted 1`] = `
   min-width: 1.5rem;
   height: 1.5rem;
   min-height: 1.5rem;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c22 {
   overflow: auto;
   border-top: 0.063rem solid;
   border-color: transparent;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c20 {
@@ -182,7 +182,7 @@ exports[`OakModal matches snapshot when mounted 1`] = `
 }
 
 .c21 {
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -202,7 +202,7 @@ exports[`OakModal matches snapshot when mounted 1`] = `
   text-align: left;
   font-family: unset;
   outline: none;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
   color: transparent;
 }
 

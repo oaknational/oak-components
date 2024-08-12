@@ -6,7 +6,7 @@ exports[`InternalTooltip matches snapshot 1`] = `
   max-width: 22.5rem;
   color: #ffffff;
   background: #222222;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c1 {

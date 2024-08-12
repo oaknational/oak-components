@@ -4,7 +4,7 @@ exports[`OakPupilJourneyHeader matches snapshot 1`] = `
 [
   " ",
   .c0 {
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c2 {
@@ -12,18 +12,18 @@ exports[`OakPupilJourneyHeader matches snapshot 1`] = `
   width: 4rem;
   height: 4rem;
   padding: 1.5rem;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c4 {
   position: absolute;
   inset: 0rem;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c7 {
   position: relative;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c8 {
@@ -32,7 +32,7 @@ exports[`OakPupilJourneyHeader matches snapshot 1`] = `
   min-width: 3rem;
   height: 3rem;
   min-height: 3rem;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c9 {
@@ -86,7 +86,7 @@ exports[`OakPupilJourneyHeader matches snapshot 1`] = `
 }
 
 .c11 {
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -97,7 +97,7 @@ exports[`OakPupilJourneyHeader matches snapshot 1`] = `
 }
 
 .c12 {
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c5 > * {

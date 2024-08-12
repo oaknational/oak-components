@@ -4,7 +4,7 @@ exports[`InternalReviewAccordion matches snapshot 1`] = `
 [
   .c0 {
   padding-top: 1.25rem;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c2 {
@@ -12,11 +12,11 @@ exports[`InternalReviewAccordion matches snapshot 1`] = `
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c8 {
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c11 {
@@ -27,7 +27,7 @@ exports[`InternalReviewAccordion matches snapshot 1`] = `
   color: #222222;
   background: #222222;
   border-radius: 6.25rem;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c13 {
@@ -36,7 +36,7 @@ exports[`InternalReviewAccordion matches snapshot 1`] = `
   width: 100%;
   height: 100%;
   border-radius: 6.25rem;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c14 {
@@ -45,7 +45,7 @@ exports[`InternalReviewAccordion matches snapshot 1`] = `
   min-width: 1.5rem;
   height: 1.5rem;
   min-height: 1.5rem;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c15 {
@@ -114,7 +114,7 @@ exports[`InternalReviewAccordion matches snapshot 1`] = `
 }
 
 .c10 {
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -134,7 +134,7 @@ exports[`InternalReviewAccordion matches snapshot 1`] = `
   text-align: left;
   font-family: unset;
   outline: none;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
   color: #222222;
 }
 
@@ -191,7 +191,7 @@ exports[`InternalReviewAccordion matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c5:hover {
@@ -276,7 +276,7 @@ exports[`InternalReviewAccordion matches snapshot 1`] = `
     </div>
   </div>,
   .c0 {
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c2 {
@@ -288,7 +288,7 @@ exports[`InternalReviewAccordion matches snapshot 1`] = `
   margin-top: 1.5rem;
   background: #ffffff;
   border-radius: 1rem;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c3 {

@@ -4,18 +4,18 @@ exports[`InternalStyledSvg matches snapshot 1`] = `
 .c0 {
   position: relative;
   padding: 1.5rem;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c2 {
   position: absolute;
   inset: 0rem;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c4 {
   position: relative;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c1 {

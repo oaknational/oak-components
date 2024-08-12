@@ -28,7 +28,7 @@ describe("OakTypography", () => {
   //       const { getByTestId } = renderWithTheme(
   //         <Typography data-testid="test" $font={font as FontVariant} />,
   //       );
-  //       expect(getByTestId("test")).toHaveStyle("font-family: Lexend,sans-serif");
+  //       expect(getByTestId("test")).toHaveStyle(font-family:__Lexend_866216,__Lexend_Fallback_86621, Lexend,sans-serif");
   //       expect(getByTestId("test")).toHaveStyle(
   //         `font-size: ${Number((fontSize / 16).toFixed(REM_DP))}rem`,
   //       );

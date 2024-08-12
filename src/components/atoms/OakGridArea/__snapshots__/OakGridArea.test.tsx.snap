@@ -2,7 +2,7 @@
 
 exports[`OakGrid matches snapshot 1`] = `
 .c0 {
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c2 {

@@ -4,7 +4,7 @@ exports[`OakQuizHint matches snapshot 1`] = `
 [
   .c0 {
   display: none;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 <div
@@ -18,11 +18,11 @@ exports[`OakQuizHint matches snapshot 1`] = `
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c6 {
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c8 {
@@ -33,7 +33,7 @@ exports[`OakQuizHint matches snapshot 1`] = `
   color: #222222;
   background: #ffe555;
   border-radius: 6.25rem;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c10 {
@@ -42,7 +42,7 @@ exports[`OakQuizHint matches snapshot 1`] = `
   width: 100%;
   height: 100%;
   border-radius: 6.25rem;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c11 {
@@ -51,7 +51,7 @@ exports[`OakQuizHint matches snapshot 1`] = `
   min-width: 1.5rem;
   height: 1.5rem;
   min-height: 1.5rem;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c12 {
@@ -100,7 +100,7 @@ exports[`OakQuizHint matches snapshot 1`] = `
 }
 
 .c13 {
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -120,7 +120,7 @@ exports[`OakQuizHint matches snapshot 1`] = `
   text-align: left;
   font-family: unset;
   outline: none;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
   color: #222222;
 }
 

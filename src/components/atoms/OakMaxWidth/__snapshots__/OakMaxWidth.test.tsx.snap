@@ -8,7 +8,7 @@ exports[`OakMaxWidth matches snapshot 1`] = `
   padding-right: 0rem;
   margin-left: auto;
   margin-right: auto;
-  font-family: Lexend,sans-serif;
+  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
 }
 
 .c1 {
