@@ -5,16 +5,16 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   .c0 {
   min-height: 3rem;
   padding: 1rem;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c3 {
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c5 {
   display: none;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c6 {
@@ -22,7 +22,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c13 {
@@ -33,7 +33,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   color: #222222;
   background: #ffe555;
   border-radius: 6.25rem;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c15 {
@@ -42,7 +42,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   width: 100%;
   height: 100%;
   border-radius: 6.25rem;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c16 {
@@ -51,7 +51,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   min-width: 1.5rem;
   height: 1.5rem;
   min-height: 1.5rem;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c19 {
@@ -59,7 +59,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c17 {
@@ -148,7 +148,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 }
 
 .c18 {
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -168,7 +168,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   text-align: left;
   font-family: unset;
   outline: none;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   color: #222222;
 }
 
@@ -341,11 +341,11 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   .c0 {
   min-height: 3rem;
   padding: 1rem;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c3 {
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c11 {
@@ -353,7 +353,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c6 {
@@ -362,7 +362,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   padding: 0rem;
   background: #287c34;
   border-radius: 6.25rem;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c7 {
@@ -371,7 +371,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   min-width: 100%;
   height: 100%;
   min-height: 100%;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c8 {
@@ -430,7 +430,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 
 .c9 {
   color: #287c34;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -442,7 +442,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 
 .c10 {
   margin-top: 0.75rem;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 700;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -544,11 +544,11 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   .c0 {
   min-height: 3rem;
   padding: 1rem;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c3 {
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c11 {
@@ -556,7 +556,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c7 {
@@ -565,7 +565,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   min-width: 100%;
   height: 100%;
   min-height: 100%;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c6 {
@@ -574,7 +574,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   padding: 0rem;
   background: #dd0035;
   border-radius: 6.25rem;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c8 {
@@ -633,7 +633,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 
 .c9 {
   color: #dd0035;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -645,7 +645,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 
 .c10 {
   margin-top: 0.75rem;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -747,11 +747,11 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   .c0 {
   min-height: 3rem;
   padding: 1rem;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c3 {
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c11 {
@@ -759,7 +759,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c6 {
@@ -768,7 +768,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   padding: 0rem;
   background: #287c34;
   border-radius: 6.25rem;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c7 {
@@ -777,7 +777,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   min-width: 100%;
   height: 100%;
   min-height: 100%;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c8 {
@@ -836,7 +836,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 
 .c9 {
   color: #287c34;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -848,7 +848,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 
 .c10 {
   margin-top: 0.75rem;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 700;
   font-size: 1rem;
   line-height: 1.5rem;

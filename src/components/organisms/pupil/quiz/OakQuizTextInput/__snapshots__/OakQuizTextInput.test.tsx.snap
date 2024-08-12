@@ -14,7 +14,7 @@ exports[`OakQuizTextInput matches snapshot 1`] = `
   border: 0.125rem solid;
   border-color: #222222;
   border-radius: 0.25rem;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c0:hover {
@@ -22,7 +22,7 @@ exports[`OakQuizTextInput matches snapshot 1`] = `
 }
 
 .c3 {
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c1 {

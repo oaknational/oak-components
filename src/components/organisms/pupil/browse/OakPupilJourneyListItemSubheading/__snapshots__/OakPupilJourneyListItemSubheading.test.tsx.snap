@@ -4,7 +4,7 @@ exports[`OakPupilJourneyListItemSubheading matches snapshot 1`] = `
 [
   " ",
   .c0 {
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c1 {
@@ -30,7 +30,7 @@ exports[`OakPupilJourneyListItemSubheading matches snapshot 1`] = `
 }
 
 .c2 {
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -41,7 +41,7 @@ exports[`OakPupilJourneyListItemSubheading matches snapshot 1`] = `
 }
 
 .c3 {
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -60,11 +60,11 @@ exports[`OakPupilJourneyListItemSubheading matches snapshot 1`] = `
   border: 0.063rem solid;
   border-color: #ffe555;
   border-radius: 0.25rem;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c5 {
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 @media (min-width:750px) {

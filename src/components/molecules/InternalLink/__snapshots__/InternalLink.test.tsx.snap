@@ -2,7 +2,7 @@
 
 exports[`InternalLink matches snapshot 1`] = `
 .c1 {
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c0 {

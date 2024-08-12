@@ -2,7 +2,7 @@
 
 exports[`OakQuizCounter matches snapshot 1`] = `
 .c0 {
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c1 {
@@ -33,7 +33,7 @@ exports[`OakQuizCounter matches snapshot 1`] = `
 
 .c2 {
   color: #808080;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 2rem;
   line-height: 2.5rem;
@@ -45,7 +45,7 @@ exports[`OakQuizCounter matches snapshot 1`] = `
 
 .c3 {
   color: #222222;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 2rem;
   line-height: 2.5rem;

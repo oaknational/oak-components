@@ -14,7 +14,9 @@ describe("typographyStyle", () => {
       <StyledComponent data-testid="test" $font={"heading-1"} />,
     );
     expect(getByTestId("test")).toHaveStyle("font-weight: 600");
-    expect(getByTestId("test")).toHaveStyle("font-family: Lexend,sans-serif");
+    expect(getByTestId("test")).toHaveStyle(
+      "font-family: --var(google-font),Lexend,sans-serif",
+    );
     expect(getByTestId("test")).toHaveStyle("line-height: 4rem");
     expect(getByTestId("test")).toHaveStyle("letter-spacing:0.0115rem");
     expect(getByTestId("test")).toHaveStyle("font-size: 3.5rem");

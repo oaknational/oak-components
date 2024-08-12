@@ -23,7 +23,7 @@ describe("OakSpan", () => {
   //       <OakSpan $font="body-1">Test</OakSpan>,
   //     );
   //     const span = getByText("Test");
-  //     expect(span).toHaveStyle("font-family: Lexend,sans-serif");
+  //     expect(span).toHaveStyle(font-family:__Lexend_866216,__Lexend_Fallback_86621, Lexend,sans-serif");
   //     expect(span).toHaveStyle(`font-size: 1.125rem`);
   //     expect(span).toHaveStyle(`line-height: 1.75rem`);
   //     expect(span).toHaveStyle(`font-weight: 300`);

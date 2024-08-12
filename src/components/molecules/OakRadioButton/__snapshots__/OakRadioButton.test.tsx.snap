@@ -2,12 +2,12 @@
 
 exports[`RadioGroup matches snapshot 1`] = `
 .c0 {
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c2 {
   color: #222222;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c8 {
@@ -16,7 +16,7 @@ exports[`RadioGroup matches snapshot 1`] = `
   background: #ffffff;
   border: 0.125rem solid;
   border-color: #222222;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c1 {
@@ -50,7 +50,7 @@ exports[`RadioGroup matches snapshot 1`] = `
 }
 
 .c3 {
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 700;
   font-size: 1.125rem;
   line-height: 1.75rem;

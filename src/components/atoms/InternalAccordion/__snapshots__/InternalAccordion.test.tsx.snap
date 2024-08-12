@@ -2,11 +2,11 @@
 
 exports[`InternalAccordion matches snapshot 1`] = `
 .c0 {
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c2 {
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c2:hover {

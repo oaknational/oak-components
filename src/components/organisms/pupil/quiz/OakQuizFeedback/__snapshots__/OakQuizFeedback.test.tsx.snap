@@ -3,7 +3,7 @@
 exports[`OakQuizFeedback matches snapshot 1`] = `
 [
   .c0 {
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c2 {
@@ -12,7 +12,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
   padding: 0rem;
   background: #287c34;
   border-radius: 6.25rem;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c3 {
@@ -21,7 +21,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
   min-width: 100%;
   height: 100%;
   min-height: 100%;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c4 {
@@ -40,7 +40,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
 
 .c5 {
   color: #287c34;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -52,7 +52,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
 
 .c6 {
   margin-top: 0.75rem;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 700;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -114,7 +114,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
     </p>
   </div>,
   .c0 {
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c3 {
@@ -123,7 +123,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
   min-width: 100%;
   height: 100%;
   min-height: 100%;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c2 {
@@ -132,7 +132,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
   padding: 0rem;
   background: #dd0035;
   border-radius: 6.25rem;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c4 {
@@ -151,7 +151,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
 
 .c5 {
   color: #dd0035;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -163,7 +163,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
 
 .c6 {
   margin-top: 0.75rem;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -225,7 +225,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
     </p>
   </div>,
   .c0 {
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c2 {
@@ -234,7 +234,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
   padding: 0rem;
   background: #287c34;
   border-radius: 6.25rem;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c3 {
@@ -243,7 +243,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
   min-width: 100%;
   height: 100%;
   min-height: 100%;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c4 {
@@ -262,7 +262,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
 
 .c5 {
   color: #287c34;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -274,7 +274,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
 
 .c6 {
   margin-top: 0.75rem;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 700;
   font-size: 1rem;
   line-height: 1.5rem;

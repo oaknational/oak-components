@@ -3,7 +3,7 @@
 exports[`OakPagination Component matches snapshot 1`] = `
 .c0 {
   width: 100%;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c5 {
@@ -12,7 +12,7 @@ exports[`OakPagination Component matches snapshot 1`] = `
   min-width: 2rem;
   height: 2rem;
   min-height: 2rem;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c7 {
@@ -36,15 +36,15 @@ exports[`OakPagination Component matches snapshot 1`] = `
 }
 
 .c4 {
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c9 {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
   display: revert;
-  font-family: Lexend,sans-serif;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   display: revert;
   display: revert;
 }
@@ -57,7 +57,7 @@ exports[`OakPagination Component matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c2 {
@@ -134,7 +134,7 @@ exports[`OakPagination Component matches snapshot 1`] = `
   justify-content: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -175,7 +175,7 @@ exports[`OakPagination Component matches snapshot 1`] = `
   justify-content: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;

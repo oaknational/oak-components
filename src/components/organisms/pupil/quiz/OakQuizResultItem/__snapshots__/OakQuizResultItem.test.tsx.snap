@@ -3,7 +3,7 @@
 exports[`OakQuizResultItem matches snapshot 1`] = `
 [
   .c0 {
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c2 {
@@ -12,12 +12,12 @@ exports[`OakQuizResultItem matches snapshot 1`] = `
   width: fit-content;
   padding: 0.5rem;
   border-radius: 0.375rem;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c4 {
   min-height: 2rem;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c1 {
@@ -60,7 +60,7 @@ exports[`OakQuizResultItem matches snapshot 1`] = `
 
 .c6 {
   color: #222222;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.5rem;

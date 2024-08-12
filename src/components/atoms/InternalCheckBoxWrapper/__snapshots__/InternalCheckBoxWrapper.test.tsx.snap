@@ -6,7 +6,7 @@ exports[`InternalCheckBoxWrapper matches snapshot 1`] = `
   position: relative;
   width: 1.5rem;
   height: 1.5rem;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c2 {
@@ -16,7 +16,7 @@ exports[`InternalCheckBoxWrapper matches snapshot 1`] = `
   width: 1.5rem;
   height: 1.5rem;
   padding: 0rem;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c3 {

@@ -10,11 +10,11 @@ exports[`OakDraggable matches snapshot 1`] = `
   color: #222222;
   background: #ffffff;
   border-radius: 0.5rem;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c2 {
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c5 {
@@ -23,11 +23,11 @@ exports[`OakDraggable matches snapshot 1`] = `
   min-width: 2rem;
   height: 2rem;
   min-height: 2rem;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c7 {
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 700;
   font-size: 1.125rem;
   line-height: 1.75rem;

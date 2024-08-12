@@ -6,7 +6,7 @@ exports[`OakSmallSecondaryButton matches snapshot 1`] = `
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c2 {
@@ -15,11 +15,11 @@ exports[`OakSmallSecondaryButton matches snapshot 1`] = `
   width: 100%;
   height: 100%;
   border-radius: 0.25rem;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c5 {
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c7 {
@@ -28,7 +28,7 @@ exports[`OakSmallSecondaryButton matches snapshot 1`] = `
   min-width: 1.5rem;
   height: 1.5rem;
   min-height: 1.5rem;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c8 {
@@ -57,7 +57,7 @@ exports[`OakSmallSecondaryButton matches snapshot 1`] = `
 }
 
 .c9 {
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -78,7 +78,7 @@ exports[`OakSmallSecondaryButton matches snapshot 1`] = `
   text-align: left;
   font-family: unset;
   outline: none;
-  font-family: Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   color: #222222;
   background: #ffffff;
   padding-left: 0.5rem;
