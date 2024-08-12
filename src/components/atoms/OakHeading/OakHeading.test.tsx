@@ -48,7 +48,7 @@ describe("Heading", () => {
       );
 
       expect(getByTestId("test")).toHaveStyle(
-        "font-family:__Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif",
+        "font-family:--var(google-font),Lexend,sans-serif",
       );
       expect(getByTestId("test")).toHaveStyle(
         `font-size: ${parseFontSize(font as OakFontToken)}`,

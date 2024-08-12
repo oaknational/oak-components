@@ -12,11 +12,11 @@ exports[`OakDraggableFeedback matches snapshot 1`] = `
   border: 0.25rem solid;
   border-color: #287c34;
   border-radius: 0.5rem;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c2 {
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c5 {
@@ -25,11 +25,11 @@ exports[`OakDraggableFeedback matches snapshot 1`] = `
   min-width: 2rem;
   height: 2rem;
   min-height: 2rem;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c7 {
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 700;
   font-size: 1.125rem;
   line-height: 1.75rem;

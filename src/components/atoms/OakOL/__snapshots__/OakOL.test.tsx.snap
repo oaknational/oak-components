@@ -4,7 +4,7 @@ exports[`Component OakOL matches snapshot 1`] = `
 .c0 {
   counter-reset: item;
   padding: 0;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c0 li {

@@ -4,27 +4,27 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 [
   .c0 {
   display: block;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c2 {
   position: relative;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c4 {
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c7 {
   position: relative;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c10 {
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c10:hover {
@@ -37,7 +37,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   min-width: 2rem;
   height: 2rem;
   min-height: 2rem;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c19 {
@@ -45,7 +45,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c21 {
@@ -54,7 +54,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   width: 100%;
   height: 100%;
   border-radius: 0.25rem;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c17 {
@@ -143,7 +143,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 }
 
 .c15 {
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -154,7 +154,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 }
 
 .c25 {
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -175,7 +175,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   text-align: left;
   font-family: unset;
   outline: none;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   color: #ffffff;
   background: #222222;
   padding-left: 1rem;
@@ -202,7 +202,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   text-align: left;
   font-family: unset;
   outline: none;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   color: #222222;
   background: #ffffff;
   padding-left: 1rem;
@@ -330,7 +330,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c14:hover {
@@ -342,7 +342,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   position: relative;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -660,7 +660,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
     </div>
   </div>,
   .c2 {
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c4 {
@@ -668,7 +668,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c6 {
@@ -677,12 +677,12 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   width: 100%;
   height: 100%;
   border-radius: 0.25rem;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c0 {
   display: none;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c3 {
@@ -728,7 +728,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 }
 
 .c10 {
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -749,7 +749,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   text-align: left;
   font-family: unset;
   outline: none;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   color: #ffffff;
   background: #222222;
   padding-left: 1rem;
@@ -776,7 +776,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   text-align: left;
   font-family: unset;
   outline: none;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   color: #222222;
   background: #ffffff;
   padding-left: 1rem;

@@ -58,7 +58,7 @@ export type TypographyStyleProps = {
 };
 
 export const typographyStyle = css<TypographyStyleProps>`
-  font-family: __Lexend_866216, __Lexend_Fallback_866216, Lexend, sans-serif; //  FIXME: this should be a css variable ?
+  font-family: --var(google-font), Lexend, sans-serif; //  FIXME: this should be a css variable ?
   ${responsiveStyle("font-weight", (props) => props.$font, parseFontWeight)}
   ${responsiveStyle("font-size", (props) => props.$font, parseFontSize)}
   ${responsiveStyle("line-height", (props) => props.$font, parseLineHeight)}

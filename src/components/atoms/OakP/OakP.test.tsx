@@ -12,7 +12,7 @@ describe("P", () => {
       <OakP data-testid="paragraph">Here is some paragraph text</OakP>,
     );
     expect(getByTestId("paragraph")).toHaveStyle(
-      "font-family:__Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif",
+      "font-family:--var(google-font),Lexend,sans-serif",
     );
   });
 

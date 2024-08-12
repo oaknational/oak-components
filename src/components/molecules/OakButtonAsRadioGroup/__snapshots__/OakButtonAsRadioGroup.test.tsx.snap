@@ -2,7 +2,7 @@
 
 exports[`OakButtonAsRadioGroup matches snapshot 1`] = `
 .c0 {
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c2 {
@@ -10,7 +10,7 @@ exports[`OakButtonAsRadioGroup matches snapshot 1`] = `
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c4 {
@@ -19,7 +19,7 @@ exports[`OakButtonAsRadioGroup matches snapshot 1`] = `
   width: 100%;
   height: 100%;
   border-radius: 0.25rem;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c1 {
@@ -50,7 +50,7 @@ exports[`OakButtonAsRadioGroup matches snapshot 1`] = `
 }
 
 .c8 {
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -71,7 +71,7 @@ exports[`OakButtonAsRadioGroup matches snapshot 1`] = `
   text-align: left;
   font-family: unset;
   outline: none;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   color: #222222;
   background: #ffffff;
   padding-left: 1rem;

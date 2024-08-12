@@ -15,7 +15,7 @@ describe("typographyStyle", () => {
     );
     expect(getByTestId("test")).toHaveStyle("font-weight: 600");
     expect(getByTestId("test")).toHaveStyle(
-      "font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif",
+      "font-family: --var(google-font),Lexend,sans-serif",
     );
     expect(getByTestId("test")).toHaveStyle("line-height: 4rem");
     expect(getByTestId("test")).toHaveStyle("letter-spacing:0.0115rem");

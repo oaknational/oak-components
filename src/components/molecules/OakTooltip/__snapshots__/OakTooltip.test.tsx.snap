@@ -5,7 +5,7 @@ exports[`OakTooltip matches snapshot 1`] = `
   .c0 {
   position: fixed;
   pointer-events: none;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   z-index: 300;
 }
 
@@ -22,7 +22,7 @@ exports[`OakTooltip matches snapshot 1`] = `
   -webkit-transform: translateY(calc(100% + 1rem));
   -ms-transform: translateY(calc(100% + 1rem));
   transform: translateY(calc(100% + 1rem));
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c2 {
@@ -36,7 +36,7 @@ exports[`OakTooltip matches snapshot 1`] = `
   background: #ffe555;
   border-radius: 0.375rem;
   border-top-left-radius: 0rem;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;

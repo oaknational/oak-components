@@ -4,7 +4,7 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
 [
   .c0 {
   width: 100%;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c2 {
@@ -13,7 +13,7 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c4 {
@@ -23,18 +23,18 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
   background: #a0b6f2;
   border-top-left-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c7 {
   margin: 0.75rem;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c9 {
   max-width: 30rem;
   margin-right: 0rem;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c12 {
@@ -45,29 +45,29 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
   border-top-left-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
   display: none;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c14 {
   width: 100%;
   padding: 1rem;
   background: #ffffff;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c15 {
   margin-bottom: 1rem;
   display: none;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c17 {
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c19 {
   width: 100%;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c23 {
@@ -80,7 +80,7 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
   border: 0.063rem solid;
   border-color: #deb7d5;
   border-radius: 0.25rem;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c25 {
@@ -90,13 +90,13 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c27 {
   margin-bottom: 1rem;
   display: none;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c1 {
@@ -228,7 +228,7 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
 }
 
 .c11 {
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -241,7 +241,7 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
 
 .c6 {
   color: #222222;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -253,7 +253,7 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
 
 .c22 {
   color: #222222;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -264,7 +264,7 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
 }
 
 .c24 {
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;

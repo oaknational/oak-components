@@ -6,11 +6,11 @@ exports[`OakAccordion matches snapshot 1`] = `
   background: #f2f2f2;
   border: 0.063rem solid;
   border-color: #cacaca;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c1 {
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -23,7 +23,7 @@ exports[`OakAccordion matches snapshot 1`] = `
 }
 
 .c3 {
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c3:hover {
@@ -37,16 +37,16 @@ exports[`OakAccordion matches snapshot 1`] = `
   height: 1.5rem;
   min-height: 1.5rem;
   margin-right: 1rem;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c9 {
   margin-left: 1.5rem;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c10 {
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c8 {

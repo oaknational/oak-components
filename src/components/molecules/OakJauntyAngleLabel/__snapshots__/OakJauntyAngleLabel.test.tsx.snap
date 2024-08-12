@@ -10,7 +10,7 @@ exports[`OakjauntyAngleLabel matches snapshot 1`] = `
   -webkit-transform: rotate(-1.5deg);
   -ms-transform: rotate(-1.5deg);
   transform: rotate(-1.5deg);
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;

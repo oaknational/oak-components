@@ -5,11 +5,11 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   position: relative;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c3 {
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c3:hover {
@@ -22,11 +22,11 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   min-width: 2rem;
   height: 2rem;
   min-height: 2rem;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c10 {
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c9 {
@@ -94,7 +94,7 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c7:hover {
@@ -106,7 +106,7 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   position: relative;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

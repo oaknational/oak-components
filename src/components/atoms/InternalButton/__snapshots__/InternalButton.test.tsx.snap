@@ -11,7 +11,7 @@ exports[`InternalButton matches snapshot 1`] = `
   text-align: left;
   font-family: unset;
   outline: none;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c0:disabled {

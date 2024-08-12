@@ -6,7 +6,7 @@ exports[`OakQuizRadioButton matches snapshot 1`] = `
   padding: 1.25rem;
   background: #ffffff;
   border-radius: 0.5rem;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c0:hover {
@@ -14,7 +14,7 @@ exports[`OakQuizRadioButton matches snapshot 1`] = `
 }
 
 .c3 {
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c9 {
@@ -23,7 +23,7 @@ exports[`OakQuizRadioButton matches snapshot 1`] = `
   background: #ffffff;
   border: 0.125rem solid;
   border-color: #222222;
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c1 {
@@ -63,7 +63,7 @@ exports[`OakQuizRadioButton matches snapshot 1`] = `
 }
 
 .c4 {
-  font-family: __Lexend_866216,__Lexend_Fallback_866216,Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1.125rem;
   line-height: 1.75rem;
