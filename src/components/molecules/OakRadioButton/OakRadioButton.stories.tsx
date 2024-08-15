@@ -146,3 +146,25 @@ export const Disabled: Story = {
   },
   args: {},
 };
+
+export const Required: Story = {
+  render: (args) => {
+    return (
+      <OakRadioGroup name="test">
+        <OakRadioButton
+          {...args}
+          id="option-1"
+          label={"Required option 1"}
+          value={"1"}
+          required
+        />
+        <OakRadioButton
+          {...args}
+          id="option-2"
+          label={"Option 2"}
+          value={"2"}
+        />
+      </OakRadioGroup>
+    );
+  },
+};
