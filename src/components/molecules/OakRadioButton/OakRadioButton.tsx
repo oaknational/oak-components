@@ -106,6 +106,7 @@ export type OakRadioButtonProps = {
   tabIndex?: number;
   "data-testid"?: string;
   disabled?: boolean;
+  required?: boolean;
   /**
    * Allows the focus ring to be disabled. This is useful when focus is indicated
    * by other means, such as a border or background color change.
@@ -149,6 +150,7 @@ export const OakRadioButton = forwardRef<HTMLInputElement, OakRadioButtonProps>(
       value,
       tabIndex,
       disabled,
+      required,
       $labelGap = "space-between-ssx",
       $labelAlignItems = "center",
       $font = "body-1",
@@ -186,6 +188,7 @@ export const OakRadioButton = forwardRef<HTMLInputElement, OakRadioButtonProps>(
             tabIndex={tabIndex}
             disabled={anyDisabled}
             ref={ref}
+            required={required}
           />
           {!anyDisabled ? (
             <VisibleRadioButtonInput
