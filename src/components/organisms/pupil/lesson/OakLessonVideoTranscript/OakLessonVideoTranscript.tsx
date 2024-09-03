@@ -19,6 +19,7 @@ type OakLessonVideoTranscriptProps = {
    * A control to toggle the video to display sign language
    */
   signLanguageControl?: ReactNode;
+  transcriptToggled?: (props: { isOpen: boolean }) => void;
 };
 
 /**
@@ -28,8 +29,16 @@ export const OakLessonVideoTranscript = ({
   children,
   id,
   signLanguageControl = null,
+  transcriptToggled,
 }: OakLessonVideoTranscriptProps) => {
   const [showTranscript, setShowTranscript] = useState(false);
+
+  const handleClick = () => {
+    setShowTranscript(!showTranscript);
+    if (transcriptToggled) {
+      transcriptToggled({ isOpen: !showTranscript });
+    }
+  };
 
   return (
     <>
@@ -40,7 +49,7 @@ export const OakLessonVideoTranscript = ({
         <OakBox>
           {children && (
             <OakTertiaryButton
-              onClick={() => setShowTranscript(!showTranscript)}
+              onClick={handleClick}
               iconName={showTranscript ? "chevron-up" : "chevron-down"}
               isTrailingIcon
               aria-controls={id}

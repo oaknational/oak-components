@@ -2,7 +2,6 @@ import React, { ReactNode } from "react";
 import styled from "styled-components";
 
 import { OakBox, OakFlex, OakIcon } from "@/components/atoms";
-import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import {
   InternalAccordionButton,
@@ -40,7 +39,7 @@ const StyledOakFlex = styled(InternalAccordionButton)`
   border: none;
   background: none;
   appearance: none;
-  margin: -${parseSpacing("inner-padding-m")};
+
   outline: none;
 
   &:focus-visible {

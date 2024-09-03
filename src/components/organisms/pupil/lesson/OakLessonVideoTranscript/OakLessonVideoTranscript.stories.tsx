@@ -12,7 +12,7 @@ const meta: Meta<typeof OakLessonVideoTranscript> = {
 
   parameters: {
     controls: {
-      include: [],
+      include: ["children", "signLanguageControl", "showTranscript", "onClick"],
     },
   },
   args: {
