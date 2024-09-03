@@ -91,7 +91,6 @@ exports[`OakAccordion matches snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  margin: -1rem;
   outline: none;
 }
 
