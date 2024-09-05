@@ -3,21 +3,34 @@ import styled from "styled-components";
 
 import { OakFlex, OakSpan } from "@/components/atoms";
 import { InternalStyledSvg } from "@/components/atoms/InternalStyledSvg";
+import { SizeStyleProps } from "@/styles/utils/sizeStyle";
+import { DisplayStyleProps } from "@/styles/utils/displayStyle";
 
 const StyledPromoTag = styled(OakFlex)`
   aspect-ratio: 2 / 1;
 `;
 
+export type OakPromoTagProps = {
+  width?: SizeStyleProps["$width"];
+  display?: DisplayStyleProps["$display"];
+};
+
 /**
  * Renders a tag with the text "New"
  */
-export const OakPromoTag = () => {
+export const OakPromoTag = (props: OakPromoTagProps) => {
+  const {
+    width = ["all-spacing-8", "all-spacing-9", "all-spacing-10"],
+    display = "flex",
+  } = props;
+
   return (
     <StyledPromoTag
       $alignItems="center"
       $justifyContent="center"
       $position="relative"
-      $width={["all-spacing-8", "all-spacing-9", "all-spacing-10"]}
+      $width={width}
+      $display={display}
     >
       <InternalStyledSvg
         height="100%"
