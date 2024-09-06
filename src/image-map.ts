@@ -140,6 +140,7 @@ export type BackgroundName = keyof typeof backgrounds;
 
 export const assets = {
   underline: "v1725550624/underline-1_icqa0u.svg",
+  "horizontal-rule": "v1725608698/horizontal-rule_rqdc6c.svg",
 };
 
 export type AssetName = keyof typeof assets;
