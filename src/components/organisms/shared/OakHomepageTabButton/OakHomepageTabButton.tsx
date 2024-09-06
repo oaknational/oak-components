@@ -64,6 +64,7 @@ export const OakHomepageTabButton = <C extends ElementType = "button">(
     <StyledButton
       element={element}
       aria-current={isActive ? "page" : null}
+      title={title}
       {...rest}
     >
       <OakFlex
