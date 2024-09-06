@@ -3,6 +3,7 @@ export * from "./OakCookieConsent";
 export * from "./OakCookieConsentProvider";
 export * from "./OakCookieSettingsModal";
 export * from "./OakHeaderHero";
+export * from "./OakHomepageTabButton";
 export * from "./OakPagination";
 export * from "./OakPrimaryNav";
 export * from "./OakPrimaryNavItem";
