@@ -27,15 +27,24 @@ const StyledButton = styled(InternalButton)`
     color: ${parseColor("black")};
   }
 
-  :focus .focusUnderline {
+  :focus .focusUnderlineSvg {
     display: block;
     filter: ${parseColorFilter("lemon")}
       drop-shadow(${parseDropShadow("drop-shadow-black")});
-    transform: translateY(-5px) rotate(-2deg);
+    transform: rotate(-2deg);
   }
 
   :focus .activeUnderline {
     display: none;
+  }
+
+  :focus .focusUnderline {
+    display: block;
+  }
+  .activeUnderlineSvg,
+  .focusUnderlineSvg {
+    position: absolute;
+    bottom: 0;
   }
 `;
 
@@ -65,12 +74,13 @@ export const OakHomepageTabButton = <C extends ElementType = "button">(
       element={element}
       aria-current={isActive ? "page" : null}
       title={title}
+      disabled={isActive}
       {...rest}
     >
       <OakFlex
         $flexDirection={"column"}
         $alignItems={"center"}
-        $gap={["space-between-none", "space-between-xs"]}
+        $gap={["space-between-s", "space-between-s"]}
       >
         <OakIcon
           $width={["all-spacing-9", "all-spacing-14", "all-spacing-14"]}
@@ -80,9 +90,10 @@ export const OakHomepageTabButton = <C extends ElementType = "button">(
         />
         <OakFlex
           $alignItems={"center"}
+          $justifyContent={"center"}
           $gap="space-between-sssx"
           $position={"relative"}
-          $pb={["inner-padding-xs", "inner-padding-xl"]} // this is needed to position the hand drawn underline
+          $pb={["inner-padding-s", "inner-padding-xl"]} // this is needed to position the hand drawn underline
         >
           <OakSpan
             className="buttonText"
@@ -92,17 +103,20 @@ export const OakHomepageTabButton = <C extends ElementType = "button">(
           >
             {title}
           </OakSpan>
+
           {showNewIcon && (
             <OakPromoTag display={["none", "flex"]} width={"all-spacing-9"} />
           )}
+
           {isActive && (
             <OakBox
+              className="activeUnderline"
               $position={"absolute"}
               $bottom={"all-spacing-0"}
-              $display={"block"}
-              className="activeUnderline"
+              $width={"100%"}
             >
               <InternalStyledSvg
+                className="activeUnderlineSvg"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 height="6"
@@ -113,14 +127,19 @@ export const OakHomepageTabButton = <C extends ElementType = "button">(
               </InternalStyledSvg>
             </OakBox>
           )}
-          <OakBox $position={"absolute"} $bottom={"all-spacing-0"}>
+          <OakBox
+            className="focusUnderline"
+            $display={"none"}
+            $position={"absolute"}
+            $bottom={"all-spacing-0"}
+            $width={"100%"}
+          >
             <InternalStyledSvg
-              className="focusUnderline"
+              className="focusUnderlineSvg"
               xmlns="http://www.w3.org/2000/svg"
               height="8"
               width={"100%"}
               preserveAspectRatio="none"
-              display={"none"}
             >
               <Underline />
             </InternalStyledSvg>
