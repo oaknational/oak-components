@@ -34,13 +34,15 @@ exports[`OakHomepageTabButton component matches snapshot 1`] = `
 
 .c6 {
   position: relative;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c9 {
   position: absolute;
   bottom: 0rem;
+  width: 100%;
+  display: none;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -62,7 +64,7 @@ exports[`OakHomepageTabButton component matches snapshot 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 0rem;
+  gap: 1rem;
 }
 
 .c7 {
@@ -74,6 +76,10 @@ exports[`OakHomepageTabButton component matches snapshot 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   gap: 0.25rem;
 }
 
@@ -96,17 +102,27 @@ exports[`OakHomepageTabButton component matches snapshot 1`] = `
   color: #222222;
 }
 
-.c1:focus .focusUnderline {
+.c1:focus .focusUnderlineSvg {
   display: block;
   -webkit-filter: invert(82%) sepia(25%) saturate(963%) hue-rotate(359deg) brightness(106%) contrast(101%) drop-shadow(0.063rem 0.125rem 0 rgba(0,0,0,100%));
   filter: invert(82%) sepia(25%) saturate(963%) hue-rotate(359deg) brightness(106%) contrast(101%) drop-shadow(0.063rem 0.125rem 0 rgba(0,0,0,100%));
-  -webkit-transform: translateY(-5px) rotate(-2deg);
-  -ms-transform: translateY(-5px) rotate(-2deg);
-  transform: translateY(-5px) rotate(-2deg);
+  -webkit-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  transform: rotate(-2deg);
 }
 
 .c1:focus .activeUnderline {
   display: none;
+}
+
+.c1:focus .focusUnderline {
+  display: block;
+}
+
+.c1 .activeUnderlineSvg,
+.c1 .focusUnderlineSvg {
+  position: absolute;
+  bottom: 0;
 }
 
 @media (min-width:750px) {
@@ -165,7 +181,7 @@ exports[`OakHomepageTabButton component matches snapshot 1`] = `
 
 @media (min-width:750px) {
   .c3 {
-    gap: 0.75rem;
+    gap: 1rem;
   }
 }
 
@@ -245,11 +261,10 @@ exports[`OakHomepageTabButton component matches snapshot 1`] = `
         Test button
       </span>
       <div
-        className="c9"
+        className="c9 focusUnderline"
       >
         <svg
-          className="focusUnderline"
-          display="none"
+          className="focusUnderlineSvg"
           height="8"
           preserveAspectRatio="none"
           width="100%"
