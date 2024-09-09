@@ -320,6 +320,11 @@ exports[`OakInlineBanner matches snapshot 1`] = `
   color: #575757;
 }
 
+.c21:visited .c23 {
+  -webkit-filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
+  filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
+}
+
 .c21:active {
   color: #222222;
 }

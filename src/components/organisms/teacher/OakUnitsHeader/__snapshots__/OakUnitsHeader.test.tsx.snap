@@ -8,6 +8,10 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
 .c5 {
   position: relative;
   width: 2.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
