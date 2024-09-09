@@ -87,6 +87,7 @@ export const OakHomepageTabButton = <C extends ElementType = "button">(
           $height={["all-spacing-9", "all-spacing-14", "all-spacing-14"]}
           iconName={iconName}
           $colorFilter={color}
+          alt=""
         />
 
         <OakFlex
