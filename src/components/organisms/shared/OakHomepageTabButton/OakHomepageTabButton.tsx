@@ -88,6 +88,7 @@ export const OakHomepageTabButton = <C extends ElementType = "button">(
           iconName={iconName}
           $colorFilter={color}
         />
+
         <OakFlex
           $alignItems={"center"}
           $justifyContent={"center"}
@@ -121,7 +122,6 @@ export const OakHomepageTabButton = <C extends ElementType = "button">(
                 fill="none"
                 height="6"
                 width={"100%"}
-                preserveAspectRatio="none"
               >
                 <Underline />
               </InternalStyledSvg>
