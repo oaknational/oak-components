@@ -113,9 +113,9 @@ export const icons = {
   "subject-understanding-the-world":
     "subject-icons/understanding-the-world.svg",
   "homepage-robot-waving": "v1725533399/homepage/robot_waving_malpc3.svg",
-  "homepage-three-pupils": "v1725534040/homepage/image-students_g0jtxe.svg",
-  "homepage-teacher": "v1725534080/homepage/teacher-carrying-stuff_gab2ec.svg",
-  "homepage-teacher-map": "v1725534099/homepage/teacher-reading-map_glwhyh.svg",
+  "homepage-three-pupils": "v1725877472/homepage/image-students_g0jtxe.svg",
+  "homepage-teacher": "v1725882091/homepage/teacher-carrying-stuff_gab2ec.svg",
+  "homepage-teacher-map": "v1725882279/homepage/teacher-reading-map_glwhyh.svg",
 } as const;
 
 export type IconName = keyof typeof icons;
