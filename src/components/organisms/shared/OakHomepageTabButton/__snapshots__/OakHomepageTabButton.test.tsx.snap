@@ -20,6 +20,7 @@ exports[`OakHomepageTabButton component matches snapshot 1`] = `
 }
 
 .c2 {
+  height: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -64,6 +65,10 @@ exports[`OakHomepageTabButton component matches snapshot 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
   gap: 1rem;
 }
 
@@ -180,12 +185,6 @@ exports[`OakHomepageTabButton component matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c3 {
-    gap: 1rem;
-  }
-}
-
-@media (min-width:750px) {
   .c8 {
     font-weight: 600;
   }
@@ -235,7 +234,7 @@ exports[`OakHomepageTabButton component matches snapshot 1`] = `
         loading="lazy"
         onError={[Function]}
         onLoad={[Function]}
-        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1725533399/homepage/robot_waving_malpc3.svg"
+        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1725896980/homepage/robot_waving_malpc3.svg"
         style={
           {
             "bottom": 0,
