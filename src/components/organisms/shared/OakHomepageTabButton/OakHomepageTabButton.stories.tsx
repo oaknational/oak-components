@@ -52,7 +52,7 @@ export const WordWrap: Story = {
       <OakHomepageTabButton {...args} />
       <OakHomepageTabButton {...args} />
       <OakHomepageTabButton {...args} />
-      <OakHomepageTabButton {...args} />
+      <OakHomepageTabButton {...args} title="Pupils" />
     </OakFlex>
   ),
 

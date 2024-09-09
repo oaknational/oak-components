@@ -78,15 +78,18 @@ export const OakHomepageTabButton = <C extends ElementType = "button">(
       {...rest}
     >
       <OakFlex
+        $height={"100%"}
         $flexDirection={"column"}
         $alignItems={"center"}
-        $gap={["space-between-s", "space-between-s"]}
+        $justifyContent={"start"}
+        $gap={"space-between-s"}
       >
         <OakIcon
           $width={["all-spacing-9", "all-spacing-14", "all-spacing-14"]}
           $height={["all-spacing-9", "all-spacing-14", "all-spacing-14"]}
           iconName={iconName}
           $colorFilter={color}
+          alt=""
         />
 
         <OakFlex
