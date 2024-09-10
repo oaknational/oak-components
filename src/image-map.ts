@@ -74,8 +74,11 @@ export const icons = {
   "subject-drama": "subject-icons/drama.svg",
   "subject-english": "subject-icons/english.svg",
   "subject-english-grammar": "subject-icons/english-grammar.svg",
+  "subject-english-handwriting": "subject-icons/handwriting.svg",
   "subject-english-reading-for-pleasure": "subject-icons/literature.svg",
   "subject-english-spelling": "subject-icons/english-spelling.svg",
+  "subject-english-reading-writing-oracy":
+    "subject-icons/reading-writing-oracy.svg",
   "subject-expressive-arts-and-design": "subject-icons/creative-arts.svg",
   "subject-french": "subject-icons/french.svg",
   "subject-geography": "subject-icons/geography.svg",
