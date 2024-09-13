@@ -56,14 +56,16 @@ const UnstyledComponent = (props: OakUnitsHeaderProps) => {
     >
       <OakFlex $gap="space-between-ssx" $flexDirection="column">
         <OakFlex $gap="space-between-ssx">
-          <OakHeading $font="heading-4" tag="h2">
+          <OakHeading $font="heading-5" tag="h2" $color={"text-primary"}>
             {isLegacy
               ? "Units released in 2020-22"
               : `${sentenceCaseSubject} units`}
           </OakHeading>
           {!isLegacy && <OakPromoTag />}
         </OakFlex>
-        <OakTypography $font="body-2">{subheading}</OakTypography>
+        <OakTypography $font="body-2" $color={"text-primary"}>
+          {subheading}
+        </OakTypography>
       </OakFlex>
       <CurriculumDownloadButton isLegacy={isLegacy} phase={phase} href={href} />
     </OakFlex>

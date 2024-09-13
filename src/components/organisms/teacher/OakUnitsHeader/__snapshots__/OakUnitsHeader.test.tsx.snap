@@ -22,6 +22,7 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
 }
 
 .c11 {
+  color: #222222;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1rem;
@@ -157,12 +158,13 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
 .c4 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
-  font-size: 2rem;
-  line-height: 2.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   -webkit-letter-spacing: 0.0115rem;
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
+  color: #222222;
 }
 
 .c10 {
