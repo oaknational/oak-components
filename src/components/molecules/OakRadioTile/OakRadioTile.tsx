@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled, { css } from "styled-components";
 
 import { OakFlex } from "@/components/atoms/OakFlex";
@@ -24,10 +24,8 @@ export const isTileItem = (u: unknown): u is TileItem => {
 export type OakRadioTileProps = {
   tileItem: TileItem;
   isChecked: boolean;
-  isFocussed: boolean;
   id: string;
   onChange: (tileItem: TileItem) => void;
-  onFocus: (value: string | undefined) => void;
 };
 
 const RadioTileLabel = styled(OakLabel)<OakLabelProps>`
@@ -55,7 +53,8 @@ const RadioTileFocus = styled(OakBox)<OakBoxProps>`
 const OakRadioTileCss = css<OakRadioTileProps>``;
 
 const UnstyledComponent = (props: OakRadioTileProps) => {
-  const { tileItem, isChecked, isFocussed, id, onChange, onFocus } = props;
+  const { tileItem, isChecked, id, onChange } = props;
+  const [isFocussed, setIsFocussed] = useState(false);
   return (
     <OakBox
       $borderColor="border-neutral"
@@ -73,6 +72,7 @@ const UnstyledComponent = (props: OakRadioTileProps) => {
           $ba="border-solid-l"
           $borderColor="grey60"
           $borderRadius="border-radius-s"
+          data-testid="radio-tile-focus"
         />
       )}
 
@@ -83,12 +83,15 @@ const UnstyledComponent = (props: OakRadioTileProps) => {
           checked={isChecked}
           onChange={() => onChange(tileItem)}
           tabIndex={0}
-          onFocus={() => onFocus(tileItem.id)}
-          onBlur={() => onFocus(undefined)}
+          onFocus={() => {
+            console.log("diego on focus");
+            setIsFocussed(true);
+          }}
+          onBlur={() => setIsFocussed(false)}
           onClick={(e) => {
             // remove focus on mouse click events
             if (e.clientX || e.clientY) {
-              onFocus(undefined);
+              setIsFocussed(false);
             }
           }}
         />
@@ -106,11 +109,12 @@ const UnstyledComponent = (props: OakRadioTileProps) => {
         >
           {isChecked && (
             <OakBox
-              $height={"all-spacing-4"}
+              $height="all-spacing-4"
               $width="all-spacing-4"
               $background="black"
               $position="absolute"
               $borderRadius="border-radius-circle"
+              data-testid="radio-tile-checked"
             />
           )}
         </OakFlex>
