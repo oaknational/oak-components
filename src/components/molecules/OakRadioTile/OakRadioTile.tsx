@@ -83,10 +83,7 @@ const UnstyledComponent = (props: OakRadioTileProps) => {
           checked={isChecked}
           onChange={() => onChange(tileItem)}
           tabIndex={0}
-          onFocus={() => {
-            console.log("diego on focus");
-            setIsFocussed(true);
-          }}
+          onFocus={() => setIsFocussed(true)}
           onBlur={() => setIsFocussed(false)}
           onClick={(e) => {
             // remove focus on mouse click events

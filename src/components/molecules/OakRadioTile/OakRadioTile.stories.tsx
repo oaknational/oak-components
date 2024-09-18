@@ -9,11 +9,10 @@ const meta: Meta<typeof OakRadioTile> = {
   tags: ["autodocs"],
   argTypes: {
     isChecked: { control: "boolean" },
-    isFocussed: { control: "boolean" },
   },
   parameters: {
     controls: {
-      include: ["isChecked", "isFocussed"],
+      include: ["isChecked"],
     },
   },
 };
@@ -26,10 +25,8 @@ export const Default: Story = {
   render: (args) => <OakRadioTile {...args} />,
   args: {
     isChecked: false,
-    isFocussed: false,
     tileItem: { id: "id", label: "Radio tile" },
     id: "id",
     onChange: () => {},
-    onFocus: () => {},
   },
 };
