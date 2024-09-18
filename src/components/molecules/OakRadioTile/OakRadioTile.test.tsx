@@ -1,13 +1,13 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
+import { ThemeProvider } from "styled-components";
+import { screen } from "@testing-library/react";
 
 import { OakRadioTile } from "./OakRadioTile";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { oakDefaultTheme } from "@/styles";
-import { ThemeProvider } from "styled-components";
-import { screen } from "@testing-library/react";
 
 describe("CopyPasteThisComponent", () => {
   it("renders", () => {
