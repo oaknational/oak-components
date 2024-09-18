@@ -9,8 +9,17 @@ import {
   OakLabel,
   OakLabelProps,
 } from "@/components/atoms";
+import { parseColor } from "@/styles/helpers/parseColor";
 
 export type TileItem = { id: string; label: string };
+export const isTileItem = (u: unknown): u is TileItem => {
+  return (
+    typeof u === "object" &&
+    u !== null &&
+    typeof (u as TileItem).id === "string" &&
+    typeof (u as TileItem).label === "string"
+  );
+};
 
 export type OakRadioTileProps = {
   tileItem: TileItem;
@@ -36,7 +45,7 @@ const HiddenRadioButtonInput = styled.input.attrs({
 `;
 
 const RadioTileFocus = styled(OakBox)<OakBoxProps>`
-  box-shadow: ${`inset 0 0 0 0.15rem #ffe555`};
+  box-shadow: ${`inset 0 0 0 0.15rem ${parseColor("lemon")}`};
   width: calc(100% + 12px);
   height: calc(100% + 12px);
   top: -6px;
@@ -53,8 +62,7 @@ const UnstyledComponent = (props: OakRadioTileProps) => {
       $ba="border-solid-m"
       $borderRadius="border-radius-s"
       $pa="inner-padding-s"
-      key={tileItem.id}
-      $position={"relative"}
+      $position="relative"
       $background={isFocussed || isChecked ? "black" : "transparent"}
       $color={isFocussed || isChecked ? "white" : "black"}
     >
@@ -77,22 +85,28 @@ const UnstyledComponent = (props: OakRadioTileProps) => {
           tabIndex={0}
           onFocus={() => onFocus(tileItem.id)}
           onBlur={() => onFocus(undefined)}
+          onClick={(e) => {
+            // remove focus on mouse click events
+            if (e.clientX || e.clientY) {
+              onFocus(undefined);
+            }
+          }}
         />
         <OakFlex
-          $height="all-spacing-6"
+          $height={"all-spacing-6"}
           $width="all-spacing-6"
           $borderColor="border-neutral"
           $flexGrow={0}
           $flexShrink={0}
-          $alignItems="center"
-          $justifyContent="center"
-          $background="bg-primary"
+          $alignItems={"center"}
+          $justifyContent={"center"}
+          $background={"bg-primary"}
           $ba="border-solid-m"
           $borderRadius="border-radius-circle"
         >
           {isChecked && (
             <OakBox
-              $height="all-spacing-4"
+              $height={"all-spacing-4"}
               $width="all-spacing-4"
               $background="black"
               $position="absolute"
