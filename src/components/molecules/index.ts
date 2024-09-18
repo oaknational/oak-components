@@ -27,6 +27,7 @@ export * from "./OakPrimaryInvertedButton";
 export * from "./OakPromoTag";
 export * from "./OakRadioButton";
 export * from "./OakRadioGroup";
+export * from "./OakRadioTile";
 export * from "./OakRoundIcon";
 export * from "./OakSecondaryButton";
 export * from "./OakSecondaryButtonAsRadio";

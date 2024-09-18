@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakRadioTile matches snapshot 1`] = `
+.c0 {
+  position: relative;
+  padding: 0.75rem;
+  color: #222222;
+  background: transparent;
+  border: 0.125rem solid;
+  border-color: #808080;
+  border-radius: 0.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c4 {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #ffffff;
+  border: 0.125rem solid;
+  border-color: #808080;
+  border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.c1 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c2 {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.c3 {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+<div
+  className="c0"
+>
+  <label
+    className="c1 c2"
+    htmlFor="id"
+  >
+    <input
+      checked={false}
+      className="c3"
+      id="id"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      tabIndex={0}
+      type="radio"
+      value="id"
+    />
+    <div
+      className="c4 c5"
+    />
+    ID
+  </label>
+</div>
+`;
