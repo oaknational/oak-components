@@ -3,12 +3,12 @@ import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
 import { ThemeProvider } from "styled-components";
 import { screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 
 import { OakRadioTile, isTileItem } from "./OakRadioTile";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { oakDefaultTheme } from "@/styles";
-import userEvent from "@testing-library/user-event";
 
 describe("isTileItem", () => {
   it("guards type correctly", () => {
