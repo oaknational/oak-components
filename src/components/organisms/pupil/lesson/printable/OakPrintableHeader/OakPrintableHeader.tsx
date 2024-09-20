@@ -59,12 +59,12 @@ export const OakPrintableHeader = ({
       </OakFlex>
       <OakFlex $flexDirection={"column"} $gap={"space-between-xs"}>
         <OakJauntyAngleLabel
-          label={`Lesson video completion - ${videoPercentage}`}
+          label={`Lesson video completion - ${videoPercentage}%`}
           $background={"bg-neutral"}
           $font={"heading-light-7"}
         />
         <OakJauntyAngleLabel
-          label={`Worksheet downloaded - ${worksheetDownloaded}%`}
+          label={`Worksheet downloaded - ${worksheetDownloaded ? "Yes" : "No"}`}
           $background={"bg-neutral"}
           $font={"heading-light-7"}
         />
