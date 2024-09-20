@@ -18,9 +18,8 @@ export type OakPrintableHeaderProps = {
 } & FlexStyleProps;
 
 /**
- * This component is the header for the pupil journey;
+ * This component is the header for the printable view;
  *
- * the icon, title and list of items are passed as props and change change depending on which page it is called
  *
  *
  */

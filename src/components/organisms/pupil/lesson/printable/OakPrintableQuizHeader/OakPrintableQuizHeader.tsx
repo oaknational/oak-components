@@ -1,4 +1,5 @@
 import React from "react";
+
 import { OakBox, OakFlex, OakHeading, OakSpan } from "@/components/atoms";
 import { FlexStyleProps } from "@/styles/utils/flexStyle";
 
@@ -10,9 +11,8 @@ export type OakPrintableQuizHeaderProps = {
 } & FlexStyleProps;
 
 /**
- * This component is the header for the pupil journey;
+ * This component is the header for quiz section in the printable view;
  *
- * the icon, title and list of items are passed as props and change change depending on which page it is called
  *
  *
  */
