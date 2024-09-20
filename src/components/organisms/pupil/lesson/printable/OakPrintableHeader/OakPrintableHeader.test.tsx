@@ -17,6 +17,8 @@ describe("OakPrintableHeader", () => {
           alt="icon"
           breadcrumbs={["first", "second", "third", "fourth"]}
           title="Pupil Journey Header"
+          worksheetDownloaded={true}
+          videoPercentage={80}
           data-testid="test"
         />
       </ThemeProvider>,
@@ -33,6 +35,8 @@ describe("OakPrintableHeader", () => {
           alt="icon"
           breadcrumbs={["first", "second", "third", "fourth"]}
           title="Pupil Journey Header"
+          worksheetDownloaded={true}
+          videoPercentage={80}
         />
       </ThemeProvider>,
     ).toJSON();

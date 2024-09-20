@@ -18,6 +18,8 @@ const meta: Meta<typeof OakPrintableHeader> = {
     iconName: "subject-science",
     alt: "icon",
     breadcrumbs: ["first", "second", "third", "fourth"],
+    worksheetDownloaded: true,
+    videoPercentage: 80,
   },
 };
 

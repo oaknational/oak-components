@@ -15,6 +15,8 @@ export type OakPrintableHeaderProps = {
   alt?: OakIconProps["alt"];
   breadcrumbs: OakBulletListProps["listItems"];
   optionalityTitle?: string;
+  worksheetDownloaded: boolean;
+  videoPercentage: number;
 } & FlexStyleProps;
 
 /**
@@ -28,6 +30,8 @@ export const OakPrintableHeader = ({
   iconName,
   alt,
   breadcrumbs,
+  worksheetDownloaded,
+  videoPercentage,
 }: OakPrintableHeaderProps) => {
   return (
     <OakFlex
@@ -55,12 +59,12 @@ export const OakPrintableHeader = ({
       </OakFlex>
       <OakFlex $flexDirection={"column"} $gap={"space-between-xs"}>
         <OakJauntyAngleLabel
-          label="Lesson video completion - 80%"
+          label={`Lesson video completion - ${videoPercentage}`}
           $background={"bg-neutral"}
           $font={"heading-light-7"}
         />
         <OakJauntyAngleLabel
-          label="Worksheet downloaded - No"
+          label={`Worksheet downloaded - ${worksheetDownloaded}%`}
           $background={"bg-neutral"}
           $font={"heading-light-7"}
         />
