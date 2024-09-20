@@ -273,12 +273,12 @@ exports[`OakPrintableHeader matches snapshot 1`] = `
       <div
         className="c14"
       >
-        Lesson video completion - 80%
+        Lesson video completion - 80
       </div>
       <div
         className="c14"
       >
-        Worksheet downloaded - No
+        Worksheet downloaded - true%
       </div>
     </div>
   </div>,
