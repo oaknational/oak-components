@@ -13,8 +13,8 @@ import styled from "styled-components";
 import { InternalShadowRoundButton } from "@/components/molecules/InternalShadowRoundButton";
 import { OakBox, OakFlex, OakImage } from "@/components/atoms";
 import { parseOpacity } from "@/styles/helpers/parseOpacity";
-import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import useCanaryObserver from "@/hooks/useCanaryObserver";
+import InternalSlideInFlex from "@/components/atoms/InternalSlideInFlex/InternalSlideInFlex";
 
 export type OakModalProps = {
   /**
@@ -65,19 +65,6 @@ export const FadeOutBox = styled(OakBox)<{ $state: TransitionStatus }>`
         return parseOpacity("semi-transparent");
       default:
         return parseOpacity("transparent");
-    }
-  }};
-`;
-
-export const SlideInFlex = styled(OakFlex)<{ $state: TransitionStatus }>`
-  max-width: calc(100vw - ${parseSpacing("inner-padding-l")});
-  transform: ${({ $state }) => {
-    switch ($state) {
-      case "entered":
-      case "entering":
-        return "translateX(0)";
-      default:
-        return "translateX(-100%)";
     }
   }};
 `;
@@ -138,20 +125,11 @@ export const OakModal = ({
             $state={state}
             $transition="standard-ease"
           />
-          <SlideInFlex
+          <InternalSlideInFlex
             ref={transitionRef}
-            $background="bg-primary"
-            $position="fixed"
-            $left="all-spacing-0"
-            $top="all-spacing-0"
-            $bottom="all-spacing-0"
-            $width={["all-spacing-22"]}
             $zIndex={finalZIndex}
-            $flexDirection="column"
-            $transition="standard-ease"
-            $color="text-primary"
-            role="dialog"
             $state={state}
+            isModal={true}
             {...rest}
           >
             <OakFlex
@@ -196,7 +174,7 @@ export const OakModal = ({
               </OakFlex>
               {footerSlot}
             </div>
-          </SlideInFlex>
+          </InternalSlideInFlex>
         </FocusOn>
       )}
     </Transition>,

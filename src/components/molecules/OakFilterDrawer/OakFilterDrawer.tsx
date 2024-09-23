@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { FocusOn } from "react-focus-on";
-import { Transition, TransitionStatus } from "react-transition-group";
+import { Transition } from "react-transition-group";
 import styled from "styled-components";
 
 import { InternalShadowRoundButton } from "@/components/molecules/InternalShadowRoundButton";
@@ -9,6 +9,7 @@ import { OakBox, OakFlex, OakHeading } from "@/components/atoms";
 import { OakModalProps, OakSecondaryLink } from "@/components/molecules";
 import { FadeOutBox } from "@/components/molecules/OakModal/OakModal";
 import useCanaryObserver from "@/hooks/useCanaryObserver";
+import InternalSlideInFlex from "@/components/atoms/InternalSlideInFlex/InternalSlideInFlex";
 
 type OakFilterDrawerProps = OakModalProps & {
   /**
@@ -16,22 +17,6 @@ type OakFilterDrawerProps = OakModalProps & {
    */
   clearAllInputs: () => void;
 };
-
-const FilterDrawerSlideInFlex = styled(OakFlex)<{ $state: TransitionStatus }>`
-  max-width: 100vw;
-  transform: ${({ $state }) => {
-    switch ($state) {
-      case "entered":
-      case "entering":
-        return "translateX(0)";
-      default:
-        return "translateX(100%)";
-    }
-  }};
-  @media (min-width: 768px) {
-    max-width: 600px;
-  }
-`;
 
 const StyledClearButton = styled(OakSecondaryLink)`
   text-decoration: none;
@@ -102,20 +87,11 @@ export const OakFilterDrawer = ({
             $state={state}
             $transition="standard-ease"
           />
-          <FilterDrawerSlideInFlex
+          <InternalSlideInFlex
             ref={transitionRef}
-            $background="bg-primary"
-            $right="all-spacing-0"
-            $position="fixed"
-            $bottom="all-spacing-0"
-            $width={["all-spacing-22"]}
-            $top="all-spacing-0"
-            $transition="standard-ease"
             $zIndex={finalZIndex}
-            $flexDirection="column"
             $state={state}
-            $color="text-primary"
-            role="dialog"
+            isModal={false}
             {...rest}
           >
             <OakFlex
@@ -173,7 +149,7 @@ export const OakFilterDrawer = ({
                 {footerSlot}
               </OakFlex>
             </div>
-          </FilterDrawerSlideInFlex>
+          </InternalSlideInFlex>
         </FocusOn>
       )}
     </Transition>,
