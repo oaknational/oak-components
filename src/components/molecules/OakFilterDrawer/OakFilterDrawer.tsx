@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { FocusOn } from "react-focus-on";
 import { Transition } from "react-transition-group";
@@ -10,6 +10,7 @@ import { OakModalProps, OakSecondaryLink } from "@/components/molecules";
 import { FadeOutBox } from "@/components/molecules/OakModal/OakModal";
 import useCanaryObserver from "@/hooks/useCanaryObserver";
 import InternalSlideInFlex from "@/components/atoms/InternalSlideInFlex/InternalSlideInFlex";
+import useMounted from "@/hooks/useMounted";
 
 type OakFilterDrawerProps = OakModalProps & {
   /**
@@ -46,22 +47,18 @@ export const OakFilterDrawer = ({
   footerSlot,
   ...rest
 }: OakFilterDrawerProps) => {
+  const isMounted = useMounted();
+
+  if (!isMounted) {
+    return null;
+  }
+
   const [canaryElement, setCanaryElement] = useState<HTMLDivElement | null>(
     null,
   );
   const isScrolled = useCanaryObserver(canaryElement);
 
   const transitionRef = useRef<HTMLDivElement>(null);
-  // `createPortal` is not supported in SSR so we can only render when mounted on the client
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) {
-    return null;
-  }
 
   const finalZIndex = typeof zIndex === "number" ? zIndex : "modal-dialog";
 

@@ -1,10 +1,4 @@
-import React, {
-  HTMLAttributes,
-  ReactNode,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import React, { HTMLAttributes, ReactNode, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { FocusOn } from "react-focus-on";
 import { Transition, TransitionStatus } from "react-transition-group";
@@ -15,6 +9,7 @@ import { OakBox, OakFlex, OakImage } from "@/components/atoms";
 import { parseOpacity } from "@/styles/helpers/parseOpacity";
 import useCanaryObserver from "@/hooks/useCanaryObserver";
 import InternalSlideInFlex from "@/components/atoms/InternalSlideInFlex/InternalSlideInFlex";
+import useMounted from "@/hooks/useMounted";
 
 export type OakModalProps = {
   /**
@@ -95,11 +90,7 @@ export const OakModal = ({
   const isScrolled = useCanaryObserver(canaryElement);
 
   // `createPortal` is not supported in SSR so we can only render when mounted on the client
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+  const isMounted = useMounted();
 
   if (!isMounted) {
     return null;
