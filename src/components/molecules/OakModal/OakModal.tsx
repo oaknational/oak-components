@@ -69,7 +69,7 @@ export const FadeOutBox = styled(OakBox)<{ $state: TransitionStatus }>`
   }};
 `;
 
-const SlideInFlex = styled(OakFlex)<{ $state: TransitionStatus }>`
+export const SlideInFlex = styled(OakFlex)<{ $state: TransitionStatus }>`
   max-width: calc(100vw - ${parseSpacing("inner-padding-l")});
   transform: ${({ $state }) => {
     switch ($state) {
