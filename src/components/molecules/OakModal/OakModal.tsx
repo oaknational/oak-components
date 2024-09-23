@@ -2,7 +2,6 @@ import React, {
   HTMLAttributes,
   ReactNode,
   useEffect,
-  useLayoutEffect,
   useRef,
   useState,
 } from "react";
@@ -15,6 +14,7 @@ import { InternalShadowRoundButton } from "@/components/molecules/InternalShadow
 import { OakBox, OakFlex, OakImage } from "@/components/atoms";
 import { parseOpacity } from "@/styles/helpers/parseOpacity";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
+import useCanaryObserver from "@/hooks/useCanaryObserver";
 
 export type OakModalProps = {
   /**
@@ -99,27 +99,9 @@ export const OakModal = ({
   const [canaryElement, setCanaryElement] = useState<HTMLDivElement | null>(
     null,
   );
-  const [isScrolled, setIsScrolled] = useState(false);
   const transitionRef = useRef<HTMLDivElement>(null);
 
-  useLayoutEffect(() => {
-    if (!canaryElement) {
-      return;
-    }
-    const observer = new IntersectionObserver(
-      (mutations) => {
-        setIsScrolled(!mutations.some((mutation) => mutation.isIntersecting));
-      },
-      {
-        root: canaryElement.parentElement,
-      },
-    );
-    observer.observe(canaryElement);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [canaryElement]);
+  const isScrolled = useCanaryObserver(canaryElement);
 
   // `createPortal` is not supported in SSR so we can only render when mounted on the client
   const [isMounted, setIsMounted] = useState(false);

@@ -42,6 +42,7 @@ const meta: Meta<typeof OakFilterDrawer> = {
           {[1, 2, 3].map((i) => {
             return (
               <OakSearchFilterCheckBox
+                key={i}
                 onChange={() => {}}
                 value={`filter-option-${i}`}
                 id={`filter-option-${i}`}
