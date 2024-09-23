@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { FocusOn } from "react-focus-on";
 import { Transition, TransitionStatus } from "react-transition-group";
