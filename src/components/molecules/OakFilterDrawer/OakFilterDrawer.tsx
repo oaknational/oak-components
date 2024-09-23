@@ -105,17 +105,17 @@ export const OakFilterDrawer = ({
           <FilterDrawerSlideInFlex
             ref={transitionRef}
             $background="bg-primary"
-            $position="fixed"
             $right="all-spacing-0"
-            $top="all-spacing-0"
+            $position="fixed"
             $bottom="all-spacing-0"
             $width={["all-spacing-22"]}
+            $top="all-spacing-0"
+            $transition="standard-ease"
             $zIndex={finalZIndex}
             $flexDirection="column"
-            $transition="standard-ease"
+            $state={state}
             $color="text-primary"
             role="dialog"
-            $state={state}
             {...rest}
           >
             <OakFlex
