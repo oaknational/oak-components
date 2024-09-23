@@ -1,101 +1,65 @@
-import React, {
-  HTMLAttributes,
-  ReactNode,
-  useEffect,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { FocusOn } from "react-focus-on";
 import { Transition, TransitionStatus } from "react-transition-group";
 import styled from "styled-components";
 
 import { InternalShadowRoundButton } from "@/components/molecules/InternalShadowRoundButton";
-import { OakBox, OakFlex, OakImage } from "@/components/atoms";
-import { parseOpacity } from "@/styles/helpers/parseOpacity";
-import { parseSpacing } from "@/styles/helpers/parseSpacing";
+import { OakBox, OakFlex, OakHeading } from "@/components/atoms";
+import { OakModalProps, OakSecondaryLink } from "@/components/molecules";
+import { FadeOutBox } from "@/components/molecules/OakModal/OakModal";
 
-export type OakModalProps = {
+type OakFilterDrawerProps = OakModalProps & {
   /**
-   * The content of the modal.
-   * Use with `<OakModalBody>` for best results.
+   * Called when the clear button is clicked
    */
-  children: ReactNode;
-  /**
-   * Slot for the footer of the modal.
-   * Use with `<OakModalFooter>` for best results.
-   */
-  footerSlot?: ReactNode;
-  /**
-   * Indicates whether the modal is open or closed
-   */
-  isOpen: boolean;
-  /**
-   * Called when the modal is closed
-   */
-  onClose: () => void;
-  /**
-   * The DOM container to render the modal portal into.
-   *
-   * @default document.body
-   */
-  domContainer?: Element;
-  /**
-   * Optional z-index override.
-   *
-   * Defaults to token: `modal-dialog`
-   *
-   * 🚨 This prop is intended for use by consumers that do not use
-   * the internal system of z-index tokens.
-   *
-   * NB *The modal is rendered inside a portal so it will not respect the stacking context of its parent component*.
-   */
-  zIndex?: number;
-} & Pick<
-  HTMLAttributes<Element>,
-  "aria-label" | "aria-description" | "aria-labelledby" | "aria-describedby"
->;
-
-export const FadeOutBox = styled(OakBox)<{ $state: TransitionStatus }>`
-  opacity: ${({ $state }) => {
-    switch ($state) {
-      case "entered":
-      case "entering":
-        return parseOpacity("semi-transparent");
-      default:
-        return parseOpacity("transparent");
-    }
-  }};
-`;
+  clearAllInputs: () => void;
+};
 
 const SlideInFlex = styled(OakFlex)<{ $state: TransitionStatus }>`
-  max-width: calc(100vw - ${parseSpacing("inner-padding-l")});
+  max-width: 100vw;
   transform: ${({ $state }) => {
     switch ($state) {
       case "entered":
       case "entering":
         return "translateX(0)";
       default:
-        return "translateX(-100%)";
+        return "translateX(100%)";
     }
   }};
+  @media (min-width: 768px) {
+    max-width: 600px;
+  }
 `;
 
-const logoSrc = `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/logo-mark.svg`;
+const StyledClearButton = styled(OakSecondaryLink)`
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
 
 /**
- * Modal dialog with trapped focus and a close button.
+ *
+ * Based on the OakModal component, this component is a filter drawer that slides in from the right side of the screen.
+ * Designed for mobile and tablet devices
+ *
+ * ### Callbacks
+ * clearAllInputs: used to clear filter options
+ *
  */
-export const OakModal = ({
-  children,
-  footerSlot,
-  domContainer,
+
+export const OakFilterDrawer = ({
   isOpen,
+  domContainer,
   onClose,
   zIndex,
+  children,
+  clearAllInputs,
+  footerSlot,
   ...rest
-}: OakModalProps) => {
+}: OakFilterDrawerProps) => {
   const [canaryElement, setCanaryElement] = useState<HTMLDivElement | null>(
     null,
   );
@@ -120,7 +84,6 @@ export const OakModal = ({
       observer.disconnect();
     };
   }, [canaryElement]);
-
   // `createPortal` is not supported in SSR so we can only render when mounted on the client
   const [isMounted, setIsMounted] = useState(false);
 
@@ -160,7 +123,7 @@ export const OakModal = ({
             ref={transitionRef}
             $background="bg-primary"
             $position="fixed"
-            $left="all-spacing-0"
+            $right="all-spacing-0"
             $top="all-spacing-0"
             $bottom="all-spacing-0"
             $width={["all-spacing-22"]}
@@ -173,16 +136,20 @@ export const OakModal = ({
             {...rest}
           >
             <OakFlex
-              $ma="space-between-s"
+              $ma="space-between-m"
               $justifyContent="space-between"
               $alignItems="center"
             >
-              <OakImage
-                src={logoSrc}
-                $height="all-spacing-8"
-                $width="all-spacing-7"
-                alt=""
-              />
+              <StyledClearButton
+                onClick={clearAllInputs}
+                aria-label="Clear"
+                element="button"
+              >
+                Clear
+              </StyledClearButton>
+              <OakHeading $font={"heading-6"} tag="h3">
+                Filters
+              </OakHeading>
               <InternalShadowRoundButton
                 onClick={onClose}
                 aria-label="Close"
@@ -210,9 +177,18 @@ export const OakModal = ({
                 }
               >
                 <div ref={setCanaryElement} />
-                {children}
+                <OakBox $mh="space-between-m">{children}</OakBox>
               </OakFlex>
-              {footerSlot}
+              <OakFlex
+                $flexDirection={["column", "row"]}
+                $bt="border-solid-s"
+                $borderColor="border-neutral-lighter"
+                $pa="inner-padding-xl"
+                $gap={["space-between-s", "space-between-m"]}
+                $width="100%"
+              >
+                {footerSlot}
+              </OakFlex>
             </div>
           </SlideInFlex>
         </FocusOn>
