@@ -259,15 +259,15 @@ exports[`OakModal matches snapshot when mounted 1`] = `
   background: transparent;
 }
 
-.c1 {
-  opacity: 0.25;
-}
-
 .c4 {
   max-width: calc(100vw - 1.25rem);
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   transform: translateX(0);
+}
+
+.c1 {
+  opacity: 0.25;
 }
 
 <div>
