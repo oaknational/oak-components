@@ -49,9 +49,9 @@ export const OakFilterDrawer = ({
   const [canaryElement, setCanaryElement] = useState<HTMLDivElement | null>(
     null,
   );
-  const transitionRef = useRef<HTMLDivElement>(null);
-
   const isScrolled = useCanaryObserver(canaryElement);
+
+  const transitionRef = useRef<HTMLDivElement>(null);
   // `createPortal` is not supported in SSR so we can only render when mounted on the client
   const [isMounted, setIsMounted] = useState(false);
 
@@ -78,20 +78,12 @@ export const OakFilterDrawer = ({
     >
       {(state) => (
         <FocusOn onEscapeKey={onClose} returnFocus autoFocus>
-          <FadeOutBox
-            $position="fixed"
-            $inset="all-spacing-0"
-            $zIndex={finalZIndex}
-            $background="black"
-            $opacity="semi-transparent"
-            $state={state}
-            $transition="standard-ease"
-          />
+          <FadeOutBox $zIndex={finalZIndex} $state={state} />
           <InternalSlideInFlex
+            isModal={false}
             ref={transitionRef}
             $zIndex={finalZIndex}
             $state={state}
-            isModal={false}
             {...rest}
           >
             <OakFlex

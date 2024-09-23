@@ -67,6 +67,10 @@ export const FadeOutBox = styled(OakBox)<{ $state: TransitionStatus }>`
         return parseOpacity("transparent");
     }
   }};
+  background-color: black;
+  position: fixed;
+  inset: 0;
+  transition: ease;
 `;
 
 const logoSrc = `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/logo-mark.svg`;
@@ -116,15 +120,7 @@ export const OakModal = ({
     >
       {(state) => (
         <FocusOn onEscapeKey={onClose} returnFocus autoFocus>
-          <FadeOutBox
-            $position="fixed"
-            $inset="all-spacing-0"
-            $zIndex={finalZIndex}
-            $background="black"
-            $opacity="semi-transparent"
-            $state={state}
-            $transition="standard-ease"
-          />
+          <FadeOutBox $zIndex={finalZIndex} $state={state} />
           <InternalSlideInFlex
             ref={transitionRef}
             $zIndex={finalZIndex}
