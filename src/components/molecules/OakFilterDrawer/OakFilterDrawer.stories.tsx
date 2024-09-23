@@ -77,7 +77,9 @@ const meta: Meta<typeof OakFilterDrawer> = {
 
     return (
       <>
-        <OakSecondaryButton onClick={onOpen}>Open modal</OakSecondaryButton>
+        <OakSecondaryButton onClick={onOpen}>
+          Open filter drawer
+        </OakSecondaryButton>
         <OakFilterDrawer
           {...args}
           onClose={onClose}
