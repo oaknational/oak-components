@@ -3,16 +3,16 @@ import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
 import { ThemeProvider } from "styled-components";
 
-import { OakPrintableQuizHeader } from "./OakPrintableQuizHeader";
+import { OakQuizPrintableSubHeader } from "./OakQuizPrintableSubHeader";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { oakDefaultTheme } from "@/styles";
 
-describe("OakPrintableQuizHeader", () => {
+describe("OakQuizPrintableSubHeader", () => {
   it("renders", () => {
     const { getByText } = renderWithTheme(
       <ThemeProvider theme={oakDefaultTheme}>
-        <OakPrintableQuizHeader
+        <OakQuizPrintableSubHeader
           grade={4}
           numQuestions={10}
           attempts={2}
@@ -28,7 +28,7 @@ describe("OakPrintableQuizHeader", () => {
     const tree = create(
       <ThemeProvider theme={oakDefaultTheme}>
         {" "}
-        <OakPrintableQuizHeader
+        <OakQuizPrintableSubHeader
           grade={4}
           numQuestions={10}
           attempts={2}

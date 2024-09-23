@@ -8,3 +8,5 @@ export * from "./OakQuizOrder";
 export * from "./OakQuizRadioButton";
 export * from "./OakQuizResultItem";
 export * from "./OakQuizTextInput";
+export * from "./OakQuizPrintableHeader";
+export * from "./OakQuizPrintableSubHeader";

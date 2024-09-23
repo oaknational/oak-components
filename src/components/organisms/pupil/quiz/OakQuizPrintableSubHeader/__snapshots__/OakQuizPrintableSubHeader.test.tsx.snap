@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OakPrintableQuizHeader matches snapshot 1`] = `
+exports[`OakQuizPrintableSubHeader matches snapshot 1`] = `
 [
   " ",
   .c0 {

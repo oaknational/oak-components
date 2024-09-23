@@ -9,7 +9,7 @@ import {
 import { OakFlex, OakHeading, OakIconProps } from "@/components/atoms";
 import { FlexStyleProps } from "@/styles/utils/flexStyle";
 
-export type OakPrintableHeaderProps = {
+export type OakQuizPrintableHeaderProps = {
   title: string;
   iconName: OakIconProps["iconName"];
   alt?: OakIconProps["alt"];
@@ -25,14 +25,14 @@ export type OakPrintableHeaderProps = {
  *
  *
  */
-export const OakPrintableHeader = ({
+export const OakQuizPrintableHeader = ({
   title,
   iconName,
   alt,
   breadcrumbs,
   worksheetDownloaded,
   videoPercentage,
-}: OakPrintableHeaderProps) => {
+}: OakQuizPrintableHeaderProps) => {
   return (
     <OakFlex
       $flexDirection={"row"}

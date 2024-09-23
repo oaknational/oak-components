@@ -3,16 +3,16 @@ import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
 import { ThemeProvider } from "styled-components";
 
-import { OakPrintableHeader } from "./OakPrintableHeader";
+import { OakQuizPrintableHeader } from "./OakQuizPrintableHeader";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { oakDefaultTheme } from "@/styles";
 
-describe("OakPrintableHeader", () => {
+describe("OakQuizPrintableHeader", () => {
   it("renders", () => {
     const { getByText } = renderWithTheme(
       <ThemeProvider theme={oakDefaultTheme}>
-        <OakPrintableHeader
+        <OakQuizPrintableHeader
           iconName="subject-science"
           alt="icon"
           breadcrumbs={["first", "second", "third", "fourth"]}
@@ -30,7 +30,7 @@ describe("OakPrintableHeader", () => {
     const tree = create(
       <ThemeProvider theme={oakDefaultTheme}>
         {" "}
-        <OakPrintableHeader
+        <OakQuizPrintableHeader
           iconName="subject-science"
           alt="icon"
           breadcrumbs={["first", "second", "third", "fourth"]}

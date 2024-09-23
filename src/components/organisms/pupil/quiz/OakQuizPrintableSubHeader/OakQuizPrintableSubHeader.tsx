@@ -3,7 +3,7 @@ import React from "react";
 import { OakBox, OakFlex, OakHeading, OakSpan } from "@/components/atoms";
 import { FlexStyleProps } from "@/styles/utils/flexStyle";
 
-export type OakPrintableQuizHeaderProps = {
+export type OakQuizPrintableSubHeaderProps = {
   title: string;
   grade: number;
   numQuestions: number;
@@ -16,12 +16,12 @@ export type OakPrintableQuizHeaderProps = {
  *
  *
  */
-export const OakPrintableQuizHeader = ({
+export const OakQuizPrintableSubHeader = ({
   title,
   grade,
   numQuestions,
   attempts,
-}: OakPrintableQuizHeaderProps) => {
+}: OakQuizPrintableSubHeaderProps) => {
   return (
     <OakFlex
       $flexDirection={"row"}

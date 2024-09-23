@@ -6,4 +6,3 @@ export * from "./OakLessonReviewItem";
 export * from "./OakLessonReviewQuiz";
 export * from "./OakLessonTopNav";
 export * from "./OakLessonVideoTranscript";
-export * from "./printable";

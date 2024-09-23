@@ -1,10 +1,10 @@
 import React from "react";
 import { StoryObj, Meta } from "@storybook/react";
 
-import { OakPrintableHeader } from "./OakPrintableHeader";
+import { OakQuizPrintableHeader } from "./OakQuizPrintableHeader";
 
-const meta: Meta<typeof OakPrintableHeader> = {
-  component: OakPrintableHeader,
+const meta: Meta<typeof OakQuizPrintableHeader> = {
+  component: OakQuizPrintableHeader,
   tags: ["autodocs"],
   argTypes: {
     iconName: {},
@@ -25,14 +25,9 @@ const meta: Meta<typeof OakPrintableHeader> = {
 
 export default meta;
 
-type Story = StoryObj<typeof OakPrintableHeader>;
+type Story = StoryObj<typeof OakQuizPrintableHeader>;
 
 export const Default: Story = {
-  render: (args) => <OakPrintableHeader {...args} />,
+  render: (args) => <OakQuizPrintableHeader {...args} />,
   args: {},
-};
-
-export const WithOptionality: Story = {
-  render: (args) => <OakPrintableHeader {...args} />,
-  args: { optionalityTitle: "Optional title" },
 };
