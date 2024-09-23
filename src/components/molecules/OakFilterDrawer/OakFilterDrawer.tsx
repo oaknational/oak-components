@@ -1,16 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { FocusOn } from "react-focus-on";
-import { Transition } from "react-transition-group";
+import { Transition, TransitionStatus } from "react-transition-group";
 import styled from "styled-components";
 
 import { InternalShadowRoundButton } from "@/components/molecules/InternalShadowRoundButton";
 import { OakBox, OakFlex, OakHeading } from "@/components/atoms";
 import { OakModalProps, OakSecondaryLink } from "@/components/molecules";
-import {
-  FadeOutBox,
-  SlideInFlex,
-} from "@/components/molecules/OakModal/OakModal";
+import { FadeOutBox } from "@/components/molecules/OakModal/OakModal";
 import useCanaryObserver from "@/hooks/useCanaryObserver";
 
 type OakFilterDrawerProps = OakModalProps & {
@@ -20,7 +17,7 @@ type OakFilterDrawerProps = OakModalProps & {
   clearAllInputs: () => void;
 };
 
-const FilterSlideInFlex = styled(SlideInFlex)`
+const FilterDrawerSlideInFlex = styled(OakFlex)<{ $state: TransitionStatus }>`
   max-width: 100vw;
   transform: ${({ $state }) => {
     switch ($state) {
@@ -105,7 +102,7 @@ export const OakFilterDrawer = ({
             $state={state}
             $transition="standard-ease"
           />
-          <FilterSlideInFlex
+          <FilterDrawerSlideInFlex
             ref={transitionRef}
             $background="bg-primary"
             $position="fixed"
@@ -176,7 +173,7 @@ export const OakFilterDrawer = ({
                 {footerSlot}
               </OakFlex>
             </div>
-          </FilterSlideInFlex>
+          </FilterDrawerSlideInFlex>
         </FocusOn>
       )}
     </Transition>,
