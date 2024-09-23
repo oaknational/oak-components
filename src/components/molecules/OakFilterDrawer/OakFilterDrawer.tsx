@@ -47,12 +47,6 @@ export const OakFilterDrawer = ({
   footerSlot,
   ...rest
 }: OakFilterDrawerProps) => {
-  const isMounted = useMounted();
-
-  if (!isMounted) {
-    return null;
-  }
-
   const [canaryElement, setCanaryElement] = useState<HTMLDivElement | null>(
     null,
   );
@@ -60,6 +54,11 @@ export const OakFilterDrawer = ({
 
   const transitionRef = useRef<HTMLDivElement>(null);
 
+  const isMounted = useMounted();
+
+  if (!isMounted) {
+    return null;
+  }
   const finalZIndex = typeof zIndex === "number" ? zIndex : "modal-dialog";
 
   return createPortal(
