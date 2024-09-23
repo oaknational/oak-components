@@ -7,7 +7,10 @@ import styled from "styled-components";
 import { InternalShadowRoundButton } from "@/components/molecules/InternalShadowRoundButton";
 import { OakBox, OakFlex, OakHeading } from "@/components/atoms";
 import { OakModalProps, OakSecondaryLink } from "@/components/molecules";
-import { FadeOutBox , SlideInFlex } from "@/components/molecules/OakModal/OakModal";
+import {
+  FadeOutBox,
+  SlideInFlex,
+} from "@/components/molecules/OakModal/OakModal";
 import useCanaryObserver from "@/hooks/useCanaryObserver";
 
 type OakFilterDrawerProps = OakModalProps & {
