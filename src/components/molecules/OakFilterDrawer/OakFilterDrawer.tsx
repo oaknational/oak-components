@@ -98,28 +98,26 @@ export const OakFilterDrawer = ({
           iconName="cross"
         />
       </OakFlex>
-      <div style={{ display: "contents" }} data-autofocus-inside>
-        <OakFlex
-          $flexGrow={1}
-          $flexDirection="column"
-          $overflow="auto"
-          $bt="border-solid-s"
-          $borderColor={isScrolled ? "border-neutral-lighter" : "transparent"}
-        >
-          <div ref={setCanaryElement} />
-          <OakBox $mh="space-between-m">{children}</OakBox>
-        </OakFlex>
-        <OakFlex
-          $flexDirection={["column", "row"]}
-          $bt="border-solid-s"
-          $borderColor="border-neutral-lighter"
-          $pa="inner-padding-xl"
-          $gap={["space-between-s", "space-between-m"]}
-          $width="100%"
-        >
-          {footerSlot}
-        </OakFlex>
-      </div>
+      <OakFlex
+        $flexGrow={1}
+        $flexDirection="column"
+        $overflow="auto"
+        $bt="border-solid-s"
+        $borderColor={isScrolled ? "border-neutral-lighter" : "transparent"}
+      >
+        <div ref={setCanaryElement} />
+        <OakBox $mh="space-between-m">{children}</OakBox>
+      </OakFlex>
+      <OakFlex
+        $flexDirection={["column", "row"]}
+        $bt="border-solid-s"
+        $borderColor="border-neutral-lighter"
+        $pa="inner-padding-s"
+        $gap={["space-between-s", "space-between-m"]}
+        $width="100%"
+      >
+        {footerSlot}
+      </OakFlex>
     </InternalModalTransition>,
     domContainer ?? document.body,
   );

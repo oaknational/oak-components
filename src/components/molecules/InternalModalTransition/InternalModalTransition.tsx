@@ -54,7 +54,11 @@ const InternalModalTransition: FC<TransitionProps> = ({
     >
       {(state) => (
         <FocusOn onEscapeKey={onClose} returnFocus autoFocus>
-          <FadeOutBox $zIndex={finalZIndex} $state={state} />
+          <FadeOutBox
+            $zIndex={finalZIndex}
+            $state={state}
+            onClick={!isModal ? onClose : undefined}
+          />
           <InternalSlideInFlex
             isModal={isModal}
             ref={transitionRef}
