@@ -1,9 +1,11 @@
 import React, { FC } from "react";
 import { FocusOn } from "react-focus-on";
-import { Transition } from "react-transition-group";
+import { Transition, TransitionStatus } from "react-transition-group";
+import styled from "styled-components";
 
-import { FadeOutBox } from "@/components/molecules/OakModal";
 import InternalSlideInFlex from "@/components/atoms/InternalSlideInFlex/InternalSlideInFlex";
+import { OakBox } from "@/components/atoms/OakBox";
+import { parseOpacity } from "@/styles/helpers/parseOpacity";
 
 type TransitionProps = {
   children: React.ReactNode;
@@ -13,6 +15,22 @@ type TransitionProps = {
   finalZIndex: number | "modal-dialog";
   isModal: boolean;
 };
+
+const FadeOutBox = styled(OakBox)<{ $state: TransitionStatus }>`
+  opacity: ${({ $state }) => {
+    switch ($state) {
+      case "entered":
+      case "entering":
+        return parseOpacity("semi-transparent");
+      default:
+        return parseOpacity("transparent");
+    }
+  }};
+  background-color: black;
+  position: fixed;
+  inset: 0;
+  transition: ease;
+`;
 
 const InternalModalTransition: FC<TransitionProps> = ({
   children,
