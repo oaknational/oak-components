@@ -1,15 +1,14 @@
 import React, { HTMLAttributes, ReactNode, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { FocusOn } from "react-focus-on";
-import { Transition, TransitionStatus } from "react-transition-group";
+import { TransitionStatus } from "react-transition-group";
 import styled from "styled-components";
 
 import { InternalShadowRoundButton } from "@/components/molecules/InternalShadowRoundButton";
 import { OakBox, OakFlex, OakImage } from "@/components/atoms";
 import { parseOpacity } from "@/styles/helpers/parseOpacity";
 import useCanaryObserver from "@/hooks/useCanaryObserver";
-import InternalSlideInFlex from "@/components/atoms/InternalSlideInFlex/InternalSlideInFlex";
 import useMounted from "@/hooks/useMounted";
+import InternalModalTransition from "@/components/atoms/InternalModalTransition/InternalModalTransition";
 
 export type OakModalProps = {
   /**
@@ -99,72 +98,55 @@ export const OakModal = ({
   const finalZIndex = typeof zIndex === "number" ? zIndex : "modal-dialog";
 
   return createPortal(
-    <Transition
-      in={isOpen}
-      nodeRef={transitionRef}
-      addEndListener={(done) => {
-        transitionRef.current?.addEventListener("transitionend", done);
-      }}
-      timeout={500}
-      mountOnEnter
-      unmountOnExit
+    <InternalModalTransition
+      isOpen={isOpen}
+      transitionRef={transitionRef}
+      onClose={onClose}
+      finalZIndex={finalZIndex}
+      isModal={true}
+      {...rest}
     >
-      {(state) => (
-        <FocusOn onEscapeKey={onClose} returnFocus autoFocus>
-          <FadeOutBox $zIndex={finalZIndex} $state={state} />
-          <InternalSlideInFlex
-            ref={transitionRef}
-            $zIndex={finalZIndex}
-            $state={state}
-            isModal={true}
-            {...rest}
-          >
-            <OakFlex
-              $ma="space-between-s"
-              $justifyContent="space-between"
-              $alignItems="center"
-            >
-              <OakImage
-                src={logoSrc}
-                $height="all-spacing-8"
-                $width="all-spacing-7"
-                alt=""
-              />
-              <InternalShadowRoundButton
-                onClick={onClose}
-                aria-label="Close"
-                defaultIconBackground="transparent"
-                defaultIconColor="black"
-                defaultTextColor="transparent"
-                hoverTextColor="transparent"
-                disabledTextColor="transparent"
-                hoverIconBackground="black"
-                hoverIconColor="white"
-                disabledIconBackground="transparent"
-                iconBackgroundSize="all-spacing-6"
-                iconSize="all-spacing-6"
-                iconName="cross"
-              />
-            </OakFlex>
-            <div style={{ display: "contents" }} data-autofocus-inside>
-              <OakFlex
-                $flexGrow={1}
-                $flexDirection="column"
-                $overflow="auto"
-                $bt="border-solid-s"
-                $borderColor={
-                  isScrolled ? "border-neutral-lighter" : "transparent"
-                }
-              >
-                <div ref={setCanaryElement} />
-                {children}
-              </OakFlex>
-              {footerSlot}
-            </div>
-          </InternalSlideInFlex>
-        </FocusOn>
-      )}
-    </Transition>,
+      <OakFlex
+        $ma="space-between-s"
+        $justifyContent="space-between"
+        $alignItems="center"
+      >
+        <OakImage
+          src={logoSrc}
+          $height="all-spacing-8"
+          $width="all-spacing-7"
+          alt=""
+        />
+        <InternalShadowRoundButton
+          onClick={onClose}
+          aria-label="Close"
+          defaultIconBackground="transparent"
+          defaultIconColor="black"
+          defaultTextColor="transparent"
+          hoverTextColor="transparent"
+          disabledTextColor="transparent"
+          hoverIconBackground="black"
+          hoverIconColor="white"
+          disabledIconBackground="transparent"
+          iconBackgroundSize="all-spacing-6"
+          iconSize="all-spacing-6"
+          iconName="cross"
+        />
+      </OakFlex>
+      <div style={{ display: "contents" }} data-autofocus-inside>
+        <OakFlex
+          $flexGrow={1}
+          $flexDirection="column"
+          $overflow="auto"
+          $bt="border-solid-s"
+          $borderColor={isScrolled ? "border-neutral-lighter" : "transparent"}
+        >
+          <div ref={setCanaryElement} />
+          {children}
+        </OakFlex>
+        {footerSlot}
+      </div>
+    </InternalModalTransition>,
     domContainer ?? document.body,
   );
 };
