@@ -64,7 +64,7 @@ const InternalSlideInFlex: FC<
       isModal={isModal}
       {...rest}
     >
-      {children}
+      <dialog>{children}</dialog>
     </SlideInFlex>
   );
 });

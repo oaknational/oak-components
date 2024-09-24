@@ -18,7 +18,6 @@ const meta: Meta<typeof OakFilterDrawer> = {
   argTypes: {
     children: {
       control: "text",
-      selectedTile: { type: "string" },
     },
   },
   parameters: {

@@ -5,7 +5,7 @@ import { InternalShadowRoundButton } from "@/components/molecules/InternalShadow
 import { OakFlex, OakImage } from "@/components/atoms";
 import useCanaryObserver from "@/hooks/useCanaryObserver";
 import useMounted from "@/hooks/useMounted";
-import InternalModalTransition from "@/components/atoms/InternalModalTransition/InternalModalTransition";
+import InternalModalTransition from "@/components/molecules/InternalModalTransition/InternalModalTransition";
 
 export type OakModalProps = {
   /**

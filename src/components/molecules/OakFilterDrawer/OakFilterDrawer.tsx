@@ -7,7 +7,7 @@ import { OakBox, OakFlex, OakHeading } from "@/components/atoms";
 import { OakModalProps, OakSecondaryLink } from "@/components/molecules";
 import useCanaryObserver from "@/hooks/useCanaryObserver";
 import useMounted from "@/hooks/useMounted";
-import InternalModalTransition from "@/components/atoms/InternalModalTransition/InternalModalTransition";
+import InternalModalTransition from "@/components/molecules/InternalModalTransition/InternalModalTransition";
 
 type OakFilterDrawerProps = OakModalProps & {
   /**

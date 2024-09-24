@@ -3,7 +3,7 @@ import { FocusOn } from "react-focus-on";
 import { Transition, TransitionStatus } from "react-transition-group";
 import styled from "styled-components";
 
-import InternalSlideInFlex from "@/components/atoms/InternalSlideInFlex/InternalSlideInFlex";
+import InternalSlideInFlex from "@/components/molecules/InternalSlideInFlex/InternalSlideInFlex";
 import { OakBox } from "@/components/atoms/OakBox";
 import { parseOpacity } from "@/styles/helpers/parseOpacity";
 
