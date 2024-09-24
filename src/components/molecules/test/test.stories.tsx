@@ -1,7 +1,7 @@
 import React from "react";
 import { StoryObj, Meta } from "@storybook/react";
 
-import { CopyPasteThisComponent } from "./test";
+import { CopyPasteThisComponent } from "./testComp";
 
 const meta: Meta<typeof CopyPasteThisComponent> = {
   //  "title" is the title of the story and where to look for component in the storybook

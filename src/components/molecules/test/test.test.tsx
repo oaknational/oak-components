@@ -2,7 +2,7 @@ import React from "react";
 import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
 
-import { CopyPasteThisComponent } from "./test";
+import { CopyPasteThisComponent } from "./testComp";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
