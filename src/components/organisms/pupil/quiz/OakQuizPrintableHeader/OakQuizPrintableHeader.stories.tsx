@@ -11,7 +11,16 @@ const meta: Meta<typeof OakQuizPrintableHeader> = {
   },
   parameters: {
     controls: {
-      include: ["iconBackground", "iconName", "alt", "breadcrumbs", "title"],
+      include: [
+        "iconBackground",
+        "iconName",
+        "alt",
+        "breadcrumbs",
+        "title",
+        "worksheetDownloaded",
+        "videoPercentage",
+        "workSheetAvailable",
+      ],
     },
   },
   args: {
@@ -20,6 +29,7 @@ const meta: Meta<typeof OakQuizPrintableHeader> = {
     breadcrumbs: ["first", "second", "third", "fourth"],
     worksheetDownloaded: true,
     videoPercentage: 80,
+    workSheetAvailable: true,
   },
 };
 

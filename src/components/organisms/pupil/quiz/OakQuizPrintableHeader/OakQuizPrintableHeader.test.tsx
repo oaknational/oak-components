@@ -20,6 +20,7 @@ describe("OakQuizPrintableHeader", () => {
           worksheetDownloaded={true}
           videoPercentage={80}
           data-testid="test"
+          workSheetAvailable={true}
         />
       </ThemeProvider>,
     );
@@ -37,6 +38,7 @@ describe("OakQuizPrintableHeader", () => {
           title="Pupil Journey Header"
           worksheetDownloaded={true}
           videoPercentage={80}
+          workSheetAvailable={true}
         />
       </ThemeProvider>,
     ).toJSON();

@@ -10,15 +10,19 @@ export type OakQuizHintProps = {
    */
   hint: ReactNode;
   id: string;
+  hintToggled?: (props: { isOpen: boolean }) => void;
 };
 
 /**
  * Presents a button which will show a hint when clicked
  */
-export const OakQuizHint = ({ hint, id }: OakQuizHintProps) => {
-  const [isOpen, setIsOpen] = useState(false);
+export const OakQuizHint = ({ hint, id, hintToggled }: OakQuizHintProps) => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   const handleClick: MouseEventHandler = () => {
     setIsOpen(!isOpen);
+    if (hintToggled) {
+      hintToggled({ isOpen: !isOpen });
+    }
   };
 
   return (
