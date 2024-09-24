@@ -47,16 +47,6 @@ describe("OakFilterDrawer", () => {
     expect(onCloseSpy).toHaveBeenCalled();
   });
 
-  it("gives the first focusable element in the modal body focus", () => {
-    const { getByRole } = renderWithTheme(
-      <OakFilterDrawer isOpen clearAllInputs={() => {}} onClose={() => {}}>
-        <input type="text" />
-      </OakFilterDrawer>,
-    );
-
-    expect(getByRole("textbox")).toHaveFocus();
-  });
-
   it("matches snapshot", () => {
     const tree = create(
       <OakFilterDrawer

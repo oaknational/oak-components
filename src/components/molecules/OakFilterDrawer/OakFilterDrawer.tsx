@@ -106,7 +106,9 @@ export const OakFilterDrawer = ({
         $borderColor={isScrolled ? "border-neutral-lighter" : "transparent"}
       >
         <div ref={setCanaryElement} />
-        <OakBox $mh="space-between-m">{children}</OakBox>
+        <div data-autofocus-inside tabIndex={-2}>
+          <OakBox $mh="space-between-m">{children}</OakBox>
+        </div>
       </OakFlex>
       <OakFlex
         $flexDirection={["column", "row"]}
