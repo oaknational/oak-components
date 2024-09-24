@@ -35,7 +35,7 @@ exports[`OakQuizPrintableHeader matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c14 {
+.c15 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.25rem;
@@ -117,6 +117,21 @@ exports[`OakQuizPrintableHeader matches snapshot 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  gap: 0.75rem;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
   gap: 0.75rem;
 }
 
@@ -268,15 +283,15 @@ exports[`OakQuizPrintableHeader matches snapshot 1`] = `
       </div>
     </div>
     <div
-      className="c0 c11"
+      className="c0 c14"
     >
       <div
-        className="c14"
+        className="c15"
       >
         Lesson video completion - 80%
       </div>
       <div
-        className="c14"
+        className="c15"
       >
         Worksheet downloaded - Yes
       </div>
