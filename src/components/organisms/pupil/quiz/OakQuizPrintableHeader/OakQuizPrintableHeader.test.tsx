@@ -26,6 +26,40 @@ describe("OakQuizPrintableHeader", () => {
     );
     expect(getByText("Pupil Journey Header")).toBeInTheDocument();
   });
+  it("renders worksheet downloaded when applicable", () => {
+    const { getByText } = renderWithTheme(
+      <ThemeProvider theme={oakDefaultTheme}>
+        <OakQuizPrintableHeader
+          iconName="subject-science"
+          alt="icon"
+          breadcrumbs={["first", "second", "third", "fourth"]}
+          title="Pupil Journey Header"
+          worksheetDownloaded={true}
+          videoPercentage={80}
+          data-testid="test"
+          workSheetAvailable={true}
+        />
+      </ThemeProvider>,
+    );
+    expect(getByText("Worksheet downloaded - Yes")).toBeInTheDocument();
+  });
+  it("renders worksheet not downloaded when applicable", () => {
+    const { getByText } = renderWithTheme(
+      <ThemeProvider theme={oakDefaultTheme}>
+        <OakQuizPrintableHeader
+          iconName="subject-science"
+          alt="icon"
+          breadcrumbs={["first", "second", "third", "fourth"]}
+          title="Pupil Journey Header"
+          worksheetDownloaded={false}
+          videoPercentage={80}
+          data-testid="test"
+          workSheetAvailable={true}
+        />
+      </ThemeProvider>,
+    );
+    expect(getByText("Worksheet downloaded - No")).toBeInTheDocument();
+  });
 
   it("matches snapshot", () => {
     const tree = create(
