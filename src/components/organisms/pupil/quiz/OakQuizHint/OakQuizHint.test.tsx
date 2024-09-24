@@ -1,12 +1,12 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
+import { fireEvent } from "@testing-library/react";
 
 import { OakQuizHint } from "./OakQuizHint";
 
 import { OakThemeProvider } from "@/components/atoms";
 import { oakDefaultTheme } from "@/styles";
-import { fireEvent } from "@testing-library/react";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import {
   installMockIntersectionObserver,
