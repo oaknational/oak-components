@@ -24,7 +24,7 @@ const meta: Meta<typeof OakFilterDrawer> = {
     "aria-label": "Example filter drawer",
     "aria-description": "This is an example filter drawer",
   },
-  render: (args) => {
+  render: function Render(args) {
     const [, updateArgs] = useArgs();
     const onClose = () => updateArgs({ isOpen: false });
     const onOpen = () => updateArgs({ isOpen: true });
