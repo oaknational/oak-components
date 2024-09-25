@@ -50,7 +50,7 @@ const meta: Meta<typeof OakFilterDrawer> = {
             <OakFlex
               $flexWrap={"wrap"}
               $mb={"space-between-m2"}
-              $gap={"space-between-m"}
+              $gap={"space-between-xs"}
             >
               {[1, 2, 3].map((i) => {
                 return (
