@@ -69,7 +69,7 @@ const meta: Meta<typeof OakFilterDrawer> = {
             </OakHeading>
             <OakBox $mb={"space-between-m"}>
               <OakRadioGroup
-                $gap={"space-between-m"}
+                $gap={"space-between-xs"}
                 name="radio-group"
                 $flexWrap={"wrap"}
               >
