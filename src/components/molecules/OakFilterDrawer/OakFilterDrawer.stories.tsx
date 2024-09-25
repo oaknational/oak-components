@@ -15,59 +15,14 @@ const meta: Meta<typeof OakFilterDrawer> = {
   component: OakFilterDrawer,
   tags: ["autodocs"],
   title: "components/molecules/OakFilterDrawer",
-  argTypes: {
-    children: {
-      control: "text",
-    },
-  },
   parameters: {
     controls: {
-      include: ["children", "isOpen", "onClose", "clearAllInputs"],
+      include: ["isOpen", "onClose", "clearAllInputs"],
     },
   },
   args: {
     "aria-label": "Example filter drawer",
     "aria-description": "This is an example filter drawer",
-    children: (
-      <>
-        <OakHeading $mv={"space-between-m"} tag={"h4"}>
-          Filter option buttons
-        </OakHeading>
-        <OakFlex
-          $flexWrap={"wrap"}
-          $mb={"space-between-m2"}
-          $gap={"space-between-m"}
-        >
-          {[1, 2, 3].map((i) => {
-            return (
-              <OakSearchFilterCheckBox
-                key={i}
-                onChange={() => {}}
-                value={`filter-option-${i}`}
-                id={`filter-option-${i}`}
-                displayValue={`${i} filter option`}
-              />
-            );
-          })}
-        </OakFlex>
-        <OakHeading $mb={"space-between-m"} tag="h4">
-          Filter option radio
-        </OakHeading>
-        <OakBox $mb={"space-between-m"}>
-          <OakRadioGroup
-            $gap={"space-between-m"}
-            name="radio-group"
-            $flexWrap={"wrap"}
-          >
-            <OakRadioButton id="radio-1" value="1" label="Option 1" />
-            <OakRadioButton id="radio-2" value="2" label="Option 2" />
-            <OakRadioButton id="radio-3" value="3" label="Option 3" />
-            <OakRadioButton id="radio-4" value="4" label="Option 4" />
-            <OakRadioButton id="radio-5" value="5" label="Option 5" />
-          </OakRadioGroup>
-        </OakBox>
-      </>
-    ),
   },
   render: (args) => {
     const [, updateArgs] = useArgs();
@@ -87,7 +42,46 @@ const meta: Meta<typeof OakFilterDrawer> = {
               Show results (23)
             </OakPrimaryButton>
           }
-        />
+        >
+          <>
+            <OakHeading $mv={"space-between-m"} tag={"h4"}>
+              Filter option buttons
+            </OakHeading>
+            <OakFlex
+              $flexWrap={"wrap"}
+              $mb={"space-between-m2"}
+              $gap={"space-between-m"}
+            >
+              {[1, 2, 3].map((i) => {
+                return (
+                  <OakSearchFilterCheckBox
+                    key={i}
+                    onChange={() => {}}
+                    value={`filter-option-${i}`}
+                    id={`filter-option-${i}`}
+                    displayValue={`${i} filter option`}
+                  />
+                );
+              })}
+            </OakFlex>
+            <OakHeading $mb={"space-between-m"} tag="h4">
+              Filter option radio
+            </OakHeading>
+            <OakBox $mb={"space-between-m"}>
+              <OakRadioGroup
+                $gap={"space-between-m"}
+                name="radio-group"
+                $flexWrap={"wrap"}
+              >
+                <OakRadioButton id="radio-1" value="1" label="Option 1" />
+                <OakRadioButton id="radio-2" value="2" label="Option 2" />
+                <OakRadioButton id="radio-3" value="3" label="Option 3" />
+                <OakRadioButton id="radio-4" value="4" label="Option 4" />
+                <OakRadioButton id="radio-5" value="5" label="Option 5" />
+              </OakRadioGroup>
+            </OakBox>
+          </>
+        </OakFilterDrawer>
       </>
     );
   },
