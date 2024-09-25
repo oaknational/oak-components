@@ -23,6 +23,7 @@ export type OakLessonBottomNavProps = {
   feedback?: OakQuizFeedbackProps["feedback"] | null;
   answerFeedback?: OakQuizFeedbackProps["answerFeedback"];
   hint?: OakQuizHintProps["hint"];
+  hintToggled?: (props: { isOpen: boolean }) => void;
 };
 
 /**
@@ -30,6 +31,7 @@ export type OakLessonBottomNavProps = {
  */
 export const OakLessonBottomNav = ({
   hint,
+  hintToggled,
   feedback,
   answerFeedback,
   children,
@@ -43,7 +45,9 @@ export const OakLessonBottomNav = ({
       );
       break;
     case !!hint:
-      content = <OakQuizHint hint={hint} id="quiz-hint" />;
+      content = (
+        <OakQuizHint hint={hint} id="quiz-hint" hintToggled={hintToggled} />
+      );
       break;
     default:
       content = null;
