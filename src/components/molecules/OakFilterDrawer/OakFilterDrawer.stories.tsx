@@ -1,6 +1,7 @@
 import React from "react";
 import { StoryObj, Meta } from "@storybook/react";
 import { useArgs } from "@storybook/preview-api";
+import styled from "styled-components";
 
 import { OakFilterDrawer } from "./OakFilterDrawer";
 
@@ -10,6 +11,12 @@ import { OakSearchFilterCheckBox } from "@/components/organisms";
 import { OakRadioGroup } from "@/components/molecules/OakRadioGroup";
 import { OakPrimaryButton } from "@/components/molecules/OakPrimaryButton";
 import { OakRadioButton } from "@/components/molecules/OakRadioButton";
+
+const StyledFieldset = styled.fieldset`
+  border: 0px;
+  margin: 0;
+  padding: 0;
+`;
 
 const meta: Meta<typeof OakFilterDrawer> = {
   component: OakFilterDrawer,
@@ -44,7 +51,7 @@ const meta: Meta<typeof OakFilterDrawer> = {
           }
         >
           <>
-            <fieldset>
+            <StyledFieldset>
               <OakHeading as={"legend"} $mv={"space-between-m"} tag={"h4"}>
                 Filter option buttons
               </OakHeading>
@@ -65,8 +72,8 @@ const meta: Meta<typeof OakFilterDrawer> = {
                   );
                 })}
               </OakFlex>
-            </fieldset>
-            <fieldset>
+            </StyledFieldset>
+            <StyledFieldset>
               <OakHeading as={"legend"} $mb={"space-between-m"} tag="h4">
                 Filter option radio
               </OakHeading>
@@ -83,7 +90,7 @@ const meta: Meta<typeof OakFilterDrawer> = {
                   <OakRadioButton id="radio-5" value="5" label="Option 5" />
                 </OakRadioGroup>
               </OakBox>
-            </fieldset>
+            </StyledFieldset>
           </>
         </OakFilterDrawer>
       </>
