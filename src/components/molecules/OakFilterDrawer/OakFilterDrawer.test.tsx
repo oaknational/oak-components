@@ -81,15 +81,19 @@ describe("OakFilterDrawer", () => {
     expect(onCloseSpy).toHaveBeenCalled();
   });
 
-  // it.only("matches snapshot", () => {
-  //   const tree = create(
-  //     <OakFilterDrawer
-  //       clearAllInputs={() => {}}
-  //       onClose={() => {}}
-  //       isOpen={true}
-  //       children={<p>click me</p>}
-  //     />,
-  //   ).toJSON();
-  //   expect(tree).toMatchSnapshot();
-  // });
+  it("calls onClear when the clear button is clicked", () => {
+    const onClearSpy = jest.fn();
+
+    const { getByLabelText } = renderWithTheme(
+      <OakFilterDrawer isOpen clearAllInputs={onClearSpy} onClose={() => {}}>
+        Filter content
+      </OakFilterDrawer>,
+    );
+
+    act(() => {
+      fireEvent.click(getByLabelText("Clear"));
+    });
+
+    expect(onClearSpy).toHaveBeenCalled();
+  });
 });
