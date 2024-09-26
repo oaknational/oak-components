@@ -44,42 +44,46 @@ const meta: Meta<typeof OakFilterDrawer> = {
           }
         >
           <>
-            <OakHeading $mv={"space-between-m"} tag={"h4"}>
-              Filter option buttons
-            </OakHeading>
-            <OakFlex
-              $flexWrap={"wrap"}
-              $mb={"space-between-m2"}
-              $gap={"space-between-xs"}
-            >
-              {[1, 2, 3].map((i) => {
-                return (
-                  <OakSearchFilterCheckBox
-                    key={i}
-                    onChange={() => {}}
-                    value={`filter-option-${i}`}
-                    id={`filter-option-${i}`}
-                    displayValue={`${i} filter option`}
-                  />
-                );
-              })}
-            </OakFlex>
-            <OakHeading $mb={"space-between-m"} tag="h4">
-              Filter option radio
-            </OakHeading>
-            <OakBox $mb={"space-between-m"}>
-              <OakRadioGroup
-                $gap={"space-between-xs"}
-                name="radio-group"
+            <fieldset>
+              <OakHeading as={"legend"} $mv={"space-between-m"} tag={"h4"}>
+                Filter option buttons
+              </OakHeading>
+              <OakFlex
                 $flexWrap={"wrap"}
+                $mb={"space-between-m2"}
+                $gap={"space-between-xs"}
               >
-                <OakRadioButton id="radio-1" value="1" label="Option 1" />
-                <OakRadioButton id="radio-2" value="2" label="Option 2" />
-                <OakRadioButton id="radio-3" value="3" label="Option 3" />
-                <OakRadioButton id="radio-4" value="4" label="Option 4" />
-                <OakRadioButton id="radio-5" value="5" label="Option 5" />
-              </OakRadioGroup>
-            </OakBox>
+                {[1, 2, 3].map((i) => {
+                  return (
+                    <OakSearchFilterCheckBox
+                      key={i}
+                      onChange={() => {}}
+                      value={`filter-option-${i}`}
+                      id={`filter-option-${i}`}
+                      displayValue={`${i} filter option`}
+                    />
+                  );
+                })}
+              </OakFlex>
+            </fieldset>
+            <fieldset>
+              <OakHeading as={"legend"} $mb={"space-between-m"} tag="h4">
+                Filter option radio
+              </OakHeading>
+              <OakBox $mb={"space-between-m"}>
+                <OakRadioGroup
+                  $gap={"space-between-xs"}
+                  name="radio-group"
+                  $flexWrap={"wrap"}
+                >
+                  <OakRadioButton id="radio-1" value="1" label="Option 1" />
+                  <OakRadioButton id="radio-2" value="2" label="Option 2" />
+                  <OakRadioButton id="radio-3" value="3" label="Option 3" />
+                  <OakRadioButton id="radio-4" value="4" label="Option 4" />
+                  <OakRadioButton id="radio-5" value="5" label="Option 5" />
+                </OakRadioGroup>
+              </OakBox>
+            </fieldset>
           </>
         </OakFilterDrawer>
       </>
