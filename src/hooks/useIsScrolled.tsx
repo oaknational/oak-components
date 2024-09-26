@@ -1,7 +1,23 @@
-import { useLayoutEffect, useState } from "react";
+import React, {
+  PropsWithChildren,
+  useCallback,
+  useLayoutEffect,
+  useState,
+} from "react";
 
-const useCanaryObserver = (canaryElement: HTMLDivElement | null) => {
+const useIsScrolled = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [canaryElement, setCanaryElement] = useState<HTMLDivElement | null>(
+    null,
+  );
+  const ObserveScroll = useCallback(({ children }: PropsWithChildren) => {
+    return (
+      <>
+        <div ref={setCanaryElement} />
+        {children}
+      </>
+    );
+  }, []);
 
   useLayoutEffect(() => {
     if (!canaryElement) {
@@ -22,7 +38,7 @@ const useCanaryObserver = (canaryElement: HTMLDivElement | null) => {
     };
   }, [canaryElement]);
 
-  return isScrolled;
+  return { isScrolled, ObserveScroll };
 };
 
-export default useCanaryObserver;
+export default useIsScrolled;

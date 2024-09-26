@@ -7,6 +7,8 @@ import { OakFilterDrawer } from "./OakFilterDrawer";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { installMockIntersectionObserver } from "@/test-helpers";
+import { OakThemeProvider } from "@/components/atoms";
+import { oakDefaultTheme } from "@/styles";
 
 installMockIntersectionObserver();
 
@@ -18,6 +20,38 @@ jest.mock("react-dom", () => {
 });
 
 describe("OakFilterDrawer", () => {
+  it("does not render until mounted on the client", () => {
+    const tree = create(
+      <OakThemeProvider theme={oakDefaultTheme}>
+        <OakFilterDrawer
+          clearAllInputs={() => {}}
+          isOpen
+          onClose={() => {}}
+          footerSlot="Oak filter footer"
+        >
+          Filter drawer content
+        </OakFilterDrawer>
+      </OakThemeProvider>,
+    );
+
+    expect(tree.toJSON()).toBeNull();
+  });
+
+  it("matches snapshot when mounted", async () => {
+    const result = renderWithTheme(
+      <OakFilterDrawer
+        clearAllInputs={() => {}}
+        isOpen
+        onClose={() => {}}
+        footerSlot="Oak filter footer"
+      >
+        Modal content
+      </OakFilterDrawer>,
+    );
+
+    expect(result.container).toMatchSnapshot();
+  });
+
   it("renders component", () => {
     const { getByTestId } = renderWithTheme(
       <OakFilterDrawer
@@ -47,16 +81,15 @@ describe("OakFilterDrawer", () => {
     expect(onCloseSpy).toHaveBeenCalled();
   });
 
-  it("matches snapshot", () => {
-    const tree = create(
-      <OakFilterDrawer
-        clearAllInputs={() => {}}
-        onClose={() => {}}
-        isOpen={true}
-      >
-        Click Me
-      </OakFilterDrawer>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+  // it.only("matches snapshot", () => {
+  //   const tree = create(
+  //     <OakFilterDrawer
+  //       clearAllInputs={() => {}}
+  //       onClose={() => {}}
+  //       isOpen={true}
+  //       children={<p>click me</p>}
+  //     />,
+  //   ).toJSON();
+  //   expect(tree).toMatchSnapshot();
+  // });
 });

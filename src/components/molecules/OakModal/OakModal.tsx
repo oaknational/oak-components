@@ -1,9 +1,9 @@
-import React, { HTMLAttributes, ReactNode, useRef, useState } from "react";
+import React, { HTMLAttributes, ReactNode, useRef } from "react";
 import { createPortal } from "react-dom";
 
 import { InternalShadowRoundButton } from "@/components/molecules/InternalShadowRoundButton";
 import { OakFlex, OakImage } from "@/components/atoms";
-import useCanaryObserver from "@/hooks/useCanaryObserver";
+import useIsScrolled from "@/hooks/useIsScrolled";
 import useMounted from "@/hooks/useMounted";
 import InternalModalTransition from "@/components/molecules/InternalModalTransition/InternalModalTransition";
 
@@ -62,12 +62,9 @@ export const OakModal = ({
   zIndex,
   ...rest
 }: OakModalProps) => {
-  const [canaryElement, setCanaryElement] = useState<HTMLDivElement | null>(
-    null,
-  );
   const transitionRef = useRef<HTMLDivElement>(null);
 
-  const isScrolled = useCanaryObserver(canaryElement);
+  const { isScrolled, ObserveScroll } = useIsScrolled();
 
   // `createPortal` is not supported in SSR so we can only render when mounted on the client
   const isMounted = useMounted();
@@ -122,8 +119,7 @@ export const OakModal = ({
           $bt="border-solid-s"
           $borderColor={isScrolled ? "border-neutral-lighter" : "transparent"}
         >
-          <div ref={setCanaryElement} />
-          {children}
+          <ObserveScroll>{children}</ObserveScroll>
         </OakFlex>
         {footerSlot}
       </div>

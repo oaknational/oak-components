@@ -1,11 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { createPortal } from "react-dom";
 import styled from "styled-components";
 
 import { InternalShadowRoundButton } from "@/components/molecules/InternalShadowRoundButton";
 import { OakBox, OakFlex, OakHeading } from "@/components/atoms";
 import { OakModalProps, OakSecondaryLink } from "@/components/molecules";
-import useCanaryObserver from "@/hooks/useCanaryObserver";
+import useIsScrolled from "@/hooks/useIsScrolled";
 import useMounted from "@/hooks/useMounted";
 import InternalModalTransition from "@/components/molecules/InternalModalTransition/InternalModalTransition";
 
@@ -44,10 +44,7 @@ export const OakFilterDrawer = ({
   footerSlot,
   ...rest
 }: OakFilterDrawerProps) => {
-  const [canaryElement, setCanaryElement] = useState<HTMLDivElement | null>(
-    null,
-  );
-  const isScrolled = useCanaryObserver(canaryElement);
+  const { isScrolled, ObserveScroll } = useIsScrolled();
 
   const transitionRef = useRef<HTMLDivElement>(null);
 
@@ -105,10 +102,11 @@ export const OakFilterDrawer = ({
         $bt="border-solid-s"
         $borderColor={isScrolled ? "border-neutral-lighter" : "transparent"}
       >
-        <div ref={setCanaryElement} />
-        <div data-autofocus-inside tabIndex={-2}>
-          <OakBox $mh="space-between-m">{children}</OakBox>
-        </div>
+        <ObserveScroll>
+          <div data-autofocus-inside tabIndex={-2}>
+            <OakBox $mh="space-between-m">{children}</OakBox>
+          </div>
+        </ObserveScroll>
       </OakFlex>
       <OakFlex
         $flexDirection={["column", "row"]}
