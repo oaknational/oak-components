@@ -1,20 +1,11 @@
-import React, {
-  HTMLAttributes,
-  ReactNode,
-  useEffect,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from "react";
+import React, { HTMLAttributes, ReactNode, useRef } from "react";
 import { createPortal } from "react-dom";
-import { FocusOn } from "react-focus-on";
-import { Transition, TransitionStatus } from "react-transition-group";
-import styled from "styled-components";
 
 import { InternalShadowRoundButton } from "@/components/molecules/InternalShadowRoundButton";
-import { OakBox, OakFlex, OakImage } from "@/components/atoms";
-import { parseOpacity } from "@/styles/helpers/parseOpacity";
-import { parseSpacing } from "@/styles/helpers/parseSpacing";
+import { OakFlex, OakImage } from "@/components/atoms";
+import useIsScrolled from "@/hooks/useIsScrolled";
+import useMounted from "@/hooks/useMounted";
+import InternalModalTransition from "@/components/molecules/InternalModalTransition/InternalModalTransition";
 
 export type OakModalProps = {
   /**
@@ -57,31 +48,6 @@ export type OakModalProps = {
   "aria-label" | "aria-description" | "aria-labelledby" | "aria-describedby"
 >;
 
-const FadeOutBox = styled(OakBox)<{ $state: TransitionStatus }>`
-  opacity: ${({ $state }) => {
-    switch ($state) {
-      case "entered":
-      case "entering":
-        return parseOpacity("semi-transparent");
-      default:
-        return parseOpacity("transparent");
-    }
-  }};
-`;
-
-const SlideInFlex = styled(OakFlex)<{ $state: TransitionStatus }>`
-  max-width: calc(100vw - ${parseSpacing("inner-padding-l")});
-  transform: ${({ $state }) => {
-    switch ($state) {
-      case "entered":
-      case "entering":
-        return "translateX(0)";
-      default:
-        return "translateX(-100%)";
-    }
-  }};
-`;
-
 const logoSrc = `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/logo-mark.svg`;
 
 /**
@@ -96,37 +62,12 @@ export const OakModal = ({
   zIndex,
   ...rest
 }: OakModalProps) => {
-  const [canaryElement, setCanaryElement] = useState<HTMLDivElement | null>(
-    null,
-  );
-  const [isScrolled, setIsScrolled] = useState(false);
   const transitionRef = useRef<HTMLDivElement>(null);
 
-  useLayoutEffect(() => {
-    if (!canaryElement) {
-      return;
-    }
-    const observer = new IntersectionObserver(
-      (mutations) => {
-        setIsScrolled(!mutations.some((mutation) => mutation.isIntersecting));
-      },
-      {
-        root: canaryElement.parentElement,
-      },
-    );
-    observer.observe(canaryElement);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [canaryElement]);
+  const { isScrolled, ObserveScroll } = useIsScrolled();
 
   // `createPortal` is not supported in SSR so we can only render when mounted on the client
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+  const isMounted = useMounted();
 
   if (!isMounted) {
     return null;
@@ -135,89 +76,54 @@ export const OakModal = ({
   const finalZIndex = typeof zIndex === "number" ? zIndex : "modal-dialog";
 
   return createPortal(
-    <Transition
-      in={isOpen}
-      nodeRef={transitionRef}
-      addEndListener={(done) => {
-        transitionRef.current?.addEventListener("transitionend", done);
-      }}
-      timeout={500}
-      mountOnEnter
-      unmountOnExit
+    <InternalModalTransition
+      isOpen={isOpen}
+      transitionRef={transitionRef}
+      onClose={onClose}
+      finalZIndex={finalZIndex}
+      isModal={true}
+      {...rest}
     >
-      {(state) => (
-        <FocusOn onEscapeKey={onClose} returnFocus autoFocus>
-          <FadeOutBox
-            $position="fixed"
-            $inset="all-spacing-0"
-            $zIndex={finalZIndex}
-            $background="black"
-            $opacity="semi-transparent"
-            $state={state}
-            $transition="standard-ease"
-          />
-          <SlideInFlex
-            ref={transitionRef}
-            $background="bg-primary"
-            $position="fixed"
-            $left="all-spacing-0"
-            $top="all-spacing-0"
-            $bottom="all-spacing-0"
-            $width={["all-spacing-22"]}
-            $zIndex={finalZIndex}
-            $flexDirection="column"
-            $transition="standard-ease"
-            $color="text-primary"
-            role="dialog"
-            $state={state}
-            {...rest}
-          >
-            <OakFlex
-              $ma="space-between-s"
-              $justifyContent="space-between"
-              $alignItems="center"
-            >
-              <OakImage
-                src={logoSrc}
-                $height="all-spacing-8"
-                $width="all-spacing-7"
-                alt=""
-              />
-              <InternalShadowRoundButton
-                onClick={onClose}
-                aria-label="Close"
-                defaultIconBackground="transparent"
-                defaultIconColor="black"
-                defaultTextColor="transparent"
-                hoverTextColor="transparent"
-                disabledTextColor="transparent"
-                hoverIconBackground="black"
-                hoverIconColor="white"
-                disabledIconBackground="transparent"
-                iconBackgroundSize="all-spacing-6"
-                iconSize="all-spacing-6"
-                iconName="cross"
-              />
-            </OakFlex>
-            <div style={{ display: "contents" }} data-autofocus-inside>
-              <OakFlex
-                $flexGrow={1}
-                $flexDirection="column"
-                $overflow="auto"
-                $bt="border-solid-s"
-                $borderColor={
-                  isScrolled ? "border-neutral-lighter" : "transparent"
-                }
-              >
-                <div ref={setCanaryElement} />
-                {children}
-              </OakFlex>
-              {footerSlot}
-            </div>
-          </SlideInFlex>
-        </FocusOn>
-      )}
-    </Transition>,
+      <OakFlex
+        $ma="space-between-s"
+        $justifyContent="space-between"
+        $alignItems="center"
+      >
+        <OakImage
+          src={logoSrc}
+          $height="all-spacing-8"
+          $width="all-spacing-7"
+          alt=""
+        />
+        <InternalShadowRoundButton
+          onClick={onClose}
+          aria-label="Close"
+          defaultIconBackground="transparent"
+          defaultIconColor="black"
+          defaultTextColor="transparent"
+          hoverTextColor="transparent"
+          disabledTextColor="transparent"
+          hoverIconBackground="black"
+          hoverIconColor="white"
+          disabledIconBackground="transparent"
+          iconBackgroundSize="all-spacing-6"
+          iconSize="all-spacing-6"
+          iconName="cross"
+        />
+      </OakFlex>
+      <div style={{ display: "contents" }} data-autofocus-inside>
+        <OakFlex
+          $flexGrow={1}
+          $flexDirection="column"
+          $overflow="auto"
+          $bt="border-solid-s"
+          $borderColor={isScrolled ? "border-neutral-lighter" : "transparent"}
+        >
+          <ObserveScroll>{children}</ObserveScroll>
+        </OakFlex>
+        {footerSlot}
+      </div>
+    </InternalModalTransition>,
     domContainer ?? document.body,
   );
 };

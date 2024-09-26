@@ -35,7 +35,7 @@ export type OakRadioGroupProps = {
   defaultValue?: string;
 } & Pick<TypographyStyleProps, "$font"> &
   ColorStyleProps &
-  Pick<FlexStyleProps, "$flexDirection" | "$alignItems" | "$gap">;
+  FlexStyleProps;
 
 /**
  *
