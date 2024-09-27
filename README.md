@@ -6,7 +6,7 @@
 
 ## Overview
 
-This is a React Typescript components library which supports React and Next applications produced by [Oak National Academy](https://www.thenational.academy/). A Storybook for the components can be found [here](https://components.thenational.academy/) please consult 1Password for access.
+This is a React Typescript components library which supports React and Next applications produced by [Oak National Academy](https://www.thenational.academy/).
 
 ## Installation
 
@@ -119,7 +119,7 @@ Components are organised into a three tier hierarchical structure applying the f
 
 ### Security and Bug Bounty
 
-Please see our [security.txt](public/.well-known/security.txt) file.
+Please see our [security.txt](https://www.thenational.academy/.well-known/security.txt) file.
 
 ### Contributing to the Code
 
@@ -135,7 +135,7 @@ Unless stated otherwise, the codebase is released under the [MIT License][mit]. 
 
 Any documentation included is © [Oak National Academy][oak] and available under the terms of the [Open Government Licence v3.0][ogl], except where otherwise stated.
 
-[mit]: LICENCE
+[mit]: https://github.com/oaknational/oak-components?tab=MIT-1-ov-file#readme
 [oak]: https://www.thenational.academy/
 [ogl]: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
 [brand]: https://support.thenational.academy/using-the-oak-brand
