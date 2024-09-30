@@ -20,6 +20,7 @@ export const icons = {
   save: "v1699895505/icons/rh1ahwwtbemvz0ihluew.svg",
   success: "v1699895534/icons/Icon-Success_aiiprx",
   error: "v1699895534/icons/Icon-Error_r25aza.svg",
+  system: "v1699895534/icons/system.svg",
   "quiz-3": "v1699895534/icons/zoayhgtrotv32fad7d3k.svg",
   "chevron-down": "v1699953557/icons/botfld6brychmttwtv6u.svg",
   linkedin: "v1699953592/icons/leqneklorqqzb1zo6rf1.svg",
