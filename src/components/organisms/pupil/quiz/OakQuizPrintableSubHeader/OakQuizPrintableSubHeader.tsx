@@ -24,10 +24,10 @@ export const OakQuizPrintableSubHeader = ({
 }: OakQuizPrintableSubHeaderProps) => {
   return (
     <OakFlex
-      $flexDirection={"row"}
+      $flexDirection={["column", "row"]}
       $gap={"space-between-s"}
       $justifyContent={"space-between"}
-      $alignItems={"center"}
+      $alignItems={["flex-start", "center"]}
     >
       <OakHeading tag="h1" $font={"heading-6"}>
         {title}

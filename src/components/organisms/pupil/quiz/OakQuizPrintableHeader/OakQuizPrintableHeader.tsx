@@ -37,7 +37,7 @@ export const OakQuizPrintableHeader = ({
 }: OakQuizPrintableHeaderProps) => {
   return (
     <OakFlex
-      $flexDirection={"row"}
+      $flexDirection={["column", "row"]}
       $gap={"space-between-s"}
       $justifyContent={"space-between"}
     >
