@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled, { css } from "styled-components";
 
-import { OakFlex, OakHeading } from "@/components/atoms";
+import { OakFlex } from "@/components/atoms";
 import {
   OakInlineBanner,
   OakPrimaryButton,
@@ -62,10 +62,6 @@ const UnstyledComponent = (
 
   return (
     <OakFlex $flexDirection={"column"} $gap={"space-between-m"}>
-      <OakHeading $font={"heading-4"} tag="h4">
-        Download
-      </OakHeading>
-
       <OakInlineBanner
         isOpen={true}
         message={`Before downloading, choose ${
