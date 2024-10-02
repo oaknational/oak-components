@@ -6,6 +6,7 @@ export const icons = {
   edit: "v1699894149/icons/qxlunbg5tfrdherzsvlt.svg",
   hamburger: "v1699895123/icons/jaqdnomtbhqvjcap962u.svg",
   cross: "v1699895179/icons/xigimrbivcaxt4omxamp.svg",
+  copy: "v1727861316/icons/Icon_Copy_qxgynv.svg",
   bell: "v1699895207/icons/ecejtvqerx81prxyxh9b.svg",
   twitter: "v1699895251/icons/bq6a50xtkvnzhltfggzz.svg",
   worksheet: "v1699895300/icons/ez1s6mtpe5jkunnxzvlw.svg",
