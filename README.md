@@ -23,7 +23,7 @@ For components to be styled correctly they will need access to a theme, some glo
 If you're using the Next.js App router your root layout should look something like:
 
 ```typescript
-// layout.js 
+// layout.js
 import { OakThemeProvider, oakDefaultTheme, OakGlobalStyle } from "@oaknational/oak-components";
 import { Lexend } from "next/font/google";
 
@@ -60,6 +60,16 @@ If you're using TypeScript you might want to add `@types/styled-components` to y
 We use [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) and [semantic versioning](https://semver.org/). Releases are managed by [Semantic Release](https://github.com/semantic-release/semantic-release) and are automatically published to [NPM](https://www.npmjs.com/package/@oaknational/oak-components) on every merge to `main`.
 
 Changes should go through a pull-request to `main` and require approval by at least 1 reviewer. You should seek reviews from a QA/designer/PM when necessary.
+
+The release process is driven by the commit messages, following the [Conventional Commits standard](https://www.conventionalcommits.org/en/v1.0.0/#specification). The `@semantic-release/commit-analyzer` plugin will determine the type of release (major, minor, or patch) based on the commit message.
+
+Here’s a summary of the commit types that trigger a release:
+
+* Patch release (x.x.x): Commits that start with `fix:` or contain other conventional keywords indicating bug fixes.
+* Minor release (x.x.0): Commits that start with `feat:` indicate a new feature but not a breaking change.
+* Major release (x.0.0): Commits that contain `BREAKING CHANGE:` in their description, which indicates a breaking change that requires a major version bump.
+
+Commit messages that begin with `chore`, `refactor` or `docs`, etc. will not trigger the release process.
 
 ## Testing components inside a host app like OWA
 
