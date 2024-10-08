@@ -14,7 +14,6 @@ import { OakLabel } from "@/components/atoms/OakLabel";
 import { OakHeading } from "@/components/atoms/OakHeading";
 
 const meta: Meta<typeof OakFieldset> = {
-  //  "title" is the title of the story and where to look for component in the storybook
   title: "Components/atoms/OakFieldset",
   component: OakFieldset,
   tags: ["autodocs"],
@@ -61,7 +60,6 @@ export const Default: Story = {
     </OakFieldset>
   ),
   args: {
-    // $ba: "border-solid-s",
     $pa: "inner-padding-s",
   },
 };
