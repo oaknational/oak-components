@@ -13,8 +13,10 @@ import {
   TypographyStyleProps,
 } from "@/styles/utils/typographyStyle";
 import { borderStyle, BorderStyleProps } from "@/styles/utils/borderStyle";
+import { sizeStyle, SizeStyleProps } from "@/styles/utils/sizeStyle";
 
 export type OakFieldsetProps = ColorStyleProps &
+  SizeStyleProps &
   OpacityStyleProps &
   MarginStyleProps &
   PaddingStyleProps &
@@ -22,14 +24,15 @@ export type OakFieldsetProps = ColorStyleProps &
   TypographyStyleProps;
 
 /**
- * OakFieldset renders a custom `fieldset` (inline text) component, exposing all the typography props.
- * ## Usage
+ * OakFieldset renders a custom `fieldset` component, removes default styling of fieldset.
+  color, opacity, margin, padding, border and typography styles can be passed in also.
  */
 export const OakFieldset = styled.fieldset<OakFieldsetProps>`
   border: 0px;
   margin: 0;
   padding: 0;
   ${colorStyle}
+  ${sizeStyle}
   ${opacityStyle}
   ${marginStyle}
   ${paddingStyle}
