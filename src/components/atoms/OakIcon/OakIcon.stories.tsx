@@ -41,7 +41,7 @@ export const AllIcons: Story = {
       {oakIconNames.map((iconName) => {
         return (
           <OakFlex key={iconName} $gap={"space-between-s"}>
-            <OakIcon {...args} iconName={iconName} />
+            <OakIcon {...args} iconName={iconName} alt="" />
             <OakTypography>{iconName}</OakTypography>
           </OakFlex>
         );
