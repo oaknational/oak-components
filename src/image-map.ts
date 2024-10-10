@@ -70,6 +70,7 @@ export const icons = {
   "subject-computing": "subject-icons/computing.svg",
   "subject-computer-science": "subject-icons/computing.svg",
   "subject-core-computing": "subject-icons/computing.svg",
+  "subject-cooking-nutrition": "subject-icons/cooking-nutrition.svg",
   "subject-computing-non-gcse": "subject-icons/computing.svg",
   "subject-creative-arts": "subject-icons/creative-arts.svg",
   "subject-design-technology": "subject-icons/design-technology.svg",
@@ -118,6 +119,7 @@ export const icons = {
   "subject-occupational-therapy": "subject-icons/therapy.svg",
   "subject-understanding-the-world":
     "subject-icons/understanding-the-world.svg",
+  swimming: "subject-icons/swimming.svg",
   "homepage-robot-waving": "v1725896980/homepage/robot_waving_malpc3.svg",
   "homepage-three-pupils": "v1725877472/homepage/image-students_g0jtxe.svg",
   "homepage-teacher": "v1725882091/homepage/teacher-carrying-stuff_gab2ec.svg",
