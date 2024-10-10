@@ -70,6 +70,7 @@ export const icons = {
   "subject-computing": "subject-icons/computing.svg",
   "subject-computer-science": "subject-icons/computing.svg",
   "subject-core-computing": "subject-icons/computing.svg",
+  "subject-cooking-nutrition": "subject-icons/cooking-nutrition.svg",
   "subject-computing-non-gcse": "subject-icons/computing.svg",
   "subject-creative-arts": "subject-icons/creative-arts.svg",
   "subject-design-technology": "subject-icons/design-technology.svg",
