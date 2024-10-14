@@ -15,6 +15,7 @@ export * from "./OakLI";
 export * from "./OakLabel";
 export * from "./OakMaxWidth";
 export * from "./OakOL";
+export * from "./OakFieldset";
 export * from "./OakP";
 export * from "./OakScreenReader";
 export * from "./OakSpan";
