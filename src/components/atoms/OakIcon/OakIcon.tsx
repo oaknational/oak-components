@@ -26,6 +26,15 @@ export function isValidIconName(iconName: string): iconName is OakIconName {
 }
 
 /**
+ * returns a Icon URL from Cloudinary if is a valid icon, otherwise returns undefined
+ */
+export function generateOakIconURL(iconName: string) {
+  if (isValidIconName(iconName)) {
+    return `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/${icons[iconName]}`;
+  }
+}
+
+/**
  * A wrapper around OakImage which uses the image-map.json file to map icon names to image paths.
  */
 export const OakIcon = (props: OakIconProps) => {
