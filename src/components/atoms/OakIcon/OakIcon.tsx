@@ -29,8 +29,13 @@ export function isValidIconName(iconName: string): iconName is OakIconName {
  * returns a Icon URL from Cloudinary if is a valid icon, otherwise returns undefined
  */
 export function generateOakIconURL(iconName: string) {
+  const urlPath = `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}`;
   if (isValidIconName(iconName)) {
-    return `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/${icons[iconName]}`;
+    return `${urlPath}/${icons[iconName]}`;
+  } else if (iconName.includes("subject")) {
+    return `${urlPath}/${icons["books"]}`;
+  } else {
+    return `${urlPath}/${icons["question-mark"]}`;
   }
 }
 
@@ -51,7 +56,7 @@ export const OakIcon = (props: OakIconProps) => {
 
   return (
     <OakImage
-      src={`https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/${icons[iconName]}`}
+      src={generateOakIconURL(iconName)}
       alt={alt ?? iconName}
       $width={$width}
       $height={$height}
