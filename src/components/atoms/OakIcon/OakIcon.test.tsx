@@ -3,7 +3,7 @@ import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 import { create } from "react-test-renderer";
 
-import { OakIcon, isValidIconName } from "./OakIcon";
+import { OakIcon, generateOakIconURL, isValidIconName } from "./OakIcon";
 
 describe("OakIcon", () => {
   it("renders", () => {
@@ -67,5 +67,14 @@ describe("isValidIconName", () => {
   it("is true when the string is a valid icon name", () => {
     expect(isValidIconName("home")).toBe(true);
     expect(isValidIconName("banana-sandwich")).toBe(false);
+  });
+});
+
+describe("generateOakIconURL", () => {
+  it("is valid url when the string is a valid icon name", () => {
+    expect(generateOakIconURL("home")).toBe(
+      "https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699887218/icons/gvqxjxcw07ei2kkmwnes.svg",
+    );
+    expect(generateOakIconURL("banana-sandwich")).toBe(undefined);
   });
 });
