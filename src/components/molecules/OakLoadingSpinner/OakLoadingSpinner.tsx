@@ -18,8 +18,25 @@ const SpinnerKeyframe = keyframes`
   }
 `;
 
+const DelayedShow = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
 export type OakLoadingSpinnerProps = Pick<SizeStyleProps, "$width"> &
-  ColorStyleProps & { loaderColor?: OakCombinedColorToken };
+  ColorStyleProps & {
+    loaderColor?: OakCombinedColorToken;
+    /**
+     * Delay the appearance of the spinner
+     *
+     * Accepts a number in milliseconds
+     */
+    $delay?: number;
+  };
 
 const StyledLoadingSpinner = styled.span<OakLoadingSpinnerProps>`
   ${(props) =>
@@ -28,6 +45,16 @@ const StyledLoadingSpinner = styled.span<OakLoadingSpinnerProps>`
       : css`
           --width: 1.25rem;
         `}
+  ${({ $delay }) => {
+    if ($delay) {
+      return css`
+        opacity: 0;
+        animation: ${DelayedShow} 0s;
+        animation-delay: ${$delay / 1000}s;
+        animation-fill-mode: forwards;
+      `;
+    }
+  }}
   --inner-width: calc(var(--width) / 10 * 8);
   --thickness: calc(var(--width) / 12);
 
