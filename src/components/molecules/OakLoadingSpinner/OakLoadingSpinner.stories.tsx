@@ -13,10 +13,11 @@ const meta: Meta<typeof OakLoadingSpinner> = {
   argTypes: {
     ...sizeArgTypes,
     ...colorArgTypes,
+    $delay: { control: { type: "range", min: 0, max: 5000 } },
   },
   parameters: {
     controls: {
-      include: ["$width", "$color", "$background"],
+      include: ["$width", "$color", "$background", "$delay"],
     },
   },
 };

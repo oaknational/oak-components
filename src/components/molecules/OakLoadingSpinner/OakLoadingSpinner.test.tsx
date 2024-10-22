@@ -25,4 +25,12 @@ describe("OakLoadingSpinner", () => {
     const { getByDisplayValue } = render(<OakLoadingSpinner />);
     expect(() => getByDisplayValue("accessible text")).toThrow();
   });
+
+  it("can have a delayed appearance", () => {
+    const { getByTestId } = render(
+      <OakLoadingSpinner data-testid="loader" $delay={300} />,
+    );
+
+    expect(getByTestId("loader")).toHaveStyleRule("animation-delay", "0.3s");
+  });
 });
