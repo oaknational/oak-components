@@ -67,6 +67,7 @@ const UnstyledComponent = (
         message={`Before downloading, choose ${
           childSubjectsAvailable && tiersAvailable ? "options" : "an option"
         } for KS4. The document will still display both KS3 and KS4.`}
+        $maxWidth={"all-spacing-22"}
       />
 
       {childSubjectsAvailable && (

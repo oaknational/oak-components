@@ -6,6 +6,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
 }
 
 .c2 {
+  max-width: 40rem;
   padding: 0.75rem;
   background: #e3e9fb;
   border: 0.063rem solid;
