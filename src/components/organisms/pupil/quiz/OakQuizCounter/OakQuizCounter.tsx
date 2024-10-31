@@ -37,7 +37,7 @@ export const OakQuizCounter = (props: OakQuizCounterProps) => {
       $gap={"space-between-xs"}
       $alignItems={"end"}
     >
-      <OakSpan $font={"heading-light-4"} $color={"text-disabled"}>
+      <OakSpan $font={"heading-light-4"} $color={"text-subdued"}>
         <OakSpan $font={"heading-4"} $color={"text-primary"}>
           {counter}{" "}
         </OakSpan>
