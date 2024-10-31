@@ -68,6 +68,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
   >
     <div
       className="c0 c1"
+      role="alert"
     >
       <div
         className="c2"
@@ -103,12 +104,14 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
       </div>
       <span
         className="c5"
+        role="alert"
       >
         Correct
       </span>
     </div>
     <p
       className="c6"
+      role="alert"
     >
       Well done!
     </p>
@@ -179,6 +182,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
   >
     <div
       className="c0 c1"
+      role="alert"
     >
       <div
         className="c2"
@@ -214,12 +218,14 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
       </div>
       <span
         className="c5"
+        role="alert"
       >
         Incorrect
       </span>
     </div>
     <p
       className="c6"
+      role="alert"
     >
       Keep trying
     </p>
@@ -290,6 +296,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
   >
     <div
       className="c0 c1"
+      role="alert"
     >
       <div
         className="c2"
@@ -325,12 +332,14 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
       </div>
       <span
         className="c5"
+        role="alert"
       >
         Correct
       </span>
     </div>
     <p
       className="c6"
+      role="alert"
     >
       Nearly there
     </p>
