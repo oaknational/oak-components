@@ -32,7 +32,7 @@ exports[`OakQuizCounter matches snapshot 1`] = `
 }
 
 .c2 {
-  color: #808080;
+  color: #575757;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 2rem;
