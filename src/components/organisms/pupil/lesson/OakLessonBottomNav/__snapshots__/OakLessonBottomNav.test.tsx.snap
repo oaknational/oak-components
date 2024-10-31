@@ -491,6 +491,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
       >
         <div
           className="c3 c5"
+          role="alert"
         >
           <div
             className="c6"
@@ -526,12 +527,14 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
           </div>
           <span
             className="c9"
+            role="alert"
           >
             Correct
           </span>
         </div>
         <p
           className="c10"
+          role="alert"
         >
           Well done!
         </p>
@@ -694,6 +697,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
       >
         <div
           className="c3 c5"
+          role="alert"
         >
           <div
             className="c6"
@@ -729,12 +733,14 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
           </div>
           <span
             className="c9"
+            role="alert"
           >
             Incorrect
           </span>
         </div>
         <p
           className="c10"
+          role="alert"
         >
           Keep trying
         </p>
@@ -897,6 +903,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
       >
         <div
           className="c3 c5"
+          role="alert"
         >
           <div
             className="c6"
@@ -932,12 +939,14 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
           </div>
           <span
             className="c9"
+            role="alert"
           >
             Correct
           </span>
         </div>
         <p
           className="c10"
+          role="alert"
         >
           Nearly there
         </p>
