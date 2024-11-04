@@ -40,7 +40,7 @@ export type OakModalCenterBodyProps = {
  * Intended to be used within the `OakModalCenter` component
  * it provides a consistent layout for the body of the modal.
  * It includes an icon, a title, and the children passed to it.
- * The icon and title can be extended/overridden with the `iconOverride` and `headingOverride` props.
+ * The  icon and title can be extended/overridden with the `iconOverride` and `headingOverride` props.
  *
  *  ## Props
  *
