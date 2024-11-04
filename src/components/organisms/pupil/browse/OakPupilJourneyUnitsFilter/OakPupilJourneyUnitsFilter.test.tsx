@@ -22,6 +22,7 @@ describe("PupilJourneyUnitsFilter", () => {
         menuItems={menuItems}
         selected={"all"}
         onSelected={() => null}
+        onSkipCallback={() => null}
       />,
     );
     expect(getAllByLabelText("OakPupilJourneyUnitsFilter")).toHaveLength(2);
@@ -35,6 +36,7 @@ describe("PupilJourneyUnitsFilter", () => {
           selected={"all"}
           onSelected={() => null}
           data-testid="test"
+          onSkipCallback={() => null}
         />
       </ThemeProvider>,
     ).toJSON();
@@ -47,6 +49,7 @@ describe("PupilJourneyUnitsFilter", () => {
         selected={"all"}
         onSelected={() => null}
         data-testid="test"
+        onSkipCallback={() => null}
       />,
     );
     menuItems.forEach((item) => {
@@ -60,6 +63,7 @@ describe("PupilJourneyUnitsFilter", () => {
         selected={"biology"}
         onSelected={() => null}
         data-testid="test"
+        onSkipCallback={() => null}
       />,
     );
     expect(getAllByText("Biology")[0]?.getAttribute("aria-checked") === "true");
@@ -72,6 +76,7 @@ describe("PupilJourneyUnitsFilter", () => {
         selected={"all"}
         onSelected={onSelected}
         data-testid="test"
+        onSkipCallback={() => null}
       />,
     );
     act(() => {
