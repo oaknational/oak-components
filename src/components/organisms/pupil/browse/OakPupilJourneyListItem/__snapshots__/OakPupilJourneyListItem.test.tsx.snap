@@ -256,7 +256,7 @@ exports[`OakPupilJourneyListItem matches snapshot 1`] = `
     role="listitem"
   >
     <a
-      className="c1 c2 c3"
+      className="c1 c2 c3 pupil-journey-item"
       title="Lesson 1"
     >
       <div
