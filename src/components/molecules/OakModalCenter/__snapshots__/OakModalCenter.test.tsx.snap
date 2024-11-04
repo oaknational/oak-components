@@ -27,8 +27,6 @@ exports[`OakModalCenter matches snapshot 1`] = `
   position: relative;
   width: 100%;
   background: #ffffff;
-  border: 0.25rem solid;
-  border-color: #93e892;
   border-radius: 1rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
