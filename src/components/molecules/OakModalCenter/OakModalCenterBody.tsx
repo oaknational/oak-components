@@ -30,6 +30,10 @@ export type OakModalCenterBodyProps = {
    * Override props for the icon
    */
   iconOverride?: Partial<OakIconProps>;
+  /**
+   * Hide icon
+   */
+  hideIcon?: boolean;
 };
 
 /**
@@ -52,6 +56,7 @@ export const OakModalCenterBody = ({
   title,
   headingOverride,
   iconOverride,
+  hideIcon,
 }: OakModalCenterBodyProps) => {
   return (
     <OakFlex
@@ -61,14 +66,16 @@ export const OakModalCenterBody = ({
       $alignItems="center"
       $justifyContent="center"
     >
-      <OakIcon
-        iconName={iconName}
-        $width="all-spacing-15"
-        $height="all-spacing-15"
-        $mb="space-between-m2"
-        data-testid="icon"
-        {...iconOverride}
-      />
+      {!hideIcon && (
+        <OakIcon
+          iconName={iconName}
+          $width="all-spacing-15"
+          $height="all-spacing-15"
+          $mb="space-between-m2"
+          data-testid="icon"
+          {...iconOverride}
+        />
+      )}
       <OakHeading
         $font={["heading-5", "heading-5", "heading-4"]}
         data-testid="OakHeading-id"
