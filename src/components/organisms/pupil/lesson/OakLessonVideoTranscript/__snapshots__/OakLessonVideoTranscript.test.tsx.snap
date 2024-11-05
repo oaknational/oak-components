@@ -316,6 +316,7 @@ exports[`OakLessonVideoTranscript matches snapshot 1`] = `
     id="transcript-element"
   >
     <div
+      aria-live="polite"
       className="c1 c2"
     >
       <div
