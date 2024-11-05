@@ -33,7 +33,10 @@ export const OakInfo = (props: OakInfoProps) => {
         <OakInfoButton
           onClick={handleClick}
           isOpen={isOpen}
-          buttonProps={{ "aria-describedby": id }}
+          buttonProps={{
+            "aria-describedby": id,
+            "aria-label": isOpen ? "close info tooltip" : "open info tooltip",
+          }}
         />
       </OakTooltip>
     </>
