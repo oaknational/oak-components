@@ -659,11 +659,11 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
       </div>
     </div>
   </div>,
-  .c2 {
+  .c8 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c4 {
+.c2 {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -671,7 +671,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c6 {
+.c5 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -685,7 +685,12 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c3 {
+.c11 {
+  display: block;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -721,6 +726,18 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 
 .c1 {
   display: none;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: end;
+  gap: 1.5rem;
+}
+
+.c12 {
+  display: block;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -739,7 +756,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   text-align: left;
 }
 
-.c7 {
+.c14 {
   background: none;
   color: inherit;
   border: none;
@@ -761,12 +778,12 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   border-radius: 0.25rem;
 }
 
-.c7:disabled {
+.c14:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c11 {
+.c6 {
   background: none;
   color: inherit;
   border: none;
@@ -788,19 +805,19 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   border-radius: 0.25rem;
 }
 
-.c11:disabled {
+.c6:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c8 {
+.c15 {
   position: relative;
   width: 100%;
   height: 100%;
   display: inline-block;
 }
 
-.c8:hover {
+.c15:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #ffffff;
@@ -808,26 +825,26 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   border-color: #575757;
 }
 
-.c8:active {
+.c15:active {
   background: #222222;
   border-color: #222222;
   color: #ffffff;
 }
 
-.c8:disabled {
+.c15:disabled {
   background: #808080;
   border-color: #808080;
   color: #ffffff;
 }
 
-.c12 {
+.c7 {
   position: relative;
   width: 100%;
   height: 100%;
   display: inline-block;
 }
 
-.c12:hover {
+.c7:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #222222;
@@ -835,41 +852,51 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   border-color: #222222;
 }
 
-.c12:active {
+.c7:active {
   background: #ffffff;
   border-color: #222222;
   color: #222222;
 }
 
-.c12:disabled {
+.c7:disabled {
   background: #e4e4e4;
   border-color: #808080;
   color: #808080;
 }
 
-.c5 .grey-shadow:has(+ * + .internal-button:focus-visible) {
+.c3 .grey-shadow:has(+ * + .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c5 .yellow-shadow:has(+ .internal-button:focus-visible) {
+.c3 .yellow-shadow:has(+ .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
 }
 
-.c5 .yellow-shadow:has(+ .internal-button:hover),
-.c5 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
+.c3 .yellow-shadow:has(+ .internal-button:hover),
+.c3 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c5 .grey-shadow:has(+ * + .internal-button:hover) {
+.c3 .grey-shadow:has(+ * + .internal-button:hover) {
   box-shadow: none;
 }
 
-.c5 .grey-shadow:has(+ * + .internal-button:active) {
+.c3 .grey-shadow:has(+ * + .internal-button:active) {
   box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c5 .yellow-shadow:has(+ .internal-button:active) {
+.c3 .yellow-shadow:has(+ .internal-button:active) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c4 > button {
+  opacity: 0;
+  position: absolute;
+}
+
+.c4 > button:focus-visible {
+  opacity: 1;
+  position: relative;
 }
 
 @media (min-width:750px) {
@@ -878,7 +905,10 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 
 @media (min-width:750px) {
   .c0 {
-    display: block;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -887,7 +917,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c3 {
+  .c13 {
     -webkit-box-pack: start;
     -webkit-justify-content: start;
     -ms-flex-pack: start;
@@ -896,7 +926,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 }
 
 @media (min-width:1280px) {
-  .c3 {
+  .c13 {
     -webkit-box-pack: end;
     -webkit-justify-content: end;
     -ms-flex-pack: end;
@@ -906,7 +936,10 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 
 @media (min-width:750px) {
   .c1 {
-    display: block;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -914,121 +947,151 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
     className="c0 c1"
   >
     <div
-      aria-label="OakPupilJourneyUnitsFilter"
-      className="c2 c3"
-      role="radiogroup"
+      className="c2 c3 c4"
     >
       <div
-        className="c4 c5"
-      >
-        <div
-          className="c6 grey-shadow"
-        />
-        <div
-          className="c6 yellow-shadow"
-        />
-        <button
-          aria-checked={true}
-          className="c7 c8 internal-button"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          role="radio"
-        >
-          <div
-            className="c2 c9"
-          >
-            <span
-              className="c10"
-            >
-              All
-            </span>
-          </div>
-        </button>
-      </div>
+        className="c5 grey-shadow"
+      />
       <div
-        className="c4 c5"
+        className="c5 yellow-shadow"
+      />
+      <button
+        className="c6 c7 internal-button"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
       >
         <div
-          className="c6 grey-shadow"
-        />
-        <div
-          className="c6 yellow-shadow"
-        />
-        <button
-          aria-checked={false}
-          className="c11 c12 internal-button"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          role="radio"
+          className="c8 c9"
         >
-          <div
-            className="c2 c9"
+          <span
+            className="c10"
           >
-            <span
-              className="c10"
-            >
-              Biology
-            </span>
-          </div>
-        </button>
-      </div>
+            Skip to results
+          </span>
+        </div>
+      </button>
+    </div>
+    <div
+      className="c11 c12"
+    >
       <div
-        className="c4 c5"
+        aria-label="OakPupilJourneyUnitsFilter"
+        className="c8 c13"
+        role="radiogroup"
       >
         <div
-          className="c6 grey-shadow"
-        />
-        <div
-          className="c6 yellow-shadow"
-        />
-        <button
-          aria-checked={false}
-          className="c11 c12 internal-button"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          role="radio"
+          className="c2 c3"
         >
           <div
-            className="c2 c9"
+            className="c5 grey-shadow"
+          />
+          <div
+            className="c5 yellow-shadow"
+          />
+          <button
+            aria-checked={true}
+            className="c14 c15 internal-button"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="radio"
           >
-            <span
-              className="c10"
+            <div
+              className="c8 c9"
             >
-              Chemistry
-            </span>
-          </div>
-        </button>
-      </div>
-      <div
-        className="c4 c5"
-      >
+              <span
+                className="c10"
+              >
+                All
+              </span>
+            </div>
+          </button>
+        </div>
         <div
-          className="c6 grey-shadow"
-        />
-        <div
-          className="c6 yellow-shadow"
-        />
-        <button
-          aria-checked={false}
-          className="c11 c12 internal-button"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          role="radio"
+          className="c2 c3"
         >
           <div
-            className="c2 c9"
+            className="c5 grey-shadow"
+          />
+          <div
+            className="c5 yellow-shadow"
+          />
+          <button
+            aria-checked={false}
+            className="c6 c7 internal-button"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="radio"
           >
-            <span
-              className="c10"
+            <div
+              className="c8 c9"
             >
-              Physics
-            </span>
-          </div>
-        </button>
+              <span
+                className="c10"
+              >
+                Biology
+              </span>
+            </div>
+          </button>
+        </div>
+        <div
+          className="c2 c3"
+        >
+          <div
+            className="c5 grey-shadow"
+          />
+          <div
+            className="c5 yellow-shadow"
+          />
+          <button
+            aria-checked={false}
+            className="c6 c7 internal-button"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="radio"
+          >
+            <div
+              className="c8 c9"
+            >
+              <span
+                className="c10"
+              >
+                Chemistry
+              </span>
+            </div>
+          </button>
+        </div>
+        <div
+          className="c2 c3"
+        >
+          <div
+            className="c5 grey-shadow"
+          />
+          <div
+            className="c5 yellow-shadow"
+          />
+          <button
+            aria-checked={false}
+            className="c6 c7 internal-button"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="radio"
+          >
+            <div
+              className="c8 c9"
+            >
+              <span
+                className="c10"
+              >
+                Physics
+              </span>
+            </div>
+          </button>
+        </div>
       </div>
     </div>
   </div>,

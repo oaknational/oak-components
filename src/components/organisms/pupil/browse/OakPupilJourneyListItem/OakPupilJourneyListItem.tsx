@@ -119,6 +119,7 @@ export const OakPupilJourneyListItem = <C extends ElementType = "a">(
   return (
     <OakBox role="listitem">
       <StyledPupilJourneyItem
+        className={disabledOrUnavailable ? undefined : "pupil-journey-item"}
         as={disabledOrUnavailable ? "div" : as ?? "a"}
         $gap={["space-between-s", "space-between-m2"]}
         $alignItems="center"

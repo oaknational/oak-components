@@ -1,10 +1,23 @@
 import React from "react";
+import styled from "styled-components";
 
 import { OakButtonAsRadioGroup } from "@/components/molecules/OakButtonAsRadioGroup";
 import { OakSecondaryButtonAsRadio } from "@/components/molecules/OakSecondaryButtonAsRadio";
+import { OakSecondaryButton } from "@/components/molecules/OakSecondaryButton";
 import { OakOutlineAccordion } from "@/components/molecules/OakOutlineAccordion";
 import { OakHeading } from "@/components/atoms/OakHeading";
 import { OakFlex } from "@/components/atoms";
+
+const StyledOakSecondaryButton = styled(OakSecondaryButton)`
+  & > button {
+    opacity: 0;
+    position: absolute;
+    &:focus-visible {
+      opacity: 1;
+      position: relative;
+    }
+  }
+`;
 
 type MenuItem = {
   displayText: string;
@@ -15,6 +28,7 @@ export type OakPupilJourneyUnitsFilterProps = {
   menuItems: MenuItem[];
   selected: string;
   onSelected: (arg0: MenuItem) => void;
+  onSkipCallback: () => void;
 };
 
 /**
@@ -31,7 +45,7 @@ export type OakPupilJourneyUnitsFilterProps = {
 export const OakPupilJourneyUnitsFilter = (
   props: OakPupilJourneyUnitsFilterProps,
 ) => {
-  const { menuItems, selected, onSelected } = props;
+  const { menuItems, selected, onSelected, onSkipCallback } = props;
 
   const OakRadioGroup = (
     <OakButtonAsRadioGroup
@@ -77,8 +91,21 @@ export const OakPupilJourneyUnitsFilter = (
           {OakRadioGroup}
         </OakOutlineAccordion>
       </OakFlex>
-      <OakFlex $display={["none", "block"]} $flexGrow={1}>
-        {OakRadioGroup}
+      <OakFlex
+        $display={["none", "flex"]}
+        $gap={"space-between-m"}
+        $flexDirection={"column"}
+        $alignItems={"end"}
+      >
+        {menuItems.length > 3 && (
+          <StyledOakSecondaryButton onClick={onSkipCallback}>
+            Skip to results
+          </StyledOakSecondaryButton>
+        )}
+
+        <OakFlex $display={"block"} $flexGrow={1}>
+          {OakRadioGroup}
+        </OakFlex>
       </OakFlex>
     </>
   );
