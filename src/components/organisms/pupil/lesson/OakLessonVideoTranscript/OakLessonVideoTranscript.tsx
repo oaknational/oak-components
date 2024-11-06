@@ -71,6 +71,7 @@ export const OakLessonVideoTranscript = ({
           isOpen={showTranscript}
           $font="body-1"
           $color="text-primary"
+          aria-live="polite"
         >
           {children}
         </OakCollapsibleContent>
