@@ -194,6 +194,7 @@ exports[`OakInfo matches snapshot 1`] = `
     >
       <button
         aria-describedby="info-tooltip"
+        aria-label="open info tooltip"
         className="c4 c5"
         data-rac={true}
         onClick={[Function]}
