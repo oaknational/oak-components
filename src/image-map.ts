@@ -4,6 +4,8 @@ export const icons = {
   send: "v1699893673/icons/rmvytilpjgvh3pgwc8ph.svg",
   rocket: "v1699894015/icons/u26xm5hteot875ozfnk9.svg",
   edit: "v1699894149/icons/qxlunbg5tfrdherzsvlt.svg",
+  expand: "v1730982187/Icon_Expand_arrktl.svg",
+  minimise: "v1730982213/Icon_Minimise_btcdbz.svg",
   hamburger: "v1699895123/icons/jaqdnomtbhqvjcap962u.svg",
   cross: "v1699895179/icons/xigimrbivcaxt4omxamp.svg",
   copy: "v1727861316/icons/Icon_Copy_qxgynv.svg",
