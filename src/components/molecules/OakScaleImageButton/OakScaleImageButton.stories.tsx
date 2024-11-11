@@ -41,8 +41,7 @@ export const Default: Story = {
 
 export const withImageScaleCallback: Story = {
   render: (args) => {
-    const [scaled, setScale] = useState(false);
-
+    const [scaled, setScale] = useState<boolean>(false);
     return (
       <OakFlex
         $width={"all-spacing-7"}
@@ -65,5 +64,11 @@ export const withImageScaleCallback: Story = {
         />
       </OakFlex>
     );
+  },
+  args: {},
+  parameters: {
+    controls: {
+      include: [],
+    },
   },
 };
