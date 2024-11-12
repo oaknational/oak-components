@@ -64,7 +64,7 @@ export const OakScaleImageButton = <C extends ElementType = "button">({
       $bblr={"border-radius-square"}
       $btlr={"border-radius-square"}
       width={"100%"}
-      aria-label={!isExpanded ? "Expand Image" : "Minimise imagew"}
+      aria-label={!isExpanded ? "Expand Image" : "Minimise image"}
       data-testid="expand-image-button"
     />
   );
