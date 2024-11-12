@@ -23,6 +23,7 @@ export type OakScaleImageButtonProps = Omit<
   | "$bblr"
   | "$btlr"
   | "width"
+  | "onClick"
 > & {
   onImageScaleCallback: (event: React.MouseEvent<HTMLButtonElement>) => void;
   isExpanded: boolean;
