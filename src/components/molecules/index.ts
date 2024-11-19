@@ -39,3 +39,5 @@ export * from "./OakTertiaryButton";
 export * from "./OakTextInput";
 export * from "./OakTooltip";
 export * from "./OakScaleImageButton";
+export * from "./OakTagFunctional";
+export * from "./OakTimer";

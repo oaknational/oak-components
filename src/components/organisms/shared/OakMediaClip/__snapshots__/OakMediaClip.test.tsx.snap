@@ -1,0 +1,299 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakMediaClip matches snapshot 1`] = `
+[
+  .c0 {
+  position: relative;
+  border-radius: 0.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c3 {
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c6 {
+  width: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c8 {
+  position: relative;
+  width: 6.25rem;
+  height: 3.5rem;
+  margin-right: 1rem;
+  border-radius: 0.125rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c11 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.125rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c13 {
+  position: absolute;
+  right: 0.25rem;
+  bottom: 0.25rem;
+  color: #ffffff;
+  background: #222222;
+  border-radius: 0.125rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.c16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.c12 {
+  object-fit: contain;
+}
+
+.c17 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+  text-overflow: ellipsis;
+  color: #222222;
+}
+
+.c15 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c18 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+  color: #575757;
+}
+
+.c4 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+  color: #ffffff;
+  background: #ffffff;
+  padding: 0.5rem;
+  border-color: transparent;
+  border-radius: 0.25rem;
+}
+
+.c4:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c1 .grey-shadow:has(+ * + .internal-button:focus-visible) {
+  box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c1 .yellow-shadow:has(+ .internal-button:focus-visible) {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
+}
+
+.c1 .grey-shadow:has(+ * + .internal-button:hover) {
+  box-shadow: none;
+}
+
+.c1 .grey-shadow:has(+ * + .internal-button:active) {
+  box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+}
+
+.c1 .yellow-shadow:has(+ .internal-button:active) {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c14 {
+  opacity: 0.9;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.c2 {
+  height: 72px;
+  min-width: 303px;
+  width: 100%;
+}
+
+.c10 img {
+  border-radius: 2px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.c5 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  -webkit-transition: opacity 300ms ease-out;
+  transition: opacity 300ms ease-out;
+}
+
+.c5:hover {
+  color: #222222;
+  background: #f2f2f2;
+  border-color: transparent;
+}
+
+.c5:hover h4 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c5:disabled {
+  background: #e4e4e4;
+  border-color: #808080;
+  color: #808080;
+}
+
+<div
+    className="c0 c1 c2"
+  >
+    <div
+      className="c3 grey-shadow"
+    />
+    <div
+      className="c3 yellow-shadow"
+    />
+    <button
+      className="c4 c5 internal-button"
+      defaultBorderColor="transparent"
+      justifyContent="flex-start"
+      muxPlayingState="standard"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <div
+        className="c6 c7"
+      >
+        <div
+          className="c8 c9 c10"
+        >
+          <div
+            className="c11"
+            fill={true}
+          >
+            <img
+              alt="Test Image"
+              className="c12"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              sizes="100vw"
+              src="/_next/image?url=%2Ftest-image.jpg&w=3840&q=75"
+              srcSet="/_next/image?url=%2Ftest-image.jpg&w=640&q=75 640w, /_next/image?url=%2Ftest-image.jpg&w=750&q=75 750w, /_next/image?url=%2Ftest-image.jpg&w=828&q=75 828w, /_next/image?url=%2Ftest-image.jpg&w=1080&q=75 1080w, /_next/image?url=%2Ftest-image.jpg&w=1200&q=75 1200w, /_next/image?url=%2Ftest-image.jpg&w=1920&q=75 1920w, /_next/image?url=%2Ftest-image.jpg&w=2048&q=75 2048w, /_next/image?url=%2Ftest-image.jpg&w=3840&q=75 3840w"
+              style={
+                {
+                  "bottom": 0,
+                  "color": "transparent",
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
+          <div
+            className="c13 c14"
+          >
+            <label
+              className="c15"
+            >
+              03:54
+            </label>
+          </div>
+        </div>
+        <div
+          className="c6 c16"
+        >
+          <h4
+            className="c17"
+          >
+            Test Clip
+          </h4>
+          <p
+            className="c18"
+          >
+            Cycle 1
+          </p>
+        </div>
+      </div>
+    </button>
+  </div>,
+  ",",
+]
+`;
