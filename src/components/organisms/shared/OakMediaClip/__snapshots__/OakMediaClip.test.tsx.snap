@@ -56,6 +56,12 @@ exports[`OakMediaClip matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
+.c16 {
+  overflow: hidden;
+  width: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
 .c7 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -80,7 +86,7 @@ exports[`OakMediaClip matches snapshot 1`] = `
   flex-shrink: 0;
 }
 
-.c16 {
+.c17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -95,7 +101,7 @@ exports[`OakMediaClip matches snapshot 1`] = `
   object-fit: contain;
 }
 
-.c17 {
+.c18 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -112,7 +118,7 @@ exports[`OakMediaClip matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c18 {
+.c19 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
@@ -174,8 +180,7 @@ exports[`OakMediaClip matches snapshot 1`] = `
 }
 
 .c2 {
-  height: 72px;
-  min-width: 303px;
+  min-height: 72px;
   width: 100%;
 }
 
@@ -278,15 +283,15 @@ exports[`OakMediaClip matches snapshot 1`] = `
           </div>
         </div>
         <div
-          className="c6 c16"
+          className="c16 c17"
         >
           <h4
-            className="c17"
+            className="c18"
           >
             Test Clip
           </h4>
           <p
-            className="c18"
+            className="c19"
           >
             Cycle 1
           </p>
