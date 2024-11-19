@@ -17,7 +17,7 @@ export type OakMediaClipProps = {
   thumbnailImage: string;
   timeCode: string;
   clipName: string;
-  learningCycle: string;
+  learningCycle?: string;
   muxPlayingState: MuxPlayingState;
   onClick: () => void;
   disabled?: boolean;
@@ -63,8 +63,7 @@ const getButtonStyles = (muxPlayingState: MuxPlayingState): MediaClipStyles => {
   }
 };
 const MediaButtonWrapper = styled(StyledButtonWrapper)`
-  height: 72px;
-  min-width: 303px;
+  min-height: 72px;
   width: 100%;
 `;
 
@@ -230,6 +229,7 @@ export const OakMediaClip = ({
               $width={"100%"}
               $flexDirection={"column"}
               $gap={"space-between-sssx"}
+              $overflow={"hidden"}
             >
               <OakHeading
                 $textOverflow={"ellipsis"}
@@ -241,12 +241,14 @@ export const OakMediaClip = ({
               >
                 {clipName}
               </OakHeading>
-              <OakP
-                $color={!disabled ? "text-subdued" : "text-disabled"}
-                $font={"body-3"}
-              >
-                {learningCycle}
-              </OakP>
+              {learningCycle && (
+                <OakP
+                  $color={!disabled ? "text-subdued" : "text-disabled"}
+                  $font={"body-3"}
+                >
+                  {learningCycle}
+                </OakP>
+              )}
             </OakFlex>
           </>
           {muxPlayingState === "played" && !disabled && (

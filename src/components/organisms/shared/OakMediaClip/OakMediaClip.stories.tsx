@@ -14,7 +14,6 @@ const meta: Meta<typeof OakMediaClip> = {
     timeCode: "03:03:34",
     muxPlayingState: "standard",
     imageAltText: "Image Alt Text",
-    learningCycle: "Learning Cycle title",
     isAudioClip: false,
     disabled: false,
     thumbnailImage: `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336494/samples/landscapes/nature-mountains.jpg`,
@@ -36,12 +35,12 @@ const meta: Meta<typeof OakMediaClip> = {
   ],
   argTypes: {
     clipName: { control: "text" },
+    learningCycle: { control: "text" },
     timeCode: { control: "text" },
     muxPlayingState: {
       control: { type: "select", options: ["standard", "playing", "played"] },
     },
     imageAltText: { control: "text" },
-    learningCycle: { control: "text" },
     isAudioClip: { control: "boolean" },
     disabled: { control: "boolean" },
     thumbnailImage: { control: "text" },
@@ -50,10 +49,10 @@ const meta: Meta<typeof OakMediaClip> = {
     controls: {
       include: [
         "clipName",
+        "learningCycle",
         "timeCode",
         "muxPlayingState",
         "imageAltText",
-        "learningCycle",
         "isAudioClip",
         "disabled",
         "thumbnailImage",
@@ -99,7 +98,6 @@ export const Default: Story = {
     timeCode: "03:03:34",
     muxPlayingState: "standard",
     imageAltText: "Image Alt Text",
-    learningCycle: "Learning Cycle title",
     isAudioClip: false,
     disabled: false,
     thumbnailImage: `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336494/samples/landscapes/nature-mountains.jpg`,
