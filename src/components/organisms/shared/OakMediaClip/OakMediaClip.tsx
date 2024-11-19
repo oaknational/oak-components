@@ -3,7 +3,13 @@ import styled, { css } from "styled-components";
 
 import { OakFlex } from "@/components/atoms/OakFlex";
 import { StyledButtonWrapper } from "@/components/molecules/InternalShadowRectButton";
-import { OakBox, OakHeading, OakImage, OakP } from "@/components/atoms";
+import {
+  OakBox,
+  OakHeading,
+  OakIcon,
+  OakImage,
+  OakP,
+} from "@/components/atoms";
 import { OakCombinedColorToken } from "@/styles";
 import { InternalButton } from "@/components/atoms/InternalButton";
 import { sizeStyle, SizeStyleProps } from "@/styles/utils/sizeStyle";
@@ -14,7 +20,7 @@ import { OakTagFunctional, OakTimer } from "@/components/molecules";
 type MuxPlayingState = "standard" | "playing" | "played";
 
 export type OakMediaClipProps = {
-  thumbnailImage: string;
+  thumbnailImage?: string;
   timeCode: string;
   clipName: string;
   learningCycle?: string;
@@ -133,8 +139,6 @@ const StyledInternalButton = styled(InternalButton)<
   `}
 `;
 
-//Check with Monika mobile designs
-
 export const OakMediaClip = ({
   thumbnailImage,
   timeCode,
@@ -204,19 +208,25 @@ export const OakMediaClip = ({
               disabled={disabled}
               $flexShrink={0}
             >
-              <OakImage
-                fill
-                $height={"100%"}
-                $width={"100%"}
-                //sort this image out it's not pulling through
-                src={
-                  isAudioClip
-                    ? "https://res.cloudinary.com/oak-web-application/image/upload/v1731951210/teacher-journey/audio_clip_small.svg"
-                    : thumbnailImage
-                }
-                alt={imageAltText}
-                $borderRadius={"border-radius-xs"}
-              />
+              {!isAudioClip && thumbnailImage ? (
+                <OakImage
+                  fill
+                  $height={"100%"}
+                  $width={"100%"}
+                  src={thumbnailImage}
+                  alt={imageAltText}
+                  $borderRadius={"border-radius-xs"}
+                />
+              ) : (
+                <OakIcon
+                  fill
+                  $height={"100%"}
+                  $width={"100%"}
+                  iconName={"audio-clip-small"}
+                  alt={imageAltText}
+                  $borderRadius={"border-radius-xs"}
+                />
+              )}
               <OakTimer
                 timeCode={timeCode}
                 $position={"absolute"}
