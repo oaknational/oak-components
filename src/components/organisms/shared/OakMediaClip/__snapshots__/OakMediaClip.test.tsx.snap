@@ -56,12 +56,6 @@ exports[`OakMediaClip matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c16 {
-  overflow: hidden;
-  width: 100%;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
 .c7 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -86,7 +80,7 @@ exports[`OakMediaClip matches snapshot 1`] = `
   flex-shrink: 0;
 }
 
-.c17 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -127,6 +121,9 @@ exports[`OakMediaClip matches snapshot 1`] = `
   -moz-letter-spacing: -0.005rem;
   -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #575757;
 }
 
@@ -191,6 +188,20 @@ exports[`OakMediaClip matches snapshot 1`] = `
   object-fit: cover;
 }
 
+.c17 {
+  position: "relative";
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.c17 h4 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+}
+
 .c5 {
   position: relative;
   width: 100%;
@@ -234,6 +245,7 @@ exports[`OakMediaClip matches snapshot 1`] = `
       onClick={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
+      tabIndex={0}
     >
       <div
         className="c6 c7"
@@ -273,6 +285,7 @@ exports[`OakMediaClip matches snapshot 1`] = `
             />
           </div>
           <div
+            aria-label="Media clip length: 03:54"
             className="c13 c14"
           >
             <label
@@ -283,7 +296,7 @@ exports[`OakMediaClip matches snapshot 1`] = `
           </div>
         </div>
         <div
-          className="c16 c17"
+          className="c6 c16 c17"
         >
           <h4
             className="c18"

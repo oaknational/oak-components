@@ -29,6 +29,7 @@ export const OakTimer = (props: OakTimerProps) => {
       $borderRadius={"border-radius-xs"}
       $background={"bg-icon"}
       $font={["body-4"]}
+      aria-label={`Media clip length: ${formattedTimeCode}`}
       {...oakBoxProps}
     >
       <OakLabel>{formattedTimeCode}</OakLabel>

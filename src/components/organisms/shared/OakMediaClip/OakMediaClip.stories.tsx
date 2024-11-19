@@ -11,6 +11,7 @@ const meta: Meta<typeof OakMediaClip> = {
   tags: ["autodocs"],
   args: {
     clipName: "Standard Clip Name",
+    learningCycle: "Learning Cycle",
     timeCode: "03:03:34",
     muxPlayingState: "standard",
     imageAltText: "Image Alt Text",

@@ -93,6 +93,7 @@ exports[`OakModalCenter matches snapshot 1`] = `
   border-bottom: 0rem solid;
   border-color: #cacaca;
   font-family: --var(google-font),Lexend,sans-serif;
+  overflow: auto;
 }
 
 .c21 {

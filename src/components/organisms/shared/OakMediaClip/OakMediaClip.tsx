@@ -29,6 +29,7 @@ export type OakMediaClipProps = {
   disabled?: boolean;
   imageAltText: string;
   isAudioClip?: boolean;
+  element?: "button" | "a";
 };
 
 type MediaClipStyles = {
@@ -98,6 +99,19 @@ const ImageBox = styled(OakFlex)<{ disabled?: boolean }>`
     `}
 `;
 
+const TextBox = styled(OakFlex)`
+  position: "relative";
+  overflow: hidden;
+  text-overflow: ellipsis;
+  h4 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+  }
+`;
+
 const StyledInternalButton = styled(InternalButton)<
   SizeStyleProps & {
     $defaultTextColor: OakCombinedColorToken;
@@ -149,6 +163,7 @@ export const OakMediaClip = ({
   disabled,
   imageAltText,
   isAudioClip,
+  element = "button",
 }: OakMediaClipProps) => {
   const buttonStyles = getButtonStyles(muxPlayingState);
 
@@ -175,7 +190,8 @@ export const OakMediaClip = ({
         $top="all-spacing-0"
       />
       <StyledInternalButton
-        element={"button"}
+        element={element}
+        tabIndex={0}
         className="internal-button"
         $width={"100%"}
         $height={"100%"}
@@ -235,11 +251,10 @@ export const OakMediaClip = ({
               />
             </ImageBox>
 
-            <OakFlex
+            <TextBox
               $width={"100%"}
               $flexDirection={"column"}
               $gap={"space-between-sssx"}
-              $overflow={"hidden"}
             >
               <OakHeading
                 $textOverflow={"ellipsis"}
@@ -255,11 +270,14 @@ export const OakMediaClip = ({
                 <OakP
                   $color={!disabled ? "text-subdued" : "text-disabled"}
                   $font={"body-3"}
+                  $textOverflow={"ellipsis"}
+                  $overflow={"hidden"}
+                  $whiteSpace={"nowrap"}
                 >
                   {learningCycle}
                 </OakP>
               )}
-            </OakFlex>
+            </TextBox>
           </>
           {muxPlayingState === "played" && !disabled && (
             <OakFlex $flexGrow={1}>
