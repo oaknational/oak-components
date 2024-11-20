@@ -20,8 +20,10 @@ const SlideInFlex = styled(OakFlex)<{
   isRightHandSide?: boolean;
 }>`
   max-width: ${({ isLeftHandSide }) =>
-    isLeftHandSide ? `calc(100vw - ${parseSpacing("inner-padding-l")})` : "100vw"};
-  
+    isLeftHandSide
+      ? `calc(100vw - ${parseSpacing("inner-padding-l")})`
+      : "100vw"};
+
   transform: ${({ $state, isLeftHandSide, isRightHandSide }) => {
     switch ($state) {
       case "entered":
@@ -31,11 +33,11 @@ const SlideInFlex = styled(OakFlex)<{
         return isRightHandSide
           ? "translateX(100%)"
           : isLeftHandSide
-          ? "translateX(-100%)"
-          : "translateX(-100%)";
+            ? "translateX(-100%)"
+            : "translateX(-100%)";
     }
   }};
-  
+
   ${({ isLeftHandSide }) =>
     !isLeftHandSide &&
     `

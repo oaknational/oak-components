@@ -43,7 +43,6 @@ export type OakModalProps = {
    * NB *The modal is rendered inside a portal so it will not respect the stacking context of its parent component*.
    */
   zIndex?: number;
-
 } & Pick<
   HTMLAttributes<Element>,
   "aria-label" | "aria-description" | "aria-labelledby" | "aria-describedby"
