@@ -127,6 +127,8 @@ export const icons = {
   "homepage-three-pupils": "v1725877472/homepage/image-students_g0jtxe.svg",
   "homepage-teacher": "v1725882091/homepage/teacher-carrying-stuff_gab2ec.svg",
   "homepage-teacher-map": "v1725882279/homepage/teacher-reading-map_glwhyh.svg",
+  "audio-clip-large": "teacher-journey/audio_clip.svg",
+  "audio-clip-small": "teacher-journey/audio_clip_small.svg",
 } as const;
 
 export type IconName = keyof typeof icons;

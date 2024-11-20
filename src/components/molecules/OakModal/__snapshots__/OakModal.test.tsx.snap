@@ -78,6 +78,7 @@ exports[`OakModal matches snapshot when mounted 1`] = `
   border-top: 0.063rem solid;
   border-color: transparent;
   font-family: --var(google-font),Lexend,sans-serif;
+  overflow: auto;
 }
 
 .c20 {

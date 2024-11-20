@@ -282,6 +282,7 @@ exports[`OakLessonVideoTranscript matches snapshot 1`] = `
   max-height: 100%;
   padding-right: 1rem;
   font-family: --var(google-font),Lexend,sans-serif;
+  overflow: auto;
 }
 
 .c2 {

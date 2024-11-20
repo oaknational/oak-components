@@ -113,7 +113,7 @@ const StyledInternalButton = styled(InternalButton)<
   `}
 `;
 
-const StyledButtonWrapper = styled(OakBox)<
+export const StyledButtonWrapper = styled(OakBox)<
   OakBoxProps & {
     $hoverShadow?: OakDropShadowToken | null;
   }
@@ -268,7 +268,7 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
           $flexDirection={iconLayout}
           $alignItems={"center"}
           $gap={iconGap}
-          $justifyContent="center"
+          $justifyContent={"center"}
           $width={innerWidth}
         >
           {!isTrailingIcon && iconLogic}
