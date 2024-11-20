@@ -12,7 +12,7 @@ const meta: Meta<typeof OakMediaClip> = {
   args: {
     clipName: "Standard Clip Name",
     learningCycle: "Learning Cycle",
-    timeCode: "03:03:34",
+    timeCode: 657.23,
     muxPlayingState: "standard",
     imageAltText: "Image Alt Text",
     isAudioClip: false,
@@ -37,7 +37,7 @@ const meta: Meta<typeof OakMediaClip> = {
   argTypes: {
     clipName: { control: "text" },
     learningCycle: { control: "text" },
-    timeCode: { control: "text" },
+    timeCode: { control: "number" },
     muxPlayingState: {
       control: { type: "select", options: ["standard", "playing", "played"] },
     },
@@ -96,7 +96,7 @@ export const Default: Story = {
   },
   args: {
     clipName: "Standard Clip Name",
-    timeCode: "03:03:34",
+    timeCode: 657.24,
     muxPlayingState: "standard",
     imageAltText: "Image Alt Text",
     isAudioClip: false,

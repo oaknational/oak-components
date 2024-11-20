@@ -26,13 +26,13 @@ exports[`OakTimer matches snapshot 1`] = `
 }
 
 <div
-  aria-label="Media clip length: 03:23"
+  aria-label="Media clip length: 11:10"
   className="c0 c1"
 >
   <label
     className="c2"
   >
-    03:23
+    11:10
   </label>
 </div>
 `;

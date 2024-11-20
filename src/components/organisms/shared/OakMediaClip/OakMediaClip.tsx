@@ -21,7 +21,7 @@ type MuxPlayingState = "standard" | "playing" | "played";
 
 export type OakMediaClipProps = {
   thumbnailImage?: string;
-  timeCode: string;
+  timeCode: number;
   clipName: string;
   learningCycle?: string;
   muxPlayingState: MuxPlayingState;
@@ -294,6 +294,8 @@ export const OakMediaClip = ({
  *
  * OakMediaClip component adapted from the Internal button component, has 4 different states, standard, playing, played and disabled
  * The following callbacks are available for tracking focus events:
+ *
+ * timeCode should be provided in seconds as the OakTimer component converts this to hours and minutes format
  *
  * ### Callbacks
  * - `onClick`

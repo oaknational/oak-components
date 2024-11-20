@@ -285,13 +285,13 @@ exports[`OakMediaClip matches snapshot 1`] = `
             />
           </div>
           <div
-            aria-label="Media clip length: 03:54"
+            aria-label="Media clip length: 10:57"
             className="c13 c14"
           >
             <label
               className="c15"
             >
-              03:54
+              10:57
             </label>
           </div>
         </div>

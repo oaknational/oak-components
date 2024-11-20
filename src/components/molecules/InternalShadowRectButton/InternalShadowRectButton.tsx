@@ -75,10 +75,9 @@ export type InternalShadowRectButtonProps = Omit<
   font?: TypographyStyleProps["$font"];
   innerWidth?: SizeStyleProps["$width"];
   textAlign?: TypographyStyleProps["$textAlign"];
-  justifyContent?: FlexStyleProps["$justifyContent"];
 } & PositionStyleProps;
 
-export const StyledInternalButton = styled(InternalButton)<
+const StyledInternalButton = styled(InternalButton)<
   SizeStyleProps & {
     $defaultTextColor: OakCombinedColorToken;
     $defaultBackground: OakCombinedColorToken;
@@ -188,7 +187,6 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
     font = "heading-7",
     textAlign = "left",
     loadingSpinnerSize = "all-spacing-6",
-    justifyContent = "center",
     ...rest
   } = props;
 
@@ -270,7 +268,7 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
           $flexDirection={iconLayout}
           $alignItems={"center"}
           $gap={iconGap}
-          $justifyContent={justifyContent}
+          $justifyContent={"center"}
           $width={innerWidth}
         >
           {!isTrailingIcon && iconLogic}

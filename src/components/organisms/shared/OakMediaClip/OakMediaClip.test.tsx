@@ -12,7 +12,7 @@ import { oakDefaultTheme } from "@/styles";
 describe("OakMediaClip", () => {
   const defaultProps = {
     thumbnailImage: "/test-image.jpg",
-    timeCode: "00:03:54",
+    timeCode: 657.24,
     clipName: "Test Clip",
     learningCycle: "Cycle 1",
     muxPlayingState: "standard" as const,
@@ -51,7 +51,7 @@ describe("OakMediaClip", () => {
 
   it("displays the correct time code", () => {
     const { getByText } = renderWithTheme(<OakMediaClip {...defaultProps} />);
-    expect(getByText("03:54")).toBeInTheDocument();
+    expect(getByText("10:57")).toBeInTheDocument();
   });
 
   it("applies disabled styles when disabled", () => {

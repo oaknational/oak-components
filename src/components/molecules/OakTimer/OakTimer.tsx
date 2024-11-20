@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { OakBox, OakBoxProps, OakLabel } from "@/components/atoms";
 
 export type OakTimerProps = {
-  timeCode: string;
+  timeCode: number;
 } & Omit<OakBoxProps, "onClick" | "label">;
 
 const StyledTimeBox = styled(OakBox)`
@@ -13,13 +13,17 @@ const StyledTimeBox = styled(OakBox)`
   padding-right: 2px;
 `;
 
+export const formatTimeCode = (seconds: number): string => {
+  const totalSeconds = Math.floor(seconds);
+  const minutes = Math.floor(totalSeconds / 60);
+  const remainingSeconds = totalSeconds % 60;
+  return `${String(minutes).padStart(2, "0")}:${String(
+    remainingSeconds,
+  ).padStart(2, "0")}`;
+};
+
 export const OakTimer = (props: OakTimerProps) => {
   const { timeCode, ...oakBoxProps } = props;
-
-  function formatTimeCode(timeCode: string): string {
-    const [, minutes, seconds] = timeCode.split(":");
-    return `${minutes}:${seconds}`;
-  }
 
   const formattedTimeCode = formatTimeCode(timeCode);
 
@@ -36,3 +40,9 @@ export const OakTimer = (props: OakTimerProps) => {
     </StyledTimeBox>
   );
 };
+
+/**
+ *
+ * OakTimer component takes time in seconds and converts it to a minutes and seconds format
+ *
+ */
