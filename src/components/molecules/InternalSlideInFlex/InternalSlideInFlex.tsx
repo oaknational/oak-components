@@ -18,7 +18,9 @@ const SlideInFlex = styled(OakFlex)<{
   isLeftHandSide: boolean;
 }>`
   max-width: ${({ isLeftHandSide }) =>
-    isLeftHandSide ? `calc(100vw - ${parseSpacing("inner-padding-l")})` : "100vw"};
+    isLeftHandSide
+      ? `calc(100vw - ${parseSpacing("inner-padding-l")})`
+      : "100vw"};
   transform: ${({ $state, isLeftHandSide }) => {
     switch ($state) {
       case "entered":
