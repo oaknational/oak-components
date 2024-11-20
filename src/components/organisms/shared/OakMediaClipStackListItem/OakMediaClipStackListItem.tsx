@@ -13,6 +13,7 @@ import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { parseTransitions } from "@/styles/helpers/parseTransitions";
+import { getMediaQuery } from "@/styles/utils/responsiveStyle";
 
 export type OakMediaClipStackListItemProps = {
   title: string;
@@ -57,7 +58,7 @@ const ImageStackShadow = styled(OakBox)`
     -webkit-filter: brightness(100%);
   }
 
-  &:after {
+  &::after {
     content: "";
     position: absolute;
     top: -6px;
@@ -66,6 +67,16 @@ const ImageStackShadow = styled(OakBox)`
     height: 100%;
     box-shadow: ${parseColor("grey40")} 7px -4px;
     border-radius: ${parseBorderRadius("border-radius-s")};
+  }
+
+  @media ${getMediaQuery("mobile")} {
+    box-shadow: ${parseColor("grey50")} 4px -3px;
+
+    &::after {
+      top: -3px;
+      left: 4px;
+      box-shadow: ${parseColor("grey40")} 4px -3px;
+    }
   }
 
   #play-icon {
@@ -95,8 +106,8 @@ export const OakMediaClipStackListItem = (
       <OakBox>
         <ImageStackShadow
           $borderRadius={"border-radius-s"}
-          $width={["all-spacing-16", "all-spacing-18"]}
-          $height={["all-spacing-12", "all-spacing-15"]}
+          $width={["all-spacing-15", "all-spacing-18"]}
+          $height={["all-spacing-11", "all-spacing-15"]}
           $position={"relative"}
           $mb={["space-between-none", "space-between-xs"]}
         >
