@@ -55,6 +55,12 @@ export type TypographyStyleProps = {
    * Accepts a text-overflow token or a responsive array of text-overflow tokens.
    */
   $textOverflow?: ResponsiveValues<OakTextOverflow>;
+  /**
+   * Sets the `overflow` CSS property of the element.
+   *
+   * Accepts an overflow token or a responsive array of overflow tokens.
+   */
+  $overflow?: ResponsiveValues<CSSProperties["overflow"]>;
 };
 
 export const typographyStyle = css<TypographyStyleProps>`
@@ -72,4 +78,5 @@ export const typographyStyle = css<TypographyStyleProps>`
   ${responsiveStyle("white-space", (props) => props.$whiteSpace)}
   ${responsiveStyle("word-wrap", (props) => props.$wordWrap)}
   ${responsiveStyle("text-overflow", (props) => props.$textOverflow)}
+  ${responsiveStyle("overflow", (props) => props.$overflow)}
 `;

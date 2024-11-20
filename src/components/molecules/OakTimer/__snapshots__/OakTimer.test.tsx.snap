@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakTimer matches snapshot 1`] = `
+.c0 {
+  color: #ffffff;
+  background: #222222;
+  border-radius: 0.125rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c2 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c1 {
+  opacity: 0.9;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+<div
+  aria-label="Media clip length: 11:10"
+  className="c0 c1"
+>
+  <label
+    className="c2"
+  >
+    11:10
+  </label>
+</div>
+`;
