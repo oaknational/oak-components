@@ -70,7 +70,7 @@ export const OakModal = ({
   ...rest
 }: OakModalProps) => {
   const transitionRef = useRef<HTMLDivElement>(null);
-  
+
   const { isScrolled, ObserveScroll } = useIsScrolled();
 
   // `createPortal` is not supported in SSR so we can only render when mounted on the client

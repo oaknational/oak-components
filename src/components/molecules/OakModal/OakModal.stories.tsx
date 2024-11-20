@@ -24,11 +24,17 @@ const meta: Meta<typeof OakModal> = {
     },
     isRightHandSide: {
       control: "boolean",
-    }
+    },
   },
   parameters: {
     controls: {
-      include: ["children", "footerSlot", "isOpen", "onClose", "isRightHandSide"],
+      include: [
+        "children",
+        "footerSlot",
+        "isOpen",
+        "onClose",
+        "isRightHandSide",
+      ],
     },
   },
   args: {
@@ -55,7 +61,11 @@ const meta: Meta<typeof OakModal> = {
     return (
       <>
         <OakSecondaryButton onClick={onOpen}>Open modal</OakSecondaryButton>
-        <OakModal {...args} onClose={onClose} isRightHandSide={args.isRightHandSide} />
+        <OakModal
+          {...args}
+          onClose={onClose}
+          isRightHandSide={args.isRightHandSide}
+        />
       </>
     );
   },

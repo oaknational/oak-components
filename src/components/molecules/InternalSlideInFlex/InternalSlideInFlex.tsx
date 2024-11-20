@@ -21,7 +21,7 @@ const SlideInFlex = styled(OakFlex)<{
 }>`
   max-width: ${({ isModal }) =>
     isModal ? `calc(100vw - ${parseSpacing("inner-padding-l")})` : "100vw"};
-  
+
   transform: ${({ $state, isModal, isRightHandSide }) => {
     switch ($state) {
       case "entered":
@@ -31,11 +31,11 @@ const SlideInFlex = styled(OakFlex)<{
         return isRightHandSide
           ? "translateX(100%)"
           : isModal
-          ? "translateX(-100%)"
-          : "translateX(-100%)";
+            ? "translateX(-100%)"
+            : "translateX(-100%)";
     }
   }};
-  
+
   ${({ isModal }) =>
     !isModal &&
     `
@@ -51,7 +51,8 @@ const InternalSlideInFlex: FC<
   HTMLDivElement,
   InternalSlideInFlexProps & ComponentPropsWithRef<typeof OakFlex>
 >((props, ref) => {
-  const { finalZIndex, state, isModal, isRightHandSide, children, ...rest } = props;
+  const { finalZIndex, state, isModal, isRightHandSide, children, ...rest } =
+    props;
 
   return (
     <SlideInFlex
