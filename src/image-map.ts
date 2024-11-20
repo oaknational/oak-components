@@ -60,6 +60,7 @@ export const icons = {
   "teacher-unit": "icons/teacher-unit.svg",
   "move-arrows": "v1709052869/icons/hoddjsgpzkszgvnmn91q.svg",
   info: "v1709052869/icons/Icon_Info_vsx3xi.svg",
+  play: "v1732099511/icons/g1xehzuhjnb0xeftmdno.svg",
   "subject-art": "subject-icons/art.svg",
   "subject-biology": "subject-icons/biology.svg",
   "subject-chemistry": "subject-icons/chemistry.svg",

@@ -7,10 +7,12 @@ import {
   OakImage,
   OakTypography,
   OakHeading,
+  OakIcon,
 } from "@/components/atoms";
 import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
+import { parseTransitions } from "@/styles/helpers/parseTransitions";
 
 export type OakMediaClipStackListItemProps = {
   title: string;
@@ -21,8 +23,7 @@ export type OakMediaClipStackListItemProps = {
 };
 
 const OakMediaClipStackListItemLink = styled(OakFlex)`
-  animation-timing-function: ease-out;
-  transition-duration: 300ms;
+  transition: ${parseTransitions("standard-ease")};
 
   &:hover {
     h5 {
@@ -35,6 +36,14 @@ const OakMediaClipStackListItemLink = styled(OakFlex)`
     box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
   }
+
+  &:hover,
+  &:focus-visible {
+    img {
+      -webkit-filter: brightness(80%);
+      transition: ${parseTransitions("standard-ease")};
+    }
+  }
 `;
 
 const ImageStackShadow = styled(OakBox)`
@@ -45,6 +54,7 @@ const ImageStackShadow = styled(OakBox)`
 
   img {
     object-fit: fill;
+    -webkit-filter: brightness(100%);
   }
 
   &:after {
@@ -56,6 +66,14 @@ const ImageStackShadow = styled(OakBox)`
     height: 100%;
     box-shadow: ${parseColor("grey40")} 7px -4px;
     border-radius: ${parseBorderRadius("border-radius-s")};
+  }
+
+  #play-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -16px;
+    margin-top: -16px;
   }
 `;
 
@@ -89,6 +107,12 @@ export const OakMediaClipStackListItem = (
             $overflow={"hidden"}
             $width={"100%"}
             $height={"100%"}
+          />
+          <OakIcon
+            id="play-icon"
+            iconName="play"
+            $width={"all-spacing-7"}
+            $height={"all-spacing-7"}
           />
         </ImageStackShadow>
       </OakBox>
