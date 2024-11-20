@@ -43,6 +43,12 @@ export type OakModalProps = {
    * NB *The modal is rendered inside a portal so it will not respect the stacking context of its parent component*.
    */
   zIndex?: number;
+  /**
+   * Whether the modal should be right-aligned.
+   *
+   * Defaults to `false`
+   */
+  isRightHandSide?: boolean;
 } & Pick<
   HTMLAttributes<Element>,
   "aria-label" | "aria-description" | "aria-labelledby" | "aria-describedby"
@@ -59,11 +65,12 @@ export const OakModal = ({
   domContainer,
   isOpen,
   onClose,
+  isRightHandSide,
   zIndex,
   ...rest
 }: OakModalProps) => {
   const transitionRef = useRef<HTMLDivElement>(null);
-
+  
   const { isScrolled, ObserveScroll } = useIsScrolled();
 
   // `createPortal` is not supported in SSR so we can only render when mounted on the client
@@ -81,6 +88,7 @@ export const OakModal = ({
       transitionRef={transitionRef}
       onClose={onClose}
       finalZIndex={finalZIndex}
+      isRightHandSide={isRightHandSide}
       isModal={true}
       {...rest}
     >

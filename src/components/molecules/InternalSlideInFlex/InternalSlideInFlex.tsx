@@ -11,23 +11,31 @@ type InternalSlideInFlexProps = {
   state: TransitionStatus;
   isModal: boolean;
   children: React.ReactNode;
+  isRightHandSide?: boolean;
 };
 
 const SlideInFlex = styled(OakFlex)<{
   $state: TransitionStatus;
   isModal: boolean;
+  isRightHandSide?: boolean;
 }>`
   max-width: ${({ isModal }) =>
     isModal ? `calc(100vw - ${parseSpacing("inner-padding-l")})` : "100vw"};
-  transform: ${({ $state, isModal }) => {
+  
+  transform: ${({ $state, isModal, isRightHandSide }) => {
     switch ($state) {
       case "entered":
       case "entering":
         return "translateX(0)";
       default:
-        return isModal ? "translateX(-100%)" : "translateX(100%)";
+        return isRightHandSide
+          ? "translateX(100%)"
+          : isModal
+          ? "translateX(-100%)"
+          : "translateX(-100%)";
     }
   }};
+  
   ${({ isModal }) =>
     !isModal &&
     `
@@ -43,14 +51,14 @@ const InternalSlideInFlex: FC<
   HTMLDivElement,
   InternalSlideInFlexProps & ComponentPropsWithRef<typeof OakFlex>
 >((props, ref) => {
-  const { finalZIndex, state, isModal, children, ...rest } = props;
+  const { finalZIndex, state, isModal, isRightHandSide, children, ...rest } = props;
 
   return (
     <SlideInFlex
       ref={ref}
       $background="bg-primary"
-      $right={!isModal ? "all-spacing-0" : null}
-      $left={isModal ? "all-spacing-0" : null}
+      $right={isRightHandSide ? "all-spacing-0" : null}
+      $left={!isRightHandSide ? "all-spacing-0" : null}
       $position="fixed"
       $bottom="all-spacing-0"
       $width={["all-spacing-22"]}
@@ -62,6 +70,7 @@ const InternalSlideInFlex: FC<
       $color="text-primary"
       role="dialog"
       isModal={isModal}
+      isRightHandSide={isRightHandSide}
       {...rest}
     >
       {children}

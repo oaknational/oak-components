@@ -13,8 +13,8 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
 .c2 {
   position: fixed;
   top: 0rem;
-  right: 0rem;
   bottom: 0rem;
+  left: 0rem;
   width: 40rem;
   color: #222222;
   background: #ffffff;
