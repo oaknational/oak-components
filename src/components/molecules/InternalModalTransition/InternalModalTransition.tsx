@@ -13,7 +13,7 @@ type TransitionProps = {
   onClose: () => void;
   transitionRef: React.RefObject<HTMLDivElement>;
   finalZIndex: number | "modal-dialog";
-  isModal: boolean;
+  isLeftHandSide?: boolean;
 };
 
 const FadeOutBox = styled(OakBox)<{ $state: TransitionStatus }>`
@@ -38,7 +38,7 @@ const InternalModalTransition: FC<TransitionProps> = ({
   transitionRef,
   onClose,
   finalZIndex,
-  isModal,
+  isLeftHandSide,
   ...rest
 }) => {
   return (
@@ -57,10 +57,10 @@ const InternalModalTransition: FC<TransitionProps> = ({
           <FadeOutBox
             $zIndex={finalZIndex}
             $state={state}
-            onClick={!isModal ? onClose : undefined}
+            onClick={!isLeftHandSide ? onClose : undefined}
           />
           <InternalSlideInFlex
-            isModal={isModal}
+            isLeftHandSide={isLeftHandSide}
             ref={transitionRef}
             $zIndex={finalZIndex}
             $state={state}

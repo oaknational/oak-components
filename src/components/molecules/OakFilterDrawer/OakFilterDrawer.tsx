@@ -61,7 +61,7 @@ export const OakFilterDrawer = ({
       transitionRef={transitionRef}
       onClose={onClose}
       finalZIndex={finalZIndex}
-      isModal={false}
+      isLeftHandSide={false}
       {...rest}
     >
       <OakFlex

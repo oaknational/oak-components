@@ -9,27 +9,29 @@ type InternalSlideInFlexProps = {
   finalZIndex: number;
   transitionRef: React.RefObject<HTMLDivElement>;
   state: TransitionStatus;
-  isModal: boolean;
+  isLeftHandSide: boolean;
   children: React.ReactNode;
 };
 
 const SlideInFlex = styled(OakFlex)<{
   $state: TransitionStatus;
-  isModal: boolean;
+  isLeftHandSide: boolean;
 }>`
-  max-width: ${({ isModal }) =>
-    isModal ? `calc(100vw - ${parseSpacing("inner-padding-l")})` : "100vw"};
-  transform: ${({ $state, isModal }) => {
+  max-width: ${({ isLeftHandSide }) =>
+    isLeftHandSide
+      ? `calc(100vw - ${parseSpacing("inner-padding-l")})`
+      : "100vw"};
+  transform: ${({ $state, isLeftHandSide }) => {
     switch ($state) {
       case "entered":
       case "entering":
         return "translateX(0)";
       default:
-        return isModal ? "translateX(-100%)" : "translateX(100%)";
+        return isLeftHandSide ? "translateX(-100%)" : "translateX(100%)";
     }
   }};
-  ${({ isModal }) =>
-    !isModal &&
+  ${({ isLeftHandSide }) =>
+    !isLeftHandSide &&
     `
       @media (min-width: 768px) {
         max-width: 600px;
@@ -43,14 +45,14 @@ const InternalSlideInFlex: FC<
   HTMLDivElement,
   InternalSlideInFlexProps & ComponentPropsWithRef<typeof OakFlex>
 >((props, ref) => {
-  const { finalZIndex, state, isModal, children, ...rest } = props;
+  const { finalZIndex, state, isLeftHandSide, children, ...rest } = props;
 
   return (
     <SlideInFlex
       ref={ref}
       $background="bg-primary"
-      $right={!isModal ? "all-spacing-0" : null}
-      $left={isModal ? "all-spacing-0" : null}
+      $right={!isLeftHandSide ? "all-spacing-0" : null}
+      $left={isLeftHandSide ? "all-spacing-0" : null}
       $position="fixed"
       $bottom="all-spacing-0"
       $width={["all-spacing-22"]}
@@ -61,7 +63,7 @@ const InternalSlideInFlex: FC<
       $state={state}
       $color="text-primary"
       role="dialog"
-      isModal={isModal}
+      isLeftHandSide={isLeftHandSide}
       {...rest}
     >
       {children}
