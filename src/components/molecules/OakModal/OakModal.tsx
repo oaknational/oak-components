@@ -43,6 +43,10 @@ export type OakModalProps = {
    * NB *The modal is rendered inside a portal so it will not respect the stacking context of its parent component*.
    */
   zIndex?: number;
+  /**
+   * Whether the modal should be anchored to the left side of the screen.
+   */
+  isLeftHandSide?: boolean;
 } & Pick<
   HTMLAttributes<Element>,
   "aria-label" | "aria-description" | "aria-labelledby" | "aria-describedby"
@@ -60,6 +64,7 @@ export const OakModal = ({
   isOpen,
   onClose,
   zIndex,
+  isLeftHandSide = true,
   ...rest
 }: OakModalProps) => {
   const transitionRef = useRef<HTMLDivElement>(null);
@@ -81,7 +86,7 @@ export const OakModal = ({
       transitionRef={transitionRef}
       onClose={onClose}
       finalZIndex={finalZIndex}
-      isLeftHandSide={true}
+      isLeftHandSide={isLeftHandSide}
       {...rest}
     >
       <OakFlex
