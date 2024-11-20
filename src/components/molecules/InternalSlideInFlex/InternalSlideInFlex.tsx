@@ -11,33 +11,23 @@ type InternalSlideInFlexProps = {
   state: TransitionStatus;
   isLeftHandSide: boolean;
   children: React.ReactNode;
-  isRightHandSide?: boolean;
 };
 
 const SlideInFlex = styled(OakFlex)<{
   $state: TransitionStatus;
   isLeftHandSide: boolean;
-  isRightHandSide?: boolean;
 }>`
   max-width: ${({ isLeftHandSide }) =>
-    isLeftHandSide
-      ? `calc(100vw - ${parseSpacing("inner-padding-l")})`
-      : "100vw"};
-
-  transform: ${({ $state, isLeftHandSide, isRightHandSide }) => {
+    isLeftHandSide ? `calc(100vw - ${parseSpacing("inner-padding-l")})` : "100vw"};
+  transform: ${({ $state, isLeftHandSide }) => {
     switch ($state) {
       case "entered":
       case "entering":
         return "translateX(0)";
       default:
-        return isRightHandSide
-          ? "translateX(100%)"
-          : isLeftHandSide
-            ? "translateX(-100%)"
-            : "translateX(-100%)";
+        return isLeftHandSide ? "translateX(-100%)" : "translateX(100%)";
     }
   }};
-
   ${({ isLeftHandSide }) =>
     !isLeftHandSide &&
     `

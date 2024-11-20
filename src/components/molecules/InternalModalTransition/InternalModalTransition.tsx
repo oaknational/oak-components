@@ -13,7 +13,7 @@ type TransitionProps = {
   onClose: () => void;
   transitionRef: React.RefObject<HTMLDivElement>;
   finalZIndex: number | "modal-dialog";
-  isLeftHandSide: boolean;
+  isLeftHandSide?: boolean;
 };
 
 const FadeOutBox = styled(OakBox)<{ $state: TransitionStatus }>`
