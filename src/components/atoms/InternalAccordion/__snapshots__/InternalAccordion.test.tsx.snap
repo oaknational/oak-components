@@ -13,6 +13,12 @@ exports[`InternalAccordion matches snapshot 1`] = `
   cursor: pointer;
 }
 
+.c5 {
+  overflow: scroll;
+  font-family: --var(google-font),Lexend,sans-serif;
+  overflow: scroll;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -59,7 +65,7 @@ exports[`InternalAccordion matches snapshot 1`] = `
   </button>
   <div
     aria-labelledby="internal-accordion"
-    className="c0 "
+    className="c5 "
     hidden={false}
     role="region"
   >

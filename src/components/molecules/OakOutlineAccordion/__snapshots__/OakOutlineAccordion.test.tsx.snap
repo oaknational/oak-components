@@ -31,7 +31,14 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   min-width: 2rem;
   height: 2rem;
   min-height: 2rem;
+  margin-right: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c15 {
+  overflow: scroll;
+  font-family: --var(google-font),Lexend,sans-serif;
+  overflow: scroll;
 }
 
 .c14 {
@@ -89,7 +96,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   padding: 0;
 }
 
-.c16 {
+.c17 {
   position: absolute;
   width: 100%;
   bottom: -0.25rem;
@@ -132,11 +139,11 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c7 .c15 {
+.c7 .c16 {
   visibility: hidden;
 }
 
-.c7 .c11:focus-visible ~ .c15 {
+.c7 .c11:focus-visible ~ .c16 {
   visibility: visible;
 }
 
@@ -146,7 +153,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   bottom: 0.125rem;
 }
 
-.c17 {
+.c18 {
   height: 0.125rem;
   position: absolute;
   width: 100%;
@@ -181,7 +188,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
     className="c5 c6 c7"
   >
     <button
-      aria-expanded={false}
+      aria-expanded={true}
       className="c8 c9 c10 c11  c12"
       id="see-more"
       onClick={[Function]}
@@ -192,7 +199,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
         className="c13"
         style={
           {
-            "transform": "none",
+            "transform": "rotate(180deg)",
             "transition": "all 0.3s ease 0s",
           }
         }
@@ -225,14 +232,14 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
     </button>
     <div
       aria-labelledby="see-more"
-      className="c2 "
-      hidden={true}
+      className="c15 "
+      hidden={false}
       role="region"
     >
       Here it is
     </div>
     <div
-      className="c2 c3 c15 c16"
+      className="c2 c3 c16 c17"
     >
       <svg
         className=""
@@ -254,7 +261,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
     </div>
   </div>
   <div
-    className="c2 c3 c17"
+    className="c2 c3 c18"
   >
     <svg
       className=""

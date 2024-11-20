@@ -46,7 +46,9 @@ exports[`OakAccordion matches snapshot 1`] = `
 }
 
 .c10 {
+  overflow: scroll;
   font-family: --var(google-font),Lexend,sans-serif;
+  overflow: scroll;
 }
 
 .c8 {

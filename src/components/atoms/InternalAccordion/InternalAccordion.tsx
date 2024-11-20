@@ -30,7 +30,7 @@ const AccordionContent = ({
   const { isOpen } = useAccordionContext();
 
   return (
-    <OakBox hidden={!isOpen} role="region" {...rest}>
+    <OakBox hidden={!isOpen} role="region" $overflow={"scroll"} {...rest}>
       {children}
     </OakBox>
   );

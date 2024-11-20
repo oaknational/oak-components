@@ -276,7 +276,9 @@ exports[`InternalReviewAccordion matches snapshot 1`] = `
     </div>
   </div>,
   .c0 {
+  overflow: scroll;
   font-family: --var(google-font),Lexend,sans-serif;
+  overflow: scroll;
 }
 
 .c2 {

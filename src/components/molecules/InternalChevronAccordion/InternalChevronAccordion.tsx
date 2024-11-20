@@ -100,6 +100,7 @@ const Accordion = ({
             transform: isOpen ? "rotate(180deg)" : "none",
             transition: "all 0.3s ease 0s",
           }}
+          $mr={"space-between-xs"}
         />
       </StyledAccordionButton>
       <InternalAccordionContent aria-labelledby={id}>
@@ -118,7 +119,7 @@ export const InternalChevronAccordion = (
   props: InternalChevronAccordionProps,
 ) => {
   return (
-    <InternalAccordionProvider isInitialOpen={false}>
+    <InternalAccordionProvider isInitialOpen={props.initialOpen || false}>
       <Accordion {...props} />
     </InternalAccordionProvider>
   );
