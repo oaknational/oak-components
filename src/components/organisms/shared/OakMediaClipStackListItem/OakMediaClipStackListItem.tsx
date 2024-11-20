@@ -71,6 +71,7 @@ export const OakMediaClipStackListItem = (
       $display={"flex"}
       $flexDirection={["row", "column"]}
       $gap={["all-spacing-2", "space-between-none"]}
+      $width={"fit-content"}
       {...rest}
     >
       <OakBox>
@@ -79,7 +80,7 @@ export const OakMediaClipStackListItem = (
           $width={["all-spacing-16", "all-spacing-18"]}
           $height={["all-spacing-12", "all-spacing-15"]}
           $position={"relative"}
-          $mb={"space-between-xs"}
+          $mb={["space-between-none", "space-between-xs"]}
         >
           <OakImage
             src={imageUrl}
@@ -91,7 +92,7 @@ export const OakMediaClipStackListItem = (
           />
         </ImageStackShadow>
       </OakBox>
-      <OakBox>
+      <OakBox $mb={["space-between-none", "space-between-s"]}>
         <OakHeading tag="h5" $font="heading-7" $color={"text-primary"}>
           {title}
         </OakHeading>
