@@ -59,7 +59,7 @@ exports[`InternalAccordion matches snapshot 1`] = `
   </button>
   <div
     aria-labelledby="internal-accordion"
-    className="c0 "
+    className="c0"
     hidden={false}
     role="region"
   >

@@ -308,7 +308,7 @@ exports[`InternalReviewAccordion matches snapshot 1`] = `
 
 <div
     aria-labelledby="see-more"
-    className="c0  c1"
+    className="c0 c1"
     hidden={false}
     role="region"
   >

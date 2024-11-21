@@ -23,7 +23,7 @@ const FlexWithReset = styled(OakFlex)`
  *
  */
 
-const AccordionContent = ({
+export const InternalAccordionContent = ({
   children,
   ...rest
 }: OakBoxProps & { "aria-labelledby": string }) => {
@@ -35,8 +35,6 @@ const AccordionContent = ({
     </OakBox>
   );
 };
-
-export const InternalAccordionContent = styled(AccordionContent)``;
 
 /**
  *
