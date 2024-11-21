@@ -279,7 +279,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   margin: 0;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
-  padding-top: 0.25rem;
+  padding-top: 0.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
