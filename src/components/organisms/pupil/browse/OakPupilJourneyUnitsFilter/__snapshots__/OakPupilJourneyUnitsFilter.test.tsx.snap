@@ -498,7 +498,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
         </button>
         <div
           aria-labelledby="mobile-unit-filter-accordion"
-          className="c18 "
+          className="c18"
           hidden={true}
           role="region"
         >

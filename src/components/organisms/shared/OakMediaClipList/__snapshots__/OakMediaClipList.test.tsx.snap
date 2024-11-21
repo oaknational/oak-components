@@ -584,7 +584,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
       </button>
       <div
         aria-labelledby="media-clip-list"
-        className="c19 "
+        className="c19"
         hidden={false}
         role="region"
       >

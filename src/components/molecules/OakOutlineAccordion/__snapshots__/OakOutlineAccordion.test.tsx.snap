@@ -232,7 +232,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
     </button>
     <div
       aria-labelledby="see-more"
-      className="c15 "
+      className="c15"
       hidden={false}
       role="region"
     >

@@ -23,20 +23,18 @@ const FlexWithReset = styled(OakFlex)`
  *
  */
 
-const AccordionContent = ({
+export const InternalAccordionContent = ({
   children,
   ...rest
 }: OakBoxProps & { "aria-labelledby": string }) => {
   const { isOpen } = useAccordionContext();
 
   return (
-    <OakBox hidden={!isOpen} role="region" $overflow={"scroll"} {...rest}>
+    <OakBox hidden={!isOpen} role="region" {...rest}>
       {children}
     </OakBox>
   );
 };
-
-export const InternalAccordionContent = styled(AccordionContent)``;
 
 /**
  *

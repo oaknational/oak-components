@@ -180,7 +180,7 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   </button>
   <div
     aria-labelledby="see-more"
-    className="c10 "
+    className="c10"
     hidden={false}
     role="region"
   >

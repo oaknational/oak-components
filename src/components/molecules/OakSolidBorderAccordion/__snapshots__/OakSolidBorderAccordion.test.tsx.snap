@@ -216,7 +216,7 @@ exports[`OakSolidBorderAccordion matches snapshot 1`] = `
     </button>
     <div
       aria-labelledby="see-more"
-      className="c13 "
+      className="c13"
       hidden={false}
       role="region"
     >

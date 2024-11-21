@@ -39,7 +39,11 @@ export const Default: Story = {
     mediaClipList: [
       {
         ...mediaClip,
-        muxPlayingState: "standard",
+        muxPlayingState: "played",
+      },
+      {
+        ...mediaClip,
+        muxPlayingState: "played",
       },
       {
         ...mediaClip,
@@ -47,7 +51,11 @@ export const Default: Story = {
       },
       {
         ...mediaClip,
-        muxPlayingState: "played",
+        muxPlayingState: "standard",
+      },
+      {
+        ...mediaClip,
+        muxPlayingState: "standard",
       },
       {
         ...mediaClip,

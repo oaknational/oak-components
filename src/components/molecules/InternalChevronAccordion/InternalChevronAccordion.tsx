@@ -103,7 +103,7 @@ const Accordion = ({
           $mr={"space-between-xs"}
         />
       </StyledAccordionButton>
-      <InternalAccordionContent aria-labelledby={id}>
+      <InternalAccordionContent aria-labelledby={id} $overflow={"scroll"}>
         {children}
       </InternalAccordionContent>
       <StyledAccordionUnderline $fill={"border-decorative5-stronger"} />
@@ -115,12 +115,13 @@ const Accordion = ({
  * InternalChevronAccordion has a chevron icon that rotates when the accordion is open
  */
 
-export const InternalChevronAccordion = (
-  props: InternalChevronAccordionProps,
-) => {
+export const InternalChevronAccordion = ({
+  initialOpen = false,
+  ...props
+}: InternalChevronAccordionProps) => {
   return (
-    <InternalAccordionProvider isInitialOpen={props.initialOpen || false}>
-      <Accordion {...props} />
+    <InternalAccordionProvider isInitialOpen={initialOpen}>
+      <Accordion initialOpen {...props} />
     </InternalAccordionProvider>
   );
 };
