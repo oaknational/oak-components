@@ -64,7 +64,7 @@ export const OakMediaClipList = ({
     ) + 1;
 
   const MediaClipListContent = () => (
-    <OakUL $reset $ph={"inner-padding-s"}>
+    <OakUL $reset $ph={"inner-padding-s"} $pt={"inner-padding-ssx"}>
       {mediaClipList.map((mediaClipListItem, index) => (
         <OakLI $mb={"space-between-ssx"} key={index}>
           <OakMediaClip {...mediaClipListItem} />
