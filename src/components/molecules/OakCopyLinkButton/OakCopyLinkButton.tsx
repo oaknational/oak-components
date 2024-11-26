@@ -32,7 +32,7 @@ export const OakCopyLinkButton = ({ href }: OakCopyLinkButtonProps) => {
         setAnnounce(""); // used for aria-live announcement
         setActive(true);
         setLabel("Copy link");
-      }, 1000);
+      }, 4000);
     } else {
       alert("Please update your browser to support this feature");
     }
