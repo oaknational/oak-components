@@ -44,7 +44,7 @@ export const OakVideoTranscript = ({
 
   return (
     <>
-      <OakFlex $flexDirection="row">
+      <OakFlex $flexDirection="row" $flexWrap={"wrap"}>
         {/* desktop */}
         <OakBox
           $mr={"space-between-s"}
@@ -66,7 +66,7 @@ export const OakVideoTranscript = ({
 
         {/* mobile */}
         <OakBox
-          $mr={"space-between-s"}
+          $mr={"space-between-sssx"}
           $mb="space-between-s"
           $display={["block", "none"]}
         >

@@ -12,3 +12,4 @@ export * from "./Oakinfo";
 export * from "./OakinfoButton";
 export * from "./OakMediaClipStackListItem";
 export * from "./OakMediaClip";
+export * from "./OakVideoTranscript";

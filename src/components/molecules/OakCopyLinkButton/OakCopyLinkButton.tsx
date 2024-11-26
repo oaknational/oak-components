@@ -40,7 +40,7 @@ export const OakCopyLinkButton = ({ href }: OakCopyLinkButtonProps) => {
 
   return (
     <OakBox
-      $mr={"space-between-s"}
+      $mr={["space-between-sssx", "space-between-s"]}
       $mb={["space-between-s", "space-between-m2"]}
     >
       <OakBox $display={["none", "block"]}>
