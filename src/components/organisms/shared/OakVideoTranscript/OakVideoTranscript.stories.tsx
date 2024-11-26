@@ -3,8 +3,8 @@ import { Meta, StoryObj } from "@storybook/react";
 
 import { OakVideoTranscript } from "./OakVideoTranscript";
 
-import { OakSignLanguageButton } from "@/components/organisms/shared/OakSignLanguageButton";
-import { OakCopyLinkButton } from "@/components/organisms/shared/OakCopyLinkButton";
+import { OakSignLanguageButton } from "@/components/molecules/OakSignLanguageButton";
+import { OakCopyLinkButton } from "@/components/molecules/OakCopyLinkButton";
 import { OakP } from "@/components/atoms";
 
 const meta: Meta<typeof OakVideoTranscript> = {
