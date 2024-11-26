@@ -198,6 +198,7 @@ exports[`OakCopyLinkButton matches snapshot 1`] = `
       />
       <button
         className="c5 c6 internal-button"
+        data-testid="copy-link-desktop-button"
         onClick={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}

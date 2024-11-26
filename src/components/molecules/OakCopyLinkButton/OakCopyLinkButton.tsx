@@ -7,19 +7,13 @@ type OakCopyLinkButtonProps = {
   /**
    * Href of the link that should be copied
    */
-  href: string;
+  href?: string;
 };
 
 /**
- * Display a togglable video transcript with a slot to display a sign language control
+ * Display copy link button
  */
 export const OakCopyLinkButton = ({ href }: OakCopyLinkButtonProps) => {
-  // const [isLinkCopied, setIsLinkCopied] = useState(false);
-  // const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-  //   setIsLinkCopied(!isLinkCopied);
-  //   onClick(event);
-  // }
-
   const [label, setLabel] = useState("Copy link");
   const [active, setActive] = useState(true);
   const [announce, setAnnounce] = useState("");
@@ -54,6 +48,7 @@ export const OakCopyLinkButton = ({ href }: OakCopyLinkButtonProps) => {
           iconName={active ? "copy" : "tick"}
           isTrailingIcon
           onClick={copyLink}
+          data-testid={"copy-link-desktop-button"}
         >
           {label}
         </OakSmallSecondaryButton>

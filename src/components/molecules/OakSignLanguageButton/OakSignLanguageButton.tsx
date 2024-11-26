@@ -11,7 +11,7 @@ type OakSignLanguageButtonProps = {
 };
 
 /**
- * Display a togglable video transcript with a slot to display a sign language control
+ * Display a button to toggle sign language
  */
 export const OakSignLanguageButton = ({
   onClick,
@@ -32,6 +32,7 @@ export const OakSignLanguageButton = ({
           iconName="sign-language"
           isTrailingIcon
           onClick={handleClick}
+          data-testid={"sign-language-desktop-button"}
         >
           {showSignLanguage ? "Hide sign language" : "Show sign language"}
         </OakSmallSecondaryButton>
