@@ -22,10 +22,17 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   min-width: 2rem;
   height: 2rem;
   min-height: 2rem;
+  margin-right: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c10 {
+  overflow: scroll;
+  font-family: --var(google-font),Lexend,sans-serif;
+  overflow: scroll;
+}
+
+.c11 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -55,7 +62,7 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c11 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -74,7 +81,7 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   padding: 0;
 }
 
-.c13 {
+.c14 {
   position: absolute;
   width: 100%;
   bottom: -0.25rem;
@@ -117,11 +124,11 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c2 .c12 {
+.c2 .c13 {
   visibility: hidden;
 }
 
-.c2 .c6:focus-visible ~ .c12 {
+.c2 .c6:focus-visible ~ .c13 {
   visibility: visible;
 }
 
@@ -129,7 +136,7 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   className="c0 c1 c2"
 >
   <button
-    aria-expanded={false}
+    aria-expanded={true}
     className="c3 c4 c5 c6  c7"
     id="see-more"
     onClick={[Function]}
@@ -140,7 +147,7 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
       className="c8"
       style={
         {
-          "transform": "none",
+          "transform": "rotate(180deg)",
           "transition": "all 0.3s ease 0s",
         }
       }
@@ -173,14 +180,14 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   </button>
   <div
     aria-labelledby="see-more"
-    className="c10 "
-    hidden={true}
+    className="c10"
+    hidden={false}
     role="region"
   >
     Here it is
   </div>
   <div
-    className="c10 c11 c12 c13"
+    className="c11 c12 c13 c14"
   >
     <svg
       className=""
