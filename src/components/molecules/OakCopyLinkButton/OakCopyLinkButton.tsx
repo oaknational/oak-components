@@ -14,7 +14,10 @@ type OakCopyLinkButtonProps = {
  * Display copy link button
  */
 export const OakCopyLinkButton = ({ href }: OakCopyLinkButtonProps) => {
-  const [label, setLabel] = useState("Copy link");
+  const copyLinkMessage = "Copy link";
+  const linkCopiedMessage = "Link copied";
+
+  const [label, setLabel] = useState(copyLinkMessage);
   const [active, setActive] = useState(true);
   const [announce, setAnnounce] = useState("");
 
@@ -23,16 +26,17 @@ export const OakCopyLinkButton = ({ href }: OakCopyLinkButtonProps) => {
       const urlToCopy = href || window.location.href;
       navigator.clipboard.writeText(urlToCopy);
 
-      const copyMessage = "Link copied";
-      setLabel(copyMessage);
-      setAnnounce(copyMessage);
+      setLabel(linkCopiedMessage);
+      setAnnounce(linkCopiedMessage);
       setActive(false);
+
+      const resetCopyLinkButtonTimer = 4000;
 
       setTimeout(() => {
         setAnnounce(""); // used for aria-live announcement
         setActive(true);
-        setLabel("Copy link");
-      }, 4000);
+        setLabel(copyLinkMessage);
+      }, resetCopyLinkButtonTimer);
     } else {
       alert("Please update your browser to support this feature");
     }
