@@ -44,6 +44,7 @@ export type InternalShadowRectButtonProps = Omit<
   | "$color"
 > & {
   iconName?: OakIconName;
+  iconAriaHidden?: boolean;
   /**
    *  we can set a custom icon if we want different sizes and padding
    */
@@ -160,6 +161,7 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
     element = "button",
     children,
     iconName,
+    iconAriaHidden,
     isTrailingIcon,
     isLoading,
     disabled,
@@ -198,6 +200,7 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
           $width={"all-spacing-6"}
           $height={"all-spacing-6"}
           $colorFilter={props.disabled ? disabledTextColor : defaultTextColor}
+          aria-hidden={iconAriaHidden}
         />
       )}
     </>

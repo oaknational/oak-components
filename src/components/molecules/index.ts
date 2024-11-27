@@ -41,3 +41,5 @@ export * from "./OakTooltip";
 export * from "./OakScaleImageButton";
 export * from "./OakTagFunctional";
 export * from "./OakTimer";
+export * from "./OakCopyLinkButton";
+export * from "./OakSignLanguageButton";
