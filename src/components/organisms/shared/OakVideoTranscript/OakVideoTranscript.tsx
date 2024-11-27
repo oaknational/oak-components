@@ -16,10 +16,16 @@ type OakVideoTranscriptProps = {
    */
   id: string;
   /**
-   * A control to toggle the video to display sign language
+   * A control to toggle sign language button (OakSignLanguageButton)
    */
   signLanguageControl?: ReactNode;
+  /**
+   * A control to toggle copy link button (OakCopyLinkButton)
+   */
   copyLinkControl?: ReactNode;
+  /**
+   * A flag to control state of a transcript
+   */
   transcriptToggled?: (props: { isOpen: boolean }) => void;
 };
 
@@ -42,6 +48,8 @@ export const OakVideoTranscript = ({
     }
   };
 
+  const label = showTranscript ? "Hide transcript" : "Show transcript";
+
   return (
     <>
       <OakFlex $flexDirection="row" $flexWrap={"wrap"}>
@@ -59,14 +67,14 @@ export const OakVideoTranscript = ({
               aria-controls={id}
               aria-expanded={showTranscript}
             >
-              {showTranscript ? "Hide transcript" : "Show transcript"}
+              {label}
             </OakSmallSecondaryButton>
           )}
         </OakBox>
 
         {/* mobile */}
         <OakBox
-          $mr={"space-between-sssx"}
+          $mr={"space-between-ssx"}
           $mb="space-between-s"
           $display={["block", "none"]}
         >
@@ -76,12 +84,23 @@ export const OakVideoTranscript = ({
               aria-controls={id}
               aria-expanded={showTranscript}
             >
-              {showTranscript ? "Hide transcript" : "Show transcript"}
+              {label}
             </OakSmallSecondaryButton>
           )}
         </OakBox>
-        {copyLinkControl}
-        {signLanguageControl}
+        {copyLinkControl && (
+          <OakBox
+            $mr={["space-between-ssx", "space-between-s"]}
+            $mb={["space-between-s", "space-between-m2"]}
+          >
+            {copyLinkControl}
+          </OakBox>
+        )}
+        {signLanguageControl && (
+          <OakBox $mb={["space-between-s", "space-between-m2"]}>
+            {signLanguageControl}
+          </OakBox>
+        )}
       </OakFlex>
       {children && (
         <OakCollapsibleContent
