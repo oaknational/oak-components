@@ -46,6 +46,7 @@ export const OakCopyLinkButton = ({ href }: OakCopyLinkButtonProps) => {
       <OakBox $display={["none", "block"]}>
         <OakSmallSecondaryButton
           iconName={active ? "copy" : "tick"}
+          iconAriaHidden={true}
           isTrailingIcon
           onClick={copyLink}
           data-testid={"copy-link-desktop-button"}

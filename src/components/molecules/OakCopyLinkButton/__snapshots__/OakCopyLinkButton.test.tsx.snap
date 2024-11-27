@@ -218,6 +218,7 @@ exports[`OakCopyLinkButton matches snapshot 1`] = `
             Copy link
           </span>
           <div
+            aria-hidden={true}
             className="c10"
           >
             <img
