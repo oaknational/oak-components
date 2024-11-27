@@ -3,42 +3,44 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 import terser from "@rollup/plugin-terser";
-import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import { typescriptPaths } from "rollup-plugin-typescript-paths";
 import json from "@rollup/plugin-json";
-
-const packageJson = require("./package.json");
+import { nodeExternals } from "rollup-plugin-node-externals";
 
 export default [
   {
     input: "src/index.ts",
     output: [
       {
-        file: packageJson.module,
-        format: "esm",
+        dir: "dist/esm",
+        format: "es",
         sourcemap: true,
-        interop: "compat", // https://rollupjs.org/configuration-options/#output-interop - needed for nextjs
+        preserveModules: true,
+        preserveModulesRoot: "src",
+        interop: "compat",
       },
       {
-        file: packageJson.main,
+        dir: "dist/cjs",
         format: "cjs",
         sourcemap: true,
-        interop: "compat", // https://rollupjs.org/configuration-options/#output-interop - needed for nextjs
+        interop: "compat",
       },
     ],
     plugins: [
-      peerDepsExternal(),
+      nodeExternals({
+        devDeps: true,
+        peerDeps: true,
+      }),
       nodeResolve({ preferBuiltins: true }),
       typescript({ tsconfig: "./tsconfig.json" }),
       terser(),
       commonjs(),
       json(),
     ],
-    external: ["react", "react-dom", "styled-components"],
   },
   {
     input: "src/index.ts",
     output: [{ file: "dist/types.d.ts", format: "es" }],
-    plugins: [typescriptPaths({ preserveExtensions: true }), dts.default()],
+    plugins: [typescriptPaths({ preserveExtensions: true }), dts()],
   },
 ];
