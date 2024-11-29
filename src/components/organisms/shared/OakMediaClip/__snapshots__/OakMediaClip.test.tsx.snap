@@ -2,13 +2,13 @@
 
 exports[`OakMediaClip matches snapshot 1`] = `
 [
-  .c0 {
+  .c1 {
   position: relative;
   border-radius: 0.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c3 {
+.c4 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -17,12 +17,12 @@ exports[`OakMediaClip matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c6 {
+.c7 {
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
+.c9 {
   position: relative;
   width: 6.25rem;
   height: 3.5rem;
@@ -31,7 +31,7 @@ exports[`OakMediaClip matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c11 {
+.c12 {
   position: relative;
   width: 100%;
   height: 100%;
@@ -39,7 +39,7 @@ exports[`OakMediaClip matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c13 {
+.c14 {
   position: absolute;
   right: 0.25rem;
   bottom: 0.25rem;
@@ -56,7 +56,7 @@ exports[`OakMediaClip matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -70,7 +70,7 @@ exports[`OakMediaClip matches snapshot 1`] = `
   align-items: center;
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -80,7 +80,7 @@ exports[`OakMediaClip matches snapshot 1`] = `
   flex-shrink: 0;
 }
 
-.c16 {
+.c17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -91,11 +91,11 @@ exports[`OakMediaClip matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c12 {
+.c13 {
   object-fit: contain;
 }
 
-.c18 {
+.c19 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -108,11 +108,20 @@ exports[`OakMediaClip matches snapshot 1`] = `
   color: #222222;
 }
 
-.c15 {
+.c0 {
+  margin-bottom: 0.5rem;
+  display: revert;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
+  display: revert;
+  display: revert;
+}
+
+.c16 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c19 {
+.c20 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
@@ -127,7 +136,7 @@ exports[`OakMediaClip matches snapshot 1`] = `
   color: #575757;
 }
 
-.c4 {
+.c5 {
   background: none;
   color: inherit;
   border: none;
@@ -145,56 +154,56 @@ exports[`OakMediaClip matches snapshot 1`] = `
   border-radius: 0.25rem;
 }
 
-.c4:disabled {
+.c5:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c1 .grey-shadow:has(+ * + .internal-button:focus-visible) {
+.c2 .grey-shadow:has(+ * + .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c1 .yellow-shadow:has(+ .internal-button:focus-visible) {
+.c2 .yellow-shadow:has(+ .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
 }
 
-.c1 .grey-shadow:has(+ * + .internal-button:hover) {
+.c2 .grey-shadow:has(+ * + .internal-button:hover) {
   box-shadow: none;
 }
 
-.c1 .grey-shadow:has(+ * + .internal-button:active) {
+.c2 .grey-shadow:has(+ * + .internal-button:active) {
   box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c1 .yellow-shadow:has(+ .internal-button:active) {
+.c2 .yellow-shadow:has(+ .internal-button:active) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c14 {
+.c15 {
   opacity: 0.9;
   padding-left: 2px;
   padding-right: 2px;
 }
 
-.c2 {
+.c3 {
   min-height: 72px;
   width: 100%;
 }
 
-.c10 img {
+.c11 img {
   border-radius: 2px;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.c17 {
+.c18 {
   position: "relative";
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.c17 h4 {
+.c18 h4 {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -202,7 +211,7 @@ exports[`OakMediaClip matches snapshot 1`] = `
   -webkit-line-clamp: 3;
 }
 
-.c5 {
+.c6 {
   position: relative;
   width: 100%;
   height: 100%;
@@ -211,107 +220,111 @@ exports[`OakMediaClip matches snapshot 1`] = `
   transition: opacity 300ms ease-out;
 }
 
-.c5:hover {
+.c6:hover {
   color: #222222;
   background: #f2f2f2;
   border-color: transparent;
 }
 
-.c5:hover h4 {
+.c6:hover h4 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c5:disabled {
+.c6:disabled {
   background: #e4e4e4;
   border-color: #808080;
   color: #808080;
 }
 
-<div
-    className="c0 c1 c2"
+<li
+    className="c0"
   >
     <div
-      className="c3 grey-shadow"
-    />
-    <div
-      className="c3 yellow-shadow"
-    />
-    <button
-      className="c4 c5 internal-button"
-      defaultBorderColor="transparent"
-      justifyContent="flex-start"
-      muxPlayingState="standard"
-      onClick={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      tabIndex={0}
+      className="c1 c2 c3"
     >
       <div
-        className="c6 c7"
+        className="c4 grey-shadow"
+      />
+      <div
+        className="c4 yellow-shadow"
+      />
+      <button
+        className="c5 c6 internal-button"
+        defaultBorderColor="transparent"
+        justifyContent="flex-start"
+        muxPlayingState="standard"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        tabIndex={0}
       >
         <div
-          className="c8 c9 c10"
+          className="c7 c8"
         >
           <div
-            className="c11"
-            fill={true}
+            className="c9 c10 c11"
           >
-            <img
-              alt="Test Image"
+            <div
               className="c12"
-              data-nimg="fill"
-              decoding="async"
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              sizes="100vw"
-              src="/_next/image?url=%2Ftest-image.jpg&w=3840&q=75"
-              srcSet="/_next/image?url=%2Ftest-image.jpg&w=640&q=75 640w, /_next/image?url=%2Ftest-image.jpg&w=750&q=75 750w, /_next/image?url=%2Ftest-image.jpg&w=828&q=75 828w, /_next/image?url=%2Ftest-image.jpg&w=1080&q=75 1080w, /_next/image?url=%2Ftest-image.jpg&w=1200&q=75 1200w, /_next/image?url=%2Ftest-image.jpg&w=1920&q=75 1920w, /_next/image?url=%2Ftest-image.jpg&w=2048&q=75 2048w, /_next/image?url=%2Ftest-image.jpg&w=3840&q=75 3840w"
-              style={
-                {
-                  "bottom": 0,
-                  "color": "transparent",
-                  "height": "100%",
-                  "left": 0,
-                  "objectFit": undefined,
-                  "objectPosition": undefined,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
+              fill={true}
+            >
+              <img
+                alt="Test Image"
+                className="c13"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                sizes="100vw"
+                src="/_next/image?url=%2Ftest-image.jpg&w=3840&q=75"
+                srcSet="/_next/image?url=%2Ftest-image.jpg&w=640&q=75 640w, /_next/image?url=%2Ftest-image.jpg&w=750&q=75 750w, /_next/image?url=%2Ftest-image.jpg&w=828&q=75 828w, /_next/image?url=%2Ftest-image.jpg&w=1080&q=75 1080w, /_next/image?url=%2Ftest-image.jpg&w=1200&q=75 1200w, /_next/image?url=%2Ftest-image.jpg&w=1920&q=75 1920w, /_next/image?url=%2Ftest-image.jpg&w=2048&q=75 2048w, /_next/image?url=%2Ftest-image.jpg&w=3840&q=75 3840w"
+                style={
+                  {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
                 }
-              }
-            />
+              />
+            </div>
+            <div
+              aria-label="Media clip length: 10:57"
+              className="c14 c15"
+            >
+              <label
+                className="c16"
+              >
+                10:57
+              </label>
+            </div>
           </div>
           <div
-            aria-label="Media clip length: 10:57"
-            className="c13 c14"
+            className="c7 c17 c18"
           >
-            <label
-              className="c15"
+            <h4
+              className="c19"
             >
-              10:57
-            </label>
+              Test Clip
+            </h4>
+            <p
+              className="c20"
+            >
+              Cycle 1
+            </p>
           </div>
         </div>
-        <div
-          className="c6 c16 c17"
-        >
-          <h4
-            className="c18"
-          >
-            Test Clip
-          </h4>
-          <p
-            className="c19"
-          >
-            Cycle 1
-          </p>
-        </div>
-      </div>
-    </button>
-  </div>,
+      </button>
+    </div>
+  </li>,
   ",",
 ]
 `;

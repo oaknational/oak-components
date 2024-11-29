@@ -3,7 +3,7 @@ import { StoryObj, Meta } from "@storybook/react";
 
 import { OakMediaClip } from "./OakMediaClip";
 
-import { OakFlex } from "@/components/atoms";
+import { OakFlex, OakUL } from "@/components/atoms";
 
 const meta: Meta<typeof OakMediaClip> = {
   title: "Components/organisms/teacher/OakMediaClip",
@@ -69,7 +69,7 @@ type Story = StoryObj<typeof OakMediaClip>;
 export const Default: Story = {
   render: (args) => {
     return (
-      <>
+      <OakUL $reset>
         <OakMediaClip
           {...args}
           muxPlayingState={"standard"}
@@ -91,7 +91,7 @@ export const Default: Story = {
             console.log(`Played video`);
           }}
         />
-      </>
+      </OakUL>
     );
   },
   args: {
