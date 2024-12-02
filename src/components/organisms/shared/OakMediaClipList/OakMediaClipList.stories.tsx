@@ -39,7 +39,7 @@ export const Default: Story = {
   args: {
     lessonTitle: "Lesson title",
     currentClipCounter: 2,
-    totalClipCounter: 5,
+    totalClipCounter: 6,
     children: (
       <>
         <OakMediaClip
@@ -51,6 +51,15 @@ export const Default: Story = {
         />
         <OakMediaClip
           {...mediaClipArgs}
+          clipName="Played Clip Name"
+          muxPlayingState={"played"}
+          onClick={() => {
+            console.log(`Played video`);
+          }}
+        />
+        <OakMediaClip
+          {...mediaClipArgs}
+          clipName="Playing Clip Name"
           muxPlayingState={"playing"}
           onClick={() => {
             console.log(`Playing video`);
@@ -58,9 +67,23 @@ export const Default: Story = {
         />
         <OakMediaClip
           {...mediaClipArgs}
-          muxPlayingState={"played"}
+          muxPlayingState={"standard"}
           onClick={() => {
-            console.log(`Played video`);
+            console.log(`Standard video`);
+          }}
+        />
+        <OakMediaClip
+          {...mediaClipArgs}
+          muxPlayingState={"standard"}
+          onClick={() => {
+            console.log(`Standard video`);
+          }}
+        />
+        <OakMediaClip
+          {...mediaClipArgs}
+          muxPlayingState={"standard"}
+          onClick={() => {
+            console.log(`Standard video`);
           }}
         />
       </>

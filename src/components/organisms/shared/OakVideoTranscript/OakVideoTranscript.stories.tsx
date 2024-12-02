@@ -168,5 +168,6 @@ export const WithNoTranscript: Story = {
         onClick={() => console.log("Sign language clicked")}
       />
     ),
+    copyLinkControl: <OakCopyLinkButton href="/copy-this-link" />,
   },
 };

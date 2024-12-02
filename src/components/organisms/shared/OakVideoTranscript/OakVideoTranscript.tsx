@@ -52,14 +52,15 @@ export const OakVideoTranscript = ({
 
   return (
     <>
-      <OakFlex $flexDirection="row" $flexWrap={"wrap"}>
+      <OakFlex
+        $flexDirection="row"
+        $flexWrap={"wrap"}
+        $gap={["space-between-ssx", "space-between-s"]}
+      >
         {/* desktop */}
-        <OakBox
-          $mr={"space-between-s"}
-          $mb="space-between-m2"
-          $display={["none", "block"]}
-        >
-          {children && (
+
+        {children && (
+          <OakBox $display={["none", "block"]}>
             <OakSmallSecondaryButton
               onClick={handleClick}
               iconName={showTranscript ? "chevron-up" : "chevron-down"}
@@ -69,15 +70,11 @@ export const OakVideoTranscript = ({
             >
               {label}
             </OakSmallSecondaryButton>
-          )}
-        </OakBox>
+          </OakBox>
+        )}
 
         {/* mobile */}
-        <OakBox
-          $mr={"space-between-ssx"}
-          $mb="space-between-s"
-          $display={["block", "none"]}
-        >
+        <OakBox $display={["block", "none"]}>
           {children && (
             <OakSmallSecondaryButton
               onClick={handleClick}
@@ -88,19 +85,8 @@ export const OakVideoTranscript = ({
             </OakSmallSecondaryButton>
           )}
         </OakBox>
-        {copyLinkControl && (
-          <OakBox
-            $mr={["space-between-ssx", "space-between-s"]}
-            $mb={["space-between-s", "space-between-m2"]}
-          >
-            {copyLinkControl}
-          </OakBox>
-        )}
-        {signLanguageControl && (
-          <OakBox $mb={["space-between-s", "space-between-m2"]}>
-            {signLanguageControl}
-          </OakBox>
-        )}
+        {copyLinkControl && <OakBox>{copyLinkControl}</OakBox>}
+        {signLanguageControl && <OakBox>{signLanguageControl}</OakBox>}
       </OakFlex>
       {children && (
         <OakCollapsibleContent
@@ -110,6 +96,7 @@ export const OakVideoTranscript = ({
           $font="body-2"
           $color="text-primary"
           $pa={"space-between-xs"}
+          $mt={["space-between-s", "space-between-m2"]}
           aria-live="polite"
         >
           {children}
