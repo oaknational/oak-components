@@ -289,6 +289,20 @@ exports[`OakVideoTranscript matches snapshot 1`] = `
         </button>
       </div>
     </div>
+    <div
+      className="c0"
+    >
+      <p>
+        copy link control
+      </p>
+    </div>
+    <div
+      className="c0"
+    >
+      <p>
+        sign language control
+      </p>
+    </div>
   </div>,
   .c0 {
   display: none;
