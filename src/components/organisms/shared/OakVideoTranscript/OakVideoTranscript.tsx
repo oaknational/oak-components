@@ -74,8 +74,8 @@ export const OakVideoTranscript = ({
         )}
 
         {/* mobile */}
-        <OakBox $display={["block", "none"]}>
-          {children && (
+        {children && (
+          <OakBox $display={["block", "none"]}>
             <OakSmallSecondaryButton
               onClick={handleClick}
               aria-controls={id}
@@ -83,8 +83,8 @@ export const OakVideoTranscript = ({
             >
               {label}
             </OakSmallSecondaryButton>
-          )}
-        </OakBox>
+          </OakBox>
+        )}
         {copyLinkControl && <OakBox>{copyLinkControl}</OakBox>}
         {signLanguageControl && <OakBox>{signLanguageControl}</OakBox>}
       </OakFlex>

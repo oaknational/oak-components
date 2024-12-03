@@ -3,19 +3,19 @@ import { create } from "react-test-renderer";
 import { act, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
-import { OakSolidBorderAccordion } from "./OakSolidBorderAccordion";
+import { OakMediaClipListAccordion } from "./OakMediaClipListAccordion";
 
 import { OakThemeProvider } from "@/components/atoms";
 import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
-describe(OakSolidBorderAccordion, () => {
+describe(OakMediaClipListAccordion, () => {
   it("matches snapshot", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
-        <OakSolidBorderAccordion initialOpen header="See more" id="see-more">
+        <OakMediaClipListAccordion initialOpen header="See more" id="see-more">
           Here it is
-        </OakSolidBorderAccordion>
+        </OakMediaClipListAccordion>
       </OakThemeProvider>,
     ).toJSON();
 
@@ -24,9 +24,9 @@ describe(OakSolidBorderAccordion, () => {
 
   it("toggles open and closed", () => {
     const { queryByRole, queryByText, getByText } = renderWithTheme(
-      <OakSolidBorderAccordion header="See more" id="see-more">
+      <OakMediaClipListAccordion header="See more" id="see-more">
         Here it is
-      </OakSolidBorderAccordion>,
+      </OakMediaClipListAccordion>,
     );
 
     expect(queryByRole("region")).not.toBeInTheDocument();
