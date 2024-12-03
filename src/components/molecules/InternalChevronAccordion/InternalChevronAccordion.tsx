@@ -9,6 +9,7 @@ import {
   OakBox,
   oakBoxCss,
 } from "@/components/atoms";
+import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import {
   InternalAccordionButton,
   InternalAccordionContent,
@@ -55,8 +56,15 @@ export const StyledAccordionButton = styled(
 )<FlexStyleProps>`
   ${flexStyle}
   ${oakBoxCss}
+  position: relative;
   &:hover {
     text-decoration: underline;
+  }
+  &:focus-visible {
+    .shadow {
+      box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
+        ${parseDropShadow("drop-shadow-centered-grey")};
+    }
   }
 `;
 
@@ -147,17 +155,27 @@ const Accordion = ({
         $alignItems={"center"}
       >
         {header}
-        <OakIcon
-          iconName="chevron-down"
-          $width="all-spacing-7"
-          $height="all-spacing-7"
-          alt="An arrow to indicate whether the item is open or closed"
-          style={{
-            transform: isOpen ? "rotate(180deg)" : "none",
-            transition: "all 0.3s ease 0s",
-          }}
-          $mr={"space-between-xs"}
-        />
+
+        <OakBox $position={"relative"} $mr={"space-between-xs"}>
+          <OakBox
+            className="shadow"
+            $position={"absolute"}
+            $borderRadius={"border-radius-s"}
+            $width={"100%"}
+            $height={"100%"}
+            $top="all-spacing-0"
+          />
+          <OakIcon
+            iconName="chevron-down"
+            $width="all-spacing-7"
+            $height="all-spacing-7"
+            alt="An arrow to indicate whether the item is open or closed"
+            style={{
+              transform: isOpen ? "rotate(180deg)" : "none",
+              transition: "all 0.3s ease 0s",
+            }}
+          />
+        </OakBox>
       </StyledAccordionButton>
       <OakBox
         ref={scrollBox}
