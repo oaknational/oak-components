@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 
 import { OakFlex } from "@/components/atoms/OakFlex";
 import { OakTypography, OakUL } from "@/components/atoms";
-import { OakSolidBorderAccordion } from "@/components/molecules/OakSolidBorderAccordion";
+import { OakMediaClipListAccordion } from "@/components/molecules/OakMediaClipListAccordion";
 
 export type OakMediaClipListProps = {
   lessonTitle: string;
@@ -48,7 +48,7 @@ export const OakMediaClipList = ({
   );
 
   return (
-    <OakSolidBorderAccordion
+    <OakMediaClipListAccordion
       header={mediaClipListHeader}
       children={mediaClipListContent}
       id="media-clip-list"

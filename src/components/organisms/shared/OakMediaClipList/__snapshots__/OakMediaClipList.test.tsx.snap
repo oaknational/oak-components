@@ -13,6 +13,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   padding-top: 0rem;
   padding-bottom: 0rem;
   border: 0.125rem solid;
+  border-left: 0.125rem solid;
   border-color: #222222;
   border-style: solid;
   font-family: --var(google-font),Lexend,sans-serif;
@@ -72,21 +73,35 @@ exports[`OakMediaClipList matches snapshot 1`] = `
 
 .c17 {
   position: relative;
-  width: 2rem;
-  min-width: 2rem;
-  height: 2rem;
-  min-height: 2rem;
   margin-right: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
+.c18 {
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
 .c19 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c21 {
   overflow: scroll;
   font-family: --var(google-font),Lexend,sans-serif;
   overflow: scroll;
 }
 
-.c21 {
+.c23 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -122,14 +137,14 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c22 {
+.c24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c18 {
+.c20 {
   object-fit: contain;
 }
 
@@ -155,7 +170,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c20 {
+.c22 {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -177,7 +192,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   padding: 0;
 }
 
-.c24 {
+.c26 {
   position: absolute;
   width: 100%;
   bottom: -0.25rem;
@@ -198,11 +213,16 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   justify-content: space-between;
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
+  position: relative;
 }
 
 .c10:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+.c10:focus-visible .shadow {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
 .c5 {
@@ -211,6 +231,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   padding-top: 0rem;
   padding-bottom: 0rem;
   border: 0.125rem solid;
+  border-left: 0.125rem solid;
   border-color: #222222;
   border-style: solid;
   font-family: --var(google-font),Lexend,sans-serif;
@@ -224,17 +245,41 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c5 .c23 {
+.c5 .c25 {
   visibility: hidden;
 }
 
-.c5 .c9:focus-visible ~ .c23 {
+.c5 .c9:focus-visible ~ .c25 {
   visibility: visible;
 }
 
 .c2 {
   position: relative;
   border-width: 2px;
+}
+
+@media (min-width:750px) {
+  .c3 {
+    border-left: 0.125rem solid;
+  }
+}
+
+@media (min-width:1280px) {
+  .c3 {
+    border-left: 0rem solid;
+  }
+}
+
+@media (min-width:750px) {
+  .c5 {
+    border-left: 0.125rem solid;
+  }
+}
+
+@media (min-width:1280px) {
+  .c5 {
+    border-left: 0rem solid;
+  }
 }
 
 <div
@@ -274,53 +319,60 @@ exports[`OakMediaClipList matches snapshot 1`] = `
         </div>
         <div
           className="c17"
-          style={
-            {
-              "transform": "rotate(180deg)",
-              "transition": "all 0.3s ease 0s",
-            }
-          }
         >
-          <img
-            alt="An arrow to indicate whether the item is open or closed"
-            className="c18"
-            data-nimg="fill"
-            decoding="async"
-            loading="lazy"
-            onError={[Function]}
-            onLoad={[Function]}
-            src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+          <div
+            className="c18 shadow"
+          />
+          <div
+            className="c19"
             style={
               {
-                "bottom": 0,
-                "color": "transparent",
-                "height": "100%",
-                "left": 0,
-                "objectFit": undefined,
-                "objectPosition": undefined,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-                "width": "100%",
+                "transform": "rotate(180deg)",
+                "transition": "all 0.3s ease 0s",
               }
             }
-          />
+          >
+            <img
+              alt="An arrow to indicate whether the item is open or closed"
+              className="c20"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+              style={
+                {
+                  "bottom": 0,
+                  "color": "transparent",
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
         </div>
       </button>
       <div
         aria-labelledby="media-clip-list"
-        className="c19"
+        className="c21"
         hidden={false}
         role="region"
       >
         <ul
-          className="c20"
+          className="c22"
         >
           children
         </ul>
       </div>
       <div
-        className="c21 c22 c23 c24"
+        className="c23 c24 c25 c26"
       >
         <svg
           className=""

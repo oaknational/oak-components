@@ -1,12 +1,12 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakSolidBorderAccordion } from "./OakSolidBorderAccordion";
+import { OakMediaClipListAccordion } from "./OakMediaClipListAccordion";
 
-const meta: Meta<typeof OakSolidBorderAccordion> = {
-  component: OakSolidBorderAccordion,
+const meta: Meta<typeof OakMediaClipListAccordion> = {
+  component: OakMediaClipListAccordion,
   tags: ["autodocs"],
-  title: "components/molecules/OakSolidBorderAccordion",
+  title: "components/molecules/OakMediaClipListAccordion",
   parameters: {
     controls: {
       include: ["header", "headerAfterSlot", "children"],
@@ -30,10 +30,10 @@ const meta: Meta<typeof OakSolidBorderAccordion> = {
     children:
       "Any cookies required for video or other embedded learning content to work",
   },
-  render: (args) => <OakSolidBorderAccordion {...args} />,
+  render: (args) => <OakMediaClipListAccordion {...args} />,
 };
 export default meta;
 
-type Story = StoryObj<typeof OakSolidBorderAccordion>;
+type Story = StoryObj<typeof OakMediaClipListAccordion>;
 
 export const Default: Story = {};

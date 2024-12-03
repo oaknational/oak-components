@@ -48,7 +48,7 @@ const AccordionWrapper = styled(OakFlex)`
 /**
  * An accordion component that can be used to show/hide content
  */
-export const OakSolidBorderAccordion = ({
+export const OakMediaClipListAccordion = ({
   header,
   children,
   id,
@@ -65,6 +65,7 @@ export const OakSolidBorderAccordion = ({
         $borderStyle={"solid"}
         $borderColor={"border-primary"}
         $ba={"border-solid-m"}
+        $bl={["border-solid-m", "border-solid-m", "border-solid-none"]}
         {...styleProps}
       >
         {children}
