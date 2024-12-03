@@ -25,12 +25,24 @@ const FlexWithReset = styled(OakFlex)`
 
 export const InternalAccordionContent = ({
   children,
+  onScroll,
+  ref,
   ...rest
-}: OakBoxProps & { "aria-labelledby": string }) => {
+}: OakBoxProps & {
+  "aria-labelledby": string;
+  onScroll?: () => void;
+  ref?: React.MutableRefObject<null | HTMLDivElement>;
+}) => {
   const { isOpen } = useAccordionContext();
 
   return (
-    <OakBox hidden={!isOpen} role="region" {...rest}>
+    <OakBox
+      hidden={!isOpen}
+      role="region"
+      {...rest}
+      onScroll={onScroll}
+      ref={ref}
+    >
       {children}
     </OakBox>
   );

@@ -42,6 +42,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 }
 
 .c18 {
+  position: relative;
   overflow: scroll;
   font-family: --var(google-font),Lexend,sans-serif;
   overflow: scroll;
@@ -374,11 +375,24 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   bottom: 0.125rem;
 }
 
-.c31 {
+.c32 {
   height: 0.125rem;
   position: absolute;
   width: 100%;
   bottom: 0.125rem;
+}
+
+.c31 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  opacity: 0;
+  z-index: 100;
+  -webkit-box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
+  -moz-box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
+  box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
+  padding: 2px;
 }
 
 @media (min-width:750px) {
@@ -497,127 +511,133 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
           </div>
         </button>
         <div
-          aria-labelledby="mobile-unit-filter-accordion"
           className="c18"
-          hidden={true}
-          role="region"
+          data-testid="scrollable-content"
+          onScroll={[Function]}
         >
           <div
-            aria-label="OakPupilJourneyUnitsFilter"
-            className="c4 c19"
-            role="radiogroup"
+            aria-labelledby="mobile-unit-filter-accordion"
+            className="c4"
+            hidden={true}
+            role="region"
           >
             <div
-              className="c20 c21"
+              aria-label="OakPupilJourneyUnitsFilter"
+              className="c4 c19"
+              role="radiogroup"
             >
               <div
-                className="c22 grey-shadow"
-              />
-              <div
-                className="c22 yellow-shadow"
-              />
-              <button
-                aria-checked={true}
-                className="c23 c24 internal-button"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                role="radio"
+                className="c20 c21"
               >
                 <div
-                  className="c4 c25"
+                  className="c22 grey-shadow"
+                />
+                <div
+                  className="c22 yellow-shadow"
+                />
+                <button
+                  aria-checked={true}
+                  className="c23 c24 internal-button"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  role="radio"
                 >
-                  <span
-                    className="c26"
+                  <div
+                    className="c4 c25"
                   >
-                    All
-                  </span>
-                </div>
-              </button>
-            </div>
-            <div
-              className="c20 c21"
-            >
+                    <span
+                      className="c26"
+                    >
+                      All
+                    </span>
+                  </div>
+                </button>
+              </div>
               <div
-                className="c22 grey-shadow"
-              />
-              <div
-                className="c22 yellow-shadow"
-              />
-              <button
-                aria-checked={false}
-                className="c27 c28 internal-button"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                role="radio"
+                className="c20 c21"
               >
                 <div
-                  className="c4 c25"
+                  className="c22 grey-shadow"
+                />
+                <div
+                  className="c22 yellow-shadow"
+                />
+                <button
+                  aria-checked={false}
+                  className="c27 c28 internal-button"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  role="radio"
                 >
-                  <span
-                    className="c26"
+                  <div
+                    className="c4 c25"
                   >
-                    Biology
-                  </span>
-                </div>
-              </button>
-            </div>
-            <div
-              className="c20 c21"
-            >
+                    <span
+                      className="c26"
+                    >
+                      Biology
+                    </span>
+                  </div>
+                </button>
+              </div>
               <div
-                className="c22 grey-shadow"
-              />
-              <div
-                className="c22 yellow-shadow"
-              />
-              <button
-                aria-checked={false}
-                className="c27 c28 internal-button"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                role="radio"
+                className="c20 c21"
               >
                 <div
-                  className="c4 c25"
+                  className="c22 grey-shadow"
+                />
+                <div
+                  className="c22 yellow-shadow"
+                />
+                <button
+                  aria-checked={false}
+                  className="c27 c28 internal-button"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  role="radio"
                 >
-                  <span
-                    className="c26"
+                  <div
+                    className="c4 c25"
                   >
-                    Chemistry
-                  </span>
-                </div>
-              </button>
-            </div>
-            <div
-              className="c20 c21"
-            >
+                    <span
+                      className="c26"
+                    >
+                      Chemistry
+                    </span>
+                  </div>
+                </button>
+              </div>
               <div
-                className="c22 grey-shadow"
-              />
-              <div
-                className="c22 yellow-shadow"
-              />
-              <button
-                aria-checked={false}
-                className="c27 c28 internal-button"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                role="radio"
+                className="c20 c21"
               >
                 <div
-                  className="c4 c25"
+                  className="c22 grey-shadow"
+                />
+                <div
+                  className="c22 yellow-shadow"
+                />
+                <button
+                  aria-checked={false}
+                  className="c27 c28 internal-button"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  role="radio"
                 >
-                  <span
-                    className="c26"
+                  <div
+                    className="c4 c25"
                   >
-                    Physics
-                  </span>
-                </div>
-              </button>
+                    <span
+                      className="c26"
+                    >
+                      Physics
+                    </span>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -642,9 +662,13 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
             />
           </svg>
         </div>
+        <div
+          className="c4 c31"
+          data-testid="bottom-box-shadow"
+        />
       </div>
       <div
-        className="c4 c5 c31"
+        className="c4 c5 c32"
       >
         <svg
           className=""

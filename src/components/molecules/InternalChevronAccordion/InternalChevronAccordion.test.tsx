@@ -44,4 +44,35 @@ describe(InternalChevronAccordion, () => {
 
     expect(queryByRole("region")).not.toBeInTheDocument();
   });
+
+  it("performs correct action when the content is scrolled", () => {
+    const { getByTestId } = renderWithTheme(
+      <InternalChevronAccordion
+        header="See more"
+        id="see-more"
+        initialOpen={true}
+      >
+        Here it is
+      </InternalChevronAccordion>,
+    );
+
+    jest.spyOn(React, "useRef").mockReturnValue({
+      current: {
+        scrollHeight: 348,
+        clientHeight: 300,
+        scrollTop: 20,
+      },
+    });
+
+    const boxShadow = getByTestId("bottom-box-shadow");
+    const styles = getComputedStyle(boxShadow);
+
+    expect(styles.opacity).toBe("0");
+
+    act(() => {
+      fireEvent.scroll(getByTestId("scrollable-content"), {
+        scrollY: 10,
+      });
+    });
+  });
 });
