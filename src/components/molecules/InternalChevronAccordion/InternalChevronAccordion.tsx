@@ -189,7 +189,7 @@ const Accordion = ({
         </InternalAccordionContent>
       </OakBox>
       <StyledAccordionUnderline $fill={"border-decorative5-stronger"} />
-      <BottomBoxShadow data-testid="bottom-box-shadow" />
+      {isOpen && <BottomBoxShadow data-testid="bottom-box-shadow" />}
     </StyledContainer>
   );
 };
