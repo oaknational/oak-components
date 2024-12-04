@@ -175,11 +175,6 @@ exports[`OakMediaClipListAccordion matches snapshot 1`] = `
   visibility: visible;
 }
 
-.c2 {
-  position: relative;
-  border-width: 2px;
-}
-
 .c20 {
   position: absolute;
   bottom: 0;
@@ -191,6 +186,11 @@ exports[`OakMediaClipListAccordion matches snapshot 1`] = `
   -moz-box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
   box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
   padding: 2px;
+}
+
+.c2 {
+  position: relative;
+  border-width: 2px;
 }
 
 @media (min-width:750px) {

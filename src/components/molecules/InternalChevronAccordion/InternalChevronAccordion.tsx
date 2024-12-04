@@ -79,6 +79,26 @@ const StyledContainer = styled(OakFlex)`
   ${flexStyle}
 `;
 
+type BottomBoxShadowProps = {
+  shouldDisplayShadow: boolean;
+};
+
+export const BottomBoxShadow = styled(OakBox)<BottomBoxShadowProps>`
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  opacity: ${(props) =>
+    props.shouldDisplayShadow
+      ? parseOpacity("opaque")
+      : parseOpacity("transparent")};
+  z-index: 100;
+  -webkit-box-shadow: inset 0px -55px 30px -30px rgba(255, 255, 255, 1);
+  -moz-box-shadow: inset 0px -55px 30px -30px rgba(255, 255, 255, 1);
+  box-shadow: inset 0px -55px 30px -30px rgba(255, 255, 255, 1);
+  padding: 2px;
+`;
+
 /**
  * An accordion component that can be used to show/hide content
  */
@@ -90,36 +110,16 @@ const Accordion = ({
   ...styleProps
 }: InternalChevronAccordionProps) => {
   const [shouldDisplayShadow, setShouldDisplayShadow] = useState(false);
-
-  const BottomBoxShadow = styled(OakBox)`
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 50px;
-    opacity: ${shouldDisplayShadow
-      ? parseOpacity("opaque")
-      : parseOpacity("transparent")};
-    z-index: 100;
-    -webkit-box-shadow: inset 0px -55px 30px -30px rgba(255, 255, 255, 1);
-    -moz-box-shadow: inset 0px -55px 30px -30px rgba(255, 255, 255, 1);
-    box-shadow: inset 0px -55px 30px -30px rgba(255, 255, 255, 1);
-    padding: 2px;
-  `;
-
   const scrollBox = useRef(null as null | HTMLDivElement);
 
   useEffect(() => {
     const scrollHeight = scrollBox.current?.scrollHeight;
-
-    console.log(">>>>>> scroll height", scrollHeight);
     const clientHeight = scrollBox.current?.clientHeight;
 
-    if (scrollHeight && clientHeight) {
-      if (scrollHeight > clientHeight) {
-        setShouldDisplayShadow(true);
-      } else {
-        setShouldDisplayShadow(false);
-      }
+    if (scrollHeight && clientHeight && scrollHeight > clientHeight) {
+      setShouldDisplayShadow(true);
+    } else {
+      setShouldDisplayShadow(false);
     }
   }, []);
 
@@ -140,6 +140,7 @@ const Accordion = ({
   };
 
   const { isOpen } = useAccordionContext();
+
   return (
     <StyledContainer
       $position={"relative"}
@@ -189,7 +190,12 @@ const Accordion = ({
         </InternalAccordionContent>
       </OakBox>
       <StyledAccordionUnderline $fill={"border-decorative5-stronger"} />
-      {isOpen && <BottomBoxShadow data-testid="bottom-box-shadow" />}
+      {isOpen && (
+        <BottomBoxShadow
+          shouldDisplayShadow={shouldDisplayShadow}
+          data-testid="bottom-box-shadow"
+        />
+      )}
     </StyledContainer>
   );
 };

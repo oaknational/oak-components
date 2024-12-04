@@ -167,19 +167,6 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   visibility: visible;
 }
 
-.c4 {
-  height: 0.125rem;
-  width: 100%;
-  bottom: 0.125rem;
-}
-
-.c21 {
-  height: 0.125rem;
-  position: absolute;
-  width: 100%;
-  bottom: 0.125rem;
-}
-
 .c20 {
   position: absolute;
   bottom: 0;
@@ -191,6 +178,19 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   -moz-box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
   box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
   padding: 2px;
+}
+
+.c4 {
+  height: 0.125rem;
+  width: 100%;
+  bottom: 0.125rem;
+}
+
+.c21 {
+  height: 0.125rem;
+  position: absolute;
+  width: 100%;
+  bottom: 0.125rem;
 }
 
 <div

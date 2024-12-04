@@ -10,6 +10,14 @@ import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe(InternalChevronAccordion, () => {
+  Object.defineProperties(HTMLElement.prototype, {
+    scrollHeight: { get: () => 348, configurable: true },
+    clientHeight: { get: () => 300, configurable: true },
+    scrollTop: { get: () => 20, configurable: true },
+  });
+
+  const useRefSpy = jest.spyOn(React, "useRef");
+
   it("matches snapshot", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
@@ -45,7 +53,7 @@ describe(InternalChevronAccordion, () => {
     expect(queryByRole("region")).not.toBeInTheDocument();
   });
 
-  it("performs correct action when the content is scrolled", () => {
+  it("renders correct initial opacity of box shadow when scroll is present", async () => {
     const { getByTestId } = renderWithTheme(
       <InternalChevronAccordion
         header="See more"
@@ -56,23 +64,94 @@ describe(InternalChevronAccordion, () => {
       </InternalChevronAccordion>,
     );
 
-    jest.spyOn(React, "useRef").mockReturnValue({
-      current: {
-        scrollHeight: 348,
-        clientHeight: 300,
-        scrollTop: 20,
-      },
+    const boxShadow = getByTestId("bottom-box-shadow");
+    const styles = getComputedStyle(boxShadow);
+
+    expect(useRefSpy).toHaveBeenCalled();
+    expect(styles.opacity).toBe("1");
+  });
+
+  it("renders correct initial opacity of box shadow when scroll is not present", async () => {
+    Object.defineProperties(HTMLElement.prototype, {
+      scrollHeight: { get: () => 348, configurable: true },
+      clientHeight: { get: () => 348, configurable: true },
+      scrollTop: { get: () => 20, configurable: true },
+    });
+
+    const { getByTestId } = renderWithTheme(
+      <InternalChevronAccordion
+        header="See more"
+        id="see-more"
+        initialOpen={true}
+      >
+        Here it is
+      </InternalChevronAccordion>,
+    );
+
+    const boxShadow = getByTestId("bottom-box-shadow");
+    const styles = getComputedStyle(boxShadow);
+
+    expect(useRefSpy).toHaveBeenCalled();
+    expect(styles.opacity).toBe("0");
+  });
+
+  it("renders correct opacity of box shadow after scrolling to the end", async () => {
+    const { getByTestId } = renderWithTheme(
+      <InternalChevronAccordion
+        header="See more"
+        id="see-more"
+        initialOpen={true}
+      >
+        Here it is
+      </InternalChevronAccordion>,
+    );
+
+    Object.defineProperties(HTMLElement.prototype, {
+      scrollHeight: { get: () => 348, configurable: true },
+      clientHeight: { get: () => 328, configurable: true },
+      scrollTop: { get: () => 0, configurable: true },
+    });
+
+    act(() => {
+      fireEvent.scroll(getByTestId("scrollable-content"), {
+        scrollY: 20,
+      });
     });
 
     const boxShadow = getByTestId("bottom-box-shadow");
     const styles = getComputedStyle(boxShadow);
 
+    expect(useRefSpy).toHaveBeenCalled();
     expect(styles.opacity).toBe("0");
+  });
+
+  it("renders correct opacity of box shadow after scrolling notto the end", async () => {
+    const { getByTestId } = renderWithTheme(
+      <InternalChevronAccordion
+        header="See more"
+        id="see-more"
+        initialOpen={true}
+      >
+        Here it is
+      </InternalChevronAccordion>,
+    );
+
+    Object.defineProperties(HTMLElement.prototype, {
+      scrollHeight: { get: () => 348, configurable: true },
+      clientHeight: { get: () => 328, configurable: true },
+      scrollTop: { get: () => 0, configurable: true },
+    });
 
     act(() => {
       fireEvent.scroll(getByTestId("scrollable-content"), {
         scrollY: 10,
       });
     });
+
+    const boxShadow = getByTestId("bottom-box-shadow");
+    const styles = getComputedStyle(boxShadow);
+
+    expect(useRefSpy).toHaveBeenCalled();
+    expect(styles.opacity).toBe("1");
   });
 });
