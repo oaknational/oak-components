@@ -9,15 +9,9 @@ import { OakThemeProvider } from "@/components/atoms";
 import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
+const useRefSpy = jest.spyOn(React, "useRef");
+
 describe(InternalChevronAccordion, () => {
-  Object.defineProperties(HTMLElement.prototype, {
-    scrollHeight: { get: () => 348, configurable: true },
-    clientHeight: { get: () => 300, configurable: true },
-    scrollTop: { get: () => 20, configurable: true },
-  });
-
-  const useRefSpy = jest.spyOn(React, "useRef");
-
   it("matches snapshot", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
@@ -53,7 +47,13 @@ describe(InternalChevronAccordion, () => {
     expect(queryByRole("region")).not.toBeInTheDocument();
   });
 
-  it("renders correct initial opacity of box shadow when scroll is present", async () => {
+  it("renders correct initial opacity of box shadow when scroll is present", () => {
+    Object.defineProperties(HTMLElement.prototype, {
+      scrollHeight: { get: () => 348, configurable: true },
+      clientHeight: { get: () => 300, configurable: true },
+      scrollTop: { get: () => 20, configurable: true },
+    });
+
     const { getByTestId } = renderWithTheme(
       <InternalChevronAccordion
         header="See more"
@@ -71,7 +71,7 @@ describe(InternalChevronAccordion, () => {
     expect(styles.opacity).toBe("1");
   });
 
-  it("renders correct initial opacity of box shadow when scroll is not present", async () => {
+  it("renders correct initial opacity of box shadow when scroll is not present", () => {
     Object.defineProperties(HTMLElement.prototype, {
       scrollHeight: { get: () => 348, configurable: true },
       clientHeight: { get: () => 348, configurable: true },
@@ -95,7 +95,7 @@ describe(InternalChevronAccordion, () => {
     expect(styles.opacity).toBe("0");
   });
 
-  it("renders correct opacity of box shadow after scrolling to the end", async () => {
+  it("renders correct opacity of box shadow after scrolling to the end", () => {
     const { getByTestId } = renderWithTheme(
       <InternalChevronAccordion
         header="See more"
