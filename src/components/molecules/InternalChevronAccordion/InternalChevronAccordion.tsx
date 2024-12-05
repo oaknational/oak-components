@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 
 import { OakHandDrawnFocusUnderline } from "@/components/molecules/OakHandDrawnFocusUnderline";
@@ -19,6 +19,7 @@ import InternalAccordionProvider from "@/components/atoms/InternalAccordion/Inte
 import { InternalStyledSvgProps } from "@/components/atoms/InternalStyledSvg";
 import { FlexStyleProps, flexStyle } from "@/styles/utils/flexStyle";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
+import { parseOpacity } from "@/styles/helpers/parseOpacity";
 import { ColorStyleProps } from "@/styles/utils/colorStyle";
 
 export type InternalChevronAccordionProps = {
@@ -78,6 +79,26 @@ const StyledContainer = styled(OakFlex)`
   ${flexStyle}
 `;
 
+type BottomBoxShadowProps = {
+  shouldDisplayShadow: boolean;
+};
+
+export const BottomBoxShadow = styled(OakBox)<BottomBoxShadowProps>`
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  opacity: ${(props) =>
+    props.shouldDisplayShadow
+      ? parseOpacity("opaque")
+      : parseOpacity("transparent")};
+  z-index: 100;
+  -webkit-box-shadow: inset 0px -55px 30px -30px rgba(255, 255, 255, 1);
+  -moz-box-shadow: inset 0px -55px 30px -30px rgba(255, 255, 255, 1);
+  box-shadow: inset 0px -55px 30px -30px rgba(255, 255, 255, 1);
+  padding: 2px;
+`;
+
 /**
  * An accordion component that can be used to show/hide content
  */
@@ -88,6 +109,36 @@ const Accordion = ({
   id,
   ...styleProps
 }: InternalChevronAccordionProps) => {
+  const [shouldDisplayShadow, setShouldDisplayShadow] = useState(false);
+  const scrollBox = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const scrollHeight = scrollBox.current?.scrollHeight;
+    const clientHeight = scrollBox.current?.clientHeight;
+
+    if (scrollHeight && clientHeight && scrollHeight > clientHeight) {
+      setShouldDisplayShadow(true);
+    } else {
+      setShouldDisplayShadow(false);
+    }
+  }, []);
+
+  const handleScroll = () => {
+    const scrollHeight = scrollBox.current?.scrollHeight;
+    const scrollTop = scrollBox.current?.scrollTop;
+    const clientHeight = scrollBox.current?.clientHeight;
+
+    if (scrollHeight && scrollTop) {
+      const bottom = scrollHeight - scrollTop === clientHeight;
+
+      if (bottom) {
+        setShouldDisplayShadow(false);
+      } else {
+        setShouldDisplayShadow(true);
+      }
+    }
+  };
+
   const { isOpen } = useAccordionContext();
 
   return (
@@ -127,10 +178,24 @@ const Accordion = ({
           />
         </OakBox>
       </StyledAccordionButton>
-      <InternalAccordionContent aria-labelledby={id} $overflow={"scroll"}>
-        {children}
-      </InternalAccordionContent>
+      <OakBox
+        ref={scrollBox}
+        $position={"relative"}
+        $overflow={"scroll"}
+        onScroll={handleScroll}
+        data-testid={"scrollable-content"}
+      >
+        <InternalAccordionContent aria-labelledby={id}>
+          {children}
+        </InternalAccordionContent>
+      </OakBox>
       <StyledAccordionUnderline $fill={"border-decorative5-stronger"} />
+      {isOpen && (
+        <BottomBoxShadow
+          shouldDisplayShadow={shouldDisplayShadow}
+          data-testid="bottom-box-shadow"
+        />
+      )}
     </StyledContainer>
   );
 };

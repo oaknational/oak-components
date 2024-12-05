@@ -90,3 +90,31 @@ export const Default: Story = {
     ),
   },
 };
+
+export const WithoutScroll: Story = {
+  render: (args) => <OakMediaClipList {...args} />,
+  args: {
+    lessonTitle: "Lesson title",
+    currentClipCounter: 2,
+    totalClipCounter: 6,
+    children: (
+      <>
+        <OakMediaClip
+          {...mediaClipArgs}
+          muxPlayingState={"standard"}
+          onClick={() => {
+            console.log(`Standard video`);
+          }}
+        />
+        <OakMediaClip
+          {...mediaClipArgs}
+          clipName="Played Clip Name"
+          muxPlayingState={"played"}
+          onClick={() => {
+            console.log(`Played video`);
+          }}
+        />
+      </>
+    ),
+  },
+};

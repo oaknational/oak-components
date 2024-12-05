@@ -56,6 +56,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 }
 
 .c20 {
+  position: relative;
   overflow: scroll;
   font-family: --var(google-font),Lexend,sans-serif;
   overflow: scroll;
@@ -514,127 +515,133 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
           </div>
         </button>
         <div
-          aria-labelledby="mobile-unit-filter-accordion"
           className="c20"
-          hidden={true}
-          role="region"
+          data-testid="scrollable-content"
+          onScroll={[Function]}
         >
           <div
-            aria-label="OakPupilJourneyUnitsFilter"
-            className="c4 c21"
-            role="radiogroup"
+            aria-labelledby="mobile-unit-filter-accordion"
+            className="c4"
+            hidden={true}
+            role="region"
           >
             <div
-              className="c22 c23"
+              aria-label="OakPupilJourneyUnitsFilter"
+              className="c4 c21"
+              role="radiogroup"
             >
               <div
-                className="c17 grey-shadow"
-              />
-              <div
-                className="c17 yellow-shadow"
-              />
-              <button
-                aria-checked={true}
-                className="c24 c25 internal-button"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                role="radio"
+                className="c22 c23"
               >
                 <div
-                  className="c4 c26"
+                  className="c17 grey-shadow"
+                />
+                <div
+                  className="c17 yellow-shadow"
+                />
+                <button
+                  aria-checked={true}
+                  className="c24 c25 internal-button"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  role="radio"
                 >
-                  <span
-                    className="c27"
+                  <div
+                    className="c4 c26"
                   >
-                    All
-                  </span>
-                </div>
-              </button>
-            </div>
-            <div
-              className="c22 c23"
-            >
+                    <span
+                      className="c27"
+                    >
+                      All
+                    </span>
+                  </div>
+                </button>
+              </div>
               <div
-                className="c17 grey-shadow"
-              />
-              <div
-                className="c17 yellow-shadow"
-              />
-              <button
-                aria-checked={false}
-                className="c28 c29 internal-button"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                role="radio"
+                className="c22 c23"
               >
                 <div
-                  className="c4 c26"
+                  className="c17 grey-shadow"
+                />
+                <div
+                  className="c17 yellow-shadow"
+                />
+                <button
+                  aria-checked={false}
+                  className="c28 c29 internal-button"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  role="radio"
                 >
-                  <span
-                    className="c27"
+                  <div
+                    className="c4 c26"
                   >
-                    Biology
-                  </span>
-                </div>
-              </button>
-            </div>
-            <div
-              className="c22 c23"
-            >
+                    <span
+                      className="c27"
+                    >
+                      Biology
+                    </span>
+                  </div>
+                </button>
+              </div>
               <div
-                className="c17 grey-shadow"
-              />
-              <div
-                className="c17 yellow-shadow"
-              />
-              <button
-                aria-checked={false}
-                className="c28 c29 internal-button"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                role="radio"
+                className="c22 c23"
               >
                 <div
-                  className="c4 c26"
+                  className="c17 grey-shadow"
+                />
+                <div
+                  className="c17 yellow-shadow"
+                />
+                <button
+                  aria-checked={false}
+                  className="c28 c29 internal-button"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  role="radio"
                 >
-                  <span
-                    className="c27"
+                  <div
+                    className="c4 c26"
                   >
-                    Chemistry
-                  </span>
-                </div>
-              </button>
-            </div>
-            <div
-              className="c22 c23"
-            >
+                    <span
+                      className="c27"
+                    >
+                      Chemistry
+                    </span>
+                  </div>
+                </button>
+              </div>
               <div
-                className="c17 grey-shadow"
-              />
-              <div
-                className="c17 yellow-shadow"
-              />
-              <button
-                aria-checked={false}
-                className="c28 c29 internal-button"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                role="radio"
+                className="c22 c23"
               >
                 <div
-                  className="c4 c26"
+                  className="c17 grey-shadow"
+                />
+                <div
+                  className="c17 yellow-shadow"
+                />
+                <button
+                  aria-checked={false}
+                  className="c28 c29 internal-button"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  role="radio"
                 >
-                  <span
-                    className="c27"
+                  <div
+                    className="c4 c26"
                   >
-                    Physics
-                  </span>
-                </div>
-              </button>
+                    <span
+                      className="c27"
+                    >
+                      Physics
+                    </span>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
         </div>

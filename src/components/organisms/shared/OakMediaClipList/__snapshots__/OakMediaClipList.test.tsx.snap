@@ -96,12 +96,13 @@ exports[`OakMediaClipList matches snapshot 1`] = `
 }
 
 .c21 {
+  position: relative;
   overflow: scroll;
   font-family: --var(google-font),Lexend,sans-serif;
   overflow: scroll;
 }
 
-.c23 {
+.c22 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -170,7 +171,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c22 {
+.c23 {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -251,6 +252,19 @@ exports[`OakMediaClipList matches snapshot 1`] = `
 
 .c5 .c9:focus-visible ~ .c25 {
   visibility: visible;
+}
+
+.c27 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  opacity: 0;
+  z-index: 100;
+  -webkit-box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
+  -moz-box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
+  box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
+  padding: 2px;
 }
 
 .c2 {
@@ -360,19 +374,25 @@ exports[`OakMediaClipList matches snapshot 1`] = `
         </div>
       </button>
       <div
-        aria-labelledby="media-clip-list"
         className="c21"
-        hidden={false}
-        role="region"
+        data-testid="scrollable-content"
+        onScroll={[Function]}
       >
-        <ul
+        <div
+          aria-labelledby="media-clip-list"
           className="c22"
+          hidden={false}
+          role="region"
         >
-          children
-        </ul>
+          <ul
+            className="c23"
+          >
+            children
+          </ul>
+        </div>
       </div>
       <div
-        className="c23 c24 c25 c26"
+        className="c22 c24 c25 c26"
       >
         <svg
           className=""
@@ -392,6 +412,10 @@ exports[`OakMediaClipList matches snapshot 1`] = `
           />
         </svg>
       </div>
+      <div
+        className="c22 c27"
+        data-testid="bottom-box-shadow"
+      />
     </div>
   </div>,
   ",",

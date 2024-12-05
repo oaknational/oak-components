@@ -50,6 +50,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
 }
 
 .c17 {
+  position: relative;
   overflow: scroll;
   font-family: --var(google-font),Lexend,sans-serif;
   overflow: scroll;
@@ -166,13 +167,26 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   visibility: visible;
 }
 
+.c20 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  opacity: 0;
+  z-index: 100;
+  -webkit-box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
+  -moz-box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
+  box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
+  padding: 2px;
+}
+
 .c4 {
   height: 0.125rem;
   width: 100%;
   bottom: 0.125rem;
 }
 
-.c20 {
+.c21 {
   height: 0.125rem;
   position: absolute;
   width: 100%;
@@ -257,12 +271,18 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
       </div>
     </button>
     <div
-      aria-labelledby="see-more"
       className="c17"
-      hidden={false}
-      role="region"
+      data-testid="scrollable-content"
+      onScroll={[Function]}
     >
-      Here it is
+      <div
+        aria-labelledby="see-more"
+        className="c2"
+        hidden={false}
+        role="region"
+      >
+        Here it is
+      </div>
     </div>
     <div
       className="c2 c3 c18 c19"
@@ -285,9 +305,13 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
         />
       </svg>
     </div>
+    <div
+      className="c2 c20"
+      data-testid="bottom-box-shadow"
+    />
   </div>
   <div
-    className="c2 c3 c20"
+    className="c2 c3 c21"
   >
     <svg
       className=""
