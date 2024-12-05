@@ -98,18 +98,18 @@ export const OakMediaClipStackListItem = (
       as="a"
       href={href}
       $display={"flex"}
-      $flexDirection={["row", "column"]}
-      $gap={["all-spacing-2", "space-between-none"]}
+      $flexDirection={["row", "row", "column"]}
+      $gap={["all-spacing-2", "all-spacing-2", "space-between-none"]}
       $width={"fit-content"}
       {...rest}
     >
       <OakBox>
         <ImageStackShadow
           $borderRadius={"border-radius-s"}
-          $width={["all-spacing-15", "all-spacing-18"]}
-          $height={["all-spacing-11", "all-spacing-15"]}
+          $width={["all-spacing-15", "all-spacing-15", "all-spacing-18"]}
+          $height={["all-spacing-11", "all-spacing-11", "all-spacing-15"]}
           $position={"relative"}
-          $mb={["space-between-none", "space-between-xs"]}
+          $mb={["space-between-none", "space-between-none", "space-between-xs"]}
         >
           <OakImage
             src={imageUrl}
@@ -127,7 +127,9 @@ export const OakMediaClipStackListItem = (
           />
         </ImageStackShadow>
       </OakBox>
-      <OakBox $mb={["space-between-none", "space-between-s"]}>
+      <OakBox
+        $mb={["space-between-none", "space-between-none", "space-between-s"]}
+      >
         <OakHeading tag="h5" $font="heading-7" $color={"text-primary"}>
           {title}
         </OakHeading>

@@ -26,6 +26,7 @@ export const OakTimer = (props: OakTimerProps) => {
   const { timeCode, ...oakBoxProps } = props;
 
   const formattedTimeCode = formatTimeCode(timeCode);
+  const [minutes, seconds] = formattedTimeCode.split(":");
 
   return (
     <StyledTimeBox
@@ -33,7 +34,7 @@ export const OakTimer = (props: OakTimerProps) => {
       $borderRadius={"border-radius-xs"}
       $background={"bg-icon"}
       $font={["body-4"]}
-      aria-label={`Media clip length: ${formattedTimeCode}`}
+      aria-label={`Media clip length: ${minutes} minutes and ${seconds} seconds`}
       {...oakBoxProps}
     >
       <OakLabel>{formattedTimeCode}</OakLabel>
