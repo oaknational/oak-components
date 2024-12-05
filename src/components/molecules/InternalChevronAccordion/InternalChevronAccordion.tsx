@@ -110,7 +110,7 @@ const Accordion = ({
   ...styleProps
 }: InternalChevronAccordionProps) => {
   const [shouldDisplayShadow, setShouldDisplayShadow] = useState(false);
-  const scrollBox = useRef(null as null | HTMLDivElement);
+  const scrollBox = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const scrollHeight = scrollBox.current?.scrollHeight;
