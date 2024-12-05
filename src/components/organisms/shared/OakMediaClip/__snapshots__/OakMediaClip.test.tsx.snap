@@ -297,7 +297,7 @@ exports[`OakMediaClip matches snapshot 1`] = `
               />
             </div>
             <div
-              aria-label="Media clip length: 10:57"
+              aria-label="Media clip length: 10 minutes and 57 seconds"
               className="c14 c15"
             >
               <label
