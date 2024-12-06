@@ -130,7 +130,7 @@ export const OakMediaClipStackListItem = (
       <OakBox
         $mb={["space-between-none", "space-between-none", "space-between-s"]}
       >
-        <OakHeading tag="h5" $font="heading-7" $color={"text-primary"}>
+        <OakHeading tag="h3" $font="heading-7" $color={"text-primary"}>
           {title}
         </OakHeading>
         <OakTypography $font="body-3" $color={"text-subdued"}>
