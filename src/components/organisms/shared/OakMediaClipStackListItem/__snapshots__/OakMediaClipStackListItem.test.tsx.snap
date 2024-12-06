@@ -313,11 +313,11 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
   <div
     className="c9"
   >
-    <h5
+    <h3
       className="c10"
     >
       Learning cycle 3 videos
-    </h5>
+    </h3>
     <div
       className="c11 c12"
     >
