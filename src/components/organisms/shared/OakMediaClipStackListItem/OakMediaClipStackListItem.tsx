@@ -8,6 +8,8 @@ import {
   OakTypography,
   OakHeading,
   OakIcon,
+  placeholderStyles,
+  oakPlaceholder,
 } from "@/components/atoms";
 import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 import { parseColor } from "@/styles/helpers/parseColor";
@@ -56,6 +58,7 @@ const ImageStackShadow = styled(OakBox)`
   img {
     object-fit: fill;
     -webkit-filter: brightness(100%);
+    ${placeholderStyles}
   }
 
   &::after {
@@ -110,6 +113,9 @@ export const OakMediaClipStackListItem = (
           $height={["all-spacing-11", "all-spacing-11", "all-spacing-15"]}
           $position={"relative"}
           $mb={["space-between-none", "space-between-none", "space-between-xs"]}
+          $showOakPlaceholder={!imageUrl ? true : false}
+          src={imageUrl ?? oakPlaceholder}
+          alt={!imageUrl ? "oak" : ""}
         >
           <OakImage
             src={imageUrl}

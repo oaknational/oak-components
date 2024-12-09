@@ -247,7 +247,9 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
     className="c3"
   >
     <div
+      alt=""
       className="c4 c5"
+      src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1698336494/samples/landscapes/nature-mountains.jpg"
     >
       <div
         className="c6"
