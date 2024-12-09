@@ -34,8 +34,6 @@ exports[`OakMediaClip matches snapshot 1`] = `
 .c12 {
   position: relative;
   width: 100%;
-  height: 100%;
-  border-radius: 0.125rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -266,7 +264,7 @@ exports[`OakMediaClip matches snapshot 1`] = `
             className="c9 c10 c11"
           >
             <div
-              className="c12"
+              className="c12 "
               fill={true}
             >
               <img

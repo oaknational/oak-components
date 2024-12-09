@@ -10,6 +10,8 @@ import {
   OakImage,
   OakP,
   OakLI,
+  oakPlaceholder,
+  placeholderStyles,
 } from "@/components/atoms";
 import { OakCombinedColorToken } from "@/styles";
 import { InternalButton } from "@/components/atoms/InternalButton";
@@ -73,6 +75,10 @@ const getButtonStyles = (muxPlayingState: MuxPlayingState): MediaClipStyles => {
 const MediaButtonWrapper = styled(StyledButtonWrapper)`
   min-height: 72px;
   width: 100%;
+`;
+
+export const StyledMediaClipImage = styled(OakImage)`
+  ${placeholderStyles}
 `;
 
 const ImageBox = styled(OakFlex)<{ disabled?: boolean }>`
@@ -231,12 +237,13 @@ export const OakMediaClip = ({
                 $flexShrink={0}
               >
                 {!isAudioClip && thumbnailImage ? (
-                  <OakImage
+                  <StyledMediaClipImage
                     fill
                     $height={"100%"}
                     $width={"100%"}
-                    src={thumbnailImage}
+                    src={thumbnailImage ?? oakPlaceholder}
                     alt={imageAltText}
+                    $showOakPlaceholder={!thumbnailImage ? true : false}
                     $borderRadius={"border-radius-xs"}
                   />
                 ) : (

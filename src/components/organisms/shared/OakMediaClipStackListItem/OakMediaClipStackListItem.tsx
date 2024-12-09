@@ -8,6 +8,8 @@ import {
   OakTypography,
   OakHeading,
   OakIcon,
+  oakPlaceholder,
+  placeholderStyles,
 } from "@/components/atoms";
 import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 import { parseColor } from "@/styles/helpers/parseColor";
@@ -88,6 +90,12 @@ const ImageStackShadow = styled(OakBox)`
   }
 `;
 
+const StyledMediaStackImage = styled(OakImage)`
+  ${placeholderStyles}
+  height: 100%;
+  width: 100%;
+`;
+
 export const OakMediaClipStackListItem = (
   props: OakMediaClipStackListItemProps,
 ) => {
@@ -111,13 +119,12 @@ export const OakMediaClipStackListItem = (
           $position={"relative"}
           $mb={["space-between-none", "space-between-none", "space-between-xs"]}
         >
-          <OakImage
-            src={imageUrl}
+          <StyledMediaStackImage
+            src={imageUrl ?? oakPlaceholder}
+            $showOakPlaceholder={!imageUrl ? true : false}
             alt={imageAltText}
             $borderRadius={"border-radius-s"}
             $overflow={"hidden"}
-            $width={"100%"}
-            $height={"100%"}
           />
           <OakIcon
             id="play-icon"
