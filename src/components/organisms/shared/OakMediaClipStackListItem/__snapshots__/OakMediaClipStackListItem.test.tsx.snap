@@ -27,15 +27,11 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
 
 .c6 {
   position: relative;
-  overflow: hidden;
   width: 100%;
-  height: 100%;
-  border-radius: 0.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
-  overflow: hidden;
 }
 
-.c8 {
+.c9 {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -44,12 +40,12 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c9 {
+.c10 {
   margin-bottom: 0rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c11 {
+.c12 {
   color: #575757;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
@@ -61,7 +57,7 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c7 {
+.c8 {
   object-fit: contain;
 }
 
@@ -76,7 +72,7 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
   gap: 0.5rem;
 }
 
-.c10 {
+.c11 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -88,7 +84,7 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
   color: #222222;
 }
 
-.c12 {
+.c13 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
@@ -151,6 +147,11 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
   margin-top: -16px;
 }
 
+.c7 {
+  height: 100%;
+  width: 100%;
+}
+
 @media (min-width:750px) {
   .c4 {
     width: 6.25rem;
@@ -188,13 +189,13 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c9 {
+  .c10 {
     margin-bottom: 0rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c9 {
+  .c10 {
     margin-bottom: 1rem;
   }
 }
@@ -247,16 +248,14 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
     className="c3"
   >
     <div
-      alt=""
       className="c4 c5"
-      src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1698336494/samples/landscapes/nature-mountains.jpg"
     >
       <div
-        className="c6"
+        className="c6 c7"
       >
         <img
           alt="alt text for the image"
-          className="c7"
+          className="c8"
           data-nimg="fill"
           decoding="async"
           loading="lazy"
@@ -282,12 +281,12 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
         />
       </div>
       <div
-        className="c8"
+        className="c9"
         id="play-icon"
       >
         <img
           alt="play"
-          className="c7"
+          className="c8"
           data-nimg="fill"
           decoding="async"
           loading="lazy"
@@ -313,15 +312,15 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
     </div>
   </div>
   <div
-    className="c9"
+    className="c10"
   >
     <h3
-      className="c10"
+      className="c11"
     >
       Learning cycle 3 videos
     </h3>
     <div
-      className="c11 c12"
+      className="c12 c13"
     >
       5
        

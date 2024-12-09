@@ -8,8 +8,8 @@ import {
   OakTypography,
   OakHeading,
   OakIcon,
-  placeholderStyles,
   oakPlaceholder,
+  placeholderStyles,
 } from "@/components/atoms";
 import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 import { parseColor } from "@/styles/helpers/parseColor";
@@ -58,7 +58,6 @@ const ImageStackShadow = styled(OakBox)`
   img {
     object-fit: fill;
     -webkit-filter: brightness(100%);
-    ${placeholderStyles}
   }
 
   &::after {
@@ -91,6 +90,12 @@ const ImageStackShadow = styled(OakBox)`
   }
 `;
 
+const StyledMediaStackImage = styled(OakImage)`
+  ${placeholderStyles}
+  height: 100%;
+  width: 100%;
+`;
+
 export const OakMediaClipStackListItem = (
   props: OakMediaClipStackListItemProps,
 ) => {
@@ -113,17 +118,13 @@ export const OakMediaClipStackListItem = (
           $height={["all-spacing-11", "all-spacing-11", "all-spacing-15"]}
           $position={"relative"}
           $mb={["space-between-none", "space-between-none", "space-between-xs"]}
-          $showOakPlaceholder={!imageUrl ? true : false}
-          src={imageUrl ?? oakPlaceholder}
-          alt={!imageUrl ? "oak" : ""}
         >
-          <OakImage
-            src={imageUrl}
+          <StyledMediaStackImage
+            src={imageUrl ?? oakPlaceholder}
+            $showOakPlaceholder={!imageUrl ? true : false}
             alt={imageAltText}
             $borderRadius={"border-radius-s"}
             $overflow={"hidden"}
-            $width={"100%"}
-            $height={"100%"}
           />
           <OakIcon
             id="play-icon"
