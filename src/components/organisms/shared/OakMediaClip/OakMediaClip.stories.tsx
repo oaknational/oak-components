@@ -108,14 +108,16 @@ export const Default: Story = {
 export const Playing: Story = {
   render: (args) => {
     return (
-      <OakMediaClip
-        {...args}
-        clipName="Playing Clip Name"
-        muxPlayingState={"playing"}
-        onClick={() => {
-          console.log(`Playing video`);
-        }}
-      />
+      <OakUL $reset>
+        <OakMediaClip
+          {...args}
+          clipName="Playing Clip Name"
+          muxPlayingState={"playing"}
+          onClick={() => {
+            console.log(`Playing video`);
+          }}
+        />
+      </OakUL>
     );
   },
 };
@@ -123,14 +125,16 @@ export const Playing: Story = {
 export const Played: Story = {
   render: (args) => {
     return (
-      <OakMediaClip
-        {...args}
-        clipName="Played Clip Name"
-        muxPlayingState={"played"}
-        onClick={() => {
-          console.log(`Played video`);
-        }}
-      />
+      <OakUL $reset>
+        <OakMediaClip
+          {...args}
+          clipName="Played Clip Name"
+          muxPlayingState={"played"}
+          onClick={() => {
+            console.log(`Played video`);
+          }}
+        />
+      </OakUL>
     );
   },
 };
@@ -138,14 +142,16 @@ export const Played: Story = {
 export const Audio: Story = {
   render: (args) => {
     return (
-      <OakMediaClip
-        {...args}
-        isAudioClip={true}
-        clipName="Audio Clip Name"
-        onClick={() => {
-          console.log(`Audio clip`);
-        }}
-      />
+      <OakUL $reset>
+        <OakMediaClip
+          {...args}
+          isAudioClip={true}
+          clipName="Audio Clip Name"
+          onClick={() => {
+            console.log(`Audio clip`);
+          }}
+        />
+      </OakUL>
     );
   },
 };
@@ -153,13 +159,15 @@ export const Audio: Story = {
 export const Disabled: Story = {
   render: (args) => {
     return (
-      <OakMediaClip
-        {...args}
-        disabled={true}
-        onClick={() => {
-          console.log(`Disabled video`);
-        }}
-      />
+      <OakUL $reset>
+        <OakMediaClip
+          {...args}
+          disabled={true}
+          onClick={() => {
+            console.log(`Disabled video`);
+          }}
+        />
+      </OakUL>
     );
   },
 };

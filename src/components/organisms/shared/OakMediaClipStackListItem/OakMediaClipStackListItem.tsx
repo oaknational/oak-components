@@ -9,18 +9,18 @@ import {
   OakHeading,
   OakIcon,
   oakPlaceholder,
-  placeholderStyles,
 } from "@/components/atoms";
 import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { parseTransitions } from "@/styles/helpers/parseTransitions";
 import { getMediaQuery } from "@/styles/utils/responsiveStyle";
+import { parseSpacing } from "@/styles/helpers/parseSpacing";
 
 export type OakMediaClipStackListItemProps = {
   title: string;
   href: string;
-  imageUrl: string;
+  imageUrl?: string;
   imageAltText: string;
   numberOfClips: number;
 };
@@ -90,8 +90,11 @@ const ImageStackShadow = styled(OakBox)`
   }
 `;
 
-const StyledMediaStackImage = styled(OakImage)`
-  ${placeholderStyles}
+const StyledMediaClipImage = styled(OakImage)`
+  background-color: ${parseColor("bg-decorative2-very-subdued")};
+  background-size: ${parseSpacing("all-spacing-11")};
+  background-position: center;
+  background-repeat: no-repeat;
   height: 100%;
   width: 100%;
 `;
@@ -119,9 +122,8 @@ export const OakMediaClipStackListItem = (
           $position={"relative"}
           $mb={["space-between-none", "space-between-none", "space-between-xs"]}
         >
-          <StyledMediaStackImage
-            src={imageUrl ?? oakPlaceholder}
-            $showOakPlaceholder={!imageUrl ? true : false}
+          <StyledMediaClipImage
+            src={!imageUrl ? oakPlaceholder : imageUrl}
             alt={imageAltText}
             $borderRadius={"border-radius-s"}
             $overflow={"hidden"}
