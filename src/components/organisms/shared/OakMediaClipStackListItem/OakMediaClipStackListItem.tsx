@@ -112,6 +112,7 @@ export const OakMediaClipStackListItem = (
       $flexDirection={["row", "row", "column"]}
       $gap={["all-spacing-2", "all-spacing-2", "space-between-none"]}
       $width={"fit-content"}
+      $alignItems={["center", "center", "flex-start"]}
       {...rest}
     >
       <OakBox>
