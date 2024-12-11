@@ -4,11 +4,13 @@ import { OakBox, OakBoxProps } from "@/components/atoms";
 
 export type OakJauntyAngleLabelProps = {
   label: string;
+  id?: string;
 } & Omit<OakBoxProps, "onClick" | "label">;
 export const OakJauntyAngleLabel = (props: OakJauntyAngleLabelProps) => {
-  const { label, ...oakBoxProps } = props;
+  const { label, id, ...oakBoxProps } = props;
   return (
     <OakBox
+      id={id}
       $borderRadius={"border-radius-m"}
       $ph={"inner-padding-xs"}
       $pv={"inner-padding-ssx"}
