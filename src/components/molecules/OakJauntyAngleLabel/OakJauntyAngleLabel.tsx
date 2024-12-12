@@ -1,16 +1,14 @@
-import React from "react";
+import React, { ComponentProps } from "react";
 
-import { OakBox, OakBoxProps } from "@/components/atoms";
+import { OakBox } from "@/components/atoms";
 
 export type OakJauntyAngleLabelProps = {
   label: string;
-  id?: string;
-} & Omit<OakBoxProps, "onClick" | "label">;
+} & ComponentProps<typeof OakBox>; // Adding div type for OakBox for aria features
 export const OakJauntyAngleLabel = (props: OakJauntyAngleLabelProps) => {
-  const { label, id, ...oakBoxProps } = props;
+  const { label, ...oakBoxProps } = props;
   return (
     <OakBox
-      id={id}
       $borderRadius={"border-radius-m"}
       $ph={"inner-padding-xs"}
       $pv={"inner-padding-ssx"}
