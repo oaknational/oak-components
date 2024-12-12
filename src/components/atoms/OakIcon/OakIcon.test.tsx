@@ -72,20 +72,16 @@ describe("isValidIconName", () => {
 
 describe("generateOakIconURL", () => {
   it("is valid url when the string is a valid icon name", () => {
-    expect(generateOakIconURL("home")).toBe(
-      "https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699887218/icons/gvqxjxcw07ei2kkmwnes.svg",
-    );
+    expect(generateOakIconURL("home")).toBe("svgs/icons/home.svg");
   });
 
   it("is returns url for question mark when the string is not a valid icon name", () => {
     expect(generateOakIconURL("banana-sandwich")).toBe(
-      "https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1706872277/icons/question-mark.svg",
+      "svgs/icons/question-mark.svg",
     );
   });
 
   it("is returns url for books when the string is not a valid subject icon name", () => {
-    expect(generateOakIconURL("subject-potions")).toBe(
-      "https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953657/icons/hz4l3iq6i68kazvkvorq.svg",
-    );
+    expect(generateOakIconURL("subject-potions")).toBe("svgs/icons/books.svg");
   });
 });

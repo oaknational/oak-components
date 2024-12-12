@@ -84,7 +84,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
+            src="svgs/icons/tick.svg"
             style={
               {
                 "bottom": 0,
@@ -198,7 +198,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
+            src="svgs/icons/cross.svg"
             style={
               {
                 "bottom": 0,
@@ -312,7 +312,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
+            src="svgs/icons/tick.svg"
             style={
               {
                 "bottom": 0,

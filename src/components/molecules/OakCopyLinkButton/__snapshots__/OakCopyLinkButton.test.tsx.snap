@@ -202,7 +202,7 @@ exports[`OakCopyLinkButton matches snapshot 1`] = `
               loading="lazy"
               onError={[Function]}
               onLoad={[Function]}
-              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1727861316/icons/Icon_Copy_qxgynv.svg"
+              src="svgs/icons/copy.svg"
               style={
                 {
                   "bottom": 0,

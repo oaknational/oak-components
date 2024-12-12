@@ -201,7 +201,7 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
               loading="lazy"
               onError={[Function]}
               onLoad={[Function]}
-              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953861/icons/ns94ozvozzi22enxkx0x.svg"
+              src="svgs/icons/sign-language.svg"
               style={
                 {
                   "bottom": 0,
