@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakPupilJourneyLayout matches snapshot 1`] = `
+.c0 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (min-width:750px) {
+  .c0 {
+    padding-left: 1.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c0 {
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c2 {
+    background-image: url();
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: 100%;
+  }
+}
+
+<div
+  className="c0 c1 c2"
+>
+  <p>
+    Hello World
+  </p>
+</div>
+`;
