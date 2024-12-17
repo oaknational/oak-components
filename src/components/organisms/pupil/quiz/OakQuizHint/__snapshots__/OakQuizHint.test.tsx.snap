@@ -219,7 +219,7 @@ exports[`OakQuizHint matches snapshot 1`] = `
                 loading="lazy"
                 onError={[Function]}
                 onLoad={[Function]}
-                src="svgs/icons/lightbulb.svg"
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1705078631/icons/zldisxmbff36z68rwcef.svg"
                 style={
                   {
                     "bottom": 0,

@@ -148,7 +148,7 @@ input:checked + .c7 {
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="svgs/icons/tick.svg"
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
           style={
             {
               "bottom": 0,

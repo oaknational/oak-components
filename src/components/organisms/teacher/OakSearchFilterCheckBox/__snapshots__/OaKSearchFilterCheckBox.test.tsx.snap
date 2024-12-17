@@ -187,7 +187,7 @@ exports[`OakSearchFilterCheckBox matches snapshot 1`] = `
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="svgs/subject-icons/history.svg"
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/subject-icons/history.svg"
           style={
             {
               "bottom": 0,

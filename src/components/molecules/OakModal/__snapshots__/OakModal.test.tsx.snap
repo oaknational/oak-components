@@ -330,7 +330,7 @@ exports[`OakModal matches snapshot when mounted 1`] = `
                     data-nimg="fill"
                     decoding="async"
                     loading="lazy"
-                    src="http://localhost/svgs/icons/cross.svg"
+                    src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
                     style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                   />
                 </div>
