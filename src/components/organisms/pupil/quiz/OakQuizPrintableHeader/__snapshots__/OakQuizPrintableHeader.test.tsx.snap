@@ -206,7 +206,7 @@ exports[`OakQuizPrintableHeader matches snapshot 1`] = `
               loading="lazy"
               onError={[Function]}
               onLoad={[Function]}
-              src="svgs/subject-icons/science.svg"
+              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/subject-icons/science.svg"
               style={
                 {
                   "bottom": 0,

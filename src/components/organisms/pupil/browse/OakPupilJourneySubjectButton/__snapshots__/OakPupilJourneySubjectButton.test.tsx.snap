@@ -176,7 +176,7 @@ exports[`OakPupilJourneySubjectButton matches snapshot 1`] = `
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="svgs/subject-icons/english.svg"
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/subject-icons/english.svg"
           style={
             {
               "bottom": 0,

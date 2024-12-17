@@ -654,7 +654,7 @@ exports[`OakHeaderHero matches snapshot 1`] = `
               loading="lazy"
               onError={[Function]}
               onLoad={[Function]}
-              src="svgs/ui-graphics/loopdown.svg"
+              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699887218/ui-graphics/loopdown.svg"
               style={
                 {
                   "bottom": 0,

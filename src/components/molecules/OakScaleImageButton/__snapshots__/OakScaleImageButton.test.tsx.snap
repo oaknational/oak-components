@@ -179,7 +179,7 @@ exports[`OakScaleImageButton matches snapshot 1`] = `
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="svgs/icons/expand.svg"
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1730982187/Icon_Expand_arrktl.svg"
           style={
             {
               "bottom": 0,

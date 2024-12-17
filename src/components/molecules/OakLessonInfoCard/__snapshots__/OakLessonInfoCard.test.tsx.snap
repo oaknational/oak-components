@@ -76,7 +76,7 @@ exports[`OakLessonInfoCard component test matches snapshot 1`] = `
         loading="lazy"
         onError={[Function]}
         onLoad={[Function]}
-        src="svgs/icons/question-mark.svg"
+        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1706872277/icons/question-mark.svg"
         style={
           {
             "bottom": 0,
