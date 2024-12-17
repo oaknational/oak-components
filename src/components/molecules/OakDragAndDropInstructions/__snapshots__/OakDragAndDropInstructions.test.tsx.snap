@@ -90,7 +90,7 @@ exports[`OakDragAndDropInstructions matches snapshot 1`] = `
         loading="lazy"
         onError={[Function]}
         onLoad={[Function]}
-        src="svgs/icons/move-arrows.svg"
+        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/hoddjsgpzkszgvnmn91q.svg"
         style={
           {
             "bottom": 0,

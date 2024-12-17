@@ -216,7 +216,7 @@ exports[`OakLessonReviewQuiz matches snapshot 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="svgs/icons/quiz.svg"
+            src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1705416077/icons/kaaizjcudy0jfgfrrdel.svg"
             style={
               {
                 "bottom": 0,

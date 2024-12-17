@@ -328,7 +328,7 @@ exports[`OakModalCenter matches snapshot 1`] = `
                         loading="lazy"
                         onError={[Function]}
                         onLoad={[Function]}
-                        src="svgs/icons/cross.svg"
+                        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
                         style={
                           {
                             "bottom": 0,

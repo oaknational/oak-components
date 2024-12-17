@@ -5,7 +5,7 @@ import { OakFlex } from "@/components/atoms";
 import { getBreakpoint } from "@/styles/utils/responsiveStyle";
 import { backgrounds } from "@/image-map";
 
-export type PupilJourneySectionName =
+type PupilJourneySectionName =
   | "tier-listing"
   | "examboard-listing"
   | "unit-listing"
@@ -13,7 +13,7 @@ export type PupilJourneySectionName =
   | "subject-listing"
   | "year-listing";
 
-export type Phase = "primary" | "secondary";
+type Phase = "primary" | "secondary";
 
 export type OakPupilJourneyLayoutProps = {
   sectionName: PupilJourneySectionName;
@@ -96,11 +96,11 @@ export const OakPupilJourneyLayout = ({
   );
 };
 
-export function getBackgroundUrlForSection(
+function getBackgroundUrlForSection(
   sectionName: PupilJourneySectionName,
   phase?: Phase,
 ) {
-  const prefix = "svgs/";
+  const prefix = `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/`;
   switch (sectionName) {
     case "lesson-listing":
       return phase === "primary"
