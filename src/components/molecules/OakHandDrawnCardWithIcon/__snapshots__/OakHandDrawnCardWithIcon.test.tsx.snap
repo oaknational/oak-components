@@ -135,7 +135,7 @@ exports[`OakHandDrawnCardWithIcon matches snapshot 1`] = `
         loading="lazy"
         onError={[Function]}
         onLoad={[Function]}
-        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895429/icons/bzhojpjxp9rukdvh7daz.svg"
+        src="svgs/icons/worksheet-3.svg"
         style={
           {
             "bottom": 0,

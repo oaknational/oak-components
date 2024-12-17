@@ -138,7 +138,7 @@ exports[`OakAccordion matches snapshot 1`] = `
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+          src="svgs/icons/chevron-down.svg"
           style={
             {
               "bottom": 0,

@@ -108,7 +108,7 @@ exports[`OakQuizMatch matches snapshot 1`] = `
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/hoddjsgpzkszgvnmn91q.svg"
+          src="svgs/icons/move-arrows.svg"
           style={
             {
               "bottom": 0,
@@ -364,7 +364,7 @@ exports[`OakQuizMatch matches snapshot 1`] = `
               loading="lazy"
               onError={[Function]}
               onLoad={[Function]}
-              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/hoddjsgpzkszgvnmn91q.svg"
+              src="svgs/icons/move-arrows.svg"
               style={
                 {
                   "bottom": 0,
@@ -418,7 +418,7 @@ exports[`OakQuizMatch matches snapshot 1`] = `
               loading="lazy"
               onError={[Function]}
               onLoad={[Function]}
-              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/hoddjsgpzkszgvnmn91q.svg"
+              src="svgs/icons/move-arrows.svg"
               style={
                 {
                   "bottom": 0,
@@ -472,7 +472,7 @@ exports[`OakQuizMatch matches snapshot 1`] = `
               loading="lazy"
               onError={[Function]}
               onLoad={[Function]}
-              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/hoddjsgpzkszgvnmn91q.svg"
+              src="svgs/icons/move-arrows.svg"
               style={
                 {
                   "bottom": 0,

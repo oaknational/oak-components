@@ -180,7 +180,7 @@ exports[`OakLessonReviewItem matches snapshot 1`] = `
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1705662092/icons/pl7bnmb13txese9yxkjv.svg"
+          src="svgs/icons/intro.svg"
           style={
             {
               "bottom": 0,

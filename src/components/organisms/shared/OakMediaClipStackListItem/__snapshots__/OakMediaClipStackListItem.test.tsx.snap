@@ -318,7 +318,7 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1732099511/icons/g1xehzuhjnb0xeftmdno.svg"
+          src="svgs/icons/play.svg"
           style={
             {
               "bottom": 0,

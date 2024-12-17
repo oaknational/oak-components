@@ -400,7 +400,7 @@ exports[`OakPupilJourneyOptionalityItem component test matches snapshot 1`] = `
                     loading="lazy"
                     onError={[Function]}
                     onLoad={[Function]}
-                    src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
+                    src="svgs/icons/chevron-right.svg"
                     style={
                       {
                         "bottom": 0,
@@ -481,7 +481,7 @@ exports[`OakPupilJourneyOptionalityItem component test matches snapshot 1`] = `
                     loading="lazy"
                     onError={[Function]}
                     onLoad={[Function]}
-                    src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
+                    src="svgs/icons/chevron-right.svg"
                     style={
                       {
                         "bottom": 0,

@@ -37,7 +37,7 @@ exports[`OakRoundIcon matches snapshot 1`] = `
       loading="lazy"
       onError={[Function]}
       onLoad={[Function]}
-      src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699887218/icons/gvqxjxcw07ei2kkmwnes.svg"
+      src="svgs/icons/home.svg"
       style={
         {
           "bottom": 0,

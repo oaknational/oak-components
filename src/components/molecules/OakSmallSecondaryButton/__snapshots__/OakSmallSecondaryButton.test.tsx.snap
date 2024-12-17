@@ -176,7 +176,7 @@ exports[`OakSmallSecondaryButton matches snapshot 1`] = `
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707149070/icons/fv0z57zerrioft52dd9n.svg"
+          src="svgs/icons/arrow-right.svg"
           style={
             {
               "bottom": 0,

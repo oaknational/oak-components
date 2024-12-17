@@ -1,7 +1,6 @@
 import React from "react";
 
-import { IconName, icons } from "../../../image-map";
-
+import { IconName, icons } from "@/image-map";
 import { OakImage, OakImageProps } from "@/components/atoms/OakImage";
 
 export const oakIconNames = Object.keys(icons) as IconName[];
@@ -29,7 +28,7 @@ export function isValidIconName(iconName: string): iconName is OakIconName {
  * returns a Icon URL from Cloudinary if is a valid icon, otherwise returns undefined
  */
 export function generateOakIconURL(iconName: string) {
-  const urlPath = `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}`;
+  const urlPath = `svgs`;
   if (isValidIconName(iconName)) {
     return `${urlPath}/${icons[iconName]}`;
   } else if (iconName.includes("subject")) {
