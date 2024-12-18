@@ -1,4 +1,4 @@
-type VersionedSvg = { [key: string]: `v${string}.svg` };
+type VersionedSvgMap = { [key: string]: `v${string}.svg` };
 
 // the values of the icons object are the paths to the versioned images in the Cloudinary
 export const icons = {
@@ -146,7 +146,7 @@ export const icons = {
   "audio-clip-small": "v1731951210/teacher-journey/audio_clip_small.svg",
   "bookmark-outlined": "v1734519491/icons/bookmark-outlined_rxe5v0.svg",
   "bookmark-filled": "v1734519491/icons/bookmark-outlined_rxe5v0.svg",
-} as const satisfies VersionedSvg;
+} as const satisfies VersionedSvgMap;
 
 export type IconName = keyof typeof icons;
 
@@ -167,13 +167,13 @@ export const backgrounds = {
   "line-pink": "v1712912389/pupil-journey/line-pink.svg",
   "line-lavender": "v1712912348/pupil-journey/line-lavender.svg",
   "line-mint": "v1712912348/pupil-journey/line-lavender.svg",
-} as const satisfies VersionedSvg;
+} as const satisfies VersionedSvgMap;
 
 export type BackgroundName = keyof typeof backgrounds;
 
 export const assets = {
   underline: "v1725550624/underline-1_icqa0u.svg",
   "horizontal-rule": "v1725608698/horizontal-rule_rqdc6c.svg",
-} satisfies VersionedSvg;
+} satisfies VersionedSvgMap;
 
 export type AssetName = keyof typeof assets;
