@@ -1,7 +1,7 @@
+// the values of the icons object are the paths to the versioned images in the Cloudinary
 export const icons = {
   "question-mark": "v1706872277/icons/question-mark.svg",
   home: "v1699887218/icons/gvqxjxcw07ei2kkmwnes.svg",
-  send: "v1699893673/icons/rmvytilpjgvh3pgwc8ph.svg",
   rocket: "v1699894015/icons/u26xm5hteot875ozfnk9.svg",
   edit: "v1699894149/icons/qxlunbg5tfrdherzsvlt.svg",
   expand: "v1730982187/Icon_Expand_arrktl.svg",
@@ -21,7 +21,7 @@ export const icons = {
   "worksheet-3": "v1699895429/icons/bzhojpjxp9rukdvh7daz.svg",
   "chevron-right": "v1707752509/icons/vk9xxxhnsltsickom6q9.svg",
   save: "v1699895505/icons/rh1ahwwtbemvz0ihluew.svg",
-  success: "v1699895534/icons/Icon-Success_aiiprx",
+  success: "v1699895534/icons/Icon-Success_aiiprx.svg",
   error: "v1699895534/icons/Icon-Error_r25aza.svg",
   filter: "v1727783280/icons/Icon_Filter_eitb2p.svg",
   "quiz-3": "v1699895534/icons/zoayhgtrotv32fad7d3k.svg",
@@ -48,7 +48,6 @@ export const icons = {
   tick: "v1699954310/icons/efd3esaor6zqk7seh6kt.svg",
   instagram: "v1699954343/icons/ayfeljric0kkimdymvva.svg",
   dot: "v1699954371/icons/knykdclphkm8lgff4u2g.svg",
-  "dot-png": "v1699954394/icons/qecbh291nzwmhcvqayqd.png",
   warning: "v1704901279/icons/zzszodmk7fvxm9xzzg9s.svg",
   "lightbulb-yellow": "v1705078631/icons/q2v4sqxouy1ngcajoavv.svg",
   lightbulb: "v1705078631/icons/zldisxmbff36z68rwcef.svg",
@@ -67,31 +66,36 @@ export const icons = {
   "subject-citizenship": "v1706616415/subject-icons/citizenship.svg",
   "subject-gcse-citizenship": "v1706616415/subject-icons/citizenship.svg",
   "subject-core-citizenship": "v1706616415/subject-icons/citizenship.svg",
-  "subject-combined-science": "v1728568866/subject-icons/science.svg",
+  "subject-combined-science": "v1734523570/subject-icons/science.svg",
   "subject-communication-and-language":
     "v1706616415/subject-icons/communication-and-language.svg",
   "subject-computing": "v1729171080/subject-icons/computing.svg",
   "subject-computer-science": "v1729171080/subject-icons/computing.svg",
   "subject-core-computing": "v1729171080/subject-icons/computing.svg",
-  "subject-cooking-nutrition": "v1729171043/subject-icons/cooking-nutrition.svg",
+  "subject-cooking-nutrition":
+    "v1734523014/subject-icons/cooking-nutrition.svg",
   "subject-computing-non-gcse": "v1729171080/subject-icons/computing.svg",
-  "subject-creative-arts": "v1729171043/subject-icons/cooking-nutrition.svg",
-  "subject-design-technology": "v1706616417/subject-icons/design-technology.svg",
+  "subject-creative-arts": "v1734523014/subject-icons/cooking-nutrition.svg",
+  "subject-design-technology":
+    "v1706616417/subject-icons/design-technology.svg",
   "subject-drama": "v1706616417/subject-icons/drama.svg",
   "subject-english": "v1706616417/subject-icons/english.svg",
   "subject-english-grammar": "v1706616417/subject-icons/english-grammar.svg",
   "subject-english-handwriting": "v1706616419/subject-icons/handwriting.svg",
-  "subject-english-reading-for-pleasure": "v1706616421/subject-icons/literature.svgg",
+  "subject-english-reading-for-pleasure":
+    "v1706616421/subject-icons/literature.svg",
   "subject-english-spelling": "v1706616417/subject-icons/english-spelling.svg",
   "subject-english-reading-writing-oracy":
     "v1706616424/subject-icons/reading-writing-oracy.svg",
   "subject-english-vocabulary": "v1706616425/subject-icons/vocabulary.svg",
-  "subject-expressive-arts-and-design": "v1706616415/subject-icons/creative-arts.svg",
+  "subject-expressive-arts-and-design":
+    "v1706616415/subject-icons/creative-arts.svg",
   "subject-french": "v1706616425/subject-icons/vocabulary.svg",
-  "subject-geography": "v1706616420/subject-icons/geography.svg",
-  "subject-german": "v1729171138/subject-icons/german.svg",
+  "subject-geography": "v1734523108/subject-icons/geography.svg",
+  "subject-german": "v1734523165/subject-icons/german.svg",
   "subject-history": "v1728568980/subject-icons/history.svg",
-  "subject-independent-living": "v1706616419/subject-icons/independent-living.svg",
+  "subject-independent-living":
+    "v1706616419/subject-icons/independent-living.svg",
   "subject-latin": "v1706616420/subject-icons/latin.svg",
   "subject-literacy": "v1706616420/subject-icons/latin.svg",
   "subject-maths": "v1706616421/subject-icons/maths.svg",
@@ -100,50 +104,65 @@ export const icons = {
   "occupational-therapy": "v1706616424/subject-icons/therapy.svg",
   "subject-personal-social-and-emotional-development":
     "v1706616423/subject-icons/rshe-pshe.svg",
-  "subject-physical-development": "v1706616422/subject-icons/physical-development.svg",
-  "subject-physical-education": "v1728568932/subject-icons/physical-education.svg",
-  "subject-core-physical-education": "v1728568932/subject-icons/physical-education.svg",
-  "subject-gcse-physical-education": "v1728568932/subject-icons/physical-education.svg",
+  "subject-physical-development":
+    "v1706616422/subject-icons/physical-development.svg",
+  "subject-physical-education":
+    "v1728568932/subject-icons/physical-education.svg",
+  "subject-core-physical-education":
+    "v1728568932/subject-icons/physical-education.svg",
+  "subject-gcse-physical-education":
+    "v1728568932/subject-icons/physical-education.svg",
   "subject-physical-therapy": "v1706632882/subject-icons/physical-therapy.svg",
   "subject-physics": "v1728568898/subject-icons/physics.svg",
-  "subject-religious-education": "v1706616425/subject-icons/religious-education.svg",
-  "subject-core-religious-education": "v1706616425/subject-icons/religious-education.svg",
-  "subject-gcse-religious-education": "v1706616425/subject-icons/religious-education.svg",
+  "subject-religious-education":
+    "v1706616425/subject-icons/religious-education.svg",
+  "subject-core-religious-education":
+    "v1706616425/subject-icons/religious-education.svg",
+  "subject-gcse-religious-education":
+    "v1706616425/subject-icons/religious-education.svg",
   "subject-rshe-pshe": "v1706616423/subject-icons/rshe-pshe.svg",
   "subject-rshe": "v1706616423/subject-icons/rshe-pshe.svg",
-  "subject-science": "v1728568866/subject-icons/science.svg",
-  "subject-sensory-integration": "v1706626743/subject-icons/sensory-integration.svg",
+  "subject-science": "v1734523570/subject-icons/science.svg",
+  "subject-sensory-integration":
+    "v1706626743/subject-icons/sensory-integration.svg",
   "subject-spanish": "v1729171166/subject-icons/spanish.svg",
   "subject-speech-and-language-therapy":
     "v1706632882/subject-icons/speech-and-language.svg",
-  "subject-specialist": "v1706616415/subject-icons/communication-and-language.svg",
+  "subject-specialist":
+    "v1706616415/subject-icons/communication-and-language.svg",
   "subject-therapy": "v1706616424/subject-icons/therapy.svg",
   "subject-therapies": "v1706616424/subject-icons/therapy.svg",
   "subject-occupational-therapy": "v1706616424/subject-icons/therapy.svg",
   "subject-understanding-the-world":
     "v1706616425/subject-icons/understanding-the-world.svg",
   swimming: "v1728649514/subject-icons/swimming.svg",
-  "homepage-robot-waving": "v1725896980/homepage/robot_waving_malpc3.svg",
-  "homepage-three-pupils": "v1725877472/homepage/image-students_g0jtxe.svg",
-  "homepage-teacher": "v1725882091/homepage/teacher-carrying-stuff_gab2ec.svg",
-  "homepage-teacher-map": "v1725882279/homepage/teacher-reading-map_glwhyh.svg",
+  "homepage-robot-waving": "v1734523528/homepage/robot_waving_malpc3.svg",
+  "homepage-three-pupils": "v1734523221/homepage/image-students_g0jtxe.svg",
+  "homepage-teacher": "v1734523680/homepage/teacher-carrying-stuff_gab2ec.svg",
+  "homepage-teacher-map": "v1734523721/homepage/teacher-reading-map_glwhyh.svg",
   "audio-clip-large": "v1731950937/teacher-journey/audio_clip.svg",
   "audio-clip-small": "v1731951210/teacher-journey/audio_clip_small.svg",
+  "bookmark-outlined": "v1734519491/icons/bookmark-outlined_rxe5v0.svg",
+  "bookmark-filled": "v1734519491/icons/bookmark-outlined_rxe5v0.svg",
 } as const;
 
 export type IconName = keyof typeof icons;
+export type IconValue = `v${string}.svg`;
 
 export const backgrounds = {
-  "confetti-pink": "v1712912220/pupil-journey/confetti-pink.svg",
-  "confetti-lavender": "v1712912297/pupil-journey/confetti-lavender.svg",
-  "confetti-mint": "v1715357422/pupil-journey/confetti-mint.svg",
-  "lesson-confetti-green": "v1721738815/pupil-journey/lesson/lesson-confetti-green.svg",
-  "lesson-confetti-mint": "v1721738815/pupil-journey/lesson/lesson-confetti-mint.svg",
-  "lesson-confetti-pink": "v1721738815/pupil-journey/lesson/lesson-confetti-pink.svg",
+  "confetti-pink": "v1734522868/pupil-journey/confetti-pink.svg",
+  "confetti-lavender": "v1734519662/pupil-journey/confetti-lavender.svg",
+  "confetti-mint": "v1734522739/pupil-journey/confetti-mint.svg",
+  "lesson-confetti-green":
+    "v1734522917/pupil-journey/lesson/lesson-confetti-green.svg",
+  "lesson-confetti-mint":
+    "v1734523422/pupil-journey/lesson/lesson-confetti-mint.svg",
+  "lesson-confetti-pink":
+    "v1734523482/pupil-journey/lesson/lesson-confetti-pink.svg",
   "lesson-confetti-green-lemon":
-    "v1721738815/pupil-journey/lesson/lesson-confetti-green-lemon.svg",
+    "v1734523276/pupil-journey/lesson/lesson-confetti-green-lemon.svg",
   "lesson-confetti-lavender":
-    "v1721738815/pupil-journey/lesson/lesson-confetti-lavender.svg",
+    "v1734523381/pupil-journey/lesson/lesson-confetti-lavender.svg",
   "line-pink": "v1712912389/pupil-journey/line-pink.svg",
   "line-lavender": "v1712912348/pupil-journey/line-lavender.svg",
   "line-mint": "v1712912348/pupil-journey/line-lavender.svg",
