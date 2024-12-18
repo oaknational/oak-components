@@ -2,6 +2,7 @@ type VersionedSvgMap = { [key: string]: `v${string}.svg` };
 
 // the values of the icons object are the paths to the versioned images in the Cloudinary
 export const icons = {
+  // icons
   "question-mark": "v1706872277/icons/question-mark.svg",
   home: "v1699887218/icons/gvqxjxcw07ei2kkmwnes.svg",
   rocket: "v1699894015/icons/u26xm5hteot875ozfnk9.svg",
@@ -62,6 +63,9 @@ export const icons = {
   "move-arrows": "v1709052869/icons/hoddjsgpzkszgvnmn91q.svg",
   info: "v1709052869/icons/Icon_Info_vsx3xi.svg",
   play: "v1732099511/icons/g1xehzuhjnb0xeftmdno.svg",
+  "bookmark-outlined": "v1734519491/icons/bookmark-outlined_rxe5v0.svg",
+  "bookmark-filled": "v1734519491/icons/bookmark-filled_jz828n.svg",
+  // subject icons
   "subject-art": "v1706616347/subject-icons/art.svg",
   "subject-biology": "v1706616415/subject-icons/biology.svg",
   "subject-chemistry": "v1706616415/subject-icons/chemistry.svg",
@@ -138,14 +142,36 @@ export const icons = {
   "subject-understanding-the-world":
     "v1706616425/subject-icons/understanding-the-world.svg",
   swimming: "v1728649514/subject-icons/swimming.svg",
+  // homepage icons
   "homepage-robot-waving": "v1734523528/homepage/robot_waving_malpc3.svg",
   "homepage-three-pupils": "v1734523221/homepage/image-students_g0jtxe.svg",
   "homepage-teacher": "v1734523680/homepage/teacher-carrying-stuff_gab2ec.svg",
   "homepage-teacher-map": "v1734523721/homepage/teacher-reading-map_glwhyh.svg",
+  // teacher journey icons
   "audio-clip-large": "v1731950937/teacher-journey/audio_clip.svg",
   "audio-clip-small": "v1731951210/teacher-journey/audio_clip_small.svg",
-  "bookmark-outlined": "v1734519491/icons/bookmark-outlined_rxe5v0.svg",
-  "bookmark-filled": "v1734519491/icons/bookmark-filled_jz828n.svg",
+  // OWA UI Graphics
+  "box-border-bottom":
+    "v1734537219/OWA/ui-graphics/box-border-bottom_oa1riy.svg",
+  "box-border-left": "v1734537223/OWA/ui-graphics/box-border-left_eqgplm.svg",
+  "box-border-right": "v1734537228/OWA/ui-graphics/box-border-right_unznsm.svg",
+  "box-border-top": "v1734537228/OWA/ui-graphics/box-border-right_unznsm.svg",
+  "bubble-1": "v1734537172/OWA/ui-graphics/bubble-1_nhgg0w.svg",
+  "bubble-2": "v1734537180/OWA/ui-graphics/bubble-2_mfms6f.svg",
+  burst: "v1734537152/OWA/ui-graphics/burst_k0mkht.svg",
+  "header-underline": "v1734536947/OWA/ui-graphics/header-underline_ejbffz.svg",
+  "icon-background-square":
+    "v1734537276/OWA/ui-graphics/icon-background-square_qajipb.svg",
+  "looping-arrow-1": "v1734537133/OWA/ui-graphics/looping-arrow-1_zizllb.svg",
+  "looping-line-1": "v1734536929/OWA/ui-graphics/looping-line-1_krbrht.svg",
+  "looping-line-2": "v1734536933/OWA/ui-graphics/looping-line-2_sdinei.svg",
+  "looping-line-3": "v1734537015/OWA/ui-graphics/looping-line-3_b8dque.svg",
+  "looping-line-4": "v1734537039/OWA/ui-graphics/looping-line-4_xtjj4r.svg",
+  "speech-bubble": "v1734537300/OWA/ui-graphics/speech-bubble_magqjf.svg",
+  "tag-promotional": "v1734537244/OWA/ui-graphics/tag-promotional_v4p3oa.svg",
+  "tick-mark-happiness":
+    "v1734537080/OWA/ui-graphics/tick-mark-happiness_fyst07.svg",
+  "underline-1": "v1734537060/OWA/ui-graphics/underline-1_zaegqi.svg",
 } as const satisfies VersionedSvgMap;
 
 export type IconName = keyof typeof icons;
