@@ -145,7 +145,7 @@ export const icons = {
   "audio-clip-large": "v1731950937/teacher-journey/audio_clip.svg",
   "audio-clip-small": "v1731951210/teacher-journey/audio_clip_small.svg",
   "bookmark-outlined": "v1734519491/icons/bookmark-outlined_rxe5v0.svg",
-  "bookmark-filled": "v1734519491/icons/bookmark-outlined_rxe5v0.svg",
+  "bookmark-filled": "v1734519491/icons/bookmark-filled_jz828n.svg",
 } as const satisfies VersionedSvgMap;
 
 export type IconName = keyof typeof icons;
