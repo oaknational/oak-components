@@ -62,7 +62,7 @@ describe("getBackgroundUrlForSection", () => {
 
   it("should return the correct background image for subject-listing", () => {
     expect(getBackgroundUrlForSection("subject-listing")).toBe(
-      "svgs/v1712912348/pupil-journey/line-lavender.svg",
+      "svgs/v1715356384/pupil-journey/line-mint.svg",
     );
   });
 
