@@ -78,7 +78,6 @@ export const oakColorFilterTokens = {
     "brightness(0) saturate(100%) invert(57%) sepia(99%) saturate(395%) hue-rotate(330deg) brightness(102%) contrast(101%);",
   lemon:
     "invert(82%) sepia(25%) saturate(963%) hue-rotate(359deg) brightness(106%) contrast(101%)",
-  // @todo colour is off
   pink: "brightness(0) saturate(100%) invert(91%) sepia(5%) saturate(2279%) hue-rotate(278deg) brightness(89%) contrast(94%)",
   pink50:
     "brightness(0) saturate(100%) invert(95%) sepia(3%) saturate(1596%) hue-rotate(279deg) brightness(95%) contrast(87%)",
