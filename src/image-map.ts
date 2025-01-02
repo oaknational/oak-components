@@ -82,7 +82,7 @@ export const icons = {
   "subject-cooking-nutrition":
     "v1734523014/subject-icons/cooking-nutrition.svg",
   "subject-computing-non-gcse": "v1729171080/subject-icons/computing.svg",
-  "subject-creative-arts": "v1734523014/subject-icons/cooking-nutrition.svg",
+  "subject-creative-arts": "v1706616415/subject-icons/creative-arts.svg",
   "subject-design-technology":
     "v1706616417/subject-icons/design-technology.svg",
   "subject-drama": "v1706616417/subject-icons/drama.svg",
