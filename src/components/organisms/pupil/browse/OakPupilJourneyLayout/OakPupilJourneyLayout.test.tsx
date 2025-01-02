@@ -38,37 +38,37 @@ describe("OakPupilJourneyLayout", () => {
 describe("getBackgroundUrlForSection", () => {
   it("should return the correct background image for lesson-listing primary", () => {
     expect(getBackgroundUrlForSection("lesson-listing", "primary")).toBe(
-      "svgs/v1734522868/pupil-journey/confetti-pink.svg",
+      "https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1734522868/pupil-journey/confetti-pink.svg",
     );
   });
 
   it("should return the correct background image for lesson-listing secondary", () => {
     expect(getBackgroundUrlForSection("lesson-listing", "secondary")).toBe(
-      "svgs/v1734519662/pupil-journey/confetti-lavender.svg",
+      "https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1734519662/pupil-journey/confetti-lavender.svg",
     );
   });
 
   it("should return the correct background image for unit-listing primary", () => {
     expect(getBackgroundUrlForSection("unit-listing", "primary")).toBe(
-      "svgs/v1712912389/pupil-journey/line-pink.svg",
+      "https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1712912389/pupil-journey/line-pink.svg",
     );
   });
 
   it("should return the correct background image for unit-listing secondary", () => {
     expect(getBackgroundUrlForSection("unit-listing", "secondary")).toBe(
-      "svgs/v1712912348/pupil-journey/line-lavender.svg",
+      "https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1712912348/pupil-journey/line-lavender.svg",
     );
   });
 
   it("should return the correct background image for subject-listing", () => {
     expect(getBackgroundUrlForSection("subject-listing")).toBe(
-      "svgs/v1715356384/pupil-journey/line-mint.svg",
+      "https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1715356384/pupil-journey/line-mint.svg",
     );
   });
 
   it("should return the correct background image for year-listing", () => {
     expect(getBackgroundUrlForSection("year-listing")).toBe(
-      "svgs/v1734522739/pupil-journey/confetti-mint.svg",
+      "https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1734522739/pupil-journey/confetti-mint.svg",
     );
   });
 });
