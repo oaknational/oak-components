@@ -100,7 +100,7 @@ export function getBackgroundUrlForSection(
   sectionName: PupilJourneySectionName,
   phase?: Phase,
 ) {
-  const prefix = "svgs/";
+  const prefix = `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/`;
   switch (sectionName) {
     case "lesson-listing":
       return phase === "primary"
