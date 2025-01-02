@@ -11,7 +11,7 @@ exports[`OakBackLink matches snapshot 1`] = `
 }
 
 .c2 {
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .c0 {
