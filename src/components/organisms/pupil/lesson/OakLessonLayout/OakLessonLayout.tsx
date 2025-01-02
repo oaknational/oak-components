@@ -256,7 +256,7 @@ function getBackgroundUrlForLesson(
   phase: Phase,
   celebrate: boolean,
 ) {
-  const prefix = "svgs/";
+  const prefix = `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/`;
   switch (sectionName) {
     case "overview":
       return phase === "secondary"
