@@ -36,4 +36,6 @@ export type { OakTheme } from "./theme";
 export { oakFontTokens, oakFontSizeTokens } from "./typography";
 export type { OakFontToken, OakFontSizeToken } from "./typography";
 
+export { oakZIndexTokens } from "./zIndex";
+
 export { oakDefaultTheme } from "./default.theme";
