@@ -234,7 +234,7 @@ exports[`OakHomepageTabButton component matches snapshot 1`] = `
         loading="lazy"
         onError={[Function]}
         onLoad={[Function]}
-        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1725896980/homepage/robot_waving_malpc3.svg"
+        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1734523528/homepage/robot_waving_malpc3.svg"
         style={
           {
             "bottom": 0,
