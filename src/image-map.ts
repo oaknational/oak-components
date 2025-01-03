@@ -104,7 +104,7 @@ export const icons = {
   "subject-independent-living":
     "v1706616419/subject-icons/independent-living.svg",
   "subject-latin": "v1706616420/subject-icons/latin.svg",
-  "subject-literacy": "v1706616420/subject-icons/latin.svg",
+  "subject-literacy": "v1706616417/subject-icons/english.svg",
   "subject-maths": "v1706616421/subject-icons/maths.svg",
   "subject-music": "v1728570203/subject-icons/music-hollow.svg",
   "subject-numeracy": "v1706616422/subject-icons/numeracy.svg",

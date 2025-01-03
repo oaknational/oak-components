@@ -37,12 +37,16 @@ exports[`OakLessonTopNav matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c13 {
+.c14 {
   display: none;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c5 {
+  object-fit: cover;
+}
+
+.c9 {
   object-fit: contain;
 }
 
@@ -69,7 +73,7 @@ exports[`OakLessonTopNav matches snapshot 1`] = `
   flex-grow: none;
 }
 
-.c12 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -84,7 +88,7 @@ exports[`OakLessonTopNav matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c9 {
+.c10 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -95,7 +99,7 @@ exports[`OakLessonTopNav matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c10 {
+.c11 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
@@ -166,31 +170,31 @@ exports[`OakLessonTopNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c13 {
+  .c14 {
     display: block;
   }
 }
 
 @media (min-width:750px) {
-  .c9 {
+  .c10 {
     font-weight: 600;
   }
 }
 
 @media (min-width:750px) {
-  .c9 {
+  .c10 {
     font-size: 1.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c9 {
+  .c10 {
     line-height: 2rem;
   }
 }
 
 @media (min-width:750px) {
-  .c9 {
+  .c10 {
     -webkit-letter-spacing: 0.0115rem;
     -moz-letter-spacing: 0.0115rem;
     -ms-letter-spacing: 0.0115rem;
@@ -199,7 +203,7 @@ exports[`OakLessonTopNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c11 {
+  .c12 {
     display: none;
   }
 }
@@ -256,7 +260,7 @@ exports[`OakLessonTopNav matches snapshot 1`] = `
       >
         <img
           alt="intro"
-          className="c5"
+          className="c9"
           data-nimg="fill"
           decoding="async"
           loading="lazy"
@@ -285,21 +289,21 @@ exports[`OakLessonTopNav matches snapshot 1`] = `
     className="c0"
   >
     <h1
-      className="c9"
+      className="c10"
     >
       Intro
     </h1>
     <span
-      className="c10 c11"
+      className="c11 c12"
     >
       In progress&hellip;
     </span>
   </div>
   <div
-    className="c0 c12"
+    className="c0 c13"
   >
     <div
-      className="c13"
+      className="c14"
     />
   </div>
 </div>

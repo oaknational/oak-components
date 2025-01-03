@@ -74,7 +74,9 @@ const StyledFillImage = styled(Image)<StyledImageProps>`
   ${colorFilterStyle}
   ${clickStyles}
   ${placeholderStyles}
-  object-fit: contain;
+  ${(props) => css`
+    object-fit: ${props.$objectFit ? props.$objectFit : "contain"};
+  `}
 `;
 
 const StyledResponsiveImage = styled(Image)<StyledImageProps>`
@@ -113,6 +115,7 @@ export const OakImage = <C extends ElementType = typeof Image>({
     placeholder = "oak",
     unoptimized,
     imageProps,
+    $objectFit,
     onLoad,
     onError,
     ...rest
@@ -138,6 +141,7 @@ export const OakImage = <C extends ElementType = typeof Image>({
           unoptimized={unoptimized}
           onLoad={handleComplete(onLoad)}
           onError={handleComplete(onError)}
+          $objectFit={$objectFit}
           {...imageProps}
         />
       </OakBox>
