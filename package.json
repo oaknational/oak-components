@@ -24,7 +24,7 @@
     "build-storybook": "storybook build",
     "prepare": "husky install",
     "prepublishOnly": "./scripts/prepublish.sh",
-    "publish:local": "npm run build && yalc publish --no-scripts"
+    "publish:local": "npm run build && npx yalc publish --no-scripts"
   },
   "author": "",
   "peerDependencies": {
