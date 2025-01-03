@@ -83,6 +83,8 @@ export const oakColorFilterTokens = {
     "brightness(0) saturate(100%) invert(95%) sepia(3%) saturate(1596%) hue-rotate(279deg) brightness(95%) contrast(87%)",
   mint: "brightness(0) saturate(100%) invert(85%) sepia(7%) saturate(1206%) hue-rotate(70deg) brightness(110%) contrast(90%)",
   aqua: "brightness(0) saturate(100%) invert(100%) sepia(32%) saturate(3811%) hue-rotate(166deg) brightness(108%) contrast(77%)",
+  lavender:
+    "brightness(0) saturate(100%) invert(89%) sepia(20%) saturate(5630%) hue-rotate(186deg) brightness(95%) contrast(100%)",
 };
 
 export type OakColorFilterToken = keyof typeof oakColorFilterTokens;
