@@ -4,7 +4,7 @@ import { create } from "react-test-renderer";
 
 import { OakKbd } from "./OakKbd";
 
-import { OakThemeProvider } from "@/components/atoms";
+import { OakThemeProvider } from "@/components/atoms/OakThemeProvider";
 import { oakDefaultTheme } from "@/styles";
 
 describe(OakKbd, () => {

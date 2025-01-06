@@ -9,7 +9,7 @@ import {
 } from "./OakLessonInfoCard";
 
 import { OakFlex, OakP } from "@/components/atoms";
-import { OakPrimaryInvertedButton } from "@/components/molecules";
+import { OakPrimaryInvertedButton } from "@/components/molecules/OakPrimaryInvertedButton";
 
 const meta: Meta<typeof OakLessonInfoCard> = {
   component: OakLessonInfoCard,

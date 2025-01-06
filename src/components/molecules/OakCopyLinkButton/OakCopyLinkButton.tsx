@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { OakSmallSecondaryButton } from "@/components/molecules";
+import { OakSmallSecondaryButton } from "@/components/molecules/OakSmallSecondaryButton";
 import { OakBox } from "@/components/atoms";
 
 type OakCopyLinkButtonProps = {

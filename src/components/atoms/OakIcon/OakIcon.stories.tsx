@@ -3,7 +3,8 @@ import { Meta, StoryObj } from "@storybook/react";
 
 import { OakIcon, OakIconProps, oakIconNames } from "./OakIcon";
 
-import { OakFlex, OakTypography } from "@/components/atoms";
+import { OakFlex } from "@/components/atoms/OakFlex";
+import { OakTypography } from "@/components/atoms/OakTypography";
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 import { colorFilterArgTypes } from "@/storybook-helpers/colorFilterStyleHelpers";
 

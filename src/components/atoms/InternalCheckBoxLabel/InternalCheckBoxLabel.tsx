@@ -1,6 +1,6 @@
 import styled, { CSSProperties } from "styled-components";
 
-import { OakLabel, OakLabelProps } from "@/components/atoms";
+import { OakLabel, OakLabelProps } from "@/components/atoms/OakLabel";
 import { responsiveStyle } from "@/styles/utils/responsiveStyle";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { FlexStyleProps } from "@/styles/utils/flexStyle";

@@ -4,9 +4,9 @@ import React from "react";
 
 import {
   OakInlineBanner,
-  OakSecondaryLink,
   bannerTypes,
-} from "@/components/molecules";
+} from "@/components/molecules/OakInlineBanner";
+import { OakSecondaryLink } from "@/components/molecules/OakSecondaryLink";
 import { oakIconNames } from "@/components/atoms";
 
 const meta: Meta<typeof OakInlineBanner> = {

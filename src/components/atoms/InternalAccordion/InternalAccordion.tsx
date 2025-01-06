@@ -3,7 +3,8 @@ import styled from "styled-components";
 
 import useAccordionContext from "./useAccordionContext";
 
-import { OakBox, OakBoxProps, OakFlex, OakFlexProps } from "@/components/atoms";
+import { OakFlex, OakFlexProps } from "@/components/atoms/OakFlex";
+import { OakBox, OakBoxProps } from "@/components/atoms/OakBox";
 
 const FlexWithReset = styled(OakFlex)`
   font: inherit;

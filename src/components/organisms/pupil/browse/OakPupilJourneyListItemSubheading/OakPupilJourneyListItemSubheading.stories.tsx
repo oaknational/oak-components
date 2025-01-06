@@ -3,7 +3,7 @@ import { StoryObj, Meta } from "@storybook/react";
 
 import { OakPupilJourneyListItemSubheading } from "./OakPupilJourneyListItemSubheading";
 
-import { OakPupilJourneyListCounter } from "@/components/organisms";
+import { OakPupilJourneyListCounter } from "@/components/organisms/pupil/browse/OakPupilJourneyListCounter";
 
 const meta: Meta<typeof OakPupilJourneyListItemSubheading> = {
   component: OakPupilJourneyListItemSubheading,
