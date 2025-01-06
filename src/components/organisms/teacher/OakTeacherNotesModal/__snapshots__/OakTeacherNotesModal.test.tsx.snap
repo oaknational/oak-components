@@ -87,8 +87,8 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
 
 .c23 {
   overflow: auto;
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   border-top: 0rem solid;
   border-bottom: 0rem solid;
   border-color: #cacaca;
@@ -109,6 +109,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
 }
 
 .c29 {
+  overflow-y: scroll;
   height: 7.5rem;
   min-height: 4.5rem;
   padding: 0.75rem;
@@ -119,7 +120,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c35 {
+.c37 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -128,12 +129,30 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c48 {
+.c42 {
+  display: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c46 {
+  width: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c53 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
   height: 1.5rem;
   min-height: 1.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c55 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -143,7 +162,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   object-fit: contain;
 }
 
-.c49 {
+.c54 {
   -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   object-fit: contain;
@@ -243,33 +262,19 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   align-self: stretch;
 }
 
-.c31 {
+.c35 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-}
-
-.c33 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   gap: 0.5rem;
 }
 
-.c38 {
+.c40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -288,42 +293,76 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c40 {
+.c43 {
+  display: none;
+}
+
+.c47 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.c56 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
 }
 
-.c41 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex: 2;
-  -webkit-flex-grow: 2;
-  -ms-flex-positive: 2;
-  flex-grow: 2;
-  gap: 0.25rem;
+.c31 {
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  width: 100%;
 }
 
-.c42 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 1rem;
+.c32 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  grid-column: span 5;
+  grid-row: span undefined;
+  grid-row: span 1;
+}
+
+.c34 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  grid-column: span 7;
+  grid-row: span undefined;
+  grid-row: span 1;
+}
+
+.c44 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  grid-column: span 0;
+  grid-row: span undefined;
+  grid-row: span 1;
+}
+
+.c45 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  grid-column: span 12;
+  grid-row: span undefined;
+  grid-row: span 1;
 }
 
 .c26 {
@@ -348,7 +387,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c39 {
+.c41 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 700;
   font-size: 0.875rem;
@@ -360,7 +399,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   text-align: left;
 }
 
-.c32 {
+.c33 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
@@ -390,7 +429,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   cursor: default;
 }
 
-.c36 {
+.c38 {
   background: none;
   color: inherit;
   border: none;
@@ -412,12 +451,12 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   border-radius: 0.25rem;
 }
 
-.c36:disabled {
+.c38:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c44 {
+.c49 {
   background: none;
   color: inherit;
   border: none;
@@ -439,12 +478,12 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   border-radius: 0.25rem;
 }
 
-.c44:disabled {
+.c49:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c46 {
+.c51 {
   background: none;
   color: inherit;
   border: none;
@@ -466,7 +505,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   border-radius: 0.25rem;
 }
 
-.c46:disabled {
+.c51:disabled {
   pointer-events: none;
   cursor: default;
 }
@@ -535,14 +574,14 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   transition: opacity 0s;
 }
 
-.c37 {
+.c39 {
   position: relative;
   width: 100%;
   height: 100%;
   display: inline-block;
 }
 
-.c37:hover {
+.c39:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #222222;
@@ -550,26 +589,26 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   border-color: #222222;
 }
 
-.c37:active {
+.c39:active {
   background: #ffffff;
   border-color: #222222;
   color: #222222;
 }
 
-.c37:disabled {
+.c39:disabled {
   background: #e4e4e4;
   border-color: #808080;
   color: #808080;
 }
 
-.c45 {
+.c50 {
   position: relative;
   width: 100%;
   height: 100%;
   display: inline-block;
 }
 
-.c45:hover {
+.c50:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #222222;
@@ -577,26 +616,26 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   border-color: #ffffff;
 }
 
-.c45:active {
+.c50:active {
   background: #ffffff;
   border-color: #ffffff;
   color: #222222;
 }
 
-.c45:disabled {
+.c50:disabled {
   background: #ffffff;
   border-color: #ffffff;
   color: #808080;
 }
 
-.c47 {
+.c52 {
   position: relative;
   width: 100%;
   height: 100%;
   display: inline-block;
 }
 
-.c47:hover {
+.c52:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #ffffff;
@@ -604,66 +643,135 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   border-color: #575757;
 }
 
-.c47:active {
+.c52:active {
   background: #222222;
   border-color: #222222;
   color: #ffffff;
 }
 
-.c47:disabled {
+.c52:disabled {
   background: #808080;
   border-color: #808080;
   color: #ffffff;
 }
 
-.c34 .grey-shadow:has(+ * + .internal-button:focus-visible) {
+.c36 .grey-shadow:has(+ * + .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c34 .yellow-shadow:has(+ .internal-button:focus-visible) {
+.c36 .yellow-shadow:has(+ .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
 }
 
-.c34 .yellow-shadow:has(+ .internal-button:hover),
-.c34 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
+.c36 .yellow-shadow:has(+ .internal-button:hover),
+.c36 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c34 .grey-shadow:has(+ * + .internal-button:hover) {
+.c36 .grey-shadow:has(+ * + .internal-button:hover) {
   box-shadow: none;
 }
 
-.c34 .grey-shadow:has(+ * + .internal-button:active) {
+.c36 .grey-shadow:has(+ * + .internal-button:active) {
   box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c34 .yellow-shadow:has(+ .internal-button:active) {
+.c36 .yellow-shadow:has(+ .internal-button:active) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c43 .grey-shadow:has(+ * + .internal-button:focus-visible) {
+.c48 .grey-shadow:has(+ * + .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c43 .yellow-shadow:has(+ .internal-button:focus-visible) {
+.c48 .yellow-shadow:has(+ .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
 }
 
-.c43 .yellow-shadow:has(+ .internal-button:hover),
-.c43 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
+.c48 .yellow-shadow:has(+ .internal-button:hover),
+.c48 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
   box-shadow: none;
 }
 
-.c43 .grey-shadow:has(+ * + .internal-button:hover) {
+.c48 .grey-shadow:has(+ * + .internal-button:hover) {
   box-shadow: none;
 }
 
-.c43 .grey-shadow:has(+ * + .internal-button:active) {
+.c48 .grey-shadow:has(+ * + .internal-button:active) {
   box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c43 .yellow-shadow:has(+ .internal-button:active) {
+.c48 .yellow-shadow:has(+ .internal-button:active) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+@media (min-width:750px) {
+  .c23 {
+    padding-left: 2rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c23 {
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c42 {
+    display: block;
+  }
+}
+
+@media (min-width:750px) {
+  .c55 {
+    display: none;
+  }
+}
+
+@media (min-width:750px) {
+  .c43 {
+    display: block;
+  }
+}
+
+@media (min-width:750px) {
+  .c47 {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width:750px) {
+  .c56 {
+    display: none;
+  }
+}
+
+@media (min-width:750px) {
+  .c32 {
+    grid-column: span 6;
+  }
+}
+
+@media (min-width:750px) {
+  .c34 {
+    grid-column: span 6;
+  }
+}
+
+@media (min-width:750px) {
+  .c44 {
+    grid-column: span 6;
+  }
+}
+
+@media (min-width:750px) {
+  .c45 {
+    grid-column: span 6;
+  }
 }
 
 <div
@@ -806,67 +914,170 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
                 <div
                   className="c16 c31"
                 >
-                  <p
-                    className="c32"
-                  >
-                    You have 
-                    <b>
-                      100
-                    </b>
-                     characters remaining
-                  </p>
                   <div
-                    className="c16 c33"
+                    className="c16 c12 c32"
+                  >
+                    <p
+                      className="c33"
+                    >
+                      You have 
+                      <b>
+                        100
+                      </b>
+                       characters remaining
+                    </p>
+                  </div>
+                  <div
+                    className="c16 c12 c34"
                   >
                     <div
-                      className="c11 c34"
+                      className="c16 c35"
                     >
                       <div
-                        className="c35 grey-shadow"
+                        className="c11 c36"
+                      >
+                        <div
+                          className="c37 grey-shadow"
+                        />
+                        <div
+                          className="c37 yellow-shadow"
+                        />
+                        <button
+                          className="c38 c39 internal-button"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          <div
+                            className="c16 c40"
+                          >
+                            <span
+                              className="c41"
+                            >
+                              Bold
+                            </span>
+                          </div>
+                        </button>
+                      </div>
+                      <div
+                        className="c11 c36"
+                      >
+                        <div
+                          className="c37 grey-shadow"
+                        />
+                        <div
+                          className="c37 yellow-shadow"
+                        />
+                        <button
+                          className="c38 c39 internal-button"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          <div
+                            className="c16 c40"
+                          >
+                            <span
+                              className="c41"
+                            >
+                              Bullet List
+                            </span>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="c16 c31"
+              >
+                <div
+                  className="c42 c43 c44"
+                />
+                <div
+                  className="c16 c12 c45"
+                >
+                  <div
+                    className="c46 c47"
+                  >
+                    <div
+                      className="c11 c48"
+                    >
+                      <div
+                        className="c37 grey-shadow"
                       />
                       <div
-                        className="c35 yellow-shadow"
+                        className="c37 yellow-shadow"
                       />
                       <button
-                        className="c36 c37 internal-button"
+                        className="c49 c50 internal-button"
                         onClick={[Function]}
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
                       >
                         <div
-                          className="c16 c38"
+                          className="c16 c40"
                         >
                           <span
-                            className="c39"
+                            className="c41"
                           >
-                            Bold
+                            Save note for later
                           </span>
                         </div>
                       </button>
                     </div>
                     <div
-                      className="c11 c34"
+                      className="c11 c36"
                     >
                       <div
-                        className="c35 grey-shadow"
+                        className="c37 grey-shadow"
                       />
                       <div
-                        className="c35 yellow-shadow"
+                        className="c37 yellow-shadow"
                       />
                       <button
-                        className="c36 c37 internal-button"
+                        className="c51 c52 internal-button"
                         onClick={[Function]}
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
                       >
                         <div
-                          className="c16 c38"
+                          className="c16 c40"
                         >
                           <span
-                            className="c39"
+                            className="c41"
                           >
-                            Bullet List
+                            Share link
                           </span>
+                          <div
+                            className="c53"
+                          >
+                            <img
+                              alt="copy"
+                              className="c54"
+                              data-nimg="fill"
+                              decoding="async"
+                              loading="lazy"
+                              onError={[Function]}
+                              onLoad={[Function]}
+                              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1727861316/icons/Icon_Copy_qxgynv.svg"
+                              style={
+                                {
+                                  "bottom": 0,
+                                  "color": "transparent",
+                                  "height": "100%",
+                                  "left": 0,
+                                  "objectFit": undefined,
+                                  "objectPosition": undefined,
+                                  "position": "absolute",
+                                  "right": 0,
+                                  "top": 0,
+                                  "width": "100%",
+                                }
+                              }
+                            />
+                          </div>
                         </div>
                       </button>
                     </div>
@@ -874,96 +1085,8 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
                 </div>
               </div>
               <div
-                className="c16 c40"
-              >
-                <div
-                  className="c16 c41"
-                />
-                <div
-                  className="c16 c42"
-                >
-                  <div
-                    className="c11 c43"
-                  >
-                    <div
-                      className="c35 grey-shadow"
-                    />
-                    <div
-                      className="c35 yellow-shadow"
-                    />
-                    <button
-                      className="c44 c45 internal-button"
-                      onClick={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                    >
-                      <div
-                        className="c16 c38"
-                      >
-                        <span
-                          className="c39"
-                        >
-                          Save note for later
-                        </span>
-                      </div>
-                    </button>
-                  </div>
-                  <div
-                    className="c11 c34"
-                  >
-                    <div
-                      className="c35 grey-shadow"
-                    />
-                    <div
-                      className="c35 yellow-shadow"
-                    />
-                    <button
-                      className="c46 c47 internal-button"
-                      onClick={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                    >
-                      <div
-                        className="c16 c38"
-                      >
-                        <span
-                          className="c39"
-                        >
-                          Share link
-                        </span>
-                        <div
-                          className="c48"
-                        >
-                          <img
-                            alt="copy"
-                            className="c49"
-                            data-nimg="fill"
-                            decoding="async"
-                            loading="lazy"
-                            onError={[Function]}
-                            onLoad={[Function]}
-                            src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1727861316/icons/Icon_Copy_qxgynv.svg"
-                            style={
-                              {
-                                "bottom": 0,
-                                "color": "transparent",
-                                "height": "100%",
-                                "left": 0,
-                                "objectFit": undefined,
-                                "objectPosition": undefined,
-                                "position": "absolute",
-                                "right": 0,
-                                "top": 0,
-                                "width": "100%",
-                              }
-                            }
-                          />
-                        </div>
-                      </div>
-                    </button>
-                  </div>
-                </div>
-              </div>
+                className="c55 c56"
+              />
             </div>
           </div>
         </div>

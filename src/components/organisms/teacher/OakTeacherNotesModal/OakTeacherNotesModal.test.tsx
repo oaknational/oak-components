@@ -67,17 +67,17 @@ describe("OakTeacherNotesModal", () => {
   });
 
   it("displays 'Link copied to clipboard' when noteShared is true", () => {
-    renderWithTheme(
+    const { getAllByText } = renderWithTheme(
       <OakTeacherNotesModal {...defaultProps} noteShared={true} />,
     );
-    expect(screen.getByText("Link copied to clipboard")).toBeInTheDocument();
+    expect(getAllByText("Link copied to clipboard")).toHaveLength(2);
   });
 
   it("displays 'Teacher note saved' when noteSaved is true", () => {
-    renderWithTheme(
+    const { getAllByText } = renderWithTheme(
       <OakTeacherNotesModal {...defaultProps} noteSaved={true} />,
     );
-    expect(screen.getByText("Teacher note saved")).toBeInTheDocument();
+    expect(getAllByText("Teacher note saved")).toHaveLength(2);
   });
 
   it("calls onBoldClick when the Bold button is clicked", () => {
