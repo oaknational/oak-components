@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import { OakBox, OakBoxProps, OakIcon } from "@/components/atoms";
+import { OakBox, OakBoxProps } from "@/components/atoms/OakBox";
+import { OakIcon } from "@/components/atoms/OakIcon";
 import { OakAllSpacingToken, OakInnerPaddingToken } from "@/styles";
 import { ResponsiveValues } from "@/styles/utils/responsiveStyle";
 

@@ -5,7 +5,7 @@ import { create } from "react-test-renderer";
 import { InternalCheckBoxWrapper } from "./InternalCheckBoxWrapper";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { OakThemeProvider } from "@/components/atoms";
+import { OakThemeProvider } from "@/components/atoms/OakThemeProvider";
 import { oakDefaultTheme } from "@/styles";
 
 describe("InternalCheckBoxWrapper", () => {
