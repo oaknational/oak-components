@@ -19,6 +19,7 @@ const meta: Meta<typeof OakTeacherNotesModal> = {
     noteShared: {
       type: "boolean",
     },
+    remainingCharacters: { type: "number" },
   },
   parameters: {
     controls: {
@@ -48,5 +49,6 @@ export const Default: Story = {
     isOpen: false,
     noteSaved: false,
     noteShared: false,
+    remainingCharacters: 100,
   },
 };

@@ -1,12 +1,12 @@
 import React from "react";
 
 import {
-  OakLink,
   OakModalCenter,
-  OakPrimaryButton,
-  OakSecondaryButton,
+  OakPrimaryInvertedButton,
+  OakSmallPrimaryButton,
+  OakSmallSecondaryButton,
 } from "@/components/molecules";
-import { OakFlex, OakHeading, OakP } from "@/components/atoms";
+import { OakFlex, OakHeading, OakIcon, OakP } from "@/components/atoms";
 
 type EditorContainerProps = {
   editorNode: React.ReactNode;
@@ -32,9 +32,9 @@ const EditorContainer = ({
       $gap={"space-between-xs"}
     >
       <OakFlex
-        $pa={"inner-padding-l"}
+        $pa={"inner-padding-s"}
         $background={"bg-primary"}
-        $height={"all-spacing-18"}
+        $height={"all-spacing-16"}
         $minHeight={"all-spacing-12"}
         $borderRadius={"border-radius-s"}
         $borderColor={"border-primary"}
@@ -48,14 +48,16 @@ const EditorContainer = ({
         $justifyContent={"space-between"}
         $alignSelf={"stretch"}
       >
-        <OakP>
+        <OakP $font={"body-3"}>
           You have <b>{remainingCharacters}</b> characters remaining
         </OakP>
         <OakFlex $gap={"space-between-ssx"}>
-          <OakSecondaryButton onClick={onBoldClick}>Bold</OakSecondaryButton>
-          <OakSecondaryButton onClick={onBulletListClick}>
+          <OakSmallSecondaryButton onClick={onBoldClick}>
+            Bold
+          </OakSmallSecondaryButton>
+          <OakSmallSecondaryButton onClick={onBulletListClick}>
             Bullet List
-          </OakSecondaryButton>
+          </OakSmallSecondaryButton>
         </OakFlex>
       </OakFlex>
     </OakFlex>
@@ -80,41 +82,63 @@ export const OakTeacherNotesModal = ({
   noteShared,
   ...rest
 }: OakTeacherNotesModalProps) => {
+  let message = undefined;
+  if (noteSaved) {
+    message = "Teacher note saved";
+  } else if (noteShared) {
+    message = "Link copied to clipboard";
+  }
+
   return (
     <OakModalCenter isOpen={isOpen} onClose={onClose}>
       <OakFlex
         $flexDirection="column"
         $alignItems="center"
-        $pb="inner-padding-xl5"
-        $gap="space-between-m2"
+        $pb="inner-padding-xl"
+        $gap="space-between-m"
       >
-        <OakFlex
-          $flexDirection={"column"}
-          $gap="space-between-s"
-          $alignItems={"center"}
-        >
-          <OakHeading tag="h1" $font={"heading-5"}>
-            Add note about the lesson and share
-          </OakHeading>
-          <OakHeading tag="h2" $font={"body-2"}>
-            You can add a note that will be displayed when the copied link is
-            opened.
-          </OakHeading>
-        </OakFlex>
+        <OakHeading tag="h1" $font={"body-3-bold"}>
+          You can add a note to the link that will appear when it's opened, and
+          share it easily.
+        </OakHeading>
+
         <EditorContainer {...rest} />
-        <OakFlex
-          $flexDirection={"column"}
-          $gap="space-between-m"
-          $alignItems={"center"}
-        >
-          <OakPrimaryButton onClick={onShareClicked}>
-            Share link
-          </OakPrimaryButton>
-          {noteShared && "Link copied to clipboard"}
-          <OakLink onClick={onSaveClicked} element="button">
-            Save note for later
-          </OakLink>
-          {noteSaved && "Teacher note saved"}
+        <OakFlex $justifyContent={"space-between"} $alignSelf={"stretch"}>
+          <OakFlex
+            $flexGrow={2}
+            $gap={"space-between-sssx"}
+            $alignItems={"center"}
+          >
+            {message && (
+              <>
+                <OakIcon
+                  iconName={"tick"}
+                  $colorFilter={"text-success"}
+                  $width={"all-spacing-5"}
+                  $height={"all-spacing-5"}
+                />
+                <OakHeading
+                  tag="h2"
+                  $font={"body-3-bold"}
+                  $color={"text-success"}
+                >
+                  {message}
+                </OakHeading>
+              </>
+            )}
+          </OakFlex>
+          <OakFlex $gap="space-between-s">
+            <OakPrimaryInvertedButton onClick={onSaveClicked}>
+              Save note for later
+            </OakPrimaryInvertedButton>
+            <OakSmallPrimaryButton
+              onClick={onShareClicked}
+              iconName="copy"
+              isTrailingIcon
+            >
+              Share link
+            </OakSmallPrimaryButton>
+          </OakFlex>
         </OakFlex>
       </OakFlex>
     </OakModalCenter>
