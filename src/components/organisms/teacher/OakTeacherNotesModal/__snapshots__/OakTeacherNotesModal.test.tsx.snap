@@ -1,0 +1,989 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakTeacherNotesModal matches snapshot 1`] = `
+.c0 {
+  position: fixed;
+  inset: 0rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+  z-index: 300;
+}
+
+.c3 {
+  position: fixed;
+  inset: 0rem;
+  background: #22222240;
+  font-family: --var(google-font),Lexend,sans-serif;
+  z-index: -1;
+}
+
+.c5 {
+  width: 100%;
+  max-width: 60rem;
+  padding: 1.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c7 {
+  position: relative;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 1rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c9 {
+  position: relative;
+  min-height: 3.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c10 {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c11 {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c16 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c18 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  color: transparent;
+  background: transparent;
+  border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c19 {
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c20 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c23 {
+  overflow: auto;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  border-top: 0rem solid;
+  border-bottom: 0rem solid;
+  border-color: #cacaca;
+  font-family: --var(google-font),Lexend,sans-serif;
+  overflow: auto;
+}
+
+.c24 {
+  padding-bottom: 1.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c27 {
+  padding: 0.75rem;
+  background: #f2f2f2;
+  border-radius: 0.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c29 {
+  height: 7.5rem;
+  min-height: 4.5rem;
+  padding: 0.75rem;
+  background: #ffffff;
+  border: 0.125rem solid;
+  border-color: #222222;
+  border-radius: 0.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c35 {
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c48 {
+  position: relative;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  min-height: 1.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c21 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  object-fit: contain;
+}
+
+.c49 {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  object-fit: contain;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0rem;
+}
+
+.c25 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.c28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  gap: 0.75rem;
+}
+
+.c30 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.c31 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.c33 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.c38 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.c40 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.c41 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
+  gap: 0.25rem;
+}
+
+.c42 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.c26 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c22 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c39 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+  text-align: left;
+}
+
+.c32 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c14 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+  color: transparent;
+}
+
+.c14:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c36 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+  color: #222222;
+  background: #ffffff;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  border: 0.125rem solid;
+  border-color: #222222;
+  border-radius: 0.25rem;
+}
+
+.c36:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c44 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+  color: #222222;
+  background: #ffffff;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  border: 0.125rem solid;
+  border-color: #ffffff;
+  border-radius: 0.25rem;
+}
+
+.c44:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c46 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+  color: #ffffff;
+  background: #222222;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  border: 0.125rem solid;
+  border-color: #222222;
+  border-radius: 0.25rem;
+}
+
+.c46:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c15 {
+  display: inline-block;
+  position: relative;
+}
+
+.c15:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: transparent;
+}
+
+.c15:hover:not(:active) [data-icon-for="button"] img {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+}
+
+.c15:active {
+  color: transparent;
+}
+
+.c15:disabled {
+  color: transparent;
+}
+
+.c13 > :first-child:focus-visible .shadow {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c13 > :first-child:hover .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c13 > :first-child:active .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+}
+
+.c13 > :first-child:disabled .icon-container {
+  background: transparent;
+}
+
+.c13 > :first-child:hover .icon-container {
+  background: #222222;
+}
+
+.c13 > :first-child:active .icon-container {
+  background: transparent;
+}
+
+.c6 {
+  width: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c4 {
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+
+.c2 {
+  opacity: 1;
+  -webkit-transition: opacity 0s;
+  transition: opacity 0s;
+}
+
+.c37 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.c37:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: #222222;
+  background: #f2f2f2;
+  border-color: #222222;
+}
+
+.c37:active {
+  background: #ffffff;
+  border-color: #222222;
+  color: #222222;
+}
+
+.c37:disabled {
+  background: #e4e4e4;
+  border-color: #808080;
+  color: #808080;
+}
+
+.c45 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.c45:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: #222222;
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+.c45:active {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #222222;
+}
+
+.c45:disabled {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #808080;
+}
+
+.c47 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.c47:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: #ffffff;
+  background: #575757;
+  border-color: #575757;
+}
+
+.c47:active {
+  background: #222222;
+  border-color: #222222;
+  color: #ffffff;
+}
+
+.c47:disabled {
+  background: #808080;
+  border-color: #808080;
+  color: #ffffff;
+}
+
+.c34 .grey-shadow:has(+ * + .internal-button:focus-visible) {
+  box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c34 .yellow-shadow:has(+ .internal-button:focus-visible) {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
+}
+
+.c34 .yellow-shadow:has(+ .internal-button:hover),
+.c34 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c34 .grey-shadow:has(+ * + .internal-button:hover) {
+  box-shadow: none;
+}
+
+.c34 .grey-shadow:has(+ * + .internal-button:active) {
+  box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+}
+
+.c34 .yellow-shadow:has(+ .internal-button:active) {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c43 .grey-shadow:has(+ * + .internal-button:focus-visible) {
+  box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c43 .yellow-shadow:has(+ .internal-button:focus-visible) {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
+}
+
+.c43 .yellow-shadow:has(+ .internal-button:hover),
+.c43 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
+  box-shadow: none;
+}
+
+.c43 .grey-shadow:has(+ * + .internal-button:hover) {
+  box-shadow: none;
+}
+
+.c43 .grey-shadow:has(+ * + .internal-button:active) {
+  box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+}
+
+.c43 .yellow-shadow:has(+ .internal-button:active) {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+<div
+  className="c0 c1 c2"
+>
+  <div
+    className="c3 c4"
+    data-testid="backdrop"
+  />
+  <div
+    className="c5 c1"
+  >
+    <div
+      data-focus-guard={true}
+      style={
+        {
+          "height": "0px",
+          "left": "1px",
+          "overflow": "hidden",
+          "padding": 0,
+          "position": "fixed",
+          "top": "1px",
+          "width": "1px",
+        }
+      }
+      tabIndex={-1}
+    />
+    <div
+      className="c6"
+      data-focus-lock-disabled="disabled"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onScrollCapture={[Function]}
+      onTouchMoveCapture={[Function]}
+      onWheelCapture={[Function]}
+    >
+      <div
+        className="c7 c8"
+        role="alertdialog"
+        style={
+          {
+            "maxHeight": "calc(100vh - 3.5rem - 3.5rem)",
+          }
+        }
+      >
+        <div
+          className="c9"
+        >
+          <div
+            className="c10"
+          >
+            <div
+              className="c11 c12 c13"
+            >
+              <button
+                aria-label="Close Modal"
+                className="c14 c15"
+                data-testid="close-button"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+              >
+                <div
+                  className="c16 c17"
+                >
+                  <div
+                    className="c18 c1 icon-container"
+                  >
+                    <div
+                      className="c19 shadow"
+                    />
+                    <div
+                      className="c20"
+                      data-icon-for="button"
+                    >
+                      <img
+                        alt="cross"
+                        className="c21"
+                        data-nimg="fill"
+                        decoding="async"
+                        loading="lazy"
+                        onError={[Function]}
+                        onLoad={[Function]}
+                        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
+                        style={
+                          {
+                            "bottom": 0,
+                            "color": "transparent",
+                            "height": "100%",
+                            "left": 0,
+                            "objectFit": undefined,
+                            "objectPosition": undefined,
+                            "position": "absolute",
+                            "right": 0,
+                            "top": 0,
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                  <span
+                    className="c22"
+                  />
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          data-autofocus-inside={true}
+          style={
+            {
+              "display": "contents",
+            }
+          }
+        >
+          <div
+            className="c23 c8"
+            data-testid="modal-main-content"
+          >
+            <div
+              className="c24 c25"
+            >
+              <h1
+                className="c26"
+              >
+                You can add a note to the link that will appear when it's opened, and share it easily.
+              </h1>
+              <div
+                className="c27 c28"
+              >
+                <div
+                  className="c29 c30"
+                >
+                  <div>
+                    Editor
+                  </div>
+                </div>
+                <div
+                  className="c16 c31"
+                >
+                  <p
+                    className="c32"
+                  >
+                    You have 
+                    <b>
+                      100
+                    </b>
+                     characters remaining
+                  </p>
+                  <div
+                    className="c16 c33"
+                  >
+                    <div
+                      className="c11 c34"
+                    >
+                      <div
+                        className="c35 grey-shadow"
+                      />
+                      <div
+                        className="c35 yellow-shadow"
+                      />
+                      <button
+                        className="c36 c37 internal-button"
+                        onClick={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                      >
+                        <div
+                          className="c16 c38"
+                        >
+                          <span
+                            className="c39"
+                          >
+                            Bold
+                          </span>
+                        </div>
+                      </button>
+                    </div>
+                    <div
+                      className="c11 c34"
+                    >
+                      <div
+                        className="c35 grey-shadow"
+                      />
+                      <div
+                        className="c35 yellow-shadow"
+                      />
+                      <button
+                        className="c36 c37 internal-button"
+                        onClick={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                      >
+                        <div
+                          className="c16 c38"
+                        >
+                          <span
+                            className="c39"
+                          >
+                            Bullet List
+                          </span>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="c16 c40"
+              >
+                <div
+                  className="c16 c41"
+                />
+                <div
+                  className="c16 c42"
+                >
+                  <div
+                    className="c11 c43"
+                  >
+                    <div
+                      className="c35 grey-shadow"
+                    />
+                    <div
+                      className="c35 yellow-shadow"
+                    />
+                    <button
+                      className="c44 c45 internal-button"
+                      onClick={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                    >
+                      <div
+                        className="c16 c38"
+                      >
+                        <span
+                          className="c39"
+                        >
+                          Save note for later
+                        </span>
+                      </div>
+                    </button>
+                  </div>
+                  <div
+                    className="c11 c34"
+                  >
+                    <div
+                      className="c35 grey-shadow"
+                    />
+                    <div
+                      className="c35 yellow-shadow"
+                    />
+                    <button
+                      className="c46 c47 internal-button"
+                      onClick={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                    >
+                      <div
+                        className="c16 c38"
+                      >
+                        <span
+                          className="c39"
+                        >
+                          Share link
+                        </span>
+                        <div
+                          className="c48"
+                        >
+                          <img
+                            alt="copy"
+                            className="c49"
+                            data-nimg="fill"
+                            decoding="async"
+                            loading="lazy"
+                            onError={[Function]}
+                            onLoad={[Function]}
+                            src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1727861316/icons/Icon_Copy_qxgynv.svg"
+                            style={
+                              {
+                                "bottom": 0,
+                                "color": "transparent",
+                                "height": "100%",
+                                "left": 0,
+                                "objectFit": undefined,
+                                "objectPosition": undefined,
+                                "position": "absolute",
+                                "right": 0,
+                                "top": 0,
+                                "width": "100%",
+                              }
+                            }
+                          />
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      data-focus-guard={true}
+      style={
+        {
+          "height": "0px",
+          "left": "1px",
+          "overflow": "hidden",
+          "padding": 0,
+          "position": "fixed",
+          "top": "1px",
+          "width": "1px",
+        }
+      }
+      tabIndex={-1}
+    />
+  </div>
+</div>
+`;

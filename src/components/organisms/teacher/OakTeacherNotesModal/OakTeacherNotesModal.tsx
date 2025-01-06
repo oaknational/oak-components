@@ -2,8 +2,8 @@ import React from "react";
 
 import {
   OakModalCenter,
-  OakPrimaryInvertedButton,
   OakSmallPrimaryButton,
+  OakSmallPrimaryInvertedButton,
   OakSmallSecondaryButton,
 } from "@/components/molecules";
 import { OakFlex, OakHeading, OakIcon, OakP } from "@/components/atoms";
@@ -128,9 +128,9 @@ export const OakTeacherNotesModal = ({
             )}
           </OakFlex>
           <OakFlex $gap="space-between-s">
-            <OakPrimaryInvertedButton onClick={onSaveClicked}>
+            <OakSmallPrimaryInvertedButton onClick={onSaveClicked}>
               Save note for later
-            </OakPrimaryInvertedButton>
+            </OakSmallPrimaryInvertedButton>
             <OakSmallPrimaryButton
               onClick={onShareClicked}
               iconName="copy"

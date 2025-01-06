@@ -1,10 +1,13 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { screen, fireEvent } from "@testing-library/react";
+import { create } from "react-test-renderer";
 
 import { OakTeacherNotesModal } from "./OakTeacherNotesModal";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
+import { OakThemeProvider } from "@/components/atoms";
+import { oakDefaultTheme } from "@/styles";
 
 describe("OakTeacherNotesModal", () => {
   const defaultProps = {
@@ -20,16 +23,23 @@ describe("OakTeacherNotesModal", () => {
     remainingCharacters: 100,
   };
 
+  it("matches snapshot", () => {
+    const tree = create(
+      <OakThemeProvider theme={oakDefaultTheme}>
+        <OakTeacherNotesModal {...defaultProps} />
+      </OakThemeProvider>,
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
   it("renders correctly when open", () => {
     const { getByText } = renderWithTheme(
       <OakTeacherNotesModal {...defaultProps} />,
     );
-    expect(
-      getByText("Add note about the lesson and share"),
-    ).toBeInTheDocument();
+
     expect(
       getByText(
-        "You can add a note that will be displayed when the copied link is opened.",
+        "You can add a note to the link that will appear when it's opened, and share it easily.",
       ),
     ).toBeInTheDocument();
     expect(getByText("Editor")).toBeInTheDocument();
