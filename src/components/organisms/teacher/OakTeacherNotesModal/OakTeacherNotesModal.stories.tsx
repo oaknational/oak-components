@@ -38,10 +38,23 @@ export const Default: Story = {
     const onClose = () => updateArgs({ isOpen: false });
     const onOpen = () => updateArgs({ isOpen: true });
 
+    const editorNode = (
+      <div>
+        Thank you for covering my class tomorrow. The lesson is based on this
+        Oak lesson, but I’d like you to adapt it to suit the needs of the
+        pupils. There are mixed abilities, though most should engage well with
+        the tasks.
+      </div>
+    );
+
     return (
       <>
         <OakSecondaryButton onClick={onOpen}>Open modal</OakSecondaryButton>
-        <OakTeacherNotesModal {...args} onClose={onClose} />
+        <OakTeacherNotesModal
+          {...args}
+          onClose={onClose}
+          editorNode={editorNode}
+        />
       </>
     );
   },

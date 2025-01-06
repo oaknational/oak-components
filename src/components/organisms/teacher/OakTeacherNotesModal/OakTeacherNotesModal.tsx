@@ -6,7 +6,14 @@ import {
   OakSmallPrimaryInvertedButton,
   OakSmallSecondaryButton,
 } from "@/components/molecules";
-import { OakFlex, OakHeading, OakIcon, OakP } from "@/components/atoms";
+import {
+  OakFlex,
+  OakGrid,
+  OakGridArea,
+  OakHeading,
+  OakIcon,
+  OakP,
+} from "@/components/atoms";
 
 type EditorContainerProps = {
   editorNode: React.ReactNode;
@@ -40,26 +47,27 @@ const EditorContainer = ({
         $borderColor={"border-primary"}
         $ba={"border-solid-m"}
         $alignSelf={"stretch"}
+        $overflowY="scroll"
       >
         {editorNode}
       </OakFlex>
-      <OakFlex
-        $alignItems={"center"}
-        $justifyContent={"space-between"}
-        $alignSelf={"stretch"}
-      >
-        <OakP $font={"body-3"}>
-          You have <b>{remainingCharacters}</b> characters remaining
-        </OakP>
-        <OakFlex $gap={"space-between-ssx"}>
-          <OakSmallSecondaryButton onClick={onBoldClick}>
-            Bold
-          </OakSmallSecondaryButton>
-          <OakSmallSecondaryButton onClick={onBulletListClick}>
-            Bullet List
-          </OakSmallSecondaryButton>
-        </OakFlex>
-      </OakFlex>
+      <OakGrid>
+        <OakGridArea $colSpan={[5, 6]}>
+          <OakP $font={"body-3"}>
+            You have <b>{remainingCharacters}</b> characters remaining
+          </OakP>
+        </OakGridArea>
+        <OakGridArea $colSpan={[7, 6]}>
+          <OakFlex $gap={"space-between-ssx"} $justifyContent={"flex-end"}>
+            <OakSmallSecondaryButton onClick={onBoldClick}>
+              Bold
+            </OakSmallSecondaryButton>
+            <OakSmallSecondaryButton onClick={onBulletListClick}>
+              Bullet List
+            </OakSmallSecondaryButton>
+          </OakFlex>
+        </OakGridArea>
+      </OakGrid>
     </OakFlex>
   );
 };
@@ -89,8 +97,28 @@ export const OakTeacherNotesModal = ({
     message = "Link copied to clipboard";
   }
 
+  const messageRender = message && (
+    <OakFlex $gap={"space-between-sssx"} $alignItems={"center"}>
+      <OakIcon
+        iconName={"tick"}
+        $colorFilter={"text-success"}
+        $width={"all-spacing-5"}
+        $height={"all-spacing-5"}
+      />
+      <OakHeading tag="h2" $font={"body-3-bold"} $color={"text-success"}>
+        {message}
+      </OakHeading>
+    </OakFlex>
+  );
+
   return (
-    <OakModalCenter isOpen={isOpen} onClose={onClose}>
+    <OakModalCenter
+      isOpen={isOpen}
+      onClose={onClose}
+      modalInnerFlexProps={{
+        $ph: ["inner-padding-m", "inner-padding-xl2"],
+      }}
+    >
       <OakFlex
         $flexDirection="column"
         $alignItems="center"
@@ -103,42 +131,35 @@ export const OakTeacherNotesModal = ({
         </OakHeading>
 
         <EditorContainer {...rest} />
-        <OakFlex $justifyContent={"space-between"} $alignSelf={"stretch"}>
-          <OakFlex
-            $flexGrow={2}
-            $gap={"space-between-sssx"}
-            $alignItems={"center"}
-          >
-            {message && (
-              <>
-                <OakIcon
-                  iconName={"tick"}
-                  $colorFilter={"text-success"}
-                  $width={"all-spacing-5"}
-                  $height={"all-spacing-5"}
-                />
-                <OakHeading
-                  tag="h2"
-                  $font={"body-3-bold"}
-                  $color={"text-success"}
-                >
-                  {message}
-                </OakHeading>
-              </>
-            )}
-          </OakFlex>
-          <OakFlex $gap="space-between-s">
-            <OakSmallPrimaryInvertedButton onClick={onSaveClicked}>
-              Save note for later
-            </OakSmallPrimaryInvertedButton>
-            <OakSmallPrimaryButton
-              onClick={onShareClicked}
-              iconName="copy"
-              isTrailingIcon
+        <OakGrid>
+          <OakGridArea $colSpan={[0, 6]} $display={["none", "block"]}>
+            {messageRender}
+          </OakGridArea>
+          <OakGridArea $colSpan={[12, 6]}>
+            <OakFlex
+              $gap="space-between-s"
+              $width={"100%"}
+              $justifyContent={["center", "flex-end"]}
             >
-              Share link
-            </OakSmallPrimaryButton>
-          </OakFlex>
+              <OakSmallPrimaryInvertedButton onClick={onSaveClicked}>
+                Save note for later
+              </OakSmallPrimaryInvertedButton>
+              <OakSmallPrimaryButton
+                onClick={onShareClicked}
+                iconName="copy"
+                isTrailingIcon
+              >
+                Share link
+              </OakSmallPrimaryButton>
+            </OakFlex>
+          </OakGridArea>
+        </OakGrid>
+        <OakFlex
+          $alignSelf={"stretch"}
+          $justifyContent={"center"}
+          $display={["flex", "none"]}
+        >
+          {messageRender}
         </OakFlex>
       </OakFlex>
     </OakModalCenter>
