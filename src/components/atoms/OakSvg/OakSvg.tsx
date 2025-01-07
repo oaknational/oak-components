@@ -19,8 +19,6 @@ const StyledSvg = styled.svg<OakBoxProps>`
 
 export type OakSvgProps = OakBoxProps & {
   name: OakSvgNames;
-  hideOnMobileH?: boolean;
-  hideOnMobileV?: boolean;
   color?: OakColorToken;
 };
 
