@@ -82,7 +82,7 @@ const EditorContainer = ({
   );
 };
 
-type OakTeacherNotesModalProps = {
+export type OakTeacherNotesModalProps = {
   isOpen: boolean;
   onClose: () => void;
   onShareClicked: () => void;
