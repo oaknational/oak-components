@@ -34,6 +34,7 @@ export * from "./OakSecondaryButtonAsRadio";
 export * from "./OakSecondaryLink";
 export * from "./OakFilterDrawer";
 export * from "./OakSmallPrimaryButton";
+export * from "./OakSmallPrimaryInvertedButton";
 export * from "./OakSmallSecondaryButton";
 export * from "./OakTertiaryButton";
 export * from "./OakTextInput";
