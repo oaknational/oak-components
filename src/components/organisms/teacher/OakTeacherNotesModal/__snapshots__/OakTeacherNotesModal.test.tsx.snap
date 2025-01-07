@@ -809,6 +809,8 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
       onWheelCapture={[Function]}
     >
       <div
+        aria-describedby="use this dialog enter and to store teacher notes about a lesson"
+        aria-label="teacher notes dialog"
         className="c7 c8"
         role="alertdialog"
         style={

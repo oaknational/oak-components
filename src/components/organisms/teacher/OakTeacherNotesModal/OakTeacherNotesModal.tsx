@@ -128,6 +128,11 @@ export const OakTeacherNotesModal = ({
       modalInnerFlexProps={{
         $ph: ["inner-padding-m", "inner-padding-xl2"],
       }}
+      modalFlexProps={{
+        "aria-label": "teacher notes dialog",
+        "aria-describedby":
+          "use this dialog enter and to store teacher notes about a lesson",
+      }}
     >
       <OakFlex
         $flexDirection="column"
