@@ -1,0 +1,230 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakCodeRendererWrapper matches snapshot 1`] = `
+.c0 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c3 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  color: #ffffff;
+  background: #2d2d2d;
+  border-radius: 0.5rem;
+  display: inline-block;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c5 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 3.5rem;
+  color: #FBFBFB;
+  background: #2d2d2d;
+  border-radius: 0.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+  white-space: pre-wrap;
+}
+
+.c7 {
+  padding-right: 0.75rem;
+  border-right: 0.063rem solid;
+  border-color: #808080;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c8 {
+  padding-left: 0.75rem;
+  display: inline-block;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c2 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c9 {
+  color: #9EE8FF;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c10 {
+  color: #EECCFF;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c11 {
+  color: #94F9AF;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c4 {
+  font-family: "Roboto Mono";
+  font-style: normal;
+}
+
+<div
+  className="c0 c1"
+>
+  <span
+    className="c2"
+  >
+    What is the 
+    <div
+      className="c3 c4"
+    >
+      output
+    </div>
+     of the following Python code?
+
+
+  </span>
+  <div
+    className="c5 c4"
+  >
+    <div
+      className="c0 c6"
+    >
+      <div
+        className="c7 c1"
+      >
+        <span
+          className="c2"
+        >
+          1
+        </span>
+        <span
+          className="c2"
+        >
+          2
+        </span>
+        <span
+          className="c2"
+        >
+          3
+        </span>
+        <span
+          className="c2"
+        >
+          4
+        </span>
+        <span
+          className="c2"
+        >
+          5
+        </span>
+        <span
+          className="c2"
+        >
+          6
+        </span>
+        <span
+          className="c2"
+        >
+          7
+        </span>
+      </div>
+      <div
+        className="c8"
+      >
+        is_weekend = 
+        <span
+          className="c9"
+        >
+          True
+        </span>
+        
+have_homework = 
+        <span
+          className="c9"
+        >
+          False
+        </span>
+        
+
+
+        <span
+          className="c10"
+        >
+          if
+        </span>
+         is_weekend 
+        <span
+          className="c10"
+        >
+          and
+        </span>
+         
+        <span
+          className="c10"
+        >
+          not
+        </span>
+         have_homework:
+   print(
+        <span
+          className="c11"
+        >
+          "Time to chill and relax"
+        </span>
+        )
+
+        <span
+          className="c10"
+        >
+          else
+        </span>
+        :
+   print(
+        <span
+          className="c11"
+        >
+          "Time to study."
+        </span>
+        )
+      </div>
+    </div>
+  </div>
+  <span
+    className="c2"
+  />
+</div>
+`;

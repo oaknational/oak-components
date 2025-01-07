@@ -45,6 +45,10 @@ export const oakColorTokens = {
   teal: "#037b7d",
   blackSemiTransparent: "#22222240",
   transparent: "transparent",
+  "rpf-syntax-blue": "#9EE8FF",
+  "rpf-syntax-green": "#94F9AF",
+  "rpf-syntax-grey": "#FBFBFB",
+  "rpf-syntax-pink": "#EECCFF",
 };
 
 export type OakColorToken = keyof typeof oakColorTokens;
@@ -150,6 +154,10 @@ const oakUiRoleTokensConst = [
   "border-decorative6",
   "border-decorative6-stronger",
   "transparent",
+  "code-blue",
+  "code-green",
+  "code-grey",
+  "code-pink",
 ] as const;
 
 export type OakUiRoleToken = (typeof oakUiRoleTokensConst)[number];

@@ -43,3 +43,4 @@ export * from "./OakTagFunctional";
 export * from "./OakTimer";
 export * from "./OakCopyLinkButton";
 export * from "./OakSignLanguageButton";
+export * from "./OakCodeRendererWrapper";
