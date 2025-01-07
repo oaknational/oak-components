@@ -21,6 +21,8 @@ describe("OakTeacherNotesModal", () => {
     onBoldClick: jest.fn(),
     onBulletListClick: jest.fn(),
     remainingCharacters: 100,
+    isBold: false,
+    isBulletList: false,
   };
 
   it("matches snapshot", () => {

@@ -4,7 +4,6 @@ import {
   OakModalCenter,
   OakSmallPrimaryButton,
   OakSmallPrimaryInvertedButton,
-  OakSmallSecondaryButton,
 } from "@/components/molecules";
 import {
   OakFlex,
@@ -14,17 +13,22 @@ import {
   OakIcon,
   OakP,
 } from "@/components/atoms";
+import { OakSmallSecondaryToggleButton } from "@/components/molecules/OakSmallSecondaryToggleButton";
 
 type EditorContainerProps = {
   editorNode: React.ReactNode;
   onBoldClick: () => void;
   onBulletListClick: () => void;
+  isBold: boolean;
+  isBulletList: boolean;
   remainingCharacters: number;
 };
 
 const EditorContainer = ({
   editorNode,
   remainingCharacters,
+  isBold,
+  isBulletList,
   onBoldClick,
   onBulletListClick,
 }: EditorContainerProps) => {
@@ -59,12 +63,18 @@ const EditorContainer = ({
         </OakGridArea>
         <OakGridArea $colSpan={[7, 6]}>
           <OakFlex $gap={"space-between-ssx"} $justifyContent={"flex-end"}>
-            <OakSmallSecondaryButton onClick={onBoldClick}>
+            <OakSmallSecondaryToggleButton
+              onClick={onBoldClick}
+              toggleOn={isBold}
+            >
               Bold
-            </OakSmallSecondaryButton>
-            <OakSmallSecondaryButton onClick={onBulletListClick}>
+            </OakSmallSecondaryToggleButton>
+            <OakSmallSecondaryToggleButton
+              onClick={onBulletListClick}
+              toggleOn={isBulletList}
+            >
               Bullet List
-            </OakSmallSecondaryButton>
+            </OakSmallSecondaryToggleButton>
           </OakFlex>
         </OakGridArea>
       </OakGrid>

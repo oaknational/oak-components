@@ -72,11 +72,17 @@ const meta: Meta<typeof OakTeacherNotesModal> = {
     noteShared: {
       type: "boolean",
     },
+    isBold: {
+      type: "boolean",
+    },
+    isBulletList: {
+      type: "boolean",
+    },
     remainingCharacters: { type: "number" },
   },
   parameters: {
     controls: {
-      include: ["isOpen", "noteSaved", "noteShared"],
+      include: ["isOpen", "noteSaved", "noteShared", "isBold", "isBulletList"],
     },
   },
 };

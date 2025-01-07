@@ -943,6 +943,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
                           className="c37 yellow-shadow"
                         />
                         <button
+                          aria-pressed={false}
                           className="c38 c39 internal-button"
                           onClick={[Function]}
                           onMouseEnter={[Function]}
@@ -969,6 +970,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
                           className="c37 yellow-shadow"
                         />
                         <button
+                          aria-pressed={false}
                           className="c38 c39 internal-button"
                           onClick={[Function]}
                           onMouseEnter={[Function]}
