@@ -49,7 +49,7 @@ export const OakCodeRendererWrapper = ({ string }: { string: string }) => {
       }, // Keywords
 
       { regex: /\b\d+\b/g, color: "code-blue" }, // Numbers
-      { regex: /(#.*?$)/gm, color: "code-grey" }, // Comments
+      // { regex: /(#.*?$)/gm, color: "code-grey" }, // Comments
       //   { regex: /(=|==|!=|<=|>=|\+|-|\*|\/|:)/g, color: "red" }, // Operators
     ];
 
