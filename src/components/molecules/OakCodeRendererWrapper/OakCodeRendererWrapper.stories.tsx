@@ -48,3 +48,10 @@ export const Answer1: Story = {
     string: '`"Hello world!"`',
   },
 };
+
+export const NoCode: Story = {
+  render: (args) => <OakCodeRendererWrapper string={args.string} />,
+  args: {
+    string: "This is a simple text without any backticks.",
+  },
+};

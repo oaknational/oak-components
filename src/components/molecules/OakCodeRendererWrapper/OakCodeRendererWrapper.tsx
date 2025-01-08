@@ -5,8 +5,7 @@ import { OakBox, OakFlex, OakSpan } from "@/components/atoms";
 import { OakCombinedColorToken } from "@/styles";
 
 const StyledCodeContainer = styled(OakBox)`
-  font-family: "Roboto Mono";
-  font-style: normal;
+  font-family: "Roboto Mono", --font-roboto-mono, monospace;
 `;
 
 export const OakCodeRendererWrapper = ({ string }: { string: string }) => {
@@ -70,7 +69,7 @@ export const OakCodeRendererWrapper = ({ string }: { string: string }) => {
               parts.splice(
                 index + 1,
                 0,
-                <OakSpan key={index} $color={color}>
+                <OakSpan key={`${part}-${index}`} $color={color}>
                   {matchedText}
                 </OakSpan>,
               );
@@ -91,19 +90,20 @@ export const OakCodeRendererWrapper = ({ string }: { string: string }) => {
     }
   };
 
-  const StyleCodeBlock = (text: string) => {
+  const StyleCodeBlock = (text: string, index: number) => {
     const matches = text.match(/```([\s\S]*?)```/);
-    if (!matches) return <span>{text}</span>;
+    if (!matches) return text;
 
     // Extract the content inside the backticks
     const codeContent = matches[1];
-    if (!codeContent) return <span>{text}</span>;
+    if (!codeContent) return text;
     // Apply syntax highlighting
 
     const codeWithSyntaxHighlighting = syntaxHighlight(codeContent);
 
     return (
       <StyledCodeContainer
+        key={`${text}-${index}`}
         $background={"grey70"}
         $color={"code-grey"}
         $pv={"inner-padding-xs"}
@@ -133,13 +133,20 @@ export const OakCodeRendererWrapper = ({ string }: { string: string }) => {
   };
   const extractAndMap = (text: string) => {
     const parts = text.split(/(```[\s\S]*?```)/);
+    if (parts.length === 1 && !text.startsWith("```")) {
+      return findAndStyleInlineCode(text);
+    }
     return (
       <OakFlex $flexDirection={"column"}>
-        {parts.map((part) => {
+        {parts.map((part, index) => {
           if (part.startsWith("```") && part.endsWith("```")) {
-            return StyleCodeBlock(part);
+            return StyleCodeBlock(part, index);
           }
-          return <OakSpan>{findAndStyleInlineCode(part)}</OakSpan>;
+          return (
+            <OakSpan key={`${part}-${index}`}>
+              {findAndStyleInlineCode(part)}
+            </OakSpan>
+          );
         })}
       </OakFlex>
     );
