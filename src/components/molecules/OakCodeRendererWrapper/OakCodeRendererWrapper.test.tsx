@@ -55,7 +55,9 @@ describe("OakCodeRendererWrapper", () => {
     // Verify the styled code container
     const codeElement = getByText(/inline code/);
     expect(codeElement).toBeInTheDocument();
-    expect(codeElement).toHaveStyle('font-family: "Roboto Mono"');
+    expect(codeElement).toHaveStyle(
+      'font-family: "Roboto Mono",--font-roboto-mono,monospace;',
+    );
   });
 
   it("renders code blocks with syntax highlighting correctly", () => {

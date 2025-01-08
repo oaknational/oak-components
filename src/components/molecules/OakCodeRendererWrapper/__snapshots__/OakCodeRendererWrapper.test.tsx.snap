@@ -97,8 +97,7 @@ exports[`OakCodeRendererWrapper matches snapshot 1`] = `
 }
 
 .c4 {
-  font-family: "Roboto Mono";
-  font-style: normal;
+  font-family: "Roboto Mono",--font-roboto-mono,monospace;
 }
 
 <div
