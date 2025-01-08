@@ -51,12 +51,6 @@ exports[`OakCodeRendererWrapper matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
-  padding-left: 0.75rem;
-  display: inline-block;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -78,6 +72,11 @@ exports[`OakCodeRendererWrapper matches snapshot 1`] = `
 }
 
 .c2 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c8 {
+  padding-left: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -161,7 +160,7 @@ exports[`OakCodeRendererWrapper matches snapshot 1`] = `
           7
         </span>
       </div>
-      <div
+      <span
         className="c8"
       >
         is_weekend = 
@@ -219,7 +218,7 @@ have_homework =
           "Time to study."
         </span>
         )
-      </div>
+      </span>
     </div>
   </div>
   <span

@@ -124,9 +124,9 @@ export const OakCodeRendererWrapper = ({ string }: { string: string }) => {
               <OakSpan key={`${line}-${index}`}>{index + 1}</OakSpan>
             ))}
           </OakFlex>
-          <OakBox $display={"inline-block"} $pl={"inner-padding-s"}>
+          <OakSpan $pl={"inner-padding-s"}>
             {codeWithSyntaxHighlighting}
-          </OakBox>
+          </OakSpan>
         </OakFlex>
       </StyledCodeContainer>
     );
