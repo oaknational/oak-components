@@ -3,9 +3,13 @@ import styled from "styled-components";
 
 import { OakColorToken } from "@/styles";
 import { oakBoxCss, OakBoxProps } from "@/components/atoms/OakBox";
-// svgs
 import { HeaderUnderline } from "@/svgs";
 
+/**
+ * Map of the svg names to the actual svg components
+ * Only components that are used in the OakSvg component should be added here
+ * Should be used only in cases where OakIcon can't be used and if this list grows much bigger in the future we should consider refactoring
+ */
 const svgMap = {
   "header-underline": HeaderUnderline,
 };
@@ -18,10 +22,18 @@ const StyledSvg = styled.svg<OakBoxProps>`
 `;
 
 export type OakSvgProps = OakBoxProps & {
+  /**
+   * The name of the svg to render
+   * Accepts an svg name token from the svgMap
+   */
   name: OakSvgNames;
   color?: OakColorToken;
 };
 
+/**
+ * This is component used for rendering SVGs that don't belong to be rendered with OakIcon component
+ * ie. UI elements that are not icons/illustratons but are part of the design system (underline, etc)
+ */
 export const OakSvg: FC<OakSvgProps> = (props) => {
   return (
     <StyledSvg

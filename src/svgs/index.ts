@@ -1,3 +1,3 @@
 export * from "./underline";
 export * from "./horizontal-rule";
-export * from "./HeaderUnderline";
+export * from "./header-underline";
