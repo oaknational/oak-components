@@ -8,29 +8,33 @@ const StyledCodeContainer = styled(OakBox)`
   font-family: "Roboto Mono", --font-roboto-mono, monospace;
 `;
 
-export const OakCodeRendererWrapper = ({ string }: { string: string }) => {
+export const OakCodeRenderer = ({ string }: { string: string }) => {
   const findAndStyleInlineCode = (text: string) => {
     const parts = text.split(/(`.*?`)/); // Matches text enclosed in backticks
-    return parts.map((part, index) => {
-      if (part.startsWith("`") && part.endsWith("`")) {
-        // Remove backticks and style the content
-        return (
-          <StyledCodeContainer
-            key={index}
-            $background={"grey70"}
-            $color={"white"}
-            $pv={"inner-padding-none"}
-            $ph={"inner-padding-xs"}
-            $borderRadius={"border-radius-m2"}
-            $display={"inline-block"}
-            $font={"code-2"}
-          >
-            {part.slice(1, -1)}
-          </StyledCodeContainer>
-        );
-      }
-      return part; // Return the unstyled part
-    });
+    return (
+      <OakSpan>
+        {parts.map((part, index) => {
+          if (part.startsWith("`") && part.endsWith("`")) {
+            // Remove backticks and style the content
+            return (
+              <StyledCodeContainer
+                key={index}
+                $background={"grey70"}
+                $color={"white"}
+                $pv={"inner-padding-none"}
+                $ph={"inner-padding-xs"}
+                $borderRadius={"border-radius-m2"}
+                $display={"inline-block"}
+                $font={"code-2"}
+              >
+                {part.slice(1, -1)}
+              </StyledCodeContainer>
+            );
+          }
+          return part; // Return the unstyled part
+        })}
+      </OakSpan>
+    );
   };
 
   const syntaxHighlight = (code: string) => {

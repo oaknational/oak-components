@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OakCodeRendererWrapper matches snapshot 1`] = `
+exports[`OakCodeRenderer matches snapshot 1`] = `
 .c0 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -105,15 +105,19 @@ exports[`OakCodeRendererWrapper matches snapshot 1`] = `
   <span
     className="c2"
   >
-    What is the 
-    <div
-      className="c3 c4"
+    <span
+      className="c2"
     >
-      output
-    </div>
-     of the following Python code?
+      What is the 
+      <div
+        className="c3 c4"
+      >
+        output
+      </div>
+       of the following Python code?
 
 
+    </span>
   </span>
   <div
     className="c5 c4"
@@ -223,6 +227,10 @@ have_homework =
   </div>
   <span
     className="c2"
-  />
+  >
+    <span
+      className="c2"
+    />
+  </span>
 </div>
 `;

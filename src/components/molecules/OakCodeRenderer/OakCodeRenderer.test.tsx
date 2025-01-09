@@ -3,7 +3,7 @@ import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
 import { ThemeProvider } from "styled-components";
 
-import { OakCodeRendererWrapper } from "./OakCodeRendererWrapper";
+import { OakCodeRenderer } from "./OakCodeRenderer";
 
 import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
@@ -11,11 +11,11 @@ import renderWithTheme from "@/test-helpers/renderWithTheme";
 const mockString =
   'What is the `output` of the following Python code?\n\n```is_weekend = True\nhave_homework = False\n\nif is_weekend and not have_homework:\n   print("Time to chill and relax")\nelse:\n   print("Time to study.")```';
 
-describe("OakCodeRendererWrapper", () => {
+describe("OakCodeRenderer", () => {
   it("renders", () => {
     const { getByText } = renderWithTheme(
       <ThemeProvider theme={oakDefaultTheme}>
-        <OakCodeRendererWrapper string={mockString} />
+        <OakCodeRenderer string={mockString} />
       </ThemeProvider>,
     );
     expect(getByText("output")).toBeInTheDocument;
@@ -24,7 +24,7 @@ describe("OakCodeRendererWrapper", () => {
   it("matches snapshot", () => {
     const tree = create(
       <ThemeProvider theme={oakDefaultTheme}>
-        <OakCodeRendererWrapper string={mockString} />
+        <OakCodeRenderer string={mockString} />
       </ThemeProvider>,
     ).toJSON();
     expect(tree).toMatchSnapshot();
@@ -34,7 +34,7 @@ describe("OakCodeRendererWrapper", () => {
     const text = "This is a simple text without any backticks.";
     const { getByText } = renderWithTheme(
       <ThemeProvider theme={oakDefaultTheme}>
-        <OakCodeRendererWrapper string={text} />
+        <OakCodeRenderer string={text} />
       </ThemeProvider>,
     );
     expect(getByText(text)).toBeInTheDocument();
@@ -44,7 +44,7 @@ describe("OakCodeRendererWrapper", () => {
     const text = "This is `inline code` in a sentence.";
     const { getByText } = renderWithTheme(
       <ThemeProvider theme={oakDefaultTheme}>
-        <OakCodeRendererWrapper string={text} />
+        <OakCodeRenderer string={text} />
       </ThemeProvider>,
     );
 
@@ -64,7 +64,7 @@ describe("OakCodeRendererWrapper", () => {
     const codeBlock = "```\nconst a = 42;\nconsole.log(a);\n```";
     const { getByText } = renderWithTheme(
       <ThemeProvider theme={oakDefaultTheme}>
-        <OakCodeRendererWrapper string={codeBlock} />
+        <OakCodeRenderer string={codeBlock} />
       </ThemeProvider>,
     );
 
@@ -81,7 +81,7 @@ describe("OakCodeRendererWrapper", () => {
     const text = "Here is some text.\n```\nlet x = 10;\n```\nAnd more text.";
     const { getByText } = renderWithTheme(
       <ThemeProvider theme={oakDefaultTheme}>
-        <OakCodeRendererWrapper string={text} />
+        <OakCodeRenderer string={text} />
       </ThemeProvider>,
     );
 
@@ -97,7 +97,7 @@ describe("OakCodeRendererWrapper", () => {
     const codeBlock = "```\nconst str = 'Hello';\nif (true) {}\n```";
     const { getByText } = renderWithTheme(
       <ThemeProvider theme={oakDefaultTheme}>
-        <OakCodeRendererWrapper string={codeBlock} />
+        <OakCodeRenderer string={codeBlock} />
       </ThemeProvider>,
     );
 
