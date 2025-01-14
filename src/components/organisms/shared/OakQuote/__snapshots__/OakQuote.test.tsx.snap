@@ -7,28 +7,35 @@ exports[`OakQuote component matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c1 {
+.c2 {
   width: 0.5rem;
   margin-right: 1.5rem;
   background: #bef2bd;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c3 {
+.c4 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
+.c9 {
   position: relative;
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c10 {
+.c11 {
   object-fit: contain;
 }
 
-.c2 {
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -38,7 +45,7 @@ exports[`OakQuote component matches snapshot 1`] = `
   flex-shrink: 0;
 }
 
-.c4 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -49,7 +56,7 @@ exports[`OakQuote component matches snapshot 1`] = `
   gap: 1rem;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -61,7 +68,7 @@ exports[`OakQuote component matches snapshot 1`] = `
   gap: 1rem;
 }
 
-.c11 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -71,7 +78,7 @@ exports[`OakQuote component matches snapshot 1`] = `
   flex-direction: column;
 }
 
-.c5 {
+.c6 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -83,7 +90,7 @@ exports[`OakQuote component matches snapshot 1`] = `
   color: #222222;
 }
 
-.c12 {
+.c13 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 700;
   font-size: 1rem;
@@ -95,7 +102,7 @@ exports[`OakQuote component matches snapshot 1`] = `
   color: #222222;
 }
 
-.c13 {
+.c14 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1rem;
@@ -107,7 +114,7 @@ exports[`OakQuote component matches snapshot 1`] = `
   color: #222222;
 }
 
-.c9 {
+.c10 {
   width: 54px;
   height: 54px;
   -webkit-flex-shrink: 0;
@@ -115,11 +122,11 @@ exports[`OakQuote component matches snapshot 1`] = `
   flex-shrink: 0;
 }
 
-.c9 img {
+.c10 img {
   border-radius: 50%;
 }
 
-.c6 {
+.c7 {
   -webkit-letter-spacing: -0.01em;
   -moz-letter-spacing: -0.01em;
   -ms-letter-spacing: -0.01em;
@@ -127,25 +134,25 @@ exports[`OakQuote component matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c5 {
+  .c6 {
     font-weight: 600;
   }
 }
 
 @media (min-width:750px) {
-  .c5 {
+  .c6 {
     font-size: 1.25rem;
   }
 }
 
 @media (min-width:750px) {
-  .c5 {
+  .c6 {
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c5 {
+  .c6 {
     -webkit-letter-spacing: 0.0115rem;
     -moz-letter-spacing: 0.0115rem;
     -ms-letter-spacing: 0.0115rem;
@@ -154,7 +161,7 @@ exports[`OakQuote component matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c6 {
+  .c7 {
     -webkit-letter-spacing: -0.02em;
     -moz-letter-spacing: -0.02em;
     -ms-letter-spacing: -0.02em;
@@ -163,19 +170,19 @@ exports[`OakQuote component matches snapshot 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 c1"
 >
   <div
-    className="c1 c2"
+    className="c2 c3"
   />
   <div
-    className="c3 c4"
+    className="c4 c5"
   >
     <p
-      className="c5"
+      className="c6"
     >
       <div
-        className="c3 c6"
+        className="c4 c7"
       >
         “
         This is a quote
@@ -183,15 +190,15 @@ exports[`OakQuote component matches snapshot 1`] = `
       </div>
     </p>
     <div
-      className="c3 c7"
+      className="c4 c8"
     >
       <div
-        className="c8 c9"
+        className="c9 c10"
         role="presentation"
       >
         <img
           alt=""
-          className="c10"
+          className="c11"
           data-nimg="fill"
           decoding="async"
           loading="lazy"
@@ -217,15 +224,15 @@ exports[`OakQuote component matches snapshot 1`] = `
         />
       </div>
       <div
-        className="c3 c11"
+        className="c4 c12"
       >
         <p
-          className="c12"
+          className="c13"
         >
           Author Name
         </p>
         <p
-          className="c13"
+          className="c14"
         >
           Author Title
         </p>

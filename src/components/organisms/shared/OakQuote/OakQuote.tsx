@@ -38,7 +38,7 @@ export const OakQuote = (props: OakQuoteProps) => {
   } = props;
 
   return (
-    <OakBox $width={"100%"} $maxWidth={"all-spacing-22"}>
+    <OakFlex $width={"100%"} $maxWidth={"all-spacing-22"}>
       <OakFlex
         $width={"all-spacing-2"}
         $background={color}
@@ -72,6 +72,6 @@ export const OakQuote = (props: OakQuoteProps) => {
           </OakFlex>
         ) : null}
       </OakFlex>
-    </OakBox>
+    </OakFlex>
   );
 };
