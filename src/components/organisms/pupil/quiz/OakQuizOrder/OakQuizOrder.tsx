@@ -24,6 +24,7 @@ import { createPortal } from "react-dom";
 
 import { OakFlex } from "@/components/atoms";
 import {
+  OakCodeRenderer,
   OakDragAndDropInstructions,
   OakDraggable,
   OakDroppable,
@@ -86,7 +87,7 @@ const ConnectedDraggable = ({
         aria-selected={!!attributes["aria-pressed"]}
         role="option"
       >
-        {label}
+        <OakCodeRenderer string={label} />
       </OakDraggable>
     </OakDroppable>
   );
@@ -144,7 +145,9 @@ export const OakQuizOrder = ({
           {createPortal(
             <DragOverlay>
               {activeItem && (
-                <OakDraggable isDragging>{activeItem.label}</OakDraggable>
+                <OakDraggable isDragging>
+                  <OakCodeRenderer string={activeItem.label} />
+                </OakDraggable>
               )}
             </DragOverlay>,
             document.body,

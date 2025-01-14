@@ -13,6 +13,10 @@ const globalDecorator: Decorator = (Story, context) => {
         href="https://googleapis-fonts.thenational.academy/css2?family=Lexend:wght@300;400;600&display=swap"
         rel="stylesheet"
       />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap"
+        rel="stylesheet"
+      />
       <OakGlobalStyle />
       <Story {...context} />
     </ThemeProvider>

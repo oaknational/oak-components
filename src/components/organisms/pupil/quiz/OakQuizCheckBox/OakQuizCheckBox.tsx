@@ -123,7 +123,7 @@ export type OakQuizCheckBoxProps = Omit<BaseCheckBoxProps, "defaultChecked"> & {
   feedback?: "correct" | "incorrect" | null;
   image?: React.JSX.Element;
   innerRef?: React.RefObject<HTMLInputElement>;
-  displayValue?: string;
+  displayValue?: string | React.JSX.Element;
   /**
    * Give the field a highlight to draw attention to it
    */
