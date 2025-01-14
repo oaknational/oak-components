@@ -11,6 +11,9 @@ const StyledCodeContainer = styled(OakBox)`
 export const OakCodeRenderer = ({ string }: { string: string }) => {
   const findAndStyleInlineCode = (text: string) => {
     const parts = text.split(/(`.*?`)/); // Matches text enclosed in backticks
+    if (parts.length === 1 && !text.startsWith("`")) {
+      return text;
+    }
     return (
       <OakSpan>
         {parts.map((part, index) => {
@@ -58,8 +61,8 @@ export const OakCodeRenderer = ({ string }: { string: string }) => {
 
     // Apply syntax highlighting by replacing matches with styled spans
     const parts: (string | ReactElement)[] = [code];
-    let recursive = true;
-    while (recursive) {
+    let isCheckingMatches = true;
+    while (isCheckingMatches) {
       let matchFound = false;
       parts.forEach((part, index) => {
         for (const { regex, color } of patterns) {
@@ -88,7 +91,7 @@ export const OakCodeRenderer = ({ string }: { string: string }) => {
         }
       });
       if (!matchFound) {
-        recursive = false;
+        isCheckingMatches = false;
         return parts;
       }
     }
