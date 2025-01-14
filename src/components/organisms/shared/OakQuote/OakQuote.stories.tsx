@@ -48,7 +48,9 @@ export const Default: Story = {
 
 export const QuoteOnly: Story = {
   render: (args) => <OakQuote {...args} />,
-  args: {},
+  args: {
+    color: "bg-decorative2-main",
+  },
 };
 
 export const WithoutImage: Story = {
@@ -56,6 +58,7 @@ export const WithoutImage: Story = {
   args: {
     authorName: "Suzanne",
     authorTitle: "Headteacher at Maple Grove Primary School",
+    color: "bg-decorative3-main",
   },
 };
 
