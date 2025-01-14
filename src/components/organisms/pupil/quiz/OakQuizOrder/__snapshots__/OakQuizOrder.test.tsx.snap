@@ -274,10 +274,6 @@ exports[`OakQuizOrder matches snapshot 1`] = `
   display: flex;
 }
 
-.c16 {
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
 .c9 {
   cursor: -webkit-grab;
   cursor: -moz-grab;
@@ -421,11 +417,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
               <div
                 className="c14 c15"
               >
-                <span
-                  className="c16"
-                >
-                  Mouse
-                </span>
+                Mouse
               </div>
             </div>
           </div>
@@ -493,11 +485,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
               <div
                 className="c14 c15"
               >
-                <span
-                  className="c16"
-                >
-                  Hawk
-                </span>
+                Hawk
               </div>
             </div>
           </div>
@@ -565,11 +553,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
               <div
                 className="c14 c15"
               >
-                <span
-                  className="c16"
-                >
-                  Grasshopper
-                </span>
+                Grasshopper
               </div>
             </div>
           </div>

@@ -227,10 +227,6 @@ have_homework =
   </div>
   <span
     className="c2"
-  >
-    <span
-      className="c2"
-    />
-  </span>
+  />
 </div>
 `;
