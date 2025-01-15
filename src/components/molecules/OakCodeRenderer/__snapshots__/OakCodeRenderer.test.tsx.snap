@@ -99,6 +99,57 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
   font-family: "Roboto Mono",--font-roboto-mono,monospace;
 }
 
+@media (min-width:750px) {
+  .c3 {
+    padding-left: 0.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c3 {
+    padding-right: 0.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c3 {
+    padding-top: 0.25rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c3 {
+    padding-bottom: 0.25rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c3 {
+    font-weight: 300;
+  }
+}
+
+@media (min-width:750px) {
+  .c3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c3 {
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c3 {
+    -webkit-letter-spacing: 0.0115rem;
+    -moz-letter-spacing: 0.0115rem;
+    -ms-letter-spacing: 0.0115rem;
+    letter-spacing: 0.0115rem;
+  }
+}
+
 <div
   className="c0 c1"
 >
