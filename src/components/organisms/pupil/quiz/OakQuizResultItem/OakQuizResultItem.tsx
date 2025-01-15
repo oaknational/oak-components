@@ -8,6 +8,7 @@ import {
   OakSpan,
 } from "@/components/atoms";
 import { OakAllSpacingToken } from "@/styles";
+import { OakCodeRenderer } from "@/components/molecules";
 
 export type InternalQuizResultItemProps = {
   feedbackState?: "correct" | "incorrect" | null;
@@ -32,10 +33,12 @@ const DisplayText = ({
         $alignItems={"center"}
       >
         <OakBox>
-          <OakSpan $font={"body-2-bold"}>{boldPrefixText}</OakSpan>
+          <OakSpan $font={"body-2-bold"}>
+            <OakCodeRenderer string={boldPrefixText} />
+          </OakSpan>
           <OakSpan $font={"body-2"}>
             {"\u00A0"}-{"\u00A0"}
-            {standardText}
+            <OakCodeRenderer string={standardText} />
           </OakSpan>
         </OakBox>
       </OakFlex>
@@ -44,7 +47,7 @@ const DisplayText = ({
     return (
       <OakFlex $minHeight={height} $alignItems={"center"}>
         <OakSpan $color={"text-primary"} $font={"body-2"}>
-          {standardText}
+          <OakCodeRenderer string={standardText} />
         </OakSpan>
       </OakFlex>
     );
