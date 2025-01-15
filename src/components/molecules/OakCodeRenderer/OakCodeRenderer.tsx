@@ -24,11 +24,11 @@ export const OakCodeRenderer = ({ string }: { string: string }) => {
                 key={index}
                 $background={"grey70"}
                 $color={"white"}
-                $pv={"inner-padding-none"}
-                $ph={"inner-padding-xs"}
+                $pv={["inner-padding-none", "inner-padding-ssx"]}
+                $ph={["inner-padding-xs", "inner-padding-xs"]}
                 $borderRadius={"border-radius-m2"}
                 $display={"inline-block"}
-                $font={"code-2"}
+                $font={["code-2", "code-1"]}
               >
                 {part.slice(1, -1)}
               </StyledCodeContainer>
