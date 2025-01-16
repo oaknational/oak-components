@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
+import { oakFlexCss, OakFlexProps } from "@/components/atoms/OakFlex";
 import { OakBoxProps, oakBoxCss } from "@/components/atoms/OakBox";
-import { oakFlexCss, OakFlexProps } from "../OakFlex";
 
 export type OakULProps = OakBoxProps &
   OakFlexProps & {
