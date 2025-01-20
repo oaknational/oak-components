@@ -74,6 +74,13 @@ describe("OakTeacherNotesModal", () => {
     expect(getAllByText("Progress saved")).toHaveLength(2);
   });
 
+  it("displays 'An error occurred' when error is true", () => {
+    const { getAllByText } = renderWithTheme(
+      <OakTeacherNotesModal {...defaultProps} error={true} />,
+    );
+    expect(getAllByText("An error occurred")).toHaveLength(2);
+  });
+
   it("calls onBoldClick when the Bold button is clicked", () => {
     renderWithTheme(<OakTeacherNotesModal {...defaultProps} />);
     fireEvent.click(screen.getByRole("button", { name: /bold/i }));
