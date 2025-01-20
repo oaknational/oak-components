@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakTeacherNotesInline matches snapshot 1`] = `
+.c0 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-right: 1.5rem;
+  border: 0.125rem solid;
+  border-color: #b0e2de;
+  border-radius: 1rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c1 {
+  overflow: scroll;
+  height: 4.5rem;
+  padding-left: 1.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+  overflow: scroll;
+}
+
+.c2 {
+  direction: rtl;
+  -webkit-scrollbar-color: #b0e2de #fff;
+  -moz-scrollbar-color: #b0e2de #fff;
+  -ms-scrollbar-color: #b0e2de #fff;
+  scrollbar-color: #b0e2de #fff;
+}
+
+.c2 > * {
+  direction: ltr;
+}
+
+.c2 a {
+  color: #0d24c4;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c2 a::active {
+  color: #0d24c4;
+}
+
+.c2 a::hover {
+  color: #0a1d9d;
+}
+
+.c2 a::visited {
+  color: #081676;
+}
+
+.c2 a::pressed {
+  color: #081676;
+}
+
+<div
+  className="c0"
+  data-testid="oak-teacher-notes-inline"
+>
+  <div
+    className="c1 c2"
+    dangerouslySetInnerHTML={
+      {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
