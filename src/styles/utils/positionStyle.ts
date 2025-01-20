@@ -90,6 +90,7 @@ export type PositionStyleProps = {
    * Accepts a `visibility` value or a responsive array of `visibility` values.
    */
   $visibility?: ResponsiveValues<CSSProperties["visibility"]>;
+  $verticalAlign?: ResponsiveValues<CSSProperties["verticalAlign"]>;
 };
 
 export const positionStyle = css<PositionStyleProps>`
@@ -105,4 +106,5 @@ export const positionStyle = css<PositionStyleProps>`
   ${responsiveStyle("object-fit", (props) => props.$objectFit)}
   ${responsiveStyle("pointer-events", (props) => props.$pointerEvents)}
   ${responsiveStyle("visibility", (props) => props.$visibility)}
+  ${responsiveStyle("verticalAlign", (props) => props.$verticalAlign)}
 `;
