@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { OakBox } from "@/components/atoms";
+import { parseColor } from "@/styles/helpers/parseColor";
 
 export type OakTeacherNotesInlineProps = {
   sanitizedHtml?: string | TrustedHTML;
@@ -13,6 +14,32 @@ const LeftScrollBox = styled(OakBox)`
   & > * {
     direction: ltr;
   }
+
+  scrollbar-color: ${() => parseColor("bg-decorative2-main")} #fff;
+
+  a{
+    color: ${() => parseColor("navy")};  
+    text-decoration: underline;
+  }
+
+  a::active {
+    color: ${() => parseColor("text-link-active")};
+  }
+
+  a::hover {
+    color: ${() => parseColor("text-link-hover")};
+  }
+
+  a::visited {
+    color: ${() => parseColor("text-link-visited")};
+  }
+
+  a::pressed {
+    color: ${() => parseColor("text-link-pressed")};
+  }
+
+}
+
 `;
 
 export const OakTeacherNotesInline = ({
