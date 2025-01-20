@@ -129,8 +129,5 @@
   },
   "overrides": {
     "jsdom": "24.0.0"
-  },
-  "dependencies": {
-    "@oaknational/oak-components": "^1.67.1"
   }
 }
