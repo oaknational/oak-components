@@ -52,7 +52,7 @@ const Tiptap = () => {
  *
  * ### Props
  * - isOpen: Whether the modal is open.
- * - noteSaved: Whether the note has been saved (used to show a success message).
+ * - progressSaved: Whether the note has been saved (used to show a success message).
  * - noteShared: Whether the note has been shared (used to show a success message).
  * - remainingCharacters: The number of characters remaining in the note.
  * - editorNode: The node to render in the editor. This should be a Tiptap editor.
@@ -66,10 +66,13 @@ const meta: Meta<typeof OakTeacherNotesModal> = {
     isOpen: {
       type: "boolean",
     },
-    noteSaved: {
+    progressSaved: {
       type: "boolean",
     },
     noteShared: {
+      type: "boolean",
+    },
+    error: {
       type: "boolean",
     },
     isBold: {
@@ -82,7 +85,14 @@ const meta: Meta<typeof OakTeacherNotesModal> = {
   },
   parameters: {
     controls: {
-      include: ["isOpen", "noteSaved", "noteShared", "isBold", "isBulletList"],
+      include: [
+        "isOpen",
+        "progressSaved",
+        "noteShared",
+        "error",
+        "isBold",
+        "isBulletList",
+      ],
     },
   },
 };
@@ -119,7 +129,8 @@ export const Default: Story = {
   },
   args: {
     isOpen: false,
-    noteSaved: false,
+    progressSaved: false,
+    error: false,
     noteShared: false,
     remainingCharacters: 100,
   },
@@ -146,7 +157,7 @@ export const WithTipTap: Story = {
   },
   args: {
     isOpen: false,
-    noteSaved: false,
+    progressSaved: false,
     noteShared: false,
     remainingCharacters: 100,
   },
