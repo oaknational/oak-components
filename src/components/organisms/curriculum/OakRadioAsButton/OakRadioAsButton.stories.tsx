@@ -51,36 +51,99 @@ export const NoIcon: Story = {
   },
 };
 
+export const WithAriaLabel: Story = {
+  args: {
+    name: "radio-1",
+    value: "Option 1",
+    displayValue: "Art and design",
+    icon: "subject-art",
+    "aria-label": "Select art and design",
+  },
+};
+
+export const WithAriaLabelledBy: Story = {
+  render: () => (
+    <>
+      <h2 id="subject-label">Choose a subject</h2>
+      <OakRadioAsButton
+        name="radio-1"
+        value="Option 1"
+        displayValue="Biology"
+        icon="subject-biology"
+        aria-labelledby="subject-label"
+      />
+    </>
+  ),
+};
+
+export const MultipleOptions: Story = {
+  render: () => (
+    <OakRadioGroup name="subjects">
+      <OakRadioAsButton
+        value="art"
+        displayValue="Art and design"
+        icon="subject-art"
+        aria-label="Select art and design"
+      />
+      <OakRadioAsButton
+        value="biology"
+        displayValue="Biology"
+        icon="subject-biology"
+        aria-label="Select biology"
+      />
+      <OakRadioAsButton
+        value="chemistry"
+        displayValue="Chemistry"
+        icon="subject-chemistry"
+        aria-label="Select chemistry"
+      />
+      <OakRadioAsButton
+        value="physics"
+        displayValue="Physics"
+        icon="subject-physics"
+        aria-label="Select physics"
+      />
+      <OakRadioAsButton
+        value="computing"
+        displayValue="Computing"
+        icon="subject-computing"
+        aria-label="Select computing"
+      />
+    </OakRadioGroup>
+  ),
+};
+
 export const KeepIconColor: Story = {
   render: (args) => {
+    const { "aria-labelledby": _, ...restArgs } = args;
     return (
       <OakRadioGroup name="test" $flexWrap={"wrap"}>
         <OakRadioAsButton
-          {...args}
+          {...restArgs}
           aria-label="Art and design"
           displayValue="Art and design"
           icon="subject-art"
         />
         <OakRadioAsButton
-          {...args}
+          {...restArgs}
           aria-label="Biology"
           displayValue="Biology"
           icon="subject-biology"
         />
         <OakRadioAsButton
-          {...args}
+          {...restArgs}
           aria-label="Chemistry"
           displayValue="Chemistry"
           icon="subject-chemistry"
         />
         <OakRadioAsButton
-          {...args}
+          {...restArgs}
           aria-label="Physics"
           displayValue="Physics"
           icon="subject-physics"
         />
         <OakRadioAsButton
-          {...args}
+          {...restArgs}
           aria-label="Computing"
           displayValue="Computing"
           icon="subject-computing"

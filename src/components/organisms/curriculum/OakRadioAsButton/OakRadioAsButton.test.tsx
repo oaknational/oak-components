@@ -19,6 +19,7 @@ describe("OakRadioAsButton", () => {
         data-testid="test-1"
         icon={"subject-history"}
         displayValue="Option 1"
+        aria-label="Select an option"
       />,
     );
     expect(getByRole("radio")).toBeInTheDocument();
@@ -32,6 +33,7 @@ describe("OakRadioAsButton", () => {
           value="Option 1"
           icon={"subject-history"}
           displayValue="Option 1"
+          aria-label="Select an option"
         />
         ,
       </OakThemeProvider>,
@@ -46,9 +48,57 @@ describe("OakRadioAsButton", () => {
         displayValue="Option 1"
         value="1"
         icon={"subject-history"}
+        aria-label="Select an option"
       />,
     );
     expect(getByLabelText("Option 1")).toBeInTheDocument();
+  });
+
+  it("renders without an icon when only label provided", () => {
+    const { container } = renderWithTheme(
+      <OakRadioAsButton
+        name="radio-1"
+        value="Option 1"
+        displayValue="Option 1"
+        aria-label="Select an option"
+      />,
+    );
+
+    const iconElement = container.querySelector("img");
+    expect(iconElement).not.toBeInTheDocument();
+  });
+
+  it("renders the correct icon when a valid icon name is provided", async () => {
+    const { container } = renderWithTheme(
+      <OakRadioAsButton
+        name="radio-1"
+        value="Option 1"
+        displayValue="Option 1"
+        icon="subject-history"
+        aria-label="Select an option"
+      />,
+    );
+
+    const iconElement = container.querySelector("img");
+    expect(iconElement).toBeInTheDocument();
+  });
+
+  it("renders both icon and label", async () => {
+    const { container, getByText } = renderWithTheme(
+      <OakRadioAsButton
+        name="radio-1"
+        value="Option 1"
+        displayValue="Display Text"
+        icon="subject-history"
+        aria-label="Select an option"
+      />,
+    );
+
+    const iconElement = container.querySelector("img");
+    const labelElement = getByText("Display Text");
+
+    expect(iconElement).toBeInTheDocument();
+    expect(labelElement).toBeInTheDocument();
   });
 
   it("calls onChange when clicked", () => {
@@ -60,12 +110,14 @@ describe("OakRadioAsButton", () => {
           onChange={onChange}
           icon={"subject-history"}
           displayValue="Option 1"
+          aria-label="Select option 1"
         />
         <OakRadioAsButton
           value="Option 2"
           onChange={onChange}
           icon={"subject-biology"}
           displayValue="Option 2"
+          aria-label="Select option 2"
         />
       </OakRadioGroup>,
     );
@@ -86,6 +138,7 @@ describe("OakRadioAsButton", () => {
         onFocus={onFocus}
         icon={"subject-history"}
         displayValue="Option 1"
+        aria-label="Select an option"
       />,
     );
     getByRole("radio").focus();
@@ -101,6 +154,7 @@ describe("OakRadioAsButton", () => {
         onBlur={onBlur}
         icon={"subject-history"}
         displayValue="Option 1"
+        aria-label="Select an option"
       />,
     );
     getByRole("radio").focus();
@@ -117,6 +171,7 @@ describe("OakRadioAsButton", () => {
         onHovered={onHovered}
         icon={"subject-history"}
         displayValue="Option 1"
+        aria-label="Select an option"
       />,
     );
     fireEvent.mouseEnter(getByRole("radio"));
@@ -134,6 +189,7 @@ describe("OakRadioAsButton", () => {
         disabled
         icon={"subject-history"}
         displayValue="Option 1"
+        aria-label="Select an option"
       />,
     );
     getByRole("radio").click();
@@ -149,9 +205,43 @@ describe("OakRadioAsButton", () => {
         innerRef={ref}
         icon={"subject-history"}
         displayValue="Option 1"
+        aria-label="Select an option"
       />,
     );
     ref.current?.click();
     expect(getByRole("radio")).toBeChecked();
+  });
+
+  it("renders with aria-labelledby attribute", () => {
+    const { container } = renderWithTheme(
+      <>
+        <h2 id="group-label">Select an option</h2>
+        <OakRadioAsButton
+          name="radio-1"
+          value="Option 1"
+          displayValue="Option 1"
+          icon={"subject-history"}
+          aria-labelledby="group-label"
+        />
+      </>,
+    );
+
+    const radioGroup = container.querySelector('[role="radiogroup"]');
+    expect(radioGroup).toHaveAttribute("aria-labelledby", "group-label");
+  });
+
+  it("renders with aria-label attribute", () => {
+    const { container } = renderWithTheme(
+      <OakRadioAsButton
+        name="radio-1"
+        value="Option 1"
+        displayValue="Option 1"
+        icon={"subject-history"}
+        aria-label="Select an option"
+      />,
+    );
+
+    const radioGroup = container.querySelector('[role="radiogroup"]');
+    expect(radioGroup).toHaveAttribute("aria-label", "Select an option");
   });
 });
