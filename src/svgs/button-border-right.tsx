@@ -4,8 +4,6 @@ export const ButtonBorderRight = () => (
   <svg
     preserveAspectRatio="none"
     fill="none"
-    height="381"
-    width="7"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 7 381"
   >
