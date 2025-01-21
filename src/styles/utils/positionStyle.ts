@@ -90,6 +90,12 @@ export type PositionStyleProps = {
    * Accepts a `visibility` value or a responsive array of `visibility` values.
    */
   $visibility?: ResponsiveValues<CSSProperties["visibility"]>;
+  /**
+   * Sets the `vertical-align` CSS property of the element.
+   *
+   * Accepts a `vertical-align` value or a responsive array of `vertical-align` values.
+   */
+  $verticalAlign?: ResponsiveValues<CSSProperties["verticalAlign"]>;
 };
 
 export const positionStyle = css<PositionStyleProps>`
@@ -105,4 +111,5 @@ export const positionStyle = css<PositionStyleProps>`
   ${responsiveStyle("object-fit", (props) => props.$objectFit)}
   ${responsiveStyle("pointer-events", (props) => props.$pointerEvents)}
   ${responsiveStyle("visibility", (props) => props.$visibility)}
+  ${responsiveStyle("vertical-align", (props) => props.$verticalAlign)}
 `;

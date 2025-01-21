@@ -3,7 +3,16 @@ import styled from "styled-components";
 
 import { OakColorToken } from "@/styles";
 import { oakBoxCss, OakBoxProps } from "@/components/atoms/OakBox";
-import { HeaderUnderline } from "@/svgs";
+import {
+  HeaderUnderline,
+  Underline,
+  HorizontalRule,
+  Underline3,
+  ButtonBorderTop,
+  ButtonBorderBottom,
+  ButtonBorderLeft,
+  ButtonBorderRight,
+} from "@/svgs";
 
 /**
  * Map of the svg names to the actual svg components
@@ -12,6 +21,13 @@ import { HeaderUnderline } from "@/svgs";
  */
 const svgMap = {
   "header-underline": HeaderUnderline,
+  underline: Underline,
+  "horizontal-rule": HorizontalRule,
+  "underline-3": Underline3,
+  "button-border-top": ButtonBorderTop,
+  "button-border-bottom": ButtonBorderBottom,
+  "button-border-left": ButtonBorderLeft,
+  "button-border-right": ButtonBorderRight,
 };
 
 export type OakSvgNames = keyof typeof svgMap;
@@ -35,6 +51,11 @@ export type OakSvgProps = OakBoxProps & {
  * ie. UI elements that are not icons/illustratons but are part of the design system (underline, etc)
  */
 export const OakSvg: FC<OakSvgProps> = (props) => {
+  const getSvgByName = (name: OakSvgNames) => {
+    const SvgComponent = svgMap[name];
+    return <SvgComponent />;
+  };
+
   return (
     <StyledSvg
       aria-hidden={true}
@@ -43,7 +64,7 @@ export const OakSvg: FC<OakSvgProps> = (props) => {
       height="100%"
       {...props}
     >
-      {props.name === "header-underline" && <HeaderUnderline />}
+      {getSvgByName(props.name)}
     </StyledSvg>
   );
 };

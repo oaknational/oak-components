@@ -34,7 +34,7 @@ export const HeaderUnderline: Story = {
   args: { $color: "black", name: "header-underline" },
   parameters: {
     controls: {
-      include: ["$width", "$height", ...Object.keys(colorArgTypes)],
+      include: ["name", "$width", "$height", ...Object.keys(colorArgTypes)],
       sort: "none",
     },
   },
