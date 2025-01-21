@@ -14,9 +14,9 @@ describe("OakTeacherNotesModal", () => {
     isOpen: true,
     onClose: jest.fn(),
     onShareClicked: jest.fn(),
-    onSaveClicked: jest.fn(),
-    noteSaved: false,
+    progressSaved: false,
     noteShared: false,
+    error: false,
     editorNode: <div>Editor</div>,
     onBoldClick: jest.fn(),
     onBulletListClick: jest.fn(),
@@ -60,14 +60,6 @@ describe("OakTeacherNotesModal", () => {
     expect(defaultProps.onShareClicked).toHaveBeenCalled();
   });
 
-  it("calls onSaveClicked when the save link is clicked", () => {
-    renderWithTheme(<OakTeacherNotesModal {...defaultProps} />);
-    fireEvent.click(
-      screen.getByRole("button", { name: /save note for later/i }),
-    );
-    expect(defaultProps.onSaveClicked).toHaveBeenCalled();
-  });
-
   it("displays 'Link copied to clipboard' when noteShared is true", () => {
     const { getAllByText } = renderWithTheme(
       <OakTeacherNotesModal {...defaultProps} noteShared={true} />,
@@ -75,11 +67,18 @@ describe("OakTeacherNotesModal", () => {
     expect(getAllByText("Link copied to clipboard")).toHaveLength(2);
   });
 
-  it("displays 'Teacher note saved' when noteSaved is true", () => {
+  it("displays 'Teacher note saved' when progressSaved is true", () => {
     const { getAllByText } = renderWithTheme(
-      <OakTeacherNotesModal {...defaultProps} noteSaved={true} />,
+      <OakTeacherNotesModal {...defaultProps} progressSaved={true} />,
     );
-    expect(getAllByText("Teacher note saved")).toHaveLength(2);
+    expect(getAllByText("Progress saved")).toHaveLength(2);
+  });
+
+  it("displays 'An error occurred' when error is true", () => {
+    const { getAllByText } = renderWithTheme(
+      <OakTeacherNotesModal {...defaultProps} error={true} />,
+    );
+    expect(getAllByText("An error occurred")).toHaveLength(2);
   });
 
   it("calls onBoldClick when the Bold button is clicked", () => {

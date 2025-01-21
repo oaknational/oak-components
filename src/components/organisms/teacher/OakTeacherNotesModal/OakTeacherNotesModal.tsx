@@ -1,10 +1,6 @@
 import React from "react";
 
-import {
-  OakModalCenter,
-  OakSmallPrimaryButton,
-  OakSmallPrimaryInvertedButton,
-} from "@/components/molecules";
+import { OakModalCenter, OakSmallPrimaryButton } from "@/components/molecules";
 import {
   OakFlex,
   OakGrid,
@@ -86,36 +82,42 @@ export type OakTeacherNotesModalProps = {
   isOpen: boolean;
   onClose: () => void;
   onShareClicked: () => void;
-  onSaveClicked: () => void;
-  noteSaved: boolean;
+  progressSaved: boolean;
   noteShared: boolean;
+  error?: boolean;
 } & EditorContainerProps;
 
 export const OakTeacherNotesModal = ({
   isOpen,
   onClose,
   onShareClicked,
-  onSaveClicked,
-  noteSaved,
+  progressSaved,
   noteShared,
+  error,
   ...rest
 }: OakTeacherNotesModalProps) => {
   let message = undefined;
-  if (noteSaved) {
-    message = "Teacher note saved";
+
+  if (error) {
+    message = "An error occurred";
+  } else if (progressSaved) {
+    message = "Progress saved";
   } else if (noteShared) {
     message = "Link copied to clipboard";
   }
 
+  const messageColor = error ? "text-error" : "text-success";
+  const messageIcon = error ? "error" : "tick";
+
   const messageRender = message && (
     <OakFlex $gap={"space-between-sssx"} $alignItems={"center"}>
       <OakIcon
-        iconName={"tick"}
-        $colorFilter={"text-success"}
+        iconName={messageIcon}
+        $colorFilter={messageColor}
         $width={"all-spacing-5"}
         $height={"all-spacing-5"}
       />
-      <OakHeading tag="h2" $font={"body-3-bold"} $color={"text-success"}>
+      <OakHeading tag="h2" $font={"body-3-bold"} $color={messageColor}>
         {message}
       </OakHeading>
     </OakFlex>
@@ -156,9 +158,6 @@ export const OakTeacherNotesModal = ({
               $width={"100%"}
               $justifyContent={["center", "flex-end"]}
             >
-              <OakSmallPrimaryInvertedButton onClick={onSaveClicked}>
-                Save note for later
-              </OakSmallPrimaryInvertedButton>
               <OakSmallPrimaryButton
                 onClick={onShareClicked}
                 iconName="copy"
