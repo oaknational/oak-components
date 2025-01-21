@@ -12,6 +12,7 @@ import {
   ButtonBorderBottom,
   ButtonBorderLeft,
   ButtonBorderRight,
+  IconBackground,
 } from "@/svgs";
 
 /**
@@ -28,6 +29,7 @@ const svgMap = {
   "button-border-bottom": ButtonBorderBottom,
   "button-border-left": ButtonBorderLeft,
   "button-border-right": ButtonBorderRight,
+  "icon-background": IconBackground,
 };
 
 export type OakSvgNames = keyof typeof svgMap;

@@ -3,8 +3,6 @@ import React from "react";
 export const ButtonBorderBottom = () => (
   <svg
     viewBox="0 0 608 13"
-    width="608"
-    height="13"
     preserveAspectRatio="none"
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
