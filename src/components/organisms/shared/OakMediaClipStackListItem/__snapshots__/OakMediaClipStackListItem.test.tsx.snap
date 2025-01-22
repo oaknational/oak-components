@@ -128,7 +128,6 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
 }
 
 .c5 img {
-  object-fit: fill;
   -webkit-filter: brightness(100%);
 }
 
@@ -158,6 +157,11 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
+}
+
+.c7 img {
+  object-fit: fill;
+  border-radius: 0.25rem;
 }
 
 @media (min-width:750px) {

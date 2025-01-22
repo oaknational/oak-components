@@ -23,6 +23,7 @@ export type OakMediaClipStackListItemProps = {
   imageUrl?: string;
   imageAltText: string;
   numberOfClips: number;
+  isAudioClip: boolean;
 };
 
 const OakMediaClipStackListItemLink = styled(OakFlex)`
@@ -56,7 +57,6 @@ const ImageStackShadow = styled(OakBox)`
   margin-right: 15px;
 
   img {
-    object-fit: fill;
     -webkit-filter: brightness(100%);
   }
 
@@ -97,12 +97,24 @@ const StyledMediaClipImage = styled(OakImage)`
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
+  img {
+    object-fit: fill;
+    border-radius: ${parseBorderRadius("border-radius-s")};
+  }
 `;
 
 export const OakMediaClipStackListItem = (
   props: OakMediaClipStackListItemProps,
 ) => {
-  const { title, numberOfClips, imageUrl, imageAltText, href, ...rest } = props;
+  const {
+    title,
+    numberOfClips,
+    imageUrl,
+    imageAltText,
+    href,
+    isAudioClip,
+    ...rest
+  } = props;
 
   return (
     <OakMediaClipStackListItemLink
@@ -123,12 +135,25 @@ export const OakMediaClipStackListItem = (
           $position={"relative"}
           $mb={["space-between-none", "space-between-none", "space-between-xs"]}
         >
-          <StyledMediaClipImage
-            src={!imageUrl ? oakPlaceholder : imageUrl}
-            alt={imageAltText}
-            $borderRadius={"border-radius-s"}
-            $overflow={"hidden"}
-          />
+          {!isAudioClip ? (
+            <StyledMediaClipImage
+              src={!imageUrl ? oakPlaceholder : imageUrl}
+              alt={imageAltText}
+              $borderRadius={"border-radius-s"}
+              $overflow={"hidden"}
+            />
+          ) : (
+            <OakIcon
+              $width={["all-spacing-15", "all-spacing-15", "all-spacing-18"]}
+              $height={["all-spacing-11", "all-spacing-11", "all-spacing-15"]}
+              iconName={"audio-clip-large"}
+              alt={imageAltText}
+              $position={"absolute"}
+              $borderRadius={"border-radius-s"}
+              $overflow={"hidden"}
+              $objectFit={"cover"}
+            />
+          )}
           <OakIcon
             id="play-icon"
             iconName="play"

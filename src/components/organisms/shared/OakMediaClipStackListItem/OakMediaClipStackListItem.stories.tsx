@@ -52,3 +52,15 @@ export const MobileAndTablet: Story = {
     },
   },
 };
+
+export const AudioClip: Story = {
+  render: (args) => <OakMediaClipStackListItem {...args} />,
+  args: {
+    title: "Learning cycle title",
+    numberOfClips: 3,
+    imageUrl: `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336494/samples/landscapes/nature-mountains.jpg`,
+    imageAltText: "alt text for the image",
+    href: "#",
+    isAudioClip: true,
+  },
+};

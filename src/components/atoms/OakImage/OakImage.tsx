@@ -120,6 +120,7 @@ export const OakImage = <C extends ElementType = typeof Image>({
     onError,
     ...rest
   } = props;
+
   const finalPlaceholder = placeholder === "oak" ? undefined : placeholder;
   const { showPlaceholder, handleComplete, setImg } = useShowPlaceholder();
 
