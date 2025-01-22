@@ -1,5 +1,5 @@
-import React, { createRef } from "react";
 import "@testing-library/jest-dom";
+import React, { createRef } from "react";
 import { create } from "react-test-renderer";
 import { fireEvent } from "@testing-library/react";
 
@@ -19,7 +19,6 @@ describe("OakRadioAsButton", () => {
         data-testid="test-1"
         icon={"subject-history"}
         displayValue="Option 1"
-        aria-label="Select an option"
       />,
     );
     expect(getByRole("radio")).toBeInTheDocument();
@@ -48,7 +47,6 @@ describe("OakRadioAsButton", () => {
         displayValue="Option 1"
         value="1"
         icon={"subject-history"}
-        aria-label="Select an option"
       />,
     );
     expect(getByLabelText("Option 1")).toBeInTheDocument();
@@ -60,7 +58,6 @@ describe("OakRadioAsButton", () => {
         name="radio-1"
         value="Option 1"
         displayValue="Option 1"
-        aria-label="Select an option"
       />,
     );
 
@@ -75,7 +72,6 @@ describe("OakRadioAsButton", () => {
         value="Option 1"
         displayValue="Option 1"
         icon="subject-history"
-        aria-label="Select an option"
       />,
     );
 
@@ -90,14 +86,13 @@ describe("OakRadioAsButton", () => {
         value="Option 1"
         displayValue="Display Text"
         icon="subject-history"
-        aria-label="Select an option"
       />,
     );
 
     const iconElement = container.querySelector("img");
-    const labelElement = getByText("Display Text");
-
     expect(iconElement).toBeInTheDocument();
+
+    const labelElement = getByText("Display Text");
     expect(labelElement).toBeInTheDocument();
   });
 
@@ -110,23 +105,50 @@ describe("OakRadioAsButton", () => {
           onChange={onChange}
           icon={"subject-history"}
           displayValue="Option 1"
-          aria-label="Select option 1"
         />
         <OakRadioAsButton
           value="Option 2"
           onChange={onChange}
           icon={"subject-biology"}
           displayValue="Option 2"
-          aria-label="Select option 2"
         />
       </OakRadioGroup>,
     );
     const radios = getAllByRole("radio");
     expect(radios).toHaveLength(2);
+
+    // Click each twice to make sure we don't register clicks twice
     radios[0]!.click();
     radios[0]!.click();
     radios[1]!.click();
+    radios[1]!.click();
     expect(onChange).toHaveBeenCalledTimes(2);
+  });
+
+  it("inputs to have name of radio group", () => {
+    const onChange = jest.fn();
+    const { getAllByRole, getByRole } = renderWithTheme(
+      <OakRadioGroup name="test">
+        <OakRadioAsButton
+          value="Option 1"
+          onChange={onChange}
+          icon={"subject-history"}
+          displayValue="Option 1"
+        />
+        <OakRadioAsButton
+          value="Option 2"
+          onChange={onChange}
+          icon={"subject-biology"}
+          displayValue="Option 2"
+        />
+      </OakRadioGroup>,
+    );
+    const radioGroup = getByRole("radiogroup");
+    const radios = getAllByRole("radio");
+    expect(radios).toHaveLength(2);
+    expect(radioGroup);
+    expect(radios[0]).toHaveAttribute("name", "test");
+    expect(radios[1]).toHaveAttribute("name", "test");
   });
 
   it("calls onFocus when focused", () => {
@@ -138,7 +160,6 @@ describe("OakRadioAsButton", () => {
         onFocus={onFocus}
         icon={"subject-history"}
         displayValue="Option 1"
-        aria-label="Select an option"
       />,
     );
     getByRole("radio").focus();
@@ -154,7 +175,6 @@ describe("OakRadioAsButton", () => {
         onBlur={onBlur}
         icon={"subject-history"}
         displayValue="Option 1"
-        aria-label="Select an option"
       />,
     );
     getByRole("radio").focus();
@@ -171,7 +191,6 @@ describe("OakRadioAsButton", () => {
         onHovered={onHovered}
         icon={"subject-history"}
         displayValue="Option 1"
-        aria-label="Select an option"
       />,
     );
     fireEvent.mouseEnter(getByRole("radio"));
@@ -189,7 +208,6 @@ describe("OakRadioAsButton", () => {
         disabled
         icon={"subject-history"}
         displayValue="Option 1"
-        aria-label="Select an option"
       />,
     );
     getByRole("radio").click();
@@ -205,7 +223,6 @@ describe("OakRadioAsButton", () => {
         innerRef={ref}
         icon={"subject-history"}
         displayValue="Option 1"
-        aria-label="Select an option"
       />,
     );
     ref.current?.click();
@@ -213,7 +230,7 @@ describe("OakRadioAsButton", () => {
   });
 
   it("renders with aria-labelledby attribute", () => {
-    const { container } = renderWithTheme(
+    const { getByRole } = renderWithTheme(
       <>
         <h2 id="group-label">Select an option</h2>
         <OakRadioAsButton
@@ -226,12 +243,12 @@ describe("OakRadioAsButton", () => {
       </>,
     );
 
-    const radioGroup = container.querySelector('[role="radiogroup"]');
-    expect(radioGroup).toHaveAttribute("aria-labelledby", "group-label");
+    const radioButton = getByRole("radio");
+    expect(radioButton).toHaveAttribute("aria-labelledby", "group-label");
   });
 
   it("renders with aria-label attribute", () => {
-    const { container } = renderWithTheme(
+    const { getByRole } = renderWithTheme(
       <OakRadioAsButton
         name="radio-1"
         value="Option 1"
@@ -241,7 +258,7 @@ describe("OakRadioAsButton", () => {
       />,
     );
 
-    const radioGroup = container.querySelector('[role="radiogroup"]');
-    expect(radioGroup).toHaveAttribute("aria-label", "Select an option");
+    const radioButton = getByRole("radio");
+    expect(radioButton).toHaveAttribute("aria-label", "Select an option");
   });
 });

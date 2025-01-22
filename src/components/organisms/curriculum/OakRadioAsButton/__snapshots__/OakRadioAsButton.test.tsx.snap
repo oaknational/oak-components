@@ -164,12 +164,11 @@ exports[`OakRadioAsButton matches snapshot 1`] = `
     className="c0 c1"
   >
     <div
-      aria-label="Select an option"
       className="c2 c3 c4"
       onClick={[Function]}
-      role="radiogroup"
     >
       <input
+        aria-label="Select an option"
         className="c5 c6"
         id=":r0:"
         name="default"

@@ -80,13 +80,18 @@ export type OakRadioAsButtonProps = Omit<
   displayValue: string;
   icon?: OakIconName;
   keepIconColor?: boolean;
-} & ( // This ensures that either aria-labelledby or aria-label are provided, but not both
-    | { "aria-labelledby": string; "aria-label"?: never }
-    | { "aria-labelledby"?: never; "aria-label": string }
-  );
+  disabled?: HTMLInputElement["disabled"];
+  checked?: HTMLInputElement["checked"];
+  value?: HTMLInputElement["value"];
+  "aria-labelledby"?: React.AriaAttributes["aria-labelledby"];
+  "aria-label"?: React.AriaAttributes["aria-label"];
+};
+
+<div aria-label="test" aria-labelledby="hello"></div>;
 
 /**
- * A radio input styled as a button, to be used within <RadioGroup/>
+ * A radio input styled as a button, to be used within `<RadioGroup/>` this is
+ * the radio inputs version of `<OakSearchFilterCheckBox/>`
  *
  * ## Events
  * The following callbacks are available for tracking focus events:
@@ -107,16 +112,7 @@ export type OakRadioAsButtonProps = Omit<
  */
 export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
   const id = useId();
-  const {
-    value,
-    disabled,
-    innerRef,
-    displayValue,
-    icon,
-    "aria-labelledby": ariaLabelledBy,
-    "aria-label": ariaLabel,
-    ...rest
-  } = props;
+  const { value, disabled, innerRef, displayValue, icon, ...rest } = props;
   const { name } = useContext(RadioContext);
 
   const defaultRef = useRef<HTMLInputElement>(null);
@@ -137,9 +133,6 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
         $ph={"inner-padding-s"}
         $pv={"inner-padding-ssx"}
         $gap={"space-between-sssx"}
-        role="radiogroup"
-        aria-labelledby={ariaLabelledBy}
-        aria-label={ariaLabel}
       >
         <StyledInternalRadio
           id={id}
