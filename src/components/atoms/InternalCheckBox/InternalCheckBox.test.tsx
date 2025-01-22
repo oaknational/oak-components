@@ -6,7 +6,7 @@ import { fireEvent } from "@testing-library/react";
 import { InternalCheckBox } from "./InternalCheckBox";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { OakThemeProvider } from "@/components/atoms";
+import { OakThemeProvider } from "@/components/atoms/OakThemeProvider";
 import { oakDefaultTheme } from "@/styles";
 
 describe("InternalCheckBox", () => {

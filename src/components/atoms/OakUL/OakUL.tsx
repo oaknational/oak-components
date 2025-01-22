@@ -1,10 +1,12 @@
 import styled, { css } from "styled-components";
 
+import { oakFlexCss, OakFlexProps } from "@/components/atoms/OakFlex";
 import { OakBoxProps, oakBoxCss } from "@/components/atoms/OakBox";
 
-export type OakULProps = OakBoxProps & {
-  $reset?: boolean;
-};
+export type OakULProps = OakBoxProps &
+  OakFlexProps & {
+    $reset?: boolean;
+  };
 
 /**
  * Styled `ul` (unordered list) component.
@@ -23,5 +25,7 @@ export const OakUL = styled.ul<OakULProps>`
       padding: 0;
     `}
   margin: 0;
+  display: block;
   ${oakBoxCss}
+  ${(props) => props.$display && oakFlexCss}
 `;

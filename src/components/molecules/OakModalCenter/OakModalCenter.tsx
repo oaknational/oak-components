@@ -30,6 +30,10 @@ export type OakModalCenterProps = {
    */
   modalFlexProps?: Partial<OakFlexProps & HTMLAttributes<Element>>;
   /**
+   * Override HTMLAttributes & OakFlex props for the inner modal container
+   */
+  modalInnerFlexProps?: Partial<OakFlexProps & HTMLAttributes<Element>>;
+  /**
    * Override HTMLAttributes & OakFlex props for the backdrop container
    */
   backdropFlexProps?: Partial<OakFlexProps & HTMLAttributes<Element>>;
@@ -93,6 +97,7 @@ const FadeInFlex = styled(OakFlex)<{ $state: TransitionStatus }>`
  * - **disableEscapeKey?** \-       If true, pressing the escape key will not call onClose
  * - **hideCloseButton?** \-        If true, the close button will be hidden
  * - **modalFlexProps?** \-         Override HTMLAttributes & OakFlex props for the modal container
+ * - **modalInnerFlexProps?** \-    Override HTMLAttributes & OakFlex props for the inner modal container
  * - **backdropFlexProps?** \-      Override HTMLAttributes & OakFlex props for the backdrop container
  * - **footerSlot?** \-             Fixed area at the bottom of the modal, this will remain fixed in view if the content is scrollable
  */
@@ -105,6 +110,7 @@ export const OakModalCenter = ({
   disableEscapeKey = false,
   hideCloseButton = false,
   modalFlexProps,
+  modalInnerFlexProps,
   backdropFlexProps,
   footerSlot,
 }: OakModalCenterProps) => {
@@ -248,6 +254,7 @@ export const OakModalCenter = ({
                         : "border-solid-none"
                     }
                     $borderColor="border-neutral-lighter"
+                    {...modalInnerFlexProps}
                   >
                     {children}
                   </OakFlex>

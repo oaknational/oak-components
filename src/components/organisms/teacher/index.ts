@@ -5,3 +5,5 @@ export * from "./OakUnitListOptionalityItem";
 export * from "./OakUnitListOptionalityItemCard";
 export * from "./OakUnitsContainer";
 export * from "./OakUnitsHeader";
+export * from "./OakTeacherNotesModal";
+export * from "./OakTeacherNotesInline";

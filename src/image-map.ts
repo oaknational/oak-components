@@ -66,6 +66,8 @@ export const icons = {
   play: "v1732099511/icons/g1xehzuhjnb0xeftmdno.svg",
   "bookmark-outlined": "v1734519491/icons/bookmark-outlined_rxe5v0.svg",
   "bookmark-filled": "v1734519491/icons/bookmark-filled_jz828n.svg",
+  "microsoft-teams": "v1736429692/microsoft-teams_gelfmi.svg",
+  "google-classroom": "v1736429692/google-classroom_pedfpd.svg",
   // subject icons
   "subject-art": "v1706616347/subject-icons/art.svg",
   "subject-biology": "v1706616415/subject-icons/biology.svg",
@@ -104,7 +106,7 @@ export const icons = {
   "subject-independent-living":
     "v1706616419/subject-icons/independent-living.svg",
   "subject-latin": "v1706616420/subject-icons/latin.svg",
-  "subject-literacy": "v1706616420/subject-icons/latin.svg",
+  "subject-literacy": "v1706616417/subject-icons/english.svg",
   "subject-maths": "v1706616421/subject-icons/maths.svg",
   "subject-music": "v1728570203/subject-icons/music-hollow.svg",
   "subject-numeracy": "v1706616422/subject-icons/numeracy.svg",
