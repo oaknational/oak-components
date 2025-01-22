@@ -87,8 +87,6 @@ export type OakRadioAsButtonProps = Omit<
   "aria-label"?: React.AriaAttributes["aria-label"];
 };
 
-<div aria-label="test" aria-labelledby="hello"></div>;
-
 /**
  * A radio input styled as a button, to be used within `<RadioGroup/>` this is
  * the radio inputs version of `<OakSearchFilterCheckBox/>`

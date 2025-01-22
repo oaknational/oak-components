@@ -168,14 +168,13 @@ exports[`OakRadioAsButton matches snapshot 1`] = `
       onClick={[Function]}
     >
       <input
-        aria-label="Select an option"
         className="c5 c6"
         id=":r0:"
         name="default"
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         type="radio"
-        value="Option 1"
+        value="history"
       />
       <div
         className="c7 "
@@ -210,7 +209,7 @@ exports[`OakRadioAsButton matches snapshot 1`] = `
         htmlFor=":r0:"
         pointerEvents="none"
       >
-        Option 1
+        History
       </label>
     </div>
   </div>,

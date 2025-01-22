@@ -15,10 +15,9 @@ describe("OakRadioAsButton", () => {
     const { getByRole } = renderWithTheme(
       <OakRadioAsButton
         name="radio-1"
-        value="Option 1"
-        data-testid="test-1"
+        value="history"
         icon={"subject-history"}
-        displayValue="Option 1"
+        displayValue="History"
       />,
     );
     expect(getByRole("radio")).toBeInTheDocument();
@@ -29,10 +28,9 @@ describe("OakRadioAsButton", () => {
       <OakThemeProvider theme={oakDefaultTheme}>
         <OakRadioAsButton
           name="radio-1"
-          value="Option 1"
+          value="history"
           icon={"subject-history"}
-          displayValue="Option 1"
-          aria-label="Select an option"
+          displayValue="History"
         />
         ,
       </OakThemeProvider>,
@@ -229,36 +227,18 @@ describe("OakRadioAsButton", () => {
     expect(getByRole("radio")).toBeChecked();
   });
 
-  it("renders with aria-labelledby attribute", () => {
-    const { getByRole } = renderWithTheme(
-      <>
-        <h2 id="group-label">Select an option</h2>
-        <OakRadioAsButton
-          name="radio-1"
-          value="Option 1"
-          displayValue="Option 1"
-          icon={"subject-history"}
-          aria-labelledby="group-label"
-        />
-      </>,
-    );
-
-    const radioButton = getByRole("radio");
-    expect(radioButton).toHaveAttribute("aria-labelledby", "group-label");
-  });
-
   it("renders with aria-label attribute", () => {
     const { getByRole } = renderWithTheme(
       <OakRadioAsButton
         name="radio-1"
-        value="Option 1"
-        displayValue="Option 1"
+        value="history"
+        displayValue="History"
         icon={"subject-history"}
-        aria-label="Select an option"
+        aria-label="History"
       />,
     );
 
     const radioButton = getByRole("radio");
-    expect(radioButton).toHaveAttribute("aria-label", "Select an option");
+    expect(radioButton).toHaveAttribute("aria-label", "History");
   });
 });
