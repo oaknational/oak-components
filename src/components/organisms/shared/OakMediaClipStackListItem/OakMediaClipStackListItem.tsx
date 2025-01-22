@@ -142,11 +142,12 @@ export const OakMediaClipStackListItem = (
           ) : (
             <OakIcon
               fill
-              $height={"100%"}
-              $width={"100%"}
+              $width={["all-spacing-15", "all-spacing-15", "all-spacing-18"]}
+              $height={["all-spacing-11", "all-spacing-11", "all-spacing-15"]}
               iconName={"audio-clip-large"}
               alt={imageAltText}
-              $borderRadius={"border-radius-xs"}
+              $position={"absolute"}
+              $borderRadius={"border-radius-s"}
             />
           )}
           <OakIcon
