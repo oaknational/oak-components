@@ -23,6 +23,7 @@ export type OakMediaClipStackListItemProps = {
   imageUrl?: string;
   imageAltText: string;
   numberOfClips: number;
+  isAudioClip: boolean;
 };
 
 const OakMediaClipStackListItemLink = styled(OakFlex)`
@@ -102,7 +103,15 @@ const StyledMediaClipImage = styled(OakImage)`
 export const OakMediaClipStackListItem = (
   props: OakMediaClipStackListItemProps,
 ) => {
-  const { title, numberOfClips, imageUrl, imageAltText, href, ...rest } = props;
+  const {
+    title,
+    numberOfClips,
+    imageUrl,
+    imageAltText,
+    href,
+    isAudioClip,
+    ...rest
+  } = props;
 
   return (
     <OakMediaClipStackListItemLink
@@ -123,12 +132,23 @@ export const OakMediaClipStackListItem = (
           $position={"relative"}
           $mb={["space-between-none", "space-between-none", "space-between-xs"]}
         >
-          <StyledMediaClipImage
-            src={!imageUrl ? oakPlaceholder : imageUrl}
-            alt={imageAltText}
-            $borderRadius={"border-radius-s"}
-            $overflow={"hidden"}
-          />
+          {!isAudioClip ? (
+            <StyledMediaClipImage
+              src={!imageUrl ? oakPlaceholder : imageUrl}
+              alt={imageAltText}
+              $borderRadius={"border-radius-s"}
+              $overflow={"hidden"}
+            />
+          ) : (
+            <OakIcon
+              fill
+              $height={"100%"}
+              $width={"100%"}
+              iconName={"audio-clip-large"}
+              alt={imageAltText}
+              $borderRadius={"border-radius-xs"}
+            />
+          )}
           <OakIcon
             id="play-icon"
             iconName="play"
