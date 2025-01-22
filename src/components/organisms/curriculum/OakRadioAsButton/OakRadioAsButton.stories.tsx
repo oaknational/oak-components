@@ -55,6 +55,7 @@ export const WithAriaLabel: Story = {
     value: "Option 1",
     displayValue: "Art and design",
     icon: "subject-art",
+    "aria-label": "Test aria label",
   },
 };
 
