@@ -57,7 +57,6 @@ const ImageStackShadow = styled(OakBox)`
   margin-right: 15px;
 
   img {
-    object-fit: fill;
     -webkit-filter: brightness(100%);
   }
 
@@ -98,6 +97,10 @@ const StyledMediaClipImage = styled(OakImage)`
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
+  img {
+    object-fit: fill;
+    border-radius: ${parseBorderRadius("border-radius-s")};
+  }
 `;
 
 export const OakMediaClipStackListItem = (
@@ -141,13 +144,14 @@ export const OakMediaClipStackListItem = (
             />
           ) : (
             <OakIcon
-              fill
               $width={["all-spacing-15", "all-spacing-15", "all-spacing-18"]}
               $height={["all-spacing-11", "all-spacing-11", "all-spacing-15"]}
               iconName={"audio-clip-large"}
               alt={imageAltText}
               $position={"absolute"}
               $borderRadius={"border-radius-s"}
+              $overflow={"hidden"}
+              $objectFit={"cover"}
             />
           )}
           <OakIcon
