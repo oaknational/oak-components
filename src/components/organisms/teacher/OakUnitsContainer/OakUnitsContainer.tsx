@@ -1,7 +1,10 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { OakUnitsHeader } from "@/components/organisms/teacher/OakUnitsHeader";
+import {
+  OakUnitsHeader,
+  OakUnitsHeaderProps,
+} from "@/components/organisms/teacher/OakUnitsHeader";
 import { OakFlex, OakUL } from "@/components/atoms";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 
@@ -11,13 +14,9 @@ const OakULFlex = styled(OakUL)`
   gap: ${parseSpacing("space-between-xs")};
 `;
 
-export type OakUnitsContainerProps = {
-  isLegacy: boolean;
+export type OakUnitsContainerProps = OakUnitsHeaderProps & {
   showHeader: boolean;
   unitCards: Array<React.ReactNode>;
-  subject: string;
-  phase: string;
-  curriculumHref: string;
 };
 
 const OakUnitsContainerCss = css<OakUnitsContainerProps>``;
@@ -45,7 +44,7 @@ const UnstyledComponent = (props: OakUnitsContainerProps) => {
       {showHeader && (
         <OakUnitsHeader
           isLegacy={isLegacy}
-          href={curriculumHref}
+          curriculumHref={curriculumHref}
           phase={phase}
           subject={subject}
           $width="100%"
