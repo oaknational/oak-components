@@ -38,6 +38,22 @@ describe("RadioGroup", () => {
     expect(label).toBeInTheDocument();
   });
 
+  it("renders with aria-labelledby attribute", () => {
+    const { getByRole } = renderWithTheme(
+      <>
+        <h2 id="radio-group-label">Choose a subject</h2>
+        <OakRadioGroup name="test" aria-labelledby="radio-group-label">
+          <OakRadioButton id="radio-1" value="1" label="Option 1" />
+          <OakRadioButton id="radio-2" value="2" label="Option 2" />
+          <OakRadioButton id="radio-3" value="3" label="Option 3" />
+        </OakRadioGroup>
+      </>,
+    );
+
+    const radioGroup = getByRole("radiogroup");
+    expect(radioGroup).toHaveAttribute("aria-labelledby", "radio-group-label");
+  });
+
   it("matches snapshot", () => {
     const tree = create(
       <ThemeProvider theme={oakDefaultTheme}>
