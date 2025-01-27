@@ -9,7 +9,7 @@ export type OakUnitsHeaderProps = {
   isLegacy: boolean;
   subject: string;
   phase: string;
-  href: string;
+  href: string | null;
 } & SizeStyleProps;
 
 const OakUnitsHeaderCss = css<OakUnitsHeaderProps>`
@@ -67,7 +67,13 @@ const UnstyledComponent = (props: OakUnitsHeaderProps) => {
           {subheading}
         </OakTypography>
       </OakFlex>
-      <CurriculumDownloadButton isLegacy={isLegacy} phase={phase} href={href} />
+      {href && (
+        <CurriculumDownloadButton
+          isLegacy={isLegacy}
+          phase={phase}
+          href={href}
+        />
+      )}
     </OakFlex>
   );
 };
