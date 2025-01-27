@@ -10,7 +10,7 @@ const meta: Meta<typeof OakUnitsHeader> = {
     isLegacy: { type: "boolean" },
     subject: { type: "string" },
     phase: { type: "string" },
-    href: {
+    curriculumHref: {
       control: {
         type: "radio",
       },
@@ -20,7 +20,7 @@ const meta: Meta<typeof OakUnitsHeader> = {
   },
   parameters: {
     controls: {
-      include: ["isLegacy", "subject", "phase", "href"],
+      include: ["isLegacy", "subject", "phase", "curriculumHref"],
     },
   },
 };
@@ -35,6 +35,6 @@ export const Default: Story = {
     isLegacy: false,
     subject: "maths",
     phase: "secondary",
-    href: "Url",
+    curriculumHref: "Url",
   },
 };

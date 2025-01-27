@@ -9,23 +9,21 @@ export type OakUnitsHeaderProps = {
   isLegacy: boolean;
   subject: string;
   phase: string;
-  href: string | null;
+  curriculumHref: string | null;
 } & SizeStyleProps;
 
 const OakUnitsHeaderCss = css<OakUnitsHeaderProps>`
   ${sizeStyle}
 `;
 
-const CurriculumDownloadButton = (props: {
-  isLegacy: boolean;
-  phase: string;
-  href: string;
-}) => {
-  return (
+const CurriculumDownloadButton = (
+  props: Omit<OakUnitsHeaderProps, "subject">,
+) => {
+  return props.curriculumHref ? (
     <OakTertiaryButton
       element="a"
       iconName="chevron-right"
-      href={props.href}
+      href={props.curriculumHref}
       isTrailingIcon={true}
       $pt={["inner-padding-xs", "inner-padding-none"]}
     >
@@ -33,11 +31,11 @@ const CurriculumDownloadButton = (props: {
         ? "Curriculum download"
         : `Full ${props.phase.toLowerCase()} curriculum`}
     </OakTertiaryButton>
-  );
+  ) : null;
 };
 
 const UnstyledComponent = (props: OakUnitsHeaderProps) => {
-  const { subject, isLegacy, phase, href, ...rest } = props;
+  const { subject, isLegacy, phase, curriculumHref: href, ...rest } = props;
 
   const sentenceCaseSubject =
     subject.slice(0, 1).toUpperCase() + subject.slice(1).toLowerCase();
@@ -71,7 +69,7 @@ const UnstyledComponent = (props: OakUnitsHeaderProps) => {
         <CurriculumDownloadButton
           isLegacy={isLegacy}
           phase={phase}
-          href={href}
+          curriculumHref={href}
         />
       )}
     </OakFlex>
