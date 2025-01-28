@@ -88,7 +88,7 @@ export type OakRadioAsButtonProps = Omit<
 };
 
 /**
- * A radio input styled as a button, to be used within `<RadioGroup/>` this is
+ * A radio input styled as a button, to be used within `<OakRadioGroup/>` this is
  * the radio inputs version of `<OakSearchFilterCheckBox/>`
  *
  * ## Events

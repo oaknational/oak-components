@@ -123,6 +123,82 @@ describe("OakRadioAsButton", () => {
     expect(onChange).toHaveBeenCalledTimes(2);
   });
 
+  it("should update checked attribute in DOM", () => {
+    const { getAllByRole } = renderWithTheme(
+      <OakRadioGroup name="test-group" value="option1">
+        <OakRadioAsButton value="option1" displayValue="Option 1" />
+        <OakRadioAsButton value="option2" displayValue="Option 2" />
+      </OakRadioGroup>,
+    );
+
+    const radios = getAllByRole("radio") as HTMLInputElement[];
+    fireEvent.click(radios[0]!);
+
+    console.log("DOM checked states:", [radios[0]!.checked]);
+    expect(radios[0]!.checked).toBe(true);
+  });
+
+  it("should uncheck previous selection", () => {
+    const { getAllByRole } = renderWithTheme(
+      <OakRadioGroup name="test-group">
+        <OakRadioAsButton value="option1" displayValue="Option 1" />
+        <OakRadioAsButton value="option2" displayValue="Option 2" />
+      </OakRadioGroup>,
+    );
+
+    const radios = getAllByRole("radio") as HTMLInputElement[];
+
+    fireEvent.click(radios[0]!);
+    console.log("After first click:", [radios[0]!.checked, radios[1]!.checked]);
+
+    fireEvent.click(radios[1]!);
+    console.log("After second click:", [
+      radios[0]!.checked,
+      radios[1]!.checked,
+    ]);
+
+    expect(radios[0]!.checked).toBe(false);
+    expect(radios[1]!.checked).toBe(true);
+  });
+
+  it("should maintain single value in group", () => {
+    let groupValue = "";
+    const { getAllByRole } = renderWithTheme(
+      <OakRadioGroup
+        name="test-group"
+        onChange={(e) => (groupValue = e.target.value)}
+      >
+        <OakRadioAsButton value="option1" displayValue="Option 1" />
+        <OakRadioAsButton value="option2" displayValue="Option 2" />
+      </OakRadioGroup>,
+    );
+
+    fireEvent.click(getAllByRole("radio")[0]!);
+    console.log("Group value after first click:", groupValue);
+
+    fireEvent.click(getAllByRole("radio")[1]!);
+    console.log("Group value after second click:", groupValue);
+
+    expect(groupValue).toBe("option2");
+  });
+
+  it("should pass the correct value in onChange", () => {
+    let lastValue = "";
+    const { getAllByRole } = renderWithTheme(
+      <OakRadioGroup
+        name="test-group"
+        onChange={(e) => (lastValue = e.target.value)}
+      >
+        <OakRadioAsButton value="option1" displayValue="Option 1" />
+        <OakRadioAsButton value="option2" displayValue="Option 2" />
+      </OakRadioGroup>,
+    );
+
+    fireEvent.click(getAllByRole("radio")[1]!);
+    console.log("Last received value:", lastValue);
+    expect(lastValue).toBe("option2");
+  });
+
   it("inputs to have name of radio group", () => {
     const onChange = jest.fn();
     const { getAllByRole, getByRole } = renderWithTheme(
