@@ -20,7 +20,11 @@ describe("InternalRadio", () => {
   it("matches snapshot", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
-        <InternalRadio id="radio-1" value="Option 1" />
+        <InternalRadio
+          id="radio-1"
+          name="internal-radio-group"
+          value="Option 1"
+        />
       </OakThemeProvider>,
     ).toJSON();
     expect(tree).toMatchSnapshot();

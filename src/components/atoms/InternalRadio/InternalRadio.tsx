@@ -70,7 +70,6 @@ const BaseRadio = forwardRef(
         type="radio"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        name={props.id}
         {...rest}
       />
     );
