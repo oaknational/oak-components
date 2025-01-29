@@ -134,7 +134,6 @@ describe("OakRadioAsButton", () => {
     const radios = getAllByRole("radio") as HTMLInputElement[];
     fireEvent.click(radios[0]!);
 
-    console.log("DOM checked states:", [radios[0]!.checked]);
     expect(radios[0]!.checked).toBe(true);
   });
 
@@ -149,13 +148,7 @@ describe("OakRadioAsButton", () => {
     const radios = getAllByRole("radio") as HTMLInputElement[];
 
     fireEvent.click(radios[0]!);
-    console.log("After first click:", [radios[0]!.checked, radios[1]!.checked]);
-
     fireEvent.click(radios[1]!);
-    console.log("After second click:", [
-      radios[0]!.checked,
-      radios[1]!.checked,
-    ]);
 
     expect(radios[0]!.checked).toBe(false);
     expect(radios[1]!.checked).toBe(true);
@@ -174,10 +167,7 @@ describe("OakRadioAsButton", () => {
     );
 
     fireEvent.click(getAllByRole("radio")[0]!);
-    console.log("Group value after first click:", groupValue);
-
     fireEvent.click(getAllByRole("radio")[1]!);
-    console.log("Group value after second click:", groupValue);
 
     expect(groupValue).toBe("option2");
   });
@@ -195,11 +185,10 @@ describe("OakRadioAsButton", () => {
     );
 
     fireEvent.click(getAllByRole("radio")[1]!);
-    console.log("Last received value:", lastValue);
     expect(lastValue).toBe("option2");
   });
 
-  it("inputs to have name of radio group", () => {
+  it("inputs to all have name of radio group", () => {
     const onChange = jest.fn();
     const { getAllByRole, getByRole } = renderWithTheme(
       <OakRadioGroup name="test">

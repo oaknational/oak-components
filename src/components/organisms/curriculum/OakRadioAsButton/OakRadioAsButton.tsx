@@ -85,6 +85,7 @@ export type OakRadioAsButtonProps = Omit<
   value?: HTMLInputElement["value"];
   "aria-labelledby"?: React.AriaAttributes["aria-labelledby"];
   "aria-label"?: React.AriaAttributes["aria-label"];
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
 /**
@@ -110,8 +111,9 @@ export type OakRadioAsButtonProps = Omit<
  */
 export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
   const id = useId();
-  const { value, disabled, innerRef, displayValue, icon, ...rest } = props;
-  const { name } = useContext(RadioContext);
+  const { value, disabled, innerRef, displayValue, icon, onChange, ...rest } =
+    props;
+  const { name, onValueUpdated } = useContext(RadioContext);
 
   const defaultRef = useRef<HTMLInputElement>(null);
   const inputRef = innerRef ?? defaultRef;
@@ -137,6 +139,10 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
           value={value}
           disabled={disabled}
           ref={inputRef}
+          onChange={(e) => {
+            onValueUpdated?.(e);
+            onChange?.(e);
+          }}
           {...rest}
           name={name}
         />
