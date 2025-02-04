@@ -74,14 +74,13 @@ const StyledFlexBox = styled(OakFlex)`
 
 export type OakRadioAsButtonProps = Omit<
   BaseRadioProps,
-  "defaultChecked" | "id"
+  "defaultChecked" | "id" | "checked"
 > & {
   innerRef?: React.RefObject<HTMLInputElement>;
   displayValue: string;
   icon?: OakIconName;
   keepIconColor?: boolean;
   disabled?: HTMLInputElement["disabled"];
-  checked?: HTMLInputElement["checked"];
   value?: HTMLInputElement["value"];
   "aria-labelledby"?: React.AriaAttributes["aria-labelledby"];
   "aria-label"?: React.AriaAttributes["aria-label"];
@@ -131,6 +130,8 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
     }
   };
 
+  const isChecked = currentValue === value;
+
   return (
     <OakFlex $minHeight={"all-spacing-8"} $position={"relative"}>
       <StyledFlexBox
@@ -145,6 +146,8 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
       >
         <StyledInternalRadio
           {...rest}
+          // This is a HACK to force a DOM update because of some chrome rendering issues
+          key={isChecked ? "checked" : "not-checked"}
           id={id}
           value={value}
           disabled={disabled}
@@ -154,7 +157,7 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
             onChange?.(e);
           }}
           name={name}
-          checked={currentValue === value}
+          checked={isChecked}
         />
         {icon && <StyledOakIcon alt="" iconName={icon} />}
         <InternalCheckBoxLabelHoverDecor

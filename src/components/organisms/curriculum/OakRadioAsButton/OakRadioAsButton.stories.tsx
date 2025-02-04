@@ -22,7 +22,11 @@ export default meta;
 type Story = StoryObj<typeof OakRadioAsButton>;
 
 export const Default: Story = {
-  render: (args) => <OakRadioAsButton {...args} />,
+  render: (args) => (
+    <OakRadioGroup name="test">
+      <OakRadioAsButton {...args} />
+    </OakRadioGroup>
+  ),
   args: {
     value: "a test value",
     displayValue: "Art and design",
@@ -36,7 +40,11 @@ export const Default: Story = {
 };
 
 export const NoIcon: Story = {
-  render: (args) => <OakRadioAsButton {...args} />,
+  render: (args) => (
+    <OakRadioGroup name="test">
+      <OakRadioAsButton {...args} />
+    </OakRadioGroup>
+  ),
   args: {
     value: "a test value",
     displayValue: "Art and design",
@@ -50,6 +58,11 @@ export const NoIcon: Story = {
 };
 
 export const WithAriaLabel: Story = {
+  render: (args) => (
+    <OakRadioGroup name="test">
+      <OakRadioAsButton {...args} />
+    </OakRadioGroup>
+  ),
   args: {
     name: "radio-1",
     value: "Option 1",
@@ -65,12 +78,12 @@ export const WithAriaLabelledBy: Story = {
       <h2 id="subject-label">Choose a subject</h2>
       <OakRadioGroup name="test" aria-labelledby="subject-label">
         <OakRadioAsButton
-          value="Option 1"
+          value="option_1"
           displayValue="Biology"
           icon="subject-biology"
         />
         <OakRadioAsButton
-          value="Option 1"
+          value="option_2"
           displayValue="Biology"
           icon="subject-biology"
         />
@@ -165,34 +178,36 @@ export const KeepIconColor: Story = {
           {...restArgs}
           displayValue="Art and design"
           icon="subject-art"
+          value="art"
         />
         <OakRadioAsButton
           {...restArgs}
           displayValue="Biology"
           icon="subject-biology"
+          value="biology"
         />
         <OakRadioAsButton
           {...restArgs}
           displayValue="Chemistry"
           icon="subject-chemistry"
+          value="chemistry"
         />
         <OakRadioAsButton
           {...restArgs}
           displayValue="Physics"
           icon="subject-physics"
+          value="physics"
         />
         <OakRadioAsButton
           {...restArgs}
           displayValue="Computing"
           icon="subject-computing"
+          value="computing"
         />
       </OakRadioGroup>
     );
   },
   args: {
-    value: "a test value",
-    displayValue: "Lessons",
-    icon: "teacher-unit",
     keepIconColor: true,
   },
   parameters: {
