@@ -169,6 +169,7 @@ exports[`OakRadioAsButton matches snapshot 1`] = `
     >
       <input
         className="c5 c6"
+        defaultChecked={false}
         id=":r0:"
         name="default"
         onChange={[Function]}

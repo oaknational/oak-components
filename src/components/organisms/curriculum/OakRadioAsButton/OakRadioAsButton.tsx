@@ -74,14 +74,13 @@ const StyledFlexBox = styled(OakFlex)`
 
 export type OakRadioAsButtonProps = Omit<
   BaseRadioProps,
-  "defaultChecked" | "id"
+  "defaultChecked" | "id" | "checked"
 > & {
   innerRef?: React.RefObject<HTMLInputElement>;
   displayValue: string;
   icon?: OakIconName;
   keepIconColor?: boolean;
   disabled?: HTMLInputElement["disabled"];
-  checked?: HTMLInputElement["checked"];
   value?: HTMLInputElement["value"];
   "aria-labelledby"?: React.AriaAttributes["aria-labelledby"];
   "aria-label"?: React.AriaAttributes["aria-label"];
@@ -113,14 +112,25 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
   const id = useId();
   const { value, disabled, innerRef, displayValue, icon, onChange, ...rest } =
     props;
-  const { name, onValueUpdated } = useContext(RadioContext);
+  const { name, onValueUpdated, currentValue } = useContext(RadioContext);
 
   const defaultRef = useRef<HTMLInputElement>(null);
   const inputRef = innerRef ?? defaultRef;
 
-  const handleContainerClick = () => {
-    inputRef.current?.click();
+  const handleContainerClick = (
+    e:
+      | React.MouseEvent<HTMLDivElement>
+      | React.MouseEvent<HTMLInputElement>
+      | React.MouseEvent<HTMLLabelElement>,
+  ) => {
+    const el = e.target as HTMLInputElement;
+
+    if (!el.isEqualNode(inputRef.current)) {
+      inputRef.current?.click();
+    }
   };
+
+  const isChecked = currentValue === value;
 
   return (
     <OakFlex $minHeight={"all-spacing-8"} $position={"relative"}>
@@ -135,6 +145,7 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
         $gap={"space-between-sssx"}
       >
         <StyledInternalRadio
+          {...rest}
           id={id}
           value={value}
           disabled={disabled}
@@ -143,8 +154,8 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
             onValueUpdated?.(e);
             onChange?.(e);
           }}
-          {...rest}
           name={name}
+          defaultChecked={isChecked}
         />
         {icon && <StyledOakIcon alt="" iconName={icon} />}
         <InternalCheckBoxLabelHoverDecor
