@@ -113,13 +113,22 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
   const id = useId();
   const { value, disabled, innerRef, displayValue, icon, onChange, ...rest } =
     props;
-  const { name, onValueUpdated } = useContext(RadioContext);
+  const { name, onValueUpdated, currentValue } = useContext(RadioContext);
 
   const defaultRef = useRef<HTMLInputElement>(null);
   const inputRef = innerRef ?? defaultRef;
 
-  const handleContainerClick = () => {
-    inputRef.current?.click();
+  const handleContainerClick = (
+    e:
+      | React.MouseEvent<HTMLDivElement>
+      | React.MouseEvent<HTMLInputElement>
+      | React.MouseEvent<HTMLLabelElement>,
+  ) => {
+    const el = e.target as HTMLInputElement;
+
+    if (!el.isEqualNode(inputRef.current)) {
+      inputRef.current?.click();
+    }
   };
 
   return (
@@ -135,6 +144,7 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
         $gap={"space-between-sssx"}
       >
         <StyledInternalRadio
+          {...rest}
           id={id}
           value={value}
           disabled={disabled}
@@ -143,8 +153,8 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
             onValueUpdated?.(e);
             onChange?.(e);
           }}
-          {...rest}
           name={name}
+          checked={currentValue === value}
         />
         {icon && <StyledOakIcon alt="" iconName={icon} />}
         <InternalCheckBoxLabelHoverDecor

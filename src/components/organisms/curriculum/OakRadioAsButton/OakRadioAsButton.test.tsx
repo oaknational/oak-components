@@ -1,5 +1,5 @@
 import "@testing-library/jest-dom";
-import React, { createRef } from "react";
+import React from "react";
 import { create } from "react-test-renderer";
 import { fireEvent } from "@testing-library/react";
 
@@ -214,6 +214,35 @@ describe("OakRadioAsButton", () => {
     expect(radios[1]).toHaveAttribute("name", "test");
   });
 
+  it("radio group value sets the correct input to checked", () => {
+    const { getAllByRole, getByRole } = renderWithTheme(
+      <OakRadioGroup name="test" value="option_2">
+        <OakRadioAsButton
+          value="option_1"
+          icon={"subject-history"}
+          displayValue="Option 1"
+        />
+        <OakRadioAsButton
+          value="option_2"
+          icon={"subject-biology"}
+          displayValue="Option 2"
+        />
+        <OakRadioAsButton
+          value="option_3"
+          icon={"subject-biology"}
+          displayValue="Option 3"
+        />
+      </OakRadioGroup>,
+    );
+    const radioGroup = getByRole("radiogroup");
+    const radios = getAllByRole("radio");
+    expect(radios).toHaveLength(3);
+    expect(radioGroup);
+    expect(radios[0]).not.toBeChecked();
+    expect(radios[1]).toBeChecked();
+    expect(radios[2]).not.toBeChecked();
+  });
+
   it("calls onFocus when focused", () => {
     const onFocus = jest.fn();
     const { getByRole } = renderWithTheme(
@@ -277,19 +306,34 @@ describe("OakRadioAsButton", () => {
     expect(onChange).not.toHaveBeenCalled();
   });
 
-  it("can be checked and unchecked using a ref", () => {
-    const ref = createRef<HTMLInputElement>();
-    const { getByRole } = renderWithTheme(
-      <OakRadioAsButton
-        name="radio-1"
-        value="Option 1"
-        innerRef={ref}
-        icon={"subject-history"}
-        displayValue="Option 1"
-      />,
+  it("clicking radio triggers onChange", async () => {
+    const onChange = jest.fn();
+    const { getAllByRole } = renderWithTheme(
+      <OakRadioGroup name="test" onChange={onChange}>
+        <OakRadioAsButton
+          value="option_1"
+          icon={"subject-history"}
+          displayValue="Option 1"
+        />
+        <OakRadioAsButton
+          value="option_2"
+          icon={"subject-biology"}
+          displayValue="Option 2"
+        />
+        <OakRadioAsButton
+          value="option_3"
+          icon={"subject-biology"}
+          displayValue="Option 3"
+        />
+      </OakRadioGroup>,
     );
-    ref.current?.click();
-    expect(getByRole("radio")).toBeChecked();
+    getAllByRole("radio")[1]?.click();
+    expect(onChange).toHaveBeenCalledTimes(1);
+    expect(onChange).toHaveBeenCalledWith(
+      expect.objectContaining({
+        target: expect.objectContaining({ value: "option_2" }),
+      }),
+    );
   });
 
   it("renders with aria-label attribute", () => {

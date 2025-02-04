@@ -115,6 +115,43 @@ export const MultipleOptions: Story = {
   ),
 };
 
+export const MultipleOptionsWithInitialValueSet: Story = {
+  render: () => (
+    <OakRadioGroup
+      name="subjects"
+      aria-label="Choose a subject"
+      $flexWrap={"wrap"}
+      value={"physics"}
+    >
+      <OakRadioAsButton
+        value="art"
+        displayValue="Art and design"
+        icon="subject-art"
+      />
+      <OakRadioAsButton
+        value="biology"
+        displayValue="Biology"
+        icon="subject-biology"
+      />
+      <OakRadioAsButton
+        value="chemistry"
+        displayValue="Chemistry"
+        icon="subject-chemistry"
+      />
+      <OakRadioAsButton
+        value="physics"
+        displayValue="Physics"
+        icon="subject-physics"
+      />
+      <OakRadioAsButton
+        value="computing"
+        displayValue="Computing"
+        icon="subject-computing"
+      />
+    </OakRadioGroup>
+  ),
+};
+
 export const KeepIconColor: Story = {
   render: (args) => {
     const { "aria-labelledby": _, ...restArgs } = args;
