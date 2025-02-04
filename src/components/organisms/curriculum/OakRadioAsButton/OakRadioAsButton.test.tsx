@@ -149,9 +149,8 @@ describe("OakRadioAsButton", () => {
 
     fireEvent.click(radios[0]!);
     fireEvent.click(radios[1]!);
-
-    expect(radios[0]!.checked).toBe(false);
-    expect(radios[1]!.checked).toBe(true);
+    expect(radios[0]).not.toBeChecked();
+    expect(radios[1]).toBeChecked();
   });
 
   it("should maintain single value in group", () => {

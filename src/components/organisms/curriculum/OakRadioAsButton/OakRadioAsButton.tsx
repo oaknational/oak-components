@@ -146,8 +146,6 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
       >
         <StyledInternalRadio
           {...rest}
-          // This is a HACK to force a DOM update because of some chrome rendering issues
-          key={isChecked ? "checked" : "not-checked"}
           id={id}
           value={value}
           disabled={disabled}
@@ -157,7 +155,7 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
             onChange?.(e);
           }}
           name={name}
-          checked={isChecked}
+          defaultChecked={isChecked}
         />
         {icon && <StyledOakIcon alt="" iconName={icon} />}
         <InternalCheckBoxLabelHoverDecor
