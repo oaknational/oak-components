@@ -3,12 +3,17 @@ import styled from "styled-components";
 
 import { OakBox, OakFlex, OakSpan } from "@/components/atoms";
 import { OakCombinedColorToken } from "@/styles";
+import { TypographyStyleProps } from "@/styles/utils/typographyStyle";
 
 const StyledCodeContainer = styled(OakBox)`
   font-family: "Roboto Mono", --font-roboto-mono, monospace;
 `;
 
-export const OakCodeRenderer = ({ string }: { string: string }) => {
+export type OakCodeRendererProps = {
+  string: string;
+} & TypographyStyleProps;
+
+export const OakCodeRenderer = ({ string, ...rest }: OakCodeRendererProps) => {
   const findAndStyleInlineCode = (text: string) => {
     const parts = text.split(/(`.*?`)/); // Matches text enclosed in backticks
     if (parts.length === 1 && !text.startsWith("`")) {
@@ -29,6 +34,7 @@ export const OakCodeRenderer = ({ string }: { string: string }) => {
                 $borderRadius={"border-radius-m2"}
                 $display={"inline-block"}
                 $font={["code-2", "code-1"]}
+                {...rest}
               >
                 {part.slice(1, -1)}
               </StyledCodeContainer>

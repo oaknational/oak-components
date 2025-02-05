@@ -3,6 +3,7 @@ import { Meta, StoryObj } from "@storybook/react";
 
 import { OakQuizHint } from "./OakQuizHint";
 
+import { OakCodeRenderer } from "@/components/molecules";
 import { OakBox } from "@/components/atoms";
 
 const meta: Meta<typeof OakQuizHint> = {
@@ -34,4 +35,12 @@ type Story = StoryObj<typeof OakQuizHint>;
 
 export const Default: Story = {
   render: (args) => <OakQuizHint {...args} />,
+};
+
+const hintWithCode = (
+  <OakCodeRenderer string={"Is it `true`?"} $font={"code-3"} />
+);
+
+export const WithCode: Story = {
+  render: () => <OakQuizHint hint={hintWithCode} id="test-id" />,
 };

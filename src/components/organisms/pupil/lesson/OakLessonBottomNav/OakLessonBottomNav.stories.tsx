@@ -4,7 +4,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { OakLessonBottomNav } from "./OakLessonBottomNav";
 
 import { OakFlex } from "@/components/atoms";
-import { OakPrimaryButton } from "@/components/molecules";
+import { OakPrimaryButton, OakCodeRenderer } from "@/components/molecules";
 
 const meta: Meta<typeof OakLessonBottomNav> = {
   component: OakLessonBottomNav,
@@ -149,5 +149,28 @@ export const WithNoAnswerFeedbackAndButton: Story = {
   ),
   args: {
     feedback: "incorrect",
+  },
+};
+
+export const FeedbackWithCode: Story = {
+  render: (args) => (
+    <OakLessonBottomNav {...args}>
+      <OakPrimaryButton
+        iconName="arrow-right"
+        isTrailingIcon
+        width={["100%", "max-content"]}
+      >
+        Next question
+      </OakPrimaryButton>
+    </OakLessonBottomNav>
+  ),
+  args: {
+    feedback: "incorrect",
+    answerFeedback: (
+      <OakCodeRenderer
+        string={"Correct answer: Is it `true`?"}
+        $font={"code-3"}
+      />
+    ),
   },
 };
