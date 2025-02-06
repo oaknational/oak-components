@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import styled from "styled-components";
 
-import { OakBox, OakFlex, OakSpan } from "@/components/atoms";
+import { OakBox, OakFlex, OakSpan, OakBoxProps } from "@/components/atoms";
 import { OakCombinedColorToken } from "@/styles";
 import { TypographyStyleProps } from "@/styles/utils/typographyStyle";
 
@@ -11,7 +11,8 @@ const StyledCodeContainer = styled(OakBox)`
 
 export type OakCodeRendererProps = {
   string: string;
-} & TypographyStyleProps;
+} & TypographyStyleProps &
+  OakBoxProps;
 
 export const OakCodeRenderer = ({ string, ...rest }: OakCodeRendererProps) => {
   const findAndStyleInlineCode = (text: string) => {
@@ -125,6 +126,7 @@ export const OakCodeRenderer = ({ string, ...rest }: OakCodeRendererProps) => {
         $whiteSpace={"pre-wrap"}
         $mt={"space-between-xl"}
         $font={"code-2"}
+        {...rest}
       >
         <OakFlex $flexDirection={"row"}>
           <OakFlex
