@@ -89,6 +89,7 @@ export const icons = {
     "v1706616417/subject-icons/design-technology.svg",
   "subject-drama": "v1706616417/subject-icons/drama.svg",
   "subject-english": "v1706616417/subject-icons/english.svg",
+  "subject-english-language": "v1706616419/subject-icons/language.svg",
   "subject-english-grammar": "v1706616417/subject-icons/english-grammar.svg",
   "subject-english-handwriting": "v1706616419/subject-icons/handwriting.svg",
   "subject-english-reading-for-pleasure":
