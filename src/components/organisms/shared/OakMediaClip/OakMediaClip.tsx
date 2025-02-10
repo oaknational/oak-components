@@ -9,6 +9,9 @@ import {
   OakIcon,
   OakImage,
   OakP,
+  OakLI,
+  oakPlaceholder,
+  placeholderStyles,
 } from "@/components/atoms";
 import { OakCombinedColorToken } from "@/styles";
 import { InternalButton } from "@/components/atoms/InternalButton";
@@ -72,6 +75,10 @@ const getButtonStyles = (muxPlayingState: MuxPlayingState): MediaClipStyles => {
 const MediaButtonWrapper = styled(StyledButtonWrapper)`
   min-height: 72px;
   width: 100%;
+`;
+
+export const StyledMediaClipImage = styled(OakImage)`
+  ${placeholderStyles}
 `;
 
 const ImageBox = styled(OakFlex)<{ disabled?: boolean }>`
@@ -168,125 +175,132 @@ export const OakMediaClip = ({
   const buttonStyles = getButtonStyles(muxPlayingState);
 
   return (
-    <MediaButtonWrapper
-      $position={"relative"}
-      $borderRadius={"border-radius-s"}
-    >
-      <OakBox
-        className="grey-shadow"
-        $position={"absolute"}
-        $borderRadius={"border-radius-s"}
-        $width={"100%"}
-        $height={"100%"}
-        $top="all-spacing-0"
-      />
-
-      <OakBox
-        className="yellow-shadow"
-        $position={"absolute"}
-        $borderRadius={"border-radius-s"}
-        $width={"100%"}
-        $height={"100%"}
-        $top="all-spacing-0"
-      />
-      <StyledInternalButton
-        element={element}
-        tabIndex={0}
-        className="internal-button"
-        $width={"100%"}
-        $height={"100%"}
-        $background={buttonStyles.defaultBackground}
-        $borderColor="transparent"
-        $borderRadius={"border-radius-s"}
+    <OakLI $mb={"space-between-ssx"}>
+      <MediaButtonWrapper
         $position={"relative"}
-        disabled={disabled}
-        defaultBorderColor="transparent"
-        $color={buttonStyles.defaultTextColor}
-        $hoverBackground={buttonStyles.hoverBackground}
-        $hoverBorderColor="transparent"
-        $hoverTextColor="text-primary"
-        $disabledBackground="bg-btn-secondary-disabled"
-        $disabledBorderColor="text-disabled"
-        $disabledTextColor="text-disabled"
-        justifyContent={"flex-start"}
-        onClick={onClick}
-        $pa={"inner-padding-xs"}
-        muxPlayingState={muxPlayingState}
+        $borderRadius={"border-radius-s"}
       >
-        <OakFlex $flexDirection={"row"} $alignItems={"center"} $width={"100%"}>
-          <>
-            <ImageBox
-              $height={"all-spacing-10"}
-              $width={"all-spacing-15"}
-              $borderRadius={"border-radius-xs"}
-              $mr={"space-between-s"}
-              $position={"relative"}
-              disabled={disabled}
-              $flexShrink={0}
-            >
-              {!isAudioClip && thumbnailImage ? (
-                <OakImage
-                  fill
-                  $height={"100%"}
-                  $width={"100%"}
-                  src={thumbnailImage}
-                  alt={imageAltText}
-                  $borderRadius={"border-radius-xs"}
-                />
-              ) : (
-                <OakIcon
-                  fill
-                  $height={"100%"}
-                  $width={"100%"}
-                  iconName={"audio-clip-small"}
-                  alt={imageAltText}
-                  $borderRadius={"border-radius-xs"}
-                />
-              )}
-              <OakTimer
-                timeCode={timeCode}
-                $position={"absolute"}
-                $bottom={"space-between-sssx"}
-                $right={"space-between-sssx"}
-              />
-            </ImageBox>
+        <OakBox
+          className="grey-shadow"
+          $position={"absolute"}
+          $borderRadius={"border-radius-s"}
+          $width={"100%"}
+          $height={"100%"}
+          $top="all-spacing-0"
+        />
 
-            <TextBox
-              $width={"100%"}
-              $flexDirection={"column"}
-              $gap={"space-between-sssx"}
-            >
-              <OakHeading
-                $textOverflow={"ellipsis"}
-                tag="h4"
-                $font={"heading-7"}
-                $color={
-                  !disabled ? buttonStyles.clipNameTitle : "text-disabled"
-                }
+        <OakBox
+          className="yellow-shadow"
+          $position={"absolute"}
+          $borderRadius={"border-radius-s"}
+          $width={"100%"}
+          $height={"100%"}
+          $top="all-spacing-0"
+        />
+        <StyledInternalButton
+          element={element}
+          tabIndex={0}
+          className="internal-button"
+          $width={"100%"}
+          $height={"100%"}
+          $background={buttonStyles.defaultBackground}
+          $borderColor="transparent"
+          $borderRadius={"border-radius-s"}
+          $position={"relative"}
+          disabled={disabled}
+          defaultBorderColor="transparent"
+          $color={buttonStyles.defaultTextColor}
+          $hoverBackground={buttonStyles.hoverBackground}
+          $hoverBorderColor="transparent"
+          $hoverTextColor="text-primary"
+          $disabledBackground="bg-btn-secondary-disabled"
+          $disabledBorderColor="text-disabled"
+          $disabledTextColor="text-disabled"
+          justifyContent={"flex-start"}
+          onClick={onClick}
+          $pa={"inner-padding-xs"}
+          muxPlayingState={muxPlayingState}
+        >
+          <OakFlex
+            $flexDirection={"row"}
+            $alignItems={"center"}
+            $width={"100%"}
+          >
+            <>
+              <ImageBox
+                $height={"all-spacing-10"}
+                $width={"all-spacing-15"}
+                $borderRadius={"border-radius-xs"}
+                $mr={"space-between-s"}
+                $position={"relative"}
+                disabled={disabled}
+                $flexShrink={0}
               >
-                {clipName}
-              </OakHeading>
-              {learningCycle && (
-                <OakP
-                  $color={!disabled ? "text-subdued" : "text-disabled"}
-                  $font={"body-3"}
+                {!isAudioClip && thumbnailImage ? (
+                  <StyledMediaClipImage
+                    fill
+                    $height={"100%"}
+                    $width={"100%"}
+                    src={thumbnailImage ?? oakPlaceholder}
+                    alt={imageAltText}
+                    $showOakPlaceholder={!thumbnailImage ? true : false}
+                    $borderRadius={"border-radius-xs"}
+                  />
+                ) : (
+                  <OakIcon
+                    fill
+                    $height={"100%"}
+                    $width={"100%"}
+                    iconName={"audio-clip-small"}
+                    alt={imageAltText}
+                    $borderRadius={"border-radius-xs"}
+                  />
+                )}
+                <OakTimer
+                  timeCode={timeCode}
+                  $position={"absolute"}
+                  $bottom={"space-between-sssx"}
+                  $right={"space-between-sssx"}
+                />
+              </ImageBox>
+
+              <TextBox
+                $width={"100%"}
+                $flexDirection={"column"}
+                $gap={"space-between-sssx"}
+              >
+                <OakHeading
                   $textOverflow={"ellipsis"}
-                  $overflow={"hidden"}
-                  $whiteSpace={"nowrap"}
+                  tag="h4"
+                  $font={"heading-7"}
+                  $color={
+                    !disabled ? buttonStyles.clipNameTitle : "text-disabled"
+                  }
                 >
-                  {learningCycle}
-                </OakP>
-              )}
-            </TextBox>
-          </>
-          {muxPlayingState === "played" && !disabled && (
-            <OakFlex $flexGrow={1}>
-              <OakTagFunctional label="Played" $background={"bg-neutral"} />
-            </OakFlex>
-          )}
-        </OakFlex>
-      </StyledInternalButton>
-    </MediaButtonWrapper>
+                  {clipName}
+                </OakHeading>
+                {learningCycle && (
+                  <OakP
+                    $color={!disabled ? "text-subdued" : "text-disabled"}
+                    $font={"body-3"}
+                    $textOverflow={"ellipsis"}
+                    $overflow={"hidden"}
+                    $whiteSpace={"nowrap"}
+                  >
+                    {learningCycle}
+                  </OakP>
+                )}
+              </TextBox>
+            </>
+            {muxPlayingState === "played" && !disabled && (
+              <OakFlex $flexGrow={1}>
+                <OakTagFunctional label="Played" $background={"bg-neutral"} />
+              </OakFlex>
+            )}
+          </OakFlex>
+        </StyledInternalButton>
+      </MediaButtonWrapper>
+    </OakLI>
   );
 };
 

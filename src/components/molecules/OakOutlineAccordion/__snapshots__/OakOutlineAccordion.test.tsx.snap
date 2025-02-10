@@ -27,21 +27,36 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
 
 .c13 {
   position: relative;
-  width: 2rem;
-  min-width: 2rem;
-  height: 2rem;
-  min-height: 2rem;
   margin-right: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
+.c14 {
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
 .c15 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c17 {
+  position: relative;
   overflow: scroll;
   font-family: --var(google-font),Lexend,sans-serif;
   overflow: scroll;
 }
 
-.c14 {
+.c16 {
   object-fit: contain;
 }
 
@@ -96,7 +111,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   padding: 0;
 }
 
-.c17 {
+.c19 {
   position: absolute;
   width: 100%;
   bottom: -0.25rem;
@@ -117,11 +132,16 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   justify-content: space-between;
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
+  position: relative;
 }
 
 .c12:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+.c12:focus-visible .shadow {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
 .c7 {
@@ -139,12 +159,25 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c7 .c16 {
+.c7 .c18 {
   visibility: hidden;
 }
 
-.c7 .c11:focus-visible ~ .c16 {
+.c7 .c11:focus-visible ~ .c18 {
   visibility: visible;
+}
+
+.c20 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  opacity: 0;
+  z-index: 100;
+  -webkit-box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
+  -moz-box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
+  box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
+  padding: 2px;
 }
 
 .c4 {
@@ -153,7 +186,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   bottom: 0.125rem;
 }
 
-.c18 {
+.c21 {
   height: 0.125rem;
   position: absolute;
   width: 100%;
@@ -197,49 +230,62 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
       See more
       <div
         className="c13"
-        style={
-          {
-            "transform": "rotate(180deg)",
-            "transition": "all 0.3s ease 0s",
-          }
-        }
       >
-        <img
-          alt="An arrow to indicate whether the item is open or closed"
-          className="c14"
-          data-nimg="fill"
-          decoding="async"
-          loading="lazy"
-          onError={[Function]}
-          onLoad={[Function]}
-          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+        <div
+          className="c14 shadow"
+        />
+        <div
+          className="c15"
           style={
             {
-              "bottom": 0,
-              "color": "transparent",
-              "height": "100%",
-              "left": 0,
-              "objectFit": undefined,
-              "objectPosition": undefined,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-              "width": "100%",
+              "transform": "rotate(180deg)",
+              "transition": "all 0.3s ease 0s",
             }
           }
-        />
+        >
+          <img
+            alt="An arrow to indicate whether the item is open or closed"
+            className="c16"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+            style={
+              {
+                "bottom": 0,
+                "color": "transparent",
+                "height": "100%",
+                "left": 0,
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": "100%",
+              }
+            }
+          />
+        </div>
       </div>
     </button>
     <div
-      aria-labelledby="see-more"
-      className="c15"
-      hidden={false}
-      role="region"
+      className="c17"
+      data-testid="scrollable-content"
+      onScroll={[Function]}
     >
-      Here it is
+      <div
+        aria-labelledby="see-more"
+        className="c2"
+        hidden={false}
+        role="region"
+      >
+        Here it is
+      </div>
     </div>
     <div
-      className="c2 c3 c16 c17"
+      className="c2 c3 c18 c19"
     >
       <svg
         className=""
@@ -259,9 +305,13 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
         />
       </svg>
     </div>
+    <div
+      className="c2 c20"
+      data-testid="bottom-box-shadow"
+    />
   </div>
   <div
-    className="c2 c3 c18"
+    className="c2 c3 c21"
   >
     <svg
       className=""

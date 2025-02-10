@@ -9,32 +9,19 @@ import { OakThemeProvider } from "@/components/atoms/OakThemeProvider";
 import { oakDefaultTheme } from "@/styles";
 
 describe("OakMediaClipList", () => {
-  const mediaClip = {
-    thumbnailImage: "/test-image.jpg",
-    timeCode: 657.24,
-    clipName: "Test Clip",
-    learningCycle: "Cycle 1",
-    muxPlayingState: "standard" as const,
-    onClick: jest.fn(),
-    imageAltText: "Test Image",
-  };
-
   const defaultProps = {
     lessonTitle: "What is a democratic community?",
-    mediaClipList: [
-      mediaClip,
-      mediaClip,
-      {
-        ...mediaClip,
-        muxPlayingState: "playing" as const,
-      },
-    ],
+    currentClipCounter: 3,
+    totalClipCounter: 3,
   };
 
   it("matches snapshot", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
-        <OakMediaClipList {...defaultProps} data-testid="test" />,
+        <OakMediaClipList {...defaultProps} data-testid="test">
+          children
+        </OakMediaClipList>
+        ,
       </OakThemeProvider>,
     ).toJSON();
     expect(tree).toMatchSnapshot();
@@ -42,14 +29,14 @@ describe("OakMediaClipList", () => {
 
   it("renders lesson title correctly", () => {
     const { getByText } = renderWithTheme(
-      <OakMediaClipList {...defaultProps} />,
+      <OakMediaClipList {...defaultProps}>children</OakMediaClipList>,
     );
     expect(getByText("What is a democratic community?")).toBeInTheDocument();
   });
 
   it("renders clip counter correctly (both currently playing clip counter and total clip counter)", () => {
     const { getByText } = renderWithTheme(
-      <OakMediaClipList {...defaultProps} />,
+      <OakMediaClipList {...defaultProps}>children</OakMediaClipList>,
     );
     expect(getByText("3/3 clips")).toBeInTheDocument();
   });

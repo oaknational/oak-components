@@ -33,29 +33,11 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 
 .c16 {
   position: relative;
-  width: 2rem;
-  min-width: 2rem;
-  height: 2rem;
-  min-height: 2rem;
   margin-right: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c18 {
-  overflow: scroll;
-  font-family: --var(google-font),Lexend,sans-serif;
-  overflow: scroll;
-}
-
-.c20 {
-  position: relative;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c22 {
+.c17 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -64,7 +46,31 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c17 {
+.c18 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c20 {
+  position: relative;
+  overflow: scroll;
+  font-family: --var(google-font),Lexend,sans-serif;
+  overflow: scroll;
+}
+
+.c22 {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c19 {
   object-fit: contain;
 }
 
@@ -115,7 +121,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c19 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -130,7 +136,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   gap: 1rem;
 }
 
-.c25 {
+.c26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -160,7 +166,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c26 {
+.c27 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -172,7 +178,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   text-align: left;
 }
 
-.c23 {
+.c24 {
   background: none;
   color: inherit;
   border: none;
@@ -194,12 +200,12 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   border-radius: 0.25rem;
 }
 
-.c23:disabled {
+.c24:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c27 {
+.c28 {
   background: none;
   color: inherit;
   border: none;
@@ -221,19 +227,19 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   border-radius: 0.25rem;
 }
 
-.c27:disabled {
+.c28:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c24 {
+.c25 {
   position: relative;
   width: 100%;
   height: 100%;
   display: inline-block;
 }
 
-.c24:hover {
+.c25:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #ffffff;
@@ -241,26 +247,26 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   border-color: #575757;
 }
 
-.c24:active {
+.c25:active {
   background: #222222;
   border-color: #222222;
   color: #ffffff;
 }
 
-.c24:disabled {
+.c25:disabled {
   background: #808080;
   border-color: #808080;
   color: #ffffff;
 }
 
-.c28 {
+.c29 {
   position: relative;
   width: 100%;
   height: 100%;
   display: inline-block;
 }
 
-.c28:hover {
+.c29:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #222222;
@@ -268,40 +274,40 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   border-color: #222222;
 }
 
-.c28:active {
+.c29:active {
   background: #ffffff;
   border-color: #222222;
   color: #222222;
 }
 
-.c28:disabled {
+.c29:disabled {
   background: #e4e4e4;
   border-color: #808080;
   color: #808080;
 }
 
-.c21 .grey-shadow:has(+ * + .internal-button:focus-visible) {
+.c23 .grey-shadow:has(+ * + .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c21 .yellow-shadow:has(+ .internal-button:focus-visible) {
+.c23 .yellow-shadow:has(+ .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
 }
 
-.c21 .yellow-shadow:has(+ .internal-button:hover),
-.c21 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
+.c23 .yellow-shadow:has(+ .internal-button:hover),
+.c23 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c21 .grey-shadow:has(+ * + .internal-button:hover) {
+.c23 .grey-shadow:has(+ * + .internal-button:hover) {
   box-shadow: none;
 }
 
-.c21 .grey-shadow:has(+ * + .internal-button:active) {
+.c23 .grey-shadow:has(+ * + .internal-button:active) {
   box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c21 .yellow-shadow:has(+ .internal-button:active) {
+.c23 .yellow-shadow:has(+ .internal-button:active) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
@@ -317,7 +323,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   padding: 0;
 }
 
-.c30 {
+.c31 {
   position: absolute;
   width: 100%;
   bottom: -0.25rem;
@@ -338,11 +344,16 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   justify-content: space-between;
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
+  position: relative;
 }
 
 .c14:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+.c14:focus-visible .shadow {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
 .c9 {
@@ -360,11 +371,11 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   gap: 1.5rem;
 }
 
-.c9 .c29 {
+.c9 .c30 {
   visibility: hidden;
 }
 
-.c9 .c13:focus-visible ~ .c29 {
+.c9 .c13:focus-visible ~ .c30 {
   visibility: visible;
 }
 
@@ -374,7 +385,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   bottom: 0.125rem;
 }
 
-.c31 {
+.c32 {
   height: 0.125rem;
   position: absolute;
   width: 100%;
@@ -398,7 +409,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c19 {
+  .c21 {
     -webkit-box-pack: start;
     -webkit-justify-content: start;
     -ms-flex-pack: start;
@@ -407,7 +418,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 }
 
 @media (min-width:1280px) {
-  .c19 {
+  .c21 {
     -webkit-box-pack: end;
     -webkit-justify-content: end;
     -ms-flex-pack: end;
@@ -463,166 +474,179 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
           </h2>
           <div
             className="c16"
-            style={
-              {
-                "transform": "none",
-                "transition": "all 0.3s ease 0s",
-              }
-            }
           >
-            <img
-              alt="An arrow to indicate whether the item is open or closed"
-              className="c17"
-              data-nimg="fill"
-              decoding="async"
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+            <div
+              className="c17 shadow"
+            />
+            <div
+              className="c18"
               style={
                 {
-                  "bottom": 0,
-                  "color": "transparent",
-                  "height": "100%",
-                  "left": 0,
-                  "objectFit": undefined,
-                  "objectPosition": undefined,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
+                  "transform": "none",
+                  "transition": "all 0.3s ease 0s",
                 }
               }
-            />
+            >
+              <img
+                alt="An arrow to indicate whether the item is open or closed"
+                className="c19"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+                style={
+                  {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+              />
+            </div>
           </div>
         </button>
         <div
-          aria-labelledby="mobile-unit-filter-accordion"
-          className="c18"
-          hidden={true}
-          role="region"
+          className="c20"
+          data-testid="scrollable-content"
+          onScroll={[Function]}
         >
           <div
-            aria-label="OakPupilJourneyUnitsFilter"
-            className="c4 c19"
-            role="radiogroup"
+            aria-labelledby="mobile-unit-filter-accordion"
+            className="c4"
+            hidden={true}
+            role="region"
           >
             <div
-              className="c20 c21"
+              aria-label="OakPupilJourneyUnitsFilter"
+              className="c4 c21"
+              role="radiogroup"
             >
               <div
-                className="c22 grey-shadow"
-              />
-              <div
-                className="c22 yellow-shadow"
-              />
-              <button
-                aria-checked={true}
-                className="c23 c24 internal-button"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                role="radio"
+                className="c22 c23"
               >
                 <div
-                  className="c4 c25"
+                  className="c17 grey-shadow"
+                />
+                <div
+                  className="c17 yellow-shadow"
+                />
+                <button
+                  aria-checked={true}
+                  className="c24 c25 internal-button"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  role="radio"
                 >
-                  <span
-                    className="c26"
+                  <div
+                    className="c4 c26"
                   >
-                    All
-                  </span>
-                </div>
-              </button>
-            </div>
-            <div
-              className="c20 c21"
-            >
+                    <span
+                      className="c27"
+                    >
+                      All
+                    </span>
+                  </div>
+                </button>
+              </div>
               <div
-                className="c22 grey-shadow"
-              />
-              <div
-                className="c22 yellow-shadow"
-              />
-              <button
-                aria-checked={false}
-                className="c27 c28 internal-button"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                role="radio"
+                className="c22 c23"
               >
                 <div
-                  className="c4 c25"
+                  className="c17 grey-shadow"
+                />
+                <div
+                  className="c17 yellow-shadow"
+                />
+                <button
+                  aria-checked={false}
+                  className="c28 c29 internal-button"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  role="radio"
                 >
-                  <span
-                    className="c26"
+                  <div
+                    className="c4 c26"
                   >
-                    Biology
-                  </span>
-                </div>
-              </button>
-            </div>
-            <div
-              className="c20 c21"
-            >
+                    <span
+                      className="c27"
+                    >
+                      Biology
+                    </span>
+                  </div>
+                </button>
+              </div>
               <div
-                className="c22 grey-shadow"
-              />
-              <div
-                className="c22 yellow-shadow"
-              />
-              <button
-                aria-checked={false}
-                className="c27 c28 internal-button"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                role="radio"
+                className="c22 c23"
               >
                 <div
-                  className="c4 c25"
+                  className="c17 grey-shadow"
+                />
+                <div
+                  className="c17 yellow-shadow"
+                />
+                <button
+                  aria-checked={false}
+                  className="c28 c29 internal-button"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  role="radio"
                 >
-                  <span
-                    className="c26"
+                  <div
+                    className="c4 c26"
                   >
-                    Chemistry
-                  </span>
-                </div>
-              </button>
-            </div>
-            <div
-              className="c20 c21"
-            >
+                    <span
+                      className="c27"
+                    >
+                      Chemistry
+                    </span>
+                  </div>
+                </button>
+              </div>
               <div
-                className="c22 grey-shadow"
-              />
-              <div
-                className="c22 yellow-shadow"
-              />
-              <button
-                aria-checked={false}
-                className="c27 c28 internal-button"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                role="radio"
+                className="c22 c23"
               >
                 <div
-                  className="c4 c25"
+                  className="c17 grey-shadow"
+                />
+                <div
+                  className="c17 yellow-shadow"
+                />
+                <button
+                  aria-checked={false}
+                  className="c28 c29 internal-button"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  role="radio"
                 >
-                  <span
-                    className="c26"
+                  <div
+                    className="c4 c26"
                   >
-                    Physics
-                  </span>
-                </div>
-              </button>
+                    <span
+                      className="c27"
+                    >
+                      Physics
+                    </span>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
         </div>
         <div
-          className="c4 c5 c29 c30"
+          className="c4 c5 c30 c31"
         >
           <svg
             className=""
@@ -644,7 +668,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
         </div>
       </div>
       <div
-        className="c4 c5 c31"
+        className="c4 c5 c32"
       >
         <svg
           className=""
@@ -670,20 +694,20 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
-  position: relative;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
 .c5 {
   position: absolute;
   top: 0rem;
   width: 100%;
   height: 100%;
   border-radius: 0.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c2 {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 

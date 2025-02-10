@@ -1,5 +1,6 @@
 export const oakAllSpacingTokens = {
   "all-spacing-0": 0,
+  "all-spacing-05": 2,
   "all-spacing-1": 4,
   "all-spacing-2": 8,
   "all-spacing-3": 12,

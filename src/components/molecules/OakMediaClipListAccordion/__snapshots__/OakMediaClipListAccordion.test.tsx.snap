@@ -1,10 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OakSolidBorderAccordion matches snapshot 1`] = `
+exports[`OakMediaClipListAccordion matches snapshot 1`] = `
 .c0 {
   position: relative;
-  border-color: #222222;
-  border-style: solid;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -12,6 +10,10 @@ exports[`OakSolidBorderAccordion matches snapshot 1`] = `
   position: relative;
   padding-top: 0rem;
   padding-bottom: 0rem;
+  border: 0.125rem solid;
+  border-left: 0.125rem solid;
+  border-color: #222222;
+  border-style: solid;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -25,25 +27,40 @@ exports[`OakSolidBorderAccordion matches snapshot 1`] = `
 
 .c11 {
   position: relative;
-  width: 2rem;
-  min-width: 2rem;
-  height: 2rem;
-  min-height: 2rem;
   margin-right: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
+.c12 {
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
 .c13 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c15 {
+  position: relative;
   overflow: scroll;
   font-family: --var(google-font),Lexend,sans-serif;
   overflow: scroll;
+}
+
+.c16 {
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c14 {
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c12 {
   object-fit: contain;
 }
 
@@ -79,7 +96,7 @@ exports[`OakSolidBorderAccordion matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c16 {
+.c17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -98,7 +115,7 @@ exports[`OakSolidBorderAccordion matches snapshot 1`] = `
   padding: 0;
 }
 
-.c18 {
+.c19 {
   position: absolute;
   width: 100%;
   bottom: -0.25rem;
@@ -119,6 +136,7 @@ exports[`OakSolidBorderAccordion matches snapshot 1`] = `
   justify-content: space-between;
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
+  position: relative;
 }
 
 .c10:hover {
@@ -126,10 +144,18 @@ exports[`OakSolidBorderAccordion matches snapshot 1`] = `
   text-decoration: underline;
 }
 
+.c10:focus-visible .shadow {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
 .c5 {
   position: relative;
   padding-top: 0rem;
   padding-bottom: 0rem;
+  border: 0.125rem solid;
+  border-left: 0.125rem solid;
+  border-color: #222222;
+  border-style: solid;
   font-family: --var(google-font),Lexend,sans-serif;
   display: -webkit-box;
   display: -webkit-flex;
@@ -141,12 +167,25 @@ exports[`OakSolidBorderAccordion matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c5 .c17 {
+.c5 .c18 {
   visibility: hidden;
 }
 
-.c5 .c9:focus-visible ~ .c17 {
+.c5 .c9:focus-visible ~ .c18 {
   visibility: visible;
+}
+
+.c20 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  opacity: 0;
+  z-index: 100;
+  -webkit-box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
+  -moz-box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
+  box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
+  padding: 2px;
 }
 
 .c2 {
@@ -154,15 +193,28 @@ exports[`OakSolidBorderAccordion matches snapshot 1`] = `
   border-width: 2px;
 }
 
-.c15 {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 50px;
-  z-index: 100;
-  -webkit-box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
-  -moz-box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
-  box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
+@media (min-width:750px) {
+  .c3 {
+    border-left: 0.125rem solid;
+  }
+}
+
+@media (min-width:1280px) {
+  .c3 {
+    border-left: 0rem solid;
+  }
+}
+
+@media (min-width:750px) {
+  .c5 {
+    border-left: 0.125rem solid;
+  }
+}
+
+@media (min-width:1280px) {
+  .c5 {
+    border-left: 0rem solid;
+  }
 }
 
 <div
@@ -181,52 +233,62 @@ exports[`OakSolidBorderAccordion matches snapshot 1`] = `
       See more
       <div
         className="c11"
-        style={
-          {
-            "transform": "rotate(180deg)",
-            "transition": "all 0.3s ease 0s",
-          }
-        }
       >
-        <img
-          alt="An arrow to indicate whether the item is open or closed"
-          className="c12"
-          data-nimg="fill"
-          decoding="async"
-          loading="lazy"
-          onError={[Function]}
-          onLoad={[Function]}
-          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+        <div
+          className="c12 shadow"
+        />
+        <div
+          className="c13"
           style={
             {
-              "bottom": 0,
-              "color": "transparent",
-              "height": "100%",
-              "left": 0,
-              "objectFit": undefined,
-              "objectPosition": undefined,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-              "width": "100%",
+              "transform": "rotate(180deg)",
+              "transition": "all 0.3s ease 0s",
             }
           }
-        />
+        >
+          <img
+            alt="An arrow to indicate whether the item is open or closed"
+            className="c14"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+            style={
+              {
+                "bottom": 0,
+                "color": "transparent",
+                "height": "100%",
+                "left": 0,
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": "100%",
+              }
+            }
+          />
+        </div>
       </div>
     </button>
     <div
-      aria-labelledby="see-more"
-      className="c13"
-      hidden={false}
-      role="region"
+      className="c15"
+      data-testid="scrollable-content"
+      onScroll={[Function]}
     >
-      Here it is
       <div
-        className="c14 c15"
-      />
+        aria-labelledby="see-more"
+        className="c16"
+        hidden={false}
+        role="region"
+      >
+        Here it is
+      </div>
     </div>
     <div
-      className="c14 c16 c17 c18"
+      className="c16 c17 c18 c19"
     >
       <svg
         className=""
@@ -246,6 +308,10 @@ exports[`OakSolidBorderAccordion matches snapshot 1`] = `
         />
       </svg>
     </div>
+    <div
+      className="c16 c20"
+      data-testid="bottom-box-shadow"
+    />
   </div>
 </div>
 `;

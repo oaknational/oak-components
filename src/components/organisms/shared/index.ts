@@ -7,6 +7,7 @@ export * from "./OakHomepageTabButton";
 export * from "./OakPagination";
 export * from "./OakPrimaryNav";
 export * from "./OakPrimaryNavItem";
+export * from "./OakQuote";
 export * from "./OakSubjectIcon";
 export * from "./Oakinfo";
 export * from "./OakinfoButton";

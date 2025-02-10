@@ -29,4 +29,16 @@ export const positionArgTypes = {
   $visibility: {
     options: ["visible", "hidden", "collapse"],
   },
+  $verticalAlign: {
+    options: [
+      "baseline",
+      "sub",
+      "super",
+      "text-top",
+      "text-bottom",
+      "middle",
+      "top",
+      "bottom",
+    ],
+  },
 };

@@ -22,3 +22,4 @@ export * from "./OakSpan";
 export * from "./OakThemeProvider";
 export * from "./OakTypography";
 export * from "./OakUL";
+export * from "./OakSvg";

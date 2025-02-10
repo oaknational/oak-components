@@ -3,7 +3,8 @@ import styled from "styled-components";
 
 import useAccordionContext from "./useAccordionContext";
 
-import { OakBox, OakBoxProps, OakFlex, OakFlexProps } from "@/components/atoms";
+import { OakFlex, OakFlexProps } from "@/components/atoms/OakFlex";
+import { OakBox, OakBoxProps } from "@/components/atoms/OakBox";
 
 const FlexWithReset = styled(OakFlex)`
   font: inherit;
@@ -25,12 +26,24 @@ const FlexWithReset = styled(OakFlex)`
 
 export const InternalAccordionContent = ({
   children,
+  onScroll,
+  ref,
   ...rest
-}: OakBoxProps & { "aria-labelledby": string }) => {
+}: OakBoxProps & {
+  "aria-labelledby": string;
+  onScroll?: () => void;
+  ref?: React.MutableRefObject<null | HTMLDivElement>;
+}) => {
   const { isOpen } = useAccordionContext();
 
   return (
-    <OakBox hidden={!isOpen} role="region" {...rest}>
+    <OakBox
+      hidden={!isOpen}
+      role="region"
+      {...rest}
+      onScroll={onScroll}
+      ref={ref}
+    >
       {children}
     </OakBox>
   );

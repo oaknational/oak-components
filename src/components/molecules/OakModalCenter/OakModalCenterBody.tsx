@@ -1,3 +1,11 @@
+/*
+ *
+ * FIXME: This component should either live in its own folder or
+ * or be renamed to SubModalCenterBody and be excluded from the exports
+ * as per the rules stated in src/docs/namingConventions.mdx
+ *
+ */
+
 import React, { ReactNode } from "react";
 
 import {

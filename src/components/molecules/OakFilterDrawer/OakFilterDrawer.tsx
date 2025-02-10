@@ -4,7 +4,8 @@ import styled from "styled-components";
 
 import { InternalShadowRoundButton } from "@/components/molecules/InternalShadowRoundButton";
 import { OakBox, OakFlex, OakHeading } from "@/components/atoms";
-import { OakModalProps, OakSecondaryLink } from "@/components/molecules";
+import { OakModalProps } from "@/components/molecules/OakModal";
+import { OakSecondaryLink } from "@/components/molecules/OakSecondaryLink";
 import useIsScrolled from "@/hooks/useIsScrolled";
 import useMounted from "@/hooks/useMounted";
 import InternalModalTransition from "@/components/molecules/InternalModalTransition/InternalModalTransition";

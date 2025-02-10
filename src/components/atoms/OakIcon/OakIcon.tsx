@@ -1,7 +1,6 @@
 import React from "react";
 
-import { IconName, icons } from "../../../image-map";
-
+import { IconName, icons } from "@/image-map";
 import { OakImage, OakImageProps } from "@/components/atoms/OakImage";
 
 export const oakIconNames = Object.keys(icons) as IconName[];

@@ -12,7 +12,7 @@ const props = {
   isLegacy: false,
   subject: "maths",
   phase: "secondary",
-  href: "https://www.thenational.academy",
+  curriculumHref: "https://www.thenational.academy",
 };
 
 describe("OakUnitsHeader", () => {

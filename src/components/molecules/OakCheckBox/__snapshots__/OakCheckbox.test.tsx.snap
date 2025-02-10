@@ -30,6 +30,27 @@ exports[`OakCheckBox matches snapshot 1`] = `
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
 }
 
+.c0 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  color: #222222;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .c2 {
   position: relative;
   width: 1.5rem;
@@ -60,27 +81,6 @@ exports[`OakCheckBox matches snapshot 1`] = `
   -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   object-fit: contain;
-}
-
-.c0 {
-  font-family: --var(google-font),Lexend,sans-serif;
-  color: #222222;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 1rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .c9 {

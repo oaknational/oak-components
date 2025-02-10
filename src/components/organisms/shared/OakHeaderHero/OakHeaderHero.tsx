@@ -25,7 +25,7 @@ export type OakHeaderHeroProps = {
   children?: ReactNode;
 };
 
-const StyledAutorImage = styled(OakImage)`
+const StyledAuthorImage = styled(OakImage)`
   width: 50px;
   height: 50px;
   margin-right: 12px;
@@ -101,7 +101,7 @@ const UnstyledComponent = (props: OakHeaderHeroProps) => {
                 $flexDirection={"row"}
                 $alignItems={"center"}
               >
-                <StyledAutorImage
+                <StyledAuthorImage
                   alt={authorImageAlt}
                   src={authorImageSrc}
                   $zIndex={"in-front"}

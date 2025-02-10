@@ -3,12 +3,12 @@ import { useArgs } from "@storybook/preview-api";
 import React, { Fragment } from "react";
 
 import { OakSecondaryButton } from "@/components/molecules/OakSecondaryButton";
+import { OakPrimaryButton } from "@/components/molecules/OakPrimaryButton";
+import { OakPrimaryInvertedButton } from "@/components/molecules/OakPrimaryInvertedButton";
 import {
   OakModalCenter,
   OakModalCenterBody,
-  OakPrimaryButton,
-  OakPrimaryInvertedButton,
-} from "@/components/molecules";
+} from "@/components/molecules/OakModalCenter";
 import { OakFlex, OakHeading, OakP } from "@/components/atoms";
 
 const meta: Meta<typeof OakModalCenter> = {

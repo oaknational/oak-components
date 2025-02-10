@@ -7,9 +7,9 @@ import { oakDefaultTheme } from "@/styles";
 import { OakThemeProvider } from "@/components/atoms";
 import {
   OakInlineBanner,
-  OakSecondaryLink,
   bannerTypes,
-} from "@/components/molecules";
+} from "@/components/molecules/OakInlineBanner";
+import { OakSecondaryLink } from "@/components/molecules/OakSecondaryLink";
 import { parseColor } from "@/styles/helpers/parseColor";
 
 jest.mock("react-dom", () => {

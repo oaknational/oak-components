@@ -8,19 +8,22 @@ import {
   OakTypography,
   OakHeading,
   OakIcon,
+  oakPlaceholder,
 } from "@/components/atoms";
 import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { parseTransitions } from "@/styles/helpers/parseTransitions";
 import { getMediaQuery } from "@/styles/utils/responsiveStyle";
+import { parseSpacing } from "@/styles/helpers/parseSpacing";
 
 export type OakMediaClipStackListItemProps = {
   title: string;
   href: string;
-  imageUrl: string;
+  imageUrl?: string;
   imageAltText: string;
   numberOfClips: number;
+  isAudioClip: boolean;
 };
 
 const OakMediaClipStackListItemLink = styled(OakFlex)`
@@ -54,7 +57,6 @@ const ImageStackShadow = styled(OakBox)`
   margin-right: 15px;
 
   img {
-    object-fit: fill;
     -webkit-filter: brightness(100%);
   }
 
@@ -88,37 +90,70 @@ const ImageStackShadow = styled(OakBox)`
   }
 `;
 
+const StyledMediaClipImage = styled(OakImage)`
+  background-color: ${parseColor("bg-decorative2-very-subdued")};
+  background-size: ${parseSpacing("all-spacing-11")};
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  img {
+    object-fit: fill;
+    border-radius: ${parseBorderRadius("border-radius-s")};
+  }
+`;
+
 export const OakMediaClipStackListItem = (
   props: OakMediaClipStackListItemProps,
 ) => {
-  const { title, numberOfClips, imageUrl, imageAltText, href, ...rest } = props;
+  const {
+    title,
+    numberOfClips,
+    imageUrl,
+    imageAltText,
+    href,
+    isAudioClip,
+    ...rest
+  } = props;
 
   return (
     <OakMediaClipStackListItemLink
       as="a"
       href={href}
       $display={"flex"}
-      $flexDirection={["row", "column"]}
-      $gap={["all-spacing-2", "space-between-none"]}
+      $flexDirection={["row", "row", "column"]}
+      $gap={["all-spacing-2", "all-spacing-2", "space-between-none"]}
       $width={"fit-content"}
+      $alignItems={["center", "center", "flex-start"]}
       {...rest}
     >
       <OakBox>
         <ImageStackShadow
           $borderRadius={"border-radius-s"}
-          $width={["all-spacing-15", "all-spacing-18"]}
-          $height={["all-spacing-11", "all-spacing-15"]}
+          $width={["all-spacing-15", "all-spacing-15", "all-spacing-18"]}
+          $height={["all-spacing-11", "all-spacing-11", "all-spacing-15"]}
           $position={"relative"}
-          $mb={["space-between-none", "space-between-xs"]}
+          $mb={["space-between-none", "space-between-none", "space-between-xs"]}
         >
-          <OakImage
-            src={imageUrl}
-            alt={imageAltText}
-            $borderRadius={"border-radius-s"}
-            $overflow={"hidden"}
-            $width={"100%"}
-            $height={"100%"}
-          />
+          {!isAudioClip ? (
+            <StyledMediaClipImage
+              src={!imageUrl ? oakPlaceholder : imageUrl}
+              alt={imageAltText}
+              $borderRadius={"border-radius-s"}
+              $overflow={"hidden"}
+            />
+          ) : (
+            <OakIcon
+              $width={["all-spacing-15", "all-spacing-15", "all-spacing-18"]}
+              $height={["all-spacing-11", "all-spacing-11", "all-spacing-15"]}
+              iconName={"audio-clip-large"}
+              alt={imageAltText}
+              $position={"absolute"}
+              $borderRadius={"border-radius-s"}
+              $overflow={"hidden"}
+              $objectFit={"cover"}
+            />
+          )}
           <OakIcon
             id="play-icon"
             iconName="play"
@@ -127,8 +162,10 @@ export const OakMediaClipStackListItem = (
           />
         </ImageStackShadow>
       </OakBox>
-      <OakBox $mb={["space-between-none", "space-between-s"]}>
-        <OakHeading tag="h5" $font="heading-7" $color={"text-primary"}>
+      <OakBox
+        $mb={["space-between-none", "space-between-none", "space-between-s"]}
+      >
+        <OakHeading tag="h3" $font="heading-7" $color={"text-primary"}>
           {title}
         </OakHeading>
         <OakTypography $font="body-3" $color={"text-subdued"}>

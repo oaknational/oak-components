@@ -27,15 +27,11 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
 
 .c6 {
   position: relative;
-  overflow: hidden;
   width: 100%;
-  height: 100%;
-  border-radius: 0.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
-  overflow: hidden;
 }
 
-.c8 {
+.c9 {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -44,12 +40,12 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c9 {
+.c10 {
   margin-bottom: 0rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c11 {
+.c12 {
   color: #575757;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
@@ -61,7 +57,7 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c7 {
+.c8 {
   object-fit: contain;
 }
 
@@ -73,10 +69,14 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 0.5rem;
 }
 
-.c10 {
+.c11 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -88,7 +88,7 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
   color: #222222;
 }
 
-.c12 {
+.c13 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
@@ -128,7 +128,6 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
 }
 
 .c5 img {
-  object-fit: fill;
   -webkit-filter: brightness(100%);
 }
 
@@ -151,7 +150,27 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
   margin-top: -16px;
 }
 
+.c7 {
+  background-color: #e7f6f5;
+  background-size: 4rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.c7 img {
+  object-fit: fill;
+  border-radius: 0.25rem;
+}
+
 @media (min-width:750px) {
+  .c4 {
+    width: 6.25rem;
+  }
+}
+
+@media (min-width:1280px) {
   .c4 {
     width: 11.25rem;
   }
@@ -159,23 +178,49 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
 
 @media (min-width:750px) {
   .c4 {
+    height: 4rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c4 {
     height: 6.25rem;
   }
 }
 
 @media (min-width:750px) {
   .c4 {
+    margin-bottom: 0rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c4 {
     margin-bottom: 0.75rem;
   }
 }
 
 @media (min-width:750px) {
-  .c9 {
+  .c10 {
+    margin-bottom: 0rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c10 {
     margin-bottom: 1rem;
   }
 }
 
 @media (min-width:750px) {
+  .c1 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:1280px) {
   .c1 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -184,6 +229,30 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
+  .c1 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media (min-width:1280px) {
+  .c1 {
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width:750px) {
+  .c1 {
+    gap: 0.5rem;
+  }
+}
+
+@media (min-width:1280px) {
   .c1 {
     gap: 0rem;
   }
@@ -212,11 +281,11 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
       className="c4 c5"
     >
       <div
-        className="c6"
+        className="c6 c7"
       >
         <img
           alt="alt text for the image"
-          className="c7"
+          className="c8"
           data-nimg="fill"
           decoding="async"
           loading="lazy"
@@ -242,12 +311,12 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
         />
       </div>
       <div
-        className="c8"
+        className="c9"
         id="play-icon"
       >
         <img
           alt="play"
-          className="c7"
+          className="c8"
           data-nimg="fill"
           decoding="async"
           loading="lazy"
@@ -273,15 +342,15 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
     </div>
   </div>
   <div
-    className="c9"
+    className="c10"
   >
-    <h5
-      className="c10"
+    <h3
+      className="c11"
     >
       Learning cycle 3 videos
-    </h5>
+    </h3>
     <div
-      className="c11 c12"
+      className="c12 c13"
     >
       5
        

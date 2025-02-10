@@ -4,8 +4,6 @@ exports[`OakMediaClipList matches snapshot 1`] = `
 [
   .c0 {
   position: relative;
-  border-color: #222222;
-  border-style: solid;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -14,6 +12,10 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   max-height: 30rem;
   padding-top: 0rem;
   padding-bottom: 0rem;
+  border: 0.125rem solid;
+  border-left: 0.125rem solid;
+  border-color: #222222;
+  border-style: solid;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -71,27 +73,11 @@ exports[`OakMediaClipList matches snapshot 1`] = `
 
 .c17 {
   position: relative;
-  width: 2rem;
-  min-width: 2rem;
-  height: 2rem;
-  min-height: 2rem;
   margin-right: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c19 {
-  overflow: scroll;
-  font-family: --var(google-font),Lexend,sans-serif;
-  overflow: scroll;
-}
-
-.c22 {
-  position: relative;
-  border-radius: 0.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c25 {
+.c18 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -100,46 +86,23 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c28 {
-  width: 100%;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c30 {
+.c19 {
   position: relative;
-  width: 6.25rem;
-  height: 3.5rem;
-  margin-right: 1rem;
-  border-radius: 0.125rem;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c33 {
+.c21 {
   position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 0.125rem;
+  overflow: scroll;
   font-family: --var(google-font),Lexend,sans-serif;
+  overflow: scroll;
 }
 
-.c34 {
-  position: absolute;
-  right: 0.25rem;
-  bottom: 0.25rem;
-  color: #ffffff;
-  background: #222222;
-  border-radius: 0.125rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 300;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
-  letter-spacing: -0.005rem;
-}
-
-.c42 {
+.c22 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -175,80 +138,15 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c29 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
-.c44 {
+.c24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c18 {
+.c20 {
   object-fit: contain;
-}
-
-.c38 {
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
-  letter-spacing: 0.0115rem;
-  text-overflow: ellipsis;
-  color: #222222;
-}
-
-.c21 {
-  margin-bottom: 0.5rem;
-  display: revert;
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-family: --var(google-font),Lexend,sans-serif;
-  display: revert;
-  display: revert;
-}
-
-.c36 {
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c39 {
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 300;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
-  letter-spacing: -0.005rem;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  color: #575757;
 }
 
 .c13 {
@@ -273,80 +171,15 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c20 {
+.c23 {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: block;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   padding-top: 0.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c26 {
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  text-align: left;
-  font-family: unset;
-  outline: none;
-  font-family: --var(google-font),Lexend,sans-serif;
-  color: #ffffff;
-  background: #ffffff;
-  padding: 0.5rem;
-  border-color: transparent;
-  border-radius: 0.25rem;
-}
-
-.c26:disabled {
-  pointer-events: none;
-  cursor: default;
-}
-
-.c40 {
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  text-align: left;
-  font-family: unset;
-  outline: none;
-  font-family: --var(google-font),Lexend,sans-serif;
-  color: #222222;
-  background: #dff9de;
-  padding: 0.5rem;
-  border-color: transparent;
-  border-radius: 0.25rem;
-}
-
-.c40:disabled {
-  pointer-events: none;
-  cursor: default;
-}
-
-.c23 .grey-shadow:has(+ * + .internal-button:focus-visible) {
-  box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
-}
-
-.c23 .yellow-shadow:has(+ .internal-button:focus-visible) {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
-}
-
-.c23 .grey-shadow:has(+ * + .internal-button:hover) {
-  box-shadow: none;
-}
-
-.c23 .grey-shadow:has(+ * + .internal-button:active) {
-  box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
-}
-
-.c23 .yellow-shadow:has(+ .internal-button:active) {
-  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
 .c8 {
@@ -361,7 +194,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   padding: 0;
 }
 
-.c46 {
+.c26 {
   position: absolute;
   width: 100%;
   bottom: -0.25rem;
@@ -382,6 +215,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   justify-content: space-between;
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
+  position: relative;
 }
 
 .c10:hover {
@@ -389,11 +223,19 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   text-decoration: underline;
 }
 
+.c10:focus-visible .shadow {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
 .c5 {
   position: relative;
   max-height: 30rem;
   padding-top: 0rem;
   padding-bottom: 0rem;
+  border: 0.125rem solid;
+  border-left: 0.125rem solid;
+  border-color: #222222;
+  border-style: solid;
   font-family: --var(google-font),Lexend,sans-serif;
   display: -webkit-box;
   display: -webkit-flex;
@@ -405,96 +247,25 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c5 .c45 {
+.c5 .c25 {
   visibility: hidden;
 }
 
-.c5 .c9:focus-visible ~ .c45 {
+.c5 .c9:focus-visible ~ .c25 {
   visibility: visible;
 }
 
-.c35 {
-  opacity: 0.9;
-  padding-left: 2px;
-  padding-right: 2px;
-}
-
-.c24 {
-  min-height: 72px;
-  width: 100%;
-}
-
-.c32 img {
-  border-radius: 2px;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.c37 {
-  position: "relative";
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.c37 h4 {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 3;
-}
-
 .c27 {
-  position: relative;
+  position: absolute;
+  bottom: 0;
   width: 100%;
-  height: 100%;
-  display: inline-block;
-  -webkit-transition: opacity 300ms ease-out;
-  transition: opacity 300ms ease-out;
-}
-
-.c27:hover {
-  color: #222222;
-  background: #f2f2f2;
-  border-color: transparent;
-}
-
-.c27:hover h4 {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c27:disabled {
-  background: #e4e4e4;
-  border-color: #808080;
-  color: #808080;
-}
-
-.c41 {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: inline-block;
-  -webkit-transition: opacity 300ms ease-out;
-  transition: opacity 300ms ease-out;
-}
-
-.c41:hover {
-  color: #222222;
-  background: #bef2bd;
-  border-color: transparent;
-}
-
-.c41:hover h4 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c41:disabled {
-  background: #e4e4e4;
-  border-color: #808080;
-  color: #808080;
+  height: 50px;
+  opacity: 0;
+  z-index: 100;
+  -webkit-box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
+  -moz-box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
+  box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
+  padding: 2px;
 }
 
 .c2 {
@@ -502,15 +273,28 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   border-width: 2px;
 }
 
-.c43 {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 50px;
-  z-index: 100;
-  -webkit-box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
-  -moz-box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
-  box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
+@media (min-width:750px) {
+  .c3 {
+    border-left: 0.125rem solid;
+  }
+}
+
+@media (min-width:1280px) {
+  .c3 {
+    border-left: 0rem solid;
+  }
+}
+
+@media (min-width:750px) {
+  .c5 {
+    border-left: 0.125rem solid;
+  }
+}
+
+@media (min-width:1280px) {
+  .c5 {
+    border-left: 0rem solid;
+  }
 }
 
 <div
@@ -550,319 +334,66 @@ exports[`OakMediaClipList matches snapshot 1`] = `
         </div>
         <div
           className="c17"
-          style={
-            {
-              "transform": "rotate(180deg)",
-              "transition": "all 0.3s ease 0s",
-            }
-          }
         >
-          <img
-            alt="An arrow to indicate whether the item is open or closed"
-            className="c18"
-            data-nimg="fill"
-            decoding="async"
-            loading="lazy"
-            onError={[Function]}
-            onLoad={[Function]}
-            src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+          <div
+            className="c18 shadow"
+          />
+          <div
+            className="c19"
             style={
               {
-                "bottom": 0,
-                "color": "transparent",
-                "height": "100%",
-                "left": 0,
-                "objectFit": undefined,
-                "objectPosition": undefined,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-                "width": "100%",
+                "transform": "rotate(180deg)",
+                "transition": "all 0.3s ease 0s",
               }
             }
-          />
+          >
+            <img
+              alt="An arrow to indicate whether the item is open or closed"
+              className="c20"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+              style={
+                {
+                  "bottom": 0,
+                  "color": "transparent",
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
         </div>
       </button>
       <div
-        aria-labelledby="media-clip-list"
-        className="c19"
-        hidden={false}
-        role="region"
+        className="c21"
+        data-testid="scrollable-content"
+        onScroll={[Function]}
       >
-        <ul
-          className="c20"
-        >
-          <li
-            className="c21"
-          >
-            <div
-              className="c22 c23 c24"
-            >
-              <div
-                className="c25 grey-shadow"
-              />
-              <div
-                className="c25 yellow-shadow"
-              />
-              <button
-                className="c26 c27 internal-button"
-                defaultBorderColor="transparent"
-                justifyContent="flex-start"
-                muxPlayingState="standard"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                tabIndex={0}
-              >
-                <div
-                  className="c28 c29"
-                >
-                  <div
-                    className="c30 c31 c32"
-                  >
-                    <div
-                      className="c33"
-                      fill={true}
-                    >
-                      <img
-                        alt="Test Image"
-                        className="c18"
-                        data-nimg="fill"
-                        decoding="async"
-                        loading="lazy"
-                        onError={[Function]}
-                        onLoad={[Function]}
-                        sizes="100vw"
-                        src="/_next/image?url=%2Ftest-image.jpg&w=3840&q=75"
-                        srcSet="/_next/image?url=%2Ftest-image.jpg&w=640&q=75 640w, /_next/image?url=%2Ftest-image.jpg&w=750&q=75 750w, /_next/image?url=%2Ftest-image.jpg&w=828&q=75 828w, /_next/image?url=%2Ftest-image.jpg&w=1080&q=75 1080w, /_next/image?url=%2Ftest-image.jpg&w=1200&q=75 1200w, /_next/image?url=%2Ftest-image.jpg&w=1920&q=75 1920w, /_next/image?url=%2Ftest-image.jpg&w=2048&q=75 2048w, /_next/image?url=%2Ftest-image.jpg&w=3840&q=75 3840w"
-                        style={
-                          {
-                            "bottom": 0,
-                            "color": "transparent",
-                            "height": "100%",
-                            "left": 0,
-                            "objectFit": undefined,
-                            "objectPosition": undefined,
-                            "position": "absolute",
-                            "right": 0,
-                            "top": 0,
-                            "width": "100%",
-                          }
-                        }
-                      />
-                    </div>
-                    <div
-                      aria-label="Media clip length: 10:57"
-                      className="c34 c35"
-                    >
-                      <label
-                        className="c36"
-                      >
-                        10:57
-                      </label>
-                    </div>
-                  </div>
-                  <div
-                    className="c28 c4 c37"
-                  >
-                    <h4
-                      className="c38"
-                    >
-                      Test Clip
-                    </h4>
-                    <p
-                      className="c39"
-                    >
-                      Cycle 1
-                    </p>
-                  </div>
-                </div>
-              </button>
-            </div>
-          </li>
-          <li
-            className="c21"
-          >
-            <div
-              className="c22 c23 c24"
-            >
-              <div
-                className="c25 grey-shadow"
-              />
-              <div
-                className="c25 yellow-shadow"
-              />
-              <button
-                className="c26 c27 internal-button"
-                defaultBorderColor="transparent"
-                justifyContent="flex-start"
-                muxPlayingState="standard"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                tabIndex={0}
-              >
-                <div
-                  className="c28 c29"
-                >
-                  <div
-                    className="c30 c31 c32"
-                  >
-                    <div
-                      className="c33"
-                      fill={true}
-                    >
-                      <img
-                        alt="Test Image"
-                        className="c18"
-                        data-nimg="fill"
-                        decoding="async"
-                        loading="lazy"
-                        onError={[Function]}
-                        onLoad={[Function]}
-                        sizes="100vw"
-                        src="/_next/image?url=%2Ftest-image.jpg&w=3840&q=75"
-                        srcSet="/_next/image?url=%2Ftest-image.jpg&w=640&q=75 640w, /_next/image?url=%2Ftest-image.jpg&w=750&q=75 750w, /_next/image?url=%2Ftest-image.jpg&w=828&q=75 828w, /_next/image?url=%2Ftest-image.jpg&w=1080&q=75 1080w, /_next/image?url=%2Ftest-image.jpg&w=1200&q=75 1200w, /_next/image?url=%2Ftest-image.jpg&w=1920&q=75 1920w, /_next/image?url=%2Ftest-image.jpg&w=2048&q=75 2048w, /_next/image?url=%2Ftest-image.jpg&w=3840&q=75 3840w"
-                        style={
-                          {
-                            "bottom": 0,
-                            "color": "transparent",
-                            "height": "100%",
-                            "left": 0,
-                            "objectFit": undefined,
-                            "objectPosition": undefined,
-                            "position": "absolute",
-                            "right": 0,
-                            "top": 0,
-                            "width": "100%",
-                          }
-                        }
-                      />
-                    </div>
-                    <div
-                      aria-label="Media clip length: 10:57"
-                      className="c34 c35"
-                    >
-                      <label
-                        className="c36"
-                      >
-                        10:57
-                      </label>
-                    </div>
-                  </div>
-                  <div
-                    className="c28 c4 c37"
-                  >
-                    <h4
-                      className="c38"
-                    >
-                      Test Clip
-                    </h4>
-                    <p
-                      className="c39"
-                    >
-                      Cycle 1
-                    </p>
-                  </div>
-                </div>
-              </button>
-            </div>
-          </li>
-          <li
-            className="c21"
-          >
-            <div
-              className="c22 c23 c24"
-            >
-              <div
-                className="c25 grey-shadow"
-              />
-              <div
-                className="c25 yellow-shadow"
-              />
-              <button
-                className="c40 c41 internal-button"
-                defaultBorderColor="transparent"
-                justifyContent="flex-start"
-                muxPlayingState="playing"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                tabIndex={0}
-              >
-                <div
-                  className="c28 c29"
-                >
-                  <div
-                    className="c30 c31 c32"
-                  >
-                    <div
-                      className="c33"
-                      fill={true}
-                    >
-                      <img
-                        alt="Test Image"
-                        className="c18"
-                        data-nimg="fill"
-                        decoding="async"
-                        loading="lazy"
-                        onError={[Function]}
-                        onLoad={[Function]}
-                        sizes="100vw"
-                        src="/_next/image?url=%2Ftest-image.jpg&w=3840&q=75"
-                        srcSet="/_next/image?url=%2Ftest-image.jpg&w=640&q=75 640w, /_next/image?url=%2Ftest-image.jpg&w=750&q=75 750w, /_next/image?url=%2Ftest-image.jpg&w=828&q=75 828w, /_next/image?url=%2Ftest-image.jpg&w=1080&q=75 1080w, /_next/image?url=%2Ftest-image.jpg&w=1200&q=75 1200w, /_next/image?url=%2Ftest-image.jpg&w=1920&q=75 1920w, /_next/image?url=%2Ftest-image.jpg&w=2048&q=75 2048w, /_next/image?url=%2Ftest-image.jpg&w=3840&q=75 3840w"
-                        style={
-                          {
-                            "bottom": 0,
-                            "color": "transparent",
-                            "height": "100%",
-                            "left": 0,
-                            "objectFit": undefined,
-                            "objectPosition": undefined,
-                            "position": "absolute",
-                            "right": 0,
-                            "top": 0,
-                            "width": "100%",
-                          }
-                        }
-                      />
-                    </div>
-                    <div
-                      aria-label="Media clip length: 10:57"
-                      className="c34 c35"
-                    >
-                      <label
-                        className="c36"
-                      >
-                        10:57
-                      </label>
-                    </div>
-                  </div>
-                  <div
-                    className="c28 c4 c37"
-                  >
-                    <h4
-                      className="c38"
-                    >
-                      Test Clip
-                    </h4>
-                    <p
-                      className="c39"
-                    >
-                      Cycle 1
-                    </p>
-                  </div>
-                </div>
-              </button>
-            </div>
-          </li>
-        </ul>
         <div
-          className="c42 c43"
-        />
+          aria-labelledby="media-clip-list"
+          className="c22"
+          hidden={false}
+          role="region"
+        >
+          <ul
+            className="c23"
+          >
+            children
+          </ul>
+        </div>
       </div>
       <div
-        className="c42 c44 c45 c46"
+        className="c22 c24 c25 c26"
       >
         <svg
           className=""
@@ -882,6 +413,10 @@ exports[`OakMediaClipList matches snapshot 1`] = `
           />
         </svg>
       </div>
+      <div
+        className="c22 c27"
+        data-testid="bottom-box-shadow"
+      />
     </div>
   </div>,
   ",",

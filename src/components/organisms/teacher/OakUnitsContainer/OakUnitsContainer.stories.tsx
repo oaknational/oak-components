@@ -14,7 +14,13 @@ const meta: Meta<typeof OakUnitsContainer> = {
     showHeader: { type: "boolean" },
     subject: { type: "string" },
     phase: { type: "string" },
-    curriculumHref: { type: "string" },
+    curriculumHref: {
+      control: {
+        type: "radio",
+      },
+      options: ["Url", "Null"],
+      mapping: { Url: "https://www.thenational.academy", Null: null },
+    },
   },
   parameters: {
     controls: {
@@ -105,6 +111,6 @@ export const Default: Story = {
     ],
     subject: "maths",
     phase: "secondary",
-    curriculumHref: "https://www.thenational.academy",
+    curriculumHref: "Url",
   },
 };

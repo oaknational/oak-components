@@ -10,11 +10,17 @@ const meta: Meta<typeof OakUnitsHeader> = {
     isLegacy: { type: "boolean" },
     subject: { type: "string" },
     phase: { type: "string" },
-    href: { type: "string" },
+    curriculumHref: {
+      control: {
+        type: "radio",
+      },
+      options: ["Url", "Null"],
+      mapping: { Url: "https://www.thenational.academy", Null: null },
+    },
   },
   parameters: {
     controls: {
-      include: ["isLegacy", "subject", "phase", "href"],
+      include: ["isLegacy", "subject", "phase", "curriculumHref"],
     },
   },
 };
@@ -29,6 +35,6 @@ export const Default: Story = {
     isLegacy: false,
     subject: "maths",
     phase: "secondary",
-    href: "https://www.thenational.academy",
+    curriculumHref: "Url",
   },
 };
