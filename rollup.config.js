@@ -6,6 +6,7 @@ import terser from "@rollup/plugin-terser";
 import { typescriptPaths } from "rollup-plugin-typescript-paths";
 import json from "@rollup/plugin-json";
 import { nodeExternals } from "rollup-plugin-node-externals";
+// import peerDepsExternal from "rollup-plugin-peer-deps-external";
 
 export default [
   {
@@ -23,13 +24,17 @@ export default [
         dir: "dist/cjs",
         format: "cjs",
         sourcemap: true,
+        preserveModules: true,
+        preserveModulesRoot: "src",
         interop: "compat",
       },
     ],
     plugins: [
+      // peerDepsExternal(),
       nodeExternals({
         devDeps: true,
         peerDeps: true,
+        deps: true,
       }),
       nodeResolve({ preferBuiltins: true }),
       typescript({ tsconfig: "./tsconfig.json" }),
@@ -37,6 +42,7 @@ export default [
       commonjs(),
       json(),
     ],
+    external: ["react", "react-dom", "styled-components"],
   },
   {
     input: "src/index.ts",
