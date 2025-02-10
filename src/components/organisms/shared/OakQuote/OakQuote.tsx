@@ -39,12 +39,14 @@ export const OakQuote = (props: OakQuoteProps) => {
 
   return (
     <OakFlex $width={"100%"} $maxWidth={"all-spacing-22"}>
-      <OakFlex
-        $width={"all-spacing-2"}
-        $background={color}
-        $mr={"space-between-m"}
-        $flexShrink={0}
-      />
+      {color !== "transparent" && (
+        <OakFlex
+          $width={"all-spacing-2"}
+          $background={color}
+          $mr={"space-between-m"}
+          $flexShrink={0}
+        />
+      )}
       <OakFlex $flexDirection={"column"} $gap={"space-between-s"}>
         <OakP $font={["heading-7", "heading-6"]} $color={"text-primary"}>
           <TightLetterSpacing>“{quote}”</TightLetterSpacing>
