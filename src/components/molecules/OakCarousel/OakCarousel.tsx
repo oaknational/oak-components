@@ -1,9 +1,22 @@
 import React, { ReactNode, useState } from "react";
+import styled from "styled-components";
 
 import { SubCarouselPositionIndicator } from "./SubCarouselPositionIndicator";
 import { SubCarouselPositionControl } from "./SubCarouselPositionControl";
 
-import { OakFlex } from "@/components/atoms";
+import { OakFlex, OakFlexProps } from "@/components/atoms";
+
+type SlideContainerProps = {
+  activeIndex: number;
+} & OakFlexProps;
+
+const SlideContainer = styled(OakFlex)<SlideContainerProps>`
+  transform: translateX(${(props) => -props.activeIndex * 100}%);
+
+  @media (prefers-reduced-motion) {
+    transition: none;
+  }
+`;
 
 export type OakCarouselProps = {
   content: ReactNode[];
@@ -12,6 +25,14 @@ export type OakCarouselProps = {
 
 export const OakCarousel = ({ content, isLooping }: OakCarouselProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleKeyUp = (key: string) => {
+    if (key === "ArrowRight") {
+      handleFwd();
+    } else if (key === "ArrowLeft") {
+      handleBack();
+    }
+  };
 
   const handleFwd = () => {
     if (!isLooping) {
@@ -42,8 +63,20 @@ export const OakCarousel = ({ content, isLooping }: OakCarouselProps) => {
       $borderRadius={"border-radius-l"}
       $flexDirection={"column"}
       $gap={"space-between-xl"}
+      onKeyUp={(event) => handleKeyUp(event.key)}
     >
-      {content[activeIndex]}
+      <OakFlex $overflow={"hidden"}>
+        <SlideContainer activeIndex={activeIndex} $transition={"standard-ease"}>
+          {content.map((item, index) => {
+            return (
+              <OakFlex key={index} $width={"100%"} $flexShrink={0}>
+                {item}
+              </OakFlex>
+            );
+          })}
+        </SlideContainer>
+      </OakFlex>
+
       <OakFlex $justifyContent={"space-between"}>
         <SubCarouselPositionIndicator
           activeIndex={activeIndex}
