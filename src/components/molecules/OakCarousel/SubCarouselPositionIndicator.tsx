@@ -12,6 +12,7 @@ const PositionIcon = ({ isActive }: { isActive: boolean }) => {
       height="17"
       viewBox="0 0 16 17"
       fill="none"
+      role="img"
     >
       <circle
         cx="8"
