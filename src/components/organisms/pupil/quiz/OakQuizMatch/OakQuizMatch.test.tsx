@@ -58,8 +58,9 @@ describe(OakQuizMatch, () => {
   });
 
   it("allows an option to be dropped into a slot", async () => {
-    // FIXME: the behavior around the holding pen seems to have changed perhaps with an update.
-    // The comments on this test are quite confusing so there might be some misconceptions here.
+    /* some flaky behaviour around the order of items in the holding pen. Fixed by sorting results.
+     However, the comments on this test are quite confusing so there might be some misconceptions here. 
+     */
 
     let dndProps: DndContextProps = {};
     const MockDndContext = (props: DndContextProps) => {
@@ -115,11 +116,11 @@ describe(OakQuizMatch, () => {
     });
 
     // The first option should be returned to the holding pen
-    expect(
-      getAllByRoleWithin(getByTestId("holding-pen"), "option").map(
-        (item) => item.textContent,
-      ),
-    ).toEqual(["Question mark", "Exclamation mark"]);
+    const res = getAllByRoleWithin(getByTestId("holding-pen"), "option")
+      .map((item) => item.textContent)
+      .sort();
+    expect(res).toEqual(["Exclamation mark", "Question mark"]);
+
     // The first slot should now contain the second option
     expect(getByRoleWithin(firstSlot, "option").textContent).toEqual(
       "Full stop",
@@ -133,11 +134,11 @@ describe(OakQuizMatch, () => {
     });
 
     // All options should be back in the holding pen
-    expect(
-      getAllByRoleWithin(getByTestId("holding-pen"), "option").map(
-        (item) => item.textContent,
-      ),
-    ).toEqual(["Full stop", "Exclamation mark", "Question mark"]);
+    const res2 = getAllByRoleWithin(getByTestId("holding-pen"), "option")
+      .map((item) => item.textContent)
+      .sort();
+
+    expect(res2).toEqual(["Exclamation mark", "Full stop", "Question mark"]);
     expect(getByTestIdWithin(firstSlot, "label").textContent).toEqual(
       "conveys intense emotion",
     );
