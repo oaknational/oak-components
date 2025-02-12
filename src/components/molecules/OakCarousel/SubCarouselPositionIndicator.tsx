@@ -13,6 +13,7 @@ const PositionIcon = ({ isActive }: { isActive: boolean }) => {
       viewBox="0 0 16 17"
       fill="none"
       role="img"
+      aria-label="Position Indicator"
     >
       <circle
         cx="8"

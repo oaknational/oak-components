@@ -103,6 +103,7 @@ type Story = StoryObj<typeof InternalShadowRoundButton>;
 export const Default: Story = {
   args: {
     iconName: "lightbulb",
+    "aria-label": "Button",
   },
 };
 

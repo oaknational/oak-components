@@ -68,30 +68,55 @@ describe("OakCarousel", () => {
 
   describe("Non-looping behavior", () => {
     it("renders initial content correctly", () => {
-      renderCarousel({ content: mockContent });
+      renderCarousel({
+        content: mockContent,
+        fwdLabel: "forward",
+        backLabel: "back",
+        containerLabel: "test",
+      });
       expect(screen.getByText("Slide 1")).toBeInTheDocument();
     });
 
     it("moves forward correctly", () => {
-      renderCarousel({ content: mockContent });
+      renderCarousel({
+        content: mockContent,
+        fwdLabel: "forward",
+        backLabel: "back",
+        containerLabel: "test",
+      });
       fireEvent.click(screen.getByTestId("fwd-button"));
       expect(screen.getByText("Slide 2")).toBeInTheDocument();
     });
 
     it("moves backward correctly", () => {
-      renderCarousel({ content: mockContent });
+      renderCarousel({
+        content: mockContent,
+        fwdLabel: "forward",
+        backLabel: "back",
+        containerLabel: "test",
+      });
       fireEvent.click(screen.getByTestId("fwd-button"));
       fireEvent.click(screen.getByTestId("back-button"));
       expect(screen.getByText("Slide 1")).toBeInTheDocument();
     });
 
     it("disables back button at start", () => {
-      renderCarousel({ content: mockContent });
+      renderCarousel({
+        content: mockContent,
+        fwdLabel: "forward",
+        backLabel: "back",
+        containerLabel: "test",
+      });
       expect(screen.getByTestId("back-button")).toBeDisabled();
     });
 
     it("disables forward button at end", () => {
-      renderCarousel({ content: mockContent });
+      renderCarousel({
+        content: mockContent,
+        fwdLabel: "forward",
+        backLabel: "back",
+        containerLabel: "test",
+      });
       fireEvent.click(screen.getByTestId("fwd-button"));
       fireEvent.click(screen.getByTestId("fwd-button"));
       expect(screen.getByTestId("fwd-button")).toBeDisabled();
@@ -100,7 +125,13 @@ describe("OakCarousel", () => {
 
   describe("Looping behavior", () => {
     it("loops forward at end", () => {
-      renderCarousel({ content: mockContent, isLooping: true });
+      renderCarousel({
+        content: mockContent,
+        isLooping: true,
+        fwdLabel: "forward",
+        backLabel: "back",
+        containerLabel: "test",
+      });
       fireEvent.click(screen.getByTestId("fwd-button"));
       fireEvent.click(screen.getByTestId("fwd-button"));
       fireEvent.click(screen.getByTestId("fwd-button"));
@@ -108,13 +139,25 @@ describe("OakCarousel", () => {
     });
 
     it("loops backward at start", () => {
-      renderCarousel({ content: mockContent, isLooping: true });
+      renderCarousel({
+        content: mockContent,
+        isLooping: true,
+        fwdLabel: "forward",
+        backLabel: "back",
+        containerLabel: "test",
+      });
       fireEvent.click(screen.getByTestId("back-button"));
       expect(screen.getByText("Slide 3")).toBeInTheDocument();
     });
 
     it("never disables navigation buttons", () => {
-      renderCarousel({ content: mockContent, isLooping: true });
+      renderCarousel({
+        content: mockContent,
+        isLooping: true,
+        fwdLabel: "forward",
+        backLabel: "back",
+        containerLabel: "test",
+      });
       expect(screen.getByTestId("back-button")).not.toBeDisabled();
       fireEvent.click(screen.getByTestId("fwd-button"));
       fireEvent.click(screen.getByTestId("fwd-button"));
@@ -123,7 +166,12 @@ describe("OakCarousel", () => {
   });
 
   it("updates position indicator correctly", () => {
-    renderCarousel({ content: mockContent });
+    renderCarousel({
+      content: mockContent,
+      fwdLabel: "forward",
+      backLabel: "back",
+      containerLabel: "test",
+    });
     expect(screen.getByTestId("position-indicator")).toHaveTextContent("0/3");
     fireEvent.click(screen.getByTestId("fwd-button"));
     expect(screen.getByTestId("position-indicator")).toHaveTextContent("1/3");

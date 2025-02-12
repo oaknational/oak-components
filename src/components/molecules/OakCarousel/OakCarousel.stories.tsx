@@ -11,7 +11,7 @@ const meta: Meta<typeof OakCarousel> = {
   argTypes: {},
   parameters: {
     controls: {
-      include: ["type"],
+      include: ["isLooping", "backLabel", "fwdLabel"],
     },
   },
 };
@@ -56,6 +56,9 @@ export const Default: Story = {
   render: (args) => <OakCarousel {...args} />,
   args: {
     content,
+    backLabel: "Back",
+    fwdLabel: "Forward",
+    containerLabel: "Carousel",
   },
 };
 
@@ -64,5 +67,8 @@ export const IsLooping: Story = {
   args: {
     content,
     isLooping: true,
+    backLabel: "Back",
+    fwdLabel: "Forward",
+    containerLabel: "Carousel",
   },
 };

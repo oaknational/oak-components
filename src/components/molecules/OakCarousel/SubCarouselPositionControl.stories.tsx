@@ -20,8 +20,13 @@ export const Controls: Story = {
   argTypes: {
     disableFwd: { control: "boolean" },
     disableBack: { control: "boolean" },
+    fwdLabel: { control: "text" },
+    backLabel: { control: "text" },
   },
 };
 export const Default: Story = {
-  args: {},
+  args: {
+    fwdLabel: "SubCarouselPositionControl",
+    backLabel: "SubCarouselPositionControl",
+  },
 };

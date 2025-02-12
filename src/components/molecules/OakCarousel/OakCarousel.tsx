@@ -21,9 +21,18 @@ const SlideContainer = styled(OakFlex)<SlideContainerProps>`
 export type OakCarouselProps = {
   content: ReactNode[];
   isLooping?: boolean;
+  backLabel: string;
+  fwdLabel: string;
+  containerLabel: string;
 };
 
-export const OakCarousel = ({ content, isLooping }: OakCarouselProps) => {
+export const OakCarousel = ({
+  content,
+  isLooping,
+  backLabel,
+  fwdLabel,
+  containerLabel,
+}: OakCarouselProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handleKeyUp = (key: string) => {
@@ -64,12 +73,24 @@ export const OakCarousel = ({ content, isLooping }: OakCarouselProps) => {
       $flexDirection={"column"}
       $gap={"space-between-xl"}
       onKeyUp={(event) => handleKeyUp(event.key)}
+      role="region"
+      aria-label={containerLabel}
     >
       <OakFlex $overflow={"hidden"}>
-        <SlideContainer activeIndex={activeIndex} $transition={"standard-ease"}>
+        <SlideContainer
+          activeIndex={activeIndex}
+          $transition={"standard-ease"}
+          role="list"
+        >
           {content.map((item, index) => {
             return (
-              <OakFlex key={index} $width={"100%"} $flexShrink={0}>
+              <OakFlex
+                key={index}
+                $width={"100%"}
+                $flexShrink={0}
+                aria-live={index === activeIndex ? "polite" : "off"}
+                role="listitem"
+              >
                 {item}
               </OakFlex>
             );
@@ -87,6 +108,8 @@ export const OakCarousel = ({ content, isLooping }: OakCarouselProps) => {
           onBack={handleBack}
           disableFwd={!isLooping && activeIndex === content.length - 1}
           disableBack={!isLooping && activeIndex === 0}
+          backLabel={backLabel}
+          fwdLabel={fwdLabel}
         />
       </OakFlex>
     </OakFlex>

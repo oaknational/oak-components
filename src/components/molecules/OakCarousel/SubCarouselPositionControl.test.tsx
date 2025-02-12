@@ -43,6 +43,8 @@ describe("SubCarouselPositionControl", () => {
   const defaultProps: SubCarouselPositionControlProps = {
     onBack: jest.fn(),
     onFwd: jest.fn(),
+    fwdLabel: "Forward",
+    backLabel: "Back",
   };
 
   const renderComponent = (

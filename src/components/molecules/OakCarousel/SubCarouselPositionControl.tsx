@@ -8,6 +8,8 @@ export type SubCarouselPositionControlProps = {
   onFwd: () => void;
   disableFwd?: boolean;
   disableBack?: boolean;
+  backLabel: string;
+  fwdLabel: string;
 };
 
 export const SubCarouselPositionControl = ({
@@ -15,6 +17,8 @@ export const SubCarouselPositionControl = ({
   onFwd,
   disableBack,
   disableFwd,
+  backLabel,
+  fwdLabel,
 }: SubCarouselPositionControlProps) => {
   return (
     <OakFlex $gap={"space-between-m"}>
@@ -22,11 +26,13 @@ export const SubCarouselPositionControl = ({
         onClick={onBack}
         iconName="chevron-left"
         disabled={disableBack}
+        aria-label={backLabel}
       />
       <OakTertiaryInvertedButton
         onClick={onFwd}
         iconName="chevron-right"
         disabled={disableFwd}
+        aria-label={fwdLabel}
       />
     </OakFlex>
   );
