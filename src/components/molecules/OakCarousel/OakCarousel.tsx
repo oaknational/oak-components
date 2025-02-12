@@ -11,6 +11,7 @@ type SlideContainerProps = {
 } & OakFlexProps;
 
 const SlideContainer = styled(OakFlex)<SlideContainerProps>`
+  width: 100%;
   transform: translateX(${(props) => -props.activeIndex * 100}%);
 
   @media (prefers-reduced-motion) {
@@ -73,9 +74,10 @@ export const OakCarousel = ({
             return (
               <OakFlex
                 key={index}
+                aria-live={index === activeIndex ? "polite" : "off"}
                 $width={"100%"}
                 $flexShrink={0}
-                aria-live={index === activeIndex ? "polite" : "off"}
+                $overflow={"visible"}
               >
                 {item}
               </OakFlex>
