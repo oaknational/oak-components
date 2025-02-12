@@ -42,6 +42,8 @@ export type InternalShadowRoundButtonProps = Omit<
   disabledIconBackground: OakCombinedColorToken;
   defaultIconColor?: OakRoundIconProps["$colorFilter"];
   disabledIconColor?: OakRoundIconProps["$colorFilter"];
+  defaultIconBorderColor?: OakCombinedColorToken;
+  disabledIconBorderColor?: OakCombinedColorToken;
   width?: SizeStyleProps["$width"];
   maxWidth?: SizeStyleProps["$maxWidth"];
   iconBackgroundSize: SizeStyleProps["$width"];
@@ -137,6 +139,8 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
     defaultIconColor,
     hoverIconBackground,
     defaultIconBackground,
+    defaultIconBorderColor,
+    disabledIconBorderColor,
     disabledIconColor,
     defaultTextColor,
     hoverTextColor,
@@ -164,6 +168,10 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
       <OakLoadingSpinner $width={iconSize} loaderColor="white" />
     </OakBox>
   );
+
+  const iconBorderColor =
+    disabled || isLoading ? disabledIconBorderColor : defaultIconBorderColor;
+
   const iconLogic = (isLoading || icon) && (
     <OakFlex
       className={"icon-container"}
@@ -181,6 +189,8 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
         className="shadow"
         $position={"absolute"}
         $borderRadius={"border-radius-circle"}
+        $borderColor={iconBorderColor}
+        $ba={iconBorderColor ? "border-solid-m" : undefined}
         $width={"100%"}
         $height={"100%"}
         $top="all-spacing-0"

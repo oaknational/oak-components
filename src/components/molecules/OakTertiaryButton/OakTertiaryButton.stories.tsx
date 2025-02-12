@@ -52,6 +52,7 @@ export const TertiaryButtonWithNoText: Story = {
   ),
   args: {
     iconName: "chevron-right",
+    ariaLabel: "test",
   },
 };
 
