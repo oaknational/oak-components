@@ -2,8 +2,20 @@ import React from "react";
 
 import { OakFlex } from "@/components/atoms";
 
-const PositionIcon = ({ isActive }: { isActive: boolean }) => {
+const PositionIcon = ({
+  isActive,
+  numItems,
+  index,
+}: {
+  isActive: boolean;
+  numItems: number;
+  index: number;
+}) => {
   const fill = isActive ? "#222222" : "#FFFFFF";
+
+  const ariaLabel = `Position indicator: ${index + 1} of ${numItems}: ${
+    isActive ? "Selected item" : "Not selected"
+  }`;
 
   return (
     <svg
@@ -13,7 +25,7 @@ const PositionIcon = ({ isActive }: { isActive: boolean }) => {
       viewBox="0 0 16 17"
       fill="none"
       role="img"
-      aria-label="Position Indicator"
+      aria-label={ariaLabel}
     >
       <circle
         cx="8"
@@ -37,7 +49,12 @@ export const SubCarouselPositionIndicator = ({
   activeIndex,
 }: SubCarouselPositionIndicatorProps) => {
   const positionIndicators = Array.from({ length: numberOfItems }, (_, i) => (
-    <PositionIcon key={i} isActive={activeIndex === i} />
+    <PositionIcon
+      key={i}
+      isActive={activeIndex === i}
+      index={i}
+      numItems={numberOfItems}
+    />
   ));
 
   return (

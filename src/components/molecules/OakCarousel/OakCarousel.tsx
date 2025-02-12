@@ -35,14 +35,6 @@ export const OakCarousel = ({
 }: OakCarouselProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const handleKeyUp = (key: string) => {
-    if (key === "ArrowRight") {
-      handleFwd();
-    } else if (key === "ArrowLeft") {
-      handleBack();
-    }
-  };
-
   const handleFwd = () => {
     if (!isLooping) {
       if (activeIndex < content.length - 1) {
@@ -72,16 +64,11 @@ export const OakCarousel = ({
       $borderRadius={"border-radius-l"}
       $flexDirection={"column"}
       $gap={"space-between-xl"}
-      onKeyUp={(event) => handleKeyUp(event.key)}
       role="region"
       aria-label={containerLabel}
     >
       <OakFlex $overflow={"hidden"}>
-        <SlideContainer
-          activeIndex={activeIndex}
-          $transition={"standard-ease"}
-          role="list"
-        >
+        <SlideContainer activeIndex={activeIndex} $transition={"standard-ease"}>
           {content.map((item, index) => {
             return (
               <OakFlex
@@ -89,7 +76,6 @@ export const OakCarousel = ({
                 $width={"100%"}
                 $flexShrink={0}
                 aria-live={index === activeIndex ? "polite" : "off"}
-                role="listitem"
               >
                 {item}
               </OakFlex>
