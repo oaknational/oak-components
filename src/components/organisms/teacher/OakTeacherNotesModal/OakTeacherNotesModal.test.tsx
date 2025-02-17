@@ -23,6 +23,7 @@ describe("OakTeacherNotesModal", () => {
     remainingCharacters: 100,
     isBold: false,
     isBulletList: false,
+    termsAndConditionsHref: "https://oak.app/terms",
   };
 
   it("matches snapshot", () => {
@@ -41,7 +42,7 @@ describe("OakTeacherNotesModal", () => {
 
     expect(
       getByText(
-        "You can add a note to the link that will appear when it's opened, and share it easily.",
+        "Add a teacher note to the page and share the link with your colleague.",
       ),
     ).toBeInTheDocument();
     expect(getByText("Editor")).toBeInTheDocument();

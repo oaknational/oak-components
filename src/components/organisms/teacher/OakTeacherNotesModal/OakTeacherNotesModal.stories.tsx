@@ -133,6 +133,7 @@ export const Default: Story = {
     error: false,
     noteShared: false,
     remainingCharacters: 100,
+    termsAndConditionsHref: "/terms-and-conditions",
   },
 };
 
@@ -160,5 +161,6 @@ export const WithTipTap: Story = {
     progressSaved: false,
     noteShared: false,
     remainingCharacters: 100,
+    termsAndConditionsHref: "/terms-and-conditions",
   },
 };

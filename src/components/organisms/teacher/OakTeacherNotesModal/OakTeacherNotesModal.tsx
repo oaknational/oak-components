@@ -1,6 +1,10 @@
 import React from "react";
 
-import { OakModalCenter, OakSmallPrimaryButton } from "@/components/molecules";
+import {
+  OakLink,
+  OakModalCenter,
+  OakSmallPrimaryButton,
+} from "@/components/molecules";
 import {
   OakFlex,
   OakGrid,
@@ -85,6 +89,7 @@ export type OakTeacherNotesModalProps = {
   progressSaved: boolean;
   noteShared: boolean;
   error?: boolean;
+  termsAndConditionsHref: string;
 } & EditorContainerProps;
 
 export const OakTeacherNotesModal = ({
@@ -94,6 +99,7 @@ export const OakTeacherNotesModal = ({
   progressSaved,
   noteShared,
   error,
+  termsAndConditionsHref,
   ...rest
 }: OakTeacherNotesModalProps) => {
   let message = undefined;
@@ -143,8 +149,7 @@ export const OakTeacherNotesModal = ({
         $gap="space-between-m"
       >
         <OakHeading tag="h1" $font={"body-3-bold"}>
-          You can add a note to the link that will appear when it's opened, and
-          share it easily.
+          Add a teacher note to the page and share the link with your colleague.
         </OakHeading>
 
         <EditorContainer {...rest} />
@@ -175,6 +180,13 @@ export const OakTeacherNotesModal = ({
         >
           {messageRender}
         </OakFlex>
+        <OakP>
+          Do not include personal, sensitive, or pupil information. See our{" "}
+          <OakLink href={termsAndConditionsHref} target="_blank">
+            Terms & conditions
+          </OakLink>{" "}
+          for guidance.
+        </OakP>
       </OakFlex>
     </OakModalCenter>
   );
