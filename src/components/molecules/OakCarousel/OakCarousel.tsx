@@ -67,6 +67,8 @@ export const OakCarousel = ({
       $gap={"space-between-xl"}
       role="region"
       aria-label={containerLabel}
+      $height={"100%"}
+      $justifyContent={"space-between"}
     >
       <OakFlex $overflow={"hidden"}>
         <SlideContainer activeIndex={activeIndex} $transition={"standard-ease"}>
