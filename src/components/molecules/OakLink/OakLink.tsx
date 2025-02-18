@@ -1,5 +1,6 @@
 import React, { ElementType, forwardRef } from "react";
 
+import { OakAllSpacingToken } from "@/styles";
 import {
   InternalLink,
   InternalLinkProps,
@@ -12,7 +13,10 @@ import {
 export type OakLinkProps = Pick<
   InternalLinkProps,
   "iconName" | "isTrailingIcon" | "isLoading"
->;
+> & {
+  iconWidth?: OakAllSpacingToken;
+  iconHeight?: OakAllSpacingToken;
+};
 
 type OakLinkComponent = <C extends React.ElementType = "a">(
   props: PolymorphicPropsWithRef<C> & OakLinkProps,
