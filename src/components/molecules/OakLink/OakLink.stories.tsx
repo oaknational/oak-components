@@ -66,3 +66,14 @@ export const Loading: Story = {
     isLoading: true,
   },
 };
+
+export const WithIconSizeProps: Story = {
+  args: {
+    element: "button",
+    children: "External link with smaller icon",
+    isTrailingIcon: true,
+    iconName: "external",
+    iconHeight: "all-spacing-4",
+    iconWidth: "all-spacing-4",
+  },
+};

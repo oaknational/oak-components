@@ -87,7 +87,7 @@ exports[`OakInlineBanner matches snapshot 1`] = `
   object-fit: contain;
 }
 
-.c25 {
+.c23 {
   object-fit: contain;
 }
 
@@ -277,11 +277,6 @@ exports[`OakInlineBanner matches snapshot 1`] = `
   background: transparent;
 }
 
-.c24 {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
 .c21 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -308,11 +303,6 @@ exports[`OakInlineBanner matches snapshot 1`] = `
   color: #222222;
 }
 
-.c21 .c23 {
-  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-}
-
 .c21:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
@@ -321,18 +311,8 @@ exports[`OakInlineBanner matches snapshot 1`] = `
   color: #575757;
 }
 
-.c21:visited .c23 {
-  -webkit-filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
-  filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
-}
-
 .c21:active {
   color: #222222;
-}
-
-.c21:active .c23 {
-  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
 }
 
 .c21[disabled] {
@@ -340,21 +320,10 @@ exports[`OakInlineBanner matches snapshot 1`] = `
   color: #808080;
 }
 
-.c21[disabled] .c23 {
-  -webkit-filter: invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%);
-  filter: invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%);
-}
-
 @media (hover:hover) {
   .c21:hover,
   .c21:visited:hover {
     color: #222222;
-  }
-
-  .c21:hover .c23,
-  .c21:visited:hover .c23 {
-    -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-    filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   }
 }
 
@@ -484,11 +453,11 @@ exports[`OakInlineBanner matches snapshot 1`] = `
       Link
     </span>
     <div
-      className="c5 c23 c24"
+      className="c19 "
     >
       <img
         alt="chevron-right"
-        className="c25"
+        className="c23"
         data-nimg="fill"
         decoding="async"
         loading="lazy"

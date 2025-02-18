@@ -12,12 +12,9 @@ import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { OakFlex, OakIcon, OakIconProps, OakSpan } from "@/components/atoms";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
-import { OakCombinedColorToken } from "@/styles";
+import { OakAllSpacingToken, OakCombinedColorToken } from "@/styles";
 
-const StyledOakIcon = styled(OakIcon)`
-  width: ${parseSpacing("all-spacing-6")};
-  height: ${parseSpacing("all-spacing-6")};
-`;
+const StyledOakIcon = styled(OakIcon)``;
 
 const StyledLink = styled.a<{
   $color: OakCombinedColorToken;
@@ -104,6 +101,8 @@ export type InternalLinkProps = {
   hoverColor: OakCombinedColorToken;
   activeColor: OakCombinedColorToken;
   disabledColor: OakCombinedColorToken;
+  iconWidth?: OakAllSpacingToken;
+  iconHeight?: OakAllSpacingToken;
 };
 
 type InternalLinkComponent = <C extends React.ElementType = "a">(
@@ -131,8 +130,11 @@ export const InternalLink: InternalLinkComponent = forwardRef(
       visitedColor,
       hoverColor,
       activeColor,
+      iconWidth = "all-spacing-6",
+      iconHeight = "all-spacing-6",
       ...rest
     } = props;
+
     const icon = (() => {
       switch (true) {
         case isLoading:
@@ -150,7 +152,13 @@ export const InternalLink: InternalLinkComponent = forwardRef(
             </OakFlex>
           );
         case !!iconName:
-          return <StyledOakIcon iconName={iconName} />;
+          return (
+            <StyledOakIcon
+              iconName={iconName}
+              iconWidth={iconWidth}
+              iconHeight={iconHeight}
+            />
+          );
         default:
           return null;
       }
