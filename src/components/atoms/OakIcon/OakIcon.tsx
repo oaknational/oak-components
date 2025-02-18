@@ -58,9 +58,6 @@ export const OakIcon = (props: OakIconProps) => {
     ...rest
   } = props;
 
-  console.log("props OakIcon:", props);
-  console.log("which", iconWidth ?? "all-spacing-7");
-
   return (
     <OakImage
       src={generateOakIconURL(iconName)}
