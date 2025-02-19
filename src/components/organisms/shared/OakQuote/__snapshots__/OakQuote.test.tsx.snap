@@ -18,6 +18,18 @@ exports[`OakQuote component matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
+.c6 {
+  color: #222222;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
 .c9 {
   position: relative;
   width: 100%;
@@ -76,18 +88,6 @@ exports[`OakQuote component matches snapshot 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-}
-
-.c6 {
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
-  letter-spacing: 0.0115rem;
-  color: #222222;
 }
 
 .c13 {
@@ -178,17 +178,17 @@ exports[`OakQuote component matches snapshot 1`] = `
   <div
     className="c4 c5"
   >
-    <p
+    <div
       className="c6"
     >
       <div
         className="c4 c7"
       >
-        “
+        "
         This is a quote
-        ”
+        "
       </div>
-    </p>
+    </div>
     <div
       className="c4 c8"
     >
