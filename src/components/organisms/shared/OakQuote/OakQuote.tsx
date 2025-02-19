@@ -48,9 +48,9 @@ export const OakQuote = (props: OakQuoteProps) => {
         />
       )}
       <OakFlex $flexDirection={"column"} $gap={"space-between-s"}>
-        <OakP $font={["heading-7", "heading-6"]} $color={"text-primary"}>
-          <TightLetterSpacing>“{quote}”</TightLetterSpacing>
-        </OakP>
+        <OakBox $font={["heading-7", "heading-6"]} $color={"text-primary"}>
+          <TightLetterSpacing>"{quote}"</TightLetterSpacing>
+        </OakBox>
 
         {authorName ? (
           <OakFlex $gap={"space-between-s"} $alignItems={"center"}>
