@@ -422,7 +422,7 @@ exports[`OakUnitsContainer matches snapshot 1`] = `
         <h2
           className="c7"
         >
-          Maths units
+          maths units
         </h2>
         <div
           className="c8 c9 c10"
