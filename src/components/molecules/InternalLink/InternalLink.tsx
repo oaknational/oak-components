@@ -23,7 +23,7 @@ const StyledLink = styled.a<{
   $activeColor: OakCombinedColorToken;
   $disabledColor: OakCombinedColorToken;
 }>`
-  display: inline-flex;
+  display: inline;
   align-items: center;
   gap: ${parseSpacing("space-between-sssx")};
   outline: none;
@@ -40,6 +40,8 @@ const StyledLink = styled.a<{
 
   ${StyledOakIcon} {
     filter: ${(props) => parseColorFilter(props.$color)};
+    display: inline-block;
+    vertical-align: bottom;
   }
 
   &:focus-visible {
