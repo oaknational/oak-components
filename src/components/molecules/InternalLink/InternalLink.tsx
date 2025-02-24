@@ -10,7 +10,7 @@ import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
-import { OakFlex, OakIcon, OakIconProps, OakSpan } from "@/components/atoms";
+import { OakBox, OakIcon, OakIconProps, OakSpan } from "@/components/atoms";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
 import { OakAllSpacingToken, OakCombinedColorToken } from "@/styles";
 
@@ -141,17 +141,16 @@ export const InternalLink: InternalLinkComponent = forwardRef(
       switch (true) {
         case isLoading:
           return (
-            <OakFlex
+            <OakBox
               $width="all-spacing-6"
               $height="all-spacing-6"
-              $alignItems="center"
-              $justifyContent="center"
+              $display={"inline-block"}
             >
               <OakLoadingSpinner
                 $width="all-spacing-4"
                 $color="icon-inverted"
               />
-            </OakFlex>
+            </OakBox>
           );
         case !!iconName:
           return (
