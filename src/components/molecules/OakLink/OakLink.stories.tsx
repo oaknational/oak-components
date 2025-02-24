@@ -3,16 +3,33 @@ import { Meta, StoryObj } from "@storybook/react";
 
 import { OakLink } from "./OakLink";
 
+import { oakIconNames } from "@/components/atoms";
+import { oakAllSpacingTokens } from "@/styles/theme/spacing";
+
+const controlIconNames = [...oakIconNames].sort((a, b) => a.localeCompare(b));
+
 const meta: Meta<typeof OakLink> = {
   component: OakLink,
   tags: ["autodocs"],
   title: "components/molecules/OakLink",
   argTypes: {
     children: { type: "string" },
+    iconName: {
+      options: controlIconNames,
+    },
+    isTrailingIcon: { type: "boolean" },
+    iconHeight: { options: [...Object.keys(oakAllSpacingTokens)] },
+    iconWidth: { options: [...Object.keys(oakAllSpacingTokens)] },
   },
   parameters: {
     controls: {
-      include: ["children", "iconName"],
+      include: [
+        "children",
+        "iconName",
+        "isTrailingIcon",
+        "iconHeight",
+        "iconWidth",
+      ],
     },
   },
   args: {
@@ -69,11 +86,11 @@ export const Loading: Story = {
 
 export const WithIconSizeProps: Story = {
   args: {
-    element: "button",
-    children: "External link with smaller icon",
+    element: "a",
+    children: "External link with icon size props",
     isTrailingIcon: true,
     iconName: "external",
-    iconHeight: "all-spacing-4",
-    iconWidth: "all-spacing-4",
+    iconHeight: "all-spacing-6",
+    iconWidth: "all-spacing-6",
   },
 };
