@@ -90,6 +90,7 @@ const ConnectedDraggable = ({
       aria-pressed={undefined}
       aria-selected={!!attributes["aria-pressed"]}
       style={{ opacity: isDragging ? 0 : 1 }}
+      id={"oak-quiz-match-item"}
     >
       {label}
     </OakDraggable>

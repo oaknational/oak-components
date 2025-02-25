@@ -86,6 +86,7 @@ const ConnectedDraggable = ({
         aria-pressed={undefined}
         aria-selected={!!attributes["aria-pressed"]}
         role="option"
+        id="oak-quiz-order-item"
       >
         <OakCodeRenderer string={label} />
       </OakDraggable>
