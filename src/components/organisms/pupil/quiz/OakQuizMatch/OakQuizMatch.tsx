@@ -26,7 +26,9 @@ import { usePrefersReducedMotion } from "@/animation/usePrefersReducedMotion";
 import { InternalDndContext } from "@/components/atoms/InternalDndContext/InternalDndContext";
 import { InternalClientPortal } from "@/components/atoms/InternalClientPortal";
 
-export const OakQuizMatchItemId = "oak-quiz-match-item";
+export const OakQuizMatchItemId = (id: string) => {
+  return `oak-quiz-match-item-${id}`;
+};
 
 type DraggableId = string;
 type DroppableId = string;
@@ -92,7 +94,7 @@ const ConnectedDraggable = ({
       aria-pressed={undefined}
       aria-selected={!!attributes["aria-pressed"]}
       style={{ opacity: isDragging ? 0 : 1 }}
-      id={OakQuizMatchItemId}
+      id={OakQuizMatchItemId(id)}
     >
       {label}
     </OakDraggable>
