@@ -37,6 +37,7 @@ type OakQuizOrderItem = {
   label: string;
 };
 
+export const OakQuizOrderitemId = "oak-quiz-order-item";
 export type OakQuizOrderProps = {
   /**
    * The initial order of items
@@ -86,7 +87,7 @@ const ConnectedDraggable = ({
         aria-pressed={undefined}
         aria-selected={!!attributes["aria-pressed"]}
         role="option"
-        id="oak-quiz-order-item"
+        id={OakQuizOrderitemId}
       >
         <OakCodeRenderer string={label} />
       </OakDraggable>
