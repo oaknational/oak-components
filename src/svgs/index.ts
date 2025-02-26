@@ -7,3 +7,4 @@ export * from "./button-border-bottom";
 export * from "./button-border-left";
 export * from "./button-border-right";
 export * from "./icon-background";
+export * from "./scribble";
