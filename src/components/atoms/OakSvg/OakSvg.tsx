@@ -13,6 +13,7 @@ import {
   ButtonBorderLeft,
   ButtonBorderRight,
   IconBackground,
+  Scribble,
 } from "@/svgs";
 
 /**
@@ -30,6 +31,7 @@ const svgMap = {
   "button-border-left": ButtonBorderLeft,
   "button-border-right": ButtonBorderRight,
   "icon-background": IconBackground,
+  scribble: Scribble,
 };
 
 export type OakSvgNames = keyof typeof svgMap;
