@@ -171,6 +171,7 @@ export const icons = {
   "looping-line-2": "v1734536933/OWA/ui-graphics/looping-line-2_sdinei.svg",
   "looping-line-3": "v1734537015/OWA/ui-graphics/looping-line-3_b8dque.svg",
   "looping-line-4": "v1734537039/OWA/ui-graphics/looping-line-4_xtjj4r.svg",
+  "looping-line-5": "v1740665310/OWA/ui-graphics/looping-line-5_vdknco.svg",
   "speech-bubble": "v1734537300/OWA/ui-graphics/speech-bubble_magqjf.svg",
   "tag-promotional": "v1734537244/OWA/ui-graphics/tag-promotional_v4p3oa.svg",
   "tick-mark-happiness":
