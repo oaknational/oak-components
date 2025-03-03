@@ -32,6 +32,8 @@ exports[`InternalShadowRectButton matches snapshot 1`] = `
 }
 
 .c8 {
+  -webkit-filter: brightness(0) saturate(100%) invert(85%) sepia(23%) saturate(120%) hue-rotate(71deg) brightness(112%) contrast(97%);
+  filter: brightness(0) saturate(100%) invert(85%) sepia(23%) saturate(120%) hue-rotate(71deg) brightness(112%) contrast(97%);
   object-fit: contain;
 }
 
