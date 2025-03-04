@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useRef, useState } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import {
   closestCenter,
   KeyboardSensor,
@@ -35,10 +35,12 @@ type DroppableId = string;
 type DraggableItem = {
   id: DraggableId;
   label: ReactNode;
+  announcement: string;
 };
 type DroppableItem = {
   id: DroppableId;
   label: ReactNode;
+  announcement: string;
 };
 type Matches = Record<DroppableId, DraggableItem>;
 
@@ -72,11 +74,12 @@ export type OakQuizMatchProps = {
 const ConnectedDraggable = ({
   id,
   label,
+  announcement,
   isOver,
 }: DraggableItem & { isOver?: boolean }) => {
   const { attributes, listeners, setNodeRef, isDragging } = useDraggable({
     id,
-    data: { id, label },
+    data: { id, label, announcement },
   });
 
   return (
@@ -108,7 +111,7 @@ const ConnectedDroppableHoldingPen = ({
 }) => {
   const { setNodeRef, isOver } = useDroppable({
     id: "holding-pen",
-    data: { label: "holding pen" },
+    data: { label: "holding pen", announcement: "holding pen" },
   });
 
   return (
@@ -127,12 +130,13 @@ const ConnectedDroppableHoldingPen = ({
 const ConnectedDroppable = ({
   id,
   label,
+  announcement,
   match,
   isHighlighted,
 }: DroppableItem & { match?: DraggableItem; isHighlighted?: boolean }) => {
   const { setNodeRef, isOver, active } = useDroppable({
     id,
-    data: { id, label },
+    data: { id, label, announcement },
   });
 
   return (
@@ -140,7 +144,7 @@ const ConnectedDroppable = ({
       isOver={isOver}
       isDisabled={!active}
       ref={setNodeRef}
-      id={id}
+      id={`droppable-${id}`}
       labelSlot={label}
       data-testid="slot"
       isHighlighted={isHighlighted}
@@ -162,12 +166,10 @@ export const OakQuizMatch = ({
   onChange,
 }: OakQuizMatchProps) => {
   const [matches, setMatches] = useState<Matches>({});
-  const draggables = useRef(initialOptions.slice()).current;
   const [shuffledDraggables, setShuffledDraggables] =
-    useState<DraggableItem[]>(draggables);
-  const droppables = useRef(initialSlots).current;
+    useState<DraggableItem[]>(initialOptions);
   const [activeId, setActiveId] = useState<DraggableId | null>(null);
-  const activeDraggable = draggables.find((item) => item.id === activeId);
+  const activeDraggable = initialOptions.find((item) => item.id === activeId);
   const prefersReducedMotion = usePrefersReducedMotion();
   const sensors = useSensors(
     useSensor(MouseSensor),
@@ -181,11 +183,11 @@ export const OakQuizMatch = ({
   useEffect(() => {
     const matchedDraggableIds = Object.values(matches).map((item) => item.id);
 
-    const unmatchedDraggables = draggables.filter(
+    const unmatchedDraggables = initialOptions.filter(
       (draggable) => !matchedDraggableIds.includes(draggable.id),
     );
     setShuffledDraggables(unmatchedDraggables.sort(() => Math.random() - 0.5));
-  }, [draggables, matches]);
+  }, [initialOptions, matches]);
 
   return (
     <>
@@ -208,7 +210,7 @@ export const OakQuizMatch = ({
           aria-label="Matched items"
           role="listbox"
         >
-          {droppables.map((droppable) => (
+          {initialSlots.map((droppable) => (
             <ConnectedDroppable
               key={droppable.id}
               {...droppable}
@@ -265,17 +267,17 @@ const announcements: Announcements = {
   },
   onDragOver({ active, over }) {
     if (over?.data.current && active.data?.current) {
-      return `Item ${active.data.current.label} is over ${over.data.current.label}`;
+      return `Item ${active.data.current.announcement} is over ${over.data.current.announcement}`;
     }
   },
   onDragEnd({ active, over }) {
     if (over?.data.current && active.data?.current) {
-      return `Item ${active.data.current.label} was dropped onto ${over.data.current.label}`;
+      return `Item ${active.data.current.announcement} was dropped onto ${over.data.current.announcement}`;
     }
   },
   onDragCancel({ active }) {
     if (active.data?.current) {
-      return `Dragging was cancelled. Item ${active.data.current.label} was dropped.`;
+      return `Dragging was cancelled. Item ${active.data.current.announcement} was dropped.`;
     }
   },
 };

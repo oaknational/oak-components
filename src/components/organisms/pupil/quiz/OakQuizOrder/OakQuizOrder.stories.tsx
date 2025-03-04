@@ -17,7 +17,10 @@ const meta: Meta<typeof OakQuizOrder> = {
   },
   args: {
     initialItems: [
-      { id: "2", label: "Grass" },
+      {
+        id: "2",
+        label: "$$169\\text{ cm}^2$$",
+      },
       { id: "3", label: "Sunlight" },
       { id: "4", label: "Mouse" },
       { id: "5", label: "Hawk" },
