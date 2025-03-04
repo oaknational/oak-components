@@ -630,7 +630,7 @@ exports[`OakQuizMatch matches snapshot 1`] = `
     <div
       className="c2 c3"
       data-testid="slot"
-      id="1"
+      id="droppable-1"
     >
       <div
         className="c4 c5 c6"
@@ -650,7 +650,7 @@ exports[`OakQuizMatch matches snapshot 1`] = `
     <div
       className="c2 c3"
       data-testid="slot"
-      id="2"
+      id="droppable-2"
     >
       <div
         className="c4 c5 c6"
@@ -670,7 +670,7 @@ exports[`OakQuizMatch matches snapshot 1`] = `
     <div
       className="c2 c3"
       data-testid="slot"
-      id="3"
+      id="droppable-3"
     >
       <div
         className="c4 c5 c6"
