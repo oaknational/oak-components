@@ -28,14 +28,18 @@ window.matchMedia =
 installMockResizeObserver();
 
 const options = [
-  { id: "1", label: "Exclamation mark" },
-  { id: "2", label: "Full stop" },
-  { id: "3", label: "Question mark" },
+  { id: "1", label: "Exclamation mark", announcement: "Exclamation mark" },
+  { id: "2", label: "Full stop", announcement: "Full stop" },
+  { id: "3", label: "Question mark", announcement: "Question mark" },
 ];
 const slots = [
-  { id: "1", label: "conveys intense emotion" },
-  { id: "2", label: "poses a question" },
-  { id: "3", label: "ends a declarative sentence" },
+  { id: "1", label: "conveys intense emotion", announcement: "Emotion" },
+  { id: "2", label: "poses a question", announcement: "Question" },
+  {
+    id: "3",
+    label: "ends a declarative sentence",
+    announcement: "Declarative",
+  },
 ];
 
 describe(OakQuizMatch, () => {

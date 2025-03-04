@@ -5,8 +5,6 @@ import {
   useSensor,
   useSensors,
   DragEndEvent,
-  DragOverlay,
-  DragStartEvent,
   UniqueIdentifier,
   Announcements,
   MouseSensor,
@@ -20,7 +18,6 @@ import {
   verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
-import { createPortal } from "react-dom";
 
 import { OakFlex } from "@/components/atoms";
 import {
@@ -56,6 +53,7 @@ export type OakQuizOrderProps = {
    * Highlight all items to indicate that they can be interacted with
    */
   isHighlighted?: boolean;
+  announcements?: OakQuizOrderItem[];
 };
 
 const ConnectedDraggable = ({
@@ -82,7 +80,6 @@ const ConnectedDraggable = ({
       <OakDraggable
         ref={setNodeRef}
         style={style}
-        isDisabled={isDragging}
         {...attributes}
         {...listeners}
         aria-describedby={undefined}
@@ -91,6 +88,7 @@ const ConnectedDraggable = ({
         aria-selected={!!attributes["aria-pressed"]}
         role="option"
         id={OakQuizOrderitemId(id)}
+        isDragging={isDragging}
       >
         <OakCodeRenderer string={label} />
       </OakDraggable>
@@ -105,12 +103,11 @@ const ConnectedDraggable = ({
  */
 export const OakQuizOrder = ({
   initialItems,
+  announcements,
   onChange,
   isHighlighted,
 }: OakQuizOrderProps) => {
   const [items, setItems] = useState<OakQuizOrderItem[]>(initialItems);
-  const [activeId, setActiveId] = useState<string | null>(null);
-  const activeItem = items.find((item) => item.id === activeId);
   const sensors = useSensors(
     useSensor(MouseSensor),
     useSensor(TouchSensor),
@@ -127,9 +124,8 @@ export const OakQuizOrder = ({
         sensors={sensors}
         collisionDetection={closestCenter}
         onDragEnd={handleDragEnd}
-        onDragStart={handleDragStart}
         accessibility={{
-          announcements: createAccouncements(items),
+          announcements: createAccouncements(announcements || items),
         }}
       >
         <SortableContext items={items} strategy={verticalListSortingStrategy}>
@@ -147,25 +143,10 @@ export const OakQuizOrder = ({
               />
             ))}
           </OakFlex>
-          {createPortal(
-            <DragOverlay>
-              {activeItem && (
-                <OakDraggable isDragging>
-                  <OakCodeRenderer string={activeItem.label} />
-                </OakDraggable>
-              )}
-            </DragOverlay>,
-            document.body,
-          )}
         </SortableContext>
       </InternalDndContext>
     </>
   );
-
-  function handleDragStart(event: DragStartEvent) {
-    const { active } = event;
-    setActiveId(active.id.toString());
-  }
 
   function handleDragEnd(event: DragEndEvent) {
     const { active, over } = event;
@@ -181,8 +162,6 @@ export const OakQuizOrder = ({
         return newItems;
       });
     }
-
-    setActiveId(null);
   }
 };
 
