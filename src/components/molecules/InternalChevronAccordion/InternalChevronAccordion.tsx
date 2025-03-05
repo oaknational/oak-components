@@ -36,6 +36,10 @@ export type InternalChevronAccordionProps = {
    */
   children: ReactNode;
   /**
+   * Optional subheading to display above the fold
+   */
+  subheading?: ReactNode;
+  /**
    * The id of the accordion
    */
   id: string;
@@ -107,6 +111,7 @@ const Accordion = ({
   header,
   children,
   id,
+  subheading,
   ...styleProps
 }: InternalChevronAccordionProps) => {
   const [shouldDisplayShadow, setShouldDisplayShadow] = useState(false);
@@ -178,10 +183,11 @@ const Accordion = ({
           />
         </OakBox>
       </StyledAccordionButton>
+      {!isOpen && subheading}
       <OakBox
         ref={scrollBox}
         $position={"relative"}
-        $overflow={"scroll"}
+        $overflow={"auto"}
         onScroll={handleScroll}
         data-testid={"scrollable-content"}
       >
@@ -194,6 +200,7 @@ const Accordion = ({
         <BottomBoxShadow
           shouldDisplayShadow={shouldDisplayShadow}
           data-testid="bottom-box-shadow"
+          $pointerEvents="none"
         />
       )}
     </StyledContainer>
