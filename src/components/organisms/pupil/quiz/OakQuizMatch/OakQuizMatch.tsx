@@ -261,7 +261,7 @@ export const OakQuizMatch = ({
   }
 };
 
-const announcements: Announcements = {
+export const announcements: Announcements = {
   onDragStart() {
     return undefined;
   },
