@@ -3,7 +3,15 @@ import assert from "assert";
 import { act, create } from "react-test-renderer";
 import { ThemeProvider } from "styled-components";
 import React from "react";
-import { DndContext, DndContextProps, UniqueIdentifier } from "@dnd-kit/core";
+import {
+  DndContext,
+  DndContextProps,
+  DragCancelEvent,
+  DragEndEvent,
+  DragOverEvent,
+  DragStartEvent,
+  UniqueIdentifier,
+} from "@dnd-kit/core";
 import {
   getAllByRole as getAllByRoleWithin,
   getByTestId as getByTestIdWithin,
@@ -11,7 +19,7 @@ import {
   queryByRole as queryByRoleWithin,
 } from "@testing-library/react";
 
-import { OakQuizMatch } from "./OakQuizMatch";
+import { announcements, OakQuizMatch } from "./OakQuizMatch";
 
 import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
@@ -28,14 +36,18 @@ window.matchMedia =
 installMockResizeObserver();
 
 const options = [
-  { id: "1", label: "Exclamation mark" },
-  { id: "2", label: "Full stop" },
-  { id: "3", label: "Question mark" },
+  { id: "1", label: "Exclamation mark", announcement: "Exclamation mark" },
+  { id: "2", label: "Full stop", announcement: "Full stop" },
+  { id: "3", label: "Question mark", announcement: "Question mark" },
 ];
 const slots = [
-  { id: "1", label: "conveys intense emotion" },
-  { id: "2", label: "poses a question" },
-  { id: "3", label: "ends a declarative sentence" },
+  { id: "1", label: "conveys intense emotion", announcement: "Emotion" },
+  { id: "2", label: "poses a question", announcement: "Question" },
+  {
+    id: "3",
+    label: "ends a declarative sentence",
+    announcement: "Declarative",
+  },
 ];
 
 describe(OakQuizMatch, () => {
@@ -143,6 +155,79 @@ describe(OakQuizMatch, () => {
       "conveys intense emotion",
     );
     expect(queryByRoleWithin(firstSlot, "option")).toBeNull();
+  });
+  describe("DnD Announcements", () => {
+    it("handles drag start", () => {
+      const mockEvent = {
+        active: {
+          data: {
+            current: { announcement: "Test Item" },
+          },
+        },
+      };
+
+      const result = announcements.onDragStart?.(
+        mockEvent as unknown as DragStartEvent,
+      );
+      expect(result).toBeUndefined();
+    });
+
+    it("handles drag over", () => {
+      const mockEvent = {
+        active: {
+          data: {
+            current: { announcement: "Active Item" },
+          },
+        },
+        over: {
+          data: {
+            current: { announcement: "Over Item" },
+          },
+        },
+      };
+
+      const result = announcements.onDragOver?.(
+        mockEvent as unknown as DragOverEvent,
+      );
+      expect(result).toBe("Item Active Item is over Over Item");
+    });
+
+    // Similar tests for onDragEnd and onDragCancel
+    it("handles drag end", () => {
+      const mockEvent = {
+        active: {
+          data: {
+            current: { announcement: "Active Item" },
+          },
+        },
+        over: {
+          data: {
+            current: { announcement: "Over Item" },
+          },
+        },
+      };
+
+      const result = announcements.onDragEnd?.(
+        mockEvent as unknown as DragEndEvent,
+      );
+      expect(result).toBe("Item Active Item was dropped onto Over Item");
+    });
+    it("handles drag cancel", () => {
+      const mockEvent = {
+        active: {
+          data: {
+            current: { announcement: "Active Item" },
+          },
+        },
+      };
+
+      const result = announcements.onDragCancel?.(
+        mockEvent as unknown as DragCancelEvent,
+      );
+      expect(result).toBe(
+        "Dragging was cancelled. Item Active Item was dropped.",
+      );
+    });
   });
 });
 
