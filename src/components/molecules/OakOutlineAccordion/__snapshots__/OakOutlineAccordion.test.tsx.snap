@@ -51,9 +51,14 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
 
 .c17 {
   position: relative;
-  overflow: scroll;
+  overflow: auto;
   font-family: --var(google-font),Lexend,sans-serif;
-  overflow: scroll;
+  overflow: auto;
+}
+
+.c20 {
+  pointer-events: none;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c16 {
@@ -167,7 +172,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   visibility: visible;
 }
 
-.c20 {
+.c21 {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -186,7 +191,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   bottom: 0.125rem;
 }
 
-.c21 {
+.c22 {
   height: 0.125rem;
   position: absolute;
   width: 100%;
@@ -306,12 +311,12 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
       </svg>
     </div>
     <div
-      className="c2 c20"
+      className="c20 c21"
       data-testid="bottom-box-shadow"
     />
   </div>
   <div
-    className="c2 c3 c21"
+    className="c2 c3 c22"
   >
     <svg
       className=""

@@ -57,9 +57,9 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 
 .c20 {
   position: relative;
-  overflow: scroll;
+  overflow: auto;
   font-family: --var(google-font),Lexend,sans-serif;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .c22 {
