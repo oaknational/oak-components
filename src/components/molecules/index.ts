@@ -47,3 +47,4 @@ export * from "./OakCopyLinkButton";
 export * from "./OakSignLanguageButton";
 export * from "./OakCodeRenderer";
 export * from "./OakCarousel";
+export * from "./OakBasicAccordion";

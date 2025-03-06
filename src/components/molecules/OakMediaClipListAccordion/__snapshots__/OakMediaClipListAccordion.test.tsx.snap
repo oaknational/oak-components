@@ -51,12 +51,17 @@ exports[`OakMediaClipListAccordion matches snapshot 1`] = `
 
 .c15 {
   position: relative;
-  overflow: scroll;
+  overflow: auto;
   font-family: --var(google-font),Lexend,sans-serif;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .c16 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c20 {
+  pointer-events: none;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -175,7 +180,7 @@ exports[`OakMediaClipListAccordion matches snapshot 1`] = `
   visibility: visible;
 }
 
-.c20 {
+.c21 {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -309,7 +314,7 @@ exports[`OakMediaClipListAccordion matches snapshot 1`] = `
       </svg>
     </div>
     <div
-      className="c16 c20"
+      className="c20 c21"
       data-testid="bottom-box-shadow"
     />
   </div>

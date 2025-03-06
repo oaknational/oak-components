@@ -97,12 +97,17 @@ exports[`OakMediaClipList matches snapshot 1`] = `
 
 .c21 {
   position: relative;
-  overflow: scroll;
+  overflow: auto;
   font-family: --var(google-font),Lexend,sans-serif;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .c22 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c27 {
+  pointer-events: none;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -255,7 +260,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   visibility: visible;
 }
 
-.c27 {
+.c28 {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -414,7 +419,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
         </svg>
       </div>
       <div
-        className="c22 c27"
+        className="c27 c28"
         data-testid="bottom-box-shadow"
       />
     </div>
