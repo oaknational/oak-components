@@ -6,6 +6,7 @@ export const oakDropShadowTokens = {
   "drop-shadow-grey": "0.25rem 0.25rem 0 rgba(87, 87, 87, 100%)",
   "drop-shadow-centered-grey": "0 0 0 0.3rem rgba(87, 87, 87, 100%)",
   "drop-shadow-black": "0.063rem 0.125rem 0 rgba(0,0,0, 100%)",
+  "drop-shadow-centred-standard": `0 0 0.5rem rgba(92, 92, 92, 20%)`,
 };
 
 export type OakDropShadowToken = keyof typeof oakDropShadowTokens;
