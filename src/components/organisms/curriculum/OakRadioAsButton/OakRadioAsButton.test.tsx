@@ -349,4 +349,26 @@ describe("OakRadioAsButton", () => {
     const radioButton = getByRole("radio");
     expect(radioButton).toHaveAttribute("aria-label", "History");
   });
+
+  it("setting value should change selection", () => {
+    const { getAllByRole, rerender } = renderWithTheme(
+      <OakRadioGroup name="test-group" value="option1">
+        <OakRadioAsButton value="option1" displayValue="Option 1" />
+        <OakRadioAsButton value="option2" displayValue="Option 2" />
+      </OakRadioGroup>,
+    );
+
+    const radios1 = getAllByRole("radio") as HTMLInputElement[];
+    expect(radios1[0]).toBeChecked();
+
+    rerender(
+      <OakRadioGroup name="test-group" value="option2">
+        <OakRadioAsButton value="option1" displayValue="Option 1" />
+        <OakRadioAsButton value="option2" displayValue="Option 2" />
+      </OakRadioGroup>,
+    );
+
+    const radios2 = getAllByRole("radio") as HTMLInputElement[];
+    expect(radios2[1]).toBeChecked();
+  });
 });

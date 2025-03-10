@@ -155,7 +155,7 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
             onChange?.(e);
           }}
           name={name}
-          defaultChecked={isChecked}
+          checked={isChecked}
         />
         {icon && <StyledOakIcon alt="" iconName={icon} />}
         <InternalCheckBoxLabelHoverDecor
