@@ -133,6 +133,9 @@ export const icons = {
     "v1706616425/subject-icons/religious-education.svg",
   "subject-rshe-pshe": "v1706616423/subject-icons/rshe-pshe.svg",
   "subject-rshe": "v1706616423/subject-icons/rshe-pshe.svg",
+  "subject-philosophy": "v1741794495/subject-icons/philosophy.svg",
+  "subject-social-science": "v1741794495/subject-icons/social-science.svg",
+  "subject-theology": "v1741794496/subject-icons/theology.svg",
   "subject-science": "v1734523570/subject-icons/science.svg",
   "subject-sensory-integration":
     "v1706626743/subject-icons/sensory-integration.svg",
