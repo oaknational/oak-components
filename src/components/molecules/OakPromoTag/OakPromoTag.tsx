@@ -49,6 +49,7 @@ export const OakPromoTag = (props: OakPromoTagProps) => {
       >
         <OakSpan
           $color="lemon"
+          $background={"bg-icon"}
           $font={["body-3-bold", "body-3-bold", "heading-7"]}
         >
           New

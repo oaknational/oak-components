@@ -48,3 +48,4 @@ export * from "./OakSignLanguageButton";
 export * from "./OakCodeRenderer";
 export * from "./OakCarousel";
 export * from "./OakBasicAccordion";
+export * from "./OakLinkCard";
