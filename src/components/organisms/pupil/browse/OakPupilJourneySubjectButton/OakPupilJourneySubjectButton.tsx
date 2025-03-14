@@ -6,9 +6,10 @@ import {
 } from "@/components/molecules/InternalShadowRectButton";
 import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
 import { OakIcon, OakIconName } from "@/components/atoms";
+import { OakCombinedColorToken } from "@/styles";
 
 export type OakPupilJourneySubjectButtonProps = {
-  phase: "primary" | "secondary";
+  phase: "primary" | "secondary" | "non-curriculum";
   subjectIconName: OakIconName;
 } & Omit<
   InternalShadowRectButtonProps,
@@ -47,16 +48,26 @@ export const OakPupilJourneySubjectButton = <C extends ElementType = "button">({
   subjectIconName,
   ...rest
 }: OakPupilJourneySubjectButtonProps & PolymorphicPropsWithoutRef<C>) => {
-  const defaultBackground =
-    phase === "primary"
-      ? "bg-decorative4-very-subdued"
-      : "bg-decorative3-very-subdued";
-  const hoverBackground =
-    phase === "primary" ? "bg-decorative4-main" : "bg-decorative3-main";
-  const borderColor =
-    phase === "primary"
-      ? "border-decorative4-stronger"
-      : "border-decorative3-stronger";
+  let defaultBackground: OakCombinedColorToken,
+    hoverBackground: OakCombinedColorToken,
+    borderColor: OakCombinedColorToken;
+  switch (phase) {
+    case "primary":
+      defaultBackground = "bg-decorative4-very-subdued";
+      hoverBackground = "bg-decorative4-main";
+      borderColor = "border-decorative4-stronger";
+      break;
+    case "non-curriculum":
+      defaultBackground = "bg-decorative1-very-subdued";
+      hoverBackground = "bg-decorative1-main";
+      borderColor = "border-decorative1-stronger";
+      break;
+    default:
+      defaultBackground = "bg-decorative3-very-subdued";
+      hoverBackground = "bg-decorative3-main";
+      borderColor = "border-decorative3-stronger";
+      break;
+  }
 
   const iconOverride = (
     <OakIcon
