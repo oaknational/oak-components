@@ -67,7 +67,7 @@ const meta: Meta<typeof OakLinkCard> = {
         </OakTertiaryButton>
       </OakFlex>
     ),
-    iconName: "subject-finance",
+    iconName: "subject-financial-education",
     iconAlt: "Illustration of persons head with finance ideas",
     iconColor: "black",
     iconFill: "bg-decorative1-main",
