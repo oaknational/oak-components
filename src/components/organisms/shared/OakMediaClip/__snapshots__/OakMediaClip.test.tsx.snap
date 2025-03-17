@@ -265,7 +265,6 @@ exports[`OakMediaClip matches snapshot 1`] = `
           >
             <div
               className="c12 "
-              fill={true}
             >
               <img
                 alt="Test Image"
