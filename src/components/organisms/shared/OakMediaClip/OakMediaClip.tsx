@@ -238,7 +238,6 @@ export const OakMediaClip = ({
               >
                 {!isAudioClip && thumbnailImage ? (
                   <StyledMediaClipImage
-                    fill
                     $height={"100%"}
                     $width={"100%"}
                     src={thumbnailImage ?? oakPlaceholder}
@@ -248,7 +247,6 @@ export const OakMediaClip = ({
                   />
                 ) : (
                   <OakIcon
-                    fill
                     $height={"100%"}
                     $width={"100%"}
                     iconName={"audio-clip-small"}

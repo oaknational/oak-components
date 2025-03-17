@@ -240,7 +240,7 @@ exports[`OakLessonLayout matches snapshot 1`] = `
             fill="#ffffff"
             mask="url(#wobbly_mask)"
             stroke="#a0b6f2"
-            stroke-width="8"
+            strokeWidth="8"
           />
         </svg>
       </div>
