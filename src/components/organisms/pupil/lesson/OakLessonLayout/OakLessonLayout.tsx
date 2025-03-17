@@ -128,7 +128,7 @@ export const OakLessonLayout = ({
               stroke={parseColor(contentBorderColor)({
                 theme: oakDefaultTheme,
               })}
-              stroke-width="8"
+              strokeWidth="8"
               mask="url(#wobbly_mask)"
             />
           </svg>
