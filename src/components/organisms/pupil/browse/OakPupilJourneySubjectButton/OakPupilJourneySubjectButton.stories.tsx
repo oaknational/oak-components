@@ -7,7 +7,10 @@ const meta: Meta<typeof OakPupilJourneySubjectButton> = {
   component: OakPupilJourneySubjectButton,
   tags: ["autodocs"],
   argTypes: {
-    phase: { control: { type: "radio" }, options: ["primary", "secondary"] },
+    phase: {
+      control: { type: "radio" },
+      options: ["primary", "secondary", "non-curriculum"],
+    },
     subjectIconName: { control: { type: "text" } },
     disabled: { control: { type: "boolean" } },
     subjectText: { control: { type: "text" } },
