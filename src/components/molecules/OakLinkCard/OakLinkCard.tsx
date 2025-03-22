@@ -46,6 +46,10 @@ export type OakLinkCardProps = {
    * Whether to display the "New" promo tag in the top-left corner.
    */
   showNew?: boolean;
+  /**
+   * Whether to display the card in a narrow layout.
+   */
+  narrow?: boolean;
 };
 
 /**
@@ -60,6 +64,7 @@ export type OakLinkCardProps = {
  * - **iconFill** - Optional fill color for the icon
  * - **href** - Destination URL when the card is clicked
  * - **showNew** - Whether to display the "New" promo tag
+ * - **narrow** - Whether to display the card in a narrow layout
  */
 export const OakLinkCard = ({
   mainSection,
@@ -69,13 +74,14 @@ export const OakLinkCard = ({
   iconFill = "bg-decorative1-main",
   href,
   showNew = false,
+  narrow = false,
 }: OakLinkCardProps) => {
   return (
     <StyledOakFlexAsLink
       as="a"
       href={href}
-      $flexDirection={["column-reverse", "row"]}
-      $alignItems={["flex-start", "center"]}
+      $flexDirection={narrow ? "column-reverse" : ["column-reverse", "row"]}
+      $alignItems={narrow ? "flex-start" : ["flex-start", "center"]}
       $justifyContent="space-between"
       $gap={"space-between-m2"}
       $background="bg-primary"
@@ -90,16 +96,30 @@ export const OakLinkCard = ({
         <OakHandDrawnCardWithIcon
           iconName={iconName}
           alt={iconAlt}
-          $width={["all-spacing-13", "all-spacing-17"]}
-          $height={["all-spacing-13", "all-spacing-17"]}
+          iconWidth={
+            narrow ? ["all-spacing-11"] : ["all-spacing-11", "all-spacing-15"]
+          }
+          iconHeight={
+            narrow ? ["all-spacing-11"] : ["all-spacing-11", "all-spacing-15"]
+          }
+          $width={
+            narrow ? ["all-spacing-13"] : ["all-spacing-13", "all-spacing-17"]
+          }
+          $height={
+            narrow ? ["all-spacing-13"] : ["all-spacing-13", "all-spacing-17"]
+          }
           fill={iconFill}
           iconColor={iconColor}
         />
         {showNew && (
           <OakBox
             $position={"absolute"}
-            $top={["all-spacing-0", "all-spacing-2"]}
-            $left={["all-spacing-0", "all-spacing-2"]}
+            $top={
+              narrow ? ["all-spacing-0"] : ["all-spacing-0", "all-spacing-2"]
+            }
+            $left={
+              narrow ? ["all-spacing-0"] : ["all-spacing-0", "all-spacing-2"]
+            }
             data-testid="oak-new-promo-tag"
             $zIndex="in-front"
             aria-hidden="true"

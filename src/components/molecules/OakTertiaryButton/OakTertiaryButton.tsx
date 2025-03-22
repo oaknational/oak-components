@@ -1,7 +1,10 @@
 import React, { ElementType } from "react";
 
 import { OakRoundIconProps } from "@/components/molecules/OakRoundIcon";
-import { InternalShadowRoundButton } from "@/components/molecules/InternalShadowRoundButton";
+import {
+  InternalShadowRoundButton,
+  InternalShadowRoundButtonProps,
+} from "@/components/molecules/InternalShadowRoundButton";
 import { OakIconName } from "@/components/atoms";
 import { InternalButtonProps } from "@/components/atoms/InternalButton";
 import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
@@ -22,7 +25,9 @@ export const OakTertiaryButton = <C extends ElementType = "button">({
   iconName,
   children,
   ...props
-}: OakTertiaryButtonProps & PolymorphicPropsWithoutRef<C>) => {
+}: OakTertiaryButtonProps &
+  Partial<InternalShadowRoundButtonProps> &
+  PolymorphicPropsWithoutRef<C>) => {
   return (
     <InternalShadowRoundButton
       element={element ?? "button"}

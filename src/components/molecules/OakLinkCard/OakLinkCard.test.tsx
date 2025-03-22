@@ -34,6 +34,7 @@ describe("OakLinkCard", () => {
     iconAlt: "Books icon",
     href: testData.href,
     showNew: false,
+    narrow: false,
   };
 
   it("matches snapshot", () => {
@@ -48,6 +49,16 @@ describe("OakLinkCard", () => {
 
   it("renders correctly with default props", () => {
     renderWithTheme(<OakLinkCard {...defaultProps} />);
+
+    expect(screen.getByText(testData.headingText)).toBeInTheDocument();
+    expect(screen.getByText(testData.paragraphText)).toBeInTheDocument();
+
+    const linkElement = screen.getByRole("link");
+    expect(linkElement).toHaveAttribute("href", "https://www.example.com");
+  });
+
+  it("renders correctly with narrow props", () => {
+    renderWithTheme(<OakLinkCard {...defaultProps} narrow />);
 
     expect(screen.getByText(testData.headingText)).toBeInTheDocument();
     expect(screen.getByText(testData.paragraphText)).toBeInTheDocument();
