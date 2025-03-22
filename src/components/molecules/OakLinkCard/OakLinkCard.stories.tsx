@@ -34,6 +34,11 @@ const meta: Meta<typeof OakLinkCard> = {
     iconFill: {
       options: controlIconFillNames,
     },
+    narrow: {
+      control: {
+        type: "boolean",
+      },
+    },
   },
   parameters: {
     controls: {
@@ -44,6 +49,7 @@ const meta: Meta<typeof OakLinkCard> = {
         "iconColor",
         "iconFill",
         "iconAlt",
+        "narrow",
       ],
     },
   },
@@ -57,12 +63,7 @@ const meta: Meta<typeof OakLinkCard> = {
           A series of lessons offering practical knowledge and skills, developed
           independently of the national curriculum.
         </OakP>
-        <OakTertiaryButton
-          element="a"
-          href="https://www.example.com"
-          iconName="chevron-right"
-          isTrailingIcon
-        >
+        <OakTertiaryButton iconName="chevron-right" isTrailingIcon>
           Go to new finance lessons
         </OakTertiaryButton>
       </OakFlex>
@@ -73,6 +74,7 @@ const meta: Meta<typeof OakLinkCard> = {
     iconFill: "bg-decorative1-main",
     href: "https://www.example.com",
     showNew: true,
+    narrow: false,
   },
 };
 
@@ -86,6 +88,7 @@ export const WithDifferentIcon: Story = {
   args: {
     iconName: "bell",
     showNew: false,
+    narrow: false,
   },
 };
 
@@ -105,12 +108,7 @@ export const WithLongText: Story = {
           financial literacy program. Learn how to budget, save, and invest your
           money. Get started today!
         </OakP>
-        <OakTertiaryButton
-          element="a"
-          href="https://www.example.com"
-          iconName="chevron-right"
-          isTrailingIcon
-        >
+        <OakTertiaryButton iconName="chevron-right" isTrailingIcon>
           Start learning
         </OakTertiaryButton>
       </OakFlex>
