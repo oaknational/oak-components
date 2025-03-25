@@ -14,8 +14,7 @@ const meta: Meta<typeof OakUnitListItem> = {
     index: 1,
     href: "#",
     yearTitle: "Year 10",
-    lessonCount: 10,
-    expiredLessonCount: null,
+    lessonCount: "10 lessons",
     isLegacy: false,
     onClick: () => console.log("onClick!"),
   },
@@ -24,7 +23,6 @@ const meta: Meta<typeof OakUnitListItem> = {
     yearTitle: { control: { type: "text" } },
     index: { control: { type: "number" } },
     lessonCount: { control: { type: "number" } },
-    expiredLessonCount: { control: { type: "number" } },
     unavailable: { control: { type: "boolean" } },
     isLegacy: { control: { type: "boolean" } },
   },
@@ -50,7 +48,7 @@ const meta: Meta<typeof OakUnitListItem> = {
           {Story()}
           <OakUnitListItem
             title={"Numerals 1-10 (Legacy example)"}
-            lessonCount={10}
+            lessonCount={"10 lessons"}
             index={2}
             isLegacy={true}
             yearTitle="Year 10"
@@ -58,7 +56,7 @@ const meta: Meta<typeof OakUnitListItem> = {
           />
           <OakUnitListItem
             title={"'The Three Billy Goats Gruff': reading and writing"}
-            lessonCount={7}
+            lessonCount={"7 lessons"}
             index={3}
             yearTitle="Year 10"
             unavailable={true}
@@ -67,7 +65,7 @@ const meta: Meta<typeof OakUnitListItem> = {
           />
           <OakUnitListItem
             title={"Test Unit"}
-            lessonCount={8}
+            lessonCount={"8 lessons"}
             index={4}
             yearTitle="Year 9"
             isLegacy={false}
@@ -75,7 +73,7 @@ const meta: Meta<typeof OakUnitListItem> = {
           />
           <OakUnitListItem
             title={"Apple"}
-            lessonCount={41}
+            lessonCount={"41 lessons"}
             index={5}
             yearTitle="Year 9"
             isLegacy={false}
@@ -85,7 +83,7 @@ const meta: Meta<typeof OakUnitListItem> = {
             title={
               "'The Three Billy Goats Gruff': reading and writing 'The Three Billy Goats Gruff': reading and writing"
             }
-            lessonCount={41}
+            lessonCount={"41 lessons"}
             index={5}
             yearTitle="Year 9"
             isLegacy={false}
@@ -95,8 +93,7 @@ const meta: Meta<typeof OakUnitListItem> = {
             title={
               "'The Three Billy Goats Gruff': reading and writing 'The Three Billy Goats Gruff': reading and writing"
             }
-            lessonCount={10}
-            expiredLessonCount={2}
+            lessonCount={"8/10 lessons"}
             index={5}
             yearTitle="Year 9"
             isLegacy={false}

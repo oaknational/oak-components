@@ -312,7 +312,9 @@ exports[`OakUnitListItem matches snapshot 1`] = `
           >
             <span
               className="c19"
-            />
+            >
+              0 lessons
+            </span>
             <div
               className="c20"
             >

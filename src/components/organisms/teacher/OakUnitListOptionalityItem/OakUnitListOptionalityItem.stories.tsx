@@ -63,7 +63,7 @@ const meta: Meta<typeof OakUnitListOptionalityItem> = {
           <OakUnitListItem
             index={1}
             title={"Test lesson 1"}
-            lessonCount={8}
+            lessonCount={"8 lessons"}
             isLegacy={false}
             href={"#"}
             yearTitle={"Year 10"}
