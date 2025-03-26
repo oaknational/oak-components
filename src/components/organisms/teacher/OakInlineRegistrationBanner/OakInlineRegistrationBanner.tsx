@@ -115,7 +115,7 @@ export const OakInlineRegistrationBanner = (
               <OakPrimaryButton>Sign up</OakPrimaryButton>
             </OakFlex>
             {success && (
-              <OakP $font="body-1" $mt="space-between-s">
+              <OakP $font="body-1-bold" $mt="space-between-s">
                 Thank you for signing up
               </OakP>
             )}
