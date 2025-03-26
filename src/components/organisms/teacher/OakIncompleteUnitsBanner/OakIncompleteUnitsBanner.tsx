@@ -11,15 +11,18 @@ import {
   OakPrimaryButton,
   OakTextInput,
 } from "@/components/molecules";
+import { ColorStyleProps } from "@/styles/utils/colorStyle";
+import { BorderStyleProps } from "@/styles/utils/borderStyle";
 
 export type OakIncompleteUnitsBannerProps = {
   onSubmit: (email: string) => Promise<string | undefined>;
-};
+} & ColorStyleProps &
+  BorderStyleProps;
 
 export const OakIncompleteUnitsBanner = (
   props: OakIncompleteUnitsBannerProps,
 ) => {
-  const { onSubmit } = props;
+  const { onSubmit, ...style } = props;
   const [email, setEmail] = useState("");
   const [formError, setFormError] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -29,6 +32,14 @@ export const OakIncompleteUnitsBanner = (
       $background="bg-decorative1-main"
       $pa="inner-padding-xl2"
       $mb={["space-between-m", "space-between-s"]}
+      $borderRadius={[
+        "border-radius-square",
+        "border-radius-m",
+        "border-radius-m",
+      ]}
+      $borderColor="border-decorative1-stronger"
+      $borderStyle={["none", "solid", "solid"]}
+      {...style}
     >
       <OakFlex $gap="space-between-m" $alignItems="center">
         <OakFlex $flexDirection="column" $gap="space-between-m">
@@ -96,7 +107,7 @@ export const OakIncompleteUnitsBanner = (
                   onChange={(event) => setEmail(event.target.value)}
                   wrapperWidth={[
                     "all-spacing-18",
-                    "all-spacing-20",
+                    "all-spacing-19",
                     "all-spacing-20",
                   ]}
                 />

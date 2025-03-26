@@ -2,6 +2,9 @@ import React from "react";
 import { StoryObj, Meta } from "@storybook/react";
 
 import { OakIncompleteUnitsBanner } from "./OakIncompleteUnitsBanner";
+
+import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
+import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";
 const success = () => Promise.resolve("Success");
 const failure = () => {
   throw new Error("oops");
@@ -20,6 +23,8 @@ const meta: Meta<typeof OakIncompleteUnitsBanner> = {
         failure,
       },
     },
+    ...colorArgTypes,
+    ...borderArgTypes,
   },
 };
 
