@@ -13,8 +13,7 @@ describe("CopyPasteThisComponent", () => {
   it("renders", () => {
     renderWithTheme(
       <OakIncompleteUnitsBanner
-        onClick={(email: string) => console.log(email)}
-        formError={false}
+        onSubmit={(email: string) => Promise.resolve(email)}
       />,
     );
     expect(
@@ -26,8 +25,7 @@ describe("CopyPasteThisComponent", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
         <OakIncompleteUnitsBanner
-          onClick={(email: string) => console.log(email)}
-          formError={false}
+          onSubmit={(email: string) => Promise.resolve(email)}
         ></OakIncompleteUnitsBanner>
       </OakThemeProvider>,
     ).toJSON();
