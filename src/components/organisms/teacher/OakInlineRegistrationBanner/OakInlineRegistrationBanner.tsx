@@ -14,13 +14,13 @@ import {
 import { ColorStyleProps } from "@/styles/utils/colorStyle";
 import { BorderStyleProps } from "@/styles/utils/borderStyle";
 
-export type OakIncompleteUnitsBannerProps = {
+export type OakInlineRegistrationBannerProps = {
   onSubmit: (email: string) => Promise<string | undefined>;
 } & ColorStyleProps &
   BorderStyleProps;
 
-export const OakIncompleteUnitsBanner = (
-  props: OakIncompleteUnitsBannerProps,
+export const OakInlineRegistrationBanner = (
+  props: OakInlineRegistrationBannerProps,
 ) => {
   const { onSubmit, ...style } = props;
   const [email, setEmail] = useState("");

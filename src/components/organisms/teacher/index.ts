@@ -7,4 +7,4 @@ export * from "./OakUnitsContainer";
 export * from "./OakUnitsHeader";
 export * from "./OakTeacherNotesModal";
 export * from "./OakTeacherNotesInline";
-export * from "./OakIncompleteUnitsBanner";
+export * from "./OakInlineRegistrationBanner";

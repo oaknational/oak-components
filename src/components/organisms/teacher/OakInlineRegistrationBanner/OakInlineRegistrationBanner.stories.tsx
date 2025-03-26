@@ -1,7 +1,7 @@
 import React from "react";
 import { StoryObj, Meta } from "@storybook/react";
 
-import { OakIncompleteUnitsBanner } from "./OakIncompleteUnitsBanner";
+import { OakInlineRegistrationBanner } from "./OakInlineRegistrationBanner";
 
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";
@@ -10,9 +10,9 @@ const failure = () => {
   throw new Error("oops");
 };
 
-const meta: Meta<typeof OakIncompleteUnitsBanner> = {
-  title: "Components/Organisms/teacher/OakIncompleteUnitsBanner",
-  component: OakIncompleteUnitsBanner,
+const meta: Meta<typeof OakInlineRegistrationBanner> = {
+  title: "Components/Organisms/teacher/OakInlineRegistrationBanner",
+  component: OakInlineRegistrationBanner,
   tags: ["autodocs"],
   argTypes: {
     onSubmit: {
@@ -30,10 +30,10 @@ const meta: Meta<typeof OakIncompleteUnitsBanner> = {
 
 export default meta;
 
-type Story = StoryObj<typeof OakIncompleteUnitsBanner>;
+type Story = StoryObj<typeof OakInlineRegistrationBanner>;
 
 export const Default: Story = {
-  render: (args) => <OakIncompleteUnitsBanner {...args} />,
+  render: (args) => <OakInlineRegistrationBanner {...args} />,
   args: {
     onSubmit: success,
   },

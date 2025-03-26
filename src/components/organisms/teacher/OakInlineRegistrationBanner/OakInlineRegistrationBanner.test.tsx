@@ -3,16 +3,16 @@ import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
 import { screen } from "@testing-library/react";
 
-import { OakIncompleteUnitsBanner } from "./OakIncompleteUnitsBanner";
+import { OakInlineRegistrationBanner } from "./OakInlineRegistrationBanner";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { OakThemeProvider } from "@/components/atoms";
 import { oakDefaultTheme } from "@/styles";
 
-describe("CopyPasteThisComponent", () => {
+describe("OakInlineRegistrationBanner", () => {
   it("renders", () => {
     renderWithTheme(
-      <OakIncompleteUnitsBanner
+      <OakInlineRegistrationBanner
         onSubmit={(email: string) => Promise.resolve(email)}
       />,
     );
@@ -24,9 +24,9 @@ describe("CopyPasteThisComponent", () => {
   it("matches snapshot", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
-        <OakIncompleteUnitsBanner
+        <OakInlineRegistrationBanner
           onSubmit={(email: string) => Promise.resolve(email)}
-        ></OakIncompleteUnitsBanner>
+        ></OakInlineRegistrationBanner>
       </OakThemeProvider>,
     ).toJSON();
     expect(tree).toMatchSnapshot();
