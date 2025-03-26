@@ -2,6 +2,7 @@ import React from "react";
 import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
 import { screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 
 import { OakInlineRegistrationBanner } from "./OakInlineRegistrationBanner";
 
@@ -30,5 +31,56 @@ describe("OakInlineRegistrationBanner", () => {
       </OakThemeProvider>,
     ).toJSON();
     expect(tree).toMatchSnapshot();
+  });
+
+  it("shows an error message when no email is entered", async () => {
+    renderWithTheme(
+      <OakInlineRegistrationBanner
+        onSubmit={(email: string) => Promise.resolve(email)}
+      />,
+    );
+    expect(
+      screen.queryByText("Please enter a valid email address"),
+    ).not.toBeInTheDocument();
+    const signUpButton = screen.getByRole("button");
+    await userEvent.click(signUpButton);
+    const errorMessage = await screen.findByText(
+      "Please enter a valid email address",
+    );
+    expect(errorMessage).toBeInTheDocument();
+  });
+  it("shows and error message when onSubmit fails", async () => {
+    renderWithTheme(
+      <OakInlineRegistrationBanner
+        onSubmit={(email: string) => Promise.reject(new Error(email))}
+      />,
+    );
+    expect(
+      screen.queryByText("Please enter a valid email address"),
+    ).not.toBeInTheDocument();
+    const emailInput = screen.getByRole("textbox");
+    await userEvent.type(emailInput, "email");
+    const signUpButton = screen.getByRole("button");
+    await userEvent.click(signUpButton);
+    const errorMessage = await screen.findByText(
+      "Please enter a valid email address",
+    );
+    expect(errorMessage).toBeInTheDocument();
+  });
+  it("shows a success message", async () => {
+    renderWithTheme(
+      <OakInlineRegistrationBanner
+        onSubmit={(email: string) => Promise.resolve(email)}
+      />,
+    );
+    expect(
+      screen.queryByText("Thank you for signing up"),
+    ).not.toBeInTheDocument();
+    const emailInput = screen.getByRole("textbox");
+    await userEvent.type(emailInput, "email");
+    const signUpButton = screen.getByRole("button");
+    await userEvent.click(signUpButton);
+    const successMessage = await screen.findByText("Thank you for signing up");
+    expect(successMessage).toBeInTheDocument();
   });
 });
