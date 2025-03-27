@@ -79,7 +79,7 @@ export const OakInlineRegistrationBanner = (
               $width="100%"
               $mt="space-between-m"
             >
-              <OakBox $position="relative">
+              <OakBox $position="relative" $width="100%">
                 <OakJauntyAngleLabel
                   label="Email"
                   $position="absolute"
@@ -98,14 +98,12 @@ export const OakInlineRegistrationBanner = (
                   $maxHeight="all-spacing-10"
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
-                  wrapperWidth={[
-                    "all-spacing-18",
-                    "all-spacing-19",
-                    "all-spacing-20",
-                  ]}
+                  wrapperWidth="100%"
                 />
               </OakBox>
-              <OakPrimaryButton>Sign up</OakPrimaryButton>
+              <OakPrimaryButton innerWidth="max-content">
+                Sign up
+              </OakPrimaryButton>
             </OakFlex>
             {success && (
               <OakP $font="body-1-bold" $mt="space-between-s">
