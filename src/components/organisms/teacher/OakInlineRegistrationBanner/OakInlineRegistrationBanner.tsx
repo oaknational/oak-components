@@ -33,6 +33,7 @@ export const OakInlineRegistrationBanner = (
       $background="bg-decorative1-main"
       $pa="inner-padding-xl2"
       $mb={["space-between-m", "space-between-s"]}
+      $borderRadius="border-radius-m"
       {...style}
     >
       <OakFlex $gap="space-between-m" $alignItems="center">
