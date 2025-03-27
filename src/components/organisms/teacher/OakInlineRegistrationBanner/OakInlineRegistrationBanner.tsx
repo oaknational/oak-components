@@ -3,11 +3,10 @@ import React, { useState } from "react";
 import { SurfingStudentSVG } from "./SurfingStudentSVG";
 
 import { OakFlex } from "@/components/atoms/OakFlex";
-import { OakBox, OakHeading, OakP, OakSpan } from "@/components/atoms";
+import { OakBox, OakP } from "@/components/atoms";
 import {
   OakFieldError,
   OakJauntyAngleLabel,
-  OakLink,
   OakPrimaryButton,
   OakTextInput,
 } from "@/components/molecules";
@@ -16,13 +15,15 @@ import { BorderStyleProps } from "@/styles/utils/borderStyle";
 
 export type OakInlineRegistrationBannerProps = {
   onSubmit: (email: string) => Promise<string | undefined>;
+  headerText: React.ReactNode;
+  bodyText: React.ReactNode;
 } & ColorStyleProps &
   BorderStyleProps;
 
 export const OakInlineRegistrationBanner = (
   props: OakInlineRegistrationBannerProps,
 ) => {
-  const { onSubmit, ...style } = props;
+  const { onSubmit, bodyText, headerText, ...style } = props;
   const [email, setEmail] = useState("");
   const [formError, setFormError] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -37,19 +38,10 @@ export const OakInlineRegistrationBanner = (
       <OakFlex $gap="space-between-m" $alignItems="center">
         <OakFlex $flexDirection="column" $gap="space-between-m">
           <OakFlex $alignItems="center" $gap="space-between-m">
-            <OakHeading
-              tag="h2"
-              $font={["heading-5", "heading-4", "heading-4"]}
-            >
-              Full unit on the way!
-            </OakHeading>
+            {headerText}
             <SurfingStudentSVG $display={["block", "none", "none"]} />
           </OakFlex>
-          <OakSpan $font="body-1">
-            We’re busy creating the final lessons for our new curriculum. Stay
-            tuned for updates. You can unsubscribe at any time. Read our{" "}
-            <OakLink>privacy policy</OakLink>.
-          </OakSpan>
+          {bodyText}
           <OakBox
             as="form"
             onSubmit={async (e) => {

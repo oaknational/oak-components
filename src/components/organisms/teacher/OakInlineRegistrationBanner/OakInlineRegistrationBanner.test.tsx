@@ -7,7 +7,7 @@ import userEvent from "@testing-library/user-event";
 import { OakInlineRegistrationBanner } from "./OakInlineRegistrationBanner";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { OakThemeProvider } from "@/components/atoms";
+import { OakHeading, OakP, OakThemeProvider } from "@/components/atoms";
 import { oakDefaultTheme } from "@/styles";
 
 describe("OakInlineRegistrationBanner", () => {
@@ -15,6 +15,8 @@ describe("OakInlineRegistrationBanner", () => {
     renderWithTheme(
       <OakInlineRegistrationBanner
         onSubmit={(email: string) => Promise.resolve(email)}
+        bodyText={<OakP>body text</OakP>}
+        headerText={<OakHeading tag="h1"> Full unit on the way!</OakHeading>}
       />,
     );
     expect(
@@ -27,6 +29,8 @@ describe("OakInlineRegistrationBanner", () => {
       <OakThemeProvider theme={oakDefaultTheme}>
         <OakInlineRegistrationBanner
           onSubmit={(email: string) => Promise.resolve(email)}
+          bodyText={<OakP>body text</OakP>}
+          headerText={<OakHeading tag="h1"> Full unit on the way!</OakHeading>}
         ></OakInlineRegistrationBanner>
       </OakThemeProvider>,
     ).toJSON();
@@ -37,6 +41,8 @@ describe("OakInlineRegistrationBanner", () => {
     renderWithTheme(
       <OakInlineRegistrationBanner
         onSubmit={(email: string) => Promise.resolve(email)}
+        bodyText={<OakP>body text</OakP>}
+        headerText={<OakHeading tag="h1"> Full unit on the way!</OakHeading>}
       />,
     );
     expect(
@@ -53,6 +59,8 @@ describe("OakInlineRegistrationBanner", () => {
     renderWithTheme(
       <OakInlineRegistrationBanner
         onSubmit={(email: string) => Promise.reject(new Error(email))}
+        bodyText={<OakP>body text</OakP>}
+        headerText={<OakHeading tag="h1"> Full unit on the way!</OakHeading>}
       />,
     );
     expect(
@@ -71,6 +79,8 @@ describe("OakInlineRegistrationBanner", () => {
     renderWithTheme(
       <OakInlineRegistrationBanner
         onSubmit={(email: string) => Promise.resolve(email)}
+        bodyText={<OakP>body text</OakP>}
+        headerText={<OakHeading tag="h1"> Full unit on the way!</OakHeading>}
       />,
     );
     expect(

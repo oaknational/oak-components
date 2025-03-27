@@ -17,20 +17,20 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c10 {
+.c8 {
   position: relative;
   width: 100%;
   margin-top: 1.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c12 {
+.c10 {
   position: relative;
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c13 {
+.c11 {
   position: absolute;
   top: -15px;
   left: 8px;
@@ -58,7 +58,7 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
   z-index: 1;
 }
 
-.c14 {
+.c12 {
   position: relative;
   width: 100%;
   height: -webkit-fit-content;
@@ -74,11 +74,11 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c14:hover {
+.c12:hover {
   cursor: pointer;
 }
 
-.c19 {
+.c17 {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -86,7 +86,7 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c21 {
+.c19 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -95,14 +95,14 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c24 {
+.c22 {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c27 {
+.c25 {
   display: none;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -130,7 +130,7 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
   gap: 1.5rem;
 }
 
-.c11 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -138,7 +138,7 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
   gap: 1rem;
 }
 
-.c15 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -150,7 +150,7 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
   gap: 1rem;
 }
 
-.c17 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -161,7 +161,7 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c25 {
+.c23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -182,31 +182,9 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
 
 .c4 {
   font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 600;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
-  letter-spacing: 0.0115rem;
 }
 
-.c7 {
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 300;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
-  letter-spacing: -0.005rem;
-}
-
-.c9 {
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c26 {
+.c24 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -218,11 +196,15 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
   text-align: left;
 }
 
+.c7 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
 .c6 {
   width: 6.25rem;
 }
 
-.c22 {
+.c20 {
   background: none;
   color: inherit;
   border: none;
@@ -244,59 +226,19 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
   border-radius: 0.25rem;
 }
 
-.c22:disabled {
+.c20:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c8 {
-  display: inline;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.25rem;
-  outline: none;
-  border-radius: 0.375rem;
-  padding: 0.25rem;
-  margin: -0.25rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  font: inherit;
-  background: none;
-  border: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  cursor: pointer;
-  color: #0d24c4;
-}
-
-.c8:focus-visible {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
-}
-
-.c8:visited {
-  color: #081676;
-}
-
-.c8:active {
-  color: #081676;
-}
-
-.c8[disabled] {
-  cursor: not-allowed;
-  color: #808080;
-}
-
-.c23 {
+.c21 {
   position: relative;
   width: 100%;
   height: 100%;
   display: inline-block;
 }
 
-.c23:hover {
+.c21:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #ffffff;
@@ -304,44 +246,44 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
   border-color: #575757;
 }
 
-.c23:active {
+.c21:active {
   background: #222222;
   border-color: #222222;
   color: #ffffff;
 }
 
-.c23:disabled {
+.c21:disabled {
   background: #808080;
   border-color: #808080;
   color: #ffffff;
 }
 
-.c20 .grey-shadow:has(+ * + .internal-button:focus-visible) {
+.c18 .grey-shadow:has(+ * + .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c20 .yellow-shadow:has(+ .internal-button:focus-visible) {
+.c18 .yellow-shadow:has(+ .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
 }
 
-.c20 .yellow-shadow:has(+ .internal-button:hover),
-.c20 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
+.c18 .yellow-shadow:has(+ .internal-button:hover),
+.c18 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c20 .grey-shadow:has(+ * + .internal-button:hover) {
+.c18 .grey-shadow:has(+ * + .internal-button:hover) {
   box-shadow: none;
 }
 
-.c20 .grey-shadow:has(+ * + .internal-button:active) {
+.c18 .grey-shadow:has(+ * + .internal-button:active) {
   box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c20 .yellow-shadow:has(+ .internal-button:active) {
+.c18 .yellow-shadow:has(+ .internal-button:active) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c18 {
+.c16 {
   -webkit-appearance: none !important;
   -moz-appearance: none !important;
   appearance: none !important;
@@ -360,44 +302,44 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
   max-height: 3.5rem;
 }
 
-.c18::-webkit-input-placeholder {
+.c16::-webkit-input-placeholder {
   color: #575757;
 }
 
-.c18::-moz-placeholder {
+.c16::-moz-placeholder {
   color: #575757;
 }
 
-.c18:-ms-input-placeholder {
+.c16:-ms-input-placeholder {
   color: #575757;
 }
 
-.c18::placeholder {
+.c16::placeholder {
   color: #575757;
 }
 
-.c18::-webkit-search-decoration,
-.c18::-webkit-search-cancel-button,
-.c18::-webkit-search-results-button,
-.c18::-webkit-search-results-decoration {
+.c16::-webkit-search-decoration,
+.c16::-webkit-search-cancel-button,
+.c16::-webkit-search-results-button,
+.c16::-webkit-search-results-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c18:disabled {
+.c16:disabled {
   cursor: not-allowed;
 }
 
-.c16 {
+.c14 {
   background: #ffffff;
 }
 
-.c16:hover {
+.c14:hover {
   cursor: text;
 }
 
-.c16:focus-within {
+.c14:focus-within {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
@@ -420,68 +362,14 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c27 {
+  .c25 {
     display: block;
   }
 }
 
 @media (min-width:1280px) {
-  .c27 {
+  .c25 {
     display: block;
-  }
-}
-
-@media (min-width:750px) {
-  .c4 {
-    font-weight: 600;
-  }
-}
-
-@media (min-width:1280px) {
-  .c4 {
-    font-weight: 600;
-  }
-}
-
-@media (min-width:750px) {
-  .c4 {
-    font-size: 2rem;
-  }
-}
-
-@media (min-width:1280px) {
-  .c4 {
-    font-size: 2rem;
-  }
-}
-
-@media (min-width:750px) {
-  .c4 {
-    line-height: 2.5rem;
-  }
-}
-
-@media (min-width:1280px) {
-  .c4 {
-    line-height: 2.5rem;
-  }
-}
-
-@media (min-width:750px) {
-  .c4 {
-    -webkit-letter-spacing: 0.0115rem;
-    -moz-letter-spacing: 0.0115rem;
-    -ms-letter-spacing: 0.0115rem;
-    letter-spacing: 0.0115rem;
-  }
-}
-
-@media (min-width:1280px) {
-  .c4 {
-    -webkit-letter-spacing: 0.0115rem;
-    -moz-letter-spacing: 0.0115rem;
-    -ms-letter-spacing: 0.0115rem;
-    letter-spacing: 0.0115rem;
   }
 }
 
@@ -497,21 +385,14 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
   }
 }
 
-@media (hover:hover) {
-  .c8:hover,
-  .c8:visited:hover {
-    color: #0a1d9d;
-  }
-}
-
 @media (max-width:750px) {
-  .c18 {
+  .c16 {
     font-size: 16px;
   }
 }
 
 @media (hover:hover) {
-  .c16:hover:not(:focus-within) {
+  .c14:hover:not(:focus-within) {
     background: #f2f2f2;
   }
 }
@@ -528,11 +409,11 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
       <div
         className="c1 c2"
       >
-        <h2
+        <h1
           className="c4"
         >
-          Full unit on the way!
-        </h2>
+           Full unit on the way!
+        </h1>
         <div
           className="c5"
         >
@@ -551,46 +432,35 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
           </svg>
         </div>
       </div>
-      <span
+      <p
         className="c7"
       >
-        We’re busy creating the final lessons for our new curriculum. Stay tuned for updates. You can unsubscribe at any time. Read our
-         
-        <a
-          className="c8"
-        >
-          <span
-            className="c9"
-          >
-            privacy policy
-          </span>
-        </a>
-        .
-      </span>
+        body text
+      </p>
       <form
         className="c1"
         onSubmit={[Function]}
       >
         <div
-          className="c10 c11"
+          className="c8 c9"
         >
           <div
-            className="c12"
+            className="c10"
           >
             <div
-              className="c13"
+              className="c11"
             >
               Email
             </div>
             <div
-              className="c14 c15 c16"
+              className="c12 c13 c14"
               onClick={[Function]}
             >
               <div
-                className="c1 c17"
+                className="c1 c15"
               >
                 <input
-                  className="c18"
+                  className="c16"
                   onChange={[Function]}
                   onFocus={[Function]}
                   placeholder="Enter email address"
@@ -601,25 +471,25 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
             </div>
           </div>
           <div
-            className="c19 c20"
+            className="c17 c18"
           >
             <div
-              className="c21 grey-shadow"
+              className="c19 grey-shadow"
             />
             <div
-              className="c21 yellow-shadow"
+              className="c19 yellow-shadow"
             />
             <button
-              className="c22 c23 internal-button"
+              className="c20 c21 internal-button"
               onClick={[Function]}
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}
             >
               <div
-                className="c24 c25"
+                className="c22 c23"
               >
                 <span
-                  className="c26"
+                  className="c24"
                 >
                   Sign up
                 </span>
@@ -630,7 +500,7 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
       </form>
     </div>
     <div
-      className="c27"
+      className="c25"
     >
       <svg
         className="c6"
