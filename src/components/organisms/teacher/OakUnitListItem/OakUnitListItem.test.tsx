@@ -16,7 +16,7 @@ describe("OakUnitListItem", () => {
         index={0}
         title={""}
         yearTitle={""}
-        lessonCount={0}
+        lessonCount={"6 lessons"}
         isLegacy={false}
         href={""}
       />,
@@ -31,7 +31,7 @@ describe("OakUnitListItem", () => {
           title="Lesson 1"
           index={1}
           yearTitle={""}
-          lessonCount={0}
+          lessonCount={"0 lessons"}
           isLegacy={false}
           href={""}
         />
@@ -49,7 +49,7 @@ describe("OakUnitListItem", () => {
         index={0}
         title={""}
         yearTitle={""}
-        lessonCount={0}
+        lessonCount={"0 lessons"}
         isLegacy={false}
         href={""}
       />,
@@ -62,7 +62,7 @@ describe("OakUnitListItem", () => {
     const { getByTestId } = renderWithTheme(
       <OakUnitListItem
         data-testid="unit-card"
-        lessonCount={6}
+        lessonCount={"6 lessons"}
         index={0}
         title={""}
         yearTitle={""}
@@ -77,7 +77,7 @@ describe("OakUnitListItem", () => {
     const { getByTestId } = renderWithTheme(
       <OakUnitListItem
         data-testid="unit-card"
-        lessonCount={6}
+        lessonCount={"6 lessons"}
         index={0}
         title={""}
         yearTitle={"Year 4"}
@@ -95,7 +95,7 @@ describe("OakUnitListItem", () => {
         index={0}
         title={""}
         yearTitle={""}
-        lessonCount={0}
+        lessonCount={"0 lessons"}
         isLegacy={false}
         href={""}
         unavailable
@@ -113,8 +113,7 @@ describe("OakUnitListItem", () => {
         index={0}
         title={""}
         yearTitle={""}
-        lessonCount={4}
-        expiredLessonCount={3}
+        lessonCount={"1/4 lessons"}
         isLegacy={false}
         href={""}
         unavailable
@@ -131,8 +130,7 @@ describe("OakUnitListItem", () => {
         index={0}
         title={""}
         yearTitle={""}
-        lessonCount={1}
-        expiredLessonCount={1}
+        lessonCount={"0/1 lesson"}
         isLegacy={false}
         href={""}
         unavailable
@@ -149,8 +147,7 @@ describe("OakUnitListItem", () => {
         index={0}
         title={""}
         yearTitle={""}
-        lessonCount={1}
-        expiredLessonCount={null}
+        lessonCount={"1 lesson"}
         isLegacy={false}
         href={""}
         unavailable
@@ -167,8 +164,7 @@ describe("OakUnitListItem", () => {
         index={0}
         title={""}
         yearTitle={""}
-        lessonCount={1}
-        expiredLessonCount={2}
+        lessonCount={"0 lessons"}
         isLegacy={false}
         href={""}
         unavailable

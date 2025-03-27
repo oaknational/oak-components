@@ -42,7 +42,7 @@ export const Default: Story = {
       <OakUnitListItem
         index={1}
         title={"Lesson 1"}
-        lessonCount={4}
+        lessonCount={"4 lessons"}
         isLegacy={false}
         yearTitle={"Year 10"}
         href={"#"}
@@ -83,7 +83,7 @@ export const Default: Story = {
         index={3}
         yearTitle={"Year 11"}
         title={"Lesson 3"}
-        lessonCount={2}
+        lessonCount={"2 lessons"}
         isLegacy={false}
         href={"#"}
       />,
@@ -93,7 +93,7 @@ export const Default: Story = {
           "Lesson 4 - English  - a lesson with a longer title, a lesson with a longer title"
         }
         yearTitle={"Year 11"}
-        lessonCount={3}
+        lessonCount={"3 lessons"}
         isLegacy={false}
         href={"#"}
       />,
@@ -103,8 +103,7 @@ export const Default: Story = {
           "Lesson 4 - English  - a lesson with a longer title, a lesson with a longer title"
         }
         yearTitle={"Year 11"}
-        lessonCount={3}
-        expiredLessonCount={2}
+        lessonCount={"1/3 lessons"}
         isLegacy={false}
         href={"#"}
       />,
