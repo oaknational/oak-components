@@ -5,6 +5,7 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
   padding: 2rem;
   margin-bottom: 1.5rem;
   background: #bef2bd;
+  border-radius: 0.375rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
