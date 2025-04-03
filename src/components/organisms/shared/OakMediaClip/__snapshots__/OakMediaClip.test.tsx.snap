@@ -229,6 +229,10 @@ exports[`OakMediaClip matches snapshot 1`] = `
   text-decoration: underline;
 }
 
+.c6:active {
+  border-color: transparent;
+}
+
 .c6:disabled {
   background: #e4e4e4;
   border-color: #808080;
@@ -249,8 +253,6 @@ exports[`OakMediaClip matches snapshot 1`] = `
       />
       <button
         className="c5 c6 internal-button"
-        defaultBorderColor="transparent"
-        justifyContent="flex-start"
         muxPlayingState="standard"
         onClick={[Function]}
         onMouseEnter={[Function]}
