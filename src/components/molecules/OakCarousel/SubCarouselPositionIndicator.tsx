@@ -33,7 +33,7 @@ const PositionIcon = ({
         r="7"
         fill={fill}
         stroke="#222222"
-        stroke-width="2"
+        strokeWidth="2"
       />
     </svg>
   );
