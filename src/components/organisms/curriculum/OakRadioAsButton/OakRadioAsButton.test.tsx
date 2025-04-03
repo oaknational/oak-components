@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import React from "react";
 import { create } from "react-test-renderer";
-import { fireEvent } from "@testing-library/react";
+import { act, fireEvent } from "@testing-library/react";
 
 import { OakRadioAsButton } from "./OakRadioAsButton";
 
@@ -115,11 +115,13 @@ describe("OakRadioAsButton", () => {
     const radios = getAllByRole("radio");
     expect(radios).toHaveLength(2);
 
-    // Click each twice to make sure we don't register clicks twice
-    radios[0]!.click();
-    radios[0]!.click();
-    radios[1]!.click();
-    radios[1]!.click();
+    act(() => {
+      // Click each twice to make sure we don't register clicks twice
+      radios[0]!.click();
+      radios[0]!.click();
+      radios[1]!.click();
+      radios[1]!.click();
+    });
     expect(onChange).toHaveBeenCalledTimes(2);
   });
 
@@ -132,7 +134,9 @@ describe("OakRadioAsButton", () => {
     );
 
     const radios = getAllByRole("radio") as HTMLInputElement[];
-    fireEvent.click(radios[0]!);
+    act(() => {
+      fireEvent.click(radios[0]!);
+    });
 
     expect(radios[0]!.checked).toBe(true);
   });
@@ -147,8 +151,10 @@ describe("OakRadioAsButton", () => {
 
     const radios = getAllByRole("radio") as HTMLInputElement[];
 
-    fireEvent.click(radios[0]!);
-    fireEvent.click(radios[1]!);
+    act(() => {
+      fireEvent.click(radios[0]!);
+      fireEvent.click(radios[1]!);
+    });
     expect(radios[0]).not.toBeChecked();
     expect(radios[1]).toBeChecked();
   });
@@ -165,9 +171,10 @@ describe("OakRadioAsButton", () => {
       </OakRadioGroup>,
     );
 
-    fireEvent.click(getAllByRole("radio")[0]!);
-    fireEvent.click(getAllByRole("radio")[1]!);
-
+    act(() => {
+      fireEvent.click(getAllByRole("radio")[0]!);
+      fireEvent.click(getAllByRole("radio")[1]!);
+    });
     expect(groupValue).toBe("option2");
   });
 
@@ -183,7 +190,9 @@ describe("OakRadioAsButton", () => {
       </OakRadioGroup>,
     );
 
-    fireEvent.click(getAllByRole("radio")[1]!);
+    act(() => {
+      fireEvent.click(getAllByRole("radio")[1]!);
+    });
     expect(lastValue).toBe("option2");
   });
 
@@ -253,7 +262,9 @@ describe("OakRadioAsButton", () => {
         displayValue="Option 1"
       />,
     );
-    getByRole("radio").focus();
+    act(() => {
+      getByRole("radio").focus();
+    });
     expect(onFocus).toHaveBeenCalled();
   });
 
@@ -268,8 +279,10 @@ describe("OakRadioAsButton", () => {
         displayValue="Option 1"
       />,
     );
-    getByRole("radio").focus();
-    getByRole("radio").blur();
+    act(() => {
+      getByRole("radio").focus();
+      getByRole("radio").blur();
+    });
     expect(onBlur).toHaveBeenCalled();
   });
 
@@ -284,8 +297,10 @@ describe("OakRadioAsButton", () => {
         displayValue="Option 1"
       />,
     );
-    fireEvent.mouseEnter(getByRole("radio"));
-    fireEvent.mouseLeave(getByRole("radio"));
+    act(() => {
+      fireEvent.mouseEnter(getByRole("radio"));
+      fireEvent.mouseLeave(getByRole("radio"));
+    });
     expect(onHovered).toHaveBeenCalled();
   });
 
@@ -301,7 +316,9 @@ describe("OakRadioAsButton", () => {
         displayValue="Option 1"
       />,
     );
-    getByRole("radio").click();
+    act(() => {
+      getByRole("radio").click();
+    });
     expect(onChange).not.toHaveBeenCalled();
   });
 
@@ -326,7 +343,9 @@ describe("OakRadioAsButton", () => {
         />
       </OakRadioGroup>,
     );
-    getAllByRole("radio")[1]?.click();
+    act(() => {
+      getAllByRole("radio")[1]?.click();
+    });
     expect(onChange).toHaveBeenCalledTimes(1);
     expect(onChange).toHaveBeenCalledWith(
       expect.objectContaining({
