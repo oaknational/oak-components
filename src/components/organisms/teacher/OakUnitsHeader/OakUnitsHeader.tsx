@@ -2,7 +2,11 @@ import React from "react";
 import styled, { css } from "styled-components";
 
 import { OakFlex, OakHeading, OakTypography } from "@/components/atoms";
-import { OakPromoTag, OakTertiaryButton } from "@/components/molecules";
+import {
+  OakInlineBanner,
+  OakPromoTag,
+  OakTertiaryButton,
+} from "@/components/molecules";
 import { SizeStyleProps, sizeStyle } from "@/styles/utils/sizeStyle";
 
 export type OakUnitsHeaderProps = {
@@ -10,6 +14,8 @@ export type OakUnitsHeaderProps = {
   subject: string;
   phase: string;
   curriculumHref: string | null;
+  isCustomUnit?: boolean;
+  customHeadingText?: string;
 } & SizeStyleProps;
 
 const OakUnitsHeaderCss = css<OakUnitsHeaderProps>`
@@ -41,33 +47,57 @@ const UnstyledComponent = (props: OakUnitsHeaderProps) => {
     ? "Resources made during the pandemic to support remote teaching."
     : "Brand-new teaching resources, thoughtfully crafted by teachers for classroom needs.";
 
+  const isCustomUnit = props.isCustomUnit;
+  const standardHeadingText = isLegacy
+    ? "Units released in 2020-22"
+    : `${subject} units`;
+  const customHeadingText = props.customHeadingText;
+
   return (
-    <OakFlex
-      $gap="space-between-sssx"
-      $alignItems={["flex-start", "center"]}
-      $justifyContent="space-between"
-      $flexDirection={["column", "row"]}
-      {...rest}
-    >
-      <OakFlex $gap="space-between-ssx" $flexDirection="column">
-        <OakFlex $gap="space-between-ssx">
-          <OakHeading $font="heading-5" tag="h2" $color={"text-primary"}>
-            {isLegacy ? "Units released in 2020-22" : `${subject} units`}
-          </OakHeading>
-          {!isLegacy && <OakPromoTag />}
+    <>
+      <OakFlex
+        $gap="space-between-sssx"
+        $alignItems={["flex-start", "center"]}
+        $justifyContent="space-between"
+        $flexDirection={["column", "row"]}
+        {...rest}
+      >
+        <OakFlex $gap="space-between-ssx" $flexDirection="column">
+          <OakFlex $gap="space-between-ssx">
+            <OakHeading $font="heading-5" tag="h2" $color={"text-primary"}>
+              {isCustomUnit && customHeadingText
+                ? customHeadingText
+                : standardHeadingText}
+            </OakHeading>
+            {!isLegacy && !isCustomUnit && <OakPromoTag />}
+          </OakFlex>
+          {!isCustomUnit && (
+            <OakTypography $font="body-2" $color={"text-primary"}>
+              {subheading}
+            </OakTypography>
+          )}
         </OakFlex>
-        <OakTypography $font="body-2" $color={"text-primary"}>
-          {subheading}
-        </OakTypography>
+        {href && !isCustomUnit && (
+          <CurriculumDownloadButton
+            isLegacy={isLegacy}
+            phase={phase}
+            curriculumHref={href}
+          />
+        )}
       </OakFlex>
-      {href && (
-        <CurriculumDownloadButton
-          isLegacy={isLegacy}
-          phase={phase}
-          curriculumHref={href}
-        />
+      {isCustomUnit && (
+        <OakFlex $width={"100%"}>
+          <OakInlineBanner
+            isOpen={true}
+            message={
+              "Swimming and water safety lessons should be selected based on the ability and experience of your pupils."
+            }
+            type="neutral"
+            $width={"100%"}
+          />
+        </OakFlex>
       )}
-    </OakFlex>
+    </>
   );
 };
 
