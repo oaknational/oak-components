@@ -1,7 +1,7 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
-import { render, waitFor } from "@testing-library/react";
+import { act, render, waitFor } from "@testing-library/react";
 
 import { OakButtonAsRadioGroup } from "./OakButtonAsRadioGroup";
 
@@ -58,7 +58,9 @@ describe("OakButtonAsRadioGroup", () => {
     );
 
     const button = getByRole("radio");
-    button.click();
+    act(() => {
+      button.click();
+    });
     await waitFor(() => {
       expect(onChange).toHaveBeenCalledTimes(1);
       expect(onChange).toHaveBeenCalledWith("1");
