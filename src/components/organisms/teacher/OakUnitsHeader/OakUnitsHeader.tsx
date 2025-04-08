@@ -16,6 +16,7 @@ export type OakUnitsHeaderProps = {
   curriculumHref: string | null;
   isCustomUnit?: boolean;
   customHeadingText?: string;
+  bannerText?: string;
 } & SizeStyleProps;
 
 const OakUnitsHeaderCss = css<OakUnitsHeaderProps>`
@@ -41,17 +42,24 @@ const CurriculumDownloadButton = (
 };
 
 const UnstyledComponent = (props: OakUnitsHeaderProps) => {
-  const { subject, isLegacy, phase, curriculumHref: href, ...rest } = props;
+  const {
+    subject,
+    isLegacy,
+    phase,
+    curriculumHref: href,
+    bannerText,
+    isCustomUnit,
+    customHeadingText,
+    ...rest
+  } = props;
 
   const subheading = isLegacy
     ? "Resources made during the pandemic to support remote teaching."
     : "Brand-new teaching resources, thoughtfully crafted by teachers for classroom needs.";
 
-  const isCustomUnit = props.isCustomUnit;
   const standardHeadingText = isLegacy
     ? "Units released in 2020-22"
     : `${subject} units`;
-  const customHeadingText = props.customHeadingText;
 
   return (
     <>
@@ -85,13 +93,11 @@ const UnstyledComponent = (props: OakUnitsHeaderProps) => {
           />
         )}
       </OakFlex>
-      {isCustomUnit && (
+      {bannerText && (
         <OakFlex $width={"100%"}>
           <OakInlineBanner
             isOpen={true}
-            message={
-              "Swimming and water safety lessons should be selected based on the ability and experience of your pupils."
-            }
+            message={bannerText}
             type="neutral"
             $width={"100%"}
           />

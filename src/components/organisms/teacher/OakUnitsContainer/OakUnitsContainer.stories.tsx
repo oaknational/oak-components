@@ -21,10 +21,22 @@ const meta: Meta<typeof OakUnitsContainer> = {
       options: ["Url", "Null"],
       mapping: { Url: "https://www.thenational.academy", Null: null },
     },
+    isCustomUnit: { type: "boolean" },
+    customHeadingText: { type: "string" },
+    bannerText: { type: "string" },
   },
   parameters: {
     controls: {
-      include: ["isLegacy", "showHeader", "subject", "phase", "curriculumHref"],
+      include: [
+        "isLegacy",
+        "showHeader",
+        "subject",
+        "phase",
+        "curriculumHref",
+        "isCustomUnit",
+        "customHeadingText",
+        "bannerText",
+      ],
     },
   },
 };

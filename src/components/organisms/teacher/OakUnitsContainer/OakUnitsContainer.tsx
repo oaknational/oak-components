@@ -19,6 +19,7 @@ export type OakUnitsContainerProps = OakUnitsHeaderProps & {
   unitCards: Array<React.ReactNode>;
   isCustomUnit?: boolean;
   customHeadingText?: string;
+  bannerText?: string;
 };
 
 const OakUnitsContainerCss = css<OakUnitsContainerProps>``;
@@ -33,6 +34,7 @@ const UnstyledComponent = (props: OakUnitsContainerProps) => {
     subject,
     isCustomUnit,
     customHeadingText,
+    bannerText,
     ...rest
   } = props;
   return (
@@ -54,6 +56,7 @@ const UnstyledComponent = (props: OakUnitsContainerProps) => {
           $width="100%"
           isCustomUnit={isCustomUnit}
           customHeadingText={customHeadingText}
+          bannerText={bannerText}
         />
       )}
       <OakULFlex aria-label="A list of units" $reset $width="100%">
