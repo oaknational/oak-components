@@ -34,7 +34,7 @@ describe(OakCloudinaryImage, () => {
     );
 
     expect(getByRole("img").getAttribute("src")).toMatch(
-      "https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/c_limit,w_3840/fl_keep_attribution/f_auto/q_auto/v1608635688/image.jpg?_a=BAVAfVDW0",
+      "https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/fl_keep_attribution/c_limit,w_3840/f_auto/q_auto/v1/v1608635688/image.jpg?_a=BAVAZGDX0",
     );
   });
 
@@ -47,7 +47,7 @@ describe(OakCloudinaryImage, () => {
     );
 
     expect(getByRole("img").getAttribute("src")).toMatch(
-      "https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/c_limit,w_3840/fl_keep_attribution/f_auto/q_auto/v1608635688/image.jpg?_a=BAVAfVDW0",
+      "https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/fl_keep_attribution/c_limit,w_3840/f_auto/q_auto/v1/v1608635688/image.jpg?_a=BAVAZGDX0",
     );
   });
 
@@ -60,7 +60,7 @@ describe(OakCloudinaryImage, () => {
     );
 
     expect(getByRole("img").getAttribute("src")).toMatch(
-      "https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/c_limit,w_3840/fl_keep_attribution/f_auto/q_auto/v1608635688/image?_a=BAVAfVDW0",
+      "https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/fl_keep_attribution/c_limit,w_3840/f_auto/q_auto/v1608635688/image?_a=BAVAZGDX0",
     );
   });
 
@@ -72,8 +72,8 @@ describe(OakCloudinaryImage, () => {
       />,
     );
 
-    expect(getByRole("img").getAttribute("src")).toMatch(
-      "https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1608635688/image?_a=BAVAfVDW0",
+    expect(getByRole("img").getAttribute("src")).toEqual(
+      "https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1608635688/image?_a=BAVAZGDX0",
     );
   });
 
@@ -98,7 +98,7 @@ describe(OakCloudinaryImage, () => {
       );
 
       expect(getByRole("img").getAttribute("src")).toMatch(
-        "https://private-cloudinary-cloud-res.cloudinary.com/image/upload/c_limit,w_3840/fl_keep_attribution/f_auto/q_auto/v1608635688/image.jpg?_a=BAVAfVDW0",
+        "https://private-cloudinary-cloud-res.cloudinary.com/image/upload/fl_keep_attribution/c_limit,w_3840/f_auto/q_auto/v1/v1608635688/image.jpg?_a=BAVAZGDX0",
       );
     });
 
@@ -122,7 +122,7 @@ describe(OakCloudinaryImage, () => {
       );
 
       expect(getByRole("img").getAttribute("src")).toMatch(
-        "https://private-cloudinary-cloud-res.cloudinary.com/image/upload/c_limit,w_3840/fl_keep_attribution/f_auto/q_auto/v1608635688/image.jpg?_a=BAVAfVDW0",
+        "https://private-cloudinary-cloud-res.cloudinary.com/image/upload/fl_keep_attribution/c_limit,w_3840/f_auto/q_auto/v1/v1608635688/image.jpg?_a=BAVAZGDX0",
       );
     });
   });
