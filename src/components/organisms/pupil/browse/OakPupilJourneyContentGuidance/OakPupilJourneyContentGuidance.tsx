@@ -78,7 +78,7 @@ export const OakPupilJourneyContentGuidance = ({
   isOpen,
   onAccept,
   onDecline,
-  title,
+  title = "Content guidance",
   contentGuidance,
   supervisionLevel = null,
   acceptText = "I understand, continue",
@@ -87,7 +87,7 @@ export const OakPupilJourneyContentGuidance = ({
   return (
     <OakModalCenter
       isOpen={isOpen}
-      modalFlexProps={{ "aria-label": "Content guidance modal" }}
+      modalFlexProps={{ "aria-label": `${title} modal` }}
       footerSlot={
         <OakFlex
           $alignItems="center"
@@ -120,7 +120,7 @@ export const OakPupilJourneyContentGuidance = ({
         iconOverride={{
           $colorFilter: "amber",
         }}
-        title={title ?? "Content guidance"}
+        title={title}
       >
         <OakFlex $flexDirection="column" $rowGap="space-between-m2">
           {removedGuidanceDuplicates(contentGuidance).map(
