@@ -28,6 +28,10 @@ export type OakPupilJourneyContentGuidanceProps = {
    */
   onDecline: () => void;
   /**
+   * Title of the modal
+   */
+  title?: string;
+  /**
    * An array of objects containing the content guidance label, description and area
    */
   contentGuidance?: OakPupilContentGuidance[] | null;
@@ -74,6 +78,7 @@ export const OakPupilJourneyContentGuidance = ({
   isOpen,
   onAccept,
   onDecline,
+  title,
   contentGuidance,
   supervisionLevel = null,
   acceptText = "I understand, continue",
@@ -115,7 +120,7 @@ export const OakPupilJourneyContentGuidance = ({
         iconOverride={{
           $colorFilter: "amber",
         }}
-        title="Content guidance"
+        title={title ?? "Content guidance"}
       >
         <OakFlex $flexDirection="column" $rowGap="space-between-m2">
           {removedGuidanceDuplicates(contentGuidance).map(

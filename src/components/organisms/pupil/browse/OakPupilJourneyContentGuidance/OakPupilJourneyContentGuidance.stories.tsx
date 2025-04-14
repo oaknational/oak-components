@@ -11,7 +11,7 @@ const meta: Meta<typeof OakPupilJourneyContentGuidance> = {
   tags: ["autodocs"],
   parameters: {
     controls: {
-      include: ["isOpen", "contentGuidance", "supervisionLevel"],
+      include: ["isOpen", "title", "contentGuidance", "supervisionLevel"],
     },
   },
   args: {},
