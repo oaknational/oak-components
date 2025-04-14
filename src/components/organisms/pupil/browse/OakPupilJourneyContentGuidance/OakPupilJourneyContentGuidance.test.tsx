@@ -65,6 +65,35 @@ describe("OakPupilJourneyContentGuidance", () => {
     expect(getByText(supervisionLevel)).toBeInTheDocument();
   });
 
+  it("uses default title if title prop is not provided", () => {
+    const { getByText } = renderWithTheme(
+      <ThemeProvider theme={oakDefaultTheme}>
+        <OakPupilJourneyContentGuidance
+          isOpen
+          onAccept={() => {}}
+          onDecline={() => {}}
+        />
+      </ThemeProvider>,
+    );
+
+    expect(getByText("Content guidance")).toBeInTheDocument();
+  });
+
+  it("sets custom title if provided", () => {
+    const { getByText } = renderWithTheme(
+      <ThemeProvider theme={oakDefaultTheme}>
+        <OakPupilJourneyContentGuidance
+          isOpen
+          onAccept={() => {}}
+          onDecline={() => {}}
+          title={"Custom title"}
+        />
+      </ThemeProvider>,
+    );
+
+    expect(getByText("Custom title")).toBeInTheDocument();
+  });
+
   it("calls onAccept when 'I understand' is clicked", () => {
     const onAccept = jest.fn();
     const { getByTestId } = renderWithTheme(
