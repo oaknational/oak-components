@@ -14,6 +14,9 @@ const meta: Meta<typeof OakPupilJourneyContentGuidance> = {
       include: ["isOpen", "title", "contentGuidance", "supervisionLevel"],
     },
   },
+  argTypes: {
+    title: { type: "string" },
+  },
   args: {},
 };
 
