@@ -192,7 +192,9 @@ export const OakCodeRenderer = ({ string, ...rest }: OakCodeRendererProps) => {
                 <OakUL $reset $pl={"inner-padding-xs"}>
                   <OakLI>
                     <OakSpan $font={"heading-7"}>• Blue</OakSpan>
-                    <OakSpan $font={"heading-light-7"}>&nbsp;- numbers</OakSpan>
+                    <OakSpan $font={"heading-light-7"}>
+                      &nbsp;- numbers and boolean values
+                    </OakSpan>
                   </OakLI>
                   <OakLI>
                     <OakSpan $font={"heading-7"}>• Green</OakSpan>
