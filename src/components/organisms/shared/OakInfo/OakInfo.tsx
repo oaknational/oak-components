@@ -1,7 +1,10 @@
 import React, { MouseEventHandler, ReactNode, useState } from "react";
 
-import { OakInfoButton } from "@/components/organisms/shared/OakinfoButton";
-import { OakTooltip, OakTooltipProps } from "@/components/molecules";
+import {
+  OakTooltip,
+  OakTooltipProps,
+  OakInfoButton,
+} from "@/components/molecules";
 import { OakBox } from "@/components/atoms";
 
 export type OakInfoProps = {

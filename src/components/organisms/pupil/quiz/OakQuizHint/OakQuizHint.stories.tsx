@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/react";
 
 import { OakQuizHint } from "./OakQuizHint";
 
-import { OakCodeRenderer } from "@/components/molecules";
+import { OakCodeRenderer } from "@/components/organisms/shared";
 import { OakBox } from "@/components/atoms";
 
 const meta: Meta<typeof OakQuizHint> = {
