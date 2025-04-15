@@ -1,0 +1,643 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakCodeRenderer matches snapshot 1`] = `
+.c0 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c3 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  color: #ffffff;
+  background: #2d2d2d;
+  border-radius: 0.5rem;
+  display: inline-block;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c5 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 3.5rem;
+  color: #FBFBFB;
+  background: #2d2d2d;
+  border-radius: 0.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+  white-space: pre-wrap;
+}
+
+.c7 {
+  padding-right: 0.75rem;
+  border-right: 0.063rem solid;
+  border-color: #808080;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c12 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 1rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c15 {
+  display: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c20 {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c27 {
+  position: relative;
+  width: 2.5rem;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  color: #222222;
+  background: #ffe555;
+  border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c29 {
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c30 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c31 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  object-fit: contain;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  gap: 0.75rem;
+}
+
+.c21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c26 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0rem;
+}
+
+.c28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c2 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c8 {
+  padding-left: 0.75rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c9 {
+  color: #9EE8FF;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c10 {
+  color: #EECCFF;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c11 {
+  color: #94F9AF;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c14 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c19 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c18 {
+  display: revert;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
+  display: revert;
+  display: revert;
+}
+
+.c16 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c17 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+  padding-left: 0.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c24 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+  color: #222222;
+}
+
+.c24:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c25 {
+  display: inline-block;
+  position: relative;
+}
+
+.c25:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: #222222;
+}
+
+.c25:active {
+  color: #222222;
+}
+
+.c25:disabled {
+  color: #808080;
+}
+
+.c22 > :first-child:focus-visible .shadow {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c22 > :first-child:hover .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c22 > :first-child:active .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+}
+
+.c22 > :first-child:disabled .icon-container {
+  background: #808080;
+}
+
+.c22 > :first-child:hover .icon-container {
+  background: #ffe555;
+}
+
+.c22 > :first-child:active .icon-container {
+  background: #ffe555;
+}
+
+.c23:hover .shadow {
+  box-shadow: none !important;
+}
+
+.c23:active .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%) !important;
+}
+
+.c4 {
+  font-family: "Roboto Mono",--font-roboto-mono,monospace;
+}
+
+@media (min-width:750px) {
+  .c3 {
+    padding-left: 0.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c3 {
+    padding-right: 0.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c3 {
+    padding-top: 0.25rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c3 {
+    padding-bottom: 0.25rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c3 {
+    font-weight: 300;
+  }
+}
+
+@media (min-width:750px) {
+  .c3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c3 {
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c3 {
+    -webkit-letter-spacing: 0.0115rem;
+    -moz-letter-spacing: 0.0115rem;
+    -ms-letter-spacing: 0.0115rem;
+    letter-spacing: 0.0115rem;
+  }
+}
+
+<div
+  className="c0 c1"
+>
+  <span
+    className="c2"
+  >
+    <span
+      className="c2"
+    >
+      What is the 
+      <div
+        className="c3 c4"
+      >
+        output
+      </div>
+       of the following Python code?
+
+
+    </span>
+  </span>
+  <div
+    className="c5 c4"
+  >
+    <div
+      className="c0 c6"
+    >
+      <div
+        className="c7 c1"
+      >
+        <span
+          className="c2"
+        >
+          1
+        </span>
+        <span
+          className="c2"
+        >
+          2
+        </span>
+        <span
+          className="c2"
+        >
+          3
+        </span>
+        <span
+          className="c2"
+        >
+          4
+        </span>
+        <span
+          className="c2"
+        >
+          5
+        </span>
+        <span
+          className="c2"
+        >
+          6
+        </span>
+        <span
+          className="c2"
+        >
+          7
+        </span>
+      </div>
+      <span
+        className="c8"
+      >
+        is_weekend = 
+        <span
+          className="c9"
+        >
+          True
+        </span>
+        
+have_homework = 
+        <span
+          className="c9"
+        >
+          False
+        </span>
+        
+
+
+        <span
+          className="c10"
+        >
+          if
+        </span>
+         is_weekend 
+        <span
+          className="c10"
+        >
+          and
+        </span>
+         
+        <span
+          className="c10"
+        >
+          not
+        </span>
+         have_homework:
+   print(
+        <span
+          className="c11"
+        >
+          "Time to chill and relax"
+        </span>
+        )
+
+        <span
+          className="c10"
+        >
+          else
+        </span>
+        :
+   print(
+        <span
+          className="c11"
+        >
+          "Time to study."
+        </span>
+        )
+      </span>
+    </div>
+  </div>
+  <span
+    className="c2"
+  />
+  <div
+    className="c12 c13"
+  >
+    <span
+      className="c14"
+    >
+      Code colour
+    </span>
+    <div
+      className="c15"
+      id="oak-code-renderer-tooltip"
+    >
+      <div
+        className="c0 c1"
+      >
+        <p
+          className="c16"
+        >
+          When programmers write code, they use a special tool called an IDE (Integrated Development Environment). In an IDE, different colours are used to help programmers understand the code:
+        </p>
+        <br />
+        <ul
+          className="c17"
+        >
+          <li
+            className="c18"
+          >
+            <span
+              className="c19"
+            >
+              • Blue
+            </span>
+            <span
+              className="c14"
+            >
+               - numbers
+            </span>
+          </li>
+          <li
+            className="c18"
+          >
+            <span
+              className="c19"
+            >
+              • Green
+            </span>
+            <span
+              className="c14"
+            >
+               - strings
+            </span>
+          </li>
+          <li
+            className="c18"
+          >
+            <span
+              className="c19"
+            >
+              • Purple
+            </span>
+            <span
+              className="c14"
+            >
+               - keywords
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      style={
+        {
+          "display": "contents",
+        }
+      }
+    >
+      <div
+        className="c20 c21 c22 c23"
+      >
+        <button
+          aria-describedby="oak-code-renderer-tooltip"
+          aria-label="open info tooltip"
+          className="c24 c25"
+          data-rac={true}
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <div
+            className="c0 c26"
+          >
+            <div
+              className="c27 c28 icon-container"
+            >
+              <div
+                className="c29 shadow"
+              />
+              <div
+                className="c30"
+                data-icon-for="button"
+              >
+                <img
+                  alt="info"
+                  className="c31"
+                  data-nimg="fill"
+                  decoding="async"
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/Icon_Info_vsx3xi.svg"
+                  style={
+                    {
+                      "bottom": 0,
+                      "color": "transparent",
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": undefined,
+                      "objectPosition": undefined,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <span
+              className="c19"
+            />
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

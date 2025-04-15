@@ -1,9 +1,18 @@
 import React, { ReactElement } from "react";
 import styled from "styled-components";
 
-import { OakBox, OakFlex, OakSpan, OakBoxProps } from "@/components/atoms";
+import {
+  OakBox,
+  OakFlex,
+  OakSpan,
+  OakBoxProps,
+  OakP,
+  OakUL,
+  OakLI,
+} from "@/components/atoms";
 import { OakCombinedColorToken } from "@/styles";
 import { TypographyStyleProps } from "@/styles/utils/typographyStyle";
+import { OakInfo } from "@/components/organisms/shared/OakInfo/OakInfo";
 
 const StyledCodeContainer = styled(OakBox)`
   font-family: "Roboto Mono", --font-roboto-mono, monospace;
@@ -163,6 +172,45 @@ export const OakCodeRenderer = ({ string, ...rest }: OakCodeRendererProps) => {
             </OakSpan>
           );
         })}
+        <OakFlex
+          $alignSelf="flex-end"
+          $width={"fit-content"}
+          $alignItems={"center"}
+          $gap={"space-between-xs"}
+          $mt={"space-between-s"}
+        >
+          <OakSpan $font={"heading-light-7"}>Code colour</OakSpan>
+          <OakInfo
+            hint={
+              <OakFlex $flexDirection="column">
+                <OakP>
+                  When programmers write code, they use a special tool called an
+                  IDE (Integrated Development Environment). In an IDE, different
+                  colours are used to help programmers understand the code:
+                </OakP>
+                <br />
+                <OakUL $reset $pl={"inner-padding-xs"}>
+                  <OakLI>
+                    <OakSpan $font={"heading-7"}>• Blue</OakSpan>
+                    <OakSpan $font={"heading-light-7"}>&nbsp;- numbers</OakSpan>
+                  </OakLI>
+                  <OakLI>
+                    <OakSpan $font={"heading-7"}>• Green</OakSpan>
+                    <OakSpan $font={"heading-light-7"}>&nbsp;- strings</OakSpan>
+                  </OakLI>
+                  <OakLI>
+                    <OakSpan $font={"heading-7"}>• Purple</OakSpan>
+                    <OakSpan $font={"heading-light-7"}>
+                      &nbsp;- keywords
+                    </OakSpan>
+                  </OakLI>
+                </OakUL>
+              </OakFlex>
+            }
+            id="oak-code-renderer-tooltip"
+            tooltipPosition="bottom-right"
+          />
+        </OakFlex>
       </OakFlex>
     );
   };

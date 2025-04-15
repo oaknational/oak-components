@@ -8,7 +8,7 @@ import {
   OakSpan,
 } from "@/components/atoms";
 import { OakAllSpacingToken } from "@/styles";
-import { OakCodeRenderer } from "@/components/molecules";
+import { OakCodeRenderer } from "@/components/organisms/shared";
 
 export type InternalQuizResultItemProps = {
   feedbackState?: "correct" | "incorrect" | null;

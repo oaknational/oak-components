@@ -7,6 +7,13 @@ import { OakCodeRenderer } from "./OakCodeRenderer";
 
 import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
+import {
+  installMockIntersectionObserver,
+  installMockResizeObserver,
+} from "@/test-helpers";
+
+installMockIntersectionObserver();
+installMockResizeObserver();
 
 const mockString =
   'What is the `output` of the following Python code?\n\n```is_weekend = True\nhave_homework = False\n\nif is_weekend and not have_homework:\n   print("Time to chill and relax")\nelse:\n   print("Time to study.")```';
@@ -107,5 +114,14 @@ describe("OakCodeRenderer", () => {
 
     const keywordElement = getByText("if");
     expect(keywordElement).toHaveStyle("color: rgb(238, 204, 255)");
+  });
+
+  it("renders the Code colour tooltip", () => {
+    const { getByText } = renderWithTheme(
+      <ThemeProvider theme={oakDefaultTheme}>
+        <OakCodeRenderer string={mockString} />
+      </ThemeProvider>,
+    );
+    expect(getByText("Code colour")).toBeInTheDocument();
   });
 });
