@@ -183,6 +183,7 @@ exports[`InternalShadowIconButton matches snapshot 1`] = `
 
 .c2 > :first-child:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+  background: white;
 }
 
 <div

@@ -82,6 +82,7 @@ const StyledButtonWrapper = styled(OakFlex)`
   > :first-child:focus-visible {
     box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
+    background: white;
   }
 `;
 
