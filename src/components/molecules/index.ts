@@ -49,3 +49,4 @@ export * from "./OakCodeRenderer";
 export * from "./OakCarousel";
 export * from "./OakBasicAccordion";
 export * from "./OakLinkCard";
+export * from "./OakSmallTertiaryInvertedButton";
