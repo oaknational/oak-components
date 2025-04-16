@@ -128,25 +128,11 @@ export const InternalShadowIconButton = <C extends ElementType = "button">(
         iconName={iconName}
         $width={"all-spacing-6"}
         $height={"all-spacing-6"}
-        $colorFilter={
-          props.disabled
-            ? disabledIconColor
-            : defaultIconColor
-              ? defaultIconColor
-              : null
-        }
-        data-icon-for="button"
-      />
-      <OakIcon
-        iconName={iconName}
-        $width={"all-spacing-6"}
-        $height={"all-spacing-6"}
         $colorFilter={props.disabled ? disabledIconColor : "grey60"}
         $position="absolute"
         $top="all-spacing-1"
         $left="all-spacing-1"
         $display="none"
-        $zIndex="behind"
         className="shadow"
       />
       <OakIcon
@@ -159,7 +145,19 @@ export const InternalShadowIconButton = <C extends ElementType = "button">(
         $top="all-spacing-05"
         $left="all-spacing-05"
         className="highlight"
-        $zIndex="behind"
+      />
+      <OakIcon
+        iconName={iconName}
+        $width={"all-spacing-6"}
+        $height={"all-spacing-6"}
+        $colorFilter={
+          props.disabled
+            ? disabledIconColor
+            : defaultIconColor
+              ? defaultIconColor
+              : null
+        }
+        data-icon-for="button"
       />
     </OakBox>
   );
