@@ -4,7 +4,8 @@ import { Meta, StoryObj } from "@storybook/react";
 import { OakLessonBottomNav } from "./OakLessonBottomNav";
 
 import { OakFlex } from "@/components/atoms";
-import { OakPrimaryButton, OakCodeRenderer } from "@/components/molecules";
+import { OakPrimaryButton } from "@/components/molecules";
+import { OakCodeRenderer } from "@/components/organisms/shared";
 
 const meta: Meta<typeof OakLessonBottomNav> = {
   component: OakLessonBottomNav,

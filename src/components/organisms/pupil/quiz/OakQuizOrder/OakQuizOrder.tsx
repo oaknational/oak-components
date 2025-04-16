@@ -21,13 +21,13 @@ import { CSS } from "@dnd-kit/utilities";
 
 import { OakFlex } from "@/components/atoms";
 import {
-  OakCodeRenderer,
   OakDragAndDropInstructions,
   OakDraggable,
   OakDroppable,
 } from "@/components/molecules";
 import { InternalDndContext } from "@/components/atoms/InternalDndContext/InternalDndContext";
 import { usePrefersReducedMotion } from "@/animation/usePrefersReducedMotion";
+import { OakCodeRenderer } from "@/components/organisms/shared";
 
 type OakQuizOrderItem = {
   id: string;
