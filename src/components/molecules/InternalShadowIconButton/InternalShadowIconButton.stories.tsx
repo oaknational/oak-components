@@ -51,9 +51,6 @@ const meta: Meta<typeof InternalShadowIconButton> = {
         "hoverTextColor",
         "hoverIconColor",
         "disabledTextColor",
-        "width",
-        "type",
-        "iconSize",
       ],
     },
   },
@@ -63,8 +60,6 @@ const meta: Meta<typeof InternalShadowIconButton> = {
     disabledTextColor: "text-disabled",
     disabledIconColor: "icon-disabled",
     defaultIconColor: "bg-btn-primary",
-    width: "auto",
-    iconSize: "all-spacing-6",
   },
   render: (args) => (
     <OakFlex $gap="space-between-m">

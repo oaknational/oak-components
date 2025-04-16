@@ -28,7 +28,7 @@ const meta: Meta<typeof OakSmallTertiaryInvertedButton> = {
   },
   parameters: {
     controls: {
-      include: ["iconName", "isTrailingIcon", "isLoading", "type"],
+      include: ["iconName", "isTrailingIcon", "isLoading"],
     },
     backgrounds: {
       default: "light",
