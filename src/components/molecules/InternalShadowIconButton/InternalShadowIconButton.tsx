@@ -41,7 +41,6 @@ export type InternalShadowIconButtonProps = Omit<
   disabledIconColor?: OakRoundIconProps["$colorFilter"];
   width?: SizeStyleProps["$width"];
   maxWidth?: SizeStyleProps["$maxWidth"];
-  iconSize: SizeStyleProps["$width"];
 } & PositionStyleProps;
 
 const StyledInternalButton = styled(InternalButton)<
@@ -112,7 +111,6 @@ export const InternalShadowIconButton = <C extends ElementType = "button">(
     disabled,
     width = "max-content",
     maxWidth,
-    iconSize,
     hoverIconColor,
     disabledTextColor,
     defaultIconColor,
@@ -127,8 +125,8 @@ export const InternalShadowIconButton = <C extends ElementType = "button">(
     <OakBox $position="relative">
       <OakIcon
         iconName={iconName}
-        $width={iconSize}
-        $height={iconSize}
+        $width={"all-spacing-6"}
+        $height={"all-spacing-6"}
         $colorFilter={
           props.disabled
             ? disabledIconColor
@@ -140,8 +138,8 @@ export const InternalShadowIconButton = <C extends ElementType = "button">(
       />
       <OakIcon
         iconName={iconName}
-        $width={iconSize}
-        $height={iconSize}
+        $width={"all-spacing-6"}
+        $height={"all-spacing-6"}
         $colorFilter={props.disabled ? disabledIconColor : "grey60"}
         $position="absolute"
         $top="all-spacing-1"
@@ -152,8 +150,8 @@ export const InternalShadowIconButton = <C extends ElementType = "button">(
       />
       <OakIcon
         iconName={iconName}
-        $width={iconSize}
-        $height={iconSize}
+        $width={"all-spacing-6"}
+        $height={"all-spacing-6"}
         $colorFilter={props.disabled ? disabledIconColor : "lemon"}
         $position="absolute"
         $display="none"
@@ -165,8 +163,8 @@ export const InternalShadowIconButton = <C extends ElementType = "button">(
     </OakBox>
   );
   const loader = (
-    <OakBox $width={iconSize} $height={iconSize}>
-      <OakLoadingSpinner $width={iconSize} $color={"text-disabled"} />
+    <OakBox $width={"all-spacing-6"} $height={"all-spacing-6"}>
+      <OakLoadingSpinner $width={"all-spacing-6"} $color={"text-disabled"} />
     </OakBox>
   );
 
@@ -212,7 +210,7 @@ export const InternalShadowIconButton = <C extends ElementType = "button">(
           $pr={isTrailingIcon ? "inner-padding-none" : "inner-padding-xs"}
         >
           {!isTrailingIcon && iconLogic}
-          <OakSpan $font={"heading-7"}>{children}</OakSpan>
+          <OakSpan $font={"heading-light-7"}>{children}</OakSpan>
           {isTrailingIcon && iconLogic}
         </OakFlex>
       </StyledInternalButton>

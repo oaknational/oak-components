@@ -13,6 +13,7 @@ export type OakSmallTertiaryInvertedButtonProps = Omit<
   | "defaultTextColor"
   | "hoverTextColor"
   | "disabledTextColor"
+  | "iconSize"
 >;
 
 /**
@@ -41,9 +42,6 @@ export const OakSmallTertiaryInvertedButton = <
       hoverTextColor="text-primary"
       disabledTextColor="text-disabled"
       disabledIconColor="text-disabled"
-      font="heading-light-7"
-      pv="inner-padding-ssx"
-      ph="inner-padding-xs"
       {...rest}
     />
   );

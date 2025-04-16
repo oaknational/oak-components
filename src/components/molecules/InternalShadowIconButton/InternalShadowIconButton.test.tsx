@@ -15,7 +15,6 @@ const defaultArgs: InternalShadowIconButtonProps = {
   defaultTextColor: "mint30",
   hoverTextColor: "lemon50",
   disabledTextColor: "grey40",
-  iconSize: "all-spacing-6",
 };
 
 describe("InternalShadowIconButton", () => {

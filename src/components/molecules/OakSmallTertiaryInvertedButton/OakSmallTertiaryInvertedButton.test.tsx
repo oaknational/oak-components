@@ -13,7 +13,6 @@ import { oakDefaultTheme } from "@/styles";
 
 const defaultArgs: OakSmallTertiaryInvertedButtonProps = {
   iconName: "arrow-right",
-  iconSize: "all-spacing-05",
 };
 
 describe("OakSmallTertiaryInvertedButton", () => {
