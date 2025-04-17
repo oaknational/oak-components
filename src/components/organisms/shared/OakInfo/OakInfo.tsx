@@ -1,4 +1,9 @@
-import React, { MouseEventHandler, ReactNode, useState } from "react";
+import React, {
+  ButtonHTMLAttributes,
+  MouseEventHandler,
+  ReactNode,
+  useState,
+} from "react";
 
 import {
   OakTooltip,
@@ -6,6 +11,7 @@ import {
   OakInfoButton,
 } from "@/components/molecules";
 import { OakBox } from "@/components/atoms";
+import { InternalShadowRoundButtonProps } from "@/components/molecules/InternalShadowRoundButton";
 
 export type OakInfoProps = {
   /**
@@ -15,13 +21,16 @@ export type OakInfoProps = {
   id: string;
   isLoading?: boolean;
   disabled?: boolean;
+  buttonProps?: Partial<
+    InternalShadowRoundButtonProps & ButtonHTMLAttributes<HTMLButtonElement>
+  >;
 } & Omit<OakTooltipProps, "children" | "tooltip" | "id">;
 
 /**
  * Presents a button which will show a hint when clicked
  */
 export const OakInfo = (props: OakInfoProps) => {
-  const { hint, id, isLoading, disabled, ...tooltipProps } = props;
+  const { hint, id, isLoading, disabled, buttonProps, ...tooltipProps } = props;
   const [isOpen, setIsOpen] = useState(false);
   const handleClick: MouseEventHandler = () => {
     setIsOpen(!isOpen);
@@ -39,6 +48,7 @@ export const OakInfo = (props: OakInfoProps) => {
           buttonProps={{
             "aria-describedby": id,
             "aria-label": isOpen ? "close info tooltip" : "open info tooltip",
+            ...buttonProps,
           }}
         />
       </OakTooltip>

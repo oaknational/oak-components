@@ -211,6 +211,9 @@ export const OakCodeRenderer = ({ string, ...rest }: OakCodeRendererProps) => {
             }
             id="oak-code-renderer-tooltip"
             tooltipPosition="bottom-right"
+            buttonProps={{
+              type: "button",
+            }}
           />
         </OakFlex>
       </OakFlex>
