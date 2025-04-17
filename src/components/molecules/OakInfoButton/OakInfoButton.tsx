@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, MouseEventHandler } from "react";
+import React, { ButtonHTMLAttributes, MouseEventHandler } from "react";
 import styled from "styled-components";
 
 import {
@@ -13,11 +13,13 @@ export type OakInfoButtonProps = {
   isLoading?: boolean;
   disabled?: boolean;
   buttonProps?: Partial<
-    InternalShadowRoundButtonProps & HTMLAttributes<Element>
+    InternalShadowRoundButtonProps & ButtonHTMLAttributes<HTMLButtonElement>
   >;
 };
 
-const StyledInternalShadowRoundButton = styled(InternalShadowRoundButton)`
+const StyledInternalShadowRoundButton = styled(
+  InternalShadowRoundButton<"button">,
+)`
   &:hover .shadow {
     box-shadow: none !important;
   }
@@ -38,6 +40,7 @@ export const OakInfoButton = (props: OakInfoButtonProps) => {
 
   return (
     <StyledInternalShadowRoundButton
+      element={"button"}
       iconName={isOpen && !disabled ? "cross" : "info"}
       defaultIconBackground={isOpen ? "black" : "bg-decorative5-main"}
       defaultIconColor={isOpen ? "white" : "black"}
@@ -48,7 +51,7 @@ export const OakInfoButton = (props: OakInfoButtonProps) => {
       disabledTextColor={"text-disabled"}
       disabledIconColor={"white"}
       isLoading={isLoading}
-      disabled={props.disabled}
+      disabled={disabled}
       iconBackgroundSize={"all-spacing-8"}
       iconSize={"all-spacing-7"}
       onClick={onClick}
