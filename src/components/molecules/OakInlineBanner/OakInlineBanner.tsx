@@ -130,6 +130,7 @@ export type OakInlineBannerVariantProps = {
     ctaWrapper?: Partial<OakBoxProps>;
     flexDirection: FlexStyleProps["$flexDirection"];
     bannerPadding: PaddingStyleProps["$pa"];
+    textContentGap?: FlexStyleProps["$gap"];
   };
 };
 
@@ -147,6 +148,7 @@ export const bannerVariants: OakInlineBannerVariantProps = {
     },
     flexDirection: "row",
     bannerPadding: "inner-padding-m",
+    textContentGap: "space-between-sssx",
   },
   large: {
     icon: {
@@ -154,10 +156,10 @@ export const bannerVariants: OakInlineBannerVariantProps = {
       $height: "all-spacing-8",
     },
     heading: {
-      $font: ["heading-7"],
+      $font: ["heading-6"],
     },
     ctaWrapper: {
-      $mt: "space-between-m",
+      $mt: "space-between-ssx",
     },
     closeButtonWrapper: {
       $position: "absolute",
@@ -166,6 +168,7 @@ export const bannerVariants: OakInlineBannerVariantProps = {
     },
     flexDirection: "column",
     bannerPadding: "inner-padding-xl",
+    textContentGap: "space-between-s",
   },
 };
 
@@ -240,7 +243,7 @@ export const OakInlineBanner = ({
           $flexDirection={title ? "column" : "row"}
           $justifyContent={title ? "center" : "space-between"}
           $alignItems={title ? "start" : "center"}
-          $gap={"space-between-sssx"}
+          $gap={bannerVariants[variant].textContentGap}
         >
           {title && (
             <OakHeading

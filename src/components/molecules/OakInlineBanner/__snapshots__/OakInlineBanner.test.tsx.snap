@@ -547,7 +547,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
 }
 
 .c11 {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -654,7 +654,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  gap: 0.25rem;
+  gap: 1rem;
 }
 
 .c18 {
@@ -701,8 +701,8 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
 .c9 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
-  font-size: 1rem;
-  line-height: 1.25rem;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   -webkit-letter-spacing: 0.0115rem;
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
