@@ -17,6 +17,8 @@ const meta: Meta<typeof OakUnitListItem> = {
     lessonCount: "10 lessons",
     isLegacy: false,
     onClick: () => console.log("onClick!"),
+    onSave: () => console.log("onSave!"),
+    isSaved: false,
   },
   argTypes: {
     title: { control: { type: "text" } },
@@ -53,6 +55,8 @@ const meta: Meta<typeof OakUnitListItem> = {
             isLegacy={true}
             yearTitle="Year 10"
             href={""}
+            onSave={() => console.log("onSave!")}
+            isSaved={false}
           />
           <OakUnitListItem
             title={"'The Three Billy Goats Gruff': reading and writing"}
@@ -62,6 +66,8 @@ const meta: Meta<typeof OakUnitListItem> = {
             unavailable={true}
             isLegacy={false}
             href={""}
+            onSave={() => console.log("onSave!")}
+            isSaved={true}
           />
           <OakUnitListItem
             title={"Test Unit"}
@@ -70,6 +76,8 @@ const meta: Meta<typeof OakUnitListItem> = {
             yearTitle="Year 9"
             isLegacy={false}
             href={""}
+            onSave={() => console.log("onSave!")}
+            isSaved={true}
           />
           <OakUnitListItem
             title={"Apple"}
@@ -78,6 +86,8 @@ const meta: Meta<typeof OakUnitListItem> = {
             yearTitle="Year 9"
             isLegacy={false}
             href={""}
+            onSave={() => console.log("onSave!")}
+            isSaved={true}
           />
           <OakUnitListItem
             title={
@@ -88,6 +98,8 @@ const meta: Meta<typeof OakUnitListItem> = {
             yearTitle="Year 9"
             isLegacy={false}
             href={""}
+            onSave={() => console.log("onSave!")}
+            isSaved={true}
           />
           <OakUnitListItem
             title={
@@ -98,6 +110,8 @@ const meta: Meta<typeof OakUnitListItem> = {
             yearTitle="Year 9"
             isLegacy={false}
             href={""}
+            onSave={() => console.log("onSave!")}
+            isSaved={true}
           />
         </OakFlex>
       );
