@@ -238,7 +238,29 @@ export const OakInlineBanner = ({
             data-testid="inline-banner-icon"
           />
         </OakBox>
+        {canDismiss && (
+          <OakFlex $order={2} {...bannerVariants[variant].closeButtonWrapper}>
+            <InternalShadowRoundButton
+              aria-label={"Dismiss banner"}
+              defaultIconBackground="transparent"
+              defaultIconColor="black"
+              defaultTextColor="transparent"
+              hoverTextColor="transparent"
+              disabledTextColor="transparent"
+              hoverIconBackground="black"
+              hoverIconColor="white"
+              disabledIconBackground="transparent"
+              iconBackgroundSize="all-spacing-6"
+              iconSize="all-spacing-6"
+              iconName="cross"
+              data-testid="inline-banner-close-button"
+              onClick={onDismiss}
+              {...closeButtonOverrideProps}
+            />
+          </OakFlex>
+        )}
         <OakFlex
+          $order={1}
           $width={"100%"}
           $flexDirection={title ? "column" : "row"}
           $justifyContent={title ? "center" : "space-between"}
@@ -263,27 +285,6 @@ export const OakInlineBanner = ({
             </OakBox>
           )}
         </OakFlex>
-        {canDismiss && (
-          <OakBox {...bannerVariants[variant].closeButtonWrapper}>
-            <InternalShadowRoundButton
-              aria-label={"Dismiss banner"}
-              defaultIconBackground="transparent"
-              defaultIconColor="black"
-              defaultTextColor="transparent"
-              hoverTextColor="transparent"
-              disabledTextColor="transparent"
-              hoverIconBackground="black"
-              hoverIconColor="white"
-              disabledIconBackground="transparent"
-              iconBackgroundSize="all-spacing-6"
-              iconSize="all-spacing-6"
-              iconName="cross"
-              data-testid="inline-banner-close-button"
-              onClick={onDismiss}
-              {...closeButtonOverrideProps}
-            />
-          </OakBox>
-        )}
       </OakFlex>
     </OakFlex>
   );

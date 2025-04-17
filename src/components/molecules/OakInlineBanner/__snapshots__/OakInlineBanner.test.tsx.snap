@@ -34,37 +34,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c7 {
-  width: 100%;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c10 {
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 300;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
-  letter-spacing: -0.005rem;
-}
-
-.c11 {
-  margin-top: 0.75rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c14 {
-  position: relative;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  height: 1.5rem;
-  min-height: 1.5rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c16 {
+.c8 {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -72,7 +42,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c22 {
+.c14 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -83,12 +53,42 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c24 {
+.c16 {
   position: absolute;
   top: 0rem;
   width: 100%;
   height: 100%;
   border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c17 {
+  position: relative;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  min-height: 1.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c19 {
+  width: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c22 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c23 {
+  margin-top: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -98,7 +98,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   object-fit: contain;
 }
 
-.c15 {
+.c26 {
   object-fit: contain;
 }
 
@@ -135,33 +135,24 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   gap: 0.75rem;
 }
 
-.c8 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  gap: 0.25rem;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
 }
 
-.c17 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c21 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -180,7 +171,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   gap: 0rem;
 }
 
-.c23 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -195,7 +186,29 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   justify-content: center;
 }
 
-.c9 {
+.c20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  gap: 0.25rem;
+}
+
+.c21 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -206,22 +219,22 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c13 {
+.c18 {
   font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
 }
 
 .c25 {
   font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
-  letter-spacing: 0.0115rem;
 }
 
-.c19 {
+.c11 {
   background: none;
   color: inherit;
   border: none;
@@ -235,60 +248,60 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   color: transparent;
 }
 
-.c19:disabled {
+.c11:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c20 {
+.c12 {
   display: inline-block;
   position: relative;
 }
 
-.c20:hover {
+.c12:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: transparent;
 }
 
-.c20:hover:not(:active) [data-icon-for="button"] img {
+.c12:hover:not(:active) [data-icon-for="button"] img {
   -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
 }
 
-.c20:active {
+.c12:active {
   color: transparent;
 }
 
-.c20:disabled {
+.c12:disabled {
   color: transparent;
 }
 
-.c18 > :first-child:focus-visible .shadow {
+.c10 > :first-child:focus-visible .shadow {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c18 > :first-child:hover .shadow {
+.c10 > :first-child:hover .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c18 > :first-child:active .shadow {
+.c10 > :first-child:active .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c18 > :first-child:disabled .icon-container {
+.c10 > :first-child:disabled .icon-container {
   background: transparent;
 }
 
-.c18 > :first-child:hover .icon-container {
+.c10 > :first-child:hover .icon-container {
   background: #222222;
 }
 
-.c18 > :first-child:active .icon-container {
+.c10 > :first-child:active .icon-container {
   background: transparent;
 }
 
-.c12 {
+.c24 {
   display: inline;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -311,26 +324,26 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   color: #222222;
 }
 
-.c12:focus-visible {
+.c24:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c12:visited {
+.c24:visited {
   color: #575757;
 }
 
-.c12:active {
+.c24:active {
   color: #222222;
 }
 
-.c12[disabled] {
+.c24[disabled] {
   cursor: not-allowed;
   color: #808080;
 }
 
 @media (hover:hover) {
-  .c12:hover,
-  .c12:visited:hover {
+  .c24:hover,
+  .c24:visited:hover {
     color: #222222;
   }
 }
@@ -376,87 +389,30 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
       </div>
     </div>
     <div
-      className="c7 c8"
-    >
-      <h1
-        className="c9"
-        data-testid="inline-banner-title"
-      >
-        Information
-      </h1>
-      <div
-        className="c10"
-        data-testid="inline-banner-message"
-      >
-        Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet.
-      </div>
-      <div
-        className="c11"
-      >
-        <a
-          className="c12"
-        >
-          <span
-            className="c13"
-          >
-            Link
-          </span>
-          <div
-            className="c14 "
-          >
-            <img
-              alt="chevron-right"
-              className="c15"
-              data-nimg="fill"
-              decoding="async"
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
-              style={
-                {
-                  "bottom": 0,
-                  "color": "transparent",
-                  "height": "100%",
-                  "left": 0,
-                  "objectFit": undefined,
-                  "objectPosition": undefined,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-            />
-          </div>
-        </a>
-      </div>
-    </div>
-    <div
-      className="c4"
+      className="c4 c7"
     >
       <div
-        className="c16 c17 c18"
+        className="c8 c9 c10"
       >
         <button
           aria-label="Dismiss banner"
-          className="c19 c20"
+          className="c11 c12"
           data-testid="inline-banner-close-button"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
           <div
-            className="c4 c21"
+            className="c4 c13"
           >
             <div
-              className="c22 c23 icon-container"
+              className="c14 c15 icon-container"
             >
               <div
-                className="c24 shadow"
+                className="c16 shadow"
               />
               <div
-                className="c14"
+                className="c17"
                 data-icon-for="button"
               >
                 <img
@@ -486,10 +442,67 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
               </div>
             </div>
             <span
-              className="c25"
+              className="c18"
             />
           </div>
         </button>
+      </div>
+    </div>
+    <div
+      className="c19 c20"
+    >
+      <h1
+        className="c21"
+        data-testid="inline-banner-title"
+      >
+        Information
+      </h1>
+      <div
+        className="c22"
+        data-testid="inline-banner-message"
+      >
+        Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet.
+      </div>
+      <div
+        className="c23"
+      >
+        <a
+          className="c24"
+        >
+          <span
+            className="c25"
+          >
+            Link
+          </span>
+          <div
+            className="c17 "
+          >
+            <img
+              alt="chevron-right"
+              className="c26"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
+              style={
+                {
+                  "bottom": 0,
+                  "color": "transparent",
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
+        </a>
       </div>
     </div>
   </div>
@@ -531,43 +544,13 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
 }
 
 .c7 {
-  width: 100%;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c10 {
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 300;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
-  letter-spacing: -0.005rem;
-}
-
-.c11 {
-  margin-top: 0.5rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c14 {
-  position: relative;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  height: 1.5rem;
-  min-height: 1.5rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c16 {
   position: absolute;
   top: 0rem;
   right: 0rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c17 {
+.c9 {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -575,7 +558,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c23 {
+.c15 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -586,12 +569,42 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c25 {
+.c17 {
   position: absolute;
   top: 0rem;
   width: 100%;
   height: 100%;
   border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c18 {
+  position: relative;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  min-height: 1.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c20 {
+  width: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c23 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c24 {
+  margin-top: 0.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -601,7 +614,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   object-fit: contain;
 }
 
-.c15 {
+.c27 {
   object-fit: contain;
 }
 
@@ -643,28 +656,19 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  gap: 1rem;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
 }
 
-.c18 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c22 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -683,7 +687,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   gap: 0rem;
 }
 
-.c24 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -698,7 +702,29 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   justify-content: center;
 }
 
-.c9 {
+.c21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  gap: 1rem;
+}
+
+.c22 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1.25rem;
@@ -709,11 +735,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c13 {
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c26 {
+.c19 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -724,7 +746,11 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c20 {
+.c26 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c12 {
   background: none;
   color: inherit;
   border: none;
@@ -738,60 +764,60 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   color: transparent;
 }
 
-.c20:disabled {
+.c12:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c21 {
+.c13 {
   display: inline-block;
   position: relative;
 }
 
-.c21:hover {
+.c13:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: transparent;
 }
 
-.c21:hover:not(:active) [data-icon-for="button"] img {
+.c13:hover:not(:active) [data-icon-for="button"] img {
   -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
 }
 
-.c21:active {
+.c13:active {
   color: transparent;
 }
 
-.c21:disabled {
+.c13:disabled {
   color: transparent;
 }
 
-.c19 > :first-child:focus-visible .shadow {
+.c11 > :first-child:focus-visible .shadow {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c19 > :first-child:hover .shadow {
+.c11 > :first-child:hover .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c19 > :first-child:active .shadow {
+.c11 > :first-child:active .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c19 > :first-child:disabled .icon-container {
+.c11 > :first-child:disabled .icon-container {
   background: transparent;
 }
 
-.c19 > :first-child:hover .icon-container {
+.c11 > :first-child:hover .icon-container {
   background: #222222;
 }
 
-.c19 > :first-child:active .icon-container {
+.c11 > :first-child:active .icon-container {
   background: transparent;
 }
 
-.c12 {
+.c25 {
   display: inline;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -814,26 +840,26 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   color: #222222;
 }
 
-.c12:focus-visible {
+.c25:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c12:visited {
+.c25:visited {
   color: #575757;
 }
 
-.c12:active {
+.c25:active {
   color: #222222;
 }
 
-.c12[disabled] {
+.c25[disabled] {
   cursor: not-allowed;
   color: #808080;
 }
 
 @media (hover:hover) {
-  .c12:hover,
-  .c12:visited:hover {
+  .c25:hover,
+  .c25:visited:hover {
     color: #222222;
   }
 }
@@ -881,85 +907,28 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
     <div
       className="c7 c8"
     >
-      <h1
-        className="c9"
-        data-testid="inline-banner-title"
-      >
-        Information
-      </h1>
       <div
-        className="c10"
-        data-testid="inline-banner-message"
-      >
-        Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet.
-      </div>
-      <div
-        className="c11"
-      >
-        <a
-          className="c12"
-        >
-          <span
-            className="c13"
-          >
-            Link
-          </span>
-          <div
-            className="c14 "
-          >
-            <img
-              alt="chevron-right"
-              className="c15"
-              data-nimg="fill"
-              decoding="async"
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
-              style={
-                {
-                  "bottom": 0,
-                  "color": "transparent",
-                  "height": "100%",
-                  "left": 0,
-                  "objectFit": undefined,
-                  "objectPosition": undefined,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-            />
-          </div>
-        </a>
-      </div>
-    </div>
-    <div
-      className="c16"
-    >
-      <div
-        className="c17 c18 c19"
+        className="c9 c10 c11"
       >
         <button
           aria-label="Dismiss banner"
-          className="c20 c21"
+          className="c12 c13"
           data-testid="inline-banner-close-button"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
           <div
-            className="c4 c22"
+            className="c4 c14"
           >
             <div
-              className="c23 c24 icon-container"
+              className="c15 c16 icon-container"
             >
               <div
-                className="c25 shadow"
+                className="c17 shadow"
               />
               <div
-                className="c14"
+                className="c18"
                 data-icon-for="button"
               >
                 <img
@@ -989,10 +958,67 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
               </div>
             </div>
             <span
-              className="c26"
+              className="c19"
             />
           </div>
         </button>
+      </div>
+    </div>
+    <div
+      className="c20 c21"
+    >
+      <h1
+        className="c22"
+        data-testid="inline-banner-title"
+      >
+        Information
+      </h1>
+      <div
+        className="c23"
+        data-testid="inline-banner-message"
+      >
+        Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet.
+      </div>
+      <div
+        className="c24"
+      >
+        <a
+          className="c25"
+        >
+          <span
+            className="c26"
+          >
+            Link
+          </span>
+          <div
+            className="c18 "
+          >
+            <img
+              alt="chevron-right"
+              className="c27"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
+              style={
+                {
+                  "bottom": 0,
+                  "color": "transparent",
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
+        </a>
       </div>
     </div>
   </div>
@@ -1033,32 +1059,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c7 {
-  width: 100%;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c9 {
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 300;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
-  letter-spacing: -0.005rem;
-}
-
-.c12 {
-  position: relative;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  height: 1.5rem;
-  min-height: 1.5rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c14 {
+.c8 {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -1066,7 +1067,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c20 {
+.c14 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -1077,7 +1078,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c22 {
+.c16 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -1086,13 +1087,38 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
+.c17 {
+  position: relative;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  min-height: 1.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c19 {
+  width: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c21 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
 .c6 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
 }
 
-.c13 {
+.c24 {
   object-fit: contain;
 }
 
@@ -1129,33 +1155,24 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   gap: 0.75rem;
 }
 
-.c8 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  gap: 0.25rem;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
 }
 
-.c15 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c19 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1174,7 +1191,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   gap: 0rem;
 }
 
-.c21 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1189,11 +1206,29 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   justify-content: center;
 }
 
-.c11 {
-  font-family: --var(google-font),Lexend,sans-serif;
+.c20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  gap: 0.25rem;
 }
 
-.c23 {
+.c18 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -1204,7 +1239,11 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   letter-spacing: 0.0115rem;
 }
 
-.c17 {
+.c23 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c11 {
   background: none;
   color: inherit;
   border: none;
@@ -1218,60 +1257,60 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   color: transparent;
 }
 
-.c17:disabled {
+.c11:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c18 {
+.c12 {
   display: inline-block;
   position: relative;
 }
 
-.c18:hover {
+.c12:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: transparent;
 }
 
-.c18:hover:not(:active) [data-icon-for="button"] img {
+.c12:hover:not(:active) [data-icon-for="button"] img {
   -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
 }
 
-.c18:active {
+.c12:active {
   color: transparent;
 }
 
-.c18:disabled {
+.c12:disabled {
   color: transparent;
 }
 
-.c16 > :first-child:focus-visible .shadow {
+.c10 > :first-child:focus-visible .shadow {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c16 > :first-child:hover .shadow {
+.c10 > :first-child:hover .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c16 > :first-child:active .shadow {
+.c10 > :first-child:active .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c16 > :first-child:disabled .icon-container {
+.c10 > :first-child:disabled .icon-container {
   background: transparent;
 }
 
-.c16 > :first-child:hover .icon-container {
+.c10 > :first-child:hover .icon-container {
   background: #222222;
 }
 
-.c16 > :first-child:active .icon-container {
+.c10 > :first-child:active .icon-container {
   background: transparent;
 }
 
-.c10 {
+.c22 {
   display: inline;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1294,26 +1333,26 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   color: #222222;
 }
 
-.c10:focus-visible {
+.c22:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c10:visited {
+.c22:visited {
   color: #575757;
 }
 
-.c10:active {
+.c22:active {
   color: #222222;
 }
 
-.c10[disabled] {
+.c22[disabled] {
   cursor: not-allowed;
   color: #808080;
 }
 
 @media (hover:hover) {
-  .c10:hover,
-  .c10:visited:hover {
+  .c22:hover,
+  .c22:visited:hover {
     color: #222222;
   }
 }
@@ -1359,81 +1398,30 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
       </div>
     </div>
     <div
-      className="c7 c8"
+      className="c4 c7"
     >
       <div
-        className="c9"
-        data-testid="inline-banner-message"
-      >
-        Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet.
-      </div>
-      <div
-        className="c4"
-      >
-        <a
-          className="c10"
-        >
-          <span
-            className="c11"
-          >
-            Link
-          </span>
-          <div
-            className="c12 "
-          >
-            <img
-              alt="chevron-right"
-              className="c13"
-              data-nimg="fill"
-              decoding="async"
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
-              style={
-                {
-                  "bottom": 0,
-                  "color": "transparent",
-                  "height": "100%",
-                  "left": 0,
-                  "objectFit": undefined,
-                  "objectPosition": undefined,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-            />
-          </div>
-        </a>
-      </div>
-    </div>
-    <div
-      className="c4"
-    >
-      <div
-        className="c14 c15 c16"
+        className="c8 c9 c10"
       >
         <button
           aria-label="Dismiss banner"
-          className="c17 c18"
+          className="c11 c12"
           data-testid="inline-banner-close-button"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
           <div
-            className="c4 c19"
+            className="c4 c13"
           >
             <div
-              className="c20 c21 icon-container"
+              className="c14 c15 icon-container"
             >
               <div
-                className="c22 shadow"
+                className="c16 shadow"
               />
               <div
-                className="c12"
+                className="c17"
                 data-icon-for="button"
               >
                 <img
@@ -1463,10 +1451,61 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
               </div>
             </div>
             <span
-              className="c23"
+              className="c18"
             />
           </div>
         </button>
+      </div>
+    </div>
+    <div
+      className="c19 c20"
+    >
+      <div
+        className="c21"
+        data-testid="inline-banner-message"
+      >
+        Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet.
+      </div>
+      <div
+        className="c4"
+      >
+        <a
+          className="c22"
+        >
+          <span
+            className="c23"
+          >
+            Link
+          </span>
+          <div
+            className="c17 "
+          >
+            <img
+              alt="chevron-right"
+              className="c24"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
+              style={
+                {
+                  "bottom": 0,
+                  "color": "transparent",
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
+        </a>
       </div>
     </div>
   </div>
