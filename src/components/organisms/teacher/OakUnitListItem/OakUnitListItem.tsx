@@ -207,7 +207,11 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
         {...rest}
       >
         <OakFlex $flexDirection="column" $gap="space-between-s" $width="100%">
-          <OakFlex $gap="space-between-s">
+          <OakFlex
+            $gap="space-between-s"
+            as="a"
+            href={unavailable ? undefined : href}
+          >
             <OakFlex
               $background={
                 unavailable
