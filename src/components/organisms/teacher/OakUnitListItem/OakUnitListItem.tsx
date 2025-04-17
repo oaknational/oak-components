@@ -9,6 +9,7 @@ import {
   OakGrid,
   OakGridArea,
   OakBox,
+  OakIcon,
 } from "@/components/atoms";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
@@ -148,8 +149,8 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
             </OakP>
           </OakGridArea>
           <OakGridArea
-            $colSpan={2}
-            $colStart={9}
+            $colSpan={onSave ? 2 : 1}
+            $colStart={onSave ? 9 : 10}
             $pv="inner-padding-l"
             $justifyContent={"center"}
           >
@@ -164,14 +165,24 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
             $colSpan={2}
             $colStart={11}
             $pv="inner-padding-l"
-            $justifyContent={"center"}
+            $alignItems="center"
+            $justifyContent="center"
           >
-            <OakP
+            <OakFlex
               $font={"heading-light-7"}
               $color={unavailable ? "text-disabled" : "text-primary"}
+              $alignItems="center"
+              $justifyContent="center"
             >
               {lessonCount}
-            </OakP>
+              {!onSave && (
+                <OakIcon
+                  iconName="chevron-right"
+                  iconWidth="all-spacing-7"
+                  $colorFilter={unavailable ? "text-disabled" : "text-primary"}
+                />
+              )}
+            </OakFlex>
           </OakGridArea>
         </OakGrid>
         {onSave && (

@@ -86,8 +86,6 @@ const meta: Meta<typeof OakUnitListItem> = {
             yearTitle="Year 9"
             isLegacy={false}
             href={""}
-            onSave={() => console.log("onSave!")}
-            isSaved={true}
           />
           <OakUnitListItem
             title={
@@ -98,8 +96,6 @@ const meta: Meta<typeof OakUnitListItem> = {
             yearTitle="Year 9"
             isLegacy={false}
             href={""}
-            onSave={() => console.log("onSave!")}
-            isSaved={true}
           />
           <OakUnitListItem
             title={
@@ -110,8 +106,6 @@ const meta: Meta<typeof OakUnitListItem> = {
             yearTitle="Year 9"
             isLegacy={false}
             href={""}
-            onSave={() => console.log("onSave!")}
-            isSaved={true}
           />
         </OakFlex>
       );
