@@ -96,6 +96,7 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
 
   return (
     <OakLI $listStyle={"none"} $width={"100%"}>
+      {/* Desktop layout */}
       <StyledUnitListItem
         $alignItems={"center"}
         $background={unavailable ? "bg-neutral" : "bg-primary"}
@@ -197,6 +198,7 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
           </OakSmallTertiaryInvertedButton>
         )}
       </StyledUnitListItem>
+      {/* Mobile layout */}
       <StyledUnitListItem
         $background={unavailable ? "bg-neutral" : "bg-primary"}
         $borderRadius="border-radius-m"
