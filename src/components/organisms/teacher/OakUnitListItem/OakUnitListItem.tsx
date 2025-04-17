@@ -105,7 +105,7 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
         $pr={onSave ? "inner-padding-s" : "inner-padding-none"}
         $width="100%"
         $display={["none", "flex"]}
-        $gap="space-between-s"
+        $gap="space-between-m2"
         {...rest}
       >
         <OakGrid
@@ -196,6 +196,7 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
             disabled={unavailable}
             onClick={onSave}
             width="all-spacing-15"
+            $justifyContent="end"
           >
             {isSaved ? "Saved" : "Save"}
           </OakSmallTertiaryInvertedButton>

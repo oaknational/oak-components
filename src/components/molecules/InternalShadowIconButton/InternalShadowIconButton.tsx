@@ -19,6 +19,7 @@ import {
 import { parseColor } from "@/styles/helpers/parseColor";
 import { OakCombinedColorToken } from "@/styles";
 import { SizeStyleProps, sizeStyle } from "@/styles/utils/sizeStyle";
+import { FlexStyleProps } from "@/styles/utils/flexStyle";
 
 export type InternalShadowIconButtonProps = Omit<
   InternalButtonProps,
@@ -41,7 +42,8 @@ export type InternalShadowIconButtonProps = Omit<
   disabledIconColor?: OakRoundIconProps["$colorFilter"];
   width?: SizeStyleProps["$width"];
   maxWidth?: SizeStyleProps["$maxWidth"];
-} & PositionStyleProps;
+} & PositionStyleProps &
+  FlexStyleProps;
 
 const StyledInternalButton = styled(InternalButton)<
   InternalShadowIconButtonProps & SizeStyleProps
@@ -119,6 +121,7 @@ export const InternalShadowIconButton = <C extends ElementType = "button">(
     defaultTextColor,
     hoverTextColor,
     className,
+    $justifyContent,
     ...rest
   } = props;
 
@@ -187,6 +190,7 @@ export const InternalShadowIconButton = <C extends ElementType = "button">(
       $position={"relative"}
       $width={width}
       $maxWidth={maxWidth}
+      $justifyContent={$justifyContent}
     >
       <StyledInternalButton
         element={element ?? "button"}
