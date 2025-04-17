@@ -105,6 +105,7 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
         $pr={onSave ? "inner-padding-s" : "inner-padding-none"}
         $width="100%"
         $display={["none", "flex"]}
+        $gap="space-between-s"
         {...rest}
       >
         <OakGrid
@@ -126,6 +127,7 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
               $justifyContent={"center"}
               $alignItems={"center"}
               $height="100%"
+              $width="all-spacing-11"
             >
               <OakHeading
                 tag="h3"
@@ -154,7 +156,7 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
             $colStart={9}
             $pv="inner-padding-l"
             $justifyContent={"center"}
-            $alignItems="center"
+            $alignItems="end"
           >
             <OakP
               $font={"heading-light-7"}
@@ -167,7 +169,7 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
             $colSpan={2}
             $colStart={11}
             $pv="inner-padding-l"
-            $alignItems="center"
+            $alignItems="end"
             $justifyContent="center"
           >
             <OakFlex

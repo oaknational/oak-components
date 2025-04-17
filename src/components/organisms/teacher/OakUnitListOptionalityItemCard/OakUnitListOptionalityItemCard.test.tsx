@@ -16,6 +16,7 @@ describe("OakUnitListOptionalityItemCard", () => {
         title={""}
         lessonCount={0}
         href={""}
+        slug="test"
       />,
     );
     expect(getByTestId("test")).toBeInTheDocument();
@@ -28,6 +29,7 @@ describe("OakUnitListOptionalityItemCard", () => {
           title="Lesson 1"
           lessonCount={0}
           href={""}
+          slug="test"
         />
         ,
       </OakThemeProvider>,
@@ -43,6 +45,7 @@ describe("OakUnitListOptionalityItemCard", () => {
         title={""}
         lessonCount={0}
         href={""}
+        slug="test"
       />,
     );
 
@@ -56,6 +59,7 @@ describe("OakUnitListOptionalityItemCard", () => {
         lessonCount={6}
         title={""}
         href={""}
+        slug="test"
       />,
     );
 
@@ -69,6 +73,7 @@ describe("OakUnitListOptionalityItemCard", () => {
         lessonCount={0}
         href={""}
         unavailable
+        slug="test"
       />,
     );
 

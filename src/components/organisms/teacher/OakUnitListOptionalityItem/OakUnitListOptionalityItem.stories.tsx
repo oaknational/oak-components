@@ -68,11 +68,21 @@ const meta: Meta<typeof OakUnitListOptionalityItem> = {
         >
           <OakUnitListItem
             index={1}
-            title={"Test lesson 1"}
+            title={"Test unit 1"}
             lessonCount={"8 lessons"}
             isLegacy={false}
             href={"#"}
             yearTitle={"Year 10"}
+          />
+          <OakUnitListItem
+            index={1}
+            title={"Save unit 1"}
+            lessonCount={"8 lessons"}
+            isLegacy={false}
+            href={"#"}
+            yearTitle={"Year 10"}
+            onSave={() => console.log("onSave!")}
+            isSaved={false}
           />
           {Story()}
           <OakUnitListOptionalityItem

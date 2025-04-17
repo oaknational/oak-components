@@ -17,6 +17,7 @@ const meta: Meta<typeof OakUnitListOptionalityItemCard> = {
     onClick: () => console.log("onClick!"),
     onSave: () => console.log("onSave!"),
     isSaved: false,
+    slug: "migration",
   },
   argTypes: {
     title: { control: { type: "text" } },

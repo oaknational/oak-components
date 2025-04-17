@@ -60,6 +60,7 @@ export type OakUnitListOptionalityItemCardProps = {
   title: string;
   lessonCount: number | null;
   href: string;
+  slug: string;
   firstItemRef?: MutableRefObject<HTMLAnchorElement | null> | null | undefined;
   onClick?: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
   onSave?: (unitSlug: string) => void;
@@ -134,6 +135,7 @@ export const OakUnitListOptionalityItemCard = (
                 iconName={isSaved ? "bookmark-filled" : "bookmark-outlined"}
                 isTrailingIcon
                 disabled={unavailable}
+                onClick={() => onSave(props.slug)}
               >
                 {isSaved ? "Saved" : "Save"}
               </OakSmallTertiaryInvertedButton>
