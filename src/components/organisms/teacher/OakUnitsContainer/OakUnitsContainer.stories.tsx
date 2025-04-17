@@ -73,6 +73,7 @@ export const Default: Story = {
 
             href: "#",
             lessonCount: 10,
+            slug: "migration",
           },
           {
             title:
@@ -80,6 +81,7 @@ export const Default: Story = {
 
             href: "#",
             lessonCount: 10,
+            slug: "migration-2",
           },
           {
             title:
@@ -87,6 +89,7 @@ export const Default: Story = {
 
             href: "#",
             lessonCount: 10,
+            slug: "migration-3",
           },
         ]}
         firstItemRef={undefined}

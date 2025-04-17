@@ -102,7 +102,7 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
         $background={unavailable ? "bg-neutral" : "bg-primary"}
         $borderRadius="border-radius-m"
         $disabled={unavailable}
-        $pr={onSave ? "inner-padding-l" : "inner-padding-none"}
+        $pr={onSave ? "inner-padding-s" : "inner-padding-none"}
         $width="100%"
         $display={["none", "flex"]}
         {...rest}
@@ -150,10 +150,11 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
             </OakP>
           </OakGridArea>
           <OakGridArea
-            $colSpan={onSave ? 2 : 1}
-            $colStart={onSave ? 9 : 10}
+            $colSpan={2}
+            $colStart={9}
             $pv="inner-padding-l"
             $justifyContent={"center"}
+            $alignItems="center"
           >
             <OakP
               $font={"heading-light-7"}

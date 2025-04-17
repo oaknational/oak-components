@@ -15,6 +15,8 @@ const meta: Meta<typeof OakUnitListOptionalityItem> = {
     index: 1,
     yearTitle: "Year 10",
     firstItemRef: undefined,
+    onSave: () => console.log("onSave!"),
+    getIsSaved: () => false,
     optionalityUnits: [
       {
         title:
@@ -22,18 +24,21 @@ const meta: Meta<typeof OakUnitListOptionalityItem> = {
         href: "#",
         lessonCount: 10,
         onClick: () => console.log("onClick!"),
+        slug: "migration",
       },
       {
         title: "Migration: What do sources tell us about the ",
         href: "#",
         lessonCount: 10,
         onClick: () => console.log("onClick!"),
+        slug: "migration-2",
       },
       {
         title: "Migration: What do sources tell us ?",
         onClick: () => console.log("onClick!"),
         href: "#",
         lessonCount: 10,
+        slug: "migration-3",
       },
       {
         title:
@@ -41,6 +46,7 @@ const meta: Meta<typeof OakUnitListOptionalityItem> = {
         onClick: () => console.log("onClick!"),
         href: "#",
         lessonCount: 10,
+        slug: "migration-4",
       },
     ],
   },
@@ -76,6 +82,8 @@ const meta: Meta<typeof OakUnitListOptionalityItem> = {
             index={2}
             yearTitle="Year 10"
             unavailable={true}
+            onSave={() => console.log("onSave!")}
+            getIsSaved={() => false}
             optionalityUnits={[
               {
                 title:
@@ -83,6 +91,7 @@ const meta: Meta<typeof OakUnitListOptionalityItem> = {
 
                 href: "#",
                 lessonCount: 10,
+                slug: "migration",
               },
               {
                 title:
@@ -90,6 +99,7 @@ const meta: Meta<typeof OakUnitListOptionalityItem> = {
 
                 href: "#",
                 lessonCount: 10,
+                slug: "migration-2",
               },
               {
                 title:
@@ -97,6 +107,7 @@ const meta: Meta<typeof OakUnitListOptionalityItem> = {
 
                 href: "#",
                 lessonCount: 10,
+                slug: "migration-3",
               },
             ]}
             firstItemRef={undefined}

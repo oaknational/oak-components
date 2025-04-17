@@ -54,6 +54,7 @@ describe("OakUnitListOptionalityItem", () => {
             href: "#",
 
             lessonCount: 0,
+            slug: "migration",
           },
           {
             title:
@@ -61,6 +62,7 @@ describe("OakUnitListOptionalityItem", () => {
             href: "#",
 
             lessonCount: 0,
+            slug: "migration-2",
           },
         ]}
         firstItemRef={undefined}
@@ -105,6 +107,7 @@ describe("OakUnitListOptionalityItem", () => {
             href: "#",
 
             lessonCount: 10,
+            slug: "migration",
           },
           {
             title:
@@ -112,6 +115,7 @@ describe("OakUnitListOptionalityItem", () => {
             href: "#",
 
             lessonCount: 4,
+            slug: "migration-2",
           },
         ]}
         firstItemRef={undefined}

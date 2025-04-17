@@ -15,6 +15,8 @@ const meta: Meta<typeof OakUnitListOptionalityItemCard> = {
     href: "/",
     lessonCount: 10,
     onClick: () => console.log("onClick!"),
+    onSave: () => console.log("onSave!"),
+    isSaved: false,
   },
   argTypes: {
     title: { control: { type: "text" } },
@@ -39,6 +41,7 @@ const meta: Meta<typeof OakUnitListOptionalityItemCard> = {
         "disabled",
         "unavailable",
         "isLegacy",
+        "isSaved",
       ],
     },
   },

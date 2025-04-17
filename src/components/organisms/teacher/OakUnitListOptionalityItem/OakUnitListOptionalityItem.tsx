@@ -118,8 +118,11 @@ export type OakUnitListOptionalityItemProps = {
   nullTitle: string;
   yearTitle?: string | null;
   firstItemRef: MutableRefObject<HTMLAnchorElement | null> | null | undefined;
+  onSave?: (unitSlug: string) => void;
+  getIsSaved?: (unitSlug: string) => boolean;
   optionalityUnits: {
     title: string;
+    slug: string;
     href: string;
     lessonCount: number;
     onClick?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
@@ -143,6 +146,8 @@ export const OakUnitListOptionalityItem = (
     optionalityUnits,
     nullTitle,
     firstItemRef,
+    onSave,
+    getIsSaved,
     ...rest
   } = props;
 
@@ -219,6 +224,8 @@ export const OakUnitListOptionalityItem = (
                 {...unit}
                 firstItemRef={index === 0 ? firstItemRef : null}
                 unavailable={unavailable}
+                onSave={onSave ?? undefined}
+                isSaved={getIsSaved ? getIsSaved(unit.slug) : undefined}
               />
             </OakGridArea>
           ))}

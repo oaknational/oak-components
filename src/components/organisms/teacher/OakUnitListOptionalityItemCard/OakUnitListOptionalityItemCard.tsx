@@ -4,6 +4,7 @@ import styled, { css } from "styled-components";
 import { OakFlex, OakSpan, OakHeading, OakIcon } from "@/components/atoms";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
+import { OakSmallTertiaryInvertedButton } from "@/components/molecules";
 
 const StyledOptionalityListItem = styled(OakFlex)<{ $disabled?: boolean }>`
   outline: none;
@@ -61,6 +62,8 @@ export type OakUnitListOptionalityItemCardProps = {
   href: string;
   firstItemRef?: MutableRefObject<HTMLAnchorElement | null> | null | undefined;
   onClick?: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
+  onSave?: (unitSlug: string) => void;
+  isSaved?: boolean;
 };
 
 /**
@@ -70,8 +73,16 @@ export type OakUnitListOptionalityItemCardProps = {
 export const OakUnitListOptionalityItemCard = (
   props: OakUnitListOptionalityItemCardProps,
 ) => {
-  const { lessonCount, href, unavailable, firstItemRef, onClick, ...rest } =
-    props;
+  const {
+    lessonCount,
+    href,
+    unavailable,
+    firstItemRef,
+    onClick,
+    isSaved,
+    onSave,
+    ...rest
+  } = props;
 
   return (
     <OakFlex $display={"flex"} $flexGrow={1}>
@@ -82,10 +93,6 @@ export const OakUnitListOptionalityItemCard = (
         $borderColor={"border-decorative3"}
         $ba="border-solid-m"
         $disabled={unavailable}
-        href={unavailable ? undefined : href}
-        onClick={unavailable ? undefined : onClick}
-        ref={firstItemRef}
-        as={"a"}
         $flexGrow={1}
         {...rest}
       >
@@ -99,20 +106,38 @@ export const OakUnitListOptionalityItemCard = (
             $color={unavailable ? "text-disabled" : "text-primary"}
             tag={"h3"}
             $mb={"space-between-xs"}
+            as={"a"}
+            onClick={unavailable ? undefined : onClick}
+            href={unavailable ? undefined : href}
+            ref={firstItemRef}
           >
             {props.title}
           </OakHeading>
-          <OakFlex $alignItems={"center"} $justifyContent={"flex-end"}>
-            <OakSpan
-              $color={unavailable ? "text-disabled" : "text-primary"}
-              $font={"heading-light-7"}
-            >
-              {`${lessonCount} lessons`}
-            </OakSpan>
-            <OakIcon
-              iconName="chevron-right"
-              $colorFilter={unavailable ? "text-disabled" : "text-primary"}
-            />
+          <OakFlex $justifyContent={onSave ? "space-between" : "flex-end"}>
+            <OakFlex $alignItems={"center"} $justifyContent={"flex-end"}>
+              <OakSpan
+                $color={unavailable ? "text-disabled" : "text-primary"}
+                $font={"heading-light-7"}
+              >
+                {`${lessonCount} lessons`}
+              </OakSpan>
+
+              {!onSave && (
+                <OakIcon
+                  iconName="chevron-right"
+                  $colorFilter={unavailable ? "text-disabled" : "text-primary"}
+                />
+              )}
+            </OakFlex>
+            {onSave && (
+              <OakSmallTertiaryInvertedButton
+                iconName={isSaved ? "bookmark-filled" : "bookmark-outlined"}
+                isTrailingIcon
+                disabled={unavailable}
+              >
+                {isSaved ? "Saved" : "Save"}
+              </OakSmallTertiaryInvertedButton>
+            )}
           </OakFlex>
         </OakFlex>
       </StyledOptionalityListItem>
