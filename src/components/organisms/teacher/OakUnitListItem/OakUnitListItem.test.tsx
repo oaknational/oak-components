@@ -144,4 +144,42 @@ describe("OakUnitListItem", () => {
     const lessonCount = screen.getAllByText("0 lessons");
     expect(lessonCount).toHaveLength(2);
   });
+  it("applies correct text for save buttons when content is unsaved", () => {
+    renderWithTheme(
+      <OakUnitListItem
+        data-testid="unit-card"
+        index={0}
+        title={""}
+        yearTitle={""}
+        lessonCount={"0 lessons"}
+        isLegacy={false}
+        href={""}
+        unavailable
+        onSave={() => {}}
+        isSaved={false}
+      />,
+    );
+
+    const saveButtons = screen.getAllByText("Save");
+    expect(saveButtons).toHaveLength(2);
+  });
+  it("applies correct text for save buttons when content is saved", () => {
+    renderWithTheme(
+      <OakUnitListItem
+        data-testid="unit-card"
+        index={0}
+        title={""}
+        yearTitle={""}
+        lessonCount={"0 lessons"}
+        isLegacy={false}
+        href={""}
+        unavailable
+        onSave={() => {}}
+        isSaved={true}
+      />,
+    );
+
+    const saveButtons = screen.getAllByText("Saved");
+    expect(saveButtons).toHaveLength(2);
+  });
 });
