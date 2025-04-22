@@ -239,6 +239,7 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
               $borderRadius="border-radius-m"
               $width="all-spacing-8"
               $height="all-spacing-8"
+              $minWidth="all-spacing-8"
             >
               <OakHeading
                 tag="h3"
