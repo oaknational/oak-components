@@ -5,9 +5,11 @@ import React from "react";
 import {
   OakInlineBanner,
   bannerTypes,
+  bannerVariants,
 } from "@/components/molecules/OakInlineBanner";
 import { OakSecondaryLink } from "@/components/molecules/OakSecondaryLink";
 import { oakIconNames } from "@/components/atoms";
+import { OakPrimaryButton } from "@/components/molecules/OakPrimaryButton";
 
 const meta: Meta<typeof OakInlineBanner> = {
   component: OakInlineBanner,
@@ -16,6 +18,9 @@ const meta: Meta<typeof OakInlineBanner> = {
   argTypes: {
     type: {
       options: Object.keys(bannerTypes),
+    },
+    variant: {
+      options: Object.keys(bannerVariants),
     },
     title: {
       control: {
@@ -45,6 +50,7 @@ const meta: Meta<typeof OakInlineBanner> = {
     controls: {
       include: [
         "type",
+        "variant",
         "title",
         "isOpen",
         "message",
@@ -56,10 +62,10 @@ const meta: Meta<typeof OakInlineBanner> = {
   },
   args: {
     type: "info",
+    variant: "regular",
     isOpen: true,
     title: "Information",
-    message:
-      "Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet.",
+    message: `Provide users with non-disruptive feedback`,
     cta: (
       <OakSecondaryLink
         iconName="chevron-right"
@@ -100,6 +106,23 @@ export const InfoSimple: Story = {
   },
 };
 
+export const InfoLarge: Story = {
+  args: {
+    type: "info",
+    variant: "large",
+    message: `Provide users with clear, timely, and non-disruptive feedback to support 
+      their understanding of actions and outcomes without interrupting their 
+      flow. Whether confirming a successful task, alerting them to an error, or 
+      informing them of a background process, feedback should be subtle and 
+      contextual—reinforcing confidence without demanding unnecessary attention.`,
+    cta: (
+      <OakPrimaryButton iconName="chevron-right" isTrailingIcon>
+        Button
+      </OakPrimaryButton>
+    ),
+  },
+};
+
 export const Neutral: Story = {
   args: {
     type: "neutral",
@@ -110,6 +133,23 @@ export const NeutralSimple: Story = {
   args: {
     type: "neutral",
     title: undefined,
+  },
+};
+
+export const NeutralLarge: Story = {
+  args: {
+    type: "neutral",
+    variant: "large",
+    message: `Provide users with clear, timely, and non-disruptive feedback to support 
+      their understanding of actions and outcomes without interrupting their 
+      flow. Whether confirming a successful task, alerting them to an error, or 
+      informing them of a background process, feedback should be subtle and 
+      contextual—reinforcing confidence without demanding unnecessary attention.`,
+    cta: (
+      <OakPrimaryButton iconName="chevron-right" isTrailingIcon>
+        Button
+      </OakPrimaryButton>
+    ),
   },
 };
 
@@ -126,6 +166,23 @@ export const SuccessSimple: Story = {
   },
 };
 
+export const SuccessLarge: Story = {
+  args: {
+    type: "success",
+    variant: "large",
+    message: `Provide users with clear, timely, and non-disruptive feedback to support 
+      their understanding of actions and outcomes without interrupting their 
+      flow. Whether confirming a successful task, alerting them to an error, or 
+      informing them of a background process, feedback should be subtle and 
+      contextual—reinforcing confidence without demanding unnecessary attention.`,
+    cta: (
+      <OakPrimaryButton iconName="chevron-right" isTrailingIcon>
+        Button
+      </OakPrimaryButton>
+    ),
+  },
+};
+
 export const Alert: Story = {
   args: {
     type: "alert",
@@ -139,6 +196,53 @@ export const AlertSimple: Story = {
   },
 };
 
+export const AlertLarge: Story = {
+  args: {
+    type: "alert",
+    variant: "large",
+    message: `Provide users with clear, timely, and non-disruptive feedback to support 
+      their understanding of actions and outcomes without interrupting their 
+      flow. Whether confirming a successful task, alerting them to an error, or 
+      informing them of a background process, feedback should be subtle and 
+      contextual—reinforcing confidence without demanding unnecessary attention.`,
+    cta: (
+      <OakPrimaryButton iconName="chevron-right" isTrailingIcon>
+        Button
+      </OakPrimaryButton>
+    ),
+  },
+};
+
+export const Warning: Story = {
+  args: {
+    type: "warning",
+  },
+};
+
+export const WarningSimple: Story = {
+  args: {
+    type: "warning",
+    title: undefined,
+  },
+};
+
+export const WarningLarge: Story = {
+  args: {
+    type: "warning",
+    variant: "large",
+    message: `Provide users with clear, timely, and non-disruptive feedback to support 
+      their understanding of actions and outcomes without interrupting their 
+      flow. Whether confirming a successful task, alerting them to an error, or 
+      informing them of a background process, feedback should be subtle and 
+      contextual—reinforcing confidence without demanding unnecessary attention.`,
+    cta: (
+      <OakPrimaryButton iconName="chevron-right" isTrailingIcon>
+        Button
+      </OakPrimaryButton>
+    ),
+  },
+};
+
 export const Error: Story = {
   args: {
     type: "error",
@@ -149,6 +253,23 @@ export const ErrorSimple: Story = {
   args: {
     type: "error",
     title: undefined,
+  },
+};
+
+export const ErrorLarge: Story = {
+  args: {
+    type: "error",
+    variant: "large",
+    message: `Provide users with clear, timely, and non-disruptive feedback to support 
+      their understanding of actions and outcomes without interrupting their 
+      flow. Whether confirming a successful task, alerting them to an error, or 
+      informing them of a background process, feedback should be subtle and 
+      contextual—reinforcing confidence without demanding unnecessary attention.`,
+    cta: (
+      <OakPrimaryButton iconName="chevron-right" isTrailingIcon>
+        Button
+      </OakPrimaryButton>
+    ),
   },
 };
 
@@ -172,5 +293,27 @@ export const OverriddenStylingSimple: Story = {
     $background: "pink30",
     iconColorFilter: "oakGreen",
     title: undefined,
+  },
+};
+
+export const OverriddenStylingLarge: Story = {
+  args: {
+    type: undefined,
+    canDismiss: false,
+    icon: "rocket",
+    $borderColor: "pink",
+    $background: "pink30",
+    iconColorFilter: "oakGreen",
+    variant: "large",
+    message: `Provide users with clear, timely, and non-disruptive feedback to support 
+      their understanding of actions and outcomes without interrupting their 
+      flow. Whether confirming a successful task, alerting them to an error, or 
+      informing them of a background process, feedback should be subtle and 
+      contextual—reinforcing confidence without demanding unnecessary attention.`,
+    cta: (
+      <OakPrimaryButton iconName="chevron-right" isTrailingIcon>
+        Button
+      </OakPrimaryButton>
+    ),
   },
 };

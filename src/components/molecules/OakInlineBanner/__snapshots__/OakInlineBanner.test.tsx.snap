@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OakInlineBanner matches snapshot 1`] = `
+exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
 .c0 {
-  padding: 0.75rem;
+  padding: 1rem;
   background: #e3e9fb;
   border: 0.063rem solid;
   border-color: #a0b6f2;
@@ -16,6 +16,7 @@ exports[`OakInlineBanner matches snapshot 1`] = `
 }
 
 .c2 {
+  position: relative;
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -33,18 +34,7 @@ exports[`OakInlineBanner matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c9 {
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 300;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
-  letter-spacing: -0.005rem;
-}
-
-.c10 {
+.c8 {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -52,7 +42,7 @@ exports[`OakInlineBanner matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c16 {
+.c14 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -63,7 +53,7 @@ exports[`OakInlineBanner matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c18 {
+.c16 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -72,12 +62,33 @@ exports[`OakInlineBanner matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c19 {
+.c17 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
   height: 1.5rem;
   min-height: 1.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c19 {
+  width: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c22 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c23 {
+  margin-top: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -87,7 +98,7 @@ exports[`OakInlineBanner matches snapshot 1`] = `
   object-fit: contain;
 }
 
-.c23 {
+.c26 {
   object-fit: contain;
 }
 
@@ -99,10 +110,10 @@ exports[`OakInlineBanner matches snapshot 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: end;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: end;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
 }
 
 .c3 {
@@ -129,28 +140,19 @@ exports[`OakInlineBanner matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  gap: 0.25rem;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
 }
 
-.c11 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c15 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -169,7 +171,7 @@ exports[`OakInlineBanner matches snapshot 1`] = `
   gap: 0rem;
 }
 
-.c17 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -184,18 +186,29 @@ exports[`OakInlineBanner matches snapshot 1`] = `
   justify-content: center;
 }
 
-.c8 {
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
-  letter-spacing: 0.0115rem;
-}
-
 .c20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  gap: 0.25rem;
+}
+
+.c21 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -206,11 +219,22 @@ exports[`OakInlineBanner matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c22 {
+.c18 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c25 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c13 {
+.c11 {
   background: none;
   color: inherit;
   border: none;
@@ -224,60 +248,60 @@ exports[`OakInlineBanner matches snapshot 1`] = `
   color: transparent;
 }
 
-.c13:disabled {
+.c11:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c14 {
+.c12 {
   display: inline-block;
   position: relative;
 }
 
-.c14:hover {
+.c12:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: transparent;
 }
 
-.c14:hover:not(:active) [data-icon-for="button"] img {
+.c12:hover:not(:active) [data-icon-for="button"] img {
   -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
 }
 
-.c14:active {
+.c12:active {
   color: transparent;
 }
 
-.c14:disabled {
+.c12:disabled {
   color: transparent;
 }
 
-.c12 > :first-child:focus-visible .shadow {
+.c10 > :first-child:focus-visible .shadow {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c12 > :first-child:hover .shadow {
+.c10 > :first-child:hover .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c12 > :first-child:active .shadow {
+.c10 > :first-child:active .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c12 > :first-child:disabled .icon-container {
+.c10 > :first-child:disabled .icon-container {
   background: transparent;
 }
 
-.c12 > :first-child:hover .icon-container {
+.c10 > :first-child:hover .icon-container {
   background: #222222;
 }
 
-.c12 > :first-child:active .icon-container {
+.c10 > :first-child:active .icon-container {
   background: transparent;
 }
 
-.c21 {
+.c24 {
   display: inline;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -300,26 +324,26 @@ exports[`OakInlineBanner matches snapshot 1`] = `
   color: #222222;
 }
 
-.c21:focus-visible {
+.c24:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c21:visited {
+.c24:visited {
   color: #575757;
 }
 
-.c21:active {
+.c24:active {
   color: #222222;
 }
 
-.c21[disabled] {
+.c24[disabled] {
   cursor: not-allowed;
   color: #808080;
 }
 
 @media (hover:hover) {
-  .c21:hover,
-  .c21:visited:hover {
+  .c24:hover,
+  .c24:visited:hover {
     color: #222222;
   }
 }
@@ -365,46 +389,30 @@ exports[`OakInlineBanner matches snapshot 1`] = `
       </div>
     </div>
     <div
-      className="c2 c7"
-    >
-      <h1
-        className="c8"
-        data-testid="inline-banner-title"
-      >
-        Information
-      </h1>
-      <div
-        className="c9"
-        data-testid="inline-banner-message"
-      >
-        Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet.
-      </div>
-    </div>
-    <div
-      className="c4"
+      className="c4 c7"
     >
       <div
-        className="c10 c11 c12"
+        className="c8 c9 c10"
       >
         <button
           aria-label="Dismiss banner"
-          className="c13 c14"
+          className="c11 c12"
           data-testid="inline-banner-close-button"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
           <div
-            className="c4 c15"
+            className="c4 c13"
           >
             <div
-              className="c16 c17 icon-container"
+              className="c14 c15 icon-container"
             >
               <div
-                className="c18 shadow"
+                className="c16 shadow"
               />
               <div
-                className="c19"
+                className="c17"
                 data-icon-for="button"
               >
                 <img
@@ -434,49 +442,1072 @@ exports[`OakInlineBanner matches snapshot 1`] = `
               </div>
             </div>
             <span
-              className="c20"
+              className="c18"
             />
           </div>
         </button>
       </div>
     </div>
-  </div>
-  <a
-    className="c21"
-  >
-    <span
-      className="c22"
-    >
-      Link
-    </span>
     <div
-      className="c19 "
+      className="c19 c20"
     >
-      <img
-        alt="chevron-right"
+      <h1
+        className="c21"
+        data-testid="inline-banner-title"
+      >
+        Information
+      </h1>
+      <div
+        className="c22"
+        data-testid="inline-banner-message"
+      >
+        Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet.
+      </div>
+      <div
         className="c23"
-        data-nimg="fill"
-        decoding="async"
-        loading="lazy"
-        onError={[Function]}
-        onLoad={[Function]}
-        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
-        style={
-          {
-            "bottom": 0,
-            "color": "transparent",
-            "height": "100%",
-            "left": 0,
-            "objectFit": undefined,
-            "objectPosition": undefined,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-            "width": "100%",
-          }
-        }
-      />
+      >
+        <a
+          className="c24"
+        >
+          <span
+            className="c25"
+          >
+            Link
+          </span>
+          <div
+            className="c17 "
+          >
+            <img
+              alt="chevron-right"
+              className="c26"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
+              style={
+                {
+                  "bottom": 0,
+                  "color": "transparent",
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
+        </a>
+      </div>
     </div>
-  </a>
+  </div>
+</div>
+`;
+
+exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
+.c0 {
+  padding: 1.5rem;
+  background: #e3e9fb;
+  border: 0.063rem solid;
+  border-color: #a0b6f2;
+  border-radius: 0.375rem;
+  border-style: solid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c2 {
+  position: relative;
+  width: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c4 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c5 {
+  position: relative;
+  width: 2.5rem;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  min-height: 2.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c7 {
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c9 {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c15 {
+  position: relative;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  color: transparent;
+  background: transparent;
+  border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c17 {
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c18 {
+  position: relative;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  min-height: 1.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c20 {
+  width: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c23 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c24 {
+  margin-top: 0.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c6 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  object-fit: contain;
+}
+
+.c27 {
+  object-fit: contain;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0rem;
+}
+
+.c16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  gap: 1rem;
+}
+
+.c22 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c19 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c26 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c12 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+  color: transparent;
+}
+
+.c12:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c13 {
+  display: inline-block;
+  position: relative;
+}
+
+.c13:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: transparent;
+}
+
+.c13:hover:not(:active) [data-icon-for="button"] img {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+}
+
+.c13:active {
+  color: transparent;
+}
+
+.c13:disabled {
+  color: transparent;
+}
+
+.c11 > :first-child:focus-visible .shadow {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c11 > :first-child:hover .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c11 > :first-child:active .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+}
+
+.c11 > :first-child:disabled .icon-container {
+  background: transparent;
+}
+
+.c11 > :first-child:hover .icon-container {
+  background: #222222;
+}
+
+.c11 > :first-child:active .icon-container {
+  background: transparent;
+}
+
+.c25 {
+  display: inline;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.25rem;
+  outline: none;
+  border-radius: 0.375rem;
+  padding: 0.25rem;
+  margin: -0.25rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font: inherit;
+  background: none;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #222222;
+}
+
+.c25:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c25:visited {
+  color: #575757;
+}
+
+.c25:active {
+  color: #222222;
+}
+
+.c25[disabled] {
+  cursor: not-allowed;
+  color: #808080;
+}
+
+@media (hover:hover) {
+  .c25:hover,
+  .c25:visited:hover {
+    color: #222222;
+  }
+}
+
+<div
+  className="c0 c1"
+  data-testid="oak-inline-banner"
+>
+  <div
+    className="c2 c3"
+  >
+    <div
+      className="c4"
+    >
+      <div
+        className="c5"
+        data-testid="inline-banner-icon"
+      >
+        <img
+          alt="info"
+          className="c6"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/Icon_Info_vsx3xi.svg"
+          style={
+            {
+              "bottom": 0,
+              "color": "transparent",
+              "height": "100%",
+              "left": 0,
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+    </div>
+    <div
+      className="c7 c8"
+    >
+      <div
+        className="c9 c10 c11"
+      >
+        <button
+          aria-label="Dismiss banner"
+          className="c12 c13"
+          data-testid="inline-banner-close-button"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <div
+            className="c4 c14"
+          >
+            <div
+              className="c15 c16 icon-container"
+            >
+              <div
+                className="c17 shadow"
+              />
+              <div
+                className="c18"
+                data-icon-for="button"
+              >
+                <img
+                  alt="cross"
+                  className="c6"
+                  data-nimg="fill"
+                  decoding="async"
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
+                  style={
+                    {
+                      "bottom": 0,
+                      "color": "transparent",
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": undefined,
+                      "objectPosition": undefined,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <span
+              className="c19"
+            />
+          </div>
+        </button>
+      </div>
+    </div>
+    <div
+      className="c20 c21"
+    >
+      <h1
+        className="c22"
+        data-testid="inline-banner-title"
+      >
+        Information
+      </h1>
+      <div
+        className="c23"
+        data-testid="inline-banner-message"
+      >
+        Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet.
+      </div>
+      <div
+        className="c24"
+      >
+        <a
+          className="c25"
+        >
+          <span
+            className="c26"
+          >
+            Link
+          </span>
+          <div
+            className="c18 "
+          >
+            <img
+              alt="chevron-right"
+              className="c27"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
+              style={
+                {
+                  "bottom": 0,
+                  "color": "transparent",
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = `
+.c0 {
+  padding: 1rem;
+  background: #e3e9fb;
+  border: 0.063rem solid;
+  border-color: #a0b6f2;
+  border-radius: 0.375rem;
+  border-style: solid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c2 {
+  position: relative;
+  width: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c4 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c5 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c8 {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c14 {
+  position: relative;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  color: transparent;
+  background: transparent;
+  border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c16 {
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c17 {
+  position: relative;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  min-height: 1.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c19 {
+  width: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c21 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c6 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  object-fit: contain;
+}
+
+.c24 {
+  object-fit: contain;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: end;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0rem;
+}
+
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  gap: 0.25rem;
+}
+
+.c18 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c23 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c11 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+  color: transparent;
+}
+
+.c11:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c12 {
+  display: inline-block;
+  position: relative;
+}
+
+.c12:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: transparent;
+}
+
+.c12:hover:not(:active) [data-icon-for="button"] img {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+}
+
+.c12:active {
+  color: transparent;
+}
+
+.c12:disabled {
+  color: transparent;
+}
+
+.c10 > :first-child:focus-visible .shadow {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c10 > :first-child:hover .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c10 > :first-child:active .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+}
+
+.c10 > :first-child:disabled .icon-container {
+  background: transparent;
+}
+
+.c10 > :first-child:hover .icon-container {
+  background: #222222;
+}
+
+.c10 > :first-child:active .icon-container {
+  background: transparent;
+}
+
+.c22 {
+  display: inline;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.25rem;
+  outline: none;
+  border-radius: 0.375rem;
+  padding: 0.25rem;
+  margin: -0.25rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font: inherit;
+  background: none;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #222222;
+}
+
+.c22:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c22:visited {
+  color: #575757;
+}
+
+.c22:active {
+  color: #222222;
+}
+
+.c22[disabled] {
+  cursor: not-allowed;
+  color: #808080;
+}
+
+@media (hover:hover) {
+  .c22:hover,
+  .c22:visited:hover {
+    color: #222222;
+  }
+}
+
+<div
+  className="c0 c1"
+  data-testid="oak-inline-banner"
+>
+  <div
+    className="c2 c3"
+  >
+    <div
+      className="c4"
+    >
+      <div
+        className="c5"
+        data-testid="inline-banner-icon"
+      >
+        <img
+          alt="info"
+          className="c6"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/Icon_Info_vsx3xi.svg"
+          style={
+            {
+              "bottom": 0,
+              "color": "transparent",
+              "height": "100%",
+              "left": 0,
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+    </div>
+    <div
+      className="c4 c7"
+    >
+      <div
+        className="c8 c9 c10"
+      >
+        <button
+          aria-label="Dismiss banner"
+          className="c11 c12"
+          data-testid="inline-banner-close-button"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <div
+            className="c4 c13"
+          >
+            <div
+              className="c14 c15 icon-container"
+            >
+              <div
+                className="c16 shadow"
+              />
+              <div
+                className="c17"
+                data-icon-for="button"
+              >
+                <img
+                  alt="cross"
+                  className="c6"
+                  data-nimg="fill"
+                  decoding="async"
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
+                  style={
+                    {
+                      "bottom": 0,
+                      "color": "transparent",
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": undefined,
+                      "objectPosition": undefined,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <span
+              className="c18"
+            />
+          </div>
+        </button>
+      </div>
+    </div>
+    <div
+      className="c19 c20"
+    >
+      <div
+        className="c21"
+        data-testid="inline-banner-message"
+      >
+        Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet.
+      </div>
+      <div
+        className="c4"
+      >
+        <a
+          className="c22"
+        >
+          <span
+            className="c23"
+          >
+            Link
+          </span>
+          <div
+            className="c17 "
+          >
+            <img
+              alt="chevron-right"
+              className="c24"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
+              style={
+                {
+                  "bottom": 0,
+                  "color": "transparent",
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
 `;

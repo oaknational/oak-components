@@ -20,7 +20,7 @@ jest.mock("react-dom", () => {
 });
 
 describe(OakInlineBanner, () => {
-  it("matches snapshot", () => {
+  it("matches snapshot for banner with title", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
         <OakInlineBanner
@@ -35,6 +35,50 @@ describe(OakInlineBanner, () => {
           onDismiss={() => {}}
           title="Information"
           type="info"
+        />
+      </OakThemeProvider>,
+    ).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  it("matches snapshot for simple banner without title", () => {
+    const tree = create(
+      <OakThemeProvider theme={oakDefaultTheme}>
+        <OakInlineBanner
+          canDismiss
+          cta={
+            <OakSecondaryLink iconName="chevron-right" isTrailingIcon>
+              Link
+            </OakSecondaryLink>
+          }
+          isOpen
+          message="Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet."
+          onDismiss={() => {}}
+          type="info"
+        />
+      </OakThemeProvider>,
+    ).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  it("matches snapshot for large variant banner", () => {
+    const tree = create(
+      <OakThemeProvider theme={oakDefaultTheme}>
+        <OakInlineBanner
+          canDismiss
+          cta={
+            <OakSecondaryLink iconName="chevron-right" isTrailingIcon>
+              Link
+            </OakSecondaryLink>
+          }
+          isOpen
+          message="Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet."
+          onDismiss={() => {}}
+          title="Information"
+          type="info"
+          variant="large"
         />
       </OakThemeProvider>,
     ).toJSON();
@@ -107,7 +151,7 @@ describe(OakInlineBanner, () => {
     expect(onDismissSpy).toHaveBeenCalledTimes(1);
   });
 
-  it("hides close icon is the banner cannot be dismissed", () => {
+  it("hides close icon if the banner cannot be dismissed", () => {
     const { queryAllByTestId } = renderWithTheme(
       <OakInlineBanner
         canDismiss={false}
@@ -226,7 +270,7 @@ describe(OakInlineBanner, () => {
     expect(queryAllByTestId("inline-banner-title")).toHaveLength(0);
   });
 
-  it("can orverride close button props", () => {
+  it("can override close button props", () => {
     const { getByTestId } = renderWithTheme(
       <OakInlineBanner
         canDismiss
