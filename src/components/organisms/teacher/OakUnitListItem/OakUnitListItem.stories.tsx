@@ -5,6 +5,69 @@ import { OakUnitListItem } from "./OakUnitListItem";
 
 import { OakBox, OakFlex, OakHeading, OakP } from "@/components/atoms";
 
+const unitItems = [
+  {
+    title:
+      "Migration: What do sources tell us about the British Empire in India and Africa?",
+    lessonCount: "10 lessons",
+    index: 1,
+    yearTitle: "Year 10",
+    unavailable: false,
+    isLegacy: false,
+  },
+  {
+    title: "Numerals 1-10 (Legacy example)",
+    lessonCount: "10 lessons",
+    index: 2,
+    isLegacy: true,
+    yearTitle: "Year 10",
+    href: "",
+  },
+  {
+    title: "'The Three Billy Goats Gruff': reading and writing",
+    lessonCount: "7 lessons",
+    index: 3,
+    yearTitle: "Year 10",
+    unavailable: true,
+    isLegacy: false,
+    href: "",
+  },
+  {
+    title: "Test Unit",
+    lessonCount: "8 lessons",
+    index: 4,
+    yearTitle: "Year 9",
+    isLegacy: false,
+    href: "",
+  },
+  {
+    title: "Apple",
+    lessonCount: "41 lessons",
+    index: 5,
+    yearTitle: "Year 9",
+    isLegacy: false,
+    href: "",
+  },
+  {
+    title:
+      "'The Three Billy Goats Gruff': reading and writing 'The Three Billy Goats Gruff': reading and writing",
+    lessonCount: "41 lessons",
+    index: 5,
+    yearTitle: "Year 9",
+    isLegacy: false,
+    href: "",
+  },
+  {
+    title:
+      "'The Three Billy Goats Gruff': reading and writing 'The Three Billy Goats Gruff': reading and writing",
+    lessonCount: "8/10 lessons",
+    index: 5,
+    yearTitle: "Year 9",
+    isLegacy: false,
+    href: "",
+  },
+];
+
 const meta: Meta<typeof OakUnitListItem> = {
   component: OakUnitListItem,
   tags: ["autodocs"],
@@ -17,8 +80,8 @@ const meta: Meta<typeof OakUnitListItem> = {
     lessonCount: "10 lessons",
     isLegacy: false,
     onClick: () => console.log("onClick!"),
-    onSave: () => console.log("onSave!"),
     isSaved: false,
+    onSave: () => console.log("onSave!"),
   },
   argTypes: {
     title: { control: { type: "text" } },
@@ -27,6 +90,7 @@ const meta: Meta<typeof OakUnitListItem> = {
     lessonCount: { control: { type: "number" } },
     unavailable: { control: { type: "boolean" } },
     isLegacy: { control: { type: "boolean" } },
+    isSaved: { control: { type: "boolean" } },
   },
   decorators: [
     (Story) => {
@@ -48,81 +112,10 @@ const meta: Meta<typeof OakUnitListItem> = {
             </OakP>
           </OakBox>
           {Story()}
-          <OakUnitListItem
-            title={"Numerals 1-10 (Legacy example)"}
-            lessonCount={"10 lessons"}
-            index={2}
-            isLegacy={true}
-            yearTitle="Year 10"
-            href={""}
-            onSave={() => console.log("onSave!")}
-            isSaved={false}
-          />
-          <OakUnitListItem
-            title={"'The Three Billy Goats Gruff': reading and writing"}
-            lessonCount={"7 lessons"}
-            index={3}
-            yearTitle="Year 10"
-            unavailable={true}
-            isLegacy={false}
-            href={""}
-            onSave={() => console.log("onSave!")}
-            isSaved={true}
-          />
-          <OakUnitListItem
-            title={"Test Unit"}
-            lessonCount={"8 lessons"}
-            index={4}
-            yearTitle="Year 9"
-            isLegacy={false}
-            href={""}
-            onSave={() => console.log("onSave!")}
-            isSaved={true}
-          />
-          <OakUnitListItem
-            title={"Apple"}
-            lessonCount={"41 lessons"}
-            index={5}
-            yearTitle="Year 9"
-            isLegacy={false}
-            href={""}
-          />
-          <OakUnitListItem
-            title={
-              "'The Three Billy Goats Gruff': reading and writing 'The Three Billy Goats Gruff': reading and writing"
-            }
-            lessonCount={"41 lessons"}
-            index={5}
-            yearTitle="Year 9"
-            isLegacy={false}
-            href={""}
-          />
-          <OakUnitListItem
-            title={
-              "'The Three Billy Goats Gruff': reading and writing 'The Three Billy Goats Gruff': reading and writing"
-            }
-            lessonCount={"8/10 lessons"}
-            index={5}
-            yearTitle="Year 9"
-            isLegacy={false}
-            href={""}
-          />
         </OakFlex>
       );
     },
   ],
-  parameters: {
-    controls: {
-      include: [
-        "title",
-        "index",
-        "lessonCount",
-        "unavailable",
-        "isLegacy",
-        "expiredLessonCount",
-      ],
-    },
-  },
 };
 
 export default meta;
@@ -130,6 +123,40 @@ export default meta;
 type Story = StoryObj<typeof OakUnitListItem>;
 
 export const Default: Story = {
-  render: (args) => <OakUnitListItem {...args} />,
+  render: () => (
+    <>
+      {unitItems.map((item, index) => (
+        <OakUnitListItem
+          key={index}
+          {...item}
+          onClick={() => console.log("onClick!")}
+          href=""
+        ></OakUnitListItem>
+      ))}
+    </>
+  ),
+  args: {},
+};
+
+export const WithSave: Story = {
+  render: () => (
+    <>
+      {unitItems.map((item, index) => (
+        <OakUnitListItem
+          key={index}
+          {...item}
+          onClick={() => console.log("onClick!")}
+          href=""
+          isSaved={Math.random() > 0.5}
+          onSave={() => console.log("onSave!")}
+        ></OakUnitListItem>
+      ))}
+    </>
+  ),
+  args: {},
+};
+
+export const EditableItem: Story = {
+  render: (args) => <OakUnitListItem {...args}></OakUnitListItem>,
   args: {},
 };
