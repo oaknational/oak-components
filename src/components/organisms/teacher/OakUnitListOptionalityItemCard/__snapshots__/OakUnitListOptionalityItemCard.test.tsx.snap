@@ -11,7 +11,10 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
 }
 
 .c2 {
-  padding: 1rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   background: #e3e9fb;
   border: 0.125rem solid;
   border-color: #a0b6f2;
@@ -23,7 +26,13 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c10 {
+.c8 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c12 {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -32,7 +41,7 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c11 {
+.c13 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
@@ -67,7 +76,7 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c7 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -78,7 +87,7 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
   justify-content: flex-end;
 }
 
-.c8 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -106,7 +115,7 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
   color: #222222;
 }
 
-.c9 {
+.c11 {
   color: #222222;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
@@ -133,6 +142,20 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
+.c7 {
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
+  outline: none;
+  border-radius: 6px;
+  padding: 4px;
+}
+
+.c7:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
 @media (hover:hover) {
   .c3:hover {
     background: #a0b6f2;
@@ -150,28 +173,28 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
         className="c4 c5"
       >
         <a
-          className="c6"
+          className="c6 c7"
           href=""
         >
           Lesson 1
         </a>
         <div
-          className="c4 c7"
+          className="c8 c9"
         >
           <div
-            className="c4 c8"
+            className="c4 c10"
           >
             <span
-              className="c9"
+              className="c11"
             >
               0 lessons
             </span>
             <div
-              className="c10"
+              className="c12"
             >
               <img
                 alt="chevron-right"
-                className="c11"
+                className="c13"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"

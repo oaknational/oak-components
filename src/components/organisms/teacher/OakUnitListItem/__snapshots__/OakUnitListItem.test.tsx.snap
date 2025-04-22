@@ -13,32 +13,34 @@ exports[`OakUnitListItem matches snapshot 1`] = `
 
 .c4 {
   width: 100%;
+  padding-right: 0.75rem;
+  border-radius: 0.375rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c6 {
+.c7 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c10 {
+.c11 {
   width: 4rem;
   height: 100%;
   background: #a0b6f2;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c14 {
+.c15 {
   padding: 1.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c18 {
+.c19 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c23 {
+.c24 {
   color: #222222;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
@@ -50,7 +52,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c24 {
+.c25 {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -59,7 +61,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c26 {
+.c27 {
   width: 100%;
   padding: 1rem;
   background: #ffffff;
@@ -71,15 +73,21 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c30 {
+.c29 {
+  width: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c32 {
   width: 2.5rem;
+  min-width: 2.5rem;
   height: 2.5rem;
   background: #a0b6f2;
   border-radius: 0.375rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c25 {
+.c26 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
@@ -91,17 +99,17 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c11 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -116,7 +124,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   justify-content: center;
 }
 
-.c15 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -127,7 +135,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   justify-content: center;
 }
 
-.c19 {
+.c20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -142,14 +150,14 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   justify-content: center;
 }
 
-.c27 {
+.c28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c28 {
+.c30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -160,7 +168,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   gap: 1rem;
 }
 
-.c29 {
+.c31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -168,7 +176,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   gap: 1rem;
 }
 
-.c31 {
+.c33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -189,7 +197,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   width: 100%;
 }
 
-.c8 {
+.c9 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -199,7 +207,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   grid-column-start: 1;
 }
 
-.c16 {
+.c17 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -209,7 +217,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   grid-column-start: 2;
 }
 
-.c20 {
+.c21 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -219,7 +227,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   grid-column-start: 9;
 }
 
-.c22 {
+.c23 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -229,7 +237,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   grid-column-start: 11;
 }
 
-.c13 {
+.c14 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
@@ -251,7 +259,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   display: revert;
 }
 
-.c17 {
+.c18 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -263,7 +271,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   color: #222222;
 }
 
-.c21 {
+.c22 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -275,8 +283,19 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   color: #222222;
 }
 
-.c3 {
+.c6 {
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
   outline: none;
+}
+
+.c6:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c3 {
   text-align: initial;
   -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out;
@@ -285,11 +304,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   cursor: pointer;
 }
 
-.c3:focus-visible {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
-}
-
-.c12 {
+.c13 {
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
   -webkit-animation-timing-function: ease-out;
@@ -308,7 +323,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c26 {
+  .c27 {
     display: none;
   }
 }
@@ -323,7 +338,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c27 {
+  .c28 {
     display: none;
   }
 }
@@ -333,13 +348,13 @@ exports[`OakUnitListItem matches snapshot 1`] = `
     background: #c6d1ef;
   }
 
-  .c3:hover .c9 {
+  .c3:hover .c10 {
     background: #7c9aec;
   }
 }
 
 @media (hover:hover) {
-  .c12:hover {
+  .c13:hover {
     background: #7c9aec;
   }
 }
@@ -352,51 +367,51 @@ exports[`OakUnitListItem matches snapshot 1`] = `
       title="Lesson 1"
     >
       <a
-        className="c4 c5"
+        className="c4 c5 c6"
         href=""
       >
         <div
-          className="c6 c7 c8"
+          className="c7 c8 c9"
         >
           <div
-            className="c9 c10 c11 c12"
+            className="c10 c11 c12 c13"
           >
             <h3
-              className="c13"
+              className="c14"
             >
               1
             </h3>
           </div>
         </div>
         <div
-          className="c14 c15 c16"
+          className="c15 c16 c17"
         >
           <p
-            className="c17"
+            className="c18"
           >
             Lesson 1
           </p>
         </div>
         <div
-          className="c18 c19 c20"
+          className="c19 c20 c21"
         >
           <p
-            className="c21"
+            className="c22"
           />
         </div>
         <div
-          className="c18 c19 c22"
+          className="c19 c20 c23"
         >
           <div
-            className="c23 c11"
+            className="c24 c12"
           >
             0 lessons
             <div
-              className="c24"
+              className="c25"
             >
               <img
                 alt="chevron-right"
-                className="c25"
+                className="c26"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"
@@ -424,43 +439,43 @@ exports[`OakUnitListItem matches snapshot 1`] = `
       </a>
     </div>
     <div
-      className="c26 c27 c3"
+      className="c27 c28 c3"
       title="Lesson 1"
     >
       <div
-        className="c4 c28"
+        className="c29 c30"
       >
         <a
-          className="c6 c29"
+          className="c7 c31"
           href=""
         >
           <div
-            className="c30 c11"
+            className="c32 c12"
           >
             <h3
-              className="c13"
+              className="c14"
             >
               1
             </h3>
           </div>
           <div
-            className="c4"
+            className="c29"
           >
             <p
-              className="c17"
+              className="c18"
             >
               Lesson 1
             </p>
           </div>
         </a>
         <div
-          className="c6 c31"
+          className="c7 c33"
         >
           <p
-            className="c21"
+            className="c22"
           />
           <p
-            className="c21"
+            className="c22"
           >
             0 lessons
           </p>
