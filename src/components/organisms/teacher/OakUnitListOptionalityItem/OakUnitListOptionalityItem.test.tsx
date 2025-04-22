@@ -1,6 +1,7 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
+import { screen } from "@testing-library/react";
 
 import { OakUnitListOptionalityItem } from "./OakUnitListOptionalityItem";
 
@@ -129,5 +130,42 @@ describe("OakUnitListOptionalityItem", () => {
     ).toHaveLength(2);
     expect(getByText("4 lessons")).toBeInTheDocument();
     expect(getByText("10 lessons")).toBeInTheDocument();
+  });
+  it("renders correct text for unit save buttons", () => {
+    renderWithTheme(
+      <OakUnitListOptionalityItem
+        data-testid="unit-card-optionality"
+        index={0}
+        yearTitle={"Year 4"}
+        nullTitle={"null title"}
+        optionalityUnits={[
+          {
+            title:
+              "Migration: What do sources tell us about the British Empire in India and Africa?",
+            href: "#",
+
+            lessonCount: 10,
+            slug: "migration",
+          },
+          {
+            title:
+              "Migration: What do sources tell us about the British Empire in India and Africa?",
+            href: "#",
+
+            lessonCount: 4,
+            slug: "migration-2",
+          },
+        ]}
+        firstItemRef={undefined}
+        getIsSaved={(slug: string) => slug === "migration-2"}
+        onSave={(unitSlug: string) => {
+          console.log(unitSlug);
+        }}
+      />,
+    );
+    const saveButtons = screen.getAllByRole("button");
+    expect(saveButtons).toHaveLength(2);
+    expect(saveButtons[0]).toHaveTextContent("Save");
+    expect(saveButtons[1]).toHaveTextContent("Saved");
   });
 });

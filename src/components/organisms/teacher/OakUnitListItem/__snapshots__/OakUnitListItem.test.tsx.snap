@@ -354,7 +354,6 @@ exports[`OakUnitListItem matches snapshot 1`] = `
       <a
         className="c4 c5"
         href=""
-        role="link"
       >
         <div
           className="c6 c7 c8"
@@ -434,7 +433,6 @@ exports[`OakUnitListItem matches snapshot 1`] = `
         <a
           className="c6 c29"
           href=""
-          role="link"
         >
           <div
             className="c30 c11"
