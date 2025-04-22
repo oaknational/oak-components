@@ -15,16 +15,22 @@ import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { OakSmallTertiaryInvertedButton } from "@/components/molecules";
 
-const StyledUnitListItem = styled(OakFlex)<{ $disabled?: boolean }>`
-  outline: none;
-  text-align: initial;
+const GridWithFocus = styled(OakGrid)`
   animation-timing-function: ease-out;
   transition-duration: 300ms;
+  outline: none;
 
   &:focus-visible {
     box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
   }
+`;
+
+const StyledUnitListItem = styled(OakFlex)<{ $disabled?: boolean }>`
+  text-align: initial;
+  animation-timing-function: ease-out;
+  transition-duration: 300ms;
+
   ${(props) =>
     !props.$disabled &&
     css`
@@ -105,15 +111,17 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
         $pr={onSave ? "inner-padding-s" : "inner-padding-none"}
         $width="100%"
         $display={["none", "flex"]}
-        $gap="space-between-m2"
+        $gap="space-between-m"
         {...rest}
       >
-        <OakGrid
+        <GridWithFocus
           as="a"
           href={unavailable ? undefined : href}
           ref={firstItemRef}
           onClick={unavailable ? undefined : onClick}
           $width="100%"
+          $pr="inner-padding-s"
+          $borderRadius="border-radius-m"
         >
           <OakGridArea $colStart={1} $colSpan={1}>
             <StyledOakIndexBox
@@ -188,7 +196,7 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
               )}
             </OakFlex>
           </OakGridArea>
-        </OakGrid>
+        </GridWithFocus>
         {onSave && (
           <OakSmallTertiaryInvertedButton
             iconName={isSaved ? "bookmark-filled" : "bookmark-outlined"}

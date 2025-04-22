@@ -67,6 +67,19 @@ export type OakUnitListOptionalityItemCardProps = {
   isSaved?: boolean;
 };
 
+const HeadingWithFocus = styled(OakHeading)`
+  animation-timing-function: ease-out;
+  transition-duration: 300ms;
+  outline: none;
+  border-radius: 6px;
+  padding: 4px;
+
+  &:focus-visible {
+    box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
+      ${parseDropShadow("drop-shadow-centered-grey")};
+  }
+`;
+
 /**
  *
  * OakUnitsListItem component used as links for unit cards
@@ -88,7 +101,8 @@ export const OakUnitListOptionalityItemCard = (
   return (
     <OakFlex $display={"flex"} $flexGrow={1}>
       <StyledOptionalityListItem
-        $pa={"inner-padding-m"}
+        $ph="inner-padding-s"
+        $pv="inner-padding-m"
         $background={"bg-decorative3-very-subdued"}
         $borderRadius="border-radius-m"
         $borderColor={"border-decorative3"}
@@ -102,7 +116,7 @@ export const OakUnitListOptionalityItemCard = (
           $flexGrow={1}
           $flexDirection={"column"}
         >
-          <OakHeading
+          <HeadingWithFocus
             $font={"heading-7"}
             $color={unavailable ? "text-disabled" : "text-primary"}
             tag={"h3"}
@@ -113,8 +127,11 @@ export const OakUnitListOptionalityItemCard = (
             ref={firstItemRef}
           >
             {props.title}
-          </OakHeading>
-          <OakFlex $justifyContent={onSave ? "space-between" : "flex-end"}>
+          </HeadingWithFocus>
+          <OakFlex
+            $justifyContent={onSave ? "space-between" : "flex-end"}
+            $ph="inner-padding-ssx"
+          >
             <OakFlex $alignItems={"center"} $justifyContent={"flex-end"}>
               <OakSpan
                 $color={unavailable ? "text-disabled" : "text-primary"}
