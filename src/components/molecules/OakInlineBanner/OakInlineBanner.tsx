@@ -3,14 +3,29 @@ import React, { ReactNode } from "react";
 import { InternalShadowRoundButton } from "@/components/molecules/InternalShadowRoundButton";
 import {
   OakBox,
+  OakBoxProps,
   OakFlex,
   OakFlexProps,
   OakHeading,
+  OakHeadingProps,
   OakIcon,
   OakIconName,
+  OakIconProps,
 } from "@/components/atoms";
 import { OakColorToken } from "@/styles";
 import { OakColorFilterToken } from "@/styles/theme/color";
+import { PaddingStyleProps } from "@/styles/utils/spacingStyle";
+import { FlexStyleProps } from "@/styles/utils/flexStyle";
+
+export type OakInlineBannerTypes =
+  | "info"
+  | "neutral"
+  | "success"
+  | "alert"
+  | "error"
+  | "warning";
+
+export type OakInlineBannerVariants = "regular" | "large";
 
 export type OakInlineBannerProps = OakFlexProps & {
   /**
@@ -28,7 +43,7 @@ export type OakInlineBannerProps = OakFlexProps & {
   /**
    * The type of banner to display
    */
-  type?: "info" | "neutral" | "success" | "alert" | "error";
+  type?: OakInlineBannerTypes;
   /**
    * The icon to display in the banner
    */
@@ -53,10 +68,14 @@ export type OakInlineBannerProps = OakFlexProps & {
    * Props to override the close button
    */
   closeButtonOverrideProps?: Partial<typeof InternalShadowRoundButton>;
+  /**
+   * The variant of an Inline Banner to display
+   */
+  variant?: OakInlineBannerVariants;
 };
 
 export type BannerTypes = {
-  [key: string]: {
+  [key in OakInlineBannerTypes]: {
     icon: OakIconName;
     iconColorFilter: OakColorFilterToken;
     backgroundColour: OakColorToken;
@@ -84,16 +103,72 @@ export const bannerTypes: BannerTypes = {
     borderColour: "mint110",
   },
   alert: {
-    icon: "warning",
+    icon: "bell",
     iconColorFilter: "black",
     backgroundColour: "lemon30",
     borderColour: "lemon50",
+  },
+  warning: {
+    icon: "warning",
+    iconColorFilter: "amber",
+    backgroundColour: "amber30",
+    borderColour: "amber50",
   },
   error: {
     icon: "error",
     iconColorFilter: "red",
     backgroundColour: "red30",
     borderColour: "red",
+  },
+};
+
+export type OakInlineBannerVariantProps = {
+  [key in OakInlineBannerVariants]: {
+    icon: Partial<OakIconProps>;
+    heading: Partial<OakHeadingProps>;
+    closeButtonWrapper?: Partial<OakBoxProps>;
+    ctaWrapper?: Partial<OakBoxProps>;
+    flexDirection: FlexStyleProps["$flexDirection"];
+    bannerPadding: PaddingStyleProps["$pa"];
+    textContentGap?: FlexStyleProps["$gap"];
+  };
+};
+
+export const bannerVariants: OakInlineBannerVariantProps = {
+  regular: {
+    icon: {
+      $width: "all-spacing-7",
+      $height: "all-spacing-7",
+    },
+    heading: {
+      $font: ["heading-7"],
+    },
+    ctaWrapper: {
+      $mt: "space-between-xs",
+    },
+    flexDirection: "row",
+    bannerPadding: "inner-padding-m",
+    textContentGap: "space-between-sssx",
+  },
+  large: {
+    icon: {
+      $width: "all-spacing-8",
+      $height: "all-spacing-8",
+    },
+    heading: {
+      $font: ["heading-6"],
+    },
+    ctaWrapper: {
+      $mt: "space-between-ssx",
+    },
+    closeButtonWrapper: {
+      $position: "absolute",
+      $top: "all-spacing-0",
+      $right: "all-spacing-0",
+    },
+    flexDirection: "column",
+    bannerPadding: "inner-padding-xl",
+    textContentGap: "space-between-s",
   },
 };
 
@@ -105,13 +180,14 @@ export const bannerTypes: BannerTypes = {
  * - **isOpen** \-                      If true the banner will be displayed
  * - **title?** \-                      Optional title to display in the banner, without this the banner will be more compact
  * - **message** \-                     Message to display in the banner
- * - **type?** \-                       Optional type of banner to display (info, neutral, success, alert, error) (default: info)
+ * - **type?** \-                       Optional type of banner to display (info, neutral, success, alert, error, warning) (default: info)
  * - **icon?** \-                       Optional icon to display in the banner
  * - **iconColorFilter?** \-            Optional color filter to apply to the icon
  * - **cta?** \-                        Optional call to action to display in the banner (ReactNode)
  * - **canDismiss?** \-                 If true the banner can be dismissed (show close icon) (default: false)
  * - **onDismiss?** \-                  Function called when the banner is dismissed
  * - **closeButtonOverrideProps?** \-   Props to override the close button (aria-label, etc)
+ * - **variant?** \-                    The variant of the inline banner to display (regular, large) (default: regular)
  * - **...rest** \-                     Other props to be passed to the wrapper OakFlex component (can be used to override styles of the banner)
  */
 export const OakInlineBanner = ({
@@ -125,6 +201,7 @@ export const OakInlineBanner = ({
   icon,
   iconColorFilter,
   closeButtonOverrideProps,
+  variant = "regular",
   ...props
 }: OakInlineBannerProps) => {
   const iconResult = icon || bannerTypes[type]?.icon;
@@ -134,10 +211,10 @@ export const OakInlineBanner = ({
   return (
     <OakFlex
       data-testid="oak-inline-banner"
-      $alignItems="end"
+      $alignItems={title ? "start" : "end"}
       $display={isOpen ? "flex" : "none"}
       $background={bannerTypes[type]?.backgroundColour}
-      $pa={"inner-padding-s"}
+      $pa={bannerVariants[variant].bannerPadding}
       $borderRadius={"border-radius-m"}
       $ba="border-solid-s"
       $borderStyle={"solid"}
@@ -146,9 +223,10 @@ export const OakInlineBanner = ({
       {...props}
     >
       <OakFlex
-        $flexDirection={"row"}
+        $position={"relative"}
+        $flexDirection={bannerVariants[variant].flexDirection}
         $justifyContent={"space-between"}
-        $alignItems={title ? "start" : "center"}
+        $alignItems={title || variant === "large" ? "start" : "center"}
         $gap={"space-between-xs"}
         $width={"100%"}
       >
@@ -156,34 +234,12 @@ export const OakInlineBanner = ({
           <OakIcon
             iconName={iconResult || "info"}
             $colorFilter={iconColorFilterResult}
-            $width="all-spacing-7"
-            $height="all-spacing-7"
+            {...bannerVariants[variant].icon}
             data-testid="inline-banner-icon"
           />
         </OakBox>
-        <OakFlex
-          $width={"100%"}
-          $flexDirection={title ? "column" : "row"}
-          $justifyContent={title ? "center" : "space-between"}
-          $alignItems={title ? "start" : "center"}
-          $gap={"space-between-sssx"}
-        >
-          {title && (
-            <OakHeading
-              $font={["heading-7"]}
-              data-testid="inline-banner-title"
-              tag="h1"
-            >
-              {title}
-            </OakHeading>
-          )}
-          <OakBox $font={"body-2"} data-testid="inline-banner-message">
-            {message}
-          </OakBox>
-          {!title && cta}
-        </OakFlex>
         {canDismiss && (
-          <OakBox>
+          <OakFlex $order={2} {...bannerVariants[variant].closeButtonWrapper}>
             <InternalShadowRoundButton
               aria-label={"Dismiss banner"}
               defaultIconBackground="transparent"
@@ -201,10 +257,35 @@ export const OakInlineBanner = ({
               onClick={onDismiss}
               {...closeButtonOverrideProps}
             />
-          </OakBox>
+          </OakFlex>
         )}
+        <OakFlex
+          $order={1}
+          $width={"100%"}
+          $flexDirection={title ? "column" : "row"}
+          $justifyContent={title ? "center" : "space-between"}
+          $alignItems={title ? "start" : "center"}
+          $gap={bannerVariants[variant].textContentGap}
+        >
+          {title && (
+            <OakHeading
+              data-testid="inline-banner-title"
+              tag="h1"
+              {...bannerVariants[variant].heading}
+            >
+              {title}
+            </OakHeading>
+          )}
+          <OakBox $font={"body-2"} data-testid="inline-banner-message">
+            {message}
+          </OakBox>
+          {cta && (
+            <OakBox {...(title ? bannerVariants[variant].ctaWrapper : {})}>
+              {cta}
+            </OakBox>
+          )}
+        </OakFlex>
       </OakFlex>
-      {title && cta}
     </OakFlex>
   );
 };

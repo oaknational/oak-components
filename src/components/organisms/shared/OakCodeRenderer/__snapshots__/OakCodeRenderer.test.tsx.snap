@@ -591,6 +591,7 @@ have_homework =
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
+          type="button"
         >
           <div
             className="c0 c26"
