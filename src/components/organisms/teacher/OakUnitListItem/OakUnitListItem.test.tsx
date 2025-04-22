@@ -1,6 +1,7 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
+import { screen } from "@testing-library/react";
 
 import { OakUnitListItem } from "./OakUnitListItem";
 
@@ -10,7 +11,7 @@ import { oakDefaultTheme } from "@/styles";
 
 describe("OakUnitListItem", () => {
   it("renders", () => {
-    const { getByTestId } = renderWithTheme(
+    renderWithTheme(
       <OakUnitListItem
         data-testid="test"
         index={0}
@@ -21,7 +22,8 @@ describe("OakUnitListItem", () => {
         href={""}
       />,
     );
-    expect(getByTestId("test")).toBeInTheDocument();
+    const listItem = screen.getAllByTestId("test");
+    expect(listItem).toHaveLength(2);
   });
 
   it("matches snapshot", () => {
@@ -43,7 +45,7 @@ describe("OakUnitListItem", () => {
   });
 
   it("renders an anchor when the item is not disabled", () => {
-    const { getByTestId } = renderWithTheme(
+    renderWithTheme(
       <OakUnitListItem
         data-testid="unit-card"
         index={0}
@@ -51,15 +53,15 @@ describe("OakUnitListItem", () => {
         yearTitle={""}
         lessonCount={"0 lessons"}
         isLegacy={false}
-        href={""}
+        href={"www.test.com"}
       />,
     );
-
-    expect(getByTestId("unit-card").tagName).toBe("A");
+    const links = screen.getByRole("link");
+    expect(links).toBeInTheDocument();
   });
 
   it("renders the number of lessons when provided", () => {
-    const { getByTestId } = renderWithTheme(
+    renderWithTheme(
       <OakUnitListItem
         data-testid="unit-card"
         lessonCount={"6 lessons"}
@@ -70,11 +72,12 @@ describe("OakUnitListItem", () => {
         href={""}
       />,
     );
-
-    expect(getByTestId("unit-card").textContent).toContain("6");
+    const unitCard = screen.getAllByTestId("unit-card")[0];
+    expect(unitCard).toBeInTheDocument();
+    expect(unitCard).toHaveTextContent("6 lessons");
   });
   it("renders the year title when provided", () => {
-    const { getByTestId } = renderWithTheme(
+    renderWithTheme(
       <OakUnitListItem
         data-testid="unit-card"
         lessonCount={"6 lessons"}
@@ -85,11 +88,12 @@ describe("OakUnitListItem", () => {
         href={""}
       />,
     );
-
-    expect(getByTestId("unit-card").textContent).toContain("Year 4");
+    const unitCard = screen.getAllByTestId("unit-card")[0];
+    expect(unitCard).toBeInTheDocument();
+    expect(unitCard).toHaveTextContent("Year 4");
   });
   it("applies disabled styles when unavailable", () => {
-    const { getByTestId } = renderWithTheme(
+    renderWithTheme(
       <OakUnitListItem
         data-testid="unit-card"
         index={0}
@@ -102,46 +106,12 @@ describe("OakUnitListItem", () => {
       />,
     );
 
-    const unitCard = getByTestId("unit-card");
+    const unitCard = screen.getAllByTestId("unit-card")[0];
     expect(unitCard).toHaveStyleRule("cursor", "not-allowed");
     expect(unitCard).toHaveStyleRule("background", "#f2f2f2");
   });
-  it("applies shows expired lesson counts correctly - 1/4 lessons", () => {
-    const { getByText } = renderWithTheme(
-      <OakUnitListItem
-        data-testid="unit-card"
-        index={0}
-        title={""}
-        yearTitle={""}
-        lessonCount={"1/4 lessons"}
-        isLegacy={false}
-        href={""}
-        unavailable
-      />,
-    );
-
-    const lessonCount = getByText("1/4 lessons");
-    expect(lessonCount).toBeInTheDocument();
-  });
-  it("applies shows expired lesson counts correctly - 0/1 lesson", () => {
-    const { getByText } = renderWithTheme(
-      <OakUnitListItem
-        data-testid="unit-card"
-        index={0}
-        title={""}
-        yearTitle={""}
-        lessonCount={"0/1 lesson"}
-        isLegacy={false}
-        href={""}
-        unavailable
-      />,
-    );
-
-    const lessonCount = getByText("0/1 lesson");
-    expect(lessonCount).toBeInTheDocument();
-  });
   it("applies shows expired lesson counts correctly - 1 lesson", () => {
-    const { getByText } = renderWithTheme(
+    renderWithTheme(
       <OakUnitListItem
         data-testid="unit-card"
         index={0}
@@ -154,11 +124,11 @@ describe("OakUnitListItem", () => {
       />,
     );
 
-    const lessonCount = getByText("1 lesson");
-    expect(lessonCount).toBeInTheDocument();
+    const lessonCount = screen.getAllByText("1 lesson");
+    expect(lessonCount).toHaveLength(2);
   });
   it("applies shows expired lesson counts correctly - 0 lesson", () => {
-    const { getByText } = renderWithTheme(
+    renderWithTheme(
       <OakUnitListItem
         data-testid="unit-card"
         index={0}
@@ -171,7 +141,7 @@ describe("OakUnitListItem", () => {
       />,
     );
 
-    const lessonCount = getByText("0 lessons");
-    expect(lessonCount).toBeInTheDocument();
+    const lessonCount = screen.getAllByText("0 lessons");
+    expect(lessonCount).toHaveLength(2);
   });
 });

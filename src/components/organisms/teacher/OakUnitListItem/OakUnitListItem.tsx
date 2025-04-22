@@ -114,6 +114,7 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
           ref={firstItemRef}
           onClick={unavailable ? undefined : onClick}
           $width="100%"
+          role="link"
         >
           <OakGridArea $colStart={1} $colSpan={1}>
             <StyledOakIndexBox
@@ -217,6 +218,7 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
             $gap="space-between-s"
             as="a"
             href={unavailable ? undefined : href}
+            role="link"
           >
             <OakFlex
               $background={

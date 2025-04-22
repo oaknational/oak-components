@@ -23,7 +23,7 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c9 {
+.c10 {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -32,7 +32,7 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c10 {
+.c11 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
@@ -72,6 +72,17 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -95,7 +106,7 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
   color: #222222;
 }
 
-.c8 {
+.c9 {
   color: #222222;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
@@ -131,58 +142,62 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
 <div
     className="c0 c1"
   >
-    <a
+    <div
       className="c2 c1 c3"
-      href=""
       title="Lesson 1"
     >
       <div
         className="c4 c5"
       >
-        <h3
+        <a
           className="c6"
+          href=""
         >
           Lesson 1
-        </h3>
+        </a>
         <div
           className="c4 c7"
         >
-          <span
-            className="c8"
-          >
-            0 lessons
-          </span>
           <div
-            className="c9"
+            className="c4 c8"
           >
-            <img
-              alt="chevron-right"
+            <span
+              className="c9"
+            >
+              0 lessons
+            </span>
+            <div
               className="c10"
-              data-nimg="fill"
-              decoding="async"
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
-              style={
-                {
-                  "bottom": 0,
-                  "color": "transparent",
-                  "height": "100%",
-                  "left": 0,
-                  "objectFit": undefined,
-                  "objectPosition": undefined,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
+            >
+              <img
+                alt="chevron-right"
+                className="c11"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
+                style={
+                  {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
                 }
-              }
-            />
+              />
+            </div>
           </div>
         </div>
       </div>
-    </a>
+    </div>
   </div>,
   ",",
 ]

@@ -1,6 +1,7 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
+import { within } from "@testing-library/react";
 
 import { OakUnitListOptionalityItemCard } from "./OakUnitListOptionalityItemCard";
 
@@ -49,7 +50,8 @@ describe("OakUnitListOptionalityItemCard", () => {
       />,
     );
 
-    expect(getByTestId("unit-card").tagName).toBe("A");
+    const link = within(getByTestId("unit-card")).getByRole("link");
+    expect(link).toBeInTheDocument();
   });
 
   it("renders the number of lessons when provided", () => {
