@@ -153,6 +153,9 @@ export const OakUnitListOptionalityItemCard = (
                 isTrailingIcon
                 disabled={unavailable}
                 onClick={() => onSave(props.slug)}
+                aria-label={`${isSaved ? "Unsave" : "Save"} this unit: ${
+                  props.title
+                } `}
               >
                 {isSaved ? "Saved" : "Save"}
               </OakSmallTertiaryInvertedButton>

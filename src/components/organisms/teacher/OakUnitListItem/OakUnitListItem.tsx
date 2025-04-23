@@ -197,6 +197,9 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
             onClick={onSave}
             width="all-spacing-15"
             $justifyContent="end"
+            aria-label={`${isSaved ? "Unsave" : "Save"} this unit: ${
+              props.title
+            } `}
           >
             {isSaved ? "Saved" : "Save"}
           </OakSmallTertiaryInvertedButton>
@@ -269,6 +272,9 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
                 isTrailingIcon
                 disabled={unavailable}
                 onClick={onSave}
+                aria-label={`${isSaved ? "Unsave" : "Save"} this unit: ${
+                  props.title
+                } `}
               >
                 {isSaved ? "Saved" : "Save"}
               </OakSmallTertiaryInvertedButton>
