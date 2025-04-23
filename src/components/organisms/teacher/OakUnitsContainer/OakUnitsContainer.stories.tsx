@@ -72,7 +72,7 @@ export const Default: Story = {
               "Migration: What do sources tell us about the British Empire in India and Africa?",
 
             href: "#",
-            lessonCount: 10,
+            lessonCount: "10 lessons",
             slug: "migration",
           },
           {
@@ -80,7 +80,7 @@ export const Default: Story = {
               "Migration: What do sources tell us about the British Empire in India and Africa?",
 
             href: "#",
-            lessonCount: 10,
+            lessonCount: "10 lessons",
             slug: "migration-2",
           },
           {
@@ -88,7 +88,7 @@ export const Default: Story = {
               "Migration: What do sources tell us about the British Empire in India and Africa?",
 
             href: "#",
-            lessonCount: 10,
+            lessonCount: "10 lessons",
             slug: "migration-3",
           },
         ]}

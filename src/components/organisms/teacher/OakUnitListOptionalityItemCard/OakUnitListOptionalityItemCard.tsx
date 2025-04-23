@@ -58,7 +58,7 @@ const StyledOakIndexBox = styled(OakFlex)`
 export type OakUnitListOptionalityItemCardProps = {
   unavailable?: boolean;
   title: string;
-  lessonCount: number | null;
+  lessonCount: string | null;
   href: string;
   slug: string;
   firstItemRef?: MutableRefObject<HTMLAnchorElement | null> | null | undefined;
@@ -137,7 +137,7 @@ export const OakUnitListOptionalityItemCard = (
                 $color={unavailable ? "text-disabled" : "text-primary"}
                 $font={"heading-light-7"}
               >
-                {`${lessonCount} lessons`}
+                {lessonCount}
               </OakSpan>
 
               {!onSave && (

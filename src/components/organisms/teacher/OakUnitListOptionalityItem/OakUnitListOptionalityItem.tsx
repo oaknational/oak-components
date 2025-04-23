@@ -126,7 +126,7 @@ export type OakUnitListOptionalityItemProps = {
     title: string;
     slug: string;
     href: string;
-    lessonCount: number;
+    lessonCount: string;
     onClick?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
     firstItemRef?:
       | MutableRefObject<HTMLAnchorElement | null>

@@ -10,14 +10,14 @@ const optionalityUnits = [
     title:
       "Migration: What do sources tell us about the British Empire in India and Africa?",
     href: "#",
-    lessonCount: 10,
+    lessonCount: "10 lessons",
     onClick: () => console.log("onClick!"),
     slug: "migration",
   },
   {
     title: "Migration: What do sources tell us about the ",
     href: "#",
-    lessonCount: 10,
+    lessonCount: "10 lessons",
     onClick: () => console.log("onClick!"),
     slug: "migration-2",
   },
@@ -25,7 +25,7 @@ const optionalityUnits = [
     title: "Migration: What do sources tell us ?",
     onClick: () => console.log("onClick!"),
     href: "#",
-    lessonCount: 10,
+    lessonCount: "10 lessons",
     slug: "migration-3",
   },
   {
@@ -33,7 +33,7 @@ const optionalityUnits = [
       "Migration: What do sources tell us about the British Empire in India and Africa?",
     onClick: () => console.log("onClick!"),
     href: "#",
-    lessonCount: 10,
+    lessonCount: "10 lessons",
     slug: "migration-4",
   },
 ];
