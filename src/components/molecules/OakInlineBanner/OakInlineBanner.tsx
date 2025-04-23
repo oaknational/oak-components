@@ -280,9 +280,9 @@ export const OakInlineBanner = ({
             {message}
           </OakBox>
           {cta && (
-            <OakBox {...(title ? bannerVariants[variant].ctaWrapper : {})}>
+            <OakFlex {...(title ? bannerVariants[variant].ctaWrapper : {})}>
               {cta}
-            </OakBox>
+            </OakFlex>
           )}
         </OakFlex>
       </OakFlex>
