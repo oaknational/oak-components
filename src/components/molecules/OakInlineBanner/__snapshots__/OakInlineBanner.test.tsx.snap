@@ -464,7 +464,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
         Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet.
       </div>
       <div
-        className="c23"
+        className="c23 c9"
       >
         <a
           className="c24"
@@ -980,7 +980,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
         Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet.
       </div>
       <div
-        className="c24"
+        className="c24 c10"
       >
         <a
           className="c25"
@@ -1467,7 +1467,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
         Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet.
       </div>
       <div
-        className="c4"
+        className="c4 c9"
       >
         <a
           className="c22"
