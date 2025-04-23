@@ -28,15 +28,6 @@ exports[`InternalShadowIconButton matches snapshot 1`] = `
 }
 
 .c10 {
-  position: relative;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  height: 1.5rem;
-  min-height: 1.5rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c12 {
   position: absolute;
   top: 0.25rem;
   left: 0.25rem;
@@ -46,10 +37,9 @@ exports[`InternalShadowIconButton matches snapshot 1`] = `
   min-height: 1.5rem;
   display: none;
   font-family: --var(google-font),Lexend,sans-serif;
-  z-index: -1;
 }
 
-.c14 {
+.c12 {
   position: absolute;
   top: 0.125rem;
   left: 0.125rem;
@@ -59,22 +49,30 @@ exports[`InternalShadowIconButton matches snapshot 1`] = `
   min-height: 1.5rem;
   display: none;
   font-family: --var(google-font),Lexend,sans-serif;
-  z-index: -1;
+}
+
+.c14 {
+  position: relative;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  min-height: 1.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c11 {
-  object-fit: contain;
-}
-
-.c13 {
   -webkit-filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
   filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
   object-fit: contain;
 }
 
-.c15 {
+.c13 {
   -webkit-filter: invert(82%) sepia(25%) saturate(963%) hue-rotate(359deg) brightness(106%) contrast(101%);
   filter: invert(82%) sepia(25%) saturate(963%) hue-rotate(359deg) brightness(106%) contrast(101%);
+  object-fit: contain;
+}
+
+.c15 {
   object-fit: contain;
 }
 
@@ -205,11 +203,10 @@ exports[`InternalShadowIconButton matches snapshot 1`] = `
           className="c9"
         >
           <div
-            className="c10"
-            data-icon-for="button"
+            className="c10 shadow"
           >
             <img
-              alt="arrow-right"
+              alt=""
               className="c11"
               data-nimg="fill"
               decoding="async"
@@ -234,10 +231,10 @@ exports[`InternalShadowIconButton matches snapshot 1`] = `
             />
           </div>
           <div
-            className="c12 shadow"
+            className="c12 highlight"
           >
             <img
-              alt="arrow-right"
+              alt=""
               className="c13"
               data-nimg="fill"
               decoding="async"
@@ -262,10 +259,11 @@ exports[`InternalShadowIconButton matches snapshot 1`] = `
             />
           </div>
           <div
-            className="c14 highlight"
+            className="c14"
+            data-icon-for="button"
           >
             <img
-              alt="arrow-right"
+              alt=""
               className="c15"
               data-nimg="fill"
               decoding="async"

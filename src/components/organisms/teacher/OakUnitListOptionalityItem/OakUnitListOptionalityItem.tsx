@@ -12,6 +12,7 @@ import {
   OakGridArea,
 } from "@/components/atoms";
 import { FlexStyleProps } from "@/styles/utils/flexStyle";
+import { BorderStyleProps } from "@/styles/utils/borderStyle";
 
 const StyledYearAndOptionFlex = styled(OakFlex)`
   @media (min-width: 356px) {
@@ -68,14 +69,15 @@ const UnitIndex = ({
 }: {
   children: React.ReactNode;
   unavailable: boolean | undefined;
-} & FlexStyleProps) => (
+} & FlexStyleProps &
+  BorderStyleProps) => (
   <OakFlex
     $btlr={"border-radius-s"}
     $bblr={"border-radius-s"}
     $background={unavailable ? "bg-neutral-stronger" : "lavender"}
-    $minWidth={"all-spacing-11"}
-    $width={["all-spacing-11", "all-spacing-11", "auto"]}
-    $height={["all-spacing-11", "auto", "auto"]}
+    $minWidth={["all-spacing-8", "all-spacing-11"]}
+    $width={["all-spacing-8", "all-spacing-11", "auto"]}
+    $height={["all-spacing-8", "auto", "auto"]}
     $justifyContent={"center"}
     $alignItems={"center"}
     {...rest}
@@ -118,10 +120,13 @@ export type OakUnitListOptionalityItemProps = {
   nullTitle: string;
   yearTitle?: string | null;
   firstItemRef: MutableRefObject<HTMLAnchorElement | null> | null | undefined;
+  onSave?: (unitSlug: string) => void;
+  getIsSaved?: (unitSlug: string) => boolean;
   optionalityUnits: {
     title: string;
+    slug: string;
     href: string;
-    lessonCount: number;
+    lessonCount: string;
     onClick?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
     firstItemRef?:
       | MutableRefObject<HTMLAnchorElement | null>
@@ -143,6 +148,8 @@ export const OakUnitListOptionalityItem = (
     optionalityUnits,
     nullTitle,
     firstItemRef,
+    onSave,
+    getIsSaved,
     ...rest
   } = props;
 
@@ -151,26 +158,33 @@ export const OakUnitListOptionalityItem = (
       $flexDirection={["column", "row", "row"]}
       $width={"100%"}
       as={"li"}
+      $background="white"
+      $borderRadius="border-radius-m"
       {...rest}
     >
-      <OakFlex $display={["flex", "none"]} $background={"white"}>
-        <UnitIndex unavailable={unavailable}>{index}</UnitIndex>
+      <OakFlex
+        $display={["flex", "none"]}
+        $ph="inner-padding-m"
+        $pt="inner-padding-m"
+        $gap="space-between-s"
+      >
+        <UnitIndex
+          unavailable={unavailable}
+          $bbrr="border-radius-s"
+          $btrr="border-radius-s"
+        >
+          {index}
+        </UnitIndex>
 
-        <OakFlex $alignItems={"center"} $ma={"space-between-xs"}>
-          <StyledUnitHeading unavailable={unavailable}>
-            {nullTitle}
-          </StyledUnitHeading>
-        </OakFlex>
+        <StyledUnitHeading unavailable={unavailable}>
+          {nullTitle}
+        </StyledUnitHeading>
       </OakFlex>
       <UnitIndex unavailable={unavailable} $display={["none", "flex", "flex"]}>
         {index}
       </UnitIndex>
 
-      <OakBox
-        $background={"white"}
-        $pa={["inner-padding-m", "inner-padding-l"]}
-        $width={"100%"}
-      >
+      <OakBox $pa={"inner-padding-m"} $width={"100%"}>
         <OakFlex
           $alignItems={"center"}
           $mb={"space-between-s"}
@@ -219,6 +233,8 @@ export const OakUnitListOptionalityItem = (
                 {...unit}
                 firstItemRef={index === 0 ? firstItemRef : null}
                 unavailable={unavailable}
+                onSave={onSave ?? undefined}
+                isSaved={getIsSaved ? getIsSaved(unit.slug) : undefined}
               />
             </OakGridArea>
           ))}

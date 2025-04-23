@@ -19,6 +19,7 @@ import {
 import { parseColor } from "@/styles/helpers/parseColor";
 import { OakCombinedColorToken } from "@/styles";
 import { SizeStyleProps, sizeStyle } from "@/styles/utils/sizeStyle";
+import { FlexStyleProps } from "@/styles/utils/flexStyle";
 
 export type InternalShadowIconButtonProps = Omit<
   InternalButtonProps,
@@ -41,7 +42,8 @@ export type InternalShadowIconButtonProps = Omit<
   disabledIconColor?: OakRoundIconProps["$colorFilter"];
   width?: SizeStyleProps["$width"];
   maxWidth?: SizeStyleProps["$maxWidth"];
-} & PositionStyleProps;
+} & PositionStyleProps &
+  FlexStyleProps;
 
 const StyledInternalButton = styled(InternalButton)<
   InternalShadowIconButtonProps & SizeStyleProps
@@ -119,11 +121,36 @@ export const InternalShadowIconButton = <C extends ElementType = "button">(
     defaultTextColor,
     hoverTextColor,
     className,
+    $justifyContent,
     ...rest
   } = props;
 
   const icon = iconName && (
     <OakBox $position="relative">
+      <OakIcon
+        iconName={iconName}
+        $width={"all-spacing-6"}
+        $height={"all-spacing-6"}
+        $colorFilter={props.disabled ? disabledIconColor : "grey60"}
+        $position="absolute"
+        $top="all-spacing-1"
+        $left="all-spacing-1"
+        $display="none"
+        className="shadow"
+        alt=""
+      />
+      <OakIcon
+        iconName={iconName}
+        $width={"all-spacing-6"}
+        $height={"all-spacing-6"}
+        $colorFilter={props.disabled ? disabledIconColor : "lemon"}
+        $position="absolute"
+        $display="none"
+        $top="all-spacing-05"
+        $left="all-spacing-05"
+        className="highlight"
+        alt=""
+      />
       <OakIcon
         iconName={iconName}
         $width={"all-spacing-6"}
@@ -136,30 +163,7 @@ export const InternalShadowIconButton = <C extends ElementType = "button">(
               : null
         }
         data-icon-for="button"
-      />
-      <OakIcon
-        iconName={iconName}
-        $width={"all-spacing-6"}
-        $height={"all-spacing-6"}
-        $colorFilter={props.disabled ? disabledIconColor : "grey60"}
-        $position="absolute"
-        $top="all-spacing-1"
-        $left="all-spacing-1"
-        $display="none"
-        $zIndex="behind"
-        className="shadow"
-      />
-      <OakIcon
-        iconName={iconName}
-        $width={"all-spacing-6"}
-        $height={"all-spacing-6"}
-        $colorFilter={props.disabled ? disabledIconColor : "lemon"}
-        $position="absolute"
-        $display="none"
-        $top="all-spacing-05"
-        $left="all-spacing-05"
-        className="highlight"
-        $zIndex="behind"
+        alt=""
       />
     </OakBox>
   );
@@ -189,6 +193,7 @@ export const InternalShadowIconButton = <C extends ElementType = "button">(
       $position={"relative"}
       $width={width}
       $maxWidth={maxWidth}
+      $justifyContent={$justifyContent}
     >
       <StyledInternalButton
         element={element ?? "button"}

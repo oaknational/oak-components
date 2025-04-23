@@ -1,6 +1,7 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
+import { within } from "@testing-library/react";
 
 import { OakUnitListOptionalityItemCard } from "./OakUnitListOptionalityItemCard";
 
@@ -14,8 +15,9 @@ describe("OakUnitListOptionalityItemCard", () => {
       <OakUnitListOptionalityItemCard
         data-testid="test"
         title={""}
-        lessonCount={0}
+        lessonCount={"0 lessons"}
         href={""}
+        slug="test"
       />,
     );
     expect(getByTestId("test")).toBeInTheDocument();
@@ -26,8 +28,9 @@ describe("OakUnitListOptionalityItemCard", () => {
       <OakThemeProvider theme={oakDefaultTheme}>
         <OakUnitListOptionalityItemCard
           title="Lesson 1"
-          lessonCount={0}
+          lessonCount={"0 lessons"}
           href={""}
+          slug="test"
         />
         ,
       </OakThemeProvider>,
@@ -41,21 +44,24 @@ describe("OakUnitListOptionalityItemCard", () => {
       <OakUnitListOptionalityItemCard
         data-testid="unit-card"
         title={""}
-        lessonCount={0}
+        lessonCount={"0 lessons"}
         href={""}
+        slug="test"
       />,
     );
 
-    expect(getByTestId("unit-card").tagName).toBe("A");
+    const link = within(getByTestId("unit-card")).getByRole("link");
+    expect(link).toBeInTheDocument();
   });
 
   it("renders the number of lessons when provided", () => {
     const { getByTestId } = renderWithTheme(
       <OakUnitListOptionalityItemCard
         data-testid="unit-card"
-        lessonCount={6}
+        lessonCount={"6 lessons"}
         title={""}
         href={""}
+        slug="test"
       />,
     );
 
@@ -66,9 +72,10 @@ describe("OakUnitListOptionalityItemCard", () => {
       <OakUnitListOptionalityItemCard
         data-testid="unit-card"
         title={""}
-        lessonCount={0}
+        lessonCount={"0 lessons"}
         href={""}
         unavailable
+        slug="test"
       />,
     );
 

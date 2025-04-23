@@ -13,12 +13,15 @@ const meta: Meta<typeof OakUnitListOptionalityItemCard> = {
     title:
       "Migration: What do sources tell us about the British Empire in India and Africa?",
     href: "/",
-    lessonCount: 10,
+    lessonCount: "10 lessons",
     onClick: () => console.log("onClick!"),
+    onSave: () => console.log("onSave!"),
+    isSaved: false,
+    slug: "migration",
   },
   argTypes: {
     title: { control: { type: "text" } },
-    lessonCount: { control: { type: "number" } },
+    lessonCount: { control: { type: "text" } },
     unavailable: { control: { type: "boolean" } },
   },
   decorators: [
@@ -39,6 +42,7 @@ const meta: Meta<typeof OakUnitListOptionalityItemCard> = {
         "disabled",
         "unavailable",
         "isLegacy",
+        "isSaved",
       ],
     },
   },

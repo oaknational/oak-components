@@ -5,36 +5,31 @@ import {
   OakFlex,
   OakP,
   OakHeading,
-  OakSpan,
-  OakIcon,
   OakLI,
+  OakBox,
+  OakIcon,
 } from "@/components/atoms";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
+import { OakSmallTertiaryInvertedButton } from "@/components/molecules";
+import { SizeStyleProps } from "@/styles/utils/sizeStyle";
 
-const LessonDetailsWrapper = styled(OakFlex)`
-  min-width: 260px;
-
-  @media (max-width: 650px) {
-    min-width: 100%;
-  }
-
-  @media (max-width: 370px) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`;
-
-const StyledUnitListItem = styled(OakFlex)<{ $disabled?: boolean }>`
-  outline: none;
-  text-align: initial;
+const FlexWithFocus = styled(OakFlex)`
   animation-timing-function: ease-out;
   transition-duration: 300ms;
+  outline: none;
 
   &:focus-visible {
     box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
   }
+`;
+
+const StyledUnitListItem = styled(OakFlex)<{ $disabled?: boolean }>`
+  text-align: initial;
+  animation-timing-function: ease-out;
+  transition-duration: 300ms;
+
   ${(props) =>
     !props.$disabled &&
     css`
@@ -82,7 +77,9 @@ export type OakUnitListItemProps = {
   href: string;
   firstItemRef?: MutableRefObject<HTMLAnchorElement | null> | null | undefined;
   onClick?: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
-};
+  onSave?: () => void;
+  isSaved?: boolean;
+} & SizeStyleProps;
 
 /**
  *
@@ -96,54 +93,59 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
     onClick,
     index,
     isLegacy,
+    onSave,
+    isSaved,
     firstItemRef,
     ...rest
   } = props;
 
   return (
     <OakLI $listStyle={"none"} $width={"100%"}>
+      {/* Desktop layout */}
       <StyledUnitListItem
         $alignItems={"center"}
         $background={unavailable ? "bg-neutral" : "bg-primary"}
         $borderRadius="border-radius-m"
         $disabled={unavailable}
-        href={unavailable ? undefined : href}
-        onClick={unavailable ? undefined : onClick}
-        ref={firstItemRef}
-        as={"a"}
+        $pr="inner-padding-m"
+        $width="100%"
+        $display={["none", "flex"]}
         {...rest}
       >
-        <StyledOakIndexBox
-          $alignSelf={"stretch"}
-          $background={
-            unavailable
-              ? "bg-neutral-stronger"
-              : isLegacy
-                ? "lavender50"
-                : "lavender"
-          }
-          $minWidth={"all-spacing-11"}
-          $justifyContent={"center"}
-          $alignItems={"center"}
+        <FlexWithFocus
+          $pr={onSave ? "inner-padding-xs" : "inner-padding-none"}
+          $borderRadius="border-radius-m"
+          $gap="space-between-s"
+          $alignItems="center"
+          $width="100%"
+          $height="100%"
+          as="a"
+          href={unavailable ? undefined : href}
+          ref={firstItemRef}
+          onClick={unavailable ? undefined : onClick}
         >
-          <OakHeading
-            tag="h3"
-            $font={"heading-5"}
-            $color={unavailable ? "text-disabled" : "text-primary"}
+          <StyledOakIndexBox
+            $background={
+              unavailable
+                ? "bg-neutral-stronger"
+                : isLegacy
+                  ? "lavender50"
+                  : "lavender"
+            }
+            $justifyContent={"center"}
+            $alignItems={"center"}
+            $height="100%"
+            $minWidth="all-spacing-11"
           >
-            {index}
-          </OakHeading>
-        </StyledOakIndexBox>
-        <OakFlex
-          $width={"100%"}
-          $height={"100%"}
-          $justifyContent={"space-between"}
-          $alignItems={"left"}
-          $flexDirection={["column", "row"]}
-          $pa={["inner-padding-l"]}
-          $gap={"space-between-s"}
-        >
-          <OakFlex $alignItems={["center"]} $maxWidth={["100%"]}>
+            <OakHeading
+              tag="h3"
+              $font={"heading-5"}
+              $color={unavailable ? "text-disabled" : "text-primary"}
+            >
+              {index}
+            </OakHeading>
+          </StyledOakIndexBox>
+          <OakFlex $pv="inner-padding-l" $pr="inner-padding-m" $flexGrow={1}>
             <OakP
               $font={"heading-7"}
               $color={unavailable ? "text-disabled" : "text-primary"}
@@ -151,35 +153,129 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
               {props.title}
             </OakP>
           </OakFlex>
-          <LessonDetailsWrapper
-            $alignItems={["center"]}
-            $minWidth={"all-spacing-13"}
-            $width={["100%", "auto"]}
-            $justifyContent={"space-between"}
-            $whiteSpace={"nowrap"}
+          <OakFlex
+            $minWidth="all-spacing-13"
+            $alignItems="center"
+            $justifyContent="end"
           >
-            <OakFlex $justifyContent={["flex-start", "flex-end"]}>
-              <OakP
-                $font={"heading-light-7"}
-                $color={unavailable ? "text-disabled" : "text-primary"}
-              >
-                {props.yearTitle}
-              </OakP>
-            </OakFlex>
+            <OakP
+              $font={"heading-light-7"}
+              $whiteSpace="nowrap"
+              $color={unavailable ? "text-disabled" : "text-primary"}
+            >
+              {props.yearTitle}
+            </OakP>
+          </OakFlex>
+          <OakFlex
+            $font={"heading-light-7"}
+            $color={unavailable ? "text-disabled" : "text-primary"}
+            $alignItems="center"
+            $justifyContent="end"
+            $minWidth={onSave ? "all-spacing-15" : "all-spacing-17"}
+          >
+            <OakP $whiteSpace="nowrap">{lessonCount}</OakP>
 
-            <OakFlex $alignItems={"center"}>
-              <OakSpan
-                $font={"heading-light-7"}
+            {!onSave && (
+              <OakIcon
+                iconName="chevron-right"
+                iconWidth="all-spacing-7"
+                $colorFilter={unavailable ? "text-disabled" : "text-primary"}
+              />
+            )}
+          </OakFlex>
+        </FlexWithFocus>
+
+        {onSave && (
+          <OakSmallTertiaryInvertedButton
+            iconName={isSaved ? "bookmark-filled" : "bookmark-outlined"}
+            isTrailingIcon
+            disabled={unavailable}
+            onClick={onSave}
+            width="all-spacing-15"
+            $justifyContent="end"
+            aria-label={`${isSaved ? "Unsave" : "Save"} this unit: ${
+              props.title
+            } `}
+          >
+            {isSaved ? "Saved" : "Save"}
+          </OakSmallTertiaryInvertedButton>
+        )}
+      </StyledUnitListItem>
+      {/* Mobile layout */}
+      <StyledUnitListItem
+        $background={unavailable ? "bg-neutral" : "bg-primary"}
+        $borderRadius="border-radius-m"
+        $disabled={unavailable}
+        $display={["flex", "none"]}
+        $width="100%"
+        $pa="inner-padding-m"
+        {...rest}
+      >
+        <OakFlex $flexDirection="column" $gap="space-between-s" $width="100%">
+          <OakFlex
+            $gap="space-between-s"
+            as="a"
+            href={unavailable ? undefined : href}
+          >
+            <OakFlex
+              $background={
+                unavailable
+                  ? "bg-neutral-stronger"
+                  : isLegacy
+                    ? "lavender50"
+                    : "lavender"
+              }
+              $justifyContent={"center"}
+              $alignItems={"center"}
+              $borderRadius="border-radius-m"
+              $width="all-spacing-8"
+              $height="all-spacing-8"
+              $minWidth="all-spacing-8"
+            >
+              <OakHeading
+                tag="h3"
+                $font="heading-5"
                 $color={unavailable ? "text-disabled" : "text-primary"}
               >
-                {lessonCount}
-              </OakSpan>
-              <OakIcon
-                $colorFilter={unavailable ? "text-disabled" : "text-primary"}
-                iconName="chevron-right"
-              />
+                {index}
+              </OakHeading>
             </OakFlex>
-          </LessonDetailsWrapper>
+            <OakBox $width="100%">
+              <OakP
+                $font="heading-7"
+                $color={unavailable ? "text-disabled" : "text-primary"}
+              >
+                {props.title}
+              </OakP>
+            </OakBox>
+          </OakFlex>
+          <OakFlex $justifyContent="space-between" $alignItems="center">
+            <OakP
+              $font={"heading-light-7"}
+              $color={unavailable ? "text-disabled" : "text-primary"}
+            >
+              {props.yearTitle}
+            </OakP>
+            <OakP
+              $font={"heading-light-7"}
+              $color={unavailable ? "text-disabled" : "text-primary"}
+            >
+              {lessonCount}
+            </OakP>
+            {onSave && (
+              <OakSmallTertiaryInvertedButton
+                iconName={isSaved ? "bookmark-filled" : "bookmark-outlined"}
+                isTrailingIcon
+                disabled={unavailable}
+                onClick={onSave}
+                aria-label={`${isSaved ? "Unsave" : "Save"} this unit: ${
+                  props.title
+                } `}
+              >
+                {isSaved ? "Saved" : "Save"}
+              </OakSmallTertiaryInvertedButton>
+            )}
+          </OakFlex>
         </OakFlex>
       </StyledUnitListItem>
     </OakLI>

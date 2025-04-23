@@ -4,6 +4,7 @@ import styled, { css } from "styled-components";
 import { OakFlex, OakSpan, OakHeading, OakIcon } from "@/components/atoms";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
+import { OakSmallTertiaryInvertedButton } from "@/components/molecules";
 
 const StyledOptionalityListItem = styled(OakFlex)<{ $disabled?: boolean }>`
   outline: none;
@@ -57,11 +58,27 @@ const StyledOakIndexBox = styled(OakFlex)`
 export type OakUnitListOptionalityItemCardProps = {
   unavailable?: boolean;
   title: string;
-  lessonCount: number | null;
+  lessonCount: string | null;
   href: string;
+  slug: string;
   firstItemRef?: MutableRefObject<HTMLAnchorElement | null> | null | undefined;
   onClick?: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
+  onSave?: (unitSlug: string) => void;
+  isSaved?: boolean;
 };
+
+const HeadingWithFocus = styled(OakHeading)`
+  animation-timing-function: ease-out;
+  transition-duration: 300ms;
+  outline: none;
+  border-radius: 6px;
+  padding: 4px;
+
+  &:focus-visible {
+    box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
+      ${parseDropShadow("drop-shadow-centered-grey")};
+  }
+`;
 
 /**
  *
@@ -70,22 +87,27 @@ export type OakUnitListOptionalityItemCardProps = {
 export const OakUnitListOptionalityItemCard = (
   props: OakUnitListOptionalityItemCardProps,
 ) => {
-  const { lessonCount, href, unavailable, firstItemRef, onClick, ...rest } =
-    props;
+  const {
+    lessonCount,
+    href,
+    unavailable,
+    firstItemRef,
+    onClick,
+    isSaved,
+    onSave,
+    ...rest
+  } = props;
 
   return (
     <OakFlex $display={"flex"} $flexGrow={1}>
       <StyledOptionalityListItem
-        $pa={"inner-padding-m"}
+        $ph="inner-padding-s"
+        $pv="inner-padding-m"
         $background={"bg-decorative3-very-subdued"}
         $borderRadius="border-radius-m"
         $borderColor={"border-decorative3"}
         $ba="border-solid-m"
         $disabled={unavailable}
-        href={unavailable ? undefined : href}
-        onClick={unavailable ? undefined : onClick}
-        ref={firstItemRef}
-        as={"a"}
         $flexGrow={1}
         {...rest}
       >
@@ -94,25 +116,50 @@ export const OakUnitListOptionalityItemCard = (
           $flexGrow={1}
           $flexDirection={"column"}
         >
-          <OakHeading
+          <HeadingWithFocus
             $font={"heading-7"}
             $color={unavailable ? "text-disabled" : "text-primary"}
             tag={"h3"}
             $mb={"space-between-xs"}
+            as={"a"}
+            onClick={unavailable ? undefined : onClick}
+            href={unavailable ? undefined : href}
+            ref={firstItemRef}
           >
             {props.title}
-          </OakHeading>
-          <OakFlex $alignItems={"center"} $justifyContent={"flex-end"}>
-            <OakSpan
-              $color={unavailable ? "text-disabled" : "text-primary"}
-              $font={"heading-light-7"}
-            >
-              {`${lessonCount} lessons`}
-            </OakSpan>
-            <OakIcon
-              iconName="chevron-right"
-              $colorFilter={unavailable ? "text-disabled" : "text-primary"}
-            />
+          </HeadingWithFocus>
+          <OakFlex
+            $justifyContent={onSave ? "space-between" : "flex-end"}
+            $ph="inner-padding-ssx"
+          >
+            <OakFlex $alignItems={"center"} $justifyContent={"flex-end"}>
+              <OakSpan
+                $color={unavailable ? "text-disabled" : "text-primary"}
+                $font={"heading-light-7"}
+              >
+                {lessonCount}
+              </OakSpan>
+
+              {!onSave && (
+                <OakIcon
+                  iconName="chevron-right"
+                  $colorFilter={unavailable ? "text-disabled" : "text-primary"}
+                />
+              )}
+            </OakFlex>
+            {onSave && (
+              <OakSmallTertiaryInvertedButton
+                iconName={isSaved ? "bookmark-filled" : "bookmark-outlined"}
+                isTrailingIcon
+                disabled={unavailable}
+                onClick={() => onSave(props.slug)}
+                aria-label={`${isSaved ? "Unsave" : "Save"} this unit: ${
+                  props.title
+                } `}
+              >
+                {isSaved ? "Saved" : "Save"}
+              </OakSmallTertiaryInvertedButton>
+            )}
           </OakFlex>
         </OakFlex>
       </StyledOptionalityListItem>

@@ -72,21 +72,24 @@ export const Default: Story = {
               "Migration: What do sources tell us about the British Empire in India and Africa?",
 
             href: "#",
-            lessonCount: 10,
+            lessonCount: "10 lessons",
+            slug: "migration",
           },
           {
             title:
               "Migration: What do sources tell us about the British Empire in India and Africa?",
 
             href: "#",
-            lessonCount: 10,
+            lessonCount: "10 lessons",
+            slug: "migration-2",
           },
           {
             title:
               "Migration: What do sources tell us about the British Empire in India and Africa?",
 
             href: "#",
-            lessonCount: 10,
+            lessonCount: "10 lessons",
+            slug: "migration-3",
           },
         ]}
         firstItemRef={undefined}
