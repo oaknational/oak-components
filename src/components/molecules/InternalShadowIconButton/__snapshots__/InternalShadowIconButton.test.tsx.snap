@@ -206,7 +206,7 @@ exports[`InternalShadowIconButton matches snapshot 1`] = `
             className="c10 shadow"
           >
             <img
-              alt="arrow-right"
+              alt=""
               className="c11"
               data-nimg="fill"
               decoding="async"
@@ -234,7 +234,7 @@ exports[`InternalShadowIconButton matches snapshot 1`] = `
             className="c12 highlight"
           >
             <img
-              alt="arrow-right"
+              alt=""
               className="c13"
               data-nimg="fill"
               decoding="async"
@@ -263,7 +263,7 @@ exports[`InternalShadowIconButton matches snapshot 1`] = `
             data-icon-for="button"
           >
             <img
-              alt="arrow-right"
+              alt=""
               className="c15"
               data-nimg="fill"
               decoding="async"
