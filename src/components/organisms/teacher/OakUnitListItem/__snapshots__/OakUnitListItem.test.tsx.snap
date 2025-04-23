@@ -13,34 +13,33 @@ exports[`OakUnitListItem matches snapshot 1`] = `
 
 .c4 {
   width: 100%;
-  padding-right: 0.75rem;
+  height: 100%;
+  padding-right: 0rem;
   border-radius: 0.375rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c7 {
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c11 {
-  width: 4rem;
+.c8 {
+  min-width: 4rem;
   height: 100%;
   background: #a0b6f2;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c15 {
-  padding: 1.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c19 {
+.c12 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+  padding-right: 1rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c24 {
+.c15 {
+  min-width: 5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c18 {
+  min-width: 6.25rem;
   color: #222222;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
@@ -52,7 +51,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c25 {
+.c20 {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -61,7 +60,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c27 {
+.c22 {
   width: 100%;
   padding: 1rem;
   background: #ffffff;
@@ -73,12 +72,16 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c29 {
+.c24 {
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c32 {
+.c26 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c28 {
   width: 2.5rem;
   min-width: 2.5rem;
   height: 2.5rem;
@@ -87,7 +90,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c26 {
+.c21 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
@@ -99,17 +102,22 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 1.5rem;
+  gap: 0rem;
 }
 
-.c8 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
 }
 
-.c12 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -124,40 +132,40 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   justify-content: center;
 }
 
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
 .c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
 }
 
-.c20 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: end;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: end;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c28 {
+.c23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c30 {
+.c25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -168,7 +176,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   gap: 1rem;
 }
 
-.c31 {
+.c27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -176,7 +184,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   gap: 1rem;
 }
 
-.c33 {
+.c29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -191,53 +199,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   justify-content: space-between;
 }
 
-.c5 {
-  display: grid;
-  grid-template-columns: repeat(12,1fr);
-  width: 100%;
-}
-
-.c9 {
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  grid-column: 1 / span 1;
-  grid-row: span undefined;
-  grid-row: span 1;
-  grid-column-start: 1;
-}
-
-.c17 {
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  grid-column: 2 / span 7;
-  grid-row: span undefined;
-  grid-row: span 1;
-  grid-column-start: 2;
-}
-
-.c21 {
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  grid-column: 9 / span 2;
-  grid-row: span undefined;
-  grid-row: span 1;
-  grid-column-start: 9;
-}
-
-.c23 {
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  grid-column: 11 / span 2;
-  grid-row: span undefined;
-  grid-row: span 1;
-  grid-column-start: 11;
-}
-
-.c14 {
+.c11 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
@@ -259,7 +221,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   display: revert;
 }
 
-.c18 {
+.c14 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -271,7 +233,25 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   color: #222222;
 }
 
-.c22 {
+.c17 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+  white-space: nowrap;
+  color: #222222;
+}
+
+.c19 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  white-space: nowrap;
+}
+
+.c30 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -304,7 +284,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   cursor: pointer;
 }
 
-.c13 {
+.c10 {
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
   -webkit-animation-timing-function: ease-out;
@@ -323,7 +303,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c27 {
+  .c22 {
     display: none;
   }
 }
@@ -338,7 +318,19 @@ exports[`OakUnitListItem matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c28 {
+  .c2 {
+    gap: 0rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c2 {
+    gap: 0rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c23 {
     display: none;
   }
 }
@@ -348,13 +340,13 @@ exports[`OakUnitListItem matches snapshot 1`] = `
     background: #c6d1ef;
   }
 
-  .c3:hover .c10 {
+  .c3:hover .c7 {
     background: #7c9aec;
   }
 }
 
 @media (hover:hover) {
-  .c13:hover {
+  .c10:hover {
     background: #7c9aec;
   }
 }
@@ -371,111 +363,107 @@ exports[`OakUnitListItem matches snapshot 1`] = `
         href=""
       >
         <div
-          className="c7 c8 c9"
+          className="c7 c8 c9 c10"
         >
-          <div
-            className="c10 c11 c12 c13"
+          <h3
+            className="c11"
           >
-            <h3
-              className="c14"
-            >
-              1
-            </h3>
-          </div>
+            1
+          </h3>
         </div>
         <div
-          className="c15 c16 c17"
+          className="c12 c13"
         >
           <p
-            className="c18"
+            className="c14"
           >
             Lesson 1
           </p>
         </div>
         <div
-          className="c19 c20 c21"
+          className="c15 c16"
         >
           <p
-            className="c22"
+            className="c17"
           />
         </div>
         <div
-          className="c19 c20 c23"
+          className="c18 c16"
         >
-          <div
-            className="c24 c12"
+          <p
+            className="c19"
           >
             0 lessons
-            <div
-              className="c25"
-            >
-              <img
-                alt="chevron-right"
-                className="c26"
-                data-nimg="fill"
-                decoding="async"
-                loading="lazy"
-                onError={[Function]}
-                onLoad={[Function]}
-                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
-                style={
-                  {
-                    "bottom": 0,
-                    "color": "transparent",
-                    "height": "100%",
-                    "left": 0,
-                    "objectFit": undefined,
-                    "objectPosition": undefined,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                    "width": "100%",
-                  }
+          </p>
+          <div
+            className="c20"
+          >
+            <img
+              alt="chevron-right"
+              className="c21"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
+              style={
+                {
+                  "bottom": 0,
+                  "color": "transparent",
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
                 }
-              />
-            </div>
+              }
+            />
           </div>
         </div>
       </a>
     </div>
     <div
-      className="c27 c28 c3"
+      className="c22 c23 c3"
       title="Lesson 1"
     >
       <div
-        className="c29 c30"
+        className="c24 c25"
       >
         <a
-          className="c7 c31"
+          className="c26 c27"
           href=""
         >
           <div
-            className="c32 c12"
+            className="c28 c9"
           >
             <h3
-              className="c14"
+              className="c11"
             >
               1
             </h3>
           </div>
           <div
-            className="c29"
+            className="c24"
           >
             <p
-              className="c18"
+              className="c14"
             >
               Lesson 1
             </p>
           </div>
         </a>
         <div
-          className="c7 c33"
+          className="c26 c29"
         >
           <p
-            className="c22"
+            className="c30"
           />
           <p
-            className="c22"
+            className="c30"
           >
             0 lessons
           </p>

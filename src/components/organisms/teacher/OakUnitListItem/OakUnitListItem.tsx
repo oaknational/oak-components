@@ -6,8 +6,6 @@ import {
   OakP,
   OakHeading,
   OakLI,
-  OakGrid,
-  OakGridArea,
   OakBox,
   OakIcon,
 } from "@/components/atoms";
@@ -15,7 +13,7 @@ import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { OakSmallTertiaryInvertedButton } from "@/components/molecules";
 
-const GridWithFocus = styled(OakGrid)`
+const FlexWithFocus = styled(OakFlex)`
   animation-timing-function: ease-out;
   transition-duration: 300ms;
   outline: none;
@@ -108,95 +106,89 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
         $background={unavailable ? "bg-neutral" : "bg-primary"}
         $borderRadius="border-radius-m"
         $disabled={unavailable}
-        $pr={onSave ? "inner-padding-s" : "inner-padding-none"}
+        $pr={onSave ? "inner-padding-xl" : "inner-padding-none"}
         $width="100%"
         $display={["none", "flex"]}
-        $gap="space-between-m"
+        $gap={[
+          "space-between-none",
+          "space-between-none",
+          "space-between-none",
+        ]}
         {...rest}
       >
-        <GridWithFocus
+        <FlexWithFocus
+          $pr={onSave ? "inner-padding-xs" : "inner-padding-none"}
+          $borderRadius="border-radius-m"
+          $gap="space-between-s"
+          $alignItems="center"
+          $width="100%"
+          $height="100%"
           as="a"
           href={unavailable ? undefined : href}
           ref={firstItemRef}
           onClick={unavailable ? undefined : onClick}
-          $width="100%"
-          $pr="inner-padding-s"
-          $borderRadius="border-radius-m"
         >
-          <OakGridArea $colStart={1} $colSpan={1}>
-            <StyledOakIndexBox
-              $background={
-                unavailable
-                  ? "bg-neutral-stronger"
-                  : isLegacy
-                    ? "lavender50"
-                    : "lavender"
-              }
-              $justifyContent={"center"}
-              $alignItems={"center"}
-              $height="100%"
-              $width="all-spacing-11"
-            >
-              <OakHeading
-                tag="h3"
-                $font={"heading-5"}
-                $color={unavailable ? "text-disabled" : "text-primary"}
-              >
-                {index}
-              </OakHeading>
-            </StyledOakIndexBox>
-          </OakGridArea>
-          <OakGridArea
-            $colSpan={7}
-            $colStart={2}
-            $pa="inner-padding-l"
+          <StyledOakIndexBox
+            $background={
+              unavailable
+                ? "bg-neutral-stronger"
+                : isLegacy
+                  ? "lavender50"
+                  : "lavender"
+            }
             $justifyContent={"center"}
+            $alignItems={"center"}
+            $height="100%"
+            $minWidth="all-spacing-11"
           >
+            <OakHeading
+              tag="h3"
+              $font={"heading-5"}
+              $color={unavailable ? "text-disabled" : "text-primary"}
+            >
+              {index}
+            </OakHeading>
+          </StyledOakIndexBox>
+          <OakFlex $pv="inner-padding-l" $pr="inner-padding-m" $flexGrow={1}>
             <OakP
               $font={"heading-7"}
               $color={unavailable ? "text-disabled" : "text-primary"}
             >
               {props.title}
             </OakP>
-          </OakGridArea>
-          <OakGridArea
-            $colSpan={2}
-            $colStart={9}
-            $pv="inner-padding-l"
-            $justifyContent={"center"}
-            $alignItems="end"
+          </OakFlex>
+          <OakFlex
+            $minWidth="all-spacing-13"
+            $alignItems="center"
+            $justifyContent="start"
           >
             <OakP
               $font={"heading-light-7"}
+              $whiteSpace="nowrap"
               $color={unavailable ? "text-disabled" : "text-primary"}
             >
               {props.yearTitle}
             </OakP>
-          </OakGridArea>
-          <OakGridArea
-            $colSpan={2}
-            $colStart={11}
-            $pv="inner-padding-l"
-            $alignItems="end"
-            $justifyContent="center"
+          </OakFlex>
+          <OakFlex
+            $font={"heading-light-7"}
+            $color={unavailable ? "text-disabled" : "text-primary"}
+            $alignItems="center"
+            $justifyContent="start"
+            $minWidth="all-spacing-15"
           >
-            <OakFlex
-              $font={"heading-light-7"}
-              $color={unavailable ? "text-disabled" : "text-primary"}
-              $alignItems="center"
-              $justifyContent="center"
-            >
-              {lessonCount}
-              {!onSave && (
-                <OakIcon
-                  iconName="chevron-right"
-                  iconWidth="all-spacing-7"
-                  $colorFilter={unavailable ? "text-disabled" : "text-primary"}
-                />
-              )}
-            </OakFlex>
-          </OakGridArea>
-        </GridWithFocus>
+            <OakP $whiteSpace="nowrap">{lessonCount}</OakP>
+
+            {!onSave && (
+              <OakIcon
+                iconName="chevron-right"
+                iconWidth="all-spacing-7"
+                $colorFilter={unavailable ? "text-disabled" : "text-primary"}
+              />
+            )}
+          </OakFlex>
+        </FlexWithFocus>
+
         {onSave && (
           <OakSmallTertiaryInvertedButton
             iconName={isSaved ? "bookmark-filled" : "bookmark-outlined"}
