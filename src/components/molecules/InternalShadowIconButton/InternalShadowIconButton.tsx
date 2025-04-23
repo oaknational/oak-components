@@ -137,6 +137,7 @@ export const InternalShadowIconButton = <C extends ElementType = "button">(
         $left="all-spacing-1"
         $display="none"
         className="shadow"
+        alt=""
       />
       <OakIcon
         iconName={iconName}
@@ -148,6 +149,7 @@ export const InternalShadowIconButton = <C extends ElementType = "button">(
         $top="all-spacing-05"
         $left="all-spacing-05"
         className="highlight"
+        alt=""
       />
       <OakIcon
         iconName={iconName}
@@ -161,6 +163,7 @@ export const InternalShadowIconButton = <C extends ElementType = "button">(
               : null
         }
         data-icon-for="button"
+        alt=""
       />
     </OakBox>
   );
