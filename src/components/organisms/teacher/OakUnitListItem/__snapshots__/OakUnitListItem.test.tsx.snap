@@ -4,7 +4,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
 [
   .c1 {
   width: 100%;
-  padding-right: 0rem;
+  padding-right: 1rem;
   background: #ffffff;
   border-radius: 0.375rem;
   display: none;
@@ -39,7 +39,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
 }
 
 .c18 {
-  min-width: 6.25rem;
+  min-width: 10rem;
   color: #222222;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
@@ -102,7 +102,6 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 0rem;
 }
 
 .c5 {
@@ -152,10 +151,10 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: start;
-  -ms-flex-pack: start;
-  justify-content: start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: end;
+  -ms-flex-pack: end;
+  justify-content: end;
 }
 
 .c23 {
@@ -314,18 +313,6 @@ exports[`OakUnitListItem matches snapshot 1`] = `
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-  }
-}
-
-@media (min-width:750px) {
-  .c2 {
-    gap: 0rem;
-  }
-}
-
-@media (min-width:1280px) {
-  .c2 {
-    gap: 0rem;
   }
 }
 

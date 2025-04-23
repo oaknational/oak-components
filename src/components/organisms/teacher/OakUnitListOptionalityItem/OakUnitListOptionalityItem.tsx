@@ -184,7 +184,7 @@ export const OakUnitListOptionalityItem = (
         {index}
       </UnitIndex>
 
-      <OakBox $pa={["inner-padding-m", "inner-padding-l"]} $width={"100%"}>
+      <OakBox $pa={"inner-padding-m"} $width={"100%"}>
         <OakFlex
           $alignItems={"center"}
           $mb={"space-between-s"}

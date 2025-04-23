@@ -12,6 +12,7 @@ import {
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { OakSmallTertiaryInvertedButton } from "@/components/molecules";
+import { SizeStyleProps } from "@/styles/utils/sizeStyle";
 
 const FlexWithFocus = styled(OakFlex)`
   animation-timing-function: ease-out;
@@ -78,7 +79,7 @@ export type OakUnitListItemProps = {
   onClick?: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
   onSave?: () => void;
   isSaved?: boolean;
-};
+} & SizeStyleProps;
 
 /**
  *
@@ -106,14 +107,9 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
         $background={unavailable ? "bg-neutral" : "bg-primary"}
         $borderRadius="border-radius-m"
         $disabled={unavailable}
-        $pr={onSave ? "inner-padding-xl" : "inner-padding-none"}
+        $pr="inner-padding-m"
         $width="100%"
         $display={["none", "flex"]}
-        $gap={[
-          "space-between-none",
-          "space-between-none",
-          "space-between-none",
-        ]}
         {...rest}
       >
         <FlexWithFocus
@@ -160,7 +156,7 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
           <OakFlex
             $minWidth="all-spacing-13"
             $alignItems="center"
-            $justifyContent="start"
+            $justifyContent="end"
           >
             <OakP
               $font={"heading-light-7"}
@@ -174,8 +170,8 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
             $font={"heading-light-7"}
             $color={unavailable ? "text-disabled" : "text-primary"}
             $alignItems="center"
-            $justifyContent="start"
-            $minWidth="all-spacing-15"
+            $justifyContent="end"
+            $minWidth={onSave ? "all-spacing-15" : "all-spacing-17"}
           >
             <OakP $whiteSpace="nowrap">{lessonCount}</OakP>
 
