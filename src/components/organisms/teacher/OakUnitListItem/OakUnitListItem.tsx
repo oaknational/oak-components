@@ -12,7 +12,6 @@ import {
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { OakSmallTertiaryInvertedButton } from "@/components/molecules";
-import { SizeStyleProps } from "@/styles/utils/sizeStyle";
 
 const FlexWithFocus = styled(OakFlex)`
   animation-timing-function: ease-out;
@@ -79,7 +78,7 @@ export type OakUnitListItemProps = {
   onClick?: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
   onSave?: () => void;
   isSaved?: boolean;
-} & SizeStyleProps;
+};
 
 /**
  *
@@ -134,8 +133,8 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
             }
             $justifyContent={"center"}
             $alignItems={"center"}
-            $height="100%"
             $minWidth="all-spacing-11"
+            $alignSelf="stretch"
           >
             <OakHeading
               tag="h3"

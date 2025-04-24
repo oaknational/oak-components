@@ -21,7 +21,6 @@ exports[`OakUnitListItem matches snapshot 1`] = `
 
 .c8 {
   min-width: 4rem;
-  height: 100%;
   background: #a0b6f2;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -129,6 +128,9 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
 }
 
 .c13 {
@@ -184,6 +186,21 @@ exports[`OakUnitListItem matches snapshot 1`] = `
 }
 
 .c29 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -250,7 +267,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   white-space: nowrap;
 }
 
-.c30 {
+.c31 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -425,7 +442,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
           href=""
         >
           <div
-            className="c28 c9"
+            className="c28 c29"
           >
             <h3
               className="c11"
@@ -444,13 +461,13 @@ exports[`OakUnitListItem matches snapshot 1`] = `
           </div>
         </a>
         <div
-          className="c26 c29"
+          className="c26 c30"
         >
           <p
-            className="c30"
+            className="c31"
           />
           <p
-            className="c30"
+            className="c31"
           >
             0 lessons
           </p>
