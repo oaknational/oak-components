@@ -72,7 +72,7 @@ export const OakPupilJourneySubjectButton = <C extends ElementType = "button">({
   const iconOverride = (
     <OakIcon
       iconName={subjectIconName}
-      alt={subjectIconName}
+      data-testid={subjectIconName}
       $minWidth={"all-spacing-12"}
       $minHeight={"all-spacing-12"}
       aria-hidden="true"

@@ -167,9 +167,10 @@ exports[`OakPupilJourneySubjectButton matches snapshot 1`] = `
       <div
         aria-hidden="true"
         className="c7"
+        data-testid="subject-english"
       >
         <img
-          alt="subject-english"
+          alt=""
           className="c8"
           data-nimg="fill"
           decoding="async"
