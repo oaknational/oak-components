@@ -2,11 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 
 import { OakFlex, OakHeading, OakTypography } from "@/components/atoms";
-import {
-  OakInlineBanner,
-  OakPromoTag,
-  OakTertiaryButton,
-} from "@/components/molecules";
+import { OakPromoTag, OakTertiaryButton } from "@/components/molecules";
 import { SizeStyleProps, sizeStyle } from "@/styles/utils/sizeStyle";
 
 export type OakUnitsHeaderProps = {
@@ -16,7 +12,7 @@ export type OakUnitsHeaderProps = {
   curriculumHref: string | null;
   isCustomUnit?: boolean;
   customHeadingText?: string;
-  bannerText?: string;
+  banner?: React.ReactNode;
 } & SizeStyleProps;
 
 const OakUnitsHeaderCss = css<OakUnitsHeaderProps>`
@@ -47,7 +43,7 @@ const UnstyledComponent = (props: OakUnitsHeaderProps) => {
     isLegacy,
     phase,
     curriculumHref: href,
-    bannerText,
+    banner,
     isCustomUnit,
     customHeadingText,
     ...rest
@@ -93,16 +89,7 @@ const UnstyledComponent = (props: OakUnitsHeaderProps) => {
           />
         )}
       </OakFlex>
-      {bannerText && (
-        <OakFlex $width={"100%"}>
-          <OakInlineBanner
-            isOpen={true}
-            message={bannerText}
-            type="neutral"
-            $width={"100%"}
-          />
-        </OakFlex>
-      )}
+      {banner && <OakFlex $width={"100%"}>{banner}</OakFlex>}
     </>
   );
 };
