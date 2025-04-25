@@ -12,6 +12,10 @@ const StyledOptionalityListItem = styled(OakFlex)<{ $disabled?: boolean }>`
   animation-timing-function: ease-out;
   transition-duration: 300ms;
 
+  &:hover .hover-text {
+    text-decoration: underline;
+  }
+
   &:focus-visible {
     background: ${parseColor("white")};
     box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
@@ -20,8 +24,6 @@ const StyledOptionalityListItem = styled(OakFlex)<{ $disabled?: boolean }>`
   ${(props) =>
     !props.$disabled &&
     css`  
-      cursor: pointer;
-
       /* Don't apply hover styles on touch devices */
       @media (hover: hover) {
     &:hover {
@@ -74,6 +76,10 @@ const HeadingWithFocus = styled(OakHeading)`
   border-radius: 6px;
   padding: 4px;
 
+  &:hover {
+    text-decoration: underline;
+  }
+
   &:focus-visible {
     box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
@@ -109,6 +115,9 @@ export const OakUnitListOptionalityItemCard = (
         $ba="border-solid-m"
         $disabled={unavailable}
         $flexGrow={1}
+        as={onSave ? "li" : "a"}
+        href={unavailable ? undefined : href}
+        ref={firstItemRef}
         {...rest}
       >
         <OakFlex
@@ -121,10 +130,11 @@ export const OakUnitListOptionalityItemCard = (
             $color={unavailable ? "text-disabled" : "text-primary"}
             tag={"h3"}
             $mb={"space-between-xs"}
-            as={"a"}
+            as={onSave ? "a" : "h3"}
             onClick={unavailable ? undefined : onClick}
             href={unavailable ? undefined : href}
             ref={firstItemRef}
+            className={onSave ? undefined : "hover-text"}
           >
             {props.title}
           </HeadingWithFocus>
@@ -136,6 +146,7 @@ export const OakUnitListOptionalityItemCard = (
               <OakSpan
                 $color={unavailable ? "text-disabled" : "text-primary"}
                 $font={"heading-light-7"}
+                className={onSave ? undefined : "hover-text"}
               >
                 {lessonCount}
               </OakSpan>

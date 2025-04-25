@@ -134,7 +134,11 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
   animation-timing-function: ease-out;
   -webkit-transition-duration: 300ms;
   transition-duration: 300ms;
-  cursor: pointer;
+}
+
+.c3:hover .hover-text {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .c3:focus-visible {
@@ -152,6 +156,11 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
   padding: 4px;
 }
 
+.c7:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
 .c7:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
@@ -165,19 +174,20 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
 <div
     className="c0 c1"
   >
-    <div
+    <a
       className="c2 c1 c3"
+      href=""
       title="Lesson 1"
     >
       <div
         className="c4 c5"
       >
-        <a
-          className="c6 c7"
+        <h3
+          className="c6 c7 hover-text"
           href=""
         >
           Lesson 1
-        </a>
+        </h3>
         <div
           className="c8 c9"
         >
@@ -185,7 +195,7 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
             className="c4 c10"
           >
             <span
-              className="c11"
+              className="c11 hover-text"
             >
               0 lessons
             </span>
@@ -220,7 +230,7 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </a>
   </div>,
   ",",
 ]

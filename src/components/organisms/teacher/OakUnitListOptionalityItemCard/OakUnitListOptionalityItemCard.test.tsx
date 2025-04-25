@@ -47,6 +47,8 @@ describe("OakUnitListOptionalityItemCard", () => {
         lessonCount={"0 lessons"}
         href={""}
         slug="test"
+        onSave={() => {}}
+        isSaved={false}
       />,
     );
 
