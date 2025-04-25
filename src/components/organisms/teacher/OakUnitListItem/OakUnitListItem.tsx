@@ -18,6 +18,10 @@ const FlexWithFocus = styled(OakFlex)`
   transition-duration: 300ms;
   outline: none;
 
+  &:hover .hover-text {
+    text-decoration: underline;
+  }
+
   &:focus-visible {
     box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
@@ -32,8 +36,6 @@ const StyledUnitListItem = styled(OakFlex)<{ $disabled?: boolean }>`
   ${(props) =>
     !props.$disabled &&
     css`
-      cursor: pointer;
-
       /* Don't apply hover styles on touch devices */
       @media (hover: hover) {
     &:hover {
@@ -148,6 +150,7 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
             <OakP
               $font={"heading-7"}
               $color={unavailable ? "text-disabled" : "text-primary"}
+              className="hover-text"
             >
               {props.title}
             </OakP>
