@@ -141,7 +141,7 @@ input:checked + .c7 {
         className="c10"
       >
         <img
-          alt="tick"
+          alt=""
           className="c11"
           data-nimg="fill"
           decoding="async"

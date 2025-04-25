@@ -194,7 +194,7 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
             className="c9"
           >
             <img
-              alt="sign-language"
+              alt=""
               className="c10"
               data-nimg="fill"
               decoding="async"

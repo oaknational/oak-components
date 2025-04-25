@@ -299,7 +299,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
                   data-icon-for="button"
                 >
                   <img
-                    alt="lightbulb"
+                    alt=""
                     className="c17"
                     data-nimg="fill"
                     decoding="async"

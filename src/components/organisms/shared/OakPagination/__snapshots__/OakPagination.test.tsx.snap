@@ -269,7 +269,7 @@ exports[`OakPagination Component matches snapshot 1`] = `
           disabled={true}
         >
           <img
-            alt="chevron-left"
+            alt=""
             className="c7"
             data-nimg="fill"
             decoding="async"
@@ -451,7 +451,7 @@ exports[`OakPagination Component matches snapshot 1`] = `
           disabled={false}
         >
           <img
-            alt="chevron-right"
+            alt=""
             className="c7"
             data-nimg="fill"
             decoding="async"

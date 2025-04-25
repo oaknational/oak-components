@@ -18,7 +18,7 @@ exports[`OakIcon matches snapshot 1`] = `
   className="c0"
 >
   <img
-    alt="home"
+    alt=""
     className="c1"
     data-nimg="fill"
     decoding="async"

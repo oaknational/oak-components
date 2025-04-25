@@ -101,7 +101,7 @@ exports[`OakQuizMatch matches snapshot 1`] = `
         className="c4"
       >
         <img
-          alt="move-arrows"
+          alt=""
           className="c5"
           data-nimg="fill"
           decoding="async"

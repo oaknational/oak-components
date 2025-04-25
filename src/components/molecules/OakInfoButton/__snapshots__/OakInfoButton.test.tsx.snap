@@ -197,7 +197,7 @@ exports[`OakInfoButton matches snapshot 1`] = `
             data-icon-for="button"
           >
             <img
-              alt="info"
+              alt=""
               className="c12"
               data-nimg="fill"
               decoding="async"

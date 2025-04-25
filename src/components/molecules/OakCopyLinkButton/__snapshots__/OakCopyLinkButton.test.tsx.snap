@@ -195,7 +195,7 @@ exports[`OakCopyLinkButton matches snapshot 1`] = `
             className="c9"
           >
             <img
-              alt="copy"
+              alt=""
               className="c10"
               data-nimg="fill"
               decoding="async"

@@ -287,6 +287,11 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   outline: none;
 }
 
+.c6:hover .hover-text {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
 .c6:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
@@ -297,7 +302,6 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   animation-timing-function: ease-out;
   -webkit-transition-duration: 300ms;
   transition-duration: 300ms;
-  cursor: pointer;
 }
 
 .c10 {
@@ -379,7 +383,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
           className="c12 c13"
         >
           <p
-            className="c14"
+            className="c14 hover-text"
           >
             Lesson 1
           </p>
@@ -403,7 +407,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
             className="c20"
           >
             <img
-              alt="chevron-right"
+              alt=""
               className="c21"
               data-nimg="fill"
               decoding="async"

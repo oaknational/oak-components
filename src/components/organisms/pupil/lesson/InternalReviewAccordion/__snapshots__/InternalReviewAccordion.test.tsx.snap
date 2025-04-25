@@ -246,7 +246,7 @@ exports[`InternalReviewAccordion matches snapshot 1`] = `
               data-icon-for="button"
             >
               <img
-                alt="chevron-down"
+                alt=""
                 className="c15"
                 data-nimg="fill"
                 decoding="async"

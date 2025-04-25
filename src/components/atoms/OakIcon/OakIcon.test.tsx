@@ -42,13 +42,6 @@ describe("OakIcon", () => {
     });
   });
 
-  it("defaults the alt text to the icon name", () => {
-    const { getByRole } = render(
-      <OakIcon data-testid="test" iconName="home" />,
-    );
-    expect(getByRole("img")).toHaveAttribute("alt", "home");
-  });
-
   it("sets the alt text", () => {
     const { getByRole } = render(
       <OakIcon data-testid="test" iconName="home" alt="Home" />,
@@ -57,7 +50,7 @@ describe("OakIcon", () => {
   });
   it("handles typedImageMap being undefined", () => {
     const { getByRole } = render(
-      <OakIcon data-testid="test" iconName="home" />,
+      <OakIcon data-testid="test" iconName="home" alt="home" />,
     );
     expect(getByRole("img")).toHaveAttribute("alt", "home");
   });

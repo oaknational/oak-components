@@ -432,7 +432,7 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
                   data-icon-for="button"
                 >
                   <img
-                    alt="cross"
+                    alt=""
                     class="c22"
                     data-nimg="fill"
                     decoding="async"

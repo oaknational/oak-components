@@ -69,7 +69,7 @@ exports[`OakLessonInfoCard component test matches snapshot 1`] = `
       className="c4"
     >
       <img
-        alt="question-mark"
+        alt=""
         className="c5"
         data-nimg="fill"
         decoding="async"

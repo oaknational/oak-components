@@ -172,7 +172,7 @@ exports[`OakScaleImageButton matches snapshot 1`] = `
         className="c7"
       >
         <img
-          alt="expand"
+          alt=""
           className="c8"
           data-nimg="fill"
           decoding="async"

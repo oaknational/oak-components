@@ -235,7 +235,7 @@ exports[`OakPupilJourneyOptionalityButton matches snapshot 1`] = `
                 className="c15"
               >
                 <img
-                  alt="chevron-right"
+                  alt=""
                   className="c16"
                   data-nimg="fill"
                   decoding="async"

@@ -183,7 +183,7 @@ exports[`InternalShadowRoundButton matches snapshot 1`] = `
           data-icon-for="button"
         >
           <img
-            alt="arrow-right"
+            alt=""
             className="c11"
             data-nimg="fill"
             decoding="async"

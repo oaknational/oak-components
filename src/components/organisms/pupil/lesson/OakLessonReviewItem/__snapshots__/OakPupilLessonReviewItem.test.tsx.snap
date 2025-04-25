@@ -173,7 +173,7 @@ exports[`OakLessonReviewItem matches snapshot 1`] = `
         className="c4"
       >
         <img
-          alt="intro"
+          alt=""
           className="c5"
           data-nimg="fill"
           decoding="async"

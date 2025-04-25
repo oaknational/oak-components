@@ -61,7 +61,7 @@ export const OakIcon = (props: OakIconProps) => {
   return (
     <OakImage
       src={generateOakIconURL(iconName)}
-      alt={alt ?? iconName}
+      alt={alt ?? ""}
       $width={$width}
       $height={$height}
       $minHeight={$minHeight}

@@ -83,7 +83,7 @@ exports[`OakDragAndDropInstructions matches snapshot 1`] = `
       className="c3"
     >
       <img
-        alt="move-arrows"
+        alt=""
         className="c4"
         data-nimg="fill"
         decoding="async"

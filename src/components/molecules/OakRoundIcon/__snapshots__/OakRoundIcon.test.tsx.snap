@@ -30,7 +30,7 @@ exports[`OakRoundIcon matches snapshot 1`] = `
     className="c1"
   >
     <img
-      alt="home"
+      alt=""
       className="c2"
       data-nimg="fill"
       decoding="async"

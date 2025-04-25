@@ -36,21 +36,18 @@ describe(OakVideoTranscript, () => {
   });
 
   it("handles transcript click correctly", () => {
-    const { getByAltText, getAllByText } = renderWithTheme(
+    const { getAllByText } = renderWithTheme(
       <OakVideoTranscript {...defaultProps}>children</OakVideoTranscript>,
     );
 
     const transcriptButton = getAllByText("Show transcript")[0];
-    const chevronIcon = getByAltText("chevron-down");
 
     expect(transcriptButton).toHaveTextContent("Show transcript");
-    expect(chevronIcon).toBeInTheDocument();
 
     act(() => {
       transcriptButton && fireEvent.click(transcriptButton);
     });
 
     expect(transcriptButton).toHaveTextContent("Hide transcript");
-    expect(chevronIcon).toHaveAttribute("alt", "chevron-up");
   });
 });

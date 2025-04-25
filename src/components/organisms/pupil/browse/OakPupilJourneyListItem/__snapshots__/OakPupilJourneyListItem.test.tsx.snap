@@ -292,7 +292,7 @@ exports[`OakPupilJourneyListItem matches snapshot 1`] = `
             className="c13"
           >
             <img
-              alt="chevron-right"
+              alt=""
               className="c14"
               data-nimg="fill"
               decoding="async"

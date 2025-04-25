@@ -229,7 +229,7 @@ exports[`OakVideoTranscript matches snapshot 1`] = `
               className="c10"
             >
               <img
-                alt="chevron-down"
+                alt=""
                 className="c11"
                 data-nimg="fill"
                 decoding="async"

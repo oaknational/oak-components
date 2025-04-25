@@ -826,7 +826,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
                       data-icon-for="button"
                     >
                       <img
-                        alt="cross"
+                        alt=""
                         className="c21"
                         data-nimg="fill"
                         decoding="async"
@@ -1008,7 +1008,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
                             className="c50"
                           >
                             <img
-                              alt="copy"
+                              alt=""
                               className="c51"
                               data-nimg="fill"
                               decoding="async"

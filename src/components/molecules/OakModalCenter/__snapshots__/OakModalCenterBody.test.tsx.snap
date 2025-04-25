@@ -114,7 +114,7 @@ exports[`OakModalCenterBody matches snapshot 1`] = `
     data-testid="icon"
   >
     <img
-      alt="content-guidance"
+      alt=""
       className="c3"
       data-nimg="fill"
       decoding="async"

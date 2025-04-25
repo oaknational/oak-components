@@ -222,7 +222,7 @@ exports[`OakLessonVideoTranscript matches snapshot 1`] = `
                 data-icon-for="button"
               >
                 <img
-                  alt="chevron-down"
+                  alt=""
                   className="c13"
                   data-nimg="fill"
                   decoding="async"

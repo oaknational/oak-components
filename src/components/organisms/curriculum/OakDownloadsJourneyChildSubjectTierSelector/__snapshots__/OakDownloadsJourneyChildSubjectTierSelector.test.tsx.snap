@@ -391,7 +391,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
           data-testid="inline-banner-icon"
         >
           <img
-            alt="info"
+            alt=""
             className="c7"
             data-nimg="fill"
             decoding="async"
@@ -592,7 +592,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
           className="c28"
         >
           <img
-            alt="arrow-right"
+            alt=""
             className="c29"
             data-nimg="fill"
             decoding="async"

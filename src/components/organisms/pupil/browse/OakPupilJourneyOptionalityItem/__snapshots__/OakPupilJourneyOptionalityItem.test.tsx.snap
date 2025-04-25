@@ -393,7 +393,7 @@ exports[`OakPupilJourneyOptionalityItem component test matches snapshot 1`] = `
                   className="c22"
                 >
                   <img
-                    alt="chevron-right"
+                    alt=""
                     className="c23"
                     data-nimg="fill"
                     decoding="async"
@@ -474,7 +474,7 @@ exports[`OakPupilJourneyOptionalityItem component test matches snapshot 1`] = `
                   className="c22"
                 >
                   <img
-                    alt="chevron-right"
+                    alt=""
                     className="c23"
                     data-nimg="fill"
                     decoding="async"
