@@ -169,7 +169,7 @@ exports[`OakPupilJourneySubjectButton matches snapshot 1`] = `
         className="c7"
       >
         <img
-          alt=""
+          alt="subject-english"
           className="c8"
           data-nimg="fill"
           decoding="async"

@@ -114,6 +114,7 @@ export const OakQuizResultItem = ({
         {feedbackState && (
           <OakIcon
             iconName={feedbackState === "correct" ? "tick" : "cross"}
+            alt={feedbackState === "correct" ? "tick" : "cross"}
             $width={"all-spacing-7"}
             $height={"all-spacing-7"}
             $colorFilter={
