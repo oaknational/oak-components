@@ -212,7 +212,7 @@ exports[`OakQuizHint matches snapshot 1`] = `
               data-icon-for="button"
             >
               <img
-                alt="lightbulb"
+                alt=""
                 className="c12"
                 data-nimg="fill"
                 decoding="async"

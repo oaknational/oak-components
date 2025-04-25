@@ -407,7 +407,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
             className="c20"
           >
             <img
-              alt="chevron-right"
+              alt=""
               className="c21"
               data-nimg="fill"
               decoding="async"

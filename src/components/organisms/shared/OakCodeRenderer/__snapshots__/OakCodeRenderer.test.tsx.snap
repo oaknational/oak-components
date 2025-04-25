@@ -607,7 +607,7 @@ have_homework =
                 data-icon-for="button"
               >
                 <img
-                  alt="info"
+                  alt=""
                   className="c31"
                   data-nimg="fill"
                   decoding="async"

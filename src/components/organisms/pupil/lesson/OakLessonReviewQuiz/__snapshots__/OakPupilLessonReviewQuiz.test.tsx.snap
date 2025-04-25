@@ -209,7 +209,7 @@ exports[`OakLessonReviewQuiz matches snapshot 1`] = `
           className="c6"
         >
           <img
-            alt="quiz"
+            alt=""
             className="c7"
             data-nimg="fill"
             decoding="async"

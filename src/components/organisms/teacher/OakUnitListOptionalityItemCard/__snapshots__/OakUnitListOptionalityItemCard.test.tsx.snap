@@ -203,7 +203,7 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
               className="c12"
             >
               <img
-                alt="chevron-right"
+                alt=""
                 className="c13"
                 data-nimg="fill"
                 decoding="async"

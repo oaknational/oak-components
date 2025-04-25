@@ -485,7 +485,7 @@ exports[`OakUnitsContainer matches snapshot 1`] = `
               data-icon-for="button"
             >
               <img
-                alt="chevron-right"
+                alt=""
                 className="c26"
                 data-nimg="fill"
                 decoding="async"

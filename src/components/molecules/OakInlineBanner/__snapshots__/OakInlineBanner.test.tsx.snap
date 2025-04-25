@@ -363,7 +363,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
         data-testid="inline-banner-icon"
       >
         <img
-          alt="info"
+          alt=""
           className="c6"
           data-nimg="fill"
           decoding="async"
@@ -416,7 +416,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
                 data-icon-for="button"
               >
                 <img
-                  alt="cross"
+                  alt=""
                   className="c6"
                   data-nimg="fill"
                   decoding="async"
@@ -478,7 +478,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
             className="c17 "
           >
             <img
-              alt="chevron-right"
+              alt=""
               className="c26"
               data-nimg="fill"
               decoding="async"
@@ -879,7 +879,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
         data-testid="inline-banner-icon"
       >
         <img
-          alt="info"
+          alt=""
           className="c6"
           data-nimg="fill"
           decoding="async"
@@ -932,7 +932,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
                 data-icon-for="button"
               >
                 <img
-                  alt="cross"
+                  alt=""
                   className="c6"
                   data-nimg="fill"
                   decoding="async"
@@ -994,7 +994,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
             className="c18 "
           >
             <img
-              alt="chevron-right"
+              alt=""
               className="c27"
               data-nimg="fill"
               decoding="async"
@@ -1372,7 +1372,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
         data-testid="inline-banner-icon"
       >
         <img
-          alt="info"
+          alt=""
           className="c6"
           data-nimg="fill"
           decoding="async"
@@ -1425,7 +1425,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
                 data-icon-for="button"
               >
                 <img
-                  alt="cross"
+                  alt=""
                   className="c6"
                   data-nimg="fill"
                   decoding="async"
@@ -1481,7 +1481,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
             className="c17 "
           >
             <img
-              alt="chevron-right"
+              alt=""
               className="c24"
               data-nimg="fill"
               decoding="async"

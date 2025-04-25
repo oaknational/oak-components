@@ -315,7 +315,7 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
         id="play-icon"
       >
         <img
-          alt="play"
+          alt=""
           className="c8"
           data-nimg="fill"
           decoding="async"

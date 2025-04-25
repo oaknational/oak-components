@@ -229,7 +229,7 @@ exports[`OakLessonNavItem matches snapshot 1`] = `
         className="c5"
       >
         <img
-          alt="intro"
+          alt=""
           className="c6"
           data-nimg="fill"
           decoding="async"
@@ -275,7 +275,7 @@ exports[`OakLessonNavItem matches snapshot 1`] = `
         className="c14"
       >
         <img
-          alt="chevron-right"
+          alt=""
           className="c6"
           data-nimg="fill"
           decoding="async"

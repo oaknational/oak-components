@@ -321,7 +321,7 @@ exports[`OakModalCenter matches snapshot 1`] = `
                       data-icon-for="button"
                     >
                       <img
-                        alt="cross"
+                        alt=""
                         className="c21"
                         data-nimg="fill"
                         decoding="async"

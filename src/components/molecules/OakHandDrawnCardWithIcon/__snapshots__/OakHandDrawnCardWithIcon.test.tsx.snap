@@ -128,7 +128,7 @@ exports[`OakHandDrawnCardWithIcon matches snapshot 1`] = `
       className="c6"
     >
       <img
-        alt="worksheet-3"
+        alt=""
         className="c7"
         data-nimg="fill"
         decoding="async"
