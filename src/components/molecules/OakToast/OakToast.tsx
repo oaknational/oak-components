@@ -171,7 +171,7 @@ export const OakToast = ({
           $background={background}
           $state={state}
           $width="max-content"
-          $maxWidth="all-spacing-20"
+          $maxWidth={["all-spacing-19", "all-spacing-20"]}
           $gap="space-between-xs"
           $dropShadow="drop-shadow-standard"
           $alignItems="center"
@@ -183,7 +183,7 @@ export const OakToast = ({
           {message}
           {!autoDismiss && (
             <InternalShadowIconButton
-              aria-label={"Dismiss toast"}
+              aria-label={"Dismiss"}
               defaultIconColor={color}
               defaultTextColor="transparent"
               hoverTextColor="transparent"

@@ -6,7 +6,7 @@ exports[`OakToast matches snapshot 1`] = `
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  max-width: 22.5rem;
+  max-width: 15rem;
   padding: 1rem;
   color: #222222;
   background: #bef2bd;
@@ -245,6 +245,12 @@ exports[`OakToast matches snapshot 1`] = `
   transition: opacity 0.3s ease-in-out;
 }
 
+@media (min-width:750px) {
+  .c0 {
+    max-width: 22.5rem;
+  }
+}
+
 <div
   className="c0 c1 c2"
   data-testid="oak-toast"
@@ -291,7 +297,7 @@ exports[`OakToast matches snapshot 1`] = `
     className="c7 c8 c9"
   >
     <button
-      aria-label="Dismiss toast"
+      aria-label="Dismiss"
       className="c10 c11"
       onClick={[Function]}
       onMouseEnter={[Function]}
