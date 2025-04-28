@@ -13,6 +13,16 @@ const meta: Meta<typeof OakToast> = {
         type: "text",
       },
     },
+    autoDismiss: {
+      control: {
+        type: "boolean",
+      },
+    },
+    autoDismissDuration: {
+      control: {
+        type: "number",
+      },
+    },
   },
 };
 
@@ -23,10 +33,7 @@ type Story = StoryObj<typeof OakToast>;
 export const Default: Story = {
   render: (args) => <OakToast {...args} />,
   args: {
-    message: (
-      <span>
-        This is a <b>toast</b> message
-      </span>
-    ),
+    message: "this is a toast message",
+    autoDismiss: true,
   },
 };
