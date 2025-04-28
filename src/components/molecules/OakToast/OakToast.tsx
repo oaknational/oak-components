@@ -5,6 +5,7 @@ import { Transition, TransitionStatus } from "react-transition-group";
 import { OakFlex } from "@/components/atoms/OakFlex";
 import { OakColorToken } from "@/styles";
 import { parseOpacity } from "@/styles/helpers/parseOpacity";
+import { InternalShadowRoundButton } from "../InternalShadowRoundButton";
 
 export type OakToastProps = {
   message: React.ReactNode;
@@ -58,8 +59,28 @@ export const OakToast = ({
           $borderRadius="border-radius-m2"
           $background={background ?? "bg-decorative1-main"}
           $state={state}
+          $width="max-content"
+          $maxWidth="all-spacing-20"
+          $gap="space-between-xs"
         >
           {message}
+          {!autoDismiss && (
+            <InternalShadowRoundButton
+              aria-label={"Dismiss toast"}
+              defaultIconBackground="transparent"
+              defaultIconColor="black"
+              defaultTextColor="transparent"
+              hoverTextColor="transparent"
+              disabledTextColor="transparent"
+              hoverIconBackground="black"
+              hoverIconColor="white"
+              disabledIconBackground="transparent"
+              iconBackgroundSize="all-spacing-6"
+              iconSize="all-spacing-6"
+              iconName="cross"
+              onClick={() => setIsVisible(false)}
+            />
+          )}
         </StyledFlex>
       )}
     </Transition>

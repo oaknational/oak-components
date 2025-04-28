@@ -34,6 +34,6 @@ export const Default: Story = {
   render: (args) => <OakToast {...args} />,
   args: {
     message: "this is a toast message",
-    autoDismiss: true,
+    autoDismiss: false,
   },
 };
