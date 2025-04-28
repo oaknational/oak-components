@@ -466,3 +466,698 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
   </div>
 </div>
 `;
+
+exports[`OakUnitsHeader matches snapshot with banner 1`] = `
+[
+  .c0 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c5 {
+  position: relative;
+  width: 2.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c9 {
+  position: absolute;
+  inset: 0rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c11 {
+  color: #222222;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c13 {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c20 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  color: #222222;
+  background: #222222;
+  border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c21 {
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c22 {
+  position: relative;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  min-height: 1.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c23 {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  object-fit: contain;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 0.25rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.c4 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+  color: #222222;
+}
+
+.c10 {
+  color: #ffe555;
+  background: #222222;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c19 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c12 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c8 {
+  fill: #222222;
+}
+
+.c16 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+  color: #222222;
+  padding-top: 0.5rem;
+}
+
+.c16:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c17 {
+  display: inline-block;
+  position: relative;
+}
+
+.c17:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: #575757;
+}
+
+.c17:active {
+  color: #222222;
+}
+
+.c17:disabled {
+  color: #808080;
+}
+
+.c15 > :first-child:focus-visible .shadow {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c15 > :first-child:hover .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c15 > :first-child:active .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+}
+
+.c15 > :first-child:disabled .icon-container {
+  background: #808080;
+}
+
+.c15 > :first-child:hover .icon-container {
+  background: #575757;
+}
+
+.c15 > :first-child:active .icon-container {
+  background: #222222;
+}
+
+.c7 {
+  aspect-ratio: 2 / 1;
+}
+
+@media (min-width:750px) {
+  .c5 {
+    width: 3rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c5 {
+    width: 3.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c1 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:750px) {
+  .c1 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media (min-width:750px) {
+  .c10 {
+    font-weight: 700;
+  }
+}
+
+@media (min-width:1280px) {
+  .c10 {
+    font-weight: 600;
+  }
+}
+
+@media (min-width:750px) {
+  .c10 {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c10 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c10 {
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c10 {
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c10 {
+    -webkit-letter-spacing: -0.005rem;
+    -moz-letter-spacing: -0.005rem;
+    -ms-letter-spacing: -0.005rem;
+    letter-spacing: -0.005rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c10 {
+    -webkit-letter-spacing: 0.0115rem;
+    -moz-letter-spacing: 0.0115rem;
+    -ms-letter-spacing: 0.0115rem;
+    letter-spacing: 0.0115rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c16 {
+    padding-top: 0rem;
+  }
+}
+
+<div
+    className="c0 c1 "
+  >
+    <div
+      className="c0 c2"
+    >
+      <div
+        className="c0 c3"
+      >
+        <h2
+          className="c4"
+        >
+          maths units
+        </h2>
+        <div
+          className="c5 c6 c7"
+        >
+          <svg
+            className="c8"
+            height="100%"
+            viewBox="0 0 56 27"
+            width="100%"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6.421 0c8.661.839 17.303.834 26.16.714a89.843 89.843 0 0 1 4.834-.013c6.333.32 12.39.317 18.506-.275 0 1.26.178 2.352 0 3.44-.276 1.38-.829 2.759-1.342 4.15-.138.354-.532.706-.808 1.06-.445.248-.63.5-.553.753 1.598 1.093-.256 2.185 0 3.277.276 1.529 1.322 3.058 1.204 4.572-.138 1.771-1.046 3.543-1.973 5.312-.288.4-1.065.792-2.309 1.169-2.288.755-4.103 1.67-11.206 1.965-9.936.417-20.953.385-30.678-.09-2.447-.12-4.38-.532-5.209-.853-1.035-.458-1.52-.929-1.44-1.4C.937 18.988-.109 14.194.01 9.4c0-2.645 1.973-5.29 3.413-7.933.237-.424 1.697-.839 3-1.468Z"
+            />
+          </svg>
+          <div
+            className="c9 c6"
+          >
+            <span
+              className="c10"
+            >
+              New
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        className="c11 c12"
+      >
+        Brand-new teaching resources, thoughtfully crafted by teachers for classroom needs.
+      </div>
+    </div>
+    <div
+      className="c13 c14 c15"
+    >
+      <a
+        className="c16 c17"
+        href="https://www.thenational.academy"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <div
+          className="c0 c18"
+        >
+          <span
+            className="c19"
+          >
+            Full secondary curriculum
+          </span>
+          <div
+            className="c20 c6 icon-container"
+          >
+            <div
+              className="c21 shadow"
+            />
+            <div
+              className="c22"
+              data-icon-for="button"
+            >
+              <img
+                alt=""
+                className="c23"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
+                style={
+                  {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+              />
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>,
+  .c6 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c0 {
+  width: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c2 {
+  width: 100%;
+  padding: 1rem;
+  background: #f2f2f2;
+  border: 0.063rem solid;
+  border-color: #cacaca;
+  border-radius: 0.375rem;
+  border-style: solid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c4 {
+  position: relative;
+  width: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c7 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c10 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c8 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  object-fit: contain;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: end;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  gap: 0.25rem;
+}
+
+@media (min-width:750px) {
+
+}
+
+@media (min-width:1280px) {
+
+}
+
+@media (min-width:750px) {
+
+}
+
+@media (min-width:750px) {
+
+}
+
+@media (min-width:750px) {
+
+}
+
+@media (min-width:1280px) {
+
+}
+
+@media (min-width:750px) {
+
+}
+
+@media (min-width:1280px) {
+
+}
+
+@media (min-width:750px) {
+
+}
+
+@media (min-width:1280px) {
+
+}
+
+@media (min-width:750px) {
+
+}
+
+@media (min-width:1280px) {
+
+}
+
+@media (min-width:750px) {
+
+}
+
+<div
+    className="c0 c1"
+  >
+    <div
+      className="c2 c3"
+      data-testid="oak-inline-banner"
+    >
+      <div
+        className="c4 c5"
+      >
+        <div
+          className="c6"
+        >
+          <div
+            className="c7"
+            data-testid="inline-banner-icon"
+          >
+            <img
+              alt=""
+              className="c8"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/Icon_Info_vsx3xi.svg"
+              style={
+                {
+                  "bottom": 0,
+                  "color": "transparent",
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
+        </div>
+        <div
+          className="c0 c9"
+        >
+          <div
+            className="c10"
+            data-testid="inline-banner-message"
+          >
+            Example banner text
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;

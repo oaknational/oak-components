@@ -7,6 +7,7 @@ import { OakUnitsHeader } from "./OakUnitsHeader";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { oakDefaultTheme } from "@/styles";
+import { OakInlineBanner } from "@/components";
 
 const props = {
   isLegacy: false,
@@ -29,6 +30,25 @@ describe("OakUnitsHeader", () => {
     const tree = create(
       <ThemeProvider theme={oakDefaultTheme}>
         <OakUnitsHeader {...props}></OakUnitsHeader>
+      </ThemeProvider>,
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it("matches snapshot with banner", () => {
+    const tree = create(
+      <ThemeProvider theme={oakDefaultTheme}>
+        <OakUnitsHeader
+          {...props}
+          banner={
+            <OakInlineBanner
+              isOpen={true}
+              message={"Example banner text"}
+              type="neutral"
+              $width={"100%"}
+            />
+          }
+        ></OakUnitsHeader>
       </ThemeProvider>,
     ).toJSON();
     expect(tree).toMatchSnapshot();
