@@ -55,6 +55,7 @@ export const Default: Story = {
     autoDismiss: false,
     showIcon: true,
     variant: "green",
+    onClose: () => console.log("Toast closed"),
   },
 };
 
@@ -71,5 +72,6 @@ export const LongElaborateMessage: Story = {
     autoDismiss: false,
     showIcon: true,
     variant: "pink",
+    onClose: () => console.log("Toast closed"),
   },
 };

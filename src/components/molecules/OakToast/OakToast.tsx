@@ -15,6 +15,7 @@ export type OakToastProps = {
   autoDismissDuration?: number;
   autoDismiss: boolean;
   showIcon: boolean;
+  onClose?: () => void;
 };
 
 type VariantKey =
@@ -134,6 +135,7 @@ export const OakToast = ({
   autoDismiss = false,
   autoDismissDuration = 5000,
   showIcon,
+  onClose,
 }: OakToastProps) => {
   const [isVisible, setIsVisible] = useState(true);
 
@@ -154,7 +156,13 @@ export const OakToast = ({
   const { background, icon, color } = variants[variant];
 
   return (
-    <Transition nodeRef={transitionRef} in={isVisible} timeout={300} appear>
+    <Transition
+      nodeRef={transitionRef}
+      in={isVisible}
+      timeout={300}
+      appear
+      onExited={onClose}
+    >
       {(state) => (
         <StyledFlex
           data-testid="oak-toast"
