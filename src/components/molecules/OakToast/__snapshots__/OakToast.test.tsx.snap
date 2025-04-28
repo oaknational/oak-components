@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakToast matches snapshot 1`] = `
+.c0 {
+  padding: 1rem;
+  background: #bef2bd;
+  border-radius: 0.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+<div
+  className="c0 c1"
+  data-testid="oak-toast"
+>
+  <span>
+    This is a toast message
+  </span>
+</div>
+`;
