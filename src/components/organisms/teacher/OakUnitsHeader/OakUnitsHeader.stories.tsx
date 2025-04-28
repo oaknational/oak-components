@@ -3,6 +3,8 @@ import { StoryObj, Meta } from "@storybook/react";
 
 import { OakUnitsHeader } from "./OakUnitsHeader";
 
+import { OakInlineBanner } from "@/components";
+
 const meta: Meta<typeof OakUnitsHeader> = {
   component: OakUnitsHeader,
   tags: ["autodocs"],
@@ -17,10 +19,28 @@ const meta: Meta<typeof OakUnitsHeader> = {
       options: ["Url", "Null"],
       mapping: { Url: "https://www.thenational.academy", Null: null },
     },
+    banner: {
+      control: {
+        type: "select",
+      },
+      options: ["show", "hide"],
+      mapping: {
+        empty: [],
+        show: (
+          <OakInlineBanner
+            isOpen={true}
+            message={"Example banner text"}
+            type="neutral"
+            $width={"100%"}
+          />
+        ),
+        hide: null,
+      },
+    },
   },
   parameters: {
     controls: {
-      include: ["isLegacy", "subject", "phase", "curriculumHref"],
+      include: ["isLegacy", "subject", "phase", "curriculumHref", "banner"],
     },
   },
 };

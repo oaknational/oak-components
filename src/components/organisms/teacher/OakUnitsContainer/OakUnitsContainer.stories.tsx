@@ -6,6 +6,8 @@ import { OakUnitListOptionalityItem } from "../OakUnitListOptionalityItem";
 
 import { OakUnitsContainer } from "./OakUnitsContainer";
 
+import { OakInlineBanner } from "@/components";
+
 const meta: Meta<typeof OakUnitsContainer> = {
   component: OakUnitsContainer,
   tags: ["autodocs"],
@@ -23,7 +25,24 @@ const meta: Meta<typeof OakUnitsContainer> = {
     },
     isCustomUnit: { type: "boolean" },
     customHeadingText: { type: "string" },
-    bannerText: { type: "string" },
+    banner: {
+      control: {
+        type: "select",
+      },
+      options: ["show", "hide"],
+      mapping: {
+        empty: [],
+        show: (
+          <OakInlineBanner
+            isOpen={true}
+            message={"Example banner text"}
+            type="neutral"
+            $width={"100%"}
+          />
+        ),
+        hide: null,
+      },
+    },
   },
   parameters: {
     controls: {
@@ -35,7 +54,7 @@ const meta: Meta<typeof OakUnitsContainer> = {
         "curriculumHref",
         "isCustomUnit",
         "customHeadingText",
-        "bannerText",
+        "banner",
       ],
     },
   },
