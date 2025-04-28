@@ -10,6 +10,9 @@ import { oakDefaultTheme } from "@/styles";
 
 const defautProps = {
   message: <span>This is a toast message</span>,
+  variant: "green" as const,
+  showIcon: true,
+  autoDismiss: false,
 };
 
 describe("OakToast", () => {

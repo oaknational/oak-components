@@ -2,9 +2,93 @@
 
 exports[`OakToast matches snapshot 1`] = `
 .c0 {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 22.5rem;
   padding: 1rem;
+  color: #222222;
   background: #bef2bd;
   border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 0.5rem rgba(92,92,92,20%);
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c3 {
+  position: relative;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c4 {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  background: #ffffff;
+  border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c5 {
+  position: relative;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  min-height: 1.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c7 {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c12 {
+  padding-left: 0rem;
+  padding-right: 0.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c14 {
+  position: relative;
+  color: transparent;
+  border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c16 {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  min-height: 1.5rem;
+  display: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c18 {
+  position: absolute;
+  top: 0.125rem;
+  left: 0.125rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  min-height: 1.5rem;
+  display: none;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -13,14 +97,307 @@ exports[`OakToast matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0rem;
+}
+
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c6 {
+  object-fit: contain;
+}
+
+.c17 {
+  -webkit-filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
+  filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
+  object-fit: contain;
+}
+
+.c19 {
+  -webkit-filter: invert(82%) sepia(25%) saturate(963%) hue-rotate(359deg) brightness(106%) contrast(101%);
+  filter: invert(82%) sepia(25%) saturate(963%) hue-rotate(359deg) brightness(106%) contrast(101%);
+  object-fit: contain;
+}
+
+.c20 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  object-fit: contain;
+}
+
+.c21 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c10 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+  color: transparent;
+  border-radius: 0.25rem;
+}
+
+.c10:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c11 {
+  display: inline-block;
+  position: relative;
+}
+
+.c11:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: transparent;
+}
+
+.c11:hover:not(:active) [data-icon-for="button"] img {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+}
+
+.c11:active {
+  color: transparent;
+}
+
+.c11:disabled {
+  color: transparent;
+}
+
+.c9 > :first-child:hover .highlight {
+  display: block;
+}
+
+.c9 > :first-child:active .highlight {
+  display: block;
+}
+
+.c9 > :first-child:active .shadow {
+  display: block;
+}
+
+.c9 > :first-child:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+  background: white;
+}
+
+.c2 {
+  opacity: 0.25;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 <div
-  className="c0 c1"
+  className="c0 c1 c2"
   data-testid="oak-toast"
 >
+  <div
+    className="c3"
+  >
+    <div
+      className="c4"
+    />
+    <div
+      className="c5"
+    >
+      <img
+        alt=""
+        className="c6"
+        data-nimg="fill"
+        decoding="async"
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895534/icons/Icon-Success_aiiprx.svg"
+        style={
+          {
+            "bottom": 0,
+            "color": "transparent",
+            "height": "100%",
+            "left": 0,
+            "objectFit": undefined,
+            "objectPosition": undefined,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          }
+        }
+      />
+    </div>
+  </div>
   <span>
     This is a toast message
   </span>
+  <div
+    className="c7 c8 c9"
+  >
+    <button
+      aria-label="Dismiss toast"
+      className="c10 c11"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <div
+        className="c12 c13"
+      >
+        <div
+          className="c14 c15 icon-container"
+        >
+          <div
+            className="c3"
+          >
+            <div
+              className="c16 shadow"
+            >
+              <img
+                alt=""
+                className="c17"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
+                style={
+                  {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+              />
+            </div>
+            <div
+              className="c18 highlight"
+            >
+              <img
+                alt=""
+                className="c19"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
+                style={
+                  {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+              />
+            </div>
+            <div
+              className="c5"
+              data-icon-for="button"
+            >
+              <img
+                alt=""
+                className="c20"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
+                style={
+                  {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+              />
+            </div>
+          </div>
+        </div>
+        <span
+          className="c21"
+        />
+      </div>
+    </button>
+  </div>
 </div>
 `;

@@ -23,6 +23,24 @@ const meta: Meta<typeof OakToast> = {
         type: "number",
       },
     },
+    showIcon: {
+      control: {
+        type: "boolean",
+      },
+    },
+    variant: {
+      options: [
+        "green",
+        "yellow",
+        "pink",
+        "blue",
+        "aqua",
+        "light",
+        "dark",
+        "error",
+        "success",
+      ],
+    },
   },
 };
 
@@ -35,5 +53,23 @@ export const Default: Story = {
   args: {
     message: "this is a toast message",
     autoDismiss: false,
+    showIcon: true,
+    variant: "green",
+  },
+};
+
+export const LongElaborateMessage: Story = {
+  render: (args) => <OakToast {...args} />,
+  args: {
+    message: (
+      <span>
+        "Lorem ipsum dolor sit amet, <b>consectetur adipiscing elit</b>. Sed do
+        eiusmod <i>tempor incididunt</i> ut labore et dolore magna <b>aliqua</b>
+        ."
+      </span>
+    ),
+    autoDismiss: false,
+    showIcon: true,
+    variant: "pink",
   },
 };
