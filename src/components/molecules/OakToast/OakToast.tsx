@@ -131,17 +131,20 @@ const StyledFlex = styled(OakFlex)<{ $state: TransitionStatus }>`
 export const OakToast = ({
   message,
   variant,
-  autoDismiss,
-  autoDismissDuration,
+  autoDismiss = false,
+  autoDismissDuration = 5000,
   showIcon,
 }: OakToastProps) => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     if (autoDismiss && isVisible) {
-      const timer = setTimeout(() => {
-        setIsVisible(false);
-      }, autoDismissDuration || 5000);
+      const timer = setTimeout(
+        () => {
+          setIsVisible(false);
+        },
+        Math.max(5000, autoDismissDuration),
+      );
       return () => clearTimeout(timer);
     }
   }, [autoDismiss, autoDismissDuration, isVisible]);
