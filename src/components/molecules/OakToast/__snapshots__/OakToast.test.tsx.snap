@@ -29,25 +29,23 @@ exports[`OakToast matches snapshot 1`] = `
 
 .c4 {
   position: absolute;
-  top: 0.25rem;
-  left: 0.25rem;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
   background: #ffffff;
   border-radius: 6.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c5 {
+.c6 {
   position: relative;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  height: 1.5rem;
-  min-height: 1.5rem;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c7 {
+.c8 {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -55,20 +53,20 @@ exports[`OakToast matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c12 {
+.c13 {
   padding-left: 0rem;
   padding-right: 0.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c14 {
+.c15 {
   position: relative;
   color: transparent;
   border-radius: 6.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c16 {
+.c17 {
   position: absolute;
   top: 0.25rem;
   left: 0.25rem;
@@ -80,7 +78,7 @@ exports[`OakToast matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c18 {
+.c19 {
   position: absolute;
   top: 0.125rem;
   left: 0.125rem;
@@ -92,23 +90,32 @@ exports[`OakToast matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c6 {
+.c21 {
+  position: relative;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  min-height: 1.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c7 {
   object-fit: contain;
 }
 
-.c17 {
+.c18 {
   -webkit-filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
   filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
   object-fit: contain;
 }
 
-.c19 {
+.c20 {
   -webkit-filter: invert(82%) sepia(25%) saturate(963%) hue-rotate(359deg) brightness(106%) contrast(101%);
   filter: invert(82%) sepia(25%) saturate(963%) hue-rotate(359deg) brightness(106%) contrast(101%);
   object-fit: contain;
 }
 
-.c20 {
+.c22 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
@@ -126,14 +133,14 @@ exports[`OakToast matches snapshot 1`] = `
   gap: 0.75rem;
 }
 
-.c8 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c13 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -152,7 +159,7 @@ exports[`OakToast matches snapshot 1`] = `
   gap: 0rem;
 }
 
-.c15 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -167,7 +174,7 @@ exports[`OakToast matches snapshot 1`] = `
   justify-content: center;
 }
 
-.c21 {
+.c23 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -178,7 +185,7 @@ exports[`OakToast matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c10 {
+.c11 {
   background: none;
   color: inherit;
   border: none;
@@ -193,50 +200,55 @@ exports[`OakToast matches snapshot 1`] = `
   border-radius: 0.25rem;
 }
 
-.c10:disabled {
+.c11:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c11 {
+.c12 {
   display: inline-block;
   position: relative;
 }
 
-.c11:hover {
+.c12:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: transparent;
 }
 
-.c11:hover:not(:active) [data-icon-for="button"] img {
+.c12:hover:not(:active) [data-icon-for="button"] img {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
 }
 
-.c11:active {
+.c12:active {
   color: transparent;
 }
 
-.c11:disabled {
+.c12:disabled {
   color: transparent;
 }
 
-.c9 > :first-child:hover .highlight {
+.c10 > :first-child:hover .highlight {
   display: block;
 }
 
-.c9 > :first-child:active .highlight {
+.c10 > :first-child:active .highlight {
   display: block;
 }
 
-.c9 > :first-child:active .shadow {
+.c10 > :first-child:active .shadow {
   display: block;
 }
 
-.c9 > :first-child:focus-visible {
+.c10 > :first-child:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
   background: white;
+}
+
+.c5 {
+  top: 6px;
+  left: 6px;
 }
 
 .c2 {
@@ -259,14 +271,14 @@ exports[`OakToast matches snapshot 1`] = `
     className="c3"
   >
     <div
-      className="c4"
+      className="c4 c5"
     />
     <div
-      className="c5"
+      className="c6"
     >
       <img
         alt=""
-        className="c6"
+        className="c7"
         data-nimg="fill"
         decoding="async"
         loading="lazy"
@@ -294,30 +306,30 @@ exports[`OakToast matches snapshot 1`] = `
     This is a toast message
   </span>
   <div
-    className="c7 c8 c9"
+    className="c8 c9 c10"
   >
     <button
       aria-label="Dismiss"
-      className="c10 c11"
+      className="c11 c12"
       onClick={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
     >
       <div
-        className="c12 c13"
+        className="c13 c14"
       >
         <div
-          className="c14 c15 icon-container"
+          className="c15 c16 icon-container"
         >
           <div
             className="c3"
           >
             <div
-              className="c16 shadow"
+              className="c17 shadow"
             >
               <img
                 alt=""
-                className="c17"
+                className="c18"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"
@@ -341,36 +353,7 @@ exports[`OakToast matches snapshot 1`] = `
               />
             </div>
             <div
-              className="c18 highlight"
-            >
-              <img
-                alt=""
-                className="c19"
-                data-nimg="fill"
-                decoding="async"
-                loading="lazy"
-                onError={[Function]}
-                onLoad={[Function]}
-                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
-                style={
-                  {
-                    "bottom": 0,
-                    "color": "transparent",
-                    "height": "100%",
-                    "left": 0,
-                    "objectFit": undefined,
-                    "objectPosition": undefined,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                    "width": "100%",
-                  }
-                }
-              />
-            </div>
-            <div
-              className="c5"
-              data-icon-for="button"
+              className="c19 highlight"
             >
               <img
                 alt=""
@@ -397,10 +380,39 @@ exports[`OakToast matches snapshot 1`] = `
                 }
               />
             </div>
+            <div
+              className="c21"
+              data-icon-for="button"
+            >
+              <img
+                alt=""
+                className="c22"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
+                style={
+                  {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+              />
+            </div>
           </div>
         </div>
         <span
-          className="c21"
+          className="c23"
         />
       </div>
     </button>

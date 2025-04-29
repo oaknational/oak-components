@@ -38,21 +38,24 @@ type Variant = Record<
   }
 >;
 
+const SuccessIconBackground = styled(OakBox)`
+  top: 6px;
+  left: 6px;
+`;
+
 const SuccessIcon = (
   <OakBox $position="relative">
-    <OakBox
-      $width="all-spacing-4"
-      $height="all-spacing-4"
+    <SuccessIconBackground
+      $width="all-spacing-5"
+      $height="all-spacing-5"
       $background="white"
       $borderRadius="border-radius-circle"
       $position="absolute"
-      $top="all-spacing-1"
-      $left="all-spacing-1"
     />
     <OakIcon
       iconName="success"
-      $width="all-spacing-6"
-      $height="all-spacing-6"
+      $width="all-spacing-7"
+      $height="all-spacing-7"
     />
   </OakBox>
 );
@@ -99,8 +102,8 @@ const variants: Variant = {
       <OakIcon
         iconName="warning"
         $colorFilter="text-inverted"
-        $height="all-spacing-6"
-        $width="all-spacing-6"
+        $height="all-spacing-7"
+        $width="all-spacing-7"
       />
     ),
     color: "white",
