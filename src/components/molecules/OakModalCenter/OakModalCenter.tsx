@@ -30,6 +30,10 @@ export type OakModalCenterProps = {
    */
   modalFlexProps?: Partial<OakFlexProps & HTMLAttributes<Element>>;
   /**
+   * Override HTMLAttributes & OakFlex props for the outer modal container
+   */
+  modalOuterFlexProps?: Partial<OakFlexProps & HTMLAttributes<Element>>;
+  /**
    * Override HTMLAttributes & OakFlex props for the inner modal container
    */
   modalInnerFlexProps?: Partial<OakFlexProps & HTMLAttributes<Element>>;
@@ -97,6 +101,7 @@ const FadeInFlex = styled(OakFlex)<{ $state: TransitionStatus }>`
  * - **disableEscapeKey?** \-       If true, pressing the escape key will not call onClose
  * - **hideCloseButton?** \-        If true, the close button will be hidden
  * - **modalFlexProps?** \-         Override HTMLAttributes & OakFlex props for the modal container
+ * - **modalOuterFlexProps?** \-    Override HTMLAttributes & OakFlex props for the outer modal container
  * - **modalInnerFlexProps?** \-    Override HTMLAttributes & OakFlex props for the inner modal container
  * - **backdropFlexProps?** \-      Override HTMLAttributes & OakFlex props for the backdrop container
  * - **footerSlot?** \-             Fixed area at the bottom of the modal, this will remain fixed in view if the content is scrollable
@@ -110,6 +115,7 @@ export const OakModalCenter = ({
   disableEscapeKey = false,
   hideCloseButton = false,
   modalFlexProps,
+  modalOuterFlexProps,
   modalInnerFlexProps,
   backdropFlexProps,
   footerSlot,
@@ -190,6 +196,7 @@ export const OakModalCenter = ({
             $maxWidth="all-spacing-23"
             $width="100%"
             $pa="inner-padding-l"
+            {...modalOuterFlexProps}
           >
             <FocusOnBox
               onEscapeKey={() => !disableEscapeKey && onClose()}
