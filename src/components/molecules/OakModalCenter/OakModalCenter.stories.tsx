@@ -32,6 +32,8 @@ const meta: Meta<typeof OakModalCenter> = {
         "children",
         "isOpen",
         "modalFlexProps",
+        "modalOuterFlexProps",
+        "modalInnerFlexProps",
         "backdropFlexProps",
         "onClose",
         "hideCloseButton",
