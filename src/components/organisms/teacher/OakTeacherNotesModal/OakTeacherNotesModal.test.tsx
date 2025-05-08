@@ -93,4 +93,19 @@ describe("OakTeacherNotesModal", () => {
     fireEvent.click(screen.getByRole("button", { name: /bullet list/i }));
     expect(defaultProps.onBulletListClick).toHaveBeenCalled();
   });
+
+  it("disables the share link button when shareLinkDisabled is true", () => {
+    renderWithTheme(
+      <OakTeacherNotesModal {...defaultProps} shareLinkDisabled={true} />,
+    );
+    expect(screen.getByRole("button", { name: /share link/i })).toBeDisabled();
+  });
+
+  it("renders the footer when provided", () => {
+    const footerContent = <div>Footer Content</div>;
+    const { getByText } = renderWithTheme(
+      <OakTeacherNotesModal {...defaultProps} footer={footerContent} />,
+    );
+    expect(getByText("Footer Content")).toBeInTheDocument();
+  });
 });

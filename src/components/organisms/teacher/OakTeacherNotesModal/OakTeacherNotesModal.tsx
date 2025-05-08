@@ -1,6 +1,7 @@
 import React from "react";
 
 import {
+  OakInlineBanner,
   OakLink,
   OakModalCenter,
   OakSmallPrimaryButton,
@@ -45,7 +46,7 @@ const EditorContainer = ({
       <OakFlex
         $pa={"inner-padding-s"}
         $background={"bg-primary"}
-        $height={"all-spacing-16"}
+        $height={"all-spacing-19"}
         $minHeight={"all-spacing-12"}
         $borderRadius={"border-radius-s"}
         $borderColor={"border-primary"}
@@ -90,6 +91,8 @@ export type OakTeacherNotesModalProps = {
   noteShared: boolean;
   error?: boolean;
   termsAndConditionsHref: string;
+  shareLinkDisabled?: boolean;
+  footer?: React.ReactNode;
 } & EditorContainerProps;
 
 export const OakTeacherNotesModal = ({
@@ -100,6 +103,8 @@ export const OakTeacherNotesModal = ({
   noteShared,
   error,
   termsAndConditionsHref,
+  shareLinkDisabled,
+  footer,
   ...rest
 }: OakTeacherNotesModalProps) => {
   let message = undefined;
@@ -157,16 +162,24 @@ export const OakTeacherNotesModal = ({
           <OakGridArea $colSpan={[0, 6]} $display={["none", "block"]}>
             {messageRender}
           </OakGridArea>
-          <OakGridArea $colSpan={[12, 6]}>
+          <OakGridArea $colSpan={12}>
             <OakFlex
               $gap="space-between-s"
               $width={"100%"}
               $justifyContent={["center", "flex-end"]}
+              $alignItems="center"
+              $flexDirection={["column", "row"]}
             >
+              {footer && (
+                <OakFlex $flexGrow={1} $alignSelf="flex-start">
+                  {footer}
+                </OakFlex>
+              )}
               <OakSmallPrimaryButton
                 onClick={onShareClicked}
                 iconName="copy"
                 isTrailingIcon
+                disabled={shareLinkDisabled}
               >
                 Share link
               </OakSmallPrimaryButton>
@@ -180,13 +193,32 @@ export const OakTeacherNotesModal = ({
         >
           {messageRender}
         </OakFlex>
-        <OakP>
-          Do not include personal, sensitive, or pupil information. See our{" "}
-          <OakLink href={termsAndConditionsHref} target="_blank">
-            Terms & conditions
-          </OakLink>{" "}
-          for guidance.
-        </OakP>
+        <OakInlineBanner
+          isOpen={true}
+          type="alert"
+          message={
+            <>
+              <OakP $font="heading-light-7">
+                Please do not include any personal or sensitive information that
+                could be used to identify, locate, or contact an individual,
+                either directly or indirectly.
+              </OakP>
+              <OakP $font="body-2" $mt="space-between-sssx">
+                Names, email addresses, or other personal information will be
+                redacted from your note to help keep everyone safe. For more
+                guidance, see our{" "}
+                <OakLink
+                  target={"_blank"}
+                  href="https://www.thenational.academy/legal/terms-and-conditions"
+                  aria-label="Oak's terms and conditions(opens in a new tab)"
+                >
+                  Terms & conditions
+                </OakLink>
+                .
+              </OakP>
+            </>
+          }
+        />
       </OakFlex>
     </OakModalCenter>
   );

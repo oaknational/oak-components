@@ -8,6 +8,7 @@ import StarterKit from "@tiptap/starter-kit";
 import { OakTeacherNotesModal } from "./OakTeacherNotesModal";
 
 import { OakSecondaryButton } from "@/components/molecules";
+import { OakFlex, OakIcon, OakSpan } from "@/components";
 
 // This component is just to demo how to insert a Tiptap editor into the modal
 // This work should actally be done from OWA to avoid bloating oak components
@@ -82,6 +83,7 @@ const meta: Meta<typeof OakTeacherNotesModal> = {
       type: "boolean",
     },
     remainingCharacters: { type: "number" },
+    shareLinkDisabled: { type: "boolean" },
   },
   parameters: {
     controls: {
@@ -92,6 +94,7 @@ const meta: Meta<typeof OakTeacherNotesModal> = {
         "error",
         "isBold",
         "isBulletList",
+        "shareLinkDisabled",
       ],
     },
   },
@@ -137,6 +140,22 @@ export const Default: Story = {
   },
 };
 
+const getMsgs = () => {
+  return [
+    "Please do not include names of individuals. This information will be redacted.",
+    "Please do not include email addresses. This information will be redacted.",
+    "Please do not include phone numbers. This information will be redacted.",
+    "Please do not include addresses. This information will be redacted.",
+  ].map((m) => (
+    <OakFlex $alignItems="center" $gap="space-between-ssx" role="alert">
+      <OakIcon iconName="error" $colorFilter="icon-error" />
+      <OakSpan $color="icon-error" $font="body-3-bold">
+        {m}
+      </OakSpan>
+    </OakFlex>
+  ));
+};
+
 export const WithTipTap: Story = {
   render: (args) => {
     const [, updateArgs] = useArgs();
@@ -152,6 +171,7 @@ export const WithTipTap: Story = {
           {...args}
           onClose={onClose}
           editorNode={editorNode}
+          footer={<OakFlex $flexDirection="column">{getMsgs()}</OakFlex>}
         />
       </>
     );
