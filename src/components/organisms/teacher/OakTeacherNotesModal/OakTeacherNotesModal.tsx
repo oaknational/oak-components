@@ -46,7 +46,7 @@ const EditorContainer = ({
       <OakFlex
         $pa={"inner-padding-s"}
         $background={"bg-primary"}
-        $height={"all-spacing-16"}
+        $height={"all-spacing-19"}
         $minHeight={"all-spacing-12"}
         $borderRadius={"border-radius-s"}
         $borderColor={"border-primary"}
@@ -207,7 +207,11 @@ export const OakTeacherNotesModal = ({
                 Names, email addresses, or other personal information will be
                 redacted from your note to help keep everyone safe. For more
                 guidance, see our{" "}
-                <OakLink href="https://www.thenational.academy/legal/terms-and-conditions">
+                <OakLink
+                  target={"_blank"}
+                  href="https://www.thenational.academy/legal/terms-and-conditions"
+                  aria-label="Oak's terms and conditions(opens in a new tab)"
+                >
                   Terms & conditions
                 </OakLink>
                 .

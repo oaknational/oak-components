@@ -110,7 +110,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
 
 .c29 {
   overflow-y: scroll;
-  height: 7.5rem;
+  height: 15rem;
   min-height: 4.5rem;
   padding: 0.75rem;
   background: #ffffff;
@@ -1213,8 +1213,10 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
                         Names, email addresses, or other personal information will be redacted from your note to help keep everyone safe. For more guidance, see our
                          
                         <a
+                          aria-label="Oak's terms and conditions(opens in a new tab)"
                           className="c62"
                           href="https://www.thenational.academy/legal/terms-and-conditions"
+                          target="_blank"
                         >
                           <span
                             className="c63"
