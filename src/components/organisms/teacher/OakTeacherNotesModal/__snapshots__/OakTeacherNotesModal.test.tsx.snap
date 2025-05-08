@@ -156,6 +156,37 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
+.c54 {
+  padding: 1rem;
+  background: #fff7cc;
+  border: 0.063rem solid;
+  border-color: #f6e8a0;
+  border-radius: 0.375rem;
+  border-style: solid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c56 {
+  position: relative;
+  width: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c59 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
 .c21 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
@@ -302,6 +333,13 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -321,6 +359,61 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
+}
+
+.c55 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: end;
+}
+
+.c57 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.c58 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  gap: 0.25rem;
 }
 
 .c31 {
@@ -399,7 +492,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   text-align: left;
 }
 
-.c56 {
+.c63 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -414,8 +507,27 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c54 {
+.c60 {
   font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c61 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+  margin-top: 0.25rem;
 }
 
 .c14 {
@@ -539,7 +651,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   background: transparent;
 }
 
-.c55 {
+.c62 {
   display: inline;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -562,19 +674,19 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   color: #0d24c4;
 }
 
-.c55:focus-visible {
+.c62:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c55:visited {
+.c62:visited {
   color: #081676;
 }
 
-.c55:active {
+.c62:active {
   color: #081676;
 }
 
-.c55[disabled] {
+.c62[disabled] {
   cursor: not-allowed;
   color: #808080;
 }
@@ -706,6 +818,14 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
 
 @media (min-width:750px) {
   .c47 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:750px) {
+  .c47 {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
@@ -737,15 +857,9 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   }
 }
 
-@media (min-width:750px) {
-  .c45 {
-    grid-column: span 6;
-  }
-}
-
 @media (hover:hover) {
-  .c55:hover,
-  .c55:visited:hover {
+  .c62:hover,
+  .c62:visited:hover {
     color: #0a1d9d;
   }
 }
@@ -1041,25 +1155,79 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
               <div
                 className="c52 c53"
               />
-              <p
-                className="c54"
+              <div
+                className="c54 c55"
+                data-testid="oak-inline-banner"
               >
-                Do not include personal, sensitive, or pupil information. See our
-                 
-                <a
-                  className="c55"
-                  href="https://oak.app/terms"
-                  target="_blank"
+                <div
+                  className="c56 c57"
                 >
-                  <span
-                    className="c56"
+                  <div
+                    className="c16"
                   >
-                    Terms & conditions
-                  </span>
-                </a>
-                 
-                for guidance.
-              </p>
+                    <div
+                      className="c20"
+                      data-testid="inline-banner-icon"
+                    >
+                      <img
+                        alt=""
+                        className="c21"
+                        data-nimg="fill"
+                        decoding="async"
+                        loading="lazy"
+                        onError={[Function]}
+                        onLoad={[Function]}
+                        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895207/icons/ecejtvqerx81prxyxh9b.svg"
+                        style={
+                          {
+                            "bottom": 0,
+                            "color": "transparent",
+                            "height": "100%",
+                            "left": 0,
+                            "objectFit": undefined,
+                            "objectPosition": undefined,
+                            "position": "absolute",
+                            "right": 0,
+                            "top": 0,
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="c46 c58"
+                  >
+                    <div
+                      className="c59"
+                      data-testid="inline-banner-message"
+                    >
+                      <p
+                        className="c60"
+                      >
+                        Please do not include any personal or sensitive information that could be used to identify, locate, or contact an individual, either directly or indirectly.
+                      </p>
+                      <p
+                        className="c61"
+                      >
+                        Names, email addresses, or other personal information will be redacted from your note to help keep everyone safe. For more guidance, see our
+                         
+                        <a
+                          className="c62"
+                          href="https://www.thenational.academy/legal/terms-and-conditions"
+                        >
+                          <span
+                            className="c63"
+                          >
+                            Terms & conditions
+                          </span>
+                        </a>
+                        .
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
