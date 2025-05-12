@@ -16,6 +16,7 @@ export type OakToastProps = {
   autoDismiss: boolean;
   showIcon: boolean;
   onClose?: () => void;
+  id?: number;
 };
 
 type VariantKey =
@@ -139,6 +140,7 @@ export const OakToast = ({
   autoDismissDuration = 5000,
   showIcon,
   onClose,
+  id,
 }: OakToastProps) => {
   const [isVisible, setIsVisible] = useState(true);
 
@@ -152,7 +154,7 @@ export const OakToast = ({
       );
       return () => clearTimeout(timer);
     }
-  }, [autoDismiss, autoDismissDuration, isVisible]);
+  }, [autoDismiss, autoDismissDuration, isVisible, id]);
 
   const transitionRef = React.useRef<HTMLDivElement>(null);
 

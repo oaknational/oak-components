@@ -1,7 +1,12 @@
 import React from "react";
 import { StoryObj, Meta } from "@storybook/react";
+import { useArgs } from "@storybook/preview-api";
+
+import { OakPrimaryButton } from "../OakPrimaryButton";
 
 import { OakToast } from "./OakToast";
+
+import { OakFlex } from "@/components/atoms";
 
 const meta: Meta<typeof OakToast> = {
   title: "components/molecules/OakToast",
@@ -55,6 +60,7 @@ export const Default: Story = {
     autoDismiss: false,
     showIcon: true,
     variant: "green",
+    id: 1,
     onClose: () => console.log("Toast closed"),
   },
 };
@@ -72,6 +78,31 @@ export const LongElaborateMessage: Story = {
     autoDismiss: false,
     showIcon: true,
     variant: "pink",
+    id: 1,
+    onClose: () => console.log("Toast closed"),
+  },
+};
+
+export const ExtendibleAutoDismiss: Story = {
+  render: (args) => {
+    const [{ id }, updateArgs] = useArgs();
+    const replaceToast = () => {
+      updateArgs({ id: id + 1, variant: "pink" });
+    };
+    return (
+      <OakFlex $flexDirection="column" $gap="all-spacing-5">
+        <OakPrimaryButton onClick={replaceToast}>Update toast</OakPrimaryButton>
+        <OakToast {...args} />
+      </OakFlex>
+    );
+  },
+  args: {
+    message: "this is a toast message",
+    autoDismiss: true,
+    autoDismissDuration: 5000,
+    showIcon: true,
+    variant: "blue",
+    id: 1,
     onClose: () => console.log("Toast closed"),
   },
 };
