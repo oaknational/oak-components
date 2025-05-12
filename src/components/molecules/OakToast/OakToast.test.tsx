@@ -1,7 +1,7 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
-import { screen, waitFor } from "@testing-library/react";
+import { act, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import { OakToast } from "./OakToast";
@@ -15,9 +15,16 @@ const defautProps = {
   variant: "green" as const,
   showIcon: true,
   autoDismiss: false,
+  id: 1,
 };
 
 describe("OakToast", () => {
+  beforeEach(() => {
+    jest.useFakeTimers();
+  });
+  afterEach(() => {
+    jest.useRealTimers();
+  });
   it("renders", () => {
     renderWithTheme(<OakToast {...defautProps} />);
     expect(screen.getByTestId("oak-toast")).toBeInTheDocument();
@@ -27,9 +34,8 @@ describe("OakToast", () => {
     renderWithTheme(<OakToast {...defautProps} autoDismiss />);
     const toast = screen.getByTestId("oak-toast");
     expect(toast).toBeVisible();
-    setTimeout(() => {
-      expect(toast).not.toBeVisible();
-    }, 5000);
+    act(() => jest.advanceTimersByTime(5300));
+    await waitFor(() => expect(toast).not.toBeVisible());
   });
 
   it("disappears when close is clicked", async () => {
@@ -45,6 +51,20 @@ describe("OakToast", () => {
     renderWithTheme(<OakToast {...defautProps} autoDismiss />);
     const closeButton = screen.queryByRole("button");
     expect(closeButton).not.toBeInTheDocument();
+  });
+
+  it("extends the autodismiss duration when reopened", async () => {
+    const { rerender } = renderWithTheme(
+      <OakToast {...defautProps} autoDismiss id={1} />,
+    );
+    const toast = screen.getByTestId("oak-toast");
+    expect(toast).toBeVisible();
+    jest.advanceTimersByTime(2000);
+    rerender(<OakToast {...defautProps} autoDismiss id={2} />);
+    jest.advanceTimersByTime(4000);
+    expect(toast).toBeVisible();
+    jest.advanceTimersByTime(2000);
+    await waitFor(() => expect(toast).not.toBeVisible());
   });
 
   it("matches snapshot", () => {
