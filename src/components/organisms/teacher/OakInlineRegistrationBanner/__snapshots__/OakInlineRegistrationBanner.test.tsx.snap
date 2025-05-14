@@ -440,6 +440,7 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
       </p>
       <form
         className="c1"
+        noValidate={true}
         onSubmit={[Function]}
       >
         <div
@@ -461,11 +462,12 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
                 className="c1 c15"
               >
                 <input
+                  autoComplete="email"
                   className="c16"
                   onChange={[Function]}
                   onFocus={[Function]}
                   placeholder="Enter email address"
-                  type="text"
+                  type="email"
                   value=""
                 />
               </div>

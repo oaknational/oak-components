@@ -45,6 +45,7 @@ export const OakInlineRegistrationBanner = (
           {bodyText}
           <OakBox
             as="form"
+            noValidate
             onSubmit={async (e) => {
               e.preventDefault();
               setSuccess(false);
@@ -87,6 +88,8 @@ export const OakInlineRegistrationBanner = (
                 />
 
                 <OakTextInput
+                  type="email"
+                  autoComplete="email"
                   placeholder="Enter email address"
                   $maxHeight="all-spacing-10"
                   value={email}
