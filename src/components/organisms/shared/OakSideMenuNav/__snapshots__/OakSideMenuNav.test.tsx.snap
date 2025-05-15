@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakSideMenuNav matches snapshot 1`] = `
+[
+  .c1 {
+  padding: 3rem;
+  background: #dff9de;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c3 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+  color: #575757;
+}
+
+.c0 {
+  outline: none;
+}
+
+@media (min-width:750px) {
+  .c1 {
+    padding: 0rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c1 {
+    background: #ffffff;
+  }
+}
+
+<nav
+    className="c0"
+  >
+    <div
+      className="c1 c2"
+    >
+      <h4
+        className="c3"
+      >
+        Test Heading
+      </h4>
+    </div>
+  </nav>,
+  ",",
+]
+`;
