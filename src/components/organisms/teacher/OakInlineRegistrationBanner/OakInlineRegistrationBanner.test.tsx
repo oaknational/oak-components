@@ -55,7 +55,7 @@ describe("OakInlineRegistrationBanner", () => {
     );
     expect(errorMessage).toBeInTheDocument();
   });
-  it("shows and error message when onSubmit fails", async () => {
+  it("shows an error message when onSubmit fails", async () => {
     renderWithTheme(
       <OakInlineRegistrationBanner
         onSubmit={(email: string) => Promise.reject(new Error(email))}
