@@ -50,7 +50,7 @@ If you're using TypeScript you might want to add `@types/styled-components` to y
 ## Development
 
 1. Copy the example env config `cp .env.example .env`
-2. Ask a colleague for the values to populate `.env`
+2. Populate `.env` with values from the 1Password developer vault, search for: "Oak components .env"
 3. run `nvm use`
 4. run `npm install`
 5. To view the storybook run `npm run storybook`
