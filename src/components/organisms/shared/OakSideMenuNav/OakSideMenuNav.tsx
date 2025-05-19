@@ -65,7 +65,7 @@ export default function OakSideMenuNav(props: OakSideMenuNavProps) {
   const [selectedHref, setSelectedHref] = useState<string | null>(null);
 
   return (
-    <StyledNav>
+    <StyledNav aria-label="side navigation">
       <OakFlex
         $flexDirection="column"
         $background={["bg-decorative1-subdued", "white"]}
@@ -92,6 +92,7 @@ export default function OakSideMenuNav(props: OakSideMenuNavProps) {
                 isSelected={selectedHref === item.href}
                 $flexDirection={["row", "column"]}
                 onClick={() => setSelectedHref(item.href)}
+                aria-current={selectedHref === item.href ? "true" : undefined}
               >
                 <OakSpan $font="heading-light-7">{item.heading}</OakSpan>
                 {item.subheading && (

@@ -191,6 +191,7 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
 }
 
 <nav
+    aria-label="side navigation"
     className="c0"
   >
     <div
