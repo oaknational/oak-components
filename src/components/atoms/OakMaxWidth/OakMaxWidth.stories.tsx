@@ -34,7 +34,7 @@ export default meta;
 type Story = StoryObj<typeof OakMaxWidth>;
 
 export const DefaultOakMaxWidth: Story = (args: Partial<OakMaxWidthProps>) => (
-  <OakMaxWidth data-testId="OakMaxWidth-id" {...args}>
+  <OakMaxWidth data-testid="OakMaxWidth-id" {...args}>
     A simple flex container with pre set padding and max width
   </OakMaxWidth>
 );

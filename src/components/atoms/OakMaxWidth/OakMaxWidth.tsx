@@ -11,13 +11,11 @@ export type OakMaxWidthProps = OakFlexProps;
  * This will make it easier to create full browser width or custom width containers on the same page
  * with different background colors / image url.
  */
-export const OakMaxWidth = styled(OakFlex)``;
-
-OakMaxWidth.defaultProps = {
+export const OakMaxWidth = styled(OakFlex).attrs<OakMaxWidthProps>(() => ({
   $maxWidth: ["all-spacing-21", "all-spacing-24"],
   $ph: ["inner-padding-none", "inner-padding-s"],
   $flexDirection: "column",
   $flexGrow: 1,
   $width: "100%",
   $mh: "auto",
-};
+}))``;
