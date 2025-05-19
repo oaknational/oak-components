@@ -9,9 +9,20 @@ import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { OakThemeProvider } from "@/components/atoms";
 import { oakDefaultTheme } from "@/styles";
 
-
 const baseProps = {
   heading: "Test Heading",
+  menuItems: [
+    {
+      heading: "Test Item 1",
+      subheading: "Test Subheading 1",
+      href: "#test1",
+    },
+    {
+      heading: "Test Item 2",
+      subheading: "Test Subheading 2",
+      href: "#test2",
+    },
+  ],
 };
 
 describe("OakSideMenuNav", () => {

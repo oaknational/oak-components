@@ -15,7 +15,6 @@ const meta: Meta<typeof OakSideMenuNav> = {
       },
     },
   },
-  args: {},
 };
 
 export default meta;
@@ -32,5 +31,27 @@ export const Default: Story = {
   ),
   args: {
     heading: "Test Heading",
+    menuItems: [
+      {
+        heading: "Test Item 1",
+        subheading: "Test Subheading 1",
+        href: "#test1",
+      },
+      {
+        heading: "Test Item 2",
+        subheading: "Test Subheading 2",
+        href: "#test2",
+      },
+      {
+        heading: "Test Item 3",
+        subheading: "Test Subheading 3",
+        href: "#test3",
+      },
+      {
+        heading: "Test Item 4",
+        subheading: "Test Subheading 4",
+        href: "#test4",
+      },
+    ],
   },
 };
