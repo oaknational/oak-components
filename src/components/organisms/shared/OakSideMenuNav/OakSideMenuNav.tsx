@@ -30,6 +30,7 @@ const StyledLink = styled("a")<
     border-left: ${(props) =>
       props.isSelected ? "4px solid black" : "4px solid transparent"};
     :hover {
+      text-decoration: underline;
       border-color: ${(props) =>
         props.isSelected
           ? parseColor("bg-btn-primary-hover")

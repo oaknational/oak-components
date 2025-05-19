@@ -128,6 +128,7 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
 .c6:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
   border-color: transparent;
+  border-radius: 4px;
 }
 
 @media (min-width:750px) {
@@ -154,6 +155,8 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
   }
 
   .c6:hover {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
     border-color: #bef2bd;
   }
 }
