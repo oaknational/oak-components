@@ -28,7 +28,7 @@ const StyledLink = styled("a")<
 
   @media (min-width: ${getBreakpoint("small")}px) {
     border-left: ${(props) =>
-      props.isSelected ? "4px solid black" : "4px solid transparent"};
+      props.isSelected ? "4px solid #222222" : "4px solid transparent"};
     :hover {
       text-decoration: underline;
       border-color: ${(props) =>
@@ -94,7 +94,9 @@ export const OakSideMenuNav = (props: OakSideMenuNavProps) => {
                 onClick={() => setSelectedHref(item.href)}
                 aria-current={selectedHref === item.href ? "true" : undefined}
               >
-                <OakSpan $font="heading-light-7">{item.heading}</OakSpan>
+                <OakSpan $font="heading-light-7" $color="text-primary">
+                  {item.heading}
+                </OakSpan>
                 {item.subheading && (
                   <OakSpan $font="body-3" $color="text-subdued">
                     {item.subheading}
