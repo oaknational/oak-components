@@ -1,7 +1,7 @@
 import React from "react";
 import { StoryObj, Meta } from "@storybook/react";
 
-import OakSideMenuNav from "./OakSideMenuNav";
+import { OakSideMenuNav } from "./OakSideMenuNav";
 
 import { OakGrid, OakGridArea } from "@/components/atoms";
 

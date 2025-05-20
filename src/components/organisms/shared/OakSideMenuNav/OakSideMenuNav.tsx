@@ -60,7 +60,7 @@ export type OakSideMenuNavProps = {
   menuItems: MenuItemProps[];
 };
 
-export default function OakSideMenuNav(props: OakSideMenuNavProps) {
+export const OakSideMenuNav = (props: OakSideMenuNavProps) => {
   const { heading, menuItems } = props;
   const [selectedHref, setSelectedHref] = useState<string | null>(null);
 
@@ -112,4 +112,4 @@ export default function OakSideMenuNav(props: OakSideMenuNavProps) {
       </OakFlex>
     </StyledNav>
   );
-}
+};

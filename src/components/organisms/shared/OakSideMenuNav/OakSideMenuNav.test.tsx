@@ -3,7 +3,7 @@ import "@testing-library/jest-dom";
 import { screen } from "@testing-library/react";
 import { create } from "react-test-renderer";
 
-import OakSideMenuNav from "./OakSideMenuNav";
+import { OakSideMenuNav } from "./OakSideMenuNav";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { OakThemeProvider } from "@/components/atoms";
