@@ -21,6 +21,14 @@ export default meta;
 
 type Story = StoryObj<typeof OakSideMenuNav>;
 
+const generateTestItems = (count: number) => {
+  return Array.from({ length: count }, (_, index) => ({
+    heading: `Test Item ${index + 1}`,
+    subheading: `Test Subheading ${index + 1}`,
+    href: `#test${index + 1}`,
+  }));
+};
+
 export const Default: Story = {
   render: (args) => (
     <OakGrid $background="pink" $width="100%" $height="100vh">
@@ -31,27 +39,25 @@ export const Default: Story = {
   ),
   args: {
     heading: "Test Heading",
-    menuItems: [
-      {
-        heading: "Test Item 1",
-        subheading: "Test Subheading 1",
-        href: "#test1",
-      },
-      {
-        heading: "Test Item 2",
-        subheading: "Test Subheading 2",
-        href: "#test2",
-      },
-      {
-        heading: "Test Item 3",
-        subheading: "Test Subheading 3",
-        href: "#test3",
-      },
-      {
-        heading: "Test Item 4",
-        subheading: "Test Subheading 4",
-        href: "#test4",
-      },
-    ],
+    menuItems: generateTestItems(4),
+  },
+};
+
+export const LongList: Story = {
+  render: (args) => (
+    <OakGrid
+      $background="pink"
+      $width="100%"
+      $maxHeight="all-spacing-20"
+      $height="100vh"
+    >
+      <OakGridArea $colSpan={[12, 2]} $overflow="auto">
+        <OakSideMenuNav {...args} />
+      </OakGridArea>
+    </OakGrid>
+  ),
+  args: {
+    heading: "Test Heading",
+    menuItems: generateTestItems(20),
   },
 };
