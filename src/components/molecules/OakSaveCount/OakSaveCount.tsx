@@ -51,7 +51,10 @@ export const OakSaveCount = ({ count, href, loading }: OakSaveCountProps) => {
           $width="all-spacing-6"
         />
         <OakBox $width="all-spacing-6" $textAlign="center">
-          <OakSpan $font="heading-light-7">
+          <OakSpan
+            $font="heading-light-7"
+            aria-label={`${count} saved unit${count === 1 ? "" : "s"}`}
+          >
             {count > 99 ? "99+" : count}
           </OakSpan>
         </OakBox>
