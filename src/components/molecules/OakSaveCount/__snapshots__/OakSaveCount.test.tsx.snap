@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakSaveCount should match snapshot 1`] = `
+.c1 {
+  width: 3.5rem;
+  height: 2rem;
+  padding: 0.25rem;
+  background: #bef2bd;
+  border-radius: 0.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c3 {
+  position: relative;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  height: 2rem;
+  min-height: 2rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c5 {
+  width: 1.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+  text-align: center;
+}
+
+.c4 {
+  object-fit: contain;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c6 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c0 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c0:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+<div>
+  <a
+    class="c0"
+    href="#"
+  >
+    <div
+      class="c1 c2"
+    >
+      <div
+        class="c3"
+      >
+        <img
+          alt=""
+          class="c4"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1734519491/icons/bookmark-outlined_rxe5v0.svg"
+          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+        />
+      </div>
+      <div
+        class="c5"
+      >
+        <span
+          class="c6"
+        >
+          0
+        </span>
+      </div>
+    </div>
+  </a>
+</div>
+`;
