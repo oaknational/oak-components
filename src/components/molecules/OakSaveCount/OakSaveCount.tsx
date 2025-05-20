@@ -1,22 +1,43 @@
 import React from "react";
+import styled from "styled-components";
+
 import { OakBox, OakFlex, OakIcon, OakSpan } from "@/components/atoms";
 import { InternalButton } from "@/components/atoms/InternalButton";
+import { parseColor } from "@/styles/helpers/parseColor";
+import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 
 export type OakSaveCountProps = {
   count: number;
   href: string;
 };
 
+const StyledInternalButton = styled(InternalButton)`
+  :hover {
+    .oak-save-count {
+      background-color: ${parseColor("bg-decorative1-main")};
+    }
+  }
+  :focus-visible {
+    .oak-save-count {
+      box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
+        ${parseDropShadow("drop-shadow-centered-grey")};
+    }
+  }
+`;
+
 export const OakSaveCount = ({ count, href }: OakSaveCountProps) => {
   return (
-    <InternalButton as="a" href={href}>
+    <StyledInternalButton as="a" href={href}>
       <OakFlex
         $width="all-spacing-10"
         $height="all-spacing-7"
-        $background="mint"
+        $background="bg-decorative1-subdued"
         $alignItems="center"
         $pa="inner-padding-ssx"
         $borderRadius="border-radius-s"
+        $borderColor="bg-decorative1-main"
+        $ba="border-solid-s"
+        className="oak-save-count"
       >
         <OakIcon
           iconName={count === 0 ? "bookmark-outlined" : "bookmark-filled"}
@@ -28,6 +49,6 @@ export const OakSaveCount = ({ count, href }: OakSaveCountProps) => {
           </OakSpan>
         </OakBox>
       </OakFlex>
-    </InternalButton>
+    </StyledInternalButton>
   );
 };
