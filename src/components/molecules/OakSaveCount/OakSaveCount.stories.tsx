@@ -18,6 +18,11 @@ const meta: Meta<typeof OakSaveCount> = {
         type: "text",
       },
     },
+    loading: {
+      control: {
+        type: "boolean",
+      },
+    },
   },
 };
 export default meta;
@@ -29,5 +34,6 @@ export const Default: Story = {
   args: {
     count: 1,
     href: "#",
+    loading: false,
   },
 };

@@ -89,6 +89,7 @@ exports[`OakSaveCount should match snapshot 1`] = `
     >
       <div
         class="c4"
+        data-testid="bookmark-outlined"
       >
         <img
           alt=""

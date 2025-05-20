@@ -9,6 +9,7 @@ import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 export type OakSaveCountProps = {
   count: number;
   href: string;
+  loading: boolean;
 };
 
 const StyledInternalButton = styled(InternalButton)`
@@ -25,22 +26,28 @@ const StyledInternalButton = styled(InternalButton)`
   }
 `;
 
-export const OakSaveCount = ({ count, href }: OakSaveCountProps) => {
+export const OakSaveCount = ({ count, href, loading }: OakSaveCountProps) => {
+  const iconName = count === 0 ? "bookmark-outlined" : "bookmark-filled";
   return (
     <StyledInternalButton as="a" href={href}>
       <OakFlex
         $width="all-spacing-10"
         $height="all-spacing-7"
-        $background="bg-decorative1-subdued"
+        $background={
+          loading ? "bg-btn-secondary-hover" : "bg-decorative1-subdued"
+        }
         $alignItems="center"
         $pa="inner-padding-ssx"
         $borderRadius="border-radius-s"
-        $borderColor="bg-decorative1-main"
+        $borderColor={
+          loading ? "border-neutral-lighter" : "bg-decorative1-main"
+        }
         $ba="border-solid-s"
-        className="oak-save-count"
+        className={loading ? undefined : "oak-save-count"}
       >
         <OakIcon
-          iconName={count === 0 ? "bookmark-outlined" : "bookmark-filled"}
+          iconName={iconName}
+          data-testid={iconName}
           $width="all-spacing-6"
         />
         <OakBox $width="all-spacing-6" $textAlign="center">
