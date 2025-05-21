@@ -1,7 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-import { OakBox, OakFlex, OakIcon, OakSpan } from "@/components/atoms";
+import {
+  OakBox,
+  OakFlex,
+  OakIcon,
+  OakScreenReader,
+  OakSpan,
+} from "@/components/atoms";
 import { InternalButton } from "@/components/atoms/InternalButton";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
@@ -30,6 +36,7 @@ export const OakSaveCount = ({ count, href, loading }: OakSaveCountProps) => {
   const iconName = count === 0 ? "bookmark-outlined" : "bookmark-filled";
   return (
     <StyledInternalButton as="a" href={href}>
+      <OakScreenReader>View my library</OakScreenReader>
       <OakFlex
         $width="all-spacing-10"
         $height="all-spacing-7"
