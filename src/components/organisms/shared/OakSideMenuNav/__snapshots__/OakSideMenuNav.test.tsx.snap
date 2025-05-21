@@ -1,0 +1,354 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakSideMenuNav matches snapshot 1`] = `
+[
+  .c1 {
+  padding: 3rem;
+  background: #dff9de;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c7 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c11 {
+  position: relative;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  height: 2rem;
+  min-height: 2rem;
+  padding-left: 0.75rem;
+  display: block;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c12 {
+  object-fit: contain;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-column-gap: 1rem;
+  column-gap: 1rem;
+}
+
+.c3 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+  color: #575757;
+}
+
+.c9 {
+  color: #222222;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c10 {
+  color: #575757;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c5 {
+  display: revert;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
+  display: revert;
+  display: revert;
+}
+
+.c4 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: --var(google-font),Lexend,sans-serif;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.c0 {
+  outline: none;
+}
+
+.c6 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-column-gap: 1rem;
+  column-gap: 1rem;
+  padding-left: 0rem;
+  padding-right: 0rem;
+}
+
+.c6:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+  border-color: transparent;
+  border-radius: 4px;
+}
+
+@media (min-width:750px) {
+  .c1 {
+    padding: 0rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c1 {
+    background: #ffffff;
+  }
+}
+
+@media (min-width:750px) {
+  .c11 {
+    display: none;
+  }
+}
+
+@media (min-width:750px) {
+  .c8 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (min-width:750px) {
+  .c8 {
+    -webkit-column-gap: 0.25rem;
+    column-gap: 0.25rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c6 {
+    border-left: 4px solid transparent;
+  }
+
+  .c6:hover {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+    border-color: #bef2bd;
+  }
+}
+
+@media (min-width:750px) {
+  .c6 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (min-width:750px) {
+  .c6 {
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width:750px) {
+  .c6 {
+    padding-left: 0.75rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c6 {
+    padding-right: 0.75rem;
+  }
+}
+
+<nav
+    aria-labelledby="side-menu-header"
+    className="c0"
+  >
+    <div
+      className="c1 c2"
+    >
+      <h2
+        className="c3"
+        id="side-menu-header"
+      >
+        Test Heading
+      </h2>
+      <ul
+        className="c4"
+      >
+        <li
+          className="c5"
+        >
+          <a
+            className="c6"
+            href="#test1"
+            onClick={[Function]}
+          >
+            <div
+              className="c7 c8"
+            >
+              <span
+                className="c9"
+              >
+                Test Item 1
+              </span>
+              <span
+                className="c10"
+              >
+                Test Subheading 1
+              </span>
+            </div>
+            <div
+              className="c11"
+            >
+              <img
+                alt=""
+                className="c12"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
+                style={
+                  {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+              />
+            </div>
+          </a>
+        </li>
+        <li
+          className="c5"
+        >
+          <a
+            className="c6"
+            href="#test2"
+            onClick={[Function]}
+          >
+            <div
+              className="c7 c8"
+            >
+              <span
+                className="c9"
+              >
+                Test Item 2
+              </span>
+              <span
+                className="c10"
+              >
+                Test Subheading 2
+              </span>
+            </div>
+            <div
+              className="c11"
+            >
+              <img
+                alt=""
+                className="c12"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
+                style={
+                  {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+              />
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>,
+  ",",
+]
+`;
