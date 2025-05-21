@@ -8,17 +8,22 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c9 {
+.c7 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c11 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
   height: 2rem;
   min-height: 2rem;
+  padding-left: 0.75rem;
   display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c10 {
+.c12 {
   object-fit: contain;
 }
 
@@ -33,6 +38,21 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
   gap: 1rem;
 }
 
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-column-gap: 1rem;
+  column-gap: 1rem;
+}
+
 .c3 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
@@ -45,7 +65,8 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
   color: #575757;
 }
 
-.c7 {
+.c9 {
+  color: #222222;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -56,7 +77,7 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c8 {
+.c10 {
   color: #575757;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
@@ -119,8 +140,8 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 1rem;
-  row-gap: 0rem;
+  -webkit-column-gap: 1rem;
+  column-gap: 1rem;
   padding-left: 0rem;
   padding-right: 0rem;
 }
@@ -144,8 +165,23 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c9 {
+  .c11 {
     display: none;
+  }
+}
+
+@media (min-width:750px) {
+  .c8 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (min-width:750px) {
+  .c8 {
+    -webkit-column-gap: 0.25rem;
+    column-gap: 0.25rem;
   }
 }
 
@@ -213,22 +249,26 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
             href="#test1"
             onClick={[Function]}
           >
-            <span
-              className="c7"
-            >
-              Test Item 1
-            </span>
-            <span
-              className="c8"
-            >
-              Test Subheading 1
-            </span>
             <div
-              className="c9"
+              className="c7 c8"
+            >
+              <span
+                className="c9"
+              >
+                Test Item 1
+              </span>
+              <span
+                className="c10"
+              >
+                Test Subheading 1
+              </span>
+            </div>
+            <div
+              className="c11"
             >
               <img
                 alt=""
-                className="c10"
+                className="c12"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"
@@ -261,22 +301,26 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
             href="#test2"
             onClick={[Function]}
           >
-            <span
-              className="c7"
-            >
-              Test Item 2
-            </span>
-            <span
-              className="c8"
-            >
-              Test Subheading 2
-            </span>
             <div
-              className="c9"
+              className="c7 c8"
+            >
+              <span
+                className="c9"
+              >
+                Test Item 2
+              </span>
+              <span
+                className="c10"
+              >
+                Test Subheading 2
+              </span>
+            </div>
+            <div
+              className="c11"
             >
               <img
                 alt=""
-                className="c10"
+                className="c12"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"

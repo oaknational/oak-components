@@ -85,8 +85,7 @@ export const OakSideMenuNav = (props: OakSideMenuNavProps) => {
             <OakLI key={item.heading}>
               <StyledLink
                 $alignItems={["center", "flex-start"]}
-                $gap="space-between-s"
-                $rowGap="space-between-none"
+                $columnGap="space-between-s"
                 href={item.href}
                 $ph={["inner-padding-none", "inner-padding-s"]}
                 isSelected={selectedHref === item.href}
@@ -94,18 +93,25 @@ export const OakSideMenuNav = (props: OakSideMenuNavProps) => {
                 onClick={() => setSelectedHref(item.href)}
                 aria-current={selectedHref === item.href ? "true" : undefined}
               >
-                <OakSpan $font="heading-light-7" $color="text-primary">
-                  {item.heading}
-                </OakSpan>
-                {item.subheading && (
-                  <OakSpan $font="body-3" $color="text-subdued">
-                    {item.subheading}
+                <OakFlex
+                  $flexDirection={["row", "column"]}
+                  $columnGap={["space-between-s", "space-between-sssx"]}
+                  $flexWrap="wrap"
+                >
+                  <OakSpan $font="heading-light-7" $color="text-primary">
+                    {item.heading}
                   </OakSpan>
-                )}
+                  {item.subheading && (
+                    <OakSpan $font="body-3" $color="text-subdued">
+                      {item.subheading}
+                    </OakSpan>
+                  )}
+                </OakFlex>
                 <OakIcon
                   $display={["block", "none"]}
                   iconName="chevron-right"
                   $width="all-spacing-6"
+                  $pl="inner-padding-s"
                 />
               </StyledLink>
             </OakLI>
