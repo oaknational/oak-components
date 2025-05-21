@@ -227,17 +227,18 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
 }
 
 <nav
-    aria-label="side navigation"
+    aria-labelledby="side-menu-header"
     className="c0"
   >
     <div
       className="c1 c2"
     >
-      <h4
+      <h2
         className="c3"
+        id="side-menu-header"
       >
         Test Heading
-      </h4>
+      </h2>
       <ul
         className="c4"
       >

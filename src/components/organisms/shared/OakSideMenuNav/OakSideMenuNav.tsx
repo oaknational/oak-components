@@ -65,14 +65,19 @@ export const OakSideMenuNav = (props: OakSideMenuNavProps) => {
   const [selectedHref, setSelectedHref] = useState<string | null>(null);
 
   return (
-    <StyledNav aria-label="side navigation">
+    <StyledNav aria-labelledby="side-menu-header">
       <OakFlex
         $flexDirection="column"
         $background={["bg-decorative1-subdued", "white"]}
         $pa={["inner-padding-xl4", "inner-padding-none"]}
         $gap="space-between-s"
       >
-        <OakHeading tag="h4" $font="heading-light-7" $color="text-subdued">
+        <OakHeading
+          tag="h2"
+          $font="heading-light-7"
+          $color="text-subdued"
+          id="side-menu-header"
+        >
           {heading}
         </OakHeading>
         <OakUL
