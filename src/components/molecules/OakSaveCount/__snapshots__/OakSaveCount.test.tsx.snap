@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakSaveCount should match snapshot 1`] = `
-.c2 {
+.c3 {
   width: 3.5rem;
   height: 2rem;
   padding: 0.25rem;
@@ -12,7 +12,7 @@ exports[`OakSaveCount should match snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c4 {
+.c5 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -21,17 +21,17 @@ exports[`OakSaveCount should match snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c6 {
+.c7 {
   width: 1.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
   text-align: center;
 }
 
-.c5 {
+.c6 {
   object-fit: contain;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -42,7 +42,7 @@ exports[`OakSaveCount should match snapshot 1`] = `
   align-items: center;
 }
 
-.c7 {
+.c8 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -51,6 +51,19 @@ exports[`OakSaveCount should match snapshot 1`] = `
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
+}
+
+.c2 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .c0 {
@@ -84,16 +97,21 @@ exports[`OakSaveCount should match snapshot 1`] = `
     class="c0 c1"
     href="#"
   >
+    <span
+      class="c2"
+    >
+      View my library
+    </span>
     <div
-      class="c2 c3 oak-save-count"
+      class="c3 c4 oak-save-count"
     >
       <div
-        class="c4"
+        class="c5"
         data-testid="bookmark-outlined"
       >
         <img
           alt=""
-          class="c5"
+          class="c6"
           data-nimg="fill"
           decoding="async"
           loading="lazy"
@@ -102,11 +120,11 @@ exports[`OakSaveCount should match snapshot 1`] = `
         />
       </div>
       <div
-        class="c6"
+        class="c7"
       >
         <span
           aria-label="0 saved units"
-          class="c7"
+          class="c8"
         >
           0
         </span>

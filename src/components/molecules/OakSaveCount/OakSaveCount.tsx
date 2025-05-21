@@ -34,11 +34,12 @@ const StyledInternalButton = styled(InternalButton)`
 
 export const OakSaveCount = ({ count, href, loading }: OakSaveCountProps) => {
   const iconName = count === 0 ? "bookmark-outlined" : "bookmark-filled";
+  const showTruncatedCount = count > 99;
   return (
     <StyledInternalButton as="a" href={href}>
       <OakScreenReader>View my library</OakScreenReader>
       <OakFlex
-        $width="all-spacing-10"
+        $width={showTruncatedCount ? "all-spacing-11" : "all-spacing-10"}
         $height="all-spacing-7"
         $background={
           loading ? "bg-btn-secondary-hover" : "bg-decorative1-subdued"
@@ -62,7 +63,7 @@ export const OakSaveCount = ({ count, href, loading }: OakSaveCountProps) => {
             $font="heading-light-7"
             aria-label={`${count} saved unit${count === 1 ? "" : "s"}`}
           >
-            {count > 99 ? "99+" : count}
+            {showTruncatedCount ? "99+" : count}
           </OakSpan>
         </OakBox>
       </OakFlex>
