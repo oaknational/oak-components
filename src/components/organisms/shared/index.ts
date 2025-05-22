@@ -16,3 +16,4 @@ export * from "./OakMediaClipList";
 export * from "./OakVideoTranscript";
 export * from "./OakCodeRenderer";
 export * from "./OakSideMenuNav";
+export * from "./OakSideMenuNavLink";

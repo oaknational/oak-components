@@ -1,0 +1,207 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakSideMenuNavLink matches snapshot 1`] = `
+[
+  " ",
+  .c1 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c5 {
+  position: relative;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  height: 2rem;
+  min-height: 2rem;
+  padding-left: 0.75rem;
+  display: block;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-column-gap: 1rem;
+  column-gap: 1rem;
+}
+
+.c6 {
+  object-fit: contain;
+}
+
+.c3 {
+  color: #222222;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c4 {
+  color: #575757;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+  white-space: break-spaces;
+}
+
+.c0 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-column-gap: 1rem;
+  column-gap: 1rem;
+  padding-left: 0rem;
+  padding-right: 0rem;
+}
+
+.c0:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+  border-color: transparent;
+  border-radius: 4px;
+}
+
+@media (min-width:750px) {
+  .c5 {
+    display: none;
+  }
+}
+
+@media (min-width:750px) {
+  .c2 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (min-width:750px) {
+  .c2 {
+    -webkit-column-gap: 0.25rem;
+    column-gap: 0.25rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c0 {
+    border-left: 4px solid transparent;
+  }
+
+  .c0:hover {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+    border-color: #bef2bd;
+  }
+}
+
+@media (min-width:750px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (min-width:750px) {
+  .c0 {
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width:750px) {
+  .c0 {
+    padding-left: 0.75rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c0 {
+    padding-right: 0.75rem;
+  }
+}
+
+<a
+    className="c0"
+    href="/test"
+    onClick={[Function]}
+  >
+    <div
+      className="c1 c2"
+    >
+      <span
+        className="c3"
+      >
+        Test
+      </span>
+      <span
+        className="c4"
+      >
+        Test Subheading
+      </span>
+    </div>
+    <div
+      className="c5"
+    >
+      <img
+        alt=""
+        className="c6"
+        data-nimg="fill"
+        decoding="async"
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
+        style={
+          {
+            "bottom": 0,
+            "color": "transparent",
+            "height": "100%",
+            "left": 0,
+            "objectFit": undefined,
+            "objectPosition": undefined,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          }
+        }
+      />
+    </div>
+  </a>,
+]
+`;
