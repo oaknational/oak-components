@@ -31,13 +31,13 @@ export const StyledAccordionContent = styled(InternalAccordionContent)`
 `;
 
 export const StyledAccordionButton = styled(InternalShadowRoundButton)<
-  FlexStyleProps & { isOpen: boolean }
+  FlexStyleProps & { $isOpen: boolean }
 >`
   ${flexStyle}
   ${oakBoxCss}
   .icon-container img {
     ${(props) => css`
-      transform: ${props.isOpen ? "rotate(180deg)" : "none"};
+      transform: ${props.$isOpen ? "rotate(180deg)" : "none"};
       transition: all 0.3s ease 0s;
     `};
   }
@@ -59,7 +59,7 @@ const Accordion = ({ children, id }: InternalReviewAccordionProps) => {
         $pt={["inner-padding-l", "inner-padding-none"]}
       >
         <StyledAccordionButton
-          isOpen={isOpen}
+          $isOpen={isOpen}
           onClick={() => setOpen(!isOpen)}
           aria-expanded={isOpen}
           id={id}
