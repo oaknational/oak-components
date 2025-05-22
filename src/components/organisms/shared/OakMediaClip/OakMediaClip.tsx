@@ -139,7 +139,7 @@ const StyledInternalButton = styled(InternalButton)<
   ${(props) => css`
     &:hover {
       h4 {
-        text-decoration: ${props.muxPlayingState === "standard"
+        text-decoration: ${props.$muxPlayingState === "standard"
           ? "underline"
           : "none"};
       }
@@ -219,7 +219,7 @@ export const OakMediaClip = ({
           $justifyContent={"flex-start"}
           onClick={onClick}
           $pa={"inner-padding-xs"}
-          muxPlayingState={muxPlayingState}
+          $muxPlayingState={muxPlayingState}
         >
           <OakFlex
             $flexDirection={"row"}

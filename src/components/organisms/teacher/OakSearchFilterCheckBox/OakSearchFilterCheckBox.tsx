@@ -16,7 +16,7 @@ import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
 const StyledOakIcon = styled(OakIcon)``;
 
 const StyledInternalCheckBox = styled(InternalCheckBox)<{
-  keepIconColor?: boolean;
+  $keepIconColor?: boolean;
 }>`
   position: absolute;
   opacity: 0;
@@ -24,7 +24,7 @@ const StyledInternalCheckBox = styled(InternalCheckBox)<{
 
   &:checked:not(:disabled) + ${StyledOakIcon} {
     filter: ${(props) =>
-      props.keepIconColor ? "none" : parseColorFilter("white")};
+      props.$keepIconColor ? "none" : parseColorFilter("white")};
   }
 
   &:checked:not(:disabled) {
@@ -106,7 +106,16 @@ export type OakSearchFilterCheckBoxProps = Omit<
 export const OakSearchFilterCheckBox = (
   props: OakSearchFilterCheckBoxProps,
 ) => {
-  const { id, value, disabled, innerRef, displayValue, icon, ...rest } = props;
+  const {
+    id,
+    value,
+    disabled,
+    innerRef,
+    displayValue,
+    icon,
+    keepIconColor,
+    ...rest
+  } = props;
 
   const defaultRef = useRef<HTMLInputElement>(null);
   const inputRef = innerRef ?? defaultRef;
@@ -141,6 +150,7 @@ export const OakSearchFilterCheckBox = (
           value={value}
           disabled={disabled}
           ref={inputRef}
+          $keepIconColor={keepIconColor}
           {...rest}
         />
         {icon && <StyledOakIcon alt="" iconName={icon} />}
