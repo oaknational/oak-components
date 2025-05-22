@@ -17,7 +17,7 @@ import { RadioContext } from "@/components/molecules/OakRadioGroup/OakRadioGroup
 const StyledOakIcon = styled(OakIcon)``;
 
 const StyledInternalRadio = styled(InternalRadio)<{
-  keepIconColor?: boolean;
+  $keepIconColor?: boolean;
 }>`
   position: absolute;
   opacity: 0;
@@ -25,7 +25,7 @@ const StyledInternalRadio = styled(InternalRadio)<{
 
   &:checked:not(:disabled) + ${StyledOakIcon} {
     filter: ${(props) =>
-      props.keepIconColor ? "none" : parseColorFilter("white")};
+      props.$keepIconColor ? "none" : parseColorFilter("white")};
   }
 
   &:checked:not(:disabled) {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import styled from "styled-components";
 import { Transition, TransitionStatus } from "react-transition-group";
 
@@ -156,7 +156,7 @@ export const OakToast = ({
     }
   }, [autoDismiss, autoDismissDuration, isVisible, id]);
 
-  const transitionRef = React.useRef<HTMLDivElement>(null);
+  const transitionRef = useRef<HTMLDivElement>(null);
 
   const { background, icon, color } = variants[variant];
 

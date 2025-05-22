@@ -253,7 +253,6 @@ exports[`OakMediaClip matches snapshot 1`] = `
       />
       <button
         className="c5 c6 internal-button"
-        muxPlayingState="standard"
         onClick={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
