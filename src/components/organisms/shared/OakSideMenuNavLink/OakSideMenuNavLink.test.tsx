@@ -1,8 +1,10 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { OakSideMenuNavLink } from "./OakSideMenuNavLink";
 import { create } from "react-test-renderer";
+
+import { OakSideMenuNavLink } from "./OakSideMenuNavLink";
+
+import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { OakThemeProvider } from "@/components/atoms";
 import { oakDefaultTheme } from "@/styles";
 

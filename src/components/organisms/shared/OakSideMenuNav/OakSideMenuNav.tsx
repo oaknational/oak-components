@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import { OakFlex, OakHeading, OakLI, OakUL } from "@/components/atoms";
 import { MenuItemProps, OakSideMenuNavLink } from "../OakSideMenuNavLink";
+
+import { OakFlex, OakHeading, OakLI, OakUL } from "@/components/atoms";
 
 const StyledNav = styled.nav`
   outline: none;
