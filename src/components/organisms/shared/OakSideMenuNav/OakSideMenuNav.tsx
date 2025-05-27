@@ -41,7 +41,7 @@ export const OakSideMenuNav = (props: OakSideMenuNavProps) => {
           $flexDirection="column"
         >
           {menuItems.map((item) => (
-            <OakLI key={item.heading}>
+            <OakLI key={item.href}>
               <OakSideMenuNavLink
                 item={item}
                 isSelected={selectedHref === item.href}
