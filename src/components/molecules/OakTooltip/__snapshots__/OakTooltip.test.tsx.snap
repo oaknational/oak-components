@@ -2,14 +2,22 @@
 
 exports[`OakTooltip matches snapshot 1`] = `
 [
-  .c0 {
+  .c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   position: fixed;
   pointer-events: none;
   font-family: --var(google-font),Lexend,sans-serif;
   z-index: 300;
 }
 
-.c1 {
+.c1:where(span) {
+  display: block;
+}
+
+.c1:where(*) {
   position: absolute;
   right: 0rem;
   bottom: 0rem;
@@ -25,7 +33,11 @@ exports[`OakTooltip matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c2:where(span) {
+  display: block;
+}
+
+.c2:where(*) {
   position: relative;
   max-width: 22.5rem;
   padding-left: 1.5rem;
@@ -71,7 +83,7 @@ exports[`OakTooltip matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c2 {
+  .c2:where(*) {
     max-width: 40rem;
   }
 }

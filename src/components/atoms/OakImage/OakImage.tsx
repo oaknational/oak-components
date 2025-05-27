@@ -28,6 +28,7 @@ export type OakImageProps<C extends ElementType = typeof Image> = Omit<
   ColorFilterStyleProps &
   HTMLProps & {
     as?: C;
+    containerAs?: "div" | "span";
     /**
      * The placeholder to use while the image is loading
      *
@@ -104,6 +105,7 @@ export const OakImage = <C extends ElementType = typeof Image>({
 }: OakImageProps<C>) => {
   const {
     as,
+    containerAs = "div",
     src,
     alt,
     width,
@@ -128,7 +130,7 @@ export const OakImage = <C extends ElementType = typeof Image>({
   // Use $width and $height to set the width and height of the image container
   if (!width || !height) {
     return (
-      <OakBox $position={$position} $width={$width} {...rest}>
+      <OakBox as={containerAs} $position={$position} $width={$width} {...rest}>
         <StyledFillImage
           ref={setImg}
           as={as ?? Image}
@@ -153,7 +155,12 @@ export const OakImage = <C extends ElementType = typeof Image>({
   // Use $minWidth to set the width with auto height
 
   return (
-    <OakBox $maxWidth={"all-spacing-0"} $position={$position} {...rest}>
+    <OakBox
+      as={containerAs}
+      $maxWidth={"all-spacing-0"}
+      $position={$position}
+      {...rest}
+    >
       <StyledResponsiveImage
         ref={setImg}
         as={as ?? Image}

@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`InternalTooltip matches snapshot 1`] = `
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   position: relative;
   max-width: 22.5rem;
   color: #ffffff;
@@ -34,7 +38,7 @@ exports[`InternalTooltip matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c0 {
+  .c0:where(*) {
     max-width: 40rem;
   }
 }

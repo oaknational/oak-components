@@ -2,13 +2,21 @@
 
 exports[`OakMediaClip matches snapshot 1`] = `
 [
-  .c1 {
+  .c1:where(span) {
+  display: block;
+}
+
+.c1:where(*) {
   position: relative;
   border-radius: 0.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c4 {
+.c4:where(span) {
+  display: block;
+}
+
+.c4:where(*) {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -17,12 +25,20 @@ exports[`OakMediaClip matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c7 {
+.c7:where(span) {
+  display: block;
+}
+
+.c7:where(*) {
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c9 {
+.c9:where(span) {
+  display: block;
+}
+
+.c9:where(*) {
   position: relative;
   width: 6.25rem;
   height: 3.5rem;
@@ -31,13 +47,21 @@ exports[`OakMediaClip matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c12 {
+.c12:where(span) {
+  display: block;
+}
+
+.c12:where(*) {
   position: relative;
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c14 {
+.c14:where(span) {
+  display: block;
+}
+
+.c14:where(*) {
   position: absolute;
   right: 0.25rem;
   bottom: 0.25rem;
@@ -107,12 +131,19 @@ exports[`OakMediaClip matches snapshot 1`] = `
 }
 
 .c0 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  display: revert;
+  display: revert;
+}
+
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   margin-bottom: 0.5rem;
   display: revert;
   font-family: --var(google-font),Lexend,sans-serif;
-  font-family: --var(google-font),Lexend,sans-serif;
-  display: revert;
-  display: revert;
 }
 
 .c16 {

@@ -2,17 +2,29 @@
 
 exports[`OakSideMenuNav matches snapshot 1`] = `
 [
-  .c1 {
+  .c1:where(span) {
+  display: block;
+}
+
+.c1:where(*) {
   padding: 3rem;
   background: #dff9de;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
+.c8:where(span) {
+  display: block;
+}
+
+.c8:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c12 {
+.c12:where(span) {
+  display: block;
+}
+
+.c12:where(*) {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -91,11 +103,18 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
 }
 
 .c5 {
-  display: revert;
-  font-family: --var(google-font),Lexend,sans-serif;
   font-family: --var(google-font),Lexend,sans-serif;
   display: revert;
   display: revert;
+}
+
+.c5:where(span) {
+  display: block;
+}
+
+.c5:where(*) {
+  display: revert;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c4 {
@@ -107,15 +126,22 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: --var(google-font),Lexend,sans-serif;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 1rem;
+}
+
+.c4:where(span) {
+  display: block;
+}
+
+.c4:where(*) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c6 {
@@ -161,19 +187,19 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c1 {
+  .c1:where(*) {
     padding: 0rem;
   }
 }
 
 @media (min-width:750px) {
-  .c1 {
+  .c1:where(*) {
     background: #ffffff;
   }
 }
 
 @media (min-width:750px) {
-  .c12 {
+  .c12:where(*) {
     display: none;
   }
 }
@@ -272,7 +298,7 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
                 Test Subheading 1
               </span>
             </div>
-            <div
+            <span
               className="c12"
             >
               <img
@@ -299,7 +325,7 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
                   }
                 }
               />
-            </div>
+            </span>
           </a>
         </li>
         <li
@@ -324,7 +350,7 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
                 Test Subheading 2
               </span>
             </div>
-            <div
+            <span
               className="c12"
             >
               <img
@@ -351,7 +377,7 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
                   }
                 }
               />
-            </div>
+            </span>
           </a>
         </li>
       </ul>

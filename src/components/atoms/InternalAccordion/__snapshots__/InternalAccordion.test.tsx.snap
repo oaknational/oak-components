@@ -1,15 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`InternalAccordion matches snapshot 1`] = `
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c2:where(span) {
+  display: block;
+}
+
+.c2:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2:hover {
+.c2:where(*):hover {
   cursor: pointer;
 }
 

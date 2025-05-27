@@ -58,26 +58,34 @@ export type OakBoxProps = {
   HTMLProps;
 
 export const oakBoxCss = css<OakBoxProps>`
-  ${positionStyle}
-  ${sizeStyle}
-  ${spacingStyle}
-  ${colorStyle}
-  ${borderStyle}
-  ${displayStyle}
-  ${dropShadowStyle}
-  ${opacityStyle}
-  ${transformStyle}
-  ${transitionStyle}
-  ${typographyStyle}
-  ${zIndexStyle}
-  ${(props) =>
-    /* onClick might be passed in the useClickableCard pattern */
-    props.onClick &&
-    css`
-      :hover {
-        cursor: pointer;
-      }
-    `}
+  // HACK: This is a massive hack because we want <span/>'s to always be block when they are <div/>'s
+  &:where(span) {
+    display: block;
+  }
+
+  // HACK: See above...
+  &:where(*) {
+    ${positionStyle}
+    ${sizeStyle}
+    ${spacingStyle}
+    ${colorStyle}
+    ${borderStyle}
+    ${displayStyle}
+    ${dropShadowStyle}
+    ${opacityStyle}
+    ${transformStyle}
+    ${transitionStyle}
+    ${typographyStyle}
+    ${zIndexStyle}
+    ${(props) =>
+      /* onClick might be passed in the useClickableCard pattern */
+      props.onClick &&
+      css`
+        :hover {
+          cursor: pointer;
+        }
+      `}
+  }
 `;
 
 /**

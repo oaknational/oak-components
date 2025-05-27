@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakjauntyAngleLabel matches snapshot 1`] = `
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.25rem;
@@ -21,25 +25,25 @@ exports[`OakjauntyAngleLabel matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c0 {
+  .c0:where(*) {
     font-weight: 600;
   }
 }
 
 @media (min-width:750px) {
-  .c0 {
+  .c0:where(*) {
     font-size: 1.25rem;
   }
 }
 
 @media (min-width:750px) {
-  .c0 {
+  .c0:where(*) {
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c0 {
+  .c0:where(*) {
     -webkit-letter-spacing: 0.0115rem;
     -moz-letter-spacing: 0.0115rem;
     -ms-letter-spacing: 0.0115rem;

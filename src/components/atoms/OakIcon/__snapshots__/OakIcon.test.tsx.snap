@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakIcon matches snapshot 1`] = `
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -14,7 +18,7 @@ exports[`OakIcon matches snapshot 1`] = `
   object-fit: contain;
 }
 
-<div
+<span
   className="c0"
 >
   <img
@@ -41,5 +45,5 @@ exports[`OakIcon matches snapshot 1`] = `
       }
     }
   />
-</div>
+</span>
 `;

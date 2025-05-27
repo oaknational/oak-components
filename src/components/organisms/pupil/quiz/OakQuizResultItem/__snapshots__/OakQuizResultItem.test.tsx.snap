@@ -2,11 +2,19 @@
 
 exports[`OakQuizResultItem matches snapshot 1`] = `
 [
-  .c0 {
+  .c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c2:where(span) {
+  display: block;
+}
+
+.c2:where(*) {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -15,7 +23,11 @@ exports[`OakQuizResultItem matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c4 {
+.c4:where(span) {
+  display: block;
+}
+
+.c4:where(*) {
   min-height: 2rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }

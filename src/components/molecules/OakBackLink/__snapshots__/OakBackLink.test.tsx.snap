@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakBackLink matches snapshot 1`] = `
-.c1 {
+.c1:where(span) {
+  display: block;
+}
+
+.c1:where(*) {
   position: relative;
   width: 2.5rem;
   min-width: 2.5rem;
@@ -71,7 +75,7 @@ exports[`OakBackLink matches snapshot 1`] = `
   aria-label="Back"
   className="c0"
 >
-  <div
+  <span
     className="c1"
   >
     <img
@@ -98,6 +102,6 @@ exports[`OakBackLink matches snapshot 1`] = `
         }
       }
     />
-  </div>
+  </span>
 </a>
 `;

@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakSaveCount should match snapshot 1`] = `
-.c3 {
+.c3:where(span) {
+  display: block;
+}
+
+.c3:where(*) {
   width: 2rem;
   height: 2rem;
   padding: 0rem;
@@ -12,7 +16,11 @@ exports[`OakSaveCount should match snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c5 {
+.c5:where(span) {
+  display: block;
+}
+
+.c5:where(*) {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -21,7 +29,11 @@ exports[`OakSaveCount should match snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c7 {
+.c7:where(span) {
+  display: block;
+}
+
+.c7:where(*) {
   width: 1.5rem;
   display: none;
   font-family: --var(google-font),Lexend,sans-serif;
@@ -98,19 +110,19 @@ exports[`OakSaveCount should match snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c3 {
+  .c3:where(*) {
     width: 3.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c3 {
+  .c3:where(*) {
     padding: 0.25rem;
   }
 }
 
 @media (min-width:750px) {
-  .c7 {
+  .c7:where(*) {
     display: block;
   }
 }
@@ -137,7 +149,7 @@ exports[`OakSaveCount should match snapshot 1`] = `
     <div
       class="c3 c4 oak-save-count"
     >
-      <div
+      <span
         class="c5"
         data-testid="bookmark-outlined"
       >
@@ -150,7 +162,7 @@ exports[`OakSaveCount should match snapshot 1`] = `
           src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1734519491/icons/bookmark-outlined_rxe5v0.svg"
           style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
         />
-      </div>
+      </span>
       <div
         class="c7"
       >

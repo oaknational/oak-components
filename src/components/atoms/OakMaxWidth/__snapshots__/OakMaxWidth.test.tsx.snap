@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakMaxWidth matches snapshot 1`] = `
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   width: 100%;
   max-width: 30rem;
   padding-left: 0rem;
@@ -26,19 +30,19 @@ exports[`OakMaxWidth matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c0 {
+  .c0:where(*) {
     max-width: 80rem;
   }
 }
 
 @media (min-width:750px) {
-  .c0 {
+  .c0:where(*) {
     padding-left: 0.75rem;
   }
 }
 
 @media (min-width:750px) {
-  .c0 {
+  .c0:where(*) {
     padding-right: 0.75rem;
   }
 }

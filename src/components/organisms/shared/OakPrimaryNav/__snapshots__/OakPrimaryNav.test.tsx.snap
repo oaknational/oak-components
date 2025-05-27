@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakPrimaryNav matches snapshot 1`] = `
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   padding-left: 0rem;
   padding-right: 0rem;
   margin-left: 0rem;
@@ -11,7 +15,11 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c3 {
+.c3:where(span) {
+  display: block;
+}
+
+.c3:where(*) {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -19,7 +27,11 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c5 {
+.c5:where(span) {
+  display: block;
+}
+
+.c5:where(*) {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -28,7 +40,11 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
+.c8:where(span) {
+  display: block;
+}
+
+.c8:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -75,12 +91,19 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
 }
 
 .c2 {
-  display: revert;
-  font-family: --var(google-font),Lexend,sans-serif;
   font-family: --var(google-font),Lexend,sans-serif;
   list-style: none;
   display: revert;
   display: revert;
+}
+
+.c2:where(span) {
+  display: block;
+}
+
+.c2:where(*) {
+  display: revert;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c6 {
