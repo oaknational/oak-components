@@ -97,7 +97,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
     <div
       className="c2 c3"
     >
-      <div
+      <span
         className="c4"
       >
         <img
@@ -124,7 +124,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
             }
           }
         />
-      </div>
+      </span>
     </div>
     <div
       className="c6 c7"
@@ -387,7 +387,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
             <div
               className="c0 c10 c11"
             >
-              <div
+              <span
                 className="c12 "
               >
                 <img
@@ -414,7 +414,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
                     }
                   }
                 />
-              </div>
+              </span>
               <div
                 className="c14 c15"
               >
@@ -456,7 +456,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
             <div
               className="c0 c10 c11"
             >
-              <div
+              <span
                 className="c12 "
               >
                 <img
@@ -483,7 +483,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
                     }
                   }
                 />
-              </div>
+              </span>
               <div
                 className="c14 c15"
               >
@@ -525,7 +525,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
             <div
               className="c0 c10 c11"
             >
-              <div
+              <span
                 className="c12 "
               >
                 <img
@@ -552,7 +552,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
                     }
                   }
                 />
-              </div>
+              </span>
               <div
                 className="c14 c15"
               >

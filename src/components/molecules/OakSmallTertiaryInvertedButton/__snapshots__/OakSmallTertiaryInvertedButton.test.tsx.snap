@@ -202,7 +202,7 @@ exports[`OakSmallTertiaryInvertedButton matches snapshot 1`] = `
         <div
           className="c9"
         >
-          <div
+          <span
             className="c10 shadow"
           >
             <img
@@ -229,8 +229,8 @@ exports[`OakSmallTertiaryInvertedButton matches snapshot 1`] = `
                 }
               }
             />
-          </div>
-          <div
+          </span>
+          <span
             className="c12 highlight"
           >
             <img
@@ -257,8 +257,8 @@ exports[`OakSmallTertiaryInvertedButton matches snapshot 1`] = `
                 }
               }
             />
-          </div>
-          <div
+          </span>
+          <span
             className="c14"
             data-icon-for="button"
           >
@@ -286,7 +286,7 @@ exports[`OakSmallTertiaryInvertedButton matches snapshot 1`] = `
                 }
               }
             />
-          </div>
+          </span>
         </div>
       </div>
       <span

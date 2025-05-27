@@ -217,7 +217,7 @@ exports[`OakLessonVideoTranscript matches snapshot 1`] = `
               <div
                 className="c11 shadow"
               />
-              <div
+              <span
                 className="c12"
                 data-icon-for="button"
               >
@@ -245,7 +245,7 @@ exports[`OakLessonVideoTranscript matches snapshot 1`] = `
                     }
                   }
                 />
-              </div>
+              </span>
             </div>
           </div>
         </button>

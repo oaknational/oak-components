@@ -273,7 +273,7 @@ exports[`OakToast matches snapshot 1`] = `
     <div
       className="c4 c5"
     />
-    <div
+    <span
       className="c6"
     >
       <img
@@ -300,7 +300,7 @@ exports[`OakToast matches snapshot 1`] = `
           }
         }
       />
-    </div>
+    </span>
   </div>
   <span>
     This is a toast message
@@ -324,7 +324,7 @@ exports[`OakToast matches snapshot 1`] = `
           <div
             className="c3"
           >
-            <div
+            <span
               className="c17 shadow"
             >
               <img
@@ -351,8 +351,8 @@ exports[`OakToast matches snapshot 1`] = `
                   }
                 }
               />
-            </div>
-            <div
+            </span>
+            <span
               className="c19 highlight"
             >
               <img
@@ -379,8 +379,8 @@ exports[`OakToast matches snapshot 1`] = `
                   }
                 }
               />
-            </div>
-            <div
+            </span>
+            <span
               className="c21"
               data-icon-for="button"
             >
@@ -408,7 +408,7 @@ exports[`OakToast matches snapshot 1`] = `
                   }
                 }
               />
-            </div>
+            </span>
           </div>
         </div>
         <span

@@ -190,7 +190,7 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
           >
             Show sign language
           </span>
-          <div
+          <span
             className="c9"
           >
             <img
@@ -217,7 +217,7 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
                 }
               }
             />
-          </div>
+          </span>
         </div>
       </button>
     </div>

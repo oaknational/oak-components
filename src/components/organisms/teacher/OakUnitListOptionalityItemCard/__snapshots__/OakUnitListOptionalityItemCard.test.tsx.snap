@@ -199,7 +199,7 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
             >
               0 lessons
             </span>
-            <div
+            <span
               className="c12"
             >
               <img
@@ -226,7 +226,7 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
                   }
                 }
               />
-            </div>
+            </span>
           </div>
         </div>
       </div>

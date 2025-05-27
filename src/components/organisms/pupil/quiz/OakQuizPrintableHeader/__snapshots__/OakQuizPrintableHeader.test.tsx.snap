@@ -195,7 +195,7 @@ exports[`OakQuizPrintableHeader matches snapshot 1`] = `
         <div
           className="c8"
         >
-          <div
+          <span
             className="c9"
           >
             <img
@@ -222,7 +222,7 @@ exports[`OakQuizPrintableHeader matches snapshot 1`] = `
                 }
               }
             />
-          </div>
+          </span>
         </div>
       </div>
       <div

@@ -207,7 +207,7 @@ exports[`OakQuizHint matches snapshot 1`] = `
             <div
               className="c10 shadow"
             />
-            <div
+            <span
               className="c11"
               data-icon-for="button"
             >
@@ -235,7 +235,7 @@ exports[`OakQuizHint matches snapshot 1`] = `
                   }
                 }
               />
-            </div>
+            </span>
           </div>
           <span
             className="c13"

@@ -165,7 +165,7 @@ exports[`OakSmallSecondaryButton matches snapshot 1`] = `
     <div
       className="c5 c6"
     >
-      <div
+      <span
         className="c7"
       >
         <img
@@ -192,7 +192,7 @@ exports[`OakSmallSecondaryButton matches snapshot 1`] = `
             }
           }
         />
-      </div>
+      </span>
       <span
         className="c9"
       >

@@ -71,7 +71,7 @@ exports[`OakBackLink matches snapshot 1`] = `
   aria-label="Back"
   className="c0"
 >
-  <div
+  <span
     className="c1"
   >
     <img
@@ -98,6 +98,6 @@ exports[`OakBackLink matches snapshot 1`] = `
         }
       }
     />
-  </div>
+  </span>
 </a>
 `;

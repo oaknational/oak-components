@@ -480,7 +480,7 @@ exports[`OakUnitsContainer matches snapshot 1`] = `
             <div
               className="c24 shadow"
             />
-            <div
+            <span
               className="c25"
               data-icon-for="button"
             >
@@ -508,7 +508,7 @@ exports[`OakUnitsContainer matches snapshot 1`] = `
                   }
                 }
               />
-            </div>
+            </span>
           </div>
         </div>
       </a>

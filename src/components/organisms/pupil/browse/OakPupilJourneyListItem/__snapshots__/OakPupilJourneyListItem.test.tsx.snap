@@ -288,7 +288,7 @@ exports[`OakPupilJourneyListItem matches snapshot 1`] = `
         <div
           className="c10 c11 c12"
         >
-          <div
+          <span
             className="c13"
           >
             <img
@@ -315,7 +315,7 @@ exports[`OakPupilJourneyListItem matches snapshot 1`] = `
                 }
               }
             />
-          </div>
+          </span>
         </div>
       </div>
     </a>

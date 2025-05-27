@@ -190,7 +190,7 @@ exports[`OakCopyLinkButton matches snapshot 1`] = `
           >
             Copy link
           </span>
-          <div
+          <span
             aria-hidden={true}
             className="c9"
           >
@@ -218,7 +218,7 @@ exports[`OakCopyLinkButton matches snapshot 1`] = `
                 }
               }
             />
-          </div>
+          </span>
         </div>
       </button>
     </div>

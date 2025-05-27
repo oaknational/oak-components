@@ -178,7 +178,7 @@ exports[`InternalShadowRoundButton matches snapshot 1`] = `
         <div
           className="c9 shadow"
         />
-        <div
+        <span
           className="c10"
           data-icon-for="button"
         >
@@ -206,7 +206,7 @@ exports[`InternalShadowRoundButton matches snapshot 1`] = `
               }
             }
           />
-        </div>
+        </span>
       </div>
       <span
         className="c12"

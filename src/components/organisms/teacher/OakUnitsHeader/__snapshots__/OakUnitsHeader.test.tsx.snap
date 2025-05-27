@@ -431,7 +431,7 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
           <div
             className="c21 shadow"
           />
-          <div
+          <span
             className="c22"
             data-icon-for="button"
           >
@@ -459,7 +459,7 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
                 }
               }
             />
-          </div>
+          </span>
         </div>
       </div>
     </a>
@@ -899,7 +899,7 @@ exports[`OakUnitsHeader matches snapshot with banner 1`] = `
             <div
               className="c21 shadow"
             />
-            <div
+            <span
               className="c22"
               data-icon-for="button"
             >
@@ -927,7 +927,7 @@ exports[`OakUnitsHeader matches snapshot with banner 1`] = `
                   }
                 }
               />
-            </div>
+            </span>
           </div>
         </div>
       </a>
@@ -1116,7 +1116,7 @@ exports[`OakUnitsHeader matches snapshot with banner 1`] = `
         <div
           className="c6"
         >
-          <div
+          <span
             className="c7"
             data-testid="inline-banner-icon"
           >
@@ -1144,7 +1144,7 @@ exports[`OakUnitsHeader matches snapshot with banner 1`] = `
                 }
               }
             />
-          </div>
+          </span>
         </div>
         <div
           className="c0 c9"

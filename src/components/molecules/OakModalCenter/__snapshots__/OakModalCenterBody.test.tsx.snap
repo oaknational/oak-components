@@ -109,7 +109,7 @@ exports[`OakModalCenterBody matches snapshot 1`] = `
 <div
   className="c0 c1"
 >
-  <div
+  <span
     className="c2"
     data-testid="icon"
   >
@@ -137,7 +137,7 @@ exports[`OakModalCenterBody matches snapshot 1`] = `
         }
       }
     />
-  </div>
+  </span>
   <h1
     className="c4"
     data-testid="OakHeading-id"

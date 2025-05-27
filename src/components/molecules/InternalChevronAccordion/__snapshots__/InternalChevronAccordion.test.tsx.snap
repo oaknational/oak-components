@@ -187,7 +187,7 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
       <div
         className="c9 shadow"
       />
-      <div
+      <span
         className="c10"
         style={
           {
@@ -220,7 +220,7 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
             }
           }
         />
-      </div>
+      </span>
     </div>
   </button>
   <div

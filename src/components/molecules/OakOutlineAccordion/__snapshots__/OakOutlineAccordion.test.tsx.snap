@@ -239,7 +239,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
         <div
           className="c14 shadow"
         />
-        <div
+        <span
           className="c15"
           style={
             {
@@ -272,7 +272,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
               }
             }
           />
-        </div>
+        </span>
       </div>
     </button>
     <div

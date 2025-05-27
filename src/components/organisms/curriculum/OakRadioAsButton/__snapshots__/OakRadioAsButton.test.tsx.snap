@@ -178,7 +178,7 @@ exports[`OakRadioAsButton matches snapshot 1`] = `
         type="radio"
         value="history"
       />
-      <div
+      <span
         className="c7 "
       >
         <img
@@ -205,7 +205,7 @@ exports[`OakRadioAsButton matches snapshot 1`] = `
             }
           }
         />
-      </div>
+      </span>
       <label
         className="c9 c10 c11 c12"
         htmlFor=":r0:"

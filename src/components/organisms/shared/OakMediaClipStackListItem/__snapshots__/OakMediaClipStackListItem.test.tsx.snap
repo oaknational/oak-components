@@ -310,7 +310,7 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
           }
         />
       </div>
-      <div
+      <span
         className="c9"
         id="play-icon"
       >
@@ -338,7 +338,7 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
             }
           }
         />
-      </div>
+      </span>
     </div>
   </div>
   <div

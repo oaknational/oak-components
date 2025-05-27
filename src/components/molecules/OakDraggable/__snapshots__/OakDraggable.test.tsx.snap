@@ -118,7 +118,7 @@ exports[`OakDraggable matches snapshot 1`] = `
   <div
     className="c2 c3 c4"
   >
-    <div
+    <span
       className="c5 "
     >
       <img
@@ -145,7 +145,7 @@ exports[`OakDraggable matches snapshot 1`] = `
           }
         }
       />
-    </div>
+    </span>
     <div
       className="c7 c8"
     >

@@ -264,7 +264,7 @@ exports[`OakPagination Component matches snapshot 1`] = `
       <span
         className="c4"
       >
-        <div
+        <span
           className="c5 c6"
           disabled={true}
         >
@@ -292,7 +292,7 @@ exports[`OakPagination Component matches snapshot 1`] = `
               }
             }
           />
-        </div>
+        </span>
       </span>
     </button>
     <ul
@@ -446,7 +446,7 @@ exports[`OakPagination Component matches snapshot 1`] = `
       <span
         className="c4"
       >
-        <div
+        <span
           className="c5 "
           disabled={false}
         >
@@ -474,7 +474,7 @@ exports[`OakPagination Component matches snapshot 1`] = `
               }
             }
           />
-        </div>
+        </span>
       </span>
     </a>
   </div>

@@ -122,7 +122,7 @@ exports[`OakAccordion matches snapshot 1`] = `
       onClick={[Function]}
       type="button"
     >
-      <div
+      <span
         className="c7"
         style={
           {
@@ -154,7 +154,7 @@ exports[`OakAccordion matches snapshot 1`] = `
             }
           }
         />
-      </div>
+      </span>
       See more
     </button>
     <div

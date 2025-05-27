@@ -240,7 +240,7 @@ exports[`InternalReviewAccordion matches snapshot 1`] = `
             <div
               className="c13 shadow"
             />
-            <div
+            <span
               className="c14"
               data-icon-for="button"
             >
@@ -268,7 +268,7 @@ exports[`InternalReviewAccordion matches snapshot 1`] = `
                   }
                 }
               />
-            </div>
+            </span>
           </div>
         </div>
       </button>

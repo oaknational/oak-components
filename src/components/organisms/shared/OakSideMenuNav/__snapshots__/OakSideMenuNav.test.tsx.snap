@@ -265,7 +265,7 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
                 Test Subheading 1
               </span>
             </div>
-            <div
+            <span
               className="c11"
             >
               <img
@@ -292,7 +292,7 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
                   }
                 }
               />
-            </div>
+            </span>
           </a>
         </li>
         <li
@@ -317,7 +317,7 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
                 Test Subheading 2
               </span>
             </div>
-            <div
+            <span
               className="c11"
             >
               <img
@@ -344,7 +344,7 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
                   }
                 }
               />
-            </div>
+            </span>
           </a>
         </li>
       </ul>

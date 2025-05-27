@@ -137,7 +137,7 @@ input:checked + .c7 {
     <div
       className="c7 c8 c9"
     >
-      <div
+      <span
         className="c10"
       >
         <img
@@ -164,7 +164,7 @@ input:checked + .c7 {
             }
           }
         />
-      </div>
+      </span>
     </div>
   </div>
   Option 1

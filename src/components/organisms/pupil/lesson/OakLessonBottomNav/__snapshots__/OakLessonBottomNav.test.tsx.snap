@@ -294,7 +294,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
                 <div
                   className="c15 shadow"
                 />
-                <div
+                <span
                   className="c16"
                   data-icon-for="button"
                 >
@@ -322,7 +322,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
                       }
                     }
                   />
-                </div>
+                </span>
               </div>
               <span
                 className="c18"
@@ -496,7 +496,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
           <div
             className="c6"
           >
-            <div
+            <span
               className="c7"
             >
               <img
@@ -523,7 +523,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
                   }
                 }
               />
-            </div>
+            </span>
           </div>
           <span
             className="c9"
@@ -702,7 +702,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
           <div
             className="c6"
           >
-            <div
+            <span
               className="c7"
             >
               <img
@@ -729,7 +729,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
                   }
                 }
               />
-            </div>
+            </span>
           </div>
           <span
             className="c9"
@@ -908,7 +908,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
           <div
             className="c6"
           >
-            <div
+            <span
               className="c7"
             >
               <img
@@ -935,7 +935,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
                   }
                 }
               />
-            </div>
+            </span>
           </div>
           <span
             className="c9"

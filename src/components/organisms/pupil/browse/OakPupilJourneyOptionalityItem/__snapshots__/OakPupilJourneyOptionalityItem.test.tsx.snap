@@ -389,7 +389,7 @@ exports[`OakPupilJourneyOptionalityItem component test matches snapshot 1`] = `
               <div
                 className="c21"
               >
-                <div
+                <span
                   className="c22"
                 >
                   <img
@@ -416,7 +416,7 @@ exports[`OakPupilJourneyOptionalityItem component test matches snapshot 1`] = `
                       }
                     }
                   />
-                </div>
+                </span>
               </div>
             </div>
           </div>
@@ -470,7 +470,7 @@ exports[`OakPupilJourneyOptionalityItem component test matches snapshot 1`] = `
               <div
                 className="c21"
               >
-                <div
+                <span
                   className="c22"
                 >
                   <img
@@ -497,7 +497,7 @@ exports[`OakPupilJourneyOptionalityItem component test matches snapshot 1`] = `
                       }
                     }
                   />
-                </div>
+                </span>
               </div>
             </div>
           </div>

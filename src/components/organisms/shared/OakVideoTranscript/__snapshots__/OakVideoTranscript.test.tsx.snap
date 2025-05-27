@@ -225,7 +225,7 @@ exports[`OakVideoTranscript matches snapshot 1`] = `
             >
               Show transcript
             </span>
-            <div
+            <span
               className="c10"
             >
               <img
@@ -252,7 +252,7 @@ exports[`OakVideoTranscript matches snapshot 1`] = `
                   }
                 }
               />
-            </div>
+            </span>
           </div>
         </button>
       </div>

@@ -403,7 +403,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
           >
             0 lessons
           </p>
-          <div
+          <span
             className="c20"
           >
             <img
@@ -430,7 +430,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
                 }
               }
             />
-          </div>
+          </span>
         </div>
       </a>
     </div>

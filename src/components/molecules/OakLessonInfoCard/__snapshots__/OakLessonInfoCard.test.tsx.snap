@@ -65,7 +65,7 @@ exports[`OakLessonInfoCard component test matches snapshot 1`] = `
   <div
     className="c2 c3"
   >
-    <div
+    <span
       className="c4"
     >
       <img
@@ -92,7 +92,7 @@ exports[`OakLessonInfoCard component test matches snapshot 1`] = `
           }
         }
       />
-    </div>
+    </span>
     <h1
       className="c6"
     >

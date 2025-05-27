@@ -358,7 +358,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
     <div
       className="c4"
     >
-      <div
+      <span
         className="c5"
         data-testid="inline-banner-icon"
       >
@@ -386,7 +386,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
             }
           }
         />
-      </div>
+      </span>
     </div>
     <div
       className="c4 c7"
@@ -411,7 +411,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
               <div
                 className="c16 shadow"
               />
-              <div
+              <span
                 className="c17"
                 data-icon-for="button"
               >
@@ -439,7 +439,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
                     }
                   }
                 />
-              </div>
+              </span>
             </div>
             <span
               className="c18"
@@ -474,7 +474,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
           >
             Link
           </span>
-          <div
+          <span
             className="c17 "
           >
             <img
@@ -501,7 +501,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
                 }
               }
             />
-          </div>
+          </span>
         </a>
       </div>
     </div>
@@ -874,7 +874,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
     <div
       className="c4"
     >
-      <div
+      <span
         className="c5"
         data-testid="inline-banner-icon"
       >
@@ -902,7 +902,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
             }
           }
         />
-      </div>
+      </span>
     </div>
     <div
       className="c7 c8"
@@ -927,7 +927,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
               <div
                 className="c17 shadow"
               />
-              <div
+              <span
                 className="c18"
                 data-icon-for="button"
               >
@@ -955,7 +955,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
                     }
                   }
                 />
-              </div>
+              </span>
             </div>
             <span
               className="c19"
@@ -990,7 +990,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
           >
             Link
           </span>
-          <div
+          <span
             className="c18 "
           >
             <img
@@ -1017,7 +1017,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
                 }
               }
             />
-          </div>
+          </span>
         </a>
       </div>
     </div>
@@ -1367,7 +1367,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
     <div
       className="c4"
     >
-      <div
+      <span
         className="c5"
         data-testid="inline-banner-icon"
       >
@@ -1395,7 +1395,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
             }
           }
         />
-      </div>
+      </span>
     </div>
     <div
       className="c4 c7"
@@ -1420,7 +1420,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
               <div
                 className="c16 shadow"
               />
-              <div
+              <span
                 className="c17"
                 data-icon-for="button"
               >
@@ -1448,7 +1448,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
                     }
                   }
                 />
-              </div>
+              </span>
             </div>
             <span
               className="c18"
@@ -1477,7 +1477,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
           >
             Link
           </span>
-          <div
+          <span
             className="c17 "
           >
             <img
@@ -1504,7 +1504,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
                 }
               }
             />
-          </div>
+          </span>
         </a>
       </div>
     </div>

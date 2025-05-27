@@ -238,7 +238,7 @@ exports[`OakLinkCard matches snapshot 1`] = `
       <div
         className="c8"
       >
-        <div
+        <span
           className="c14"
         >
           <img
@@ -265,7 +265,7 @@ exports[`OakLinkCard matches snapshot 1`] = `
               }
             }
           />
-        </div>
+        </span>
       </div>
     </div>
   </div>

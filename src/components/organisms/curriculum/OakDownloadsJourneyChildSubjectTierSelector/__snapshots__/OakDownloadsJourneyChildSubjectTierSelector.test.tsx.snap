@@ -386,7 +386,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
       <div
         className="c0"
       >
-        <div
+        <span
           className="c6"
           data-testid="inline-banner-icon"
         >
@@ -414,7 +414,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
               }
             }
           />
-        </div>
+        </span>
       </div>
       <div
         className="c8 c9"
@@ -588,7 +588,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
         >
           Next
         </span>
-        <div
+        <span
           className="c28"
         >
           <img
@@ -615,7 +615,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
               }
             }
           />
-        </div>
+        </span>
       </div>
     </button>
   </div>

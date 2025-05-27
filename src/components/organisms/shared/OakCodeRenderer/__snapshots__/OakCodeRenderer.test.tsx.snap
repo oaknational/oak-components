@@ -602,7 +602,7 @@ have_homework =
               <div
                 className="c29 shadow"
               />
-              <div
+              <span
                 className="c30"
                 data-icon-for="button"
               >
@@ -630,7 +630,7 @@ have_homework =
                     }
                   }
                 />
-              </div>
+              </span>
             </div>
             <span
               className="c19"

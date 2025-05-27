@@ -176,7 +176,7 @@ exports[`OakSearchFilterCheckBox matches snapshot 1`] = `
         type="checkbox"
         value="Option 1"
       />
-      <div
+      <span
         className="c7 "
       >
         <img
@@ -203,7 +203,7 @@ exports[`OakSearchFilterCheckBox matches snapshot 1`] = `
             }
           }
         />
-      </div>
+      </span>
       <label
         className="c9 c10 c11 c12"
         htmlFor="checkbox-1"

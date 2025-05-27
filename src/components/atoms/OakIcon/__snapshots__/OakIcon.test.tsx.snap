@@ -14,7 +14,7 @@ exports[`OakIcon matches snapshot 1`] = `
   object-fit: contain;
 }
 
-<div
+<span
   className="c0"
 >
   <img
@@ -41,5 +41,5 @@ exports[`OakIcon matches snapshot 1`] = `
       }
     }
   />
-</div>
+</span>
 `;

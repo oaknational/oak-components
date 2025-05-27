@@ -935,7 +935,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
                     <div
                       className="c19 shadow"
                     />
-                    <div
+                    <span
                       className="c20"
                       data-icon-for="button"
                     >
@@ -963,7 +963,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
                           }
                         }
                       />
-                    </div>
+                    </span>
                   </div>
                   <span
                     className="c22"
@@ -1118,7 +1118,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
                           >
                             Share link
                           </span>
-                          <div
+                          <span
                             className="c50"
                           >
                             <img
@@ -1145,7 +1145,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
                                 }
                               }
                             />
-                          </div>
+                          </span>
                         </div>
                       </button>
                     </div>
@@ -1165,7 +1165,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
                   <div
                     className="c16"
                   >
-                    <div
+                    <span
                       className="c20"
                       data-testid="inline-banner-icon"
                     >
@@ -1193,7 +1193,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
                           }
                         }
                       />
-                    </div>
+                    </span>
                   </div>
                   <div
                     className="c46 c58"
