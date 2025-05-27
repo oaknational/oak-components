@@ -3,19 +3,19 @@
 exports[`OakSideMenuNavLink matches snapshot 1`] = `
 [
   " ",
-  .c1:where(span) {
+  .c2:where(span) {
   display: block;
 }
 
-.c1:where(*) {
+.c2:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c5:where(span) {
+.c6:where(span) {
   display: block;
 }
 
-.c5:where(*) {
+.c6:where(*) {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -26,7 +26,7 @@ exports[`OakSideMenuNavLink matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -41,11 +41,11 @@ exports[`OakSideMenuNavLink matches snapshot 1`] = `
   column-gap: 1rem;
 }
 
-.c6 {
+.c7 {
   object-fit: contain;
 }
 
-.c3 {
+.c4 {
   color: #222222;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
@@ -57,7 +57,7 @@ exports[`OakSideMenuNavLink matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c4 {
+.c5 {
   color: #575757;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
@@ -101,14 +101,21 @@ exports[`OakSideMenuNavLink matches snapshot 1`] = `
   border-radius: 4px;
 }
 
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 @media (min-width:750px) {
-  .c5:where(*) {
+  .c6:where(*) {
     display: none;
   }
 }
 
 @media (min-width:750px) {
-  .c2 {
+  .c3 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -116,7 +123,7 @@ exports[`OakSideMenuNavLink matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c2 {
+  .c3 {
     -webkit-column-gap: 0.25rem;
     column-gap: 0.25rem;
   }
@@ -164,30 +171,30 @@ exports[`OakSideMenuNavLink matches snapshot 1`] = `
 }
 
 <a
-    className="c0"
+    className="c0 c1"
     href="/test"
     onClick={[Function]}
   >
     <div
-      className="c1 c2"
+      className="c2 c3"
     >
       <span
-        className="c3"
+        className="c4"
       >
         Test
       </span>
       <span
-        className="c4"
+        className="c5"
       >
         Test Subheading
       </span>
     </div>
     <span
-      className="c5"
+      className="c6"
     >
       <img
         alt=""
-        className="c6"
+        className="c7"
         data-nimg="fill"
         decoding="async"
         loading="lazy"

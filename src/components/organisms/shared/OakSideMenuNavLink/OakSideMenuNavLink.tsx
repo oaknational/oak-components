@@ -57,7 +57,7 @@ const OakSideMenuNavLinkCss = css<OakSideMenuNavLinkProps>`
 `;
 
 const UnstyledComponent = (props: OakSideMenuNavLinkProps) => {
-  const { item, isSelected, onClick } = props;
+  const { item, isSelected, onClick, ...rest } = props;
   return (
     <StyledLink
       $alignItems={["center", "flex-start"]}
@@ -68,6 +68,7 @@ const UnstyledComponent = (props: OakSideMenuNavLinkProps) => {
       $flexDirection={["row", "column"]}
       onClick={onClick}
       aria-current={isSelected ? "true" : undefined}
+      {...rest}
     >
       <OakFlex
         $flexDirection={["row", "column"]}
