@@ -1,16 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakLessonTopNav matches snapshot 1`] = `
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c2:where(span) {
+  display: block;
+}
+
+.c2:where(*) {
   padding-left: 0rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c4 {
+.c4:where(span) {
+  display: block;
+}
+
+.c4:where(*) {
   position: relative;
   width: 2.5rem;
   min-width: 2.5rem;
@@ -19,7 +31,11 @@ exports[`OakLessonTopNav matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c7 {
+.c7:where(span) {
+  display: block;
+}
+
+.c7:where(*) {
   width: 2.5rem;
   height: 2.5rem;
   padding: 0.25rem;
@@ -28,7 +44,11 @@ exports[`OakLessonTopNav matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
+.c8:where(span) {
+  display: block;
+}
+
+.c8:where(*) {
   position: relative;
   width: 100%;
   min-width: 100%;
@@ -37,7 +57,11 @@ exports[`OakLessonTopNav matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c14 {
+.c14:where(span) {
+  display: block;
+}
+
+.c14:where(*) {
   display: none;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -164,13 +188,13 @@ exports[`OakLessonTopNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c2 {
+  .c2:where(*) {
     padding-left: 0.75rem;
   }
 }
 
 @media (min-width:750px) {
-  .c14 {
+  .c14:where(*) {
     display: block;
   }
 }

@@ -19,12 +19,20 @@ exports[`OakHomepageTabButton component matches snapshot 1`] = `
   cursor: default;
 }
 
-.c2 {
+.c2:where(span) {
+  display: block;
+}
+
+.c2:where(*) {
   height: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c4 {
+.c4:where(span) {
+  display: block;
+}
+
+.c4:where(*) {
   position: relative;
   width: 3rem;
   min-width: 3rem;
@@ -33,13 +41,21 @@ exports[`OakHomepageTabButton component matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c6 {
+.c6:where(span) {
+  display: block;
+}
+
+.c6:where(*) {
   position: relative;
   padding-bottom: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c9 {
+.c9:where(span) {
+  display: block;
+}
+
+.c9:where(*) {
   position: absolute;
   bottom: 0rem;
   width: 100%;
@@ -131,55 +147,55 @@ exports[`OakHomepageTabButton component matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c4 {
+  .c4:where(*) {
     width: 5.75rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c4 {
+  .c4:where(*) {
     width: 5.75rem;
   }
 }
 
 @media (min-width:750px) {
-  .c4 {
+  .c4:where(*) {
     min-width: 5.75rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c4 {
+  .c4:where(*) {
     min-width: 5.75rem;
   }
 }
 
 @media (min-width:750px) {
-  .c4 {
+  .c4:where(*) {
     height: 5.75rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c4 {
+  .c4:where(*) {
     height: 5.75rem;
   }
 }
 
 @media (min-width:750px) {
-  .c4 {
+  .c4:where(*) {
     min-height: 5.75rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c4 {
+  .c4:where(*) {
     min-height: 5.75rem;
   }
 }
 
 @media (min-width:750px) {
-  .c6 {
+  .c6:where(*) {
     padding-bottom: 1.5rem;
   }
 }

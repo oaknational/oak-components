@@ -1,12 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakCollapsibleContent matches snapshot 1`] = `
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c1 {
+.c1:where(span) {
+  display: block;
+}
+
+.c1:where(*) {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 1.5rem;
@@ -16,7 +24,11 @@ exports[`OakCollapsibleContent matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c3 {
+.c3:where(span) {
+  display: block;
+}
+
+.c3:where(*) {
   overflow: auto;
   width: 100%;
   max-height: 100%;

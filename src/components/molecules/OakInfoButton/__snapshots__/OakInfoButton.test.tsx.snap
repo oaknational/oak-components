@@ -2,7 +2,11 @@
 
 exports[`OakInfoButton matches snapshot 1`] = `
 [
-  .c0 {
+  .c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -10,11 +14,19 @@ exports[`OakInfoButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c6 {
+.c6:where(span) {
+  display: block;
+}
+
+.c6:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
+.c8:where(span) {
+  display: block;
+}
+
+.c8:where(*) {
   position: relative;
   width: 2.5rem;
   min-width: 2.5rem;
@@ -25,7 +37,11 @@ exports[`OakInfoButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c10 {
+.c10:where(span) {
+  display: block;
+}
+
+.c10:where(*) {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -34,7 +50,11 @@ exports[`OakInfoButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c11 {
+.c11:where(span) {
+  display: block;
+}
+
+.c11:where(*) {
   position: relative;
   width: 2rem;
   min-width: 2rem;

@@ -2,13 +2,21 @@
 
 exports[`OakQuizCheckBox matches snapshot 1`] = `
 [
-  .c0 {
+  .c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   position: relative;
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c2:where(span) {
+  display: block;
+}
+
+.c2:where(*) {
   padding: 1.25rem;
   background: #ffffff;
   border-color: #222222;
@@ -16,18 +24,26 @@ exports[`OakQuizCheckBox matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2:hover {
+.c2:where(*):hover {
   cursor: pointer;
 }
 
-.c9 {
+.c9:where(span) {
+  display: block;
+}
+
+.c9:where(*) {
   position: relative;
   width: 2rem;
   height: 2rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c13 {
+.c13:where(span) {
+  display: block;
+}
+
+.c13:where(*) {
   position: absolute;
   top: 0rem;
   left: 0rem;
@@ -37,14 +53,22 @@ exports[`OakQuizCheckBox matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c15 {
+.c15:where(span) {
+  display: block;
+}
+
+.c15:where(*) {
   width: 100%;
   height: 100%;
   background: #222222;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c16 {
+.c16:where(span) {
+  display: block;
+}
+
+.c16:where(*) {
   width: 100%;
   height: 100%;
   border: 0.125rem solid;

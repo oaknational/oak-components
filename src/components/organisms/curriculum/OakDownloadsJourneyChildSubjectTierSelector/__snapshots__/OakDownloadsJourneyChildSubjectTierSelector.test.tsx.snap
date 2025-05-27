@@ -1,11 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c2:where(span) {
+  display: block;
+}
+
+.c2:where(*) {
   max-width: 40rem;
   padding: 1rem;
   background: #e3e9fb;
@@ -20,13 +28,21 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c4 {
+.c4:where(span) {
+  display: block;
+}
+
+.c4:where(*) {
   position: relative;
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c6 {
+.c6:where(span) {
+  display: block;
+}
+
+.c6:where(*) {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -35,12 +51,20 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
+.c8:where(span) {
+  display: block;
+}
+
+.c8:where(*) {
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c10 {
+.c10:where(span) {
+  display: block;
+}
+
+.c10:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1rem;
@@ -51,7 +75,11 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c18 {
+.c18:where(span) {
+  display: block;
+}
+
+.c18:where(*) {
   width: 1.5rem;
   height: 1.5rem;
   background: #ffffff;
@@ -60,7 +88,11 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c21 {
+.c21:where(span) {
+  display: block;
+}
+
+.c21:where(*) {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -68,7 +100,11 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c23 {
+.c23:where(span) {
+  display: block;
+}
+
+.c23:where(*) {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -77,7 +113,11 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c28 {
+.c28:where(span) {
+  display: block;
+}
+
+.c28:where(*) {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;

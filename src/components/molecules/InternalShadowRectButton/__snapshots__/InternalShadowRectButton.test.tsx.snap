@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`InternalShadowRectButton matches snapshot 1`] = `
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -9,7 +13,11 @@ exports[`InternalShadowRectButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c2:where(span) {
+  display: block;
+}
+
+.c2:where(*) {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -18,11 +26,19 @@ exports[`InternalShadowRectButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c5 {
+.c5:where(span) {
+  display: block;
+}
+
+.c5:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c7 {
+.c7:where(span) {
+  display: block;
+}
+
+.c7:where(*) {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;

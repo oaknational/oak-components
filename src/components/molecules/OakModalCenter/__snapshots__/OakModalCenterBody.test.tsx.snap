@@ -1,13 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakModalCenterBody matches snapshot 1`] = `
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   width: 100%;
   padding-bottom: 1.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c2:where(span) {
+  display: block;
+}
+
+.c2:where(*) {
   position: relative;
   width: 6.25rem;
   min-width: 6.25rem;

@@ -1,28 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`InternalChevronAccordion matches snapshot 1`] = `
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   position: relative;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c3 {
+.c3:where(span) {
+  display: block;
+}
+
+.c3:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c3:hover {
+.c3:where(*):hover {
   cursor: pointer;
 }
 
-.c8 {
+.c8:where(span) {
+  display: block;
+}
+
+.c8:where(*) {
   position: relative;
   margin-right: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c9 {
+.c9:where(span) {
+  display: block;
+}
+
+.c9:where(*) {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -31,7 +47,11 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c10 {
+.c10:where(span) {
+  display: block;
+}
+
+.c10:where(*) {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -40,18 +60,30 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c12 {
+.c12:where(span) {
+  display: block;
+}
+
+.c12:where(*) {
   position: relative;
   overflow: auto;
   font-family: --var(google-font),Lexend,sans-serif;
   overflow: auto;
 }
 
-.c13 {
+.c13:where(span) {
+  display: block;
+}
+
+.c13:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c17 {
+.c17:where(span) {
+  display: block;
+}
+
+.c17:where(*) {
   pointer-events: none;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -120,9 +152,16 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  position: relative;
+}
+
+.c7:where(span) {
+  display: block;
+}
+
+.c7:where(*) {
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
-  position: relative;
 }
 
 .c7:hover {
@@ -135,10 +174,6 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
 }
 
 .c2 {
-  position: relative;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  font-family: --var(google-font),Lexend,sans-serif;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -155,6 +190,17 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
 
 .c2 .c6:focus-visible ~ .c15 {
   visibility: visible;
+}
+
+.c2:where(span) {
+  display: block;
+}
+
+.c2:where(*) {
+  position: relative;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c18 {

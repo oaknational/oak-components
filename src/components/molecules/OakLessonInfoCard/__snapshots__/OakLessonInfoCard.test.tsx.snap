@@ -1,18 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakLessonInfoCard component test matches snapshot 1`] = `
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   padding: 1.5rem;
   background: #ffffff;
   border-radius: 1rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c2:where(span) {
+  display: block;
+}
+
+.c2:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c4 {
+.c4:where(span) {
+  display: block;
+}
+
+.c4:where(*) {
   position: relative;
   width: 2rem;
   min-width: 2rem;

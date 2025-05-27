@@ -1,11 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakCodeRenderer matches snapshot 1`] = `
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c3 {
+.c3:where(span) {
+  display: block;
+}
+
+.c3:where(*) {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0rem;
@@ -24,7 +32,11 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c5 {
+.c5:where(span) {
+  display: block;
+}
+
+.c5:where(*) {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   padding-top: 0.5rem;
@@ -44,14 +56,22 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
   white-space: pre-wrap;
 }
 
-.c7 {
+.c7:where(span) {
+  display: block;
+}
+
+.c7:where(*) {
   padding-right: 0.75rem;
   border-right: 0.063rem solid;
   border-color: #808080;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c12 {
+.c12:where(span) {
+  display: block;
+}
+
+.c12:where(*) {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -59,12 +79,20 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c15 {
+.c15:where(span) {
+  display: block;
+}
+
+.c15:where(*) {
   display: none;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c20 {
+.c20:where(span) {
+  display: block;
+}
+
+.c20:where(*) {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -72,7 +100,11 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c27 {
+.c27:where(span) {
+  display: block;
+}
+
+.c27:where(*) {
   position: relative;
   width: 2.5rem;
   min-width: 2.5rem;
@@ -83,7 +115,11 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c29 {
+.c29:where(span) {
+  display: block;
+}
+
+.c29:where(*) {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -92,7 +128,11 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c30 {
+.c30:where(span) {
+  display: block;
+}
+
+.c30:where(*) {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -230,11 +270,18 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
 }
 
 .c18 {
-  display: revert;
-  font-family: --var(google-font),Lexend,sans-serif;
   font-family: --var(google-font),Lexend,sans-serif;
   display: revert;
   display: revert;
+}
+
+.c18:where(span) {
+  display: block;
+}
+
+.c18:where(*) {
+  display: revert;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c16 {
@@ -246,6 +293,13 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
   padding: 0;
   margin: 0;
   display: block;
+}
+
+.c17:where(span) {
+  display: block;
+}
+
+.c17:where(*) {
   padding-left: 0.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -325,49 +379,49 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c3 {
+  .c3:where(*) {
     padding-left: 0.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c3 {
+  .c3:where(*) {
     padding-right: 0.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c3 {
+  .c3:where(*) {
     padding-top: 0.25rem;
   }
 }
 
 @media (min-width:750px) {
-  .c3 {
+  .c3:where(*) {
     padding-bottom: 0.25rem;
   }
 }
 
 @media (min-width:750px) {
-  .c3 {
+  .c3:where(*) {
     font-weight: 300;
   }
 }
 
 @media (min-width:750px) {
-  .c3 {
+  .c3:where(*) {
     font-size: 1.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c3 {
+  .c3:where(*) {
     line-height: 2rem;
   }
 }
 
 @media (min-width:750px) {
-  .c3 {
+  .c3:where(*) {
     -webkit-letter-spacing: 0.0115rem;
     -moz-letter-spacing: 0.0115rem;
     -ms-letter-spacing: 0.0115rem;

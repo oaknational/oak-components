@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakPupilJourneyLayout matches snapshot 1`] = `
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
@@ -22,13 +26,13 @@ exports[`OakPupilJourneyLayout matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c0 {
+  .c0:where(*) {
     padding-left: 1.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c0 {
+  .c0:where(*) {
     padding-right: 1.5rem;
   }
 }

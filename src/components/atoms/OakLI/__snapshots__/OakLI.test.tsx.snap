@@ -2,11 +2,18 @@
 
 exports[`Component OakLI matches snapshot 1`] = `
 .c0 {
-  display: revert;
-  font-family: --var(google-font),Lexend,sans-serif;
   font-family: --var(google-font),Lexend,sans-serif;
   display: revert;
   display: revert;
+}
+
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
+  display: revert;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 <li

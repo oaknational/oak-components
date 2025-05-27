@@ -2,7 +2,11 @@
 
 exports[`OakUnitListItem matches snapshot 1`] = `
 [
-  .c1 {
+  .c1:where(span) {
+  display: block;
+}
+
+.c1:where(*) {
   width: 100%;
   padding-right: 1rem;
   background: #ffffff;
@@ -11,7 +15,11 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c4 {
+.c4:where(span) {
+  display: block;
+}
+
+.c4:where(*) {
   width: 100%;
   height: 100%;
   padding-right: 0rem;
@@ -19,25 +27,41 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
+.c8:where(span) {
+  display: block;
+}
+
+.c8:where(*) {
   min-width: 4rem;
   background: #a0b6f2;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c12 {
+.c12:where(span) {
+  display: block;
+}
+
+.c12:where(*) {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   padding-right: 1rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c15 {
+.c15:where(span) {
+  display: block;
+}
+
+.c15:where(*) {
   min-width: 5rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c18 {
+.c18:where(span) {
+  display: block;
+}
+
+.c18:where(*) {
   min-width: 10rem;
   color: #222222;
   font-family: --var(google-font),Lexend,sans-serif;
@@ -50,7 +74,11 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c20 {
+.c20:where(span) {
+  display: block;
+}
+
+.c20:where(*) {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -59,7 +87,11 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c22 {
+.c22:where(span) {
+  display: block;
+}
+
+.c22:where(*) {
   width: 100%;
   padding: 1rem;
   background: #ffffff;
@@ -71,16 +103,28 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c24 {
+.c24:where(span) {
+  display: block;
+}
+
+.c24:where(*) {
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c26 {
+.c26:where(span) {
+  display: block;
+}
+
+.c26:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c28 {
+.c28:where(span) {
+  display: block;
+}
+
+.c28:where(*) {
   width: 2.5rem;
   min-width: 2.5rem;
   height: 2.5rem;
@@ -228,13 +272,20 @@ exports[`OakUnitListItem matches snapshot 1`] = `
 }
 
 .c0 {
-  width: 100%;
-  display: revert;
-  font-family: --var(google-font),Lexend,sans-serif;
   font-family: --var(google-font),Lexend,sans-serif;
   list-style: none;
   display: revert;
   display: revert;
+}
+
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
+  width: 100%;
+  display: revert;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c14 {
@@ -314,7 +365,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c1 {
+  .c1:where(*) {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -323,7 +374,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c22 {
+  .c22:where(*) {
     display: none;
   }
 }

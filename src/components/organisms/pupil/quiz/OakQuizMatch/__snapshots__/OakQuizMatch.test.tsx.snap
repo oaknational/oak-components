@@ -2,16 +2,28 @@
 
 exports[`OakQuizMatch matches snapshot 1`] = `
 [
-  .c0 {
+  .c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   margin-bottom: 2rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c2:where(span) {
+  display: block;
+}
+
+.c2:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c4 {
+.c4:where(span) {
+  display: block;
+}
+
+.c4:where(*) {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -20,7 +32,11 @@ exports[`OakQuizMatch matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c6 {
+.c6:where(span) {
+  display: block;
+}
+
+.c6:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1rem;
@@ -163,11 +179,19 @@ exports[`OakQuizMatch matches snapshot 1`] = `
        arrows on your keyboard.
     </div>
   </div>,
-  .c6 {
+  .c6:where(span) {
+  display: block;
+}
+
+.c6:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c9 {
+.c9:where(span) {
+  display: block;
+}
+
+.c9:where(*) {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -176,19 +200,31 @@ exports[`OakQuizMatch matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   margin-bottom: 2rem;
   border-radius: 1rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c2:where(span) {
+  display: block;
+}
+
+.c2:where(*) {
   min-height: 5rem;
   padding: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c4 {
+.c4:where(span) {
+  display: block;
+}
+
+.c4:where(*) {
   min-height: 3.5rem;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -200,7 +236,11 @@ exports[`OakQuizMatch matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c11 {
+.c11:where(span) {
+  display: block;
+}
+
+.c11:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 700;
   font-size: 1.125rem;
@@ -501,18 +541,30 @@ exports[`OakQuizMatch matches snapshot 1`] = `
       </div>
     </div>
   </div>,
-  .c0 {
+  .c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c2:where(span) {
+  display: block;
+}
+
+.c2:where(*) {
   padding: 1rem;
   background: #cee7e5;
   border-radius: 1rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c4 {
+.c4:where(span) {
+  display: block;
+}
+
+.c4:where(*) {
   min-height: 4rem;
   padding: 0.25rem;
   background: #cee7e5;
@@ -520,12 +572,20 @@ exports[`OakQuizMatch matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c7 {
+.c7:where(span) {
+  display: block;
+}
+
+.c7:where(*) {
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
+.c8:where(span) {
+  display: block;
+}
+
+.c8:where(*) {
   width: 100%;
   min-height: 3.5rem;
   padding-left: 1.25rem;

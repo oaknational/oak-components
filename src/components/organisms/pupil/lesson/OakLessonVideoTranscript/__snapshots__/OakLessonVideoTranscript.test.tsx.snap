@@ -2,11 +2,19 @@
 
 exports[`OakLessonVideoTranscript matches snapshot 1`] = `
 [
-  .c0 {
+  .c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c2:where(span) {
+  display: block;
+}
+
+.c2:where(*) {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -14,7 +22,11 @@ exports[`OakLessonVideoTranscript matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c9 {
+.c9:where(span) {
+  display: block;
+}
+
+.c9:where(*) {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -25,7 +37,11 @@ exports[`OakLessonVideoTranscript matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c11 {
+.c11:where(span) {
+  display: block;
+}
+
+.c11:where(*) {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -34,7 +50,11 @@ exports[`OakLessonVideoTranscript matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c12 {
+.c12:where(span) {
+  display: block;
+}
+
+.c12:where(*) {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -252,12 +272,20 @@ exports[`OakLessonVideoTranscript matches snapshot 1`] = `
       </div>
     </div>
   </div>,
-  .c0 {
+  .c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   display: none;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c1 {
+.c1:where(span) {
+  display: block;
+}
+
+.c1:where(*) {
   max-height: 60rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -276,7 +304,11 @@ exports[`OakLessonVideoTranscript matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c3 {
+.c3:where(span) {
+  display: block;
+}
+
+.c3:where(*) {
   overflow: auto;
   width: 100%;
   max-height: 100%;

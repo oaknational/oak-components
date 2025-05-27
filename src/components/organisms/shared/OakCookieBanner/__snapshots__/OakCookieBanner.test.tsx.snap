@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakCookieBanner matches snapshot 1`] = `
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   color: #222222;
   background: #f2f2f2;
   border-top: 0.063rem solid;
@@ -9,13 +13,21 @@ exports[`OakCookieBanner matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c1 {
+.c1:where(span) {
+  display: block;
+}
+
+.c1:where(*) {
   margin-left: auto;
   margin-right: auto;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c2:where(span) {
+  display: block;
+}
+
+.c2:where(*) {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   margin-left: 1rem;
@@ -23,7 +35,11 @@ exports[`OakCookieBanner matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c4 {
+.c4:where(span) {
+  display: block;
+}
+
+.c4:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
@@ -34,11 +50,19 @@ exports[`OakCookieBanner matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c6 {
+.c6:where(span) {
+  display: block;
+}
+
+.c6:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
+.c8:where(span) {
+  display: block;
+}
+
+.c8:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -50,7 +74,11 @@ exports[`OakCookieBanner matches snapshot 1`] = `
   white-space: nowrap;
 }
 
-.c12 {
+.c12:where(span) {
+  display: block;
+}
+
+.c12:where(*) {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -58,7 +86,11 @@ exports[`OakCookieBanner matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c14 {
+.c14:where(span) {
+  display: block;
+}
+
+.c14:where(*) {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -335,49 +367,49 @@ exports[`OakCookieBanner matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c2 {
+  .c2:where(*) {
     margin-left: 1.5rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c2 {
+  .c2:where(*) {
     margin-left: 3.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c2 {
+  .c2:where(*) {
     margin-right: 1.5rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c2 {
+  .c2:where(*) {
     margin-right: 3.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c4 {
+  .c4:where(*) {
     font-weight: 300;
   }
 }
 
 @media (min-width:750px) {
-  .c4 {
+  .c4:where(*) {
     font-size: 1rem;
   }
 }
 
 @media (min-width:750px) {
-  .c4 {
+  .c4:where(*) {
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c4 {
+  .c4:where(*) {
     -webkit-letter-spacing: -0.005rem;
     -moz-letter-spacing: -0.005rem;
     -ms-letter-spacing: -0.005rem;

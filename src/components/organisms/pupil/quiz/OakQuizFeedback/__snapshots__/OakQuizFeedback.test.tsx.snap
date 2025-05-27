@@ -2,11 +2,19 @@
 
 exports[`OakQuizFeedback matches snapshot 1`] = `
 [
-  .c0 {
+  .c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c2:where(span) {
+  display: block;
+}
+
+.c2:where(*) {
   width: 1.5rem;
   height: 1.5rem;
   padding: 0rem;
@@ -15,7 +23,11 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c3 {
+.c3:where(span) {
+  display: block;
+}
+
+.c3:where(*) {
   position: relative;
   width: 100%;
   min-width: 100%;
@@ -116,11 +128,19 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
       Well done!
     </p>
   </div>,
-  .c0 {
+  .c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c3 {
+.c3:where(span) {
+  display: block;
+}
+
+.c3:where(*) {
   position: relative;
   width: 100%;
   min-width: 100%;
@@ -129,7 +149,11 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c2:where(span) {
+  display: block;
+}
+
+.c2:where(*) {
   width: 1.5rem;
   height: 1.5rem;
   padding: 0rem;
@@ -230,11 +254,19 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
       Keep trying
     </p>
   </div>,
-  .c0 {
+  .c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c2:where(span) {
+  display: block;
+}
+
+.c2:where(*) {
   width: 1.5rem;
   height: 1.5rem;
   padding: 0rem;
@@ -243,7 +275,11 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c3 {
+.c3:where(span) {
+  display: block;
+}
+
+.c3:where(*) {
   position: relative;
   width: 100%;
   min-width: 100%;

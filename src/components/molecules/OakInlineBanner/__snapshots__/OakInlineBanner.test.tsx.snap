@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   padding: 1rem;
   background: #e3e9fb;
   border: 0.063rem solid;
@@ -15,17 +19,29 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c2:where(span) {
+  display: block;
+}
+
+.c2:where(*) {
   position: relative;
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c4 {
+.c4:where(span) {
+  display: block;
+}
+
+.c4:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c5 {
+.c5:where(span) {
+  display: block;
+}
+
+.c5:where(*) {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -34,7 +50,11 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
+.c8:where(span) {
+  display: block;
+}
+
+.c8:where(*) {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -42,7 +62,11 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c14 {
+.c14:where(span) {
+  display: block;
+}
+
+.c14:where(*) {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -53,7 +77,11 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c16 {
+.c16:where(span) {
+  display: block;
+}
+
+.c16:where(*) {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -62,7 +90,11 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c17 {
+.c17:where(span) {
+  display: block;
+}
+
+.c17:where(*) {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -71,12 +103,20 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c19 {
+.c19:where(span) {
+  display: block;
+}
+
+.c19:where(*) {
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c22 {
+.c22:where(span) {
+  display: block;
+}
+
+.c22:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1rem;
@@ -87,7 +127,11 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c23 {
+.c23:where(span) {
+  display: block;
+}
+
+.c23:where(*) {
   margin-top: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -510,7 +554,11 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
 `;
 
 exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   padding: 1.5rem;
   background: #e3e9fb;
   border: 0.063rem solid;
@@ -524,17 +572,29 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c2:where(span) {
+  display: block;
+}
+
+.c2:where(*) {
   position: relative;
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c4 {
+.c4:where(span) {
+  display: block;
+}
+
+.c4:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c5 {
+.c5:where(span) {
+  display: block;
+}
+
+.c5:where(*) {
   position: relative;
   width: 2.5rem;
   min-width: 2.5rem;
@@ -543,14 +603,22 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c7 {
+.c7:where(span) {
+  display: block;
+}
+
+.c7:where(*) {
   position: absolute;
   top: 0rem;
   right: 0rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c9 {
+.c9:where(span) {
+  display: block;
+}
+
+.c9:where(*) {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -558,7 +626,11 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c15 {
+.c15:where(span) {
+  display: block;
+}
+
+.c15:where(*) {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -569,7 +641,11 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c17 {
+.c17:where(span) {
+  display: block;
+}
+
+.c17:where(*) {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -578,7 +654,11 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c18 {
+.c18:where(span) {
+  display: block;
+}
+
+.c18:where(*) {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -587,12 +667,20 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c20 {
+.c20:where(span) {
+  display: block;
+}
+
+.c20:where(*) {
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c23 {
+.c23:where(span) {
+  display: block;
+}
+
+.c23:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1rem;
@@ -603,7 +691,11 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c24 {
+.c24:where(span) {
+  display: block;
+}
+
+.c24:where(*) {
   margin-top: 0.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -1026,7 +1118,11 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
 `;
 
 exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = `
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   padding: 1rem;
   background: #e3e9fb;
   border: 0.063rem solid;
@@ -1040,17 +1136,29 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c2:where(span) {
+  display: block;
+}
+
+.c2:where(*) {
   position: relative;
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c4 {
+.c4:where(span) {
+  display: block;
+}
+
+.c4:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c5 {
+.c5:where(span) {
+  display: block;
+}
+
+.c5:where(*) {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -1059,7 +1167,11 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
+.c8:where(span) {
+  display: block;
+}
+
+.c8:where(*) {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -1067,7 +1179,11 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c14 {
+.c14:where(span) {
+  display: block;
+}
+
+.c14:where(*) {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -1078,7 +1194,11 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c16 {
+.c16:where(span) {
+  display: block;
+}
+
+.c16:where(*) {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -1087,7 +1207,11 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c17 {
+.c17:where(span) {
+  display: block;
+}
+
+.c17:where(*) {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -1096,12 +1220,20 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c19 {
+.c19:where(span) {
+  display: block;
+}
+
+.c19:where(*) {
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c21 {
+.c21:where(span) {
+  display: block;
+}
+
+.c21:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1rem;

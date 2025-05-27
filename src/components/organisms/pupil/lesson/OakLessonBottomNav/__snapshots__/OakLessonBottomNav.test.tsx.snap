@@ -2,22 +2,38 @@
 
 exports[`OakLessonBottomNav matches snapshot 1`] = `
 [
-  .c0 {
+  .c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   min-height: 3rem;
   padding: 1rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c3 {
+.c3:where(span) {
+  display: block;
+}
+
+.c3:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c5 {
+.c5:where(span) {
+  display: block;
+}
+
+.c5:where(*) {
   display: none;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c6 {
+.c6:where(span) {
+  display: block;
+}
+
+.c6:where(*) {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -25,7 +41,11 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c13 {
+.c13:where(span) {
+  display: block;
+}
+
+.c13:where(*) {
   position: relative;
   width: 2.5rem;
   min-width: 2.5rem;
@@ -36,7 +56,11 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c15 {
+.c15:where(span) {
+  display: block;
+}
+
+.c15:where(*) {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -45,7 +69,11 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c16 {
+.c16:where(span) {
+  display: block;
+}
+
+.c16:where(*) {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -54,7 +82,11 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c19 {
+.c19:where(span) {
+  display: block;
+}
+
+.c19:where(*) {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -233,7 +265,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c19 {
+  .c19:where(*) {
     width: auto;
   }
 }
@@ -338,17 +370,29 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
       className="c19 c20"
     />
   </div>,
-  .c0 {
+  .c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   min-height: 3rem;
   padding: 1rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c3 {
+.c3:where(span) {
+  display: block;
+}
+
+.c3:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c11 {
+.c11:where(span) {
+  display: block;
+}
+
+.c11:where(*) {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -356,7 +400,11 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c6 {
+.c6:where(span) {
+  display: block;
+}
+
+.c6:where(*) {
   width: 1.5rem;
   height: 1.5rem;
   padding: 0rem;
@@ -365,7 +413,11 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c7 {
+.c7:where(span) {
+  display: block;
+}
+
+.c7:where(*) {
   position: relative;
   width: 100%;
   min-width: 100%;
@@ -457,7 +509,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c11 {
+  .c11:where(*) {
     width: auto;
   }
 }
@@ -544,17 +596,29 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
       className="c11 c12"
     />
   </div>,
-  .c0 {
+  .c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   min-height: 3rem;
   padding: 1rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c3 {
+.c3:where(span) {
+  display: block;
+}
+
+.c3:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c11 {
+.c11:where(span) {
+  display: block;
+}
+
+.c11:where(*) {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -562,7 +626,11 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c7 {
+.c7:where(span) {
+  display: block;
+}
+
+.c7:where(*) {
   position: relative;
   width: 100%;
   min-width: 100%;
@@ -571,7 +639,11 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c6 {
+.c6:where(span) {
+  display: block;
+}
+
+.c6:where(*) {
   width: 1.5rem;
   height: 1.5rem;
   padding: 0rem;
@@ -663,7 +735,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c11 {
+  .c11:where(*) {
     width: auto;
   }
 }
@@ -750,17 +822,29 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
       className="c11 c12"
     />
   </div>,
-  .c0 {
+  .c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   min-height: 3rem;
   padding: 1rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c3 {
+.c3:where(span) {
+  display: block;
+}
+
+.c3:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c11 {
+.c11:where(span) {
+  display: block;
+}
+
+.c11:where(*) {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -768,7 +852,11 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c6 {
+.c6:where(span) {
+  display: block;
+}
+
+.c6:where(*) {
   width: 1.5rem;
   height: 1.5rem;
   padding: 0rem;
@@ -777,7 +865,11 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c7 {
+.c7:where(span) {
+  display: block;
+}
+
+.c7:where(*) {
   position: relative;
   width: 100%;
   min-width: 100%;
@@ -869,7 +961,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c11 {
+  .c11:where(*) {
     width: auto;
   }
 }

@@ -2,12 +2,20 @@
 
 exports[`OakMediaClipList matches snapshot 1`] = `
 [
-  .c0 {
+  .c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   position: relative;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c3 {
+.c3:where(span) {
+  display: block;
+}
+
+.c3:where(*) {
   position: relative;
   max-height: 30rem;
   padding-top: 0rem;
@@ -19,15 +27,23 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c6 {
+.c6:where(span) {
+  display: block;
+}
+
+.c6:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c6:hover {
+.c6:where(*):hover {
   cursor: pointer;
 }
 
-.c11 {
+.c11:where(span) {
+  display: block;
+}
+
+.c11:where(*) {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.75rem;
@@ -36,7 +52,11 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   text-align: left;
 }
 
-.c12 {
+.c12:where(span) {
+  display: block;
+}
+
+.c12:where(*) {
   margin-bottom: 0.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
@@ -48,7 +68,11 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c14 {
+.c14:where(span) {
+  display: block;
+}
+
+.c14:where(*) {
   margin-bottom: 0.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
@@ -60,7 +84,11 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c16 {
+.c16:where(span) {
+  display: block;
+}
+
+.c16:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
@@ -71,13 +99,21 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c17 {
+.c17:where(span) {
+  display: block;
+}
+
+.c17:where(*) {
   position: relative;
   margin-right: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c18 {
+.c18:where(span) {
+  display: block;
+}
+
+.c18:where(*) {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -86,7 +122,11 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c19 {
+.c19:where(span) {
+  display: block;
+}
+
+.c19:where(*) {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -95,18 +135,30 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c21 {
+.c21:where(span) {
+  display: block;
+}
+
+.c21:where(*) {
   position: relative;
   overflow: auto;
   font-family: --var(google-font),Lexend,sans-serif;
   overflow: auto;
 }
 
-.c22 {
+.c22:where(span) {
+  display: block;
+}
+
+.c22:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c27 {
+.c27:where(span) {
+  display: block;
+}
+
+.c27:where(*) {
   pointer-events: none;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -181,6 +233,13 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   padding: 0;
   margin: 0;
   display: block;
+}
+
+.c23:where(span) {
+  display: block;
+}
+
+.c23:where(*) {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   padding-top: 0.5rem;
@@ -218,9 +277,16 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  position: relative;
+}
+
+.c10:where(span) {
+  display: block;
+}
+
+.c10:where(*) {
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
-  position: relative;
 }
 
 .c10:hover {
@@ -233,15 +299,6 @@ exports[`OakMediaClipList matches snapshot 1`] = `
 }
 
 .c5 {
-  position: relative;
-  max-height: 30rem;
-  padding-top: 0rem;
-  padding-bottom: 0rem;
-  border: 0.125rem solid;
-  border-left: 0.125rem solid;
-  border-color: #222222;
-  border-style: solid;
-  font-family: --var(google-font),Lexend,sans-serif;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -258,6 +315,22 @@ exports[`OakMediaClipList matches snapshot 1`] = `
 
 .c5 .c9:focus-visible ~ .c25 {
   visibility: visible;
+}
+
+.c5:where(span) {
+  display: block;
+}
+
+.c5:where(*) {
+  position: relative;
+  max-height: 30rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  border: 0.125rem solid;
+  border-left: 0.125rem solid;
+  border-color: #222222;
+  border-style: solid;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c28 {
@@ -279,25 +352,25 @@ exports[`OakMediaClipList matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c3 {
+  .c3:where(*) {
     border-left: 0.125rem solid;
   }
 }
 
 @media (min-width:1280px) {
-  .c3 {
+  .c3:where(*) {
     border-left: 0rem solid;
   }
 }
 
 @media (min-width:750px) {
-  .c5 {
+  .c5:where(*) {
     border-left: 0.125rem solid;
   }
 }
 
 @media (min-width:1280px) {
-  .c5 {
+  .c5:where(*) {
     border-left: 0rem solid;
   }
 }

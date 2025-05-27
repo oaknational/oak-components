@@ -4,6 +4,13 @@ exports[`Component OakUL matches snapshot 1`] = `
 .c0 {
   margin: 0;
   display: block;
+}
+
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 

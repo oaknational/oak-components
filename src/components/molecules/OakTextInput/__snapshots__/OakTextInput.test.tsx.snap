@@ -49,7 +49,11 @@ exports[`OakTextInput matches snapshot 1`] = `
   cursor: not-allowed;
 }
 
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   position: relative;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -64,11 +68,15 @@ exports[`OakTextInput matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c0:hover {
+.c0:where(*):hover {
   cursor: pointer;
 }
 
-.c3 {
+.c3:where(span) {
+  display: block;
+}
+
+.c3:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 

@@ -7,15 +7,6 @@ exports[`Component OakTertiaryOLNav matches snapshot 1`] = `
 }
 
 .c2 {
-  display: revert;
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
-  letter-spacing: 0.0115rem;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -26,6 +17,22 @@ exports[`Component OakTertiaryOLNav matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
   display: revert;
   display: revert;
+}
+
+.c2:where(span) {
+  display: block;
+}
+
+.c2:where(*) {
+  display: revert;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
 }
 
 .c4 {

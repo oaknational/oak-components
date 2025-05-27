@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakRadioTile matches snapshot 1`] = `
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   position: relative;
   padding: 0.75rem;
   color: #222222;
@@ -12,7 +16,11 @@ exports[`OakRadioTile matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c4 {
+.c4:where(span) {
+  display: block;
+}
+
+.c4:where(*) {
   width: 1.5rem;
   height: 1.5rem;
   background: #ffffff;

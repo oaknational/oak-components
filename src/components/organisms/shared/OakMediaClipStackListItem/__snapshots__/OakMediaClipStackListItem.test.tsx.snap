@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakMediaClipStackListItem matches snapshot 1`] = `
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -12,11 +16,19 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c3 {
+.c3:where(span) {
+  display: block;
+}
+
+.c3:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c4 {
+.c4:where(span) {
+  display: block;
+}
+
+.c4:where(*) {
   position: relative;
   width: 6.25rem;
   height: 4rem;
@@ -25,13 +37,21 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c6 {
+.c6:where(span) {
+  display: block;
+}
+
+.c6:where(*) {
   position: relative;
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c9 {
+.c9:where(span) {
+  display: block;
+}
+
+.c9:where(*) {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -40,12 +60,20 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c10 {
+.c10:where(span) {
+  display: block;
+}
+
+.c10:where(*) {
   margin-bottom: 0rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c12 {
+.c12:where(span) {
+  display: block;
+}
+
+.c12:where(*) {
   color: #575757;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
@@ -165,49 +193,49 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c4 {
+  .c4:where(*) {
     width: 6.25rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c4 {
+  .c4:where(*) {
     width: 11.25rem;
   }
 }
 
 @media (min-width:750px) {
-  .c4 {
+  .c4:where(*) {
     height: 4rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c4 {
+  .c4:where(*) {
     height: 6.25rem;
   }
 }
 
 @media (min-width:750px) {
-  .c4 {
+  .c4:where(*) {
     margin-bottom: 0rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c4 {
+  .c4:where(*) {
     margin-bottom: 0.75rem;
   }
 }
 
 @media (min-width:750px) {
-  .c10 {
+  .c10:where(*) {
     margin-bottom: 0rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c10 {
+  .c10:where(*) {
     margin-bottom: 1rem;
   }
 }

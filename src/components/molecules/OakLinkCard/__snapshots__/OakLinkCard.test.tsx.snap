@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakLinkCard matches snapshot 1`] = `
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   width: 100%;
   padding: 1.5rem;
   background: #ffffff;
@@ -10,21 +14,37 @@ exports[`OakLinkCard matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c3 {
+.c3:where(span) {
+  display: block;
+}
+
+.c3:where(*) {
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c4 {
+.c4:where(span) {
+  display: block;
+}
+
+.c4:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
+.c8:where(span) {
+  display: block;
+}
+
+.c8:where(*) {
   position: relative;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c9 {
+.c9:where(span) {
+  display: block;
+}
+
+.c9:where(*) {
   position: relative;
   width: 5rem;
   height: 5rem;
@@ -32,13 +52,21 @@ exports[`OakLinkCard matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c11 {
+.c11:where(span) {
+  display: block;
+}
+
+.c11:where(*) {
   position: absolute;
   inset: 0rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c14 {
+.c14:where(span) {
+  display: block;
+}
+
+.c14:where(*) {
   position: relative;
   width: 4rem;
   min-width: 4rem;
@@ -139,37 +167,37 @@ exports[`OakLinkCard matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c9 {
+  .c9:where(*) {
     width: 10rem;
   }
 }
 
 @media (min-width:750px) {
-  .c9 {
+  .c9:where(*) {
     height: 10rem;
   }
 }
 
 @media (min-width:750px) {
-  .c14 {
+  .c14:where(*) {
     width: 6.25rem;
   }
 }
 
 @media (min-width:750px) {
-  .c14 {
+  .c14:where(*) {
     min-width: 6.25rem;
   }
 }
 
 @media (min-width:750px) {
-  .c14 {
+  .c14:where(*) {
     height: 6.25rem;
   }
 }
 
 @media (min-width:750px) {
-  .c14 {
+  .c14:where(*) {
     min-height: 6.25rem;
   }
 }

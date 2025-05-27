@@ -3,11 +3,19 @@
 exports[`OakPupilJourneyHeader matches snapshot 1`] = `
 [
   " ",
-  .c0 {
+  .c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c2:where(span) {
+  display: block;
+}
+
+.c2:where(*) {
   position: relative;
   width: 4rem;
   height: 4rem;
@@ -15,18 +23,30 @@ exports[`OakPupilJourneyHeader matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c4 {
+.c4:where(span) {
+  display: block;
+}
+
+.c4:where(*) {
   position: absolute;
   inset: 0rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c7 {
+.c7:where(span) {
+  display: block;
+}
+
+.c7:where(*) {
   position: relative;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
+.c8:where(span) {
+  display: block;
+}
+
+.c8:where(*) {
   position: relative;
   width: 3rem;
   min-width: 3rem;
@@ -110,73 +130,73 @@ exports[`OakPupilJourneyHeader matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c2 {
+  .c2:where(*) {
     width: 5rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c2 {
+  .c2:where(*) {
     width: 5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c2 {
+  .c2:where(*) {
     height: 5rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c2 {
+  .c2:where(*) {
     height: 5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c8 {
+  .c8:where(*) {
     width: 3.5rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c8 {
+  .c8:where(*) {
     width: 3.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c8 {
+  .c8:where(*) {
     min-width: 3.5rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c8 {
+  .c8:where(*) {
     min-width: 3.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c8 {
+  .c8:where(*) {
     height: 3.5rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c8 {
+  .c8:where(*) {
     height: 3.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c8 {
+  .c8:where(*) {
     min-height: 3.5rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c8 {
+  .c8:where(*) {
     min-height: 3.5rem;
   }
 }

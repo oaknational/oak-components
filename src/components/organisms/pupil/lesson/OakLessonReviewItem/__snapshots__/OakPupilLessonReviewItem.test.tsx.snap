@@ -2,7 +2,11 @@
 
 exports[`OakLessonReviewItem matches snapshot 1`] = `
 [
-  .c0 {
+  .c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 1.25rem;
@@ -14,7 +18,11 @@ exports[`OakLessonReviewItem matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c3 {
+.c3:where(span) {
+  display: block;
+}
+
+.c3:where(*) {
   width: 3.5rem;
   height: 3.5rem;
   padding: 0.25rem;
@@ -23,7 +31,11 @@ exports[`OakLessonReviewItem matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c4 {
+.c4:where(span) {
+  display: block;
+}
+
+.c4:where(*) {
   position: relative;
   width: 100%;
   min-width: 100%;
@@ -32,11 +44,19 @@ exports[`OakLessonReviewItem matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c6 {
+.c6:where(span) {
+  display: block;
+}
+
+.c6:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
+.c8:where(span) {
+  display: block;
+}
+
+.c8:where(*) {
   color: #222222;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
@@ -48,7 +68,11 @@ exports[`OakLessonReviewItem matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c9 {
+.c9:where(span) {
+  display: block;
+}
+
+.c9:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1rem;
@@ -98,37 +122,37 @@ exports[`OakLessonReviewItem matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c0 {
+  .c0:where(*) {
     padding-left: 1.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c0 {
+  .c0:where(*) {
     padding-right: 1.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c8 {
+  .c8:where(*) {
     font-weight: 600;
   }
 }
 
 @media (min-width:750px) {
-  .c8 {
+  .c8:where(*) {
     font-size: 1.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c8 {
+  .c8:where(*) {
     line-height: 2rem;
   }
 }
 
 @media (min-width:750px) {
-  .c8 {
+  .c8:where(*) {
     -webkit-letter-spacing: 0.0115rem;
     -moz-letter-spacing: 0.0115rem;
     -ms-letter-spacing: 0.0115rem;
@@ -137,25 +161,25 @@ exports[`OakLessonReviewItem matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c9 {
+  .c9:where(*) {
     font-weight: 300;
   }
 }
 
 @media (min-width:750px) {
-  .c9 {
+  .c9:where(*) {
     font-size: 1.125rem;
   }
 }
 
 @media (min-width:750px) {
-  .c9 {
+  .c9:where(*) {
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:750px) {
-  .c9 {
+  .c9:where(*) {
     -webkit-letter-spacing: -0.005rem;
     -moz-letter-spacing: -0.005rem;
     -ms-letter-spacing: -0.005rem;

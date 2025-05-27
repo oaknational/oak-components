@@ -2,7 +2,11 @@
 
 exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
 [
-  .c0 {
+  .c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10,7 +14,11 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c2:where(span) {
+  display: block;
+}
+
+.c2:where(*) {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   padding-top: 1rem;
@@ -22,17 +30,29 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c4 {
+.c4:where(span) {
+  display: block;
+}
+
+.c4:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
+.c8:where(span) {
+  display: block;
+}
+
+.c8:where(*) {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c12 {
+.c12:where(span) {
+  display: block;
+}
+
+.c12:where(*) {
   position: relative;
   width: 2rem;
   min-width: 2rem;

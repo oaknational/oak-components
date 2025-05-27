@@ -1,37 +1,61 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakOutlineAccordion matches snapshot 1`] = `
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   position: relative;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c2:where(span) {
+  display: block;
+}
+
+.c2:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c5 {
+.c5:where(span) {
+  display: block;
+}
+
+.c5:where(*) {
   position: relative;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
+.c8:where(span) {
+  display: block;
+}
+
+.c8:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8:hover {
+.c8:where(*):hover {
   cursor: pointer;
 }
 
-.c13 {
+.c13:where(span) {
+  display: block;
+}
+
+.c13:where(*) {
   position: relative;
   margin-right: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c14 {
+.c14:where(span) {
+  display: block;
+}
+
+.c14:where(*) {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -40,7 +64,11 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c15 {
+.c15:where(span) {
+  display: block;
+}
+
+.c15:where(*) {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -49,14 +77,22 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c17 {
+.c17:where(span) {
+  display: block;
+}
+
+.c17:where(*) {
   position: relative;
   overflow: auto;
   font-family: --var(google-font),Lexend,sans-serif;
   overflow: auto;
 }
 
-.c20 {
+.c20:where(span) {
+  display: block;
+}
+
+.c20:where(*) {
   pointer-events: none;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -135,9 +171,16 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  position: relative;
+}
+
+.c12:where(span) {
+  display: block;
+}
+
+.c12:where(*) {
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
-  position: relative;
 }
 
 .c12:hover {
@@ -150,10 +193,6 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
 }
 
 .c7 {
-  position: relative;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  font-family: --var(google-font),Lexend,sans-serif;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -170,6 +209,17 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
 
 .c7 .c11:focus-visible ~ .c18 {
   visibility: visible;
+}
+
+.c7:where(span) {
+  display: block;
+}
+
+.c7:where(*) {
+  position: relative;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c21 {

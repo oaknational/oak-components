@@ -1,12 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakPagination Component matches snapshot 1`] = `
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c5 {
+.c5:where(span) {
+  display: block;
+}
+
+.c5:where(*) {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -40,13 +48,20 @@ exports[`OakPagination Component matches snapshot 1`] = `
 }
 
 .c9 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  display: revert;
+  display: revert;
+}
+
+.c9:where(span) {
+  display: block;
+}
+
+.c9:where(*) {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
   display: revert;
   font-family: --var(google-font),Lexend,sans-serif;
-  font-family: --var(google-font),Lexend,sans-serif;
-  display: revert;
-  display: revert;
 }
 
 .c8 {
@@ -58,11 +73,18 @@ exports[`OakPagination Component matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c8:where(span) {
+  display: block;
+}
+
+.c8:where(*) {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c2 {
@@ -207,25 +229,25 @@ exports[`OakPagination Component matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c9 {
+  .c9:where(*) {
     margin-left: 0.5rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c9 {
+  .c9:where(*) {
     margin-left: 0.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c9 {
+  .c9:where(*) {
     margin-right: 0.5rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c9 {
+  .c9:where(*) {
     margin-right: 0.5rem;
   }
 }

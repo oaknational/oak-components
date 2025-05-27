@@ -1,24 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakQuote component matches snapshot 1`] = `
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   width: 100%;
   max-width: 40rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c2:where(span) {
+  display: block;
+}
+
+.c2:where(*) {
   width: 0.5rem;
   margin-right: 1.5rem;
   background: #bef2bd;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c4 {
+.c4:where(span) {
+  display: block;
+}
+
+.c4:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c6 {
+.c6:where(span) {
+  display: block;
+}
+
+.c6:where(*) {
   color: #222222;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
@@ -30,7 +46,11 @@ exports[`OakQuote component matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c9 {
+.c9:where(span) {
+  display: block;
+}
+
+.c9:where(*) {
   position: relative;
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
@@ -134,25 +154,25 @@ exports[`OakQuote component matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c6 {
+  .c6:where(*) {
     font-weight: 600;
   }
 }
 
 @media (min-width:750px) {
-  .c6 {
+  .c6:where(*) {
     font-size: 1.25rem;
   }
 }
 
 @media (min-width:750px) {
-  .c6 {
+  .c6:where(*) {
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c6 {
+  .c6:where(*) {
     -webkit-letter-spacing: 0.0115rem;
     -moz-letter-spacing: 0.0115rem;
     -ms-letter-spacing: 0.0115rem;

@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakRoundIcon matches snapshot 1`] = `
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   width: 3rem;
   height: 3rem;
   padding: 0.25rem;
@@ -10,7 +14,11 @@ exports[`OakRoundIcon matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c1 {
+.c1:where(span) {
+  display: block;
+}
+
+.c1:where(*) {
   position: relative;
   width: 100%;
   min-width: 100%;

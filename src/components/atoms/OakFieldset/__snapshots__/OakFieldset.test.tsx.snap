@@ -5,6 +5,13 @@ exports[`OakFieldset matches snapshot 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
+}
+
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 

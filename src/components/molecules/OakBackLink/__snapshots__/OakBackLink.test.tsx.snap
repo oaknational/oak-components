@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakBackLink matches snapshot 1`] = `
-.c1 {
+.c1:where(span) {
+  display: block;
+}
+
+.c1:where(*) {
   position: relative;
   width: 2.5rem;
   min-width: 2.5rem;

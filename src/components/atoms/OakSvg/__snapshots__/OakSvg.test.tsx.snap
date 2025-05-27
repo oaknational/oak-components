@@ -2,9 +2,16 @@
 
 exports[`OakSvg matches snapshot 1`] = `
 .c0 {
-  font-family: --var(google-font),Lexend,sans-serif;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 <svg

@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakAccordion matches snapshot 1`] = `
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   padding: 1rem;
   background: #f2f2f2;
   border: 0.063rem solid;
@@ -9,7 +13,11 @@ exports[`OakAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c1 {
+.c1:where(span) {
+  display: block;
+}
+
+.c1:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -22,15 +30,23 @@ exports[`OakAccordion matches snapshot 1`] = `
   text-decoration: underline;
 }
 
-.c3 {
+.c3:where(span) {
+  display: block;
+}
+
+.c3:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c3:hover {
+.c3:where(*):hover {
   cursor: pointer;
 }
 
-.c7 {
+.c7:where(span) {
+  display: block;
+}
+
+.c7:where(*) {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -40,12 +56,20 @@ exports[`OakAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c9 {
+.c9:where(span) {
+  display: block;
+}
+
+.c9:where(*) {
   margin-left: 1.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c10 {
+.c10:where(span) {
+  display: block;
+}
+
+.c10:where(*) {
   padding-left: 1rem;
   margin-left: 1.5rem;
   margin-top: 0.25rem;

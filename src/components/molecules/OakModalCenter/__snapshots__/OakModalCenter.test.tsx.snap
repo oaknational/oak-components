@@ -1,14 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakModalCenter matches snapshot 1`] = `
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   position: fixed;
   inset: 0rem;
   font-family: --var(google-font),Lexend,sans-serif;
   z-index: 300;
 }
 
-.c3 {
+.c3:where(span) {
+  display: block;
+}
+
+.c3:where(*) {
   position: fixed;
   inset: 0rem;
   background: #22222240;
@@ -16,14 +24,22 @@ exports[`OakModalCenter matches snapshot 1`] = `
   z-index: -1;
 }
 
-.c5 {
+.c5:where(span) {
+  display: block;
+}
+
+.c5:where(*) {
   width: 100%;
   max-width: 60rem;
   padding: 1.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c7 {
+.c7:where(span) {
+  display: block;
+}
+
+.c7:where(*) {
   position: relative;
   width: 100%;
   background: #ffffff;
@@ -31,20 +47,32 @@ exports[`OakModalCenter matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c9 {
+.c9:where(span) {
+  display: block;
+}
+
+.c9:where(*) {
   position: relative;
   min-height: 3.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c10 {
+.c10:where(span) {
+  display: block;
+}
+
+.c10:where(*) {
   position: absolute;
   top: 0.75rem;
   right: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c11 {
+.c11:where(span) {
+  display: block;
+}
+
+.c11:where(*) {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -52,11 +80,19 @@ exports[`OakModalCenter matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c16 {
+.c16:where(span) {
+  display: block;
+}
+
+.c16:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c18 {
+.c18:where(span) {
+  display: block;
+}
+
+.c18:where(*) {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -67,7 +103,11 @@ exports[`OakModalCenter matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c19 {
+.c19:where(span) {
+  display: block;
+}
+
+.c19:where(*) {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -76,7 +116,11 @@ exports[`OakModalCenter matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c20 {
+.c20:where(span) {
+  display: block;
+}
+
+.c20:where(*) {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -85,7 +129,11 @@ exports[`OakModalCenter matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c23 {
+.c23:where(span) {
+  display: block;
+}
+
+.c23:where(*) {
   overflow: auto;
   padding-left: 3.5rem;
   padding-right: 3.5rem;
@@ -231,7 +279,11 @@ exports[`OakModalCenter matches snapshot 1`] = `
   background: transparent;
 }
 
-.c6 {
+.c6:where(span) {
+  display: block;
+}
+
+.c6:where(*) {
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
 }

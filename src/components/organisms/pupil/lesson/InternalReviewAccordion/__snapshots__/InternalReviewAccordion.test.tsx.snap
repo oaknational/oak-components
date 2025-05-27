@@ -2,12 +2,20 @@
 
 exports[`InternalReviewAccordion matches snapshot 1`] = `
 [
-  .c0 {
+  .c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   padding-top: 1.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c2:where(span) {
+  display: block;
+}
+
+.c2:where(*) {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -15,11 +23,19 @@ exports[`InternalReviewAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
+.c8:where(span) {
+  display: block;
+}
+
+.c8:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c11 {
+.c11:where(span) {
+  display: block;
+}
+
+.c11:where(*) {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -30,7 +46,11 @@ exports[`InternalReviewAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c13 {
+.c13:where(span) {
+  display: block;
+}
+
+.c13:where(*) {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -39,7 +59,11 @@ exports[`InternalReviewAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c14 {
+.c14:where(span) {
+  display: block;
+}
+
+.c14:where(*) {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -191,10 +215,17 @@ exports[`InternalReviewAccordion matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.c5:where(span) {
+  display: block;
+}
+
+.c5:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c5:hover {
+.c5:where(*):hover {
   cursor: pointer;
 }
 
@@ -207,7 +238,7 @@ exports[`InternalReviewAccordion matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c0 {
+  .c0:where(*) {
     padding-top: 0rem;
   }
 }
@@ -274,11 +305,19 @@ exports[`InternalReviewAccordion matches snapshot 1`] = `
       </button>
     </div>
   </div>,
-  .c0 {
+  .c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c2:where(span) {
+  display: block;
+}
+
+.c2:where(*) {
   min-width: 100%;
   padding-left: 1.5rem;
   padding-right: 1.5rem;

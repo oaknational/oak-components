@@ -2,12 +2,20 @@
 
 exports[`OakCopyLinkButton matches snapshot 1`] = `
 [
-  .c0 {
+  .c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   display: none;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c1 {
+.c1:where(span) {
+  display: block;
+}
+
+.c1:where(*) {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -15,7 +23,11 @@ exports[`OakCopyLinkButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c3 {
+.c3:where(span) {
+  display: block;
+}
+
+.c3:where(*) {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -24,11 +36,19 @@ exports[`OakCopyLinkButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c6 {
+.c6:where(span) {
+  display: block;
+}
+
+.c6:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c9 {
+.c9:where(span) {
+  display: block;
+}
+
+.c9:where(*) {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -154,7 +174,7 @@ exports[`OakCopyLinkButton matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c0 {
+  .c0:where(*) {
     display: block;
   }
 }
@@ -223,7 +243,11 @@ exports[`OakCopyLinkButton matches snapshot 1`] = `
       </button>
     </div>
   </div>,
-  .c1 {
+  .c1:where(span) {
+  display: block;
+}
+
+.c1:where(*) {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -231,7 +255,11 @@ exports[`OakCopyLinkButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c3 {
+.c3:where(span) {
+  display: block;
+}
+
+.c3:where(*) {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -240,11 +268,19 @@ exports[`OakCopyLinkButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c6 {
+.c6:where(span) {
+  display: block;
+}
+
+.c6:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -364,7 +400,7 @@ exports[`OakCopyLinkButton matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c0 {
+  .c0:where(*) {
     display: none;
   }
 }

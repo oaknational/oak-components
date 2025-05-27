@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakTeacherNotesInline matches snapshot 1`] = `
-.c0 {
+.c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   padding-right: 1.5rem;
@@ -11,7 +15,11 @@ exports[`OakTeacherNotesInline matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c1 {
+.c1:where(span) {
+  display: block;
+}
+
+.c1:where(*) {
   overflow: scroll;
   height: 4.5rem;
   padding-left: 1.5rem;

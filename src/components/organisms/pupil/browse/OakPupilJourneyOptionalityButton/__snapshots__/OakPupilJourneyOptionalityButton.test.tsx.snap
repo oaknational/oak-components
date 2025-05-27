@@ -2,13 +2,21 @@
 
 exports[`OakPupilJourneyOptionalityButton matches snapshot 1`] = `
 [
-  .c0 {
+  .c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   color: #222222;
   background: #ffffff;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c3 {
+.c3:where(span) {
+  display: block;
+}
+
+.c3:where(*) {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -17,22 +25,38 @@ exports[`OakPupilJourneyOptionalityButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c5 {
+.c5:where(span) {
+  display: block;
+}
+
+.c5:where(*) {
   position: absolute;
   inset: 0rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
+.c8:where(span) {
+  display: block;
+}
+
+.c8:where(*) {
   position: relative;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c9 {
+.c9:where(span) {
+  display: block;
+}
+
+.c9:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c11 {
+.c11:where(span) {
+  display: block;
+}
+
+.c11:where(*) {
   color: #222222;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
@@ -44,7 +68,11 @@ exports[`OakPupilJourneyOptionalityButton matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c13 {
+.c13:where(span) {
+  display: block;
+}
+
+.c13:where(*) {
   color: #222222;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
@@ -56,7 +84,11 @@ exports[`OakPupilJourneyOptionalityButton matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c14 {
+.c14:where(span) {
+  display: block;
+}
+
+.c14:where(*) {
   width: 2rem;
   height: 2rem;
   padding: 0.25rem;
@@ -65,7 +97,11 @@ exports[`OakPupilJourneyOptionalityButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c15 {
+.c15:where(span) {
+  display: block;
+}
+
+.c15:where(*) {
   position: relative;
   width: 100%;
   min-width: 100%;
@@ -153,25 +189,25 @@ exports[`OakPupilJourneyOptionalityButton matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c11 {
+  .c11:where(*) {
     font-weight: 600;
   }
 }
 
 @media (min-width:750px) {
-  .c11 {
+  .c11:where(*) {
     font-size: 1.25rem;
   }
 }
 
 @media (min-width:750px) {
-  .c11 {
+  .c11:where(*) {
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c11 {
+  .c11:where(*) {
     -webkit-letter-spacing: 0.0115rem;
     -moz-letter-spacing: 0.0115rem;
     -ms-letter-spacing: 0.0115rem;

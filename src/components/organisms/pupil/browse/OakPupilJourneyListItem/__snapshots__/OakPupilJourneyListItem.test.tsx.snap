@@ -2,11 +2,19 @@
 
 exports[`OakPupilJourneyListItem matches snapshot 1`] = `
 [
-  .c0 {
+  .c0:where(span) {
+  display: block;
+}
+
+.c0:where(*) {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c1 {
+.c1:where(span) {
+  display: block;
+}
+
+.c1:where(*) {
   padding: 1.25rem;
   color: #222222;
   background: #ffffff;
@@ -16,7 +24,11 @@ exports[`OakPupilJourneyListItem matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c6 {
+.c6:where(span) {
+  display: block;
+}
+
+.c6:where(*) {
   color: #222222;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
@@ -30,7 +42,11 @@ exports[`OakPupilJourneyListItem matches snapshot 1`] = `
   text-decoration: none;
 }
 
-.c8 {
+.c8:where(span) {
+  display: block;
+}
+
+.c8:where(*) {
   color: #222222;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
@@ -42,7 +58,11 @@ exports[`OakPupilJourneyListItem matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c10 {
+.c10:where(span) {
+  display: block;
+}
+
+.c10:where(*) {
   width: 3rem;
   height: 3rem;
   padding: 0.25rem;
@@ -51,7 +71,11 @@ exports[`OakPupilJourneyListItem matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c13 {
+.c13:where(span) {
+  display: block;
+}
+
+.c13:where(*) {
   position: relative;
   width: 100%;
   min-width: 100%;
@@ -171,31 +195,31 @@ exports[`OakPupilJourneyListItem matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c1 {
+  .c1:where(*) {
     padding: 1.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c6 {
+  .c6:where(*) {
     font-weight: 600;
   }
 }
 
 @media (min-width:750px) {
-  .c6 {
+  .c6:where(*) {
     font-size: 2rem;
   }
 }
 
 @media (min-width:750px) {
-  .c6 {
+  .c6:where(*) {
     line-height: 2.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c6 {
+  .c6:where(*) {
     -webkit-letter-spacing: 0.0115rem;
     -moz-letter-spacing: 0.0115rem;
     -ms-letter-spacing: 0.0115rem;
@@ -204,25 +228,25 @@ exports[`OakPupilJourneyListItem matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c8 {
+  .c8:where(*) {
     font-weight: 600;
   }
 }
 
 @media (min-width:750px) {
-  .c8 {
+  .c8:where(*) {
     font-size: 1.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c8 {
+  .c8:where(*) {
     line-height: 2rem;
   }
 }
 
 @media (min-width:750px) {
-  .c8 {
+  .c8:where(*) {
     -webkit-letter-spacing: 0.0115rem;
     -moz-letter-spacing: 0.0115rem;
     -ms-letter-spacing: 0.0115rem;
