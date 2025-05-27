@@ -8,7 +8,10 @@ export const oakIconNames = Object.keys(icons) as IconName[];
 
 export type OakIconName = IconName;
 
-export type OakIconProps = Omit<OakImageProps, "alt" | "src"> & {
+export type OakIconProps = Omit<
+  OakImageProps,
+  "alt" | "src" | "containerAs"
+> & {
   /**
    * The name of the icon to display
    *
@@ -61,6 +64,7 @@ export const OakIcon = (props: OakIconProps) => {
   return (
     <OakImage
       src={generateOakIconURL(iconName)}
+      containerAs="span"
       alt={alt ?? ""}
       $width={$width}
       $height={$height}

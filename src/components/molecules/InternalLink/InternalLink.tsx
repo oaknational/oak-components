@@ -142,6 +142,7 @@ export const InternalLink: InternalLinkComponent = forwardRef(
         case isLoading:
           return (
             <OakBox
+              as="span"
               $width="all-spacing-6"
               $height="all-spacing-6"
               $display={"inline-block"}
