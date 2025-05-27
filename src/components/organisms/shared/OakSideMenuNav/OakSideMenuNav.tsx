@@ -3,7 +3,13 @@ import styled from "styled-components";
 
 import { MenuItemProps, OakSideMenuNavLink } from "../OakSideMenuNavLink";
 
-import { OakFlex, OakHeading, OakLI, OakUL } from "@/components/atoms";
+import {
+  OakAnchorTarget,
+  OakFlex,
+  OakHeading,
+  OakLI,
+  OakUL,
+} from "@/components/atoms";
 
 const StyledNav = styled.nav`
   outline: none;
@@ -12,14 +18,16 @@ const StyledNav = styled.nav`
 export type OakSideMenuNavProps = {
   heading: string;
   menuItems: MenuItemProps[];
+  anchorTargetId: string;
 };
 
 export const OakSideMenuNav = (props: OakSideMenuNavProps) => {
-  const { heading, menuItems } = props;
+  const { heading, menuItems, anchorTargetId } = props;
   const [selectedHref, setSelectedHref] = useState<string | null>(null);
 
   return (
     <StyledNav aria-labelledby="side-menu-header">
+      <OakAnchorTarget id={anchorTargetId} />
       <OakFlex
         $flexDirection="column"
         $background={["bg-decorative1-subdued", "white"]}
