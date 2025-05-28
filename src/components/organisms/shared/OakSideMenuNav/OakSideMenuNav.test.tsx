@@ -11,6 +11,7 @@ import { oakDefaultTheme } from "@/styles";
 
 const baseProps = {
   heading: "Test Heading",
+  anchorTargetId: "side-menu-header",
   menuItems: [
     {
       heading: "Test Item 1",
