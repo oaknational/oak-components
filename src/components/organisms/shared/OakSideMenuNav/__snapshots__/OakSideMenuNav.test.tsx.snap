@@ -8,11 +8,11 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
+.c9 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c12 {
+.c13 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -34,7 +34,7 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
   gap: 1rem;
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -54,7 +54,7 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
   top: 0;
 }
 
-.c13 {
+.c14 {
   object-fit: contain;
 }
 
@@ -70,7 +70,7 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
   color: #575757;
 }
 
-.c10 {
+.c11 {
   color: #222222;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
@@ -82,7 +82,7 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c11 {
+.c12 {
   color: #575757;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
@@ -154,6 +154,13 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
   border-radius: 4px;
 }
 
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .c0 {
   outline: none;
 }
@@ -171,13 +178,13 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c12 {
+  .c13 {
     display: none;
   }
 }
 
 @media (min-width:750px) {
-  .c9 {
+  .c10 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -185,7 +192,7 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c9 {
+  .c10 {
     -webkit-column-gap: 0.25rem;
     column-gap: 0.25rem;
   }
@@ -256,30 +263,30 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
           className="c6"
         >
           <a
-            className="c7"
+            className="c7 c8"
             href="#test1"
             onClick={[Function]}
           >
             <div
-              className="c8 c9"
+              className="c9 c10"
             >
               <span
-                className="c10"
+                className="c11"
               >
                 Test Item 1
               </span>
               <span
-                className="c11"
+                className="c12"
               >
                 Test Subheading 1
               </span>
             </div>
             <div
-              className="c12"
+              className="c13"
             >
               <img
                 alt=""
-                className="c13"
+                className="c14"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"
@@ -308,30 +315,30 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
           className="c6"
         >
           <a
-            className="c7"
+            className="c7 c8"
             href="#test2"
             onClick={[Function]}
           >
             <div
-              className="c8 c9"
+              className="c9 c10"
             >
               <span
-                className="c10"
+                className="c11"
               >
                 Test Item 2
               </span>
               <span
-                className="c11"
+                className="c12"
               >
                 Test Subheading 2
               </span>
             </div>
             <div
-              className="c12"
+              className="c13"
             >
               <img
                 alt=""
-                className="c13"
+                className="c14"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"
