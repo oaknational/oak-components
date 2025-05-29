@@ -15,6 +15,7 @@ export const icons = {
   copy: "v1727861316/icons/Icon_Copy_qxgynv.svg",
   bell: "v1699895207/icons/ecejtvqerx81prxyxh9b.svg",
   twitter: "v1699895251/icons/bq6a50xtkvnzhltfggzz.svg",
+  x: "v1748452854/icons/x_fpmv5f.svg",
   worksheet: "v1699895300/icons/ez1s6mtpe5jkunnxzvlw.svg",
   facebook: "v1699895330/icons/iojlvh3o5lshy2jupyph.svg",
   share: "v1699895363/icons/agcmduftef3wcla6gzec.svg",
