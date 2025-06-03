@@ -12,14 +12,14 @@ import {
 } from "@/components/atoms";
 
 export type OakHeaderHeroProps = {
-  headingTitle: string;
+  authorImageSrc?: string;
+  authorImageAlt?: string;
+  authorName?: string;
+  authorTitle?: string;
   heroImageSrc: string;
-  authorImageSrc: string;
-  authorName: string;
-  authorTitle: string;
-  subHeadingText: string;
   heroImageAlt: string;
-  authorImageAlt: string;
+  headingTitle?: string;
+  subHeadingText: string;
   breadcrumbs: ReactElement;
   cmsImage?: ReactElement;
   children?: ReactNode;
@@ -38,17 +38,21 @@ const OakHeaderHeroCss = css<OakHeaderHeroProps>``;
 
 const UnstyledComponent = (props: OakHeaderHeroProps) => {
   const {
-    headingTitle,
-    breadcrumbs,
     authorName,
     authorTitle,
-    subHeadingText,
-    heroImageSrc,
     authorImageSrc,
-    heroImageAlt,
     authorImageAlt,
+    heroImageSrc,
+    heroImageAlt,
+    headingTitle,
+    breadcrumbs,
+    subHeadingText,
     cmsImage,
   } = props;
+
+  const hasAuthorProps =
+    authorImageSrc && authorImageAlt && authorName && authorTitle;
+
   return (
     <OakBox
       $width={"100%"}
@@ -96,21 +100,23 @@ const UnstyledComponent = (props: OakHeaderHeroProps) => {
               >
                 {headingTitle}
               </OakHeading>
-              <OakFlex
-                $mb={"space-between-m"}
-                $flexDirection={"row"}
-                $alignItems={"center"}
-              >
-                <StyledAuthorImage
-                  alt={authorImageAlt}
-                  src={authorImageSrc}
-                  $zIndex={"in-front"}
-                />
-                <OakBox>
-                  <OakP $font={"heading-7"}>{authorName}</OakP>
-                  <OakP $font={"body-3"}>{authorTitle}</OakP>
-                </OakBox>
-              </OakFlex>
+              {hasAuthorProps && (
+                <OakFlex
+                  $mb={"space-between-m"}
+                  $flexDirection={"row"}
+                  $alignItems={"center"}
+                >
+                  <StyledAuthorImage
+                    alt={authorImageAlt}
+                    src={authorImageSrc}
+                    $zIndex={"in-front"}
+                  />
+                  <OakBox>
+                    <OakP $font={"heading-7"}>{authorName}</OakP>
+                    <OakP $font={"body-3"}>{authorTitle}</OakP>
+                  </OakBox>
+                </OakFlex>
+              )}
               <OakP
                 $font={"body-1"}
                 $mb={["space-between-l", "space-between-none"]}
