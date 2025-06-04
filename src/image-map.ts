@@ -69,6 +69,10 @@ export const icons = {
   "bookmark-filled": "v1734519491/icons/bookmark-filled_jz828n.svg",
   "microsoft-teams": "v1736429692/microsoft-teams_gelfmi.svg",
   "google-classroom": "v1736429692/google-classroom_pedfpd.svg",
+  clipboard: "v1749031463/icons/clipboard_yll2yj.svg",
+  "book-steps": "v1749034739/icons/book-steps_qwku6h.svg",
+  "free-tag": "v1749033815/icons/free-tag_lijptf.svg",
+  threads: "v1749034800/icons/threads_sqlqoe.svg",
   // subject icons
   "subject-art": "v1706616347/subject-icons/art.svg",
   "subject-biology": "v1706616415/subject-icons/biology.svg",
