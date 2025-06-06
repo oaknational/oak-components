@@ -65,6 +65,10 @@ export type OakModalCenterProps = {
    * Slot for the footer of the modal
    */
   footerSlot?: ReactNode;
+  /**
+   * Override for returnFocus behavior of FocusOn
+   */
+  returnFocus?: (returnTo: Element) => boolean | FocusOptions;
 };
 
 const FocusOnBox = styled(FocusOn)`
@@ -119,6 +123,7 @@ export const OakModalCenter = ({
   modalInnerFlexProps,
   backdropFlexProps,
   footerSlot,
+  returnFocus,
 }: OakModalCenterProps) => {
   const [scrollBorders, setScrollBorders] = useState({
     top: false,
@@ -201,7 +206,7 @@ export const OakModalCenter = ({
             <FocusOnBox
               onEscapeKey={() => !disableEscapeKey && onClose()}
               onClickOutside={() => !disableBackdropClick && onClose()}
-              returnFocus
+              returnFocus={returnFocus ?? true}
               autoFocus
               $width="100%"
             >

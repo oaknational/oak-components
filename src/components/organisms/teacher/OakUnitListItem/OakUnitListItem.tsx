@@ -80,6 +80,7 @@ export type OakUnitListItemProps = {
   onClick?: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
   onSave?: () => void;
   isSaved?: boolean;
+  saveButtonId?: string;
 };
 
 /**
@@ -97,6 +98,7 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
     onSave,
     isSaved,
     firstItemRef,
+    saveButtonId,
     ...rest
   } = props;
 
@@ -198,6 +200,7 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
             aria-label={`${isSaved ? "Unsave" : "Save"} this unit: ${
               props.title
             } `}
+            id={saveButtonId}
           >
             {isSaved ? "Saved" : "Save"}
           </OakSmallTertiaryInvertedButton>
