@@ -126,6 +126,7 @@ exports[`OakSaveCount should match snapshot 1`] = `
 
 <div>
   <a
+    aria-label="0 saved units"
     class="c0 c1"
     href="#"
   >
@@ -155,7 +156,6 @@ exports[`OakSaveCount should match snapshot 1`] = `
         class="c7"
       >
         <span
-          aria-label="0 saved units"
           class="c8"
         >
           0

@@ -40,7 +40,11 @@ export const OakSaveCount = ({ count, href, loading }: OakSaveCountProps) => {
     : "all-spacing-10";
 
   return (
-    <StyledInternalButton as="a" href={href}>
+    <StyledInternalButton
+      as="a"
+      href={href}
+      aria-label={`${count} saved unit${count === 1 ? "" : "s"}`}
+    >
       <OakScreenReader>View my library</OakScreenReader>
       <OakFlex
         $width={["all-spacing-7", containerWidth]}
@@ -68,10 +72,7 @@ export const OakSaveCount = ({ count, href, loading }: OakSaveCountProps) => {
           $textAlign="center"
           $display={["none", "block"]}
         >
-          <OakSpan
-            $font="heading-light-7"
-            aria-label={`${count} saved unit${count === 1 ? "" : "s"}`}
-          >
+          <OakSpan $font="heading-light-7">
             {showTruncatedCount ? "99+" : count}
           </OakSpan>
         </OakBox>
