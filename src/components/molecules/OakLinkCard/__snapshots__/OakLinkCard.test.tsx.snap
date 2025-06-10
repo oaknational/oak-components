@@ -130,6 +130,8 @@ exports[`OakLinkCard matches snapshot 1`] = `
 }
 
 .c2 {
+  -webkit-animation: none;
+  animation: none;
   cursor: pointer;
   outline: none;
 }

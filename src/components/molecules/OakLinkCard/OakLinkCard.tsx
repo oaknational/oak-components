@@ -4,16 +4,37 @@ import styled from "styled-components";
 import { OakHandDrawnCardWithIcon } from "../OakHandDrawnCardWithIcon";
 import { OakPromoTag } from "../OakPromoTag";
 
-import { OakFlex, OakBox, OakIconName, OakIconProps } from "@/components/atoms";
+import {
+  OakFlex,
+  OakBox,
+  OakIconName,
+  OakIconProps,
+  OakFlexProps,
+} from "@/components/atoms";
 import { InternalStyledSvgProps } from "@/components/atoms/InternalStyledSvg";
+import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 
-const StyledOakFlexAsLink = styled(OakFlex)`
+type OakFlexPropsWithAnimation = OakFlexProps & {
+  hasAnimation?: boolean;
+};
+const StyledOakFlexAsLink = styled(OakFlex)<OakFlexPropsWithAnimation>`
+  animation: ${({ hasAnimation }) =>
+    hasAnimation ? "background-fade 0.9s ease-in-out" : "none"};
   cursor: pointer;
   outline: none;
   &:focus-visible {
     box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
+  }
+
+  @keyframes background-fade {
+    from {
+      background-color: ${parseColor("bg-decorative1-main")};
+    }
+    to {
+      transform: ${parseColor("bg-primary")};
+    }
   }
 `;
 
@@ -50,6 +71,10 @@ export type OakLinkCardProps = {
    * Whether to display the card in a narrow layout.
    */
   narrow?: boolean;
+  /**
+   * Whether to apply a background animation effect.
+   */
+  hasAnimation?: boolean;
 };
 
 /**
@@ -74,17 +99,19 @@ export const OakLinkCard = ({
   iconFill = "bg-decorative1-main",
   href,
   showNew = false,
+  hasAnimation = false,
   narrow = false,
 }: OakLinkCardProps) => {
   return (
     <StyledOakFlexAsLink
+      hasAnimation={hasAnimation}
       as="a"
       href={href}
       $flexDirection={narrow ? "column-reverse" : ["column-reverse", "row"]}
       $alignItems={narrow ? "flex-start" : ["flex-start", "center"]}
       $justifyContent="space-between"
       $gap={"space-between-m2"}
-      $background="bg-primary"
+      $background={"bg-primary"}
       $pa="inner-padding-xl"
       $borderRadius="border-radius-m2"
       $width="100%"

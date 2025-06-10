@@ -39,6 +39,11 @@ const meta: Meta<typeof OakLinkCard> = {
         type: "boolean",
       },
     },
+    hasAnimation: {
+      control: {
+        type: "boolean",
+      },
+    },
   },
   parameters: {
     controls: {
@@ -75,6 +80,7 @@ const meta: Meta<typeof OakLinkCard> = {
     href: "https://www.example.com",
     showNew: true,
     narrow: false,
+    hasAnimation: false,
   },
 };
 
@@ -116,5 +122,32 @@ export const WithLongText: Story = {
     iconName: "books",
     href: "https://www.example.com",
     showNew: false,
+  },
+};
+
+export const WithAnimation: Story = {
+  args: {
+    hasAnimation: true,
+    mainSection: (
+      <OakFlex $flexDirection="column" $gap="space-between-xs">
+        <OakHeading tag="h1" $font="heading-5">
+          Explore our cool animations that happen on mount
+        </OakHeading>
+        <OakP>
+          Dive into this smooth transition from bg-decorative1-main to
+          bg-primary. It eases in an out for a delightful user experience.
+          Discover more subtle ways to call attention to components.
+        </OakP>
+        <OakTertiaryButton iconName="chevron-right" isTrailingIcon>
+          Find out more
+        </OakTertiaryButton>
+      </OakFlex>
+    ),
+    iconName: "question-mark",
+    iconAlt: "Illustration of interactive lessons",
+    iconColor: "black",
+    iconFill: "bg-decorative1-main",
+    href: "https://www.example.com",
+    narrow: false,
   },
 };
