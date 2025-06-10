@@ -174,9 +174,8 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
 <div
     className="c0 c1"
   >
-    <a
+    <div
       className="c2 c1 c3"
-      href=""
       title="Lesson 1"
     >
       <div
@@ -230,7 +229,7 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
           </div>
         </div>
       </div>
-    </a>
+    </div>
   </div>,
   ",",
 ]

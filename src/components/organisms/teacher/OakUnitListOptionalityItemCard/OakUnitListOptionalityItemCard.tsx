@@ -115,9 +115,6 @@ export const OakUnitListOptionalityItemCard = (
         $ba="border-solid-m"
         $disabled={unavailable}
         $flexGrow={1}
-        as={onSave ? "li" : "a"}
-        href={unavailable ? undefined : href}
-        ref={firstItemRef}
         {...rest}
       >
         <OakFlex
