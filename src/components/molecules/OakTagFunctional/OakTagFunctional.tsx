@@ -4,9 +4,10 @@ import { OakBox, OakBoxProps, OakLabel } from "@/components/atoms";
 
 export type OakTagFunctionalProps = {
   label: string;
+  useSpan?: boolean;
 } & Omit<OakBoxProps, "onClick" | "label">;
 export const OakTagFunctional = (props: OakTagFunctionalProps) => {
-  const { label, ...oakBoxProps } = props;
+  const { label, useSpan, ...oakBoxProps } = props;
   return (
     <OakBox
       $borderRadius={"border-radius-m"}
@@ -15,7 +16,7 @@ export const OakTagFunctional = (props: OakTagFunctionalProps) => {
       $font={["heading-light-7"]}
       {...oakBoxProps}
     >
-      <OakLabel>{label}</OakLabel>
+      <OakLabel as={useSpan ? "span" : undefined}>{label}</OakLabel>
     </OakBox>
   );
 };
