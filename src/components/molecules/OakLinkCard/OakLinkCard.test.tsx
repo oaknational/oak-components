@@ -98,7 +98,7 @@ describe("OakLinkCard", () => {
     );
 
     expect(containerWithAnimation.firstChild).toHaveStyle({
-      animation: "background-fade 0.9s ease-in-out",
+      animation: "background-fade 2s ease-in-out",
     });
 
     expect(containerWithoutAnimation.firstChild).toHaveStyle({

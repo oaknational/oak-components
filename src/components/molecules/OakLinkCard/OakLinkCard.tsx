@@ -20,7 +20,8 @@ type OakFlexPropsWithAnimation = OakFlexProps & {
 };
 const StyledOakFlexAsLink = styled(OakFlex)<OakFlexPropsWithAnimation>`
   animation: ${({ hasAnimation }) =>
-    hasAnimation ? "background-fade 0.9s ease-in-out" : "none"};
+    hasAnimation ? "background-fade 2s ease-in-out" : "none"};
+  animation-delay: 0.5s;
   cursor: pointer;
   outline: none;
   &:focus-visible {
