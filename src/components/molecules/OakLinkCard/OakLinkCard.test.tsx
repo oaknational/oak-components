@@ -88,4 +88,21 @@ describe("OakLinkCard", () => {
     renderWithTheme(<OakLinkCard {...defaultProps} showNew={false} />);
     expect(screen.queryByTestId("oak-new-promo-tag")).not.toBeInTheDocument();
   });
+
+  it("applies an animation only when hasAnimation is true", () => {
+    const { container: containerWithAnimation } = renderWithTheme(
+      <OakLinkCard {...defaultProps} hasAnimation={true} />,
+    );
+    const { container: containerWithoutAnimation } = renderWithTheme(
+      <OakLinkCard {...defaultProps} hasAnimation={false} />,
+    );
+
+    expect(containerWithAnimation.firstChild).toHaveStyle({
+      animation: "background-fade 2s ease-in-out",
+    });
+
+    expect(containerWithoutAnimation.firstChild).toHaveStyle({
+      animation: "none",
+    });
+  });
 });
