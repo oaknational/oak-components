@@ -13,7 +13,7 @@ const meta: Meta<typeof OakTagFunctional> = {
   component: OakTagFunctional,
   tags: ["autodocs"],
   title: "components/molecules/OakTagFunctional",
-  argTypes: { 
+  argTypes: {
     label: { control: "text" },
     iconName: { options: controlIconNames },
     isTrailingIcon: { type: "boolean" },
@@ -23,7 +23,6 @@ const meta: Meta<typeof OakTagFunctional> = {
       include: ["iconName", "label"],
     },
   },
-  args: { label: "Played" },
 
   decorators: [
     (Story) => (

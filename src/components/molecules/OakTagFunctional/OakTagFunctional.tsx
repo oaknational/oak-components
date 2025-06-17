@@ -15,7 +15,7 @@ export type OakTagFunctionalProps = {
   useSpan?: boolean;
 } & Omit<OakBoxProps, "onClick" | "label">;
 export const OakTagFunctional = (props: OakTagFunctionalProps) => {
-  const { label, ...oakBoxProps } = props;
+  const { label, useSpan, ...oakBoxProps } = props;
   const icon = props.iconName && (
     <OakIcon
       $height={"all-spacing-5"}
@@ -36,7 +36,7 @@ export const OakTagFunctional = (props: OakTagFunctionalProps) => {
       {...oakBoxProps}
     >
       {leadingIcon}
-      <OakLabel as={props.useSpan ? "" : "span"}>{label}</OakLabel>
+      <OakLabel as={useSpan ? "span" : undefined}>{label}</OakLabel>
       {trailingIcon}
     </OakFlex>
   );
