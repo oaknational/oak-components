@@ -13,7 +13,7 @@ const meta: Meta<typeof OakTagFunctional> = {
   component: OakTagFunctional,
   tags: ["autodocs"],
   title: "components/molecules/OakTagFunctional",
-  argTypes: {
+  argTypes: { 
     label: { control: "text" },
     iconName: { options: controlIconNames },
     isTrailingIcon: { type: "boolean" },
@@ -23,6 +23,15 @@ const meta: Meta<typeof OakTagFunctional> = {
       include: ["iconName", "label"],
     },
   },
+  args: { label: "Played" },
+
+  decorators: [
+    (Story) => (
+      <OakFlex $pa={"inner-padding-xl"} $flexDirection={"row"}>
+        <Story />
+      </OakFlex>
+    ),
+  ],
 };
 
 export default meta;
@@ -53,4 +62,9 @@ export const Default: Story = {
     );
   },
   args: { $background: "bg-neutral", $color: "text-subdued" },
+};
+
+export const Span: Story = {
+  render: (args) => <OakTagFunctional {...args} />,
+  args: { $background: "bg-neutral", $color: "text-subdued", useSpan: true },
 };
