@@ -23,7 +23,6 @@ const meta: Meta<typeof OakTagFunctional> = {
       include: ["iconName", "label"],
     },
   },
-
   decorators: [
     (Story) => (
       <OakFlex $pa={"inner-padding-xl"} $flexDirection={"row"}>
@@ -65,5 +64,10 @@ export const Default: Story = {
 
 export const Span: Story = {
   render: (args) => <OakTagFunctional {...args} />,
-  args: { $background: "bg-neutral", $color: "text-subdued", useSpan: true },
+  args: {
+    $background: "bg-neutral",
+    $color: "text-subdued",
+    useSpan: true,
+    label: "Span Tag",
+  },
 };
