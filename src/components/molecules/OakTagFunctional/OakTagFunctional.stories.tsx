@@ -16,7 +16,6 @@ const meta: Meta<typeof OakTagFunctional> = {
   argTypes: {
     label: { control: "text" },
     iconName: { options: controlIconNames },
-    isTrailingIcon: { type: "boolean" },
   },
   parameters: {
     controls: {

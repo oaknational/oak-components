@@ -1,8 +1,8 @@
 import React from "react";
 
 import {
-  OakBoxProps,
   OakFlex,
+  OakFlexProps,
   OakIcon,
   OakIconName,
   OakLabel,
@@ -13,9 +13,9 @@ export type OakTagFunctionalProps = {
   iconName?: OakIconName;
   isTrailingIcon?: boolean;
   useSpan?: boolean;
-} & Omit<OakBoxProps, "onClick" | "label">;
+} & Omit<OakFlexProps, "onClick" | "label">;
 export const OakTagFunctional = (props: OakTagFunctionalProps) => {
-  const { label, useSpan, ...oakBoxProps } = props;
+  const { label, useSpan, ...oakFlexProps } = props;
   const icon = props.iconName && (
     <OakIcon
       $height={"all-spacing-5"}
@@ -31,9 +31,9 @@ export const OakTagFunctional = (props: OakTagFunctionalProps) => {
       $borderRadius={"border-radius-m"}
       $ph={"inner-padding-xs"}
       $pv={"inner-padding-ssx"}
-      $font={["heading-light-7"]}
+      $font={"heading-light-7"}
       $gap={"space-between-ssx"}
-      {...oakBoxProps}
+      {...oakFlexProps}
     >
       {leadingIcon}
       <OakLabel as={useSpan ? "span" : undefined}>{label}</OakLabel>
