@@ -3,18 +3,23 @@ import { Meta, StoryObj } from "@storybook/react";
 
 import { OakTagFunctional } from "./OakTagFunctional";
 
-import { OakFlex } from "@/components/atoms";
+import { OakFlex, oakIconNames } from "@/components/atoms";
+const controlIconNames = [
+  null,
+  [...oakIconNames].sort((a, b) => a.localeCompare(b)),
+].flat();
 
 const meta: Meta<typeof OakTagFunctional> = {
   component: OakTagFunctional,
   tags: ["autodocs"],
   title: "components/molecules/OakTagFunctional",
-  args: { label: "Played" },
   argTypes: {
-    useSpan: {
-      control: "boolean",
-      description:
-        "Whether to use a span element or default label element for label text",
+    label: { control: "text" },
+    iconName: { options: controlIconNames },
+  },
+  parameters: {
+    controls: {
+      include: ["iconName", "label"],
     },
   },
   decorators: [
@@ -25,16 +30,43 @@ const meta: Meta<typeof OakTagFunctional> = {
     ),
   ],
 };
+
 export default meta;
 
 type Story = StoryObj<typeof OakTagFunctional>;
 
 export const Default: Story = {
-  render: (args) => <OakTagFunctional {...args} />,
+  render: (args) => {
+    const iconName = args.iconName ? args.iconName : "arrow-right";
+    return (
+      <OakFlex $gap="space-between-m">
+        <OakTagFunctional
+          label={args.label ? args.label : "No icon"}
+          $background="mint"
+        />
+        <OakTagFunctional
+          label={args.label ? args.label : "With icon"}
+          iconName={iconName}
+          $background="pink"
+        />
+        <OakTagFunctional
+          label={args.label ? args.label : "Trailing icon"}
+          iconName={iconName}
+          isTrailingIcon
+          $background="lavender"
+        />
+      </OakFlex>
+    );
+  },
   args: { $background: "bg-neutral", $color: "text-subdued" },
 };
 
 export const Span: Story = {
   render: (args) => <OakTagFunctional {...args} />,
-  args: { $background: "bg-neutral", $color: "text-subdued", useSpan: true },
+  args: {
+    $background: "bg-neutral",
+    $color: "text-subdued",
+    useSpan: true,
+    label: "Span Tag",
+  },
 };

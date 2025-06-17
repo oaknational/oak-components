@@ -18,14 +18,22 @@ exports[`OakTagFunctional matches snapshot 1`] = `
 }
 
 .c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.c2 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
 <div
-  className="c0"
+  className="c0 c1"
 >
   <label
-    className="c1"
+    className="c2"
   >
     Select one answer
   </label>
