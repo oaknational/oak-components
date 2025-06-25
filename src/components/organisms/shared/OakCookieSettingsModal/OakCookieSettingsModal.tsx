@@ -139,6 +139,7 @@ export const OakCookieSettingsModal = ({
                     {policy.policyLabel}
                   </OakSpan>
                 }
+                headerTag="h4"
                 id={`cookies-settings-${policy.policyId}-accordion`}
                 headerAfterSlot={
                   <OakCheckBox
