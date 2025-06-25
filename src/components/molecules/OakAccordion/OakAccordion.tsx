@@ -16,6 +16,10 @@ export type OakAccordionProps = {
    */
   header: ReactNode;
   /**
+   * The heading tag the header of the accordion is to assume
+   */
+  headerTag?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  /**
    * Slot to place content after the header and outside the button
    */
   headerAfterSlot?: ReactNode;
@@ -50,11 +54,13 @@ const StyledOakFlex = styled(InternalAccordionButton)`
 
 const Accordion = ({
   header,
+  headerTag,
   headerAfterSlot,
   children,
   id,
 }: OakAccordionProps) => {
   const { isOpen } = useAccordionContext();
+  const HeaderTag = headerTag || "h3";
 
   return (
     <OakBox
@@ -65,7 +71,7 @@ const Accordion = ({
       $background={isOpen ? "bg-neutral" : "bg-primary"}
     >
       <OakFlex
-        as="h3"
+        as={HeaderTag}
         $font="heading-light-7"
         $textDecoration={isOpen ? "underline" : "none"}
       >
