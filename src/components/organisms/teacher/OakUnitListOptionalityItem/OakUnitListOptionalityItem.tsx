@@ -122,6 +122,7 @@ export type OakUnitListOptionalityItemProps = {
   firstItemRef: MutableRefObject<HTMLAnchorElement | null> | null | undefined;
   onSave?: (unitSlug: string) => void;
   getIsSaved?: (unitSlug: string) => boolean;
+  getIsSaving?: (unitSlug: string) => boolean;
   optionalityUnits: {
     title: string;
     slug: string;
@@ -150,6 +151,7 @@ export const OakUnitListOptionalityItem = (
     firstItemRef,
     onSave,
     getIsSaved,
+    getIsSaving,
     ...rest
   } = props;
 
@@ -235,6 +237,7 @@ export const OakUnitListOptionalityItem = (
                 unavailable={unavailable}
                 onSave={onSave ?? undefined}
                 isSaved={getIsSaved ? getIsSaved(unit.slug) : undefined}
+                isSaving={getIsSaving ? getIsSaving(unit.slug) : undefined}
               />
             </OakGridArea>
           ))}

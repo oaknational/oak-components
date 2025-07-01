@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 import { OakFlex, OakSpan, OakHeading, OakIcon } from "@/components/atoms";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
-import { OakSmallTertiaryInvertedButton } from "@/components/molecules";
+import { OakSaveButton } from "@/components/molecules/OakSaveButton/OakSaveButton";
 
 const StyledOptionalityListItem = styled(OakFlex)<{ $disabled?: boolean }>`
   outline: none;
@@ -67,6 +67,7 @@ export type OakUnitListOptionalityItemCardProps = {
   onClick?: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
   onSave?: (unitSlug: string) => void;
   isSaved?: boolean;
+  isSaving?: boolean;
 };
 
 const HeadingWithFocus = styled(OakHeading)`
@@ -100,6 +101,7 @@ export const OakUnitListOptionalityItemCard = (
     firstItemRef,
     onClick,
     isSaved,
+    isSaving,
     onSave,
     ...rest
   } = props;
@@ -156,17 +158,14 @@ export const OakUnitListOptionalityItemCard = (
               )}
             </OakFlex>
             {onSave && (
-              <OakSmallTertiaryInvertedButton
-                iconName={isSaved ? "bookmark-filled" : "bookmark-outlined"}
-                isTrailingIcon
-                disabled={unavailable}
-                onClick={() => onSave(props.slug)}
-                aria-label={`${isSaved ? "Unsave" : "Save"} this unit: ${
-                  props.title
-                } `}
-              >
-                {isSaved ? "Saved" : "Save"}
-              </OakSmallTertiaryInvertedButton>
+              <OakSaveButton
+                isSaved={isSaved ?? false}
+                isLoading={isSaving ?? false}
+                onSave={() => onSave(props.slug)}
+                unavailable={unavailable}
+                saveButtonId={`save-button-${props.slug}`}
+                title={props.title}
+              />
             )}
           </OakFlex>
         </OakFlex>

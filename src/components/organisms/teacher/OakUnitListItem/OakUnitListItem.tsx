@@ -11,7 +11,7 @@ import {
 } from "@/components/atoms";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
-import { OakSmallTertiaryInvertedButton } from "@/components/molecules";
+import { OakSaveButton } from "@/components/molecules/OakSaveButton/OakSaveButton";
 
 const FlexWithFocus = styled(OakFlex)`
   animation-timing-function: ease-out;
@@ -80,6 +80,7 @@ export type OakUnitListItemProps = {
   onClick?: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
   onSave?: () => void;
   isSaved?: boolean;
+  isSaving?: boolean;
   saveButtonId?: string;
 };
 
@@ -97,6 +98,7 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
     isLegacy,
     onSave,
     isSaved,
+    isSaving,
     firstItemRef,
     saveButtonId,
     ...rest
@@ -188,22 +190,15 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
             )}
           </OakFlex>
         </FlexWithFocus>
-
         {onSave && (
-          <OakSmallTertiaryInvertedButton
-            iconName={isSaved ? "bookmark-filled" : "bookmark-outlined"}
-            isTrailingIcon
-            disabled={unavailable}
-            onClick={onSave}
-            width="all-spacing-15"
-            $justifyContent="end"
-            aria-label={`${isSaved ? "Unsave" : "Save"} this unit: ${
-              props.title
-            } `}
-            id={saveButtonId}
-          >
-            {isSaved ? "Saved" : "Save"}
-          </OakSmallTertiaryInvertedButton>
+          <OakSaveButton
+            onSave={onSave}
+            isSaved={isSaved ?? false}
+            isLoading={isSaving ?? false}
+            unavailable={unavailable}
+            saveButtonId={saveButtonId}
+            title={props.title}
+          />
         )}
       </StyledUnitListItem>
       {/* Mobile layout */}
@@ -268,17 +263,14 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
               {lessonCount}
             </OakP>
             {onSave && (
-              <OakSmallTertiaryInvertedButton
-                iconName={isSaved ? "bookmark-filled" : "bookmark-outlined"}
-                isTrailingIcon
-                disabled={unavailable}
-                onClick={onSave}
-                aria-label={`${isSaved ? "Unsave" : "Save"} this unit: ${
-                  props.title
-                } `}
-              >
-                {isSaved ? "Saved" : "Save"}
-              </OakSmallTertiaryInvertedButton>
+              <OakSaveButton
+                onSave={onSave}
+                isSaved={isSaved ?? false}
+                isLoading={isSaving ?? false}
+                unavailable={unavailable}
+                saveButtonId={saveButtonId}
+                title={props.title}
+              />
             )}
           </OakFlex>
         </OakFlex>
