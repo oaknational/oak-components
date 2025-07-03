@@ -268,7 +268,6 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
                 isSaved={isSaved ?? false}
                 isLoading={isSaving ?? false}
                 unavailable={unavailable}
-                saveButtonId={saveButtonId}
                 title={props.title}
               />
             )}
