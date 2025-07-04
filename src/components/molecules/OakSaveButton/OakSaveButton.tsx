@@ -18,7 +18,8 @@ export const OakSaveButton = (props: OakSaveButtonProps) => {
     <OakSmallTertiaryInvertedButton
       iconName={isSaved ? "bookmark-filled" : "bookmark-outlined"}
       isTrailingIcon
-      disabled={isLoading || unavailable}
+      aria-disabled={isLoading}
+      disabled={unavailable}
       onClick={onSave}
       width="all-spacing-15"
       $justifyContent="end"
