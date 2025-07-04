@@ -52,3 +52,4 @@ export * from "./OakInfoButton";
 export * from "./OakSmallTertiaryInvertedButton";
 export * from "./OakToast";
 export * from "./OakSaveCount";
+export * from "./OakSaveButton";
