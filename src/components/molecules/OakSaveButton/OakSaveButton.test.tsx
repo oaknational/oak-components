@@ -76,8 +76,7 @@ describe("OakSaveButton", () => {
     const button = screen.getByRole("button", {
       name: "Save this unit: Test unit",
     });
-
-    expect(button).toBeDisabled();
+    expect(button).toHaveAttribute("aria-disabled", "true");
   });
   it("disables the button when unavailable is true", () => {
     render(
