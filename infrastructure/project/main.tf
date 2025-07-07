@@ -23,5 +23,5 @@ module "vercel" {
   protection_bypass_for_automation = false
   skew_protection                  = "1 day"
 
-  domains = ["components-vercel.thenational.academy"]
+  domains = ["components.thenational.academy"]
 }
