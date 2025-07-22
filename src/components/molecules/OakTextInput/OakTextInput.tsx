@@ -222,10 +222,10 @@ export const OakTextInput = ({
       <OakFlex $flexGrow={1}>
         <InternalTextInput
           type={type}
-          {...props}
           $width={"100%"}
           $pv="inner-padding-l"
           $height="all-spacing-12"
+          {...props}
         />
       </OakFlex>
       {isTrailingIcon && iconName && (
