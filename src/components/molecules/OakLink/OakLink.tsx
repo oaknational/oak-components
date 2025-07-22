@@ -1,6 +1,6 @@
 import React, { ElementType, forwardRef } from "react";
 
-import { OakAllSpacingToken } from "@/styles";
+import { OakAllSpacingToken, OakCombinedColorToken } from "@/styles";
 import {
   InternalLink,
   InternalLinkProps,
@@ -16,6 +16,11 @@ export type OakLinkProps = Pick<
 > & {
   iconWidth?: OakAllSpacingToken;
   iconHeight?: OakAllSpacingToken;
+  /**
+   * Overrides the default link color and all its states (hover, active, disabled, visited)
+   * with the provided OakCombinedColorToken.
+   */
+  colorOverride?: OakCombinedColorToken;
 };
 
 type OakLinkComponent = <C extends React.ElementType = "a">(
@@ -26,6 +31,8 @@ type OakLinkComponent = <C extends React.ElementType = "a">(
  * A blue link with an optional icon and loading state.
  *
  * Defaulting to a `HTMLAnchorElement` this component is polymorphic and can be rendered as a button or any other element.
+ *
+ * @prop colorOverride - Overrides the default link color and its states (hover, active, disabled, visited) with the provided OakColorToken.
  */
 export const OakLink: OakLinkComponent = forwardRef(
   <C extends ElementType = "a">(
@@ -34,11 +41,19 @@ export const OakLink: OakLinkComponent = forwardRef(
   ) => {
     return (
       <InternalLink
-        color="text-link-active"
-        hoverColor="text-link-hover"
-        activeColor="text-link-pressed"
-        disabledColor="text-disabled"
-        visitedColor="text-link-visited"
+        color={props.colorOverride ? props.colorOverride : "text-link-active"}
+        hoverColor={
+          props.colorOverride ? props.colorOverride : "text-link-hover"
+        }
+        activeColor={
+          props.colorOverride ? props.colorOverride : "text-link-pressed"
+        }
+        disabledColor={
+          props.colorOverride ? props.colorOverride : "text-disabled"
+        }
+        visitedColor={
+          props.colorOverride ? props.colorOverride : "text-link-visited"
+        }
         {...props}
         ref={ref}
       />
