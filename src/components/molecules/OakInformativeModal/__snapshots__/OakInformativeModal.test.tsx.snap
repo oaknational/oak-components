@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OakModalExperimental matches snapshot when mounted 1`] = `
+exports[`OakInformativeModal matches snapshot when mounted 1`] = `
 .c0 {
   font-family: --var(google-font),Lexend,sans-serif;
   z-index: 300;

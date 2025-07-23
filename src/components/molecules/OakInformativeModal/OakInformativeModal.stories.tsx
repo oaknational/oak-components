@@ -2,19 +2,19 @@ import { Meta, StoryObj } from "@storybook/react";
 import { useArgs } from "@storybook/preview-api";
 import React, { Fragment } from "react";
 
-import { OakModalExperimental } from "./OakModalExperimental";
-import { OakModalExperimentalFooter } from "./OakModalExperimentalFooter";
-import { OakModalExperimentalBody } from "./OakModalExperimentalBody";
+import { OakInformativeModal } from "./OakInformativeModal";
+import { OakInformativeModalFooter } from "./OakInformativeModalFooter";
+import { OakInformativeModalBody } from "./OakInformativeModalBody";
 
 import { OakSecondaryButton } from "@/components/molecules/OakSecondaryButton";
 import { OakPrimaryButton } from "@/components/molecules/OakPrimaryButton";
 import { OakBox, OakP } from "@/components/atoms";
 import { oakColorTokens, oakUiRoleTokens } from "@/styles";
 
-const meta: Meta<typeof OakModalExperimental> = {
-  component: OakModalExperimental,
+const meta: Meta<typeof OakInformativeModal> = {
+  component: OakInformativeModal,
   tags: ["autodocs"],
-  title: "components/molecules/OakModalExperimental",
+  title: "components/molecules/OakInformativeModal",
   argTypes: {
     children: {
       control: "text",
@@ -53,17 +53,17 @@ const meta: Meta<typeof OakModalExperimental> = {
     isOpen: false, // Modal starts closed
     isLeftHandSide: false, // Default value for the prop
     children: (
-      <OakModalExperimentalBody>
+      <OakInformativeModalBody>
         <OakBox $borderStyle={"solid"} $height={"100%"}>
           Modal content
         </OakBox>
-      </OakModalExperimentalBody>
+      </OakInformativeModalBody>
     ),
     footerSlot: (
-      <OakModalExperimentalFooter>
+      <OakInformativeModalFooter>
         <OakSecondaryButton width="100%">Secondary action</OakSecondaryButton>
         <OakPrimaryButton width="100%">Primary action</OakPrimaryButton>
-      </OakModalExperimentalFooter>
+      </OakInformativeModalFooter>
     ),
   },
   render: (args) => {
@@ -74,7 +74,7 @@ const meta: Meta<typeof OakModalExperimental> = {
     return (
       <>
         <OakSecondaryButton onClick={onOpen}>Open modal</OakSecondaryButton>
-        <OakModalExperimental {...args} onClose={onClose} />
+        <OakInformativeModal {...args} onClose={onClose} />
       </>
     );
   },
@@ -82,7 +82,7 @@ const meta: Meta<typeof OakModalExperimental> = {
 
 export default meta;
 
-type Story = StoryObj<typeof OakModalExperimental>;
+type Story = StoryObj<typeof OakInformativeModal>;
 
 export const Default: Story = {};
 
@@ -91,7 +91,7 @@ export const WithScrolling: Story = {
     "aria-label": "Scrolling modal",
     "aria-description": "A modal with scrolling content",
     children: (
-      <OakModalExperimentalBody>
+      <OakInformativeModalBody>
         {[1, 2, 3].map((i) => (
           <Fragment key={i}>
             <OakP>
@@ -120,7 +120,7 @@ export const WithScrolling: Story = {
             </OakP>
           </Fragment>
         ))}
-      </OakModalExperimentalBody>
+      </OakInformativeModalBody>
     ),
   },
 };
@@ -132,7 +132,7 @@ export const WithColour: Story = {
     $borderColor: "pink110",
     $background: "pink50",
     children: (
-      <OakModalExperimentalBody>
+      <OakInformativeModalBody>
         {[1, 2, 3].map((i) => (
           <Fragment key={i}>
             <OakP>
@@ -161,7 +161,7 @@ export const WithColour: Story = {
             </OakP>
           </Fragment>
         ))}
-      </OakModalExperimentalBody>
+      </OakInformativeModalBody>
     ),
   },
 };

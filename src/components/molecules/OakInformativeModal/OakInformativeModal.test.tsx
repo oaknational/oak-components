@@ -3,7 +3,7 @@ import React, { ReactNode } from "react";
 import "@testing-library/jest-dom";
 import { act, fireEvent } from "@testing-library/react";
 
-import { OakModalExperimental } from "./OakModalExperimental";
+import { OakInformativeModal } from "./OakInformativeModal";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { oakDefaultTheme } from "@/styles";
@@ -19,17 +19,17 @@ jest.mock("react-dom", () => {
   };
 });
 
-describe(OakModalExperimental, () => {
+describe(OakInformativeModal, () => {
   it("does not render until mounted on the client", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
-        <OakModalExperimental
+        <OakInformativeModal
           isOpen
           onClose={() => {}}
           footerSlot="Modal footer"
         >
           Modal content
-        </OakModalExperimental>
+        </OakInformativeModal>
       </OakThemeProvider>,
     );
 
@@ -38,9 +38,9 @@ describe(OakModalExperimental, () => {
 
   it("matches snapshot when mounted", async () => {
     const result = renderWithTheme(
-      <OakModalExperimental isOpen onClose={() => {}}>
+      <OakInformativeModal isOpen onClose={() => {}}>
         Modal content
-      </OakModalExperimental>,
+      </OakInformativeModal>,
     );
 
     expect(result.container).toMatchSnapshot();
@@ -50,9 +50,9 @@ describe(OakModalExperimental, () => {
     const onCloseSpy = jest.fn();
 
     const { getByLabelText } = renderWithTheme(
-      <OakModalExperimental isOpen onClose={onCloseSpy}>
+      <OakInformativeModal isOpen onClose={onCloseSpy}>
         Modal content
-      </OakModalExperimental>,
+      </OakInformativeModal>,
     );
 
     act(() => {
@@ -64,9 +64,9 @@ describe(OakModalExperimental, () => {
 
   it("gives the first focusable element in the modal body focus", () => {
     const { getByRole } = renderWithTheme(
-      <OakModalExperimental isOpen onClose={() => {}}>
+      <OakInformativeModal isOpen onClose={() => {}}>
         <input type="text" />
-      </OakModalExperimental>,
+      </OakInformativeModal>,
     );
 
     expect(getByRole("textbox")).toHaveFocus();

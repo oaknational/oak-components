@@ -10,19 +10,19 @@ import InternalModalTransition from "@/components/molecules/InternalModalTransit
 import { BorderStyleProps } from "@/styles/utils/borderStyle";
 import { ColorStyleProps } from "@/styles/utils/colorStyle";
 
-export const OakModalExperimentalBorderColor = createContext<
+export const OakInformativeModalBorderColor = createContext<
   BorderStyleProps["$borderColor"]
 >("border-neutral-lighter");
 
-export type OakModalExperimentalProps = {
+export type OakInformativeModalProps = {
   /**
    * The content of the modal.
-   * Use with `<OakModalExperimentalBody>` for best results.
+   * Use with `<OakInformativeModalBody>` for best results.
    */
   children: ReactNode;
   /**
    * Slot for the footer of the modal.
-   * Use with `<OakModalExperimentalFooter>` for best results.
+   * Use with `<OakInformativeModalFooter>` for best results.
    */
   footerSlot?: ReactNode;
   /**
@@ -59,9 +59,9 @@ export type OakModalExperimentalProps = {
 >;
 
 /**
- * Modal dialog with trapped focus and a close button.
+ * Modal dialog with trapped focus and a close button. See the [design specification](https://www.figma.com/design/YcWQMMhHPVVmc47cHHEEAl/Oak-Design-Kit?node-id=15135-2063)
  */
-export const OakModalExperimental = ({
+export const OakInformativeModal = ({
   children,
   footerSlot,
   domContainer,
@@ -72,7 +72,7 @@ export const OakModalExperimental = ({
   $background = "white",
   $borderColor = "border-neutral-lighter",
   ...rest
-}: OakModalExperimentalProps) => {
+}: OakInformativeModalProps) => {
   const transitionRef = useRef<HTMLDivElement>(null);
 
   const { isScrolled, ObserveScroll } = useIsScrolled();
@@ -87,7 +87,7 @@ export const OakModalExperimental = ({
   const finalZIndex = typeof zIndex === "number" ? zIndex : "modal-dialog";
 
   return createPortal(
-    <OakModalExperimentalBorderColor.Provider value={$borderColor}>
+    <OakInformativeModalBorderColor.Provider value={$borderColor}>
       <InternalModalTransition
         isOpen={isOpen}
         transitionRef={transitionRef}
@@ -130,7 +130,7 @@ export const OakModalExperimental = ({
           </div>
         </OakFlex>
       </InternalModalTransition>
-    </OakModalExperimentalBorderColor.Provider>,
+    </OakInformativeModalBorderColor.Provider>,
     domContainer ?? document.body,
   );
 };
