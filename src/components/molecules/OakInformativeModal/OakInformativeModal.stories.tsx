@@ -59,12 +59,6 @@ const meta: Meta<typeof OakInformativeModal> = {
         </OakBox>
       </OakInformativeModalBody>
     ),
-    footerSlot: (
-      <OakInformativeModalFooter>
-        <OakSecondaryButton width="100%">Secondary action</OakSecondaryButton>
-        <OakPrimaryButton width="100%">Primary action</OakPrimaryButton>
-      </OakInformativeModalFooter>
-    ),
   },
   render: (args) => {
     const [, updateArgs] = useArgs();
@@ -162,6 +156,19 @@ export const WithColour: Story = {
           </Fragment>
         ))}
       </OakInformativeModalBody>
+    ),
+  },
+};
+
+export const WithFooter: Story = {
+  args: {
+    "aria-label": "With footer",
+    "aria-description": "A modal with footer",
+    footerSlot: (
+      <OakInformativeModalFooter>
+        <OakSecondaryButton width="100%">Secondary action</OakSecondaryButton>
+        <OakPrimaryButton width="100%">Primary action</OakPrimaryButton>
+      </OakInformativeModalFooter>
     ),
   },
 };
