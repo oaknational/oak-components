@@ -25,11 +25,17 @@ exports[`OakModalExperimental matches snapshot when mounted 1`] = `
 }
 
 .c5 {
+  height: 100%;
+  background: #ffffff;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c6 {
   padding: 1rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c7 {
+.c8 {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -37,25 +43,25 @@ exports[`OakModalExperimental matches snapshot when mounted 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c12 {
+.c13 {
   padding-left: 0rem;
   padding-right: 0.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c14 {
+.c15 {
   position: relative;
   color: #222222;
   border-radius: 6.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c16 {
+.c17 {
   position: relative;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c17 {
+.c18 {
   position: absolute;
   top: 0.25rem;
   left: 0.25rem;
@@ -67,7 +73,7 @@ exports[`OakModalExperimental matches snapshot when mounted 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c19 {
+.c20 {
   position: absolute;
   top: 0.125rem;
   left: 0.125rem;
@@ -79,7 +85,7 @@ exports[`OakModalExperimental matches snapshot when mounted 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c21 {
+.c22 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -88,7 +94,7 @@ exports[`OakModalExperimental matches snapshot when mounted 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c24 {
+.c25 {
   overflow: auto;
   border-top: 0.063rem solid;
   border-color: transparent;
@@ -96,19 +102,19 @@ exports[`OakModalExperimental matches snapshot when mounted 1`] = `
   overflow: auto;
 }
 
-.c18 {
+.c19 {
   -webkit-filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
   filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
   object-fit: contain;
 }
 
-.c20 {
+.c21 {
   -webkit-filter: invert(82%) sepia(25%) saturate(963%) hue-rotate(359deg) brightness(106%) contrast(101%);
   filter: invert(82%) sepia(25%) saturate(963%) hue-rotate(359deg) brightness(106%) contrast(101%);
   object-fit: contain;
 }
 
-.c22 {
+.c23 {
   object-fit: contain;
 }
 
@@ -122,7 +128,7 @@ exports[`OakModalExperimental matches snapshot when mounted 1`] = `
   flex-direction: column;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -131,20 +137,20 @@ exports[`OakModalExperimental matches snapshot when mounted 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
-.c8 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c13 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -163,7 +169,7 @@ exports[`OakModalExperimental matches snapshot when mounted 1`] = `
   gap: 0rem;
 }
 
-.c15 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -178,7 +184,7 @@ exports[`OakModalExperimental matches snapshot when mounted 1`] = `
   justify-content: center;
 }
 
-.c25 {
+.c26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -192,7 +198,7 @@ exports[`OakModalExperimental matches snapshot when mounted 1`] = `
   flex-grow: 1;
 }
 
-.c23 {
+.c24 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -203,7 +209,7 @@ exports[`OakModalExperimental matches snapshot when mounted 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c10 {
+.c11 {
   background: none;
   color: inherit;
   border: none;
@@ -218,43 +224,43 @@ exports[`OakModalExperimental matches snapshot when mounted 1`] = `
   border-radius: 0.25rem;
 }
 
-.c10:disabled {
+.c11:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c11 {
+.c12 {
   display: inline-block;
   position: relative;
 }
 
-.c11:hover {
+.c12:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #222222;
 }
 
-.c11:active {
+.c12:active {
   color: #222222;
 }
 
-.c11:disabled {
+.c12:disabled {
   color: #e4e4e4;
 }
 
-.c9 > :first-child:hover .highlight {
+.c10 > :first-child:hover .highlight {
   display: block;
 }
 
-.c9 > :first-child:active .highlight {
+.c10 > :first-child:active .highlight {
   display: block;
 }
 
-.c9 > :first-child:active .shadow {
+.c10 > :first-child:active .shadow {
   display: block;
 }
 
-.c9 > :first-child:focus-visible {
+.c10 > :first-child:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
   background: white;
 }
@@ -300,82 +306,86 @@ exports[`OakModalExperimental matches snapshot when mounted 1`] = `
       role="dialog"
     >
       <div
-        class="c5 c6"
+        class="c5 c3"
       >
         <div
-          class="c7 c8 c9"
+          class="c6 c7"
         >
-          <button
-            aria-label="Close"
-            class="c10 c11"
+          <div
+            class="c8 c9 c10"
           >
-            <div
-              class="c12 c13"
+            <button
+              aria-label="Close"
+              class="c11 c12"
             >
               <div
-                class="c14 c15 icon-container"
+                class="c13 c14"
               >
                 <div
-                  class="c16"
+                  class="c15 c16 icon-container"
                 >
                   <div
-                    class="c17 shadow"
+                    class="c17"
                   >
-                    <img
-                      alt=""
-                      class="c18"
-                      data-nimg="fill"
-                      decoding="async"
-                      loading="lazy"
-                      src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
-                      style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
-                    />
-                  </div>
-                  <div
-                    class="c19 highlight"
-                  >
-                    <img
-                      alt=""
-                      class="c20"
-                      data-nimg="fill"
-                      decoding="async"
-                      loading="lazy"
-                      src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
-                      style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
-                    />
-                  </div>
-                  <div
-                    class="c21"
-                    data-icon-for="button"
-                  >
-                    <img
-                      alt=""
+                    <div
+                      class="c18 shadow"
+                    >
+                      <img
+                        alt=""
+                        class="c19"
+                        data-nimg="fill"
+                        decoding="async"
+                        loading="lazy"
+                        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
+                        style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                      />
+                    </div>
+                    <div
+                      class="c20 highlight"
+                    >
+                      <img
+                        alt=""
+                        class="c21"
+                        data-nimg="fill"
+                        decoding="async"
+                        loading="lazy"
+                        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
+                        style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                      />
+                    </div>
+                    <div
                       class="c22"
-                      data-nimg="fill"
-                      decoding="async"
-                      loading="lazy"
-                      src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
-                      style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
-                    />
+                      data-icon-for="button"
+                    >
+                      <img
+                        alt=""
+                        class="c23"
+                        data-nimg="fill"
+                        decoding="async"
+                        loading="lazy"
+                        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
+                        style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                      />
+                    </div>
                   </div>
                 </div>
+                <span
+                  class="c24"
+                />
               </div>
-              <span
-                class="c23"
-              />
-            </div>
-          </button>
+            </button>
+          </div>
         </div>
-      </div>
-      <div
-        data-autofocus-inside="true"
-        style="display: contents;"
-      >
         <div
-          class="c24 c25"
+          data-autofocus-inside="true"
+          style="display: contents;"
         >
-          <div />
-          Modal content
+          <div
+            class="c25 c26"
+          >
+            <div />
+            Modal content
+          </div>
         </div>
       </div>
     </div>

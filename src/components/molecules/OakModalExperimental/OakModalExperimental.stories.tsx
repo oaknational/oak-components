@@ -42,10 +42,10 @@ const meta: Meta<typeof OakModalExperimental> = {
     "aria-label": "Example modal",
     "aria-description": "This is an example modal",
     isOpen: false, // Modal starts closed
-    isLeftHandSide: true, // Default value for the prop
+    isLeftHandSide: false, // Default value for the prop
     children: (
       <OakModalExperimentalBody>
-        <OakBox $mb="space-between-m" $background={"amber"} $height={"100%"}>
+        <OakBox $borderStyle={"solid"} $height={"100%"}>
           Modal content
         </OakBox>
       </OakModalExperimentalBody>
@@ -81,6 +81,51 @@ export const WithScrolling: Story = {
   args: {
     "aria-label": "Scrolling modal",
     "aria-description": "A modal with scrolling content",
+    children: (
+      <OakModalExperimentalBody>
+        {[1, 2, 3].map((i) => (
+          <Fragment key={i}>
+            <OakP>
+              Privacy concerns have become increasingly paramount, prompting the
+              need for transparency and user consent regarding data collection
+              practices. A cookie banner serves as the initial point of contact
+              between a website and its visitors.
+            </OakP>
+            <OakP>
+              Privacy concerns have become increasingly paramount, prompting the
+              need for transparency and user consent regarding data collection
+              practices. A cookie banner serves as the initial point of contact
+              between a website and its visitors.
+            </OakP>
+            <OakP>
+              Privacy concerns have become increasingly paramount, prompting the
+              need for transparency and user consent regarding data collection
+              practices. A cookie banner serves as the initial point of contact
+              between a website and its visitors.
+            </OakP>
+            <OakP>
+              Privacy concerns have become increasingly paramount, prompting the
+              need for transparency and user consent regarding data collection
+              practices. A cookie banner serves as the initial point of contact
+              between a website and its visitors.
+            </OakP>
+          </Fragment>
+        ))}
+      </OakModalExperimentalBody>
+    ),
+  },
+};
+
+export const WithColour: Story = {
+  args: {
+    "aria-label": "Color modal",
+    "aria-description": "A modal with different colors",
+    borderProps: {
+      $borderColor: "pink110",
+    },
+    containerProps: {
+      $background: "pink50",
+    },
     children: (
       <OakModalExperimentalBody>
         {[1, 2, 3].map((i) => (

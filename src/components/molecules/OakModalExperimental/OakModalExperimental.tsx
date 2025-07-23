@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, ReactNode, useRef } from "react";
+import React, { createContext, HTMLAttributes, ReactNode, useRef } from "react";
 import { createPortal } from "react-dom";
 
 import { InternalShadowIconButton } from "../InternalShadowIconButton";
@@ -7,6 +7,12 @@ import { OakFlex } from "@/components/atoms";
 import useIsScrolled from "@/hooks/useIsScrolled";
 import useMounted from "@/hooks/useMounted";
 import InternalModalTransition from "@/components/molecules/InternalModalTransition/InternalModalTransition";
+import { BorderStyleProps } from "@/styles/utils/borderStyle";
+import { ColorStyleProps } from "@/styles/utils/colorStyle";
+
+export const OakModalExperimentalBorderStyleContext = createContext<
+  Pick<BorderStyleProps, "$borderColor">
+>({ $borderColor: "border-neutral-lighter" });
 
 export type OakModalExperimentalProps = {
   /**
@@ -45,6 +51,8 @@ export type OakModalExperimentalProps = {
    */
   zIndex?: number;
   isLeftHandSide?: boolean;
+  borderProps?: Pick<BorderStyleProps, "$borderColor">;
+  containerProps?: Pick<ColorStyleProps, "$background">;
 } & Pick<
   HTMLAttributes<Element>,
   "aria-label" | "aria-description" | "aria-labelledby" | "aria-describedby"
@@ -61,6 +69,8 @@ export const OakModalExperimental = ({
   onClose,
   zIndex,
   isLeftHandSide,
+  containerProps = {},
+  borderProps = {},
   ...rest
 }: OakModalExperimentalProps) => {
   const transitionRef = useRef<HTMLDivElement>(null);
@@ -77,42 +87,59 @@ export const OakModalExperimental = ({
   const finalZIndex = typeof zIndex === "number" ? zIndex : "modal-dialog";
 
   return createPortal(
-    <InternalModalTransition
-      isOpen={isOpen}
-      transitionRef={transitionRef}
-      onClose={onClose}
-      finalZIndex={finalZIndex}
-      isLeftHandSide={isLeftHandSide}
-      {...rest}
+    <OakModalExperimentalBorderStyleContext.Provider
+      value={{
+        $borderColor: "border-neutral-lighter",
+        ...borderProps,
+      }}
     >
-      <OakFlex
-        $pa="inner-padding-m"
-        // $pb="inner-padding-none"
-        $justifyContent={isLeftHandSide ? "flex-end" : "flex-start"}
-        $alignItems="center"
+      <InternalModalTransition
+        isOpen={isOpen}
+        transitionRef={transitionRef}
+        onClose={onClose}
+        finalZIndex={finalZIndex}
+        isLeftHandSide={isLeftHandSide}
+        {...rest}
       >
-        <InternalShadowIconButton
-          onClick={onClose}
-          aria-label="Close"
-          iconName="cross"
-          defaultTextColor={"black"}
-          hoverTextColor={"black"}
-          disabledTextColor={"grey30"}
-        />
-      </OakFlex>
-      <div style={{ display: "contents" }} data-autofocus-inside>
         <OakFlex
-          $flexGrow={1}
-          $flexDirection="column"
-          $overflow="auto"
-          $bt="border-solid-s"
-          $borderColor={isScrolled ? "border-neutral-lighter" : "transparent"}
+          $background={containerProps.$background ?? "white"}
+          $flexDirection={"column"}
+          $height={"100%"}
         >
-          <ObserveScroll>{children}</ObserveScroll>
+          <OakFlex
+            $pa="inner-padding-m"
+            // $pb="inner-padding-none"
+            $justifyContent={"flex-end"}
+            $alignItems="center"
+          >
+            <InternalShadowIconButton
+              onClick={onClose}
+              aria-label="Close"
+              iconName="cross"
+              defaultTextColor={"black"}
+              hoverTextColor={"black"}
+              disabledTextColor={"grey30"}
+            />
+          </OakFlex>
+          <div style={{ display: "contents" }} data-autofocus-inside>
+            <OakFlex
+              $flexGrow={1}
+              $flexDirection="column"
+              $overflow="auto"
+              $bt="border-solid-s"
+              $borderColor={
+                isScrolled
+                  ? borderProps.$borderColor ?? "border-neutral-lighter"
+                  : "transparent"
+              }
+            >
+              <ObserveScroll>{children}</ObserveScroll>
+            </OakFlex>
+            {footerSlot}
+          </div>
         </OakFlex>
-        {footerSlot}
-      </div>
-    </InternalModalTransition>,
+      </InternalModalTransition>
+    </OakModalExperimentalBorderStyleContext.Provider>,
     domContainer ?? document.body,
   );
 };

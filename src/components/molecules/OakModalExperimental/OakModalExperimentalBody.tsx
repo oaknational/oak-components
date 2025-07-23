@@ -15,7 +15,7 @@ export const OakModalExperimentalBody = (
   props: OakModalExperimentalBodyProps,
 ) => {
   return (
-    <OakBox $pa="inner-padding-m" $pb="inner-padding-none" $minHeight={"100%"}>
+    <OakBox $pa="inner-padding-m" $pt="inner-padding-none" $minHeight={"100%"}>
       {props.children}
     </OakBox>
   );
