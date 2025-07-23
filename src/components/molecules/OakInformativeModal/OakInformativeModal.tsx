@@ -14,6 +14,8 @@ export const OakInformativeModalBorderColor = createContext<
   BorderStyleProps["$borderColor"]
 >("border-neutral-lighter");
 
+export type OakInformativeModalCloseAction = "close_button" | undefined;
+
 export type OakInformativeModalProps = {
   /**
    * The content of the modal.
@@ -32,7 +34,7 @@ export type OakInformativeModalProps = {
   /**
    * Called when the modal is closed
    */
-  onClose: () => void;
+  onClose: (action?: OakInformativeModalCloseAction) => void;
   /**
    * The DOM container to render the modal portal into.
    *
@@ -84,6 +86,14 @@ export const OakInformativeModal = ({
     return null;
   }
 
+  const onCloseModal = () => {
+    onClose();
+  };
+
+  const onCloseButton = () => {
+    onClose("close_button");
+  };
+
   const finalZIndex = typeof zIndex === "number" ? zIndex : "modal-dialog";
 
   return createPortal(
@@ -91,7 +101,7 @@ export const OakInformativeModal = ({
       <InternalModalTransition
         isOpen={isOpen}
         transitionRef={transitionRef}
-        onClose={onClose}
+        onClose={onCloseModal}
         finalZIndex={finalZIndex}
         isLeftHandSide={isLeftHandSide}
         {...rest}
@@ -108,7 +118,7 @@ export const OakInformativeModal = ({
             $alignItems="center"
           >
             <InternalShadowIconButton
-              onClick={onClose}
+              onClick={onCloseButton}
               aria-label="Close"
               iconName="cross"
               defaultTextColor={"black"}
