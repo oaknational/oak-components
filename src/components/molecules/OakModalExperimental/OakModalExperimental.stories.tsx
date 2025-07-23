@@ -9,6 +9,7 @@ import { OakModalExperimentalBody } from "./OakModalExperimentalBody";
 import { OakSecondaryButton } from "@/components/molecules/OakSecondaryButton";
 import { OakPrimaryButton } from "@/components/molecules/OakPrimaryButton";
 import { OakBox, OakP } from "@/components/atoms";
+import { oakColorTokens, oakUiRoleTokens } from "@/styles";
 
 const meta: Meta<typeof OakModalExperimental> = {
   component: OakModalExperimental,
@@ -26,6 +27,12 @@ const meta: Meta<typeof OakModalExperimental> = {
       description:
         "Whether the modal is anchored to the left side of the screen.",
     },
+    $borderColor: {
+      options: [...oakUiRoleTokens, ...Object.keys(oakColorTokens)],
+    },
+    $background: {
+      options: Object.keys(oakColorTokens),
+    },
   },
   parameters: {
     controls: {
@@ -35,6 +42,8 @@ const meta: Meta<typeof OakModalExperimental> = {
         "isOpen",
         "onClose",
         "isLeftHandSide",
+        "$borderColor",
+        "$background",
       ],
     },
   },
@@ -120,12 +129,8 @@ export const WithColour: Story = {
   args: {
     "aria-label": "Color modal",
     "aria-description": "A modal with different colors",
-    borderProps: {
-      $borderColor: "pink110",
-    },
-    containerProps: {
-      $background: "pink50",
-    },
+    $borderColor: "pink110",
+    $background: "pink50",
     children: (
       <OakModalExperimentalBody>
         {[1, 2, 3].map((i) => (

@@ -51,8 +51,8 @@ export type OakModalExperimentalProps = {
    */
   zIndex?: number;
   isLeftHandSide?: boolean;
-  borderProps?: Pick<BorderStyleProps, "$borderColor">;
-  containerProps?: Pick<ColorStyleProps, "$background">;
+  $borderColor?: BorderStyleProps["$borderColor"];
+  $background?: ColorStyleProps["$background"];
 } & Pick<
   HTMLAttributes<Element>,
   "aria-label" | "aria-description" | "aria-labelledby" | "aria-describedby"
@@ -69,8 +69,8 @@ export const OakModalExperimental = ({
   onClose,
   zIndex,
   isLeftHandSide,
-  containerProps = {},
-  borderProps = {},
+  $background = "white",
+  $borderColor = "border-neutral-lighter",
   ...rest
 }: OakModalExperimentalProps) => {
   const transitionRef = useRef<HTMLDivElement>(null);
@@ -87,12 +87,7 @@ export const OakModalExperimental = ({
   const finalZIndex = typeof zIndex === "number" ? zIndex : "modal-dialog";
 
   return createPortal(
-    <OakModalExperimentalBorderStyleContext.Provider
-      value={{
-        $borderColor: "border-neutral-lighter",
-        ...borderProps,
-      }}
-    >
+    <OakModalExperimentalBorderStyleContext.Provider value={{ $borderColor }}>
       <InternalModalTransition
         isOpen={isOpen}
         transitionRef={transitionRef}
@@ -102,7 +97,7 @@ export const OakModalExperimental = ({
         {...rest}
       >
         <OakFlex
-          $background={containerProps.$background ?? "white"}
+          $background={$background}
           $flexDirection={"column"}
           $height={"100%"}
         >
@@ -127,11 +122,7 @@ export const OakModalExperimental = ({
               $flexDirection="column"
               $overflow="auto"
               $bt="border-solid-s"
-              $borderColor={
-                isScrolled
-                  ? borderProps.$borderColor ?? "border-neutral-lighter"
-                  : "transparent"
-              }
+              $borderColor={isScrolled ? $borderColor : "transparent"}
             >
               <ObserveScroll>{children}</ObserveScroll>
             </OakFlex>
