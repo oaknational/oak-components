@@ -19,7 +19,6 @@ export * from "./OakJauntyAngleLabel";
 export * from "./OakLessonInfoCard";
 export * from "./OakLink";
 export * from "./OakLoadingSpinner";
-export * from "./OakModal";
 export * from "./OakModalCenter";
 export * from "./OakOutlineAccordion";
 export * from "./OakPrimaryButton";
