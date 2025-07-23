@@ -10,9 +10,9 @@ import InternalModalTransition from "@/components/molecules/InternalModalTransit
 import { BorderStyleProps } from "@/styles/utils/borderStyle";
 import { ColorStyleProps } from "@/styles/utils/colorStyle";
 
-export const OakModalExperimentalBorderStyleContext = createContext<
-  Pick<BorderStyleProps, "$borderColor">
->({ $borderColor: "border-neutral-lighter" });
+export const OakModalExperimentalBorderColor = createContext<
+  BorderStyleProps["$borderColor"]
+>("border-neutral-lighter");
 
 export type OakModalExperimentalProps = {
   /**
@@ -87,7 +87,7 @@ export const OakModalExperimental = ({
   const finalZIndex = typeof zIndex === "number" ? zIndex : "modal-dialog";
 
   return createPortal(
-    <OakModalExperimentalBorderStyleContext.Provider value={{ $borderColor }}>
+    <OakModalExperimentalBorderColor.Provider value={$borderColor}>
       <InternalModalTransition
         isOpen={isOpen}
         transitionRef={transitionRef}
@@ -130,7 +130,7 @@ export const OakModalExperimental = ({
           </div>
         </OakFlex>
       </InternalModalTransition>
-    </OakModalExperimentalBorderStyleContext.Provider>,
+    </OakModalExperimentalBorderColor.Provider>,
     domContainer ?? document.body,
   );
 };
