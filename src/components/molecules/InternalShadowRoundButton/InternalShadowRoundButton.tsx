@@ -17,7 +17,7 @@ import {
   positionStyle,
 } from "@/styles/utils/positionStyle";
 import { parseColor } from "@/styles/helpers/parseColor";
-import { OakCombinedColorToken } from "@/styles";
+import { OakCombinedColorToken, OakDropShadowToken } from "@/styles";
 import { SizeStyleProps, sizeStyle } from "@/styles/utils/sizeStyle";
 
 export type InternalShadowRoundButtonProps = Omit<
@@ -48,6 +48,7 @@ export type InternalShadowRoundButtonProps = Omit<
   maxWidth?: SizeStyleProps["$maxWidth"];
   iconBackgroundSize: SizeStyleProps["$width"];
   iconSize: SizeStyleProps["$width"];
+  hoverDropShadow?: OakDropShadowToken | null;
 } & PositionStyleProps;
 
 const StyledInternalButton = styled(InternalButton)<
@@ -80,18 +81,23 @@ const StyledButtonWrapper = styled(OakFlex)<{
   $disabledIconBackground: OakCombinedColorToken;
   $hoverIconBackground: OakCombinedColorToken;
   $defaultIconBackground: OakCombinedColorToken;
+  $hoverDropShadow: OakDropShadowToken | null;
 }>`
-  > :first-child:focus-visible .shadow {
-    box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
-      ${parseDropShadow("drop-shadow-centered-grey")};
-  }
-  > :first-child:hover .shadow {
-    box-shadow: ${parseDropShadow("drop-shadow-lemon")};
-  }
-  > :first-child:active .shadow {
-    box-shadow: ${parseDropShadow("drop-shadow-lemon")},
-      ${parseDropShadow("drop-shadow-grey")};
-  }
+  ${(props) => css`
+    > :first-child:focus-visible .shadow {
+      box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
+        ${parseDropShadow("drop-shadow-centered-grey")};
+    }
+    > :first-child:hover .shadow {
+      box-shadow: ${parseDropShadow(
+        props.$hoverDropShadow /*"drop-shadow-lemon"*/,
+      )};
+    }
+    > :first-child:active .shadow {
+      box-shadow: ${parseDropShadow("drop-shadow-lemon")},
+        ${parseDropShadow("drop-shadow-grey")};
+    }
+  `}
   ${(props) => css`
     > :first-child:disabled .icon-container {
       background: ${parseColor(props.$disabledIconBackground)};
@@ -144,6 +150,7 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
     disabledIconColor,
     defaultTextColor,
     hoverTextColor,
+    hoverDropShadow = "drop-shadow-lemon",
     className,
     ...rest
   } = props;
@@ -209,6 +216,7 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
       $disabledIconBackground={disabledIconBackground}
       $hoverIconBackground={hoverIconBackground}
       $defaultIconBackground={defaultIconBackground}
+      $hoverDropShadow={hoverDropShadow}
     >
       <StyledInternalButton
         element={element ?? "button"}
