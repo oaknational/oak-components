@@ -1,7 +1,7 @@
 import React, { createContext, HTMLAttributes, ReactNode, useRef } from "react";
 import { createPortal } from "react-dom";
 
-import { InternalShadowIconButton } from "../InternalShadowIconButton";
+import { OakCloseButton } from "../OakCloseButton";
 
 import { OakFlex } from "@/components/atoms";
 import useIsScrolled from "@/hooks/useIsScrolled";
@@ -112,14 +112,7 @@ export const OakInformativeModal = ({
             $justifyContent={"flex-end"}
             $alignItems="center"
           >
-            <InternalShadowIconButton
-              onClick={onCloseButton}
-              aria-label="Close"
-              iconName="cross"
-              defaultTextColor={"black"}
-              hoverTextColor={"black"}
-              disabledTextColor={"grey30"}
-            />
+            <OakCloseButton onClose={onCloseButton} />
           </OakFlex>
           <div style={{ display: "contents" }} data-autofocus-inside>
             <OakFlex

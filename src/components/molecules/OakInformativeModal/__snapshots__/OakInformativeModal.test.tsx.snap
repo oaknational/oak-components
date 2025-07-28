@@ -44,48 +44,30 @@ exports[`OakInformativeModal matches snapshot when mounted 1`] = `
 }
 
 .c13 {
-  padding-left: 0rem;
-  padding-right: 0.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c15 {
   position: relative;
-  color: #222222;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  color: transparent;
+  background: transparent;
   border-radius: 6.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c17 {
-  position: relative;
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 6.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c18 {
-  position: absolute;
-  top: 0.25rem;
-  left: 0.25rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  height: 1.5rem;
-  min-height: 1.5rem;
-  display: none;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c20 {
-  position: absolute;
-  top: 0.125rem;
-  left: 0.125rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  height: 1.5rem;
-  min-height: 1.5rem;
-  display: none;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c22 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -94,7 +76,7 @@ exports[`OakInformativeModal matches snapshot when mounted 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c25 {
+.c21 {
   overflow: auto;
   border-top: 0.063rem solid;
   border-color: transparent;
@@ -103,18 +85,8 @@ exports[`OakInformativeModal matches snapshot when mounted 1`] = `
 }
 
 .c19 {
-  -webkit-filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
-  filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
-  object-fit: contain;
-}
-
-.c21 {
-  -webkit-filter: invert(82%) sepia(25%) saturate(963%) hue-rotate(359deg) brightness(106%) contrast(101%);
-  filter: invert(82%) sepia(25%) saturate(963%) hue-rotate(359deg) brightness(106%) contrast(101%);
-  object-fit: contain;
-}
-
-.c23 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
 }
 
@@ -184,7 +156,7 @@ exports[`OakInformativeModal matches snapshot when mounted 1`] = `
   justify-content: center;
 }
 
-.c26 {
+.c22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -198,9 +170,9 @@ exports[`OakInformativeModal matches snapshot when mounted 1`] = `
   flex-grow: 1;
 }
 
-.c24 {
+.c20 {
   font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
   -webkit-letter-spacing: 0.0115rem;
@@ -220,8 +192,7 @@ exports[`OakInformativeModal matches snapshot when mounted 1`] = `
   font-family: unset;
   outline: none;
   font-family: --var(google-font),Lexend,sans-serif;
-  color: #222222;
-  border-radius: 0.25rem;
+  color: transparent;
 }
 
 .c11:disabled {
@@ -237,32 +208,44 @@ exports[`OakInformativeModal matches snapshot when mounted 1`] = `
 .c12:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  color: #222222;
+  color: transparent;
+}
+
+.c12:hover:not(:active) [data-icon-for="button"] img {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
 }
 
 .c12:active {
-  color: #222222;
+  color: transparent;
 }
 
 .c12:disabled {
-  color: #e4e4e4;
+  color: transparent;
 }
 
-.c10 > :first-child:hover .highlight {
-  display: block;
+.c10 > :first-child:focus-visible .shadow {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c10 > :first-child:active .highlight {
-  display: block;
+.c10 > :first-child:hover .shadow {
+  box-shadow: none;
 }
 
 .c10 > :first-child:active .shadow {
-  display: block;
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c10 > :first-child:focus-visible {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
-  background: white;
+.c10 > :first-child:disabled .icon-container {
+  background: transparent;
+}
+
+.c10 > :first-child:hover .icon-container {
+  background: #f2f2f2;
+}
+
+.c10 > :first-child:active .icon-container {
+  background: transparent;
 }
 
 .c4 {
@@ -325,52 +308,25 @@ exports[`OakInformativeModal matches snapshot when mounted 1`] = `
                   class="c15 c16 icon-container"
                 >
                   <div
-                    class="c17"
+                    class="c17 shadow"
+                  />
+                  <div
+                    class="c18"
+                    data-icon-for="button"
                   >
-                    <div
-                      class="c18 shadow"
-                    >
-                      <img
-                        alt=""
-                        class="c19"
-                        data-nimg="fill"
-                        decoding="async"
-                        loading="lazy"
-                        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
-                        style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
-                      />
-                    </div>
-                    <div
-                      class="c20 highlight"
-                    >
-                      <img
-                        alt=""
-                        class="c21"
-                        data-nimg="fill"
-                        decoding="async"
-                        loading="lazy"
-                        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
-                        style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
-                      />
-                    </div>
-                    <div
-                      class="c22"
-                      data-icon-for="button"
-                    >
-                      <img
-                        alt=""
-                        class="c23"
-                        data-nimg="fill"
-                        decoding="async"
-                        loading="lazy"
-                        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
-                        style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
-                      />
-                    </div>
+                    <img
+                      alt=""
+                      class="c19"
+                      data-nimg="fill"
+                      decoding="async"
+                      loading="lazy"
+                      src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
+                      style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                    />
                   </div>
                 </div>
                 <span
-                  class="c24"
+                  class="c20"
                 />
               </div>
             </button>
@@ -381,7 +337,7 @@ exports[`OakInformativeModal matches snapshot when mounted 1`] = `
           style="display: contents;"
         >
           <div
-            class="c25 c26"
+            class="c21 c22"
           >
             <div />
             Modal content
