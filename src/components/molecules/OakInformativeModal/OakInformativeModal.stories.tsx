@@ -9,7 +9,6 @@ import { OakInformativeModalBody } from "./OakInformativeModalBody";
 import { OakSecondaryButton } from "@/components/molecules/OakSecondaryButton";
 import { OakPrimaryButton } from "@/components/molecules/OakPrimaryButton";
 import { OakBox, OakP } from "@/components/atoms";
-import { oakColorTokens, oakUiRoleTokens } from "@/styles";
 
 const meta: Meta<typeof OakInformativeModal> = {
   component: OakInformativeModal,
@@ -27,12 +26,6 @@ const meta: Meta<typeof OakInformativeModal> = {
       description:
         "Whether the modal is anchored to the left side of the screen.",
     },
-    $borderColor: {
-      options: [...oakUiRoleTokens, ...Object.keys(oakColorTokens)],
-    },
-    $background: {
-      options: Object.keys(oakColorTokens),
-    },
   },
   parameters: {
     controls: {
@@ -42,8 +35,6 @@ const meta: Meta<typeof OakInformativeModal> = {
         "isOpen",
         "onClose",
         "isLeftHandSide",
-        "$borderColor",
-        "$background",
       ],
     },
   },
@@ -84,47 +75,6 @@ export const WithScrolling: Story = {
   args: {
     "aria-label": "Scrolling modal",
     "aria-description": "A modal with scrolling content",
-    children: (
-      <OakInformativeModalBody>
-        {[1, 2, 3].map((i) => (
-          <Fragment key={i}>
-            <OakP>
-              Privacy concerns have become increasingly paramount, prompting the
-              need for transparency and user consent regarding data collection
-              practices. A cookie banner serves as the initial point of contact
-              between a website and its visitors.
-            </OakP>
-            <OakP>
-              Privacy concerns have become increasingly paramount, prompting the
-              need for transparency and user consent regarding data collection
-              practices. A cookie banner serves as the initial point of contact
-              between a website and its visitors.
-            </OakP>
-            <OakP>
-              Privacy concerns have become increasingly paramount, prompting the
-              need for transparency and user consent regarding data collection
-              practices. A cookie banner serves as the initial point of contact
-              between a website and its visitors.
-            </OakP>
-            <OakP>
-              Privacy concerns have become increasingly paramount, prompting the
-              need for transparency and user consent regarding data collection
-              practices. A cookie banner serves as the initial point of contact
-              between a website and its visitors.
-            </OakP>
-          </Fragment>
-        ))}
-      </OakInformativeModalBody>
-    ),
-  },
-};
-
-export const WithColour: Story = {
-  args: {
-    "aria-label": "Color modal",
-    "aria-description": "A modal with different colors",
-    $borderColor: "pink110",
-    $background: "pink50",
     children: (
       <OakInformativeModalBody>
         {[1, 2, 3].map((i) => (

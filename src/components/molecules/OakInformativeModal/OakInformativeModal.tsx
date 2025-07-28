@@ -8,7 +8,6 @@ import useIsScrolled from "@/hooks/useIsScrolled";
 import useMounted from "@/hooks/useMounted";
 import InternalModalTransition from "@/components/molecules/InternalModalTransition/InternalModalTransition";
 import { BorderStyleProps } from "@/styles/utils/borderStyle";
-import { ColorStyleProps } from "@/styles/utils/colorStyle";
 
 export const OakInformativeModalBorderColor = createContext<
   BorderStyleProps["$borderColor"]
@@ -53,8 +52,6 @@ export type OakInformativeModalProps = {
    */
   zIndex?: number;
   isLeftHandSide?: boolean;
-  $borderColor?: BorderStyleProps["$borderColor"];
-  $background?: ColorStyleProps["$background"];
 } & Pick<
   HTMLAttributes<Element>,
   "aria-label" | "aria-description" | "aria-labelledby" | "aria-describedby"
@@ -71,8 +68,6 @@ export const OakInformativeModal = ({
   onClose,
   zIndex,
   isLeftHandSide,
-  $background = "white",
-  $borderColor = "border-neutral-lighter",
   ...rest
 }: OakInformativeModalProps) => {
   const transitionRef = useRef<HTMLDivElement>(null);
@@ -97,7 +92,7 @@ export const OakInformativeModal = ({
   const finalZIndex = typeof zIndex === "number" ? zIndex : "modal-dialog";
 
   return createPortal(
-    <OakInformativeModalBorderColor.Provider value={$borderColor}>
+    <OakInformativeModalBorderColor.Provider value={"border-neutral-lighter"}>
       <InternalModalTransition
         isOpen={isOpen}
         transitionRef={transitionRef}
@@ -107,7 +102,7 @@ export const OakInformativeModal = ({
         {...rest}
       >
         <OakFlex
-          $background={$background}
+          $background={"white"}
           $flexDirection={"column"}
           $height={"100%"}
         >
@@ -132,7 +127,9 @@ export const OakInformativeModal = ({
               $flexDirection="column"
               $overflow="auto"
               $bt="border-solid-s"
-              $borderColor={isScrolled ? $borderColor : "transparent"}
+              $borderColor={
+                isScrolled ? "border-neutral-lighter" : "transparent"
+              }
             >
               <ObserveScroll>{children}</ObserveScroll>
             </OakFlex>
