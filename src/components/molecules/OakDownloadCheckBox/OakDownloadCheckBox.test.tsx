@@ -38,7 +38,7 @@ describe("OakDownloadCheckBox", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("matches snapshot wth fileSizeSlot", () => {
+  it("matches snapshot with fileSizeSlot", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
         <OakDownloadCheckBox
