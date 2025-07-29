@@ -24,6 +24,9 @@ const meta: Meta<typeof OakDownloadCheckBox> = {
     formatSlot: {
       type: "string",
     },
+    asRadio: {
+      type: "boolean",
+    },
   },
   parameters: {
     controls: {
@@ -34,6 +37,7 @@ const meta: Meta<typeof OakDownloadCheckBox> = {
         "titleSlot",
         "fileSizeSlot",
         "formatSlot",
+        "asRadio",
       ],
     },
   },
