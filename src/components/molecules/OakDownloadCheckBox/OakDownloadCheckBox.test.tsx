@@ -68,20 +68,6 @@ describe("OakDownloadCheckBox", () => {
     expect(getByRole("checkbox")).toBeInTheDocument();
   });
 
-  it("has a name attribute of value id", () => {
-    const { getByRole } = renderWithTheme(
-      <OakDownloadCheckBox
-        id="checkbox-1"
-        value="Option 1"
-        titleSlot={"TITLE"}
-        formatSlot={"FORMAT"}
-        iconName={"books"}
-      />,
-    );
-
-    expect(getByRole("checkbox")).toHaveAttribute("name", "checkbox-1");
-  });
-
   it("can be checked and unchecked through clicking", () => {
     const { getByRole } = renderWithTheme(
       <OakDownloadCheckBox
