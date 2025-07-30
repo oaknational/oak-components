@@ -73,7 +73,7 @@ export const AsRadio: Story = {
 
     return (
       <OakRadioGroup
-        name={"test"}
+        name={"as-radio-test"}
         value={value}
         onChange={(e) => setValue(e.target.value)}
       >
@@ -93,7 +93,7 @@ export const AsRadio: Story = {
 
 export const AsRadioDisabled: Story = {
   render: (args) => (
-    <OakRadioGroup name={"test"} value="one" disabled={true}>
+    <OakRadioGroup name={"as-radio--disabled-test"} value="one" disabled={true}>
       <OakDownloadCard {...args} value="one" />
       <OakDownloadCard {...args} value="two" />
     </OakRadioGroup>
