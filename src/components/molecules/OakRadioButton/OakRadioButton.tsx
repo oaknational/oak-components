@@ -119,6 +119,7 @@ export const OakRadioButton = forwardRef<HTMLInputElement, OakRadioButtonProps>(
             radioInnerSize={radioInnerSize}
             radioOuterSize={radioOuterSize}
             radioBorderWidth={radioBorderWidth}
+            size={radioOuterSize}
             radioBackground={radioBackground}
             checkedRadioBorderWidth={checkedRadioBorderWidth}
             internalRadio={
