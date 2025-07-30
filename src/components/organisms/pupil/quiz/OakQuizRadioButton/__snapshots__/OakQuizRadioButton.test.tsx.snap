@@ -17,17 +17,7 @@ exports[`OakQuizRadioButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c6 {
-  position: relative;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c10 {
-  position: absolute;
-  top: 0rem;
-  left: 0rem;
+.c9 {
   width: 2rem;
   height: 2rem;
   background: #ffffff;
@@ -50,7 +40,7 @@ exports[`OakQuizRadioButton matches snapshot 1`] = `
   justify-content: space-between;
 }
 
-.c11 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -83,41 +73,6 @@ exports[`OakQuizRadioButton matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c8 {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  margin: 0;
-  outline: none;
-  border: 0.125rem solid;
-  border-color: #222222;
-  border-radius: 0.125rem;
-}
-
-.c8:checked {
-  background: #222222;
-}
-
-.c8:disabled {
-  pointer-events: none;
-}
-
-.c12 {
-  border-radius: 50%;
-}
-
-.c7:checked ~ .c9::after {
-  content: "";
-  height: 1.5rem;
-  width: 1.5rem;
-  background: #222222;
-  position: absolute;
-  border-radius: 50%;
-  border: 0.125rem solid #ffffff;
-}
-
 .c5 {
   cursor: pointer;
   display: -webkit-box;
@@ -129,6 +84,26 @@ exports[`OakQuizRadioButton matches snapshot 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.c7 {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.c11 {
+  border-radius: 50%;
+}
+
+.c6:checked ~ .c8::after {
+  content: "";
+  height: 1.5rem;
+  width: 1.5rem;
+  background: #222222;
+  position: absolute;
+  border-radius: 50%;
+  border: 0.125rem solid #ffffff;
 }
 
 .c2:hover {
@@ -154,12 +129,6 @@ exports[`OakQuizRadioButton matches snapshot 1`] = `
   border-bottom: 0.188rem solid #575757;
 }
 
-@media (hover:hover) {
-  .c8:hover:not(:disabled) {
-    border-color: #222222;
-  }
-}
-
 <div
   className="c0 c1 c2"
   onClick={[Function]}
@@ -171,23 +140,17 @@ exports[`OakQuizRadioButton matches snapshot 1`] = `
       className="c4 c5"
       htmlFor="checkbox-1"
     >
+      <input
+        checked={false}
+        className="c6 c7"
+        id="checkbox-1"
+        name="default"
+        type="radio"
+        value="Option 1"
+      />
       <div
-        className="c6"
-      >
-        <input
-          checked={false}
-          className="c7 c8"
-          id="checkbox-1"
-          name="default"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          type="radio"
-          value="Option 1"
-        />
-        <div
-          className="c9 c10 c11 c12"
-        />
-      </div>
+        className="c8 c9 c10 c11"
+      />
       Radio option
     </label>
   </div>

@@ -2,16 +2,16 @@ import React from "react";
 import "@testing-library/jest-dom";
 import { create } from "react-test-renderer";
 
-import { OakDownloadCard } from "./OakDownloadCard";
+import { OakDownloadCheckBox } from "./OakDownloadCheckBox";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { OakThemeProvider } from "@/components/atoms";
 import { oakDefaultTheme } from "@/styles";
 
-describe("OakDownloadCard", () => {
+describe("OakDownloadCheckBox", () => {
   it("renders a checkbox", () => {
     const { getByTestId } = renderWithTheme(
-      <OakDownloadCard
+      <OakDownloadCheckBox
         id="checkbox-1"
         value="Option 1"
         data-testid="test-1"
@@ -26,7 +26,7 @@ describe("OakDownloadCard", () => {
   it("matches snapshot without fileSizeSlot", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
-        <OakDownloadCard
+        <OakDownloadCheckBox
           id="checkbox-1"
           value="Option 1"
           titleSlot={"TITLE"}
@@ -41,7 +41,7 @@ describe("OakDownloadCard", () => {
   it("matches snapshot with fileSizeSlot", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
-        <OakDownloadCard
+        <OakDownloadCheckBox
           id="checkbox-1"
           value="Option 1"
           titleSlot={"TITLE"}
@@ -56,7 +56,7 @@ describe("OakDownloadCard", () => {
 
   it("has a role of checkbox", () => {
     const { getByRole } = renderWithTheme(
-      <OakDownloadCard
+      <OakDownloadCheckBox
         id="checkbox-1"
         value="Option 1"
         titleSlot={"TITLE"}
@@ -68,9 +68,23 @@ describe("OakDownloadCard", () => {
     expect(getByRole("checkbox")).toBeInTheDocument();
   });
 
+  it("has a name attribute of value id", () => {
+    const { getByRole } = renderWithTheme(
+      <OakDownloadCheckBox
+        id="checkbox-1"
+        value="Option 1"
+        titleSlot={"TITLE"}
+        formatSlot={"FORMAT"}
+        iconName={"books"}
+      />,
+    );
+
+    expect(getByRole("checkbox")).toHaveAttribute("name", "checkbox-1");
+  });
+
   it("can be checked and unchecked through clicking", () => {
     const { getByRole } = renderWithTheme(
-      <OakDownloadCard
+      <OakDownloadCheckBox
         id="checkbox-1"
         value="Option 1"
         titleSlot={"TITLE"}
@@ -87,7 +101,7 @@ describe("OakDownloadCard", () => {
   it("calls onChange method when checked and unchecked", () => {
     const onChange = jest.fn();
     const { getByRole } = renderWithTheme(
-      <OakDownloadCard
+      <OakDownloadCheckBox
         id="checkbox-1"
         value="Option 1"
         onChange={onChange}
@@ -105,7 +119,7 @@ describe("OakDownloadCard", () => {
     const onFocus = jest.fn();
     const onBlur = jest.fn();
     const { getByRole } = renderWithTheme(
-      <OakDownloadCard
+      <OakDownloadCheckBox
         id="checkbox-1"
         value="Option 1"
         onFocus={onFocus}
