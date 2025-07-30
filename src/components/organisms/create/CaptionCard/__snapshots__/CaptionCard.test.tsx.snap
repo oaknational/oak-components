@@ -6,11 +6,6 @@ exports[`CaptionCard matches snapshot 1`] = `
   position: relative;
   width: 100%;
   min-height: 2.5rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c2 {
-  width: 100%;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   padding-top: 0.75rem;
@@ -22,19 +17,19 @@ exports[`CaptionCard matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c5 {
+.c3 {
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c9 {
+.c7 {
   position: relative;
   width: 1.5rem;
   height: 1.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c15 {
+.c13 {
   position: absolute;
   top: 0rem;
   left: 0rem;
@@ -44,7 +39,7 @@ exports[`CaptionCard matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c17 {
+.c15 {
   position: relative;
   width: 100%;
   min-width: 100%;
@@ -53,11 +48,11 @@ exports[`CaptionCard matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c19 {
+.c17 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c23 {
+.c21 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -66,13 +61,13 @@ exports[`CaptionCard matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c27 {
+.c25 {
   position: relative;
   min-height: 2.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c29 {
+.c27 {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -81,24 +76,17 @@ exports[`CaptionCard matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c18 {
+.c16 {
   -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   object-fit: contain;
 }
 
-.c24 {
+.c22 {
   object-fit: contain;
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -109,7 +97,7 @@ exports[`CaptionCard matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c6 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -125,7 +113,7 @@ exports[`CaptionCard matches snapshot 1`] = `
   gap: 0.75rem;
 }
 
-.c20 {
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -140,7 +128,7 @@ exports[`CaptionCard matches snapshot 1`] = `
   flex-grow: 10;
 }
 
-.c22 {
+.c20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -152,7 +140,7 @@ exports[`CaptionCard matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c28 {
+.c26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -163,16 +151,16 @@ exports[`CaptionCard matches snapshot 1`] = `
   align-items: center;
 }
 
-.c26 {
+.c24 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c7 {
+.c5 {
   font-family: --var(google-font),Lexend,sans-serif;
   color: #222222;
 }
 
-.c8 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -188,7 +176,7 @@ exports[`CaptionCard matches snapshot 1`] = `
   align-items: center;
 }
 
-.c21 {
+.c19 {
   background: none;
   color: inherit;
   border: none;
@@ -201,12 +189,12 @@ exports[`CaptionCard matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c21:disabled {
+.c19:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c11 {
+.c9 {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -222,29 +210,29 @@ exports[`CaptionCard matches snapshot 1`] = `
   border-color: #808080;
 }
 
-.c11:checked {
+.c9:checked {
   background: #222222;
   border-color: #222222;
 }
 
-.c11:disabled {
+.c9:disabled {
   pointer-events: none;
 }
 
-.c13:focus-visible {
+.c11:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
 }
 
-.c16 {
+.c14 {
   pointer-events: none;
   opacity: 0;
 }
 
-input:checked + .c14 {
+input:checked + .c12 {
   opacity: 1;
 }
 
-.c25 {
+.c23 {
   display: inline;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -267,48 +255,48 @@ input:checked + .c14 {
   color: #222222;
 }
 
-.c25:focus-visible {
+.c23:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c25:visited {
+.c23:visited {
   color: #287c34;
 }
 
-.c25:active {
+.c23:active {
   color: #222222;
 }
 
-.c25[disabled] {
+.c23[disabled] {
   cursor: not-allowed;
   color: #808080;
 }
 
-.c4:has(input:not(:disabled)) {
+.c2:has(input:not(:disabled)) {
   cursor: default;
 }
 
-.c4:has(input:disabled) {
+.c2:has(input:disabled) {
   pointer-events: none;
   cursor: none;
 }
 
-.c4:hover:has(input:not(:disabled)) {
-  background-color: #e4e4e4;
+.c2:hover:has(input:not(:disabled)) {
+  background-color: #c6d1ef;
 }
 
-.c4:focus-within {
+.c2:focus-within {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
 @media (hover:hover) {
-  .c11:hover:not(:disabled) {
+  .c9:hover:not(:disabled) {
     border-color: #222222;
   }
 }
 
 @media (hover:hover) {
-  .c12:hover:not(.c10:checked):not(.c10:disabled)::after {
+  .c10:hover:not(.c8:checked):not(.c8:disabled)::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -324,281 +312,277 @@ input:checked + .c14 {
 }
 
 @media (hover:hover) {
-  .c25:hover,
-  .c25:visited:hover {
+  .c23:hover,
+  .c23:visited:hover {
     color: #222222;
   }
 }
 
 <div
-    className="c0 c1"
+    className="c0 c1 c2"
     data-testid="caption-card"
   >
     <div
-      className="c2 c3 c4"
+      className="c3 c4"
     >
-      <div
+      <label
         className="c5 c6"
+        disabled={false}
+        htmlFor="CAP-TEST-01234"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
       >
-        <label
-          className="c7 c8"
-          data-testid="checkbox"
-          disabled={false}
-          htmlFor="CAP-TEST-01234"
+        <div
+          className="c7"
+        >
+          <input
+            aria-label="check caption CAP-TEST-01234"
+            aria-labelledby="CAP-TEST-01234"
+            checked={false}
+            className="c8 c9 c10 c11"
+            data-testid="checkbox"
+            disabled={false}
+            id="CAP-TEST-01234"
+            name="CAP-TEST-01234"
+            onChange={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            type="checkbox"
+            value="Caption ID: CAP-TEST-01234"
+          />
+          <div
+            className="c12 c13 c14"
+          >
+            <div
+              className="c15"
+            >
+              <img
+                alt=""
+                className="c16"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
+                style={
+                  {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+              />
+            </div>
+          </div>
+        </div>
+        Caption ID: CAP-TEST-01234
+      </label>
+      <div
+        className="c17"
+      >
+        Video Title: 
+        This is a test video title
+      </div>
+      <div
+        className="c17 c18"
+      >
+        <button
+          aria-label="edit caption CAP-TEST-01234 in rev"
+          className="c19"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
           <div
-            className="c9"
+            className="c17 c20"
           >
-            <input
-              aria-label="check caption CAP-TEST-01234"
-              aria-labelledby="CAP-TEST-01234"
-              checked={false}
-              className="c10 c11 c12 c13"
-              disabled={false}
-              id="CAP-TEST-01234"
-              name="CAP-TEST-01234"
-              onChange={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              type="checkbox"
-              value="Caption ID: CAP-TEST-01234"
-            />
+            Edit
             <div
-              className="c14 c15 c16"
+              className="c21 "
             >
-              <div
-                className="c17"
-              >
-                <img
-                  alt=""
-                  className="c18"
-                  data-nimg="fill"
-                  decoding="async"
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
-                  style={
-                    {
-                      "bottom": 0,
-                      "color": "transparent",
-                      "height": "100%",
-                      "left": 0,
-                      "objectFit": undefined,
-                      "objectPosition": undefined,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                      "width": "100%",
-                    }
+              <img
+                alt=""
+                className="c22"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953892/icons/hlxmejse3mcr4tqo6t8u.svg"
+                style={
+                  {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
                   }
-                />
-              </div>
+                }
+              />
             </div>
           </div>
-          Caption ID: CAP-TEST-01234
-        </label>
-        <div
-          className="c19"
+        </button>
+      </div>
+    </div>
+    <div
+      className="c3 c4"
+    >
+      <a
+        aria-label="view lesson LESS-TEST-01234"
+        className="c23"
+        onClick={[Function]}
+      >
+        <span
+          className="c24"
         >
-          Video Title: 
-          This is a test video title
-        </div>
-        <div
-          className="c19 c20"
-        >
-          <button
-            aria-label="edit caption CAP-TEST-01234 in rev"
-            className="c21"
-            onClick={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
+          <div
+            className="c25 c20"
           >
+            LESS-TEST-01234
             <div
-              className="c19 c22"
+              className="c21 "
             >
-              Edit
-              <div
-                className="c23 "
-              >
-                <img
-                  alt=""
-                  className="c24"
-                  data-nimg="fill"
-                  decoding="async"
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953892/icons/hlxmejse3mcr4tqo6t8u.svg"
-                  style={
-                    {
-                      "bottom": 0,
-                      "color": "transparent",
-                      "height": "100%",
-                      "left": 0,
-                      "objectFit": undefined,
-                      "objectPosition": undefined,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                      "width": "100%",
-                    }
+              <img
+                alt=""
+                className="c22"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953892/icons/hlxmejse3mcr4tqo6t8u.svg"
+                style={
+                  {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
                   }
-                />
-              </div>
+                }
+              />
             </div>
-          </button>
+          </div>
+        </span>
+      </a>
+      <div
+        className="c17 c26"
+      >
+        <div
+          className="c27 "
+        >
+          <img
+            alt=""
+            className="c22"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1705416078/icons/wzey1zfxrvv3apeebbf5.svg"
+            style={
+              {
+                "bottom": 0,
+                "color": "transparent",
+                "height": "100%",
+                "left": 0,
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": "100%",
+              }
+            }
+          />
         </div>
+        Lesson video
       </div>
       <div
-        className="c5 c6"
+        className="c17 c26"
       >
-        <a
-          aria-label="view lesson LESS-TEST-01234"
-          className="c25"
-          onClick={[Function]}
-        >
-          <span
-            className="c26"
-          >
-            <div
-              className="c27 c22"
-            >
-              LESS-TEST-01234
-              <div
-                className="c23 "
-              >
-                <img
-                  alt=""
-                  className="c24"
-                  data-nimg="fill"
-                  decoding="async"
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953892/icons/hlxmejse3mcr4tqo6t8u.svg"
-                  style={
-                    {
-                      "bottom": 0,
-                      "color": "transparent",
-                      "height": "100%",
-                      "left": 0,
-                      "objectFit": undefined,
-                      "objectPosition": undefined,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                      "width": "100%",
-                    }
-                  }
-                />
-              </div>
-            </div>
-          </span>
-        </a>
         <div
-          className="c19 c28"
+          className="c27 "
         >
-          <div
-            className="c29 "
-          >
-            <img
-              alt=""
-              className="c24"
-              data-nimg="fill"
-              decoding="async"
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1705416078/icons/wzey1zfxrvv3apeebbf5.svg"
-              style={
-                {
-                  "bottom": 0,
-                  "color": "transparent",
-                  "height": "100%",
-                  "left": 0,
-                  "objectFit": undefined,
-                  "objectPosition": undefined,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
+          <img
+            alt=""
+            className="c22"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953925/icons/pw22bdhj2vrzfv2ogi4e.svg"
+            style={
+              {
+                "bottom": 0,
+                "color": "transparent",
+                "height": "100%",
+                "left": 0,
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": "100%",
               }
-            />
-          </div>
-          Lesson video
+            }
+          />
         </div>
+        Edited 
+        2 years ago
+      </div>
+      <div
+        className="c17 c26"
+      >
         <div
-          className="c19 c28"
+          className="c27 "
         >
-          <div
-            className="c29 "
-          >
-            <img
-              alt=""
-              className="c24"
-              data-nimg="fill"
-              decoding="async"
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953925/icons/pw22bdhj2vrzfv2ogi4e.svg"
-              style={
-                {
-                  "bottom": 0,
-                  "color": "transparent",
-                  "height": "100%",
-                  "left": 0,
-                  "objectFit": undefined,
-                  "objectPosition": undefined,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
+          <img
+            alt=""
+            className="c22"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895534/icons/Icon-Success_aiiprx.svg"
+            style={
+              {
+                "bottom": 0,
+                "color": "transparent",
+                "height": "100%",
+                "left": 0,
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": "100%",
               }
-            />
-          </div>
-          Edited 
-          2 years ago
+            }
+          />
         </div>
-        <div
-          className="c19 c28"
-        >
-          <div
-            className="c29 "
-          >
-            <img
-              alt=""
-              className="c24"
-              data-nimg="fill"
-              decoding="async"
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895534/icons/Icon-Success_aiiprx.svg"
-              style={
-                {
-                  "bottom": 0,
-                  "color": "transparent",
-                  "height": "100%",
-                  "left": 0,
-                  "objectFit": undefined,
-                  "objectPosition": undefined,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-            />
-          </div>
-          Updated 
-          2 years ago
-        </div>
+        Updated 
+        2 years ago
       </div>
     </div>
   </div>,

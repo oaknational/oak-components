@@ -28,7 +28,7 @@ const StyledFlexBox = styled(OakFlex)`
   }
 
   &:hover:has(input:not(:disabled)) {
-    background-color: ${parseColor("bg-neutral-stronger")};
+    background-color: ${parseColor("bg-decorative3-subdued")};
   }
 
   &:focus-within {
@@ -49,6 +49,7 @@ export interface CaptionCardProps {
   highlighted?: boolean;
   disabled?: boolean;
   onCheckChanged: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  "data-testid"?: string;
 }
 
 /**
@@ -74,6 +75,7 @@ export const CaptionCard = (props: CaptionCardProps) => {
     linkToRev,
     highlighted,
     disabled,
+    "data-testid": dataTestId = "caption-card",
   } = props;
 
   function handleEditClick() {
@@ -86,80 +88,45 @@ export const CaptionCard = (props: CaptionCardProps) => {
   }
 
   return (
-    <OakFlex
+    <StyledFlexBox
+      data-testid={dataTestId}
       $minHeight={"all-spacing-8"}
       $position={"relative"}
+      $borderRadius={"border-radius-s"}
+      $borderColor={getBorderColor(!!disabled, !!highlighted)}
+      $ba="border-solid-s"
+      $background={getBackgroundColor(!!disabled, !!highlighted)}
+      $ph={"inner-padding-s"}
+      $pv={"inner-padding-s"}
+      $gap={"space-between-sssx"}
+      $flexDirection={"column"}
       $width={"100%"}
-      data-testid="caption-card"
     >
-      <StyledFlexBox
-        $borderRadius={"border-radius-s"}
-        $borderColor={getBorderColor(!!disabled, !!highlighted)}
-        $ba="border-solid-s"
-        $background={getBackgroundColor(!!disabled, !!highlighted)}
-        $ph={"inner-padding-s"}
-        $pv={"inner-padding-s"}
-        $gap={"space-between-sssx"}
-        $flexDirection={"column"}
+      <OakFlex
+        $justifyContent={"flex-start"}
+        $alignItems={"center"}
         $width={"100%"}
+        $gap={"space-between-xs"}
       >
-        <OakFlex
-          $justifyContent={"flex-start"}
-          $alignItems={"center"}
-          $width={"100%"}
-          $gap={"space-between-xs"}
-        >
-          <OakCheckBox
-            checked={checked}
-            value={`Caption ID: ${captionId}`}
-            disabled={disabled}
-            onChange={onCheckChanged}
-            aria-labelledby={captionId}
-            aria-label={`check caption ${captionId}`}
-            data-testid="checkbox"
-            id={captionId}
-          />
-          {/* <OakBox>Caption ID: {captionId}</OakBox> */}
-          <OakBox>Video Title: {videoTitle}</OakBox>
-          <OakFlex $flexGrow={10} $justifyContent={"flex-end"}>
-            <InternalButton
-              onClick={handleEditClick}
-              aria-label={`edit caption ${captionId} in rev`}
-            >
-              <OakFlex $alignItems={"center"} $gap={"space-between-sssx"}>
-                Edit
-                <StyledOakIcon
-                  iconWidth="all-spacing-6"
-                  iconHeight="all-spacing-6"
-                  alt=""
-                  iconName="external"
-                />
-              </OakFlex>
-            </InternalButton>
-          </OakFlex>
-        </OakFlex>
-        <OakFlex
-          $justifyContent={"flex-start"}
-          $alignItems={"center"}
-          $width={"100%"}
-          $gap={"space-between-xs"}
-        >
-          <InternalLink
-            onClick={handleLessonIdClick}
-            color={"black"}
-            visitedColor={"border-brand"}
-            hoverColor={"black"}
-            activeColor={"black"}
-            disabledColor={"text-disabled"}
-            aria-label={`view lesson ${lessonUid}`}
+        <OakCheckBox
+          checked={checked}
+          value={`Caption ID: ${captionId}`}
+          disabled={disabled}
+          onChange={onCheckChanged}
+          aria-labelledby={captionId}
+          aria-label={`check caption ${captionId}`}
+          data-testid="checkbox"
+          id={captionId}
+        />
+        {/* <OakBox>Caption ID: {captionId}</OakBox> */}
+        <OakBox>Video Title: {videoTitle}</OakBox>
+        <OakFlex $flexGrow={10} $justifyContent={"flex-end"}>
+          <InternalButton
+            onClick={handleEditClick}
+            aria-label={`edit caption ${captionId} in rev`}
           >
-            <OakFlex
-              $minHeight={"all-spacing-8"}
-              $position={"relative"}
-              $alignItems={"center"}
-              $gap={"space-between-sssx"}
-            >
-              {lessonUid}
+            <OakFlex $alignItems={"center"} $gap={"space-between-sssx"}>
+              Edit
               <StyledOakIcon
                 iconWidth="all-spacing-6"
                 iconHeight="all-spacing-6"
@@ -167,24 +134,55 @@ export const CaptionCard = (props: CaptionCardProps) => {
                 iconName="external"
               />
             </OakFlex>
-          </InternalLink>
-          <OakFlex $alignItems={"center"}>
-            <StyledOakIcon alt="" iconName="video" />
-            {getVideoTypeText(videoType)}
-          </OakFlex>
-          {lastEdited ? (
-            <OakFlex $alignItems={"center"}>
-              <StyledOakIcon alt="" iconName="equipment-required" />
-              Edited {getTimeText(lastEdited)}
-            </OakFlex>
-          ) : null}
-          <OakFlex $alignItems={"center"}>
-            <StyledOakIcon alt="" iconName="success" />
-            Updated {getTimeText(lastUpdated)}
-          </OakFlex>
+          </InternalButton>
         </OakFlex>
-      </StyledFlexBox>
-    </OakFlex>
+      </OakFlex>
+      <OakFlex
+        $justifyContent={"flex-start"}
+        $alignItems={"center"}
+        $width={"100%"}
+        $gap={"space-between-xs"}
+      >
+        <InternalLink
+          onClick={handleLessonIdClick}
+          color={"black"}
+          visitedColor={"border-brand"}
+          hoverColor={"black"}
+          activeColor={"black"}
+          disabledColor={"text-disabled"}
+          aria-label={`view lesson ${lessonUid}`}
+        >
+          <OakFlex
+            $minHeight={"all-spacing-8"}
+            $position={"relative"}
+            $alignItems={"center"}
+            $gap={"space-between-sssx"}
+          >
+            {lessonUid}
+            <StyledOakIcon
+              iconWidth="all-spacing-6"
+              iconHeight="all-spacing-6"
+              alt=""
+              iconName="external"
+            />
+          </OakFlex>
+        </InternalLink>
+        <OakFlex $alignItems={"center"}>
+          <StyledOakIcon alt="" iconName="video" />
+          {getVideoTypeText(videoType)}
+        </OakFlex>
+        {lastEdited ? (
+          <OakFlex $alignItems={"center"}>
+            <StyledOakIcon alt="" iconName="equipment-required" />
+            Edited {getTimeText(lastEdited)}
+          </OakFlex>
+        ) : null}
+        <OakFlex $alignItems={"center"}>
+          <StyledOakIcon alt="" iconName="success" />
+          Updated {getTimeText(lastUpdated)}
+        </OakFlex>
+      </OakFlex>
+    </StyledFlexBox>
   );
 };
 
@@ -216,7 +214,7 @@ function getBackgroundColor(
   if (disabled) {
     return "bg-neutral-stronger";
   }
-  return highlighted ? "bg-decorative3-main" : "bg-neutral";
+  return highlighted ? "bg-decorative3-very-subdued" : "bg-neutral";
 }
 
 function getTimeText(timestamp: string | number): string {

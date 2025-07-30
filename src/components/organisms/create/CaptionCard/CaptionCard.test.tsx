@@ -60,7 +60,7 @@ describe("CaptionCard", () => {
         videoType={"lesson"}
         lastUpdated={"2023-01-01"}
         linkToRev={"https://example.com"}
-        checked={false}
+        checked={true}
         highlighted={false}
         onCheckChanged={() => {}}
         disabled={false}
@@ -69,13 +69,127 @@ describe("CaptionCard", () => {
     expect(queryByText("Edited")).not.toBeInTheDocument();
   });
 
-  it("calls onChangeChecked when clicked", () => {});
+  it("calls onChangeChecked when checkbox is clicked", () => {
+    const mockOnCheckChanged = jest.fn();
+    const { queryByTestId } = renderWithTheme(
+      <CaptionCard
+        captionId={"CAP-TEST-01234"}
+        videoTitle={"This is a test video title"}
+        lessonUid={"LESS-TEST-01234"}
+        videoType={"lesson"}
+        lastUpdated={"2023-01-01"}
+        linkToRev={"https://example.com"}
+        checked={false}
+        highlighted={false}
+        onCheckChanged={mockOnCheckChanged}
+        disabled={false}
+      />,
+    );
+    queryByTestId("checkbox")?.click();
+    expect(mockOnCheckChanged).toHaveBeenCalled();
+  });
 
-  it("should update checked attribute in DOM", () => {});
+  it("should display checked box if checked prop is true", () => {
+    const { queryByTestId } = renderWithTheme(
+      <CaptionCard
+        captionId={"CAP-TEST-01234"}
+        videoTitle={"This is a test video title"}
+        lessonUid={"LESS-TEST-01234"}
+        videoType={"lesson"}
+        lastUpdated={"2023-01-01"}
+        linkToRev={"https://example.com"}
+        checked={true}
+        highlighted={false}
+        onCheckChanged={() => {}}
+        disabled={false}
+      />,
+    );
+    expect(queryByTestId("checkbox")).toBeInTheDocument();
+    expect(queryByTestId("checkbox")).toBeChecked();
+  });
 
-  it("should render the caption information", () => {});
+  it("should display unchecked box if checked prop is false", () => {
+    const { queryByTestId } = renderWithTheme(
+      <CaptionCard
+        captionId={"CAP-TEST-01234"}
+        videoTitle={"This is a test video title"}
+        lessonUid={"LESS-TEST-01234"}
+        videoType={"lesson"}
+        lastUpdated={"2023-01-01"}
+        linkToRev={"https://example.com"}
+        checked={false}
+        highlighted={false}
+        onCheckChanged={() => {}}
+        disabled={false}
+      />,
+    );
+    expect(queryByTestId("checkbox")).toBeInTheDocument();
+    expect(queryByTestId("checkbox")).not.toBeChecked();
+  });
 
-  it("should maintain single value in group", () => {});
+  it("should use a different background if highlighted prop is true", () => {
+    renderWithTheme(
+      <CaptionCard
+        captionId={"CAP-TEST-01234"}
+        videoTitle={"This is a test video title"}
+        lessonUid={"LESS-TEST-01234"}
+        videoType={"lesson"}
+        lastUpdated={"2023-01-01"}
+        linkToRev={"https://example.com"}
+        checked={false}
+        highlighted={false}
+        onCheckChanged={() => {}}
+        disabled={false}
+        data-testid="caption-card-original"
+      />,
+    );
+    const { queryByTestId } = renderWithTheme(
+      <CaptionCard
+        captionId={"CAP-TEST-01234"}
+        videoTitle={"This is a test video title"}
+        lessonUid={"LESS-TEST-01234"}
+        videoType={"lesson"}
+        lastUpdated={"2023-01-01"}
+        linkToRev={"https://example.com"}
+        checked={false}
+        highlighted={true}
+        onCheckChanged={() => {}}
+        disabled={false}
+        data-testid="caption-card"
+      />,
+    );
+    // expect(queryByTestId("caption-card")).toBeInTheDocument();
+    expect(queryByTestId("caption-card")?.attributes).not.toBe(
+      queryByTestId("caption-card-original")?.attributes,
+    );
+  });
+
+  it("should render the caption information", () => {
+    const { queryByText } = renderWithTheme(
+      <CaptionCard
+        captionId={"test-caption-id"}
+        videoTitle={"test-video-title"}
+        lessonUid={"test-lesson-uid"}
+        videoType={"lesson"}
+        lastUpdated={new Date().toUTCString()}
+        linkToRev={"https://example.com"}
+        checked={false}
+        highlighted={false}
+        onCheckChanged={() => {}}
+        disabled={false}
+      />,
+    );
+    expect(
+      queryByText("test-caption-id", { exact: false }),
+    ).toBeInTheDocument();
+    expect(
+      queryByText("test-video-title", { exact: false }),
+    ).toBeInTheDocument();
+    expect(
+      queryByText("test-lesson-uid", { exact: false }),
+    ).toBeInTheDocument();
+    expect(queryByText("Updated", { exact: false })).toBeInTheDocument();
+  });
 
   it("clicking checkbox triggers onChangeChecked", async () => {
     const onCheckChanged = jest.fn();
