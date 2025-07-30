@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OakDownloadCheckBox matches snapshot with fileSizeSlot 1`] = `
+exports[`OakDownloadCard matches snapshot with fileSizeSlot 1`] = `
 .c0 {
   overflow: hidden;
   background: #ffffff;
@@ -327,7 +327,7 @@ input:checked + .c18 {
 </div>
 `;
 
-exports[`OakDownloadCheckBox matches snapshot without fileSizeSlot 1`] = `
+exports[`OakDownloadCard matches snapshot without fileSizeSlot 1`] = `
 .c0 {
   overflow: hidden;
   background: #ffffff;

@@ -16,7 +16,7 @@ import { IconName } from "@/image-map";
 import { InternalRadioWrapper } from "@/components/atoms/InternalRadioWrapper";
 import { InternalRadio } from "@/components/atoms/InternalRadio/InternalRadio";
 
-export type OakDownloadCheckBoxProps = BaseCheckBoxProps & {
+export type OakDownloadCardProps = BaseCheckBoxProps & {
   titleSlot: React.ReactNode;
   fileSizeSlot?: React.ReactNode;
   formatSlot: React.ReactNode;
@@ -49,7 +49,7 @@ const Container = styled(OakFlex)<{ $hoverBackground: OakCombinedColorToken }>`
  * Design document: <https://www.figma.com/design/YcWQMMhHPVVmc47cHHEEAl/Oak-Design-Kit?node-id=14795-5603>
  *
  */
-export const OakDownloadCheckBox = (props: OakDownloadCheckBoxProps) => {
+export const OakDownloadCard = (props: OakDownloadCardProps) => {
   const radioContext = useContext(RadioContext);
   const {
     titleSlot,

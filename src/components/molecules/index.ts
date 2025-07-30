@@ -54,4 +54,4 @@ export * from "./OakToast";
 export * from "./OakSaveCount";
 export * from "./OakSaveButton";
 export * from "./OakCloseButton";
-export * from "./OakDownloadCheckBox";
+export * from "./OakDownloadCard";

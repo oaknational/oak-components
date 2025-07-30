@@ -3,14 +3,14 @@ import { Meta, StoryObj } from "@storybook/react";
 
 import { OakRadioGroup } from "../OakRadioGroup";
 
-import { OakDownloadCheckBox } from "./OakDownloadCheckBox";
+import { OakDownloadCard } from "./OakDownloadCard";
 
 import { oakIconNames } from "@/components/atoms";
 
-const meta: Meta<typeof OakDownloadCheckBox> = {
-  component: OakDownloadCheckBox,
+const meta: Meta<typeof OakDownloadCard> = {
+  component: OakDownloadCard,
   tags: ["autodocs"],
-  title: "components/molecules/OakDownloadCheckBox",
+  title: "components/molecules/OakDownloadCard",
   argTypes: {
     iconName: {
       options: oakIconNames,
@@ -44,10 +44,10 @@ const meta: Meta<typeof OakDownloadCheckBox> = {
 };
 export default meta;
 
-type Story = StoryObj<typeof OakDownloadCheckBox>;
+type Story = StoryObj<typeof OakDownloadCard>;
 
 export const Default: Story = {
-  render: (args) => <OakDownloadCheckBox {...args} />,
+  render: (args) => <OakDownloadCard {...args} />,
   args: {
     iconName: "book-steps",
     value: "a test value",
@@ -57,7 +57,7 @@ export const Default: Story = {
 };
 
 export const WithFileSize: Story = {
-  render: (args) => <OakDownloadCheckBox {...args} />,
+  render: (args) => <OakDownloadCard {...args} />,
   args: {
     iconName: "book-steps",
     value: "a test value",
@@ -77,8 +77,8 @@ export const AsRadio: Story = {
         value={value}
         onChange={(e) => setValue(e.target.value)}
       >
-        <OakDownloadCheckBox {...args} value="one" />
-        <OakDownloadCheckBox {...args} value="two" />
+        <OakDownloadCard {...args} value="one" />
+        <OakDownloadCard {...args} value="two" />
       </OakRadioGroup>
     );
   },
@@ -94,8 +94,8 @@ export const AsRadio: Story = {
 export const AsRadioDisabled: Story = {
   render: (args) => (
     <OakRadioGroup name={"test"} value="one" disabled={true}>
-      <OakDownloadCheckBox {...args} value="one" />
-      <OakDownloadCheckBox {...args} value="two" />
+      <OakDownloadCard {...args} value="one" />
+      <OakDownloadCard {...args} value="two" />
     </OakRadioGroup>
   ),
   args: {
@@ -109,7 +109,7 @@ export const AsRadioDisabled: Story = {
 };
 
 export const Disabled: Story = {
-  render: (args) => <OakDownloadCheckBox {...args} />,
+  render: (args) => <OakDownloadCard {...args} />,
   args: {
     iconName: "book-steps",
     value: "a test value",
