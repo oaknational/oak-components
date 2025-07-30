@@ -44,11 +44,12 @@ export interface CaptionCardProps {
   videoType: "lesson";
   lastUpdated: string;
   lastEdited?: string;
-  linkToRev: string;
   checked: boolean;
   highlighted?: boolean;
   disabled?: boolean;
-  onCheckChanged: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onCheckChanged?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onLessonUidClick?: () => void;
+  onEditClick?: () => void;
   "data-testid"?: string;
 }
 
@@ -66,26 +67,18 @@ export const CaptionCard = (props: CaptionCardProps) => {
   const {
     checked,
     onCheckChanged,
+    onLessonUidClick,
+    onEditClick,
     captionId,
     videoTitle,
     lessonUid,
     videoType,
     lastUpdated,
     lastEdited,
-    linkToRev,
     highlighted,
     disabled,
     "data-testid": dataTestId = "caption-card",
   } = props;
-
-  function handleEditClick() {
-    window.open(linkToRev, "_blank");
-  }
-
-  function handleLessonIdClick() {
-    // TODO correct this link to retool
-    window.open(`/lessons/${lessonUid}`, "_blank");
-  }
 
   return (
     <StyledFlexBox
@@ -122,7 +115,7 @@ export const CaptionCard = (props: CaptionCardProps) => {
         <OakBox>Video Title: {videoTitle}</OakBox>
         <OakFlex $flexGrow={10} $justifyContent={"flex-end"}>
           <InternalButton
-            onClick={handleEditClick}
+            onClick={onEditClick}
             aria-label={`edit caption ${captionId} in rev`}
           >
             <OakFlex $alignItems={"center"} $gap={"space-between-sssx"}>
@@ -144,13 +137,14 @@ export const CaptionCard = (props: CaptionCardProps) => {
         $gap={"space-between-xs"}
       >
         <InternalLink
-          onClick={handleLessonIdClick}
+          onClick={onLessonUidClick}
           color={"black"}
           visitedColor={"border-brand"}
           hoverColor={"black"}
           activeColor={"black"}
           disabledColor={"text-disabled"}
           aria-label={`view lesson ${lessonUid}`}
+          data-testid="lesson_uid"
         >
           <OakFlex
             $minHeight={"all-spacing-8"}
@@ -217,7 +211,7 @@ function getBackgroundColor(
   return highlighted ? "bg-decorative3-very-subdued" : "bg-neutral";
 }
 
-function getTimeText(timestamp: string | number): string {
+export function getTimeText(timestamp: string | number): string {
   const date = new Date(timestamp);
   if (isNaN(date.getTime())) {
     return "at an unknown time";

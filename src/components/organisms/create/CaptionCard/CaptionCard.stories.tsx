@@ -30,7 +30,6 @@ export const Default: Story = {
     videoType: "lesson",
     lastUpdated: "2023-01-01",
     lastEdited: "2023-01-01",
-    linkToRev: "https://example.com",
     checked: false,
     highlighted: false,
   },
@@ -50,7 +49,6 @@ export const SetText: Story = {
     videoType: "lesson",
     lastUpdated: "2023-01-01",
     lastEdited: "2023-01-01",
-    linkToRev: "https://example.com",
     checked: false,
     highlighted: false,
   },
@@ -93,7 +91,6 @@ export const MultipleOptions: Story = {
         videoType={"lesson"}
         lastUpdated={nowDate.toUTCString()}
         lastEdited={secondsAgo.toUTCString()}
-        linkToRev={"https://example.com"}
         checked={false}
         onCheckChanged={() => {}}
       />
@@ -104,7 +101,6 @@ export const MultipleOptions: Story = {
         videoType={"lesson"}
         lastUpdated={minutesAgo.toUTCString()}
         lastEdited={hoursAgo.toUTCString()}
-        linkToRev={"https://example.com"}
         checked={true}
         onCheckChanged={() => {}}
       />
@@ -115,7 +111,6 @@ export const MultipleOptions: Story = {
         videoType={"lesson"}
         lastUpdated={daysAgo.toUTCString()}
         lastEdited={weeksAgo.toUTCString()}
-        linkToRev={"https://example.com"}
         checked={false}
         disabled={true}
         onCheckChanged={() => {}}
@@ -127,7 +122,6 @@ export const MultipleOptions: Story = {
         videoType={"lesson"}
         lastUpdated={monthsAgo.toUTCString()}
         lastEdited={yearsAgo.toUTCString()}
-        linkToRev={"https://example.com"}
         checked={false}
         onCheckChanged={() => {}}
       />
@@ -138,7 +132,6 @@ export const MultipleOptions: Story = {
         videoType={"lesson"}
         lastUpdated={"2025-07-01"}
         lastEdited={"2025-07-28T12:26:40.425868+00:00"}
-        linkToRev={"https://example.com"}
         checked={false}
         onCheckChanged={() => {}}
       />

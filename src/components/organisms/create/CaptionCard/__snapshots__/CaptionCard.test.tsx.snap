@@ -443,7 +443,7 @@ input:checked + .c12 {
       <a
         aria-label="view lesson LESS-TEST-01234"
         className="c23"
-        onClick={[Function]}
+        data-testid="lesson_uid"
       >
         <span
           className="c24"

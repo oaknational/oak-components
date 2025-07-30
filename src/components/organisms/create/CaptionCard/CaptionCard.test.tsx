@@ -3,7 +3,7 @@ import React from "react";
 import { create } from "react-test-renderer";
 import { act } from "@testing-library/react";
 
-import { CaptionCard } from "./CaptionCard";
+import { CaptionCard, getTimeText } from "./CaptionCard";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { OakThemeProvider } from "@/components/atoms";
@@ -19,7 +19,6 @@ describe("CaptionCard", () => {
         videoType={"lesson"}
         lastUpdated={"2023-01-01"}
         lastEdited={"2023-01-01"}
-        linkToRev={"https://example.com"}
         checked={false}
         highlighted={false}
         onCheckChanged={() => {}}
@@ -39,7 +38,6 @@ describe("CaptionCard", () => {
           videoType={"lesson"}
           lastUpdated={"2023-01-01"}
           lastEdited={"2023-01-01"}
-          linkToRev={"https://example.com"}
           checked={false}
           highlighted={false}
           onCheckChanged={() => {}}
@@ -59,7 +57,6 @@ describe("CaptionCard", () => {
         lessonUid={"LESS-TEST-01234"}
         videoType={"lesson"}
         lastUpdated={"2023-01-01"}
-        linkToRev={"https://example.com"}
         checked={true}
         highlighted={false}
         onCheckChanged={() => {}}
@@ -70,7 +67,7 @@ describe("CaptionCard", () => {
   });
 
   it("calls onChangeChecked when checkbox is clicked", () => {
-    const mockOnCheckChanged = jest.fn();
+    const mockCallback = jest.fn();
     const { queryByTestId } = renderWithTheme(
       <CaptionCard
         captionId={"CAP-TEST-01234"}
@@ -78,15 +75,32 @@ describe("CaptionCard", () => {
         lessonUid={"LESS-TEST-01234"}
         videoType={"lesson"}
         lastUpdated={"2023-01-01"}
-        linkToRev={"https://example.com"}
         checked={false}
         highlighted={false}
-        onCheckChanged={mockOnCheckChanged}
+        onCheckChanged={mockCallback}
         disabled={false}
       />,
     );
     queryByTestId("checkbox")?.click();
-    expect(mockOnCheckChanged).toHaveBeenCalled();
+    expect(mockCallback).toHaveBeenCalled();
+  });
+  it("calls onLessonUidClicked when lesson uid is clicked", () => {
+    const mockCallback = jest.fn();
+    const { queryByTestId } = renderWithTheme(
+      <CaptionCard
+        captionId={"CAP-TEST-01234"}
+        videoTitle={"This is a test video title"}
+        lessonUid={"LESS-TEST-01234"}
+        videoType={"lesson"}
+        lastUpdated={"2023-01-01"}
+        checked={false}
+        highlighted={false}
+        onLessonUidClick={mockCallback}
+        disabled={false}
+      />,
+    );
+    queryByTestId("lesson_uid")?.click();
+    expect(mockCallback).toHaveBeenCalled();
   });
 
   it("should display checked box if checked prop is true", () => {
@@ -97,7 +111,6 @@ describe("CaptionCard", () => {
         lessonUid={"LESS-TEST-01234"}
         videoType={"lesson"}
         lastUpdated={"2023-01-01"}
-        linkToRev={"https://example.com"}
         checked={true}
         highlighted={false}
         onCheckChanged={() => {}}
@@ -116,7 +129,6 @@ describe("CaptionCard", () => {
         lessonUid={"LESS-TEST-01234"}
         videoType={"lesson"}
         lastUpdated={"2023-01-01"}
-        linkToRev={"https://example.com"}
         checked={false}
         highlighted={false}
         onCheckChanged={() => {}}
@@ -135,7 +147,6 @@ describe("CaptionCard", () => {
         lessonUid={"LESS-TEST-01234"}
         videoType={"lesson"}
         lastUpdated={"2023-01-01"}
-        linkToRev={"https://example.com"}
         checked={false}
         highlighted={false}
         onCheckChanged={() => {}}
@@ -150,7 +161,6 @@ describe("CaptionCard", () => {
         lessonUid={"LESS-TEST-01234"}
         videoType={"lesson"}
         lastUpdated={"2023-01-01"}
-        linkToRev={"https://example.com"}
         checked={false}
         highlighted={true}
         onCheckChanged={() => {}}
@@ -172,7 +182,6 @@ describe("CaptionCard", () => {
         lessonUid={"test-lesson-uid"}
         videoType={"lesson"}
         lastUpdated={new Date().toUTCString()}
-        linkToRev={"https://example.com"}
         checked={false}
         highlighted={false}
         onCheckChanged={() => {}}
@@ -200,7 +209,6 @@ describe("CaptionCard", () => {
         lessonUid={"LESS-TEST-01234"}
         videoType={"lesson"}
         lastUpdated={"2023-01-01"}
-        linkToRev={"https://example.com"}
         onCheckChanged={onCheckChanged}
         checked={false}
         disabled={false}
@@ -222,7 +230,6 @@ describe("CaptionCard", () => {
         lessonUid={"LESS-TEST-01234"}
         videoType={"lesson"}
         lastUpdated={"2023-01-01"}
-        linkToRev={"https://example.com"}
         onCheckChanged={onCheckChanged}
         checked={false}
         disabled={true}
@@ -232,5 +239,45 @@ describe("CaptionCard", () => {
       getByTestId("checkbox").click();
     });
     expect(onCheckChanged).not.toHaveBeenCalled();
+  });
+});
+
+describe("getTimeText", () => {
+  it("returns 'just now' if time is less than a second in the past", () => {
+    expect(getTimeText(new Date().toUTCString())).toBe("just now");
+  });
+  it("returns time in secs if time is less than a minute in the past", () => {
+    expect(getTimeText(Date.now() - (1000 * 60 - 1))).toBe("59 secs ago");
+  });
+  it("returns time in mins if time is less than an hour in the past", () => {
+    expect(getTimeText(Date.now() - (1000 * 60 * 60 - 1))).toBe("59 mins ago");
+  });
+  it("returns time in hours if time is less than a day in the past", () => {
+    expect(getTimeText(Date.now() - (1000 * 60 * 60 * 24 - 1))).toBe(
+      "23 hrs ago",
+    );
+  });
+  it("returns time in days if time is less than a week in the past", () => {
+    expect(getTimeText(Date.now() - (1000 * 60 * 60 * 24 * 7 - 1))).toBe(
+      "6 days ago",
+    );
+  });
+  it("returns time in weeks if time is less than a month in the past", () => {
+    expect(getTimeText(Date.now() - (1000 * 60 * 60 * 24 * 30 - 1))).toBe(
+      "4 weeks ago",
+    );
+  });
+  it("returns time in months if time is less than a year in the past", () => {
+    expect(getTimeText(Date.now() - (1000 * 60 * 60 * 24 * 364 - 1))).toBe(
+      "12 months ago",
+    );
+  });
+  it("returns time in years if time is more than a year in the past", () => {
+    expect(getTimeText(Date.now() - 1000 * 60 * 60 * 24 * 365 * 2)).toBe(
+      "2 years ago",
+    );
+  });
+  it("returns 'at an unknown time' if the date is invalid", () => {
+    expect(getTimeText("invalid date")).toBe("at an unknown time");
   });
 });
