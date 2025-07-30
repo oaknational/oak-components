@@ -1,0 +1,122 @@
+import React, { useState } from "react";
+import { Meta, StoryObj } from "@storybook/react";
+
+import { OakRadioGroup } from "../OakRadioGroup";
+
+import { OakDownloadCard } from "./OakDownloadCard";
+
+import { oakIconNames } from "@/components/atoms";
+
+const meta: Meta<typeof OakDownloadCard> = {
+  component: OakDownloadCard,
+  tags: ["autodocs"],
+  title: "components/molecules/OakDownloadCard",
+  argTypes: {
+    iconName: {
+      options: oakIconNames,
+    },
+    titleSlot: {
+      type: "string",
+    },
+    fileSizeSlot: {
+      type: "string",
+    },
+    formatSlot: {
+      type: "string",
+    },
+    asRadio: {
+      type: "boolean",
+    },
+  },
+  parameters: {
+    controls: {
+      include: [
+        "id",
+        "iconName",
+        "value",
+        "titleSlot",
+        "fileSizeSlot",
+        "formatSlot",
+        "asRadio",
+      ],
+    },
+  },
+};
+export default meta;
+
+type Story = StoryObj<typeof OakDownloadCard>;
+
+export const Default: Story = {
+  render: (args) => <OakDownloadCard {...args} />,
+  args: {
+    iconName: "book-steps",
+    value: "a test value",
+    titleSlot: "Fancy presentation",
+    formatSlot: "PPTX",
+  },
+};
+
+export const WithFileSize: Story = {
+  render: (args) => <OakDownloadCard {...args} />,
+  args: {
+    iconName: "book-steps",
+    value: "a test value",
+    titleSlot: "Fancy presentation",
+    formatSlot: "PPTX",
+    fileSizeSlot: "200kb",
+  },
+};
+
+export const AsRadio: Story = {
+  render: (args) => {
+    const [value, setValue] = useState("one");
+
+    return (
+      <OakRadioGroup
+        name={"as-radio-test"}
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+      >
+        <OakDownloadCard {...args} value="one" />
+        <OakDownloadCard {...args} value="two" />
+      </OakRadioGroup>
+    );
+  },
+  args: {
+    iconName: "book-steps",
+    titleSlot: "Fancy presentation",
+    formatSlot: "PPTX",
+    fileSizeSlot: "200kb",
+    asRadio: true,
+  },
+};
+
+export const AsRadioDisabled: Story = {
+  render: (args) => (
+    <OakRadioGroup name={"as-radio--disabled-test"} value="one" disabled={true}>
+      <OakDownloadCard {...args} value="one" />
+      <OakDownloadCard {...args} value="two" />
+    </OakRadioGroup>
+  ),
+  args: {
+    iconName: "book-steps",
+    value: "a test value",
+    titleSlot: "Fancy presentation",
+    formatSlot: "PPTX",
+    fileSizeSlot: "200kb",
+    asRadio: true,
+  },
+};
+
+export const Disabled: Story = {
+  render: (args) => <OakDownloadCard {...args} />,
+  args: {
+    iconName: "book-steps",
+    value: "a test value",
+    titleSlot: "Fancy presentation",
+    formatSlot: "PPTX",
+    fileSizeSlot: "200kb",
+    disabled: true,
+    checked: true,
+  },
+};

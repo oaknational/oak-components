@@ -51,7 +51,17 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c18 {
+.c15 {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c19 {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
   width: 1.5rem;
   height: 1.5rem;
   background: #ffffff;
@@ -60,7 +70,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c21 {
+.c22 {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -68,7 +78,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c23 {
+.c24 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -77,7 +87,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c28 {
+.c29 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -92,7 +102,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   object-fit: contain;
 }
 
-.c29 {
+.c30 {
   -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   object-fit: contain;
@@ -175,7 +185,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   gap: 1rem;
 }
 
-.c19 {
+.c20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -197,7 +207,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   flex-shrink: 0;
 }
 
-.c26 {
+.c27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -216,7 +226,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   gap: 0.5rem;
 }
 
-.c27 {
+.c28 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -250,7 +260,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c24 {
+.c25 {
   background: none;
   color: inherit;
   border: none;
@@ -272,19 +282,19 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   border-radius: 0.25rem;
 }
 
-.c24:disabled {
+.c25:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c25 {
+.c26 {
   position: relative;
   width: 100%;
   height: 100%;
   display: inline-block;
 }
 
-.c25:hover {
+.c26:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #ffffff;
@@ -292,41 +302,87 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   border-color: #575757;
 }
 
-.c25:active {
+.c26:active {
   background: #222222;
   border-color: #222222;
   color: #ffffff;
 }
 
-.c25:disabled {
+.c26:disabled {
   background: #808080;
   border-color: #808080;
   color: #ffffff;
 }
 
-.c22 .grey-shadow:has(+ * + .internal-button:focus-visible) {
+.c23 .grey-shadow:has(+ * + .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c22 .yellow-shadow:has(+ .internal-button:focus-visible) {
+.c23 .yellow-shadow:has(+ .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
 }
 
-.c22 .yellow-shadow:has(+ .internal-button:hover),
-.c22 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
+.c23 .yellow-shadow:has(+ .internal-button:hover),
+.c23 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c22 .grey-shadow:has(+ * + .internal-button:hover) {
+.c23 .grey-shadow:has(+ * + .internal-button:hover) {
   box-shadow: none;
 }
 
-.c22 .grey-shadow:has(+ * + .internal-button:active) {
+.c23 .grey-shadow:has(+ * + .internal-button:active) {
   box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c22 .yellow-shadow:has(+ .internal-button:active) {
+.c23 .yellow-shadow:has(+ .internal-button:active) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c17 {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  margin: 0;
+  outline: none;
+  border: 0.125rem solid;
+  border-color: #222222;
+  border-radius: 0.125rem;
+}
+
+.c17:checked {
+  background: #222222;
+}
+
+.c17:disabled {
+  pointer-events: none;
+}
+
+.c21 {
+  border-radius: 50%;
+}
+
+.c16:focus-visible ~ .c18::before {
+  content: "";
+  height: 2rem;
+  width: 2rem;
+  background: "transparent" display:block;
+  position: absolute;
+  border-radius: 50%;
+  border: 0.125rem solid #575757;
+  box-shadow: inset 0 0 0 0.13rem #ffe555;
+}
+
+.c16:checked ~ .c18::after {
+  content: "";
+  height: 1rem;
+  width: 1rem;
+  background: #222222;
+  position: absolute;
+  border-radius: 50%;
+  border: 0.125rem solid #ffffff;
 }
 
 .c14 {
@@ -342,35 +398,10 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   align-items: center;
 }
 
-.c16 {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.c20 {
-  border-radius: 50%;
-}
-
-.c15:focus-visible ~ .c17::before {
-  content: "";
-  height: 2rem;
-  width: 2rem;
-  background: "transparent" display:block;
-  position: absolute;
-  border-radius: 50%;
-  border: 0.125rem solid #575757;
-  box-shadow: inset 0 0 0 0.13rem #ffe555;
-}
-
-.c15:checked ~ .c17::after {
-  content: "";
-  height: 1rem;
-  width: 1rem;
-  background: #222222;
-  position: absolute;
-  border-radius: 50%;
-  border: 0.125rem solid #ffffff;
+@media (hover:hover) {
+  .c17:hover:not(:disabled) {
+    border-color: #222222;
+  }
 }
 
 <div
@@ -446,18 +477,24 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
         data-testid="child-subject-radio-button"
         htmlFor="biology"
       >
-        <input
-          checked={true}
-          className="c15 c16"
-          id="biology"
-          name="childSubjectRadio"
-          onChange={[Function]}
-          type="radio"
-          value="biology"
-        />
         <div
-          className="c17 c18 c19 c20"
-        />
+          className="c15"
+        >
+          <input
+            checked={true}
+            className="c16 c17"
+            id="biology"
+            name="childSubjectRadio"
+            onChange={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            type="radio"
+            value="biology"
+          />
+          <div
+            className="c18 c19 c20 c21"
+          />
+        </div>
         Biology
       </label>
     </div>
@@ -469,18 +506,24 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
         data-testid="child-subject-radio-button"
         htmlFor="physics"
       >
-        <input
-          checked={false}
-          className="c15 c16"
-          id="physics"
-          name="childSubjectRadio"
-          onChange={[Function]}
-          type="radio"
-          value="physics"
-        />
         <div
-          className="c17 c18 c19 c20"
-        />
+          className="c15"
+        >
+          <input
+            checked={false}
+            className="c16 c17"
+            id="physics"
+            name="childSubjectRadio"
+            onChange={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            type="radio"
+            value="physics"
+          />
+          <div
+            className="c18 c19 c20 c21"
+          />
+        </div>
         Physics
       </label>
     </div>
@@ -492,18 +535,24 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
         data-testid="child-subject-radio-button"
         htmlFor="chemistry"
       >
-        <input
-          checked={false}
-          className="c15 c16"
-          id="chemistry"
-          name="childSubjectRadio"
-          onChange={[Function]}
-          type="radio"
-          value="chemistry"
-        />
         <div
-          className="c17 c18 c19 c20"
-        />
+          className="c15"
+        >
+          <input
+            checked={false}
+            className="c16 c17"
+            id="chemistry"
+            name="childSubjectRadio"
+            onChange={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            type="radio"
+            value="chemistry"
+          />
+          <div
+            className="c18 c19 c20 c21"
+          />
+        </div>
         Chemistry
       </label>
     </div>
@@ -526,18 +575,24 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
         data-testid="tier-radio-button"
         htmlFor="foundation"
       >
-        <input
-          checked={true}
-          className="c15 c16"
-          id="foundation"
-          name="tierRadio"
-          onChange={[Function]}
-          type="radio"
-          value="foundation"
-        />
         <div
-          className="c17 c18 c19 c20"
-        />
+          className="c15"
+        >
+          <input
+            checked={true}
+            className="c16 c17"
+            id="foundation"
+            name="tierRadio"
+            onChange={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            type="radio"
+            value="foundation"
+          />
+          <div
+            className="c18 c19 c20 c21"
+          />
+        </div>
         Foundation
       </label>
     </div>
@@ -549,51 +604,57 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
         data-testid="tier-radio-button"
         htmlFor="higher"
       >
-        <input
-          checked={false}
-          className="c15 c16"
-          id="higher"
-          name="tierRadio"
-          onChange={[Function]}
-          type="radio"
-          value="higher"
-        />
         <div
-          className="c17 c18 c19 c20"
-        />
+          className="c15"
+        >
+          <input
+            checked={false}
+            className="c16 c17"
+            id="higher"
+            name="tierRadio"
+            onChange={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            type="radio"
+            value="higher"
+          />
+          <div
+            className="c18 c19 c20 c21"
+          />
+        </div>
         Higher
       </label>
     </div>
   </div>
   <div
-    className="c21 c22"
+    className="c22 c23"
   >
     <div
-      className="c23 grey-shadow"
+      className="c24 grey-shadow"
     />
     <div
-      className="c23 yellow-shadow"
+      className="c24 yellow-shadow"
     />
     <button
-      className="c24 c25 internal-button"
+      className="c25 c26 internal-button"
       onClick={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
     >
       <div
-        className="c0 c26"
+        className="c0 c27"
       >
         <span
-          className="c27"
+          className="c28"
         >
           Next
         </span>
         <div
-          className="c28"
+          className="c29"
         >
           <img
             alt=""
-            className="c29"
+            className="c30"
             data-nimg="fill"
             decoding="async"
             loading="lazy"
