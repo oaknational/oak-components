@@ -25,6 +25,12 @@ export type OakDownloadCardProps = BaseCheckBoxProps & {
   asRadio?: boolean;
 } & InternalCheckBoxLabelProps;
 
+const LabelContainer = styled("label")`
+  flex: 1;
+  cursor: pointer;
+  display: flex;
+`;
+
 const Container = styled(OakFlex)<{ $hoverBackground: OakCombinedColorToken }>`
   cursor: pointer;
 
@@ -90,12 +96,13 @@ export const OakDownloadCard = (props: OakDownloadCardProps) => {
       $overflow={"hidden"}
       $hoverBackground="bg-btn-secondary-hover"
     >
-      <label style={{ flex: 1, cursor: "pointer" }}>
-        <OakFlex>
+      <LabelContainer>
+        <OakFlex $alignItems={"center"} $flexGrow={1}>
           <OakFlex
             $background={"lemon"}
             $pa={"inner-padding-s"}
             $alignItems={"center"}
+            $alignSelf={"stretch"}
           >
             <OakIcon
               iconName={iconName}
@@ -120,6 +127,7 @@ export const OakDownloadCard = (props: OakDownloadCardProps) => {
                 checked={value === radioContext.currentValue}
                 size={checkboxSize}
                 disabled={anyDisabled}
+                radioBorderColor={checkedBorderColor}
                 internalRadio={
                   <InternalRadio
                     {...rest}
@@ -162,7 +170,7 @@ export const OakDownloadCard = (props: OakDownloadCardProps) => {
             )}
           </OakFlex>
         </OakFlex>
-      </label>
+      </LabelContainer>
     </Container>
   );
 };
