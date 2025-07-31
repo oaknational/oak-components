@@ -95,9 +95,10 @@ export const OakDownloadCard = (props: OakDownloadCardProps) => {
       $borderRadius={"border-radius-s"}
       $overflow={"hidden"}
       $hoverBackground="bg-btn-secondary-hover"
+      $color={"black"}
     >
       <LabelContainer>
-        <OakFlex $alignItems={"center"} $flexGrow={1}>
+        <OakFlex $alignItems={"flex-start"} $flexGrow={1}>
           <OakFlex
             $background={"lemon"}
             $pa={"inner-padding-s"}
@@ -121,6 +122,8 @@ export const OakDownloadCard = (props: OakDownloadCardProps) => {
             {fileSizeSlot && <OakBox $font={"body-3"}>{fileSizeSlot}</OakBox>}
             <OakBox $font={"body-3"}>{formatSlot}</OakBox>
           </OakFlex>
+        </OakFlex>
+        <OakFlex>
           <OakFlex $alignItems={"center"} $pr={"inner-padding-m"}>
             {asRadio && (
               <InternalRadioWrapper

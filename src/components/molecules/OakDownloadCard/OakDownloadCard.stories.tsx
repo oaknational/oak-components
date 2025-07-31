@@ -136,6 +136,5 @@ export const WrappingHeight: Story = {
     value: "a test value",
     formatSlot: "PPTX",
     fileSizeSlot: "200kb",
-    checked: true,
   },
 };
