@@ -121,7 +121,6 @@ export const OakCheckBox = (props: OakCheckBoxProps) => {
       disabled={disabled}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      data-testid={dataTestId}
     >
       <InternalCheckBoxWrapper
         size={checkboxSize}
@@ -146,6 +145,7 @@ export const OakCheckBox = (props: OakCheckBoxProps) => {
             defaultChecked={defaultChecked}
             checked={checked}
             disabled={disabled}
+            data-testid={dataTestId}
             {...rest}
           />
         }
