@@ -45,6 +45,10 @@ export type InternalRadioWrapperProps = {
    * Allows the width of the radio button border to be customized when the radio button is checked.
    */
   checkedRadioBorderWidth?: OakBorderWidthToken;
+  /**
+   * Allows the borderColor of the radio button border to be customized.
+   */
+  radioBorderColor?: OakCombinedColorToken;
 };
 
 type VisibleRadioButtonInputProps = OakFlexProps & {
@@ -114,6 +118,7 @@ export const InternalRadioWrapper = (props: InternalRadioWrapperProps) => {
     radioInnerSize = "all-spacing-4",
     radioOuterSize = "all-spacing-6",
     radioBorderWidth = "border-solid-m",
+    radioBorderColor = "black",
     radioBackground = "bg-primary",
     checkedRadioBorderWidth = "border-solid-m",
     checked,
@@ -130,7 +135,7 @@ export const InternalRadioWrapper = (props: InternalRadioWrapperProps) => {
           $height={radioOuterSize}
           $width={radioOuterSize}
           $ba={finalRadioBorderWidth}
-          $borderColor={"black"}
+          $borderColor={radioBorderColor}
           $flexGrow={0}
           $flexShrink={0}
           $alignItems={"center"}

@@ -120,3 +120,21 @@ export const Disabled: Story = {
     checked: true,
   },
 };
+
+export const WrappingHeight: Story = {
+  render: (args) => (
+    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+      <OakDownloadCard
+        {...args}
+        titleSlot="A very very very very very long title on in the card so it wraps"
+      />
+      <OakDownloadCard {...args} titleSlot="Short title" />
+    </div>
+  ),
+  args: {
+    iconName: "book-steps",
+    value: "a test value",
+    formatSlot: "PPTX",
+    fileSizeSlot: "200kb",
+  },
+};
