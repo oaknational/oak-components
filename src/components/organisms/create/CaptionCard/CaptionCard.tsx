@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { OakBox, OakFlex, OakIcon } from "@/components/atoms";
 import { InternalCheckBoxLabelHoverDecor } from "@/components/atoms/InternalCheckBoxLabel";
@@ -7,13 +7,25 @@ import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { InternalButton } from "@/components/atoms/InternalButton";
 import { OakCheckBox } from "@/components/molecules";
-import { OakCombinedColorToken } from "@/styles";
 import { InternalLink } from "@/components/molecules/InternalLink";
 
 // Converted to styled-component so it can be used in '&:checked:not(:disabled) + ${StyledOakIcon}' to change svg color.
 const StyledOakIcon = styled(OakIcon)``;
 
-const StyledFlexBox = styled(OakFlex)`
+interface StyledFlexBoxWrapperProps {
+  $minHeight: string;
+  $position: string;
+  $borderRadius: string;
+  $ph: string;
+  $pv: string;
+  $gap: string;
+  $flexDirection: string;
+  $width: string;
+  $highlighted?: boolean;
+  $disabled?: boolean;
+}
+
+const StyledFlexBox = styled(OakFlex)<StyledFlexBoxWrapperProps>`
   &:has(input:not(:disabled)) {
     cursor: default;
   }
@@ -27,14 +39,36 @@ const StyledFlexBox = styled(OakFlex)`
     text-decoration: underline;
   }
 
-  &:hover:has(input:not(:disabled)) {
-    background-color: ${parseColor("bg-decorative3-subdued")};
-  }
-
   &:focus-within {
     box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
   }
+
+  ${(props) =>
+    props.$disabled &&
+    css`
+      cursor: not-allowed;
+      background-color: ${parseColor("bg-neutral-stronger")};
+    `}
+
+  ${(props) =>
+    !props.$disabled &&
+    props.$highlighted &&
+    css`
+      background-color: ${parseColor("bg-decorative3-very-subdued")};
+      border-color: ${parseColor("bg-decorative3-main")};
+      &:hover {
+        background-color: ${parseColor("bg-decorative3-subdued")};
+      }
+    `}
+  ${(props) =>
+    !props.$disabled &&
+    !props.$highlighted &&
+    css`
+      &:hover {
+        background-color: ${parseColor("bg-neutral-stronger")};
+      }
+    `}
 `;
 
 export interface CaptionCardProps {
@@ -86,14 +120,14 @@ export const CaptionCard = (props: CaptionCardProps) => {
       $minHeight={"all-spacing-8"}
       $position={"relative"}
       $borderRadius={"border-radius-s"}
-      $borderColor={getBorderColor(!!disabled, !!highlighted)}
       $ba="border-solid-s"
-      $background={getBackgroundColor(!!disabled, !!highlighted)}
       $ph={"inner-padding-s"}
       $pv={"inner-padding-s"}
       $gap={"space-between-sssx"}
       $flexDirection={"column"}
       $width={"100%"}
+      $highlighted={!!highlighted}
+      $disabled={!!disabled}
     >
       <OakFlex
         $justifyContent={"flex-start"}
@@ -189,26 +223,6 @@ function getVideoTypeText(videoType: string): string {
     default:
       return "Unknown";
   }
-}
-
-function getBorderColor(
-  disabled: boolean,
-  highlighted: boolean,
-): OakCombinedColorToken {
-  if (disabled) {
-    return "border-neutral-lighter";
-  }
-  return highlighted ? "bg-decorative3-main" : "border-neutral-lighter";
-}
-
-function getBackgroundColor(
-  disabled: boolean,
-  highlighted: boolean,
-): OakCombinedColorToken {
-  if (disabled) {
-    return "bg-neutral-stronger";
-  }
-  return highlighted ? "bg-decorative3-very-subdued" : "bg-neutral";
 }
 
 export function getTimeText(timestamp: string | number): string {

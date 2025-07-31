@@ -32,6 +32,7 @@ export const Default: Story = {
     lastEdited: "2023-01-01",
     checked: false,
     highlighted: false,
+    disabled: false,
   },
   parameters: {
     controls: {

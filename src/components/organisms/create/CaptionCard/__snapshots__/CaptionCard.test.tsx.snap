@@ -10,9 +10,7 @@ exports[`CaptionCard matches snapshot 1`] = `
   padding-right: 0.75rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  background: #f2f2f2;
   border: 0.063rem solid;
-  border-color: #cacaca;
   border-radius: 0.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -281,12 +279,12 @@ input:checked + .c12 {
   cursor: none;
 }
 
-.c2:hover:has(input:not(:disabled)) {
-  background-color: #c6d1ef;
-}
-
 .c2:focus-within {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c2:hover {
+  background-color: #e4e4e4;
 }
 
 @media (hover:hover) {
