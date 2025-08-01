@@ -200,7 +200,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   justify-content: center;
 }
 
-.c30 {
+.c31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -215,7 +215,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   justify-content: space-between;
 }
 
-.c11 {
+.c30 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
@@ -225,6 +225,18 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
   color: #222222;
+}
+
+.c11 {
+  color: #222222;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
 }
 
 .c0 {
@@ -267,7 +279,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   white-space: nowrap;
 }
 
-.c31 {
+.c32 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -373,11 +385,11 @@ exports[`OakUnitListItem matches snapshot 1`] = `
         <div
           className="c7 c8 c9 c10"
         >
-          <h3
+          <span
             className="c11"
           >
             1
-          </h3>
+          </span>
         </div>
         <div
           className="c12 c13"
@@ -449,7 +461,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
             className="c28 c29"
           >
             <h3
-              className="c11"
+              className="c30"
             >
               1
             </h3>
@@ -465,13 +477,13 @@ exports[`OakUnitListItem matches snapshot 1`] = `
           </div>
         </a>
         <div
-          className="c26 c30"
+          className="c26 c31"
         >
           <p
-            className="c31"
+            className="c32"
           />
           <p
-            className="c31"
+            className="c32"
           >
             0 lessons
           </p>
