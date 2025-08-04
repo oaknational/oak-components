@@ -490,7 +490,7 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
       <div
         className="c7 c8"
       >
-        <h3
+        <h4
           className="c9"
         />
       </div>
@@ -516,7 +516,7 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
           <div
             className="c7 c8"
           >
-            <h3
+            <h4
               className="c9"
             />
           </div>
@@ -551,7 +551,7 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
           <div
             className="c7 c8"
           >
-            <h3
+            <h4
               className="c9"
             />
           </div>
