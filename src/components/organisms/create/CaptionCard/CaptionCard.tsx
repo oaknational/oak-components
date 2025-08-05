@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 
 import { getTimeText } from "../utils";
 
-import { OakBox, OakFlex, OakIcon } from "@/components/atoms";
+import { OakBox, OakFlex, OakIcon, OakSpan } from "@/components/atoms";
 import { InternalCheckBoxLabelHoverDecor } from "@/components/atoms/InternalCheckBoxLabel";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
@@ -18,8 +18,7 @@ interface StyledFlexBoxWrapperProps {
   $minHeight: string;
   $position: string;
   $borderRadius: string;
-  $ph: string;
-  $pv: string;
+  $pa: string;
   $gap: string;
   $flexDirection: string;
   $width: string;
@@ -68,7 +67,7 @@ const StyledFlexBox = styled(OakFlex)<StyledFlexBoxWrapperProps>`
     !props.$highlighted &&
     css`
       &:hover {
-        background-color: ${parseColor("bg-neutral-stronger")};
+        background-color: ${parseColor("bg-decorative3-subdued")};
       }
     `}
 `;
@@ -111,8 +110,8 @@ export const CaptionCard = (props: CaptionCardProps) => {
     videoType,
     lastUpdated,
     lastEdited,
-    highlighted,
-    disabled,
+    highlighted = false,
+    disabled = false,
     "data-testid": dataTestId = "caption-card",
   } = props;
 
@@ -123,9 +122,8 @@ export const CaptionCard = (props: CaptionCardProps) => {
       $position={"relative"}
       $borderRadius={"border-radius-s"}
       $ba="border-solid-s"
-      $ph={"inner-padding-s"}
-      $pv={"inner-padding-s"}
-      $gap={"space-between-sssx"}
+      $pa={"inner-padding-m"}
+      $gap={"space-between-xs"}
       $flexDirection={"column"}
       $width={"100%"}
       $highlighted={!!highlighted}
@@ -136,10 +134,12 @@ export const CaptionCard = (props: CaptionCardProps) => {
         $alignItems={"center"}
         $width={"100%"}
         $gap={"space-between-xs"}
+        $font={"heading-7"}
       >
         <OakCheckBox
           checked={checked}
           value={`Caption ID: ${captionId}`}
+          displayValue=""
           disabled={disabled}
           onChange={onCheckChanged}
           aria-labelledby={captionId}
@@ -147,8 +147,17 @@ export const CaptionCard = (props: CaptionCardProps) => {
           data-testid="checkbox"
           id={captionId}
         />
-        {/* <OakBox>Caption ID: {captionId}</OakBox> */}
-        <OakBox>Video Title: {videoTitle}</OakBox>
+        <OakFlex
+          $font={"heading-7"}
+          $justifyContent={"flex-start"}
+          $gap={"space-between-ssx"}
+          $flexWrap={"wrap"}
+        >
+          <OakSpan $font={"heading-7"}>Caption ID: {captionId}</OakSpan>
+          <OakSpan> • </OakSpan>
+          <OakBox>Video Title: {videoTitle}</OakBox>
+        </OakFlex>
+
         <OakFlex $flexGrow={10} $justifyContent={"flex-end"}>
           <InternalButton
             onClick={onEditClick}
@@ -170,7 +179,8 @@ export const CaptionCard = (props: CaptionCardProps) => {
         $justifyContent={"flex-start"}
         $alignItems={"center"}
         $width={"100%"}
-        $gap={"space-between-xs"}
+        $gap={"all-spacing-7"}
+        $font={"body-2"}
       >
         <InternalLink
           onClick={onLessonUidClick}
@@ -182,12 +192,7 @@ export const CaptionCard = (props: CaptionCardProps) => {
           aria-label={`view lesson ${lessonUid}`}
           data-testid="lesson_uid"
         >
-          <OakFlex
-            $minHeight={"all-spacing-8"}
-            $position={"relative"}
-            $alignItems={"center"}
-            $gap={"space-between-sssx"}
-          >
+          <OakFlex $gap={"space-between-sssx"}>
             {lessonUid}
             <StyledOakIcon
               iconWidth="all-spacing-6"
@@ -197,7 +202,9 @@ export const CaptionCard = (props: CaptionCardProps) => {
             />
           </OakFlex>
         </InternalLink>
-        <OakFlex $alignItems={"center"}>
+        <OakFlex $alignItems={"center"} $gap={"space-between-sssx"}>
+          {" "}
+          {/* the video icon has no natural padding so whilst inconsistent this looks better */}
           <StyledOakIcon alt="" iconName="video" />
           {getVideoTypeText(videoType)}
         </OakFlex>

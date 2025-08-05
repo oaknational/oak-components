@@ -8,12 +8,30 @@ import { OakFlex } from "@/components/atoms";
 const meta: Meta<typeof CaptionCard> = {
   component: CaptionCard,
   tags: ["autodocs"],
+  argTypes: {
+    disabled: {
+      control: { type: "boolean" },
+    },
+    checked: {
+      control: { type: "boolean" },
+    },
+    highlighted: {
+      control: { type: "boolean" },
+    },
+  },
   parameters: {
     backgrounds: {
       default: "light",
     },
     controls: {
-      include: ["disabled", "checked", "displayValue", "value", "icon"],
+      include: [
+        "disabled",
+        "checked",
+        "highlighted",
+        "displayValue",
+        "value",
+        "icon",
+      ],
     },
   },
 };
