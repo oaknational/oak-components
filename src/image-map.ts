@@ -74,6 +74,8 @@ export const icons = {
   "book-steps": "v1749034739/icons/book-steps_qwku6h.svg",
   "free-tag": "v1749033815/icons/free-tag_lijptf.svg",
   threads: "v1749034800/icons/threads_sqlqoe.svg",
+  spreadsheet: "v1754386968/icons/spreadsheet_rsndeb.svg",
+  "curriculum-plan": "v1754386969/icons/curriculum-plan_qygyuo.svg",
   // subject icons
   "subject-art": "v1706616347/subject-icons/art.svg",
   "subject-biology": "v1706616415/subject-icons/biology.svg",
