@@ -1,2 +1,1 @@
-export * from "./CaptionCard";
 export * from "./CaptionSearch";
