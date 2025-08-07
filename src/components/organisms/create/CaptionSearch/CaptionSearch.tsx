@@ -1,7 +1,7 @@
 import React from "react";
 
 import { OakFlex, OakHeading, OakP } from "@/components/atoms";
-import { OakTextInput } from "@/components/molecules";
+import { OakPrimaryButton, OakTextInput } from "@/components/molecules";
 
 export interface CaptionSearchProps {
   onSearchClick?: () => void;
@@ -28,6 +28,7 @@ export const CaptionSearch = ({ onSearchClick }: CaptionSearchProps) => {
           </OakP>
         </OakFlex>
         <OakTextInput $height={"all-spacing-6"} />
+        <OakPrimaryButton onClick={onSearchClick}>Search</OakPrimaryButton>
       </OakFlex>
     </OakFlex>
   );

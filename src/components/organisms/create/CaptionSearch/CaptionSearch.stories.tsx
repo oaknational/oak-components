@@ -18,7 +18,7 @@ export default meta;
 type Story = StoryObj<typeof CaptionSearch>;
 
 export const Default: Story = {
-  render: (args) => <CaptionSearch />,
+  render: () => <CaptionSearch />,
   args: {},
   parameters: {
     controls: {
