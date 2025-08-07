@@ -151,7 +151,12 @@ export const OakFormInput = ({
         event.currentTarget.querySelector("input")?.focus();
       }}
     >
-      <InternalTextInput type={type} $width={"100%"} {...props} />
+      <InternalTextInput
+        type={type}
+        $width={"100%"}
+        aria-invalid={invalid}
+        {...props}
+      />
     </StyledTextInputWrapper>
   );
 };
