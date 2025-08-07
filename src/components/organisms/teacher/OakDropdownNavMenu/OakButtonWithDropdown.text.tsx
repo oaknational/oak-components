@@ -2,7 +2,7 @@ import React from "react";
 import "@testing-library/jest-dom";
 import userEvent from "@testing-library/user-event";
 
-import { OakDropdownNavMenu } from "./OakDropdownNavMenu";
+import { OakButtonWithDropdown } from "./OakButtonWithDropdown";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { OakFlex, OakSpan } from "@/components/atoms";
@@ -33,10 +33,10 @@ const defaultProps = {
   ),
 };
 
-describe("OakDropdownNavMenu", () => {
+describe("OakButtonWithDropdown", () => {
   it("renders", () => {
     const { getByText } = renderWithTheme(
-      <OakDropdownNavMenu {...defaultProps} />,
+      <OakButtonWithDropdown {...defaultProps} />,
     );
     expect(getByText("Create more with AI")).toBeInTheDocument();
   });
@@ -44,7 +44,7 @@ describe("OakDropdownNavMenu", () => {
   it("renders provided items when dropdown is open", async () => {
     const user = userEvent.setup();
     const { getByText } = renderWithTheme(
-      <OakDropdownNavMenu {...defaultProps} />,
+      <OakButtonWithDropdown {...defaultProps} />,
     );
 
     // First open the dropdown
@@ -65,7 +65,7 @@ describe("OakDropdownNavMenu", () => {
       { label: "Custom Item 2" },
     ];
     const { getByText, queryByText } = renderWithTheme(
-      <OakDropdownNavMenu {...defaultProps} items={customItems} />,
+      <OakButtonWithDropdown {...defaultProps} items={customItems} />,
     );
 
     // First open the dropdown
@@ -80,7 +80,7 @@ describe("OakDropdownNavMenu", () => {
     const user = userEvent.setup();
     const onPrimaryAction = jest.fn();
     const { getByText } = renderWithTheme(
-      <OakDropdownNavMenu
+      <OakButtonWithDropdown
         {...defaultProps}
         onPrimaryAction={onPrimaryAction}
       />,
@@ -94,7 +94,7 @@ describe("OakDropdownNavMenu", () => {
     const onClick = jest.fn();
     const items = [{ label: "Test Item", onClick }];
     const { getByText, getByRole } = renderWithTheme(
-      <OakDropdownNavMenu {...defaultProps} items={items} />,
+      <OakButtonWithDropdown {...defaultProps} items={items} />,
     );
 
     // First open the dropdown
@@ -110,7 +110,7 @@ describe("OakDropdownNavMenu", () => {
     const user = userEvent.setup();
     const items = [{ label: "External Link", href: "https://example.com" }];
     const { getByText, container } = renderWithTheme(
-      <OakDropdownNavMenu {...defaultProps} items={items} />,
+      <OakButtonWithDropdown {...defaultProps} items={items} />,
     );
 
     // First open the dropdown
@@ -122,7 +122,7 @@ describe("OakDropdownNavMenu", () => {
 
   it("displays loading state on primary button", () => {
     const { getByText } = renderWithTheme(
-      <OakDropdownNavMenu {...defaultProps} isPrimaryActionLoading={true} />,
+      <OakButtonWithDropdown {...defaultProps} isPrimaryActionLoading={true} />,
     );
     const button = getByText("Create more with AI").closest("button");
     expect(button).toBeDisabled();
@@ -130,7 +130,10 @@ describe("OakDropdownNavMenu", () => {
 
   it("displays disabled state on primary button", () => {
     const { getByText } = renderWithTheme(
-      <OakDropdownNavMenu {...defaultProps} isPrimaryActionDisabled={true} />,
+      <OakButtonWithDropdown
+        {...defaultProps}
+        isPrimaryActionDisabled={true}
+      />,
     );
     const button = getByText("Create more with AI").closest("button");
     expect(button).toBeDisabled();
@@ -149,7 +152,7 @@ describe("OakDropdownNavMenu", () => {
       </OakSmallPrimaryInvertedButton>
     );
     const { getByText, getByRole } = renderWithTheme(
-      <OakDropdownNavMenu {...defaultProps} footer={customFooter} />,
+      <OakButtonWithDropdown {...defaultProps} footer={customFooter} />,
     );
 
     // First open the dropdown
@@ -164,7 +167,7 @@ describe("OakDropdownNavMenu", () => {
   it("renders footer text when provided and dropdown is open", async () => {
     const user = userEvent.setup();
     const { getByText } = renderWithTheme(
-      <OakDropdownNavMenu {...defaultProps} />,
+      <OakButtonWithDropdown {...defaultProps} />,
     );
 
     // First open the dropdown
@@ -177,7 +180,7 @@ describe("OakDropdownNavMenu", () => {
 
   it("renders with accessible attributes", () => {
     const { container } = renderWithTheme(
-      <OakDropdownNavMenu
+      <OakButtonWithDropdown
         {...defaultProps}
         ariaLabel="Additional materials"
         ariaDescription="Access teaching resources"
@@ -198,7 +201,7 @@ describe("OakDropdownNavMenu", () => {
 
   it("renders without footer when not provided", () => {
     const { queryByRole } = renderWithTheme(
-      <OakDropdownNavMenu
+      <OakButtonWithDropdown
         primaryActionText="Test Action"
         items={[{ label: "Test Item" }]}
       />,
@@ -212,7 +215,7 @@ describe("OakDropdownNavMenu", () => {
     const user = userEvent.setup();
     const items = [{ label: "Test Item", iconName: "download" as const }];
     const { getByText, container } = renderWithTheme(
-      <OakDropdownNavMenu {...defaultProps} items={items} />,
+      <OakButtonWithDropdown {...defaultProps} items={items} />,
     );
 
     // First open the dropdown
@@ -226,7 +229,7 @@ describe("OakDropdownNavMenu", () => {
   it("toggles dropdown open/closed when primary button is clicked", async () => {
     const user = userEvent.setup();
     const { getByText, queryByRole } = renderWithTheme(
-      <OakDropdownNavMenu {...defaultProps} />,
+      <OakButtonWithDropdown {...defaultProps} />,
     );
 
     // Initially closed
@@ -244,7 +247,7 @@ describe("OakDropdownNavMenu", () => {
   it("closes dropdown when clicking outside", async () => {
     const user = userEvent.setup();
     const { getByText, queryByRole } = renderWithTheme(
-      <OakDropdownNavMenu {...defaultProps} />,
+      <OakButtonWithDropdown {...defaultProps} />,
     );
 
     // Open dropdown
@@ -259,7 +262,7 @@ describe("OakDropdownNavMenu", () => {
   it("renders leading icon when leadingItemIcon prop is provided", async () => {
     const user = userEvent.setup();
     const { getByText, container } = renderWithTheme(
-      <OakDropdownNavMenu {...defaultProps} leadingItemIcon="cross" />,
+      <OakButtonWithDropdown {...defaultProps} leadingItemIcon="cross" />,
     );
 
     // First open the dropdown
@@ -277,7 +280,7 @@ describe("OakDropdownNavMenu", () => {
       items: [{ label: "Test Item" }],
     };
     const { getByText, container } = renderWithTheme(
-      <OakDropdownNavMenu {...propsWithoutLeadingIcon} />,
+      <OakButtonWithDropdown {...propsWithoutLeadingIcon} />,
     );
 
     // First open the dropdown

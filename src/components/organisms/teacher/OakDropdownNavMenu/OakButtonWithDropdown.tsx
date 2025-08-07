@@ -6,7 +6,7 @@ import {
   OakSmallSecondaryButton,
 } from "@/components/molecules";
 
-export type OakDropdownNavMenuItem = {
+export type OakButtonWithDropdownItem = {
   label: string;
   href?: string;
   onClick?: () => void;
@@ -14,11 +14,11 @@ export type OakDropdownNavMenuItem = {
   iconName?: OakIconName;
 };
 
-export type OakDropdownNavMenuProps = {
+export type OakButtonWithDropdownProps = {
   primaryActionText: string;
   primaryActionIcon?: OakIconName;
   onPrimaryAction?: () => void;
-  items: OakDropdownNavMenuItem[];
+  items: OakButtonWithDropdownItem[];
   footer?: React.ReactNode;
   leadingItemIcon?: OakIconName;
   isPrimaryActionLoading?: boolean;
@@ -34,7 +34,7 @@ export type OakDropdownNavMenuProps = {
  * Can be used for additional materials, resources, tools, or any similar content structure.
  * Supports customizable text, icons, and accessibility features.
  */
-export const OakDropdownNavMenu = ({
+export const OakButtonWithDropdown = ({
   primaryActionText,
   primaryActionIcon = "chevron-down",
   onPrimaryAction,
@@ -47,7 +47,7 @@ export const OakDropdownNavMenu = ({
   ariaDescription,
   leadingButtonIcon,
   "data-testid": dataTestId,
-}: OakDropdownNavMenuProps) => {
+}: OakButtonWithDropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -122,7 +122,7 @@ export const OakDropdownNavMenu = ({
     onPrimaryAction?.();
   };
 
-  const handleItemClick = (item: OakDropdownNavMenuItem) => {
+  const handleItemClick = (item: OakButtonWithDropdownItem) => {
     if (item.onClick) {
       item.onClick();
     }
