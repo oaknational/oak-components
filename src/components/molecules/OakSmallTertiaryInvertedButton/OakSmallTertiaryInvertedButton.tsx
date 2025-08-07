@@ -3,8 +3,7 @@ import React, { ElementType } from "react";
 import {
   InternalShadowIconButton,
   InternalShadowIconButtonProps,
-} from "../InternalShadowIconButton";
-
+} from "@/components/molecules/InternalShadowIconButton";
 import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
 
 export type OakSmallTertiaryInvertedButtonProps = Omit<

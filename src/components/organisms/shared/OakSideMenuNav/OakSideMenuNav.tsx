@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import { MenuItemProps, OakSideMenuNavLink } from "../OakSideMenuNavLink";
-
+import {
+  MenuItemProps,
+  OakSideMenuNavLink,
+} from "@/components/organisms/shared/OakSideMenuNavLink";
 import {
   OakAnchorTarget,
   OakFlex,

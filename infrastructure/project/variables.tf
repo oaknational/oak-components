@@ -14,12 +14,3 @@ variable "env_vars" {
     preview = object({})
   })
 }
-
-variable "sensitive_env_vars" {
-  type = object({
-    shared  = object({})
-    prod    = object({})
-    preview = object({})
-  })
-  sensitive = true
-}

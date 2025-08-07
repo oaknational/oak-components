@@ -1,6 +1,6 @@
 import React from "react";
 
-import { InternalShadowRoundButton } from "../InternalShadowRoundButton";
+import { InternalShadowRoundButton } from "@/components/molecules/InternalShadowRoundButton";
 
 export type OakCloseButtonProps = {
   onClose: () => void;

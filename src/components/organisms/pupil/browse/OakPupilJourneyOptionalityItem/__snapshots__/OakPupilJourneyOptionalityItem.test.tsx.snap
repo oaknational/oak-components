@@ -200,14 +200,14 @@ exports[`OakPupilJourneyOptionalityItem component test matches snapshot 1`] = `
   grid-template-columns: repeat(1,1fr);
 }
 
-.c14 > * {
-  width: 100%;
-  height: 100%;
-}
-
 .c15 {
   fill: #222222;
   stroke: #222222;
+}
+
+.c14 > * {
+  width: 100%;
+  height: 100%;
 }
 
 .c10 {
