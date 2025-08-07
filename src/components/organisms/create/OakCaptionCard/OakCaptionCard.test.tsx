@@ -3,7 +3,7 @@ import React from "react";
 import { create } from "react-test-renderer";
 import { act } from "@testing-library/react";
 
-import { CaptionCard } from "./CaptionCard";
+import { OakCaptionCard } from "./OakCaptionCard";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { OakThemeProvider } from "@/components/atoms";
@@ -12,7 +12,7 @@ import { oakDefaultTheme } from "@/styles";
 describe("CaptionCard", () => {
   it("renders a caption card", () => {
     const { getByTestId } = renderWithTheme(
-      <CaptionCard
+      <OakCaptionCard
         captionId={"CAP-TEST-01234"}
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-01234"}
@@ -31,7 +31,7 @@ describe("CaptionCard", () => {
   it("matches snapshot", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
-        <CaptionCard
+        <OakCaptionCard
           captionId={"CAP-TEST-01234"}
           videoTitle={"This is a test video title"}
           lessonUid={"LESS-TEST-01234"}
@@ -51,7 +51,7 @@ describe("CaptionCard", () => {
 
   it("does not include the last edited time if one is not provided", () => {
     const { queryByText } = renderWithTheme(
-      <CaptionCard
+      <OakCaptionCard
         captionId={"CAP-TEST-01234"}
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-01234"}
@@ -69,7 +69,7 @@ describe("CaptionCard", () => {
   it("calls onChangeChecked when checkbox is clicked", () => {
     const mockCallback = jest.fn();
     const { queryByTestId } = renderWithTheme(
-      <CaptionCard
+      <OakCaptionCard
         captionId={"CAP-TEST-01234"}
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-01234"}
@@ -87,7 +87,7 @@ describe("CaptionCard", () => {
   it("calls onLessonUidClicked when lesson uid is clicked", () => {
     const mockCallback = jest.fn();
     const { queryByTestId } = renderWithTheme(
-      <CaptionCard
+      <OakCaptionCard
         captionId={"CAP-TEST-01234"}
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-01234"}
@@ -105,7 +105,7 @@ describe("CaptionCard", () => {
 
   it("should display checked box if checked prop is true", () => {
     const { queryByTestId } = renderWithTheme(
-      <CaptionCard
+      <OakCaptionCard
         captionId={"CAP-TEST-01234"}
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-01234"}
@@ -123,7 +123,7 @@ describe("CaptionCard", () => {
 
   it("should display unchecked box if checked prop is false", () => {
     const { queryByTestId } = renderWithTheme(
-      <CaptionCard
+      <OakCaptionCard
         captionId={"CAP-TEST-01234"}
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-01234"}
@@ -141,7 +141,7 @@ describe("CaptionCard", () => {
 
   it("should use a different background if highlighted prop is true", () => {
     renderWithTheme(
-      <CaptionCard
+      <OakCaptionCard
         captionId={"CAP-TEST-01234"}
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-01234"}
@@ -155,7 +155,7 @@ describe("CaptionCard", () => {
       />,
     );
     const { queryByTestId } = renderWithTheme(
-      <CaptionCard
+      <OakCaptionCard
         captionId={"CAP-TEST-01234"}
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-01234"}
@@ -176,7 +176,7 @@ describe("CaptionCard", () => {
 
   it("should render the caption information", () => {
     const { queryByText } = renderWithTheme(
-      <CaptionCard
+      <OakCaptionCard
         captionId={"test-caption-id"}
         videoTitle={"test-video-title"}
         lessonUid={"test-lesson-uid"}
@@ -203,7 +203,7 @@ describe("CaptionCard", () => {
   it("clicking checkbox triggers onChangeChecked", async () => {
     const onCheckChanged = jest.fn();
     const { getByTestId } = renderWithTheme(
-      <CaptionCard
+      <OakCaptionCard
         captionId={"CAP-TEST-01234"}
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-01234"}
@@ -224,7 +224,7 @@ describe("CaptionCard", () => {
   it("checkbox is not clickable when the card is disabled", () => {
     const onCheckChanged = jest.fn();
     const { getByTestId } = renderWithTheme(
-      <CaptionCard
+      <OakCaptionCard
         captionId={"CAP-TEST-01234"}
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-01234"}

@@ -1,12 +1,12 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { CaptionCard } from "./CaptionCard";
+import { OakCaptionCard } from "./OakCaptionCard";
 
 import { OakFlex } from "@/components/atoms";
 
-const meta: Meta<typeof CaptionCard> = {
-  component: CaptionCard,
+const meta: Meta<typeof OakCaptionCard> = {
+  component: OakCaptionCard,
   tags: ["autodocs"],
   argTypes: {
     disabled: {
@@ -37,10 +37,10 @@ const meta: Meta<typeof CaptionCard> = {
 };
 export default meta;
 
-type Story = StoryObj<typeof CaptionCard>;
+type Story = StoryObj<typeof OakCaptionCard>;
 
 export const Default: Story = {
-  render: (args) => <CaptionCard {...args} />,
+  render: (args) => <OakCaptionCard {...args} />,
   args: {
     captionId: "CAP-TEST-01234",
     videoTitle: "This is a test video title",
@@ -60,7 +60,7 @@ export const Default: Story = {
 };
 
 export const SetText: Story = {
-  render: (args) => <CaptionCard {...args} />,
+  render: (args) => <OakCaptionCard {...args} />,
   args: {
     captionId: "CAP-TEST-01234",
     videoTitle: "This is a test video title",
@@ -103,7 +103,7 @@ yearsAgo.setFullYear(nowDate.getFullYear() - 1);
 export const MultipleOptions: Story = {
   render: () => (
     <OakFlex $flexDirection="column">
-      <CaptionCard
+      <OakCaptionCard
         captionId={"CAP-TEST-0001"}
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-0001"}
@@ -113,7 +113,7 @@ export const MultipleOptions: Story = {
         checked={false}
         onCheckChanged={() => {}}
       />
-      <CaptionCard
+      <OakCaptionCard
         captionId={"CAP-TEST-0002"}
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-0002"}
@@ -123,7 +123,7 @@ export const MultipleOptions: Story = {
         checked={true}
         onCheckChanged={() => {}}
       />
-      <CaptionCard
+      <OakCaptionCard
         captionId={"CAP-TEST-0003"}
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-0003"}
@@ -134,7 +134,7 @@ export const MultipleOptions: Story = {
         disabled={true}
         onCheckChanged={() => {}}
       />
-      <CaptionCard
+      <OakCaptionCard
         captionId={"CAP-TEST-0004"}
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-0004"}
@@ -144,7 +144,7 @@ export const MultipleOptions: Story = {
         checked={false}
         onCheckChanged={() => {}}
       />
-      <CaptionCard
+      <OakCaptionCard
         captionId={"CAP-TEST-0005"}
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-0005"}

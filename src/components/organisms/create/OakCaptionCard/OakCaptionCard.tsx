@@ -71,7 +71,7 @@ const StyledFlexBox = styled(OakFlex)<StyledFlexBoxWrapperProps>`
     `}
 `;
 
-export interface CaptionCardProps {
+export interface OakCaptionCardProps {
   captionId: string;
   videoTitle: string;
   lessonUid: string;
@@ -97,7 +97,7 @@ export interface CaptionCardProps {
  *  onCheckChanged?: (event: React.ChangeEvent<HTMLInputElement>) => void;
  *
  */
-export const CaptionCard = (props: CaptionCardProps) => {
+export const OakCaptionCard = (props: OakCaptionCardProps) => {
   const {
     checked,
     onCheckChanged,
