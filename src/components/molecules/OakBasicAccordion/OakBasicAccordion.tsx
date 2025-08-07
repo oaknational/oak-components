@@ -1,7 +1,6 @@
 import React, { ReactNode } from "react";
 
-import { InternalChevronAccordion } from "../InternalChevronAccordion";
-
+import { InternalChevronAccordion } from "@/components/molecules/InternalChevronAccordion";
 import { FlexStyleProps } from "@/styles/utils/flexStyle";
 import { BorderStyleProps } from "@/styles/utils/borderStyle";
 

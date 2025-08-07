@@ -3,8 +3,10 @@ import React from "react";
 import "@testing-library/jest-dom";
 import { screen } from "@testing-library/react";
 
-import { OakLinkCard, OakLinkCardProps } from "../OakLinkCard";
-
+import {
+  OakLinkCard,
+  OakLinkCardProps,
+} from "@/components/molecules/OakLinkCard";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { oakDefaultTheme } from "@/styles";
 import {

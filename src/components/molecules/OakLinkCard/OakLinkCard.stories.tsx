@@ -1,9 +1,8 @@
 import { Meta, StoryObj } from "@storybook/react";
 import React from "react";
 
-import { OakTertiaryButton } from "../OakTertiaryButton";
-import { OakLinkCard } from "../OakLinkCard";
-
+import { OakTertiaryButton } from "@/components/molecules/OakTertiaryButton";
+import { OakLinkCard } from "@/components/molecules/OakLinkCard";
 import { OakFlex, OakHeading, oakIconNames, OakP } from "@/components/atoms";
 import {
   oakColorFilterTokens,
