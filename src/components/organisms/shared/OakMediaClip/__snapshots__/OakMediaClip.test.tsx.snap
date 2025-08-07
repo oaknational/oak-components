@@ -106,6 +106,10 @@ exports[`OakMediaClip matches snapshot 1`] = `
   color: #222222;
 }
 
+.c16 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
 .c0 {
   margin-bottom: 0.5rem;
   display: revert;
@@ -113,10 +117,6 @@ exports[`OakMediaClip matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
   display: revert;
   display: revert;
-}
-
-.c16 {
-  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c20 {

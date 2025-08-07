@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakRadioGroup } from "../OakRadioGroup";
-
 import { OakDownloadCard } from "./OakDownloadCard";
 
+import { OakRadioGroup } from "@/components/molecules/OakRadioGroup";
 import { oakIconNames } from "@/components/atoms";
 
 const meta: Meta<typeof OakDownloadCard> = {

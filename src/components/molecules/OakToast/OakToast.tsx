@@ -2,8 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import styled from "styled-components";
 import { Transition, TransitionStatus } from "react-transition-group";
 
-import { InternalShadowIconButton } from "../InternalShadowIconButton";
-
+import { InternalShadowIconButton } from "@/components/molecules/InternalShadowIconButton";
 import { OakFlex } from "@/components/atoms/OakFlex";
 import { OakColorToken } from "@/styles";
 import { parseOpacity } from "@/styles/helpers/parseOpacity";
