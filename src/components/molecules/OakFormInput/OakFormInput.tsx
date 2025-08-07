@@ -29,7 +29,6 @@ export type OakFormInputProps = {
    * Disables user input and updates the appearance accordingly.
    */
   disabled?: boolean;
-
   /**
    * Sets the value. Use this in controlled components;
    */

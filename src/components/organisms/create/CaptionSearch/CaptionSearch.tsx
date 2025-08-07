@@ -1,6 +1,6 @@
 import React from "react";
 
-import { OakFlex, OakHeading, OakP } from "@/components/atoms";
+import { OakFlex } from "@/components/atoms";
 import { OakPrimaryButton, OakTextInput } from "@/components/molecules";
 
 export interface CaptionSearchProps {
@@ -18,15 +18,6 @@ export const CaptionSearch = ({ onSearchClick }: CaptionSearchProps) => {
       $borderRadius={"border-radius-s"}
     >
       <OakFlex $flexDirection={"column"} $gap={"space-between-ssx"}>
-        <OakFlex $flexDirection={"column"}>
-          {/* Move this to OakFormInputWithLabels */}
-          <OakHeading tag="h2" $font={"body-2-bold"}>
-            Caption ID
-          </OakHeading>
-          <OakP $font={"body-3"}>
-            Search single or multiple caption IDs by adding comma.
-          </OakP>
-        </OakFlex>
         <OakTextInput $height={"all-spacing-6"} />
         <OakPrimaryButton onClick={onSearchClick}>Search</OakPrimaryButton>
       </OakFlex>

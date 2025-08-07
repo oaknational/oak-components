@@ -1,4 +1,3 @@
-import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
 import { OakFormInput } from "./OakFormInput";
@@ -28,7 +27,6 @@ const meta: Meta<typeof OakFormInput> = {
   args: {
     placeholder: "Placeholder text",
   },
-  render: (args) => <OakFormInput {...args} />,
 };
 export default meta;
 
