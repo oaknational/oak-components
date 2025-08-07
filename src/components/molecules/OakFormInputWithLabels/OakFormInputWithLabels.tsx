@@ -16,7 +16,7 @@ export interface OakFormInputWithLabelsProps {
   /**
    * Placeholder text for the input field.
    */
-  placeholder: string;
+  placeholder?: string;
   /**
    * Indicates if the input is invalid (to be used after form submission or validation).
    */
