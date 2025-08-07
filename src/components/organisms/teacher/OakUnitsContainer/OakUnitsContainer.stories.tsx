@@ -1,11 +1,10 @@
 import React from "react";
 import { StoryObj, Meta } from "@storybook/react";
 
-import { OakUnitListItem } from "../OakUnitListItem";
-import { OakUnitListOptionalityItem } from "../OakUnitListOptionalityItem";
-
 import { OakUnitsContainer } from "./OakUnitsContainer";
 
+import { OakUnitListItem } from "@/components/organisms/teacher/OakUnitListItem";
+import { OakUnitListOptionalityItem } from "@/components/organisms/teacher/OakUnitListOptionalityItem";
 import { OakInlineBanner } from "@/components";
 
 const meta: Meta<typeof OakUnitsContainer> = {

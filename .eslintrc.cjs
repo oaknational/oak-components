@@ -10,11 +10,15 @@ const importRules = {
     },
   ],
   "@typescript-eslint/no-unused-vars": ["error", { ignoreRestSiblings: true }],
+  "no-relative-import-paths/no-relative-import-paths": [
+    "warn",
+    { allowSameFolder: true, prefix: "@", rootDir: "src" },
+  ],
 };
 
 const defaultConfig = {
-  plugins: ["react", "react-hooks"],
-  extends: ["eslint:recommended", "plugin:import/recommended",  "prettier"],
+  plugins: ["react", "react-hooks", "no-relative-import-paths"],
+  extends: ["eslint:recommended", "plugin:import/recommended", "prettier"],
   rules: {
     ...importRules,
     "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
@@ -75,8 +79,8 @@ module.exports = {
         "mdx/code-blocks": true,
         // optional, if you want to disable language mapper, set it to `false`
         // if you want to override the default language mapper inside, you can provide your own
-        "mdx/language-mapper": {}
-      }
-    }
+        "mdx/language-mapper": {},
+      },
+    },
   ],
 };

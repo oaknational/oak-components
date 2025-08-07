@@ -1,8 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { getTimeText } from "../utils";
-
+import { getTimeText } from "@/components/organisms/create/utils";
 import { OakBox, OakFlex, OakIcon, OakSpan } from "@/components/atoms";
 import { InternalCheckBoxLabelHoverDecor } from "@/components/atoms/InternalCheckBoxLabel";
 import { parseColor } from "@/styles/helpers/parseColor";

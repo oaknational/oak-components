@@ -1,9 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { InternalRadio } from "../InternalRadio/InternalRadio";
-import { OakFlex, OakFlexProps } from "../OakFlex";
-
+import { InternalRadio } from "@/components/atoms/InternalRadio";
+import { OakFlex, OakFlexProps } from "@/components/atoms/OakFlex";
 import { OakBox } from "@/components/atoms/OakBox";
 import {
   OakAllSpacingToken,
