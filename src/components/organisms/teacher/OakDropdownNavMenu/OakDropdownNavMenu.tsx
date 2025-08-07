@@ -4,7 +4,6 @@ import { OakBox, OakFlex, OakIcon, OakIconName } from "@/components/atoms";
 import {
   OakSmallPrimaryInvertedButton,
   OakSmallSecondaryButton,
-  OakTagFunctional,
 } from "@/components/molecules";
 
 export type OakDropdownNavMenuItem = {
@@ -25,7 +24,7 @@ export type OakDropdownNavMenuProps = {
   isPrimaryActionLoading?: boolean;
   isPrimaryActionDisabled?: boolean;
   ariaLabel?: string;
-  isNew?: boolean;
+  leadingButtonIcon?: React.ReactNode;
   ariaDescription?: string;
   "data-testid"?: string;
 };
@@ -46,7 +45,7 @@ export const OakDropdownNavMenu = ({
   isPrimaryActionDisabled = false,
   ariaLabel,
   ariaDescription,
-  isNew = false,
+  leadingButtonIcon,
   "data-testid": dataTestId,
 }: OakDropdownNavMenuProps) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -145,7 +144,7 @@ export const OakDropdownNavMenu = ({
       <OakFlex $flexDirection="column" $gap="space-between-xs">
         {/* Primary Action Button */}
 
-        <OakFlex $gap="space-between-m">
+        <OakFlex $gap="space-between-xs">
           <OakSmallSecondaryButton
             iconName={primaryActionIcon}
             isTrailingIcon
@@ -167,13 +166,7 @@ export const OakDropdownNavMenu = ({
             }
           >
             <OakFlex $alignItems={"center"}>
-              {isNew && (
-                <OakTagFunctional // add size props
-                  $ma={"space-between-sssx"}
-                  $background={"lemon"}
-                  label={"New"}
-                />
-              )}
+              {leadingButtonIcon && leadingButtonIcon}
               {primaryActionText}
             </OakFlex>
           </OakSmallSecondaryButton>
@@ -185,7 +178,7 @@ export const OakDropdownNavMenu = ({
             $borderRadius="border-radius-s"
             $ba="border-solid-m"
             $borderColor="border-primary"
-            $pa="inner-padding-m"
+            $pa="inner-padding-xs"
             $position="absolute"
             $top="all-spacing-8"
             $zIndex="modal-close-button"
@@ -238,7 +231,7 @@ export const OakDropdownNavMenu = ({
                   $height="all-spacing-0"
                   $width="100%"
                   $ba="border-solid-s"
-                  $borderColor="border-neutral"
+                  $borderColor="border-neutral-lighter"
                   $mb="space-between-s"
                   role="separator"
                   aria-hidden="true"

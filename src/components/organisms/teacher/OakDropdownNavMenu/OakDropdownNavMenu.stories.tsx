@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/react";
 
 import { OakDropdownNavMenu } from "./OakDropdownNavMenu";
 
-import { OakFlex, OakSpan } from "@/components/atoms";
+import { OakFlex, OakIcon, OakSpan } from "@/components/atoms";
 import { OakSmallPrimaryInvertedButton } from "@/components/molecules";
 
 // Generic Dropdown Navigation Button Stories
@@ -83,11 +83,16 @@ export const CustomTeacherResources: DropdownNavStory = {
     ],
     footer: (
       <OakFlex $flexDirection="column" $gap="space-between-xs">
-        <OakSpan $font="heading-light-7" $color="text-primary">
+        <OakSpan $ph={"inner-padding-xs"} $color="text-primary">
           Need help with lesson planning?
         </OakSpan>
-        <OakSmallPrimaryInvertedButton element="a" href="#" iconName="external">
-          Need help with lesson planning?, Get support
+        <OakSmallPrimaryInvertedButton
+          element="a"
+          href="#"
+          isTrailingIcon
+          iconName="external"
+        >
+          Get support
         </OakSmallPrimaryInvertedButton>
       </OakFlex>
     ),
@@ -126,6 +131,58 @@ export const footerButtons: DropdownNavStory = {
           iconName="external"
         >
           Button 2
+        </OakSmallPrimaryInvertedButton>
+      </OakFlex>
+    ),
+    ariaLabel: "Teaching resources hub",
+  },
+};
+
+export const leadingButtonIcon: DropdownNavStory = {
+  render: (args) => (
+    <OakFlex $height={"all-spacing-19"}>
+      <OakDropdownNavMenu {...args} />
+    </OakFlex>
+  ),
+  args: {
+    primaryActionText: "Create more with AI",
+
+    leadingButtonIcon: (
+      <OakFlex
+        $borderRadius={"border-radius-s"}
+        $ph={"inner-padding-ssx"}
+        $mr={"space-between-ssx"}
+        $background={"lemon"}
+        $alignItems={"center"}
+        $justifyContent={"center"}
+        $pr={"inner-padding-ssx"}
+      >
+        <OakIcon
+          $height={"all-spacing-4"}
+          $width={"all-spacing-4"}
+          iconName={"ai"}
+        />
+        <OakSpan $font="body-3">{"New"}</OakSpan>
+      </OakFlex>
+    ),
+    items: [
+      { label: "Glossary", iconName: "external" },
+      { label: "Comprehension task", iconName: "external" },
+      { label: "More starter quiz questions", iconName: "external" },
+      { label: "More exit quiz questions", iconName: "external" },
+    ],
+    footer: (
+      <OakFlex $flexDirection="column" $gap="space-between-xs">
+        <OakSpan $ph={"inner-padding-xs"} $color="text-primary">
+          Learn more about
+        </OakSpan>
+        <OakSmallPrimaryInvertedButton
+          isTrailingIcon
+          element="a"
+          href="#"
+          iconName="external"
+        >
+          Aila, Oak's AI lesson assistant
         </OakSmallPrimaryInvertedButton>
       </OakFlex>
     ),
