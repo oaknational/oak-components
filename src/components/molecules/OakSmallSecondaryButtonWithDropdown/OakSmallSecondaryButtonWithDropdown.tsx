@@ -3,26 +3,28 @@ import React, { useState, useRef, useEffect } from "react";
 import { OakBox, OakFlex, OakIcon, OakIconName } from "@/components/atoms";
 import {
   OakSmallPrimaryInvertedButton,
+  OakSmallPrimaryInvertedButtonProps,
   OakSmallSecondaryButton,
 } from "@/components/molecules";
 
-export type OakButtonWithDropdownItem = {
-  label: string;
-  href?: string;
-  onClick?: () => void;
-  ariaLabel?: string;
-  iconName?: OakIconName;
-};
+export type OakSmallSecondaryButtonWithDropdownItem =
+  OakSmallPrimaryInvertedButtonProps & {
+    label: string;
+    href?: string;
+    onClick?: () => void;
+    ariaLabel?: string;
+    iconName?: OakIconName;
+  };
 
-export type OakButtonWithDropdownProps = {
+export type OakSmallSecondaryButtonWithDropdownProps = {
   primaryActionText: string;
   primaryActionIcon?: OakIconName;
   onPrimaryAction?: () => void;
-  items: OakButtonWithDropdownItem[];
+  items: OakSmallSecondaryButtonWithDropdownItem[];
   footer?: React.ReactNode;
   leadingItemIcon?: OakIconName;
-  isPrimaryActionLoading?: boolean;
-  isPrimaryActionDisabled?: boolean;
+  isLoading?: boolean;
+  disabled?: boolean;
   ariaLabel?: string;
   leadingButtonIcon?: React.ReactNode;
   ariaDescription?: string;
@@ -30,24 +32,22 @@ export type OakButtonWithDropdownProps = {
 };
 
 /**
- * A flexible component that displays a primary action button and a list of items/resources.
- * Can be used for additional materials, resources, tools, or any similar content structure.
- * Supports customizable text, icons, and accessibility features.
+ * A secondary button with a dropdown of items.
  */
-export const OakButtonWithDropdown = ({
+export const OakSmallSecondaryButtonWithDropdown = ({
   primaryActionText,
   primaryActionIcon = "chevron-down",
   onPrimaryAction,
   items,
   footer,
   leadingItemIcon,
-  isPrimaryActionLoading = false,
-  isPrimaryActionDisabled = false,
+  isLoading = false,
+  disabled = false,
   ariaLabel,
   ariaDescription,
   leadingButtonIcon,
   "data-testid": dataTestId,
-}: OakButtonWithDropdownProps) => {
+}: OakSmallSecondaryButtonWithDropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -122,7 +122,7 @@ export const OakButtonWithDropdown = ({
     onPrimaryAction?.();
   };
 
-  const handleItemClick = (item: OakButtonWithDropdownItem) => {
+  const handleItemClick = (item: OakSmallSecondaryButtonWithDropdownItem) => {
     if (item.onClick) {
       item.onClick();
     }
@@ -149,8 +149,8 @@ export const OakButtonWithDropdown = ({
             iconName={primaryActionIcon}
             isTrailingIcon
             onClick={handlePrimaryAction}
-            isLoading={isPrimaryActionLoading}
-            disabled={isPrimaryActionDisabled}
+            isLoading={isLoading}
+            disabled={disabled}
             width="max-content"
             aria-expanded={isOpen}
             aria-haspopup="menu"
@@ -190,7 +190,7 @@ export const OakButtonWithDropdown = ({
           >
             <OakFlex
               $flexDirection="column"
-              $mb={footer ? "space-between-s" : "space-between-none"}
+              $mb={footer ? "space-between-xs" : "space-between-none"}
               $gap={"space-between-ssx"}
             >
               {items.map((item, index) => (
@@ -230,9 +230,9 @@ export const OakButtonWithDropdown = ({
                 <OakBox
                   $height="all-spacing-0"
                   $width="100%"
-                  $ba="border-solid-s"
+                  $bt="border-solid-s"
                   $borderColor="border-neutral-lighter"
-                  $mb="space-between-s"
+                  $mb="space-between-ssx"
                   role="separator"
                   aria-hidden="true"
                 />
