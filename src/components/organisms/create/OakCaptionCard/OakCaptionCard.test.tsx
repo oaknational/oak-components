@@ -23,6 +23,8 @@ describe("CaptionCard", () => {
         highlighted={false}
         onCheckChanged={() => {}}
         disabled={false}
+        editHref={`#}`}
+        lessonHref={`#`}
       />,
     );
     expect(getByTestId("caption-card")).toBeInTheDocument();
@@ -42,6 +44,8 @@ describe("CaptionCard", () => {
           highlighted={false}
           onCheckChanged={() => {}}
           disabled={false}
+          editHref={`#}`}
+          lessonHref={`#`}
         />
         ,
       </OakThemeProvider>,
@@ -61,6 +65,8 @@ describe("CaptionCard", () => {
         highlighted={false}
         onCheckChanged={() => {}}
         disabled={false}
+        editHref={`#}`}
+        lessonHref={`#`}
       />,
     );
     expect(queryByText("Edited")).not.toBeInTheDocument();
@@ -79,27 +85,11 @@ describe("CaptionCard", () => {
         highlighted={false}
         onCheckChanged={mockCallback}
         disabled={false}
+        editHref={`#}`}
+        lessonHref={`#`}
       />,
     );
     queryByTestId("checkbox")?.click();
-    expect(mockCallback).toHaveBeenCalled();
-  });
-  it("calls onLessonUidClicked when lesson uid is clicked", () => {
-    const mockCallback = jest.fn();
-    const { queryByTestId } = renderWithTheme(
-      <OakCaptionCard
-        captionId={"CAP-TEST-01234"}
-        videoTitle={"This is a test video title"}
-        lessonUid={"LESS-TEST-01234"}
-        videoType={"lesson"}
-        lastUpdated={"2023-01-01"}
-        checked={false}
-        highlighted={false}
-        onLessonUidClick={mockCallback}
-        disabled={false}
-      />,
-    );
-    queryByTestId("lesson_uid")?.click();
     expect(mockCallback).toHaveBeenCalled();
   });
 
@@ -115,6 +105,8 @@ describe("CaptionCard", () => {
         highlighted={false}
         onCheckChanged={() => {}}
         disabled={false}
+        editHref={`#}`}
+        lessonHref={`#`}
       />,
     );
     expect(queryByTestId("checkbox")).toBeInTheDocument();
@@ -133,6 +125,8 @@ describe("CaptionCard", () => {
         highlighted={false}
         onCheckChanged={() => {}}
         disabled={false}
+        editHref={`#`}
+        lessonHref={`#`}
       />,
     );
     expect(queryByTestId("checkbox")).toBeInTheDocument();
@@ -152,6 +146,8 @@ describe("CaptionCard", () => {
         onCheckChanged={() => {}}
         disabled={false}
         data-testid="caption-card-original"
+        editHref={`#}`}
+        lessonHref={`#`}
       />,
     );
     const { queryByTestId } = renderWithTheme(
@@ -166,6 +162,8 @@ describe("CaptionCard", () => {
         onCheckChanged={() => {}}
         disabled={false}
         data-testid="caption-card"
+        editHref={`#}`}
+        lessonHref={`#`}
       />,
     );
     // expect(queryByTestId("caption-card")).toBeInTheDocument();
@@ -186,6 +184,8 @@ describe("CaptionCard", () => {
         highlighted={false}
         onCheckChanged={() => {}}
         disabled={false}
+        editHref={`#}`}
+        lessonHref={`#`}
       />,
     );
     expect(
@@ -212,6 +212,8 @@ describe("CaptionCard", () => {
         onCheckChanged={onCheckChanged}
         checked={false}
         disabled={false}
+        editHref={`#}`}
+        lessonHref={`#`}
       />,
     );
     act(() => {
@@ -233,6 +235,8 @@ describe("CaptionCard", () => {
         onCheckChanged={onCheckChanged}
         checked={false}
         disabled={true}
+        editHref={`#}`}
+        lessonHref={`#`}
       />,
     );
     act(() => {

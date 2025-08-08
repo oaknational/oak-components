@@ -20,6 +20,7 @@ export * from "./OakHandDrawnCard";
 export * from "./OakHandDrawnCardWithIcon";
 export * from "./OakHandDrawnFocusUnderline";
 export * from "./OakHandDrawnHR";
+export * from "./OakHoverLink";
 export * from "./OakInfoButton";
 export * from "./OakInlineBanner";
 export * from "./OakJauntyAngleLabel";

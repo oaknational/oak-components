@@ -6,12 +6,11 @@ import { OakBox, OakFlex, OakIcon, OakSpan } from "@/components/atoms";
 import { InternalCheckBoxLabelHoverDecor } from "@/components/atoms/InternalCheckBoxLabel";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
-import { InternalButton } from "@/components/atoms/InternalButton";
-import { OakCheckBox } from "@/components/molecules";
-import { InternalLink } from "@/components/molecules/InternalLink";
-
-// Converted to styled-component so it can be used in '&:checked:not(:disabled) + ${StyledOakIcon}' to change svg color.
-const StyledOakIcon = styled(OakIcon)``;
+import {
+  OakCheckBox,
+  OakHoverLink,
+  OakSecondaryLink,
+} from "@/components/molecules";
 
 interface StyledFlexBoxWrapperProps {
   $minHeight: string;
@@ -49,6 +48,7 @@ const StyledFlexBox = styled(OakFlex)<StyledFlexBoxWrapperProps>`
     css`
       cursor: not-allowed;
       background-color: ${parseColor("bg-neutral-stronger")};
+      color: ${parseColor("text-disabled")};
     `}
 
   ${(props) =>
@@ -82,8 +82,8 @@ export interface OakCaptionCardProps {
   highlighted?: boolean;
   disabled?: boolean;
   onCheckChanged?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  onLessonUidClick?: () => void;
-  onEditClick?: () => void;
+  editHref: string;
+  lessonHref: string;
   "data-testid"?: string;
 }
 
@@ -101,8 +101,6 @@ export const OakCaptionCard = (props: OakCaptionCardProps) => {
   const {
     checked,
     onCheckChanged,
-    onLessonUidClick,
-    onEditClick,
     captionId,
     videoTitle,
     lessonUid,
@@ -112,15 +110,19 @@ export const OakCaptionCard = (props: OakCaptionCardProps) => {
     highlighted = false,
     disabled = false,
     "data-testid": dataTestId = "caption-card",
+    editHref,
+    lessonHref,
   } = props;
+
+  const filterColor = disabled ? "grey50" : null;
 
   return (
     <StyledFlexBox
       data-testid={dataTestId}
       $minHeight={"all-spacing-8"}
       $position={"relative"}
+      $background={"bg-primary"}
       $borderRadius={"border-radius-s"}
-      $ba="border-solid-s"
       $pa={"inner-padding-m"}
       $gap={"space-between-xs"}
       $flexDirection={"column"}
@@ -158,20 +160,15 @@ export const OakCaptionCard = (props: OakCaptionCardProps) => {
         </OakFlex>
 
         <OakFlex $flexGrow={10} $justifyContent={"flex-end"}>
-          <InternalButton
-            onClick={onEditClick}
-            aria-label={`edit caption ${captionId} in rev`}
+          <OakHoverLink
+            href={editHref}
+            iconName="external"
+            isTrailingIcon
+            aria-label={`edit caption ${captionId} in a new tab in rev`}
+            displayDisabled={disabled}
           >
-            <OakFlex $alignItems={"center"} $gap={"space-between-sssx"}>
-              Edit
-              <StyledOakIcon
-                iconWidth="all-spacing-6"
-                iconHeight="all-spacing-6"
-                alt=""
-                iconName="external"
-              />
-            </OakFlex>
-          </InternalButton>
+            Edit
+          </OakHoverLink>
         </OakFlex>
       </OakFlex>
       <OakFlex
@@ -181,40 +178,49 @@ export const OakCaptionCard = (props: OakCaptionCardProps) => {
         $gap={"all-spacing-7"}
         $font={"body-2"}
       >
-        <InternalLink
-          onClick={onLessonUidClick}
-          color={"black"}
-          visitedColor={"border-brand"}
-          hoverColor={"black"}
-          activeColor={"black"}
-          disabledColor={"text-disabled"}
-          aria-label={`view lesson ${lessonUid}`}
+        <OakSecondaryLink
+          href={lessonHref}
+          aria-label={`view lesson ${lessonUid} in a new tab`}
           data-testid="lesson_uid"
+          iconName="external"
+          isTrailingIcon
+          displayDisabled={disabled}
         >
-          <OakFlex $gap={"space-between-sssx"}>
-            {lessonUid}
-            <StyledOakIcon
-              iconWidth="all-spacing-6"
-              iconHeight="all-spacing-6"
-              alt=""
-              iconName="external"
-            />
-          </OakFlex>
-        </InternalLink>
+          {lessonUid}
+        </OakSecondaryLink>
+
         <OakFlex $alignItems={"center"} $gap={"space-between-sssx"}>
           {" "}
           {/* the video icon has no natural padding so whilst inconsistent this looks better */}
-          <StyledOakIcon alt="" iconName="video" />
+          <OakIcon
+            alt=""
+            iconName="video"
+            iconWidth="all-spacing-6"
+            iconHeight="all-spacing-6"
+            $colorFilter={filterColor}
+          />
           {getVideoTypeText(videoType)}
         </OakFlex>
         {lastEdited ? (
           <OakFlex $alignItems={"center"}>
-            <StyledOakIcon alt="" iconName="equipment-required" />
+            <OakIcon
+              alt=""
+              iconName="equipment-required"
+              iconWidth="all-spacing-6"
+              iconHeight="all-spacing-6"
+              $colorFilter={filterColor}
+            />
             Edited {getTimeText(lastEdited)}
           </OakFlex>
         ) : null}
         <OakFlex $alignItems={"center"}>
-          <StyledOakIcon alt="" iconName="success" />
+          <OakIcon
+            alt=""
+            iconName="success"
+            iconWidth="all-spacing-6"
+            iconHeight="all-spacing-6"
+            $colorFilter={filterColor}
+          />
           Updated {getTimeText(lastUpdated)}
         </OakFlex>
       </OakFlex>

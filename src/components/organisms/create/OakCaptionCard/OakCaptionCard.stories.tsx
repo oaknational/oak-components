@@ -112,6 +112,8 @@ export const MultipleOptions: Story = {
         lastEdited={secondsAgo.toUTCString()}
         checked={false}
         onCheckChanged={() => {}}
+        lessonHref="#lesson-uid-1"
+        editHref="#edit-uid-1"
       />
       <OakCaptionCard
         captionId={"CAP-TEST-0002"}
@@ -122,6 +124,8 @@ export const MultipleOptions: Story = {
         lastEdited={hoursAgo.toUTCString()}
         checked={true}
         onCheckChanged={() => {}}
+        lessonHref="#lesson-uid-1"
+        editHref="#edit-uid-1"
       />
       <OakCaptionCard
         captionId={"CAP-TEST-0003"}
@@ -133,6 +137,8 @@ export const MultipleOptions: Story = {
         checked={false}
         disabled={true}
         onCheckChanged={() => {}}
+        lessonHref="#lesson-uid-1"
+        editHref="#edit-uid-1"
       />
       <OakCaptionCard
         captionId={"CAP-TEST-0004"}
@@ -143,6 +149,8 @@ export const MultipleOptions: Story = {
         lastEdited={yearsAgo.toUTCString()}
         checked={false}
         onCheckChanged={() => {}}
+        lessonHref="#lesson-uid-1"
+        editHref="#edit-uid-1"
       />
       <OakCaptionCard
         captionId={"CAP-TEST-0005"}
@@ -153,6 +161,8 @@ export const MultipleOptions: Story = {
         lastEdited={"2025-07-28T12:26:40.425868+00:00"}
         checked={false}
         onCheckChanged={() => {}}
+        lessonHref="#lesson-uid-1"
+        editHref="#edit-uid-1"
       />
     </OakFlex>
   ),
