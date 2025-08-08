@@ -62,6 +62,7 @@ export const OakCaptionSearch = ({
         invalid={hasError}
         invalidText={errorText}
         disabled={isLoading}
+        required
       />
       <OakPrimaryButton
         type="submit"

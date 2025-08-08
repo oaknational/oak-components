@@ -355,6 +355,7 @@ exports[`OakCaptionSearch should match snapshot 1`] = `
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        required={true}
         type="text"
       />
     </div>

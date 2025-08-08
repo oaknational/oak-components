@@ -37,6 +37,8 @@ export interface OakFormInputWithLabelsProps {
   /**
    * Optional name of the input field. This is used to identify the field in forms.
    */
+
+  required?: boolean;
   inputName?: string;
   /**
    * Callback function that is called when the input value changes.
@@ -61,6 +63,7 @@ export const OakFormInputWithLabels = ({
   value,
   inputName,
   disabled = false,
+  required = false,
   onChange = () => {},
   onInitialFocus = () => {},
   onBlur = () => {},
@@ -84,9 +87,11 @@ export const OakFormInputWithLabels = ({
         onInitialFocus={onInitialFocus}
         onBlur={onBlur}
         disabled={disabled}
+        aria-describedby={invalid ? `error-${inputId}` : undefined}
+        required={required}
       />
       {invalid && invalidText && (
-        <OakP $font={"body-3"} $color={"text-error"}>
+        <OakP id={`error-${inputId}`} $font={"body-3"} $color={"text-error"}>
           {invalidText}
         </OakP>
       )}
