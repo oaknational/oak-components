@@ -45,7 +45,7 @@ type Story = StoryObj<typeof OakHoverLink>;
 
 export const Default: Story = {
   args: {
-    href: `#${Math.random()}`,
+    href: `#test`,
   },
 };
 
@@ -57,14 +57,14 @@ export const AsAButton: Story = {
 
 export const WithIcon: Story = {
   args: {
-    href: `#${Math.random()}`,
+    href: `#test`,
     iconName: "chevron-left",
   },
 };
 
 export const WithTrailingIcon: Story = {
   args: {
-    href: `#${Math.random()}`,
+    href: `#test`,
     iconName: "chevron-right",
     isTrailingIcon: true,
   },
