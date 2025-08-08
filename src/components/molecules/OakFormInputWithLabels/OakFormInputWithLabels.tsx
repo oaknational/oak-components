@@ -91,7 +91,7 @@ export const OakFormInputWithLabels = ({
         required={required}
       />
       {invalid && invalidText && (
-        <OakP id={`error-${inputId}`} $font={"body-3"} $color={"text-error"}>
+        <OakP id={`error-${inputId}`} $font={"body-2"} $color={"text-error"}>
           {invalidText}
         </OakP>
       )}

@@ -82,14 +82,16 @@ const StyledTextInputWrapper = styled(OakFlex)<StyledTextInputWrapperProps>`
     background: ${(props) => parseColor(props.$focusBackgroundColor)};
   }
 
-  ${(props) => css`
-    @media (hover: hover) {
-      &:hover:not(:focus-within) {
-        background: ${parseColor(props.$hoverBackground)};
-        border-color: ${parseColor(props.$hoverBorderColor)};
+  ${(props) =>
+    !props.$disabled &&
+    css`
+      @media (hover: hover) {
+        &:hover:not(:focus-within) {
+          background: ${parseColor(props.$hoverBackground)};
+          border-color: ${parseColor(props.$hoverBorderColor)};
+        }
       }
-    }
-  `}
+    `}
 
   ${(props) =>
     props.$disabled &&
