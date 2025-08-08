@@ -9,10 +9,16 @@ const meta: Meta<typeof OakSecondaryLink> = {
   title: "components/molecules/OakSecondaryLink",
   argTypes: {
     children: { type: "string" },
+    displayDisabled: { type: "boolean" },
+    iconName: {
+      control: { type: "select" },
+      options: ["chevron-left", "chevron-right", "loading"],
+    },
+    isTrailingIcon: { type: "boolean" },
   },
   parameters: {
     controls: {
-      include: ["children", "iconName"],
+      include: ["children", "iconName", "isTrailingIcon", "displayDisabled"],
     },
   },
   args: {
@@ -55,6 +61,14 @@ export const Disabled: Story = {
   args: {
     element: "button",
     disabled: true,
+    iconName: "chevron-left",
+  },
+};
+
+export const DisplayDisabled: Story = {
+  args: {
+    element: "a",
+    displayDisabled: true,
     iconName: "chevron-left",
   },
 };
