@@ -7,7 +7,7 @@ exports[`CaptionCard matches snapshot 1`] = `
   width: 100%;
   min-height: 2.5rem;
   padding: 1rem;
-  border: 0.063rem solid;
+  background: #ffffff;
   border-radius: 0.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -86,15 +86,6 @@ exports[`CaptionCard matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c31 {
-  position: relative;
-  width: 2rem;
-  min-width: 2rem;
-  height: 2rem;
-  min-height: 2rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
 .c16 {
   -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
@@ -102,6 +93,10 @@ exports[`CaptionCard matches snapshot 1`] = `
 }
 
 .c26 {
+  object-fit: contain;
+}
+
+.c31 {
   object-fit: contain;
 }
 
@@ -162,18 +157,6 @@ exports[`CaptionCard matches snapshot 1`] = `
   flex-grow: 10;
 }
 
-.c24 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.25rem;
-}
-
 .c28 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -195,6 +178,10 @@ exports[`CaptionCard matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 0.25rem;
 }
 
@@ -245,24 +232,6 @@ exports[`CaptionCard matches snapshot 1`] = `
   align-items: center;
 }
 
-.c23 {
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  text-align: left;
-  font-family: unset;
-  outline: none;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c23:disabled {
-  pointer-events: none;
-  cursor: default;
-}
-
 .c9 {
   -webkit-appearance: none;
   -webkit-appearance: none;
@@ -301,6 +270,46 @@ input:checked + .c12 {
   opacity: 1;
 }
 
+.c23 {
+  display: inline;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.25rem;
+  outline: none;
+  border-radius: 0.375rem;
+  padding: 0.25rem;
+  margin: -0.25rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font: inherit;
+  background: none;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #222222;
+}
+
+.c23:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c23:visited {
+  color: #222222;
+}
+
+.c23:active {
+  color: #222222;
+}
+
+.c23[disabled] {
+  cursor: not-allowed;
+  color: #222222;
+}
+
 .c29 {
   display: inline;
   -webkit-align-items: center;
@@ -329,7 +338,7 @@ input:checked + .c12 {
 }
 
 .c29:visited {
-  color: #287c34;
+  color: #222222;
 }
 
 .c29:active {
@@ -339,6 +348,24 @@ input:checked + .c12 {
 .c29[disabled] {
   cursor: not-allowed;
   color: #808080;
+}
+
+.c24 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c24:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .c2:has(input:not(:disabled)) {
@@ -377,6 +404,13 @@ input:checked + .c12 {
     transform: translate(-50%,-50%);
     border-radius: 0.125rem;
     background: #222222;
+  }
+}
+
+@media (hover:hover) {
+  .c23:hover,
+  .c23:visited:hover {
+    color: #222222;
   }
 }
 
@@ -477,105 +511,100 @@ input:checked + .c12 {
       <div
         className="c21 c22"
       >
-        <button
-          aria-label="edit caption CAP-TEST-01234 in rev"
-          className="c23"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
+        <a
+          aria-label="edit caption CAP-TEST-01234 in a new tab in rev"
+          className="c23 c24"
+          href="#}"
         >
-          <div
-            className="c21 c24"
+          <span
+            className="c20"
           >
             Edit
-            <div
-              className="c25 "
-            >
-              <img
-                alt=""
-                className="c26"
-                data-nimg="fill"
-                decoding="async"
-                loading="lazy"
-                onError={[Function]}
-                onLoad={[Function]}
-                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953892/icons/hlxmejse3mcr4tqo6t8u.svg"
-                style={
-                  {
-                    "bottom": 0,
-                    "color": "transparent",
-                    "height": "100%",
-                    "left": 0,
-                    "objectFit": undefined,
-                    "objectPosition": undefined,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                    "width": "100%",
-                  }
+          </span>
+          <div
+            className="c25 "
+          >
+            <img
+              alt=""
+              className="c26"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953892/icons/hlxmejse3mcr4tqo6t8u.svg"
+              style={
+                {
+                  "bottom": 0,
+                  "color": "transparent",
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
                 }
-              />
-            </div>
+              }
+            />
           </div>
-        </button>
+        </a>
       </div>
     </div>
     <div
       className="c27 c28"
     >
       <a
-        aria-label="view lesson LESS-TEST-01234"
-        className="c29"
+        aria-label="view lesson LESS-TEST-01234 in a new tab"
+        className="c29 "
         data-testid="lesson_uid"
+        href="#"
       >
         <span
           className="c20"
         >
-          <div
-            className="c21 c30"
-          >
-            LESS-TEST-01234
-            <div
-              className="c25 "
-            >
-              <img
-                alt=""
-                className="c26"
-                data-nimg="fill"
-                decoding="async"
-                loading="lazy"
-                onError={[Function]}
-                onLoad={[Function]}
-                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953892/icons/hlxmejse3mcr4tqo6t8u.svg"
-                style={
-                  {
-                    "bottom": 0,
-                    "color": "transparent",
-                    "height": "100%",
-                    "left": 0,
-                    "objectFit": undefined,
-                    "objectPosition": undefined,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                    "width": "100%",
-                  }
-                }
-              />
-            </div>
-          </div>
+          LESS-TEST-01234
         </span>
-      </a>
-      <div
-        className="c21 c24"
-      >
-         
         <div
-          className="c31 "
+          className="c25 "
         >
           <img
             alt=""
             className="c26"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953892/icons/hlxmejse3mcr4tqo6t8u.svg"
+            style={
+              {
+                "bottom": 0,
+                "color": "transparent",
+                "height": "100%",
+                "left": 0,
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": "100%",
+              }
+            }
+          />
+        </div>
+      </a>
+      <div
+        className="c21 c30"
+      >
+         
+        <div
+          className="c25"
+        >
+          <img
+            alt=""
+            className="c31"
             data-nimg="fill"
             decoding="async"
             loading="lazy"
@@ -604,11 +633,11 @@ input:checked + .c12 {
         className="c21 c32"
       >
         <div
-          className="c31 "
+          className="c25"
         >
           <img
             alt=""
-            className="c26"
+            className="c31"
             data-nimg="fill"
             decoding="async"
             loading="lazy"
@@ -638,11 +667,11 @@ input:checked + .c12 {
         className="c21 c32"
       >
         <div
-          className="c31 "
+          className="c25"
         >
           <img
             alt=""
-            className="c26"
+            className="c31"
             data-nimg="fill"
             decoding="async"
             loading="lazy"

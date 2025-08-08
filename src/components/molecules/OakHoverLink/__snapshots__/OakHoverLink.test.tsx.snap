@@ -48,6 +48,14 @@ exports[`OakHoverLink matches snapshot 1`] = `
 .c1 {
   -webkit-text-decoration: none;
   text-decoration: none;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c1:hover {
