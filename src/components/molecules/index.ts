@@ -16,6 +16,8 @@ export * from "./OakDraggableFeedback";
 export * from "./OakDroppable";
 export * from "./OakFieldError";
 export * from "./OakFilterDrawer";
+export * from "./OakFormInput";
+export * from "./OakFormInputWithLabels";
 export * from "./OakHandDrawnCard";
 export * from "./OakHandDrawnCardWithIcon";
 export * from "./OakHandDrawnFocusUnderline";
