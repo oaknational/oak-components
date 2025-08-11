@@ -2,9 +2,7 @@
 
 exports[`OakFormInput should match snapshot 1`] = `
 .c3 {
-  -webkit-appearance: none !important;
-  -moz-appearance: none !important;
-  appearance: none !important;
+  appearance: none!important;
   border: 0;
   border-radius: 0;
   border-color: transparent;
@@ -16,18 +14,6 @@ exports[`OakFormInput should match snapshot 1`] = `
   width: 100%;
 }
 
-.c3::-webkit-input-placeholder {
-  color: #575757;
-}
-
-.c3::-moz-placeholder {
-  color: #575757;
-}
-
-.c3:-ms-input-placeholder {
-  color: #575757;
-}
-
 .c3::placeholder {
   color: #575757;
 }
@@ -36,19 +22,15 @@ exports[`OakFormInput should match snapshot 1`] = `
 .c3::-webkit-search-cancel-button,
 .c3::-webkit-search-results-button,
 .c3::-webkit-search-results-decoration {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 
-.c3:disabled {
+.c3 :disabled {
   cursor: not-allowed;
 }
 
 .c0 {
   position: relative;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   padding: 0.5rem;
   color: #222222;
@@ -60,24 +42,15 @@ exports[`OakFormInput should match snapshot 1`] = `
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.5rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
-.c0:hover {
+.c0 :hover {
   cursor: pointer;
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -94,13 +67,13 @@ exports[`OakFormInput should match snapshot 1`] = `
   background: #ffffff;
 }
 
-@media (max-width:750px) {
+@media (max-width: 750px) {
   .c3 {
     font-size: 16px;
   }
 }
 
-@media (hover:hover) {
+@media (hover: hover) {
   .c2:hover:not(:focus-within) {
     background: #f2f2f2;
     border-color: #808080;

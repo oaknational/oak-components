@@ -3,8 +3,6 @@
 exports[`OakSmallTertiaryInvertedButton matches snapshot 1`] = `
 .c0 {
   position: relative;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -61,13 +59,11 @@ exports[`OakSmallTertiaryInvertedButton matches snapshot 1`] = `
 }
 
 .c11 {
-  -webkit-filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
   filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
   object-fit: contain;
 }
 
 .c13 {
-  -webkit-filter: invert(82%) sepia(25%) saturate(963%) hue-rotate(359deg) brightness(106%) contrast(101%);
   filter: invert(82%) sepia(25%) saturate(963%) hue-rotate(359deg) brightness(106%) contrast(101%);
   object-fit: contain;
 }
@@ -77,43 +73,20 @@ exports[`OakSmallTertiaryInvertedButton matches snapshot 1`] = `
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   gap: 0.25rem;
 }
 
 .c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -122,9 +95,6 @@ exports[`OakSmallTertiaryInvertedButton matches snapshot 1`] = `
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
 }
 
@@ -154,7 +124,6 @@ exports[`OakSmallTertiaryInvertedButton matches snapshot 1`] = `
 }
 
 .c4:hover {
-  -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #222222;
 }
@@ -167,20 +136,20 @@ exports[`OakSmallTertiaryInvertedButton matches snapshot 1`] = `
   color: #808080;
 }
 
-.c2 > :first-child:hover .highlight {
+.c2 >:first-child:hover .highlight {
   display: block;
 }
 
-.c2 > :first-child:active .highlight {
+.c2 >:first-child:active .highlight {
   display: block;
 }
 
-.c2 > :first-child:active .shadow {
+.c2 >:first-child:active .shadow {
   display: block;
 }
 
-.c2 > :first-child:focus-visible {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+.c2 >:first-child:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
   background: white;
 }
 

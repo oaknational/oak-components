@@ -7,29 +7,23 @@ exports[`InternalLink matches snapshot 1`] = `
 
 .c0 {
   display: inline;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 0.25rem;
   outline: none;
   border-radius: 0.375rem;
   padding: 0.25rem;
   margin: -0.25rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   font: inherit;
   background: none;
   border: none;
-  -webkit-text-decoration: underline;
   text-decoration: underline;
   cursor: pointer;
   color: #0d24c4;
 }
 
 .c0:focus-visible {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 .c0:visited {
@@ -45,7 +39,7 @@ exports[`InternalLink matches snapshot 1`] = `
   color: #808080;
 }
 
-@media (hover:hover) {
+@media (hover: hover) {
   .c0:hover,
   .c0:visited:hover {
     color: #0a1d9d;

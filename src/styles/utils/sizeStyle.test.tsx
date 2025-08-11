@@ -13,7 +13,7 @@ describe("sizeStyle", () => {
     ["$height", "all-spacing-2", "height: 0.5rem;"],
     ["$minHeight", "all-spacing-2", "min-height: 0.5rem;"],
     ["$maxHeight", "all-spacing-2", "max-height: 0.5rem;"],
-    ["$aspectRatio", "16 / 9", "aspect-ratio: 16 / 9;"],
+    ["$aspectRatio", "16 / 9", "aspect-ratio: 16/9;"],
     ["$boxSizing", "content-box", "box-sizing: content-box;"],
   ])("should correctly handle %p prop", (prop, value, expected) => {
     const props = {

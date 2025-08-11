@@ -8,9 +8,6 @@ exports[`OakLessonLayout matches snapshot 1`] = `
   padding-left: 0rem;
   padding-right: 0rem;
   background: #c6d1ef;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -61,138 +58,121 @@ exports[`OakLessonLayout matches snapshot 1`] = `
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
 .c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   gap: 3rem;
 }
 
 .c10 {
-  position: -webkit-sticky;
   position: sticky;
   bottom: 0;
   z-index: 10;
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c0 {
     padding-left: 1.5rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c0 {
     padding-right: 1.5rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c2 {
     background: transparent;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c4 {
     display: block;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c5 {
     padding-top: 1rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c7 {
     padding-left: 0.5rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c7 {
     padding-right: 0rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c7 {
     margin-right: 3rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c7 {
     background: transparent;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c9 {
     margin-left: 0rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c9 {
     margin-left: 0.25rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c9 {
     margin-right: 0rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c9 {
     margin-right: 0.25rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c9 {
     background: #ffffff;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c6 {
     gap: 3.5rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c1 {
     padding-top: 3.5rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c1 {
     background-repeat: no-repeat;
     background-position-x: center;
@@ -201,7 +181,10 @@ exports[`OakLessonLayout matches snapshot 1`] = `
 }
 
 <div
+    celebrate={false}
     className="c0 c1"
+    phase="primary"
+    sectionName="tier-listing"
   >
     <div
       className="c2 c3"

@@ -14,28 +14,20 @@ exports[`InternalDroppableHoldingPen matches snapshot 1`] = `
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
   align-items: flex-start;
   gap: 0.75rem;
 }
 
 .c1 {
   background-color: #f2f2f2;
-  background-color: color-mix(in lch,#222222 5%,transparent);
+  background-color: color-mix(in lch, #222222 5%, transparent);
 }
 
 .c1[data-over="true"] {
   background-color: #ffffff;
-  background-color: color-mix( in lch, #ffffff 60%, transparent );
+  background-color: color-mix(       in lch,       #ffffff 60%,       transparent     );
 }
 
 <div

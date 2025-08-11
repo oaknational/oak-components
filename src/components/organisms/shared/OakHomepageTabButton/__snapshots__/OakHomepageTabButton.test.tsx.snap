@@ -48,42 +48,21 @@ exports[`OakHomepageTabButton component matches snapshot 1`] = `
 }
 
 .c5 {
-  -webkit-filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
   filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
   object-fit: contain;
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   gap: 1rem;
 }
 
 .c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   gap: 0.25rem;
 }
@@ -94,33 +73,26 @@ exports[`OakHomepageTabButton component matches snapshot 1`] = `
   font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
   text-align: center;
 }
 
-.c1:hover .buttonText {
-  -webkit-text-decoration: underline;
+.c1 :hover .buttonText {
   text-decoration: underline;
   color: #222222;
 }
 
-.c1:focus .focusUnderlineSvg {
+.c1 :focus .focusUnderlineSvg {
   display: block;
-  -webkit-filter: invert(82%) sepia(25%) saturate(963%) hue-rotate(359deg) brightness(106%) contrast(101%) drop-shadow(0.063rem 0.125rem 0 rgba(0,0,0,100%));
-  filter: invert(82%) sepia(25%) saturate(963%) hue-rotate(359deg) brightness(106%) contrast(101%) drop-shadow(0.063rem 0.125rem 0 rgba(0,0,0,100%));
-  -webkit-transform: rotate(-2deg);
-  -ms-transform: rotate(-2deg);
+  filter: invert(82%) sepia(25%) saturate(963%) hue-rotate(359deg) brightness(106%) contrast(101%) drop-shadow(0.063rem 0.125rem 0 rgba(0,0,0, 100%));
   transform: rotate(-2deg);
 }
 
-.c1:focus .activeUnderline {
+.c1 :focus .activeUnderline {
   display: none;
 }
 
-.c1:focus .focusUnderline {
+.c1 :focus .focusUnderline {
   display: block;
 }
 
@@ -130,83 +102,80 @@ exports[`OakHomepageTabButton component matches snapshot 1`] = `
   bottom: 0;
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c4 {
     width: 5.75rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c4 {
     width: 5.75rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c4 {
     min-width: 5.75rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c4 {
     min-width: 5.75rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c4 {
     height: 5.75rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c4 {
     height: 5.75rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c4 {
     min-height: 5.75rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c4 {
     min-height: 5.75rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c6 {
     padding-bottom: 1.5rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c8 {
     font-weight: 600;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c8 {
     font-size: 1rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c8 {
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c8 {
-    -webkit-letter-spacing: 0.0115rem;
-    -moz-letter-spacing: 0.0115rem;
-    -ms-letter-spacing: 0.0115rem;
     letter-spacing: 0.0115rem;
   }
 }

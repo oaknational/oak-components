@@ -23,7 +23,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c6:hover {
+.c6 :hover {
   cursor: pointer;
 }
 
@@ -42,9 +42,6 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
@@ -54,9 +51,6 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
 }
 
@@ -65,9 +59,6 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
@@ -112,41 +103,22 @@ exports[`OakMediaClipList matches snapshot 1`] = `
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 
 .c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 0.25rem;
 }
 
 .c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
 .c24 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -159,9 +131,6 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
@@ -170,9 +139,6 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
 }
 
@@ -192,8 +158,6 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   color: inherit;
   border: none;
   background: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   outline: none;
   padding: 0;
@@ -206,17 +170,8 @@ exports[`OakMediaClipList matches snapshot 1`] = `
 }
 
 .c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
@@ -224,12 +179,11 @@ exports[`OakMediaClipList matches snapshot 1`] = `
 }
 
 .c10:hover {
-  -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
 .c10:focus-visible .shadow {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 .c5 {
@@ -242,12 +196,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   border-color: #222222;
   border-style: solid;
   font-family: --var(google-font),Lexend,sans-serif;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 0.25rem;
 }
@@ -256,7 +205,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   visibility: hidden;
 }
 
-.c5 .c9:focus-visible ~ .c25 {
+.c5 .c9:focus-visible~.c25 {
   visibility: visible;
 }
 
@@ -267,9 +216,9 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   height: 50px;
   opacity: 0;
   z-index: 100;
-  -webkit-box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
-  -moz-box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
-  box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
+  -webkit-box-shadow: inset 0px -55px 30px -30px rgba(255, 255, 255, 1);
+  -moz-box-shadow: inset 0px -55px 30px -30px rgba(255, 255, 255, 1);
+  box-shadow: inset 0px -55px 30px -30px rgba(255, 255, 255, 1);
   padding: 2px;
 }
 
@@ -278,25 +227,25 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   border-width: 2px;
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c3 {
     border-left: 0.125rem solid;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c3 {
     border-left: 0rem solid;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c5 {
     border-left: 0.125rem solid;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c5 {
     border-left: 0rem solid;
   }
@@ -307,10 +256,11 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   >
     <div
       className="c3 c4 c5"
+      initialOpen={true}
     >
       <button
         aria-expanded={true}
-        className="c6 c7 c8 c9  c10"
+        className="c6 c7 c8 c9 c10"
         id="media-clip-list"
         onClick={[Function]}
         type="button"
@@ -421,6 +371,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
       <div
         className="c27 c28"
         data-testid="bottom-box-shadow"
+        shouldDisplayShadow={false}
       />
     </div>
   </div>,

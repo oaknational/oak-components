@@ -20,7 +20,7 @@ exports[`OakSearchFilterCheckBox matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2:hover {
+.c2 :hover {
   cursor: pointer;
 }
 
@@ -38,16 +38,10 @@ exports[`OakSearchFilterCheckBox matches snapshot 1`] = `
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   gap: 0.25rem;
 }
@@ -57,20 +51,11 @@ exports[`OakSearchFilterCheckBox matches snapshot 1`] = `
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
 }
 
 .c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -81,8 +66,6 @@ exports[`OakSearchFilterCheckBox matches snapshot 1`] = `
 
 .c5 {
   -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   cursor: pointer;
   margin: 0;
@@ -104,6 +87,10 @@ exports[`OakSearchFilterCheckBox matches snapshot 1`] = `
   position: absolute;
   opacity: 0;
   pointer-events: none;
+}
+
+.c6:checked:not(:disabled)+.{
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
 }
 
 .c6:checked:not(:disabled) {
@@ -130,7 +117,6 @@ exports[`OakSearchFilterCheckBox matches snapshot 1`] = `
 }
 
 .c4:hover:has(input:not(:disabled)) .c9 {
-  -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
@@ -139,7 +125,7 @@ exports[`OakSearchFilterCheckBox matches snapshot 1`] = `
 }
 
 .c4:focus-within {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 .c4:has(input:checked:not(:disabled)) {
@@ -147,14 +133,13 @@ exports[`OakSearchFilterCheckBox matches snapshot 1`] = `
   color: #ffffff;
 }
 
-@media (hover:hover) {
+@media (hover: hover) {
   .c12:hover {
-    -webkit-text-decoration: underline;
     text-decoration: underline;
   }
 }
 
-@media (hover:hover) {
+@media (hover: hover) {
   .c5:hover:not(:disabled) {
     border-color: #222222;
   }

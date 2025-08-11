@@ -3,22 +3,17 @@
 exports[`OakToast matches snapshot 1`] = `
 .c0 {
   position: relative;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   max-width: 15rem;
   padding: 1rem;
   color: #222222;
   background: #bef2bd;
   border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 0.5rem rgba(92,92,92,20%);
+  box-shadow: 0 0.5rem 0.5rem rgba(92, 92, 92, 20%);
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
 }
 
@@ -47,8 +42,6 @@ exports[`OakToast matches snapshot 1`] = `
 
 .c8 {
   position: relative;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -104,73 +97,41 @@ exports[`OakToast matches snapshot 1`] = `
 }
 
 .c18 {
-  -webkit-filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
   filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
   object-fit: contain;
 }
 
 .c20 {
-  -webkit-filter: invert(82%) sepia(25%) saturate(963%) hue-rotate(359deg) brightness(106%) contrast(101%);
   filter: invert(82%) sepia(25%) saturate(963%) hue-rotate(359deg) brightness(106%) contrast(101%);
   object-fit: contain;
 }
 
 .c22 {
-  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 0.75rem;
 }
 
 .c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .c14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   gap: 0rem;
 }
 
 .c16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -179,9 +140,6 @@ exports[`OakToast matches snapshot 1`] = `
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
 }
 
@@ -211,13 +169,11 @@ exports[`OakToast matches snapshot 1`] = `
 }
 
 .c12:hover {
-  -webkit-text-decoration: underline;
   text-decoration: underline;
   color: transparent;
 }
 
 .c12:hover:not(:active) [data-icon-for="button"] img {
-  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
 }
 
@@ -229,20 +185,20 @@ exports[`OakToast matches snapshot 1`] = `
   color: transparent;
 }
 
-.c10 > :first-child:hover .highlight {
+.c10 >:first-child:hover .highlight {
   display: block;
 }
 
-.c10 > :first-child:active .highlight {
+.c10 >:first-child:active .highlight {
   display: block;
 }
 
-.c10 > :first-child:active .shadow {
+.c10 >:first-child:active .shadow {
   display: block;
 }
 
-.c10 > :first-child:focus-visible {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+.c10 >:first-child:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
   background: white;
 }
 
@@ -253,11 +209,10 @@ exports[`OakToast matches snapshot 1`] = `
 
 .c2 {
   opacity: 0.25;
-  -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c0 {
     max-width: 22.5rem;
   }

@@ -21,7 +21,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8:hover {
+.c8 :hover {
   cursor: pointer;
 }
 
@@ -66,41 +66,22 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 0.25rem;
 }
 
 .c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
@@ -109,8 +90,6 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   color: inherit;
   border: none;
   background: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   outline: none;
   padding: 0;
@@ -123,17 +102,8 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
 }
 
 .c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
@@ -141,12 +111,11 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
 }
 
 .c12:hover {
-  -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
 .c12:focus-visible .shadow {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 .c7 {
@@ -154,12 +123,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 0.25rem;
 }
@@ -168,7 +132,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   visibility: hidden;
 }
 
-.c7 .c11:focus-visible ~ .c18 {
+.c7 .c11:focus-visible~.c18 {
   visibility: visible;
 }
 
@@ -179,9 +143,9 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   height: 50px;
   opacity: 0;
   z-index: 100;
-  -webkit-box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
-  -moz-box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
-  box-shadow: inset 0px -55px 30px -30px rgba(255,255,255,1);
+  -webkit-box-shadow: inset 0px -55px 30px -30px rgba(255, 255, 255, 1);
+  -moz-box-shadow: inset 0px -55px 30px -30px rgba(255, 255, 255, 1);
+  box-shadow: inset 0px -55px 30px -30px rgba(255, 255, 255, 1);
   padding: 2px;
 }
 
@@ -224,10 +188,11 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   </div>
   <div
     className="c5 c6 c7"
+    initialOpen={true}
   >
     <button
       aria-expanded={true}
-      className="c8 c9 c10 c11  c12"
+      className="c8 c9 c10 c11 c12"
       id="see-more"
       onClick={[Function]}
       type="button"
@@ -313,6 +278,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
     <div
       className="c20 c21"
       data-testid="bottom-box-shadow"
+      shouldDisplayShadow={false}
     />
   </div>
   <div

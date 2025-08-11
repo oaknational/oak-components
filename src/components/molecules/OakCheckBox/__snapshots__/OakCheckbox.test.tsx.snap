@@ -1,10 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakCheckBox matches snapshot 1`] = `
-.c4 {
+.c3 {
   -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   cursor: pointer;
   margin: 0;
@@ -17,17 +15,17 @@ exports[`OakCheckBox matches snapshot 1`] = `
   border-color: #808080;
 }
 
-.c4:checked {
+.c3:checked {
   background: #222222;
   border-color: #222222;
 }
 
-.c4:disabled {
+.c3:disabled {
   pointer-events: none;
 }
 
-.c6:focus-visible {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
+.c5:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%);
 }
 
 .c0 {
@@ -36,18 +34,9 @@ exports[`OakCheckBox matches snapshot 1`] = `
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 1rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -58,7 +47,7 @@ exports[`OakCheckBox matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
+.c6 {
   position: absolute;
   top: 0rem;
   left: 0rem;
@@ -68,7 +57,7 @@ exports[`OakCheckBox matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c10 {
+.c8 {
   position: relative;
   width: 100%;
   min-width: 100%;
@@ -77,38 +66,35 @@ exports[`OakCheckBox matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c11 {
-  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+.c9 {
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   object-fit: contain;
 }
 
-.c9 {
+.c7 {
   pointer-events: none;
   opacity: 0;
 }
 
-input:checked + .c7 {
+input:checked+.c7 {
   opacity: 1;
 }
 
-@media (hover:hover) {
-  .c4:hover:not(:disabled) {
+@media (hover: hover) {
+  .c3:hover:not(:disabled) {
     border-color: #222222;
   }
 }
 
-@media (hover:hover) {
-  .c5:hover:not(.c3:checked):not(.c3:disabled)::after {
+@media (hover: hover) {
+  .c4:hover:not(.c4:checked):not(.c4:disabled)::after {
     content: "";
     position: absolute;
     top: 50%;
     left: 50%;
     width: 60%;
     height: 60%;
-    -webkit-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     border-radius: 0.125rem;
     background: #222222;
   }
@@ -118,6 +104,8 @@ input:checked + .c7 {
   className="c0 c1"
   disabled={false}
   htmlFor="checkbox-1"
+  labelAlignItems="center"
+  labelGap="space-between-s"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
@@ -125,7 +113,7 @@ input:checked + .c7 {
     className="c2"
   >
     <input
-      className="c3 c4 c5 c6"
+      className="c3 c4 c5"
       disabled={false}
       id="checkbox-1"
       name="checkbox-1"
@@ -135,14 +123,14 @@ input:checked + .c7 {
       value="Option 1"
     />
     <div
-      className="c7 c8 c9"
+      className="c6 c7"
     >
       <div
-        className="c10"
+        className="c8"
       >
         <img
           alt=""
-          className="c11"
+          className="c9"
           data-nimg="fill"
           decoding="async"
           loading="lazy"

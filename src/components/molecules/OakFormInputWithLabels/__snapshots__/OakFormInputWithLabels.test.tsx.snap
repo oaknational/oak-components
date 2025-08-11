@@ -12,8 +12,6 @@ exports[`OakFormInputWithLabels should match snapshot 1`] = `
 
 .c5 {
   position: relative;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   padding: 0.5rem;
   color: #222222;
@@ -25,52 +23,31 @@ exports[`OakFormInputWithLabels should match snapshot 1`] = `
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.5rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
-.c5:hover {
+.c5 :hover {
   cursor: pointer;
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 0.5rem;
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 
 .c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
 .c8 {
-  -webkit-appearance: none !important;
-  -moz-appearance: none !important;
-  appearance: none !important;
+  appearance: none!important;
   border: 0;
   border-radius: 0;
   border-color: transparent;
@@ -82,18 +59,6 @@ exports[`OakFormInputWithLabels should match snapshot 1`] = `
   width: 100%;
 }
 
-.c8::-webkit-input-placeholder {
-  color: #575757;
-}
-
-.c8::-moz-placeholder {
-  color: #575757;
-}
-
-.c8:-ms-input-placeholder {
-  color: #575757;
-}
-
 .c8::placeholder {
   color: #575757;
 }
@@ -102,12 +67,10 @@ exports[`OakFormInputWithLabels should match snapshot 1`] = `
 .c8::-webkit-search-cancel-button,
 .c8::-webkit-search-results-button,
 .c8::-webkit-search-results-decoration {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 
-.c8:disabled {
+.c8 :disabled {
   cursor: not-allowed;
 }
 
@@ -116,9 +79,6 @@ exports[`OakFormInputWithLabels should match snapshot 1`] = `
   font-weight: 700;
   font-size: 1rem;
   line-height: 1.5rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
@@ -135,13 +95,13 @@ exports[`OakFormInputWithLabels should match snapshot 1`] = `
   background: #ffffff;
 }
 
-@media (max-width:750px) {
+@media (max-width: 750px) {
   .c8 {
     font-size: 16px;
   }
 }
 
-@media (hover:hover) {
+@media (hover: hover) {
   .c7:hover:not(:focus-within) {
     background: #f2f2f2;
     border-color: #808080;
