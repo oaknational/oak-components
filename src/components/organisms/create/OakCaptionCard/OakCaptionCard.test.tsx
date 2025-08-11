@@ -3,7 +3,7 @@ import React from "react";
 import { create } from "react-test-renderer";
 import { act } from "@testing-library/react";
 
-import { CaptionCard } from "./CaptionCard";
+import { OakCaptionCard } from "./OakCaptionCard";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { OakThemeProvider } from "@/components/atoms";
@@ -12,7 +12,7 @@ import { oakDefaultTheme } from "@/styles";
 describe("CaptionCard", () => {
   it("renders a caption card", () => {
     const { getByTestId } = renderWithTheme(
-      <CaptionCard
+      <OakCaptionCard
         captionId={"CAP-TEST-01234"}
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-01234"}
@@ -23,6 +23,8 @@ describe("CaptionCard", () => {
         highlighted={false}
         onCheckChanged={() => {}}
         disabled={false}
+        editHref={`#}`}
+        lessonHref={`#`}
       />,
     );
     expect(getByTestId("caption-card")).toBeInTheDocument();
@@ -31,7 +33,7 @@ describe("CaptionCard", () => {
   it("matches snapshot", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
-        <CaptionCard
+        <OakCaptionCard
           captionId={"CAP-TEST-01234"}
           videoTitle={"This is a test video title"}
           lessonUid={"LESS-TEST-01234"}
@@ -42,6 +44,8 @@ describe("CaptionCard", () => {
           highlighted={false}
           onCheckChanged={() => {}}
           disabled={false}
+          editHref={`#}`}
+          lessonHref={`#`}
         />
         ,
       </OakThemeProvider>,
@@ -51,7 +55,7 @@ describe("CaptionCard", () => {
 
   it("does not include the last edited time if one is not provided", () => {
     const { queryByText } = renderWithTheme(
-      <CaptionCard
+      <OakCaptionCard
         captionId={"CAP-TEST-01234"}
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-01234"}
@@ -61,6 +65,8 @@ describe("CaptionCard", () => {
         highlighted={false}
         onCheckChanged={() => {}}
         disabled={false}
+        editHref={`#}`}
+        lessonHref={`#`}
       />,
     );
     expect(queryByText("Edited")).not.toBeInTheDocument();
@@ -69,7 +75,7 @@ describe("CaptionCard", () => {
   it("calls onChangeChecked when checkbox is clicked", () => {
     const mockCallback = jest.fn();
     const { queryByTestId } = renderWithTheme(
-      <CaptionCard
+      <OakCaptionCard
         captionId={"CAP-TEST-01234"}
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-01234"}
@@ -79,33 +85,17 @@ describe("CaptionCard", () => {
         highlighted={false}
         onCheckChanged={mockCallback}
         disabled={false}
+        editHref={`#}`}
+        lessonHref={`#`}
       />,
     );
     queryByTestId("checkbox")?.click();
     expect(mockCallback).toHaveBeenCalled();
   });
-  it("calls onLessonUidClicked when lesson uid is clicked", () => {
-    const mockCallback = jest.fn();
-    const { queryByTestId } = renderWithTheme(
-      <CaptionCard
-        captionId={"CAP-TEST-01234"}
-        videoTitle={"This is a test video title"}
-        lessonUid={"LESS-TEST-01234"}
-        videoType={"lesson"}
-        lastUpdated={"2023-01-01"}
-        checked={false}
-        highlighted={false}
-        onLessonUidClick={mockCallback}
-        disabled={false}
-      />,
-    );
-    queryByTestId("lesson_uid")?.click();
-    expect(mockCallback).toHaveBeenCalled();
-  });
 
   it("should display checked box if checked prop is true", () => {
     const { queryByTestId } = renderWithTheme(
-      <CaptionCard
+      <OakCaptionCard
         captionId={"CAP-TEST-01234"}
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-01234"}
@@ -115,6 +105,8 @@ describe("CaptionCard", () => {
         highlighted={false}
         onCheckChanged={() => {}}
         disabled={false}
+        editHref={`#}`}
+        lessonHref={`#`}
       />,
     );
     expect(queryByTestId("checkbox")).toBeInTheDocument();
@@ -123,7 +115,7 @@ describe("CaptionCard", () => {
 
   it("should display unchecked box if checked prop is false", () => {
     const { queryByTestId } = renderWithTheme(
-      <CaptionCard
+      <OakCaptionCard
         captionId={"CAP-TEST-01234"}
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-01234"}
@@ -133,6 +125,8 @@ describe("CaptionCard", () => {
         highlighted={false}
         onCheckChanged={() => {}}
         disabled={false}
+        editHref={`#`}
+        lessonHref={`#`}
       />,
     );
     expect(queryByTestId("checkbox")).toBeInTheDocument();
@@ -141,7 +135,7 @@ describe("CaptionCard", () => {
 
   it("should use a different background if highlighted prop is true", () => {
     renderWithTheme(
-      <CaptionCard
+      <OakCaptionCard
         captionId={"CAP-TEST-01234"}
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-01234"}
@@ -152,10 +146,12 @@ describe("CaptionCard", () => {
         onCheckChanged={() => {}}
         disabled={false}
         data-testid="caption-card-original"
+        editHref={`#}`}
+        lessonHref={`#`}
       />,
     );
     const { queryByTestId } = renderWithTheme(
-      <CaptionCard
+      <OakCaptionCard
         captionId={"CAP-TEST-01234"}
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-01234"}
@@ -166,6 +162,8 @@ describe("CaptionCard", () => {
         onCheckChanged={() => {}}
         disabled={false}
         data-testid="caption-card"
+        editHref={`#}`}
+        lessonHref={`#`}
       />,
     );
     // expect(queryByTestId("caption-card")).toBeInTheDocument();
@@ -176,7 +174,7 @@ describe("CaptionCard", () => {
 
   it("should render the caption information", () => {
     const { queryByText } = renderWithTheme(
-      <CaptionCard
+      <OakCaptionCard
         captionId={"test-caption-id"}
         videoTitle={"test-video-title"}
         lessonUid={"test-lesson-uid"}
@@ -186,6 +184,8 @@ describe("CaptionCard", () => {
         highlighted={false}
         onCheckChanged={() => {}}
         disabled={false}
+        editHref={`#}`}
+        lessonHref={`#`}
       />,
     );
     expect(
@@ -203,7 +203,7 @@ describe("CaptionCard", () => {
   it("clicking checkbox triggers onChangeChecked", async () => {
     const onCheckChanged = jest.fn();
     const { getByTestId } = renderWithTheme(
-      <CaptionCard
+      <OakCaptionCard
         captionId={"CAP-TEST-01234"}
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-01234"}
@@ -212,6 +212,8 @@ describe("CaptionCard", () => {
         onCheckChanged={onCheckChanged}
         checked={false}
         disabled={false}
+        editHref={`#}`}
+        lessonHref={`#`}
       />,
     );
     act(() => {
@@ -224,7 +226,7 @@ describe("CaptionCard", () => {
   it("checkbox is not clickable when the card is disabled", () => {
     const onCheckChanged = jest.fn();
     const { getByTestId } = renderWithTheme(
-      <CaptionCard
+      <OakCaptionCard
         captionId={"CAP-TEST-01234"}
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-01234"}
@@ -233,6 +235,8 @@ describe("CaptionCard", () => {
         onCheckChanged={onCheckChanged}
         checked={false}
         disabled={true}
+        editHref={`#}`}
+        lessonHref={`#`}
       />,
     );
     act(() => {

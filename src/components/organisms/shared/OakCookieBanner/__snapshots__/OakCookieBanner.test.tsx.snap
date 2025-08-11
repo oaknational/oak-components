@@ -322,7 +322,7 @@ exports[`OakCookieBanner matches snapshot 1`] = `
 }
 
 .c10:visited {
-  color: #575757;
+  color: #222222;
 }
 
 .c10:active {
@@ -523,7 +523,7 @@ exports[`OakCookieBanner matches snapshot 1`] = `
           className="c8 c9"
         >
           <button
-            className="c10"
+            className="c10 "
             data-testid="cookie-banner-reject"
             onClick={[MockFunction]}
             type="button"
