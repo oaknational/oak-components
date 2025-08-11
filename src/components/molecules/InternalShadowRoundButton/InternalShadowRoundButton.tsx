@@ -51,9 +51,7 @@ export type InternalShadowRoundButtonProps = Omit<
   hoverDropShadow?: OakDropShadowToken | null;
 } & PositionStyleProps;
 
-const StyledInternalButton = styled(InternalButton)<
-  InternalShadowRoundButtonProps & SizeStyleProps
->`
+const StyledInternalButton = styled(InternalButton)<SizeStyleProps>`
   display: inline-block;
   ${positionStyle}
   ${sizeStyle}

@@ -1,14 +1,9 @@
 import React from "react";
-import styled, {
-  css,
-  DefaultTheme,
-  FlattenSimpleInterpolation,
-  Interpolation,
-  ThemedStyledProps,
-} from "styled-components";
+import styled, { css, Interpolation, RuleSet } from "styled-components";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 
+import { ThemedStyledProps } from "@/styles/theme/theme";
 import { responsiveStyle } from "@/styles/utils/responsiveStyle";
 import {
   oakColorTokens,
@@ -28,9 +23,7 @@ type TestProps = {
  * in order to compare it with the expected css values.
  */
 const stringify = (
-  cssArray:
-    | FlattenSimpleInterpolation
-    | Interpolation<ThemedStyledProps<TestProps, DefaultTheme>>,
+  cssArray: RuleSet | Interpolation<ThemedStyledProps<TestProps>>,
 ) =>
   (Array.isArray(cssArray) ? cssArray : [cssArray])
     ?.flatMap((str: unknown) => (typeof str === "string" ? str.trim() : str))
@@ -55,7 +48,7 @@ describe("responsiveStyle", () => {
       (props: TestProps) => props.pl,
       pxOrUndefined,
     )(props);
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<TestProps>`
       ${styles}
     `;
     const { getByTestId } = render(

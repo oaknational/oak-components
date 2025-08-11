@@ -2,13 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import "@testing-library/jest-dom";
 
-import { colorFilterStyle } from "./colorFilterStyle";
+import { colorFilterStyle, ColorFilterStyleProps } from "./colorFilterStyle";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("colorFilterStyle", () => {
   it("should correctly handle prop 'filter' set to OakColorFilterToken", () => {
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<ColorFilterStyleProps>`
       ${colorFilterStyle}
     `;
     const { getByTestId } = renderWithTheme(

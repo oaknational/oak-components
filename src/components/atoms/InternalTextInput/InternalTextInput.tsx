@@ -24,7 +24,7 @@ type StyledInputProps = Omit<
  * E.g. ios and rounded borders (which border-radius doesn't fix without
  * appearance: none)
  */
-const StyledInput = styled.input`
+const StyledInput = styled.input<SpacingStyleProps & SizeStyleProps>`
   appearance: none !important;
   border: 0;
   border-radius: 0;

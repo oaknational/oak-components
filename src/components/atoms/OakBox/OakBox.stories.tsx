@@ -14,6 +14,7 @@ import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";
 import { opacityArgTypes } from "@/storybook-helpers/opacityStyleHelpers";
 import { zIndexArgTypes } from "@/storybook-helpers/zIndexStyleHelpers";
 import { transitionArgTypes } from "@/storybook-helpers/transitionStyleHelpers";
+import { OakCombinedColorToken } from "@/styles";
 
 const meta: Meta<typeof OakBox> = {
   component: OakBox,
@@ -188,7 +189,8 @@ export const TransitionAndTransform: Story = {
     const HoverBox = styled(OakBox)<OakBoxProps>`
       &:hover {
         transform: ${() => args.$transform};
-        background-color: ${() => parseColor(args.$background)};
+        background-color: ${() =>
+          parseColor(args.$background as OakCombinedColorToken | null)};
       }
     `;
     return (

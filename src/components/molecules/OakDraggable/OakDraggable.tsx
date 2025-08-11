@@ -1,9 +1,4 @@
-import React, {
-  ComponentPropsWithRef,
-  ComponentPropsWithoutRef,
-  FC,
-  forwardRef,
-} from "react";
+import React, { ComponentPropsWithRef, FC, forwardRef } from "react";
 import styled from "styled-components";
 
 import { OakBox, OakFlex, OakIcon } from "@/components/atoms";
@@ -126,10 +121,10 @@ const StyledFlex = styled(OakFlex)`
  * It is intended to be used with `useDraggable` from `@dnd-kit/core`
  */
 export const OakDraggable: FC<
-  ComponentPropsWithRef<OakDraggableProps & typeof OakBox>
+  OakDraggableProps & ComponentPropsWithRef<typeof OakBox>
 > = forwardRef<
   HTMLDivElement,
-  OakDraggableProps & ComponentPropsWithoutRef<typeof OakBox>
+  OakDraggableProps & ComponentPropsWithRef<typeof OakBox>
 >(
   (
     {

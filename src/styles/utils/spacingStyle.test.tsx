@@ -3,11 +3,16 @@ import styled from "styled-components";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 
-import { marginStyle, paddingStyle } from "@/styles/utils/spacingStyle";
+import {
+  marginStyle,
+  MarginStyleProps,
+  paddingStyle,
+  PaddingStyleProps,
+} from "@/styles/utils/spacingStyle";
 
 describe("spacingStyle", () => {
   test("should correctly handle prop 'ma'", async () => {
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<MarginStyleProps>`
       ${marginStyle}
     `;
     const { getByTestId } = render(
@@ -21,7 +26,7 @@ describe("spacingStyle", () => {
   });
 
   test("should correctly handle prop 'mv'", async () => {
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<MarginStyleProps>`
       ${marginStyle}
     `;
     const { getByTestId } = render(
@@ -33,7 +38,7 @@ describe("spacingStyle", () => {
   });
 
   test("should correctly handle prop 'mh'", async () => {
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<MarginStyleProps>`
       ${marginStyle}
     `;
     const { getByTestId } = render(
@@ -45,7 +50,7 @@ describe("spacingStyle", () => {
   });
 
   test("should correctly handle prop 'pv'", async () => {
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<PaddingStyleProps>`
       ${paddingStyle}
     `;
     const { getByTestId } = render(
@@ -57,7 +62,7 @@ describe("spacingStyle", () => {
   });
 
   test("should correctly handle prop 'ph'", async () => {
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<PaddingStyleProps>`
       ${paddingStyle}
     `;
     const { getByTestId } = render(
@@ -69,7 +74,7 @@ describe("spacingStyle", () => {
   });
 
   test("should correctly handle prop 'pa'", async () => {
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<PaddingStyleProps>`
       ${paddingStyle}
     `;
     const { getByTestId } = render(
@@ -96,7 +101,7 @@ describe("spacingStyle", () => {
       [prop]: value,
     };
 
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<MarginStyleProps & PaddingStyleProps>`
       ${marginStyle}
       ${paddingStyle}
     `;

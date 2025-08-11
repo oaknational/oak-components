@@ -15,8 +15,6 @@ const meta: Meta<typeof OakHeaderHero> = {
     heroImageSrc: { type: "string" },
     heroImageAlt: { type: "string" },
     authorImageSrc: { type: "string" },
-    imageSrc: { type: "string" },
-    imageAlt: { type: "string" },
     subHeadingText: { type: "string" },
   },
   parameters: {
@@ -43,7 +41,6 @@ const meta: Meta<typeof OakHeaderHero> = {
     ),
     heroImageAlt: "Hero image",
     authorImageAlt: "Author image",
-    blogProfileAuthor: "Rachel Storm",
     authorTitle: "Head of School Support",
     authorName: "Rachel Storm",
     authorImageSrc: `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/test-images/test_author.jpg`,

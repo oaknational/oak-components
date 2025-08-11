@@ -14,15 +14,17 @@ import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
 import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 
+console.log({ sizeArgTypes });
+
 const meta: Meta<typeof InternalRadio> = {
   component: InternalRadio,
   tags: ["autodocs"],
   title: "components/atoms/InternalRadio",
   argTypes: {
-    sizeArgTypes,
-    borderArgTypes,
-    colorArgTypes,
-    spacingArgTypes,
+    ...sizeArgTypes,
+    ...borderArgTypes,
+    ...colorArgTypes,
+    ...spacingArgTypes,
     disabled: {
       control: "boolean",
     },
@@ -46,14 +48,7 @@ const meta: Meta<typeof InternalRadio> = {
 };
 export default meta;
 
-type Story = StoryObj<
-  | typeof InternalRadio
-  | typeof InternalRadioHover
-  | typeof InternalRadioFocus
-  | typeof InternalRadioHoverFocus
->;
-
-export const Default: Story = {
+export const Default: StoryObj<typeof InternalRadio> = {
   render: (args) => <InternalRadio {...args} />,
   args: {
     id: "checkbox-test-default-1",
@@ -63,7 +58,7 @@ export const Default: Story = {
   },
 };
 
-export const Hover: Story = {
+export const Hover: StoryObj<typeof InternalRadioHover> = {
   render: (args) => (
     <OakBox $position="relative" $width={args.$width} $height={args.$height}>
       <InternalRadioHover {...args} />
@@ -77,7 +72,7 @@ export const Hover: Story = {
   },
 };
 
-export const Focus: Story = {
+export const Focus: StoryObj<typeof InternalRadioFocus> = {
   render: (args) => (
     <OakBox $position="relative" $width={args.$width} $height={args.$height}>
       <InternalRadioFocus {...args} />
@@ -91,7 +86,7 @@ export const Focus: Story = {
   },
 };
 
-export const HoverFocus: Story = {
+export const HoverFocus: StoryObj<typeof InternalRadioHoverFocus> = {
   render: (args) => (
     <OakBox $position="relative" $width={args.$width} $height={args.$height}>
       <InternalRadioHoverFocus {...args} />

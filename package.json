@@ -28,11 +28,11 @@
   },
   "author": "",
   "peerDependencies": {
-    "next": ">=14.2.12",
-    "next-cloudinary": ">=6.16.0",
+    "next": "^15.2.4",
+    "next-cloudinary": "^6.16.0",
     "react": ">=18.2.0",
     "react-dom": ">=18.2.0",
-    "styled-components": ">=5.3.11"
+    "styled-components": "^6.1.19"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.4",

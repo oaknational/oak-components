@@ -3,7 +3,7 @@ import styled from "styled-components";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 
-import { sizeStyle } from "@/styles/utils/sizeStyle";
+import { sizeStyle, SizeStyleProps } from "@/styles/utils/sizeStyle";
 
 describe("sizeStyle", () => {
   test.each([
@@ -20,7 +20,7 @@ describe("sizeStyle", () => {
       [prop]: value,
     };
 
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<SizeStyleProps>`
       ${sizeStyle}
     `;
     const { getByTestId } = render(
