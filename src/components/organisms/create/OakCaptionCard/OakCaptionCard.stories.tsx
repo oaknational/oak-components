@@ -51,6 +51,8 @@ export const Default: Story = {
     checked: false,
     highlighted: false,
     disabled: false,
+    lessonHref: "#lesson-uid-1",
+    editHref: "#edit-uid-1",
   },
   parameters: {
     controls: {
@@ -70,6 +72,8 @@ export const SetText: Story = {
     lastEdited: "2023-01-01",
     checked: false,
     highlighted: false,
+    lessonHref: "#lesson-uid-1",
+    editHref: "#edit-uid-1",
   },
   parameters: {
     controls: {

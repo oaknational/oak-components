@@ -368,16 +368,7 @@ input:checked + .c12 {
   text-decoration: underline;
 }
 
-.c2:has(input:not(:disabled)) {
-  cursor: default;
-}
-
-.c2:has(input:disabled) {
-  pointer-events: none;
-  cursor: none;
-}
-
-.c2:focus-within {
+.c2:has(input:focus) {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 

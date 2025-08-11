@@ -25,20 +25,11 @@ interface StyledFlexBoxWrapperProps {
 }
 
 const StyledFlexBox = styled(OakFlex)<StyledFlexBoxWrapperProps>`
-  &:has(input:not(:disabled)) {
-    cursor: default;
-  }
-
-  &:has(input:disabled) {
-    pointer-events: none;
-    cursor: none;
-  }
-
   &:hover:has(input:not(:disabled)) ${InternalCheckBoxLabelHoverDecor} {
     text-decoration: underline;
   }
 
-  &:focus-within {
+  &:has(input:focus) {
     box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
   }
@@ -165,7 +156,6 @@ export const OakCaptionCard = (props: OakCaptionCardProps) => {
             iconName="external"
             isTrailingIcon
             aria-label={`edit caption ${captionId} in a new tab in rev`}
-            displayDisabled={disabled}
           >
             Edit
           </OakHoverLink>
@@ -184,7 +174,6 @@ export const OakCaptionCard = (props: OakCaptionCardProps) => {
           data-testid="lesson_uid"
           iconName="external"
           isTrailingIcon
-          displayDisabled={disabled}
         >
           {lessonUid}
         </OakSecondaryLink>
