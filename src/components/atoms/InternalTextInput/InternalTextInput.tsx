@@ -40,15 +40,15 @@ const StyledInput = styled.input`
     font-size: 16px;
   }
 
-  ::placeholder {
+  &::placeholder {
     color: ${({ theme }) =>
       theme && theme.uiColors && parseColor(theme.uiColors["text-subdued"])};
   }
 
-  ::-webkit-search-decoration,
-  ::-webkit-search-cancel-button,
-  ::-webkit-search-results-button,
-  ::-webkit-search-results-decoration {
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
     appearance: none;
   }
 
