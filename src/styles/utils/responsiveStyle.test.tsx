@@ -105,9 +105,9 @@ describe("responsiveStyle", () => {
       pl: "0.5em",
     };
 
-    const actual = responsiveStyle(
+    const actual = responsiveStyle<TestProps, string | number>(
       "padding-left",
-      (props: TestProps) => props.pl,
+      (props) => props.pl,
     )(props);
     const expected = css`
       padding-left: 0.5em;

@@ -1,4 +1,4 @@
-import { css, Interpolation } from "styled-components";
+import { css, ExecutionProps, Interpolation } from "styled-components";
 
 import { truthy } from "@/styles/helpers/truthy";
 import { PropsWithTheme } from "@/styles/theme/theme";
@@ -39,16 +39,20 @@ export type ResponsiveValues<Value> = (Value | null) | (Value | null)[];
 type Generic = string | number | undefined | null;
 
 export const responsiveStyle =
-  <Props extends object, T extends Generic>(
+  <Props, T extends Generic>(
     attr: string,
-    getValues: (props: Props) => ResponsiveValues<T | undefined | null>,
+    getValues: (
+      props: Props & ExecutionProps,
+    ) => ResponsiveValues<T | undefined | null>,
     parse:
       | ((unparsed: T | undefined | null) => Generic)
       | ((
           unparsed: T | undefined | null,
         ) => (props: PropsWithTheme) => Generic) = (x) => x,
   ) =>
-  (props: Props): Interpolation<Omit<Props, "theme">> => {
+  (
+    props: Props & ExecutionProps,
+  ): Interpolation<Omit<Props & ExecutionProps, "theme">> => {
     const attrCss = (value: T | undefined | null) =>
       typeof value === "undefined"
         ? undefined
