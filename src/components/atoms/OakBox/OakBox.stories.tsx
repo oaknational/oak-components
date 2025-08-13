@@ -5,7 +5,6 @@ import styled from "styled-components";
 import { OakBox, OakBoxProps } from "./OakBox";
 
 import { OakFlex } from "@/components/atoms/OakFlex";
-import { parseColor } from "@/styles/helpers/parseColor";
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
@@ -14,7 +13,7 @@ import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";
 import { opacityArgTypes } from "@/storybook-helpers/opacityStyleHelpers";
 import { zIndexArgTypes } from "@/storybook-helpers/zIndexStyleHelpers";
 import { transitionArgTypes } from "@/storybook-helpers/transitionStyleHelpers";
-import { OakCombinedColorToken } from "@/styles";
+import { responsiveStyle } from "@/styles/utils/responsiveStyle";
 
 const meta: Meta<typeof OakBox> = {
   component: OakBox,
@@ -189,8 +188,7 @@ export const TransitionAndTransform: Story = {
     const HoverBox = styled(OakBox)<OakBoxProps>`
       &:hover {
         transform: ${() => args.$transform};
-        background-color: ${() =>
-          parseColor(args.$background as OakCombinedColorToken | null)};
+        ${responsiveStyle("background-color", () => args.$background)}
       }
     `;
     return (

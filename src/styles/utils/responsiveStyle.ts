@@ -1,7 +1,7 @@
 import { css, ExecutionProps, Interpolation } from "styled-components";
 
 import { truthy } from "@/styles/helpers/truthy";
-import { PropsWithTheme } from "@/styles/theme/theme";
+import { PropsWithTheme, ThemedStyledProps } from "@/styles/theme/theme";
 
 const breakpointsByName = {
   small: 750,
@@ -52,7 +52,7 @@ export const responsiveStyle =
   ) =>
   (
     props: Props & ExecutionProps,
-  ): Interpolation<Omit<Props & ExecutionProps, "theme">> => {
+  ): Interpolation<Omit<ThemedStyledProps<Props>, "theme">> => {
     const attrCss = (value: T | undefined | null) =>
       typeof value === "undefined"
         ? undefined
