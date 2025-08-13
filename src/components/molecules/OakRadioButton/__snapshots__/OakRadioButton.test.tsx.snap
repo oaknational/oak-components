@@ -102,7 +102,7 @@ exports[`RadioGroup matches snapshot 1`] = `
   align-items: center;
 }
 
-@media (hover:hover) {
+@media (hover: hover) {
   .c7:hover:not(:disabled) {
     border-color: #222222;
   }

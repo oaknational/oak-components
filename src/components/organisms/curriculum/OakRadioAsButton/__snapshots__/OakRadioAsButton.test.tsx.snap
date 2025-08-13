@@ -139,7 +139,7 @@ exports[`OakRadioAsButton matches snapshot 1`] = `
   }
 }
 
-@media (hover:hover) {
+@media (hover: hover) {
   .c5:hover:not(:disabled) {
     border-color: #222222;
   }
