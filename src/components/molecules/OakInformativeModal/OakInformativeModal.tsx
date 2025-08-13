@@ -1,8 +1,7 @@
 import React, { createContext, HTMLAttributes, ReactNode, useRef } from "react";
 import { createPortal } from "react-dom";
 
-import { OakCloseButton } from "../OakCloseButton";
-
+import { OakCloseButton } from "@/components/molecules/OakCloseButton";
 import { OakFlex } from "@/components/atoms";
 import useIsScrolled from "@/hooks/useIsScrolled";
 import useMounted from "@/hooks/useMounted";

@@ -1,9 +1,8 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
 
-import { OakHandDrawnCardWithIcon } from "../OakHandDrawnCardWithIcon";
-import { OakPromoTag } from "../OakPromoTag";
-
+import { OakHandDrawnCardWithIcon } from "@/components/molecules/OakHandDrawnCardWithIcon";
+import { OakPromoTag } from "@/components/molecules/OakPromoTag";
 import {
   OakFlex,
   OakBox,

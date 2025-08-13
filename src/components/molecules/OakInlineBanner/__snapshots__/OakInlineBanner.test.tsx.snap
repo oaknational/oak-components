@@ -329,7 +329,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
 }
 
 .c24:visited {
-  color: #575757;
+  color: #222222;
 }
 
 .c24:active {
@@ -467,7 +467,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
         className="c23 c9"
       >
         <a
-          className="c24"
+          className="c24 "
         >
           <span
             className="c25"
@@ -845,7 +845,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
 }
 
 .c25:visited {
-  color: #575757;
+  color: #222222;
 }
 
 .c25:active {
@@ -983,7 +983,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
         className="c24 c10"
       >
         <a
-          className="c25"
+          className="c25 "
         >
           <span
             className="c26"
@@ -1338,7 +1338,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
 }
 
 .c22:visited {
-  color: #575757;
+  color: #222222;
 }
 
 .c22:active {
@@ -1470,7 +1470,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
         className="c4 c9"
       >
         <a
-          className="c22"
+          className="c22 "
         >
           <span
             className="c23"

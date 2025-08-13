@@ -68,7 +68,7 @@ const UnstyledComponent = (props: OakUnitsHeaderProps) => {
       >
         <OakFlex $gap="space-between-ssx" $flexDirection="column">
           <OakFlex $gap="space-between-ssx">
-            <OakHeading $font="heading-5" tag="h2" $color={"text-primary"}>
+            <OakHeading $font="heading-5" tag="h3" $color={"text-primary"}>
               {isCustomUnit && customHeadingText
                 ? customHeadingText
                 : standardHeadingText}

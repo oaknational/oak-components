@@ -2,10 +2,9 @@ import React from "react";
 import { StoryObj, Meta } from "@storybook/react";
 import { useArgs } from "@storybook/preview-api";
 
-import { OakPrimaryButton } from "../OakPrimaryButton";
-
 import { OakToast } from "./OakToast";
 
+import { OakPrimaryButton } from "@/components/molecules/OakPrimaryButton";
 import { OakFlex } from "@/components/atoms";
 
 const meta: Meta<typeof OakToast> = {

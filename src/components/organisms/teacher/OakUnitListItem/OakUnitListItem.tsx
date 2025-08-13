@@ -8,6 +8,7 @@ import {
   OakLI,
   OakBox,
   OakIcon,
+  OakSpan,
 } from "@/components/atoms";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
@@ -142,13 +143,12 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
             $minWidth="all-spacing-11"
             $alignSelf="stretch"
           >
-            <OakHeading
-              tag="h3"
+            <OakSpan
               $font={"heading-5"}
               $color={unavailable ? "text-disabled" : "text-primary"}
             >
               {index}
-            </OakHeading>
+            </OakSpan>
           </StyledOakIndexBox>
           <OakFlex $pv="inner-padding-l" $pr="inner-padding-m" $flexGrow={1}>
             <OakP

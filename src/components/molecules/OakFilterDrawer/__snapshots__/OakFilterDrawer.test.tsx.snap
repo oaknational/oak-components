@@ -310,7 +310,7 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
 }
 
 .c7:visited {
-  color: #575757;
+  color: #222222;
 }
 
 .c7:active {

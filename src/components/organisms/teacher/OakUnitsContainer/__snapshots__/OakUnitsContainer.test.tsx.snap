@@ -420,11 +420,11 @@ exports[`OakUnitsContainer matches snapshot 1`] = `
       <div
         className="c2 c6"
       >
-        <h2
+        <h3
           className="c7"
         >
           maths units
-        </h2>
+        </h3>
         <div
           className="c8 c9 c10"
         >

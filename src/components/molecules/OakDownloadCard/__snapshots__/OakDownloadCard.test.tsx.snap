@@ -1,7 +1,169 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OakDownloadCheckBox matches snapshot with fileSizeSlot 1`] = `
+exports[`OakDownloadCard matches snapshot with fileSizeSlot 1`] = `
+.c0 {
+  overflow: hidden;
+  color: #222222;
+  background: #ffffff;
+  border: 0.125rem solid;
+  border-radius: 0.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+  overflow: hidden;
+}
+
+.c4 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c6 {
+  padding: 0.75rem;
+  background: #ffe555;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c8 {
+  position: relative;
+  width: 3rem;
+  min-width: 3rem;
+  height: 3rem;
+  min-height: 3rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c10 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c12 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c13 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c14 {
+  padding-right: 1rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c16 {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c22 {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c24 {
+  position: relative;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  min-height: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c9 {
+  object-fit: contain;
+}
+
+.c25 {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  object-fit: contain;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  gap: 0.25rem;
+}
+
 .c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c18 {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -17,175 +179,55 @@ exports[`OakDownloadCheckBox matches snapshot with fileSizeSlot 1`] = `
   border-color: #808080;
 }
 
-.c15:checked {
+.c18:checked {
   background: #222222;
   border-color: #222222;
 }
 
-.c15:disabled {
+.c18:disabled {
   pointer-events: none;
 }
 
-.c17:focus-visible {
+.c20:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
 }
 
-.c0 {
-  overflow: hidden;
-  border: 0.125rem solid;
-  border-radius: 0.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-  overflow: hidden;
-}
-
-.c3 {
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c4 {
-  padding: 0.75rem;
-  background: #ffe555;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c6 {
-  position: relative;
-  width: 3rem;
-  min-width: 3rem;
-  height: 3rem;
-  min-height: 3rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c8 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c10 {
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
-  letter-spacing: -0.005rem;
-}
-
-.c11 {
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 300;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
-  letter-spacing: -0.005rem;
-}
-
-.c12 {
-  padding-right: 1rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c13 {
-  position: relative;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c19 {
-  position: absolute;
-  top: 0rem;
-  left: 0rem;
-  width: 1.5rem;
-  height: 1.5rem;
-  padding: 0rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c21 {
-  position: relative;
-  width: 100%;
-  min-width: 100%;
-  height: 100%;
-  min-height: 100%;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c7 {
-  object-fit: contain;
-}
-
-.c22 {
-  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
-  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
-  object-fit: contain;
-}
-
-.c20 {
+.c23 {
   pointer-events: none;
   opacity: 0;
 }
 
-input:checked + .c18 {
+input:checked + .c21 {
   opacity: 1;
 }
 
-.c1 {
+.c3 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  gap: 0.25rem;
 }
 
 .c2 {
   cursor: pointer;
 }
 
-.c2:has(input:focus-within):has(:focus-visible) {
+.c2:has(input:focus-within):focus-visible {
   box-shadow: 0px 0px 0px 2px #ffe555, 0px 0px 0px 5px #575757;
 }
 
 @media (hover:hover) {
-  .c15:hover:not(:disabled) {
+  .c18:hover:not(:disabled) {
     border-color: #222222;
   }
 }
 
 @media (hover:hover) {
-  .c16:hover:not(.c14:checked):not(.c14:disabled)::after {
+  .c19:hover:not(.c17:checked):not(.c17:disabled)::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -210,25 +252,20 @@ input:checked + .c18 {
   className="c0 c1 c2"
 >
   <label
-    style={
-      {
-        "cursor": "pointer",
-        "flex": 1,
-      }
-    }
+    className="c3"
   >
     <div
-      className="c3 c1"
+      className="c4 c5"
     >
       <div
-        className="c4 c5"
+        className="c6 c7"
       >
         <div
-          className="c6"
+          className="c8"
         >
           <img
             alt=""
-            className="c7"
+            className="c9"
             data-nimg="fill"
             decoding="async"
             loading="lazy"
@@ -253,49 +290,53 @@ input:checked + .c18 {
         </div>
       </div>
       <div
-        className="c8 c9"
+        className="c10 c11"
       >
         <div
-          className="c10"
+          className="c12"
         >
           TITLE
         </div>
         <div
-          className="c11"
+          className="c13"
         >
           FILE_SIZE
         </div>
         <div
-          className="c11"
+          className="c13"
         >
           FORMAT
         </div>
       </div>
+    </div>
+    <div
+      className="c4 c1"
+    >
       <div
-        className="c12 c5"
+        className="c14 c15"
       >
         <div
-          className="c13"
+          className="c16"
         >
           <input
-            className="c14 c15 c16 c17"
+            className="c17 c18 c19 c20"
             disabled={false}
             id="checkbox-1"
-            name="checkbox-1"
+            name="default"
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             type="checkbox"
             value="Option 1"
           />
           <div
-            className="c18 c19 c20"
+            className="c21 c22 c23"
           >
             <div
-              className="c21"
+              className="c24"
             >
               <img
                 alt=""
-                className="c22"
+                className="c25"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"
@@ -326,8 +367,170 @@ input:checked + .c18 {
 </div>
 `;
 
-exports[`OakDownloadCheckBox matches snapshot without fileSizeSlot 1`] = `
+exports[`OakDownloadCard matches snapshot without fileSizeSlot 1`] = `
+.c0 {
+  overflow: hidden;
+  color: #222222;
+  background: #ffffff;
+  border: 0.125rem solid;
+  border-radius: 0.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+  overflow: hidden;
+}
+
+.c4 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c6 {
+  padding: 0.75rem;
+  background: #ffe555;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c8 {
+  position: relative;
+  width: 3rem;
+  min-width: 3rem;
+  height: 3rem;
+  min-height: 3rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c10 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c12 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c13 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c14 {
+  padding-right: 1rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c16 {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c22 {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c24 {
+  position: relative;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  min-height: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c9 {
+  object-fit: contain;
+}
+
+.c25 {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  object-fit: contain;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  gap: 0.25rem;
+}
+
 .c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c18 {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -343,175 +546,55 @@ exports[`OakDownloadCheckBox matches snapshot without fileSizeSlot 1`] = `
   border-color: #808080;
 }
 
-.c15:checked {
+.c18:checked {
   background: #222222;
   border-color: #222222;
 }
 
-.c15:disabled {
+.c18:disabled {
   pointer-events: none;
 }
 
-.c17:focus-visible {
+.c20:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
 }
 
-.c0 {
-  overflow: hidden;
-  border: 0.125rem solid;
-  border-radius: 0.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-  overflow: hidden;
-}
-
-.c3 {
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c4 {
-  padding: 0.75rem;
-  background: #ffe555;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c6 {
-  position: relative;
-  width: 3rem;
-  min-width: 3rem;
-  height: 3rem;
-  min-height: 3rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c8 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c10 {
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
-  letter-spacing: -0.005rem;
-}
-
-.c11 {
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 300;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
-  letter-spacing: -0.005rem;
-}
-
-.c12 {
-  padding-right: 1rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c13 {
-  position: relative;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c19 {
-  position: absolute;
-  top: 0rem;
-  left: 0rem;
-  width: 1.5rem;
-  height: 1.5rem;
-  padding: 0rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c21 {
-  position: relative;
-  width: 100%;
-  min-width: 100%;
-  height: 100%;
-  min-height: 100%;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c7 {
-  object-fit: contain;
-}
-
-.c22 {
-  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
-  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
-  object-fit: contain;
-}
-
-.c20 {
+.c23 {
   pointer-events: none;
   opacity: 0;
 }
 
-input:checked + .c18 {
+input:checked + .c21 {
   opacity: 1;
 }
 
-.c1 {
+.c3 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  gap: 0.25rem;
 }
 
 .c2 {
   cursor: pointer;
 }
 
-.c2:has(input:focus-within):has(:focus-visible) {
+.c2:has(input:focus-within):focus-visible {
   box-shadow: 0px 0px 0px 2px #ffe555, 0px 0px 0px 5px #575757;
 }
 
 @media (hover:hover) {
-  .c15:hover:not(:disabled) {
+  .c18:hover:not(:disabled) {
     border-color: #222222;
   }
 }
 
 @media (hover:hover) {
-  .c16:hover:not(.c14:checked):not(.c14:disabled)::after {
+  .c19:hover:not(.c17:checked):not(.c17:disabled)::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -536,25 +619,20 @@ input:checked + .c18 {
   className="c0 c1 c2"
 >
   <label
-    style={
-      {
-        "cursor": "pointer",
-        "flex": 1,
-      }
-    }
+    className="c3"
   >
     <div
-      className="c3 c1"
+      className="c4 c5"
     >
       <div
-        className="c4 c5"
+        className="c6 c7"
       >
         <div
-          className="c6"
+          className="c8"
         >
           <img
             alt=""
-            className="c7"
+            className="c9"
             data-nimg="fill"
             decoding="async"
             loading="lazy"
@@ -579,44 +657,48 @@ input:checked + .c18 {
         </div>
       </div>
       <div
-        className="c8 c9"
+        className="c10 c11"
       >
         <div
-          className="c10"
+          className="c12"
         >
           TITLE
         </div>
         <div
-          className="c11"
+          className="c13"
         >
           FORMAT
         </div>
       </div>
+    </div>
+    <div
+      className="c4 c1"
+    >
       <div
-        className="c12 c5"
+        className="c14 c15"
       >
         <div
-          className="c13"
+          className="c16"
         >
           <input
-            className="c14 c15 c16 c17"
+            className="c17 c18 c19 c20"
             disabled={false}
             id="checkbox-1"
-            name="checkbox-1"
+            name="default"
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             type="checkbox"
             value="Option 1"
           />
           <div
-            className="c18 c19 c20"
+            className="c21 c22 c23"
           >
             <div
-              className="c21"
+              className="c24"
             >
               <img
                 alt=""
-                className="c22"
+                className="c25"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"

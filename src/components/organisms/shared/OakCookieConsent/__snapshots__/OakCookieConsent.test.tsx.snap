@@ -215,46 +215,6 @@ exports[`OakCookieConsent matches snapshot 1`] = `
   cursor: default;
 }
 
-.c10 {
-  display: inline;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.25rem;
-  outline: none;
-  border-radius: 0.375rem;
-  padding: 0.25rem;
-  margin: -0.25rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  font: inherit;
-  background: none;
-  border: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  cursor: pointer;
-  color: #222222;
-}
-
-.c10:focus-visible {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
-}
-
-.c10:visited {
-  color: #575757;
-}
-
-.c10:active {
-  color: #222222;
-}
-
-.c10[disabled] {
-  cursor: not-allowed;
-  color: #808080;
-}
-
 .c16 {
   position: relative;
   width: 100%;
@@ -332,6 +292,46 @@ exports[`OakCookieConsent matches snapshot 1`] = `
 
 .c13 .yellow-shadow:has(+ .internal-button:active) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c10 {
+  display: inline;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.25rem;
+  outline: none;
+  border-radius: 0.375rem;
+  padding: 0.25rem;
+  margin: -0.25rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font: inherit;
+  background: none;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #222222;
+}
+
+.c10:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c10:visited {
+  color: #222222;
+}
+
+.c10:active {
+  color: #222222;
+}
+
+.c10[disabled] {
+  cursor: not-allowed;
+  color: #808080;
 }
 
 @media (min-width:750px) {
@@ -523,7 +523,7 @@ exports[`OakCookieConsent matches snapshot 1`] = `
           className="c8 c9"
         >
           <button
-            className="c10"
+            className="c10 "
             data-testid="cookie-banner-reject"
             onClick={[Function]}
             type="button"

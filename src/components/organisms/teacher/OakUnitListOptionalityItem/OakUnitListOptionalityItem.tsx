@@ -106,7 +106,7 @@ const StyledUnitHeading = ({
       <OakHeading
         $color={unavailable ? "text-disabled" : "text-primary"}
         $font={"heading-7"}
-        tag="h3"
+        tag="h4"
       >
         {children}
       </OakHeading>
