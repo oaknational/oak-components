@@ -20,7 +20,7 @@ exports[`OakRadioAsButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 :hover {
+.c2:hover {
   cursor: pointer;
 }
 
@@ -133,13 +133,13 @@ exports[`OakRadioAsButton matches snapshot 1`] = `
   color: #ffffff;
 }
 
-@media (hover: hover) {
+@media (hover:hover) {
   .c12:hover {
     text-decoration: underline;
   }
 }
 
-@media (hover: hover) {
+@media (hover:hover) {
   .c5:hover:not(:disabled) {
     border-color: #222222;
   }

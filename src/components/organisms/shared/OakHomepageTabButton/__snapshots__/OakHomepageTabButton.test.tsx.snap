@@ -77,22 +77,22 @@ exports[`OakHomepageTabButton component matches snapshot 1`] = `
   text-align: center;
 }
 
-.c1 :hover .buttonText {
+.c1:hover .buttonText {
   text-decoration: underline;
   color: #222222;
 }
 
-.c1 :focus .focusUnderlineSvg {
+.c1:focus .focusUnderlineSvg {
   display: block;
   filter: invert(82%) sepia(25%) saturate(963%) hue-rotate(359deg) brightness(106%) contrast(101%) drop-shadow(0.063rem 0.125rem 0 rgba(0,0,0, 100%));
   transform: rotate(-2deg);
 }
 
-.c1 :focus .activeUnderline {
+.c1:focus .activeUnderline {
   display: none;
 }
 
-.c1 :focus .focusUnderline {
+.c1:focus .focusUnderline {
   display: block;
 }
 

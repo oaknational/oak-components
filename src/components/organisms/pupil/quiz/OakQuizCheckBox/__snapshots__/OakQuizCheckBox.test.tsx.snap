@@ -16,7 +16,7 @@ exports[`OakQuizCheckBox matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 :hover {
+.c2:hover {
   cursor: pointer;
 }
 
@@ -136,7 +136,7 @@ input:checked+.c13 {
   box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
-@media (hover: hover) {
+@media (hover:hover) {
   .c8:hover {
     text-decoration: underline;
   }

@@ -15,7 +15,7 @@ exports[`OakQuizTextInput matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c0 :hover {
+.c0:hover {
   cursor: pointer;
 }
 
@@ -61,7 +61,7 @@ exports[`OakQuizTextInput matches snapshot 1`] = `
   appearance: none;
 }
 
-.c5 :disabled {
+.c5:disabled {
   cursor: not-allowed;
 }
 

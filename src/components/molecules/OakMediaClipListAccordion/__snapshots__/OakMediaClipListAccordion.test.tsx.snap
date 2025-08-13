@@ -21,7 +21,7 @@ exports[`OakMediaClipListAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c6 :hover {
+.c6:hover {
   cursor: pointer;
 }
 

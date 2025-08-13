@@ -21,7 +21,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 :hover {
+.c8:hover {
   cursor: pointer;
 }
 

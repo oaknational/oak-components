@@ -60,7 +60,7 @@ exports[`OakSideMenuNavLink matches snapshot 1`] = `
   padding-right: 0rem;
 }
 
-.c0 :focus-visible {
+.c0:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
   border-color: transparent;
   border-radius: 4px;
@@ -93,7 +93,7 @@ exports[`OakSideMenuNavLink matches snapshot 1`] = `
     border-left: 4px solid transparent;
   }
 
-  .c0 :hover {
+  :.c0hover {
     text-decoration: underline;
     border-color: #bef2bd;
   }

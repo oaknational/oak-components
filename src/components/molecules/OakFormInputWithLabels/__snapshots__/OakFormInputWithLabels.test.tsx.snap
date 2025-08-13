@@ -26,7 +26,7 @@ exports[`OakFormInputWithLabels should match snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c5 :hover {
+.c5:hover {
   cursor: pointer;
 }
 
@@ -70,7 +70,7 @@ exports[`OakFormInputWithLabels should match snapshot 1`] = `
   appearance: none;
 }
 
-.c8 :disabled {
+.c8:disabled {
   cursor: not-allowed;
 }
 

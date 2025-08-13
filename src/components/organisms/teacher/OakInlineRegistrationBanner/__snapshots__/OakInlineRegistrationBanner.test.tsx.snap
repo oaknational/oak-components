@@ -64,7 +64,7 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c12 :hover {
+.c12:hover {
   cursor: pointer;
 }
 
@@ -256,7 +256,7 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
   appearance: none;
 }
 
-.c16 :disabled {
+.c16:disabled {
   cursor: not-allowed;
 }
 

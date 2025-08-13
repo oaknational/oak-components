@@ -6,7 +6,7 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
   z-index: 300;
 }
 
-.c0 :hover {
+.c0:hover {
   cursor: pointer;
 }
 

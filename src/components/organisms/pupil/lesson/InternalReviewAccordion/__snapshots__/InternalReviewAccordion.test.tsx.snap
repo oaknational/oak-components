@@ -150,7 +150,7 @@ exports[`InternalReviewAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c5 :hover {
+.c5:hover {
   cursor: pointer;
 }
 

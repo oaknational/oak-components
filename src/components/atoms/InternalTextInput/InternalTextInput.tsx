@@ -52,7 +52,7 @@ const StyledInput = styled.input<SpacingStyleProps & SizeStyleProps>`
     appearance: none;
   }
 
-  :disabled {
+  &:disabled {
     cursor: not-allowed;
   }
 

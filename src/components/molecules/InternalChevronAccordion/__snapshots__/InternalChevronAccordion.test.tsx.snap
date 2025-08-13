@@ -12,7 +12,7 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c3 :hover {
+.c3:hover {
   cursor: pointer;
 }
 

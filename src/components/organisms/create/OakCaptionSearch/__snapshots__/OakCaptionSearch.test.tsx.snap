@@ -34,7 +34,7 @@ exports[`OakCaptionSearch should match snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c8 :hover {
+.c8:hover {
   cursor: pointer;
 }
 
@@ -224,7 +224,7 @@ exports[`OakCaptionSearch should match snapshot 1`] = `
   appearance: none;
 }
 
-.c11 :disabled {
+.c11:disabled {
   cursor: not-allowed;
 }
 

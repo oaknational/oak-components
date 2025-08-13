@@ -76,11 +76,11 @@ exports[`OakSaveCount should match snapshot 1`] = `
   cursor: default;
 }
 
-.c1 :hover .oak-save-count {
+.c1:hover .oak-save-count {
   background-color: #bef2bd;
 }
 
-.c1 :focus-visible .oak-save-count {
+.c1:focus-visible .oak-save-count {
   box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 

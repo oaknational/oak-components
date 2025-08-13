@@ -25,7 +25,7 @@ exports[`OakFormInput should match snapshot 1`] = `
   appearance: none;
 }
 
-.c3 :disabled {
+.c3:disabled {
   cursor: not-allowed;
 }
 
@@ -45,7 +45,7 @@ exports[`OakFormInput should match snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c0 :hover {
+.c0:hover {
   cursor: pointer;
 }
 

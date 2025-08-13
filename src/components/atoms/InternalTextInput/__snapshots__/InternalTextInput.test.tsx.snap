@@ -20,7 +20,7 @@ exports[`InternalTextInput matches snapshot 1`] = `
   appearance: none;
 }
 
-.c0 :disabled {
+.c0:disabled {
   cursor: not-allowed;
 }
 
