@@ -15,8 +15,13 @@ export const OakInformativeModalBody = (
   props: OakInformativeModalBodyProps,
 ) => {
   return (
-    <OakBox $pa="inner-padding-m" $pt="inner-padding-none" $minHeight={"100%"}>
-      {props.children}
+    <OakBox $position={"relative"} $minHeight={"100%"}>
+      <OakBox
+        $ph={["inner-padding-m", "inner-padding-xl6", "inner-padding-xl6"]}
+        $pv={["inner-padding-m", "inner-padding-xl5", "inner-padding-xl5"]}
+      >
+        {props.children}
+      </OakBox>
     </OakBox>
   );
 };
