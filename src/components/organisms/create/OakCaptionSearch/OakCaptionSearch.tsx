@@ -5,6 +5,7 @@ import { OakPrimaryButton } from "@/components/molecules";
 import { OakFormInputWithLabels } from "@/components/molecules/OakFormInputWithLabels/OakFormInputWithLabels";
 
 export interface OakCaptionSearchProps {
+  defaultValue?: string;
   /**
    * Callback function that is called when the search is submitted.
    * It receives the caption ID string as an argument.
@@ -29,6 +30,7 @@ export const OakCaptionSearch = ({
   hasError,
   errorText,
   isLoading = false,
+  defaultValue,
 }: OakCaptionSearchProps) => {
   const handleFormSubmit = (event: React.FormEvent) => {
     // NB. we don't handle caption ID validation here to remain decoupled from the application logic
@@ -62,6 +64,7 @@ export const OakCaptionSearch = ({
         invalid={hasError}
         invalidText={errorText}
         disabled={isLoading}
+        defaultValue={defaultValue}
         required
       />
       <OakPrimaryButton

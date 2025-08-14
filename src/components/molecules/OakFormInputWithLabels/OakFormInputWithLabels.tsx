@@ -31,6 +31,10 @@ export interface OakFormInputWithLabelsProps {
 
   value?: string;
   /**
+   * The initial value of the input field. Use this in controlled components.
+   */
+  defaultValue?: string;
+  /**
    * Disables the input field, preventing user interaction.
    */
   disabled?: boolean;
@@ -64,6 +68,7 @@ export const OakFormInputWithLabels = ({
   inputName,
   disabled = false,
   required = false,
+  defaultValue,
   onChange = () => {},
   onInitialFocus = () => {},
   onBlur = () => {},
@@ -88,6 +93,7 @@ export const OakFormInputWithLabels = ({
         onBlur={onBlur}
         disabled={disabled}
         aria-describedby={invalid ? `error-${inputId}` : undefined}
+        defaultValue={defaultValue}
         required={required}
       />
       {invalid && invalidText && (

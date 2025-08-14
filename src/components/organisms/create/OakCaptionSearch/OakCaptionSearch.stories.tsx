@@ -43,3 +43,10 @@ export const Loading: Story = {
     isLoading: true,
   },
 };
+
+export const DefaultValue: Story = {
+  render: (args) => <OakCaptionSearch {...args} />,
+  args: {
+    defaultValue: "test-caption-id",
+  },
+};

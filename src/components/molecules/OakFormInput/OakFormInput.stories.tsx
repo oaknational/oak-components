@@ -47,3 +47,9 @@ export const Invalid: Story = {
     invalid: true,
   },
 };
+
+export const DefaultText: Story = {
+  args: {
+    defaultValue: "A default text value",
+  },
+};

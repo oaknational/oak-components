@@ -67,3 +67,11 @@ export const Disabled: Story = {
     disabled: true,
   },
 };
+
+export const DefaultValue: Story = {
+  args: {
+    label: "Email Address",
+    placeholder: "Enter your email",
+    defaultValue: "test@example.com",
+  },
+};
