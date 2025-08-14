@@ -6,27 +6,14 @@ exports[`OakQuizCounter matches snapshot 1`] = `
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: end;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
   align-items: end;
   gap: 0.75rem;
 }
 
 .c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
@@ -37,9 +24,6 @@ exports[`OakQuizCounter matches snapshot 1`] = `
   font-weight: 400;
   font-size: 2rem;
   line-height: 2.5rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
 }
 
@@ -49,9 +33,6 @@ exports[`OakQuizCounter matches snapshot 1`] = `
   font-weight: 600;
   font-size: 2rem;
   line-height: 2.5rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
 }
 

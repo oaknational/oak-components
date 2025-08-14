@@ -9,9 +9,6 @@ exports[`OakAspectRatio matches snapshot 1`] = `
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   position: absolute;
   right: 0;
@@ -22,6 +19,7 @@ exports[`OakAspectRatio matches snapshot 1`] = `
 
 <div
   className="c0"
+  ratio="16:9"
 >
   <div
     className="c1"

@@ -3,11 +3,14 @@ import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import styled from "styled-components";
 
-import { typographyStyle } from "@/styles/utils/typographyStyle";
+import {
+  typographyStyle,
+  TypographyStyleProps,
+} from "@/styles/utils/typographyStyle";
 
 describe("typographyStyle", () => {
   test("should correctly handle prop 'font'", async () => {
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<TypographyStyleProps>`
       ${typographyStyle}
     `;
     const { getByTestId } = render(
@@ -32,7 +35,7 @@ describe("typographyStyle", () => {
       [prop]: value,
     };
 
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<TypographyStyleProps>`
       ${typographyStyle}
     `;
     const { getByTestId } = render(

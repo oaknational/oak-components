@@ -95,7 +95,7 @@ export const OakVideoTranscript = ({
           isOpen={showTranscript}
           $font="body-2"
           $color="text-primary"
-          $pa={"space-between-xs"}
+          $pa={"inner-padding-s"}
           $mt={["space-between-s", "space-between-m2"]}
           aria-live="polite"
         >

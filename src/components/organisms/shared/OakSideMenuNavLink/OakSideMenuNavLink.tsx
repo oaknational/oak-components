@@ -25,7 +25,7 @@ const StyledLink = styled("a")<
   @media (min-width: ${getBreakpoint("small")}px) {
     border-left: ${(props) =>
       props.isSelected ? "4px solid #222222" : "4px solid transparent"};
-    :hover {
+    :&hover {
       text-decoration: underline;
       border-color: ${(props) =>
         props.isSelected
@@ -34,7 +34,7 @@ const StyledLink = styled("a")<
     }
   }
 
-  :focus-visible {
+  &:focus-visible {
     box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
     border-color: transparent;

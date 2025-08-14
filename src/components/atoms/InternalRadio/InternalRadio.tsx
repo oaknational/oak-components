@@ -76,7 +76,7 @@ const BaseRadio = forwardRef(
   },
 );
 
-type StyledBaseRadioProps = BaseRadioProps &
+export type StyledBaseRadioProps = BaseRadioProps &
   ColorStyleProps &
   SpacingStyleProps &
   BorderStyleProps &

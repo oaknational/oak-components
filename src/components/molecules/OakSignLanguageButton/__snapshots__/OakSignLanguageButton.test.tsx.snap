@@ -9,8 +9,6 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
 
 .c1 {
   position: relative;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -38,26 +36,14 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
 }
 
 .c10 {
-  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
 }
 
 .c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   gap: 0.25rem;
 }
@@ -67,9 +53,6 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
   font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
   text-align: left;
 }
@@ -109,7 +92,6 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
 }
 
 .c5:hover {
-  -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #222222;
   background: #f2f2f2;
@@ -129,16 +111,16 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
 }
 
 .c2 .grey-shadow:has(+ * + .internal-button:focus-visible) {
-  box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 .c2 .yellow-shadow:has(+ .internal-button:focus-visible) {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%);
 }
 
 .c2 .yellow-shadow:has(+ .internal-button:hover),
-.c2 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
-  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+.c2 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible, :active)) {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%);
 }
 
 .c2 .grey-shadow:has(+ * + .internal-button:hover) {
@@ -146,20 +128,20 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
 }
 
 .c2 .grey-shadow:has(+ * + .internal-button:active) {
-  box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+  box-shadow: 0.25rem 0.25rem 0 rgba(87, 87, 87, 100%);
 }
 
 .c2 .yellow-shadow:has(+ .internal-button:active) {
-  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+  box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%);
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c0 {
     display: block;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
 
 }
 
@@ -224,8 +206,6 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
   </div>,
   .c1 {
   position: relative;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -249,20 +229,9 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
 }
 
 .c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   gap: 0.25rem;
 }
@@ -272,9 +241,6 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
   font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
   text-align: left;
 }
@@ -314,7 +280,6 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
 }
 
 .c5:hover {
-  -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #222222;
   background: #f2f2f2;
@@ -334,16 +299,16 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
 }
 
 .c2 .grey-shadow:has(+ * + .internal-button:focus-visible) {
-  box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 .c2 .yellow-shadow:has(+ .internal-button:focus-visible) {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%);
 }
 
 .c2 .yellow-shadow:has(+ .internal-button:hover),
-.c2 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
-  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+.c2 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible, :active)) {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%);
 }
 
 .c2 .grey-shadow:has(+ * + .internal-button:hover) {
@@ -351,18 +316,18 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
 }
 
 .c2 .grey-shadow:has(+ * + .internal-button:active) {
-  box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+  box-shadow: 0.25rem 0.25rem 0 rgba(87, 87, 87, 100%);
 }
 
 .c2 .yellow-shadow:has(+ .internal-button:active) {
-  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+  box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%);
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
 
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c0 {
     display: none;
   }

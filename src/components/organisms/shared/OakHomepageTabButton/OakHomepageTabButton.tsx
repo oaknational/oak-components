@@ -22,23 +22,23 @@ import { InternalStyledSvg } from "@/components/atoms/InternalStyledSvg";
 import { Underline } from "@/svgs";
 
 const StyledButton = styled(InternalButton)`
-  :hover .buttonText {
+  &:hover .buttonText {
     text-decoration: underline;
     color: ${parseColor("black")};
   }
 
-  :focus .focusUnderlineSvg {
+  &:focus .focusUnderlineSvg {
     display: block;
     filter: ${parseColorFilter("lemon")}
       drop-shadow(${parseDropShadow("drop-shadow-black")});
     transform: rotate(-2deg);
   }
 
-  :focus .activeUnderline {
+  &:focus .activeUnderline {
     display: none;
   }
 
-  :focus .focusUnderline {
+  &:focus .focusUnderline {
     display: block;
   }
   .activeUnderlineSvg,

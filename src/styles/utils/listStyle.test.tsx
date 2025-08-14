@@ -3,11 +3,11 @@ import styled from "styled-components";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 
-import { listStyle } from "./listStyle";
+import { listStyle, ListStyleProps } from "./listStyle";
 
 describe("listStyle", () => {
   test("should correctly handle prop 'listStyle' as string", async () => {
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<ListStyleProps>`
       ${listStyle}
     `;
     const { getByTestId } = render(

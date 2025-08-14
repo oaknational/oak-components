@@ -8,9 +8,6 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   border-color: #a0b6f2;
   border-radius: 0.375rem;
   border-style: solid;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -36,8 +33,6 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
 
 .c8 {
   position: relative;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -81,9 +76,6 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.5rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
@@ -93,7 +85,6 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
 }
 
 .c6 {
-  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
 }
@@ -103,107 +94,47 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
   align-items: start;
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
   align-items: start;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   gap: 0.75rem;
 }
 
 .c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-order: 2;
-  -ms-flex-order: 2;
   order: 2;
 }
 
 .c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   gap: 0rem;
 }
 
 .c15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 
 .c20 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
   align-items: start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
   order: 1;
   gap: 0.25rem;
 }
@@ -213,9 +144,6 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
 }
 
@@ -224,9 +152,6 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
 }
 
@@ -259,13 +184,11 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
 }
 
 .c12:hover {
-  -webkit-text-decoration: underline;
   text-decoration: underline;
   color: transparent;
 }
 
 .c12:hover:not(:active) [data-icon-for="button"] img {
-  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
 }
 
@@ -277,55 +200,49 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   color: transparent;
 }
 
-.c10 > :first-child:focus-visible .shadow {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+.c10 >:first-child:focus-visible .shadow {
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
-.c10 > :first-child:hover .shadow {
-  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+.c10 >:first-child:hover .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%);
 }
 
-.c10 > :first-child:active .shadow {
-  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+.c10 >:first-child:active .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%),0.25rem 0.25rem 0 rgba(87, 87, 87, 100%);
 }
 
-.c10 > :first-child:disabled .icon-container {
+.c10 >:first-child:disabled .icon-container {
   background: transparent;
 }
 
-.c10 > :first-child:hover .icon-container {
+.c10 >:first-child:hover .icon-container {
   background: #222222;
 }
 
-.c10 > :first-child:active .icon-container {
+.c10 >:first-child:active .icon-container {
   background: transparent;
 }
 
 .c24 {
   display: inline;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 0.25rem;
   outline: none;
   border-radius: 0.375rem;
   padding: 0.25rem;
   margin: -0.25rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   font: inherit;
   background: none;
   border: none;
-  -webkit-text-decoration: underline;
   text-decoration: underline;
   cursor: pointer;
   color: #222222;
 }
 
 .c24:focus-visible {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 .c24:visited {
@@ -341,7 +258,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   color: #808080;
 }
 
-@media (hover:hover) {
+@media (hover: hover) {
   .c24:hover,
   .c24:visited:hover {
     color: #222222;
@@ -517,9 +434,6 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   border-color: #a0b6f2;
   border-radius: 0.375rem;
   border-style: solid;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -552,8 +466,6 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
 
 .c9 {
   position: relative;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -597,9 +509,6 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.5rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
@@ -609,7 +518,6 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
 }
 
 .c6 {
-  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
 }
@@ -619,107 +527,47 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
   align-items: start;
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
   align-items: start;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   gap: 0.75rem;
 }
 
 .c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-order: 2;
-  -ms-flex-order: 2;
   order: 2;
 }
 
 .c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .c14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   gap: 0rem;
 }
 
 .c16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 
 .c21 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
   align-items: start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
   order: 1;
   gap: 1rem;
 }
@@ -729,9 +577,6 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.5rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
 }
 
@@ -740,9 +585,6 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
 }
 
@@ -775,13 +617,11 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
 }
 
 .c13:hover {
-  -webkit-text-decoration: underline;
   text-decoration: underline;
   color: transparent;
 }
 
 .c13:hover:not(:active) [data-icon-for="button"] img {
-  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
 }
 
@@ -793,55 +633,49 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   color: transparent;
 }
 
-.c11 > :first-child:focus-visible .shadow {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+.c11 >:first-child:focus-visible .shadow {
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
-.c11 > :first-child:hover .shadow {
-  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+.c11 >:first-child:hover .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%);
 }
 
-.c11 > :first-child:active .shadow {
-  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+.c11 >:first-child:active .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%),0.25rem 0.25rem 0 rgba(87, 87, 87, 100%);
 }
 
-.c11 > :first-child:disabled .icon-container {
+.c11 >:first-child:disabled .icon-container {
   background: transparent;
 }
 
-.c11 > :first-child:hover .icon-container {
+.c11 >:first-child:hover .icon-container {
   background: #222222;
 }
 
-.c11 > :first-child:active .icon-container {
+.c11 >:first-child:active .icon-container {
   background: transparent;
 }
 
 .c25 {
   display: inline;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 0.25rem;
   outline: none;
   border-radius: 0.375rem;
   padding: 0.25rem;
   margin: -0.25rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   font: inherit;
   background: none;
   border: none;
-  -webkit-text-decoration: underline;
   text-decoration: underline;
   cursor: pointer;
   color: #222222;
 }
 
 .c25:focus-visible {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 .c25:visited {
@@ -857,7 +691,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   color: #808080;
 }
 
-@media (hover:hover) {
+@media (hover: hover) {
   .c25:hover,
   .c25:visited:hover {
     color: #222222;
@@ -1033,9 +867,6 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   border-color: #a0b6f2;
   border-radius: 0.375rem;
   border-style: solid;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -1061,8 +892,6 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
 
 .c8 {
   position: relative;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -1106,14 +935,10 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.5rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
 .c6 {
-  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
 }
@@ -1123,107 +948,47 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: end;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
   align-items: end;
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   gap: 0.75rem;
 }
 
 .c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-order: 2;
-  -ms-flex-order: 2;
   order: 2;
 }
 
 .c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   gap: 0rem;
 }
 
 .c15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 
 .c20 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
   order: 1;
   gap: 0.25rem;
 }
@@ -1233,9 +998,6 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
 }
 
@@ -1268,13 +1030,11 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
 }
 
 .c12:hover {
-  -webkit-text-decoration: underline;
   text-decoration: underline;
   color: transparent;
 }
 
 .c12:hover:not(:active) [data-icon-for="button"] img {
-  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
 }
 
@@ -1286,55 +1046,49 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   color: transparent;
 }
 
-.c10 > :first-child:focus-visible .shadow {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+.c10 >:first-child:focus-visible .shadow {
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
-.c10 > :first-child:hover .shadow {
-  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+.c10 >:first-child:hover .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%);
 }
 
-.c10 > :first-child:active .shadow {
-  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+.c10 >:first-child:active .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%),0.25rem 0.25rem 0 rgba(87, 87, 87, 100%);
 }
 
-.c10 > :first-child:disabled .icon-container {
+.c10 >:first-child:disabled .icon-container {
   background: transparent;
 }
 
-.c10 > :first-child:hover .icon-container {
+.c10 >:first-child:hover .icon-container {
   background: #222222;
 }
 
-.c10 > :first-child:active .icon-container {
+.c10 >:first-child:active .icon-container {
   background: transparent;
 }
 
 .c22 {
   display: inline;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 0.25rem;
   outline: none;
   border-radius: 0.375rem;
   padding: 0.25rem;
   margin: -0.25rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   font: inherit;
   background: none;
   border: none;
-  -webkit-text-decoration: underline;
   text-decoration: underline;
   cursor: pointer;
   color: #222222;
 }
 
 .c22:focus-visible {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 .c22:visited {
@@ -1350,7 +1104,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   color: #808080;
 }
 
-@media (hover:hover) {
+@media (hover: hover) {
   .c22:hover,
   .c22:visited:hover {
     color: #222222;

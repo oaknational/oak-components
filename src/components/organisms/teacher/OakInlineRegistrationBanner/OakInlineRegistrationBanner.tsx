@@ -81,10 +81,9 @@ export const OakInlineRegistrationBanner = (
                   $background={formError ? "red" : "bg-decorative5-main"}
                   $color={formError ? "white" : "text-primary"}
                   $width="max-content"
-                  $ph="space-between-s"
+                  $ph="inner-padding-s"
                   $font="heading-7"
-                  $top="-15px"
-                  $left="8px"
+                  style={{ top: "-15px", left: "8px" }}
                 />
 
                 <OakTextInput

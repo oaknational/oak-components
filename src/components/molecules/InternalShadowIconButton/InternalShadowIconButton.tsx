@@ -45,9 +45,7 @@ export type InternalShadowIconButtonProps = Omit<
 } & PositionStyleProps &
   FlexStyleProps;
 
-const StyledInternalButton = styled(InternalButton)<
-  InternalShadowIconButtonProps & SizeStyleProps
->`
+const StyledInternalButton = styled(InternalButton)<SizeStyleProps>`
   display: inline-block;
   ${positionStyle}
   ${sizeStyle}

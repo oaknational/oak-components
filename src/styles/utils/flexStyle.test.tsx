@@ -3,10 +3,10 @@ import styled from "styled-components";
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
-import { flexStyle } from "@/styles/utils/flexStyle";
+import { flexStyle, FlexStyleProps } from "@/styles/utils/flexStyle";
 
 describe("flexStyle", () => {
-  const StyledComponent = styled.div`
+  const StyledComponent = styled.div<FlexStyleProps>`
     ${flexStyle}
   `;
 

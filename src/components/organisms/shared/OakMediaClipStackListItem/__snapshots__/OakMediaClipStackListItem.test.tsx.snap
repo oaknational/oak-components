@@ -2,12 +2,7 @@
 
 exports[`OakMediaClipStackListItem matches snapshot 1`] = `
 .c0 {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -51,9 +46,6 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
@@ -62,16 +54,8 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 0.5rem;
 }
@@ -81,9 +65,6 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
   color: #222222;
 }
@@ -93,31 +74,25 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
 .c2 {
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 .c2:hover h5 {
-  -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
 .c2:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 .c2:hover img,
 .c2:focus-visible img {
   -webkit-filter: brightness(80%);
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -164,101 +139,91 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
   border-radius: 0.25rem;
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c4 {
     width: 6.25rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c4 {
     width: 11.25rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c4 {
     height: 4rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c4 {
     height: 6.25rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c4 {
     margin-bottom: 0rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c4 {
     margin-bottom: 0.75rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c10 {
     margin-bottom: 0rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c10 {
     margin-bottom: 1rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c1 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c1 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c1 {
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c1 {
-    -webkit-align-items: flex-start;
-    -webkit-box-align: flex-start;
-    -ms-flex-align: flex-start;
     align-items: flex-start;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c1 {
     gap: 0.5rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c1 {
     gap: 0rem;
   }
 }
 
-@media (max-width:749px) {
+@media (max-width: 749px) {
   .c5 {
     box-shadow: #808080 4px -3px;
   }

@@ -13,14 +13,8 @@ exports[`OakTooltip matches snapshot 1`] = `
   position: absolute;
   right: 0rem;
   bottom: 0rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
-  -webkit-transform: translateY(calc(100% + 1rem));
-  -ms-transform: translateY(calc(100% + 1rem));
   transform: translateY(calc(100% + 1rem));
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -40,22 +34,14 @@ exports[`OakTooltip matches snapshot 1`] = `
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .c4 {
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   pointer-events: none;
 }
@@ -64,13 +50,11 @@ exports[`OakTooltip matches snapshot 1`] = `
   position: absolute;
   top: -1rem;
   left: 0rem;
-  -webkit-transform: scaleY(-1);
-  -ms-transform: scaleY(-1);
   transform: scaleY(-1);
   fill: #ffe555;
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c2 {
     max-width: 40rem;
   }
@@ -103,7 +87,7 @@ exports[`OakTooltip matches snapshot 1`] = `
       </div>
     </div>
   </div>,
-  @media (min-width:750px) {
+  @media (min-width: 750px) {
 
 }
 

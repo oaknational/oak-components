@@ -1,12 +1,7 @@
-import {
-  css,
-  DefaultTheme,
-  Interpolation,
-  ThemedStyledProps,
-} from "styled-components";
+import { css, ExecutionProps, Interpolation } from "styled-components";
 
 import { truthy } from "@/styles/helpers/truthy";
-import { PropsWithTheme } from "@/styles/theme/theme";
+import { PropsWithTheme, ThemedStyledProps } from "@/styles/theme/theme";
 
 const breakpointsByName = {
   small: 750,
@@ -46,14 +41,18 @@ type Generic = string | number | undefined | null;
 export const responsiveStyle =
   <Props, T extends Generic>(
     attr: string,
-    getValues: (props: Props) => ResponsiveValues<T | undefined | null>,
+    getValues: (
+      props: Props & ExecutionProps,
+    ) => ResponsiveValues<T | undefined | null>,
     parse:
       | ((unparsed: T | undefined | null) => Generic)
       | ((
           unparsed: T | undefined | null,
         ) => (props: PropsWithTheme) => Generic) = (x) => x,
   ) =>
-  (props: Props): Interpolation<ThemedStyledProps<Props, DefaultTheme>> => {
+  (
+    props: Props & ExecutionProps,
+  ): Interpolation<Omit<ThemedStyledProps<Props>, "theme">> => {
     const attrCss = (value: T | undefined | null) =>
       typeof value === "undefined"
         ? undefined

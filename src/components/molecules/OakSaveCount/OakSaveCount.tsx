@@ -19,12 +19,12 @@ export type OakSaveCountProps = {
 };
 
 const StyledInternalButton = styled(InternalButton)`
-  :hover {
+  &:hover {
     .oak-save-count {
       background-color: ${parseColor("bg-decorative1-main")};
     }
   }
-  :focus-visible {
+  &:focus-visible {
     .oak-save-count {
       box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
         ${parseDropShadow("drop-shadow-centered-grey")};

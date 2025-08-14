@@ -3,7 +3,13 @@ import styled, { css } from "styled-components";
 
 import { generatePageNumbers } from "./utils";
 
-import { OakFlex, OakIcon, OakLI, OakUL } from "@/components/atoms";
+import {
+  OakFlex,
+  OakIcon,
+  OakLI,
+  OakTypographyProps,
+  OakUL,
+} from "@/components/atoms";
 import { InternalButton } from "@/components/atoms/InternalButton";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
 import { OakLink } from "@/components/molecules";
@@ -30,14 +36,12 @@ type OakPageNumberProps = {
   pageName: string;
 };
 
-const StyledChevronButton = styled(OakLink)<{ disabledColor: string }>`
+const StyledChevronButton = styled(OakLink)`
   display: inline-block;
-  ${(props) => css`
-    &:disabled {
-      color: ${props.disabledColor};
-      cursor: pointer;
-    }
-  `}
+
+  &:disabled {
+    cursor: pointer;
+  }
 `;
 
 const StyledIcon = styled(OakIcon)<{ disabled: boolean }>`
@@ -50,7 +54,9 @@ const StyledIcon = styled(OakIcon)<{ disabled: boolean }>`
   }}
 `;
 
-const StyledNumberButton = styled(OakLink)<{ selected: boolean }>`
+const StyledNumberButton = styled(OakLink)<
+  { selected: boolean } & OakTypographyProps
+>`
   height: 30px;
   width: 30px;
   border-radius: 100px;

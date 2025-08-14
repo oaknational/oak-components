@@ -36,51 +36,26 @@ exports[`OakPupilJourneyHeader matches snapshot 1`] = `
 }
 
 .c9 {
-  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
   gap: 1.5rem;
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
   flex-grow: 0;
 }
 
 .c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 1rem;
 }
@@ -90,9 +65,6 @@ exports[`OakPupilJourneyHeader matches snapshot 1`] = `
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 2rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
 }
 
@@ -104,106 +76,103 @@ exports[`OakPupilJourneyHeader matches snapshot 1`] = `
   fill: #deb7d5;
 }
 
-.c5 > * {
+.c5>* {
   width: 100%;
   height: 100%;
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c2 {
     width: 5rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c2 {
     width: 5rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c2 {
     height: 5rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c2 {
     height: 5rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c8 {
     width: 3.5rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c8 {
     width: 3.5rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c8 {
     min-width: 3.5rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c8 {
     min-width: 3.5rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c8 {
     height: 3.5rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c8 {
     height: 3.5rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c8 {
     min-height: 3.5rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c8 {
     min-height: 3.5rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c11 {
     font-weight: 600;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c11 {
     font-size: 2rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c11 {
     line-height: 2.5rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c11 {
-    -webkit-letter-spacing: 0.0115rem;
-    -moz-letter-spacing: 0.0115rem;
-    -ms-letter-spacing: 0.0115rem;
     letter-spacing: 0.0115rem;
   }
 }

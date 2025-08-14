@@ -32,7 +32,7 @@ export const InternalCheckBoxLabelHoverDecor = styled(InternalCheckBoxLabel)`
     ${props.pointerEvents ? `pointer-events: ${props.pointerEvents};` : ""}
     ${props.disabled ? `pointer-events: none;` : `cursor: pointer;`}
   `}
-  @media (hover: hover) {
+  @media (hover:hover) {
     &:hover {
       text-decoration: ${(props) => (props.disabled ? "none" : "underline")};
     }

@@ -74,7 +74,7 @@ export const oakBoxCss = css<OakBoxProps>`
     /* onClick might be passed in the useClickableCard pattern */
     props.onClick &&
     css`
-      :hover {
+      &:hover {
         cursor: pointer;
       }
     `}

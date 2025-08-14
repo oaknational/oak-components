@@ -4,6 +4,8 @@ import { OakBox } from "@/components/atoms";
 
 export type OakJauntyAngleLabelProps = {
   label: string;
+  as?: string | React.ElementType;
+  htmlFor?: string;
 } & ComponentProps<typeof OakBox>; // Adding div type for OakBox for aria features
 export const OakJauntyAngleLabel = (props: OakJauntyAngleLabelProps) => {
   const { label, ...oakBoxProps } = props;

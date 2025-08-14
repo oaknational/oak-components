@@ -60,10 +60,10 @@ const InternalModalTransition: FC<TransitionProps> = ({
             onClick={!isLeftHandSide ? onClose : undefined}
           />
           <InternalSlideInFlex
-            isLeftHandSide={isLeftHandSide}
+            isLeftHandSide={isLeftHandSide ?? false}
             ref={transitionRef}
             $zIndex={finalZIndex}
-            $state={state}
+            state={state}
             {...rest}
           >
             {children}

@@ -12,6 +12,7 @@ import {
   OakLI,
   oakPlaceholder,
   placeholderStyles,
+  StyledImageProps,
 } from "@/components/atoms";
 import { OakCombinedColorToken } from "@/styles";
 import { InternalButton } from "@/components/atoms/InternalButton";
@@ -77,7 +78,7 @@ const MediaButtonWrapper = styled(StyledButtonWrapper)`
   width: 100%;
 `;
 
-export const StyledMediaClipImage = styled(OakImage)`
+export const StyledMediaClipImage = styled(OakImage)<StyledImageProps>`
   ${placeholderStyles}
 `;
 
@@ -204,6 +205,8 @@ export const OakMediaClip = ({
           $width={"100%"}
           $height={"100%"}
           $background={buttonStyles.defaultBackground}
+          $defaultBackground={"bg-btn-primary"}
+          $defaultTextColor="text-primary"
           $borderColor="transparent"
           $borderRadius={"border-radius-s"}
           $position={"relative"}

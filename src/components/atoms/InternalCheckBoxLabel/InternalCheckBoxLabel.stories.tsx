@@ -29,10 +29,10 @@ type Story = StoryObj<typeof InternalCheckBoxLabel>;
 
 export const Default: Story = {
   render: (args) => (
-    <InternalCheckBoxLabel {...args}>Value</InternalCheckBoxLabel>
+    <InternalCheckBoxLabel {...args}>{args.children}</InternalCheckBoxLabel>
   ),
   args: {
     htmlFor: "test",
-    value: "a test value",
+    children: "test children",
   },
 };

@@ -3,9 +3,6 @@
 exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
 [
   .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -42,63 +39,30 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
 }
 
 .c13 {
-  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
 .c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
 .c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
 }
 
 .c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
 }
 
@@ -107,9 +71,6 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
   margin-bottom: 0.75rem;
   color: #222222;
@@ -121,35 +82,27 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
 }
 
 .c3 {
   outline: none;
   text-align: initial;
-  -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out;
-  -webkit-transition-duration: 300ms;
   transition-duration: 300ms;
 }
 
 .c3:hover .hover-text {
-  -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
 .c3:focus-visible {
   background: #ffffff;
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 .c7 {
-  -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out;
-  -webkit-transition-duration: 300ms;
   transition-duration: 300ms;
   outline: none;
   border-radius: 6px;
@@ -157,15 +110,14 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
 }
 
 .c7:hover {
-  -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
 .c7:focus-visible {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
-@media (hover:hover) {
+@media (hover: hover) {
   .c3:hover {
     background: #a0b6f2;
   }
@@ -176,6 +128,7 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
   >
     <div
       className="c2 c1 c3"
+      slug="test"
       title="Lesson 1"
     >
       <div
@@ -184,6 +137,7 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
         <h3
           className="c6 c7 hover-text"
           href=""
+          tag="h3"
         >
           Lesson 1
         </h3>

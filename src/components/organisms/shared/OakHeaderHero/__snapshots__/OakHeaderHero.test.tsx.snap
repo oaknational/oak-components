@@ -72,8 +72,6 @@ exports[`OakHeaderHero matches snapshot 1`] = `
   width: 100%;
   min-width: 15rem;
   min-height: 15rem;
-  -webkit-transform: rotate(-2.025deg);
-  -ms-transform: rotate(-2.025deg);
   transform: rotate(-2.025deg);
   font-family: --var(google-font),Lexend,sans-serif;
   z-index: 1;
@@ -108,104 +106,48 @@ exports[`OakHeaderHero matches snapshot 1`] = `
 }
 
 .c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
 .c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column-reverse;
-  -ms-flex-direction: column-reverse;
   flex-direction: column-reverse;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-self: flex-start;
-  -ms-flex-item-align: start;
   align-self: flex-start;
 }
 
 .c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 
 .c14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
 .c23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 
 .c26 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .c29 {
   display: block;
-  -webkit-align-self: flex-start;
-  -ms-flex-item-align: start;
   align-self: flex-start;
 }
 
@@ -214,9 +156,6 @@ exports[`OakHeaderHero matches snapshot 1`] = `
   font-weight: 600;
   font-size: 2rem;
   line-height: 2.5rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
   margin-bottom: 1.5rem;
   color: #1b1b1b;
@@ -231,9 +170,6 @@ exports[`OakHeaderHero matches snapshot 1`] = `
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
 }
 
@@ -242,9 +178,6 @@ exports[`OakHeaderHero matches snapshot 1`] = `
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
@@ -253,9 +186,6 @@ exports[`OakHeaderHero matches snapshot 1`] = `
   font-weight: 300;
   font-size: 1.125rem;
   line-height: 1.75rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
   margin-bottom: 3rem;
 }
@@ -272,29 +202,23 @@ exports[`OakHeaderHero matches snapshot 1`] = `
 
 .c8 {
   display: inline;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 0.25rem;
   outline: none;
   border-radius: 0.375rem;
   padding: 0.25rem;
   margin: -0.25rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   font: inherit;
   background: none;
   border: none;
-  -webkit-text-decoration: underline;
   text-decoration: underline;
   cursor: pointer;
   color: #0d24c4;
 }
 
 .c8:focus-visible {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 .c8:visited {
@@ -310,204 +234,193 @@ exports[`OakHeaderHero matches snapshot 1`] = `
   color: #808080;
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c1 {
     max-width: 80rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c1 {
     padding-left: 0.75rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c1 {
     padding-right: 0.75rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c7 {
     display: none;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c7 {
     display: block;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c10 {
     min-height: 0rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c10 {
     min-height: 22.5rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c10 {
     margin-bottom: 3rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c10 {
     margin-bottom: 0rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c22 {
     min-height: 30rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c22 {
     min-height: 30rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c22 {
     margin-bottom: 2rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c22 {
     margin-bottom: 0rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c24 {
     min-width: 40rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c24 {
     min-width: 30rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c24 {
     min-height: 22.5rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c24 {
     min-height: 22.5rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c25 {
     width: 60rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c25 {
     width: 60rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c28 {
     padding-bottom: 1.5rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c28 {
     display: block;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c28 {
     display: none;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c4 {
-    -webkit-flex-direction: column-reverse;
-    -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c4 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
   }
 }
 
-@media (min-width:750px) {
-
-}
-
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c29 {
     display: block;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c29 {
     display: none;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c12 {
     font-weight: 600;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c12 {
     font-size: 2.5rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c12 {
     line-height: 3rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c12 {
-    -webkit-letter-spacing: 0.0115rem;
-    -moz-letter-spacing: 0.0115rem;
-    -ms-letter-spacing: 0.0115rem;
     letter-spacing: 0.0115rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c21 {
     margin-bottom: 0rem;
   }
 }
 
-@media (hover:hover) {
+@media (hover: hover) {
   .c8:hover,
   .c8:visited:hover {
     color: #0a1d9d;

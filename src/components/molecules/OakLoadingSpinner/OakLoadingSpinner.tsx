@@ -62,7 +62,7 @@ const StyledLoadingSpinner = styled.span<OakLoadingSpinnerProps>`
   width: var(--width);
   height: var(--width);
 
-  ::after {
+  &::after {
     content: " ";
     display: block;
     width: var(--inner-width);
