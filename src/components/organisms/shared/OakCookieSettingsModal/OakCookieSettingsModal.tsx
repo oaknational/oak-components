@@ -7,11 +7,10 @@ import {
 import {
   OakAccordion,
   OakCheckBox,
+  OakInformativeModal,
+  OakInformativeModalFooter,
+  OakInformativeModalProps,
   OakLink,
-  OakModal,
-  OakModalBody,
-  OakModalFooter,
-  OakModalProps,
   OakPrimaryButton,
   OakSecondaryButton,
   OakSecondaryLink,
@@ -19,7 +18,7 @@ import {
 import { OakBox, OakHeading, OakP, OakSpan, OakUL } from "@/components/atoms";
 
 export type OakCookieSettingsModalProps = Pick<
-  OakModalProps,
+  OakInformativeModalProps,
   "isOpen" | "onClose" | "zIndex"
 > & {
   /**
@@ -81,12 +80,13 @@ export const OakCookieSettingsModal = ({
   };
 
   return (
-    <OakModal
+    <OakInformativeModal
       isOpen={isOpen}
+      isLeftHandSide={true}
       onClose={onClose}
       zIndex={zIndex}
       footerSlot={
-        <OakModalFooter>
+        <OakInformativeModalFooter>
           <OakSecondaryButton onClick={onReject} width="100%">
             Reject non-essential cookies
           </OakSecondaryButton>
@@ -97,10 +97,10 @@ export const OakCookieSettingsModal = ({
           >
             Confirm my choices
           </OakPrimaryButton>
-        </OakModalFooter>
+        </OakInformativeModalFooter>
       }
     >
-      <OakModalBody>
+      <OakBox $pa={"inner-padding-l"}>
         <OakHeading tag="h2" $font="heading-5" $mb="space-between-s">
           This site uses cookies to store information on your computer.
         </OakHeading>
@@ -188,7 +188,7 @@ export const OakCookieSettingsModal = ({
             );
           })}
         </OakBox>
-      </OakModalBody>
-    </OakModal>
+      </OakBox>
+    </OakInformativeModal>
   );
 };
