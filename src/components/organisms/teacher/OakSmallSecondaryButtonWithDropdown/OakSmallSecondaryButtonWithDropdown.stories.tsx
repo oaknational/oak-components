@@ -83,7 +83,6 @@ export const ButtonWithDropDown: DropdownNavStory = {
             $borderColor="border-neutral-lighter"
             $mb="space-between-ssx"
             $mt="space-between-xs"
-            role="separator"
             aria-hidden="true"
           />
 
@@ -137,7 +136,6 @@ export const ButtonWithDropDown: DropdownNavStory = {
             $borderColor="border-neutral-lighter"
             $mb="space-between-ssx"
             $mt="space-between-xs"
-            role="separator"
             aria-hidden="true"
           />
 
@@ -190,7 +188,6 @@ export const ButtonWithDropDown: DropdownNavStory = {
             $borderColor="border-neutral-lighter"
             $mb="space-between-ssx"
             $mt="space-between-xs"
-            role="separator"
             aria-hidden="true"
           />
 
@@ -270,7 +267,6 @@ export const leadingButtonIcon: DropdownNavStory = {
           $bt="border-solid-s"
           $borderColor="border-neutral-lighter"
           $mb="space-between-ssx"
-          role="separator"
           aria-hidden="true"
         />
 
