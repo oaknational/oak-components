@@ -2,13 +2,13 @@ import React, { useState, useRef, useEffect } from "react";
 
 import { OakBox, OakFlex, OakIcon, OakIconName } from "@/components/atoms";
 import {
-  OakSmallPrimaryInvertedButton,
-  OakSmallPrimaryInvertedButtonProps,
-  OakSmallSecondaryButton,
+  OakPrimaryInvertedButton,
+  OakPrimaryInvertedButtonProps,
+  OakSecondaryButton,
 } from "@/components/molecules";
 
-export type OakSmallSecondaryButtonWithDropdownItem =
-  OakSmallPrimaryInvertedButtonProps & {
+export type OakSecondaryButtonWithDropdownItem =
+  OakPrimaryInvertedButtonProps & {
     label: string;
     href?: string;
     onClick?: () => void;
@@ -16,11 +16,11 @@ export type OakSmallSecondaryButtonWithDropdownItem =
     iconName?: OakIconName;
   };
 
-export type OakSmallSecondaryButtonWithDropdownProps = {
+export type OakSecondaryButtonWithDropdownProps = {
   primaryActionText: string;
   primaryActionIcon?: OakIconName;
   onPrimaryAction?: () => void;
-  items: OakSmallSecondaryButtonWithDropdownItem[];
+  items: OakSecondaryButtonWithDropdownItem[];
   footer?: React.ReactNode;
   leadingItemIcon?: OakIconName;
   isLoading?: boolean;
@@ -34,7 +34,7 @@ export type OakSmallSecondaryButtonWithDropdownProps = {
 /**
  * A secondary button with a dropdown of items.
  */
-export const OakSmallSecondaryButtonWithDropdown = ({
+export const OakSecondaryButtonWithDropdown = ({
   primaryActionText,
   primaryActionIcon = "chevron-down",
   onPrimaryAction,
@@ -47,7 +47,7 @@ export const OakSmallSecondaryButtonWithDropdown = ({
   ariaDescription,
   leadingButtonIcon,
   "data-testid": dataTestId,
-}: OakSmallSecondaryButtonWithDropdownProps) => {
+}: OakSecondaryButtonWithDropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -55,9 +55,7 @@ export const OakSmallSecondaryButtonWithDropdown = ({
   const getFocusableElements = () => {
     if (!dropdownRef.current) return [];
     return Array.from(
-      dropdownRef.current.querySelectorAll(
-        'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
-      ),
+      dropdownRef.current.querySelectorAll("button:not([disabled]), [href]"),
     ) as HTMLElement[];
   };
 
@@ -122,7 +120,7 @@ export const OakSmallSecondaryButtonWithDropdown = ({
     onPrimaryAction?.();
   };
 
-  const handleItemClick = (item: OakSmallSecondaryButtonWithDropdownItem) => {
+  const handleItemClick = (item: OakSecondaryButtonWithDropdownItem) => {
     if (item.onClick) {
       item.onClick();
     }
@@ -142,10 +140,8 @@ export const OakSmallSecondaryButtonWithDropdown = ({
       $position="relative"
     >
       <OakFlex $flexDirection="column" $gap="space-between-xs">
-        {/* Primary Action Button */}
-
-        <OakFlex $width={"100%"} $gap="space-between-xs">
-          <OakSmallSecondaryButton
+        <OakFlex $gap="space-between-xs">
+          <OakSecondaryButton
             iconName={primaryActionIcon}
             isTrailingIcon
             onClick={handlePrimaryAction}
@@ -169,7 +165,7 @@ export const OakSmallSecondaryButtonWithDropdown = ({
               {leadingButtonIcon && leadingButtonIcon}
               {primaryActionText}
             </OakFlex>
-          </OakSmallSecondaryButton>
+          </OakSecondaryButton>
         </OakFlex>
 
         {isOpen && (
@@ -180,7 +176,7 @@ export const OakSmallSecondaryButtonWithDropdown = ({
             $borderColor="border-primary"
             $pa="inner-padding-xs"
             $position="absolute"
-            $top="all-spacing-8"
+            $top="all-spacing-10"
             $zIndex="modal-close-button"
             role="menu"
             aria-label={`${items.length} item${
@@ -194,43 +190,44 @@ export const OakSmallSecondaryButtonWithDropdown = ({
               $gap={"space-between-ssx"}
             >
               {items.map((item, index) => (
-                <OakFlex key={index} $width={"100%"}>
-                  <OakSmallPrimaryInvertedButton
-                    key={index}
-                    element={item.href ? "a" : "button"}
-                    href={item.href}
-                    onClick={
-                      item.href ? undefined : () => handleItemClick(item)
-                    }
-                    iconName={item.iconName || "external"}
-                    isTrailingIcon
-                    role="menuitem"
-                    aria-label={item.ariaLabel || `${item.label}`}
-                    data-testid={
-                      dataTestId ? `${dataTestId}-item-${index}` : undefined
-                    }
-                    {...(item.href && {
-                      target: "_blank",
-                    })}
+                <OakPrimaryInvertedButton
+                  key={index}
+                  element={item.href ? "a" : "button"}
+                  href={item.href}
+                  $textAlign={"left"}
+                  onClick={item.href ? undefined : () => handleItemClick(item)}
+                  iconName={item.iconName || "external"}
+                  isTrailingIcon
+                  role="menuitem"
+                  width={"100%"}
+                  aria-label={item.ariaLabel || `${item.label}`}
+                  data-testid={
+                    dataTestId ? `${dataTestId}-item-${index}` : undefined
+                  }
+                  {...(item.href && {
+                    target: "_blank",
+                  })}
+                >
+                  <OakFlex
+                    $justifyContent={"flex-start"}
+                    $alignItems={"center"}
+                    $width={"100%"}
                   >
-                    <OakFlex $justifyContent={"center"} $alignItems={"center"}>
-                      {leadingItemIcon && (
-                        <OakIcon
-                          $height={"all-spacing-6"}
-                          iconName={leadingItemIcon}
-                        />
-                      )}
-                      {item.label}
-                    </OakFlex>
-                  </OakSmallPrimaryInvertedButton>
-                </OakFlex>
+                    {leadingItemIcon && (
+                      <OakIcon
+                        $height={"all-spacing-6"}
+                        iconName={leadingItemIcon}
+                      />
+                    )}
+                    {item.label}
+                  </OakFlex>
+                </OakPrimaryInvertedButton>
               ))}
             </OakFlex>
 
-            {/* Footer Section */}
             {footer && (
               <>
-                {/* Divider Line */}
+                {/* Divider*/}
                 <OakBox
                   $height="all-spacing-0"
                   $width="100%"

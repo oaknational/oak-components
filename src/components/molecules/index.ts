@@ -31,6 +31,7 @@ export * from "./OakRadioTile";
 export * from "./OakRoundIcon";
 export * from "./OakSecondaryButton";
 export * from "./OakSecondaryButtonAsRadio";
+export * from "./OakSecondaryButtonWithDropdown";
 export * from "./OakSecondaryLink";
 export * from "./OakFilterDrawer";
 export * from "./OakSmallPrimaryButton";
