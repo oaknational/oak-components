@@ -29,7 +29,7 @@ const StyledFlexBox = styled(OakFlex)<StyledFlexBoxWrapperProps>`
     text-decoration: underline;
   }
 
-  &:has(input:focus) {
+  &:has(input:focus-visible) {
     box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
   }
@@ -69,10 +69,11 @@ export interface OakCaptionCardProps {
   videoType: "lesson";
   lastUpdated: string;
   lastEdited?: string;
-  checked: boolean;
+  checked?: boolean;
   highlighted?: boolean;
   disabled?: boolean;
   onCheckChanged?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onClick?: (event: React.MouseEvent<HTMLDivElement>) => void;
   editHref: string;
   lessonHref: string;
   "data-testid"?: string;
@@ -92,6 +93,7 @@ export const OakCaptionCard = (props: OakCaptionCardProps) => {
   const {
     checked,
     onCheckChanged,
+    onClick,
     captionId,
     videoTitle,
     lessonUid,
@@ -120,6 +122,7 @@ export const OakCaptionCard = (props: OakCaptionCardProps) => {
       $width={"100%"}
       $highlighted={!!highlighted}
       $disabled={!!disabled}
+      onClick={onClick}
     >
       <OakFlex
         $justifyContent={"flex-start"}
@@ -156,6 +159,10 @@ export const OakCaptionCard = (props: OakCaptionCardProps) => {
             iconName="external"
             isTrailingIcon
             aria-label={`edit caption ${captionId} in a new tab in rev`}
+            target="_blank"
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
           >
             Edit
           </OakHoverLink>
@@ -174,6 +181,10 @@ export const OakCaptionCard = (props: OakCaptionCardProps) => {
           data-testid="lesson_uid"
           iconName="external"
           isTrailingIcon
+          target="_blank"
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
         >
           {lessonUid}
         </OakSecondaryLink>
