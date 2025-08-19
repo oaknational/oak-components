@@ -203,7 +203,7 @@ exports[`OakSecondaryButtonWithDropdown matches snapshot 1`] = `
         <button
           aria-expanded={false}
           aria-haspopup="menu"
-          aria-label="Actions, 2 items available"
+          aria-label="Actions"
           className="c7 c8 internal-button"
           disabled={false}
           onClick={[Function]}

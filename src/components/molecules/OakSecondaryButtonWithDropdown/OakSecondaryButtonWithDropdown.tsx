@@ -1,28 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
 
-import { OakBox, OakFlex, OakIcon, OakIconName } from "@/components/atoms";
-import {
-  OakPrimaryInvertedButton,
-  OakPrimaryInvertedButtonProps,
-  OakSecondaryButton,
-} from "@/components/molecules";
-
-export type OakSecondaryButtonWithDropdownItem =
-  OakPrimaryInvertedButtonProps & {
-    label: string;
-    href?: string;
-    onClick?: () => void;
-    ariaLabel?: string;
-    iconName?: OakIconName;
-  };
+import { OakBox, OakFlex, OakIconName } from "@/components/atoms";
+import { OakSecondaryButton } from "@/components/molecules";
 
 export type OakSecondaryButtonWithDropdownProps = {
   primaryActionText: string;
   primaryActionIcon?: OakIconName;
   onPrimaryAction?: () => void;
-  items: OakSecondaryButtonWithDropdownItem[];
-  footer?: React.ReactNode;
-  leadingItemIcon?: OakIconName;
+  children?: React.ReactNode;
   isLoading?: boolean;
   disabled?: boolean;
   ariaLabel?: string;
@@ -38,9 +23,7 @@ export const OakSecondaryButtonWithDropdown = ({
   primaryActionText,
   primaryActionIcon = "chevron-down",
   onPrimaryAction,
-  items,
-  footer,
-  leadingItemIcon,
+  children,
   isLoading = false,
   disabled = false,
   ariaLabel,
@@ -55,7 +38,9 @@ export const OakSecondaryButtonWithDropdown = ({
   const getFocusableElements = () => {
     if (!dropdownRef.current) return [];
     return Array.from(
-      dropdownRef.current.querySelectorAll("button:not([disabled]), [href]"),
+      dropdownRef.current.querySelectorAll(
+        'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
+      ),
     ) as HTMLElement[];
   };
 
@@ -120,14 +105,6 @@ export const OakSecondaryButtonWithDropdown = ({
     onPrimaryAction?.();
   };
 
-  const handleItemClick = (item: OakSecondaryButtonWithDropdownItem) => {
-    if (item.onClick) {
-      item.onClick();
-    }
-    // Close dropdown when an item is clicked
-    setIsOpen(false);
-  };
-
   return (
     <OakBox
       as="section"
@@ -150,13 +127,7 @@ export const OakSecondaryButtonWithDropdown = ({
             width="max-content"
             aria-expanded={isOpen}
             aria-haspopup="menu"
-            aria-label={`${primaryActionText}${
-              items.length > 0
-                ? `, ${items.length} item${
-                    items.length === 1 ? "" : "s"
-                  } available`
-                : ""
-            }`}
+            aria-label={primaryActionText}
             data-testid={
               dataTestId ? `${dataTestId}-primary-action` : undefined
             }
@@ -179,68 +150,10 @@ export const OakSecondaryButtonWithDropdown = ({
             $top="all-spacing-10"
             $zIndex="modal-close-button"
             role="menu"
-            aria-label={`${items.length} item${
-              items.length === 1 ? "" : "s"
-            }. Use arrow keys to navigate, Tab to cycle through items, Escape to close.`}
+            aria-label="Dropdown menu. Use arrow keys to navigate, Tab to cycle through items, Escape to close."
             data-testid={dataTestId ? `${dataTestId}-dropdown` : undefined}
           >
-            <OakFlex
-              $flexDirection="column"
-              $mb={footer ? "space-between-xs" : "space-between-none"}
-              $gap={"space-between-ssx"}
-            >
-              {items.map((item, index) => (
-                <OakPrimaryInvertedButton
-                  key={index}
-                  element={item.href ? "a" : "button"}
-                  href={item.href}
-                  $textAlign={"left"}
-                  onClick={item.href ? undefined : () => handleItemClick(item)}
-                  iconName={item.iconName || "external"}
-                  isTrailingIcon
-                  role="menuitem"
-                  width={"100%"}
-                  aria-label={item.ariaLabel || `${item.label}`}
-                  data-testid={
-                    dataTestId ? `${dataTestId}-item-${index}` : undefined
-                  }
-                  {...(item.href && {
-                    target: "_blank",
-                  })}
-                >
-                  <OakFlex
-                    $justifyContent={"flex-start"}
-                    $alignItems={"center"}
-                    $width={"100%"}
-                  >
-                    {leadingItemIcon && (
-                      <OakIcon
-                        $height={"all-spacing-6"}
-                        iconName={leadingItemIcon}
-                      />
-                    )}
-                    {item.label}
-                  </OakFlex>
-                </OakPrimaryInvertedButton>
-              ))}
-            </OakFlex>
-
-            {footer && (
-              <>
-                {/* Divider*/}
-                <OakBox
-                  $height="all-spacing-0"
-                  $width="100%"
-                  $bt="border-solid-s"
-                  $borderColor="border-neutral-lighter"
-                  $mb="space-between-ssx"
-                  role="separator"
-                  aria-hidden="true"
-                />
-
-                {footer}
-              </>
-            )}
+            {children}
           </OakBox>
         )}
       </OakFlex>

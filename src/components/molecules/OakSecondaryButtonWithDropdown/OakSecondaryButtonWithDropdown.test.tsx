@@ -11,11 +11,18 @@ import { oakDefaultTheme } from "@/styles";
 
 const defaultProps = {
   primaryActionText: "Actions",
-  items: [
-    { label: "Edit", onClick: jest.fn() },
-    { label: "Delete", onClick: jest.fn() },
-  ],
 };
+
+const simpleChildren = (
+  <>
+    <button role="menuitem" aria-label="Edit">
+      Edit
+    </button>
+    <button role="menuitem" aria-label="Delete">
+      Delete
+    </button>
+  </>
+);
 
 const renderWithTheme = (component: React.ReactElement) => {
   return render(
@@ -31,7 +38,9 @@ describe("OakSecondaryButtonWithDropdown", () => {
   it("matches snapshot", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
-        <OakSecondaryButtonWithDropdown {...defaultProps} />
+        <OakSecondaryButtonWithDropdown {...defaultProps}>
+          {simpleChildren}
+        </OakSecondaryButtonWithDropdown>
       </OakThemeProvider>,
     ).toJSON();
 
@@ -39,7 +48,11 @@ describe("OakSecondaryButtonWithDropdown", () => {
   });
 
   it("renders primary action button with correct text", () => {
-    renderWithTheme(<OakSecondaryButtonWithDropdown {...defaultProps} />);
+    renderWithTheme(
+      <OakSecondaryButtonWithDropdown {...defaultProps}>
+        {simpleChildren}
+      </OakSecondaryButtonWithDropdown>,
+    );
 
     expect(screen.getByRole("button")).toBeInTheDocument();
     expect(screen.getByText("Actions")).toBeInTheDocument();
@@ -47,7 +60,11 @@ describe("OakSecondaryButtonWithDropdown", () => {
 
   it("opens dropdown when primary button is clicked", async () => {
     const user = userEvent.setup();
-    renderWithTheme(<OakSecondaryButtonWithDropdown {...defaultProps} />);
+    renderWithTheme(
+      <OakSecondaryButtonWithDropdown {...defaultProps}>
+        {simpleChildren}
+      </OakSecondaryButtonWithDropdown>,
+    );
 
     const primaryButton = screen.getByRole("button");
     await user.click(primaryButton);
@@ -57,31 +74,32 @@ describe("OakSecondaryButtonWithDropdown", () => {
     expect(screen.getByText("Delete")).toBeInTheDocument();
   });
 
-  it("closes dropdown when item is clicked", async () => {
+  it("renders children content when dropdown is open", async () => {
     const user = userEvent.setup();
-    const mockOnClick = jest.fn();
-    const props = {
-      ...defaultProps,
-      items: [{ label: "Edit", onClick: mockOnClick }],
-    };
+    renderWithTheme(
+      <OakSecondaryButtonWithDropdown {...defaultProps}>
+        <div data-testid="custom-content">Custom dropdown content</div>
+      </OakSecondaryButtonWithDropdown>,
+    );
 
-    renderWithTheme(<OakSecondaryButtonWithDropdown {...props} />);
+    // Initially closed - content should not be visible
+    expect(screen.queryByTestId("custom-content")).not.toBeInTheDocument();
 
     // Open dropdown
     const primaryButton = screen.getByRole("button");
     await user.click(primaryButton);
 
-    // Click item
-    const editButton = screen.getByText("Edit");
-    await user.click(editButton);
-
-    expect(mockOnClick).toHaveBeenCalledTimes(1);
-    expect(screen.queryByRole("menu")).not.toBeInTheDocument();
+    // Content should now be visible
+    expect(screen.getByTestId("custom-content")).toBeInTheDocument();
   });
 
   it("handles keyboard navigation", async () => {
     const user = userEvent.setup();
-    renderWithTheme(<OakSecondaryButtonWithDropdown {...defaultProps} />);
+    renderWithTheme(
+      <OakSecondaryButtonWithDropdown {...defaultProps}>
+        {simpleChildren}
+      </OakSecondaryButtonWithDropdown>,
+    );
 
     const primaryButton = screen.getByRole("button");
     await user.click(primaryButton);
@@ -95,7 +113,9 @@ describe("OakSecondaryButtonWithDropdown", () => {
     const user = userEvent.setup();
     renderWithTheme(
       <div>
-        <OakSecondaryButtonWithDropdown {...defaultProps} />
+        <OakSecondaryButtonWithDropdown {...defaultProps}>
+          {simpleChildren}
+        </OakSecondaryButtonWithDropdown>
         <button data-testid="outside-button">Outside</button>
       </div>,
     );
@@ -112,81 +132,86 @@ describe("OakSecondaryButtonWithDropdown", () => {
     expect(screen.queryByRole("menu")).not.toBeInTheDocument();
   });
 
-  it("renders footer when provided", async () => {
+  it("toggles dropdown open/closed state", async () => {
     const user = userEvent.setup();
-    const props = {
-      ...defaultProps,
-      footer: <div>Footer content</div>,
-    };
-
-    renderWithTheme(<OakSecondaryButtonWithDropdown {...props} />);
+    renderWithTheme(
+      <OakSecondaryButtonWithDropdown {...defaultProps}>
+        {simpleChildren}
+      </OakSecondaryButtonWithDropdown>,
+    );
 
     const primaryButton = screen.getByRole("button");
-    await user.click(primaryButton);
 
-    expect(screen.getByText("Footer content")).toBeInTheDocument();
+    // Initially closed
+    expect(screen.queryByRole("menu")).not.toBeInTheDocument();
+
+    // Click to open
+    await user.click(primaryButton);
+    expect(screen.getByRole("menu")).toBeInTheDocument();
+
+    // Click to close
+    await user.click(primaryButton);
+    expect(screen.queryByRole("menu")).not.toBeInTheDocument();
   });
 
-  it("renders with href items as links", async () => {
+  it("sets proper ARIA attributes", async () => {
     const user = userEvent.setup();
-    const props = {
-      ...defaultProps,
-      items: [{ label: "External Link", href: "https://example.com" }],
-    };
-
-    renderWithTheme(<OakSecondaryButtonWithDropdown {...props} />);
+    renderWithTheme(
+      <OakSecondaryButtonWithDropdown {...defaultProps}>
+        {simpleChildren}
+      </OakSecondaryButtonWithDropdown>,
+    );
 
     const primaryButton = screen.getByRole("button");
-    await user.click(primaryButton);
 
-    const link = screen.getByRole("link", { name: /external link/i });
-    expect(link).toHaveAttribute("href", "https://example.com");
-    expect(link).toHaveAttribute("target", "_blank");
+    // Initially closed
+    expect(primaryButton).toHaveAttribute("aria-expanded", "false");
+    expect(primaryButton).toHaveAttribute("aria-haspopup", "menu");
+
+    // Open dropdown
+    await user.click(primaryButton);
+    expect(primaryButton).toHaveAttribute("aria-expanded", "true");
   });
 
   it("handles loading state", () => {
-    const props = {
-      ...defaultProps,
-      isLoading: true,
-    };
-
-    renderWithTheme(<OakSecondaryButtonWithDropdown {...props} />);
+    renderWithTheme(
+      <OakSecondaryButtonWithDropdown {...defaultProps} isLoading={true}>
+        {simpleChildren}
+      </OakSecondaryButtonWithDropdown>,
+    );
 
     const primaryButton = screen.getByRole("button");
     expect(primaryButton).toBeInTheDocument();
   });
 
   it("handles disabled state", () => {
-    const props = {
-      ...defaultProps,
-      disabled: true,
-    };
-
-    renderWithTheme(<OakSecondaryButtonWithDropdown {...props} />);
+    renderWithTheme(
+      <OakSecondaryButtonWithDropdown {...defaultProps} disabled={true}>
+        {simpleChildren}
+      </OakSecondaryButtonWithDropdown>,
+    );
 
     const primaryButton = screen.getByRole("button");
     expect(primaryButton).toBeDisabled();
   });
 
-  it("renders with custom icons", async () => {
-    const user = userEvent.setup();
-    const props = {
-      ...defaultProps,
-      leadingItemIcon: "download" as const,
-      items: [
-        {
-          label: "Download",
-          iconName: "download" as const,
-          onClick: jest.fn(),
-        },
-      ],
-    };
+  it("supports custom aria labels and descriptions", () => {
+    renderWithTheme(
+      <OakSecondaryButtonWithDropdown
+        primaryActionText="Custom Menu"
+        ariaLabel="Custom dropdown menu"
+        ariaDescription="A custom description for the dropdown"
+        data-testid="custom-dropdown"
+      >
+        {simpleChildren}
+      </OakSecondaryButtonWithDropdown>,
+    );
 
-    renderWithTheme(<OakSecondaryButtonWithDropdown {...props} />);
-
-    const primaryButton = screen.getByRole("button");
-    await user.click(primaryButton);
-
-    expect(screen.getByText("Download")).toBeInTheDocument();
+    const section = screen.getByLabelText("Custom dropdown menu");
+    expect(section).toBeInTheDocument();
+    expect(section).toHaveAttribute(
+      "aria-describedby",
+      "custom-dropdown-description",
+    );
   });
 });
