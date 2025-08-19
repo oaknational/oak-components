@@ -1,10 +1,10 @@
 import React from "react";
 
 import { OakIconName } from "@/components/atoms";
-import { OakSecondaryButton } from "@/components/molecules/OakSecondaryButton";
+import { OakSmallSecondaryButton } from "@/components/molecules/OakSmallSecondaryButton";
 import { OakButtonWithDropdown } from "@/components/molecules/OakButtonWithDropdown";
 
-export type OakSecondaryButtonWithDropdownProps = {
+export type OakSmallSecondaryButtonWithDropdownProps = {
   primaryActionText: string;
   primaryActionIcon?: OakIconName;
   onPrimaryAction?: () => void;
@@ -18,16 +18,17 @@ export type OakSecondaryButtonWithDropdownProps = {
 };
 
 /**
- * A secondary button with a dropdown of items.
+ * A secondary button that allows children to be passed in as a dropdown menu.
  */
-export const OakSecondaryButtonWithDropdown = (
-  props: OakSecondaryButtonWithDropdownProps,
+export const OakSmallSecondaryButtonWithDropdown = (
+  props: OakSmallSecondaryButtonWithDropdownProps,
 ) => {
   return (
     <OakButtonWithDropdown
       {...props}
-      buttonComponent={OakSecondaryButton}
-      dropdownTopSpacing="all-spacing-10"
+      buttonComponent={OakSmallSecondaryButton}
+      dropdownTopSpacing="all-spacing-8"
+      flexWidth={["100%"]}
     />
   );
 };

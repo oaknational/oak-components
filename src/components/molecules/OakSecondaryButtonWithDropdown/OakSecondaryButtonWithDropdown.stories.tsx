@@ -199,7 +199,7 @@ export const ButtonWithDropDown: DropdownNavStory = {
   ),
 };
 
-export const leadingButtonIconCustomFooter: DropdownNavStory = {
+export const leadingButtonIcon: DropdownNavStory = {
   render: (args) => (
     <OakBox $height={"all-spacing-19"}>
       <OakSecondaryButtonWithDropdown {...args}>

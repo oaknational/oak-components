@@ -1,9 +1,23 @@
 import React, { useState, useRef, useEffect } from "react";
 
-import { OakBox, OakFlex, OakIconName } from "@/components/atoms";
-import { OakSmallSecondaryButton } from "@/components/molecules";
+import { OakSecondaryButtonProps } from "../OakSecondaryButton";
 
-export type OakSmallSecondaryButtonWithDropdownProps = {
+import { OakBox, OakFlex, OakIconName } from "@/components/atoms";
+import { ResponsiveValues } from "@/styles/utils/responsiveStyle";
+import {
+  OakAllSpacingToken,
+  OakSpaceBetweenToken,
+  OakCombinedSpacingToken,
+} from "@/styles/theme/spacing";
+import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
+
+type ButtonComponent = <C extends React.ElementType = "button">({
+  element,
+  ...rest
+}: OakSecondaryButtonProps &
+  PolymorphicPropsWithoutRef<C>) => React.JSX.Element;
+
+export type OakButtonWithDropdownProps = {
   primaryActionText: string;
   primaryActionIcon?: OakIconName;
   onPrimaryAction?: () => void;
@@ -14,12 +28,18 @@ export type OakSmallSecondaryButtonWithDropdownProps = {
   leadingButtonIcon?: React.ReactNode;
   ariaDescription?: string;
   "data-testid"?: string;
+  buttonComponent: ButtonComponent;
+  dropdownTopSpacing?: ResponsiveValues<
+    OakAllSpacingToken | OakSpaceBetweenToken | null | undefined
+  >;
+  flexWidth?: ResponsiveValues<OakCombinedSpacingToken | null | undefined>;
 };
 
 /**
- * A secondary button that allows children to be passed in as a dropdown menu.
+ * A shared component that provides dropdown functionality for any button type.
+ * Accepts the button component as a prop to eliminate code duplication.
  */
-export const OakSmallSecondaryButtonWithDropdown = ({
+export const OakButtonWithDropdown = ({
   primaryActionText,
   primaryActionIcon = "chevron-down",
   onPrimaryAction,
@@ -30,7 +50,10 @@ export const OakSmallSecondaryButtonWithDropdown = ({
   ariaDescription,
   leadingButtonIcon,
   "data-testid": dataTestId,
-}: OakSmallSecondaryButtonWithDropdownProps) => {
+  buttonComponent: ButtonComponent,
+  dropdownTopSpacing = "all-spacing-10",
+  flexWidth,
+}: OakButtonWithDropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -117,10 +140,8 @@ export const OakSmallSecondaryButtonWithDropdown = ({
       $position="relative"
     >
       <OakFlex $flexDirection="column" $gap="space-between-xs">
-        {/* Primary Action Button */}
-
-        <OakFlex $width={"100%"} $gap="space-between-xs">
-          <OakSmallSecondaryButton
+        <OakFlex $width={flexWidth} $gap="space-between-xs">
+          <ButtonComponent
             iconName={primaryActionIcon}
             isTrailingIcon
             onClick={handlePrimaryAction}
@@ -138,7 +159,7 @@ export const OakSmallSecondaryButtonWithDropdown = ({
               {leadingButtonIcon && leadingButtonIcon}
               {primaryActionText}
             </OakFlex>
-          </OakSmallSecondaryButton>
+          </ButtonComponent>
         </OakFlex>
 
         {isOpen && (
@@ -149,7 +170,7 @@ export const OakSmallSecondaryButtonWithDropdown = ({
             $borderColor="border-primary"
             $pa="inner-padding-xs"
             $position="absolute"
-            $top="all-spacing-8"
+            $top={dropdownTopSpacing}
             $zIndex="modal-close-button"
             role="menu"
             aria-label="Dropdown menu. Use arrow keys to navigate, Tab to cycle through items, Escape to close."

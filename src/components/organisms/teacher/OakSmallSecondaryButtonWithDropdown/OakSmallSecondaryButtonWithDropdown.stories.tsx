@@ -208,7 +208,7 @@ export const ButtonWithDropDown: DropdownNavStory = {
   ),
 };
 
-export const leadingButtonIconCustomFooter: DropdownNavStory = {
+export const leadingButtonIcon: DropdownNavStory = {
   render: (args) => (
     <OakFlex $height={"all-spacing-19"}>
       <OakSmallSecondaryButtonWithDropdown {...args}>
