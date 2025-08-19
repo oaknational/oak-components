@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 
-import { OakSecondaryButtonProps } from "../OakSecondaryButton";
-
+import { OakSecondaryButtonProps } from "@/components/molecules/OakSecondaryButton";
 import { OakBox, OakFlex, OakIconName } from "@/components/atoms";
 import { ResponsiveValues } from "@/styles/utils/responsiveStyle";
 import {
