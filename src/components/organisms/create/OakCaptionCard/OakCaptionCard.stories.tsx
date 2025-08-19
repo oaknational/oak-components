@@ -88,7 +88,8 @@ export const SetText: Story = {
 };
 
 export const Controlled: Story = {
-  render: (args) => {
+  render: function ControlledStory(args) {
+    // we use a named function to satisfy sonar cloud which otherwise complains that this isn't a react component
     const [checked, setChecked] = useState(false);
     return (
       <OakCaptionCard
