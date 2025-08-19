@@ -1,6 +1,6 @@
 import React from "react";
 import { create } from "react-test-renderer";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom";
 
@@ -114,11 +114,11 @@ describe("OakButtonWithDropdown", () => {
     expect(editButton).toHaveFocus();
 
     // Simulate ArrowDown keypress on the dropdown container
-    fireEvent.keyDown(document, { key: "ArrowDown" });
+    await user.keyboard("{ArrowDown}");
     expect(deleteButton).toHaveFocus();
 
     // Test ArrowUp (should wrap to first)
-    fireEvent.keyDown(document, { key: "ArrowUp" });
+    await user.keyboard("{ArrowUp}");
     expect(editButton).toHaveFocus();
   });
 
@@ -158,7 +158,7 @@ describe("OakButtonWithDropdown", () => {
 
     // Click outside
     const outsideButton = screen.getByTestId("outside-button");
-    fireEvent.mouseDown(outsideButton);
+    await user.click(outsideButton);
 
     expect(screen.queryByRole("menu")).not.toBeInTheDocument();
   });
