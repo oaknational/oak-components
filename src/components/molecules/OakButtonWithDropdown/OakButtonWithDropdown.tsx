@@ -156,7 +156,7 @@ export const OakButtonWithDropdown = ({
             }
           >
             <OakFlex $alignItems={"center"}>
-              {leadingButtonIcon && leadingButtonIcon}
+              {leadingButtonIcon}
               {primaryActionText}
             </OakFlex>
           </ButtonComponent>
