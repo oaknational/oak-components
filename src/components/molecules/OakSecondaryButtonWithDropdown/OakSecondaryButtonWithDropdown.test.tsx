@@ -61,7 +61,7 @@ describe("OakSecondaryButtonWithDropdown", () => {
   it("uses correct dropdown top spacing for secondary button", async () => {
     const user = userEvent.setup();
     renderWithTheme(
-      <OakSecondaryButtonWithDropdown 
+      <OakSecondaryButtonWithDropdown
         {...defaultProps}
         data-testid="secondary-dropdown"
       >
