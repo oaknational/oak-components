@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
 import { OakCaptionCard } from "./OakCaptionCard";
@@ -48,7 +48,6 @@ export const Default: Story = {
     videoType: "lesson",
     lastUpdated: "2023-01-01",
     lastEdited: "2023-01-01",
-    checked: false,
     highlighted: false,
     disabled: false,
     lessonHref: "#lesson-uid-1",
@@ -84,6 +83,37 @@ export const SetText: Story = {
         "lastUpdated",
         "lastEdited",
       ],
+    },
+  },
+};
+
+export const Controlled: Story = {
+  render: function ControlledStory(args) {
+    // we use a named function to satisfy sonar cloud which otherwise complains that this isn't a react component
+    const [checked, setChecked] = useState(false);
+    return (
+      <OakCaptionCard
+        {...args}
+        checked={checked}
+        onClick={() => setChecked(!checked)}
+      />
+    );
+  },
+  args: {
+    captionId: "CAP-TEST-01234",
+    videoTitle: "This is a test video title",
+    lessonUid: "LESS-TEST-01234",
+    videoType: "lesson",
+    lastUpdated: "2023-01-01",
+    lastEdited: "2023-01-01",
+    highlighted: false,
+    disabled: false,
+    lessonHref: "#lesson-uid-1",
+    editHref: "#edit-uid-1",
+  },
+  parameters: {
+    controls: {
+      include: ["checked", "highlighted", "disabled"],
     },
   },
 };

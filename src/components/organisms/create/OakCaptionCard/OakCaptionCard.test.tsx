@@ -244,4 +244,56 @@ describe("CaptionCard", () => {
     });
     expect(onCheckChanged).not.toHaveBeenCalled();
   });
+
+  it("does not fire onCheckChanged callback when edit link is clicked", () => {
+    const onCheckChanged = jest.fn();
+    const { getByRole } = renderWithTheme(
+      <OakCaptionCard
+        captionId={"CAP-TEST-01234"}
+        videoTitle={"This is a test video title"}
+        lessonUid={"LESS-TEST-01234"}
+        videoType={"lesson"}
+        lastUpdated={"2023-01-01"}
+        onCheckChanged={onCheckChanged}
+        checked={false}
+        disabled={false}
+        editHref={`#`}
+        lessonHref={`#`}
+      />,
+    );
+
+    expect(getByRole("link", { name: /edit caption/i })).toBeInTheDocument();
+
+    act(() => {
+      getByRole("link", { name: /edit caption/i }).click();
+    });
+
+    expect(onCheckChanged).not.toHaveBeenCalled();
+  });
+
+  it("does not fire onCheckChanged callback when lesson link is clicked", () => {
+    const onCheckChanged = jest.fn();
+    const { getByRole } = renderWithTheme(
+      <OakCaptionCard
+        captionId={"CAP-TEST-01234"}
+        videoTitle={"This is a test video title"}
+        lessonUid={"LESS-TEST-01234"}
+        videoType={"lesson"}
+        lastUpdated={"2023-01-01"}
+        onCheckChanged={onCheckChanged}
+        checked={false}
+        disabled={false}
+        editHref={`#`}
+        lessonHref={`#`}
+      />,
+    );
+
+    expect(getByRole("link", { name: /view lesson/i })).toBeInTheDocument();
+
+    act(() => {
+      getByRole("link", { name: /view lesson/i }).click();
+    });
+
+    expect(onCheckChanged).not.toHaveBeenCalled();
+  });
 });

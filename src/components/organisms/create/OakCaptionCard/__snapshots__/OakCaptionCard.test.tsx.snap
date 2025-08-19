@@ -368,7 +368,7 @@ input:checked + .c12 {
   text-decoration: underline;
 }
 
-.c2:has(input:focus) {
+.c2:has(input:focus-visible) {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
@@ -506,6 +506,8 @@ input:checked + .c12 {
           aria-label="edit caption CAP-TEST-01234 in a new tab in rev"
           className="c23 c24"
           href="#}"
+          onClick={[Function]}
+          target="_blank"
         >
           <span
             className="c20"
@@ -551,6 +553,8 @@ input:checked + .c12 {
         className="c29 "
         data-testid="lesson_uid"
         href="#"
+        onClick={[Function]}
+        target="_blank"
       >
         <span
           className="c20"
