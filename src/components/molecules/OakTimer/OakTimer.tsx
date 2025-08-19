@@ -25,8 +25,6 @@ export const formatTimeCode = (seconds: number): string => {
 export const OakTimer = (props: OakTimerProps) => {
   const { timeCode, ...oakBoxProps } = props;
 
-  const formattedTimeCode = formatTimeCode(timeCode);
-
   return (
     <StyledTimeBox
       $color={"text-inverted"}
@@ -35,7 +33,7 @@ export const OakTimer = (props: OakTimerProps) => {
       $font={["body-4"]}
       {...oakBoxProps}
     >
-      <OakLabel>{formattedTimeCode}</OakLabel>
+      <OakLabel>{formatTimeCode(timeCode)}</OakLabel>
     </StyledTimeBox>
   );
 };
