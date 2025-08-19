@@ -1,28 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
 
-import { OakBox, OakFlex, OakIcon, OakIconName } from "@/components/atoms";
-import {
-  OakSmallPrimaryInvertedButton,
-  OakSmallPrimaryInvertedButtonProps,
-  OakSmallSecondaryButton,
-} from "@/components/molecules";
-
-export type OakSmallSecondaryButtonWithDropdownItem =
-  OakSmallPrimaryInvertedButtonProps & {
-    label: string;
-    href?: string;
-    onClick?: () => void;
-    ariaLabel?: string;
-    iconName?: OakIconName;
-  };
+import { OakBox, OakFlex, OakIconName } from "@/components/atoms";
+import { OakSmallSecondaryButton } from "@/components/molecules";
 
 export type OakSmallSecondaryButtonWithDropdownProps = {
   primaryActionText: string;
   primaryActionIcon?: OakIconName;
   onPrimaryAction?: () => void;
-  items: OakSmallSecondaryButtonWithDropdownItem[];
-  footer?: React.ReactNode;
-  leadingItemIcon?: OakIconName;
+  children?: React.ReactNode;
   isLoading?: boolean;
   disabled?: boolean;
   ariaLabel?: string;
@@ -32,15 +17,13 @@ export type OakSmallSecondaryButtonWithDropdownProps = {
 };
 
 /**
- * A secondary button with a dropdown of items.
+ * A secondary button that allows children to be passed in as a dropdown menu.
  */
 export const OakSmallSecondaryButtonWithDropdown = ({
   primaryActionText,
   primaryActionIcon = "chevron-down",
   onPrimaryAction,
-  items,
-  footer,
-  leadingItemIcon,
+  children,
   isLoading = false,
   disabled = false,
   ariaLabel,
@@ -122,14 +105,6 @@ export const OakSmallSecondaryButtonWithDropdown = ({
     onPrimaryAction?.();
   };
 
-  const handleItemClick = (item: OakSmallSecondaryButtonWithDropdownItem) => {
-    if (item.onClick) {
-      item.onClick();
-    }
-    // Close dropdown when an item is clicked
-    setIsOpen(false);
-  };
-
   return (
     <OakBox
       as="section"
@@ -154,13 +129,7 @@ export const OakSmallSecondaryButtonWithDropdown = ({
             width="max-content"
             aria-expanded={isOpen}
             aria-haspopup="menu"
-            aria-label={`${primaryActionText}${
-              items.length > 0
-                ? `, ${items.length} item${
-                    items.length === 1 ? "" : "s"
-                  } available`
-                : ""
-            }`}
+            aria-label={primaryActionText}
             data-testid={
               dataTestId ? `${dataTestId}-primary-action` : undefined
             }
@@ -183,67 +152,10 @@ export const OakSmallSecondaryButtonWithDropdown = ({
             $top="all-spacing-8"
             $zIndex="modal-close-button"
             role="menu"
-            aria-label={`${items.length} item${
-              items.length === 1 ? "" : "s"
-            }. Use arrow keys to navigate, Tab to cycle through items, Escape to close.`}
+            aria-label="Dropdown menu. Use arrow keys to navigate, Tab to cycle through items, Escape to close."
             data-testid={dataTestId ? `${dataTestId}-dropdown` : undefined}
           >
-            <OakFlex
-              $flexDirection="column"
-              $mb={footer ? "space-between-xs" : "space-between-none"}
-              $gap={"space-between-ssx"}
-            >
-              {items.map((item, index) => (
-                <OakFlex key={index} $width={"100%"}>
-                  <OakSmallPrimaryInvertedButton
-                    key={index}
-                    element={item.href ? "a" : "button"}
-                    href={item.href}
-                    onClick={
-                      item.href ? undefined : () => handleItemClick(item)
-                    }
-                    iconName={item.iconName || "external"}
-                    isTrailingIcon
-                    role="menuitem"
-                    aria-label={item.ariaLabel || `${item.label}`}
-                    data-testid={
-                      dataTestId ? `${dataTestId}-item-${index}` : undefined
-                    }
-                    {...(item.href && {
-                      target: "_blank",
-                    })}
-                  >
-                    <OakFlex $justifyContent={"center"} $alignItems={"center"}>
-                      {leadingItemIcon && (
-                        <OakIcon
-                          $height={"all-spacing-6"}
-                          iconName={leadingItemIcon}
-                        />
-                      )}
-                      {item.label}
-                    </OakFlex>
-                  </OakSmallPrimaryInvertedButton>
-                </OakFlex>
-              ))}
-            </OakFlex>
-
-            {/* Footer Section */}
-            {footer && (
-              <>
-                {/* Divider Line */}
-                <OakBox
-                  $height="all-spacing-0"
-                  $width="100%"
-                  $bt="border-solid-s"
-                  $borderColor="border-neutral-lighter"
-                  $mb="space-between-ssx"
-                  role="separator"
-                  aria-hidden="true"
-                />
-
-                {footer}
-              </>
-            )}
+            {children}
           </OakBox>
         )}
       </OakFlex>

@@ -10,7 +10,12 @@ exports[`OakSmallSecondaryButtonWithDropdown matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c4 {
+.c3 {
+  width: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c5 {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -18,7 +23,7 @@ exports[`OakSmallSecondaryButtonWithDropdown matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c6 {
+.c7 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -27,7 +32,7 @@ exports[`OakSmallSecondaryButtonWithDropdown matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c12 {
+.c13 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -36,7 +41,7 @@ exports[`OakSmallSecondaryButtonWithDropdown matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c13 {
+.c14 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
@@ -53,7 +58,7 @@ exports[`OakSmallSecondaryButtonWithDropdown matches snapshot 1`] = `
   gap: 0.75rem;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -61,7 +66,7 @@ exports[`OakSmallSecondaryButtonWithDropdown matches snapshot 1`] = `
   gap: 0.75rem;
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -80,7 +85,7 @@ exports[`OakSmallSecondaryButtonWithDropdown matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c11 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -91,7 +96,7 @@ exports[`OakSmallSecondaryButtonWithDropdown matches snapshot 1`] = `
   align-items: center;
 }
 
-.c10 {
+.c11 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 700;
   font-size: 0.875rem;
@@ -103,7 +108,7 @@ exports[`OakSmallSecondaryButtonWithDropdown matches snapshot 1`] = `
   text-align: left;
 }
 
-.c7 {
+.c8 {
   background: none;
   color: inherit;
   border: none;
@@ -125,19 +130,19 @@ exports[`OakSmallSecondaryButtonWithDropdown matches snapshot 1`] = `
   border-radius: 0.25rem;
 }
 
-.c7:disabled {
+.c8:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c8 {
+.c9 {
   position: relative;
   width: 100%;
   height: 100%;
   display: inline-block;
 }
 
-.c8:hover {
+.c9:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #222222;
@@ -145,40 +150,40 @@ exports[`OakSmallSecondaryButtonWithDropdown matches snapshot 1`] = `
   border-color: #222222;
 }
 
-.c8:active {
+.c9:active {
   background: #ffffff;
   border-color: #222222;
   color: #222222;
 }
 
-.c8:disabled {
+.c9:disabled {
   background: #e4e4e4;
   border-color: #808080;
   color: #808080;
 }
 
-.c5 .grey-shadow:has(+ * + .internal-button:focus-visible) {
+.c6 .grey-shadow:has(+ * + .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c5 .yellow-shadow:has(+ .internal-button:focus-visible) {
+.c6 .yellow-shadow:has(+ .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
 }
 
-.c5 .yellow-shadow:has(+ .internal-button:hover),
-.c5 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
+.c6 .yellow-shadow:has(+ .internal-button:hover),
+.c6 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c5 .grey-shadow:has(+ * + .internal-button:hover) {
+.c6 .grey-shadow:has(+ * + .internal-button:hover) {
   box-shadow: none;
 }
 
-.c5 .grey-shadow:has(+ * + .internal-button:active) {
+.c6 .grey-shadow:has(+ * + .internal-button:active) {
   box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c5 .yellow-shadow:has(+ .internal-button:active) {
+.c6 .yellow-shadow:has(+ .internal-button:active) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
@@ -189,45 +194,45 @@ exports[`OakSmallSecondaryButtonWithDropdown matches snapshot 1`] = `
     className="c1 c2"
   >
     <div
-      className="c1 c3"
+      className="c3 c4"
     >
       <div
-        className="c4 c5"
+        className="c5 c6"
       >
         <div
-          className="c6 grey-shadow"
+          className="c7 grey-shadow"
         />
         <div
-          className="c6 yellow-shadow"
+          className="c7 yellow-shadow"
         />
         <button
           aria-expanded={false}
           aria-haspopup="menu"
-          aria-label="Create more with AI, 5 items available"
-          className="c7 c8 internal-button"
+          aria-label="Menu Trigger"
+          className="c8 c9 internal-button"
           disabled={false}
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
           <div
-            className="c1 c9"
+            className="c1 c10"
           >
             <span
-              className="c10"
+              className="c11"
             >
               <div
-                className="c1 c11"
+                className="c1 c12"
               >
-                Create more with AI
+                Menu Trigger
               </div>
             </span>
             <div
-              className="c12"
+              className="c13"
             >
               <img
                 alt=""
-                className="c13"
+                className="c14"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"

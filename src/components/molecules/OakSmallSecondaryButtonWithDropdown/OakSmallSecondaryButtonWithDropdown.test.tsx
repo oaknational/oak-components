@@ -7,34 +7,25 @@ import { ThemeProvider } from "styled-components";
 import { OakSmallSecondaryButtonWithDropdown } from "./OakSmallSecondaryButtonWithDropdown";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { OakFlex, OakSpan } from "@/components/atoms";
-import { OakSmallPrimaryInvertedButton } from "@/components/molecules";
 import { oakDefaultTheme } from "@/styles";
 
 const defaultProps = {
-  primaryActionText: "Create more with AI",
-  items: [
-    { label: "Glossary" },
-    { label: "Comprehension task" },
-    { label: "Lesson narrative" },
-    { label: "More starter quiz questions" },
-    { label: "More exit quiz questions" },
-  ],
-  footer: (
-    <OakFlex
-      $flexDirection="column"
-      $alignItems="center"
-      $gap="space-between-xs"
-    >
-      <OakSpan $font="heading-light-7" $color="text-primary">
-        Learn more about Aila, Oak's AI lesson assistant
-      </OakSpan>
-      <OakSmallPrimaryInvertedButton element="a" href="#" iconName="external">
-        Learn more
-      </OakSmallPrimaryInvertedButton>
-    </OakFlex>
-  ),
+  primaryActionText: "Menu Trigger",
 };
+
+const simpleChildren = (
+  <>
+    <button role="menuitem" aria-label="Option 1">
+      Option 1
+    </button>
+    <button role="menuitem" aria-label="Option 2">
+      Option 2
+    </button>
+    <button role="menuitem" aria-label="Option 3">
+      Option 3
+    </button>
+  </>
+);
 
 describe("OakSmallSecondaryButtonWithDropdown", () => {
   it("calls onPrimaryAction when primary button is clicked", async () => {
@@ -44,86 +35,112 @@ describe("OakSmallSecondaryButtonWithDropdown", () => {
       <OakSmallSecondaryButtonWithDropdown
         {...defaultProps}
         onPrimaryAction={onPrimaryAction}
-      />,
+      >
+        {simpleChildren}
+      </OakSmallSecondaryButtonWithDropdown>,
     );
-    await user.click(getByText("Create more with AI"));
+    await user.click(getByText("Menu Trigger"));
     expect(onPrimaryAction).toHaveBeenCalledTimes(1);
   });
 
-  it("calls onClick handler when item is clicked", async () => {
+  it("renders children content when dropdown is open", async () => {
     const user = userEvent.setup();
-    const onClick = jest.fn();
-    const items = [{ label: "Test Item", onClick }];
-    const { getByText, getByRole } = renderWithTheme(
-      <OakSmallSecondaryButtonWithDropdown {...defaultProps} items={items} />,
+    const { getByText } = renderWithTheme(
+      <OakSmallSecondaryButtonWithDropdown {...defaultProps}>
+        <div data-testid="custom-content">Custom dropdown content</div>
+      </OakSmallSecondaryButtonWithDropdown>,
     );
 
-    await user.click(getByText("Create more with AI"));
+    // Initially closed - content should not be visible
+    expect(() => getByText("Custom dropdown content")).toThrow();
 
-    const itemButton = getByRole("menuitem", { name: /Test Item/i });
-    await user.click(itemButton);
-    expect(onClick).toHaveBeenCalledTimes(1);
+    // Open dropdown
+    await user.click(getByText("Menu Trigger"));
+
+    // Content should now be visible
+    expect(getByText("Custom dropdown content")).toBeInTheDocument();
   });
 
-  it("renders external link when href is provided and dropdown is open", async () => {
+  it("supports keyboard navigation with arrow keys", async () => {
     const user = userEvent.setup();
-    const items = [{ label: "External Link", href: "https://example.com" }];
-    const { getByText, container } = renderWithTheme(
-      <OakSmallSecondaryButtonWithDropdown {...defaultProps} items={items} />,
+    const { getByText } = renderWithTheme(
+      <OakSmallSecondaryButtonWithDropdown {...defaultProps}>
+        {simpleChildren}
+      </OakSmallSecondaryButtonWithDropdown>,
     );
 
-    await user.click(getByText("Create more with AI"));
+    // Open dropdown
+    await user.click(getByText("Menu Trigger"));
 
-    const link = container.querySelector("a");
-    expect(link).toHaveAttribute("href", "https://example.com");
+    // Focus should be manageable with arrow keys
+    const option1 = getByText("Option 1");
+    const option2 = getByText("Option 2");
+
+    option1.focus();
+    expect(document.activeElement).toBe(option1);
+
+    // Simulate arrow down key
+    await user.keyboard("{ArrowDown}");
+    expect(document.activeElement).toBe(option2);
   });
 
   it("displays disabled state on primary button", () => {
     const { getByText } = renderWithTheme(
-      <OakSmallSecondaryButtonWithDropdown {...defaultProps} disabled={true} />,
+      <OakSmallSecondaryButtonWithDropdown {...defaultProps} disabled={true}>
+        {simpleChildren}
+      </OakSmallSecondaryButtonWithDropdown>,
     );
-    const button = getByText("Create more with AI").closest("button");
+    const button = getByText("Menu Trigger").closest("button");
     expect(button).toBeDisabled();
   });
 
-  it("renders without footer when not provided", () => {
-    const { queryByRole } = renderWithTheme(
-      <OakSmallSecondaryButtonWithDropdown
-        primaryActionText="Test Action"
-        items={[{ label: "Test Item" }]}
-      />,
+  it("closes dropdown when escape key is pressed", async () => {
+    const user = userEvent.setup();
+    const { getByText, queryByRole } = renderWithTheme(
+      <OakSmallSecondaryButtonWithDropdown {...defaultProps}>
+        {simpleChildren}
+      </OakSmallSecondaryButtonWithDropdown>,
     );
 
-    const separator = queryByRole("separator");
-    expect(separator).not.toBeInTheDocument();
+    // Open dropdown
+    await user.click(getByText("Menu Trigger"));
+    expect(queryByRole("menu")).toBeInTheDocument();
+
+    // Press escape key
+    await user.keyboard("{Escape}");
+    expect(queryByRole("menu")).not.toBeInTheDocument();
   });
 
   it("toggles dropdown open/closed when primary button is clicked", async () => {
     const user = userEvent.setup();
     const { getByText, queryByRole } = renderWithTheme(
-      <OakSmallSecondaryButtonWithDropdown {...defaultProps} />,
+      <OakSmallSecondaryButtonWithDropdown {...defaultProps}>
+        {simpleChildren}
+      </OakSmallSecondaryButtonWithDropdown>,
     );
 
     // Initially closed
     expect(queryByRole("menu")).not.toBeInTheDocument();
 
     // Click to open
-    await user.click(getByText("Create more with AI"));
+    await user.click(getByText("Menu Trigger"));
     expect(queryByRole("menu")).toBeInTheDocument();
 
     // Click to close
-    await user.click(getByText("Create more with AI"));
+    await user.click(getByText("Menu Trigger"));
     expect(queryByRole("menu")).not.toBeInTheDocument();
   });
 
   it("closes dropdown when clicking outside", async () => {
     const user = userEvent.setup();
     const { getByText, queryByRole } = renderWithTheme(
-      <OakSmallSecondaryButtonWithDropdown {...defaultProps} />,
+      <OakSmallSecondaryButtonWithDropdown {...defaultProps}>
+        {simpleChildren}
+      </OakSmallSecondaryButtonWithDropdown>,
     );
 
     // Open dropdown
-    await user.click(getByText("Create more with AI"));
+    await user.click(getByText("Menu Trigger"));
     expect(queryByRole("menu")).toBeInTheDocument();
 
     // Click outside (simulate by clicking on document body)
@@ -131,11 +148,61 @@ describe("OakSmallSecondaryButtonWithDropdown", () => {
     expect(queryByRole("menu")).not.toBeInTheDocument();
   });
 
+  it("sets proper ARIA attributes on primary button", () => {
+    const { getByText } = renderWithTheme(
+      <OakSmallSecondaryButtonWithDropdown {...defaultProps}>
+        {simpleChildren}
+      </OakSmallSecondaryButtonWithDropdown>,
+    );
+
+    const button = getByText("Menu Trigger").closest("button");
+    expect(button).toHaveAttribute("aria-expanded", "false");
+    expect(button).toHaveAttribute("aria-haspopup", "menu");
+  });
+
+  it("updates aria-expanded when dropdown is opened", async () => {
+    const user = userEvent.setup();
+    const { getByText } = renderWithTheme(
+      <OakSmallSecondaryButtonWithDropdown {...defaultProps}>
+        {simpleChildren}
+      </OakSmallSecondaryButtonWithDropdown>,
+    );
+
+    const button = getByText("Menu Trigger").closest("button");
+
+    // Initially closed
+    expect(button).toHaveAttribute("aria-expanded", "false");
+
+    // Open dropdown
+    await user.click(getByText("Menu Trigger"));
+    expect(button).toHaveAttribute("aria-expanded", "true");
+  });
+
+  it("renders with custom aria-label and description", () => {
+    const { container } = renderWithTheme(
+      <OakSmallSecondaryButtonWithDropdown
+        primaryActionText="Test"
+        ariaLabel="Custom menu"
+        ariaDescription="Custom description"
+        data-testid="test-dropdown"
+      >
+        {simpleChildren}
+      </OakSmallSecondaryButtonWithDropdown>,
+    );
+
+    const section = container.querySelector('[aria-label="Custom menu"]');
+    expect(section).toBeInTheDocument();
+    expect(section).toHaveAttribute(
+      "aria-describedby",
+      "test-dropdown-description",
+    );
+  });
+
   it("matches snapshot", () => {
     const tree = create(
       <ThemeProvider theme={oakDefaultTheme}>
         <OakSmallSecondaryButtonWithDropdown {...defaultProps}>
-          Click Me
+          {simpleChildren}
         </OakSmallSecondaryButtonWithDropdown>
       </ThemeProvider>,
     ).toJSON();
