@@ -26,7 +26,6 @@ exports[`OakTimer matches snapshot 1`] = `
 }
 
 <div
-  aria-label="Media clip length: 11 minutes and 10 seconds"
   className="c0 c1"
 >
   <label
