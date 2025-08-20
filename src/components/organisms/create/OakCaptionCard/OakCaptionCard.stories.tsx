@@ -1,28 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { CaptionCard } from "./CaptionCard";
+import { OakCaptionCard } from "./OakCaptionCard";
 
 import { OakFlex } from "@/components/atoms";
 
-const meta: Meta<typeof CaptionCard> = {
-  component: CaptionCard,
+const meta: Meta<typeof OakCaptionCard> = {
+  component: OakCaptionCard,
   tags: ["autodocs"],
+  argTypes: {
+    disabled: {
+      control: { type: "boolean" },
+    },
+    checked: {
+      control: { type: "boolean" },
+    },
+    highlighted: {
+      control: { type: "boolean" },
+    },
+  },
   parameters: {
     backgrounds: {
       default: "light",
     },
     controls: {
-      include: ["disabled", "checked", "displayValue", "value", "icon"],
+      include: [
+        "disabled",
+        "checked",
+        "highlighted",
+        "displayValue",
+        "value",
+        "icon",
+      ],
     },
   },
 };
 export default meta;
 
-type Story = StoryObj<typeof CaptionCard>;
+type Story = StoryObj<typeof OakCaptionCard>;
 
 export const Default: Story = {
-  render: (args) => <CaptionCard {...args} />,
+  render: (args) => <OakCaptionCard {...args} />,
   args: {
     captionId: "CAP-TEST-01234",
     videoTitle: "This is a test video title",
@@ -30,9 +48,10 @@ export const Default: Story = {
     videoType: "lesson",
     lastUpdated: "2023-01-01",
     lastEdited: "2023-01-01",
-    checked: false,
     highlighted: false,
     disabled: false,
+    lessonHref: "#lesson-uid-1",
+    editHref: "#edit-uid-1",
   },
   parameters: {
     controls: {
@@ -42,7 +61,7 @@ export const Default: Story = {
 };
 
 export const SetText: Story = {
-  render: (args) => <CaptionCard {...args} />,
+  render: (args) => <OakCaptionCard {...args} />,
   args: {
     captionId: "CAP-TEST-01234",
     videoTitle: "This is a test video title",
@@ -52,6 +71,8 @@ export const SetText: Story = {
     lastEdited: "2023-01-01",
     checked: false,
     highlighted: false,
+    lessonHref: "#lesson-uid-1",
+    editHref: "#edit-uid-1",
   },
   parameters: {
     controls: {
@@ -62,6 +83,37 @@ export const SetText: Story = {
         "lastUpdated",
         "lastEdited",
       ],
+    },
+  },
+};
+
+export const Controlled: Story = {
+  render: function ControlledStory(args) {
+    // we use a named function to satisfy sonar cloud which otherwise complains that this isn't a react component
+    const [checked, setChecked] = useState(false);
+    return (
+      <OakCaptionCard
+        {...args}
+        checked={checked}
+        onClick={() => setChecked(!checked)}
+      />
+    );
+  },
+  args: {
+    captionId: "CAP-TEST-01234",
+    videoTitle: "This is a test video title",
+    lessonUid: "LESS-TEST-01234",
+    videoType: "lesson",
+    lastUpdated: "2023-01-01",
+    lastEdited: "2023-01-01",
+    highlighted: false,
+    disabled: false,
+    lessonHref: "#lesson-uid-1",
+    editHref: "#edit-uid-1",
+  },
+  parameters: {
+    controls: {
+      include: ["checked", "highlighted", "disabled"],
     },
   },
 };
@@ -85,7 +137,7 @@ yearsAgo.setFullYear(nowDate.getFullYear() - 1);
 export const MultipleOptions: Story = {
   render: () => (
     <OakFlex $flexDirection="column">
-      <CaptionCard
+      <OakCaptionCard
         captionId={"CAP-TEST-0001"}
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-0001"}
@@ -94,8 +146,10 @@ export const MultipleOptions: Story = {
         lastEdited={secondsAgo.toUTCString()}
         checked={false}
         onCheckChanged={() => {}}
+        lessonHref="#lesson-uid-1"
+        editHref="#edit-uid-1"
       />
-      <CaptionCard
+      <OakCaptionCard
         captionId={"CAP-TEST-0002"}
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-0002"}
@@ -104,8 +158,10 @@ export const MultipleOptions: Story = {
         lastEdited={hoursAgo.toUTCString()}
         checked={true}
         onCheckChanged={() => {}}
+        lessonHref="#lesson-uid-1"
+        editHref="#edit-uid-1"
       />
-      <CaptionCard
+      <OakCaptionCard
         captionId={"CAP-TEST-0003"}
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-0003"}
@@ -115,8 +171,10 @@ export const MultipleOptions: Story = {
         checked={false}
         disabled={true}
         onCheckChanged={() => {}}
+        lessonHref="#lesson-uid-1"
+        editHref="#edit-uid-1"
       />
-      <CaptionCard
+      <OakCaptionCard
         captionId={"CAP-TEST-0004"}
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-0004"}
@@ -125,8 +183,10 @@ export const MultipleOptions: Story = {
         lastEdited={yearsAgo.toUTCString()}
         checked={false}
         onCheckChanged={() => {}}
+        lessonHref="#lesson-uid-1"
+        editHref="#edit-uid-1"
       />
-      <CaptionCard
+      <OakCaptionCard
         captionId={"CAP-TEST-0005"}
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-0005"}
@@ -135,6 +195,8 @@ export const MultipleOptions: Story = {
         lastEdited={"2025-07-28T12:26:40.425868+00:00"}
         checked={false}
         onCheckChanged={() => {}}
+        lessonHref="#lesson-uid-1"
+        editHref="#edit-uid-1"
       />
     </OakFlex>
   ),

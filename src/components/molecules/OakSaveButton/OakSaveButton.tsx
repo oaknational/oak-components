@@ -1,6 +1,6 @@
 import React from "react";
 
-import { OakSmallTertiaryInvertedButton } from "../OakSmallTertiaryInvertedButton";
+import { OakSmallTertiaryInvertedButton } from "@/components/molecules/OakSmallTertiaryInvertedButton";
 
 export type OakSaveButtonProps = {
   isSaved: boolean;

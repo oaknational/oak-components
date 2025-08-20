@@ -106,6 +106,10 @@ exports[`OakMediaClip matches snapshot 1`] = `
   color: #222222;
 }
 
+.c16 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
 .c0 {
   margin-bottom: 0.5rem;
   display: revert;
@@ -113,10 +117,6 @@ exports[`OakMediaClip matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
   display: revert;
   display: revert;
-}
-
-.c16 {
-  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c20 {
@@ -252,6 +252,7 @@ exports[`OakMediaClip matches snapshot 1`] = `
         className="c4 yellow-shadow"
       />
       <button
+        aria-label="Media clip: Test Clip, length: 10 minutes and 57 seconds"
         className="c5 c6 internal-button"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -295,7 +296,6 @@ exports[`OakMediaClip matches snapshot 1`] = `
               />
             </div>
             <div
-              aria-label="Media clip length: 10 minutes and 57 seconds"
               className="c14 c15"
             >
               <label

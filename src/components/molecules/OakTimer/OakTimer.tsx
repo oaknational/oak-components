@@ -25,19 +25,15 @@ export const formatTimeCode = (seconds: number): string => {
 export const OakTimer = (props: OakTimerProps) => {
   const { timeCode, ...oakBoxProps } = props;
 
-  const formattedTimeCode = formatTimeCode(timeCode);
-  const [minutes, seconds] = formattedTimeCode.split(":");
-
   return (
     <StyledTimeBox
       $color={"text-inverted"}
       $borderRadius={"border-radius-xs"}
       $background={"bg-icon"}
       $font={["body-4"]}
-      aria-label={`Media clip length: ${minutes} minutes and ${seconds} seconds`}
       {...oakBoxProps}
     >
-      <OakLabel>{formattedTimeCode}</OakLabel>
+      <OakLabel>{formatTimeCode(timeCode)}</OakLabel>
     </StyledTimeBox>
   );
 };

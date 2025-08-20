@@ -1,1 +1,2 @@
-export * from "./CaptionCard";
+export * from "./OakCaptionCard";
+export * from "./OakCaptionSearch";

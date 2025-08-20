@@ -19,6 +19,7 @@ import { sizeStyle, SizeStyleProps } from "@/styles/utils/sizeStyle";
 import { positionStyle } from "@/styles/utils/positionStyle";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { OakTagFunctional, OakTimer } from "@/components/molecules";
+import { formatTimeCode } from "@/components/molecules/OakTimer/OakTimer";
 
 type MuxPlayingState = "standard" | "playing" | "played";
 
@@ -173,6 +174,8 @@ export const OakMediaClip = ({
   element = "button",
 }: OakMediaClipProps) => {
   const buttonStyles = getButtonStyles(muxPlayingState);
+  const formattedTimeCode = formatTimeCode(timeCode);
+  const [minutes, seconds] = formattedTimeCode.split(":");
 
   return (
     <OakLI $mb={"space-between-ssx"}>
@@ -220,6 +223,7 @@ export const OakMediaClip = ({
           onClick={onClick}
           $pa={"inner-padding-xs"}
           $muxPlayingState={muxPlayingState}
+          aria-label={`Media clip: ${clipName}, length: ${minutes} minutes and ${seconds} seconds`}
         >
           <OakFlex
             $flexDirection={"row"}
