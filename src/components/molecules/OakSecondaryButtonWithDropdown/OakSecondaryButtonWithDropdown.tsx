@@ -3,8 +3,7 @@ import React, { ElementType } from "react";
 import {
   OakPrimaryInvertedButton,
   OakPrimaryInvertedButtonProps,
-} from "../OakPrimaryInvertedButton";
-
+} from "@/components/molecules/OakPrimaryInvertedButton";
 import { OakIconName } from "@/components/atoms";
 import { OakSecondaryButton } from "@/components/molecules/OakSecondaryButton";
 import { OakButtonWithDropdown } from "@/components/molecules/OakButtonWithDropdown";
