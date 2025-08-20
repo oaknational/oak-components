@@ -1,8 +1,11 @@
 import React from "react";
 
+import { OakPrimaryInvertedButton } from "../OakPrimaryInvertedButton";
+
 import { OakIconName } from "@/components/atoms";
 import { OakSecondaryButton } from "@/components/molecules/OakSecondaryButton";
 import { OakButtonWithDropdown } from "@/components/molecules/OakButtonWithDropdown";
+import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
 
 export type OakSecondaryButtonWithDropdownProps = {
   primaryActionText: string;
@@ -18,7 +21,7 @@ export type OakSecondaryButtonWithDropdownProps = {
 };
 
 /**
- * A secondary button with a dropdown of items.
+ * A oak secondary button that takes custom menu items or .Item and .Divider compound components as children.
  */
 export const OakSecondaryButtonWithDropdown = (
   props: OakSecondaryButtonWithDropdownProps,
@@ -31,3 +34,23 @@ export const OakSecondaryButtonWithDropdown = (
     />
   );
 };
+
+OakSecondaryButtonWithDropdown.Divider = (): React.ReactElement => (
+  <OakButtonWithDropdown.Divider />
+);
+
+OakSecondaryButtonWithDropdown.Item = ({
+  children,
+  ...rest
+}: { children: React.ReactNode } & PolymorphicPropsWithoutRef<
+  typeof OakPrimaryInvertedButton
+>): React.ReactElement => (
+  <OakPrimaryInvertedButton
+    element="button"
+    role="menuitem"
+    isTrailingIcon
+    {...rest}
+  >
+    {children}
+  </OakPrimaryInvertedButton>
+);

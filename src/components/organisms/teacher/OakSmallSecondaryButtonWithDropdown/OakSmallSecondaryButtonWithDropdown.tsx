@@ -3,6 +3,8 @@ import React from "react";
 import { OakIconName } from "@/components/atoms";
 import { OakSmallSecondaryButton } from "@/components/molecules/OakSmallSecondaryButton";
 import { OakButtonWithDropdown } from "@/components/molecules/OakButtonWithDropdown";
+import { OakSmallPrimaryInvertedButton } from "@/components/molecules";
+import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
 
 export type OakSmallSecondaryButtonWithDropdownProps = {
   primaryActionText: string;
@@ -32,3 +34,23 @@ export const OakSmallSecondaryButtonWithDropdown = (
     />
   );
 };
+
+OakSmallSecondaryButtonWithDropdown.Divider = (): React.ReactElement => (
+  <OakButtonWithDropdown.Divider />
+);
+
+OakSmallSecondaryButtonWithDropdown.Item = ({
+  children,
+  ...rest
+}: { children: React.ReactNode } & PolymorphicPropsWithoutRef<
+  typeof OakSmallPrimaryInvertedButton
+>): React.ReactElement => (
+  <OakSmallPrimaryInvertedButton
+    element="button"
+    role="menuitem"
+    isTrailingIcon
+    {...rest}
+  >
+    {children}
+  </OakSmallPrimaryInvertedButton>
+);

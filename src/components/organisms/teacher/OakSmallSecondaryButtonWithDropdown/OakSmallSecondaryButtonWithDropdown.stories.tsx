@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/react";
 
 import { OakSmallSecondaryButtonWithDropdown } from "./OakSmallSecondaryButtonWithDropdown";
 
-import { OakBox, OakFlex, OakIcon, OakSpan } from "@/components/atoms";
+import { OakFlex, OakIcon, OakSpan } from "@/components/atoms";
 import { OakSmallPrimaryInvertedButton } from "@/components/molecules";
 
 // Generic Dropdown Navigation Button Stories
@@ -48,52 +48,27 @@ export const ButtonWithDropDown: DropdownNavStory = {
     <OakFlex $height={"all-spacing-19"}>
       <OakFlex $gap="space-between-m">
         <OakSmallSecondaryButtonWithDropdown {...args}>
-          <OakFlex $flexDirection="column" $gap={"space-between-ssx"}>
-            <OakSmallPrimaryInvertedButton
-              element="button"
-              role="menuitem"
-              aria-label="Button 1"
-              textAlign={"left"}
-            >
-              Button 1
-            </OakSmallPrimaryInvertedButton>
+          <OakSmallSecondaryButtonWithDropdown.Item aria-label="Button 1">
+            Button 1
+          </OakSmallSecondaryButtonWithDropdown.Item>
 
-            <OakSmallPrimaryInvertedButton
-              element="button"
-              role="menuitem"
-              aria-label="Longer button 2"
-            >
-              Longer button 2
-            </OakSmallPrimaryInvertedButton>
+          <OakSmallSecondaryButtonWithDropdown.Item aria-label="Longer button 2">
+            Longer button 2
+          </OakSmallSecondaryButtonWithDropdown.Item>
 
-            <OakSmallPrimaryInvertedButton
-              element="button"
-              role="menuitem"
-              aria-label="Button 3"
-            >
-              Button 3
-            </OakSmallPrimaryInvertedButton>
-          </OakFlex>
+          <OakSmallSecondaryButtonWithDropdown.Item aria-label="Button 3">
+            Button 3
+          </OakSmallSecondaryButtonWithDropdown.Item>
 
-          {/* Divider Line */}
-          <OakBox
-            $height="all-spacing-0"
-            $width="100%"
-            $bt="border-solid-s"
-            $borderColor="border-neutral-lighter"
-            $mb="space-between-ssx"
-            $mt="space-between-xs"
-            aria-hidden="true"
-          />
+          <OakSmallSecondaryButtonWithDropdown.Divider />
 
-          <OakSmallPrimaryInvertedButton
-            element="a"
+          <OakSmallSecondaryButtonWithDropdown.Item
             href="#"
-            isTrailingIcon
+            aria-label="Button 4"
             iconName="external"
           >
             Button 4
-          </OakSmallPrimaryInvertedButton>
+          </OakSmallSecondaryButtonWithDropdown.Item>
         </OakSmallSecondaryButtonWithDropdown>
 
         <OakSmallSecondaryButtonWithDropdown
@@ -101,52 +76,9 @@ export const ButtonWithDropDown: DropdownNavStory = {
           primaryActionText="Disabled"
           disabled
         >
-          <OakFlex $flexDirection="column" $gap={"space-between-ssx"}>
-            <OakSmallPrimaryInvertedButton
-              element="button"
-              role="menuitem"
-              aria-label="Button 1"
-              width={"100%"}
-            >
-              Button 1
-            </OakSmallPrimaryInvertedButton>
-
-            <OakSmallPrimaryInvertedButton
-              element="button"
-              role="menuitem"
-              aria-label="Longer button 2"
-            >
-              Longer button 2
-            </OakSmallPrimaryInvertedButton>
-
-            <OakSmallPrimaryInvertedButton
-              element="button"
-              role="menuitem"
-              aria-label="Button 3"
-            >
-              Button 3
-            </OakSmallPrimaryInvertedButton>
-          </OakFlex>
-
-          {/* Divider Line */}
-          <OakBox
-            $height="all-spacing-0"
-            $width="100%"
-            $bt="border-solid-s"
-            $borderColor="border-neutral-lighter"
-            $mb="space-between-ssx"
-            $mt="space-between-xs"
-            aria-hidden="true"
-          />
-
-          <OakSmallPrimaryInvertedButton
-            element="a"
-            href="#"
-            isTrailingIcon
-            iconName="external"
-          >
-            Button 4
-          </OakSmallPrimaryInvertedButton>
+          <OakSmallSecondaryButtonWithDropdown.Item aria-label="Button 1">
+            Button 1
+          </OakSmallSecondaryButtonWithDropdown.Item>
         </OakSmallSecondaryButtonWithDropdown>
 
         <OakSmallSecondaryButtonWithDropdown
@@ -154,51 +86,9 @@ export const ButtonWithDropDown: DropdownNavStory = {
           primaryActionText="Loading"
           isLoading
         >
-          <OakFlex $flexDirection="column" $gap={"space-between-ssx"}>
-            <OakSmallPrimaryInvertedButton
-              element="button"
-              role="menuitem"
-              aria-label="Button 1"
-            >
-              Button 1
-            </OakSmallPrimaryInvertedButton>
-
-            <OakSmallPrimaryInvertedButton
-              element="button"
-              role="menuitem"
-              aria-label="Longer button 2"
-            >
-              Longer button 2
-            </OakSmallPrimaryInvertedButton>
-
-            <OakSmallPrimaryInvertedButton
-              element="button"
-              role="menuitem"
-              aria-label="Button 3"
-            >
-              Button 3
-            </OakSmallPrimaryInvertedButton>
-          </OakFlex>
-
-          {/* Divider Line */}
-          <OakBox
-            $height="all-spacing-0"
-            $width="100%"
-            $bt="border-solid-s"
-            $borderColor="border-neutral-lighter"
-            $mb="space-between-ssx"
-            $mt="space-between-xs"
-            aria-hidden="true"
-          />
-
-          <OakSmallPrimaryInvertedButton
-            element="a"
-            href="#"
-            isTrailingIcon
-            iconName="external"
-          >
-            Button 4
-          </OakSmallPrimaryInvertedButton>
+          <OakSmallSecondaryButtonWithDropdown.Item aria-label="Button 1">
+            Button 1
+          </OakSmallSecondaryButtonWithDropdown.Item>
         </OakSmallSecondaryButtonWithDropdown>
       </OakFlex>
     </OakFlex>
@@ -209,66 +99,32 @@ export const leadingButtonIcon: DropdownNavStory = {
   render: (args) => (
     <OakFlex $height={"all-spacing-19"}>
       <OakSmallSecondaryButtonWithDropdown {...args}>
-        <OakFlex
-          $flexDirection="column"
-          $gap={"space-between-ssx"}
-          $mb="space-between-xs"
+        <OakSmallSecondaryButtonWithDropdown.Item
+          iconName="external"
+          aria-label="Glossary"
         >
-          <OakFlex $width={"100%"}>
-            <OakSmallPrimaryInvertedButton
-              element="button"
-              iconName="external"
-              isTrailingIcon
-              role="menuitem"
-              aria-label="Glossary"
-            >
-              Glossary
-            </OakSmallPrimaryInvertedButton>
-          </OakFlex>
-          <OakFlex $width={"100%"}>
-            <OakSmallPrimaryInvertedButton
-              element="button"
-              iconName="external"
-              isTrailingIcon
-              role="menuitem"
-              aria-label="Comprehension task"
-            >
-              Comprehension task
-            </OakSmallPrimaryInvertedButton>
-          </OakFlex>
-          <OakFlex $width={"100%"}>
-            <OakSmallPrimaryInvertedButton
-              element="button"
-              iconName="external"
-              isTrailingIcon
-              role="menuitem"
-              aria-label="More starter quiz questions"
-            >
-              More starter quiz questions
-            </OakSmallPrimaryInvertedButton>
-          </OakFlex>
-          <OakFlex $width={"100%"}>
-            <OakSmallPrimaryInvertedButton
-              element="button"
-              iconName="external"
-              isTrailingIcon
-              role="menuitem"
-              aria-label="More exit quiz questions"
-            >
-              More exit quiz questions
-            </OakSmallPrimaryInvertedButton>
-          </OakFlex>
-        </OakFlex>
+          Glossary
+        </OakSmallSecondaryButtonWithDropdown.Item>
+        <OakSmallSecondaryButtonWithDropdown.Item
+          iconName="external"
+          aria-label="Comprehension task"
+        >
+          Comprehension task
+        </OakSmallSecondaryButtonWithDropdown.Item>
+        <OakSmallSecondaryButtonWithDropdown.Item
+          iconName="external"
+          aria-label="More starter quiz questions"
+        >
+          More starter quiz questions
+        </OakSmallSecondaryButtonWithDropdown.Item>
+        <OakSmallSecondaryButtonWithDropdown.Item
+          iconName="external"
+          aria-label="More exit quiz questions"
+        >
+          More exit quiz questions
+        </OakSmallSecondaryButtonWithDropdown.Item>
 
-        {/* Divider Line */}
-        <OakBox
-          $height="all-spacing-0"
-          $width="100%"
-          $bt="border-solid-s"
-          $borderColor="border-neutral-lighter"
-          $mb="space-between-ssx"
-          aria-hidden="true"
-        />
+        <OakSmallSecondaryButtonWithDropdown.Divider />
 
         <OakSmallPrimaryInvertedButton
           element="a"

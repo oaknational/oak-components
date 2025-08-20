@@ -175,10 +175,22 @@ export const OakButtonWithDropdown = ({
             aria-label="Dropdown menu. Use arrow keys to navigate, Tab to cycle through items, Escape to close."
             data-testid={dataTestId ? `${dataTestId}-dropdown` : undefined}
           >
-            {children}
+            <OakFlex $flexDirection="column" $gap={"space-between-ssx"}>
+              {children}
+            </OakFlex>
           </OakBox>
         )}
       </OakFlex>
     </OakBox>
   );
 };
+
+OakButtonWithDropdown.Divider = (): React.ReactElement => (
+  <OakBox
+    $height="all-spacing-0"
+    $width="100%"
+    $bt="border-solid-s"
+    $borderColor="border-neutral-lighter"
+    aria-hidden="true"
+  />
+);
