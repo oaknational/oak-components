@@ -1,9 +1,12 @@
-import React from "react";
+import React, { ElementType } from "react";
 
 import { OakIconName } from "@/components/atoms";
 import { OakSmallSecondaryButton } from "@/components/molecules/OakSmallSecondaryButton";
 import { OakButtonWithDropdown } from "@/components/molecules/OakButtonWithDropdown";
-import { OakSmallPrimaryInvertedButton } from "@/components/molecules";
+import {
+  OakSmallPrimaryInvertedButton,
+  OakSmallPrimaryInvertedButtonProps,
+} from "@/components/molecules";
 import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
 
 export type OakSmallSecondaryButtonWithDropdownProps = {
@@ -39,14 +42,16 @@ OakSmallSecondaryButtonWithDropdown.Divider = (): React.ReactElement => (
   <OakButtonWithDropdown.Divider />
 );
 
-OakSmallSecondaryButtonWithDropdown.Item = ({
+OakSmallSecondaryButtonWithDropdown.Item = <C extends ElementType = "button">({
   children,
+  element,
   ...rest
-}: { children: React.ReactNode } & PolymorphicPropsWithoutRef<
-  typeof OakSmallPrimaryInvertedButton
->): React.ReactElement => (
+}: {
+  children: React.ReactNode;
+} & OakSmallPrimaryInvertedButtonProps &
+  PolymorphicPropsWithoutRef<C>): React.ReactElement => (
   <OakSmallPrimaryInvertedButton
-    element="button"
+    element="a"
     role="menuitem"
     isTrailingIcon
     {...rest}

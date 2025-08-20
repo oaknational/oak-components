@@ -37,6 +37,7 @@ export * from "./OakFilterDrawer";
 export * from "./OakSmallPrimaryButton";
 export * from "./OakSmallPrimaryInvertedButton";
 export * from "./OakSmallSecondaryButton";
+export * from "./OakSmallSecondaryButtonWithDropdown";
 export * from "./OakTertiaryButton";
 export * from "./OakTertiaryInvertedButton";
 export * from "./OakTextInput";

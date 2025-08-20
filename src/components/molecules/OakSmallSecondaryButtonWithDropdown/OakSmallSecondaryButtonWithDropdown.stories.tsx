@@ -63,6 +63,7 @@ export const ButtonWithDropDown: DropdownNavStory = {
           <OakSmallSecondaryButtonWithDropdown.Divider />
 
           <OakSmallSecondaryButtonWithDropdown.Item
+            element="a"
             href="#"
             aria-label="Button 4"
             iconName="external"
