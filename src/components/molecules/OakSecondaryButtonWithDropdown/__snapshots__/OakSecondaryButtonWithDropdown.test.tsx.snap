@@ -1,0 +1,259 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakSecondaryButtonWithDropdown matches snapshot 1`] = `
+.c0 {
+  position: relative;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c1 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c4 {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c6 {
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c12 {
+  position: relative;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  min-height: 1.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c13 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  object-fit: contain;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c10 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+  text-align: left;
+}
+
+.c7 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+  color: #222222;
+  background: #ffffff;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border: 0.125rem solid;
+  border-color: #222222;
+  border-radius: 0.25rem;
+}
+
+.c7:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c8 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.c8:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: #222222;
+  background: #f2f2f2;
+  border-color: #222222;
+}
+
+.c8:active {
+  background: #ffffff;
+  border-color: #222222;
+  color: #222222;
+}
+
+.c8:disabled {
+  background: #e4e4e4;
+  border-color: #808080;
+  color: #808080;
+}
+
+.c5 .grey-shadow:has(+ * + .internal-button:focus-visible) {
+  box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c5 .yellow-shadow:has(+ .internal-button:focus-visible) {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
+}
+
+.c5 .yellow-shadow:has(+ .internal-button:hover),
+.c5 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c5 .grey-shadow:has(+ * + .internal-button:hover) {
+  box-shadow: none;
+}
+
+.c5 .grey-shadow:has(+ * + .internal-button:active) {
+  box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+}
+
+.c5 .yellow-shadow:has(+ .internal-button:active) {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+<section
+  className="c0"
+>
+  <div
+    className="c1 c2"
+  >
+    <div
+      className="c1 c3"
+    >
+      <div
+        className="c4 c5"
+      >
+        <div
+          className="c6 grey-shadow"
+        />
+        <div
+          className="c6 yellow-shadow"
+        />
+        <button
+          aria-expanded={false}
+          aria-haspopup="menu"
+          aria-label="Actions"
+          className="c7 c8 internal-button"
+          disabled={false}
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <div
+            className="c1 c9"
+          >
+            <span
+              className="c10"
+            >
+              <div
+                className="c1 c11"
+              >
+                Actions
+              </div>
+            </span>
+            <div
+              className="c12"
+            >
+              <img
+                alt=""
+                className="c13"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+                style={
+                  {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+              />
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+`;
