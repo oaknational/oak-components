@@ -252,7 +252,7 @@ exports[`OakMediaClip matches snapshot 1`] = `
         className="c4 yellow-shadow"
       />
       <button
-        aria-label="Media clip: Test Clip, length: 10 minutes and 57 seconds"
+        aria-label="Video - Test Clip - Cycle 1, length: 10:57"
         className="c5 c6 internal-button"
         onClick={[Function]}
         onMouseEnter={[Function]}
