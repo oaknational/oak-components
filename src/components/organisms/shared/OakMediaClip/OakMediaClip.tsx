@@ -175,7 +175,11 @@ export const OakMediaClip = ({
 }: OakMediaClipProps) => {
   const buttonStyles = getButtonStyles(muxPlayingState);
   const formattedTimeCode = formatTimeCode(timeCode);
-  const [minutes, seconds] = formattedTimeCode.split(":");
+  const buttonAriaLabel = `${isAudioClip ? "Audio" : "Video"} - ${clipName}${
+    learningCycle ? ` - ${learningCycle}` : ""
+  }, length: ${formattedTimeCode}${
+    muxPlayingState === "played" ? `, Played` : ""
+  }`;
 
   return (
     <OakLI $mb={"space-between-ssx"}>
@@ -223,7 +227,7 @@ export const OakMediaClip = ({
           onClick={onClick}
           $pa={"inner-padding-xs"}
           $muxPlayingState={muxPlayingState}
-          aria-label={`Media clip: ${clipName}, length: ${minutes} minutes and ${seconds} seconds`}
+          aria-label={buttonAriaLabel}
         >
           <OakFlex
             $flexDirection={"row"}
