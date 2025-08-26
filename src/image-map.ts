@@ -5,6 +5,11 @@ export const icons = {
   // icons
   "question-mark": "v1706872277/icons/question-mark.svg",
   ai: "v1754063273/icons/ai_cqaksa.svg",
+  "ai-additional-material":
+    "v1756224441/icons/AI_additional_material_oopjax.svg",
+  "ai-quiz": "v1756224440/icons/AI_quiz_eivb2s.svg",
+  "ai-slide-deck": "v1756224440/icons/Ai_slidedeck_xuo49n.svg",
+  "ai-worksheet": "v1756224441/icons/AI_worksheet_cm4f0q.svg",
   home: "v1699887218/icons/gvqxjxcw07ei2kkmwnes.svg",
   send: "v1699893673/icons/rmvytilpjgvh3pgwc8ph.svg",
   rocket: "v1699894015/icons/u26xm5hteot875ozfnk9.svg",
