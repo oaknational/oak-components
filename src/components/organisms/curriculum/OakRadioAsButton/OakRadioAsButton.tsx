@@ -110,8 +110,16 @@ export type OakRadioAsButtonProps = Omit<
  */
 export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
   const id = useId();
-  const { value, disabled, innerRef, displayValue, icon, onChange, ...rest } =
-    props;
+  const {
+    value,
+    disabled,
+    innerRef,
+    displayValue,
+    icon,
+    onChange,
+    keepIconColor,
+    ...rest
+  } = props;
   const { name, onValueUpdated, currentValue } = useContext(RadioContext);
 
   const defaultRef = useRef<HTMLInputElement>(null);
@@ -146,6 +154,7 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
       >
         <StyledInternalRadio
           {...rest}
+          $keepIconColor={keepIconColor}
           id={id}
           value={value}
           disabled={disabled}
