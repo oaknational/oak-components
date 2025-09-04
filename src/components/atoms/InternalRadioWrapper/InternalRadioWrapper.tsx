@@ -3,7 +3,6 @@ import styled, { css } from "styled-components";
 
 import { InternalRadio } from "@/components/atoms/InternalRadio";
 import { OakFlex, OakFlexProps } from "@/components/atoms/OakFlex";
-import { OakBox } from "@/components/atoms/OakBox";
 import {
   OakAllSpacingToken,
   OakBorderWidthToken,
@@ -127,7 +126,7 @@ export const InternalRadioWrapper = (props: InternalRadioWrapperProps) => {
     : radioBorderWidth;
 
   return (
-    <OakBox $position="relative" $width={size} $height={size}>
+    <OakFlex $position="relative" $width={size} $height={size} $flexShrink={0}>
       {internalRadio}
       {!disabled ? (
         <VisibleRadioButtonInput
@@ -164,6 +163,6 @@ export const InternalRadioWrapper = (props: InternalRadioWrapperProps) => {
           $left={"all-spacing-0"}
         />
       )}
-    </OakBox>
+    </OakFlex>
   );
 };
