@@ -131,6 +131,7 @@ export const OakRadioButton = forwardRef<HTMLInputElement, OakRadioButtonProps>(
                 value={value}
                 checked={value === radioContext.currentValue}
                 onChange={radioContext.onValueUpdated}
+                $ba={"border-solid-none"}
                 {...rest}
               />
             }
