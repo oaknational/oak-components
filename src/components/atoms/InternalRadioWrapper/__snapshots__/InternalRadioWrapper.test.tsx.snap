@@ -9,7 +9,7 @@ exports[`InternalRadioWrapper matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c1 {
+.c2 {
   position: absolute;
   top: 0rem;
   left: 0rem;
@@ -21,7 +21,17 @@ exports[`InternalRadioWrapper matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -43,12 +53,12 @@ exports[`InternalRadioWrapper matches snapshot 1`] = `
   flex-shrink: 0;
 }
 
-.c3 {
+.c4 {
   border-radius: 50%;
 }
 
 <div
-    className="c0"
+    className="c0 c1"
   >
     <input
       data-testid="test-input"
@@ -57,7 +67,7 @@ exports[`InternalRadioWrapper matches snapshot 1`] = `
       value="Option 1"
     />
     <div
-      className="c1 c2 c3"
+      className="c2 c3 c4"
     />
   </div>,
   ",",
