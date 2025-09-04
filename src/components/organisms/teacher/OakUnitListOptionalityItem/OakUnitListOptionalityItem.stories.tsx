@@ -109,8 +109,12 @@ export const Default: Story = {
   render: (args) => (
     <>
       <OakUnitListOptionalityItem {...args} />
-      {optionalityItemData.map((item) => (
-        <OakUnitListOptionalityItem {...item} firstItemRef={undefined} />
+      {optionalityItemData.map((item, i) => (
+        <OakUnitListOptionalityItem
+          key={item.nullTitle + i}
+          {...item}
+          firstItemRef={undefined}
+        />
       ))}
     </>
   ),
