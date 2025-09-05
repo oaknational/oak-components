@@ -126,7 +126,14 @@ export const InternalRadioWrapper = (props: InternalRadioWrapperProps) => {
     : radioBorderWidth;
 
   return (
-    <OakFlex $position="relative" $width={size} $height={size} $flexShrink={0}>
+    <OakFlex
+      $position="relative"
+      $width={size}
+      $height={size}
+      $flexShrink={0}
+      $justifyContent={"center"}
+      $alignItems={"center"}
+    >
       {internalRadio}
       {!disabled ? (
         <VisibleRadioButtonInput
