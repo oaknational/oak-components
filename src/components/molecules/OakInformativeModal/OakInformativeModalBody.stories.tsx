@@ -1,11 +1,11 @@
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakModalBody } from "./OakModalBody";
+import { OakInformativeModalBody } from "./OakInformativeModalBody";
 
-const meta: Meta<typeof OakModalBody> = {
-  component: OakModalBody,
+const meta: Meta<typeof OakInformativeModalBody> = {
+  component: OakInformativeModalBody,
   tags: ["autodocs"],
-  title: "components/molecules/OakModal/OakModalBody",
+  title: "components/molecules/OakInformativeModal/OakInformativeModalBody",
   parameters: {
     controls: {
       include: [],
@@ -26,6 +26,6 @@ const meta: Meta<typeof OakModalBody> = {
 };
 export default meta;
 
-type Story = StoryObj<typeof OakModalBody>;
+type Story = StoryObj<typeof OakInformativeModalBody>;
 
 export const Default: Story = {};
