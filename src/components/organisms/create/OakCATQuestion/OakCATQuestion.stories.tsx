@@ -3,18 +3,15 @@ import { StoryObj, Meta } from "@storybook/react";
 
 import { OakCATQuestion } from "./OakCATQuestion";
 
+import { OakBox, OakP } from "@/components/atoms";
+
 const meta: Meta<typeof OakCATQuestion> = {
   component: OakCATQuestion,
   tags: ["autodocs"],
   argTypes: {},
   parameters: {
     controls: {
-      include: [
-        "questionNumber",
-        "status",
-        "availableQuestionTypes",
-        "chosenQuestionType",
-      ],
+      include: ["questionNumber", "status"],
     },
   },
 };
@@ -28,19 +25,50 @@ export const Default: Story = {
   args: {
     questionNumber: 1,
     status: "draft",
-    availableQuestionTypes: [
-      "multiple-choice",
-      "short-answer",
-      "match",
-      "order",
-    ],
-    chosenQuestionType: "multiple-choice",
-    onQuestionTypeChange: (type: string) => {
-      console.log(type);
-    },
-    questionTextInput: <div>Question Text Input</div>,
-    hintInput: <div>Hint Input</div>,
-    feedbackInput: <div>Feedback Input</div>,
-    answersSection: <div>Answers Section</div>,
+    questionTypeInput: (
+      <OakBox $background={"aqua50"} $pa="inner-padding-ssx">
+        Dummy Question Type Input
+      </OakBox>
+    ),
+    questionTextInput: (
+      <OakBox $background={"aqua50"} $pa="inner-padding-s">
+        Dummy Question Text Input
+      </OakBox>
+    ),
+    hintInput: (
+      <OakBox $background={"aqua50"}>
+        <OakBox
+          $background={"amber50"}
+          $pa="inner-padding-ssx"
+          $height={"all-spacing-12"}
+          $width={"all-spacing-20"}
+        >
+          Dummy Hint Input
+        </OakBox>
+        <OakP>Character count 0/200</OakP>
+      </OakBox>
+    ),
+    feedbackInput: (
+      <OakBox $background={"aqua50"}>
+        <OakBox
+          $background={"amber50"}
+          $pa="inner-padding-ssx"
+          $height={"all-spacing-12"}
+          $width={"all-spacing-20"}
+        >
+          Dummy Feedback Input
+        </OakBox>
+        <OakP>Character count 0/200</OakP>
+      </OakBox>
+    ),
+    answersSection: (
+      <OakBox
+        $background={"mint50"}
+        $pa="inner-padding-s"
+        $height={"all-spacing-20"}
+      >
+        Dummy answers Section
+      </OakBox>
+    ),
   },
 };
