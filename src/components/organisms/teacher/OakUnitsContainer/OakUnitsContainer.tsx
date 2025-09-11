@@ -57,7 +57,9 @@ const UnstyledComponent = (props: OakUnitsContainerProps) => {
         />
       )}
       <OakULFlex aria-label="A list of units" $reset $width="100%">
-        {...unitCards}
+        {unitCards.map((unitCard, index) => (
+          <React.Fragment key={index}>{unitCard}</React.Fragment>
+        ))}
       </OakULFlex>
     </OakFlex>
   );
