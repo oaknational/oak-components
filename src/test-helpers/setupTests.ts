@@ -12,7 +12,7 @@ if (process.env.TEST_ALLOW_LOGGING !== "1") {
   consoleMethods.forEach((type: ConsoleMethod) => {
     console[type] = (message: string) => {
       throw new Error(
-        `Failed: We don't allow console.${type} while running tests!\n\n${message}`,
+        `Failed: We don't allow console.${type} while running tests!\n\n${message}\n\nIf you'd like to enable logging for testing, prefix with TEST_ALLOW_LOGGING=1`,
       );
     };
   });
