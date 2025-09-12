@@ -3,7 +3,7 @@ import { StoryObj, Meta } from "@storybook/react";
 
 import { OakCATQuestion } from "./OakCATQuestion";
 
-import { OakBox, OakP } from "@/components/atoms";
+import { OakBox, OakP, OakUL } from "@/components/atoms";
 
 const meta: Meta<typeof OakCATQuestion> = {
   component: OakCATQuestion,
@@ -24,7 +24,9 @@ const meta: Meta<typeof OakCATQuestion> = {
   decorators: [
     (Story) => (
       <OakBox $background={"grey20"} $pa="inner-padding-xl" $width={"100%"}>
-        <Story />
+        <OakUL>
+          <Story />
+        </OakUL>
       </OakBox>
     ),
   ],
