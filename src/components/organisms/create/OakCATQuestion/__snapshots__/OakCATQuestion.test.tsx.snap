@@ -210,6 +210,8 @@ exports[`OakCATQuestion matches snapshot 1`] = `
 
 .c3 {
   border-left: 8px solid #cacaca;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 .c0 {
