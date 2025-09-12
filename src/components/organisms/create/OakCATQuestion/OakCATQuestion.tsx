@@ -5,7 +5,8 @@ import { OakFlex, OakFlexProps } from "@/components/atoms/OakFlex";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { OakCombinedColorToken } from "@/styles";
 import { OakLabel, OakSpan } from "@/components/atoms";
-import { OakBasicAccordion } from "@/components/molecules";
+import { InternalUnstyledChevronAccordion } from "@/components/molecules/InternalUnstyledChevronAccordion";
+import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 
 type StyledOakFlexProps = {
   $statusColor: OakCombinedColorToken;
@@ -13,15 +14,20 @@ type StyledOakFlexProps = {
 
 const StyledOakFlex = styled(OakFlex)<StyledOakFlexProps>`
   border-left: 8px solid ${(props) => parseColor(props.$statusColor)};
+  border-top-right-radius: ${parseBorderRadius("border-radius-m2")};
+  border-bottom-right-radius: ${parseBorderRadius("border-radius-m2")};
 `;
 
 const UnstyledLI = styled.li`
   list-style: none;
 `;
 
+type Statuses = "error" | "selected" | "neutral";
+
 export type OakCATQuestionProps = {
   questionNumber: number;
-  status: string;
+  status: Statuses;
+  initialOpen?: boolean;
   questionTypeInput: ReactNode;
   questionTextInput: ReactNode;
   hintInput: ReactNode;
@@ -32,26 +38,25 @@ export type OakCATQuestionProps = {
 export const OakCATQuestion = (props: OakCATQuestionProps) => {
   const {
     questionNumber,
-    status,
     questionTypeInput,
     questionTextInput,
     hintInput,
     feedbackInput,
     answersSection,
+    initialOpen = false,
+    status = "neutral",
   } = props;
 
+  const statusColorMap: Record<Statuses, OakCombinedColorToken> = {
+    error: "red",
+    selected: "mint110",
+    neutral: "grey40",
+  };
+
   const header = (
-    <OakFlex
-      $flexDirection={"column"}
-      $width={"100%"}
-      $gap={"space-between-s"}
-      $textAlign={"left"}
-    >
-      <OakFlex $gap={"space-between-xs"} $alignItems={"center"}>
-        {`${questionNumber}.`}
-        {questionTypeInput}
-      </OakFlex>
-      {questionTextInput}
+    <OakFlex $gap={"space-between-xs"} $alignItems={"center"} $width={"100%"}>
+      {`${questionNumber}.`}
+      {questionTypeInput}
     </OakFlex>
   );
 
@@ -97,15 +102,17 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
         $justifyContent={"flex-start"}
         $background={"bg-primary"}
         $pa={"inner-padding-xl2"}
-        $statusColor="mint110"
+        $statusColor={statusColorMap[status]}
         $flexDirection={"column"}
       >
-        <OakBasicAccordion
+        <InternalUnstyledChevronAccordion
           id={`question-${questionNumber}`}
           header={header}
-          children={body}
+          subheader={questionTextInput}
+          content={body}
           $flexDirection={"column"}
           $justifyContent={"flex-start"}
+          initialOpen={initialOpen}
         />
       </StyledOakFlex>
     </UnstyledLI>

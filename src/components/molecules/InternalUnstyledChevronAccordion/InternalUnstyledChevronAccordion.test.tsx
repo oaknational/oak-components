@@ -16,10 +16,9 @@ describe(InternalUnstyledChevronAccordion, () => {
         <InternalUnstyledChevronAccordion
           initialOpen
           header="See more"
+          content={<div>Here it is</div>}
           id="see-more"
-        >
-          Here it is
-        </InternalUnstyledChevronAccordion>
+        />
       </OakThemeProvider>,
     ).toJSON();
 
@@ -27,25 +26,36 @@ describe(InternalUnstyledChevronAccordion, () => {
   });
 
   it("toggles open and closed", () => {
-    const { queryByRole, queryByText, getByText, getByRole } = renderWithTheme(
-      <InternalUnstyledChevronAccordion header="See more" id="see-more">
-        Here it is
-      </InternalUnstyledChevronAccordion>,
+    const { queryByText, queryByRole, getByRole } = renderWithTheme(
+      <InternalUnstyledChevronAccordion
+        initialOpen={false}
+        header="See more"
+        content={<div>Here it is</div>}
+        id="see-more"
+      />,
     );
 
-    expect(queryByRole("region")).not.toBeInTheDocument();
+    // expect(getByRole("region")).not.toBeVisible();
 
     act(() => {
       fireEvent.click(getByRole("button"));
     });
 
-    expect(queryByRole("region")).toBeVisible();
+    expect(getByRole("region")).toBeVisible();
+
     expect(queryByText("Here it is")).toBeInTheDocument();
 
     act(() => {
       fireEvent.click(getByRole("button"));
     });
 
-    expect(queryByRole("region")).not.toBeInTheDocument();
+    expect(queryByRole("region")).toBeNull();
+    expect(queryByText("Here it is")).not.toBeVisible();
+
+    act(() => {
+      fireEvent.click(getByRole("button"));
+    });
+
+    expect(getByRole("region")).toBeInTheDocument();
   });
 });

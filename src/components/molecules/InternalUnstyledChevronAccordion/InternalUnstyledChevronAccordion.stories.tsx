@@ -11,11 +11,11 @@ const meta: Meta<typeof InternalUnstyledChevronAccordion> = {
   tags: ["autodocs"],
   parameters: {
     controls: {
-      include: ["header", "headerAfterSlot", "children"],
+      include: ["header", "subheader", "content", "initialOpen"],
     },
   },
   argTypes: {
-    children: {
+    content: {
       control: {
         type: "text",
       },
@@ -25,12 +25,27 @@ const meta: Meta<typeof InternalUnstyledChevronAccordion> = {
         type: "text",
       },
     },
+    subheader: {
+      control: {
+        type: "text",
+      },
+    },
+    initialOpen: {
+      control: {
+        type: "boolean",
+      },
+    },
   },
   args: {
     id: "accordion-1",
-    header: <OakBox>Header goes here</OakBox>,
-    children:
-      "Any cookies required for video or other embedded learning content to work",
+    header: <OakBox $background={"amber30"}>Header goes here</OakBox>,
+    content: (
+      <OakBox $background={"mint30"} $height={"all-spacing-10"}>
+        Content goes here
+      </OakBox>
+    ),
+    initialOpen: false,
+    subheader: <OakBox $background={"lemon30"}>Subheader goes here</OakBox>,
   },
   render: (args) => <InternalUnstyledChevronAccordion {...args} />,
 };
@@ -48,6 +63,7 @@ export const MultilineHeader: Story = {
         <OakP>This is a multiline header</OakP>
       </OakBox>
     ),
+    subheader: <OakBox>Subheader goes here</OakBox>,
   },
 };
 

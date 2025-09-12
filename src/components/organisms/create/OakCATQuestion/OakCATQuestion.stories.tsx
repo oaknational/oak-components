@@ -8,12 +8,26 @@ import { OakBox, OakP } from "@/components/atoms";
 const meta: Meta<typeof OakCATQuestion> = {
   component: OakCATQuestion,
   tags: ["autodocs"],
-  argTypes: {},
+  argTypes: {
+    questionNumber: { control: "number" },
+    status: {
+      control: { type: "select" },
+      options: ["error", "selected", "neutral"],
+    },
+    initialOpen: { control: "boolean" },
+  },
   parameters: {
     controls: {
-      include: ["questionNumber", "status"],
+      include: ["questionNumber", "status", "initialOpen"],
     },
   },
+  decorators: [
+    (Story) => (
+      <OakBox $background={"grey20"} $pa="inner-padding-xl" $width={"100%"}>
+        <Story />
+      </OakBox>
+    ),
+  ],
 };
 
 export default meta;
@@ -24,7 +38,7 @@ export const Default: Story = {
   render: (args) => <OakCATQuestion {...args} />,
   args: {
     questionNumber: 1,
-    status: "draft",
+    status: "neutral",
     questionTypeInput: (
       <OakBox $background={"aqua50"} $pa="inner-padding-ssx">
         Dummy Question Type Input

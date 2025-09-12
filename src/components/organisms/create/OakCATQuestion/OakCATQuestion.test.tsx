@@ -14,12 +14,8 @@ describe("OakCATQuestion", () => {
       <OakCATQuestion
         data-testid="test"
         questionNumber={1}
-        status="draft"
-        availableQuestionTypes={["multiple-choice", "short-answer"]}
-        chosenQuestionType="multiple-choice"
-        onQuestionTypeChange={(type: string) => {
-          console.log(type);
-        }}
+        status="neutral"
+        questionTypeInput={<div>Question Type Input</div>}
         questionTextInput={<div>Question Text Input</div>}
         hintInput={<div>Hint Input</div>}
         feedbackInput={<div>Feedback Input</div>}
@@ -35,12 +31,8 @@ describe("OakCATQuestion", () => {
         <OakCATQuestion
           data-testid="test"
           questionNumber={1}
-          status="draft"
-          availableQuestionTypes={["multiple-choice", "short-answer"]}
-          chosenQuestionType="multiple-choice"
-          onQuestionTypeChange={(type: string) => {
-            console.log(type);
-          }}
+          status="neutral"
+          questionTypeInput={<div>Question Type Input</div>}
           questionTextInput={<div>Question Text Input</div>}
           hintInput={<div>Hint Input</div>}
           feedbackInput={<div>Feedback Input</div>}

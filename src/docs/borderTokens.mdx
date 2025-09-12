@@ -1,0 +1,30 @@
+import { Meta } from "@storybook/blocks";
+
+import {
+oakBorderWidthTokens,
+oakBorderRadiusTokens
+} from "@/styles/theme";
+import { parseSpacing } from "@/styles/helpers/parseSpacing";
+import { OakLI, OakUL } from "@/components/atoms";
+
+<Meta title="StyleTokens/OakBorderTokens" />
+
+# OakBorderTokens
+
+## BorderWidthTokens
+<OakUL>
+  {Object.entries(oakBorderWidthTokens).map((token, i) => (
+    <OakLI key={i}>
+      {token[0]}, {token[1]}px
+    </OakLI>
+  ))}
+</OakUL>
+
+## BorderRadiusTokens
+<OakUL>
+  {Object.entries(oakBorderRadiusTokens).map((token, i) => (
+    <OakLI key={i}>
+      {token[0]}, {token[1]}px
+    </OakLI>
+  ))}
+</OakUL>
