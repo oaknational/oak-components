@@ -25,6 +25,7 @@ export type OakMediaClipStackListItemProps = {
   numberOfClips: number;
   isAudioClip: boolean;
   onClick?: () => void;
+  rel?: string;
 };
 
 const OakMediaClipStackListItemLink = styled(OakFlex)`
@@ -114,12 +115,14 @@ export const OakMediaClipStackListItem = (
     imageAltText,
     href,
     isAudioClip,
+    rel,
     ...rest
   } = props;
 
   return (
     <OakMediaClipStackListItemLink
       as="a"
+      rel={rel}
       href={href}
       $display={"flex"}
       $flexDirection={["row", "row", "column"]}
