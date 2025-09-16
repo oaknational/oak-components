@@ -25,7 +25,7 @@ export type OakMediaClipStackListItemProps = {
   numberOfClips: number;
   isAudioClip: boolean;
   onClick?: () => void;
-  rel?: "nofollow";
+  rel?: string;
 };
 
 const OakMediaClipStackListItemLink = styled(OakFlex)`
