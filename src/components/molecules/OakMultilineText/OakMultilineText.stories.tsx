@@ -5,7 +5,7 @@ import { OakMultilineText } from "./OakMultilineText";
 
 const meta: Meta<typeof OakMultilineText> = {
   //  "title" is the title of the story and where to look for component in the storybook
-  title: "Components/OakMultilineText",
+  title: "Components/molecules/OakMultilineText",
   component: OakMultilineText,
   tags: ["autodocs"],
   argTypes: {
