@@ -35,7 +35,7 @@ export type OakMultilineTextProps = {
 // By adding the style css utils to this components css your component will be able to accept corresponding props and prop values.
 // you can also add custom styles to the component by adding the styles to the css template literal below
 
-const CopyPasteThisComponentCss = css<OakMultilineTextProps>``;
+const OakMultilineTextCss = css<OakMultilineTextProps>``;
 
 /**
  *
@@ -81,5 +81,5 @@ const UnstyledComponent = (props: OakMultilineTextProps) => {
  * NB. We must export a styled component for it to be inheritable
  */
 export const OakMultilineText = styled(UnstyledComponent)`
-  ${CopyPasteThisComponentCss}
+  ${OakMultilineTextCss}
 `;
