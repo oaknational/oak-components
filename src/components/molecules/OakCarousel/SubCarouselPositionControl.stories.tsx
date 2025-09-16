@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { SubCarouselPositionControl } from "./SubCarouselPositionControl";
 
 const meta: Meta<typeof SubCarouselPositionControl> = {
+  title: "Components/molecules/OakCarousel/Subcomponents/Position Control",
   component: SubCarouselPositionControl,
   parameters: {
     layout: "centered",
