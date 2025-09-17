@@ -51,6 +51,12 @@ export type OakInformativeModalProps = {
    */
   zIndex?: number;
   isLeftHandSide?: boolean;
+  /**
+   * Close the modal when clicking the background
+   *
+   * @default false;
+   */
+  closeOnBackgroundClick?: boolean;
 } & Pick<
   HTMLAttributes<Element>,
   "aria-label" | "aria-description" | "aria-labelledby" | "aria-describedby"
@@ -67,6 +73,7 @@ export const OakInformativeModal = ({
   onClose,
   zIndex,
   isLeftHandSide,
+  closeOnBackgroundClick,
   ...rest
 }: OakInformativeModalProps) => {
   const transitionRef = useRef<HTMLDivElement>(null);
@@ -98,6 +105,7 @@ export const OakInformativeModal = ({
         onClose={onCloseModal}
         finalZIndex={finalZIndex}
         isLeftHandSide={isLeftHandSide}
+        closeOnBackgroundClick={closeOnBackgroundClick}
         {...rest}
       >
         <OakFlex

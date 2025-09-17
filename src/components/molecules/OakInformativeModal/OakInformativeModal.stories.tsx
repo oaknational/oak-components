@@ -26,6 +26,10 @@ const meta: Meta<typeof OakInformativeModal> = {
       description:
         "Whether the modal is anchored to the left side of the screen.",
     },
+    closeOnBackgroundClick: {
+      control: "boolean",
+      description: "Wether to close the modal when clicking the background",
+    },
   },
   parameters: {
     controls: {
@@ -35,6 +39,7 @@ const meta: Meta<typeof OakInformativeModal> = {
         "isOpen",
         "onClose",
         "isLeftHandSide",
+        "closeOnBackgroundClick",
       ],
     },
   },
@@ -126,5 +131,11 @@ export const WithFooter: Story = {
 export const LeftHandSide: Story = {
   args: {
     isLeftHandSide: true,
+  },
+};
+
+export const CloseOnBackgroundClick: Story = {
+  args: {
+    closeOnBackgroundClick: true,
   },
 };

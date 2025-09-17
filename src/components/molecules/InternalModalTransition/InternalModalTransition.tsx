@@ -14,6 +14,12 @@ type TransitionProps = {
   transitionRef: React.RefObject<HTMLDivElement>;
   finalZIndex: number | "modal-dialog";
   isLeftHandSide?: boolean;
+  /**
+   * Close the modal when clicking the background
+   *
+   * @default false;
+   */
+  closeOnBackgroundClick?: boolean;
 };
 
 const FadeOutBox = styled(OakBox)<{ $state: TransitionStatus }>`
@@ -39,6 +45,7 @@ const InternalModalTransition: FC<TransitionProps> = ({
   onClose,
   finalZIndex,
   isLeftHandSide,
+  closeOnBackgroundClick = false,
   ...rest
 }) => {
   return (
@@ -57,7 +64,7 @@ const InternalModalTransition: FC<TransitionProps> = ({
           <FadeOutBox
             $zIndex={finalZIndex}
             $state={state}
-            onClick={!isLeftHandSide ? onClose : undefined}
+            onClick={closeOnBackgroundClick ? onClose : undefined}
           />
           <InternalSlideInFlex
             isLeftHandSide={isLeftHandSide}
