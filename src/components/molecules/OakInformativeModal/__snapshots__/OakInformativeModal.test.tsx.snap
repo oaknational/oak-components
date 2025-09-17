@@ -6,10 +6,6 @@ exports[`OakInformativeModal matches snapshot when mounted 1`] = `
   z-index: 300;
 }
 
-.c0:hover {
-  cursor: pointer;
-}
-
 .c2 {
   position: fixed;
   top: 0rem;
@@ -285,6 +281,7 @@ exports[`OakInformativeModal matches snapshot when mounted 1`] = `
       class="c0 c1"
     />
     <div
+      aria-modal="true"
       class="c2 c3 c4"
       role="dialog"
     >
