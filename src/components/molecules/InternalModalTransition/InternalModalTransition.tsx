@@ -71,6 +71,7 @@ const InternalModalTransition: FC<TransitionProps> = ({
             ref={transitionRef}
             $zIndex={finalZIndex}
             $state={state}
+            aria-modal={true}
             {...rest}
           >
             {children}
