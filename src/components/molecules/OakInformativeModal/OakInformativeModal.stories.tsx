@@ -122,3 +122,9 @@ export const WithFooter: Story = {
     ),
   },
 };
+
+export const LeftHandSide: Story = {
+  args: {
+    isLeftHandSide: true,
+  },
+};
