@@ -114,6 +114,7 @@ exports[`OakFormInput should match snapshot 1`] = `
   <input
     aria-invalid={false}
     className="c3"
+    onChange={[Function]}
     onFocus={[Function]}
     placeholder="Test input"
     type="text"

@@ -2,7 +2,6 @@ import React, { ReactElement } from "react";
 import styled from "styled-components";
 
 import {
-  OakBox,
   OakFlex,
   OakSpan,
   OakBoxProps,
@@ -14,7 +13,7 @@ import { OakCombinedColorToken } from "@/styles";
 import { TypographyStyleProps } from "@/styles/utils/typographyStyle";
 import { OakInfo } from "@/components/organisms/shared/OakInfo/OakInfo";
 
-const StyledCodeContainer = styled(OakBox)`
+const StyledCodeContainer = styled(OakSpan)`
   font-family: "Roboto Mono", --font-roboto-mono, monospace;
 `;
 
