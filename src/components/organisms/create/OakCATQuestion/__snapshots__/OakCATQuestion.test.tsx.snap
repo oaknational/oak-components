@@ -243,6 +243,7 @@ exports[`OakCATQuestion matches snapshot 1`] = `
         >
           <button
             aria-expanded={false}
+            aria-label="collapse question 1"
             className="c9 c10 c11  c12"
             id="question-1"
             onClick={[Function]}
