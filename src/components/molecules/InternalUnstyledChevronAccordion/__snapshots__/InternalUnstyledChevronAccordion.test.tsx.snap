@@ -122,6 +122,7 @@ exports[`InternalUnstyledChevronAccordion matches snapshot 1`] = `
     >
       <button
         aria-expanded={true}
+        aria-label="Close accordion"
         className="c4 c5 c6  c7"
         id="see-more"
         onClick={[Function]}

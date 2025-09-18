@@ -58,4 +58,28 @@ describe(InternalUnstyledChevronAccordion, () => {
 
     expect(getByRole("region")).toBeInTheDocument();
   });
+
+  it("changes aria-label based on open state", () => {
+    const { getByRole } = renderWithTheme(
+      <InternalUnstyledChevronAccordion
+        initialOpen={false}
+        header="See more"
+        content={<div>Here it is</div>}
+        id="see-more"
+        ariaLabelOpen="Close accordion"
+        ariaLabelClose="Open accordion"
+      />,
+    );
+
+    expect(getByRole("button")).toHaveAttribute("aria-label", "Open accordion");
+
+    act(() => {
+      fireEvent.click(getByRole("button"));
+    });
+
+    expect(getByRole("button")).toHaveAttribute(
+      "aria-label",
+      "Close accordion",
+    );
+  });
 });

@@ -40,6 +40,14 @@ export type InternalUnstyledChevronAccordionProps = {
    * The id of the accordion
    */
   id: string;
+  /**
+   * Aria label for the button when the accordion is open
+   */
+  ariaLabelOpen?: string;
+  /**
+   * Aria label for the button when the accordion is closed
+   */
+  ariaLabelClose?: string;
 } & FlexStyleProps &
   OakBoxProps &
   ColorStyleProps;
@@ -69,6 +77,8 @@ const Accordion = ({
   content,
   id,
   subheader,
+  ariaLabelOpen = "Close accordion",
+  ariaLabelClose = "Open accordion",
   ...styleProps
 }: InternalUnstyledChevronAccordionProps) => {
   const { isOpen } = useAccordionContext();
@@ -78,7 +88,10 @@ const Accordion = ({
       <OakFlex $justifyContent={"space-between"} $alignItems={"center"}>
         {header}
         <OakBox>
-          <StyledAccordionButton id={id}>
+          <StyledAccordionButton
+            id={id}
+            aria-label={isOpen ? ariaLabelOpen : ariaLabelClose}
+          >
             <OakBox
               className="focus-outline"
               $borderRadius={"border-radius-s"}
