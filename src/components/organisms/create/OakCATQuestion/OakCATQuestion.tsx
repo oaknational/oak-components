@@ -113,6 +113,8 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
           $flexDirection={"column"}
           $justifyContent={"flex-start"}
           initialOpen={initialOpen}
+          ariaLabelClose={`collapse question ${questionNumber}`}
+          ariaLabelOpen={`expand question ${questionNumber}`}
         />
       </StyledOakFlex>
     </UnstyledLI>
