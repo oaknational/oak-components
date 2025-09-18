@@ -12,17 +12,21 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c3:hover {
+.c5 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c5:hover {
   cursor: pointer;
 }
 
-.c8 {
+.c10 {
   position: relative;
   margin-right: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c9 {
+.c11 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -31,7 +35,7 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c10 {
+.c12 {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -40,23 +44,19 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c12 {
+.c14 {
   position: relative;
   overflow: auto;
   font-family: --var(google-font),Lexend,sans-serif;
   overflow: auto;
 }
 
-.c13 {
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c17 {
+.c18 {
   pointer-events: none;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c11 {
+.c13 {
   object-fit: contain;
 }
 
@@ -76,20 +76,35 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
-.c14 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c5 {
+.c7 {
   font: inherit;
   color: inherit;
   border: none;
@@ -101,13 +116,13 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   padding: 0;
 }
 
-.c16 {
+.c17 {
   position: absolute;
   width: 100%;
   bottom: -0.25rem;
 }
 
-.c7 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -125,12 +140,12 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   position: relative;
 }
 
-.c7:hover {
+.c9:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c7:focus-visible .shadow {
+.c9:focus-visible .shadow {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
@@ -149,15 +164,15 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c2 .c15 {
+.c2 .c16 {
   visibility: hidden;
 }
 
-.c2 .c6:focus-visible ~ .c15 {
+.c2 .c8:focus-visible ~ .c16 {
   visibility: visible;
 }
 
-.c18 {
+.c19 {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -173,64 +188,68 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
 <div
   className="c0 c1 c2"
 >
-  <button
-    aria-expanded={true}
-    className="c3 c4 c5 c6  c7"
-    id="see-more"
-    onClick={[Function]}
-    type="button"
+  <div
+    className="c3 c4"
   >
-    See more
-    <div
-      className="c8"
+    <button
+      aria-expanded={true}
+      className="c5 c6 c7 c8  c9"
+      id="see-more"
+      onClick={[Function]}
+      type="button"
     >
-      <div
-        className="c9 shadow"
-      />
+      See more
       <div
         className="c10"
-        style={
-          {
-            "transform": "rotate(180deg)",
-            "transition": "all 0.3s ease 0s",
-          }
-        }
       >
-        <img
-          alt="An arrow to indicate whether the item is open or closed"
-          className="c11"
-          data-nimg="fill"
-          decoding="async"
-          loading="lazy"
-          onError={[Function]}
-          onLoad={[Function]}
-          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+        <div
+          className="c11 shadow"
+        />
+        <div
+          className="c12"
           style={
             {
-              "bottom": 0,
-              "color": "transparent",
-              "height": "100%",
-              "left": 0,
-              "objectFit": undefined,
-              "objectPosition": undefined,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-              "width": "100%",
+              "transform": "rotate(180deg)",
+              "transition": "all 0.3s ease 0s",
             }
           }
-        />
+        >
+          <img
+            alt="An arrow to indicate whether the item is open or closed"
+            className="c13"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+            style={
+              {
+                "bottom": 0,
+                "color": "transparent",
+                "height": "100%",
+                "left": 0,
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": "100%",
+              }
+            }
+          />
+        </div>
       </div>
-    </div>
-  </button>
+    </button>
+  </div>
   <div
-    className="c12"
+    className="c14"
     data-testid="scrollable-content"
     onScroll={[Function]}
   >
     <div
       aria-labelledby="see-more"
-      className="c13"
+      className="c3"
       hidden={false}
       role="region"
     >
@@ -238,7 +257,7 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
     </div>
   </div>
   <div
-    className="c13 c14 c15 c16"
+    className="c3 c15 c16 c17"
   >
     <svg
       className=""
@@ -259,7 +278,7 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
     </svg>
   </div>
   <div
-    className="c17 c18"
+    className="c18 c19"
     data-testid="bottom-box-shadow"
   />
 </div>

@@ -17,21 +17,21 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
+.c9 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8:hover {
+.c9:hover {
   cursor: pointer;
 }
 
-.c13 {
+.c14 {
   position: relative;
   margin-right: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c14 {
+.c15 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -40,7 +40,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c15 {
+.c16 {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -49,19 +49,19 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c17 {
+.c18 {
   position: relative;
   overflow: auto;
   font-family: --var(google-font),Lexend,sans-serif;
   overflow: auto;
 }
 
-.c20 {
+.c21 {
   pointer-events: none;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c16 {
+.c17 {
   object-fit: contain;
 }
 
@@ -93,7 +93,22 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c9 {
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -104,7 +119,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c10 {
+.c11 {
   font: inherit;
   color: inherit;
   border: none;
@@ -116,13 +131,13 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   padding: 0;
 }
 
-.c19 {
+.c20 {
   position: absolute;
   width: 100%;
   bottom: -0.25rem;
 }
 
-.c12 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -140,12 +155,12 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   position: relative;
 }
 
-.c12:hover {
+.c13:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c12:focus-visible .shadow {
+.c13:focus-visible .shadow {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
@@ -164,15 +179,15 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c7 .c18 {
+.c7 .c19 {
   visibility: hidden;
 }
 
-.c7 .c11:focus-visible ~ .c18 {
+.c7 .c12:focus-visible ~ .c19 {
   visibility: visible;
 }
 
-.c21 {
+.c22 {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -191,7 +206,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   bottom: 0.125rem;
 }
 
-.c22 {
+.c23 {
   height: 0.125rem;
   position: absolute;
   width: 100%;
@@ -225,58 +240,62 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   <div
     className="c5 c6 c7"
   >
-    <button
-      aria-expanded={true}
-      className="c8 c9 c10 c11  c12"
-      id="see-more"
-      onClick={[Function]}
-      type="button"
+    <div
+      className="c2 c8"
     >
-      See more
-      <div
-        className="c13"
+      <button
+        aria-expanded={true}
+        className="c9 c10 c11 c12  c13"
+        id="see-more"
+        onClick={[Function]}
+        type="button"
       >
+        See more
         <div
-          className="c14 shadow"
-        />
-        <div
-          className="c15"
-          style={
-            {
-              "transform": "rotate(180deg)",
-              "transition": "all 0.3s ease 0s",
-            }
-          }
+          className="c14"
         >
-          <img
-            alt="An arrow to indicate whether the item is open or closed"
+          <div
+            className="c15 shadow"
+          />
+          <div
             className="c16"
-            data-nimg="fill"
-            decoding="async"
-            loading="lazy"
-            onError={[Function]}
-            onLoad={[Function]}
-            src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
             style={
               {
-                "bottom": 0,
-                "color": "transparent",
-                "height": "100%",
-                "left": 0,
-                "objectFit": undefined,
-                "objectPosition": undefined,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-                "width": "100%",
+                "transform": "rotate(180deg)",
+                "transition": "all 0.3s ease 0s",
               }
             }
-          />
+          >
+            <img
+              alt="An arrow to indicate whether the item is open or closed"
+              className="c17"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+              style={
+                {
+                  "bottom": 0,
+                  "color": "transparent",
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
         </div>
-      </div>
-    </button>
+      </button>
+    </div>
     <div
-      className="c17"
+      className="c18"
       data-testid="scrollable-content"
       onScroll={[Function]}
     >
@@ -290,7 +309,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
       </div>
     </div>
     <div
-      className="c2 c3 c18 c19"
+      className="c2 c3 c19 c20"
     >
       <svg
         className=""
@@ -311,12 +330,12 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
       </svg>
     </div>
     <div
-      className="c20 c21"
+      className="c21 c22"
       data-testid="bottom-box-shadow"
     />
   </div>
   <div
-    className="c2 c3 c22"
+    className="c2 c3 c23"
   >
     <svg
       className=""

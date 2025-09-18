@@ -21,17 +21,21 @@ exports[`OakMediaClipListAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c6:hover {
+.c8 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c8:hover {
   cursor: pointer;
 }
 
-.c11 {
+.c13 {
   position: relative;
   margin-right: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c12 {
+.c14 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -40,7 +44,7 @@ exports[`OakMediaClipListAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c13 {
+.c15 {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -49,23 +53,19 @@ exports[`OakMediaClipListAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c15 {
+.c17 {
   position: relative;
   overflow: auto;
   font-family: --var(google-font),Lexend,sans-serif;
   overflow: auto;
 }
 
-.c16 {
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c20 {
+.c21 {
   pointer-events: none;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c14 {
+.c16 {
   object-fit: contain;
 }
 
@@ -95,20 +95,35 @@ exports[`OakMediaClipListAccordion matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
-.c17 {
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c8 {
+.c10 {
   font: inherit;
   color: inherit;
   border: none;
@@ -120,13 +135,13 @@ exports[`OakMediaClipListAccordion matches snapshot 1`] = `
   padding: 0;
 }
 
-.c19 {
+.c20 {
   position: absolute;
   width: 100%;
   bottom: -0.25rem;
 }
 
-.c10 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -144,12 +159,12 @@ exports[`OakMediaClipListAccordion matches snapshot 1`] = `
   position: relative;
 }
 
-.c10:hover {
+.c12:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c10:focus-visible .shadow {
+.c12:focus-visible .shadow {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
@@ -172,15 +187,15 @@ exports[`OakMediaClipListAccordion matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c5 .c18 {
+.c5 .c19 {
   visibility: hidden;
 }
 
-.c5 .c9:focus-visible ~ .c18 {
+.c5 .c11:focus-visible ~ .c19 {
   visibility: visible;
 }
 
-.c21 {
+.c22 {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -228,64 +243,68 @@ exports[`OakMediaClipListAccordion matches snapshot 1`] = `
   <div
     className="c3 c4 c5"
   >
-    <button
-      aria-expanded={true}
-      className="c6 c7 c8 c9  c10"
-      id="see-more"
-      onClick={[Function]}
-      type="button"
+    <div
+      className="c6 c7"
     >
-      See more
-      <div
-        className="c11"
+      <button
+        aria-expanded={true}
+        className="c8 c9 c10 c11  c12"
+        id="see-more"
+        onClick={[Function]}
+        type="button"
       >
-        <div
-          className="c12 shadow"
-        />
+        See more
         <div
           className="c13"
-          style={
-            {
-              "transform": "rotate(180deg)",
-              "transition": "all 0.3s ease 0s",
-            }
-          }
         >
-          <img
-            alt="An arrow to indicate whether the item is open or closed"
-            className="c14"
-            data-nimg="fill"
-            decoding="async"
-            loading="lazy"
-            onError={[Function]}
-            onLoad={[Function]}
-            src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+          <div
+            className="c14 shadow"
+          />
+          <div
+            className="c15"
             style={
               {
-                "bottom": 0,
-                "color": "transparent",
-                "height": "100%",
-                "left": 0,
-                "objectFit": undefined,
-                "objectPosition": undefined,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-                "width": "100%",
+                "transform": "rotate(180deg)",
+                "transition": "all 0.3s ease 0s",
               }
             }
-          />
+          >
+            <img
+              alt="An arrow to indicate whether the item is open or closed"
+              className="c16"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+              style={
+                {
+                  "bottom": 0,
+                  "color": "transparent",
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
         </div>
-      </div>
-    </button>
+      </button>
+    </div>
     <div
-      className="c15"
+      className="c17"
       data-testid="scrollable-content"
       onScroll={[Function]}
     >
       <div
         aria-labelledby="see-more"
-        className="c16"
+        className="c6"
         hidden={false}
         role="region"
       >
@@ -293,7 +312,7 @@ exports[`OakMediaClipListAccordion matches snapshot 1`] = `
       </div>
     </div>
     <div
-      className="c16 c17 c18 c19"
+      className="c6 c18 c19 c20"
     >
       <svg
         className=""
@@ -314,7 +333,7 @@ exports[`OakMediaClipListAccordion matches snapshot 1`] = `
       </svg>
     </div>
     <div
-      className="c20 c21"
+      className="c21 c22"
       data-testid="bottom-box-shadow"
     />
   </div>

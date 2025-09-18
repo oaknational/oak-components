@@ -154,4 +154,20 @@ describe(InternalChevronAccordion, () => {
     expect(useRefSpy).toHaveBeenCalled();
     expect(styles.opacity).toBe("1");
   });
+
+  it("renders the beforeButtonSlot and afterButtonSlot when provided", () => {
+    const { getByText } = renderWithTheme(
+      <InternalChevronAccordion
+        header="See more"
+        id="see-more"
+        beforeButtonSlot={<div>Before slot content</div>}
+        afterButtonSlot={<div>After slot content</div>}
+      >
+        Here it is
+      </InternalChevronAccordion>,
+    );
+
+    expect(getByText("Before slot content")).toBeInTheDocument();
+    expect(getByText("After slot content")).toBeInTheDocument();
+  });
 });

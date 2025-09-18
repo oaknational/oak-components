@@ -23,11 +23,15 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c6:hover {
+.c8 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c8:hover {
   cursor: pointer;
 }
 
-.c11 {
+.c13 {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.75rem;
@@ -36,7 +40,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   text-align: left;
 }
 
-.c12 {
+.c14 {
   margin-bottom: 0.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
@@ -48,7 +52,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c14 {
+.c16 {
   margin-bottom: 0.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
@@ -60,7 +64,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c16 {
+.c18 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
@@ -71,13 +75,13 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c17 {
+.c19 {
   position: relative;
   margin-right: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c18 {
+.c20 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -86,7 +90,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c19 {
+.c21 {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -95,18 +99,14 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c21 {
+.c23 {
   position: relative;
   overflow: auto;
   font-family: --var(google-font),Lexend,sans-serif;
   overflow: auto;
 }
 
-.c22 {
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c27 {
+.c28 {
   pointer-events: none;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -137,24 +137,39 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
-.c24 {
+.c25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c20 {
+.c22 {
   object-fit: contain;
 }
 
-.c13 {
+.c15 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
@@ -165,7 +180,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c15 {
+.c17 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -176,7 +191,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c23 {
+.c24 {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -187,7 +202,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
+.c10 {
   font: inherit;
   color: inherit;
   border: none;
@@ -199,13 +214,13 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   padding: 0;
 }
 
-.c26 {
+.c27 {
   position: absolute;
   width: 100%;
   bottom: -0.25rem;
 }
 
-.c10 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -223,12 +238,12 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   position: relative;
 }
 
-.c10:hover {
+.c12:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c10:focus-visible .shadow {
+.c12:focus-visible .shadow {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
@@ -252,15 +267,15 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c5 .c25 {
+.c5 .c26 {
   visibility: hidden;
 }
 
-.c5 .c9:focus-visible ~ .c25 {
+.c5 .c11:focus-visible ~ .c26 {
   visibility: visible;
 }
 
-.c28 {
+.c29 {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -308,97 +323,101 @@ exports[`OakMediaClipList matches snapshot 1`] = `
     <div
       className="c3 c4 c5"
     >
-      <button
-        aria-expanded={true}
-        className="c6 c7 c8 c9  c10"
-        id="media-clip-list"
-        onClick={[Function]}
-        type="button"
+      <div
+        className="c6 c7"
       >
-        <div
-          className="c11 c1"
+        <button
+          aria-expanded={true}
+          className="c8 c9 c10 c11  c12"
+          id="media-clip-list"
+          onClick={[Function]}
+          type="button"
         >
           <div
-            className="c12 c13"
+            className="c13 c1"
           >
-            Lesson
+            <div
+              className="c14 c15"
+            >
+              Lesson
+            </div>
+            <div
+              className="c16 c17"
+            >
+              What is a democratic community?
+            </div>
+            <div
+              className="c18 c15"
+            >
+              3
+              /
+              3
+               clips
+            </div>
           </div>
-          <div
-            className="c14 c15"
-          >
-            What is a democratic community?
-          </div>
-          <div
-            className="c16 c13"
-          >
-            3
-            /
-            3
-             clips
-          </div>
-        </div>
-        <div
-          className="c17"
-        >
-          <div
-            className="c18 shadow"
-          />
           <div
             className="c19"
-            style={
-              {
-                "transform": "rotate(180deg)",
-                "transition": "all 0.3s ease 0s",
-              }
-            }
           >
-            <img
-              alt="An arrow to indicate whether the item is open or closed"
-              className="c20"
-              data-nimg="fill"
-              decoding="async"
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+            <div
+              className="c20 shadow"
+            />
+            <div
+              className="c21"
               style={
                 {
-                  "bottom": 0,
-                  "color": "transparent",
-                  "height": "100%",
-                  "left": 0,
-                  "objectFit": undefined,
-                  "objectPosition": undefined,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
+                  "transform": "rotate(180deg)",
+                  "transition": "all 0.3s ease 0s",
                 }
               }
-            />
+            >
+              <img
+                alt="An arrow to indicate whether the item is open or closed"
+                className="c22"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+                style={
+                  {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+              />
+            </div>
           </div>
-        </div>
-      </button>
+        </button>
+      </div>
       <div
-        className="c21"
+        className="c23"
         data-testid="scrollable-content"
         onScroll={[Function]}
       >
         <div
           aria-labelledby="media-clip-list"
-          className="c22"
+          className="c6"
           hidden={false}
           role="region"
         >
           <ul
-            className="c23"
+            className="c24"
           >
             children
           </ul>
         </div>
       </div>
       <div
-        className="c22 c24 c25 c26"
+        className="c6 c25 c26 c27"
       >
         <svg
           className=""
@@ -419,7 +438,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
         </svg>
       </div>
       <div
-        className="c27 c28"
+        className="c28 c29"
         data-testid="bottom-box-shadow"
       />
     </div>
