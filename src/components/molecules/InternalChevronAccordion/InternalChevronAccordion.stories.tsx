@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import styled from "styled-components";
 
 import { InternalChevronAccordion } from "./InternalChevronAccordion";
 
+import { OakCheckBox } from "@/components/molecules/OakCheckBox";
 import { OakHandDrawnHR } from "@/components/molecules/OakHandDrawnHR";
 import { OakFlex } from "@/components/atoms";
 import { PositionStyleProps } from "@/styles/utils/positionStyle";
@@ -86,6 +87,48 @@ export const FillAccordion: Story = {
     );
   },
   args: {},
+};
+
+export const BeforeAfterSlotsAccordion: Story = {
+  render: () => {
+    const [checked, setChecked] = useState([false, false]);
+    return (
+      <InternalChevronAccordion
+        beforeButtonSlot={
+          <OakCheckBox
+            checked={checked[0]}
+            value={""}
+            onChange={() =>
+              setChecked((prev) => {
+                const newChecked = [...prev];
+                newChecked[0] = !newChecked[0];
+                return newChecked;
+              })
+            }
+            id={"checkbox-1"}
+          />
+        }
+        afterButtonSlot={
+          <OakCheckBox
+            checked={checked[1]}
+            value={""}
+            onChange={() =>
+              setChecked((prev) => {
+                const newChecked = [...prev];
+                newChecked[1] = !newChecked[1];
+                return newChecked;
+              })
+            }
+            id={"checkbox-2"}
+          />
+        }
+        header={"Title"}
+        id={"before-after-slot-accordion"}
+      >
+        Subcopy area
+      </InternalChevronAccordion>
+    );
+  },
 };
 
 export const MultipleAccordions: Story = {
