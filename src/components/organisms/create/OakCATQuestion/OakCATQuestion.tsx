@@ -22,11 +22,11 @@ const UnstyledLI = styled.li`
   list-style: none;
 `;
 
-type Statuses = "error" | "selected" | "neutral";
+type Status = "error" | "selected" | "neutral";
 
 export type OakCATQuestionProps = {
   questionNumber: number;
-  status: Statuses;
+  status: Status;
   initialOpen?: boolean;
   questionTypeInput: ReactNode;
   questionTextInput: ReactNode;
@@ -47,7 +47,7 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
     status = "neutral",
   } = props;
 
-  const statusColorMap: Record<Statuses, OakCombinedColorToken> = {
+  const statusColorMap: Record<Status, OakCombinedColorToken> = {
     error: "red",
     selected: "mint110",
     neutral: "grey40",
