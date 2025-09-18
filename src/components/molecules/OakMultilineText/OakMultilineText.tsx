@@ -2,34 +2,27 @@ import React from "react";
 import styled, { css } from "styled-components";
 
 import { OakFlex } from "@/components/atoms/OakFlex";
-import { parseSpacing } from "@/styles/helpers/parseSpacing";
-
-const StyledOakFlex = styled(OakFlex)`
-  width: ${parseSpacing("all-spacing-6")};
-`;
-// For example you could restyle the OakFlex component by adding the styles to the css template literal below
+// import { OakCombinedColorToken } from "@/styles";
 
 export type OakMultilineTextProps = {
   /**
-   * Define the props for your component here
-   * add styleprops from "@/styles/utils/*Style" to the component props type definition where necessary in order to use
-   * the oak design kit which accept specific tokens to add style and also keep the components style consistent
-   *  & TypographyStyleProps &
-   *   SpacingStyleProps &
-   *   ColorStyleProps &
-   *   DisplayStyleProps &
-   *   BorderStyleProps &
-   *   ColorFilterStyleProps &
-   *   DropShadowStyleProps &
-   *   FlexStyleProps &
-   *   ListStyleProps &
-   *   OpacityStyleProps &
-   *   PositionStyleProps &
-   *   SizeStyleProps &
-   *   TransformStyleProps &
-   *   TransitionStyleProps &
-   *   ZIndexStyleProps;
+   * Limits input to a single line only
    */
+  singleLine: boolean;
+  /**
+   * Limits number of characters permitted
+   */
+  charLimit: number;
+  /**
+   * Controls if user can use 'enter' key to get a newline
+   */
+  allowCarriageReturn: boolean;
+  disabled: boolean;
+  placeholder: string;
+  // color: OakCombinedColorToken;
+  // borderColor: OakCombinedColorToken;
+  // focusBorderColor: OakCombinedColorToken;
+  // disabledBorderColor: OakCombinedColorToken;
 };
 
 // By adding the style css utils to this components css your component will be able to accept corresponding props and prop values.
@@ -51,35 +44,44 @@ const OakMultilineTextCss = css<OakMultilineTextProps>``;
  *
  */
 
-const UnstyledComponent = (props: OakMultilineTextProps) => {
-  /**
-   * Add your component logic here
-   *
-   */
+const UnstyledOakMultilineText = (props: OakMultilineTextProps) => {
+  const onEnterPressed = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === "Enter" && !props.allowCarriageReturn) {
+      e.preventDefault();
+    }
+  };
+
+  const setRows = (singleLine: boolean) => {
+    if (singleLine) {
+      return 1;
+    }
+  };
 
   return (
-    /**
-     *  Return your component JSX here
-     * for example you could
-     *
-     */
-
-    <StyledOakFlex {...props}>
-      {/** Add your component content here */}
-    </StyledOakFlex>
+    <OakFlex $flexDirection="column" $width="100%" {...props}>
+      <textarea
+        id="OakMultilineText"
+        maxLength={props.charLimit}
+        disabled={props.disabled}
+        onKeyDown={(e) => onEnterPressed(e)}
+        placeholder={props.placeholder}
+        rows={setRows(props.singleLine)}
+        // style={{ resize: "none", overflowY: "visible" }}
+      ></textarea>
+    </OakFlex>
   );
 };
 
 /**
  *
- * Add the description of the component here and it will appear on the story for the component
- * The following callbacks are available for tracking focus events:
+ * A textarea that can be used for longer quiz answers
+ *
  *
  * ### Callbacks
  * make sure to add descriptions and types for any callbacks for the component
  *
  * NB. We must export a styled component for it to be inheritable
  */
-export const OakMultilineText = styled(UnstyledComponent)`
+export const OakMultilineText = styled(UnstyledOakMultilineText)`
   ${OakMultilineTextCss}
 `;
