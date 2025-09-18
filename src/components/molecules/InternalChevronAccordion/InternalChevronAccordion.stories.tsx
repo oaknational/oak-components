@@ -97,7 +97,7 @@ export const BeforeAfterSlotsAccordion: Story = {
         beforeButtonSlot={
           <OakCheckBox
             checked={checked[0]}
-            value={""}
+            value={"checkbox1"}
             onChange={() =>
               setChecked((prev) => {
                 const newChecked = [...prev];
@@ -106,12 +106,13 @@ export const BeforeAfterSlotsAccordion: Story = {
               })
             }
             id={"checkbox-1"}
+            displayValue="Before slot checkbox"
           />
         }
         afterButtonSlot={
           <OakCheckBox
             checked={checked[1]}
-            value={""}
+            value={"checkbox2"}
             onChange={() =>
               setChecked((prev) => {
                 const newChecked = [...prev];
@@ -120,6 +121,7 @@ export const BeforeAfterSlotsAccordion: Story = {
               })
             }
             id={"checkbox-2"}
+            displayValue="After slot checkbox"
           />
         }
         header={"Title"}
