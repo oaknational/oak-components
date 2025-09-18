@@ -43,6 +43,14 @@ export type InternalChevronAccordionProps = {
    * The id of the accordion
    */
   id: string;
+  /**
+   * A slot before header outside of the button's interact area
+   */
+  beforeButtonSlot?: ReactNode;
+  /**
+   * A slot after the header outside of the button's interact area
+   */
+  afterButtonSlot?: ReactNode;
 } & FlexStyleProps &
   OakBoxProps &
   ColorStyleProps;
@@ -112,6 +120,8 @@ const Accordion = ({
   children,
   id,
   subheading,
+  beforeButtonSlot,
+  afterButtonSlot,
   ...styleProps
 }: InternalChevronAccordionProps) => {
   const [shouldDisplayShadow, setShouldDisplayShadow] = useState(false);
@@ -154,35 +164,39 @@ const Accordion = ({
       $gap={"all-spacing-1"}
       {...styleProps}
     >
-      <StyledAccordionButton
-        id={id}
-        $width={"100%"}
-        $justifyContent={"space-between"}
-        $alignItems={"center"}
-      >
-        {header}
+      <OakFlex $alignItems={"center"} $justifyContent={"center"}>
+        {beforeButtonSlot}
+        <StyledAccordionButton
+          id={id}
+          $width={"100%"}
+          $justifyContent={"space-between"}
+          $alignItems={"center"}
+        >
+          {header}
 
-        <OakBox $position={"relative"} $mr={"space-between-xs"}>
-          <OakBox
-            className="shadow"
-            $position={"absolute"}
-            $borderRadius={"border-radius-s"}
-            $width={"100%"}
-            $height={"100%"}
-            $top="all-spacing-0"
-          />
-          <OakIcon
-            iconName="chevron-down"
-            $width="all-spacing-7"
-            $height="all-spacing-7"
-            alt="An arrow to indicate whether the item is open or closed"
-            style={{
-              transform: isOpen ? "rotate(180deg)" : "none",
-              transition: "all 0.3s ease 0s",
-            }}
-          />
-        </OakBox>
-      </StyledAccordionButton>
+          <OakBox $position={"relative"} $mr={"space-between-xs"}>
+            <OakBox
+              className="shadow"
+              $position={"absolute"}
+              $borderRadius={"border-radius-s"}
+              $width={"100%"}
+              $height={"100%"}
+              $top="all-spacing-0"
+            />
+            <OakIcon
+              iconName="chevron-down"
+              $width="all-spacing-7"
+              $height="all-spacing-7"
+              alt="An arrow to indicate whether the item is open or closed"
+              style={{
+                transform: isOpen ? "rotate(180deg)" : "none",
+                transition: "all 0.3s ease 0s",
+              }}
+            />
+          </OakBox>
+        </StyledAccordionButton>
+        {afterButtonSlot}
+      </OakFlex>
       {!isOpen && subheading}
       <OakBox
         ref={scrollBox}

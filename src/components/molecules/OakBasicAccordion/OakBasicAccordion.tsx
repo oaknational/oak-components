@@ -25,6 +25,14 @@ export type OakBasicAccordionProps = {
    * The id of the accordion
    */
   id: string;
+  /**
+   * A slot before header outside of the button's interact area
+   */
+  beforeButtonSlot?: ReactNode;
+  /**
+   * A slot after the header outside of the button's interact area
+   */
+  afterButtonSlot?: ReactNode;
 } & BorderStyleProps &
   FlexStyleProps;
 
@@ -34,6 +42,8 @@ export const OakBasicAccordion = ({
   id,
   initialOpen,
   subheading,
+  beforeButtonSlot,
+  afterButtonSlot,
   ...styleProps
 }: OakBasicAccordionProps) => {
   return (
@@ -42,6 +52,8 @@ export const OakBasicAccordion = ({
       id={id}
       initialOpen={initialOpen}
       subheading={subheading}
+      beforeButtonSlot={beforeButtonSlot}
+      afterButtonSlot={afterButtonSlot}
       {...styleProps}
     >
       {children}
