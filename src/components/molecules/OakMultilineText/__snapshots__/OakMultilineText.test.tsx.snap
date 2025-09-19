@@ -27,6 +27,13 @@ exports[`OakMultilineText matches snapshot 1`] = `
     maxLength={200}
     onKeyDown={[Function]}
     placeholder="Start typing answer..."
+    rows={4}
+    style={
+      {
+        "overflow": "visible",
+        "resize": "none",
+      }
+    }
   />
 </div>
 `;
