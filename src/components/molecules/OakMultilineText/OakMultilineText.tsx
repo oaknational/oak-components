@@ -46,15 +46,13 @@ const OakMultilineTextCss = css<OakMultilineTextProps>``;
 
 const UnstyledOakMultilineText = (props: OakMultilineTextProps) => {
   const onEnterPressed = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
-    if (e.key === "Enter" && !props.allowCarriageReturn) {
+    if (e.key === "Enter" && (!props.allowCarriageReturn || props.singleLine)) {
       e.preventDefault();
     }
   };
 
   const setRows = (singleLine: boolean) => {
-    if (singleLine) {
-      return 1;
-    }
+    return singleLine ? 1 : 4;
   };
 
   return (
@@ -66,7 +64,10 @@ const UnstyledOakMultilineText = (props: OakMultilineTextProps) => {
         onKeyDown={(e) => onEnterPressed(e)}
         placeholder={props.placeholder}
         rows={setRows(props.singleLine)}
-        // style={{ resize: "none", overflowY: "visible" }}
+        style={{
+          resize: "none",
+          overflow: "visible",
+        }}
       ></textarea>
     </OakFlex>
   );
