@@ -42,5 +42,6 @@ export const Default: Story = {
     disabled: false,
     placeholder: "Start typing answer...",
     allowCarriageReturn: true,
+    charLimit: 200,
   },
 };
