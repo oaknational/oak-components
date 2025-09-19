@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`OakMultilineText matches snapshot 1`] = `
+.c0 {
+  width: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+<div
+  className="c0 c1 "
+  disabled={false}
+  label=""
+  placeholder="Start typing answer..."
+>
+  <textarea
+    disabled={false}
+    id="textarea-"
+    maxLength={200}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    placeholder="Start typing answer..."
+    rows={1}
+    style={
+      {
+        "resize": "none",
+      }
+    }
+    tabIndex={0}
+  />
+  <textarea
+    aria-hidden={true}
+    readOnly={true}
+    style={
+      {
+        "height": 0,
+        "left": 0,
+        "overflow": "hidden",
+        "paddingBottom": 0,
+        "paddingTop": 0,
+        "position": "absolute",
+        "resize": "none",
+        "top": 0,
+        "transform": "translateZ(0)",
+        "visibility": "hidden",
+      }
+    }
+    tabIndex={-1}
+  />
+</div>
+`;
