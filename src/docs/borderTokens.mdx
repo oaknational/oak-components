@@ -1,0 +1,34 @@
+import { Meta } from "@storybook/blocks";
+
+import {
+oakBorderWidthTokens,
+oakBorderRadiusTokens
+} from "@/styles/theme";
+import { parseSpacing } from "@/styles/helpers/parseSpacing";
+import { OakLI, OakUL , OakSpan, OakBox, OakFlex} from "@/components/atoms";
+
+<Meta title="StyleTokens/OakBorderTokens" />
+
+# OakBorderTokens
+
+## BorderWidthTokens
+<OakUL>
+  {Object.entries(oakBorderWidthTokens).map((token, i) => (
+    <OakLI key={i}>
+      <OakBox $ba={token[0]} $pa={"all-spacing-3"}>
+        <OakSpan>{token[0]}, {token[1]}px</OakSpan>
+      </OakBox>
+    </OakLI>
+  ))}
+</OakUL>
+
+## BorderRadiusTokens
+<OakUL>
+  {Object.entries(oakBorderRadiusTokens).map((token, i) => (
+    <OakLI key={i}>
+      <OakBox $ba={"border-solid-s"} $pa={"all-spacing-3"} $height={"all-spacing-7"} $borderRadius={token[0]}>
+        <OakSpan>{token[0]}, {token[1]}px</OakSpan>
+      </OakBox>
+    </OakLI>
+  ))}
+</OakUL>

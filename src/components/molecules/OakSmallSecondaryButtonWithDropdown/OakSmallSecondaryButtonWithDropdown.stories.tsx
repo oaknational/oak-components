@@ -4,7 +4,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { OakSmallSecondaryButtonWithDropdown } from "./OakSmallSecondaryButtonWithDropdown";
 
 import { OakFlex, OakIcon, OakSpan } from "@/components/atoms";
-import { OakSmallPrimaryInvertedButton } from "@/components/molecules";
+import { OakSmallPrimaryInvertedButton } from "@/components/molecules/OakSmallPrimaryInvertedButton";
 
 // Generic Dropdown Navigation Button Stories
 const dropdownNavMeta: Meta<typeof OakSmallSecondaryButtonWithDropdown> = {

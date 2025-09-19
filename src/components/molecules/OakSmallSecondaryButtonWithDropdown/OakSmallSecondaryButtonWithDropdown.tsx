@@ -6,7 +6,7 @@ import { OakButtonWithDropdown } from "@/components/molecules/OakButtonWithDropd
 import {
   OakSmallPrimaryInvertedButton,
   OakSmallPrimaryInvertedButtonProps,
-} from "@/components/molecules";
+} from "@/components/molecules/OakSmallPrimaryInvertedButton";
 import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
 
 export type OakSmallSecondaryButtonWithDropdownProps = {
