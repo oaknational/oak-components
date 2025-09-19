@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import { TextareaAutosize } from "@mui/material";
 
 import { OakFlex } from "@/components/atoms/OakFlex";
 // import { OakCombinedColorToken } from "@/styles";
@@ -51,24 +52,20 @@ const UnstyledOakMultilineText = (props: OakMultilineTextProps) => {
     }
   };
 
-  const setRows = (singleLine: boolean) => {
-    return singleLine ? 1 : 4;
-  };
-
   return (
     <OakFlex $flexDirection="column" $width="100%" {...props}>
-      <textarea
+      <TextareaAutosize
         id="OakMultilineText"
         maxLength={props.charLimit}
         disabled={props.disabled}
         onKeyDown={(e) => onEnterPressed(e)}
         placeholder={props.placeholder}
-        rows={setRows(props.singleLine)}
+        minRows={1}
         style={{
-          resize: "none",
-          overflow: "visible",
+          resize: "none"
         }}
-      ></textarea>
+        tabIndex={0}
+      ></TextareaAutosize>
     </OakFlex>
   );
 };

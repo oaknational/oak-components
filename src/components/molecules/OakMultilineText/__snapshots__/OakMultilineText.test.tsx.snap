@@ -25,15 +25,35 @@ exports[`OakMultilineText matches snapshot 1`] = `
     disabled={false}
     id="OakMultilineText"
     maxLength={200}
+    onChange={[Function]}
     onKeyDown={[Function]}
     placeholder="Start typing answer..."
-    rows={4}
+    rows={1}
     style={
       {
-        "overflow": "visible",
         "resize": "none",
       }
     }
+    tabIndex={0}
+  />
+  <textarea
+    aria-hidden={true}
+    readOnly={true}
+    style={
+      {
+        "height": 0,
+        "left": 0,
+        "overflow": "hidden",
+        "paddingBottom": 0,
+        "paddingTop": 0,
+        "position": "absolute",
+        "resize": "none",
+        "top": 0,
+        "transform": "translateZ(0)",
+        "visibility": "hidden",
+      }
+    }
+    tabIndex={-1}
   />
 </div>
 `;
