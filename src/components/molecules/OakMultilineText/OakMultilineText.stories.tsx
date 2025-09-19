@@ -14,6 +14,9 @@ const meta: Meta<typeof OakMultilineText> = {
     allowCarriageReturn: { control: "boolean" },
     disabled: { control: "boolean" },
     placeholder: { control: "text" },
+    invalid: { control: "boolean" },
+    invalidText: { control: "text" },
+    label: { control: "text" },
   },
   parameters: {
     controls: {
@@ -23,6 +26,9 @@ const meta: Meta<typeof OakMultilineText> = {
         "allowCarriageReturn",
         "disabled",
         "placeholder",
+        "invalid",
+        "invalidText",
+        "label"
       ],
     },
     backgrounds: {
@@ -43,5 +49,7 @@ export const Default: Story = {
     placeholder: "Start typing answer...",
     allowCarriageReturn: true,
     charLimit: 200,
+    invalid: false,
+    label: "test"
   },
 };

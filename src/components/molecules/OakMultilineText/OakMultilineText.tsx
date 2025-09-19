@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 import { TextareaAutosize } from "@mui/material";
 
 import { OakFlex } from "@/components/atoms/OakFlex";
+import { OakP, OakLabel } from "@/components/atoms";
 // import { OakCombinedColorToken } from "@/styles";
 
 export type OakMultilineTextProps = {
@@ -18,6 +19,18 @@ export type OakMultilineTextProps = {
    * Controls if user can use 'enter' key to get a newline
    */
   allowCarriageReturn: boolean;
+  /**
+   * Indicates if the input is invalid (to be used after form submission or validation)
+   */
+  invalid?: boolean;
+  /**
+   * Feedback text to display when the input is invalid
+   */
+  invalidText?: string;
+  /**
+   * The label for the textarea
+   */
+  label: string;
   disabled: boolean;
   placeholder: string;
   // color: OakCombinedColorToken;
@@ -52,20 +65,35 @@ const UnstyledOakMultilineText = (props: OakMultilineTextProps) => {
     }
   };
 
+  const textareaId = `textarea-${props.label
+    .toLowerCase()
+    .replace(/\s+/g, "-")}`;
+
   return (
     <OakFlex $flexDirection="column" $width="100%" {...props}>
+      {props.label && (
+        <OakLabel $font={"body-2-bold"} htmlFor={textareaId}>
+          {props.label}
+        </OakLabel>
+      )}
+
       <TextareaAutosize
-        id="OakMultilineText"
+        id={textareaId}
         maxLength={props.charLimit}
         disabled={props.disabled}
         onKeyDown={(e) => onEnterPressed(e)}
         placeholder={props.placeholder}
         minRows={1}
         style={{
-          resize: "none"
+          resize: "none",
         }}
         tabIndex={0}
       ></TextareaAutosize>
+      {props.invalid && props.invalidText && (
+        <OakP id={`error-${textareaId}`} $font={"body-2"} $color={"text-error"}>
+          {props.invalidText}
+        </OakP>
+      )}
     </OakFlex>
   );
 };

@@ -16,6 +16,7 @@ describe("OakMultilineText", () => {
         charLimit={200}
         singleLine={false}
         allowCarriageReturn={true}
+        label=""
       />,
     );
     expect(getByTestId("test")).toBeInTheDocument();
@@ -29,6 +30,7 @@ describe("OakMultilineText", () => {
         charLimit={200}
         singleLine={false}
         allowCarriageReturn={true}
+        label=""
       ></OakMultilineText>,
     ).toJSON();
     expect(tree).toMatchSnapshot();

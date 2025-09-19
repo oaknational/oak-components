@@ -19,11 +19,12 @@ exports[`OakMultilineText matches snapshot 1`] = `
 <div
   className="c0 c1 "
   disabled={false}
+  label=""
   placeholder="Start typing answer..."
 >
   <textarea
     disabled={false}
-    id="OakMultilineText"
+    id="textarea-"
     maxLength={200}
     onChange={[Function]}
     onKeyDown={[Function]}
