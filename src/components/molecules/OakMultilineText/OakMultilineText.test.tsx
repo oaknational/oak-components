@@ -1,6 +1,6 @@
 import React from "react";
 import "@testing-library/jest-dom";
-// import { create } from "react-test-renderer";
+import { create } from "react-test-renderer";
 
 import { OakMultilineText } from "./OakMultilineText";
 
@@ -21,8 +21,16 @@ describe("OakMultilineText", () => {
     expect(getByTestId("test")).toBeInTheDocument();
   });
 
-  // it("matches snapshot", () => {
-  //   const tree = create(<OakMultilineText >Click Me</OakMultilineText>).toJSON();
-  //   expect(tree).toMatchSnapshot();
-  // });
+  it("matches snapshot", () => {
+    const tree = create(
+      <OakMultilineText
+        disabled={false}
+        placeholder="Start typing answer..."
+        charLimit={200}
+        singleLine={false}
+        allowCarriageReturn={true}
+      ></OakMultilineText>,
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });
