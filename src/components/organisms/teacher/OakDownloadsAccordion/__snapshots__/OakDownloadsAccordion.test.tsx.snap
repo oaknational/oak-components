@@ -1,0 +1,869 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
+.c0 {
+  width: 100%;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-top: 0.063rem solid;
+  border-bottom: 0.063rem solid;
+  border-color: #cacaca;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c2 {
+  width: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c5 {
+  padding: 0.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c5:hover {
+  cursor: pointer;
+}
+
+.c8 {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c14 {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c16 {
+  position: relative;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  min-height: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c18 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c18:hover {
+  cursor: pointer;
+}
+
+.c22 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c26 {
+  padding-right: 0.75rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c28 {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c29 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c31 {
+  position: relative;
+  overflow: auto;
+  font-family: --var(google-font),Lexend,sans-serif;
+  overflow: auto;
+}
+
+.c32 {
+  padding-top: 1.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c34 {
+  overflow: hidden;
+  color: #222222;
+  background: #ffffff;
+  border: 0.125rem solid;
+  border-radius: 0.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+  overflow: hidden;
+}
+
+.c39 {
+  padding: 0.75rem;
+  background: #ffe555;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c41 {
+  position: relative;
+  width: 3rem;
+  min-width: 3rem;
+  height: 3rem;
+  min-height: 3rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c42 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c44 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c45 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c46 {
+  padding-right: 1rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c17 {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  object-fit: contain;
+}
+
+.c30 {
+  object-fit: contain;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.c19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.c24 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c33 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.c35 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c38 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c40 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.c43 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  gap: 0.25rem;
+}
+
+.c25 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+  text-align: left;
+  margin-right: 1rem;
+  color: #222222;
+}
+
+.c6 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  color: #222222;
+}
+
+.c27 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  text-align: left;
+}
+
+.c20 {
+  font: inherit;
+  color: inherit;
+  border: none;
+  background: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  padding: 0;
+}
+
+.c10 {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  margin: 0;
+  outline: none;
+  border: 0.125rem solid;
+  border-color: #222222;
+  border-radius: 0.125rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-color: #808080;
+}
+
+.c10:checked {
+  background: #222222;
+  border-color: #222222;
+}
+
+.c10:disabled {
+  pointer-events: none;
+}
+
+.c12:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c15 {
+  pointer-events: none;
+  opacity: 0;
+}
+
+input:checked + .c13 {
+  opacity: 1;
+}
+
+.c37 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c36 {
+  cursor: pointer;
+}
+
+.c36:has(input:focus-within):focus-visible {
+  box-shadow: 0px 0px 0px 2px #ffe555, 0px 0px 0px 5px #575757;
+}
+
+.c21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-right: 0.75rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+  min-width: 0;
+}
+
+.c21:hover .chevron-icon {
+  -webkit-filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
+  filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
+}
+
+.c21:focus-visible .focus-outline {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+@media (hover:hover) {
+  .c10:hover:not(:disabled) {
+    border-color: #222222;
+  }
+}
+
+@media (hover:hover) {
+  .c11:hover:not(.c9:checked):not(.c9:disabled)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 60%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    border-radius: 0.125rem;
+    background: #222222;
+  }
+}
+
+@media (hover:hover) {
+  .c36:hover:not(:disabled,:active) {
+    background: #f2f2f2;
+  }
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    className="c2 c3"
+  >
+    <div
+      className="c2 c4"
+    >
+      <div
+        className="c5"
+        id="select-all-wrapper"
+        onClick={[MockFunction]}
+      >
+        <label
+          className="c6 c7"
+          disabled={false}
+          htmlFor="select-all"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <div
+            className="c8"
+          >
+            <input
+              aria-labelledby="downloads-accordion-heading"
+              checked={false}
+              className="c9 c10 c11 c12"
+              disabled={false}
+              id="select-all"
+              name="select-all"
+              onChange={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              type="checkbox"
+              value=""
+            />
+            <div
+              className="c13 c14 c15"
+            >
+              <div
+                className="c16"
+              >
+                <img
+                  alt=""
+                  className="c17"
+                  data-nimg="fill"
+                  decoding="async"
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
+                  style={
+                    {
+                      "bottom": 0,
+                      "color": "transparent",
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": undefined,
+                      "objectPosition": undefined,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                />
+              </div>
+            </div>
+          </div>
+        </label>
+      </div>
+      <button
+        aria-expanded={false}
+        className="c18 c19 c20  c21"
+        id="test-downloads-accordion"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="c22 c23"
+        >
+          <div
+            className="c22 c24"
+          >
+            <h2
+              className="c25"
+              id="downloads-accordion-heading"
+            >
+              Select all resources
+            </h2>
+            <div
+              className="c26"
+            >
+              <p
+                className="c27"
+              >
+                Slides, quizzes, worksheet, additional materials
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c28 focus-outline"
+        >
+          <div
+            className="c29 chevron-icon"
+            style={
+              {
+                "transform": "none",
+                "transition": "all 0.3s ease 0s",
+              }
+            }
+          >
+            <img
+              alt="An arrow to indicate whether the item is open or closed"
+              className="c30"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+              style={
+                {
+                  "bottom": 0,
+                  "color": "transparent",
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
+        </div>
+      </button>
+    </div>
+  </div>
+  <div
+    className="c31"
+  >
+    <div
+      aria-labelledby="test-downloads-accordion"
+      className="c32"
+      hidden={true}
+      role="region"
+    >
+      <div
+        className="c22 c33"
+      >
+        <div
+          className="c34 c35 c36"
+        >
+          <label
+            className="c37"
+          >
+            <div
+              className="c22 c38"
+            >
+              <div
+                className="c39 c40"
+              >
+                <div
+                  className="c41"
+                >
+                  <img
+                    alt=""
+                    className="c30"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    onError={[Function]}
+                    onLoad={[Function]}
+                    src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1749034739/icons/book-steps_qwku6h.svg"
+                    style={
+                      {
+                        "bottom": 0,
+                        "color": "transparent",
+                        "height": "100%",
+                        "left": 0,
+                        "objectFit": undefined,
+                        "objectPosition": undefined,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </div>
+              </div>
+              <div
+                className="c42 c43"
+              >
+                <div
+                  className="c44"
+                >
+                  Lesson plan
+                </div>
+                <div
+                  className="c45"
+                >
+                  245KB
+                </div>
+                <div
+                  className="c45"
+                >
+                  PDF
+                </div>
+              </div>
+            </div>
+            <div
+              className="c22 c35"
+            >
+              <div
+                className="c46 c3"
+              >
+                <div
+                  className="c8"
+                >
+                  <input
+                    className="c9 c10 c11 c12"
+                    disabled={false}
+                    id="lesson-plan"
+                    name="default"
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    type="checkbox"
+                    value="lesson-plan"
+                  />
+                  <div
+                    className="c13 c14 c15"
+                  >
+                    <div
+                      className="c16"
+                    >
+                      <img
+                        alt=""
+                        className="c17"
+                        data-nimg="fill"
+                        decoding="async"
+                        loading="lazy"
+                        onError={[Function]}
+                        onLoad={[Function]}
+                        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
+                        style={
+                          {
+                            "bottom": 0,
+                            "color": "transparent",
+                            "height": "100%",
+                            "left": 0,
+                            "objectFit": undefined,
+                            "objectPosition": undefined,
+                            "position": "absolute",
+                            "right": 0,
+                            "top": 0,
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </label>
+        </div>
+        <div
+          className="c34 c35 c36"
+        >
+          <label
+            className="c37"
+          >
+            <div
+              className="c22 c38"
+            >
+              <div
+                className="c39 c40"
+              >
+                <div
+                  className="c41"
+                >
+                  <img
+                    alt=""
+                    className="c30"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    onError={[Function]}
+                    onLoad={[Function]}
+                    src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954241/icons/sjjy5f3g4eciwcuxxr33.svg"
+                    style={
+                      {
+                        "bottom": 0,
+                        "color": "transparent",
+                        "height": "100%",
+                        "left": 0,
+                        "objectFit": undefined,
+                        "objectPosition": undefined,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </div>
+              </div>
+              <div
+                className="c42 c43"
+              >
+                <div
+                  className="c44"
+                >
+                  Lesson presentation
+                </div>
+                <div
+                  className="c45"
+                >
+                  1.2MB
+                </div>
+                <div
+                  className="c45"
+                >
+                  PPTX
+                </div>
+              </div>
+            </div>
+            <div
+              className="c22 c35"
+            >
+              <div
+                className="c46 c3"
+              >
+                <div
+                  className="c8"
+                >
+                  <input
+                    className="c9 c10 c11 c12"
+                    disabled={false}
+                    id="presentation"
+                    name="default"
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    type="checkbox"
+                    value="presentation"
+                  />
+                  <div
+                    className="c13 c14 c15"
+                  >
+                    <div
+                      className="c16"
+                    >
+                      <img
+                        alt=""
+                        className="c17"
+                        data-nimg="fill"
+                        decoding="async"
+                        loading="lazy"
+                        onError={[Function]}
+                        onLoad={[Function]}
+                        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
+                        style={
+                          {
+                            "bottom": 0,
+                            "color": "transparent",
+                            "height": "100%",
+                            "left": 0,
+                            "objectFit": undefined,
+                            "objectPosition": undefined,
+                            "position": "absolute",
+                            "right": 0,
+                            "top": 0,
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
