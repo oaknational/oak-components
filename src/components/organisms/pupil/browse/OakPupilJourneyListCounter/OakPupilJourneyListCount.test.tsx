@@ -10,7 +10,7 @@ describe("OakPupilJourneyListCount", () => {
     const { getByText } = renderWithTheme(
       <OakPupilJourneyListCounter
         count={5}
-        countHeader={"Lessons"}
+        countHeader={"Previously released lessons"}
         tag={"h2"}
       />,
     );
