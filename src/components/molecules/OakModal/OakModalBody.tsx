@@ -13,7 +13,7 @@ export type OakModalBodyProps = {
  */
 export const OakModalBody = (props: OakModalBodyProps) => {
   return (
-    <OakBox $mv="space-between-m" $ph="inner-padding-m">
+    <OakBox $mv="spacing-24" $ph="spacing-16">
       {props.children}
     </OakBox>
   );

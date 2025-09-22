@@ -270,7 +270,7 @@ describe("OakButtonWithDropdown", () => {
     renderWithTheme(
       <OakButtonWithDropdown
         {...defaultProps}
-        dropdownTopSpacing="all-spacing-8"
+        dropdownTopSpacing="spacing-40"
         data-testid="custom-spacing-dropdown"
       >
         {simpleChildren}

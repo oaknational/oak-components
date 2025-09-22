@@ -30,7 +30,7 @@ const meta: Meta<typeof OakLessonReviewQuiz> = {
   decorators: [
     (Story) => {
       return (
-        <OakFlex $flexDirection="column" $gap="space-between-m">
+        <OakFlex $flexDirection="column" $gap="spacing-24">
           {Story()}
         </OakFlex>
       );

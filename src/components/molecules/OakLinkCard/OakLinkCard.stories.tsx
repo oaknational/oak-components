@@ -59,7 +59,7 @@ const meta: Meta<typeof OakLinkCard> = {
   },
   args: {
     mainSection: (
-      <OakFlex $flexDirection="column" $gap="space-between-xs">
+      <OakFlex $flexDirection="column" $gap="spacing-12">
         <OakHeading tag="h1" $font="heading-5">
           Try our new financial education lessons
         </OakHeading>
@@ -100,7 +100,7 @@ export const WithDifferentIcon: Story = {
 export const WithLongText: Story = {
   args: {
     mainSection: (
-      <OakFlex $flexDirection="column" $gap="space-between-xs">
+      <OakFlex $flexDirection="column" $gap="spacing-12">
         <OakHeading tag="h1" $font="heading-5">
           Learn how to manage your finances, Learn how to manage your finances,
           Learn how to manage your finances
@@ -128,7 +128,7 @@ export const WithAnimation: Story = {
   args: {
     hasAnimation: true,
     mainSection: (
-      <OakFlex $flexDirection="column" $gap="space-between-xs">
+      <OakFlex $flexDirection="column" $gap="spacing-12">
         <OakHeading tag="h1" $font="heading-5">
           Explore our cool animations that happen on mount
         </OakHeading>

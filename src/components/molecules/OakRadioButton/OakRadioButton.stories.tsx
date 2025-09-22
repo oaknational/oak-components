@@ -71,7 +71,7 @@ export const WithStyling: Story = {
       <OakRadioGroup
         name="test"
         $flexDirection={"column"}
-        $gap={"space-between-m"}
+        $gap={"spacing-24"}
         $alignItems={"flex-start"}
       >
         <OakRadioButton
@@ -110,8 +110,8 @@ export const WithStyling: Story = {
     },
   },
   args: {
-    $pv: "inner-padding-s",
-    $ph: "inner-padding-l",
+    $pv: "spacing-12",
+    $ph: "spacing-20",
     $ba: "border-solid-s",
     $borderRadius: "border-radius-s",
     $background: "bg-decorative2-subdued",

@@ -113,15 +113,15 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
         $background={unavailable ? "bg-neutral" : "bg-primary"}
         $borderRadius="border-radius-m"
         $disabled={unavailable}
-        $pr="inner-padding-m"
+        $pr="spacing-16"
         $width="100%"
         $display={["none", "flex"]}
         {...rest}
       >
         <FlexWithFocus
-          $pr={onSave ? "inner-padding-xs" : "inner-padding-none"}
+          $pr={onSave ? "spacing-8" : "spacing-0"}
           $borderRadius="border-radius-m"
-          $gap="space-between-s"
+          $gap="spacing-16"
           $alignItems="center"
           $width="100%"
           $height="100%"
@@ -140,7 +140,7 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
             }
             $justifyContent={"center"}
             $alignItems={"center"}
-            $minWidth="all-spacing-11"
+            $minWidth="spacing-64"
             $alignSelf="stretch"
           >
             <OakSpan
@@ -150,7 +150,7 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
               {index}
             </OakSpan>
           </StyledOakIndexBox>
-          <OakFlex $pv="inner-padding-l" $pr="inner-padding-m" $flexGrow={1}>
+          <OakFlex $pv="spacing-20" $pr="spacing-16" $flexGrow={1}>
             <OakP
               $font={"heading-7"}
               $color={unavailable ? "text-disabled" : "text-primary"}
@@ -160,7 +160,7 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
             </OakP>
           </OakFlex>
           <OakFlex
-            $minWidth="all-spacing-13"
+            $minWidth="spacing-80"
             $alignItems="center"
             $justifyContent="end"
           >
@@ -177,14 +177,14 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
             $color={unavailable ? "text-disabled" : "text-primary"}
             $alignItems="center"
             $justifyContent="end"
-            $minWidth={onSave ? "all-spacing-15" : "all-spacing-17"}
+            $minWidth={onSave ? "spacing-100" : "spacing-160"}
           >
             <OakP $whiteSpace="nowrap">{lessonCount}</OakP>
 
             {!onSave && (
               <OakIcon
                 iconName="chevron-right"
-                iconWidth="all-spacing-7"
+                iconWidth="spacing-32"
                 $colorFilter={unavailable ? "text-disabled" : "text-primary"}
               />
             )}
@@ -208,12 +208,12 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
         $disabled={unavailable}
         $display={["flex", "none"]}
         $width="100%"
-        $pa="inner-padding-m"
+        $pa="spacing-16"
         {...rest}
       >
-        <OakFlex $flexDirection="column" $gap="space-between-s" $width="100%">
+        <OakFlex $flexDirection="column" $gap="spacing-16" $width="100%">
           <OakFlex
-            $gap="space-between-s"
+            $gap="spacing-16"
             as="a"
             href={unavailable ? undefined : href}
           >
@@ -228,9 +228,9 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
               $justifyContent={"center"}
               $alignItems={"center"}
               $borderRadius="border-radius-m"
-              $width="all-spacing-8"
-              $height="all-spacing-8"
-              $minWidth="all-spacing-8"
+              $width="spacing-40"
+              $height="spacing-40"
+              $minWidth="spacing-40"
             >
               <OakHeading
                 tag="h3"

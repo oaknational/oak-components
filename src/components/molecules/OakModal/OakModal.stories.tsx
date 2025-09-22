@@ -46,7 +46,7 @@ const meta: Meta<typeof OakModal> = {
     isLeftHandSide: true, // Default value for the prop
     children: (
       <OakModalBody>
-        <OakBox $mb="space-between-m">Modal content</OakBox>
+        <OakBox $mb="spacing-24">Modal content</OakBox>
         <OakTextInput />
       </OakModalBody>
     ),

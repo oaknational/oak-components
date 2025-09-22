@@ -5,7 +5,7 @@ import { OakFlex } from "@/components/atoms/OakFlex";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 
 const StyledOakFlex = styled(OakFlex)`
-  width: ${parseSpacing("all-spacing-6")};
+  width: ${parseSpacing("spacing-24")};
 `;
 // For example you could restyle the OakFlex component by adding the styles to the css template literal below
 

@@ -24,7 +24,7 @@ export type OakCardWithHandDrawnBorderProps = Omit<
  * An optional `stroke` and `fill` can be applied to change the color of the border
  */
 export const OakCardWithHandDrawnBorder = ({
-  $pa = "inner-padding-xl",
+  $pa = "spacing-24",
   fill = "black",
   stroke,
   $width = "fit-content",

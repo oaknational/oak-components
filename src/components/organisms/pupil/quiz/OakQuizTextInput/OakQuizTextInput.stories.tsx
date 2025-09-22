@@ -50,7 +50,7 @@ export const Highlighted: Story = {
 
 export const ResponsiveWidth: Story = {
   args: {
-    wrapperWidth: ["100%", "all-spacing-20"],
+    wrapperWidth: ["100%", "spacing-360"],
     feedback: "incorrect",
     defaultValue:
       "The pupil's answer which is longer than the width of the input",

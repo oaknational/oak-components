@@ -94,7 +94,7 @@ export const OakPupilJourneyOptionalityButton = <C extends ElementType = "a">(
         stroke={unavailable ? "border-neutral-lighter" : "black"}
         strokeWidth={"border-solid-s"}
       >
-        <OakFlex $flexDirection={"column"} $gap={"all-spacing-2"}>
+        <OakFlex $flexDirection={"column"} $gap={"spacing-8"}>
           <StyledLabel
             $font={["heading-7", "heading-6"]}
             $color={disabledOrUnavailable ? "text-subdued" : "text-primary"}
@@ -102,7 +102,7 @@ export const OakPupilJourneyOptionalityButton = <C extends ElementType = "a">(
             {props.title}
           </StyledLabel>
 
-          <OakFlex $alignItems={"center"} $gap={"space-between-sssx"}>
+          <OakFlex $alignItems={"center"} $gap={"spacing-4"}>
             {!props.unavailable && (
               <>
                 <StyledLabel
@@ -115,8 +115,8 @@ export const OakPupilJourneyOptionalityButton = <C extends ElementType = "a">(
                 </StyledLabel>
                 <OakRoundIcon
                   iconName="chevron-right"
-                  $width={"all-spacing-7"}
-                  $height={"all-spacing-7"}
+                  $width={"spacing-32"}
+                  $height={"spacing-32"}
                   $background={"transparent"}
                   $colorFilter={
                     disabledOrUnavailable ? "icon-disabled" : "icon-inverted"

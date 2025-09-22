@@ -15,7 +15,7 @@ const meta: Meta<typeof OakTertiaryInvertedButton> = {
       include: ["iconName"],
     },
   },
-  decorators: [(Story) => <OakFlex $gap="space-between-m">{Story()}</OakFlex>],
+  decorators: [(Story) => <OakFlex $gap="spacing-24">{Story()}</OakFlex>],
 };
 export default meta;
 
@@ -23,7 +23,7 @@ type Story = StoryObj<typeof OakTertiaryInvertedButton>;
 
 export const Default: Story = {
   render: (args) => (
-    <OakFlex $flexWrap={"wrap"} $gap={"space-between-m"}>
+    <OakFlex $flexWrap={"wrap"} $gap={"spacing-24"}>
       <OakTertiaryInvertedButton {...args}>
         Tertiary Button
       </OakTertiaryInvertedButton>
@@ -48,7 +48,7 @@ export const Default: Story = {
 
 export const TertiaryButtonWithNoText: Story = {
   render: (args) => (
-    <OakFlex $flexWrap={"wrap"} $gap={"space-between-m"}>
+    <OakFlex $flexWrap={"wrap"} $gap={"spacing-24"}>
       <OakTertiaryInvertedButton {...args} />
       <OakTertiaryInvertedButton {...args} disabled />
       <OakTertiaryInvertedButton {...args} isLoading />

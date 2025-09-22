@@ -14,8 +14,8 @@ const meta: Meta<typeof OakFormInputWithLabels> = {
       <OakBox
         $width={"100%"}
         $background={"grey10"}
-        $pv={"inner-padding-l"}
-        $ph={"inner-padding-s"}
+        $pv={"spacing-20"}
+        $ph={"spacing-12"}
       >
         <Story />
       </OakBox>

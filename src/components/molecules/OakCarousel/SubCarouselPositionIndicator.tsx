@@ -58,7 +58,7 @@ export const SubCarouselPositionIndicator = ({
   ));
 
   return (
-    <OakFlex $gap={"space-between-m"} $alignItems={"end"}>
+    <OakFlex $gap={"spacing-24"} $alignItems={"end"}>
       {positionIndicators}
     </OakFlex>
   );

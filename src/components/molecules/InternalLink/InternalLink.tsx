@@ -25,11 +25,11 @@ const StyledLink = styled.a<{
 }>`
   display: inline;
   align-items: center;
-  gap: ${parseSpacing("space-between-sssx")};
+  gap: ${parseSpacing("spacing-4")};
   outline: none;
   border-radius: ${parseBorderRadius("border-radius-m")};
-  padding: ${parseSpacing("inner-padding-ssx")};
-  margin: -${parseSpacing("inner-padding-ssx")};
+  padding: ${parseSpacing("spacing-4")};
+  margin: -${parseSpacing("spacing-4")};
   appearance: none;
   font: inherit;
   background: none;
@@ -132,8 +132,8 @@ export const InternalLink: InternalLinkComponent = forwardRef(
       visitedColor,
       hoverColor,
       activeColor,
-      iconWidth = "all-spacing-6",
-      iconHeight = "all-spacing-6",
+      iconWidth = "spacing-24",
+      iconHeight = "spacing-24",
       ...rest
     } = props;
 
@@ -142,14 +142,11 @@ export const InternalLink: InternalLinkComponent = forwardRef(
         case isLoading:
           return (
             <OakBox
-              $width="all-spacing-6"
-              $height="all-spacing-6"
+              $width="spacing-24"
+              $height="spacing-24"
               $display={"inline-block"}
             >
-              <OakLoadingSpinner
-                $width="all-spacing-4"
-                $color="icon-inverted"
-              />
+              <OakLoadingSpinner $width="spacing-16" $color="icon-inverted" />
             </OakBox>
           );
         case !!iconName:

@@ -28,7 +28,7 @@ const CurriculumDownloadButton = (
       iconName="chevron-right"
       href={props.curriculumHref}
       isTrailingIcon={true}
-      $pt={["inner-padding-xs", "inner-padding-none"]}
+      $pt={["spacing-8", "spacing-0"]}
     >
       {props.isLegacy
         ? "Curriculum download"
@@ -60,14 +60,14 @@ const UnstyledComponent = (props: OakUnitsHeaderProps) => {
   return (
     <>
       <OakFlex
-        $gap="space-between-sssx"
+        $gap="spacing-4"
         $alignItems={["flex-start", "center"]}
         $justifyContent="space-between"
         $flexDirection={["column", "row"]}
         {...rest}
       >
-        <OakFlex $gap="space-between-ssx" $flexDirection="column">
-          <OakFlex $gap="space-between-ssx">
+        <OakFlex $gap="spacing-8" $flexDirection="column">
+          <OakFlex $gap="spacing-8">
             <OakHeading $font="heading-5" tag="h3" $color={"text-primary"}>
               {isCustomUnit && customHeadingText
                 ? customHeadingText

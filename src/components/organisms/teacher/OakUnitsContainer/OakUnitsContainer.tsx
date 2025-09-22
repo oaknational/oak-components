@@ -11,7 +11,7 @@ import { parseSpacing } from "@/styles/helpers/parseSpacing";
 const OakULFlex = styled(OakUL)`
   display: flex;
   flex-direction: column;
-  gap: ${parseSpacing("space-between-xs")};
+  gap: ${parseSpacing("spacing-12")};
 `;
 
 export type OakUnitsContainerProps = OakUnitsHeaderProps & {
@@ -36,12 +36,12 @@ const UnstyledComponent = (props: OakUnitsContainerProps) => {
   } = props;
   return (
     <OakFlex
-      $gap="space-between-s"
+      $gap="spacing-16"
       $alignItems="center"
       {...rest}
       $background={isLegacy ? "bg-neutral" : "bg-decorative3-very-subdued"}
       $flexDirection="column"
-      $pa="inner-padding-m"
+      $pa="spacing-16"
       $borderRadius="border-radius-m"
     >
       {showHeader && (

@@ -31,14 +31,14 @@ export const OakInlineRegistrationBanner = (
   return (
     <OakBox
       $background="bg-decorative1-main"
-      $pa="inner-padding-xl2"
-      $mb={["space-between-m", "space-between-s"]}
+      $pa="spacing-32"
+      $mb={["spacing-24", "spacing-16"]}
       $borderRadius="border-radius-m"
       {...style}
     >
-      <OakFlex $gap="space-between-m" $alignItems="center">
-        <OakFlex $flexDirection="column" $gap="space-between-m">
-          <OakFlex $alignItems="center" $gap="space-between-m">
+      <OakFlex $gap="spacing-24" $alignItems="center">
+        <OakFlex $flexDirection="column" $gap="spacing-24">
+          <OakFlex $alignItems="center" $gap="spacing-24">
             {headerText}
             <SurfingStudentSVG $display={["block", "none", "none"]} />
           </OakFlex>
@@ -68,10 +68,10 @@ export const OakInlineRegistrationBanner = (
             </OakFieldError>
 
             <OakFlex
-              $gap="space-between-s"
+              $gap="spacing-16"
               $position="relative"
               $width="100%"
-              $mt="space-between-m"
+              $mt="spacing-24"
             >
               <OakBox $position="relative" $width="100%">
                 <OakJauntyAngleLabel
@@ -81,7 +81,7 @@ export const OakInlineRegistrationBanner = (
                   $background={formError ? "red" : "bg-decorative5-main"}
                   $color={formError ? "white" : "text-primary"}
                   $width="max-content"
-                  $ph="space-between-s"
+                  $ph="spacing-16"
                   $font="heading-7"
                   $top="-15px"
                   $left="8px"
@@ -91,7 +91,7 @@ export const OakInlineRegistrationBanner = (
                   type="email"
                   autoComplete="email"
                   placeholder="Enter email address"
-                  $maxHeight="all-spacing-10"
+                  $maxHeight="spacing-56"
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
                   wrapperWidth="100%"
@@ -102,7 +102,7 @@ export const OakInlineRegistrationBanner = (
               </OakPrimaryButton>
             </OakFlex>
             {success && (
-              <OakP $font="body-1-bold" $mt="space-between-s">
+              <OakP $font="body-1-bold" $mt="spacing-16">
                 Thank you for signing up
               </OakP>
             )}

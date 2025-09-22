@@ -26,7 +26,7 @@ export const SingleShadow: Story = {
   render: (args) => (
     <OakFlex
       $flexDirection={"column"}
-      $gap="space-between-m"
+      $gap="spacing-24"
       {...args}
       $alignItems="start"
     >
@@ -34,7 +34,7 @@ export const SingleShadow: Story = {
         <OakBox
           key={token}
           $ba={"border-solid-m"}
-          $pa={"inner-padding-l"}
+          $pa={"spacing-20"}
           $borderRadius={"border-radius-s"}
           $dropShadow={token as OakDropShadowToken}
         >
@@ -55,15 +55,15 @@ export const DoubleShadow: Story = {
   render: (args) => (
     <OakFlex
       $flexDirection={"column"}
-      $gap="space-between-m"
+      $gap="spacing-24"
       {...args}
       $alignItems="start"
     >
       <OakBox $position={"relative"}>
         <OakBox
           $position={"absolute"}
-          $top={"space-between-none"}
-          $left={"space-between-none"}
+          $top={"spacing-0"}
+          $left={"spacing-0"}
           $width={"100%"}
           $height={"100%"}
           $dropShadow={"drop-shadow-centered-grey"}
@@ -73,13 +73,13 @@ export const DoubleShadow: Story = {
           $borderRadius={"border-radius-s"}
           $dropShadow={"drop-shadow-centered-lemon"}
           $position={"absolute"}
-          $top={"space-between-none"}
-          $left={"space-between-none"}
+          $top={"spacing-0"}
+          $left={"spacing-0"}
           $width={"100%"}
           $height={"100%"}
         />
         <OakBox
-          $pa="inner-padding-m"
+          $pa="spacing-16"
           $ba="border-solid-m"
           $borderRadius="border-radius-s"
         >
@@ -90,8 +90,8 @@ export const DoubleShadow: Story = {
       <OakBox $position={"relative"}>
         <OakBox
           $position={"absolute"}
-          $top={"space-between-none"}
-          $left={"space-between-none"}
+          $top={"spacing-0"}
+          $left={"spacing-0"}
           $width={"100%"}
           $height={"100%"}
           $dropShadow={"drop-shadow-grey"}
@@ -101,13 +101,13 @@ export const DoubleShadow: Story = {
           $borderRadius={"border-radius-s"}
           $dropShadow={"drop-shadow-lemon"}
           $position={"absolute"}
-          $top={"space-between-none"}
-          $left={"space-between-none"}
+          $top={"spacing-0"}
+          $left={"spacing-0"}
           $width={"100%"}
           $height={"100%"}
         />
         <OakBox
-          $pa="inner-padding-m"
+          $pa="spacing-16"
           $ba="border-solid-m"
           $borderRadius="border-radius-s"
         >

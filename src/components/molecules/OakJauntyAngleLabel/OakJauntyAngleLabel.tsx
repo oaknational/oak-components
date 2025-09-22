@@ -10,8 +10,8 @@ export const OakJauntyAngleLabel = (props: OakJauntyAngleLabelProps) => {
   return (
     <OakBox
       $borderRadius={"border-radius-m"}
-      $ph={"inner-padding-xs"}
-      $pv={"inner-padding-ssx"}
+      $ph={"spacing-8"}
+      $pv={"spacing-4"}
       $font={["heading-7", "heading-6"]}
       $transform={"rotate(-1.5deg)"}
       {...oakBoxProps}

@@ -20,7 +20,7 @@ export type OakPromoTagProps = {
  */
 export const OakPromoTag = (props: OakPromoTagProps) => {
   const {
-    width = ["all-spacing-8", "all-spacing-9", "all-spacing-10"],
+    width = ["spacing-40", "spacing-48", "spacing-56"],
     display = "flex",
   } = props;
 
@@ -43,7 +43,7 @@ export const OakPromoTag = (props: OakPromoTagProps) => {
       </InternalStyledSvg>
       <OakFlex
         $position="absolute"
-        $inset="all-spacing-0"
+        $inset="spacing-0"
         $alignItems="center"
         $justifyContent="center"
       >

@@ -12,7 +12,7 @@ const meta: Meta<typeof InternalCheckBoxWrapper> = {
   title: "components/atoms/InternalCheckBoxWrapper",
   argTypes: {
     size: {
-      options: ["all-spacing-6", "all-spacing-7", "all-spacing-8"],
+      options: ["spacing-24", "spacing-32", "spacing-40"],
     },
     iconPadding: spacingArgTypes.$pa,
   },
@@ -41,5 +41,5 @@ export const Default: Story = {
       }
     />
   ),
-  args: { size: "all-spacing-6" },
+  args: { size: "spacing-24" },
 };

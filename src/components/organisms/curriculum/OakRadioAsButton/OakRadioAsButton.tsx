@@ -141,16 +141,16 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
   const isChecked = currentValue === value;
 
   return (
-    <OakFlex $minHeight={"all-spacing-8"} $position={"relative"}>
+    <OakFlex $minHeight={"spacing-40"} $position={"relative"}>
       <StyledFlexBox
         $borderRadius={"border-radius-s"}
         $borderColor={"border-neutral-lighter"}
         $ba="border-solid-s"
         $background={"white"}
         onClick={handleContainerClick}
-        $ph={"inner-padding-s"}
-        $pv={"inner-padding-ssx"}
-        $gap={"space-between-sssx"}
+        $ph={"spacing-12"}
+        $pv={"spacing-4"}
+        $gap={"spacing-4"}
       >
         <StyledInternalRadio
           {...rest}

@@ -101,33 +101,33 @@ export const OakCookieSettingsModal = ({
       }
     >
       <OakModalBody>
-        <OakHeading tag="h2" $font="heading-5" $mb="space-between-s">
+        <OakHeading tag="h2" $font="heading-5" $mb="spacing-16">
           This site uses cookies to store information on your computer.
         </OakHeading>
-        <OakP $mb="space-between-m">
+        <OakP $mb="spacing-24">
           Some of these cookies are essential, while others help us to improve
           your experience by providing insights into how the site is being used.
         </OakP>
 
-        <OakP $mb="space-between-l">
+        <OakP $mb="spacing-48">
           For more information, view our{" "}
           <OakLink href={policyURL} target="_blank">
             cookie policy
           </OakLink>
           .
         </OakP>
-        <OakBox $mb="space-between-xl">
-          <OakPrimaryButton onClick={onAccept} width="all-spacing-18">
+        <OakBox $mb="spacing-56">
+          <OakPrimaryButton onClick={onAccept} width="spacing-180">
             Allow all
           </OakPrimaryButton>
         </OakBox>
         <OakBox
-          $ph="inner-padding-xs"
+          $ph="spacing-8"
           as="form"
           id="cookie-settings-form"
           onSubmit={handleSubmit}
         >
-          <OakHeading tag="h3" $font="heading-6" $mb="space-between-m">
+          <OakHeading tag="h3" $font="heading-6" $mb="spacing-24">
             Manage consent preferences
           </OakHeading>
           {policyConsents.map((policy) => {
@@ -156,12 +156,12 @@ export const OakCookieSettingsModal = ({
                   />
                 }
               >
-                <OakP $mb="space-between-m2">{policy.policyDescription}</OakP>
-                <OakBox as="dl" $pl="inner-padding-m">
+                <OakP $mb="spacing-32">{policy.policyDescription}</OakP>
+                <OakBox as="dl" $pl="spacing-16">
                   {policy.policyParties.length > 0 && (
                     <>
                       <dt>Who do we share data with?</dt>
-                      <OakBox as="dd" $font="body-3-bold" $mb="space-between-s">
+                      <OakBox as="dd" $font="body-3-bold" $mb="spacing-16">
                         <OakUL $reset>
                           {policy.policyParties.map((party, index, all) => (
                             <OakBox as="li" key={index} $display="inline">

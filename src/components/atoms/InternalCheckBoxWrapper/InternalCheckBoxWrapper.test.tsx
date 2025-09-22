@@ -12,7 +12,7 @@ describe("InternalCheckBoxWrapper", () => {
   it("renders", () => {
     const { getByTestId } = renderWithTheme(
       <InternalCheckBoxWrapper
-        size={"all-spacing-6"}
+        size={"spacing-24"}
         internalCheckbox={
           <input
             data-testid="test-input"
@@ -32,7 +32,7 @@ describe("InternalCheckBoxWrapper", () => {
     const tree = create(
       <OakThemeProvider theme={oakDefaultTheme}>
         <InternalCheckBoxWrapper
-          size={"all-spacing-6"}
+          size={"spacing-24"}
           internalCheckbox={
             <input
               data-testid="test-input"

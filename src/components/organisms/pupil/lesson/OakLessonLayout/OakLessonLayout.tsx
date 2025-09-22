@@ -40,7 +40,7 @@ const StyledLayoutBox = styled(OakBox)<{
   celebrate: boolean;
 }>`
   @media (min-width: ${getBreakpoint("small")}px) {
-    padding-top: ${parseSpacing("space-between-xl")};
+    padding-top: ${parseSpacing("spacing-56")};
   }
   @media (min-width: ${getBreakpoint("large")}px) {
     ${(props) => css`
@@ -85,7 +85,7 @@ export const OakLessonLayout = ({
       $display={"flex"}
       $width="100%"
       $minHeight={"100%"}
-      $ph={["inner-padding-none", "inner-padding-xl"]}
+      $ph={["spacing-0", "spacing-24"]}
       $background={pageBackgroundColor}
       sectionName={lessonSectionName}
       celebrate={celebrate}
@@ -95,7 +95,7 @@ export const OakLessonLayout = ({
         $flexDirection="column"
         $flexGrow={1}
         $background={[mobileContentBackgroundColor, "transparent"]}
-        $maxWidth="all-spacing-24"
+        $maxWidth="spacing-1280"
         $minHeight="100%"
         $mh="auto"
         $position={"relative"}
@@ -138,15 +138,15 @@ export const OakLessonLayout = ({
           $flexGrow={1}
           $minHeight="100%"
           $zIndex={1}
-          $pt={["inner-padding-none", "inner-padding-m"]}
-          $gap={["space-between-l", "space-between-xl"]}
+          $pt={["spacing-0", "spacing-16"]}
+          $gap={["spacing-48", "spacing-56"]}
         >
           {topNavSlot && (
             <OakBox
-              $pv="inner-padding-l"
-              $pl={["inner-padding-m", "inner-padding-xs"]}
-              $pr={["inner-padding-m", "inner-padding-none"]}
-              $mr={["space-between-none", "space-between-l"]}
+              $pv="spacing-20"
+              $pl={["spacing-16", "spacing-8"]}
+              $pr={["spacing-16", "spacing-0"]}
+              $mr={["spacing-0", "spacing-48"]}
               $background={["bg-primary", "transparent"]}
             >
               {topNavSlot}
@@ -157,11 +157,7 @@ export const OakLessonLayout = ({
           </OakFlex>
           {bottomNavSlot && (
             <StickyFooter
-              $mh={[
-                "space-between-none",
-                "space-between-none",
-                "space-between-sssx",
-              ]}
+              $mh={["spacing-0", "spacing-0", "spacing-4"]}
               $borderColor={contentBorderColor}
               $bt={"border-solid-xl"}
               $background={["bg-primary", contentBackgroundColor]}

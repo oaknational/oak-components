@@ -18,7 +18,7 @@ const defaultProps = {
   handleToggleSelectAll: mockHandleToggleSelectAll,
   selectAllChecked: false,
   children: (
-    <OakFlex $flexDirection="column" $gap="space-between-s">
+    <OakFlex $flexDirection="column" $gap="spacing-16">
       <OakDownloadCard
         id="lesson-plan"
         value="lesson-plan"

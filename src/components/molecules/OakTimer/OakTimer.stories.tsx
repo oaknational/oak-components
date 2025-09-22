@@ -12,7 +12,7 @@ const meta: Meta<typeof OakTimer> = {
   args: { timeCode: 6534.23 },
   decorators: [
     (Story) => (
-      <OakFlex $pa={"inner-padding-xl"} $flexDirection={"row"}>
+      <OakFlex $pa={"spacing-24"} $flexDirection={"row"}>
         <Story />
       </OakFlex>
     ),

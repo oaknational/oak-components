@@ -28,7 +28,7 @@ type Story = StoryObj<typeof OakHintButton>;
 export const Default: Story = {
   render: (args) => (
     <OakThemeProvider theme={oakDefaultTheme}>
-      <OakFlex $gap="space-between-m">
+      <OakFlex $gap="spacing-24">
         <OakHintButton {...args} />
         <OakHintButton {...args} disabled />
         <OakHintButton {...args} isLoading />

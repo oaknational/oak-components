@@ -38,7 +38,7 @@ type Story = StoryObj<typeof OakSmallSecondaryButton>;
 
 export const Default: Story = {
   render: (args) => (
-    <OakFlex $gap="space-between-m">
+    <OakFlex $gap="spacing-24">
       <OakSmallSecondaryButton {...args}>
         Secondary Button
       </OakSmallSecondaryButton>
@@ -57,7 +57,7 @@ export const Default: Story = {
 
 export const LinkStyledAsButton: Story = {
   render: (args) => (
-    <OakFlex $gap="space-between-m">
+    <OakFlex $gap="spacing-24">
       <OakSmallSecondaryButton {...args}>
         Secondary Link
       </OakSmallSecondaryButton>

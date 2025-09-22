@@ -182,7 +182,7 @@ export const OakMediaClip = ({
   }`;
 
   return (
-    <OakLI $mb={"space-between-ssx"}>
+    <OakLI $mb={"spacing-8"}>
       <MediaButtonWrapper
         $position={"relative"}
         $borderRadius={"border-radius-s"}
@@ -193,7 +193,7 @@ export const OakMediaClip = ({
           $borderRadius={"border-radius-s"}
           $width={"100%"}
           $height={"100%"}
-          $top="all-spacing-0"
+          $top="spacing-0"
         />
 
         <OakBox
@@ -202,7 +202,7 @@ export const OakMediaClip = ({
           $borderRadius={"border-radius-s"}
           $width={"100%"}
           $height={"100%"}
-          $top="all-spacing-0"
+          $top="spacing-0"
         />
         <StyledInternalButton
           element={element}
@@ -225,7 +225,7 @@ export const OakMediaClip = ({
           $disabledTextColor="text-disabled"
           $justifyContent={"flex-start"}
           onClick={onClick}
-          $pa={"inner-padding-xs"}
+          $pa={"spacing-8"}
           $muxPlayingState={muxPlayingState}
           aria-label={buttonAriaLabel}
         >
@@ -236,10 +236,10 @@ export const OakMediaClip = ({
           >
             <>
               <ImageBox
-                $height={"all-spacing-10"}
-                $width={"all-spacing-15"}
+                $height={"spacing-56"}
+                $width={"spacing-100"}
                 $borderRadius={"border-radius-xs"}
-                $mr={"space-between-s"}
+                $mr={"spacing-16"}
                 $position={"relative"}
                 disabled={disabled}
                 $flexShrink={0}
@@ -265,15 +265,15 @@ export const OakMediaClip = ({
                 <OakTimer
                   timeCode={timeCode}
                   $position={"absolute"}
-                  $bottom={"space-between-sssx"}
-                  $right={"space-between-sssx"}
+                  $bottom={"spacing-4"}
+                  $right={"spacing-4"}
                 />
               </ImageBox>
 
               <TextBox
                 $width={"100%"}
                 $flexDirection={"column"}
-                $gap={"space-between-sssx"}
+                $gap={"spacing-4"}
               >
                 <OakHeading
                   $textOverflow={"ellipsis"}

@@ -27,14 +27,14 @@ describe("Component OakBox", () => {
 
   test("can pass custom padding", async () => {
     const { getByTestId } = render(
-      <InternalCard data-testid="test" $pl={"inner-padding-m"} />,
+      <InternalCard data-testid="test" $pl={"spacing-16"} />,
     );
     expect(getByTestId("test")).toHaveStyle("padding-left: 1rem");
   });
 
   test("can pass custom margin", async () => {
     const { getByTestId } = render(
-      <InternalCard data-testid="test" $mb={"space-between-ssx"} />,
+      <InternalCard data-testid="test" $mb={"spacing-8"} />,
     );
     expect(getByTestId("test")).toHaveStyle("margin-bottom: 0.5rem");
   });

@@ -13,7 +13,7 @@ export const SurfingStudentSVG = (props: DisplayStyleProps) => {
   return (
     <OakBox {...props}>
       <StyledSvg
-        $width={["all-spacing-15", "all-spacing-18", "all-spacing-19"]}
+        $width={["spacing-100", "spacing-180", "spacing-240"]}
         viewBox="0 0 251 198"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

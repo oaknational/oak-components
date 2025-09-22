@@ -18,8 +18,8 @@ export const OakModalFooter = (props: OakModalFooterProps) => {
       $flexDirection={["column", "row"]}
       $bt="border-solid-s"
       $borderColor="border-neutral-lighter"
-      $pa="inner-padding-xl"
-      $gap={["space-between-s", "space-between-m"]}
+      $pa="spacing-24"
+      $gap={["spacing-16", "spacing-24"]}
       $width="100%"
     />
   );

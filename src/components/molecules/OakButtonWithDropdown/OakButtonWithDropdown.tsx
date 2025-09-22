@@ -50,7 +50,7 @@ export const OakButtonWithDropdown = ({
   leadingButtonIcon,
   "data-testid": dataTestId,
   buttonComponent: ButtonComponent,
-  dropdownTopSpacing = "all-spacing-10",
+  dropdownTopSpacing = "spacing-56",
   flexWidth,
 }: OakButtonWithDropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -138,8 +138,8 @@ export const OakButtonWithDropdown = ({
       ref={dropdownRef}
       $position="relative"
     >
-      <OakFlex $flexDirection="column" $gap="space-between-xs">
-        <OakFlex $width={flexWidth} $gap="space-between-xs">
+      <OakFlex $flexDirection="column" $gap="spacing-12">
+        <OakFlex $width={flexWidth} $gap="spacing-12">
           <ButtonComponent
             iconName={primaryActionIcon}
             isTrailingIcon
@@ -167,7 +167,7 @@ export const OakButtonWithDropdown = ({
             $borderRadius="border-radius-s"
             $ba="border-solid-m"
             $borderColor="border-primary"
-            $pa="inner-padding-xs"
+            $pa="spacing-8"
             $position="absolute"
             $top={dropdownTopSpacing}
             $zIndex="modal-close-button"
@@ -175,7 +175,7 @@ export const OakButtonWithDropdown = ({
             aria-label="Dropdown menu. Use arrow keys to navigate, Tab to cycle through items, Escape to close."
             data-testid={dataTestId ? `${dataTestId}-dropdown` : undefined}
           >
-            <OakFlex $flexDirection="column" $gap={"space-between-ssx"}>
+            <OakFlex $flexDirection="column" $gap={"spacing-8"}>
               {children}
             </OakFlex>
           </OakBox>
@@ -187,7 +187,7 @@ export const OakButtonWithDropdown = ({
 
 OakButtonWithDropdown.Divider = (): React.ReactElement => (
   <OakBox
-    $height="all-spacing-0"
+    $height="spacing-0"
     $width="100%"
     $bt="border-solid-s"
     $borderColor="border-neutral-lighter"

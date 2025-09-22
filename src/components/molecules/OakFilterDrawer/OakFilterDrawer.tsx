@@ -66,7 +66,7 @@ export const OakFilterDrawer = ({
       {...rest}
     >
       <OakFlex
-        $ma="space-between-m"
+        $ma="spacing-24"
         $justifyContent="space-between"
         $alignItems="center"
       >
@@ -91,8 +91,8 @@ export const OakFilterDrawer = ({
           hoverIconBackground="black"
           hoverIconColor="white"
           disabledIconBackground="transparent"
-          iconBackgroundSize="all-spacing-6"
-          iconSize="all-spacing-6"
+          iconBackgroundSize="spacing-24"
+          iconSize="spacing-24"
           iconName="cross"
         />
       </OakFlex>
@@ -105,7 +105,7 @@ export const OakFilterDrawer = ({
       >
         <ObserveScroll>
           <div data-autofocus-inside tabIndex={-2}>
-            <OakBox $mh="space-between-m">{children}</OakBox>
+            <OakBox $mh="spacing-24">{children}</OakBox>
           </div>
         </ObserveScroll>
       </OakFlex>
@@ -113,8 +113,8 @@ export const OakFilterDrawer = ({
         $flexDirection={["column", "row"]}
         $bt="border-solid-s"
         $borderColor="border-neutral-lighter"
-        $pa="inner-padding-s"
-        $gap={["space-between-s", "space-between-m"]}
+        $pa="spacing-12"
+        $gap={["spacing-16", "spacing-24"]}
         $width="100%"
       >
         {footerSlot}

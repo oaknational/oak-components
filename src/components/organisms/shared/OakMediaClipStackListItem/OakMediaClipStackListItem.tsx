@@ -94,7 +94,7 @@ const ImageStackShadow = styled(OakBox)`
 
 const StyledMediaClipImage = styled(OakImage)`
   background-color: ${parseColor("bg-decorative2-very-subdued")};
-  background-size: ${parseSpacing("all-spacing-11")};
+  background-size: ${parseSpacing("spacing-64")};
   background-position: center;
   background-repeat: no-repeat;
   height: 100%;
@@ -126,7 +126,7 @@ export const OakMediaClipStackListItem = (
       href={href}
       $display={"flex"}
       $flexDirection={["row", "row", "column"]}
-      $gap={["all-spacing-2", "all-spacing-2", "space-between-none"]}
+      $gap={["spacing-8", "spacing-8", "spacing-0"]}
       $width={"fit-content"}
       $alignItems={["center", "center", "flex-start"]}
       {...rest}
@@ -134,10 +134,10 @@ export const OakMediaClipStackListItem = (
       <OakBox>
         <ImageStackShadow
           $borderRadius={"border-radius-s"}
-          $width={["all-spacing-15", "all-spacing-15", "all-spacing-18"]}
-          $height={["all-spacing-11", "all-spacing-11", "all-spacing-15"]}
+          $width={["spacing-100", "spacing-100", "spacing-180"]}
+          $height={["spacing-64", "spacing-64", "spacing-100"]}
           $position={"relative"}
-          $mb={["space-between-none", "space-between-none", "space-between-xs"]}
+          $mb={["spacing-0", "spacing-0", "spacing-12"]}
         >
           {!isAudioClip ? (
             <StyledMediaClipImage
@@ -148,8 +148,8 @@ export const OakMediaClipStackListItem = (
             />
           ) : (
             <OakIcon
-              $width={["all-spacing-15", "all-spacing-15", "all-spacing-18"]}
-              $height={["all-spacing-11", "all-spacing-11", "all-spacing-15"]}
+              $width={["spacing-100", "spacing-100", "spacing-180"]}
+              $height={["spacing-64", "spacing-64", "spacing-100"]}
               iconName={"audio-clip-large"}
               alt={imageAltText}
               $position={"absolute"}
@@ -161,14 +161,12 @@ export const OakMediaClipStackListItem = (
           <OakIcon
             id="play-icon"
             iconName="play"
-            $width={"all-spacing-7"}
-            $height={"all-spacing-7"}
+            $width={"spacing-32"}
+            $height={"spacing-32"}
           />
         </ImageStackShadow>
       </OakBox>
-      <OakBox
-        $mb={["space-between-none", "space-between-none", "space-between-s"]}
-      >
+      <OakBox $mb={["spacing-0", "spacing-0", "spacing-16"]}>
         <OakHeading tag="h3" $font="heading-7" $color={"text-primary"}>
           {title}
         </OakHeading>

@@ -57,10 +57,10 @@ export const Default: Story = {
         <OakTertiaryOLNav {...args} />
         <OakFlex
           $flexDirection={"column"}
-          $mt={"space-between-l"}
-          $gap={"all-spacing-16"}
+          $mt={"spacing-48"}
+          $gap={"spacing-120"}
           $background={"aqua30"}
-          $pa={"inner-padding-m"}
+          $pa={"spacing-16"}
         >
           <OakFlex $position={"relative"}>
             <OakAnchorTarget id="solid-explanations" />

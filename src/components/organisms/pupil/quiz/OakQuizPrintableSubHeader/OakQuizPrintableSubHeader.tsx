@@ -25,7 +25,7 @@ export const OakQuizPrintableSubHeader = ({
   return (
     <OakFlex
       $flexDirection={["column", "row"]}
-      $gap={"space-between-s"}
+      $gap={"spacing-16"}
       $justifyContent={"space-between"}
       $alignItems={["flex-start", "center"]}
     >
@@ -34,10 +34,10 @@ export const OakQuizPrintableSubHeader = ({
       </OakHeading>
       <OakFlex
         $flexDirection={"row"}
-        $gap={"space-between-m"}
+        $gap={"spacing-24"}
         $background={"bg-neutral"}
-        $pv={"inner-padding-ssx"}
-        $ph={"inner-padding-s"}
+        $pv={"spacing-4"}
+        $ph={"spacing-12"}
         $borderRadius={"border-radius-m"}
       >
         <OakBox>
@@ -46,7 +46,7 @@ export const OakQuizPrintableSubHeader = ({
         </OakBox>
         <OakFlex
           $flexDirection={"column"}
-          $gap={"space-between-xs"}
+          $gap={"spacing-12"}
           $justifyContent={"center"}
         >
           <OakSpan $font="heading-6">Attempts: {attempts}</OakSpan>

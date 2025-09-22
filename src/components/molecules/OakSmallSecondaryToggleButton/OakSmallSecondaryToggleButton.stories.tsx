@@ -41,7 +41,7 @@ type Story = StoryObj<typeof OakSmallSecondaryToggleButton>;
 
 export const Default: Story = {
   render: (args) => (
-    <OakFlex $gap="space-between-m">
+    <OakFlex $gap="spacing-24">
       <OakSmallSecondaryToggleButton {...args}>
         Secondary Button
       </OakSmallSecondaryToggleButton>

@@ -68,7 +68,7 @@ export const OakModalCenterBody = ({
 }: OakModalCenterBodyProps) => {
   return (
     <OakFlex
-      $pb="inner-padding-xl"
+      $pb="spacing-24"
       $width="100%"
       $flexDirection="column"
       $alignItems="center"
@@ -77,9 +77,9 @@ export const OakModalCenterBody = ({
       {!hideIcon && (
         <OakIcon
           iconName={iconName}
-          $width="all-spacing-15"
-          $height="all-spacing-15"
-          $mb="space-between-m2"
+          $width="spacing-100"
+          $height="spacing-100"
+          $mb="spacing-32"
           data-testid="icon"
           {...iconOverride}
         />
@@ -88,7 +88,7 @@ export const OakModalCenterBody = ({
         $font={["heading-5", "heading-5", "heading-4"]}
         data-testid="OakHeading-id"
         tag="h1"
-        $mb="space-between-m2"
+        $mb="spacing-32"
         $textAlign="center"
         {...headingOverride}
       >

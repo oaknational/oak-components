@@ -21,25 +21,25 @@ const meta: Meta<typeof OakCollapsibleContent> = {
   },
   args: {
     isOpen: true,
-    $maxHeight: "all-spacing-19",
+    $maxHeight: "spacing-240",
     children: (
       <>
-        <OakP $mb="space-between-m">
+        <OakP $mb="spacing-24">
           Hello, I'm Mr. Norris, and welcome to the first lesson in this topic
           on forces for year seven.
         </OakP>
-        <OakP $mb="space-between-m">
+        <OakP $mb="spacing-24">
           This lesson is all about what forces do. This is part of the wider big
         </OakP>
-        <OakP $mb="space-between-m">
+        <OakP $mb="spacing-24">
           question of how forces make things happen in the universe. Everything
           that
         </OakP>
-        <OakP $mb="space-between-m">
+        <OakP $mb="spacing-24">
           happens in the universe at the deepest level, any change happens,
           because
         </OakP>
-        <OakP $mb="space-between-m">
+        <OakP $mb="spacing-24">
           a force has acted. And that's why this is such a great, such an
           important
         </OakP>
@@ -66,7 +66,7 @@ export const WithControl: Story = {
         <OakTertiaryButton
           onClick={() => setIsOpen(!isOpen)}
           iconName={isOpen ? "chevron-up" : "chevron-down"}
-          $mb="space-between-m"
+          $mb="spacing-24"
           aria-expanded={isOpen}
           aria-controls="collapsible-content"
         >

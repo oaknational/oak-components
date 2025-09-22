@@ -21,7 +21,7 @@ export const OakSaveButton = (props: OakSaveButtonProps) => {
       aria-disabled={isLoading}
       disabled={unavailable}
       onClick={onSave}
-      width="all-spacing-15"
+      width="spacing-100"
       $justifyContent="end"
       aria-label={`${isSaved ? "Unsave" : "Save"} this unit: ${title} `}
       id={saveButtonId}

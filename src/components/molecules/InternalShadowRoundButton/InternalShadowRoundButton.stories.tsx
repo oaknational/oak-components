@@ -81,11 +81,11 @@ const meta: Meta<typeof InternalShadowRoundButton> = {
     hoverBorderColor: "text-primary",
     hoverIconBackground: "mint50",
     width: "auto",
-    iconBackgroundSize: "all-spacing-7",
-    iconSize: "all-spacing-6",
+    iconBackgroundSize: "spacing-32",
+    iconSize: "spacing-24",
   },
   render: (args) => (
-    <OakFlex $gap="space-between-m">
+    <OakFlex $gap="spacing-24">
       <InternalShadowRoundButton {...args}>Button</InternalShadowRoundButton>
       <InternalShadowRoundButton {...args} disabled>
         Disabled Button
@@ -123,14 +123,14 @@ export const LinkStyledAsButton: Story = {
 
 export const ButtonInList: Story = {
   render: (args) => (
-    <OakUL $width={"all-spacing-18"}>
-      <OakLI $pv={"inner-padding-s"}>
+    <OakUL $width={"spacing-180"}>
+      <OakLI $pv={"spacing-12"}>
         <InternalShadowRoundButton {...args}>Link 1</InternalShadowRoundButton>
       </OakLI>
-      <OakLI $pv={"inner-padding-s"}>
+      <OakLI $pv={"spacing-12"}>
         <InternalShadowRoundButton {...args}>Link 2</InternalShadowRoundButton>
       </OakLI>
-      <OakLI $pv={"inner-padding-s"}>
+      <OakLI $pv={"spacing-12"}>
         <InternalShadowRoundButton {...args}>Link 3</InternalShadowRoundButton>
       </OakLI>
     </OakUL>

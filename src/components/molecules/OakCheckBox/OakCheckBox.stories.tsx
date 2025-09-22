@@ -18,7 +18,7 @@ const meta: Meta<typeof OakCheckBox> = {
       control: "boolean",
     },
     checkboxSize: {
-      options: ["all-spacing-6", "all-spacing-7", "all-spacing-8"],
+      options: ["spacing-24", "spacing-32", "spacing-40"],
     },
     labelGap: flexArgTypes.$gap,
     labelAlignItems: flexArgTypes.$alignItems,
@@ -67,12 +67,12 @@ export const WithStyling: Story = {
   args: {
     id: "checkbox-test-with-styling",
     value: "a test value",
-    checkboxSize: "all-spacing-7",
+    checkboxSize: "spacing-32",
     checkboxBorder: "border-solid-l",
     checkboxBorderRadius: "border-radius-m",
-    iconPadding: "inner-padding-xs",
+    iconPadding: "spacing-8",
     hoverBorderRadius: "border-radius-l",
-    labelGap: "space-between-s",
+    labelGap: "spacing-16",
     labelAlignItems: "flex-start",
     defaultColor: "red",
     disabledColor: "red50",
@@ -84,7 +84,7 @@ export const CustomIcon: Story = {
   args: {
     id: "checkbox-test-custom",
     value: "a test value",
-    iconPadding: "inner-padding-ssx",
+    iconPadding: "spacing-4",
     checkedBackgroundFill: false,
     checkedIcon: (
       <OakBox
@@ -102,7 +102,7 @@ export const PreChecked: Story = {
     const { id, ...rest } = args;
 
     return (
-      <OakFlex $gap="space-between-m">
+      <OakFlex $gap="spacing-24">
         <OakCheckBox
           id="checkbox-test-prechecked-1"
           {...rest}

@@ -90,14 +90,14 @@ export const OakModal = ({
       {...rest}
     >
       <OakFlex
-        $ma="space-between-s"
+        $ma="spacing-16"
         $justifyContent="space-between"
         $alignItems="center"
       >
         <OakImage
           src={logoSrc}
-          $height="all-spacing-8"
-          $width="all-spacing-7"
+          $height="spacing-40"
+          $width="spacing-32"
           alt=""
         />
         <InternalShadowRoundButton
@@ -111,8 +111,8 @@ export const OakModal = ({
           hoverIconBackground="black"
           hoverIconColor="white"
           disabledIconBackground="transparent"
-          iconBackgroundSize="all-spacing-6"
-          iconSize="all-spacing-6"
+          iconBackgroundSize="spacing-24"
+          iconSize="spacing-24"
           iconName="cross"
         />
       </OakFlex>

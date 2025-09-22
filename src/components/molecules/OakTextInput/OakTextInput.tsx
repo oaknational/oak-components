@@ -201,8 +201,8 @@ export const OakTextInput = ({
       $color={color}
       $alignItems="center"
       $position="relative"
-      $gap="space-between-s"
-      $ph="inner-padding-l"
+      $gap="spacing-16"
+      $ph="spacing-20"
       $disabled={!!props.disabled}
       $readOnly={!!props.readOnly}
       onClick={(event) => {
@@ -214,17 +214,16 @@ export const OakTextInput = ({
           iconName={iconName}
           $colorFilter={finalIconColor}
           $pointerEvents="none"
-          $width={"all-spacing-7"}
+          $width={"spacing-32"}
           alt={iconAlt}
         />
       )}
-
       <OakFlex $flexGrow={1}>
         <InternalTextInput
           type={type}
           $width={"100%"}
-          $pv="inner-padding-l"
-          $height="all-spacing-12"
+          $pv="spacing-20"
+          $height="spacing-72"
           {...props}
         />
       </OakFlex>
@@ -233,7 +232,7 @@ export const OakTextInput = ({
           iconName={iconName}
           $colorFilter={finalIconColor}
           $pointerEvents="none"
-          $width={"all-spacing-7"}
+          $width={"spacing-32"}
           alt={iconAlt}
         />
       )}

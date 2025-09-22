@@ -48,7 +48,7 @@ export const LongList: Story = {
     <OakGrid
       $background="pink"
       $width="100%"
-      $maxHeight="all-spacing-20"
+      $maxHeight="spacing-360"
       $height="100vh"
     >
       <OakGridArea $colSpan={[12, 2]} $overflow="auto">

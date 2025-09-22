@@ -86,20 +86,16 @@ const Accordion = ({
       $bt={"border-solid-s"}
       $bb={isOpen ? "border-solid-none" : "border-solid-s"}
       $borderColor={"grey40"}
-      $pv={"inner-padding-s"}
+      $pv={"spacing-12"}
       $flexDirection={"column"}
       $width={"100%"}
       {...styleProps}
     >
       <OakFlex $alignItems={"center"} $width={"100%"}>
-        <OakFlex
-          $alignItems={"center"}
-          $width={"100%"}
-          $gap={"space-between-s"}
-        >
+        <OakFlex $alignItems={"center"} $width={"100%"} $gap={"spacing-16"}>
           <OakBox
             id="select-all-wrapper"
-            $pa={"inner-padding-xs"}
+            $pa={"spacing-8"}
             onClick={handleToggleSelectAll}
           >
             <OakCheckBox
@@ -116,12 +112,12 @@ const Accordion = ({
             $flexGrow={1}
             id={id}
             $alignItems={"center"}
-            $mr={"space-between-xs"}
+            $mr={"spacing-12"}
           >
             <OakFlex
               $justifyContent={"center"}
               $alignItems={"center"}
-              $gap={"space-between-xs"}
+              $gap={"spacing-12"}
             >
               <OakFlex
                 $flexDirection={"column"}
@@ -133,14 +129,14 @@ const Accordion = ({
                   id="downloads-accordion-heading"
                   $color={"text-primary"}
                   $font={"heading-6"}
-                  $mr={"space-between-s"}
+                  $mr={"spacing-16"}
                   tag="h2"
                 >
                   {selectAllChecked
                     ? "All resources selected"
                     : "Select all resources"}
                 </OakHeading>
-                <OakBox $pr={"inner-padding-s"}>
+                <OakBox $pr={"spacing-12"}>
                   <OakP $textAlign={"left"}>{downloadsText}</OakP>
                 </OakBox>
               </OakFlex>
@@ -148,13 +144,13 @@ const Accordion = ({
             <OakBox
               className="focus-outline"
               $borderRadius={"border-radius-s"}
-              $pa={"inner-padding-xs"}
+              $pa={"spacing-8"}
             >
               <OakIcon
                 className="chevron-icon"
                 iconName="chevron-down"
-                $width="all-spacing-7"
-                $height="all-spacing-7"
+                $width="spacing-32"
+                $height="spacing-32"
                 alt="An arrow to indicate whether the item is open or closed"
                 style={{
                   transform: isOpen ? "rotate(180deg)" : "none",
@@ -167,7 +163,7 @@ const Accordion = ({
       </OakFlex>
       {/* Accordion content */}
       <OakBox $position={"relative"} $overflow={"auto"}>
-        <InternalAccordionContent $pt={"inner-padding-l"} aria-labelledby={id}>
+        <InternalAccordionContent $pt={"spacing-20"} aria-labelledby={id}>
           {children}
         </InternalAccordionContent>
       </OakBox>

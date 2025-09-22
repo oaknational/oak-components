@@ -89,7 +89,7 @@ export const ExtendibleAutoDismiss: Story = {
       updateArgs({ id: id + 1, variant: "pink" });
     };
     return (
-      <OakFlex $flexDirection="column" $gap="all-spacing-5">
+      <OakFlex $flexDirection="column" $gap="spacing-20">
         <OakPrimaryButton onClick={replaceToast}>Update toast</OakPrimaryButton>
         <OakToast {...args} />
       </OakFlex>
