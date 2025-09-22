@@ -90,7 +90,12 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
   overflow: auto;
 }
 
-.c33 {
+.c32 {
+  padding-top: 1.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c34 {
   overflow: hidden;
   color: #222222;
   background: #ffffff;
@@ -100,13 +105,13 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
   overflow: hidden;
 }
 
-.c38 {
+.c39 {
   padding: 0.75rem;
   background: #ffe555;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c40 {
+.c41 {
   position: relative;
   width: 3rem;
   min-width: 3rem;
@@ -115,7 +120,7 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c41 {
+.c42 {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.75rem;
@@ -123,7 +128,7 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c43 {
+.c44 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 700;
   font-size: 1rem;
@@ -134,7 +139,7 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c44 {
+.c45 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
@@ -145,7 +150,7 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c45 {
+.c46 {
   padding-right: 1rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -238,7 +243,7 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
   justify-content: center;
 }
 
-.c32 {
+.c33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -249,14 +254,14 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
   gap: 1rem;
 }
 
-.c34 {
+.c35 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c37 {
+.c38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -271,7 +276,7 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
   flex-grow: 1;
 }
 
-.c39 {
+.c40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -285,7 +290,7 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
   align-self: stretch;
 }
 
-.c42 {
+.c43 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -390,7 +395,7 @@ input:checked + .c13 {
   opacity: 1;
 }
 
-.c36 {
+.c37 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -401,11 +406,11 @@ input:checked + .c13 {
   display: flex;
 }
 
-.c35 {
+.c36 {
   cursor: pointer;
 }
 
-.c35:has(input:focus-within):focus-visible {
+.c36:has(input:focus-within):focus-visible {
   box-shadow: 0px 0px 0px 2px #ffe555, 0px 0px 0px 5px #575757;
 }
 
@@ -463,7 +468,7 @@ input:checked + .c13 {
 }
 
 @media (hover:hover) {
-  .c35:hover:not(:disabled,:active) {
+  .c36:hover:not(:disabled,:active) {
     background: #f2f2f2;
   }
 }
@@ -616,27 +621,27 @@ input:checked + .c13 {
   >
     <div
       aria-labelledby="test-downloads-accordion"
-      className="c22"
+      className="c32"
       hidden={true}
       role="region"
     >
       <div
-        className="c22 c32"
+        className="c22 c33"
       >
         <div
-          className="c33 c34 c35"
+          className="c34 c35 c36"
         >
           <label
-            className="c36"
+            className="c37"
           >
             <div
-              className="c22 c37"
+              className="c22 c38"
             >
               <div
-                className="c38 c39"
+                className="c39 c40"
               >
                 <div
-                  className="c40"
+                  className="c41"
                 >
                   <img
                     alt=""
@@ -665,30 +670,30 @@ input:checked + .c13 {
                 </div>
               </div>
               <div
-                className="c41 c42"
+                className="c42 c43"
               >
                 <div
-                  className="c43"
+                  className="c44"
                 >
                   Lesson plan
                 </div>
                 <div
-                  className="c44"
+                  className="c45"
                 >
                   245KB
                 </div>
                 <div
-                  className="c44"
+                  className="c45"
                 >
                   PDF
                 </div>
               </div>
             </div>
             <div
-              className="c22 c34"
+              className="c22 c35"
             >
               <div
-                className="c45 c3"
+                className="c46 c3"
               >
                 <div
                   className="c8"
@@ -741,19 +746,19 @@ input:checked + .c13 {
           </label>
         </div>
         <div
-          className="c33 c34 c35"
+          className="c34 c35 c36"
         >
           <label
-            className="c36"
+            className="c37"
           >
             <div
-              className="c22 c37"
+              className="c22 c38"
             >
               <div
-                className="c38 c39"
+                className="c39 c40"
               >
                 <div
-                  className="c40"
+                  className="c41"
                 >
                   <img
                     alt=""
@@ -782,30 +787,30 @@ input:checked + .c13 {
                 </div>
               </div>
               <div
-                className="c41 c42"
+                className="c42 c43"
               >
                 <div
-                  className="c43"
+                  className="c44"
                 >
                   Lesson presentation
                 </div>
                 <div
-                  className="c44"
+                  className="c45"
                 >
                   1.2MB
                 </div>
                 <div
-                  className="c44"
+                  className="c45"
                 >
                   PPTX
                 </div>
               </div>
             </div>
             <div
-              className="c22 c34"
+              className="c22 c35"
             >
               <div
-                className="c45 c3"
+                className="c46 c3"
               >
                 <div
                   className="c8"

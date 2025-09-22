@@ -167,7 +167,7 @@ const Accordion = ({
       </OakFlex>
       {/* Accordion content */}
       <OakBox $position={"relative"} $overflow={"auto"}>
-        <InternalAccordionContent aria-labelledby={id}>
+        <InternalAccordionContent $pt={"inner-padding-l"} aria-labelledby={id}>
           {children}
         </InternalAccordionContent>
       </OakBox>
