@@ -1,6 +1,6 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { act } from "react-test-renderer";
+import { act } from "@testing-library/react";
 
 import { OakPupilJourneyUnitsFilter } from "./OakPupilJourneyUnitsFilter";
 

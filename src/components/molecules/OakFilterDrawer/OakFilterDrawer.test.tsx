@@ -1,7 +1,6 @@
 import React, { ReactNode } from "react";
 import "@testing-library/jest-dom";
-import { act } from "react-test-renderer";
-import { fireEvent } from "@testing-library/react";
+import { act, fireEvent } from "@testing-library/react";
 
 import { OakFilterDrawer } from "./OakFilterDrawer";
 

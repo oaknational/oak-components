@@ -1,6 +1,5 @@
 import assert from "assert";
 
-import { act } from "react-test-renderer";
 import React from "react";
 import {
   DndContext,
@@ -16,6 +15,7 @@ import {
   getByTestId as getByTestIdWithin,
   getByRole as getByRoleWithin,
   queryByRole as queryByRoleWithin,
+  act,
 } from "@testing-library/react";
 
 import { announcements, OakQuizMatch } from "./OakQuizMatch";

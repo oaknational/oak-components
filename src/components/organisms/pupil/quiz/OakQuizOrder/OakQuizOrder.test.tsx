@@ -1,6 +1,6 @@
-import { act } from "react-test-renderer";
 import React from "react";
 import { DndContext, DndContextProps, UniqueIdentifier } from "@dnd-kit/core";
+import { act } from "@testing-library/react";
 
 import { OakQuizOrder } from "./OakQuizOrder";
 

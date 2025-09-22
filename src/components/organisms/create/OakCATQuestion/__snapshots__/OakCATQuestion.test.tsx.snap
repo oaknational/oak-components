@@ -1,0 +1,334 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakCATQuestion matches snapshot 1`] = `
+.c1 {
+  width: 100%;
+  padding: 2rem;
+  background: #ffffff;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c4 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c5 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c7 {
+  width: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c9 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c9:hover {
+  cursor: pointer;
+}
+
+.c13 {
+  margin-right: 0.75rem;
+  border-radius: 0.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c14 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c16 {
+  position: relative;
+  overflow: auto;
+  font-family: --var(google-font),Lexend,sans-serif;
+  overflow: auto;
+}
+
+.c19 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  background: #f9f9f9;
+  border: 0.063rem solid;
+  border-color: #f2f2f2;
+  border-radius: 0.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.c20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+.c21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.25rem;
+}
+
+.c15 {
+  object-fit: contain;
+}
+
+.c23 {
+  color: #575757;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c22 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c11 {
+  font: inherit;
+  color: inherit;
+  border: none;
+  background: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  padding: 0;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c12:hover .chevron-icon {
+  -webkit-filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
+  filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
+}
+
+.c12:focus-visible .focus-outline {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c3 {
+  border-left: 8px solid #cacaca;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.c0 {
+  list-style: none;
+}
+
+<div>
+  <li
+    class="c0"
+  >
+    <div
+      class="c1 c2 c3"
+    >
+      <div
+        class="c4 c2"
+      >
+        <div
+          class="c5 c6"
+        >
+          <div
+            class="c7 c8"
+          >
+            1.
+            <div>
+              Question Type Input
+            </div>
+          </div>
+          <div
+            class="c5"
+          >
+            <button
+              aria-expanded="false"
+              aria-label="expand question 1"
+              class="c9 c10 c11  c12"
+              id="question-1"
+              type="button"
+            >
+              <div
+                class="c13 focus-outline"
+              >
+                <div
+                  class="c14 chevron-icon"
+                  style="transform: none; transition: all 0.3s ease 0s;"
+                >
+                  <img
+                    alt="An arrow to indicate whether the item is open or closed"
+                    class="c15"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                  />
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div>
+          Question Text Input
+        </div>
+        <div
+          class="c16"
+        >
+          <div
+            aria-labelledby="question-1"
+            class="c5"
+            hidden=""
+            role="region"
+          >
+            <div
+              class="c7 c17"
+            >
+              <div
+                class="c5 c18"
+              >
+                <div>
+                  Answers Section
+                </div>
+              </div>
+              <div
+                class="c19 c20"
+              >
+                <div
+                  class="c5 c21"
+                >
+                  <label
+                    class="c22"
+                  >
+                    <span
+                      class="c23"
+                    >
+                      Hint
+                    </span>
+                    <div>
+                      Hint Input
+                    </div>
+                  </label>
+                  <label
+                    class="c22"
+                  >
+                    <span
+                      class="c23"
+                    >
+                      Feedback
+                    </span>
+                    <div>
+                      Feedback Input
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</div>
+`;
