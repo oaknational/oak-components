@@ -473,394 +473,285 @@ input:checked + .c13 {
   }
 }
 
-<div
-  className="c0 c1"
->
+<div>
   <div
-    className="c2 c3"
+    class="c0 c1"
   >
     <div
-      className="c2 c4"
+      class="c2 c3"
     >
       <div
-        className="c5"
-        id="select-all-wrapper"
-        onClick={[MockFunction]}
+        class="c2 c4"
       >
-        <label
-          className="c6 c7"
-          disabled={false}
-          htmlFor="select-all"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
+        <div
+          class="c5"
+          id="select-all-wrapper"
+        >
+          <label
+            class="c6 c7"
+            for="select-all"
+          >
+            <div
+              class="c8"
+            >
+              <input
+                aria-labelledby="downloads-accordion-heading"
+                class="c9 c10 c11 c12"
+                id="select-all"
+                name="select-all"
+                type="checkbox"
+                value=""
+              />
+              <div
+                class="c13 c14 c15"
+              >
+                <div
+                  class="c16"
+                >
+                  <img
+                    alt=""
+                    class="c17"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                  />
+                </div>
+              </div>
+            </div>
+          </label>
+        </div>
+        <button
+          aria-expanded="false"
+          class="c18 c19 c20  c21"
+          id="test-downloads-accordion"
+          type="button"
         >
           <div
-            className="c8"
+            class="c22 c23"
           >
-            <input
-              aria-labelledby="downloads-accordion-heading"
-              checked={false}
-              className="c9 c10 c11 c12"
-              disabled={false}
-              id="select-all"
-              name="select-all"
-              onChange={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              type="checkbox"
-              value=""
-            />
             <div
-              className="c13 c14 c15"
+              class="c22 c24"
             >
-              <div
-                className="c16"
+              <h2
+                class="c25"
+                id="downloads-accordion-heading"
               >
-                <img
-                  alt=""
-                  className="c17"
-                  data-nimg="fill"
-                  decoding="async"
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
-                  style={
-                    {
-                      "bottom": 0,
-                      "color": "transparent",
-                      "height": "100%",
-                      "left": 0,
-                      "objectFit": undefined,
-                      "objectPosition": undefined,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                      "width": "100%",
-                    }
-                  }
-                />
+                Select all resources
+              </h2>
+              <div
+                class="c26"
+              >
+                <p
+                  class="c27"
+                >
+                  Slides, quizzes, worksheet, additional materials
+                </p>
               </div>
             </div>
           </div>
-        </label>
+          <div
+            class="c28 focus-outline"
+          >
+            <div
+              class="c29 chevron-icon"
+              style="transform: none; transition: all 0.3s ease 0s;"
+            >
+              <img
+                alt="An arrow to indicate whether the item is open or closed"
+                class="c30"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+              />
+            </div>
+          </div>
+        </button>
       </div>
-      <button
-        aria-expanded={false}
-        className="c18 c19 c20  c21"
-        id="test-downloads-accordion"
-        onClick={[Function]}
-        type="button"
-      >
-        <div
-          className="c22 c23"
-        >
-          <div
-            className="c22 c24"
-          >
-            <h2
-              className="c25"
-              id="downloads-accordion-heading"
-            >
-              Select all resources
-            </h2>
-            <div
-              className="c26"
-            >
-              <p
-                className="c27"
-              >
-                Slides, quizzes, worksheet, additional materials
-              </p>
-            </div>
-          </div>
-        </div>
-        <div
-          className="c28 focus-outline"
-        >
-          <div
-            className="c29 chevron-icon"
-            style={
-              {
-                "transform": "none",
-                "transition": "all 0.3s ease 0s",
-              }
-            }
-          >
-            <img
-              alt="An arrow to indicate whether the item is open or closed"
-              className="c30"
-              data-nimg="fill"
-              decoding="async"
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
-              style={
-                {
-                  "bottom": 0,
-                  "color": "transparent",
-                  "height": "100%",
-                  "left": 0,
-                  "objectFit": undefined,
-                  "objectPosition": undefined,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-            />
-          </div>
-        </div>
-      </button>
     </div>
-  </div>
-  <div
-    className="c31"
-  >
     <div
-      aria-labelledby="test-downloads-accordion"
-      className="c32"
-      hidden={true}
-      role="region"
+      class="c31"
     >
       <div
-        className="c22 c33"
+        aria-labelledby="test-downloads-accordion"
+        class="c32"
+        hidden=""
+        role="region"
       >
         <div
-          className="c34 c35 c36"
+          class="c22 c33"
         >
-          <label
-            className="c37"
+          <div
+            class="c34 c35 c36"
           >
-            <div
-              className="c22 c38"
+            <label
+              class="c37"
             >
               <div
-                className="c39 c40"
+                class="c22 c38"
               >
                 <div
-                  className="c41"
+                  class="c39 c40"
                 >
-                  <img
-                    alt=""
-                    className="c30"
-                    data-nimg="fill"
-                    decoding="async"
-                    loading="lazy"
-                    onError={[Function]}
-                    onLoad={[Function]}
-                    src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1749034739/icons/book-steps_qwku6h.svg"
-                    style={
-                      {
-                        "bottom": 0,
-                        "color": "transparent",
-                        "height": "100%",
-                        "left": 0,
-                        "objectFit": undefined,
-                        "objectPosition": undefined,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </div>
-              </div>
-              <div
-                className="c42 c43"
-              >
-                <div
-                  className="c44"
-                >
-                  Lesson plan
-                </div>
-                <div
-                  className="c45"
-                >
-                  245KB
-                </div>
-                <div
-                  className="c45"
-                >
-                  PDF
-                </div>
-              </div>
-            </div>
-            <div
-              className="c22 c35"
-            >
-              <div
-                className="c46 c3"
-              >
-                <div
-                  className="c8"
-                >
-                  <input
-                    className="c9 c10 c11 c12"
-                    disabled={false}
-                    id="lesson-plan"
-                    name="default"
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    type="checkbox"
-                    value="lesson-plan"
-                  />
                   <div
-                    className="c13 c14 c15"
+                    class="c41"
                   >
+                    <img
+                      alt=""
+                      class="c30"
+                      data-nimg="fill"
+                      decoding="async"
+                      loading="lazy"
+                      src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1749034739/icons/book-steps_qwku6h.svg"
+                      style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="c42 c43"
+                >
+                  <div
+                    class="c44"
+                  >
+                    Lesson plan
+                  </div>
+                  <div
+                    class="c45"
+                  >
+                    245KB
+                  </div>
+                  <div
+                    class="c45"
+                  >
+                    PDF
+                  </div>
+                </div>
+              </div>
+              <div
+                class="c22 c35"
+              >
+                <div
+                  class="c46 c3"
+                >
+                  <div
+                    class="c8"
+                  >
+                    <input
+                      class="c9 c10 c11 c12"
+                      id="lesson-plan"
+                      name="default"
+                      type="checkbox"
+                      value="lesson-plan"
+                    />
                     <div
-                      className="c16"
+                      class="c13 c14 c15"
                     >
-                      <img
-                        alt=""
-                        className="c17"
-                        data-nimg="fill"
-                        decoding="async"
-                        loading="lazy"
-                        onError={[Function]}
-                        onLoad={[Function]}
-                        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
-                        style={
-                          {
-                            "bottom": 0,
-                            "color": "transparent",
-                            "height": "100%",
-                            "left": 0,
-                            "objectFit": undefined,
-                            "objectPosition": undefined,
-                            "position": "absolute",
-                            "right": 0,
-                            "top": 0,
-                            "width": "100%",
-                          }
-                        }
-                      />
+                      <div
+                        class="c16"
+                      >
+                        <img
+                          alt=""
+                          class="c17"
+                          data-nimg="fill"
+                          decoding="async"
+                          loading="lazy"
+                          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
+                          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </label>
-        </div>
-        <div
-          className="c34 c35 c36"
-        >
-          <label
-            className="c37"
+            </label>
+          </div>
+          <div
+            class="c34 c35 c36"
           >
-            <div
-              className="c22 c38"
+            <label
+              class="c37"
             >
               <div
-                className="c39 c40"
+                class="c22 c38"
               >
                 <div
-                  className="c41"
+                  class="c39 c40"
                 >
-                  <img
-                    alt=""
-                    className="c30"
-                    data-nimg="fill"
-                    decoding="async"
-                    loading="lazy"
-                    onError={[Function]}
-                    onLoad={[Function]}
-                    src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954241/icons/sjjy5f3g4eciwcuxxr33.svg"
-                    style={
-                      {
-                        "bottom": 0,
-                        "color": "transparent",
-                        "height": "100%",
-                        "left": 0,
-                        "objectFit": undefined,
-                        "objectPosition": undefined,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </div>
-              </div>
-              <div
-                className="c42 c43"
-              >
-                <div
-                  className="c44"
-                >
-                  Lesson presentation
-                </div>
-                <div
-                  className="c45"
-                >
-                  1.2MB
-                </div>
-                <div
-                  className="c45"
-                >
-                  PPTX
-                </div>
-              </div>
-            </div>
-            <div
-              className="c22 c35"
-            >
-              <div
-                className="c46 c3"
-              >
-                <div
-                  className="c8"
-                >
-                  <input
-                    className="c9 c10 c11 c12"
-                    disabled={false}
-                    id="presentation"
-                    name="default"
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    type="checkbox"
-                    value="presentation"
-                  />
                   <div
-                    className="c13 c14 c15"
+                    class="c41"
                   >
+                    <img
+                      alt=""
+                      class="c30"
+                      data-nimg="fill"
+                      decoding="async"
+                      loading="lazy"
+                      src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954241/icons/sjjy5f3g4eciwcuxxr33.svg"
+                      style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="c42 c43"
+                >
+                  <div
+                    class="c44"
+                  >
+                    Lesson presentation
+                  </div>
+                  <div
+                    class="c45"
+                  >
+                    1.2MB
+                  </div>
+                  <div
+                    class="c45"
+                  >
+                    PPTX
+                  </div>
+                </div>
+              </div>
+              <div
+                class="c22 c35"
+              >
+                <div
+                  class="c46 c3"
+                >
+                  <div
+                    class="c8"
+                  >
+                    <input
+                      class="c9 c10 c11 c12"
+                      id="presentation"
+                      name="default"
+                      type="checkbox"
+                      value="presentation"
+                    />
                     <div
-                      className="c16"
+                      class="c13 c14 c15"
                     >
-                      <img
-                        alt=""
-                        className="c17"
-                        data-nimg="fill"
-                        decoding="async"
-                        loading="lazy"
-                        onError={[Function]}
-                        onLoad={[Function]}
-                        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
-                        style={
-                          {
-                            "bottom": 0,
-                            "color": "transparent",
-                            "height": "100%",
-                            "left": 0,
-                            "objectFit": undefined,
-                            "objectPosition": undefined,
-                            "position": "absolute",
-                            "right": 0,
-                            "top": 0,
-                            "width": "100%",
-                          }
-                        }
-                      />
+                      <div
+                        class="c16"
+                      >
+                        <img
+                          alt=""
+                          class="c17"
+                          data-nimg="fill"
+                          decoding="async"
+                          loading="lazy"
+                          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
+                          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </label>
+            </label>
+          </div>
         </div>
       </div>
     </div>
