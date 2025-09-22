@@ -23,36 +23,23 @@ exports[`OakRoundIcon matches snapshot 1`] = `
   object-fit: contain;
 }
 
-<div
-  className="c0"
->
+<div>
   <div
-    className="c1"
+    class="c0"
   >
-    <img
-      alt=""
-      className="c2"
-      data-nimg="fill"
-      decoding="async"
-      loading="lazy"
-      onError={[Function]}
-      onLoad={[Function]}
-      src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699887218/icons/gvqxjxcw07ei2kkmwnes.svg"
-      style={
-        {
-          "bottom": 0,
-          "color": "transparent",
-          "height": "100%",
-          "left": 0,
-          "objectFit": undefined,
-          "objectPosition": undefined,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-          "width": "100%",
-        }
-      }
-    />
+    <div
+      class="c1"
+    >
+      <img
+        alt=""
+        class="c2"
+        data-nimg="fill"
+        decoding="async"
+        loading="lazy"
+        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699887218/icons/gvqxjxcw07ei2kkmwnes.svg"
+        style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+      />
+    </div>
   </div>
 </div>
 `;

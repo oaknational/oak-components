@@ -1,10 +1,7 @@
-import { create } from "react-test-renderer";
 import React, { ReactNode } from "react";
 import "@testing-library/jest-dom";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { oakDefaultTheme } from "@/styles";
-import { OakThemeProvider } from "@/components/atoms";
 import {
   OakInlineBanner,
   bannerTypes,
@@ -21,69 +18,63 @@ jest.mock("react-dom", () => {
 
 describe(OakInlineBanner, () => {
   it("matches snapshot for banner with title", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakInlineBanner
-          canDismiss
-          cta={
-            <OakSecondaryLink iconName="chevron-right" isTrailingIcon>
-              Link
-            </OakSecondaryLink>
-          }
-          isOpen
-          message="Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet."
-          onDismiss={() => {}}
-          title="Information"
-          type="info"
-        />
-      </OakThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <OakInlineBanner
+        canDismiss
+        cta={
+          <OakSecondaryLink iconName="chevron-right" isTrailingIcon>
+            Link
+          </OakSecondaryLink>
+        }
+        isOpen
+        message="Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet."
+        onDismiss={() => {}}
+        title="Information"
+        type="info"
+      />,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it("matches snapshot for simple banner without title", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakInlineBanner
-          canDismiss
-          cta={
-            <OakSecondaryLink iconName="chevron-right" isTrailingIcon>
-              Link
-            </OakSecondaryLink>
-          }
-          isOpen
-          message="Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet."
-          onDismiss={() => {}}
-          type="info"
-        />
-      </OakThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <OakInlineBanner
+        canDismiss
+        cta={
+          <OakSecondaryLink iconName="chevron-right" isTrailingIcon>
+            Link
+          </OakSecondaryLink>
+        }
+        isOpen
+        message="Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet."
+        onDismiss={() => {}}
+        type="info"
+      />,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it("matches snapshot for large variant banner", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakInlineBanner
-          canDismiss
-          cta={
-            <OakSecondaryLink iconName="chevron-right" isTrailingIcon>
-              Link
-            </OakSecondaryLink>
-          }
-          isOpen
-          message="Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet."
-          onDismiss={() => {}}
-          title="Information"
-          type="info"
-          variant="large"
-        />
-      </OakThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <OakInlineBanner
+        canDismiss
+        cta={
+          <OakSecondaryLink iconName="chevron-right" isTrailingIcon>
+            Link
+          </OakSecondaryLink>
+        }
+        isOpen
+        message="Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet."
+        onDismiss={() => {}}
+        title="Information"
+        type="info"
+        variant="large"
+      />,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it("shows title", () => {

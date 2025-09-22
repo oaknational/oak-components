@@ -1,25 +1,20 @@
 import React from "react";
-import { create } from "react-test-renderer";
 import { act, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
 import { OakMediaClipListAccordion } from "./OakMediaClipListAccordion";
 
-import { OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe(OakMediaClipListAccordion, () => {
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakMediaClipListAccordion initialOpen header="See more" id="see-more">
-          Here it is
-        </OakMediaClipListAccordion>
-      </OakThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <OakMediaClipListAccordion initialOpen header="See more" id="see-more">
+        Here it is
+      </OakMediaClipListAccordion>,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it("toggles open and closed", () => {

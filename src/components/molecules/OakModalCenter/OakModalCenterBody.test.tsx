@@ -1,12 +1,9 @@
-import { create } from "react-test-renderer";
 import React, { ReactNode } from "react";
 import "@testing-library/jest-dom";
 
 import { OakModalCenterBody } from ".";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { oakDefaultTheme } from "@/styles";
-import { OakThemeProvider } from "@/components/atoms";
 
 jest.mock("react-dom", () => {
   return {
@@ -17,15 +14,13 @@ jest.mock("react-dom", () => {
 
 describe(OakModalCenterBody, () => {
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakModalCenterBody title="Modal Title" iconName="content-guidance">
-          Modal content
-        </OakModalCenterBody>
-      </OakThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <OakModalCenterBody title="Modal Title" iconName="content-guidance">
+        Modal content
+      </OakModalCenterBody>,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it("shows the child content", () => {

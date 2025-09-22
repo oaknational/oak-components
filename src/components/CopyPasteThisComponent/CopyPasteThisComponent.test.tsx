@@ -1,6 +1,5 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 
 import { CopyPasteThisComponent } from "./CopyPasteThisComponent";
 
@@ -15,9 +14,9 @@ describe("CopyPasteThisComponent", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
+    const { container } = renderWithTheme(
       <CopyPasteThisComponent>Click Me</CopyPasteThisComponent>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    );
+    expect(container).toMatchSnapshot();
   });
 });

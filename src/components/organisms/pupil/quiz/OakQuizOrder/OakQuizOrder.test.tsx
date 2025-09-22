@@ -1,11 +1,9 @@
-import { act, create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
+import { act } from "react-test-renderer";
 import React from "react";
 import { DndContext, DndContextProps, UniqueIdentifier } from "@dnd-kit/core";
 
 import { OakQuizOrder } from "./OakQuizOrder";
 
-import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { injectDndContext } from "@/components/atoms/InternalDndContext/InternalDndContext";
 
@@ -32,13 +30,11 @@ describe(OakQuizOrder, () => {
   ];
 
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakQuizOrder initialItems={initialItems} />
-      </ThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <OakQuizOrder initialItems={initialItems} />,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it("allows items to be reordered", async () => {

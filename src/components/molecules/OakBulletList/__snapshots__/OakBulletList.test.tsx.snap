@@ -5,46 +5,48 @@ exports[`OakBulletList matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-<span
-  className="c0"
-  data-testid="test"
->
+<div>
   <span
-    className="c0"
+    class="c0"
+    data-testid="test"
   >
     <span
-      className="c0"
+      class="c0"
     >
-      first
+      <span
+        class="c0"
+      >
+        first
+      </span>
+    </span>
+    <span
+      class="c0"
+    >
+      <span
+        class="c0"
+      >
+         • 
+      </span>
+      <span
+        class="c0"
+      >
+        second
+      </span>
+    </span>
+    <span
+      class="c0"
+    >
+      <span
+        class="c0"
+      >
+         • 
+      </span>
+      <span
+        class="c0"
+      >
+        third
+      </span>
     </span>
   </span>
-  <span
-    className="c0"
-  >
-    <span
-      className="c0"
-    >
-       • 
-    </span>
-    <span
-      className="c0"
-    >
-      second
-    </span>
-  </span>
-  <span
-    className="c0"
-  >
-    <span
-      className="c0"
-    >
-       • 
-    </span>
-    <span
-      className="c0"
-    >
-      third
-    </span>
-  </span>
-</span>
+</div>
 `;

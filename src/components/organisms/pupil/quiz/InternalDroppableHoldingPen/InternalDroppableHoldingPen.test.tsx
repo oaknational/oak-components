@@ -1,19 +1,16 @@
-import { ThemeProvider } from "styled-components";
-import { create } from "react-test-renderer";
 import React from "react";
 
 import { InternalDroppableHoldingPen } from "./InternalDroppableHoldingPen";
 
-import { oakDefaultTheme } from "@/styles";
+import renderWithTheme from "@/test-helpers/renderWithTheme";
+import { installMockResizeObserver } from "@/test-helpers";
+
+installMockResizeObserver();
 
 describe("InternalDroppableHoldingPen", () => {
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <InternalDroppableHoldingPen />
-      </ThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(<InternalDroppableHoldingPen />);
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

@@ -1,13 +1,10 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 import { screen } from "@testing-library/react";
 
 import { OakUnitListOptionalityItem } from "./OakUnitListOptionalityItem";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
 
 describe("OakUnitListOptionalityItem", () => {
   it("renders", () => {
@@ -25,20 +22,17 @@ describe("OakUnitListOptionalityItem", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakUnitListOptionalityItem
-          index={1}
-          yearTitle={""}
-          optionalityUnits={[]}
-          nullTitle={""}
-          firstItemRef={undefined}
-        />
-        ,
-      </OakThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <OakUnitListOptionalityItem
+        index={1}
+        yearTitle={""}
+        optionalityUnits={[]}
+        nullTitle={""}
+        firstItemRef={undefined}
+      />,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it("renders the number of optional units", () => {

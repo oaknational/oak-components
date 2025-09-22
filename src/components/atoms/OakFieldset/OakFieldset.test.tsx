@@ -1,6 +1,5 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 
 import { OakFieldset } from "./OakFieldset";
 
@@ -13,7 +12,7 @@ describe("OakFieldset", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(<OakFieldset />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(<OakFieldset />);
+    expect(container).toMatchSnapshot();
   });
 });

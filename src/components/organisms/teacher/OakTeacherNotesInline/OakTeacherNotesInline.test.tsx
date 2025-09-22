@@ -1,12 +1,9 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 
 import { OakTeacherNotesInline } from "./OakTeacherNotesInline";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { oakDefaultTheme } from "@/styles";
-import { OakThemeProvider } from "@/components/atoms";
 
 describe("OakTeacherNotesInline", () => {
   it("renders", () => {
@@ -23,11 +20,7 @@ describe("OakTeacherNotesInline", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakTeacherNotesInline />
-      </OakThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(<OakTeacherNotesInline />);
+    expect(container).toMatchSnapshot();
   });
 });

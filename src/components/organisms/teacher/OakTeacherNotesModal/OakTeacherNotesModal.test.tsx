@@ -1,13 +1,10 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { screen, fireEvent } from "@testing-library/react";
-import { create } from "react-test-renderer";
 
 import { OakTeacherNotesModal } from "./OakTeacherNotesModal";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
 
 describe("OakTeacherNotesModal", () => {
   const defaultProps = {
@@ -27,12 +24,10 @@ describe("OakTeacherNotesModal", () => {
   };
 
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakTeacherNotesModal {...defaultProps} />
-      </OakThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakTeacherNotesModal {...defaultProps} />,
+    );
+    expect(container).toMatchSnapshot();
   });
 
   it("renders correctly when open", () => {

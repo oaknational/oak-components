@@ -1,13 +1,10 @@
 import "@testing-library/jest-dom";
 import React from "react";
-import { create } from "react-test-renderer";
 import { act } from "@testing-library/react";
 
 import { OakCaptionCard } from "./OakCaptionCard";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
 
 describe("CaptionCard", () => {
   it("renders a caption card", () => {
@@ -31,26 +28,23 @@ describe("CaptionCard", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakCaptionCard
-          captionId={"CAP-TEST-01234"}
-          videoTitle={"This is a test video title"}
-          lessonUid={"LESS-TEST-01234"}
-          videoType={"lesson"}
-          lastUpdated={"2023-01-01"}
-          lastEdited={"2023-01-01"}
-          checked={false}
-          highlighted={false}
-          onCheckChanged={() => {}}
-          disabled={false}
-          editHref={`#}`}
-          lessonHref={`#`}
-        />
-        ,
-      </OakThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakCaptionCard
+        captionId={"CAP-TEST-01234"}
+        videoTitle={"This is a test video title"}
+        lessonUid={"LESS-TEST-01234"}
+        videoType={"lesson"}
+        lastUpdated={"2023-01-01"}
+        lastEdited={"2023-01-01"}
+        checked={false}
+        highlighted={false}
+        onCheckChanged={() => {}}
+        disabled={false}
+        editHref={`#}`}
+        lessonHref={`#`}
+      />,
+    );
+    expect(container).toMatchSnapshot();
   });
 
   it("does not include the last edited time if one is not provided", () => {

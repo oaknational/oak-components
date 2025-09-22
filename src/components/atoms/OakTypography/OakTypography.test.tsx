@@ -1,13 +1,14 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
-import { create } from "react-test-renderer";
 
 // TODO: resolve these once typography is implemented
 // import { FontVariant, FONT_VARIANTS } from "../../styles/utils/typography";
 // import { REM_DP } from "../../styles/utils/getRemUnits";
 
 import { OakTypography } from "./OakTypography";
+
+import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 // import { renderWithTheme } from "@/test-helpers/renderWithTheme";
 
@@ -18,8 +19,8 @@ describe("OakTypography", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(<OakTypography />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(<OakTypography />);
+    expect(container).toMatchSnapshot();
   });
   //   TODO: Implement once typography is implemented
   //     test.each(Object.entries(FONT_VARIANTS))(

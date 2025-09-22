@@ -1,9 +1,10 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
-import { create } from "react-test-renderer";
 
 import { OakIcon, generateOakIconURL, isValidIconName } from "./OakIcon";
+
+import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("OakIcon", () => {
   it("renders", () => {
@@ -14,8 +15,8 @@ describe("OakIcon", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(<OakIcon iconName="home" />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(<OakIcon iconName="home" />);
+    expect(container).toMatchSnapshot();
   });
 
   it("defaults to 32px width and height", () => {

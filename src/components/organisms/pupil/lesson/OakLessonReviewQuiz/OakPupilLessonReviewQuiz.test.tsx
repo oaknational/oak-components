@@ -1,28 +1,22 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 
 import { OakLessonReviewQuiz } from "./OakPupilLessonReviewQuiz";
 
-import { OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe(OakLessonReviewQuiz, () => {
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakLessonReviewQuiz
-          lessonSectionName="exit-quiz"
-          completed={false}
-          numQuestions={0}
-          grade={0}
-        />
-        ,
-      </OakThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <OakLessonReviewQuiz
+        lessonSectionName="exit-quiz"
+        completed={false}
+        numQuestions={0}
+        grade={0}
+      />,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it("renders copy for each lesson section that has not been completed", () => {

@@ -132,32 +132,31 @@ exports[`OakSecondaryButtonAsRadio matches snapshot 1`] = `
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-<div
-  className="c0 c1"
->
+<div>
   <div
-    className="c2 grey-shadow"
-  />
-  <div
-    className="c2 yellow-shadow"
-  />
-  <button
-    aria-checked={false}
-    className="c3 c4 internal-button"
-    onClick={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    role="radio"
+    class="c0 c1"
   >
     <div
-      className="c5 c6"
+      class="c2 grey-shadow"
+    />
+    <div
+      class="c2 yellow-shadow"
+    />
+    <button
+      aria-checked="false"
+      class="c3 c4 internal-button"
+      role="radio"
     >
-      <span
-        className="c7"
+      <div
+        class="c5 c6"
       >
-        Display Value
-      </span>
-    </div>
-  </button>
+        <span
+          class="c7"
+        >
+          Display Value
+        </span>
+      </div>
+    </button>
+  </div>
 </div>
 `;

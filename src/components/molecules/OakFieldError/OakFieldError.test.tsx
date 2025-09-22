@@ -1,9 +1,10 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
-import { create } from "react-test-renderer";
 
 import { OakFieldError } from "./OakFieldError";
+
+import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("OakFieldError", () => {
   it("renders", () => {
@@ -14,8 +15,8 @@ describe("OakFieldError", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(<OakFieldError />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(<OakFieldError />);
+    expect(container).toMatchSnapshot();
   });
 
   it("renders nothing when there's no children", () => {

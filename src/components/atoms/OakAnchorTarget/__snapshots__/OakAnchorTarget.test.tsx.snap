@@ -6,7 +6,9 @@ exports[`OakAnchorTarget matches snapshot 1`] = `
   top: 0;
 }
 
-<span
-  className="c0"
-/>
+<div>
+  <span
+    class="c0"
+  />
+</div>
 `;

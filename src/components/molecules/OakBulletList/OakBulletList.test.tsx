@@ -1,6 +1,5 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 
 import { OakBulletList } from "./OakBulletList";
 
@@ -19,13 +18,13 @@ describe("OakBulletList", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
+    const { container } = renderWithTheme(
       <OakBulletList
         data-testid="test"
         listItems={["first", "second", "third"]}
       />,
-    ).toJSON();
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

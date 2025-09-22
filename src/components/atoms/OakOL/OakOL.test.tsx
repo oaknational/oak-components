@@ -1,6 +1,5 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 
 import { OakOL } from "./OakOL";
 
@@ -13,7 +12,7 @@ describe("Component OakOL", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(<OakOL />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(<OakOL />);
+    expect(container).toMatchSnapshot();
   });
 });

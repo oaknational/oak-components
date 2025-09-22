@@ -42,11 +42,13 @@ exports[`OakPupilJourneyLayout matches snapshot 1`] = `
   }
 }
 
-<div
-  className="c0 c1 c2"
->
-  <p>
-    Hello World
-  </p>
+<div>
+  <div
+    class="c0 c1 c2"
+  >
+    <p>
+      Hello World
+    </p>
+  </div>
 </div>
 `;

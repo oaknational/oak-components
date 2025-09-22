@@ -1,13 +1,10 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 import { fireEvent } from "@testing-library/react";
 
 import { OakMediaClip } from "./OakMediaClip";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { OakThemeProvider } from "@/components/atoms/OakThemeProvider";
-import { oakDefaultTheme } from "@/styles";
 
 describe("OakMediaClip", () => {
   const defaultProps = {
@@ -21,19 +18,15 @@ describe("OakMediaClip", () => {
   };
 
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakMediaClip {...defaultProps} data-testid="test" />,
-      </OakThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakMediaClip {...defaultProps} data-testid="test" />,
+    );
+    expect(container).toMatchSnapshot();
   });
 
   it("calls onClick when clicked", () => {
     const { getByRole } = renderWithTheme(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakMediaClip {...defaultProps} data-testid="test" />,
-      </OakThemeProvider>,
+      <OakMediaClip {...defaultProps} data-testid="test" />,
     );
     fireEvent.click(getByRole("button"));
     expect(defaultProps.onClick).toHaveBeenCalled();

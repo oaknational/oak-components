@@ -73,76 +73,63 @@ exports[`OakDragAndDropInstructions matches snapshot 1`] = `
   line-height: calc(1.5rem + 0.5rem);
 }
 
-<div
-  className="c0 c1"
->
+<div>
   <div
-    className="c0 c2"
+    class="c0 c1"
   >
     <div
-      className="c3"
+      class="c0 c2"
     >
-      <img
-        alt=""
-        className="c4"
-        data-nimg="fill"
-        decoding="async"
-        loading="lazy"
-        onError={[Function]}
-        onLoad={[Function]}
-        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/hoddjsgpzkszgvnmn91q.svg"
-        style={
-          {
-            "bottom": 0,
-            "color": "transparent",
-            "height": "100%",
-            "left": 0,
-            "objectFit": undefined,
-            "objectPosition": undefined,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-            "width": "100%",
-          }
-        }
-      />
-    </div>
-  </div>
-  <div
-    className="c5 c6"
-  >
-    Click and drag answers to change the order, or select using
-     
-    <kbd
-      className="c7"
-    >
-      <span
-        aria-hidden="true"
+      <div
+        class="c3"
       >
-        ↹
-      </span>
-       Tab
-    </kbd>
-     
-    then move by pressing 
-    <kbd
-      className="c7"
+        <img
+          alt=""
+          class="c4"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/hoddjsgpzkszgvnmn91q.svg"
+          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+        />
+      </div>
+    </div>
+    <div
+      class="c5 c6"
     >
-      Space
-    </kbd>
-     and the 
-    <kbd
-      className="c7"
-    >
-      ↑
-    </kbd>
-     
-    <kbd
-      className="c7"
-    >
-      ↓
-    </kbd>
-     arrows on your keyboard.
+      Click and drag answers to change the order, or select using
+       
+      <kbd
+        class="c7"
+      >
+        <span
+          aria-hidden="true"
+        >
+          ↹
+        </span>
+         Tab
+      </kbd>
+       
+      then move by pressing 
+      <kbd
+        class="c7"
+      >
+        Space
+      </kbd>
+       and the 
+      <kbd
+        class="c7"
+      >
+        ↑
+      </kbd>
+       
+      <kbd
+        class="c7"
+      >
+        ↓
+      </kbd>
+       arrows on your keyboard.
+    </div>
   </div>
 </div>
 `;

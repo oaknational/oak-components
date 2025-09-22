@@ -140,38 +140,37 @@ exports[`OakButtonAsRadioGroup matches snapshot 1`] = `
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-<div
-  aria-label="test"
-  className="c0 c1"
-  role="radiogroup"
->
+<div>
   <div
-    className="c2 c3"
+    aria-label="test"
+    class="c0 c1"
+    role="radiogroup"
   >
     <div
-      className="c4 grey-shadow"
-    />
-    <div
-      className="c4 yellow-shadow"
-    />
-    <button
-      aria-checked={false}
-      className="c5 c6 internal-button"
-      onClick={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      role="radio"
+      class="c2 c3"
     >
       <div
-        className="c0 c7"
+        class="c4 grey-shadow"
+      />
+      <div
+        class="c4 yellow-shadow"
+      />
+      <button
+        aria-checked="false"
+        class="c5 c6 internal-button"
+        role="radio"
       >
-        <span
-          className="c8"
+        <div
+          class="c0 c7"
         >
-          Display Value
-        </span>
-      </div>
-    </button>
+          <span
+            class="c8"
+          >
+            Display Value
+          </span>
+        </div>
+      </button>
+    </div>
   </div>
 </div>
 `;

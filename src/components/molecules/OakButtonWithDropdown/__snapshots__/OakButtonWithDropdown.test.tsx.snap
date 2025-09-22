@@ -182,78 +182,61 @@ exports[`OakButtonWithDropdown matches snapshot 1`] = `
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-<section
-  className="c0"
->
-  <div
-    className="c1 c2"
+<div>
+  <section
+    class="c0"
   >
     <div
-      className="c1 c3"
+      class="c1 c2"
     >
       <div
-        className="c4 c5"
+        class="c1 c3"
       >
         <div
-          className="c6 grey-shadow"
-        />
-        <div
-          className="c6 yellow-shadow"
-        />
-        <button
-          aria-expanded={false}
-          aria-haspopup="menu"
-          aria-label="Actions"
-          className="c7 c8 internal-button"
-          disabled={false}
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
+          class="c4 c5"
         >
           <div
-            className="c1 c9"
+            class="c6 grey-shadow"
+          />
+          <div
+            class="c6 yellow-shadow"
+          />
+          <button
+            aria-expanded="false"
+            aria-haspopup="menu"
+            aria-label="Actions"
+            class="c7 c8 internal-button"
           >
-            <span
-              className="c10"
-            >
-              <div
-                className="c1 c11"
-              >
-                Actions
-              </div>
-            </span>
             <div
-              className="c12"
+              class="c1 c9"
             >
-              <img
-                alt=""
-                className="c13"
-                data-nimg="fill"
-                decoding="async"
-                loading="lazy"
-                onError={[Function]}
-                onLoad={[Function]}
-                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
-                style={
-                  {
-                    "bottom": 0,
-                    "color": "transparent",
-                    "height": "100%",
-                    "left": 0,
-                    "objectFit": undefined,
-                    "objectPosition": undefined,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                    "width": "100%",
-                  }
-                }
-              />
+              <span
+                class="c10"
+              >
+                <div
+                  class="c1 c11"
+                >
+                  Actions
+                </div>
+              </span>
+              <div
+                class="c12"
+              >
+                <img
+                  alt=""
+                  class="c13"
+                  data-nimg="fill"
+                  decoding="async"
+                  loading="lazy"
+                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+                  style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                />
+              </div>
             </div>
-          </div>
-        </button>
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>
 `;

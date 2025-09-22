@@ -1,12 +1,10 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { act, create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
+import { act } from "react-test-renderer";
 
 import { OakPupilJourneyUnitsFilter } from "./OakPupilJourneyUnitsFilter";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { oakDefaultTheme } from "@/styles";
 
 const menuItems = [
   { displayText: "All", value: "all" },
@@ -29,18 +27,16 @@ describe("PupilJourneyUnitsFilter", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakPupilJourneyUnitsFilter
-          menuItems={menuItems}
-          selected={"all"}
-          onSelected={() => null}
-          data-testid="test"
-          onSkipCallback={() => null}
-        />
-      </ThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakPupilJourneyUnitsFilter
+        menuItems={menuItems}
+        selected={"all"}
+        onSelected={() => null}
+        data-testid="test"
+        onSkipCallback={() => null}
+      />,
+    );
+    expect(container).toMatchSnapshot();
   });
   it("renders 4 buttons with the correct text", () => {
     const { getAllByText } = renderWithTheme(

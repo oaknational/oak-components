@@ -5,7 +5,9 @@ exports[`P matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-<p
-  className="c0"
-/>
+<div>
+  <p
+    class="c0"
+  />
+</div>
 `;

@@ -1,9 +1,10 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
-import { create } from "react-test-renderer";
 
 import { OakForm } from "./OakForm";
+
+import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("Component OakBox", () => {
   it("renders", () => {
@@ -12,7 +13,7 @@ describe("Component OakBox", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(<OakForm />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(<OakForm />);
+    expect(container).toMatchSnapshot();
   });
 });

@@ -1,6 +1,5 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 
 import {
   InternalAccordionButton,
@@ -29,7 +28,7 @@ describe("InternalAccordion", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
+    const { container } = renderWithTheme(
       <AccordionProvider isInitialOpen={true}>
         <OakFlex id={"internal-accordion"} data-testid="test">
           <InternalAccordionButton id={"internal-accordion"}>
@@ -40,7 +39,7 @@ describe("InternalAccordion", () => {
           </InternalAccordionContent>
         </OakFlex>
       </AccordionProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    );
+    expect(container).toMatchSnapshot();
   });
 });

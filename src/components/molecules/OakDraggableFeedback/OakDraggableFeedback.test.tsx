@@ -1,22 +1,17 @@
-import { create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
 import React from "react";
 import "@testing-library/jest-dom";
 
 import { OakDraggableFeedback } from "./OakDraggableFeedback";
 
-import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe(OakDraggableFeedback, () => {
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakDraggableFeedback feedback="correct">Elephant</OakDraggableFeedback>
-      </ThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <OakDraggableFeedback feedback="correct">Elephant</OakDraggableFeedback>,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it("applies an appropriate alt text for the icon", () => {

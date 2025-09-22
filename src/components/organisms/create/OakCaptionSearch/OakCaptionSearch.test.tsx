@@ -1,13 +1,10 @@
 import React from "react";
-import { create } from "react-test-renderer";
 import "@testing-library/jest-dom";
 import { fireEvent } from "@testing-library/react";
-import { ThemeProvider } from "styled-components";
 
 import { OakCaptionSearch } from "./OakCaptionSearch";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { oakDefaultTheme } from "@/styles";
 
 describe("OakCaptionSearch", () => {
   it("should render", () => {
@@ -16,12 +13,8 @@ describe("OakCaptionSearch", () => {
   });
 
   it("should match snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakCaptionSearch />
-      </ThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(<OakCaptionSearch />);
+    expect(container).toMatchSnapshot();
   });
 
   it("should handle search submission", () => {

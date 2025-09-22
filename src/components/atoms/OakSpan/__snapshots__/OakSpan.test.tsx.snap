@@ -5,7 +5,9 @@ exports[`OakSpan matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-<span
-  className="c0"
-/>
+<div>
+  <span
+    class="c0"
+  />
+</div>
 `;

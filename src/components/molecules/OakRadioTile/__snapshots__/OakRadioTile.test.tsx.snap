@@ -63,29 +63,26 @@ exports[`OakRadioTile matches snapshot 1`] = `
   cursor: pointer;
 }
 
-<div
-  className="c0"
->
-  <label
-    className="c1 c2"
-    htmlFor="id"
+<div>
+  <div
+    class="c0"
   >
-    <input
-      checked={false}
-      className="c3"
-      id="id"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      tabIndex={0}
-      type="radio"
-      value="id"
-    />
-    <div
-      className="c4 c5"
-    />
-    ID
-  </label>
+    <label
+      class="c1 c2"
+      for="id"
+    >
+      <input
+        class="c3"
+        id="id"
+        tabindex="0"
+        type="radio"
+        value="id"
+      />
+      <div
+        class="c4 c5"
+      />
+      ID
+    </label>
+  </div>
 </div>
 `;

@@ -1,6 +1,5 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 import { render } from "@testing-library/react";
 
 import { OakHeading, OakHeadingTag } from "./OakHeading";
@@ -22,8 +21,8 @@ describe("Heading", () => {
     expect(getByTestId("test")).toBeInTheDocument();
   });
   it("matches snapshot", () => {
-    const tree = create(<OakHeading tag={"h1"} />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(<OakHeading tag={"h1"} />);
+    expect(container).toMatchSnapshot();
   });
   test.each([
     ["h1", 1],

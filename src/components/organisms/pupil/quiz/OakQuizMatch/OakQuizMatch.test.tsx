@@ -1,7 +1,6 @@
 import assert from "assert";
 
-import { act, create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
+import { act } from "react-test-renderer";
 import React from "react";
 import {
   DndContext,
@@ -21,7 +20,6 @@ import {
 
 import { announcements, OakQuizMatch } from "./OakQuizMatch";
 
-import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { injectDndContext } from "@/components/atoms/InternalDndContext/InternalDndContext";
 import { installMockResizeObserver } from "@/test-helpers";
@@ -60,13 +58,11 @@ describe(OakQuizMatch, () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakQuizMatch initialOptions={options} initialSlots={slots} />
-      </ThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <OakQuizMatch initialOptions={options} initialSlots={slots} />,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it("allows an option to be dropped into a slot", async () => {

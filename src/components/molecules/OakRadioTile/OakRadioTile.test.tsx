@@ -1,14 +1,11 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import { OakRadioTile, isTileItem } from "./OakRadioTile";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { oakDefaultTheme } from "@/styles";
 
 describe("isTileItem", () => {
   it("guards type correctly", () => {
@@ -58,17 +55,15 @@ describe("OakRadioTile", () => {
     expect(screen.getByTestId("radio-tile-checked")).toBeInTheDocument();
   });
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakRadioTile
-          data-testid="test"
-          isChecked={false}
-          tileItem={{ id: "id", label: "ID" }}
-          id="id"
-          onChange={jest.fn}
-        />
-      </ThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakRadioTile
+        data-testid="test"
+        isChecked={false}
+        tileItem={{ id: "id", label: "ID" }}
+        id="id"
+        onChange={jest.fn}
+      />,
+    );
+    expect(container).toMatchSnapshot();
   });
 });
