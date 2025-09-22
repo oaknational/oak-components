@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 import "@testing-library/jest-dom";
 import { act, fireEvent } from "@testing-library/react";
 
-import { OakModal } from "./OakModal";
+import { OakInformativeModal } from "./OakInformativeModal";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { installMockIntersectionObserver } from "@/test-helpers";
@@ -16,23 +16,28 @@ jest.mock("react-dom", () => {
   };
 });
 
-describe(OakModal, () => {
+describe(OakInformativeModal, () => {
   // FIXME
   // it("does not render until mounted on the client", () => {
-  //   const { container } = renderWithTheme(
-  //     <OakModal isOpen onClose={() => { }} footerSlot="Modal footer">
-  //       Modal content
-  //     </OakModal>,
+  //   const tree = create(
+  //     <OakThemeProvider theme={oakDefaultTheme}>
+  //       <OakInformativeModal
+  //         isOpen
+  //         onClose={() => {}}
+  //         footerSlot="Modal footer"
+  //       >
+  //         Modal content
+  //       </OakInformativeModal>
+  //     </OakThemeProvider>,
   //   );
-
   //   expect(container).toBeNull();
   // });
 
   it("matches snapshot when mounted", async () => {
     const result = renderWithTheme(
-      <OakModal isOpen onClose={() => {}}>
+      <OakInformativeModal isOpen onClose={() => {}}>
         Modal content
-      </OakModal>,
+      </OakInformativeModal>,
     );
 
     expect(result.container).toMatchSnapshot();
@@ -42,9 +47,9 @@ describe(OakModal, () => {
     const onCloseSpy = jest.fn();
 
     const { getByLabelText } = renderWithTheme(
-      <OakModal isOpen onClose={onCloseSpy}>
+      <OakInformativeModal isOpen onClose={onCloseSpy}>
         Modal content
-      </OakModal>,
+      </OakInformativeModal>,
     );
 
     act(() => {
@@ -56,9 +61,9 @@ describe(OakModal, () => {
 
   it("gives the first focusable element in the modal body focus", () => {
     const { getByRole } = renderWithTheme(
-      <OakModal isOpen onClose={() => {}}>
+      <OakInformativeModal isOpen onClose={() => {}}>
         <input type="text" />
-      </OakModal>,
+      </OakInformativeModal>,
     );
 
     expect(getByRole("textbox")).toHaveFocus();
