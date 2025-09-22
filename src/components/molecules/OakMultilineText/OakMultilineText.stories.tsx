@@ -28,7 +28,7 @@ const meta: Meta<typeof OakMultilineText> = {
         "placeholder",
         "invalid",
         "invalidText",
-        "label"
+        "label",
       ],
     },
     backgrounds: {
@@ -50,6 +50,6 @@ export const Default: Story = {
     allowCarriageReturn: true,
     charLimit: 200,
     invalid: false,
-    label: "test"
+    label: "test",
   },
 };
