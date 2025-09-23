@@ -18,11 +18,10 @@ export type OakMultilineTextProps = {
 };
 
 type StyledOakTextAreaProps = {
-    isError?: boolean;
+  isError?: boolean;
 } & OakTextAreaProps;
 
 const StyledOakTextArea = styled(OakTextArea)<StyledOakTextAreaProps>`
-
   background: ${parseColor("bg-primary")};
   color: ${parseColor("text-subdued")};
   border-radius: ${parseBorderRadius("border-radius-m")};
@@ -34,15 +33,14 @@ const StyledOakTextArea = styled(OakTextArea)<StyledOakTextAreaProps>`
   border-color: ${parseColor("border-neutral-lighter")};
 
   &:focus-visible {
-    
     border-color: ${(props) =>
       props.isError ? parseColor("red") : parseColor("border-primary")};
     color: ${parseColor("text-primary")};
   }
 
   &:hover {
-      background: ${parseColor("bg-neutral")};
-      border-color: ${parseColor("border-neutral")};
+    background: ${parseColor("bg-neutral")};
+    border-color: ${parseColor("border-neutral")};
   }
 `;
 
@@ -79,11 +77,10 @@ const UnstyledComponent = ({
         $height={["all-spacing-19", "all-spacing-13", "all-spacing-10"]}
       ></StyledOakTextArea>
       {showCharCount && (
-        <OakSpan $textAlign={"right"}> 
+        <OakSpan $textAlign={"right"}>
           {charCount}/{$charLimit}
         </OakSpan>
       )}
-      
     </OakFlex>
   );
 };
