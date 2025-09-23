@@ -79,7 +79,6 @@ export const OakRadioGroup = (props: OakRadioGroupProps) => {
   return (
     <OakFlex
       as="fieldset"
-      role="radiogroup"
       $gap={$gap}
       $flexDirection={"column"}
       $borderStyle={"none"}
