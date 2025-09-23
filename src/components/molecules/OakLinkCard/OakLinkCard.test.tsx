@@ -1,4 +1,3 @@
-import { create } from "react-test-renderer";
 import React from "react";
 import "@testing-library/jest-dom";
 import { screen } from "@testing-library/react";
@@ -8,13 +7,7 @@ import {
   OakLinkCardProps,
 } from "@/components/molecules/OakLinkCard";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { oakDefaultTheme } from "@/styles";
-import {
-  OakThemeProvider,
-  OakFlex,
-  OakHeading,
-  OakP,
-} from "@/components/atoms";
+import { OakFlex, OakHeading, OakP } from "@/components/atoms";
 
 const testData = {
   headingText: "Test Heading",
@@ -40,13 +33,9 @@ describe("OakLinkCard", () => {
   };
 
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakLinkCard {...defaultProps} />
-      </OakThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(<OakLinkCard {...defaultProps} />);
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it("renders correctly with default props", () => {

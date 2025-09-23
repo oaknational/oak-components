@@ -1,14 +1,12 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import { OakInlineRegistrationBanner } from "./OakInlineRegistrationBanner";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { OakHeading, OakP, OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
+import { OakHeading, OakP } from "@/components/atoms";
 
 describe("OakInlineRegistrationBanner", () => {
   it("renders", () => {
@@ -25,16 +23,14 @@ describe("OakInlineRegistrationBanner", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakInlineRegistrationBanner
-          onSubmit={(email: string) => Promise.resolve(email)}
-          bodyText={<OakP>body text</OakP>}
-          headerText={<OakHeading tag="h1"> Full unit on the way!</OakHeading>}
-        ></OakInlineRegistrationBanner>
-      </OakThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakInlineRegistrationBanner
+        onSubmit={(email: string) => Promise.resolve(email)}
+        bodyText={<OakP>body text</OakP>}
+        headerText={<OakHeading tag="h1"> Full unit on the way!</OakHeading>}
+      ></OakInlineRegistrationBanner>,
+    );
+    expect(container).toMatchSnapshot();
   });
 
   it("shows an error message when no email is entered", async () => {

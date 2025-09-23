@@ -1,6 +1,5 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 
 import { OakCATQuestion } from "./OakCATQuestion";
 
@@ -26,7 +25,7 @@ describe("OakCATQuestion", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
+    const { container } = renderWithTheme(
       <OakThemeProvider theme={oakDefaultTheme}>
         <OakCATQuestion
           data-testid="test"
@@ -39,7 +38,7 @@ describe("OakCATQuestion", () => {
           answersSection={<div>Answers Section</div>}
         />
       </OakThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    );
+    expect(container).toMatchSnapshot();
   });
 });

@@ -20,11 +20,13 @@ exports[`OakAspectRatio matches snapshot 1`] = `
   top: 0;
 }
 
-<div
-  className="c0"
->
+<div>
   <div
-    className="c1"
-  />
+    class="c0"
+  >
+    <div
+      class="c1"
+    />
+  </div>
 </div>
 `;

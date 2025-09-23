@@ -1,11 +1,8 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 
 import { OakLessonTopNav, OakLessonTopNavProps } from "./OakLessonTopNav";
 
-import { OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
 import { OakBackLink } from "@/components/molecules";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
@@ -18,13 +15,9 @@ const baseProps: OakLessonTopNavProps = {
 
 describe(OakLessonTopNav, () => {
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakLessonTopNav {...baseProps} />
-      </OakThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(<OakLessonTopNav {...baseProps} />);
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it("renders the back link", async () => {

@@ -1,12 +1,9 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
 
 import { OakPrimaryNav, OakPrimaryNavProps } from "./OakPrimaryNav";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { oakDefaultTheme } from "@/styles";
 
 const navItems = [
   {
@@ -44,12 +41,8 @@ describe("OakPrimaryNav", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakPrimaryNav {...defaultArgs} />
-      </ThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(<OakPrimaryNav {...defaultArgs} />);
+    expect(container).toMatchSnapshot();
   });
 
   it("renders correct amount of nav items", () => {

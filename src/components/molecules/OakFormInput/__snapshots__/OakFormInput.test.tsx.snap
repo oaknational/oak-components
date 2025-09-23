@@ -107,18 +107,17 @@ exports[`OakFormInput should match snapshot 1`] = `
   }
 }
 
-<div
-  className="c0 c1 c2"
-  onClick={[Function]}
->
-  <input
-    aria-invalid={false}
-    className="c3"
-    onChange={[Function]}
-    onFocus={[Function]}
-    placeholder="Test input"
-    type="text"
-    value="Sample text"
-  />
+<div>
+  <div
+    class="c0 c1 c2"
+  >
+    <input
+      aria-invalid="false"
+      class="c3"
+      placeholder="Test input"
+      type="text"
+      value="Sample text"
+    />
+  </div>
 </div>
 `;

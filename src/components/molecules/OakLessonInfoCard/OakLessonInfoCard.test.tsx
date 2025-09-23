@@ -1,9 +1,10 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
-import { create } from "react-test-renderer";
 
 import { OakCardHeader, OakLessonInfoCard } from "./OakLessonInfoCard";
+
+import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("OakLessonInfoCard component test", () => {
   it("renders", () => {
@@ -19,14 +20,14 @@ describe("OakLessonInfoCard component test", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
+    const { container } = renderWithTheme(
       <OakLessonInfoCard>
         <OakCardHeader tag="h1" iconName="question-mark">
           Header title
         </OakCardHeader>
         Children of the compoent goes here.
       </OakLessonInfoCard>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    );
+    expect(container).toMatchSnapshot();
   });
 });

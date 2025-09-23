@@ -16,11 +16,13 @@ exports[`InternalCheckBoxLabel matches snapshot 1`] = `
   align-items: center;
 }
 
-<label
-  className="c0 c1"
-  data-testid="test-1"
-  htmlFor="checkbox-1"
->
-  Value
-</label>
+<div>
+  <label
+    class="c0 c1"
+    data-testid="test-1"
+    for="checkbox-1"
+  >
+    Value
+  </label>
+</div>
 `;

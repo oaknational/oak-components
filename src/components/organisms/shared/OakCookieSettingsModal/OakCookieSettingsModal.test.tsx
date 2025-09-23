@@ -1,5 +1,4 @@
 import React from "react";
-import { create } from "react-test-renderer";
 import { fireEvent, act } from "@testing-library/react";
 
 import {
@@ -7,8 +6,6 @@ import {
   OakCookieSettingsModalProps,
 } from "./OakCookieSettingsModal";
 
-import { OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { installMockIntersectionObserver } from "@/test-helpers";
 
@@ -16,13 +13,11 @@ installMockIntersectionObserver();
 
 describe(OakCookieSettingsModal, () => {
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakCookieSettingsModal {...createProps()} />
-      </OakThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <OakCookieSettingsModal {...createProps()} />,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it.each([

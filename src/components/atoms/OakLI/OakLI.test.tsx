@@ -1,9 +1,10 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
-import { create } from "react-test-renderer";
 
 import { OakLI } from "./OakLI";
+
+import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("Component OakLI", () => {
   it("renders", () => {
@@ -12,7 +13,7 @@ describe("Component OakLI", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(<OakLI />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(<OakLI />);
+    expect(container).toMatchSnapshot();
   });
 });

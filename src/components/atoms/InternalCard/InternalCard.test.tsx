@@ -1,9 +1,10 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
-import { create } from "react-test-renderer";
 
 import { InternalCard } from "./InternalCard";
+
+import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("Component OakBox", () => {
   it("renders", () => {
@@ -12,8 +13,8 @@ describe("Component OakBox", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(<InternalCard />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(<InternalCard />);
+    expect(container).toMatchSnapshot();
   });
 
   test("has default padding 24", async () => {

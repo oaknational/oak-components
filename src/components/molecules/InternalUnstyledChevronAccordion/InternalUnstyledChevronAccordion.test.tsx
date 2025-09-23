@@ -1,5 +1,4 @@
 import React from "react";
-import { create } from "react-test-renderer";
 import { act, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
@@ -11,7 +10,7 @@ import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe(InternalUnstyledChevronAccordion, () => {
   it("matches snapshot", () => {
-    const tree = create(
+    const { container } = renderWithTheme(
       <OakThemeProvider theme={oakDefaultTheme}>
         <InternalUnstyledChevronAccordion
           initialOpen
@@ -20,9 +19,9 @@ describe(InternalUnstyledChevronAccordion, () => {
           id="see-more"
         />
       </OakThemeProvider>,
-    ).toJSON();
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it("toggles open and closed", () => {

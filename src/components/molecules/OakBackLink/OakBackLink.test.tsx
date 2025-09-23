@@ -1,11 +1,8 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
 
 import { OakBackLink } from "./OakBackLink";
 
-import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe(OakBackLink, () => {
@@ -16,13 +13,9 @@ describe(OakBackLink, () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakBackLink />
-      </ThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(<OakBackLink />);
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it("is polymorphic", () => {

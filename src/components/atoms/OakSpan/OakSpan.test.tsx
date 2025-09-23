@@ -1,9 +1,10 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
-import { create } from "react-test-renderer";
 
 import { OakSpan } from "./OakSpan";
+
+import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 // import renderWithTheme from "@/test-helpers/renderWithTheme";
 
@@ -14,8 +15,8 @@ describe("OakSpan", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(<OakSpan />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(<OakSpan />);
+    expect(container).toMatchSnapshot();
   });
 
   //   test.skip("should apply font-family from props", () => {

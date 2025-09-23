@@ -47,9 +47,11 @@ exports[`OakjauntyAngleLabel matches snapshot 1`] = `
   }
 }
 
-<div
-  className="c0"
->
-  Select one answer
+<div>
+  <div
+    class="c0"
+  >
+    Select one answer
+  </div>
 </div>
 `;

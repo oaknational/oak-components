@@ -89,24 +89,26 @@ exports[`OakPupilJourneyList matches snapshot 1`] = `
   }
 }
 
-<div
-  className="c0 c1"
->
+<div>
   <div
-    className="c2 c3"
+    class="c0 c1"
   >
     <div
-      className="c4 c5"
+      class="c2 c3"
     >
-      <div>
-        Option Title Slot Here
-      </div>
       <div
-        className="c6 c7"
+        class="c4 c5"
       >
-        <p>
-          Hello World
-        </p>
+        <div>
+          Option Title Slot Here
+        </div>
+        <div
+          class="c6 c7"
+        >
+          <p>
+            Hello World
+          </p>
+        </div>
       </div>
     </div>
   </div>

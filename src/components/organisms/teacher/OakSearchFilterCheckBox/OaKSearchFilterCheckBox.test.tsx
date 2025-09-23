@@ -1,13 +1,10 @@
 import React, { createRef } from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 import { fireEvent } from "@testing-library/react";
 
 import { OakSearchFilterCheckBox } from "./OakSearchFilterCheckBox";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
 
 describe("OakSearchFilterCheckBox", () => {
   it("renders a checkbox", () => {
@@ -24,18 +21,15 @@ describe("OakSearchFilterCheckBox", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakSearchFilterCheckBox
-          id="checkbox-1"
-          value="Option 1"
-          icon={"subject-history"}
-          displayValue="Option 1"
-        />
-        ,
-      </OakThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakSearchFilterCheckBox
+        id="checkbox-1"
+        value="Option 1"
+        icon={"subject-history"}
+        displayValue="Option 1"
+      />,
+    );
+    expect(container).toMatchSnapshot();
   });
 
   it("has a label", () => {

@@ -1,13 +1,10 @@
 import React, { createRef } from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
-import { fireEvent, render } from "@testing-library/react";
+import { fireEvent } from "@testing-library/react";
 
 import { OakQuizCheckBox } from "./OakQuizCheckBox";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
 
 describe("OakQuizCheckBox", () => {
   it("renders a checkbox", () => {
@@ -18,12 +15,10 @@ describe("OakQuizCheckBox", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakQuizCheckBox id="checkbox-1" value="Option 1" />,
-      </OakThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakQuizCheckBox id="checkbox-1" value="Option 1" />,
+    );
+    expect(container).toMatchSnapshot();
   });
 
   it("has a label", () => {
@@ -90,43 +85,31 @@ describe("OakQuizCheckBox", () => {
   });
 
   it("renders a tick when is correct and is selected", async () => {
-    const { getByAltText, getByRole, rerender } = render(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakQuizCheckBox id="checkbox-1" value="Option 1" />
-      </OakThemeProvider>,
+    const { getByAltText, getByRole, rerender } = renderWithTheme(
+      <OakQuizCheckBox id="checkbox-1" value="Option 1" />,
     );
 
     await getByRole("checkbox").click();
 
     rerender(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakQuizCheckBox
-          id="checkbox-1"
-          value="Option 1"
-          feedback={"correct"}
-        />
-      </OakThemeProvider>,
+      <OakQuizCheckBox id="checkbox-1" value="Option 1" feedback={"correct"} />,
     );
     expect(getByAltText("Correct")).toBeInTheDocument();
   });
 
   it("renders a cross feedback is incorrect and is selected", async () => {
-    const { getByAltText, getByRole, rerender } = render(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakQuizCheckBox id="checkbox-1" value="Option 1" />
-      </OakThemeProvider>,
+    const { getByAltText, getByRole, rerender } = renderWithTheme(
+      <OakQuizCheckBox id="checkbox-1" value="Option 1" />,
     );
 
     await getByRole("checkbox").click();
 
     rerender(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakQuizCheckBox
-          id="checkbox-1"
-          value="Option 1"
-          feedback={"incorrect"}
-        />
-      </OakThemeProvider>,
+      <OakQuizCheckBox
+        id="checkbox-1"
+        value="Option 1"
+        feedback={"incorrect"}
+      />,
     );
     expect(getByAltText("Incorrect")).toBeInTheDocument();
   });

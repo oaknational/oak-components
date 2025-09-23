@@ -1,6 +1,5 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 
 import { OakHandDrawnFocusUnderline } from "./OakHandDrawnFocusUnderline";
 
@@ -15,7 +14,7 @@ describe("OakHandDrawnFocusUnderline", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(<OakHandDrawnFocusUnderline />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(<OakHandDrawnFocusUnderline />);
+    expect(container).toMatchSnapshot();
   });
 });

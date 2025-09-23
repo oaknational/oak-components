@@ -1,11 +1,8 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 
 import { OakMediaClipStackListItem } from "./OakMediaClipStackListItem";
 
-import { OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("OakMediaClipStackListItem", () => {
@@ -25,12 +22,10 @@ describe("OakMediaClipStackListItem", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakMediaClipStackListItem {...props} />
-      </OakThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <OakMediaClipStackListItem {...props} />,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakMediaClip matches snapshot 1`] = `
-[
-  .c1 {
+.c1 {
   position: relative;
   border-radius: 0.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
@@ -90,6 +89,11 @@ exports[`OakMediaClip matches snapshot 1`] = `
 }
 
 .c13 {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHBhdGggZmlsbD0iIzIyMiIgZD0iTTI4Ljc3OSAxOS4xNzZhMjcuMTkxIDI3LjE5MSAwIDAgMC0zLjggMS42IDE2LjcgMTYuNyAwIDAgMC03LjEgOC40YzAgLjEtLjEuMi0uMS4zLS43IDIuNC0uNiAyIDEuMyAyLjMgMS45LjMgMSAuNSAxIDEuMy0uMSA4LjggNC4xIDE1LjEgMTEuNCAxOS42YTEuNSAxLjUgMCAwIDAgMS43LjJjNS43LTIuNiA5LjMtNyAxMC4zLTEzLjJhMSAxIDAgMCAxIDEtMWwzLS4yYy44IDAgMS4zLjIgMS4yIDEuMmExNy45IDE3LjkgMCAwIDEtMy4yIDkuMiAyMy43IDIzLjcgMCAwIDEtMTAuOSA5LjEgNS40MDEgNS40MDEgMCAwIDEtNC41LS4yIDI2LjI5OCAyNi4yOTggMCAwIDEtOC41LTYuNiAyNS45IDI1LjkgMCAwIDEtNi40LTE0LjRjMC0uNi0uMi0uNy0uOC0uOC0yLjUtLjQtMi41LS4xLTIuMy0yLjlhMTkuMyAxOS4zIDAgMCAxIDEwLjgtMTYuNiAzOC45OTkgMzguOTk5IDAgMCAxIDUuNy0yLjEgMi4xIDIuMSAwIDAgMCAuOS0xLjMgMTQuMSAxNC4xIDAgMCAxIDMuNS02LjNsLjMtLjNjMS45LTIgMi42LTIgNC4zLjJsLjQuNWMxLjEgMS4xIDEgMS41LS4xIDIuNmExMS45IDExLjkgMCAwIDAtMy4yIDQuNCAxNi45IDE2LjkgMCAwIDEgNy41IDIuM2M1LjcgMy41IDkuMiA4LjMgOS45IDE1IC4wMTYuOTAxLS4wMTcgMS44MDItLjEgMi43IDAgLjgtLjYgMS0xLjIgMS4yYTE2LjEgMTYuMSAwIDAgMS0xMS0uNyAxNy45MDEgMTcuOTAxIDAgMCAxLTEwLjktMTMuNiA5Ljc5NiA5Ljc5NiAwIDAgMS0uMS0xLjlabTE4LjEgMTIuMmMuNC01LjUtNi45LTEyLjYtMTMtMTIuMS41IDYuNSA3LjYgMTIuOCAxMyAxMi4xWiIgb3BhY2l0eT0iLjEiLz48L3N2Zz4=);
+  background-color: #e7f6f5;
+  background-size: 4rem;
+  background-position: center;
+  background-repeat: no-repeat;
   object-fit: contain;
 }
 
@@ -239,82 +243,65 @@ exports[`OakMediaClip matches snapshot 1`] = `
   color: #808080;
 }
 
-<li
-    className="c0"
+<div>
+  <li
+    class="c0"
   >
     <div
-      className="c1 c2 c3"
+      class="c1 c2 c3"
     >
       <div
-        className="c4 grey-shadow"
+        class="c4 grey-shadow"
       />
       <div
-        className="c4 yellow-shadow"
+        class="c4 yellow-shadow"
       />
       <button
         aria-label="Video - Test Clip - Cycle 1, length: 10:57"
-        className="c5 c6 internal-button"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        tabIndex={0}
+        class="c5 c6 internal-button"
+        tabindex="0"
       >
         <div
-          className="c7 c8"
+          class="c7 c8"
         >
           <div
-            className="c9 c10 c11"
+            class="c9 c10 c11"
           >
             <div
-              className="c12 "
+              class="c12 "
             >
               <img
                 alt="Test Image"
-                className="c13"
+                class="c13"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"
-                onError={[Function]}
-                onLoad={[Function]}
                 sizes="100vw"
-                src="/_next/image?url=%2Ftest-image.jpg&w=3840&q=75"
-                srcSet="/_next/image?url=%2Ftest-image.jpg&w=640&q=75 640w, /_next/image?url=%2Ftest-image.jpg&w=750&q=75 750w, /_next/image?url=%2Ftest-image.jpg&w=828&q=75 828w, /_next/image?url=%2Ftest-image.jpg&w=1080&q=75 1080w, /_next/image?url=%2Ftest-image.jpg&w=1200&q=75 1200w, /_next/image?url=%2Ftest-image.jpg&w=1920&q=75 1920w, /_next/image?url=%2Ftest-image.jpg&w=2048&q=75 2048w, /_next/image?url=%2Ftest-image.jpg&w=3840&q=75 3840w"
-                style={
-                  {
-                    "bottom": 0,
-                    "color": "transparent",
-                    "height": "100%",
-                    "left": 0,
-                    "objectFit": undefined,
-                    "objectPosition": undefined,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                    "width": "100%",
-                  }
-                }
+                src="http://localhost/_next/image?url=%2Ftest-image.jpg&w=3840&q=75"
+                srcset="/_next/image?url=%2Ftest-image.jpg&w=640&q=75 640w, /_next/image?url=%2Ftest-image.jpg&w=750&q=75 750w, /_next/image?url=%2Ftest-image.jpg&w=828&q=75 828w, /_next/image?url=%2Ftest-image.jpg&w=1080&q=75 1080w, /_next/image?url=%2Ftest-image.jpg&w=1200&q=75 1200w, /_next/image?url=%2Ftest-image.jpg&w=1920&q=75 1920w, /_next/image?url=%2Ftest-image.jpg&w=2048&q=75 2048w, /_next/image?url=%2Ftest-image.jpg&w=3840&q=75 3840w"
+                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
               />
             </div>
             <div
-              className="c14 c15"
+              class="c14 c15"
             >
               <label
-                className="c16"
+                class="c16"
               >
                 10:57
               </label>
             </div>
           </div>
           <div
-            className="c7 c17 c18"
+            class="c7 c17 c18"
           >
             <h4
-              className="c19"
+              class="c19"
             >
               Test Clip
             </h4>
             <p
-              className="c20"
+              class="c20"
             >
               Cycle 1
             </p>
@@ -322,7 +309,6 @@ exports[`OakMediaClip matches snapshot 1`] = `
         </div>
       </button>
     </div>
-  </li>,
-  ",",
-]
+  </li>
+</div>
 `;

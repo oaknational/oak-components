@@ -1,12 +1,9 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 import { fireEvent } from "@testing-library/react";
 
 import { OakQuizHint } from "./OakQuizHint";
 
-import { OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import {
   installMockIntersectionObserver,
@@ -18,29 +15,23 @@ installMockIntersectionObserver();
 
 describe(OakQuizHint, () => {
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakQuizHint
-          hint="The answer is right in front of your eyes"
-          id="quiz-hint"
-        />
-        ,
-      </OakThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <OakQuizHint
+        hint="The answer is right in front of your eyes"
+        id="quiz-hint"
+      />,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
   it("calls hintToggled when hint button is clicked", () => {
     const hintToggled = jest.fn();
     const { getByRole } = renderWithTheme(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakQuizHint
-          hint="The answer is right in front of your eyes"
-          id="quiz-hint"
-          hintToggled={hintToggled}
-        />
-        ,
-      </OakThemeProvider>,
+      <OakQuizHint
+        hint="The answer is right in front of your eyes"
+        id="quiz-hint"
+        hintToggled={hintToggled}
+      />,
     );
 
     fireEvent.click(getByRole("button"));

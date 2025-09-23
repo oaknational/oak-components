@@ -1,6 +1,5 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 
 import {
   OakPupilJourneyLayout,
@@ -10,8 +9,6 @@ import {
 } from "./OakPupilJourneyLayout";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
 
 describe("OakPupilJourneyLayout", () => {
   it("should render successfully", () => {
@@ -24,14 +21,12 @@ describe("OakPupilJourneyLayout", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakPupilJourneyLayout sectionName={"tier-listing"}>
-          <p>Hello World</p>
-        </OakPupilJourneyLayout>
-      </OakThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakPupilJourneyLayout sectionName={"tier-listing"}>
+        <p>Hello World</p>
+      </OakPupilJourneyLayout>,
+    );
+    expect(container).toMatchSnapshot();
   });
 });
 

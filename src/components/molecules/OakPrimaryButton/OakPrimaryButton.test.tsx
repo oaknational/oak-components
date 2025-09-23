@@ -1,12 +1,9 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
 
 import { OakPrimaryButton, OakPrimaryButtonProps } from "./OakPrimaryButton";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { oakDefaultTheme } from "@/styles";
 
 const defaultArgs: OakPrimaryButtonProps = {
   iconName: "arrow-right",
@@ -32,12 +29,10 @@ describe("OakPrimaryButton", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakPrimaryButton {...defaultArgs}>Click Me</OakPrimaryButton>
-      </ThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakPrimaryButton {...defaultArgs}>Click Me</OakPrimaryButton>,
+    );
+    expect(container).toMatchSnapshot();
   });
 
   it("renders the chidren", () => {

@@ -1,21 +1,16 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 
 import { OakSmallSecondaryToggleButton } from "./OakSmallSecondaryToggleButton";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
 
 describe("OakSmallSecondaryToggleButton component", () => {
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakSmallSecondaryToggleButton toggleOn={true} />
-      </OakThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakSmallSecondaryToggleButton toggleOn={true} />,
+    );
+    expect(container).toMatchSnapshot();
   });
 
   it("calls onClick when clicked", () => {

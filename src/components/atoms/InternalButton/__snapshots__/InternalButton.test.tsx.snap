@@ -19,12 +19,11 @@ exports[`InternalButton matches snapshot 1`] = `
   cursor: default;
 }
 
-<button
-  className="c0"
-  onClick={[Function]}
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
->
-  Click Me
-</button>
+<div>
+  <button
+    class="c0"
+  >
+    Click Me
+  </button>
+</div>
 `;

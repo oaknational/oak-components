@@ -1,22 +1,17 @@
-import { create } from "react-test-renderer";
 import React from "react";
 import "@testing-library/jest-dom";
 
 import { InternalTooltip } from "./InternalTooltip";
 
-import { OakThemeProvider } from "@/components/atoms/OakThemeProvider";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { oakDefaultTheme } from "@/styles";
 
 describe(InternalTooltip, () => {
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <InternalTooltip id={"tooltip"}>Hello there</InternalTooltip>
-      </OakThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <InternalTooltip id={"tooltip"}>Hello there</InternalTooltip>,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it("renders children", () => {

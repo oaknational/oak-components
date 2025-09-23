@@ -5,7 +5,9 @@ exports[`Component OakBox matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-<form
-  className="c0"
-/>
+<div>
+  <form
+    class="c0"
+  />
+</div>
 `;

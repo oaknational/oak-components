@@ -1,23 +1,18 @@
 import React from "react";
-import { create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
 import { act, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
 import { OakCookieBanner, OakCookieBannerProps } from "./OakCookieBanner";
 
-import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe(OakCookieBanner, () => {
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakCookieBanner {...createProps()} />
-      </ThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <OakCookieBanner {...createProps()} />,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it('is correctly positioned when "isFixed" is true', () => {

@@ -27,11 +27,13 @@ exports[`OakGrid matches snapshot 1`] = `
   width: 100%;
 }
 
-<div
-  className="c0 c1"
->
+<div>
   <div
-    className="c0 c2 c3"
-  />
+    class="c0 c1"
+  >
+    <div
+      class="c0 c2 c3"
+    />
+  </div>
 </div>
 `;

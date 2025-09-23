@@ -187,78 +187,61 @@ exports[`OakSmallSecondaryButtonWithDropdown matches snapshot 1`] = `
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-<section
-  className="c0"
->
-  <div
-    className="c1 c2"
+<div>
+  <section
+    class="c0"
   >
     <div
-      className="c3 c4"
+      class="c1 c2"
     >
       <div
-        className="c5 c6"
+        class="c3 c4"
       >
         <div
-          className="c7 grey-shadow"
-        />
-        <div
-          className="c7 yellow-shadow"
-        />
-        <button
-          aria-expanded={false}
-          aria-haspopup="menu"
-          aria-label="Menu Trigger"
-          className="c8 c9 internal-button"
-          disabled={false}
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
+          class="c5 c6"
         >
           <div
-            className="c1 c10"
+            class="c7 grey-shadow"
+          />
+          <div
+            class="c7 yellow-shadow"
+          />
+          <button
+            aria-expanded="false"
+            aria-haspopup="menu"
+            aria-label="Menu Trigger"
+            class="c8 c9 internal-button"
           >
-            <span
-              className="c11"
-            >
-              <div
-                className="c1 c12"
-              >
-                Menu Trigger
-              </div>
-            </span>
             <div
-              className="c13"
+              class="c1 c10"
             >
-              <img
-                alt=""
-                className="c14"
-                data-nimg="fill"
-                decoding="async"
-                loading="lazy"
-                onError={[Function]}
-                onLoad={[Function]}
-                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
-                style={
-                  {
-                    "bottom": 0,
-                    "color": "transparent",
-                    "height": "100%",
-                    "left": 0,
-                    "objectFit": undefined,
-                    "objectPosition": undefined,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                    "width": "100%",
-                  }
-                }
-              />
+              <span
+                class="c11"
+              >
+                <div
+                  class="c1 c12"
+                >
+                  Menu Trigger
+                </div>
+              </span>
+              <div
+                class="c13"
+              >
+                <img
+                  alt=""
+                  class="c14"
+                  data-nimg="fill"
+                  decoding="async"
+                  loading="lazy"
+                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+                  style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                />
+              </div>
             </div>
-          </div>
-        </button>
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>
 `;

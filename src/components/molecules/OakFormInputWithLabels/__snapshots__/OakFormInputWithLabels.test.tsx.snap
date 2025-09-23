@@ -148,36 +148,32 @@ exports[`OakFormInputWithLabels should match snapshot 1`] = `
   }
 }
 
-<div
-  className="c0 c1"
->
+<div>
   <div
-    className="c2 c3"
+    class="c0 c1"
   >
-    <label
-      className="c4"
-      htmlFor="input-sample-input"
+    <div
+      class="c2 c3"
     >
-      Sample Input
-    </label>
-  </div>
-  <div
-    className="c5 c6 c7"
-    onClick={[Function]}
-  >
-    <input
-      aria-invalid={false}
-      className="c8"
-      disabled={false}
-      id="input-sample-input"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
-      placeholder="Enter text"
-      required={false}
-      type="text"
-      value="Sample text"
-    />
+      <label
+        class="c4"
+        for="input-sample-input"
+      >
+        Sample Input
+      </label>
+    </div>
+    <div
+      class="c5 c6 c7"
+    >
+      <input
+        aria-invalid="false"
+        class="c8"
+        id="input-sample-input"
+        placeholder="Enter text"
+        type="text"
+        value="Sample text"
+      />
+    </div>
   </div>
 </div>
 `;

@@ -16,9 +16,11 @@ exports[`CopyPasteThisComponent matches snapshot 1`] = `
   width: 1.5rem;
 }
 
-<div
-  className="c0 c1 c2 "
->
-  Click Me
+<div>
+  <div
+    class="c0 c1 c2 "
+  >
+    Click Me
+  </div>
 </div>
 `;

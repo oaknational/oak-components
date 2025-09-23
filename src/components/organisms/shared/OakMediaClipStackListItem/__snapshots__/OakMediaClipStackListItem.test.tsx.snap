@@ -40,12 +40,12 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c10 {
+.c11 {
   margin-bottom: 0rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c12 {
+.c13 {
   color: #575757;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
@@ -57,7 +57,16 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
+.c10 {
+  object-fit: contain;
+}
+
 .c8 {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHBhdGggZmlsbD0iIzIyMiIgZD0iTTI4Ljc3OSAxOS4xNzZhMjcuMTkxIDI3LjE5MSAwIDAgMC0zLjggMS42IDE2LjcgMTYuNyAwIDAgMC03LjEgOC40YzAgLjEtLjEuMi0uMS4zLS43IDIuNC0uNiAyIDEuMyAyLjMgMS45LjMgMSAuNSAxIDEuMy0uMSA4LjggNC4xIDE1LjEgMTEuNCAxOS42YTEuNSAxLjUgMCAwIDAgMS43LjJjNS43LTIuNiA5LjMtNyAxMC4zLTEzLjJhMSAxIDAgMCAxIDEtMWwzLS4yYy44IDAgMS4zLjIgMS4yIDEuMmExNy45IDE3LjkgMCAwIDEtMy4yIDkuMiAyMy43IDIzLjcgMCAwIDEtMTAuOSA5LjEgNS40MDEgNS40MDEgMCAwIDEtNC41LS4yIDI2LjI5OCAyNi4yOTggMCAwIDEtOC41LTYuNiAyNS45IDI1LjkgMCAwIDEtNi40LTE0LjRjMC0uNi0uMi0uNy0uOC0uOC0yLjUtLjQtMi41LS4xLTIuMy0yLjlhMTkuMyAxOS4zIDAgMCAxIDEwLjgtMTYuNiAzOC45OTkgMzguOTk5IDAgMCAxIDUuNy0yLjEgMi4xIDIuMSAwIDAgMCAuOS0xLjMgMTQuMSAxNC4xIDAgMCAxIDMuNS02LjNsLjMtLjNjMS45LTIgMi42LTIgNC4zLjJsLjQuNWMxLjEgMS4xIDEgMS41LS4xIDIuNmExMS45IDExLjkgMCAwIDAtMy4yIDQuNCAxNi45IDE2LjkgMCAwIDEgNy41IDIuM2M1LjcgMy41IDkuMiA4LjMgOS45IDE1IC4wMTYuOTAxLS4wMTcgMS44MDItLjEgMi43IDAgLjgtLjYgMS0xLjIgMS4yYTE2LjEgMTYuMSAwIDAgMS0xMS0uNyAxNy45MDEgMTcuOTAxIDAgMCAxLTEwLjktMTMuNiA5Ljc5NiA5Ljc5NiAwIDAgMS0uMS0xLjlabTE4LjEgMTIuMmMuNC01LjUtNi45LTEyLjYtMTMtMTIuMS41IDYuNSA3LjYgMTIuOCAxMyAxMi4xWiIgb3BhY2l0eT0iLjEiLz48L3N2Zz4=);
+  background-color: #e7f6f5;
+  background-size: 4rem;
+  background-position: center;
+  background-repeat: no-repeat;
   object-fit: contain;
 }
 
@@ -76,7 +85,7 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
   gap: 0.5rem;
 }
 
-.c11 {
+.c12 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -88,7 +97,7 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
   color: #222222;
 }
 
-.c13 {
+.c14 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
@@ -201,13 +210,13 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c10 {
+  .c11 {
     margin-bottom: 0rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c10 {
+  .c11 {
     margin-bottom: 1rem;
   }
 }
@@ -270,92 +279,64 @@ exports[`OakMediaClipStackListItem matches snapshot 1`] = `
   }
 }
 
-<a
-  className="c0 c1 c2"
-  href=""
->
-  <div
-    className="c3"
+<div>
+  <a
+    class="c0 c1 c2"
+    href=""
   >
     <div
-      className="c4 c5"
+      class="c3"
     >
       <div
-        className="c6 c7"
+        class="c4 c5"
       >
-        <img
-          alt="alt text for the image"
-          className="c8"
-          data-nimg="fill"
-          decoding="async"
-          loading="lazy"
-          onError={[Function]}
-          onLoad={[Function]}
-          sizes="100vw"
-          src="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336494%2Fsamples%2Flandscapes%2Fnature-mountains.jpg&w=3840&q=75"
-          srcSet="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336494%2Fsamples%2Flandscapes%2Fnature-mountains.jpg&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336494%2Fsamples%2Flandscapes%2Fnature-mountains.jpg&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336494%2Fsamples%2Flandscapes%2Fnature-mountains.jpg&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336494%2Fsamples%2Flandscapes%2Fnature-mountains.jpg&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336494%2Fsamples%2Flandscapes%2Fnature-mountains.jpg&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336494%2Fsamples%2Flandscapes%2Fnature-mountains.jpg&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336494%2Fsamples%2Flandscapes%2Fnature-mountains.jpg&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336494%2Fsamples%2Flandscapes%2Fnature-mountains.jpg&w=3840&q=75 3840w"
-          style={
-            {
-              "bottom": 0,
-              "color": "transparent",
-              "height": "100%",
-              "left": 0,
-              "objectFit": undefined,
-              "objectPosition": undefined,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-              "width": "100%",
-            }
-          }
-        />
-      </div>
-      <div
-        className="c9"
-        id="play-icon"
-      >
-        <img
-          alt=""
-          className="c8"
-          data-nimg="fill"
-          decoding="async"
-          loading="lazy"
-          onError={[Function]}
-          onLoad={[Function]}
-          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1732099511/icons/g1xehzuhjnb0xeftmdno.svg"
-          style={
-            {
-              "bottom": 0,
-              "color": "transparent",
-              "height": "100%",
-              "left": 0,
-              "objectFit": undefined,
-              "objectPosition": undefined,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-              "width": "100%",
-            }
-          }
-        />
+        <div
+          class="c6 c7"
+        >
+          <img
+            alt="alt text for the image"
+            class="c8"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            sizes="100vw"
+            src="http://localhost/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336494%2Fsamples%2Flandscapes%2Fnature-mountains.jpg&w=3840&q=75"
+            srcset="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336494%2Fsamples%2Flandscapes%2Fnature-mountains.jpg&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336494%2Fsamples%2Flandscapes%2Fnature-mountains.jpg&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336494%2Fsamples%2Flandscapes%2Fnature-mountains.jpg&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336494%2Fsamples%2Flandscapes%2Fnature-mountains.jpg&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336494%2Fsamples%2Flandscapes%2Fnature-mountains.jpg&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336494%2Fsamples%2Flandscapes%2Fnature-mountains.jpg&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336494%2Fsamples%2Flandscapes%2Fnature-mountains.jpg&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336494%2Fsamples%2Flandscapes%2Fnature-mountains.jpg&w=3840&q=75 3840w"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+          />
+        </div>
+        <div
+          class="c9"
+          id="play-icon"
+        >
+          <img
+            alt=""
+            class="c10"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1732099511/icons/g1xehzuhjnb0xeftmdno.svg"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+          />
+        </div>
       </div>
     </div>
-  </div>
-  <div
-    className="c10"
-  >
-    <h3
-      className="c11"
-    >
-      Learning cycle 3 videos
-    </h3>
     <div
-      className="c12 c13"
+      class="c11"
     >
-      5
-       
-      clips
+      <h3
+        class="c12"
+      >
+        Learning cycle 3 videos
+      </h3>
+      <div
+        class="c13 c14"
+      >
+        5
+         
+        clips
+      </div>
     </div>
-  </div>
-</a>
+  </a>
+</div>
 `;

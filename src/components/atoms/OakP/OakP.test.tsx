@@ -1,6 +1,5 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 
 import { OakP } from "./OakP";
 
@@ -17,7 +16,7 @@ describe("P", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(<OakP />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(<OakP />);
+    expect(container).toMatchSnapshot();
   });
 });

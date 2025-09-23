@@ -1,25 +1,20 @@
 import React from "react";
-import { create } from "react-test-renderer";
 import { act, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
 import { InternalReviewAccordion } from "./InternalReviewAccordion";
 
-import { OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe(InternalReviewAccordion, () => {
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <InternalReviewAccordion initialOpen id="see-more">
-          Here it is
-        </InternalReviewAccordion>
-      </OakThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <InternalReviewAccordion initialOpen id="see-more">
+        Here it is
+      </InternalReviewAccordion>,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it("toggles open and closed", () => {

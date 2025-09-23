@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakVideoTranscript matches snapshot 1`] = `
-[
-  .c0 {
+.c0 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -40,6 +39,41 @@ exports[`OakVideoTranscript matches snapshot 1`] = `
 .c12 {
   display: block;
   font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c13 {
+  display: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c14 {
+  max-height: 60rem;
+  padding: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-top: 1rem;
+  color: #222222;
+  background: #e4e4e4;
+  border-radius: 0.375rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c16 {
+  overflow: auto;
+  width: 100%;
+  max-height: 100%;
+  padding-right: 1rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+  overflow: auto;
 }
 
 .c11 {
@@ -81,6 +115,13 @@ exports[`OakVideoTranscript matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .c9 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 700;
@@ -118,6 +159,22 @@ exports[`OakVideoTranscript matches snapshot 1`] = `
 .c6:disabled {
   pointer-events: none;
   cursor: default;
+}
+
+.c17::-webkit-scrollbar-thumb {
+  border-radius: 0.375rem;
+  background-color: #808080;
+}
+
+.c17::-webkit-scrollbar-track {
+  border-radius: 0.375rem;
+  background-color: #ffffff;
+}
+
+.c17::-webkit-scrollbar {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 0.375rem;
 }
 
 .c7 {
@@ -185,7 +242,9 @@ exports[`OakVideoTranscript matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-
+  .c14 {
+    margin-top: 2rem;
+  }
 }
 
 @media (min-width:750px) {
@@ -194,63 +253,46 @@ exports[`OakVideoTranscript matches snapshot 1`] = `
   }
 }
 
-<div
-    className="c0 c1"
+<div>
+  <div
+    class="c0 c1"
   >
     <div
-      className="c2"
+      class="c2"
     >
       <div
-        className="c3 c4"
+        class="c3 c4"
       >
         <div
-          className="c5 grey-shadow"
+          class="c5 grey-shadow"
         />
         <div
-          className="c5 yellow-shadow"
+          class="c5 yellow-shadow"
         />
         <button
           aria-controls="transcript-element"
-          aria-expanded={false}
-          className="c6 c7 internal-button"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
+          aria-expanded="false"
+          class="c6 c7 internal-button"
         >
           <div
-            className="c0 c8"
+            class="c0 c8"
           >
             <span
-              className="c9"
+              class="c9"
             >
               Show transcript
             </span>
             <div
-              className="c10"
+              class="c10"
             >
               <img
                 alt=""
-                className="c11"
+                class="c11"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"
-                onError={[Function]}
-                onLoad={[Function]}
                 src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
-                style={
-                  {
-                    "bottom": 0,
-                    "color": "transparent",
-                    "height": "100%",
-                    "left": 0,
-                    "objectFit": undefined,
-                    "objectPosition": undefined,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                    "width": "100%",
-                  }
-                }
+                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
               />
             </div>
           </div>
@@ -258,30 +300,27 @@ exports[`OakVideoTranscript matches snapshot 1`] = `
       </div>
     </div>
     <div
-      className="c12"
+      class="c12"
     >
       <div
-        className="c3 c4"
+        class="c3 c4"
       >
         <div
-          className="c5 grey-shadow"
+          class="c5 grey-shadow"
         />
         <div
-          className="c5 yellow-shadow"
+          class="c5 yellow-shadow"
         />
         <button
           aria-controls="transcript-element"
-          aria-expanded={false}
-          className="c6 c7 internal-button"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
+          aria-expanded="false"
+          class="c6 c7 internal-button"
         >
           <div
-            className="c0 c8"
+            class="c0 c8"
           >
             <span
-              className="c9"
+              class="c9"
             >
               Show transcript
             </span>
@@ -290,110 +329,34 @@ exports[`OakVideoTranscript matches snapshot 1`] = `
       </div>
     </div>
     <div
-      className="c0"
+      class="c0"
     >
       <p>
         copy link control
       </p>
     </div>
     <div
-      className="c0"
+      class="c0"
     >
       <p>
         sign language control
       </p>
     </div>
-  </div>,
-  .c0 {
-  display: none;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c1 {
-  max-height: 60rem;
-  padding: 0.75rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  margin-top: 1rem;
-  color: #222222;
-  background: #e4e4e4;
-  border-radius: 0.375rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 300;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
-  letter-spacing: -0.005rem;
-}
-
-.c3 {
-  overflow: auto;
-  width: 100%;
-  max-height: 100%;
-  padding-right: 1rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-  overflow: auto;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c4::-webkit-scrollbar-thumb {
-  border-radius: 0.375rem;
-  background-color: #808080;
-}
-
-.c4::-webkit-scrollbar-track {
-  border-radius: 0.375rem;
-  background-color: #ffffff;
-}
-
-.c4::-webkit-scrollbar {
-  width: 0.75rem;
-  height: 0.75rem;
-  border-radius: 0.375rem;
-}
-
-@media (min-width:750px) {
-
-}
-
-@media (min-width:750px) {
-
-}
-
-@media (min-width:750px) {
-  .c1 {
-    margin-top: 2rem;
-  }
-}
-
-@media (min-width:750px) {
-
-}
-
-<div
-    className="c0"
+  </div>
+  <div
+    class="c13"
     id="transcript-element"
   >
     <div
       aria-live="polite"
-      className="c1 c2"
+      class="c14 c15"
     >
       <div
-        className="c3 c4"
+        class="c16 c17"
       >
         Transcript goes here
       </div>
     </div>
-  </div>,
-]
+  </div>
+</div>
 `;

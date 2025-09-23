@@ -1,19 +1,15 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
 
 import { OakTagFunctional } from "./OakTagFunctional";
 
-import { oakDefaultTheme } from "@/styles";
+import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("OakTagFunctional", () => {
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakTagFunctional label="Select one answer" />
-      </ThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakTagFunctional label="Select one answer" />,
+    );
+    expect(container).toMatchSnapshot();
   });
 });

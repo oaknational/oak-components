@@ -12,7 +12,9 @@ exports[`Component OakBox matches snapshot 1`] = `
   display: flex;
 }
 
-<div
-  className="c0 c1"
-/>
+<div>
+  <div
+    class="c0 c1"
+  />
+</div>
 `;

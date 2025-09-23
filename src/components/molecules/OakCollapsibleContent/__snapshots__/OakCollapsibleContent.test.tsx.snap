@@ -48,16 +48,18 @@ exports[`OakCollapsibleContent matches snapshot 1`] = `
   border-radius: 0.375rem;
 }
 
-<div
-  className="c0"
->
+<div>
   <div
-    className="c1 c2"
+    class="c0"
   >
     <div
-      className="c3 c4"
+      class="c1 c2"
     >
-      Content goes here
+      <div
+        class="c3 c4"
+      >
+        Content goes here
+      </div>
     </div>
   </div>
 </div>

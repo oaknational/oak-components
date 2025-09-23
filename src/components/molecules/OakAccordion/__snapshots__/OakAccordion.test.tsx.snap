@@ -108,68 +108,49 @@ exports[`OakAccordion matches snapshot 1`] = `
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-<div
-  className="c0"
-  id="see-more"
->
-  <h3
-    className="c1 c2"
-  >
-    <button
-      aria-expanded={true}
-      className="c3 c4 c5  c6"
-      id="see-more"
-      onClick={[Function]}
-      type="button"
-    >
-      <div
-        className="c7"
-        style={
-          {
-            "transform": "rotate(180deg)",
-          }
-        }
-      >
-        <img
-          alt=""
-          className="c8"
-          data-nimg="fill"
-          decoding="async"
-          loading="lazy"
-          onError={[Function]}
-          onLoad={[Function]}
-          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
-          style={
-            {
-              "bottom": 0,
-              "color": "transparent",
-              "height": "100%",
-              "left": 0,
-              "objectFit": undefined,
-              "objectPosition": undefined,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-              "width": "100%",
-            }
-          }
-        />
-      </div>
-      See more
-    </button>
-    <div
-      className="c9 c2"
-    >
-      After
-    </div>
-  </h3>
+<div>
   <div
-    aria-labelledby="see-more"
-    className="c10"
-    hidden={false}
-    role="region"
+    class="c0"
+    id="see-more"
   >
-    Here it is
+    <h3
+      class="c1 c2"
+    >
+      <button
+        aria-expanded="true"
+        class="c3 c4 c5  c6"
+        id="see-more"
+        type="button"
+      >
+        <div
+          class="c7"
+          style="transform: rotate(180deg);"
+        >
+          <img
+            alt=""
+            class="c8"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+          />
+        </div>
+        See more
+      </button>
+      <div
+        class="c9 c2"
+      >
+        After
+      </div>
+    </h3>
+    <div
+      aria-labelledby="see-more"
+      class="c10"
+      role="region"
+    >
+      Here it is
+    </div>
   </div>
 </div>
 `;

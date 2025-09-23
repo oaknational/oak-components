@@ -28,7 +28,13 @@ exports[`Component OakOL matches snapshot 1`] = `
   content: counter(item) ".";
 }
 
-<ol
-  className="c0"
-/>
+.c0 a {
+  color: navy;
+}
+
+<div>
+  <ol
+    class="c0"
+  />
+</div>
 `;

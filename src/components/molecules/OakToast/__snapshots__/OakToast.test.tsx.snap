@@ -263,159 +263,98 @@ exports[`OakToast matches snapshot 1`] = `
   }
 }
 
-<div
-  className="c0 c1 c2"
-  data-testid="oak-toast"
->
+<div>
   <div
-    className="c3"
+    class="c0 c1 c2"
+    data-testid="oak-toast"
   >
     <div
-      className="c4 c5"
-    />
-    <div
-      className="c6"
-    >
-      <img
-        alt=""
-        className="c7"
-        data-nimg="fill"
-        decoding="async"
-        loading="lazy"
-        onError={[Function]}
-        onLoad={[Function]}
-        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895534/icons/Icon-Success_aiiprx.svg"
-        style={
-          {
-            "bottom": 0,
-            "color": "transparent",
-            "height": "100%",
-            "left": 0,
-            "objectFit": undefined,
-            "objectPosition": undefined,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-            "width": "100%",
-          }
-        }
-      />
-    </div>
-  </div>
-  <span>
-    This is a toast message
-  </span>
-  <div
-    className="c8 c9 c10"
-  >
-    <button
-      aria-label="Dismiss"
-      className="c11 c12"
-      onClick={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
+      class="c3"
     >
       <div
-        className="c13 c14"
+        class="c4 c5"
+      />
+      <div
+        class="c6"
       >
-        <div
-          className="c15 c16 icon-container"
-        >
-          <div
-            className="c3"
-          >
-            <div
-              className="c17 shadow"
-            >
-              <img
-                alt=""
-                className="c18"
-                data-nimg="fill"
-                decoding="async"
-                loading="lazy"
-                onError={[Function]}
-                onLoad={[Function]}
-                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
-                style={
-                  {
-                    "bottom": 0,
-                    "color": "transparent",
-                    "height": "100%",
-                    "left": 0,
-                    "objectFit": undefined,
-                    "objectPosition": undefined,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                    "width": "100%",
-                  }
-                }
-              />
-            </div>
-            <div
-              className="c19 highlight"
-            >
-              <img
-                alt=""
-                className="c20"
-                data-nimg="fill"
-                decoding="async"
-                loading="lazy"
-                onError={[Function]}
-                onLoad={[Function]}
-                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
-                style={
-                  {
-                    "bottom": 0,
-                    "color": "transparent",
-                    "height": "100%",
-                    "left": 0,
-                    "objectFit": undefined,
-                    "objectPosition": undefined,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                    "width": "100%",
-                  }
-                }
-              />
-            </div>
-            <div
-              className="c21"
-              data-icon-for="button"
-            >
-              <img
-                alt=""
-                className="c22"
-                data-nimg="fill"
-                decoding="async"
-                loading="lazy"
-                onError={[Function]}
-                onLoad={[Function]}
-                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
-                style={
-                  {
-                    "bottom": 0,
-                    "color": "transparent",
-                    "height": "100%",
-                    "left": 0,
-                    "objectFit": undefined,
-                    "objectPosition": undefined,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                    "width": "100%",
-                  }
-                }
-              />
-            </div>
-          </div>
-        </div>
-        <span
-          className="c23"
+        <img
+          alt=""
+          class="c7"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895534/icons/Icon-Success_aiiprx.svg"
+          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
         />
       </div>
-    </button>
+    </div>
+    <span>
+      This is a toast message
+    </span>
+    <div
+      class="c8 c9 c10"
+    >
+      <button
+        aria-label="Dismiss"
+        class="c11 c12"
+      >
+        <div
+          class="c13 c14"
+        >
+          <div
+            class="c15 c16 icon-container"
+          >
+            <div
+              class="c3"
+            >
+              <div
+                class="c17 shadow"
+              >
+                <img
+                  alt=""
+                  class="c18"
+                  data-nimg="fill"
+                  decoding="async"
+                  loading="lazy"
+                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
+                  style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                />
+              </div>
+              <div
+                class="c19 highlight"
+              >
+                <img
+                  alt=""
+                  class="c20"
+                  data-nimg="fill"
+                  decoding="async"
+                  loading="lazy"
+                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
+                  style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                />
+              </div>
+              <div
+                class="c21"
+                data-icon-for="button"
+              >
+                <img
+                  alt=""
+                  class="c22"
+                  data-nimg="fill"
+                  decoding="async"
+                  loading="lazy"
+                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
+                  style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                />
+              </div>
+            </div>
+          </div>
+          <span
+            class="c23"
+          />
+        </div>
+      </button>
+    </div>
   </div>
 </div>
 `;

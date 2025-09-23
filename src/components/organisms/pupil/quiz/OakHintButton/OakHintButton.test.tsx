@@ -1,12 +1,9 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
 
 import { OakHintButton } from "./OakHintButton";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { oakDefaultTheme } from "@/styles";
 
 describe("OakHintButton", () => {
   it("renders", () => {
@@ -16,15 +13,13 @@ describe("OakHintButton", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakHintButton
-          isOpen={false}
-          buttonProps={{ "aria-describedby": "hint-tooltip" }}
-        />
-      </ThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <OakHintButton
+        isOpen={false}
+        buttonProps={{ "aria-describedby": "hint-tooltip" }}
+      />,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

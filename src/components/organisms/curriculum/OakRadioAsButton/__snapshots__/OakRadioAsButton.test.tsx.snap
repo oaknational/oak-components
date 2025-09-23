@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakRadioAsButton matches snapshot 1`] = `
-[
-  .c0 {
+.c0 {
   position: relative;
   min-height: 2.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
@@ -160,61 +159,41 @@ exports[`OakRadioAsButton matches snapshot 1`] = `
   }
 }
 
-<div
-    className="c0 c1"
+<div>
+  <div
+    class="c0 c1"
   >
     <div
-      className="c2 c3 c4"
-      onClick={[Function]}
+      class="c2 c3 c4"
     >
       <input
-        checked={false}
-        className="c5 c6"
-        id=":r0:"
+        class="c5 c6"
+        id=":r1:"
         name="default"
-        onChange={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
         type="radio"
         value="history"
       />
       <div
-        className="c7 "
+        class="c7 "
       >
         <img
           alt=""
-          className="c8"
+          class="c8"
           data-nimg="fill"
           decoding="async"
           loading="lazy"
-          onError={[Function]}
-          onLoad={[Function]}
           src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1728568980/subject-icons/history.svg"
-          style={
-            {
-              "bottom": 0,
-              "color": "transparent",
-              "height": "100%",
-              "left": 0,
-              "objectFit": undefined,
-              "objectPosition": undefined,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-              "width": "100%",
-            }
-          }
+          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
         />
       </div>
       <label
-        className="c9 c10 c11 c12"
-        htmlFor=":r0:"
-        pointerEvents="none"
+        class="c9 c10 c11 c12"
+        for=":r1:"
+        pointer-events="none"
       >
         History
       </label>
     </div>
-  </div>,
-  ",",
-]
+  </div>
+</div>
 `;

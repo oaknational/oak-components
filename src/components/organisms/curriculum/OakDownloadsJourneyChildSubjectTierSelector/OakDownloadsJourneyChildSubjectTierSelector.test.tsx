@@ -1,12 +1,9 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 import { clearAllMocks } from "@storybook/test";
-import { ThemeProvider } from "styled-components";
 
 import { OakDownloadsJourneyChildSubjectTierSelector } from "./OakDownloadsJourneyChildSubjectTierSelector";
 
-import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 const tiers = [
@@ -96,16 +93,14 @@ describe("OakDownloadsJourneyChildSubjectTierSelector", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakDownloadsJourneyChildSubjectTierSelector
-          tiers={tiers}
-          childSubjects={childSubjects}
-          getTierSubjectValues={getTierSubjectValues}
-          data-testid="test"
-        />
-      </ThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakDownloadsJourneyChildSubjectTierSelector
+        tiers={tiers}
+        childSubjects={childSubjects}
+        getTierSubjectValues={getTierSubjectValues}
+        data-testid="test"
+      />,
+    );
+    expect(container).toMatchSnapshot();
   });
 });

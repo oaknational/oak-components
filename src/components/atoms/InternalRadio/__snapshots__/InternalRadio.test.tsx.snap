@@ -28,13 +28,13 @@ exports[`InternalRadio matches snapshot 1`] = `
   }
 }
 
-<input
-  className="c0"
-  id="radio-1"
-  name="internal-radio-group"
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
-  type="radio"
-  value="Option 1"
-/>
+<div>
+  <input
+    class="c0"
+    id="radio-1"
+    name="internal-radio-group"
+    type="radio"
+    value="Option 1"
+  />
+</div>
 `;

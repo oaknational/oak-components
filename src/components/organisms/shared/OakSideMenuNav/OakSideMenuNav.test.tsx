@@ -1,13 +1,10 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { screen } from "@testing-library/react";
-import { create } from "react-test-renderer";
 
 import { OakSideMenuNav } from "./OakSideMenuNav";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
 
 const baseProps = {
   heading: "Test Heading",
@@ -33,11 +30,7 @@ describe("OakSideMenuNav", () => {
     expect(heading).toBeInTheDocument();
   });
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakSideMenuNav {...baseProps} />,
-      </OakThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(<OakSideMenuNav {...baseProps} />);
+    expect(container).toMatchSnapshot();
   });
 });

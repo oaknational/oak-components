@@ -1,20 +1,16 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
 
 import { OakHandDrawnCard } from "./OakHandDrawnCard";
 
-import { oakDefaultTheme } from "@/styles";
+import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe(OakHandDrawnCard, () => {
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakHandDrawnCard>Content goes here</OakHandDrawnCard>
-      </ThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <OakHandDrawnCard>Content goes here</OakHandDrawnCard>,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

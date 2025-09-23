@@ -1,14 +1,11 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 import { fireEvent } from "@testing-library/react";
 
 import { OakPagination } from "./OakPagination";
 import { generatePageNumbers } from "./utils";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
 
 describe("OakPagination Component", () => {
   beforeEach(() => {
@@ -17,31 +14,26 @@ describe("OakPagination Component", () => {
 
   it("renders", () => {
     const { getByTestId } = renderWithTheme(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakPagination
-          paginationHref={""}
-          pageName={"test"}
-          currentPage={1}
-          totalPages={8}
-          onPageChange={() => {}}
-        />
-        ,
-      </OakThemeProvider>,
+      <OakPagination
+        paginationHref={""}
+        pageName={"test"}
+        currentPage={1}
+        totalPages={8}
+        onPageChange={() => {}}
+      />,
     );
     expect(getByTestId("pagination")).toBeInTheDocument();
   });
 
   it("should not render when no additional pages", () => {
     const { queryByTestId, container } = renderWithTheme(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakPagination
-          paginationHref={""}
-          pageName={"test"}
-          currentPage={1}
-          totalPages={1}
-          onPageChange={() => {}}
-        />
-      </OakThemeProvider>,
+      <OakPagination
+        paginationHref={""}
+        pageName={"test"}
+        currentPage={1}
+        totalPages={1}
+        onPageChange={() => {}}
+      />,
     );
     expect(queryByTestId("pagination")).not.toBeInTheDocument();
     expect(container.firstChild).toBeNull();
@@ -49,15 +41,13 @@ describe("OakPagination Component", () => {
 
   it("renders the correct number of pages", () => {
     const { getAllByTestId } = renderWithTheme(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakPagination
-          paginationHref={""}
-          onPageChange={() => {}}
-          pageName={"test"}
-          currentPage={1}
-          totalPages={7}
-        />
-      </OakThemeProvider>,
+      <OakPagination
+        paginationHref={""}
+        onPageChange={() => {}}
+        pageName={"test"}
+        currentPage={1}
+        totalPages={7}
+      />,
     );
 
     expect(getAllByTestId("page-number-component")).toHaveLength(7);
@@ -65,30 +55,26 @@ describe("OakPagination Component", () => {
 
   it("disables the backwards button when on the first page", () => {
     const { getByTestId } = renderWithTheme(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakPagination
-          paginationHref={""}
-          pageName={"test"}
-          currentPage={1}
-          onPageChange={() => {}}
-          totalPages={7}
-        />
-      </OakThemeProvider>,
+      <OakPagination
+        paginationHref={""}
+        pageName={"test"}
+        currentPage={1}
+        onPageChange={() => {}}
+        totalPages={7}
+      />,
     );
     expect(getByTestId("backwards-button")).toBeDisabled();
   });
 
   it("disables the backwards button when on the first page", () => {
     const { getByTestId } = renderWithTheme(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakPagination
-          paginationHref={""}
-          pageName={"test"}
-          currentPage={7}
-          onPageChange={() => {}}
-          totalPages={7}
-        />
-      </OakThemeProvider>,
+      <OakPagination
+        paginationHref={""}
+        pageName={"test"}
+        currentPage={7}
+        onPageChange={() => {}}
+        totalPages={7}
+      />,
     );
 
     const forwardsButton = getByTestId("forwards-button");
@@ -143,18 +129,16 @@ describe("OakPagination Component", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakPagination
-          paginationHref={""}
-          pageName={"test"}
-          currentPage={1}
-          totalPages={7}
-          onPageChange={() => {}}
-        />
-      </OakThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakPagination
+        paginationHref={""}
+        pageName={"test"}
+        currentPage={1}
+        totalPages={7}
+        onPageChange={() => {}}
+      />,
+    );
+    expect(container).toMatchSnapshot();
   });
 
   describe("generatePageNumbers", () => {

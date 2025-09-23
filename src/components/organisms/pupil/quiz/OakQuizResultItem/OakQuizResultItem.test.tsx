@@ -1,12 +1,9 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 
 import { OakQuizResultItem } from "./OakQuizResultItem";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
 
 describe("OakQuizResultItem", () => {
   beforeAll(() => {
@@ -26,12 +23,10 @@ describe("OakQuizResultItem", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakQuizResultItem standardText={"standardText"} />,
-      </OakThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakQuizResultItem standardText={"standardText"} />,
+    );
+    expect(container).toMatchSnapshot();
   });
 
   it("throws error if the boldPrefixText is specified without standardText ", () => {

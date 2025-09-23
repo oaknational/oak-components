@@ -1,13 +1,10 @@
 import React, { createRef } from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 import { fireEvent } from "@testing-library/react";
 
 import { InternalCheckBox } from "./InternalCheckBox";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { OakThemeProvider } from "@/components/atoms/OakThemeProvider";
-import { oakDefaultTheme } from "@/styles";
 
 describe("InternalCheckBox", () => {
   it("renders a checkbox", () => {
@@ -22,12 +19,10 @@ describe("InternalCheckBox", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <InternalCheckBox id="checkbox-1" value="Option 1" />
-      </OakThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <InternalCheckBox id="checkbox-1" value="Option 1" />,
+    );
+    expect(container).toMatchSnapshot();
   });
 
   it("has a role of checkbox", () => {

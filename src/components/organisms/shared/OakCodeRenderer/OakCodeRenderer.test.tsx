@@ -1,11 +1,8 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
 
 import { OakCodeRenderer } from "./OakCodeRenderer";
 
-import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import {
   installMockIntersectionObserver,
@@ -21,39 +18,27 @@ const mockString =
 describe("OakCodeRenderer", () => {
   it("renders", () => {
     const { getByText } = renderWithTheme(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakCodeRenderer string={mockString} />
-      </ThemeProvider>,
+      <OakCodeRenderer string={mockString} />,
     );
     expect(getByText("output")).toBeInTheDocument;
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakCodeRenderer string={mockString} />
-      </ThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakCodeRenderer string={mockString} />,
+    );
+    expect(container).toMatchSnapshot();
   });
 
   it("renders plain text without backticks correctly", () => {
     const text = "This is a simple text without any backticks.";
-    const { getByText } = renderWithTheme(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakCodeRenderer string={text} />
-      </ThemeProvider>,
-    );
+    const { getByText } = renderWithTheme(<OakCodeRenderer string={text} />);
     expect(getByText(text)).toBeInTheDocument();
   });
 
   it("renders text with inline code (backticks) correctly", () => {
     const text = "This is `inline code` in a sentence.";
-    const { getByText } = renderWithTheme(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakCodeRenderer string={text} />
-      </ThemeProvider>,
-    );
+    const { getByText } = renderWithTheme(<OakCodeRenderer string={text} />);
 
     // Verify the non-code text
     expect(getByText(/This is /)).toBeInTheDocument();
@@ -70,9 +55,7 @@ describe("OakCodeRenderer", () => {
   it("renders code blocks with syntax highlighting correctly", () => {
     const codeBlock = "```\nconst a = 42;\nconsole.log(a);\n```";
     const { getByText } = renderWithTheme(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakCodeRenderer string={codeBlock} />
-      </ThemeProvider>,
+      <OakCodeRenderer string={codeBlock} />,
     );
 
     // Verify code block content
@@ -86,11 +69,7 @@ describe("OakCodeRenderer", () => {
 
   it("handles mixed text and code blocks correctly", () => {
     const text = "Here is some text.\n```\nlet x = 10;\n```\nAnd more text.";
-    const { getByText } = renderWithTheme(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakCodeRenderer string={text} />
-      </ThemeProvider>,
-    );
+    const { getByText } = renderWithTheme(<OakCodeRenderer string={text} />);
 
     // Verify non-code text
     expect(getByText(/Here is some text./)).toBeInTheDocument();
@@ -103,9 +82,7 @@ describe("OakCodeRenderer", () => {
   it("applies syntax highlighting to keywords and strings", () => {
     const codeBlock = "```\nconst str = 'Hello';\nif (true) {}\n```";
     const { getByText } = renderWithTheme(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakCodeRenderer string={codeBlock} />
-      </ThemeProvider>,
+      <OakCodeRenderer string={codeBlock} />,
     );
 
     // Verify syntax highlighting
@@ -118,9 +95,7 @@ describe("OakCodeRenderer", () => {
 
   it("renders the Code colour tooltip", () => {
     const { getByText } = renderWithTheme(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakCodeRenderer string={mockString} />
-      </ThemeProvider>,
+      <OakCodeRenderer string={mockString} />,
     );
     expect(getByText("Code colour")).toBeInTheDocument();
   });
