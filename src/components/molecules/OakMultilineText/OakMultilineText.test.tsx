@@ -12,8 +12,7 @@ describe("OakMultilineText", () => {
       <OakMultilineText
         data-testid="test"
         $charLimit={200}
-        $height="all-spacing-13"
-        $width="100%"
+        $height="all-spacing-10"
       />,
     );
     expect(getByTestId("test")).toBeInTheDocument();
@@ -24,7 +23,6 @@ describe("OakMultilineText", () => {
       <OakMultilineText
         $charLimit={200}
         $height="all-spacing-10"
-        $width="all-spacing-10"
       ></OakMultilineText>,
     ).toJSON();
     expect(tree).toMatchSnapshot();
