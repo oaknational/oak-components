@@ -1,25 +1,20 @@
 import React from "react";
-import { create } from "react-test-renderer";
 import { act, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
 import { OakOutlineAccordion } from "./OakOutlineAccordion";
 
-import { OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe(OakOutlineAccordion, () => {
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakOutlineAccordion initialOpen header="See more" id="see-more">
-          Here it is
-        </OakOutlineAccordion>
-      </OakThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <OakOutlineAccordion initialOpen header="See more" id="see-more">
+        Here it is
+      </OakOutlineAccordion>,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it("toggles open and closed", () => {

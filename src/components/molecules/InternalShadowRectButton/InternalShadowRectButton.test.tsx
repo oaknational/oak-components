@@ -1,7 +1,6 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render, fireEvent } from "@testing-library/react";
-import { create } from "react-test-renderer";
 
 import {
   InternalShadowRectButton,
@@ -43,12 +42,12 @@ describe("InternalShadowRectButton", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
+    const { container } = renderWithTheme(
       <InternalShadowRectButton {...defaultArgs}>
         Click Me
       </InternalShadowRectButton>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    );
+    expect(container).toMatchSnapshot();
   });
 
   it("renders the children", () => {

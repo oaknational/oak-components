@@ -1,19 +1,15 @@
 import React from "react";
-import { create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
 
 import { OakHoverLink } from "./OakHoverLink";
 
-import { oakDefaultTheme } from "@/styles";
+import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("OakHoverLink", () => {
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakHoverLink>Content goes here</OakHoverLink>
-      </ThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <OakHoverLink>Content goes here</OakHoverLink>,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

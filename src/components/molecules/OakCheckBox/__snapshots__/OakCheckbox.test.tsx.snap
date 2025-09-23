@@ -114,59 +114,40 @@ input:checked + .c7 {
   }
 }
 
-<label
-  className="c0 c1"
-  disabled={false}
-  htmlFor="checkbox-1"
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
->
-  <div
-    className="c2"
+<div>
+  <label
+    class="c0 c1"
+    for="checkbox-1"
   >
-    <input
-      className="c3 c4 c5 c6"
-      disabled={false}
-      id="checkbox-1"
-      name="checkbox-1"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      type="checkbox"
-      value="Option 1"
-    />
     <div
-      className="c7 c8 c9"
+      class="c2"
     >
+      <input
+        class="c3 c4 c5 c6"
+        id="checkbox-1"
+        name="checkbox-1"
+        type="checkbox"
+        value="Option 1"
+      />
       <div
-        className="c10"
+        class="c7 c8 c9"
       >
-        <img
-          alt=""
-          className="c11"
-          data-nimg="fill"
-          decoding="async"
-          loading="lazy"
-          onError={[Function]}
-          onLoad={[Function]}
-          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
-          style={
-            {
-              "bottom": 0,
-              "color": "transparent",
-              "height": "100%",
-              "left": 0,
-              "objectFit": undefined,
-              "objectPosition": undefined,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-              "width": "100%",
-            }
-          }
-        />
+        <div
+          class="c10"
+        >
+          <img
+            alt=""
+            class="c11"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+          />
+        </div>
       </div>
     </div>
-  </div>
-  Option 1
-</label>
+    Option 1
+  </label>
+</div>
 `;

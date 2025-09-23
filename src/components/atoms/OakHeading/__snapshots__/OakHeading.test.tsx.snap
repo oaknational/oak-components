@@ -5,7 +5,9 @@ exports[`Heading matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-<h1
-  className="c0"
-/>
+<div>
+  <h1
+    class="c0"
+  />
+</div>
 `;

@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakLessonNavItem matches snapshot 1`] = `
-[
-  .c0 {
+.c0 {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 1.25rem;
@@ -219,88 +218,58 @@ exports[`OakLessonNavItem matches snapshot 1`] = `
   }
 }
 
-<a
-    className="c0 c1 c2"
+<div>
+  <a
+    class="c0 c1 c2"
   >
     <div
-      className="c3 c4"
+      class="c3 c4"
     >
       <div
-        className="c5"
+        class="c5"
       >
         <img
           alt=""
-          className="c6"
+          class="c6"
           data-nimg="fill"
           decoding="async"
           loading="lazy"
-          onError={[Function]}
-          onLoad={[Function]}
           src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1705662092/icons/pl7bnmb13txese9yxkjv.svg"
-          style={
-            {
-              "bottom": 0,
-              "color": "transparent",
-              "height": "100%",
-              "left": 0,
-              "objectFit": undefined,
-              "objectPosition": undefined,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-              "width": "100%",
-            }
-          }
+          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
         />
       </div>
     </div>
     <div
-      className="c7 c8"
+      class="c7 c8"
     >
       <strong
-        className="c9"
+        class="c9"
       >
         Introduction
       </strong>
       <div
-        className="c10"
+        class="c10"
       >
         Prepare
       </div>
     </div>
     <div
-      className="c11 c12 c13"
+      class="c11 c12 c13"
     >
       <div
-        className="c14"
+        class="c14"
       >
         <img
           alt=""
-          className="c6"
+          class="c6"
           data-nimg="fill"
           decoding="async"
           loading="lazy"
-          onError={[Function]}
-          onLoad={[Function]}
           src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
-          style={
-            {
-              "bottom": 0,
-              "color": "transparent",
-              "height": "100%",
-              "left": 0,
-              "objectFit": undefined,
-              "objectPosition": undefined,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-              "width": "100%",
-            }
-          }
+          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
         />
       </div>
     </div>
-  </a>,
-  ",",
-]
+  </a>
+</div>
 `;

@@ -132,32 +132,30 @@ exports[`OakPrimaryNavItem matches snapshot 1`] = `
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-<div
-  className="c0 c1"
->
+<div>
   <div
-    className="c2 grey-shadow"
-  />
-  <div
-    className="c2 yellow-shadow"
-  />
-  <a
-    className="c3 c4 internal-button"
-    href="/"
-    onClick={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    onTouchStart={[Function]}
+    class="c0 c1"
   >
     <div
-      className="c5 c6"
+      class="c2 grey-shadow"
+    />
+    <div
+      class="c2 yellow-shadow"
+    />
+    <a
+      class="c3 c4 internal-button"
+      href="/"
     >
-      <span
-        className="c7"
+      <div
+        class="c5 c6"
       >
-        Base nav item
-      </span>
-    </div>
-  </a>
+        <span
+          class="c7"
+        >
+          Base nav item
+        </span>
+      </div>
+    </a>
+  </div>
 </div>
 `;

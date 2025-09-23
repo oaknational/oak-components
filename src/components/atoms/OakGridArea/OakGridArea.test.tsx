@@ -1,11 +1,11 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
-import { create } from "react-test-renderer";
 
 import { OakGridArea } from "./OakGridArea";
 
 import { OakGrid } from "@/components/atoms/OakGrid";
+import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("OakGrid", () => {
   it("renders without crashing", () => {
@@ -18,11 +18,11 @@ describe("OakGrid", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
+    const { container } = renderWithTheme(
       <OakGrid>
         <OakGridArea $colSpan={1} />
       </OakGrid>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    );
+    expect(container).toMatchSnapshot();
   });
 });

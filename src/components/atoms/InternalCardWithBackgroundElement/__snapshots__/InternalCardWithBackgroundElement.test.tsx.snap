@@ -37,19 +37,21 @@ exports[`InternalStyledSvg matches snapshot 1`] = `
   height: 100%;
 }
 
-<div
-  className="c0 c1"
->
+<div>
   <div
-    aria-hidden={true}
-    className="c2 c3"
+    class="c0 c1"
   >
-    <svg />
-  </div>
-  <div
-    className="c4"
-  >
-    Card contents!
+    <div
+      aria-hidden="true"
+      class="c2 c3"
+    >
+      <svg />
+    </div>
+    <div
+      class="c4"
+    >
+      Card contents!
+    </div>
   </div>
 </div>
 `;

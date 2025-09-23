@@ -1,6 +1,6 @@
 {
   "name": "@oaknational/oak-components",
-  "version": "1.144.0",
+  "version": "1.147.2",
   "licence": "MIT",
   "description": "Shared components for Oak applications",
   "main": "dist/cjs/index.js",
@@ -85,7 +85,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-focus-on": "^3.9.2",
-    "react-test-renderer": "^18.2.0",
     "react-transition-group": "^4.4.5",
     "rollup": "^4.9.4",
     "rollup-plugin-dts": "^6.1.0",

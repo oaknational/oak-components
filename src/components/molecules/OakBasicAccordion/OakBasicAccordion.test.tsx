@@ -1,6 +1,5 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 
 import { OakBasicAccordion } from "./OakBasicAccordion";
 
@@ -22,7 +21,7 @@ describe("OakBasicAccordion", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
+    const { container } = renderWithTheme(
       <OakBasicAccordion
         id={"1"}
         header={<OakHeading tag="h1">Heading</OakHeading>}
@@ -30,7 +29,7 @@ describe("OakBasicAccordion", () => {
       >
         <OakP>Body</OakP>
       </OakBasicAccordion>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    );
+    expect(container).toMatchSnapshot();
   });
 });

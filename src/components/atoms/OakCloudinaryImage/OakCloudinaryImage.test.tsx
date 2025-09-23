@@ -1,28 +1,23 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 
 import {
   OakCloudinaryConfigProvider,
   OakCloudinaryImage,
 } from "./OakCloudinaryImage";
 
-import { OakThemeProvider } from "@/components/atoms/OakThemeProvider";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { oakDefaultTheme } from "@/styles";
 
 describe(OakCloudinaryImage, () => {
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakCloudinaryImage
-          cloudinaryId="v1688316547/xqvnpdqx9u2awiykyb8s.jpg"
-          alt="a test image"
-        />
-      </OakThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <OakCloudinaryImage
+        cloudinaryId="v1688316547/xqvnpdqx9u2awiykyb8s.jpg"
+        alt="a test image"
+      />,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it("respects the globally set config", () => {

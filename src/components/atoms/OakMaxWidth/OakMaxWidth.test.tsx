@@ -1,9 +1,10 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
-import { create } from "react-test-renderer";
 
 import { OakMaxWidth } from "./OakMaxWidth";
+
+import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("OakMaxWidth", () => {
   it("renders", () => {
@@ -12,8 +13,8 @@ describe("OakMaxWidth", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(<OakMaxWidth />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(<OakMaxWidth />);
+    expect(container).toMatchSnapshot();
   });
 
   it("has has max-width: 80rem when screen width is large", () => {

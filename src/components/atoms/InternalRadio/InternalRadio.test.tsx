@@ -1,13 +1,10 @@
 import React, { createRef } from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 import { fireEvent } from "@testing-library/react";
 
 import { InternalRadio } from "./InternalRadio";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { OakThemeProvider } from "@/components/atoms/OakThemeProvider";
-import { oakDefaultTheme } from "@/styles";
 
 describe("InternalRadio", () => {
   it("renders a radio", () => {
@@ -18,16 +15,14 @@ describe("InternalRadio", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <InternalRadio
-          id="radio-1"
-          name="internal-radio-group"
-          value="Option 1"
-        />
-      </OakThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <InternalRadio
+        id="radio-1"
+        name="internal-radio-group"
+        value="Option 1"
+      />,
+    );
+    expect(container).toMatchSnapshot();
   });
 
   it("has a role of radio", () => {

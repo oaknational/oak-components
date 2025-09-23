@@ -2,25 +2,22 @@ import React from "react";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
 
 import { OakRadioButton } from "@/components/molecules/OakRadioButton";
 import { OakRadioGroup } from "@/components/molecules/OakRadioGroup";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { oakDefaultTheme } from "@/styles";
 
 describe("RadioGroup", () => {
   it("renders a RadioGroup", () => {
-    renderWithTheme(
-      <OakRadioGroup name={"test"}>
+    const { getByRole } = renderWithTheme(
+      <OakRadioGroup name={"test"} label="test">
         <OakRadioButton id="radio-1" value="1" label="Option 1" />
         <OakRadioButton id="radio-2" value="2" label="Option 2" />
         <OakRadioButton id="radio-3" value="3" label="Option 3" />
       </OakRadioGroup>,
     );
 
-    const radioGroup = screen.getByRole("radiogroup");
+    const radioGroup = getByRole("group");
     expect(radioGroup).toBeInTheDocument();
   });
 
@@ -50,43 +47,41 @@ describe("RadioGroup", () => {
       </>,
     );
 
-    const radioGroup = getByRole("radiogroup");
+    const radioGroup = getByRole("group");
     expect(radioGroup).toHaveAttribute("aria-labelledby", "radio-group-label");
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakRadioGroup name={"test"}>
-          <OakRadioButton
-            value="1"
-            id="radio-1"
-            label="Option 1"
-            $labelGap="space-between-m"
-            $font="body-1-bold"
-            $color="black"
-            data-testid={"radio-1"}
-          />
-          <OakRadioButton
-            value="2"
-            id="radio-2"
-            label="Option 2"
-            $labelGap="space-between-m"
-            $font="body-1-bold"
-            $color="black"
-          />
-          <OakRadioButton
-            value="3"
-            id="radio-3"
-            label="Option 3"
-            $labelGap="space-between-m"
-            $font="body-1-bold"
-            $color="black"
-          />
-        </OakRadioGroup>
-      </ThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakRadioGroup name={"test"}>
+        <OakRadioButton
+          value="1"
+          id="radio-1"
+          label="Option 1"
+          $labelGap="space-between-m"
+          $font="body-1-bold"
+          $color="black"
+          data-testid={"radio-1"}
+        />
+        <OakRadioButton
+          value="2"
+          id="radio-2"
+          label="Option 2"
+          $labelGap="space-between-m"
+          $font="body-1-bold"
+          $color="black"
+        />
+        <OakRadioButton
+          value="3"
+          id="radio-3"
+          label="Option 3"
+          $labelGap="space-between-m"
+          $font="body-1-bold"
+          $color="black"
+        />
+      </OakRadioGroup>,
+    );
+    expect(container).toMatchSnapshot();
   });
 
   it("allows you to select a radio on click of label", async () => {

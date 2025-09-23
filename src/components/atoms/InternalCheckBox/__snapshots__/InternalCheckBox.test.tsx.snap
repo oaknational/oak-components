@@ -28,13 +28,13 @@ exports[`InternalCheckBox matches snapshot 1`] = `
   }
 }
 
-<input
-  className="c0"
-  id="checkbox-1"
-  name="checkbox-1"
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
-  type="checkbox"
-  value="Option 1"
-/>
+<div>
+  <input
+    class="c0"
+    id="checkbox-1"
+    name="checkbox-1"
+    type="checkbox"
+    value="Option 1"
+  />
+</div>
 `;

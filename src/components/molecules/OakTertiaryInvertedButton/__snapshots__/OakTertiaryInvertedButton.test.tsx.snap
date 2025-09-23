@@ -112,24 +112,23 @@ exports[`OakTertiaryInvertedButton matches snapshot 1`] = `
   background: #ffffff;
 }
 
-<div
-  className="c0 c1 c2"
->
-  <button
-    className="c3 c4"
-    onClick={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
+<div>
+  <div
+    class="c0 c1 c2"
   >
-    <div
-      className="c5 c6"
+    <button
+      class="c3 c4"
     >
-      <span
-        className="c7"
+      <div
+        class="c5 c6"
       >
-        Click Me
-      </span>
-    </div>
-  </button>
+        <span
+          class="c7"
+        >
+          Click Me
+        </span>
+      </div>
+    </button>
+  </div>
 </div>
 `;

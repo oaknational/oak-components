@@ -8,7 +8,9 @@ exports[`OakFieldset matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-<fieldset
-  className="c0"
-/>
+<div>
+  <fieldset
+    class="c0"
+  />
+</div>
 `;

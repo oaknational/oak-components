@@ -1,11 +1,9 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 
 import { OakPupilJourneySubjectButton } from "./OakPupilJourneySubjectButton";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { OakThemeProvider } from "@/components/atoms";
 import { oakDefaultTheme } from "@/styles";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { rgbToHex } from "@/test-helpers";
@@ -24,17 +22,15 @@ describe("OakPupilJourneySubjectButton", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakPupilJourneySubjectButton
-          phase="primary"
-          subjectIconName="subject-english"
-        >
-          English
-        </OakPupilJourneySubjectButton>
-      </OakThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakPupilJourneySubjectButton
+        phase="primary"
+        subjectIconName="subject-english"
+      >
+        English
+      </OakPupilJourneySubjectButton>,
+    );
+    expect(container).toMatchSnapshot();
   });
   describe("OakPupilJourneySubjectButton - Phase Styling", () => {
     it("applies correct styles for primary phase", () => {

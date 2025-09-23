@@ -53,17 +53,14 @@ exports[`OakTeacherNotesInline matches snapshot 1`] = `
   color: #081676;
 }
 
-<div
-  className="c0"
-  data-testid="oak-teacher-notes-inline"
->
+<div>
   <div
-    className="c1 c2"
-    dangerouslySetInnerHTML={
-      {
-        "__html": "",
-      }
-    }
-  />
+    class="c0"
+    data-testid="oak-teacher-notes-inline"
+  >
+    <div
+      class="c1 c2"
+    />
+  </div>
 </div>
 `;

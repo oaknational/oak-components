@@ -15,31 +15,20 @@ exports[`InternalTextInput matches snapshot 1`] = `
   color: inherit;
 }
 
-.c0::-webkit-search-decoration,
-.c0::-webkit-search-cancel-button,
-.c0::-webkit-search-results-button,
-.c0::-webkit-search-results-decoration {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+.c0::-webkit-input-placeholder {
+  color: #575757;
 }
 
-.c0::-webkit-search-decoration,
-.c0::-webkit-search-cancel-button,
-.c0::-webkit-search-results-button,
-.c0::-webkit-search-results-decoration {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+.c0::-moz-placeholder {
+  color: #575757;
 }
 
-.c0::-webkit-search-decoration,
-.c0::-webkit-search-cancel-button,
-.c0::-webkit-search-results-button,
-.c0::-webkit-search-results-decoration {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+.c0:-ms-input-placeholder {
+  color: #575757;
+}
+
+.c0::placeholder {
+  color: #575757;
 }
 
 .c0::-webkit-search-decoration,
@@ -61,8 +50,9 @@ exports[`InternalTextInput matches snapshot 1`] = `
   }
 }
 
-<input
-  className="c0"
-  onFocus={[Function]}
-/>
+<div>
+  <input
+    class="c0"
+  />
+</div>
 `;

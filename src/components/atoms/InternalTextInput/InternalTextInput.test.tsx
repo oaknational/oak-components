@@ -1,9 +1,10 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
-import { create } from "react-test-renderer";
 
 import { InternalTextInput } from "./InternalTextInput";
+
+import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("InternalTextInput", () => {
   it("renders", () => {
@@ -12,8 +13,8 @@ describe("InternalTextInput", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(<InternalTextInput />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(<InternalTextInput />);
+    expect(container).toMatchSnapshot();
   });
 
   it("renders with placeholder", () => {

@@ -1,19 +1,15 @@
-import { create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
 import React from "react";
 
 import { OakDraggable } from "./OakDraggable";
 
-import { oakDefaultTheme } from "@/styles";
+import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("OakDraggable", () => {
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakDraggable>Elephant</OakDraggable>
-      </ThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <OakDraggable>Elephant</OakDraggable>,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

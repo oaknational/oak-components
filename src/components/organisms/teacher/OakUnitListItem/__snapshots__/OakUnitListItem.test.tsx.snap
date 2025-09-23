@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakUnitListItem matches snapshot 1`] = `
-[
-  .c1 {
+.c1 {
   width: 100%;
   padding-right: 1rem;
   background: #ffffff;
@@ -371,126 +370,111 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   }
 }
 
-<li
-    className="c0"
+<div>
+  <li
+    class="c0"
   >
     <div
-      className="c1 c2 c3"
+      class="c1 c2 c3"
       title="Lesson 1"
     >
       <a
-        className="c4 c5 c6"
+        class="c4 c5 c6"
         href=""
       >
         <div
-          className="c7 c8 c9 c10"
+          class="c7 c8 c9 c10"
         >
           <span
-            className="c11"
+            class="c11"
           >
             1
           </span>
         </div>
         <div
-          className="c12 c13"
+          class="c12 c13"
         >
           <p
-            className="c14 hover-text"
+            class="c14 hover-text"
           >
             Lesson 1
           </p>
         </div>
         <div
-          className="c15 c16"
+          class="c15 c16"
         >
           <p
-            className="c17"
+            class="c17"
           />
         </div>
         <div
-          className="c18 c16"
+          class="c18 c16"
         >
           <p
-            className="c19"
+            class="c19"
           >
             0 lessons
           </p>
           <div
-            className="c20"
+            class="c20"
           >
             <img
               alt=""
-              className="c21"
+              class="c21"
               data-nimg="fill"
               decoding="async"
               loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
               src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
-              style={
-                {
-                  "bottom": 0,
-                  "color": "transparent",
-                  "height": "100%",
-                  "left": 0,
-                  "objectFit": undefined,
-                  "objectPosition": undefined,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
+              style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
             />
           </div>
         </div>
       </a>
     </div>
     <div
-      className="c22 c23 c3"
+      class="c22 c23 c3"
       title="Lesson 1"
     >
       <div
-        className="c24 c25"
+        class="c24 c25"
       >
         <a
-          className="c26 c27"
+          class="c26 c27"
           href=""
         >
           <div
-            className="c28 c29"
+            class="c28 c29"
           >
             <h3
-              className="c30"
+              class="c30"
             >
               1
             </h3>
           </div>
           <div
-            className="c24"
+            class="c24"
           >
             <p
-              className="c14"
+              class="c14"
             >
               Lesson 1
             </p>
           </div>
         </a>
         <div
-          className="c26 c31"
+          class="c26 c31"
         >
           <p
-            className="c32"
+            class="c32"
           />
           <p
-            className="c32"
+            class="c32"
           >
             0 lessons
           </p>
         </div>
       </div>
     </div>
-  </li>,
-  ",",
-]
+  </li>
+</div>
 `;

@@ -1,20 +1,14 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
 
 import { OakLink } from "./OakLink";
 
-import { oakDefaultTheme } from "@/styles";
+import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("OakLink", () => {
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakLink>Content goes here</OakLink>
-      </ThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(<OakLink>Content goes here</OakLink>);
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

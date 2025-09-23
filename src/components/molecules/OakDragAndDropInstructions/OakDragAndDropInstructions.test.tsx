@@ -1,20 +1,14 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 
 import { OakDragAndDropInstructions } from "./OakDragAndDropInstructions";
 
-import { OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
+import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe(OakDragAndDropInstructions, () => {
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakDragAndDropInstructions />
-      </OakThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(<OakDragAndDropInstructions />);
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

@@ -1,21 +1,63 @@
-import React, { useRef } from "react";
+import React, { HTMLAttributes, ReactNode, useRef } from "react";
 import { createPortal } from "react-dom";
 import styled from "styled-components";
 
 import { InternalShadowRoundButton } from "@/components/molecules/InternalShadowRoundButton";
 import { OakBox, OakFlex, OakHeading } from "@/components/atoms";
-import { OakModalProps } from "@/components/molecules/OakModal";
 import { OakSecondaryLink } from "@/components/molecules/OakSecondaryLink";
 import useIsScrolled from "@/hooks/useIsScrolled";
 import useMounted from "@/hooks/useMounted";
 import InternalModalTransition from "@/components/molecules/InternalModalTransition/InternalModalTransition";
 
-type OakFilterDrawerProps = OakModalProps & {
+type OakFilterDrawerProps = {
   /**
    * Called when the clear button is clicked
    */
   clearAllInputs: () => void;
-};
+
+  /**
+   * The content of the modal.
+   * Use with `<OakModalBody>` for best results.
+   */
+  children: ReactNode;
+  /**
+   * Slot for the footer of the modal.
+   * Use with `<OakModalFooter>` for best results.
+   */
+  footerSlot?: ReactNode;
+  /**
+   * Indicates whether the modal is open or closed
+   */
+  isOpen: boolean;
+  /**
+   * Called when the modal is closed
+   */
+  onClose: () => void;
+  /**
+   * The DOM container to render the modal portal into.
+   *
+   * @default document.body
+   */
+  domContainer?: Element;
+  /**
+   * Optional z-index override.
+   *
+   * Defaults to token: `modal-dialog`
+   *
+   * 🚨 This prop is intended for use by consumers that do not use
+   * the internal system of z-index tokens.
+   *
+   * NB *The modal is rendered inside a portal so it will not respect the stacking context of its parent component*.
+   */
+  zIndex?: number;
+  /**
+   * Whether the modal should be anchored to the left side of the screen.
+   */
+  isLeftHandSide?: boolean;
+} & Pick<
+  HTMLAttributes<Element>,
+  "aria-label" | "aria-description" | "aria-labelledby" | "aria-describedby"
+>;
 
 const StyledClearButton = styled(OakSecondaryLink)`
   text-decoration: none;

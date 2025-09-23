@@ -38,16 +38,14 @@ exports[`InternalDroppableHoldingPen matches snapshot 1`] = `
   background-color: color-mix( in lch, #ffffff 60%, transparent );
 }
 
-<div
-  className="c0 c1"
-  style={
-    {
-      "minHeight": "auto",
-    }
-  }
->
+<div>
   <div
-    className="c2 c3"
-  />
+    class="c0 c1"
+    style="min-height: auto;"
+  >
+    <div
+      class="c2 c3"
+    />
+  </div>
 </div>
 `;

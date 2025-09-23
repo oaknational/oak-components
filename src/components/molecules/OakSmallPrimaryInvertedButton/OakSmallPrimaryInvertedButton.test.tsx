@@ -1,7 +1,5 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
 
 import {
   OakSmallPrimaryInvertedButton,
@@ -9,7 +7,6 @@ import {
 } from "./OakSmallPrimaryInvertedButton";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { oakDefaultTheme } from "@/styles";
 
 const defaultArgs: OakSmallPrimaryInvertedButtonProps = {
   iconName: "arrow-right",
@@ -35,14 +32,12 @@ describe("OakSmallPrimaryInvertedButton", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakSmallPrimaryInvertedButton {...defaultArgs}>
-          Click Me
-        </OakSmallPrimaryInvertedButton>
-      </ThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakSmallPrimaryInvertedButton {...defaultArgs}>
+        Click Me
+      </OakSmallPrimaryInvertedButton>,
+    );
+    expect(container).toMatchSnapshot();
   });
 
   it("renders the chidren", () => {

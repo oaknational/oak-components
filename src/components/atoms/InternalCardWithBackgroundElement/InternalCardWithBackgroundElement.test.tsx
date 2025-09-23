@@ -1,17 +1,18 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 
 import { InternalCardWithBackgroundElement } from "./InternalCardWithBackgroundElement";
 
+import renderWithTheme from "@/test-helpers/renderWithTheme";
+
 describe("InternalStyledSvg", () => {
   it("matches snapshot", () => {
-    const tree = create(
+    const { container } = renderWithTheme(
       <InternalCardWithBackgroundElement backgroundElement={<svg />}>
         Card contents!
       </InternalCardWithBackgroundElement>,
-    ).toJSON();
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

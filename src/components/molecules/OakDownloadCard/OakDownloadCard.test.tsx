@@ -1,12 +1,9 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 
 import { OakDownloadCard } from "./OakDownloadCard";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
 
 describe("OakDownloadCard", () => {
   it("renders a checkbox", () => {
@@ -24,34 +21,30 @@ describe("OakDownloadCard", () => {
   });
 
   it("matches snapshot without fileSizeSlot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakDownloadCard
-          id="checkbox-1"
-          value="Option 1"
-          titleSlot={"TITLE"}
-          formatSlot={"FORMAT"}
-          iconName={"books"}
-        />
-      </OakThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakDownloadCard
+        id="checkbox-1"
+        value="Option 1"
+        titleSlot={"TITLE"}
+        formatSlot={"FORMAT"}
+        iconName={"books"}
+      />,
+    );
+    expect(container).toMatchSnapshot();
   });
 
   it("matches snapshot with fileSizeSlot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakDownloadCard
-          id="checkbox-1"
-          value="Option 1"
-          titleSlot={"TITLE"}
-          formatSlot={"FORMAT"}
-          iconName={"books"}
-          fileSizeSlot={"FILE_SIZE"}
-        />
-      </OakThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakDownloadCard
+        id="checkbox-1"
+        value="Option 1"
+        titleSlot={"TITLE"}
+        formatSlot={"FORMAT"}
+        iconName={"books"}
+        fileSizeSlot={"FILE_SIZE"}
+      />,
+    );
+    expect(container).toMatchSnapshot();
   });
 
   it("has a role of checkbox", () => {

@@ -1,13 +1,10 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 import { within } from "@testing-library/react";
 
 import { OakUnitListOptionalityItemCard } from "./OakUnitListOptionalityItemCard";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
 
 describe("OakUnitListOptionalityItemCard", () => {
   it("renders", () => {
@@ -24,19 +21,16 @@ describe("OakUnitListOptionalityItemCard", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakUnitListOptionalityItemCard
-          title="Lesson 1"
-          lessonCount={"0 lessons"}
-          href={""}
-          slug="test"
-        />
-        ,
-      </OakThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <OakUnitListOptionalityItemCard
+        title="Lesson 1"
+        lessonCount={"0 lessons"}
+        href={""}
+        slug="test"
+      />,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it("renders an anchor when the item is not disabled", () => {

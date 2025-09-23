@@ -1,13 +1,10 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 import userEvent from "@testing-library/user-event";
 
 import { OakTertiaryOLNav, OakTertiaryOLNavProps } from "./OakTertiaryOLNav";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
 
 const baseProps: OakTertiaryOLNavProps = {
   items: [
@@ -50,12 +47,8 @@ describe("Component OakTertiaryOLNav", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakTertiaryOLNav {...baseProps} />,
-      </OakThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(<OakTertiaryOLNav {...baseProps} />);
+    expect(container).toMatchSnapshot();
   });
   it("applies aria-current to the current active link", async () => {
     const { getByText } = renderWithTheme(<OakTertiaryOLNav {...baseProps} />);

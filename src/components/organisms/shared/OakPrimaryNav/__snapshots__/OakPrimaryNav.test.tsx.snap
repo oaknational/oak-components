@@ -245,137 +245,124 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
   pointer-events: none;
 }
 
-<nav>
-  <ul
-    className="c0 c1"
-  >
-    <li
-      className="c2"
+<div>
+  <nav>
+    <ul
+      class="c0 c1"
     >
-      <div
-        className="c3 c4"
+      <li
+        class="c2"
       >
         <div
-          className="c5 grey-shadow"
-        />
-        <div
-          className="c5 yellow-shadow"
-        />
-        <a
-          className="c6 c7 internal-button"
-          href="/"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onTouchStart={[Function]}
+          class="c3 c4"
         >
           <div
-            className="c8 c9"
+            class="c5 grey-shadow"
+          />
+          <div
+            class="c5 yellow-shadow"
+          />
+          <a
+            class="c6 c7 internal-button"
+            href="/"
           >
-            <span
-              className="c10"
+            <div
+              class="c8 c9"
             >
-              nav item 1
-            </span>
-          </div>
-        </a>
-      </div>
-    </li>
-    <li
-      className="c2"
-    >
-      <div
-        className="c3 c11 c12"
+              <span
+                class="c10"
+              >
+                nav item 1
+              </span>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li
+        class="c2"
       >
         <div
-          className="c5 grey-shadow"
-        />
-        <div
-          className="c5 yellow-shadow"
-        />
-        <span
-          aria-current="page"
-          className="c13 c14 internal-button"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
+          class="c3 c11 c12"
         >
           <div
-            className="c8 c9"
+            class="c5 grey-shadow"
+          />
+          <div
+            class="c5 yellow-shadow"
+          />
+          <span
+            aria-current="page"
+            class="c13 c14 internal-button"
           >
-            <span
-              className="c10"
+            <div
+              class="c8 c9"
             >
-              nav item 2
-            </span>
-          </div>
-        </span>
-      </div>
-    </li>
-    <li
-      className="c2"
-    >
-      <div
-        className="c3 c4"
+              <span
+                class="c10"
+              >
+                nav item 2
+              </span>
+            </div>
+          </span>
+        </div>
+      </li>
+      <li
+        class="c2"
       >
         <div
-          className="c5 grey-shadow"
-        />
-        <div
-          className="c5 yellow-shadow"
-        />
-        <a
-          className="c6 c7 internal-button"
-          href="/"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onTouchStart={[Function]}
+          class="c3 c4"
         >
           <div
-            className="c8 c9"
+            class="c5 grey-shadow"
+          />
+          <div
+            class="c5 yellow-shadow"
+          />
+          <a
+            class="c6 c7 internal-button"
+            href="/"
           >
-            <span
-              className="c10"
+            <div
+              class="c8 c9"
             >
-              nav item 3
-            </span>
-          </div>
-        </a>
-      </div>
-    </li>
-    <li
-      className="c2"
-    >
-      <div
-        className="c3 c4"
+              <span
+                class="c10"
+              >
+                nav item 3
+              </span>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li
+        class="c2"
       >
         <div
-          className="c5 grey-shadow"
-        />
-        <div
-          className="c5 yellow-shadow"
-        />
-        <a
-          className="c6 c7 internal-button"
-          href="/"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onTouchStart={[Function]}
+          class="c3 c4"
         >
           <div
-            className="c8 c9"
+            class="c5 grey-shadow"
+          />
+          <div
+            class="c5 yellow-shadow"
+          />
+          <a
+            class="c6 c7 internal-button"
+            href="/"
           >
-            <span
-              className="c10"
+            <div
+              class="c8 c9"
             >
-              nav item 4
-            </span>
-          </div>
-        </a>
-      </div>
-    </li>
-  </ul>
-</nav>
+              <span
+                class="c10"
+              >
+                nav item 4
+              </span>
+            </div>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</div>
 `;

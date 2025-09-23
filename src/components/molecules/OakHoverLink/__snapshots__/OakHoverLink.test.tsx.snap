@@ -70,13 +70,15 @@ exports[`OakHoverLink matches snapshot 1`] = `
   }
 }
 
-<a
-  className="c0 c1"
->
-  <span
-    className="c2"
+<div>
+  <a
+    class="c0 c1"
   >
-    Content goes here
-  </span>
-</a>
+    <span
+      class="c2"
+    >
+      Content goes here
+    </span>
+  </a>
+</div>
 `;

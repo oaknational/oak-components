@@ -1,12 +1,9 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
 
 import { OakPrimaryNavItem, OakPrimaryNavItemProps } from "./OakPrimaryNavItem";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { oakDefaultTheme } from "@/styles";
 
 const defaultArgs: OakPrimaryNavItemProps = {
   isCurrent: false,
@@ -24,12 +21,10 @@ describe("OakPrimaryNavItem", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakPrimaryNavItem {...defaultArgs} />
-      </ThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakPrimaryNavItem {...defaultArgs} />,
+    );
+    expect(container).toMatchSnapshot();
   });
 
   it("renders <a> tag for items with isCurrent set to false", () => {

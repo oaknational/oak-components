@@ -495,98 +495,93 @@ exports[`OakCookieBanner matches snapshot 1`] = `
   }
 }
 
-<div
-  className="c0"
-  data-testid="cookie-banner"
->
+<div>
   <div
-    className="c1"
+    class="c0"
+    data-testid="cookie-banner"
   >
     <div
-      className="c2 c3"
+      class="c1"
     >
       <div
-        className="c4"
-      >
-        <strong
-          className="c5"
-        >
-          This site uses cookies to store information on your computer.
-        </strong>
-         
-        Some of these cookies are essential, while others help us to improve your experience by providing insights into how the site is being used.
-      </div>
-      <div
-        className="c6 c7"
+        class="c2 c3"
       >
         <div
-          className="c8 c9"
+          class="c4"
         >
-          <button
-            className="c10 "
-            data-testid="cookie-banner-reject"
-            onClick={[MockFunction]}
-            type="button"
+          <strong
+            class="c5"
           >
-            <span
-              className="c11"
-            >
-              Reject non-essential cookies
-            </span>
-          </button>
+            This site uses cookies to store information on your computer.
+          </strong>
+           
+          Some of these cookies are essential, while others help us to improve your experience by providing insights into how the site is being used.
         </div>
         <div
-          className="c12 c13"
+          class="c6 c7"
         >
           <div
-            className="c14 grey-shadow"
-          />
-          <div
-            className="c14 yellow-shadow"
-          />
-          <button
-            className="c15 c16 internal-button"
-            onClick={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
+            class="c8 c9"
           >
-            <div
-              className="c6 c17"
+            <button
+              class="c10 "
+              data-testid="cookie-banner-reject"
+              type="button"
             >
               <span
-                className="c18"
+                class="c11"
               >
-                Cookie settings
+                Reject non-essential cookies
               </span>
-            </div>
-          </button>
-        </div>
-        <div
-          className="c12 c13"
-        >
+            </button>
+          </div>
           <div
-            className="c14 grey-shadow"
-          />
-          <div
-            className="c14 yellow-shadow"
-          />
-          <button
-            className="c19 c20 internal-button"
-            data-testid="cookie-banner-accept"
-            onClick={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
+            class="c12 c13"
           >
             <div
-              className="c6 c17"
+              class="c14 grey-shadow"
+            />
+            <div
+              class="c14 yellow-shadow"
+            />
+            <button
+              class="c15 c16 internal-button"
             >
-              <span
-                className="c18"
+              <div
+                class="c6 c17"
               >
-                Accept all cookies
-              </span>
-            </div>
-          </button>
+                <span
+                  class="c18"
+                >
+                  Cookie settings
+                </span>
+              </div>
+            </button>
+          </div>
+          <div
+            class="c12 c13"
+          >
+            <div
+              class="c14 grey-shadow"
+            />
+            <div
+              class="c14 yellow-shadow"
+            />
+            <button
+              class="c19 c20 internal-button"
+              data-testid="cookie-banner-accept"
+            >
+              <div
+                class="c6 c17"
+              >
+                <span
+                  class="c18"
+                >
+                  Accept all cookies
+                </span>
+              </div>
+            </button>
+          </div>
         </div>
       </div>
     </div>

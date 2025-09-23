@@ -1,26 +1,17 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 
 import { OakPupilJourneyOptionalityButton } from "./OakPupilJourneyOptionalityButton";
 
-import { OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe(OakPupilJourneyOptionalityButton, () => {
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakPupilJourneyOptionalityButton
-          numberOfLessons={6}
-          title="Lesson 1"
-        />
-        ,
-      </OakThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <OakPupilJourneyOptionalityButton numberOfLessons={6} title="Lesson 1" />,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it("renders a div when the item is disabled", () => {

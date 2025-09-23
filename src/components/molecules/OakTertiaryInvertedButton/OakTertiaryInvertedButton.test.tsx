@@ -1,12 +1,9 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
 
 import { OakTertiaryInvertedButton } from "./OakTertiaryInvertedButton";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { oakDefaultTheme } from "@/styles";
 
 describe("OakTertiaryInvertedButton", () => {
   it("renders", () => {
@@ -18,12 +15,10 @@ describe("OakTertiaryInvertedButton", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakTertiaryInvertedButton>Click Me</OakTertiaryInvertedButton>
-      </ThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <OakTertiaryInvertedButton>Click Me</OakTertiaryInvertedButton>,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });
