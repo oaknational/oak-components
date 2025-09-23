@@ -1,11 +1,11 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
-import { create } from "react-test-renderer";
 
 import { OakGrid } from "./OakGrid";
 
 import { OakGridArea } from "@/components/atoms/OakGridArea";
+import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("OakGrid", () => {
   it("renders without crashing", () => {
@@ -16,8 +16,8 @@ describe("OakGrid", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(<OakGrid />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(<OakGrid />);
+    expect(container).toMatchSnapshot();
   });
 
   it("is a grid", () => {

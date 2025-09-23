@@ -374,268 +374,248 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
   }
 }
 
-<div
-  className="c0 c1"
->
-  <span
-    className="c2"
-  >
-    <span
-      className="c2"
-    >
-      What is the 
-      <span
-        className="c3 c4"
-      >
-        output
-      </span>
-       of the following Python code?
-
-
-    </span>
-  </span>
-  <span
-    className="c5 c4"
-  >
-    <div
-      className="c0 c6"
-    >
-      <div
-        className="c7 c1"
-      >
-        <span
-          className="c2"
-        >
-          1
-        </span>
-        <span
-          className="c2"
-        >
-          2
-        </span>
-        <span
-          className="c2"
-        >
-          3
-        </span>
-        <span
-          className="c2"
-        >
-          4
-        </span>
-        <span
-          className="c2"
-        >
-          5
-        </span>
-        <span
-          className="c2"
-        >
-          6
-        </span>
-        <span
-          className="c2"
-        >
-          7
-        </span>
-      </div>
-      <span
-        className="c8"
-      >
-        is_weekend = 
-        <span
-          className="c9"
-        >
-          True
-        </span>
-        
-have_homework = 
-        <span
-          className="c9"
-        >
-          False
-        </span>
-        
-
-
-        <span
-          className="c10"
-        >
-          if
-        </span>
-         is_weekend 
-        <span
-          className="c10"
-        >
-          and
-        </span>
-         
-        <span
-          className="c10"
-        >
-          not
-        </span>
-         have_homework:
-   print(
-        <span
-          className="c11"
-        >
-          "Time to chill and relax"
-        </span>
-        )
-
-        <span
-          className="c10"
-        >
-          else
-        </span>
-        :
-   print(
-        <span
-          className="c11"
-        >
-          "Time to study."
-        </span>
-        )
-      </span>
-    </div>
-  </span>
-  <span
-    className="c2"
-  />
+<div>
   <div
-    className="c12 c13"
+    class="c0 c1"
   >
     <span
-      className="c14"
+      class="c2"
     >
-      Code colour
+      <span
+        class="c2"
+      >
+        What is the 
+        <span
+          class="c3 c4"
+        >
+          output
+        </span>
+         of the following Python code?
+
+
+      </span>
     </span>
-    <div
-      className="c15"
-      id="oak-code-renderer-tooltip"
+    <span
+      class="c5 c4"
     >
       <div
-        className="c0 c1"
+        class="c0 c6"
       >
-        <p
-          className="c16"
+        <div
+          class="c7 c1"
         >
-          When programmers write code, they use a special tool called an IDE (Integrated Development Environment). In an IDE, different colours are used to help programmers understand the code:
-        </p>
-        <br />
-        <ul
-          className="c17"
+          <span
+            class="c2"
+          >
+            1
+          </span>
+          <span
+            class="c2"
+          >
+            2
+          </span>
+          <span
+            class="c2"
+          >
+            3
+          </span>
+          <span
+            class="c2"
+          >
+            4
+          </span>
+          <span
+            class="c2"
+          >
+            5
+          </span>
+          <span
+            class="c2"
+          >
+            6
+          </span>
+          <span
+            class="c2"
+          >
+            7
+          </span>
+        </div>
+        <span
+          class="c8"
         >
-          <li
-            className="c18"
+          is_weekend = 
+          <span
+            class="c9"
           >
-            <span
-              className="c19"
-            >
-              • Blue
-            </span>
-            <span
-              className="c14"
-            >
-               - numbers and boolean values
-            </span>
-          </li>
-          <li
-            className="c18"
+            True
+          </span>
+          
+have_homework = 
+          <span
+            class="c9"
           >
-            <span
-              className="c19"
-            >
-              • Green
-            </span>
-            <span
-              className="c14"
-            >
-               - strings
-            </span>
-          </li>
-          <li
-            className="c18"
+            False
+          </span>
+          
+
+
+          <span
+            class="c10"
           >
-            <span
-              className="c19"
-            >
-              • Purple
-            </span>
-            <span
-              className="c14"
-            >
-               - keywords
-            </span>
-          </li>
-        </ul>
+            if
+          </span>
+           is_weekend 
+          <span
+            class="c10"
+          >
+            and
+          </span>
+           
+          <span
+            class="c10"
+          >
+            not
+          </span>
+           have_homework:
+   print(
+          <span
+            class="c11"
+          >
+            "Time to chill and relax"
+          </span>
+          )
+
+          <span
+            class="c10"
+          >
+            else
+          </span>
+          :
+   print(
+          <span
+            class="c11"
+          >
+            "Time to study."
+          </span>
+          )
+        </span>
       </div>
-    </div>
+    </span>
+    <span
+      class="c2"
+    />
     <div
-      style={
-        {
-          "display": "contents",
-        }
-      }
+      class="c12 c13"
     >
-      <div
-        className="c20 c21 c22 c23"
+      <span
+        class="c14"
       >
-        <button
-          aria-describedby="oak-code-renderer-tooltip"
-          aria-label="open info tooltip"
-          className="c24 c25"
-          data-rac={true}
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          type="button"
+        Code colour
+      </span>
+      <div
+        class="c15"
+        id="oak-code-renderer-tooltip"
+      >
+        <div
+          class="c0 c1"
         >
-          <div
-            className="c0 c26"
+          <p
+            class="c16"
+          >
+            When programmers write code, they use a special tool called an IDE (Integrated Development Environment). In an IDE, different colours are used to help programmers understand the code:
+          </p>
+          <br />
+          <ul
+            class="c17"
+          >
+            <li
+              class="c18"
+            >
+              <span
+                class="c19"
+              >
+                • Blue
+              </span>
+              <span
+                class="c14"
+              >
+                 - numbers and boolean values
+              </span>
+            </li>
+            <li
+              class="c18"
+            >
+              <span
+                class="c19"
+              >
+                • Green
+              </span>
+              <span
+                class="c14"
+              >
+                 - strings
+              </span>
+            </li>
+            <li
+              class="c18"
+            >
+              <span
+                class="c19"
+              >
+                • Purple
+              </span>
+              <span
+                class="c14"
+              >
+                 - keywords
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        style="display: contents;"
+      >
+        <div
+          class="c20 c21 c22 c23"
+        >
+          <button
+            aria-describedby="oak-code-renderer-tooltip"
+            aria-label="open info tooltip"
+            class="c24 c25"
+            data-rac="true"
+            type="button"
           >
             <div
-              className="c27 c28 icon-container"
+              class="c0 c26"
             >
               <div
-                className="c29 shadow"
-              />
-              <div
-                className="c30"
-                data-icon-for="button"
+                class="c27 c28 icon-container"
               >
-                <img
-                  alt=""
-                  className="c31"
-                  data-nimg="fill"
-                  decoding="async"
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/Icon_Info_vsx3xi.svg"
-                  style={
-                    {
-                      "bottom": 0,
-                      "color": "transparent",
-                      "height": "100%",
-                      "left": 0,
-                      "objectFit": undefined,
-                      "objectPosition": undefined,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                      "width": "100%",
-                    }
-                  }
+                <div
+                  class="c29 shadow"
                 />
+                <div
+                  class="c30"
+                  data-icon-for="button"
+                >
+                  <img
+                    alt=""
+                    class="c31"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/Icon_Info_vsx3xi.svg"
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                  />
+                </div>
               </div>
+              <span
+                class="c19"
+              />
             </div>
-            <span
-              className="c19"
-            />
-          </div>
-        </button>
+          </button>
+        </div>
       </div>
     </div>
   </div>

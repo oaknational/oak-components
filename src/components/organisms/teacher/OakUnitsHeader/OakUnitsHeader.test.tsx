@@ -1,12 +1,9 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
 
 import { OakUnitsHeader } from "./OakUnitsHeader";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { oakDefaultTheme } from "@/styles";
 import { OakInlineBanner } from "@/components";
 
 const props = {
@@ -19,38 +16,32 @@ const props = {
 describe("OakUnitsHeader", () => {
   it("renders", () => {
     const { getByTestId } = renderWithTheme(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakUnitsHeader data-testid="test" {...props} />
-      </ThemeProvider>,
+      <OakUnitsHeader data-testid="test" {...props} />,
     );
     expect(getByTestId("test")).toBeInTheDocument();
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakUnitsHeader {...props}></OakUnitsHeader>
-      </ThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakUnitsHeader {...props}></OakUnitsHeader>,
+    );
+    expect(container).toMatchSnapshot();
   });
 
   it("matches snapshot with banner", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakUnitsHeader
-          {...props}
-          banner={
-            <OakInlineBanner
-              isOpen={true}
-              message={"Example banner text"}
-              type="neutral"
-              $width={"100%"}
-            />
-          }
-        ></OakUnitsHeader>
-      </ThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakUnitsHeader
+        {...props}
+        banner={
+          <OakInlineBanner
+            isOpen={true}
+            message={"Example banner text"}
+            type="neutral"
+            $width={"100%"}
+          />
+        }
+      ></OakUnitsHeader>,
+    );
+    expect(container).toMatchSnapshot();
   });
 });

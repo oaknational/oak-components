@@ -1,9 +1,10 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render, fireEvent } from "@testing-library/react";
-import { create } from "react-test-renderer";
 
 import { InternalButton } from "./InternalButton";
+
+import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("InternalButton", () => {
   beforeEach(() => {
@@ -23,8 +24,10 @@ describe("InternalButton", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(<InternalButton>Click Me</InternalButton>).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <InternalButton>Click Me</InternalButton>,
+    );
+    expect(container).toMatchSnapshot();
   });
 
   it("renders the chidren", () => {

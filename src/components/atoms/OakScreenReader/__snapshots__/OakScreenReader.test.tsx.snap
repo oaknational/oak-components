@@ -14,7 +14,9 @@ exports[`OakScreenReader matches snapshot 1`] = `
   border: 0;
 }
 
-<span
-  className="c0"
-/>
+<div>
+  <span
+    class="c0"
+  />
+</div>
 `;

@@ -1,14 +1,12 @@
 import React from "react";
-import { create } from "react-test-renderer";
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom";
 
 import { OakButtonWithDropdown } from "./OakButtonWithDropdown";
 
 import { OakSecondaryButton } from "@/components/molecules/OakSecondaryButton";
-import { OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
+import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 const defaultProps = {
   primaryActionText: "Actions",
@@ -26,27 +24,19 @@ const simpleChildren = (
   </>
 );
 
-const renderWithTheme = (component: React.ReactElement) => {
-  return render(
-    <OakThemeProvider theme={oakDefaultTheme}>{component}</OakThemeProvider>,
-  );
-};
-
 describe("OakButtonWithDropdown", () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakButtonWithDropdown {...defaultProps}>
-          {simpleChildren}
-        </OakButtonWithDropdown>
-      </OakThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <OakButtonWithDropdown {...defaultProps}>
+        {simpleChildren}
+      </OakButtonWithDropdown>,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it("renders primary action button with correct text", () => {

@@ -1,12 +1,9 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
 
 import { OakQuizTextInput } from "./OakQuizTextInput";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { oakDefaultTheme } from "@/styles";
 
 describe("OakQuizTextInput", () => {
   it("renders", () => {
@@ -21,13 +18,11 @@ describe("OakQuizTextInput", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakQuizTextInput defaultValue="An answer to a question" />,
-      </ThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <OakQuizTextInput defaultValue="An answer to a question" />,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it('sets the input to read-only when feedback is "correct"', () => {

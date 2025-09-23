@@ -1,26 +1,17 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 
 import { OakLessonReviewIntroVideo } from "./OakPupilLessonReviewIntroVideo";
 
-import { OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe(OakLessonReviewIntroVideo, () => {
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakLessonReviewIntroVideo
-          lessonSectionName="intro"
-          completed={false}
-        />
-        ,
-      </OakThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <OakLessonReviewIntroVideo lessonSectionName="intro" completed={false} />,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it("renders copy for each lesson section that has not been completed", () => {

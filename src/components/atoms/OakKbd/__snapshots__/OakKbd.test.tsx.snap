@@ -21,9 +21,11 @@ exports[`OakKbd matches snapshot 1`] = `
   white-space: nowrap;
 }
 
-<kbd
-  className="c0"
->
-  Tab
-</kbd>
+<div>
+  <kbd
+    class="c0"
+  >
+    Tab
+  </kbd>
+</div>
 `;

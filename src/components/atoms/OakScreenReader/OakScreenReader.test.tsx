@@ -1,9 +1,10 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
-import { create } from "react-test-renderer";
 
 import { OakScreenReader } from "./OakScreenReader";
+
+import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("OakScreenReader", () => {
   it("renders", () => {
@@ -12,8 +13,8 @@ describe("OakScreenReader", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(<OakScreenReader />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(<OakScreenReader />);
+    expect(container).toMatchSnapshot();
   });
 
   it("the child text is hidden", () => {

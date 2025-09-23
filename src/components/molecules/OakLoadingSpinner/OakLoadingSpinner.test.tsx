@@ -1,9 +1,10 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
-import { create } from "react-test-renderer";
 
 import { OakLoadingSpinner } from "./OakLoadingSpinner";
+
+import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("OakLoadingSpinner", () => {
   it("renders", () => {
@@ -12,8 +13,8 @@ describe("OakLoadingSpinner", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(<OakLoadingSpinner />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(<OakLoadingSpinner />);
+    expect(container).toMatchSnapshot();
   });
 
   it("has accessible text", () => {

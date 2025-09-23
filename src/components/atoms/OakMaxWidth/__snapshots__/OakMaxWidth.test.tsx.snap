@@ -43,7 +43,9 @@ exports[`OakMaxWidth matches snapshot 1`] = `
   }
 }
 
-<div
-  className="c0 c1"
-/>
+<div>
+  <div
+    class="c0 c1"
+  />
+</div>
 `;

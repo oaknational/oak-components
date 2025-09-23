@@ -1,6 +1,5 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 
 import { OakHandDrawnHR } from "./OakHandDrawnHR";
 
@@ -15,7 +14,7 @@ describe("OakHandDrawnHR", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(<OakHandDrawnHR />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(<OakHandDrawnHR />);
+    expect(container).toMatchSnapshot();
   });
 });

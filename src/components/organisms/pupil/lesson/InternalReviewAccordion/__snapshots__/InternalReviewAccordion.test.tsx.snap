@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`InternalReviewAccordion matches snapshot 1`] = `
-[
-  .c0 {
+.c0 {
   padding-top: 1.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -45,6 +44,18 @@ exports[`InternalReviewAccordion matches snapshot 1`] = `
   min-width: 1.5rem;
   height: 1.5rem;
   min-height: 1.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c17 {
+  min-width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  margin-top: 1.5rem;
+  background: #ffffff;
+  border-radius: 1rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -186,6 +197,10 @@ exports[`InternalReviewAccordion matches snapshot 1`] = `
   background: #222222;
 }
 
+.c16 {
+  width: 100%;
+}
+
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -212,110 +227,61 @@ exports[`InternalReviewAccordion matches snapshot 1`] = `
   }
 }
 
-<div
-    className="c0 c1"
+<div>
+  <div
+    class="c0 c1"
   >
     <div
-      className="c2 c3 c4 c5"
+      class="c2 c3 c4 c5"
     >
       <button
-        aria-expanded={true}
-        className="c6 c7"
+        aria-expanded="true"
+        class="c6 c7"
         id="see-more"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
       >
         <div
-          className="c8 c9"
+          class="c8 c9"
         >
           <span
-            className="c10"
+            class="c10"
           >
             Results
           </span>
           <div
-            className="c11 c12 icon-container"
+            class="c11 c12 icon-container"
           >
             <div
-              className="c13 shadow"
+              class="c13 shadow"
             />
             <div
-              className="c14"
+              class="c14"
               data-icon-for="button"
             >
               <img
                 alt=""
-                className="c15"
+                class="c15"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"
-                onError={[Function]}
-                onLoad={[Function]}
                 src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
-                style={
-                  {
-                    "bottom": 0,
-                    "color": "transparent",
-                    "height": "100%",
-                    "left": 0,
-                    "objectFit": undefined,
-                    "objectPosition": undefined,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                    "width": "100%",
-                  }
-                }
+                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
               />
             </div>
           </div>
         </div>
       </button>
     </div>
-  </div>,
-  .c0 {
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c2 {
-  min-width: 100%;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-  margin-top: 1.5rem;
-  background: #ffffff;
-  border-radius: 1rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c1 {
-  width: 100%;
-}
-
-@media (min-width:750px) {
-
-}
-
-<div
+  </div>
+  <div
     aria-labelledby="see-more"
-    className="c0 c1"
-    hidden={false}
+    class="c8 c16"
     role="region"
   >
     <div
-      className="c2 c3"
+      class="c17 c3"
     >
       Here it is
     </div>
-  </div>,
-]
+  </div>
+</div>
 `;

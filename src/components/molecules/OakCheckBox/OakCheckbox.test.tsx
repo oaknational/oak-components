@@ -1,13 +1,10 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 import { fireEvent } from "@testing-library/react";
 
 import { OakCheckBox } from "./OakCheckBox";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
 
 describe("OakCheckBox", () => {
   it("renders a checkbox", () => {
@@ -18,12 +15,10 @@ describe("OakCheckBox", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakCheckBox id="checkbox-1" value="Option 1" />
-      </OakThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakCheckBox id="checkbox-1" value="Option 1" />,
+    );
+    expect(container).toMatchSnapshot();
   });
 
   it("renders value as a label", () => {

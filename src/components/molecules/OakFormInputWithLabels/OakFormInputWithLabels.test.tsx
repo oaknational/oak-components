@@ -1,12 +1,9 @@
 import React from "react";
-import { create } from "react-test-renderer";
 import "@testing-library/jest-dom";
-import { ThemeProvider } from "styled-components";
 
 import { OakFormInputWithLabels } from "./OakFormInputWithLabels";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { oakDefaultTheme } from "@/styles";
 
 describe("OakFormInputWithLabels", () => {
   it("should render correctly", () => {
@@ -17,16 +14,14 @@ describe("OakFormInputWithLabels", () => {
   });
 
   it("should match snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakFormInputWithLabels
-          label="Sample Input"
-          placeholder="Enter text"
-          value="Sample text"
-        />
-      </ThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakFormInputWithLabels
+        label="Sample Input"
+        placeholder="Enter text"
+        value="Sample text"
+      />,
+    );
+    expect(container).toMatchSnapshot();
   });
 
   it("should handle disabled state", () => {

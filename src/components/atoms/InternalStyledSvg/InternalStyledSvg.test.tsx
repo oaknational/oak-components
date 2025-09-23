@@ -1,12 +1,13 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 
 import { InternalStyledSvg } from "./InternalStyledSvg";
 
+import renderWithTheme from "@/test-helpers/renderWithTheme";
+
 describe("InternalStyledSvg", () => {
   it("matches snapshot", () => {
-    const tree = create(
+    const { container } = renderWithTheme(
       <InternalStyledSvg
         $fill="amber30"
         $stroke="amber50"
@@ -14,8 +15,8 @@ describe("InternalStyledSvg", () => {
       >
         <path d="M0 1 2 3Z" />
       </InternalStyledSvg>,
-    ).toJSON();
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

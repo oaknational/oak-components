@@ -1,12 +1,9 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 
 import { OakImage } from "./OakImage";
 
-import { OakThemeProvider } from "@/components/atoms/OakThemeProvider";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { oakDefaultTheme } from "@/styles";
 
 describe("OakImage", () => {
   it("renders", () => {
@@ -21,15 +18,13 @@ describe("OakImage", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakImage
-          src="/../../../../assets/oak-national-academy-logo-512.png"
-          alt="a test image"
-        />
-      </OakThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakImage
+        src="/../../../../assets/oak-national-academy-logo-512.png"
+        alt="a test image"
+      />,
+    );
+    expect(container).toMatchSnapshot();
   });
 
   it("defaults to 100% width and auto height when aspect ratio props are provide and sets minWidth on container", () => {

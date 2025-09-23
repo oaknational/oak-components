@@ -154,94 +154,84 @@ exports[`RadioGroup matches snapshot 1`] = `
   }
 }
 
-<div
-  className="c0 c1"
-  role="radiogroup"
->
+<div>
   <div
-    className="c2"
+    class="c0 c1"
+    role="radiogroup"
   >
-    <label
-      className="c3 c4"
-      data-testid="radio-1"
-      htmlFor="radio-1"
+    <div
+      class="c2"
     >
-      <div
-        className="c5 c6"
+      <label
+        class="c3 c4"
+        data-testid="radio-1"
+        for="radio-1"
       >
-        <input
-          checked={false}
-          className="c7 c8"
-          id="radio-1"
-          name="test"
-          onChange={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          type="radio"
-          value="1"
-        />
         <div
-          className="c9 c10 c11 c12"
-        />
-      </div>
-      Option 1
-    </label>
-  </div>
-  <div
-    className="c2"
-  >
-    <label
-      className="c3 c4"
-      htmlFor="radio-2"
+          class="c5 c6"
+        >
+          <input
+            class="c7 c8"
+            id="radio-1"
+            name="test"
+            type="radio"
+            value="1"
+          />
+          <div
+            class="c9 c10 c11 c12"
+          />
+        </div>
+        Option 1
+      </label>
+    </div>
+    <div
+      class="c2"
     >
-      <div
-        className="c5 c6"
+      <label
+        class="c3 c4"
+        for="radio-2"
       >
-        <input
-          checked={false}
-          className="c7 c8"
-          id="radio-2"
-          name="test"
-          onChange={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          type="radio"
-          value="2"
-        />
         <div
-          className="c9 c10 c11 c12"
-        />
-      </div>
-      Option 2
-    </label>
-  </div>
-  <div
-    className="c2"
-  >
-    <label
-      className="c3 c4"
-      htmlFor="radio-3"
+          class="c5 c6"
+        >
+          <input
+            class="c7 c8"
+            id="radio-2"
+            name="test"
+            type="radio"
+            value="2"
+          />
+          <div
+            class="c9 c10 c11 c12"
+          />
+        </div>
+        Option 2
+      </label>
+    </div>
+    <div
+      class="c2"
     >
-      <div
-        className="c5 c6"
+      <label
+        class="c3 c4"
+        for="radio-3"
       >
-        <input
-          checked={false}
-          className="c7 c8"
-          id="radio-3"
-          name="test"
-          onChange={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          type="radio"
-          value="3"
-        />
         <div
-          className="c9 c10 c11 c12"
-        />
-      </div>
-      Option 3
-    </label>
+          class="c5 c6"
+        >
+          <input
+            class="c7 c8"
+            id="radio-3"
+            name="test"
+            type="radio"
+            value="3"
+          />
+          <div
+            class="c9 c10 c11 c12"
+          />
+        </div>
+        Option 3
+      </label>
+    </div>
   </div>
 </div>
 `;

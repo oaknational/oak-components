@@ -59,46 +59,33 @@ exports[`OakLessonInfoCard component test matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-<div
-  className="c0 c1"
->
+<div>
   <div
-    className="c2 c3"
+    class="c0 c1"
   >
     <div
-      className="c4"
+      class="c2 c3"
     >
-      <img
-        alt=""
-        className="c5"
-        data-nimg="fill"
-        decoding="async"
-        loading="lazy"
-        onError={[Function]}
-        onLoad={[Function]}
-        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1706872277/icons/question-mark.svg"
-        style={
-          {
-            "bottom": 0,
-            "color": "transparent",
-            "height": "100%",
-            "left": 0,
-            "objectFit": undefined,
-            "objectPosition": undefined,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-            "width": "100%",
-          }
-        }
-      />
+      <div
+        class="c4"
+      >
+        <img
+          alt=""
+          class="c5"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1706872277/icons/question-mark.svg"
+          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+        />
+      </div>
+      <h1
+        class="c6"
+      >
+        Header title
+      </h1>
     </div>
-    <h1
-      className="c6"
-    >
-      Header title
-    </h1>
+    Children of the compoent goes here.
   </div>
-  Children of the compoent goes here.
 </div>
 `;

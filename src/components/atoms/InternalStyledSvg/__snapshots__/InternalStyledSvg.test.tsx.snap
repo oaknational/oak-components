@@ -7,11 +7,13 @@ exports[`InternalStyledSvg matches snapshot 1`] = `
   stroke-width: 0.125rem;
 }
 
-<svg
-  className="c0"
->
-  <path
-    d="M0 1 2 3Z"
-  />
-</svg>
+<div>
+  <svg
+    class="c0"
+  >
+    <path
+      d="M0 1 2 3Z"
+    />
+  </svg>
+</div>
 `;

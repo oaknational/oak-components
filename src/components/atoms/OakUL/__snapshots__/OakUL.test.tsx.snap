@@ -7,7 +7,9 @@ exports[`Component OakUL matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-<ul
-  className="c0"
-/>
+<div>
+  <ul
+    class="c0"
+  />
+</div>
 `;

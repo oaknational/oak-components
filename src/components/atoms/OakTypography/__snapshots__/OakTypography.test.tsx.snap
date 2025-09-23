@@ -9,7 +9,9 @@ exports[`OakTypography matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-<div
-  className="c0 c1"
-/>
+<div>
+  <div
+    class="c0 c1"
+  />
+</div>
 `;

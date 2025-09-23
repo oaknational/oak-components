@@ -1,12 +1,9 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 import { act, fireEvent } from "@testing-library/react";
-import { ThemeProvider } from "styled-components";
 
 import { OakVideoTranscript } from "./OakVideoTranscript";
 
-import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe(OakVideoTranscript, () => {
@@ -20,19 +17,17 @@ describe(OakVideoTranscript, () => {
   };
 
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakVideoTranscript
-          id="transcript-element"
-          copyLinkControl={copyLinkControl}
-          signLanguageControl={signLanguageControl}
-        >
-          Transcript goes here
-        </OakVideoTranscript>
-      </ThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <OakVideoTranscript
+        id="transcript-element"
+        copyLinkControl={copyLinkControl}
+        signLanguageControl={signLanguageControl}
+      >
+        Transcript goes here
+      </OakVideoTranscript>,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it("handles transcript click correctly", () => {

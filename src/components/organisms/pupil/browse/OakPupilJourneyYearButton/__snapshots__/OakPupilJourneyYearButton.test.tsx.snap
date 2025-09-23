@@ -132,30 +132,29 @@ exports[`OakPupilJourneyYearButton matches snapshot 1`] = `
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-<div
-  className="c0 c1"
->
+<div>
   <div
-    className="c2 grey-shadow"
-  />
-  <div
-    className="c2 yellow-shadow"
-  />
-  <button
-    className="c3 c4 internal-button"
-    onClick={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
+    class="c0 c1"
   >
     <div
-      className="c5 c6"
+      class="c2 grey-shadow"
+    />
+    <div
+      class="c2 yellow-shadow"
+    />
+    <button
+      class="c3 c4 internal-button"
     >
-      <span
-        className="c7"
+      <div
+        class="c5 c6"
       >
-        Year 1
-      </span>
-    </div>
-  </button>
+        <span
+          class="c7"
+        >
+          Year 1
+        </span>
+      </div>
+    </button>
+  </div>
 </div>
 `;

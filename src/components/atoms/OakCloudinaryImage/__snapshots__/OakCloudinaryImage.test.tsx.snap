@@ -8,37 +8,29 @@ exports[`OakCloudinaryImage matches snapshot 1`] = `
 }
 
 .c1 {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHBhdGggZmlsbD0iIzIyMiIgZD0iTTI4Ljc3OSAxOS4xNzZhMjcuMTkxIDI3LjE5MSAwIDAgMC0zLjggMS42IDE2LjcgMTYuNyAwIDAgMC03LjEgOC40YzAgLjEtLjEuMi0uMS4zLS43IDIuNC0uNiAyIDEuMyAyLjMgMS45LjMgMSAuNSAxIDEuMy0uMSA4LjggNC4xIDE1LjEgMTEuNCAxOS42YTEuNSAxLjUgMCAwIDAgMS43LjJjNS43LTIuNiA5LjMtNyAxMC4zLTEzLjJhMSAxIDAgMCAxIDEtMWwzLS4yYy44IDAgMS4zLjIgMS4yIDEuMmExNy45IDE3LjkgMCAwIDEtMy4yIDkuMiAyMy43IDIzLjcgMCAwIDEtMTAuOSA5LjEgNS40MDEgNS40MDEgMCAwIDEtNC41LS4yIDI2LjI5OCAyNi4yOTggMCAwIDEtOC41LTYuNiAyNS45IDI1LjkgMCAwIDEtNi40LTE0LjRjMC0uNi0uMi0uNy0uOC0uOC0yLjUtLjQtMi41LS4xLTIuMy0yLjlhMTkuMyAxOS4zIDAgMCAxIDEwLjgtMTYuNiAzOC45OTkgMzguOTk5IDAgMCAxIDUuNy0yLjEgMi4xIDIuMSAwIDAgMCAuOS0xLjMgMTQuMSAxNC4xIDAgMCAxIDMuNS02LjNsLjMtLjNjMS45LTIgMi42LTIgNC4zLjJsLjQuNWMxLjEgMS4xIDEgMS41LS4xIDIuNmExMS45IDExLjkgMCAwIDAtMy4yIDQuNCAxNi45IDE2LjkgMCAwIDEgNy41IDIuM2M1LjcgMy41IDkuMiA4LjMgOS45IDE1IC4wMTYuOTAxLS4wMTcgMS44MDItLjEgMi43IDAgLjgtLjYgMS0xLjIgMS4yYTE2LjEgMTYuMSAwIDAgMS0xMS0uNyAxNy45MDEgMTcuOTAxIDAgMCAxLTEwLjktMTMuNiA5Ljc5NiA5Ljc5NiAwIDAgMS0uMS0xLjlabTE4LjEgMTIuMmMuNC01LjUtNi45LTEyLjYtMTMtMTIuMS41IDYuNSA3LjYgMTIuOCAxMyAxMi4xWiIgb3BhY2l0eT0iLjEiLz48L3N2Zz4=);
+  background-color: #e7f6f5;
+  background-size: 4rem;
+  background-position: center;
+  background-repeat: no-repeat;
   object-fit: contain;
 }
 
-<div
-  className="c0"
->
-  <img
-    alt="a test image"
-    className="c1"
-    data-nimg="fill"
-    decoding="async"
-    loading="lazy"
-    onError={[Function]}
-    onLoad={[Function]}
-    sizes="100vw"
-    src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/fl_keep_attribution/c_limit,w_3840/f_auto/q_auto/v1/v1688316547/xqvnpdqx9u2awiykyb8s.jpg?_a=BAVAZGDX0"
-    srcSet="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/fl_keep_attribution/c_limit,w_640/f_auto/q_auto/v1/v1688316547/xqvnpdqx9u2awiykyb8s.jpg?_a=BAVAZGDX0 640w, https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/fl_keep_attribution/c_limit,w_750/f_auto/q_auto/v1/v1688316547/xqvnpdqx9u2awiykyb8s.jpg?_a=BAVAZGDX0 750w, https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/fl_keep_attribution/c_limit,w_828/f_auto/q_auto/v1/v1688316547/xqvnpdqx9u2awiykyb8s.jpg?_a=BAVAZGDX0 828w, https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/fl_keep_attribution/c_limit,w_1080/f_auto/q_auto/v1/v1688316547/xqvnpdqx9u2awiykyb8s.jpg?_a=BAVAZGDX0 1080w, https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/fl_keep_attribution/c_limit,w_1200/f_auto/q_auto/v1/v1688316547/xqvnpdqx9u2awiykyb8s.jpg?_a=BAVAZGDX0 1200w, https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/fl_keep_attribution/c_limit,w_1920/f_auto/q_auto/v1/v1688316547/xqvnpdqx9u2awiykyb8s.jpg?_a=BAVAZGDX0 1920w, https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/fl_keep_attribution/c_limit,w_2048/f_auto/q_auto/v1/v1688316547/xqvnpdqx9u2awiykyb8s.jpg?_a=BAVAZGDX0 2048w, https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/fl_keep_attribution/c_limit,w_3840/f_auto/q_auto/v1/v1688316547/xqvnpdqx9u2awiykyb8s.jpg?_a=BAVAZGDX0 3840w"
-    style={
-      {
-        "bottom": 0,
-        "color": "transparent",
-        "height": "100%",
-        "left": 0,
-        "objectFit": undefined,
-        "objectPosition": undefined,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-        "width": "100%",
-      }
-    }
-  />
+<div>
+  <div
+    class="c0"
+  >
+    <img
+      alt="a test image"
+      class="c1"
+      data-nimg="fill"
+      decoding="async"
+      loading="lazy"
+      sizes="100vw"
+      src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/fl_keep_attribution/c_limit,w_3840/f_auto/q_auto/v1/v1688316547/xqvnpdqx9u2awiykyb8s.jpg?_a=BAVAZGDX0"
+      srcset="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/fl_keep_attribution/c_limit,w_640/f_auto/q_auto/v1/v1688316547/xqvnpdqx9u2awiykyb8s.jpg?_a=BAVAZGDX0 640w, https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/fl_keep_attribution/c_limit,w_750/f_auto/q_auto/v1/v1688316547/xqvnpdqx9u2awiykyb8s.jpg?_a=BAVAZGDX0 750w, https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/fl_keep_attribution/c_limit,w_828/f_auto/q_auto/v1/v1688316547/xqvnpdqx9u2awiykyb8s.jpg?_a=BAVAZGDX0 828w, https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/fl_keep_attribution/c_limit,w_1080/f_auto/q_auto/v1/v1688316547/xqvnpdqx9u2awiykyb8s.jpg?_a=BAVAZGDX0 1080w, https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/fl_keep_attribution/c_limit,w_1200/f_auto/q_auto/v1/v1688316547/xqvnpdqx9u2awiykyb8s.jpg?_a=BAVAZGDX0 1200w, https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/fl_keep_attribution/c_limit,w_1920/f_auto/q_auto/v1/v1688316547/xqvnpdqx9u2awiykyb8s.jpg?_a=BAVAZGDX0 1920w, https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/fl_keep_attribution/c_limit,w_2048/f_auto/q_auto/v1/v1688316547/xqvnpdqx9u2awiykyb8s.jpg?_a=BAVAZGDX0 2048w, https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/fl_keep_attribution/c_limit,w_3840/f_auto/q_auto/v1/v1688316547/xqvnpdqx9u2awiykyb8s.jpg?_a=BAVAZGDX0 3840w"
+      style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+    />
+  </div>
 </div>
 `;

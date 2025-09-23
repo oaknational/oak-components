@@ -1,13 +1,11 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 import { act, fireEvent } from "@testing-library/react";
 
 import { OakDownloadsAccordion } from "./OakDownloadsAccordion";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { OakThemeProvider, OakFlex } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
+import { OakFlex } from "@/components/atoms";
 import { OakDownloadCard } from "@/components/molecules/OakDownloadCard";
 
 const mockHandleToggleSelectAll = jest.fn();
@@ -45,12 +43,10 @@ describe("OakDownloadsAccordion", () => {
   });
 
   it("matches snapshot when closed", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakDownloadsAccordion {...defaultProps} />
-      </OakThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakDownloadsAccordion {...defaultProps} />,
+    );
+    expect(container).toMatchSnapshot();
   });
 
   it("displays correct heading when selectAllChecked is false", () => {

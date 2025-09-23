@@ -348,161 +348,115 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   }
 }
 
-<div
-  className="c0 c1"
-  data-testid="oak-inline-banner"
->
+<div>
   <div
-    className="c2 c3"
+    class="c0 c1"
+    data-testid="oak-inline-banner"
   >
     <div
-      className="c4"
+      class="c2 c3"
     >
       <div
-        className="c5"
-        data-testid="inline-banner-icon"
+        class="c4"
       >
-        <img
-          alt=""
-          className="c6"
-          data-nimg="fill"
-          decoding="async"
-          loading="lazy"
-          onError={[Function]}
-          onLoad={[Function]}
-          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/Icon_Info_vsx3xi.svg"
-          style={
-            {
-              "bottom": 0,
-              "color": "transparent",
-              "height": "100%",
-              "left": 0,
-              "objectFit": undefined,
-              "objectPosition": undefined,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-              "width": "100%",
-            }
-          }
-        />
-      </div>
-    </div>
-    <div
-      className="c4 c7"
-    >
-      <div
-        className="c8 c9 c10"
-      >
-        <button
-          aria-label="Dismiss banner"
-          className="c11 c12"
-          data-testid="inline-banner-close-button"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
+        <div
+          class="c5"
+          data-testid="inline-banner-icon"
         >
-          <div
-            className="c4 c13"
+          <img
+            alt=""
+            class="c6"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/Icon_Info_vsx3xi.svg"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+          />
+        </div>
+      </div>
+      <div
+        class="c4 c7"
+      >
+        <div
+          class="c8 c9 c10"
+        >
+          <button
+            aria-label="Dismiss banner"
+            class="c11 c12"
+            data-testid="inline-banner-close-button"
           >
             <div
-              className="c14 c15 icon-container"
+              class="c4 c13"
             >
               <div
-                className="c16 shadow"
-              />
-              <div
-                className="c17"
-                data-icon-for="button"
+                class="c14 c15 icon-container"
               >
-                <img
-                  alt=""
-                  className="c6"
-                  data-nimg="fill"
-                  decoding="async"
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
-                  style={
-                    {
-                      "bottom": 0,
-                      "color": "transparent",
-                      "height": "100%",
-                      "left": 0,
-                      "objectFit": undefined,
-                      "objectPosition": undefined,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                      "width": "100%",
-                    }
-                  }
+                <div
+                  class="c16 shadow"
                 />
+                <div
+                  class="c17"
+                  data-icon-for="button"
+                >
+                  <img
+                    alt=""
+                    class="c6"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                  />
+                </div>
               </div>
+              <span
+                class="c18"
+              />
             </div>
-            <span
-              className="c18"
-            />
-          </div>
-        </button>
-      </div>
-    </div>
-    <div
-      className="c19 c20"
-    >
-      <h1
-        className="c21"
-        data-testid="inline-banner-title"
-      >
-        Information
-      </h1>
-      <div
-        className="c22"
-        data-testid="inline-banner-message"
-      >
-        Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet.
+          </button>
+        </div>
       </div>
       <div
-        className="c23 c9"
+        class="c19 c20"
       >
-        <a
-          className="c24 "
+        <h1
+          class="c21"
+          data-testid="inline-banner-title"
         >
-          <span
-            className="c25"
+          Information
+        </h1>
+        <div
+          class="c22"
+          data-testid="inline-banner-message"
+        >
+          Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet.
+        </div>
+        <div
+          class="c23 c9"
+        >
+          <a
+            class="c24 "
           >
-            Link
-          </span>
-          <div
-            className="c17 "
-          >
-            <img
-              alt=""
-              className="c26"
-              data-nimg="fill"
-              decoding="async"
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
-              style={
-                {
-                  "bottom": 0,
-                  "color": "transparent",
-                  "height": "100%",
-                  "left": 0,
-                  "objectFit": undefined,
-                  "objectPosition": undefined,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-            />
-          </div>
-        </a>
+            <span
+              class="c25"
+            >
+              Link
+            </span>
+            <div
+              class="c17 "
+            >
+              <img
+                alt=""
+                class="c26"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
+                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+              />
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -864,161 +818,115 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   }
 }
 
-<div
-  className="c0 c1"
-  data-testid="oak-inline-banner"
->
+<div>
   <div
-    className="c2 c3"
+    class="c0 c1"
+    data-testid="oak-inline-banner"
   >
     <div
-      className="c4"
+      class="c2 c3"
     >
       <div
-        className="c5"
-        data-testid="inline-banner-icon"
+        class="c4"
       >
-        <img
-          alt=""
-          className="c6"
-          data-nimg="fill"
-          decoding="async"
-          loading="lazy"
-          onError={[Function]}
-          onLoad={[Function]}
-          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/Icon_Info_vsx3xi.svg"
-          style={
-            {
-              "bottom": 0,
-              "color": "transparent",
-              "height": "100%",
-              "left": 0,
-              "objectFit": undefined,
-              "objectPosition": undefined,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-              "width": "100%",
-            }
-          }
-        />
-      </div>
-    </div>
-    <div
-      className="c7 c8"
-    >
-      <div
-        className="c9 c10 c11"
-      >
-        <button
-          aria-label="Dismiss banner"
-          className="c12 c13"
-          data-testid="inline-banner-close-button"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
+        <div
+          class="c5"
+          data-testid="inline-banner-icon"
         >
-          <div
-            className="c4 c14"
+          <img
+            alt=""
+            class="c6"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/Icon_Info_vsx3xi.svg"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+          />
+        </div>
+      </div>
+      <div
+        class="c7 c8"
+      >
+        <div
+          class="c9 c10 c11"
+        >
+          <button
+            aria-label="Dismiss banner"
+            class="c12 c13"
+            data-testid="inline-banner-close-button"
           >
             <div
-              className="c15 c16 icon-container"
+              class="c4 c14"
             >
               <div
-                className="c17 shadow"
-              />
-              <div
-                className="c18"
-                data-icon-for="button"
+                class="c15 c16 icon-container"
               >
-                <img
-                  alt=""
-                  className="c6"
-                  data-nimg="fill"
-                  decoding="async"
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
-                  style={
-                    {
-                      "bottom": 0,
-                      "color": "transparent",
-                      "height": "100%",
-                      "left": 0,
-                      "objectFit": undefined,
-                      "objectPosition": undefined,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                      "width": "100%",
-                    }
-                  }
+                <div
+                  class="c17 shadow"
                 />
+                <div
+                  class="c18"
+                  data-icon-for="button"
+                >
+                  <img
+                    alt=""
+                    class="c6"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                  />
+                </div>
               </div>
+              <span
+                class="c19"
+              />
             </div>
-            <span
-              className="c19"
-            />
-          </div>
-        </button>
-      </div>
-    </div>
-    <div
-      className="c20 c21"
-    >
-      <h1
-        className="c22"
-        data-testid="inline-banner-title"
-      >
-        Information
-      </h1>
-      <div
-        className="c23"
-        data-testid="inline-banner-message"
-      >
-        Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet.
+          </button>
+        </div>
       </div>
       <div
-        className="c24 c10"
+        class="c20 c21"
       >
-        <a
-          className="c25 "
+        <h1
+          class="c22"
+          data-testid="inline-banner-title"
         >
-          <span
-            className="c26"
+          Information
+        </h1>
+        <div
+          class="c23"
+          data-testid="inline-banner-message"
+        >
+          Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet.
+        </div>
+        <div
+          class="c24 c10"
+        >
+          <a
+            class="c25 "
           >
-            Link
-          </span>
-          <div
-            className="c18 "
-          >
-            <img
-              alt=""
-              className="c27"
-              data-nimg="fill"
-              decoding="async"
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
-              style={
-                {
-                  "bottom": 0,
-                  "color": "transparent",
-                  "height": "100%",
-                  "left": 0,
-                  "objectFit": undefined,
-                  "objectPosition": undefined,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-            />
-          </div>
-        </a>
+            <span
+              class="c26"
+            >
+              Link
+            </span>
+            <div
+              class="c18 "
+            >
+              <img
+                alt=""
+                class="c27"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
+                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+              />
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -1357,155 +1265,109 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   }
 }
 
-<div
-  className="c0 c1"
-  data-testid="oak-inline-banner"
->
+<div>
   <div
-    className="c2 c3"
+    class="c0 c1"
+    data-testid="oak-inline-banner"
   >
     <div
-      className="c4"
+      class="c2 c3"
     >
       <div
-        className="c5"
-        data-testid="inline-banner-icon"
+        class="c4"
       >
-        <img
-          alt=""
-          className="c6"
-          data-nimg="fill"
-          decoding="async"
-          loading="lazy"
-          onError={[Function]}
-          onLoad={[Function]}
-          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/Icon_Info_vsx3xi.svg"
-          style={
-            {
-              "bottom": 0,
-              "color": "transparent",
-              "height": "100%",
-              "left": 0,
-              "objectFit": undefined,
-              "objectPosition": undefined,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-              "width": "100%",
-            }
-          }
-        />
-      </div>
-    </div>
-    <div
-      className="c4 c7"
-    >
-      <div
-        className="c8 c9 c10"
-      >
-        <button
-          aria-label="Dismiss banner"
-          className="c11 c12"
-          data-testid="inline-banner-close-button"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
+        <div
+          class="c5"
+          data-testid="inline-banner-icon"
         >
-          <div
-            className="c4 c13"
+          <img
+            alt=""
+            class="c6"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/Icon_Info_vsx3xi.svg"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+          />
+        </div>
+      </div>
+      <div
+        class="c4 c7"
+      >
+        <div
+          class="c8 c9 c10"
+        >
+          <button
+            aria-label="Dismiss banner"
+            class="c11 c12"
+            data-testid="inline-banner-close-button"
           >
             <div
-              className="c14 c15 icon-container"
+              class="c4 c13"
             >
               <div
-                className="c16 shadow"
-              />
-              <div
-                className="c17"
-                data-icon-for="button"
+                class="c14 c15 icon-container"
               >
-                <img
-                  alt=""
-                  className="c6"
-                  data-nimg="fill"
-                  decoding="async"
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
-                  style={
-                    {
-                      "bottom": 0,
-                      "color": "transparent",
-                      "height": "100%",
-                      "left": 0,
-                      "objectFit": undefined,
-                      "objectPosition": undefined,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                      "width": "100%",
-                    }
-                  }
+                <div
+                  class="c16 shadow"
                 />
+                <div
+                  class="c17"
+                  data-icon-for="button"
+                >
+                  <img
+                    alt=""
+                    class="c6"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                  />
+                </div>
               </div>
+              <span
+                class="c18"
+              />
             </div>
-            <span
-              className="c18"
-            />
-          </div>
-        </button>
-      </div>
-    </div>
-    <div
-      className="c19 c20"
-    >
-      <div
-        className="c21"
-        data-testid="inline-banner-message"
-      >
-        Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet.
+          </button>
+        </div>
       </div>
       <div
-        className="c4 c9"
+        class="c19 c20"
       >
-        <a
-          className="c22 "
+        <div
+          class="c21"
+          data-testid="inline-banner-message"
         >
-          <span
-            className="c23"
+          Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet.
+        </div>
+        <div
+          class="c4 c9"
+        >
+          <a
+            class="c22 "
           >
-            Link
-          </span>
-          <div
-            className="c17 "
-          >
-            <img
-              alt=""
-              className="c24"
-              data-nimg="fill"
-              decoding="async"
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
-              style={
-                {
-                  "bottom": 0,
-                  "color": "transparent",
-                  "height": "100%",
-                  "left": 0,
-                  "objectFit": undefined,
-                  "objectPosition": undefined,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-            />
-          </div>
-        </a>
+            <span
+              class="c23"
+            >
+              Link
+            </span>
+            <div
+              class="c17 "
+            >
+              <img
+                alt=""
+                class="c24"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
+                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+              />
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </div>

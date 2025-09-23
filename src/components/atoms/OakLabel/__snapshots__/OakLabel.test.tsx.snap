@@ -5,7 +5,9 @@ exports[`Component OakLabel matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-<label
-  className="c0"
-/>
+<div>
+  <label
+    class="c0"
+  />
+</div>
 `;

@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakPupilJourneyListCount matches snapshot 1`] = `
+.c0 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c1 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+@media (min-width:750px) {
+  .c0 {
+    font-weight: 600;
+  }
+}
+
+@media (min-width:750px) {
+  .c0 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c0 {
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c0 {
+    -webkit-letter-spacing: 0.0115rem;
+    -moz-letter-spacing: 0.0115rem;
+    -ms-letter-spacing: 0.0115rem;
+    letter-spacing: 0.0115rem;
+  }
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Lessons
+    <span
+      class="c1"
+    >
+       (5)
+    </span>
+  </h2>
+</div>
+`;

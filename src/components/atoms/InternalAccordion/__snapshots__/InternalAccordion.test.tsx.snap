@@ -43,27 +43,27 @@ exports[`InternalAccordion matches snapshot 1`] = `
   padding: 0;
 }
 
-<div
-  className="c0 c1"
-  data-testid="test"
-  id="internal-accordion"
->
-  <button
-    aria-expanded={true}
-    className="c2 c3 c4 "
-    id="internal-accordion"
-    onClick={[Function]}
-    type="button"
-  >
-    accordion button
-  </button>
+<div>
   <div
-    aria-labelledby="internal-accordion"
-    className="c0"
-    hidden={false}
-    role="region"
+    class="c0 c1"
+    data-testid="test"
+    id="internal-accordion"
   >
-    accordion content
+    <button
+      aria-expanded="true"
+      class="c2 c3 c4 "
+      id="internal-accordion"
+      type="button"
+    >
+      accordion button
+    </button>
+    <div
+      aria-labelledby="internal-accordion"
+      class="c0"
+      role="region"
+    >
+      accordion content
+    </div>
   </div>
 </div>
 `;

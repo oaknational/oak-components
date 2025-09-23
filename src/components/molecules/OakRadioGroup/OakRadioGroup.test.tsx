@@ -2,13 +2,10 @@ import React from "react";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
 
 import { OakRadioButton } from "@/components/molecules/OakRadioButton";
 import { OakRadioGroup } from "@/components/molecules/OakRadioGroup";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { oakDefaultTheme } from "@/styles";
 
 describe("RadioGroup", () => {
   it("renders a RadioGroup", () => {
@@ -55,38 +52,36 @@ describe("RadioGroup", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakRadioGroup name={"test"}>
-          <OakRadioButton
-            value="1"
-            id="radio-1"
-            label="Option 1"
-            $labelGap="spacing-24"
-            $font="body-1-bold"
-            $color="black"
-            data-testid={"radio-1"}
-          />
-          <OakRadioButton
-            value="2"
-            id="radio-2"
-            label="Option 2"
-            $labelGap="spacing-24"
-            $font="body-1-bold"
-            $color="black"
-          />
-          <OakRadioButton
-            value="3"
-            id="radio-3"
-            label="Option 3"
-            $labelGap="spacing-24"
-            $font="body-1-bold"
-            $color="black"
-          />
-        </OakRadioGroup>
-      </ThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakRadioGroup name={"test"}>
+        <OakRadioButton
+          value="1"
+          id="radio-1"
+          label="Option 1"
+          $labelGap="spacing-24"
+          $font="body-1-bold"
+          $color="black"
+          data-testid={"radio-1"}
+        />
+        <OakRadioButton
+          value="2"
+          id="radio-2"
+          label="Option 2"
+          $labelGap="spacing-24"
+          $font="body-1-bold"
+          $color="black"
+        />
+        <OakRadioButton
+          value="3"
+          id="radio-3"
+          label="Option 3"
+          $labelGap="spacing-24"
+          $font="body-1-bold"
+          $color="black"
+        />
+      </OakRadioGroup>,
+    );
+    expect(container).toMatchSnapshot();
   });
 
   it("allows you to select a radio on click of label", async () => {

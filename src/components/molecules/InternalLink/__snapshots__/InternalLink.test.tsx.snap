@@ -52,13 +52,15 @@ exports[`InternalLink matches snapshot 1`] = `
   }
 }
 
-<a
-  className="c0"
->
-  <span
-    className="c1"
+<div>
+  <a
+    class="c0"
   >
-    Content goes here
-  </span>
-</a>
+    <span
+      class="c1"
+    >
+      Content goes here
+    </span>
+  </a>
+</div>
 `;

@@ -132,29 +132,28 @@ exports[`OakSmallSecondaryToggleButton component matches snapshot 1`] = `
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-<div
-  className="c0 c1"
->
+<div>
   <div
-    className="c2 grey-shadow"
-  />
-  <div
-    className="c2 yellow-shadow"
-  />
-  <button
-    aria-pressed={true}
-    className="c3 c4 internal-button"
-    onClick={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
+    class="c0 c1"
   >
     <div
-      className="c5 c6"
+      class="c2 grey-shadow"
+    />
+    <div
+      class="c2 yellow-shadow"
+    />
+    <button
+      aria-pressed="true"
+      class="c3 c4 internal-button"
     >
-      <span
-        className="c7"
-      />
-    </div>
-  </button>
+      <div
+        class="c5 c6"
+      >
+        <span
+          class="c7"
+        />
+      </div>
+    </button>
+  </div>
 </div>
 `;

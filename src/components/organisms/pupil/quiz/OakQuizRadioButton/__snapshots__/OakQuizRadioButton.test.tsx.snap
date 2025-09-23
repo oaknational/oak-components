@@ -2,6 +2,10 @@
 
 exports[`OakQuizRadioButton matches snapshot 1`] = `
 .c0 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c2 {
   position: relative;
   padding: 1.25rem;
   background: #ffffff;
@@ -9,22 +13,18 @@ exports[`OakQuizRadioButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c0:hover {
+.c2:hover {
   cursor: pointer;
 }
 
-.c3 {
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c6 {
+.c7 {
   position: relative;
   width: 2rem;
   height: 2rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c11 {
+.c12 {
   position: absolute;
   top: 0rem;
   left: 0rem;
@@ -41,6 +41,14 @@ exports[`OakQuizRadioButton matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 1rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
   align-content: center;
@@ -50,7 +58,7 @@ exports[`OakQuizRadioButton matches snapshot 1`] = `
   justify-content: space-between;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -68,7 +76,7 @@ exports[`OakQuizRadioButton matches snapshot 1`] = `
   flex-shrink: 0;
 }
 
-.c12 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -90,7 +98,7 @@ exports[`OakQuizRadioButton matches snapshot 1`] = `
   flex-shrink: 0;
 }
 
-.c4 {
+.c5 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1.125rem;
@@ -101,7 +109,7 @@ exports[`OakQuizRadioButton matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c9 {
+.c10 {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -114,19 +122,19 @@ exports[`OakQuizRadioButton matches snapshot 1`] = `
   border-radius: 0.125rem;
 }
 
-.c9:checked {
+.c10:checked {
   background: #222222;
 }
 
-.c9:disabled {
+.c10:disabled {
   pointer-events: none;
 }
 
-.c13 {
+.c14 {
   border-radius: 50%;
 }
 
-.c8:checked ~ .c10::after {
+.c9:checked ~ .c11::after {
   content: "";
   height: 1.5rem;
   width: 1.5rem;
@@ -136,7 +144,7 @@ exports[`OakQuizRadioButton matches snapshot 1`] = `
   border: 0.125rem solid #ffffff;
 }
 
-.c5 {
+.c6 {
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
@@ -149,21 +157,21 @@ exports[`OakQuizRadioButton matches snapshot 1`] = `
   align-items: center;
 }
 
-.c2:hover {
+.c4:hover {
   cursor: pointer;
 }
 
-.c2:focus-within {
+.c4:focus-within {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c2:hover {
+.c4:hover {
   background-color: #dff9de;
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c2:hover:not(:focus-within)::after {
+.c4:hover:not(:focus-within)::after {
   pointer-events: none;
   content: "";
   position: absolute;
@@ -173,41 +181,44 @@ exports[`OakQuizRadioButton matches snapshot 1`] = `
 }
 
 @media (hover:hover) {
-  .c9:hover:not(:disabled) {
+  .c10:hover:not(:disabled) {
     border-color: #222222;
   }
 }
 
-<div
-  className="c0 c1 c2"
-  onClick={[Function]}
->
+<div>
   <div
-    className="c3"
+    class="c0 c1"
+    role="radiogroup"
   >
-    <label
-      className="c4 c5"
-      htmlFor="checkbox-1"
+    <div
+      class="c2 c3 c4"
     >
       <div
-        className="c6 c7"
+        class="c0"
       >
-        <input
-          checked={false}
-          className="c8 c9"
-          id="checkbox-1"
-          name="default"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          type="radio"
-          value="Option 1"
-        />
-        <div
-          className="c10 c11 c12 c13"
-        />
+        <label
+          class="c5 c6"
+          for="checkbox-1"
+        >
+          <div
+            class="c7 c8"
+          >
+            <input
+              class="c9 c10"
+              id="checkbox-1"
+              name="quiz-radio-group"
+              type="radio"
+              value="Option 1"
+            />
+            <div
+              class="c11 c12 c13 c14"
+            />
+          </div>
+          Radio option
+        </label>
       </div>
-      Radio option
-    </label>
+    </div>
   </div>
 </div>
 `;

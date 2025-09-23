@@ -1,23 +1,28 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 
 import { OakLessonBottomNav } from "./OakLessonBottomNav";
 
-import { OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
+import renderWithTheme from "@/test-helpers/renderWithTheme";
+import {
+  installMockIntersectionObserver,
+  installMockResizeObserver,
+} from "@/test-helpers";
+
+installMockIntersectionObserver();
+installMockResizeObserver();
 
 describe(OakLessonBottomNav, () => {
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
+    const { container } = renderWithTheme(
+      <>
         <OakLessonBottomNav hint="The answer is right in front of your eyes" />
         <OakLessonBottomNav feedback="correct" answerFeedback="Well done!" />
         <OakLessonBottomNav feedback="incorrect" answerFeedback="Keep trying" />
         <OakLessonBottomNav feedback="correct" answerFeedback="Nearly there" />
-      </OakThemeProvider>,
-    ).toJSON();
+      </>,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

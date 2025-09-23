@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
-[
-  .c0 {
+.c0 {
   width: 100%;
   background: #ffffff;
   border-radius: 0.375rem;
@@ -472,68 +471,69 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
   }
 }
 
-<li
-    className="c0 c1"
+<div>
+  <li
+    class="c0 c1"
   >
     <div
-      className="c2 c3"
+      class="c2 c3"
     >
       <div
-        className="c4 c5"
+        class="c4 c5"
       >
         <span
-          className="c6"
+          class="c6"
         >
           1
         </span>
       </div>
       <div
-        className="c7 c8"
+        class="c7 c8"
       >
         <h4
-          className="c9"
+          class="c9"
         />
       </div>
     </div>
     <div
-      className="c10 c11"
+      class="c10 c11"
     >
       <span
-        className="c6"
+        class="c6"
       >
         1
       </span>
     </div>
     <div
-      className="c12"
+      class="c12"
     >
       <div
-        className="c13 c14"
+        class="c13 c14"
       >
         <div
-          className="c15 c16"
+          class="c15 c16"
         >
           <div
-            className="c7 c8"
+            class="c7 c8"
           >
             <h4
-              className="c9"
+              class="c9"
             />
           </div>
           <div
-            className="c15 c17"
+            class="c15 c17"
           >
             <div
-              className="c18 c19 c20"
+              class="c18 c19 c20"
             >
               <span
-                className="c21"
+                class="c21"
               />
               <div
-                className="c22"
+                class="c22"
               >
                 <label
-                  className="c23"
+                  class="c23"
                 >
                   0 unit options
                 </label>
@@ -543,30 +543,30 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
         </div>
       </div>
       <div
-        className="c24 c25"
+        class="c24 c25"
       >
         <div
-          className="c26"
+          class="c26"
         >
           <div
-            className="c7 c8"
+            class="c7 c8"
           >
             <h4
-              className="c9"
+              class="c9"
             />
           </div>
         </div>
         <div
-          className="c18 c19 c20"
+          class="c18 c19 c20"
         >
           <span
-            className="c21"
+            class="c21"
           />
           <div
-            className="c22"
+            class="c22"
           >
             <label
-              className="c23"
+              class="c23"
             >
               0 unit options
             </label>
@@ -574,10 +574,9 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
         </div>
       </div>
       <div
-        className="c15 c27"
+        class="c15 c27"
       />
     </div>
-  </li>,
-  ",",
-]
+  </li>
+</div>
 `;

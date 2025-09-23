@@ -39,13 +39,15 @@ exports[`OakLoadingSpinner matches snapshot 1`] = `
   animation: epmXAj 1.2s linear infinite;
 }
 
-<span
-  className="c0"
->
+<div>
   <span
-    className="c1"
+    class="c0"
   >
-    Loading
+    <span
+      class="c1"
+    >
+      Loading
+    </span>
   </span>
-</span>
+</div>
 `;

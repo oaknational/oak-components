@@ -1,11 +1,8 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
 
 import { OakRoundIcon } from "./OakRoundIcon";
 
-import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("OakRoundIcon", () => {
@@ -16,12 +13,8 @@ describe("OakRoundIcon", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakRoundIcon iconName="home" />
-      </ThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(<OakRoundIcon iconName="home" />);
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

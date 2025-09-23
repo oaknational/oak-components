@@ -1,9 +1,10 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
-import { create } from "react-test-renderer";
 
 import { OakUL } from "./OakUL";
+
+import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("Component OakUL", () => {
   it("renders", () => {
@@ -12,7 +13,7 @@ describe("Component OakUL", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(<OakUL />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(<OakUL />);
+    expect(container).toMatchSnapshot();
   });
 });

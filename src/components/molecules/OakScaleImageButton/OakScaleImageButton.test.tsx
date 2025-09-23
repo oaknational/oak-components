@@ -1,7 +1,5 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
 
 import {
   OakScaleImageButton,
@@ -9,7 +7,6 @@ import {
 } from "./OakScaleImageButton";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { oakDefaultTheme } from "@/styles";
 
 const defaultArgs: OakScaleImageButtonProps = {
   onImageScaleCallback: jest.fn(),
@@ -34,12 +31,10 @@ describe("OakScaleImageButton", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakScaleImageButton {...defaultArgs}>Click Me</OakScaleImageButton>
-      </ThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakScaleImageButton {...defaultArgs}>Click Me</OakScaleImageButton>,
+    );
+    expect(container).toMatchSnapshot();
   });
 
   it("calls onImageScaleCallback method", () => {

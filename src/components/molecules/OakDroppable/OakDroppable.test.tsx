@@ -1,19 +1,15 @@
-import { create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
 import React from "react";
 
 import { OakDroppable } from "./OakDroppable";
 
-import { oakDefaultTheme } from "@/styles";
+import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("OakDroppable", () => {
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakDroppable>Children</OakDroppable>
-      </ThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <OakDroppable>Children</OakDroppable>,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

@@ -1,13 +1,10 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import userEvent from "@testing-library/user-event";
-import { create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
 
 import { OakSmallSecondaryButtonWithDropdown } from "./OakSmallSecondaryButtonWithDropdown";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { oakDefaultTheme } from "@/styles";
 
 const defaultProps = {
   primaryActionText: "Menu Trigger",
@@ -29,14 +26,12 @@ const simpleChildren = (
 
 describe("OakSmallSecondaryButtonWithDropdown", () => {
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakSmallSecondaryButtonWithDropdown {...defaultProps}>
-          {simpleChildren}
-        </OakSmallSecondaryButtonWithDropdown>
-      </ThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakSmallSecondaryButtonWithDropdown {...defaultProps}>
+        {simpleChildren}
+      </OakSmallSecondaryButtonWithDropdown>,
+    );
+    expect(container).toMatchSnapshot();
   });
 
   it("renders with OakSmallSecondaryButton styling", () => {

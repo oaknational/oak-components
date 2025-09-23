@@ -1,12 +1,9 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 
 import { OakLessonLayout, OakLessonLayoutProps } from "./OakLessonLayout";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
 
 describe("OakLessonLayout", () => {
   it("should render successfully", () => {
@@ -23,19 +20,16 @@ describe("OakLessonLayout", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakLessonLayout
-          lessonSectionName={"tier-listing"}
-          topNavSlot={<div>top nav slot</div>}
-          bottomNavSlot={<div>bottom nav slot</div>}
-        >
-          <p>Hello World</p>
-        </OakLessonLayout>
-        ,
-      </OakThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakLessonLayout
+        lessonSectionName={"tier-listing"}
+        topNavSlot={<div>top nav slot</div>}
+        bottomNavSlot={<div>bottom nav slot</div>}
+      >
+        <p>Hello World</p>
+      </OakLessonLayout>,
+    );
+    expect(container).toMatchSnapshot();
   });
 });
 

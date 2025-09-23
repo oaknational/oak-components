@@ -1,12 +1,9 @@
-import { create } from "react-test-renderer";
 import React, { ReactNode } from "react";
 import "@testing-library/jest-dom";
 
 import { OakTooltip } from "./OakTooltip";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { oakDefaultTheme } from "@/styles";
-import { OakThemeProvider } from "@/components/atoms";
 import {
   installMockIntersectionObserver,
   installMockResizeObserver,
@@ -24,15 +21,13 @@ installMockIntersectionObserver();
 
 describe(OakTooltip, () => {
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakTooltip tooltip="Hello there" isOpen id="tooltip">
-          <div>Trigger!</div>
-        </OakTooltip>
-      </OakThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <OakTooltip tooltip="Hello there" isOpen id="tooltip">
+        <div>Trigger!</div>
+      </OakTooltip>,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it("renders", () => {

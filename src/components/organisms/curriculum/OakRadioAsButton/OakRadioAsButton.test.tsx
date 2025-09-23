@@ -1,13 +1,10 @@
 import "@testing-library/jest-dom";
 import React from "react";
-import { create } from "react-test-renderer";
 import { act, fireEvent } from "@testing-library/react";
 
 import { OakRadioAsButton } from "./OakRadioAsButton";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
 import { OakRadioGroup } from "@/components/molecules";
 
 describe("OakRadioAsButton", () => {
@@ -24,18 +21,15 @@ describe("OakRadioAsButton", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakRadioAsButton
-          name="radio-1"
-          value="history"
-          icon={"subject-history"}
-          displayValue="History"
-        />
-        ,
-      </OakThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakRadioAsButton
+        name="radio-1"
+        value="history"
+        icon={"subject-history"}
+        displayValue="History"
+      />,
+    );
+    expect(container).toMatchSnapshot();
   });
 
   it("has a label", () => {

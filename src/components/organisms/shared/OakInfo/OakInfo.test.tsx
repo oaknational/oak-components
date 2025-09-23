@@ -1,24 +1,26 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 
 import { OakInfo } from "./OakInfo";
 
-import { OakThemeProvider } from "@/components/atoms";
-import { oakDefaultTheme } from "@/styles";
+import renderWithTheme from "@/test-helpers/renderWithTheme";
+import {
+  installMockIntersectionObserver,
+  installMockResizeObserver,
+} from "@/test-helpers";
+
+installMockIntersectionObserver();
+installMockResizeObserver();
 
 describe("OakInfo", () => {
   it("matches snapshot", () => {
-    const tree = create(
-      <OakThemeProvider theme={oakDefaultTheme}>
-        <OakInfo
-          hint="The answer is right in front of your eyes"
-          id="info-tooltip"
-        />
-        ,
-      </OakThemeProvider>,
-    ).toJSON();
+    const { container } = renderWithTheme(
+      <OakInfo
+        hint="The answer is right in front of your eyes"
+        id="info-tooltip"
+      />,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

@@ -1,9 +1,10 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
-import { create } from "react-test-renderer";
 
 import { OakAnchorTarget } from "./OakAnchorTarget";
+
+import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("OakAnchorTarget", () => {
   it("renders", () => {
@@ -12,8 +13,8 @@ describe("OakAnchorTarget", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(<OakAnchorTarget />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(<OakAnchorTarget />);
+    expect(container).toMatchSnapshot();
   });
   it("has position absolute", () => {
     const { getByTestId } = render(<OakAnchorTarget data-testid="test" />);

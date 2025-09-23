@@ -1,7 +1,5 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
 
 import {
   OakSecondaryButton,
@@ -9,7 +7,6 @@ import {
 } from "./OakSecondaryButton";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import { oakDefaultTheme } from "@/styles";
 
 const defaultArgs: OakSecondaryButtonProps = {
   iconName: "arrow-right",
@@ -35,12 +32,10 @@ describe("OakSecondaryButton", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <ThemeProvider theme={oakDefaultTheme}>
-        <OakSecondaryButton {...defaultArgs}>Click Me</OakSecondaryButton>
-      </ThemeProvider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(
+      <OakSecondaryButton {...defaultArgs}>Click Me</OakSecondaryButton>,
+    );
+    expect(container).toMatchSnapshot();
   });
 
   it("renders the chidren", () => {
