@@ -15,7 +15,7 @@ describe("RadioGroup", () => {
       </OakRadioGroup>,
     );
 
-    const radioGroup = getByRole("radiogroup");
+    const radioGroup = getByRole("group");
     expect(radioGroup).toBeInTheDocument();
   });
   it("matches snapshot", () => {

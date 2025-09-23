@@ -1,9 +1,14 @@
 import React, { createContext, useState } from "react";
+import styled from "styled-components";
 
 import { TypographyStyleProps } from "@/styles/utils/typographyStyle";
 import { ColorStyleProps } from "@/styles/utils/colorStyle";
-import { OakFlex, OakLabel } from "@/components/atoms";
+import { OakBox, OakFlex } from "@/components/atoms";
 import { FlexStyleProps } from "@/styles/utils/flexStyle";
+
+const DisplayContentsLegend = styled("legend")`
+  display: contents;
+`;
 
 type RadioContextType = {
   currentValue: string;
@@ -72,8 +77,20 @@ export const OakRadioGroup = (props: OakRadioGroupProps) => {
   };
 
   return (
-    <OakFlex role="radiogroup" $gap={$gap} {...rest}>
-      {label && <OakLabel $font={$font}>{label}</OakLabel>}
+    <OakFlex
+      as="fieldset"
+      $gap={$gap}
+      $flexDirection={"column"}
+      $borderStyle={"none"}
+      $pa="inner-padding-none"
+      $ma="space-between-none"
+      {...rest}
+    >
+      {label && (
+        <DisplayContentsLegend>
+          <OakBox $font={$font}>{label}</OakBox>
+        </DisplayContentsLegend>
+      )}
       <RadioContext.Provider
         value={{
           currentValue: value ?? currentValue,
