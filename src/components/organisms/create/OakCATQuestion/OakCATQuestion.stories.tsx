@@ -23,7 +23,7 @@ const meta: Meta<typeof OakCATQuestion> = {
   },
   decorators: [
     (Story) => (
-      <OakBox $background={"grey20"} $pa="inner-padding-xl" $width={"100%"}>
+      <OakBox $background={"grey20"} $pa="spacing-24" $width={"100%"}>
         <OakUL>
           <Story />
         </OakUL>
@@ -42,12 +42,12 @@ export const Default: Story = {
     questionNumber: 1,
     status: "neutral",
     questionTypeInput: (
-      <OakBox $background={"aqua50"} $pa="inner-padding-ssx">
+      <OakBox $background={"aqua50"} $pa="spacing-4">
         Dummy Question Type Input
       </OakBox>
     ),
     questionTextInput: (
-      <OakBox $background={"aqua50"} $pa="inner-padding-s">
+      <OakBox $background={"aqua50"} $pa="spacing-12">
         Dummy Question Text Input
       </OakBox>
     ),
@@ -55,9 +55,9 @@ export const Default: Story = {
       <OakBox $background={"aqua50"}>
         <OakBox
           $background={"amber50"}
-          $pa="inner-padding-ssx"
-          $height={"all-spacing-12"}
-          $width={"all-spacing-20"}
+          $pa="spacing-4"
+          $height={"spacing-72"}
+          $width={"spacing-360"}
         >
           Dummy Hint Input
         </OakBox>
@@ -68,9 +68,9 @@ export const Default: Story = {
       <OakBox $background={"aqua50"}>
         <OakBox
           $background={"amber50"}
-          $pa="inner-padding-ssx"
-          $height={"all-spacing-12"}
-          $width={"all-spacing-20"}
+          $pa="spacing-4"
+          $height={"spacing-72"}
+          $width={"spacing-360"}
         >
           Dummy Feedback Input
         </OakBox>
@@ -78,11 +78,7 @@ export const Default: Story = {
       </OakBox>
     ),
     answersSection: (
-      <OakBox
-        $background={"mint50"}
-        $pa="inner-padding-s"
-        $height={"all-spacing-20"}
-      >
+      <OakBox $background={"mint50"} $pa="spacing-12" $height={"spacing-360"}>
         Dummy answers Section
       </OakBox>
     ),
@@ -96,12 +92,12 @@ export const InitiallyOpen: Story = {
     questionNumber: 1,
     status: "neutral",
     questionTypeInput: (
-      <OakBox $background={"aqua50"} $pa="inner-padding-ssx">
+      <OakBox $background={"aqua50"} $pa="spacing-4">
         Dummy Question Type Input
       </OakBox>
     ),
     questionTextInput: (
-      <OakBox $background={"aqua50"} $pa="inner-padding-s">
+      <OakBox $background={"aqua50"} $pa="spacing-12">
         Dummy Question Text Input
       </OakBox>
     ),
@@ -109,9 +105,9 @@ export const InitiallyOpen: Story = {
       <OakBox $background={"aqua50"}>
         <OakBox
           $background={"amber50"}
-          $pa="inner-padding-ssx"
-          $height={"all-spacing-12"}
-          $width={"all-spacing-20"}
+          $pa="spacing-4"
+          $height={"spacing-72"}
+          $width={"spacing-360"}
         >
           Dummy Hint Input
         </OakBox>
@@ -122,9 +118,9 @@ export const InitiallyOpen: Story = {
       <OakBox $background={"aqua50"}>
         <OakBox
           $background={"amber50"}
-          $pa="inner-padding-ssx"
-          $height={"all-spacing-12"}
-          $width={"all-spacing-20"}
+          $pa="spacing-4"
+          $height={"spacing-72"}
+          $width={"spacing-360"}
         >
           Dummy Feedback Input
         </OakBox>
@@ -132,11 +128,7 @@ export const InitiallyOpen: Story = {
       </OakBox>
     ),
     answersSection: (
-      <OakBox
-        $background={"mint50"}
-        $pa="inner-padding-s"
-        $height={"all-spacing-20"}
-      >
+      <OakBox $background={"mint50"} $pa="spacing-12" $height={"spacing-360"}>
         Dummy answers Section
       </OakBox>
     ),

@@ -41,7 +41,7 @@ type Story = StoryObj<typeof OakPrimaryInvertedButton>;
 
 export const Default: Story = {
   render: (args) => (
-    <OakFlex $gap="space-between-m">
+    <OakFlex $gap="spacing-24">
       <OakPrimaryInvertedButton {...args}>
         Primary Inverted Button
       </OakPrimaryInvertedButton>
@@ -60,7 +60,7 @@ export const Default: Story = {
 
 export const LinkStyledAsButton: Story = {
   render: (args) => (
-    <OakFlex $gap="space-between-m">
+    <OakFlex $gap="spacing-24">
       <OakPrimaryInvertedButton {...args}>
         Primary Inverted Link
       </OakPrimaryInvertedButton>

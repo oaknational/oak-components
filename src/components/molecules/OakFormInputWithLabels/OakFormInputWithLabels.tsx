@@ -75,7 +75,7 @@ export const OakFormInputWithLabels = ({
 }: OakFormInputWithLabelsProps) => {
   const inputId = `input-${label.toLowerCase().replace(/\s+/g, "-")}`;
   return (
-    <OakFlex $width={"100%"} $flexDirection={"column"} $gap="space-between-ssx">
+    <OakFlex $width={"100%"} $flexDirection={"column"} $gap="spacing-8">
       <OakFlex $flexDirection={"column"}>
         <OakLabel $font={"body-2-bold"} htmlFor={inputId}>
           {label}

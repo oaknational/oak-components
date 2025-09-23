@@ -9,7 +9,7 @@ describe("InternalRadioWrapper", () => {
   it("renders", () => {
     const { getByTestId } = renderWithTheme(
       <InternalRadioWrapper
-        size={"all-spacing-6"}
+        size={"spacing-24"}
         internalRadio={
           <input
             data-testid="test-input"
@@ -26,7 +26,7 @@ describe("InternalRadioWrapper", () => {
   it("matches snapshot", () => {
     const { container } = renderWithTheme(
       <InternalRadioWrapper
-        size={"all-spacing-6"}
+        size={"spacing-24"}
         internalRadio={
           <input
             data-testid="test-input"

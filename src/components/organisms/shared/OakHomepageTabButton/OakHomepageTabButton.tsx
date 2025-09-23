@@ -82,11 +82,11 @@ export const OakHomepageTabButton = <C extends ElementType = "button">(
         $flexDirection={"column"}
         $alignItems={"center"}
         $justifyContent={"space-between"}
-        $gap={"space-between-s"}
+        $gap={"spacing-16"}
       >
         <OakIcon
-          $width={["all-spacing-9", "all-spacing-14", "all-spacing-14"]}
-          $height={["all-spacing-9", "all-spacing-14", "all-spacing-14"]}
+          $width={["spacing-48", "spacing-92", "spacing-92"]}
+          $height={["spacing-48", "spacing-92", "spacing-92"]}
           iconName={iconName}
           $colorFilter={color}
           alt=""
@@ -95,9 +95,9 @@ export const OakHomepageTabButton = <C extends ElementType = "button">(
         <OakFlex
           $alignItems={"center"}
           $justifyContent={"center"}
-          $gap="space-between-sssx"
+          $gap="spacing-4"
           $position={"relative"}
-          $pb={["inner-padding-s", "inner-padding-xl"]} // this is needed to position the hand drawn underline
+          $pb={["spacing-12", "spacing-24"]} // this is needed to position the hand drawn underline
         >
           <OakSpan
             className="buttonText"
@@ -109,14 +109,14 @@ export const OakHomepageTabButton = <C extends ElementType = "button">(
           </OakSpan>
 
           {showNewIcon && (
-            <OakPromoTag display={["none", "flex"]} width={"all-spacing-9"} />
+            <OakPromoTag display={["none", "flex"]} width={"spacing-48"} />
           )}
 
           {isActive && (
             <OakBox
               className="activeUnderline"
               $position={"absolute"}
-              $bottom={"all-spacing-0"}
+              $bottom={"spacing-0"}
               $width={"100%"}
             >
               <InternalStyledSvg
@@ -134,7 +134,7 @@ export const OakHomepageTabButton = <C extends ElementType = "button">(
             className="focusUnderline"
             $display={"none"}
             $position={"absolute"}
-            $bottom={"all-spacing-0"}
+            $bottom={"spacing-0"}
             $width={"100%"}
           >
             <InternalStyledSvg

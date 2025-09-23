@@ -21,7 +21,7 @@ export type InternalQuizResultItemProps = {
 const DisplayText = ({
   boldPrefixText,
   standardText,
-  height = "all-spacing-5",
+  height = "spacing-20",
 }: Pick<InternalQuizResultItemProps, "boldPrefixText" | "standardText"> & {
   height: OakAllSpacingToken;
 }) => {
@@ -98,32 +98,28 @@ export const OakQuizResultItem = ({
   })();
 
   return (
-    <OakFlex
-      $flexDirection={"column"}
-      $alignItems={"start"}
-      $gap={"space-between-ssx"}
-    >
+    <OakFlex $flexDirection={"column"} $alignItems={"start"} $gap={"spacing-8"}>
       <OakFlex
         $background={background}
-        $pa={"inner-padding-xs"}
+        $pa={"spacing-8"}
         $borderRadius={"border-radius-m"}
         $width={"fit-content"}
-        $gap={"space-between-xs"}
+        $gap={"spacing-12"}
         $alignItems={"center"}
       >
         {feedbackState && (
           <OakIcon
             iconName={feedbackState === "correct" ? "tick" : "cross"}
             data-testid={feedbackState === "correct" ? "tick" : "cross"}
-            $width={"all-spacing-7"}
-            $height={"all-spacing-7"}
+            $width={"spacing-32"}
+            $height={"spacing-32"}
             $colorFilter={
               feedbackState === "correct" ? "text-primary" : "icon-error"
             }
           />
         )}
         <DisplayText
-          height="all-spacing-7"
+          height="spacing-32"
           standardText={standardText}
           boldPrefixText={boldPrefixText}
         />
@@ -132,8 +128,8 @@ export const OakQuizResultItem = ({
         <OakImage
           src={imageURL}
           alt={imageAlt}
-          $width={"all-spacing-17"}
-          $height={"all-spacing-17"}
+          $width={"spacing-160"}
+          $height={"spacing-160"}
           $background={"bg-neutral"}
         />
       )}

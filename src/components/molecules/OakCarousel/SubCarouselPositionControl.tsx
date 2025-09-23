@@ -21,7 +21,7 @@ export const SubCarouselPositionControl = ({
   fwdLabel,
 }: SubCarouselPositionControlProps) => {
   return (
-    <OakFlex $gap={"space-between-m"}>
+    <OakFlex $gap={"spacing-24"}>
       <OakTertiaryInvertedButton
         onClick={onBack}
         iconName="chevron-left"

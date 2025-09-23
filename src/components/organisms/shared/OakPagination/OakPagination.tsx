@@ -168,7 +168,7 @@ export const OakPagination = ({
         $alignItems={"center"}
         $justifyContent={"center"}
         $width={"100%"}
-        $gap={["space-between-ssx", "space-between-s", "space-between-s"]}
+        $gap={["spacing-8", "spacing-16", "spacing-16"]}
       >
         <StyledChevronButton
           element={isFirstPage ? "button" : "a"}
@@ -201,11 +201,7 @@ export const OakPagination = ({
               return (
                 <OakLI
                   key={`${page} ${i}`}
-                  $mh={[
-                    "space-between-sssx",
-                    "space-between-ssx",
-                    "space-between-ssx",
-                  ]}
+                  $mh={["spacing-4", "spacing-8", "spacing-8"]}
                 >
                   <OakPageNumber
                     pageName={pageName}
@@ -222,11 +218,7 @@ export const OakPagination = ({
             } else {
               return (
                 <OakLI
-                  $mh={[
-                    "space-between-sssx",
-                    "space-between-ssx",
-                    "space-between-ssx",
-                  ]}
+                  $mh={["spacing-4", "spacing-8", "spacing-8"]}
                   key={`${page} ${i}`}
                 >
                   <OakFlex $height={"100%"} $alignSelf={"center"}>

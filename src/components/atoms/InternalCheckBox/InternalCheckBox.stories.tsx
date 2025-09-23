@@ -58,8 +58,8 @@ export const Default: Story = {
   args: {
     id: "checkbox-test-default-1",
     value: "a test value",
-    $width: "all-spacing-6",
-    $height: "all-spacing-6",
+    $width: "spacing-24",
+    $height: "spacing-24",
   },
 };
 
@@ -72,8 +72,8 @@ export const Hover: Story = {
   args: {
     id: "checkbox-test-default-2",
     value: "a test value",
-    $width: "all-spacing-6",
-    $height: "all-spacing-6",
+    $width: "spacing-24",
+    $height: "spacing-24",
   },
 };
 
@@ -86,8 +86,8 @@ export const Focus: Story = {
   args: {
     id: "checkbox-test-default-3",
     value: "a test value",
-    $width: "all-spacing-6",
-    $height: "all-spacing-6",
+    $width: "spacing-24",
+    $height: "spacing-24",
   },
 };
 
@@ -100,7 +100,7 @@ export const HoverFocus: Story = {
   args: {
     id: "checkbox-test-default-4",
     value: "a test value",
-    $width: "all-spacing-6",
-    $height: "all-spacing-6",
+    $width: "spacing-24",
+    $height: "spacing-24",
   },
 };

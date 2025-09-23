@@ -27,7 +27,7 @@ type Story = StoryObj<typeof OakSvg>;
 
 export const HeaderUnderline: Story = {
   render: (args: OakSvgProps) => (
-    <OakFlex $flexDirection={"column"} $gap="space-between-xs">
+    <OakFlex $flexDirection={"column"} $gap="spacing-12">
       <OakSvg {...args} />
     </OakFlex>
   ),

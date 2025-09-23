@@ -77,9 +77,9 @@ const meta: Meta<typeof OakUnitListOptionalityItem> = {
       return (
         <OakFlex
           $flexDirection="column"
-          $gap="space-between-l"
+          $gap="spacing-48"
           $background={"grey20"}
-          $pa={"inner-padding-xl"}
+          $pa={"spacing-24"}
           role="list"
         >
           {Story()}

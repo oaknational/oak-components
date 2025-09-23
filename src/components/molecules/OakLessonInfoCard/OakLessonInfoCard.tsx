@@ -23,7 +23,7 @@ export const OakCardHeader = (props: OakCardHeaderprops) => {
   const { iconName, tag, children } = props;
 
   return (
-    <OakFlex $alignItems={"center"} $gap={"space-between-ssx"}>
+    <OakFlex $alignItems={"center"} $gap={"spacing-8"}>
       <OakIcon iconName={iconName} />
       <OakHeading $font={"heading-6"} tag={tag}>
         {children}
@@ -43,9 +43,9 @@ export const OakLessonInfoCard = (props: OakInfoCardProps) => {
   return (
     <OakFlex
       $borderRadius={"border-radius-l"}
-      $pa={"inner-padding-xl"}
+      $pa={"spacing-24"}
       $flexDirection={"column"}
-      $gap={"space-between-s"}
+      $gap={"spacing-16"}
       $background={"white"}
       {...rest}
     >
@@ -66,11 +66,7 @@ export const OakStaticMessageCard = (props: OakInfoCardProps) => {
         "bg-decorative2-subdued",
       ]}
     >
-      <OakFlex
-        $pa={"inner-padding-none"}
-        $flexDirection={"column"}
-        $gap={"space-between-s"}
-      >
+      <OakFlex $pa={"spacing-0"} $flexDirection={"column"} $gap={"spacing-16"}>
         {children}
       </OakFlex>
     </OakHandDrawnCard>

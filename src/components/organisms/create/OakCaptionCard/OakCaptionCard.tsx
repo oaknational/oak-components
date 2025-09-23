@@ -112,12 +112,12 @@ export const OakCaptionCard = (props: OakCaptionCardProps) => {
   return (
     <StyledFlexBox
       data-testid={dataTestId}
-      $minHeight={"all-spacing-8"}
+      $minHeight={"spacing-40"}
       $position={"relative"}
       $background={"bg-primary"}
       $borderRadius={"border-radius-s"}
-      $pa={"inner-padding-m"}
-      $gap={"space-between-xs"}
+      $pa={"spacing-16"}
+      $gap={"spacing-12"}
       $flexDirection={"column"}
       $width={"100%"}
       $highlighted={!!highlighted}
@@ -128,7 +128,7 @@ export const OakCaptionCard = (props: OakCaptionCardProps) => {
         $justifyContent={"flex-start"}
         $alignItems={"center"}
         $width={"100%"}
-        $gap={"space-between-xs"}
+        $gap={"spacing-12"}
         $font={"heading-7"}
       >
         <OakCheckBox
@@ -145,7 +145,7 @@ export const OakCaptionCard = (props: OakCaptionCardProps) => {
         <OakFlex
           $font={"heading-7"}
           $justifyContent={"flex-start"}
-          $gap={"space-between-ssx"}
+          $gap={"spacing-8"}
           $flexWrap={"wrap"}
         >
           <OakSpan $font={"heading-7"}>Caption ID: {captionId}</OakSpan>
@@ -172,7 +172,7 @@ export const OakCaptionCard = (props: OakCaptionCardProps) => {
         $justifyContent={"flex-start"}
         $alignItems={"center"}
         $width={"100%"}
-        $gap={"all-spacing-7"}
+        $gap={"spacing-32"}
         $font={"body-2"}
       >
         <OakSecondaryLink
@@ -189,14 +189,14 @@ export const OakCaptionCard = (props: OakCaptionCardProps) => {
           {lessonUid}
         </OakSecondaryLink>
 
-        <OakFlex $alignItems={"center"} $gap={"space-between-sssx"}>
+        <OakFlex $alignItems={"center"} $gap={"spacing-4"}>
           {" "}
           {/* the video icon has no natural padding so whilst inconsistent this looks better */}
           <OakIcon
             alt=""
             iconName="video"
-            iconWidth="all-spacing-6"
-            iconHeight="all-spacing-6"
+            iconWidth="spacing-24"
+            iconHeight="spacing-24"
             $colorFilter={filterColor}
           />
           {getVideoTypeText(videoType)}
@@ -206,8 +206,8 @@ export const OakCaptionCard = (props: OakCaptionCardProps) => {
             <OakIcon
               alt=""
               iconName="equipment-required"
-              iconWidth="all-spacing-6"
-              iconHeight="all-spacing-6"
+              iconWidth="spacing-24"
+              iconHeight="spacing-24"
               $colorFilter={filterColor}
             />
             Edited {getTimeText(lastEdited)}
@@ -217,8 +217,8 @@ export const OakCaptionCard = (props: OakCaptionCardProps) => {
           <OakIcon
             alt=""
             iconName="success"
-            iconWidth="all-spacing-6"
-            iconHeight="all-spacing-6"
+            iconWidth="spacing-24"
+            iconHeight="spacing-24"
             $colorFilter={filterColor}
           />
           Updated {getTimeText(lastUpdated)}

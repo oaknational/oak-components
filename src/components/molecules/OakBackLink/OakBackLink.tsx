@@ -76,9 +76,9 @@ export const OakBackLink = <C extends ElementType = "a">({
       <OakIcon
         alt=""
         iconName="chevron-left"
-        $width="all-spacing-8"
+        $width="spacing-40"
         $objectFit={"cover"}
-        $height="all-spacing-8"
+        $height="spacing-40"
       />
     </StyledBackLink>
   );

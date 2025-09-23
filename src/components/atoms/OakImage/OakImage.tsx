@@ -64,7 +64,7 @@ export const placeholderStyles = css<StyledImageProps>`
     css`
       background-image: url(${oakPlaceholder});
       background-color: ${parseColor("bg-decorative2-very-subdued")};
-      background-size: ${parseSpacing("all-spacing-11")};
+      background-size: ${parseSpacing("spacing-64")};
       background-position: center;
       background-repeat: no-repeat;
     `}
@@ -153,7 +153,7 @@ export const OakImage = <C extends ElementType = typeof Image>({
   // Use $minWidth to set the width with auto height
 
   return (
-    <OakBox $maxWidth={"all-spacing-0"} $position={$position} {...rest}>
+    <OakBox $maxWidth={"spacing-0"} $position={$position} {...rest}>
       <StyledResponsiveImage
         ref={setImg}
         as={as ?? Image}

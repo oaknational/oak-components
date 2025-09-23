@@ -38,7 +38,7 @@ const meta: Meta<typeof InternalTooltip> = {
   },
   decorators: [
     (Story) => (
-      <OakBox $ma="space-between-xxl">
+      <OakBox $ma="spacing-72">
         <Story />
       </OakBox>
     ),
@@ -61,12 +61,12 @@ export const WithStyling: Story = {
     <InternalTooltip
       {...args}
       $background="lemon50"
-      $ph="inner-padding-xl"
-      $pv="inner-padding-m"
+      $ph="spacing-24"
+      $pv="spacing-16"
       $color="text-primary"
       $borderRadius="border-radius-m"
       $font="heading-light-7"
-      $mb="space-between-xs"
+      $mb="spacing-12"
     />
   ),
 };

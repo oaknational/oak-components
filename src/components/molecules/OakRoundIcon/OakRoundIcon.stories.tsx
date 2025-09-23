@@ -75,9 +75,9 @@ export const StyledWithIconFromLibrary: Story = {
   args: {
     $background: "icon-success",
     $colorFilter: "white",
-    $pa: "inner-padding-none",
-    $width: "all-spacing-6",
-    $height: "all-spacing-6",
+    $pa: "spacing-0",
+    $width: "spacing-24",
+    $height: "spacing-24",
     iconName: "tick",
   },
   parameters: {

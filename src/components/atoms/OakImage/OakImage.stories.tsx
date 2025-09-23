@@ -36,11 +36,11 @@ export const LocalImage: Story = (args: OakImageProps) => (
 LocalImage.args = {
   alt: "Test image",
   src: testPic,
-  $height: "all-spacing-16",
+  $height: "spacing-120",
 };
 
 export const RemoteImage: Story = (args: OakImageProps) => (
-  <OakFlex $flexDirection="column" $gap="space-between-s">
+  <OakFlex $flexDirection="column" $gap="spacing-16">
     <OakImage
       {...args}
       src={`https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336494/samples/animals/cat.jpg`}
@@ -56,7 +56,7 @@ export const RemoteImage: Story = (args: OakImageProps) => (
 
 RemoteImage.args = {
   alt: "Image of a cat",
-  $height: "all-spacing-16",
+  $height: "spacing-120",
 };
 
 export const ClickableImage: Story = (args: OakImageProps) => (
@@ -67,7 +67,7 @@ ClickableImage.args = {
   alt: "Test image",
   src: testPic,
   onClick: () => alert("clicked"),
-  $height: "all-spacing-16",
+  $height: "spacing-120",
 };
 
 export const SVGImage: Story = {
@@ -75,7 +75,7 @@ export const SVGImage: Story = {
   args: {
     alt: "Image of a cat",
     src: `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1699887218/icons/gvqxjxcw07ei2kkmwnes.svg`,
-    $height: "all-spacing-16",
+    $height: "spacing-120",
   },
   parameters: {
     controls: {
@@ -93,7 +93,7 @@ export const SVGImageResponsive: Story = {
   args: {
     alt: "Image of a cat",
     src: `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1699887218/icons/gvqxjxcw07ei2kkmwnes.svg`,
-    $minWidth: "all-spacing-16",
+    $minWidth: "spacing-120",
     sizes: "100vw",
     width: 100,
     height: 100,

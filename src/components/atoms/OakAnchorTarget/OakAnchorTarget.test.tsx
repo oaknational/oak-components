@@ -26,7 +26,7 @@ describe("OakAnchorTarget", () => {
   });
   it("has scroll-margin-top", () => {
     const { getByTestId } = render(
-      <OakAnchorTarget data-testid="test" $pt={"inner-padding-l"} />,
+      <OakAnchorTarget data-testid="test" $pt={"spacing-20"} />,
     );
     expect(getByTestId("test")).toHaveStyle("scroll-margin-top: 1.25rem");
   });

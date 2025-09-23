@@ -45,8 +45,8 @@ type DropdownNavStory = StoryObj<typeof OakSmallSecondaryButtonWithDropdown>;
 
 export const ButtonWithDropDown: DropdownNavStory = {
   render: (args) => (
-    <OakFlex $height={"all-spacing-19"}>
-      <OakFlex $gap="space-between-m">
+    <OakFlex $height={"spacing-240"}>
+      <OakFlex $gap="spacing-24">
         <OakSmallSecondaryButtonWithDropdown {...args}>
           <OakSmallSecondaryButtonWithDropdown.Item aria-label="Button 1">
             Button 1
@@ -98,7 +98,7 @@ export const ButtonWithDropDown: DropdownNavStory = {
 
 export const leadingButtonIcon: DropdownNavStory = {
   render: (args) => (
-    <OakFlex $height={"all-spacing-19"}>
+    <OakFlex $height={"spacing-240"}>
       <OakSmallSecondaryButtonWithDropdown {...args}>
         <OakSmallSecondaryButtonWithDropdown.Item
           iconName="external"
@@ -137,7 +137,7 @@ export const leadingButtonIcon: DropdownNavStory = {
             <OakSpan>Learn more about Aila, Oak's AI </OakSpan>
             <OakFlex $font={"body-3"} $alignItems={"center"}>
               <OakSpan>lesson assistant </OakSpan>
-              <OakIcon iconHeight="all-spacing-6" iconName="external" />
+              <OakIcon iconHeight="spacing-24" iconName="external" />
             </OakFlex>
           </OakFlex>
         </OakSmallPrimaryInvertedButton>
@@ -149,18 +149,14 @@ export const leadingButtonIcon: DropdownNavStory = {
     leadingButtonIcon: (
       <OakFlex
         $borderRadius={"border-radius-s"}
-        $ph={"inner-padding-ssx"}
-        $mr={"space-between-ssx"}
+        $ph={"spacing-4"}
+        $mr={"spacing-8"}
         $background={"lemon"}
         $alignItems={"center"}
         $justifyContent={"center"}
-        $pr={"inner-padding-ssx"}
+        $pr={"spacing-4"}
       >
-        <OakIcon
-          $height={"all-spacing-4"}
-          $width={"all-spacing-4"}
-          iconName={"ai"}
-        />
+        <OakIcon $height={"spacing-16"} $width={"spacing-16"} iconName={"ai"} />
         <OakSpan $font="body-3">{"New"}</OakSpan>
       </OakFlex>
     ),

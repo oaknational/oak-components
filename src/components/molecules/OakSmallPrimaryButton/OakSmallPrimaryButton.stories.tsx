@@ -38,7 +38,7 @@ type Story = StoryObj<typeof OakSmallPrimaryButton>;
 
 export const Default: Story = {
   render: (args) => (
-    <OakFlex $gap="space-between-m">
+    <OakFlex $gap="spacing-24">
       <OakSmallPrimaryButton {...args}>Primary Button</OakSmallPrimaryButton>
       <OakSmallPrimaryButton {...args} disabled>
         Disabled Button
@@ -55,7 +55,7 @@ export const Default: Story = {
 
 export const LinkStyledAsButton: Story = {
   render: (args) => (
-    <OakFlex $gap="space-between-m">
+    <OakFlex $gap="spacing-24">
       <OakSmallPrimaryButton {...args}>Primary Link</OakSmallPrimaryButton>
     </OakFlex>
   ),

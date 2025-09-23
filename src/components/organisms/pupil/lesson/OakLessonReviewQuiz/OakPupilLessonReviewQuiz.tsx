@@ -45,8 +45,8 @@ export const ReviewItemContainer = (
       $flexDirection={["column", "column", "row"]}
       $justifyContent={"space-between"}
       $flexWrap={"wrap"}
-      $ph={["inner-padding-m", "inner-padding-xl"]}
-      $pv="inner-padding-l"
+      $ph={["spacing-16", "spacing-24"]}
+      $pv="spacing-20"
       $borderRadius="border-radius-l"
       $ba="border-solid-l"
       {...rest}
@@ -72,12 +72,8 @@ export const ReviewItemTitleSection = (props: ReviewItemTitleSectionProps) => {
         {completed === false ? (
           summaryForIncomplete
         ) : (
-          <OakFlex $gap="space-between-sssx" $alignItems="center">
-            <OakIcon
-              iconName="tick"
-              $width="all-spacing-6"
-              $height="all-spacing-6"
-            />
+          <OakFlex $gap="spacing-4" $alignItems="center">
+            <OakIcon iconName="tick" $width="spacing-24" $height="spacing-24" />
             Completed
           </OakFlex>
         )}
@@ -108,11 +104,11 @@ export const OakLessonReviewQuiz = (props: OakLessonReviewQuizProps) => {
       $borderColor={completed ? completedBackgroundColor : borderColor}
       {...rest}
     >
-      <OakFlex $gap="space-between-m" $alignItems="center">
+      <OakFlex $gap="spacing-24" $alignItems="center">
         <OakRoundIcon
           iconName="quiz"
-          $width="all-spacing-10"
-          $height="all-spacing-10"
+          $width="spacing-56"
+          $height="spacing-56"
           $background={iconBackgroundColor}
         />
         <ReviewItemTitleSection

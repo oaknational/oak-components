@@ -20,7 +20,7 @@ const meta: Meta<typeof OakLessonInfoCard> = {
     (Story) => (
       <OakFlex
         $background={"grey10"}
-        $pa={"inner-padding-xl"}
+        $pa={"spacing-24"}
         $flexDirection={"column"}
       >
         <Story />

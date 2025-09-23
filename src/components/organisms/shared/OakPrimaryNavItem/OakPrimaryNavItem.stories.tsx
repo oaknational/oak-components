@@ -27,7 +27,7 @@ type Story = StoryObj<typeof OakPrimaryNavItem>;
 
 export const Default: Story = {
   render: (args) => (
-    <OakFlex $gap="space-between-m">
+    <OakFlex $gap="spacing-24">
       <OakFlex>
         <OakPrimaryNavItem {...args}>Primary nav item</OakPrimaryNavItem>
       </OakFlex>
@@ -41,7 +41,7 @@ export const Default: Story = {
 
 export const Current: Story = {
   render: (args) => (
-    <OakFlex $gap="space-between-m">
+    <OakFlex $gap="spacing-24">
       <OakFlex>
         <OakPrimaryNavItem {...args}>
           Primary current nav item

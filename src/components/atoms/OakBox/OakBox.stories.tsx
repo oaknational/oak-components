@@ -48,9 +48,9 @@ export const Color: Story = {
   args: {
     $background: "mint",
     $color: "black",
-    $width: "all-spacing-16",
-    $height: "all-spacing-16",
-    $pa: "inner-padding-m",
+    $width: "spacing-120",
+    $height: "spacing-120",
+    $pa: "spacing-16",
   },
   parameters: {
     controls: { include: [...Object.keys(colorArgTypes)] },
@@ -68,12 +68,12 @@ export const Position: Story = {
   args: {
     $background: "mint",
     $color: "black",
-    $width: "all-spacing-20",
-    $height: "all-spacing-16",
+    $width: "spacing-360",
+    $height: "spacing-120",
     $position: "absolute",
-    $pa: "inner-padding-m",
-    $mt: "space-between-l",
-    $ml: "space-between-l",
+    $pa: "spacing-16",
+    $mt: "spacing-48",
+    $ml: "spacing-48",
   },
   parameters: {
     controls: {
@@ -92,25 +92,25 @@ export const Borders: Story = {
     <OakFlex
       $flexDirection={"column"}
       $alignItems={"start"}
-      $gap={"space-between-s"}
+      $gap={"spacing-16"}
       $width={"100%"}
       $height={"100vh"}
     >
-      <OakBox data-testId="box-id" {...args} $pa="inner-padding-xl">
+      <OakBox data-testId="box-id" {...args} $pa="spacing-24">
         Use controls to change border style
       </OakBox>
 
-      <OakBox data-testId="box-id" $pa="inner-padding-xl" $ba="border-solid-s">
+      <OakBox data-testId="box-id" $pa="spacing-24" $ba="border-solid-s">
         Border Solid Small
       </OakBox>
 
-      <OakBox data-testId="box-id" $pa="inner-padding-xl" $ba="border-solid-m">
+      <OakBox data-testId="box-id" $pa="spacing-24" $ba="border-solid-m">
         Border Solid Medium
       </OakBox>
 
       <OakBox
         data-testId="box-id"
-        $pa="inner-padding-xl"
+        $pa="spacing-24"
         $ba="border-solid-m"
         $borderRadius={"border-radius-m"}
       >
@@ -131,8 +131,8 @@ export const DropShadow: Story = {
     <OakBox
       data-testId="box-id"
       $dropShadow="drop-shadow-standard"
-      $pa="inner-padding-l"
-      $width="all-spacing-16"
+      $pa="spacing-20"
+      $width="spacing-120"
       {...args}
     >
       Drop Shadow Standard
@@ -150,21 +150,21 @@ export const OpacityAndZIndex: Story = {
   render: (args) => (
     <OakBox $width={"100%"} $height={"100vh"}>
       <OakBox
-        $pa="inner-padding-xl"
-        $width="all-spacing-18"
-        $height="all-spacing-18"
+        $pa="spacing-24"
+        $width="spacing-180"
+        $height="spacing-180"
         $background="red"
         $position="absolute"
-        $left="space-between-l"
-        $top="space-between-l"
+        $left="spacing-48"
+        $top="spacing-48"
       >
         Fixed Box
       </OakBox>
       <OakBox
         {...args}
-        $pa="inner-padding-xl"
-        $width="all-spacing-18"
-        $height="all-spacing-18"
+        $pa="spacing-24"
+        $width="spacing-180"
+        $height="spacing-180"
         $background="blue"
         $position="absolute"
       >
@@ -193,8 +193,8 @@ export const TransitionAndTransform: Story = {
     `;
     return (
       <HoverBox
-        $pa="inner-padding-xl"
-        $width="all-spacing-18"
+        $pa="spacing-24"
+        $width="spacing-180"
         $background="mint"
         $transition={args.$transition}
       >

@@ -21,7 +21,7 @@ type Story = StoryObj<typeof OakFlex>;
 
 export const AllFonts: Story = {
   render: (args) => (
-    <OakFlex $flexDirection={"column"} $gap="space-between-m" {...args}>
+    <OakFlex $flexDirection={"column"} $gap="spacing-24" {...args}>
       {Object.keys(oakFontTokens).map((fontToken) => (
         <OakSpan key={fontToken} $font={fontToken as OakFontToken}>
           {fontToken}

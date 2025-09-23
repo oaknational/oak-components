@@ -34,6 +34,6 @@ type Story = StoryObj<typeof OakHandDrawnHR>;
 export const Default: Story = {
   render: (args) => <OakHandDrawnHR {...args} />,
   args: {
-    $height: "all-spacing-1",
+    $height: "spacing-4",
   },
 };

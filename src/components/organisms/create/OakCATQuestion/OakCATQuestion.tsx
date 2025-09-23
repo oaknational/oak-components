@@ -54,29 +54,29 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
   };
 
   const header = (
-    <OakFlex $gap={"space-between-xs"} $alignItems={"center"} $width={"100%"}>
+    <OakFlex $gap={"spacing-12"} $alignItems={"center"} $width={"100%"}>
       {`${questionNumber}.`}
       {questionTypeInput}
     </OakFlex>
   );
 
   const body = (
-    <OakFlex $flexDirection={"column"} $width={"100%"} $gap={"space-between-l"}>
+    <OakFlex $flexDirection={"column"} $width={"100%"} $gap={"spacing-48"}>
       {/* this has the effect of stretching the container and the items within */}
       <OakFlex $alignSelf={"stretch"} $flexDirection={"column"}>
         {answersSection}
       </OakFlex>
 
       <OakFlex
-        $ph="inner-padding-xl2"
-        $pv="inner-padding-xl"
+        $ph="spacing-32"
+        $pv="spacing-24"
         $background={"grey10"}
         $borderRadius={"border-radius-m2"}
         $borderColor={"bg-neutral"}
         $ba={"border-solid-s"}
         $alignSelf={"flex-start"}
       >
-        <OakFlex $gap="all-spacing-5">
+        <OakFlex $gap="spacing-20">
           <OakLabel>
             <OakSpan $color={"text-subdued"} $font={"heading-light-7"}>
               Hint
@@ -101,7 +101,7 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
         $width={"100%"}
         $justifyContent={"flex-start"}
         $background={"bg-primary"}
-        $pa={"inner-padding-xl2"}
+        $pa={"spacing-32"}
         $statusColor={statusColorMap[status]}
         $flexDirection={"column"}
       >

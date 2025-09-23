@@ -36,8 +36,8 @@ export const InternalCheckBoxWrapper = (
   props: InternalCheckBoxWrapperProps,
 ) => {
   const {
-    size = "all-spacing-6",
-    iconPadding = "inner-padding-none",
+    size = "spacing-24",
+    iconPadding = "spacing-0",
     internalCheckbox,
     checkedIcon = (
       <OakIcon
@@ -54,8 +54,8 @@ export const InternalCheckBoxWrapper = (
       {internalCheckbox}
       <StyledIconContainer
         $position={"absolute"}
-        $top={"all-spacing-0"}
-        $left={"all-spacing-0"}
+        $top={"spacing-0"}
+        $left={"spacing-0"}
         $pa={iconPadding}
         $width={size}
         $height={size}

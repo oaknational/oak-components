@@ -23,7 +23,7 @@ type Story = StoryObj<typeof OakAspectRatio>;
 
 export const LocalImage: Story = (args: OakAspectRatioProps) => (
   <OakAspectRatio {...args} ratio={args.ratio}>
-    <OakImage alt={"Testimage"} src={testPic} $maxWidth={"all-spacing-20"} />
+    <OakImage alt={"Testimage"} src={testPic} $maxWidth={"spacing-360"} />
   </OakAspectRatio>
 );
 

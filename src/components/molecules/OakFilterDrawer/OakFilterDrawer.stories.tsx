@@ -52,13 +52,13 @@ const meta: Meta<typeof OakFilterDrawer> = {
         >
           <>
             <StyledFieldset>
-              <OakHeading as={"legend"} $mv={"space-between-m"} tag={"h4"}>
+              <OakHeading as={"legend"} $mv={"spacing-24"} tag={"h4"}>
                 Filter option buttons
               </OakHeading>
               <OakFlex
                 $flexWrap={"wrap"}
-                $mb={"space-between-m2"}
-                $gap={"space-between-xs"}
+                $mb={"spacing-32"}
+                $gap={"spacing-12"}
               >
                 {[1, 2, 3].map((i) => {
                   return (
@@ -74,12 +74,12 @@ const meta: Meta<typeof OakFilterDrawer> = {
               </OakFlex>
             </StyledFieldset>
             <StyledFieldset>
-              <OakHeading as={"legend"} $mb={"space-between-m"} tag="h4">
+              <OakHeading as={"legend"} $mb={"spacing-24"} tag="h4">
                 Filter option radio
               </OakHeading>
-              <OakBox $mb={"space-between-m"}>
+              <OakBox $mb={"spacing-24"}>
                 <OakRadioGroup
-                  $gap={"space-between-xs"}
+                  $gap={"spacing-12"}
                   name="radio-group"
                   $flexWrap={"wrap"}
                 >

@@ -73,7 +73,7 @@ const StyledDraggable = styled(OakBox)<{ $iconColor: OakCombinedColorToken }>`
       box-shadow: ${parseDropShadow("drop-shadow-standard")};
       border-bottom: ${parseBorder("border-solid-xl")}
         ${parseColor("border-primary")};
-      padding-bottom: ${parseSpacing("inner-padding-m")};
+      padding-bottom: ${parseSpacing("spacing-16")};
       text-decoration: underline;
 
       ${StyledOakIcon} {
@@ -118,7 +118,7 @@ const StyledDraggable = styled(OakBox)<{ $iconColor: OakCombinedColorToken }>`
 `;
 
 const StyledFlex = styled(OakFlex)`
-  margin-block: -${parseSpacing("space-between-ssx")};
+  margin-block: -${parseSpacing("spacing-8")};
 `;
 
 /**
@@ -149,24 +149,24 @@ export const OakDraggable: FC<
     return (
       <StyledDraggable
         ref={ref}
-        $pv="inner-padding-l"
-        $pl="inner-padding-s"
-        $pr="inner-padding-m"
+        $pv="spacing-20"
+        $pl="spacing-12"
+        $pr="spacing-16"
         $background={background}
         $color={color}
         $borderRadius="border-radius-m2"
-        $minHeight="all-spacing-10"
+        $minHeight="spacing-56"
         data-dragging={isDragging}
         data-disabled={isDisabled}
         data-readonly={isReadOnly}
         $iconColor={iconColor}
         {...props}
       >
-        <StyledFlex $gap="space-between-s" $alignItems="center">
+        <StyledFlex $gap="spacing-16" $alignItems="center">
           <StyledOakIcon
             iconName={iconName}
-            $width="all-spacing-7"
-            $height="all-spacing-7"
+            $width="spacing-32"
+            $height="spacing-32"
             alt={iconAlt}
           />
           <OakFlex $font="body-1-bold">{children}</OakFlex>

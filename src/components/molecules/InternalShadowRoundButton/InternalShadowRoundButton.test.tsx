@@ -17,8 +17,8 @@ const defaultArgs: InternalShadowRoundButtonProps = {
   disabledIconBackground: "grey20",
   disabledTextColor: "grey40",
   hoverIconBackground: "mint",
-  iconBackgroundSize: "all-spacing-7",
-  iconSize: "all-spacing-6",
+  iconBackgroundSize: "spacing-32",
+  iconSize: "spacing-24",
 };
 
 describe("InternalShadowRoundButton", () => {

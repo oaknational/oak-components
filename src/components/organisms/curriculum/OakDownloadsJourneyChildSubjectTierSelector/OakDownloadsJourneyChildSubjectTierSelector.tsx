@@ -61,22 +61,21 @@ const UnstyledComponent = (
   }
 
   return (
-    <OakFlex $flexDirection={"column"} $gap={"space-between-m"}>
+    <OakFlex $flexDirection={"column"} $gap={"spacing-24"}>
       <OakInlineBanner
         isOpen={true}
         message={`Before downloading, choose ${
           childSubjectsAvailable && tiersAvailable ? "options" : "an option"
         } for KS4. The document will still display both KS3 and KS4.`}
-        $maxWidth={"all-spacing-22"}
+        $maxWidth={"spacing-640"}
       />
-
       {childSubjectsAvailable && (
         <OakRadioGroup
           label="Choose subject for KS4 units"
           name="childSubjectRadio"
           onChange={handleChildSubjectSelection}
           $flexDirection={"column"}
-          $gap={"space-between-s"}
+          $gap={"spacing-16"}
           defaultValue={childSubjectSelected || "combined-science"}
           data-testid="child-subject-selector"
         >
@@ -99,7 +98,6 @@ const UnstyledComponent = (
           )}
         </OakRadioGroup>
       )}
-
       {tiersAvailable && (
         <OakRadioGroup
           data-testid="tier-selector"
@@ -107,7 +105,7 @@ const UnstyledComponent = (
           name="tierRadio"
           onChange={handleTierSelection}
           $flexDirection={"column"}
-          $gap={"space-between-s"}
+          $gap={"spacing-16"}
           defaultValue={tierSelected}
         >
           {tiers.map(
@@ -123,7 +121,6 @@ const UnstyledComponent = (
           )}
         </OakRadioGroup>
       )}
-
       <OakPrimaryButton
         iconName="arrow-right"
         isTrailingIcon={true}

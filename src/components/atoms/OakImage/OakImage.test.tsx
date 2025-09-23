@@ -34,7 +34,7 @@ describe("OakImage", () => {
         src="/../../../../assets/oak-national-academy-logo-512.png"
         width={512}
         height={512}
-        $minWidth={"all-spacing-16"}
+        $minWidth={"spacing-120"}
         alt="a test image"
       />,
     );

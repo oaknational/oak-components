@@ -171,8 +171,8 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
   const imageContainer = (
     <OakFlex
       $flexDirection="column"
-      $minWidth={"all-spacing-20"}
-      $gap={"space-between-s"}
+      $minWidth={"spacing-360"}
+      $gap={"spacing-16"}
     >
       <OakBox>{image}</OakBox>
       {displayValue}
@@ -184,7 +184,7 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
 
   const inputCheckbox = (
     <StyledFlexBox
-      $pa="inner-padding-l"
+      $pa="spacing-20"
       $borderRadius={"border-radius-m2"}
       $borderColor={
         isHighlighted ? "border-decorative5-stronger" : "border-primary"
@@ -203,15 +203,15 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
       <InternalCheckBoxLabelHoverDecor
         pointerEvents="none"
         htmlFor={id}
-        labelGap={"space-between-s"}
+        labelGap={"spacing-16"}
         labelAlignItems={"center"}
         $color={disabled && !isFeedback ? "text-disabled" : "text-primary"}
         $font={"body-1"}
         disabled={disabled}
       >
         <InternalCheckBoxWrapper
-          size={"all-spacing-7"}
-          iconPadding="inner-padding-ssx"
+          size={"spacing-32"}
+          iconPadding="spacing-4"
           checkedIcon={
             <OakBox
               $width="100%"
@@ -234,8 +234,8 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
               value={value}
               disabled={disabled || isFeedback}
               {...rest}
-              $width={"all-spacing-7"}
-              $height={"all-spacing-7"}
+              $width={"spacing-32"}
+              $height={"spacing-32"}
               $ba={"border-solid-m"}
               $borderColor="border-neutral"
               $borderRadius={"border-radius-s"}

@@ -47,17 +47,17 @@ export const SpanningColumns: Story = {
         {...args}
         $background={"amber"}
         $colSpan={6}
-        $pa="inner-padding-xl"
+        $pa="spacing-24"
       >
         6 columns
       </OakGridArea>
-      <OakGridArea $background={"mint"} $colSpan={4} $pa="inner-padding-xl">
+      <OakGridArea $background={"mint"} $colSpan={4} $pa="spacing-24">
         4 columns
       </OakGridArea>
-      <OakGridArea $background={"lemon"} $colSpan={2} $pa="inner-padding-xl">
+      <OakGridArea $background={"lemon"} $colSpan={2} $pa="spacing-24">
         2 columns
       </OakGridArea>
-      <OakGridArea $background={"teal"} $colSpan={12} $pa="inner-padding-xl">
+      <OakGridArea $background={"teal"} $colSpan={12} $pa="spacing-24">
         12 columns
       </OakGridArea>
     </OakGrid>
@@ -73,17 +73,17 @@ export const SpanningRows: Story = {
         $background={"amber"}
         $colSpan={6}
         $rowSpan={2}
-        $pa="inner-padding-xl"
+        $pa="spacing-24"
       >
         6 columns, 2 rows
       </OakGridArea>
-      <OakGridArea $background={"mint"} $colSpan={6} $pa="inner-padding-xl">
+      <OakGridArea $background={"mint"} $colSpan={6} $pa="spacing-24">
         6 columns, 1 row
       </OakGridArea>
-      <OakGridArea $background={"lemon"} $colSpan={3} $pa="inner-padding-xl">
+      <OakGridArea $background={"lemon"} $colSpan={3} $pa="spacing-24">
         3 columns, 1 row
       </OakGridArea>
-      <OakGridArea $background={"teal"} $colSpan={3} $pa="inner-padding-xl">
+      <OakGridArea $background={"teal"} $colSpan={3} $pa="spacing-24">
         3 columns, 1 row
       </OakGridArea>
     </OakGrid>
@@ -98,7 +98,7 @@ export const StartCol: Story = {
         {...args}
         $background={"amber"}
         $colSpan={3}
-        $pa="inner-padding-xl"
+        $pa="spacing-24"
         $colStart={3}
       >
         Col start 3
@@ -107,7 +107,7 @@ export const StartCol: Story = {
         $background={"lemon"}
         $colSpan={3}
         $colStart={4}
-        $pa="inner-padding-xl"
+        $pa="spacing-24"
       >
         Col start 4
       </OakGridArea>
@@ -115,7 +115,7 @@ export const StartCol: Story = {
         $background={"teal"}
         $colSpan={3}
         $colStart={5}
-        $pa="inner-padding-xl"
+        $pa="spacing-24"
       >
         Col Start 5
       </OakGridArea>
@@ -131,7 +131,7 @@ export const EndCol: Story = {
         {...args}
         $background={"amber"}
         $colSpan={3}
-        $pa="inner-padding-xl"
+        $pa="spacing-24"
         $colEnd={4}
       >
         Col end 4
@@ -140,7 +140,7 @@ export const EndCol: Story = {
         $background={"lemon"}
         $colSpan={3}
         $colEnd={5}
-        $pa="inner-padding-xl"
+        $pa="spacing-24"
       >
         Col end 5
       </OakGridArea>
@@ -148,7 +148,7 @@ export const EndCol: Story = {
         $background={"teal"}
         $colSpan={3}
         $colEnd={6}
-        $pa="inner-padding-xl"
+        $pa="spacing-24"
       >
         Col end 6
       </OakGridArea>

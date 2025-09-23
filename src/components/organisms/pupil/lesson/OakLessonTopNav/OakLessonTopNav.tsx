@@ -49,15 +49,13 @@ export const OakLessonTopNav = ({
   mobileSummary,
 }: OakLessonTopNavProps) => {
   return (
-    <OakFlex $gap="space-between-m" $alignItems="center">
-      <OakBox $pl={["inner-padding-none", "inner-padding-s"]}>
-        {backLinkSlot}
-      </OakBox>
+    <OakFlex $gap="spacing-24" $alignItems="center">
+      <OakBox $pl={["spacing-0", "spacing-12"]}>{backLinkSlot}</OakBox>
       <OakFlex $flexGrow="none">
         <OakRoundIcon
           {...pickSectionIcon(lessonSectionName)}
-          $width="all-spacing-8"
-          $height="all-spacing-8"
+          $width="spacing-40"
+          $height="spacing-40"
         />
       </OakFlex>
       <OakBox>

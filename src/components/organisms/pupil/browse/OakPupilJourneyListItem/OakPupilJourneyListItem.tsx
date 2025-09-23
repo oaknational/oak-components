@@ -28,8 +28,8 @@ const StyledLabel = styled(OakBox)``;
 const StyledRoundIcon = styled(OakRoundIcon)<{
   $disabled?: boolean;
 }>`
-  width: ${parseSpacing("all-spacing-8")};
-  height: ${parseSpacing("all-spacing-8")};
+  width: ${parseSpacing("spacing-40")};
+  height: ${parseSpacing("spacing-40")};
   padding: 0;
 
   background: transparent;
@@ -121,12 +121,12 @@ export const OakPupilJourneyListItem = <C extends ElementType = "a">(
       <StyledPupilJourneyItem
         className={disabledOrUnavailable ? undefined : "pupil-journey-item"}
         as={disabledOrUnavailable ? "div" : as ?? "a"}
-        $gap={["space-between-s", "space-between-m2"]}
+        $gap={["spacing-16", "spacing-32"]}
         $alignItems="center"
         $justifyContent={"space-between"}
         $flexWrap={"wrap"}
         $background={unavailable ? "bg-neutral" : "bg-primary"}
-        $pa={["inner-padding-l", "inner-padding-xl"]}
+        $pa={["spacing-20", "spacing-24"]}
         $borderRadius="border-radius-m"
         $ba={unavailable ? "border-solid-m" : "border-solid-none"}
         $borderColor={unavailable ? "border-neutral-lighter" : "transparent"}
@@ -136,7 +136,7 @@ export const OakPupilJourneyListItem = <C extends ElementType = "a">(
         onClick={disabledOrUnavailable ? undefined : onClick}
         {...rest}
       >
-        <OakFlex $alignItems={"center"} $gap={["space-between-m2"]}>
+        <OakFlex $alignItems={"center"} $gap={["spacing-32"]}>
           {" "}
           <OakFlex>
             <OakBox
@@ -159,7 +159,7 @@ export const OakPupilJourneyListItem = <C extends ElementType = "a">(
 
         <OakFlex
           $alignItems={"center"}
-          $gap={"space-between-xs"}
+          $gap={"spacing-12"}
           $flexBasis={"auto"}
           $flexGrow={1}
           $justifyContent={"flex-end"}

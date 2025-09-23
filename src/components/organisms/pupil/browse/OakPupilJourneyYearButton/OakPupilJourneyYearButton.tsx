@@ -58,8 +58,8 @@ export const OakPupilJourneyYearButton = <C extends ElementType = "button">({
   return (
     <InternalShadowRectButton
       element={element ?? "button"}
-      pv={"inner-padding-xl"}
-      ph={"inner-padding-xl"}
+      pv={"spacing-24"}
+      ph={"spacing-24"}
       font={"heading-6"}
       defaultBorderColor={borderColor}
       defaultBackground={defaultBackground}

@@ -12,7 +12,7 @@ export type InternalCardProps = OakFlexProps;
 const InternalCard = styled(OakFlex)``;
 
 InternalCard.defaultProps = {
-  $pa: "inner-padding-xl",
+  $pa: "spacing-24",
   $flexDirection: "column",
   $flexGrow: 1,
   $position: "relative",

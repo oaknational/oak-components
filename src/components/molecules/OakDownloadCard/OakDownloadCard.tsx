@@ -74,7 +74,7 @@ export const OakDownloadCard = (props: OakDownloadCardProps) => {
     ...rest
   } = props;
 
-  const checkboxSize = "all-spacing-6";
+  const checkboxSize = "spacing-24";
   const checkedBorderColor = "border-primary";
   const disabledColor = "text-disabled";
 
@@ -100,22 +100,22 @@ export const OakDownloadCard = (props: OakDownloadCardProps) => {
         <OakFlex $alignItems={"flex-start"} $flexGrow={1}>
           <OakFlex
             $background={"lemon"}
-            $pa={"inner-padding-s"}
+            $pa={"spacing-12"}
             $alignItems={"center"}
             $alignSelf={"stretch"}
           >
             <OakIcon
               iconName={iconName}
-              $width={"all-spacing-9"}
-              $height={"all-spacing-9"}
+              $width={"spacing-48"}
+              $height={"spacing-48"}
             />
           </OakFlex>
           <OakFlex
             $flexGrow={1}
             $flexDirection={"column"}
-            $gap="all-spacing-1"
-            $pv="inner-padding-s"
-            $ph="inner-padding-m"
+            $gap="spacing-4"
+            $pv="spacing-12"
+            $ph="spacing-16"
           >
             <OakBox $font={"body-2-bold"}>{titleSlot}</OakBox>
             {fileSizeSlot && <OakBox $font={"body-3"}>{fileSizeSlot}</OakBox>}
@@ -123,7 +123,7 @@ export const OakDownloadCard = (props: OakDownloadCardProps) => {
           </OakFlex>
         </OakFlex>
         <OakFlex>
-          <OakFlex $alignItems={"center"} $pr={"inner-padding-m"}>
+          <OakFlex $alignItems={"center"} $pr={"spacing-16"}>
             {asRadio && (
               <InternalRadioWrapper
                 checked={value === radioContext.currentValue}
@@ -167,7 +167,7 @@ export const OakDownloadCard = (props: OakDownloadCardProps) => {
                     {...rest}
                   />
                 }
-                iconPadding={"inner-padding-none"}
+                iconPadding={"spacing-0"}
               />
             )}
           </OakFlex>

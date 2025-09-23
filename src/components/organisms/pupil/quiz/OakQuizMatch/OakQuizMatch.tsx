@@ -191,7 +191,7 @@ export const OakQuizMatch = ({
 
   return (
     <>
-      <OakDragAndDropInstructions $mb="space-between-m2" />
+      <OakDragAndDropInstructions $mb="spacing-32" />
       <InternalDndContext
         sensors={sensors}
         collisionDetection={closestCenter}
@@ -205,7 +205,7 @@ export const OakQuizMatch = ({
           ))}
         </ConnectedDroppableHoldingPen>
         <OakFlex
-          $gap="space-between-s"
+          $gap="spacing-16"
           $flexDirection="column"
           aria-label="Matched items"
           role="listbox"

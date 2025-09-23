@@ -85,15 +85,15 @@ export const OakPupilJourneyUnitsFilter = (
               Categories
             </OakHeading>
           }
-          $pv={"inner-padding-xl"}
-          $gap={"space-between-m"}
+          $pv={"spacing-24"}
+          $gap={"spacing-24"}
         >
           {OakRadioGroup}
         </OakOutlineAccordion>
       </OakFlex>
       <OakFlex
         $display={["none", "flex"]}
-        $gap={"space-between-m"}
+        $gap={"spacing-24"}
         $flexDirection={"column"}
         $alignItems={"end"}
       >

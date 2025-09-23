@@ -64,7 +64,7 @@ export const WithoutImage: Story = {
 
 export const MintPageBackground: Story = {
   render: (args) => (
-    <OakMaxWidth $background={"mint"} $pa={"inner-padding-xl"}>
+    <OakMaxWidth $background={"mint"} $pa={"spacing-24"}>
       <OakQuote {...args} />
     </OakMaxWidth>
   ),

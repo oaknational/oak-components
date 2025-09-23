@@ -12,7 +12,7 @@ const meta: Meta<typeof OakJauntyAngleLabel> = {
   args: { label: "Select one answer" },
   decorators: [
     (Story) => (
-      <OakFlex $pa={"inner-padding-xl"} $flexDirection={"row"}>
+      <OakFlex $pa={"spacing-24"} $flexDirection={"row"}>
         <Story />
       </OakFlex>
     ),

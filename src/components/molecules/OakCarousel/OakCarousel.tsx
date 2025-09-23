@@ -58,13 +58,13 @@ export const OakCarousel = ({
 
   return (
     <OakFlex
-      $pt={"inner-padding-xl5"}
-      $pb={"inner-padding-xl2"}
-      $ph={"inner-padding-xl2"}
+      $pt={"spacing-56"}
+      $pb={"spacing-32"}
+      $ph={"spacing-32"}
       $background={"mint30"}
       $borderRadius={"border-radius-l"}
       $flexDirection={"column"}
-      $gap={"space-between-xl"}
+      $gap={"spacing-56"}
       role="region"
       aria-label={containerLabel}
       $height={"100%"}
@@ -87,7 +87,6 @@ export const OakCarousel = ({
           })}
         </SlideContainer>
       </OakFlex>
-
       <OakFlex $justifyContent={"space-between"}>
         <SubCarouselPositionIndicator
           activeIndex={activeIndex}

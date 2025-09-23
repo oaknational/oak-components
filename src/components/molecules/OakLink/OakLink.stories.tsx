@@ -90,7 +90,7 @@ export const WithIconSizeProps: Story = {
     children: "External link with icon size props",
     isTrailingIcon: true,
     iconName: "external",
-    iconHeight: "all-spacing-6",
-    iconWidth: "all-spacing-6",
+    iconHeight: "spacing-24",
+    iconWidth: "spacing-24",
   },
 };

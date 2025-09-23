@@ -61,9 +61,9 @@ const UnstyledComponent = (props: OakSideMenuNavLinkProps) => {
   return (
     <StyledLink
       $alignItems={["center", "flex-start"]}
-      $columnGap="space-between-s"
+      $columnGap="spacing-16"
       href={item.href}
-      $ph={["inner-padding-none", "inner-padding-s"]}
+      $ph={["spacing-0", "spacing-12"]}
       isSelected={isSelected}
       $flexDirection={["row", "column"]}
       onClick={onClick}
@@ -72,7 +72,7 @@ const UnstyledComponent = (props: OakSideMenuNavLinkProps) => {
     >
       <OakFlex
         $flexDirection={["row", "column"]}
-        $columnGap={["space-between-s", "space-between-sssx"]}
+        $columnGap={["spacing-16", "spacing-4"]}
         $flexWrap="wrap"
       >
         <OakSpan $font="heading-light-7" $color="text-primary">
@@ -91,8 +91,8 @@ const UnstyledComponent = (props: OakSideMenuNavLinkProps) => {
       <OakIcon
         $display={["block", "none"]}
         iconName="chevron-right"
-        $width="all-spacing-6"
-        $pl="inner-padding-s"
+        $width="spacing-24"
+        $pl="spacing-12"
       />
     </StyledLink>
   );

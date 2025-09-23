@@ -69,11 +69,11 @@ const meta: Meta<typeof OakModalCenter> = {
     ),
     footerSlot: (
       <OakFlex
-        $pv="inner-padding-xl"
+        $pv="spacing-24"
         $justifyContent="center"
         $alignItems="center"
         $flexDirection="column"
-        $rowGap="space-between-m"
+        $rowGap="spacing-24"
       >
         <OakPrimaryButton $font="heading-7">
           I understand, continue
@@ -134,7 +134,7 @@ export const WithScrolling: Story = {
       >
         {[1, 2, 3].map((i) => (
           <Fragment key={i}>
-            <OakP $mb="space-between-s">
+            <OakP $mb="spacing-16">
               In today's digital landscape, privacy concerns have become
               increasingly paramount, prompting the need for transparency and
               user consent regarding data collection practices. A cookie banner
@@ -146,7 +146,7 @@ export const WithScrolling: Story = {
               and the California Consumer Privacy Act (CCPA) in the United
               States.
             </OakP>
-            <OakP $mb="space-between-s">
+            <OakP $mb="spacing-16">
               Without a cookie banner, website visitors may remain unaware of
               the data being collected about them, including their browsing
               habits, preferences, and demographic information. This lack of

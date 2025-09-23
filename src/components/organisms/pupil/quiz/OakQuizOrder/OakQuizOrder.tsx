@@ -119,7 +119,7 @@ export const OakQuizOrder = ({
 
   return (
     <>
-      <OakDragAndDropInstructions $mb="space-between-m2" />
+      <OakDragAndDropInstructions $mb="spacing-32" />
       <InternalDndContext
         sensors={sensors}
         collisionDetection={closestCenter}
@@ -130,7 +130,7 @@ export const OakQuizOrder = ({
       >
         <SortableContext items={items} strategy={verticalListSortingStrategy}>
           <OakFlex
-            $gap="space-between-s"
+            $gap="spacing-16"
             $flexDirection="column"
             role="listbox"
             aria-label="Sortable items"

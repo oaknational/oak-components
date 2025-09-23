@@ -52,8 +52,8 @@ export const OakInfoButton = (props: OakInfoButtonProps) => {
       disabledIconColor={"white"}
       isLoading={isLoading}
       disabled={disabled}
-      iconBackgroundSize={"all-spacing-8"}
-      iconSize={"all-spacing-7"}
+      iconBackgroundSize={"spacing-40"}
+      iconSize={"spacing-32"}
       onClick={onClick}
       data-rac
       {...buttonProps}

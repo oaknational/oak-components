@@ -14,8 +14,8 @@ export type OakMaxWidthProps = OakFlexProps;
 export const OakMaxWidth = styled(OakFlex)``;
 
 OakMaxWidth.defaultProps = {
-  $maxWidth: ["all-spacing-21", "all-spacing-24"],
-  $ph: ["inner-padding-none", "inner-padding-s"],
+  $maxWidth: ["spacing-480", "spacing-1280"],
+  $ph: ["spacing-0", "spacing-12"],
   $flexDirection: "column",
   $flexGrow: 1,
   $width: "100%",

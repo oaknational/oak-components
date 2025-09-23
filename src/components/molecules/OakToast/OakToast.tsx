@@ -46,17 +46,13 @@ const SuccessIconBackground = styled(OakBox)`
 const SuccessIcon = (
   <OakBox $position="relative">
     <SuccessIconBackground
-      $width="all-spacing-5"
-      $height="all-spacing-5"
+      $width="spacing-20"
+      $height="spacing-20"
       $background="white"
       $borderRadius="border-radius-circle"
       $position="absolute"
     />
-    <OakIcon
-      iconName="success"
-      $width="all-spacing-7"
-      $height="all-spacing-7"
-    />
+    <OakIcon iconName="success" $width="spacing-32" $height="spacing-32" />
   </OakBox>
 );
 
@@ -102,8 +98,8 @@ const variants: Variant = {
       <OakIcon
         iconName="warning"
         $colorFilter="text-inverted"
-        $height="all-spacing-7"
-        $width="all-spacing-7"
+        $height="spacing-32"
+        $width="spacing-32"
       />
     ),
     color: "white",
@@ -170,13 +166,13 @@ export const OakToast = ({
       {(state) => (
         <StyledFlex
           data-testid="oak-toast"
-          $pa="inner-padding-m"
+          $pa="spacing-16"
           $borderRadius="border-radius-m2"
           $background={background}
           $state={state}
           $width="max-content"
-          $maxWidth={["all-spacing-19", "all-spacing-20"]}
-          $gap="space-between-xs"
+          $maxWidth={["spacing-240", "spacing-360"]}
+          $gap="spacing-12"
           $dropShadow="drop-shadow-standard"
           $alignItems="center"
           $font="heading-light-7"

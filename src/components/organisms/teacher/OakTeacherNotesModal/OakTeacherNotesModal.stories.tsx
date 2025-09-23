@@ -147,12 +147,7 @@ const getMsgs = () => {
     "Please do not include phone numbers. This information will be redacted.",
     "Please do not include addresses. This information will be redacted.",
   ].map((m, i) => (
-    <OakFlex
-      key={m + i}
-      $alignItems="center"
-      $gap="space-between-ssx"
-      role="alert"
-    >
+    <OakFlex key={m + i} $alignItems="center" $gap="spacing-8" role="alert">
       <OakIcon iconName="error" $colorFilter="icon-error" />
       <OakSpan $color="icon-error" $font="body-3-bold">
         {m}

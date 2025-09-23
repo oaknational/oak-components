@@ -62,7 +62,7 @@ export const OakButtonAsRadioGroup = (props: OakButtonAsRadioGroupProps) => {
     ariaLabelledby,
     onChange,
     $font = "body-1-bold",
-    $gap = "space-between-s",
+    $gap = "spacing-16",
     disabled,
     value,
     defaultValue = "",

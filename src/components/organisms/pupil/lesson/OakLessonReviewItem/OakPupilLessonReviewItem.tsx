@@ -50,11 +50,11 @@ export const OakLessonReviewItem = (props: OakLessonReviewItemProps) => {
   return (
     <StyledLessonReviewItem
       completed={completed}
-      $gap="space-between-m"
+      $gap="spacing-24"
       $alignItems="center"
       $background={completed ? completedBackgroundColor : "white"}
-      $ph={["inner-padding-m", "inner-padding-xl"]}
-      $pv="inner-padding-l"
+      $ph={["spacing-16", "spacing-24"]}
+      $pv="spacing-20"
       $borderRadius="border-radius-l"
       $borderColor={completed ? completedBackgroundColor : borderColor}
       $ba="border-solid-l"
@@ -62,8 +62,8 @@ export const OakLessonReviewItem = (props: OakLessonReviewItemProps) => {
     >
       <OakRoundIcon
         iconName={lessonSectionNameToIconMap.get(lessonSectionName)}
-        $width="all-spacing-10"
-        $height="all-spacing-10"
+        $width="spacing-56"
+        $height="spacing-56"
         $background={iconBackgroundColor}
       />
       <OakFlex $flexGrow={1} $flexShrink={1} $flexDirection={"column"}>
@@ -84,12 +84,8 @@ const pickSummaryForProgress = (props: OakLessonReviewItemProps) => {
     return pickSummaryForIncomplete(props);
   } else {
     return (
-      <OakFlex $gap="space-between-sssx" $alignItems="center">
-        <OakIcon
-          iconName="tick"
-          $width="all-spacing-6"
-          $height="all-spacing-6"
-        />
+      <OakFlex $gap="spacing-4" $alignItems="center">
+        <OakIcon iconName="tick" $width="spacing-24" $height="spacing-24" />
         Completed
       </OakFlex>
     );

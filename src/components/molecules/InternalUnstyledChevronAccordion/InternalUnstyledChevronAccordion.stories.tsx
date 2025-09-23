@@ -40,7 +40,7 @@ const meta: Meta<typeof InternalUnstyledChevronAccordion> = {
     id: "accordion-1",
     header: <OakBox $background={"amber30"}>Header goes here</OakBox>,
     content: (
-      <OakBox $background={"mint30"} $height={"all-spacing-10"}>
+      <OakBox $background={"mint30"} $height={"spacing-56"}>
         Content goes here
       </OakBox>
     ),
