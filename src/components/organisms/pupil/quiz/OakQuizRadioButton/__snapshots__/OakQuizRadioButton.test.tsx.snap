@@ -199,7 +199,6 @@ exports[`OakQuizRadioButton matches snapshot 1`] = `
 <div>
   <fieldset
     class="c0 c1"
-    role="radiogroup"
   >
     <div
       class="c2 c3 c4"

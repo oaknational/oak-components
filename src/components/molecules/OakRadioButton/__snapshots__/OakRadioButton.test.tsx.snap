@@ -163,7 +163,6 @@ exports[`RadioGroup matches snapshot 1`] = `
 <div>
   <fieldset
     class="c0 c1"
-    role="radiogroup"
   >
     <div
       class="c2"

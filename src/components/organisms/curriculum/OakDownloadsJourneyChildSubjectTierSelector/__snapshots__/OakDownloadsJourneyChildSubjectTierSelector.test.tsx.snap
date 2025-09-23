@@ -477,7 +477,6 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
     <fieldset
       class="c11 c12"
       data-testid="child-subject-selector"
-      role="radiogroup"
     >
       <legend
         class="c13"
@@ -568,7 +567,6 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
     <fieldset
       class="c11 c12"
       data-testid="tier-selector"
-      role="radiogroup"
     >
       <legend
         class="c13"
