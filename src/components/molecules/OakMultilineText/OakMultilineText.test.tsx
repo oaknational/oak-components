@@ -11,12 +11,9 @@ describe("OakMultilineText", () => {
     const { getByTestId } = renderWithTheme(
       <OakMultilineText
         data-testid="test"
-        disabled={false}
-        placeholder="Start typing answer..."
-        charLimit={200}
-        singleLine={false}
-        allowCarriageReturn={true}
-        label=""
+        $charLimit={200}
+        $height="all-spacing-13"
+        $width="100%"
       />,
     );
     expect(getByTestId("test")).toBeInTheDocument();
@@ -25,12 +22,9 @@ describe("OakMultilineText", () => {
   it("matches snapshot", () => {
     const tree = create(
       <OakMultilineText
-        disabled={false}
-        placeholder="Start typing answer..."
-        charLimit={200}
-        singleLine={false}
-        allowCarriageReturn={true}
-        label=""
+        $charLimit={200}
+        $height="all-spacing-10"
+        $width="all-spacing-10"
       ></OakMultilineText>,
     ).toJSON();
     expect(tree).toMatchSnapshot();
