@@ -51,14 +51,32 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c15 {
+.c11 {
+  padding: 0rem;
+  margin: 0rem;
+  border-style: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c14 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c17 {
   position: relative;
   width: 1.5rem;
   height: 1.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c20 {
+.c22 {
   position: absolute;
   top: 0rem;
   left: 0rem;
@@ -70,7 +88,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c23 {
+.c25 {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -78,7 +96,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c25 {
+.c27 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -87,7 +105,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c30 {
+.c32 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -102,7 +120,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   object-fit: contain;
 }
 
-.c31 {
+.c33 {
   -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   object-fit: contain;
@@ -174,7 +192,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c11 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -185,7 +203,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   gap: 1rem;
 }
 
-.c16 {
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -203,7 +221,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   flex-shrink: 0;
 }
 
-.c21 {
+.c23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -225,7 +243,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   flex-shrink: 0;
 }
 
-.c28 {
+.c30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -244,7 +262,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   gap: 0.5rem;
 }
 
-.c29 {
+.c31 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -256,18 +274,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   text-align: left;
 }
 
-.c12 {
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
-  letter-spacing: -0.005rem;
-}
-
-.c13 {
+.c15 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1.125rem;
@@ -278,7 +285,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c26 {
+.c28 {
   background: none;
   color: inherit;
   border: none;
@@ -300,19 +307,19 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   border-radius: 0.25rem;
 }
 
-.c26:disabled {
+.c28:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c27 {
+.c29 {
   position: relative;
   width: 100%;
   height: 100%;
   display: inline-block;
 }
 
-.c27:hover {
+.c29:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #ffffff;
@@ -320,44 +327,48 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   border-color: #575757;
 }
 
-.c27:active {
+.c29:active {
   background: #222222;
   border-color: #222222;
   color: #ffffff;
 }
 
-.c27:disabled {
+.c29:disabled {
   background: #808080;
   border-color: #808080;
   color: #ffffff;
 }
 
-.c24 .grey-shadow:has(+ * + .internal-button:focus-visible) {
+.c26 .grey-shadow:has(+ * + .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c24 .yellow-shadow:has(+ .internal-button:focus-visible) {
+.c26 .yellow-shadow:has(+ .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
 }
 
-.c24 .yellow-shadow:has(+ .internal-button:hover),
-.c24 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
+.c26 .yellow-shadow:has(+ .internal-button:hover),
+.c26 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c24 .grey-shadow:has(+ * + .internal-button:hover) {
+.c26 .grey-shadow:has(+ * + .internal-button:hover) {
   box-shadow: none;
 }
 
-.c24 .grey-shadow:has(+ * + .internal-button:active) {
+.c26 .grey-shadow:has(+ * + .internal-button:active) {
   box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c24 .yellow-shadow:has(+ .internal-button:active) {
+.c26 .yellow-shadow:has(+ .internal-button:active) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c18 {
+.c13 {
+  display: contents;
+}
+
+.c20 {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -370,19 +381,19 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   border-radius: 0.125rem;
 }
 
-.c18:checked {
+.c20:checked {
   background: #222222;
 }
 
-.c18:disabled {
+.c20:disabled {
   pointer-events: none;
 }
 
-.c22 {
+.c24 {
   border-radius: 50%;
 }
 
-.c17:focus-visible ~ .c19::before {
+.c19:focus-visible ~ .c21::before {
   content: "";
   height: 2rem;
   width: 2rem;
@@ -393,7 +404,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   box-shadow: inset 0 0 0 0.13rem #ffe555;
 }
 
-.c17:checked ~ .c19::after {
+.c19:checked ~ .c21::after {
   content: "";
   height: 1rem;
   width: 1rem;
@@ -403,7 +414,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   border: 0.125rem solid #ffffff;
 }
 
-.c14 {
+.c16 {
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
@@ -417,7 +428,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
 }
 
 @media (hover:hover) {
-  .c18:hover:not(:disabled) {
+  .c20:hover:not(:disabled) {
     border-color: #222222;
   }
 }
@@ -463,37 +474,41 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
         </div>
       </div>
     </div>
-    <div
-      class="c0 c11"
+    <fieldset
+      class="c11 c12"
       data-testid="child-subject-selector"
       role="radiogroup"
     >
-      <label
-        class="c12"
+      <legend
+        class="c13"
       >
-        Choose subject for KS4 units
-      </label>
+        <div
+          class="c14"
+        >
+          Choose subject for KS4 units
+        </div>
+      </legend>
       <div
         class="c0"
       >
         <label
-          class="c13 c14"
+          class="c15 c16"
           data-testid="child-subject-radio-button"
           for="biology"
         >
           <div
-            class="c15 c16"
+            class="c17 c18"
           >
             <input
               checked=""
-              class="c17 c18"
+              class="c19 c20"
               id="biology"
               name="childSubjectRadio"
               type="radio"
               value="biology"
             />
             <div
-              class="c19 c20 c21 c22"
+              class="c21 c22 c23 c24"
             />
           </div>
           Biology
@@ -503,22 +518,22 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
         class="c0"
       >
         <label
-          class="c13 c14"
+          class="c15 c16"
           data-testid="child-subject-radio-button"
           for="physics"
         >
           <div
-            class="c15 c16"
+            class="c17 c18"
           >
             <input
-              class="c17 c18"
+              class="c19 c20"
               id="physics"
               name="childSubjectRadio"
               type="radio"
               value="physics"
             />
             <div
-              class="c19 c20 c21 c22"
+              class="c21 c22 c23 c24"
             />
           </div>
           Physics
@@ -528,59 +543,63 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
         class="c0"
       >
         <label
-          class="c13 c14"
+          class="c15 c16"
           data-testid="child-subject-radio-button"
           for="chemistry"
         >
           <div
-            class="c15 c16"
+            class="c17 c18"
           >
             <input
-              class="c17 c18"
+              class="c19 c20"
               id="chemistry"
               name="childSubjectRadio"
               type="radio"
               value="chemistry"
             />
             <div
-              class="c19 c20 c21 c22"
+              class="c21 c22 c23 c24"
             />
           </div>
           Chemistry
         </label>
       </div>
-    </div>
-    <div
-      class="c0 c11"
+    </fieldset>
+    <fieldset
+      class="c11 c12"
       data-testid="tier-selector"
       role="radiogroup"
     >
-      <label
-        class="c12"
+      <legend
+        class="c13"
       >
-        Choose learning tier for KS4 units
-      </label>
+        <div
+          class="c14"
+        >
+          Choose learning tier for KS4 units
+        </div>
+      </legend>
       <div
         class="c0"
       >
         <label
-          class="c13 c14"
+          class="c15 c16"
           data-testid="tier-radio-button"
           for="foundation"
         >
           <div
-            class="c15 c16"
+            class="c17 c18"
           >
             <input
               checked=""
-              class="c17 c18"
+              class="c19 c20"
               id="foundation"
               name="tierRadio"
               type="radio"
               value="foundation"
             />
             <div
-              class="c19 c20 c21 c22"
+              class="c21 c22 c23 c24"
             />
           </div>
           Foundation
@@ -590,54 +609,54 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
         class="c0"
       >
         <label
-          class="c13 c14"
+          class="c15 c16"
           data-testid="tier-radio-button"
           for="higher"
         >
           <div
-            class="c15 c16"
+            class="c17 c18"
           >
             <input
-              class="c17 c18"
+              class="c19 c20"
               id="higher"
               name="tierRadio"
               type="radio"
               value="higher"
             />
             <div
-              class="c19 c20 c21 c22"
+              class="c21 c22 c23 c24"
             />
           </div>
           Higher
         </label>
       </div>
-    </div>
+    </fieldset>
     <div
-      class="c23 c24"
+      class="c25 c26"
     >
       <div
-        class="c25 grey-shadow"
+        class="c27 grey-shadow"
       />
       <div
-        class="c25 yellow-shadow"
+        class="c27 yellow-shadow"
       />
       <button
-        class="c26 c27 internal-button"
+        class="c28 c29 internal-button"
       >
         <div
-          class="c0 c28"
+          class="c0 c30"
         >
           <span
-            class="c29"
+            class="c31"
           >
             Next
           </span>
           <div
-            class="c30"
+            class="c32"
           >
             <img
               alt=""
-              class="c31"
+              class="c33"
               data-nimg="fill"
               decoding="async"
               loading="lazy"
