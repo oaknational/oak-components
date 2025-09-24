@@ -1,6 +1,5 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { create } from "react-test-renderer";
 
 import { OakTextArea } from "./OakTextArea";
 
@@ -19,12 +18,7 @@ describe("OakTextArea", () => {
   });
 
   it("matches snapshot", () => {
-    const tree = create(
-      <OakTextArea
-        disabled={false}
-        placeholder="Start typing answer..."
-      ></OakTextArea>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = renderWithTheme(<OakTextArea />);
+    expect(container).toMatchSnapshot();
   });
 });

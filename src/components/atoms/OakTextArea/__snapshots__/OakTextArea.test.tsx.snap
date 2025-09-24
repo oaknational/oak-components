@@ -7,10 +7,9 @@ exports[`OakTextArea matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-<textarea
-  className="c0 "
-  disabled={false}
-  onKeyDown={[Function]}
-  placeholder="Start typing answer..."
-/>
+<div>
+  <textarea
+    class="c0 "
+  />
+</div>
 `;
