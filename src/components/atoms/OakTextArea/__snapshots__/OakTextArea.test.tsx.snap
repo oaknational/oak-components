@@ -3,38 +3,8 @@
 exports[`OakTextArea matches snapshot 1`] = `
 .c0 {
   resize: none;
-  width: 11.25rem;
-  height: 15rem;
-  border: 0.125rem solid;
-  border-radius: 0.375rem;
-  padding: 0.75rem;
-  margin-left: 0.75rem;
-  margin-right: 0.75rem;
+  outline: none;
   font-family: --var(google-font),Lexend,sans-serif;
-}
-
-@media (min-width:750px) {
-  .c0 {
-    width: 100%;
-  }
-}
-
-@media (min-width:1280px) {
-  .c0 {
-    width: 100%;
-  }
-}
-
-@media (min-width:750px) {
-  .c0 {
-    height: 4.5rem;
-  }
-}
-
-@media (min-width:1280px) {
-  .c0 {
-    height: 5rem;
-  }
 }
 
 <textarea
