@@ -9,25 +9,13 @@ const meta: Meta<typeof OakMultilineText> = {
   component: OakMultilineText,
   tags: ["autodocs"],
   argTypes: {
-    // Define your component's props and their types here
-    // For example:
-    // text: { control: "text" },
-    // size: { control: 'select', options: ['small', 'medium', 'large'] },
-    //
-    // can also use the storybook-helpers to add the argTypes
-    // ...colorArgTypes,
-    // ...spacingArgTypes,
-    // ...borderArgTypes,
+    charLimit: { control: "number" },
+    placeholder: { control: "text" },
+    disabled: { control: "boolean" },
   },
   parameters: {
     controls: {
-      include: [
-        // include the argTypes from the storybook-helpers
-        // ...Object.keys(colorArgTypes),
-        // ...Object.keys(spacingArgTypes),
-        // ...Object.keys(borderArgTypes),
-        "type",
-      ],
+      include: ["charLimit", "placeholder", "disabled"],
     },
   },
 };
@@ -39,11 +27,8 @@ type Story = StoryObj<typeof OakMultilineText>;
 export const Default: Story = {
   render: (args) => <OakMultilineText {...args} />,
   args: {
-    // Define your component's default props here
-    //   $background: "bg-btn-primary",
-    //   $color: "white",
-    //   $ba: "border-solid-s",
-    //   $pa: "inner-padding-s",
-    //   $borderRadius: "border-radius-m",
+    placeholder: "Start typing answer...",
+    charLimit: 200,
+    disabled: false,
   },
 };

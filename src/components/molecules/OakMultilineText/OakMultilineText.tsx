@@ -13,8 +13,19 @@ import { parseBorderWidth } from "@/styles/helpers/parseBorderWidth";
 // For example you could restyle the OakFlex component by adding the styles to the css template literal below
 
 export type OakMultilineTextProps = {
+  /**
+   * Height of component
+   */
   $height: SizeStyleProps["$height"];
-  $charLimit: number;
+  /**
+   * Maximum number of characters
+   */
+  charLimit: number;
+  /**
+   * Placeholder text
+   */
+  placeholder?: string;
+  disabled: boolean;
 };
 
 type StyledOakTextAreaProps = {
@@ -44,10 +55,7 @@ const StyledOakTextArea = styled(OakTextArea)<StyledOakTextAreaProps>`
   }
 `;
 
-const UnstyledComponent = ({
-  $charLimit = 200,
-  // ...props
-}: OakMultilineTextProps) => {
+const UnstyledComponent = (props: OakMultilineTextProps) => {
   const [charCount, setCharCount] = useState(Number);
   const [showCharCount, setShowCharCount] = useState(Boolean);
   const [text, setText] = useState(String);
@@ -73,12 +81,14 @@ const UnstyledComponent = ({
         onFocus={handleFocus}
         onChange={(e) => handleChange(e.target.value)}
         onBlur={handleBlur}
-        maxLength={200}
+        maxLength={props.charLimit}
         $height={["all-spacing-19", "all-spacing-13", "all-spacing-10"]}
+        placeholder={props.placeholder}
+        disabled={props.disabled}
       ></StyledOakTextArea>
       {showCharCount && (
         <OakSpan $textAlign={"right"}>
-          {charCount}/{$charLimit}
+          {charCount}/{props.charLimit}
         </OakSpan>
       )}
     </OakFlex>
