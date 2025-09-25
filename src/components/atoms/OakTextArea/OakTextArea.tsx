@@ -1,10 +1,9 @@
 import React, {
   DetailedHTMLProps,
-  //InputHTMLAttributes,
   TextareaHTMLAttributes,
+  forwardRef,
 } from "react";
-//import styled, { css } from "styled-components";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { sizeStyle, SizeStyleProps } from "@/styles/utils/sizeStyle";
 import { borderStyle, BorderStyleProps } from "@/styles/utils/borderStyle";
@@ -17,6 +16,7 @@ import {
   positionStyle,
   PositionStyleProps,
 } from "@/styles/utils/positionStyle";
+import { colorStyle, ColorStyleProps } from "@/styles/utils/colorStyle";
 
 export type OakTextAreaProps = Omit<
   DetailedHTMLProps<
@@ -25,15 +25,21 @@ export type OakTextAreaProps = Omit<
   >,
   "ref"
 > &
-  StyledTextAreaProps & { allowCarriageReturn?: boolean };
+  StyledTextAreaProps & {
+    /**
+     * Whether to allow carriage return (new line) when the Enter key is pressed.
+     */
+    allowCarriageReturn?: boolean;
+  };
 
 type StyledTextAreaProps = SizeStyleProps &
   BorderStyleProps &
   SpacingStyleProps &
   TypographyStyleProps &
-  PositionStyleProps;
+  PositionStyleProps &
+  ColorStyleProps;
 
-const StyledTextArea = styled("textarea")<StyledTextAreaProps>`
+const textAreaCss = css<StyledTextAreaProps>`
   resize: none;
   outline: none;
   ${sizeStyle}
@@ -41,33 +47,35 @@ const StyledTextArea = styled("textarea")<StyledTextAreaProps>`
   ${spacingStyle}
   ${typographyStyle}
   ${positionStyle}
+  ${colorStyle}
 `;
 
-const UnstyledOakTextArea = (props: OakTextAreaProps) => {
-  // const { allowCarriageReturn = false, ...rest } = props;
+const UnstyledOakTextArea = forwardRef(
+  (props: OakTextAreaProps, ref?: React.Ref<HTMLTextAreaElement>) => {
+    const { allowCarriageReturn = false, ...rest } = props;
 
-  const onEnterPressed = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
-    if (e.key === "Enter" && !props.allowCarriageReturn) {
-      e.preventDefault();
-    }
-  };
+    const onEnterPressed = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+      if (e.key === "Enter" && !allowCarriageReturn) {
+        e.preventDefault();
+      }
+    };
 
-  return (
-    <StyledTextArea
-      onKeyDown={(e) => onEnterPressed(e)}
-      {...props}
-    ></StyledTextArea>
-  );
-};
+    return (
+      <textarea
+        ref={ref}
+        onKeyDown={(e) => onEnterPressed(e)}
+        {...rest}
+      ></textarea>
+    );
+  },
+);
 
 /**
  *
- * A textarea that can be used for longer quiz answers
+ * A textarea that can be used for longer text inputs where text should wrap.
+ * allowCarriageReturn can be used to simulate the behaviour of an input field.
  *
- *
- * ### Callbacks
- * make sure to add descriptions and types for any callbacks for the component
- *
- * NB. We must export a styled component for it to be inheritable
  */
-export const OakTextArea = styled(UnstyledOakTextArea)``;
+export const OakTextArea = styled(UnstyledOakTextArea)`
+  ${textAreaCss}
+`;
