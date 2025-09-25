@@ -52,4 +52,22 @@ describe("OakMultilineText", () => {
 
     expect(getByLabelText("character count")).toBeInTheDocument();
   });
+
+  it("changing value changed the text", async () => {
+    const { getByDisplayValue } = renderWithTheme(
+      <OakMultilineText
+        charLimit={200}
+        $height="all-spacing-10"
+        disabled={false}
+        value="Hello"
+      />,
+    );
+    const textArea = getByDisplayValue("Hello");
+    expect(textArea).toBeInTheDocument();
+  });
 });
+
+// tests for callbacks
+/**
+ * initial value
+ */
