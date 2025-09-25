@@ -13,13 +13,18 @@ import {
   TypographyStyleProps,
 } from "@/styles/utils/typographyStyle";
 import { borderStyle, BorderStyleProps } from "@/styles/utils/borderStyle";
+import {
+  positionStyle,
+  PositionStyleProps,
+} from "@/styles/utils/positionStyle";
 
 export type OakSpanProps = ColorStyleProps &
   OpacityStyleProps &
   MarginStyleProps &
   PaddingStyleProps &
   BorderStyleProps &
-  TypographyStyleProps;
+  TypographyStyleProps &
+  PositionStyleProps;
 
 /**
  * Span renders a `span` (inline text) component, exposing all the typography props.
@@ -33,4 +38,5 @@ export const OakSpan = styled.span<OakSpanProps>`
   ${paddingStyle}
   ${borderStyle}
   ${typographyStyle}
+  ${positionStyle}
 `;
