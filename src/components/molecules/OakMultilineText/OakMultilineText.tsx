@@ -29,9 +29,9 @@ export type OakMultilineTextProps = {
   invalidText?: string;
   value?: string;
   onChange?: (value: string) => void;
-  // onFocus?: () => void;
-  // onBlur?: (value: string) => void;
-  // onError?: (error: string) => void;
+  onFocus?: () => void;
+  onBlur?: (value: string) => void;
+  onError?: (error: string) => void;
 };
 
 type StyledOakTextAreaProps = {
@@ -62,9 +62,9 @@ const UnstyledComponent = forwardRef(
       ariaLabel,
       value,
       onChange,
-      // onFocus,
-      // onBlur,
-      // onError,
+      onFocus,
+      onBlur,
+      onError,
     }: OakMultilineTextProps,
     ref?: React.Ref<HTMLTextAreaElement>,
   ) => {
@@ -74,12 +74,12 @@ const UnstyledComponent = forwardRef(
     const charCountWidth = charLimit > 99 ? "all-spacing-10" : "all-spacing-9";
 
     const handleFocus = () => {
-      // onFocus && onFocus();
+      onFocus && onFocus();
       setShowCharCount(true);
     };
 
-    const handleBlur = (/*value: string */) => {
-      // onBlur && onBlur(value);
+    const handleBlur = (value: string) => {
+      onBlur && onBlur(value);
       setShowCharCount(false);
     };
 
@@ -89,11 +89,11 @@ const UnstyledComponent = forwardRef(
       setCharCount(charCount);
     };
 
-    // const handlePaste = (value: string) => {
-    //   if (value.length > charLimit) {
-    //     onError && onError("Character limit exceeded");
-    //   }
-    // };
+    const handlePaste = (value: string) => {
+      if (value.length > charLimit) {
+        onError && onError("Character limit exceeded");
+      }
+    };
 
     return (
       <OakFlex
@@ -105,7 +105,7 @@ const UnstyledComponent = forwardRef(
           value={value}
           onFocus={() => handleFocus()}
           onChange={(e) => handleChange(e.target.value)}
-          onBlur={(/*e*/) => handleBlur(/*e.target.value*/)}
+          onBlur={(e) => handleBlur(e.target.value)}
           maxLength={charLimit}
           placeholder={placeholder}
           disabled={disabled}
@@ -118,7 +118,7 @@ const UnstyledComponent = forwardRef(
           $pa={"inner-padding-s"}
           $width="100%"
           $borderColor={"border-neutral-lighter"}
-          // onPaste={(e) => handlePaste(e.clipboardData.getData("text"))}
+          onPaste={(e) => handlePaste(e.clipboardData.getData("text"))}
         ></StyledOakTextArea>
         {/* Span is inside OakFlex to stop textarea width changing when charCount changes. */}
         {showCharCount && (
