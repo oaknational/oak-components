@@ -142,7 +142,11 @@ const UnstyledComponent = forwardRef(
           </OakFlex>
         )}
         {invalid && invalidText && (
-          <OakP $font={"body-2"} $color={"text-error"}>
+          <OakP
+            $font={"body-2"}
+            $color={"text-error"}
+            aria-label="invalid text message"
+          >
             {invalidText}
           </OakP>
         )}
