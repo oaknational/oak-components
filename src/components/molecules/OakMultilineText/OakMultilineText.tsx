@@ -29,6 +29,9 @@ export type OakMultilineTextProps = {
   invalidText?: string;
   value?: string;
   onChange?: (value: string) => void;
+  // onFocus?: () => void;
+  // onBlur?: (value: string) => void;
+  // onError?: (error: string) => void;
 };
 
 type StyledOakTextAreaProps = {
@@ -59,17 +62,24 @@ const UnstyledComponent = forwardRef(
       ariaLabel,
       value,
       onChange,
+      // onFocus,
+      // onBlur,
+      // onError,
     }: OakMultilineTextProps,
     ref?: React.Ref<HTMLTextAreaElement>,
   ) => {
     const [charCount, setCharCount] = useState(Number);
     const [showCharCount, setShowCharCount] = useState(Boolean);
 
+    const charCountWidth = charLimit > 99 ? "all-spacing-10" : "all-spacing-9";
+
     const handleFocus = () => {
+      // onFocus && onFocus();
       setShowCharCount(true);
     };
 
-    const handleBlur = () => {
+    const handleBlur = (/*value: string */) => {
+      // onBlur && onBlur(value);
       setShowCharCount(false);
     };
 
@@ -79,6 +89,12 @@ const UnstyledComponent = forwardRef(
       setCharCount(charCount);
     };
 
+    // const handlePaste = (value: string) => {
+    //   if (value.length > charLimit) {
+    //     onError && onError("Character limit exceeded");
+    //   }
+    // };
+
     return (
       <OakFlex
         $flexDirection={["row", "column"]}
@@ -87,9 +103,9 @@ const UnstyledComponent = forwardRef(
         <StyledOakTextArea
           ref={ref}
           value={value}
-          onFocus={handleFocus}
+          onFocus={() => handleFocus()}
           onChange={(e) => handleChange(e.target.value)}
-          onBlur={handleBlur}
+          onBlur={(/*e*/) => handleBlur(/*e.target.value*/)}
           maxLength={charLimit}
           placeholder={placeholder}
           disabled={disabled}
@@ -102,16 +118,28 @@ const UnstyledComponent = forwardRef(
           $pa={"inner-padding-s"}
           $width="100%"
           $borderColor={"border-neutral-lighter"}
+          // onPaste={(e) => handlePaste(e.clipboardData.getData("text"))}
         ></StyledOakTextArea>
+        {/* Span is inside OakFlex to stop textarea width changing when charCount changes. */}
         {showCharCount && (
-          <OakSpan
-            $textAlign={"right"}
-            aria-label="character count"
-            $font={"body-3"}
-            $color={"grey60"}
+          <OakFlex
+            $minWidth={[charCountWidth, null]}
+            $justifyContent={[null, "flex-end"]}
+            $pa={[null, "inner-padding-ssx"]}
+            $position={["relative", null]}
           >
-            {charCount}/{charLimit}
-          </OakSpan>
+            <OakSpan
+              $textAlign={"right"}
+              aria-label="character count"
+              $font={"body-3"}
+              $color={"grey60"}
+              $position={["absolute", null]}
+              $top={["all-spacing-0", null]}
+              $right={["all-spacing-0", null]}
+            >
+              {charCount}/{charLimit}
+            </OakSpan>
+          </OakFlex>
         )}
         {invalid && invalidText && (
           <OakP $font={"body-2"} $color={"text-error"}>
