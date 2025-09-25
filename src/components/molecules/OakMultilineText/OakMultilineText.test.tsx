@@ -1,5 +1,6 @@
 import React from "react";
 import "@testing-library/jest-dom";
+import userEvent from "@testing-library/user-event";
 
 import { OakMultilineText } from "./OakMultilineText";
 
@@ -27,5 +28,28 @@ describe("OakMultilineText", () => {
       ></OakMultilineText>,
     );
     expect(container).toMatchSnapshot();
+  });
+
+  it("shows char count on focus", async () => {
+    const { getByRole, getByLabelText } = renderWithTheme(
+      <OakMultilineText
+        charLimit={200}
+        $height="all-spacing-10"
+        disabled={false}
+      ></OakMultilineText>,
+    );
+    const textArea = getByRole("textbox");
+    expect(textArea).toBeInTheDocument();
+    expect(textArea).not.toHaveFocus();
+
+    expect(() => {
+      getByLabelText("character count");
+    }).toThrow();
+
+    const user = userEvent.setup();
+    await user.click(textArea);
+    expect(textArea).toHaveFocus();
+
+    expect(getByLabelText("character count")).toBeInTheDocument();
   });
 });
