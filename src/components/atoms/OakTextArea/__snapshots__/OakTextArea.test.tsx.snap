@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+// Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakTextArea matches snapshot 1`] = `
 .c0 {
@@ -9,7 +9,7 @@ exports[`OakTextArea matches snapshot 1`] = `
 
 <div>
   <textarea
-    class="c0 "
+    class="c0"
   />
 </div>
 `;
