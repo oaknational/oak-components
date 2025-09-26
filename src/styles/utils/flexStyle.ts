@@ -99,6 +99,7 @@ export type FlexStyleProps = DisplayStyleProps & {
   $rowGap?: ResponsiveValues<
     OakAllSpacingToken | OakSpaceBetweenToken | null | undefined
   >;
+  focusable?: boolean;
 };
 
 export const flexStyle = css<FlexStyleProps>`
