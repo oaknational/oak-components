@@ -35,5 +35,6 @@ export const Default: Story = {
   render: (args) => <OakHandDrawnHR {...args} />,
   args: {
     $height: "all-spacing-1",
+    focusable: false,
   },
 };
