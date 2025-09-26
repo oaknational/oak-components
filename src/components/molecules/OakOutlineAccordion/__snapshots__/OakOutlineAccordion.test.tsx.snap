@@ -10,28 +10,28 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c5 {
+.c6 {
   position: relative;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
+.c9 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8:hover {
+.c9:hover {
   cursor: pointer;
 }
 
-.c13 {
+.c14 {
   position: relative;
   margin-right: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c14 {
+.c15 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -40,7 +40,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c15 {
+.c16 {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -49,19 +49,19 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c17 {
+.c18 {
   position: relative;
   overflow: auto;
   font-family: --var(google-font),Lexend,sans-serif;
   overflow: auto;
 }
 
-.c20 {
+.c21 {
   pointer-events: none;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c16 {
+.c17 {
   object-fit: contain;
 }
 
@@ -82,7 +82,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   display: flex;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -93,7 +93,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -104,7 +104,11 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c10 {
+.c4 {
+  focusable: true;
+}
+
+.c11 {
   font: inherit;
   color: inherit;
   border: none;
@@ -116,13 +120,13 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   padding: 0;
 }
 
-.c19 {
+.c20 {
   position: absolute;
   width: 100%;
   bottom: -0.25rem;
 }
 
-.c12 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -140,16 +144,16 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   position: relative;
 }
 
-.c12:hover {
+.c13:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c12:focus-visible .shadow {
+.c13:focus-visible .shadow {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c7 {
+.c8 {
   position: relative;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -164,15 +168,15 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c7 .c18 {
+.c8 .c19 {
   visibility: hidden;
 }
 
-.c7 .c11:focus-visible ~ .c18 {
+.c8 .c12:focus-visible ~ .c19 {
   visibility: visible;
 }
 
-.c21 {
+.c22 {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -185,13 +189,13 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   padding: 2px;
 }
 
-.c4 {
+.c5 {
   height: 0.125rem;
   width: 100%;
   bottom: 0.125rem;
 }
 
-.c22 {
+.c23 {
   height: 0.125rem;
   position: absolute;
   width: 100%;
@@ -203,7 +207,8 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
     class="c0 c1"
   >
     <div
-      class="c2 c3 c4"
+      class="c2 c3 c4 c5"
+      focusable="true"
     >
       <svg
         class=""
@@ -224,28 +229,28 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
       </svg>
     </div>
     <div
-      class="c5 c6 c7"
+      class="c6 c7 c8"
     >
       <button
         aria-expanded="true"
-        class="c8 c9 c10 c11  c12"
+        class="c9 c10 c11 c12  c13"
         id="see-more"
         type="button"
       >
         See more
         <div
-          class="c13"
+          class="c14"
         >
           <div
-            class="c14 shadow"
+            class="c15 shadow"
           />
           <div
-            class="c15"
+            class="c16"
             style="transform: rotate(180deg); transition: all 0.3s ease 0s;"
           >
             <img
               alt="An arrow to indicate whether the item is open or closed"
-              class="c16"
+              class="c17"
               data-nimg="fill"
               decoding="async"
               loading="lazy"
@@ -256,7 +261,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
         </div>
       </button>
       <div
-        class="c17"
+        class="c18"
         data-testid="scrollable-content"
       >
         <div
@@ -268,7 +273,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
         </div>
       </div>
       <div
-        class="c2 c3 c18 c19"
+        class="c2 c3 c19 c20"
       >
         <svg
           class=""
@@ -289,12 +294,13 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
         </svg>
       </div>
       <div
-        class="c20 c21"
+        class="c21 c22"
         data-testid="bottom-box-shadow"
       />
     </div>
     <div
-      class="c2 c3 c22"
+      class="c2 c3 c4 c23"
+      focusable="true"
     >
       <svg
         class=""
