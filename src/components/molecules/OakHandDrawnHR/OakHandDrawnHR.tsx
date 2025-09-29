@@ -8,13 +8,10 @@ import { InternalStyledSvgProps } from "@/components/atoms/InternalStyledSvg";
 import { SizeStyleProps } from "@/styles/utils/sizeStyle";
 import { SpacingStyleProps } from "@/styles/utils/spacingStyle";
 
-const StyledOakFlex = styled(OakFlex)<{ focusable: boolean }>`
-  ${(props) => (!props.focusable ? "focusable: false;" : "focusable: true;")}
-`;
+const StyledOakFlex = styled(OakFlex)``;
 
 export type OakHandDrawnHRProps = {
   hrColor?: InternalStyledSvgProps["$fill"];
-  focusable?: boolean;
 } & SpacingStyleProps &
   SizeStyleProps;
 
@@ -26,10 +23,10 @@ export type OakHandDrawnHRProps = {
  * change the sizeProps of the flex container to change the size and dimentions of the HR
  */
 export const OakHandDrawnHR = (props: OakHandDrawnHRProps) => {
-  const { hrColor, focusable = true, ...flexProps } = props;
+  const { hrColor, ...flexProps } = props;
 
   return (
-    <StyledOakFlex focusable={focusable} {...flexProps}>
+    <StyledOakFlex focusable={false} {...flexProps}>
       <HandDrawnHRSvg $fill={hrColor} />
     </StyledOakFlex>
   );
