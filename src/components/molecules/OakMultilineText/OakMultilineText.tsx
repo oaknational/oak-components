@@ -158,12 +158,15 @@ const UnstyledComponent = forwardRef(
 
 /**
  *
- * Add the description of the component here and it will appear on the story for the component
- * The following callbacks are available for tracking focus events:
+ * An implementation of OakTextArea with responsive height. Displays character count (on focus only) that updates on each keystroke.
+ *
  *
  * ### Callbacks
- * make sure to add descriptions and types for any callbacks for the component
+ * onFocus: display character count
  *
- * NB. We must export a styled component for it to be inheritable
+ * onBlur: hide character count
+ *
+ * onChange: update character count
+ *
  */
 export const OakMultilineText = UnstyledComponent;
