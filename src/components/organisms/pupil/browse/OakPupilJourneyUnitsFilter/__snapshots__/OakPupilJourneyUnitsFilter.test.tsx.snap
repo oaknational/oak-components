@@ -488,6 +488,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
     >
       <div
         class="c4 c5 c6"
+        focusable="false"
       >
         <svg
           class=""
@@ -685,6 +686,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
       </div>
       <div
         class="c4 c5 c32"
+        focusable="false"
       >
         <svg
           class=""
