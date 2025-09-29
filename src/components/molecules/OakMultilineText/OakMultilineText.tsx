@@ -131,7 +131,6 @@ const UnstyledComponent = forwardRef(
             $position={["relative", null]}
           >
             <OakSpan
-              $textAlign={"right"}
               aria-label="character count"
               $font={"body-3"}
               $color={"grey60"}
