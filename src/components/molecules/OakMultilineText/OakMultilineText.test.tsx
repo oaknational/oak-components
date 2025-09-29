@@ -85,7 +85,7 @@ describe("OakMultilineText", () => {
     expect(textArea).toHaveValue("Hello");
   });
 
-  it("counts characters correctly when text when text is edited", async () => {
+  it("counts characters correctly when text is edited", async () => {
     const user = userEvent.setup();
 
     const { getByRole, getByLabelText } = renderWithTheme(
