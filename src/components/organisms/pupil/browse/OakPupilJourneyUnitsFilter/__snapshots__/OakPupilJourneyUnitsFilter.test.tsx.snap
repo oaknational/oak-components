@@ -15,28 +15,28 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
+.c7 {
   position: relative;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c11 {
+.c10 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c11:hover {
+.c10:hover {
   cursor: pointer;
 }
 
-.c17 {
+.c16 {
   position: relative;
   margin-right: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c18 {
+.c17 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -45,7 +45,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c19 {
+.c18 {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -54,14 +54,14 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c21 {
+.c20 {
   position: relative;
   overflow: auto;
   font-family: --var(google-font),Lexend,sans-serif;
   overflow: auto;
 }
 
-.c23 {
+.c22 {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -69,17 +69,17 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c34 {
+.c33 {
   display: none;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c37 {
+.c36 {
   display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c20 {
+.c19 {
   object-fit: contain;
 }
 
@@ -108,7 +108,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   display: flex;
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -119,7 +119,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   gap: 1.5rem;
 }
 
-.c12 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -130,7 +130,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c22 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -145,7 +145,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   gap: 1rem;
 }
 
-.c27 {
+.c26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -164,7 +164,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   gap: 0.5rem;
 }
 
-.c35 {
+.c34 {
   display: none;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -176,7 +176,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   gap: 1.5rem;
 }
 
-.c38 {
+.c37 {
   display: block;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -184,7 +184,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c16 {
+.c15 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
@@ -195,7 +195,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c28 {
+.c27 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -207,7 +207,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   text-align: left;
 }
 
-.c25 {
+.c24 {
   background: none;
   color: inherit;
   border: none;
@@ -229,12 +229,12 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   border-radius: 0.25rem;
 }
 
-.c25:disabled {
+.c24:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c29 {
+.c28 {
   background: none;
   color: inherit;
   border: none;
@@ -256,19 +256,19 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   border-radius: 0.25rem;
 }
 
-.c29:disabled {
+.c28:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c26 {
+.c25 {
   position: relative;
   width: 100%;
   height: 100%;
   display: inline-block;
 }
 
-.c26:hover {
+.c25:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #ffffff;
@@ -276,26 +276,26 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   border-color: #575757;
 }
 
-.c26:active {
+.c25:active {
   background: #222222;
   border-color: #222222;
   color: #ffffff;
 }
 
-.c26:disabled {
+.c25:disabled {
   background: #808080;
   border-color: #808080;
   color: #ffffff;
 }
 
-.c30 {
+.c29 {
   position: relative;
   width: 100%;
   height: 100%;
   display: inline-block;
 }
 
-.c30:hover {
+.c29:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #222222;
@@ -303,48 +303,44 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   border-color: #222222;
 }
 
-.c30:active {
+.c29:active {
   background: #ffffff;
   border-color: #222222;
   color: #222222;
 }
 
-.c30:disabled {
+.c29:disabled {
   background: #e4e4e4;
   border-color: #808080;
   color: #808080;
 }
 
-.c24 .grey-shadow:has(+ * + .internal-button:focus-visible) {
+.c23 .grey-shadow:has(+ * + .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c24 .yellow-shadow:has(+ .internal-button:focus-visible) {
+.c23 .yellow-shadow:has(+ .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
 }
 
-.c24 .yellow-shadow:has(+ .internal-button:hover),
-.c24 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
+.c23 .yellow-shadow:has(+ .internal-button:hover),
+.c23 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c24 .grey-shadow:has(+ * + .internal-button:hover) {
+.c23 .grey-shadow:has(+ * + .internal-button:hover) {
   box-shadow: none;
 }
 
-.c24 .grey-shadow:has(+ * + .internal-button:active) {
+.c23 .grey-shadow:has(+ * + .internal-button:active) {
   box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c24 .yellow-shadow:has(+ .internal-button:active) {
+.c23 .yellow-shadow:has(+ .internal-button:active) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c6 {
-  focusable: true;
-}
-
-.c13 {
+.c12 {
   font: inherit;
   color: inherit;
   border: none;
@@ -356,13 +352,13 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   padding: 0;
 }
 
-.c32 {
+.c31 {
   position: absolute;
   width: 100%;
   bottom: -0.25rem;
 }
 
-.c15 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -380,16 +376,16 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   position: relative;
 }
 
-.c15:hover {
+.c14:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c15:focus-visible .shadow {
+.c14:focus-visible .shadow {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c10 {
+.c9 {
   position: relative;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -404,33 +400,33 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   gap: 1.5rem;
 }
 
-.c10 .c31 {
+.c9 .c30 {
   visibility: hidden;
 }
 
-.c10 .c14:focus-visible ~ .c31 {
+.c9 .c13:focus-visible ~ .c30 {
   visibility: visible;
 }
 
-.c7 {
+.c6 {
   height: 0.125rem;
   width: 100%;
   bottom: 0.125rem;
 }
 
-.c33 {
+.c32 {
   height: 0.125rem;
   position: absolute;
   width: 100%;
   bottom: 0.125rem;
 }
 
-.c36 > button {
+.c35 > button {
   opacity: 0;
   position: absolute;
 }
 
-.c36 > button:focus-visible {
+.c35 > button:focus-visible {
   opacity: 1;
   position: relative;
 }
@@ -442,7 +438,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c34 {
+  .c33 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -457,7 +453,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c22 {
+  .c21 {
     -webkit-box-pack: start;
     -webkit-justify-content: start;
     -ms-flex-pack: start;
@@ -466,7 +462,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 }
 
 @media (min-width:1280px) {
-  .c22 {
+  .c21 {
     -webkit-box-pack: end;
     -webkit-justify-content: end;
     -ms-flex-pack: end;
@@ -475,7 +471,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c35 {
+  .c34 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -491,8 +487,8 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
       class="c2 c3"
     >
       <div
-        class="c4 c5 c6 c7"
-        focusable="true"
+        class="c4 c5 c6"
+        focusable="false"
       >
         <svg
           class=""
@@ -513,32 +509,32 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
         </svg>
       </div>
       <div
-        class="c8 c9 c10"
+        class="c7 c8 c9"
       >
         <button
           aria-expanded="false"
-          class="c11 c12 c13 c14  c15"
+          class="c10 c11 c12 c13  c14"
           id="mobile-unit-filter-accordion"
           type="button"
         >
           <h2
-            class="c16"
+            class="c15"
           >
             Categories
           </h2>
           <div
-            class="c17"
+            class="c16"
           >
             <div
-              class="c18 shadow"
+              class="c17 shadow"
             />
             <div
-              class="c19"
+              class="c18"
               style="transform: none; transition: all 0.3s ease 0s;"
             >
               <img
                 alt="An arrow to indicate whether the item is open or closed"
-                class="c20"
+                class="c19"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"
@@ -549,7 +545,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
           </div>
         </button>
         <div
-          class="c21"
+          class="c20"
           data-testid="scrollable-content"
         >
           <div
@@ -560,28 +556,28 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
           >
             <div
               aria-label="OakPupilJourneyUnitsFilter"
-              class="c4 c22"
+              class="c4 c21"
               role="radiogroup"
             >
               <div
-                class="c23 c24"
+                class="c22 c23"
               >
                 <div
-                  class="c18 grey-shadow"
+                  class="c17 grey-shadow"
                 />
                 <div
-                  class="c18 yellow-shadow"
+                  class="c17 yellow-shadow"
                 />
                 <button
                   aria-checked="true"
-                  class="c25 c26 internal-button"
+                  class="c24 c25 internal-button"
                   role="radio"
                 >
                   <div
-                    class="c4 c27"
+                    class="c4 c26"
                   >
                     <span
-                      class="c28"
+                      class="c27"
                     >
                       All
                     </span>
@@ -589,24 +585,24 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
                 </button>
               </div>
               <div
-                class="c23 c24"
+                class="c22 c23"
               >
                 <div
-                  class="c18 grey-shadow"
+                  class="c17 grey-shadow"
                 />
                 <div
-                  class="c18 yellow-shadow"
+                  class="c17 yellow-shadow"
                 />
                 <button
                   aria-checked="false"
-                  class="c29 c30 internal-button"
+                  class="c28 c29 internal-button"
                   role="radio"
                 >
                   <div
-                    class="c4 c27"
+                    class="c4 c26"
                   >
                     <span
-                      class="c28"
+                      class="c27"
                     >
                       Biology
                     </span>
@@ -614,24 +610,24 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
                 </button>
               </div>
               <div
-                class="c23 c24"
+                class="c22 c23"
               >
                 <div
-                  class="c18 grey-shadow"
+                  class="c17 grey-shadow"
                 />
                 <div
-                  class="c18 yellow-shadow"
+                  class="c17 yellow-shadow"
                 />
                 <button
                   aria-checked="false"
-                  class="c29 c30 internal-button"
+                  class="c28 c29 internal-button"
                   role="radio"
                 >
                   <div
-                    class="c4 c27"
+                    class="c4 c26"
                   >
                     <span
-                      class="c28"
+                      class="c27"
                     >
                       Chemistry
                     </span>
@@ -639,24 +635,24 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
                 </button>
               </div>
               <div
-                class="c23 c24"
+                class="c22 c23"
               >
                 <div
-                  class="c18 grey-shadow"
+                  class="c17 grey-shadow"
                 />
                 <div
-                  class="c18 yellow-shadow"
+                  class="c17 yellow-shadow"
                 />
                 <button
                   aria-checked="false"
-                  class="c29 c30 internal-button"
+                  class="c28 c29 internal-button"
                   role="radio"
                 >
                   <div
-                    class="c4 c27"
+                    class="c4 c26"
                   >
                     <span
-                      class="c28"
+                      class="c27"
                     >
                       Physics
                     </span>
@@ -667,7 +663,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
           </div>
         </div>
         <div
-          class="c4 c5 c31 c32"
+          class="c4 c5 c30 c31"
         >
           <svg
             class=""
@@ -689,8 +685,8 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
         </div>
       </div>
       <div
-        class="c4 c5 c6 c33"
-        focusable="true"
+        class="c4 c5 c32"
+        focusable="false"
       >
         <svg
           class=""
@@ -713,25 +709,25 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
     </div>
   </div>
   <div
-    class="c34 c35"
+    class="c33 c34"
   >
     <div
-      class="c23 c24 c36"
+      class="c22 c23 c35"
     >
       <div
-        class="c18 grey-shadow"
+        class="c17 grey-shadow"
       />
       <div
-        class="c18 yellow-shadow"
+        class="c17 yellow-shadow"
       />
       <button
-        class="c29 c30 internal-button"
+        class="c28 c29 internal-button"
       >
         <div
-          class="c4 c27"
+          class="c4 c26"
         >
           <span
-            class="c28"
+            class="c27"
           >
             Skip to results
           </span>
@@ -739,32 +735,32 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
       </button>
     </div>
     <div
-      class="c37 c38"
+      class="c36 c37"
     >
       <div
         aria-label="OakPupilJourneyUnitsFilter"
-        class="c4 c22"
+        class="c4 c21"
         role="radiogroup"
       >
         <div
-          class="c23 c24"
+          class="c22 c23"
         >
           <div
-            class="c18 grey-shadow"
+            class="c17 grey-shadow"
           />
           <div
-            class="c18 yellow-shadow"
+            class="c17 yellow-shadow"
           />
           <button
             aria-checked="true"
-            class="c25 c26 internal-button"
+            class="c24 c25 internal-button"
             role="radio"
           >
             <div
-              class="c4 c27"
+              class="c4 c26"
             >
               <span
-                class="c28"
+                class="c27"
               >
                 All
               </span>
@@ -772,24 +768,24 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
           </button>
         </div>
         <div
-          class="c23 c24"
+          class="c22 c23"
         >
           <div
-            class="c18 grey-shadow"
+            class="c17 grey-shadow"
           />
           <div
-            class="c18 yellow-shadow"
+            class="c17 yellow-shadow"
           />
           <button
             aria-checked="false"
-            class="c29 c30 internal-button"
+            class="c28 c29 internal-button"
             role="radio"
           >
             <div
-              class="c4 c27"
+              class="c4 c26"
             >
               <span
-                class="c28"
+                class="c27"
               >
                 Biology
               </span>
@@ -797,24 +793,24 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
           </button>
         </div>
         <div
-          class="c23 c24"
+          class="c22 c23"
         >
           <div
-            class="c18 grey-shadow"
+            class="c17 grey-shadow"
           />
           <div
-            class="c18 yellow-shadow"
+            class="c17 yellow-shadow"
           />
           <button
             aria-checked="false"
-            class="c29 c30 internal-button"
+            class="c28 c29 internal-button"
             role="radio"
           >
             <div
-              class="c4 c27"
+              class="c4 c26"
             >
               <span
-                class="c28"
+                class="c27"
               >
                 Chemistry
               </span>
@@ -822,24 +818,24 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
           </button>
         </div>
         <div
-          class="c23 c24"
+          class="c22 c23"
         >
           <div
-            class="c18 grey-shadow"
+            class="c17 grey-shadow"
           />
           <div
-            class="c18 yellow-shadow"
+            class="c17 yellow-shadow"
           />
           <button
             aria-checked="false"
-            class="c29 c30 internal-button"
+            class="c28 c29 internal-button"
             role="radio"
           >
             <div
-              class="c4 c27"
+              class="c4 c26"
             >
               <span
-                class="c28"
+                class="c27"
               >
                 Physics
               </span>

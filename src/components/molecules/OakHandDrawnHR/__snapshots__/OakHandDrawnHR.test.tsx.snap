@@ -12,14 +12,10 @@ exports[`OakHandDrawnHR matches snapshot 1`] = `
   display: flex;
 }
 
-.c2 {
-  focusable: true;
-}
-
 <div>
   <div
-    class="c0 c1 c2"
-    focusable="true"
+    class="c0 c1"
+    focusable="false"
   >
     <svg
       class=""
