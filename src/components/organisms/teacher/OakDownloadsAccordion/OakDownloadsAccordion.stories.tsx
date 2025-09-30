@@ -31,6 +31,13 @@ const meta: Meta<typeof OakDownloadsAccordion> = {
     ...colorArgTypes,
     ...borderArgTypes,
   },
+};
+
+export default meta;
+
+type Story = StoryObj<typeof OakDownloadsAccordion>;
+
+export const Default: Story = {
   args: {
     id: "oak-downloads-accordion",
     downloadsText: "Slides, quizzes, worksheet, additional materials",
@@ -79,9 +86,3 @@ const meta: Meta<typeof OakDownloadsAccordion> = {
     );
   },
 };
-
-export default meta;
-
-type Story = StoryObj<typeof OakDownloadsAccordion>;
-
-export const Default: Story = {};
