@@ -284,4 +284,43 @@ describe(OakInlineBanner, () => {
       "Close information banner",
     );
   });
+  it("should have h1 as default title tag", () => {
+    const { getByTestId } = renderWithTheme(
+      <OakInlineBanner
+        canDismiss
+        cta={
+          <OakSecondaryLink iconName="chevron-right" isTrailingIcon>
+            Link
+          </OakSecondaryLink>
+        }
+        isOpen
+        message="Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet."
+        onDismiss={() => {}}
+        title="Information"
+        type="info"
+      />,
+    );
+
+    expect(getByTestId("inline-banner-title").tagName).toBe("H1");
+  });
+  it("should be able to set title tag via prop", () => {
+    const { getByTestId } = renderWithTheme(
+      <OakInlineBanner
+        canDismiss
+        cta={
+          <OakSecondaryLink iconName="chevron-right" isTrailingIcon>
+            Link
+          </OakSecondaryLink>
+        }
+        isOpen
+        message="Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet."
+        onDismiss={() => {}}
+        title="Information"
+        type="info"
+        titleTag="h3"
+      />,
+    );
+
+    expect(getByTestId("inline-banner-title").tagName).toBe("H3");
+  });
 });
