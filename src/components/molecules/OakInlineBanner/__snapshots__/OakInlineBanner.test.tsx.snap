@@ -419,12 +419,12 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
       <div
         class="c19 c20"
       >
-        <h2
+        <h1
           class="c21"
           data-testid="inline-banner-title"
         >
           Information
-        </h2>
+        </h1>
         <div
           class="c22"
           data-testid="inline-banner-message"
@@ -889,12 +889,12 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
       <div
         class="c20 c21"
       >
-        <h2
+        <h1
           class="c22"
           data-testid="inline-banner-title"
         >
           Information
-        </h2>
+        </h1>
         <div
           class="c23"
           data-testid="inline-banner-message"
