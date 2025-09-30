@@ -270,7 +270,7 @@ export const OakInlineBanner = ({
           {title && (
             <OakHeading
               data-testid="inline-banner-title"
-              tag="h1"
+              tag="h2"
               {...bannerVariants[variant].heading}
             >
               {title}
