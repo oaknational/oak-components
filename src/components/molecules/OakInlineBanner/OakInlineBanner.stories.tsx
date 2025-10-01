@@ -96,6 +96,7 @@ type Story = StoryObj<typeof OakInlineBanner>;
 export const Info: Story = {
   args: {
     type: "info",
+    titleTag: "h2",
   },
 };
 
