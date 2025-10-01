@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakDownloadsAccordion } from "./OakDownloadsAccordion";
+import {
+  OakDownloadsAccordion,
+  OakDownloadsAccordionProps,
+} from "./OakDownloadsAccordion";
 
 import { OakFlex } from "@/components/atoms";
 import { OakDownloadCard } from "@/components/molecules/OakDownloadCard";
@@ -36,6 +39,20 @@ const meta: Meta<typeof OakDownloadsAccordion> = {
 export default meta;
 
 type Story = StoryObj<typeof OakDownloadsAccordion>;
+
+const WithState = (args: OakDownloadsAccordionProps) => {
+  const [checked, setChecked] = useState(false);
+  const handleChecked = () => {
+    setChecked((prev) => !prev);
+  };
+  return (
+    <OakDownloadsAccordion
+      {...args}
+      selectAllChecked={checked}
+      handleToggleSelectAll={handleChecked}
+    />
+  );
+};
 
 export const Default: Story = {
   args: {
@@ -72,17 +89,5 @@ export const Default: Story = {
     initialOpen: false,
     $width: "100%",
   },
-  render: (args) => {
-    const [checked, setChecked] = useState(false);
-    const handleChecked = () => {
-      setChecked((prev) => !prev);
-    };
-    return (
-      <OakDownloadsAccordion
-        {...args}
-        selectAllChecked={checked}
-        handleToggleSelectAll={handleChecked}
-      />
-    );
-  },
+  render: (args) => <WithState {...args} />,
 };
