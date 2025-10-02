@@ -32,7 +32,6 @@ export type OakMultilineTextProps = {
   onFocus?: () => void;
   onBlur?: (value: string) => void;
   onError?: (error: string) => void;
-  initialValue?: string;
 };
 
 type StyledOakTextAreaProps = {
@@ -66,7 +65,6 @@ const UnstyledComponent = forwardRef(
       onFocus,
       onBlur,
       onError,
-      initialValue,
     }: OakMultilineTextProps,
     ref?: React.Ref<HTMLTextAreaElement>,
   ) => {
@@ -104,7 +102,7 @@ const UnstyledComponent = forwardRef(
       >
         <StyledOakTextArea
           ref={ref}
-          value={value ? value : initialValue}
+          value={value}
           onFocus={() => handleFocus()}
           onChange={(e) => handleChange(e.target.value)}
           onBlur={(e) => handleBlur(e.target.value)}
