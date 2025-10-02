@@ -5,6 +5,7 @@ import userEvent from "@testing-library/user-event";
 import { OakMultilineText } from "./OakMultilineText";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
+import { OakP } from "@/components/atoms/OakP";
 
 describe("OakMultilineText", () => {
   it("renders", () => {
@@ -68,31 +69,38 @@ describe("OakMultilineText", () => {
 
   it("trims text when pasted text length exceeds character limit", async () => {
     const user = userEvent.setup();
+    const onError = jest.fn();
 
-    const { getByDisplayValue } = renderWithTheme(
+    const { getByRole } = renderWithTheme(
       <OakMultilineText
-        charLimit={5}
+        charLimit={10}
         $height="all-spacing-10"
         disabled={false}
-        value="Hello"
+        onError={onError}
       />,
     );
 
-    const textArea = getByDisplayValue("Hello");
+    const textArea = getByRole("textbox");
     expect(textArea).toBeInTheDocument();
+    await user.type(textArea, "Hello");
+    await user.click(textArea);
+    await user.paste("Testing paste");
+    expect(textArea).toHaveValue("HelloTesti");
+    expect(textArea).toHaveFocus();
 
-    await user.paste("Hello, world!");
-    expect(textArea).toHaveValue("Hello");
+    expect(onError).toHaveBeenCalled();
   });
 
   it("counts characters correctly when text is edited", async () => {
     const user = userEvent.setup();
+    const onChange = jest.fn();
 
     const { getByRole, getByLabelText } = renderWithTheme(
       <OakMultilineText
         charLimit={100}
         $height="all-spacing-10"
         disabled={false}
+        onChange={onChange}
       />,
     );
 
@@ -109,6 +117,7 @@ describe("OakMultilineText", () => {
     await user.click(textArea);
     expect(textArea).toHaveFocus();
     expect(charCount).toHaveTextContent("12/100");
+    expect(onChange).toHaveBeenCalledTimes(14);
   });
 
   it("shows invalid text if invalid is true and invalid text has been set", () => {
@@ -128,5 +137,59 @@ describe("OakMultilineText", () => {
     const invalidText = getByLabelText("invalid text message");
     expect(invalidText).toBeInTheDocument();
     expect(invalidText).toHaveTextContent("Invalid text");
+  });
+
+  it("calls onBlur when blurred", async () => {
+    const user = userEvent.setup();
+    const onBlur = jest.fn();
+    const { getByRole, getByText } = renderWithTheme(
+      <>
+        <OakMultilineText
+          charLimit={100}
+          $height="all-spacing-10"
+          disabled={false}
+          onBlur={onBlur}
+        />
+        <OakP>test</OakP>
+      </>,
+    );
+
+    const textArea = getByRole("textbox");
+    const paragraph = getByText("test");
+
+    await user.click(textArea);
+    await user.type(textArea, "text");
+    await user.click(paragraph);
+
+    expect(onBlur).toHaveBeenCalled();
+    expect(onBlur).toHaveBeenCalledWith("text");
+  });
+
+  it("calls onFocus when focused", async () => {
+    const onFocus = jest.fn();
+    const user = userEvent.setup();
+
+    const { getByRole, getByText } = renderWithTheme(
+      <>
+        <OakMultilineText
+          charLimit={100}
+          $height="all-spacing-10"
+          disabled={false}
+          onFocus={onFocus}
+        />
+        ,<OakP>test</OakP>
+      </>,
+    );
+
+    const textArea = getByRole("textbox");
+    const paragraph = getByText("test");
+
+    await user.click(paragraph);
+    expect(textArea).not.toHaveFocus();
+
+    await user.click(textArea);
+    expect(textArea).toHaveFocus();
+
+    expect(onFocus).toHaveBeenCalledTimes(1);
   });
 });
