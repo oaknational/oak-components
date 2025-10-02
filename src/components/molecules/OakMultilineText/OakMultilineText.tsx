@@ -89,8 +89,8 @@ const UnstyledComponent = forwardRef(
       setCharCount(charCount);
     };
 
-    const handlePaste = (value: string) => {
-      if (value.length > charLimit) {
+    const handlePaste = (pasteValue: string) => {
+      if (pasteValue.length > charLimit) {
         onError && onError("Character limit exceeded");
       }
     };
@@ -106,6 +106,7 @@ const UnstyledComponent = forwardRef(
           onFocus={() => handleFocus()}
           onChange={(e) => handleChange(e.target.value)}
           onBlur={(e) => handleBlur(e.target.value)}
+          onError={(e) => onError && onError(e.currentTarget.value)}
           maxLength={charLimit}
           placeholder={placeholder}
           disabled={disabled}
