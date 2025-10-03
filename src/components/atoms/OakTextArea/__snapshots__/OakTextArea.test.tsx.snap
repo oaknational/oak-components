@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OakTextArea matches snapshot 1`] = `
+.c0 {
+  resize: none;
+  outline: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+<div>
+  <textarea
+    class="c0"
+  />
+</div>
+`;
