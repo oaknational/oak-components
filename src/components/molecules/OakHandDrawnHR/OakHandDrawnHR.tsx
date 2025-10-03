@@ -26,7 +26,7 @@ export const OakHandDrawnHR = (props: OakHandDrawnHRProps) => {
   const { hrColor, ...flexProps } = props;
 
   return (
-    <StyledOakFlex {...flexProps}>
+    <StyledOakFlex focusable={false} {...flexProps}>
       <HandDrawnHRSvg $fill={hrColor} />
     </StyledOakFlex>
   );

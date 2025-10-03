@@ -204,6 +204,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   >
     <div
       class="c2 c3 c4"
+      focusable="false"
     >
       <svg
         class=""
@@ -295,6 +296,7 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
     </div>
     <div
       class="c2 c3 c22"
+      focusable="false"
     >
       <svg
         class=""

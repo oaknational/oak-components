@@ -72,6 +72,7 @@ export type OakInlineBannerProps = OakFlexProps & {
    * The variant of an Inline Banner to display
    */
   variant?: OakInlineBannerVariants;
+  titleTag?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 };
 
 export type BannerTypes = {
@@ -202,6 +203,7 @@ export const OakInlineBanner = ({
   iconColorFilter,
   closeButtonOverrideProps,
   variant = "regular",
+  titleTag = "h1",
   ...props
 }: OakInlineBannerProps) => {
   const iconResult = icon || bannerTypes[type]?.icon;
@@ -270,7 +272,7 @@ export const OakInlineBanner = ({
           {title && (
             <OakHeading
               data-testid="inline-banner-title"
-              tag="h1"
+              tag={titleTag}
               {...bannerVariants[variant].heading}
             >
               {title}

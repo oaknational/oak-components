@@ -80,7 +80,9 @@ exports[`OakQuizCounter matches snapshot 1`] = `
       6
     </span>
     <div
+      aria-hidden="true"
       class="c0 c4"
+      focusable="false"
     >
       <svg
         class="c5"
