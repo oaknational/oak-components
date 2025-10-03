@@ -25,7 +25,6 @@ export type OakMultilineTextProps = {
   placeholder?: string;
   disabled: boolean;
   ariaLabel?: string;
-  invalid?: boolean;
   invalidText?: string;
   value?: string;
   onChange?: (value: string) => void;
@@ -57,7 +56,6 @@ const UnstyledComponent = forwardRef(
       charLimit,
       placeholder,
       disabled,
-      invalid,
       invalidText,
       ariaLabel,
       value,
@@ -141,7 +139,7 @@ const UnstyledComponent = forwardRef(
             </OakSpan>
           </OakFlex>
         )}
-        {invalid && invalidText && (
+        {invalidText && (
           <OakP
             $font={"body-2"}
             $color={"text-error"}

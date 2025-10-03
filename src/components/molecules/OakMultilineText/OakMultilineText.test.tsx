@@ -126,7 +126,6 @@ describe("OakMultilineText", () => {
         charLimit={100}
         $height="all-spacing-10"
         disabled={false}
-        invalid={true}
         invalidText="Invalid text"
       />,
     );

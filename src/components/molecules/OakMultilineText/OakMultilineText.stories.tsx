@@ -11,18 +11,11 @@ const meta: Meta<typeof OakMultilineText> = {
     charLimit: { control: "number" },
     placeholder: { control: "text" },
     disabled: { control: "boolean" },
-    invalid: { control: "boolean" },
     invalidText: { control: "text" },
   },
   parameters: {
     controls: {
-      include: [
-        "charLimit",
-        "placeholder",
-        "disabled",
-        "invalid",
-        "invalidText",
-      ],
+      include: ["charLimit", "placeholder", "disabled", "invalidText"],
     },
   },
 };
@@ -37,6 +30,5 @@ export const Default: Story = {
     placeholder: "Start typing answer...",
     charLimit: 200,
     disabled: false,
-    invalid: false,
   },
 };
