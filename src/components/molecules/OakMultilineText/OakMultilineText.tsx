@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { OakFlex } from "@/components/atoms/OakFlex";
 import { OakTextArea, OakTextAreaProps } from "@/components/atoms/OakTextArea";
-import { OakSpan, OakP, OakLabel } from "@/components/atoms";
+import { OakSpan, OakLabel } from "@/components/atoms";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { OakCombinedSpacingToken } from "@/styles";
 import { ResponsiveValues } from "@/styles/utils/responsiveStyle";
@@ -72,6 +72,7 @@ const UnstyledComponent = forwardRef(
   ) => {
     const [charCount, setCharCount] = useState(Number);
     const [showCharCount, setShowCharCount] = useState(Boolean);
+    const [error, setError] = useState(String);
 
     const charCountWidth = charLimit > 99 ? "all-spacing-10" : "all-spacing-9";
 
@@ -89,11 +90,15 @@ const UnstyledComponent = forwardRef(
       onChange && onChange(value);
       const charCount = value.length;
       setCharCount(charCount);
+      if (charCount <= charLimit) {
+        setError("");
+      }
     };
 
     const handlePaste = (pasteValue: string) => {
       if (pasteValue.length > charLimit) {
         onError && onError("Character limit exceeded");
+        setError("Please enter " + charLimit + " or less characters.");
       }
     };
 
@@ -130,16 +135,27 @@ const UnstyledComponent = forwardRef(
           onPaste={(e) => handlePaste(e.clipboardData.getData("text"))}
         ></StyledOakTextArea>
         {/* Span is inside OakFlex to stop textarea width changing when charCount changes. */}
-        {showCharCount && (
-          <OakFlex
-            $minWidth={[charCountWidth, null]}
-            $justifyContent={[null, "flex-end"]}
-            $pa={[null, "inner-padding-ssx"]}
-            $position={["relative", null]}
-          >
+        <OakFlex
+          $minWidth={[charCountWidth, null]}
+          $pa={[null, "inner-padding-ssx"]}
+          $position={["relative", null]}
+        >
+          {(invalidText || error) && (
+            <OakSpan
+              $font={"body-4"}
+              $color={"text-error"}
+              aria-label="invalid text message"
+              $left={["all-spacing-0", null]}
+              $top={["all-spacing-0", null]}
+              $position={["absolute", null]}
+            >
+              {invalidText ? invalidText : error}
+            </OakSpan>
+          )}
+          {showCharCount && (
             <OakSpan
               aria-label="character count"
-              $font={"body-3"}
+              $font={"body-4"}
               $color={"grey60"}
               $position={["absolute", null]}
               $top={["all-spacing-0", null]}
@@ -147,17 +163,8 @@ const UnstyledComponent = forwardRef(
             >
               {charCount}/{charLimit}
             </OakSpan>
-          </OakFlex>
-        )}
-        {invalidText && (
-          <OakP
-            $font={"body-2"}
-            $color={"text-error"}
-            aria-label="invalid text message"
-          >
-            {invalidText}
-          </OakP>
-        )}
+          )}
+        </OakFlex>
       </OakFlex>
     );
   },
