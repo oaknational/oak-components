@@ -5,6 +5,13 @@ exports[`OakMultilineText matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
+.c4 {
+  position: relative;
+  min-width: 3.5rem;
+  background: #b0e2de;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -14,6 +21,13 @@ exports[`OakMultilineText matches snapshot 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.75rem;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .c2 {
@@ -38,6 +52,20 @@ exports[`OakMultilineText matches snapshot 1`] = `
 .c3:hover {
   background: #f2f2f2;
   border-color: #808080;
+}
+
+@media (min-width:750px) {
+
+}
+
+@media (min-width:750px) {
+
+}
+
+@media (min-width:750px) {
+  .c4 {
+    padding: 0.25rem;
+  }
 }
 
 @media (min-width:750px) {
@@ -72,6 +100,9 @@ exports[`OakMultilineText matches snapshot 1`] = `
       class="c2 c3"
       id="textarea"
       maxlength="200"
+    />
+    <div
+      class="c4 c5"
     />
   </div>
 </div>
