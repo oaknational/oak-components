@@ -15,6 +15,7 @@ describe("OakMultilineText", () => {
         $height="all-spacing-10"
         placeholder="Start typing answer..."
         disabled={false}
+        $width="100%"
       />,
     );
     expect(getByPlaceholderText("Start typing answer...")).toBeInTheDocument();
@@ -26,6 +27,7 @@ describe("OakMultilineText", () => {
         charLimit={200}
         $height="all-spacing-10"
         disabled={false}
+        $width="100%"
       ></OakMultilineText>,
     );
     expect(container).toMatchSnapshot();
@@ -37,6 +39,7 @@ describe("OakMultilineText", () => {
         charLimit={200}
         $height="all-spacing-10"
         disabled={false}
+        $width="100%"
       ></OakMultilineText>,
     );
     const textArea = getByRole("textbox");
@@ -61,6 +64,7 @@ describe("OakMultilineText", () => {
         $height="all-spacing-10"
         disabled={false}
         value="Hello"
+        $width="100%"
       />,
     );
     const textArea = getByDisplayValue("Hello");
@@ -77,6 +81,7 @@ describe("OakMultilineText", () => {
         $height="all-spacing-10"
         disabled={false}
         onError={onError}
+        $width="100%"
       />,
     );
 
@@ -101,6 +106,7 @@ describe("OakMultilineText", () => {
         $height="all-spacing-10"
         disabled={false}
         onChange={onChange}
+        $width="100%"
       />,
     );
 
@@ -127,6 +133,7 @@ describe("OakMultilineText", () => {
         $height="all-spacing-10"
         disabled={false}
         invalidText="Invalid text"
+        $width="100%"
       />,
     );
 
@@ -148,6 +155,7 @@ describe("OakMultilineText", () => {
           $height="all-spacing-10"
           disabled={false}
           onBlur={onBlur}
+          $width="100%"
         />
         <OakP>test</OakP>
       </>,
@@ -175,6 +183,7 @@ describe("OakMultilineText", () => {
           $height="all-spacing-10"
           disabled={false}
           onFocus={onFocus}
+          $width="100%"
         />
         ,<OakP>test</OakP>
       </>,

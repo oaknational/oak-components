@@ -23,7 +23,7 @@ export type OakMultilineTextProps = {
    * Placeholder text
    */
   placeholder?: string;
-  // $width: ResponsiveValues<OakCombinedSpacingToken>;
+  $width: ResponsiveValues<OakCombinedSpacingToken>;
   disabled: boolean;
   ariaLabel?: string;
   invalidText?: string;
@@ -66,7 +66,7 @@ const UnstyledComponent = forwardRef(
       onBlur,
       onError,
       label,
-      // $width,
+      $width,
     }: OakMultilineTextProps,
     ref?: React.Ref<HTMLTextAreaElement>,
   ) => {
@@ -125,7 +125,7 @@ const UnstyledComponent = forwardRef(
           $borderRadius={"border-radius-m"}
           $ba={"border-solid-m"}
           $pa={"inner-padding-s"}
-          $width="100%"
+          $width={$width}
           $borderColor={"border-neutral-lighter"}
           onPaste={(e) => handlePaste(e.clipboardData.getData("text"))}
         ></StyledOakTextArea>
