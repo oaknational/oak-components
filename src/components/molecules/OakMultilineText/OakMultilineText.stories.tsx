@@ -12,10 +12,11 @@ const meta: Meta<typeof OakMultilineText> = {
     placeholder: { control: "text" },
     disabled: { control: "boolean" },
     invalidText: { control: "text" },
+    label: { control: "text" },
   },
   parameters: {
     controls: {
-      include: ["charLimit", "placeholder", "disabled", "invalidText"],
+      include: ["charLimit", "placeholder", "disabled", "invalidText", "label"],
     },
   },
 };

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { OakFlex } from "@/components/atoms/OakFlex";
 import { OakTextArea, OakTextAreaProps } from "@/components/atoms/OakTextArea";
-import { OakSpan, OakP } from "@/components/atoms";
+import { OakSpan, OakP, OakLabel } from "@/components/atoms";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { OakCombinedSpacingToken } from "@/styles";
 import { ResponsiveValues } from "@/styles/utils/responsiveStyle";
@@ -23,6 +23,7 @@ export type OakMultilineTextProps = {
    * Placeholder text
    */
   placeholder?: string;
+  // $width: ResponsiveValues<OakCombinedSpacingToken>;
   disabled: boolean;
   ariaLabel?: string;
   invalidText?: string;
@@ -31,7 +32,8 @@ export type OakMultilineTextProps = {
   onFocus?: () => void;
   onBlur?: (value: string) => void;
   onError?: (error: string) => void;
-};
+  label?: string;
+} & OakTextAreaProps;
 
 type StyledOakTextAreaProps = {
   isError?: boolean;
@@ -63,6 +65,8 @@ const UnstyledComponent = forwardRef(
       onFocus,
       onBlur,
       onError,
+      label,
+      // $width,
     }: OakMultilineTextProps,
     ref?: React.Ref<HTMLTextAreaElement>,
   ) => {
@@ -98,8 +102,14 @@ const UnstyledComponent = forwardRef(
         $flexDirection={["row", "column"]}
         $gap={["space-between-xs", null]}
       >
+        {label && (
+          <OakLabel htmlFor="textarea" $font={"body-2-bold"}>
+            {label}
+          </OakLabel>
+        )}
         <StyledOakTextArea
           ref={ref}
+          id="textarea"
           value={value}
           onFocus={() => handleFocus()}
           onChange={(e) => handleChange(e.target.value)}
