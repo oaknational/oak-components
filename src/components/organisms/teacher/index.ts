@@ -1,3 +1,4 @@
+export * from "./OakDownloadsAccordion";
 export * from "./OakInlineRegistrationBanner";
 export * from "./OakSearchFilterCheckBox";
 export * from "./OakTeacherNotesInline";
@@ -8,4 +9,3 @@ export * from "./OakUnitListOptionalityItem";
 export * from "./OakUnitListOptionalityItemCard";
 export * from "./OakUnitsContainer";
 export * from "./OakUnitsHeader";
-export * from "./OakDownloadsAccordion";
