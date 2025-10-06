@@ -103,10 +103,7 @@ const UnstyledComponent = forwardRef(
     };
 
     return (
-      <OakFlex
-        $flexDirection={["row", "column"]}
-        $gap={["space-between-xs", null]}
-      >
+      <OakFlex $flexDirection={["column"]} $gap={["space-between-xs", null]}>
         {label && (
           <OakLabel htmlFor="textarea" $font={"body-2-bold"}>
             {label}
