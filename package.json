@@ -1,6 +1,6 @@
 {
   "name": "@oaknational/oak-components",
-  "version": "1.150.1",
+  "version": "1.150.2",
   "licence": "MIT",
   "description": "Shared components for Oak applications",
   "main": "dist/cjs/index.js",
