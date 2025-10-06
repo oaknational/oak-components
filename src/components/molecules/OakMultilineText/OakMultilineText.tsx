@@ -161,7 +161,7 @@ const UnstyledComponent = forwardRef(
         >
           {(invalidText || internalError) && (
             <>
-              <OakGridArea $colSpan={9}>
+              <OakGridArea $colSpan={10} $height={"auto"}>
                 <OakFlex $flexDirection={"row"}>
                   <OakIcon
                     iconName="warning"
@@ -172,7 +172,7 @@ const UnstyledComponent = forwardRef(
                   ></OakIcon>
                   <OakSpan
                     $overflowY={"scroll"}
-                    $overflowX={"visible"}
+                    $overflowX={"scroll"}
                     $font={"body-4"}
                     $color={"text-error"}
                     aria-label="invalid text message"
