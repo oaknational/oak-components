@@ -96,7 +96,7 @@ const UnstyledComponent = forwardRef(
     };
 
     const handlePaste = (pasteValue: string) => {
-      if (pasteValue.length > charLimit) {
+      if (pasteValue.length > charLimit - charCount) {
         onError && onError("Character limit exceeded");
         setInternalError("Please enter " + charLimit + " or less characters.");
       }
