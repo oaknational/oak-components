@@ -29,7 +29,7 @@ export type OakMultilineTextProps = {
   invalidText?: string;
   value?: string;
   onChange?: (value: string) => void;
-  onFocus?: () => void;
+  onFocus?: (value: string) => void;
   onBlur?: (value: string) => void;
   onError?: (error: string) => void;
   label?: string;
@@ -76,9 +76,10 @@ const UnstyledComponent = forwardRef(
 
     const charCountWidth = charLimit > 99 ? "all-spacing-10" : "all-spacing-9";
 
-    const handleFocus = () => {
-      onFocus && onFocus();
+    const handleFocus = (value: string) => {
+      onFocus && onFocus(value);
       setShowCharCount(true);
+      setCharCount(value.length);
     };
 
     const handleBlur = (value: string) => {
@@ -113,7 +114,7 @@ const UnstyledComponent = forwardRef(
           ref={ref}
           id="textarea"
           value={value}
-          onFocus={() => handleFocus()}
+          onFocus={(e) => handleFocus(e.target.value)}
           onChange={(e) => handleChange(e.target.value)}
           onBlur={(e) => handleBlur(e.target.value)}
           onError={(e) => onError && onError(e.currentTarget.value)}

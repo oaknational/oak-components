@@ -200,4 +200,26 @@ describe("OakMultilineText", () => {
 
     expect(onFocus).toHaveBeenCalledTimes(1);
   });
+
+  it("displays correct character count when text area value is already set", async () => {
+    const user = userEvent.setup();
+    const { getByRole, getByLabelText } = renderWithTheme(
+      <OakMultilineText
+        charLimit={100}
+        $height="all-spacing-10"
+        disabled={false}
+        $width="100%"
+        value={"Test"}
+      ></OakMultilineText>,
+    );
+
+    const textarea = getByRole("textbox");
+
+    await user.click(textarea);
+    const charCount = getByLabelText("character count");
+    expect(textarea).toHaveFocus();
+    expect(charCount).toBeInTheDocument();
+    expect(textarea).toHaveTextContent("Test");
+    expect(charCount).toHaveTextContent("4/100");
+  });
 });
