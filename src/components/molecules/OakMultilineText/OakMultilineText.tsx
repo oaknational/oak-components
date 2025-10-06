@@ -3,7 +3,13 @@ import styled from "styled-components";
 
 import { OakFlex } from "@/components/atoms/OakFlex";
 import { OakTextArea, OakTextAreaProps } from "@/components/atoms/OakTextArea";
-import { OakSpan, OakLabel, OakIcon, OakP } from "@/components/atoms";
+import {
+  OakSpan,
+  OakLabel,
+  OakIcon,
+  OakGrid,
+  OakGridArea,
+} from "@/components/atoms";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { OakCombinedSpacingToken } from "@/styles";
 import { ResponsiveValues } from "@/styles/utils/responsiveStyle";
@@ -103,12 +109,16 @@ const UnstyledComponent = forwardRef(
     const handlePaste = (pasteValue: string) => {
       if (pasteValue.length > charLimit - charCount) {
         onError && onError("Character limit exceeded");
-        setInternalError("Please enter " + charLimit + " or less characters.");
+        setInternalError("Please enter " + charLimit + " or fewer characters.");
       }
     };
 
     return (
-      <OakFlex $flexDirection={["column"]} $gap={["space-between-xs", null]}>
+      <OakFlex
+        $flexDirection={["column"]}
+        $gap={["space-between-xs", null]}
+        $width={$width}
+      >
         {label && (
           <OakLabel htmlFor={id} $font={"body-2-bold"}>
             {label}
@@ -133,7 +143,6 @@ const UnstyledComponent = forwardRef(
           $borderRadius={"border-radius-m"}
           $ba={"border-solid-m"}
           $pa={"inner-padding-s"}
-          $width={$width}
           $borderColor={
             internalError || invalidText
               ? "border-error"
@@ -144,43 +153,52 @@ const UnstyledComponent = forwardRef(
           $overflowY={"scroll"}
         ></StyledOakTextArea>
         {/* Span is inside OakFlex to stop textarea width changing when charCount changes. */}
-        <OakFlex
+        <OakGrid
           $minWidth={[charCountWidth, null]}
+          $width={$width}
           $pa={[null, "inner-padding-ssx"]}
           $position={["relative", null]}
-          $flexDirection={"row"}
         >
           {(invalidText || internalError) && (
             <>
-              <OakIcon
-                iconName="warning"
-                $colorFilter={"icon-error"}
-                $width={"all-spacing-4"}
-                $height={"all-spacing-4"}
-                $right={"all-spacing-1"}
-              ></OakIcon>
-              <OakP
-                $font={"body-4"}
-                $color={"text-error"}
-                aria-label="invalid text message"
-              >
-                {invalidText ? invalidText : internalError}
-              </OakP>
+              <OakGridArea $colSpan={9}>
+                <OakFlex $flexDirection={"row"}>
+                  <OakIcon
+                    iconName="warning"
+                    $colorFilter={"icon-error"}
+                    $width={"all-spacing-4"}
+                    $height={"all-spacing-4"}
+                    $right={"all-spacing-1"}
+                  ></OakIcon>
+                  <OakSpan
+                    $overflowY={"scroll"}
+                    $overflowX={"visible"}
+                    $font={"body-4"}
+                    $color={"text-error"}
+                    aria-label="invalid text message"
+                  >
+                    {invalidText ? invalidText : internalError}
+                  </OakSpan>
+                </OakFlex>
+              </OakGridArea>
             </>
           )}
-          {showCharCount && (
-            <OakSpan
-              aria-label="character count"
-              $font={"body-4"}
-              $color={"grey60"}
-              $position={["absolute", null]}
-              $top={["all-spacing-0", null]}
-              $right={["all-spacing-0", null]}
-            >
-              {charCount}/{charLimit}
-            </OakSpan>
-          )}
-        </OakFlex>
+
+          <OakGridArea $colSpan={1}>
+            {showCharCount && (
+              <OakSpan
+                aria-label="character count"
+                $font={"body-4"}
+                $color={"grey60"}
+                $position={["absolute", null]}
+                $top={["all-spacing-0", null]}
+                $right={["all-spacing-0", null]}
+              >
+                {charCount}/{charLimit}
+              </OakSpan>
+            )}
+          </OakGridArea>
+        </OakGrid>
       </OakFlex>
     );
   },
