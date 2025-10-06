@@ -72,7 +72,7 @@ const UnstyledComponent = forwardRef(
   ) => {
     const [charCount, setCharCount] = useState(Number);
     const [showCharCount, setShowCharCount] = useState(Boolean);
-    const [error, setError] = useState(String);
+    const [internalError, setInternalError] = useState(String);
 
     const charCountWidth = charLimit > 99 ? "all-spacing-10" : "all-spacing-9";
 
@@ -91,14 +91,14 @@ const UnstyledComponent = forwardRef(
       const charCount = value.length;
       setCharCount(charCount);
       if (charCount <= charLimit) {
-        setError("");
+        setInternalError("");
       }
     };
 
     const handlePaste = (pasteValue: string) => {
       if (pasteValue.length > charLimit) {
         onError && onError("Character limit exceeded");
-        setError("Please enter " + charLimit + " or less characters.");
+        setInternalError("Please enter " + charLimit + " or less characters.");
       }
     };
 
@@ -129,7 +129,9 @@ const UnstyledComponent = forwardRef(
           $pa={"inner-padding-s"}
           $width={$width}
           $borderColor={
-            error || invalidText ? "border-error" : "border-neutral-lighter"
+            internalError || invalidText
+              ? "border-error"
+              : "border-neutral-lighter"
           }
           onPaste={(e) => handlePaste(e.clipboardData.getData("text"))}
         ></StyledOakTextArea>
@@ -140,21 +142,23 @@ const UnstyledComponent = forwardRef(
           $position={["relative", null]}
           $flexDirection={"row"}
         >
-          <OakIcon
-            iconName="warning"
-            $colorFilter={"icon-error"}
-            $width={"all-spacing-4"}
-            $height={"all-spacing-4"}
-            $right={"all-spacing-1"}
-          ></OakIcon>
-          {(invalidText || error) && (
-            <OakP
-              $font={"body-4"}
-              $color={"text-error"}
-              aria-label="invalid text message"
-            >
-              {invalidText ? invalidText : error}
-            </OakP>
+          {(invalidText || internalError) && (
+            <>
+              <OakIcon
+                iconName="warning"
+                $colorFilter={"icon-error"}
+                $width={"all-spacing-4"}
+                $height={"all-spacing-4"}
+                $right={"all-spacing-1"}
+              ></OakIcon>
+              <OakP
+                $font={"body-4"}
+                $color={"text-error"}
+                aria-label="invalid text message"
+              >
+                {invalidText ? invalidText : internalError}
+              </OakP>
+            </>
           )}
           {showCharCount && (
             <OakSpan
