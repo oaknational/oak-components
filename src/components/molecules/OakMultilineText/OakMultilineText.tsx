@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { OakFlex } from "@/components/atoms/OakFlex";
 import { OakTextArea, OakTextAreaProps } from "@/components/atoms/OakTextArea";
-import { OakSpan, OakLabel, OakIcon } from "@/components/atoms";
+import { OakSpan, OakLabel, OakIcon, OakP } from "@/components/atoms";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { OakCombinedSpacingToken } from "@/styles";
 import { ResponsiveValues } from "@/styles/utils/responsiveStyle";
@@ -14,7 +14,7 @@ export type OakMultilineTextProps = {
   /**
    * Height of component
    */
-  $height: ResponsiveValues<OakCombinedSpacingToken>;
+  $height?: ResponsiveValues<OakCombinedSpacingToken>;
   /**
    * Maximum number of characters
    */
@@ -23,8 +23,8 @@ export type OakMultilineTextProps = {
    * Placeholder text
    */
   placeholder?: string;
-  $width: ResponsiveValues<OakCombinedSpacingToken>;
-  disabled: boolean;
+  $width?: ResponsiveValues<OakCombinedSpacingToken>;
+  disabled?: boolean;
   ariaLabel?: string;
   invalidText?: string;
   value?: string;
@@ -138,19 +138,23 @@ const UnstyledComponent = forwardRef(
           $minWidth={[charCountWidth, null]}
           $pa={[null, "inner-padding-ssx"]}
           $position={["relative", null]}
+          $flexDirection={"row"}
         >
+          <OakIcon
+            iconName="warning"
+            $colorFilter={"icon-error"}
+            $width={"all-spacing-4"}
+            $height={"all-spacing-4"}
+            $right={"all-spacing-1"}
+          ></OakIcon>
           {(invalidText || error) && (
-            <OakSpan
+            <OakP
               $font={"body-4"}
               $color={"text-error"}
               aria-label="invalid text message"
-              $left={["all-spacing-0", null]}
-              $top={["all-spacing-0", null]}
-              $position={["absolute", null]}
             >
-              <OakIcon iconName="warning"></OakIcon>
               {invalidText ? invalidText : error}
-            </OakSpan>
+            </OakP>
           )}
           {showCharCount && (
             <OakSpan
