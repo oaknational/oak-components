@@ -134,6 +134,8 @@ const UnstyledComponent = forwardRef(
               : "border-neutral-lighter"
           }
           onPaste={(e) => handlePaste(e.clipboardData.getData("text"))}
+          $overflowX={"scroll"}
+          $overflowY={"scroll"}
         ></StyledOakTextArea>
         {/* Span is inside OakFlex to stop textarea width changing when charCount changes. */}
         <OakFlex
