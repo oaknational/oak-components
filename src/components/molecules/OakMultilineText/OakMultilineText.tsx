@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { OakFlex } from "@/components/atoms/OakFlex";
 import { OakTextArea, OakTextAreaProps } from "@/components/atoms/OakTextArea";
-import { OakSpan, OakLabel } from "@/components/atoms";
+import { OakSpan, OakLabel, OakIcon } from "@/components/atoms";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { OakCombinedSpacingToken } from "@/styles";
 import { ResponsiveValues } from "@/styles/utils/responsiveStyle";
@@ -128,7 +128,9 @@ const UnstyledComponent = forwardRef(
           $ba={"border-solid-m"}
           $pa={"inner-padding-s"}
           $width={$width}
-          $borderColor={"border-neutral-lighter"}
+          $borderColor={
+            error || invalidText ? "border-error" : "border-neutral-lighter"
+          }
           onPaste={(e) => handlePaste(e.clipboardData.getData("text"))}
         ></StyledOakTextArea>
         {/* Span is inside OakFlex to stop textarea width changing when charCount changes. */}
@@ -146,6 +148,7 @@ const UnstyledComponent = forwardRef(
               $top={["all-spacing-0", null]}
               $position={["absolute", null]}
             >
+              <OakIcon iconName="warning"></OakIcon>
               {invalidText ? invalidText : error}
             </OakSpan>
           )}
