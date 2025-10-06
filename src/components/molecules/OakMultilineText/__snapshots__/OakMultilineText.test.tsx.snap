@@ -94,8 +94,9 @@ exports[`OakMultilineText matches snapshot 1`] = `
   >
     <textarea
       class="c2 c3"
-      id="textarea"
+      id="1"
       maxlength="200"
+      name="textarea"
     />
     <div
       class="c4 c5"

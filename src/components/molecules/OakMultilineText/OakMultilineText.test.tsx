@@ -16,6 +16,8 @@ describe("OakMultilineText", () => {
         placeholder="Start typing answer..."
         disabled={false}
         $width="100%"
+        id={"1"}
+        name="textarea"
       />,
     );
     expect(getByPlaceholderText("Start typing answer...")).toBeInTheDocument();
@@ -28,6 +30,8 @@ describe("OakMultilineText", () => {
         $height="all-spacing-10"
         disabled={false}
         $width="100%"
+        id={"1"}
+        name="textarea"
       ></OakMultilineText>,
     );
     expect(container).toMatchSnapshot();
@@ -40,6 +44,8 @@ describe("OakMultilineText", () => {
         $height="all-spacing-10"
         disabled={false}
         $width="100%"
+        id={"1"}
+        name="textarea"
       ></OakMultilineText>,
     );
     const textArea = getByRole("textbox");
@@ -65,6 +71,8 @@ describe("OakMultilineText", () => {
         disabled={false}
         value="Hello"
         $width="100%"
+        id={"1"}
+        name="textarea"
       />,
     );
     const textArea = getByDisplayValue("Hello");
@@ -82,6 +90,8 @@ describe("OakMultilineText", () => {
         disabled={false}
         onError={onError}
         $width="100%"
+        id={"1"}
+        name="textarea"
       />,
     );
 
@@ -107,6 +117,8 @@ describe("OakMultilineText", () => {
         disabled={false}
         onChange={onChange}
         $width="100%"
+        id={"1"}
+        name="textarea"
       />,
     );
 
@@ -134,6 +146,8 @@ describe("OakMultilineText", () => {
         disabled={false}
         invalidText="Invalid text"
         $width="100%"
+        id={"1"}
+        name="textarea"
       />,
     );
 
@@ -156,6 +170,8 @@ describe("OakMultilineText", () => {
           disabled={false}
           onBlur={onBlur}
           $width="100%"
+          id={"1"}
+          name="textarea"
         />
         <OakP>test</OakP>
       </>,
@@ -184,6 +200,8 @@ describe("OakMultilineText", () => {
           disabled={false}
           onFocus={onFocus}
           $width="100%"
+          id={"1"}
+          name="textarea"
         />
         ,<OakP>test</OakP>
       </>,
@@ -210,6 +228,8 @@ describe("OakMultilineText", () => {
         disabled={false}
         $width="100%"
         value={"Test"}
+        id={"1"}
+        name="textarea"
       ></OakMultilineText>,
     );
 

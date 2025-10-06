@@ -33,6 +33,8 @@ export type OakMultilineTextProps = {
   onBlur?: (value: string) => void;
   onError?: (error: string) => void;
   label?: string;
+  id: string;
+  name: string;
 } & OakTextAreaProps;
 
 type StyledOakTextAreaProps = {
@@ -67,6 +69,8 @@ const UnstyledComponent = forwardRef(
       onError,
       label,
       $width,
+      id,
+      name,
     }: OakMultilineTextProps,
     ref?: React.Ref<HTMLTextAreaElement>,
   ) => {
@@ -106,13 +110,14 @@ const UnstyledComponent = forwardRef(
     return (
       <OakFlex $flexDirection={["column"]} $gap={["space-between-xs", null]}>
         {label && (
-          <OakLabel htmlFor="textarea" $font={"body-2-bold"}>
+          <OakLabel htmlFor={id} $font={"body-2-bold"}>
             {label}
           </OakLabel>
         )}
         <StyledOakTextArea
           ref={ref}
-          id="textarea"
+          id={id}
+          name={name}
           value={value}
           onFocus={(e) => handleFocus(e.target.value)}
           onChange={(e) => handleChange(e.target.value)}
