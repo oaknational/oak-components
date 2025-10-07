@@ -4,6 +4,7 @@ import { StoryObj, Meta } from "@storybook/react";
 import { OakCATQuestion } from "./OakCATQuestion";
 
 import { OakBox, OakP, OakUL } from "@/components/atoms";
+import { OakMultilineText } from "@/components/molecules";
 
 const meta: Meta<typeof OakCATQuestion> = {
   component: OakCATQuestion,
@@ -57,7 +58,6 @@ export const Default: Story = {
           $background={"amber50"}
           $pa="inner-padding-ssx"
           $height={"all-spacing-12"}
-          $width={"all-spacing-20"}
         >
           Dummy Hint Input
         </OakBox>
@@ -70,7 +70,6 @@ export const Default: Story = {
           $background={"amber50"}
           $pa="inner-padding-ssx"
           $height={"all-spacing-12"}
-          $width={"all-spacing-20"}
         >
           Dummy Feedback Input
         </OakBox>
@@ -130,6 +129,49 @@ export const InitiallyOpen: Story = {
         </OakBox>
         <OakP>Character count 0/200</OakP>
       </OakBox>
+    ),
+    answersSection: (
+      <OakBox
+        $background={"mint50"}
+        $pa="inner-padding-s"
+        $height={"all-spacing-20"}
+      >
+        Dummy answers Section
+      </OakBox>
+    ),
+  },
+};
+
+export const WithMultilineText: Story = {
+  render: (args) => <OakCATQuestion {...args} />,
+  args: {
+    questionNumber: 1,
+    status: "neutral",
+    questionTypeInput: (
+      <OakBox $background={"aqua50"} $pa="inner-padding-ssx">
+        Dummy Question Type Input
+      </OakBox>
+    ),
+    questionTextInput: (
+      <OakBox $background={"aqua50"} $pa="inner-padding-s">
+        Dummy Question Text Input
+      </OakBox>
+    ),
+    hintInput: (
+      <OakMultilineText
+        charLimit={100}
+        name="hintInput"
+        id="hintInput"
+        $height={"all-spacing-24"}
+      />
+    ),
+    feedbackInput: (
+      <OakMultilineText
+        charLimit={100}
+        name="feedbackInput"
+        id="feedbackInput"
+        $height={"all-spacing-24"}
+      />
     ),
     answersSection: (
       <OakBox

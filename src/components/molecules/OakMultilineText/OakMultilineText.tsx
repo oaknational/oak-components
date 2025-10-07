@@ -18,10 +18,6 @@ import { ResponsiveValues } from "@/styles/utils/responsiveStyle";
 
 export type OakMultilineTextProps = {
   /**
-   * Height of component
-   */
-  $height?: ResponsiveValues<OakCombinedSpacingToken>;
-  /**
    * Maximum number of characters
    */
   charLimit: number;
@@ -29,7 +25,6 @@ export type OakMultilineTextProps = {
    * Placeholder text
    */
   placeholder?: string;
-  $width?: ResponsiveValues<OakCombinedSpacingToken>;
   disabled?: boolean;
   ariaLabel?: string;
   invalidText?: string;
@@ -41,6 +36,7 @@ export type OakMultilineTextProps = {
   label?: string;
   id: string;
   name: string;
+  innerHeight?: ResponsiveValues<OakCombinedSpacingToken>;
 } & OakTextAreaProps;
 
 type StyledOakTextAreaProps = {
@@ -74,9 +70,9 @@ const UnstyledComponent = forwardRef(
       onBlur,
       onError,
       label,
-      $width,
       id,
       name,
+      innerHeight = ["all-spacing-19", "all-spacing-13", "all-spacing-10"],
     }: OakMultilineTextProps,
     ref?: React.Ref<HTMLTextAreaElement>,
   ) => {
@@ -114,11 +110,7 @@ const UnstyledComponent = forwardRef(
     };
 
     return (
-      <OakFlex
-        $flexDirection={["column"]}
-        $gap={["space-between-xs", null]}
-        $width={$width}
-      >
+      <OakFlex $flexDirection={["column"]} $gap={["space-between-xs", null]}>
         {label && (
           <OakLabel htmlFor={id} $font={"body-2-bold"}>
             {label}
@@ -136,7 +128,7 @@ const UnstyledComponent = forwardRef(
           maxLength={charLimit}
           placeholder={placeholder}
           disabled={disabled}
-          $height={["all-spacing-19", "all-spacing-13", "all-spacing-10"]}
+          $height={innerHeight}
           aria-label={ariaLabel}
           $background={disabled ? "bg-neutral" : "bg-primary"}
           $color={"text-subdued"}
@@ -155,36 +147,38 @@ const UnstyledComponent = forwardRef(
         {/* Span is inside OakFlex to stop textarea width changing when charCount changes. */}
         <OakGrid
           $minWidth={[charCountWidth, null]}
-          $width={$width}
-          $pa={[null, "inner-padding-ssx"]}
+          $pb={["inner-padding-l"]}
           $position={["relative", null]}
         >
           {(invalidText || internalError) && (
-            <>
-              <OakGridArea $colSpan={10} $height={"auto"}>
-                <OakFlex $flexDirection={"row"}>
-                  <OakIcon
-                    iconName="warning"
-                    $colorFilter={"icon-error"}
-                    $width={"all-spacing-4"}
-                    $height={"all-spacing-4"}
-                    $right={"all-spacing-1"}
-                  ></OakIcon>
-                  <OakSpan
-                    $overflowY={"scroll"}
-                    $overflowX={"scroll"}
-                    $font={"body-4"}
-                    $color={"text-error"}
-                    aria-label="invalid text message"
-                  >
-                    {invalidText ? invalidText : internalError}
-                  </OakSpan>
-                </OakFlex>
-              </OakGridArea>
-            </>
+            <OakGridArea $colSpan={10} $position={"relative"}>
+              <OakFlex
+                $flexDirection={"row"}
+                $position={"absolute"}
+                $top={"all-spacing-0"}
+                $left={"all-spacing-0"}
+              >
+                <OakIcon
+                  iconName="warning"
+                  $colorFilter={"icon-error"}
+                  $width={"all-spacing-4"}
+                  $height={"all-spacing-4"}
+                  $right={"all-spacing-1"}
+                ></OakIcon>
+                <OakSpan
+                  $overflowY={"scroll"}
+                  $overflowX={"scroll"}
+                  $font={"body-4"}
+                  $color={"text-error"}
+                  aria-label="invalid text message"
+                >
+                  {invalidText ? invalidText : internalError}
+                </OakSpan>
+              </OakFlex>
+            </OakGridArea>
           )}
 
-          <OakGridArea $colSpan={1}>
+          <OakGridArea $colSpan={2}>
             {showCharCount && (
               <OakSpan
                 aria-label="character count"

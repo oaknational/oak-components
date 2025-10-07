@@ -2,18 +2,13 @@
 
 exports[`OakMultilineText matches snapshot 1`] = `
 .c0 {
-  width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c4 {
   position: relative;
-  width: 100%;
   min-width: 3.5rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c6 {
+  padding-bottom: 1.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -28,7 +23,7 @@ exports[`OakMultilineText matches snapshot 1`] = `
   gap: 0.75rem;
 }
 
-.c7 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -56,11 +51,11 @@ exports[`OakMultilineText matches snapshot 1`] = `
   width: 100%;
 }
 
-.c8 {
+.c7 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  grid-column: span 1;
+  grid-column: span 2;
   grid-row: span undefined;
   grid-row: span 1;
 }
@@ -81,12 +76,6 @@ exports[`OakMultilineText matches snapshot 1`] = `
 
 @media (min-width:750px) {
 
-}
-
-@media (min-width:750px) {
-  .c4 {
-    padding: 0.25rem;
-  }
 }
 
 @media (min-width:750px) {
@@ -119,7 +108,7 @@ exports[`OakMultilineText matches snapshot 1`] = `
       class="c4 c5"
     >
       <div
-        class="c6 c7 c8"
+        class="c0 c6 c7"
       />
     </div>
   </div>
