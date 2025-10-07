@@ -141,29 +141,49 @@ exports[`OakCATQuestion matches snapshot 1`] = `
   align-self: stretch;
 }
 
-.c20 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-self: flex-start;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
-}
-
 .c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1.25rem;
+}
+
+.c23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 .c15 {
   object-fit: contain;
 }
 
-.c23 {
+.c20 {
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  width: 100%;
+  -webkit-column-gap: 1.25rem;
+  column-gap: 1.25rem;
+}
+
+.c22 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  grid-column: span 6;
+  grid-row: span undefined;
+  grid-row: span 1;
+}
+
+.c25 {
   color: #575757;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
@@ -175,7 +195,7 @@ exports[`OakCATQuestion matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c22 {
+.c24 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -296,32 +316,46 @@ exports[`OakCATQuestion matches snapshot 1`] = `
                 class="c19 c20"
               >
                 <div
-                  class="c5 c21"
+                  class="c5 c21 c22"
                 >
-                  <label
-                    class="c22"
+                  <div
+                    class="c5 c23"
                   >
-                    <span
-                      class="c23"
+                    <label
+                      class="c24"
+                      for="hintInputId"
                     >
-                      Hint
-                    </span>
+                      <span
+                        class="c25"
+                      >
+                        Hint
+                      </span>
+                    </label>
                     <div>
                       Hint Input
                     </div>
-                  </label>
-                  <label
-                    class="c22"
+                  </div>
+                </div>
+                <div
+                  class="c5 c21 c22"
+                >
+                  <div
+                    class="c5 c23"
                   >
-                    <span
-                      class="c23"
+                    <label
+                      class="c24"
+                      for="feedbackInputId"
                     >
-                      Feedback
-                    </span>
+                      <span
+                        class="c25"
+                      >
+                        Feedback
+                      </span>
+                    </label>
                     <div>
                       Feedback Input
                     </div>
-                  </label>
+                  </div>
                 </div>
               </div>
             </div>

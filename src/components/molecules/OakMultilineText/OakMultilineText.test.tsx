@@ -15,6 +15,9 @@ describe("OakMultilineText", () => {
         $height="all-spacing-10"
         placeholder="Start typing answer..."
         disabled={false}
+        $width="100%"
+        id={"1"}
+        name="textarea"
       />,
     );
     expect(getByPlaceholderText("Start typing answer...")).toBeInTheDocument();
@@ -26,6 +29,9 @@ describe("OakMultilineText", () => {
         charLimit={200}
         $height="all-spacing-10"
         disabled={false}
+        $width="100%"
+        id={"1"}
+        name="textarea"
       ></OakMultilineText>,
     );
     expect(container).toMatchSnapshot();
@@ -37,6 +43,9 @@ describe("OakMultilineText", () => {
         charLimit={200}
         $height="all-spacing-10"
         disabled={false}
+        $width="100%"
+        id={"1"}
+        name="textarea"
       ></OakMultilineText>,
     );
     const textArea = getByRole("textbox");
@@ -61,6 +70,9 @@ describe("OakMultilineText", () => {
         $height="all-spacing-10"
         disabled={false}
         value="Hello"
+        $width="100%"
+        id={"1"}
+        name="textarea"
       />,
     );
     const textArea = getByDisplayValue("Hello");
@@ -77,6 +89,9 @@ describe("OakMultilineText", () => {
         $height="all-spacing-10"
         disabled={false}
         onError={onError}
+        $width="100%"
+        id={"1"}
+        name="textarea"
       />,
     );
 
@@ -101,6 +116,9 @@ describe("OakMultilineText", () => {
         $height="all-spacing-10"
         disabled={false}
         onChange={onChange}
+        $width="100%"
+        id={"1"}
+        name="textarea"
       />,
     );
 
@@ -126,8 +144,10 @@ describe("OakMultilineText", () => {
         charLimit={100}
         $height="all-spacing-10"
         disabled={false}
-        invalid={true}
         invalidText="Invalid text"
+        $width="100%"
+        id={"1"}
+        name="textarea"
       />,
     );
 
@@ -149,6 +169,9 @@ describe("OakMultilineText", () => {
           $height="all-spacing-10"
           disabled={false}
           onBlur={onBlur}
+          $width="100%"
+          id={"1"}
+          name="textarea"
         />
         <OakP>test</OakP>
       </>,
@@ -176,6 +199,9 @@ describe("OakMultilineText", () => {
           $height="all-spacing-10"
           disabled={false}
           onFocus={onFocus}
+          $width="100%"
+          id={"1"}
+          name="textarea"
         />
         ,<OakP>test</OakP>
       </>,
@@ -191,5 +217,29 @@ describe("OakMultilineText", () => {
     expect(textArea).toHaveFocus();
 
     expect(onFocus).toHaveBeenCalledTimes(1);
+  });
+
+  it("displays correct character count when text area value is already set", async () => {
+    const user = userEvent.setup();
+    const { getByRole, getByLabelText } = renderWithTheme(
+      <OakMultilineText
+        charLimit={100}
+        $height="all-spacing-10"
+        disabled={false}
+        $width="100%"
+        value={"Test"}
+        id={"1"}
+        name="textarea"
+      ></OakMultilineText>,
+    );
+
+    const textarea = getByRole("textbox");
+
+    await user.click(textarea);
+    const charCount = getByLabelText("character count");
+    expect(textarea).toHaveFocus();
+    expect(charCount).toBeInTheDocument();
+    expect(textarea).toHaveTextContent("Test");
+    expect(charCount).toHaveTextContent("4/100");
   });
 });

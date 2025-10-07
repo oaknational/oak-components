@@ -3,6 +3,8 @@ import { StoryObj, Meta } from "@storybook/react";
 
 import { OakMultilineText } from "./OakMultilineText";
 
+import { OakFlex } from "@/components/atoms";
+
 const meta: Meta<typeof OakMultilineText> = {
   title: "Components/molecules/OakMultilineText",
   component: OakMultilineText,
@@ -11,18 +13,12 @@ const meta: Meta<typeof OakMultilineText> = {
     charLimit: { control: "number" },
     placeholder: { control: "text" },
     disabled: { control: "boolean" },
-    invalid: { control: "boolean" },
     invalidText: { control: "text" },
+    label: { control: "text" },
   },
   parameters: {
     controls: {
-      include: [
-        "charLimit",
-        "placeholder",
-        "disabled",
-        "invalid",
-        "invalidText",
-      ],
+      include: ["charLimit", "placeholder", "disabled", "invalidText", "label"],
     },
   },
 };
@@ -37,6 +33,29 @@ export const Default: Story = {
     placeholder: "Start typing answer...",
     charLimit: 200,
     disabled: false,
-    invalid: false,
+  },
+};
+
+export const ChangeHeight: Story = {
+  render: (args) => <OakMultilineText {...args} />,
+  args: {
+    placeholder: "Start typing answer...",
+    charLimit: 200,
+    disabled: false,
+    innerHeight: "all-spacing-20",
+  },
+};
+export const Errors: Story = {
+  render: (args) => (
+    <>
+      <OakMultilineText {...args} />
+      <OakFlex>This is some text.</OakFlex>
+    </>
+  ),
+  args: {
+    placeholder: "Start typing answer...",
+    charLimit: 200,
+    disabled: false,
+    invalidText: "This is an error.",
   },
 };
