@@ -97,7 +97,7 @@ const UnstyledComponent = forwardRef(
       }
 
       if (output !== input) {
-        onError && onError("Forbidden characters in input");
+        onError?.("Forbidden characters in input");
         setInternalError(
           "Carriage returns or leading/trailing spaces have been removed",
         );
@@ -107,17 +107,16 @@ const UnstyledComponent = forwardRef(
     };
 
     const handleFocus = (e: React.FocusEvent<HTMLTextAreaElement>) => {
-      onFocus && onFocus(e);
+      onFocus?.(e);
       setShowCharCount(true);
       setCharCount(e.target.value.length);
     };
 
     const handleBlur = (e: React.FocusEvent<HTMLTextAreaElement>) => {
-      onBlur && onBlur(e);
-      onTextAreaChange &&
-        onTextAreaChange(
-          sanitizeInput(e.target.value, !allowLeadingTrailingSpaces),
-        );
+      onBlur?.(e);
+      onTextAreaChange?.(
+        sanitizeInput(e.target.value, !allowLeadingTrailingSpaces),
+      );
       setShowCharCount(false);
     };
 
@@ -133,7 +132,7 @@ const UnstyledComponent = forwardRef(
 
     const handlePaste = (pasteValue: string) => {
       if (pasteValue.length > charLimit - charCount) {
-        onError && onError("Character limit exceeded");
+        onError?.("Character limit exceeded");
         setInternalError(
           "Character limit exceeded: input has been trimmed to " +
             charLimit +
