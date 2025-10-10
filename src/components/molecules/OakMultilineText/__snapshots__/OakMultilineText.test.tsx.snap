@@ -45,6 +45,7 @@ exports[`OakMultilineText matches snapshot 1`] = `
   border-radius: 0.375rem;
   padding: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
+  white-space: wrap;
   overflow-y: scroll;
   color: #575757;
   background: #ffffff;
@@ -63,10 +64,6 @@ exports[`OakMultilineText matches snapshot 1`] = `
   grid-column: span 2;
   grid-row: span undefined;
   grid-row: span 1;
-}
-
-.c3 {
-  white-space: nowrap;
 }
 
 .c3:focus-visible {
@@ -92,6 +89,18 @@ exports[`OakMultilineText matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
+  .c2 {
+    white-space: wrap;
+  }
+}
+
+@media (min-width:1280px) {
+  .c2 {
+    white-space: nowrap;
+  }
+}
+
+@media (min-width:750px) {
 
 }
 
@@ -102,7 +111,9 @@ exports[`OakMultilineText matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-
+  .c2 {
+    overflow-y: scroll;
+  }
 }
 
 @media (min-width:1280px) {

@@ -50,10 +50,6 @@ const StyledOakTextArea = styled(OakTextArea)<StyledOakTextAreaProps>`
     background: ${parseColor("bg-neutral")};
     border-color: ${parseColor("border-neutral")};
   }
-
-  white-space: ${(
-    props, // this replicates a text input like behaviour where text remains on a single line
-  ) => (props.$overflowY !== "scroll" ? "nowrap" : "wrap")};
 `;
 
 const UnstyledComponent = forwardRef(
@@ -74,7 +70,8 @@ const UnstyledComponent = forwardRef(
       name,
       $height = ["all-spacing-19", "all-spacing-13", "all-spacing-10"],
       $overflowX = [null, null, "scroll"],
-      $overflowY = ["scroll", null, null],
+      $overflowY = ["scroll", "scroll", null],
+      $whiteSpace = ["wrap", "wrap", "nowrap"],
       allowCarriageReturn = false,
       allowLeadingTrailingSpaces = false,
       ...textAreaProps
@@ -186,6 +183,7 @@ const UnstyledComponent = forwardRef(
           $height={$height}
           $overflowX={$overflowX}
           $overflowY={$overflowY}
+          $whiteSpace={$whiteSpace}
           $width={"100%"}
           {...textAreaProps}
         ></StyledOakTextArea>
