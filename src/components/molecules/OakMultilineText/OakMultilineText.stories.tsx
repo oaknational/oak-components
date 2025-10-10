@@ -79,15 +79,18 @@ export const Errors: Story = {
 
 export const WithManagedState: Story = {
   render: (args) => {
-    const [value, setValue] = useState("");
+    const WithManagedState: React.FC = () => {
+      const [value, setValue] = useState("");
 
-    return (
-      <OakMultilineText
-        {...args}
-        value={value}
-        onTextAreaChange={(newValue) => setValue(newValue)}
-      />
-    );
+      return (
+        <OakMultilineText
+          {...args}
+          value={value}
+          onTextAreaChange={(newValue) => setValue(newValue)}
+        />
+      );
+    };
+    return <WithManagedState />;
   },
   args: {
     placeholder: "Start typing answer...",
