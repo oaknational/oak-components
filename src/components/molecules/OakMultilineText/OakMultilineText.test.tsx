@@ -108,14 +108,14 @@ describe("OakMultilineText", () => {
 
   it("counts characters correctly when text is edited", async () => {
     const user = userEvent.setup();
-    const onChange = jest.fn();
+    const onTextAreaChange = jest.fn();
 
     const { getByRole, getByLabelText } = renderWithTheme(
       <OakMultilineText
         charLimit={100}
         $height="all-spacing-10"
         disabled={false}
-        onChange={onChange}
+        onTextAreaChange={onTextAreaChange}
         $width="100%"
         id={"1"}
         name="textarea"
@@ -135,7 +135,7 @@ describe("OakMultilineText", () => {
     await user.click(textArea);
     expect(textArea).toHaveFocus();
     expect(charCount).toHaveTextContent("12/100");
-    expect(onChange).toHaveBeenCalledTimes(14);
+    expect(onTextAreaChange).toHaveBeenCalledTimes(14);
   });
 
   it("shows invalid text if invalid is true and invalid text has been set", () => {
@@ -240,5 +240,88 @@ describe("OakMultilineText", () => {
     expect(charCount).toBeInTheDocument();
     expect(textarea).toHaveTextContent("Test");
     expect(charCount).toHaveTextContent("4/100");
+  });
+
+  it.each([
+    [true, "test\ntest 2"],
+    [false, "testtest 2"],
+  ])(
+    "allows carriage return only when true",
+    async (allowCarriageReturn, expectedValue) => {
+      const user = userEvent.setup();
+      const { getByRole } = renderWithTheme(
+        <OakMultilineText
+          charLimit={200}
+          data-testid="test"
+          disabled={false}
+          placeholder="Start typing answer..."
+          allowCarriageReturn={allowCarriageReturn}
+        />,
+      );
+      const textArea = getByRole("textbox");
+      expect(textArea).toBeInTheDocument();
+
+      await user.click(textArea);
+      await user.type(textArea, "test");
+
+      expect(textArea).toHaveValue("test");
+
+      await user.type(textArea, "{Enter}");
+      await user.type(textArea, "test 2");
+      expect(textArea).toHaveValue(expectedValue);
+    },
+  );
+
+  it("trims leading and trailing whitespace on blur when allowLeadingTrailingSpaces is false", async () => {
+    const user = userEvent.setup();
+    const onError = jest.fn();
+    const onTextAreaChange = jest.fn();
+    const { getByRole } = renderWithTheme(
+      <OakMultilineText
+        charLimit={200}
+        data-testid="test"
+        disabled={false}
+        onError={onError}
+        onTextAreaChange={onTextAreaChange}
+        placeholder="Start typing answer..."
+        allowLeadingTrailingSpaces={false}
+      />,
+    );
+    const textArea = getByRole("textbox");
+    expect(textArea).toBeInTheDocument();
+
+    await user.click(textArea);
+    await user.type(textArea, "   test   ");
+
+    expect(onTextAreaChange).toHaveBeenLastCalledWith("   test   ");
+    await user.click(document.body); // blur
+
+    expect(onTextAreaChange).toHaveBeenLastCalledWith("test");
+    expect(onError).toHaveBeenCalledWith("Forbidden characters in input");
+  });
+
+  it("removes carriage returns on pasted text", async () => {
+    const user = userEvent.setup();
+    const onError = jest.fn();
+    const onTextAreaChange = jest.fn();
+    const { getByRole } = renderWithTheme(
+      <OakMultilineText
+        charLimit={200}
+        data-testid="test"
+        disabled={false}
+        onError={onError}
+        onTextAreaChange={onTextAreaChange}
+        placeholder="Start typing answer..."
+        allowLeadingTrailingSpaces={true}
+      />,
+    );
+    const textArea = getByRole("textbox");
+    expect(textArea).toBeInTheDocument();
+
+    await user.click(textArea);
+    await user.paste("test\ntest 2");
+
+    expect(onTextAreaChange).toHaveBeenLastCalledWith("test test 2");
+    expect(onError).toHaveBeenCalledWith("Forbidden characters in input");
   });
 });

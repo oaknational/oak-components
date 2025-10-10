@@ -11,10 +11,6 @@ import {
   OakGridArea,
 } from "@/components/atoms";
 import { parseColor } from "@/styles/helpers/parseColor";
-import { OakCombinedSpacingToken } from "@/styles";
-import { ResponsiveValues } from "@/styles/utils/responsiveStyle";
-
-// For example you could restyle the OakFlex component by adding the styles to the css template literal below
 
 export type OakMultilineTextProps = {
   /**
@@ -22,19 +18,22 @@ export type OakMultilineTextProps = {
    */
   charLimit: number;
   /**
-   * Placeholder text
+   * Whether to allow carriage return (new line) when the Enter key is pressed and in clipboard pastes.
    */
-  placeholder?: string;
-  disabled?: boolean;
+  allowCarriageReturn?: boolean;
+  allowLeadingTrailingSpaces?: boolean;
   ariaLabel?: string;
+  /**
+   * Display an error
+   */
   invalidText?: string;
-  value?: string;
-  onError?: (error: string) => void;
   label?: string;
-  id: string;
-  name: string;
-  innerHeight?: ResponsiveValues<OakCombinedSpacingToken>;
-} & OakTextAreaProps;
+  /**
+   * Callback for internally handled errors (e.g. character limit exceeded)
+   */
+  onError?: (error: string) => void;
+  onTextAreaChange?: (input: string) => void;
+} & Omit<OakTextAreaProps, "onChange" | "onError">;
 
 type StyledOakTextAreaProps = {
   isError?: boolean;
@@ -51,6 +50,10 @@ const StyledOakTextArea = styled(OakTextArea)<StyledOakTextAreaProps>`
     background: ${parseColor("bg-neutral")};
     border-color: ${parseColor("border-neutral")};
   }
+
+  white-space: ${(
+    props, // this replicates a text input like behaviour where text remains on a single line
+  ) => (props.$overflowY !== "scroll" ? "nowrap" : "wrap")};
 `;
 
 const UnstyledComponent = forwardRef(
@@ -62,14 +65,19 @@ const UnstyledComponent = forwardRef(
       invalidText,
       ariaLabel,
       value,
-      onChange,
+      onTextAreaChange,
       onFocus,
       onBlur,
       onError,
       label,
       id,
       name,
-      innerHeight = ["all-spacing-19", "all-spacing-13", "all-spacing-10"],
+      $height = ["all-spacing-19", "all-spacing-13", "all-spacing-10"],
+      $overflowX = [null, null, "scroll"],
+      $overflowY = ["scroll", null, null],
+      allowCarriageReturn = false,
+      allowLeadingTrailingSpaces = false,
+      ...textAreaProps
     }: OakMultilineTextProps,
     ref?: React.Ref<HTMLTextAreaElement>,
   ) => {
@@ -79,6 +87,25 @@ const UnstyledComponent = forwardRef(
 
     const charCountWidth = charLimit > 99 ? "all-spacing-10" : "all-spacing-9";
 
+    const sanitizeInput = (input: string, trim: boolean = false) => {
+      let output = input;
+      if (trim) {
+        output = output.trim();
+      }
+      if (!allowCarriageReturn) {
+        output = output.replace(/[\r\n]+/gm, " ");
+      }
+
+      if (output !== input) {
+        onError && onError("Forbidden characters in input");
+        setInternalError(
+          "Carriage returns or leading/trailing spaces have been removed",
+        );
+      }
+
+      return output;
+    };
+
     const handleFocus = (e: React.FocusEvent<HTMLTextAreaElement>) => {
       onFocus && onFocus(e);
       setShowCharCount(true);
@@ -87,12 +114,17 @@ const UnstyledComponent = forwardRef(
 
     const handleBlur = (e: React.FocusEvent<HTMLTextAreaElement>) => {
       onBlur && onBlur(e);
+      onTextAreaChange &&
+        onTextAreaChange(
+          sanitizeInput(e.target.value, !allowLeadingTrailingSpaces),
+        );
       setShowCharCount(false);
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-      onChange && onChange(e);
-      const charCount = e.target.value.length;
+      const sanitizedValue = sanitizeInput(e.target.value);
+      onTextAreaChange && onTextAreaChange(sanitizedValue);
+      const charCount = sanitizedValue.length;
       setCharCount(charCount);
       if (charCount <= charLimit) {
         setInternalError("");
@@ -102,7 +134,18 @@ const UnstyledComponent = forwardRef(
     const handlePaste = (pasteValue: string) => {
       if (pasteValue.length > charLimit - charCount) {
         onError && onError("Character limit exceeded");
-        setInternalError("Please enter " + charLimit + " or fewer characters.");
+        setInternalError(
+          "Character limit exceeded: input has been trimmed to " +
+            charLimit +
+            " characters.",
+        );
+        return;
+      }
+    };
+
+    const onEnterPressed = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+      if (e.key === "Enter" && !allowCarriageReturn) {
+        e.preventDefault();
       }
     };
 
@@ -118,13 +161,13 @@ const UnstyledComponent = forwardRef(
           id={id}
           name={name}
           value={value}
+          onKeyDown={(e) => onEnterPressed(e)}
           onFocus={handleFocus}
           onChange={handleChange}
           onBlur={handleBlur}
           maxLength={charLimit}
           placeholder={placeholder}
           disabled={disabled}
-          $height={innerHeight}
           aria-label={ariaLabel}
           $background={disabled ? "bg-neutral" : "bg-primary"}
           $color={"text-subdued"}
@@ -137,8 +180,10 @@ const UnstyledComponent = forwardRef(
               : "border-neutral-lighter"
           }
           onPaste={(e) => handlePaste(e.clipboardData.getData("text"))}
-          $overflowX={"scroll"}
-          $overflowY={"scroll"}
+          $height={$height}
+          $overflowX={$overflowX}
+          $overflowY={$overflowY}
+          {...textAreaProps}
         ></StyledOakTextArea>
         {/* Span is inside OakFlex to stop textarea width changing when charCount changes. */}
         <OakGrid
