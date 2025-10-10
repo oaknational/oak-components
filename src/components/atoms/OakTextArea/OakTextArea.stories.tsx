@@ -7,13 +7,12 @@ const meta: Meta<typeof OakTextArea> = {
   component: OakTextArea,
   tags: ["autodocs"],
   argTypes: {
-    allowCarriageReturn: { control: "boolean" },
     placeholder: { control: "text" },
     disabled: { control: "boolean" },
   },
   parameters: {
     controls: {
-      include: ["allowCarriageReturn", "placeholder", "disabled"],
+      include: ["placeholder", "disabled"],
     },
   },
 };
