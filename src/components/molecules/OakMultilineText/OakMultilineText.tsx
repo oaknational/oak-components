@@ -29,9 +29,6 @@ export type OakMultilineTextProps = {
   ariaLabel?: string;
   invalidText?: string;
   value?: string;
-  onChange?: (value: string) => void;
-  onFocus?: (value: string) => void;
-  onBlur?: (value: string) => void;
   onError?: (error: string) => void;
   label?: string;
   id: string;
@@ -82,20 +79,20 @@ const UnstyledComponent = forwardRef(
 
     const charCountWidth = charLimit > 99 ? "all-spacing-10" : "all-spacing-9";
 
-    const handleFocus = (value: string) => {
-      onFocus && onFocus(value);
+    const handleFocus = (e: React.FocusEvent<HTMLTextAreaElement>) => {
+      onFocus && onFocus(e);
       setShowCharCount(true);
-      setCharCount(value.length);
+      setCharCount(e.target.value.length);
     };
 
-    const handleBlur = (value: string) => {
-      onBlur && onBlur(value);
+    const handleBlur = (e: React.FocusEvent<HTMLTextAreaElement>) => {
+      onBlur && onBlur(e);
       setShowCharCount(false);
     };
 
-    const handleChange = (value: string) => {
-      onChange && onChange(value);
-      const charCount = value.length;
+    const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+      onChange && onChange(e);
+      const charCount = e.target.value.length;
       setCharCount(charCount);
       if (charCount <= charLimit) {
         setInternalError("");
@@ -121,10 +118,9 @@ const UnstyledComponent = forwardRef(
           id={id}
           name={name}
           value={value}
-          onFocus={(e) => handleFocus(e.target.value)}
-          onChange={(e) => handleChange(e.target.value)}
-          onBlur={(e) => handleBlur(e.target.value)}
-          onError={(e) => onError && onError(e.currentTarget.value)}
+          onFocus={handleFocus}
+          onChange={handleChange}
+          onBlur={handleBlur}
           maxLength={charLimit}
           placeholder={placeholder}
           disabled={disabled}

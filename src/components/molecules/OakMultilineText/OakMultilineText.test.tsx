@@ -185,7 +185,6 @@ describe("OakMultilineText", () => {
     await user.click(paragraph);
 
     expect(onBlur).toHaveBeenCalled();
-    expect(onBlur).toHaveBeenCalledWith("text");
   });
 
   it("calls onFocus when focused", async () => {
