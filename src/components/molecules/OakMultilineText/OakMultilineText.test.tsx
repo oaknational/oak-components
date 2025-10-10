@@ -15,7 +15,6 @@ describe("OakMultilineText", () => {
         $height="all-spacing-10"
         placeholder="Start typing answer..."
         disabled={false}
-        $width="100%"
         id={"1"}
         name="textarea"
       />,
@@ -29,7 +28,6 @@ describe("OakMultilineText", () => {
         charLimit={200}
         $height="all-spacing-10"
         disabled={false}
-        $width="100%"
         id={"1"}
         name="textarea"
       ></OakMultilineText>,
@@ -43,7 +41,6 @@ describe("OakMultilineText", () => {
         charLimit={200}
         $height="all-spacing-10"
         disabled={false}
-        $width="100%"
         id={"1"}
         name="textarea"
       ></OakMultilineText>,
@@ -70,7 +67,6 @@ describe("OakMultilineText", () => {
         $height="all-spacing-10"
         disabled={false}
         value="Hello"
-        $width="100%"
         id={"1"}
         name="textarea"
       />,
@@ -89,7 +85,6 @@ describe("OakMultilineText", () => {
         $height="all-spacing-10"
         disabled={false}
         onError={onError}
-        $width="100%"
         id={"1"}
         name="textarea"
       />,
@@ -116,7 +111,6 @@ describe("OakMultilineText", () => {
         $height="all-spacing-10"
         disabled={false}
         onTextAreaChange={onTextAreaChange}
-        $width="100%"
         id={"1"}
         name="textarea"
       />,
@@ -145,7 +139,6 @@ describe("OakMultilineText", () => {
         $height="all-spacing-10"
         disabled={false}
         invalidText="Invalid text"
-        $width="100%"
         id={"1"}
         name="textarea"
       />,
@@ -169,7 +162,6 @@ describe("OakMultilineText", () => {
           $height="all-spacing-10"
           disabled={false}
           onBlur={onBlur}
-          $width="100%"
           id={"1"}
           name="textarea"
         />
@@ -198,7 +190,6 @@ describe("OakMultilineText", () => {
           $height="all-spacing-10"
           disabled={false}
           onFocus={onFocus}
-          $width="100%"
           id={"1"}
           name="textarea"
         />
@@ -225,7 +216,6 @@ describe("OakMultilineText", () => {
         charLimit={100}
         $height="all-spacing-10"
         disabled={false}
-        $width="100%"
         value={"Test"}
         id={"1"}
         name="textarea"

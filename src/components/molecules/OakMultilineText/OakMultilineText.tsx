@@ -33,7 +33,7 @@ export type OakMultilineTextProps = {
    */
   onError?: (error: string) => void;
   onTextAreaChange?: (input: string) => void;
-} & Omit<OakTextAreaProps, "onChange" | "onError">;
+} & Omit<OakTextAreaProps, "onChange" | "onError" | "$width">;
 
 type StyledOakTextAreaProps = {
   isError?: boolean;
@@ -149,7 +149,11 @@ const UnstyledComponent = forwardRef(
     };
 
     return (
-      <OakFlex $flexDirection={["column"]} $gap={["space-between-xs", null]}>
+      <OakFlex
+        $flexDirection={["column"]}
+        $gap={["space-between-xs", null]}
+        $width={"100%"}
+      >
         {label && (
           <OakLabel htmlFor={id} $font={"body-2-bold"}>
             {label}
@@ -182,6 +186,7 @@ const UnstyledComponent = forwardRef(
           $height={$height}
           $overflowX={$overflowX}
           $overflowY={$overflowY}
+          $width={"100%"}
           {...textAreaProps}
         ></StyledOakTextArea>
         {/* Span is inside OakFlex to stop textarea width changing when charCount changes. */}
