@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { StoryObj, Meta } from "@storybook/react";
 
 import { OakMultilineText } from "./OakMultilineText";
@@ -12,6 +12,7 @@ const meta: Meta<typeof OakMultilineText> = {
   tags: ["autodocs"],
   argTypes: {
     charLimit: { control: "number" },
+    initialValue: { control: "text" },
     placeholder: { control: "text" },
     disabled: { control: "boolean" },
     invalidText: { control: "text" },
@@ -27,6 +28,7 @@ const meta: Meta<typeof OakMultilineText> = {
       include: [
         "charLimit",
         "placeholder",
+        "initialValue",
         "disabled",
         "invalidText",
         "label",
@@ -53,6 +55,16 @@ export const Default: Story = {
   },
 };
 
+export const InitialValue: Story = {
+  render: (args) => <OakMultilineText {...args} />,
+  args: {
+    placeholder: "Start typing answer...",
+    charLimit: 200,
+    disabled: false,
+    initialValue: "This is the initial value.",
+  },
+};
+
 export const ChangeHeight: Story = {
   render: (args) => <OakMultilineText {...args} />,
   args: {
@@ -74,27 +86,5 @@ export const Errors: Story = {
     charLimit: 200,
     disabled: false,
     invalidText: "This is an error.",
-  },
-};
-
-export const WithManagedState: Story = {
-  render: (args) => {
-    const WithManagedState: React.FC = () => {
-      const [value, setValue] = useState("");
-
-      return (
-        <OakMultilineText
-          {...args}
-          value={value}
-          onTextAreaChange={(newValue) => setValue(newValue)}
-        />
-      );
-    };
-    return <WithManagedState />;
-  },
-  args: {
-    placeholder: "Start typing answer...",
-    charLimit: 1000,
-    disabled: false,
   },
 };

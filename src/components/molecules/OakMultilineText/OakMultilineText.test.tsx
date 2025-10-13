@@ -60,19 +60,26 @@ describe("OakMultilineText", () => {
     expect(getByLabelText("character count")).toBeInTheDocument();
   });
 
-  it("updates text when value changed", async () => {
+  it("calls onTextAreaChange when text is changed", async () => {
+    const user = userEvent.setup();
+    const onTextAreaChange = jest.fn();
     const { getByDisplayValue } = renderWithTheme(
       <OakMultilineText
         charLimit={200}
         $height="all-spacing-10"
         disabled={false}
-        value="Hello"
         id={"1"}
         name="textarea"
+        initialValue="Hello"
       />,
     );
     const textArea = getByDisplayValue("Hello");
     expect(textArea).toBeInTheDocument();
+    await user.click(textArea);
+    expect(textArea).toHaveFocus();
+    await user.type(textArea, ", world!");
+    expect(textArea).toHaveValue("Hello, world!");
+    expect(onTextAreaChange).not.toHaveBeenCalled();
   });
 
   it("trims text when pasted text length exceeds character limit", async () => {
@@ -152,16 +159,16 @@ describe("OakMultilineText", () => {
     expect(invalidText).toHaveTextContent("Invalid text");
   });
 
-  it("calls onBlur when blurred", async () => {
+  it("calls onTextAreaBlur when blurred", async () => {
     const user = userEvent.setup();
-    const onBlur = jest.fn();
+    const onTextAreaBlur = jest.fn();
     const { getByRole, getByText } = renderWithTheme(
       <>
         <OakMultilineText
           charLimit={100}
           $height="all-spacing-10"
           disabled={false}
-          onBlur={onBlur}
+          onTextAreaBlur={onTextAreaBlur}
           id={"1"}
           name="textarea"
         />
@@ -176,7 +183,7 @@ describe("OakMultilineText", () => {
     await user.type(textArea, "text");
     await user.click(paragraph);
 
-    expect(onBlur).toHaveBeenCalled();
+    expect(onTextAreaBlur).toHaveBeenCalledWith("text");
   });
 
   it("calls onFocus when focused", async () => {
@@ -216,7 +223,7 @@ describe("OakMultilineText", () => {
         charLimit={100}
         $height="all-spacing-10"
         disabled={false}
-        value={"Test"}
+        initialValue="Test"
         id={"1"}
         name="textarea"
       ></OakMultilineText>,
@@ -265,6 +272,7 @@ describe("OakMultilineText", () => {
   it("trims leading and trailing whitespace on blur when allowLeadingTrailingSpaces is false", async () => {
     const user = userEvent.setup();
     const onError = jest.fn();
+    const onTextAreaBlur = jest.fn();
     const onTextAreaChange = jest.fn();
     const { getByRole } = renderWithTheme(
       <OakMultilineText
@@ -272,6 +280,7 @@ describe("OakMultilineText", () => {
         data-testid="test"
         disabled={false}
         onError={onError}
+        onTextAreaBlur={onTextAreaBlur}
         onTextAreaChange={onTextAreaChange}
         placeholder="Start typing answer..."
         allowLeadingTrailingSpaces={false}
@@ -286,8 +295,11 @@ describe("OakMultilineText", () => {
     expect(onTextAreaChange).toHaveBeenLastCalledWith("   test   ");
     await user.click(document.body); // blur
 
-    expect(onTextAreaChange).toHaveBeenLastCalledWith("test");
-    expect(onError).toHaveBeenCalledWith("Forbidden characters in input");
+    expect(onTextAreaBlur).toHaveBeenLastCalledWith("test");
+    expect(onError).toHaveBeenCalledTimes(1);
+    expect(onError).toHaveBeenCalledWith(
+      "Leading or trailing spaces have been removed",
+    );
   });
 
   it("removes carriage returns on pasted text", async () => {
@@ -312,6 +324,6 @@ describe("OakMultilineText", () => {
     await user.paste("test\ntest 2");
 
     expect(onTextAreaChange).toHaveBeenLastCalledWith("test test 2");
-    expect(onError).toHaveBeenCalledWith("Forbidden characters in input");
+    expect(onError).toHaveBeenCalledWith("Carriage returns have been removed");
   });
 });
