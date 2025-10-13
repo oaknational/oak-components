@@ -223,7 +223,6 @@ const UnstyledComponent = forwardRef(
                   $colorFilter={"icon-error"}
                   $width={"all-spacing-4"}
                   $height={"all-spacing-4"}
-                  $right={"all-spacing-1"}
                 ></OakIcon>
                 <OakSpan
                   $overflowY={"scroll"}
@@ -231,6 +230,7 @@ const UnstyledComponent = forwardRef(
                   $font={"body-4"}
                   $color={"text-error"}
                   id="multiline-text-invalid-error"
+                  $pl={"inner-padding-ssx"}
                 >
                   {invalidText ? invalidText : internalErrors.join(". ")}
                 </OakSpan>
