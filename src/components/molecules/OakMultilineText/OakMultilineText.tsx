@@ -47,7 +47,6 @@ const StyledOakTextArea = styled(OakTextArea)<StyledOakTextAreaProps>`
   &:focus-visible {
     border-color: ${(props) =>
       props.isError ? parseColor("red") : parseColor("border-primary")};
-    color: ${parseColor("text-primary")};
   }
 
   &:hover {
@@ -131,7 +130,7 @@ const UnstyledComponent = forwardRef(
           $height={innerHeight}
           aria-label={ariaLabel}
           $background={disabled ? "bg-neutral" : "bg-primary"}
-          $color={"text-subdued"}
+          $color={charCount === 0 ? "text-subdued" : "text-primary"}
           $borderRadius={"border-radius-m"}
           $ba={"border-solid-m"}
           $pa={"inner-padding-s"}
