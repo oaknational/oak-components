@@ -33,6 +33,8 @@ export const Default: Story = {
     placeholder: "Start typing answer...",
     charLimit: 200,
     disabled: false,
+    id: "default",
+    label: "Default",
   },
 };
 
@@ -43,6 +45,8 @@ export const ChangeHeight: Story = {
     charLimit: 200,
     disabled: false,
     innerHeight: "all-spacing-20",
+    id: "change-height",
+    label: "Change Height",
   },
 };
 export const Errors: Story = {
@@ -57,5 +61,7 @@ export const Errors: Story = {
     charLimit: 200,
     disabled: false,
     invalidText: "This is an error.",
+    id: "errors",
+    label: "Errors",
   },
 };
