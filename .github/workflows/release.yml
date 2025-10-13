@@ -35,7 +35,6 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.RELEASE_GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           HUSKY: 0
           CI: true
         run: npx semantic-release
