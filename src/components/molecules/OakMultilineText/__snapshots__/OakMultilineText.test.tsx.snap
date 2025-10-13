@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+// Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakMultilineText matches snapshot 1`] = `
 .c0 {
@@ -62,7 +62,6 @@ exports[`OakMultilineText matches snapshot 1`] = `
 
 .c3:focus-visible {
   border-color: #222222;
-  color: #222222;
 }
 
 .c3:hover {
