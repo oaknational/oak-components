@@ -53,7 +53,6 @@ export const Default: Story = {
     charLimit: 200,
     disabled: false,
     id: "default",
-    label: "Default",
   },
 };
 
