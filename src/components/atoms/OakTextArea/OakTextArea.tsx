@@ -25,12 +25,7 @@ export type OakTextAreaProps = Omit<
   >,
   "ref"
 > &
-  StyledTextAreaProps & {
-    /**
-     * Whether to allow carriage return (new line) when the Enter key is pressed.
-     */
-    allowCarriageReturn?: boolean;
-  };
+  StyledTextAreaProps;
 
 type StyledTextAreaProps = SizeStyleProps &
   BorderStyleProps &
@@ -52,28 +47,13 @@ const textAreaCss = css<StyledTextAreaProps>`
 
 const UnstyledOakTextArea = forwardRef(
   (props: OakTextAreaProps, ref?: React.Ref<HTMLTextAreaElement>) => {
-    const { allowCarriageReturn = false, ...rest } = props;
-
-    const onEnterPressed = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
-      if (e.key === "Enter" && !allowCarriageReturn) {
-        e.preventDefault();
-      }
-    };
-
-    return (
-      <textarea
-        ref={ref}
-        onKeyDown={(e) => onEnterPressed(e)}
-        {...rest}
-      ></textarea>
-    );
+    return <textarea ref={ref} {...props}></textarea>;
   },
 );
 
 /**
  *
  * A textarea that can be used for longer text inputs where text should wrap.
- * allowCarriageReturn can be used to simulate the behaviour of an input field.
  *
  */
 export const OakTextArea = styled(UnstyledOakTextArea)`
