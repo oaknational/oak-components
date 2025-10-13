@@ -35,6 +35,20 @@ describe("OakMultilineText", () => {
     expect(container).toMatchSnapshot();
   });
 
+  it("renders with initial value", () => {
+    const { getByDisplayValue } = renderWithTheme(
+      <OakMultilineText
+        charLimit={200}
+        $height="all-spacing-10"
+        disabled={false}
+        initialValue="This is the initial value."
+        id={"1"}
+        name="textarea"
+      ></OakMultilineText>,
+    );
+    expect(getByDisplayValue("This is the initial value.")).toBeInTheDocument();
+  });
+
   it("shows char count on focus", async () => {
     const { getByRole, getByLabelText } = renderWithTheme(
       <OakMultilineText
