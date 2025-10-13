@@ -15,7 +15,6 @@ describe("OakMultilineText", () => {
         $height="all-spacing-10"
         placeholder="Start typing answer..."
         disabled={false}
-        $width="100%"
         id={"1"}
         name="textarea"
       />,
@@ -29,12 +28,25 @@ describe("OakMultilineText", () => {
         charLimit={200}
         $height="all-spacing-10"
         disabled={false}
-        $width="100%"
         id={"1"}
         name="textarea"
       ></OakMultilineText>,
     );
     expect(container).toMatchSnapshot();
+  });
+
+  it("renders with initial value", () => {
+    const { getByDisplayValue } = renderWithTheme(
+      <OakMultilineText
+        charLimit={200}
+        $height="all-spacing-10"
+        disabled={false}
+        initialValue="This is the initial value."
+        id={"1"}
+        name="textarea"
+      ></OakMultilineText>,
+    );
+    expect(getByDisplayValue("This is the initial value.")).toBeInTheDocument();
   });
 
   it("shows char count on focus", async () => {
@@ -43,7 +55,6 @@ describe("OakMultilineText", () => {
         charLimit={200}
         $height="all-spacing-10"
         disabled={false}
-        $width="100%"
         id={"1"}
         name="textarea"
       ></OakMultilineText>,
@@ -63,20 +74,26 @@ describe("OakMultilineText", () => {
     expect(getByLabelText("character count")).toBeInTheDocument();
   });
 
-  it("updates text when value changed", async () => {
+  it("calls onTextAreaChange when text is changed", async () => {
+    const user = userEvent.setup();
+    const onTextAreaChange = jest.fn();
     const { getByDisplayValue } = renderWithTheme(
       <OakMultilineText
         charLimit={200}
         $height="all-spacing-10"
         disabled={false}
-        value="Hello"
-        $width="100%"
         id={"1"}
         name="textarea"
+        initialValue="Hello"
       />,
     );
     const textArea = getByDisplayValue("Hello");
     expect(textArea).toBeInTheDocument();
+    await user.click(textArea);
+    expect(textArea).toHaveFocus();
+    await user.type(textArea, ", world!");
+    expect(textArea).toHaveValue("Hello, world!");
+    expect(onTextAreaChange).not.toHaveBeenCalled();
   });
 
   it("trims text when pasted text length exceeds character limit", async () => {
@@ -89,7 +106,6 @@ describe("OakMultilineText", () => {
         $height="all-spacing-10"
         disabled={false}
         onError={onError}
-        $width="100%"
         id={"1"}
         name="textarea"
       />,
@@ -108,15 +124,14 @@ describe("OakMultilineText", () => {
 
   it("counts characters correctly when text is edited", async () => {
     const user = userEvent.setup();
-    const onChange = jest.fn();
+    const onTextAreaChange = jest.fn();
 
     const { getByRole, getByLabelText } = renderWithTheme(
       <OakMultilineText
         charLimit={100}
         $height="all-spacing-10"
         disabled={false}
-        onChange={onChange}
-        $width="100%"
+        onTextAreaChange={onTextAreaChange}
         id={"1"}
         name="textarea"
       />,
@@ -135,7 +150,7 @@ describe("OakMultilineText", () => {
     await user.click(textArea);
     expect(textArea).toHaveFocus();
     expect(charCount).toHaveTextContent("12/100");
-    expect(onChange).toHaveBeenCalledTimes(14);
+    expect(onTextAreaChange).toHaveBeenCalledTimes(14);
   });
 
   it("shows invalid text if invalid is true and invalid text has been set", () => {
@@ -145,7 +160,6 @@ describe("OakMultilineText", () => {
         $height="all-spacing-10"
         disabled={false}
         invalidText="Invalid text"
-        $width="100%"
         id={"1"}
         name="textarea"
       />,
@@ -159,17 +173,16 @@ describe("OakMultilineText", () => {
     expect(invalidText).toBeInTheDocument();
   });
 
-  it("calls onBlur when blurred", async () => {
+  it("calls onTextAreaBlur when blurred", async () => {
     const user = userEvent.setup();
-    const onBlur = jest.fn();
+    const onTextAreaBlur = jest.fn();
     const { getByRole, getByText } = renderWithTheme(
       <>
         <OakMultilineText
           charLimit={100}
           $height="all-spacing-10"
           disabled={false}
-          onBlur={onBlur}
-          $width="100%"
+          onTextAreaBlur={onTextAreaBlur}
           id={"1"}
           name="textarea"
         />
@@ -184,7 +197,7 @@ describe("OakMultilineText", () => {
     await user.type(textArea, "text");
     await user.click(paragraph);
 
-    expect(onBlur).toHaveBeenCalled();
+    expect(onTextAreaBlur).toHaveBeenCalledWith("text");
   });
 
   it("calls onFocus when focused", async () => {
@@ -198,7 +211,6 @@ describe("OakMultilineText", () => {
           $height="all-spacing-10"
           disabled={false}
           onFocus={onFocus}
-          $width="100%"
           id={"1"}
           name="textarea"
         />
@@ -225,8 +237,7 @@ describe("OakMultilineText", () => {
         charLimit={100}
         $height="all-spacing-10"
         disabled={false}
-        $width="100%"
-        value={"Test"}
+        initialValue="Test"
         id={"1"}
         name="textarea"
       ></OakMultilineText>,
@@ -240,5 +251,93 @@ describe("OakMultilineText", () => {
     expect(charCount).toBeInTheDocument();
     expect(textarea).toHaveTextContent("Test");
     expect(charCount).toHaveTextContent("4/100");
+  });
+
+  it.each([
+    [true, "test\ntest 2"],
+    [false, "testtest 2"],
+  ])(
+    "allows carriage return only when true",
+    async (allowCarriageReturn, expectedValue) => {
+      const user = userEvent.setup();
+      const { getByRole } = renderWithTheme(
+        <OakMultilineText
+          charLimit={200}
+          data-testid="test"
+          disabled={false}
+          placeholder="Start typing answer..."
+          allowCarriageReturn={allowCarriageReturn}
+        />,
+      );
+      const textArea = getByRole("textbox");
+      expect(textArea).toBeInTheDocument();
+
+      await user.click(textArea);
+      await user.type(textArea, "test");
+
+      expect(textArea).toHaveValue("test");
+
+      await user.type(textArea, "{Enter}");
+      await user.type(textArea, "test 2");
+      expect(textArea).toHaveValue(expectedValue);
+    },
+  );
+
+  it("trims leading and trailing whitespace on blur when allowLeadingTrailingSpaces is false", async () => {
+    const user = userEvent.setup();
+    const onError = jest.fn();
+    const onTextAreaBlur = jest.fn();
+    const onTextAreaChange = jest.fn();
+    const { getByRole } = renderWithTheme(
+      <OakMultilineText
+        charLimit={200}
+        data-testid="test"
+        disabled={false}
+        onError={onError}
+        onTextAreaBlur={onTextAreaBlur}
+        onTextAreaChange={onTextAreaChange}
+        placeholder="Start typing answer..."
+        allowLeadingTrailingSpaces={false}
+      />,
+    );
+    const textArea = getByRole("textbox");
+    expect(textArea).toBeInTheDocument();
+
+    await user.click(textArea);
+    await user.type(textArea, "   test   ");
+
+    expect(onTextAreaChange).toHaveBeenLastCalledWith("   test   ");
+    await user.click(document.body); // blur
+
+    expect(onTextAreaBlur).toHaveBeenLastCalledWith("test");
+    expect(onError).toHaveBeenCalledTimes(1);
+    expect(onError).toHaveBeenCalledWith(
+      "Leading or trailing spaces have been removed",
+    );
+  });
+
+  it("removes carriage returns on pasted text", async () => {
+    const user = userEvent.setup();
+    const onError = jest.fn();
+    const onTextAreaChange = jest.fn();
+    const { getByRole } = renderWithTheme(
+      <OakMultilineText
+        charLimit={200}
+        data-testid="test"
+        disabled={false}
+        onError={onError}
+        onTextAreaChange={onTextAreaChange}
+        placeholder="Start typing answer..."
+        allowLeadingTrailingSpaces={true}
+      />,
+    );
+    const textArea = getByRole("textbox");
+    expect(textArea).toBeInTheDocument();
+
+    await user.click(textArea);
+    await user.paste("test\ntest 2");
+
+    expect(onTextAreaChange).toHaveBeenLastCalledWith("test test 2");
+    expect(onError).toHaveBeenCalledWith("Carriage returns have been removed");
   });
 });
