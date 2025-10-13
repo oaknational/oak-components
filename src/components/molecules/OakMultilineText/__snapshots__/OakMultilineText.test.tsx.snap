@@ -98,6 +98,7 @@ exports[`OakMultilineText matches snapshot 1`] = `
     class="c0 c1"
   >
     <textarea
+      aria-describedby="multiline-text-invalid-error"
       class="c2 c3"
       id="1"
       maxlength="200"

@@ -138,6 +138,7 @@ const UnstyledComponent = forwardRef(
           onPaste={(e) => handlePaste(e.clipboardData.getData("text"))}
           $overflowX={"scroll"}
           $overflowY={"scroll"}
+          aria-describedby="multiline-text-invalid-error"
         ></StyledOakTextArea>
         {/* Span is inside OakFlex to stop textarea width changing when charCount changes. */}
         <OakGrid
@@ -165,6 +166,7 @@ const UnstyledComponent = forwardRef(
                   $overflowX={"scroll"}
                   $font={"body-4"}
                   $color={"text-error"}
+                  id="multiline-text-invalid-error"
                 >
                   {invalidText ? invalidText : internalError}
                 </OakSpan>
