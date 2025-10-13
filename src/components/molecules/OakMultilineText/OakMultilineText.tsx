@@ -165,7 +165,6 @@ const UnstyledComponent = forwardRef(
                   $overflowX={"scroll"}
                   $font={"body-4"}
                   $color={"text-error"}
-                  aria-label="invalid text message"
                 >
                   {invalidText ? invalidText : internalError}
                 </OakSpan>
