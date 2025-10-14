@@ -80,8 +80,8 @@ const UnstyledComponent = forwardRef(
       id,
       name,
       $height = ["all-spacing-19", "all-spacing-13", "all-spacing-10"],
-      $overflowX = [null, null, "auto"],
-      $overflowY = ["auto", "auto", null],
+      $overflowX = [null, null, "scroll"],
+      $overflowY = ["scroll", "scroll", null],
       $whiteSpace = ["wrap", "wrap", "nowrap"],
       allowCarriageReturn = false,
       allowLeadingTrailingSpaces = false,
@@ -229,8 +229,8 @@ const UnstyledComponent = forwardRef(
                   $height={"all-spacing-4"}
                 ></OakIcon>
                 <OakSpan
-                  $overflowY={"scroll"}
-                  $overflowX={"scroll"}
+                  $overflowY={"auto"}
+                  $overflowX={"auto"}
                   $font={"body-4"}
                   $color={"text-error"}
                   id="multiline-text-invalid-error"
