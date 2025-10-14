@@ -57,6 +57,10 @@ const StyledOakTextArea = styled(OakTextArea)<StyledOakTextAreaProps>`
     background: ${parseColor("bg-btn-secondary-hover")};
     border-color: ${parseColor("border-neutral")};
   }
+
+  ::placeholder {
+    color: ${parseColor("text-subdued")};
+  }
 `;
 
 const UnstyledComponent = forwardRef(
@@ -186,7 +190,7 @@ const UnstyledComponent = forwardRef(
           disabled={disabled}
           aria-label={ariaLabel}
           $background={disabled ? "bg-neutral" : "bg-primary"}
-          $color={charCount === 0 ? "text-subdued" : "text-primary"}
+          $color={"text-primary"}
           $borderRadius={"border-radius-m"}
           $ba={"border-solid-m"}
           $pa={"inner-padding-s"}
