@@ -20,8 +20,8 @@ const meta: Meta<typeof OakMultilineText> = {
     $height: sizeArgTypes.$height,
     allowCarriageReturn: { control: "boolean" },
     allowLeadingTrailingSpaces: { control: "boolean" },
-    $overflowX: { control: "select", options: ["clip", "scroll", null] },
-    $overflowY: { control: "select", options: ["clip", "scroll", null] },
+    $overflowX: { control: "select", options: ["clip", "auto", null] },
+    $overflowY: { control: "select", options: ["clip", "auto", null] },
   },
   parameters: {
     controls: {
