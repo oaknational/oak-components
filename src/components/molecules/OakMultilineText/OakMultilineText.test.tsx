@@ -168,7 +168,6 @@ describe("OakMultilineText", () => {
     const textArea = getByRole("textbox");
     expect(textArea).toBeInTheDocument();
 
-    // const invalidText = getByLabelText("invalid text message");
     const invalidText = getByText("Invalid text");
     expect(invalidText).toBeInTheDocument();
   });
