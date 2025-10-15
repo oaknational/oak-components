@@ -51,12 +51,15 @@ const StyledOakTextArea = styled(OakTextArea)<StyledOakTextAreaProps>`
   &:focus-visible {
     border-color: ${(props) =>
       props.isError ? parseColor("red") : parseColor("border-primary")};
-    color: ${parseColor("text-primary")};
   }
 
   &:hover {
-    background: ${parseColor("bg-neutral")};
+    background: ${parseColor("bg-btn-secondary-hover")};
     border-color: ${parseColor("border-neutral")};
+  }
+
+  ::placeholder {
+    color: ${parseColor("text-subdued")};
   }
 `;
 
@@ -187,7 +190,7 @@ const UnstyledComponent = forwardRef(
           disabled={disabled}
           aria-label={ariaLabel}
           $background={disabled ? "bg-neutral" : "bg-primary"}
-          $color={"text-subdued"}
+          $color={"text-primary"}
           $borderRadius={"border-radius-m"}
           $ba={"border-solid-m"}
           $pa={"inner-padding-s"}
@@ -202,6 +205,7 @@ const UnstyledComponent = forwardRef(
           $overflowY={$overflowY}
           $whiteSpace={$whiteSpace}
           $width={"100%"}
+          aria-describedby="multiline-text-invalid-error"
           {...textAreaProps}
         ></StyledOakTextArea>
         {/* Span is inside OakFlex to stop textarea width changing when charCount changes. */}
@@ -223,14 +227,14 @@ const UnstyledComponent = forwardRef(
                   $colorFilter={"icon-error"}
                   $width={"all-spacing-4"}
                   $height={"all-spacing-4"}
-                  $right={"all-spacing-1"}
                 ></OakIcon>
                 <OakSpan
-                  $overflowY={"scroll"}
-                  $overflowX={"scroll"}
+                  $overflowY={"auto"}
+                  $overflowX={"auto"}
                   $font={"body-4"}
                   $color={"text-error"}
-                  aria-label="invalid text message"
+                  id="multiline-text-invalid-error"
+                  $pl={"inner-padding-ssx"}
                 >
                   {invalidText ? invalidText : internalErrors.join(". ")}
                 </OakSpan>

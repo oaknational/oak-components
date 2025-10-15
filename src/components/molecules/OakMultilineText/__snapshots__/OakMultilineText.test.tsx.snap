@@ -47,7 +47,7 @@ exports[`OakMultilineText matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
   white-space: wrap;
   overflow-y: scroll;
-  color: #575757;
+  color: #222222;
   background: #ffffff;
 }
 
@@ -68,12 +68,27 @@ exports[`OakMultilineText matches snapshot 1`] = `
 
 .c3:focus-visible {
   border-color: #222222;
-  color: #222222;
 }
 
 .c3:hover {
   background: #f2f2f2;
   border-color: #808080;
+}
+
+.c3::-webkit-input-placeholder {
+  color: #575757;
+}
+
+.c3::-moz-placeholder {
+  color: #575757;
+}
+
+.c3:-ms-input-placeholder {
+  color: #575757;
+}
+
+.c3::placeholder {
+  color: #575757;
 }
 
 @media (min-width:750px) {
@@ -125,6 +140,7 @@ exports[`OakMultilineText matches snapshot 1`] = `
     class="c0 c1"
   >
     <textarea
+      aria-describedby="multiline-text-invalid-error"
       class="c2 c3"
       id="1"
       maxlength="200"

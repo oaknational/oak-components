@@ -154,7 +154,7 @@ describe("OakMultilineText", () => {
   });
 
   it("shows invalid text if invalid is true and invalid text has been set", () => {
-    const { getByRole, getByLabelText } = renderWithTheme(
+    const { getByRole, getByText } = renderWithTheme(
       <OakMultilineText
         charLimit={100}
         $height="all-spacing-10"
@@ -168,9 +168,8 @@ describe("OakMultilineText", () => {
     const textArea = getByRole("textbox");
     expect(textArea).toBeInTheDocument();
 
-    const invalidText = getByLabelText("invalid text message");
+    const invalidText = getByText("Invalid text");
     expect(invalidText).toBeInTheDocument();
-    expect(invalidText).toHaveTextContent("Invalid text");
   });
 
   it("calls onTextAreaBlur when blurred", async () => {
