@@ -90,6 +90,7 @@
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-typescript-paths": "^1.5.0",
+    "semantic-release": "^25.0.1",
     "storybook": "^8.0.10",
     "storybook-react-context": "^0.6.0",
     "ts-jest": "^29.1.1",
