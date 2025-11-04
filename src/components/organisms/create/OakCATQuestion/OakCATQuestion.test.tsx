@@ -19,6 +19,8 @@ describe("OakCATQuestion", () => {
         hintInput={<div>Hint Input</div>}
         feedbackInput={<div>Feedback Input</div>}
         answersSection={<div>Answers Section</div>}
+        hintInputId="hintInputId"
+        feedbackInputId="feedbackInputId"
       />,
     );
     expect(getByText("1.")).toBeInTheDocument();
@@ -36,6 +38,8 @@ describe("OakCATQuestion", () => {
           hintInput={<div>Hint Input</div>}
           feedbackInput={<div>Feedback Input</div>}
           answersSection={<div>Answers Section</div>}
+          hintInputId="hintInputId"
+          feedbackInputId="feedbackInputId"
         />
       </OakThemeProvider>,
     );

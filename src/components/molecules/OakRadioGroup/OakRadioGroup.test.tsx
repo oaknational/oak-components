@@ -9,15 +9,15 @@ import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("RadioGroup", () => {
   it("renders a RadioGroup", () => {
-    renderWithTheme(
-      <OakRadioGroup name={"test"}>
+    const { getByRole } = renderWithTheme(
+      <OakRadioGroup name={"test"} label="test">
         <OakRadioButton id="radio-1" value="1" label="Option 1" />
         <OakRadioButton id="radio-2" value="2" label="Option 2" />
         <OakRadioButton id="radio-3" value="3" label="Option 3" />
       </OakRadioGroup>,
     );
 
-    const radioGroup = screen.getByRole("radiogroup");
+    const radioGroup = getByRole("group");
     expect(radioGroup).toBeInTheDocument();
   });
 
@@ -47,7 +47,7 @@ describe("RadioGroup", () => {
       </>,
     );
 
-    const radioGroup = getByRole("radiogroup");
+    const radioGroup = getByRole("group");
     expect(radioGroup).toHaveAttribute("aria-labelledby", "radio-group-label");
   });
 

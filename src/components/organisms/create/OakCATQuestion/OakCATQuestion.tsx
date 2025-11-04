@@ -1,10 +1,10 @@
-import React, { ReactNode } from "react";
+import React, { ReactElement, ReactNode } from "react";
 import styled from "styled-components";
 
 import { OakFlex, OakFlexProps } from "@/components/atoms/OakFlex";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { OakCombinedColorToken } from "@/styles";
-import { OakLabel, OakSpan } from "@/components/atoms";
+import { OakGrid, OakGridArea, OakLabel, OakSpan } from "@/components/atoms";
 import { InternalUnstyledChevronAccordion } from "@/components/molecules/InternalUnstyledChevronAccordion";
 import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 
@@ -30,9 +30,11 @@ export type OakCATQuestionProps = {
   initialOpen?: boolean;
   questionTypeInput: ReactNode;
   questionTextInput: ReactNode;
-  hintInput: ReactNode;
-  feedbackInput: ReactNode;
+  hintInput: ReactElement;
+  feedbackInput: ReactElement;
   answersSection: ReactNode;
+  hintInputId: string;
+  feedbackInputId: string;
 };
 
 export const OakCATQuestion = (props: OakCATQuestionProps) => {
@@ -45,6 +47,8 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
     answersSection,
     initialOpen = false,
     status = "neutral",
+    hintInputId,
+    feedbackInputId,
   } = props;
 
   const statusColorMap: Record<Status, OakCombinedColorToken> = {
@@ -67,31 +71,37 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
         {answersSection}
       </OakFlex>
 
-      <OakFlex
+      <OakGrid
         $ph="spacing-32"
         $pv="spacing-24"
         $background={"grey10"}
         $borderRadius={"border-radius-m2"}
         $borderColor={"bg-neutral"}
         $ba={"border-solid-s"}
-        $alignSelf={"flex-start"}
+        $cg={"spacing-20"}
       >
-        <OakFlex $gap="spacing-20">
-          <OakLabel>
-            <OakSpan $color={"text-subdued"} $font={"heading-light-7"}>
-              Hint
-            </OakSpan>
+        <OakGridArea $colSpan={6}>
+          <OakFlex $flexDirection={"column"} $flexGrow={1}>
+            <OakLabel htmlFor={hintInputId}>
+              <OakSpan $color={"text-subdued"} $font={"heading-light-7"}>
+                Hint
+              </OakSpan>
+            </OakLabel>
             {hintInput}
-          </OakLabel>
+          </OakFlex>
+        </OakGridArea>
 
-          <OakLabel>
-            <OakSpan $color={"text-subdued"} $font={"heading-light-7"}>
-              Feedback
-            </OakSpan>
+        <OakGridArea $colSpan={6}>
+          <OakFlex $flexDirection={"column"} $flexGrow={1}>
+            <OakLabel htmlFor={feedbackInputId}>
+              <OakSpan $color={"text-subdued"} $font={"heading-light-7"}>
+                Feedback
+              </OakSpan>
+            </OakLabel>
             {feedbackInput}
-          </OakLabel>
-        </OakFlex>
-      </OakFlex>
+          </OakFlex>
+        </OakGridArea>
+      </OakGrid>
     </OakFlex>
   );
 

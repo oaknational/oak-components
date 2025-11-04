@@ -4,6 +4,7 @@ import { StoryObj, Meta } from "@storybook/react";
 import { OakCATQuestion } from "./OakCATQuestion";
 
 import { OakBox, OakP, OakUL } from "@/components/atoms";
+import { OakMultilineText } from "@/components/molecules";
 
 const meta: Meta<typeof OakCATQuestion> = {
   component: OakCATQuestion,
@@ -53,12 +54,7 @@ export const Default: Story = {
     ),
     hintInput: (
       <OakBox $background={"aqua50"}>
-        <OakBox
-          $background={"amber50"}
-          $pa="spacing-4"
-          $height={"spacing-72"}
-          $width={"spacing-360"}
-        >
+        <OakBox $background={"amber50"} $pa="spacing-4" $height={"spacing-72"}>
           Dummy Hint Input
         </OakBox>
         <OakP>Character count 0/200</OakP>
@@ -66,12 +62,7 @@ export const Default: Story = {
     ),
     feedbackInput: (
       <OakBox $background={"aqua50"}>
-        <OakBox
-          $background={"amber50"}
-          $pa="spacing-4"
-          $height={"spacing-72"}
-          $width={"spacing-360"}
-        >
+        <OakBox $background={"amber50"} $pa="spacing-4" $height={"spacing-72"}>
           Dummy Feedback Input
         </OakBox>
         <OakP>Character count 0/200</OakP>
@@ -126,6 +117,45 @@ export const InitiallyOpen: Story = {
         </OakBox>
         <OakP>Character count 0/200</OakP>
       </OakBox>
+    ),
+    answersSection: (
+      <OakBox $background={"mint50"} $pa="spacing-12" $height={"spacing-360"}>
+        Dummy answers Section
+      </OakBox>
+    ),
+  },
+};
+
+export const WithMultilineText: Story = {
+  render: (args) => <OakCATQuestion {...args} />,
+  args: {
+    questionNumber: 1,
+    status: "neutral",
+    questionTypeInput: (
+      <OakBox $background={"aqua50"} $pa="spacing-4">
+        Dummy Question Type Input
+      </OakBox>
+    ),
+    questionTextInput: (
+      <OakBox $background={"aqua50"} $pa="spacing-12">
+        Dummy Question Text Input
+      </OakBox>
+    ),
+    hintInput: (
+      <OakMultilineText
+        charLimit={100}
+        name="hintInput"
+        id="hintInput"
+        $height={"spacing-1280"}
+      />
+    ),
+    feedbackInput: (
+      <OakMultilineText
+        charLimit={100}
+        name="feedbackInput"
+        id="feedbackInput"
+        $height={"spacing-1280"}
+      />
     ),
     answersSection: (
       <OakBox $background={"mint50"} $pa="spacing-12" $height={"spacing-360"}>

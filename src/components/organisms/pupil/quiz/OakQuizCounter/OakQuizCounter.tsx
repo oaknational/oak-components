@@ -39,7 +39,12 @@ export const OakQuizCounter = (props: OakQuizCounterProps) => {
         </OakSpan>
         of {total}
       </OakSpan>
-      <OakFlex $gap={"spacing-8"} $flexWrap={"wrap"}>
+      <OakFlex
+        $gap={"spacing-8"}
+        $flexWrap={"wrap"}
+        aria-hidden="true"
+        focusable={false}
+      >
         {pills}
       </OakFlex>
     </OakFlex>

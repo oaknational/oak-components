@@ -70,6 +70,7 @@ const oakTextDecorationsConst = [
 const oakWhiteSpacesConst = [
   "normal",
   "nowrap",
+  "wrap",
   "pre",
   "pre-wrap",
   "pre-line",

@@ -208,7 +208,7 @@ describe("OakRadioAsButton", () => {
         />
       </OakRadioGroup>,
     );
-    const radioGroup = getByRole("radiogroup");
+    const radioGroup = getByRole("group");
     const radios = getAllByRole("radio");
     expect(radios).toHaveLength(2);
     expect(radioGroup);
@@ -236,7 +236,7 @@ describe("OakRadioAsButton", () => {
         />
       </OakRadioGroup>,
     );
-    const radioGroup = getByRole("radiogroup");
+    const radioGroup = getByRole("group");
     const radios = getAllByRole("radio");
     expect(radios).toHaveLength(3);
     expect(radioGroup);
