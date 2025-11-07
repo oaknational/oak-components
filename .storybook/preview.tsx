@@ -1,8 +1,10 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
-import type { Decorator, Preview } from "@storybook/react";
+import type { Decorator, Preview, ReactRenderer } from "@storybook/react";
+import { withThemeFromJSXProvider } from "@storybook/addon-themes";
 
 import { oakDefaultTheme } from "../src/styles/theme/default.theme";
+import { oakDarkTheme } from "../src/styles/theme/dark.theme";
 import { OakGlobalStyle } from "../src/components/atoms/OakGlobalStyle/OakGlobalStyle";
 import { oakStorybookTheme } from "./oakStorybookTheme";
 
@@ -36,7 +38,18 @@ const preview: Preview = {
       theme: oakStorybookTheme,
     },
   },
-  decorators: [globalDecorator],
+  decorators: [
+    withThemeFromJSXProvider<ReactRenderer>({
+      themes: {
+        default: oakDefaultTheme,
+        dark: oakDarkTheme,
+      },
+      defaultTheme: "light",
+      Provider: ThemeProvider,
+      GlobalStyles: OakGlobalStyle,
+    }),
+    globalDecorator,
+  ],
 };
 
 export default preview;
