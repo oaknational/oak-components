@@ -4,6 +4,11 @@ export type {
   OakColorToken,
   OakCombinedColorToken,
   OakUiRoleToken,
+  OakTextColorToken,
+  OakBackgroundColorToken,
+  OakIconColorToken,
+  OakBorderColorToken,
+  OakCodeColorToken,
   OakColorFilterToken,
 } from "./color";
 
@@ -41,3 +46,4 @@ export { oakZIndexTokens } from "./zIndex";
 export type { OakZIndexToken } from "./zIndex";
 
 export { oakDefaultTheme } from "./default.theme";
+export { oakDarkTheme } from "./dark.theme";
