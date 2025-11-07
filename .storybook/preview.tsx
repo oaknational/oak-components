@@ -44,7 +44,7 @@ const preview: Preview = {
         default: oakDefaultTheme,
         dark: oakDarkTheme,
       },
-      defaultTheme: "light",
+      defaultTheme: "default",
       Provider: ThemeProvider,
       GlobalStyles: OakGlobalStyle,
     }),
