@@ -205,7 +205,7 @@ const UnstyledComponent = forwardRef(
           $overflowY={$overflowY}
           $whiteSpace={$whiteSpace}
           $width={"100%"}
-          aria-describedby="multiline-text-invalid-error"
+          aria-describedby="multiline-text-area"
           {...textAreaProps}
         ></StyledOakTextArea>
         {/* Span is inside OakFlex to stop textarea width changing when charCount changes. */}
