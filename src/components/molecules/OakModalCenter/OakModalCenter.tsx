@@ -182,14 +182,14 @@ export const OakModalCenter = ({
           ref={transitionRef}
           $state={state}
           $position="fixed"
-          $inset="all-spacing-0"
+          $inset="spacing-0"
           $justifyContent="center"
           $alignItems="center"
           $zIndex="modal-dialog"
         >
           <BlurredOakBox
             $position="fixed"
-            $inset="all-spacing-0"
+            $inset="spacing-0"
             $zIndex="behind"
             $background="blackSemiTransparent"
             data-testid="backdrop"
@@ -198,9 +198,9 @@ export const OakModalCenter = ({
           <OakFlex
             $alignItems="center"
             $justifyContent="center"
-            $maxWidth="all-spacing-23"
+            $maxWidth="spacing-960"
             $width="100%"
-            $pa="inner-padding-l"
+            $pa="spacing-20"
             {...modalOuterFlexProps}
           >
             <FocusOnBox
@@ -219,17 +219,17 @@ export const OakModalCenter = ({
                 role="alertdialog"
                 style={{
                   maxHeight: `calc(100vh - ${parseSpacing(
-                    "inner-padding-xl5",
-                  )} - ${parseSpacing("inner-padding-xl5")})`,
+                    "spacing-56",
+                  )} - ${parseSpacing("spacing-56")})`,
                 }}
                 {...modalFlexProps}
               >
-                <OakBox $minHeight="inner-padding-xl5" $position="relative">
+                <OakBox $minHeight="spacing-56" $position="relative">
                   {!hideCloseButton && (
                     <OakBox
                       $position="absolute"
-                      $top="all-spacing-3"
-                      $right="all-spacing-3"
+                      $top="spacing-12"
+                      $right="spacing-12"
                     >
                       <InternalShadowRoundButton
                         onClick={onClose}
@@ -242,8 +242,8 @@ export const OakModalCenter = ({
                         hoverIconBackground="black"
                         hoverIconColor="white"
                         disabledIconBackground="transparent"
-                        iconBackgroundSize="all-spacing-7"
-                        iconSize="all-spacing-7"
+                        iconBackgroundSize="spacing-32"
+                        iconSize="spacing-32"
                         iconName="cross"
                         data-testid="close-button"
                       />
@@ -256,7 +256,7 @@ export const OakModalCenter = ({
                     data-testid="modal-main-content"
                     $overflow="auto"
                     $flexDirection="column"
-                    $ph="inner-padding-xl5"
+                    $ph="spacing-56"
                     $bt={
                       scrollBorders.top ? "border-solid-s" : "border-solid-none"
                     }

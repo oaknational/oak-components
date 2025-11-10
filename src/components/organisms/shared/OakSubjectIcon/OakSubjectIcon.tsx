@@ -30,8 +30,8 @@ export const OakSubjectIcon = ({
       {showPromoTag && (
         <OakBox
           $position="absolute"
-          $top={["all-spacing-0", "all-spacing-2"]}
-          $left={["all-spacing-0", "all-spacing-2"]}
+          $top={["spacing-0", "spacing-8"]}
+          $left={["spacing-0", "spacing-8"]}
         >
           <OakPromoTag />
         </OakBox>

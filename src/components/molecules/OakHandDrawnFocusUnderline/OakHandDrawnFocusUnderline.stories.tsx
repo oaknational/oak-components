@@ -34,6 +34,6 @@ type Story = StoryObj<typeof OakHandDrawnFocusUnderline>;
 export const Default: Story = {
   render: (args) => <OakHandDrawnFocusUnderline {...args} />,
   args: {
-    $height: "all-spacing-1",
+    $height: "spacing-4",
   },
 };

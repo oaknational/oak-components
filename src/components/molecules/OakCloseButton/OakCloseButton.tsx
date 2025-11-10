@@ -26,8 +26,8 @@ export function OakCloseButton({ onClose, ...rest }: OakCloseButtonProps) {
       hoverIconBackground="bg-neutral"
       hoverIconColor="black"
       disabledIconBackground="transparent"
-      iconBackgroundSize="all-spacing-6"
-      iconSize="all-spacing-6"
+      iconBackgroundSize="spacing-24"
+      iconSize="spacing-24"
       iconName="cross"
       hoverDropShadow={null}
       {...rest}

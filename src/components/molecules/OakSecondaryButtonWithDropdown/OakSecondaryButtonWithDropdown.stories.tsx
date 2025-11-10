@@ -44,8 +44,8 @@ type DropdownNavStory = StoryObj<typeof OakSecondaryButtonWithDropdown>;
 
 export const ButtonWithDropDown: DropdownNavStory = {
   render: (args) => (
-    <OakBox $height={"all-spacing-19"}>
-      <OakFlex $gap="space-between-m">
+    <OakBox $height={"spacing-240"}>
+      <OakFlex $gap="spacing-24">
         <OakSecondaryButtonWithDropdown {...args}>
           <OakSecondaryButtonWithDropdown.Item>
             Button 1
@@ -108,7 +108,7 @@ export const ButtonWithDropDown: DropdownNavStory = {
 
 export const withIcons: DropdownNavStory = {
   render: (args) => (
-    <OakBox $height={"all-spacing-19"}>
+    <OakBox $height={"spacing-240"}>
       <OakSecondaryButtonWithDropdown {...args}>
         <OakSecondaryButtonWithDropdown.Item
           iconName="external"
@@ -146,7 +146,7 @@ export const withIcons: DropdownNavStory = {
             <OakSpan>Learn more about Aila, Oak's AI </OakSpan>
             <OakFlex $font={"body-2"} $alignItems={"center"}>
               <OakSpan>lesson assistant </OakSpan>
-              <OakIcon iconHeight="all-spacing-6" iconName="external" />
+              <OakIcon iconHeight="spacing-24" iconName="external" />
             </OakFlex>
           </OakFlex>
         </OakPrimaryInvertedButton>
@@ -158,18 +158,14 @@ export const withIcons: DropdownNavStory = {
     leadingButtonIcon: (
       <OakFlex
         $borderRadius={"border-radius-s"}
-        $ph={"inner-padding-ssx"}
-        $mr={"space-between-ssx"}
+        $ph={"spacing-4"}
+        $mr={"spacing-8"}
         $background={"lemon"}
         $alignItems={"center"}
         $justifyContent={"center"}
-        $pr={"inner-padding-ssx"}
+        $pr={"spacing-4"}
       >
-        <OakIcon
-          $height={"all-spacing-4"}
-          $width={"all-spacing-4"}
-          iconName={"ai"}
-        />
+        <OakIcon $height={"spacing-16"} $width={"spacing-16"} iconName={"ai"} />
         <OakSpan $font="body-2">{"New"}</OakSpan>
       </OakFlex>
     ),

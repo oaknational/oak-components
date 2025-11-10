@@ -129,32 +129,32 @@ export const InternalShadowIconButton = <C extends ElementType = "button">(
     <OakBox $position="relative">
       <OakIcon
         iconName={iconName}
-        $width={"all-spacing-6"}
-        $height={"all-spacing-6"}
+        $width={"spacing-24"}
+        $height={"spacing-24"}
         $colorFilter={props.disabled ? disabledIconColor : "grey60"}
         $position="absolute"
-        $top="all-spacing-1"
-        $left="all-spacing-1"
+        $top="spacing-4"
+        $left="spacing-4"
         $display="none"
         className="shadow"
         alt=""
       />
       <OakIcon
         iconName={iconName}
-        $width={"all-spacing-6"}
-        $height={"all-spacing-6"}
+        $width={"spacing-24"}
+        $height={"spacing-24"}
         $colorFilter={props.disabled ? disabledIconColor : "lemon"}
         $position="absolute"
         $display="none"
-        $top="all-spacing-05"
-        $left="all-spacing-05"
+        $top="spacing-2"
+        $left="spacing-2"
         className="highlight"
         alt=""
       />
       <OakIcon
         iconName={iconName}
-        $width={"all-spacing-6"}
-        $height={"all-spacing-6"}
+        $width={"spacing-24"}
+        $height={"spacing-24"}
         $colorFilter={
           props.disabled
             ? disabledIconColor
@@ -168,8 +168,8 @@ export const InternalShadowIconButton = <C extends ElementType = "button">(
     </OakBox>
   );
   const loader = (
-    <OakBox $width={"all-spacing-6"} $height={"all-spacing-6"}>
-      <OakLoadingSpinner $width={"all-spacing-6"} $color={"text-disabled"} />
+    <OakBox $width={"spacing-24"} $height={"spacing-24"}>
+      <OakLoadingSpinner $width={"spacing-24"} $color={"text-disabled"} />
     </OakBox>
   );
 
@@ -210,10 +210,10 @@ export const InternalShadowIconButton = <C extends ElementType = "button">(
         <OakFlex
           $flexDirection={"row"}
           $alignItems={"center"}
-          $gap={children ? "space-between-sssx" : "space-between-none"}
+          $gap={children ? "spacing-4" : "spacing-0"}
           $justifyContent="center"
-          $pl={isTrailingIcon ? "inner-padding-xs" : "inner-padding-none"}
-          $pr={isTrailingIcon ? "inner-padding-none" : "inner-padding-xs"}
+          $pl={isTrailingIcon ? "spacing-8" : "spacing-0"}
+          $pr={isTrailingIcon ? "spacing-0" : "spacing-8"}
         >
           {!isTrailingIcon && iconLogic}
           <OakSpan $font={"heading-light-7"}>{children}</OakSpan>

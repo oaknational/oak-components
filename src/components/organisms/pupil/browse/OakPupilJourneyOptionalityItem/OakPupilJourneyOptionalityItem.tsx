@@ -23,13 +23,13 @@ export const OakPupilJourneyOptionalityItem = (
   return (
     <OakFlex
       $borderRadius={"border-radius-m"}
-      $pa={"inner-padding-xl"}
+      $pa={"spacing-24"}
       $flexDirection={"column"}
-      $gap={"space-between-m"}
+      $gap={"spacing-24"}
       $background={unavailable ? "bg-neutral" : "bg-primary"}
       {...rest}
     >
-      <OakFlex $alignItems={"center"} $gap={"space-between-m2"}>
+      <OakFlex $alignItems={"center"} $gap={"spacing-32"}>
         <OakFlex>
           <OakBox
             $font={["heading-5", "heading-4"]}
@@ -48,8 +48,8 @@ export const OakPupilJourneyOptionalityItem = (
       </OakFlex>
       <OakGrid
         $gridTemplateColumns={["repeat(1,1fr)", "repeat(2, 1fr)"]}
-        $cg={"space-between-xs"}
-        $rg={"space-between-xs"}
+        $cg={"spacing-12"}
+        $rg={"spacing-12"}
       >
         {children}
       </OakGrid>

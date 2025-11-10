@@ -37,7 +37,7 @@ export const Default: Story = {
     $background: "bg-btn-primary",
     $color: "white",
     $ba: "border-solid-s",
-    $pa: "inner-padding-s",
+    $pa: "spacing-12",
     $borderRadius: "border-radius-m",
   },
 };
@@ -52,7 +52,7 @@ export const LinkStyledAsButton: Story = {
     $background: "bg-btn-primary",
     $color: "white",
     $ba: "border-solid-s",
-    $pa: "inner-padding-s",
+    $pa: "spacing-12",
     $borderRadius: "border-radius-m",
   },
 };

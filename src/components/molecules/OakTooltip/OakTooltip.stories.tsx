@@ -24,7 +24,7 @@ const meta: Meta<typeof OakTooltip> = {
   },
   decorators: [
     (Story) => (
-      <OakBox $ma="space-between-xxl">
+      <OakBox $ma="spacing-72">
         <Story />
       </OakBox>
     ),
@@ -47,10 +47,10 @@ export const Default: Story = {
 export const FixedPosition: Story = {
   render: (args) => (
     <>
-      <OakBox $position="fixed" $top="all-spacing-2">
+      <OakBox $position="fixed" $top="spacing-8">
         <OakTooltip {...args} />
       </OakBox>
-      <OakBox $position="fixed" $bottom="all-spacing-2">
+      <OakBox $position="fixed" $bottom="spacing-8">
         <OakTooltip {...args} tooltipPosition="top-left" />
       </OakBox>
       <OakBox style={{ height: "1000px" }} />
@@ -60,7 +60,7 @@ export const FixedPosition: Story = {
 
 export const WithinAScrollingContainer: Story = {
   render: (args) => (
-    <OakBox $overflow="scroll" $height="all-spacing-20">
+    <OakBox $overflow="scroll" $height="spacing-360">
       <OakTooltip {...args} />
       <OakBox style={{ height: "1000px" }} />
     </OakBox>

@@ -33,8 +33,8 @@ describe("OakIcon", () => {
       <OakIcon
         data-testid="test"
         iconName="home"
-        $width="all-spacing-5"
-        $height="all-spacing-5"
+        $width="spacing-20"
+        $height="spacing-20"
       />,
     );
     expect(getByTestId("test")).toHaveStyle({

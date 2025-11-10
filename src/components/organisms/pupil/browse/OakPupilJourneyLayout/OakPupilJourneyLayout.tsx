@@ -77,20 +77,19 @@ export const OakPupilJourneyLayout = ({
       $background={backgroundColor}
       $flexDirection="column"
       $alignItems={"center"}
-      $ph={["inner-padding-s", "inner-padding-xl"]}
+      $ph={["spacing-12", "spacing-24"]}
       sectionName={sectionName}
       phase={phase}
     >
       {topNavSlot && (
         <OakFlex
-          $height={["all-spacing-13", "all-spacing-14", "all-spacing-16"]}
+          $height={["spacing-80", "spacing-92", "spacing-120"]}
           $alignItems={"center"}
-          $width={["100%", "100%", "all-spacing-24"]}
+          $width={["100%", "100%", "spacing-1280"]}
         >
           {topNavSlot}
         </OakFlex>
       )}
-
       {children}
     </StyledLayoutBox>
   );

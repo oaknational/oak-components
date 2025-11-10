@@ -59,9 +59,9 @@ export const Default: Story = {
     >
       <OakBox
         $background={"bg-neutral"}
-        $width={["100%", "100%", "all-spacing-23"]}
-        $minHeight={"all-spacing-24"}
-        $mb="space-between-m"
+        $width={["100%", "100%", "spacing-960"]}
+        $minHeight={"spacing-1280"}
+        $mb="spacing-24"
       >
         <p>Section content</p>
       </OakBox>
@@ -72,7 +72,7 @@ export const Default: Story = {
 export const NoTopNav: Story = {
   render: ({ sectionName, ...args }) => (
     <OakPupilJourneyLayout {...args} sectionName={sectionName}>
-      <OakBox $background={"bg-neutral"} $minHeight={"all-spacing-20"}>
+      <OakBox $background={"bg-neutral"} $minHeight={"spacing-360"}>
         <p>Section content</p>
       </OakBox>
     </OakPupilJourneyLayout>

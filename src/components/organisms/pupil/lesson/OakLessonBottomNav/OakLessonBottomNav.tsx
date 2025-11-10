@@ -56,9 +56,9 @@ export const OakLessonBottomNav = ({
   return (
     <StyledOakFlex
       $flexDirection={["column", "row"]}
-      $pa="inner-padding-m"
-      $minHeight="all-spacing-9"
-      $gap="space-between-m"
+      $pa="spacing-16"
+      $minHeight="spacing-48"
+      $gap="spacing-24"
     >
       <OakFlex $alignItems="center">{content}</OakFlex>
       <OakFlex

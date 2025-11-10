@@ -9,7 +9,7 @@ describe("InternalCheckBoxWrapper", () => {
   it("renders", () => {
     const { getByTestId } = renderWithTheme(
       <InternalCheckBoxWrapper
-        size={"all-spacing-6"}
+        size={"spacing-24"}
         internalCheckbox={
           <input
             data-testid="test-input"
@@ -28,7 +28,7 @@ describe("InternalCheckBoxWrapper", () => {
   it("matches snapshot", () => {
     const { container } = renderWithTheme(
       <InternalCheckBoxWrapper
-        size={"all-spacing-6"}
+        size={"spacing-24"}
         internalCheckbox={
           <input
             data-testid="test-input"

@@ -200,7 +200,7 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
         $ba={iconBorderColor ? "border-solid-m" : undefined}
         $width={"100%"}
         $height={"100%"}
-        $top="all-spacing-0"
+        $top="spacing-0"
       />
 
       {isLoading && !disabled ? loader : icon}
@@ -232,7 +232,7 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
         <OakFlex
           $flexDirection={"row"}
           $alignItems={"center"}
-          $gap={children ? "space-between-xs" : "space-between-none"}
+          $gap={children ? "spacing-12" : "spacing-0"}
           $justifyContent="center"
         >
           {!isTrailingIcon && iconLogic}

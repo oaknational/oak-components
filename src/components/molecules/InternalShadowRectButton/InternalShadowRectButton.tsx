@@ -27,7 +27,7 @@ import { TypographyStyleProps } from "@/styles/utils/typographyStyle";
 
 type OakLoadingSpinnerTokenSubset = Extract<
   OakAllSpacingToken,
-  "all-spacing-5" | "all-spacing-6"
+  "spacing-20" | "spacing-24"
 >;
 
 export type InternalShadowRectButtonProps = Omit<
@@ -179,16 +179,16 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
     disabledBorderColor,
     className,
     hoverShadow = "drop-shadow-lemon",
-    pv = "inner-padding-s",
-    ph = "inner-padding-m",
+    pv = "spacing-12",
+    ph = "spacing-16",
     pt,
     pb,
     iconLayout = "row",
-    iconGap = "space-between-ssx",
+    iconGap = "spacing-8",
     iconOverride,
     font = "heading-7",
     textAlign = "left",
-    loadingSpinnerSize = "all-spacing-6",
+    loadingSpinnerSize = "spacing-24",
     ...rest
   } = props;
 
@@ -197,8 +197,8 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
       {iconName && (
         <OakIcon
           iconName={iconName}
-          $width={"all-spacing-6"}
-          $height={"all-spacing-6"}
+          $width={"spacing-24"}
+          $height={"spacing-24"}
           $colorFilter={props.disabled ? disabledTextColor : defaultTextColor}
           aria-hidden={iconAriaHidden}
         />
@@ -228,18 +228,16 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
         $borderRadius={"border-radius-s"}
         $width={"100%"}
         $height={"100%"}
-        $top="all-spacing-0"
+        $top="spacing-0"
       />
-
       <OakBox
         className="yellow-shadow"
         $position={"absolute"}
         $borderRadius={"border-radius-s"}
         $width={"100%"}
         $height={"100%"}
-        $top="all-spacing-0"
+        $top="spacing-0"
       />
-
       <StyledInternalButton
         element={element}
         className="internal-button"

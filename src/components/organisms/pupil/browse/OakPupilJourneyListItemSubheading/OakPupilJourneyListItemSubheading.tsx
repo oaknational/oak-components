@@ -27,7 +27,7 @@ export const OakPupilJourneyListItemSubheading = (
       $justifyContent={"space-between"}
       $flexGrow={[null, 1]}
       $alignItems={["flex-start", "center"]}
-      $gap={"space-between-m"}
+      $gap={"spacing-24"}
     >
       {textSlot}
       <OakBulletList
@@ -36,8 +36,8 @@ export const OakPupilJourneyListItemSubheading = (
         $borderRadius={"border-radius-s"}
         $borderColor={"border-decorative5"}
         $ba={"border-solid-s"}
-        $ph={"inner-padding-xs"}
-        $pv={"inner-padding-ssx"}
+        $ph={"spacing-8"}
+        $pv={"spacing-4"}
       />
     </OakFlex>
   );

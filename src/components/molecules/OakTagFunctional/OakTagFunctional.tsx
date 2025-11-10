@@ -18,8 +18,8 @@ export const OakTagFunctional = (props: OakTagFunctionalProps) => {
   const { label, useSpan, ...oakFlexProps } = props;
   const icon = props.iconName && (
     <OakIcon
-      $height={"all-spacing-5"}
-      $width={"all-spacing-5"}
+      $height={"spacing-20"}
+      $width={"spacing-20"}
       iconName={props.iconName}
     />
   );
@@ -29,10 +29,10 @@ export const OakTagFunctional = (props: OakTagFunctionalProps) => {
   return (
     <OakFlex
       $borderRadius={"border-radius-m"}
-      $ph={"inner-padding-xs"}
-      $pv={"inner-padding-ssx"}
+      $ph={"spacing-8"}
+      $pv={"spacing-4"}
       $font={"heading-light-7"}
-      $gap={"space-between-ssx"}
+      $gap={"spacing-8"}
       {...oakFlexProps}
     >
       {leadingIcon}

@@ -153,8 +153,8 @@ export const OakTooltip = ({
                 <InternalTooltip
                   $background="bg-decorative5-main"
                   $color="text-primary"
-                  $pv="inner-padding-m"
-                  $ph="inner-padding-xl"
+                  $pv="spacing-16"
+                  $ph="spacing-24"
                   $font="heading-light-7"
                   tooltipPosition={tooltipPosition}
                   aria-expanded={isVisible}
@@ -188,15 +188,15 @@ function getTooltipPositionProps(
   switch (tooltipPosition) {
     case "top-left":
     case "top-right":
-      props.$top = "space-between-none";
+      props.$top = "spacing-0";
       props.$transform = `translateY(calc(-100% - ${parseSpacing(
-        "space-between-s",
+        "spacing-16",
       )}))`;
       break;
     default:
-      props.$bottom = "space-between-none";
+      props.$bottom = "spacing-0";
       props.$transform = `translateY(calc(100% + ${parseSpacing(
-        "space-between-s",
+        "spacing-16",
       )}))`;
       break;
   }
@@ -204,10 +204,10 @@ function getTooltipPositionProps(
   switch (tooltipPosition) {
     case "top-left":
     case "bottom-left":
-      props.$left = "space-between-none";
+      props.$left = "spacing-0";
       break;
     default:
-      props.$right = "space-between-none";
+      props.$right = "spacing-0";
       break;
   }
 

@@ -93,8 +93,8 @@ export const OakPupilJourneyContentGuidance = ({
           $alignItems="center"
           $flexDirection="column"
           $justifyContent="center"
-          $pv="inner-padding-xl"
-          $rowGap="space-between-m"
+          $pv="spacing-24"
+          $rowGap="spacing-24"
         >
           <OakPrimaryButton
             $font="heading-7"
@@ -122,7 +122,7 @@ export const OakPupilJourneyContentGuidance = ({
         }}
         title={title}
       >
-        <OakFlex $flexDirection="column" $rowGap="space-between-m2">
+        <OakFlex $flexDirection="column" $rowGap="spacing-32">
           {removedGuidanceDuplicates(contentGuidance).map(
             (guidance, index: number) => (
               <OakHeading

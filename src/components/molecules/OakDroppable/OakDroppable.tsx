@@ -86,17 +86,17 @@ export const OakDroppable: FC<
       <OakFlex
         ref={ref}
         $background={background}
-        $pa="inner-padding-m"
+        $pa="spacing-16"
         $borderRadius="border-radius-l"
-        $gap="space-between-s"
+        $gap="spacing-16"
         $flexDirection={["column", "row", "row"]}
         {...props}
       >
         <StyledFlex
           $background={slotBackground}
-          $pa="inner-padding-ssx"
+          $pa="spacing-4"
           $borderRadius="border-radius-m2"
-          $minHeight="all-spacing-11"
+          $minHeight="spacing-64"
           $flexBasis="100%"
           data-disabled={isDisabled}
         >
@@ -108,9 +108,9 @@ export const OakDroppable: FC<
             $borderRadius="border-radius-m2"
             $alignItems="center"
             $font="body-1"
-            $ph="inner-padding-l"
-            $minHeight="all-spacing-10"
-            $pv="inner-padding-ssx"
+            $ph="spacing-20"
+            $minHeight="spacing-56"
+            $pv="spacing-4"
             $flexBasis="100%"
             $width="100%"
             $alignSelf="center"

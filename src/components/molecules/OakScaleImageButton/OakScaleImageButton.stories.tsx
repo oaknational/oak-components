@@ -30,8 +30,8 @@ type Story = StoryObj<typeof OakScaleImageButton>;
 export const Default: Story = {
   render: (args) => (
     <OakFlex
-      $width={"all-spacing-7"}
-      $height={"all-spacing-7"}
+      $width={"spacing-32"}
+      $height={"spacing-32"}
       $pointerEvents={"auto"}
     >
       <OakScaleImageButton {...args} />
@@ -43,8 +43,8 @@ export const withImage: Story = {
   render: (args) => {
     return (
       <OakFlex
-        $width={"all-spacing-7"}
-        $height={"all-spacing-7"}
+        $width={"spacing-32"}
+        $height={"spacing-32"}
         $pointerEvents={"auto"}
       >
         <OakCloudinaryImage
@@ -52,7 +52,7 @@ export const withImage: Story = {
           cloudinaryId="v1705942058/test-images/Cat_August_2010-4_lklxsr.jpg"
           width={3640}
           height={2226}
-          $minWidth={"all-spacing-21"}
+          $minWidth={"spacing-480"}
         />
         <OakScaleImageButton {...args} />
       </OakFlex>

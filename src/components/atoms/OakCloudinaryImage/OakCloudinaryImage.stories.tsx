@@ -34,7 +34,7 @@ export const Default: Story = {
   args: {
     width: 3640,
     height: 2226,
-    $minWidth: "all-spacing-22",
+    $minWidth: "spacing-640",
     sizes: "(max-width: 768px) 100vw, 33vw",
   },
 };

@@ -12,7 +12,7 @@ describe("OakMultilineText", () => {
     const { getByPlaceholderText } = renderWithTheme(
       <OakMultilineText
         charLimit={200}
-        $height="all-spacing-10"
+        $height="spacing-56"
         placeholder="Start typing answer..."
         disabled={false}
         id={"1"}
@@ -26,7 +26,7 @@ describe("OakMultilineText", () => {
     const { container } = renderWithTheme(
       <OakMultilineText
         charLimit={200}
-        $height="all-spacing-10"
+        $height="spacing-56"
         disabled={false}
         id={"1"}
         name="textarea"
@@ -39,7 +39,7 @@ describe("OakMultilineText", () => {
     const { getByDisplayValue } = renderWithTheme(
       <OakMultilineText
         charLimit={200}
-        $height="all-spacing-10"
+        $height="spacing-56"
         disabled={false}
         initialValue="This is the initial value."
         id={"1"}
@@ -53,7 +53,7 @@ describe("OakMultilineText", () => {
     const { getByRole, getByLabelText } = renderWithTheme(
       <OakMultilineText
         charLimit={200}
-        $height="all-spacing-10"
+        $height="spacing-56"
         disabled={false}
         id={"1"}
         name="textarea"
@@ -80,7 +80,7 @@ describe("OakMultilineText", () => {
     const { getByDisplayValue } = renderWithTheme(
       <OakMultilineText
         charLimit={200}
-        $height="all-spacing-10"
+        $height="spacing-56"
         disabled={false}
         id={"1"}
         name="textarea"
@@ -103,7 +103,7 @@ describe("OakMultilineText", () => {
     const { getByRole } = renderWithTheme(
       <OakMultilineText
         charLimit={10}
-        $height="all-spacing-10"
+        $height="spacing-56"
         disabled={false}
         onError={onError}
         id={"1"}
@@ -129,7 +129,7 @@ describe("OakMultilineText", () => {
     const { getByRole, getByLabelText } = renderWithTheme(
       <OakMultilineText
         charLimit={100}
-        $height="all-spacing-10"
+        $height="spacing-56"
         disabled={false}
         onTextAreaChange={onTextAreaChange}
         id={"1"}
@@ -157,7 +157,7 @@ describe("OakMultilineText", () => {
     const { getByRole, getByText } = renderWithTheme(
       <OakMultilineText
         charLimit={100}
-        $height="all-spacing-10"
+        $height="spacing-56"
         disabled={false}
         invalidText="Invalid text"
         id={"1"}
@@ -179,7 +179,7 @@ describe("OakMultilineText", () => {
       <>
         <OakMultilineText
           charLimit={100}
-          $height="all-spacing-10"
+          $height="spacing-56"
           disabled={false}
           onTextAreaBlur={onTextAreaBlur}
           id={"1"}
@@ -207,7 +207,7 @@ describe("OakMultilineText", () => {
       <>
         <OakMultilineText
           charLimit={100}
-          $height="all-spacing-10"
+          $height="spacing-56"
           disabled={false}
           onFocus={onFocus}
           id={"1"}
@@ -234,7 +234,7 @@ describe("OakMultilineText", () => {
     const { getByRole, getByLabelText } = renderWithTheme(
       <OakMultilineText
         charLimit={100}
-        $height="all-spacing-10"
+        $height="spacing-56"
         disabled={false}
         initialValue="Test"
         id={"1"}

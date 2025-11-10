@@ -35,5 +35,5 @@ export const DefaultOakForm: Story = (args: Partial<OakFormProps>) => (
 );
 
 DefaultOakForm.args = {
-  $pa: "inner-padding-m",
+  $pa: "spacing-16",
 };

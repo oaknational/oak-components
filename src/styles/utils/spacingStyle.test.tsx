@@ -11,7 +11,7 @@ describe("spacingStyle", () => {
       ${marginStyle}
     `;
     const { getByTestId } = render(
-      <StyledComponent data-testid="test" $ma={"space-between-ssx"} />,
+      <StyledComponent data-testid="test" $ma={"spacing-8"} />,
     );
 
     expect(getByTestId("test")).toHaveStyle("margin-left: 0.5rem");
@@ -25,7 +25,7 @@ describe("spacingStyle", () => {
       ${marginStyle}
     `;
     const { getByTestId } = render(
-      <StyledComponent data-testid="test" $mv={"space-between-ssx"} />,
+      <StyledComponent data-testid="test" $mv={"spacing-8"} />,
     );
 
     expect(getByTestId("test")).toHaveStyle("margin-top: 0.5rem");
@@ -37,7 +37,7 @@ describe("spacingStyle", () => {
       ${marginStyle}
     `;
     const { getByTestId } = render(
-      <StyledComponent data-testid="test" $mh={"space-between-ssx"} />,
+      <StyledComponent data-testid="test" $mh={"spacing-8"} />,
     );
 
     expect(getByTestId("test")).toHaveStyle("margin-left: 0.5rem");
@@ -49,7 +49,7 @@ describe("spacingStyle", () => {
       ${paddingStyle}
     `;
     const { getByTestId } = render(
-      <StyledComponent data-testid="test" $pv={"inner-padding-xs"} />,
+      <StyledComponent data-testid="test" $pv={"spacing-8"} />,
     );
 
     expect(getByTestId("test")).toHaveStyle("padding-top: 0.5rem");
@@ -61,7 +61,7 @@ describe("spacingStyle", () => {
       ${paddingStyle}
     `;
     const { getByTestId } = render(
-      <StyledComponent data-testid="test" $ph={"inner-padding-xs"} />,
+      <StyledComponent data-testid="test" $ph={"spacing-8"} />,
     );
 
     expect(getByTestId("test")).toHaveStyle("padding-left: 0.5rem");
@@ -73,7 +73,7 @@ describe("spacingStyle", () => {
       ${paddingStyle}
     `;
     const { getByTestId } = render(
-      <StyledComponent data-testid="test" $pa={"inner-padding-xs"} />,
+      <StyledComponent data-testid="test" $pa={"spacing-8"} />,
     );
 
     expect(getByTestId("test")).toHaveStyle("padding-left: 0.5rem");
@@ -83,14 +83,14 @@ describe("spacingStyle", () => {
   });
 
   test.each([
-    ["$pl", "inner-padding-xs", "padding-left: 0.5rem;"],
-    ["$pr", "inner-padding-xs", "padding-right: 0.5rem;"],
-    ["$pt", "inner-padding-xs", "padding-top: 0.5rem;"],
-    ["$pb", "inner-padding-xs", "padding-bottom: 0.5rem;"],
-    ["$ml", "inner-padding-xs", "margin-left: 0.5rem;"],
-    ["$mr", "inner-padding-xs", "margin-right: 0.5rem;"],
-    ["$mt", "inner-padding-xs", "margin-top: 0.5rem;"],
-    ["$mb", "inner-padding-xs", "margin-bottom: 0.5rem;"],
+    ["$pl", "spacing-8", "padding-left: 0.5rem;"],
+    ["$pr", "spacing-8", "padding-right: 0.5rem;"],
+    ["$pt", "spacing-8", "padding-top: 0.5rem;"],
+    ["$pb", "spacing-8", "padding-bottom: 0.5rem;"],
+    ["$ml", "spacing-8", "margin-left: 0.5rem;"],
+    ["$mr", "spacing-8", "margin-right: 0.5rem;"],
+    ["$mt", "spacing-8", "margin-top: 0.5rem;"],
+    ["$mb", "spacing-8", "margin-bottom: 0.5rem;"],
   ])("should correctly handle prop '%s'", (prop, value, expected) => {
     const props = {
       [prop]: value,

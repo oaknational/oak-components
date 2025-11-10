@@ -42,15 +42,15 @@ export const OakQuizFeedback = ({
 
   return (
     <OakBox aria-live="polite">
-      <OakFlex $gap="space-between-xs" role="alert">
+      <OakFlex $gap="spacing-12" role="alert">
         <OakRoundIcon
           iconName={feedback === "correct" ? "tick" : "cross"}
           alt=""
-          $pa="inner-padding-none"
+          $pa="spacing-0"
           $background={feedback === "correct" ? "icon-success" : "icon-error"}
           $colorFilter="text-inverted"
-          $width="all-spacing-6"
-          $height="all-spacing-6"
+          $width="spacing-24"
+          $height="spacing-24"
         />
         <OakSpan
           $font="heading-6"
@@ -63,7 +63,7 @@ export const OakQuizFeedback = ({
       {answerFeedback && (
         <OakSpan
           as="p"
-          $mt="space-between-xs"
+          $mt="spacing-12"
           $font={feedback === "correct" ? "body-2-bold" : "body-2"}
           role="alert"
         >

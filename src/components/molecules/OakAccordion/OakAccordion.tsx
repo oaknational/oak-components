@@ -67,7 +67,7 @@ const Accordion = ({
       id={id}
       $borderColor="border-neutral-lighter"
       $ba="border-solid-s"
-      $pa="inner-padding-m"
+      $pa="spacing-16"
       $background={isOpen ? "bg-neutral" : "bg-primary"}
     >
       <OakFlex
@@ -75,26 +75,26 @@ const Accordion = ({
         $font="heading-light-7"
         $textDecoration={isOpen ? "underline" : "none"}
       >
-        <StyledOakFlex $alignItems="center" $pa="inner-padding-m" id={id}>
+        <StyledOakFlex $alignItems="center" $pa="spacing-16" id={id}>
           <OakIcon
             iconName="chevron-down"
-            $mr="space-between-s"
-            $width="all-spacing-6"
-            $height="all-spacing-6"
+            $mr="spacing-16"
+            $width="spacing-24"
+            $height="spacing-24"
             alt=""
             style={{ transform: isOpen ? "rotate(180deg)" : "none" }}
           />
           {header}
         </StyledOakFlex>
         {headerAfterSlot && (
-          <OakFlex $ml="space-between-m">{headerAfterSlot}</OakFlex>
+          <OakFlex $ml="spacing-24">{headerAfterSlot}</OakFlex>
         )}
       </OakFlex>
       <InternalAccordionContent
         aria-labelledby={id}
-        $ml="space-between-m"
-        $pl="inner-padding-m"
-        $mt="space-between-sssx"
+        $ml="spacing-24"
+        $pl="spacing-16"
+        $mt="spacing-4"
         $font="body-3"
       >
         {children}

@@ -79,7 +79,7 @@ export const InternalDroppableHoldingPen: FC<
   return (
     <StyledOakBox
       ref={ref}
-      $mb="space-between-m2"
+      $mb="spacing-32"
       $borderRadius="border-radius-l"
       data-over={isOver}
       style={{ minHeight: minHeight === 0 ? "auto" : minHeight }}
@@ -87,9 +87,9 @@ export const InternalDroppableHoldingPen: FC<
     >
       <OakFlex
         $alignItems="flex-start"
-        $minHeight="all-spacing-13"
-        $pa="inner-padding-s"
-        $gap="space-between-xs"
+        $minHeight="spacing-80"
+        $pa="spacing-12"
+        $gap="spacing-12"
         $flexWrap="wrap"
         ref={setContentBox}
       >

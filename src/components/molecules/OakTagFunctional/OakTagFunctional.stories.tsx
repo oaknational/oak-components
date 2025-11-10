@@ -24,7 +24,7 @@ const meta: Meta<typeof OakTagFunctional> = {
   },
   decorators: [
     (Story) => (
-      <OakFlex $pa={"inner-padding-xl"} $flexDirection={"row"}>
+      <OakFlex $pa={"spacing-24"} $flexDirection={"row"}>
         <Story />
       </OakFlex>
     ),
@@ -39,7 +39,7 @@ export const Default: Story = {
   render: (args) => {
     const iconName = args.iconName ? args.iconName : "arrow-right";
     return (
-      <OakFlex $gap="space-between-m">
+      <OakFlex $gap="spacing-24">
         <OakTagFunctional
           label={args.label ? args.label : "No icon"}
           $background="mint"

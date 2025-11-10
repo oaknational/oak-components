@@ -21,7 +21,7 @@ const meta: Meta<typeof OakInfo> = {
   },
   decorators: [
     (Story) => (
-      <OakBox $mt="space-between-xxl">
+      <OakBox $mt="spacing-72">
         <Story />
       </OakBox>
     ),

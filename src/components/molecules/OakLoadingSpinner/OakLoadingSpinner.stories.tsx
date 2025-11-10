@@ -29,4 +29,4 @@ export const DefaultOakLoadingSpinner: Story = (
   args: Partial<OakLoadingSpinnerProps>,
 ) => <OakLoadingSpinner {...args} />;
 
-DefaultOakLoadingSpinner.args = { $width: "all-spacing-15" };
+DefaultOakLoadingSpinner.args = { $width: "spacing-100" };

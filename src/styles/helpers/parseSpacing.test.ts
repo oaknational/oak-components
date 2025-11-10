@@ -7,15 +7,15 @@ describe("parseSpacing", () => {
   });
 
   it("should return the corresponding css value for an OakAllSpacing type", () => {
-    expect(parseSpacing("all-spacing-2")).toBe("0.5rem");
+    expect(parseSpacing("spacing-8")).toBe("0.5rem");
   });
 
   it("should return the corresponding css value for an OakInnerPadding type", () => {
-    expect(parseSpacing("inner-padding-xs")).toBe("0.5rem");
+    expect(parseSpacing("spacing-8")).toBe("0.5rem");
   });
 
   it("should return the corresponding css value for an OakSpaceBetween type", () => {
-    expect(parseSpacing("space-between-ssx")).toBe("0.5rem");
+    expect(parseSpacing("spacing-8")).toBe("0.5rem");
   });
 
   it("should pass through percentages", () => {

@@ -21,10 +21,10 @@ export const OakPrimaryNav = ({ ariaLabel, navItems }: OakPrimaryNavProps) => {
       <OakFlex
         as={"ul"}
         $flexDirection={["row"]}
-        $gap={"space-between-m"}
-        $mh={"space-between-none"}
-        $mv={"space-between-none"}
-        $ph={"inner-padding-none"}
+        $gap={"spacing-24"}
+        $mh={"spacing-0"}
+        $mv={"spacing-0"}
+        $ph={"spacing-0"}
       >
         {navItems.map(
           (

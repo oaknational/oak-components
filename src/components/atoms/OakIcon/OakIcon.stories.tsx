@@ -38,10 +38,10 @@ type Story = StoryObj<typeof OakIcon>;
 
 export const AllIcons: Story = {
   render: (args: OakIconProps) => (
-    <OakFlex $flexDirection={"column"} $gap="space-between-xs">
+    <OakFlex $flexDirection={"column"} $gap="spacing-12">
       {oakIconNames.map((iconName) => {
         return (
-          <OakFlex key={iconName} $gap={"space-between-s"}>
+          <OakFlex key={iconName} $gap={"spacing-16"}>
             <OakIcon {...args} iconName={iconName} alt="" />
             <OakTypography>{iconName}</OakTypography>
           </OakFlex>
@@ -62,8 +62,8 @@ export const PickIcon: Story = {
   render: (args: OakIconProps) => <OakIcon {...args} />,
   args: {
     iconName: "home",
-    $width: "all-spacing-20",
-    $height: "all-spacing-20",
+    $width: "spacing-360",
+    $height: "spacing-360",
   },
   parameters: {
     controls: {

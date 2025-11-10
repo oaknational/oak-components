@@ -73,7 +73,7 @@ type Story = StoryObj<typeof InternalShadowRectButton>;
 
 export const Default: Story = {
   render: (args) => (
-    <OakFlex $gap="space-between-m">
+    <OakFlex $gap="spacing-24">
       <InternalShadowRectButton {...args}>Button</InternalShadowRectButton>
       <InternalShadowRectButton {...args} disabled>
         Disabled Button
@@ -99,7 +99,7 @@ export const Default: Story = {
 
 export const ButtonWithNoHoverShadow: Story = {
   render: (args) => (
-    <OakFlex $gap="space-between-m">
+    <OakFlex $gap="spacing-24">
       <InternalShadowRectButton {...args}>
         Button with no hover shadow
       </InternalShadowRectButton>
@@ -122,7 +122,7 @@ export const ButtonWithNoHoverShadow: Story = {
 
 export const LinkStyledAsButton: Story = {
   render: (args) => (
-    <OakFlex $gap="space-between-m">
+    <OakFlex $gap="spacing-24">
       <InternalShadowRectButton {...args}>Link</InternalShadowRectButton>
     </OakFlex>
   ),
@@ -144,14 +144,14 @@ export const LinkStyledAsButton: Story = {
 
 export const ButtonInList: Story = {
   render: (args) => (
-    <OakUL $width={"all-spacing-18"}>
-      <OakLI $pv={"inner-padding-s"}>
+    <OakUL $width={"spacing-180"}>
+      <OakLI $pv={"spacing-12"}>
         <InternalShadowRectButton {...args}>Link 1</InternalShadowRectButton>
       </OakLI>
-      <OakLI $pv={"inner-padding-s"}>
+      <OakLI $pv={"spacing-12"}>
         <InternalShadowRectButton {...args}>Link 2</InternalShadowRectButton>
       </OakLI>
-      <OakLI $pv={"inner-padding-s"}>
+      <OakLI $pv={"spacing-12"}>
         <InternalShadowRectButton {...args}>Link 3</InternalShadowRectButton>
       </OakLI>
     </OakUL>
@@ -172,7 +172,7 @@ export const ButtonInList: Story = {
 
 export const VeritcalLayout: Story = {
   render: (args) => (
-    <OakFlex $gap="space-between-m">
+    <OakFlex $gap="spacing-24">
       <InternalShadowRectButton {...args}>Button</InternalShadowRectButton>
     </OakFlex>
   ),
@@ -196,13 +196,13 @@ export const CustomIcon: Story = {
     const customIcon = (
       <OakIcon
         iconName="books"
-        $pa={"inner-padding-m"}
-        $width={"all-spacing-14"}
-        $height={"all-spacing-14"}
+        $pa={"spacing-16"}
+        $width={"spacing-92"}
+        $height={"spacing-92"}
       />
     );
     return (
-      <OakFlex $gap="space-between-m">
+      <OakFlex $gap="spacing-24">
         <InternalShadowRectButton {...args} iconOverride={customIcon}>
           Button
         </InternalShadowRectButton>
@@ -211,7 +211,7 @@ export const CustomIcon: Story = {
   },
   args: {
     iconLayout: "column",
-    iconGap: "space-between-m",
+    iconGap: "spacing-24",
     font: "heading-5",
     defaultBackground: "bg-btn-secondary",
     defaultTextColor: "text-primary",

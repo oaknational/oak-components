@@ -32,7 +32,7 @@ export const OakSmallSecondaryButtonWithDropdown = (
     <OakButtonWithDropdown
       {...props}
       buttonComponent={OakSmallSecondaryButton}
-      dropdownTopSpacing="all-spacing-8"
+      dropdownTopSpacing="spacing-40"
       flexWidth={["100%"]}
     />
   );

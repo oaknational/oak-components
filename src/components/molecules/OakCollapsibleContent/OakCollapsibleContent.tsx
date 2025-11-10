@@ -23,8 +23,8 @@ const StyledScrollBox = styled(OakBox)`
     background-color: ${parseColor("white")};
   }
   &::-webkit-scrollbar {
-    width: ${parseSpacing("all-spacing-3")};
-    height: ${parseSpacing("all-spacing-3")};
+    width: ${parseSpacing("spacing-12")};
+    height: ${parseSpacing("spacing-12")};
     border-radius: ${parseBorderRadius("border-radius-m")};
   }
 `;
@@ -43,8 +43,8 @@ export const OakCollapsibleContent = ({
     <OakBox $display={isOpen ? "block" : "none"} id={id}>
       <OakFlex
         $background="bg-neutral-stronger"
-        $ph="inner-padding-m"
-        $pv="inner-padding-xl"
+        $ph="spacing-16"
+        $pv="spacing-24"
         $borderRadius="border-radius-m"
         {...rest}
       >
@@ -52,7 +52,7 @@ export const OakCollapsibleContent = ({
           $overflow="auto"
           $maxHeight="100%"
           $width="100%"
-          $pr="inner-padding-m"
+          $pr="spacing-16"
         >
           {children}
         </StyledScrollBox>

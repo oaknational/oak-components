@@ -30,7 +30,7 @@ const UnitYearAndOptionCount = ({
   unavailable: boolean | undefined;
 }) => (
   <StyledYearAndOptionFlex
-    $width={["100%", "all-spacing-19"]}
+    $width={["100%", "spacing-240"]}
     $justifyContent={["space-between"]}
     $alignItems={"center"}
   >
@@ -42,8 +42,8 @@ const UnitYearAndOptionCount = ({
     </OakSpan>
 
     <OakBox
-      $ph={"inner-padding-xs"}
-      $pv={"inner-padding-ssx"}
+      $ph={"spacing-8"}
+      $pv={"spacing-4"}
       $ba={"border-solid-s"}
       $borderColor={
         unavailable ? "border-neutral-lighter" : "bg-decorative4-main"
@@ -75,9 +75,9 @@ const UnitIndex = ({
     $btlr={"border-radius-s"}
     $bblr={"border-radius-s"}
     $background={unavailable ? "bg-neutral-stronger" : "lavender"}
-    $minWidth={["all-spacing-8", "all-spacing-11"]}
-    $width={["all-spacing-8", "all-spacing-11", "auto"]}
-    $height={["all-spacing-8", "auto", "auto"]}
+    $minWidth={["spacing-40", "spacing-64"]}
+    $width={["spacing-40", "spacing-64", "auto"]}
+    $height={["spacing-40", "auto", "auto"]}
     $justifyContent={"center"}
     $alignItems={"center"}
     {...rest}
@@ -99,10 +99,7 @@ const StyledUnitHeading = ({
   unavailable: boolean | undefined;
 }) => {
   return (
-    <OakFlex
-      $maxWidth={"all-spacing-21"}
-      $mr={["space-between-none", "space-between-s"]}
-    >
+    <OakFlex $maxWidth={"spacing-480"} $mr={["spacing-0", "spacing-16"]}>
       <OakHeading
         $color={unavailable ? "text-disabled" : "text-primary"}
         $font={"heading-7"}
@@ -166,9 +163,9 @@ export const OakUnitListOptionalityItem = (
     >
       <OakFlex
         $display={["flex", "none"]}
-        $ph="inner-padding-m"
-        $pt="inner-padding-m"
-        $gap="space-between-s"
+        $ph="spacing-16"
+        $pt="spacing-16"
+        $gap="spacing-16"
       >
         <UnitIndex
           unavailable={unavailable}
@@ -185,11 +182,10 @@ export const OakUnitListOptionalityItem = (
       <UnitIndex unavailable={unavailable} $display={["none", "flex", "flex"]}>
         {index}
       </UnitIndex>
-
-      <OakBox $pa={"inner-padding-m"} $width={"100%"}>
+      <OakBox $pa={"spacing-16"} $width={"100%"}>
         <OakFlex
           $alignItems={"center"}
-          $mb={"space-between-s"}
+          $mb={"spacing-16"}
           $display={["none", "flex"]}
         >
           <OakFlex
@@ -212,11 +208,11 @@ export const OakUnitListOptionalityItem = (
         <OakFlex
           $alignItems={"center"}
           $justifyContent={"space-between"}
-          $mb={"space-between-s"}
+          $mb={"spacing-16"}
           $display={["flex", "none", "none"]}
           $width={"100%"}
         >
-          <OakBox $mb={"space-between-s"} $display={["none", "auto", "auto"]}>
+          <OakBox $mb={"spacing-16"} $display={["none", "auto", "auto"]}>
             <StyledUnitHeading unavailable={unavailable}>
               {nullTitle}
             </StyledUnitHeading>
@@ -228,7 +224,7 @@ export const OakUnitListOptionalityItem = (
             unavailable={unavailable}
           />
         </OakFlex>
-        <OakGrid $rg={"space-between-xs"} $cg={"space-between-xs"}>
+        <OakGrid $rg={"spacing-12"} $cg={"spacing-12"}>
           {optionalityUnits.map((unit, index) => (
             <OakGridArea key={`${unit.title}-${index}`} $colSpan={[12, 6]}>
               <OakUnitListOptionalityItemCard

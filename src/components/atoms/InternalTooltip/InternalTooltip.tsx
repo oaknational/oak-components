@@ -24,7 +24,7 @@ type StyledSvgProps = {
   $tooltipPosition?: InternalTooltipProps["tooltipPosition"];
 };
 
-const ARROW_SIZE = parseSpacing("all-spacing-4");
+const ARROW_SIZE = parseSpacing("spacing-16");
 
 const StyledSvg = styled.svg<StyledSvgProps>`
   position: absolute;
@@ -33,24 +33,24 @@ const StyledSvg = styled.svg<StyledSvgProps>`
       case "bottom-right":
         return css`
           top: -${ARROW_SIZE};
-          right: ${parseSpacing("all-spacing-0")};
+          right: ${parseSpacing("spacing-0")};
           transform: scale(-1, -1);
         `;
       case "top-right":
         return css`
           bottom: -${ARROW_SIZE};
-          right: ${parseSpacing("all-spacing-0")};
+          right: ${parseSpacing("spacing-0")};
           transform: scaleX(-1);
         `;
       case "top-left":
         return css`
           bottom: -${ARROW_SIZE};
-          left: ${parseSpacing("all-spacing-0")};
+          left: ${parseSpacing("spacing-0")};
         `;
       default:
         return css`
           top: -${ARROW_SIZE};
-          left: ${parseSpacing("all-spacing-0")};
+          left: ${parseSpacing("spacing-0")};
           transform: scaleY(-1);
         `;
     }
@@ -79,7 +79,7 @@ export const InternalTooltip = ({
       $position="relative"
       $background={$background}
       $color={$color}
-      $maxWidth={["all-spacing-20", "all-spacing-22"]}
+      $maxWidth={["spacing-360", "spacing-640"]}
       {...props}
     >
       {children}

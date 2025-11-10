@@ -39,8 +39,8 @@ export const OakTertiaryInvertedButton = <C extends ElementType = "button">({
       defaultTextColor="text-primary"
       hoverTextColor="text-subdued"
       disabledTextColor="text-disabled"
-      iconBackgroundSize={"all-spacing-7"}
-      iconSize={"all-spacing-6"}
+      iconBackgroundSize={"spacing-32"}
+      iconSize={"spacing-24"}
     >
       {children}
     </InternalShadowRoundButton>

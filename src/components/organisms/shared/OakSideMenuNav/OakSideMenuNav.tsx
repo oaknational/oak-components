@@ -33,8 +33,8 @@ export const OakSideMenuNav = (props: OakSideMenuNavProps) => {
       <OakFlex
         $flexDirection="column"
         $background={["bg-decorative1-subdued", "white"]}
-        $pa={["inner-padding-xl4", "inner-padding-none"]}
-        $gap="space-between-s"
+        $pa={["spacing-48", "spacing-0"]}
+        $gap="spacing-16"
       >
         <OakHeading
           tag="h2"
@@ -44,12 +44,7 @@ export const OakSideMenuNav = (props: OakSideMenuNavProps) => {
         >
           {heading}
         </OakHeading>
-        <OakUL
-          $reset
-          $display="flex"
-          $gap="space-between-s"
-          $flexDirection="column"
-        >
+        <OakUL $reset $display="flex" $gap="spacing-16" $flexDirection="column">
           {menuItems.map((item) => (
             <OakLI key={item.href}>
               <OakSideMenuNavLink

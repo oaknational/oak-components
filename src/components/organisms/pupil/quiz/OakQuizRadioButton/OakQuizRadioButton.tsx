@@ -128,7 +128,7 @@ export const OakQuizRadioButton = (props: OakQuizRadioButtonProps) => {
 
   return (
     <StyledOakFlex
-      $pa="inner-padding-l"
+      $pa="spacing-20"
       $borderRadius="border-radius-m2"
       $justifyContent="space-between"
       $position="relative"
@@ -142,18 +142,18 @@ export const OakQuizRadioButton = (props: OakQuizRadioButtonProps) => {
       <OakRadioButton
         value={value}
         disabled={disabled || showFeedback}
-        $labelGap="space-between-s"
+        $labelGap="spacing-16"
         disableFocusRing
-        radioInnerSize="all-spacing-6"
-        radioOuterSize="all-spacing-7"
+        radioInnerSize="spacing-24"
+        radioOuterSize="spacing-32"
         radioBackground={radioBackground}
         checkedRadioBorderWidth="border-solid-l"
         label={
           image ? (
             <OakFlex
               $flexDirection="column"
-              $minWidth="all-spacing-20"
-              $gap="space-between-s"
+              $minWidth="spacing-360"
+              $gap="spacing-16"
             >
               <OakBox>{image}</OakBox>
               {label}

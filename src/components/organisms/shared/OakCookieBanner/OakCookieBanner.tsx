@@ -85,9 +85,9 @@ export const OakCookieBanner = ({
       $bt="border-solid-s"
       $borderColor="border-neutral"
       $position={isFixed ? "fixed" : undefined}
-      $bottom={isFixed ? "all-spacing-0" : undefined}
-      $right={isFixed ? "all-spacing-0" : undefined}
-      $left={isFixed ? "all-spacing-0" : undefined}
+      $bottom={isFixed ? "spacing-0" : undefined}
+      $right={isFixed ? "spacing-0" : undefined}
+      $left={isFixed ? "spacing-0" : undefined}
       $zIndex={finalZIndex}
       $color="text-primary"
       data-testid="cookie-banner"
@@ -96,9 +96,9 @@ export const OakCookieBanner = ({
         <OakFlex
           $alignItems={["flex-start", "flex-start", "center"]}
           $flexDirection={["column", "column", "row"]}
-          $mh={["space-between-s", "space-between-m", "space-between-xl"]}
-          $pv="inner-padding-xl"
-          $gap={["space-between-m", "space-between-m", "space-between-m2"]}
+          $mh={["spacing-16", "spacing-24", "spacing-56"]}
+          $pv="spacing-24"
+          $gap={["spacing-24", "spacing-24", "spacing-32"]}
         >
           {(() => {
             switch (state) {
@@ -146,7 +146,7 @@ export const OakCookieBanner = ({
                       the site is being used.
                     </OakBox>
                     <OakFlex
-                      $gap={["space-between-xs", "space-between-m2"]}
+                      $gap={["spacing-12", "spacing-32"]}
                       $justifyContent="flex-end"
                       $flexDirection={["column", "row"]}
                       $flexWrap={["wrap", "wrap", "nowrap"]}

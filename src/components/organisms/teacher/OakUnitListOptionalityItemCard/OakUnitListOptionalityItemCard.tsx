@@ -109,8 +109,8 @@ export const OakUnitListOptionalityItemCard = (
   return (
     <OakFlex $display={"flex"} $flexGrow={1}>
       <StyledOptionalityListItem
-        $ph="inner-padding-s"
-        $pv="inner-padding-m"
+        $ph="spacing-12"
+        $pv="spacing-16"
         $background={"bg-decorative3-very-subdued"}
         $borderRadius="border-radius-m"
         $borderColor={"border-decorative3"}
@@ -128,7 +128,7 @@ export const OakUnitListOptionalityItemCard = (
             $font={"heading-7"}
             $color={unavailable ? "text-disabled" : "text-primary"}
             tag={"h3"}
-            $mb={"space-between-xs"}
+            $mb={"spacing-12"}
             as={onSave ? "a" : "h3"}
             onClick={unavailable ? undefined : onClick}
             href={unavailable ? undefined : href}
@@ -139,7 +139,7 @@ export const OakUnitListOptionalityItemCard = (
           </HeadingWithFocus>
           <OakFlex
             $justifyContent={onSave ? "space-between" : "flex-end"}
-            $ph="inner-padding-ssx"
+            $ph="spacing-4"
           >
             <OakFlex $alignItems={"center"} $justifyContent={"flex-end"}>
               <OakSpan

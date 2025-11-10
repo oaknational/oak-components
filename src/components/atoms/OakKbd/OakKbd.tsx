@@ -18,8 +18,8 @@ export const OakKbd = ({ children }: OakKbdProps) => {
       $background="bg-primary"
       $borderRadius="border-radius-m"
       $ba="border-solid-m"
-      $ph="inner-padding-xs"
-      $pv="inner-padding-ssx"
+      $ph="spacing-8"
+      $pv="spacing-4"
       $whiteSpace="nowrap"
     >
       {children}

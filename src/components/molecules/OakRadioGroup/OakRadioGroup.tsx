@@ -58,7 +58,7 @@ export const OakRadioGroup = (props: OakRadioGroupProps) => {
     label,
     onChange,
     $font = "body-1-bold",
-    $gap = "space-between-s",
+    $gap = "spacing-16",
     disabled,
     value,
     defaultValue = "",
@@ -82,8 +82,8 @@ export const OakRadioGroup = (props: OakRadioGroupProps) => {
       $gap={$gap}
       $flexDirection={"column"}
       $borderStyle={"none"}
-      $pa="inner-padding-none"
-      $ma="space-between-none"
+      $pa="spacing-0"
+      $ma="spacing-0"
       {...rest}
     >
       {label && (

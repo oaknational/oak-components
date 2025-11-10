@@ -31,7 +31,7 @@ const meta: Meta<typeof OakLessonNavItem> = {
   decorators: [
     (Story) => {
       return (
-        <OakFlex $flexDirection="column" $gap="space-between-m">
+        <OakFlex $flexDirection="column" $gap="spacing-24">
           {Story()}
         </OakFlex>
       );

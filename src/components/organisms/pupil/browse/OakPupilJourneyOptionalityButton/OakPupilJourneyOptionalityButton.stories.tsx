@@ -22,11 +22,7 @@ const meta: Meta<typeof OakPupilJourneyOptionalityButton> = {
   decorators: [
     (Story) => {
       return (
-        <OakFlex
-          $flexDirection="column"
-          $gap="space-between-m"
-          $pa={"inner-padding-xl"}
-        >
+        <OakFlex $flexDirection="column" $gap="spacing-24" $pa={"spacing-24"}>
           {Story()}
         </OakFlex>
       );

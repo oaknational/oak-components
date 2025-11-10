@@ -51,11 +51,11 @@ export const OakLessonReviewIntroVideo = (
       $borderColor={completed ? completedBackgroundColor : borderColor}
       {...rest}
     >
-      <OakFlex $gap="space-between-m" $alignItems="center">
+      <OakFlex $gap="spacing-24" $alignItems="center">
         <OakRoundIcon
           iconName={lessonSectionNameToIconMap.get(lessonSectionName)}
-          $width="all-spacing-10"
-          $height="all-spacing-10"
+          $width="spacing-56"
+          $height="spacing-56"
           $background={iconBackgroundColor}
         />
         <ReviewItemTitleSection

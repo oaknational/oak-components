@@ -22,7 +22,7 @@ const meta: Meta<typeof OakQuizFeedback> = {
   },
   decorators: [
     (Story) => (
-      <OakFlex $flexDirection="column" $gap="space-between-m">
+      <OakFlex $flexDirection="column" $gap="spacing-24">
         <Story />
       </OakFlex>
     ),

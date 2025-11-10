@@ -23,11 +23,11 @@ export type OakHandDrawnBoxWithIconProps = Omit<
 export const OakHandDrawnCardWithIcon = ({
   iconName,
   iconColor = "text-primary",
-  iconWidth = ["all-spacing-11", "all-spacing-16"],
-  iconHeight = ["all-spacing-11", "all-spacing-16"],
+  iconWidth = ["spacing-64", "spacing-120"],
+  iconHeight = ["spacing-64", "spacing-120"],
   alt,
-  $width = ["all-spacing-13", "all-spacing-17"],
-  $height = ["all-spacing-13", "all-spacing-17"],
+  $width = ["spacing-80", "spacing-160"],
+  $height = ["spacing-80", "spacing-160"],
   $alignItems = "center",
   $justifyContent = "center",
   ...props

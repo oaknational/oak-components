@@ -110,43 +110,30 @@ export const OakLinkCard = ({
       $flexDirection={narrow ? "column-reverse" : ["column-reverse", "row"]}
       $alignItems={narrow ? "flex-start" : ["flex-start", "center"]}
       $justifyContent="space-between"
-      $gap={"space-between-m2"}
+      $gap={"spacing-32"}
       $background={"bg-primary"}
-      $pa="inner-padding-xl"
+      $pa="spacing-24"
       $borderRadius="border-radius-m2"
       $width="100%"
       $dropShadow={"drop-shadow-centred-standard"}
     >
       <OakBox $width={"100%"}>{mainSection}</OakBox>
-
       <OakBox $position="relative">
         <OakHandDrawnCardWithIcon
           iconName={iconName}
           alt={iconAlt}
-          iconWidth={
-            narrow ? ["all-spacing-11"] : ["all-spacing-11", "all-spacing-15"]
-          }
-          iconHeight={
-            narrow ? ["all-spacing-11"] : ["all-spacing-11", "all-spacing-15"]
-          }
-          $width={
-            narrow ? ["all-spacing-13"] : ["all-spacing-13", "all-spacing-17"]
-          }
-          $height={
-            narrow ? ["all-spacing-13"] : ["all-spacing-13", "all-spacing-17"]
-          }
+          iconWidth={narrow ? ["spacing-64"] : ["spacing-64", "spacing-100"]}
+          iconHeight={narrow ? ["spacing-64"] : ["spacing-64", "spacing-100"]}
+          $width={narrow ? ["spacing-80"] : ["spacing-80", "spacing-160"]}
+          $height={narrow ? ["spacing-80"] : ["spacing-80", "spacing-160"]}
           fill={iconFill}
           iconColor={iconColor}
         />
         {showNew && (
           <OakBox
             $position={"absolute"}
-            $top={
-              narrow ? ["all-spacing-0"] : ["all-spacing-0", "all-spacing-2"]
-            }
-            $left={
-              narrow ? ["all-spacing-0"] : ["all-spacing-0", "all-spacing-2"]
-            }
+            $top={narrow ? ["spacing-0"] : ["spacing-0", "spacing-8"]}
+            $left={narrow ? ["spacing-0"] : ["spacing-0", "spacing-8"]}
             data-testid="oak-new-promo-tag"
             $zIndex="in-front"
             aria-hidden="true"

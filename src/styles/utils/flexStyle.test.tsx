@@ -26,10 +26,10 @@ describe("flexStyle", () => {
     ["$flexGrow", "1", "flex-grow: 1;"],
     ["$flexShrink", "1", "flex-shrink: 1;"],
     ["$order", "1", "order: 1;"],
-    ["$flexBasis", "space-between-ssx", "flex-basis: 0.5rem;"],
-    ["$gap", "space-between-ssx", "gap: 0.5rem;"],
-    ["$columnGap", "space-between-ssx", "column-gap: 0.5rem;"],
-    ["$rowGap", "space-between-ssx", "row-gap: 0.5rem;"],
+    ["$flexBasis", "spacing-8", "flex-basis: 0.5rem;"],
+    ["$gap", "spacing-8", "gap: 0.5rem;"],
+    ["$columnGap", "spacing-8", "column-gap: 0.5rem;"],
+    ["$rowGap", "spacing-8", "row-gap: 0.5rem;"],
   ])("should correctly handle prop '%s'", (prop, value, expected) => {
     const props = {
       [prop]: value,

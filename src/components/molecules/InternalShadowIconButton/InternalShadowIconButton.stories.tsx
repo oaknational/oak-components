@@ -62,7 +62,7 @@ const meta: Meta<typeof InternalShadowIconButton> = {
     defaultIconColor: "bg-btn-primary",
   },
   render: (args) => (
-    <OakFlex $gap="space-between-m">
+    <OakFlex $gap="spacing-24">
       <InternalShadowIconButton {...args}>Button</InternalShadowIconButton>
       <InternalShadowIconButton {...args} disabled>
         Disabled Button
@@ -100,14 +100,14 @@ export const LinkStyledAsButton: Story = {
 
 export const ButtonInList: Story = {
   render: (args) => (
-    <OakUL $width={"all-spacing-18"}>
-      <OakLI $pv={"inner-padding-s"}>
+    <OakUL $width={"spacing-180"}>
+      <OakLI $pv={"spacing-12"}>
         <InternalShadowIconButton {...args}>Link 1</InternalShadowIconButton>
       </OakLI>
-      <OakLI $pv={"inner-padding-s"}>
+      <OakLI $pv={"spacing-12"}>
         <InternalShadowIconButton {...args}>Link 2</InternalShadowIconButton>
       </OakLI>
-      <OakLI $pv={"inner-padding-s"}>
+      <OakLI $pv={"spacing-12"}>
         <InternalShadowIconButton {...args}>Link 3</InternalShadowIconButton>
       </OakLI>
     </OakUL>
