@@ -1,4 +1,4 @@
-import React, { MutableRefObject } from "react";
+import React, { ElementType, MutableRefObject } from "react";
 import styled, { css } from "styled-components";
 
 import {
@@ -69,7 +69,7 @@ const StyledOakIndexBox = styled(OakFlex)`
   }
 `;
 
-export type OakUnitListItemProps = {
+export type OakUnitListItemProps<element extends ElementType> = {
   unavailable?: boolean;
   index: number;
   title: string;
@@ -83,13 +83,16 @@ export type OakUnitListItemProps = {
   isSaved?: boolean;
   isSaving?: boolean;
   saveButtonId?: string;
+  as?: element;
 };
 
 /**
  *
  * OakUnitsListItem component used as links for unit cards
  */
-export const OakUnitListItem = (props: OakUnitListItemProps) => {
+export const OakUnitListItem = <element extends ElementType = "a">(
+  props: OakUnitListItemProps<element>,
+) => {
   const {
     lessonCount,
     href,
@@ -102,6 +105,7 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
     isSaving,
     firstItemRef,
     saveButtonId,
+    as = "a",
     ...rest
   } = props;
 
@@ -125,7 +129,7 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
           $alignItems="center"
           $width="100%"
           $height="100%"
-          as="a"
+          as={as}
           href={unavailable ? undefined : href}
           ref={firstItemRef}
           onClick={unavailable ? undefined : onClick}
@@ -214,7 +218,7 @@ export const OakUnitListItem = (props: OakUnitListItemProps) => {
         <OakFlex $flexDirection="column" $gap="space-between-s" $width="100%">
           <OakFlex
             $gap="space-between-s"
-            as="a"
+            as={as}
             href={unavailable ? undefined : href}
           >
             <OakFlex
