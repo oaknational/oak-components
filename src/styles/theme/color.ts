@@ -99,9 +99,7 @@ export const oakColorFilterTokens = {
 
 export type OakColorFilterToken = keyof typeof oakColorFilterTokens;
 
-const oakTransparentTokenConst = ["transparent"] as const;
-
-const oakTextColorTokensConst = [
+const oakUiRoleTokensConst = [
   "text-primary",
   "text-subdued",
   "text-error",
@@ -113,12 +111,6 @@ const oakTextColorTokensConst = [
   "text-inverted",
   "text-success",
   "text-warning",
-  ...oakTransparentTokenConst,
-] as const;
-
-export type OakTextColorToken = (typeof oakTextColorTokensConst)[number];
-
-const oakBackgroundColorTokensConst = [
   "bg-primary",
   "bg-neutral",
   "bg-neutral-stronger",
@@ -147,13 +139,6 @@ const oakBackgroundColorTokensConst = [
   "bg-decorative5-very-subdued",
   "bg-correct",
   "bg-incorrect",
-  ...oakTransparentTokenConst,
-] as const;
-
-export type OakBackgroundColorToken =
-  (typeof oakBackgroundColorTokensConst)[number];
-
-const oakIconColorTokensConst = [
   "icon-main",
   "icon-inverted",
   "icon-disabled",
@@ -161,12 +146,6 @@ const oakIconColorTokensConst = [
   "icon-success",
   "icon-error",
   "icon-warning",
-  ...oakTransparentTokenConst,
-] as const;
-
-export type OakIconColorToken = (typeof oakIconColorTokensConst)[number];
-
-const oakBorderColorTokensConst = [
   "border-primary",
   "border-inverted",
   "border-neutral",
@@ -187,27 +166,11 @@ const oakBorderColorTokensConst = [
   "border-decorative5-stronger",
   "border-decorative6",
   "border-decorative6-stronger",
-  ...oakTransparentTokenConst,
-] as const;
-
-export type OakBorderColorToken = (typeof oakBorderColorTokensConst)[number];
-
-const oakCodeColorTokensConst = [
+  "transparent",
   "code-blue",
   "code-green",
   "code-grey",
   "code-pink",
-] as const;
-
-export type OakCodeColorToken = (typeof oakCodeColorTokensConst)[number];
-
-const oakUiRoleTokensConst = [
-  ...oakTextColorTokensConst,
-  ...oakBackgroundColorTokensConst,
-  ...oakIconColorTokensConst,
-  ...oakBorderColorTokensConst,
-  ...oakCodeColorTokensConst,
-  ...oakTransparentTokenConst,
 ] as const;
 
 export type OakUiRoleToken = (typeof oakUiRoleTokensConst)[number];

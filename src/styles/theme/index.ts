@@ -4,11 +4,6 @@ export type {
   OakColorToken,
   OakCombinedColorToken,
   OakUiRoleToken,
-  OakTextColorToken,
-  OakBackgroundColorToken,
-  OakIconColorToken,
-  OakBorderColorToken,
-  OakCodeColorToken,
   OakColorFilterToken,
 } from "./color";
 
