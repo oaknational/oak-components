@@ -1,11 +1,7 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import OakSelect, {
-  OakOptGroup,
-  OakOptGroupLegend,
-  OakOption,
-} from "./OakSelect";
+import OakSelect, { OakOptGroup, OakOption } from "./OakSelect";
 
 import { OakJauntyAngleLabel } from "@/components/molecules/OakJauntyAngleLabel";
 import { OakBox } from "@/components/atoms";
@@ -25,6 +21,28 @@ export const Default: Story = {
     <OakSelect {...args} $display={"block"}>
       <OakOption>one</OakOption>
       <OakOption>two</OakOption>
+      <OakOption>three</OakOption>
+    </OakSelect>
+  ),
+  args: {},
+};
+
+export const Disabled: Story = {
+  render: (args) => (
+    <OakSelect {...args} $display={"block"} disabled={true}>
+      <OakOption>one</OakOption>
+      <OakOption>two</OakOption>
+      <OakOption>three</OakOption>
+    </OakSelect>
+  ),
+  args: {},
+};
+
+export const DisabledOption: Story = {
+  render: (args) => (
+    <OakSelect {...args} $display={"block"}>
+      <OakOption>one</OakOption>
+      <OakOption disabled={true}>two</OakOption>
       <OakOption>three</OakOption>
     </OakSelect>
   ),
@@ -88,14 +106,12 @@ export const Highlighted: Story = {
 export const WithOptGroup: Story = {
   render: (args) => (
     <OakSelect {...args} $display={"block"}>
-      <OakOptGroup>
-        <OakOptGroupLegend>Theropods</OakOptGroupLegend>
+      <OakOptGroup label="Theropods">
         <OakOption>Tyrannosaurus</OakOption>
         <OakOption>Velociraptor</OakOption>
         <OakOption>Deinonychus</OakOption>
       </OakOptGroup>
-      <OakOptGroup>
-        <OakOptGroupLegend>Theropods</OakOptGroupLegend>
+      <OakOptGroup label="Theropods">
         <OakOption>Diplodocus</OakOption>
         <OakOption>Saltasaurus</OakOption>
         <OakOption>Apatosaurus</OakOption>
