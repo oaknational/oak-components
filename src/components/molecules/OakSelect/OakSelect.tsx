@@ -441,7 +441,7 @@ export default function OakSelect({
         $pointerEvents={"none"}
         $alignContent={"center"}
       >
-        <OakIcon iconName="chevron-down" />
+        <OakIcon iconName="chevron-up" />
       </IconUpWrapper>
       <IconDownWrapper
         $position={"absolute"}
@@ -451,7 +451,7 @@ export default function OakSelect({
         $pointerEvents={"none"}
         $alignContent={"center"}
       >
-        <OakIcon iconName="chevron-up" />
+        <OakIcon iconName="chevron-down" />
       </IconDownWrapper>
     </StyledTextInputWrapper>
   );
