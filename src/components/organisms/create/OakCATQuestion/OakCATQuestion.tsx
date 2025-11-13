@@ -30,6 +30,8 @@ export type OakCATQuestionProps = {
   initialOpen?: boolean;
   questionTypeInput: ReactNode;
   questionTextInput: ReactNode;
+  questionImage?: ReactNode;
+  questionImagePosition?: "above" | "below";
   hintInput: ReactElement;
   feedbackInput: ReactElement;
   answersSection: ReactNode;
@@ -42,6 +44,8 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
     questionNumber,
     questionTypeInput,
     questionTextInput,
+    questionImage,
+    questionImagePosition,
     hintInput,
     feedbackInput,
     answersSection,
@@ -61,6 +65,14 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
     <OakFlex $gap={"space-between-xs"} $alignItems={"center"} $width={"100%"}>
       {`${questionNumber}.`}
       {questionTypeInput}
+    </OakFlex>
+  );
+
+  const questionStem = (
+    <OakFlex $flexDirection={"column"}>
+      {questionImagePosition === "above" && questionImage}
+      {questionTextInput}
+      {questionImagePosition === "below" && questionImage}
     </OakFlex>
   );
 
@@ -118,7 +130,7 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
         <InternalUnstyledChevronAccordion
           id={`question-${questionNumber}`}
           header={header}
-          subheader={questionTextInput}
+          subheader={questionStem}
           content={body}
           $flexDirection={"column"}
           $justifyContent={"flex-start"}
