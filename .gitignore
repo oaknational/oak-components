@@ -40,7 +40,7 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-types
+/types
 
 # tool files to ignore
 .eslintcache
