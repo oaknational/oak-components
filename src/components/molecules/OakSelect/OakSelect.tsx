@@ -323,11 +323,20 @@ function OakOptGroupLegend({ children }: OakOptGroupLegendProps) {
 export type OakOptionProps = {
   children: ReactNode;
   disabled?: boolean;
+  selected?: boolean;
+  value?: string;
 };
-export function OakOption({ disabled, children }: OakOptionProps) {
+export function OakOption({
+  selected,
+  disabled,
+  value,
+  children,
+}: OakOptionProps) {
   return (
     <NativeOption
+      value={value}
       disabled={disabled}
+      selected={selected}
       $ph={"inner-padding-m"}
       $pv={"inner-padding-xs"}
       $focusRingDropShadows={[

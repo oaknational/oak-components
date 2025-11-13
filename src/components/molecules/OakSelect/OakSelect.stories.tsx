@@ -19,9 +19,12 @@ type Story = StoryObj<typeof OakSelect>;
 export const Default: Story = {
   render: (args) => (
     <OakSelect {...args} $display={"block"}>
-      <OakOption>one</OakOption>
-      <OakOption>two</OakOption>
-      <OakOption>three</OakOption>
+      <OakOption disabled={true} selected={true} value="null">
+        Please choose an option
+      </OakOption>
+      <OakOption value="1">one</OakOption>
+      <OakOption value="2">two</OakOption>
+      <OakOption value="3">three</OakOption>
     </OakSelect>
   ),
   args: {},
