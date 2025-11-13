@@ -248,6 +248,8 @@ const NativeOption = styled("option")<
   border: none;
   color: ${parseColor("text-primary")};
   outline: none;
+  font: ${parseFontSize("body-2-bold")};
+  font-weight: ${parseFontWeight("body-2-bold")};
 
   &:focus {
     border-radius: ${parseBorderRadius("border-radius-xs")};
@@ -260,8 +262,6 @@ const NativeOption = styled("option")<
   &:disabled {
     background: ${parseColor("bg-neutral-stronger")};
     color: ${parseColor("text-subdued")};
-    font: ${parseFontSize("body-2-bold")};
-    font-weight: ${parseFontWeight("body-2-bold")};
     cursor: not-allowed;
   }
 
