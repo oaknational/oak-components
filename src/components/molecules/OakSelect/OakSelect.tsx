@@ -242,14 +242,19 @@ export type OakSelectProps = {
 const NativeOptGroup = styled("optgroup")<PaddingStyleProps>``;
 
 const NativeOption = styled("option")<
-  PaddingStyleProps & { $focusRingDropShadows?: OakDropShadowToken[] }
+  PaddingStyleProps & {
+    $focusRingDropShadows?: OakDropShadowToken[];
+    $asDefault?: boolean;
+  }
 >`
   cursor: pointer;
   border: none;
   color: ${parseColor("text-primary")};
   outline: none;
-  font: ${parseFontSize("body-2-bold")};
-  font-weight: ${parseFontWeight("body-2-bold")};
+  font: ${(props) =>
+    parseFontSize(props.$asDefault ? "body-2" : "body-2-bold")};
+  font-weight: ${(props) =>
+    parseFontWeight(props.$asDefault ? "body-2" : "body-2-bold")};
 
   &:focus {
     border-radius: ${parseBorderRadius("border-radius-xs")};
@@ -325,15 +330,18 @@ export type OakOptionProps = {
   disabled?: boolean;
   selected?: boolean;
   value?: string;
+  asDefault?: boolean;
 };
 export function OakOption({
   selected,
   disabled,
   value,
   children,
+  asDefault,
 }: OakOptionProps) {
   return (
     <NativeOption
+      $asDefault={asDefault}
       value={value}
       disabled={disabled}
       selected={selected}
