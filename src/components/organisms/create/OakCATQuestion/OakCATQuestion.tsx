@@ -29,7 +29,7 @@ export type OakCATQuestionProps = {
   status: Status;
   initialOpen?: boolean;
   questionTypeInput: ReactNode;
-  questionTextInput: ReactNode;
+  questionStem: ReactNode;
   hintInput: ReactElement;
   feedbackInput: ReactElement;
   answersSection: ReactNode;
@@ -41,7 +41,7 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
   const {
     questionNumber,
     questionTypeInput,
-    questionTextInput,
+    questionStem,
     hintInput,
     feedbackInput,
     answersSection,
@@ -118,7 +118,7 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
         <InternalUnstyledChevronAccordion
           id={`question-${questionNumber}`}
           header={header}
-          subheader={questionTextInput}
+          subheader={questionStem}
           content={body}
           $flexDirection={"column"}
           $justifyContent={"flex-start"}
