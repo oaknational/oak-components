@@ -3,7 +3,7 @@ import { StoryObj, Meta } from "@storybook/react";
 
 import { OakCATQuestion } from "./OakCATQuestion";
 
-import { OakBox, OakP, OakUL } from "@/components/atoms";
+import { OakBox, OakImage, OakP, OakUL } from "@/components/atoms";
 import { OakMultilineText } from "@/components/molecules";
 
 const meta: Meta<typeof OakCATQuestion> = {
