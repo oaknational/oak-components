@@ -81,6 +81,9 @@ export const icons = {
   threads: "v1749034800/icons/threads_sqlqoe.svg",
   spreadsheet: "v1754386968/icons/spreadsheet_rsndeb.svg",
   "curriculum-plan": "v1754386969/icons/curriculum-plan_qygyuo.svg",
+  data: "v1763393164/icons/data-illustration_ukwdxg.svg",
+  chatting: "v1763393163/icons/chatting-illustration_l52zaf.svg",
+  "snack-break": "v1763393167/icons/snackbreak_illustration_fguw7l.svg",
   // subject icons
   "subject-art": "v1706616347/subject-icons/art.svg",
   "subject-biology": "v1706616415/subject-icons/biology.svg",
