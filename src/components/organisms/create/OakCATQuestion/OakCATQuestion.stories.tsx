@@ -136,7 +136,7 @@ export const WithMultilineText: Story = {
         Dummy Question Type Input
       </OakBox>
     ),
-    questionTextInput: (
+    questionStem: (
       <OakBox $background={"aqua50"} $pa="spacing-12">
         Dummy Question Text Input
       </OakBox>
