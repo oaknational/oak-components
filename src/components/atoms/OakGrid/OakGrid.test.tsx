@@ -10,7 +10,7 @@ import renderWithTheme from "@/test-helpers/renderWithTheme";
 describe("OakGrid", () => {
   it("renders without crashing", () => {
     const { getByTestId } = render(
-      <OakGrid data-testid="oak-grid" $cg={"all-spacing-1"} />,
+      <OakGrid data-testid="oak-grid" $cg={"spacing-4"} />,
     );
     expect(getByTestId("oak-grid")).toBeInTheDocument();
   });
@@ -34,7 +34,7 @@ describe("OakGrid", () => {
 
   it("adjusts column gap via $cg", () => {
     const { getByTestId } = render(
-      <OakGrid data-testid="oak-grid" $cg={"all-spacing-1"}>
+      <OakGrid data-testid="oak-grid" $cg={"spacing-4"}>
         <OakGridArea $colSpan={1} />
       </OakGrid>,
     );

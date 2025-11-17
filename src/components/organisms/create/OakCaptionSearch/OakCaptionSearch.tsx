@@ -52,8 +52,8 @@ export const OakCaptionSearch = ({
       $flexDirection={"column"}
       $color={"text-primary"}
       $background={"white"}
-      $pa={"inner-padding-xl"}
-      $gap={"space-between-m"}
+      $pa={"spacing-24"}
+      $gap={"spacing-24"}
       $borderRadius={"border-radius-s"}
       onSubmit={handleFormSubmit}
     >

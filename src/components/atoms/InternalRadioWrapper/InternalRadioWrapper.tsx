@@ -64,8 +64,8 @@ const VisibleRadioButtonInput = styled(OakFlex)<VisibleRadioButtonInputProps>`
     css`
       ${InternalRadio}:focus-visible ~ &::before {
         content: "";
-        height: ${parseSpacing("all-spacing-7")};
-        width: ${parseSpacing("all-spacing-7")};
+        height: ${parseSpacing("spacing-32")};
+        width: ${parseSpacing("spacing-32")};
         background: "transparent"
         display: block;
         position: absolute;
@@ -109,12 +109,12 @@ const DisabledVisibleRadioButtonInput = styled(VisibleRadioButtonInput)`
  */
 export const InternalRadioWrapper = (props: InternalRadioWrapperProps) => {
   const {
-    size = "all-spacing-6",
+    size = "spacing-24",
     internalRadio,
     disabled,
     disableFocusRing = false,
-    radioInnerSize = "all-spacing-4",
-    radioOuterSize = "all-spacing-6",
+    radioInnerSize = "spacing-16",
+    radioOuterSize = "spacing-24",
     radioBorderWidth = "border-solid-m",
     radioBorderColor = "black",
     radioBackground = "bg-primary",
@@ -149,8 +149,8 @@ export const InternalRadioWrapper = (props: InternalRadioWrapperProps) => {
           $disableFocusRing={!!disableFocusRing}
           $radioInnerSize={radioInnerSize}
           $position={"absolute"}
-          $top={"all-spacing-0"}
-          $left={"all-spacing-0"}
+          $top={"spacing-0"}
+          $left={"spacing-0"}
         />
       ) : (
         <DisabledVisibleRadioButtonInput
@@ -166,8 +166,8 @@ export const InternalRadioWrapper = (props: InternalRadioWrapperProps) => {
           $disableFocusRing={!!disableFocusRing}
           $radioInnerSize={radioInnerSize}
           $position={"absolute"}
-          $top={"all-spacing-0"}
-          $left={"all-spacing-0"}
+          $top={"spacing-0"}
+          $left={"spacing-0"}
         />
       )}
     </OakFlex>

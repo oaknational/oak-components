@@ -54,20 +54,20 @@ export const OakLessonVideoTranscript = ({
               isTrailingIcon
               aria-controls={id}
               aria-expanded={showTranscript}
-              $mb="space-between-m"
+              $mb="spacing-24"
             >
               {showTranscript ? "Hide transcript" : "Show transcript"}
             </OakTertiaryButton>
           )}
         </OakBox>
         {signLanguageControl && (
-          <OakBox $mb="space-between-m">{signLanguageControl}</OakBox>
+          <OakBox $mb="spacing-24">{signLanguageControl}</OakBox>
         )}
       </OakFlex>
       {children && (
         <OakCollapsibleContent
           id={id}
-          $maxHeight="all-spacing-23"
+          $maxHeight="spacing-960"
           isOpen={showTranscript}
           $font="body-1"
           $color="text-primary"

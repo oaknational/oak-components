@@ -35,9 +35,7 @@ const StyledInternalButton = styled(InternalButton)`
 export const OakSaveCount = ({ count, href, loading }: OakSaveCountProps) => {
   const iconName = count === 0 ? "bookmark-outlined" : "bookmark-filled";
   const showTruncatedCount = count > 99;
-  const containerWidth = showTruncatedCount
-    ? "all-spacing-11"
-    : "all-spacing-10";
+  const containerWidth = showTruncatedCount ? "spacing-64" : "spacing-56";
 
   return (
     <StyledInternalButton
@@ -47,14 +45,14 @@ export const OakSaveCount = ({ count, href, loading }: OakSaveCountProps) => {
     >
       <OakScreenReader>View my library</OakScreenReader>
       <OakFlex
-        $width={["all-spacing-7", containerWidth]}
-        $height="all-spacing-7"
+        $width={["spacing-32", containerWidth]}
+        $height="spacing-32"
         $background={
           loading ? "bg-btn-secondary-hover" : "bg-decorative1-subdued"
         }
         $alignItems="center"
         $justifyContent={["center", "initial"]}
-        $pa={["inner-padding-none", "inner-padding-ssx"]}
+        $pa={["spacing-0", "spacing-4"]}
         $borderRadius="border-radius-s"
         $borderColor={
           loading ? "border-neutral-lighter" : "bg-decorative1-main"
@@ -65,10 +63,10 @@ export const OakSaveCount = ({ count, href, loading }: OakSaveCountProps) => {
         <OakIcon
           iconName={iconName}
           data-testid={iconName}
-          $width="all-spacing-6"
+          $width="spacing-24"
         />
         <OakBox
-          $width="all-spacing-6"
+          $width="spacing-24"
           $textAlign="center"
           $display={["none", "block"]}
         >

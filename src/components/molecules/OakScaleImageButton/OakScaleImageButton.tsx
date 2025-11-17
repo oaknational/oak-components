@@ -58,9 +58,9 @@ export const OakScaleImageButton = <C extends ElementType = "button">({
       hoverBorderColor={"bg-neutral-stronger"}
       disabledBackground={"bg-btn-primary-disabled"}
       disabledBorderColor={"bg-btn-primary-disabled"}
-      iconGap={"all-spacing-0"}
-      pv={"inner-padding-none"}
-      ph={"inner-padding-none"}
+      iconGap={"spacing-0"}
+      pv={"spacing-0"}
+      ph={"spacing-0"}
       $bblr={"border-radius-square"}
       $btlr={"border-radius-square"}
       width={"100%"}

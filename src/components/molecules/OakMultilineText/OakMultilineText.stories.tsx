@@ -72,7 +72,7 @@ export const ChangeHeight: Story = {
     placeholder: "Start typing answer...",
     charLimit: 200,
     disabled: false,
-    $height: ["all-spacing-20"],
+    $height: ["spacing-360"],
     id: "change-height",
     label: "Change Height",
   },

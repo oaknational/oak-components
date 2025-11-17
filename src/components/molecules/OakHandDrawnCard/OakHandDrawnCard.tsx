@@ -24,7 +24,7 @@ export type OakHandDrawnCardProps = Omit<
  * An optional `stroke` and `strokeWidth` can be applied to give the background a border
  */
 export const OakHandDrawnCard = ({
-  $pa = "inner-padding-xl",
+  $pa = "spacing-24",
   fill = "bg-decorative1-main",
   stroke,
   strokeWidth,

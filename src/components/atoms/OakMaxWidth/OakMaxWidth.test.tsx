@@ -19,7 +19,7 @@ describe("OakMaxWidth", () => {
 
   it("has has max-width: 80rem when screen width is large", () => {
     const { getByTestId } = render(
-      <OakMaxWidth data-testid="test" $maxWidth={"all-spacing-24"} />,
+      <OakMaxWidth data-testid="test" $maxWidth={"spacing-1280"} />,
     );
     expect(getByTestId("test")).toHaveStyle("max-width: 80rem");
   });

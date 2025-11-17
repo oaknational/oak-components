@@ -13,11 +13,7 @@ const meta: Meta<typeof OakLessonTopNav> = {
 
   decorators: [
     (Story) => (
-      <OakFlex
-        $mt="space-between-xl"
-        $flexDirection="column"
-        $gap="space-between-m"
-      >
+      <OakFlex $mt="spacing-56" $flexDirection="column" $gap="spacing-24">
         <Story />
       </OakFlex>
     ),

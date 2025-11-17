@@ -55,8 +55,8 @@ export const OakHintButton = (props: OakHintButtonProps) => {
       onClick={props.onClick}
       isLoading={props.isLoading}
       disabled={props.disabled}
-      iconBackgroundSize={"all-spacing-8"}
-      iconSize={"all-spacing-6"}
+      iconBackgroundSize={"spacing-40"}
+      iconSize={"spacing-24"}
       data-rac
       // aria-describedby={describedby}
       {...buttonProps}

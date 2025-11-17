@@ -60,8 +60,8 @@ const StyledLabel = styled(OakBox)``;
 const StyledRoundIcon = styled(OakRoundIcon)<{
   $disabled?: boolean;
 }>`
-  width: ${parseSpacing("all-spacing-8")};
-  height: ${parseSpacing("all-spacing-8")};
+  width: ${parseSpacing("spacing-40")};
+  height: ${parseSpacing("spacing-40")};
   padding: 0;
 
   background: transparent;
@@ -135,13 +135,13 @@ export const OakLessonNavItem = <C extends ElementType = "a">(
   return (
     <StyledLessonNavItem
       as={disabled ? "div" : as ?? "a"}
-      $gap="space-between-m"
+      $gap="spacing-24"
       $alignItems="center"
       $background={
         progress === "not-started" ? notStartedBackgroundColor : backgroundColor
       }
-      $ph={["inner-padding-m", "inner-padding-xl"]}
-      $pv="inner-padding-l"
+      $ph={["spacing-16", "spacing-24"]}
+      $pv="spacing-20"
       $borderRadius="border-radius-l"
       $borderColor={borderColor}
       $ba="border-solid-l"
@@ -151,11 +151,11 @@ export const OakLessonNavItem = <C extends ElementType = "a">(
       onClick={disabled ? undefined : onClick}
       {...rest}
     >
-      <OakFlex $width="all-spacing-13" $justifyContent="center">
+      <OakFlex $width="spacing-80" $justifyContent="center">
         <OakIcon
           iconName={pickIconForSection(lessonSectionName)}
-          $width="all-spacing-10"
-          $height="all-spacing-10"
+          $width="spacing-56"
+          $height="spacing-56"
         />
       </OakFlex>
       <FlexedOakBox>
@@ -188,7 +188,7 @@ function renderQuestionCounter(props: SectionProps) {
     case "exit-quiz":
     case "starter-quiz":
       return (
-        <OakBox $display={["none", "block"]} $mr="space-between-m">
+        <OakBox $display={["none", "block"]} $mr="spacing-24">
           <OakSpan $font="heading-4">{props.grade}</OakSpan>
           <OakSpan $font="heading-6">&nbsp;/&nbsp;{props.numQuestions}</OakSpan>
         </OakBox>
@@ -266,12 +266,8 @@ function pickSummaryForProgress(props: SectionProps) {
       return "In progress...";
     case "complete":
       return (
-        <OakFlex $gap="space-between-sssx" $alignItems="center">
-          <OakIcon
-            iconName="tick"
-            $width="all-spacing-6"
-            $height="all-spacing-6"
-          />
+        <OakFlex $gap="spacing-4" $alignItems="center">
+          <OakIcon iconName="tick" $width="spacing-24" $height="spacing-24" />
           {pickSummaryForComplete(props)}
         </OakFlex>
       );

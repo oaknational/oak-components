@@ -48,7 +48,7 @@ export const Default: Story = {
 
 export const WordWrap: Story = {
   render: (args) => (
-    <OakFlex $gap={["space-between-ssx", "space-between-s"]}>
+    <OakFlex $gap={["spacing-8", "spacing-16"]}>
       <OakHomepageTabButton {...args} />
       <OakHomepageTabButton {...args} />
       <OakHomepageTabButton {...args} />

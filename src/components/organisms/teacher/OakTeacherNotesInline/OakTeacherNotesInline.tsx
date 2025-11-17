@@ -48,8 +48,8 @@ export const OakTeacherNotesInline = ({
   const innerHtml = sanitizedHtml ?? "";
   return (
     <OakBox
-      $pv="inner-padding-xl"
-      $pr="inner-padding-xl"
+      $pv="spacing-24"
+      $pr="spacing-24"
       $ba={"border-solid-m"}
       $borderColor={"bg-decorative2-main"}
       $borderRadius={"border-radius-l"}
@@ -57,8 +57,8 @@ export const OakTeacherNotesInline = ({
     >
       <LeftScrollBox
         $overflow={"scroll"}
-        $pl="inner-padding-xl"
-        $height={"all-spacing-12"}
+        $pl="spacing-24"
+        $height={"spacing-72"}
         dangerouslySetInnerHTML={{ __html: innerHtml }}
       />
     </OakBox>

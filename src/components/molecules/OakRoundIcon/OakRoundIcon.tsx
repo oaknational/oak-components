@@ -25,9 +25,9 @@ export type OakRoundIconProps = IconProps | ImageProps;
 export const OakRoundIcon = ({
   $background = "bg-decorative5-main",
   $borderRadius = "border-radius-circle",
-  $width = "all-spacing-9",
-  $height = "all-spacing-9",
-  $pa = "inner-padding-ssx",
+  $width = "spacing-48",
+  $height = "spacing-48",
+  $pa = "spacing-4",
   className,
   ...rest
 }: OakRoundIconProps) => {

@@ -28,7 +28,7 @@ export const DefaultOakThemeProvider: Story = () => (
       $background="bg-decorative1-main"
       $color="text-inverted"
       $ba="border-solid-m"
-      $pa="inner-padding-xl"
+      $pa="spacing-24"
       $borderRadius="border-radius-l"
       $borderColor="border-primary"
     >

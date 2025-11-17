@@ -32,17 +32,17 @@ export const OakPupilJourneyProgrammeOptions = ({
   return (
     <OakFlex
       $flexDirection={"column"}
-      $width={["100%", "all-spacing-22", "all-spacing-23"]}
+      $width={["100%", "spacing-640", "spacing-960"]}
       $background={outerBackgroundColor}
     >
       {titleSlot && (
         <OakFlex
           $flexDirection={"column"}
-          $gap={["space-between-m", "space-between-m2", "space-between-m2"]}
-          $mb={"space-between-m2"}
+          $gap={["spacing-24", "spacing-32", "spacing-32"]}
+          $mb={"spacing-32"}
         >
           {titleSlot}
-          <OakHandDrawnHR hrColor={"white"} $height={"all-spacing-1"} />
+          <OakHandDrawnHR hrColor={"white"} $height={"spacing-4"} />
         </OakFlex>
       )}
       <OakFlex
@@ -50,18 +50,18 @@ export const OakPupilJourneyProgrammeOptions = ({
         $background={"bg-primary"}
         $ba={"border-solid-m"}
         $borderRadius={"border-radius-l"}
-        $pa={"inner-padding-xl"}
+        $pa={"spacing-24"}
         $borderColor={backgroundColor}
       >
         <OakFlex
-          $pv={"inner-padding-xl"}
+          $pv={"spacing-24"}
           $flexDirection={"column"}
           $alignItems={"center"}
-          $gap={"space-between-l"}
+          $gap={"spacing-48"}
         >
           {optionTitleSlot}
           <OakFlex
-            $gap={"space-between-s"}
+            $gap={"spacing-16"}
             $flexWrap={"wrap"}
             $justifyContent={"center"}
           >

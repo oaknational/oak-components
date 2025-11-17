@@ -59,7 +59,7 @@ describe("OakSmallSecondaryButtonWithDropdown", () => {
 
     const dropdown = queryByTestId("small-dropdown-dropdown");
     expect(dropdown).toBeInTheDocument();
-    // The specific spacing (all-spacing-8) is tested in the shared component
+    // The specific spacing (spacing-40) is tested in the shared component
   });
 
   it("uses full width flex styling", async () => {

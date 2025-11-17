@@ -52,7 +52,7 @@ const StyledAccordionUnderline = styled(
 )<InternalStyledSvgProps>`
   position: absolute;
   width: 100%;
-  bottom: -${parseSpacing("all-spacing-1")};
+  bottom: -${parseSpacing("spacing-4")};
 `;
 
 export const StyledAccordionButton = styled(
@@ -149,9 +149,9 @@ const Accordion = ({
   return (
     <StyledContainer
       $position={"relative"}
-      $pv={"inner-padding-s"}
+      $pv={"spacing-12"}
       $flexDirection={"column"}
-      $gap={"all-spacing-1"}
+      $gap={"spacing-4"}
       {...styleProps}
     >
       <StyledAccordionButton
@@ -162,19 +162,19 @@ const Accordion = ({
       >
         {header}
 
-        <OakBox $position={"relative"} $mr={"space-between-xs"}>
+        <OakBox $position={"relative"} $mr={"spacing-12"}>
           <OakBox
             className="shadow"
             $position={"absolute"}
             $borderRadius={"border-radius-s"}
             $width={"100%"}
             $height={"100%"}
-            $top="all-spacing-0"
+            $top="spacing-0"
           />
           <OakIcon
             iconName="chevron-down"
-            $width="all-spacing-7"
-            $height="all-spacing-7"
+            $width="spacing-32"
+            $height="spacing-32"
             alt="An arrow to indicate whether the item is open or closed"
             style={{
               transform: isOpen ? "rotate(180deg)" : "none",

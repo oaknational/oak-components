@@ -79,7 +79,7 @@ const UnstyledComponent = forwardRef(
       label,
       id,
       name,
-      $height = ["all-spacing-19", "all-spacing-13", "all-spacing-10"],
+      $height = ["spacing-240", "spacing-80", "spacing-56"],
       $overflowX = [null, null, "scroll"],
       $overflowY = ["scroll", "scroll", null],
       $whiteSpace = ["wrap", "wrap", "nowrap"],
@@ -94,7 +94,7 @@ const UnstyledComponent = forwardRef(
     const [userText, setUserText] = useState(initialValue);
     const charCount = userText?.length ?? 0;
 
-    const charCountWidth = charLimit > 99 ? "all-spacing-10" : "all-spacing-9";
+    const charCountWidth = charLimit > 99 ? "spacing-56" : "spacing-48";
 
     const updateInternalErrors = (error: string) => {
       if (!internalErrors.includes(error)) {
@@ -168,7 +168,7 @@ const UnstyledComponent = forwardRef(
     return (
       <OakFlex
         $flexDirection={["column"]}
-        $gap={["space-between-xs", null]}
+        $gap={["spacing-12", null]}
         $width={"100%"}
       >
         {label && (
@@ -193,7 +193,7 @@ const UnstyledComponent = forwardRef(
           $color={"text-primary"}
           $borderRadius={"border-radius-m"}
           $ba={"border-solid-m"}
-          $pa={"inner-padding-s"}
+          $pa={"spacing-12"}
           $borderColor={
             internalErrors.length > 0 || invalidText
               ? "border-error"
@@ -211,7 +211,7 @@ const UnstyledComponent = forwardRef(
         {/* Span is inside OakFlex to stop textarea width changing when charCount changes. */}
         <OakGrid
           $minWidth={[charCountWidth, null]}
-          $pb={["inner-padding-l"]}
+          $pb={["spacing-20"]}
           $position={["relative", null]}
         >
           {(invalidText || internalErrors.length > 0) && (
@@ -219,14 +219,14 @@ const UnstyledComponent = forwardRef(
               <OakFlex
                 $flexDirection={"row"}
                 $position={"absolute"}
-                $top={"all-spacing-0"}
-                $left={"all-spacing-0"}
+                $top={"spacing-0"}
+                $left={"spacing-0"}
               >
                 <OakIcon
                   iconName="warning"
                   $colorFilter={"icon-error"}
-                  $width={"all-spacing-4"}
-                  $height={"all-spacing-4"}
+                  $width={"spacing-16"}
+                  $height={"spacing-16"}
                 ></OakIcon>
                 <OakSpan
                   $overflowY={"auto"}
@@ -234,7 +234,7 @@ const UnstyledComponent = forwardRef(
                   $font={"body-4"}
                   $color={"text-error"}
                   id={`${name}-invalid-error`}
-                  $pl={"inner-padding-ssx"}
+                  $pl={"spacing-4"}
                 >
                   {invalidText ? invalidText : internalErrors.join(". ")}
                 </OakSpan>
@@ -249,8 +249,8 @@ const UnstyledComponent = forwardRef(
                 $font={"body-4"}
                 $color={"grey60"}
                 $position={["absolute", null]}
-                $top={["all-spacing-0", null]}
-                $right={["all-spacing-0", null]}
+                $top={["spacing-0", null]}
+                $right={["spacing-0", null]}
               >
                 {charCount}/{charLimit}
               </OakSpan>

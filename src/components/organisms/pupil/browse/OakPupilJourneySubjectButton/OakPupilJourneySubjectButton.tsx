@@ -73,8 +73,8 @@ export const OakPupilJourneySubjectButton = <C extends ElementType = "button">({
     <OakIcon
       iconName={subjectIconName}
       data-testid={subjectIconName}
-      $minWidth={"all-spacing-12"}
-      $minHeight={"all-spacing-12"}
+      $minWidth={"spacing-72"}
+      $minHeight={"spacing-72"}
       aria-hidden="true"
     />
   );
@@ -84,11 +84,11 @@ export const OakPupilJourneySubjectButton = <C extends ElementType = "button">({
       element={element ?? "button"}
       iconOverride={iconOverride}
       iconLayout="column"
-      iconGap={"space-between-sssx"}
+      iconGap={"spacing-4"}
       pv={null}
-      pt={"inner-padding-s"}
-      pb={"inner-padding-xl"}
-      ph={"inner-padding-s"}
+      pt={"spacing-12"}
+      pb={"spacing-24"}
+      ph={"spacing-12"}
       font={"heading-7"}
       defaultBorderColor={borderColor}
       defaultBackground={defaultBackground}
@@ -100,7 +100,7 @@ export const OakPupilJourneySubjectButton = <C extends ElementType = "button">({
       disabledBorderColor="border-neutral-lighter"
       disabledTextColor="text-subdued"
       textAlign={"center"}
-      innerWidth={"all-spacing-16"}
+      innerWidth={"spacing-120"}
       {...rest}
     />
   );

@@ -84,7 +84,7 @@ const Accordion = ({
   const { isOpen } = useAccordionContext();
 
   return (
-    <OakFlex $pv={"inner-padding-s"} $flexDirection={"column"} {...styleProps}>
+    <OakFlex $pv={"spacing-12"} $flexDirection={"column"} {...styleProps}>
       <OakFlex $justifyContent={"space-between"} $alignItems={"center"}>
         {header}
         <OakBox>
@@ -95,13 +95,13 @@ const Accordion = ({
             <OakBox
               className="focus-outline"
               $borderRadius={"border-radius-s"}
-              $mr={"space-between-xs"}
+              $mr={"spacing-12"}
             >
               <OakIcon
                 className="chevron-icon"
                 iconName="chevron-down"
-                $width="all-spacing-7"
-                $height="all-spacing-7"
+                $width="spacing-32"
+                $height="spacing-32"
                 alt="An arrow to indicate whether the item is open or closed"
                 style={{
                   transform: isOpen ? "rotate(180deg)" : "none",

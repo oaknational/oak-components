@@ -35,19 +35,19 @@ const EditorContainer = ({
 }: EditorContainerProps) => {
   return (
     <OakFlex
-      $pa={"inner-padding-s"}
+      $pa={"spacing-12"}
       $background={"bg-neutral"}
       $flexDirection={"column"}
       $alignItems={"flex-start"}
       $borderRadius={"border-radius-m2"}
       $alignSelf={"stretch"}
-      $gap={"space-between-xs"}
+      $gap={"spacing-12"}
     >
       <OakFlex
-        $pa={"inner-padding-s"}
+        $pa={"spacing-12"}
         $background={"bg-primary"}
-        $height={"all-spacing-19"}
-        $minHeight={"all-spacing-12"}
+        $height={"spacing-240"}
+        $minHeight={"spacing-72"}
         $borderRadius={"border-radius-s"}
         $borderColor={"border-primary"}
         $ba={"border-solid-m"}
@@ -63,7 +63,7 @@ const EditorContainer = ({
           </OakP>
         </OakGridArea>
         <OakGridArea $colSpan={[7, 6]}>
-          <OakFlex $gap={"space-between-ssx"} $justifyContent={"flex-end"}>
+          <OakFlex $gap={"spacing-8"} $justifyContent={"flex-end"}>
             <OakSmallSecondaryToggleButton
               onClick={onBoldClick}
               toggleOn={isBold}
@@ -121,12 +121,12 @@ export const OakTeacherNotesModal = ({
   const messageIcon = error ? "error" : "tick";
 
   const messageRender = message && (
-    <OakFlex $gap={"space-between-sssx"} $alignItems={"center"}>
+    <OakFlex $gap={"spacing-4"} $alignItems={"center"}>
       <OakIcon
         iconName={messageIcon}
         $colorFilter={messageColor}
-        $width={"all-spacing-5"}
-        $height={"all-spacing-5"}
+        $width={"spacing-20"}
+        $height={"spacing-20"}
       />
       <OakHeading tag="h2" $font={"body-3-bold"} $color={messageColor}>
         {message}
@@ -139,7 +139,7 @@ export const OakTeacherNotesModal = ({
       isOpen={isOpen}
       onClose={onClose}
       modalInnerFlexProps={{
-        $ph: ["inner-padding-m", "inner-padding-xl2"],
+        $ph: ["spacing-16", "spacing-32"],
       }}
       modalFlexProps={{
         "aria-label": "teacher notes dialog",
@@ -150,8 +150,8 @@ export const OakTeacherNotesModal = ({
       <OakFlex
         $flexDirection="column"
         $alignItems="center"
-        $pb="inner-padding-xl"
-        $gap="space-between-m"
+        $pb="spacing-24"
+        $gap="spacing-24"
       >
         <OakHeading tag="h1" $font={"body-3-bold"}>
           Add a teacher note to the page and share the link with your colleague.
@@ -164,7 +164,7 @@ export const OakTeacherNotesModal = ({
           </OakGridArea>
           <OakGridArea $colSpan={12}>
             <OakFlex
-              $gap="space-between-s"
+              $gap="spacing-16"
               $width={"100%"}
               $justifyContent={["center", "flex-end"]}
               $alignItems="center"
@@ -203,7 +203,7 @@ export const OakTeacherNotesModal = ({
                 could be used to identify, locate, or contact an individual,
                 either directly or indirectly.
               </OakP>
-              <OakP $font="body-2" $mt="space-between-sssx">
+              <OakP $font="body-2" $mt="spacing-4">
                 Names, email addresses, or other personal information will be
                 redacted from your note to help keep everyone safe. For more
                 guidance, see our{" "}

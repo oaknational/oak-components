@@ -29,17 +29,17 @@ describe("positionStyle", () => {
   });
 
   test.each([
-    ["$top", "space-between-ssx", "top: 0.5rem;"],
-    ["$bottom", "space-between-ssx", "bottom: 0.5rem;"],
-    ["$left", "space-between-ssx", "left: 0.5rem;"],
-    ["$right", "space-between-ssx", "right: 0.5rem;"],
+    ["$top", "spacing-8", "top: 0.5rem;"],
+    ["$bottom", "spacing-8", "bottom: 0.5rem;"],
+    ["$left", "spacing-8", "left: 0.5rem;"],
+    ["$right", "spacing-8", "right: 0.5rem;"],
     ["$overflow", "visible", "overflow: visible;"],
     ["$overflowX", "visible", "overflow-x: visible;"],
     ["$overflowY", "visible", "overflow-y: visible;"],
     ["$objectFit", "none", "object-fit: none;"],
     ["$pointerEvents", "none", "pointer-events: none;"],
     ["$visibility", "none", "visibility: none;"],
-    ["$inset", "space-between-ssx", "inset: 0.5rem;"],
+    ["$inset", "spacing-8", "inset: 0.5rem;"],
   ])("should correctly handle props", (prop, value, expected) => {
     const props = {
       [prop]: value,

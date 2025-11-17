@@ -36,7 +36,7 @@ export const Default: Story = {};
 
 export const Selected: Story = {
   render: (args) => (
-    <OakFlex $gap="space-between-m" $flexDirection="column">
+    <OakFlex $gap="spacing-24" $flexDirection="column">
       <OakRadioGroup
         name="radio-group-2"
         value="Option 1"
@@ -57,7 +57,7 @@ export const Selected: Story = {
 
 export const NotSelected: Story = {
   render: (args) => (
-    <OakFlex $gap="space-between-m" $flexDirection="column">
+    <OakFlex $gap="spacing-24" $flexDirection="column">
       <OakRadioGroup name="radio-group-4" value="" $flexDirection="column">
         <OakQuizRadioButton {...args} />
       </OakRadioGroup>
@@ -76,7 +76,7 @@ export const Highlighted: Story = {
 
 export const WithFeedback: Story = {
   render: (args) => (
-    <OakFlex $gap="space-between-m" $flexDirection="column">
+    <OakFlex $gap="spacing-24" $flexDirection="column">
       <OakRadioGroup
         name="radio-group-6"
         value="Option 1"
@@ -119,7 +119,7 @@ export const WithFeedback: Story = {
 
 export const WithImage: Story = {
   render: (args) => (
-    <OakFlex $gap="space-between-m" $flexDirection="column">
+    <OakFlex $gap="spacing-24" $flexDirection="column">
       <OakRadioGroup name="radio-group-10" $flexDirection="column">
         <OakQuizRadioButton
           {...args}
@@ -129,7 +129,7 @@ export const WithImage: Story = {
               cloudinaryId={`https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/sample.jpg`}
               width={864}
               height={576}
-              $minWidth="all-spacing-19"
+              $minWidth="spacing-240"
             />
           }
         />
@@ -145,7 +145,7 @@ export const WithImage: Story = {
               cloudinaryId={`https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/sample.jpg`}
               width={864}
               height={576}
-              $minWidth="all-spacing-19"
+              $minWidth="spacing-240"
             />
           }
         />
@@ -165,7 +165,7 @@ export const WithImage: Story = {
               cloudinaryId={`https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/sample.jpg`}
               width={864}
               height={576}
-              $minWidth="all-spacing-19"
+              $minWidth="spacing-240"
             />
           }
         />

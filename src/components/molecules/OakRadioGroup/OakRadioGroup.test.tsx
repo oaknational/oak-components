@@ -58,7 +58,7 @@ describe("RadioGroup", () => {
           value="1"
           id="radio-1"
           label="Option 1"
-          $labelGap="space-between-m"
+          $labelGap="spacing-24"
           $font="body-1-bold"
           $color="black"
           data-testid={"radio-1"}
@@ -67,7 +67,7 @@ describe("RadioGroup", () => {
           value="2"
           id="radio-2"
           label="Option 2"
-          $labelGap="space-between-m"
+          $labelGap="spacing-24"
           $font="body-1-bold"
           $color="black"
         />
@@ -75,7 +75,7 @@ describe("RadioGroup", () => {
           value="3"
           id="radio-3"
           label="Option 3"
-          $labelGap="space-between-m"
+          $labelGap="spacing-24"
           $font="body-1-bold"
           $color="black"
         />
@@ -239,7 +239,7 @@ describe("RadioGroup", () => {
       <OakRadioGroup
         name={"test"}
         $font={"body-1-bold"}
-        $gap={"space-between-m"}
+        $gap={"spacing-24"}
         label="Select one of the following:"
         data-testid="radio-group"
       >

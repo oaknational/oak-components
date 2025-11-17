@@ -31,11 +31,7 @@ export const InternalCardWithBackgroundElement = ({
 }: InternalCardWithBackgroundElementProps) => {
   return (
     <InternalCard {...props}>
-      <StyledBackgroundBox
-        $position="absolute"
-        $inset="space-between-none"
-        aria-hidden
-      >
+      <StyledBackgroundBox $position="absolute" $inset="spacing-0" aria-hidden>
         {backgroundElement}
       </StyledBackgroundBox>
       <OakBox $position="relative">{children}</OakBox>

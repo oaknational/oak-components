@@ -19,7 +19,7 @@ const meta: Meta<typeof OakQuizHint> = {
   },
   decorators: [
     (Story) => (
-      <OakBox $mt="space-between-xxl">
+      <OakBox $mt="spacing-72">
         <Story />
       </OakBox>
     ),

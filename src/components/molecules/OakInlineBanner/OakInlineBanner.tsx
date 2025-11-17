@@ -138,38 +138,38 @@ export type OakInlineBannerVariantProps = {
 export const bannerVariants: OakInlineBannerVariantProps = {
   regular: {
     icon: {
-      $width: "all-spacing-7",
-      $height: "all-spacing-7",
+      $width: "spacing-32",
+      $height: "spacing-32",
     },
     heading: {
       $font: ["heading-7"],
     },
     ctaWrapper: {
-      $mt: "space-between-xs",
+      $mt: "spacing-12",
     },
     flexDirection: "row",
-    bannerPadding: "inner-padding-m",
-    textContentGap: "space-between-sssx",
+    bannerPadding: "spacing-16",
+    textContentGap: "spacing-4",
   },
   large: {
     icon: {
-      $width: "all-spacing-8",
-      $height: "all-spacing-8",
+      $width: "spacing-40",
+      $height: "spacing-40",
     },
     heading: {
       $font: ["heading-6"],
     },
     ctaWrapper: {
-      $mt: "space-between-ssx",
+      $mt: "spacing-8",
     },
     closeButtonWrapper: {
       $position: "absolute",
-      $top: "all-spacing-0",
-      $right: "all-spacing-0",
+      $top: "spacing-0",
+      $right: "spacing-0",
     },
     flexDirection: "column",
-    bannerPadding: "inner-padding-xl",
-    textContentGap: "space-between-s",
+    bannerPadding: "spacing-24",
+    textContentGap: "spacing-16",
   },
 };
 
@@ -229,7 +229,7 @@ export const OakInlineBanner = ({
         $flexDirection={bannerVariants[variant].flexDirection}
         $justifyContent={"space-between"}
         $alignItems={title || variant === "large" ? "start" : "center"}
-        $gap={"space-between-xs"}
+        $gap={"spacing-12"}
         $width={"100%"}
       >
         <OakBox>
@@ -252,8 +252,8 @@ export const OakInlineBanner = ({
               hoverIconBackground="black"
               hoverIconColor="white"
               disabledIconBackground="transparent"
-              iconBackgroundSize="all-spacing-6"
-              iconSize="all-spacing-6"
+              iconBackgroundSize="spacing-24"
+              iconSize="spacing-24"
               iconName="cross"
               data-testid="inline-banner-close-button"
               onClick={onDismiss}
