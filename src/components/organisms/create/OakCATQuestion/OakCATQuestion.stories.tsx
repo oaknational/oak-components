@@ -3,7 +3,7 @@ import { StoryObj, Meta } from "@storybook/react";
 
 import { OakCATQuestion } from "./OakCATQuestion";
 
-import { OakBox, OakImage, OakP, OakUL } from "@/components/atoms";
+import { OakBox, OakP, OakUL } from "@/components/atoms";
 import { OakMultilineText } from "@/components/molecules";
 
 const meta: Meta<typeof OakCATQuestion> = {
@@ -19,12 +19,7 @@ const meta: Meta<typeof OakCATQuestion> = {
   },
   parameters: {
     controls: {
-      include: [
-        "questionNumber",
-        "status",
-        "initialOpen",
-        "questionImagePosition",
-      ],
+      include: ["questionNumber", "status", "initialOpen"],
     },
   },
   decorators: [
@@ -52,7 +47,7 @@ export const Default: Story = {
         Dummy Question Type Input
       </OakBox>
     ),
-    questionStem: (
+    questionTextInput: (
       <OakBox $background={"aqua50"} $pa="spacing-12">
         Dummy Question Text Input
       </OakBox>
@@ -92,7 +87,7 @@ export const InitiallyOpen: Story = {
         Dummy Question Type Input
       </OakBox>
     ),
-    questionStem: (
+    questionTextInput: (
       <OakBox $background={"aqua50"} $pa="spacing-12">
         Dummy Question Text Input
       </OakBox>
@@ -141,54 +136,9 @@ export const WithMultilineText: Story = {
         Dummy Question Type Input
       </OakBox>
     ),
-    questionStem: (
+    questionTextInput: (
       <OakBox $background={"aqua50"} $pa="spacing-12">
         Dummy Question Text Input
-      </OakBox>
-    ),
-    hintInput: (
-      <OakMultilineText
-        charLimit={100}
-        name="hintInput"
-        id="hintInput"
-        $height={"spacing-1280"}
-      />
-    ),
-    feedbackInput: (
-      <OakMultilineText
-        charLimit={100}
-        name="feedbackInput"
-        id="feedbackInput"
-        $height={"spacing-1280"}
-      />
-    ),
-    answersSection: (
-      <OakBox $background={"mint50"} $pa="spacing-12" $height={"spacing-360"}>
-        Dummy answers Section
-      </OakBox>
-    ),
-  },
-};
-
-export const WithMultilineTextAndStemImage: Story = {
-  render: (args) => <OakCATQuestion {...args} />,
-  args: {
-    questionNumber: 1,
-    status: "neutral",
-    questionTypeInput: (
-      <OakBox $background={"aqua50"} $pa="spacing-4">
-        Dummy Question Type Input
-      </OakBox>
-    ),
-    questionStem: (
-      <OakBox $background={"aqua50"} $pa="spacing-12">
-        Dummy Question Text Input
-        <OakImage
-          src="https://oaknationalacademy-res.cloudinary.com/image/upload/v1755009886/hc2moqkbq4rlsouotg2c.jpg"
-          alt="cat on chair"
-          $height={"spacing-100"}
-          $width={"spacing-100"}
-        />
       </OakBox>
     ),
     hintInput: (
