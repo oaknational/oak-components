@@ -52,10 +52,10 @@ export const OakSmallPrimaryButton = <C extends ElementType = "button">({
       disabledBorderColor="text-disabled"
       disabledTextColor="text-inverted"
       font="body-3-bold"
-      pv="inner-padding-ssx"
-      ph="inner-padding-xs"
-      loadingSpinnerSize="all-spacing-5"
-      iconGap="space-between-sssx"
+      pv="spacing-4"
+      ph="spacing-8"
+      loadingSpinnerSize="spacing-20"
+      iconGap="spacing-4"
       {...rest}
     />
   );

@@ -18,9 +18,7 @@ const SlideInFlex = styled(OakFlex)<{
   isLeftHandSide: boolean;
 }>`
   max-width: ${({ isLeftHandSide }) =>
-    isLeftHandSide
-      ? `calc(100vw - ${parseSpacing("inner-padding-l")})`
-      : "100vw"};
+    isLeftHandSide ? `calc(100vw - ${parseSpacing("spacing-20")})` : "100vw"};
   transform: ${({ $state, isLeftHandSide }) => {
     switch ($state) {
       case "entered":
@@ -51,12 +49,12 @@ const InternalSlideInFlex: FC<
     <SlideInFlex
       ref={ref}
       $background="bg-primary"
-      $right={!isLeftHandSide ? "all-spacing-0" : null}
-      $left={isLeftHandSide ? "all-spacing-0" : null}
+      $right={!isLeftHandSide ? "spacing-0" : null}
+      $left={isLeftHandSide ? "spacing-0" : null}
       $position="fixed"
-      $bottom="all-spacing-0"
-      $width={["all-spacing-22"]}
-      $top="all-spacing-0"
+      $bottom="spacing-0"
+      $width={["spacing-640"]}
+      $top="spacing-0"
       $transition="standard-ease"
       $zIndex={finalZIndex}
       $flexDirection="column"

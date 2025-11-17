@@ -30,7 +30,7 @@ const StyledOakLink = styled(InternalLink)`
     color: ${parseColor("white")};
     text-align: center;
     line-height: 32px;
-    margin-right: ${parseSpacing("space-between-xs")};
+    margin-right: ${parseSpacing("spacing-12")};
     text-decoration: none;
   }
   &:hover::before {
@@ -66,7 +66,7 @@ const StyledOLItem = styled(OakLI)`
   counter-increment: list-counter;
   display: flex;
   align-items: center;
-  margin-bottom: ${parseSpacing("space-between-xs")};
+  margin-bottom: ${parseSpacing("spacing-12")};
   min-height: 40px;
   &:last-child {
     margin-bottom: 0;
@@ -106,7 +106,7 @@ export const OakTertiaryOLNav = ({
     <StyledNav aria-label={ariaLabel} {...rest}>
       {anchorTarget && <OakAnchorTarget id={anchorTarget} />}
       {title && (
-        <OakBox $mb={"space-between-m"}>
+        <OakBox $mb={"spacing-24"}>
           <OakSpan $font={"heading-light-7"}>{title}</OakSpan>
         </OakBox>
       )}

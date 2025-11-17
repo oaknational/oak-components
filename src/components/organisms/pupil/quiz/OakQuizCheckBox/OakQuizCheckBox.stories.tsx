@@ -66,7 +66,7 @@ export const WithImage: Story = {
         cloudinaryId={`https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/sample.jpg`}
         width={864}
         height={576}
-        $minWidth={"all-spacing-19"}
+        $minWidth={"spacing-240"}
       />
     ),
   },
@@ -79,7 +79,7 @@ export const WithImage: Story = {
 
 export const WithImageNoDims: Story = {
   render: (args) => (
-    <OakFlex $gap={"space-between-m"} $flexDirection={"column"}>
+    <OakFlex $gap={"spacing-24"} $flexDirection={"column"}>
       <OakQuizCheckBox
         {...args}
         id="checkbox-test-default-2"
@@ -89,8 +89,8 @@ export const WithImageNoDims: Story = {
           <OakCloudinaryImage
             alt="Some trees"
             cloudinaryId={`https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/sample.jpg`}
-            $width={"all-spacing-19"}
-            $height={"all-spacing-17"}
+            $width={"spacing-240"}
+            $height={"spacing-160"}
             $background={"bg-neutral"}
           />
         }
@@ -104,8 +104,8 @@ export const WithImageNoDims: Story = {
           <OakCloudinaryImage
             alt="Some trees"
             cloudinaryId={`https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336526/samples/dessert-on-a-plate.jpg`}
-            $width={"all-spacing-19"}
-            $height={"all-spacing-17"}
+            $width={"spacing-240"}
+            $height={"spacing-160"}
             $background={"bg-neutral"}
           />
         }
@@ -137,7 +137,7 @@ export const Feedback: Story = {
     >(null);
 
     return (
-      <OakFlex $flexDirection={"column"} $gap={"space-between-m"}>
+      <OakFlex $flexDirection={"column"} $gap={"spacing-24"}>
         <OakQuizCheckBox
           {...args}
           id="checkbox-test-default-7"

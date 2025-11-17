@@ -97,9 +97,9 @@ const meta: Meta<typeof OakUnitListItem> = {
       return (
         <OakFlex
           $flexDirection="column"
-          $gap="space-between-m"
+          $gap="spacing-24"
           $background={"bg-decorative4-main"}
-          $pa={"inner-padding-xl"}
+          $pa={"spacing-24"}
           role="list"
         >
           <OakBox>

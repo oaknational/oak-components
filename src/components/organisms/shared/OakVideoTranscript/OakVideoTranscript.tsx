@@ -55,7 +55,7 @@ export const OakVideoTranscript = ({
       <OakFlex
         $flexDirection="row"
         $flexWrap={"wrap"}
-        $gap={["space-between-ssx", "space-between-s"]}
+        $gap={["spacing-8", "spacing-16"]}
       >
         {/* desktop */}
 
@@ -91,12 +91,12 @@ export const OakVideoTranscript = ({
       {children && (
         <OakCollapsibleContent
           id={id}
-          $maxHeight="all-spacing-23"
+          $maxHeight="spacing-960"
           isOpen={showTranscript}
           $font="body-2"
           $color="text-primary"
-          $pa={"space-between-xs"}
-          $mt={["space-between-s", "space-between-m2"]}
+          $pa={"spacing-12"}
+          $mt={["spacing-16", "spacing-32"]}
           aria-live="polite"
         >
           {children}

@@ -38,22 +38,22 @@ export const OakQuote = (props: OakQuoteProps) => {
   } = props;
 
   return (
-    <OakFlex $width={"100%"} $maxWidth={"all-spacing-22"}>
+    <OakFlex $width={"100%"} $maxWidth={"spacing-640"}>
       {color !== "transparent" && (
         <OakFlex
-          $width={"all-spacing-2"}
+          $width={"spacing-8"}
           $background={color}
-          $mr={"space-between-m"}
+          $mr={"spacing-24"}
           $flexShrink={0}
         />
       )}
-      <OakFlex $flexDirection={"column"} $gap={"space-between-s"}>
+      <OakFlex $flexDirection={"column"} $gap={"spacing-16"}>
         <OakBox $font={["heading-7", "heading-6"]} $color={"text-primary"}>
           <TightLetterSpacing>"{quote}"</TightLetterSpacing>
         </OakBox>
 
         {authorName ? (
-          <OakFlex $gap={"space-between-s"} $alignItems={"center"}>
+          <OakFlex $gap={"spacing-16"} $alignItems={"center"}>
             {authorImageSrc ? (
               <StyledAuthorImage
                 alt={""}

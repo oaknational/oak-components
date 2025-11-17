@@ -38,8 +38,8 @@ export const OakCodeRenderer = ({ string, ...rest }: OakCodeRendererProps) => {
                 key={index}
                 $background={"grey70"}
                 $color={"white"}
-                $pv={["inner-padding-none", "inner-padding-ssx"]}
-                $ph={["inner-padding-xs", "inner-padding-xs"]}
+                $pv={["spacing-0", "spacing-4"]}
+                $ph={["spacing-8", "spacing-8"]}
                 $borderRadius={"border-radius-m2"}
                 $display={"inline-block"}
                 $font={["code-2", "code-1"]}
@@ -128,11 +128,11 @@ export const OakCodeRenderer = ({ string, ...rest }: OakCodeRendererProps) => {
         key={`${text}-${index}`}
         $background={"grey70"}
         $color={"code-grey"}
-        $pv={"inner-padding-xs"}
-        $ph={"inner-padding-s"}
+        $pv={"spacing-8"}
+        $ph={"spacing-12"}
         $borderRadius={"border-radius-m2"}
         $whiteSpace={"pre-wrap"}
-        $mt={"space-between-xl"}
+        $mt={"spacing-56"}
         $font={"code-2"}
         {...rest}
       >
@@ -141,15 +141,13 @@ export const OakCodeRenderer = ({ string, ...rest }: OakCodeRendererProps) => {
             $flexDirection={"column"}
             $br={"border-solid-s"}
             $borderColor={"border-neutral"}
-            $pr={"inner-padding-s"}
+            $pr={"spacing-12"}
           >
             {codeContent.split("\n").map((line, index) => (
               <OakSpan key={`${line}-${index}`}>{index + 1}</OakSpan>
             ))}
           </OakFlex>
-          <OakSpan $pl={"inner-padding-s"}>
-            {codeWithSyntaxHighlighting}
-          </OakSpan>
+          <OakSpan $pl={"spacing-12"}>{codeWithSyntaxHighlighting}</OakSpan>
         </OakFlex>
       </StyledCodeContainer>
     );
@@ -175,8 +173,8 @@ export const OakCodeRenderer = ({ string, ...rest }: OakCodeRendererProps) => {
           $alignSelf="flex-end"
           $width={"fit-content"}
           $alignItems={"center"}
-          $gap={"space-between-xs"}
-          $mt={"space-between-s"}
+          $gap={"spacing-12"}
+          $mt={"spacing-16"}
         >
           <OakSpan $font={"heading-light-7"}>Code colour</OakSpan>
           <OakInfo
@@ -188,7 +186,7 @@ export const OakCodeRenderer = ({ string, ...rest }: OakCodeRendererProps) => {
                   colours are used to help programmers understand the code:
                 </OakP>
                 <br />
-                <OakUL $reset $pl={"inner-padding-xs"}>
+                <OakUL $reset $pl={"spacing-8"}>
                   <OakLI>
                     <OakSpan $font={"heading-7"}>• Blue</OakSpan>
                     <OakSpan $font={"heading-light-7"}>

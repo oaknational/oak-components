@@ -11,8 +11,8 @@ import { parseSpacing } from "@/styles/helpers/parseSpacing";
  * This might be a useful atom to extract
  */
 const StyledLeadingTrim = styled(OakBox)`
-  margin-block: calc(-${parseSpacing("space-between-ssx")} / 2);
-  line-height: calc(1.5rem + ${parseSpacing("space-between-ssx")});
+  margin-block: calc(-${parseSpacing("spacing-8")} / 2);
+  line-height: calc(1.5rem + ${parseSpacing("spacing-8")});
 `;
 
 /**
@@ -22,7 +22,7 @@ export const OakDragAndDropInstructions = (
   props: ComponentPropsWithoutRef<typeof OakFlex>,
 ) => {
   return (
-    <OakFlex $gap="space-between-ssx" {...props}>
+    <OakFlex $gap="spacing-8" {...props}>
       <OakFlex $flexGrow={0}>
         <OakIcon iconName="move-arrows" />
       </OakFlex>

@@ -31,20 +31,19 @@ const Slots = ({
 >) => {
   if (titleSlot) {
     return (
-      <OakFlex $flexDirection={"column"} $gap={"space-between-m"}>
-        <OakFlex $flexDirection={"column"} $gap={"space-between-m2"}>
+      <OakFlex $flexDirection={"column"} $gap={"spacing-24"}>
+        <OakFlex $flexDirection={"column"} $gap={"spacing-32"}>
           {titleSlot}
-          <OakHandDrawnHR hrColor={"white"} $height={"all-spacing-1"} />
+          <OakHandDrawnHR hrColor={"white"} $height={"spacing-4"} />
         </OakFlex>
-
-        <OakFlex $flexDirection={"column"} $gap={"space-between-m2"}>
+        <OakFlex $flexDirection={"column"} $gap={"spacing-32"}>
           {filterSlot}
           <OakFlex>{subheadingSlot}</OakFlex>
         </OakFlex>
       </OakFlex>
     );
   } else {
-    return <OakFlex $pt={"inner-padding-xl"}>{subheadingSlot}</OakFlex>;
+    return <OakFlex $pt={"spacing-24"}>{subheadingSlot}</OakFlex>;
   }
 };
 
@@ -72,9 +71,9 @@ export const OakPupilJourneyList = ({
   return (
     <OakFlex
       $flexDirection={"column"}
-      $width={["100%", "all-spacing-22", "all-spacing-23"]}
+      $width={["100%", "spacing-640", "spacing-960"]}
       $background={outerBackgroundColor}
-      $gap={"space-between-m"}
+      $gap={"spacing-24"}
     >
       <Slots
         titleSlot={titleSlot}
@@ -83,9 +82,9 @@ export const OakPupilJourneyList = ({
       />
       <OakFlex
         $flexDirection={"column"}
-        $pa={"inner-padding-m"}
+        $pa={"spacing-16"}
         $borderRadius={"border-radius-l"}
-        $gap={"space-between-s"}
+        $gap={"spacing-16"}
         $background={backgroundColor}
         role="list"
       >

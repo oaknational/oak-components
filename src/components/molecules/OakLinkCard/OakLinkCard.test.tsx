@@ -18,7 +18,7 @@ const testData = {
 describe("OakLinkCard", () => {
   const defaultProps: OakLinkCardProps = {
     mainSection: (
-      <OakFlex $flexDirection="column" $gap="space-between-xs">
+      <OakFlex $flexDirection="column" $gap="spacing-12">
         <OakHeading tag="h1" $font="heading-5">
           {testData.headingText}
         </OakHeading>

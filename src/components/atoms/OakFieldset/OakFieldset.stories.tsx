@@ -60,6 +60,6 @@ export const Default: Story = {
     </OakFieldset>
   ),
   args: {
-    $pa: "inner-padding-s",
+    $pa: "spacing-12",
   },
 };

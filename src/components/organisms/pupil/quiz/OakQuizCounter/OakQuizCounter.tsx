@@ -32,11 +32,7 @@ export const OakQuizCounter = (props: OakQuizCounterProps) => {
     <Pill key={i} isFilled={i < props.counter} />
   ));
   return (
-    <OakFlex
-      $flexDirection={"column"}
-      $gap={"space-between-xs"}
-      $alignItems={"end"}
-    >
+    <OakFlex $flexDirection={"column"} $gap={"spacing-12"} $alignItems={"end"}>
       <OakSpan $font={"heading-light-4"} $color={"text-subdued"}>
         <OakSpan $font={"heading-4"} $color={"text-primary"}>
           {counter}{" "}
@@ -44,7 +40,7 @@ export const OakQuizCounter = (props: OakQuizCounterProps) => {
         of {total}
       </OakSpan>
       <OakFlex
-        $gap={"space-between-ssx"}
+        $gap={"spacing-8"}
         $flexWrap={"wrap"}
         aria-hidden="true"
         focusable={false}

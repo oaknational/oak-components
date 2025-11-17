@@ -33,18 +33,18 @@ export const OakPupilJourneyHeader = ({
   optionalityTitle,
 }: OakPupilJourneyHeaderProps) => {
   return (
-    <OakFlex $flexDirection={"row"} $gap={"space-between-m"}>
+    <OakFlex $flexDirection={"row"} $gap={"spacing-24"}>
       <OakHandDrawnCardWithIcon
         fill={getIconBackground(iconBackground)}
         iconName={iconName}
         $flexGrow={0}
-        iconHeight={["all-spacing-9", "all-spacing-10", "all-spacing-10"]}
-        iconWidth={["all-spacing-9", "all-spacing-10", "all-spacing-10"]}
-        $width={["all-spacing-11", "all-spacing-13", "all-spacing-13"]}
-        $height={["all-spacing-11", "all-spacing-13", "all-spacing-13"]}
+        iconHeight={["spacing-48", "spacing-56", "spacing-56"]}
+        iconWidth={["spacing-48", "spacing-56", "spacing-56"]}
+        $width={["spacing-64", "spacing-80", "spacing-80"]}
+        $height={["spacing-64", "spacing-80", "spacing-80"]}
         alt={alt}
       />
-      <OakFlex $flexDirection={"column"} $gap={"space-between-s"}>
+      <OakFlex $flexDirection={"column"} $gap={"spacing-16"}>
         {optionalityTitle && (
           <OakHeading tag="h2" $font={["heading-7"]}>
             {optionalityTitle}

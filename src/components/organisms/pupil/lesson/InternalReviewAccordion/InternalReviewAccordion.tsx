@@ -56,7 +56,7 @@ const Accordion = ({ children, id }: InternalReviewAccordionProps) => {
         $flexDirection={"column"}
         $alignItems={"flex-end"}
         $justifyContent={"center"}
-        $pt={["inner-padding-l", "inner-padding-none"]}
+        $pt={["spacing-20", "spacing-0"]}
       >
         <StyledAccordionButton
           $isOpen={isOpen}
@@ -70,23 +70,22 @@ const Accordion = ({ children, id }: InternalReviewAccordionProps) => {
           defaultIconBackground={"black"}
           hoverIconBackground={"black"}
           disabledIconBackground={"transparent"}
-          iconBackgroundSize={"all-spacing-7"}
-          iconSize={"all-spacing-6"}
+          iconBackgroundSize={"spacing-32"}
+          iconSize={"spacing-24"}
           defaultIconColor={"white"}
           isTrailingIcon={true}
         >
           Results
         </StyledAccordionButton>
       </OakFlex>
-
       <StyledAccordionContent aria-labelledby={id}>
         <OakFlex
           $background={"white"}
           $borderRadius={"border-radius-l"}
-          $pv={"inner-padding-xl3"}
-          $ph={"inner-padding-xl"}
+          $pv={"spacing-40"}
+          $ph={"spacing-24"}
           $minWidth={"100%"}
-          $mt={"space-between-m"}
+          $mt={"spacing-24"}
         >
           {children}
         </OakFlex>

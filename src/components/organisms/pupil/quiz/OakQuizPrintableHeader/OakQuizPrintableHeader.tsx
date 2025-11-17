@@ -38,21 +38,21 @@ export const OakQuizPrintableHeader = ({
   return (
     <OakFlex
       $flexDirection={["column", "row"]}
-      $gap={"space-between-s"}
+      $gap={"spacing-16"}
       $justifyContent={"space-between"}
     >
-      <OakFlex $flexDirection={"row"} $gap={"space-between-s"}>
+      <OakFlex $flexDirection={"row"} $gap={"spacing-16"}>
         <OakHandDrawnCardWithIcon
           iconName={iconName}
           fill={"white"}
           $flexGrow={0}
-          iconHeight={"all-spacing-10"}
-          iconWidth={"all-spacing-10"}
-          $width={"all-spacing-10"}
-          $height={"all-spacing-10"}
+          iconHeight={"spacing-56"}
+          iconWidth={"spacing-56"}
+          $width={"spacing-56"}
+          $height={"spacing-56"}
           alt={alt}
         />
-        <OakFlex $flexDirection={"column"} $gap={"space-between-xs"}>
+        <OakFlex $flexDirection={"column"} $gap={"spacing-12"}>
           <OakHeading tag="h1" $font={"heading-7"}>
             {title}
           </OakHeading>
@@ -61,7 +61,7 @@ export const OakQuizPrintableHeader = ({
       </OakFlex>
       <OakFlex
         $flexDirection={"column"}
-        $gap={"space-between-xs"}
+        $gap={"spacing-12"}
         $alignItems={"flex-start"}
       >
         <OakJauntyAngleLabel

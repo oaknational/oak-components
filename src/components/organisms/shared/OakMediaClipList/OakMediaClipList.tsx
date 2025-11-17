@@ -26,13 +26,13 @@ export const OakMediaClipList = ({
     <OakFlex
       $flexDirection={"column"}
       $textAlign={"left"}
-      $ph={"inner-padding-m"}
-      $pv={"inner-padding-s"}
+      $ph={"spacing-16"}
+      $pv={"spacing-12"}
     >
-      <OakTypography $font="body-3" $mb={"space-between-sssx"}>
+      <OakTypography $font="body-3" $mb={"spacing-4"}>
         Lesson
       </OakTypography>
-      <OakTypography $font="heading-7" $mb={"space-between-sssx"}>
+      <OakTypography $font="heading-7" $mb={"spacing-4"}>
         {lessonTitle}
       </OakTypography>
       <OakTypography $font="body-3">
@@ -42,7 +42,7 @@ export const OakMediaClipList = ({
   );
 
   const mediaClipListContent = (
-    <OakUL $reset $ph={"inner-padding-s"} $pt={"inner-padding-xs"}>
+    <OakUL $reset $ph={"spacing-12"} $pt={"spacing-8"}>
       {children}
     </OakUL>
   );
@@ -53,7 +53,7 @@ export const OakMediaClipList = ({
       children={mediaClipListContent}
       id="media-clip-list"
       initialOpen={true}
-      $maxHeight={"all-spacing-21"}
+      $maxHeight={"spacing-480"}
     />
   );
 };

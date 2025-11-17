@@ -23,9 +23,9 @@ export const OakInformativeModalFooter = (
       $flexDirection={["column", "row"]}
       $bt="border-solid-s"
       $borderColor={$borderColor}
-      $ph={["inner-padding-m", "inner-padding-m", "inner-padding-m"]}
-      $pv={["inner-padding-s", "inner-padding-m", "inner-padding-m"]}
-      $gap={["space-between-s", "space-between-m"]}
+      $ph={["spacing-16", "spacing-16", "spacing-16"]}
+      $pv={["spacing-12", "spacing-16", "spacing-16"]}
+      $gap={["spacing-16", "spacing-24"]}
       $width="100%"
     />
   );

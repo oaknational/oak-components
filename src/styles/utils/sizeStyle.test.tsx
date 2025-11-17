@@ -7,12 +7,12 @@ import { sizeStyle } from "@/styles/utils/sizeStyle";
 
 describe("sizeStyle", () => {
   test.each([
-    ["$width", "all-spacing-2", "width: 0.5rem;"],
-    ["$minWidth", "all-spacing-2", "min-width: 0.5rem;"],
-    ["$maxWidth", "all-spacing-2", "max-width: 0.5rem;"],
-    ["$height", "all-spacing-2", "height: 0.5rem;"],
-    ["$minHeight", "all-spacing-2", "min-height: 0.5rem;"],
-    ["$maxHeight", "all-spacing-2", "max-height: 0.5rem;"],
+    ["$width", "spacing-8", "width: 0.5rem;"],
+    ["$minWidth", "spacing-8", "min-width: 0.5rem;"],
+    ["$maxWidth", "spacing-8", "max-width: 0.5rem;"],
+    ["$height", "spacing-8", "height: 0.5rem;"],
+    ["$minHeight", "spacing-8", "min-height: 0.5rem;"],
+    ["$maxHeight", "spacing-8", "max-height: 0.5rem;"],
     ["$aspectRatio", "16 / 9", "aspect-ratio: 16 / 9;"],
     ["$boxSizing", "content-box", "box-sizing: content-box;"],
   ])("should correctly handle %p prop", (prop, value, expected) => {

@@ -31,7 +31,7 @@ export type OakRadioTileProps = {
 const RadioTileLabel = styled(OakLabel)<OakLabelProps>`
   cursor: pointer;
   display: flex;
-  gap: ${parseSpacing("space-between-s")};
+  gap: ${parseSpacing("spacing-16")};
 `;
 
 const HiddenRadioButtonInput = styled.input.attrs({
@@ -60,7 +60,7 @@ const UnstyledComponent = (props: OakRadioTileProps) => {
       $borderColor="border-neutral"
       $ba="border-solid-m"
       $borderRadius="border-radius-s"
-      $pa="inner-padding-s"
+      $pa="spacing-12"
       $position="relative"
       $background={isFocussed || isChecked ? "black" : "transparent"}
       $color={isFocussed || isChecked ? "white" : "black"}
@@ -75,7 +75,6 @@ const UnstyledComponent = (props: OakRadioTileProps) => {
           data-testid="radio-tile-focus"
         />
       )}
-
       <RadioTileLabel htmlFor={id}>
         <HiddenRadioButtonInput
           value={tileItem.id}
@@ -93,8 +92,8 @@ const UnstyledComponent = (props: OakRadioTileProps) => {
           }}
         />
         <OakFlex
-          $height={"all-spacing-6"}
-          $width="all-spacing-6"
+          $height={"spacing-24"}
+          $width="spacing-24"
           $borderColor="border-neutral"
           $flexGrow={0}
           $flexShrink={0}
@@ -106,8 +105,8 @@ const UnstyledComponent = (props: OakRadioTileProps) => {
         >
           {isChecked && (
             <OakBox
-              $height="all-spacing-4"
-              $width="all-spacing-4"
+              $height="spacing-16"
+              $width="spacing-16"
               $background="black"
               $position="absolute"
               $borderRadius="border-radius-circle"
