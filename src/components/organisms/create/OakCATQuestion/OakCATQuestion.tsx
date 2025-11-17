@@ -118,7 +118,7 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
         <InternalUnstyledChevronAccordion
           id={`question-${questionNumber}`}
           header={header}
-          subheader={questionTextInput}
+          subheader={questionStem}
           content={body}
           $flexDirection={"column"}
           $justifyContent={"flex-start"}
