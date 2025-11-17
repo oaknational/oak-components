@@ -41,7 +41,7 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
   const {
     questionNumber,
     questionTypeInput,
-    questionTextInput,
+    questionStem,
     hintInput,
     feedbackInput,
     answersSection,
