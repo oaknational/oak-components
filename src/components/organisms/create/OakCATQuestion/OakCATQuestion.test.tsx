@@ -45,7 +45,6 @@ describe("OakCATQuestion", () => {
     );
     expect(container).toMatchSnapshot();
   });
-  
   it("renders image in question stem", () => {
     const { getByText, getByAltText } = renderWithTheme(
       <OakThemeProvider theme={oakDefaultTheme}>
