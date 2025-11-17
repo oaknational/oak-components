@@ -279,7 +279,7 @@ const NativeOption = styled("option")<
   }
 
   ${NativeOptGroup} & {
-    padding-left: ${parseSpacing("inner-padding-xl2")};
+    padding-left: ${parseSpacing("spacing-32")};
   }
 
   ${paddingStyle};
@@ -303,11 +303,7 @@ export type OakOptGroupProps = {
 };
 export function OakOptGroup({ label, children }: OakOptGroupProps) {
   return (
-    <NativeOptGroup
-      label={label}
-      $ph={"inner-padding-m"}
-      $pv={"inner-padding-xs"}
-    >
+    <NativeOptGroup label={label} $ph={"spacing-16"} $pv={"spacing-8"}>
       <OakOptGroupLegend>{label}</OakOptGroupLegend>
       {children}
     </NativeOptGroup>
@@ -319,7 +315,7 @@ type OakOptGroupLegendProps = {
 };
 function OakOptGroupLegend({ children }: OakOptGroupLegendProps) {
   return (
-    <NativeLegend $ph={"inner-padding-m"} $pv={"inner-padding-xs"}>
+    <NativeLegend $ph={"spacing-16"} $pv={"spacing-8"}>
       {children}
     </NativeLegend>
   );
@@ -345,8 +341,8 @@ export function OakOption({
       value={value}
       disabled={disabled}
       selected={selected}
-      $ph={"inner-padding-m"}
-      $pv={"inner-padding-xs"}
+      $ph={"spacing-16"}
+      $pv={"spacing-8"}
       $focusRingDropShadows={[
         "drop-shadow-centered-lemon",
         "drop-shadow-centered-grey",
@@ -418,7 +414,7 @@ export default function OakSelect({
       $color={color}
       $alignItems="center"
       $position="relative"
-      $gap="space-between-s"
+      $gap="spacing-16"
       $disabled={!!props.disabled}
       $readOnly={!!props.readOnly}
       $display={$display}
@@ -428,11 +424,11 @@ export default function OakSelect({
     >
       <NativeSelect
         key={props.value}
-        $pa={"inner-padding-m"}
+        $pa={"spacing-16"}
         // $ba={"border-solid-m"}
         $borderColor={"black"}
         // $borderRadius={"border-radius-m"}
-        $pr={"inner-padding-xl5"}
+        $pr={"spacing-56"}
         $focusRingDropShadows={focusRingDropShadows}
         disabled={!!props.disabled}
       >
@@ -443,9 +439,9 @@ export default function OakSelect({
       </NativeSelect>
       <IconUpWrapper
         $position={"absolute"}
-        $top={"all-spacing-0"}
-        $bottom={"all-spacing-0"}
-        $right={"all-spacing-3"}
+        $top={"spacing-0"}
+        $bottom={"spacing-0"}
+        $right={"spacing-12"}
         $pointerEvents={"none"}
         $alignContent={"center"}
       >
@@ -453,9 +449,9 @@ export default function OakSelect({
       </IconUpWrapper>
       <IconDownWrapper
         $position={"absolute"}
-        $top={"all-spacing-0"}
-        $bottom={"all-spacing-0"}
-        $right={"all-spacing-3"}
+        $top={"spacing-0"}
+        $bottom={"spacing-0"}
+        $right={"spacing-12"}
         $pointerEvents={"none"}
         $alignContent={"center"}
       >
