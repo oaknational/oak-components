@@ -115,7 +115,6 @@ export const OakInformativeModal = ({
         >
           <OakFlex
             $pa="spacing-16"
-            // $pb="inner-padding-none"
             $justifyContent={"flex-end"}
             $alignItems="center"
           >

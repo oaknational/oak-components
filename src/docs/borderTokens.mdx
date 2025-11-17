@@ -15,7 +15,7 @@ import { OakLI, OakUL , OakSpan, OakBox, OakFlex} from "@/components/atoms";
 <OakUL>
   {Object.entries(oakBorderWidthTokens).map((token, i) => (
     <OakLI key={i}>
-      <OakBox $ba={token[0]} $pa={"all-spacing-3"}>
+      <OakBox $ba={token[0]} $pa={"spacing-12"}>
         <OakSpan>{token[0]}, {token[1]}px</OakSpan>
       </OakBox>
     </OakLI>
@@ -26,7 +26,7 @@ import { OakLI, OakUL , OakSpan, OakBox, OakFlex} from "@/components/atoms";
 <OakUL>
   {Object.entries(oakBorderRadiusTokens).map((token, i) => (
     <OakLI key={i}>
-      <OakBox $ba={"border-solid-s"} $pa={"all-spacing-3"} $height={"all-spacing-7"} $borderRadius={token[0]}>
+      <OakBox $ba={"border-solid-s"} $pa={"spacing-12"} $height={"spacing-32"} $borderRadius={token[0]}>
         <OakSpan>{token[0]}, {token[1]}px</OakSpan>
       </OakBox>
     </OakLI>
