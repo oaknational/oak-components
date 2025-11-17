@@ -29,9 +29,7 @@ export type OakCATQuestionProps = {
   status: Status;
   initialOpen?: boolean;
   questionTypeInput: ReactNode;
-  questionTextInput: ReactNode;
-  questionImage?: ReactNode;
-  questionImagePosition?: "above" | "below";
+  questionStem: ReactNode;
   hintInput: ReactElement;
   feedbackInput: ReactElement;
   answersSection: ReactNode;
@@ -43,9 +41,7 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
   const {
     questionNumber,
     questionTypeInput,
-    questionTextInput,
-    questionImage,
-    questionImagePosition,
+    questionStem,
     hintInput,
     feedbackInput,
     answersSection,
@@ -65,14 +61,6 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
     <OakFlex $gap={"space-between-xs"} $alignItems={"center"} $width={"100%"}>
       {`${questionNumber}.`}
       {questionTypeInput}
-    </OakFlex>
-  );
-
-  const questionStem = (
-    <OakFlex $flexDirection={"column"}>
-      {questionImagePosition === "above" && questionImage}
-      {questionTextInput}
-      {questionImagePosition === "below" && questionImage}
     </OakFlex>
   );
 

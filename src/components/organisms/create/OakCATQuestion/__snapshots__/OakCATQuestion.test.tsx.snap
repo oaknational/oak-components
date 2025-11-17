@@ -46,14 +46,14 @@ exports[`OakCATQuestion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c17 {
+.c16 {
   position: relative;
   overflow: auto;
   font-family: --var(google-font),Lexend,sans-serif;
   overflow: auto;
 }
 
-.c20 {
+.c19 {
   padding-left: 2rem;
   padding-right: 2rem;
   padding-top: 1.5rem;
@@ -117,17 +117,7 @@ exports[`OakCATQuestion matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c18 {
+.c17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -138,7 +128,7 @@ exports[`OakCATQuestion matches snapshot 1`] = `
   gap: 3rem;
 }
 
-.c19 {
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -151,14 +141,14 @@ exports[`OakCATQuestion matches snapshot 1`] = `
   align-self: stretch;
 }
 
-.c22 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c24 {
+.c23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -176,7 +166,7 @@ exports[`OakCATQuestion matches snapshot 1`] = `
   object-fit: contain;
 }
 
-.c21 {
+.c20 {
   display: grid;
   grid-template-columns: repeat(12,1fr);
   width: 100%;
@@ -184,7 +174,7 @@ exports[`OakCATQuestion matches snapshot 1`] = `
   column-gap: 1.25rem;
 }
 
-.c23 {
+.c22 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -193,7 +183,7 @@ exports[`OakCATQuestion matches snapshot 1`] = `
   grid-row: span 1;
 }
 
-.c26 {
+.c25 {
   color: #575757;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
@@ -205,7 +195,7 @@ exports[`OakCATQuestion matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c25 {
+.c24 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -300,15 +290,11 @@ exports[`OakCATQuestion matches snapshot 1`] = `
             </button>
           </div>
         </div>
-        <div
-          class="c5 c16"
-        >
-          <div>
-            Question Text Input
-          </div>
+        <div>
+          Question Text Input
         </div>
         <div
-          class="c17"
+          class="c16"
         >
           <div
             aria-labelledby="question-1"
@@ -317,30 +303,30 @@ exports[`OakCATQuestion matches snapshot 1`] = `
             role="region"
           >
             <div
-              class="c7 c18"
+              class="c7 c17"
             >
               <div
-                class="c5 c19"
+                class="c5 c18"
               >
                 <div>
                   Answers Section
                 </div>
               </div>
               <div
-                class="c20 c21"
+                class="c19 c20"
               >
                 <div
-                  class="c5 c22 c23"
+                  class="c5 c21 c22"
                 >
                   <div
-                    class="c5 c24"
+                    class="c5 c23"
                   >
                     <label
-                      class="c25"
+                      class="c24"
                       for="hintInputId"
                     >
                       <span
-                        class="c26"
+                        class="c25"
                       >
                         Hint
                       </span>
@@ -351,17 +337,17 @@ exports[`OakCATQuestion matches snapshot 1`] = `
                   </div>
                 </div>
                 <div
-                  class="c5 c22 c23"
+                  class="c5 c21 c22"
                 >
                   <div
-                    class="c5 c24"
+                    class="c5 c23"
                   >
                     <label
-                      class="c25"
+                      class="c24"
                       for="feedbackInputId"
                     >
                       <span
-                        class="c26"
+                        class="c25"
                       >
                         Feedback
                       </span>

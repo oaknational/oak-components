@@ -52,7 +52,7 @@ export const Default: Story = {
         Dummy Question Type Input
       </OakBox>
     ),
-    questionTextInput: (
+    questionStem: (
       <OakBox $background={"aqua50"} $pa="inner-padding-s">
         Dummy Question Text Input
       </OakBox>
@@ -104,7 +104,7 @@ export const InitiallyOpen: Story = {
         Dummy Question Type Input
       </OakBox>
     ),
-    questionTextInput: (
+    questionStem: (
       <OakBox $background={"aqua50"} $pa="inner-padding-s">
         Dummy Question Text Input
       </OakBox>
@@ -157,7 +157,7 @@ export const WithMultilineText: Story = {
         Dummy Question Type Input
       </OakBox>
     ),
-    questionTextInput: (
+    questionStem: (
       <OakBox $background={"aqua50"} $pa="inner-padding-s">
         Dummy Question Text Input
       </OakBox>
@@ -195,24 +195,21 @@ export const WithMultilineTextAndStemImage: Story = {
   args: {
     questionNumber: 1,
     status: "neutral",
-    questionImagePosition: "below",
     questionTypeInput: (
       <OakBox $background={"aqua50"} $pa="inner-padding-ssx">
         Dummy Question Type Input
       </OakBox>
     ),
-    questionTextInput: (
+    questionStem: (
       <OakBox $background={"aqua50"} $pa="inner-padding-s">
         Dummy Question Text Input
+        <OakImage
+          src="https://oaknationalacademy-res.cloudinary.com/image/upload/v1755009886/hc2moqkbq4rlsouotg2c.jpg"
+          alt="cat on chair"
+          $height={"all-spacing-15"}
+          $width={"all-spacing-15"}
+        />
       </OakBox>
-    ),
-    questionImage: (
-      <OakImage
-        src="https://oaknationalacademy-res.cloudinary.com/image/upload/v1755009886/hc2moqkbq4rlsouotg2c.jpg"
-        alt="cat on chair"
-        $height={"all-spacing-15"}
-        $width={"all-spacing-15"}
-      />
     ),
     hintInput: (
       <OakMultilineText
