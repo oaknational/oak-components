@@ -205,7 +205,7 @@ const UnstyledComponent = forwardRef(
           $overflowY={$overflowY}
           $whiteSpace={$whiteSpace}
           $width={"100%"}
-          aria-describedby="multiline-text-invalid-error"
+          aria-describedby={`${name}-invalid-error`}
           {...textAreaProps}
         ></StyledOakTextArea>
         {/* Span is inside OakFlex to stop textarea width changing when charCount changes. */}
@@ -233,7 +233,7 @@ const UnstyledComponent = forwardRef(
                   $overflowX={"auto"}
                   $font={"body-4"}
                   $color={"text-error"}
-                  id="multiline-text-invalid-error"
+                  id={`${name}-invalid-error`}
                   $pl={"spacing-4"}
                 >
                   {invalidText ? invalidText : internalErrors.join(". ")}
