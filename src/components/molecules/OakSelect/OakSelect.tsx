@@ -75,7 +75,7 @@ export type OakSelectProps = {
   disabledColor?: OakCombinedColorToken;
   readOnlyColor?: OakCombinedColorToken;
   highlightBackgroundColor?: OakCombinedColorToken;
-  $display: DisplayStyleProps["$display"];
+  $display?: DisplayStyleProps["$display"];
   /**
    * The width of the surrounding div - the input and icon will fill this
    */
