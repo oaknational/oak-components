@@ -2,14 +2,12 @@ import React, { ChangeEventHandler, ReactNode } from "react";
 import styled, { css } from "styled-components";
 
 import { OakFlex, OakIcon } from "@/components/atoms";
-import { InternalTextInputProps } from "@/components/atoms/InternalTextInput";
 import { OakCombinedColorToken, OakDropShadowToken } from "@/styles";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { borderStyle, BorderStyleProps } from "@/styles/utils/borderStyle";
 import { DisplayStyleProps } from "@/styles/utils/displayStyle";
-import { SizeStyleProps } from "@/styles/utils/sizeStyle";
 import {
   paddingStyle,
   PaddingStyleProps,
@@ -20,6 +18,7 @@ import {
   parseFontSize,
   parseFontWeight,
 } from "@/styles/helpers/parseTypography";
+import { colorStyle, ColorStyleProps } from "@/styles/utils/colorStyle";
 
 const IconUpWrapper = styled(OakFlex)`
   user-select: none;
@@ -28,79 +27,44 @@ const IconDownWrapper = styled(OakFlex)`
   user-select: none;
 `;
 
-type StyledTextInputWrapperProps = {
-  $color: OakCombinedColorToken;
-  $hoverBackground: OakCombinedColorToken;
-  $background: OakCombinedColorToken;
-  $borderColor: OakCombinedColorToken;
-  $focusRingDropShadows: OakDropShadowToken[];
-  $disabledBackgroundColor: OakCombinedColorToken;
-  $readOnlyBorderColor: OakCombinedColorToken;
-  $disabledColor: OakCombinedColorToken;
-  $readOnlyColor: OakCombinedColorToken;
-  $disabled: boolean;
-  $readOnly: boolean;
-};
-
-export type OakTextInputProps = {
-  /**
-   * Disables user input and updates the appearance accordingly.
-   */
-  disabled?: boolean;
-  /**
-   * Makes the input read-only. Preventing the user from changing the value.
-   */
-  readOnly?: boolean;
-  /**
-   * Sets the value. Use this in controlled components;
-   */
-  value?: string;
-  /**
-   * Sets the initial value. Use this for an uncontrolled component;
-   */
-  defaultValue?: string;
-  /**
-   * Used to target the input element in tests.
-   */
-  "data-testid"?: string;
-  onChange?: ChangeEventHandler<HTMLInputElement>;
-  /**
-   * Alters the appearance of the input field to indicate whether the input is valid or invalid.
-   */
-  validity?: "valid" | "invalid";
-  /**
-   * Position the icon at the end of the input
-   */
-  isTrailingIcon?: boolean;
-  /**
-   * Give the field a highlight to draw attention to it
-   */
-  isHighlighted?: boolean;
-  validBorderColor?: OakCombinedColorToken;
-  invalidBorderColor?: OakCombinedColorToken;
-  color?: OakCombinedColorToken;
-  hoverBackground?: OakCombinedColorToken;
-  background?: OakCombinedColorToken;
-  borderColor?: OakCombinedColorToken;
-  focusRingDropShadows?: OakDropShadowToken[];
-  disabledBackgroundColor?: OakCombinedColorToken;
-  readOnlyBorderColor?: OakCombinedColorToken;
-  disabledColor?: OakCombinedColorToken;
-  readOnlyColor?: OakCombinedColorToken;
-  highlightBackgroundColor?: OakCombinedColorToken;
-  /**
-   * The width of the surrounding div - the input and icon will fill this
-   */
-  wrapperWidth?: SizeStyleProps["$width"];
-  wrapperMaxWidth?: SizeStyleProps["$maxWidth"];
-} & InternalTextInputProps;
-
-const StyledTextInputWrapper = styled(OakFlex)<StyledTextInputWrapperProps>`
-  &:hover {
-    cursor: text;
+const StyledWrapper = styled(OakFlex)`
+  select ~ ${IconDownWrapper} {
+    display: block;
   }
 
-  background: ${(props) => parseColor(props.$background)};
+  select:open ~ ${IconDownWrapper} {
+    display: none;
+  }
+
+  select ~ ${IconUpWrapper} {
+    display: none;
+  }
+
+  select:open ~ ${IconUpWrapper} {
+    display: block;
+  }
+`;
+
+const NativeSelect = styled("select")<
+  SpacingStyleProps &
+    ColorStyleProps &
+    BorderStyleProps & {
+      $focusRingDropShadows: OakDropShadowToken[];
+      $hoverBackground?: OakCombinedColorToken;
+      $readOnly?: boolean;
+      $readOnlyBorderColor?: OakCombinedColorToken;
+      $readOnlyColor?: OakCombinedColorToken;
+      $disabledBackgroundColor?: OakCombinedColorToken;
+      $disabledColor?: OakCombinedColorToken;
+      $disabled?: boolean;
+    }
+>`
+  border: none;
+  outline: none;
+  width: 100%;
+
+  appearance: none;
+  appearance: base-select;
 
   ${(props) =>
     !props.$readOnly &&
@@ -133,33 +97,9 @@ const StyledTextInputWrapper = styled(OakFlex)<StyledTextInputWrapperProps>`
     display: block;
   }
 
-  select:open ~ ${IconDownWrapper} {
-    display: none;
-  }
+  border-radius: ${parseBorderRadius("border-radius-s")};
 
-  select ~ ${IconUpWrapper} {
-    display: none;
-  }
-
-  select:open ~ ${IconUpWrapper} {
-    display: block;
-  }
-`;
-
-const NativeSelect = styled("select")<
-  SpacingStyleProps &
-    BorderStyleProps & { $focusRingDropShadows: OakDropShadowToken[] }
->`
-  border: none;
-  background: none;
-  outline: none;
-  width: 100%;
-
-  appearance: none;
-  appearance: base-select;
-
-  &:focus-within:not(:open) {
-    border-radius: ${parseBorderRadius("border-radius-s")};
+  &:focus:not(:open) {
     box-shadow: ${(props) =>
       props.$focusRingDropShadows
         .map((dropShadow) => parseDropShadow(dropShadow))
@@ -169,15 +109,16 @@ const NativeSelect = styled("select")<
   &::picker(select) {
     appearance: none;
     appearance: base-select;
-    border: solid 2px ${parseColor("text-primary")};
     border-bottom-left-radius: ${parseBorderRadius("border-radius-s")};
     border-bottom-right-radius: ${parseBorderRadius("border-radius-s")};
-    border-top: none;
     overflow: visible;
+    ${borderStyle};
+    ${colorStyle};
+    border-top: none;
   }
 
   ::picker(select) {
-    top: calc(anchor(bottom));
+    top: calc(anchor(bottom) - 2px);
     left: anchor(0);
   }
 
@@ -187,6 +128,17 @@ const NativeSelect = styled("select")<
 
   ${paddingStyle};
   ${borderStyle};
+  ${colorStyle};
+
+  &:open {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+    ::picker(select) {
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+    }
+  }
 `;
 
 export type OakSelectProps = {
@@ -235,8 +187,6 @@ export type OakSelectProps = {
   /**
    * The width of the surrounding div - the input and icon will fill this
    */
-  wrapperWidth?: SizeStyleProps["$width"];
-  wrapperMaxWidth?: SizeStyleProps["$maxWidth"];
 };
 
 const NativeOptGroup = styled("optgroup")<PaddingStyleProps>``;
@@ -255,9 +205,9 @@ const NativeOption = styled("option")<
     parseFontSize(props.$asDefault ? "body-2" : "body-2-bold")};
   font-weight: ${(props) =>
     parseFontWeight(props.$asDefault ? "body-2" : "body-2-bold")};
+  border-radius: ${parseBorderRadius("border-radius-xs")};
 
   &:focus {
-    border-radius: ${parseBorderRadius("border-radius-xs")};
     box-shadow: ${(props) =>
       props.$focusRingDropShadows
         ?.map((dropShadow) => parseDropShadow(dropShadow))
@@ -283,6 +233,7 @@ const NativeOption = styled("option")<
   }
 
   ${paddingStyle};
+  ${colorStyle};
 `;
 
 const NativeLegend = styled("legend")<PaddingStyleProps>`
@@ -327,6 +278,7 @@ export type OakOptionProps = {
   selected?: boolean;
   value?: string;
   asDefault?: boolean;
+  $focusRingDropShadows?: OakDropShadowToken[];
 };
 export function OakOption({
   selected,
@@ -334,6 +286,10 @@ export function OakOption({
   value,
   children,
   asDefault,
+  $focusRingDropShadows = [
+    "drop-shadow-centered-lemon",
+    "drop-shadow-centered-grey",
+  ],
 }: OakOptionProps) {
   return (
     <NativeOption
@@ -343,10 +299,7 @@ export function OakOption({
       selected={selected}
       $ph={"spacing-16"}
       $pv={"spacing-8"}
-      $focusRingDropShadows={[
-        "drop-shadow-centered-lemon",
-        "drop-shadow-centered-grey",
-      ]}
+      $focusRingDropShadows={$focusRingDropShadows}
     >
       {children}
     </NativeOption>
@@ -372,8 +325,6 @@ export default function OakSelect({
   validBorderColor = "border-success",
   invalidBorderColor = "border-error",
   isHighlighted = false,
-  wrapperWidth,
-  wrapperMaxWidth,
   $display = "inline-block",
   children,
   ...props
@@ -397,40 +348,31 @@ export default function OakSelect({
   }
 
   return (
-    <StyledTextInputWrapper
-      $height="fit-content"
-      $width={wrapperWidth}
-      $maxWidth={wrapperMaxWidth}
-      $borderRadius="border-radius-s"
-      $ba="border-solid-m"
-      $borderColor={finalBorderColor}
-      $focusRingDropShadows={focusRingDropShadows}
-      $background={finalBackgroundColor}
-      $hoverBackground={hoverBackground}
-      $disabledBackgroundColor={disabledBackgroundColor}
-      $readOnlyBorderColor={finalReadOnlyBorderColor}
-      $disabledColor={disabledColor}
-      $readOnlyColor={readOnlyColor}
-      $color={color}
-      $alignItems="center"
-      $position="relative"
-      $gap="spacing-16"
-      $disabled={!!props.disabled}
-      $readOnly={!!props.readOnly}
+    <StyledWrapper
       $display={$display}
-      onClick={(event) => {
-        event.currentTarget.querySelector("input")?.focus();
-      }}
+      $position={"relative"}
+      $overflow={"hidden"}
+      $alignItems="center"
+      $gap="spacing-16"
     >
       <NativeSelect
         key={props.value}
         $pa={"spacing-16"}
-        // $ba={"border-solid-m"}
-        $borderColor={"black"}
-        // $borderRadius={"border-radius-m"}
+        $background={finalBackgroundColor}
+        $borderColor={finalBorderColor}
         $pr={"spacing-56"}
         $focusRingDropShadows={focusRingDropShadows}
+        $ba="border-solid-m"
         disabled={!!props.disabled}
+        $borderRadius="border-radius-s"
+        $hoverBackground={hoverBackground}
+        $disabledBackgroundColor={disabledBackgroundColor}
+        $readOnlyBorderColor={finalReadOnlyBorderColor}
+        $disabledColor={disabledColor}
+        $readOnlyColor={readOnlyColor}
+        $color={color}
+        $disabled={!!props.disabled}
+        $readOnly={!!props.readOnly}
       >
         <button>
           <selectedcontent></selectedcontent>
@@ -457,6 +399,6 @@ export default function OakSelect({
       >
         <OakIcon iconName="chevron-down" />
       </IconDownWrapper>
-    </StyledTextInputWrapper>
+    </StyledWrapper>
   );
 }
