@@ -1,143 +1,35 @@
 import React, { ChangeEventHandler, ReactNode } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+
+import { NativeSelect } from "./NativeSelect";
 
 import { OakFlex, OakIcon } from "@/components/atoms";
 import { OakCombinedColorToken, OakDropShadowToken } from "@/styles";
-import { parseColor } from "@/styles/helpers/parseColor";
-import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
-import { parseSpacing } from "@/styles/helpers/parseSpacing";
-import { borderStyle, BorderStyleProps } from "@/styles/utils/borderStyle";
 import { DisplayStyleProps } from "@/styles/utils/displayStyle";
-import {
-  paddingStyle,
-  PaddingStyleProps,
-  SpacingStyleProps,
-} from "@/styles/utils/spacingStyle";
-import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
-import {
-  parseFontSize,
-  parseFontWeight,
-} from "@/styles/helpers/parseTypography";
-import { colorStyle, ColorStyleProps } from "@/styles/utils/colorStyle";
 
-const IconUpWrapper = styled(OakFlex)`
+export const IconUp = styled(OakFlex)`
   user-select: none;
 `;
-const IconDownWrapper = styled(OakFlex)`
+
+export const IconDown = styled(OakFlex)`
   user-select: none;
 `;
 
 const StyledWrapper = styled(OakFlex)`
-  select ~ ${IconDownWrapper} {
+  select ~ ${IconDown} {
     display: block;
   }
 
-  select:open ~ ${IconDownWrapper} {
+  select:open ~ ${IconDown} {
     display: none;
   }
 
-  select ~ ${IconUpWrapper} {
+  select ~ ${IconUp} {
     display: none;
   }
 
-  select:open ~ ${IconUpWrapper} {
+  select:open ~ ${IconUp} {
     display: block;
-  }
-`;
-
-const NativeSelect = styled("select")<
-  SpacingStyleProps &
-    ColorStyleProps &
-    BorderStyleProps & {
-      $focusRingDropShadows: OakDropShadowToken[];
-      $hoverBackground?: OakCombinedColorToken;
-      $readOnly?: boolean;
-      $readOnlyBorderColor?: OakCombinedColorToken;
-      $readOnlyColor?: OakCombinedColorToken;
-      $disabledBackgroundColor?: OakCombinedColorToken;
-      $disabledColor?: OakCombinedColorToken;
-      $disabled?: boolean;
-    }
->`
-  border: none;
-  outline: none;
-  width: 100%;
-
-  appearance: none;
-  appearance: base-select;
-
-  ${(props) =>
-    !props.$readOnly &&
-    css`
-      @media (hover: hover) {
-        &:hover:not(:focus-within) {
-          background: ${parseColor(props.$hoverBackground)};
-        }
-      }
-    `}
-
-  ${(props) =>
-    props.$readOnly &&
-    css`
-      border-color: ${parseColor(props.$readOnlyBorderColor)};
-      color: ${parseColor(props.$readOnlyColor)};
-    `}
-
-  ${(props) =>
-    props.$disabled &&
-    css`
-      background: ${parseColor(props.$disabledBackgroundColor)};
-      color: ${parseColor(props.$disabledColor)};
-      &:hover {
-        cursor: not-allowed;
-      }
-    `}
-
-    select ~ ${IconDownWrapper} {
-    display: block;
-  }
-
-  border-radius: ${parseBorderRadius("border-radius-s")};
-
-  &:focus:not(:open) {
-    box-shadow: ${(props) =>
-      props.$focusRingDropShadows
-        .map((dropShadow) => parseDropShadow(dropShadow))
-        .join(",")};
-  }
-
-  &::picker(select) {
-    appearance: none;
-    appearance: base-select;
-    border-bottom-left-radius: ${parseBorderRadius("border-radius-s")};
-    border-bottom-right-radius: ${parseBorderRadius("border-radius-s")};
-    overflow: visible;
-    ${borderStyle};
-    ${colorStyle};
-    border-top: none;
-  }
-
-  ::picker(select) {
-    top: calc(anchor(bottom) - 2px);
-    left: anchor(0);
-  }
-
-  ::picker-icon {
-    display: none;
-  }
-
-  ${paddingStyle};
-  ${borderStyle};
-  ${colorStyle};
-
-  &:open {
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-
-    ::picker(select) {
-      border-top-left-radius: 0px;
-      border-top-right-radius: 0px;
-    }
   }
 `;
 
@@ -189,124 +81,7 @@ export type OakSelectProps = {
    */
 };
 
-const NativeOptGroup = styled("optgroup")<PaddingStyleProps>``;
-
-const NativeOption = styled("option")<
-  PaddingStyleProps & {
-    $focusRingDropShadows?: OakDropShadowToken[];
-    $asDefault?: boolean;
-  }
->`
-  cursor: pointer;
-  border: none;
-  color: ${parseColor("text-primary")};
-  outline: none;
-  font: ${(props) =>
-    parseFontSize(props.$asDefault ? "body-2" : "body-2-bold")};
-  font-weight: ${(props) =>
-    parseFontWeight(props.$asDefault ? "body-2" : "body-2-bold")};
-  border-radius: ${parseBorderRadius("border-radius-xs")};
-
-  &:focus {
-    box-shadow: ${(props) =>
-      props.$focusRingDropShadows
-        ?.map((dropShadow) => parseDropShadow(dropShadow))
-        .join(",") ?? "none"};
-  }
-
-  &:disabled {
-    background: ${parseColor("bg-neutral-stronger")};
-    color: ${parseColor("text-subdued")};
-    cursor: not-allowed;
-  }
-
-  &:active:not(:disabled) {
-    background: initial;
-  }
-
-  &::checkmark {
-    display: none;
-  }
-
-  ${NativeOptGroup} & {
-    padding-left: ${parseSpacing("spacing-32")};
-  }
-
-  ${paddingStyle};
-  ${colorStyle};
-`;
-
-const NativeLegend = styled("legend")<PaddingStyleProps>`
-  cursor: pointer;
-  border: none;
-  color: ${parseColor("text-subdued")};
-
-  &::checkmark {
-    display: none;
-  }
-
-  ${paddingStyle};
-`;
-
-export type OakOptGroupProps = {
-  label: string;
-  children: ReactNode;
-};
-export function OakOptGroup({ label, children }: OakOptGroupProps) {
-  return (
-    <NativeOptGroup label={label} $ph={"spacing-16"} $pv={"spacing-8"}>
-      <OakOptGroupLegend>{label}</OakOptGroupLegend>
-      {children}
-    </NativeOptGroup>
-  );
-}
-
-type OakOptGroupLegendProps = {
-  children: ReactNode;
-};
-function OakOptGroupLegend({ children }: OakOptGroupLegendProps) {
-  return (
-    <NativeLegend $ph={"spacing-16"} $pv={"spacing-8"}>
-      {children}
-    </NativeLegend>
-  );
-}
-
-export type OakOptionProps = {
-  children: ReactNode;
-  disabled?: boolean;
-  selected?: boolean;
-  value?: string;
-  asDefault?: boolean;
-  $focusRingDropShadows?: OakDropShadowToken[];
-};
-export function OakOption({
-  selected,
-  disabled,
-  value,
-  children,
-  asDefault,
-  $focusRingDropShadows = [
-    "drop-shadow-centered-lemon",
-    "drop-shadow-centered-grey",
-  ],
-}: OakOptionProps) {
-  return (
-    <NativeOption
-      $asDefault={asDefault}
-      value={value}
-      disabled={disabled}
-      selected={selected}
-      $ph={"spacing-16"}
-      $pv={"spacing-8"}
-      $focusRingDropShadows={$focusRingDropShadows}
-    >
-      {children}
-    </NativeOption>
-  );
-}
-
-export default function OakSelect({
+export function OakSelect({
   id,
   borderColor = "border-primary",
   readOnlyBorderColor = "border-neutral",
@@ -379,7 +154,7 @@ export default function OakSelect({
         </button>
         {children}
       </NativeSelect>
-      <IconUpWrapper
+      <IconUp
         $position={"absolute"}
         $top={"spacing-0"}
         $bottom={"spacing-0"}
@@ -388,8 +163,8 @@ export default function OakSelect({
         $alignContent={"center"}
       >
         <OakIcon iconName="chevron-up" />
-      </IconUpWrapper>
-      <IconDownWrapper
+      </IconUp>
+      <IconDown
         $position={"absolute"}
         $top={"spacing-0"}
         $bottom={"spacing-0"}
@@ -398,7 +173,7 @@ export default function OakSelect({
         $alignContent={"center"}
       >
         <OakIcon iconName="chevron-down" />
-      </IconDownWrapper>
+      </IconDown>
     </StyledWrapper>
   );
 }

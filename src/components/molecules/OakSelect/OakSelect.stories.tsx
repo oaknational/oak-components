@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import OakSelect, { OakOptGroup, OakOption } from "./OakSelect";
+import { OakSelect, OakOptGroup, OakOption } from "./";
 
 import { OakJauntyAngleLabel } from "@/components/molecules/OakJauntyAngleLabel";
 import { OakBox } from "@/components/atoms";
