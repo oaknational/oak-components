@@ -22,7 +22,7 @@ export function OakOption({
     "drop-shadow-centered-lemon",
     "drop-shadow-centered-grey",
   ],
-}: OakOptionProps) {
+}: Readonly<OakOptionProps>) {
   return (
     <NativeOption
       $asDefault={asDefault}

@@ -7,7 +7,7 @@ export type OakOptGroupProps = {
   label: string;
   children: ReactNode;
 };
-export function OakOptGroup({ label, children }: OakOptGroupProps) {
+export function OakOptGroup({ label, children }: Readonly<OakOptGroupProps>) {
   return (
     <NativeOptGroup label={label} $ph={"spacing-16"} $pv={"spacing-8"}>
       <NativeLegend $ph={"spacing-16"} $pv={"spacing-8"}>

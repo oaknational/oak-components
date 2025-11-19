@@ -103,7 +103,7 @@ export function OakSelect({
   $display = "inline-block",
   children,
   ...props
-}: OakSelectProps) {
+}: Readonly<OakSelectProps>) {
   let finalBackgroundColor = background;
   let finalBorderColor = borderColor;
   let finalReadOnlyBorderColor = readOnlyBorderColor;
