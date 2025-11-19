@@ -7,8 +7,9 @@ import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("OakRoundIcon", () => {
   it("renders", () => {
-    const { getByRole } = renderWithTheme(<OakRoundIcon iconName="home" />);
-
+    const { getByRole } = renderWithTheme(
+      <OakRoundIcon iconName="home" alt="test" />,
+    );
     expect(getByRole("img")).toBeInTheDocument();
   });
 
