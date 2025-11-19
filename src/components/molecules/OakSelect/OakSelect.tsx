@@ -148,6 +148,7 @@ export function OakSelect({
         $color={color}
         $disabled={!!props.disabled}
         $readOnly={!!props.readOnly}
+        id={id}
       >
         <button>
           <selectedcontent></selectedcontent>
