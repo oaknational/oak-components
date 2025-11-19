@@ -46,23 +46,24 @@ const StyleInternalLink = styled(InternalLink)`
   align-items: center;
 `;
 
-export const OakHoverLink: OakHoverLinkComponent = forwardRef(
-  <C extends ElementType = "a">(
-    props: PolymorphicPropsWithRef<C> & OakHoverLinkProps,
-    ref: PolymorphicRef<C>,
-  ) => {
-    const color = props.displayDisabled ? "text-disabled" : "text-primary";
+export const OakHoverLink: OakHoverLinkComponent =
+  forwardRef<HTMLAnchorElement>(
+    <C extends ElementType = "a">(
+      props: PolymorphicPropsWithRef<C> & OakHoverLinkProps,
+      ref: PolymorphicRef<C>,
+    ) => {
+      const color = props.displayDisabled ? "text-disabled" : "text-primary";
 
-    return (
-      <StyleInternalLink
-        color={color}
-        hoverColor={color}
-        activeColor={color}
-        disabledColor={color}
-        visitedColor={color}
-        {...props}
-        ref={ref}
-      />
-    );
-  },
-);
+      return (
+        <StyleInternalLink
+          color={color}
+          hoverColor={color}
+          activeColor={color}
+          disabledColor={color}
+          visitedColor={color}
+          {...props}
+          ref={ref}
+        />
+      );
+    },
+  );

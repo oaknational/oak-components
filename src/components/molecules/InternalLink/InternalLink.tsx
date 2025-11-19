@@ -117,7 +117,10 @@ type InternalLinkComponent = <C extends React.ElementType = "a">(
  *
  * Defaulting to a `HTMLAnchorElement` this component is polymorphic and can be rendered as a button or any other element.
  */
-export const InternalLink: InternalLinkComponent = forwardRef(
+export const InternalLink: InternalLinkComponent = forwardRef<
+  HTMLAnchorElement,
+  InternalLinkProps
+>(
   <C extends ElementType = "a">(
     props: PolymorphicPropsWithRef<C> & InternalLinkProps,
     ref: PolymorphicRef<C>,
