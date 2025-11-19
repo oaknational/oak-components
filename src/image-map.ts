@@ -183,6 +183,7 @@ export const icons = {
   "bubble-1": "v1734537172/OWA/ui-graphics/bubble-1_nhgg0w.svg",
   "bubble-2": "v1734537180/OWA/ui-graphics/bubble-2_mfms6f.svg",
   burst: "v1734537152/OWA/ui-graphics/burst_k0mkht.svg",
+  confetti: "v1763546694/ui-graphics/confetti-background_xbvfrc.svg",
   "header-underline": "v1734536947/OWA/ui-graphics/header-underline_ejbffz.svg",
   "icon-background-square":
     "v1734537276/OWA/ui-graphics/icon-background-square_qajipb.svg",
