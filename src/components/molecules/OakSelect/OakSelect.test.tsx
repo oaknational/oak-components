@@ -5,6 +5,59 @@ import { OakSelect, OakOptGroup, OakOption } from "./";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
+jest.spyOn(console, "error").mockImplementation(() => jest.fn());
+
+// NOTE: These are due to react/jsdom being behind browser standards, they will catch up and we can remove these
+// See <https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select> for current support
+function expectJsdomOptionError() {
+  expect(console.error).toHaveBeenCalledTimes(2);
+  expect(console.error).toHaveBeenNthCalledWith(
+    1,
+    "Warning: The tag <%s> is unrecognized in this browser. If you meant to render a React component, start its name with an uppercase letter.%s",
+    "selectedcontent",
+    expect.anything(),
+  );
+  expect(console.error).toHaveBeenNthCalledWith(
+    2,
+    "Warning: validateDOMNesting(...): %s cannot appear as a child of <%s>.%s%s%s",
+    "<button>",
+    "select",
+    expect.anything(),
+    expect.anything(),
+    expect.anything(),
+  );
+}
+
+// NOTE: These are due to react/jsdom being behind browser standards, they will catch up and we can remove these
+// See <https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select> for current support
+function expectJsdomOptGroupError() {
+  expect(console.error).toHaveBeenCalledTimes(3);
+  expect(console.error).toHaveBeenNthCalledWith(
+    1,
+    "Warning: The tag <%s> is unrecognized in this browser. If you meant to render a React component, start its name with an uppercase letter.%s",
+    "selectedcontent",
+    expect.anything(),
+  );
+  expect(console.error).toHaveBeenNthCalledWith(
+    2,
+    "Warning: validateDOMNesting(...): %s cannot appear as a child of <%s>.%s%s%s",
+    "<button>",
+    "select",
+    expect.anything(),
+    expect.anything(),
+    expect.anything(),
+  );
+  expect(console.error).toHaveBeenNthCalledWith(
+    3,
+    "Warning: validateDOMNesting(...): %s cannot appear as a child of <%s>.%s%s%s",
+    "<legend>",
+    "optgroup",
+    expect.anything(),
+    expect.anything(),
+    expect.anything(),
+  );
+}
+
 describe("OakSelect", () => {
   it("plain select", () => {
     const { container } = renderWithTheme(
@@ -15,6 +68,7 @@ describe("OakSelect", () => {
       </OakSelect>,
     );
 
+    expectJsdomOptionError();
     expect(container).toMatchSnapshot();
   });
 
@@ -27,6 +81,7 @@ describe("OakSelect", () => {
       </OakSelect>,
     );
 
+    expectJsdomOptionError();
     expect(container).toMatchSnapshot();
   });
 
@@ -39,6 +94,7 @@ describe("OakSelect", () => {
       </OakSelect>,
     );
 
+    expectJsdomOptionError();
     expect(container).toMatchSnapshot();
   });
 
@@ -51,6 +107,7 @@ describe("OakSelect", () => {
       </OakSelect>,
     );
 
+    expectJsdomOptionError();
     expect(container).toMatchSnapshot();
   });
 
@@ -70,6 +127,7 @@ describe("OakSelect", () => {
       </OakSelect>,
     );
 
+    expectJsdomOptGroupError();
     expect(container).toMatchSnapshot();
   });
 });
