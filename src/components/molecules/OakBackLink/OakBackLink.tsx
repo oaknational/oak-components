@@ -29,7 +29,8 @@ const StyledBackLink = styled.a`
   }
 
   &:active {
-    box-shadow: ${parseDropShadow("drop-shadow-lemon")},
+    box-shadow:
+      ${parseDropShadow("drop-shadow-lemon")},
       ${parseDropShadow("drop-shadow-grey")};
   }
 
@@ -43,7 +44,8 @@ const StyledBackLink = styled.a`
   }
 
   &:focus-visible {
-    box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
+    box-shadow:
+      ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
   }
 

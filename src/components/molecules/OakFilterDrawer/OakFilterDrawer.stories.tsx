@@ -1,6 +1,6 @@
 import React from "react";
 import { StoryObj, Meta } from "@storybook/react";
-import { useArgs } from "@storybook/preview-api";
+import { useArgs } from "storybook/preview-api";
 import styled from "styled-components";
 
 import { OakFilterDrawer } from "./OakFilterDrawer";

@@ -1,6 +1,6 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { clearAllMocks } from "@storybook/test";
+import { clearAllMocks } from "storybook/test";
 
 import { OakDownloadsJourneyChildSubjectTierSelector } from "./OakDownloadsJourneyChildSubjectTierSelector";
 

@@ -22,7 +22,8 @@ const StyledInternalShadowRoundButton = styled(InternalShadowRoundButton)`
     box-shadow: none !important;
   }
   &:active .shadow {
-    box-shadow: ${parseDropShadow("drop-shadow-lemon")},
+    box-shadow:
+      ${parseDropShadow("drop-shadow-lemon")},
       ${parseDropShadow("drop-shadow-grey")} !important;
   }
 `;

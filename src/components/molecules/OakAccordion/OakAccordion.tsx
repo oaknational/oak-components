@@ -47,7 +47,8 @@ const StyledOakFlex = styled(InternalAccordionButton)`
   outline: none;
 
   &:focus-visible {
-    box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
+    box-shadow:
+      ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
   }
 `;

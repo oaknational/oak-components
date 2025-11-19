@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import { within } from "@storybook/test";
+import { within } from "storybook/test";
 
 import { OakQuizCheckBox } from "./OakQuizCheckBox";
 

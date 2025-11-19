@@ -62,7 +62,8 @@ const StyledAccordionButton = styled(InternalAccordionButton)<FlexStyleProps>`
   }
   &:focus-visible {
     .focus-outline {
-      box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
+      box-shadow:
+        ${parseDropShadow("drop-shadow-centered-lemon")},
         ${parseDropShadow("drop-shadow-centered-grey")};
     }
   }

@@ -24,7 +24,8 @@ const StyledOakFlexAsLink = styled(OakFlex)<OakFlexPropsWithAnimation>`
   cursor: pointer;
   outline: none;
   &:focus-visible {
-    box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
+    box-shadow:
+      ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
   }
 

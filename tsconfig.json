@@ -1,37 +1,44 @@
 {
-    "compilerOptions": {
-      "target": "es5",
-      "lib": [
-        "dom", 
-        "dom.iterable", 
-        "esnext"
-      ],
-      "allowJs": false,
-      "skipLibCheck": true,
-      "strict": true,
-      "forceConsistentCasingInFileNames": true,
-      "noEmit": true,
-      "esModuleInterop": true,
-      "module": "esnext",
-      "moduleResolution": "node",
-      "plugins": [
-        { "name": "typescript-plugin-css-modules" }
-      ],
-      "resolveJsonModule": true,
-      "isolatedModules": true,
-      "jsx": "react",
-      "noUncheckedIndexedAccess": true,
-      "noImplicitAny": true,
-      "downlevelIteration": true,
-      "baseUrl": ".",
-      "paths": {
-        "@/*": ["src/*"]
-      },
-    },
-    "exclude": [
-      "dist",
-      "types",
-      "node_modules"
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
     ],
-    "include": ["**/*.ts", "**/*.tsx"],
-  }
+    "allowJs": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ],
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react",
+    "noUncheckedIndexedAccess": true,
+    "noImplicitAny": true,
+    "downlevelIteration": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+  },
+  "exclude": [
+    "dist",
+    "types",
+    "node_modules"
+  ],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+}
