@@ -19,12 +19,7 @@ const meta: Meta<typeof OakCATQuestion> = {
   },
   parameters: {
     controls: {
-      include: [
-        "questionNumber",
-        "status",
-        "initialOpen",
-        "questionImagePosition",
-      ],
+      include: ["questionNumber", "status", "initialOpen"],
     },
   },
   decorators: [

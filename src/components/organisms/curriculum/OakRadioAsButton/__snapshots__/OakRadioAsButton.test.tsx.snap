@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`OakRadioAsButton matches snapshot 1`] = `
 .c0 {
@@ -168,7 +168,7 @@ exports[`OakRadioAsButton matches snapshot 1`] = `
     >
       <input
         class="c5 c6"
-        id=":r1:"
+        id="react-use-id-test-result"
         name="default"
         type="radio"
         value="history"
@@ -188,7 +188,7 @@ exports[`OakRadioAsButton matches snapshot 1`] = `
       </div>
       <label
         class="c9 c10 c11 c12"
-        for=":r1:"
+        for="react-use-id-test-result"
         pointer-events="none"
       >
         History
