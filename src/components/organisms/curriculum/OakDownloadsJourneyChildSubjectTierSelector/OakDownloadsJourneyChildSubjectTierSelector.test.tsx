@@ -1,6 +1,5 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { clearAllMocks } from "storybook/test";
 
 import { OakDownloadsJourneyChildSubjectTierSelector } from "./OakDownloadsJourneyChildSubjectTierSelector";
 
@@ -19,9 +18,6 @@ const childSubjects = [
 
 const getTierSubjectValues = jest.fn(() => {});
 describe("OakDownloadsJourneyChildSubjectTierSelector", () => {
-  beforeEach(() => {
-    clearAllMocks();
-  });
   describe("KS4 Science", () => {
     it("renders KS4 Science: both tiers and child subjects are present", () => {
       const { getByTestId } = renderWithTheme(
