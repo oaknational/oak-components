@@ -70,10 +70,8 @@ exports[`OakSelect disabled select 1`] = `
 
 .c0 {
   position: relative;
-  overflow: hidden;
   display: inline-block;
   font-family: --var(google-font),Lexend,sans-serif;
-  overflow: hidden;
 }
 
 .c6 {
@@ -314,10 +312,8 @@ exports[`OakSelect highlighted select 1`] = `
 
 .c0 {
   position: relative;
-  overflow: hidden;
   display: inline-block;
   font-family: --var(google-font),Lexend,sans-serif;
-  overflow: hidden;
 }
 
 .c6 {
@@ -557,10 +553,8 @@ exports[`OakSelect invalid select 1`] = `
 
 .c0 {
   position: relative;
-  overflow: hidden;
   display: inline-block;
   font-family: --var(google-font),Lexend,sans-serif;
-  overflow: hidden;
 }
 
 .c6 {
@@ -800,10 +794,8 @@ exports[`OakSelect optgroup select 1`] = `
 
 .c0 {
   position: relative;
-  overflow: hidden;
   display: inline-block;
   font-family: --var(google-font),Lexend,sans-serif;
-  overflow: hidden;
 }
 
 .c7 {
@@ -1092,10 +1084,8 @@ exports[`OakSelect plain select 1`] = `
 
 .c0 {
   position: relative;
-  overflow: hidden;
   display: inline-block;
   font-family: --var(google-font),Lexend,sans-serif;
-  overflow: hidden;
 }
 
 .c6 {

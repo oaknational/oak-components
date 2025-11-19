@@ -126,7 +126,6 @@ export function OakSelect({
     <StyledWrapper
       $display={$display}
       $position={"relative"}
-      $overflow={"hidden"}
       $alignItems="center"
       $gap="spacing-16"
     >
