@@ -58,7 +58,7 @@ export const NativeSelect = styled("select")<
 
   border-radius: ${parseBorderRadius("border-radius-s")};
 
-  &:focus:not(:open) {
+  &:focus {
     box-shadow: ${(props) =>
       props.$focusRingDropShadows
         .map((dropShadow) => parseDropShadow(dropShadow))

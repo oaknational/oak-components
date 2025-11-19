@@ -27,7 +27,7 @@ exports[`OakSelect disabled select 1`] = `
   cursor: not-allowed;
 }
 
-.c3:focus:not(:open) {
+.c3:focus {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
@@ -269,7 +269,7 @@ exports[`OakSelect highlighted select 1`] = `
   background: #ffe555;
 }
 
-.c3:focus:not(:open) {
+.c3:focus {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
@@ -510,7 +510,7 @@ exports[`OakSelect invalid select 1`] = `
   background: #ffffff;
 }
 
-.c3:focus:not(:open) {
+.c3:focus {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
@@ -751,7 +751,7 @@ exports[`OakSelect optgroup select 1`] = `
   background: #ffffff;
 }
 
-.c3:focus:not(:open) {
+.c3:focus {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
@@ -1041,7 +1041,7 @@ exports[`OakSelect plain select 1`] = `
   background: #ffffff;
 }
 
-.c3:focus:not(:open) {
+.c3:focus {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
