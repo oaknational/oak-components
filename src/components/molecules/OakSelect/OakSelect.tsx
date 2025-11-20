@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { NativeSelect } from "./NativeSelect";
 
 import { OakFlex, OakIcon } from "@/components/atoms";
-import { OakCombinedColorToken, OakDropShadowToken } from "@/styles";
+import { OakDropShadowToken, OakUiRoleToken } from "@/styles";
 import { DisplayStyleProps } from "@/styles/utils/displayStyle";
 
 export const IconUp = styled(OakFlex)`
@@ -61,20 +61,20 @@ export type OakSelectProps = {
    * Give the field a highlight to draw attention to it
    */
   isHighlighted?: boolean;
-  validBorderColor?: OakCombinedColorToken;
-  invalidBorderColor?: OakCombinedColorToken;
-  validIconColor?: OakCombinedColorToken;
-  invalidIconColor?: OakCombinedColorToken;
-  color?: OakCombinedColorToken;
-  hoverBackground?: OakCombinedColorToken;
-  background?: OakCombinedColorToken;
-  borderColor?: OakCombinedColorToken;
+  validBorderColor?: OakUiRoleToken;
+  invalidBorderColor?: OakUiRoleToken;
+  validIconColor?: OakUiRoleToken;
+  invalidIconColor?: OakUiRoleToken;
+  color?: OakUiRoleToken;
+  hoverBackground?: OakUiRoleToken;
+  background?: OakUiRoleToken;
+  borderColor?: OakUiRoleToken;
   focusRingDropShadows?: OakDropShadowToken[];
-  disabledBackgroundColor?: OakCombinedColorToken;
-  readOnlyBorderColor?: OakCombinedColorToken;
-  disabledColor?: OakCombinedColorToken;
-  readOnlyColor?: OakCombinedColorToken;
-  highlightBackgroundColor?: OakCombinedColorToken;
+  disabledBackgroundColor?: OakUiRoleToken;
+  readOnlyBorderColor?: OakUiRoleToken;
+  disabledColor?: OakUiRoleToken;
+  readOnlyColor?: OakUiRoleToken;
+  highlightBackgroundColor?: OakUiRoleToken;
   $display?: DisplayStyleProps["$display"];
   name?: HTMLSelectElement["name"];
 };
