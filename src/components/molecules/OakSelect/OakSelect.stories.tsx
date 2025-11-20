@@ -10,7 +10,9 @@ const meta: Meta<typeof OakSelect> = {
   component: OakSelect,
   tags: ["autodocs"],
   title: "components/molecules/OakSelect",
-  argTypes: {},
+  argTypes: {
+    onChange: { action: "change" },
+  },
 };
 export default meta;
 

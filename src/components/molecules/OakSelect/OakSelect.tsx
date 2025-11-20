@@ -52,7 +52,7 @@ export type OakSelectProps = {
    * Used to target the input element in tests.
    */
   "data-testid"?: string;
-  onChange?: ChangeEventHandler<HTMLInputElement>;
+  onChange?: ChangeEventHandler<HTMLSelectElement>;
   /**
    * Alters the appearance of the input field to indicate whether the input is valid or invalid.
    */
@@ -76,9 +76,7 @@ export type OakSelectProps = {
   readOnlyColor?: OakCombinedColorToken;
   highlightBackgroundColor?: OakCombinedColorToken;
   $display?: DisplayStyleProps["$display"];
-  /**
-   * The width of the surrounding div - the input and icon will fill this
-   */
+  name?: HTMLSelectElement["name"];
 };
 
 export function OakSelect({
@@ -102,6 +100,8 @@ export function OakSelect({
   isHighlighted = false,
   $display = "inline-block",
   children,
+  name,
+  onChange,
   ...props
 }: Readonly<OakSelectProps>) {
   let finalBackgroundColor = background;
@@ -148,6 +148,8 @@ export function OakSelect({
         $disabled={!!props.disabled}
         $readOnly={!!props.readOnly}
         id={id}
+        name={name}
+        onChange={onChange}
       >
         <button>
           <selectedcontent></selectedcontent>
