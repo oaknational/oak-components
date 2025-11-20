@@ -1,0 +1,1262 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`OakSelect disabled select 1`] = `
+.c3 {
+  border: none;
+  outline: none;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance: base-select;
+  -moz-appearance: base-select;
+  appearance: base-select;
+  background: #f2f2f2;
+  color: #808080;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  padding-right: 3.5rem;
+  border: 0.125rem solid;
+  border-color: #222222;
+  border-radius: 0.25rem;
+  color: #222222;
+  background: #ffffff;
+}
+
+.c3:hover {
+  cursor: not-allowed;
+}
+
+.c3:focus {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c3::picker(select) {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance: base-select;
+  -moz-appearance: base-select;
+  appearance: base-select;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  overflow: visible;
+  border: 0.125rem solid;
+  border-color: #222222;
+  border-radius: 0.25rem;
+  color: #222222;
+  background: #ffffff;
+  border-top: none;
+}
+
+.c3::picker(select) {
+  top: calc(anchor(bottom) - 2px);
+  left: anchor(0);
+}
+
+.c3::picker-icon {
+  display: none;
+}
+
+.c3:open {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.c3:open::picker(select) {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.c0 {
+  position: relative;
+  display: inline-block;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c6 {
+  position: absolute;
+  top: 0rem;
+  right: 0.75rem;
+  bottom: 0rem;
+  pointer-events: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c9 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c10 {
+  object-fit: contain;
+}
+
+.c1 {
+  display: inline-block;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.c8 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c12 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c2 select ~ .c11 {
+  display: block;
+}
+
+.c2 select:open ~ .c11 {
+  display: none;
+}
+
+.c2 select ~ .c5 {
+  display: none;
+}
+
+.c2 select:open ~ .c5 {
+  display: block;
+}
+
+.c4 {
+  cursor: pointer;
+  border: none;
+  color: #222222;
+  outline: none;
+  font: 1rem;
+  font-weight: 700;
+  border-radius: 0.125rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.c4:focus {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c4:disabled {
+  background: #e4e4e4;
+  color: #575757;
+  cursor: not-allowed;
+}
+
+.c4:active:not(:disabled) {
+  background: initial;
+}
+
+.c4::checkmark {
+  display: none;
+}
+
+@media (hover:hover) {
+  .c3:hover:not(:focus-within) {
+    background: #f2f2f2;
+  }
+}
+
+<div>
+  <div
+    class="c0 c1 c2"
+  >
+    <select
+      class="c3"
+      disabled=""
+    >
+      <button>
+        <selectedcontent />
+      </button>
+      <option
+        class="c4"
+      >
+        one
+      </option>
+      <option
+        class="c4"
+      >
+        two
+      </option>
+      <option
+        class="c4"
+      >
+        three
+      </option>
+    </select>
+    <div
+      class="c5 c6 c7 c8"
+    >
+      <div
+        class="c9"
+      >
+        <img
+          alt=""
+          class="c10"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954058/icons/pay71thmhhylj7z28sj1.svg"
+          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+        />
+      </div>
+    </div>
+    <div
+      class="c11 c6 c7 c12"
+    >
+      <div
+        class="c9"
+      >
+        <img
+          alt=""
+          class="c10"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`OakSelect highlighted select 1`] = `
+.c3 {
+  border: none;
+  outline: none;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance: base-select;
+  -moz-appearance: base-select;
+  appearance: base-select;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  padding-right: 3.5rem;
+  border: 0.125rem solid;
+  border-color: #222222;
+  border-radius: 0.25rem;
+  color: #222222;
+  background: #ffe555;
+}
+
+.c3:focus {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c3::picker(select) {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance: base-select;
+  -moz-appearance: base-select;
+  appearance: base-select;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  overflow: visible;
+  border: 0.125rem solid;
+  border-color: #222222;
+  border-radius: 0.25rem;
+  color: #222222;
+  background: #ffe555;
+  border-top: none;
+}
+
+.c3::picker(select) {
+  top: calc(anchor(bottom) - 2px);
+  left: anchor(0);
+}
+
+.c3::picker-icon {
+  display: none;
+}
+
+.c3:open {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.c3:open::picker(select) {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.c0 {
+  position: relative;
+  display: inline-block;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c6 {
+  position: absolute;
+  top: 0rem;
+  right: 0.75rem;
+  bottom: 0rem;
+  pointer-events: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c9 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c10 {
+  object-fit: contain;
+}
+
+.c1 {
+  display: inline-block;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.c8 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c12 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c2 select ~ .c11 {
+  display: block;
+}
+
+.c2 select:open ~ .c11 {
+  display: none;
+}
+
+.c2 select ~ .c5 {
+  display: none;
+}
+
+.c2 select:open ~ .c5 {
+  display: block;
+}
+
+.c4 {
+  cursor: pointer;
+  border: none;
+  color: #222222;
+  outline: none;
+  font: 1rem;
+  font-weight: 700;
+  border-radius: 0.125rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.c4:focus {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c4:disabled {
+  background: #e4e4e4;
+  color: #575757;
+  cursor: not-allowed;
+}
+
+.c4:active:not(:disabled) {
+  background: initial;
+}
+
+.c4::checkmark {
+  display: none;
+}
+
+@media (hover:hover) {
+  .c3:hover:not(:focus-within) {
+    background: #f2f2f2;
+  }
+}
+
+<div>
+  <div
+    class="c0 c1 c2"
+  >
+    <select
+      class="c3"
+    >
+      <button>
+        <selectedcontent />
+      </button>
+      <option
+        class="c4"
+      >
+        one
+      </option>
+      <option
+        class="c4"
+      >
+        two
+      </option>
+      <option
+        class="c4"
+      >
+        three
+      </option>
+    </select>
+    <div
+      class="c5 c6 c7 c8"
+    >
+      <div
+        class="c9"
+      >
+        <img
+          alt=""
+          class="c10"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954058/icons/pay71thmhhylj7z28sj1.svg"
+          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+        />
+      </div>
+    </div>
+    <div
+      class="c11 c6 c7 c12"
+    >
+      <div
+        class="c9"
+      >
+        <img
+          alt=""
+          class="c10"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`OakSelect invalid select 1`] = `
+.c3 {
+  border: none;
+  outline: none;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance: base-select;
+  -moz-appearance: base-select;
+  appearance: base-select;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  padding-right: 3.5rem;
+  border: 0.125rem solid;
+  border-color: #dd0035;
+  border-radius: 0.25rem;
+  color: #222222;
+  background: #ffffff;
+}
+
+.c3:focus {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c3::picker(select) {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance: base-select;
+  -moz-appearance: base-select;
+  appearance: base-select;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  overflow: visible;
+  border: 0.125rem solid;
+  border-color: #dd0035;
+  border-radius: 0.25rem;
+  color: #222222;
+  background: #ffffff;
+  border-top: none;
+}
+
+.c3::picker(select) {
+  top: calc(anchor(bottom) - 2px);
+  left: anchor(0);
+}
+
+.c3::picker-icon {
+  display: none;
+}
+
+.c3:open {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.c3:open::picker(select) {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.c0 {
+  position: relative;
+  display: inline-block;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c6 {
+  position: absolute;
+  top: 0rem;
+  right: 0.75rem;
+  bottom: 0rem;
+  pointer-events: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c9 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c10 {
+  object-fit: contain;
+}
+
+.c1 {
+  display: inline-block;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.c8 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c12 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c2 select ~ .c11 {
+  display: block;
+}
+
+.c2 select:open ~ .c11 {
+  display: none;
+}
+
+.c2 select ~ .c5 {
+  display: none;
+}
+
+.c2 select:open ~ .c5 {
+  display: block;
+}
+
+.c4 {
+  cursor: pointer;
+  border: none;
+  color: #222222;
+  outline: none;
+  font: 1rem;
+  font-weight: 700;
+  border-radius: 0.125rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.c4:focus {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c4:disabled {
+  background: #e4e4e4;
+  color: #575757;
+  cursor: not-allowed;
+}
+
+.c4:active:not(:disabled) {
+  background: initial;
+}
+
+.c4::checkmark {
+  display: none;
+}
+
+@media (hover:hover) {
+  .c3:hover:not(:focus-within) {
+    background: #f2f2f2;
+  }
+}
+
+<div>
+  <div
+    class="c0 c1 c2"
+  >
+    <select
+      class="c3"
+    >
+      <button>
+        <selectedcontent />
+      </button>
+      <option
+        class="c4"
+      >
+        one
+      </option>
+      <option
+        class="c4"
+      >
+        two
+      </option>
+      <option
+        class="c4"
+      >
+        three
+      </option>
+    </select>
+    <div
+      class="c5 c6 c7 c8"
+    >
+      <div
+        class="c9"
+      >
+        <img
+          alt=""
+          class="c10"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954058/icons/pay71thmhhylj7z28sj1.svg"
+          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+        />
+      </div>
+    </div>
+    <div
+      class="c11 c6 c7 c12"
+    >
+      <div
+        class="c9"
+      >
+        <img
+          alt=""
+          class="c10"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`OakSelect optgroup select 1`] = `
+.c3 {
+  border: none;
+  outline: none;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance: base-select;
+  -moz-appearance: base-select;
+  appearance: base-select;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  padding-right: 3.5rem;
+  border: 0.125rem solid;
+  border-color: #222222;
+  border-radius: 0.25rem;
+  color: #222222;
+  background: #ffffff;
+}
+
+.c3:focus {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c3::picker(select) {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance: base-select;
+  -moz-appearance: base-select;
+  appearance: base-select;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  overflow: visible;
+  border: 0.125rem solid;
+  border-color: #222222;
+  border-radius: 0.25rem;
+  color: #222222;
+  background: #ffffff;
+  border-top: none;
+}
+
+.c3::picker(select) {
+  top: calc(anchor(bottom) - 2px);
+  left: anchor(0);
+}
+
+.c3::picker-icon {
+  display: none;
+}
+
+.c3:open {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.c3:open::picker(select) {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.c0 {
+  position: relative;
+  display: inline-block;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c7 {
+  position: absolute;
+  top: 0rem;
+  right: 0.75rem;
+  bottom: 0rem;
+  pointer-events: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c10 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c11 {
+  object-fit: contain;
+}
+
+.c1 {
+  display: inline-block;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.c9 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c13 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c2 select ~ .c12 {
+  display: block;
+}
+
+.c2 select:open ~ .c12 {
+  display: none;
+}
+
+.c2 select ~ .c6 {
+  display: none;
+}
+
+.c2 select:open ~ .c6 {
+  display: block;
+}
+
+.c5 {
+  cursor: pointer;
+  border: none;
+  color: #222222;
+  outline: none;
+  font: 1rem;
+  font-weight: 700;
+  border-radius: 0.125rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.c5:focus {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c5:disabled {
+  background: #e4e4e4;
+  color: #575757;
+  cursor: not-allowed;
+}
+
+.c5:active:not(:disabled) {
+  background: initial;
+}
+
+.c5::checkmark {
+  display: none;
+}
+
+.c4 {
+  cursor: pointer;
+  border: none;
+  color: #575757;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.c4::checkmark {
+  display: none;
+}
+
+@media (hover:hover) {
+  .c3:hover:not(:focus-within) {
+    background: #f2f2f2;
+  }
+}
+
+<div>
+  <div
+    class="c0 c1 c2"
+  >
+    <select
+      class="c3"
+    >
+      <button>
+        <selectedcontent />
+      </button>
+      <optgroup
+        class=""
+        label="Group 1"
+      >
+        <legend
+          class="c4"
+        >
+          Group 1
+        </legend>
+        <option
+          class="c5"
+        >
+          one
+        </option>
+        <option
+          class="c5"
+        >
+          two
+        </option>
+        <option
+          class="c5"
+        >
+          three
+        </option>
+      </optgroup>
+      <optgroup
+        class=""
+        label="Group 2"
+      >
+        <legend
+          class="c4"
+        >
+          Group 2
+        </legend>
+        <option
+          class="c5"
+        >
+          four
+        </option>
+        <option
+          class="c5"
+        >
+          five
+        </option>
+        <option
+          class="c5"
+        >
+          six
+        </option>
+      </optgroup>
+    </select>
+    <div
+      class="c6 c7 c8 c9"
+    >
+      <div
+        class="c10"
+      >
+        <img
+          alt=""
+          class="c11"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954058/icons/pay71thmhhylj7z28sj1.svg"
+          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+        />
+      </div>
+    </div>
+    <div
+      class="c12 c7 c8 c13"
+    >
+      <div
+        class="c10"
+      >
+        <img
+          alt=""
+          class="c11"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`OakSelect plain select 1`] = `
+.c3 {
+  border: none;
+  outline: none;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance: base-select;
+  -moz-appearance: base-select;
+  appearance: base-select;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  padding-right: 3.5rem;
+  border: 0.125rem solid;
+  border-color: #222222;
+  border-radius: 0.25rem;
+  color: #222222;
+  background: #ffffff;
+}
+
+.c3:focus {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c3::picker(select) {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance: base-select;
+  -moz-appearance: base-select;
+  appearance: base-select;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  overflow: visible;
+  border: 0.125rem solid;
+  border-color: #222222;
+  border-radius: 0.25rem;
+  color: #222222;
+  background: #ffffff;
+  border-top: none;
+}
+
+.c3::picker(select) {
+  top: calc(anchor(bottom) - 2px);
+  left: anchor(0);
+}
+
+.c3::picker-icon {
+  display: none;
+}
+
+.c3:open {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.c3:open::picker(select) {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.c0 {
+  position: relative;
+  display: inline-block;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c6 {
+  position: absolute;
+  top: 0rem;
+  right: 0.75rem;
+  bottom: 0rem;
+  pointer-events: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c9 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c10 {
+  object-fit: contain;
+}
+
+.c1 {
+  display: inline-block;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.c8 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c12 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c2 select ~ .c11 {
+  display: block;
+}
+
+.c2 select:open ~ .c11 {
+  display: none;
+}
+
+.c2 select ~ .c5 {
+  display: none;
+}
+
+.c2 select:open ~ .c5 {
+  display: block;
+}
+
+.c4 {
+  cursor: pointer;
+  border: none;
+  color: #222222;
+  outline: none;
+  font: 1rem;
+  font-weight: 700;
+  border-radius: 0.125rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.c4:focus {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c4:disabled {
+  background: #e4e4e4;
+  color: #575757;
+  cursor: not-allowed;
+}
+
+.c4:active:not(:disabled) {
+  background: initial;
+}
+
+.c4::checkmark {
+  display: none;
+}
+
+@media (hover:hover) {
+  .c3:hover:not(:focus-within) {
+    background: #f2f2f2;
+  }
+}
+
+<div>
+  <div
+    class="c0 c1 c2"
+  >
+    <select
+      class="c3"
+    >
+      <button>
+        <selectedcontent />
+      </button>
+      <option
+        class="c4"
+      >
+        one
+      </option>
+      <option
+        class="c4"
+      >
+        two
+      </option>
+      <option
+        class="c4"
+      >
+        three
+      </option>
+    </select>
+    <div
+      class="c5 c6 c7 c8"
+    >
+      <div
+        class="c9"
+      >
+        <img
+          alt=""
+          class="c10"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954058/icons/pay71thmhhylj7z28sj1.svg"
+          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+        />
+      </div>
+    </div>
+    <div
+      class="c11 c6 c7 c12"
+    >
+      <div
+        class="c9"
+      >
+        <img
+          alt=""
+          class="c10"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

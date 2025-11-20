@@ -64,3 +64,4 @@ export * from "./OakTextInput";
 export * from "./OakTimer";
 export * from "./OakToast";
 export * from "./OakTooltip";
+export * from "./OakSelect";
