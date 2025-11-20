@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
+import { useArgs } from "@storybook/preview-api";
 
 import { OakSelect, OakOptGroup, OakOption } from "./";
 
@@ -34,12 +35,13 @@ export const Default: Story = {
 
 export const Controlled: Story = {
   render: (args) => {
-    const [value, setValue] = useState("2");
+    const [, updateArgs] = useArgs();
+
     return (
       <OakSelect
         {...args}
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
+        value={args.value}
+        onChange={(e) => updateArgs({ value: e.target.value })}
         $display={"block"}
       >
         <OakOption asDefault={true} selected={true} value="">
@@ -51,7 +53,9 @@ export const Controlled: Story = {
       </OakSelect>
     );
   },
-  args: {},
+  args: {
+    value: "2",
+  },
 };
 
 export const Disabled: Story = {
