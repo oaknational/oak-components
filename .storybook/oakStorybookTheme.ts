@@ -1,4 +1,4 @@
-import { create } from "@storybook/theming/create";
+import { create } from "storybook/theming";
 import assert from "assert";
 
 // @ts-expect-error:  this is an svg

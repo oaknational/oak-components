@@ -42,7 +42,8 @@ const StyledRoundIcon = styled(OakRoundIcon)<{
 
 const activeIconStyles = css`
   ${StyledRoundIcon} {
-    box-shadow: ${parseDropShadow("drop-shadow-lemon")},
+    box-shadow:
+      ${parseDropShadow("drop-shadow-lemon")},
       ${parseDropShadow("drop-shadow-grey")};
   }
 `;
@@ -62,7 +63,8 @@ const StyledPupilJourneyItem = styled(OakFlex)<{ $disabled?: boolean }>`
   text-align: initial;
 
   &:focus-visible {
-    box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
+    box-shadow:
+      ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
   }
 
@@ -86,7 +88,8 @@ const StyledPupilJourneyItem = styled(OakFlex)<{ $disabled?: boolean }>`
       }
 
       &:active {
-        box-shadow: ${parseDropShadow("drop-shadow-lemon")},
+        box-shadow:
+          ${parseDropShadow("drop-shadow-lemon")},
           ${parseDropShadow("drop-shadow-grey")};
         ${activeIconStyles}
         ${hoverIconStyles}
@@ -120,7 +123,7 @@ export const OakPupilJourneyListItem = <C extends ElementType = "a">(
     <OakBox role="listitem">
       <StyledPupilJourneyItem
         className={disabledOrUnavailable ? undefined : "pupil-journey-item"}
-        as={disabledOrUnavailable ? "div" : as ?? "a"}
+        as={disabledOrUnavailable ? "div" : (as ?? "a")}
         $gap={["spacing-16", "spacing-32"]}
         $alignItems="center"
         $justifyContent={"space-between"}

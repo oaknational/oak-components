@@ -27,7 +27,7 @@ type OakLinkComponent = <C extends React.ElementType = "a">(
  *
  * Defaulting to a `HTMLAnchorElement` this component is polymorphic and can be rendered as a button or any other element.
  */
-export const OakLink: OakLinkComponent = forwardRef(
+export const OakLink: OakLinkComponent = forwardRef<HTMLAnchorElement>(
   <C extends ElementType = "a">(
     props: PolymorphicPropsWithRef<C> & OakLinkProps,
     ref: PolymorphicRef<C>,

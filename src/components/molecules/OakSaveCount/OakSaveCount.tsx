@@ -26,7 +26,8 @@ const StyledInternalButton = styled(InternalButton)`
   }
   :focus-visible {
     .oak-save-count {
-      box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
+      box-shadow:
+        ${parseDropShadow("drop-shadow-centered-lemon")},
         ${parseDropShadow("drop-shadow-centered-grey")};
     }
   }

@@ -39,7 +39,7 @@ describe("OakUnitListOptionalityItemCard", () => {
         data-testid="unit-card"
         title={""}
         lessonCount={"0 lessons"}
-        href={""}
+        href={"#"}
         slug="test"
         onSave={() => {}}
         isSaved={false}

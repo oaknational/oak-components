@@ -30,7 +30,7 @@ const StyledInternalLink = styled(InternalLink)``;
  *
  * Defaulting to a `HTMLAnchorElement` this component is polymorphic and can be rendered as a button or any other element.
  */
-export const OakSecondaryLink: OakLinkComponent = forwardRef(
+export const OakSecondaryLink: OakLinkComponent = forwardRef<HTMLAnchorElement>(
   <C extends ElementType = "a">(
     props: PolymorphicPropsWithRef<C> & OakSecondaryLinkProps,
     ref: PolymorphicRef<C>,

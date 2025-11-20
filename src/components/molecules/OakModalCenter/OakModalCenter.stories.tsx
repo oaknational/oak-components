@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { useArgs } from "@storybook/preview-api";
+import { useArgs } from "storybook/preview-api";
 import React, { Fragment } from "react";
 
 import { OakSecondaryButton } from "@/components/molecules/OakSecondaryButton";
