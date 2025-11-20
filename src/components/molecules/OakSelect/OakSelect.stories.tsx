@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
 import { OakSelect, OakOptGroup, OakOption } from "./";
@@ -29,6 +29,28 @@ export const Default: Story = {
       <OakOption value="3">three</OakOption>
     </OakSelect>
   ),
+  args: {},
+};
+
+export const Controlled: Story = {
+  render: (args) => {
+    const [value, setValue] = useState("2");
+    return (
+      <OakSelect
+        {...args}
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        $display={"block"}
+      >
+        <OakOption asDefault={true} selected={true} value="">
+          Please choose an option
+        </OakOption>
+        <OakOption value="1">one</OakOption>
+        <OakOption value="2">two</OakOption>
+        <OakOption value="3">three</OakOption>
+      </OakSelect>
+    );
+  },
   args: {},
 };
 
