@@ -59,11 +59,11 @@ export const WithLabel: Story = {
     <OakBox $position={"relative"}>
       <OakJauntyAngleLabel
         label={"Test"}
-        $color={"white"}
+        $color={"text-primary"}
         htmlFor={"test"}
         as="label"
         $font={"heading-7"}
-        $background={"black"}
+        $background={"bg-decorative5-main"}
         $zIndex="in-front"
         $position="absolute"
         $top={"-20px"}
