@@ -1,101 +1,101 @@
-import { FileInfo, API, JSXAttribute, JSCodeshift, Identifier } from "jscodeshift";
-
-// what is left
-
-// do the search for each color left
-// What to do about primitive vars which have more than one possible value?
-// fill = "black",
-// theme.ts files shouldn't be modified
-// handle all parseColor("black") cases in a separate script?
-  // - cases where UI token is used but in a wrong way, ie. iconColor = "text-primary",
+import { FileInfo, API, ASTPath, Identifier } from "jscodeshift";
 
 const TEXT_COLOR_MAPPINGS: Record<string, string> = {
-  "navy120": "text-link-pressed",
+  navy120: "text-link-pressed",
   // "navy120": "text-link-visited",
 
-  "black": "text-primary",
-  "grey60": "text-subdued",
-  "red": "text-error",
-  "grey50": "text-disabled",
-  "navy": "text-link-active",
-  "navy110": "text-link-hover",
-  "white": "text-inverted",
-  "oakGreen": "text-success",
-  "lemon": "text-promo",
+  black: "text-primary",
+  grey60: "text-subdued",
+  red: "text-error",
+  grey50: "text-disabled",
+  navy: "text-link-active",
+  navy110: "text-link-hover",
+  white: "text-inverted",
+  oakGreen: "text-success",
+  lemon: "text-promo",
+};
+
+const BTN_COLOR_MAPPINGS: Record<string, string> = {
+  white: "bg-btn-secondary",
+  grey20: "bg-btn-secondary-hover",
+  grey30: "bg-btn-secondary-disabled",
+  black: "bg-btn-primary",
+  grey60: "bg-btn-primary-hover",
+  grey50: "bg-btn-primary-disabled",
+};
+
+const ICON_BG_COLOR_MAPPINGS: Record<string, string> = {
+  black: "bg-icon",
+  grey60: "bg-icon-hover",
 };
 
 const BG_COLOR_MAPPINGS: Record<string, string> = {
-  "white": "bg-primary",
+  white: "bg-primary",
   // "white": "bg-btn-secondary",
-
-  "grey20": "bg-neutral",
+  grey20: "bg-neutral",
   // "grey20": "bg-btn-secondary-hover",
-
-  "grey30": "bg-neutral-stronger",
+  grey30: "bg-neutral-stronger",
   // "grey30": "bg-btn-secondary-disabled",
-
-  "black": "bg-inverted",
+  black: "bg-inverted",
   // "black": "bg-btn-primary",
   // "black": "bg-icon",
-
-  "grey60": "bg-btn-primary-hover",
+  grey60: "bg-btn-primary-hover",
   // "grey60": "bg-icon-hover",
-
-  "red": "bg-error",
-  "grey50": "bg-btn-primary-disabled",
-  "mint": "bg-decorative1-main",
-  "mint50": "bg-decorative1-subdued", 
-  "mint30": "bg-decorative1-very-subdued",
-  "aqua": "bg-decorative2-main",
-  "aqua50": "bg-decorative2-subdued",
-  "aqua30": "bg-decorative2-very-subdued",
-  "lavender": "bg-decorative3-main",
-  "lavender50": "bg-decorative3-subdued",
-  "lavender30": "bg-decorative3-very-subdued",
-  "pink": "bg-decorative4-main",
-  "pink50": "bg-decorative4-subdued",
-  "pink30": "bg-decorative4-very-subdued",
-  "lemon": "bg-decorative5-main",
-  "lemon50": "bg-decorative5-subdued",
-  "lemon30": "bg-decorative5-very-subdued",
+  red: "bg-error",
+  grey50: "bg-btn-primary-disabled",
+  mint: "bg-decorative1-main",
+  mint50: "bg-decorative1-subdued",
   // "mint50": "bg-correct",
-  "red30": "bg-incorrect",
+  mint30: "bg-decorative1-very-subdued",
+  aqua: "bg-decorative2-main",
+  aqua50: "bg-decorative2-subdued",
+  aqua30: "bg-decorative2-very-subdued",
+  lavender: "bg-decorative3-main",
+  lavender50: "bg-decorative3-subdued",
+  lavender30: "bg-decorative3-very-subdued",
+  pink: "bg-decorative4-main",
+  pink50: "bg-decorative4-subdued",
+  pink30: "bg-decorative4-very-subdued",
+  lemon: "bg-decorative5-main",
+  lemon50: "bg-decorative5-subdued",
+  lemon30: "bg-decorative5-very-subdued",
+  red30: "bg-incorrect",
 };
 
 const BORDER_COLOR_MAPPINGS: Record<string, string> = {
-  "oakGreen": "border-brand",
+  oakGreen: "border-brand",
   // "oakGreen": "border-success",
 
-  "amber": "border-warning",
+  amber: "border-warning",
   // "amber": "border-decorative6-stronger",
 
-  "black": "border-primary",
-  "white": "border-inverted",
-  "grey50": "border-neutral",
-  "grey40": "border-neutral-lighter",
-  "red": "border-error",
-  "mint": "border-decorative1",
-  "mint110": "border-decorative1-stronger",
-  "aqua": "border-decorative2",
-  "aqua110": "border-decorative2-stronger",
-  "lavender": "border-decorative3",
-  "lavender110": "border-decorative3-stronger",
-  "pink": "border-decorative4",
-  "pink110": "border-decorative4-stronger",
-  "lemon50": "border-decorative5",
-  "lemon110": "border-decorative5-stronger",
-  "amber50": "border-decorative6",
+  black: "border-primary",
+  white: "border-inverted",
+  grey50: "border-neutral",
+  grey40: "border-neutral-lighter",
+  red: "border-error",
+  mint: "border-decorative1",
+  mint110: "border-decorative1-stronger",
+  aqua: "border-decorative2",
+  aqua110: "border-decorative2-stronger",
+  lavender: "border-decorative3",
+  lavender110: "border-decorative3-stronger",
+  pink: "border-decorative4",
+  pink110: "border-decorative4-stronger",
+  lemon50: "border-decorative5",
+  lemon110: "border-decorative5-stronger",
+  amber50: "border-decorative6",
 };
 
 const ICON_COLOR_MAPPINGS: Record<string, string> = {
-  "oakGreen": "icon-brand",
+  oakGreen: "icon-brand",
   // "oakGreen": "icon-success",
 
-  "white": "icon-main",
-  "black": "icon-inverted",
-  "grey50": "icon-disabled",
-  "red": "icon-error",
-  "amber": "icon-warning",
+  white: "icon-main",
+  black: "icon-inverted",
+  grey50: "icon-disabled",
+  red: "icon-error",
+  amber: "icon-warning",
 };
 
 const CODE_COLOR_MAPPINGS: Record<string, string> = {
@@ -105,373 +105,215 @@ const CODE_COLOR_MAPPINGS: Record<string, string> = {
   "rpf-syntax-pink": "code-pink",
 };
 
+type ColorMapping = {
+  regex: RegExp;
+  mappings: Record<string, string>;
+  name: string;
+};
+
 export default function (file: FileInfo, api: API) {
   const j = api.jscodeshift;
   const root = j(file.source);
 
-  // ICON COLOR
-  const iconColorRegex = /(icon)/i;
-  
-  root
-    .find(j.Identifier)
-    .filter(path => iconColorRegex.test(path.node.name)) 
-    .forEach(path => {
-    const parent = path.parent;
-    
-    // Check if parent is a Property and has a StringLiteral value
+  // order is important here
+  const colorMappings: ColorMapping[] = [
+    {
+      regex: /(bg|background|fill|loaderColor)/i,
+      mappings: BG_COLOR_MAPPINGS,
+      name: "background",
+    },
+    { regex: /(icon)/i, mappings: ICON_COLOR_MAPPINGS, name: "icon" },
+    {
+      regex: /(border|stroke)/i,
+      mappings: BORDER_COLOR_MAPPINGS,
+      name: "border",
+    },
+    { regex: /(color)/i, mappings: TEXT_COLOR_MAPPINGS, name: "text" },
+  ];
+
+  // Helper function to transform string literals based on parent node type
+  function transformStringLiteral(
+    parent: ASTPath,
+    mappings: Record<string, string>,
+  ) {
+    // Check if parent is a Property
     if (j.Property.check(parent.node)) {
       const value = parent.node.value;
-      if (value?.type === "StringLiteral" && ICON_COLOR_MAPPINGS[value.value]) {
-        parent.node.value = j.stringLiteral(ICON_COLOR_MAPPINGS[value.value]!);
-      }
-    }
-    
-    // is this really needed?
-    // Check if parent is a PropertyAssignment (TypeScript)
-    if (j.PropertyAssignment?.check && j.PropertyAssignment.check(parent.node)) {
-      const initializer = parent.node.initializer;
-      if (initializer?.type === "StringLiteral" && ICON_COLOR_MAPPINGS[initializer.value]) {
-        parent.node.initializer = j.stringLiteral(ICON_COLOR_MAPPINGS[initializer.value]!);
-      }
-    }
-
-    // Check if parent is an ObjectProperty (babel AST node type)
-    if (j.ObjectProperty?.check && j.ObjectProperty.check(parent.node)) {
-      const value = parent.node.value;
-      if (value?.type === "StringLiteral" && ICON_COLOR_MAPPINGS[value.value]) {
-        parent.node.value = j.stringLiteral(ICON_COLOR_MAPPINGS[value.value]!);
-      }
-    }
-    
-    // Check if parent is an AssignmentPattern (default parameter: iconColor = "black")
-    if (j.AssignmentPattern.check(parent.node)) {
-      const right = parent.node.right;
-      if (right?.type === "StringLiteral" && ICON_COLOR_MAPPINGS[right.value]) {
-        parent.node.right = j.stringLiteral(ICON_COLOR_MAPPINGS[right.value]!);
-      }
-    }
-
-    // Check if parent is a VariableDeclarator and has a StringLiteral init
-    if (j.VariableDeclarator.check(parent.node)) {
-      const init = parent.node.init;
-      if (init?.type === "StringLiteral" && ICON_COLOR_MAPPINGS[init.value]) {
-        parent.node.init = j.stringLiteral(ICON_COLOR_MAPPINGS[init.value]!);
-      }
-    }
-    
-    // Check if parent is a JSXAttribute and has a StringLiteral value
-    if (j.JSXAttribute.check(parent.node)) {
-      const value = parent.node.value;
-      if (value?.type === "StringLiteral" && ICON_COLOR_MAPPINGS[value.value]) {
-        parent.node.value = j.stringLiteral(ICON_COLOR_MAPPINGS[value.value]!);
-      }
-    }
-
-    // Check if parent is an AssignmentExpression (e.g., iconColor = "black")
-    if (j.AssignmentExpression.check(parent.node)) {
-      const right = parent.node.right;
-      if (right?.type === "StringLiteral" && ICON_COLOR_MAPPINGS[right.value]) {
-        parent.node.right = j.stringLiteral(ICON_COLOR_MAPPINGS[right.value]!);
-      }
-    }
-  });
-
-
-  // >>> @todo check if this changes anything
-  //  // Check if parent is an AssignmentPattern (destructuring default: { $background = "black" })
-  //   if (j.AssignmentPattern.check(parent.node)) {
-  //     const right = parent.node.right;
-  //     if (right?.type === "StringLiteral" && BG_COLOR_MAPPINGS[right.value]) {
-  //       parent.node.right = j.stringLiteral(BG_COLOR_MAPPINGS[right.value]!);
-  //     }
-  //   }
-
-  // what is left
-  // iconColorFilter: "black" -> the type is OakColorFilterToken
-  // this will match both color and bg
-
-  // // BG COLOR
-  const bgColorRegex = /(bg|background|fill)/i;
-  
-  root
-    .find(j.Identifier)
-    .filter(path => bgColorRegex.test(path.node.name)) 
-    .forEach(path => {
-    const parent = path.parent;
-    
-    // Check if parent is a Property and has a StringLiteral value
-    if (j.Property.check(parent.node)) {
-      const value = parent.node.value;
-      if (value?.type === "StringLiteral" && BG_COLOR_MAPPINGS[value.value]) {
-        parent.node.value = j.stringLiteral(BG_COLOR_MAPPINGS[value.value]!);
+      if (value?.type === "StringLiteral" && mappings[value.value]) {
+        parent.node.value = j.stringLiteral(mappings[value.value]!);
       }
     }
 
     // Check if parent is an ObjectProperty (babel AST)
     if (j.ObjectProperty?.check && j.ObjectProperty.check(parent.node)) {
       const value = parent.node.value;
-      if (value?.type === "StringLiteral" && BG_COLOR_MAPPINGS[value.value]) {
-        parent.node.value = j.stringLiteral(BG_COLOR_MAPPINGS[value.value]!);
-      }
-    }
-    
-    // Check if parent is a VariableDeclarator and has a StringLiteral init
-    if (j.VariableDeclarator.check(parent.node)) {
-      const init = parent.node.init;
-      if (init?.type === "StringLiteral" && BG_COLOR_MAPPINGS[init.value]) {
-        parent.node.init = j.stringLiteral(BG_COLOR_MAPPINGS[init.value]!);
-      }
-    }
-    
-    // Check if parent is a JSXAttribute and has a StringLiteral value
-    if (j.JSXAttribute.check(parent.node)) {
-      const value = parent.node.value;
-      if (value?.type === "StringLiteral" && BG_COLOR_MAPPINGS[value.value]) {
-        parent.node.value = j.stringLiteral(BG_COLOR_MAPPINGS[value.value]!);
+      if (value?.type === "StringLiteral" && mappings[value.value]) {
+        parent.node.value = j.stringLiteral(mappings[value.value]!);
       }
     }
 
-    // Check if parent is an AssignmentPattern (destructuring default: { $background = "black" })
+    // Check if parent is an AssignmentPattern (default parameter)
     if (j.AssignmentPattern.check(parent.node)) {
       const right = parent.node.right;
-      if (right?.type === "StringLiteral" && BG_COLOR_MAPPINGS[right.value]) {
-        parent.node.right = j.stringLiteral(BG_COLOR_MAPPINGS[right.value]!);
-      }
-    }
-  });
-
-  // Handle StringLiterals in ternary expressions and other complex expressions
-  root
-    .find(j.StringLiteral)
-    .filter(path => {
-      // Check if this string literal should be transformed
-      return BG_COLOR_MAPPINGS[path.node.value] !== undefined;
-    })
-    .forEach(path => {
-      // Check if this is in a context related to background/bg
-      let current = path.parent;
-      let isBackgroundContext = false;
-      
-      // Traverse up to find if we're in a background-related context
-      while (current && !isBackgroundContext) {
-        if (j.JSXAttribute.check(current.node)) {
-          const name = current.node.name;
-          if (j.JSXIdentifier.check(name) && bgColorRegex.test(name.name)) {
-            isBackgroundContext = true;
-          }
-        } else if (j.Property.check(current.node)) {
-          const key = current.node.key;
-          if (j.Identifier.check(key) && bgColorRegex.test(key.name)) {
-            isBackgroundContext = true;
-          }
-        }
-        current = current.parent;
-      }
-      
-      if (isBackgroundContext) {
-        path.node.value = BG_COLOR_MAPPINGS[path.node.value]!;
-      }
-    });
-
-  // BORDER COLOR
-  const borderColorRegex = /(border|stroke)/i;
-  // const borderColorRegex = /^\$?border/i;  // ^ anchors to start, \$? makes $ optional
-  
-  root
-    .find(j.Identifier)
-    .filter(path => borderColorRegex.test(path.node.name)) 
-    .forEach(path => {
-    const parent = path.parent;
-    
-    // Debug: log when we find $borderColor
-    if (path.node.name === "$borderColor") {
-      console.log("Found $borderColor");
-      console.log("Parent type:", parent.node.type);
-      console.log("File:", file.path);
-      if (j.Property.check(parent.node)) {
-        console.log("Is Property - value:", parent.node.value);
-        console.log("Value type:", parent.node.value?.type);
-        console.log("String value:", parent.node.value?.value);
-        console.log("Mapping exists?", BORDER_COLOR_MAPPINGS[parent.node.value?.value]);
-      }
-    }
-    
-
-    // Check if parent is a Property and has a StringLiteral value
-    if (j.Property.check(parent.node)) {
-      const value = parent.node.value;
-      if (value?.type === "StringLiteral" && BORDER_COLOR_MAPPINGS[value.value]) {
-        parent.node.value = j.stringLiteral(BORDER_COLOR_MAPPINGS[value.value]!);
+      if (right?.type === "StringLiteral" && mappings[right.value]) {
+        parent.node.right = j.stringLiteral(mappings[right.value]!);
       }
     }
 
-  //   // @todo check if for other mapping this will make sense too
-  //   // Check if parent is an ObjectProperty (babel AST node type)
-  //   if (j.ObjectProperty?.check && j.ObjectProperty.check(parent.node)) {
-  //     const value = parent.node.value;
-  //     if (value?.type === "StringLiteral" && BORDER_COLOR_MAPPINGS[value.value]) {
-  //       parent.node.value = j.stringLiteral(BORDER_COLOR_MAPPINGS[value.value]!);
-  //     }
-  //   }
-
-    // Check if parent is a VariableDeclarator and has a StringLiteral init
+    // Check if parent is a VariableDeclarator
     if (j.VariableDeclarator.check(parent.node)) {
       const init = parent.node.init;
-      if (init?.type === "StringLiteral" && BORDER_COLOR_MAPPINGS[init.value]) {
-        parent.node.init = j.stringLiteral(BORDER_COLOR_MAPPINGS[init.value]!);
-      }
-    }
-    
-    // Check if parent is a JSXAttribute and has a StringLiteral value
-    if (j.JSXAttribute.check(parent.node)) {
-      const value = parent.node.value;
-      if (value?.type === "StringLiteral" && BORDER_COLOR_MAPPINGS[value.value]) {
-        parent.node.value = j.stringLiteral(BORDER_COLOR_MAPPINGS[value.value]!);
+      if (init?.type === "StringLiteral" && mappings[init.value]) {
+        parent.node.init = j.stringLiteral(mappings[init.value]!);
       }
     }
 
-    //   // Check if parent is an AssignmentPattern (destructuring default: { $background = "black" })
-    if (j.AssignmentPattern.check(parent.node)) {
+    // Check if parent is a JSXAttribute
+    if (j.JSXAttribute.check(parent.node)) {
+      const value = parent.node.value;
+      if (value?.type === "StringLiteral" && mappings[value.value]) {
+        parent.node.value = j.stringLiteral(mappings[value.value]!);
+      }
+    }
+
+    // Check if parent is an AssignmentExpression
+    if (j.AssignmentExpression.check(parent.node)) {
       const right = parent.node.right;
-      if (right?.type === "StringLiteral" && BORDER_COLOR_MAPPINGS[right.value]) {
-        parent.node.right = j.stringLiteral(BORDER_COLOR_MAPPINGS[right.value]!);
+      if (right?.type === "StringLiteral" && mappings[right.value]) {
+        parent.node.right = j.stringLiteral(mappings[right.value]!);
       }
     }
-  });
+  }
 
-  // Handle StringLiterals in ternary expressions and other complex expressions
-  root
-    .find(j.StringLiteral)
-    .filter(path => {
-      // Check if this string literal should be transformed
-      return BORDER_COLOR_MAPPINGS[path.node.value] !== undefined;
-    })
-    .forEach(path => {
-      // Check if this is in a context related to background/bg
-      let current = path.parent;
-      let isBorderContext = false;
-      
-      // Traverse up to find if we're in a background-related context
-      while (current && !isBorderContext) {
-        if (j.JSXAttribute.check(current.node)) {
-          const name = current.node.name;
-          if (j.JSXIdentifier.check(name) && borderColorRegex.test(name.name)) {
-            isBorderContext = true;
-          }
-        } else if (j.Property.check(current.node)) {
-          const key = current.node.key;
-          if (j.Identifier.check(key) && borderColorRegex.test(key.name)) {
-            isBorderContext = true;
-          }
-        }
-        current = current.parent;
-      }
-      
-      if (isBorderContext) {
-        path.node.value = BORDER_COLOR_MAPPINGS[path.node.value]!;
-      }
-    });
-
-  // what is left?
-  // $borderColor="grey60" -> missing from border tokens
-  // borderColor: "blue", -> blue is missing from border tokens
-
-  // TEXT COLOR
-  const textColorRegex = /(color)/i;
-  
-  root
-    .find(j.Identifier)
-    .filter(path => textColorRegex.test(path.node.name)) 
-    .forEach(path => {
-    const parent = path.parent;
-    
-    // Check if parent is a Property and has a StringLiteral value
-    if (j.Property.check(parent.node)) {
-      const value = parent.node.value;
-      if (value?.type === "StringLiteral" && TEXT_COLOR_MAPPINGS[value.value]) {
-        parent.node.value = j.stringLiteral(TEXT_COLOR_MAPPINGS[value.value]!);
-      }
-    }
-
-    // Check if parent is an ObjectProperty (babel AST node type)
-    if (j.ObjectProperty?.check && j.ObjectProperty.check(parent.node)) {
-      const value = parent.node.value;
-      if (value?.type === "StringLiteral" && BORDER_COLOR_MAPPINGS[value.value]) {
-        parent.node.value = j.stringLiteral(BORDER_COLOR_MAPPINGS[value.value]!);
-      }
-    }
-
-    
-    // Check if parent is a VariableDeclarator and has a StringLiteral init
-    if (j.VariableDeclarator.check(parent.node)) {
-      const init = parent.node.init;
-      if (init?.type === "StringLiteral" && TEXT_COLOR_MAPPINGS[init.value]) {
-        parent.node.init = j.stringLiteral(TEXT_COLOR_MAPPINGS[init.value]!);
-      }
-    }
-    
-    // Check if parent is a JSXAttribute and has a StringLiteral value
-    if (j.JSXAttribute.check(parent.node)) {
-      const value = parent.node.value;
-      if (value?.type === "StringLiteral" && TEXT_COLOR_MAPPINGS[value.value]) {
-        parent.node.value = j.stringLiteral(TEXT_COLOR_MAPPINGS[value.value]!);
-      }
-    }
-  });
-
-  // Handle StringLiterals in ternary expressions and other complex expressions
-  root
-    .find(j.StringLiteral)
-    .filter(path => {
-      // Check if this string literal should be transformed
-      return TEXT_COLOR_MAPPINGS[path.node.value] !== undefined;
-    })
-    .forEach(path => {
-      // Check if this is in a context related to background/bg
-      let current = path.parent;
-      let isBorderContext = false;
-      
-      // Traverse up to find if we're in a background-related context
-      while (current && !isBorderContext) {
-        if (j.JSXAttribute.check(current.node)) {
-          const name = current.node.name;
-          if (j.JSXIdentifier.check(name) && textColorRegex.test(name.name)) {
-            isBorderContext = true;
-          }
-        } else if (j.Property.check(current.node)) {
-          const key = current.node.key;
-          if (j.Identifier.check(key) && textColorRegex.test(key.name)) {
-            isBorderContext = true;
-          }
-        }
-        current = current.parent;
-      }
-      
-      if (isBorderContext) {
-        path.node.value = TEXT_COLOR_MAPPINGS[path.node.value]!;
-      }
-    });
-
+  // Process each color mapping type
+  colorMappings.forEach(({ regex, mappings, name }) => {
+    // Transform based on identifier matching
+    root
+      .find(j.Identifier)
+      .filter((path) => regex.test(path.node.name))
+      .forEach((path) => {
+        transformStringLiteral(path.parent, mappings);
+      });
 
     // Handle StringLiterals in ternary expressions and other complex expressions
-// root
-//   .find(j.StringLiteral)
-//   .forEach(path => {
-//     const value = path.node.value;
-    
-//     // Check if this string literal matches any of our mappings
-//     if (BG_COLOR_MAPPINGS[value]) {
-//       path.node.value = BG_COLOR_MAPPINGS[value]!;
-//     } else if (TEXT_COLOR_MAPPINGS[value]) {
-//       path.node.value = TEXT_COLOR_MAPPINGS[value]!;
-//     } else if (ICON_COLOR_MAPPINGS[value]) {
-//       path.node.value = ICON_COLOR_MAPPINGS[value]!;
-//     } else if (BORDER_COLOR_MAPPINGS[value]) {
-//       path.node.value = BORDER_COLOR_MAPPINGS[value]!;
-//     }
-//   });
-  
+    // old version not taking colorFilter into account
+    // root
+    //   .find(j.StringLiteral)
+    //   .filter(path => mappings[path.node.value] !== undefined)
+    //   .forEach(path => {
+    //     let current = path.parent;
+    //     let isCorrectContext = false;
 
+    //     // Traverse up to find if we're in the correct context
+    //     while (current && !isCorrectContext) {
+    //       if (j.JSXAttribute.check(current.node)) {
+    //         const name = current.node.name;
+    //         if (j.JSXIdentifier.check(name) && regex.test(name.name)) {
+    //           isCorrectContext = true;
+    //         }
+    //       } else if (j.Property.check(current.node)) {
+    //         const key = current.node.key;
+    //         if (j.Identifier.check(key) && regex.test(key.name)) {
+    //           isCorrectContext = true;
+    //         }
+    //       } else if (j.ObjectProperty?.check && j.ObjectProperty.check(current.node)) {
+    //         const key = current.node.key;
+    //         if (j.Identifier.check(key) && regex.test(key.name)) {
+    //           isCorrectContext = true;
+    //         }
+    //       }
+    //       current = current.parent;
+    //     }
+
+    //     if (isCorrectContext) {
+    //       path.node.value = mappings[path.node.value]!;
+    //     }
+    //   });
+
+    // Handle StringLiterals in ternary expressions and other complex expressions
+    root
+      .find(j.StringLiteral)
+      .filter((path) => mappings[path.node.value] !== undefined)
+      .forEach((path) => {
+        let current = path.parent;
+        let isCorrectContext = false;
+        let shouldSkip = false;
+
+        while (current && !isCorrectContext && !shouldSkip) {
+          if (j.JSXAttribute.check(current.node)) {
+            const name = current.node.name;
+            if (
+              j.JSXIdentifier.check(name) &&
+              name.name.toLowerCase().includes("colorfilter")
+            ) {
+              shouldSkip = true;
+            }
+            if (j.JSXIdentifier.check(name) && regex.test(name.name)) {
+              isCorrectContext = true;
+            }
+          } else if (j.Property.check(current.node)) {
+            const key = current.node.key;
+            if (
+              j.Identifier.check(key) &&
+              key.name.toLowerCase().includes("colorfilter")
+            ) {
+              shouldSkip = true;
+            }
+            if (j.Identifier.check(key) && regex.test(key.name)) {
+              isCorrectContext = true;
+            }
+          } else if (
+            j.ObjectProperty?.check &&
+            j.ObjectProperty.check(current.node)
+          ) {
+            const key = current.node.key;
+            if (
+              j.Identifier.check(key) &&
+              key.name.toLowerCase().includes("colorfilter")
+            ) {
+              shouldSkip = true;
+            }
+            if (j.Identifier.check(key) && regex.test(key.name)) {
+              isCorrectContext = true;
+            }
+          }
+          current = current.parent;
+        }
+
+        if (isCorrectContext && !shouldSkip) {
+          path.node.value = mappings[path.node.value]!;
+        }
+      });
+  });
 
   return root.toSource();
-};
+}
+
+// what is left
+// - what to do about primitive vars which have more than one possible value?
+// - handle all parseColor("black") cases in a separate script (actually, everything inside styled``)
+
+// What needs to be done manually after running codemod:
+// - commented out code
+// - search for each color left
+// - there are some places where UI token are used but in a wrong way, ie. iconColor = "text-primary"
+// - run npm run check-types
+
+// those files need to be updated:
+// error: "red", (OakCatQuestion)
+// return ["bg-decorative5-very-subdued", "border-decorative5", "lemon"]; -> OakPupilLessonReviewItem
+// InternalShadowRectButton.test.tsx -> grey30, grey40, mint50
+// mint30, hoverTextColor: "lemon50", (in 3 tests) -> InternalShadowRectButton.test.tsx
+// borderColor: "blue", -> blue is missing from border tokens -> zmień na inny kolor - obecność tylko w stories -> OakTextInput
+// <OakBox $background={"amber50"} $textAlign={"left"}> -> zmień w story na inny color -> InternalUnstyledChevronAccordion
+// const fill = isFilled ? "black" : "border-decorative2"; -> OakQuizCounter
+
+// those types need to be updated:
+// OakInlineBanner 82-32
+// OakToast 35-37
+
+// discuss with design - missing tokens
+// $borderColor="grey60" -> missing from border tokens -> OakDownloadCard
+// background: "oakGreen", -> OakToast
+// $background: "lemon110", -> OakLessonTopNav
+// - hoverIconBackground=" -> it will use bg token rather than icon bg token because we only have two icon bgs

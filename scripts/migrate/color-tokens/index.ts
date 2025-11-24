@@ -21,7 +21,9 @@ async function run({ path, dry }: { path: string; dry: boolean }) {
       ? searchPath
       : `${searchPath}/**/*.{ts,tsx}`,
   );
-  const pathsFiltered = paths.filter((path) => !path.match(/fixture.ts$/));
+  const pathsFiltered = paths.filter(
+    (path) => !path.match(/fixture.ts$|theme.ts$/),
+  );
   const res = await jscodeshift(transformPath, pathsFiltered, options);
   console.log(res);
 }
