@@ -198,6 +198,7 @@ export const icons = {
   "tick-mark-happiness":
     "v1734537080/OWA/ui-graphics/tick-mark-happiness_fyst07.svg",
   "underline-1": "v1734537060/OWA/ui-graphics/underline-1_zaegqi.svg",
+  "icon-image": "v1763680546/icons/Icon_Image_uatq6d.svg"
 } as const satisfies VersionedSvgMap;
 
 export type IconName = keyof typeof icons;
