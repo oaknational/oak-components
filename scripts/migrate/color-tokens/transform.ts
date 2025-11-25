@@ -1,9 +1,7 @@
-import { FileInfo, API, ASTPath, Identifier } from "jscodeshift";
+import { FileInfo, API, ASTPath } from "jscodeshift";
 
 const TEXT_COLOR_MAPPINGS: Record<string, string> = {
-  navy120: "text-link-pressed",
-  // "navy120": "text-link-visited",
-
+  navy120: "text-link-pressed", // "text-link-visited"
   black: "text-primary",
   grey60: "text-subdued",
   red: "text-error",
@@ -15,37 +13,16 @@ const TEXT_COLOR_MAPPINGS: Record<string, string> = {
   lemon: "text-promo",
 };
 
-const BTN_COLOR_MAPPINGS: Record<string, string> = {
-  white: "bg-btn-secondary",
-  grey20: "bg-btn-secondary-hover",
-  grey30: "bg-btn-secondary-disabled",
-  black: "bg-btn-primary",
-  grey60: "bg-btn-primary-hover",
-  grey50: "bg-btn-primary-disabled",
-};
-
-const ICON_BG_COLOR_MAPPINGS: Record<string, string> = {
-  black: "bg-icon",
-  grey60: "bg-icon-hover",
-};
-
 const BG_COLOR_MAPPINGS: Record<string, string> = {
-  white: "bg-primary",
-  // "white": "bg-btn-secondary",
-  grey20: "bg-neutral",
-  // "grey20": "bg-btn-secondary-hover",
-  grey30: "bg-neutral-stronger",
-  // "grey30": "bg-btn-secondary-disabled",
-  black: "bg-inverted",
-  // "black": "bg-btn-primary",
-  // "black": "bg-icon",
-  grey60: "bg-btn-primary-hover",
-  // "grey60": "bg-icon-hover",
+  white: "bg-primary", // "bg-btn-secondary"
+  grey20: "bg-neutral", // "bg-btn-secondary-hover"
+  grey30: "bg-neutral-stronger", // "bg-btn-secondary-disabled"
+  black: "bg-inverted", // "bg-btn-primary", "bg-icon",
+  grey60: "bg-btn-primary-hover", // "bg-icon-hover"
   red: "bg-error",
   grey50: "bg-btn-primary-disabled",
   mint: "bg-decorative1-main",
-  mint50: "bg-decorative1-subdued",
-  // "mint50": "bg-correct",
+  mint50: "bg-decorative1-subdued", // "bg-correct"
   mint30: "bg-decorative1-very-subdued",
   aqua: "bg-decorative2-main",
   aqua50: "bg-decorative2-subdued",
@@ -63,12 +40,8 @@ const BG_COLOR_MAPPINGS: Record<string, string> = {
 };
 
 const BORDER_COLOR_MAPPINGS: Record<string, string> = {
-  oakGreen: "border-brand",
-  // "oakGreen": "border-success",
-
-  amber: "border-warning",
-  // "amber": "border-decorative6-stronger",
-
+  oakGreen: "border-brand", // "border-success"
+  amber: "border-warning", // "border-decorative6-stronger"
   black: "border-primary",
   white: "border-inverted",
   grey50: "border-neutral",
@@ -88,21 +61,12 @@ const BORDER_COLOR_MAPPINGS: Record<string, string> = {
 };
 
 const ICON_COLOR_MAPPINGS: Record<string, string> = {
-  oakGreen: "icon-brand",
-  // "oakGreen": "icon-success",
-
+  oakGreen: "icon-brand", // "icon-success"
   white: "icon-main",
   black: "icon-inverted",
   grey50: "icon-disabled",
   red: "icon-error",
   amber: "icon-warning",
-};
-
-const CODE_COLOR_MAPPINGS: Record<string, string> = {
-  "rpf-syntax-blue": "code-blue",
-  "rpf-syntax-green": "code-green",
-  "rpf-syntax-grey": "code-grey",
-  "rpf-syntax-pink": "code-pink",
 };
 
 type ColorMapping = {
@@ -111,9 +75,40 @@ type ColorMapping = {
   name: string;
 };
 
-export default function (file: FileInfo, api: API) {
+type TransformOptions = {
+  restrictToOakImports?: boolean;
+};
+
+export default function (
+  file: FileInfo,
+  api: API,
+  options: TransformOptions = {},
+) {
   const j = api.jscodeshift;
   const root = j(file.source);
+
+  // Collect imported component names from 'oak-components'
+  const oakComponentNames = new Set<string>();
+  if (options.restrictToOakImports) {
+    root
+      .find(j.ImportDeclaration)
+      .filter(
+        (path) =>
+          typeof path.node.source.value === "string" &&
+          path.node.source.value.startsWith("@oaknational/oak-components"),
+      )
+      .forEach((path) => {
+        path.node.specifiers?.forEach((spec) => {
+          if (
+            spec.type === "ImportSpecifier" ||
+            spec.type === "ImportDefaultSpecifier"
+          ) {
+            spec.local?.name &&
+              oakComponentNames.add(spec.local.name.toString());
+          }
+        });
+      });
+  }
 
   // order is important here
   const colorMappings: ColorMapping[] = [
@@ -196,43 +191,28 @@ export default function (file: FileInfo, api: API) {
           !path.node.name.toLowerCase().includes("colorfilter"),
       )
       .forEach((path) => {
-        transformStringLiteral(path.parent, mappings);
+        // Only update if inside JSX for an Oak component (if restricted)
+        if (
+          options.restrictToOakImports &&
+          path.parent &&
+          j.JSXAttribute.check(path.parent.node)
+        ) {
+          let jsxElement = path.parent.parent;
+          while (jsxElement && !j.JSXOpeningElement.check(jsxElement.node)) {
+            jsxElement = jsxElement.parent;
+          }
+          if (
+            jsxElement &&
+            j.JSXOpeningElement.check(jsxElement.node) &&
+            j.JSXIdentifier.check(jsxElement.node.name) &&
+            oakComponentNames.has(jsxElement.node.name.name)
+          ) {
+            transformStringLiteral(path.parent, mappings);
+          }
+        } else if (!options.restrictToOakImports) {
+          transformStringLiteral(path.parent, mappings);
+        }
       });
-
-    // Handle StringLiterals in ternary expressions and other complex expressions
-    // old version not taking colorFilter into account
-    // root
-    //   .find(j.StringLiteral)
-    //   .filter(path => mappings[path.node.value] !== undefined)
-    //   .forEach(path => {
-    //     let current = path.parent;
-    //     let isCorrectContext = false;
-
-    //     // Traverse up to find if we're in the correct context
-    //     while (current && !isCorrectContext) {
-    //       if (j.JSXAttribute.check(current.node)) {
-    //         const name = current.node.name;
-    //         if (j.JSXIdentifier.check(name) && regex.test(name.name)) {
-    //           isCorrectContext = true;
-    //         }
-    //       } else if (j.Property.check(current.node)) {
-    //         const key = current.node.key;
-    //         if (j.Identifier.check(key) && regex.test(key.name)) {
-    //           isCorrectContext = true;
-    //         }
-    //       } else if (j.ObjectProperty?.check && j.ObjectProperty.check(current.node)) {
-    //         const key = current.node.key;
-    //         if (j.Identifier.check(key) && regex.test(key.name)) {
-    //           isCorrectContext = true;
-    //         }
-    //       }
-    //       current = current.parent;
-    //     }
-
-    //     if (isCorrectContext) {
-    //       path.node.value = mappings[path.node.value]!;
-    //     }
-    //   });
 
     // Handle StringLiterals in ternary expressions and other complex expressions
     root
@@ -242,10 +222,27 @@ export default function (file: FileInfo, api: API) {
         let current = path.parent;
         let isCorrectContext = false;
         let shouldSkip = false;
+        let isOakComponent = false;
 
         while (current && !isCorrectContext && !shouldSkip) {
           if (j.JSXAttribute.check(current.node)) {
             const name = current.node.name;
+            // Oak component check
+            let jsxElement = current.parent;
+            while (jsxElement && !j.JSXOpeningElement.check(jsxElement.node)) {
+              jsxElement = jsxElement.parent;
+            }
+            if (
+              options.restrictToOakImports &&
+              jsxElement &&
+              j.JSXOpeningElement.check(jsxElement.node) &&
+              j.JSXIdentifier.check(jsxElement.node.name) &&
+              oakComponentNames.has(jsxElement.node.name.name)
+            ) {
+              isOakComponent = true;
+            } else if (!options.restrictToOakImports) {
+              isOakComponent = true;
+            }
             if (
               j.JSXIdentifier.check(name) &&
               name.name.toLowerCase().includes("colorfilter")
@@ -284,7 +281,7 @@ export default function (file: FileInfo, api: API) {
           current = current.parent;
         }
 
-        if (isCorrectContext && !shouldSkip) {
+        if (isCorrectContext && !shouldSkip && isOakComponent) {
           path.node.value = mappings[path.node.value]!;
         }
       });
