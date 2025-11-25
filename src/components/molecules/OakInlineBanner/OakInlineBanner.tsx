@@ -12,7 +12,7 @@ import {
   OakIconName,
   OakIconProps,
 } from "@/components/atoms";
-import { OakColorToken } from "@/styles";
+import { OakCombinedColorToken } from "@/styles";
 import { OakColorFilterToken } from "@/styles/theme/color";
 import { PaddingStyleProps } from "@/styles/utils/spacingStyle";
 import { FlexStyleProps } from "@/styles/utils/flexStyle";
@@ -79,8 +79,8 @@ export type BannerTypes = {
   [key in OakInlineBannerTypes]: {
     icon: OakIconName;
     iconColorFilter: OakColorFilterToken;
-    backgroundColour: OakColorToken;
-    borderColour: OakColorToken;
+    backgroundColour: OakCombinedColorToken;
+    borderColour: OakCombinedColorToken;
   };
 };
 
