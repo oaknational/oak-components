@@ -190,7 +190,11 @@ export default function (file: FileInfo, api: API) {
     // Transform based on identifier matching
     root
       .find(j.Identifier)
-      .filter((path) => regex.test(path.node.name))
+      .filter(
+        (path) =>
+          regex.test(path.node.name) &&
+          !path.node.name.toLowerCase().includes("colorfilter"),
+      )
       .forEach((path) => {
         transformStringLiteral(path.parent, mappings);
       });
@@ -288,32 +292,3 @@ export default function (file: FileInfo, api: API) {
 
   return root.toSource();
 }
-
-// what is left
-// - what to do about primitive vars which have more than one possible value?
-// - handle all parseColor("black") cases in a separate script (actually, everything inside styled``)
-
-// What needs to be done manually after running codemod:
-// - commented out code
-// - search for each color left
-// - there are some places where UI token are used but in a wrong way, ie. iconColor = "text-primary"
-// - run npm run check-types
-
-// those files need to be updated:
-// error: "red", (OakCatQuestion)
-// return ["bg-decorative5-very-subdued", "border-decorative5", "lemon"]; -> OakPupilLessonReviewItem
-// InternalShadowRectButton.test.tsx -> grey30, grey40, mint50
-// mint30, hoverTextColor: "lemon50", (in 3 tests) -> InternalShadowRectButton.test.tsx
-// borderColor: "blue", -> blue is missing from border tokens -> zmień na inny kolor - obecność tylko w stories -> OakTextInput
-// <OakBox $background={"amber50"} $textAlign={"left"}> -> zmień w story na inny color -> InternalUnstyledChevronAccordion
-// const fill = isFilled ? "black" : "border-decorative2"; -> OakQuizCounter
-
-// those types need to be updated:
-// OakInlineBanner 82-32
-// OakToast 35-37
-
-// discuss with design - missing tokens
-// $borderColor="grey60" -> missing from border tokens -> OakDownloadCard
-// background: "oakGreen", -> OakToast
-// $background: "lemon110", -> OakLessonTopNav
-// - hoverIconBackground=" -> it will use bg token rather than icon bg token because we only have two icon bgs
