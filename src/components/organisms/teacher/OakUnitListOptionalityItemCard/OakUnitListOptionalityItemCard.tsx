@@ -18,7 +18,8 @@ const StyledOptionalityListItem = styled(OakFlex)<{ $disabled?: boolean }>`
 
   &:focus-visible {
     background: ${parseColor("white")};
-    box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
+    box-shadow:
+      ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
   }
   ${(props) =>
@@ -82,7 +83,8 @@ const HeadingWithFocus = styled(OakHeading)`
   }
 
   &:focus-visible {
-    box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
+    box-shadow:
+      ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
   }
 `;

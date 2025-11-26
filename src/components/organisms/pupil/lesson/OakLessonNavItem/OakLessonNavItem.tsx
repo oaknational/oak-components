@@ -87,7 +87,8 @@ const StyledLessonNavItem = styled(OakFlex)<{ $disabled?: boolean }>`
   text-align: initial;
 
   &:focus-visible {
-    box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
+    box-shadow:
+      ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
   }
 
@@ -110,7 +111,8 @@ const StyledLessonNavItem = styled(OakFlex)<{ $disabled?: boolean }>`
       }
 
       &:active {
-        box-shadow: ${parseDropShadow("drop-shadow-lemon")},
+        box-shadow:
+          ${parseDropShadow("drop-shadow-lemon")},
           ${parseDropShadow("drop-shadow-grey")};
         ${activeIconStyles}
       }
@@ -134,7 +136,7 @@ export const OakLessonNavItem = <C extends ElementType = "a">(
 
   return (
     <StyledLessonNavItem
-      as={disabled ? "div" : as ?? "a"}
+      as={disabled ? "div" : (as ?? "a")}
       $gap="spacing-24"
       $alignItems="center"
       $background={

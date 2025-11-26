@@ -48,7 +48,6 @@ describe("OakQuizRadioButton", () => {
       </OakRadioGroup>,
     );
     await userEvent.click(getByTestId("quiz-radio"));
-
     expect(getByRole("radio")).toHaveFocus();
   });
 

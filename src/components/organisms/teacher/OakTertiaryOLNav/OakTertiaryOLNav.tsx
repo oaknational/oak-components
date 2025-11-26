@@ -40,7 +40,8 @@ const StyledOakLink = styled(InternalLink)`
   }
 
   &:focus-within::before {
-    box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
+    box-shadow:
+      ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
     text-decoration: none;
   }
@@ -48,7 +49,8 @@ const StyledOakLink = styled(InternalLink)`
     color: ${parseColor("black")};
   }
   &:active::before {
-    box-shadow: ${parseDropShadow("drop-shadow-lemon")},
+    box-shadow:
+      ${parseDropShadow("drop-shadow-lemon")},
       ${parseDropShadow("drop-shadow-grey")};
     background-color: ${parseColor("black")};
   }
