@@ -24,7 +24,8 @@ export default function (
   const j = api.jscodeshift;
   const root = j(file.source);
 
-  // Collect imported component names from 'oak-components'
+  // if restrictToOakImports is set collect imported component names from 'oak-components'
+  // this option should be set when run within other repos
   const oakComponentNames = new Set<string>();
   if (options.restrictToOakImports) {
     root
@@ -63,63 +64,51 @@ export default function (
     { regex: /(color)/i, mappings: TEXT_COLOR_MAPPINGS, name: "text" },
   ];
 
-  // Helper function to transform string literals based on parent node type
+  // helper function to transform only values from colorMappings
+  function transformIfMapped(
+    value: any,
+    mappings: Record<string, string>,
+  ): any {
+    if (value?.type === "StringLiteral" && mappings[value.value]) {
+      return j.stringLiteral(mappings[value.value]!);
+    }
+    return value;
+  }
+
+  // helper function to transform string literals based on parent node type
   function transformStringLiteral(
     parent: ASTPath,
     mappings: Record<string, string>,
   ) {
-    // Check if parent is a Property
-    if (j.Property.check(parent.node)) {
-      const value = parent.node.value;
-      if (value?.type === "StringLiteral" && mappings[value.value]) {
-        parent.node.value = j.stringLiteral(mappings[value.value]!);
-      }
+    // check if parent is an Propery or ObjectProperty (backgroundColor: "black")
+    if (j.ObjectProperty.check(parent.node) || j.Property.check(parent.node)) {
+      parent.node.value = transformIfMapped(parent.node.value, mappings);
     }
 
-    // Check if parent is an ObjectProperty (babel AST)
-    if (j.ObjectProperty?.check && j.ObjectProperty.check(parent.node)) {
-      const value = parent.node.value;
-      if (value?.type === "StringLiteral" && mappings[value.value]) {
-        parent.node.value = j.stringLiteral(mappings[value.value]!);
-      }
-    }
-
-    // Check if parent is an AssignmentPattern (default parameter)
+    // check if parent is an AssignmentPattern (default parameter) (iconColor = "black")
     if (j.AssignmentPattern.check(parent.node)) {
-      const right = parent.node.right;
-      if (right?.type === "StringLiteral" && mappings[right.value]) {
-        parent.node.right = j.stringLiteral(mappings[right.value]!);
-      }
+      parent.node.right = transformIfMapped(parent.node.right, mappings);
     }
 
-    // Check if parent is a VariableDeclarator
+    // check if parent is a VariableDeclarator (const backgroundColor = "grey20")
     if (j.VariableDeclarator.check(parent.node)) {
-      const init = parent.node.init;
-      if (init?.type === "StringLiteral" && mappings[init.value]) {
-        parent.node.init = j.stringLiteral(mappings[init.value]!);
-      }
+      parent.node.init = transformIfMapped(parent.node.init, mappings);
     }
 
-    // Check if parent is a JSXAttribute
+    // check if parent is a JSXAttribute (<OakBox $background="white" />)
     if (j.JSXAttribute.check(parent.node)) {
-      const value = parent.node.value;
-      if (value?.type === "StringLiteral" && mappings[value.value]) {
-        parent.node.value = j.stringLiteral(mappings[value.value]!);
-      }
+      parent.node.value = transformIfMapped(parent.node.value, mappings);
     }
 
-    // Check if parent is an AssignmentExpression
+    // check if parent is an AssignmentExpression (color = "black")
     if (j.AssignmentExpression.check(parent.node)) {
-      const right = parent.node.right;
-      if (right?.type === "StringLiteral" && mappings[right.value]) {
-        parent.node.right = j.stringLiteral(mappings[right.value]!);
-      }
+      parent.node.right = transformIfMapped(parent.node.right, mappings);
     }
   }
 
-  // Process each color mapping type
-  colorMappings.forEach(({ regex, mappings, name }) => {
-    // Transform based on identifier matching
+  // process each color mapping type
+  colorMappings.forEach(({ regex, mappings }) => {
+    // transform based on identifier matching
     root
       .find(j.Identifier)
       .filter(
@@ -128,7 +117,7 @@ export default function (
           !path.node.name.toLowerCase().includes("colorfilter"),
       )
       .forEach((path) => {
-        // Only update if inside JSX for an Oak component (if restricted)
+        // if restrictToOakImports option is set, it will only update value inside components imported from oak-components
         if (
           options.restrictToOakImports &&
           path.parent &&
@@ -146,12 +135,13 @@ export default function (
           ) {
             transformStringLiteral(path.parent, mappings);
           }
+          // if restrictToOakImports option is not set, it will be run on every component
         } else if (!options.restrictToOakImports) {
           transformStringLiteral(path.parent, mappings);
         }
       });
 
-    // Handle StringLiterals in ternary expressions and other complex expressions
+    // handle StringLiterals in ternary expressions and other complex expressions
     root
       .find(j.StringLiteral)
       .filter((path) => mappings[path.node.value] !== undefined)
@@ -164,11 +154,11 @@ export default function (
         while (current && !isCorrectContext && !shouldSkip) {
           if (j.JSXAttribute.check(current.node)) {
             const name = current.node.name;
-            // Oak component check
             let jsxElement = current.parent;
             while (jsxElement && !j.JSXOpeningElement.check(jsxElement.node)) {
               jsxElement = jsxElement.parent;
             }
+            // if restrictToOakImports option is set, it will only update values inside components imported from oak-components
             if (
               options.restrictToOakImports &&
               jsxElement &&
@@ -177,9 +167,11 @@ export default function (
               oakComponentNames.has(jsxElement.node.name.name)
             ) {
               isOakComponent = true;
+              // if transform is not restricted to oak-components it will be run on every component
             } else if (!options.restrictToOakImports) {
               isOakComponent = true;
             }
+            // skip colorFilter props
             if (
               j.JSXIdentifier.check(name) &&
               name.name.toLowerCase().includes("colorfilter")
@@ -189,22 +181,12 @@ export default function (
             if (j.JSXIdentifier.check(name) && regex.test(name.name)) {
               isCorrectContext = true;
             }
-          } else if (j.Property.check(current.node)) {
-            const key = current.node.key;
-            if (
-              j.Identifier.check(key) &&
-              key.name.toLowerCase().includes("colorfilter")
-            ) {
-              shouldSkip = true;
-            }
-            if (j.Identifier.check(key) && regex.test(key.name)) {
-              isCorrectContext = true;
-            }
           } else if (
-            j.ObjectProperty?.check &&
-            j.ObjectProperty.check(current.node)
+            j.Property.check(current.node) ||
+            j.ObjectProperty?.check?.(current.node)
           ) {
             const key = current.node.key;
+            // skip colorfilter props
             if (
               j.Identifier.check(key) &&
               key.name.toLowerCase().includes("colorfilter")
