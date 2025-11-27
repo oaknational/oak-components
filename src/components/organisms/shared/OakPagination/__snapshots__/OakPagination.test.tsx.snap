@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+// Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakPagination Component matches snapshot 1`] = `
 .c0 {
@@ -93,7 +93,7 @@ exports[`OakPagination Component matches snapshot 1`] = `
 }
 
 .c2:visited {
-  color: #081676;
+  color: #7c9aec;
 }
 
 .c2:active {
@@ -144,19 +144,19 @@ exports[`OakPagination Component matches snapshot 1`] = `
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
-  color: black;
-  background-color: black;
-  color: white;
+  color: #222222;
+  background-color: #222222;
+  color: #ffffff;
 }
 
 .c10:visited {
-  color: white;
+  color: #ffffff;
 }
 
 .c10:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  color: white;
+  color: #ffffff;
 }
 
 .c11 {
@@ -185,8 +185,8 @@ exports[`OakPagination Component matches snapshot 1`] = `
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
-  color: black;
-  background-color: white;
+  color: #222222;
+  background-color: #ffffff;
 }
 
 .c11:hover {
@@ -239,7 +239,7 @@ exports[`OakPagination Component matches snapshot 1`] = `
 
 @media (hover:hover) {
   .c10:hover:hover:not(:disabled) {
-    color: white;
+    color: #ffffff;
   }
 }
 

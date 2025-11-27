@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+// Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`InternalLink matches snapshot 1`] = `
 .c1 {
@@ -33,7 +33,7 @@ exports[`InternalLink matches snapshot 1`] = `
 }
 
 .c0:visited {
-  color: #081676;
+  color: #7c9aec;
 }
 
 .c0:active {

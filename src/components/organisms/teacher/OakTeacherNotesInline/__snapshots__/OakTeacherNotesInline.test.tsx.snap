@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+// Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OakTeacherNotesInline matches snapshot 1`] = `
 .c0 {
@@ -46,7 +46,7 @@ exports[`OakTeacherNotesInline matches snapshot 1`] = `
 }
 
 .c2 a::visited {
-  color: #081676;
+  color: #7c9aec;
 }
 
 .c2 a::pressed {
