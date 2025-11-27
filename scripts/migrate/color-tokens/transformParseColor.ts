@@ -19,16 +19,6 @@ function getMappingForPropertyName(
   return null;
 }
 
-function getMappingFromObjectProperty(
-  parent: any,
-  j: any,
-): Record<string, string> | null {
-  if (j.Property.check(parent.node) && j.Identifier.check(parent.node.key)) {
-    return getMappingForPropertyName(parent.node.key.name);
-  }
-  return null;
-}
-
 function getMappingFromTemplateLiteral(
   parent: any,
   path: any,
@@ -79,9 +69,7 @@ export default function (file: FileInfo, api: API) {
     .forEach((path) => {
       const parent = path.parent;
       const mappings =
-        getMappingFromObjectProperty(parent, j) ||
-        getMappingFromTemplateLiteral(parent, path, j) ||
-        ALL_COLOR_MAPPINGS;
+        getMappingFromTemplateLiteral(parent, path, j) || ALL_COLOR_MAPPINGS;
 
       const arg = path.node.arguments[0];
       if (j.StringLiteral.check(arg) && arg.value) {
