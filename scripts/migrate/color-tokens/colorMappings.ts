@@ -1,5 +1,6 @@
 export const TEXT_COLOR_MAPPINGS: Record<string, string> = {
-  navy120: "text-link-pressed", // "text-link-visited"
+  navy120: "text-link-pressed",
+  lavender110: "text-link-visited",
   black: "text-primary",
   grey60: "text-subdued",
   red: "text-error",
@@ -35,6 +36,10 @@ export const BG_COLOR_MAPPINGS: Record<string, string> = {
   lemon50: "bg-decorative5-subdued",
   lemon30: "bg-decorative5-very-subdued",
   red30: "bg-incorrect",
+  amber: "bg-decorative6-main",
+  amber50: "bg-decorative6-subdued",
+  amber30: "bg-decorative6-very-subdued",
+  oakGreen: "bg-success",
 };
 
 export const BORDER_COLOR_MAPPINGS: Record<string, string> = {
@@ -44,6 +49,7 @@ export const BORDER_COLOR_MAPPINGS: Record<string, string> = {
   white: "border-inverted",
   grey50: "border-neutral",
   grey40: "border-neutral-lighter",
+  grey60: "border-neutral-stronger",
   red: "border-error",
   mint: "border-decorative1",
   mint110: "border-decorative1-stronger",
@@ -61,8 +67,18 @@ export const BORDER_COLOR_MAPPINGS: Record<string, string> = {
 export const ICON_COLOR_MAPPINGS: Record<string, string> = {
   oakGreen: "icon-brand", // "icon-success"
   white: "icon-main",
-  black: "icon-inverted",
+  black: "icon-primary",
   grey50: "icon-disabled",
   red: "icon-error",
-  amber: "icon-warning",
+  amber: "icon-decorative6", // "icon-warning"
+  grey60: "icon-subdued",
+  navy: "icon-link-active",
+  navy110: "icon-link-hover",
+  navy120: "icon-link-pressed",
+  lavender110: "icon-decorative3", // "icon-link-visited"
+  mint110: "icon-decorative1",
+  aqua110: "icon-decorative2",
+  pink110: "icon-decorative4",
+  lemon110: "icon-decorative5",
+  lemon: "icon-promo",
 };
