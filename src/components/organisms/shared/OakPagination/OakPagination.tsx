@@ -6,6 +6,7 @@ import { generatePageNumbers } from "./utils";
 import { OakFlex, OakIcon, OakLI, OakUL } from "@/components/atoms";
 import { InternalButton } from "@/components/atoms/InternalButton";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
+import { parseColor } from "@/styles/helpers/parseColor";
 import { OakLink } from "@/components/molecules";
 import { typographyStyle } from "@/styles/utils/typographyStyle";
 
@@ -59,18 +60,20 @@ const StyledNumberButton = styled(OakLink)<{ selected: boolean }>`
   justify-content: center;
   text-decoration: none;
   ${typographyStyle}
-  color: black;
+  color: ${parseColor("black")};
 
   ${(props) => css`
-    background-color: ${props.selected ? "black" : "white"};
+    background-color: ${props.selected
+      ? parseColor("black")
+      : parseColor("white")};
   `};
 
   ${(props) =>
     props.selected &&
     css`
-      color: white;
+      color: ${parseColor("white")};
       &:visited {
-        color: white;
+        color: ${parseColor("white")};
       }
     `}
 
@@ -79,10 +82,10 @@ const StyledNumberButton = styled(OakLink)<{ selected: boolean }>`
     ${(props) =>
       props.selected &&
       css`
-        color: white;
+        color: ${parseColor("white")};
         @media (hover: hover) {
     &:hover:not(:disabled) {
-      color: white;
+      color: ${parseColor("white")};
     }
       `}
   }
