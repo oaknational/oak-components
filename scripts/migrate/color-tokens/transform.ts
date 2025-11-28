@@ -50,12 +50,12 @@ export default function (
 
   // order is important here
   const colorMappings: ColorMapping[] = [
+    { regex: /(icon)/i, mappings: ICON_COLOR_MAPPINGS, name: "icon" },
     {
       regex: /(bg|background|fill|loaderColor)/i,
       mappings: BG_COLOR_MAPPINGS,
       name: "background",
     },
-    { regex: /(icon)/i, mappings: ICON_COLOR_MAPPINGS, name: "icon" },
     {
       regex: /(border|stroke)/i,
       mappings: BORDER_COLOR_MAPPINGS,
