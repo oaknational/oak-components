@@ -142,6 +142,8 @@ const oakUiRoleTokensConst = [
   "bg-decorative6-main",
   "bg-decorative6-subdued",
   "bg-decorative6-very-subdued",
+  "bg-interactive-element1",
+  "bg-interactive-element2",
   "bg-correct",
   "bg-incorrect",
   "bg-success",

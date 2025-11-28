@@ -45,6 +45,8 @@ export const oakDarkTheme: OakTheme = {
     "bg-decorative6-main": "amber",
     "bg-decorative6-subdued": "amber50",
     "bg-decorative6-very-subdued": "amber30",
+    "bg-interactive-element1": "grey40",
+    "bg-interactive-element2": "grey30",
     "bg-correct": "mint30",
     "bg-incorrect": "red30",
     "bg-success": "mint",
