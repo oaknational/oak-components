@@ -19,7 +19,7 @@ export const BG_COLOR_MAPPINGS: Record<string, string> = {
   black: "bg-inverted", // "bg-btn-primary", "bg-icon",
   grey60: "bg-btn-primary-hover", // "bg-icon-hover"
   red: "bg-error",
-  grey50: "bg-btn-primary-disabled",
+  grey50: "bg-interactive-element1", // "bg-btn-primary-disabled",
   mint: "bg-decorative1-main",
   mint50: "bg-decorative1-subdued", // "bg-correct"
   mint30: "bg-decorative1-very-subdued",
@@ -40,6 +40,7 @@ export const BG_COLOR_MAPPINGS: Record<string, string> = {
   amber50: "bg-decorative6-subdued",
   amber30: "bg-decorative6-very-subdued",
   oakGreen: "bg-success",
+  grey40: "bg-interactive-element2",
 };
 
 export const BORDER_COLOR_MAPPINGS: Record<string, string> = {
