@@ -10,7 +10,7 @@ export const oakDefaultTheme: OakTheme = {
     "text-link-active": "navy",
     "text-link-hover": "navy110",
     "text-link-pressed": "navy120",
-    "text-link-visited": "navy120",
+    "text-link-visited": "lavender110",
     "text-inverted": "white",
     "text-success": "oakGreen",
     "text-warning": "amber", // to be deprecated, we don't use warning text anymore

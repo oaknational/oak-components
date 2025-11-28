@@ -93,7 +93,7 @@ exports[`OakPagination Component matches snapshot 1`] = `
 }
 
 .c2:visited {
-  color: #081676;
+  color: #7c9aec;
 }
 
 .c2:active {
