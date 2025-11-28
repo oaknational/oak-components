@@ -32,7 +32,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
 
 .c10 {
   padding: 1rem;
-  background: #cee7e5;
+  background: #d7f1ef;
   border-radius: 1rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }

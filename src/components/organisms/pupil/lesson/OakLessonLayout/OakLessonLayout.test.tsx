@@ -55,7 +55,7 @@ describe("OakLessonLayoutProps", () => {
       bottomNavSlot: <div>bottom nav slot</div>,
       children: <p>Hello World</p>,
     });
-    expect(container.firstChild).toHaveStyle("background: rgb(229, 209, 224)");
+    expect(container.firstChild).toHaveStyle("background: rgb(239, 219, 234)");
   });
 
   it("should render with correct background color for overview section in secondary phase", () => {
@@ -66,7 +66,7 @@ describe("OakLessonLayoutProps", () => {
       bottomNavSlot: <div>bottom nav slot</div>,
       children: <p>Hello World</p>,
     });
-    expect(container.firstChild).toHaveStyle("background: rgb(198, 209, 239)");
+    expect(container.firstChild).toHaveStyle("background: rgb(189, 205, 245)");
   });
 
   it("should render with correct background color for intro section", () => {
@@ -76,7 +76,7 @@ describe("OakLessonLayoutProps", () => {
       bottomNavSlot: <div>bottom nav slot</div>,
       children: <p>Hello World</p>,
     });
-    expect(container.firstChild).toHaveStyle("background: rgb(206, 231, 229)");
+    expect(container.firstChild).toHaveStyle("background: rgb(215, 241, 239)");
   });
 
   it("should render with correct background color for starter-quiz section", () => {
@@ -96,7 +96,7 @@ describe("OakLessonLayoutProps", () => {
       bottomNavSlot: <div>bottom nav slot</div>,
       children: <p>Hello World</p>,
     });
-    expect(container.firstChild).toHaveStyle("background: rgb(229, 209, 224)");
+    expect(container.firstChild).toHaveStyle("background: rgb(239, 219, 234)");
   });
 
   it("should render with correct background color for exit-quiz section", () => {
@@ -117,7 +117,7 @@ describe("OakLessonLayoutProps", () => {
       bottomNavSlot: <div>bottom nav slot</div>,
       children: <p>Hello World</p>,
     });
-    expect(container.firstChild).toHaveStyle("background: rgb(229, 209, 224)");
+    expect(container.firstChild).toHaveStyle("background: rgb(239, 219, 234)");
   });
 
   it("should render with correct background color for review section in secondary phase", () => {
@@ -128,6 +128,6 @@ describe("OakLessonLayoutProps", () => {
       bottomNavSlot: <div>bottom nav slot</div>,
       children: <p>Hello World</p>,
     });
-    expect(container.firstChild).toHaveStyle("background: rgb(198, 209, 239)");
+    expect(container.firstChild).toHaveStyle("background: rgb(189, 205, 245)");
   });
 });

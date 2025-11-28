@@ -3,7 +3,7 @@
 exports[`OakDroppable matches snapshot 1`] = `
 .c0 {
   padding: 1rem;
-  background: #cee7e5;
+  background: #d7f1ef;
   border-radius: 1rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }

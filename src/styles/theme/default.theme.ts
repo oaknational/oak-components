@@ -52,7 +52,7 @@ export const oakDefaultTheme: OakTheme = {
     "bg-interactive-element1": "grey50",
     "bg-interactive-element2": "grey40",
     "icon-main": "white", // to be deprecated
-    "icon-inverted": "black",
+    "icon-inverted": "black", // to be updated to match text-primary soon
     "icon-disabled": "grey50",
     "icon-brand": "oakGreen",
     "icon-success": "oakGreen",
