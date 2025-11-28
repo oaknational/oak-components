@@ -67,7 +67,7 @@ exports[`OakQuizMatch matches snapshot 1`] = `
 
 .c20 {
   padding: 1rem;
-  background: #cee7e5;
+  background: #d7f1ef;
   border-radius: 1rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -75,7 +75,7 @@ exports[`OakQuizMatch matches snapshot 1`] = `
 .c22 {
   min-height: 4rem;
   padding: 0.25rem;
-  background: #cee7e5;
+  background: #d7f1ef;
   border-radius: 0.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -573,7 +573,7 @@ exports[`OakQuizMatch matches snapshot 1`] = `
     aria-live="assertive"
     id="DndLiveRegion-0"
     role="status"
-    style="position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
+    style="position: fixed; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
   />
 </div>
 `;

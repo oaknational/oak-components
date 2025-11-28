@@ -6,7 +6,7 @@ exports[`OakLessonLayout matches snapshot 1`] = `
   min-height: 100%;
   padding-left: 0rem;
   padding-right: 0rem;
-  background: #c6d1ef;
+  background: #bdcdf5;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

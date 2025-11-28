@@ -14,7 +14,7 @@ exports[`OakPupilJourneyList matches snapshot 1`] = `
 
 .c4 {
   padding: 1rem;
-  background: #e5d1e0;
+  background: #efdbea;
   border-radius: 1rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
