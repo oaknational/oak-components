@@ -410,8 +410,29 @@ input:checked + .c13 {
   cursor: pointer;
 }
 
-.c36:has(input:focus-within):focus-visible {
-  box-shadow: 0px 0px 0px 2px #ffe555, 0px 0px 0px 5px #575757;
+.c36:has(input:focus-within):focus-visible box-shadow:0px 0px 0px 2px function (_a) {
+  -webkit-var: theme = _a.theme;
+  -moz-var: theme = _a.theme;
+  -ms-var: theme = _a.theme;
+  var: theme = _a.theme;
+  -webkit-var: c = theme.uiColors[value];
+  -moz-var: c = theme.uiColors[value];
+  -ms-var: c = theme.uiColors[value];
+  var: c = theme.uiColors[value];
+  return: color_1.oakColorTokens[c];
+}
+
+.c36:has(input:focus-within):focus-visible,
+.c36:has(input:focus-within):focus-visible 0px 0px 0px 5px function (_a) {
+  -webkit-var: theme = _a.theme;
+  -moz-var: theme = _a.theme;
+  -ms-var: theme = _a.theme;
+  var: theme = _a.theme;
+  -webkit-var: c = theme.uiColors[value];
+  -moz-var: c = theme.uiColors[value];
+  -ms-var: c = theme.uiColors[value];
+  var: c = theme.uiColors[value];
+  return: color_1.oakColorTokens[c];
 }
 
 .c21 {

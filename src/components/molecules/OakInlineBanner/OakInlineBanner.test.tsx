@@ -2,12 +2,8 @@ import React, { ReactNode } from "react";
 import "@testing-library/jest-dom";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
-import {
-  OakInlineBanner,
-  bannerTypes,
-} from "@/components/molecules/OakInlineBanner";
+import { OakInlineBanner } from "@/components/molecules/OakInlineBanner";
 import { OakSecondaryLink } from "@/components/molecules/OakSecondaryLink";
-import { parseColor } from "@/styles/helpers/parseColor";
 
 jest.mock("react-dom", () => {
   return {
@@ -202,14 +198,10 @@ describe(OakInlineBanner, () => {
     );
 
     expect(getByTestId("oak-inline-banner")).toHaveStyle(
-      `background-color: ${parseColor(
-        bannerTypes?.info?.backgroundColour || "lavender50",
-      )}`,
+      `background-color: rgb(227, 233, 251)`,
     );
     expect(getByTestId("oak-inline-banner")).toHaveStyle(
-      `border-color: ${parseColor(
-        bannerTypes?.info?.borderColour || "lavender",
-      )}`,
+      `border-color: rgb(160, 182, 242)`,
     );
   });
 
@@ -231,14 +223,10 @@ describe(OakInlineBanner, () => {
     );
 
     expect(getByTestId("oak-inline-banner")).toHaveStyle(
-      `background-color: ${parseColor(
-        bannerTypes?.alert?.backgroundColour || "lemon30",
-      )}`,
+      `background-color: rgb(255, 247, 204)`,
     );
     expect(getByTestId("oak-inline-banner")).toHaveStyle(
-      `border-color: ${parseColor(
-        bannerTypes?.alert?.borderColour || "lemon50",
-      )}`,
+      `border-color: rgb(255, 229, 85)`,
     );
   });
 

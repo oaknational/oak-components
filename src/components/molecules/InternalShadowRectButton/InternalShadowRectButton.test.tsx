@@ -61,7 +61,7 @@ describe("InternalShadowRectButton", () => {
 
   it("calls onClick method", () => {
     const onClick = jest.fn();
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithTheme(
       <InternalShadowRectButton
         {...defaultArgs}
         data-testid="test"
@@ -76,7 +76,7 @@ describe("InternalShadowRectButton", () => {
 
   it("calls onHovered method when a mouseover and mouseout event has happened", () => {
     const onHovered = jest.fn();
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithTheme(
       <InternalShadowRectButton
         {...defaultArgs}
         data-testid="test"
@@ -93,7 +93,7 @@ describe("InternalShadowRectButton", () => {
 
   it("calls doesn't call onHovered method before a mouseout event happens", () => {
     const onHovered = jest.fn();
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithTheme(
       <InternalShadowRectButton
         {...defaultArgs}
         data-testid="test"
@@ -125,7 +125,7 @@ describe("InternalShadowRectButton", () => {
 
   it("correctly captures the duration of the hover event", () => {
     const onHovered = jest.fn();
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithTheme(
       <InternalShadowRectButton
         {...defaultArgs}
         data-testid="test"

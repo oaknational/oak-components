@@ -1,6 +1,6 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { render, fireEvent } from "@testing-library/react";
+import { fireEvent } from "@testing-library/react";
 
 import {
   InternalShadowRoundButton,
@@ -50,7 +50,7 @@ describe("InternalShadowRoundButton", () => {
   });
 
   it("renders the chidren", () => {
-    const { getByText } = render(
+    const { getByText } = renderWithTheme(
       <InternalShadowRoundButton {...defaultArgs}>
         Click
       </InternalShadowRoundButton>,
@@ -60,7 +60,7 @@ describe("InternalShadowRoundButton", () => {
 
   it("calls onClick method", () => {
     const onClick = jest.fn();
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithTheme(
       <InternalShadowRoundButton
         {...defaultArgs}
         data-testid="test"
@@ -75,7 +75,7 @@ describe("InternalShadowRoundButton", () => {
 
   it("calls onHovered method when a mouseover and mouseout event has happened", () => {
     const onHovered = jest.fn();
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithTheme(
       <InternalShadowRoundButton
         {...defaultArgs}
         data-testid="test"
@@ -91,7 +91,7 @@ describe("InternalShadowRoundButton", () => {
 
   it("calls doesn't call onHovered method before a mouseout event happens", () => {
     const onHovered = jest.fn();
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithTheme(
       <InternalShadowRoundButton
         {...defaultArgs}
         data-testid="test"
@@ -122,7 +122,7 @@ describe("InternalShadowRoundButton", () => {
 
   it("correctly captures the duration of the hover event", () => {
     const onHovered = jest.fn();
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithTheme(
       <InternalShadowRoundButton
         {...defaultArgs}
         data-testid="test"
