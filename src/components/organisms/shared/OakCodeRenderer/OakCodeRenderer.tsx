@@ -36,7 +36,7 @@ export const OakCodeRenderer = ({ string, ...rest }: OakCodeRendererProps) => {
             return (
               <StyledCodeContainer
                 key={index}
-                $background={"grey70"}
+                $background={"border-neutral-lighter"}
                 $color={"text-inverted"}
                 $pv={["spacing-0", "spacing-4"]}
                 $ph={["spacing-8", "spacing-8"]}

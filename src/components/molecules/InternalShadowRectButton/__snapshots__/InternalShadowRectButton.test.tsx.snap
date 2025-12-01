@@ -32,8 +32,8 @@ exports[`InternalShadowRectButton matches snapshot 1`] = `
 }
 
 .c8 {
-  -webkit-filter: brightness(0) saturate(100%) invert(85%) sepia(23%) saturate(120%) hue-rotate(71deg) brightness(112%) contrast(97%);
-  filter: brightness(0) saturate(100%) invert(85%) sepia(23%) saturate(120%) hue-rotate(71deg) brightness(112%) contrast(97%);
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
 }
 
@@ -79,14 +79,14 @@ exports[`InternalShadowRectButton matches snapshot 1`] = `
   font-family: unset;
   outline: none;
   font-family: --var(google-font),Lexend,sans-serif;
-  color: #ebfbeb;
+  color: #222222;
   background: #bef2bd;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   border: 0.125rem solid;
-  border-color: #dff9de;
+  border-color: #fff2aa;
   border-radius: 0.25rem;
 }
 
@@ -105,21 +105,21 @@ exports[`InternalShadowRectButton matches snapshot 1`] = `
 .c4:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  color: #fff2aa;
+  color: #ffe555;
   background: #ffe555;
-  border-color: #fff7cc;
+  border-color: #fff2aa;
 }
 
 .c4:active {
   background: #bef2bd;
-  border-color: #dff9de;
-  color: #ebfbeb;
+  border-color: #fff2aa;
+  color: #222222;
 }
 
 .c4:disabled {
   background: #f2f2f2;
-  border-color: #e4e4e4;
-  color: #cacaca;
+  border-color: #cacaca;
+  color: #808080;
 }
 
 .c1 .grey-shadow:has(+ * + .internal-button:focus-visible) {

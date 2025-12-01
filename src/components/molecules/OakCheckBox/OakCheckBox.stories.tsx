@@ -75,7 +75,7 @@ export const WithStyling: Story = {
     labelGap: "spacing-16",
     labelAlignItems: "flex-start",
     defaultColor: "text-error",
-    disabledColor: "red50",
+    disabledColor: "text-disabled",
   },
 };
 

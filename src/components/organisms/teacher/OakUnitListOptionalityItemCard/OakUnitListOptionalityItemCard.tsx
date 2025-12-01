@@ -28,7 +28,7 @@ const StyledOptionalityListItem = styled(OakFlex)<{ $disabled?: boolean }>`
       @media (hover: hover) {
     &:hover {
       ${StyledOakIndexBox} {
-        background: ${parseColor("lavender110")};
+        background: ${parseColor("bg-decorative3-very-subdued")};
       }
       background: ${parseColor("bg-decorative3-main")};
     }
@@ -52,7 +52,7 @@ const StyledOakIndexBox = styled(OakFlex)`
   transition-duration: 300ms;
   @media (hover: hover) {
     &:hover {
-      background: ${parseColor("lavender110")};
+      background: ${parseColor("bg-decorative3-very-subdued")};
     }
   }
 `;

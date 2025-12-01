@@ -73,7 +73,7 @@ const variants: Variant = {
     color: "text-primary",
   },
   blue: {
-    background: "lavender110",
+    background: "bg-decorative3-main",
     icon: SuccessIcon,
     color: "text-primary",
   },

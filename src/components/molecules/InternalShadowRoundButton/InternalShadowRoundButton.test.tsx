@@ -12,10 +12,10 @@ import renderWithTheme from "@/test-helpers/renderWithTheme";
 const defaultArgs: InternalShadowRoundButtonProps = {
   iconName: "arrow-right",
   defaultIconBackground: "bg-decorative1-main",
-  defaultTextColor: "mint30",
-  hoverTextColor: "lemon50",
+  defaultTextColor: "text-subdued",
+  hoverTextColor: "text-promo",
   disabledIconBackground: "bg-neutral",
-  disabledTextColor: "grey40",
+  disabledTextColor: "text-disabled",
   hoverIconBackground: "bg-decorative1-main",
   iconBackgroundSize: "spacing-32",
   iconSize: "spacing-24",
@@ -116,7 +116,7 @@ describe("InternalShadowRoundButton", () => {
 
     expect(getByTestId("test").firstChild?.firstChild).toHaveStyle({
       "background-color": "#bef2bd",
-      color: "#ebfbeb",
+      color: "#575757",
     });
   });
 

@@ -67,7 +67,11 @@ export const Default: Story = {
       >
         2 columns
       </OakGridArea>
-      <OakGridArea $background={"teal"} $colSpan={12} $pa="spacing-24">
+      <OakGridArea
+        $background={"bg-decorative1-subdued"}
+        $colSpan={12}
+        $pa="spacing-24"
+      >
         12 columns
       </OakGridArea>
     </OakGrid>

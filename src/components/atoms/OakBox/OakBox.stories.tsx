@@ -169,7 +169,7 @@ export const OpacityAndZIndex: Story = {
         $pa="spacing-24"
         $width="spacing-180"
         $height="spacing-180"
-        $background="blue"
+        $background="bg-decorative2-main"
         $position="absolute"
       >
         Adjust the opacity and z-index using controls

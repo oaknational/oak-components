@@ -1,6 +1,6 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { render, fireEvent } from "@testing-library/react";
+import { fireEvent } from "@testing-library/react";
 
 import {
   InternalShadowRectButton,
@@ -12,14 +12,14 @@ import renderWithTheme from "@/test-helpers/renderWithTheme";
 const defaultArgs: InternalShadowRectButtonProps = {
   iconName: "arrow-right",
   defaultBackground: "bg-decorative1-main",
-  defaultTextColor: "mint30",
-  defaultBorderColor: "mint50",
+  defaultTextColor: "text-primary",
+  defaultBorderColor: "border-decorative5",
   hoverBackground: "bg-decorative5-main",
-  hoverBorderColor: "lemon30",
-  hoverTextColor: "lemon50",
+  hoverBorderColor: "border-decorative5",
+  hoverTextColor: "text-promo",
   disabledBackground: "bg-neutral",
-  disabledBorderColor: "grey30",
-  disabledTextColor: "grey40",
+  disabledBorderColor: "border-neutral-lighter",
+  disabledTextColor: "text-disabled",
 };
 
 describe("InternalShadowRectButton", () => {
@@ -51,7 +51,7 @@ describe("InternalShadowRectButton", () => {
   });
 
   it("renders the children", () => {
-    const { getByText } = render(
+    const { getByText } = renderWithTheme(
       <InternalShadowRectButton {...defaultArgs}>
         Click
       </InternalShadowRectButton>,
@@ -118,8 +118,8 @@ describe("InternalShadowRectButton", () => {
 
     expect(getByTestId("test")).toHaveStyle({
       "background-color": "#bef2bd",
-      color: "#ebfbeb",
-      "border-color": "#dff9de",
+      color: "#222222",
+      "border-color": "#fff2aa",
     });
   });
 

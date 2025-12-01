@@ -88,7 +88,7 @@ export const oakDefaultTheme: OakTheme = {
     "border-decorative3-stronger": "lavender110",
     "border-decorative4": "pink",
     "border-decorative4-stronger": "pink110",
-    "border-decorative5": "lemon",
+    "border-decorative5": "lemon50",
     "border-decorative5-stronger": "lemon110",
     "border-decorative6": "amber50",
     "border-decorative6-stronger": "amber",

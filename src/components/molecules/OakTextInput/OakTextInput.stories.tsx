@@ -67,9 +67,9 @@ export const WithStyling: Story = {
   args: {
     value: "a test value",
     background: "bg-decorative2-main",
-    color: "blue",
-    borderColor: "blue",
-    hoverBackground: "aqua110",
+    color: "text-subdued",
+    borderColor: "border-decorative2",
+    hoverBackground: "bg-decorative2-subdued",
     focusRingDropShadows: ["drop-shadow-wide-lemon"],
   },
 };

@@ -91,7 +91,7 @@ export const OakLessonReviewQuiz = (props: OakLessonReviewQuizProps) => {
   ] =
     lessonSectionName === "starter-quiz"
       ? ["bg-decorative1-very-subdued", "border-decorative1", "mint"]
-      : ["bg-decorative5-very-subdued", "border-decorative5", "lemon"];
+      : ["bg-decorative5-very-subdued", "border-decorative5", "icon-promo"];
 
   const summaryForIncomplete =
     lessonSectionName === "starter-quiz"
