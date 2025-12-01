@@ -8,7 +8,7 @@ exports[`OakLessonReviewQuiz matches snapshot 1`] = `
   padding-bottom: 1.25rem;
   background: #ffffff;
   border: 0.188rem solid;
-  border-color: #ffe555;
+  border-color: #fff2aa;
   border-radius: 1rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
