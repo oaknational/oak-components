@@ -119,7 +119,7 @@ describe("InternalShadowRectButton", () => {
     expect(getByTestId("test")).toHaveStyle({
       "background-color": "#bef2bd",
       color: "#222222",
-      "border-color": "#fff2aa",
+      "border-color": "#ffe555",
     });
   });
 

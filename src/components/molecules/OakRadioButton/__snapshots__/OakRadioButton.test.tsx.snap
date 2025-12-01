@@ -124,22 +124,12 @@ exports[`RadioGroup matches snapshot 1`] = `
   content: "";
   height: 2rem;
   width: 2rem;
-  background: "transparent" display:block;
+  background: transparent;
+  display: block;
   position: absolute;
   border-radius: 50%;
   border: 0.125rem solid #575757;
-}
-
-.c7:focus-visible ~ .c9::before box-shadow:inset 0 0 0 0.13rem function (_a) {
-  -webkit-var: theme = _a.theme;
-  -moz-var: theme = _a.theme;
-  -ms-var: theme = _a.theme;
-  var: theme = _a.theme;
-  -webkit-var: c = theme.uiColors[value];
-  -moz-var: c = theme.uiColors[value];
-  -ms-var: c = theme.uiColors[value];
-  var: c = theme.uiColors[value];
-  return: color_1.oakColorTokens[c];
+  box-shadow: inset 0 0 0 0.13rem #ffe555;
 }
 
 .c7:checked ~ .c9::after {

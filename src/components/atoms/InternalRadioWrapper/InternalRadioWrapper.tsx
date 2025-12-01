@@ -66,15 +66,15 @@ const VisibleRadioButtonInput = styled(OakFlex)<VisibleRadioButtonInputProps>`
         content: "";
         height: ${parseSpacing("spacing-32")};
         width: ${parseSpacing("spacing-32")};
-        background: "transparent"
+        background: transparent;
         display: block;
         position: absolute;
         border-radius: 50%;
-        border: ${parseBorder("border-solid-m")} ${parseColor(
-          "border-neutral-stronger",
-        )};
-        box-shadow: ${`inset 0 0 0 0.13rem ${parseColor("icon-promo")}`};
-      }`}
+        border: ${parseBorder("border-solid-m")}
+          ${parseColor("border-neutral-stronger")};
+        box-shadow: inset 0 0 0 0.13rem ${parseColor("bg-decorative5-main")};
+      }
+    `}
 
   ${InternalRadio}:checked ~ &::after {
     content: "";

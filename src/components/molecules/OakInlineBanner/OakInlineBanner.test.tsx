@@ -223,10 +223,10 @@ describe(OakInlineBanner, () => {
     );
 
     expect(getByTestId("oak-inline-banner")).toHaveStyle(
-      `background-color: rgb(255, 247, 204)`,
+      `background-color: #fff7cc`,
     );
     expect(getByTestId("oak-inline-banner")).toHaveStyle(
-      `border-color: rgb(255, 229, 85)`,
+      `border-color: #fbd60e`,
     );
   });
 

@@ -107,7 +107,7 @@ export const bannerTypes: BannerTypes = {
     icon: "bell",
     iconColorFilter: "black",
     backgroundColour: "bg-decorative5-very-subdued",
-    borderColour: "border-decorative5",
+    borderColour: "border-decorative5-stronger",
   },
   warning: {
     icon: "warning",

@@ -86,7 +86,7 @@ exports[`InternalShadowRectButton matches snapshot 1`] = `
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   border: 0.125rem solid;
-  border-color: #fff2aa;
+  border-color: #ffe555;
   border-radius: 0.25rem;
 }
 
@@ -107,12 +107,12 @@ exports[`InternalShadowRectButton matches snapshot 1`] = `
   text-decoration: underline;
   color: #ffe555;
   background: #ffe555;
-  border-color: #fff2aa;
+  border-color: #ffe555;
 }
 
 .c4:active {
   background: #bef2bd;
-  border-color: #fff2aa;
+  border-color: #ffe555;
   color: #222222;
 }
 
