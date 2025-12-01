@@ -11,12 +11,12 @@ import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 const defaultArgs: InternalShadowRoundButtonProps = {
   iconName: "arrow-right",
-  defaultIconBackground: "mint",
+  defaultIconBackground: "bg-decorative1-main",
   defaultTextColor: "mint30",
   hoverTextColor: "lemon50",
-  disabledIconBackground: "grey20",
+  disabledIconBackground: "bg-neutral",
   disabledTextColor: "grey40",
-  hoverIconBackground: "mint",
+  hoverIconBackground: "bg-decorative1-main",
   iconBackgroundSize: "spacing-32",
   iconSize: "spacing-24",
 };

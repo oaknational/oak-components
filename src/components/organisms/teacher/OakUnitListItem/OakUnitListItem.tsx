@@ -139,8 +139,8 @@ export const OakUnitListItem = <element extends ElementType = "a">(
               unavailable
                 ? "bg-neutral-stronger"
                 : isLegacy
-                  ? "lavender50"
-                  : "lavender"
+                  ? "bg-decorative3-subdued"
+                  : "bg-decorative3-main"
             }
             $justifyContent={"center"}
             $alignItems={"center"}
@@ -226,8 +226,8 @@ export const OakUnitListItem = <element extends ElementType = "a">(
                 unavailable
                   ? "bg-neutral-stronger"
                   : isLegacy
-                    ? "lavender50"
-                    : "lavender"
+                    ? "bg-decorative3-subdued"
+                    : "bg-decorative3-main"
               }
               $justifyContent={"center"}
               $alignItems={"center"}

@@ -48,7 +48,7 @@ const SuccessIcon = (
     <SuccessIconBackground
       $width="spacing-20"
       $height="spacing-20"
-      $background="white"
+      $background="bg-primary"
       $borderRadius="border-radius-circle"
       $position="absolute"
     />
@@ -58,42 +58,42 @@ const SuccessIcon = (
 
 const variants: Variant = {
   green: {
-    background: "mint",
+    background: "bg-decorative1-main",
     icon: SuccessIcon,
-    color: "black",
+    color: "text-primary",
   },
   yellow: {
-    background: "lemon",
+    background: "bg-decorative5-main",
     icon: SuccessIcon,
-    color: "black",
+    color: "text-primary",
   },
   pink: {
-    background: "pink",
+    background: "bg-decorative4-main",
     icon: SuccessIcon,
-    color: "black",
+    color: "text-primary",
   },
   blue: {
     background: "lavender110",
     icon: SuccessIcon,
-    color: "black",
+    color: "text-primary",
   },
   aqua: {
-    background: "aqua",
+    background: "bg-decorative2-main",
     icon: SuccessIcon,
-    color: "black",
+    color: "text-primary",
   },
   light: {
-    background: "white",
+    background: "bg-primary",
     icon: SuccessIcon,
-    color: "black",
+    color: "text-primary",
   },
   dark: {
-    background: "black",
+    background: "bg-inverted",
     icon: SuccessIcon,
-    color: "white",
+    color: "text-inverted",
   },
   error: {
-    background: "red",
+    background: "bg-error",
     icon: (
       <OakIcon
         iconName="warning"
@@ -102,12 +102,12 @@ const variants: Variant = {
         $width="spacing-32"
       />
     ),
-    color: "white",
+    color: "text-inverted",
   },
   success: {
-    background: "oakGreen",
+    background: "bg-success",
     icon: SuccessIcon,
-    color: "white",
+    color: "text-inverted",
   },
 };
 

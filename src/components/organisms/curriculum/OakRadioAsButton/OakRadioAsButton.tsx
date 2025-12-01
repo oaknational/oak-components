@@ -67,8 +67,8 @@ const StyledFlexBox = styled(OakFlex)`
   }
 
   &:has(input:checked:not(:disabled)) {
-    background-color: ${parseColor("black")};
-    color: ${parseColor("white")};
+    background-color: ${parseColor("bg-inverted")};
+    color: ${parseColor("text-inverted")};
   }
 `;
 
@@ -146,7 +146,7 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
         $borderRadius={"border-radius-s"}
         $borderColor={"border-neutral-lighter"}
         $ba="border-solid-s"
-        $background={"white"}
+        $background={"bg-primary"}
         onClick={handleContainerClick}
         $ph={"spacing-12"}
         $pv={"spacing-4"}

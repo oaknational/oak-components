@@ -222,7 +222,7 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
             >
               <OakBox
                 $ba={"border-solid-m"}
-                $borderColor={"white"}
+                $borderColor={"icon-main"}
                 $width={"100%"}
                 $height={"100%"}
               />

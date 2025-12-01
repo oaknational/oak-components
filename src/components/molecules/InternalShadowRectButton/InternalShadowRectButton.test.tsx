@@ -11,13 +11,13 @@ import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 const defaultArgs: InternalShadowRectButtonProps = {
   iconName: "arrow-right",
-  defaultBackground: "mint",
+  defaultBackground: "bg-decorative1-main",
   defaultTextColor: "mint30",
   defaultBorderColor: "mint50",
-  hoverBackground: "lemon",
+  hoverBackground: "bg-decorative5-main",
   hoverBorderColor: "lemon30",
   hoverTextColor: "lemon50",
-  disabledBackground: "grey20",
+  disabledBackground: "bg-neutral",
   disabledBorderColor: "grey30",
   disabledTextColor: "grey40",
 };

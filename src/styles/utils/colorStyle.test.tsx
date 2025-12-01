@@ -56,8 +56,8 @@ describe("colorStyle", () => {
     const { getByTestId } = renderWithTheme(
       <StyledComponent
         data-testid="test"
-        $background={"mint"}
-        $color={"black"}
+        $background={"bg-decorative1-main"}
+        $color={"text-primary"}
       />,
     );
 

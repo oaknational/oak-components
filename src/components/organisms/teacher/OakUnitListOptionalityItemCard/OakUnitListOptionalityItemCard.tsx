@@ -17,7 +17,7 @@ const StyledOptionalityListItem = styled(OakFlex)<{ $disabled?: boolean }>`
   }
 
   &:focus-visible {
-    background: ${parseColor("white")};
+    background: ${parseColor("bg-primary")};
     box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
   }

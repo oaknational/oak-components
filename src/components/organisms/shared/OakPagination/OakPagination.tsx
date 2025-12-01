@@ -60,20 +60,20 @@ const StyledNumberButton = styled(OakLink)<{ selected: boolean }>`
   justify-content: center;
   text-decoration: none;
   ${typographyStyle}
-  color: ${parseColor("black")};
+  color: ${parseColor("text-primary")};
 
   ${(props) => css`
     background-color: ${props.selected
-      ? parseColor("black")
-      : parseColor("white")};
+      ? parseColor("icon-primary")
+      : parseColor("icon-main")};
   `};
 
   ${(props) =>
     props.selected &&
     css`
-      color: ${parseColor("white")};
+      color: ${parseColor("text-inverted")};
       &:visited {
-        color: ${parseColor("white")};
+        color: ${parseColor("text-inverted")};
       }
     `}
 
@@ -82,10 +82,10 @@ const StyledNumberButton = styled(OakLink)<{ selected: boolean }>`
     ${(props) =>
       props.selected &&
       css`
-        color: ${parseColor("white")};
+        color: ${parseColor("text-inverted")};
         @media (hover: hover) {
     &:hover:not(:disabled) {
-      color: ${parseColor("white")};
+      color: ${parseColor("text-inverted")};
     }
       `}
   }
@@ -125,7 +125,7 @@ const OakEllipsis = () => {
     <StyledEllipsis
       $color="text-primary"
       $font={"heading-7"}
-      $background="white"
+      $background="bg-primary"
       aria-label="Hidden page numbers"
       disabled
     >

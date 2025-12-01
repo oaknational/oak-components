@@ -47,7 +47,7 @@ export const OakLessonReviewIntroVideo = (
 
   return (
     <ReviewItemContainer
-      $background={completed ? completedBackgroundColor : "white"}
+      $background={completed ? completedBackgroundColor : "bg-primary"}
       $borderColor={completed ? completedBackgroundColor : borderColor}
       {...rest}
     >

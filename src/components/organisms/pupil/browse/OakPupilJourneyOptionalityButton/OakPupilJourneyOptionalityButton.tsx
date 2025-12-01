@@ -90,8 +90,8 @@ export const OakPupilJourneyOptionalityButton = <C extends ElementType = "a">(
       {...rest}
     >
       <OakCardWithHandDrawnBorder
-        fill={unavailable ? "border-neutral-lighter" : "black"}
-        stroke={unavailable ? "border-neutral-lighter" : "black"}
+        fill={unavailable ? "border-neutral-lighter" : "bg-inverted"}
+        stroke={unavailable ? "border-neutral-lighter" : "border-primary"}
         strokeWidth={"border-solid-s"}
       >
         <OakFlex $flexDirection={"column"} $gap={"spacing-8"}>

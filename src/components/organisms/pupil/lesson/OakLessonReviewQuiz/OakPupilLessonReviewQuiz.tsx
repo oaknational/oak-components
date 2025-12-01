@@ -100,7 +100,7 @@ export const OakLessonReviewQuiz = (props: OakLessonReviewQuizProps) => {
 
   return (
     <ReviewItemContainer
-      $background={completed ? completedBackgroundColor : "white"}
+      $background={completed ? completedBackgroundColor : "bg-primary"}
       $borderColor={completed ? completedBackgroundColor : borderColor}
       {...rest}
     >

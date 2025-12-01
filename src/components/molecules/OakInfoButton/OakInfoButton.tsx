@@ -42,14 +42,14 @@ export const OakInfoButton = (props: OakInfoButtonProps) => {
     <StyledInternalShadowRoundButton
       element={"button"}
       iconName={isOpen && !disabled ? "cross" : "info"}
-      defaultIconBackground={isOpen ? "black" : "bg-decorative5-main"}
-      defaultIconColor={isOpen ? "white" : "black"}
-      hoverIconBackground={isOpen ? "black" : "bg-decorative5-main"}
+      defaultIconBackground={isOpen ? "icon-primary" : "bg-decorative5-main"}
+      defaultIconColor={isOpen ? "icon-main" : "icon-primary"}
+      hoverIconBackground={isOpen ? "icon-primary" : "bg-decorative5-main"}
       defaultTextColor={"text-primary"}
       hoverTextColor={"text-primary"}
       disabledIconBackground={"bg-btn-primary-disabled"}
       disabledTextColor={"text-disabled"}
-      disabledIconColor={"white"}
+      disabledIconColor={"icon-main"}
       isLoading={isLoading}
       disabled={disabled}
       iconBackgroundSize={"spacing-40"}

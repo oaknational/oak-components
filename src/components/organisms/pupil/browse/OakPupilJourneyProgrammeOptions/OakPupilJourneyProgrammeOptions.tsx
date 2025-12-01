@@ -42,7 +42,7 @@ export const OakPupilJourneyProgrammeOptions = ({
           $mb={"spacing-32"}
         >
           {titleSlot}
-          <OakHandDrawnHR hrColor={"white"} $height={"spacing-4"} />
+          <OakHandDrawnHR hrColor={"text-inverted"} $height={"spacing-4"} />
         </OakFlex>
       )}
       <OakFlex

@@ -52,7 +52,7 @@ export const OakLessonReviewItem = (props: OakLessonReviewItemProps) => {
       completed={completed}
       $gap="spacing-24"
       $alignItems="center"
-      $background={completed ? completedBackgroundColor : "white"}
+      $background={completed ? completedBackgroundColor : "bg-primary"}
       $ph={["spacing-16", "spacing-24"]}
       $pv="spacing-20"
       $borderRadius="border-radius-l"

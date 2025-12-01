@@ -42,18 +42,18 @@ export const Default: Story = {
       <OakFlex $gap="spacing-24">
         <OakTagFunctional
           label={args.label ? args.label : "No icon"}
-          $background="mint"
+          $background="bg-decorative1-main"
         />
         <OakTagFunctional
           label={args.label ? args.label : "With icon"}
           iconName={iconName}
-          $background="pink"
+          $background="bg-decorative4-main"
         />
         <OakTagFunctional
           label={args.label ? args.label : "Trailing icon"}
           iconName={iconName}
           isTrailingIcon
-          $background="lavender"
+          $background="bg-decorative3-main"
         />
       </OakFlex>
     );

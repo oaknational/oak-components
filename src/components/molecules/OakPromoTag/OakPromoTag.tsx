@@ -48,7 +48,7 @@ export const OakPromoTag = (props: OakPromoTagProps) => {
         $justifyContent="center"
       >
         <OakSpan
-          $color="lemon"
+          $color="text-promo"
           $background={"bg-icon"}
           $font={["body-3-bold", "body-3-bold", "heading-7"]}
         >

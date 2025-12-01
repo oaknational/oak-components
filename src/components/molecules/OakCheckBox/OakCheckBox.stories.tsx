@@ -74,7 +74,7 @@ export const WithStyling: Story = {
     hoverBorderRadius: "border-radius-l",
     labelGap: "spacing-16",
     labelAlignItems: "flex-start",
-    defaultColor: "red",
+    defaultColor: "text-error",
     disabledColor: "red50",
   },
 };
@@ -91,7 +91,7 @@ export const CustomIcon: Story = {
         $width="100%"
         $height="100%"
         $borderRadius="border-radius-xs"
-        $background="black"
+        $background="icon-primary"
       ></OakBox>
     ),
   },

@@ -41,8 +41,8 @@ export const Default: Story = {
         <InternalStyledSvg
           preserveAspectRatio="none"
           viewBox="0 0 10 10"
-          $fill="aqua50"
-          $stroke="aqua110"
+          $fill="bg-decorative2-subdued"
+          $stroke="border-decorative2-stronger"
           $strokeWidth="border-solid-s"
         >
           <circle cx="5" cy="5" r="5" vectorEffect="non-scaling-stroke" />

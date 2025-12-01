@@ -41,26 +41,38 @@ export const DefaultOakFlex: Story = (args: Partial<OakFlexProps>) => (
 );
 
 DefaultOakFlex.args = {
-  $background: "mint",
-  $color: "black",
+  $background: "bg-decorative1-main",
+  $color: "text-primary",
   $pa: "spacing-16",
 };
 
 export const NestedOakFlex: Story = (args: Partial<OakFlexProps>) => (
   <OakFlex {...args}>
-    <OakFlex data-testId="OakFlex-id" $background={"grey40"} $pa={"spacing-16"}>
+    <OakFlex
+      data-testId="OakFlex-id"
+      $background={"bg-interactive-element2"}
+      $pa={"spacing-16"}
+    >
       Test content 1
     </OakFlex>
-    <OakFlex data-testId="OakFlex-id" $background={"grey40"} $pa={"spacing-16"}>
+    <OakFlex
+      data-testId="OakFlex-id"
+      $background={"bg-interactive-element2"}
+      $pa={"spacing-16"}
+    >
       Test content 2
     </OakFlex>
-    <OakFlex data-testId="OakFlex-id" $background={"grey40"} $pa={"spacing-16"}>
+    <OakFlex
+      data-testId="OakFlex-id"
+      $background={"bg-interactive-element2"}
+      $pa={"spacing-16"}
+    >
       Test content 3
     </OakFlex>
   </OakFlex>
 );
 NestedOakFlex.args = {
-  $background: "mint",
+  $background: "bg-decorative1-main",
   $flexDirection: "column",
   $pa: "spacing-16",
   $gap: "spacing-24",
