@@ -136,4 +136,45 @@ describe("InternalShadowRoundButton", () => {
     fireEvent.mouseLeave(getByTestId("test"));
     expect(onHovered).toHaveBeenCalledWith(expect.anything(), 1000);
   });
+
+  it("uses null when neither iconColorFilter nor defaultIconColor is provided", () => {
+    const { container } = renderWithTheme(
+      <InternalShadowRoundButton {...defaultArgs} defaultIconColor={undefined}>
+        Click
+      </InternalShadowRoundButton>,
+    );
+    const icon = container.querySelector('[data-icon-for="button"]');
+    expect(icon).toBeInTheDocument();
+    expect(container).toMatchSnapshot();
+  });
+
+  it("iconColorFilter takes precedence over defaultIconColor", () => {
+    const { container } = renderWithTheme(
+      <InternalShadowRoundButton
+        {...defaultArgs}
+        iconColorFilter="white"
+        defaultIconColor="black"
+      >
+        Click
+      </InternalShadowRoundButton>,
+    );
+    const icon = container.querySelector('[data-icon-for="button"]');
+    expect(icon).toBeInTheDocument();
+    expect(container).toMatchSnapshot();
+  });
+
+  it("uses custom iconBorderColor when provided", () => {
+    const { container } = renderWithTheme(
+      <InternalShadowRoundButton
+        {...defaultArgs}
+        iconBorderColor="border-inverted"
+      >
+        Click
+      </InternalShadowRoundButton>,
+    );
+    const shadow = container.querySelector(".shadow");
+    expect(shadow).toHaveStyle({
+      borderColor: expect.stringMatching(/border-inverted/),
+    });
+  });
 });
