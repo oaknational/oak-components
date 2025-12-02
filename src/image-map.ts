@@ -200,6 +200,7 @@ export const icons = {
   "underline-1": "v1734537060/OWA/ui-graphics/underline-1_zaegqi.svg",
   image: "v1763680546/icons/Icon_Image_uatq6d.svg",
   logo: "v1711468346/logo-mark.svg",
+  delete: "v1764692488/icons/icon_delete_edzcua.svg",
 } as const satisfies VersionedSvgMap;
 
 export type IconName = keyof typeof icons;
