@@ -21,4 +21,18 @@ describe("OakTertiaryInvertedButton", () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  it("renders with both custom iconColorFilter and iconBorderColor", () => {
+    const { container } = renderWithTheme(
+      <OakTertiaryInvertedButton
+        iconName="chevron-right"
+        iconColorFilter="black"
+        iconBorderColor="black"
+      >
+        Click Me
+      </OakTertiaryInvertedButton>,
+    );
+
+    expect(container).toMatchSnapshot();
+  });
 });

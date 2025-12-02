@@ -49,6 +49,8 @@ export type InternalShadowRoundButtonProps = Omit<
   iconBackgroundSize: SizeStyleProps["$width"];
   iconSize: SizeStyleProps["$width"];
   hoverDropShadow?: OakDropShadowToken | null;
+  iconColorFilter?: OakRoundIconProps["$colorFilter"];
+  iconBorderColor?: OakRoundIconProps["$colorFilter"];
 } & PositionStyleProps;
 
 const StyledInternalButton = styled(InternalButton)<
@@ -152,6 +154,8 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
     hoverTextColor,
     hoverDropShadow = "drop-shadow-lemon",
     className,
+    iconColorFilter,
+    iconBorderColor,
     ...rest
   } = props;
 
@@ -161,11 +165,9 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
       $width={iconSize}
       $height={iconSize}
       $colorFilter={
-        props.disabled
+        disabled
           ? disabledIconColor
-          : defaultIconColor
-            ? defaultIconColor
-            : null
+          : iconColorFilter ?? defaultIconColor ?? null
       }
       data-icon-for="button"
     />
@@ -176,8 +178,10 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
     </OakBox>
   );
 
-  const iconBorderColor =
-    disabled || isLoading ? disabledIconBorderColor : defaultIconBorderColor;
+  const computedIconBorderColor =
+    disabled || isLoading
+      ? disabledIconBorderColor
+      : iconBorderColor ?? defaultIconBorderColor;
 
   const iconLogic = (isLoading || icon) && (
     <OakFlex
@@ -196,8 +200,8 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
         className="shadow"
         $position={"absolute"}
         $borderRadius={"border-radius-circle"}
-        $borderColor={iconBorderColor}
-        $ba={iconBorderColor ? "border-solid-m" : undefined}
+        $borderColor={computedIconBorderColor}
+        $ba={computedIconBorderColor ? "border-solid-m" : undefined}
         $width={"100%"}
         $height={"100%"}
         $top="spacing-0"
