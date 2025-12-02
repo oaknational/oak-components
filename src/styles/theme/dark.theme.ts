@@ -13,7 +13,7 @@ export const oakDarkTheme: OakTheme = {
     "text-link-visited": "pink50",
     "text-inverted": "black",
     "text-success": "mint",
-    "text-warning": "lemon50", // to be deprecated
+    "text-warning": "lemon50", // to be deprecated, we don't use warning text anymore
     "text-promo": "lemon50",
     "bg-primary": "black",
     "bg-inverted": "white",
@@ -25,8 +25,8 @@ export const oakDarkTheme: OakTheme = {
     "bg-btn-secondary": "black",
     "bg-btn-secondary-hover": "grey60",
     "bg-btn-secondary-disabled": "grey50",
-    "bg-icon": "white", // to be deprecated
-    "bg-icon-hover": "grey30", // to be deprecated
+    "bg-icon": "white", // to be deprecated, use icon-primary instead
+    "bg-icon-hover": "grey30", // to be deprecated, use icon-subdued instead
     "bg-decorative1-main": "mint110",
     "bg-decorative1-subdued": "mint",
     "bg-decorative1-very-subdued": "mint50",
@@ -45,14 +45,14 @@ export const oakDarkTheme: OakTheme = {
     "bg-decorative6-main": "amber",
     "bg-decorative6-subdued": "amber50",
     "bg-decorative6-very-subdued": "amber30",
+    "bg-interactive-element1": "grey40",
+    "bg-interactive-element2": "grey30",
     "bg-correct": "mint30",
     "bg-incorrect": "red30",
     "bg-success": "mint",
     "bg-error": "red50",
-    "bg-interactive-element1": "grey40",
-    "bg-interactive-element2": "grey30",
-    "icon-main": "black", // to be deprecated
-    "icon-inverted": "white",
+    "icon-main": "black", // to be deprecated, icon-inverted will be used instead soon
+    "icon-inverted": "white", // this will be updated to black once all current occurrences of icon-inverted are replaced with icon-primary
     "icon-disabled": "grey20",
     "icon-brand": "mint50",
     "icon-success": "mint50",
@@ -73,8 +73,8 @@ export const oakDarkTheme: OakTheme = {
     "icon-promo": "lemon50",
     "border-primary": "white",
     "border-inverted": "black",
-    "border-neutral": "grey30",
-    "border-neutral-lighter": "grey10",
+    "border-neutral": "grey60",
+    "border-neutral-lighter": "grey70",
     "border-neutral-stronger": "grey40",
     "border-brand": "mint50",
     "border-success": "mint50",
@@ -91,7 +91,7 @@ export const oakDarkTheme: OakTheme = {
     "border-decorative5": "lemon50",
     "border-decorative5-stronger": "lemon30",
     "border-decorative6": "amber50",
-    "border-decorative6-stronger": "amber",
+    "border-decorative6-stronger": "amber30",
     transparent: "transparent",
     "code-blue": "rpf-syntax-blue",
     "code-green": "rpf-syntax-green",

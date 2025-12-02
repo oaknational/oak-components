@@ -27,7 +27,6 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
   width: 1.5rem;
   height: 1.5rem;
   padding: 0rem;
-  background: #dd0035;
   border-radius: 6.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }

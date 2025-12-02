@@ -150,6 +150,7 @@ export function OakSelect({
         id={id}
         name={name}
         onChange={onChange}
+        value={props.value}
       >
         <button>
           <selectedcontent></selectedcontent>

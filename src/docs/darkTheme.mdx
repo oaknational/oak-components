@@ -1,0 +1,15 @@
+import { oakDarkTheme } from "@/styles/theme";
+import { parseColor } from "@/styles/helpers/parseColor";
+import { Meta, ColorPalette, ColorItem } from "@storybook/blocks";
+
+<Meta title="StyleTokens/oakDarkTheme" />
+
+# oakDarkTheme
+
+### uiColors
+
+<ColorPalette>
+  {Object.entries(oakDarkTheme.uiColors).map((token, i) => (
+    <ColorItem key={i} title={token[0]} colors={[parseColor(token[1])]} />
+  ))}
+</ColorPalette>
