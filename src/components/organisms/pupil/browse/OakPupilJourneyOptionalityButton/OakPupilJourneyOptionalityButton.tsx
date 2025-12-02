@@ -119,7 +119,7 @@ export const OakPupilJourneyOptionalityButton = <C extends ElementType = "a">(
                   $height={"spacing-32"}
                   $background={"transparent"}
                   $colorFilter={
-                    disabledOrUnavailable ? "icon-disabled" : "icon-inverted"
+                    disabledOrUnavailable ? "icon-disabled" : "icon-primary"
                   }
                 />
               </>
