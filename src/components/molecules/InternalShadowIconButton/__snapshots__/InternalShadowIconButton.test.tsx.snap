@@ -156,7 +156,7 @@ exports[`InternalShadowIconButton matches snapshot 1`] = `
 .c4:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  color: #f6e8a0;
+  color: #fff2aa;
 }
 
 .c4:active {

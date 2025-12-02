@@ -307,7 +307,7 @@ exports[`OakHeaderHero matches snapshot 1`] = `
 }
 
 .c8:visited {
-  color: #081676;
+  color: #7c9aec;
 }
 
 .c8:active {

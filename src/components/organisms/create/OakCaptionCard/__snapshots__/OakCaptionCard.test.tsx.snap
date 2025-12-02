@@ -372,7 +372,7 @@ input:checked + .c12 {
 }
 
 .c2:hover {
-  background-color: #c6d1ef;
+  background-color: #bdcdf5;
 }
 
 @media (hover:hover) {
