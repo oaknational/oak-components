@@ -10,7 +10,7 @@ import { InternalCheckBoxLabelProps } from "@/components/atoms/InternalCheckBoxL
 import { InternalCheckBoxWrapper } from "@/components/atoms/InternalCheckBoxWrapper";
 import { OakBox, OakFlex, OakIcon } from "@/components/atoms";
 import { parseColor } from "@/styles/helpers/parseColor";
-import { OakCombinedColorToken } from "@/styles";
+import { OakUiRoleToken } from "@/styles";
 import { IconName } from "@/image-map";
 import { InternalRadioWrapper } from "@/components/atoms/InternalRadioWrapper";
 import { InternalRadio } from "@/components/atoms/InternalRadio/InternalRadio";
@@ -30,7 +30,7 @@ const LabelContainer = styled("label")`
   display: flex;
 `;
 
-const Container = styled(OakFlex)<{ $hoverBackground: OakCombinedColorToken }>`
+const Container = styled(OakFlex)<{ $hoverBackground: OakUiRoleToken }>`
   cursor: pointer;
 
   &:has(input:focus-within) {

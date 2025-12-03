@@ -12,16 +12,16 @@ import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { OakBox, OakIcon, OakIconProps, OakSpan } from "@/components/atoms";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
-import { OakAllSpacingToken, OakCombinedColorToken } from "@/styles";
+import { OakAllSpacingToken, OakUiRoleToken } from "@/styles";
 
 const StyledOakIcon = styled(OakIcon)``;
 
 const StyledLink = styled.a<{
-  $color: OakCombinedColorToken;
-  $visitedColor: OakCombinedColorToken;
-  $hoverColor: OakCombinedColorToken;
-  $activeColor: OakCombinedColorToken;
-  $disabledColor: OakCombinedColorToken;
+  $color: OakUiRoleToken;
+  $visitedColor: OakUiRoleToken;
+  $hoverColor: OakUiRoleToken;
+  $activeColor: OakUiRoleToken;
+  $disabledColor: OakUiRoleToken;
 }>`
   display: inline;
   align-items: center;
@@ -98,11 +98,11 @@ export type InternalLinkProps = {
    * Displays a loading spinner in place of the icon.
    */
   isLoading?: boolean;
-  color: OakCombinedColorToken;
-  visitedColor: OakCombinedColorToken;
-  hoverColor: OakCombinedColorToken;
-  activeColor: OakCombinedColorToken;
-  disabledColor: OakCombinedColorToken;
+  color: OakUiRoleToken;
+  visitedColor: OakUiRoleToken;
+  hoverColor: OakUiRoleToken;
+  activeColor: OakUiRoleToken;
+  disabledColor: OakUiRoleToken;
   iconWidth?: OakAllSpacingToken;
   iconHeight?: OakAllSpacingToken;
 };

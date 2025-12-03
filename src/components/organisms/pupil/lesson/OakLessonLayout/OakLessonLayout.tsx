@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 import { OakBox, OakFlex } from "@/components/atoms";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { getBreakpoint } from "@/styles/utils/responsiveStyle";
-import { OakCombinedColorToken, oakDefaultTheme } from "@/styles";
+import { OakUiRoleToken, oakDefaultTheme } from "@/styles";
 import { backgrounds } from "@/image-map";
 import { parseColor } from "@/styles/helpers/parseColor";
 
@@ -175,10 +175,10 @@ function pickSectionColours(
   sectionName: LessonSectionName,
   phase: Phase,
 ): [
-  pageBackgroundColor: OakCombinedColorToken,
-  contentBackgroundColor: OakCombinedColorToken,
-  contentBorderColor: OakCombinedColorToken,
-  mobileContentBackgroundColor: OakCombinedColorToken,
+  pageBackgroundColor: OakUiRoleToken,
+  contentBackgroundColor: OakUiRoleToken,
+  contentBorderColor: OakUiRoleToken,
+  mobileContentBackgroundColor: OakUiRoleToken,
 ] {
   switch (sectionName) {
     case "overview":

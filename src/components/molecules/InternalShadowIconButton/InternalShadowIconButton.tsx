@@ -17,7 +17,7 @@ import {
   positionStyle,
 } from "@/styles/utils/positionStyle";
 import { parseColor } from "@/styles/helpers/parseColor";
-import { OakCombinedColorToken } from "@/styles";
+import { OakUiRoleToken } from "@/styles";
 import { SizeStyleProps, sizeStyle } from "@/styles/utils/sizeStyle";
 import { FlexStyleProps } from "@/styles/utils/flexStyle";
 
@@ -34,10 +34,10 @@ export type InternalShadowIconButtonProps = Omit<
 > & {
   iconName?: OakIconName;
   isTrailingIcon?: boolean;
-  defaultTextColor: OakCombinedColorToken;
-  hoverTextColor: OakCombinedColorToken;
-  disabledTextColor: OakCombinedColorToken;
-  hoverIconColor?: OakCombinedColorToken;
+  defaultTextColor: OakUiRoleToken;
+  hoverTextColor: OakUiRoleToken;
+  disabledTextColor: OakUiRoleToken;
+  hoverIconColor?: OakUiRoleToken;
   defaultIconColor?: OakRoundIconProps["$colorFilter"];
   disabledIconColor?: OakRoundIconProps["$colorFilter"];
   width?: SizeStyleProps["$width"];

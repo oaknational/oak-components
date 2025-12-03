@@ -6,7 +6,7 @@ import { SizeStyleProps } from "@/styles/utils/sizeStyle";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { responsiveStyle } from "@/styles/utils/responsiveStyle";
 import { ColorStyleProps, colorStyle } from "@/styles/utils/colorStyle";
-import { OakCombinedColorToken } from "@/styles";
+import { OakUiRoleToken } from "@/styles";
 
 const SpinnerKeyframe = keyframes`
   0% {
@@ -29,7 +29,7 @@ const DelayedShow = keyframes`
 
 export type OakLoadingSpinnerProps = Pick<SizeStyleProps, "$width"> &
   ColorStyleProps & {
-    loaderColor?: OakCombinedColorToken;
+    loaderColor?: OakUiRoleToken;
     /**
      * Delay the appearance of the spinner
      *

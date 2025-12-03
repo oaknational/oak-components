@@ -14,7 +14,7 @@ import {
 import {
   OakAllSpacingToken,
   OakBorderWidthToken,
-  OakCombinedColorToken,
+  OakUiRoleToken,
 } from "@/styles";
 import { InternalRadioWrapper } from "@/components/atoms/InternalRadioWrapper";
 import { InternalRadio } from "@/components/atoms/InternalRadio/InternalRadio";
@@ -65,7 +65,7 @@ export type OakRadioButtonProps = {
   /**
    * Allows the background color of the radio button to be customized.
    */
-  radioBackground?: OakCombinedColorToken;
+  radioBackground?: OakUiRoleToken;
   /**
    * Allows the width of the radio button border to be customized when the radio button is checked.
    */

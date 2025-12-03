@@ -2,7 +2,7 @@ import React, { HTMLAttributes, ReactNode } from "react";
 import styled, { css } from "styled-components";
 
 import { OakFlex, OakFlexProps } from "@/components/atoms/OakFlex";
-import { OakCombinedColorToken } from "@/styles";
+import { OakUiRoleToken } from "@/styles";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { ColorStyleProps } from "@/styles/utils/colorStyle";
 import { responsiveStyle } from "@/styles/utils/responsiveStyle";
@@ -55,7 +55,7 @@ const StyledSvg = styled.svg<StyledSvgProps>`
         `;
     }
   }}
-  ${responsiveStyle<StyledSvgProps, OakCombinedColorToken>(
+  ${responsiveStyle<StyledSvgProps, OakUiRoleToken>(
     "fill",
     (props) => props.$fill,
     parseColor,

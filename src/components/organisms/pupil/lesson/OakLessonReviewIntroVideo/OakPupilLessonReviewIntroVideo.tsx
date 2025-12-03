@@ -6,7 +6,7 @@ import {
 } from "@/components/organisms/pupil/lesson/OakLessonReviewQuiz";
 import { OakFlex } from "@/components/atoms";
 import { OakRoundIcon } from "@/components/molecules";
-import { OakCombinedColorToken } from "@/styles";
+import { OakUiRoleToken } from "@/styles";
 
 type LessonSectionName = "intro" | "video";
 type BaseOakLessonReviewItemProps = {
@@ -29,9 +29,9 @@ export const OakLessonReviewIntroVideo = (
 ) => {
   const { completed, lessonSectionName, ...rest } = props;
   const [completedBackgroundColor, borderColor, iconBackgroundColor]: [
-    completedBackgroundColor: OakCombinedColorToken,
-    borderColor: OakCombinedColorToken,
-    iconBackgroundColor: OakCombinedColorToken,
+    completedBackgroundColor: OakUiRoleToken,
+    borderColor: OakUiRoleToken,
+    iconBackgroundColor: OakUiRoleToken,
   ] =
     lessonSectionName === "intro"
       ? [

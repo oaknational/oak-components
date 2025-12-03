@@ -5,12 +5,12 @@ import {
   responsiveStyle,
   ResponsiveValues,
 } from "@/styles/utils/responsiveStyle";
-import { OakCombinedColorToken } from "@/styles/theme/color";
+import { OakUiRoleToken } from "@/styles/theme/color";
 
 /**
  * Color token!
  */
-type ColorToken = ResponsiveValues<OakCombinedColorToken | null>;
+type ColorToken = ResponsiveValues<OakUiRoleToken | null>;
 
 export type ColorStyleProps = {
   /**
@@ -27,12 +27,12 @@ export type ColorStyleProps = {
   $background?: ColorToken;
 };
 export const colorStyle = css<ColorStyleProps>`
-  ${responsiveStyle<ColorStyleProps, OakCombinedColorToken>(
+  ${responsiveStyle<ColorStyleProps, OakUiRoleToken>(
     "color",
     (props) => props.$color,
     parseColor,
   )}
-  ${responsiveStyle<ColorStyleProps, OakCombinedColorToken>(
+  ${responsiveStyle<ColorStyleProps, OakUiRoleToken>(
     "background",
     (props) => props.$background,
     parseColor,

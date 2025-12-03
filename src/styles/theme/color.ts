@@ -190,6 +190,7 @@ const oakUiRoleTokensConst = [
   "border-decorative6",
   "border-decorative6-stronger",
   "transparent",
+  "blackSemiTransparent",
   "code-blue",
   "code-green",
   "code-grey",

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { OakBox, OakFlex, OakIcon, OakSpan } from "@/components/atoms";
 import { OakRoundIcon } from "@/components/molecules";
-import { OakCombinedColorToken } from "@/styles";
+import { OakUiRoleToken } from "@/styles";
 
 type LessonSectionName = "intro" | "starter-quiz" | "video" | "exit-quiz";
 type BaseOakLessonReviewItemProps = {
@@ -121,9 +121,9 @@ const pickLabelForSection = (sectionName: LessonSectionName): string => {
 const pickColorsForSection = (
   sectionName: LessonSectionName,
 ): [
-  completedBackgroundColor: OakCombinedColorToken,
-  borderColor: OakCombinedColorToken,
-  iconBackgroundColor: OakCombinedColorToken,
+  completedBackgroundColor: OakUiRoleToken,
+  borderColor: OakUiRoleToken,
+  iconBackgroundColor: OakUiRoleToken,
 ] => {
   switch (sectionName) {
     case "intro":

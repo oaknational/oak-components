@@ -6,7 +6,7 @@ import {
 } from "@/components/molecules/InternalShadowRectButton";
 import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
 import { OakIcon, OakIconName } from "@/components/atoms";
-import { OakCombinedColorToken } from "@/styles";
+import { OakUiRoleToken } from "@/styles";
 
 export type OakPupilJourneySubjectButtonProps = {
   phase: "primary" | "secondary" | "non-curriculum";
@@ -48,9 +48,9 @@ export const OakPupilJourneySubjectButton = <C extends ElementType = "button">({
   subjectIconName,
   ...rest
 }: OakPupilJourneySubjectButtonProps & PolymorphicPropsWithoutRef<C>) => {
-  let defaultBackground: OakCombinedColorToken,
-    hoverBackground: OakCombinedColorToken,
-    borderColor: OakCombinedColorToken;
+  let defaultBackground: OakUiRoleToken,
+    hoverBackground: OakUiRoleToken,
+    borderColor: OakUiRoleToken;
   switch (phase) {
     case "primary":
       defaultBackground = "bg-decorative4-very-subdued";

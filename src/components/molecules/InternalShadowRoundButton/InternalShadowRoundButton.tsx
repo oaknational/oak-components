@@ -17,7 +17,7 @@ import {
   positionStyle,
 } from "@/styles/utils/positionStyle";
 import { parseColor } from "@/styles/helpers/parseColor";
-import { OakCombinedColorToken, OakDropShadowToken } from "@/styles";
+import { OakUiRoleToken, OakDropShadowToken } from "@/styles";
 import { SizeStyleProps, sizeStyle } from "@/styles/utils/sizeStyle";
 
 export type InternalShadowRoundButtonProps = Omit<
@@ -33,17 +33,17 @@ export type InternalShadowRoundButtonProps = Omit<
 > & {
   iconName?: OakIconName;
   isTrailingIcon?: boolean;
-  defaultTextColor: OakCombinedColorToken;
-  hoverTextColor: OakCombinedColorToken;
-  disabledTextColor: OakCombinedColorToken;
-  defaultIconBackground: OakCombinedColorToken;
-  hoverIconBackground: OakCombinedColorToken;
-  hoverIconColor?: OakCombinedColorToken;
-  disabledIconBackground: OakCombinedColorToken;
+  defaultTextColor: OakUiRoleToken;
+  hoverTextColor: OakUiRoleToken;
+  disabledTextColor: OakUiRoleToken;
+  defaultIconBackground: OakUiRoleToken;
+  hoverIconBackground: OakUiRoleToken;
+  hoverIconColor?: OakUiRoleToken;
+  disabledIconBackground: OakUiRoleToken;
   defaultIconColor?: OakRoundIconProps["$colorFilter"];
   disabledIconColor?: OakRoundIconProps["$colorFilter"];
-  defaultIconBorderColor?: OakCombinedColorToken;
-  disabledIconBorderColor?: OakCombinedColorToken;
+  defaultIconBorderColor?: OakUiRoleToken;
+  disabledIconBorderColor?: OakUiRoleToken;
   width?: SizeStyleProps["$width"];
   maxWidth?: SizeStyleProps["$maxWidth"];
   iconBackgroundSize: SizeStyleProps["$width"];
@@ -78,9 +78,9 @@ const StyledInternalButton = styled(InternalButton)<
 `;
 
 const StyledButtonWrapper = styled(OakFlex)<{
-  $disabledIconBackground: OakCombinedColorToken;
-  $hoverIconBackground: OakCombinedColorToken;
-  $defaultIconBackground: OakCombinedColorToken;
+  $disabledIconBackground: OakUiRoleToken;
+  $hoverIconBackground: OakUiRoleToken;
+  $defaultIconBackground: OakUiRoleToken;
   $hoverDropShadow: OakDropShadowToken | null;
 }>`
   ${(props) => css`

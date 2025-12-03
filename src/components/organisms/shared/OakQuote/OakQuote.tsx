@@ -2,11 +2,11 @@ import styled from "styled-components";
 import React from "react";
 
 import { OakFlex, OakP, OakBox, OakImage } from "@/components/atoms";
-import { OakCombinedColorToken } from "@/styles";
+import { OakUiRoleToken } from "@/styles";
 
 export type OakQuoteProps = {
   quote: string;
-  color?: OakCombinedColorToken;
+  color?: OakUiRoleToken;
   authorName?: string;
   authorTitle?: string;
   authorImageSrc?: string;

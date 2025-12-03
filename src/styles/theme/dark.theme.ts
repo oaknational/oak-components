@@ -93,6 +93,7 @@ export const oakDarkTheme: OakTheme = {
     "border-decorative6": "amber50",
     "border-decorative6-stronger": "amber30",
     transparent: "transparent",
+    blackSemiTransparent: "blackSemiTransparent",
     "code-blue": "rpf-syntax-blue",
     "code-green": "rpf-syntax-green",
     "code-grey": "rpf-syntax-grey",

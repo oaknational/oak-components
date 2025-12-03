@@ -13,7 +13,7 @@ import { OakRoundIcon } from "@/components/molecules";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
-import { OakCombinedColorToken } from "@/styles";
+import { OakUiRoleToken } from "@/styles";
 
 type LessonSectionName = "intro" | "starter-quiz" | "video" | "exit-quiz";
 
@@ -213,9 +213,9 @@ function pickIconForSection(sectionName: LessonSectionName): OakIconName {
 function pickColorsForSection(
   sectionName: LessonSectionName,
 ): [
-  notStartedBackgroundColor: OakCombinedColorToken,
-  backgroundColor: OakCombinedColorToken,
-  borderColor: OakCombinedColorToken,
+  notStartedBackgroundColor: OakUiRoleToken,
+  backgroundColor: OakUiRoleToken,
+  borderColor: OakUiRoleToken,
 ] {
   switch (sectionName) {
     case "intro":
