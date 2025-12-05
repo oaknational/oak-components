@@ -45,13 +45,13 @@ export const OakHintButton = (props: OakHintButtonProps) => {
   return (
     <StyledInternalShadowRoundButton
       iconName={isOpen && !disabled ? "lightbulb-yellow" : "lightbulb"}
-      defaultIconBackground={isOpen ? "black" : "bg-decorative5-main"}
-      hoverIconBackground={isOpen ? "black" : "bg-decorative5-main"}
+      defaultIconBackground={isOpen ? "icon-primary" : "bg-decorative5-main"}
+      hoverIconBackground={isOpen ? "icon-primary" : "bg-decorative5-main"}
       defaultTextColor={"text-primary"}
       hoverTextColor={"text-primary"}
       disabledIconBackground={"bg-btn-primary-disabled"}
       disabledTextColor={"text-disabled"}
-      disabledIconColor={"white"}
+      disabledIconColor={"icon-main"}
       onClick={props.onClick}
       isLoading={props.isLoading}
       disabled={props.disabled}

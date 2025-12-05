@@ -31,7 +31,7 @@ const generateTestItems = (count: number) => {
 
 export const Default: Story = {
   render: (args) => (
-    <OakGrid $background="pink" $width="100%" $height="100vh">
+    <OakGrid $background="bg-decorative4-main" $width="100%" $height="100vh">
       <OakGridArea $colSpan={[12, 2]}>
         <OakSideMenuNav {...args} />
       </OakGridArea>
@@ -46,7 +46,7 @@ export const Default: Story = {
 export const LongList: Story = {
   render: (args) => (
     <OakGrid
-      $background="pink"
+      $background="bg-decorative4-main"
       $width="100%"
       $maxHeight="spacing-360"
       $height="100vh"

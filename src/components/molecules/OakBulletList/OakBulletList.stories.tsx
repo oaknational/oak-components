@@ -42,7 +42,7 @@ export const WithStyling: Story = {
   ),
   args: {
     $font: "body-4",
-    $color: "grey50",
+    $color: "text-disabled",
   },
   parameters: {
     controls: {

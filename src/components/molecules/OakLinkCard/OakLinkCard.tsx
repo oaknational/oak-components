@@ -95,7 +95,7 @@ export const OakLinkCard = ({
   mainSection,
   iconName = "books",
   iconAlt = "",
-  iconColor = "black",
+  iconColor = "icon-primary",
   iconFill = "bg-decorative1-main",
   href,
   showNew = false,

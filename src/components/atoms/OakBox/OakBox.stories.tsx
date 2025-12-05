@@ -46,8 +46,8 @@ export const Color: Story = {
     </OakBox>
   ),
   args: {
-    $background: "mint",
-    $color: "black",
+    $background: "bg-decorative1-main",
+    $color: "text-primary",
     $width: "spacing-120",
     $height: "spacing-120",
     $pa: "spacing-16",
@@ -59,15 +59,19 @@ export const Color: Story = {
 
 export const Position: Story = {
   render: (args) => (
-    <OakBox $background={"grey40"} $width={"100%"} $height={"100vh"}>
+    <OakBox
+      $background={"bg-interactive-element2"}
+      $width={"100%"}
+      $height={"100vh"}
+    >
       <OakBox data-testId="box-id" {...args}>
         Use controls to change position, spacing and size attributes
       </OakBox>
     </OakBox>
   ),
   args: {
-    $background: "mint",
-    $color: "black",
+    $background: "bg-decorative1-main",
+    $color: "text-primary",
     $width: "spacing-360",
     $height: "spacing-120",
     $position: "absolute",
@@ -119,7 +123,7 @@ export const Borders: Story = {
     </OakFlex>
   ),
   args: {
-    $background: "mint",
+    $background: "bg-decorative1-main",
   },
   parameters: {
     controls: { include: [...Object.keys(borderArgTypes)] },
@@ -139,7 +143,7 @@ export const DropShadow: Story = {
     </OakBox>
   ),
   args: {
-    $background: "mint",
+    $background: "bg-decorative1-main",
   },
   parameters: {
     controls: { include: [] },
@@ -153,7 +157,7 @@ export const OpacityAndZIndex: Story = {
         $pa="spacing-24"
         $width="spacing-180"
         $height="spacing-180"
-        $background="red"
+        $background="bg-error"
         $position="absolute"
         $left="spacing-48"
         $top="spacing-48"
@@ -165,7 +169,7 @@ export const OpacityAndZIndex: Story = {
         $pa="spacing-24"
         $width="spacing-180"
         $height="spacing-180"
-        $background="blue"
+        $background="bg-decorative2-main"
         $position="absolute"
       >
         Adjust the opacity and z-index using controls
@@ -195,7 +199,7 @@ export const TransitionAndTransform: Story = {
       <HoverBox
         $pa="spacing-24"
         $width="spacing-180"
-        $background="mint"
+        $background="bg-decorative1-main"
         $transition={args.$transition}
       >
         Hover over me to change
@@ -203,7 +207,7 @@ export const TransitionAndTransform: Story = {
     );
   },
   args: {
-    $background: "red",
+    $background: "bg-error",
     $transform: "scale(1.2)",
   },
   parameters: {

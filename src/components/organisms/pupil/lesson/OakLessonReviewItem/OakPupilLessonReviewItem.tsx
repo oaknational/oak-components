@@ -52,7 +52,7 @@ export const OakLessonReviewItem = (props: OakLessonReviewItemProps) => {
       completed={completed}
       $gap="spacing-24"
       $alignItems="center"
-      $background={completed ? completedBackgroundColor : "white"}
+      $background={completed ? completedBackgroundColor : "bg-primary"}
       $ph={["spacing-16", "spacing-24"]}
       $pv="spacing-20"
       $borderRadius="border-radius-l"
@@ -127,13 +127,29 @@ const pickColorsForSection = (
 ] => {
   switch (sectionName) {
     case "intro":
-      return ["bg-decorative2-very-subdued", "border-decorative2", "aqua"];
+      return [
+        "bg-decorative2-very-subdued",
+        "border-decorative2",
+        "bg-decorative2-main",
+      ];
     case "starter-quiz":
-      return ["bg-decorative1-very-subdued", "border-decorative1", "mint"];
+      return [
+        "bg-decorative1-very-subdued",
+        "border-decorative1",
+        "bg-decorative1-main",
+      ];
     case "video":
-      return ["bg-decorative4-very-subdued", "border-decorative4", "pink"];
+      return [
+        "bg-decorative4-very-subdued",
+        "border-decorative4",
+        "bg-decorative4-main",
+      ];
     case "exit-quiz":
-      return ["bg-decorative5-very-subdued", "border-decorative5", "lemon"];
+      return [
+        "bg-decorative5-very-subdued",
+        "border-decorative5",
+        "bg-decorative5-main",
+      ];
   }
 };
 

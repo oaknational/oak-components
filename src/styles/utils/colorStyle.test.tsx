@@ -11,20 +11,20 @@ describe("colorStyle", () => {
       ${colorStyle}
     `;
     const { getByTestId } = renderWithTheme(
-      <StyledComponent data-testid="test" $color="mint" />,
+      <StyledComponent data-testid="test" $color="text-subdued" />,
     );
 
-    expect(getByTestId("test")).toHaveStyle("color: #bef2bd");
+    expect(getByTestId("test")).toHaveStyle("color: #575757");
   });
   test("should correctly handle prop 'color' as array", async () => {
     const StyledComponent = styled.div<ColorStyleProps>`
       ${colorStyle}
     `;
     const { getByTestId } = renderWithTheme(
-      <StyledComponent data-testid="test" $color={["mint"]} />,
+      <StyledComponent data-testid="test" $color={["text-subdued"]} />,
     );
 
-    expect(getByTestId("test")).toHaveStyle("color: #bef2bd");
+    expect(getByTestId("test")).toHaveStyle("color: #575757");
   });
 
   test("should correctly handle prop 'color' set to OakUiRole", async () => {
@@ -56,8 +56,8 @@ describe("colorStyle", () => {
     const { getByTestId } = renderWithTheme(
       <StyledComponent
         data-testid="test"
-        $background={"mint"}
-        $color={"black"}
+        $background={"bg-decorative1-main"}
+        $color={"text-primary"}
       />,
     );
 

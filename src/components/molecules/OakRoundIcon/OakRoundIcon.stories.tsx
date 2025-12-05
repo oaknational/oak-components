@@ -53,7 +53,7 @@ export const WithImageSrc: Story = {
 export const StyledWithImageSrc: Story = {
   render: (args) => <OakRoundIcon {...args} />,
   args: {
-    $background: "icon-inverted",
+    $background: "icon-primary",
     src: lightbulbWhiteOutlineSvg.src,
   },
   parameters: {

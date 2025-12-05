@@ -9,8 +9,8 @@ describe("InternalStyledSvg", () => {
   it("matches snapshot", () => {
     const { container } = renderWithTheme(
       <InternalStyledSvg
-        $fill="amber30"
-        $stroke="amber50"
+        $fill="bg-decorative6-very-subdued"
+        $stroke="border-decorative6"
         $strokeWidth="border-solid-m"
       >
         <path d="M0 1 2 3Z" />

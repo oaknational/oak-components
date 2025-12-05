@@ -25,7 +25,7 @@ export type OakCardWithHandDrawnBorderProps = Omit<
  */
 export const OakCardWithHandDrawnBorder = ({
   $pa = "spacing-24",
-  fill = "black",
+  fill = "bg-inverted",
   stroke,
   $width = "fit-content",
   ...props

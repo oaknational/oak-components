@@ -172,7 +172,7 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
   );
   const loader = (
     <OakBox $width={iconSize} $height={iconSize}>
-      <OakLoadingSpinner $width={iconSize} loaderColor="white" />
+      <OakLoadingSpinner $width={iconSize} loaderColor="bg-primary" />
     </OakBox>
   );
 

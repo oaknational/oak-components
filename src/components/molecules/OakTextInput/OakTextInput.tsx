@@ -149,7 +149,7 @@ export const OakTextInput = ({
   disabledColor = "text-disabled",
   readOnlyColor = "text-subdued",
   validity,
-  iconColor = "icon-inverted",
+  iconColor = "icon-primary",
   validBorderColor = "border-success",
   invalidBorderColor = "border-error",
   validIconColor = "icon-success",

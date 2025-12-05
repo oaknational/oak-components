@@ -16,11 +16,11 @@ export type OakCollapsibleContentProps = ComponentProps<typeof OakFlex> & {
 const StyledScrollBox = styled(OakBox)`
   &::-webkit-scrollbar-thumb {
     border-radius: ${parseBorderRadius("border-radius-m")};
-    background-color: ${parseColor("grey50")};
+    background-color: ${parseColor("bg-interactive-element1")};
   }
   &::-webkit-scrollbar-track {
     border-radius: ${parseBorderRadius("border-radius-m")};
-    background-color: ${parseColor("white")};
+    background-color: ${parseColor("bg-primary")};
   }
   &::-webkit-scrollbar {
     width: ${parseSpacing("spacing-12")};

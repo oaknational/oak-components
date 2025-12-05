@@ -44,7 +44,7 @@ export const OakQuizPrintableHeader = ({
       <OakFlex $flexDirection={"row"} $gap={"spacing-16"}>
         <OakHandDrawnCardWithIcon
           iconName={iconName}
-          fill={"white"}
+          fill={"bg-primary"}
           $flexGrow={0}
           iconHeight={"spacing-56"}
           iconWidth={"spacing-56"}

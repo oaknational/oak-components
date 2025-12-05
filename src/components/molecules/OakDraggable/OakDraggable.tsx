@@ -77,7 +77,7 @@ const StyledDraggable = styled(OakBox)<{ $iconColor: OakCombinedColorToken }>`
       text-decoration: underline;
 
       ${StyledOakIcon} {
-        filter: ${parseColorFilter("icon-inverted")};
+        filter: ${parseColorFilter("icon-primary")};
       }
     }
   }
@@ -98,7 +98,7 @@ const StyledDraggable = styled(OakBox)<{ $iconColor: OakCombinedColorToken }>`
     text-decoration: underline;
 
     ${StyledOakIcon} {
-      filter: ${parseColorFilter("icon-inverted")};
+      filter: ${parseColorFilter("icon-primary")};
     }
   }
 
@@ -135,7 +135,7 @@ export const OakDraggable: FC<
     {
       children,
       iconName = "move-arrows",
-      iconColor = "icon-inverted",
+      iconColor = "icon-primary",
       iconAlt = "",
       color = "text-primary",
       background = "bg-primary",

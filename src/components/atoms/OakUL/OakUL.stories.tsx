@@ -47,6 +47,6 @@ export const DefaultOakUL: Story = (args: Partial<OakULProps>) => (
 );
 
 DefaultOakUL.args = {
-  $color: "black",
+  $color: "text-primary",
   $font: "list-item-1",
 };

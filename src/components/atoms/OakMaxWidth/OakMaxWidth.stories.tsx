@@ -40,7 +40,7 @@ export const DefaultOakMaxWidth: Story = (args: Partial<OakMaxWidthProps>) => (
 );
 
 DefaultOakMaxWidth.args = {
-  $background: "mint",
-  $color: "black",
+  $background: "bg-decorative1-main",
+  $color: "text-primary",
   $pa: "spacing-16",
 };

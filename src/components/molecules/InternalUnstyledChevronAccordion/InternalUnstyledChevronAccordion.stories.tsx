@@ -38,14 +38,25 @@ const meta: Meta<typeof InternalUnstyledChevronAccordion> = {
   },
   args: {
     id: "accordion-1",
-    header: <OakBox $background={"amber30"}>Header goes here</OakBox>,
+    header: (
+      <OakBox $background={"bg-decorative6-very-subdued"}>
+        Header goes here
+      </OakBox>
+    ),
     content: (
-      <OakBox $background={"mint30"} $height={"spacing-56"}>
+      <OakBox
+        $background={"bg-decorative1-very-subdued"}
+        $height={"spacing-56"}
+      >
         Content goes here
       </OakBox>
     ),
     initialOpen: false,
-    subheader: <OakBox $background={"lemon30"}>Subheader goes here</OakBox>,
+    subheader: (
+      <OakBox $background={"bg-decorative5-very-subdued"}>
+        Subheader goes here
+      </OakBox>
+    ),
   },
   render: (args) => <InternalUnstyledChevronAccordion {...args} />,
 };
@@ -58,7 +69,7 @@ export const Default: Story = {};
 export const MultilineHeader: Story = {
   args: {
     header: (
-      <OakBox $background={"amber50"} $textAlign={"left"}>
+      <OakBox $background={"bg-decorative6-subdued"} $textAlign={"left"}>
         <OakP>Header goes here</OakP>
         <OakP>This is a multiline header</OakP>
       </OakBox>
@@ -70,7 +81,7 @@ export const MultilineHeader: Story = {
 export const InputAsHeader: Story = {
   args: {
     header: (
-      <OakBox $background={"amber50"} $textAlign={"left"}>
+      <OakBox $background={"bg-decorative6-subdued"} $textAlign={"left"}>
         <OakSmallSecondaryButtonWithDropdown primaryActionText="Click me">
           <OakSmallSecondaryButtonWithDropdown.Item>
             Action 1

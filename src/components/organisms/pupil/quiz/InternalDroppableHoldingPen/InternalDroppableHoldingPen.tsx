@@ -12,14 +12,18 @@ import { OakBox, OakFlex } from "@/components/atoms";
 import { parseColor } from "@/styles/helpers/parseColor";
 
 const StyledOakBox = styled(OakBox)`
-  background-color: ${parseColor("grey20")};
-  background-color: color-mix(in lch, ${parseColor("black")} 5%, transparent);
+  background-color: ${parseColor("bg-neutral")};
+  background-color: color-mix(
+    in lch,
+    ${parseColor("bg-inverted")} 5%,
+    transparent
+  );
 
   &[data-over="true"] {
-    background-color: ${parseColor("white")};
+    background-color: ${parseColor("bg-primary")};
     background-color: color-mix(
       in lch,
-      ${parseColor("white")} 60%,
+      ${parseColor("bg-primary")} 60%,
       transparent
     );
   }

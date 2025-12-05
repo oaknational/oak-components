@@ -52,9 +52,9 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
   } = props;
 
   const statusColorMap: Record<Status, OakCombinedColorToken> = {
-    error: "red",
-    selected: "mint110",
-    neutral: "grey40",
+    error: "border-error",
+    selected: "border-decorative1-stronger",
+    neutral: "border-neutral-lighter",
   };
 
   const header = (
@@ -74,7 +74,7 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
       <OakGrid
         $ph="spacing-32"
         $pv="spacing-24"
-        $background={"grey10"}
+        $background={"bg-neutral"}
         $borderRadius={"border-radius-m2"}
         $borderColor={"bg-neutral"}
         $ba={"border-solid-s"}

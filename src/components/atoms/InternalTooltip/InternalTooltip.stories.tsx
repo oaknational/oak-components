@@ -60,7 +60,7 @@ export const WithStyling: Story = {
   render: (args) => (
     <InternalTooltip
       {...args}
-      $background="lemon50"
+      $background="bg-decorative5-subdued"
       $ph="spacing-24"
       $pv="spacing-16"
       $color="text-primary"

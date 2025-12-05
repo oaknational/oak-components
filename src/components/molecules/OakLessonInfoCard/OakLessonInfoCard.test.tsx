@@ -1,6 +1,5 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { render } from "@testing-library/react";
 
 import { OakCardHeader, OakLessonInfoCard } from "./OakLessonInfoCard";
 
@@ -8,7 +7,7 @@ import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("OakLessonInfoCard component test", () => {
   it("renders", () => {
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithTheme(
       <OakLessonInfoCard data-testid="test">
         <OakCardHeader tag="h1" iconName="question-mark">
           Header title

@@ -53,7 +53,7 @@ const OakMediaClipStackListItemLink = styled(OakFlex)`
 `;
 
 const ImageStackShadow = styled(OakBox)`
-  box-shadow: ${parseColor("grey50")} 8px -6px;
+  box-shadow: ${parseColor("icon-disabled")} 8px -6px;
 
   margin-top: 10px;
   margin-right: 15px;
@@ -69,17 +69,17 @@ const ImageStackShadow = styled(OakBox)`
     left: 8px;
     width: 100%;
     height: 100%;
-    box-shadow: ${parseColor("grey40")} 7px -4px;
+    box-shadow: ${parseColor("border-neutral-lighter")} 7px -4px;
     border-radius: ${parseBorderRadius("border-radius-s")};
   }
 
   @media ${getMediaQuery("mobile")} {
-    box-shadow: ${parseColor("grey50")} 4px -3px;
+    box-shadow: ${parseColor("border-neutral")} 4px -3px;
 
     &::after {
       top: -3px;
       left: 4px;
-      box-shadow: ${parseColor("grey40")} 4px -3px;
+      box-shadow: ${parseColor("border-neutral-lighter")} 4px -3px;
     }
   }
 

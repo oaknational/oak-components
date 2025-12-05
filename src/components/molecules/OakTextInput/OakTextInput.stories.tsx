@@ -66,10 +66,10 @@ export const WithTrailingIcon: Story = {
 export const WithStyling: Story = {
   args: {
     value: "a test value",
-    background: "aqua",
-    color: "blue",
-    borderColor: "blue",
-    hoverBackground: "aqua110",
+    background: "bg-decorative2-main",
+    color: "text-subdued",
+    borderColor: "border-decorative2",
+    hoverBackground: "bg-decorative2-subdued",
     focusRingDropShadows: ["drop-shadow-wide-lemon"],
   },
 };

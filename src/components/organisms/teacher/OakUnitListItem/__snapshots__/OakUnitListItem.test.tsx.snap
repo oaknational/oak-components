@@ -360,13 +360,13 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   }
 
   .c3:hover .c7 {
-    background: #7c9aec;
+    background: #bdcdf5;
   }
 }
 
 @media (hover:hover) {
   .c10:hover {
-    background: #7c9aec;
+    background: #bdcdf5;
   }
 }
 

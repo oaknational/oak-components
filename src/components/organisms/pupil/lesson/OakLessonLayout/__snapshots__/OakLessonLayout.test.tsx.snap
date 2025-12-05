@@ -219,7 +219,7 @@ exports[`OakLessonLayout matches snapshot 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <mask
-            fill="white"
+            fill="bg-primary"
             id="wobbly_mask"
           >
             <path

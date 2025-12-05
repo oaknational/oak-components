@@ -46,16 +46,32 @@ type Story = StoryObj<typeof OakGrid>;
 export const Default: Story = {
   render: (args) => (
     <OakGrid {...args}>
-      <OakGridArea $background={"amber"} $colSpan={6} $pa="spacing-24">
+      <OakGridArea
+        $background={"bg-decorative6-main"}
+        $colSpan={6}
+        $pa="spacing-24"
+      >
         6 columns
       </OakGridArea>
-      <OakGridArea $background={"mint"} $colSpan={4} $pa="spacing-24">
+      <OakGridArea
+        $background={"bg-decorative1-main"}
+        $colSpan={4}
+        $pa="spacing-24"
+      >
         4 columns
       </OakGridArea>
-      <OakGridArea $background={"lemon"} $colSpan={2} $pa="spacing-24">
+      <OakGridArea
+        $background={"bg-decorative5-main"}
+        $colSpan={2}
+        $pa="spacing-24"
+      >
         2 columns
       </OakGridArea>
-      <OakGridArea $background={"teal"} $colSpan={12} $pa="spacing-24">
+      <OakGridArea
+        $background={"bg-decorative1-subdued"}
+        $colSpan={12}
+        $pa="spacing-24"
+      >
         12 columns
       </OakGridArea>
     </OakGrid>

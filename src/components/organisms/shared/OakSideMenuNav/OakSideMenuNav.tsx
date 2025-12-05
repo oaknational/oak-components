@@ -32,7 +32,7 @@ export const OakSideMenuNav = (props: OakSideMenuNavProps) => {
       <OakAnchorTarget id={anchorTargetId} />
       <OakFlex
         $flexDirection="column"
-        $background={["bg-decorative1-subdued", "white"]}
+        $background={["bg-decorative1-subdued", "bg-primary"]}
         $pa={["spacing-48", "spacing-0"]}
         $gap="spacing-16"
       >

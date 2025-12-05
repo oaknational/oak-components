@@ -59,7 +59,7 @@ export const Default: Story = {
           $flexDirection={"column"}
           $mt={"spacing-48"}
           $gap={"spacing-120"}
-          $background={"aqua30"}
+          $background={"bg-decorative2-very-subdued"}
           $pa={"spacing-16"}
         >
           <OakFlex $position={"relative"}>

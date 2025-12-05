@@ -35,7 +35,7 @@ export const Default: Story = {
   render: (args) => <InternalButton {...args}>Click Me!</InternalButton>,
   args: {
     $background: "bg-btn-primary",
-    $color: "white",
+    $color: "text-inverted",
     $ba: "border-solid-s",
     $pa: "spacing-12",
     $borderRadius: "border-radius-m",
@@ -50,7 +50,7 @@ export const LinkStyledAsButton: Story = {
     element: "a",
     href: "/",
     $background: "bg-btn-primary",
-    $color: "white",
+    $color: "text-inverted",
     $ba: "border-solid-s",
     $pa: "spacing-12",
     $borderRadius: "border-radius-m",

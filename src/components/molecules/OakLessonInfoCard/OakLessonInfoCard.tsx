@@ -46,7 +46,7 @@ export const OakLessonInfoCard = (props: OakInfoCardProps) => {
       $pa={"spacing-24"}
       $flexDirection={"column"}
       $gap={"spacing-16"}
-      $background={"white"}
+      $background={"bg-primary"}
       {...rest}
     >
       {children}

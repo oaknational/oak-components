@@ -58,7 +58,7 @@ exports[`OakCATQuestion matches snapshot 1`] = `
   padding-right: 2rem;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  background: #f9f9f9;
+  background: #f2f2f2;
   border: 0.063rem solid;
   border-color: #f2f2f2;
   border-radius: 0.5rem;

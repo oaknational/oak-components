@@ -6,6 +6,7 @@ import { generatePageNumbers } from "./utils";
 import { OakFlex, OakIcon, OakLI, OakUL } from "@/components/atoms";
 import { InternalButton } from "@/components/atoms/InternalButton";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
+import { parseColor } from "@/styles/helpers/parseColor";
 import { OakLink } from "@/components/molecules";
 import { typographyStyle } from "@/styles/utils/typographyStyle";
 
@@ -59,18 +60,20 @@ const StyledNumberButton = styled(OakLink)<{ selected: boolean }>`
   justify-content: center;
   text-decoration: none;
   ${typographyStyle}
-  color: black;
+  color: ${parseColor("text-primary")};
 
   ${(props) => css`
-    background-color: ${props.selected ? "black" : "white"};
+    background-color: ${props.selected
+      ? parseColor("icon-primary")
+      : parseColor("icon-main")};
   `};
 
   ${(props) =>
     props.selected &&
     css`
-      color: white;
+      color: ${parseColor("text-inverted")};
       &:visited {
-        color: white;
+        color: ${parseColor("text-inverted")};
       }
     `}
 
@@ -79,10 +82,10 @@ const StyledNumberButton = styled(OakLink)<{ selected: boolean }>`
     ${(props) =>
       props.selected &&
       css`
-        color: white;
+        color: ${parseColor("text-inverted")};
         @media (hover: hover) {
     &:hover:not(:disabled) {
-      color: white;
+      color: ${parseColor("text-inverted")};
     }
       `}
   }
@@ -122,7 +125,7 @@ const OakEllipsis = () => {
     <StyledEllipsis
       $color="text-primary"
       $font={"heading-7"}
-      $background="white"
+      $background="bg-primary"
       aria-label="Hidden page numbers"
       disabled
     >

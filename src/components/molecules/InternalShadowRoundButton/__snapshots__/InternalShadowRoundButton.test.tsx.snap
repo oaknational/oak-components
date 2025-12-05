@@ -18,7 +18,7 @@ exports[`InternalShadowRoundButton matches snapshot 1`] = `
   width: 2rem;
   min-width: 2rem;
   height: 2rem;
-  color: #ebfbeb;
+  color: #575757;
   background: #bef2bd;
   border-radius: 6.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
@@ -109,7 +109,7 @@ exports[`InternalShadowRoundButton matches snapshot 1`] = `
   font-family: unset;
   outline: none;
   font-family: --var(google-font),Lexend,sans-serif;
-  color: #ebfbeb;
+  color: #575757;
 }
 
 .c3:disabled {
@@ -125,15 +125,15 @@ exports[`InternalShadowRoundButton matches snapshot 1`] = `
 .c4:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  color: #fff2aa;
+  color: #ffe555;
 }
 
 .c4:active {
-  color: #ebfbeb;
+  color: #575757;
 }
 
 .c4:disabled {
-  color: #cacaca;
+  color: #808080;
 }
 
 .c2 > :first-child:focus-visible .shadow {

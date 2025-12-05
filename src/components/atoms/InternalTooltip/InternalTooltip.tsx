@@ -67,7 +67,7 @@ const StyledSvg = styled.svg<StyledSvgProps>`
  */
 export const InternalTooltip = ({
   children,
-  $background = "black",
+  $background = "bg-inverted",
   $color = "text-inverted",
   tooltipPosition = "bottom-left",
   ...props

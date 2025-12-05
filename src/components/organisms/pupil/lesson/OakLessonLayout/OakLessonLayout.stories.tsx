@@ -93,7 +93,11 @@ export const Default: Story = {
         </OakLessonBottomNav>
       }
     >
-      <OakBox $height="spacing-1280" $ba="border-solid-xl" $borderColor="black">
+      <OakBox
+        $height="spacing-1280"
+        $ba="border-solid-xl"
+        $borderColor="border-primary"
+      >
         <p>Section content</p>
       </OakBox>
     </OakLessonLayout>

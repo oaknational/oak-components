@@ -109,7 +109,7 @@ export const OakInformativeModal = ({
         {...rest}
       >
         <OakFlex
-          $background={"white"}
+          $background={"bg-primary"}
           $flexDirection={"column"}
           $height={"100%"}
         >

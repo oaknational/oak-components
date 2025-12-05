@@ -80,27 +80,27 @@ function pickSectionIcon(
     case "intro":
       return {
         iconName: "intro",
-        $background: "aqua110",
+        $background: "icon-decorative2",
       };
     case "starter-quiz":
       return {
         iconName: "quiz",
-        $background: "mint110",
+        $background: "icon-decorative1",
       };
     case "video":
       return {
         iconName: "video",
-        $background: "pink110",
+        $background: "icon-decorative4",
       };
     case "exit-quiz":
       return {
         iconName: "quiz",
-        $background: "lemon110",
+        $background: "icon-decorative5",
       };
     default:
       return {
         iconName: "intro",
-        $background: "aqua110",
+        $background: "icon-decorative2",
       };
   }
 }

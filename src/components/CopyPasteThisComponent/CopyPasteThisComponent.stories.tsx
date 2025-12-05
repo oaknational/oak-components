@@ -41,7 +41,7 @@ export const Default: Story = {
   args: {
     // Define your component's default props here
     //   $background: "bg-btn-primary",
-    //   $color: "white",
+    //   $color: "text-inverted",
     //   $ba: "border-solid-s",
     //   $pa: "spacing-12",
     //   $borderRadius: "border-radius-m",

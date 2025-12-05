@@ -146,7 +146,7 @@ export const InternalLink: InternalLinkComponent = forwardRef(
               $height="spacing-24"
               $display={"inline-block"}
             >
-              <OakLoadingSpinner $width="spacing-16" $color="icon-inverted" />
+              <OakLoadingSpinner $width="spacing-16" $color="icon-primary" />
             </OakBox>
           );
         case !!iconName:

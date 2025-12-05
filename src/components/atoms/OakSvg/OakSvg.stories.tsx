@@ -31,7 +31,7 @@ export const HeaderUnderline: Story = {
       <OakSvg {...args} />
     </OakFlex>
   ),
-  args: { $color: "black", name: "header-underline" },
+  args: { $color: "text-primary", name: "header-underline" },
   parameters: {
     controls: {
       include: ["name", "$width", "$height", ...Object.keys(colorArgTypes)],

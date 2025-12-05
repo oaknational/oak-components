@@ -18,7 +18,7 @@ const LeftScrollBox = styled(OakBox)`
   scrollbar-color: ${() => parseColor("bg-decorative2-main")} #fff;
 
   a{
-    color: ${() => parseColor("navy")};  
+    color: ${() => parseColor("icon-link-active")};  
     text-decoration: underline;
   }
 

@@ -27,7 +27,7 @@ describe("RadioGroup", () => {
           label="Option 1"
           $labelGap="spacing-24"
           $font="body-1-bold"
-          $color="black"
+          $color="text-primary"
           data-testid={"radio-1"}
         />
         <OakRadioButton
@@ -36,7 +36,7 @@ describe("RadioGroup", () => {
           label="Option 2"
           $labelGap="spacing-24"
           $font="body-1-bold"
-          $color="black"
+          $color="text-primary"
         />
         <OakRadioButton
           value="3"
@@ -44,7 +44,7 @@ describe("RadioGroup", () => {
           label="Option 3"
           $labelGap="spacing-24"
           $font="body-1-bold"
-          $color="black"
+          $color="text-primary"
         />
       </OakRadioGroup>,
     );
@@ -59,7 +59,7 @@ describe("RadioGroup", () => {
           label="Option 1"
           $labelGap="spacing-24"
           $font="body-1-bold"
-          $color="black"
+          $color="text-primary"
           data-testid={"radio-1"}
         />
         <OakRadioButton
@@ -68,7 +68,7 @@ describe("RadioGroup", () => {
           label="Option 2"
           $labelGap="spacing-24"
           $font="body-1-bold"
-          $color="black"
+          $color="text-primary"
         />
         <OakRadioButton
           value="3"
@@ -76,7 +76,7 @@ describe("RadioGroup", () => {
           label="Option 3"
           $labelGap="spacing-24"
           $font="body-1-bold"
-          $color="black"
+          $color="text-primary"
         />
       </OakRadioGroup>,
     );

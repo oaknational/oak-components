@@ -12,7 +12,7 @@ import {
   OakIconName,
   OakIconProps,
 } from "@/components/atoms";
-import { OakColorToken } from "@/styles";
+import { OakCombinedColorToken } from "@/styles";
 import { OakColorFilterToken } from "@/styles/theme/color";
 import { PaddingStyleProps } from "@/styles/utils/spacingStyle";
 import { FlexStyleProps } from "@/styles/utils/flexStyle";
@@ -79,8 +79,8 @@ export type BannerTypes = {
   [key in OakInlineBannerTypes]: {
     icon: OakIconName;
     iconColorFilter: OakColorFilterToken;
-    backgroundColour: OakColorToken;
-    borderColour: OakColorToken;
+    backgroundColour: OakCombinedColorToken;
+    borderColour: OakCombinedColorToken;
   };
 };
 
@@ -88,38 +88,38 @@ export const bannerTypes: BannerTypes = {
   info: {
     icon: "info",
     iconColorFilter: "black",
-    backgroundColour: "lavender30",
-    borderColour: "lavender",
+    backgroundColour: "bg-decorative3-very-subdued",
+    borderColour: "border-decorative3",
   },
   neutral: {
     icon: "info",
     iconColorFilter: "black",
-    backgroundColour: "grey20",
-    borderColour: "grey40",
+    backgroundColour: "bg-neutral",
+    borderColour: "border-neutral-lighter",
   },
   success: {
     icon: "success",
     iconColorFilter: "black",
-    backgroundColour: "mint30",
-    borderColour: "mint110",
+    backgroundColour: "bg-decorative1-very-subdued",
+    borderColour: "border-decorative1-stronger",
   },
   alert: {
     icon: "bell",
     iconColorFilter: "black",
-    backgroundColour: "lemon30",
-    borderColour: "lemon50",
+    backgroundColour: "bg-decorative5-very-subdued",
+    borderColour: "border-decorative5-stronger",
   },
   warning: {
     icon: "warning",
     iconColorFilter: "amber",
-    backgroundColour: "amber30",
-    borderColour: "amber50",
+    backgroundColour: "bg-decorative6-very-subdued",
+    borderColour: "border-decorative6",
   },
   error: {
     icon: "error",
     iconColorFilter: "red",
-    backgroundColour: "red30",
-    borderColour: "red",
+    backgroundColour: "bg-incorrect",
+    borderColour: "border-error",
   },
 };
 
@@ -245,12 +245,12 @@ export const OakInlineBanner = ({
             <InternalShadowRoundButton
               aria-label={"Dismiss banner"}
               defaultIconBackground="transparent"
-              defaultIconColor="black"
+              defaultIconColor="icon-primary"
               defaultTextColor="transparent"
               hoverTextColor="transparent"
               disabledTextColor="transparent"
-              hoverIconBackground="black"
-              hoverIconColor="white"
+              hoverIconBackground="icon-primary"
+              hoverIconColor="icon-main"
               disabledIconBackground="transparent"
               iconBackgroundSize="spacing-24"
               iconSize="spacing-24"

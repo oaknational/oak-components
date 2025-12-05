@@ -34,7 +34,7 @@ const Slots = ({
       <OakFlex $flexDirection={"column"} $gap={"spacing-24"}>
         <OakFlex $flexDirection={"column"} $gap={"spacing-32"}>
           {titleSlot}
-          <OakHandDrawnHR hrColor={"white"} $height={"spacing-4"} />
+          <OakHandDrawnHR hrColor={"bg-primary"} $height={"spacing-4"} />
         </OakFlex>
         <OakFlex $flexDirection={"column"} $gap={"spacing-32"}>
           {filterSlot}
