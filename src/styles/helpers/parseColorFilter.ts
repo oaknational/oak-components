@@ -4,16 +4,16 @@ import {
   oakColorFilterTokens,
   oakUiRoleTokens,
 } from "@/styles/theme/color";
-import { OakCombinedColorToken } from "@/styles/theme";
+import { OakColorToken } from "@/styles/theme";
 import { PropsWithTheme } from "@/styles/theme/theme";
 
 function parseColorFilter(
-  value?: OakCombinedColorToken | null,
+  value?: OakColorToken | OakUiRoleToken | null,
 ): (props: PropsWithTheme) => string;
 function parseColorFilter(
-  value?: OakCombinedColorToken | null,
+  value?: OakColorToken | OakUiRoleToken | null,
 ): ((props: PropsWithTheme) => string) | undefined;
-function parseColorFilter(value?: OakCombinedColorToken | null) {
+function parseColorFilter(value?: OakColorToken | OakUiRoleToken| null) {
   if (value === undefined || value === null) {
     return undefined;
   }

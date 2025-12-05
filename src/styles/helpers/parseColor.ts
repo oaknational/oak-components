@@ -1,6 +1,5 @@
 import {
   OakColorToken,
-  OakCombinedColorToken,
   OakUiRoleToken,
   oakColorTokens,
   oakUiRoleTokens,
@@ -14,12 +13,12 @@ import { PropsWithTheme } from "@/styles/theme/theme";
  */
 function parseColor(): undefined;
 function parseColor(
-  value?: OakCombinedColorToken | null,
+  value?: OakColorToken | OakUiRoleToken | null,
 ): (props: PropsWithTheme) => string;
 function parseColor(
-  value?: OakCombinedColorToken | null,
+  value?: OakColorToken | OakUiRoleToken | null,
 ): ((props: PropsWithTheme) => string) | undefined;
-function parseColor(value?: OakCombinedColorToken | null) {
+function parseColor(value?: OakColorToken | OakUiRoleToken | null) {
   if (value === undefined || value === null) {
     return undefined;
   }

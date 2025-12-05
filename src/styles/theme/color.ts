@@ -205,5 +205,3 @@ export type UiRoleMap = Record<
   OakUiRoleToken,
   OakColorToken | null | undefined
 >;
-
-export type OakCombinedColorToken = OakColorToken | OakUiRoleToken;
