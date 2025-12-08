@@ -145,7 +145,6 @@ const oakUiRoleTokensConst = [
   "bg-incorrect",
   "bg-success",
   "bg-error",
-  "icon-main", // to be deprecated
   "icon-inverted",
   "icon-disabled",
   "icon-brand",

@@ -48,8 +48,7 @@ export const oakDefaultTheme: OakTheme = {
     "bg-incorrect": "red30",
     "bg-success": "oakGreen",
     "bg-error": "red",
-    "icon-main": "white", // to be deprecated, icon-inverted will be used instead soon
-    "icon-inverted": "black", // this will be updated to white once all current occurrences of icon-inverted are replaced with icon-primary
+    "icon-inverted": "white",
     "icon-disabled": "grey50",
     "icon-brand": "oakGreen",
     "icon-success": "oakGreen",

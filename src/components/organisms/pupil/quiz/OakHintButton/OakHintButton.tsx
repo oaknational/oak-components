@@ -51,7 +51,7 @@ export const OakHintButton = (props: OakHintButtonProps) => {
       hoverTextColor={"text-primary"}
       disabledIconBackground={"bg-btn-primary-disabled"}
       disabledTextColor={"text-disabled"}
-      disabledIconColor={"icon-main"}
+      disabledIconColor={"icon-inverted"}
       onClick={props.onClick}
       isLoading={props.isLoading}
       disabled={props.disabled}

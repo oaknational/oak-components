@@ -13,7 +13,7 @@ function parseColorFilter(
 function parseColorFilter(
   value?: OakColorToken | OakUiRoleToken | null,
 ): ((props: PropsWithTheme) => string) | undefined;
-function parseColorFilter(value?: OakColorToken | OakUiRoleToken| null) {
+function parseColorFilter(value?: OakColorToken | OakUiRoleToken | null) {
   if (value === undefined || value === null) {
     return undefined;
   }

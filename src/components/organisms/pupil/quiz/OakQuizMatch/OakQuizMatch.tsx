@@ -88,7 +88,7 @@ const ConnectedDraggable = ({
       isDisabled={isOver}
       color="text-inverted"
       background="bg-btn-primary"
-      iconColor="icon-main"
+      iconColor="icon-inverted"
       {...attributes}
       {...listeners}
       role="option"

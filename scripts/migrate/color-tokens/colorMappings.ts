@@ -67,7 +67,7 @@ export const BORDER_COLOR_MAPPINGS: Record<string, string> = {
 
 export const ICON_COLOR_MAPPINGS: Record<string, string> = {
   oakGreen: "icon-brand", // "icon-success"
-  white: "icon-main",
+  white: "icon-inverted",
   black: "icon-primary",
   grey50: "icon-disabled",
   red: "icon-error",
