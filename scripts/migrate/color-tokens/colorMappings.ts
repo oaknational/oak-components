@@ -16,8 +16,8 @@ export const BG_COLOR_MAPPINGS: Record<string, string> = {
   white: "bg-primary", // "bg-btn-secondary"
   grey20: "bg-neutral", // "bg-btn-secondary-hover"
   grey30: "bg-neutral-stronger", // "bg-btn-secondary-disabled"
-  black: "bg-inverted", // "bg-btn-primary", "bg-icon",
-  grey60: "bg-btn-primary-hover", // "bg-icon-hover"
+  black: "bg-inverted", // "bg-btn-primary",
+  grey60: "bg-btn-primary-hover",
   red: "bg-error",
   grey50: "bg-interactive-element1", // "bg-btn-primary-disabled",
   mint: "bg-decorative1-main",

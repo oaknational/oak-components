@@ -110,7 +110,6 @@ const oakUiRoleTokensConst = [
   "text-link-pressed",
   "text-inverted",
   "text-success",
-  "text-warning", // to be deprecated, we don't use warning text anymore
   "text-promo",
   "bg-primary",
   "bg-inverted",
@@ -122,8 +121,6 @@ const oakUiRoleTokensConst = [
   "bg-btn-secondary",
   "bg-btn-secondary-hover",
   "bg-btn-secondary-disabled",
-  "bg-icon", // to be deprecated, use icon-primary instead
-  "bg-icon-hover", // to be deprecated, use icon-subdued instead
   "bg-decorative1-main",
   "bg-decorative1-subdued",
   "bg-decorative1-very-subdued",
