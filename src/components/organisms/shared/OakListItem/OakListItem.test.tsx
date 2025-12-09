@@ -116,7 +116,7 @@ describe("OakListItem", () => {
     // Assert
     indexBoxes.forEach((indexBox) => {
       if (getComputedStyle(indexBox!).display !== "none") {
-        expect(indexBox).toHaveStyleRule("background", "#e5d1e0"); // pink50
+        expect(indexBox).toHaveStyleRule("background", "#efdbea"); // pink50
       }
     });
   });

@@ -349,7 +349,7 @@ exports[`OakListItem matches snapshot 1`] = `
 
 @media (hover:hover) {
   .c5:hover {
-    background: #e5d1e0;
+    background: #efdbea;
   }
 
   .c5:hover .c9 {
