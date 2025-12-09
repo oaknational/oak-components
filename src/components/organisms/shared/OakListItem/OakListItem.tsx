@@ -12,7 +12,7 @@ import {
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { OakColorToken } from "@/styles";
-import { OakCheckBox } from "@/components";
+import { OakCheckBox } from "@/components/molecules/OakCheckBox";
 
 const FlexWithFocus = styled(OakFlex)`
   animation-timing-function: ease-out;
