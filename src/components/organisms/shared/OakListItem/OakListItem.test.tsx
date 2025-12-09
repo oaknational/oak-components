@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createRef } from "react";
 import "@testing-library/jest-dom";
 
 import { OakListItem } from "./OakListItem";
@@ -101,7 +101,7 @@ describe("OakListItem", () => {
 
   it("forwards the ref to the first item", () => {
     // Arrange
-    const ref = React.createRef<HTMLDivElement>();
+    const ref = createRef<HTMLDivElement>();
     renderWithTheme(<OakListItem {...defaultProps} firstItemRef={ref} />);
     // Assert
     expect(ref.current).toBeInTheDocument();
