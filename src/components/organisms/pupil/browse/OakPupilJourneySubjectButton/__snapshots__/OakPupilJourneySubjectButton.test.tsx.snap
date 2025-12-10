@@ -32,6 +32,11 @@ exports[`OakPupilJourneySubjectButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
+.c9 {
+  position: relative;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
 .c8 {
   object-fit: contain;
 }
@@ -55,7 +60,7 @@ exports[`OakPupilJourneySubjectButton matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c9 {
+.c10 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -109,16 +114,28 @@ exports[`OakPupilJourneySubjectButton matches snapshot 1`] = `
   border-color: #cf9cc3;
 }
 
+.c4:hover [data-state="selected"] {
+  display: none;
+}
+
 .c4:active {
   background: #f5e9f2;
   border-color: #cf9cc3;
   color: #222222;
 }
 
+.c4:active [data-state="selected"] {
+  display: none;
+}
+
 .c4:disabled {
   background: #e4e4e4;
   border-color: #cacaca;
   color: #575757;
+}
+
+.c4:disabled [data-state="selected"] {
+  display: none;
 }
 
 .c1 .grey-shadow:has(+ * + .internal-button:focus-visible) {
@@ -177,11 +194,15 @@ exports[`OakPupilJourneySubjectButton matches snapshot 1`] = `
             style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
           />
         </div>
-        <span
+        <div
           class="c9"
         >
-          English
-        </span>
+          <span
+            class="c10"
+          >
+            English
+          </span>
+        </div>
       </div>
     </button>
   </div>

@@ -150,16 +150,28 @@ exports[`OakSmallSecondaryButtonWithDropdown matches snapshot 1`] = `
   border-color: #222222;
 }
 
+.c9:hover [data-state="selected"] {
+  display: none;
+}
+
 .c9:active {
   background: #ffffff;
   border-color: #222222;
   color: #222222;
 }
 
+.c9:active [data-state="selected"] {
+  display: none;
+}
+
 .c9:disabled {
   background: #e4e4e4;
   border-color: #808080;
   color: #808080;
+}
+
+.c9:disabled [data-state="selected"] {
+  display: none;
 }
 
 .c6 .grey-shadow:has(+ * + .internal-button:focus-visible) {
@@ -215,15 +227,19 @@ exports[`OakSmallSecondaryButtonWithDropdown matches snapshot 1`] = `
             <div
               class="c1 c10"
             >
-              <span
-                class="c11"
+              <div
+                class="c0"
               >
-                <div
-                  class="c1 c12"
+                <span
+                  class="c11"
                 >
-                  Menu Trigger
-                </div>
-              </span>
+                  <div
+                    class="c1 c12"
+                  >
+                    Menu Trigger
+                  </div>
+                </span>
+              </div>
               <div
                 class="c13"
               >

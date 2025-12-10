@@ -27,7 +27,12 @@ exports[`OakVideoTranscript matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c10 {
+.c9 {
+  position: relative;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c11 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -36,17 +41,17 @@ exports[`OakVideoTranscript matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c12 {
+.c13 {
   display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c13 {
+.c14 {
   display: none;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c14 {
+.c15 {
   max-height: 60rem;
   padding: 0.75rem;
   padding-left: 1rem;
@@ -67,7 +72,7 @@ exports[`OakVideoTranscript matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c16 {
+.c17 {
   overflow: auto;
   width: 100%;
   max-height: 100%;
@@ -76,7 +81,7 @@ exports[`OakVideoTranscript matches snapshot 1`] = `
   overflow: auto;
 }
 
-.c11 {
+.c12 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
@@ -115,14 +120,14 @@ exports[`OakVideoTranscript matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c15 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c9 {
+.c10 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 700;
   font-size: 0.875rem;
@@ -161,17 +166,17 @@ exports[`OakVideoTranscript matches snapshot 1`] = `
   cursor: default;
 }
 
-.c17::-webkit-scrollbar-thumb {
+.c18::-webkit-scrollbar-thumb {
   border-radius: 0.375rem;
   background-color: #808080;
 }
 
-.c17::-webkit-scrollbar-track {
+.c18::-webkit-scrollbar-track {
   border-radius: 0.375rem;
   background-color: #ffffff;
 }
 
-.c17::-webkit-scrollbar {
+.c18::-webkit-scrollbar {
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 0.375rem;
@@ -192,16 +197,28 @@ exports[`OakVideoTranscript matches snapshot 1`] = `
   border-color: #222222;
 }
 
+.c7:hover [data-state="selected"] {
+  display: none;
+}
+
 .c7:active {
   background: #ffffff;
   border-color: #222222;
   color: #222222;
 }
 
+.c7:active [data-state="selected"] {
+  display: none;
+}
+
 .c7:disabled {
   background: #e4e4e4;
   border-color: #808080;
   color: #808080;
+}
+
+.c7:disabled [data-state="selected"] {
+  display: none;
 }
 
 .c4 .grey-shadow:has(+ * + .internal-button:focus-visible) {
@@ -236,13 +253,13 @@ exports[`OakVideoTranscript matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c12 {
+  .c13 {
     display: none;
   }
 }
 
 @media (min-width:750px) {
-  .c14 {
+  .c15 {
     margin-top: 2rem;
   }
 }
@@ -277,17 +294,21 @@ exports[`OakVideoTranscript matches snapshot 1`] = `
           <div
             class="c0 c8"
           >
-            <span
+            <div
               class="c9"
             >
-              Show transcript
-            </span>
+              <span
+                class="c10"
+              >
+                Show transcript
+              </span>
+            </div>
             <div
-              class="c10"
+              class="c11"
             >
               <img
                 alt=""
-                class="c11"
+                class="c12"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"
@@ -300,7 +321,7 @@ exports[`OakVideoTranscript matches snapshot 1`] = `
       </div>
     </div>
     <div
-      class="c12"
+      class="c13"
     >
       <div
         class="c3 c4"
@@ -319,11 +340,15 @@ exports[`OakVideoTranscript matches snapshot 1`] = `
           <div
             class="c0 c8"
           >
-            <span
+            <div
               class="c9"
             >
-              Show transcript
-            </span>
+              <span
+                class="c10"
+              >
+                Show transcript
+              </span>
+            </div>
           </div>
         </button>
       </div>
@@ -344,15 +369,15 @@ exports[`OakVideoTranscript matches snapshot 1`] = `
     </div>
   </div>
   <div
-    class="c13"
+    class="c14"
     id="transcript-element"
   >
     <div
       aria-live="polite"
-      class="c14 c15"
+      class="c15 c16"
     >
       <div
-        class="c16 c17"
+        class="c17 c18"
       >
         Transcript goes here
       </div>

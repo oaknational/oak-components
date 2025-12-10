@@ -22,6 +22,11 @@ exports[`OakPrimaryNavItem matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
+.c7 {
+  position: relative;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
 .c6 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -41,7 +46,7 @@ exports[`OakPrimaryNavItem matches snapshot 1`] = `
   gap: 0.5rem;
 }
 
-.c7 {
+.c8 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -95,16 +100,28 @@ exports[`OakPrimaryNavItem matches snapshot 1`] = `
   border-color: #ffffff;
 }
 
+.c4:hover [data-state="selected"] {
+  display: none;
+}
+
 .c4:active {
   background: #ffffff;
   border-color: #ffffff;
   color: #222222;
 }
 
+.c4:active [data-state="selected"] {
+  display: none;
+}
+
 .c4:disabled {
   background: #ffffff;
   border-color: #ffffff;
   color: #808080;
+}
+
+.c4:disabled [data-state="selected"] {
+  display: none;
 }
 
 .c1 .grey-shadow:has(+ * + .internal-button:focus-visible) {
@@ -149,11 +166,15 @@ exports[`OakPrimaryNavItem matches snapshot 1`] = `
       <div
         class="c5 c6"
       >
-        <span
+        <div
           class="c7"
         >
-          Base nav item
-        </span>
+          <span
+            class="c8"
+          >
+            Base nav item
+          </span>
+        </div>
       </div>
     </a>
   </div>

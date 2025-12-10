@@ -31,6 +31,11 @@ exports[`InternalShadowRectButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
+.c9 {
+  position: relative;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
 .c8 {
   -webkit-filter: brightness(0) saturate(100%) invert(85%) sepia(23%) saturate(120%) hue-rotate(71deg) brightness(112%) contrast(97%);
   filter: brightness(0) saturate(100%) invert(85%) sepia(23%) saturate(120%) hue-rotate(71deg) brightness(112%) contrast(97%);
@@ -56,7 +61,7 @@ exports[`InternalShadowRectButton matches snapshot 1`] = `
   gap: 0.5rem;
 }
 
-.c9 {
+.c10 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -110,16 +115,28 @@ exports[`InternalShadowRectButton matches snapshot 1`] = `
   border-color: #fff7cc;
 }
 
+.c4:hover [data-state="selected"] {
+  display: none;
+}
+
 .c4:active {
   background: #bef2bd;
   border-color: #dff9de;
   color: #ebfbeb;
 }
 
+.c4:active [data-state="selected"] {
+  display: none;
+}
+
 .c4:disabled {
   background: #f2f2f2;
   border-color: #e4e4e4;
   color: #cacaca;
+}
+
+.c4:disabled [data-state="selected"] {
+  display: none;
 }
 
 .c1 .grey-shadow:has(+ * + .internal-button:focus-visible) {
@@ -176,11 +193,15 @@ exports[`InternalShadowRectButton matches snapshot 1`] = `
             style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
           />
         </div>
-        <span
+        <div
           class="c9"
         >
-          Click Me
-        </span>
+          <span
+            class="c10"
+          >
+            Click Me
+          </span>
+        </div>
       </div>
     </button>
   </div>

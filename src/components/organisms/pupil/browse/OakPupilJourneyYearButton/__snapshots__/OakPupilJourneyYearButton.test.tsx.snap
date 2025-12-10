@@ -22,6 +22,11 @@ exports[`OakPupilJourneyYearButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
+.c7 {
+  position: relative;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
 .c6 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -41,7 +46,7 @@ exports[`OakPupilJourneyYearButton matches snapshot 1`] = `
   gap: 0.5rem;
 }
 
-.c7 {
+.c8 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1.25rem;
@@ -95,16 +100,28 @@ exports[`OakPupilJourneyYearButton matches snapshot 1`] = `
   border-color: #cf9cc3;
 }
 
+.c4:hover [data-state="selected"] {
+  display: none;
+}
+
 .c4:active {
   background: #f5e9f2;
   border-color: #cf9cc3;
   color: #222222;
 }
 
+.c4:active [data-state="selected"] {
+  display: none;
+}
+
 .c4:disabled {
   background: #e4e4e4;
   border-color: #cacaca;
   color: #575757;
+}
+
+.c4:disabled [data-state="selected"] {
+  display: none;
 }
 
 .c1 .grey-shadow:has(+ * + .internal-button:focus-visible) {
@@ -148,11 +165,15 @@ exports[`OakPupilJourneyYearButton matches snapshot 1`] = `
       <div
         class="c5 c6"
       >
-        <span
+        <div
           class="c7"
         >
-          Year 1
-        </span>
+          <span
+            class="c8"
+          >
+            Year 1
+          </span>
+        </div>
       </div>
     </button>
   </div>

@@ -22,6 +22,11 @@ exports[`OakSmallSecondaryToggleButton component matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
+.c7 {
+  position: relative;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
 .c6 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -41,7 +46,7 @@ exports[`OakSmallSecondaryToggleButton component matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c7 {
+.c8 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 700;
   font-size: 0.875rem;
@@ -95,16 +100,28 @@ exports[`OakSmallSecondaryToggleButton component matches snapshot 1`] = `
   border-color: #575757;
 }
 
+.c4:hover [data-state="selected"] {
+  display: none;
+}
+
 .c4:active {
   background: #222222;
   border-color: #222222;
   color: #ffffff;
 }
 
+.c4:active [data-state="selected"] {
+  display: none;
+}
+
 .c4:disabled {
   background: #808080;
   border-color: #808080;
   color: #ffffff;
+}
+
+.c4:disabled [data-state="selected"] {
+  display: none;
 }
 
 .c1 .grey-shadow:has(+ * + .internal-button:focus-visible) {
@@ -149,9 +166,13 @@ exports[`OakSmallSecondaryToggleButton component matches snapshot 1`] = `
       <div
         class="c5 c6"
       >
-        <span
+        <div
           class="c7"
-        />
+        >
+          <span
+            class="c8"
+          />
+        </div>
       </div>
     </button>
   </div>

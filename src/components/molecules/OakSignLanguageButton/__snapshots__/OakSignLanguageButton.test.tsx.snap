@@ -27,7 +27,12 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c9 {
+.c8 {
+  position: relative;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c10 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -36,12 +41,12 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c11 {
+.c12 {
   display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c10 {
+.c11 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
@@ -66,7 +71,7 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c8 {
+.c9 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 700;
   font-size: 0.875rem;
@@ -120,16 +125,28 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
   border-color: #222222;
 }
 
+.c5:hover [data-state="selected"] {
+  display: none;
+}
+
 .c5:active {
   background: #ffffff;
   border-color: #222222;
   color: #222222;
 }
 
+.c5:active [data-state="selected"] {
+  display: none;
+}
+
 .c5:disabled {
   background: #e4e4e4;
   border-color: #808080;
   color: #808080;
+}
+
+.c5:disabled [data-state="selected"] {
+  display: none;
 }
 
 .c2 .grey-shadow:has(+ * + .internal-button:focus-visible) {
@@ -164,7 +181,7 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c11 {
+  .c12 {
     display: none;
   }
 }
@@ -189,17 +206,21 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
         <div
           class="c6 c7"
         >
-          <span
+          <div
             class="c8"
           >
-            Show sign language
-          </span>
+            <span
+              class="c9"
+            >
+              Show sign language
+            </span>
+          </div>
           <div
-            class="c9"
+            class="c10"
           >
             <img
               alt=""
-              class="c10"
+              class="c11"
               data-nimg="fill"
               decoding="async"
               loading="lazy"
@@ -212,7 +233,7 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
     </div>
   </div>
   <div
-    class="c11"
+    class="c12"
   >
     <div
       class="c1 c2"
@@ -229,11 +250,15 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
         <div
           class="c6 c7"
         >
-          <span
+          <div
             class="c8"
           >
-            Show sign language
-          </span>
+            <span
+              class="c9"
+            >
+              Show sign language
+            </span>
+          </div>
         </div>
       </button>
     </div>
