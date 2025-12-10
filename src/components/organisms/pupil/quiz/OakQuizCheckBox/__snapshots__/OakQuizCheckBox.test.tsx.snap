@@ -230,6 +230,7 @@ input:checked + .c12 {
             class="c10 c11"
             id="checkbox-1"
             name="checkbox-1"
+            theme="[object Object]"
             type="checkbox"
             value="Option 1"
           />

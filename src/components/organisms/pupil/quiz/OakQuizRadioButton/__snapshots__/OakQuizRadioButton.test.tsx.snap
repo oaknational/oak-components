@@ -217,6 +217,7 @@ exports[`OakQuizRadioButton matches snapshot 1`] = `
               class="c10 c11"
               id="checkbox-1"
               name="quiz-radio-group"
+              theme="[object Object]"
               type="radio"
               value="Option 1"
             />

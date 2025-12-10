@@ -33,6 +33,7 @@ exports[`InternalCheckBox matches snapshot 1`] = `
     class="c0"
     id="checkbox-1"
     name="checkbox-1"
+    theme="[object Object]"
     type="checkbox"
     value="Option 1"
   />

@@ -308,6 +308,7 @@ input:checked + .c21 {
               class="c17 c18 c19 c20"
               id="checkbox-1"
               name="default"
+              theme="[object Object]"
               type="checkbox"
               value="Option 1"
             />
@@ -639,6 +640,7 @@ input:checked + .c21 {
               class="c17 c18 c19 c20"
               id="checkbox-1"
               name="default"
+              theme="[object Object]"
               type="checkbox"
               value="Option 1"
             />

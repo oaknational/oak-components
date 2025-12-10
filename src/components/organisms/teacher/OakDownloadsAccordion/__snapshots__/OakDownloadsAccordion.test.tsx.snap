@@ -499,6 +499,7 @@ input:checked + .c13 {
                 class="c9 c10 c11 c12"
                 id="select-all"
                 name="select-all"
+                theme="[object Object]"
                 type="checkbox"
                 value=""
               />
@@ -643,6 +644,7 @@ input:checked + .c13 {
                       class="c9 c10 c11 c12"
                       id="lesson-plan"
                       name="default"
+                      theme="[object Object]"
                       type="checkbox"
                       value="lesson-plan"
                     />
@@ -727,6 +729,7 @@ input:checked + .c13 {
                       class="c9 c10 c11 c12"
                       id="presentation"
                       name="default"
+                      theme="[object Object]"
                       type="checkbox"
                       value="presentation"
                     />

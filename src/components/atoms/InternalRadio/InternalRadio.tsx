@@ -124,7 +124,19 @@ type HoverBaseRadioProps = {
  *
  *
  */
-export const InternalRadio = styled(BaseRadio)<StyledBaseRadioProps>`
+export const internalRadioDefaults: Partial<StyledBaseRadioProps> = {
+  $borderRadius: "border-radius-xs",
+  $ba: "border-solid-m",
+  $borderColor: "text-primary",
+  $checkedBackground: "text-primary",
+};
+
+export const InternalRadio = styled(BaseRadio).attrs<StyledBaseRadioProps>(
+  (props) => ({
+    ...internalRadioDefaults,
+    ...props,
+  }),
+)<StyledBaseRadioProps>`
   /* removing default appearance */
   -webkit-appearance: none;
   appearance: none;
@@ -156,16 +168,16 @@ export const InternalRadio = styled(BaseRadio)<StyledBaseRadioProps>`
   }
 `;
 
-InternalRadio.defaultProps = {
-  $borderRadius: "border-radius-xs",
-  $ba: "border-solid-m",
-  $borderColor: "text-primary",
-  $checkedBackground: "text-primary",
+export const internalRadioHoverDefaults: Partial<HoverBaseRadioProps> = {
+  $hoverBorderRadius: "border-radius-xs",
 };
 
-export const InternalRadioHover = styled(InternalRadio)<
+export const InternalRadioHover = styled(InternalRadio).attrs<
   StyledBaseRadioProps & HoverBaseRadioProps
->`
+>((props) => ({
+  ...internalRadioHoverDefaults,
+  ...props,
+}))<StyledBaseRadioProps & HoverBaseRadioProps>`
   /* @media wrapper is required to prevent hover effect on iOS Safari */
 
   @media (hover: hover) {
@@ -182,10 +194,6 @@ export const InternalRadioHover = styled(InternalRadio)<
     }
   }
 `;
-
-InternalRadioHover.defaultProps = {
-  $hoverBorderRadius: "border-radius-xs",
-};
 
 const focusStyle = css`
   &:focus-visible {

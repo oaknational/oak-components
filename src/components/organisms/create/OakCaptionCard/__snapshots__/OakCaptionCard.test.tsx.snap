@@ -433,6 +433,7 @@ input:checked + .c12 {
             data-testid="checkbox"
             id="CAP-TEST-01234"
             name="CAP-TEST-01234"
+            theme="[object Object]"
             type="checkbox"
             value="Caption ID: CAP-TEST-01234"
           />

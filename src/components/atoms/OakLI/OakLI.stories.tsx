@@ -1,11 +1,12 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakLI } from "./OakLI";
+import { OakLI, oakLIDefaults } from "./OakLI";
 
 import { OakUL, OakULProps } from "@/components/atoms/OakUL";
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
+import { buildArgTypes } from "@/storybook-helpers/buildArgTypes";
 
 /**
  *
@@ -17,10 +18,7 @@ const meta: Meta<typeof OakUL> = {
   component: OakLI,
   tags: ["autodocs"],
   title: "components/atoms/OakLI",
-  argTypes: {
-    ...colorArgTypes,
-    ...spacingArgTypes,
-  },
+  argTypes: buildArgTypes([colorArgTypes, spacingArgTypes], oakLIDefaults),
   parameters: {
     controls: {
       include: [],

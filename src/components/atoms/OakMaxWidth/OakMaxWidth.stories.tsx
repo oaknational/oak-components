@@ -1,11 +1,16 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakMaxWidth, OakMaxWidthProps } from "./OakMaxWidth";
+import {
+  OakMaxWidth,
+  OakMaxWidthProps,
+  oakMaxWidthDefaults,
+} from "./OakMaxWidth";
 
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
 import { flexArgTypes } from "@/storybook-helpers/flexStyleHelpers";
+import { buildArgTypes } from "@/storybook-helpers/buildArgTypes";
 /**
  *
  * OakMaxWidth is a OakFlex with default max-width and paddings set it also exposes flexbox related props.
@@ -17,11 +22,10 @@ const meta: Meta<typeof OakMaxWidth> = {
   component: OakMaxWidth,
   tags: ["autodocs"],
   title: "components/atoms/OakMaxWidth",
-  argTypes: {
-    ...flexArgTypes,
-    ...colorArgTypes,
-    ...spacingArgTypes,
-  },
+  argTypes: buildArgTypes(
+    [flexArgTypes, colorArgTypes, spacingArgTypes],
+    oakMaxWidthDefaults,
+  ),
   parameters: {
     controls: {
       include: [...Object.keys(flexArgTypes)],

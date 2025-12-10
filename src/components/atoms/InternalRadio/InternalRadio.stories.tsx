@@ -6,6 +6,7 @@ import {
   InternalRadioHover,
   InternalRadioFocus,
   InternalRadioHoverFocus,
+  internalRadioDefaults,
 } from "./InternalRadio";
 
 import { OakBox } from "@/components/atoms/OakBox";
@@ -13,20 +14,26 @@ import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
 import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
+import { buildArgTypes } from "@/storybook-helpers/buildArgTypes";
 
 const meta: Meta<typeof InternalRadio> = {
   component: InternalRadio,
   tags: ["autodocs"],
   title: "components/atoms/InternalRadio",
   argTypes: {
-    sizeArgTypes,
-    borderArgTypes,
-    colorArgTypes,
-    spacingArgTypes,
+    ...buildArgTypes(
+      [sizeArgTypes, borderArgTypes, colorArgTypes, spacingArgTypes],
+      internalRadioDefaults,
+    ),
     disabled: {
       control: "boolean",
     },
-    $checkedBackground: colorArgTypes.$color,
+    $checkedBackground: {
+      ...colorArgTypes.$color,
+      table: {
+        defaultValue: { summary: internalRadioDefaults.$checkedBackground },
+      },
+    },
   },
   parameters: {
     controls: {

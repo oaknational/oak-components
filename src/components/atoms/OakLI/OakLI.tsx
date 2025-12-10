@@ -23,15 +23,18 @@ export type OakLIProps = OakFlexProps &
  * Places where we directly want to style a list item
  *
  **/
-export const OakLI = styled.li<OakLIProps>`
+export const oakLIDefaults: Partial<OakLIProps> = {
+  $display: "revert",
+};
+
+export const OakLI = styled.li.attrs<OakLIProps>((props) => ({
+  ...oakLIDefaults,
+  ...props,
+}))<OakLIProps>`
   ${oakBoxCss}
   ${typographyStyle}
   ${listStyle}
   ${displayStyle}
-  // FIXME - Flex props will only work when display is set to flex, can we conditionally apply this + props above ? 
+  // FIXME - Flex props will only work when display is set to flex, can we conditionally apply this + props above ?
   ${flexStyle}
 `;
-
-OakLI.defaultProps = {
-  $display: "revert",
-};
