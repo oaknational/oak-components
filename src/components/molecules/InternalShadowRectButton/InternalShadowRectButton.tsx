@@ -135,6 +135,14 @@ const StyledInternalButton = styled(InternalButton)<
   `}
 `;
 
+const StyledOakSvg = styled(OakSvg)`
+  bottom: -3px;
+  left: 0px;
+  position: absolute;
+  height: 5px;
+  color: ${parseColor("border-decorative1")};
+`;
+
 export const StyledButtonWrapper = styled(OakBox)<
   OakBoxProps & {
     $hoverShadow?: OakDropShadowToken | null;
@@ -301,15 +309,7 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
               {children}
             </OakSpan>
             {selected && (
-              <OakSvg
-                name="underline"
-                $color="border-decorative1"
-                $height="spacing-4"
-                data-state="selected"
-                $position="absolute"
-                $top="spacing-20"
-                $left="spacing-0"
-              />
+              <StyledOakSvg name="underline" data-state="selected" />
             )}
           </OakBox>
           {isTrailingIcon && iconLogic}
