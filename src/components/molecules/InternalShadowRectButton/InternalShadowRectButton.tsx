@@ -1,7 +1,13 @@
 import React, { ElementType } from "react";
 import styled, { css } from "styled-components";
 
-import { OakBox, OakBoxProps, OakFlex, OakSpan } from "@/components/atoms";
+import {
+  OakBox,
+  OakBoxProps,
+  OakFlex,
+  OakSpan,
+  OakSvg,
+} from "@/components/atoms";
 import {
   InternalButton,
   InternalButtonProps,
@@ -58,6 +64,10 @@ export type InternalShadowRectButtonProps = Omit<
    *  we can adjust the gap between the icon and the text
    */
   loadingSpinnerSize?: OakLoadingSpinnerTokenSubset;
+  /**
+   * whether the button should show a selected state
+   */
+  selected?: boolean;
   iconGap?: FlexStyleProps["$gap"];
   defaultTextColor: OakCombinedColorToken;
   defaultBackground: OakCombinedColorToken;
@@ -100,16 +110,25 @@ const StyledInternalButton = styled(InternalButton)<
       color: ${parseColor(props.$hoverTextColor)};
       background: ${parseColor(props.$hoverBackground)};
       border-color: ${parseColor(props.$hoverBorderColor)};
+      [data-state="selected"] {
+        display: none;
+      }
     }
     &:active {
       background: ${parseColor(props.$defaultBackground)};
       border-color: ${parseColor(props.$defaultBorderColor)};
       color: ${parseColor(props.$defaultTextColor)};
+      [data-state="selected"] {
+        display: none;
+      }
     }
     &:disabled {
       background: ${parseColor(props.$disabledBackground)};
       border-color: ${parseColor(props.$disabledBorderColor)};
       color: ${parseColor(props.$disabledTextColor)};
+      [data-state="selected"] {
+        display: none;
+      }
     }
   `}
 `;
@@ -189,6 +208,7 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
     font = "heading-7",
     textAlign = "left",
     loadingSpinnerSize = "spacing-24",
+    selected,
     ...rest
   } = props;
 
@@ -273,9 +293,22 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
           $width={innerWidth}
         >
           {!isTrailingIcon && iconLogic}
-          <OakSpan $font={font} $textAlign={textAlign}>
-            {children}
-          </OakSpan>
+          <OakBox $position={"relative"}>
+            <OakSpan $font={font} $textAlign={textAlign}>
+              {children}
+            </OakSpan>
+            {selected && (
+              <OakSvg
+                name="underline"
+                $color="border-decorative1"
+                $height="spacing-4"
+                data-state="selected"
+                $position="absolute"
+                $top="spacing-20"
+                $left="spacing-0"
+              />
+            )}
+          </OakBox>
           {isTrailingIcon && iconLogic}
         </OakFlex>
       </StyledInternalButton>
