@@ -118,8 +118,8 @@ exports[`OakCopyLinkButton matches snapshot 1`] = `
 }
 
 .c5:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #222222;
   background: #f2f2f2;
   border-color: #222222;

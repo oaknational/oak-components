@@ -664,8 +664,8 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
 }
 
 .c39:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #222222;
   background: #f2f2f2;
   border-color: #222222;
@@ -703,8 +703,8 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
 }
 
 .c50:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #ffffff;
   background: #575757;
   border-color: #575757;

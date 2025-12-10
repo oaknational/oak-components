@@ -93,8 +93,8 @@ exports[`OakSmallSecondaryToggleButton component matches snapshot 1`] = `
 }
 
 .c4:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #ffffff;
   background: #575757;
   border-color: #575757;

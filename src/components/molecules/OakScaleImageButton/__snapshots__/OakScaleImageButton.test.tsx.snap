@@ -108,8 +108,8 @@ exports[`OakScaleImageButton matches snapshot 1`] = `
 }
 
 .c4:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #222222;
   background: #e4e4e4;
   border-color: #e4e4e4;

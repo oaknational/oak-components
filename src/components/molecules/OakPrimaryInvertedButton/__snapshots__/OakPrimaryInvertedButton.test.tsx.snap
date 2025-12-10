@@ -111,8 +111,8 @@ exports[`OakPrimaryInvertedButton matches snapshot 1`] = `
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #222222;
-  background: #ffffff;
-  border-color: #ffffff;
+  background: #f2f2f2;
+  border-color: #f2f2f2;
 }
 
 .c4:hover [data-state="selected"] {

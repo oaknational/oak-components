@@ -108,8 +108,8 @@ exports[`InternalShadowRectButton matches snapshot 1`] = `
 }
 
 .c4:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #fff2aa;
   background: #ffe555;
   border-color: #fff7cc;

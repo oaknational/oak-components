@@ -93,8 +93,8 @@ exports[`OakPupilJourneyYearButton matches snapshot 1`] = `
 }
 
 .c4:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #222222;
   background: #deb7d5;
   border-color: #cf9cc3;
