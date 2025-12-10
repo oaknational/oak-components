@@ -75,6 +75,7 @@ export type InternalShadowRectButtonProps = Omit<
   hoverTextColor: OakCombinedColorToken;
   hoverBackground: OakCombinedColorToken;
   hoverBorderColor: OakCombinedColorToken;
+  hoverUnderline?: boolean;
   disabledBackground: OakCombinedColorToken;
   disabledBorderColor: OakCombinedColorToken;
   disabledTextColor: OakCombinedColorToken;
@@ -96,6 +97,7 @@ const StyledInternalButton = styled(InternalButton)<
     $hoverTextColor: OakCombinedColorToken;
     $hoverBackground: OakCombinedColorToken;
     $hoverBorderColor: OakCombinedColorToken;
+    $hoverUnderline?: boolean;
     $disabledBackground: OakCombinedColorToken;
     $disabledBorderColor: OakCombinedColorToken;
     $disabledTextColor: OakCombinedColorToken;
@@ -106,7 +108,7 @@ const StyledInternalButton = styled(InternalButton)<
   display: inline-block;
   ${(props) => css`
     &:hover {
-      text-decoration: underline;
+      text-decoration: ${props.$hoverUnderline ? "underline" : "none"};
       color: ${parseColor(props.$hoverTextColor)};
       background: ${parseColor(props.$hoverBackground)};
       border-color: ${parseColor(props.$hoverBorderColor)};
@@ -194,6 +196,7 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
     hoverTextColor,
     hoverBackground,
     hoverBorderColor,
+    hoverUnderline,
     disabledBackground,
     disabledBorderColor,
     className,
@@ -233,7 +236,6 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
   );
 
   const iconLogic = <>{isLoading && !disabled ? loader : icon}</>;
-
   return (
     <StyledButtonWrapper
       className={className}
@@ -277,6 +279,7 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
         $hoverTextColor={hoverTextColor}
         $hoverBackground={hoverBackground}
         $hoverBorderColor={hoverBorderColor}
+        $hoverUnderline={hoverUnderline}
         $defaultTextColor={defaultTextColor}
         $defaultBackground={defaultBackground}
         $defaultBorderColor={defaultBorderColor}
