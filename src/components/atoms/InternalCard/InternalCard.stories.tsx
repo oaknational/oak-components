@@ -1,12 +1,17 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { InternalCard, InternalCardProps } from "./InternalCard";
+import {
+  InternalCard,
+  InternalCardProps,
+  internalCardDefaults,
+} from "./InternalCard";
 
 const meta: Meta<typeof InternalCard> = {
   component: InternalCard,
   tags: ["autodocs"],
   title: "components/atoms/InternalCard",
+  args: internalCardDefaults,
   parameters: {
     controls: {
       include: [],

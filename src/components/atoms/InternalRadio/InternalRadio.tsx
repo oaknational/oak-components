@@ -48,8 +48,11 @@ export type BaseRadioProps = {
 };
 
 const BaseRadio = forwardRef(
-  (props: BaseRadioProps, ref?: React.Ref<HTMLInputElement>) => {
-    const { onHovered, ...rest } = props;
+  (
+    props: BaseRadioProps & { theme?: unknown },
+    ref?: React.Ref<HTMLInputElement>,
+  ) => {
+    const { onHovered, theme: _theme, ...rest } = props;
 
     const hoverStart = useRef(Date.now());
 
@@ -124,7 +127,19 @@ type HoverBaseRadioProps = {
  *
  *
  */
-export const InternalRadio = styled(BaseRadio)<StyledBaseRadioProps>`
+export const internalRadioDefaults = {
+  $borderRadius: "border-radius-xs",
+  $ba: "border-solid-m",
+  $borderColor: "text-primary",
+  $checkedBackground: "text-primary",
+} satisfies Partial<StyledBaseRadioProps>;
+
+export const InternalRadio = styled(BaseRadio).attrs<StyledBaseRadioProps>(
+  (props) => ({
+    ...internalRadioDefaults,
+    ...props,
+  }),
+)<StyledBaseRadioProps>`
   /* removing default appearance */
   -webkit-appearance: none;
   appearance: none;
@@ -156,16 +171,16 @@ export const InternalRadio = styled(BaseRadio)<StyledBaseRadioProps>`
   }
 `;
 
-InternalRadio.defaultProps = {
-  $borderRadius: "border-radius-xs",
-  $ba: "border-solid-m",
-  $borderColor: "text-primary",
-  $checkedBackground: "text-primary",
-};
+export const internalRadioHoverDefaults = {
+  $hoverBorderRadius: "border-radius-xs",
+} satisfies Partial<HoverBaseRadioProps>;
 
-export const InternalRadioHover = styled(InternalRadio)<
+export const InternalRadioHover = styled(InternalRadio).attrs<
   StyledBaseRadioProps & HoverBaseRadioProps
->`
+>((props) => ({
+  ...internalRadioHoverDefaults,
+  ...props,
+}))<StyledBaseRadioProps & HoverBaseRadioProps>`
   /* @media wrapper is required to prevent hover effect on iOS Safari */
 
   @media (hover: hover) {
@@ -182,10 +197,6 @@ export const InternalRadioHover = styled(InternalRadio)<
     }
   }
 `;
-
-InternalRadioHover.defaultProps = {
-  $hoverBorderRadius: "border-radius-xs",
-};
 
 const focusStyle = css`
   &:focus-visible {
