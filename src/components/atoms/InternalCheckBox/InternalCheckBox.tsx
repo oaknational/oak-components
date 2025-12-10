@@ -125,7 +125,19 @@ type HoverBaseCheckBoxProps = {
  *
  *
  */
-export const InternalCheckBox = styled(BaseCheckBox)<StyledBaseCheckBoxProps>`
+export const internalCheckBoxDefaults = {
+  $borderRadius: "border-radius-xs",
+  $ba: "border-solid-m",
+  $borderColor: "text-primary",
+  $checkedBackground: "text-primary",
+} satisfies Partial<StyledBaseCheckBoxProps>;
+
+export const InternalCheckBox = styled(
+  BaseCheckBox,
+).attrs<StyledBaseCheckBoxProps>(({ theme, ...props }) => ({
+  ...internalCheckBoxDefaults,
+  ...props,
+}))<StyledBaseCheckBoxProps>`
   /* removing default appearance */
   -webkit-appearance: none;
   appearance: none;
@@ -157,16 +169,16 @@ export const InternalCheckBox = styled(BaseCheckBox)<StyledBaseCheckBoxProps>`
   }
 `;
 
-InternalCheckBox.defaultProps = {
-  $borderRadius: "border-radius-xs",
-  $ba: "border-solid-m",
-  $borderColor: "text-primary",
-  $checkedBackground: "text-primary",
-};
+export const internalCheckBoxHoverDefaults = {
+  $hoverBorderRadius: "border-radius-xs",
+} satisfies Partial<HoverBaseCheckBoxProps>;
 
-export const InternalCheckBoxHover = styled(InternalCheckBox)<
+export const InternalCheckBoxHover = styled(InternalCheckBox).attrs<
   StyledBaseCheckBoxProps & HoverBaseCheckBoxProps
->`
+>(({ theme, ...props }) => ({
+  ...internalCheckBoxHoverDefaults,
+  ...props,
+}))<StyledBaseCheckBoxProps & HoverBaseCheckBoxProps>`
   /* @media wrapper is required to prevent hover effect on iOS Safari */
 
   @media (hover: hover) {
@@ -183,10 +195,6 @@ export const InternalCheckBoxHover = styled(InternalCheckBox)<
     }
   }
 `;
-
-InternalCheckBoxHover.defaultProps = {
-  $hoverBorderRadius: "border-radius-xs",
-};
 
 const focusStyle = css`
   &:focus-visible {

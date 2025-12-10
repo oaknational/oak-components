@@ -1,7 +1,11 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakMaxWidth, OakMaxWidthProps } from "./OakMaxWidth";
+import {
+  OakMaxWidth,
+  OakMaxWidthProps,
+  oakMaxWidthDefaults,
+} from "./OakMaxWidth";
 
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
@@ -17,6 +21,7 @@ const meta: Meta<typeof OakMaxWidth> = {
   component: OakMaxWidth,
   tags: ["autodocs"],
   title: "components/atoms/OakMaxWidth",
+  args: oakMaxWidthDefaults,
   argTypes: {
     ...flexArgTypes,
     ...colorArgTypes,
