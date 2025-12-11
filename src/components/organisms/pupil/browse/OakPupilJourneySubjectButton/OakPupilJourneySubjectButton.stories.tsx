@@ -14,10 +14,20 @@ const meta: Meta<typeof OakPupilJourneySubjectButton> = {
     subjectIconName: { control: { type: "text" } },
     disabled: { control: { type: "boolean" } },
     subjectText: { control: { type: "text" } },
+    variant: {
+      control: { type: "radio" },
+      options: ["vertical", "horizontal"],
+    },
   },
   parameters: {
     controls: {
-      include: ["phase", "subjectIconName", "disabled", "subjectText"],
+      include: [
+        "phase",
+        "subjectIconName",
+        "disabled",
+        "subjectText",
+        "variant",
+      ],
     },
   },
 };
@@ -37,6 +47,7 @@ export const Default: Story = {
     subjectIconName: "subject-english",
     disabled: false,
     subjectText: "English",
+    variant: "vertical",
   },
 };
 
@@ -51,5 +62,6 @@ export const Disabled: Story = {
     subjectIconName: "subject-english",
     phase: "primary",
     subjectText: "English",
+    variant: "vertical",
   },
 };

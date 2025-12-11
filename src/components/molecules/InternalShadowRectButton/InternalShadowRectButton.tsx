@@ -195,6 +195,7 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
     isLoading,
     disabled,
     width = "max-content",
+    height = "auto",
     maxWidth,
     innerWidth,
     defaultBackground,
@@ -213,6 +214,8 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
     ph = "spacing-16",
     pt,
     pb,
+    pl,
+    pr,
     iconLayout = "row",
     iconGap = "spacing-8",
     iconOverride,
@@ -249,6 +252,7 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
       className={className}
       $position={"relative"}
       $width={width}
+      $height={height}
       $maxWidth={maxWidth}
       $hoverShadow={hoverShadow}
     >
@@ -279,6 +283,8 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
         $ph={ph}
         $pt={pt}
         $pb={pb}
+        $pl={pl}
+        $pr={pr}
         $borderRadius={"border-radius-s"}
         $position={"relative"}
         disabled={disabled || isLoading}

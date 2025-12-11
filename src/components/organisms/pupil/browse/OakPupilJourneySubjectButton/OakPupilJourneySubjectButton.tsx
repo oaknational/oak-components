@@ -11,6 +11,7 @@ import { OakCombinedColorToken } from "@/styles";
 export type OakPupilJourneySubjectButtonProps = {
   phase: "primary" | "secondary" | "non-curriculum";
   subjectIconName: OakIconName;
+  variant: "vertical" | "horizontal";
 } & Omit<
   InternalShadowRectButtonProps,
   | "defaultBorderColor"
@@ -46,6 +47,7 @@ export const OakPupilJourneySubjectButton = <C extends ElementType = "button">({
   phase,
   element,
   subjectIconName,
+  variant,
   ...rest
 }: OakPupilJourneySubjectButtonProps & PolymorphicPropsWithoutRef<C>) => {
   let defaultBackground: OakCombinedColorToken,
@@ -69,12 +71,14 @@ export const OakPupilJourneySubjectButton = <C extends ElementType = "button">({
       break;
   }
 
+  const isVerticalVariant = variant === "vertical";
+
   const iconOverride = (
     <OakIcon
       iconName={subjectIconName}
       data-testid={subjectIconName}
-      $minWidth={"spacing-72"}
-      $minHeight={"spacing-72"}
+      $minWidth={isVerticalVariant ? "spacing-72" : "spacing-40"}
+      $minHeight={isVerticalVariant ? "spacing-72" : "spacing-40"}
       aria-hidden="true"
     />
   );
@@ -83,12 +87,14 @@ export const OakPupilJourneySubjectButton = <C extends ElementType = "button">({
     <InternalShadowRectButton
       element={element ?? "button"}
       iconOverride={iconOverride}
-      iconLayout="column"
-      iconGap={"spacing-4"}
+      iconLayout={isVerticalVariant ? "column" : "row"}
+      iconGap={isVerticalVariant ? "spacing-4" : "spacing-8"}
       pv={null}
-      pt={"spacing-12"}
-      pb={"spacing-24"}
-      ph={"spacing-12"}
+      ph={null}
+      pt={isVerticalVariant ? "spacing-12" : "spacing-0"}
+      pb={isVerticalVariant ? "spacing-24" : "spacing-0"}
+      pl={isVerticalVariant ? "spacing-12" : "spacing-4"}
+      pr={"spacing-12"}
       font={"heading-7"}
       defaultBorderColor={borderColor}
       defaultBackground={defaultBackground}
@@ -101,6 +107,8 @@ export const OakPupilJourneySubjectButton = <C extends ElementType = "button">({
       disabledTextColor="text-subdued"
       textAlign={"center"}
       innerWidth={"spacing-120"}
+      hoverUnderline
+      height={isVerticalVariant ? null : "spacing-48"}
       {...rest}
     />
   );

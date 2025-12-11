@@ -14,6 +14,7 @@ describe("OakPupilJourneySubjectButton", () => {
       <OakPupilJourneySubjectButton
         phase="primary"
         subjectIconName="subject-english"
+        variant="vertical"
       >
         English
       </OakPupilJourneySubjectButton>,
@@ -26,6 +27,7 @@ describe("OakPupilJourneySubjectButton", () => {
       <OakPupilJourneySubjectButton
         phase="primary"
         subjectIconName="subject-english"
+        variant="vertical"
       >
         English
       </OakPupilJourneySubjectButton>,
@@ -38,6 +40,7 @@ describe("OakPupilJourneySubjectButton", () => {
         <OakPupilJourneySubjectButton
           phase="primary"
           subjectIconName="subject-science"
+          variant="vertical"
         >
           Science
         </OakPupilJourneySubjectButton>,
@@ -59,6 +62,7 @@ describe("OakPupilJourneySubjectButton", () => {
         <OakPupilJourneySubjectButton
           phase="secondary"
           subjectIconName="subject-maths"
+          variant="vertical"
         >
           Math
         </OakPupilJourneySubjectButton>,
@@ -80,6 +84,7 @@ describe("OakPupilJourneySubjectButton", () => {
         <OakPupilJourneySubjectButton
           phase="non-curriculum"
           subjectIconName="subject-music"
+          variant="vertical"
         >
           Music
         </OakPupilJourneySubjectButton>,
