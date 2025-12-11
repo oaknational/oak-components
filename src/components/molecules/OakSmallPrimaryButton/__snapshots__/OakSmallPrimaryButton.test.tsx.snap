@@ -31,6 +31,11 @@ exports[`OakSmallPrimaryButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
+.c9 {
+  position: relative;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
 .c8 {
   -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
@@ -56,7 +61,7 @@ exports[`OakSmallPrimaryButton matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c9 {
+.c10 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 700;
   font-size: 0.875rem;
@@ -103,11 +108,15 @@ exports[`OakSmallPrimaryButton matches snapshot 1`] = `
 }
 
 .c4:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #ffffff;
   background: #575757;
   border-color: #575757;
+}
+
+.c4:hover [data-state="selected"] {
+  display: none;
 }
 
 .c4:active {
@@ -116,10 +125,18 @@ exports[`OakSmallPrimaryButton matches snapshot 1`] = `
   color: #ffffff;
 }
 
+.c4:active [data-state="selected"] {
+  display: none;
+}
+
 .c4:disabled {
   background: #808080;
   border-color: #808080;
   color: #ffffff;
+}
+
+.c4:disabled [data-state="selected"] {
+  display: none;
 }
 
 .c1 .grey-shadow:has(+ * + .internal-button:focus-visible) {
@@ -176,11 +193,15 @@ exports[`OakSmallPrimaryButton matches snapshot 1`] = `
             style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
           />
         </div>
-        <span
+        <div
           class="c9"
         >
-          Click Me
-        </span>
+          <span
+            class="c10"
+          >
+            Click Me
+          </span>
+        </div>
       </div>
     </button>
   </div>

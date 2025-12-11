@@ -22,6 +22,11 @@ exports[`OakButtonAsRadioGroup matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
+.c8 {
+  position: relative;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -49,7 +54,7 @@ exports[`OakButtonAsRadioGroup matches snapshot 1`] = `
   gap: 0.5rem;
 }
 
-.c8 {
+.c9 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -103,16 +108,28 @@ exports[`OakButtonAsRadioGroup matches snapshot 1`] = `
   border-color: #222222;
 }
 
+.c6:hover [data-state="selected"] {
+  display: none;
+}
+
 .c6:active {
   background: #ffffff;
   border-color: #222222;
   color: #222222;
 }
 
+.c6:active [data-state="selected"] {
+  display: none;
+}
+
 .c6:disabled {
   background: #e4e4e4;
   border-color: #808080;
   color: #808080;
+}
+
+.c6:disabled [data-state="selected"] {
+  display: none;
 }
 
 .c3 .grey-shadow:has(+ * + .internal-button:focus-visible) {
@@ -163,11 +180,15 @@ exports[`OakButtonAsRadioGroup matches snapshot 1`] = `
         <div
           class="c0 c7"
         >
-          <span
+          <div
             class="c8"
           >
-            Display Value
-          </span>
+            <span
+              class="c9"
+            >
+              Display Value
+            </span>
+          </div>
         </div>
       </button>
     </div>

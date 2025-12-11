@@ -25,10 +25,13 @@ const meta: Meta<typeof OakSmallPrimaryInvertedButton> = {
     isLoading: {
       control: "boolean",
     },
+    selected: {
+      control: "boolean",
+    },
   },
   parameters: {
     controls: {
-      include: ["iconName", "isTrailingIcon", "isLoading", "type"],
+      include: ["iconName", "isTrailingIcon", "isLoading", "type", "selected"],
     },
     backgrounds: {
       default: "light",
@@ -44,6 +47,9 @@ export const Default: Story = {
     <OakFlex $gap="spacing-24">
       <OakSmallPrimaryInvertedButton {...args}>
         Primary Inverted Button
+      </OakSmallPrimaryInvertedButton>
+      <OakSmallPrimaryInvertedButton {...args} selected>
+        Selected Inverted Button
       </OakSmallPrimaryInvertedButton>
       <OakSmallPrimaryInvertedButton {...args} disabled>
         Disabled Inverted Button
@@ -70,5 +76,6 @@ export const LinkStyledAsButton: Story = {
     element: "a",
     href: "/",
     iconName: "arrow-right",
+    selected: false,
   },
 };

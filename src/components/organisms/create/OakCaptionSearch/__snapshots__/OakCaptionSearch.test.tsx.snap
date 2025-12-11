@@ -60,7 +60,12 @@ exports[`OakCaptionSearch should match snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c19 {
+.c18 {
+  position: relative;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c20 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -69,7 +74,7 @@ exports[`OakCaptionSearch should match snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c20 {
+.c21 {
   -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   object-fit: contain;
@@ -137,7 +142,7 @@ exports[`OakCaptionSearch should match snapshot 1`] = `
   gap: 0.5rem;
 }
 
-.c18 {
+.c19 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -213,16 +218,28 @@ exports[`OakCaptionSearch should match snapshot 1`] = `
   border-color: #575757;
 }
 
+.c16:hover [data-state="selected"] {
+  display: none;
+}
+
 .c16:active {
   background: #222222;
   border-color: #222222;
   color: #ffffff;
 }
 
+.c16:active [data-state="selected"] {
+  display: none;
+}
+
 .c16:disabled {
   background: #808080;
   border-color: #808080;
   color: #ffffff;
+}
+
+.c16:disabled [data-state="selected"] {
+  display: none;
 }
 
 .c13 .grey-shadow:has(+ * + .internal-button:focus-visible) {
@@ -372,17 +389,21 @@ exports[`OakCaptionSearch should match snapshot 1`] = `
         <div
           class="c4 c17"
         >
-          <span
+          <div
             class="c18"
           >
-            Search
-          </span>
+            <span
+              class="c19"
+            >
+              Search
+            </span>
+          </div>
           <div
-            class="c19"
+            class="c20"
           >
             <img
               alt=""
-              class="c20"
+              class="c21"
               data-nimg="fill"
               decoding="async"
               loading="lazy"
