@@ -21,7 +21,7 @@ const meta: Meta<typeof OakPupilJourneyOptionalityItem> = {
   decorators: [
     (Story) => (
       <OakFlex
-        $background={"grey10"}
+        $background={"bg-neutral"}
         $pa={"spacing-24"}
         $flexDirection={"column"}
       >

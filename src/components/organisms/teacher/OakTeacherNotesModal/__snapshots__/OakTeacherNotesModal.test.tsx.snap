@@ -175,7 +175,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   padding: 1rem;
   background: #fff7cc;
   border: 0.063rem solid;
-  border-color: #fff2aa;
+  border-color: #fbd60e;
   border-radius: 0.375rem;
   border-style: solid;
   display: -webkit-box;
@@ -796,7 +796,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
 }
 
 .c64:visited {
-  color: #7c9aec;
+  color: #081676;
 }
 
 .c64:active {

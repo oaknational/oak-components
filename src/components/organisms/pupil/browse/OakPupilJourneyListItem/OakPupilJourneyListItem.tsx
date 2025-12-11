@@ -36,7 +36,7 @@ const StyledRoundIcon = styled(OakRoundIcon)<{
 
   img {
     filter: ${(props) =>
-      parseColorFilter(props.$disabled ? "icon-disabled" : "icon-inverted")};
+      parseColorFilter(props.$disabled ? "icon-disabled" : "icon-primary")};
   }
 `;
 

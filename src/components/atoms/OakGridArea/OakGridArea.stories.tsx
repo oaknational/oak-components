@@ -45,19 +45,31 @@ export const SpanningColumns: Story = {
     <OakGrid>
       <OakGridArea
         {...args}
-        $background={"amber"}
+        $background={"bg-decorative6-main"}
         $colSpan={6}
         $pa="spacing-24"
       >
         6 columns
       </OakGridArea>
-      <OakGridArea $background={"mint"} $colSpan={4} $pa="spacing-24">
+      <OakGridArea
+        $background={"bg-decorative1-main"}
+        $colSpan={4}
+        $pa="spacing-24"
+      >
         4 columns
       </OakGridArea>
-      <OakGridArea $background={"lemon"} $colSpan={2} $pa="spacing-24">
+      <OakGridArea
+        $background={"bg-decorative5-main"}
+        $colSpan={2}
+        $pa="spacing-24"
+      >
         2 columns
       </OakGridArea>
-      <OakGridArea $background={"teal"} $colSpan={12} $pa="spacing-24">
+      <OakGridArea
+        $background={"bg-decorative1-subdued"}
+        $colSpan={12}
+        $pa="spacing-24"
+      >
         12 columns
       </OakGridArea>
     </OakGrid>
@@ -70,20 +82,32 @@ export const SpanningRows: Story = {
     <OakGrid>
       <OakGridArea
         {...args}
-        $background={"amber"}
+        $background={"bg-decorative6-main"}
         $colSpan={6}
         $rowSpan={2}
         $pa="spacing-24"
       >
         6 columns, 2 rows
       </OakGridArea>
-      <OakGridArea $background={"mint"} $colSpan={6} $pa="spacing-24">
+      <OakGridArea
+        $background={"bg-decorative1-main"}
+        $colSpan={6}
+        $pa="spacing-24"
+      >
         6 columns, 1 row
       </OakGridArea>
-      <OakGridArea $background={"lemon"} $colSpan={3} $pa="spacing-24">
+      <OakGridArea
+        $background={"bg-decorative5-main"}
+        $colSpan={3}
+        $pa="spacing-24"
+      >
         3 columns, 1 row
       </OakGridArea>
-      <OakGridArea $background={"teal"} $colSpan={3} $pa="spacing-24">
+      <OakGridArea
+        $background={"bg-decorative1-subdued"}
+        $colSpan={3}
+        $pa="spacing-24"
+      >
         3 columns, 1 row
       </OakGridArea>
     </OakGrid>
@@ -96,7 +120,7 @@ export const StartCol: Story = {
     <OakGrid>
       <OakGridArea
         {...args}
-        $background={"amber"}
+        $background={"bg-decorative6-main"}
         $colSpan={3}
         $pa="spacing-24"
         $colStart={3}
@@ -104,7 +128,7 @@ export const StartCol: Story = {
         Col start 3
       </OakGridArea>
       <OakGridArea
-        $background={"lemon"}
+        $background={"bg-decorative5-main"}
         $colSpan={3}
         $colStart={4}
         $pa="spacing-24"
@@ -112,7 +136,7 @@ export const StartCol: Story = {
         Col start 4
       </OakGridArea>
       <OakGridArea
-        $background={"teal"}
+        $background={"bg-decorative1-subdued"}
         $colSpan={3}
         $colStart={5}
         $pa="spacing-24"
@@ -129,7 +153,7 @@ export const EndCol: Story = {
     <OakGrid>
       <OakGridArea
         {...args}
-        $background={"amber"}
+        $background={"bg-decorative6-main"}
         $colSpan={3}
         $pa="spacing-24"
         $colEnd={4}
@@ -137,7 +161,7 @@ export const EndCol: Story = {
         Col end 4
       </OakGridArea>
       <OakGridArea
-        $background={"lemon"}
+        $background={"bg-decorative5-main"}
         $colSpan={3}
         $colEnd={5}
         $pa="spacing-24"
@@ -145,7 +169,7 @@ export const EndCol: Story = {
         Col end 5
       </OakGridArea>
       <OakGridArea
-        $background={"teal"}
+        $background={"bg-decorative1-subdued"}
         $colSpan={3}
         $colEnd={6}
         $pa="spacing-24"

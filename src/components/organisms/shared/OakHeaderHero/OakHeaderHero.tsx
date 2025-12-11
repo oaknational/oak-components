@@ -87,7 +87,7 @@ const UnstyledComponent = (props: OakHeaderHeroProps) => {
             >
               <OakHeading
                 tag="h1"
-                $color={"grey80"}
+                $color={"text-primary"}
                 $font={["heading-4", "heading-3"]}
                 $mb={"spacing-24"}
               >

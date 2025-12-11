@@ -67,12 +67,12 @@ const Accordion = ({ children, id }: InternalReviewAccordionProps) => {
           defaultTextColor={"text-primary"}
           hoverTextColor={"text-primary"}
           disabledTextColor={"text-disabled"}
-          defaultIconBackground={"black"}
-          hoverIconBackground={"black"}
+          defaultIconBackground={"icon-primary"}
+          hoverIconBackground={"icon-primary"}
           disabledIconBackground={"transparent"}
           iconBackgroundSize={"spacing-32"}
           iconSize={"spacing-24"}
-          defaultIconColor={"white"}
+          defaultIconColor={"icon-main"}
           isTrailingIcon={true}
         >
           Results
@@ -80,7 +80,7 @@ const Accordion = ({ children, id }: InternalReviewAccordionProps) => {
       </OakFlex>
       <StyledAccordionContent aria-labelledby={id}>
         <OakFlex
-          $background={"white"}
+          $background={"bg-primary"}
           $borderRadius={"border-radius-l"}
           $pv={"spacing-40"}
           $ph={"spacing-24"}

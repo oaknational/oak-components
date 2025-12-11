@@ -6,6 +6,7 @@ export * from "./OakCookieSettingsModal";
 export * from "./OakHeaderHero";
 export * from "./OakHomepageTabButton";
 export * from "./OakInfo";
+export * from "./OakListItem";
 export * from "./OakMediaClip";
 export * from "./OakMediaClipList";
 export * from "./OakMediaClipStackListItem";

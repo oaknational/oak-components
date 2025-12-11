@@ -1,6 +1,6 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { render, fireEvent } from "@testing-library/react";
+import { fireEvent } from "@testing-library/react";
 
 import {
   InternalShadowIconButton,
@@ -11,9 +11,9 @@ import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 const defaultArgs: InternalShadowIconButtonProps = {
   iconName: "arrow-right",
-  defaultTextColor: "mint30",
-  hoverTextColor: "lemon50",
-  disabledTextColor: "grey40",
+  defaultTextColor: "text-subdued",
+  hoverTextColor: "text-promo",
+  disabledTextColor: "text-disabled",
 };
 
 describe("InternalShadowIconButton", () => {
@@ -45,7 +45,7 @@ describe("InternalShadowIconButton", () => {
   });
 
   it("renders the chidren", () => {
-    const { getByText } = render(
+    const { getByText } = renderWithTheme(
       <InternalShadowIconButton {...defaultArgs}>
         Click
       </InternalShadowIconButton>,
@@ -55,7 +55,7 @@ describe("InternalShadowIconButton", () => {
 
   it("calls onClick method", () => {
     const onClick = jest.fn();
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithTheme(
       <InternalShadowIconButton
         {...defaultArgs}
         data-testid="test"
@@ -70,7 +70,7 @@ describe("InternalShadowIconButton", () => {
 
   it("calls onHovered method when a mouseover and mouseout event has happened", () => {
     const onHovered = jest.fn();
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithTheme(
       <InternalShadowIconButton
         {...defaultArgs}
         data-testid="test"
@@ -86,7 +86,7 @@ describe("InternalShadowIconButton", () => {
 
   it("calls doesn't call onHovered method before a mouseout event happens", () => {
     const onHovered = jest.fn();
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithTheme(
       <InternalShadowIconButton
         {...defaultArgs}
         data-testid="test"
@@ -103,7 +103,7 @@ describe("InternalShadowIconButton", () => {
 
   it("correctly captures the duration of the hover event", () => {
     const onHovered = jest.fn();
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithTheme(
       <InternalShadowIconButton
         {...defaultArgs}
         data-testid="test"

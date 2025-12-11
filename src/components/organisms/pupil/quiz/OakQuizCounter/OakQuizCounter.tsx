@@ -14,7 +14,7 @@ export type OakQuizCounterProps = {
  *
  */
 const Pill = ({ isFilled }: { isFilled: boolean }) => {
-  const fill = isFilled ? "black" : "border-decorative2";
+  const fill = isFilled ? "bg-inverted" : "bg-decorative2-main";
 
   return (
     <InternalStyledSvg width={"26"} height={"7"} $fill={fill}>

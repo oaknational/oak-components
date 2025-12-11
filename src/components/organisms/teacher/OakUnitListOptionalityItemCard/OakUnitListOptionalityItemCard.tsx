@@ -17,7 +17,7 @@ const StyledOptionalityListItem = styled(OakFlex)<{ $disabled?: boolean }>`
   }
 
   &:focus-visible {
-    background: ${parseColor("white")};
+    background: ${parseColor("bg-primary")};
     box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
   }
@@ -28,7 +28,7 @@ const StyledOptionalityListItem = styled(OakFlex)<{ $disabled?: boolean }>`
       @media (hover: hover) {
     &:hover {
       ${StyledOakIndexBox} {
-        background: ${parseColor("lavender110")};
+        background: ${parseColor("bg-decorative3-very-subdued")};
       }
       background: ${parseColor("bg-decorative3-main")};
     }
@@ -52,7 +52,7 @@ const StyledOakIndexBox = styled(OakFlex)`
   transition-duration: 300ms;
   @media (hover: hover) {
     &:hover {
-      background: ${parseColor("lavender110")};
+      background: ${parseColor("bg-decorative3-very-subdued")};
     }
   }
 `;

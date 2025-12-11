@@ -212,7 +212,7 @@ export const OakModalCenter = ({
             >
               <OakFlex
                 $flexDirection="column"
-                $background="white"
+                $background="bg-primary"
                 $borderRadius="border-radius-l"
                 $width="100%"
                 $position="relative"
@@ -235,12 +235,12 @@ export const OakModalCenter = ({
                         onClick={onClose}
                         aria-label="Close Modal"
                         defaultIconBackground="transparent"
-                        defaultIconColor="black"
+                        defaultIconColor="icon-primary"
                         defaultTextColor="transparent"
                         hoverTextColor="transparent"
                         disabledTextColor="transparent"
-                        hoverIconBackground="black"
-                        hoverIconColor="white"
+                        hoverIconBackground="icon-primary"
+                        hoverIconColor="icon-main"
                         disabledIconBackground="transparent"
                         iconBackgroundSize="spacing-32"
                         iconSize="spacing-32"

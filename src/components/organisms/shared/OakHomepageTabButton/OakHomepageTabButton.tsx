@@ -24,7 +24,7 @@ import { Underline } from "@/svgs";
 const StyledButton = styled(InternalButton)`
   :hover .buttonText {
     text-decoration: underline;
-    color: ${parseColor("black")};
+    color: ${parseColor("text-primary")};
   }
 
   :focus .focusUnderlineSvg {

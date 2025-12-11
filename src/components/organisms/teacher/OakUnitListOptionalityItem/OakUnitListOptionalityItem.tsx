@@ -74,7 +74,7 @@ const UnitIndex = ({
   <OakFlex
     $btlr={"border-radius-s"}
     $bblr={"border-radius-s"}
-    $background={unavailable ? "bg-neutral-stronger" : "lavender"}
+    $background={unavailable ? "bg-neutral-stronger" : "bg-decorative3-main"}
     $minWidth={["spacing-40", "spacing-64"]}
     $width={["spacing-40", "spacing-64", "auto"]}
     $height={["spacing-40", "auto", "auto"]}
@@ -157,7 +157,7 @@ export const OakUnitListOptionalityItem = (
       $flexDirection={["column", "row", "row"]}
       $width={"100%"}
       as={"li"}
-      $background="white"
+      $background="bg-primary"
       $borderRadius="border-radius-m"
       {...rest}
     >

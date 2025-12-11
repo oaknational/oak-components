@@ -34,8 +34,16 @@ export const OakLessonReviewIntroVideo = (
     iconBackgroundColor: OakCombinedColorToken,
   ] =
     lessonSectionName === "intro"
-      ? ["bg-decorative2-very-subdued", "border-decorative2", "aqua"]
-      : ["bg-decorative4-very-subdued", "border-decorative4", "pink"];
+      ? [
+          "bg-decorative2-very-subdued",
+          "border-decorative2",
+          "bg-decorative2-main",
+        ]
+      : [
+          "bg-decorative4-very-subdued",
+          "border-decorative4",
+          "bg-decorative4-main",
+        ];
 
   const summaryForIncomplete =
     lessonSectionName === "intro" ? "Prepare" : "Learn";
@@ -47,7 +55,7 @@ export const OakLessonReviewIntroVideo = (
 
   return (
     <ReviewItemContainer
-      $background={completed ? completedBackgroundColor : "white"}
+      $background={completed ? completedBackgroundColor : "bg-primary"}
       $borderColor={completed ? completedBackgroundColor : borderColor}
       {...rest}
     >

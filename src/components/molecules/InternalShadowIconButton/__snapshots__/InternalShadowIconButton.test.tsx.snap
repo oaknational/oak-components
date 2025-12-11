@@ -17,7 +17,7 @@ exports[`InternalShadowIconButton matches snapshot 1`] = `
 
 .c7 {
   position: relative;
-  color: #ebfbeb;
+  color: #575757;
   border-radius: 6.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -139,7 +139,7 @@ exports[`InternalShadowIconButton matches snapshot 1`] = `
   font-family: unset;
   outline: none;
   font-family: --var(google-font),Lexend,sans-serif;
-  color: #ebfbeb;
+  color: #575757;
   border-radius: 0.25rem;
 }
 
@@ -156,15 +156,15 @@ exports[`InternalShadowIconButton matches snapshot 1`] = `
 .c4:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  color: #fff2aa;
+  color: #ffe555;
 }
 
 .c4:active {
-  color: #ebfbeb;
+  color: #575757;
 }
 
 .c4:disabled {
-  color: #cacaca;
+  color: #808080;
 }
 
 .c2 > :first-child:hover .highlight {

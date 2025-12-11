@@ -28,8 +28,8 @@ export const oakStorybookTheme = create({
   inputTextColor: getUIColor("text-primary"),
   inputBorderRadius: oakBorderRadiusTokens["border-radius-m"],
 
-  barTextColor: getUIColor("icon-inverted"),
-  barSelectedColor: getUIColor("icon-inverted"),
+  barTextColor: getUIColor("text-primary"),
+  barSelectedColor: getUIColor("text-primary"),
   buttonBg: getUIColor("bg-btn-secondary"),
   buttonBorder: getUIColor("border-primary"),
   barHoverColor: getUIColor("text-primary"),

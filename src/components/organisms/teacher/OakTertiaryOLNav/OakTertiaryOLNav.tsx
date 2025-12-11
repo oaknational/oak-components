@@ -26,8 +26,8 @@ const StyledOakLink = styled(InternalLink)`
     min-width: 32px;
     height: 32px;
     border-radius: 50%;
-    background-color: ${parseColor("black")};
-    color: ${parseColor("white")};
+    background-color: ${parseColor("bg-inverted")};
+    color: ${parseColor("text-inverted")};
     text-align: center;
     line-height: 32px;
     margin-right: ${parseSpacing("spacing-12")};
@@ -45,12 +45,12 @@ const StyledOakLink = styled(InternalLink)`
     text-decoration: none;
   }
   &:active {
-    color: ${parseColor("black")};
+    color: ${parseColor("text-primary")};
   }
   &:active::before {
     box-shadow: ${parseDropShadow("drop-shadow-lemon")},
       ${parseDropShadow("drop-shadow-grey")};
-    background-color: ${parseColor("black")};
+    background-color: ${parseColor("bg-inverted")};
   }
 `;
 

@@ -29,7 +29,7 @@ export const OakTimer = (props: OakTimerProps) => {
     <StyledTimeBox
       $color={"text-inverted"}
       $borderRadius={"border-radius-xs"}
-      $background={"bg-icon"}
+      $background={"icon-primary"}
       $font={["body-4"]}
       {...oakBoxProps}
     >

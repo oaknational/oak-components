@@ -72,7 +72,8 @@ const StyledOakFlex = styled(OakFlex)<StyledOakFlexProps>`
         position: absolute;
         inset: 0;
         border-radius: ${parseBorderRadius("border-radius-m2")};
-        border-bottom: ${parseBorder("border-solid-l")} ${parseColor("grey60")};
+        border-bottom: ${parseBorder("border-solid-l")}
+          ${parseColor("border-neutral-stronger")};
       }
     `}
 `;

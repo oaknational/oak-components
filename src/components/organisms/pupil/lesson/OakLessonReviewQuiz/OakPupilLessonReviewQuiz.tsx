@@ -90,8 +90,16 @@ export const OakLessonReviewQuiz = (props: OakLessonReviewQuizProps) => {
     iconBackgroundColor: OakCombinedColorToken,
   ] =
     lessonSectionName === "starter-quiz"
-      ? ["bg-decorative1-very-subdued", "border-decorative1", "mint"]
-      : ["bg-decorative5-very-subdued", "border-decorative5", "lemon"];
+      ? [
+          "bg-decorative1-very-subdued",
+          "border-decorative1",
+          "bg-decorative1-main",
+        ]
+      : [
+          "bg-decorative5-very-subdued",
+          "border-decorative5",
+          "bg-decorative5-main",
+        ];
 
   const summaryForIncomplete =
     lessonSectionName === "starter-quiz"
@@ -100,7 +108,7 @@ export const OakLessonReviewQuiz = (props: OakLessonReviewQuizProps) => {
 
   return (
     <ReviewItemContainer
-      $background={completed ? completedBackgroundColor : "white"}
+      $background={completed ? completedBackgroundColor : "bg-primary"}
       $borderColor={completed ? completedBackgroundColor : borderColor}
       {...rest}
     >
