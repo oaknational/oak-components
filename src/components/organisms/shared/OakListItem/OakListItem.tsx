@@ -11,7 +11,7 @@ import {
 } from "@/components/atoms";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
-import { OakColorToken } from "@/styles";
+import { OakUiRoleToken } from "@/styles";
 import { OakCheckBox } from "@/components/molecules/OakCheckBox";
 
 const FlexWithFocus = styled(OakFlex)`
@@ -31,8 +31,8 @@ const FlexWithFocus = styled(OakFlex)`
 
 const StyledListItem = styled(OakFlex)<{
   $disabled?: boolean;
-  $indexHoverColour: OakColorToken;
-  $hoverColour: OakColorToken;
+  $indexHoverBgColour: OakUiRoleToken;
+  $hoverBgColour: OakUiRoleToken;
 }>`
   text-align: initial;
   animation-timing-function: ease-out;
@@ -45,9 +45,9 @@ const StyledListItem = styled(OakFlex)<{
       @media (hover: hover) {
     &:hover {
       ${StyledOakIndexBox} {
-        background: ${parseColor(props.$indexHoverColour)};
+        background: ${parseColor(props.$indexHoverBgColour)};
       }
-      background: ${parseColor(props.$hoverColour)};
+      background: ${parseColor(props.$hoverBgColour)};
     }
   }
       }
@@ -61,13 +61,15 @@ const StyledListItem = styled(OakFlex)<{
     `}
 `;
 
-const StyledOakIndexBox = styled(OakFlex)<{ $indexHoverColour: OakColorToken }>`
+const StyledOakIndexBox = styled(OakFlex)<{
+  $indexHoverBgColour: OakUiRoleToken;
+}>`
   animation-timing-function: ease-out;
   transition-duration: 300ms;
   @media (hover: hover) {
     &:hover {
       ${(props) => css`
-        background: ${parseColor(props.$indexHoverColour)};
+        background: ${parseColor(props.$indexHoverBgColour)};
       `}
     }
   }
@@ -85,10 +87,10 @@ export type OakListItemProps = {
   onClick?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
   middleSlot?: React.ReactNode;
   endSlot?: React.ReactNode;
-  hoverColour?: OakColorToken;
-  indexColour?: OakColorToken;
-  indexHoverColour?: OakColorToken;
-  indexLegacyColour?: OakColorToken;
+  hoverBgColour?: OakUiRoleToken;
+  indexBgColour?: OakUiRoleToken;
+  indexHoverBgColour?: OakUiRoleToken;
+  indexLegacyBgColour?: OakUiRoleToken;
   expandedContent?: React.ReactNode;
   isExpanded?: boolean;
   id?: string;
@@ -111,10 +113,10 @@ export const OakListItem = (props: OakListItemProps) => {
     firstItemRef,
     middleSlot,
     endSlot,
-    hoverColour = "pink50",
-    indexColour = "pink",
-    indexHoverColour = "pink",
-    indexLegacyColour = "pink50",
+    hoverBgColour = "bg-decorative4-subdued",
+    indexBgColour = "bg-decorative4-main",
+    indexHoverBgColour = "bg-decorative4-main",
+    indexLegacyBgColour = "bg-decorative4-subdued",
     expandedContent,
     isExpanded,
     id,
@@ -160,8 +162,8 @@ export const OakListItem = (props: OakListItemProps) => {
           $pr="spacing-16"
           $width="100%"
           $display={["none", "flex"]}
-          $indexHoverColour={indexHoverColour}
-          $hoverColour={hoverColour}
+          $indexHoverBgColour={indexHoverBgColour}
+          $hoverBgColour={hoverBgColour}
         >
           <FlexWithFocus
             $borderRadius="border-radius-m"
@@ -177,8 +179,8 @@ export const OakListItem = (props: OakListItemProps) => {
                 unavailable
                   ? "bg-neutral-stronger"
                   : isLegacy
-                    ? indexLegacyColour
-                    : indexColour
+                    ? indexLegacyBgColour
+                    : indexBgColour
               }
               $btlr={"border-radius-m"}
               $bblr={isExpanded ? "border-radius-square" : "border-radius-m"}
@@ -186,7 +188,7 @@ export const OakListItem = (props: OakListItemProps) => {
               $alignItems={"center"}
               $minWidth="spacing-64"
               $alignSelf="stretch"
-              $indexHoverColour={indexHoverColour}
+              $indexHoverBgColour={indexHoverBgColour}
             >
               <OakSpan
                 $font={"heading-5"}
@@ -234,8 +236,8 @@ export const OakListItem = (props: OakListItemProps) => {
           $display={["flex", "none"]}
           $width="100%"
           $pa="spacing-16"
-          $indexHoverColour={indexHoverColour}
-          $hoverColour={hoverColour}
+          $indexHoverBgColour={indexHoverBgColour}
+          $hoverBgColour={hoverBgColour}
           onClick={unavailable ? undefined : onClick}
         >
           <OakFlex $flexDirection="column" $gap="spacing-16" $width="100%">
@@ -245,8 +247,8 @@ export const OakListItem = (props: OakListItemProps) => {
                   unavailable
                     ? "bg-neutral-stronger"
                     : isLegacy
-                      ? indexLegacyColour
-                      : indexColour
+                      ? indexLegacyBgColour
+                      : indexBgColour
                 }
                 $justifyContent={"center"}
                 $alignItems={"center"}
@@ -288,7 +290,7 @@ export const OakListItem = (props: OakListItemProps) => {
           <OakFlex
             $background={"white"}
             $pa={"spacing-24"}
-            $borderColor={indexColour}
+            $borderColor={indexBgColour}
             $bt={"border-solid-s"}
             $bbrr={"border-radius-m"}
             $bblr={"border-radius-m"}

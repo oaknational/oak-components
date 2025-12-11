@@ -4,6 +4,7 @@ import { StoryObj, Meta } from "@storybook/react";
 import { OakListItem } from "./OakListItem";
 
 import { OakBox, OakFlex, OakHeading, OakP } from "@/components/atoms";
+import { OakUiRoleToken } from "@/styles";
 
 const unitItems = [
   {
@@ -44,6 +45,15 @@ const unitItems = [
         <OakP>World</OakP>
       </OakFlex>
     ),
+  },
+  {
+    title: "Alt colours",
+    index: 6,
+    unavailable: false,
+    isLegacy: false,
+    indexBgColour: "bg-decorative3-main" as OakUiRoleToken,
+    indexHoverBgColour: "bg-decorative3-main" as OakUiRoleToken,
+    hoverBgColour: "bg-decorative3-subdued" as OakUiRoleToken,
   },
 ];
 
