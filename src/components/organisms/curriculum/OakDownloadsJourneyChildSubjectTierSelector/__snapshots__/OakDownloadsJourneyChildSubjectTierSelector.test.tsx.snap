@@ -109,6 +109,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
 .c31 {
   position: relative;
   font-family: --var(google-font),Lexend,sans-serif;
+  text-align: left;
 }
 
 .c33 {
@@ -277,7 +278,6 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
-  text-align: left;
 }
 
 .c15 {

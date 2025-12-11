@@ -31,6 +31,7 @@ exports[`OakVideoTranscript matches snapshot 1`] = `
 .c9 {
   position: relative;
   font-family: --var(google-font),Lexend,sans-serif;
+  text-align: left;
 }
 
 .c11 {
@@ -137,7 +138,6 @@ exports[`OakVideoTranscript matches snapshot 1`] = `
   -moz-letter-spacing: -0.005rem;
   -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
-  text-align: left;
 }
 
 .c6 {
