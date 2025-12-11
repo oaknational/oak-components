@@ -310,10 +310,8 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
           $width={innerWidth}
         >
           {!isTrailingIcon && iconLogic}
-          <OakBox $position={"relative"}>
-            <OakSpan $font={font} $textAlign={textAlign}>
-              {children}
-            </OakSpan>
+          <OakBox $position={"relative"} $textAlign={textAlign}>
+            <OakSpan $font={font}>{children}</OakSpan>
             {selected && (
               <StyledOakSvg name="underline" data-state="selected" />
             )}
