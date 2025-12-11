@@ -16,4 +16,5 @@ export * from "./OakQuote";
 export * from "./OakSideMenuNav";
 export * from "./OakSideMenuNavLink";
 export * from "./OakSubjectIcon";
+export * from "./OakSubjectIconButton";
 export * from "./OakVideoTranscript";

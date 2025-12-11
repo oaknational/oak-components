@@ -1,10 +1,10 @@
 import React from "react";
 import { StoryObj, Meta } from "@storybook/react";
 
-import { OakPupilJourneySubjectButton } from "./OakPupilJourneySubjectButton";
+import { OakSubjectIconButton } from "./OakSubjectIconButton";
 
-const meta: Meta<typeof OakPupilJourneySubjectButton> = {
-  component: OakPupilJourneySubjectButton,
+const meta: Meta<typeof OakSubjectIconButton> = {
+  component: OakSubjectIconButton,
   tags: ["autodocs"],
   argTypes: {
     phase: {
@@ -34,13 +34,11 @@ const meta: Meta<typeof OakPupilJourneySubjectButton> = {
 
 export default meta;
 
-type Story = StoryObj<typeof OakPupilJourneySubjectButton>;
+type Story = StoryObj<typeof OakSubjectIconButton>;
 
 export const Default: Story = {
   render: (args) => (
-    <OakPupilJourneySubjectButton {...args}>
-      {args.subjectText}
-    </OakPupilJourneySubjectButton>
+    <OakSubjectIconButton {...args}>{args.subjectText}</OakSubjectIconButton>
   ),
   args: {
     phase: "primary",
@@ -53,9 +51,7 @@ export const Default: Story = {
 
 export const Disabled: Story = {
   render: (args) => (
-    <OakPupilJourneySubjectButton {...args}>
-      {args.subjectText}
-    </OakPupilJourneySubjectButton>
+    <OakSubjectIconButton {...args}>{args.subjectText}</OakSubjectIconButton>
   ),
   args: {
     disabled: true,

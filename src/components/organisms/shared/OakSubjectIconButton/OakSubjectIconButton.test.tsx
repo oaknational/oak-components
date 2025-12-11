@@ -1,7 +1,7 @@
 import React from "react";
 import "@testing-library/jest-dom";
 
-import { OakPupilJourneySubjectButton } from "./OakPupilJourneySubjectButton";
+import { OakSubjectIconButton } from "./OakSubjectIconButton";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { oakDefaultTheme } from "@/styles";
@@ -11,39 +11,39 @@ import { rgbToHex } from "@/test-helpers";
 describe("OakPupilJourneySubjectButton", () => {
   it("renders", () => {
     const { getByRole } = renderWithTheme(
-      <OakPupilJourneySubjectButton
+      <OakSubjectIconButton
         phase="primary"
         subjectIconName="subject-english"
         variant="vertical"
       >
         English
-      </OakPupilJourneySubjectButton>,
+      </OakSubjectIconButton>,
     );
     expect(getByRole("button", { name: /English/ })).toBeInTheDocument();
   });
 
   it("matches snapshot", () => {
     const { container } = renderWithTheme(
-      <OakPupilJourneySubjectButton
+      <OakSubjectIconButton
         phase="primary"
         subjectIconName="subject-english"
         variant="vertical"
       >
         English
-      </OakPupilJourneySubjectButton>,
+      </OakSubjectIconButton>,
     );
     expect(container).toMatchSnapshot();
   });
   describe("OakPupilJourneySubjectButton - Phase Styling", () => {
     it("applies correct styles for primary phase", () => {
       const { getByRole } = renderWithTheme(
-        <OakPupilJourneySubjectButton
+        <OakSubjectIconButton
           phase="primary"
           subjectIconName="subject-science"
           variant="vertical"
         >
           Science
-        </OakPupilJourneySubjectButton>,
+        </OakSubjectIconButton>,
       );
 
       const button = getByRole("button", { name: /Science/ });
@@ -59,13 +59,13 @@ describe("OakPupilJourneySubjectButton", () => {
 
     it("applies correct styles for secondary phase", () => {
       const { getByRole } = renderWithTheme(
-        <OakPupilJourneySubjectButton
+        <OakSubjectIconButton
           phase="secondary"
           subjectIconName="subject-maths"
           variant="vertical"
         >
           Math
-        </OakPupilJourneySubjectButton>,
+        </OakSubjectIconButton>,
       );
 
       const button = getByRole("button", { name: /Math/ });
@@ -81,13 +81,13 @@ describe("OakPupilJourneySubjectButton", () => {
 
     it("applies correct styles for non-curriculum phase", () => {
       const { getByRole } = renderWithTheme(
-        <OakPupilJourneySubjectButton
+        <OakSubjectIconButton
           phase="non-curriculum"
           subjectIconName="subject-music"
           variant="vertical"
         >
           Music
-        </OakPupilJourneySubjectButton>,
+        </OakSubjectIconButton>,
       );
 
       const button = getByRole("button", { name: /Music/ });

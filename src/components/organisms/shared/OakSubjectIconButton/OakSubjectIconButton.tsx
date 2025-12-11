@@ -8,7 +8,7 @@ import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
 import { OakIcon, OakIconName } from "@/components/atoms";
 import { OakCombinedColorToken } from "@/styles";
 
-export type OakPupilJourneySubjectButtonProps = {
+export type OakSubjectIconButtonProps = {
   phase: "primary" | "secondary" | "non-curriculum";
   subjectIconName: OakIconName;
   variant: "vertical" | "horizontal";
@@ -43,13 +43,13 @@ export type OakPupilJourneySubjectButtonProps = {
  *  called after a mouseEnter and mouseLeave event has happened
  */
 
-export const OakPupilJourneySubjectButton = <C extends ElementType = "button">({
+export const OakSubjectIconButton = <C extends ElementType = "button">({
   phase,
   element,
   subjectIconName,
   variant,
   ...rest
-}: OakPupilJourneySubjectButtonProps & PolymorphicPropsWithoutRef<C>) => {
+}: OakSubjectIconButtonProps & PolymorphicPropsWithoutRef<C>) => {
   let defaultBackground: OakCombinedColorToken,
     hoverBackground: OakCombinedColorToken,
     borderColor: OakCombinedColorToken;
