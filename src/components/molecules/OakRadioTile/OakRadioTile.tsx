@@ -43,7 +43,7 @@ const HiddenRadioButtonInput = styled.input.attrs({
 `;
 
 const RadioTileFocus = styled(OakBox)<OakBoxProps>`
-  box-shadow: ${`inset 0 0 0 0.15rem ${parseColor("lemon")}`};
+  box-shadow: ${`inset 0 0 0 0.15rem ${parseColor("icon-promo")}`};
   width: calc(100% + 12px);
   height: calc(100% + 12px);
   top: -6px;
@@ -62,15 +62,15 @@ const UnstyledComponent = (props: OakRadioTileProps) => {
       $borderRadius="border-radius-s"
       $pa="spacing-12"
       $position="relative"
-      $background={isFocussed || isChecked ? "black" : "transparent"}
-      $color={isFocussed || isChecked ? "white" : "black"}
+      $background={isFocussed || isChecked ? "bg-inverted" : "transparent"}
+      $color={isFocussed || isChecked ? "text-inverted" : "text-primary"}
     >
       {isFocussed && (
         <RadioTileFocus
           $background="transparent"
           $position="absolute"
           $ba="border-solid-l"
-          $borderColor="grey60"
+          $borderColor="border-neutral-stronger"
           $borderRadius="border-radius-s"
           data-testid="radio-tile-focus"
         />
@@ -107,7 +107,7 @@ const UnstyledComponent = (props: OakRadioTileProps) => {
             <OakBox
               $height="spacing-16"
               $width="spacing-16"
-              $background="black"
+              $background="bg-inverted"
               $position="absolute"
               $borderRadius="border-radius-circle"
               data-testid="radio-tile-checked"

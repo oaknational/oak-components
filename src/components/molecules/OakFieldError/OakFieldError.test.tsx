@@ -8,7 +8,7 @@ import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("OakFieldError", () => {
   it("renders", () => {
-    const { getByText } = render(
+    const { getByText } = renderWithTheme(
       <OakFieldError> Oak Field Error</OakFieldError>,
     );
     expect(getByText("Oak Field Error")).toBeInTheDocument();

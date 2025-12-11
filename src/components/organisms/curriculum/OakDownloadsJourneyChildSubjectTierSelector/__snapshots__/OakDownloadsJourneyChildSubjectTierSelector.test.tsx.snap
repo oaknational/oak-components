@@ -414,7 +414,8 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   content: "";
   height: 2rem;
   width: 2rem;
-  background: "transparent" display:block;
+  background: transparent;
+  display: block;
   position: absolute;
   border-radius: 50%;
   border: 0.125rem solid #575757;

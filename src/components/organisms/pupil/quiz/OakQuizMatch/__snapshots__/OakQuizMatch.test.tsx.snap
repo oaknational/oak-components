@@ -232,7 +232,7 @@ exports[`OakQuizMatch matches snapshot 1`] = `
 
 .c10 {
   background-color: #f2f2f2;
-  background-color: color-mix(in lch,#222222 5%,transparent);
+  background-color: color-mix( in lch, #222222 5%, transparent );
 }
 
 .c10[data-over="true"] {

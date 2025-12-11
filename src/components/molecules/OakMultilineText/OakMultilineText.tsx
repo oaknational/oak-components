@@ -50,7 +50,7 @@ type StyledOakTextAreaProps = {
 const StyledOakTextArea = styled(OakTextArea)<StyledOakTextAreaProps>`
   &:focus-visible {
     border-color: ${(props) =>
-      props.isError ? parseColor("red") : parseColor("border-primary")};
+      props.isError ? parseColor("icon-error") : parseColor("border-primary")};
   }
 
   &:hover {
@@ -247,7 +247,7 @@ const UnstyledComponent = forwardRef(
               <OakSpan
                 aria-label="character count"
                 $font={"body-4"}
-                $color={"grey60"}
+                $color={"text-subdued"}
                 $position={["absolute", null]}
                 $top={["spacing-0", null]}
                 $right={["spacing-0", null]}

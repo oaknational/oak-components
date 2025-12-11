@@ -19,7 +19,7 @@ const meta: Meta<typeof OakLessonInfoCard> = {
   decorators: [
     (Story) => (
       <OakFlex
-        $background={"grey10"}
+        $background={"bg-neutral"}
         $pa={"spacing-24"}
         $flexDirection={"column"}
       >

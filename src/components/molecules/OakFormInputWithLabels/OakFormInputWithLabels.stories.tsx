@@ -13,7 +13,7 @@ const meta: Meta<typeof OakFormInputWithLabels> = {
     (Story) => (
       <OakBox
         $width={"100%"}
-        $background={"grey10"}
+        $background={"bg-neutral"}
         $pv={"spacing-20"}
         $ph={"spacing-12"}
       >

@@ -85,7 +85,7 @@ const Accordion = ({
     <OakFlex
       $bt={"border-solid-s"}
       $bb={isOpen ? "border-solid-none" : "border-solid-s"}
-      $borderColor={"grey40"}
+      $borderColor={"border-neutral-lighter"}
       $pv={"spacing-12"}
       $flexDirection={"column"}
       $width={"100%"}

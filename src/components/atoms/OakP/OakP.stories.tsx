@@ -43,6 +43,6 @@ export const DefaultOakFlex: Story = (args: Partial<OakPProps>) => (
 );
 
 DefaultOakFlex.args = {
-  $color: "black",
+  $color: "text-primary",
   $font: "body-1",
 };

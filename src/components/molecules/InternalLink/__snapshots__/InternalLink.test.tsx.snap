@@ -33,7 +33,7 @@ exports[`InternalLink matches snapshot 1`] = `
 }
 
 .c0:visited {
-  color: #7c9aec;
+  color: #081676;
 }
 
 .c0:active {

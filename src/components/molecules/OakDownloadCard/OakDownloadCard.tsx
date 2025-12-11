@@ -35,8 +35,9 @@ const Container = styled(OakFlex)<{ $hoverBackground: OakCombinedColorToken }>`
 
   &:has(input:focus-within) {
     &:focus-visible {
-      box-shadow: ${() => `0px 0px 0px 2px ${parseColor("lemon")}`},
-        ${() => `0px 0px 0px 5px ${parseColor("grey60")}`};
+      box-shadow:
+        0px 0px 0px 2px ${parseColor("bg-decorative5-main")},
+        0px 0px 0px 5px ${parseColor("bg-btn-primary-hover")};
     }
   }
   @media (hover: hover) {
@@ -89,17 +90,17 @@ export const OakDownloadCard = (props: OakDownloadCardProps) => {
   return (
     <Container
       data-testid={dataTestId}
-      $background={"white"}
+      $background={"bg-primary"}
       $ba={"border-solid-m"}
       $borderRadius={"border-radius-s"}
       $overflow={"hidden"}
       $hoverBackground="bg-btn-secondary-hover"
-      $color={"black"}
+      $color={"text-primary"}
     >
       <LabelContainer>
         <OakFlex $alignItems={"flex-start"} $flexGrow={1}>
           <OakFlex
-            $background={"lemon"}
+            $background={"bg-decorative5-main"}
             $pa={"spacing-12"}
             $alignItems={"center"}
             $alignSelf={"stretch"}

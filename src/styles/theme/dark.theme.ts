@@ -10,7 +10,7 @@ export const oakDarkTheme: OakTheme = {
     "text-link-active": "lavender",
     "text-link-hover": "lavender50",
     "text-link-pressed": "lavender30",
-    "text-link-visited": "pink50",
+    "text-link-visited": "lavender30",
     "text-inverted": "black",
     "text-success": "mint",
     "text-warning": "lemon50", // to be deprecated, we don't use warning text anymore

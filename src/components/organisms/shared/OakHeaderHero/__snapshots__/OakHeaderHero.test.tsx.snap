@@ -228,7 +228,7 @@ exports[`OakHeaderHero matches snapshot 1`] = `
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
   margin-bottom: 1.5rem;
-  color: #1b1b1b;
+  color: #222222;
 }
 
 .c9 {
@@ -307,7 +307,7 @@ exports[`OakHeaderHero matches snapshot 1`] = `
 }
 
 .c8:visited {
-  color: #7c9aec;
+  color: #081676;
 }
 
 .c8:active {

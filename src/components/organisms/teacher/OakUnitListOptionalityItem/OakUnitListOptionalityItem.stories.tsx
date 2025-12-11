@@ -78,7 +78,7 @@ const meta: Meta<typeof OakUnitListOptionalityItem> = {
         <OakFlex
           $flexDirection="column"
           $gap="spacing-48"
-          $background={"grey20"}
+          $background={"bg-neutral"}
           $pa={"spacing-24"}
           role="list"
         >

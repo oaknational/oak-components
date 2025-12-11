@@ -1,6 +1,6 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { render, fireEvent } from "@testing-library/react";
+import { fireEvent } from "@testing-library/react";
 
 import {
   InternalShadowRoundButton,
@@ -11,12 +11,12 @@ import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 const defaultArgs: InternalShadowRoundButtonProps = {
   iconName: "arrow-right",
-  defaultIconBackground: "mint",
-  defaultTextColor: "mint30",
-  hoverTextColor: "lemon50",
-  disabledIconBackground: "grey20",
-  disabledTextColor: "grey40",
-  hoverIconBackground: "mint",
+  defaultIconBackground: "bg-decorative1-main",
+  defaultTextColor: "text-subdued",
+  hoverTextColor: "text-promo",
+  disabledIconBackground: "bg-neutral",
+  disabledTextColor: "text-disabled",
+  hoverIconBackground: "bg-decorative1-main",
   iconBackgroundSize: "spacing-32",
   iconSize: "spacing-24",
 };
@@ -50,7 +50,7 @@ describe("InternalShadowRoundButton", () => {
   });
 
   it("renders the chidren", () => {
-    const { getByText } = render(
+    const { getByText } = renderWithTheme(
       <InternalShadowRoundButton {...defaultArgs}>
         Click
       </InternalShadowRoundButton>,
@@ -60,7 +60,7 @@ describe("InternalShadowRoundButton", () => {
 
   it("calls onClick method", () => {
     const onClick = jest.fn();
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithTheme(
       <InternalShadowRoundButton
         {...defaultArgs}
         data-testid="test"
@@ -75,7 +75,7 @@ describe("InternalShadowRoundButton", () => {
 
   it("calls onHovered method when a mouseover and mouseout event has happened", () => {
     const onHovered = jest.fn();
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithTheme(
       <InternalShadowRoundButton
         {...defaultArgs}
         data-testid="test"
@@ -91,7 +91,7 @@ describe("InternalShadowRoundButton", () => {
 
   it("calls doesn't call onHovered method before a mouseout event happens", () => {
     const onHovered = jest.fn();
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithTheme(
       <InternalShadowRoundButton
         {...defaultArgs}
         data-testid="test"
@@ -116,13 +116,13 @@ describe("InternalShadowRoundButton", () => {
 
     expect(getByTestId("test").firstChild?.firstChild).toHaveStyle({
       "background-color": "#bef2bd",
-      color: "#ebfbeb",
+      color: "#575757",
     });
   });
 
   it("correctly captures the duration of the hover event", () => {
     const onHovered = jest.fn();
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithTheme(
       <InternalShadowRoundButton
         {...defaultArgs}
         data-testid="test"
