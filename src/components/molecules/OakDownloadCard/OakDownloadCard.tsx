@@ -35,7 +35,8 @@ const Container = styled(OakFlex)<{ $hoverBackground: OakCombinedColorToken }>`
 
   &:has(input:focus-within) {
     &:focus-visible {
-      box-shadow: ${() => `0px 0px 0px 2px ${parseColor("lemon")}`},
+      box-shadow:
+        ${() => `0px 0px 0px 2px ${parseColor("lemon")}`},
         ${() => `0px 0px 0px 5px ${parseColor("grey60")}`};
     }
   }

@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import { useArgs } from "@storybook/preview-api";
-import { action } from "@storybook/addon-actions";
+import { useArgs } from "storybook/preview-api";
+import { action } from "storybook/actions";
 
 import { OakCookieConsent, OakCookieConsentProps } from "./OakCookieConsent";
 

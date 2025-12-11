@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { StoryObj, Meta } from "@storybook/react";
-import { useArgs } from "@storybook/preview-api";
+import { useArgs } from "storybook/preview-api";
 import { useEditor, EditorContent } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 
