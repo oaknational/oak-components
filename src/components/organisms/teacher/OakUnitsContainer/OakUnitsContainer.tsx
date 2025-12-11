@@ -7,6 +7,7 @@ import {
 } from "@/components/organisms/teacher/OakUnitsHeader";
 import { OakFlex, OakUL } from "@/components/atoms";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
+import { OakUiRoleToken } from "@/styles";
 
 const OakULFlex = styled(OakUL)`
   display: flex;
@@ -17,6 +18,7 @@ const OakULFlex = styled(OakUL)`
 export type OakUnitsContainerProps = OakUnitsHeaderProps & {
   showHeader: boolean;
   unitCards: Array<React.ReactNode>;
+  backgroundColour?: OakUiRoleToken;
 };
 
 const OakUnitsContainerCss = css<OakUnitsContainerProps>``;
@@ -32,6 +34,7 @@ const UnstyledComponent = (props: OakUnitsContainerProps) => {
     isCustomUnit,
     customHeadingText,
     banner,
+    backgroundColour = "bg-decorative3-very-subdued",
     ...rest
   } = props;
   return (
@@ -39,7 +42,7 @@ const UnstyledComponent = (props: OakUnitsContainerProps) => {
       $gap="spacing-16"
       $alignItems="center"
       {...rest}
-      $background={isLegacy ? "bg-neutral" : "bg-decorative3-very-subdued"}
+      $background={isLegacy ? "bg-neutral" : backgroundColour}
       $flexDirection="column"
       $pa="spacing-16"
       $borderRadius="border-radius-m"

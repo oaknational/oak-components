@@ -145,16 +145,28 @@ exports[`OakButtonWithDropdown matches snapshot 1`] = `
   border-color: #222222;
 }
 
+.c8:hover [data-state="selected"] {
+  display: none;
+}
+
 .c8:active {
   background: #ffffff;
   border-color: #222222;
   color: #222222;
 }
 
+.c8:active [data-state="selected"] {
+  display: none;
+}
+
 .c8:disabled {
   background: #e4e4e4;
   border-color: #808080;
   color: #808080;
+}
+
+.c8:disabled [data-state="selected"] {
+  display: none;
 }
 
 .c5 .grey-shadow:has(+ * + .internal-button:focus-visible) {
@@ -210,15 +222,19 @@ exports[`OakButtonWithDropdown matches snapshot 1`] = `
             <div
               class="c1 c9"
             >
-              <span
-                class="c10"
+              <div
+                class="c0"
               >
-                <div
-                  class="c1 c11"
+                <span
+                  class="c10"
                 >
-                  Actions
-                </div>
-              </span>
+                  <div
+                    class="c1 c11"
+                  >
+                    Actions
+                  </div>
+                </span>
+              </div>
               <div
                 class="c12"
               >

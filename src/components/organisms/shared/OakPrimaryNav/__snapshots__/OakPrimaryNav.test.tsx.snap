@@ -32,6 +32,11 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
+.c10 {
+  position: relative;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -62,7 +67,7 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
   gap: 0.5rem;
 }
 
-.c10 {
+.c11 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -110,7 +115,7 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
   cursor: default;
 }
 
-.c13 {
+.c14 {
   background: none;
   color: inherit;
   border: none;
@@ -132,7 +137,7 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
   border-radius: 0.25rem;
 }
 
-.c13:disabled {
+.c14:disabled {
   pointer-events: none;
   cursor: default;
 }
@@ -148,8 +153,12 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #222222;
-  background: #ffffff;
-  border-color: #ffffff;
+  background: #f2f2f2;
+  border-color: #f2f2f2;
+}
+
+.c7:hover [data-state="selected"] {
+  display: none;
 }
 
 .c7:active {
@@ -158,20 +167,28 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
   color: #222222;
 }
 
+.c7:active [data-state="selected"] {
+  display: none;
+}
+
 .c7:disabled {
   background: #ffffff;
   border-color: #ffffff;
   color: #808080;
 }
 
-.c14 {
+.c7:disabled [data-state="selected"] {
+  display: none;
+}
+
+.c15 {
   position: relative;
   width: 100%;
   height: 100%;
   display: inline-block;
 }
 
-.c14:hover {
+.c15:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #ffffff;
@@ -179,16 +196,28 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
   border-color: #575757;
 }
 
-.c14:active {
+.c15:hover [data-state="selected"] {
+  display: none;
+}
+
+.c15:active {
   background: #222222;
   border-color: #222222;
   color: #ffffff;
 }
 
-.c14:disabled {
+.c15:active [data-state="selected"] {
+  display: none;
+}
+
+.c15:disabled {
   background: #808080;
   border-color: #808080;
   color: #ffffff;
+}
+
+.c15:disabled [data-state="selected"] {
+  display: none;
 }
 
 .c4 .grey-shadow:has(+ * + .internal-button:focus-visible) {
@@ -216,32 +245,32 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c11 .grey-shadow:has(+ * + .internal-button:focus-visible) {
+.c12 .grey-shadow:has(+ * + .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c11 .yellow-shadow:has(+ .internal-button:focus-visible) {
+.c12 .yellow-shadow:has(+ .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
 }
 
-.c11 .yellow-shadow:has(+ .internal-button:hover),
-.c11 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
+.c12 .yellow-shadow:has(+ .internal-button:hover),
+.c12 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c11 .grey-shadow:has(+ * + .internal-button:hover) {
+.c12 .grey-shadow:has(+ * + .internal-button:hover) {
   box-shadow: none;
 }
 
-.c11 .grey-shadow:has(+ * + .internal-button:active) {
+.c12 .grey-shadow:has(+ * + .internal-button:active) {
   box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c11 .yellow-shadow:has(+ .internal-button:active) {
+.c12 .yellow-shadow:has(+ .internal-button:active) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c12 {
+.c13 {
   pointer-events: none;
 }
 
@@ -269,11 +298,15 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
             <div
               class="c8 c9"
             >
-              <span
+              <div
                 class="c10"
               >
-                nav item 1
-              </span>
+                <span
+                  class="c11"
+                >
+                  nav item 1
+                </span>
+              </div>
             </div>
           </a>
         </div>
@@ -282,7 +315,7 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
         class="c2"
       >
         <div
-          class="c3 c11 c12"
+          class="c3 c12 c13"
         >
           <div
             class="c5 grey-shadow"
@@ -292,16 +325,20 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
           />
           <span
             aria-current="page"
-            class="c13 c14 internal-button"
+            class="c14 c15 internal-button"
           >
             <div
               class="c8 c9"
             >
-              <span
+              <div
                 class="c10"
               >
-                nav item 2
-              </span>
+                <span
+                  class="c11"
+                >
+                  nav item 2
+                </span>
+              </div>
             </div>
           </span>
         </div>
@@ -325,11 +362,15 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
             <div
               class="c8 c9"
             >
-              <span
+              <div
                 class="c10"
               >
-                nav item 3
-              </span>
+                <span
+                  class="c11"
+                >
+                  nav item 3
+                </span>
+              </div>
             </div>
           </a>
         </div>
@@ -353,11 +394,15 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
             <div
               class="c8 c9"
             >
-              <span
+              <div
                 class="c10"
               >
-                nav item 4
-              </span>
+                <span
+                  class="c11"
+                >
+                  nav item 4
+                </span>
+              </div>
             </div>
           </a>
         </div>

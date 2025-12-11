@@ -4,6 +4,7 @@ import styled, { css, keyframes } from "styled-components";
 import { OakScreenReader } from "@/components/atoms/OakScreenReader";
 import { SizeStyleProps } from "@/styles/utils/sizeStyle";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
+import { parseColor } from "@/styles/helpers/parseColor";
 import { responsiveStyle } from "@/styles/utils/responsiveStyle";
 import { ColorStyleProps, colorStyle } from "@/styles/utils/colorStyle";
 import { OakUiRoleToken } from "@/styles";
@@ -73,8 +74,9 @@ const StyledLoadingSpinner = styled.span<OakLoadingSpinnerProps>`
     ${(props) =>
       props.loaderColor
         ? css`
-            border-color: ${props.loaderColor} ${props.loaderColor}
-              ${props.loaderColor} transparent;
+            border-color: ${parseColor(props.loaderColor)}
+              ${parseColor(props.loaderColor)} ${parseColor(props.loaderColor)}
+              transparent;
           `
         : css`
             border-color: currentcolor currentcolor currentcolor transparent;

@@ -103,7 +103,12 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c25 {
+.c24 {
+  position: relative;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c26 {
   display: none;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -185,7 +190,7 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c24 {
+.c25 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -247,16 +252,28 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
   border-color: #575757;
 }
 
+.c21:hover [data-state="selected"] {
+  display: none;
+}
+
 .c21:active {
   background: #222222;
   border-color: #222222;
   color: #ffffff;
 }
 
+.c21:active [data-state="selected"] {
+  display: none;
+}
+
 .c21:disabled {
   background: #808080;
   border-color: #808080;
   color: #ffffff;
+}
+
+.c21:disabled [data-state="selected"] {
+  display: none;
 }
 
 .c18 .grey-shadow:has(+ * + .internal-button:focus-visible) {
@@ -363,13 +380,13 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c25 {
+  .c26 {
     display: block;
   }
 }
 
 @media (min-width:1280px) {
-  .c25 {
+  .c26 {
     display: block;
   }
 }
@@ -485,11 +502,15 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
                 <div
                   class="c22 c23"
                 >
-                  <span
+                  <div
                     class="c24"
                   >
-                    Sign up
-                  </span>
+                    <span
+                      class="c25"
+                    >
+                      Sign up
+                    </span>
+                  </div>
                 </div>
               </button>
             </div>
@@ -497,7 +518,7 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
         </form>
       </div>
       <div
-        class="c25"
+        class="c26"
       >
         <svg
           class="c6"

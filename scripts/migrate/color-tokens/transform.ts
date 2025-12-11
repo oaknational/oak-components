@@ -52,7 +52,7 @@ export default function (
   const colorMappings: ColorMapping[] = [
     { regex: /(icon)/i, mappings: ICON_COLOR_MAPPINGS, name: "icon" },
     {
-      regex: /(bg|background|fill|loaderColor)/i,
+      regex: /(bg|background|fill)/i,
       mappings: BG_COLOR_MAPPINGS,
       name: "background",
     },

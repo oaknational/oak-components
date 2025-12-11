@@ -46,7 +46,7 @@ exports[`OakTeacherNotesInline matches snapshot 1`] = `
 }
 
 .c2 a::visited {
-  color: #7c9aec;
+  color: #081676;
 }
 
 .c2 a::pressed {

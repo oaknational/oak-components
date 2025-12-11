@@ -67,6 +67,11 @@ exports[`OakCookieBanner matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
+.c18 {
+  position: relative;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -149,7 +154,7 @@ exports[`OakCookieBanner matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c18 {
+.c19 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -188,7 +193,7 @@ exports[`OakCookieBanner matches snapshot 1`] = `
   cursor: default;
 }
 
-.c19 {
+.c20 {
   background: none;
   color: inherit;
   border: none;
@@ -210,7 +215,7 @@ exports[`OakCookieBanner matches snapshot 1`] = `
   border-radius: 0.25rem;
 }
 
-.c19:disabled {
+.c20:disabled {
   pointer-events: none;
   cursor: default;
 }
@@ -230,10 +235,18 @@ exports[`OakCookieBanner matches snapshot 1`] = `
   border-color: #222222;
 }
 
+.c16:hover [data-state="selected"] {
+  display: none;
+}
+
 .c16:active {
   background: #ffffff;
   border-color: #222222;
   color: #222222;
+}
+
+.c16:active [data-state="selected"] {
+  display: none;
 }
 
 .c16:disabled {
@@ -242,14 +255,18 @@ exports[`OakCookieBanner matches snapshot 1`] = `
   color: #808080;
 }
 
-.c20 {
+.c16:disabled [data-state="selected"] {
+  display: none;
+}
+
+.c21 {
   position: relative;
   width: 100%;
   height: 100%;
   display: inline-block;
 }
 
-.c20:hover {
+.c21:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #ffffff;
@@ -257,16 +274,28 @@ exports[`OakCookieBanner matches snapshot 1`] = `
   border-color: #575757;
 }
 
-.c20:active {
+.c21:hover [data-state="selected"] {
+  display: none;
+}
+
+.c21:active {
   background: #222222;
   border-color: #222222;
   color: #ffffff;
 }
 
-.c20:disabled {
+.c21:active [data-state="selected"] {
+  display: none;
+}
+
+.c21:disabled {
   background: #808080;
   border-color: #808080;
   color: #ffffff;
+}
+
+.c21:disabled [data-state="selected"] {
+  display: none;
 }
 
 .c13 .grey-shadow:has(+ * + .internal-button:focus-visible) {
@@ -550,11 +579,15 @@ exports[`OakCookieBanner matches snapshot 1`] = `
               <div
                 class="c6 c17"
               >
-                <span
+                <div
                   class="c18"
                 >
-                  Cookie settings
-                </span>
+                  <span
+                    class="c19"
+                  >
+                    Cookie settings
+                  </span>
+                </div>
               </div>
             </button>
           </div>
@@ -568,17 +601,21 @@ exports[`OakCookieBanner matches snapshot 1`] = `
               class="c14 yellow-shadow"
             />
             <button
-              class="c19 c20 internal-button"
+              class="c20 c21 internal-button"
               data-testid="cookie-banner-accept"
             >
               <div
                 class="c6 c17"
               >
-                <span
+                <div
                   class="c18"
                 >
-                  Accept all cookies
-                </span>
+                  <span
+                    class="c19"
+                  >
+                    Accept all cookies
+                  </span>
+                </div>
               </div>
             </button>
           </div>
