@@ -109,6 +109,7 @@ export const OakSubjectIconButton = <C extends ElementType = "button">({
       innerWidth={isVerticalVariant ? "spacing-120" : "auto"}
       hoverUnderline
       height={isVerticalVariant ? null : "spacing-48"}
+      $ba={isVerticalVariant ? "border-solid-m" : "border-solid-s"}
       {...rest}
     />
   );
