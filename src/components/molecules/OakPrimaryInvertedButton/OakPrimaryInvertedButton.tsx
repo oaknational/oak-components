@@ -42,9 +42,10 @@ export const OakPrimaryInvertedButton = <C extends ElementType = "button">({
       defaultBorderColor="bg-btn-secondary"
       defaultBackground="bg-btn-secondary"
       defaultTextColor="text-primary"
-      hoverBackground="bg-btn-secondary"
-      hoverBorderColor="bg-btn-secondary"
+      hoverBackground="bg-btn-secondary-hover"
+      hoverBorderColor="bg-btn-secondary-hover"
       hoverTextColor="text-primary"
+      hoverUnderline
       disabledBackground="bg-btn-secondary"
       disabledBorderColor="bg-btn-secondary"
       disabledTextColor="text-disabled"

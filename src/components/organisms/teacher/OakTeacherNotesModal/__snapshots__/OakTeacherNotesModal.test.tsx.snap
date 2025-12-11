@@ -129,17 +129,22 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c42 {
+.c41 {
+  position: relative;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c43 {
   display: none;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c46 {
+.c47 {
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c50 {
+.c51 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -148,7 +153,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c52 {
+.c53 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -156,7 +161,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c54 {
+.c55 {
   padding: 1rem;
   background: #fff7cc;
   border: 0.063rem solid;
@@ -170,13 +175,13 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c56 {
+.c57 {
   position: relative;
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c59 {
+.c60 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1rem;
@@ -193,7 +198,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   object-fit: contain;
 }
 
-.c51 {
+.c52 {
   -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   object-fit: contain;
@@ -324,11 +329,11 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c43 {
+.c44 {
   display: none;
 }
 
-.c47 {
+.c48 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -347,7 +352,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   gap: 1rem;
 }
 
-.c53 {
+.c54 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -361,7 +366,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   align-self: stretch;
 }
 
-.c55 {
+.c56 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -375,7 +380,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   align-items: end;
 }
 
-.c57 {
+.c58 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -394,7 +399,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   gap: 0.75rem;
 }
 
-.c58 {
+.c59 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -440,7 +445,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   grid-row: span 1;
 }
 
-.c44 {
+.c45 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -449,7 +454,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   grid-row: span 1;
 }
 
-.c45 {
+.c46 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -480,7 +485,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c41 {
+.c42 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 700;
   font-size: 0.875rem;
@@ -492,7 +497,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   text-align: left;
 }
 
-.c63 {
+.c64 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -507,7 +512,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c60 {
+.c61 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -518,7 +523,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c61 {
+.c62 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1rem;
@@ -576,7 +581,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   cursor: default;
 }
 
-.c48 {
+.c49 {
   background: none;
   color: inherit;
   border: none;
@@ -598,7 +603,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   border-radius: 0.25rem;
 }
 
-.c48:disabled {
+.c49:disabled {
   pointer-events: none;
   cursor: default;
 }
@@ -659,11 +664,15 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
 }
 
 .c39:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #222222;
   background: #f2f2f2;
   border-color: #222222;
+}
+
+.c39:hover [data-state="selected"] {
+  display: none;
 }
 
 .c39:active {
@@ -672,37 +681,57 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   color: #222222;
 }
 
+.c39:active [data-state="selected"] {
+  display: none;
+}
+
 .c39:disabled {
   background: #e4e4e4;
   border-color: #808080;
   color: #808080;
 }
 
-.c49 {
+.c39:disabled [data-state="selected"] {
+  display: none;
+}
+
+.c50 {
   position: relative;
   width: 100%;
   height: 100%;
   display: inline-block;
 }
 
-.c49:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.c50:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #ffffff;
   background: #575757;
   border-color: #575757;
 }
 
-.c49:active {
+.c50:hover [data-state="selected"] {
+  display: none;
+}
+
+.c50:active {
   background: #222222;
   border-color: #222222;
   color: #ffffff;
 }
 
-.c49:disabled {
+.c50:active [data-state="selected"] {
+  display: none;
+}
+
+.c50:disabled {
   background: #808080;
   border-color: #808080;
   color: #ffffff;
+}
+
+.c50:disabled [data-state="selected"] {
+  display: none;
 }
 
 .c36 .grey-shadow:has(+ * + .internal-button:focus-visible) {
@@ -730,7 +759,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c62 {
+.c63 {
   display: inline;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -753,19 +782,19 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   color: #0d24c4;
 }
 
-.c62:focus-visible {
+.c63:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c62:visited {
+.c63:visited {
   color: #081676;
 }
 
-.c62:active {
+.c63:active {
   color: #081676;
 }
 
-.c62[disabled] {
+.c63[disabled] {
   cursor: not-allowed;
   color: #808080;
 }
@@ -799,25 +828,25 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c42 {
-    display: block;
-  }
-}
-
-@media (min-width:750px) {
-  .c52 {
-    display: none;
-  }
-}
-
-@media (min-width:750px) {
   .c43 {
     display: block;
   }
 }
 
 @media (min-width:750px) {
-  .c47 {
+  .c53 {
+    display: none;
+  }
+}
+
+@media (min-width:750px) {
+  .c44 {
+    display: block;
+  }
+}
+
+@media (min-width:750px) {
+  .c48 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -825,7 +854,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c47 {
+  .c48 {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
@@ -834,7 +863,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c53 {
+  .c54 {
     display: none;
   }
 }
@@ -852,14 +881,14 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c44 {
+  .c45 {
     grid-column: span 6;
   }
 }
 
 @media (hover:hover) {
-  .c62:hover,
-  .c62:visited:hover {
+  .c63:hover,
+  .c63:visited:hover {
     color: #0a1d9d;
   }
 }
@@ -1005,11 +1034,15 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
                             <div
                               class="c16 c40"
                             >
-                              <span
+                              <div
                                 class="c41"
                               >
-                                Bold
-                              </span>
+                                <span
+                                  class="c42"
+                                >
+                                  Bold
+                                </span>
+                              </div>
                             </div>
                           </button>
                         </div>
@@ -1029,11 +1062,15 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
                             <div
                               class="c16 c40"
                             >
-                              <span
+                              <div
                                 class="c41"
                               >
-                                Bullet List
-                              </span>
+                                <span
+                                  class="c42"
+                                >
+                                  Bullet List
+                                </span>
+                              </div>
                             </div>
                           </button>
                         </div>
@@ -1045,13 +1082,13 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
                   class="c16 c31"
                 >
                   <div
-                    class="c42 c43 c44"
+                    class="c43 c44 c45"
                   />
                   <div
-                    class="c16 c12 c45"
+                    class="c16 c12 c46"
                   >
                     <div
-                      class="c46 c47"
+                      class="c47 c48"
                     >
                       <div
                         class="c11 c36"
@@ -1063,22 +1100,26 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
                           class="c37 yellow-shadow"
                         />
                         <button
-                          class="c48 c49 internal-button"
+                          class="c49 c50 internal-button"
                         >
                           <div
                             class="c16 c40"
                           >
-                            <span
+                            <div
                               class="c41"
                             >
-                              Share link
-                            </span>
+                              <span
+                                class="c42"
+                              >
+                                Share link
+                              </span>
+                            </div>
                             <div
-                              class="c50"
+                              class="c51"
                             >
                               <img
                                 alt=""
-                                class="c51"
+                                class="c52"
                                 data-nimg="fill"
                                 decoding="async"
                                 loading="lazy"
@@ -1093,14 +1134,14 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
                   </div>
                 </div>
                 <div
-                  class="c52 c53"
+                  class="c53 c54"
                 />
                 <div
-                  class="c54 c55"
+                  class="c55 c56"
                   data-testid="oak-inline-banner"
                 >
                   <div
-                    class="c56 c57"
+                    class="c57 c58"
                   >
                     <div
                       class="c16"
@@ -1121,30 +1162,30 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
                       </div>
                     </div>
                     <div
-                      class="c46 c58"
+                      class="c47 c59"
                     >
                       <div
-                        class="c59"
+                        class="c60"
                         data-testid="inline-banner-message"
                       >
                         <p
-                          class="c60"
+                          class="c61"
                         >
                           Please do not include any personal or sensitive information that could be used to identify, locate, or contact an individual, either directly or indirectly.
                         </p>
                         <p
-                          class="c61"
+                          class="c62"
                         >
                           Names, email addresses, or other personal information will be redacted from your note to help keep everyone safe. For more guidance, see our
                            
                           <a
                             aria-label="Oak's terms and conditions(opens in a new tab)"
-                            class="c62"
+                            class="c63"
                             href="https://www.thenational.academy/legal/terms-and-conditions"
                             target="_blank"
                           >
                             <span
-                              class="c63"
+                              class="c64"
                             >
                               Terms & conditions
                             </span>

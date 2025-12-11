@@ -276,16 +276,28 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   border-color: #575757;
 }
 
+.c25:hover [data-state="selected"] {
+  display: none;
+}
+
 .c25:active {
   background: #222222;
   border-color: #222222;
   color: #ffffff;
 }
 
+.c25:active [data-state="selected"] {
+  display: none;
+}
+
 .c25:disabled {
   background: #808080;
   border-color: #808080;
   color: #ffffff;
+}
+
+.c25:disabled [data-state="selected"] {
+  display: none;
 }
 
 .c29 {
@@ -303,16 +315,28 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   border-color: #222222;
 }
 
+.c29:hover [data-state="selected"] {
+  display: none;
+}
+
 .c29:active {
   background: #ffffff;
   border-color: #222222;
   color: #222222;
 }
 
+.c29:active [data-state="selected"] {
+  display: none;
+}
+
 .c29:disabled {
   background: #e4e4e4;
   border-color: #808080;
   color: #808080;
+}
+
+.c29:disabled [data-state="selected"] {
+  display: none;
 }
 
 .c23 .grey-shadow:has(+ * + .internal-button:focus-visible) {
@@ -576,11 +600,15 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
                   <div
                     class="c4 c26"
                   >
-                    <span
-                      class="c27"
+                    <div
+                      class="c2"
                     >
-                      All
-                    </span>
+                      <span
+                        class="c27"
+                      >
+                        All
+                      </span>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -601,11 +629,15 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
                   <div
                     class="c4 c26"
                   >
-                    <span
-                      class="c27"
+                    <div
+                      class="c2"
                     >
-                      Biology
-                    </span>
+                      <span
+                        class="c27"
+                      >
+                        Biology
+                      </span>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -626,11 +658,15 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
                   <div
                     class="c4 c26"
                   >
-                    <span
-                      class="c27"
+                    <div
+                      class="c2"
                     >
-                      Chemistry
-                    </span>
+                      <span
+                        class="c27"
+                      >
+                        Chemistry
+                      </span>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -651,11 +687,15 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
                   <div
                     class="c4 c26"
                   >
-                    <span
-                      class="c27"
+                    <div
+                      class="c2"
                     >
-                      Physics
-                    </span>
+                      <span
+                        class="c27"
+                      >
+                        Physics
+                      </span>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -726,11 +766,15 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
         <div
           class="c4 c26"
         >
-          <span
-            class="c27"
+          <div
+            class="c2"
           >
-            Skip to results
-          </span>
+            <span
+              class="c27"
+            >
+              Skip to results
+            </span>
+          </div>
         </div>
       </button>
     </div>
@@ -759,11 +803,15 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
             <div
               class="c4 c26"
             >
-              <span
-                class="c27"
+              <div
+                class="c2"
               >
-                All
-              </span>
+                <span
+                  class="c27"
+                >
+                  All
+                </span>
+              </div>
             </div>
           </button>
         </div>
@@ -784,11 +832,15 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
             <div
               class="c4 c26"
             >
-              <span
-                class="c27"
+              <div
+                class="c2"
               >
-                Biology
-              </span>
+                <span
+                  class="c27"
+                >
+                  Biology
+                </span>
+              </div>
             </div>
           </button>
         </div>
@@ -809,11 +861,15 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
             <div
               class="c4 c26"
             >
-              <span
-                class="c27"
+              <div
+                class="c2"
               >
-                Chemistry
-              </span>
+                <span
+                  class="c27"
+                >
+                  Chemistry
+                </span>
+              </div>
             </div>
           </button>
         </div>
@@ -834,11 +890,15 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
             <div
               class="c4 c26"
             >
-              <span
-                class="c27"
+              <div
+                class="c2"
               >
-                Physics
-              </span>
+                <span
+                  class="c27"
+                >
+                  Physics
+                </span>
+              </div>
             </div>
           </button>
         </div>

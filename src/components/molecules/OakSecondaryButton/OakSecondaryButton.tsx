@@ -45,6 +45,7 @@ export const OakSecondaryButton = <C extends ElementType = "button">({
       hoverBackground="bg-btn-secondary-hover"
       hoverBorderColor="text-primary"
       hoverTextColor="text-primary"
+      hoverUnderline={true}
       disabledBackground="bg-btn-secondary-disabled"
       disabledBorderColor="text-disabled"
       disabledTextColor="text-disabled"
