@@ -106,7 +106,7 @@ export const OakSubjectIconButton = <C extends ElementType = "button">({
       disabledBorderColor="border-neutral-lighter"
       disabledTextColor="text-subdued"
       textAlign={"center"}
-      innerWidth={"spacing-120"}
+      innerWidth={isVerticalVariant ? "spacing-120" : "auto"}
       hoverUnderline
       height={isVerticalVariant ? null : "spacing-48"}
       {...rest}
