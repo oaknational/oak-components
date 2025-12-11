@@ -6,11 +6,19 @@ import { OakUnitsContainer } from "./OakUnitsContainer";
 import { OakUnitListItem } from "@/components/organisms/teacher/OakUnitListItem";
 import { OakUnitListOptionalityItem } from "@/components/organisms/teacher/OakUnitListOptionalityItem";
 import { OakInlineBanner } from "@/components";
+import { oakUiRoleTokens } from "@/styles";
+
+const controlBackgroundColour = [...oakUiRoleTokens].sort((a, b) =>
+  a.localeCompare(b),
+);
 
 const meta: Meta<typeof OakUnitsContainer> = {
   component: OakUnitsContainer,
   tags: ["autodocs"],
   argTypes: {
+    backgroundColour: {
+      options: controlBackgroundColour,
+    },
     isLegacy: { type: "boolean" },
     showHeader: { type: "boolean" },
     subject: { type: "string" },
@@ -46,6 +54,7 @@ const meta: Meta<typeof OakUnitsContainer> = {
   parameters: {
     controls: {
       include: [
+        "backgroundColour",
         "isLegacy",
         "showHeader",
         "subject",
