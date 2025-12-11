@@ -6,6 +6,7 @@ exports[`OakPupilJourneyYearButton matches snapshot 1`] = `
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  height: auto;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -93,8 +94,8 @@ exports[`OakPupilJourneyYearButton matches snapshot 1`] = `
 }
 
 .c4:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
   color: #222222;
   background: #deb7d5;
   border-color: #cf9cc3;
