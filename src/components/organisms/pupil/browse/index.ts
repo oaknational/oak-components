@@ -8,6 +8,5 @@ export * from "./OakPupilJourneyListItemSubheading";
 export * from "./OakPupilJourneyOptionalityButton";
 export * from "./OakPupilJourneyOptionalityItem";
 export * from "./OakPupilJourneyProgrammeOptions";
-export * from "./OakPupilJourneySubjectButton";
 export * from "./OakPupilJourneyUnitsFilter";
 export * from "./OakPupilJourneyYearButton";

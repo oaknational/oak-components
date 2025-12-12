@@ -55,6 +55,7 @@ exports[`OakCookieConsent matches snapshot 1`] = `
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  height: auto;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -64,11 +65,6 @@ exports[`OakCookieConsent matches snapshot 1`] = `
   width: 100%;
   height: 100%;
   border-radius: 0.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c18 {
-  position: relative;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -154,7 +150,7 @@ exports[`OakCookieConsent matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c19 {
+.c18 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -193,7 +189,7 @@ exports[`OakCookieConsent matches snapshot 1`] = `
   cursor: default;
 }
 
-.c20 {
+.c19 {
   background: none;
   color: inherit;
   border: none;
@@ -215,7 +211,7 @@ exports[`OakCookieConsent matches snapshot 1`] = `
   border-radius: 0.25rem;
 }
 
-.c20:disabled {
+.c19:disabled {
   pointer-events: none;
   cursor: default;
 }
@@ -259,14 +255,14 @@ exports[`OakCookieConsent matches snapshot 1`] = `
   display: none;
 }
 
-.c21 {
+.c20 {
   position: relative;
   width: 100%;
   height: 100%;
   display: inline-block;
 }
 
-.c21:hover {
+.c20:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #ffffff;
@@ -274,27 +270,27 @@ exports[`OakCookieConsent matches snapshot 1`] = `
   border-color: #575757;
 }
 
-.c21:hover [data-state="selected"] {
+.c20:hover [data-state="selected"] {
   display: none;
 }
 
-.c21:active {
+.c20:active {
   background: #222222;
   border-color: #222222;
   color: #ffffff;
 }
 
-.c21:active [data-state="selected"] {
+.c20:active [data-state="selected"] {
   display: none;
 }
 
-.c21:disabled {
+.c20:disabled {
   background: #808080;
   border-color: #808080;
   color: #ffffff;
 }
 
-.c21:disabled [data-state="selected"] {
+.c20:disabled [data-state="selected"] {
   display: none;
 }
 
@@ -579,15 +575,11 @@ exports[`OakCookieConsent matches snapshot 1`] = `
               <div
                 class="c6 c17"
               >
-                <div
+                <span
                   class="c18"
                 >
-                  <span
-                    class="c19"
-                  >
-                    Cookie settings
-                  </span>
-                </div>
+                  Cookie settings
+                </span>
               </div>
             </button>
           </div>
@@ -601,21 +593,17 @@ exports[`OakCookieConsent matches snapshot 1`] = `
               class="c14 yellow-shadow"
             />
             <button
-              class="c20 c21 internal-button"
+              class="c19 c20 internal-button"
               data-testid="cookie-banner-accept"
             >
               <div
                 class="c6 c17"
               >
-                <div
+                <span
                   class="c18"
                 >
-                  <span
-                    class="c19"
-                  >
-                    Accept all cookies
-                  </span>
-                </div>
+                  Accept all cookies
+                </span>
               </div>
             </button>
           </div>

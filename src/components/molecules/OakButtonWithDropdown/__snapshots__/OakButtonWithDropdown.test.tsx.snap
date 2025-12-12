@@ -15,6 +15,7 @@ exports[`OakButtonWithDropdown matches snapshot 1`] = `
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  height: auto;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -222,19 +223,15 @@ exports[`OakButtonWithDropdown matches snapshot 1`] = `
             <div
               class="c1 c9"
             >
-              <div
-                class="c0"
+              <span
+                class="c10"
               >
-                <span
-                  class="c10"
+                <div
+                  class="c1 c11"
                 >
-                  <div
-                    class="c1 c11"
-                  >
-                    Actions
-                  </div>
-                </span>
-              </div>
+                  Actions
+                </div>
+              </span>
               <div
                 class="c12"
               >

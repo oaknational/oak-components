@@ -1,4 +1,4 @@
-import React, { ElementType } from "react";
+import React, { ElementType, ReactNode } from "react";
 import styled, { css } from "styled-components";
 
 import {
@@ -195,6 +195,7 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
     isLoading,
     disabled,
     width = "max-content",
+    height = "auto",
     maxWidth,
     innerWidth,
     defaultBackground,
@@ -213,6 +214,8 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
     ph = "spacing-16",
     pt,
     pb,
+    pl,
+    pr,
     iconLayout = "row",
     iconGap = "spacing-8",
     iconOverride,
@@ -249,6 +252,7 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
       className={className}
       $position={"relative"}
       $width={width}
+      $height={height}
       $maxWidth={maxWidth}
       $hoverShadow={hoverShadow}
     >
@@ -279,6 +283,8 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
         $ph={ph}
         $pt={pt}
         $pb={pb}
+        $pl={pl}
+        $pr={pr}
         $borderRadius={"border-radius-s"}
         $position={"relative"}
         disabled={disabled || isLoading}
@@ -304,17 +310,35 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
           $width={innerWidth}
         >
           {!isTrailingIcon && iconLogic}
-          <OakBox $position={"relative"}>
+          {selected ? (
+            <TextWithUnderline font={font}>{children}</TextWithUnderline>
+          ) : (
             <OakSpan $font={font} $textAlign={textAlign}>
               {children}
             </OakSpan>
-            {selected && (
-              <StyledOakSvg name="underline" data-state="selected" />
-            )}
-          </OakBox>
+          )}
           {isTrailingIcon && iconLogic}
         </OakFlex>
       </StyledInternalButton>
     </StyledButtonWrapper>
   );
 };
+
+const TextWithUnderline = ({
+  textAlign,
+  font,
+  children,
+}: {
+  font?: TypographyStyleProps["$font"];
+  textAlign?: TypographyStyleProps["$textAlign"];
+  children: ReactNode;
+}) => (
+  <OakBox $position={"relative"} $textAlign={textAlign}>
+    <OakSpan $font={font}>{children}</OakSpan>
+    <StyledOakSvg
+      name="underline"
+      data-state="selected"
+      data-testid="selected-underline"
+    />
+  </OakBox>
+);

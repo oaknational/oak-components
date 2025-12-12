@@ -66,6 +66,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  height: auto;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -600,15 +601,11 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
                   <div
                     class="c4 c26"
                   >
-                    <div
-                      class="c2"
+                    <span
+                      class="c27"
                     >
-                      <span
-                        class="c27"
-                      >
-                        All
-                      </span>
-                    </div>
+                      All
+                    </span>
                   </div>
                 </button>
               </div>
@@ -629,15 +626,11 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
                   <div
                     class="c4 c26"
                   >
-                    <div
-                      class="c2"
+                    <span
+                      class="c27"
                     >
-                      <span
-                        class="c27"
-                      >
-                        Biology
-                      </span>
-                    </div>
+                      Biology
+                    </span>
                   </div>
                 </button>
               </div>
@@ -658,15 +651,11 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
                   <div
                     class="c4 c26"
                   >
-                    <div
-                      class="c2"
+                    <span
+                      class="c27"
                     >
-                      <span
-                        class="c27"
-                      >
-                        Chemistry
-                      </span>
-                    </div>
+                      Chemistry
+                    </span>
                   </div>
                 </button>
               </div>
@@ -687,15 +676,11 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
                   <div
                     class="c4 c26"
                   >
-                    <div
-                      class="c2"
+                    <span
+                      class="c27"
                     >
-                      <span
-                        class="c27"
-                      >
-                        Physics
-                      </span>
-                    </div>
+                      Physics
+                    </span>
                   </div>
                 </button>
               </div>
@@ -766,15 +751,11 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
         <div
           class="c4 c26"
         >
-          <div
-            class="c2"
+          <span
+            class="c27"
           >
-            <span
-              class="c27"
-            >
-              Skip to results
-            </span>
-          </div>
+            Skip to results
+          </span>
         </div>
       </button>
     </div>
@@ -803,15 +784,11 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
             <div
               class="c4 c26"
             >
-              <div
-                class="c2"
+              <span
+                class="c27"
               >
-                <span
-                  class="c27"
-                >
-                  All
-                </span>
-              </div>
+                All
+              </span>
             </div>
           </button>
         </div>
@@ -832,15 +809,11 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
             <div
               class="c4 c26"
             >
-              <div
-                class="c2"
+              <span
+                class="c27"
               >
-                <span
-                  class="c27"
-                >
-                  Biology
-                </span>
-              </div>
+                Biology
+              </span>
             </div>
           </button>
         </div>
@@ -861,15 +834,11 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
             <div
               class="c4 c26"
             >
-              <div
-                class="c2"
+              <span
+                class="c27"
               >
-                <span
-                  class="c27"
-                >
-                  Chemistry
-                </span>
-              </div>
+                Chemistry
+              </span>
             </div>
           </button>
         </div>
@@ -890,15 +859,11 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
             <div
               class="c4 c26"
             >
-              <div
-                class="c2"
+              <span
+                class="c27"
               >
-                <span
-                  class="c27"
-                >
-                  Physics
-                </span>
-              </div>
+                Physics
+              </span>
             </div>
           </button>
         </div>

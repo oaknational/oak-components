@@ -32,11 +32,6 @@ exports[`OakPupilJourneySubjectButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c9 {
-  position: relative;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
 .c8 {
   object-fit: contain;
 }
@@ -60,7 +55,7 @@ exports[`OakPupilJourneySubjectButton matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c10 {
+.c9 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -107,8 +102,8 @@ exports[`OakPupilJourneySubjectButton matches snapshot 1`] = `
 }
 
 .c4:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
   color: #222222;
   background: #deb7d5;
   border-color: #cf9cc3;
@@ -194,15 +189,11 @@ exports[`OakPupilJourneySubjectButton matches snapshot 1`] = `
             style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
           />
         </div>
-        <div
+        <span
           class="c9"
         >
-          <span
-            class="c10"
-          >
-            English
-          </span>
-        </div>
+          English
+        </span>
       </div>
     </button>
   </div>

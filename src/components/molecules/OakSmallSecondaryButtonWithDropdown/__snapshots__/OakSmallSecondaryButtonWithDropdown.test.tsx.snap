@@ -20,6 +20,7 @@ exports[`OakSmallSecondaryButtonWithDropdown matches snapshot 1`] = `
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  height: auto;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -227,19 +228,15 @@ exports[`OakSmallSecondaryButtonWithDropdown matches snapshot 1`] = `
             <div
               class="c1 c10"
             >
-              <div
-                class="c0"
+              <span
+                class="c11"
               >
-                <span
-                  class="c11"
+                <div
+                  class="c1 c12"
                 >
-                  <div
-                    class="c1 c12"
-                  >
-                    Menu Trigger
-                  </div>
-                </span>
-              </div>
+                  Menu Trigger
+                </div>
+              </span>
               <div
                 class="c13"
               >

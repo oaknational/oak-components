@@ -16,6 +16,7 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  height: auto;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -29,11 +30,6 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
 }
 
 .c8 {
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c10 {
-  position: relative;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -67,7 +63,7 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
   gap: 0.5rem;
 }
 
-.c11 {
+.c10 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -115,7 +111,7 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
   cursor: default;
 }
 
-.c14 {
+.c13 {
   background: none;
   color: inherit;
   border: none;
@@ -137,7 +133,7 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
   border-radius: 0.25rem;
 }
 
-.c14:disabled {
+.c13:disabled {
   pointer-events: none;
   cursor: default;
 }
@@ -181,14 +177,14 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
   display: none;
 }
 
-.c15 {
+.c14 {
   position: relative;
   width: 100%;
   height: 100%;
   display: inline-block;
 }
 
-.c15:hover {
+.c14:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #ffffff;
@@ -196,27 +192,27 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
   border-color: #575757;
 }
 
-.c15:hover [data-state="selected"] {
+.c14:hover [data-state="selected"] {
   display: none;
 }
 
-.c15:active {
+.c14:active {
   background: #222222;
   border-color: #222222;
   color: #ffffff;
 }
 
-.c15:active [data-state="selected"] {
+.c14:active [data-state="selected"] {
   display: none;
 }
 
-.c15:disabled {
+.c14:disabled {
   background: #808080;
   border-color: #808080;
   color: #ffffff;
 }
 
-.c15:disabled [data-state="selected"] {
+.c14:disabled [data-state="selected"] {
   display: none;
 }
 
@@ -245,32 +241,32 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c12 .grey-shadow:has(+ * + .internal-button:focus-visible) {
+.c11 .grey-shadow:has(+ * + .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c12 .yellow-shadow:has(+ .internal-button:focus-visible) {
+.c11 .yellow-shadow:has(+ .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
 }
 
-.c12 .yellow-shadow:has(+ .internal-button:hover),
-.c12 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
+.c11 .yellow-shadow:has(+ .internal-button:hover),
+.c11 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c12 .grey-shadow:has(+ * + .internal-button:hover) {
+.c11 .grey-shadow:has(+ * + .internal-button:hover) {
   box-shadow: none;
 }
 
-.c12 .grey-shadow:has(+ * + .internal-button:active) {
+.c11 .grey-shadow:has(+ * + .internal-button:active) {
   box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c12 .yellow-shadow:has(+ .internal-button:active) {
+.c11 .yellow-shadow:has(+ .internal-button:active) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c13 {
+.c12 {
   pointer-events: none;
 }
 
@@ -298,15 +294,11 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
             <div
               class="c8 c9"
             >
-              <div
+              <span
                 class="c10"
               >
-                <span
-                  class="c11"
-                >
-                  nav item 1
-                </span>
-              </div>
+                nav item 1
+              </span>
             </div>
           </a>
         </div>
@@ -315,7 +307,7 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
         class="c2"
       >
         <div
-          class="c3 c12 c13"
+          class="c3 c11 c12"
         >
           <div
             class="c5 grey-shadow"
@@ -325,20 +317,16 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
           />
           <span
             aria-current="page"
-            class="c14 c15 internal-button"
+            class="c13 c14 internal-button"
           >
             <div
               class="c8 c9"
             >
-              <div
+              <span
                 class="c10"
               >
-                <span
-                  class="c11"
-                >
-                  nav item 2
-                </span>
-              </div>
+                nav item 2
+              </span>
             </div>
           </span>
         </div>
@@ -362,15 +350,11 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
             <div
               class="c8 c9"
             >
-              <div
+              <span
                 class="c10"
               >
-                <span
-                  class="c11"
-                >
-                  nav item 3
-                </span>
-              </div>
+                nav item 3
+              </span>
             </div>
           </a>
         </div>
@@ -394,15 +378,11 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
             <div
               class="c8 c9"
             >
-              <div
+              <span
                 class="c10"
               >
-                <span
-                  class="c11"
-                >
-                  nav item 4
-                </span>
-              </div>
+                nav item 4
+              </span>
             </div>
           </a>
         </div>

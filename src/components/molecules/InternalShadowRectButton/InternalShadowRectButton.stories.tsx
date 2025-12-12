@@ -42,6 +42,7 @@ const meta: Meta<typeof InternalShadowRectButton> = {
     disabledBorderColor: colorArgTypes.$color,
     disabledTextColor: colorArgTypes.$color,
     width: sizeArgTypes["$width"],
+    selected: { control: { type: "boolean" } },
   },
   parameters: {
     controls: {
@@ -63,6 +64,7 @@ const meta: Meta<typeof InternalShadowRectButton> = {
         "disabledTextColor",
         "width",
         "type",
+        "selected",
       ],
     },
   },
@@ -94,6 +96,19 @@ export const Default: Story = {
     disabledBackground: "bg-btn-secondary-disabled",
     disabledBorderColor: "text-disabled",
     disabledTextColor: "text-disabled",
+  },
+};
+
+export const Selected: Story = {
+  render: (args) => (
+    <InternalShadowRectButton {...args}>
+      Selected button{" "}
+    </InternalShadowRectButton>
+  ),
+  args: {
+    selected: true,
+    iconName: "arrow-right",
+    isTrailingIcon: true,
   },
 };
 

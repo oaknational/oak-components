@@ -70,6 +70,7 @@ export const OakPupilJourneyYearButton = <C extends ElementType = "button">({
       disabledBackground="bg-btn-secondary-disabled"
       disabledBorderColor="border-neutral-lighter"
       disabledTextColor="text-subdued"
+      hoverUnderline
       {...rest}
     />
   );

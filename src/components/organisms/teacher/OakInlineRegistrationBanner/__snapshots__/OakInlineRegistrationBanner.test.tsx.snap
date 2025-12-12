@@ -84,6 +84,7 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  height: auto;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -103,12 +104,7 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c24 {
-  position: relative;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c26 {
+.c25 {
   display: none;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -190,7 +186,7 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c25 {
+.c24 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -380,13 +376,13 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c26 {
+  .c25 {
     display: block;
   }
 }
 
 @media (min-width:1280px) {
-  .c26 {
+  .c25 {
     display: block;
   }
 }
@@ -502,15 +498,11 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
                 <div
                   class="c22 c23"
                 >
-                  <div
+                  <span
                     class="c24"
                   >
-                    <span
-                      class="c25"
-                    >
-                      Sign up
-                    </span>
-                  </div>
+                    Sign up
+                  </span>
                 </div>
               </button>
             </div>
@@ -518,7 +510,7 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
         </form>
       </div>
       <div
-        class="c26"
+        class="c25"
       >
         <svg
           class="c6"
