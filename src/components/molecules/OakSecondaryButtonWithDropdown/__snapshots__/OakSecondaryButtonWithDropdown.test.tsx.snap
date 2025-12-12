@@ -28,13 +28,7 @@ exports[`OakSecondaryButtonWithDropdown matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c10 {
-  position: relative;
-  font-family: --var(google-font),Lexend,sans-serif;
-  text-align: left;
-}
-
-.c13 {
+.c12 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -43,7 +37,7 @@ exports[`OakSecondaryButtonWithDropdown matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c14 {
+.c13 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
@@ -87,7 +81,7 @@ exports[`OakSecondaryButtonWithDropdown matches snapshot 1`] = `
   gap: 0.5rem;
 }
 
-.c12 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -98,7 +92,7 @@ exports[`OakSecondaryButtonWithDropdown matches snapshot 1`] = `
   align-items: center;
 }
 
-.c11 {
+.c10 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -107,6 +101,7 @@ exports[`OakSecondaryButtonWithDropdown matches snapshot 1`] = `
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
+  text-align: left;
 }
 
 .c7 {
@@ -228,25 +223,21 @@ exports[`OakSecondaryButtonWithDropdown matches snapshot 1`] = `
             <div
               class="c1 c9"
             >
-              <div
+              <span
                 class="c10"
               >
-                <span
-                  class="c11"
+                <div
+                  class="c1 c11"
                 >
-                  <div
-                    class="c1 c12"
-                  >
-                    Actions
-                  </div>
-                </span>
-              </div>
+                  Actions
+                </div>
+              </span>
               <div
-                class="c13"
+                class="c12"
               >
                 <img
                   alt=""
-                  class="c14"
+                  class="c13"
                   data-nimg="fill"
                   decoding="async"
                   loading="lazy"

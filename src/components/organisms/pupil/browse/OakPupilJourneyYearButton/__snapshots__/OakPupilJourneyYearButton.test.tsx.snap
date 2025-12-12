@@ -23,12 +23,6 @@ exports[`OakPupilJourneyYearButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c7 {
-  position: relative;
-  font-family: --var(google-font),Lexend,sans-serif;
-  text-align: left;
-}
-
 .c6 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -48,7 +42,7 @@ exports[`OakPupilJourneyYearButton matches snapshot 1`] = `
   gap: 0.5rem;
 }
 
-.c8 {
+.c7 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1.25rem;
@@ -57,6 +51,7 @@ exports[`OakPupilJourneyYearButton matches snapshot 1`] = `
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
+  text-align: left;
 }
 
 .c3 {
@@ -166,15 +161,11 @@ exports[`OakPupilJourneyYearButton matches snapshot 1`] = `
       <div
         class="c5 c6"
       >
-        <div
+        <span
           class="c7"
         >
-          <span
-            class="c8"
-          >
-            Year 1
-          </span>
-        </div>
+          Year 1
+        </span>
       </div>
     </button>
   </div>

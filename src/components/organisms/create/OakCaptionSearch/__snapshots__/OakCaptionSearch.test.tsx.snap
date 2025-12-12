@@ -61,13 +61,7 @@ exports[`OakCaptionSearch should match snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c18 {
-  position: relative;
-  font-family: --var(google-font),Lexend,sans-serif;
-  text-align: left;
-}
-
-.c20 {
+.c19 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -76,7 +70,7 @@ exports[`OakCaptionSearch should match snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c21 {
+.c20 {
   -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   object-fit: contain;
@@ -144,7 +138,7 @@ exports[`OakCaptionSearch should match snapshot 1`] = `
   gap: 0.5rem;
 }
 
-.c19 {
+.c18 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -153,6 +147,7 @@ exports[`OakCaptionSearch should match snapshot 1`] = `
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
+  text-align: left;
 }
 
 .c6 {
@@ -390,21 +385,17 @@ exports[`OakCaptionSearch should match snapshot 1`] = `
         <div
           class="c4 c17"
         >
-          <div
+          <span
             class="c18"
           >
-            <span
-              class="c19"
-            >
-              Search
-            </span>
-          </div>
+            Search
+          </span>
           <div
-            class="c20"
+            class="c19"
           >
             <img
               alt=""
-              class="c21"
+              class="c20"
               data-nimg="fill"
               decoding="async"
               loading="lazy"

@@ -28,13 +28,7 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
-  position: relative;
-  font-family: --var(google-font),Lexend,sans-serif;
-  text-align: left;
-}
-
-.c10 {
+.c9 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -43,12 +37,12 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c12 {
+.c11 {
   display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c11 {
+.c10 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
@@ -73,7 +67,7 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c9 {
+.c8 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 700;
   font-size: 0.875rem;
@@ -82,6 +76,7 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
   -moz-letter-spacing: -0.005rem;
   -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
+  text-align: left;
 }
 
 .c4 {
@@ -182,7 +177,7 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c12 {
+  .c11 {
     display: none;
   }
 }
@@ -207,21 +202,17 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
         <div
           class="c6 c7"
         >
-          <div
+          <span
             class="c8"
           >
-            <span
-              class="c9"
-            >
-              Show sign language
-            </span>
-          </div>
+            Show sign language
+          </span>
           <div
-            class="c10"
+            class="c9"
           >
             <img
               alt=""
-              class="c11"
+              class="c10"
               data-nimg="fill"
               decoding="async"
               loading="lazy"
@@ -234,7 +225,7 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
     </div>
   </div>
   <div
-    class="c12"
+    class="c11"
   >
     <div
       class="c1 c2"
@@ -251,15 +242,11 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
         <div
           class="c6 c7"
         >
-          <div
+          <span
             class="c8"
           >
-            <span
-              class="c9"
-            >
-              Show sign language
-            </span>
-          </div>
+            Show sign language
+          </span>
         </div>
       </button>
     </div>
