@@ -62,6 +62,7 @@ export const icons = {
   warning: "v1704901279/icons/zzszodmk7fvxm9xzzg9s.svg",
   "lightbulb-yellow": "v1705078631/icons/q2v4sqxouy1ngcajoavv.svg",
   lightbulb: "v1705078631/icons/zldisxmbff36z68rwcef.svg",
+  pencil: "v1765539996/icons/pencil.svg",
   quiz: "v1705416077/icons/kaaizjcudy0jfgfrrdel.svg",
   video: "v1705416078/icons/wzey1zfxrvv3apeebbf5.svg",
   intro: "v1705662092/icons/pl7bnmb13txese9yxkjv.svg",
