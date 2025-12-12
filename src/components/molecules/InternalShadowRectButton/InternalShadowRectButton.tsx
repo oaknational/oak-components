@@ -1,4 +1,4 @@
-import React, { ElementType } from "react";
+import React, { ElementType, ReactNode } from "react";
 import styled, { css } from "styled-components";
 
 import {
@@ -310,15 +310,31 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
           $width={innerWidth}
         >
           {!isTrailingIcon && iconLogic}
-          <OakBox $position={"relative"} $textAlign={textAlign}>
-            <OakSpan $font={font}>{children}</OakSpan>
-            {selected && (
-              <StyledOakSvg name="underline" data-state="selected" />
-            )}
-          </OakBox>
+          {selected ? (
+            <TextWithUnderline font={font}>{children}</TextWithUnderline>
+          ) : (
+            <OakSpan $font={font} $textAlign={textAlign}>
+              {children}
+            </OakSpan>
+          )}
           {isTrailingIcon && iconLogic}
         </OakFlex>
       </StyledInternalButton>
     </StyledButtonWrapper>
   );
 };
+
+const TextWithUnderline = ({
+  textAlign,
+  font,
+  children,
+}: {
+  font?: TypographyStyleProps["$font"];
+  textAlign?: TypographyStyleProps["$textAlign"];
+  children: ReactNode;
+}) => (
+  <OakBox $position={"relative"} $textAlign={textAlign}>
+    <OakSpan $font={font}>{children}</OakSpan>
+    <StyledOakSvg name="underline" data-state="selected" />
+  </OakBox>
+);
