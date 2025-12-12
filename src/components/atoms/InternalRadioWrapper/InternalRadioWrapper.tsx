@@ -6,7 +6,7 @@ import { OakFlex, OakFlexProps } from "@/components/atoms/OakFlex";
 import {
   OakAllSpacingToken,
   OakBorderWidthToken,
-  OakCombinedColorToken,
+  OakUiRoleToken,
 } from "@/styles";
 import { ResponsiveValues } from "@/styles/utils/responsiveStyle";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
@@ -38,7 +38,7 @@ export type InternalRadioWrapperProps = {
   /**
    * Allows the background color of the radio button to be customized.
    */
-  radioBackground?: OakCombinedColorToken;
+  radioBackground?: OakUiRoleToken;
   /**
    * Allows the width of the radio button border to be customized when the radio button is checked.
    */
@@ -46,7 +46,7 @@ export type InternalRadioWrapperProps = {
   /**
    * Allows the borderColor of the radio button border to be customized.
    */
-  radioBorderColor?: OakCombinedColorToken;
+  radioBorderColor?: OakUiRoleToken;
 };
 
 type VisibleRadioButtonInputProps = OakFlexProps & {

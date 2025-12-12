@@ -12,7 +12,7 @@ import {
   OakIconName,
   OakIconProps,
 } from "@/components/atoms";
-import { OakCombinedColorToken } from "@/styles";
+import { OakUiRoleToken } from "@/styles";
 import { OakColorFilterToken } from "@/styles/theme/color";
 import { PaddingStyleProps } from "@/styles/utils/spacingStyle";
 import { FlexStyleProps } from "@/styles/utils/flexStyle";
@@ -79,8 +79,8 @@ export type BannerTypes = {
   [key in OakInlineBannerTypes]: {
     icon: OakIconName;
     iconColorFilter: OakColorFilterToken;
-    backgroundColour: OakCombinedColorToken;
-    borderColour: OakCombinedColorToken;
+    backgroundColour: OakUiRoleToken;
+    borderColour: OakUiRoleToken;
   };
 };
 
@@ -250,7 +250,7 @@ export const OakInlineBanner = ({
               hoverTextColor="transparent"
               disabledTextColor="transparent"
               hoverIconBackground="icon-primary"
-              hoverIconColor="icon-main"
+              hoverIconColor="icon-inverted"
               disabledIconBackground="transparent"
               iconBackgroundSize="spacing-24"
               iconSize="spacing-24"

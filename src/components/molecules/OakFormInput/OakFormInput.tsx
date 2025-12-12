@@ -7,21 +7,21 @@ import {
   InternalTextInputProps,
 } from "@/components/atoms/InternalTextInput";
 import { OakFlex } from "@/components/atoms";
-import { OakCombinedColorToken } from "@/styles";
+import { OakUiRoleToken } from "@/styles";
 import { SizeStyleProps } from "@/styles/utils/sizeStyle";
 
 type StyledTextInputWrapperProps = {
   $disabled: boolean;
-  $color: OakCombinedColorToken;
-  $background: OakCombinedColorToken;
-  $borderColor: OakCombinedColorToken;
-  $hoverBackground: OakCombinedColorToken;
-  $hoverBorderColor: OakCombinedColorToken;
-  $focusBorderColor: OakCombinedColorToken;
-  $focusBackgroundColor: OakCombinedColorToken;
-  $disabledColor: OakCombinedColorToken;
-  $disabledBorderColor: OakCombinedColorToken;
-  $disabledBackgroundColor: OakCombinedColorToken;
+  $color: OakUiRoleToken;
+  $background: OakUiRoleToken;
+  $borderColor: OakUiRoleToken;
+  $hoverBackground: OakUiRoleToken;
+  $hoverBorderColor: OakUiRoleToken;
+  $focusBorderColor: OakUiRoleToken;
+  $focusBackgroundColor: OakUiRoleToken;
+  $disabledColor: OakUiRoleToken;
+  $disabledBorderColor: OakUiRoleToken;
+  $disabledBackgroundColor: OakUiRoleToken;
 };
 
 export type OakFormInputProps = {
@@ -52,17 +52,17 @@ export type OakFormInputProps = {
   /**
    * Give the field a highlight to draw attention to it
    */
-  invalidBorderColor?: OakCombinedColorToken;
-  color?: OakCombinedColorToken;
-  background?: OakCombinedColorToken;
-  borderColor?: OakCombinedColorToken;
-  hoverBackground?: OakCombinedColorToken;
-  hoverBorderColor?: OakCombinedColorToken;
-  focusBorderColor?: OakCombinedColorToken;
-  focusBackgroundColor?: OakCombinedColorToken;
-  disabledColor?: OakCombinedColorToken;
-  disabledBorderColor?: OakCombinedColorToken;
-  disabledBackgroundColor?: OakCombinedColorToken;
+  invalidBorderColor?: OakUiRoleToken;
+  color?: OakUiRoleToken;
+  background?: OakUiRoleToken;
+  borderColor?: OakUiRoleToken;
+  hoverBackground?: OakUiRoleToken;
+  hoverBorderColor?: OakUiRoleToken;
+  focusBorderColor?: OakUiRoleToken;
+  focusBackgroundColor?: OakUiRoleToken;
+  disabledColor?: OakUiRoleToken;
+  disabledBorderColor?: OakUiRoleToken;
+  disabledBackgroundColor?: OakUiRoleToken;
   /**
    * The width of the surrounding div - the input will fill this with padding.
    */

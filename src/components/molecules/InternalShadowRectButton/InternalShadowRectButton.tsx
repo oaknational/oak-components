@@ -22,7 +22,7 @@ import {
 import { parseColor } from "@/styles/helpers/parseColor";
 import {
   OakAllSpacingToken,
-  OakCombinedColorToken,
+  OakUiRoleToken,
   OakDropShadowToken,
 } from "@/styles";
 import { SizeStyleProps, sizeStyle } from "@/styles/utils/sizeStyle";
@@ -69,16 +69,16 @@ export type InternalShadowRectButtonProps = Omit<
    */
   selected?: boolean;
   iconGap?: FlexStyleProps["$gap"];
-  defaultTextColor: OakCombinedColorToken;
-  defaultBackground: OakCombinedColorToken;
-  defaultBorderColor: OakCombinedColorToken;
-  hoverTextColor: OakCombinedColorToken;
-  hoverBackground: OakCombinedColorToken;
-  hoverBorderColor: OakCombinedColorToken;
+  defaultTextColor: OakUiRoleToken;
+  defaultBackground: OakUiRoleToken;
+  defaultBorderColor: OakUiRoleToken;
+  hoverTextColor: OakUiRoleToken;
+  hoverBackground: OakUiRoleToken;
+  hoverBorderColor: OakUiRoleToken;
   hoverUnderline?: boolean;
-  disabledBackground: OakCombinedColorToken;
-  disabledBorderColor: OakCombinedColorToken;
-  disabledTextColor: OakCombinedColorToken;
+  disabledBackground: OakUiRoleToken;
+  disabledBorderColor: OakUiRoleToken;
+  disabledTextColor: OakUiRoleToken;
   width?: SizeStyleProps["$width"];
   maxWidth?: SizeStyleProps["$maxWidth"];
   hoverShadow?: OakDropShadowToken | null;
@@ -91,16 +91,16 @@ export type InternalShadowRectButtonProps = Omit<
 
 const StyledInternalButton = styled(InternalButton)<
   SizeStyleProps & {
-    $defaultTextColor: OakCombinedColorToken;
-    $defaultBackground: OakCombinedColorToken;
-    $defaultBorderColor: OakCombinedColorToken;
-    $hoverTextColor: OakCombinedColorToken;
-    $hoverBackground: OakCombinedColorToken;
-    $hoverBorderColor: OakCombinedColorToken;
+    $defaultTextColor: OakUiRoleToken;
+    $defaultBackground: OakUiRoleToken;
+    $defaultBorderColor: OakUiRoleToken;
+    $hoverTextColor: OakUiRoleToken;
+    $hoverBackground: OakUiRoleToken;
+    $hoverBorderColor: OakUiRoleToken;
     $hoverUnderline?: boolean;
-    $disabledBackground: OakCombinedColorToken;
-    $disabledBorderColor: OakCombinedColorToken;
-    $disabledTextColor: OakCombinedColorToken;
+    $disabledBackground: OakUiRoleToken;
+    $disabledBorderColor: OakUiRoleToken;
+    $disabledTextColor: OakUiRoleToken;
   }
 >`
   ${positionStyle}
