@@ -16,6 +16,7 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  height: auto;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -35,6 +36,7 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
 .c10 {
   position: relative;
   font-family: --var(google-font),Lexend,sans-serif;
+  text-align: left;
 }
 
 .c1 {
@@ -76,7 +78,6 @@ exports[`OakPrimaryNav matches snapshot 1`] = `
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
-  text-align: left;
 }
 
 .c2 {

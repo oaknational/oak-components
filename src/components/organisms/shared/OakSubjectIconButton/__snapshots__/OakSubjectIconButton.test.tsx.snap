@@ -35,6 +35,7 @@ exports[`OakPupilJourneySubjectButton matches snapshot 1`] = `
 .c9 {
   position: relative;
   font-family: --var(google-font),Lexend,sans-serif;
+  text-align: center;
 }
 
 .c8 {
@@ -69,7 +70,6 @@ exports[`OakPupilJourneySubjectButton matches snapshot 1`] = `
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
-  text-align: center;
 }
 
 .c3 {
@@ -107,8 +107,8 @@ exports[`OakPupilJourneySubjectButton matches snapshot 1`] = `
 }
 
 .c4:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
   color: #222222;
   background: #deb7d5;
   border-color: #cf9cc3;

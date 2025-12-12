@@ -20,6 +20,7 @@ exports[`OakSmallSecondaryButtonWithDropdown matches snapshot 1`] = `
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  height: auto;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -32,7 +33,13 @@ exports[`OakSmallSecondaryButtonWithDropdown matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c13 {
+.c11 {
+  position: relative;
+  font-family: --var(google-font),Lexend,sans-serif;
+  text-align: left;
+}
+
+.c14 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -41,7 +48,7 @@ exports[`OakSmallSecondaryButtonWithDropdown matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c14 {
+.c15 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
@@ -85,7 +92,7 @@ exports[`OakSmallSecondaryButtonWithDropdown matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c12 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -96,7 +103,7 @@ exports[`OakSmallSecondaryButtonWithDropdown matches snapshot 1`] = `
   align-items: center;
 }
 
-.c11 {
+.c12 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 700;
   font-size: 0.875rem;
@@ -105,7 +112,6 @@ exports[`OakSmallSecondaryButtonWithDropdown matches snapshot 1`] = `
   -moz-letter-spacing: -0.005rem;
   -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
-  text-align: left;
 }
 
 .c8 {
@@ -228,24 +234,24 @@ exports[`OakSmallSecondaryButtonWithDropdown matches snapshot 1`] = `
               class="c1 c10"
             >
               <div
-                class="c0"
+                class="c11"
               >
                 <span
-                  class="c11"
+                  class="c12"
                 >
                   <div
-                    class="c1 c12"
+                    class="c1 c13"
                   >
                     Menu Trigger
                   </div>
                 </span>
               </div>
               <div
-                class="c13"
+                class="c14"
               >
                 <img
                   alt=""
-                  class="c14"
+                  class="c15"
                   data-nimg="fill"
                   decoding="async"
                   loading="lazy"

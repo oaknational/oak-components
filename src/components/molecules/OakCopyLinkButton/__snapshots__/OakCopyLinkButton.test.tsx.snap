@@ -11,6 +11,7 @@ exports[`OakCopyLinkButton matches snapshot 1`] = `
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  height: auto;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -30,6 +31,7 @@ exports[`OakCopyLinkButton matches snapshot 1`] = `
 .c8 {
   position: relative;
   font-family: --var(google-font),Lexend,sans-serif;
+  text-align: left;
 }
 
 .c10 {
@@ -80,7 +82,6 @@ exports[`OakCopyLinkButton matches snapshot 1`] = `
   -moz-letter-spacing: -0.005rem;
   -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
-  text-align: left;
 }
 
 .c4 {

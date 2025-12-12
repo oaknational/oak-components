@@ -15,6 +15,7 @@ exports[`OakButtonWithDropdown matches snapshot 1`] = `
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  height: auto;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -27,7 +28,13 @@ exports[`OakButtonWithDropdown matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c12 {
+.c10 {
+  position: relative;
+  font-family: --var(google-font),Lexend,sans-serif;
+  text-align: left;
+}
+
+.c13 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -36,7 +43,7 @@ exports[`OakButtonWithDropdown matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c13 {
+.c14 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
@@ -80,7 +87,7 @@ exports[`OakButtonWithDropdown matches snapshot 1`] = `
   gap: 0.5rem;
 }
 
-.c11 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -91,7 +98,7 @@ exports[`OakButtonWithDropdown matches snapshot 1`] = `
   align-items: center;
 }
 
-.c10 {
+.c11 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -100,7 +107,6 @@ exports[`OakButtonWithDropdown matches snapshot 1`] = `
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
-  text-align: left;
 }
 
 .c7 {
@@ -223,24 +229,24 @@ exports[`OakButtonWithDropdown matches snapshot 1`] = `
               class="c1 c9"
             >
               <div
-                class="c0"
+                class="c10"
               >
                 <span
-                  class="c10"
+                  class="c11"
                 >
                   <div
-                    class="c1 c11"
+                    class="c1 c12"
                   >
                     Actions
                   </div>
                 </span>
               </div>
               <div
-                class="c12"
+                class="c13"
               >
                 <img
                   alt=""
-                  class="c13"
+                  class="c14"
                   data-nimg="fill"
                   decoding="async"
                   loading="lazy"
