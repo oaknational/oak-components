@@ -139,4 +139,28 @@ describe("InternalShadowRectButton", () => {
     fireEvent.mouseLeave(getByTestId("test"));
     expect(onHovered).toHaveBeenCalledWith(expect.anything(), 1000);
   });
+  it("renders a selected state", () => {
+    const { getByTestId } = renderWithTheme(
+      <InternalShadowRectButton {...defaultArgs} selected>
+        Primary
+      </InternalShadowRectButton>,
+    );
+
+    const selectedUnderline = getByTestId("selected-underline");
+    expect(selectedUnderline).toBeInTheDocument();
+  });
+  it("hides selected state on hover", () => {
+    const { getByTestId } = renderWithTheme(
+      <InternalShadowRectButton data-testid="test" {...defaultArgs} selected>
+        Primary
+      </InternalShadowRectButton>,
+    );
+
+    expect(getByTestId("selected-underline")).toBeInTheDocument();
+
+    fireEvent.mouseEnter(getByTestId("test"));
+    jest.advanceTimersByTime(1000);
+
+    expect(getByTestId("selected-underline")).not.toBeVisible();
+  });
 });

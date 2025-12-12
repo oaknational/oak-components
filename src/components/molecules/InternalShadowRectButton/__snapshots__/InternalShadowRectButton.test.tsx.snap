@@ -32,12 +32,6 @@ exports[`InternalShadowRectButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c9 {
-  position: relative;
-  font-family: --var(google-font),Lexend,sans-serif;
-  text-align: left;
-}
-
 .c8 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
@@ -63,7 +57,7 @@ exports[`InternalShadowRectButton matches snapshot 1`] = `
   gap: 0.5rem;
 }
 
-.c10 {
+.c9 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -72,6 +66,7 @@ exports[`InternalShadowRectButton matches snapshot 1`] = `
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
+  text-align: left;
 }
 
 .c3 {
@@ -194,15 +189,11 @@ exports[`InternalShadowRectButton matches snapshot 1`] = `
             style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
           />
         </div>
-        <div
+        <span
           class="c9"
         >
-          <span
-            class="c10"
-          >
-            Click Me
-          </span>
-        </div>
+          Click Me
+        </span>
       </div>
     </button>
   </div>

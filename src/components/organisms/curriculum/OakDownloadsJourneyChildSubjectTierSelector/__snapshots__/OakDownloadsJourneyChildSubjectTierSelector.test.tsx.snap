@@ -106,13 +106,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c31 {
-  position: relative;
-  font-family: --var(google-font),Lexend,sans-serif;
-  text-align: left;
-}
-
-.c33 {
+.c32 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -127,7 +121,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   object-fit: contain;
 }
 
-.c34 {
+.c33 {
   -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   object-fit: contain;
@@ -269,7 +263,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   gap: 0.5rem;
 }
 
-.c32 {
+.c31 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -278,6 +272,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
+  text-align: left;
 }
 
 .c15 {
@@ -663,21 +658,17 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
         <div
           class="c0 c30"
         >
-          <div
+          <span
             class="c31"
           >
-            <span
-              class="c32"
-            >
-              Next
-            </span>
-          </div>
+            Next
+          </span>
           <div
-            class="c33"
+            class="c32"
           >
             <img
               alt=""
-              class="c34"
+              class="c33"
               data-nimg="fill"
               decoding="async"
               loading="lazy"
