@@ -50,3 +50,6 @@ yarn-error.log*
 
 # asdf version manager
 .tool-versions
+
+# vscode settings
+.vscode/settings.json
