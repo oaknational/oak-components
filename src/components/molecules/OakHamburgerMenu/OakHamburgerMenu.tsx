@@ -72,13 +72,11 @@ export const OakHamburgerMenu = ({
 
   return (
     <>
-      <OakBox $display={["block", "block", "none"]}>
-        <OakSecondaryButton
-          $borderStyle={"none"}
-          iconName="hamburger"
-          onClick={handleOpen}
-        />
-      </OakBox>
+      <OakSecondaryButton
+        $borderStyle={"none"}
+        iconName="hamburger"
+        onClick={handleOpen}
+      />
       {isMounted &&
         createPortal(
           <HamburgerMenuWrapper $display={["block", "block", "none"]}>
