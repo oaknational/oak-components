@@ -5,7 +5,6 @@ import styled from "styled-components";
 import { OakCloseButton } from "@/components/molecules/OakCloseButton";
 import { OakSecondaryButton } from "@/components/molecules/OakSecondaryButton";
 import { OakBox, OakFlex } from "@/components/atoms";
-import useIsScrolled from "@/hooks/useIsScrolled";
 import useMounted from "@/hooks/useMounted";
 import InternalModalTransition from "@/components/molecules/InternalModalTransition/InternalModalTransition";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
@@ -61,7 +60,6 @@ export const OakHamburgerMenu = ({
   ...rest
 }: OakHamburgerMenuProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const { isScrolled, ObserveScroll } = useIsScrolled();
 
   const transitionRef = useRef<HTMLDivElement>(null);
 
@@ -100,20 +98,8 @@ export const OakHamburgerMenu = ({
               >
                 <OakCloseButton onClose={handleClose} />
               </OakFlex>
-              <OakFlex
-                $flexGrow={1}
-                $flexDirection="column"
-                $overflow="auto"
-                $bt="border-solid-s"
-                $borderColor={
-                  isScrolled ? "border-neutral-lighter" : "transparent"
-                }
-              >
-                <ObserveScroll>
-                  <div data-autofocus-inside tabIndex={-2}>
-                    <OakBox $pa="spacing-24">{children}</OakBox>
-                  </div>
-                </ObserveScroll>
+              <OakFlex $flexGrow={1} $flexDirection="column" $overflow="auto">
+                {children}
               </OakFlex>
             </InternalModalTransition>
           </HamburgerMenuWrapper>,
