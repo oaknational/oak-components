@@ -6,6 +6,7 @@ import {
   InternalRadioHover,
   InternalRadioFocus,
   InternalRadioHoverFocus,
+  internalRadioDefaults,
 } from "./InternalRadio";
 
 import { OakBox } from "@/components/atoms/OakBox";
@@ -18,6 +19,7 @@ const meta: Meta<typeof InternalRadio> = {
   component: InternalRadio,
   tags: ["autodocs"],
   title: "components/atoms/InternalRadio",
+  args: internalRadioDefaults,
   argTypes: {
     sizeArgTypes,
     borderArgTypes,
