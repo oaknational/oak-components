@@ -26,17 +26,21 @@ Enable consuming applications to use **arbitrary branded colors** in Oak Compone
 
 ## Phases
 
-### Phase 1 Summary: Core Custom Tokens (MVP)
+### Phase 1 Summary: Core Custom Tokens (MVP) ✅ COMPLETE
+
+> **Implemented:** 2025-12-17
+> **ADR:** [0002-custom-semantic-tokens.adr.md](../../docs/architecture/decision-records/0002-custom-semantic-tokens.adr.md)
 
 Enable custom token props with consumer-defined colors.
 
-**Deliverables:**
+**Delivered:**
 
-1. Token registry (`customSemanticTokens.ts`)
-2. Type extension (`OakCombinedColorToken`)
-3. `parseColor` update
-4. `CustomThemeProvider` component
-5. Full test coverage
+1. ✅ Token registry (`customSemanticTokens.ts`) - 16 tokens with derived types
+2. ✅ Type extension (`OakCombinedColorToken`)
+3. ✅ `parseColor` update - returns CSS var references for custom tokens
+4. ✅ `CustomThemeProvider` component - with `buildCss` pure function
+5. ✅ Full test coverage - 28 new tests
+6. ✅ Storybook examples - 4 stories (Default, AllTokenCategories, HighContrastDemo, BrandedTheme)
 
 ### Phase 2 Summary: Theme Generator
 
@@ -47,6 +51,7 @@ Helper function to generate accessible themes from brand colors.
 1. `generateTheme()` function
 2. `checkContrast()` utility
 3. WCAG 2.2 AA/AAA validation
+4. Storybook examples proving the features work
 
 ### Phase 3 Summary: Advanced Accessibility
 
@@ -57,6 +62,7 @@ CVD safety and bundled palettes.
 1. `simulateCVD()` function
 2. `safePalettes` collection
 3. Okabe-Ito, Wong, IBM palettes
+4. Storybook examples proving the features work
 
 ### Phase 4 Summary: Arbitrary Named Themes
 
@@ -67,6 +73,7 @@ Support for custom theme names beyond light/dark.
 1. `named` themes in config
 2. `data-theme` attribute support
 3. Theme switcher example
+4. Storybook examples proving the features work
 
 ---
 
@@ -1866,7 +1873,7 @@ Before marking Phase 1 complete:
 - [ ] `parseColor.test.tsx` passes (including new custom token tests)
 - [ ] `buildCss.test.ts` passes
 - [ ] `CustomThemeProvider.test.tsx` passes
-- [ ] **Storybook stories** - All stories render without errors
+- [ ] **Storybook stories** - New stories for all features. All stories render without errors
 - [ ] **a11y addon** - No accessibility violations in stories
 - [ ] **Type safety** - No `as`, `any`, or `!` usage (except `as const`)
 - [ ] **TSDoc** - All public exports have documentation
@@ -1887,6 +1894,7 @@ Before marking Phase 2 complete:
 - [ ] `generateTheme.test.ts` passes
 - [ ] Generated themes achieve WCAG AA contrast (4.5:1 text, 3:1 UI)
 - [ ] High-contrast variants achieve WCAG AAA (7:1 text)
+- [ ] **Storybook stories** - New stories for all features. All stories render without errors
 - [ ] **Type safety** - No escape hatches
 - [ ] **TSDoc** - All functions documented
 - [ ] **Quality gates pass**
@@ -1898,7 +1906,7 @@ Before marking Phase 3 complete:
 - [ ] **TDD complete** - Tests for `simulateCVD`, `areDistinguishable` written first
 - [ ] `simulateCVD.test.ts` passes
 - [ ] `safePalettes` all validated against CVD simulation
-- [ ] **Storybook stories** - Safe palette stories demonstrate a11y
+- [ ] **Storybook stories** - New stories for all features. All stories render without errors. Safe palette stories demonstrate a11y
 - [ ] **Type safety** - No escape hatches
 - [ ] **Quality gates pass**
 
@@ -1909,7 +1917,7 @@ Before marking Phase 4 complete:
 - [ ] **TDD complete** - Tests for named themes in `buildCss.test.ts`
 - [ ] Named themes generate correct `[data-theme="*"]` selectors
 - [ ] Reserved names (`light`, `dark`, etc.) throw errors
-- [ ] **Storybook stories** - Named theme switcher demo
+- [ ] **Storybook stories** - New stories for all features. All stories render without errors. Named theme switcher demo (light, dark, high-contrast-light, high-contrast-dark, low-contrast-light, low-contrast-dark, festive-theme-2025)
 - [ ] **Quality gates pass**
 
 ### Final Verification

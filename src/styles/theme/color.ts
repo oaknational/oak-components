@@ -1,3 +1,5 @@
+import { CustomSemanticToken } from "./customSemanticTokens";
+
 export const oakColorTokens = {
   white: "#ffffff",
   grey10: "#f9f9f9",
@@ -205,4 +207,7 @@ export type UiRoleMap = Record<
   OakColorToken | null | undefined
 >;
 
-export type OakCombinedColorToken = OakColorToken | OakUiRoleToken;
+export type OakCombinedColorToken =
+  | OakColorToken
+  | OakUiRoleToken
+  | CustomSemanticToken;

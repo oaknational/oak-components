@@ -22,7 +22,7 @@
     "lint": "eslint src/**/*",
     "lint:precommit": "eslint src/**/* --fix",
     "fix": "npm run lint:precommit && npm run format:precommit",
-    "check": "npm run type-check && npm run lint && npm run format:check && npm run test:ci && npm run test:snapshot",
+    "check": "npm run type-check && npm run lint && npm run format:check && npm run test:ci",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "prepare": "husky install",

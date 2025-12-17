@@ -5,6 +5,7 @@ import {
   oakColorTokens,
   oakUiRoleTokens,
 } from "@/styles/theme/color";
+import { isCustomSemanticToken } from "@/styles/theme/customSemanticTokens";
 import { PropsWithTheme } from "@/styles/theme/theme";
 
 /**
@@ -23,6 +24,12 @@ function parseColor(value?: OakCombinedColorToken | null) {
   if (value === undefined || value === null) {
     return undefined;
   }
+
+  // Custom semantic tokens: return CSS variable reference
+  if (typeof value === "string" && isCustomSemanticToken(value)) {
+    return `var(--${value})`;
+  }
+
   if (value in oakColorTokens) {
     return oakColorTokens[value as OakColorToken];
   }

@@ -24,3 +24,4 @@ export * from "./OakTextArea";
 export * from "./OakThemeProvider";
 export * from "./OakTypography";
 export * from "./OakUL";
+export * from "./CustomThemeProvider";

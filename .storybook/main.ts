@@ -1,10 +1,21 @@
-const config = {
-  env: (config) => ({
-    ...config,
-    NEXT_PUBLIC_OAK_ASSETS_HOST: process.env.NEXT_PUBLIC_OAK_ASSETS_HOST,
-    NEXT_PUBLIC_OAK_ASSETS_PATH: process.env.NEXT_PUBLIC_OAK_ASSETS_PATH,
-    NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME:
-      process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
+import { StorybookConfig } from "@storybook/nextjs";
+
+const host = process.env.NEXT_PUBLIC_OAK_ASSETS_HOST;
+const path = process.env.NEXT_PUBLIC_OAK_ASSETS_PATH;
+const cloudinaryCloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
+
+if (!host || !path || !cloudinaryCloudName) {
+  throw new Error(
+    "NEXT_PUBLIC_OAK_ASSETS_HOST, NEXT_PUBLIC_OAK_ASSETS_PATH, and NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME are required",
+  );
+}
+
+const config: StorybookConfig = {
+  env: (existingEnv) => ({
+    ...existingEnv,
+    NEXT_PUBLIC_OAK_ASSETS_HOST: host,
+    NEXT_PUBLIC_OAK_ASSETS_PATH: path,
+    NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: cloudinaryCloudName,
   }),
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [
