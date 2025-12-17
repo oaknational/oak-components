@@ -24,6 +24,52 @@ Enable consuming applications to use **arbitrary branded colors** in Oak Compone
 
 ---
 
+## Phases
+
+### Phase 1: Core Custom Tokens (MVP)
+
+Enable custom token props with consumer-defined colors.
+
+**Deliverables:**
+
+1. Token registry (`customSemanticTokens.ts`)
+2. Type extension (`OakCombinedColorToken`)
+3. `parseColor` update
+4. `CustomThemeProvider` component
+5. Full test coverage
+
+### Phase 2: Theme Generator
+
+Helper function to generate accessible themes from brand colors.
+
+**Deliverables:**
+
+1. `generateTheme()` function
+2. `checkContrast()` utility
+3. WCAG 2.2 AA/AAA validation
+
+### Phase 3: Advanced Accessibility
+
+CVD safety and bundled palettes.
+
+**Deliverables:**
+
+1. `simulateCVD()` function
+2. `safePalettes` collection
+3. Okabe-Ito, Wong, IBM palettes
+
+### Phase 4: Arbitrary Named Themes
+
+Support for custom theme names beyond light/dark.
+
+**Deliverables:**
+
+1. `named` themes in config
+2. `data-theme` attribute support
+3. Theme switcher example
+
+---
+
 ## Requirements
 
 ### Must Have
@@ -38,20 +84,20 @@ Enable consuming applications to use **arbitrary branded colors** in Oak Compone
 
 6. **Contrast preference support**: `prefers-contrast: more/less` via CSS media queries
 7. **Derived fallbacks**: Undefined tokens derive from explicit ones (e.g., muted = 60% of primary)
-8. **Theme generator**: Helper function generates full theme from 1-2 brand colors using triadic colors and WCAG 2.2 AA contrast validation
-9. **Arbitrary named themes**: Support themes like `"festive-theme-2025"` beyond the reserved light/dark/contrast names
+8. **Theme generator**: Helper function generates full theme from 1-2 brand colors
+9. **Arbitrary named themes**: Support themes like `"festive-theme-2025"`
 
-### Must NOT change, modify, or remove
+### Must NOT change
 
 - Existing Oak color tokens (`mint`, `navy110`, etc.)
 - Existing UI role tokens (`bg-decorative1-main`, etc.)
-- Changing Oak's existing theme structure
+- Oak's existing theme structure
 
 ---
 
-## Architecture
+## Phase 1: Core Custom Tokens
 
-### How It Works
+### Architecture
 
 ```text
 1. Consumer defines colors:
@@ -73,9 +119,7 @@ Enable consuming applications to use **arbitrary branded colors** in Oak Compone
    Browser applies light or dark value based on color-scheme
 ```
 
----
-
-## Token Registry (Runtime Constant)
+### Token Registry
 
 **File:** `src/styles/theme/customSemanticTokens.ts`
 
@@ -87,8 +131,6 @@ Enable consuming applications to use **arbitrary branded colors** in Oak Compone
  * @remarks
  * Token names follow the pattern `custom-{category}-{name}`.
  * These are recognized by `parseColor` and output CSS var references.
- * 
- * @see {@link CustomSemanticToken} - Derived union type
  */
 export const customSemanticTokenSpec = {
   surface: ["primary", "secondary", "accent", "inverse"],
@@ -105,9 +147,15 @@ type TokenNames<T extends Record<string, readonly string[]>> = {
 
 /**
  * Union type of all valid custom semantic token names.
- * Used in `OakCombinedColorToken` for prop type safety.
  */
 export type CustomSemanticToken = TokenNames<typeof customSemanticTokenSpec>;
+
+/**
+ * Type guard for custom semantic tokens.
+ */
+export function isCustomSemanticToken(value: string): value is CustomSemanticToken {
+  return value.startsWith("custom-") && customSemanticTokens.includes(value as CustomSemanticToken);
+}
 
 // Generate array for runtime checks
 export const customSemanticTokens: readonly CustomSemanticToken[] = 
@@ -116,11 +164,65 @@ export const customSemanticTokens: readonly CustomSemanticToken[] =
   );
 ```
 
----
+### TDD: Token Registry Tests
 
-## Type Changes
+**File:** `src/styles/theme/customSemanticTokens.test.ts`
 
-### Extend OakCombinedColorToken
+```typescript
+import { 
+  customSemanticTokens, 
+  isCustomSemanticToken,
+  type CustomSemanticToken 
+} from "./customSemanticTokens";
+
+describe("customSemanticTokens", () => {
+  describe("token generation", () => {
+    it("generates all expected surface tokens", () => {
+      expect(customSemanticTokens).toContain("custom-surface-primary");
+      expect(customSemanticTokens).toContain("custom-surface-secondary");
+      expect(customSemanticTokens).toContain("custom-surface-accent");
+      expect(customSemanticTokens).toContain("custom-surface-inverse");
+    });
+
+    it("generates all expected text tokens", () => {
+      expect(customSemanticTokens).toContain("custom-text-primary");
+      expect(customSemanticTokens).toContain("custom-text-muted");
+      expect(customSemanticTokens).toContain("custom-text-inverse");
+      expect(customSemanticTokens).toContain("custom-text-accent");
+    });
+
+    it("generates all expected border tokens", () => {
+      expect(customSemanticTokens).toContain("custom-border-subtle");
+      expect(customSemanticTokens).toContain("custom-border-strong");
+      expect(customSemanticTokens).toContain("custom-border-accent");
+    });
+
+    it("generates correct total count", () => {
+      // 4 surface + 4 text + 3 border + 3 interactive + 2 shadow = 16
+      expect(customSemanticTokens).toHaveLength(16);
+    });
+  });
+
+  describe("isCustomSemanticToken type guard", () => {
+    it("returns true for valid custom tokens", () => {
+      expect(isCustomSemanticToken("custom-surface-primary")).toBe(true);
+      expect(isCustomSemanticToken("custom-text-muted")).toBe(true);
+    });
+
+    it("returns false for invalid custom tokens", () => {
+      expect(isCustomSemanticToken("custom-invalid-token")).toBe(false);
+      expect(isCustomSemanticToken("surface-primary")).toBe(false);
+    });
+
+    it("returns false for Oak tokens", () => {
+      expect(isCustomSemanticToken("mint")).toBe(false);
+      expect(isCustomSemanticToken("bg-decorative1-main")).toBe(false);
+    });
+  });
+});
+```
+
+### Type Extension
 
 **File:** `src/styles/theme/color.ts`
 
@@ -131,21 +233,48 @@ export const customSemanticTokens: readonly CustomSemanticToken[] =
 + export type OakCombinedColorToken = OakColorToken | OakUiRoleToken | CustomSemanticToken;
 ```
 
-This single change enables:
+### TDD: parseColor Tests
 
-```tsx
-<OakBox $background="custom-surface-primary" />  // ✅ Type-safe
-<OakBox $color="custom-text-muted" />            // ✅ Type-safe
+**File:** `src/styles/helpers/parseColor.test.tsx` (additions)
+
+```typescript
+describe("parseColor with custom tokens", () => {
+  it("returns CSS var for custom-surface-primary", () => {
+    expect(parseColor("custom-surface-primary")).toBe("var(--custom-surface-primary)");
+  });
+
+  it("returns CSS var for custom-text-muted", () => {
+    expect(parseColor("custom-text-muted")).toBe("var(--custom-text-muted)");
+  });
+
+  it("returns CSS var for all custom token categories", () => {
+    expect(parseColor("custom-border-subtle")).toBe("var(--custom-border-subtle)");
+    expect(parseColor("custom-interactive-hover")).toBe("var(--custom-interactive-hover)");
+    expect(parseColor("custom-shadow-strong")).toBe("var(--custom-shadow-strong)");
+  });
+
+  it("existing Oak color tokens still work", () => {
+    expect(parseColor("mint")).toBe("#bef2bd");
+  });
+
+  it("existing UI role tokens still work", () => {
+    const result = parseColor("bg-decorative1-main");
+    expect(typeof result).toBe("function"); // Theme function
+  });
+
+  it("returns undefined for null/undefined", () => {
+    expect(parseColor(null)).toBeUndefined();
+    expect(parseColor(undefined)).toBeUndefined();
+  });
+});
 ```
 
----
-
-## parseColor Changes
+### parseColor Implementation
 
 **File:** `src/styles/helpers/parseColor.ts`
 
 ```diff
-+ import { customSemanticTokens } from "@/styles/theme/customSemanticTokens";
++ import { isCustomSemanticToken } from "@/styles/theme/customSemanticTokens";
 
 function parseColor(value?: OakCombinedColorToken | null) {
   if (value === undefined || value === null) {
@@ -153,11 +282,7 @@ function parseColor(value?: OakCombinedColorToken | null) {
   }
 
 + // Custom semantic tokens: return CSS variable reference
-+ if (typeof value === "string" && value.startsWith("custom-")) {
-+   // Runtime validation (type system handles compile-time)
-+   if (!customSemanticTokens.includes(value as any)) {
-+     console.warn(`Unknown custom semantic token: ${value}`);
-+   }
++ if (typeof value === "string" && isCustomSemanticToken(value)) {
 +   return `var(--${value})`;
 + }
 
@@ -176,55 +301,83 @@ function parseColor(value?: OakCombinedColorToken | null) {
 }
 ```
 
----
+### TDD: buildCss Pure Function Tests
 
-## Consumer Provider
-
-**File:** `src/components/atoms/CustomThemeProvider/CustomThemeProvider.tsx`
+**File:** `src/components/atoms/CustomThemeProvider/buildCss.test.ts`
 
 ```typescript
-import React, { useMemo, type JSX } from "react";
-import { customSemanticTokenSpec } from "@/styles";
+import { buildCss } from "./buildCss";
+import type { CustomThemeConfig } from "./CustomThemeProvider";
 
-/**
- * Color values for a single theme mode.
- */
-export type CustomThemeColors = {
-  [K in keyof typeof customSemanticTokenSpec]: {
-    [N in (typeof customSemanticTokenSpec)[K][number]]?: string;
+describe("buildCss", () => {
+  const minimalConfig: CustomThemeConfig = {
+    light: {
+      surface: { primary: "#ffffff" },
+      text: { primary: "#222222" },
+    },
+    dark: {
+      surface: { primary: "#1a1a1a" },
+      text: { primary: "#f0f0f0" },
+    },
   };
-};
+
+  it("generates :root with color-scheme declaration", () => {
+    const css = buildCss(minimalConfig);
+    expect(css).toContain(":root {");
+    expect(css).toContain("color-scheme: light dark;");
+  });
+
+  it("generates light-dark() for tokens defined in both modes", () => {
+    const css = buildCss(minimalConfig);
+    expect(css).toContain("--custom-surface-primary: light-dark(#ffffff, #1a1a1a);");
+    expect(css).toContain("--custom-text-primary: light-dark(#222222, #f0f0f0);");
+  });
+
+  it("omits tokens not defined in both modes", () => {
+    const partialConfig: CustomThemeConfig = {
+      light: { surface: { primary: "#fff" }, text: {} },
+      dark: { surface: { primary: "#000" }, text: {} },
+    };
+    const css = buildCss(partialConfig);
+    expect(css).not.toContain("--custom-text-primary");
+  });
+
+  it("generates high-contrast media query when highContrast modes provided", () => {
+    const hcConfig: CustomThemeConfig = {
+      ...minimalConfig,
+      highContrastLight: { surface: { primary: "#ffffff" }, text: { primary: "#000000" } },
+      highContrastDark: { surface: { primary: "#000000" }, text: { primary: "#ffffff" } },
+    };
+    const css = buildCss(hcConfig);
+    expect(css).toContain("@media (prefers-contrast: more)");
+  });
+
+  it("does not generate high-contrast when modes not provided", () => {
+    const css = buildCss(minimalConfig);
+    expect(css).not.toContain("@media (prefers-contrast: more)");
+  });
+});
+```
+
+### buildCss Implementation
+
+**File:** `src/components/atoms/CustomThemeProvider/buildCss.ts`
+
+```typescript
+import { customSemanticTokenSpec } from "@/styles/theme/customSemanticTokens";
+import type { CustomThemeColors, CustomThemeConfig } from "./CustomThemeProvider";
 
 /**
- * Configuration for custom semantic theming.
+ * Generates CSS custom properties for custom theme tokens.
  * 
- * @example
- * ```typescript
- * const config: CustomThemeConfig = {
- *   light: {
- *     surface: { primary: "#ffffff", secondary: "#f5f5f5" },
- *     text: { primary: "#222222" },
- *   },
- *   dark: {
- *     surface: { primary: "#1a1a1a", secondary: "#2a2a2a" },
- *     text: { primary: "#f0f0f0" },
- *   },
- * };
- * ```
+ * @param config - Theme configuration with light/dark color values
+ * @returns CSS string to inject into <style> element
+ * 
+ * @remarks
+ * Pure function - no side effects, deterministic output.
+ * Uses CSS `light-dark()` for automatic theme switching.
  */
-export interface CustomThemeConfig {
-  light: CustomThemeColors;
-  dark: CustomThemeColors;
-  highContrastLight?: CustomThemeColors;
-  highContrastDark?: CustomThemeColors;
-}
-
-export interface CustomThemeProviderProps {
-  config: CustomThemeConfig;
-  children: React.ReactNode;
-}
-
-function buildCss(config: CustomThemeConfig): string {
+export function buildCss(config: CustomThemeConfig): string {
   const lines: string[] = [":root {", "  color-scheme: light dark;"];
   
   for (const [category, names] of Object.entries(customSemanticTokenSpec)) {
@@ -259,6 +412,40 @@ function buildCss(config: CustomThemeConfig): string {
   
   return lines.join("\n");
 }
+```
+
+### CustomThemeProvider Component
+
+**File:** `src/components/atoms/CustomThemeProvider/CustomThemeProvider.tsx`
+
+```typescript
+import React, { useMemo, type JSX } from "react";
+import { customSemanticTokenSpec } from "@/styles/theme/customSemanticTokens";
+import { buildCss } from "./buildCss";
+
+/**
+ * Color values for a single theme mode.
+ */
+export type CustomThemeColors = {
+  [K in keyof typeof customSemanticTokenSpec]: {
+    [N in (typeof customSemanticTokenSpec)[K][number]]?: string;
+  };
+};
+
+/**
+ * Configuration for custom semantic theming.
+ */
+export interface CustomThemeConfig {
+  light: CustomThemeColors;
+  dark: CustomThemeColors;
+  highContrastLight?: CustomThemeColors;
+  highContrastDark?: CustomThemeColors;
+}
+
+export interface CustomThemeProviderProps {
+  config: CustomThemeConfig;
+  children: React.ReactNode;
+}
 
 /**
  * Provider for custom semantic theming.
@@ -289,293 +476,360 @@ export function CustomThemeProvider({ config, children }: CustomThemeProviderPro
 
 ---
 
-## Usage Examples
+## Phase 2: Theme Generator
 
-### Basic Usage
+### TDD: checkContrast Tests
 
-```tsx
-// app/layout.tsx
-import { CustomThemeProvider, OakGlobalStyle } from "@oaknational/oak-components";
-import { myThemeConfig } from "@/styles/theme";
-
-export default function RootLayout({ children }) {
-  return (
-    <html>
-      <body>
-        <CustomThemeProvider config={myThemeConfig}>
-          <OakGlobalStyle />
-          {children}
-        </CustomThemeProvider>
-      </body>
-    </html>
-  );
-}
-```
-
-### In Components
-
-```tsx
-import { OakBox, OakFlex, OakHeading } from "@oaknational/oak-components";
-
-export function HeroSection() {
-  return (
-    <OakBox $background="custom-surface-accent" $pv="spacing-48">
-      <OakFlex $flexDirection="column" $gap="spacing-16">
-        <OakHeading $color="custom-text-primary" tag="h1">
-          Welcome
-        </OakHeading>
-      </OakFlex>
-    </OakBox>
-  );
-}
-
-export function Footer() {
-  return (
-    <OakBox
-      as="footer"
-      $background="custom-surface-primary"
-      $color="custom-text-primary"
-      $borderColor="custom-border-subtle"
-      $bt="border-solid-s"
-    >
-      <FooterContent />
-    </OakBox>
-  );
-}
-```
-
----
-
-## Files to Create/Modify
-
-| File | Action | Purpose |
-|------|--------|---------|
-| `src/styles/theme/customSemanticTokens.ts` | NEW | Token registry + derived types |
-| `src/styles/theme/generateTheme.ts` | NEW | Theme generator + contrast checker |
-| `src/styles/theme/color.ts` | MODIFY | Add CustomSemanticToken to union |
-| `src/styles/helpers/parseColor.ts` | MODIFY | Handle custom-* prefix |
-| `src/styles/theme/safePalettes.ts` | NEW | Bundled CVD-safe palettes |
-| `src/styles/theme/index.ts` | MODIFY | Export new types |
-| `src/components/atoms/CustomThemeProvider/` | NEW | Provider component |
-
----
-
-## Test Updates
-
-**File:** `src/styles/helpers/parseColor.test.tsx`
+**File:** `src/styles/theme/checkContrast.test.ts`
 
 ```typescript
-describe("parseColor with custom tokens", () => {
-  it("returns CSS var for custom semantic tokens", () => {
-    expect(parseColor("custom-surface-primary")).toBe("var(--custom-surface-primary)");
-    expect(parseColor("custom-text-muted")).toBe("var(--custom-text-muted)");
+import { checkContrast } from "./checkContrast";
+
+describe("checkContrast", () => {
+  it("calculates 21:1 ratio for black on white", () => {
+    const result = checkContrast("#000000", "#ffffff");
+    expect(result.ratio).toBeCloseTo(21, 0);
   });
+
+  it("calculates 1:1 ratio for same colors", () => {
+    const result = checkContrast("#ffffff", "#ffffff");
+    expect(result.ratio).toBeCloseTo(1, 0);
+  });
+
+  it("passes text for 4.5:1+ ratio", () => {
+    // #767676 on white is exactly 4.54:1
+    const result = checkContrast("#767676", "#ffffff");
+    expect(result.passesText).toBe(true);
+    expect(result.ratio).toBeGreaterThanOrEqual(4.5);
+  });
+
+  it("fails text for <4.5:1 ratio", () => {
+    // #777777 on white is ~4.48:1
+    const result = checkContrast("#777777", "#ffffff");
+    expect(result.passesText).toBe(false);
+  });
+
+  it("passes large text for 3:1+ ratio", () => {
+    // #959595 on white is ~3.01:1
+    const result = checkContrast("#959595", "#ffffff");
+    expect(result.passesLargeText).toBe(true);
+    expect(result.passesText).toBe(false);
+  });
+
+  it("passes UI for 3:1+ ratio", () => {
+    const result = checkContrast("#959595", "#ffffff");
+    expect(result.passesUI).toBe(true);
+  });
+
+  it("handles 3-char hex shorthand", () => {
+    const result = checkContrast("#000", "#fff");
+    expect(result.ratio).toBeCloseTo(21, 0);
+  });
+});
+```
+
+### checkContrast Implementation
+
+**File:** `src/styles/theme/checkContrast.ts`
+
+```typescript
+/**
+ * Result of WCAG contrast check.
+ */
+export interface ContrastResult {
+  /** Contrast ratio (1:1 to 21:1) */
+  ratio: number;
+  /** Passes WCAG AA normal text (4.5:1) */
+  passesText: boolean;
+  /** Passes WCAG AA large text (3:1) */
+  passesLargeText: boolean;
+  /** Passes WCAG AA UI components (3:1) */
+  passesUI: boolean;
+  /** Passes WCAG AAA normal text (7:1) */
+  passesAAAText: boolean;
+}
+
+/**
+ * Parses hex color to RGB values.
+ */
+function hexToRgb(hex: string): { r: number; g: number; b: number } {
+  const clean = hex.replace("#", "");
+  const expanded = clean.length === 3
+    ? clean.split("").map(c => c + c).join("")
+    : clean;
   
-  it("existing tokens still work", () => {
-    expect(parseColor("mint")).toBe("#bef2bd");
+  return {
+    r: parseInt(expanded.slice(0, 2), 16),
+    g: parseInt(expanded.slice(2, 4), 16),
+    b: parseInt(expanded.slice(4, 6), 16),
+  };
+}
+
+/**
+ * Calculates relative luminance per WCAG 2.2.
+ */
+function relativeLuminance({ r, g, b }: { r: number; g: number; b: number }): number {
+  const [rs, gs, bs] = [r, g, b].map(c => {
+    const sRGB = c / 255;
+    return sRGB <= 0.04045
+      ? sRGB / 12.92
+      : Math.pow((sRGB + 0.055) / 1.055, 2.4);
+  });
+  return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
+}
+
+/**
+ * Checks WCAG 2.2 contrast ratio between two colors.
+ * 
+ * @param foreground - Foreground color (hex)
+ * @param background - Background color (hex)
+ * @returns Contrast check result with ratio and pass/fail flags
+ */
+export function checkContrast(foreground: string, background: string): ContrastResult {
+  const fgLum = relativeLuminance(hexToRgb(foreground));
+  const bgLum = relativeLuminance(hexToRgb(background));
+  
+  const lighter = Math.max(fgLum, bgLum);
+  const darker = Math.min(fgLum, bgLum);
+  const ratio = (lighter + 0.05) / (darker + 0.05);
+  
+  return {
+    ratio,
+    passesText: ratio >= 4.5,
+    passesLargeText: ratio >= 3,
+    passesUI: ratio >= 3,
+    passesAAAText: ratio >= 7,
+  };
+}
+```
+
+### TDD: generateTheme Tests
+
+**File:** `src/styles/theme/generateTheme.test.ts`
+
+```typescript
+import { generateTheme } from "./generateTheme";
+import { checkContrast } from "./checkContrast";
+
+describe("generateTheme", () => {
+  it("generates light and dark themes from primary color", () => {
+    const result = generateTheme("#287c34");
+    expect(result.light).toBeDefined();
+    expect(result.dark).toBeDefined();
+  });
+
+  it("generates text colors with AA contrast against surfaces", () => {
+    const result = generateTheme("#287c34");
+    
+    // Light mode: text should contrast with light surface
+    const lightSurface = result.light.surface?.primary;
+    const lightText = result.light.text?.primary;
+    if (lightSurface && lightText) {
+      const contrast = checkContrast(lightText, lightSurface);
+      expect(contrast.passesText).toBe(true);
+    }
+
+    // Dark mode: text should contrast with dark surface
+    const darkSurface = result.dark.surface?.primary;
+    const darkText = result.dark.text?.primary;
+    if (darkSurface && darkText) {
+      const contrast = checkContrast(darkText, darkSurface);
+      expect(contrast.passesText).toBe(true);
+    }
+  });
+
+  it("uses provided secondary color when given", () => {
+    const result = generateTheme("#287c34", "#7c2834");
+    expect(result.light.surface?.accent).toBeDefined();
+  });
+
+  it("derives triadic secondary when not provided", () => {
+    const result = generateTheme("#287c34");
+    // Should generate a secondary/accent color
+    expect(result.light.surface?.accent).toBeDefined();
+  });
+
+  it("generates high-contrast variants when requested", () => {
+    const result = generateTheme("#287c34", undefined, { includeHighContrast: true });
+    expect(result.highContrastLight).toBeDefined();
+    expect(result.highContrastDark).toBeDefined();
+  });
+
+  it("high-contrast text achieves AAA (7:1) ratio", () => {
+    const result = generateTheme("#287c34", undefined, { includeHighContrast: true });
+    
+    if (result.highContrastLight?.surface?.primary && result.highContrastLight?.text?.primary) {
+      const contrast = checkContrast(
+        result.highContrastLight.text.primary,
+        result.highContrastLight.surface.primary
+      );
+      expect(contrast.passesAAAText).toBe(true);
+    }
+  });
+
+  it("returns warnings array for adjusted colors", () => {
+    // A color that requires adjustment to meet contrast
+    const result = generateTheme("#cccccc");
+    expect(Array.isArray(result.warnings)).toBe(true);
   });
 });
 ```
 
 ---
 
-## Theme Generator Helper
+## Phase 3: CVD Safety
 
-**File:** `src/styles/theme/generateTheme.ts`
+### TDD: simulateCVD Tests
+
+**File:** `src/styles/theme/simulateCVD.test.ts`
 
 ```typescript
-import type { CustomThemeColors } from "./CustomThemeProvider";
+import { simulateCVD, areDistinguishable } from "./simulateCVD";
 
-type ContrastLevel = "AA" | "AAA";
-type CVDType = "deuteranopia" | "protanopia" | "tritanopia";
+describe("simulateCVD", () => {
+  it("simulates deuteranopia (red-green confusion)", () => {
+    // Red and green should become more similar
+    const redSimulated = simulateCVD("#ff0000", "deuteranopia");
+    const greenSimulated = simulateCVD("#00ff00", "deuteranopia");
+    
+    // Both should shift toward yellow-brown tones
+    expect(redSimulated).not.toBe("#ff0000");
+    expect(greenSimulated).not.toBe("#00ff00");
+  });
 
-interface GenerateThemeOptions {
-  /** Include high-contrast variants (WCAG AAA) */
-  includeHighContrast?: boolean;
-  /** Include low-contrast variants (softer, still AA compliant) */
-  includeLowContrast?: boolean;
-  /**
-   * Enable color blindness safety validation.
-   * 
-   * @remarks
-   * When enabled:
-   * - Upgrades to WCAG 2.2 AAA contrast (7:1 text, 4.5:1 UI)
-   * - Simulates palette for deuteranopia, protanopia, and tritanopia
-   * - Auto-adjusts hue/lightness if simulated colors become indistinguishable
-   * - Ensures all color pairings remain visually distinct after simulation
-   * 
-   * **Important**: Color-safe themes address perception differences, but
-   * UI design should NEVER rely on color alone to convey information.
-   * Always pair color with:
-   * - Icons (✓ for success, ✕ for error)
-   * - Text labels
-   * - Patterns or shapes
-   * 
-   * @see {@link https://www.w3.org/WAI/WCAG22/Understanding/use-of-color | WCAG 1.4.1 Use of Color}
-   * @see {@link https://webaim.org/articles/visual/colorblind | WebAIM Color Blindness Guide}
-   * @see {@link https://www.color-blindness.com/types-of-color-blindness/ | Types of Color Blindness}
-   */
-  colorBlindSafe?: boolean;
-}
+  it("simulates protanopia (red weakness)", () => {
+    const result = simulateCVD("#ff0000", "protanopia");
+    expect(result).not.toBe("#ff0000");
+  });
 
-/**
- * Generates a complete theme from 1-2 brand colors.
- * 
- * @remarks
- * Uses color theory to derive a full palette:
- * - Primary color for interactive elements
- * - Triadic colors for accents (120° hue rotation)
- * - Automatic light/dark surface colors
- * 
- * **Contrast standards by theme type:**
- * - Light/Dark: WCAG 2.2 AA (4.5:1 text, 3:1 UI)
- * - High-contrast: WCAG 2.2 AAA (7:1 text, 4.5:1 UI)
- * - Low-contrast: WCAG 2.2 AA minimum, softer colors
- * - colorBlindSafe: WCAG 2.2 AAA + CVD simulation validation
- * 
- * Iteratively adjusts colors until all combinations pass.
- * 
- * @param primary - Primary brand color (hex)
- * @param secondary - Optional secondary color; if omitted, derives triadic
- * @param options - Configuration options
- * @returns Complete theme config with all requested modes
- * 
- * @example
- * ```typescript
- * // Generate accessible, color-blind-safe theme
- * const theme = generateTheme("#287c34", undefined, {
- *   colorBlindSafe: true,
- *   includeHighContrast: true,
- * });
- * ```
- */
-export function generateTheme(
-  primary: string,
-  secondary?: string,
-  options?: GenerateThemeOptions
-): {
-  light: CustomThemeColors;
-  dark: CustomThemeColors;
-  highContrastLight?: CustomThemeColors;
-  highContrastDark?: CustomThemeColors;
-  lowContrastLight?: CustomThemeColors;
-  lowContrastDark?: CustomThemeColors;
-  /** Warnings about potential issues (e.g., adjusted colors) */
-  warnings?: string[];
-} {
-  // Implementation:
-  // 1. Parse primary to OKLCH (perceptually uniform)
-  // 2. Generate triadic secondary if not provided (primary + 120°)
-  // 3. Generate surface colors (very light/dark versions)
-  // 4. Generate text colors
-  // 
-  // Standard mode (WCAG AA):
-  // 5. Check contrast ≥ 4.5:1 for text, ≥ 3:1 for UI
-  // 6. Adjust lightness until passes
-  //
-  // High-contrast (WCAG AAA):
-  // 7. Check contrast ≥ 7:1 for text, ≥ 4.5:1 for UI
-  //
-  // colorBlindSafe mode:
-  // 8. Apply WCAG AAA contrast requirements
-  // 9. Simulate palette through CVD (deuteranopia, protanopia, tritanopia)
-  // 10. Check simulated colors remain distinguishable
-  // 11. If colors merge, shift hue by 30° or adjust lightness
-  // 12. Re-validate until all CVD simulations pass
-  // 13. Add warnings for any auto-adjusted colors
-  
-  // ... implementation details
-}
+  it("simulates tritanopia (blue-yellow confusion)", () => {
+    const result = simulateCVD("#0000ff", "tritanopia");
+    expect(result).not.toBe("#0000ff");
+  });
 
-/**
- * Simulates how a color appears to someone with color vision deficiency.
- * 
- * @param color - Input color (hex)
- * @param type - Type of color vision deficiency
- * @returns Simulated color (hex)
- * 
- * @see {@link https://www.color-blindness.com/coblis-color-blindness-simulator/ | Color Blindness Simulator}
- */
-export function simulateCVD(color: string, type: CVDType): string {
-  // Uses Brettel/Viénot/Mollon algorithm for CVD simulation
-  // ... implementation
-}
+  it("leaves grayscale colors unchanged", () => {
+    const white = simulateCVD("#ffffff", "deuteranopia");
+    const black = simulateCVD("#000000", "deuteranopia");
+    const gray = simulateCVD("#808080", "deuteranopia");
+    
+    expect(white).toBe("#ffffff");
+    expect(black).toBe("#000000");
+    // Gray should remain approximately gray
+  });
+});
 
-/**
- * Checks WCAG 2.2 AA contrast ratio between two colors.
- * 
- * @param foreground - Text/foreground color (hex)
- * @param background - Background color (hex)
- * @returns Object with ratio and pass/fail for text and UI elements
- */
-export function checkContrast(foreground: string, background: string): {
-  ratio: number;
-  passesText: boolean;      // 4.5:1 for normal text
-  passesLargeText: boolean; // 3:1 for large text
-  passesUI: boolean;        // 3:1 for UI components
-} {
-  // ... implementation
-}
+describe("areDistinguishable", () => {
+  it("returns true for high-contrast color pairs", () => {
+    expect(areDistinguishable("#000000", "#ffffff")).toBe(true);
+  });
+
+  it("returns false for low-contrast color pairs after CVD simulation", () => {
+    // Red and green become indistinguishable in deuteranopia
+    expect(areDistinguishable("#ff0000", "#00ff00", "deuteranopia")).toBe(false);
+  });
+
+  it("returns true for blue and yellow in deuteranopia", () => {
+    // Blue and yellow remain distinguishable in red-green CVD
+    expect(areDistinguishable("#0000ff", "#ffff00", "deuteranopia")).toBe(true);
+  });
+});
 ```
 
----
-
-## Bundled Color-Blind Safe Palettes
+### Safe Palettes
 
 **File:** `src/styles/theme/safePalettes.ts`
 
 ```typescript
-import type { CustomThemeConfig } from "./CustomThemeProvider";
+import type { CustomThemeConfig } from "@/components/atoms/CustomThemeProvider";
 
 /**
  * Pre-built color-blind safe theme palettes based on peer-reviewed research.
  * 
  * @remarks
  * These palettes have been validated to be distinguishable by users with
- * deuteranopia, protanopia, and tritanopia, while meeting WCAG 2.2 AAA.
+ * deuteranopia, protanopia, and tritanopia, while meeting WCAG 2.2 AA.
  * 
- * **Palette Sources:**
- * - IBM Design: {@link https://www.ibm.com/design/language/color/}
- * - Okabe-Ito: {@link https://jfly.uni-koeln.de/color/ | Color Universal Design}
- * - Wong: {@link https://www.nature.com/articles/nmeth.1618 | Points of View: Color blindness}
- * 
- * @example
- * ```tsx
- * import { safePalettes } from "@oaknational/oak-components";
- * 
- * <CustomThemeProvider config={safePalettes.okabeIto}>
- *   <App />
- * </CustomThemeProvider>
- * ```
+ * @see {@link https://jfly.uni-koeln.de/color/ | Okabe-Ito Color Universal Design}
+ * @see {@link https://www.nature.com/articles/nmeth.1618 | Wong - Points of View}
  */
 export const safePalettes = {
   /**
-   * IBM Design color-blind safe palette.
-   * 8 distinct colors validated across all CVD types.
-   */
-  ibm: { /* CustomThemeConfig */ } as CustomThemeConfig,
-  
-  /**
    * Okabe-Ito palette (Color Universal Design).
-   * Gold standard for scientific publications.
-   * 
-   * @see {@link https://jfly.uni-koeln.de/color/ | Original Research}
+   * Gold standard for scientific publications and accessibility.
    */
-  okabeIto: { /* CustomThemeConfig */ } as CustomThemeConfig,
-  
-  /**
-   * Wong palette from Nature Methods.
-   * Optimized for data visualization.
-   * 
-   * @see {@link https://www.nature.com/articles/nmeth.1618 | Points of View}
-   */
-  wong: { /* CustomThemeConfig */ } as CustomThemeConfig,
-  
+  okabeIto: {
+    light: {
+      surface: { 
+        primary: "#ffffff",
+        secondary: "#f0f0f0",
+        accent: "#e69f00", // Orange
+        inverse: "#0072b2", // Blue
+      },
+      text: { 
+        primary: "#000000",
+        muted: "#555555",
+        inverse: "#ffffff",
+        accent: "#009e73", // Bluish green
+      },
+      border: {
+        subtle: "#cccccc",
+        strong: "#000000",
+        accent: "#cc79a7", // Reddish purple
+      },
+      interactive: {
+        primary: "#0072b2", // Blue
+        hover: "#005b8f",
+        focus: "#56b4e9", // Sky blue
+      },
+      shadow: { subtle: "rgba(0,0,0,0.1)", strong: "rgba(0,0,0,0.25)" },
+    },
+    dark: {
+      surface: {
+        primary: "#1a1a1a",
+        secondary: "#2a2a2a",
+        accent: "#e69f00",
+        inverse: "#56b4e9",
+      },
+      text: {
+        primary: "#f0f0f0",
+        muted: "#aaaaaa",
+        inverse: "#000000",
+        accent: "#009e73",
+      },
+      border: {
+        subtle: "#444444",
+        strong: "#ffffff",
+        accent: "#cc79a7",
+      },
+      interactive: {
+        primary: "#56b4e9",
+        hover: "#0072b2",
+        focus: "#e69f00",
+      },
+      shadow: { subtle: "rgba(0,0,0,0.3)", strong: "rgba(0,0,0,0.5)" },
+    },
+  } satisfies CustomThemeConfig,
+
   /**
    * High-contrast monochromatic palette.
    * Uses only luminance differences, works for all CVD types.
    */
-  monochrome: { /* CustomThemeConfig */ } as CustomThemeConfig,
+  monochrome: {
+    light: {
+      surface: { primary: "#ffffff", secondary: "#e0e0e0", accent: "#c0c0c0", inverse: "#000000" },
+      text: { primary: "#000000", muted: "#404040", inverse: "#ffffff", accent: "#000000" },
+      border: { subtle: "#c0c0c0", strong: "#000000", accent: "#606060" },
+      interactive: { primary: "#000000", hover: "#333333", focus: "#666666" },
+      shadow: { subtle: "rgba(0,0,0,0.15)", strong: "rgba(0,0,0,0.35)" },
+    },
+    dark: {
+      surface: { primary: "#000000", secondary: "#1a1a1a", accent: "#333333", inverse: "#ffffff" },
+      text: { primary: "#ffffff", muted: "#c0c0c0", inverse: "#000000", accent: "#ffffff" },
+      border: { subtle: "#333333", strong: "#ffffff", accent: "#808080" },
+      interactive: { primary: "#ffffff", hover: "#cccccc", focus: "#999999" },
+      shadow: { subtle: "rgba(0,0,0,0.3)", strong: "rgba(0,0,0,0.6)" },
+    },
+  } satisfies CustomThemeConfig,
 } as const;
 
 export type SafePaletteName = keyof typeof safePalettes;
@@ -583,26 +837,9 @@ export type SafePaletteName = keyof typeof safePalettes;
 
 ---
 
-## Arbitrary Named Themes
+## Phase 4: Arbitrary Named Themes
 
-### Activation
-
-For themes beyond light/dark, use the `data-theme` attribute:
-
-```tsx
-// Component to switch themes
-export function ThemeSwitcher({ theme }: { theme: string }) {
-  useEffect(() => {
-    document.documentElement.dataset.theme = theme;
-  }, [theme]);
-  return null;
-}
-
-// Usage
-<ThemeSwitcher theme="festive-theme-2025" />
-```
-
-### Defining Arbitrary Themes
+### Extended Config Type
 
 ```typescript
 export interface CustomThemeConfig {
@@ -610,67 +847,88 @@ export interface CustomThemeConfig {
   dark: CustomThemeColors;
   highContrastLight?: CustomThemeColors;
   highContrastDark?: CustomThemeColors;
-  // Arbitrary named themes
+  /** Arbitrary named themes activated via data-theme attribute */
   named?: Record<string, CustomThemeColors>;
 }
-
-const config: CustomThemeConfig = {
-  light: { /* ... */ },
-  dark: { /* ... */ },
-  named: {
-    "festive-theme-2025": {
-      surface: { primary: "#1a472a", secondary: "#8b0000", accent: "#ffd700" },
-      text: { primary: "#ffffff", muted: "#e0e0e0" },
-      // ...
-    },
-    "summer-sale": {
-      surface: { primary: "#ff6b35", accent: "#00d4aa" },
-      // ...
-    },
-  },
-};
 ```
 
-### Generated CSS for Named Themes
+### TDD: Named Themes in buildCss
 
-```css
-/* Named themes via data-theme attribute */
-[data-theme="festive-theme-2025"] {
-  --custom-surface-primary: #1a472a;
-  --custom-surface-secondary: #8b0000;
-  --custom-surface-accent: #ffd700;
-  --custom-text-primary: #ffffff;
-}
+```typescript
+describe("buildCss with named themes", () => {
+  it("generates data-theme selectors for named themes", () => {
+    const config: CustomThemeConfig = {
+      light: { surface: { primary: "#fff" }, text: {} },
+      dark: { surface: { primary: "#000" }, text: {} },
+      named: {
+        "festive-2025": {
+          surface: { primary: "#1a472a", accent: "#ffd700" },
+          text: { primary: "#ffffff" },
+        },
+      },
+    };
+    const css = buildCss(config);
+    expect(css).toContain('[data-theme="festive-2025"]');
+    expect(css).toContain("--custom-surface-primary: #1a472a");
+  });
 
-[data-theme="summer-sale"] {
-  --custom-surface-primary: #ff6b35;
-  --custom-surface-accent: #00d4aa;
-}
+  it("does not use light-dark() for named themes (static values)", () => {
+    const config: CustomThemeConfig = {
+      light: { surface: { primary: "#fff" }, text: {} },
+      dark: { surface: { primary: "#000" }, text: {} },
+      named: {
+        "summer-sale": { surface: { primary: "#ff6b35" }, text: {} },
+      },
+    };
+    const css = buildCss(config);
+    // Named themes use static values, not light-dark()
+    expect(css).toContain('[data-theme="summer-sale"]');
+    expect(css).not.toMatch(/\[data-theme="summer-sale"\].*light-dark/);
+  });
+});
 ```
-
-### Reserved Theme Names
-
-The following names use `light-dark()` and cannot be used as arbitrary theme names:
-
-- `light`, `dark` (handled by `color-scheme`)
-- `high-contrast-light`, `high-contrast-dark` (handled by `prefers-contrast: more`)
-- `low-contrast-light`, `low-contrast-dark` (handled by `prefers-contrast: less`)
-
-Any other name is available for arbitrary themes.
 
 ---
 
-## SSR & Browser Support
+## Files Summary
 
-- **SSR safe**: `useMemo` with pure function, `<style>` in initial HTML
-- **`light-dark()`**: Chrome 123+, Firefox 120+, Safari 17.5+
-- **`prefers-contrast`**: Chrome 96+, Firefox 101+, Safari 14.1+
+| File | Action | Phase |
+|------|--------|-------|
+| `src/styles/theme/customSemanticTokens.ts` | NEW | 1 |
+| `src/styles/theme/customSemanticTokens.test.ts` | NEW | 1 |
+| `src/styles/theme/color.ts` | MODIFY | 1 |
+| `src/styles/helpers/parseColor.ts` | MODIFY | 1 |
+| `src/styles/helpers/parseColor.test.tsx` | MODIFY | 1 |
+| `src/components/atoms/CustomThemeProvider/buildCss.ts` | NEW | 1 |
+| `src/components/atoms/CustomThemeProvider/buildCss.test.ts` | NEW | 1 |
+| `src/components/atoms/CustomThemeProvider/CustomThemeProvider.tsx` | NEW | 1 |
+| `src/styles/theme/checkContrast.ts` | NEW | 2 |
+| `src/styles/theme/checkContrast.test.ts` | NEW | 2 |
+| `src/styles/theme/generateTheme.ts` | NEW | 2 |
+| `src/styles/theme/generateTheme.test.ts` | NEW | 2 |
+| `src/styles/theme/simulateCVD.ts` | NEW | 3 |
+| `src/styles/theme/simulateCVD.test.ts` | NEW | 3 |
+| `src/styles/theme/safePalettes.ts` | NEW | 3 |
+| `src/styles/theme/index.ts` | MODIFY | 1-3 |
 
 ---
 
 ## Verification
 
 ```bash
-npm install && npm test -- --watchAll=false && npm run build
-npm run storybook  # Visual verification
+# Phase 1
+npm run test -- customSemanticTokens parseColor buildCss CustomThemeProvider
+npm run build && npm run check-types
+
+# Phase 2
+npm run test -- checkContrast generateTheme
+npm run build
+
+# Phase 3
+npm run test -- simulateCVD safePalettes
+npm run build
+
+# Full verification
+npm run build && npm run check-types && npm run lint && npm run format:check && npm run test:ci
+npm run storybook  # Visual verification with example stories
 ```

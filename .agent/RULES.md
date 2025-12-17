@@ -294,7 +294,7 @@ Ensure `tsconfig.json` has strict mode:
 
 ## 📋 Git Commit Standards
 
-```
+```text
 type(scope): short description
 ```
 
