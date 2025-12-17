@@ -26,7 +26,7 @@ Enable consuming applications to use **arbitrary branded colors** in Oak Compone
 
 ## Phases
 
-### Phase 1: Core Custom Tokens (MVP)
+### Phase 1 Summary: Core Custom Tokens (MVP)
 
 Enable custom token props with consumer-defined colors.
 
@@ -38,7 +38,7 @@ Enable custom token props with consumer-defined colors.
 4. `CustomThemeProvider` component
 5. Full test coverage
 
-### Phase 2: Theme Generator
+### Phase 2 Summary: Theme Generator
 
 Helper function to generate accessible themes from brand colors.
 
@@ -48,7 +48,7 @@ Helper function to generate accessible themes from brand colors.
 2. `checkContrast()` utility
 3. WCAG 2.2 AA/AAA validation
 
-### Phase 3: Advanced Accessibility
+### Phase 3 Summary: Advanced Accessibility
 
 CVD safety and bundled palettes.
 
@@ -58,7 +58,7 @@ CVD safety and bundled palettes.
 2. `safePalettes` collection
 3. Okabe-Ito, Wong, IBM palettes
 
-### Phase 4: Arbitrary Named Themes
+### Phase 4 Summary: Arbitrary Named Themes
 
 Support for custom theme names beyond light/dark.
 
@@ -92,6 +92,499 @@ Support for custom theme names beyond light/dark.
 - Existing Oak color tokens (`mint`, `navy110`, etc.)
 - Existing UI role tokens (`bg-decorative1-main`, etc.)
 - Oak's existing theme structure
+
+---
+
+## Examples
+
+### 1. Minimum Valid Palette
+
+The minimum required tokens are **`surface.primary`** and **`text.primary`** for both `light` and `dark` modes. All other tokens are optional and will be derived automatically if not provided.
+
+```typescript
+// ✅ Minimum valid config - only 2 tokens per mode
+const minimalConfig: CustomThemeConfig = {
+  light: {
+    surface: { primary: "#ffffff" },
+    text: { primary: "#1a1a1a" },
+  },
+  dark: {
+    surface: { primary: "#1a1a1a" },
+    text: { primary: "#f0f0f0" },
+  },
+};
+
+// Auto-derived values (examples - actual derivation may vary):
+// surface.secondary = surface.primary adjusted by 5% lightness
+// surface.accent = interactive.primary (if set) or derived from text.primary
+// surface.inverse = opposite mode's surface.primary
+// text.muted = text.primary at 60% opacity/lightness
+// text.inverse = opposite mode's text.primary
+// text.accent = interactive.primary (if set)
+// border.subtle = surface.primary adjusted 15% toward text.primary
+// border.strong = text.primary
+// border.accent = interactive.primary (if set)
+// interactive.primary = first non-grayscale color found, or derived
+// interactive.hover = interactive.primary darkened 10%
+// interactive.focus = interactive.primary lightened 20%
+// shadow.subtle = rgba(0,0,0,0.1) / rgba(0,0,0,0.2)
+// shadow.strong = rgba(0,0,0,0.25) / rgba(0,0,0,0.4)
+```
+
+**Derivation Rules:**
+
+| Token | Derived From | Rule |
+|-------|-------------|------|
+| `surface.secondary` | `surface.primary` | Shift lightness 5% toward middle gray |
+| `surface.accent` | `interactive.primary` | Copy, or if missing, derive from text |
+| `surface.inverse` | Opposite mode's `surface.primary` | Direct copy |
+| `text.muted` | `text.primary` | Reduce contrast by 40% |
+| `text.inverse` | Opposite mode's `text.primary` | Direct copy |
+| `text.accent` | `interactive.primary` | Copy |
+| `border.subtle` | `surface.primary`, `text.primary` | 15% blend |
+| `border.strong` | `text.primary` | Direct copy |
+| `border.accent` | `interactive.primary` | Copy |
+| `interactive.primary` | First chromatic color | Auto-detect or derive |
+| `interactive.hover` | `interactive.primary` | Darken 10% |
+| `interactive.focus` | `interactive.primary` | Lighten 20%, ensure visible ring |
+| `shadow.subtle` | Mode | `rgba(0,0,0,0.1)` light / `rgba(0,0,0,0.2)` dark |
+| `shadow.strong` | Mode | `rgba(0,0,0,0.25)` light / `rgba(0,0,0,0.4)` dark |
+
+---
+
+### 2. Full Manual Specification (All Reserved Themes + Custom)
+
+This example shows explicit values for all 6 reserved theme modes plus one custom named theme.
+
+```typescript
+const fullManualConfig: CustomThemeConfig = {
+  // Required: Standard light mode
+  light: {
+    surface: { 
+      primary: "#ffffff",
+      secondary: "#f5f5f5",
+      accent: "#e8f4e8",
+      inverse: "#1a1a1a",
+    },
+    text: { 
+      primary: "#1a1a1a",
+      muted: "#666666",
+      inverse: "#f0f0f0",
+      accent: "#287c34",
+    },
+    border: { 
+      subtle: "#e0e0e0",
+      strong: "#1a1a1a",
+      accent: "#287c34",
+    },
+    interactive: { 
+      primary: "#287c34",
+      hover: "#1f5f28",
+      focus: "#4a9f54",
+    },
+    shadow: { 
+      subtle: "rgba(0,0,0,0.08)",
+      strong: "rgba(0,0,0,0.2)",
+    },
+  },
+
+  // Required: Standard dark mode
+  dark: {
+    surface: { 
+      primary: "#1a1a1a",
+      secondary: "#2a2a2a",
+      accent: "#1e3a1e",
+      inverse: "#ffffff",
+    },
+    text: { 
+      primary: "#f0f0f0",
+      muted: "#999999",
+      inverse: "#1a1a1a",
+      accent: "#4a9f54",
+    },
+    border: { 
+      subtle: "#3a3a3a",
+      strong: "#f0f0f0",
+      accent: "#4a9f54",
+    },
+    interactive: { 
+      primary: "#4a9f54",
+      hover: "#5cb565",
+      focus: "#287c34",
+    },
+    shadow: { 
+      subtle: "rgba(0,0,0,0.2)",
+      strong: "rgba(0,0,0,0.5)",
+    },
+  },
+
+  // Optional: High-contrast light (prefers-contrast: more)
+  highContrastLight: {
+    surface: { 
+      primary: "#ffffff",
+      secondary: "#ffffff",
+      accent: "#ffffff",
+      inverse: "#000000",
+    },
+    text: { 
+      primary: "#000000",
+      muted: "#000000",
+      inverse: "#ffffff",
+      accent: "#000000",
+    },
+    border: { 
+      subtle: "#000000",
+      strong: "#000000",
+      accent: "#000000",
+    },
+    interactive: { 
+      primary: "#000000",
+      hover: "#333333",
+      focus: "#000000",
+    },
+    shadow: { 
+      subtle: "rgba(0,0,0,0.3)",
+      strong: "rgba(0,0,0,0.6)",
+    },
+  },
+
+  // Optional: High-contrast dark (prefers-contrast: more + dark)
+  highContrastDark: {
+    surface: { 
+      primary: "#000000",
+      secondary: "#000000",
+      accent: "#000000",
+      inverse: "#ffffff",
+    },
+    text: { 
+      primary: "#ffffff",
+      muted: "#ffffff",
+      inverse: "#000000",
+      accent: "#ffffff",
+    },
+    border: { 
+      subtle: "#ffffff",
+      strong: "#ffffff",
+      accent: "#ffffff",
+    },
+    interactive: { 
+      primary: "#ffffff",
+      hover: "#cccccc",
+      focus: "#ffffff",
+    },
+    shadow: { 
+      subtle: "rgba(255,255,255,0.15)",
+      strong: "rgba(255,255,255,0.35)",
+    },
+  },
+
+  // Optional: Low-contrast light (prefers-contrast: less)
+  lowContrastLight: {
+    surface: { 
+      primary: "#fafafa",
+      secondary: "#f0f0f0",
+      accent: "#e8e8e8",
+      inverse: "#404040",
+    },
+    text: { 
+      primary: "#404040",
+      muted: "#808080",
+      inverse: "#e0e0e0",
+      accent: "#5a9a5a",
+    },
+    border: { 
+      subtle: "#e8e8e8",
+      strong: "#a0a0a0",
+      accent: "#5a9a5a",
+    },
+    interactive: { 
+      primary: "#5a9a5a",
+      hover: "#4a8a4a",
+      focus: "#6aaa6a",
+    },
+    shadow: { 
+      subtle: "rgba(0,0,0,0.04)",
+      strong: "rgba(0,0,0,0.1)",
+    },
+  },
+
+  // Optional: Low-contrast dark (prefers-contrast: less)
+  lowContrastDark: {
+    surface: { 
+      primary: "#2a2a2a",
+      secondary: "#333333",
+      accent: "#3a3a3a",
+      inverse: "#c0c0c0",
+    },
+    text: { 
+      primary: "#c0c0c0",
+      muted: "#808080",
+      inverse: "#404040",
+      accent: "#6aaa6a",
+    },
+    border: { 
+      subtle: "#404040",
+      strong: "#808080",
+      accent: "#6aaa6a",
+    },
+    interactive: { 
+      primary: "#6aaa6a",
+      hover: "#7aba7a",
+      focus: "#5a9a5a",
+    },
+    shadow: { 
+      subtle: "rgba(0,0,0,0.15)",
+      strong: "rgba(0,0,0,0.3)",
+    },
+  },
+
+  // Optional: Arbitrary named themes
+  named: {
+    "festive-theme-2025": {
+      surface: { 
+        primary: "#1a472a",      // Deep green
+        secondary: "#0d2818",    // Darker green
+        accent: "#8b0000",       // Dark red
+        inverse: "#ffd700",      // Gold
+      },
+      text: { 
+        primary: "#ffffff",
+        muted: "#c0c0c0",
+        inverse: "#1a472a",
+        accent: "#ffd700",       // Gold
+      },
+      border: { 
+        subtle: "#2a5a3a",
+        strong: "#ffd700",
+        accent: "#8b0000",
+      },
+      interactive: { 
+        primary: "#ffd700",
+        hover: "#ffed4a",
+        focus: "#e6c200",
+      },
+      shadow: { 
+        subtle: "rgba(0,0,0,0.3)",
+        strong: "rgba(0,0,0,0.6)",
+      },
+    },
+  },
+};
+```
+
+**Generated CSS for the above config:**
+
+```css
+/* Standard light/dark with light-dark() */
+:root {
+  color-scheme: light dark;
+  --custom-surface-primary: light-dark(#ffffff, #1a1a1a);
+  --custom-surface-secondary: light-dark(#f5f5f5, #2a2a2a);
+  /* ... all tokens ... */
+}
+
+/* High contrast override */
+@media (prefers-contrast: more) {
+  :root {
+    --custom-surface-primary: light-dark(#ffffff, #000000);
+    --custom-text-primary: light-dark(#000000, #ffffff);
+    /* ... all tokens ... */
+  }
+}
+
+/* Low contrast override */
+@media (prefers-contrast: less) {
+  :root {
+    --custom-surface-primary: light-dark(#fafafa, #2a2a2a);
+    --custom-text-primary: light-dark(#404040, #c0c0c0);
+    /* ... all tokens ... */
+  }
+}
+
+/* Named theme (static values, not light-dark) */
+[data-theme="festive-theme-2025"] {
+  --custom-surface-primary: #1a472a;
+  --custom-surface-secondary: #0d2818;
+  --custom-surface-accent: #8b0000;
+  --custom-text-primary: #ffffff;
+  /* ... all tokens ... */
+}
+```
+
+---
+
+### 3. Theme Generator Examples
+
+> **Note:** The output colors shown below are illustrative examples. Actual generated values will depend on the specific algorithms implemented (OKLCH color space, contrast adjustment iterations, triadic hue rotations).
+
+#### 3a. Single Color Input (Standard)
+
+```typescript
+const result = generateTheme("#287c34"); // Oak green
+
+// Example output (illustrative):
+{
+  light: {
+    surface: { primary: "#ffffff", secondary: "#f7faf7", accent: "#e8f4e8", inverse: "#1a1a1a" },
+    text: { primary: "#1a2e1c", muted: "#4a5a4c", inverse: "#f0f5f0", accent: "#287c34" },
+    border: { subtle: "#d4e4d4", strong: "#287c34", accent: "#287c34" },
+    interactive: { primary: "#287c34", hover: "#1f5f28", focus: "#4a9f54" },
+    shadow: { subtle: "rgba(40,124,52,0.08)", strong: "rgba(40,124,52,0.2)" },
+  },
+  dark: {
+    surface: { primary: "#0f1a10", secondary: "#1a2e1c", accent: "#1e3a1e", inverse: "#f0f5f0" },
+    text: { primary: "#e8f0e8", muted: "#a0b0a0", inverse: "#1a2e1c", accent: "#5cb565" },
+    border: { subtle: "#2a4a2c", strong: "#5cb565", accent: "#5cb565" },
+    interactive: { primary: "#5cb565", hover: "#4a9f54", focus: "#7cc985" },
+    shadow: { subtle: "rgba(0,0,0,0.25)", strong: "rgba(0,0,0,0.5)" },
+  },
+  warnings: [], // No warnings if all contrasts passed
+}
+```
+
+#### 3b. Single Color with `colorBlindSafe: true`
+
+```typescript
+const result = generateTheme("#287c34", undefined, { colorBlindSafe: true });
+
+// Example output (illustrative):
+// - Achieves WCAG AAA (7:1) contrast for text
+// - All color pairs validated through CVD simulation
+// - Hues adjusted if original pairing fails CVD test
+{
+  light: {
+    surface: { primary: "#ffffff", secondary: "#f5f5f5", accent: "#e0f0e0", inverse: "#000000" },
+    text: { primary: "#000000", muted: "#333333", inverse: "#ffffff", accent: "#1a5a22" },
+    border: { subtle: "#c0c0c0", strong: "#000000", accent: "#1a5a22" },
+    interactive: { primary: "#1a5a22", hover: "#0d3a14", focus: "#2a7a32" },
+    shadow: { subtle: "rgba(0,0,0,0.12)", strong: "rgba(0,0,0,0.3)" },
+  },
+  dark: {
+    surface: { primary: "#000000", secondary: "#1a1a1a", accent: "#0a2a0e", inverse: "#ffffff" },
+    text: { primary: "#ffffff", muted: "#cccccc", inverse: "#000000", accent: "#7cc985" },
+    border: { subtle: "#444444", strong: "#ffffff", accent: "#7cc985" },
+    interactive: { primary: "#7cc985", hover: "#9cda9e", focus: "#5cb565" },
+    shadow: { subtle: "rgba(0,0,0,0.35)", strong: "rgba(0,0,0,0.6)" },
+  },
+  highContrastLight: { /* AAA contrast, pure black/white where needed */ },
+  highContrastDark: { /* AAA contrast, pure black/white where needed */ },
+  warnings: [
+    "Adjusted interactive.primary hue by +15° to improve deuteranopia distinguishability",
+  ],
+}
+```
+
+#### 3c. Two Color Input
+
+```typescript
+const result = generateTheme("#287c34", "#7c2834"); // Green + complementary red-brown
+
+// Example output (illustrative):
+// - Primary color (#287c34) used for interactive elements
+// - Secondary color (#7c2834) used for accents
+{
+  light: {
+    surface: { 
+      primary: "#ffffff", 
+      secondary: "#faf7f7",  // Tinted toward secondary
+      accent: "#f4e8e8",     // Secondary-tinted
+      inverse: "#1a1a1a",
+    },
+    text: { 
+      primary: "#1a1a1a", 
+      muted: "#5a5a5a", 
+      inverse: "#f0f0f0", 
+      accent: "#7c2834",    // Secondary color
+    },
+    border: { 
+      subtle: "#e4d4d4",    // Secondary-tinted
+      strong: "#1a1a1a", 
+      accent: "#7c2834",    // Secondary color
+    },
+    interactive: { 
+      primary: "#287c34",   // Primary color
+      hover: "#1f5f28", 
+      focus: "#4a9f54",
+    },
+    shadow: { subtle: "rgba(0,0,0,0.08)", strong: "rgba(0,0,0,0.2)" },
+  },
+  dark: {
+    surface: { 
+      primary: "#1a1a1a", 
+      secondary: "#2a2020",  // Secondary-tinted
+      accent: "#3a2020",     // Secondary-tinted
+      inverse: "#ffffff",
+    },
+    text: { 
+      primary: "#f0f0f0", 
+      muted: "#a0a0a0", 
+      inverse: "#1a1a1a", 
+      accent: "#c45a66",    // Secondary, lightened for dark mode
+    },
+    border: { 
+      subtle: "#4a3a3a",    // Secondary-tinted
+      strong: "#f0f0f0", 
+      accent: "#c45a66",    // Secondary, lightened
+    },
+    interactive: { 
+      primary: "#5cb565",   // Primary, lightened for dark mode
+      hover: "#4a9f54", 
+      focus: "#7cc985",
+    },
+    shadow: { subtle: "rgba(0,0,0,0.25)", strong: "rgba(0,0,0,0.5)" },
+  },
+  warnings: [],
+}
+```
+
+> **Important:** The hex values shown in all examples above are illustrative. The actual implementation will use OKLCH color space calculations, WCAG 2.2 contrast formulas, and iterative adjustment to produce colors that meet accessibility requirements. The specific output values will depend on the algorithms chosen during implementation.
+
+---
+
+## Edge Cases
+
+### Input Validation
+
+| Case | Behavior |
+|------|----------|
+| Invalid hex format (`#gggggg`) | Throw `TypeError` with descriptive message |
+| 3-char hex (`#abc`) | Expand to 6-char (`#aabbcc`) |
+| 8-char hex with alpha (`#rrggbbaa`) | Strip alpha, warn in `warnings` array |
+| RGB/HSL string | Throw `TypeError` - only hex supported (v1) |
+| Empty string | Throw `TypeError` |
+
+### Contrast Failures
+
+| Case | Behavior |
+|------|----------|
+| Cannot achieve 4.5:1 with provided color | Adjust lightness until passes, add warning |
+| Cannot achieve 7:1 for AAA | Cap at maximum achievable, add warning |
+| Primary color too close to white/black | Shift hue 180° or use derived triadic, add warning |
+
+### Derivation Edge Cases
+
+| Case | Behavior |
+|------|----------|
+| `surface.primary` is very dark in light mode | Warn, suggest using it in dark mode config |
+| `interactive.primary` is grayscale | Derive chromatic color from theme defaults |
+| Only `light` mode provided, no `dark` | Throw `TypeError` - both modes required |
+| `highContrastLight` without `highContrastDark` | Throw `TypeError` - pairs required |
+
+### Named Theme Edge Cases
+
+| Case | Behavior |
+|------|----------|
+| Reserved name used (`"light"`, `"dark"`) | Throw `TypeError` - reserved names forbidden |
+| Theme name with special characters | Sanitize for CSS selector compatibility |
+| Empty named themes object (`named: {}`) | Valid - no named themes generated |
+
+### SSR/Hydration
+
+| Case | Behavior |
+|------|----------|
+| Config changes between server/client | React reconciliation handles style update |
+| Missing `CustomThemeProvider` | CSS vars undefined, components use fallback/transparent |
+| Multiple `CustomThemeProvider` instances | Last one wins (CSS cascade) |
 
 ---
 
@@ -890,6 +1383,452 @@ describe("buildCss with named themes", () => {
 
 ---
 
+## Storybook Stories
+
+### CustomThemeProvider Stories
+
+**File:** `src/components/atoms/CustomThemeProvider/CustomThemeProvider.stories.tsx`
+
+```typescript
+import type { Meta, StoryObj } from "@storybook/react";
+import { CustomThemeProvider, type CustomThemeConfig } from "./CustomThemeProvider";
+import { OakBox, OakFlex, OakHeading, OakP, OakPrimaryButton } from "@/components";
+import { safePalettes } from "@/styles/theme/safePalettes";
+
+const meta: Meta<typeof CustomThemeProvider> = {
+  title: "Providers/CustomThemeProvider",
+  component: CustomThemeProvider,
+  tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+Provider for custom semantic theming. Generates CSS custom properties 
+that enable Oak components to use arbitrary brand colors via props like 
+\`$background="custom-surface-primary"\`.
+        `,
+      },
+    },
+  },
+};
+
+export default meta;
+type Story = StoryObj<typeof CustomThemeProvider>;
+
+// Demo component to show all custom tokens in action
+function ThemeDemo() {
+  return (
+    <OakFlex $flexDirection="column" $gap="spacing-16">
+      <OakBox $background="custom-surface-primary" $pa="spacing-16">
+        <OakHeading tag="h3" $color="custom-text-primary">
+          Surface Primary
+        </OakHeading>
+        <OakP $color="custom-text-muted">Text muted on primary surface</OakP>
+      </OakBox>
+      
+      <OakBox $background="custom-surface-secondary" $pa="spacing-16">
+        <OakP $color="custom-text-primary">Surface Secondary</OakP>
+      </OakBox>
+      
+      <OakBox $background="custom-surface-accent" $pa="spacing-16">
+        <OakP $color="custom-text-inverse">Surface Accent</OakP>
+      </OakBox>
+      
+      <OakFlex $gap="spacing-8">
+        <OakBox 
+          $background="custom-interactive-primary" 
+          $pa="spacing-8"
+          $color="custom-text-inverse"
+        >
+          Interactive Primary
+        </OakBox>
+        <OakBox 
+          $background="custom-interactive-hover" 
+          $pa="spacing-8"
+          $color="custom-text-inverse"
+        >
+          Interactive Hover
+        </OakBox>
+      </OakFlex>
+      
+      <OakBox 
+        $borderColor="custom-border-strong" 
+        $ba="border-solid-m" 
+        $pa="spacing-16"
+      >
+        <OakP $color="custom-text-primary">Strong border</OakP>
+      </OakBox>
+    </OakFlex>
+  );
+}
+
+const minimalConfig: CustomThemeConfig = {
+  light: {
+    surface: { primary: "#ffffff" },
+    text: { primary: "#1a1a1a" },
+  },
+  dark: {
+    surface: { primary: "#1a1a1a" },
+    text: { primary: "#f0f0f0" },
+  },
+};
+
+const brandedConfig: CustomThemeConfig = {
+  light: {
+    surface: { 
+      primary: "#ffffff", 
+      secondary: "#f0faf0", 
+      accent: "#287c34",
+      inverse: "#1a1a1a",
+    },
+    text: { 
+      primary: "#1a1a1a", 
+      muted: "#666666", 
+      inverse: "#ffffff",
+      accent: "#287c34",
+    },
+    border: { subtle: "#e0e0e0", strong: "#287c34", accent: "#287c34" },
+    interactive: { primary: "#287c34", hover: "#1f5f28", focus: "#4a9f54" },
+    shadow: { subtle: "rgba(0,0,0,0.08)", strong: "rgba(0,0,0,0.2)" },
+  },
+  dark: {
+    surface: { 
+      primary: "#0f1a10", 
+      secondary: "#1a2e1c", 
+      accent: "#287c34",
+      inverse: "#f0f0f0",
+    },
+    text: { 
+      primary: "#f0f0f0", 
+      muted: "#999999", 
+      inverse: "#1a1a1a",
+      accent: "#5cb565",
+    },
+    border: { subtle: "#2a4a2c", strong: "#5cb565", accent: "#5cb565" },
+    interactive: { primary: "#5cb565", hover: "#4a9f54", focus: "#7cc985" },
+    shadow: { subtle: "rgba(0,0,0,0.25)", strong: "rgba(0,0,0,0.5)" },
+  },
+};
+
+export const Default: Story = {
+  args: {
+    config: minimalConfig,
+    children: <ThemeDemo />,
+  },
+};
+
+export const BrandedTheme: Story = {
+  args: {
+    config: brandedConfig,
+    children: <ThemeDemo />,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: "Full branded theme with Oak green as the primary interactive color.",
+      },
+    },
+  },
+};
+
+export const OkabeItoPalette: Story = {
+  args: {
+    config: safePalettes.okabeIto,
+    children: <ThemeDemo />,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: "Color-blind safe Okabe-Ito palette. Validated for deuteranopia, protanopia, and tritanopia.",
+      },
+    },
+  },
+};
+
+export const MonochromePalette: Story = {
+  args: {
+    config: safePalettes.monochrome,
+    children: <ThemeDemo />,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: "High-contrast monochromatic palette. Uses only luminance differences for maximum accessibility.",
+      },
+    },
+  },
+};
+
+export const LightMode: Story = {
+  args: {
+    config: brandedConfig,
+    children: <ThemeDemo />,
+  },
+  parameters: {
+    backgrounds: { default: "light" },
+  },
+};
+
+export const DarkMode: Story = {
+  args: {
+    config: brandedConfig,
+    children: <ThemeDemo />,
+  },
+  parameters: {
+    backgrounds: { default: "dark" },
+  },
+};
+```
+
+### Story Requirements Checklist
+
+Per RULES.md, every component must have:
+
+- [x] **Default story** - Component with minimal config
+- [x] **All variants** - BrandedTheme, OkabeItoPalette, MonochromePalette
+- [x] **Interactive states** - ThemeDemo shows hover/focus interactive colors
+- [x] **Edge cases** - Minimal config, CVD-safe palettes
+- [x] **Accessibility** - a11y addon validates contrast
+
+---
+
+## Component Tests for CustomThemeProvider
+
+**File:** `src/components/atoms/CustomThemeProvider/CustomThemeProvider.test.tsx`
+
+```typescript
+import { render, screen } from "@testing-library/react";
+import { CustomThemeProvider, type CustomThemeConfig } from "./CustomThemeProvider";
+import { OakBox } from "@/components";
+
+const minimalConfig: CustomThemeConfig = {
+  light: {
+    surface: { primary: "#ffffff" },
+    text: { primary: "#1a1a1a" },
+  },
+  dark: {
+    surface: { primary: "#1a1a1a" },
+    text: { primary: "#f0f0f0" },
+  },
+};
+
+describe("CustomThemeProvider", () => {
+  describe("rendering", () => {
+    it("renders children", () => {
+      render(
+        <CustomThemeProvider config={minimalConfig}>
+          <div data-testid="child">Content</div>
+        </CustomThemeProvider>
+      );
+      expect(screen.getByTestId("child")).toBeInTheDocument();
+    });
+
+    it("injects a style element with id 'custom-theme-vars'", () => {
+      const { container } = render(
+        <CustomThemeProvider config={minimalConfig}>
+          <div>Content</div>
+        </CustomThemeProvider>
+      );
+      const styleElement = container.querySelector("style#custom-theme-vars");
+      expect(styleElement).toBeInTheDocument();
+    });
+
+    it("generates CSS with light-dark() for defined tokens", () => {
+      const { container } = render(
+        <CustomThemeProvider config={minimalConfig}>
+          <div>Content</div>
+        </CustomThemeProvider>
+      );
+      const styleElement = container.querySelector("style#custom-theme-vars");
+      expect(styleElement?.textContent).toContain("light-dark(#ffffff, #1a1a1a)");
+    });
+
+    it("sets color-scheme: light dark on :root", () => {
+      const { container } = render(
+        <CustomThemeProvider config={minimalConfig}>
+          <div>Content</div>
+        </CustomThemeProvider>
+      );
+      const styleElement = container.querySelector("style#custom-theme-vars");
+      expect(styleElement?.textContent).toContain("color-scheme: light dark");
+    });
+  });
+
+  describe("integration with Oak components", () => {
+    it("enables custom tokens in OakBox", () => {
+      render(
+        <CustomThemeProvider config={minimalConfig}>
+          <OakBox 
+            data-testid="themed-box" 
+            $background="custom-surface-primary"
+          >
+            Content
+          </OakBox>
+        </CustomThemeProvider>
+      );
+      const box = screen.getByTestId("themed-box");
+      expect(box).toHaveStyle("background: var(--custom-surface-primary)");
+    });
+  });
+
+  describe("config updates", () => {
+    it("updates CSS when config changes", () => {
+      const { container, rerender } = render(
+        <CustomThemeProvider config={minimalConfig}>
+          <div>Content</div>
+        </CustomThemeProvider>
+      );
+      
+      const newConfig: CustomThemeConfig = {
+        light: {
+          surface: { primary: "#f0f0f0" },
+          text: { primary: "#000000" },
+        },
+        dark: {
+          surface: { primary: "#0f0f0f" },
+          text: { primary: "#ffffff" },
+        },
+      };
+      
+      rerender(
+        <CustomThemeProvider config={newConfig}>
+          <div>Content</div>
+        </CustomThemeProvider>
+      );
+      
+      const styleElement = container.querySelector("style#custom-theme-vars");
+      expect(styleElement?.textContent).toContain("#f0f0f0");
+      expect(styleElement?.textContent).not.toContain("#ffffff, #1a1a1a");
+    });
+  });
+
+  describe("high contrast mode", () => {
+    it("includes @media (prefers-contrast: more) when highContrast modes provided", () => {
+      const hcConfig: CustomThemeConfig = {
+        ...minimalConfig,
+        highContrastLight: {
+          surface: { primary: "#ffffff" },
+          text: { primary: "#000000" },
+        },
+        highContrastDark: {
+          surface: { primary: "#000000" },
+          text: { primary: "#ffffff" },
+        },
+      };
+      
+      const { container } = render(
+        <CustomThemeProvider config={hcConfig}>
+          <div>Content</div>
+        </CustomThemeProvider>
+      );
+      
+      const styleElement = container.querySelector("style#custom-theme-vars");
+      expect(styleElement?.textContent).toContain("@media (prefers-contrast: more)");
+    });
+  });
+});
+```
+
+---
+
+## Naming Clarification
+
+### Component Naming Convention
+
+The provider is named **`CustomThemeProvider`** (not `OakCustomThemeProvider`) because:
+
+1. **Provider pattern** - Providers in React idiomatically use `*Provider` suffix without framework prefixes
+2. **Matches Oak precedent** - `OakThemeProvider` exists; `CustomThemeProvider` follows same pattern
+3. **Clarity** - "Custom" clearly distinguishes from Oak's built-in theming
+
+### Export Strategy
+
+```typescript
+// src/index.ts
+export { 
+  CustomThemeProvider,
+  type CustomThemeConfig,
+  type CustomThemeColors,
+} from "./components/atoms/CustomThemeProvider";
+
+export {
+  generateTheme,
+  checkContrast,
+  safePalettes,
+  type SafePaletteName,
+} from "./styles/theme";
+```
+
+---
+
+## Architecture Decision Record
+
+This feature requires **ADR-0002: Custom Semantic Tokens**.
+
+**File:** `docs/architecture/decision-records/0002-custom-semantic-tokens.adr.md`
+
+```markdown
+# ADR-0002: Custom Semantic Tokens
+
+**Date:** 2024-12-17
+**Status:** Proposed
+
+## Context
+
+Oak Components uses a fixed color palette (`mint`, `navy110`, etc.) and UI role tokens 
+(`bg-decorative1-main`, etc.). Consuming applications need to use their own brand colors
+while maintaining:
+
+1. Design token consistency across the application
+2. Automatic light/dark mode support
+3. WCAG AA accessibility compliance
+4. SSR compatibility
+
+Options considered:
+
+1. **Extend Oak's theme object** - Adds custom colors to `oakDefaultTheme`
+   - Rejected: Violates "must not change existing theme structure"
+   
+2. **CSS variables via consumers** - Consumers define their own CSS vars
+   - Rejected: No type safety, easy to misuse, no integration with Oak props
+   
+3. **Semantic token layer** - New `custom-*` token prefix recognized by `parseColor`
+   - Selected: Non-breaking, type-safe, SSR-compatible
+
+## Decision
+
+Implement a **semantic token layer** with the `custom-*` prefix:
+
+1. Define canonical tokens in `customSemanticTokenSpec` constant
+2. Derive TypeScript types from the constant (single source of truth)
+3. Extend `OakCombinedColorToken` to include `CustomSemanticToken`
+4. Modify `parseColor` to return `var(--custom-*)` for custom tokens
+5. Provide `CustomThemeProvider` to generate CSS custom properties
+
+## Consequences
+
+### Benefits
+
+- **Zero breaking changes** - Existing Oak tokens unchanged
+- **Full type safety** - Autocomplete for all custom tokens
+- **SSR safe** - CSS generated server-side, no hydration mismatch
+- **CSS-native** - Uses `light-dark()` for automatic theme switching
+- **Accessible** - Optional theme generator enforces WCAG contrast
+
+### Trade-offs
+
+- **Browser support** - `light-dark()` requires modern browsers (Chrome 123+)
+- **Learning curve** - Consumers must understand semantic token concepts
+- **Bundle size** - Small increase for `CustomThemeProvider` (~2KB gzipped)
+
+## Related
+
+- [ADR-0001: Core Architecture (Atomic Design)](./0001-core-architecture.adr.md)
+- [Plan: Custom Semantic Theme Support](/.agent/plans/arbitrary-theme-support.plan.md)
+```
+
+---
+
 ## Files Summary
 
 | File | Action | Phase |
@@ -902,6 +1841,9 @@ describe("buildCss with named themes", () => {
 | `src/components/atoms/CustomThemeProvider/buildCss.ts` | NEW | 1 |
 | `src/components/atoms/CustomThemeProvider/buildCss.test.ts` | NEW | 1 |
 | `src/components/atoms/CustomThemeProvider/CustomThemeProvider.tsx` | NEW | 1 |
+| `src/components/atoms/CustomThemeProvider/CustomThemeProvider.test.tsx` | NEW | 1 |
+| `src/components/atoms/CustomThemeProvider/CustomThemeProvider.stories.tsx` | NEW | 1 |
+| `docs/architecture/decision-records/0002-custom-semantic-tokens.adr.md` | NEW | 1 |
 | `src/styles/theme/checkContrast.ts` | NEW | 2 |
 | `src/styles/theme/checkContrast.test.ts` | NEW | 2 |
 | `src/styles/theme/generateTheme.ts` | NEW | 2 |
@@ -913,22 +1855,88 @@ describe("buildCss with named themes", () => {
 
 ---
 
-## Verification
+## Quality Gate Checklists
+
+### Phase 1 Checklist
+
+Before marking Phase 1 complete:
+
+- [ ] **TDD complete** - All tests written before implementation
+- [ ] `customSemanticTokens.test.ts` passes
+- [ ] `parseColor.test.tsx` passes (including new custom token tests)
+- [ ] `buildCss.test.ts` passes
+- [ ] `CustomThemeProvider.test.tsx` passes
+- [ ] **Storybook stories** - All stories render without errors
+- [ ] **a11y addon** - No accessibility violations in stories
+- [ ] **Type safety** - No `as`, `any`, or `!` usage (except `as const`)
+- [ ] **TSDoc** - All public exports have documentation
+- [ ] **Quality gates pass:**
+
+  ```bash
+  npm run build && npm run check-types && npm run lint && npm run format:check && npm run test:ci
+  ```
+
+- [ ] **ADR created** - `0002-custom-semantic-tokens.adr.md` committed
+
+### Phase 2 Checklist
+
+Before marking Phase 2 complete:
+
+- [ ] **TDD complete** - Tests for `checkContrast`, `generateTheme` written first
+- [ ] `checkContrast.test.ts` passes
+- [ ] `generateTheme.test.ts` passes
+- [ ] Generated themes achieve WCAG AA contrast (4.5:1 text, 3:1 UI)
+- [ ] High-contrast variants achieve WCAG AAA (7:1 text)
+- [ ] **Type safety** - No escape hatches
+- [ ] **TSDoc** - All functions documented
+- [ ] **Quality gates pass**
+
+### Phase 3 Checklist
+
+Before marking Phase 3 complete:
+
+- [ ] **TDD complete** - Tests for `simulateCVD`, `areDistinguishable` written first
+- [ ] `simulateCVD.test.ts` passes
+- [ ] `safePalettes` all validated against CVD simulation
+- [ ] **Storybook stories** - Safe palette stories demonstrate a11y
+- [ ] **Type safety** - No escape hatches
+- [ ] **Quality gates pass**
+
+### Phase 4 Checklist
+
+Before marking Phase 4 complete:
+
+- [ ] **TDD complete** - Tests for named themes in `buildCss.test.ts`
+- [ ] Named themes generate correct `[data-theme="*"]` selectors
+- [ ] Reserved names (`light`, `dark`, etc.) throw errors
+- [ ] **Storybook stories** - Named theme switcher demo
+- [ ] **Quality gates pass**
+
+### Final Verification
+
+After all phases:
 
 ```bash
-# Phase 1
-npm run test -- customSemanticTokens parseColor buildCss CustomThemeProvider
-npm run build && npm run check-types
-
-# Phase 2
-npm run test -- checkContrast generateTheme
-npm run build
-
-# Phase 3
-npm run test -- simulateCVD safePalettes
-npm run build
-
-# Full verification
+# Full quality gates
 npm run build && npm run check-types && npm run lint && npm run format:check && npm run test:ci
-npm run storybook  # Visual verification with example stories
+
+# Visual verification
+npm run storybook
+
+# Manual testing
+# 1. Toggle system light/dark preference - verify automatic switching
+# 2. Enable high-contrast mode - verify @media rule applies
+# 3. Test named theme switcher - verify data-theme attribute works
 ```
+
+### Engineering Excellence Checklist (from RULES.md)
+
+Before final PR:
+
+- [ ] All quality gates pass
+- [ ] TDD followed - tests written first
+- [ ] No type escape hatches (`as`, `any`, `!`)
+- [ ] Stories created in Storybook
+- [ ] Storybook a11y addon passes
+- [ ] TSDoc for all public APIs
+- [ ] Design tokens used (no hardcoded values)

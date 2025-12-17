@@ -119,7 +119,7 @@ See [testing-strategy.md](./testing-strategy.md) for full details.
 **Test priority:**
 
 1. Pure function unit tests (style utilities)
-2. Component behavior tests (interactions, accessibility)
+2. Component behaviour tests (interactions, accessibility)
 3. Snapshot tests (structural regression)
 4. Storybook visual tests
 

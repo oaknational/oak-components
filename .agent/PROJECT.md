@@ -40,7 +40,7 @@ import { OakThemeProvider, oakDefaultTheme } from "@oaknational/oak-components";
 ## Development Workflow
 
 1. **Develop in Storybook** - Build components in isolation
-2. **Test with Jest/RTL** - Behavior and snapshot tests
+2. **Test with Jest/RTL** - Behaviour and snapshot tests
 3. **Document with Stories** - Each component has stories
 4. **Publish to npm** - Semantic release on merge to main
 
