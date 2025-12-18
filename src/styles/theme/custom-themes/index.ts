@@ -45,3 +45,7 @@ export type { OklchColor } from "./colorUtils";
 // Token derivation (internal, but useful for advanced use)
 export { deriveThemeColors } from "./deriveTokens";
 export type { DeriveContext } from "./deriveTokens";
+
+// Theme preview for Storybook mode simulation
+export { ThemePreview } from "./ThemePreview";
+export type { ThemePreviewProps } from "./ThemePreview";

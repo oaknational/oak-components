@@ -43,17 +43,20 @@ function deriveShadowTokens(
 
 /**
  * Derive surface tokens.
+ * Secondary colour drives accent surfaces when provided.
  */
 function deriveSurfaceTokens(
   context: DeriveContext,
 ): GeneratedThemeColors["surface"] {
-  const { mode, primary } = context;
+  const { mode, primary, secondary } = context;
+  // Accent surfaces use secondary if provided, otherwise primary
+  const accentSource = secondary ?? primary;
 
   if (mode === "light") {
     return {
       primary: "#ffffff",
       secondary: "#f5f5f5",
-      accent: adjustLightness(primary, 0.35),
+      accent: adjustLightness(accentSource, 0.35),
       inverse: "#1a1a1a",
     };
   }
@@ -61,7 +64,7 @@ function deriveSurfaceTokens(
   return {
     primary: "#1a1a1a",
     secondary: "#2a2a2a",
-    accent: adjustLightness(primary, -0.25),
+    accent: adjustLightness(accentSource, -0.25),
     inverse: "#f0f0f0",
   };
 }
@@ -131,19 +134,24 @@ function deriveBorderTokens(
 
 /**
  * Derive interactive tokens.
+ * Primary drives main interactions; secondary (if provided) drives focus state
+ * for visual distinction between click targets and focus indicators.
  */
 function deriveInteractiveTokens(
   context: DeriveContext,
 ): GeneratedThemeColors["interactive"] {
-  const { mode, primary } = context;
+  const { mode, primary, secondary } = context;
+  // Focus ring uses secondary for distinction; falls back to primary-derived if no secondary
+  const focusSource = secondary ?? primary;
 
   if (mode === "light") {
     const interactivePrimary = ensureContrast(primary, "#ffffff", 4.5).adjusted;
+    const focusColor = ensureContrast(focusSource, "#ffffff", 3).adjusted;
 
     return {
       primary: interactivePrimary,
       hover: adjustLightness(interactivePrimary, -0.1),
-      focus: adjustLightness(interactivePrimary, 0.15),
+      focus: secondary ? focusColor : adjustLightness(interactivePrimary, 0.15),
     };
   }
 
@@ -152,11 +160,16 @@ function deriveInteractiveTokens(
     "#1a1a1a",
     4.5,
   ).adjusted;
+  const focusColor = ensureContrast(
+    adjustLightness(focusSource, 0.25),
+    "#1a1a1a",
+    3,
+  ).adjusted;
 
   return {
     primary: interactivePrimary,
     hover: adjustLightness(interactivePrimary, 0.1),
-    focus: adjustLightness(interactivePrimary, -0.1),
+    focus: secondary ? focusColor : adjustLightness(interactivePrimary, -0.1),
   };
 }
 

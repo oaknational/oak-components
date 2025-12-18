@@ -1,63 +1,108 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import React from "react";
+import styled from "styled-components";
 
 import { checkContrast } from "./contrastUtils";
 import { generateTheme } from "./generateTheme";
+import { ThemePreview } from "./ThemePreview";
+import type { GeneratedTheme } from "./themeTypes";
 
-import { CustomThemeProvider } from "@/components/atoms/CustomThemeProvider";
 import { OakBox } from "@/components/atoms/OakBox";
 import { OakFlex } from "@/components/atoms/OakFlex";
 import { OakHeading } from "@/components/atoms/OakHeading";
 import { OakP } from "@/components/atoms/OakP";
 
 /**
- * Showcase component for displaying a generated theme.
- * Used internally by stories.
+ * Interactive button demo that shows actual hover, active, and focus states.
  */
-function ThemeShowcase({
+const DemoButton = styled.button`
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  background: var(--custom-interactive-primary);
+  color: var(--custom-text-inverse);
+
+  &:hover {
+    background: var(--custom-interactive-hover);
+  }
+
+  &:active {
+    background: var(--custom-interactive-hover);
+    transform: scale(0.98);
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--custom-interactive-focus);
+    outline-offset: 2px;
+  }
+
+  &[data-state="hover"] {
+    background: var(--custom-interactive-hover);
+  }
+
+  &[data-state="active"] {
+    background: var(--custom-interactive-hover);
+    transform: scale(0.98);
+  }
+
+  &[data-state="focus"] {
+    outline: 3px solid var(--custom-interactive-focus);
+    outline-offset: 2px;
+  }
+`;
+
+/**
+ * A single theme card showing all token categories for one mode.
+ */
+function ThemeCard({
+  theme,
+  mode,
   title,
   primary,
   secondary,
-  showGeneratedValues,
 }: {
+  theme: GeneratedTheme;
+  mode: "light" | "dark";
   title: string;
   primary: string;
   secondary?: string;
-  showGeneratedValues?: boolean;
 }) {
-  const result = generateTheme({ primary, secondary });
-
   return (
-    <CustomThemeProvider config={result.theme}>
-      <OakBox $pa="spacing-24" $background="custom-surface-primary">
-        <OakHeading
-          tag="h2"
-          $color="custom-text-primary"
-          $font="heading-5"
-          $mb="spacing-16"
+    <ThemePreview theme={theme} mode={mode}>
+      <OakBox $pa="spacing-16" aria-label={`${title} - ${mode} mode`}>
+        <OakP
+          $font="body-3-bold"
+          style={{ color: "var(--custom-text-primary)", marginBottom: 8 }}
         >
-          {title}
-        </OakHeading>
+          {mode.charAt(0).toUpperCase() + mode.slice(1)} Mode
+        </OakP>
 
-        {/* Input colors display */}
-        <OakFlex $gap="spacing-4" $mb="spacing-16" $alignItems="center">
+        {/* Brand colour inputs */}
+        <OakFlex $gap="spacing-4" $mb="spacing-8" $alignItems="center">
           <OakBox
-            $pa="spacing-8"
+            $pa="spacing-4"
             $borderRadius="border-radius-s"
-            style={{ backgroundColor: primary, minWidth: 60 }}
+            style={{ backgroundColor: primary }}
+            aria-label={`Primary: ${primary}`}
           >
             <OakP
               $font="body-3"
               style={{ color: "#fff", textShadow: "0 1px 2px rgba(0,0,0,0.5)" }}
             >
-              Primary
+              P
             </OakP>
           </OakBox>
           {secondary && (
             <OakBox
-              $pa="spacing-8"
+              $pa="spacing-4"
               $borderRadius="border-radius-s"
-              style={{ backgroundColor: secondary, minWidth: 60 }}
+              style={{ backgroundColor: secondary }}
+              aria-label={`Secondary: ${secondary}`}
             >
               <OakP
                 $font="body-3"
@@ -66,195 +111,206 @@ function ThemeShowcase({
                   textShadow: "0 1px 2px rgba(0,0,0,0.5)",
                 }}
               >
-                Secondary
+                S
               </OakP>
             </OakBox>
           )}
         </OakFlex>
 
-        <OakFlex $gap="spacing-4" $flexWrap="wrap">
-          {/* Surface tokens */}
+        {/* Surface tokens */}
+        <OakFlex $gap="spacing-4" $mb="spacing-8" $flexWrap="wrap">
           <OakBox
-            $pa="spacing-16"
-            $background="custom-surface-secondary"
-            $borderRadius="border-radius-m"
+            $pa="spacing-8"
+            $borderRadius="border-radius-s"
+            style={{ background: "var(--custom-surface-secondary)" }}
+            aria-label="Surface secondary"
           >
-            <OakP $color="custom-text-primary" $font="body-2">
-              Surface Secondary
+            <OakP
+              $font="body-3"
+              style={{ color: "var(--custom-text-primary)" }}
+            >
+              Surface
             </OakP>
           </OakBox>
-
           <OakBox
-            $pa="spacing-16"
-            $background="custom-surface-accent"
-            $borderRadius="border-radius-m"
+            $pa="spacing-8"
+            $borderRadius="border-radius-s"
+            style={{ background: "var(--custom-surface-accent)" }}
+            aria-label="Surface accent"
           >
-            <OakP $color="custom-text-primary" $font="body-2">
-              Surface Accent
-            </OakP>
-          </OakBox>
-
-          {/* Interactive tokens */}
-          <OakBox
-            $pa="spacing-16"
-            $background="custom-interactive-primary"
-            $borderRadius="border-radius-m"
-          >
-            <OakP $color="custom-text-inverse" $font="body-2">
-              Interactive Primary
-            </OakP>
-          </OakBox>
-
-          <OakBox
-            $pa="spacing-16"
-            $background="custom-interactive-hover"
-            $borderRadius="border-radius-m"
-          >
-            <OakP $color="custom-text-inverse" $font="body-2">
-              Interactive Hover
+            <OakP
+              $font="body-3"
+              style={{ color: "var(--custom-text-primary)" }}
+            >
+              Accent
             </OakP>
           </OakBox>
         </OakFlex>
 
+        {/* Interactive states */}
+        <OakFlex $gap="spacing-4" $flexWrap="wrap">
+          <DemoButton type="button" aria-label="Hover to see hover state">
+            Hover me
+          </DemoButton>
+          <DemoButton
+            type="button"
+            data-state="active"
+            aria-label="Active/pressed state"
+          >
+            Pressed
+          </DemoButton>
+          <DemoButton
+            type="button"
+            data-state="focus"
+            aria-label="Focus ring demonstration"
+          >
+            Focused
+          </DemoButton>
+        </OakFlex>
+
         {/* Text tokens */}
-        <OakBox $mt="spacing-16">
-          <OakP $color="custom-text-primary" $font="body-1">
-            Text Primary - Main content text
+        <OakBox $mt="spacing-8">
+          <OakP $font="body-3" style={{ color: "var(--custom-text-primary)" }}>
+            Primary text
           </OakP>
-          <OakP $color="custom-text-muted" $font="body-2">
-            Text Muted - Secondary information
+          <OakP $font="body-3" style={{ color: "var(--custom-text-muted)" }}>
+            Muted text
           </OakP>
-          <OakP $color="custom-text-accent" $font="body-2-bold">
-            Text Accent - Highlighted text
+          <OakP $font="body-3" style={{ color: "var(--custom-text-accent)" }}>
+            Accent text
           </OakP>
         </OakBox>
 
         {/* Border tokens */}
-        <OakFlex $gap="spacing-4" $mt="spacing-16">
+        <OakFlex $gap="spacing-4" $mt="spacing-8">
           <OakBox
-            $pa="spacing-16"
-            $borderColor="custom-border-subtle"
-            $ba="border-solid-s"
-            $borderRadius="border-radius-m"
+            $pa="spacing-8"
+            style={{
+              border: "1px solid var(--custom-border-subtle)",
+              borderRadius: 4,
+            }}
+            aria-label="Subtle border"
           >
-            <OakP $color="custom-text-primary" $font="body-3">
-              Border Subtle
+            <OakP
+              $font="body-3"
+              style={{ color: "var(--custom-text-primary)" }}
+            >
+              Subtle
             </OakP>
           </OakBox>
-
           <OakBox
-            $pa="spacing-16"
-            $borderColor="custom-border-strong"
-            $ba="border-solid-m"
-            $borderRadius="border-radius-m"
+            $pa="spacing-8"
+            style={{
+              border: "2px solid var(--custom-border-accent)",
+              borderRadius: 4,
+            }}
+            aria-label="Accent border"
           >
-            <OakP $color="custom-text-primary" $font="body-3">
-              Border Strong
+            <OakP
+              $font="body-3"
+              style={{ color: "var(--custom-text-primary)" }}
+            >
+              Accent
             </OakP>
           </OakBox>
         </OakFlex>
-
-        {/* Generated values display */}
-        {showGeneratedValues && (
-          <OakBox
-            $mt="spacing-16"
-            $pa="spacing-16"
-            $background="custom-surface-secondary"
-            $borderRadius="border-radius-m"
-          >
-            <OakP
-              $color="custom-text-primary"
-              $font="body-3-bold"
-              $mb="spacing-8"
-            >
-              Generated Light Theme Values
-            </OakP>
-            <OakP $color="custom-text-muted" $font="body-3">
-              interactive.primary: {result.theme.light.interactive.primary}
-              <br />
-              text.primary: {result.theme.light.text.primary}
-              <br />
-              text.accent: {result.theme.light.text.accent}
-            </OakP>
-          </OakBox>
-        )}
-
-        {/* Warnings */}
-        {result.warnings.length > 0 && (
-          <OakBox
-            $mt="spacing-16"
-            $pa="spacing-8"
-            $background="custom-surface-accent"
-          >
-            <OakP $color="custom-text-primary" $font="body-3">
-              ⚠️ Warnings: {result.warnings.join(", ")}
-            </OakP>
-          </OakBox>
-        )}
       </OakBox>
-    </CustomThemeProvider>
+    </ThemePreview>
+  );
+}
+
+/**
+ * Theme column showing both light and dark modes.
+ */
+function ThemeColumn({
+  title,
+  primary,
+  secondary,
+}: {
+  title: string;
+  primary: string;
+  secondary?: string;
+}) {
+  const result = generateTheme({ primary, secondary });
+
+  return (
+    <OakFlex $flexDirection="column" $gap="spacing-8" style={{ flex: 1 }}>
+      <OakHeading tag="h3" $font="heading-6" $mb="spacing-4">
+        {title}
+      </OakHeading>
+      <ThemeCard
+        theme={result.theme}
+        mode="light"
+        title={title}
+        primary={primary}
+        secondary={secondary}
+      />
+      <ThemeCard
+        theme={result.theme}
+        mode="dark"
+        title={title}
+        primary={primary}
+        secondary={secondary}
+      />
+    </OakFlex>
   );
 }
 
 /**
  * Story args interface for interactive controls.
  */
-interface ThemeGeneratorArgs {
-  primary: string;
-  secondary: string;
-  showGeneratedValues: boolean;
+interface ThemeShowcaseArgs {
+  oneColourPrimary: string;
+  twoColourPrimary: string;
+  twoColourSecondary: string;
 }
 
-const meta: Meta<ThemeGeneratorArgs> = {
+const meta: Meta<ThemeShowcaseArgs> = {
   title: "Custom Themes/Theme Generator",
   argTypes: {
-    primary: {
+    oneColourPrimary: {
       control: "color",
-      description: "Primary brand color (hex)",
+      description: "Primary colour for single-colour theme",
       table: {
-        category: "Brand Colors",
+        category: "One Colour Theme",
         defaultValue: { summary: "#287c34" },
       },
     },
-    secondary: {
+    twoColourPrimary: {
       control: "color",
-      description: "Optional secondary/accent color (hex)",
+      description: "Primary colour for two-colour theme",
       table: {
-        category: "Brand Colors",
-        defaultValue: { summary: "undefined" },
+        category: "Two Colour Theme",
+        defaultValue: { summary: "#1e40af" },
       },
     },
-    showGeneratedValues: {
-      control: "boolean",
-      description: "Show the generated hex values",
+    twoColourSecondary: {
+      control: "color",
+      description: "Secondary colour for two-colour theme",
       table: {
-        category: "Debug",
-        defaultValue: { summary: "false" },
+        category: "Two Colour Theme",
+        defaultValue: { summary: "#ea580c" },
       },
     },
   },
   args: {
-    primary: "#287c34",
-    secondary: "",
-    showGeneratedValues: false,
+    oneColourPrimary: "#287c34",
+    twoColourPrimary: "#1e40af",
+    twoColourSecondary: "#ea580c",
   },
   parameters: {
     docs: {
       description: {
         component: `
-Generate accessible themes from 1-2 brand colors.
+Generate accessible themes from 1-2 brand colours.
 
-**Use the Controls panel** to pick colors and see the theme update in real-time.
-The a11y addon will verify that generated colors meet WCAG contrast requirements.
+This showcase demonstrates:
+- **One Colour Theme** — All tokens derived from a single primary colour
+- **Two Colour Theme** — Secondary colour drives accent surfaces, text, and focus states  
+- **Named Theme** — A custom "festive-2025" theme with explicit colour choices
 
-### Usage
-
-\`\`\`typescript
-import { generateTheme } from '@oaknational/oak-components';
-
-const result = generateTheme({ primary: '#287c34' });
-// result.theme is ready for CustomThemeProvider
-\`\`\`
+Use the **Controls panel** to adjust colours and see themes update in real-time.
+Both light and dark modes are shown simultaneously to verify derivation works correctly.
         `,
       },
     },
@@ -263,143 +319,134 @@ const result = generateTheme({ primary: '#287c34' });
 
 export default meta;
 
-type Story = StoryObj<ThemeGeneratorArgs>;
+type Story = StoryObj<ThemeShowcaseArgs>;
+
+/**
+ * **Theme Showcase**
+ *
+ * Compares three theme generation approaches side-by-side:
+ * 1. One brand colour — minimal input, full derivation
+ * 2. Two brand colours — secondary drives accents and focus
+ * 3. Named theme — custom "festive-2025" with explicit colours
+ *
+ * Each column shows both light and dark modes for complete comparison.
+ */
+export const ThemeShowcase: Story = {
+  render: (args) => (
+    <OakFlex $gap="spacing-16" $flexWrap="wrap">
+      <ThemeColumn title="One Colour" primary={args.oneColourPrimary} />
+      <ThemeColumn
+        title="Two Colours"
+        primary={args.twoColourPrimary}
+        secondary={args.twoColourSecondary}
+      />
+      <ThemeColumn
+        title="Festive 2025"
+        primary="#c41e3a" // Christmas red
+        secondary="#228b22" // Forest green
+      />
+    </OakFlex>
+  ),
+};
 
 /**
  * **Interactive Playground**
  *
- * Demonstrates real-time theme generation from brand colours.
- *
- * **What it shows:**
- * - Pick any primary colour using the colour picker in Controls
- * - Optionally add a secondary/accent colour
- * - Watch all semantic tokens (surface, text, border, interactive) update live
- *
- * **Use case:** Exploring how different brand colours translate into a complete theme.
+ * Single theme with full controls for exploring generation.
  */
 export const Interactive: Story = {
-  render: (args) => (
-    <ThemeShowcase
-      title="Generated Theme"
-      primary={args.primary}
-      secondary={args.secondary || undefined}
-      showGeneratedValues={args.showGeneratedValues}
-    />
-  ),
-};
-
-/**
- * **One Brand Colour**
- *
- * Demonstrates the minimum viable input: a single hex colour.
- *
- * **What it shows:**
- * - A complete theme generated from just one brand colour
- * - All token categories (surface, text, border, interactive, shadow) are derived
- * - Secondary control is hidden as it's not relevant to this demonstration
- *
- * **Use case:** Organisations with a single primary brand colour who want
- * automatic derivation of all other theme tokens.
- */
-export const OneBrandColour: Story = {
   args: {
-    primary: "#287c34",
-    secondary: "",
-    showGeneratedValues: true,
+    oneColourPrimary: "#287c34",
+    twoColourPrimary: "#287c34",
+    twoColourSecondary: "",
   },
   argTypes: {
-    secondary: { table: { disable: true } },
+    twoColourPrimary: { table: { disable: true } },
+    twoColourSecondary: { table: { disable: true } },
   },
-  render: (args) => (
-    <ThemeShowcase
-      title="Single Colour Theme"
-      primary={args.primary}
-      secondary={args.secondary || undefined}
-      showGeneratedValues={args.showGeneratedValues}
-    />
-  ),
-};
-
-/**
- * **Two Brand Colours**
- *
- * Demonstrates theme generation with primary and secondary brand colours.
- *
- * **What it shows:**
- * - Primary colour drives surfaces and main interactive elements
- * - Secondary colour provides accent tones for highlights and emphasis
- * - Complementary colour schemes are preserved in the generated tokens
- *
- * **Use case:** Brands with a defined primary/secondary colour palette
- * who want those relationships reflected throughout the theme.
- */
-export const TwoBrandColours: Story = {
-  args: {
-    primary: "#287c34",
-    secondary: "#7c2834",
-    showGeneratedValues: true,
+  render: (args) => {
+    const result = generateTheme({ primary: args.oneColourPrimary });
+    return (
+      <OakFlex $gap="spacing-16">
+        <ThemePreview theme={result.theme} mode="light">
+          <OakBox $pa="spacing-24">
+            <OakBox $mb="spacing-16">
+              <OakHeading tag="h2" $font="heading-5" $color="text-primary">
+                Light Mode
+              </OakHeading>
+            </OakBox>
+            <OakFlex $gap="spacing-8" $flexWrap="wrap">
+              <DemoButton type="button">Hover me</DemoButton>
+              <DemoButton type="button" data-state="active">
+                Pressed
+              </DemoButton>
+              <DemoButton type="button" data-state="focus">
+                Focused
+              </DemoButton>
+            </OakFlex>
+            <OakBox $mt="spacing-16">
+              <OakP
+                $font="body-2"
+                style={{ color: "var(--custom-text-primary)" }}
+              >
+                Primary text on surface
+              </OakP>
+              <OakP
+                $font="body-2"
+                style={{ color: "var(--custom-text-accent)" }}
+              >
+                Accent text
+              </OakP>
+            </OakBox>
+          </OakBox>
+        </ThemePreview>
+        <ThemePreview theme={result.theme} mode="dark">
+          <OakBox $pa="spacing-24">
+            <OakBox $mb="spacing-16">
+              <OakHeading tag="h2" $font="heading-5" $color="text-primary">
+                Dark Mode
+              </OakHeading>
+            </OakBox>
+            <OakFlex $gap="spacing-8" $flexWrap="wrap">
+              <DemoButton type="button">Hover me</DemoButton>
+              <DemoButton type="button" data-state="active">
+                Pressed
+              </DemoButton>
+              <DemoButton type="button" data-state="focus">
+                Focused
+              </DemoButton>
+            </OakFlex>
+            <OakBox $mt="spacing-16">
+              <OakP
+                $font="body-2"
+                style={{ color: "var(--custom-text-primary)" }}
+              >
+                Primary text on surface
+              </OakP>
+              <OakP
+                $font="body-2"
+                style={{ color: "var(--custom-text-accent)" }}
+              >
+                Accent text
+              </OakP>
+            </OakBox>
+          </OakBox>
+        </ThemePreview>
+      </OakFlex>
+    );
   },
-  render: (args) => (
-    <ThemeShowcase
-      title="Primary + Secondary Theme"
-      primary={args.primary}
-      secondary={args.secondary || undefined}
-      showGeneratedValues={args.showGeneratedValues}
-    />
-  ),
-};
-
-/**
- * **Brand Comparison**
- *
- * Demonstrates how different brand colours produce distinct themes.
- *
- * **What it shows:**
- * - Four different primary colours side-by-side
- * - How the generator adapts token derivation to each colour's characteristics
- * - Consistent structure across all themes despite different inputs
- *
- * **Use case:** Comparing potential brand colours before committing,
- * or demonstrating theme flexibility to stakeholders.
- *
- * **Note:** Controls are disabled as this is a static comparison.
- */
-export const BrandComparison: Story = {
-  argTypes: {
-    primary: { table: { disable: true } },
-    secondary: { table: { disable: true } },
-    showGeneratedValues: { table: { disable: true } },
-  },
-  render: () => (
-    <OakFlex $flexDirection="column" $gap="spacing-16">
-      <ThemeShowcase title="Blue Brand" primary="#1e40af" />
-      <ThemeShowcase title="Purple Brand" primary="#7c3aed" />
-      <ThemeShowcase title="Orange Brand" primary="#ea580c" />
-      <ThemeShowcase title="Teal Brand" primary="#0d9488" />
-    </OakFlex>
-  ),
 };
 
 /**
  * **Contrast Checker**
  *
  * Demonstrates WCAG contrast ratio verification for colour combinations.
- *
- * **What it shows:**
- * - Various foreground/background colour pairs
- * - Real-time contrast ratio calculation
- * - Pass/fail badges for WCAG AA (4.5:1) and AAA (7:1) standards
- *
- * **Use case:** Validating that generated or custom colour combinations
- * meet accessibility requirements before deployment.
- *
- * **Note:** Uses the Storybook a11y addon for additional contrast checks.
  */
 export const ContrastChecker: Story = {
   argTypes: {
-    primary: { table: { disable: true } },
-    secondary: { table: { disable: true } },
-    showGeneratedValues: { table: { disable: true } },
+    oneColourPrimary: { table: { disable: true } },
+    twoColourPrimary: { table: { disable: true } },
+    twoColourSecondary: { table: { disable: true } },
   },
   render: () => {
     const pairs = [
@@ -408,24 +455,35 @@ export const ContrastChecker: Story = {
       { fg: "#767676", bg: "#ffffff", label: "Gray on White (AA boundary)" },
       { fg: "#ffffff", bg: "#1a1a1a", label: "White on Dark" },
       { fg: "#1e40af", bg: "#ffffff", label: "Blue on White" },
-      { fg: "#7c3aed", bg: "#ffffff", label: "Purple on White" },
+      { fg: "#c41e3a", bg: "#ffffff", label: "Festive Red on White" },
     ];
 
     return (
-      <OakBox $pa="spacing-24">
+      <OakBox $pa="spacing-24" aria-label="Contrast checker results">
         <OakHeading tag="h2" $font="heading-5" $mb="spacing-8">
           Contrast Checker
         </OakHeading>
         <OakP $font="body-2" $color="grey60" $mb="spacing-16">
-          Verify color combinations meet WCAG AA (4.5:1) and AAA (7:1)
+          Verify colour combinations meet WCAG AA (4.5:1) and AAA (7:1)
           standards.
         </OakP>
 
-        <OakFlex $flexDirection="column" $gap="spacing-8">
+        <OakFlex
+          $flexDirection="column"
+          $gap="spacing-8"
+          role="list"
+          aria-label="Contrast ratio results"
+        >
           {pairs.map(({ fg, bg, label }) => {
             const result = checkContrast(fg, bg);
             return (
-              <OakFlex key={label} $gap="spacing-8" $alignItems="center">
+              <OakFlex
+                key={label}
+                $gap="spacing-8"
+                $alignItems="center"
+                role="listitem"
+                aria-label={`${label}: ${result.ratio.toFixed(1)} to 1 ratio`}
+              >
                 <OakBox
                   $pa="spacing-16"
                   $borderRadius="border-radius-m"
@@ -449,6 +507,7 @@ export const ContrastChecker: Story = {
                     $background={
                       result.passesAA ? "bg-correct" : "bg-incorrect"
                     }
+                    aria-label={result.passesAA ? "Passes AA" : "Fails AA"}
                   >
                     <OakP $font="body-3" $color="white">
                       AA {result.passesAA ? "✓" : "✗"}
@@ -460,6 +519,7 @@ export const ContrastChecker: Story = {
                     $background={
                       result.passesAAA ? "bg-correct" : "bg-incorrect"
                     }
+                    aria-label={result.passesAAA ? "Passes AAA" : "Fails AAA"}
                   >
                     <OakP $font="body-3" $color="white">
                       AAA {result.passesAAA ? "✓" : "✗"}
