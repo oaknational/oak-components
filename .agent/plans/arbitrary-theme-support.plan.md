@@ -22,6 +22,8 @@ Enable consuming applications to use **arbitrary branded colors** in Oak Compone
 - **Design flexibility**: CSS-native theming with system preference support
 - **Zero breaking changes**: Existing Oak tokens continue to work unchanged
 
+> See [ADR-0002 Nomenclature](../../docs/architecture/decision-records/0002-custom-semantic-tokens.adr.md#nomenclature) for term definitions (Theme, Simple Theme, Partial Theme, Full Theme, Brand Colors, Generated Theme).
+
 ---
 
 ## Phases
