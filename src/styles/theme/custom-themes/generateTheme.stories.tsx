@@ -266,8 +266,16 @@ export default meta;
 type Story = StoryObj<ThemeGeneratorArgs>;
 
 /**
- * Interactive theme generator - pick any color and see the full theme.
- * Use the Controls panel to change the primary and secondary colors.
+ * **Interactive Playground**
+ *
+ * Demonstrates real-time theme generation from brand colours.
+ *
+ * **What it shows:**
+ * - Pick any primary colour using the colour picker in Controls
+ * - Optionally add a secondary/accent colour
+ * - Watch all semantic tokens (surface, text, border, interactive) update live
+ *
+ * **Use case:** Exploring how different brand colours translate into a complete theme.
  */
 export const Interactive: Story = {
   render: (args) => (
@@ -281,9 +289,19 @@ export const Interactive: Story = {
 };
 
 /**
- * Oak's default green theme.
+ * **One Brand Colour**
+ *
+ * Demonstrates the minimum viable input: a single hex colour.
+ *
+ * **What it shows:**
+ * - A complete theme generated from just one brand colour
+ * - All token categories (surface, text, border, interactive, shadow) are derived
+ * - Secondary control is hidden as it's not relevant to this demonstration
+ *
+ * **Use case:** Organisations with a single primary brand colour who want
+ * automatic derivation of all other theme tokens.
  */
-export const OakGreen: Story = {
+export const OneBrandColour: Story = {
   args: {
     primary: "#287c34",
     secondary: "",
@@ -294,7 +312,7 @@ export const OakGreen: Story = {
   },
   render: (args) => (
     <ThemeShowcase
-      title="Oak Green Theme"
+      title="Single Colour Theme"
       primary={args.primary}
       secondary={args.secondary || undefined}
       showGeneratedValues={args.showGeneratedValues}
@@ -303,9 +321,19 @@ export const OakGreen: Story = {
 };
 
 /**
- * Two-color theme with primary and accent.
+ * **Two Brand Colours**
+ *
+ * Demonstrates theme generation with primary and secondary brand colours.
+ *
+ * **What it shows:**
+ * - Primary colour drives surfaces and main interactive elements
+ * - Secondary colour provides accent tones for highlights and emphasis
+ * - Complementary colour schemes are preserved in the generated tokens
+ *
+ * **Use case:** Brands with a defined primary/secondary colour palette
+ * who want those relationships reflected throughout the theme.
  */
-export const TwoColors: Story = {
+export const TwoBrandColours: Story = {
   args: {
     primary: "#287c34",
     secondary: "#7c2834",
@@ -313,7 +341,7 @@ export const TwoColors: Story = {
   },
   render: (args) => (
     <ThemeShowcase
-      title="Green + Red Theme"
+      title="Primary + Secondary Theme"
       primary={args.primary}
       secondary={args.secondary || undefined}
       showGeneratedValues={args.showGeneratedValues}
@@ -322,7 +350,19 @@ export const TwoColors: Story = {
 };
 
 /**
- * Grid showing multiple brand color options for comparison.
+ * **Brand Comparison**
+ *
+ * Demonstrates how different brand colours produce distinct themes.
+ *
+ * **What it shows:**
+ * - Four different primary colours side-by-side
+ * - How the generator adapts token derivation to each colour's characteristics
+ * - Consistent structure across all themes despite different inputs
+ *
+ * **Use case:** Comparing potential brand colours before committing,
+ * or demonstrating theme flexibility to stakeholders.
+ *
+ * **Note:** Controls are disabled as this is a static comparison.
  */
 export const BrandComparison: Story = {
   argTypes: {
@@ -341,7 +381,19 @@ export const BrandComparison: Story = {
 };
 
 /**
- * Interactive contrast checker - verify WCAG compliance.
+ * **Contrast Checker**
+ *
+ * Demonstrates WCAG contrast ratio verification for colour combinations.
+ *
+ * **What it shows:**
+ * - Various foreground/background colour pairs
+ * - Real-time contrast ratio calculation
+ * - Pass/fail badges for WCAG AA (4.5:1) and AAA (7:1) standards
+ *
+ * **Use case:** Validating that generated or custom colour combinations
+ * meet accessibility requirements before deployment.
+ *
+ * **Note:** Uses the Storybook a11y addon for additional contrast checks.
  */
 export const ContrastChecker: Story = {
   argTypes: {
