@@ -369,14 +369,14 @@ function deriveInteractiveTokens(
 
   if (isHighContrast) {
     // High contrast: distinct colour changes for each state
+
+    // Hover
     hoverColor = focusColor;
-    // Active uses tertiary for another distinct colour
+
+    // Active
     const activeSource = isLight
-      ? palette.tertiary
-      : adjustLightness(
-          palette.tertiary,
-          LIGHTNESS.interactive.darkPrimaryBoost,
-        );
+      ? focusColor
+      : adjustLightness(focusColor, LIGHTNESS.interactive.darkPrimaryBoost);
     activeColor = ensureContrast(
       activeSource,
       surfacePrimary,
@@ -387,7 +387,7 @@ function deriveInteractiveTokens(
     const hoverShift = isLight
       ? LIGHTNESS.interactive.hoverDarken
       : LIGHTNESS.interactive.hoverLighten;
-    const activeShift = hoverShift * 1.5; // 50% more shift for active
+    const activeShift = hoverShift * 2; // % more shift for active
 
     hoverColor = adjustLightness(interactivePrimary, hoverShift);
     activeColor = adjustLightness(interactivePrimary, activeShift);

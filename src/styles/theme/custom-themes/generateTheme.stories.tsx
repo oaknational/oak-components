@@ -34,7 +34,7 @@ const SwatchContainer = styled.div`
 const Swatch = styled.div<{ $color: string; $size?: number }>`
   width: ${(props) => props.$size ?? 24}px;
   height: ${(props) => props.$size ?? 24}px;
-  border-radius: 4px;
+  border-radius: 1%;
   background: ${(props) => props.$color};
   border: 1px solid rgba(0, 0, 0, 0.15);
 `;
@@ -52,7 +52,7 @@ const HexLabel = styled.span`
 const NormalHoverButton = styled.button`
   padding: 8px 16px;
   border: none;
-  border-radius: 4px;
+  border-radius: 1%;
   font-family: inherit;
   font-size: 12px;
   font-weight: 600;
@@ -79,7 +79,7 @@ const NormalHoverButton = styled.button`
 const NormalActiveButton = styled.button`
   padding: 8px 16px;
   border: none;
-  border-radius: 4px;
+  border-radius: 1%;
   font-family: inherit;
   font-size: 12px;
   font-weight: 600;
@@ -106,7 +106,7 @@ const NormalActiveButton = styled.button`
 const HighContrastHoverButton = styled.button`
   padding: 8px 16px;
   border: none;
-  border-radius: 4px;
+  border-radius: 1%;
   font-family: inherit;
   font-size: 12px;
   font-weight: 600;
@@ -133,7 +133,7 @@ const HighContrastHoverButton = styled.button`
 const HighContrastActiveButton = styled.button`
   padding: 8px 16px;
   border: none;
-  border-radius: 4px;
+  border-radius: 1%;
   font-family: inherit;
   font-size: 12px;
   font-weight: 600;
@@ -160,7 +160,7 @@ const SurfaceSwatch = styled.div<{
   $surface: "primary" | "secondary" | "accent" | "inverse";
 }>`
   padding: 8px;
-  border-radius: 4px;
+  border-radius: 1%;
   background: ${(props) => `var(--custom-surface-${props.$surface})`};
   border: 1px solid var(--custom-border-subtle);
   font-size: 9px;
@@ -175,7 +175,7 @@ const SurfaceSwatch = styled.div<{
  */
 const ShadowDemoCard = styled.div<{ $shadow: "subtle" | "strong" }>`
   padding: 8px 12px;
-  border-radius: 4px;
+  border-radius: 1%;
   background: var(--custom-surface-primary);
   border: 1px solid var(--custom-border-subtle);
   box-shadow: ${(props) =>
@@ -191,7 +191,7 @@ const ShadowDemoCard = styled.div<{ $shadow: "subtle" | "strong" }>`
  */
 const TokenCardContainer = styled.div`
   border: 1px solid #ccc;
-  border-radius: 0 0 8px 8px;
+  border-radius: 2%;
   overflow: hidden;
   margin-bottom: 8px;
 `;
@@ -595,7 +595,7 @@ function GeneratedThemeColumn({
       style={{ minWidth: 280, flex: 1 }}
     >
       {/* Header section */}
-      <OakBox $mb="spacing-16">
+      <OakBox $mb="spacing-16" $minHeight="spacing-180">
         <OakHeading tag="h3" $font="heading-6">
           {title}
         </OakHeading>
@@ -674,7 +674,7 @@ function NamedThemeColumn({
       style={{ minWidth: 280, flex: 1 }}
     >
       {/* Header with all 16 tokens */}
-      <OakBox $mb="spacing-16">
+      <OakBox $mb="spacing-16" $minHeight="spacing-180">
         <OakHeading tag="h3" $font="heading-6">
           {title}
         </OakHeading>
