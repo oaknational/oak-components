@@ -32,11 +32,13 @@ export interface DeriveContext {
 /**
  * Get minimum contrast ratio based on level.
  * - normal: WCAG AA (4.5:1)
- * - high: WCAG AAA (7:1)
- * - low: WCAG AA (4.5:1) but with reduced visual intensity
+ * - high: Exceeds AAA (9:1) for visible distinction
+ * - low: Close to AA (4.5:1) with muted tones
  */
 function getContrastRatio(level: ContrastLevel): number {
-  return level === "high" ? 7 : 4.5;
+  // High contrast exceeds AAA for visible difference from normal
+  // Low contrast targets exact AA minimum
+  return level === "high" ? 9 : 4.5;
 }
 
 /**
@@ -65,17 +67,58 @@ function deriveShadowTokens(
 /**
  * Derive surface tokens from palette.
  * Surfaces are derived from the palette colours, not hardcoded greys.
+ * High contrast uses near-white/black; low contrast uses muted tones.
  */
 function deriveSurfaceTokens(
   context: DeriveContext,
 ): GeneratedThemeColors["surface"] {
   const { palette, mode, contrast } = context;
 
-  // Lightness adjustments based on contrast level
-  const lightnessBoost =
-    contrast === "high" ? 0.45 : contrast === "low" ? 0.35 : 0.4;
-  const lightnessDrop =
-    contrast === "high" ? -0.4 : contrast === "low" ? -0.3 : -0.35;
+  // High contrast: force towards extremes for ≥9:1 ratio
+  // Low contrast: softer transitions with muted tones
+  // Normal: balanced middle ground
+  if (contrast === "high") {
+    // Force near-white/near-black for maximum contrast
+    if (mode === "light") {
+      return {
+        primary: "#ffffff",
+        secondary: "#f5f5f5",
+        accent: adjustLightness(palette.tertiary, 0.35),
+        inverse: "#000000",
+      };
+    }
+    return {
+      primary: "#0a0a0a",
+      secondary: "#1a1a1a",
+      accent: adjustLightness(palette.tertiary, -0.25),
+      inverse: "#ffffff",
+    };
+  }
+
+  // Low contrast: muted tones, less separation
+  if (contrast === "low") {
+    const lightnessBoost = 0.3;
+    const lightnessDrop = -0.25;
+
+    if (mode === "light") {
+      return {
+        primary: adjustLightness(palette.primary, lightnessBoost),
+        secondary: adjustLightness(palette.secondary, lightnessBoost - 0.03),
+        accent: adjustLightness(palette.tertiary, lightnessBoost - 0.05),
+        inverse: adjustLightness(palette.primary, lightnessDrop),
+      };
+    }
+    return {
+      primary: adjustLightness(palette.primary, lightnessDrop),
+      secondary: adjustLightness(palette.secondary, lightnessDrop + 0.03),
+      accent: adjustLightness(palette.tertiary, lightnessDrop + 0.05),
+      inverse: adjustLightness(palette.primary, lightnessBoost),
+    };
+  }
+
+  // Normal contrast
+  const lightnessBoost = 0.4;
+  const lightnessDrop = -0.35;
 
   if (mode === "light") {
     return {

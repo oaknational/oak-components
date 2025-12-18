@@ -54,3 +54,15 @@ export type { DeriveContext, ContrastLevel } from "./deriveTokens";
 // Theme preview for Storybook mode simulation
 export { ThemePreview } from "./ThemePreview";
 export type { ThemePreviewProps } from "./ThemePreview";
+
+// Named themes and Simple Theme support
+export {
+  namedThemes,
+  festive2025,
+  colorBlindSafe,
+  getNamedTheme,
+} from "./namedThemes";
+export type { SimpleTheme } from "./namedThemes";
+
+// Simple Theme expansion
+export { expandSimpleTheme } from "./expandSimpleTheme";
