@@ -25,21 +25,23 @@ function parseColor(value?: OakCombinedColorToken | null) {
     return undefined;
   }
 
-  // Check plugin-registered tokens first (e.g., custom-* from @oaknational/oak-custom-themes)
-  if (typeof value === "string") {
-    const registered = parseRegisteredToken(value);
-    if (registered) return registered;
-  }
-
+  // Oak color tokens (mint, navy, etc.) - highest priority
   if (value in oakColorTokens) {
     return oakColorTokens[value as OakColorToken];
   }
 
+  // Oak UI role tokens (bg-decorative1-main, etc.)
   if (oakUiRoleTokens.includes(value as OakUiRoleToken)) {
     return ({ theme }: PropsWithTheme) => {
       const c = theme.uiColors[value as OakUiRoleToken];
       return oakColorTokens[c as OakColorToken];
     };
+  }
+
+  // Plugin-registered tokens (e.g., custom-* from external packages) - last
+  if (typeof value === "string") {
+    const registered = parseRegisteredToken(value);
+    if (registered) return registered;
   }
 }
 
