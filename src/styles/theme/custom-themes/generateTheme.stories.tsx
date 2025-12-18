@@ -18,6 +18,27 @@ import { OakHeading } from "@/components/atoms/OakHeading";
 import { OakP } from "@/components/atoms/OakP";
 
 // ─────────────────────────────────────────────────────────────────────────────
+// Configuration
+// ─────────────────────────────────────────────────────────────────────────────
+
+/**
+ * All 6 Token Set variants: mode × contrast
+ * Single source of truth for rendering theme cards.
+ */
+const TOKEN_SET_VARIANTS: {
+  mode: "light" | "dark";
+  contrast: "normal" | "high" | "low";
+  label: string;
+}[] = [
+  { mode: "light", contrast: "normal", label: "Light (Normal)" },
+  { mode: "dark", contrast: "normal", label: "Dark (Normal)" },
+  { mode: "light", contrast: "high", label: "Light (High Contrast)" },
+  { mode: "dark", contrast: "high", label: "Dark (High Contrast)" },
+  { mode: "light", contrast: "low", label: "Light (Low Contrast)" },
+  { mode: "dark", contrast: "low", label: "Dark (Low Contrast)" },
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
 // Styled Components
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -264,49 +285,62 @@ function MiniSwatch({ color, title }: { color: string; title: string }) {
 }
 
 /**
- * Display all 16 tokens from a simple theme in a grid
+ * Display all 17 tokens from a simple theme in a grid
  */
 function TokensGrid({ tokens }: { tokens: GeneratedThemeColors }) {
+  // Config for token groups - single source of truth
+  const tokenGroups = [
+    {
+      label: "Surface",
+      items: [
+        { key: "primary", value: tokens.surface.primary },
+        { key: "secondary", value: tokens.surface.secondary },
+        { key: "accent", value: tokens.surface.accent },
+        { key: "inverse", value: tokens.surface.inverse },
+      ],
+    },
+    {
+      label: "Text",
+      items: [
+        { key: "primary", value: tokens.text.primary },
+        { key: "muted", value: tokens.text.muted },
+        { key: "accent", value: tokens.text.accent },
+        { key: "inverse", value: tokens.text.inverse },
+      ],
+    },
+    {
+      label: "Border",
+      items: [
+        { key: "subtle", value: tokens.border.subtle },
+        { key: "strong", value: tokens.border.strong },
+        { key: "accent", value: tokens.border.accent },
+      ],
+    },
+    {
+      label: "Interactive",
+      items: [
+        { key: "primary", value: tokens.interactive.primary },
+        { key: "hover", value: tokens.interactive.hover },
+        { key: "active", value: tokens.interactive.active },
+        { key: "focus", value: tokens.interactive.focus },
+      ],
+    },
+  ];
+
   return (
     <TokenGrid>
-      <TokenGroup>
-        <TokenGroupLabel>Surface</TokenGroupLabel>
-        <MiniSwatch color={tokens.surface.primary} title="surface.primary" />
-        <MiniSwatch
-          color={tokens.surface.secondary}
-          title="surface.secondary"
-        />
-        <MiniSwatch color={tokens.surface.accent} title="surface.accent" />
-        <MiniSwatch color={tokens.surface.inverse} title="surface.inverse" />
-      </TokenGroup>
-      <TokenGroup>
-        <TokenGroupLabel>Text</TokenGroupLabel>
-        <MiniSwatch color={tokens.text.primary} title="text.primary" />
-        <MiniSwatch color={tokens.text.muted} title="text.muted" />
-        <MiniSwatch color={tokens.text.accent} title="text.accent" />
-        <MiniSwatch color={tokens.text.inverse} title="text.inverse" />
-      </TokenGroup>
-      <TokenGroup>
-        <TokenGroupLabel>Border</TokenGroupLabel>
-        <MiniSwatch color={tokens.border.subtle} title="border.subtle" />
-        <MiniSwatch color={tokens.border.strong} title="border.strong" />
-        <MiniSwatch color={tokens.border.accent} title="border.accent" />
-      </TokenGroup>
-      <TokenGroup>
-        <TokenGroupLabel>Interactive</TokenGroupLabel>
-        <MiniSwatch
-          color={tokens.interactive.primary}
-          title="interactive.primary"
-        />
-        <MiniSwatch
-          color={tokens.interactive.hover}
-          title="interactive.hover"
-        />
-        <MiniSwatch
-          color={tokens.interactive.focus}
-          title="interactive.focus"
-        />
-      </TokenGroup>
+      {tokenGroups.map((group) => (
+        <TokenGroup key={group.label}>
+          <TokenGroupLabel>{group.label}</TokenGroupLabel>
+          {group.items.map((item) => (
+            <MiniSwatch
+              key={item.key}
+              color={item.value}
+              title={`${group.label.toLowerCase()}.${item.key}`}
+            />
+          ))}
+        </TokenGroup>
+      ))}
     </TokenGrid>
   );
 }
@@ -571,43 +605,16 @@ function GeneratedThemeColumn({
         </OakBox>
       </OakBox>
 
-      {/* All 6 Token Sets */}
-      <TokenSetCard
-        theme={result.theme}
-        mode="light"
-        contrast="normal"
-        label="Light (Normal)"
-      />
-      <TokenSetCard
-        theme={result.theme}
-        mode="dark"
-        contrast="normal"
-        label="Dark (Normal)"
-      />
-      <TokenSetCard
-        theme={result.theme}
-        mode="light"
-        contrast="high"
-        label="Light (High Contrast)"
-      />
-      <TokenSetCard
-        theme={result.theme}
-        mode="dark"
-        contrast="high"
-        label="Dark (High Contrast)"
-      />
-      <TokenSetCard
-        theme={result.theme}
-        mode="light"
-        contrast="low"
-        label="Light (Low Contrast)"
-      />
-      <TokenSetCard
-        theme={result.theme}
-        mode="dark"
-        contrast="low"
-        label="Dark (Low Contrast)"
-      />
+      {/* All 6 Token Sets - rendered from config */}
+      {TOKEN_SET_VARIANTS.map((variant) => (
+        <TokenSetCard
+          key={variant.label}
+          theme={result.theme}
+          mode={variant.mode}
+          contrast={variant.contrast}
+          label={variant.label}
+        />
+      ))}
     </OakFlex>
   );
 }
@@ -648,43 +655,16 @@ function NamedThemeColumn({
         <TokensGrid tokens={simpleTheme.tokens} />
       </OakBox>
 
-      {/* All 6 Token Sets */}
-      <TokenSetCard
-        theme={fullTheme}
-        mode="light"
-        contrast="normal"
-        label="Light (Normal)"
-      />
-      <TokenSetCard
-        theme={fullTheme}
-        mode="dark"
-        contrast="normal"
-        label="Dark (Normal)"
-      />
-      <TokenSetCard
-        theme={fullTheme}
-        mode="light"
-        contrast="high"
-        label="Light (High Contrast)"
-      />
-      <TokenSetCard
-        theme={fullTheme}
-        mode="dark"
-        contrast="high"
-        label="Dark (High Contrast)"
-      />
-      <TokenSetCard
-        theme={fullTheme}
-        mode="light"
-        contrast="low"
-        label="Light (Low Contrast)"
-      />
-      <TokenSetCard
-        theme={fullTheme}
-        mode="dark"
-        contrast="low"
-        label="Dark (Low Contrast)"
-      />
+      {/* All 6 Token Sets - rendered from config */}
+      {TOKEN_SET_VARIANTS.map((variant) => (
+        <TokenSetCard
+          key={variant.label}
+          theme={fullTheme}
+          mode={variant.mode}
+          contrast={variant.contrast}
+          label={variant.label}
+        />
+      ))}
     </OakFlex>
   );
 }
