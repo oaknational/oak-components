@@ -44,7 +44,7 @@ Enable custom token props with consumer-defined colors.
 5. ✅ Full test coverage - 28 new tests
 6. ✅ Storybook examples - 4 stories (Default, AllTokenCategories, HighContrastDemo, BrandedTheme)
 
-### Phase 2 Summary: Theme Generator ✅ COMPLETE
+### Phase 2a Summary: Theme Generator ✅ COMPLETE
 
 > **Implemented:** 2025-12-18
 
@@ -61,6 +61,36 @@ Generate accessible themes from brand colors using colour theory.
 7. ✅ Interactive token with `active` state (17 tokens total)
 8. ✅ Storybook with interactive colour picker, token grids, live demos
 9. ✅ 78 unit tests covering all derivation paths
+
+### Phase 2b Summary: CustomThemeProvider Integration 🔴 BLOCKING
+
+> **Status:** Not started
+> **Critical Path:** Yes - without this, consuming apps cannot use generated themes
+
+Connect `generateTheme()` output to `CustomThemeProvider` for production use.
+
+**Deliverables:**
+
+1. Update `CustomThemeProvider` to accept `GeneratedTheme` via `theme` prop
+2. Emit `@media (prefers-contrast: more/less)` CSS blocks for high/low contrast
+3. Auto-set `color-scheme: light dark` on root element
+4. Tests for CSS output covering all 6 Token Sets
+5. Migration docs showing upgrade path from manual config
+
+**Current Gap:**
+
+```tsx
+// ❌ Cannot do this today:
+const { theme } = generateTheme({ primary: "#287c34" });
+<CustomThemeProvider theme={theme}>
+  <App />
+</CustomThemeProvider>
+
+// ✅ After Phase 2b:
+<CustomThemeProvider theme={theme}>
+  <App />  {/* Auto-responds to prefers-color-scheme + prefers-contrast */}
+</CustomThemeProvider>
+```
 
 ### Phase 3 Summary: Advanced Accessibility
 

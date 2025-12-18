@@ -78,7 +78,38 @@ Generate **Full Themes** (6 Token Sets) from **Brand Colours** or **Simple Theme
 
 ---
 
-## 🔶 Remaining Work (Optional Improvements)
+## 🔴 Blocking Work (Phase 2b)
+
+### CustomThemeProvider Integration
+
+> **Critical Path:** Yes - without this, consuming apps cannot use generated themes
+
+| Task | Description |
+|------|-------------|
+| Accept `GeneratedTheme` | Update provider to take `theme` prop |
+| Emit contrast media queries | `@media (prefers-contrast: more/less)` blocks |
+| Auto color-scheme | Set `color-scheme: light dark` on root |
+| Tests | Verify CSS output for all 6 Token Sets |
+| Migration docs | Show upgrade path from manual config |
+
+**Current Gap:**
+
+```tsx
+// ❌ Cannot do this today:
+const { theme } = generateTheme({ primary: "#287c34" });
+<CustomThemeProvider theme={theme}>
+  <App />
+</CustomThemeProvider>
+
+// ✅ After Phase 2b:
+<CustomThemeProvider theme={theme}>
+  <App />  {/* Auto-responds to prefers-color-scheme + prefers-contrast */}
+</CustomThemeProvider>
+```
+
+---
+
+## 🔶 Optional Improvements
 
 ### Low Priority DRY
 
@@ -92,7 +123,6 @@ Generate **Full Themes** (6 Token Sets) from **Brand Colours** or **Simple Theme
 
 | Feature | Description |
 |---------|-------------|
-| CustomThemeProvider integration | Wire generateTheme into actual provider component |
 | Dark mode SSR | Handle server-side rendering with correct mode |
 | Theme persistence | LocalStorage/cookie for user preference |
 | Animation tokens | Transition timing from theme |
