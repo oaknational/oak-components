@@ -82,6 +82,7 @@ function tokensToCssVars(tokens: GeneratedThemeColors): React.CSSProperties {
   if (tokens.interactive) {
     vars["--custom-interactive-primary"] = tokens.interactive.primary;
     vars["--custom-interactive-hover"] = tokens.interactive.hover;
+    vars["--custom-interactive-active"] = tokens.interactive.active;
     vars["--custom-interactive-focus"] = tokens.interactive.focus;
   }
 

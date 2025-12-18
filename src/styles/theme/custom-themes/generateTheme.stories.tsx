@@ -89,7 +89,7 @@ const NormalActiveButton = styled.button`
   transition: all 0.15s ease;
 
   &:active {
-    background: var(--custom-interactive-hover);
+    background: var(--custom-interactive-active);
     transform: translateY(1px) scale(0.98);
   }
 
@@ -143,7 +143,7 @@ const HighContrastActiveButton = styled.button`
   transition: all 0.15s ease;
 
   &:active {
-    background: var(--custom-interactive-hover);
+    background: var(--custom-interactive-active);
     transform: translateY(1px);
   }
 
@@ -191,7 +191,7 @@ const ShadowDemoCard = styled.div<{ $shadow: "subtle" | "strong" }>`
  */
 const TokenCardContainer = styled.div`
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 0 0 8px 8px;
   overflow: hidden;
   margin-bottom: 8px;
 `;

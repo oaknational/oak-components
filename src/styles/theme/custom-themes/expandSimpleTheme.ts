@@ -106,6 +106,7 @@ function adjustTokenSetContrast(
         targetContrast,
       ).adjusted,
       hover: applyAdjust(tokens.interactive.hover),
+      active: applyAdjust(tokens.interactive.active),
       focus: tokens.interactive.focus,
     },
     shadow: {
@@ -146,6 +147,7 @@ function invertTokenSet(tokens: GeneratedThemeColors): GeneratedThemeColors {
     interactive: {
       primary: invertLightness(tokens.interactive.primary),
       hover: invertLightness(tokens.interactive.hover),
+      active: invertLightness(tokens.interactive.active),
       focus: invertLightness(tokens.interactive.focus),
     },
     shadow: {

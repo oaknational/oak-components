@@ -327,8 +327,9 @@ function deriveBorderTokens(
  * Derive interactive tokens from palette.
  *
  * Interactive state strategy:
- * - **Normal/Low contrast**: Hover uses lightness shift (darker in light mode, lighter in dark mode)
- * - **High contrast**: Hover uses focus colour for distinct colour change (accessibility requirement)
+ * - **Hover**: Small lightness shift from primary
+ * - **Active**: Larger lightness shift from primary (more pronounced than hover)
+ * - **High contrast**: Hover uses focus colour, active uses tertiary for distinct colour changes
  */
 function deriveInteractiveTokens(
   context: DeriveContext,
@@ -362,22 +363,40 @@ function deriveInteractiveTokens(
     CONTRAST_RATIOS.focus,
   ).adjusted;
 
-  // Hover colour based on contrast level
+  // Hover and active colours based on contrast level
   let hoverColor: string;
+  let activeColor: string;
+
   if (isHighContrast) {
-    // High contrast: distinct colour change using focus colour
+    // High contrast: distinct colour changes for each state
     hoverColor = focusColor;
+    // Active uses tertiary for another distinct colour
+    const activeSource = isLight
+      ? palette.tertiary
+      : adjustLightness(
+          palette.tertiary,
+          LIGHTNESS.interactive.darkPrimaryBoost,
+        );
+    activeColor = ensureContrast(
+      activeSource,
+      surfacePrimary,
+      minContrast,
+    ).adjusted;
   } else {
-    // Normal/Low: lightness shift
+    // Normal/Low: lightness shifts (active is more pronounced than hover)
     const hoverShift = isLight
       ? LIGHTNESS.interactive.hoverDarken
       : LIGHTNESS.interactive.hoverLighten;
+    const activeShift = hoverShift * 1.5; // 50% more shift for active
+
     hoverColor = adjustLightness(interactivePrimary, hoverShift);
+    activeColor = adjustLightness(interactivePrimary, activeShift);
   }
 
   return {
     primary: interactivePrimary,
     hover: hoverColor,
+    active: activeColor,
     focus: focusColor,
   };
 }

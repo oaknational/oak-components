@@ -30,7 +30,7 @@ export interface BrandColors {
 /**
  * A complete set of theme colors for one mode (light or dark).
  *
- * This represents a constructed **artifact** - all 16 semantic tokens
+ * This represents a constructed **artifact** - all 17 semantic tokens
  * with guaranteed string values. No properties are optional.
  */
 export interface GeneratedThemeColors {
@@ -54,6 +54,7 @@ export interface GeneratedThemeColors {
   interactive: {
     primary: string;
     hover: string;
+    active: string;
     focus: string;
   };
   shadow: {

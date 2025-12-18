@@ -48,6 +48,7 @@ export const festive2025: SimpleTheme = {
     interactive: {
       primary: "#c41e3a", // Christmas red
       hover: "#a01830", // Darker red
+      active: "#8a1428", // Even darker red for pressed state
       focus: "#228b22", // Forest green for distinction
     },
     shadow: {
@@ -87,6 +88,7 @@ export const colorBlindSafe: SimpleTheme = {
     interactive: {
       primary: "#0055aa", // Strong blue (distinct from orange)
       hover: "#004488", // Darker blue
+      active: "#003366", // Even darker blue for pressed state
       focus: "#e67700", // Orange for focus (distinct)
     },
     shadow: {
