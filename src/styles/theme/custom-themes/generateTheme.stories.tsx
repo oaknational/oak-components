@@ -22,6 +22,14 @@ import { OakP } from "@/components/atoms/OakP";
 // ─────────────────────────────────────────────────────────────────────────────
 
 /**
+ * Fixed height header container for alignment
+ */
+const HeaderSection = styled.div`
+  min-height: 120px;
+  margin-bottom: 16px;
+`;
+
+/**
  * Colour swatch with hex label underneath
  */
 const SwatchContainer = styled.div`
@@ -74,12 +82,12 @@ const DemoButton = styled.button<{ $mode: "light" | "dark" }>`
 `;
 
 /**
- * Card with shadow for context display
+ * Shadow demo card on surface primary background
  */
-const ShadowCard = styled.div<{ $shadow: "subtle" | "strong" }>`
+const ShadowDemoCard = styled.div<{ $shadow: "subtle" | "strong" }>`
   padding: 8px 12px;
   border-radius: 4px;
-  background: var(--custom-surface-secondary);
+  background: var(--custom-surface-primary);
   box-shadow: ${(props) =>
     props.$shadow === "subtle"
       ? "var(--custom-shadow-subtle)"
@@ -124,6 +132,13 @@ const RowLabel = styled.div`
   margin-bottom: 6px;
 `;
 
+const SectionLabel = styled.div`
+  font-size: 11px;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 4px;
+`;
+
 // ─────────────────────────────────────────────────────────────────────────────
 // Helper Components
 // ─────────────────────────────────────────────────────────────────────────────
@@ -137,29 +152,43 @@ function ColorSwatch({ color, label }: { color: string; label: string }) {
   );
 }
 
+/**
+ * Input and generated palette display
+ */
 function PaletteDisplay({
+  inputColors,
   palette,
-  inputLabel,
 }: {
+  inputColors: string[];
   palette: BasePalette;
-  inputLabel: string;
 }) {
   return (
-    <OakBox $mb="spacing-8">
-      <OakP $font="body-3" $color="grey60" $mb="spacing-4">
-        {inputLabel}
-      </OakP>
+    <OakBox>
+      {/* Input Colours */}
+      <SectionLabel>Input Colours</SectionLabel>
+      <OakFlex $gap="spacing-8" $mb="spacing-8">
+        {inputColors.map((color, i) => (
+          <ColorSwatch
+            key={i}
+            color={color}
+            label={i === 0 ? "Primary input" : "Secondary input"}
+          />
+        ))}
+      </OakFlex>
+
+      {/* Generated Base Palette */}
+      <SectionLabel>Generated Base Palette</SectionLabel>
       <OakFlex $gap="spacing-8">
-        <ColorSwatch color={palette.primary} label="Primary" />
-        <ColorSwatch color={palette.secondary} label="Secondary" />
-        <ColorSwatch color={palette.tertiary} label="Tertiary" />
+        <ColorSwatch color={palette.primary} label="Primary (generated)" />
+        <ColorSwatch color={palette.secondary} label="Secondary (generated)" />
+        <ColorSwatch color={palette.tertiary} label="Tertiary (generated)" />
       </OakFlex>
     </OakBox>
   );
 }
 
 /**
- * Full Token Set display organized by role
+ * Full Token Set display with all 16 tokens
  */
 function TokenSetCard({
   theme,
@@ -178,9 +207,9 @@ function TokenSetCard({
     <TokenCardContainer>
       <TokenCardHeader>{label}</TokenCardHeader>
       <ThemePreview theme={theme} mode={mode} contrast={contrast}>
-        {/* Surfaces Row */}
+        {/* Surfaces Row - 4 tokens */}
         <TokenRow>
-          <RowLabel>Surfaces</RowLabel>
+          <RowLabel>Surfaces (4)</RowLabel>
           <OakFlex $gap="spacing-8" $flexWrap="wrap">
             <SwatchContainer>
               <OakBox
@@ -249,34 +278,48 @@ function TokenSetCard({
           </OakFlex>
         </TokenRow>
 
-        {/* Text Row */}
+        {/* Text Row - 4 tokens */}
         <TokenRow>
-          <RowLabel>Text</RowLabel>
+          <RowLabel>Text (4)</RowLabel>
           <OakFlex $gap="spacing-16" $flexWrap="wrap">
             <OakP
               $font="body-3"
               style={{ color: "var(--custom-text-primary)", fontSize: 11 }}
             >
-              Primary Text
+              Primary
             </OakP>
             <OakP
               $font="body-3"
               style={{ color: "var(--custom-text-muted)", fontSize: 11 }}
             >
-              Muted Text
+              Muted
             </OakP>
             <OakP
               $font="body-3"
               style={{ color: "var(--custom-text-accent)", fontSize: 11 }}
             >
-              Accent Text
+              Accent
             </OakP>
+            <OakBox
+              $pa="spacing-4"
+              style={{
+                background: "var(--custom-surface-inverse)",
+                borderRadius: 2,
+              }}
+            >
+              <OakP
+                $font="body-3"
+                style={{ color: "var(--custom-text-inverse)", fontSize: 11 }}
+              >
+                Inverse
+              </OakP>
+            </OakBox>
           </OakFlex>
         </TokenRow>
 
-        {/* Borders Row */}
+        {/* Borders Row - 3 tokens */}
         <TokenRow>
-          <RowLabel>Borders</RowLabel>
+          <RowLabel>Borders (3)</RowLabel>
           <OakFlex $gap="spacing-8">
             <OakBox
               $pa="spacing-8"
@@ -289,7 +332,7 @@ function TokenSetCard({
                 $font="body-3"
                 style={{ color: "var(--custom-text-primary)", fontSize: 9 }}
               >
-                Subtle Border
+                Subtle
               </OakP>
             </OakBox>
             <OakBox
@@ -303,7 +346,7 @@ function TokenSetCard({
                 $font="body-3"
                 style={{ color: "var(--custom-text-primary)", fontSize: 9 }}
               >
-                Strong Border
+                Strong
               </OakP>
             </OakBox>
             <OakBox
@@ -317,21 +360,21 @@ function TokenSetCard({
                 $font="body-3"
                 style={{ color: "var(--custom-text-primary)", fontSize: 9 }}
               >
-                Accent Border
+                Accent
               </OakP>
             </OakBox>
           </OakFlex>
         </TokenRow>
 
-        {/* Interactive Row */}
+        {/* Interactive Row - 3 tokens */}
         <TokenRow>
-          <RowLabel>Interactive</RowLabel>
+          <RowLabel>Interactive (3)</RowLabel>
           <OakFlex $gap="spacing-8" $alignItems="center">
             <DemoButton
               $mode={mode}
               type="button"
               onClick={() => setIsClicked(!isClicked)}
-              aria-label="Click to see active state"
+              aria-label="Click to see active state (uses primary + hover)"
             >
               Click me
             </DemoButton>
@@ -347,18 +390,18 @@ function TokenSetCard({
                 $font="body-3"
                 style={{ color: "var(--custom-text-primary)", fontSize: 9 }}
               >
-                Focus Ring
+                Focus
               </OakP>
             </OakBox>
           </OakFlex>
         </TokenRow>
 
-        {/* Shadows Row */}
+        {/* Shadows Row - 2 tokens on surface.primary background */}
         <TokenRow>
-          <RowLabel>Shadows</RowLabel>
+          <RowLabel>Shadows (2)</RowLabel>
           <OakFlex $gap="spacing-8">
-            <ShadowCard $shadow="subtle">Subtle Shadow</ShadowCard>
-            <ShadowCard $shadow="strong">Strong Shadow</ShadowCard>
+            <ShadowDemoCard $shadow="subtle">Subtle</ShadowDemoCard>
+            <ShadowDemoCard $shadow="strong">Strong</ShadowDemoCard>
           </OakFlex>
         </TokenRow>
       </ThemePreview>
@@ -367,7 +410,7 @@ function TokenSetCard({
 }
 
 /**
- * Theme column for generated themes (with expansion)
+ * Theme column for generated themes
  */
 function GeneratedThemeColumn({
   title,
@@ -381,9 +424,7 @@ function GeneratedThemeColumn({
   colorTheory: "Triadic" | "Split-Complementary";
 }) {
   const result = generateTheme({ primary, secondary });
-  const inputLabel = secondary
-    ? `Inputs: ${primary}, ${secondary}`
-    : `Input: ${primary}`;
+  const inputColors = secondary ? [primary, secondary] : [primary];
 
   return (
     <OakFlex
@@ -391,14 +432,21 @@ function GeneratedThemeColumn({
       $gap="spacing-4"
       style={{ minWidth: 280, flex: 1 }}
     >
-      <OakHeading tag="h3" $font="heading-6">
-        {title}
-      </OakHeading>
-      <OakP $font="body-3" $color="grey60" style={{ marginTop: -4 }}>
-        {colorTheory} derivation
-      </OakP>
-
-      <PaletteDisplay palette={result.basePalette} inputLabel={inputLabel} />
+      {/* Fixed height header section */}
+      <HeaderSection>
+        <OakHeading tag="h3" $font="heading-6">
+          {title}
+        </OakHeading>
+        <OakP $font="body-3" $color="grey60" style={{ marginTop: 2 }}>
+          {colorTheory} derivation
+        </OakP>
+        <OakBox $mt="spacing-8">
+          <PaletteDisplay
+            inputColors={inputColors}
+            palette={result.basePalette}
+          />
+        </OakBox>
+      </HeaderSection>
 
       {/* All 6 Token Sets */}
       <TokenSetCard
@@ -463,18 +511,18 @@ function NamedThemeColumn({
       $gap="spacing-4"
       style={{ minWidth: 280, flex: 1 }}
     >
-      <OakHeading tag="h3" $font="heading-6">
-        {title}
-      </OakHeading>
-
-      <OakBox $mb="spacing-8">
-        <OakP $font="body-3" $color="grey60" $mb="spacing-4">
+      {/* Fixed height header section */}
+      <HeaderSection>
+        <OakHeading tag="h3" $font="heading-6">
+          {title}
+        </OakHeading>
+        <OakP $font="body-3" $color="grey60" $mt="spacing-4">
           Input: Simple Theme ({simpleTheme.name})
         </OakP>
         <OakP $font="body-3" $color="grey60">
           Fully specified 16 tokens, {simpleTheme.mode} mode
         </OakP>
-      </OakBox>
+      </HeaderSection>
 
       {/* All 6 Token Sets */}
       <TokenSetCard
@@ -521,10 +569,9 @@ function NamedThemeColumn({
  * Colour-Blind Safe column (single theme, no expansion)
  */
 function ColorBlindSafeColumn() {
-  // Wrap the single token set as a "theme" for ThemePreview
   const singleTheme: GeneratedTheme = {
     light: colorBlindSafe.tokens,
-    dark: colorBlindSafe.tokens, // Same tokens
+    dark: colorBlindSafe.tokens,
     highContrastLight: colorBlindSafe.tokens,
     highContrastDark: colorBlindSafe.tokens,
     lowContrastLight: colorBlindSafe.tokens,
@@ -537,25 +584,28 @@ function ColorBlindSafeColumn() {
       $gap="spacing-4"
       style={{ minWidth: 280, flex: 1 }}
     >
-      <OakHeading tag="h3" $font="heading-6">
-        Colour-Blind Safe
-      </OakHeading>
-
-      <OakBox $mb="spacing-8">
-        <OakP $font="body-3" $color="grey60" $mb="spacing-4">
+      {/* Fixed height header section */}
+      <HeaderSection>
+        <OakHeading tag="h3" $font="heading-6">
+          Colour-Blind Safe
+        </OakHeading>
+        <OakP $font="body-3" $color="grey60" $mt="spacing-4">
           Pre-computed Named Theme
         </OakP>
         <OakP $font="body-3" $color="grey60">
-          WCAG AAA · Blue-Orange axis · No expansion
+          WCAG AAA · Blue-Orange axis
         </OakP>
-      </OakBox>
+        <OakP $font="body-3" $color="grey60">
+          No expansion (single theme)
+        </OakP>
+      </HeaderSection>
 
       {/* Single theme display */}
       <TokenSetCard
         theme={singleTheme}
         mode="light"
         contrast="normal"
-        label="Colour-Blind Safe (Single)"
+        label="Colour-Blind Safe (16 tokens)"
       />
     </OakFlex>
   );
@@ -576,8 +626,7 @@ const meta: Meta<ThemeShowcaseArgs> = {
   argTypes: {
     oneColourPrimary: {
       control: "color",
-      description:
-        "Primary colour for single-colour theme (Triadic derivation: 120° hue rotations)",
+      description: "Primary colour for Triadic derivation (120° hue rotations)",
       table: {
         category: "One Colour (Triadic)",
         defaultValue: { summary: "#287c34" },
@@ -585,8 +634,7 @@ const meta: Meta<ThemeShowcaseArgs> = {
     },
     twoColourPrimary: {
       control: "color",
-      description:
-        "Primary colour for two-colour theme (Split-Complementary derivation)",
+      description: "Primary colour for Split-Complementary derivation",
       table: {
         category: "Two Colours (Split-Comp)",
         defaultValue: { summary: "#1e40af" },
@@ -612,6 +660,16 @@ const meta: Meta<ThemeShowcaseArgs> = {
         component: `
 Generate accessible themes from brand colours using colour theory.
 
+## 16 Semantic Tokens
+
+| Category | Tokens |
+|----------|--------|
+| Surface | primary, secondary, accent, inverse |
+| Text | primary, muted, accent, inverse |
+| Border | subtle, strong, accent |
+| Interactive | primary, hover, focus |
+| Shadow | subtle, strong |
+
 ## Contrast Targets
 
 | Mode | Target |
@@ -619,7 +677,7 @@ Generate accessible themes from brand colours using colour theory.
 | Normal | WCAG AA (4.5:1) |
 | High | Exceeds AAA (≥9:1) |
 | Low | Close to AA (4.5–5:1), muted tones |
-| Colour-Blind Safe | AAA, blue-orange axis |
+| Colour-Blind Safe | AAA (verified: 17:1, 8.5:1, 7.3:1) |
         `,
       },
     },
@@ -633,11 +691,8 @@ type Story = StoryObj<ThemeShowcaseArgs>;
 /**
  * **Theme Showcase**
  *
- * Compares four theme generation approaches:
- * 1. One colour — triadic derivation
- * 2. Two colours — split-complementary
- * 3. Festive 2025 — from fully specified Simple Theme
- * 4. Colour-blind safe — pre-computed, no expansion
+ * Compares four theme generation approaches side-by-side.
+ * Each column shows input colours, generated base palette, and all 6 Token Sets (16 tokens each).
  */
 export const ThemeShowcase: Story = {
   render: (args) => (
