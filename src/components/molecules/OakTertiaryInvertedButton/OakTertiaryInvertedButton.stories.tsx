@@ -4,15 +4,24 @@ import { Meta, StoryObj } from "@storybook/react";
 import { OakTertiaryInvertedButton } from "./OakTertiaryInvertedButton";
 
 import { OakFlex } from "@/components/atoms";
+import { oakColorFilterTokens } from "@/styles/theme/color";
+
+const colorFilterControl = {
+  control: "select" as const,
+  options: Object.keys(oakColorFilterTokens),
+};
 
 const meta: Meta<typeof OakTertiaryInvertedButton> = {
   component: OakTertiaryInvertedButton,
   tags: ["autodocs"],
   title: "components/molecules/OakTertiaryInvertedButton",
-  argTypes: {},
+  argTypes: {
+    iconColorFilter: colorFilterControl,
+    iconBorderColor: colorFilterControl,
+  },
   parameters: {
     controls: {
-      include: ["iconName"],
+      include: ["iconName", "iconColorFilter", "iconBorderColor"],
     },
   },
   decorators: [(Story) => <OakFlex $gap="spacing-24">{Story()}</OakFlex>],
@@ -43,6 +52,8 @@ export const Default: Story = {
   ),
   args: {
     iconName: "chevron-right",
+    iconColorFilter: "black",
+    iconBorderColor: "black",
   },
 };
 
@@ -57,6 +68,8 @@ export const TertiaryButtonWithNoText: Story = {
   args: {
     iconName: "chevron-right",
     "aria-label": "Test",
+    iconColorFilter: "black",
+    iconBorderColor: "black",
   },
 };
 
@@ -72,5 +85,7 @@ export const LinkStyledAsButton: Story = {
     element: "a",
     href: "/",
     iconName: "chevron-right",
+    iconColorFilter: "black",
+    iconBorderColor: "black",
   },
 };

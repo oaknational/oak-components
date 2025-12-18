@@ -11,6 +11,7 @@ type OakTertiaryInvertedButtonProps = InternalButtonProps & {
   iconColorFilter?: OakRoundIconProps["$colorFilter"];
   isTrailingIcon?: boolean;
   iconName?: OakIconName;
+  iconBorderColor?: OakRoundIconProps["$colorFilter"];
 };
 
 /**
@@ -20,6 +21,8 @@ export const OakTertiaryInvertedButton = <C extends ElementType = "button">({
   element,
   isTrailingIcon,
   iconName,
+  iconColorFilter,
+  iconBorderColor,
   children,
   ...props
 }: OakTertiaryInvertedButtonProps & PolymorphicPropsWithoutRef<C>) => {
@@ -29,6 +32,8 @@ export const OakTertiaryInvertedButton = <C extends ElementType = "button">({
       {...props}
       isTrailingIcon={isTrailingIcon}
       iconName={iconName}
+      iconColorFilter={iconColorFilter}
+      iconBorderColor={iconBorderColor}
       defaultIconColor={"text-primary"}
       disabledIconColor="icon-disabled"
       disabledIconBackground="bg-btn-secondary-disabled"
