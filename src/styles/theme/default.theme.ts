@@ -13,7 +13,6 @@ export const oakDefaultTheme: OakTheme = {
     "text-link-visited": "navy120",
     "text-inverted": "white",
     "text-success": "oakGreen",
-    "text-warning": "amber", // to be deprecated, we don't use warning text anymore
     "text-promo": "lemon",
     "bg-primary": "white",
     "bg-inverted": "black",
@@ -25,8 +24,6 @@ export const oakDefaultTheme: OakTheme = {
     "bg-btn-secondary": "white",
     "bg-btn-secondary-hover": "grey20",
     "bg-btn-secondary-disabled": "grey30",
-    "bg-icon": "black", // to be deprecated, use icon-primary instead
-    "bg-icon-hover": "grey60", // to be deprecated, use icon-subdued instead
     "bg-decorative1-main": "mint",
     "bg-decorative1-subdued": "mint50",
     "bg-decorative1-very-subdued": "mint30",
@@ -51,8 +48,7 @@ export const oakDefaultTheme: OakTheme = {
     "bg-incorrect": "red30",
     "bg-success": "oakGreen",
     "bg-error": "red",
-    "icon-main": "white", // to be deprecated, icon-inverted will be used instead soon
-    "icon-inverted": "black", // this will be updated to white once all current occurrences of icon-inverted are replaced with icon-primary
+    "icon-inverted": "white",
     "icon-disabled": "grey50",
     "icon-brand": "oakGreen",
     "icon-success": "oakGreen",
@@ -93,6 +89,7 @@ export const oakDefaultTheme: OakTheme = {
     "border-decorative6": "amber50",
     "border-decorative6-stronger": "amber",
     transparent: "transparent",
+    blackSemiTransparent: "blackSemiTransparent",
     "code-blue": "rpf-syntax-blue",
     "code-green": "rpf-syntax-green",
     "code-grey": "rpf-syntax-grey",

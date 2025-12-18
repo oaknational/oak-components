@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { OakCombinedColorToken, OakDropShadowToken } from "@/styles";
+import { OakUiRoleToken, OakDropShadowToken } from "@/styles";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { borderStyle, BorderStyleProps } from "@/styles/utils/borderStyle";
@@ -13,12 +13,12 @@ export const NativeSelect = styled("select")<
     ColorStyleProps &
     BorderStyleProps & {
       $focusRingDropShadows: OakDropShadowToken[];
-      $hoverBackground?: OakCombinedColorToken;
+      $hoverBackground?: OakUiRoleToken;
       $readOnly?: boolean;
-      $readOnlyBorderColor?: OakCombinedColorToken;
-      $readOnlyColor?: OakCombinedColorToken;
-      $disabledBackgroundColor?: OakCombinedColorToken;
-      $disabledColor?: OakCombinedColorToken;
+      $readOnlyBorderColor?: OakUiRoleToken;
+      $readOnlyColor?: OakUiRoleToken;
+      $disabledBackgroundColor?: OakUiRoleToken;
+      $disabledColor?: OakUiRoleToken;
       $disabled?: boolean;
     }
 >`

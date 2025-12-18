@@ -110,7 +110,6 @@ const oakUiRoleTokensConst = [
   "text-link-pressed",
   "text-inverted",
   "text-success",
-  "text-warning", // to be deprecated, we don't use warning text anymore
   "text-promo",
   "bg-primary",
   "bg-inverted",
@@ -122,8 +121,6 @@ const oakUiRoleTokensConst = [
   "bg-btn-secondary",
   "bg-btn-secondary-hover",
   "bg-btn-secondary-disabled",
-  "bg-icon", // to be deprecated, use icon-primary instead
-  "bg-icon-hover", // to be deprecated, use icon-subdued instead
   "bg-decorative1-main",
   "bg-decorative1-subdued",
   "bg-decorative1-very-subdued",
@@ -148,7 +145,6 @@ const oakUiRoleTokensConst = [
   "bg-incorrect",
   "bg-success",
   "bg-error",
-  "icon-main", // to be deprecated
   "icon-inverted",
   "icon-disabled",
   "icon-brand",
@@ -190,6 +186,7 @@ const oakUiRoleTokensConst = [
   "border-decorative6",
   "border-decorative6-stronger",
   "transparent",
+  "blackSemiTransparent",
   "code-blue",
   "code-green",
   "code-grey",
@@ -204,5 +201,3 @@ export type UiRoleMap = Record<
   OakUiRoleToken,
   OakColorToken | null | undefined
 >;
-
-export type OakCombinedColorToken = OakColorToken | OakUiRoleToken;

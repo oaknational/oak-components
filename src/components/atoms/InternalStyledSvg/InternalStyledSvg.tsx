@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { OakBorderWidthToken, OakCombinedColorToken } from "@/styles";
+import { OakBorderWidthToken, OakUiRoleToken } from "@/styles";
 import {
   ResponsiveValues,
   responsiveStyle,
@@ -9,13 +9,13 @@ import { parseColor } from "@/styles/helpers/parseColor";
 import { parseBorderWidth } from "@/styles/helpers/parseBorderWidth";
 
 export type InternalStyledSvgProps = {
-  $fill?: ResponsiveValues<OakCombinedColorToken>;
-  $stroke?: ResponsiveValues<OakCombinedColorToken>;
+  $fill?: ResponsiveValues<OakUiRoleToken>;
+  $stroke?: ResponsiveValues<OakUiRoleToken>;
   $strokeWidth?: ResponsiveValues<OakBorderWidthToken>;
 };
 
 export const colorFillStyle = css<InternalStyledSvgProps>`
-  ${responsiveStyle<InternalStyledSvgProps, OakCombinedColorToken>(
+  ${responsiveStyle<InternalStyledSvgProps, OakUiRoleToken>(
     "fill",
     (props) => props.$fill,
     parseColor,
@@ -27,7 +27,7 @@ export const colorFillStyle = css<InternalStyledSvgProps>`
  */
 export const InternalStyledSvg = styled.svg<InternalStyledSvgProps>`
   ${colorFillStyle}
-  ${responsiveStyle<InternalStyledSvgProps, OakCombinedColorToken>(
+  ${responsiveStyle<InternalStyledSvgProps, OakUiRoleToken>(
     "stroke",
     (props) => props.$stroke,
     parseColor,

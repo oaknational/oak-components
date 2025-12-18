@@ -5,9 +5,9 @@ import {
   responsiveStyle,
   ResponsiveValues,
 } from "@/styles/utils/responsiveStyle";
-import { OakCombinedColorToken } from "@/styles/theme/color";
+import { OakUiRoleToken, OakColorToken } from "@/styles/theme/color";
 
-type ColorFilterToken = ResponsiveValues<OakCombinedColorToken | null>;
+type ColorFilterToken = ResponsiveValues<OakColorToken | OakUiRoleToken | null>;
 
 export type ColorFilterStyleProps = {
   /**
@@ -18,7 +18,7 @@ export type ColorFilterStyleProps = {
   $colorFilter?: ColorFilterToken;
 };
 export const colorFilterStyle = css<ColorFilterStyleProps>`
-  ${responsiveStyle<ColorFilterStyleProps, OakCombinedColorToken>(
+  ${responsiveStyle<ColorFilterStyleProps, OakColorToken | OakUiRoleToken>(
     "filter",
     (props) => props.$colorFilter,
     parseColorFilter,
