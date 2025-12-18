@@ -46,10 +46,10 @@ const HexLabel = styled.span`
 `;
 
 /**
- * Hover-only demo button for normal/low contrast
- * Shows hover state when hovering (lightness + transform)
+ * Base button styles shared by all demo buttons.
+ * Extends this for hover/active/high-contrast variants.
  */
-const NormalHoverButton = styled.button`
+const BaseButton = styled.button`
   padding: 8px 16px;
   border: none;
   border-radius: 1%;
@@ -61,95 +61,53 @@ const NormalHoverButton = styled.button`
   color: var(--custom-text-inverse);
   transition: all 0.15s ease;
 
+  &:focus-visible {
+    outline: 3px solid var(--custom-interactive-focus);
+    outline-offset: 2px;
+  }
+`;
+
+/**
+ * Hover-only demo button for normal/low contrast.
+ * Shows hover state with lightness shift + lift.
+ */
+const NormalHoverButton = styled(BaseButton)`
   &:hover {
     background: var(--custom-interactive-hover);
     transform: translateY(-1px);
   }
-
-  &:focus-visible {
-    outline: 3px solid var(--custom-interactive-focus);
-    outline-offset: 2px;
-  }
 `;
 
 /**
- * Active-only demo button for normal/low contrast
- * Shows active state when pressed (more lightness + scale)
+ * Active-only demo button for normal/low contrast.
+ * Shows active state with deeper lightness + press.
  */
-const NormalActiveButton = styled.button`
-  padding: 8px 16px;
-  border: none;
-  border-radius: 1%;
-  font-family: inherit;
-  font-size: 12px;
-  font-weight: 600;
-  cursor: pointer;
-  background: var(--custom-interactive-primary);
-  color: var(--custom-text-inverse);
-  transition: all 0.15s ease;
-
+const NormalActiveButton = styled(BaseButton)`
   &:active {
     background: var(--custom-interactive-active);
     transform: translateY(1px) scale(0.98);
   }
-
-  &:focus-visible {
-    outline: 3px solid var(--custom-interactive-focus);
-    outline-offset: 2px;
-  }
 `;
 
 /**
- * Hover-only demo button for high contrast
- * Shows colour change to focus colour on hover
+ * Hover-only demo button for high contrast.
+ * Shows distinct colour change (to focus colour) on hover.
  */
-const HighContrastHoverButton = styled.button`
-  padding: 8px 16px;
-  border: none;
-  border-radius: 1%;
-  font-family: inherit;
-  font-size: 12px;
-  font-weight: 600;
-  cursor: pointer;
-  background: var(--custom-interactive-primary);
-  color: var(--custom-text-inverse);
-  transition: all 0.15s ease;
-
+const HighContrastHoverButton = styled(BaseButton)`
   &:hover {
     background: var(--custom-interactive-focus);
     transform: translateY(-1px);
   }
-
-  &:focus-visible {
-    outline: 3px solid var(--custom-interactive-focus);
-    outline-offset: 2px;
-  }
 `;
 
 /**
- * Active-only demo button for high contrast
- * Shows colour change to hover colour on press
+ * Active-only demo button for high contrast.
+ * Shows distinct colour change on press.
  */
-const HighContrastActiveButton = styled.button`
-  padding: 8px 16px;
-  border: none;
-  border-radius: 1%;
-  font-family: inherit;
-  font-size: 12px;
-  font-weight: 600;
-  cursor: pointer;
-  background: var(--custom-interactive-primary);
-  color: var(--custom-text-inverse);
-  transition: all 0.15s ease;
-
+const HighContrastActiveButton = styled(BaseButton)`
   &:active {
     background: var(--custom-interactive-active);
     transform: translateY(1px);
-  }
-
-  &:focus-visible {
-    outline: 3px solid var(--custom-interactive-focus);
-    outline-offset: 2px;
   }
 `;
 
