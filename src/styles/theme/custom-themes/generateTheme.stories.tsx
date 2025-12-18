@@ -289,6 +289,9 @@ export const OakGreen: Story = {
     secondary: "",
     showGeneratedValues: true,
   },
+  argTypes: {
+    secondary: { table: { disable: true } },
+  },
   render: (args) => (
     <ThemeShowcase
       title="Oak Green Theme"
@@ -322,6 +325,11 @@ export const TwoColors: Story = {
  * Grid showing multiple brand color options for comparison.
  */
 export const BrandComparison: Story = {
+  argTypes: {
+    primary: { table: { disable: true } },
+    secondary: { table: { disable: true } },
+    showGeneratedValues: { table: { disable: true } },
+  },
   render: () => (
     <OakFlex $flexDirection="column" $gap="spacing-16">
       <ThemeShowcase title="Blue Brand" primary="#1e40af" />
@@ -336,6 +344,11 @@ export const BrandComparison: Story = {
  * Interactive contrast checker - verify WCAG compliance.
  */
 export const ContrastChecker: Story = {
+  argTypes: {
+    primary: { table: { disable: true } },
+    secondary: { table: { disable: true } },
+    showGeneratedValues: { table: { disable: true } },
+  },
   render: () => {
     const pairs = [
       { fg: "#000000", bg: "#ffffff", label: "Black on White" },

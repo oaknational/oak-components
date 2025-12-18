@@ -12,7 +12,7 @@
  * ```
  */
 
-import { isValidHex, expandHex } from "./colorUtils";
+import { isValidHex, expandHex, parseColor } from "./colorUtils";
 import { deriveThemeColors } from "./deriveTokens";
 import type {
   BrandColors,
@@ -32,15 +32,22 @@ export type {
 };
 
 /**
- * Validate and normalize a hex color.
+ * Validate and normalize a color (supports hex, rgb, rgba, hsl, hsla).
  */
-function validateHex(hex: string, name: string): string {
-  if (!isValidHex(hex)) {
+function validateColor(color: string, name: string): string {
+  // Try parseColor first (handles all formats)
+  const parsed = parseColor(color);
+  if (parsed) {
+    return parsed;
+  }
+
+  // Fallback: check if it's a valid hex (for better error messages)
+  if (!isValidHex(color)) {
     throw new TypeError(
-      `Invalid ${name} color "${hex}". Expected hex format: #RGB or #RRGGBB`,
+      `Invalid ${name} color "${color}". Expected hex (#RGB or #RRGGBB), rgb(), rgba(), hsl(), or hsla()`,
     );
   }
-  return expandHex(hex);
+  return expandHex(color);
 }
 
 /**
@@ -142,9 +149,9 @@ export function generateTheme(
   options: GenerateThemeOptions = {},
 ): GenerateThemeResult {
   // Validate inputs
-  const normalizedPrimary = validateHex(brand.primary, "primary");
+  const normalizedPrimary = validateColor(brand.primary, "primary");
   const normalizedSecondary = brand.secondary
-    ? validateHex(brand.secondary, "secondary")
+    ? validateColor(brand.secondary, "secondary")
     : undefined;
 
   const warnings: string[] = [];

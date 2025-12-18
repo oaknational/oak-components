@@ -6,6 +6,7 @@ import {
   adjustHue,
   isValidHex,
   expandHex,
+  parseColor,
 } from "./colorUtils";
 
 describe("colorUtils", () => {
@@ -161,6 +162,44 @@ describe("colorUtils", () => {
       const original = "#287c34";
       // Full rotation should return similar color
       expect(rotated.toLowerCase()).toBe(original.toLowerCase());
+    });
+  });
+
+  describe("parseColor", () => {
+    it("parses hex colors", () => {
+      expect(parseColor("#ffffff")).toBe("#ffffff");
+      expect(parseColor("#fff")).toBe("#ffffff");
+      expect(parseColor("#287c34")).toBe("#287c34");
+    });
+
+    it("parses rgb() colors", () => {
+      expect(parseColor("rgb(255, 255, 255)")).toBe("#ffffff");
+      expect(parseColor("rgb(0, 0, 0)")).toBe("#000000");
+      expect(parseColor("rgb(40, 124, 52)")).toBe("#287c34");
+    });
+
+    it("parses rgba() colors (ignores alpha)", () => {
+      expect(parseColor("rgba(255, 255, 255, 0.5)")).toBe("#ffffff");
+      expect(parseColor("rgba(0, 0, 0, 1)")).toBe("#000000");
+    });
+
+    it("parses hsl() colors", () => {
+      expect(parseColor("hsl(0, 0%, 100%)")).toBe("#ffffff");
+      expect(parseColor("hsl(0, 0%, 0%)")).toBe("#000000");
+      // Green: approximately 129deg, 51% sat, 32% light
+      const parsed = parseColor("hsl(129, 51%, 32%)");
+      expect(parsed).toMatch(/^#[0-9a-f]{6}$/i);
+    });
+
+    it("parses hsla() colors (ignores alpha)", () => {
+      expect(parseColor("hsla(0, 0%, 100%, 0.5)")).toBe("#ffffff");
+      expect(parseColor("hsla(0, 0%, 0%, 1)")).toBe("#000000");
+    });
+
+    it("returns null for invalid colors", () => {
+      expect(parseColor("invalid")).toBe(null);
+      expect(parseColor("")).toBe(null);
+      expect(parseColor("red")).toBe(null); // Named colors not supported
     });
   });
 });

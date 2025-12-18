@@ -26,6 +26,76 @@ export function isValidHex(hex: string): boolean {
 }
 
 /**
+ * Parse any CSS color format and convert to hex.
+ * Supports: hex, rgb(), rgba(), hsl(), hsla()
+ *
+ * @param color - CSS color string
+ * @returns Hex color string or null if invalid
+ */
+export function parseColor(color: string): string | null {
+  const trimmed = color.trim();
+
+  // Already hex?
+  if (isValidHex(trimmed)) {
+    return expandHex(trimmed);
+  }
+
+  // RGB/RGBA: rgb(r, g, b) or rgba(r, g, b, a)
+  const rgbMatch = trimmed.match(
+    /^rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*(?:,\s*[\d.]+)?\s*\)$/i,
+  );
+  if (rgbMatch) {
+    const r = parseInt(rgbMatch[1]!, 10);
+    const g = parseInt(rgbMatch[2]!, 10);
+    const b = parseInt(rgbMatch[3]!, 10);
+    return rgbToHex(r, g, b);
+  }
+
+  // HSL/HSLA: hsl(h, s%, l%) or hsla(h, s%, l%, a)
+  const hslMatch = trimmed.match(
+    /^hsla?\(\s*([\d.]+)\s*,\s*([\d.]+)%\s*,\s*([\d.]+)%\s*(?:,\s*[\d.]+)?\s*\)$/i,
+  );
+  if (hslMatch) {
+    const h = parseFloat(hslMatch[1]!) / 360;
+    const s = parseFloat(hslMatch[2]!) / 100;
+    const l = parseFloat(hslMatch[3]!) / 100;
+    return hslToHex(h, s, l);
+  }
+
+  return null;
+}
+
+/**
+ * Convert HSL to hex.
+ * @param h - Hue (0-1)
+ * @param s - Saturation (0-1)
+ * @param l - Lightness (0-1)
+ */
+function hslToHex(h: number, s: number, l: number): string {
+  const hue2rgb = (p: number, q: number, t: number) => {
+    if (t < 0) t += 1;
+    if (t > 1) t -= 1;
+    if (t < 1 / 6) return p + (q - p) * 6 * t;
+    if (t < 1 / 2) return q;
+    if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
+    return p;
+  };
+
+  let r, g, b;
+  if (s === 0) {
+    r = g = b = l;
+  } else {
+    const q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+    const p = 2 * l - q;
+    r = hue2rgb(p, q, h + 1 / 3);
+    g = hue2rgb(p, q, h);
+    b = hue2rgb(p, q, h - 1 / 3);
+  }
+
+  return rgbToHex(r * 255, g * 255, b * 255);
+}
+
+/**
  * Expand 3-char hex to 6-char.
  */
 export function expandHex(hex: string): string {
@@ -49,6 +119,7 @@ function hexToRgb(hex: string): { r: number; g: number; b: number } {
 /**
  * RGB to hex string.
  */
+// Note: Must be declared before parseColor uses it
 function rgbToHex(r: number, g: number, b: number): string {
   const clamp = (v: number) => Math.max(0, Math.min(255, Math.round(v)));
   const toHex = (v: number) => clamp(v).toString(16).padStart(2, "0");
