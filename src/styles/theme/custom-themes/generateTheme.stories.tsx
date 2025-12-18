@@ -162,7 +162,7 @@ const SurfaceSwatch = styled.div<{
   padding: 8px;
   border-radius: 1%;
   background: ${(props) => `var(--custom-surface-${props.$surface})`};
-  border: 1px solid var(--custom-border-subtle);
+  border: 1px solid var(--custom-border-strong);
   font-size: 9px;
   color: ${(props) =>
     props.$surface === "inverse"
@@ -182,7 +182,7 @@ const ShadowDemoCard = styled.div<{ $shadow: "subtle" | "strong" }>`
     props.$shadow === "subtle"
       ? "var(--custom-shadow-subtle)"
       : "var(--custom-shadow-strong)"};
-  font-size: 10px;
+  font-size: 0.6rem;
   color: var(--custom-text-primary);
 `;
 
@@ -190,7 +190,7 @@ const ShadowDemoCard = styled.div<{ $shadow: "subtle" | "strong" }>`
  * Token Set card with border
  */
 const TokenCardContainer = styled.div`
-  border: 1px solid #ccc;
+  border: 1px solid var(--custom-border-accent);
   border-radius: 2%;
   overflow: hidden;
   margin-bottom: 8px;
@@ -198,15 +198,16 @@ const TokenCardContainer = styled.div`
 
 const TokenCardHeader = styled.div`
   padding: 8px 12px;
-  background: #f5f5f5;
-  border-bottom: 1px solid #ccc;
+  color: var(--custom-text-muted);
+  background: var(--custom-surface-secondary);
+  border-bottom: 1px solid var(--custom-border-subtle);
   font-weight: 600;
   font-size: 12px;
 `;
 
 const TokenRow = styled.div`
   padding: 8px 12px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--custom-border-subtle);
 
   &:last-child {
     border-bottom: none;
@@ -214,9 +215,9 @@ const TokenRow = styled.div`
 `;
 
 const RowLabel = styled.div`
-  font-size: 10px;
+  font-size: 0.6rem;
   font-weight: 600;
-  color: #999;
+  color: var(--custom-text-primary);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 6px;
@@ -225,7 +226,7 @@ const RowLabel = styled.div`
 const SectionLabel = styled.div`
   font-size: 11px;
   font-weight: 600;
-  color: #666;
+  color: var(--custom-text-primary);
   margin-bottom: 4px;
 `;
 
@@ -233,11 +234,13 @@ const SectionLabel = styled.div`
  * Text sample on a surface background
  */
 const TextOnSurface = styled.div<{ $bg: string; $fg: string }>`
-  padding: 4px 8px;
-  border-radius: 3px;
+  font-size: 0.6rem;
+  width: 6rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.2rem;
+  border: 1px solid var(--custom-border-subtle);
   background: var(${(props) => props.$bg});
   color: var(${(props) => props.$fg});
-  font-size: 10px;
   display: inline-block;
 `;
 
@@ -404,9 +407,9 @@ function TokenSetCard({
     : NormalActiveButton;
 
   return (
-    <TokenCardContainer>
-      <TokenCardHeader>{label}</TokenCardHeader>
-      <ThemePreview theme={theme} mode={mode} contrast={contrast}>
+    <ThemePreview theme={theme} mode={mode} contrast={contrast}>
+      <TokenCardContainer>
+        <TokenCardHeader>{label}</TokenCardHeader>
         {/* Surfaces Row - 4 tokens with borders for visibility */}
         <TokenRow>
           <RowLabel>Surfaces (4)</RowLabel>
@@ -462,12 +465,6 @@ function TokenSetCard({
                 $fg="--custom-text-accent"
               >
                 Accent on Pri
-              </TextOnSurface>
-              <TextOnSurface
-                $bg="--custom-surface-secondary"
-                $fg="--custom-text-accent"
-              >
-                Accent on Sec
               </TextOnSurface>
             </OakFlex>
             <OakFlex $gap="spacing-4">
@@ -566,8 +563,8 @@ function TokenSetCard({
             <ShadowDemoCard $shadow="strong">Strong</ShadowDemoCard>
           </OakFlex>
         </TokenRow>
-      </ThemePreview>
-    </TokenCardContainer>
+      </TokenCardContainer>
+    </ThemePreview>
   );
 }
 
@@ -762,9 +759,9 @@ function ColorBlindSafeColumn() {
       </OakBox>
 
       {/* Single theme display - uses high contrast button behaviour */}
-      <TokenCardContainer>
-        <TokenCardHeader>Colour-Blind Safe (16 tokens)</TokenCardHeader>
-        <ThemePreview theme={singleTheme} mode="light" contrast="high">
+      <ThemePreview theme={singleTheme} mode="light" contrast="high">
+        <TokenCardContainer>
+          <TokenCardHeader>Colour-Blind Safe (17 tokens)</TokenCardHeader>
           {/* Surfaces */}
           <TokenRow>
             <RowLabel>Surfaces (4)</RowLabel>
@@ -903,8 +900,8 @@ function ColorBlindSafeColumn() {
               <ShadowDemoCard $shadow="strong">Strong</ShadowDemoCard>
             </OakFlex>
           </TokenRow>
-        </ThemePreview>
-      </TokenCardContainer>
+        </TokenCardContainer>
+      </ThemePreview>
     </OakFlex>
   );
 }

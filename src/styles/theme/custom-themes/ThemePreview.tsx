@@ -98,6 +98,10 @@ function tokensToCssVars(tokens: GeneratedThemeColors): React.CSSProperties {
 /**
  * Preview a theme with explicit mode selection.
  *
+ * This is a **pure CSS variable provider** - it only sets custom properties,
+ * with no styling of its own. Consumers are responsible for using the
+ * `var(--custom-*)` tokens for backgrounds, colors, etc.
+ *
  * This bypasses CSS light-dark() and directly applies token values,
  * enabling side-by-side light/dark comparisons in Storybook.
  */
@@ -114,12 +118,7 @@ export function ThemePreview({
   return (
     <div
       className={className}
-      style={{
-        ...cssVars,
-        // Use actual theme surface.primary for background to show real contrast
-        backgroundColor: tokenSet.surface.primary,
-        color: tokenSet.text?.primary,
-      }}
+      style={cssVars}
       data-theme-mode={mode}
       data-theme-contrast={contrast}
     >
