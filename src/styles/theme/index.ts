@@ -42,39 +42,3 @@ export type { OakZIndexToken } from "./zIndex";
 
 export { oakDefaultTheme } from "./default.theme";
 export { oakDarkTheme } from "./dark.theme";
-
-// Custom themes (Phase 1 + Phase 2)
-export {
-  // Token registry
-  customSemanticTokens,
-  customSemanticTokenSpec,
-  isCustomSemanticToken,
-  // Theme generation
-  generateTheme,
-  // Contrast utilities
-  checkContrast,
-  ensureContrast,
-  // Color utilities
-  hexToOklch,
-  oklchToHex,
-  getContrastRatio,
-  adjustLightness,
-  adjustHue,
-  isValidHex,
-  expandHex,
-  // Token derivation
-  deriveThemeColors,
-} from "./custom-themes";
-
-export type {
-  CustomSemanticToken,
-  BrandColors,
-  GeneratedTheme,
-  GeneratedThemeColors,
-  GenerateThemeOptions,
-  GenerateThemeResult,
-  ContrastResult,
-  EnsureContrastResult,
-  OklchColor,
-  DeriveContext,
-} from "./custom-themes";

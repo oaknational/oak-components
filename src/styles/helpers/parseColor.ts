@@ -5,7 +5,7 @@ import {
   oakColorTokens,
   oakUiRoleTokens,
 } from "@/styles/theme/color";
-import { isCustomSemanticToken } from "@/styles/theme/custom-themes/customSemanticTokens";
+import { parseRegisteredToken } from "@/styles/helpers/tokenRegistry";
 import { PropsWithTheme } from "@/styles/theme/theme";
 
 /**
@@ -25,9 +25,10 @@ function parseColor(value?: OakCombinedColorToken | null) {
     return undefined;
   }
 
-  // Custom semantic tokens: return CSS variable reference
-  if (typeof value === "string" && isCustomSemanticToken(value)) {
-    return `var(--${value})`;
+  // Check plugin-registered tokens first (e.g., custom-* from @oaknational/oak-custom-themes)
+  if (typeof value === "string") {
+    const registered = parseRegisteredToken(value);
+    if (registered) return registered;
   }
 
   if (value in oakColorTokens) {

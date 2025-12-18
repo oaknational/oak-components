@@ -1,5 +1,3 @@
-import { CustomSemanticToken } from "./custom-themes/customSemanticTokens";
-
 export const oakColorTokens = {
   white: "#ffffff",
   grey10: "#f9f9f9",
@@ -207,7 +205,21 @@ export type UiRoleMap = Record<
   OakColorToken | null | undefined
 >;
 
+/**
+ * Extensible interface for plugin-provided color tokens.
+ * External packages can augment this via TypeScript declaration merging:
+ *
+ * @example
+ * declare module "@oaknational/oak-components" {
+ *   interface OakColorTokenExtensions {
+ *     customTheme: "custom-surface-primary" | "custom-text-muted" | ...;
+ *   }
+ * }
+ */
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface OakColorTokenExtensions {}
+
 export type OakCombinedColorToken =
   | OakColorToken
   | OakUiRoleToken
-  | CustomSemanticToken;
+  | OakColorTokenExtensions[keyof OakColorTokenExtensions];
