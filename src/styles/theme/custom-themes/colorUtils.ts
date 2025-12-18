@@ -289,6 +289,25 @@ export function adjustChroma(hex: string, factor: number): string {
 }
 
 /**
+ * Desaturate a colour by reducing its chroma.
+ *
+ * @param hex - Hex colour
+ * @param amount - Amount to desaturate (0 = no change, 1 = fully desaturated)
+ * @returns Desaturated hex colour
+ *
+ * @example
+ * ```typescript
+ * desaturate('#287c34', 0.5)  // Reduce chroma by 50%
+ * desaturate('#287c34', 0.85) // Nearly neutral, keeps hint of brand
+ * ```
+ */
+export function desaturate(hex: string, amount: number): string {
+  const oklch = hexToOklch(hex);
+  oklch.c = Math.max(0, oklch.c * (1 - amount));
+  return oklchToHex(oklch);
+}
+
+/**
  * Derive a triadic 3-colour palette from a single brand colour.
  *
  * Uses 120° hue rotations in OKLCH colour space for perceptually

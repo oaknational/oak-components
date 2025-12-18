@@ -5,72 +5,69 @@
  * base palette derived via colour theory.
  *
  * @remarks
- * All functions are pure with no side effects.
+ * - All functions are pure with no side effects
+ * - No hardcoded colours - all tokens derived from the palette input
+ * - Lightness adjustments create light/dark mode variants
+ * - ensureContrast() adjusts colours to meet WCAG requirements
  */
 
-import { adjustLightness } from "./colorUtils";
+import { adjustLightness, desaturate } from "./colorUtils";
 import { ensureContrast } from "./contrastUtils";
 import type { GeneratedThemeColors, BasePalette } from "./themeTypes";
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Configuration Constants
+// Configuration Constants (no hardcoded colours - only numerical adjustments)
 // ─────────────────────────────────────────────────────────────────────────────
 
 /**
- * Base neutral colours used as starting points for text and borders.
- * These are adjusted by ensureContrast() to meet accessibility requirements.
- */
-const NEUTRALS = {
-  /** Near-black used for light mode text */
-  darkText: "#1a1a1a",
-  /** Near-white used for dark mode text */
-  lightText: "#f0f0f0",
-  /** Grey for light mode muted text */
-  lightMuted: "#666666",
-  /** Grey for dark mode muted text */
-  darkMuted: "#999999",
-  /** Pure white for high contrast light surfaces */
-  pureWhite: "#ffffff",
-  /** Pure black for high contrast dark surfaces */
-  pureBlack: "#000000",
-  /** Near-white for high contrast light secondary */
-  offWhite: "#f5f5f5",
-  /** Near-black for high contrast dark primary */
-  nearBlack: "#0a0a0a",
-  /** Near-black for high contrast dark secondary */
-  charcoal: "#1a1a1a",
-} as const;
-
-/**
- * Lightness adjustment values for surface derivation.
- * Positive values lighten (for light mode), negative darken (for dark mode).
+ * Lightness adjustment values for derivation.
+ * Positive values lighten, negative values darken.
  */
 const LIGHTNESS = {
   surface: {
-    /** Light mode: boost lightness to create pale surfaces */
-    lightPrimary: 0.4,
+    /** Light mode: boost lightness to create pale surfaces from brand colour */
+    light: 0.45,
     /** Dark mode: reduce lightness to create dark surfaces */
-    darkPrimary: -0.35,
+    dark: -0.4,
     /** Secondary surface offset from primary */
     secondaryOffset: 0.05,
     /** Accent surface offset from primary */
     accentOffset: 0.1,
   },
   lowContrast: {
-    /** Reduced lightness boost for low contrast */
-    lightPrimary: 0.3,
-    darkPrimary: -0.25,
+    light: 0.35,
+    dark: -0.3,
     secondaryOffset: 0.03,
     accentOffset: 0.05,
   },
   highContrast: {
-    /** Accent lightness in light mode */
-    accentLight: 0.35,
-    /** Accent darkening in dark mode */
-    accentDark: -0.25,
+    /** High contrast light mode: very pale surfaces */
+    light: 0.48,
+    /** High contrast dark mode: very dark surfaces */
+    dark: -0.48,
+    accentLight: 0.4,
+    accentDark: -0.35,
   },
   text: {
-    /** Brighten accent for dark mode readability */
+    /** Light mode: derive text from darkened primary */
+    lightPrimary: -0.45,
+    /** Dark mode: derive text from lightened primary */
+    darkPrimary: 0.45,
+    /** Muted text has less extreme lightness */
+    lightMuted: -0.25,
+    darkMuted: 0.25,
+    /** Accent text boost for dark mode readability */
+    darkAccentBoost: 0.2,
+  },
+  border: {
+    /** Light mode subtle border */
+    lightSubtle: 0.25,
+    /** Dark mode subtle border */
+    darkSubtle: -0.15,
+    /** Strong border adjustments */
+    lightStrong: -0.4,
+    darkStrong: 0.4,
+    /** Accent boost for dark mode */
     darkAccentBoost: 0.2,
   },
   interactive: {
@@ -78,16 +75,10 @@ const LIGHTNESS = {
     hoverDarken: -0.1,
     /** Hover state: lighten in dark mode */
     hoverLighten: 0.1,
-    /** High contrast hover: larger shift for visibility */
-    hoverHighContrast: 0.15,
     /** Brighten primary for dark mode */
     darkPrimaryBoost: 0.2,
     /** Brighten focus colour for dark mode */
     darkFocusBoost: 0.25,
-  },
-  border: {
-    /** Lighten border accent for dark mode */
-    darkAccentBoost: 0.2,
   },
 } as const;
 
@@ -127,17 +118,13 @@ const SHADOW_OPACITY = {
 } as const;
 
 /**
- * Border grey colours for different modes and contrast levels.
+ * Desaturation amounts for deriving neutral-ish colours from brand.
  */
-const BORDER_GREYS = {
-  light: {
-    subtle: { normal: "#e0e0e0", high: "#c0c0c0" },
-    strong: "#1a1a1a",
-  },
-  dark: {
-    subtle: { normal: "#3a3a3a", high: "#4a4a4a" },
-    strong: "#f0f0f0",
-  },
+const DESATURATION = {
+  /** Desaturate primary to create text base (keeps hint of brand) */
+  text: 0.85,
+  /** Desaturate for border base */
+  border: 0.9,
 } as const;
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -173,30 +160,25 @@ function getContrastRatio(level: ContrastLevel): number {
 }
 
 /**
- * Get lightness settings for a contrast level.
+ * Get lightness config for a contrast level.
  */
-function getLightnessConfig(contrast: ContrastLevel) {
+function getSurfaceConfig(contrast: ContrastLevel) {
+  if (contrast === "high") return LIGHTNESS.highContrast;
   if (contrast === "low") return LIGHTNESS.lowContrast;
   return LIGHTNESS.surface;
 }
 
 /**
- * Calculate surface primary lightness for a given context.
- * This is the key calculation that determines the background colour.
+ * Derive the surface primary colour from the palette.
+ * This is the background colour - derived by adjusting the primary brand colour.
  */
-function getSurfacePrimaryLightness(
+function deriveSurfacePrimary(
   palette: BasePalette,
   mode: "light" | "dark",
   contrast: ContrastLevel,
 ): string {
-  // High contrast uses fixed extreme colours
-  if (contrast === "high") {
-    return mode === "light" ? NEUTRALS.pureWhite : NEUTRALS.nearBlack;
-  }
-
-  const config = getLightnessConfig(contrast);
-  const adjustment =
-    mode === "light" ? config.lightPrimary : config.darkPrimary;
+  const config = getSurfaceConfig(contrast);
+  const adjustment = mode === "light" ? config.light : config.dark;
   return adjustLightness(palette.primary, adjustment);
 }
 
@@ -206,6 +188,7 @@ function getSurfacePrimaryLightness(
 
 /**
  * Derive shadow tokens based on mode and contrast.
+ * Shadows use transparency so they work over any background.
  */
 function deriveShadowTokens(
   mode: "light" | "dark",
@@ -214,6 +197,7 @@ function deriveShadowTokens(
   const intensityFactor = SHADOW_INTENSITY[contrast];
   const baseOpacity = SHADOW_OPACITY[mode];
 
+  // Using rgba(0,0,0,...) is acceptable for shadows as they must work universally
   return {
     subtle: `rgba(0,0,0,${(baseOpacity.subtle * intensityFactor).toFixed(2)})`,
     strong: `rgba(0,0,0,${(baseOpacity.strong * intensityFactor).toFixed(2)})`,
@@ -222,89 +206,87 @@ function deriveShadowTokens(
 
 /**
  * Derive surface tokens from palette.
- * High contrast uses near-white/black; low contrast uses muted tones.
+ * All surfaces are derived from the brand palette through lightness adjustments.
  */
 function deriveSurfaceTokens(
   context: DeriveContext,
 ): GeneratedThemeColors["surface"] {
   const { palette, mode, contrast } = context;
-
-  // High contrast: force towards extremes for ≥9:1 ratio
-  if (contrast === "high") {
-    if (mode === "light") {
-      return {
-        primary: NEUTRALS.pureWhite,
-        secondary: NEUTRALS.offWhite,
-        accent: adjustLightness(
-          palette.tertiary,
-          LIGHTNESS.highContrast.accentLight,
-        ),
-        inverse: NEUTRALS.pureBlack,
-      };
-    }
-    return {
-      primary: NEUTRALS.nearBlack,
-      secondary: NEUTRALS.charcoal,
-      accent: adjustLightness(
-        palette.tertiary,
-        LIGHTNESS.highContrast.accentDark,
-      ),
-      inverse: NEUTRALS.pureWhite,
-    };
-  }
-
-  // Normal and low contrast: derive from palette
-  const config = getLightnessConfig(contrast);
+  const config = getSurfaceConfig(contrast);
   const isLight = mode === "light";
-  const primaryAdjust = isLight ? config.lightPrimary : config.darkPrimary;
-  const direction = isLight ? -1 : 1; // Offset direction
+  const primaryAdjust = isLight ? config.light : config.dark;
+
+  // Offset direction: in light mode secondary is slightly darker, in dark mode slightly lighter
+  const direction = isLight ? -1 : 1;
+  const secondaryOffset =
+    "secondaryOffset" in config ? config.secondaryOffset : 0.05;
+  const accentOffset = "accentOffset" in config ? config.accentOffset : 0.1;
+
+  // Derive accent lightness adjustment
+  const accentAdjust =
+    contrast === "high"
+      ? isLight
+        ? LIGHTNESS.highContrast.accentLight
+        : LIGHTNESS.highContrast.accentDark
+      : primaryAdjust + direction * accentOffset;
 
   return {
     primary: adjustLightness(palette.primary, primaryAdjust),
     secondary: adjustLightness(
       palette.secondary,
-      primaryAdjust + direction * config.secondaryOffset,
+      primaryAdjust + direction * secondaryOffset,
     ),
-    accent: adjustLightness(
-      palette.tertiary,
-      primaryAdjust + direction * config.accentOffset,
-    ),
-    inverse: adjustLightness(
-      palette.primary,
-      isLight ? -primaryAdjust : -primaryAdjust,
-    ),
+    accent: adjustLightness(palette.tertiary, accentAdjust),
+    inverse: adjustLightness(palette.primary, -primaryAdjust),
   };
 }
 
 /**
- * Derive text tokens with appropriate contrast.
+ * Derive text tokens from palette with appropriate contrast.
+ * Text colours are derived by heavily adjusting and desaturating the primary.
  */
 function deriveTextTokens(
   context: DeriveContext,
 ): GeneratedThemeColors["text"] {
   const { palette, mode, contrast } = context;
   const minContrast = getContrastRatio(contrast);
-  const surfacePrimary = getSurfacePrimaryLightness(palette, mode, contrast);
+  const surfacePrimary = deriveSurfacePrimary(palette, mode, contrast);
 
   const isLight = mode === "light";
-  const baseText = isLight ? NEUTRALS.darkText : NEUTRALS.lightText;
-  const baseMuted = isLight ? NEUTRALS.lightMuted : NEUTRALS.darkMuted;
-  const baseInverse = isLight ? NEUTRALS.lightText : NEUTRALS.darkText;
 
+  // Derive text base from desaturated primary, then adjust lightness
+  const textBase = desaturate(palette.primary, DESATURATION.text);
+  const primaryText = adjustLightness(
+    textBase,
+    isLight ? LIGHTNESS.text.lightPrimary : LIGHTNESS.text.darkPrimary,
+  );
+  const mutedText = adjustLightness(
+    textBase,
+    isLight ? LIGHTNESS.text.lightMuted : LIGHTNESS.text.darkMuted,
+  );
+
+  // Inverse text is lightened/darkened opposite to primary
+  const inverseText = adjustLightness(
+    textBase,
+    isLight ? LIGHTNESS.text.darkPrimary : LIGHTNESS.text.lightPrimary,
+  );
+
+  // Accent text uses tertiary
   const accentBase = isLight
     ? palette.tertiary
     : adjustLightness(palette.tertiary, LIGHTNESS.text.darkAccentBoost);
 
   return {
-    primary: ensureContrast(baseText, surfacePrimary, minContrast).adjusted,
-    muted: ensureContrast(baseMuted, surfacePrimary, minContrast).adjusted,
-    inverse: baseInverse,
+    primary: ensureContrast(primaryText, surfacePrimary, minContrast).adjusted,
+    muted: ensureContrast(mutedText, surfacePrimary, minContrast).adjusted,
+    inverse: inverseText,
     accent: ensureContrast(accentBase, surfacePrimary, minContrast).adjusted,
   };
 }
 
 /**
- * Derive border tokens.
+ * Derive border tokens from palette.
+ * Borders are derived from desaturated primary with lightness adjustments.
  */
 function deriveBorderTokens(
   context: DeriveContext,
@@ -312,45 +294,53 @@ function deriveBorderTokens(
   const { palette, mode, contrast } = context;
   const minContrast =
     contrast === "high" ? CONTRAST_RATIOS.borderHigh : CONTRAST_RATIOS.border;
-  const surfacePrimary = getSurfacePrimaryLightness(palette, mode, contrast);
+  const surfacePrimary = deriveSurfacePrimary(palette, mode, contrast);
 
   const isLight = mode === "light";
-  const greys = isLight ? BORDER_GREYS.light : BORDER_GREYS.dark;
-  const subtleGrey =
-    contrast === "high" ? greys.subtle.high : greys.subtle.normal;
+  const borderBase = desaturate(palette.primary, DESATURATION.border);
 
+  // Subtle border: slightly different from surface
+  const subtleBorder = adjustLightness(
+    borderBase,
+    isLight ? LIGHTNESS.border.lightSubtle : LIGHTNESS.border.darkSubtle,
+  );
+
+  // Strong border: high contrast from surface
+  const strongBorder = adjustLightness(
+    borderBase,
+    isLight ? LIGHTNESS.border.lightStrong : LIGHTNESS.border.darkStrong,
+  );
+
+  // Accent border uses secondary
   const accentSource = isLight
     ? palette.secondary
     : adjustLightness(palette.secondary, LIGHTNESS.border.darkAccentBoost);
 
   return {
-    subtle: subtleGrey,
-    strong: greys.strong,
+    subtle: ensureContrast(subtleBorder, surfacePrimary, minContrast).adjusted,
+    strong: ensureContrast(strongBorder, surfacePrimary, minContrast).adjusted,
     accent: ensureContrast(accentSource, surfacePrimary, minContrast).adjusted,
   };
 }
 
 /**
- * Derive interactive tokens.
+ * Derive interactive tokens from palette.
  *
  * Interactive state strategy:
  * - **Normal/Low contrast**: Hover uses lightness shift (darker in light mode, lighter in dark mode)
  * - **High contrast**: Hover uses focus colour for distinct colour change (accessibility requirement)
- *
- * @param context - The derivation context
- * @returns Interactive tokens with primary, hover, and focus states
  */
 function deriveInteractiveTokens(
   context: DeriveContext,
 ): GeneratedThemeColors["interactive"] {
   const { palette, mode, contrast } = context;
   const minContrast = getContrastRatio(contrast);
-  const surfacePrimary = getSurfacePrimaryLightness(palette, mode, contrast);
+  const surfacePrimary = deriveSurfacePrimary(palette, mode, contrast);
 
   const isLight = mode === "light";
   const isHighContrast = contrast === "high";
 
-  // Calculate base interactive primary
+  // Primary interactive: uses brand primary
   const primarySource = isLight
     ? palette.primary
     : adjustLightness(palette.primary, LIGHTNESS.interactive.darkPrimaryBoost);
@@ -361,7 +351,7 @@ function deriveInteractiveTokens(
     minContrast,
   ).adjusted;
 
-  // Calculate focus colour (uses secondary palette colour)
+  // Focus colour: uses secondary for distinction
   const focusSource = isLight
     ? palette.secondary
     : adjustLightness(palette.secondary, LIGHTNESS.interactive.darkFocusBoost);
@@ -372,14 +362,13 @@ function deriveInteractiveTokens(
     CONTRAST_RATIOS.focus,
   ).adjusted;
 
-  // Calculate hover colour based on contrast level
+  // Hover colour based on contrast level
   let hoverColor: string;
   if (isHighContrast) {
-    // High contrast: use focus colour for distinct colour change
-    // This ensures visible distinction for users who need high contrast
+    // High contrast: distinct colour change using focus colour
     hoverColor = focusColor;
   } else {
-    // Normal/Low contrast: use lightness shift
+    // Normal/Low: lightness shift
     const hoverShift = isLight
       ? LIGHTNESS.interactive.hoverDarken
       : LIGHTNESS.interactive.hoverLighten;
@@ -400,6 +389,11 @@ function deriveInteractiveTokens(
 /**
  * Derive a complete Token Set from a base palette.
  *
+ * All 16 tokens are derived from the 3-colour palette input through:
+ * - Lightness adjustments for mode (light/dark)
+ * - Desaturation for neutral-ish text and borders
+ * - ensureContrast() to meet WCAG requirements
+ *
  * @param context - Palette, mode, and contrast level
  * @returns Complete `GeneratedThemeColors` with all 16 tokens populated
  */
@@ -413,37 +407,4 @@ export function deriveThemeColors(
     interactive: deriveInteractiveTokens(context),
     shadow: deriveShadowTokens(context.mode, context.contrast),
   };
-}
-
-// ─────────────────────────────────────────────────────────────────────────────
-// Legacy Support
-// ─────────────────────────────────────────────────────────────────────────────
-
-/**
- * Legacy context for backward compatibility.
- * @deprecated Use DeriveContext with palette instead
- */
-export interface LegacyDeriveContext {
-  primary: string;
-  secondary?: string;
-  mode: "light" | "dark";
-}
-
-/**
- * Legacy function for backward compatibility.
- * @deprecated Use deriveThemeColors with DeriveContext instead
- */
-export function deriveThemeColorsLegacy(
-  context: LegacyDeriveContext,
-): GeneratedThemeColors {
-  const palette: BasePalette = {
-    primary: context.primary,
-    secondary: context.secondary ?? context.primary,
-    tertiary: context.secondary ?? context.primary,
-  };
-  return deriveThemeColors({
-    palette,
-    mode: context.mode,
-    contrast: "normal",
-  });
 }
