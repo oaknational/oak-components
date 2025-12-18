@@ -46,9 +46,10 @@ const HexLabel = styled.span`
 `;
 
 /**
- * Normal/Low contrast button: hover = lighter/darker, active = more shift
+ * Hover-only demo button for normal/low contrast
+ * Shows hover state when hovering (lightness + transform)
  */
-const NormalButton = styled.button`
+const NormalHoverButton = styled.button`
   padding: 8px 16px;
   border: none;
   border-radius: 4px;
@@ -65,6 +66,28 @@ const NormalButton = styled.button`
     transform: translateY(-1px);
   }
 
+  &:focus-visible {
+    outline: 3px solid var(--custom-interactive-focus);
+    outline-offset: 2px;
+  }
+`;
+
+/**
+ * Active-only demo button for normal/low contrast
+ * Shows active state when pressed (more lightness + scale)
+ */
+const NormalActiveButton = styled.button`
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--custom-interactive-primary);
+  color: var(--custom-text-inverse);
+  transition: all 0.15s ease;
+
   &:active {
     background: var(--custom-interactive-hover);
     transform: translateY(1px) scale(0.98);
@@ -77,9 +100,10 @@ const NormalButton = styled.button`
 `;
 
 /**
- * High contrast button: hover = focus colour, active = primary darkened
+ * Hover-only demo button for high contrast
+ * Shows colour change to focus colour on hover
  */
-const HighContrastButton = styled.button`
+const HighContrastHoverButton = styled.button`
   padding: 8px 16px;
   border: none;
   border-radius: 4px;
@@ -95,6 +119,28 @@ const HighContrastButton = styled.button`
     background: var(--custom-interactive-focus);
     transform: translateY(-1px);
   }
+
+  &:focus-visible {
+    outline: 3px solid var(--custom-interactive-focus);
+    outline-offset: 2px;
+  }
+`;
+
+/**
+ * Active-only demo button for high contrast
+ * Shows colour change to hover colour on press
+ */
+const HighContrastActiveButton = styled.button`
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--custom-interactive-primary);
+  color: var(--custom-text-inverse);
+  transition: all 0.15s ease;
 
   &:active {
     background: var(--custom-interactive-hover);
@@ -332,7 +378,12 @@ function TokenSetCard({
   label: string;
 }) {
   const isHighContrast = contrast === "high";
-  const ButtonComponent = isHighContrast ? HighContrastButton : NormalButton;
+  const HoverButton = isHighContrast
+    ? HighContrastHoverButton
+    : NormalHoverButton;
+  const ActiveButton = isHighContrast
+    ? HighContrastActiveButton
+    : NormalActiveButton;
 
   return (
     <TokenCardContainer>
@@ -521,16 +572,16 @@ function TokenSetCard({
           </OakFlex>
         </TokenRow>
 
-        {/* Interactive Row - 3 tokens with hover + active + focus demos */}
+        {/* Interactive Row - 3 tokens with separate hover + active + focus demos */}
         <TokenRow>
           <RowLabel>Interactive (3) — hover, active, focus</RowLabel>
           <OakFlex $gap="spacing-8" $alignItems="center">
-            <ButtonComponent
-              type="button"
-              aria-label="Demo hover and active states"
-            >
-              Hover / Click
-            </ButtonComponent>
+            <HoverButton type="button" aria-label="Hover to see hover state">
+              Hover me
+            </HoverButton>
+            <ActiveButton type="button" aria-label="Click to see active state">
+              Click me
+            </ActiveButton>
             <OakBox
               $pa="spacing-8"
               style={{
@@ -909,15 +960,18 @@ function ColorBlindSafeColumn() {
             </OakFlex>
           </TokenRow>
 
-          {/* Interactive - uses high contrast button for colour changes */}
+          {/* Interactive - uses high contrast buttons for colour changes */}
           <TokenRow>
             <RowLabel>
               Interactive (3) — colour changes on hover/active
             </RowLabel>
             <OakFlex $gap="spacing-8" $alignItems="center">
-              <HighContrastButton type="button">
-                Hover / Click
-              </HighContrastButton>
+              <HighContrastHoverButton type="button">
+                Hover me
+              </HighContrastHoverButton>
+              <HighContrastActiveButton type="button">
+                Click me
+              </HighContrastActiveButton>
               <OakBox
                 $pa="spacing-8"
                 style={{
