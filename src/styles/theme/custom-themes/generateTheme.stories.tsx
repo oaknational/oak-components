@@ -165,6 +165,8 @@ const TokenCardHeader = styled.div`
 
 const TokenRow = styled.div`
   padding: 8px 12px;
+  background: var(--custom-surface-primary);
+  color: var(--custom-text-primary);
   border-bottom: 1px solid var(--custom-border-subtle);
 
   &:last-child {
@@ -343,20 +345,24 @@ function PaletteDisplay({
 }
 
 /**
- * Full Token Set display with all 16 tokens and real contrast demos
+ * Full Token Set display with all 17 tokens and real contrast demos
  */
 function TokenSetCard({
   theme,
   mode,
   contrast,
   label,
+  useHighContrastButtons,
 }: {
   theme: GeneratedTheme;
   mode: "light" | "dark";
   contrast: "normal" | "high" | "low";
   label: string;
+  /** Override button style (defaults to contrast === "high") */
+  useHighContrastButtons?: boolean;
 }) {
-  const isHighContrast = contrast === "high";
+  // Use high contrast buttons if explicitly set, otherwise derive from contrast
+  const isHighContrast = useHighContrastButtons ?? contrast === "high";
   const HoverButton = isHighContrast
     ? HighContrastHoverButton
     : NormalHoverButton;
@@ -684,9 +690,12 @@ function NamedThemeColumn({
 }
 
 /**
- * Colour-Blind Safe column showing all 16 tokens
+ * Colour-Blind Safe column showing all 17 tokens.
+ * The theme itself is already designed for high contrast, so we use contrast="normal"
+ * but enable high contrast buttons for distinct colour changes on hover/active.
  */
 function ColorBlindSafeColumn() {
+  // The colorBlindSafe theme is a standalone theme - same tokens for all modes
   const singleTheme: GeneratedTheme = {
     light: colorBlindSafe.tokens,
     dark: colorBlindSafe.tokens,
@@ -702,8 +711,8 @@ function ColorBlindSafeColumn() {
       $gap="spacing-4"
       style={{ minWidth: 280, flex: 1 }}
     >
-      {/* Header with all 16 tokens */}
-      <OakBox $mb="spacing-16">
+      {/* Header with theme info and token preview grid */}
+      <OakBox $mb="spacing-16" $minHeight="spacing-180">
         <OakHeading tag="h3" $font="heading-6">
           Colour-Blind Safe
         </OakHeading>
@@ -716,150 +725,14 @@ function ColorBlindSafeColumn() {
         <TokensGrid tokens={colorBlindSafe.tokens} />
       </OakBox>
 
-      {/* Single theme display - uses high contrast button behaviour */}
-      <ThemePreview theme={singleTheme} mode="light" contrast="high">
-        <TokenCardContainer>
-          <TokenCardHeader>Colour-Blind Safe (17 tokens)</TokenCardHeader>
-          {/* Surfaces */}
-          <TokenRow>
-            <RowLabel>Surfaces (4)</RowLabel>
-            <OakFlex $gap="spacing-8" $flexWrap="wrap">
-              <SurfaceSwatch $surface="primary">Primary</SurfaceSwatch>
-              <SurfaceSwatch $surface="secondary">Secondary</SurfaceSwatch>
-              <SurfaceSwatch $surface="accent">Accent</SurfaceSwatch>
-              <SurfaceSwatch $surface="inverse">Inverse</SurfaceSwatch>
-            </OakFlex>
-          </TokenRow>
-
-          {/* Text */}
-          <TokenRow>
-            <RowLabel>Text (4) — on intended surfaces</RowLabel>
-            <OakFlex $gap="spacing-4" $flexWrap="wrap" $flexDirection="column">
-              <OakFlex $gap="spacing-4" $flexWrap="wrap">
-                <TextOnSurface
-                  $bg="--custom-surface-primary"
-                  $fg="--custom-text-primary"
-                >
-                  Pri on Pri
-                </TextOnSurface>
-                <TextOnSurface
-                  $bg="--custom-surface-secondary"
-                  $fg="--custom-text-primary"
-                >
-                  Pri on Sec
-                </TextOnSurface>
-              </OakFlex>
-              <OakFlex $gap="spacing-4" $flexWrap="wrap">
-                <TextOnSurface
-                  $bg="--custom-surface-primary"
-                  $fg="--custom-text-muted"
-                >
-                  Muted on Pri
-                </TextOnSurface>
-                <TextOnSurface
-                  $bg="--custom-surface-primary"
-                  $fg="--custom-text-accent"
-                >
-                  Accent on Pri
-                </TextOnSurface>
-              </OakFlex>
-              <TextOnSurface
-                $bg="--custom-surface-inverse"
-                $fg="--custom-text-inverse"
-              >
-                Inverse on Inverse
-              </TextOnSurface>
-            </OakFlex>
-          </TokenRow>
-
-          {/* Borders */}
-          <TokenRow>
-            <RowLabel>Borders (3)</RowLabel>
-            <OakFlex $gap="spacing-8">
-              <OakBox
-                $pa="spacing-8"
-                style={{
-                  border: "1px solid var(--custom-border-subtle)",
-                  borderRadius: 4,
-                }}
-              >
-                <OakP
-                  $font="body-3"
-                  style={{ color: "var(--custom-text-primary)", fontSize: 9 }}
-                >
-                  Subtle
-                </OakP>
-              </OakBox>
-              <OakBox
-                $pa="spacing-8"
-                style={{
-                  border: "2px solid var(--custom-border-strong)",
-                  borderRadius: 4,
-                }}
-              >
-                <OakP
-                  $font="body-3"
-                  style={{ color: "var(--custom-text-primary)", fontSize: 9 }}
-                >
-                  Strong
-                </OakP>
-              </OakBox>
-              <OakBox
-                $pa="spacing-8"
-                style={{
-                  border: "2px solid var(--custom-border-accent)",
-                  borderRadius: 4,
-                }}
-              >
-                <OakP
-                  $font="body-3"
-                  style={{ color: "var(--custom-text-primary)", fontSize: 9 }}
-                >
-                  Accent
-                </OakP>
-              </OakBox>
-            </OakFlex>
-          </TokenRow>
-
-          {/* Interactive - uses high contrast buttons for colour changes */}
-          <TokenRow>
-            <RowLabel>
-              Interactive (3) — colour changes on hover/active
-            </RowLabel>
-            <OakFlex $gap="spacing-8" $alignItems="center">
-              <HighContrastHoverButton type="button">
-                Hover me
-              </HighContrastHoverButton>
-              <HighContrastActiveButton type="button">
-                Click me
-              </HighContrastActiveButton>
-              <OakBox
-                $pa="spacing-8"
-                style={{
-                  border: "3px solid var(--custom-interactive-focus)",
-                  borderRadius: 4,
-                }}
-              >
-                <OakP
-                  $font="body-3"
-                  style={{ color: "var(--custom-text-primary)", fontSize: 9 }}
-                >
-                  Focus
-                </OakP>
-              </OakBox>
-            </OakFlex>
-          </TokenRow>
-
-          {/* Shadows */}
-          <TokenRow>
-            <RowLabel>Shadows (2)</RowLabel>
-            <OakFlex $gap="spacing-8">
-              <ShadowDemoCard $shadow="subtle">Subtle</ShadowDemoCard>
-              <ShadowDemoCard $shadow="strong">Strong</ShadowDemoCard>
-            </OakFlex>
-          </TokenRow>
-        </TokenCardContainer>
-      </ThemePreview>
+      {/* Theme display using shared TokenSetCard */}
+      <TokenSetCard
+        theme={singleTheme}
+        mode="light"
+        contrast="normal"
+        label={colorBlindSafe.name}
+        useHighContrastButtons={true}
+      />
     </OakFlex>
   );
 }

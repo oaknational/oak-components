@@ -5,6 +5,7 @@
  * base palette derived via colour theory.
  *
  * @remarks
+ *
  * - All functions are pure with no side effects
  * - No hardcoded colours - all tokens derived from the palette input
  * - Lightness adjustments create light/dark mode variants
