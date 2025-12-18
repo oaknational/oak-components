@@ -31,7 +31,7 @@ const minimalConfig: CustomThemeConfig = {
 const meta: Meta<typeof CustomThemeProvider> = {
   component: CustomThemeProvider,
   tags: ["autodocs"],
-  title: "components/atoms/CustomThemeProvider",
+  title: "Custom Themes/CustomThemeProvider",
   argTypes: {},
   parameters: {
     controls: {
