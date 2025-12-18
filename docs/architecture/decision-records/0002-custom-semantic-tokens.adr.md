@@ -83,7 +83,54 @@ Generated CSS uses `light-dark()` for automatic theme switching.
 > [!NOTE]
 > The `CustomThemeConfig` may need to support specifying which theme preference (`light`/`dark`/`both`) and contrast preference (`more`/`less`/`no-preference`) it applies to. Default should be `both` and `no-preference`. This would enable more granular control for consumers.
 
+## Type Architecture: Intent vs Artifact (Phase 2 Discovery)
+
+> [!IMPORTANT]
+> The input and output of theme generation are fundamentally different types of things.
+
+### The Insight
+
+During Phase 2 implementation, we discovered that using a single type with optional properties for both input and output was conceptually wrong. The fix isn't just making properties required - it's recognizing these are different entities:
+
+| Concept | Type | What It Represents |
+|---------|------|-------------------|
+| **Intent** | `BrandColors` | Consumer's brand identity - 1-2 hex colors |
+| **Artifact** | `GeneratedTheme` | Constructed theme - complete, ready-to-use |
+
+### BrandColors (Intent)
+
+What the consumer provides to express their brand:
+
+```typescript
+interface BrandColors {
+  primary: string;      // Required: primary brand color
+  secondary?: string;   // Optional: accent color
+}
+```
+
+### GeneratedTheme (Artifact)
+
+What the generator constructs - a complete, usable artifact:
+
+```typescript
+interface GeneratedTheme {
+  surface: { primary: string; secondary: string; accent: string; inverse: string };
+  text: { primary: string; muted: string; inverse: string; accent: string };
+  border: { subtle: string; strong: string; accent: string };
+  interactive: { primary: string; hover: string; focus: string };
+  shadow: { subtle: string; strong: string };
+}
+```
+
+### Why This Matters
+
+1. **Clear semantics** - Names describe what things ARE, not their state
+2. **Type safety** - Compiler enforces guarantees naturally
+3. **No assertions** - Generated themes have all properties guaranteed
+
 ## Related
 
+- [phase-2-theme-generator.plan.md](../../.agent/plans/phase-2-theme-generator.plan.md)
 - [arbitrary-theme-support.plan.md](../../.agent/plans/arbitrary-theme-support.plan.md)
-- [RULES.md](../../.agent/RULES.md) - TDD and type safety standards followed
+- [RULES.md](../../.agent/RULES.md)
+- TDD and type safety standards followed

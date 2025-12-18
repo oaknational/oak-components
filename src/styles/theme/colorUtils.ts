@@ -1,0 +1,203 @@
+/**
+ * Color utilities for theme generation.
+ * Uses OKLCH color space for perceptually uniform color manipulation.
+ *
+ * @remarks
+ * All functions are pure with no side effects.
+ */
+
+/**
+ * OKLCH color representation.
+ */
+export interface OklchColor {
+  /** Lightness (0-1) */
+  l: number;
+  /** Chroma (0-~0.4 typical) */
+  c: number;
+  /** Hue (0-360 degrees) */
+  h: number;
+}
+
+/**
+ * Check if a string is a valid hex color.
+ */
+export function isValidHex(hex: string): boolean {
+  return /^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/.test(hex);
+}
+
+/**
+ * Expand 3-char hex to 6-char.
+ */
+export function expandHex(hex: string): string {
+  if (hex.length === 4) {
+    return `#${hex[1]}${hex[1]}${hex[2]}${hex[2]}${hex[3]}${hex[3]}`;
+  }
+  return hex;
+}
+
+/**
+ * Parse hex to RGB components (0-255).
+ */
+function hexToRgb(hex: string): { r: number; g: number; b: number } {
+  const expanded = expandHex(hex);
+  const r = parseInt(expanded.slice(1, 3), 16);
+  const g = parseInt(expanded.slice(3, 5), 16);
+  const b = parseInt(expanded.slice(5, 7), 16);
+  return { r, g, b };
+}
+
+/**
+ * RGB to hex string.
+ */
+function rgbToHex(r: number, g: number, b: number): string {
+  const clamp = (v: number) => Math.max(0, Math.min(255, Math.round(v)));
+  const toHex = (v: number) => clamp(v).toString(16).padStart(2, "0");
+  return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
+}
+
+/**
+ * Convert linear RGB to sRGB.
+ */
+function linearToSrgb(c: number): number {
+  if (c <= 0.0031308) {
+    return c * 12.92;
+  }
+  return 1.055 * Math.pow(c, 1 / 2.4) - 0.055;
+}
+
+/**
+ * Convert sRGB to linear RGB.
+ */
+function srgbToLinear(c: number): number {
+  if (c <= 0.04045) {
+    return c / 12.92;
+  }
+  return Math.pow((c + 0.055) / 1.055, 2.4);
+}
+
+/**
+ * Convert hex color to OKLCH color space.
+ *
+ * @param hex - Hex color string (3 or 6 char)
+ * @returns OKLCH color
+ */
+export function hexToOklch(hex: string): OklchColor {
+  const { r, g, b } = hexToRgb(hex);
+
+  // Convert to linear RGB
+  const lr = srgbToLinear(r / 255);
+  const lg = srgbToLinear(g / 255);
+  const lb = srgbToLinear(b / 255);
+
+  // Linear RGB to LMS
+  const l_ = 0.4122214708 * lr + 0.5363325363 * lg + 0.0514459929 * lb;
+  const m_ = 0.2119034982 * lr + 0.6806995451 * lg + 0.1073969566 * lb;
+  const s_ = 0.0883024619 * lr + 0.2817188376 * lg + 0.6299787005 * lb;
+
+  // LMS to Lab
+  const l__ = Math.cbrt(l_);
+  const m__ = Math.cbrt(m_);
+  const s__ = Math.cbrt(s_);
+
+  const L = 0.2104542553 * l__ + 0.793617785 * m__ - 0.0040720468 * s__;
+  const a = 1.9779984951 * l__ - 2.428592205 * m__ + 0.4505937099 * s__;
+  const bVal = 0.0259040371 * l__ + 0.7827717662 * m__ - 0.808675766 * s__;
+
+  // Lab to LCH
+  const C = Math.sqrt(a * a + bVal * bVal);
+  let H = (Math.atan2(bVal, a) * 180) / Math.PI;
+  if (H < 0) H += 360;
+
+  return { l: L, c: C, h: H };
+}
+
+/**
+ * Convert OKLCH color to hex string.
+ *
+ * @param color - OKLCH color
+ * @returns Hex color string
+ */
+export function oklchToHex(color: OklchColor): string {
+  const { l: L, c: C, h: H } = color;
+
+  // LCH to Lab
+  const hRad = (H * Math.PI) / 180;
+  const a = C * Math.cos(hRad);
+  const bVal = C * Math.sin(hRad);
+
+  // Lab to LMS
+  const l__ = L + 0.3963377774 * a + 0.2158037573 * bVal;
+  const m__ = L - 0.1055613458 * a - 0.0638541728 * bVal;
+  const s__ = L - 0.0894841775 * a - 1.291485548 * bVal;
+
+  // LMS to linear RGB
+  const l_ = l__ * l__ * l__;
+  const m_ = m__ * m__ * m__;
+  const s_ = s__ * s__ * s__;
+
+  const lr = +4.0767416621 * l_ - 3.3077115913 * m_ + 0.2309699292 * s_;
+  const lg = -1.2684380046 * l_ + 2.6097574011 * m_ - 0.3413193965 * s_;
+  const lb = -0.0041960863 * l_ - 0.7034186147 * m_ + 1.707614701 * s_;
+
+  // Linear to sRGB
+  const r = linearToSrgb(lr) * 255;
+  const g = linearToSrgb(lg) * 255;
+  const b = linearToSrgb(lb) * 255;
+
+  return rgbToHex(r, g, b);
+}
+
+/**
+ * Calculate relative luminance per WCAG 2.2.
+ */
+function relativeLuminance(hex: string): number {
+  const { r, g, b } = hexToRgb(hex);
+  const rLin = srgbToLinear(r / 255);
+  const gLin = srgbToLinear(g / 255);
+  const bLin = srgbToLinear(b / 255);
+  return 0.2126 * rLin + 0.7152 * gLin + 0.0722 * bLin;
+}
+
+/**
+ * Calculate contrast ratio between two colors per WCAG 2.2.
+ *
+ * @param foreground - Foreground hex color
+ * @param background - Background hex color
+ * @returns Contrast ratio (1 to 21)
+ */
+export function getContrastRatio(
+  foreground: string,
+  background: string,
+): number {
+  const l1 = relativeLuminance(foreground);
+  const l2 = relativeLuminance(background);
+  const lighter = Math.max(l1, l2);
+  const darker = Math.min(l1, l2);
+  return (lighter + 0.05) / (darker + 0.05);
+}
+
+/**
+ * Adjust the lightness of a color.
+ *
+ * @param hex - Hex color
+ * @param amount - Amount to adjust (-1 to 1)
+ * @returns Adjusted hex color
+ */
+export function adjustLightness(hex: string, amount: number): string {
+  const oklch = hexToOklch(hex);
+  oklch.l = Math.max(0, Math.min(1, oklch.l + amount));
+  return oklchToHex(oklch);
+}
+
+/**
+ * Adjust the hue of a color.
+ *
+ * @param hex - Hex color
+ * @param degrees - Degrees to rotate hue
+ * @returns Adjusted hex color
+ */
+export function adjustHue(hex: string, degrees: number): string {
+  const oklch = hexToOklch(hex);
+  oklch.h = (((oklch.h + degrees) % 360) + 360) % 360; // Normalize to 0-360
+  return oklchToHex(oklch);
+}
