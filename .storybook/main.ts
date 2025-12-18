@@ -1,12 +1,27 @@
 import { StorybookConfig } from "@storybook/nextjs";
+import { config as dotenvConfig } from "dotenv";
 
-const host = process.env.NEXT_PUBLIC_OAK_ASSETS_HOST;
-const path = process.env.NEXT_PUBLIC_OAK_ASSETS_PATH;
-const cloudinaryCloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
+let host = process.env.NEXT_PUBLIC_OAK_ASSETS_HOST;
+let path = process.env.NEXT_PUBLIC_OAK_ASSETS_PATH;
+let cloudinaryCloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
 
+const isLocal = !process.env.VERCEL && !process.env.GITHUB_ACTION;
+
+// Envs missing. If we are local, attempt to load from .env file. Note: this is redundant once we update to latest Storybook.
+if (isLocal && (!host || !path || !cloudinaryCloudName)) {
+  console.info("Attempting to load envs from .env file");
+  dotenvConfig({ path: [".env", ".env.local"] });
+
+  // Re-assign envs
+  host = process.env.NEXT_PUBLIC_OAK_ASSETS_HOST;
+  path = process.env.NEXT_PUBLIC_OAK_ASSETS_PATH;
+  cloudinaryCloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
+}
+
+// Final check regardless of context.
 if (!host || !path || !cloudinaryCloudName) {
   throw new Error(
-    "NEXT_PUBLIC_OAK_ASSETS_HOST, NEXT_PUBLIC_OAK_ASSETS_PATH, and NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME are required",
+    `All envs are required. NEXT_PUBLIC_OAK_ASSETS_HOST: ${!!host}, NEXT_PUBLIC_OAK_ASSETS_PATH: ${!!path}, and NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: ${!!cloudinaryCloudName}`,
   );
 }
 
