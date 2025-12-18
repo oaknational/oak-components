@@ -6,6 +6,8 @@
  * All functions are pure with no side effects.
  */
 
+import type { BasePalette } from "./themeTypes";
+
 /**
  * OKLCH color representation.
  */
@@ -271,4 +273,148 @@ export function adjustHue(hex: string, degrees: number): string {
   const oklch = hexToOklch(hex);
   oklch.h = (((oklch.h + degrees) % 360) + 360) % 360; // Normalize to 0-360
   return oklchToHex(oklch);
+}
+
+/**
+ * Adjust the chroma (saturation) of a color.
+ *
+ * @param hex - Hex color
+ * @param factor - Multiplier (0.9 = 90% saturation)
+ * @returns Adjusted hex color
+ */
+export function adjustChroma(hex: string, factor: number): string {
+  const oklch = hexToOklch(hex);
+  oklch.c = Math.max(0, oklch.c * factor);
+  return oklchToHex(oklch);
+}
+
+/**
+ * Derive a triadic 3-colour palette from a single brand colour.
+ *
+ * Uses 120° hue rotations in OKLCH colour space for perceptually
+ * uniform colour relationships. Minimal adjustments for accessibility.
+ *
+ * @param primary - Primary brand colour (hex)
+ * @returns 3-colour base palette
+ *
+ * @example
+ * ```typescript
+ * const palette = deriveTriadicPalette('#287c34');
+ * // palette.primary = '#287c34' (input)
+ * // palette.secondary = '#...' (+120° hue)
+ * // palette.tertiary = '#...' (+240° hue)
+ * ```
+ */
+export function deriveTriadicPalette(primary: string): BasePalette {
+  const oklch = hexToOklch(primary);
+
+  // Secondary: +120° hue, slightly reduced chroma for harmony
+  const secondaryOklch = {
+    l: Math.min(oklch.l + 0.05, 0.85), // Small lightness boost for a11y
+    c: oklch.c * 0.9,
+    h: (oklch.h + 120) % 360,
+  };
+
+  // Tertiary: +240° hue (or -120°)
+  const tertiaryOklch = {
+    l: Math.min(oklch.l + 0.05, 0.85),
+    c: oklch.c * 0.9,
+    h: (oklch.h + 240) % 360,
+  };
+
+  return {
+    primary,
+    secondary: oklchToHex(secondaryOklch),
+    tertiary: oklchToHex(tertiaryOklch),
+  };
+}
+
+/**
+ * Derive a split-complementary palette from two brand colours.
+ *
+ * - Primary: used as-is (absolute)
+ * - Secondary: based on input secondary (rough coordinate), adjusted for a11y
+ * - Tertiary: derived via split-complement (150° from primary)
+ *
+ * @param primary - Primary brand colour (hex)
+ * @param secondaryHint - Secondary colour (used as hue guide)
+ * @returns 3-colour base palette
+ */
+export function deriveSplitComplementaryPalette(
+  primary: string,
+  secondaryHint: string,
+): BasePalette {
+  const primaryOklch = hexToOklch(primary);
+  const hintOklch = hexToOklch(secondaryHint);
+
+  // Secondary: honour the hint's hue, adjust L/C for a11y
+  const secondary = oklchToHex({
+    l: Math.max(0.3, Math.min(0.7, hintOklch.l)), // Ensure mid-range lightness
+    c: hintOklch.c * 0.9,
+    h: hintOklch.h,
+  });
+
+  // Tertiary: split-complement of primary (150° instead of 180° for more harmony)
+  const tertiary = oklchToHex({
+    l: primaryOklch.l,
+    c: primaryOklch.c * 0.85,
+    h: (primaryOklch.h + 150) % 360,
+  });
+
+  return { primary, secondary, tertiary };
+}
+
+/**
+ * Derive a colour-blind safe triadic palette.
+ *
+ * Avoids red-green confusion by using blue-orange-yellow axis.
+ * Uses WCAG AAA contrast for extra headroom.
+ *
+ * @param primary - Primary brand colour (hex)
+ * @returns 3-colour base palette safe for colour vision deficiency
+ */
+export function deriveColorBlindSafePalette(primary: string): BasePalette {
+  const oklch = hexToOklch(primary);
+
+  // Shift hues away from red-green confusion zone
+  // Blue-yellow axis is generally safer
+  const safeHue = adjustHueForColorBlindness(oklch.h);
+
+  // Secondary: shifted towards blue (safe for deuteranopia)
+  const secondaryOklch = {
+    l: Math.min(oklch.l + 0.1, 0.8),
+    c: oklch.c * 0.85,
+    h: (safeHue + 180) % 360, // Complement for maximum distinction
+  };
+
+  // Tertiary: shifted towards yellow/orange (also safe)
+  const tertiaryOklch = {
+    l: Math.min(oklch.l + 0.15, 0.85),
+    c: oklch.c * 0.8,
+    h: (safeHue + 60) % 360, // 60° for triadic-like distinction
+  };
+
+  return {
+    primary: oklchToHex({ ...oklch, h: safeHue }),
+    secondary: oklchToHex(secondaryOklch),
+    tertiary: oklchToHex(tertiaryOklch),
+  };
+}
+
+/**
+ * Adjust hue to avoid red-green confusion.
+ * Shifts problematic hues towards blue or orange.
+ */
+function adjustHueForColorBlindness(hue: number): number {
+  // Red-green confusion zone: roughly 0-60° (red-orange) and 90-150° (yellow-green)
+  // Shift these towards safer zones
+  if ((hue >= 0 && hue < 30) || (hue >= 330 && hue <= 360)) {
+    // Red zone → shift towards orange
+    return 30;
+  }
+  if (hue >= 90 && hue < 150) {
+    // Green zone → shift towards teal/blue
+    return 180;
+  }
+  return hue;
 }

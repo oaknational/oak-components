@@ -1,7 +1,8 @@
 /**
- * Theme generator for creating accessible themes from brand colors.
+ * Theme generator for creating accessible themes from brand colours.
  *
- * Constructs a `GeneratedTheme` artifact from `BrandColors` intent.
+ * Constructs a `GeneratedTheme` artifact (6 Token Sets) from `BrandColors` intent
+ * using colour theory (triadic or split-complementary palettes).
  *
  * @example
  * ```typescript
@@ -12,10 +13,19 @@
  * ```
  */
 
-import { isValidHex, expandHex, parseColor } from "./colorUtils";
+import {
+  isValidHex,
+  expandHex,
+  parseColor,
+  deriveTriadicPalette,
+  deriveSplitComplementaryPalette,
+  deriveColorBlindSafePalette,
+} from "./colorUtils";
 import { deriveThemeColors } from "./deriveTokens";
+import type { ContrastLevel } from "./deriveTokens";
 import type {
   BrandColors,
+  BasePalette,
   GeneratedTheme,
   GeneratedThemeColors,
   GenerateThemeOptions,
@@ -25,6 +35,7 @@ import type {
 // Re-export types for convenience
 export type {
   BrandColors,
+  BasePalette,
   GeneratedTheme,
   GeneratedThemeColors,
   GenerateThemeOptions,
@@ -32,7 +43,7 @@ export type {
 };
 
 /**
- * Validate and normalize a color (supports hex, rgb, rgba, hsl, hsla).
+ * Validate and normalize a colour (supports hex, rgb, rgba, hsl, hsla).
  */
 function validateColor(color: string, name: string): string {
   // Try parseColor first (handles all formats)
@@ -44,103 +55,69 @@ function validateColor(color: string, name: string): string {
   // Fallback: check if it's a valid hex (for better error messages)
   if (!isValidHex(color)) {
     throw new TypeError(
-      `Invalid ${name} color "${color}". Expected hex (#RGB or #RRGGBB), rgb(), rgba(), hsl(), or hsla()`,
+      `Invalid ${name} colour "${color}". Expected hex (#RGB or #RRGGBB), rgb(), rgba(), hsl(), or hsla()`,
     );
   }
   return expandHex(color);
 }
 
 /**
- * Generate high contrast theme colors.
+ * Derive the appropriate base palette based on input and options.
  */
-function generateHighContrastTheme(
-  mode: "light" | "dark",
-): GeneratedThemeColors {
-  if (mode === "light") {
-    return {
-      surface: {
-        primary: "#ffffff",
-        secondary: "#ffffff",
-        accent: "#ffffff",
-        inverse: "#000000",
-      },
-      text: {
-        primary: "#000000",
-        muted: "#000000",
-        inverse: "#ffffff",
-        accent: "#000000",
-      },
-      border: {
-        subtle: "#000000",
-        strong: "#000000",
-        accent: "#000000",
-      },
-      interactive: {
-        primary: "#000000",
-        hover: "#333333",
-        focus: "#000000",
-      },
-      shadow: {
-        subtle: "rgba(0,0,0,0.3)",
-        strong: "rgba(0,0,0,0.6)",
-      },
-    };
+function derivePalette(
+  primary: string,
+  secondary: string | undefined,
+  colorBlindSafe: boolean,
+): BasePalette {
+  if (colorBlindSafe) {
+    return deriveColorBlindSafePalette(primary);
   }
 
-  return {
-    surface: {
-      primary: "#000000",
-      secondary: "#000000",
-      accent: "#000000",
-      inverse: "#ffffff",
-    },
-    text: {
-      primary: "#ffffff",
-      muted: "#ffffff",
-      inverse: "#000000",
-      accent: "#ffffff",
-    },
-    border: {
-      subtle: "#ffffff",
-      strong: "#ffffff",
-      accent: "#ffffff",
-    },
-    interactive: {
-      primary: "#ffffff",
-      hover: "#cccccc",
-      focus: "#ffffff",
-    },
-    shadow: {
-      subtle: "rgba(255,255,255,0.2)",
-      strong: "rgba(255,255,255,0.4)",
-    },
-  };
+  if (secondary) {
+    return deriveSplitComplementaryPalette(primary, secondary);
+  }
+
+  return deriveTriadicPalette(primary);
 }
 
 /**
- * Generate a complete theme from brand colors.
+ * Generate a Token Set for a specific mode and contrast level.
+ */
+function generateTokenSet(
+  palette: BasePalette,
+  mode: "light" | "dark",
+  contrast: ContrastLevel,
+): GeneratedThemeColors {
+  return deriveThemeColors({ palette, mode, contrast });
+}
+
+/**
+ * Generate a complete theme from brand colours.
  *
- * Constructs a `GeneratedTheme` artifact from the consumer's brand intent.
+ * Constructs a `GeneratedTheme` artifact (6 Token Sets) from the consumer's
+ * brand intent using colour theory:
+ * - One colour: triadic palette (120° hue rotations)
+ * - Two colours: split-complementary palette
  *
- * @param brand - Brand colors expressing identity
+ * @param brand - Brand colours expressing identity
  * @param options - Generation options
- * @returns Complete theme artifact and any warnings
+ * @returns Complete theme artifact (6 Token Sets), base palette, and any warnings
  *
  * @example
  * ```typescript
- * // Single color
+ * // Single colour → triadic derivation
  * const result = generateTheme({ primary: '#287c34' });
  *
- * // Two colors
+ * // Two colours → split-complementary
  * const result = generateTheme({
  *   primary: '#287c34',
  *   secondary: '#7c2834',
  * });
  *
- * // With options
+ * // Colour-blind safe
  * const result = generateTheme(
  *   { primary: '#287c34' },
- *   { contrast: 'AAA', includeHighContrast: true }
+ *   { colorBlindSafe: true }
  * );
  * ```
  */
@@ -155,36 +132,34 @@ export function generateTheme(
     : undefined;
 
   const warnings: string[] = [];
+  const colorBlindSafe = options.colorBlindSafe ?? false;
 
-  // Generate light and dark themes
-  const lightColors = deriveThemeColors({
-    primary: normalizedPrimary,
-    secondary: normalizedSecondary,
-    mode: "light",
-  });
+  // Derive 3-colour base palette
+  const basePalette = derivePalette(
+    normalizedPrimary,
+    normalizedSecondary,
+    colorBlindSafe,
+  );
 
-  const darkColors = deriveThemeColors({
-    primary: normalizedPrimary,
-    secondary: normalizedSecondary,
-    mode: "dark",
-  });
-
-  // Build theme artifact
+  // Generate all 6 Token Sets
   const theme: GeneratedTheme = {
-    light: lightColors,
-    dark: darkColors,
+    // Normal contrast
+    light: generateTokenSet(basePalette, "light", "normal"),
+    dark: generateTokenSet(basePalette, "dark", "normal"),
+    // High contrast (WCAG AAA)
+    highContrastLight: generateTokenSet(basePalette, "light", "high"),
+    highContrastDark: generateTokenSet(basePalette, "dark", "high"),
+    // Low contrast
+    lowContrastLight: generateTokenSet(basePalette, "light", "low"),
+    lowContrastDark: generateTokenSet(basePalette, "dark", "low"),
   };
 
-  // Add high contrast variants if requested
-  if (options.includeHighContrast) {
-    theme.highContrastLight = generateHighContrastTheme("light");
-    theme.highContrastDark = generateHighContrastTheme("dark");
+  // Add colour-blind safe warning if applicable
+  if (colorBlindSafe) {
+    warnings.push(
+      "Colour-blind safe palette applied. Hues adjusted to avoid red-green confusion.",
+    );
   }
 
-  // Phase 3: colorBlindSafe validation
-  if (options.colorBlindSafe) {
-    warnings.push("colorBlindSafe option will be implemented in Phase 3");
-  }
-
-  return { theme, warnings };
+  return { theme, basePalette, warnings };
 }

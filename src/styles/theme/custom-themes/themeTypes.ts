@@ -63,20 +63,44 @@ export interface GeneratedThemeColors {
 }
 
 /**
- * A complete generated theme with light and dark mode colors.
+ * A complete generated theme with all mode and contrast variations.
  *
  * This is the **artifact** constructed by `generateTheme()` from brand intent.
- * All properties are guaranteed to be populated.
+ * All 6 Token Sets are guaranteed to be populated (Full Theme).
+ *
+ * Covered modes:
+ * - light / dark (normal contrast)
+ * - highContrastLight / highContrastDark (prefers-contrast: more)
+ * - lowContrastLight / lowContrastDark (prefers-contrast: less)
  */
 export interface GeneratedTheme {
-  /** Light mode colors - always present */
+  /** Light mode, normal contrast - always present */
   light: GeneratedThemeColors;
-  /** Dark mode colors - always present */
+  /** Dark mode, normal contrast - always present */
   dark: GeneratedThemeColors;
-  /** High contrast light mode - present if requested */
-  highContrastLight?: GeneratedThemeColors;
-  /** High contrast dark mode - present if requested */
-  highContrastDark?: GeneratedThemeColors;
+  /** Light mode, high contrast (WCAG AAA) - always present */
+  highContrastLight: GeneratedThemeColors;
+  /** Dark mode, high contrast (WCAG AAA) - always present */
+  highContrastDark: GeneratedThemeColors;
+  /** Light mode, low contrast - always present */
+  lowContrastLight: GeneratedThemeColors;
+  /** Dark mode, low contrast - always present */
+  lowContrastDark: GeneratedThemeColors;
+}
+
+/**
+ * 3-colour base palette derived from brand colours via colour theory.
+ *
+ * For one brand colour: triadic (120° hue rotations)
+ * For two brand colours: split-complementary
+ */
+export interface BasePalette {
+  /** Primary colour - typically the input brand colour */
+  primary: string;
+  /** Secondary colour - triadic (+120°) or input secondary (adjusted) */
+  secondary: string;
+  /** Tertiary colour - triadic (+240°) or split-complement */
+  tertiary: string;
 }
 
 /**
@@ -85,9 +109,7 @@ export interface GeneratedTheme {
 export interface GenerateThemeOptions {
   /** Target contrast level: 'AA' (4.5:1) or 'AAA' (7:1). Default: 'AA' */
   contrast?: "AA" | "AAA";
-  /** Include high-contrast mode variants. Default: false */
-  includeHighContrast?: boolean;
-  /** Validate against color vision deficiency simulations (Phase 3). Default: false */
+  /** Validate against colour vision deficiency simulations. Default: false */
   colorBlindSafe?: boolean;
 }
 
@@ -95,8 +117,10 @@ export interface GenerateThemeOptions {
  * Result of theme generation.
  */
 export interface GenerateThemeResult {
-  /** The constructed theme artifact */
+  /** The constructed theme artifact (6 Token Sets) */
   theme: GeneratedTheme;
+  /** The 3-colour base palette used for derivation */
+  basePalette: BasePalette;
   /** Warnings about adjustments made during generation */
   warnings: string[];
 }

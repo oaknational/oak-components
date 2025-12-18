@@ -1,11 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
-import { checkContrast } from "./contrastUtils";
 import { generateTheme } from "./generateTheme";
 import { ThemePreview } from "./ThemePreview";
-import type { GeneratedTheme } from "./themeTypes";
+import type { GeneratedTheme, BasePalette } from "./themeTypes";
 
 import { OakBox } from "@/components/atoms/OakBox";
 import { OakFlex } from "@/components/atoms/OakFlex";
@@ -13,14 +12,14 @@ import { OakHeading } from "@/components/atoms/OakHeading";
 import { OakP } from "@/components/atoms/OakP";
 
 /**
- * Interactive button demo that shows actual hover, active, and focus states.
+ * Interactive button demo with real hover, active, and focus states.
  */
 const DemoButton = styled.button`
-  padding: 12px 24px;
+  padding: 8px 16px;
   border: none;
-  border-radius: 6px;
+  border-radius: 4px;
   font-family: inherit;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.15s ease;
@@ -40,177 +39,162 @@ const DemoButton = styled.button`
     outline: 3px solid var(--custom-interactive-focus);
     outline-offset: 2px;
   }
-
-  &[data-state="hover"] {
-    background: var(--custom-interactive-hover);
-  }
-
-  &[data-state="active"] {
-    background: var(--custom-interactive-hover);
-    transform: scale(0.98);
-  }
-
-  &[data-state="focus"] {
-    outline: 3px solid var(--custom-interactive-focus);
-    outline-offset: 2px;
-  }
 `;
 
 /**
- * A single theme card showing all token categories for one mode.
+ * Colour swatch for displaying palette colours.
  */
-function ThemeCard({
+const Swatch = styled.div<{ $color: string }>`
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background: ${(props) => props.$color};
+  border: 1px solid rgba(0, 0, 0, 0.1);
+`;
+
+/**
+ * Token Set card showing all 16 tokens in compact form.
+ */
+function TokenSetCard({
   theme,
   mode,
-  title,
-  primary,
-  secondary,
+  contrast,
+  label,
 }: {
   theme: GeneratedTheme;
   mode: "light" | "dark";
-  title: string;
-  primary: string;
-  secondary?: string;
+  contrast: "normal" | "high" | "low";
+  label: string;
 }) {
+  const [isClicked, setIsClicked] = useState(false);
+
   return (
-    <ThemePreview theme={theme} mode={mode}>
-      <OakBox $pa="spacing-16" aria-label={`${title} - ${mode} mode`}>
+    <ThemePreview theme={theme} mode={mode} contrast={contrast}>
+      <OakBox $pa="spacing-8" aria-label={`${label} token demonstration`}>
         <OakP
           $font="body-3-bold"
-          style={{ color: "var(--custom-text-primary)", marginBottom: 8 }}
+          style={{ color: "var(--custom-text-primary)", marginBottom: 4 }}
         >
-          {mode.charAt(0).toUpperCase() + mode.slice(1)} Mode
+          {label}
         </OakP>
 
-        {/* Brand colour inputs */}
-        <OakFlex $gap="spacing-4" $mb="spacing-8" $alignItems="center">
+        {/* Surfaces */}
+        <OakFlex $gap="spacing-4" $mb="spacing-4" $flexWrap="wrap">
           <OakBox
             $pa="spacing-4"
-            $borderRadius="border-radius-s"
-            style={{ backgroundColor: primary }}
-            aria-label={`Primary: ${primary}`}
-          >
-            <OakP
-              $font="body-3"
-              style={{ color: "#fff", textShadow: "0 1px 2px rgba(0,0,0,0.5)" }}
-            >
-              P
-            </OakP>
-          </OakBox>
-          {secondary && (
-            <OakBox
-              $pa="spacing-4"
-              $borderRadius="border-radius-s"
-              style={{ backgroundColor: secondary }}
-              aria-label={`Secondary: ${secondary}`}
-            >
-              <OakP
-                $font="body-3"
-                style={{
-                  color: "#fff",
-                  textShadow: "0 1px 2px rgba(0,0,0,0.5)",
-                }}
-              >
-                S
-              </OakP>
-            </OakBox>
-          )}
-        </OakFlex>
-
-        {/* Surface tokens */}
-        <OakFlex $gap="spacing-4" $mb="spacing-8" $flexWrap="wrap">
-          <OakBox
-            $pa="spacing-8"
             $borderRadius="border-radius-s"
             style={{ background: "var(--custom-surface-secondary)" }}
             aria-label="Surface secondary"
           >
             <OakP
               $font="body-3"
-              style={{ color: "var(--custom-text-primary)" }}
+              style={{ color: "var(--custom-text-primary)", fontSize: 10 }}
             >
-              Surface
+              Sec
             </OakP>
           </OakBox>
           <OakBox
-            $pa="spacing-8"
+            $pa="spacing-4"
             $borderRadius="border-radius-s"
             style={{ background: "var(--custom-surface-accent)" }}
             aria-label="Surface accent"
           >
             <OakP
               $font="body-3"
-              style={{ color: "var(--custom-text-primary)" }}
+              style={{ color: "var(--custom-text-primary)", fontSize: 10 }}
             >
-              Accent
+              Acc
             </OakP>
           </OakBox>
         </OakFlex>
 
-        {/* Interactive states */}
-        <OakFlex $gap="spacing-4" $flexWrap="wrap">
-          <DemoButton type="button" aria-label="Hover to see hover state">
-            Hover me
-          </DemoButton>
-          <DemoButton
-            type="button"
-            data-state="active"
-            aria-label="Active/pressed state"
+        {/* Text samples */}
+        <OakBox $mb="spacing-4">
+          <OakP
+            $font="body-3"
+            style={{ color: "var(--custom-text-primary)", fontSize: 10 }}
           >
-            Pressed
-          </DemoButton>
-          <DemoButton
-            type="button"
-            data-state="focus"
-            aria-label="Focus ring demonstration"
-          >
-            Focused
-          </DemoButton>
-        </OakFlex>
-
-        {/* Text tokens */}
-        <OakBox $mt="spacing-8">
-          <OakP $font="body-3" style={{ color: "var(--custom-text-primary)" }}>
             Primary text
           </OakP>
-          <OakP $font="body-3" style={{ color: "var(--custom-text-muted)" }}>
+          <OakP
+            $font="body-3"
+            style={{ color: "var(--custom-text-muted)", fontSize: 10 }}
+          >
             Muted text
           </OakP>
-          <OakP $font="body-3" style={{ color: "var(--custom-text-accent)" }}>
+          <OakP
+            $font="body-3"
+            style={{ color: "var(--custom-text-accent)", fontSize: 10 }}
+          >
             Accent text
           </OakP>
         </OakBox>
 
-        {/* Border tokens */}
-        <OakFlex $gap="spacing-4" $mt="spacing-8">
+        {/* Borders */}
+        <OakFlex $gap="spacing-4" $mb="spacing-4">
           <OakBox
-            $pa="spacing-8"
+            $pa="spacing-4"
             style={{
               border: "1px solid var(--custom-border-subtle)",
-              borderRadius: 4,
+              borderRadius: 2,
             }}
             aria-label="Subtle border"
           >
             <OakP
               $font="body-3"
-              style={{ color: "var(--custom-text-primary)" }}
+              style={{ color: "var(--custom-text-primary)", fontSize: 9 }}
             >
-              Subtle
+              Sub
             </OakP>
           </OakBox>
           <OakBox
-            $pa="spacing-8"
+            $pa="spacing-4"
             style={{
               border: "2px solid var(--custom-border-accent)",
-              borderRadius: 4,
+              borderRadius: 2,
             }}
             aria-label="Accent border"
           >
             <OakP
               $font="body-3"
-              style={{ color: "var(--custom-text-primary)" }}
+              style={{ color: "var(--custom-text-primary)", fontSize: 9 }}
             >
-              Accent
+              Acc
+            </OakP>
+          </OakBox>
+        </OakFlex>
+
+        {/* Interactive */}
+        <OakFlex $gap="spacing-4" $mb="spacing-4" $flexWrap="wrap">
+          <DemoButton type="button" aria-label="Hover to see hover state">
+            Hover
+          </DemoButton>
+          <DemoButton
+            type="button"
+            onClick={() => setIsClicked(!isClicked)}
+            style={isClicked ? { transform: "scale(0.98)" } : undefined}
+            aria-label="Click me to see active state"
+          >
+            Click me
+          </DemoButton>
+        </OakFlex>
+
+        {/* Shadow demo */}
+        <OakFlex $gap="spacing-4">
+          <OakBox
+            $pa="spacing-4"
+            $borderRadius="border-radius-s"
+            style={{
+              background: "var(--custom-surface-primary)",
+              boxShadow: "var(--custom-shadow-subtle)",
+            }}
+            aria-label="Subtle shadow"
+          >
+            <OakP
+              $font="body-3"
+              style={{ color: "var(--custom-text-primary)", fontSize: 9 }}
+            >
+              Shd
             </OakP>
           </OakBox>
         </OakFlex>
@@ -220,37 +204,107 @@ function ThemeCard({
 }
 
 /**
- * Theme column showing both light and dark modes.
+ * Palette display showing the 3-colour base.
+ */
+function PaletteDisplay({
+  palette,
+  inputLabel,
+}: {
+  palette: BasePalette;
+  inputLabel: string;
+}) {
+  return (
+    <OakBox $mb="spacing-8">
+      <OakP $font="body-3" $color="grey60" $mb="spacing-4">
+        {inputLabel}
+      </OakP>
+      <OakFlex $gap="spacing-4" $alignItems="center">
+        <Swatch
+          $color={palette.primary}
+          aria-label={`Primary: ${palette.primary}`}
+        />
+        <Swatch
+          $color={palette.secondary}
+          aria-label={`Secondary: ${palette.secondary}`}
+        />
+        <Swatch
+          $color={palette.tertiary}
+          aria-label={`Tertiary: ${palette.tertiary}`}
+        />
+      </OakFlex>
+    </OakBox>
+  );
+}
+
+/**
+ * Theme column showing all 6 Token Sets for one theme configuration.
  */
 function ThemeColumn({
   title,
   primary,
   secondary,
+  colorBlindSafe,
 }: {
   title: string;
   primary: string;
   secondary?: string;
+  colorBlindSafe?: boolean;
 }) {
-  const result = generateTheme({ primary, secondary });
+  const result = generateTheme({ primary, secondary }, { colorBlindSafe });
+  const inputLabel = secondary
+    ? `Input: ${primary}, ${secondary}`
+    : colorBlindSafe
+      ? `Input: ${primary} (CBS)`
+      : `Input: ${primary}`;
 
   return (
-    <OakFlex $flexDirection="column" $gap="spacing-8" style={{ flex: 1 }}>
-      <OakHeading tag="h3" $font="heading-6" $mb="spacing-4">
+    <OakFlex
+      $flexDirection="column"
+      $gap="spacing-4"
+      style={{ minWidth: 200, flex: 1 }}
+    >
+      <OakHeading tag="h3" $font="heading-6">
         {title}
       </OakHeading>
-      <ThemeCard
+
+      <PaletteDisplay palette={result.basePalette} inputLabel={inputLabel} />
+
+      {/* All 6 Token Sets */}
+      <TokenSetCard
         theme={result.theme}
         mode="light"
-        title={title}
-        primary={primary}
-        secondary={secondary}
+        contrast="normal"
+        label="Light"
       />
-      <ThemeCard
+      <TokenSetCard
         theme={result.theme}
         mode="dark"
-        title={title}
-        primary={primary}
-        secondary={secondary}
+        contrast="normal"
+        label="Dark"
+      />
+      <TokenSetCard
+        theme={result.theme}
+        mode="light"
+        contrast="high"
+        label="HC Light"
+      />
+      <TokenSetCard
+        theme={result.theme}
+        mode="dark"
+        contrast="high"
+        label="HC Dark"
+      />
+      <TokenSetCard
+        theme={result.theme}
+        mode="light"
+        contrast="low"
+        label="LC Light"
+      />
+      <TokenSetCard
+        theme={result.theme}
+        mode="dark"
+        contrast="low"
+        label="LC Dark"
       />
     </OakFlex>
   );
@@ -263,6 +317,7 @@ interface ThemeShowcaseArgs {
   oneColourPrimary: string;
   twoColourPrimary: string;
   twoColourSecondary: string;
+  colorBlindSafePrimary: string;
 }
 
 const meta: Meta<ThemeShowcaseArgs> = {
@@ -272,7 +327,7 @@ const meta: Meta<ThemeShowcaseArgs> = {
       control: "color",
       description: "Primary colour for single-colour theme",
       table: {
-        category: "One Colour Theme",
+        category: "One Colour",
         defaultValue: { summary: "#287c34" },
       },
     },
@@ -280,7 +335,7 @@ const meta: Meta<ThemeShowcaseArgs> = {
       control: "color",
       description: "Primary colour for two-colour theme",
       table: {
-        category: "Two Colour Theme",
+        category: "Two Colours",
         defaultValue: { summary: "#1e40af" },
       },
     },
@@ -288,8 +343,16 @@ const meta: Meta<ThemeShowcaseArgs> = {
       control: "color",
       description: "Secondary colour for two-colour theme",
       table: {
-        category: "Two Colour Theme",
+        category: "Two Colours",
         defaultValue: { summary: "#ea580c" },
+      },
+    },
+    colorBlindSafePrimary: {
+      control: "color",
+      description: "Primary colour for colour-blind safe theme",
+      table: {
+        category: "Colour-Blind Safe",
+        defaultValue: { summary: "#287c34" },
       },
     },
   },
@@ -297,20 +360,29 @@ const meta: Meta<ThemeShowcaseArgs> = {
     oneColourPrimary: "#287c34",
     twoColourPrimary: "#1e40af",
     twoColourSecondary: "#ea580c",
+    colorBlindSafePrimary: "#287c34",
   },
   parameters: {
     docs: {
       description: {
         component: `
-Generate accessible themes from 1-2 brand colours.
+Generate accessible themes from 1-2 brand colours using colour theory.
 
-This showcase demonstrates:
-- **One Colour Theme** — All tokens derived from a single primary colour
-- **Two Colour Theme** — Secondary colour drives accent surfaces, text, and focus states  
-- **Named Theme** — A custom "festive-2025" theme with explicit colour choices
+## Features
 
-Use the **Controls panel** to adjust colours and see themes update in real-time.
-Both light and dark modes are shown simultaneously to verify derivation works correctly.
+- **Triadic derivation** (one colour): 120° hue rotations for 3-colour palette
+- **Split-complementary** (two colours): honours secondary hue, derives tertiary
+- **6 Token Sets per Full Theme**: light/dark × normal/high/low contrast
+- **Colour-blind safe mode**: avoids red-green confusion
+
+## Contrast Requirements
+
+| Mode | Minimum |
+|------|---------|
+| Normal | WCAG 2.2 AA (4.5:1) |
+| High | WCAG 2.2 AAA (7:1) |
+| Low | WCAG 2.2 AA (4.5:1) |
+| CBS | WCAG 2.2 AAA (7:1) |
         `,
       },
     },
@@ -324,213 +396,49 @@ type Story = StoryObj<ThemeShowcaseArgs>;
 /**
  * **Theme Showcase**
  *
- * Compares three theme generation approaches side-by-side:
- * 1. One brand colour — minimal input, full derivation
- * 2. Two brand colours — secondary drives accents and focus
- * 3. Named theme — custom "festive-2025" with explicit colours
+ * Compares four theme generation approaches:
+ * 1. One colour — triadic derivation
+ * 2. Two colours — split-complementary
+ * 3. Festive 2025 — named theme example
+ * 4. Colour-blind safe — adjusted for vision deficiency
  *
- * Each column shows both light and dark modes for complete comparison.
+ * Each column shows all 6 Token Sets.
  */
 export const ThemeShowcase: Story = {
   render: (args) => (
-    <OakFlex $gap="spacing-16" $flexWrap="wrap">
+    <OakFlex
+      $gap="spacing-16"
+      $flexWrap="wrap"
+      style={{ alignItems: "flex-start" }}
+    >
       <ThemeColumn title="One Colour" primary={args.oneColourPrimary} />
       <ThemeColumn
         title="Two Colours"
         primary={args.twoColourPrimary}
         secondary={args.twoColourSecondary}
       />
+      <ThemeColumn title="Festive 2025" primary="#c41e3a" secondary="#228b22" />
       <ThemeColumn
-        title="Festive 2025"
-        primary="#c41e3a" // Christmas red
-        secondary="#228b22" // Forest green
+        title="Colour-Blind Safe"
+        primary={args.colorBlindSafePrimary}
+        colorBlindSafe
       />
     </OakFlex>
   ),
 };
 
 /**
- * **Interactive Playground**
+ * **Single Theme Interactive**
  *
- * Single theme with full controls for exploring generation.
+ * Explore a single theme with full controls.
  */
 export const Interactive: Story = {
-  args: {
-    oneColourPrimary: "#287c34",
-    twoColourPrimary: "#287c34",
-    twoColourSecondary: "",
-  },
   argTypes: {
     twoColourPrimary: { table: { disable: true } },
     twoColourSecondary: { table: { disable: true } },
+    colorBlindSafePrimary: { table: { disable: true } },
   },
-  render: (args) => {
-    const result = generateTheme({ primary: args.oneColourPrimary });
-    return (
-      <OakFlex $gap="spacing-16">
-        <ThemePreview theme={result.theme} mode="light">
-          <OakBox $pa="spacing-24">
-            <OakBox $mb="spacing-16">
-              <OakHeading tag="h2" $font="heading-5" $color="text-primary">
-                Light Mode
-              </OakHeading>
-            </OakBox>
-            <OakFlex $gap="spacing-8" $flexWrap="wrap">
-              <DemoButton type="button">Hover me</DemoButton>
-              <DemoButton type="button" data-state="active">
-                Pressed
-              </DemoButton>
-              <DemoButton type="button" data-state="focus">
-                Focused
-              </DemoButton>
-            </OakFlex>
-            <OakBox $mt="spacing-16">
-              <OakP
-                $font="body-2"
-                style={{ color: "var(--custom-text-primary)" }}
-              >
-                Primary text on surface
-              </OakP>
-              <OakP
-                $font="body-2"
-                style={{ color: "var(--custom-text-accent)" }}
-              >
-                Accent text
-              </OakP>
-            </OakBox>
-          </OakBox>
-        </ThemePreview>
-        <ThemePreview theme={result.theme} mode="dark">
-          <OakBox $pa="spacing-24">
-            <OakBox $mb="spacing-16">
-              <OakHeading tag="h2" $font="heading-5" $color="text-primary">
-                Dark Mode
-              </OakHeading>
-            </OakBox>
-            <OakFlex $gap="spacing-8" $flexWrap="wrap">
-              <DemoButton type="button">Hover me</DemoButton>
-              <DemoButton type="button" data-state="active">
-                Pressed
-              </DemoButton>
-              <DemoButton type="button" data-state="focus">
-                Focused
-              </DemoButton>
-            </OakFlex>
-            <OakBox $mt="spacing-16">
-              <OakP
-                $font="body-2"
-                style={{ color: "var(--custom-text-primary)" }}
-              >
-                Primary text on surface
-              </OakP>
-              <OakP
-                $font="body-2"
-                style={{ color: "var(--custom-text-accent)" }}
-              >
-                Accent text
-              </OakP>
-            </OakBox>
-          </OakBox>
-        </ThemePreview>
-      </OakFlex>
-    );
-  },
-};
-
-/**
- * **Contrast Checker**
- *
- * Demonstrates WCAG contrast ratio verification for colour combinations.
- */
-export const ContrastChecker: Story = {
-  argTypes: {
-    oneColourPrimary: { table: { disable: true } },
-    twoColourPrimary: { table: { disable: true } },
-    twoColourSecondary: { table: { disable: true } },
-  },
-  render: () => {
-    const pairs = [
-      { fg: "#000000", bg: "#ffffff", label: "Black on White" },
-      { fg: "#287c34", bg: "#ffffff", label: "Oak Green on White" },
-      { fg: "#767676", bg: "#ffffff", label: "Gray on White (AA boundary)" },
-      { fg: "#ffffff", bg: "#1a1a1a", label: "White on Dark" },
-      { fg: "#1e40af", bg: "#ffffff", label: "Blue on White" },
-      { fg: "#c41e3a", bg: "#ffffff", label: "Festive Red on White" },
-    ];
-
-    return (
-      <OakBox $pa="spacing-24" aria-label="Contrast checker results">
-        <OakHeading tag="h2" $font="heading-5" $mb="spacing-8">
-          Contrast Checker
-        </OakHeading>
-        <OakP $font="body-2" $color="grey60" $mb="spacing-16">
-          Verify colour combinations meet WCAG AA (4.5:1) and AAA (7:1)
-          standards.
-        </OakP>
-
-        <OakFlex
-          $flexDirection="column"
-          $gap="spacing-8"
-          role="list"
-          aria-label="Contrast ratio results"
-        >
-          {pairs.map(({ fg, bg, label }) => {
-            const result = checkContrast(fg, bg);
-            return (
-              <OakFlex
-                key={label}
-                $gap="spacing-8"
-                $alignItems="center"
-                role="listitem"
-                aria-label={`${label}: ${result.ratio.toFixed(1)} to 1 ratio`}
-              >
-                <OakBox
-                  $pa="spacing-16"
-                  $borderRadius="border-radius-m"
-                  $minWidth="spacing-32"
-                  style={{ backgroundColor: bg }}
-                >
-                  <OakP style={{ color: fg }} $font="body-2-bold">
-                    Sample
-                  </OakP>
-                </OakBox>
-                <OakBox $minWidth="spacing-56">
-                  <OakP $font="body-2-bold">{label}</OakP>
-                  <OakP $font="body-3" $color="grey60">
-                    {result.ratio.toFixed(2)}:1
-                  </OakP>
-                </OakBox>
-                <OakFlex $gap="spacing-4">
-                  <OakBox
-                    $pa="spacing-4"
-                    $borderRadius="border-radius-s"
-                    $background={
-                      result.passesAA ? "bg-correct" : "bg-incorrect"
-                    }
-                    aria-label={result.passesAA ? "Passes AA" : "Fails AA"}
-                  >
-                    <OakP $font="body-3" $color="white">
-                      AA {result.passesAA ? "✓" : "✗"}
-                    </OakP>
-                  </OakBox>
-                  <OakBox
-                    $pa="spacing-4"
-                    $borderRadius="border-radius-s"
-                    $background={
-                      result.passesAAA ? "bg-correct" : "bg-incorrect"
-                    }
-                    aria-label={result.passesAAA ? "Passes AAA" : "Fails AAA"}
-                  >
-                    <OakP $font="body-3" $color="white">
-                      AAA {result.passesAAA ? "✓" : "✗"}
-                    </OakP>
-                  </OakBox>
-                </OakFlex>
-              </OakFlex>
-            );
-          })}
-        </OakFlex>
-      </OakBox>
-    );
-  },
+  render: (args) => (
+    <ThemeColumn title="Interactive Preview" primary={args.oneColourPrimary} />
+  ),
 };

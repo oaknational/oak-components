@@ -31,7 +31,7 @@ export interface ThemePreviewProps {
 }
 
 /**
- * Selects the appropriate token set based on mode and contrast.
+ * Selects the appropriate Token Set based on mode and contrast.
  */
 function selectTokenSet(
   theme: GeneratedTheme,
@@ -39,16 +39,12 @@ function selectTokenSet(
   contrast: "normal" | "high" | "low",
 ): GeneratedThemeColors {
   if (contrast === "high") {
-    if (mode === "light" && theme.highContrastLight) {
-      return theme.highContrastLight;
-    }
-    if (mode === "dark" && theme.highContrastDark) {
-      return theme.highContrastDark;
-    }
+    return mode === "light" ? theme.highContrastLight : theme.highContrastDark;
   }
 
-  // Low contrast would use lowContrastLight/Dark if available
-  // For now, fall back to normal
+  if (contrast === "low") {
+    return mode === "light" ? theme.lowContrastLight : theme.lowContrastDark;
+  }
 
   return mode === "light" ? theme.light : theme.dark;
 }

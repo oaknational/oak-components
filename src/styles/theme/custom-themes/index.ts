@@ -12,6 +12,7 @@
 export { generateTheme } from "./generateTheme";
 export type {
   BrandColors,
+  BasePalette,
   GeneratedTheme,
   GeneratedThemeColors,
   GenerateThemeOptions,
@@ -37,14 +38,18 @@ export {
   getContrastRatio,
   adjustLightness,
   adjustHue,
+  adjustChroma,
   isValidHex,
   expandHex,
+  deriveTriadicPalette,
+  deriveSplitComplementaryPalette,
+  deriveColorBlindSafePalette,
 } from "./colorUtils";
 export type { OklchColor } from "./colorUtils";
 
 // Token derivation (internal, but useful for advanced use)
 export { deriveThemeColors } from "./deriveTokens";
-export type { DeriveContext } from "./deriveTokens";
+export type { DeriveContext, ContrastLevel } from "./deriveTokens";
 
 // Theme preview for Storybook mode simulation
 export { ThemePreview } from "./ThemePreview";

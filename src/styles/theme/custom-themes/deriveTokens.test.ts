@@ -1,14 +1,24 @@
 import { deriveThemeColors, type DeriveContext } from "./deriveTokens";
+import { deriveTriadicPalette } from "./colorUtils";
 import { checkContrast } from "./contrastUtils";
-import type { GeneratedThemeColors } from "./themeTypes";
+import type { GeneratedThemeColors, BasePalette } from "./themeTypes";
+
+/**
+ * Helper to create a DeriveContext from primary colour.
+ */
+function createContext(
+  primary: string,
+  mode: "light" | "dark",
+  contrast: "normal" | "high" | "low" = "normal",
+): DeriveContext {
+  const palette = deriveTriadicPalette(primary);
+  return { palette, mode, contrast };
+}
 
 describe("deriveTokens", () => {
   describe("deriveThemeColors", () => {
-    it("derives complete theme from primary color only", () => {
-      const context: DeriveContext = {
-        primary: "#287c34",
-        mode: "light",
-      };
+    it("derives complete theme from palette", () => {
+      const context = createContext("#287c34", "light");
 
       const result: GeneratedThemeColors = deriveThemeColors(context);
 
@@ -35,34 +45,33 @@ describe("deriveTokens", () => {
       expect(result.shadow.strong).toBeDefined();
     });
 
-    it("uses secondary color for accent tokens when provided", () => {
-      const context: DeriveContext = {
+    it("uses palette secondary for focus tokens", () => {
+      const palette: BasePalette = {
         primary: "#287c34",
         secondary: "#7c2834",
+        tertiary: "#34287c",
+      };
+      const context: DeriveContext = {
+        palette,
         mode: "light",
+        contrast: "normal",
       };
 
       const result = deriveThemeColors(context);
 
-      expect(result.text.accent).toBeDefined();
+      expect(result.interactive.focus).toBeDefined();
       expect(result.border.accent).toBeDefined();
     });
 
     it("ensures surface.primary has good contrast with text.primary", () => {
-      const lightResult = deriveThemeColors({
-        primary: "#287c34",
-        mode: "light",
-      });
+      const lightResult = deriveThemeColors(createContext("#287c34", "light"));
       const lightContrast = checkContrast(
         lightResult.text.primary,
         lightResult.surface.primary,
       );
       expect(lightContrast.passesAA).toBe(true);
 
-      const darkResult = deriveThemeColors({
-        primary: "#287c34",
-        mode: "dark",
-      });
+      const darkResult = deriveThemeColors(createContext("#287c34", "dark"));
       const darkContrast = checkContrast(
         darkResult.text.primary,
         darkResult.surface.primary,
@@ -71,10 +80,7 @@ describe("deriveTokens", () => {
     });
 
     it("generates valid hex colors for all tokens", () => {
-      const result = deriveThemeColors({
-        primary: "#287c34",
-        mode: "light",
-      });
+      const result = deriveThemeColors(createContext("#287c34", "light"));
       const hexRegex = /^#[0-9a-fA-F]{6}$/;
 
       expect(result.surface.primary).toMatch(hexRegex);
@@ -97,45 +103,52 @@ describe("deriveTokens", () => {
     });
 
     it("generates different colors for light vs dark mode", () => {
-      const lightResult = deriveThemeColors({
-        primary: "#287c34",
-        mode: "light",
-      });
-      const darkResult = deriveThemeColors({
-        primary: "#287c34",
-        mode: "dark",
-      });
+      const lightResult = deriveThemeColors(createContext("#287c34", "light"));
+      const darkResult = deriveThemeColors(createContext("#287c34", "dark"));
 
       expect(lightResult.surface.primary).not.toBe(darkResult.surface.primary);
       expect(lightResult.text.primary).not.toBe(darkResult.text.primary);
     });
 
     it("handles grayscale primary color", () => {
-      const result = deriveThemeColors({
-        primary: "#808080",
-        mode: "light",
-      });
+      const result = deriveThemeColors(createContext("#808080", "light"));
 
       expect(result.surface.primary).toMatch(/^#[0-9a-fA-F]{6}$/);
       expect(result.interactive.primary).toMatch(/^#[0-9a-fA-F]{6}$/);
     });
 
-    it("returns lighter shadows for light mode", () => {
-      const result = deriveThemeColors({
-        primary: "#287c34",
-        mode: "light",
-      });
+    it("returns shadows for light mode", () => {
+      const result = deriveThemeColors(createContext("#287c34", "light"));
       expect(result.shadow.subtle).toContain("rgba(0,0,0,");
       expect(result.shadow.strong).toContain("rgba(0,0,0,");
     });
 
-    it("returns darker shadows for dark mode", () => {
-      const result = deriveThemeColors({
-        primary: "#287c34",
-        mode: "dark",
-      });
+    it("returns shadows for dark mode", () => {
+      const result = deriveThemeColors(createContext("#287c34", "dark"));
       expect(result.shadow.subtle).toContain("rgba(0,0,0,");
       expect(result.shadow.strong).toContain("rgba(0,0,0,");
+    });
+
+    it("high contrast mode meets AAA requirements", () => {
+      const result = deriveThemeColors(
+        createContext("#287c34", "light", "high"),
+      );
+      const contrast = checkContrast(
+        result.text.primary,
+        result.surface.primary,
+      );
+      expect(contrast.passesAAA).toBe(true);
+    });
+
+    it("low contrast mode still meets AA requirements", () => {
+      const result = deriveThemeColors(
+        createContext("#287c34", "light", "low"),
+      );
+      const contrast = checkContrast(
+        result.text.primary,
+        result.surface.primary,
+      );
+      expect(contrast.passesAA).toBe(true);
     });
   });
 });

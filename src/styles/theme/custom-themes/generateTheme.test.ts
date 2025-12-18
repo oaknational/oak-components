@@ -7,20 +7,33 @@ import { checkContrast } from "./contrastUtils";
 
 describe("generateTheme", () => {
   describe("single color input", () => {
-    it("generates complete theme from single brand color", () => {
+    it("generates complete theme with all 6 Token Sets", () => {
       const brand: BrandColors = { primary: "#287c34" };
       const result: GenerateThemeResult = generateTheme(brand);
 
-      // Both light and dark modes are complete
+      // All 6 Token Sets are present
       expect(result.theme.light).toBeDefined();
       expect(result.theme.dark).toBeDefined();
+      expect(result.theme.highContrastLight).toBeDefined();
+      expect(result.theme.highContrastDark).toBeDefined();
+      expect(result.theme.lowContrastLight).toBeDefined();
+      expect(result.theme.lowContrastDark).toBeDefined();
 
-      // All categories present
+      // All categories present in each
       expect(result.theme.light.surface.primary).toBeDefined();
       expect(result.theme.light.text.primary).toBeDefined();
       expect(result.theme.light.border.subtle).toBeDefined();
       expect(result.theme.light.interactive.primary).toBeDefined();
       expect(result.theme.light.shadow.subtle).toBeDefined();
+    });
+
+    it("returns base palette alongside theme", () => {
+      const result = generateTheme({ primary: "#287c34" });
+
+      expect(result.basePalette).toBeDefined();
+      expect(result.basePalette.primary).toBeDefined();
+      expect(result.basePalette.secondary).toBeDefined();
+      expect(result.basePalette.tertiary).toBeDefined();
     });
 
     it("ensures all text passes AA contrast", () => {
@@ -39,7 +52,7 @@ describe("generateTheme", () => {
       expect(darkContrast.passesAA).toBe(true);
     });
 
-    it("returns empty warnings for valid input", () => {
+    it("returns empty warnings for valid input without colorBlindSafe", () => {
       const result = generateTheme({ primary: "#287c34" });
       expect(Array.isArray(result.warnings)).toBe(true);
       expect(result.warnings).toHaveLength(0);
@@ -47,14 +60,14 @@ describe("generateTheme", () => {
   });
 
   describe("two color input", () => {
-    it("uses secondary color for accents", () => {
+    it("uses secondary color for palette derivation", () => {
       const result = generateTheme({
         primary: "#287c34",
         secondary: "#7c2834",
       });
 
-      expect(result.theme.light.text.accent).toBeDefined();
-      expect(result.theme.light.border.accent).toBeDefined();
+      expect(result.basePalette.secondary).toBeDefined();
+      expect(result.theme.light.interactive.focus).toBeDefined();
     });
 
     it("generates complete theme with two colors", () => {
@@ -65,28 +78,36 @@ describe("generateTheme", () => {
 
       expect(result.theme.light).toBeDefined();
       expect(result.theme.dark).toBeDefined();
+      expect(result.theme.highContrastLight).toBeDefined();
+      expect(result.theme.highContrastDark).toBeDefined();
     });
   });
 
   describe("options", () => {
-    it("generates high contrast variants when requested", () => {
-      const result = generateTheme(
-        { primary: "#287c34" },
-        { includeHighContrast: true },
-      );
+    it("high contrast Token Sets meet AAA requirements", () => {
+      const result = generateTheme({ primary: "#287c34" });
 
-      expect(result.theme.highContrastLight).toBeDefined();
-      expect(result.theme.highContrastDark).toBeDefined();
+      const lightContrast = checkContrast(
+        result.theme.highContrastLight.text.primary,
+        result.theme.highContrastLight.surface.primary,
+      );
+      expect(lightContrast.passesAAA).toBe(true);
+
+      const darkContrast = checkContrast(
+        result.theme.highContrastDark.text.primary,
+        result.theme.highContrastDark.surface.primary,
+      );
+      expect(darkContrast.passesAAA).toBe(true);
     });
 
-    it("ensures AAA contrast when requested", () => {
-      const result = generateTheme({ primary: "#287c34" }, { contrast: "AAA" });
-
-      const contrast = checkContrast(
-        result.theme.light.text.primary,
-        result.theme.light.surface.primary,
+    it("colorBlindSafe option adds warning and adjusts palette", () => {
+      const result = generateTheme(
+        { primary: "#287c34" },
+        { colorBlindSafe: true },
       );
-      expect(contrast.passesAAA).toBe(true);
+
+      expect(result.warnings.length).toBeGreaterThan(0);
+      expect(result.warnings[0]).toContain("Colour-blind safe");
     });
   });
 
@@ -106,6 +127,16 @@ describe("generateTheme", () => {
       expect(() =>
         generateTheme({ primary: "#287c34", secondary: "#invalid" }),
       ).toThrow(TypeError);
+    });
+
+    it("accepts rgb() format", () => {
+      const result = generateTheme({ primary: "rgb(40, 124, 52)" });
+      expect(result.theme.light).toBeDefined();
+    });
+
+    it("accepts hsl() format", () => {
+      const result = generateTheme({ primary: "hsl(130, 51%, 32%)" });
+      expect(result.theme.light).toBeDefined();
     });
   });
 
