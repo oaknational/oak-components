@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import { generateTheme } from "./generateTheme";
@@ -22,11 +22,12 @@ import { OakP } from "@/components/atoms/OakP";
 // ─────────────────────────────────────────────────────────────────────────────
 
 /**
- * Fixed height header container for alignment
+ * Fixed height header container - uses explicit height not min-height
  */
 const HeaderSection = styled.div`
-  min-height: 120px;
+  height: 160px;
   margin-bottom: 16px;
+  flex-shrink: 0;
 `;
 
 /**
@@ -54,9 +55,36 @@ const HexLabel = styled.span`
 `;
 
 /**
- * Demo button with no hover styling, colour change on click only
+ * Interactive button demo - uses hover token on hover, different active states
  */
-const DemoButton = styled.button<{ $mode: "light" | "dark" }>`
+const HoverButton = styled.button`
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--custom-interactive-primary);
+  color: var(--custom-text-inverse);
+  transition: background 0.15s ease;
+
+  &:hover {
+    background: var(--custom-interactive-hover);
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--custom-interactive-focus);
+    outline-offset: 2px;
+  }
+`;
+
+/**
+ * Active button demo - shows active state colour change
+ * Light/Dark normal/low: lightness adjustment
+ * High contrast: colour change for distinction
+ */
+const ActiveButton = styled.button<{ $highContrast?: boolean }>`
   padding: 8px 16px;
   border: none;
   border-radius: 4px;
@@ -70,9 +98,9 @@ const DemoButton = styled.button<{ $mode: "light" | "dark" }>`
 
   &:active {
     background: ${(props) =>
-      props.$mode === "light"
-        ? "var(--custom-interactive-hover)"
-        : "var(--custom-interactive-focus)"};
+      props.$highContrast
+        ? "var(--custom-interactive-focus)"
+        : "var(--custom-interactive-hover)"};
   }
 
   &:focus-visible {
@@ -139,6 +167,18 @@ const SectionLabel = styled.div`
   margin-bottom: 4px;
 `;
 
+/**
+ * Text sample on a surface background
+ */
+const TextOnSurface = styled.div<{ $bg: string; $fg: string }>`
+  padding: 4px 8px;
+  border-radius: 3px;
+  background: var(${(props) => props.$bg});
+  color: var(${(props) => props.$fg});
+  font-size: 10px;
+  display: inline-block;
+`;
+
 // ─────────────────────────────────────────────────────────────────────────────
 // Helper Components
 // ─────────────────────────────────────────────────────────────────────────────
@@ -164,7 +204,6 @@ function PaletteDisplay({
 }) {
   return (
     <OakBox>
-      {/* Input Colours */}
       <SectionLabel>Input Colours</SectionLabel>
       <OakFlex $gap="spacing-8" $mb="spacing-8">
         {inputColors.map((color, i) => (
@@ -176,19 +215,18 @@ function PaletteDisplay({
         ))}
       </OakFlex>
 
-      {/* Generated Base Palette */}
       <SectionLabel>Generated Base Palette</SectionLabel>
       <OakFlex $gap="spacing-8">
-        <ColorSwatch color={palette.primary} label="Primary (generated)" />
-        <ColorSwatch color={palette.secondary} label="Secondary (generated)" />
-        <ColorSwatch color={palette.tertiary} label="Tertiary (generated)" />
+        <ColorSwatch color={palette.primary} label="Primary" />
+        <ColorSwatch color={palette.secondary} label="Secondary" />
+        <ColorSwatch color={palette.tertiary} label="Tertiary" />
       </OakFlex>
     </OakBox>
   );
 }
 
 /**
- * Full Token Set display with all 16 tokens
+ * Full Token Set display with all 16 tokens and real contrast demos
  */
 function TokenSetCard({
   theme,
@@ -201,7 +239,7 @@ function TokenSetCard({
   contrast: "normal" | "high" | "low";
   label: string;
 }) {
-  const [isClicked, setIsClicked] = useState(false);
+  const isHighContrast = contrast === "high";
 
   return (
     <TokenCardContainer>
@@ -278,42 +316,70 @@ function TokenSetCard({
           </OakFlex>
         </TokenRow>
 
-        {/* Text Row - 4 tokens */}
+        {/* Text Row - 4 tokens on their intended surfaces */}
         <TokenRow>
-          <RowLabel>Text (4)</RowLabel>
-          <OakFlex $gap="spacing-16" $flexWrap="wrap">
-            <OakP
-              $font="body-3"
-              style={{ color: "var(--custom-text-primary)", fontSize: 11 }}
-            >
-              Primary
-            </OakP>
-            <OakP
-              $font="body-3"
-              style={{ color: "var(--custom-text-muted)", fontSize: 11 }}
-            >
-              Muted
-            </OakP>
-            <OakP
-              $font="body-3"
-              style={{ color: "var(--custom-text-accent)", fontSize: 11 }}
-            >
-              Accent
-            </OakP>
-            <OakBox
-              $pa="spacing-4"
-              style={{
-                background: "var(--custom-surface-inverse)",
-                borderRadius: 2,
-              }}
-            >
-              <OakP
-                $font="body-3"
-                style={{ color: "var(--custom-text-inverse)", fontSize: 11 }}
+          <RowLabel>Text (4) — shown on intended surfaces</RowLabel>
+          <OakFlex $gap="spacing-4" $flexWrap="wrap" $flexDirection="column">
+            {/* Primary text on multiple surfaces */}
+            <OakFlex $gap="spacing-4" $flexWrap="wrap">
+              <TextOnSurface
+                $bg="--custom-surface-primary"
+                $fg="--custom-text-primary"
               >
-                Inverse
-              </OakP>
-            </OakBox>
+                Primary on Pri
+              </TextOnSurface>
+              <TextOnSurface
+                $bg="--custom-surface-secondary"
+                $fg="--custom-text-primary"
+              >
+                Primary on Sec
+              </TextOnSurface>
+              <TextOnSurface
+                $bg="--custom-surface-accent"
+                $fg="--custom-text-primary"
+              >
+                Primary on Acc
+              </TextOnSurface>
+            </OakFlex>
+            {/* Muted text on surfaces */}
+            <OakFlex $gap="spacing-4" $flexWrap="wrap">
+              <TextOnSurface
+                $bg="--custom-surface-primary"
+                $fg="--custom-text-muted"
+              >
+                Muted on Pri
+              </TextOnSurface>
+              <TextOnSurface
+                $bg="--custom-surface-secondary"
+                $fg="--custom-text-muted"
+              >
+                Muted on Sec
+              </TextOnSurface>
+            </OakFlex>
+            {/* Accent text on surfaces (not on accent) */}
+            <OakFlex $gap="spacing-4" $flexWrap="wrap">
+              <TextOnSurface
+                $bg="--custom-surface-primary"
+                $fg="--custom-text-accent"
+              >
+                Accent on Pri
+              </TextOnSurface>
+              <TextOnSurface
+                $bg="--custom-surface-secondary"
+                $fg="--custom-text-accent"
+              >
+                Accent on Sec
+              </TextOnSurface>
+            </OakFlex>
+            {/* Inverse text on inverse surface */}
+            <OakFlex $gap="spacing-4">
+              <TextOnSurface
+                $bg="--custom-surface-inverse"
+                $fg="--custom-text-inverse"
+              >
+                Inverse on Inverse
+              </TextOnSurface>
+            </OakFlex>
           </OakFlex>
         </TokenRow>
 
@@ -366,18 +432,20 @@ function TokenSetCard({
           </OakFlex>
         </TokenRow>
 
-        {/* Interactive Row - 3 tokens */}
+        {/* Interactive Row - 3 tokens with hover + active + focus demos */}
         <TokenRow>
-          <RowLabel>Interactive (3)</RowLabel>
+          <RowLabel>Interactive (3) — hover, click, focus</RowLabel>
           <OakFlex $gap="spacing-8" $alignItems="center">
-            <DemoButton
-              $mode={mode}
+            <HoverButton type="button" aria-label="Hover to see hover state">
+              Hover me
+            </HoverButton>
+            <ActiveButton
+              $highContrast={isHighContrast}
               type="button"
-              onClick={() => setIsClicked(!isClicked)}
-              aria-label="Click to see active state (uses primary + hover)"
+              aria-label="Click to see active state"
             >
               Click me
-            </DemoButton>
+            </ActiveButton>
             <OakBox
               $pa="spacing-8"
               style={{
@@ -593,10 +661,10 @@ function ColorBlindSafeColumn() {
           Pre-computed Named Theme
         </OakP>
         <OakP $font="body-3" $color="grey60">
-          WCAG AAA · Blue-Orange axis
+          WCAG AAA (verified: 17:1, 8.5:1, 7.3:1)
         </OakP>
         <OakP $font="body-3" $color="grey60">
-          No expansion (single theme)
+          Blue-Orange axis · Single theme
         </OakP>
       </HeaderSection>
 
@@ -626,7 +694,7 @@ const meta: Meta<ThemeShowcaseArgs> = {
   argTypes: {
     oneColourPrimary: {
       control: "color",
-      description: "Primary colour for Triadic derivation (120° hue rotations)",
+      description: "Triadic derivation (120° hue rotations)",
       table: {
         category: "One Colour (Triadic)",
         defaultValue: { summary: "#287c34" },
@@ -634,7 +702,7 @@ const meta: Meta<ThemeShowcaseArgs> = {
     },
     twoColourPrimary: {
       control: "color",
-      description: "Primary colour for Split-Complementary derivation",
+      description: "Split-Complementary derivation",
       table: {
         category: "Two Colours (Split-Comp)",
         defaultValue: { summary: "#1e40af" },
@@ -642,7 +710,7 @@ const meta: Meta<ThemeShowcaseArgs> = {
     },
     twoColourSecondary: {
       control: "color",
-      description: "Secondary colour hint for Split-Complementary palette",
+      description: "Secondary hint for Split-Complementary",
       table: {
         category: "Two Colours (Split-Comp)",
         defaultValue: { summary: "#ea580c" },
@@ -672,12 +740,12 @@ Generate accessible themes from brand colours using colour theory.
 
 ## Contrast Targets
 
-| Mode | Target |
-|------|--------|
-| Normal | WCAG AA (4.5:1) |
-| High | Exceeds AAA (≥9:1) |
-| Low | Close to AA (4.5–5:1), muted tones |
-| Colour-Blind Safe | AAA (verified: 17:1, 8.5:1, 7.3:1) |
+| Mode | Target | Active State |
+|------|--------|--------------|
+| Normal | AA (4.5:1) | Lightness change |
+| High | ≥9:1 | Colour change |
+| Low | AA (4.5–5:1) | Lightness change |
+| Colour-Blind Safe | AAA | Colour change |
         `,
       },
     },
@@ -691,8 +759,8 @@ type Story = StoryObj<ThemeShowcaseArgs>;
 /**
  * **Theme Showcase**
  *
- * Compares four theme generation approaches side-by-side.
- * Each column shows input colours, generated base palette, and all 6 Token Sets (16 tokens each).
+ * Demonstrates text tokens on their intended surfaces to show real contrast ratios.
+ * Interactive states: Hover shows hover token, Click shows active behaviour.
  */
 export const ThemeShowcase: Story = {
   render: (args) => (
@@ -721,7 +789,7 @@ export const ThemeShowcase: Story = {
 /**
  * **Interactive**
  *
- * Explore a single theme with full controls.
+ * Single theme with full controls.
  */
 export const Interactive: Story = {
   argTypes: {
