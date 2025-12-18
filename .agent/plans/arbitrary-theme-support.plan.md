@@ -37,23 +37,30 @@ Enable custom token props with consumer-defined colors.
 
 **Delivered:**
 
-1. ✅ Token registry (`customSemanticTokens.ts`) - 16 tokens with derived types
+1. ✅ Token registry (`customSemanticTokens.ts`) - 17 tokens with derived types
 2. ✅ Type extension (`OakCombinedColorToken`)
 3. ✅ `parseColor` update - returns CSS var references for custom tokens
 4. ✅ `CustomThemeProvider` component - with `buildCss` pure function
 5. ✅ Full test coverage - 28 new tests
 6. ✅ Storybook examples - 4 stories (Default, AllTokenCategories, HighContrastDemo, BrandedTheme)
 
-### Phase 2 Summary: Theme Generator
+### Phase 2 Summary: Theme Generator ✅ COMPLETE
 
-Helper function to generate accessible themes from brand colors.
+> **Implemented:** 2025-12-18
 
-**Deliverables:**
+Generate accessible themes from brand colors using colour theory.
 
-1. `generateTheme()` function
-2. `checkContrast()` utility
-3. WCAG 2.2 AA/AAA validation
-4. Storybook examples proving the features work
+**Delivered:**
+
+1. ✅ `generateTheme()` function - triadic/split-complementary derivation
+2. ✅ `deriveTokens()` - 17 semantic tokens from base palette
+3. ✅ `expandSimpleTheme()` - expand SimpleTheme to 6 Token Sets
+4. ✅ `checkWcagContrast()` utility - WCAG 2.2 AA/AAA validation
+5. ✅ Named themes (`festive2025`, `colorBlindSafe`) with pre-computed tokens
+6. ✅ High/Low contrast modes with proper derivation (9:1+ / 4.5-5:1)
+7. ✅ Interactive token with `active` state (17 tokens total)
+8. ✅ Storybook with interactive colour picker, token grids, live demos
+9. ✅ 78 unit tests covering all derivation paths
 
 ### Phase 3 Summary: Advanced Accessibility
 

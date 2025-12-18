@@ -103,14 +103,14 @@ const fullConfig = {
     surface: { primary: "#ffffff", secondary: "#f5f5f5", accent: "#e8f4e8", inverse: "#1a1a1a" },
     text: { primary: "#1a1a1a", muted: "#666666", inverse: "#f0f0f0", accent: "#287c34" },
     border: { subtle: "#e0e0e0", strong: "#1a1a1a", accent: "#287c34" },
-    interactive: { primary: "#287c34", hover: "#1f5f28", focus: "#4a9f54" },
+    interactive: { primary: "#287c34", hover: "#1f5f28", active: "#194b1f", focus: "#4a9f54" },
     shadow: { subtle: "rgba(0,0,0,0.08)", strong: "rgba(0,0,0,0.2)" },
   },
   dark: {
     surface: { primary: "#1a1a1a", secondary: "#2a2a2a", accent: "#1e3a1e", inverse: "#ffffff" },
     text: { primary: "#f0f0f0", muted: "#999999", inverse: "#1a1a1a", accent: "#4a9f54" },
     border: { subtle: "#3a3a3a", strong: "#f0f0f0", accent: "#4a9f54" },
-    interactive: { primary: "#4a9f54", hover: "#5cb565", focus: "#287c34" },
+    interactive: { primary: "#4a9f54", hover: "#5cb565", active: "#3d8a41", focus: "#287c34" },
     shadow: { subtle: "rgba(0,0,0,0.2)", strong: "rgba(0,0,0,0.5)" },
   },
 };
