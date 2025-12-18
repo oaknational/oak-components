@@ -154,12 +154,30 @@ const HighContrastActiveButton = styled.button`
 `;
 
 /**
+ * Surface swatch with border for visibility against themed background
+ */
+const SurfaceSwatch = styled.div<{
+  $surface: "primary" | "secondary" | "accent" | "inverse";
+}>`
+  padding: 8px;
+  border-radius: 4px;
+  background: ${(props) => `var(--custom-surface-${props.$surface})`};
+  border: 1px solid var(--custom-border-subtle);
+  font-size: 9px;
+  color: ${(props) =>
+    props.$surface === "inverse"
+      ? "var(--custom-text-inverse)"
+      : "var(--custom-text-primary)"};
+`;
+
+/**
  * Shadow demo card on surface primary background
  */
 const ShadowDemoCard = styled.div<{ $shadow: "subtle" | "strong" }>`
   padding: 8px 12px;
   border-radius: 4px;
   background: var(--custom-surface-primary);
+  border: 1px solid var(--custom-border-subtle);
   box-shadow: ${(props) =>
     props.$shadow === "subtle"
       ? "var(--custom-shadow-subtle)"
@@ -389,74 +407,14 @@ function TokenSetCard({
     <TokenCardContainer>
       <TokenCardHeader>{label}</TokenCardHeader>
       <ThemePreview theme={theme} mode={mode} contrast={contrast}>
-        {/* Surfaces Row - 4 tokens */}
+        {/* Surfaces Row - 4 tokens with borders for visibility */}
         <TokenRow>
           <RowLabel>Surfaces (4)</RowLabel>
           <OakFlex $gap="spacing-8" $flexWrap="wrap">
-            <SwatchContainer>
-              <OakBox
-                $pa="spacing-8"
-                style={{
-                  background: "var(--custom-surface-primary)",
-                  borderRadius: 4,
-                }}
-              >
-                <OakP
-                  $font="body-3"
-                  style={{ color: "var(--custom-text-primary)", fontSize: 9 }}
-                >
-                  Primary
-                </OakP>
-              </OakBox>
-            </SwatchContainer>
-            <SwatchContainer>
-              <OakBox
-                $pa="spacing-8"
-                style={{
-                  background: "var(--custom-surface-secondary)",
-                  borderRadius: 4,
-                }}
-              >
-                <OakP
-                  $font="body-3"
-                  style={{ color: "var(--custom-text-primary)", fontSize: 9 }}
-                >
-                  Secondary
-                </OakP>
-              </OakBox>
-            </SwatchContainer>
-            <SwatchContainer>
-              <OakBox
-                $pa="spacing-8"
-                style={{
-                  background: "var(--custom-surface-accent)",
-                  borderRadius: 4,
-                }}
-              >
-                <OakP
-                  $font="body-3"
-                  style={{ color: "var(--custom-text-primary)", fontSize: 9 }}
-                >
-                  Accent
-                </OakP>
-              </OakBox>
-            </SwatchContainer>
-            <SwatchContainer>
-              <OakBox
-                $pa="spacing-8"
-                style={{
-                  background: "var(--custom-surface-inverse)",
-                  borderRadius: 4,
-                }}
-              >
-                <OakP
-                  $font="body-3"
-                  style={{ color: "var(--custom-text-inverse)", fontSize: 9 }}
-                >
-                  Inverse
-                </OakP>
-              </OakBox>
-            </SwatchContainer>
+            <SurfaceSwatch $surface="primary">Primary</SurfaceSwatch>
+            <SurfaceSwatch $surface="secondary">Secondary</SurfaceSwatch>
+            <SurfaceSwatch $surface="accent">Accent</SurfaceSwatch>
+            <SurfaceSwatch $surface="inverse">Inverse</SurfaceSwatch>
           </OakFlex>
         </TokenRow>
 
@@ -811,62 +769,10 @@ function ColorBlindSafeColumn() {
           <TokenRow>
             <RowLabel>Surfaces (4)</RowLabel>
             <OakFlex $gap="spacing-8" $flexWrap="wrap">
-              <OakBox
-                $pa="spacing-8"
-                style={{
-                  background: "var(--custom-surface-primary)",
-                  borderRadius: 4,
-                }}
-              >
-                <OakP
-                  $font="body-3"
-                  style={{ color: "var(--custom-text-primary)", fontSize: 9 }}
-                >
-                  Primary
-                </OakP>
-              </OakBox>
-              <OakBox
-                $pa="spacing-8"
-                style={{
-                  background: "var(--custom-surface-secondary)",
-                  borderRadius: 4,
-                }}
-              >
-                <OakP
-                  $font="body-3"
-                  style={{ color: "var(--custom-text-primary)", fontSize: 9 }}
-                >
-                  Secondary
-                </OakP>
-              </OakBox>
-              <OakBox
-                $pa="spacing-8"
-                style={{
-                  background: "var(--custom-surface-accent)",
-                  borderRadius: 4,
-                }}
-              >
-                <OakP
-                  $font="body-3"
-                  style={{ color: "var(--custom-text-primary)", fontSize: 9 }}
-                >
-                  Accent
-                </OakP>
-              </OakBox>
-              <OakBox
-                $pa="spacing-8"
-                style={{
-                  background: "var(--custom-surface-inverse)",
-                  borderRadius: 4,
-                }}
-              >
-                <OakP
-                  $font="body-3"
-                  style={{ color: "var(--custom-text-inverse)", fontSize: 9 }}
-                >
-                  Inverse
-                </OakP>
-              </OakBox>
+              <SurfaceSwatch $surface="primary">Primary</SurfaceSwatch>
+              <SurfaceSwatch $surface="secondary">Secondary</SurfaceSwatch>
+              <SurfaceSwatch $surface="accent">Accent</SurfaceSwatch>
+              <SurfaceSwatch $surface="inverse">Inverse</SurfaceSwatch>
             </OakFlex>
           </TokenRow>
 

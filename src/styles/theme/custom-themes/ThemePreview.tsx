@@ -115,11 +115,16 @@ export function ThemePreview({
       className={className}
       style={{
         ...cssVars,
-        // Set background based on mode for visual context
-        backgroundColor: mode === "light" ? "#ffffff" : "#1a1a1a",
-        color: mode === "light" ? "#1a1a1a" : "#f0f0f0",
+        // Use actual theme surface.primary for background to show real contrast
+        backgroundColor:
+          tokenSet.surface?.primary ??
+          (mode === "light" ? "#ffffff" : "#1a1a1a"),
+        color:
+          tokenSet.text?.primary ?? (mode === "light" ? "#1a1a1a" : "#f0f0f0"),
         padding: "1rem",
         borderRadius: "8px",
+        // Add subtle border using theme border.subtle for visibility
+        border: `1px solid ${tokenSet.border?.subtle ?? "rgba(0,0,0,0.1)"}`,
       }}
       data-theme-mode={mode}
       data-theme-contrast={contrast}
