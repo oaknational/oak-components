@@ -3,6 +3,41 @@
 **Date:** 2025-12-17
 **Status:** Accepted
 
+## Nomenclature
+
+> **Canonical definitions for consistent terminology across all documents.**
+
+| Term | Definition |
+|------|------------|
+| | **Theme Structure** |
+| **Theme** | A set of design tokens (currently colors) that define the appearance of components |
+| **Token Set** | The collection of color values for one mode (e.g., just the light mode values) |
+| **Simple Theme** | A Token Set mapping to single static values — one mode only, no system preference switching |
+| **Partial Theme** | An incomplete theme input requiring derivation. May be incomplete in: (1) **tokens** — only some categories specified, or (2) **modes** — only light or dark, or (3) **both**. Used to generate a Full Theme |
+| **Full Theme** | A complete theme covering the matrix of: light/dark modes × high/normal/low contrast preferences. Applied via modern CSS (`light-dark()`, `@media (prefers-contrast)`) for automatic system preference switching |
+| **Named Theme** | A theme (Simple or Full) identified by a custom name and applied via `data-theme` attribute for explicit scoping |
+| **Brand Colors** | 1-2 input colors expressing brand identity (Intent) |
+| **Generated Theme** | A Full Theme artifact produced by `generateTheme()` from Brand Colors OR a Partial Theme |
+| **Custom Semantic Token** | A `custom-{category}-{name}` token (e.g., `custom-surface-primary`) recognized by `parseColor` |
+| | **Theme Selection** *(see [ADR-0003](./0003-theme-selection.adr.md))* |
+| **Picked Theme** | The user's explicit preference: `light`, `dark`, `high-contrast-*`, a Named Theme, or `system` (defers to OS) |
+| **Resolved Theme** | The actual Simple Theme being applied — either the Picked Theme (if explicit) or the OS-detected preference (if `system`) |
+
+### Theme Matrix
+
+A **Full Theme** covers this preference matrix:
+
+| Color Scheme | Contrast Preference | Token Set Name |
+|--------------|---------------------|----------------|
+| Light | No preference | `light` |
+| Dark | No preference | `dark` |
+| Light | High | `highContrastLight` |
+| Dark | High | `highContrastDark` |
+| Light | Low | `lowContrastLight` (optional) |
+| Dark | Low | `lowContrastDark` (optional) |
+
+**Future:** Color-blind-safe variants may be added as an additional dimension.
+
 ## Context
 
 Consuming applications need to use arbitrary branded colors in Oak Components while maintaining:
