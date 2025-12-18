@@ -8,7 +8,7 @@
 ## Quick Resume
 
 1. Read this document fully
-2. Check current test status: `npm test`
+2. Check current test status: `npm test -- custom-themes`
 3. Pick up from "Remaining Work" section
 
 ---
@@ -17,7 +17,7 @@
 
 ### Phase 1 (Complete)
 
-- Token registry: 16 semantic tokens (`custom-surface-primary`, etc.)
+- Token registry: 17 semantic tokens (`custom-surface-primary`, etc.)
 - `CustomThemeProvider`: React component generating CSS custom properties
 - `parseColor` integration: Recognizes `custom-*` tokens
 
@@ -27,202 +27,141 @@ Generate **Full Themes** (6 Token Sets) from **Brand Colours** or **Simple Theme
 
 ---
 
-## Nomenclature
+## ✅ Completed Work
 
-See [ADR-0002](../../docs/architecture/decision-records/0002-custom-semantic-tokens.adr.md#nomenclature):
+### UI Clarity (Stories)
 
-- **Brand Colours** — 1-2 input hex colours
-- **Simple Theme** — Fully specified Token Set (16 tokens, one mode only)
-- **Base Palette** — 3-colour foundation derived via colour theory
-- **Token Set** — All 16 tokens for one mode/contrast combo
-- **Full Theme** — 6 Token Sets (light/dark × 3 contrasts)
-- **Named Theme** — Pre-computed Simple Theme stored with a name
+- [x] Palette swatches with hex labels
+- [x] Full labels (no abbreviations)
+- [x] Token Set cards organised by role
+- [x] Card borders
+- [x] Click me: no hover, colour on click
+- [x] Shadows on elevated cards
+- [x] Colour theory labels (Triadic/Split-Comp)
 
----
+### Contrast Strategy
 
-## 🔴 Remaining Work
+- [x] High contrast: ≥9:1 (white/black surfaces)
+- [x] Low contrast: 4.5–5:1 (muted tones)
 
-### UI Issues (from feedback)
+### Named Themes
 
-| Issue | Fix |
-|-------|-----|
-| Palette swatches have no hex labels | Show colour blocks with hex code underneath |
-| Abbreviations unclear ("Sec", "Acc", "Sub") | Use full labels: "Secondary Surface", "Text Accent", etc. |
-| Primary surface not visible | Show all 4 surfaces in a row |
-| Token cards lack structure | Organise by role: Surfaces row, Text row, Borders row, Interactive row, Shadows row |
-| Light mode cards lack borders | Add visible border around each Token Set card |
-| Click me has hover styling | Remove hover styling, only show active state on click |
-| Shadows not shown in context | Use shadows on elevated cards |
+- [x] SimpleTheme type
+- [x] festive-2025 Simple Theme (fully specified)
+- [x] expandSimpleTheme() function
+- [x] Storybook updated
 
-### Contrast Issues (from feedback)
+### Colour-Blind Safe
 
-| Issue | Fix |
-|-------|-----|
-| High contrast dark identical to dark | Force more variation: exceed AAA (9:1+) for high contrast |
-| Contrast calculations not used | Verify and enforce contrast in derivation |
-| Low contrast too similar | Hit close to AA (4.5:1), use more muted tones |
+- [x] Pre-computed (AAA, blue-orange)
+- [x] Single theme, no expansion
+- [x] Uses TokenSetCard with useHighContrastButtons=true
 
-### Named Theme Issues (from feedback)
+### Interactive Token (interactive.active)
 
-| Issue | Fix |
-|-------|-----|
-| Named theme uses two colours | Input should be a **fully specified Simple Theme** (16 tokens) |
-| `expandSimpleTheme()` needed | Derive other 5 Token Sets from the provided one |
+- [x] Added to GeneratedThemeColors interface (17 total tokens)
+- [x] deriveTokens.ts: derives active with 2x lightness shift
+- [x] expandSimpleTheme.ts: shares derivation logic with deriveTokens
+- [x] Named themes updated with active values
+- [x] ThemePreview.tsx: generates --custom-interactive-active CSS var
+- [x] Stories: buttons use active token for :active state
 
-### Colour-Blind Safe Issues (from feedback)
+### DRY Improvements
 
-| Issue | Fix |
-|-------|-----|
-| Generated dynamically | Should be a **pre-computed Named Theme** |
-| Supports modes×contrast | Only provide one selectable theme (no variants) |
-| Minimum AAA | Pre-computed theme meets AAA |
-
----
-
-## Contrast Strategy (Revised)
-
-| Mode | Target | Method |
-|------|--------|--------|
-| Normal | WCAG 2.2 AA (4.5:1) | Standard derivation |
-| High Contrast | **Exceed AAA (≥9:1)** | Force whites/blacks, max separation |
-| Low Contrast | **Hit close to AA (4.5:1–5:1)** | Muted tones, softer transitions |
-
-> High contrast must be **visibly different** from normal mode.
-> Low contrast should feel "softer" while remaining accessible.
+- [x] expandSimpleTheme.ts: removed 17 hardcoded hex colours
+- [x] ThemePreview: pure CSS variable provider (no styling)
+- [x] BaseButton: shared button styles with 4 extending variants
+- [x] TokensGrid: config array with .map() instead of hardcoded calls
+- [x] TOKEN_SET_VARIANTS: config for 6 mode×contrast combinations
+- [x] GeneratedThemeColumn / NamedThemeColumn: use .map() iteration
+- [x] ColorBlindSafeColumn: reuses TokenSetCard component
 
 ---
 
-## Type Definitions (Revised)
+## 🔶 Remaining Work (Optional Improvements)
+
+### Low Priority DRY
+
+| Item | Status | Notes |
+|------|--------|-------|
+| Border demo boxes | Could iterate | 3 similar OakBox structures |
+| TextOnSurface combinations | Could be config-driven | Currently documentation-like clarity |
+| HexLabel/TokenGroupLabel #666/#999 | Outside theme context | Storybook-only styling |
+
+### Future Enhancements
+
+| Feature | Description |
+|---------|-------------|
+| CustomThemeProvider integration | Wire generateTheme into actual provider component |
+| Dark mode SSR | Handle server-side rendering with correct mode |
+| Theme persistence | LocalStorage/cookie for user preference |
+| Animation tokens | Transition timing from theme |
+| Export utilities | CSS file generation from theme |
+
+---
+
+## Current Architecture
+
+### Files
+
+| File | Purpose |
+|------|---------|
+| `colorUtils.ts` | OKLCH colour manipulation (adjustLightness, desaturate, etc.) |
+| `contrastUtils.ts` | WCAG contrast checks and adjustments |
+| `deriveTokens.ts` | Generate 17 tokens from brand palette |
+| `expandSimpleTheme.ts` | Expand SimpleTheme to 6 Token Sets |
+| `generateTheme.ts` | Main API: generateTheme(), generateSingleTokenSet() |
+| `namedThemes.ts` | Pre-defined themes (festive2025, colorBlindSafe) |
+| `themeTypes.ts` | Type definitions (BrandColors, GeneratedTheme, etc.) |
+| `ThemePreview.tsx` | Storybook preview with explicit mode selection |
+| `generateTheme.stories.tsx` | Interactive Storybook demonstration |
+| `customSemanticTokens.ts` | Token registry and type generation |
+
+### Key Types
 
 ```typescript
-// Simple Theme: fully specified single mode
+interface BrandColors {
+  primary: string;
+  secondary?: string;
+}
+
+interface GeneratedThemeColors {
+  surface: { primary, secondary, accent, inverse };
+  text: { primary, muted, accent, inverse };
+  border: { subtle, strong, accent };
+  interactive: { primary, hover, active, focus }; // 4 tokens
+  shadow: { subtle, strong };
+}
+
+interface GeneratedTheme {
+  light: GeneratedThemeColors;
+  dark: GeneratedThemeColors;
+  highContrastLight: GeneratedThemeColors;
+  highContrastDark: GeneratedThemeColors;
+  lowContrastLight: GeneratedThemeColors;
+  lowContrastDark: GeneratedThemeColors;
+}
+
 interface SimpleTheme {
   name: string;
   mode: "light" | "dark";
   tokens: GeneratedThemeColors;
 }
-
-// Named Theme Registry
-const namedThemes: Record<string, SimpleTheme> = {
-  "festive-2025": { name: "festive-2025", mode: "light", tokens: {...} },
-  "colour-blind-safe": { name: "colour-blind-safe", mode: "light", tokens: {...} },
-};
-
-// Colour-Blind Safe is a standalone theme (no modes×contrast expansion)
-const colorBlindSafeTheme: GeneratedThemeColors = namedThemes["colour-blind-safe"].tokens;
 ```
-
----
-
-## API (Revised)
-
-```typescript
-// Generate from Brand Colours (with expansion)
-function generateTheme(
-  brand: BrandColors,
-  options?: { contrast?: "AA" | "AAA" }
-): GenerateThemeResult
-
-// Expand Simple Theme to Full Theme
-function expandSimpleTheme(
-  simple: SimpleTheme
-): GeneratedTheme
-
-// Get pre-computed Named Theme
-function getNamedTheme(
-  name: "festive-2025" | "colour-blind-safe"
-): SimpleTheme | GeneratedTheme
-```
-
----
-
-## Storybook Demonstration (Revised)
-
-### ThemeShowcase Layout
-
-```text
-┌────────────────────┬────────────────────┬────────────────────┬────────────────────┐
-│ One Colour         │ Two Colours        │ Festive 2025       │ Colour-Blind Safe  │
-├────────────────────┼────────────────────┼────────────────────┼────────────────────┤
-│ Input: [■ #287c34] │ Input: [■ #1e40af] │ Input: Simple Theme│ Pre-computed       │
-│                    │        [■ #ea580c] │ (fully specified)  │ Named Theme        │
-├────────────────────┼────────────────────┼────────────────────┼────────────────────┤
-│ Base Palette:      │ Base Palette:      │ N/A (tokens given) │ N/A (fixed)        │
-│ [■ #287c34]        │ [■ #1e40af]        │                    │                    │
-│ [■ #7c3498]        │ [■ #ea580c]        │                    │                    │
-│ [■ #a86432]        │ [■ #16a085]        │                    │                    │
-├────────────────────┼────────────────────┼────────────────────┼────────────────────┤
-│ Light (6 sets)     │ Light (6 sets)     │ Light (6 sets)     │ Single theme       │
-│ Dark               │ Dark               │ Dark               │ (no expansion)     │
-│ HC-Light           │ HC-Light           │ HC-Light           │                    │
-│ HC-Dark            │ HC-Dark            │ HC-Dark            │                    │
-│ LC-Light           │ LC-Light           │ LC-Light           │                    │
-│ LC-Dark            │ LC-Dark            │ LC-Dark            │                    │
-└────────────────────┴────────────────────┴────────────────────┴────────────────────┘
-```
-
-### Token Set Card Layout (Revised)
-
-Each Token Set card with border:
-
-```text
-┌─────────────────────────────────────────────────────────┐
-│ Light Mode (Normal Contrast)                            │
-├─────────────────────────────────────────────────────────┤
-│ SURFACES                                                │
-│ [■ Primary]  [■ Secondary]  [■ Accent]  [■ Inverse]     │
-│  #ffffff      #f5e0d0        #e0d5f0     #1a1a1a        │
-├─────────────────────────────────────────────────────────┤
-│ TEXT                                                    │
-│ Primary text    Muted text    Accent text    Inverse    │
-├─────────────────────────────────────────────────────────┤
-│ BORDERS                                                 │
-│ ┌─Subtle─┐  ┌─Strong─┐  ┌─Accent─┐                      │
-├─────────────────────────────────────────────────────────┤
-│ INTERACTIVE                                             │
-│ [Click me]  [Focus demo]                                │
-├─────────────────────────────────────────────────────────┤
-│ SHADOWS                                                 │
-│ ┌────────┐  ┌────────┐                                  │
-│ │ Subtle │  │ Strong │  (elevated cards)                │
-│ └────────┘  └────────┘                                  │
-└─────────────────────────────────────────────────────────┘
-```
-
-### Interactive Elements (Revised)
-
-- **Click me** — No hover styling. On click: changes colour (lighter in dark mode, darker in light mode)
-- **Focus demo** — Static focus ring display
-
----
-
-## Implementation Steps
-
-1. **Update contrast derivation** — Enforce 9:1+ for high contrast, 4.5–5:1 for low
-2. **Create Simple Theme type** — Fully specified 16 tokens
-3. **Create Named Theme registry** — festive-2025, colour-blind-safe
-4. **Implement `expandSimpleTheme()`** — Generate 5 other Token Sets from one
-5. **Pre-compute colour-blind-safe** — Store as Named Theme with AAA
-6. **Update Storybook UI** — Full labels, hex codes, organised rows, borders
-7. **Fix Click me button** — Remove hover, use active state with colour change
-8. **Add shadow context demos** — Elevated cards
 
 ---
 
 ## Quality Gates
 
 ```bash
-npm run check  # type-check, lint, format:check, test:ci
+npm run check-types   # TypeScript
+npm test -- custom-themes --watchAll=false  # 78 tests
 ```
 
 ---
 
-## RULES
+## Related Documents
 
-- WCAG 2.2 AA minimum for all themes
-- WCAG 2.2 AAA minimum for colour-blind-safe theme
-- High contrast exceeds AAA (≥9:1) for visible distinction
-- Low contrast close to AA (4.5–5:1) with muted tones
-- No non-null assertions
-- All functions pure
-- TDD approach
+- [ADR-0002: Custom Semantic Tokens](../../docs/architecture/decision-records/0002-custom-semantic-tokens.adr.md)
+- [arbitrary-theme-support.plan.md](./arbitrary-theme-support.plan.md)
+- [theme-input-examples.appendix.md](./theme-input-examples.appendix.md)
