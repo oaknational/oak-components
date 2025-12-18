@@ -21,6 +21,13 @@ exports[`OakCATQuestion matches snapshot 1`] = `
 .c7 {
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
 }
 
 .c9 {
@@ -53,7 +60,12 @@ exports[`OakCATQuestion matches snapshot 1`] = `
   overflow: auto;
 }
 
-.c19 {
+.c17 {
+  width: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c20 {
   padding-left: 2rem;
   padding-right: 2rem;
   padding-top: 1.5rem;
@@ -117,7 +129,7 @@ exports[`OakCATQuestion matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c17 {
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -128,7 +140,7 @@ exports[`OakCATQuestion matches snapshot 1`] = `
   gap: 3rem;
 }
 
-.c18 {
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -141,14 +153,14 @@ exports[`OakCATQuestion matches snapshot 1`] = `
   align-self: stretch;
 }
 
-.c21 {
+.c22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c23 {
+.c24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -166,7 +178,7 @@ exports[`OakCATQuestion matches snapshot 1`] = `
   object-fit: contain;
 }
 
-.c20 {
+.c21 {
   display: grid;
   grid-template-columns: repeat(12,1fr);
   width: 100%;
@@ -174,7 +186,7 @@ exports[`OakCATQuestion matches snapshot 1`] = `
   column-gap: 1.25rem;
 }
 
-.c22 {
+.c23 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -183,7 +195,7 @@ exports[`OakCATQuestion matches snapshot 1`] = `
   grid-row: span 1;
 }
 
-.c25 {
+.c26 {
   color: #575757;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
@@ -195,7 +207,7 @@ exports[`OakCATQuestion matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c24 {
+.c25 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -303,30 +315,30 @@ exports[`OakCATQuestion matches snapshot 1`] = `
             role="region"
           >
             <div
-              class="c7 c17"
+              class="c17 c18"
             >
               <div
-                class="c5 c18"
+                class="c5 c19"
               >
                 <div>
                   Answers Section
                 </div>
               </div>
               <div
-                class="c19 c20"
+                class="c20 c21"
               >
                 <div
-                  class="c5 c21 c22"
+                  class="c5 c22 c23"
                 >
                   <div
-                    class="c5 c23"
+                    class="c5 c24"
                   >
                     <label
-                      class="c24"
+                      class="c25"
                       for="hintInputId"
                     >
                       <span
-                        class="c25"
+                        class="c26"
                       >
                         Hint
                       </span>
@@ -337,17 +349,17 @@ exports[`OakCATQuestion matches snapshot 1`] = `
                   </div>
                 </div>
                 <div
-                  class="c5 c21 c22"
+                  class="c5 c22 c23"
                 >
                   <div
-                    class="c5 c23"
+                    class="c5 c24"
                   >
                     <label
-                      class="c24"
+                      class="c25"
                       for="feedbackInputId"
                     >
                       <span
-                        class="c25"
+                        class="c26"
                       >
                         Feedback
                       </span>
