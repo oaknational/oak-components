@@ -66,3 +66,11 @@ export type { SimpleTheme } from "./namedThemes";
 
 // Simple Theme expansion
 export { expandSimpleTheme } from "./expandSimpleTheme";
+
+// CustomThemeProvider - React component for applying custom themes
+export { CustomThemeProvider } from "./CustomThemeProvider";
+export type {
+  CustomThemeConfig,
+  CustomThemeColors,
+  CustomThemeProviderProps,
+} from "./CustomThemeProvider";
