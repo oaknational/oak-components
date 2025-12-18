@@ -1,4 +1,4 @@
-import { CustomSemanticToken } from "./customSemanticTokens";
+import { CustomSemanticToken } from "./custom-themes/customSemanticTokens";
 
 export const oakColorTokens = {
   white: "#ffffff",

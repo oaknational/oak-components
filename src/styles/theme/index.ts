@@ -43,24 +43,18 @@ export type { OakZIndexToken } from "./zIndex";
 export { oakDefaultTheme } from "./default.theme";
 export { oakDarkTheme } from "./dark.theme";
 
-// Phase 1: Custom semantic tokens
+// Custom themes (Phase 1 + Phase 2)
 export {
+  // Token registry
   customSemanticTokens,
+  customSemanticTokenSpec,
   isCustomSemanticToken,
-} from "./customSemanticTokens";
-export type { CustomSemanticToken } from "./customSemanticTokens";
-
-// Phase 2: Theme generator
-export { generateTheme } from "./generateTheme";
-export type {
-  GenerateThemeOptions,
-  GenerateThemeResult,
-} from "./generateTheme";
-
-export { checkContrast, ensureContrast } from "./contrastUtils";
-export type { ContrastResult, EnsureContrastResult } from "./contrastUtils";
-
-export {
+  // Theme generation
+  generateTheme,
+  // Contrast utilities
+  checkContrast,
+  ensureContrast,
+  // Color utilities
   hexToOklch,
   oklchToHex,
   getContrastRatio,
@@ -68,5 +62,19 @@ export {
   adjustHue,
   isValidHex,
   expandHex,
-} from "./colorUtils";
-export type { OklchColor } from "./colorUtils";
+  // Token derivation
+  deriveThemeColors,
+} from "./custom-themes";
+
+export type {
+  CustomSemanticToken,
+  BrandColors,
+  GeneratedTheme,
+  GeneratedThemeColors,
+  GenerateThemeOptions,
+  GenerateThemeResult,
+  ContrastResult,
+  EnsureContrastResult,
+  OklchColor,
+  DeriveContext,
+} from "./custom-themes";

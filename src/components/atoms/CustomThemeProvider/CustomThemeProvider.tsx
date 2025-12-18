@@ -2,7 +2,7 @@ import React, { useMemo, type JSX } from "react";
 
 import { buildCss } from "./buildCss";
 
-import { customSemanticTokenSpec } from "@/styles/theme/customSemanticTokens";
+import { customSemanticTokenSpec } from "@/styles/theme/custom-themes/customSemanticTokens";
 
 /**
  * Color values for a single theme mode.

@@ -3,7 +3,7 @@ import type {
   CustomThemeConfig,
 } from "./CustomThemeProvider";
 
-import { customSemanticTokenSpec } from "@/styles/theme/customSemanticTokens";
+import { customSemanticTokenSpec } from "@/styles/theme/custom-themes/customSemanticTokens";
 
 /**
  * Generates CSS custom properties for custom theme tokens.

@@ -5,7 +5,7 @@ import {
   oakColorTokens,
   oakUiRoleTokens,
 } from "@/styles/theme/color";
-import { isCustomSemanticToken } from "@/styles/theme/customSemanticTokens";
+import { isCustomSemanticToken } from "@/styles/theme/custom-themes/customSemanticTokens";
 import { PropsWithTheme } from "@/styles/theme/theme";
 
 /**
