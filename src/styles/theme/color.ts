@@ -200,11 +200,6 @@ export type OakUiRoleToken = (typeof oakUiRoleTokensConst)[number];
 
 export const oakUiRoleTokens = [...oakUiRoleTokensConst];
 
-export type UiRoleMap = Record<
-  OakUiRoleToken,
-  OakColorToken | null | undefined
->;
-
 /**
  * Extensible interface for plugin-provided color tokens.
  * External packages can augment this via TypeScript declaration merging:
@@ -221,5 +216,16 @@ export interface OakColorTokenExtensions {}
 
 export type OakCombinedColorToken =
   | OakColorToken
-  | OakUiRoleToken
-  | OakColorTokenExtensions[keyof OakColorTokenExtensions];
+  | OakColorTokenExtensions[keyof OakColorTokenExtensions]
+  | OakUiRoleToken;
+
+/**
+ * Semantic color roles for Oak components.
+ */
+export type UiRoleMap = Record<
+  OakUiRoleToken,
+  | OakColorToken
+  | OakColorTokenExtensions[keyof OakColorTokenExtensions]
+  | null
+  | undefined
+>;
