@@ -200,9 +200,32 @@ export type OakUiRoleToken = (typeof oakUiRoleTokensConst)[number];
 
 export const oakUiRoleTokens = [...oakUiRoleTokensConst];
 
+/**
+ * Extensible interface for plugin-provided color tokens.
+ * External packages can augment this via TypeScript declaration merging:
+ *
+ * @example
+ * declare module "@oaknational/oak-components" {
+ *   interface OakColorTokenExtensions {
+ *     customTheme: "custom-surface-primary" | "custom-text-muted" | ...;
+ *   }
+ * }
+ */
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface OakColorTokenExtensions {}
+
+export type OakCombinedColorToken =
+  | OakColorToken
+  | OakColorTokenExtensions[keyof OakColorTokenExtensions]
+  | OakUiRoleToken;
+
+/**
+ * Semantic color roles for Oak components.
+ */
 export type UiRoleMap = Record<
   OakUiRoleToken,
-  OakColorToken | null | undefined
+  | OakColorToken
+  | OakColorTokenExtensions[keyof OakColorTokenExtensions]
+  | null
+  | undefined
 >;
-
-export type OakCombinedColorToken = OakColorToken | OakUiRoleToken;
