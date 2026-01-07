@@ -29,8 +29,12 @@ describe("CaptionCard", () => {
 
   it("matches snapshot", () => {
     const date = new Date();
-    const currentDateString =
-      date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
+    const dateString =
+      date.getFullYear() +
+      "-" +
+      (date.getMonth() + 1) +
+      "-" +
+      (date.getDate() - 1);
 
     const { container } = renderWithTheme(
       <OakCaptionCard
@@ -38,8 +42,8 @@ describe("CaptionCard", () => {
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-01234"}
         videoType={"lesson"}
-        lastUpdated={currentDateString}
-        lastEdited={currentDateString}
+        lastUpdated={dateString}
+        lastEdited={dateString}
         checked={false}
         highlighted={false}
         onCheckChanged={() => {}}
