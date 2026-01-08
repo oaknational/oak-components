@@ -66,6 +66,8 @@ export type OakSpaceBetweenToken = keyof typeof oakSpaceBetweenTokens;
 
 type AdditionalSpacingTypes =
   | "100%"
+  | "-50%"
+  | "50%"
   | 0
   | "100vh"
   | "100vw"
