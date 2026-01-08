@@ -14,9 +14,9 @@ import { OakLabel } from "@/components/atoms/OakLabel";
 import { OakHeading } from "@/components/atoms/OakHeading";
 
 const meta: Meta<typeof OakFieldset> = {
+  tags: ["autodocs"],
   title: "Components/atoms/OakFieldset",
   component: OakFieldset,
-  tags: ["autodocs"],
   argTypes: {
     ...colorArgTypes,
     ...sizeArgTypes,

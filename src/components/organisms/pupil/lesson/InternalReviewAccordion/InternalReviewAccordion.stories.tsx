@@ -6,6 +6,8 @@ import { InternalReviewAccordion } from "./InternalReviewAccordion";
 const meta: Meta<typeof InternalReviewAccordion> = {
   component: InternalReviewAccordion,
   tags: ["autodocs"],
+  title:
+    "components/molecules/OakAccordion (🔀 to be merged)/InternalReviewAccordion",
   parameters: {
     controls: {
       include: ["expandableLabel", "headerAfterSlot", "children"],

@@ -16,6 +16,8 @@ import { OakQuizCounter } from "@/components/organisms/pupil/quiz/OakQuizCounter
 const meta: Meta<typeof OakLessonLayout> = {
   component: OakLessonLayout,
   tags: ["autodocs"],
+  title:
+    "components/organisms/OWA (❌ to be moved out)/pupil/lesson/OakLessonLayout",
 
   decorators: [(Story) => <Story />],
   argTypes: {

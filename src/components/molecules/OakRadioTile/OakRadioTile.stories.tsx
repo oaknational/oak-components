@@ -4,9 +4,9 @@ import { StoryObj, Meta } from "@storybook/react";
 import { OakRadioTile } from "./OakRadioTile";
 
 const meta: Meta<typeof OakRadioTile> = {
-  title: "Components/molecules/OakRadioTile",
   component: OakRadioTile,
   tags: ["autodocs"],
+  title: "components/molecules/OWA (❌ to be moved out)/OakRadioTile",
   argTypes: {
     isChecked: { control: "boolean" },
   },

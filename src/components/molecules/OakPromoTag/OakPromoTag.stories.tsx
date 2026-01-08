@@ -6,7 +6,7 @@ import { OakPromoTag } from "./OakPromoTag";
 const meta: Meta<typeof OakPromoTag> = {
   component: OakPromoTag,
   tags: ["autodocs"],
-  title: "components/molecules/OakPromoTag",
+  title: "components/molecules/OWA (❌ to be moved out)/OakPromoTag",
 };
 export default meta;
 

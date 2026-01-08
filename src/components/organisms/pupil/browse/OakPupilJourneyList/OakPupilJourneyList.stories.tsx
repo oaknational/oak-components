@@ -16,6 +16,8 @@ import { OakFlex } from "@/components/atoms/OakFlex";
 const meta: Meta<typeof OakPupilJourneyList> = {
   component: OakPupilJourneyList,
   tags: ["autodocs"],
+  title:
+    "components/organisms/OWA (❌ to be moved out)/pupil/browse/OakPupilJourneyList",
 
   argTypes: {
     phase: { control: { options: ["primary", "secondary"] } },

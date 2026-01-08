@@ -4,9 +4,9 @@ import { StoryObj, Meta } from "@storybook/react";
 import { OakCodeRenderer } from "./OakCodeRenderer";
 
 const meta: Meta<typeof OakCodeRenderer> = {
-  title: "Components/organisms/shared/OakCodeRenderer",
   component: OakCodeRenderer,
   tags: ["autodocs"],
+  title: "components/organisms/OWA (❌ to be moved out)/shared/OakCodeRenderer",
   parameters: {
     controls: {
       include: ["string", "type"],

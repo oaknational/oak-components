@@ -14,7 +14,8 @@ const controlIconNames = [
 const meta: Meta<typeof OakSmallSecondaryToggleButton> = {
   component: OakSmallSecondaryToggleButton,
   tags: ["autodocs"],
-  title: "components/molecules/OakSmallSecondaryToggleButton",
+  title:
+    "components/molecules/OWA (❌ to be moved out)/OakSmallSecondaryToggleButton",
   argTypes: {
     toggleOn: {
       control: "boolean",

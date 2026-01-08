@@ -1,6 +1,9 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, ElementType } from "react";
 
-import { OakSecondaryButtonProps } from "@/components/molecules/OakSecondaryButton";
+import {
+  OakSecondaryButton,
+  OakSecondaryButtonProps,
+} from "@/components/molecules/OakSecondaryButton";
 import { OakBox, OakFlex, OakIconName } from "@/components/atoms";
 import { ResponsiveValues } from "@/styles/utils/responsiveStyle";
 import {
@@ -193,4 +196,17 @@ OakButtonWithDropdown.Divider = (): React.ReactElement => (
     $borderColor="border-neutral-lighter"
     aria-hidden="true"
   />
+);
+
+OakButtonWithDropdown.Item = <C extends ElementType = "button">({
+  children,
+  element,
+  ...rest
+}: {
+  children: React.ReactNode;
+} & OakSecondaryButtonProps &
+  PolymorphicPropsWithoutRef<C>): React.ReactElement => (
+  <OakSecondaryButton element="a" role="menuitem" isTrailingIcon {...rest}>
+    {children}
+  </OakSecondaryButton>
 );

@@ -8,6 +8,7 @@ import { OakMaxWidth } from "@/components/atoms";
 const meta: Meta<typeof OakQuote> = {
   component: OakQuote,
   tags: ["autodocs"],
+  title: "components/organisms/OakQuote",
   argTypes: {
     quote: { type: "string" },
     color: { type: "string" },

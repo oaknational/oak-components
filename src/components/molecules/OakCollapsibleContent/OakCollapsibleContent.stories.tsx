@@ -10,7 +10,8 @@ import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 const meta: Meta<typeof OakCollapsibleContent> = {
   component: OakCollapsibleContent,
   tags: ["autodocs"],
-  title: "components/molecules/OakCollapsibleContent",
+  title:
+    "components/molecules/OakAccordion (🔀 to be merged)/OakCollapsibleContent",
   argTypes: {
     ...sizeArgTypes,
   },

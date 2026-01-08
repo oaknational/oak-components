@@ -22,7 +22,7 @@ const controlIconFillNames = [
 const meta: Meta<typeof OakLinkCard> = {
   component: OakLinkCard,
   tags: ["autodocs"],
-  title: "components/molecules/OakLinkCard",
+  title: "components/molecules/OWA (❌ to be moved out)/OakLinkCard",
   argTypes: {
     iconName: {
       options: controlIconNames,

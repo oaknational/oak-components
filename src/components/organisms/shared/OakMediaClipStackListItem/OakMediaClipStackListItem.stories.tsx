@@ -5,9 +5,10 @@ import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import { OakMediaClipStackListItem } from "./OakMediaClipStackListItem";
 
 const meta: Meta<typeof OakMediaClipStackListItem> = {
-  title: "Components/organisms/teacher/OakMediaClipStackListItem",
   component: OakMediaClipStackListItem,
   tags: ["autodocs"],
+  title:
+    "components/organisms/OWA (❌ to be moved out)/shared/OakMediaClipStackListItem",
   argTypes: {
     title: { control: "text" },
     numberOfClips: { control: "number" },

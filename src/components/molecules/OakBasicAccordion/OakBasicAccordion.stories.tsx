@@ -6,7 +6,8 @@ import { OakBasicAccordion } from "./OakBasicAccordion";
 const meta: Meta<typeof OakBasicAccordion> = {
   component: OakBasicAccordion,
   tags: ["autodocs"],
-  title: "components/molecules/OakBasicAccordion",
+  title:
+    "components/molecules/OakAccordion (🔀 to be merged)/OakBasicAccordion",
   parameters: {
     controls: {
       include: ["header", "headerAfterSlot", "children", "subheading"],

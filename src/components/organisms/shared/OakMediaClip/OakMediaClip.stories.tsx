@@ -6,9 +6,9 @@ import { OakMediaClip } from "./OakMediaClip";
 import { OakFlex, OakUL } from "@/components/atoms";
 
 const meta: Meta<typeof OakMediaClip> = {
-  title: "Components/organisms/teacher/OakMediaClip",
   component: OakMediaClip,
   tags: ["autodocs"],
+  title: "components/organisms/OWA (❌ to be moved out)/shared/OakMediaClip",
   args: {
     clipName: "Standard Clip Name",
     learningCycle: "Learning Cycle",

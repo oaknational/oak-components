@@ -6,9 +6,10 @@ import { OakMediaClipList } from "./OakMediaClipList";
 import { OakMediaClip } from "@/components/organisms/shared/OakMediaClip/OakMediaClip";
 
 const meta: Meta<typeof OakMediaClipList> = {
-  title: "Components/organisms/teacher/OakMediaClipList",
   component: OakMediaClipList,
   tags: ["autodocs"],
+  title:
+    "components/organisms/OWA (❌ to be moved out)/shared/OakMediaClipList",
   argTypes: {
     lessonTitle: { control: "text" },
   },
