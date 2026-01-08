@@ -60,4 +60,38 @@ describe("OakSaveCount", () => {
     );
     expect(container).toMatchSnapshot();
   });
+
+  it("applies the correct aria label when count is set", () => {
+    render(
+      <OakThemeProvider theme={oakDefaultTheme}>
+        <OakSaveCount {...defaultProps} />
+      </OakThemeProvider>,
+    );
+
+    expect(
+      screen.getByLabelText("My library: 0 saved units"),
+    ).toBeInTheDocument();
+  });
+
+  it("pluralises the count correctly", () => {
+    render(
+      <OakThemeProvider theme={oakDefaultTheme}>
+        <OakSaveCount {...defaultProps} count={1} />
+      </OakThemeProvider>,
+    );
+
+    expect(
+      screen.getByLabelText("My library: 1 saved unit"),
+    ).toBeInTheDocument();
+  });
+
+  it("applies the correct aria label when no count  is provided", () => {
+    render(
+      <OakThemeProvider theme={oakDefaultTheme}>
+        <OakSaveCount {...defaultProps} count={undefined} label="My library" />
+      </OakThemeProvider>,
+    );
+
+    expect(screen.getByLabelText("My library")).toBeInTheDocument();
+  });
 });

@@ -1,18 +1,27 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`OakSaveCount should match snapshot 1`] = `
-.c3 {
-  width: 2rem;
+.c2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 2rem;
   height: 2rem;
-  padding: 0rem;
   background: #dff9de;
   border: 0.063rem solid;
   border-color: #bef2bd;
   border-radius: 0.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
 }
 
-.c5 {
+.c4 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -21,18 +30,16 @@ exports[`OakSaveCount should match snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c7 {
-  width: 1.5rem;
+.c6 {
   display: none;
   font-family: --var(google-font),Lexend,sans-serif;
-  text-align: center;
 }
 
-.c6 {
+.c5 {
   object-fit: contain;
 }
 
-.c4 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -45,30 +52,11 @@ exports[`OakSaveCount should match snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  gap: 0.25rem;
 }
 
-.c8 {
+.c7 {
   font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
-  letter-spacing: 0.0115rem;
-}
-
-.c2 {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
-  white-space: nowrap;
-  border: 0;
 }
 
 .c0 {
@@ -98,25 +86,25 @@ exports[`OakSaveCount should match snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c3 {
-    width: 3.5rem;
+  .c2 {
+    padding-left: 0.25rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c2 {
+    padding-right: 0.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c6 {
+    display: contents;
   }
 }
 
 @media (min-width:750px) {
   .c3 {
-    padding: 0.25rem;
-  }
-}
-
-@media (min-width:750px) {
-  .c7 {
-    display: block;
-  }
-}
-
-@media (min-width:750px) {
-  .c4 {
     -webkit-box-pack: initial;
     -webkit-justify-content: initial;
     -ms-flex-pack: initial;
@@ -126,25 +114,20 @@ exports[`OakSaveCount should match snapshot 1`] = `
 
 <div>
   <a
-    aria-label="0 saved units"
+    aria-label="My library: 0 saved units"
     class="c0 c1"
     href="#"
   >
-    <span
-      class="c2"
-    >
-      View my library
-    </span>
     <div
-      class="c3 c4 oak-save-count"
+      class="c2 c3 oak-save-count"
     >
       <div
-        class="c5"
+        class="c4"
         data-testid="bookmark-outlined"
       >
         <img
           alt=""
-          class="c6"
+          class="c5"
           data-nimg="fill"
           decoding="async"
           loading="lazy"
@@ -153,12 +136,15 @@ exports[`OakSaveCount should match snapshot 1`] = `
         />
       </div>
       <div
-        class="c7"
+        class="c6"
       >
+        My library
         <span
-          class="c8"
+          class="c7"
         >
+          (
           0
+          )
         </span>
       </div>
     </div>
