@@ -29,6 +29,9 @@ const StyledInternalLink = styled(InternalLink)``;
  * A black link with an optional icon and loading state.
  *
  * Defaulting to a `HTMLAnchorElement` this component is polymorphic and can be rendered as a button or any other element.
+ *
+ * ## To be merged 🔀
+ * This component will be a variant of `OakLink` component
  */
 export const OakSecondaryLink: OakLinkComponent = forwardRef(
   <C extends ElementType = "a">(

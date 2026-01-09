@@ -23,7 +23,10 @@ export type OakSecondaryButtonWithDropdownProps = {
 };
 
 /**
- * A oak secondary button that takes custom menu items or .Item and .Divider compound components as children.
+ * A secondary button that takes custom menu items or .Item and .Divider compound components as children.
+ *
+ * ## To be merged 🔀
+ * This component will become a variant of `OakButtonWithDropdown`
  */
 export const OakSecondaryButtonWithDropdown = (
   props: OakSecondaryButtonWithDropdownProps,

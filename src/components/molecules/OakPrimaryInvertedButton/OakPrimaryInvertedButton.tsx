@@ -25,6 +25,9 @@ export type OakPrimaryInvertedButtonProps = Omit<
  *
  * The following callbacks are available for tracking focus events:
  *
+ * ## To be merged 🔀
+ * This component will become a variant of `OakButton` component
+ *
  * ### onClick
  * `onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;`
  *

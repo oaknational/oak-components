@@ -39,7 +39,6 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        // method: '',
         order: [
           "components",
           [
@@ -58,7 +57,6 @@ const preview: Preview = {
           "style tokens",
           "test helpers",
         ],
-        // locales: '',
       },
     },
   },

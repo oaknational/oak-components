@@ -35,6 +35,9 @@ export const OakCloudinaryConfigProvider = cloudinaryConfigContext.Provider;
  *
  * Cloudinary cloud name can be set globally with `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME` or a config
  * can be passed with `OakCloudinaryConfigProvider`.
+ *
+ * ## To be refactored 🔀
+ * This component will be refactored not to be tight to a service like Cloudinary
  */
 export const OakCloudinaryImage = ({
   cloudinaryId,

@@ -19,6 +19,9 @@ export type OakSmallTertiaryInvertedButtonProps = Omit<
  *
  * A specific implementation of InternalShadowIconButton
  *
+ * ## To be merged 🔀
+ * This component will become a variant of `OakButton` component
+ *
  * The following callbacks are available for tracking focus events:
  *
  * ### onClick

@@ -65,6 +65,9 @@ const StyledBackLink = styled.a`
  *
  * * Default (Anchor) `<OakBackLink href="https://www.thenational.academy/" />`
  * * Button `<OakBackLink as="button" onClick={() => goBack(-1)} />`
+ *
+ * ## To be merged 🔀
+ * This component will become a variant of `OakIconButton`
  */
 export const OakBackLink = <C extends ElementType = "a">({
   as,

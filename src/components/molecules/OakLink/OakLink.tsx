@@ -26,6 +26,9 @@ type OakLinkComponent = <C extends React.ElementType = "a">(
  * A blue link with an optional icon and loading state.
  *
  * Defaulting to a `HTMLAnchorElement` this component is polymorphic and can be rendered as a button or any other element.
+ *
+ * ## To be merged 🔀
+ * This component will be extended to include styling of `OakSecondaryLink` and `OakHoverLink` components
  */
 export const OakLink: OakLinkComponent = forwardRef(
   <C extends ElementType = "a">(

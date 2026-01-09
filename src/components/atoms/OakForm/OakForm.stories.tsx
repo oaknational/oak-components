@@ -5,12 +5,6 @@ import { OakForm, OakFormProps } from "./OakForm";
 
 import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
 
-/**
- *
- * OakForm extends OakBox by taking the same props and style but applying them to a form element.
- *
- */
-
 const meta: Meta<typeof OakForm> = {
   component: OakForm,
   tags: ["autodocs"],
