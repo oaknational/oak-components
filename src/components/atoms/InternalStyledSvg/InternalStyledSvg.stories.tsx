@@ -8,7 +8,7 @@ import { drawingArgTypes } from "@/storybook-helpers/drawingStyleHelpers";
 const meta: Meta<typeof InternalStyledSvg> = {
   component: InternalStyledSvg,
   tags: ["autodocs"],
-  title: "components/atoms/InternalStyledSvg",
+  title: "internal components/InternalStyledSvg",
   argTypes: {
     ...drawingArgTypes,
   },

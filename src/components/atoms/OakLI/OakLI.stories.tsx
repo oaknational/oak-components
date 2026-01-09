@@ -16,7 +16,7 @@ import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
 const meta: Meta<typeof OakUL> = {
   component: OakLI,
   tags: ["autodocs"],
-  title: "components/atoms/OakLI",
+  title: "components/typography/OakLI",
   args: oakLIDefaults,
   argTypes: {
     ...colorArgTypes,

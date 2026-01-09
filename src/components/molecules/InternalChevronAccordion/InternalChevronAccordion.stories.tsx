@@ -12,7 +12,7 @@ import { SizeStyleProps } from "@/styles/utils/sizeStyle";
 const meta: Meta<typeof InternalChevronAccordion> = {
   component: InternalChevronAccordion,
   tags: ["autodocs"],
-  title: "components/molecules/InternalChevronAccordion",
+  title: "internal components/InternalChevronAccordion",
   parameters: {
     controls: {
       include: ["header", "headerAfterSlot", "children"],

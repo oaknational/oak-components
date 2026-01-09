@@ -9,6 +9,7 @@ import { OakBox, OakP } from "@/components/atoms";
 const meta: Meta<typeof InternalUnstyledChevronAccordion> = {
   component: InternalUnstyledChevronAccordion,
   tags: ["autodocs"],
+  title: "internal components/InternalUnstyledChevronAccordion",
   parameters: {
     controls: {
       include: ["header", "subheader", "content", "initialOpen"],

@@ -6,7 +6,7 @@ import { OakDraggable } from "./OakDraggable";
 const meta: Meta<typeof OakDraggable> = {
   component: OakDraggable,
   tags: ["autodocs"],
-  title: "components/molecules/OWA (❌ to be moved out)/OakDraggable",
+  title: "OWA (❌ to be moved out)/OakDraggable",
   argTypes: {
     children: { type: "string" },
     isDragging: { type: "boolean" },

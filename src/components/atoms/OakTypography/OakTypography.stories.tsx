@@ -22,7 +22,7 @@ import { positionArgTypes } from "@/storybook-helpers/positionStyleHelpers";
 const meta: Meta<typeof OakTypography> = {
   component: OakTypography,
   tags: ["autodocs"],
-  title: "components/atoms/OakTypography",
+  title: "components/typography/OakTypography",
   argTypes: {
     ...typographyArgTypes,
     ...colorArgTypes,

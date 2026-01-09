@@ -10,7 +10,7 @@ import {
 const meta: Meta<typeof OakAnchorTarget> = {
   component: OakAnchorTarget,
   tags: ["autodocs"],
-  title: "components/atoms/OakAnchorTarget",
+  title: "components/typography/OakAnchorTarget",
   parameters: {
     controls: {
       include: [],

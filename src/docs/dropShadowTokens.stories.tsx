@@ -16,7 +16,7 @@ import {
 const meta: Meta<typeof OakFlex> = {
   component: OakFlex,
   tags: ["autodocs"],
-  title: "StyleTokens/OakDropShadowTokens",
+  title: "style tokens/OakDropShadowTokens",
 };
 export default meta;
 

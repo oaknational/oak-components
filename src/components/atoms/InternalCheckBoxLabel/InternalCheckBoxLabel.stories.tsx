@@ -8,7 +8,7 @@ import { flexArgTypes } from "@/storybook-helpers/flexStyleHelpers";
 const meta: Meta<typeof InternalCheckBoxLabel> = {
   component: InternalCheckBoxLabel,
   tags: ["autodocs"],
-  title: "components/atoms/InternalCheckBoxLabel",
+  title: "internal components/InternalCheckBoxLabel",
   argTypes: {
     disabled: {
       control: "boolean",

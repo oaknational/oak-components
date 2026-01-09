@@ -9,7 +9,7 @@ import { colorFilterArgTypes } from "@/storybook-helpers/colorFilterStyleHelpers
 const meta: Meta<typeof OakCloudinaryImage> = {
   component: OakCloudinaryImage,
   tags: ["autodocs"],
-  title: "components/atoms/OakCloudinaryImage (🔀 to be refactored)",
+  title: "components/image/OakCloudinaryImage (🔀 to be refactored)",
   argTypes: {
     ...sizeArgTypes,
     ...colorFilterArgTypes,

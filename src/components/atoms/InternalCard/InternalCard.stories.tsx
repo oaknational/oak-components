@@ -10,7 +10,7 @@ import {
 const meta: Meta<typeof InternalCard> = {
   component: InternalCard,
   tags: ["autodocs"],
-  title: "components/atoms/InternalCard",
+  title: "internal components/InternalCard",
   args: internalCardDefaults,
   parameters: {
     controls: {

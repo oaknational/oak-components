@@ -6,7 +6,7 @@ import { InternalLink } from "./InternalLink";
 const meta: Meta<typeof InternalLink> = {
   component: InternalLink,
   tags: ["autodocs"],
-  title: "components/molecules/InternalLink",
+  title: "internal components/InternalLink",
   argTypes: {
     children: { type: "string" },
     element: { type: "string" },

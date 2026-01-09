@@ -18,7 +18,7 @@ import { OakSpan, OakSpanProps } from "@/components/atoms/OakSpan";
 const meta: Meta<typeof OakScreenReader> = {
   component: OakScreenReader,
   tags: ["autodocs"],
-  title: "components/atoms/OakScreenReader",
+  title: "components/accessibility/OakScreenReader",
   argTypes: {},
   parameters: {
     controls: {

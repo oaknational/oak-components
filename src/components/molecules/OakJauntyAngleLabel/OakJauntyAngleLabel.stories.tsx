@@ -8,7 +8,7 @@ import { OakFlex } from "@/components/atoms";
 const meta: Meta<typeof OakJauntyAngleLabel> = {
   component: OakJauntyAngleLabel,
   tags: ["autodocs"],
-  title: "components/molecules/OakJauntyAngleLabel",
+  title: "components/forms/OakJauntyAngleLabel",
   args: { label: "Select one answer" },
   decorators: [
     (Story) => (

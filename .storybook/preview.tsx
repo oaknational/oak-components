@@ -37,6 +37,30 @@ const preview: Preview = {
     docs: {
       theme: oakStorybookTheme,
     },
+    options: {
+      storySort: {
+        // method: '',
+        order: [
+          "components",
+          [
+            "typography",
+            "buttons",
+            "forms",
+            "layout",
+            "image",
+            "accessibility",
+            "others",
+          ],
+          "internal components",
+          "OWA (❌ to be moved out)",
+          "House CAT (❌ to be moved out)",
+          "docs",
+          "style tokens",
+          "test helpers",
+        ],
+        // locales: '',
+      },
+    },
   },
   decorators: [
     withThemeFromJSXProvider<ReactRenderer>({

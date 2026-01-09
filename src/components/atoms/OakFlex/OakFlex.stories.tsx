@@ -17,7 +17,7 @@ import { flexArgTypes } from "@/storybook-helpers/flexStyleHelpers";
 const meta: Meta<typeof OakFlex> = {
   component: OakFlex,
   tags: ["autodocs"],
-  title: "components/atoms/OakFlex",
+  title: "components/layout/OakFlex",
   argTypes: {
     ...flexArgTypes,
     ...colorArgTypes,

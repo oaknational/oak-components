@@ -14,8 +14,7 @@ import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";
 const meta: Meta<typeof OakDownloadsAccordion> = {
   component: OakDownloadsAccordion,
   tags: ["autodocs"],
-  title:
-    "components/organisms/OWA (❌ to be moved out)/teacher/OakDownloadsAccordion",
+  title: "OWA (❌ to be moved out)/teacher/OakDownloadsAccordion",
   parameters: {
     controls: {
       include: ["initialOpen"],

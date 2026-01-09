@@ -8,7 +8,7 @@ import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 
 const meta: Meta<typeof OakMultilineText> = {
   tags: ["autodocs"],
-  title: "Components/molecules/OakMultilineText",
+  title: "components/forms/OakMultilineText",
   component: OakMultilineText,
   argTypes: {
     charLimit: { control: "number" },

@@ -8,7 +8,7 @@ import { InternalRadioHoverFocus } from "@/components/atoms/InternalRadio/Intern
 const meta: Meta<typeof InternalRadioWrapper> = {
   component: InternalRadioWrapper,
   tags: ["autodocs"],
-  title: "components/atoms/InternalRadioWrapper",
+  title: "internal components/InternalRadioWrapper",
   argTypes: {
     size: {
       options: ["spacing-24", "spacing-32", "spacing-40"],

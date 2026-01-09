@@ -8,7 +8,7 @@ import { OakFlex } from "@/components/atoms";
 const meta: Meta<typeof OakCaptionCard> = {
   component: OakCaptionCard,
   tags: ["autodocs"],
-  title: "components/organisms/House CAT (❌ to be moved out)/OakCaptionCard",
+  title: "House CAT (❌ to be moved out)/OakCaptionCard",
   argTypes: {
     disabled: {
       control: { type: "boolean" },

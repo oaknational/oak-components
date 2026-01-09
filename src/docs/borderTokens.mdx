@@ -1,33 +1,41 @@
 import { Meta } from "@storybook/blocks";
 
-import {
-oakBorderWidthTokens,
-oakBorderRadiusTokens
-} from "@/styles/theme";
+import { oakBorderWidthTokens, oakBorderRadiusTokens } from "@/styles/theme";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
-import { OakLI, OakUL , OakSpan, OakBox, OakFlex} from "@/components/atoms";
+import { OakLI, OakUL, OakSpan, OakBox, OakFlex } from "@/components/atoms";
 
-<Meta title="StyleTokens/OakBorderTokens" />
+<Meta title="style tokens/OakBorderTokens" />
 
 # OakBorderTokens
 
 ## BorderWidthTokens
+
 <OakUL>
   {Object.entries(oakBorderWidthTokens).map((token, i) => (
     <OakLI key={i}>
       <OakBox $ba={token[0]} $pa={"spacing-12"}>
-        <OakSpan>{token[0]}, {token[1]}px</OakSpan>
+        <OakSpan>
+          {token[0]}, {token[1]}px
+        </OakSpan>
       </OakBox>
     </OakLI>
   ))}
 </OakUL>
 
 ## BorderRadiusTokens
+
 <OakUL>
   {Object.entries(oakBorderRadiusTokens).map((token, i) => (
     <OakLI key={i}>
-      <OakBox $ba={"border-solid-s"} $pa={"spacing-12"} $height={"spacing-32"} $borderRadius={token[0]}>
-        <OakSpan>{token[0]}, {token[1]}px</OakSpan>
+      <OakBox
+        $ba={"border-solid-s"}
+        $pa={"spacing-12"}
+        $height={"spacing-32"}
+        $borderRadius={token[0]}
+      >
+        <OakSpan>
+          {token[0]}, {token[1]}px
+        </OakSpan>
       </OakBox>
     </OakLI>
   ))}

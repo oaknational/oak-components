@@ -8,7 +8,7 @@ import { OakFlex } from "@/components/atoms";
 const meta: Meta<typeof OakPrimaryNavItem> = {
   component: OakPrimaryNavItem,
   tags: ["autodocs"],
-  title: "components/organisms/OakPrimaryNavItem (⚠️ deprecated)",
+  title: "components/others/OakPrimaryNavItem (⚠️ deprecated)",
 
   argTypes: {
     isCurrent: { type: "boolean" },

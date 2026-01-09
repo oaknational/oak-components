@@ -8,8 +8,7 @@ import { OakFlex } from "@/components/atoms";
 const meta: Meta<typeof OakPupilJourneyListItem> = {
   component: OakPupilJourneyListItem,
   tags: ["autodocs"],
-  title:
-    "components/organisms/OWA (❌ to be moved out)/pupil/browse/OakPupilJourneyListItem",
+  title: "OWA (❌ to be moved out)/pupil/browse/OakPupilJourneyListItem",
   args: {
     title: "Lesson 1",
     index: 1,

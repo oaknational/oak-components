@@ -6,7 +6,7 @@ import { OakPagination, OakPaginationProps } from "./OakPagination";
 const meta: Meta<typeof OakPagination> = {
   component: OakPagination,
   tags: ["autodocs"],
-  title: "components/organisms/OakPagination",
+  title: "components/others/OakPagination",
   argTypes: {
     totalPages: { type: "number" },
     paginationHref: { type: "string" },

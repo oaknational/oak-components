@@ -13,7 +13,7 @@ import { colorFilterArgTypes } from "@/storybook-helpers/colorFilterStyleHelpers
 const meta: Meta<typeof OakImage> = {
   component: OakImage,
   tags: ["autodocs"],
-  title: "components/atoms/OakImage",
+  title: "components/image/OakImage",
   argTypes: {
     ...sizeArgTypes,
     ...colorFilterArgTypes,

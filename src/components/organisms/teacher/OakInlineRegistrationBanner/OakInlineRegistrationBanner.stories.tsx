@@ -15,8 +15,7 @@ const failure = () => {
 const meta: Meta<typeof OakInlineRegistrationBanner> = {
   component: OakInlineRegistrationBanner,
   tags: ["autodocs"],
-  title:
-    "components/organisms/OWA (❌ to be moved out)/teacher/OakInlineRegistrationBanner",
+  title: "OWA (❌ to be moved out)/teacher/OakInlineRegistrationBanner",
   argTypes: {
     onSubmit: {
       control: { type: "radio" },

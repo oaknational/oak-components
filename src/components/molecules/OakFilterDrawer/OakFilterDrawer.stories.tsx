@@ -21,7 +21,7 @@ const StyledFieldset = styled.fieldset`
 const meta: Meta<typeof OakFilterDrawer> = {
   component: OakFilterDrawer,
   tags: ["autodocs"],
-  title: "components/molecules/OWA (❌ to be moved out)/OakFilterDrawer",
+  title: "OWA (❌ to be moved out)/OakFilterDrawer",
   parameters: {
     controls: {
       include: ["isOpen", "onClose", "clearAllInputs"],

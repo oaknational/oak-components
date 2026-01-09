@@ -6,6 +6,7 @@ import { OakTextArea } from "./OakTextArea";
 const meta: Meta<typeof OakTextArea> = {
   component: OakTextArea,
   tags: ["autodocs"],
+  title: "components/forms/OakTextArea",
   argTypes: {
     placeholder: { control: "text" },
     disabled: { control: "boolean" },

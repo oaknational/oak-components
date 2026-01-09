@@ -6,8 +6,7 @@ import { OakSearchFilterCheckBox } from "./OakSearchFilterCheckBox";
 const meta: Meta<typeof OakSearchFilterCheckBox> = {
   component: OakSearchFilterCheckBox,
   tags: ["autodocs"],
-  title: "components/organisms/OakSearchFilterCheckBox (🔀 to be refactored)",
-
+  title: "components/forms/OakSearchFilterCheckBox (🔀 to be refactored)",
   parameters: {
     backgrounds: {
       default: "light",

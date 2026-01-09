@@ -11,7 +11,7 @@ const meta: Meta<typeof OakButtonAsRadioGroup> = {
   component: OakButtonAsRadioGroup,
   tags: ["autodocs"],
   title:
-    "components/molecules/OakButtonAsRadio (🔀 to be created)/OakButtonAsRadioGroup",
+    "components/forms/OakButtonAsRadio (🔀 to be created)/OakButtonAsRadioGroup",
   argTypes: {
     ...flexArgTypes,
     ...colorArgTypes,

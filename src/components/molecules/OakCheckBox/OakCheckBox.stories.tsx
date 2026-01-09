@@ -12,7 +12,7 @@ import { flexArgTypes } from "@/storybook-helpers/flexStyleHelpers";
 const meta: Meta<typeof OakCheckBox> = {
   component: OakCheckBox,
   tags: ["autodocs"],
-  title: "components/molecules/OakCheckBox",
+  title: "components/forms/OakCheckBox",
   argTypes: {
     disabled: {
       control: "boolean",

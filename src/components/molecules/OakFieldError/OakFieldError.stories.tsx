@@ -6,7 +6,7 @@ import { OakFieldError, OakFieldErrorProps } from "./OakFieldError";
 const meta: Meta<typeof OakFieldError> = {
   component: OakFieldError,
   tags: ["autodocs"],
-  title: "components/molecules/OakFieldError",
+  title: "components/forms/OakFieldError",
   argTypes: {},
   parameters: {
     controls: {

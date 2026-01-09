@@ -8,7 +8,7 @@ import { OakCheckBox } from "@/components/molecules/OakCheckBox";
 const meta: Meta<typeof OakAccordion> = {
   component: OakAccordion,
   tags: ["autodocs"],
-  title: "components/molecules/OakAccordion (🔀 to be merged)/OakAccordion",
+  title: "components/others/OakAccordion (🔀 to be merged)/OakAccordion",
   parameters: {
     controls: {
       include: ["header", "headerAfterSlot", "children"],

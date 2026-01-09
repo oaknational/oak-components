@@ -18,7 +18,7 @@ import { typographyArgTypes } from "@/storybook-helpers/typographyStyleHelpers";
 const meta: Meta<typeof OakUL> = {
   component: OakUL,
   tags: ["autodocs"],
-  title: "components/atoms/OakUL",
+  title: "components/typography/OakUL",
   argTypes: {
     ...colorArgTypes,
     ...spacingArgTypes,

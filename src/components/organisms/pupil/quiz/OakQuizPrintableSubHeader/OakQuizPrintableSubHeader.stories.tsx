@@ -6,8 +6,7 @@ import { OakQuizPrintableSubHeader } from "./OakQuizPrintableSubHeader";
 const meta: Meta<typeof OakQuizPrintableSubHeader> = {
   component: OakQuizPrintableSubHeader,
   tags: ["autodocs"],
-  title:
-    "components/organisms/OWA (❌ to be moved out)/pupil/quiz/OakQuizPrintableSubHeader",
+  title: "OWA (❌ to be moved out)/pupil/quiz/OakQuizPrintableSubHeader",
   argTypes: {},
   parameters: {
     controls: {

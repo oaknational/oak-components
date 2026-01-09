@@ -8,6 +8,7 @@ import { OakQuote } from "@/components/organisms/shared/OakQuote/OakQuote";
 const meta: Meta<typeof OakCarousel> = {
   component: OakCarousel,
   tags: ["autodocs"],
+  title: "components/others/OakCarousel/OakCarousel",
   argTypes: {},
   parameters: {
     controls: {

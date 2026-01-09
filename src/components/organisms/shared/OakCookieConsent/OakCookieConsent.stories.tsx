@@ -19,8 +19,7 @@ const meta: Meta<
 > = {
   component: OakCookieConsent,
   tags: ["autodocs"],
-  title: "components/organisms/OakCookieConsent",
-
+  title: "components/others/OakCookieConsent",
   argTypes: {
     innerMaxWidth: sizeArgTypes["$maxWidth"],
     zIndex: { control: "number" },

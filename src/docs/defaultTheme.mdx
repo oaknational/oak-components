@@ -2,11 +2,14 @@ import { oakDefaultTheme } from "@/styles/theme";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { Meta, ColorPalette, ColorItem } from "@storybook/blocks";
 
-<Meta title="StyleTokens/oakDefaultTheme" />
+<Meta title="style tokens/oakDefaultTheme" />
 
 # oakDefaultTheme
 
 ### uiColors
+
 <ColorPalette>
-  {Object.entries(oakDefaultTheme.uiColors).map((token, i) =>  <ColorItem key={i} title={token[0]} colors={[parseColor(token[1])]}/>)}
+  {Object.entries(oakDefaultTheme.uiColors).map((token, i) => (
+    <ColorItem key={i} title={token[0]} colors={[parseColor(token[1])]} />
+  ))}
 </ColorPalette>

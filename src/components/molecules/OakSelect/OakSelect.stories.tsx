@@ -10,7 +10,7 @@ import { OakBox } from "@/components/atoms";
 const meta: Meta<typeof OakSelect> = {
   component: OakSelect,
   tags: ["autodocs"],
-  title: "components/molecules/OakSelect",
+  title: "components/forms/OakSelect",
   argTypes: {
     onChange: { action: "change" },
   },

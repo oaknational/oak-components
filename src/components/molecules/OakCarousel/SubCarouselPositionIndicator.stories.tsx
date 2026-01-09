@@ -4,6 +4,7 @@ import { SubCarouselPositionIndicator } from "./SubCarouselPositionIndicator";
 
 const meta: Meta<typeof SubCarouselPositionIndicator> = {
   component: SubCarouselPositionIndicator,
+  title: "components/others/OakCarousel/SubCarouselPositionIndicator",
   parameters: {
     layout: "centered",
   },

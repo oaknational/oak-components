@@ -12,8 +12,7 @@ import { OakFlex } from "@/components/atoms/OakFlex";
 const meta: Meta<typeof InternalAccordionProvider> = {
   component: InternalAccordionProvider,
   tags: ["autodocs"],
-  title:
-    "components/molecules/OakAccordion (🔀 to be merged)/InternalAccordion",
+  title: "internal components/InternalAccordion",
 };
 
 export default meta;

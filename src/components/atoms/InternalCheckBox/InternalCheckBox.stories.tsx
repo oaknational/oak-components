@@ -18,7 +18,7 @@ import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 const meta: Meta<typeof InternalCheckBox> = {
   component: InternalCheckBox,
   tags: ["autodocs"],
-  title: "components/atoms/InternalCheckBox",
+  title: "internal components/InternalCheckBox",
   args: internalCheckBoxDefaults,
   argTypes: {
     sizeArgTypes,

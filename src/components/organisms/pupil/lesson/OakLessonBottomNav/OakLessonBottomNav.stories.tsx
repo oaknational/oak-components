@@ -10,8 +10,7 @@ import { OakCodeRenderer } from "@/components/organisms/shared";
 const meta: Meta<typeof OakLessonBottomNav> = {
   component: OakLessonBottomNav,
   tags: ["autodocs"],
-  title:
-    "components/organisms/OWA (❌ to be moved out)/pupil/lesson/OakLessonBottomNav",
+  title: "OWA (❌ to be moved out)/pupil/lesson/OakLessonBottomNav",
 
   decorators: [
     (Story) => (

@@ -12,7 +12,7 @@ const controlIconNames = [
 const meta: Meta<typeof OakTagFunctional> = {
   component: OakTagFunctional,
   tags: ["autodocs"],
-  title: "components/molecules/OakTagFunctional",
+  title: "components/others/OakTagFunctional",
   argTypes: {
     label: { control: "text" },
     iconName: { options: controlIconNames },

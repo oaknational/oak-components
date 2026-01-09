@@ -10,7 +10,7 @@ const meta: Meta<typeof OakInformativeModalFooter> = {
   component: OakInformativeModalFooter,
   tags: ["autodocs"],
   title:
-    "components/molecules/OakModal (🔀 to be created)/OakInformativeModalFooter",
+    "components/others/OakModal (🔀 to be created)/OakInformativeModalFooter",
   parameters: {
     controls: {
       include: [],

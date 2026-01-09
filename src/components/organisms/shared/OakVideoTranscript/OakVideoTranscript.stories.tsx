@@ -10,8 +10,7 @@ import { OakP } from "@/components/atoms";
 const meta: Meta<typeof OakVideoTranscript> = {
   component: OakVideoTranscript,
   tags: ["autodocs"],
-  title:
-    "components/organisms/OWA (❌ to be moved out)/shared/OakVideoTranscript",
+  title: "OWA (❌ to be moved out)/shared/OakVideoTranscript",
 
   parameters: {
     controls: {

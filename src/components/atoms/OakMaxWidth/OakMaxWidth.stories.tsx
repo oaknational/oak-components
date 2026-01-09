@@ -20,7 +20,7 @@ import { flexArgTypes } from "@/storybook-helpers/flexStyleHelpers";
 const meta: Meta<typeof OakMaxWidth> = {
   component: OakMaxWidth,
   tags: ["autodocs"],
-  title: "components/atoms/OakMaxWidth",
+  title: "components/layout/OakMaxWidth",
   args: oakMaxWidthDefaults,
   argTypes: {
     ...flexArgTypes,

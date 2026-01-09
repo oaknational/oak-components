@@ -8,8 +8,7 @@ import { OakSecondaryButton } from "@/components/molecules";
 
 const meta: Meta<typeof OakPupilJourneyContentGuidance> = {
   tags: ["autodocs"],
-  title:
-    "components/organisms/OWA (❌ to be moved out)/pupil/OakPupilJourneyContentGuidance",
+  title: "OWA (❌ to be moved out)/pupil/OakPupilJourneyContentGuidance",
   component: OakPupilJourneyContentGuidance,
   parameters: {
     controls: {

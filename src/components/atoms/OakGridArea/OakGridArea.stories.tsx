@@ -10,7 +10,7 @@ const colRowSpanCtl = { control: { type: "range" as const, min: 0, max: 12 } };
 const meta: Meta<typeof OakGridArea> = {
   component: OakGridArea,
   tags: ["autodocs"],
-  title: "components/atoms/OakGridArea",
+  title: "components/layout/OakGridArea",
   argTypes: {
     $colSpan: colRowSpanCtl,
     $rowSpan: colRowSpanCtl,

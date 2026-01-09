@@ -10,7 +10,7 @@ import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";
 const meta: Meta<typeof InternalButton> = {
   component: InternalButton,
   tags: ["autodocs"],
-  title: "components/atoms/InternalButton",
+  title: "internal components/InternalButton",
   argTypes: {
     ...colorArgTypes,
     ...spacingArgTypes,

@@ -9,8 +9,7 @@ import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 const meta: Meta<typeof HandDrawnFocusUnderlineSvg> = {
   component: HandDrawnFocusUnderlineSvg,
   tags: ["autodocs"],
-  title:
-    "components/molecules/OWA (❌ to be moved out)/SubHandDrawnFocusUnderline",
+  title: "OWA (❌ to be moved out)/SubHandDrawnFocusUnderline",
   parameters: {
     controls: {
       include: [

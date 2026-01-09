@@ -9,7 +9,7 @@ const meta: Meta<typeof OakPupilJourneyOptionalityButton> = {
   component: OakPupilJourneyOptionalityButton,
   tags: ["autodocs"],
   title:
-    "components/organisms/OWA (❌ to be moved out)/pupil/browse/OakPupilJourneyOptionalityButton",
+    "OWA (❌ to be moved out)/pupil/browse/OakPupilJourneyOptionalityButton",
   args: {
     title: "Lesson 1",
     numberOfLessons: 7,

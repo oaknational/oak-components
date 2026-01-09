@@ -18,7 +18,7 @@ const controlIconNames = [
 const meta: Meta<typeof InternalShadowRectButton> = {
   component: InternalShadowRectButton,
   tags: ["autodocs"],
-  title: "components/molecules/InternalShadowRectButton",
+  title: "internal components/InternalShadowRectButton",
   argTypes: {
     iconName: {
       options: controlIconNames,

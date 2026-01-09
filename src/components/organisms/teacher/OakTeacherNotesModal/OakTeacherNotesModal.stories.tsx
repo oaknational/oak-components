@@ -63,8 +63,7 @@ const Tiptap = () => {
 const meta: Meta<typeof OakTeacherNotesModal> = {
   component: OakTeacherNotesModal,
   tags: ["autodocs"],
-  title:
-    "components/organisms/OWA (❌ to be moved out)/teacher/OakTeacherNotesModal",
+  title: "OWA (❌ to be moved out)/teacher/OakTeacherNotesModal",
   argTypes: {
     isOpen: {
       type: "boolean",

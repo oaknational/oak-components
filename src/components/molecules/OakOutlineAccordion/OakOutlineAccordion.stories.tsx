@@ -6,7 +6,7 @@ import { OakOutlineAccordion } from "./OakOutlineAccordion";
 const meta: Meta<typeof OakOutlineAccordion> = {
   component: OakOutlineAccordion,
   tags: ["autodocs"],
-  title: "components/molecules/OWA (❌ to be moved out)/OakOutlineAccordion",
+  title: "OWA (❌ to be moved out)/OakOutlineAccordion",
   parameters: {
     controls: {
       include: ["header", "headerAfterSlot", "children"],
