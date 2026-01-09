@@ -612,54 +612,6 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   cursor: default;
 }
 
-.c15 {
-  display: inline-block;
-  position: relative;
-}
-
-.c15:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  color: transparent;
-}
-
-.c15:hover:not(:active) [data-icon-for="button"] img {
-  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
-  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
-}
-
-.c15:active {
-  color: transparent;
-}
-
-.c15:disabled {
-  color: transparent;
-}
-
-.c13 > :first-child:focus-visible .shadow {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
-}
-
-.c13 > :first-child:hover .shadow {
-  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
-}
-
-.c13 > :first-child:active .shadow {
-  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
-}
-
-.c13 > :first-child:disabled .icon-container {
-  background: transparent;
-}
-
-.c13 > :first-child:hover .icon-container {
-  background: #222222;
-}
-
-.c13 > :first-child:active .icon-container {
-  background: transparent;
-}
-
 .c40 {
   position: relative;
   width: 100%;
@@ -761,6 +713,54 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
 
 .c37 .yellow-shadow:has(+ .internal-button:active) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c15 {
+  display: inline-block;
+  position: relative;
+}
+
+.c15:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: transparent;
+}
+
+.c15:hover:not(:active) [data-icon-for="button"] img {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+}
+
+.c15:active {
+  color: transparent;
+}
+
+.c15:disabled {
+  color: transparent;
+}
+
+.c13 > :first-child:focus-visible .shadow {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c13 > :first-child:hover .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c13 > :first-child:active .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+}
+
+.c13 > :first-child:disabled .icon-container {
+  background: transparent;
+}
+
+.c13 > :first-child:hover .icon-container {
+  background: #222222;
+}
+
+.c13 > :first-child:active .icon-container {
+  background: transparent;
 }
 
 .c63 {
