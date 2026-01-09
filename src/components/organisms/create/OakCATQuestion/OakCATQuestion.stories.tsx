@@ -162,7 +162,7 @@ export const WithMultilineText: Story = {
         charLimit={100}
         name="hintInput"
         id="hintInput"
-        $height={"spacing-1280"}
+        $height={"spacing-160"}
       />
     ),
     feedbackInput: (
@@ -170,7 +170,7 @@ export const WithMultilineText: Story = {
         charLimit={100}
         name="feedbackInput"
         id="feedbackInput"
-        $height={"spacing-1280"}
+        $height={"spacing-160"}
       />
     ),
     answersSection: (
@@ -211,7 +211,7 @@ export const WithMultilineTextAndStemImage: Story = {
         charLimit={100}
         name="hintInput"
         id="hintInput"
-        $height={"spacing-1280"}
+        $height={"spacing-160"}
       />
     ),
     feedbackInput: (
@@ -219,7 +219,7 @@ export const WithMultilineTextAndStemImage: Story = {
         charLimit={100}
         name="feedbackInput"
         id="feedbackInput"
-        $height={"spacing-1280"}
+        $height={"spacing-160"}
       />
     ),
     answersSection: (
