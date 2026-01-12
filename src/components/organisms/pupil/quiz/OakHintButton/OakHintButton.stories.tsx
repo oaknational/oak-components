@@ -8,7 +8,7 @@ import { oakDefaultTheme } from "@/styles";
 
 const meta: Meta<typeof OakHintButton> = {
   tags: ["autodocs"],
-  title: "OWA (❌ to be moved out)/pupil/OakHintButton",
+  title: "OWA/pupil/OakHintButton",
   component: OakHintButton,
 
   argTypes: {

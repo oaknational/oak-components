@@ -9,7 +9,7 @@ import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 const meta: Meta<typeof OakLoadingSpinner> = {
   component: OakLoadingSpinner,
   tags: ["autodocs"],
-  title: "components/others/OakLoadingSpinner",
+  title: "components/Messaging and feedback/OakLoadingSpinner",
   argTypes: {
     ...sizeArgTypes,
     ...colorArgTypes,

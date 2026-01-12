@@ -14,7 +14,7 @@ import { OakPrimaryButton } from "@/components/molecules/OakPrimaryButton";
 const meta: Meta<typeof OakInlineBanner> = {
   component: OakInlineBanner,
   tags: ["autodocs"],
-  title: "components/others/OakInlineBanner",
+  title: "components/Messaging and feedback/OakInlineBanner",
   argTypes: {
     type: {
       options: Object.keys(bannerTypes),

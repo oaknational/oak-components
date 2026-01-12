@@ -9,7 +9,7 @@ import { OakBox } from "@/components/atoms";
 const meta: Meta<typeof OakQuizHint> = {
   component: OakQuizHint,
   tags: ["autodocs"],
-  title: "OWA (❌ to be moved out)/pupil/quiz/OakQuizHint",
+  title: "OWA/pupil/quiz/OakQuizHint",
 
   argTypes: {
     hint: {

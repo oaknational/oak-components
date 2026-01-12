@@ -85,45 +85,51 @@ Sometimes it isn't enough to develop entirely inside Storybook and it might be n
    - 🚨 if you're an Oak engineer developing in OWA there is a convenience script and you should use `npm run remove-local-components` instead
      as it will automatically re-install the library from NPM.
 
-## Structure
+## Organisational structure
 
-We're trying to follow the tenets of "Atomic design". [Brad Frost's book](https://atomicdesign.bradfrost.com/) is
-a great resource if you're just starting out building your first component for this library. It's also a great reference
-if you're in doubt as to where a component belongs (it can be a little fuzzy at times!).
+- shared components are organised in the subfolders within 'components' folder
+- internal components are organised within 'internal components' folder
+- squad specific components are organised within relevant squad folders
 
-Components are organised into a three tier hierarchical structure applying the following rules:
+⚠️ When creating a new component and in doubt of which category or folder it should belong to, discuss in #oak-components Slack channel.
 
-### Atoms
+Current shared components subfolders:
 
-- Can import other atoms
-- Imports from molecules and organisms are forbidden!
-- Generic
-- Unstyled
-- Avoid embedded logic and state
-- No sub-components
-  (eg. `Box`)
+### Typography
 
-### Molecules
+All typography related components
 
-- Imports from atoms components and other molecules
-- Imports from organisms are forbidden!
-- Generic
-- Styled
-- Avoid embedded logic and state
-- No sub-components
-  (eg. `IconButton`)
+### Buttons
 
-### Organisms
+All buttons and icon buttons
 
-- Imports from atoms, molecules and occasionally organisms
-- Combines multiple molecules together
-- Applicable to a limited range of contexts which might occur in multiple apps
-- Styled
-- May contain embedded logic or state
-- May be split into sub-components
-  (eg. `SchoolInputForm`)
+### Form elements
 
-  NB. these rules are a work in progress. Modifications may be required as the library builds.
+Form elements including form elements styled as buttons
+
+### Images and icons
+
+Components to render icons, images or SVGs
+
+### Messaging and feedback
+
+Components which role is to display a message or provide feedback to the user
+
+### Layout and structure
+
+Components which are used for creating layout
+
+### Navigation
+
+Components which main role is navigation
+
+### Presentational
+
+Components which main function is presentational
+
+### Cookies
+
+Cookie related layouts
 
 ## External Contributions
 

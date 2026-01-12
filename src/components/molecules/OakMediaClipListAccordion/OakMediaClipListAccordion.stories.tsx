@@ -6,7 +6,7 @@ import { OakMediaClipListAccordion } from "./OakMediaClipListAccordion";
 const meta: Meta<typeof OakMediaClipListAccordion> = {
   component: OakMediaClipListAccordion,
   tags: ["autodocs"],
-  title: "OWA (❌ to be moved out)/OakMediaClipListAccordion",
+  title: "OWA/OakMediaClipListAccordion",
   parameters: {
     controls: {
       include: ["header", "headerAfterSlot", "children"],

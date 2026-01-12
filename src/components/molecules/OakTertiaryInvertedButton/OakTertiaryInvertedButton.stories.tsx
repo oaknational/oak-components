@@ -8,8 +8,7 @@ import { OakFlex } from "@/components/atoms";
 const meta: Meta<typeof OakTertiaryInvertedButton> = {
   component: OakTertiaryInvertedButton,
   tags: ["autodocs"],
-  title:
-    "components/buttons/OakButton (🔀 to be created)/OakTertiaryInvertedButton",
+  title: "components/Buttons/OakTertiaryInvertedButton",
   argTypes: {},
   parameters: {
     controls: {

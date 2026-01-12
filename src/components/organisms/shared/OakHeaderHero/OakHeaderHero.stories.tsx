@@ -8,7 +8,7 @@ import { OakLink } from "@/components/molecules";
 const meta: Meta<typeof OakHeaderHero> = {
   component: OakHeaderHero,
   tags: ["autodocs"],
-  title: "OWA (❌ to be moved out)/shared/OakHeaderHero",
+  title: "OWA/shared/OakHeaderHero",
   argTypes: {
     headingTitle: { type: "string" },
     authorName: { type: "string" },

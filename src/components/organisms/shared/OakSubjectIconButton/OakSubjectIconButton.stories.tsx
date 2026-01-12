@@ -6,7 +6,7 @@ import { OakSubjectIconButton } from "./OakSubjectIconButton";
 const meta: Meta<typeof OakSubjectIconButton> = {
   component: OakSubjectIconButton,
   tags: ["autodocs"],
-  title: "OWA (❌ to be moved out)/shared/OakSubjectIconButton",
+  title: "OWA/shared/OakSubjectIconButton",
   argTypes: {
     phase: {
       control: { type: "radio" },

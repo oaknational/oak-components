@@ -6,7 +6,7 @@ import { OakSignLanguageButton } from "./OakSignLanguageButton";
 const meta: Meta<typeof OakSignLanguageButton> = {
   component: OakSignLanguageButton,
   tags: ["autodocs"],
-  title: "OWA (❌ to be moved out)/OakSignLanguageButton",
+  title: "OWA/OakSignLanguageButton",
   parameters: {
     controls: {
       include: ["onClick"],

@@ -6,7 +6,7 @@ import { OakDraggableFeedback } from "./OakDraggableFeedback";
 const meta: Meta<typeof OakDraggableFeedback> = {
   component: OakDraggableFeedback,
   tags: ["autodocs"],
-  title: "OWA (❌ to be moved out)/OakDraggableFeedback",
+  title: "OWA/OakDraggableFeedback",
   argTypes: {
     children: { type: "string" },
   },

@@ -16,7 +16,7 @@ import { typographyArgTypes } from "@/storybook-helpers/typographyStyleHelpers";
 const meta: Meta<typeof OakOL> = {
   component: OakOL,
   tags: ["autodocs"],
-  title: "components/typography/OakOL",
+  title: "components/Typography/OakOL",
   argTypes: {
     ...typographyArgTypes,
   },

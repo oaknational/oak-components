@@ -8,7 +8,7 @@ import { typographyArgTypes } from "@/storybook-helpers/typographyStyleHelpers";
 const meta: Meta<typeof OakHeading> = {
   component: OakHeading,
   tags: ["autodocs"],
-  title: "components/typography/OakHeading",
+  title: "components/Typography/OakHeading",
   argTypes: {
     ...typographyArgTypes,
     tag: {

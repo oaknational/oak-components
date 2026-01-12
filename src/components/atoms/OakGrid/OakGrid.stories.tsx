@@ -9,7 +9,7 @@ import { marginCtl } from "@/storybook-helpers/spacingStyleHelpers";
 const meta: Meta<typeof OakGrid> = {
   component: OakGrid,
   tags: ["autodocs"],
-  title: "components/layout/OakGrid",
+  title: "components/Layout and structure/OakGrid",
   argTypes: {
     $rg: marginCtl,
     $cg: marginCtl,

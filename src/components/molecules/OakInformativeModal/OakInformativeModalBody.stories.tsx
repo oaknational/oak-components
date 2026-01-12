@@ -5,8 +5,7 @@ import { OakInformativeModalBody } from "./OakInformativeModalBody";
 const meta: Meta<typeof OakInformativeModalBody> = {
   component: OakInformativeModalBody,
   tags: ["autodocs"],
-  title:
-    "components/others/OakModal (🔀 to be created)/OakInformativeModalBody",
+  title: "components/Messaging and feedback/OakInformativeModalBody",
   parameters: {
     controls: {
       include: [],

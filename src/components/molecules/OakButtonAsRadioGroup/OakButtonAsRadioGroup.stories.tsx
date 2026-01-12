@@ -10,8 +10,7 @@ import { OakSecondaryButtonAsRadio } from "@/components/molecules/OakSecondaryBu
 const meta: Meta<typeof OakButtonAsRadioGroup> = {
   component: OakButtonAsRadioGroup,
   tags: ["autodocs"],
-  title:
-    "components/forms/OakButtonAsRadio (🔀 to be created)/OakButtonAsRadioGroup",
+  title: "components/Form elements/OakButtonAsRadioGroup",
   argTypes: {
     ...flexArgTypes,
     ...colorArgTypes,

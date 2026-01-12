@@ -8,7 +8,7 @@ import { OakDraggable } from "@/components/molecules";
 const meta: Meta<typeof InternalDroppableHoldingPen> = {
   component: InternalDroppableHoldingPen,
   tags: ["autodocs"],
-  title: "OWA (❌ to be moved out)/pupil/quiz/InternalDroppableHoldingPen",
+  title: "OWA/pupil/quiz/InternalDroppableHoldingPen",
 
   parameters: {
     controls: {

@@ -8,7 +8,7 @@ import { OakInlineBanner } from "@/components";
 const meta: Meta<typeof OakUnitsHeader> = {
   component: OakUnitsHeader,
   tags: ["autodocs"],
-  title: "OWA (❌ to be moved out)/teacher/OakUnitsHeader",
+  title: "OWA/teacher/OakUnitsHeader",
   argTypes: {
     isLegacy: { type: "boolean" },
     subject: { type: "string" },

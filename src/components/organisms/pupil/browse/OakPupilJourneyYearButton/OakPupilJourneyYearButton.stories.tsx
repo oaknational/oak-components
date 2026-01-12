@@ -6,7 +6,7 @@ import { OakPupilJourneyYearButton } from "./OakPupilJourneyYearButton";
 const meta: Meta<typeof OakPupilJourneyYearButton> = {
   component: OakPupilJourneyYearButton,
   tags: ["autodocs"],
-  title: "OWA (❌ to be moved out)/pupil/browse/OakPupilJourneyYearButton",
+  title: "OWA/pupil/browse/OakPupilJourneyYearButton",
   argTypes: {
     phase: { control: { type: "radio" }, options: ["primary", "secondary"] },
     disabled: { control: { type: "boolean" } },

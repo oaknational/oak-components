@@ -37,9 +37,7 @@ export type OakScaleImageButtonProps = Omit<
  *
  * ### onImageScaleCallback
  * `onImageScaleCallback: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;`
- *
- * ## To be merged 🔀
- * This component will become a variant of `OakIconButton` component
+ *ą
  */
 
 export const OakScaleImageButton = <C extends ElementType = "button">({

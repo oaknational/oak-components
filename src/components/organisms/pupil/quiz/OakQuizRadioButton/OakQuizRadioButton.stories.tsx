@@ -9,7 +9,7 @@ import { OakCloudinaryImage, OakFlex } from "@/components/atoms";
 const meta: Meta<typeof OakQuizRadioButton> = {
   component: OakQuizRadioButton,
   tags: ["autodocs"],
-  title: "OWA (❌ to be moved out)/pupil/quiz/OakQuizRadioButton",
+  title: "OWA/pupil/quiz/OakQuizRadioButton",
 
   args: {
     label: "Option label",

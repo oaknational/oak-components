@@ -11,7 +11,7 @@ import { OakImage } from "@/components/atoms/OakImage";
 const meta: Meta<typeof OakAspectRatio> = {
   component: OakAspectRatio,
   tags: ["autodocs"],
-  title: "components/image/OakAspectRatio (⚠️ deprecated)",
+  title: "components/Images and icons/OakAspectRatio (deprecated)",
   argTypes: {},
   parameters: {
     controls: {},

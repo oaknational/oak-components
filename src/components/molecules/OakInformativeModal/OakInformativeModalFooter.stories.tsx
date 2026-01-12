@@ -9,8 +9,7 @@ import { OakPrimaryButton } from "@/components/molecules/OakPrimaryButton";
 const meta: Meta<typeof OakInformativeModalFooter> = {
   component: OakInformativeModalFooter,
   tags: ["autodocs"],
-  title:
-    "components/others/OakModal (🔀 to be created)/OakInformativeModalFooter",
+  title: "components/Messaging and feedback/OakInformativeModalFooter",
   parameters: {
     controls: {
       include: [],

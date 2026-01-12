@@ -58,7 +58,7 @@ const optionalityItemData = [
 const meta: Meta<typeof OakUnitListOptionalityItem> = {
   component: OakUnitListOptionalityItem,
   tags: ["autodocs"],
-  title: "OWA (❌ to be moved out)/teacher/OakUnitListOptionalityItem",
+  title: "OWA/teacher/OakUnitListOptionalityItem",
   args: {
     nullTitle: "British Empire in India and Africa",
     index: 1,

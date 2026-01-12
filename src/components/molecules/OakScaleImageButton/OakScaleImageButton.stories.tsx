@@ -8,8 +8,7 @@ import { OakCloudinaryImage, OakFlex } from "@/components/atoms";
 const meta: Meta<typeof OakScaleImageButton> = {
   component: OakScaleImageButton,
   tags: ["autodocs"],
-  title:
-    "components/buttons/OakIconButton (🔀 to be created)/OakScaleImageButton",
+  title: "OWA/OakScaleImageButton",
   argTypes: {
     onImageScaleCallback: {
       options: ["expand", "minimise"],

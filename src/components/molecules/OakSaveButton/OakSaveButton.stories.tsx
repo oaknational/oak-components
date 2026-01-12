@@ -5,7 +5,7 @@ import { OakSaveButton, OakSaveButtonProps } from "./OakSaveButton";
 
 const meta: Meta<OakSaveButtonProps> = {
   component: OakSaveButton,
-  title: "OWA (❌ to be moved out)/OakSaveButton",
+  title: "OWA/OakSaveButton",
   argTypes: {
     isLoading: { control: "boolean" },
     unavailable: { control: "boolean" },

@@ -9,7 +9,7 @@ import { OakBox } from "@/components/atoms";
 const meta: Meta<typeof OakTooltip> = {
   component: OakTooltip,
   tags: ["autodocs"],
-  title: "components/others/OakTooltip",
+  title: "components/Messaging and feedback/OakTooltip",
   argTypes: {
     tooltip: {
       control: {

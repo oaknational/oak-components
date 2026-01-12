@@ -14,7 +14,7 @@ import { OakPrimaryInvertedButton } from "@/components/molecules/OakPrimaryInver
 const meta: Meta<typeof OakLessonInfoCard> = {
   component: OakLessonInfoCard,
   tags: ["autodocs"],
-  title: "OWA (❌ to be moved out)/OakLessonInfoCard",
+  title: "OWA/OakLessonInfoCard",
   args: {},
   decorators: [
     (Story) => (

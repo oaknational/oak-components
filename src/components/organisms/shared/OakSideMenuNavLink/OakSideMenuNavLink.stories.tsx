@@ -6,7 +6,7 @@ import { OakSideMenuNavLink } from "./OakSideMenuNavLink";
 const meta: Meta<typeof OakSideMenuNavLink> = {
   component: OakSideMenuNavLink,
   tags: ["autodocs"],
-  title: "OWA (❌ to be moved out)/shared/OakSideMenuNavLink",
+  title: "OWA/shared/OakSideMenuNavLink",
   argTypes: {
     item: {
       control: {

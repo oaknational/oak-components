@@ -6,8 +6,7 @@ import { OakSecondaryButtonAsRadio } from "./OakSecondaryButtonAsRadio";
 const meta: Meta<typeof OakSecondaryButtonAsRadio> = {
   component: OakSecondaryButtonAsRadio,
   tags: ["autodocs"],
-  title:
-    "components/forms/OakButtonAsRadio (🔀 to be created)/OakSecondaryButtonAsRadio",
+  title: "components/Form elements/OakSecondaryButtonAsRadio",
   argTypes: {},
   parameters: {
     controls: {

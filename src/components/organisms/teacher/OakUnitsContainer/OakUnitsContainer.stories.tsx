@@ -15,7 +15,7 @@ const controlBackgroundColour = [...oakUiRoleTokens].sort((a, b) =>
 const meta: Meta<typeof OakUnitsContainer> = {
   component: OakUnitsContainer,
   tags: ["autodocs"],
-  title: "OWA (❌ to be moved out)/teacher/OakUnitsContainer",
+  title: "OWA/teacher/OakUnitsContainer",
   argTypes: {
     backgroundColour: {
       options: controlBackgroundColour,

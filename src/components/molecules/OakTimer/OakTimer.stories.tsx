@@ -8,7 +8,7 @@ import { OakFlex } from "@/components/atoms";
 const meta: Meta<typeof OakTimer> = {
   component: OakTimer,
   tags: ["autodocs"],
-  title: "OWA (❌ to be moved out)/OakTimer",
+  title: "OWA/OakTimer",
   args: { timeCode: 6534.23 },
   decorators: [
     (Story) => (

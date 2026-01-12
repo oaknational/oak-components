@@ -34,8 +34,6 @@ const StyledInternalShadowRoundButton = styled(
  *
  * onClick: MouseEventHandler
  *
- * ## To be merged 🔀
- * This component will become a variant of `OakIconButton` component
  */
 export const OakInfoButton = (props: OakInfoButtonProps) => {
   const { isLoading, disabled, onClick, isOpen, buttonProps } = props;

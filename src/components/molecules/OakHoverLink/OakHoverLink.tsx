@@ -45,8 +45,6 @@ const StyleInternalLink = styled(InternalLink)`
  * Defaulting to a `HTMLAnchorElement` this component is polymorphic and can be rendered as a button or any other element.
  * A linkDisabled prop is also available to disable the link even when it is not a button.
  *
- * ## To be merged 🔀
- * This component will become a prop on `OakLink` component
  */
 export const OakHoverLink: OakHoverLinkComponent = forwardRef(
   <C extends ElementType = "a">(

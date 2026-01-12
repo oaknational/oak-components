@@ -8,7 +8,7 @@ import { OakFlex } from "@/components/atoms";
 const meta: Meta<typeof OakLessonReviewItem> = {
   component: OakLessonReviewItem,
   tags: ["autodocs"],
-  title: "OWA (❌ to be moved out)/pupil/lesson/OakLessonReviewItem",
+  title: "OWA/pupil/lesson/OakLessonReviewItem",
 
   argTypes: {
     numQuestions: {

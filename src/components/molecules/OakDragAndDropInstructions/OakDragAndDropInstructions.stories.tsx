@@ -6,7 +6,7 @@ import { OakDragAndDropInstructions } from "./OakDragAndDropInstructions";
 const meta: Meta<typeof OakDragAndDropInstructions> = {
   component: OakDragAndDropInstructions,
   tags: ["autodocs"],
-  title: "OWA (❌ to be moved out)/OakDragAndDropInstructions",
+  title: "OWA/OakDragAndDropInstructions",
   parameters: {
     controls: {
       include: [],

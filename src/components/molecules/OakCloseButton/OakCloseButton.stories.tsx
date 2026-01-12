@@ -6,7 +6,7 @@ import { OakCloseButton } from "./OakCloseButton";
 const meta: Meta<typeof OakCloseButton> = {
   component: OakCloseButton,
   tags: ["autodocs"],
-  title: "components/buttons/OakIconButton (🔀 to be created)/OakCloseButton",
+  title: "House CAT/OakCloseButton",
   argTypes: {
     onClose: {
       description: "Function to be called when a button pressed",

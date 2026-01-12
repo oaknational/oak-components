@@ -18,7 +18,7 @@ import { transitionArgTypes } from "@/storybook-helpers/transitionStyleHelpers";
 const meta: Meta<typeof OakBox> = {
   component: OakBox,
   tags: ["autodocs"],
-  title: "components/layout/OakBox",
+  title: "components/Layout and structure/OakBox",
   argTypes: {
     ...colorArgTypes,
     ...sizeArgTypes,

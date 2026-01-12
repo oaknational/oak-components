@@ -9,7 +9,7 @@ import { OakPupilJourneyOptionalityButton } from "@/components/organisms/pupil/b
 const meta: Meta<typeof OakPupilJourneyOptionalityItem> = {
   component: OakPupilJourneyOptionalityItem,
   tags: ["autodocs"],
-  title: "OWA (❌ to be moved out)/pupil/browse/OakPupilJourneyOptionalityItem",
+  title: "OWA/pupil/browse/OakPupilJourneyOptionalityItem",
 
   args: {
     index: 1,

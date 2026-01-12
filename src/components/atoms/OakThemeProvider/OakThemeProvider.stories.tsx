@@ -9,7 +9,7 @@ import { oakDefaultTheme } from "@/styles";
 const meta: Meta<typeof OakThemeProvider> = {
   component: OakThemeProvider,
   tags: ["autodocs"],
-  title: "components/others/OakThemeProvider",
+  title: "components/OakThemeProvider",
   argTypes: {},
   parameters: {
     controls: {

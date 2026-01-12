@@ -22,8 +22,7 @@ function getTierSubjectValues(tier: string, childSubject?: string): void {
 
 const meta: Meta<typeof OakDownloadsJourneyChildSubjectTierSelector> = {
   tags: ["autodocs"],
-  title:
-    "OWA (❌ to be moved out)/curriculum/OakDownloadsJourneyChildSubjectTierSelector",
+  title: "OWA/curriculum/OakDownloadsJourneyChildSubjectTierSelector",
   component: OakDownloadsJourneyChildSubjectTierSelector,
   argTypes: {
     tiers: {

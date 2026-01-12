@@ -13,7 +13,7 @@ import { OakBox, OakP } from "@/components/atoms";
 const meta: Meta<typeof OakInformativeModal> = {
   component: OakInformativeModal,
   tags: ["autodocs"],
-  title: "components/others/OakModal (🔀 to be created)/OakInformativeModal",
+  title: "components/Messaging and feedback/OakInformativeModal",
   argTypes: {
     children: {
       control: "text",

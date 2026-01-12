@@ -10,7 +10,7 @@ import { drawingArgTypes } from "@/storybook-helpers/drawingStyleHelpers";
 const meta: Meta<typeof OakHandDrawnFocusUnderline> = {
   component: OakHandDrawnFocusUnderline,
   tags: ["autodocs"],
-  title: "OWA (❌ to be moved out)/OakHandDrawnFocusUnderline",
+  title: "OWA/OakHandDrawnFocusUnderline",
   argTypes: {
     FocusUnderlineColor: drawingArgTypes["$fill"],
     ...spacingArgTypes,

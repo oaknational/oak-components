@@ -6,7 +6,7 @@ import { OakRadioTile } from "./OakRadioTile";
 const meta: Meta<typeof OakRadioTile> = {
   component: OakRadioTile,
   tags: ["autodocs"],
-  title: "OWA (❌ to be moved out)/OakRadioTile",
+  title: "OWA/OakRadioTile",
   argTypes: {
     isChecked: { control: "boolean" },
   },

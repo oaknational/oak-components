@@ -12,8 +12,7 @@ export type OakCloseButtonProps = {
  *
  * Design system: <https://www.figma.com/design/YcWQMMhHPVVmc47cHHEEAl/Oak-Design-Kit?node-id=14493-15312>
  *
- * ## To be merged 🔀
- * This component will become a variant of `OakIconButton`
+ *
  */
 export function OakCloseButton({ onClose, ...rest }: OakCloseButtonProps) {
   return (

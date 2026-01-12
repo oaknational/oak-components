@@ -10,8 +10,7 @@ import { OakSmallPrimaryInvertedButton } from "@/components/molecules/OakSmallPr
 const dropdownNavMeta: Meta<typeof OakButtonWithDropdown> = {
   component: OakButtonWithDropdown,
   tags: ["autodocs"],
-  title:
-    "components/buttons/OakButtonWithDropdown (🔀 to be merged)/OakButtonWithDropdown",
+  title: "components/Buttons/OakButtonWithDropdown",
   parameters: {
     controls: {
       include: [

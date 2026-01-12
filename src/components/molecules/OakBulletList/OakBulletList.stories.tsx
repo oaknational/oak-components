@@ -9,7 +9,7 @@ import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 const meta: Meta<typeof OakBulletList> = {
   component: OakBulletList,
   tags: ["autodocs"],
-  title: "OWA (❌ to be moved out)/OakBulletList",
+  title: "OWA/OakBulletList",
   argTypes: {
     $font: typographyArgTypes.$font,
     $color: colorArgTypes.$color,
