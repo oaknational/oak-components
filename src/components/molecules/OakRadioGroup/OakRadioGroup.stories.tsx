@@ -10,7 +10,7 @@ import { flexArgTypes } from "@/storybook-helpers/flexStyleHelpers";
 const meta: Meta<typeof OakRadioGroup> = {
   component: OakRadioGroup,
   tags: ["autodocs"],
-  title: "components/forms/OakRadioGroup",
+  title: "components/Form elements/OakRadioGroup",
   argTypes: {
     ...flexArgTypes,
     ...colorArgTypes,

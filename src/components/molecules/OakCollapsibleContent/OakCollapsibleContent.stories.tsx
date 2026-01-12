@@ -11,7 +11,7 @@ const meta: Meta<typeof OakCollapsibleContent> = {
   component: OakCollapsibleContent,
   tags: ["autodocs"],
   title:
-    "components/others/OakAccordion (🔀 to be merged)/OakCollapsibleContent",
+    "components/Navigation/OakAccordion (🔀 to be merged)/OakCollapsibleContent",
   argTypes: {
     ...sizeArgTypes,
   },

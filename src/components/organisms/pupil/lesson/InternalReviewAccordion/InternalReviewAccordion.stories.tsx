@@ -7,7 +7,7 @@ const meta: Meta<typeof InternalReviewAccordion> = {
   component: InternalReviewAccordion,
   tags: ["autodocs"],
   title:
-    "components/others/OakAccordion (🔀 to be merged)/InternalReviewAccordion",
+    "components/Navigation/OakAccordion (🔀 to be merged)/InternalReviewAccordion",
   parameters: {
     controls: {
       include: ["expandableLabel", "headerAfterSlot", "children"],

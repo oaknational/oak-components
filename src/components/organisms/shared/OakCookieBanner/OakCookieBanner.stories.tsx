@@ -7,7 +7,7 @@ import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 const meta: Meta<typeof OakCookieBanner> = {
   component: OakCookieBanner,
   tags: ["autodocs"],
-  title: "components/others/OakCookieBanner",
+  title: "components/Messaging and feedback/OakCookieBanner",
 
   args: {
     state: "initial",

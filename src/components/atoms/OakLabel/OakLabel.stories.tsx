@@ -17,7 +17,7 @@ import { typographyArgTypes } from "@/storybook-helpers/typographyStyleHelpers";
 const meta: Meta<typeof OakLabel> = {
   component: OakLabel,
   tags: ["autodocs"],
-  title: "components/forms/OakLabel",
+  title: "components/Form elements/OakLabel",
   argTypes: {
     ...typographyArgTypes,
     ...colorArgTypes,

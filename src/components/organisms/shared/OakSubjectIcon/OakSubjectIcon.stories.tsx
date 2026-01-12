@@ -9,7 +9,8 @@ import { colorFilterArgTypes } from "@/storybook-helpers/colorFilterStyleHelpers
 const meta: Meta<typeof OakSubjectIcon> = {
   component: OakSubjectIcon,
   tags: ["autodocs"],
-  title: "components/image/OakSubjectIcon (🔀 to be merged)/OakSubjectIcon",
+  title:
+    "components/Images and icons/OakSubjectIcon (🔀 to be merged)/OakSubjectIcon",
 
   argTypes: {
     fill: drawingArgTypes["$fill"],

@@ -7,7 +7,7 @@ const meta: Meta<typeof OakSecondaryButtonAsRadio> = {
   component: OakSecondaryButtonAsRadio,
   tags: ["autodocs"],
   title:
-    "components/forms/OakButtonAsRadio (🔀 to be created)/OakSecondaryButtonAsRadio",
+    "components/Form elements/OakButtonAsRadio (🔀 to be created)/OakSecondaryButtonAsRadio",
   argTypes: {},
   parameters: {
     controls: {

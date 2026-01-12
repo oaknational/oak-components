@@ -9,7 +9,7 @@ const meta: Meta<typeof OakScaleImageButton> = {
   component: OakScaleImageButton,
   tags: ["autodocs"],
   title:
-    "components/buttons/OakIconButton (🔀 to be created)/OakScaleImageButton",
+    "components/Buttons/OakIconButton (🔀 to be created)/OakScaleImageButton",
   argTypes: {
     onImageScaleCallback: {
       options: ["expand", "minimise"],

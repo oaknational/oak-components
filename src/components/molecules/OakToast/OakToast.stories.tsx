@@ -9,7 +9,7 @@ import { OakFlex } from "@/components/atoms";
 
 const meta: Meta<typeof OakToast> = {
   tags: ["autodocs"],
-  title: "components/others/OakToast",
+  title: "components/Messaging and feedback/OakToast",
   component: OakToast,
   argTypes: {
     message: {

@@ -10,7 +10,7 @@ const meta: Meta<typeof OakHandDrawnCardWithIcon> = {
   component: OakHandDrawnCardWithIcon,
   tags: ["autodocs"],
   title:
-    "components/image/OakSubjectIcon (🔀 to be merged)/OakHandDrawnCardWithIcon",
+    "components/Images and icons/OakSubjectIcon (🔀 to be merged)/OakHandDrawnCardWithIcon",
   argTypes: {
     fill: drawingArgTypes["$fill"],
     iconColor: colorFilterArgTypes["$colorFilter"],

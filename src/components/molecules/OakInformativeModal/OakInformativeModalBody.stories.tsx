@@ -6,7 +6,7 @@ const meta: Meta<typeof OakInformativeModalBody> = {
   component: OakInformativeModalBody,
   tags: ["autodocs"],
   title:
-    "components/others/OakModal (🔀 to be created)/OakInformativeModalBody",
+    "components/Messaging and feedback/OakModal (🔀 to be created)/OakInformativeModalBody",
   parameters: {
     controls: {
       include: [],

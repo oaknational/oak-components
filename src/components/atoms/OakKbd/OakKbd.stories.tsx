@@ -6,7 +6,7 @@ import { OakKbd } from "@/components/atoms/OakKbd";
 const meta: Meta<typeof OakKbd> = {
   component: OakKbd,
   tags: ["autodocs"],
-  title: "components/accessibility/OakKbd",
+  title: "components/Messaging and feedback/OakKbd",
   args: {
     children: "Tab",
   },

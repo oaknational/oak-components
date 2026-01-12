@@ -4,7 +4,8 @@ import { SubCarouselPositionControl } from "./SubCarouselPositionControl";
 
 const meta: Meta<typeof SubCarouselPositionControl> = {
   component: SubCarouselPositionControl,
-  title: "components/others/OakCarousel/SubCarouselPositionControl",
+  title:
+    "components/Layout and structure/OakCarousel/SubCarouselPositionControl",
   parameters: {
     layout: "centered",
   },

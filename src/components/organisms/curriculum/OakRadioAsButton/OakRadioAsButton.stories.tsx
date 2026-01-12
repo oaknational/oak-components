@@ -8,7 +8,7 @@ import { OakRadioGroup } from "@/components/molecules";
 const meta: Meta<typeof OakRadioAsButton> = {
   component: OakRadioAsButton,
   tags: ["autodocs"],
-  title: "components/forms/OakRadioAsButton (🔀 to be refactored)",
+  title: "components/Form elements/OakRadioAsButton (🔀 to be refactored)",
   parameters: {
     backgrounds: {
       default: "light",

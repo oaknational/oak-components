@@ -7,7 +7,7 @@ import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 const meta: Meta<typeof OakFormInput> = {
   component: OakFormInput,
   tags: ["autodocs"],
-  title: "components/forms/OakTextInput (🔀 to be merged)/OakFormInput",
+  title: "components/Form elements/OakTextInput (🔀 to be merged)/OakFormInput",
   argTypes: {
     wrapperWidth: sizeArgTypes["$width"],
     wrapperMaxWidth: sizeArgTypes["$width"],

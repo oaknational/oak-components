@@ -12,7 +12,7 @@ import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";
 const meta: Meta<typeof OakRadioButton> = {
   component: OakRadioButton,
   tags: ["autodocs"],
-  title: "components/forms/OakRadioButton",
+  title: "components/Form elements/OakRadioButton",
   argTypes: {
     ...colorArgTypes,
     ...typographyArgTypes,

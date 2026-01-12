@@ -9,7 +9,7 @@ const meta: Meta<typeof OakTertiaryInvertedButton> = {
   component: OakTertiaryInvertedButton,
   tags: ["autodocs"],
   title:
-    "components/buttons/OakButton (🔀 to be created)/OakTertiaryInvertedButton",
+    "components/Buttons/OakButton (🔀 to be created)/OakTertiaryInvertedButton",
   argTypes: {},
   parameters: {
     controls: {

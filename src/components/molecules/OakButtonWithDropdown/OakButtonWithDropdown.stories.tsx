@@ -11,7 +11,7 @@ const dropdownNavMeta: Meta<typeof OakButtonWithDropdown> = {
   component: OakButtonWithDropdown,
   tags: ["autodocs"],
   title:
-    "components/buttons/OakButtonWithDropdown (🔀 to be merged)/OakButtonWithDropdown",
+    "components/Buttons/OakButtonWithDropdown (🔀 to be merged)/OakButtonWithDropdown",
   parameters: {
     controls: {
       include: [
