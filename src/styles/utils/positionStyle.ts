@@ -14,6 +14,8 @@ import { parseSpacing } from "@/styles/helpers/parseSpacing";
 type PositionSpacing =
   | OakAllSpacingToken
   | OakSpaceBetweenToken
+  | "-50%"
+  | "50%"
   | null
   | undefined;
 
@@ -27,31 +29,40 @@ export type PositionStyleProps = {
   /**
    * Sets the `top` CSS property of the element.
    *
-   * Accepts a spacing token or a responsive array of spacing tokens. Can be nulled.
+   * - Accepts a spacing token or a responsive array of spacing tokens. E.g. `['spacing-4', 'spacing-8']`
+   * - `50%` or `-50%` may be used to center an absolutely positioned element within its parent.
+   * - Can be `null` at a breakpoint E.g. `[null, 'spacing-8']`.
    */
   $top?: ResponsiveValues<PositionSpacing>;
   /**
    * Sets the `right` CSS property of the element.
    *
-   * Accepts a spacing token or a responsive array of spacing tokens. Can be nulled.
+   * - Accepts a spacing token or a responsive array of spacing tokens. E.g. `['spacing-4', 'spacing-8']`
+   * - `50%` or `-50%` may be used to center an absolutely positioned element within its parent.
+   * - Can be `null` at a breakpoint E.g. `[null, 'spacing-8']`.
    */
   $right?: ResponsiveValues<PositionSpacing>;
   /**
    * Sets the `bottom` CSS property of the element.
    *
-   * Accepts a spacing token or a responsive array of spacing tokens. Can be nulled.
+   * - Accepts a spacing token or a responsive array of spacing tokens. E.g. `['spacing-4', 'spacing-8']`
+   * - `50%` or `-50%` may be used to center an absolutely positioned element within its parent.
+   * - Can be `null` at a breakpoint E.g. `[null, 'spacing-8']`.
    */
   $bottom?: ResponsiveValues<PositionSpacing>;
   /**
    * Sets the `left` CSS property of the element.
    *
-   * Accepts a spacing token or a responsive array of spacing tokens. Can be nulled.
+   * - Accepts a spacing token or a responsive array of spacing tokens. E.g. `['spacing-4', 'spacing-8']`
+   * - `50%` or `-50%` may be used to center an absolutely positioned element within its parent.
+   * - Can be `null` at a breakpoint E.g. `[null, 'spacing-8']`.
    */
   $left?: ResponsiveValues<PositionSpacing>;
   /**
    * Sets the `inset` CSS property of the element.
    *
-   * Accepts a spacing token or a responsive array of spacing tokens. Can be nulled.
+   * - Accepts a spacing token or a responsive array of spacing tokens. E.g. `['spacing-4', 'spacing-8']`
+   * - Can be `null` at a breakpoint E.g. `[null, 'spacing-8']`.
    */
   $inset?: ResponsiveValues<PositionSpacing>;
   /**
