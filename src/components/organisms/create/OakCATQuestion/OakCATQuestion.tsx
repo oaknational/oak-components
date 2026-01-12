@@ -59,10 +59,11 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
 
   const header = (
     <OakFlex
-      $gap={"spacing-12"}
+      $gap={"spacing-16"}
       $alignItems={"center"}
       $width={"100%"}
       $font={"body-1-bold"}
+      $mb={"spacing-12"}
     >
       {`${questionNumber}.`}
       {questionTypeInput}
@@ -70,7 +71,12 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
   );
 
   const body = (
-    <OakFlex $flexDirection={"column"} $width={"100%"} $gap={"spacing-48"}>
+    <OakFlex
+      $flexDirection={"column"}
+      $width={"100%"}
+      $gap={"spacing-48"}
+      $mt={"spacing-24"}
+    >
       {/* this has the effect of stretching the container and the items within */}
       <OakFlex $alignSelf={"stretch"} $flexDirection={"column"}>
         {answersSection}
@@ -83,7 +89,7 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
         $borderRadius={"border-radius-m2"}
         $borderColor={"bg-neutral"}
         $ba={"border-solid-s"}
-        $cg={"spacing-20"}
+        $cg={"spacing-16"}
       >
         <OakGridArea $colSpan={6}>
           <OakFlex $flexDirection={"column"} $flexGrow={1}>
@@ -116,9 +122,12 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
         $width={"100%"}
         $justifyContent={"flex-start"}
         $background={"bg-primary"}
-        $pa={"spacing-32"}
+        $pv={"spacing-48"}
+        $ph={"spacing-40"}
         $statusColor={statusColorMap[status]}
         $flexDirection={"column"}
+        $borderRadius={"border-radius-m2"}
+        $dropShadow={"drop-shadow-centred-standard"}
       >
         <InternalUnstyledChevronAccordion
           id={`question-${questionNumber}`}
