@@ -3,6 +3,7 @@
 exports[`OakCATQuestion matches snapshot 1`] = `
 .c1 {
   width: 100%;
+  max-width: 60rem;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
   padding-top: 3rem;
