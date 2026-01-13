@@ -59,7 +59,7 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
 
   const header = (
     <OakFlex
-      $gap={"spacing-16"}
+      $gap={"spacing-12"}
       $alignItems={"center"}
       $width={"100%"}
       $font={"body-1-bold"}
