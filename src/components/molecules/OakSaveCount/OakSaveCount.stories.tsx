@@ -10,10 +10,16 @@ const meta: Meta<typeof OakSaveCount> = {
   argTypes: {
     count: {
       control: {
-        type: "number",
+        type: "select",
       },
+      options: [undefined, 0, 1, 5, 10, 50, 99, 100],
     },
     href: {
+      control: {
+        type: "text",
+      },
+    },
+    label: {
       control: {
         type: "text",
       },
