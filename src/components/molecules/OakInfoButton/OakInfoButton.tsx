@@ -43,13 +43,13 @@ export const OakInfoButton = (props: OakInfoButtonProps) => {
       element={"button"}
       iconName={isOpen && !disabled ? "cross" : "info"}
       defaultIconBackground={isOpen ? "icon-primary" : "bg-decorative5-main"}
-      defaultIconColor={isOpen ? "icon-main" : "icon-primary"}
+      defaultIconColor={isOpen ? "icon-inverted" : "icon-primary"}
       hoverIconBackground={isOpen ? "icon-primary" : "bg-decorative5-main"}
       defaultTextColor={"text-primary"}
       hoverTextColor={"text-primary"}
       disabledIconBackground={"bg-btn-primary-disabled"}
       disabledTextColor={"text-disabled"}
-      disabledIconColor={"icon-main"}
+      disabledIconColor={"icon-inverted"}
       isLoading={isLoading}
       disabled={disabled}
       iconBackgroundSize={"spacing-40"}

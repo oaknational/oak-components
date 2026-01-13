@@ -13,7 +13,7 @@ import {
   OakSpan,
 } from "@/components/atoms";
 import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
-import { OakColorFilterToken } from "@/styles/theme/color";
+import { OakUiRoleToken } from "@/styles/theme/color";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { OakPromoTag } from "@/components/molecules";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
@@ -67,7 +67,7 @@ export const OakHomepageTabButton = <C extends ElementType = "button">(
     ...rest
   } = props;
 
-  const color: OakColorFilterToken = isActive ? "black" : "grey60";
+  const color: OakUiRoleToken = isActive ? "text-primary" : "text-subdued";
 
   return (
     <StyledButton

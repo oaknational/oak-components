@@ -7,20 +7,20 @@ import {
   InternalTextInputProps,
 } from "@/components/atoms/InternalTextInput";
 import { OakFlex, OakIcon, OakIconName } from "@/components/atoms";
-import { OakCombinedColorToken, OakDropShadowToken } from "@/styles";
+import { OakUiRoleToken, OakDropShadowToken } from "@/styles";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { SizeStyleProps } from "@/styles/utils/sizeStyle";
 
 type StyledTextInputWrapperProps = {
-  $color: OakCombinedColorToken;
-  $hoverBackground: OakCombinedColorToken;
-  $background: OakCombinedColorToken;
-  $borderColor: OakCombinedColorToken;
+  $color: OakUiRoleToken;
+  $hoverBackground: OakUiRoleToken;
+  $background: OakUiRoleToken;
+  $borderColor: OakUiRoleToken;
   $focusRingDropShadows: OakDropShadowToken[];
-  $disabledBackgroundColor: OakCombinedColorToken;
-  $readOnlyBorderColor: OakCombinedColorToken;
-  $disabledColor: OakCombinedColorToken;
-  $readOnlyColor: OakCombinedColorToken;
+  $disabledBackgroundColor: OakUiRoleToken;
+  $readOnlyBorderColor: OakUiRoleToken;
+  $disabledColor: OakUiRoleToken;
+  $readOnlyColor: OakUiRoleToken;
   $disabled: boolean;
   $readOnly: boolean;
 };
@@ -65,21 +65,21 @@ export type OakTextInputProps = {
    * Give the field a highlight to draw attention to it
    */
   isHighlighted?: boolean;
-  iconColor?: OakCombinedColorToken;
-  validBorderColor?: OakCombinedColorToken;
-  invalidBorderColor?: OakCombinedColorToken;
-  validIconColor?: OakCombinedColorToken;
-  invalidIconColor?: OakCombinedColorToken;
-  color?: OakCombinedColorToken;
-  hoverBackground?: OakCombinedColorToken;
-  background?: OakCombinedColorToken;
-  borderColor?: OakCombinedColorToken;
+  iconColor?: OakUiRoleToken;
+  validBorderColor?: OakUiRoleToken;
+  invalidBorderColor?: OakUiRoleToken;
+  validIconColor?: OakUiRoleToken;
+  invalidIconColor?: OakUiRoleToken;
+  color?: OakUiRoleToken;
+  hoverBackground?: OakUiRoleToken;
+  background?: OakUiRoleToken;
+  borderColor?: OakUiRoleToken;
   focusRingDropShadows?: OakDropShadowToken[];
-  disabledBackgroundColor?: OakCombinedColorToken;
-  readOnlyBorderColor?: OakCombinedColorToken;
-  disabledColor?: OakCombinedColorToken;
-  readOnlyColor?: OakCombinedColorToken;
-  highlightBackgroundColor?: OakCombinedColorToken;
+  disabledBackgroundColor?: OakUiRoleToken;
+  readOnlyBorderColor?: OakUiRoleToken;
+  disabledColor?: OakUiRoleToken;
+  readOnlyColor?: OakUiRoleToken;
+  highlightBackgroundColor?: OakUiRoleToken;
   /**
    * The width of the surrounding div - the input and icon will fill this
    */

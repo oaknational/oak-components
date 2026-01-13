@@ -9,7 +9,7 @@ import {
   OakUL,
   OakLI,
 } from "@/components/atoms";
-import { OakCombinedColorToken } from "@/styles";
+import { OakUiRoleToken } from "@/styles";
 import { TypographyStyleProps } from "@/styles/utils/typographyStyle";
 import { OakInfo } from "@/components/organisms/shared/OakInfo/OakInfo";
 
@@ -57,7 +57,7 @@ export const OakCodeRenderer = ({ string, ...rest }: OakCodeRendererProps) => {
 
   const syntaxHighlight = (code: string) => {
     // Define regex patterns for different code parts
-    const patterns: { regex: RegExp; color: OakCombinedColorToken }[] = [
+    const patterns: { regex: RegExp; color: OakUiRoleToken }[] = [
       { regex: /"(.*?)"|'(.*?)'/g, color: "code-green" }, // Strings
       {
         regex:
