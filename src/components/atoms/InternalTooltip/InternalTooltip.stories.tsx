@@ -12,7 +12,7 @@ import { typographyArgTypes } from "@/storybook-helpers/typographyStyleHelpers";
 const meta: Meta<typeof InternalTooltip> = {
   component: InternalTooltip,
   tags: ["autodocs"],
-  title: "components/atoms/InternalTooltip",
+  title: "internal components/InternalTooltip",
   argTypes: {
     children: {
       control: {

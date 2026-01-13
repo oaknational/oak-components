@@ -91,6 +91,9 @@ export type OakRadioAsButtonProps = Omit<
  * A radio input styled as a button, to be used within `<OakRadioGroup/>` this is
  * the radio inputs version of `<OakSearchFilterCheckBox/>`
  *
+ * ## To be refactored 🔀
+ * This component will be refactored to have more variants
+ *
  * ## Events
  * The following callbacks are available for tracking focus events:
  *

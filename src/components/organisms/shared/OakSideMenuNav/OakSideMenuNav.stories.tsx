@@ -8,6 +8,7 @@ import { OakGrid, OakGridArea } from "@/components/atoms";
 const meta: Meta<typeof OakSideMenuNav> = {
   component: OakSideMenuNav,
   tags: ["autodocs"],
+  title: "OWA (❌ to be moved out)/shared/OakSideMenuNav",
   argTypes: {
     heading: {
       control: {

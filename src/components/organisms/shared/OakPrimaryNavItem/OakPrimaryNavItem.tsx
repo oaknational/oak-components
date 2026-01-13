@@ -32,6 +32,7 @@ const OakPrimaryButtonWithoutPointerEvents = styled(OakPrimaryButton)`
  * A specific implementation of OakPrimaryButton and OakPrimaryInvertedButton rendering
  * relevant view depending on isCurrent prop
  *
+ * ⚠️ To be deprecated
  */
 export const OakPrimaryNavItem = ({
   href,

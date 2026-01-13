@@ -7,9 +7,9 @@ import { OakFlex } from "@/components/atoms";
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 
 const meta: Meta<typeof OakMultilineText> = {
-  title: "Components/molecules/OakMultilineText",
-  component: OakMultilineText,
   tags: ["autodocs"],
+  title: "components/Form elements/OakMultilineText",
+  component: OakMultilineText,
   argTypes: {
     charLimit: { control: "number" },
     initialValue: { control: "text" },

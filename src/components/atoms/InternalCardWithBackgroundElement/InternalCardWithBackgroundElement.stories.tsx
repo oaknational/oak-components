@@ -10,7 +10,7 @@ import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
 const meta: Meta<typeof InternalCardWithBackgroundElement> = {
   component: InternalCardWithBackgroundElement,
   tags: ["autodocs"],
-  title: "components/atoms/InternalCardWithBackgroundElement",
+  title: "internal components/InternalCardWithBackgroundElement",
   argTypes: {
     ...flexArgTypes,
     ...spacingArgTypes,

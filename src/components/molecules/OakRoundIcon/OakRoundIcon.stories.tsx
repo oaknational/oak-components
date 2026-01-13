@@ -15,7 +15,7 @@ import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 const meta: Meta<typeof OakRoundIcon> = {
   component: OakRoundIcon,
   tags: ["autodocs"],
-  title: "components/molecules/OakRoundIcon",
+  title: "components/Images and icons/OakIcon (🔀 to be merged)/OakRoundIcon",
   argTypes: {
     ...sizeArgTypes,
     ...colorFilterArgTypes,

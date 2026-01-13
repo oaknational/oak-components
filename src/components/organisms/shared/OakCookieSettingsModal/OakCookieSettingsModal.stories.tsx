@@ -9,6 +9,7 @@ import { OakSecondaryButton } from "@/components/molecules";
 const meta: Meta<typeof OakCookieSettingsModal> = {
   component: OakCookieSettingsModal,
   tags: ["autodocs"],
+  title: "components/Messaging and feedback/OakCookieSettingsModal",
 
   args: {
     isOpen: false,

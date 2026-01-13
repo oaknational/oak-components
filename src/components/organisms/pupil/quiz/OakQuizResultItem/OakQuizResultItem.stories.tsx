@@ -6,6 +6,7 @@ import { OakQuizResultItem } from "./OakQuizResultItem";
 const meta: Meta<typeof OakQuizResultItem> = {
   component: OakQuizResultItem,
   tags: ["autodocs"],
+  title: "OWA (❌ to be moved out)/pupil/quiz/OakQuizResultItem",
   argTypes: {
     standardText: { control: "text" },
     boldPrefixText: { control: "text" },

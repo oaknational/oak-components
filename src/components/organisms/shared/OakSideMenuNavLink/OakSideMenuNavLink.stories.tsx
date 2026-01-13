@@ -4,9 +4,9 @@ import { StoryObj, Meta } from "@storybook/react";
 import { OakSideMenuNavLink } from "./OakSideMenuNavLink";
 
 const meta: Meta<typeof OakSideMenuNavLink> = {
-  title: "Components/organisms/shared/OakSideMenuNavLink",
   component: OakSideMenuNavLink,
   tags: ["autodocs"],
+  title: "OWA (❌ to be moved out)/shared/OakSideMenuNavLink",
   argTypes: {
     item: {
       control: {

@@ -9,6 +9,7 @@ import { OakFlex, OakCloudinaryImage } from "@/components/atoms";
 const meta: Meta<typeof OakQuizCheckBox> = {
   component: OakQuizCheckBox,
   tags: ["autodocs"],
+  title: "OWA (❌ to be moved out)/pupil/quiz/OakQuizCheckBox",
 
   argTypes: {
     feedback: {

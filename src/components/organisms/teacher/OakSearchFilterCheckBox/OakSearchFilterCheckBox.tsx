@@ -82,9 +82,13 @@ export type OakSearchFilterCheckBoxProps = Omit<
 };
 
 /**
+ *
  * A checkbox for search filters.
  *
- * Takes a displayValue and optional icon, for subject icons 'subject-[subjectSlug]' should be used.
+ * Takes a displayValue and optional icon, for subject icons `subject-[subjectSlug]` should be used.
+ *
+ * ## To be renamed and refactored 🔀
+ * This component will be renamed to `OakCheckboxAsButton` and refactored to have more variants
  *
  * ## Events
  * The following callbacks are available for tracking focus events:

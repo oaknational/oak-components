@@ -7,8 +7,9 @@ import { OakFlex, OakThemeProvider } from "@/components/atoms";
 import { oakDefaultTheme } from "@/styles";
 
 const meta: Meta<typeof OakHintButton> = {
-  component: OakHintButton,
   tags: ["autodocs"],
+  title: "OWA (❌ to be moved out)/pupil/OakHintButton",
+  component: OakHintButton,
 
   argTypes: {
     isOpen: {

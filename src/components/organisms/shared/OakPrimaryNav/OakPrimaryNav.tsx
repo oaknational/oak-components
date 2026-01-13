@@ -14,6 +14,8 @@ export type OakPrimaryNavProps = {
 
 /**
  * A row of buttons for navigating between different sections
+ *
+ * ⚠️ To be deprecated
  */
 export const OakPrimaryNav = ({ ariaLabel, navItems }: OakPrimaryNavProps) => {
   return (

@@ -37,6 +37,30 @@ const preview: Preview = {
     docs: {
       theme: oakStorybookTheme,
     },
+    options: {
+      storySort: {
+        order: [
+          "components",
+          [
+            "Typography",
+            "Buttons",
+            "Form elements",
+            "Images and icons",
+            "Messaging and feedback",
+            "Layout and structure",
+            "Navigation",
+            "OakThemeProvider",
+            "CopyPasteThisComponent",
+          ],
+          "internal components",
+          "OWA (❌ to be moved out)",
+          "House CAT (❌ to be moved out)",
+          "docs",
+          "style tokens",
+          "test helpers",
+        ],
+      },
+    },
   },
   decorators: [
     withThemeFromJSXProvider<ReactRenderer>({

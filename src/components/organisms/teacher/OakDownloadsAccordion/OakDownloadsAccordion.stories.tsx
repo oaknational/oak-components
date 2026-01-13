@@ -12,9 +12,9 @@ import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";
 
 const meta: Meta<typeof OakDownloadsAccordion> = {
-  title: "Components/Organisms/teacher/OakDownloadsAccordion",
   component: OakDownloadsAccordion,
   tags: ["autodocs"],
+  title: "OWA (❌ to be moved out)/teacher/OakDownloadsAccordion",
   parameters: {
     controls: {
       include: ["initialOpen"],

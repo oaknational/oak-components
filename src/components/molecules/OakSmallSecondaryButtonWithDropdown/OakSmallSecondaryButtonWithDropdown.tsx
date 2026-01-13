@@ -24,6 +24,9 @@ export type OakSmallSecondaryButtonWithDropdownProps = {
 
 /**
  * A secondary button that allows children to be passed in as a dropdown menu.
+ *
+ * ## To be merged 🔀
+ * This component will become a variant of `OakButtonWithDropdown`
  */
 export const OakSmallSecondaryButtonWithDropdown = (
   props: OakSmallSecondaryButtonWithDropdownProps,

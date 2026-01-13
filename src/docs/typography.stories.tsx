@@ -13,7 +13,7 @@ import { OakFontToken, oakFontTokens } from "@/styles/theme/typography";
 const meta: Meta<typeof OakFlex> = {
   component: OakFlex,
   tags: ["autodocs"],
-  title: "StyleTokens/OakFontTokens",
+  title: "style tokens/OakFontTokens",
 };
 export default meta;
 

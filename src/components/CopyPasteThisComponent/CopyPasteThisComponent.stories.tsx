@@ -4,10 +4,10 @@ import { StoryObj, Meta } from "@storybook/react";
 import { CopyPasteThisComponent } from "./CopyPasteThisComponent";
 
 const meta: Meta<typeof CopyPasteThisComponent> = {
-  //  "title" is the title of the story and where to look for component in the storybook
-  title: "Components/CopyPasteThisComponent",
-  component: CopyPasteThisComponent,
   tags: ["autodocs"],
+  //  "title" is the title of the story and where to look for component in the storybook
+  title: "components/CopyPasteThisComponent",
+  component: CopyPasteThisComponent,
   argTypes: {
     // Define your component's props and their types here
     // For example:

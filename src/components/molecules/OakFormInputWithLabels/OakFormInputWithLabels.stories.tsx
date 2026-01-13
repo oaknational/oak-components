@@ -7,8 +7,9 @@ import { OakBox } from "@/components/atoms";
 
 const meta: Meta<typeof OakFormInputWithLabels> = {
   component: OakFormInputWithLabels,
-  parameters: {},
   tags: ["autodocs"],
+  title: "OWA (❌ to be moved out)/OakFormInputWithLabels",
+  parameters: {},
   decorators: [
     (Story) => (
       <OakBox

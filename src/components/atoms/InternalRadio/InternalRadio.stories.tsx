@@ -18,7 +18,7 @@ import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 const meta: Meta<typeof InternalRadio> = {
   component: InternalRadio,
   tags: ["autodocs"],
-  title: "components/atoms/InternalRadio",
+  title: "internal components/InternalRadio",
   args: internalRadioDefaults,
   argTypes: {
     sizeArgTypes,

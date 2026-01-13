@@ -45,6 +45,7 @@ const items: OakTertiaryOLNavProps = {
 const meta: Meta<typeof OakTertiaryOLNav> = {
   component: OakTertiaryOLNav,
   tags: ["autodocs"],
+  title: "OWA (❌ to be moved out)/teacher/OakTertiaryOLNav",
 };
 export default meta;
 

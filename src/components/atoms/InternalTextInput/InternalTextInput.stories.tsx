@@ -6,7 +6,7 @@ import { InternalTextInput } from "./InternalTextInput";
 const meta: Meta<typeof InternalTextInput> = {
   component: InternalTextInput,
   tags: ["autodocs"],
-  title: "components/atoms/InternalTextInput",
+  title: "internal components/InternalTextInput",
   parameters: {
     controls: {
       include: [],

@@ -19,7 +19,7 @@ import { positionArgTypes } from "@/storybook-helpers/positionStyleHelpers";
 const meta: Meta<typeof OakSpan> = {
   component: OakSpan,
   tags: ["autodocs"],
-  title: "components/atoms/OakSpan",
+  title: "components/Layout and structure/OakSpan",
   argTypes: {
     ...colorArgTypes,
     ...sizeArgTypes,

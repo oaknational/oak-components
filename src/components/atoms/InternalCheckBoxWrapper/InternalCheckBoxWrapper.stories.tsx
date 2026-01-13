@@ -9,7 +9,7 @@ import { InternalCheckBoxHoverFocus } from "@/components/atoms/InternalCheckBox/
 const meta: Meta<typeof InternalCheckBoxWrapper> = {
   component: InternalCheckBoxWrapper,
   tags: ["autodocs"],
-  title: "components/atoms/InternalCheckBoxWrapper",
+  title: "internal components/InternalCheckBoxWrapper",
   argTypes: {
     size: {
       options: ["spacing-24", "spacing-32", "spacing-40"],

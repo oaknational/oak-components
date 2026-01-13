@@ -30,13 +30,6 @@ type OakHoverLinkComponent = <C extends React.ElementType = "a">(
     OakHoverLinkProps,
 ) => React.ReactNode;
 
-/**
- * A link with an optional icon where underline is shown on hover.
- *
- * Defaulting to a `HTMLAnchorElement` this component is polymorphic and can be rendered as a button or any other element.
- * A linkDisabled prop is also available to disable the link even when it is not a button.
- */
-
 const StyleInternalLink = styled(InternalLink)`
   text-decoration: none;
   &:hover {
@@ -46,6 +39,15 @@ const StyleInternalLink = styled(InternalLink)`
   align-items: center;
 `;
 
+/**
+ * A link with an optional icon where underline is shown on hover.
+ *
+ * Defaulting to a `HTMLAnchorElement` this component is polymorphic and can be rendered as a button or any other element.
+ * A linkDisabled prop is also available to disable the link even when it is not a button.
+ *
+ * ## To be merged 🔀
+ * This component will become a prop on `OakLink` component
+ */
 export const OakHoverLink: OakHoverLinkComponent = forwardRef(
   <C extends ElementType = "a">(
     props: PolymorphicPropsWithRef<C> & OakHoverLinkProps,

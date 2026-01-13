@@ -4,7 +4,10 @@ import { OakBoxProps, oakBoxCss } from "@/components/atoms/OakBox";
 
 /**
  *
- * Inherit everything from OakBox, but change the element to a form.
+ * OakForm extends OakBox by taking the same props and style but applying them to a form element.
+ *
+ * ## To be deprecated
+ * Use `<OakBox as="form">` instead
  *
  * @deprecated Use `<OakBox as="form">` instead
  */

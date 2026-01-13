@@ -14,7 +14,8 @@ const controlIconNames = [
 const meta: Meta<typeof OakSmallTertiaryInvertedButton> = {
   component: OakSmallTertiaryInvertedButton,
   tags: ["autodocs"],
-  title: "components/molecules/OakSmallTertiaryInvertedButton",
+  title:
+    "components/Buttons/OakButton (🔀 to be created)/OakSmallTertiaryInvertedButton",
   argTypes: {
     iconName: {
       options: controlIconNames,

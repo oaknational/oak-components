@@ -8,6 +8,7 @@ import { OakFlex } from "@/components/atoms";
 const meta: Meta<typeof OakPupilJourneyUnitsFilter> = {
   component: OakPupilJourneyUnitsFilter,
   tags: ["autodocs"],
+  title: "OWA (❌ to be moved out)/pupil/browse/OakPupilJourneyUnitsFilter",
   argTypes: {
     menuItems: {
       description: "Menu items to be displayed",

@@ -6,7 +6,7 @@ import { OakBackLink } from "./OakBackLink";
 const meta: Meta<typeof OakBackLink> = {
   component: OakBackLink,
   tags: ["autodocs"],
-  title: "components/molecules/OakBackLink",
+  title: "components/Buttons/OakIconButton (🔀 to be created)/OakBackLink",
   args: {
     href: "#",
   },

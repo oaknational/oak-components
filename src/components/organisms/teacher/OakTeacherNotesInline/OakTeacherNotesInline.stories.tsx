@@ -6,6 +6,7 @@ import { OakTeacherNotesInline } from "./OakTeacherNotesInline";
 const meta: Meta<typeof OakTeacherNotesInline> = {
   component: OakTeacherNotesInline,
   tags: ["autodocs"],
+  title: "OWA (❌ to be moved out)/teacher/OakTeacherNotesInline",
   argTypes: {
     sanitizedHtml: {
       name: "sanitizedHtml",

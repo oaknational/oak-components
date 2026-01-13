@@ -6,6 +6,7 @@ import { OakCopyLinkButton } from "./OakCopyLinkButton";
 const meta: Meta<typeof OakCopyLinkButton> = {
   component: OakCopyLinkButton,
   tags: ["autodocs"],
+  title: "OWA (❌ to be moved out)/OakCopyLinkButton",
 
   parameters: {
     controls: {

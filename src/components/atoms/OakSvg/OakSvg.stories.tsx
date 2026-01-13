@@ -10,7 +10,7 @@ import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 const meta: Meta<typeof OakSvg> = {
   component: OakSvg,
   tags: ["autodocs"],
-  title: "components/atoms/OakSvg",
+  title: "components/Images and icons/OakSvg",
   argTypes: {
     ...colorArgTypes,
     ...sizeArgTypes,

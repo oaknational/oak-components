@@ -58,6 +58,8 @@ export type OakAspectRatioProps = {
  *
  * AspectRatio provides a container of fixed aspect ratio
  *
+ * ⚠️ To be deprecated
+ *
  * ## Usage
  * Use this component when you want to ensure a box has a certain aspect ratio.
  * Wrap with component with <code>position: relative</code> and a width or min-width

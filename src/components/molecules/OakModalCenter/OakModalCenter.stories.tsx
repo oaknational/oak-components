@@ -14,7 +14,8 @@ import { OakFlex, OakHeading, OakP } from "@/components/atoms";
 const meta: Meta<typeof OakModalCenter> = {
   component: OakModalCenter,
   tags: ["autodocs"],
-  title: "components/molecules/OakModalCenter",
+  title:
+    "components/Messaging and feedback/OakModal (🔀 to be created)/OakModalCenter",
   argTypes: {
     children: {
       control: "text",

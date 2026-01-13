@@ -11,7 +11,7 @@ import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 const meta: Meta<typeof OakCardWithHandDrawnBorder> = {
   component: OakCardWithHandDrawnBorder,
   tags: ["autodocs"],
-  title: "components/molecules/OakCardWithHandDrawnBorder",
+  title: "OWA (❌ to be moved out)/OakCardWithHandDrawnBorder",
   argTypes: {
     fill: drawingArgTypes["$fill"],
     stroke: drawingArgTypes["$stroke"],
