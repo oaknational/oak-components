@@ -128,6 +128,7 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
         $flexDirection={"column"}
         $borderRadius={"border-radius-m2"}
         $dropShadow={"drop-shadow-centred-standard"}
+        $maxWidth={"spacing-960"}
       >
         <InternalUnstyledChevronAccordion
           id={`question-${questionNumber}`}
