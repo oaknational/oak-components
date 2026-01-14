@@ -207,6 +207,7 @@ export const OakLeftAlignedButton = <C extends ElementType = "button">(
         {...rest}
       >
         <OakFlex
+          data-testid={"left-aligned-btn-flex-container"}
           $flexDirection={"row"}
           $alignItems={"center"}
           $gap={"spacing-8"}

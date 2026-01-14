@@ -54,14 +54,9 @@ type Story = StoryObj<typeof OakLeftAlignedButton>;
 
 export const Default: Story = {
   render: (args) => (
-    <OakFlex
-      $background={"bg-decorative1-main"}
-      $pa={"spacing-4"}
-      $flexDirection="column"
-      $gap="spacing-24"
-    >
+    <OakFlex $pa={"spacing-4"} $flexDirection="column" $gap="spacing-24">
       <OakLeftAlignedButton width="spacing-240" {...args}>
-        Left Aligned Button
+        Button
       </OakLeftAlignedButton>
       <OakLeftAlignedButton width="spacing-240" {...args} selected>
         Selected Button
@@ -79,24 +74,22 @@ export const Default: Story = {
   },
 };
 
-export const WithRightAlignedIcon: Story = {
+export const Alignment: Story = {
   render: (args) => (
     <OakFlex $flexDirection="column" $gap="spacing-24">
       <OakLeftAlignedButton {...args} width="100%">
-        Text left, icon right
+        Default
       </OakLeftAlignedButton>
-      <OakLeftAlignedButton {...args} width="100%" selected>
-        Selected with right icon
+      <OakLeftAlignedButton {...args} isTrailingIcon width="100%">
+        Trailing Icon
       </OakLeftAlignedButton>
-      <OakLeftAlignedButton {...args} width="100%" disabled>
-        Disabled with right icon
+      <OakLeftAlignedButton {...args} rightAlignIcon width="100%">
+        Right aligned icon
       </OakLeftAlignedButton>
     </OakFlex>
   ),
   args: {
     iconName: "chevron-right",
-    rightAlignIcon: true,
-    isTrailingIcon: true,
   },
 };
 
