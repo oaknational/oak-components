@@ -91,7 +91,7 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
         $ba={"border-solid-s"}
         $cg={"spacing-16"}
       >
-        <OakGridArea $colSpan={6}>
+        <OakGridArea $colSpan={[12, 6, 6]}>
           <OakFlex $flexDirection={"column"} $flexGrow={1}>
             <OakLabel htmlFor={hintInputId}>
               <OakSpan $color={"text-subdued"} $font={"heading-light-7"}>
@@ -102,7 +102,7 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
           </OakFlex>
         </OakGridArea>
 
-        <OakGridArea $colSpan={6}>
+        <OakGridArea $colSpan={[12, 6, 6]}>
           <OakFlex $flexDirection={"column"} $flexGrow={1}>
             <OakLabel htmlFor={feedbackInputId}>
               <OakSpan $color={"text-subdued"} $font={"heading-light-7"}>
