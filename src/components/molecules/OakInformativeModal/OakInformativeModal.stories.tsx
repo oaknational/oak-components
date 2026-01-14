@@ -128,14 +128,6 @@ export const WithFooter: Story = {
   },
 };
 
-export const WithDesktopWidth: Story = {
-  args: {
-    "aria-label": "With desktop width",
-    "aria-description": "A modal with max width set",
-    largeScreenMaxWidth: 480,
-  },
-};
-
 export const LeftHandSide: Story = {
   args: {
     isLeftHandSide: true,

@@ -11,17 +11,11 @@ type InternalSlideInFlexProps = {
   state: TransitionStatus;
   isLeftHandSide: boolean;
   children: React.ReactNode;
-  /**
-   * Max width for tablet and desktop screens (768px+)
-   * @default 600
-   */
-  largeScreenMaxWidth?: number;
 };
 
 const SlideInFlex = styled(OakFlex)<{
   $state: TransitionStatus;
   isLeftHandSide: boolean;
-  largeScreenMaxWidth: number;
 }>`
   max-width: ${({ isLeftHandSide }) =>
     isLeftHandSide ? `calc(100vw - ${parseSpacing("spacing-20")})` : "100vw"};
@@ -34,11 +28,11 @@ const SlideInFlex = styled(OakFlex)<{
         return isLeftHandSide ? "translateX(-100%)" : "translateX(100%)";
     }
   }};
-  ${({ isLeftHandSide, largeScreenMaxWidth }) =>
+  ${({ isLeftHandSide }) =>
     !isLeftHandSide &&
     `
       @media (min-width: 768px) {
-        max-width: ${largeScreenMaxWidth}px;
+        max-width: 600px;
       }
     `}
 `;
@@ -49,14 +43,7 @@ const InternalSlideInFlex: FC<
   HTMLDivElement,
   InternalSlideInFlexProps & ComponentPropsWithRef<typeof OakFlex>
 >((props, ref) => {
-  const {
-    finalZIndex,
-    state,
-    isLeftHandSide,
-    children,
-    largeScreenMaxWidth = 600,
-    ...rest
-  } = props;
+  const { finalZIndex, state, isLeftHandSide, children, ...rest } = props;
 
   return (
     <SlideInFlex
@@ -75,7 +62,6 @@ const InternalSlideInFlex: FC<
       $color="text-primary"
       role="dialog"
       isLeftHandSide={isLeftHandSide}
-      largeScreenMaxWidth={largeScreenMaxWidth}
       {...rest}
     >
       {children}
