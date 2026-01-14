@@ -1,19 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 
-import {
-  OakBox,
-  OakFlex,
-  OakIcon,
-  OakScreenReader,
-  OakSpan,
-} from "@/components/atoms";
+import { OakBox, OakFlex, OakIcon, OakSpan } from "@/components/atoms";
 import { InternalButton } from "@/components/atoms/InternalButton";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 
 export type OakSaveCountProps = {
-  count: number;
+  /**
+   * The number of saved items.
+   *
+   * Setting this will show the count inline with the label.
+   */
+  count?: number;
+  /**
+   * The label to display inline with the count.
+   */
+  label?: string;
   href: string;
   loading: boolean;
 };
@@ -32,47 +35,56 @@ const StyledInternalButton = styled(InternalButton)`
   }
 `;
 
-export const OakSaveCount = ({ count, href, loading }: OakSaveCountProps) => {
-  const iconName = count === 0 ? "bookmark-outlined" : "bookmark-filled";
-  const showTruncatedCount = count > 99;
-  const containerWidth = showTruncatedCount ? "spacing-64" : "spacing-56";
+export const OakSaveCount = ({
+  count,
+  href,
+  loading,
+  label = "My library",
+}: OakSaveCountProps) => {
+  const hasCount = typeof count === "number";
+  const iconName =
+    hasCount && count > 0 ? "bookmark-filled" : "bookmark-outlined";
+  const showTruncatedCount = hasCount && count > 99;
+  const ariaLabel = hasCount
+    ? `${label}: ${count} saved unit${count === 1 ? "" : "s"}`
+    : label;
 
   return (
-    <StyledInternalButton
-      as="a"
-      href={href}
-      aria-label={`${count} saved unit${count === 1 ? "" : "s"}`}
-    >
-      <OakScreenReader>View my library</OakScreenReader>
+    <StyledInternalButton as="a" href={href} aria-label={ariaLabel}>
       <OakFlex
-        $width={["spacing-32", containerWidth]}
+        $width="fit-content"
+        $minWidth="spacing-32"
         $height="spacing-32"
         $background={
           loading ? "bg-btn-secondary-hover" : "bg-decorative1-subdued"
         }
+        $font="heading-light-7"
         $alignItems="center"
         $justifyContent={["center", "initial"]}
-        $pa={["spacing-0", "spacing-4"]}
+        $pl={[null, "spacing-4"]}
+        $pr={[null, "spacing-8"]}
         $borderRadius="border-radius-s"
         $borderColor={
           loading ? "border-neutral-lighter" : "bg-decorative1-main"
         }
         $ba="border-solid-s"
         className={loading ? undefined : "oak-save-count"}
+        $gap="spacing-4"
       >
         <OakIcon
           iconName={iconName}
           data-testid={iconName}
           $width="spacing-24"
         />
-        <OakBox
-          $width="spacing-24"
-          $textAlign="center"
-          $display={["none", "block"]}
-        >
-          <OakSpan $font="heading-light-7">
-            {showTruncatedCount ? "99+" : count}
-          </OakSpan>
+        {/*
+         * We hide the label and count on mobile,
+         * but show them on desktop.
+         */}
+        <OakBox $display={["none", "contents"]}>
+          {label}
+          {hasCount && (
+            <OakSpan>({showTruncatedCount ? "99+" : count})</OakSpan>
+          )}
         </OakBox>
       </OakFlex>
     </StyledInternalButton>
