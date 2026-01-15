@@ -1,5 +1,6 @@
 export * from "./OakDownloadsAccordion";
 export * from "./OakInlineRegistrationBanner";
+export * from "./OakProgrammeHeader";
 export * from "./OakSearchFilterCheckBox";
 export * from "./OakTeacherNotesInline";
 export * from "./OakTeacherNotesModal";
