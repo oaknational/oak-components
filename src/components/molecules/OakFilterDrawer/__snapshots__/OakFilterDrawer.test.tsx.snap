@@ -25,7 +25,7 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c11 {
+.c10 {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -33,11 +33,11 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c16 {
+.c15 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c18 {
+.c17 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -48,7 +48,7 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c20 {
+.c19 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -57,7 +57,7 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c21 {
+.c20 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -66,7 +66,7 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c24 {
+.c23 {
   overflow: auto;
   border-top: 0.063rem solid;
   border-color: transparent;
@@ -74,13 +74,13 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
   overflow: auto;
 }
 
-.c26 {
+.c25 {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c27 {
+.c26 {
   width: 100%;
   padding: 0.75rem;
   border-top: 0.063rem solid;
@@ -88,7 +88,7 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c22 {
+.c21 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
@@ -119,14 +119,14 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
   justify-content: space-between;
 }
 
-.c12 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c17 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -145,7 +145,7 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
   gap: 0rem;
 }
 
-.c19 {
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -160,7 +160,7 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
   justify-content: center;
 }
 
-.c25 {
+.c24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -174,7 +174,7 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
   flex-grow: 1;
 }
 
-.c28 {
+.c27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -185,7 +185,7 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
   gap: 1rem;
 }
 
-.c10 {
+.c9 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1.25rem;
@@ -196,11 +196,11 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c9 {
+.c8 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c23 {
+.c22 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -211,7 +211,7 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c14 {
+.c13 {
   background: none;
   color: inherit;
   border: none;
@@ -225,56 +225,56 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
   color: transparent;
 }
 
-.c14:disabled {
+.c13:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c15 {
+.c14 {
   display: inline-block;
   position: relative;
 }
 
-.c15:hover {
+.c14:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: transparent;
 }
 
-.c15:hover:not(:active) [data-icon-for="button"] img {
+.c14:hover:not(:active) [data-icon-for="button"] img {
   -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
 }
 
-.c15:active {
+.c14:active {
   color: transparent;
 }
 
-.c15:disabled {
+.c14:disabled {
   color: transparent;
 }
 
-.c13 > :first-child:focus-visible .shadow {
+.c12 > :first-child:focus-visible .shadow {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c13 > :first-child:hover .shadow {
+.c12 > :first-child:hover .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c13 > :first-child:active .shadow {
+.c12 > :first-child:active .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c13 > :first-child:disabled .icon-container {
+.c12 > :first-child:disabled .icon-container {
   background: transparent;
 }
 
-.c13 > :first-child:hover .icon-container {
+.c12 > :first-child:hover .icon-container {
   background: #222222;
 }
 
-.c13 > :first-child:active .icon-container {
+.c12 > :first-child:active .icon-container {
   background: transparent;
 }
 
@@ -295,8 +295,8 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
   font: inherit;
   background: none;
   border: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   cursor: pointer;
   color: #222222;
 }
@@ -334,18 +334,8 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
   transition: ease;
 }
 
-.c8 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c8:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
 @media (min-width:750px) {
-  .c28 {
+  .c27 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -353,7 +343,7 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
 }
 
 @media (min-width:750px) {
-  .c28 {
+  .c27 {
     gap: 1.5rem;
   }
 }
@@ -362,6 +352,8 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
   .c7:hover,
   .c7:visited:hover {
     color: #222222;
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
   }
 }
 
@@ -395,42 +387,42 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
       >
         <button
           aria-label="Clear"
-          class="c7 c8"
+          class="c7 "
         >
           <span
-            class="c9"
+            class="c8"
           >
             Clear
           </span>
         </button>
         <h3
-          class="c10"
+          class="c9"
         >
           Filters
         </h3>
         <div
-          class="c11 c12 c13"
+          class="c10 c11 c12"
         >
           <button
             aria-label="Close"
-            class="c14 c15"
+            class="c13 c14"
           >
             <div
-              class="c16 c17"
+              class="c15 c16"
             >
               <div
-                class="c18 c19 icon-container"
+                class="c17 c18 icon-container"
               >
                 <div
-                  class="c20 shadow"
+                  class="c19 shadow"
                 />
                 <div
-                  class="c21"
+                  class="c20"
                   data-icon-for="button"
                 >
                   <img
                     alt=""
-                    class="c22"
+                    class="c21"
                     data-nimg="fill"
                     decoding="async"
                     loading="lazy"
@@ -440,14 +432,14 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
                 </div>
               </div>
               <span
-                class="c23"
+                class="c22"
               />
             </div>
           </button>
         </div>
       </div>
       <div
-        class="c24 c25"
+        class="c23 c24"
       >
         <div />
         <div
@@ -455,14 +447,14 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
           tabindex="-2"
         >
           <div
-            class="c26"
+            class="c25"
           >
             Modal content
           </div>
         </div>
       </div>
       <div
-        class="c27 c28"
+        class="c26 c27"
       >
         Oak filter footer
       </div>

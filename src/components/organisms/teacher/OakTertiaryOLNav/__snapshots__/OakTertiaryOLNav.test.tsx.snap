@@ -144,7 +144,11 @@ exports[`Component OakTertiaryOLNav matches snapshot 1`] = `
 }
 
 @media (hover:hover) {
-
+  .c4:hover,
+  .c4:visited:hover {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+  }
 }
 
 <div>

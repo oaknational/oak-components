@@ -234,6 +234,8 @@ exports[`OakPagination Component matches snapshot 1`] = `
   .c2:hover,
   .c2:visited:hover {
     color: #0a1d9d;
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
   }
 }
 
