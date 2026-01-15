@@ -520,6 +520,8 @@ exports[`OakHeaderHero matches snapshot 1`] = `
   .c8:hover,
   .c8:visited:hover {
     color: #0a1d9d;
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
   }
 }
 
