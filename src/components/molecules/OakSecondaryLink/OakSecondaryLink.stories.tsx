@@ -6,7 +6,7 @@ import { OakSecondaryLink } from "./OakSecondaryLink";
 const meta: Meta<typeof OakSecondaryLink> = {
   component: OakSecondaryLink,
   tags: ["autodocs"],
-  title: "components/molecules/OakSecondaryLink",
+  title: "components/molecules/OakLink (🔀 to be merged)/OakSecondaryLink",
   argTypes: {
     children: { type: "string" },
     displayDisabled: { type: "boolean" },

@@ -10,7 +10,7 @@ import { drawingArgTypes } from "@/storybook-helpers/drawingStyleHelpers";
 const meta: Meta<typeof OakHandDrawnHR> = {
   component: OakHandDrawnHR,
   tags: ["autodocs"],
-  title: "Components/molecules/OakHandDrawnHR",
+  title: "components/molecules/OWA (❌ to be moved out)/OakHandDrawnHR",
   argTypes: {
     hrColor: drawingArgTypes["$fill"],
     ...spacingArgTypes,

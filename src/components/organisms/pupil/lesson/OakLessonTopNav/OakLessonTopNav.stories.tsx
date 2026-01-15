@@ -10,6 +10,8 @@ import { OakBackLink } from "@/components/molecules";
 const meta: Meta<typeof OakLessonTopNav> = {
   component: OakLessonTopNav,
   tags: ["autodocs"],
+  title:
+    "components/organisms/OWA (❌ to be moved out)/pupil/lesson/OakLessonTopNav",
 
   decorators: [
     (Story) => (

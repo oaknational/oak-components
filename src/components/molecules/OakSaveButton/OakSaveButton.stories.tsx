@@ -4,8 +4,8 @@ import { Meta, StoryObj } from "@storybook/react";
 import { OakSaveButton, OakSaveButtonProps } from "./OakSaveButton";
 
 const meta: Meta<OakSaveButtonProps> = {
-  title: "components/molecules/OakSaveButton",
   component: OakSaveButton,
+  title: "components/molecules/OWA (❌ to be moved out)/OakSaveButton",
   argTypes: {
     isLoading: { control: "boolean" },
     unavailable: { control: "boolean" },

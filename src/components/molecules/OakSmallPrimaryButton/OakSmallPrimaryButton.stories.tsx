@@ -14,7 +14,8 @@ const controlIconNames = [
 const meta: Meta<typeof OakSmallPrimaryButton> = {
   component: OakSmallPrimaryButton,
   tags: ["autodocs"],
-  title: "components/molecules/OakSmallPrimaryButton",
+  title:
+    "components/molecules/OakButton (🔀 to be created)/OakSmallPrimaryButton",
   argTypes: {
     iconName: {
       options: controlIconNames,

@@ -6,7 +6,7 @@ import { OakSaveCount } from "./OakSaveCount";
 const meta: Meta<typeof OakSaveCount> = {
   component: OakSaveCount,
   tags: ["autodocs"],
-  title: "components/molecules/OakSaveCount",
+  title: "components/molecules/OWA (❌ to be moved out)/OakSaveCount",
   argTypes: {
     count: {
       control: {

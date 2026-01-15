@@ -6,6 +6,7 @@ import { OakPrimaryNav } from "./OakPrimaryNav";
 const meta: Meta<typeof OakPrimaryNav> = {
   component: OakPrimaryNav,
   tags: ["autodocs"],
+  title: "components/organisms/OakPrimaryNav (⚠️ deprecated)",
 
   parameters: {
     backgrounds: {

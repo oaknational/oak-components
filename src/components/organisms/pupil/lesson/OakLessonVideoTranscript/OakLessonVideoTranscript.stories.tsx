@@ -9,6 +9,8 @@ import { OakTertiaryButton } from "@/components/molecules";
 const meta: Meta<typeof OakLessonVideoTranscript> = {
   component: OakLessonVideoTranscript,
   tags: ["autodocs"],
+  title:
+    "components/organisms/OWA (❌ to be moved out)/pupil/lesson/OakLessonVideoTranscript",
 
   parameters: {
     controls: {

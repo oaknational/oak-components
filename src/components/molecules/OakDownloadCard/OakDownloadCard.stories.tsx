@@ -9,7 +9,7 @@ import { oakIconNames } from "@/components/atoms";
 const meta: Meta<typeof OakDownloadCard> = {
   component: OakDownloadCard,
   tags: ["autodocs"],
-  title: "components/molecules/OakDownloadCard",
+  title: "components/molecules/OWA (❌ to be moved out)/OakDownloadCard",
   argTypes: {
     iconName: {
       options: oakIconNames,

@@ -8,6 +8,8 @@ import { OakPupilJourneyListCounter } from "@/components/organisms/pupil/browse/
 const meta: Meta<typeof OakPupilJourneyListItemSubheading> = {
   component: OakPupilJourneyListItemSubheading,
   tags: ["autodocs"],
+  title:
+    "components/organisms/OWA (❌ to be moved out)/pupil/browse/OakPupilJourneyListItemSubheading",
   argTypes: {
     textSlot: { control: { type: "text" } },
   },

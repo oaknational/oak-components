@@ -9,6 +9,7 @@ import { OakMultilineText } from "@/components/molecules";
 const meta: Meta<typeof OakCATQuestion> = {
   component: OakCATQuestion,
   tags: ["autodocs"],
+  title: "components/organisms/House CAT (❌ to be moved out)/OakCATQuestion",
   argTypes: {
     questionNumber: { control: "number" },
     status: {

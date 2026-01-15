@@ -8,6 +8,7 @@ import { OakBox } from "@/components/atoms";
 const meta: Meta<typeof OakInfoButton> = {
   component: OakInfoButton,
   tags: ["autodocs"],
+  title: "components/molecules/OakIconButton (🔀 to be created)/OakInfoButton",
 
   argTypes: {
     onClick: { action: "clicked" },

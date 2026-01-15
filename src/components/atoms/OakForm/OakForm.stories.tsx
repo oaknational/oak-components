@@ -14,7 +14,7 @@ import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
 const meta: Meta<typeof OakForm> = {
   component: OakForm,
   tags: ["autodocs"],
-  title: "components/atoms/OakForm",
+  title: "components/atoms/OakForm (⚠️ deprecated)",
   argTypes: {
     ...spacingArgTypes,
   },

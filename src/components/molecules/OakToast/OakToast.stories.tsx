@@ -8,9 +8,9 @@ import { OakPrimaryButton } from "@/components/molecules/OakPrimaryButton";
 import { OakFlex } from "@/components/atoms";
 
 const meta: Meta<typeof OakToast> = {
+  tags: ["autodocs"],
   title: "components/molecules/OakToast",
   component: OakToast,
-  tags: ["autodocs"],
   argTypes: {
     message: {
       control: {

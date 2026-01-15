@@ -6,9 +6,10 @@ import { OakUnitListOptionalityItemCard } from "./OakUnitListOptionalityItemCard
 import { OakFlex } from "@/components/atoms";
 
 const meta: Meta<typeof OakUnitListOptionalityItemCard> = {
-  title: "components/organisms/teacher/OakUnitListOptionalityItemCard",
   component: OakUnitListOptionalityItemCard,
   tags: ["autodocs"],
+  title:
+    "components/organisms/OWA (❌ to be moved out)/teacher/OakUnitListOptionalityItemCard",
   args: {
     title:
       "Migration: What do sources tell us about the British Empire in India and Africa?",

@@ -1,17 +1,17 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakSmallSecondaryButtonWithDropdown } from "./OakSmallSecondaryButtonWithDropdown";
+import { OakButtonWithDropdown } from "./OakButtonWithDropdown";
 
 import { OakFlex, OakIcon, OakSpan } from "@/components/atoms";
 import { OakSmallPrimaryInvertedButton } from "@/components/molecules/OakSmallPrimaryInvertedButton";
 
 // Generic Dropdown Navigation Button Stories
-const dropdownNavMeta: Meta<typeof OakSmallSecondaryButtonWithDropdown> = {
-  component: OakSmallSecondaryButtonWithDropdown,
+const dropdownNavMeta: Meta<typeof OakButtonWithDropdown> = {
+  component: OakButtonWithDropdown,
   tags: ["autodocs"],
   title:
-    "components/molecules/OakButtonWithDropdown (🔀 to be merged)/OakSmallSecondaryButtonWithDropdown",
+    "components/molecules/OakButtonWithDropdown (🔀 to be merged)/OakButtonWithDropdown",
   parameters: {
     controls: {
       include: [
@@ -42,91 +42,80 @@ const dropdownNavMeta: Meta<typeof OakSmallSecondaryButtonWithDropdown> = {
 
 export default dropdownNavMeta;
 
-type DropdownNavStory = StoryObj<typeof OakSmallSecondaryButtonWithDropdown>;
+type OakButtonWithDropdownStory = StoryObj<typeof OakButtonWithDropdown>;
 
-export const ButtonWithDropDown: DropdownNavStory = {
+export const ButtonWithDropdown: OakButtonWithDropdownStory = {
   render: (args) => (
     <OakFlex $height={"spacing-240"}>
       <OakFlex $gap="spacing-24">
-        <OakSmallSecondaryButtonWithDropdown {...args}>
-          <OakSmallSecondaryButtonWithDropdown.Item aria-label="Button 1">
+        <OakButtonWithDropdown {...args}>
+          <OakButtonWithDropdown.Item aria-label="Button 1">
             Button 1
-          </OakSmallSecondaryButtonWithDropdown.Item>
+          </OakButtonWithDropdown.Item>
 
-          <OakSmallSecondaryButtonWithDropdown.Item aria-label="Longer button 2">
+          <OakButtonWithDropdown.Item aria-label="Longer button 2">
             Longer button 2
-          </OakSmallSecondaryButtonWithDropdown.Item>
+          </OakButtonWithDropdown.Item>
 
-          <OakSmallSecondaryButtonWithDropdown.Item aria-label="Button 3">
+          <OakButtonWithDropdown.Item aria-label="Button 3">
             Button 3
-          </OakSmallSecondaryButtonWithDropdown.Item>
+          </OakButtonWithDropdown.Item>
 
-          <OakSmallSecondaryButtonWithDropdown.Divider />
+          <OakButtonWithDropdown.Divider />
 
-          <OakSmallSecondaryButtonWithDropdown.Item
+          <OakButtonWithDropdown.Item
             element="a"
             href="#"
             aria-label="Button 4"
             iconName="external"
           >
             Button 4
-          </OakSmallSecondaryButtonWithDropdown.Item>
-        </OakSmallSecondaryButtonWithDropdown>
+          </OakButtonWithDropdown.Item>
+        </OakButtonWithDropdown>
 
-        <OakSmallSecondaryButtonWithDropdown
-          {...args}
-          primaryActionText="Disabled"
-          disabled
-        >
-          <OakSmallSecondaryButtonWithDropdown.Item aria-label="Button 1">
+        <OakButtonWithDropdown {...args} primaryActionText="Disabled" disabled>
+          <OakButtonWithDropdown.Item aria-label="Button 1">
             Button 1
-          </OakSmallSecondaryButtonWithDropdown.Item>
-        </OakSmallSecondaryButtonWithDropdown>
+          </OakButtonWithDropdown.Item>
+        </OakButtonWithDropdown>
 
-        <OakSmallSecondaryButtonWithDropdown
-          {...args}
-          primaryActionText="Loading"
-          isLoading
-        >
-          <OakSmallSecondaryButtonWithDropdown.Item aria-label="Button 1">
+        <OakButtonWithDropdown {...args} primaryActionText="Loading" isLoading>
+          <OakButtonWithDropdown.Item aria-label="Button 1">
             Button 1
-          </OakSmallSecondaryButtonWithDropdown.Item>
-        </OakSmallSecondaryButtonWithDropdown>
+          </OakButtonWithDropdown.Item>
+        </OakButtonWithDropdown>
       </OakFlex>
     </OakFlex>
   ),
 };
 
-export const leadingButtonIcon: DropdownNavStory = {
+export const leadingButtonIcon: OakButtonWithDropdownStory = {
   render: (args) => (
     <OakFlex $height={"spacing-240"}>
-      <OakSmallSecondaryButtonWithDropdown {...args}>
-        <OakSmallSecondaryButtonWithDropdown.Item
-          iconName="external"
-          aria-label="Glossary"
-        >
+      <OakButtonWithDropdown {...args}>
+        <OakButtonWithDropdown.Item iconName="external" aria-label="Glossary">
           Glossary
-        </OakSmallSecondaryButtonWithDropdown.Item>
-        <OakSmallSecondaryButtonWithDropdown.Item
+        </OakButtonWithDropdown.Item>
+        <OakButtonWithDropdown.Item
           iconName="external"
           aria-label="Comprehension task"
         >
           Comprehension task
-        </OakSmallSecondaryButtonWithDropdown.Item>
-        <OakSmallSecondaryButtonWithDropdown.Item
+        </OakButtonWithDropdown.Item>
+        <OakButtonWithDropdown.Item
           iconName="external"
           aria-label="More starter quiz questions"
         >
           More starter quiz questions
-        </OakSmallSecondaryButtonWithDropdown.Item>
-        <OakSmallSecondaryButtonWithDropdown.Item
+        </OakButtonWithDropdown.Item>
+        <OakButtonWithDropdown.Item
           iconName="external"
           aria-label="More exit quiz questions"
         >
           More exit quiz questions
-        </OakSmallSecondaryButtonWithDropdown.Item>
+        </OakButtonWithDropdown.Item>
 
-        <OakSmallSecondaryButtonWithDropdown.Divider />
+        <OakButtonWithDropdown.Divider />
 
         <OakSmallPrimaryInvertedButton
           element="a"
@@ -142,7 +131,7 @@ export const leadingButtonIcon: DropdownNavStory = {
             </OakFlex>
           </OakFlex>
         </OakSmallPrimaryInvertedButton>
-      </OakSmallSecondaryButtonWithDropdown>
+      </OakButtonWithDropdown>
     </OakFlex>
   ),
   args: {

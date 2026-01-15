@@ -6,6 +6,7 @@ import { OakCaptionSearch } from "./OakCaptionSearch";
 const meta: Meta<typeof OakCaptionSearch> = {
   component: OakCaptionSearch,
   tags: ["autodocs"],
+  title: "components/organisms/House CAT (❌ to be moved out)/OakCaptionSearch",
   parameters: {
     backgrounds: {
       default: "light",

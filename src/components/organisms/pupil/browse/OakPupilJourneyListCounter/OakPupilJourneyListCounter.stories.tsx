@@ -6,6 +6,8 @@ import { OakPupilJourneyListCounter } from "./OakPupilJourneyListCounter";
 const meta: Meta<typeof OakPupilJourneyListCounter> = {
   component: OakPupilJourneyListCounter,
   tags: ["autodocs"],
+  title:
+    "components/organisms/OWA (❌ to be moved out)/pupil/browse/OakPupilJourneyListCounter",
   argTypes: {},
   parameters: {
     controls: {

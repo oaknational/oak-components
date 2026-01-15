@@ -4,9 +4,9 @@ import { StoryObj, Meta } from "@storybook/react";
 import { OakPagination, OakPaginationProps } from "./OakPagination";
 
 const meta: Meta<typeof OakPagination> = {
-  title: "Components/organisms/shared/OakPagination",
   component: OakPagination,
   tags: ["autodocs"],
+  title: "components/organisms/OakPagination",
   argTypes: {
     totalPages: { type: "number" },
     paginationHref: { type: "string" },

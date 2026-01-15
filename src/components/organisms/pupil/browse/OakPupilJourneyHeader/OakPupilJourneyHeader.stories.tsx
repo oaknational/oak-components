@@ -6,6 +6,8 @@ import { OakPupilJourneyHeader } from "./OakPupilJourneyHeader";
 const meta: Meta<typeof OakPupilJourneyHeader> = {
   component: OakPupilJourneyHeader,
   tags: ["autodocs"],
+  title:
+    "components/organisms/OWA (❌ to be moved out)/pupil/browse/OakPupilJourneyHeader",
   argTypes: {
     iconBackground: {},
     iconName: {},
