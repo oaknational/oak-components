@@ -28,6 +28,7 @@ export * from "./OakInfoButton";
 export * from "./OakInformativeModal";
 export * from "./OakInlineBanner";
 export * from "./OakJauntyAngleLabel";
+export * from "./OakLeftAlignedButton";
 export * from "./OakLessonInfoCard";
 export * from "./OakLink";
 export * from "./OakLinkCard";
