@@ -21,27 +21,15 @@ export type OakMultilineTextProps = {
    * Maximum number of characters
    */
   charLimit: number;
-  /**
-   * Whether to allow carriage return (new line) when the Enter key is pressed and in clipboard pastes.
-   */
-  allowCarriageReturn?: boolean;
-  allowLeadingTrailingSpaces?: boolean;
   ariaLabel?: string;
   /**
-   * Display an error
+   * Display errors passed in as a prop
    */
-  invalidText?: string;
+  errors?: Array<string>;
   label?: string;
-  /**
-   * Callback for internally handled errors (e.g. character limit exceeded)
-   */
-  onError?: (error: string) => void;
   onTextAreaChange?: (input: string) => void;
   onTextAreaBlur?: (input: string) => void;
-} & Omit<
-  OakTextAreaProps,
-  "onChange" | "onBlur" | "onError" | "$width" | "value"
->;
+} & Omit<OakTextAreaProps, "onChange" | "onBlur" | "$width" | "value">;
 
 type StyledOakTextAreaProps = {
   isError?: boolean;
@@ -69,13 +57,12 @@ const UnstyledComponent = forwardRef(
       charLimit,
       placeholder,
       disabled,
-      invalidText,
+      errors,
       ariaLabel,
       initialValue,
       onTextAreaChange,
       onTextAreaBlur,
       onFocus,
-      onError,
       label,
       id,
       name,
@@ -83,48 +70,15 @@ const UnstyledComponent = forwardRef(
       $overflowX = [null, null, "auto"],
       $overflowY = ["auto", "auto", null],
       $whiteSpace = ["wrap", "wrap", "nowrap"],
-      allowCarriageReturn = false,
-      allowLeadingTrailingSpaces = false,
       ...textAreaProps
     }: OakMultilineTextProps,
     ref?: React.Ref<HTMLTextAreaElement>,
   ) => {
     const [showCharCount, setShowCharCount] = useState(false);
-    const [internalErrors, setInternalErrors] = useState<string[]>([]);
     const [userText, setUserText] = useState(initialValue);
     const charCount = userText?.length ?? 0;
 
     const charCountWidth = charLimit > 99 ? "spacing-56" : "spacing-48";
-
-    const updateInternalErrors = (error: string) => {
-      if (!internalErrors.includes(error)) {
-        setInternalErrors((errors) => [...errors, error]);
-      }
-    };
-
-    const sanitizeInput = (input: string, trim: boolean = false) => {
-      let output = input;
-      if (trim) {
-        const temp = output.trim();
-        if (output !== temp) {
-          output = temp;
-          const errorMessage = "Leading or trailing spaces have been removed";
-          onError?.(errorMessage);
-          updateInternalErrors(errorMessage);
-        }
-      }
-      if (!allowCarriageReturn) {
-        const temp = output.replace(/[\r\n]+/gm, " ");
-        if (output !== temp) {
-          output = temp;
-          const errorMessage = "Carriage returns have been removed";
-          onError?.(errorMessage);
-          updateInternalErrors(errorMessage);
-        }
-      }
-
-      return output;
-    };
 
     const handleFocus = (e: React.FocusEvent<HTMLTextAreaElement>) => {
       onFocus?.(e);
@@ -132,37 +86,14 @@ const UnstyledComponent = forwardRef(
     };
 
     const handleBlur = (e: React.FocusEvent<HTMLTextAreaElement>) => {
-      const sanitizedValue = sanitizeInput(
-        e.target.value,
-        !allowLeadingTrailingSpaces,
-      );
-      setUserText(sanitizedValue);
-      onTextAreaBlur?.(sanitizedValue);
+      setUserText(e.target.value);
+      onTextAreaBlur?.(e.target.value);
       setShowCharCount(false);
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-      const sanitizedValue = sanitizeInput(e.target.value);
-      setUserText(sanitizedValue);
-      onTextAreaChange?.(sanitizedValue);
-    };
-
-    const handlePaste = (pasteValue: string) => {
-      setInternalErrors([]);
-      // The text area automatically trims the pasted text to the maxLength (charLimit) so we need to check here if the new value exceeds charLimit and record the error
-      const newValue = (userText ?? "") + pasteValue;
-      if (newValue.length > charLimit) {
-        const errorMessage = `Character limit exceeded: input has been trimmed to ${charLimit} characters`;
-        onError?.(errorMessage);
-        updateInternalErrors(errorMessage);
-      }
-    };
-
-    const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
-      setInternalErrors([]);
-      if (e.key === "Enter" && !allowCarriageReturn) {
-        e.preventDefault();
-      }
+      setUserText(e.target.value);
+      onTextAreaChange?.(e.target.value);
     };
 
     return (
@@ -181,7 +112,6 @@ const UnstyledComponent = forwardRef(
           id={id}
           name={name}
           value={userText}
-          onKeyDown={handleKeyDown}
           onFocus={handleFocus}
           onChange={handleChange}
           onBlur={handleBlur}
@@ -195,11 +125,10 @@ const UnstyledComponent = forwardRef(
           $ba={"border-solid-m"}
           $pa={"spacing-12"}
           $borderColor={
-            internalErrors.length > 0 || invalidText
+            errors && errors?.length > 0
               ? "border-error"
               : "border-neutral-lighter"
           }
-          onPaste={(e) => handlePaste(e.clipboardData.getData("text"))}
           $height={$height}
           $overflowX={$overflowX}
           $overflowY={$overflowY}
@@ -214,7 +143,7 @@ const UnstyledComponent = forwardRef(
           $pb={["spacing-20"]}
           $position={["relative", null]}
         >
-          {(invalidText || internalErrors.length > 0) && (
+          {errors && errors.length > 0 && (
             <OakGridArea $colSpan={10} $position={"relative"}>
               <OakFlex
                 $flexDirection={"row"}
@@ -236,7 +165,7 @@ const UnstyledComponent = forwardRef(
                   id={`${name}-invalid-error`}
                   $pl={"spacing-4"}
                 >
-                  {invalidText ? invalidText : internalErrors.join(". ")}
+                  {errors.join(". ")}
                 </OakSpan>
               </OakFlex>
             </OakGridArea>
@@ -266,9 +195,8 @@ const UnstyledComponent = forwardRef(
  *
  * This component wraps OakTextArea and provides the following functionality
  * - Manages its own state
- * - Displays errors for character limit exceeded (on paste), leading/trailing spaces removed, carriage returns removed
+ * - Displays errors passed in as a prop
  * - Displays and updates character count on focus only
- * - Prevents carriage returns (Enter key and pasted text) when allowCarriageReturn is false
  * - Passes stored text to onTextAreaChange and onTextAreaBlur callbacks
  *
  *
@@ -277,7 +205,6 @@ const UnstyledComponent = forwardRef(
  * onTextAreaBlur
  * onTextAreaChange
  * onFocus: display character count
- * onError: returns error messages for internally handled errors
  *
  * ### Notes
  *  - Current method of clearing the component is to reset its key in the parent component

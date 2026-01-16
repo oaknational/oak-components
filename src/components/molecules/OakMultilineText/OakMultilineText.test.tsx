@@ -98,14 +98,12 @@ describe("OakMultilineText", () => {
 
   it("trims text when pasted text length exceeds character limit", async () => {
     const user = userEvent.setup();
-    const onError = jest.fn();
 
     const { getByRole } = renderWithTheme(
       <OakMultilineText
         charLimit={10}
         $height="spacing-56"
         disabled={false}
-        onError={onError}
         id={"1"}
         name="textarea"
       />,
@@ -118,8 +116,6 @@ describe("OakMultilineText", () => {
     await user.paste("Testing paste");
     expect(textArea).toHaveValue("HelloTesti");
     expect(textArea).toHaveFocus();
-
-    expect(onError).toHaveBeenCalled();
   });
 
   it("counts characters correctly when text is edited", async () => {
@@ -153,13 +149,13 @@ describe("OakMultilineText", () => {
     expect(onTextAreaChange).toHaveBeenCalledTimes(14);
   });
 
-  it("shows invalid text if invalid is true and invalid text has been set", () => {
+  it("shows errors if errors have been passed in as prop", () => {
     const { getByRole, getByText } = renderWithTheme(
       <OakMultilineText
         charLimit={100}
         $height="spacing-56"
         disabled={false}
-        invalidText="Invalid text"
+        errors={["Invalid text"]}
         id={"1"}
         name="textarea"
       />,
@@ -250,93 +246,5 @@ describe("OakMultilineText", () => {
     expect(charCount).toBeInTheDocument();
     expect(textarea).toHaveTextContent("Test");
     expect(charCount).toHaveTextContent("4/100");
-  });
-
-  it.each([
-    [true, "test\ntest 2"],
-    [false, "testtest 2"],
-  ])(
-    "allows carriage return only when true",
-    async (allowCarriageReturn, expectedValue) => {
-      const user = userEvent.setup();
-      const { getByRole } = renderWithTheme(
-        <OakMultilineText
-          charLimit={200}
-          data-testid="test"
-          disabled={false}
-          placeholder="Start typing answer..."
-          allowCarriageReturn={allowCarriageReturn}
-        />,
-      );
-      const textArea = getByRole("textbox");
-      expect(textArea).toBeInTheDocument();
-
-      await user.click(textArea);
-      await user.type(textArea, "test");
-
-      expect(textArea).toHaveValue("test");
-
-      await user.type(textArea, "{Enter}");
-      await user.type(textArea, "test 2");
-      expect(textArea).toHaveValue(expectedValue);
-    },
-  );
-
-  it("trims leading and trailing whitespace on blur when allowLeadingTrailingSpaces is false", async () => {
-    const user = userEvent.setup();
-    const onError = jest.fn();
-    const onTextAreaBlur = jest.fn();
-    const onTextAreaChange = jest.fn();
-    const { getByRole } = renderWithTheme(
-      <OakMultilineText
-        charLimit={200}
-        data-testid="test"
-        disabled={false}
-        onError={onError}
-        onTextAreaBlur={onTextAreaBlur}
-        onTextAreaChange={onTextAreaChange}
-        placeholder="Start typing answer..."
-        allowLeadingTrailingSpaces={false}
-      />,
-    );
-    const textArea = getByRole("textbox");
-    expect(textArea).toBeInTheDocument();
-
-    await user.click(textArea);
-    await user.type(textArea, "   test   ");
-
-    expect(onTextAreaChange).toHaveBeenLastCalledWith("   test   ");
-    await user.click(document.body); // blur
-
-    expect(onTextAreaBlur).toHaveBeenLastCalledWith("test");
-    expect(onError).toHaveBeenCalledTimes(1);
-    expect(onError).toHaveBeenCalledWith(
-      "Leading or trailing spaces have been removed",
-    );
-  });
-
-  it("removes carriage returns on pasted text", async () => {
-    const user = userEvent.setup();
-    const onError = jest.fn();
-    const onTextAreaChange = jest.fn();
-    const { getByRole } = renderWithTheme(
-      <OakMultilineText
-        charLimit={200}
-        data-testid="test"
-        disabled={false}
-        onError={onError}
-        onTextAreaChange={onTextAreaChange}
-        placeholder="Start typing answer..."
-        allowLeadingTrailingSpaces={true}
-      />,
-    );
-    const textArea = getByRole("textbox");
-    expect(textArea).toBeInTheDocument();
-
-    await user.click(textArea);
-    await user.paste("test\ntest 2");
-
-    expect(onTextAreaChange).toHaveBeenLastCalledWith("test test 2");
-    expect(onError).toHaveBeenCalledWith("Carriage returns have been removed");
   });
 });
