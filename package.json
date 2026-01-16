@@ -22,7 +22,7 @@
     "lint:precommit": "eslint src/**/* --fix",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prepare": "husky install",
+    "prepare": "if [ -d .git ]; then husky install; else npm run build; fi",
     "prepublishOnly": "./scripts/prepublish.sh",
     "publish:local": "npm run build && yalc publish --no-scripts"
   },
