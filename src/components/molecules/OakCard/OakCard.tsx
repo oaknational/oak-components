@@ -1,85 +1,54 @@
 import React from "react";
-import styled, { css } from "styled-components";
+// import styled, { css } from "styled-components";
 
-import { OakFlex } from "@/components/atoms/OakFlex";
-import { parseSpacing } from "@/styles/helpers/parseSpacing";
+import { OakFlex, OakHeading, OakImage, OakP } from "@/components/atoms";
+import { OakTagFunctional } from "@/components/molecules/OakTagFunctional";
+import { OakLink } from "@/components/molecules/OakLink";
 
-const StyledOakFlex = styled(OakFlex)`
-  width: ${parseSpacing("spacing-24")};
-`;
-// For example you could restyle the OakFlex component by adding the styles to the css template literal below
+// to do: investigate importing molecules from index error
+
 
 export type OakCardProps = {
-  /**
-   * Define the props for your component here
-   * add styleprops from "@/styles/utils/*Style" to the component props type definition where necessary in order to use
-   * the oak design kit which accept specific tokens to add style and also keep the components style consistent
-   *  & TypographyStyleProps &
-   *   SpacingStyleProps &
-   *   ColorStyleProps &
-   *   DisplayStyleProps &
-   *   BorderStyleProps &
-   *   ColorFilterStyleProps &
-   *   DropShadowStyleProps &
-   *   FlexStyleProps &
-   *   ListStyleProps &
-   *   OpacityStyleProps &
-   *   PositionStyleProps &
-   *   SizeStyleProps &
-   *   TransformStyleProps &
-   *   TransitionStyleProps &
-   *   ZIndexStyleProps;
-   */
+  orientation?: "row" | "column";
+  imageSrc?: string;
+  aspectRatio?: "1/1" | "4/3";
+  heading: string;
+  subCopy?: string;
+  tagName?: string;
+  linkText?: string;
+  linkIconName?: string; //use defined strings?
+  href?: string;
 };
 
-// By adding the style css utils to this components css your component will be able to accept corresponding props and prop values.
-// you can also add custom styles to the component by adding the styles to the css template literal below
+// const OakCardCss = css<OakCardProps>``;
 
-const OakCardCss = css<OakCardProps>``;
-
-/**
- *
- * add default and custom styles to the component by adding the styles to the css template literal below
- *
- * ${typographyStyle}
- * ${colorStyle}
- * ${spacingStyle}
- * ${displayStyle}
- * ${borderStyle}
- * ${dropShadowStyle}
- * ${colorFilterStyle}
- *
- */
-
-const UnstyledComponent = (props: OakCardProps) => {
-  /**
-   * Add your component logic here
-   *
-   */
-
+// to do: pull out props names
+// to do: conditionals
+// to do: look up proper prop passing
+// to do: styling
+// to do : add comments
+// to do: use functional tag as span?
+// to do: allow text decoration of heading?
+// to do: add aspect ratio to oak image
+export const OakCard = (props: OakCardProps) => {
   return (
-    /**
-     *  Return your component JSX here
-     * for example you could
-     *
-     */
-
-    <StyledOakFlex {...props}>
-      {/** Add your component content here */}
-    </StyledOakFlex>
+    <div>
+      {props.imageSrc && <OakImage
+        src={props.imageSrc || ""}
+        alt={props.heading}
+        $width={"spacing-160"}
+        $height={"spacing-160"}
+      />}
+      <OakHeading tag="h6">{props.heading}</OakHeading>
+      {props.subCopy && <OakP>{props.subCopy}</OakP>}
+      {props.tagName && <OakTagFunctional label={props.tagName} />}
+      {props.href && <OakLink
+        href={props.href}
+        iconName={props.linkIconName}
+        isTrailingIcon={true}
+        // iconWidth=""
+        // iconHeight=""
+      >{props.linkText}</OakLink>}
+    </div>
   );
 };
-
-/**
- *
- * Add the description of the component here and it will appear on the story for the component
- * The following callbacks are available for tracking focus events:
- *
- * ### Callbacks
- * make sure to add descriptions and types for any callbacks for the component
- *
- * NB. We must export a styled component for it to be inheritable
- */
-export const OakCard = styled(UnstyledComponent)`
-  ${OakCardCss}
-`;
