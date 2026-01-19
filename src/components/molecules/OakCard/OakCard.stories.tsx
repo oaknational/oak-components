@@ -29,7 +29,7 @@ const meta: Meta<typeof OakCard> = {
         "type",
       ],
     },
-  },
+  }
 };
 
 export default meta;
@@ -39,11 +39,14 @@ type Story = StoryObj<typeof OakCard>;
 export const Default: Story = {
   render: (args) => <OakCard {...args} />,
   args: {
-    // Define your component's default props here
-    //   $background: "bg-btn-primary",
-    //   $color: "text-inverted",
-    //   $ba: "border-solid-s",
-    //   $pa: "spacing-12",
-    //   $borderRadius: "border-radius-m",
+    orientation: "row",
+    imageSrc: `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/sample.jpg`,
+    aspectRatio: "1/1",
+    heading: "A Heading",
+    subCopy: "Some Sub Copy",
+    tagName: "A Tag",
+    linkText: "Link Text",
+    linkIconName: "chevron-right",
+    href: "https://example.com",
   },
 };
