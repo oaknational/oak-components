@@ -9,7 +9,7 @@ import { OakLink } from "@/components/molecules/OakLink";
 
 
 export type OakCardProps = {
-  orientation?: "row" | "column";
+  cardOrientation?: "row" | "column";
   imageSrc?: string;
   aspectRatio?: "1/1" | "4/3";
   heading: string;
@@ -30,25 +30,35 @@ export type OakCardProps = {
 // to do: use functional tag as span?
 // to do: allow text decoration of heading?
 // to do: add aspect ratio to oak image
-export const OakCard = (props: OakCardProps) => {
+export const OakCard = ({
+  heading,
+  cardOrientation = "column",
+  imageSrc = "",
+  aspectRatio = "1/1",
+  subCopy = "",
+  tagName = "",
+  linkText = "",
+  linkIconName = "",
+  href = "",
+  }: OakCardProps) => {
   return (
-    <div>
-      {props.imageSrc && <OakImage
-        src={props.imageSrc || ""}
-        alt={props.heading}
+    <OakFlex $flexDirection={cardOrientation ?? "column"}>
+      {imageSrc && <OakImage
+        src={imageSrc || ""}
+        alt={heading}
         $width={"spacing-160"}
         $height={"spacing-160"}
       />}
-      <OakHeading tag="h6">{props.heading}</OakHeading>
-      {props.subCopy && <OakP>{props.subCopy}</OakP>}
-      {props.tagName && <OakTagFunctional label={props.tagName} />}
-      {props.href && <OakLink
-        href={props.href}
-        iconName={props.linkIconName}
+      <OakHeading tag="h6">{heading}</OakHeading>
+      {subCopy && <OakP>{subCopy}</OakP>}
+      {tagName && <OakTagFunctional label={tagName} />}
+      {href && <OakLink
+        href={href}
+        iconName={linkIconName}
         isTrailingIcon={true}
         // iconWidth=""
         // iconHeight=""
-      >{props.linkText}</OakLink>}
-    </div>
+      >{linkText}</OakLink>}
+    </OakFlex>
   );
 };
