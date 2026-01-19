@@ -1,7 +1,8 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakFlex, OakBox } from "@/components/atoms";
+import { OakFlex } from "@/components/layout-and-structure/OakFlex";
+import { OakBox } from "@/components/layout-and-structure/OakBox";
 import {
   OakDropShadowToken,
   oakDropShadowTokens,

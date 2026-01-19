@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { OakFlex } from "@/components/atoms/OakFlex";
+import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 
 const StyledOakFlex = styled(OakFlex)`
