@@ -26,6 +26,8 @@ export type OakCardProps = {
 // to do: add comments
 // to do: allow text decoration of heading?
 // to do: how to handle oak box styling - props pass?
+// to do: order styles
+// to do: border radius on image
 export const OakCard = ({
   heading,
   cardOrientation = "column",
@@ -38,30 +40,38 @@ export const OakCard = ({
   href = "",
   }: OakCardProps) => {
   return (
-    <OakFlex $flexDirection={cardOrientation ?? "column"}>
-      <OakBox $background={"bg-primary"}>
-        {imageSrc && <OakImage
-          src={imageSrc || ""}
-          alt={heading}
-          $width={"spacing-160"}
-          $height={"spacing-160"}
-          $objectFit={aspectRatio === "1/1" ? "cover" : "contain"}
-        />}
-        <OakFlex $flexDirection="column" $gap="spacing-16">
-          <OakHeading $font={"heading-6"} tag="h3">{heading}</OakHeading>
-          {subCopy && <OakP>{subCopy}</OakP>}
-          <OakFlex $flexDirection="row">
-            {tagName && <OakTagFunctional label={tagName} $background={"bg-decorative3-very-subdued"}/>}
-            {href && <OakLink
-              href={href}
-              iconName={linkIconName}
-              isTrailingIcon={true}
-              // iconWidth=""
-              // iconHeight=""
-            >{linkText}</OakLink>}
-          </OakFlex>
+    <OakFlex
+      $flexDirection={cardOrientation ?? "column"}
+      $borderRadius={"border-radius-m2"}
+      $background={"bg-neutral"}
+      $width={"fit-content"}
+      $gap={"spacing-16"}
+      $pa={"spacing-16"}
+    >
+      {imageSrc && <OakImage
+        src={imageSrc || ""}
+        alt={heading}
+        $width={"spacing-360"}
+        $height={"spacing-360"}
+        $objectFit={aspectRatio === "1/1" ? "cover" : "contain"}
+        // $borderRadius={"border-radius-m2"}
+      />}
+      <OakFlex $flexDirection="column" $gap="spacing-16">
+        <OakHeading $font={"heading-6"} tag="h3">{heading}</OakHeading>
+        {subCopy && <OakP>{subCopy}</OakP>}
+        <OakFlex $flexDirection="row" $justifyContent={"space-between"}>
+          {tagName && <OakTagFunctional label={tagName} $background={"bg-decorative3-very-subdued"}/>}
+          {href && <OakLink
+            href={href}
+            iconName={linkIconName}
+            isTrailingIcon={true}
+            // iconWidth=""
+            // iconHeight=""
+            $color={"bg-btn-primary"}
+            $textDecoration={"none"}
+          >{linkText}</OakLink>}
         </OakFlex>
-      </OakBox>
+      </OakFlex>
     </OakFlex>
   );
 };
