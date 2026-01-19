@@ -40,6 +40,7 @@ const preview: Preview = {
     options: {
       storySort: {
         order: [
+          "docs",
           "components",
           [
             "Typography",
@@ -57,7 +58,6 @@ const preview: Preview = {
           "internal components",
           "OWA",
           "House CAT",
-          "docs",
           "style tokens",
           "test helpers",
         ],

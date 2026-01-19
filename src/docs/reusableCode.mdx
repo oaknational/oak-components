@@ -1,6 +1,6 @@
 import { Meta } from "@storybook/blocks";
 
-<Meta title="docs/ReusableCode" />
+<Meta title="docs/Reusable code" />
 
 # Tips for writing resuable code
 
@@ -19,15 +19,15 @@ Whilst this is probably the easiest to implement, it comes with the following da
 
 ## Should I create a new component ?
 
-In most most cases this is the better option and it follows the [oak components heuristics](/docs/docs-howtodesigncomponents--docs#heuristics-for-component-design) . The key risks to look out for are:
+In most most cases this is the better option and it follows the [oak components heuristics](/docs/docs-how-to-design-components--docs#heuristics-for-component-design) . The key risks to look out for are:
 
-- code duplication: check that there isn't an existing component which does what you need
+- code duplication: check that there isn't an existing component which does what you need (you can ask in #oak-components Slack channel if unsure)
 - poor discoverability: make sure your component is well named using the [naming conventions](/docs/docs-namingconventions--docs)
 - divergence of components: use patterns of composition and inheritance to avoid this
 
 ## Approaches to code reuse
 
-In all cases your component will be a function composed of other atoms, molecules and perhaps organisms. When you want to use the majority of the existing component but with a few changes, you have a few options:
+When you want to use the majority of the existing component but with a few changes, you have a few options:
 
 ### Pure composition
 

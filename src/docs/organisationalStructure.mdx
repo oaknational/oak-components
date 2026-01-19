@@ -1,49 +1,61 @@
 import { Meta } from "@storybook/blocks";
 
-<Meta title="docs/OrganisationalStructure" />
+<Meta title="docs/Organisational structure" />
 
 # Organisational structure
 
-- shared components are organised in the subfolders within 'components' folder
-- internal components are organised within 'internal components' folder
-- squad specific components are organised within relevant squad folders
-
 ⚠️ When creating a new component and in doubt of which category or folder it should belong to, discuss in #oak-components Slack channel.
 
-Current shared components subfolders:
+## Components
 
-### Typography
+- generic components or components used by more than one repo
+- organised in the subfolders within 'Components' folder
+
+### Current shared components subfolders
+
+#### Typography
 
 All typography related components
 
-### Buttons
+#### Buttons
 
 All buttons and icon buttons
 
-### Form elements
+#### Form elements
 
 Form elements including form elements styled as buttons
 
-### Images and icons
+#### Images and icons
 
 Components to render icons, images or SVGs
 
-### Messaging and feedback
+#### Messaging and feedback
 
 Components which role is to display a message or provide feedback to the user
 
-### Layout and structure
+#### Layout and structure
 
 Components which are used for creating layout
 
-### Navigation
+#### Navigation
 
 Components which main role is navigation
 
-### Presentational
+#### Presentational
 
 Components which main function is presentational
 
-### Cookies
+#### Cookies
 
 Cookie related layouts
+
+## Internal components
+
+- an internal component is a non exported component which supports several shared Oak Components
+- organised within 'Internal components' folder
+
+## Squad specific components
+
+- components built to serve a specific repo
+- organised within relevant squad folders
+- for new squad specific components, build them directly within a relevant repo; the current caveat is that if squad specific component imports any of the internal components which are not exported, it needs to be built within `oak-components` - in this case build it within squad specific folder
