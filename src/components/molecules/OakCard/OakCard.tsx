@@ -1,7 +1,7 @@
 import React from "react";
 // import styled, { css } from "styled-components";
 
-import { OakFlex, OakHeading, OakImage, OakP } from "@/components/atoms";
+import { OakBox, OakFlex, OakHeading, OakImage, OakP } from "@/components/atoms";
 import { OakTagFunctional } from "@/components/molecules/OakTagFunctional";
 import { OakLink } from "@/components/molecules/OakLink";
 
@@ -9,10 +9,10 @@ import { OakLink } from "@/components/molecules/OakLink";
 
 
 export type OakCardProps = {
+  heading: string;
   cardOrientation?: "row" | "column";
   imageSrc?: string;
   aspectRatio?: "1/1" | "4/3";
-  heading: string;
   subCopy?: string;
   tagName?: string;
   linkText?: string;
@@ -22,14 +22,10 @@ export type OakCardProps = {
 
 // const OakCardCss = css<OakCardProps>``;
 
-// to do: pull out props names
-// to do: conditionals
-// to do: look up proper prop passing
 // to do: styling
-// to do : add comments
-// to do: use functional tag as span?
+// to do: add comments
 // to do: allow text decoration of heading?
-// to do: add aspect ratio to oak image
+// to do: how to handle oak box styling - props pass?
 export const OakCard = ({
   heading,
   cardOrientation = "column",
@@ -43,22 +39,29 @@ export const OakCard = ({
   }: OakCardProps) => {
   return (
     <OakFlex $flexDirection={cardOrientation ?? "column"}>
-      {imageSrc && <OakImage
-        src={imageSrc || ""}
-        alt={heading}
-        $width={"spacing-160"}
-        $height={"spacing-160"}
-      />}
-      <OakHeading tag="h6">{heading}</OakHeading>
-      {subCopy && <OakP>{subCopy}</OakP>}
-      {tagName && <OakTagFunctional label={tagName} />}
-      {href && <OakLink
-        href={href}
-        iconName={linkIconName}
-        isTrailingIcon={true}
-        // iconWidth=""
-        // iconHeight=""
-      >{linkText}</OakLink>}
+      <OakBox $background={"bg-primary"}>
+        {imageSrc && <OakImage
+          src={imageSrc || ""}
+          alt={heading}
+          $width={"spacing-160"}
+          $height={"spacing-160"}
+          $objectFit={aspectRatio === "1/1" ? "cover" : "contain"}
+        />}
+        <OakFlex $flexDirection="column" $gap="spacing-16">
+          <OakHeading $font={"heading-6"} tag="h3">{heading}</OakHeading>
+          {subCopy && <OakP>{subCopy}</OakP>}
+          <OakFlex $flexDirection="row">
+            {tagName && <OakTagFunctional label={tagName} $background={"bg-decorative3-very-subdued"}/>}
+            {href && <OakLink
+              href={href}
+              iconName={linkIconName}
+              isTrailingIcon={true}
+              // iconWidth=""
+              // iconHeight=""
+            >{linkText}</OakLink>}
+          </OakFlex>
+        </OakFlex>
+      </OakBox>
     </OakFlex>
   );
 };
