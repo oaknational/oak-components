@@ -1,5 +1,8 @@
 import React from "react";
-// import styled, { css } from "styled-components";
+import styled, { css } from "styled-components";
+
+import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
+import { parseSpacing } from "@/styles/helpers/parseSpacing";
 
 import { OakBox, OakFlex, OakHeading, OakImage, OakP } from "@/components/atoms";
 import { OakTagFunctional } from "@/components/molecules/OakTagFunctional";
@@ -21,6 +24,25 @@ export type OakCardProps = {
 };
 
 // const OakCardCss = css<OakCardProps>``;
+
+type StyledProps = {
+  $height: string;
+  $width: string;
+  $aspectRatio: string;
+  $objectFit: string;
+};
+
+const StyledOakImage = styled(OakImage)<StyledProps>`
+  height: ${({ $height }) => parseSpacing($height)};
+  width: ${({ $width }) => $width};
+  aspect-ratio: ${({ $aspectRatio }) => $aspectRatio};
+
+  img {
+    border-radius: ${parseBorderRadius("border-radius-m2")};
+    object-fit: cover;
+  }
+`;
+
 
 // to do: styling
 // to do: add comments
@@ -48,14 +70,13 @@ export const OakCard = ({
       $gap={"spacing-16"}
       $pa={"spacing-16"}
     >
-      {imageSrc && <OakImage
+      {imageSrc && <StyledOakImage
         src={imageSrc || ""}
         alt={heading}
         $height={cardOrientation === "row" ? "spacing-240" : "372px"}
         $width={"auto"}
         $aspectRatio={aspectRatio}
         $objectFit={"cover"}
-        // $borderRadius={"border-radius-m2"}
       />}
       <OakFlex $flexDirection="column" $gap="spacing-16">
         <OakHeading $font={"heading-6"} tag="h3">{heading}</OakHeading>
