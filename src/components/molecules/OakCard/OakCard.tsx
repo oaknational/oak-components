@@ -51,9 +51,10 @@ export const OakCard = ({
       {imageSrc && <OakImage
         src={imageSrc || ""}
         alt={heading}
-        $width={"spacing-360"}
-        $height={"spacing-360"}
-        $objectFit={aspectRatio === "1/1" ? "cover" : "contain"}
+        $height={cardOrientation === "row" ? "spacing-240" : "372px"}
+        $width={"auto"}
+        $aspectRatio={aspectRatio}
+        $objectFit={"cover"}
         // $borderRadius={"border-radius-m2"}
       />}
       <OakFlex $flexDirection="column" $gap="spacing-16">
