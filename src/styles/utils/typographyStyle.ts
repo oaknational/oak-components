@@ -61,6 +61,16 @@ export type TypographyStyleProps = {
    * Accepts an overflow token or a responsive array of overflow tokens.
    */
   $overflow?: ResponsiveValues<CSSProperties["overflow"]>;
+  /**
+   * Sets the `text-wrap` CSS property of the element.
+   *
+   * Accepts a text-wrap token or a responsive array of text-wrap tokens.
+   *
+   * Controls how text inside an element is wrapped. The different values provide:
+   * - Typographic improvements, for example more balanced line lengths across broken headings
+   * - A way to turn text wrapping off completely
+   */
+  $textWrap?: ResponsiveValues<CSSProperties["textWrap"]>;
 };
 
 export const typographyStyle = css<TypographyStyleProps>`
@@ -79,4 +89,5 @@ export const typographyStyle = css<TypographyStyleProps>`
   ${responsiveStyle("word-wrap", (props) => props.$wordWrap)}
   ${responsiveStyle("text-overflow", (props) => props.$textOverflow)}
   ${responsiveStyle("overflow", (props) => props.$overflow)}
+  ${responsiveStyle("text-wrap", (props) => props.$textWrap)}
 `;
