@@ -39,14 +39,16 @@ type Story = StoryObj<typeof OakCard>;
 export const Default: Story = {
   render: (args) => <OakCard {...args} />,
   args: {
-    orientation: "row",
-    imageSrc: `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/sample.jpg`,
-    aspectRatio: "1/1",
     heading: "A Heading",
+    cardOrientation: "column",
+    cardWidth: "fit-content",
+    imageSrc: `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/sample.jpg`,
+    imageAlt: "Example Image Alt",
+    aspectRatio: "4/3",
     subCopy: "Some Sub Copy",
     tagName: "A Tag",
     linkText: "Link Text",
-    linkIconName: "chevron-right",
+    linkIconName: "arrow-right",
     href: "https://example.com",
   },
 };
