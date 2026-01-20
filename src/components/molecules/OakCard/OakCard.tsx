@@ -1,36 +1,31 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
-
-import { OakBox, OakFlex, OakHeading, OakImage, OakP } from "@/components/atoms";
+import { OakFlex, OakHeading, OakImage, OakP, OakIconName } from "@/components/atoms";
 import { OakTagFunctional } from "@/components/molecules/OakTagFunctional";
 import { OakLink } from "@/components/molecules/OakLink";
-
-// to do: investigate importing molecules from index error
-
+import { OakCombinedSpacingToken, OakAllSpacingToken } from "@/styles";
 
 export type OakCardProps = {
   heading: string;
   cardOrientation?: "row" | "column";
-  cardWidth?: string;
+  cardWidth?: OakCombinedSpacingToken;
   imageSrc?: string;
+  imageAlt?: string;
   aspectRatio?: "1/1" | "4/3";
   subCopy?: string;
   tagName?: string;
   linkText?: string;
-  linkIconName?: string; //use defined strings?
+  linkIconName?: OakIconName;
   href?: string;
 };
 
-// const OakCardCss = css<OakCardProps>``;
-
 type StyledProps = {
-  $height: string;
-  $width: string;
-  $aspectRatio: string;
-  $objectFit: string;
+  $height: OakAllSpacingToken;
+  $width: OakAllSpacingToken;
+  $aspectRatio: "1/1" | "4/3";
 };
 
 const StyledOakImage = styled(OakImage)<StyledProps>`
@@ -44,23 +39,27 @@ const StyledOakImage = styled(OakImage)<StyledProps>`
   }
 `;
 
-// to do: styling
 // to do: add comments
+// to do: make whole card clickable if href provided
 // to do: allow text decoration of heading?
-// to do: how to handle oak box styling - props pass?
 // to do: order styles
-// to do: border radius on image
+// to do: fix height/width auto errors
+// to do: storybook controls
+// to do: storybook documentation
+// to do: tests
+// to do: focus behaviour
 export const OakCard = ({
   heading,
   cardOrientation = "column",
-  cardWidth = "fit-content",
-  imageSrc = "",
+  cardWidth,
+  imageSrc,
+  imageAlt,
   aspectRatio = "1/1",
-  subCopy = "",
-  tagName = "",
-  linkText = "",
-  linkIconName = "",
-  href = "",
+  subCopy,
+  tagName,
+  linkText,
+  linkIconName,
+  href,
   }: OakCardProps) => {
   return (
     <OakFlex
@@ -73,24 +72,28 @@ export const OakCard = ({
     >
       {imageSrc && <StyledOakImage
         src={imageSrc || ""}
-        alt={heading}
-        $height={cardOrientation === "row" ? "spacing-240" : undefined}
+        alt={imageAlt || ""}
+        $height={cardOrientation === "row" ? "spacing-240" : "auto"}
         $width={"auto"}
         $aspectRatio={aspectRatio}
-        $objectFit={"cover"}
       />}
       <OakFlex
         $flexDirection="column"
         $gap="spacing-16"
-        $pt={cardOrientation === "row" ? "spacing-24" : 0}
-        $pb={cardOrientation === "row" ? "spacing-24" : 0}
+        $pt={cardOrientation === "row" ? "spacing-24" : "spacing-0"}
+        $pb={cardOrientation === "row" ? "spacing-24" : "spacing-0"}
         $justifyContent={"space-between"}
       >
         <OakFlex
           $flexDirection="column"
           $gap="spacing-16"
         >
-          <OakHeading $font={"heading-6"} tag="h3">{heading}</OakHeading>
+          <OakHeading
+            $font={"heading-6"}
+            tag="h3"
+          >
+            {heading}
+          </OakHeading>
           {subCopy && <OakP>{subCopy}</OakP>}
         </OakFlex>
         <OakFlex
@@ -98,14 +101,15 @@ export const OakCard = ({
           $justifyContent={"space-between"}
           $gap="spacing-16"
         >
-          {tagName && <OakTagFunctional label={tagName} $background={"bg-decorative3-very-subdued"}/>}
+          {tagName && <OakTagFunctional
+            label={tagName}
+            $background={"bg-decorative3-very-subdued"}
+          />}
           {href && <OakLink
             href={href}
             iconName={linkIconName}
             isTrailingIcon={true}
-            // iconWidth=""
-            // iconHeight=""
-            $color={"bg-btn-primary"}
+            color={"bg-btn-primary"}
             $textDecoration={"none"}
           >{linkText}</OakLink>}
         </OakFlex>
