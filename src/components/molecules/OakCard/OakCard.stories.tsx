@@ -40,11 +40,11 @@ export const Default: Story = {
   render: (args) => <OakCard {...args} />,
   args: {
     heading: "A Heading",
-    cardOrientation: "column",
+    cardOrientation: "row",
     cardWidth: "fit-content",
     imageSrc: `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/sample.jpg`,
     imageAlt: "Example Image Alt",
-    aspectRatio: "4/3",
+    aspectRatio: "1/1",
     subCopy: "Some Sub Copy",
     tagName: "A Tag",
     linkText: "Link Text",

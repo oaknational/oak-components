@@ -6,7 +6,7 @@ import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { OakFlex, OakHeading, OakImage, OakP, OakIconName } from "@/components/atoms";
 import { OakTagFunctional } from "@/components/molecules/OakTagFunctional";
 import { OakLink } from "@/components/molecules/OakLink";
-import { OakCombinedSpacingToken, OakAllSpacingToken } from "@/styles";
+import { OakCombinedSpacingToken } from "@/styles";
 
 export type OakCardProps = {
   heading: string;
@@ -23,8 +23,8 @@ export type OakCardProps = {
 };
 
 type StyledProps = {
-  $height: OakAllSpacingToken;
-  $width: OakAllSpacingToken;
+  $height: OakCombinedSpacingToken;
+  $width: OakCombinedSpacingToken;
   $aspectRatio: "1/1" | "4/3";
 };
 
@@ -47,7 +47,7 @@ const StyledOakImage = styled(OakImage)<StyledProps>`
 // to do: storybook controls
 // to do: storybook documentation
 // to do: tests
-// to do: focus behaviour
+// to do: focus and hover state behaviours
 export const OakCard = ({
   heading,
   cardOrientation = "column",
@@ -64,11 +64,11 @@ export const OakCard = ({
   return (
     <OakFlex
       $flexDirection={cardOrientation}
-      $borderRadius={"border-radius-m2"}
-      $background={"bg-neutral"}
       $width={cardWidth}
-      $gap={"spacing-16"}
       $pa={"spacing-16"}
+      $gap={"spacing-16"}
+      $background={"bg-neutral"}
+      $borderRadius={"border-radius-m2"}
     >
       {imageSrc && <StyledOakImage
         src={imageSrc || ""}
@@ -79,18 +79,18 @@ export const OakCard = ({
       />}
       <OakFlex
         $flexDirection="column"
-        $gap="spacing-16"
+        $justifyContent={"space-between"}
         $pt={cardOrientation === "row" ? "spacing-24" : "spacing-0"}
         $pb={cardOrientation === "row" ? "spacing-24" : "spacing-0"}
-        $justifyContent={"space-between"}
+        $gap="spacing-16"
       >
         <OakFlex
           $flexDirection="column"
           $gap="spacing-16"
         >
           <OakHeading
-            $font={"heading-6"}
             tag="h3"
+            $font={"heading-6"}
           >
             {heading}
           </OakHeading>
@@ -107,10 +107,9 @@ export const OakCard = ({
           />}
           {href && <OakLink
             href={href}
-            iconName={linkIconName}
             isTrailingIcon={true}
+            iconName={linkIconName}
             color={"bg-btn-primary"}
-            $textDecoration={"none"}
           >{linkText}</OakLink>}
         </OakFlex>
       </OakFlex>
