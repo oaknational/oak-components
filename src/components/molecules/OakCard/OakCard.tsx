@@ -14,6 +14,7 @@ import { OakLink } from "@/components/molecules/OakLink";
 export type OakCardProps = {
   heading: string;
   cardOrientation?: "row" | "column";
+  cardWidth?: string;
   imageSrc?: string;
   aspectRatio?: "1/1" | "4/3";
   subCopy?: string;
@@ -43,7 +44,6 @@ const StyledOakImage = styled(OakImage)<StyledProps>`
   }
 `;
 
-
 // to do: styling
 // to do: add comments
 // to do: allow text decoration of heading?
@@ -53,6 +53,7 @@ const StyledOakImage = styled(OakImage)<StyledProps>`
 export const OakCard = ({
   heading,
   cardOrientation = "column",
+  cardWidth = "fit-content",
   imageSrc = "",
   aspectRatio = "1/1",
   subCopy = "",
@@ -63,25 +64,40 @@ export const OakCard = ({
   }: OakCardProps) => {
   return (
     <OakFlex
-      $flexDirection={cardOrientation ?? "column"}
+      $flexDirection={cardOrientation}
       $borderRadius={"border-radius-m2"}
       $background={"bg-neutral"}
-      $width={"fit-content"}
+      $width={cardWidth}
       $gap={"spacing-16"}
       $pa={"spacing-16"}
     >
       {imageSrc && <StyledOakImage
         src={imageSrc || ""}
         alt={heading}
-        $height={cardOrientation === "row" ? "spacing-240" : "372px"}
+        $height={cardOrientation === "row" ? "spacing-240" : undefined}
         $width={"auto"}
         $aspectRatio={aspectRatio}
         $objectFit={"cover"}
       />}
-      <OakFlex $flexDirection="column" $gap="spacing-16">
-        <OakHeading $font={"heading-6"} tag="h3">{heading}</OakHeading>
-        {subCopy && <OakP>{subCopy}</OakP>}
-        <OakFlex $flexDirection="row" $justifyContent={"space-between"}>
+      <OakFlex
+        $flexDirection="column"
+        $gap="spacing-16"
+        $pt={cardOrientation === "row" ? "spacing-24" : 0}
+        $pb={cardOrientation === "row" ? "spacing-24" : 0}
+        $justifyContent={"space-between"}
+      >
+        <OakFlex
+          $flexDirection="column"
+          $gap="spacing-16"
+        >
+          <OakHeading $font={"heading-6"} tag="h3">{heading}</OakHeading>
+          {subCopy && <OakP>{subCopy}</OakP>}
+        </OakFlex>
+        <OakFlex
+          $flexDirection="row"
+          $justifyContent={"space-between"}
+          $gap="spacing-16"
+        >
           {tagName && <OakTagFunctional label={tagName} $background={"bg-decorative3-very-subdued"}/>}
           {href && <OakLink
             href={href}
