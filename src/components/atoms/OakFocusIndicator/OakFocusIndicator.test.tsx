@@ -11,7 +11,7 @@ describe("OakFocusIndicator", () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  test("with props set", () => {
+  test("renders correctly with props set", () => {
     const { baseElement } = renderWithTheme(
       <OakFocusIndicator
         hoverBackground="bg-btn-secondary"
