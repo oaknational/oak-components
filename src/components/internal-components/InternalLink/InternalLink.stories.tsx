@@ -72,3 +72,9 @@ export const Loading: Story = {
     isLoading: true,
   },
 };
+
+export const WithoutUnderline: Story = {
+  args: {
+    textDecoration: "none",
+  },
+};

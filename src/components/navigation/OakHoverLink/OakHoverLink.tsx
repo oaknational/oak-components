@@ -31,10 +31,6 @@ type OakHoverLinkComponent = <C extends React.ElementType = "a">(
 ) => React.ReactNode;
 
 const StyleInternalLink = styled(InternalLink)`
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
   display: inline-flex;
   align-items: center;
 `;
@@ -60,6 +56,7 @@ export const OakHoverLink: OakHoverLinkComponent = forwardRef(
         activeColor={color}
         disabledColor={color}
         visitedColor={color}
+        textDecoration="none"
         {...props}
         ref={ref}
       />

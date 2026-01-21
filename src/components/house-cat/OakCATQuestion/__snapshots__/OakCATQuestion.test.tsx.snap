@@ -3,8 +3,14 @@
 exports[`OakCATQuestion matches snapshot 1`] = `
 .c1 {
   width: 100%;
-  padding: 2rem;
+  max-width: 60rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   background: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem rgba(92,92,92,20%);
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -20,6 +26,7 @@ exports[`OakCATQuestion matches snapshot 1`] = `
 
 .c7 {
   width: 100%;
+  margin-bottom: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 700;
   font-size: 1.125rem;
@@ -62,6 +69,7 @@ exports[`OakCATQuestion matches snapshot 1`] = `
 
 .c17 {
   width: 100%;
+  margin-top: 1.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -182,15 +190,15 @@ exports[`OakCATQuestion matches snapshot 1`] = `
   display: grid;
   grid-template-columns: repeat(12,1fr);
   width: 100%;
-  -webkit-column-gap: 1.25rem;
-  column-gap: 1.25rem;
+  -webkit-column-gap: 1rem;
+  column-gap: 1rem;
 }
 
 .c23 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  grid-column: span 6;
+  grid-column: span 12;
   grid-row: span undefined;
   grid-row: span 1;
 }
@@ -248,6 +256,18 @@ exports[`OakCATQuestion matches snapshot 1`] = `
 
 .c0 {
   list-style: none;
+}
+
+@media (min-width:750px) {
+  .c23 {
+    grid-column: span 6;
+  }
+}
+
+@media (min-width:1280px) {
+  .c23 {
+    grid-column: span 6;
+  }
 }
 
 <div>

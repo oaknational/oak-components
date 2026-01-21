@@ -15,6 +15,7 @@ import { OakIcon, OakIconProps } from "@/components/images-and-icons/OakIcon";
 import { OakSpan } from "@/components/typography/OakSpan";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
 import { OakAllSpacingToken, OakCombinedColorToken } from "@/styles";
+import { OakTextDecoration } from "@/styles/theme/typography";
 
 const StyledOakIcon = styled(OakIcon)``;
 
@@ -24,6 +25,7 @@ const StyledLink = styled.a<{
   $hoverColor: OakCombinedColorToken;
   $activeColor: OakCombinedColorToken;
   $disabledColor: OakCombinedColorToken;
+  $textDecoration: OakTextDecoration;
 }>`
   display: inline;
   align-items: center;
@@ -36,7 +38,7 @@ const StyledLink = styled.a<{
   font: inherit;
   background: none;
   border: none;
-  text-decoration: underline;
+  text-decoration: ${(props) => props.$textDecoration};
   cursor: pointer;
   color: ${(props) => parseColor(props.$color)};
 
@@ -66,12 +68,12 @@ const StyledLink = styled.a<{
       ${StyledOakIcon} {
         filter: ${(props) => parseColorFilter(props.$hoverColor)};
       }
+      text-decoration: underline;
     }
   }
 
   &:active {
     color: ${(props) => parseColor(props.$activeColor)};
-
     ${StyledOakIcon} {
       filter: ${(props) => parseColorFilter(props.$activeColor)};
     }
@@ -107,6 +109,7 @@ export type InternalLinkProps = {
   disabledColor: OakCombinedColorToken;
   iconWidth?: OakAllSpacingToken;
   iconHeight?: OakAllSpacingToken;
+  textDecoration?: OakTextDecoration;
 };
 
 type InternalLinkComponent = <C extends React.ElementType = "a">(
@@ -136,6 +139,7 @@ export const InternalLink: InternalLinkComponent = forwardRef(
       activeColor,
       iconWidth = "spacing-24",
       iconHeight = "spacing-24",
+      textDecoration = "underline",
       ...rest
     } = props;
 
@@ -184,6 +188,7 @@ export const InternalLink: InternalLinkComponent = forwardRef(
         $visitedColor={visitedColor}
         $hoverColor={hoverColor}
         $activeColor={activeColor}
+        $textDecoration={textDecoration}
         {...rest}
       >
         {!isTrailingIcon && icon}

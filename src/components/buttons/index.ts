@@ -12,3 +12,4 @@ export * from "@/components/buttons/OakSmallSecondaryToggleButton";
 export * from "@/components/buttons/OakSmallTertiaryInvertedButton";
 export * from "@/components/buttons/OakTertiaryButton";
 export * from "@/components/buttons/OakTertiaryInvertedButton";
+export * from "@/components/buttons/OakLeftAlignedButton";

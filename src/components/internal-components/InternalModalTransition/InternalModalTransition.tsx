@@ -20,6 +20,11 @@ type TransitionProps = {
    * @default false;
    */
   closeOnBackgroundClick?: boolean;
+  /**
+   * Max width for tablet and desktop screens (768px+)
+   * @default 600
+   */
+  largeScreenMaxWidth?: number;
 };
 
 const FadeOutBox = styled(OakBox)<{ $state: TransitionStatus }>`
@@ -46,6 +51,7 @@ const InternalModalTransition: FC<TransitionProps> = ({
   finalZIndex,
   isLeftHandSide,
   closeOnBackgroundClick = false,
+  largeScreenMaxWidth,
   ...rest
 }) => {
   return (
@@ -72,6 +78,7 @@ const InternalModalTransition: FC<TransitionProps> = ({
             $zIndex={finalZIndex}
             $state={state}
             aria-modal={true}
+            largeScreenMaxWidth={largeScreenMaxWidth}
             {...rest}
           >
             {children}

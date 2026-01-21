@@ -47,6 +47,7 @@ export const OakSecondaryLink: OakLinkComponent = forwardRef(
         activeColor={color}
         disabledColor="text-disabled"
         visitedColor={visitedColor}
+        textDecoration="none"
         {...restProps}
         ref={ref}
       />

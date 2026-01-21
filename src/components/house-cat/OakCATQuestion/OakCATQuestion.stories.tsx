@@ -150,7 +150,7 @@ export const WithMultilineText: Story = {
   render: (args) => <OakCATQuestion {...args} />,
   args: {
     questionNumber: 1,
-    status: "neutral",
+    status: "selected",
     questionTypeInput: (
       <OakBox $background={"bg-decorative2-subdued"} $pa="spacing-4">
         Dummy Question Type Input
@@ -166,7 +166,7 @@ export const WithMultilineText: Story = {
         charLimit={100}
         name="hintInput"
         id="hintInput"
-        $height={"spacing-1280"}
+        $height={"spacing-120"}
       />
     ),
     feedbackInput: (
@@ -174,7 +174,7 @@ export const WithMultilineText: Story = {
         charLimit={100}
         name="feedbackInput"
         id="feedbackInput"
-        $height={"spacing-1280"}
+        $height={"spacing-120"}
       />
     ),
     answersSection: (
@@ -215,7 +215,7 @@ export const WithMultilineTextAndStemImage: Story = {
         charLimit={100}
         name="hintInput"
         id="hintInput"
-        $height={"spacing-1280"}
+        $height={"spacing-120"}
       />
     ),
     feedbackInput: (
@@ -223,7 +223,7 @@ export const WithMultilineTextAndStemImage: Story = {
         charLimit={100}
         name="feedbackInput"
         id="feedbackInput"
-        $height={"spacing-1280"}
+        $height={"spacing-120"}
       />
     ),
     answersSection: (
