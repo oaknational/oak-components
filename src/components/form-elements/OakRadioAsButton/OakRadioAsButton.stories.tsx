@@ -5,19 +5,43 @@ import { OakRadioAsButton } from "./OakRadioAsButton";
 
 import { OakRadioGroup } from "@/components/form-elements/OakRadioGroup";
 
+const argTypes: Meta<typeof OakRadioAsButton>["argTypes"] = {
+  colorScheme: {
+    control: { type: "select" },
+    options: [
+      "primary",
+      "decorative1",
+      "decorative2",
+      "decorative3",
+      "decorative4",
+      "decorative5",
+      "decorative6",
+      "transparent",
+    ],
+  },
+  disabled: {
+    control: { type: "boolean" },
+  },
+  displayValue: {
+    control: { type: "text" },
+  },
+};
+
 const meta: Meta<typeof OakRadioAsButton> = {
   component: OakRadioAsButton,
   tags: ["autodocs"],
   title: "components/Form elements/OakRadioAsButton",
+  argTypes,
   parameters: {
     backgrounds: {
       default: "light",
     },
     controls: {
-      include: ["disabled", "checked", "displayValue", "value", "icon"],
+      include: ["colorScheme", "disabled", "displayValue", "value", "icon"],
     },
   },
 };
+
 export default meta;
 
 type Story = StoryObj<typeof OakRadioAsButton>;
@@ -33,11 +57,6 @@ export const Default: Story = {
     displayValue: "Art and design",
     icon: "subject-art",
   },
-  parameters: {
-    controls: {
-      include: ["disabled", "checked", "displayValue", "value", "icon"],
-    },
-  },
 };
 
 export const NoIcon: Story = {
@@ -50,11 +69,6 @@ export const NoIcon: Story = {
     value: "a test value",
     displayValue: "Art and design",
     "aria-label": "Art and design",
-  },
-  parameters: {
-    controls: {
-      include: ["disabled", "checked", "displayValue", "value", "icon"],
-    },
   },
 };
 
@@ -211,9 +225,63 @@ export const KeepIconColor: Story = {
   args: {
     keepIconColor: true,
   },
-  parameters: {
-    controls: {
-      include: ["disabled", "checked", "displayValue", "value", "icon"],
-    },
-  },
+};
+
+export const WithDifferentBackgrounds: Story = {
+  render: () => (
+    <OakRadioGroup
+      name="backgrounds"
+      aria-label="Choose a subject"
+      $flexWrap={"wrap"}
+    >
+      <OakRadioAsButton
+        value="art-primary"
+        displayValue="Primary background"
+        icon="subject-art"
+        colorScheme="primary"
+      />
+      <OakRadioAsButton
+        value="biology-decorative1"
+        displayValue="Decorative 1 background"
+        icon="subject-biology"
+        colorScheme="decorative1"
+      />
+      <OakRadioAsButton
+        value="chemistry-decorative2"
+        displayValue="Decorative 2 background"
+        icon="subject-chemistry"
+        colorScheme="decorative2"
+      />
+      <OakRadioAsButton
+        value="physics-decorative3"
+        displayValue="Decorative 3 background"
+        icon="subject-physics"
+        colorScheme="decorative3"
+      />
+      <OakRadioAsButton
+        value="computing-decorative4"
+        displayValue="Decorative 4 background"
+        icon="subject-computing"
+        colorScheme="decorative4"
+      />
+      <OakRadioAsButton
+        value="english-decorative5"
+        displayValue="Decorative 5 background"
+        icon="subject-english"
+        colorScheme="decorative5"
+      />
+      <OakRadioAsButton
+        value="maths-decorative6"
+        displayValue="Decorative 6 background"
+        icon="subject-maths"
+        colorScheme="decorative6"
+      />
+      <OakRadioAsButton
+        value="transparent"
+        displayValue="Transparent"
+        icon="subject-history"
+        colorScheme="transparent"
+      />
+    </OakRadioGroup>
+  ),
 };
