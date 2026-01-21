@@ -13,6 +13,7 @@ import {
 import { parseColor } from "@/styles/helpers/parseColor";
 
 export type OakMultilineTextProps = {
+  initialValue?: string;
   /**
    * Maximum number of characters
    */
@@ -57,6 +58,7 @@ const UnstyledComponent = forwardRef(
       errors,
       ariaLabel,
       value,
+      initialValue,
       onChange,
       onBlur,
       onFocus,
@@ -72,9 +74,13 @@ const UnstyledComponent = forwardRef(
     ref?: React.Ref<HTMLTextAreaElement>,
   ) => {
     const [showCharCount, setShowCharCount] = useState(false);
-    const [charCount, setCharCount] = useState(value?.toString().length ?? 0);
+    const [internalValue, setInternalValue] = useState(initialValue);
 
+    const isControlled: boolean = value !== undefined;
     const charCountWidth = charLimit > 99 ? "spacing-56" : "spacing-48";
+    const charCount = isControlled
+      ? value?.toString().length
+      : internalValue?.length ?? 0;
 
     const handleFocus = (e: React.FocusEvent<HTMLTextAreaElement>) => {
       onFocus?.(e);
@@ -87,7 +93,10 @@ const UnstyledComponent = forwardRef(
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-      setCharCount(e.target.value.length);
+      if (!isControlled) {
+        setInternalValue(e.target.value);
+      }
+
       onChange?.(e);
     };
 
@@ -106,7 +115,7 @@ const UnstyledComponent = forwardRef(
           ref={ref}
           id={id}
           name={name}
-          value={value}
+          value={isControlled ? value : internalValue}
           onFocus={handleFocus}
           onChange={handleChange}
           onBlur={handleBlur}
@@ -192,7 +201,7 @@ const UnstyledComponent = forwardRef(
  * - Displays errors passed in as a prop
  * - Displays and updates character count on focus only
  * - Passes stored text to onChange and onBlur callbacks
- *
+ * - Allows state to be controlled either internally or externally
  *
  * ### Callbacks
  *

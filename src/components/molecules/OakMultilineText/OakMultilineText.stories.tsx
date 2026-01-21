@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { StoryObj, Meta } from "@storybook/react";
 
 import { OakMultilineText } from "./OakMultilineText";
@@ -57,6 +57,7 @@ export const InitialValue: Story = {
     placeholder: "Start typing answer...",
     charLimit: 200,
     disabled: false,
+    initialValue: "Test",
   },
 };
 
@@ -86,4 +87,20 @@ export const Errors: Story = {
     id: "errors",
     label: "Errors",
   },
+};
+
+export const Controlled: Story = {
+  render: () => <ControlledOakMultilineText />,
+};
+
+const ControlledOakMultilineText = () => {
+  const [value, setValue] = useState("");
+
+  return (
+    <OakMultilineText
+      charLimit={200}
+      value={value}
+      onChange={(e) => setValue(e.target.value)}
+    />
+  );
 };
