@@ -75,19 +75,19 @@ exports[`OakMultilineText matches snapshot 1`] = `
   border-color: #808080;
 }
 
-.c3::-webkit-input-placeholder {
+.c3:hover::-webkit-input-placeholder {
   color: #575757;
 }
 
-.c3::-moz-placeholder {
+.c3:hover::-moz-placeholder {
   color: #575757;
 }
 
-.c3:-ms-input-placeholder {
+.c3:hover:-ms-input-placeholder {
   color: #575757;
 }
 
-.c3::placeholder {
+.c3:hover::placeholder {
   color: #575757;
 }
 

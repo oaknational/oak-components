@@ -12,7 +12,6 @@ const meta: Meta<typeof OakMultilineText> = {
   tags: ["autodocs"],
   argTypes: {
     charLimit: { control: "number" },
-    initialValue: { control: "text" },
     placeholder: { control: "text" },
     disabled: { control: "boolean" },
     errors: { control: "object" },
@@ -58,7 +57,6 @@ export const InitialValue: Story = {
     placeholder: "Start typing answer...",
     charLimit: 200,
     disabled: false,
-    initialValue: "This is the initial value.",
   },
 };
 
