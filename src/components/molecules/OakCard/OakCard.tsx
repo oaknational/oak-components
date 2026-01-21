@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
-import { OakFlex, OakHeading, OakImage, OakP, OakIconName } from "@/components/atoms";
+import { OakFlex, OakHeading, OakImage, OakP, OakIconName, OakLabel, OakIcon } from "@/components/atoms";
 import { OakTagFunctional } from "@/components/molecules/OakTagFunctional";
 import { OakLink } from "@/components/molecules/OakLink";
 import { OakCombinedSpacingToken } from "@/styles";
@@ -105,12 +105,17 @@ export const OakCard = ({
             label={tagName}
             $background={"bg-decorative3-very-subdued"}
           />}
-          {href && <OakLink
-            href={href}
-            isTrailingIcon={true}
-            iconName={linkIconName}
-            color={"bg-btn-primary"}
-          >{linkText}</OakLink>}
+          {href && linkText && linkIconName && <OakFlex
+            $alignItems={"center"}
+          >
+            <OakLabel>{linkText}</OakLabel>
+            <OakIcon
+              iconName={linkIconName}
+              $width="spacing-24"
+              $height="spacing-24"
+              alt={linkIconName}
+            />
+          </OakFlex>}
         </OakFlex>
       </OakFlex>
     </OakFlex>
