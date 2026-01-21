@@ -11,9 +11,13 @@ const meta: Meta<typeof OakTabs> = {
       control: { type: "radio" },
       options: ["default", "compact"],
     },
-    colourVariant: {
+    colorVariant: {
       control: { type: "radio" },
       options: ["white", "black"],
+    },
+    activeTab: {
+      control: { type: "radio" },
+      options: ["Unit sequence", "Explainer", "Download"],
     },
   },
   parameters: {},
@@ -27,7 +31,8 @@ export const Default: Story = {
   render: (args) => <OakTabs {...args} />,
   args: {
     sizeVariant: "default",
-    colourVariant: "black",
+    colorVariant: "black",
     tabs: ["Unit sequence", "Explainer", "Download"],
+    activeTab: "Unit sequence",
   },
 };
