@@ -38,7 +38,7 @@ export default meta;
 
 type Story = StoryObj<typeof OakFocusIndicator>;
 
-function UnStyledButton({ children }: { children: ReactNode }) {
+function UnStyledButton({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <button
       style={{
