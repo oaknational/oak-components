@@ -8,16 +8,49 @@ import { OakTagFunctional } from "@/components/molecules/OakTagFunctional";
 import { OakCombinedSpacingToken } from "@/styles";
 
 export type OakCardProps = {
+  /**
+   * The heading text of the card.
+   */
   heading: string;
+  /**
+   * The orientation of the card.
+   */
   cardOrientation?: "row" | "column";
+  /**
+   * The width of the card.
+   */
   cardWidth?: OakCombinedSpacingToken;
+  /**
+   * The source URL for the image to be displayed in the card.
+   */
   imageSrc?: string;
+  /**
+   * The alternative text for the image, used for accessibility.
+   */
   imageAlt?: string;
+  /**
+   * The aspect ratio of the image.
+   */
   aspectRatio?: "1/1" | "4/3";
+  /**
+   * The subcopy text of the card.
+   */
   subCopy?: string;
+  /**
+   * The name of a tag to be displayed in the card.
+   */
   tagName?: string;
+  /**
+   * The text to be displayed next to the link icon in the card.
+   */
   linkText?: string;
+  /**
+   * The name of the icon to be displayed next to the link text in the card.
+   */
   linkIconName?: OakIconName;
+  /**
+   * The URL that the card links to.
+   */
   href?: string;
 };
 
