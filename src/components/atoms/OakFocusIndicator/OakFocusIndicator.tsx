@@ -17,6 +17,9 @@ export type OakFocusIndicatorProps = {
   activeDropShadow?: OakDropShadowToken;
 };
 
+/**
+ * Wrap focusable components `<a/>`/`<button/>` and this will add focus styles then the inner element is focused
+ */
 export const OakFocusIndicator = styled(OakBox)<OakFocusIndicatorProps>`
   box-shadow: ${(props) =>
     props.dropShadow ? parseDropShadow(props.dropShadow) : "none"};
