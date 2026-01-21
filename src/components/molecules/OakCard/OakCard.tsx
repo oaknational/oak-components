@@ -41,7 +41,6 @@ const StyledOakImage = styled(OakImage)<StyledProps>`
 
 
 // to do: add comments
-// to do: allow text decoration of heading?
 // to do: storybook controls
 // to do: storybook documentation
 // to do: tests
@@ -97,7 +96,7 @@ export const OakCard = ({
         </OakFlex>
         <OakFlex
           $flexDirection="row"
-          $justifyContent={"space-between"}
+          $justifyContent={tagName ? "space-between" : "flex-end"}
           $gap="spacing-16"
         >
           {tagName && <OakTagFunctional
