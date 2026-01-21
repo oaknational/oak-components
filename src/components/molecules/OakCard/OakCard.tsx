@@ -5,7 +5,6 @@ import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { OakFlex, OakHeading, OakImage, OakP, OakIconName, OakLabel, OakIcon } from "@/components/atoms";
 import { OakTagFunctional } from "@/components/molecules/OakTagFunctional";
-import { OakLink } from "@/components/molecules/OakLink";
 import { OakCombinedSpacingToken } from "@/styles";
 
 export type OakCardProps = {
@@ -39,15 +38,15 @@ const StyledOakImage = styled(OakImage)<StyledProps>`
   }
 `;
 
+
+
 // to do: add comments
-// to do: make whole card clickable if href provided
 // to do: allow text decoration of heading?
-// to do: order styles
-// to do: fix height/width auto errors
 // to do: storybook controls
 // to do: storybook documentation
 // to do: tests
-// to do: focus and hover state behaviours
+// to do: focus and hover state behaviours using wrapper
+// to do: add underline hover behaviour
 export const OakCard = ({
   heading,
   cardOrientation = "column",
@@ -61,7 +60,7 @@ export const OakCard = ({
   linkIconName,
   href,
   }: OakCardProps) => {
-  return (
+    const content = (
     <OakFlex
       $flexDirection={cardOrientation}
       $width={cardWidth}
@@ -111,13 +110,15 @@ export const OakCard = ({
             <OakLabel>{linkText}</OakLabel>
             <OakIcon
               iconName={linkIconName}
+              alt={linkIconName}
               $width="spacing-24"
               $height="spacing-24"
-              alt={linkIconName}
             />
           </OakFlex>}
         </OakFlex>
       </OakFlex>
     </OakFlex>
-  );
+    );
+
+    return href ? <a href={href}>{content}</a> : content;
 };
