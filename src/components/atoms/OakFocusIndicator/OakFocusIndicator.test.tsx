@@ -4,7 +4,7 @@ import { OakFocusIndicator } from "./OakFocusIndicator";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
-describe("FocusIndicator", () => {
+describe("OakFocusIndicator", () => {
   test("default render", async () => {
     const { baseElement } = renderWithTheme(<OakFocusIndicator />);
 

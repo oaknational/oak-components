@@ -6,12 +6,6 @@ import { OakFocusIndicator } from "./OakFocusIndicator";
 import { OakBox } from "@/components/atoms/OakBox";
 import { oakDropShadowTokens, oakUiRoleTokens } from "@/styles";
 
-/**
- *
- * OakFocusIndicator extends OakBox by taking the same props and style but applying them to a form element.
- *
- */
-
 const meta: Meta<typeof OakFocusIndicator> = {
   component: OakFocusIndicator,
   tags: ["autodocs"],
@@ -99,7 +93,7 @@ export const ChangeHoverBackgroundAndHover: Story = {
   },
 };
 
-export const FakeFocus: Story = {
+export const FakingFocus: Story = {
   render: (args) => (
     <OakFocusIndicator {...args}>
       <OakBox $overflow={"hidden"} $ba={"border-solid-m"} {...args}>

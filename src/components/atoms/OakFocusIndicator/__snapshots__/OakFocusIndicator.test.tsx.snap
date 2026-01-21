@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`FocusIndicator default render 1`] = `
+exports[`OakFocusIndicator default render 1`] = `
 .c0 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -38,7 +38,7 @@ exports[`FocusIndicator default render 1`] = `
 </body>
 `;
 
-exports[`FocusIndicator with props set 1`] = `
+exports[`OakFocusIndicator with props set 1`] = `
 .c0 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
