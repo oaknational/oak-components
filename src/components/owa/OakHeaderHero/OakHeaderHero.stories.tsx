@@ -8,7 +8,7 @@ import { OakLink } from "@/components/navigation/OakLink";
 const meta: Meta<typeof OakHeaderHero> = {
   component: OakHeaderHero,
   tags: ["autodocs"],
-  title: "OWA/shared/OakHeaderHero",
+  title: "OWA/OakHeaderHero",
   argTypes: {
     headingTitle: { type: "string" },
     authorName: { type: "string" },

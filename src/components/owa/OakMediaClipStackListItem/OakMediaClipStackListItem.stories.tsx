@@ -7,7 +7,7 @@ import { OakMediaClipStackListItem } from "./OakMediaClipStackListItem";
 const meta: Meta<typeof OakMediaClipStackListItem> = {
   component: OakMediaClipStackListItem,
   tags: ["autodocs"],
-  title: "OWA/shared/OakMediaClipStackListItem",
+  title: "OWA/OakMediaClipStackListItem",
   argTypes: {
     title: { control: "text" },
     numberOfClips: { control: "number" },

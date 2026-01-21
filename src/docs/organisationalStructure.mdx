@@ -5,8 +5,9 @@ import { Meta } from "@storybook/blocks";
 # Organisational structure
 
 ⚠️ When creating a new component and in doubt of which category or folder it should belong to, discuss in #oak-components Slack channel.
+⚠️ If you need to use a component which is inside a repo specific directory, you should pull it into "Shared components".
 
-## Components
+## Shared components
 
 - generic components or components used by more than one repo
 - organised in the subfolders within 'Components' folder
@@ -54,8 +55,8 @@ Cookie related layouts
 - an internal component is a non exported component which supports several shared Oak Components
 - organised within 'Internal components' folder
 
-## Squad specific components
+## Repo specific components
 
 - components built to serve a specific repo
 - organised within relevant squad folders
-- for new squad specific components, build them directly within a relevant repo; the current caveat is that if squad specific component imports any of the internal components which are not exported, it needs to be built within `oak-components` - in this case build it within squad specific folder
+- for new repo specific components, build them directly within a relevant repo; the current caveat is that if squad specific component imports any of the internal components which are not exported, it needs to be built within `oak-components` - in this case build it within repo specific folder

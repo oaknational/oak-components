@@ -63,7 +63,7 @@ const unitItems = [
 const meta: Meta<typeof OakListItem> = {
   component: OakListItem,
   tags: ["autodocs"],
-  title: "OWA/shared/OakListItem",
+  title: "OWA/OakListItem",
   args: {
     title:
       "Migration: What do sources tell us about the British Empire in India and Africa?",

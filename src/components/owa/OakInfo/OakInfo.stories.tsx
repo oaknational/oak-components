@@ -7,7 +7,7 @@ import { OakBox } from "@/components/layout-and-structure/OakBox";
 
 const meta: Meta<typeof OakInfo> = {
   tags: ["autodocs"],
-  title: "OWA/shared/OakInfo",
+  title: "OWA/OakInfo",
   component: OakInfo,
 
   argTypes: {

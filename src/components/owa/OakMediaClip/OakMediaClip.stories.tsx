@@ -9,7 +9,7 @@ import { OakUL } from "@/components/typography/OakUL";
 const meta: Meta<typeof OakMediaClip> = {
   component: OakMediaClip,
   tags: ["autodocs"],
-  title: "OWA/shared/OakMediaClip",
+  title: "OWA/OakMediaClip",
   args: {
     clipName: "Standard Clip Name",
     learningCycle: "Learning Cycle",

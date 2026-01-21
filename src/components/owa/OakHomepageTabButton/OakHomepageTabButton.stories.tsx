@@ -8,7 +8,7 @@ import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 const meta: Meta<typeof OakHomepageTabButton> = {
   component: OakHomepageTabButton,
   tags: ["autodocs"],
-  title: "OWA/shared/OakHomepageTabButton",
+  title: "OWA/OakHomepageTabButton",
 
   argTypes: {
     iconName: {

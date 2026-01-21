@@ -10,7 +10,7 @@ import { OakP } from "@/components/typography/OakP";
 const meta: Meta<typeof OakVideoTranscript> = {
   component: OakVideoTranscript,
   tags: ["autodocs"],
-  title: "OWA/shared/OakVideoTranscript",
+  title: "OWA/OakVideoTranscript",
 
   parameters: {
     controls: {

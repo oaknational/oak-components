@@ -6,7 +6,7 @@ import { OakCodeRenderer } from "./OakCodeRenderer";
 const meta: Meta<typeof OakCodeRenderer> = {
   component: OakCodeRenderer,
   tags: ["autodocs"],
-  title: "OWA/shared/OakCodeRenderer",
+  title: "OWA/OakCodeRenderer",
   parameters: {
     controls: {
       include: ["string", "type"],

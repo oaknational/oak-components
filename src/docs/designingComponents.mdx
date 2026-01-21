@@ -12,6 +12,14 @@ Read the [organisational structure](/docs/docs-organisational-structure--docs) s
 
 Read the [naming conventions](/docs/docs-naming-conventions--docs) section of this storybook carefully.
 
+## What to remember about when creating new components ?
+
+- Use `OakUiRoleToken` type for colour related props
+- Use correct UI role token for seting the colours of your components (ie. `bg-decorative2-main` should be used only to set the background, not font or icon color); if there is a token missing, flag it with design and they will either change the design or create necessary token
+- Only pass down the props you want to pass, avoid `{...rest}` operator
+- Make sure the `title` attribute in the storybook file is correct, this will ensure to keep files in the right subfolder within Storybook, ie. `title: "components/Buttons/OakPrimaryButton"`
+- Make sure your storybook file exposes relevant props with correct control for each prop (`argTypes` should use the same type as actual prop)
+
 ## What is the $ for ?
 
 The $ prefix is used to denote a styled component prop. This is a convention used by the styled-components library.

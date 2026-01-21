@@ -8,7 +8,7 @@ import { OakMediaClip } from "@/components/owa/OakMediaClip/OakMediaClip";
 const meta: Meta<typeof OakMediaClipList> = {
   component: OakMediaClipList,
   tags: ["autodocs"],
-  title: "OWA/shared/OakMediaClipList",
+  title: "OWA/OakMediaClipList",
   argTypes: {
     lessonTitle: { control: "text" },
   },
