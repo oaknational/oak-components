@@ -114,6 +114,19 @@ exports[`OakLinkCard matches snapshot 1`] = `
   object-fit: contain;
 }
 
+.c2 {
+  -webkit-animation: none;
+  animation: none;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  cursor: pointer;
+  outline: none;
+}
+
+.c2:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
 .c6 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
@@ -127,19 +140,6 @@ exports[`OakLinkCard matches snapshot 1`] = `
 
 .c7 {
   font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c2 {
-  -webkit-animation: none;
-  animation: none;
-  -webkit-animation-delay: 0.5s;
-  animation-delay: 0.5s;
-  cursor: pointer;
-  outline: none;
-}
-
-.c2:focus-visible {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
 @media (min-width:750px) {

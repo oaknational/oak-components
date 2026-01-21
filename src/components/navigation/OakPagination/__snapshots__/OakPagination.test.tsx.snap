@@ -15,10 +15,6 @@ exports[`OakPagination Component matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c7 {
-  object-fit: contain;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -35,8 +31,8 @@ exports[`OakPagination Component matches snapshot 1`] = `
   gap: 0.5rem;
 }
 
-.c4 {
-  font-family: --var(google-font),Lexend,sans-serif;
+.c7 {
+  object-fit: contain;
 }
 
 .c9 {
@@ -63,6 +59,10 @@ exports[`OakPagination Component matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.c4 {
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c2 {

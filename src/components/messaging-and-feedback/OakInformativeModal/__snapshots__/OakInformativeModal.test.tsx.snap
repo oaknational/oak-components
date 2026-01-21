@@ -80,12 +80,6 @@ exports[`OakInformativeModal matches snapshot when mounted 1`] = `
   overflow: auto;
 }
 
-.c19 {
-  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-  object-fit: contain;
-}
-
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -194,6 +188,12 @@ exports[`OakInformativeModal matches snapshot when mounted 1`] = `
 .c11:disabled {
   pointer-events: none;
   cursor: default;
+}
+
+.c19 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  object-fit: contain;
 }
 
 .c12 {

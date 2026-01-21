@@ -69,6 +69,15 @@ exports[`OakQuizCheckBox matches snapshot 1`] = `
   flex-grow: 1;
 }
 
+.c14 {
+  pointer-events: none;
+  opacity: 0;
+}
+
+input:checked + .c12 {
+  opacity: 1;
+}
+
 .c6 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
@@ -79,15 +88,6 @@ exports[`OakQuizCheckBox matches snapshot 1`] = `
   -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
   color: #222222;
-}
-
-.c14 {
-  pointer-events: none;
-  opacity: 0;
-}
-
-input:checked + .c12 {
-  opacity: 1;
 }
 
 .c7 {

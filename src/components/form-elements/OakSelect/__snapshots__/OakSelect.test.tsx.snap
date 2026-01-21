@@ -92,10 +92,6 @@ exports[`OakSelect disabled select 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c10 {
-  object-fit: contain;
-}
-
 .c1 {
   display: inline-block;
   -webkit-align-items: center;
@@ -113,6 +109,10 @@ exports[`OakSelect disabled select 1`] = `
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
   align-content: center;
+}
+
+.c10 {
+  object-fit: contain;
 }
 
 .c8 {
@@ -334,10 +334,6 @@ exports[`OakSelect highlighted select 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c10 {
-  object-fit: contain;
-}
-
 .c1 {
   display: inline-block;
   -webkit-align-items: center;
@@ -355,6 +351,10 @@ exports[`OakSelect highlighted select 1`] = `
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
   align-content: center;
+}
+
+.c10 {
+  object-fit: contain;
 }
 
 .c8 {
@@ -575,10 +575,6 @@ exports[`OakSelect invalid select 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c10 {
-  object-fit: contain;
-}
-
 .c1 {
   display: inline-block;
   -webkit-align-items: center;
@@ -596,6 +592,10 @@ exports[`OakSelect invalid select 1`] = `
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
   align-content: center;
+}
+
+.c10 {
+  object-fit: contain;
 }
 
 .c8 {
@@ -816,10 +816,6 @@ exports[`OakSelect optgroup select 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c11 {
-  object-fit: contain;
-}
-
 .c1 {
   display: inline-block;
   -webkit-align-items: center;
@@ -837,6 +833,10 @@ exports[`OakSelect optgroup select 1`] = `
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
   align-content: center;
+}
+
+.c11 {
+  object-fit: contain;
 }
 
 .c9 {
@@ -1106,10 +1106,6 @@ exports[`OakSelect plain select 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c10 {
-  object-fit: contain;
-}
-
 .c1 {
   display: inline-block;
   -webkit-align-items: center;
@@ -1127,6 +1123,10 @@ exports[`OakSelect plain select 1`] = `
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
   align-content: center;
+}
+
+.c10 {
+  object-fit: contain;
 }
 
 .c8 {

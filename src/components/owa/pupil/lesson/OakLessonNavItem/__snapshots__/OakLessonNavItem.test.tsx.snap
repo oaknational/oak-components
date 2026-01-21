@@ -73,10 +73,6 @@ exports[`OakLessonNavItem matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c6 {
-  object-fit: contain;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -98,6 +94,10 @@ exports[`OakLessonNavItem matches snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.c6 {
+  object-fit: contain;
 }
 
 .c13 {

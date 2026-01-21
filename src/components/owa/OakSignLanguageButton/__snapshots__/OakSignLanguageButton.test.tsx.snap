@@ -42,12 +42,6 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c10 {
-  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-  object-fit: contain;
-}
-
 .c7 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -104,6 +98,12 @@ exports[`OakSignLanguageButton matches snapshot 1`] = `
 .c4:disabled {
   pointer-events: none;
   cursor: default;
+}
+
+.c10 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  object-fit: contain;
 }
 
 .c5 {

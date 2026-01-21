@@ -32,12 +32,6 @@ exports[`OakSmallPrimaryButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
-  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
-  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
-  object-fit: contain;
-}
-
 .c6 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -94,6 +88,12 @@ exports[`OakSmallPrimaryButton matches snapshot 1`] = `
 .c3:disabled {
   pointer-events: none;
   cursor: default;
+}
+
+.c8 {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  object-fit: contain;
 }
 
 .c4 {

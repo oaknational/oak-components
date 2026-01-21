@@ -42,14 +42,6 @@ exports[`OakLessonTopNav matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c5 {
-  object-fit: cover;
-}
-
-.c9 {
-  object-fit: contain;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -108,6 +100,14 @@ exports[`OakLessonTopNav matches snapshot 1`] = `
   -moz-letter-spacing: -0.005rem;
   -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
+}
+
+.c5 {
+  object-fit: cover;
+}
+
+.c9 {
+  object-fit: contain;
 }
 
 .c3 {

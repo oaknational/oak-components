@@ -106,12 +106,6 @@ exports[`OakPupilJourneyOptionalityItem component test matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c23 {
-  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-  object-fit: contain;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -200,14 +194,20 @@ exports[`OakPupilJourneyOptionalityItem component test matches snapshot 1`] = `
   grid-template-columns: repeat(1,1fr);
 }
 
+.c14 > * {
+  width: 100%;
+  height: 100%;
+}
+
 .c15 {
   fill: #222222;
   stroke: #222222;
 }
 
-.c14 > * {
-  width: 100%;
-  height: 100%;
+.c23 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  object-fit: contain;
 }
 
 .c10 {

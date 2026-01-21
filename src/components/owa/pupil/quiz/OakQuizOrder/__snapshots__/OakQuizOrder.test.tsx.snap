@@ -143,6 +143,10 @@ exports[`OakQuizOrder matches snapshot 1`] = `
   display: flex;
 }
 
+.c5 {
+  object-fit: contain;
+}
+
 .c8 {
   background: #ffffff;
   padding-left: 0.5rem;
@@ -161,10 +165,6 @@ exports[`OakQuizOrder matches snapshot 1`] = `
   -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
   white-space: nowrap;
-}
-
-.c5 {
-  object-fit: contain;
 }
 
 .c7 {

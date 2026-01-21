@@ -21,10 +21,6 @@ exports[`OakLessonInfoCard component test matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c5 {
-  object-fit: contain;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -57,6 +53,10 @@ exports[`OakLessonInfoCard component test matches snapshot 1`] = `
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
+}
+
+.c5 {
+  object-fit: contain;
 }
 
 <div>

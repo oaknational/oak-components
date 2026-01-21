@@ -32,10 +32,6 @@ exports[`OakSearchFilterCheckBox matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
-  object-fit: contain;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -49,6 +45,10 @@ exports[`OakSearchFilterCheckBox matches snapshot 1`] = `
   display: -ms-flexbox;
   display: flex;
   gap: 0.25rem;
+}
+
+.c8 {
+  object-fit: contain;
 }
 
 .c10 {

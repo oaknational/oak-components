@@ -59,10 +59,6 @@ exports[`OakPupilJourneyListItem matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c14 {
-  object-fit: contain;
-}
-
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -122,6 +118,10 @@ exports[`OakPupilJourneyListItem matches snapshot 1`] = `
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
   gap: 0.75rem;
+}
+
+.c14 {
+  object-fit: contain;
 }
 
 .c12 {

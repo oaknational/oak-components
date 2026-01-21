@@ -88,12 +88,6 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c21 {
-  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-  object-fit: contain;
-}
-
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -185,17 +179,6 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
   gap: 1rem;
 }
 
-.c9 {
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
-  letter-spacing: 0.0115rem;
-}
-
 .c8 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -228,6 +211,12 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
 .c13:disabled {
   pointer-events: none;
   cursor: default;
+}
+
+.c21 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  object-fit: contain;
 }
 
 .c14 {
@@ -276,6 +265,17 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
 
 .c12 > :first-child:active .icon-container {
   background: transparent;
+}
+
+.c9 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
 }
 
 .c7 {

@@ -182,10 +182,6 @@ exports[`OakCATQuestion matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c15 {
-  object-fit: contain;
-}
-
 .c21 {
   display: grid;
   grid-template-columns: repeat(12,1fr);
@@ -203,6 +199,10 @@ exports[`OakCATQuestion matches snapshot 1`] = `
   grid-row: span 1;
 }
 
+.c25 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
 .c26 {
   color: #575757;
   font-family: --var(google-font),Lexend,sans-serif;
@@ -215,8 +215,8 @@ exports[`OakCATQuestion matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c25 {
-  font-family: --var(google-font),Lexend,sans-serif;
+.c15 {
+  object-fit: contain;
 }
 
 .c11 {

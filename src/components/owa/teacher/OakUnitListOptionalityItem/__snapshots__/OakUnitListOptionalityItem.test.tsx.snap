@@ -1,6 +1,30 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
+.c6 {
+  color: #222222;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c21 {
+  color: #222222;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
 .c0 {
   width: 100%;
   background: #ffffff;
@@ -218,15 +242,6 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
   justify-content: space-between;
 }
 
-.c27 {
-  display: grid;
-  grid-template-columns: repeat(12,1fr);
-  width: 100%;
-  row-gap: 0.75rem;
-  -webkit-column-gap: 0.75rem;
-  column-gap: 0.75rem;
-}
-
 .c9 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
@@ -239,30 +254,6 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
   color: #222222;
 }
 
-.c6 {
-  color: #222222;
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 600;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
-  letter-spacing: 0.0115rem;
-}
-
-.c21 {
-  color: #222222;
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
-  letter-spacing: 0.0115rem;
-}
-
 .c23 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
@@ -273,6 +264,15 @@ exports[`OakUnitListOptionalityItem matches snapshot 1`] = `
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
   color: #222222;
+}
+
+.c27 {
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  width: 100%;
+  row-gap: 0.75rem;
+  -webkit-column-gap: 0.75rem;
+  column-gap: 0.75rem;
 }
 
 @media (min-width:750px) {

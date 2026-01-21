@@ -88,12 +88,6 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c21 {
-  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-  object-fit: contain;
-}
-
 .c2 {
   display: none;
   -webkit-align-items: center;
@@ -214,40 +208,6 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   justify-content: space-between;
 }
 
-.c30 {
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 600;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
-  letter-spacing: 0.0115rem;
-  color: #222222;
-}
-
-.c11 {
-  color: #222222;
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 600;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
-  letter-spacing: 0.0115rem;
-}
-
-.c0 {
-  width: 100%;
-  display: revert;
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-family: --var(google-font),Lexend,sans-serif;
-  list-style: none;
-  display: revert;
-  display: revert;
-}
-
 .c14 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
@@ -288,6 +248,46 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
   color: #222222;
+}
+
+.c30 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+  color: #222222;
+}
+
+.c0 {
+  width: 100%;
+  display: revert;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
+  list-style: none;
+  display: revert;
+  display: revert;
+}
+
+.c11 {
+  color: #222222;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c21 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  object-fit: contain;
 }
 
 .c6 {

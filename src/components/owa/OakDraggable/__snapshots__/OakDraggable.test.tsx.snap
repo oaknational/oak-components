@@ -37,10 +37,6 @@ exports[`OakDraggable matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c6 {
-  object-fit: contain;
-}
-
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -58,6 +54,10 @@ exports[`OakDraggable matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.c6 {
+  object-fit: contain;
 }
 
 .c1 {

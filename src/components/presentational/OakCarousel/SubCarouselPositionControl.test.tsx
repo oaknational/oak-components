@@ -7,6 +7,8 @@ import {
   SubCarouselPositionControlProps,
 } from "./SubCarouselPositionControl";
 
+import renderWithTheme from "@/test-helpers/renderWithTheme";
+
 // Mock the custom components
 type FlexProps = {
   children: ReactElement | ReactElement[];
@@ -19,11 +21,11 @@ type ButtonProps = {
   disabled?: boolean;
 };
 
-jest.mock("@/components/atoms", () => ({
+jest.mock("@/components/layout-and-structure/OakFlex", () => ({
   OakFlex: ({ children }: FlexProps): ReactElement => <div>{children}</div>,
 }));
 
-jest.mock("@/components/molecules/OakTertiaryInvertedButton", () => ({
+jest.mock("@/components/buttons/OakTertiaryInvertedButton", () => ({
   OakTertiaryInvertedButton: ({
     onClick,
     iconName,
@@ -50,7 +52,7 @@ describe("SubCarouselPositionControl", () => {
   const renderComponent = (
     props: SubCarouselPositionControlProps = defaultProps,
   ): ReturnType<typeof render> => {
-    return render(<SubCarouselPositionControl {...props} />);
+    return renderWithTheme(<SubCarouselPositionControl {...props} />);
   };
 
   beforeEach(() => {

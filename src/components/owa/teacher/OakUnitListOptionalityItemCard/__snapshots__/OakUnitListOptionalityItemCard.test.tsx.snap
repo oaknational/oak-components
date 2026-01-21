@@ -1,6 +1,18 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
+.c11 {
+  color: #222222;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -38,12 +50,6 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
   height: 2rem;
   min-height: 2rem;
   font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c13 {
-  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-  object-fit: contain;
 }
 
 .c1 {
@@ -114,16 +120,10 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
   color: #222222;
 }
 
-.c11 {
-  color: #222222;
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
-  letter-spacing: 0.0115rem;
+.c13 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  object-fit: contain;
 }
 
 .c3 {

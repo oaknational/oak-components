@@ -62,12 +62,6 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c31 {
-  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-  object-fit: contain;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -228,14 +222,6 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c18 {
-  display: revert;
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-family: --var(google-font),Lexend,sans-serif;
-  display: revert;
-  display: revert;
-}
-
 .c16 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -247,6 +233,14 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
   display: block;
   padding-left: 0.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c18 {
+  display: revert;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: --var(google-font),Lexend,sans-serif;
+  display: revert;
+  display: revert;
 }
 
 .c24 {
@@ -266,6 +260,12 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
 .c24:disabled {
   pointer-events: none;
   cursor: default;
+}
+
+.c31 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  object-fit: contain;
 }
 
 .c25 {

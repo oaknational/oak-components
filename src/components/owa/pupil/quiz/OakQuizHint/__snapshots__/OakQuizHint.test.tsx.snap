@@ -47,10 +47,6 @@ exports[`OakQuizHint matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c13 {
-  object-fit: contain;
-}
-
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -120,6 +116,10 @@ exports[`OakQuizHint matches snapshot 1`] = `
 .c5:disabled {
   pointer-events: none;
   cursor: default;
+}
+
+.c13 {
+  object-fit: contain;
 }
 
 .c6 {

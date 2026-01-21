@@ -47,12 +47,6 @@ exports[`OakInfo matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c13 {
-  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-  object-fit: contain;
-}
-
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -122,6 +116,12 @@ exports[`OakInfo matches snapshot 1`] = `
 .c5:disabled {
   pointer-events: none;
   cursor: default;
+}
+
+.c13 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  object-fit: contain;
 }
 
 .c6 {

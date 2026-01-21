@@ -15,7 +15,7 @@ type FlexProps = {
 };
 
 // Mock OakFlex component
-jest.mock("@/components/atoms", () => ({
+jest.mock("@/components/layout-and-structure/OakFlex", () => ({
   OakFlex: ({ children }: FlexProps): ReactElement => (
     <div data-testid="oak-flex">{children}</div>
   ),

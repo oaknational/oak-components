@@ -111,17 +111,6 @@ exports[`OakFormInputWithLabels should match snapshot 1`] = `
   cursor: not-allowed;
 }
 
-.c4 {
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
-  letter-spacing: -0.005rem;
-}
-
 .c7 {
   background: #ffffff;
 }
@@ -133,6 +122,17 @@ exports[`OakFormInputWithLabels should match snapshot 1`] = `
 .c7:focus-within {
   border-color: #222222;
   background: #ffffff;
+}
+
+.c4 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
 }
 
 @media (max-width:750px) {

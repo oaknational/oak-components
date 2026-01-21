@@ -91,16 +91,6 @@ exports[`OakDownloadCard matches snapshot with fileSizeSlot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c9 {
-  object-fit: contain;
-}
-
-.c25 {
-  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
-  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
-  object-fit: contain;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -190,6 +180,16 @@ exports[`OakDownloadCard matches snapshot with fileSizeSlot 1`] = `
 
 .c20:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
+}
+
+.c9 {
+  object-fit: contain;
+}
+
+.c25 {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  object-fit: contain;
 }
 
 .c23 {
@@ -427,16 +427,6 @@ exports[`OakDownloadCard matches snapshot without fileSizeSlot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c9 {
-  object-fit: contain;
-}
-
-.c25 {
-  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
-  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
-  object-fit: contain;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -526,6 +516,16 @@ exports[`OakDownloadCard matches snapshot without fileSizeSlot 1`] = `
 
 .c20:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
+}
+
+.c9 {
+  object-fit: contain;
+}
+
+.c25 {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  object-fit: contain;
 }
 
 .c23 {

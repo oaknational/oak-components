@@ -227,6 +227,18 @@ exports[`OakListItem matches snapshot 1`] = `
   justify-content: space-between;
 }
 
+.c16 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+  color: #222222;
+}
+
 .c27 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
@@ -237,18 +249,6 @@ exports[`OakListItem matches snapshot 1`] = `
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
   color: #222222;
-}
-
-.c13 {
-  color: #222222;
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 600;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
-  letter-spacing: 0.0115rem;
 }
 
 .c0 {
@@ -273,16 +273,16 @@ exports[`OakListItem matches snapshot 1`] = `
   flex-direction: column;
 }
 
-.c16 {
+.c13 {
+  color: #222222;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
-  font-size: 1rem;
-  line-height: 1.25rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   -webkit-letter-spacing: 0.0115rem;
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
-  color: #222222;
 }
 
 .c8 {

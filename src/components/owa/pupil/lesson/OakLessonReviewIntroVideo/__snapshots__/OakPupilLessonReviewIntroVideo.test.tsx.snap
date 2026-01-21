@@ -58,10 +58,6 @@ exports[`OakLessonReviewIntroVideo matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c7 {
-  object-fit: contain;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -106,6 +102,10 @@ exports[`OakLessonReviewIntroVideo matches snapshot 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
+}
+
+.c7 {
+  object-fit: contain;
 }
 
 .c2 {

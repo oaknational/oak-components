@@ -80,10 +80,6 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c19 {
-  object-fit: contain;
-}
-
 .c1 {
   display: block;
   -webkit-box-flex: 1;
@@ -185,17 +181,6 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c15 {
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 600;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
-  letter-spacing: 0.0115rem;
-}
-
 .c27 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
@@ -260,6 +245,10 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 .c28:disabled {
   pointer-events: none;
   cursor: default;
+}
+
+.c19 {
+  object-fit: contain;
 }
 
 .c25 {
@@ -444,6 +433,17 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   position: absolute;
   width: 100%;
   bottom: 0.125rem;
+}
+
+.c15 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
 }
 
 .c35 > button {

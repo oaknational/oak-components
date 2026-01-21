@@ -47,12 +47,6 @@ exports[`OakHomepageTabButton component matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c5 {
-  -webkit-filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
-  filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
-  object-fit: contain;
-}
-
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -86,6 +80,12 @@ exports[`OakHomepageTabButton component matches snapshot 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   gap: 0.25rem;
+}
+
+.c5 {
+  -webkit-filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
+  filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
+  object-fit: contain;
 }
 
 .c8 {

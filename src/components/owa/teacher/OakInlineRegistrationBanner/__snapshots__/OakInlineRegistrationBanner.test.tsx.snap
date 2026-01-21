@@ -109,6 +109,10 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
+.c6 {
+  width: 6.25rem;
+}
+
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -182,7 +186,7 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
   gap: 0.5rem;
 }
 
-.c4 {
+.c7 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -196,14 +200,6 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
   text-align: left;
-}
-
-.c7 {
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c6 {
-  width: 6.25rem;
 }
 
 .c20 {
@@ -355,6 +351,10 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
 
 .c14:focus-within {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c4 {
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 @media (min-width:750px) {

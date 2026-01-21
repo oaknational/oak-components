@@ -149,10 +149,6 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   display: flex;
 }
 
-.c20 {
-  object-fit: contain;
-}
-
 .c13 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
@@ -184,6 +180,10 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   padding-right: 0.75rem;
   padding-top: 0.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c20 {
+  object-fit: contain;
 }
 
 .c8 {

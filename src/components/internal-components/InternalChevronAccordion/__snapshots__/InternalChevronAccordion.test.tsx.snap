@@ -56,10 +56,6 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c11 {
-  object-fit: contain;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -87,6 +83,10 @@ exports[`InternalChevronAccordion matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.c11 {
+  object-fit: contain;
 }
 
 .c5 {

@@ -35,10 +35,6 @@ exports[`OakSaveCount should match snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c5 {
-  object-fit: contain;
-}
-
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -53,6 +49,10 @@ exports[`OakSaveCount should match snapshot 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   gap: 0.25rem;
+}
+
+.c5 {
+  object-fit: contain;
 }
 
 .c7 {

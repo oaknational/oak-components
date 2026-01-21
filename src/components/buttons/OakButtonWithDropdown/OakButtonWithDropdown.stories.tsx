@@ -7,6 +7,7 @@ import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakIcon } from "@/components/images-and-icons/OakIcon";
 import { OakSpan } from "@/components/typography/OakSpan";
 import { OakSmallPrimaryInvertedButton } from "@/components/buttons/OakSmallPrimaryInvertedButton";
+import { OakSecondaryButton } from "@/components/buttons/OakSecondaryButton";
 
 // Generic Dropdown Navigation Button Stories
 const dropdownNavMeta: Meta<typeof OakButtonWithDropdown> = {
@@ -33,6 +34,7 @@ const dropdownNavMeta: Meta<typeof OakButtonWithDropdown> = {
     disabled: false,
     ariaLabel: "Additional teaching materials",
     ariaDescription: "Access additional teaching resources and materials",
+    buttonComponent: OakSecondaryButton,
   },
   argTypes: {
     onPrimaryAction: {

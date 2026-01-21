@@ -65,10 +65,6 @@ exports[`OakMediaClipListAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c14 {
-  object-fit: contain;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -106,6 +102,10 @@ exports[`OakMediaClipListAccordion matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.c14 {
+  object-fit: contain;
 }
 
 .c8 {
