@@ -35,6 +35,7 @@ const meta: Meta<typeof OakCard> = {
     controls: {
       include: [
         "heading",
+        "href",
         "cardOrientation",
         "cardWidth",
         "aspectRatio",
@@ -42,7 +43,6 @@ const meta: Meta<typeof OakCard> = {
         "tagName",
         "linkText",
         "linkIconName",
-        "href",
       ],
     },
   }
@@ -56,6 +56,7 @@ export const Default: Story = {
   render: (args) => <OakCard {...args} />,
   args: {
     heading: "A Heading",
+    href: "https://example.com",
     cardOrientation: "column",
     cardWidth: "spacing-360",
     imageSrc: `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/sample.jpg`,
@@ -65,7 +66,6 @@ export const Default: Story = {
     tagName: "Tag Name",
     linkText: "Link Text",
     linkIconName: "arrow-right",
-    href: "https://example.com",
   },
 };
 
@@ -73,6 +73,7 @@ export const ColumnOrientationWithSquareImage: Story = {
   render: (args) => <OakCard {...args} />,
   args: {
     heading: "Raising ambition and inspiring a love for language with Oak's English curriculum",
+    href: "https://example.com",
     cardOrientation: "column",
     cardWidth: "spacing-360",
     imageSrc: "https://sanity-asset-cdn.thenational.academy/images/cuvjke51/production/bb3aaee85a870c0356d88b6123c396115f28475f-2018x1134.png?w=640&fm=webp&q=80&fit=clip&auto=format",
@@ -80,7 +81,6 @@ export const ColumnOrientationWithSquareImage: Story = {
     aspectRatio: "1/1",
     linkText: "Watch the video",
     linkIconName: "arrow-right",
-    href: "https://example.com",
   },
 };
 
@@ -88,6 +88,7 @@ export const RowOrientationWithRectangularImage: Story = {
   render: (args) => <OakCard {...args} />,
   args: {
     heading: "Building curious, confident historians: inside Oak's history curriculum",
+    href: "https://example.com",
     cardOrientation: "row",
     cardWidth: "100%",
     imageSrc: "https://sanity-asset-cdn.thenational.academy/images/cuvjke51/production/7830648e67825d0f931e4535f11bbf21d10e82aa-600x400.jpg?w=640&fm=webp&q=80&fit=clip&auto=format",
@@ -97,7 +98,6 @@ export const RowOrientationWithRectangularImage: Story = {
     tagName: "Curriculum planning",
     linkText: "Read more",
     linkIconName: "arrow-right",
-    href: "https://example.com",
   },
 };
 
@@ -105,11 +105,11 @@ export const DownloadCard: Story = {
   render: (args) => <OakCard {...args} />,
   args: {
     heading: "Oak's 2022-2025 strategy: April 2024 update",
+    href: "https://example.com/download.pdf",
     cardOrientation: "column",
     cardWidth: "spacing-240",
     subCopy: "PDF, 4.8MB",
     linkText: "Download",
     linkIconName: "download",
-    href: "https://example.com/brochure.pdf",
   },
 };

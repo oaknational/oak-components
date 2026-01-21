@@ -13,6 +13,10 @@ export type OakCardProps = {
    */
   heading: string;
   /**
+   * The URL that the card links to.
+   */
+  href: string;
+  /**
    * The orientation of the card.
    */
   cardOrientation?: "row" | "column";
@@ -48,10 +52,6 @@ export type OakCardProps = {
    * The name of the icon to be displayed next to the link text in the card.
    */
   linkIconName?: OakIconName;
-  /**
-   * The URL that the card links to.
-   */
-  href?: string;
 };
 
 type StyledProps = {
@@ -71,11 +71,6 @@ const StyledOakImage = styled(OakImage)<StyledProps>`
   }
 `;
 
-
-
-// to do: add comments
-// to do: storybook controls
-// to do: storybook documentation
 // to do: tests
 // to do: focus and hover state behaviours using wrapper
 // to do: add underline hover behaviour
@@ -90,6 +85,7 @@ const StyledOakImage = styled(OakImage)<StyledProps>`
  */
 export const OakCard = ({
   heading,
+  href,
   cardOrientation = "column",
   cardWidth,
   imageSrc,
@@ -99,67 +95,66 @@ export const OakCard = ({
   tagName,
   linkText,
   linkIconName,
-  href,
   }: OakCardProps) => {
-    const content = (
-    <OakFlex
-      $flexDirection={cardOrientation}
-      $width={cardWidth}
-      $pa={"spacing-16"}
-      $gap={"spacing-16"}
-      $background={"bg-neutral"}
-      $borderRadius={"border-radius-m2"}
-    >
-      {imageSrc && <StyledOakImage
-        src={imageSrc || ""}
-        alt={imageAlt || ""}
-        $height={cardOrientation === "row" ? "spacing-240" : "auto"}
-        $width={"auto"}
-        $aspectRatio={aspectRatio}
-      />}
+    return (
       <OakFlex
-        $flexDirection="column"
-        $justifyContent={"space-between"}
-        $pt={cardOrientation === "row" ? "spacing-24" : "spacing-0"}
-        $pb={cardOrientation === "row" ? "spacing-24" : "spacing-0"}
-        $gap="spacing-16"
+        as="a"
+        href={href}
+        $flexDirection={cardOrientation}
+        $width={cardWidth}
+        $pa={"spacing-16"}
+        $gap={"spacing-16"}
+        $background={"bg-neutral"}
+        $borderRadius={"border-radius-m2"}
       >
+        {imageSrc && <StyledOakImage
+          src={imageSrc || ""}
+          alt={imageAlt || ""}
+          $height={cardOrientation === "row" ? "spacing-240" : "auto"}
+          $width={"auto"}
+          $aspectRatio={aspectRatio}
+        />}
         <OakFlex
           $flexDirection="column"
+          $justifyContent={"space-between"}
+          $pt={cardOrientation === "row" ? "spacing-24" : "spacing-0"}
+          $pb={cardOrientation === "row" ? "spacing-24" : "spacing-0"}
           $gap="spacing-16"
         >
-          <OakHeading
-            tag="h3"
-            $font={"heading-6"}
+          <OakFlex
+            $flexDirection="column"
+            $gap="spacing-16"
           >
-            {heading}
-          </OakHeading>
-          {subCopy && <OakP>{subCopy}</OakP>}
-        </OakFlex>
-        <OakFlex
-          $flexDirection="row"
-          $justifyContent={tagName ? "space-between" : "flex-end"}
-          $gap="spacing-16"
-        >
-          {tagName && <OakTagFunctional
-            label={tagName}
-            $background={"bg-decorative3-very-subdued"}
-          />}
-          {href && linkText && linkIconName && <OakFlex
-            $alignItems={"center"}
+            <OakHeading
+              tag="h3"
+              $font={"heading-6"}
+            >
+              {heading}
+            </OakHeading>
+            {subCopy && <OakP>{subCopy}</OakP>}
+          </OakFlex>
+          <OakFlex
+            $flexDirection="row"
+            $justifyContent={tagName ? "space-between" : "flex-end"}
+            $gap="spacing-16"
           >
-            <OakLabel>{linkText}</OakLabel>
-            <OakIcon
-              iconName={linkIconName}
-              alt={linkIconName}
-              $width="spacing-24"
-              $height="spacing-24"
-            />
-          </OakFlex>}
+            {tagName && <OakTagFunctional
+              label={tagName}
+              $background={"bg-decorative3-very-subdued"}
+            />}
+            {href && linkText && linkIconName && <OakFlex
+              $alignItems={"center"}
+            >
+              <OakLabel>{linkText}</OakLabel>
+              <OakIcon
+                iconName={linkIconName}
+                alt={linkIconName}
+                $width="spacing-24"
+                $height="spacing-24"
+              />
+            </OakFlex>}
+          </OakFlex>
         </OakFlex>
       </OakFlex>
-    </OakFlex>
     );
-
-    return href ? <a href={href}>{content}</a> : content;
 };
