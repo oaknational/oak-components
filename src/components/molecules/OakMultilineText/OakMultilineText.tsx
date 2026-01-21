@@ -37,7 +37,10 @@ const StyledOakTextArea = styled(OakTextArea)<StyledOakTextAreaProps>`
 
   &:hover {
     background: ${parseColor("bg-btn-secondary-hover")};
-    border-color: ${parseColor("border-neutral")};
+    border-color: ${(props) =>
+      props.disabled
+        ? parseColor("border-neutral-lighter")
+        : parseColor("border-neutral")};
   }
 
   ::placeholder {
