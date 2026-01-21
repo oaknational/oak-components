@@ -1,15 +1,17 @@
 import styled from "styled-components";
 
 import { OakBox } from "@/components/atoms/OakBox";
-import { OakCombinedColorToken, OakDropShadowToken } from "@/styles";
+import { OakDropShadowToken, OakUiRoleToken, parseColor } from "@/styles";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
+import { responsiveStyle } from "@/styles/utils/responsiveStyle";
+import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 
 function isJSDOM() {
   return globalThis?.navigator?.userAgent?.includes("jsdom/");
 }
 
 export type OakFocusIndicatorProps = {
-  hoverBackground?: OakCombinedColorToken;
+  hoverBackground?: OakUiRoleToken;
   dropShadow?: OakDropShadowToken;
   hoverDropShadow?: OakDropShadowToken;
   activeDropShadow?: OakDropShadowToken;
@@ -23,7 +25,11 @@ export const OakFocusIndicator = styled(OakBox)<OakFocusIndicatorProps>`
       a${isJSDOM() ? "" : ":focus-visible"},
         button${isJSDOM() ? "" : ":focus-visible"}
     ) {
-    border-radius: ${(props) => props.$borderRadius ?? "0.25em;"};
+    ${responsiveStyle(
+      "border-radius",
+      (props) => props.$borderRadius,
+      parseBorderRadius,
+    )}
     z-index: 2;
     box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
@@ -32,7 +38,11 @@ export const OakFocusIndicator = styled(OakBox)<OakFocusIndicatorProps>`
   &:has(a:hover, button:hover),
   &:has(button:hover:not(:active${isJSDOM() ? "" : ", :focus-visible"})) {
     z-index: 1;
-    background-color: ${(props) => props.hoverBackground ?? ""};
+    ${responsiveStyle(
+      "background-color",
+      (props) => props.hoverBackground,
+      parseColor,
+    )}
   }
 
   &:has(a:hover, button:hover) {

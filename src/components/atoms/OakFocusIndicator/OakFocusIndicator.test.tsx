@@ -14,7 +14,7 @@ describe("OakFocusIndicator", () => {
   test("with props set", () => {
     const { baseElement } = renderWithTheme(
       <OakFocusIndicator
-        hoverBackground="pink"
+        hoverBackground="bg-btn-secondary"
         dropShadow="drop-shadow-centered-grey"
         hoverDropShadow="drop-shadow-centered-grey"
         activeDropShadow="drop-shadow-none"

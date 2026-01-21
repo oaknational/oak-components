@@ -10,7 +10,6 @@ exports[`OakFocusIndicator default render 1`] = `
 }
 
 .c1:has( a, button ) {
-  border-radius: 0.25em;
   z-index: 2;
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
@@ -48,7 +47,6 @@ exports[`OakFocusIndicator with props set 1`] = `
 }
 
 .c1:has( a, button ) {
-  border-radius: 0.25em;
   z-index: 2;
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
@@ -56,7 +54,7 @@ exports[`OakFocusIndicator with props set 1`] = `
 .c1:has(a:hover,button:hover),
 .c1:has(button:hover:not(:active)) {
   z-index: 1;
-  background-color: pink;
+  background-color: #ffffff;
 }
 
 .c1:has(a:hover,button:hover) {

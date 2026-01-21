@@ -4,7 +4,11 @@ import { Meta, StoryObj } from "@storybook/react";
 import { OakFocusIndicator } from "./OakFocusIndicator";
 
 import { OakBox } from "@/components/atoms/OakBox";
-import { oakDropShadowTokens, oakUiRoleTokens } from "@/styles";
+import {
+  oakBorderRadiusTokens,
+  oakDropShadowTokens,
+  oakUiRoleTokens,
+} from "@/styles";
 
 const meta: Meta<typeof OakFocusIndicator> = {
   component: OakFocusIndicator,
@@ -15,6 +19,7 @@ const meta: Meta<typeof OakFocusIndicator> = {
     dropShadow: { options: [...Object.keys(oakDropShadowTokens), null] },
     hoverDropShadow: { options: [...Object.keys(oakDropShadowTokens), null] },
     activeDropShadow: { options: [...Object.keys(oakDropShadowTokens), null] },
+    $borderRadius: { options: [...Object.keys(oakBorderRadiusTokens), null] },
   },
   parameters: {
     controls: {
@@ -23,6 +28,7 @@ const meta: Meta<typeof OakFocusIndicator> = {
         "dropShadow",
         "hoverDropShadow",
         "activeDropShadow",
+        "$borderRadius",
       ],
     },
   },
@@ -88,7 +94,7 @@ export const ChangeHoverBackgroundAndHover: Story = {
     </OakFocusIndicator>
   ),
   args: {
-    hoverBackground: "pink",
+    hoverBackground: "bg-decorative1-subdued",
     $borderRadius: "border-radius-m",
   },
 };
