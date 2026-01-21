@@ -12,6 +12,7 @@ import { parseBorder } from "@/styles/helpers/parseBorder";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
 import { RadioContext } from "@/components/molecules/OakRadioGroup/OakRadioGroup";
+import { OakCombinedColorToken, OakUiRoleToken } from "@/styles";
 
 // Converted to styled-component so it can be used in '&:checked:not(:disabled) + ${StyledOakIcon}' to change svg color.
 const StyledOakIcon = styled(OakIcon)``;
@@ -43,7 +44,7 @@ const StyledInternalRadio = styled(InternalRadio)<{
   }
 `;
 
-const StyledFlexBox = styled(OakFlex)`
+const StyledFlexBox = styled(OakFlex)<{ $hoverBackground: OakUiRoleToken }>`
   &:has(input:not(:disabled)) {
     cursor: pointer;
   }
@@ -51,6 +52,10 @@ const StyledFlexBox = styled(OakFlex)`
   &:has(input:disabled) {
     pointer-events: none;
     cursor: none;
+
+    background-color: transparent;
+    border-color: transparent;
+    color: ${parseColor("text-disabled")};
   }
 
   &:hover:has(input:not(:disabled)) ${InternalCheckBoxLabelHoverDecor} {
@@ -58,7 +63,7 @@ const StyledFlexBox = styled(OakFlex)`
   }
 
   &:hover:has(input:not(:disabled)) {
-    background-color: ${parseColor("bg-neutral")};
+    background-color: ${(props) => parseColor(props.$hoverBackground)};
   }
 
   &:focus-within {
@@ -71,6 +76,51 @@ const StyledFlexBox = styled(OakFlex)`
     color: ${parseColor("text-inverted")};
   }
 `;
+
+type DecorativeBackgroundMain = Extract<
+  OakCombinedColorToken,
+  `bg-decorative${number}-main`
+>;
+type DecorativeColorScheme =
+  DecorativeBackgroundMain extends `bg-${infer N}-main` ? N : never;
+type OakRadioAsButtonColorScheme =
+  | DecorativeColorScheme
+  | "primary"
+  | "transparent";
+
+const pickBackgroundToken = (
+  colorScheme: OakRadioAsButtonColorScheme,
+): OakUiRoleToken => {
+  if (colorScheme === "transparent") {
+    return "transparent";
+  }
+
+  if (colorScheme === "primary") {
+    return "bg-primary";
+  }
+
+  return `bg-${colorScheme}-main`;
+};
+
+const pickHoverBackgroundToken = (
+  colorScheme: OakRadioAsButtonColorScheme,
+): OakUiRoleToken => {
+  if (colorScheme === "primary" || colorScheme === "transparent") {
+    return "bg-neutral";
+  }
+
+  return `bg-${colorScheme}-very-subdued`;
+};
+
+const pickBorderColorToken = (
+  colorScheme: OakRadioAsButtonColorScheme,
+): OakUiRoleToken => {
+  if (colorScheme === "primary" || colorScheme === "transparent") {
+    return "border-neutral-lighter";
+  }
+
+  return `border-${colorScheme}`;
+};
 
 export type OakRadioAsButtonProps = Omit<
   BaseRadioProps,
@@ -85,6 +135,7 @@ export type OakRadioAsButtonProps = Omit<
   "aria-labelledby"?: React.AriaAttributes["aria-labelledby"];
   "aria-label"?: React.AriaAttributes["aria-label"];
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  colorScheme?: OakRadioAsButtonColorScheme;
 };
 
 /**
@@ -118,10 +169,10 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
     icon,
     onChange,
     keepIconColor,
+    colorScheme = "primary",
     ...rest
   } = props;
   const { name, onValueUpdated, currentValue } = useContext(RadioContext);
-
   const defaultRef = useRef<HTMLInputElement>(null);
   const inputRef = innerRef ?? defaultRef;
 
@@ -144,9 +195,10 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
     <OakFlex $minHeight={"spacing-40"} $position={"relative"}>
       <StyledFlexBox
         $borderRadius={"border-radius-s"}
-        $borderColor={"border-neutral-lighter"}
+        $borderColor={pickBorderColorToken(colorScheme)}
         $ba="border-solid-s"
-        $background={"bg-primary"}
+        $background={pickBackgroundToken(colorScheme)}
+        $hoverBackground={pickHoverBackgroundToken(colorScheme)}
         onClick={handleContainerClick}
         $ph={"spacing-12"}
         $pv={"spacing-4"}
