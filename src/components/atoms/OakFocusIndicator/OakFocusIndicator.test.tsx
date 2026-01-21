@@ -5,13 +5,13 @@ import { OakFocusIndicator } from "./OakFocusIndicator";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("OakFocusIndicator", () => {
-  test("default render", async () => {
+  test("default render", () => {
     const { baseElement } = renderWithTheme(<OakFocusIndicator />);
 
     expect(baseElement).toMatchSnapshot();
   });
 
-  test("with props set", async () => {
+  test("with props set", () => {
     const { baseElement } = renderWithTheme(
       <OakFocusIndicator
         hoverBackground="pink"
