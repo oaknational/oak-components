@@ -37,7 +37,7 @@ exports[`OakFocusIndicator default render 1`] = `
 </body>
 `;
 
-exports[`OakFocusIndicator with props set 1`] = `
+exports[`OakFocusIndicator renders correctly with props set 1`] = `
 .c0 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
