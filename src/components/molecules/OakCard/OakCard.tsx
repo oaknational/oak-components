@@ -79,6 +79,15 @@ const StyledOakImage = styled(OakImage)<StyledProps>`
 // to do: tests
 // to do: focus and hover state behaviours using wrapper
 // to do: add underline hover behaviour
+
+/**
+ * A highly customisable card component that displays a heading and takes a href at minimum.
+ * 
+ * It can also display an image, subcopy, a tag, and a link with an icon.
+ * 
+ * The card can be oriented in a row or column layout and its width can be adjusted using spacing tokens.
+ * The image aspect ratio can be set to either 1:1 or 4:3.
+ */
 export const OakCard = ({
   heading,
   cardOrientation = "column",
