@@ -5,7 +5,8 @@ exports[`OakRadioAsButton matches snapshot 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  min-height: 2.5rem;
+  min-height: 2rem;
+  box-sizing: content-box;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   padding-top: 0.25rem;
@@ -47,7 +48,7 @@ exports[`OakRadioAsButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c15 {
+.c13 {
   object-fit: contain;
 }
 
@@ -103,7 +104,7 @@ exports[`OakRadioAsButton matches snapshot 1`] = `
   flex-shrink: 0;
 }
 
-.c17 {
+.c15 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -127,7 +128,7 @@ exports[`OakRadioAsButton matches snapshot 1`] = `
   border: 0;
 }
 
-.c18 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -138,7 +139,7 @@ exports[`OakRadioAsButton matches snapshot 1`] = `
   align-items: center;
 }
 
-.c19 {
+.c17 {
   pointer-events: none;
   cursor: pointer;
 }
@@ -178,10 +179,6 @@ exports[`OakRadioAsButton matches snapshot 1`] = `
   border: 0.125rem solid #ffffff;
 }
 
-.c14 {
-  margin-block: -0.25rem;
-}
-
 .c2 {
   cursor: pointer;
   background-color: #ffffff;
@@ -197,7 +194,7 @@ exports[`OakRadioAsButton matches snapshot 1`] = `
   color: #808080;
 }
 
-.c2:hover:has(input:not(:disabled)) .c16 {
+.c2:hover:has(input:not(:disabled)) .c14 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -215,13 +212,8 @@ exports[`OakRadioAsButton matches snapshot 1`] = `
   color: #ffffff;
 }
 
-.c2:has(input:checked:not(:disabled)) .c13 {
-  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
-  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
-}
-
 @media (hover:hover) {
-  .c19:hover {
+  .c17:hover {
     -webkit-text-decoration: underline;
     text-decoration: underline;
   }
@@ -256,11 +248,11 @@ exports[`OakRadioAsButton matches snapshot 1`] = `
       </div>
     </span>
     <div
-      class="c12 c13 c14"
+      class="c12 "
     >
       <img
         alt=""
-        class="c15"
+        class="c13"
         data-nimg="fill"
         decoding="async"
         loading="lazy"
@@ -269,7 +261,7 @@ exports[`OakRadioAsButton matches snapshot 1`] = `
       />
     </div>
     <label
-      class="c16 c17 c18 c19"
+      class="c14 c15 c16 c17"
       for="react-use-id-test-result"
       pointer-events="none"
     >
