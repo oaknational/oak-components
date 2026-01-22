@@ -184,17 +184,6 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%),0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c6 {
-  height: 15rem;
-  width: auto;
-  aspect-ratio: 4/3;
-}
-
-.c6 img {
-  border-radius: 0.5rem;
-  object-fit: cover;
-}
-
 .c4 {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
@@ -206,6 +195,17 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
 .c4:hover h3 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+.c6 {
+  height: 15rem;
+  width: auto;
+  aspect-ratio: 4/3;
+}
+
+.c6 img {
+  border-radius: 0.5rem;
+  object-fit: cover;
 }
 
 <div>
