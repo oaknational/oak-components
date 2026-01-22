@@ -11,11 +11,21 @@ const meta: Meta<typeof OakPupilJourneyContentGuidance> = {
   tags: ["autodocs"],
   parameters: {
     controls: {
-      include: ["isOpen", "title", "contentGuidance", "supervisionLevel"],
+      include: [
+        "isOpen",
+        "title",
+        "contentGuidance",
+        "supervisionLevel",
+        "declineIcon",
+      ],
     },
   },
   argTypes: {
     title: { type: "string" },
+    declineIcon: {
+      control: "select",
+      options: ["cross", "arrow-left"],
+    },
   },
   args: {},
 };
@@ -57,5 +67,6 @@ export const Default: Story = {
       },
     ],
     supervisionLevel: "Adult supervision suggested.",
+    declineIcon: "arrow-left",
   },
 };
