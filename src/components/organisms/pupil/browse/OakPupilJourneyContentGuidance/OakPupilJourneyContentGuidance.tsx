@@ -8,7 +8,6 @@ import {
 } from "@/components/molecules";
 import { OakFlex, OakHeading, OakIconName } from "@/components/atoms";
 
-
 export type OakPupilContentGuidance = {
   contentguidanceLabel: string | null;
   contentguidanceDescription: string | null;
