@@ -65,7 +65,7 @@ export const Default: Story = {
     heading: "A Heading",
     href: "https://example.com",
     cardOrientation: "column",
-    cardWidth: "spacing-360",
+    cardWidth: "fit-content",
     imageSrc: `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/sample.jpg`,
     imageAlt: "Example Image Alt",
     aspectRatio: "4/3",
