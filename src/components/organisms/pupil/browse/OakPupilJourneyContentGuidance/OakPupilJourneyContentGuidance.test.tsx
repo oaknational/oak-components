@@ -144,7 +144,6 @@ describe("OakPupilJourneyContentGuidance", () => {
         />
       </ThemeProvider>,
     );
-  
     const icon = getByTestId("declineButton").querySelector("img");
     expect(icon).toHaveAttribute("src", generateOakIconURL("cross"));
   });
