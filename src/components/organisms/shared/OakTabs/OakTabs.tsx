@@ -62,8 +62,10 @@ export function OakTabs<T extends string>(props: Readonly<OakTabsProps<T>>) {
             key={tab}
             $background={isSelected ? "bg-decorative1-main" : backgroundColor}
             $color={isSelected ? "text-primary" : textColor}
-            $hoverColor={hoverText}
-            $hoverBackground={hoverBackground}
+            $hoverColor={isSelected ? "text-primary" : hoverText}
+            $hoverBackground={
+              isSelected ? "bg-decorative1-main" : hoverBackground
+            }
             onClick={() => onTabClick(tab)}
           >
             <OakFlex
