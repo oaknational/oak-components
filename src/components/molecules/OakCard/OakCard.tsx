@@ -166,10 +166,7 @@ export const OakCard = ({
             $gap="spacing-16"
           >
             {tagName && (
-              <OakTagFunctional
-                label={tagName}
-                $background={tagBackground}
-              />
+              <OakTagFunctional label={tagName} $background={tagBackground} />
             )}
             {linkText && (
               <OakFlex $alignItems={"center"}>

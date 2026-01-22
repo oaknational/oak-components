@@ -101,11 +101,13 @@ describe("OakCard", () => {
   });
 
   it("renders with tag with correct background colour when provided", () => {
-    renderWithTheme(<OakCard
-      {...requiredProps}
-      tagName={testData.tagName}
-      tagBackground={testData.tagBackground}
-    />);
+    renderWithTheme(
+      <OakCard
+        {...requiredProps}
+        tagName={testData.tagName}
+        tagBackground={testData.tagBackground}
+      />,
+    );
 
     expect(screen.getByText(testData.tagName)).toBeInTheDocument();
   });
