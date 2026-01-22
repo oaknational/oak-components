@@ -28,7 +28,7 @@ const StyledTabButton = styled(InternalButton)<{
     color: ${(props) => parseColor(props.$hoverColor)};
     background: ${(props) => parseColor(props.$hoverBackground)};
   }
-  &:focus-within {
+  &:focus-visible:not(&:active) {
     box-shadow: ${parseDropShadow("drop-shadow-centered-grey")};
     .focus-outline {
       box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")};
