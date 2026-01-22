@@ -63,7 +63,7 @@ export type OakCardProps = {
   linkIconName?: OakIconName;
 };
 
-type StyledProps = {
+type StyledImageProps = {
   $height: OakCombinedSpacingToken;
   $width: OakCombinedSpacingToken;
   $aspectRatio: "1/1" | "4/3";
@@ -75,7 +75,7 @@ type StyledFlexProps = {
   $gap: OakCombinedSpacingToken;
 };
 
-const StyledOakImage = styled(OakImage)<StyledProps>`
+const StyledOakImage = styled(OakImage)<StyledImageProps>`
   height: ${({ $height }) => parseSpacing($height)};
   width: ${({ $width }) => $width};
   aspect-ratio: ${({ $aspectRatio }) => $aspectRatio};
