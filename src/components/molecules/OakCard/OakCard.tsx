@@ -137,6 +137,7 @@ export const OakCard = ({
         $flexDirection={cardOrientation}
         $pa={"spacing-16"}
         $gap={"spacing-16"}
+        $color={"black"}
       >
         {imageSrc && (
           <StyledOakImage
