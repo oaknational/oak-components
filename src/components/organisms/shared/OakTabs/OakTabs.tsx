@@ -53,6 +53,10 @@ export function OakTabs<T extends string>(props: Readonly<OakTabsProps<T>>) {
       $pa={"spacing-8"}
       $alignItems={"center"}
       $font={sizeVariant === "compact" ? "body-3" : "heading-light-7"}
+      $ba={"border-solid-s"}
+      $borderColor={
+        colorVariant === "white" ? "border-neutral-lighter" : backgroundColor
+      }
     >
       {tabs.map((tab) => {
         const isSelected = activeTab === tab;
@@ -65,6 +69,10 @@ export function OakTabs<T extends string>(props: Readonly<OakTabsProps<T>>) {
             $hoverColor={isSelected ? "text-primary" : hoverText}
             $hoverBackground={
               isSelected ? "bg-decorative1-main" : hoverBackground
+            }
+            $ba="border-solid-s"
+            $borderColor={
+              isSelected ? "border-decorative1-stronger" : backgroundColor
             }
             onClick={() => onTabClick(tab)}
           >
