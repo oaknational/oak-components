@@ -64,20 +64,23 @@ export const oakSpaceBetweenTokens = {
 
 export type OakSpaceBetweenToken = keyof typeof oakSpaceBetweenTokens;
 
-type AdditionalSpacingTypes =
-  | "100%"
-  | "-50%"
-  | "50%"
-  | 0
-  | "100vh"
-  | "100vw"
-  | "auto"
-  | "fit-content"
-  | "max-content"
-  | "min-content"
-  | "inherit"
-  | "initial"
-  | "unset";
+export const additionalSpacingTokens = {
+  "100%": "100%",
+  "-50%": "-50%",
+  "50%": "50%",
+  "0": "0",
+  "100vh": "100vh",
+  "100vw": "100vw",
+  "auto": "auto",
+  "fit-content": "fit-content",
+  "max-content": "max-content",
+  "min-content": "min-content",
+  "inherit": "inherit",
+  "initial": "initial",
+  "unset": "unset",
+};
+
+export type AdditionalSpacingTypes = keyof typeof additionalSpacingTokens;
 
 export type OakCombinedSpacingToken =
   | OakAllSpacingToken
