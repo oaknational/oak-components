@@ -9,12 +9,12 @@ import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { ResponsiveValues } from "@/styles/utils/responsiveStyle";
 
-export type OakTabsProps = {
+export type OakTabsProps<T extends string> = {
   sizeVariant: ResponsiveValues<"default" | "compact">;
   colorVariant: "black" | "white";
-  tabs: Array<string>;
-  activeTab: string;
-  onTabClick: (tab: string) => void;
+  tabs: Array<T>;
+  activeTab: T;
+  onTabClick: (tab: T) => void;
 };
 
 const StyledTabButton = styled(InternalButton)<{
@@ -36,13 +36,8 @@ const StyledTabButton = styled(InternalButton)<{
   }
 `;
 
-export const OakTabs = ({
-  sizeVariant,
-  colorVariant,
-  tabs,
-  activeTab,
-  onTabClick,
-}: OakTabsProps) => {
+export function OakTabs<T extends string>(props: Readonly<OakTabsProps<T>>) {
+  const { colorVariant, sizeVariant, tabs, activeTab, onTabClick } = props;
   const backgroundColor = colorVariant === "black" ? "bg-icon" : "bg-primary";
   const textColor = colorVariant === "black" ? "text-inverted" : "text-primary";
   const hoverBackground =
@@ -87,4 +82,4 @@ export const OakTabs = ({
       })}
     </OakFlex>
   );
-};
+}
