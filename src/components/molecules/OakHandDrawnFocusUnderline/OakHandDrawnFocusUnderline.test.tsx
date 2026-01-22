@@ -17,4 +17,11 @@ describe("OakHandDrawnFocusUnderline", () => {
     const { container } = renderWithTheme(<OakHandDrawnFocusUnderline />);
     expect(container).toMatchSnapshot();
   });
+
+  it("passes color through correctly", () => {
+    const { container } = renderWithTheme(
+      <OakHandDrawnFocusUnderline fillColor={"border-primary"} />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

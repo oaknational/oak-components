@@ -12,7 +12,7 @@ const meta: Meta<typeof OakHandDrawnFocusUnderline> = {
   tags: ["autodocs"],
   title: "Components/molecules/OakHandDrawnFocusUnderline",
   argTypes: {
-    FocusUnderlineColor: drawingArgTypes["$fill"],
+    fillColor: drawingArgTypes["$fill"],
     ...spacingArgTypes,
     ...sizeArgTypes,
   },
@@ -20,6 +20,7 @@ const meta: Meta<typeof OakHandDrawnFocusUnderline> = {
     controls: {
       include: [
         "fill",
+        "fillColor",
         ...Object.keys(spacingArgTypes),
         ...Object.keys(sizeArgTypes),
       ],
@@ -35,5 +36,13 @@ export const Default: Story = {
   render: (args) => <OakHandDrawnFocusUnderline {...args} />,
   args: {
     $height: "spacing-4",
+    fillColor: "amber",
+  },
+};
+
+export const Colors: Story = {
+  render: (args) => <OakHandDrawnFocusUnderline {...args} />,
+  args: {
+    fillColor: "amber",
   },
 };
