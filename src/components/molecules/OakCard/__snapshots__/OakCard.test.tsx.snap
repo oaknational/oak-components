@@ -2,30 +2,35 @@
 
 exports[`OakCard matches snapshot when passed all props 1`] = `
 .c0 {
+  overflow: hidden;
   width: 22.5rem;
-  padding: 1rem;
-  background: #f2f2f2;
   border-radius: 0.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
+  overflow: hidden;
 }
 
 .c2 {
+  padding: 1rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c5 {
   position: relative;
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c5 {
+.c8 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c7 {
+.c10 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c12 {
+.c15 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.25rem;
@@ -42,7 +47,7 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c16 {
+.c19 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -51,11 +56,11 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c17 {
+.c20 {
   object-fit: contain;
 }
 
-.c4 {
+.c7 {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHBhdGggZmlsbD0iIzIyMiIgZD0iTTI4Ljc3OSAxOS4xNzZhMjcuMTkxIDI3LjE5MSAwIDAgMC0zLjggMS42IDE2LjcgMTYuNyAwIDAgMC03LjEgOC40YzAgLjEtLjEuMi0uMS4zLS43IDIuNC0uNiAyIDEuMyAyLjMgMS45LjMgMSAuNSAxIDEuMy0uMSA4LjggNC4xIDE1LjEgMTEuNCAxOS42YTEuNSAxLjUgMCAwIDAgMS43LjJjNS43LTIuNiA5LjMtNyAxMC4zLTEzLjJhMSAxIDAgMCAxIDEtMWwzLS4yYy44IDAgMS4zLjIgMS4yIDEuMmExNy45IDE3LjkgMCAwIDEtMy4yIDkuMiAyMy43IDIzLjcgMCAwIDEtMTAuOSA5LjEgNS40MDEgNS40MDEgMCAwIDEtNC41LS4yIDI2LjI5OCAyNi4yOTggMCAwIDEtOC41LTYuNiAyNS45IDI1LjkgMCAwIDEtNi40LTE0LjRjMC0uNi0uMi0uNy0uOC0uOC0yLjUtLjQtMi41LS4xLTIuMy0yLjlhMTkuMyAxOS4zIDAgMCAxIDEwLjgtMTYuNiAzOC45OTkgMzguOTk5IDAgMCAxIDUuNy0yLjEgMi4xIDIuMSAwIDAgMCAuOS0xLjMgMTQuMSAxNC4xIDAgMCAxIDMuNS02LjNsLjMtLjNjMS45LTIgMi42LTIgNC4zLjJsLjQuNWMxLjEgMS4xIDEgMS41LS4xIDIuNmExMS45IDExLjkgMCAwIDAtMy4yIDQuNCAxNi45IDE2LjkgMCAwIDEgNy41IDIuM2M1LjcgMy41IDkuMiA4LjMgOS45IDE1IC4wMTYuOTAxLS4wMTcgMS44MDItLjEgMi43IDAgLjgtLjYgMS0xLjIgMS4yYTE2LjEgMTYuMSAwIDAgMS0xMS0uNyAxNy45MDEgMTcuOTAxIDAgMCAxLTEwLjktMTMuNiA5Ljc5NiA5Ljc5NiAwIDAgMS0uMS0xLjlabTE4LjEgMTIuMmMuNC01LjUtNi45LTEyLjYtMTMtMTIuMS41IDYuNSA3LjYgMTIuOCAxMyAxMi4xWiIgb3BhY2l0eT0iLjEiLz48L3N2Zz4=);
   background-color: #e7f6f5;
   background-size: 4rem;
@@ -64,7 +69,7 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   object-fit: contain;
 }
 
-.c1 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -75,7 +80,7 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   gap: 1rem;
 }
 
-.c6 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -87,17 +92,6 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  gap: 1rem;
-}
-
-.c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   gap: 1rem;
 }
 
@@ -106,6 +100,17 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -116,7 +121,7 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   gap: 1rem;
 }
 
-.c13 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -124,7 +129,7 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   gap: 0.5rem;
 }
 
-.c15 {
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -135,7 +140,7 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   align-items: center;
 }
 
-.c9 {
+.c12 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1.25rem;
@@ -146,98 +151,140 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c14 {
+.c17 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c10 {
+.c13 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c3 {
+.c1 {
+  box-shadow: none;
+}
+
+.c1:has( a, button ) {
+  border-radius: 0.5rem;
+  z-index: 2;
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c1:has(a:hover,button:hover),
+.c1:has(button:hover:not(:active)) {
+  z-index: 1;
+  background-color: #f2f2f2;
+}
+
+.c1:has(a:hover,button:hover) {
+  box-shadow: none;
+}
+
+.c1:has(a:active,button:active) {
+  z-index: 2;
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%),0.25rem 0.25rem 0 rgba(87,87,87,100%);
+}
+
+.c6 {
   height: 15rem;
   width: auto;
   aspect-ratio: 4/3;
 }
 
-.c3 img {
+.c6 img {
   border-radius: 0.5rem;
   object-fit: cover;
 }
 
+.c4 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  pa: 1rem;
+  gap: 1rem;
+}
+
+.c4:hover h3 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
 <div>
-  <a
+  <div
     class="c0 c1"
-    href="https://www.example.com"
   >
-    <div
-      class="c2 c3"
-    >
-      <img
-        alt="Test image"
-        class="c4"
-        data-nimg="fill"
-        decoding="async"
-        loading="lazy"
-        sizes="100vw"
-        src="http://localhost/_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=3840&q=75"
-        srcset="/_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=3840&q=75 3840w"
-        style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
-      />
-    </div>
-    <div
-      class="c5 c6"
+    <a
+      class="c2 c3 c4"
+      href="https://www.example.com"
     >
       <div
-        class="c7 c8"
+        class="c5 c6"
       >
-        <h3
-          class="c9"
-        >
-          Test Heading
-        </h3>
-        <p
-          class="c10"
-        >
-          Some Test Subcopy
-        </p>
+        <img
+          alt="Test image"
+          class="c7"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          sizes="100vw"
+          src="http://localhost/_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=3840&q=75"
+          srcset="/_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=3840&q=75 3840w"
+          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+        />
       </div>
       <div
-        class="c7 c11"
+        class="c8 c9"
       >
         <div
-          class="c12 c13"
+          class="c10 c11"
         >
-          <label
-            class="c14"
+          <h3
+            class="c12"
           >
-            Test Tag
-          </label>
+            Test Heading
+          </h3>
+          <p
+            class="c13"
+          >
+            Some Test Subcopy
+          </p>
         </div>
         <div
-          class="c7 c15"
+          class="c10 c14"
         >
-          <label
-            class="c14"
-          >
-            Test Link Text
-          </label>
           <div
-            class="c16"
+            class="c15 c16"
           >
-            <img
-              alt="arrow-right"
+            <label
               class="c17"
-              data-nimg="fill"
-              decoding="async"
-              loading="lazy"
-              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707149070/icons/fv0z57zerrioft52dd9n.svg"
-              style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
-            />
+            >
+              Test Tag
+            </label>
+          </div>
+          <div
+            class="c10 c18"
+          >
+            <label
+              class="c17"
+            >
+              Test Link Text
+            </label>
+            <div
+              class="c19"
+            >
+              <img
+                alt="arrow-right"
+                class="c20"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707149070/icons/fv0z57zerrioft52dd9n.svg"
+                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+              />
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </a>
+    </a>
+  </div>
 </div>
 `;
