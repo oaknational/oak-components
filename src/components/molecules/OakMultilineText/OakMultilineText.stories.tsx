@@ -91,7 +91,7 @@ export const Errors: Story = {
 };
 
 export const Controlled: Story = {
-  render: () => <ControlledOakMultilineText />,
+  render: (args) => <ControlledOakMultilineText {...args} />,
 };
 
 const ControlledOakMultilineText = () => {
