@@ -120,10 +120,7 @@ describe("OakCard", () => {
 
   it("renders with link text and correct default icon when not provided", () => {
     renderWithTheme(
-      <OakCard
-        {...requiredProps}
-        linkText={testData.linkText}
-      />,
+      <OakCard {...requiredProps} linkText={testData.linkText} />,
     );
 
     expect(screen.getByText(testData.linkText)).toBeInTheDocument();
