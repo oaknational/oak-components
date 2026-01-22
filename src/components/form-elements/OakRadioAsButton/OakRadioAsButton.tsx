@@ -132,7 +132,6 @@ export type OakRadioAsButtonProps = Omit<
   value?: HTMLInputElement["value"];
   "aria-labelledby"?: React.AriaAttributes["aria-labelledby"];
   "aria-label"?: React.AriaAttributes["aria-label"];
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   /**
    * Sets the color scheme of the component.
    * Defaults to `"primary"`.
@@ -155,28 +154,7 @@ export type OakRadioAsButtonProps = Omit<
   );
 
 /**
- * A radio input styled as a button, to be used within `<OakRadioGroup/>` this is
- * the radio inputs version of `<OakSearchFilterCheckBox/>`
- *
- * ## To be refactored 🔀
- * This component will be refactored to have more variants
- *
- * ## Events
- * The following callbacks are available for tracking focus events:
- *
- * ### onChange
- *  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
- *
- * ### onFocus
- *   onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
- *
- * ### onBlur
- *    onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
- *
- * ### onHovered
- *  `onHovered?: (id, value, duration: number) => void;`<br>
- *  called after a mouseEnter and mouseLeave event has happened
- *
+ * A radio input styled as a button, to be used within `<OakRadioGroup/>`.
  */
 export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
   const id = useId();
