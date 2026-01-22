@@ -8,6 +8,7 @@ const StyledOakFlex = styled(OakFlex)`
   width: ${parseSpacing("spacing-24")};
 `;
 // For example you could restyle the OakFlex component by adding the styles to the css template literal below
+// Parse functions (parseColor, parseSpacing, etc) give you access to the oak design tokens
 
 export type CopyPasteThisComponentProps = {
   /**
@@ -29,6 +30,8 @@ export type CopyPasteThisComponentProps = {
    *   TransformStyleProps &
    *   TransitionStyleProps &
    *   ZIndexStyleProps;
+   *
+   * When adding prop which controls a color, use OakUiRoleToken as its type to ensure that component works correctly with a theme
    */
 };
 
