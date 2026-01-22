@@ -11,13 +11,20 @@ import {
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
+import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { RadioContext } from "@/components/form-elements/OakRadioGroup/OakRadioGroup";
 import { OakCombinedColorToken, OakUiRoleToken } from "@/styles";
 import { InternalRadioWrapper } from "@/components/internal-components/InternalRadioWrapper";
 import { OakScreenReader } from "@/components/messaging-and-feedback/OakScreenReader";
+import { SizeStyleProps } from "@/styles/utils/sizeStyle";
 
 // Converted to styled-component so it can be used in '&:checked:not(:disabled) + ${StyledOakIcon}' to change svg color.
-const StyledOakIcon = styled(OakIcon)``;
+// Negate the whole component's padding-block so to that the icon variant fits the min-height of 40px.
+// Ensures the padding appears when label is multi line.
+// 32 (icon height) + 8 (padding-block) + 2 (borders) = 42
+const StyledOakIcon = styled(OakIcon)`
+  margin-block: -${parseSpacing("spacing-4")};
+`;
 
 const StyledFlexBox = styled(OakFlex)<{
   $hoverBackground: OakUiRoleToken;
@@ -115,6 +122,7 @@ export type OakRadioAsButtonProps = Omit<
   "aria-label"?: React.AriaAttributes["aria-label"];
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   colorScheme?: OakRadioAsButtonColorScheme;
+  width?: SizeStyleProps["$width"];
 } & (
     | {
         /**
@@ -166,6 +174,7 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
     icon,
     keepIconColor,
     colorScheme = "primary",
+    width,
     ...rest
   } = props;
 
@@ -215,35 +224,31 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
   );
 
   return (
-    <OakFlex $minHeight={"spacing-40"} $position={"relative"}>
-      <StyledFlexBox
-        $borderRadius={"border-radius-s"}
-        $borderColor={borderColor}
-        $ba="border-solid-s"
-        $background={background}
-        $hoverBackground={hoverBackground}
-        onClick={handleContainerClick}
-        $ph={"spacing-12"}
-        $pv={"spacing-4"}
-        $gap={"spacing-8"}
-        $alignItems={"center"}
-        $keepIconColor={keepIconColor}
+    <StyledFlexBox
+      $borderRadius={"border-radius-s"}
+      $borderColor={borderColor}
+      $ba="border-solid-s"
+      $background={background}
+      $hoverBackground={hoverBackground}
+      $pv={"spacing-4"}
+      $ph={"spacing-12"}
+      $gap={"spacing-8"}
+      $alignItems={"center"}
+      $keepIconColor={keepIconColor}
+      $width={width ?? "fit-content"}
+      $minHeight={"spacing-40"}
+      onClick={handleContainerClick}
+    >
+      {variant === "radio" ? radio : <OakScreenReader>{radio}</OakScreenReader>}
+      {variant === "icon" && icon && <StyledOakIcon alt="" iconName={icon} />}
+      <InternalCheckBoxLabelHoverDecor
+        pointerEvents="none"
+        htmlFor={id}
+        $font={"heading-7"}
+        disabled={disabled}
       >
-        {variant === "radio" ? (
-          radio
-        ) : (
-          <OakScreenReader>{radio}</OakScreenReader>
-        )}
-        {variant === "icon" && icon && <StyledOakIcon alt="" iconName={icon} />}
-        <InternalCheckBoxLabelHoverDecor
-          pointerEvents="none"
-          htmlFor={id}
-          $font={"heading-7"}
-          disabled={disabled}
-        >
-          {displayValue}
-        </InternalCheckBoxLabelHoverDecor>
-      </StyledFlexBox>
-    </OakFlex>
+        {displayValue}
+      </InternalCheckBoxLabelHoverDecor>
+    </StyledFlexBox>
   );
 };

@@ -4,6 +4,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { OakRadioAsButton } from "./OakRadioAsButton";
 
 import { OakRadioGroup } from "@/components/form-elements/OakRadioGroup";
+import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 
 const argTypes: Meta<typeof OakRadioAsButton>["argTypes"] = {
   variant: {
@@ -29,6 +30,7 @@ const argTypes: Meta<typeof OakRadioAsButton>["argTypes"] = {
   displayValue: {
     control: { type: "text" },
   },
+  width: sizeArgTypes["$width"],
 };
 
 const meta: Meta<typeof OakRadioAsButton> = {
@@ -48,6 +50,7 @@ const meta: Meta<typeof OakRadioAsButton> = {
         "displayValue",
         "value",
         "icon",
+        "width",
       ],
     },
   },
@@ -158,6 +161,165 @@ export const RadioVariant: Story = {
           displayValue="Transparent"
           aria-label="Transparent"
           colorScheme="transparent"
+        />
+      </OakRadioGroup>
+    );
+  },
+  args: {
+    variant: "radio",
+  },
+};
+
+export const ColorSchemes: Story = {
+  render: () => (
+    <OakRadioGroup
+      name="color-schemes"
+      aria-label="Choose a subject"
+      $flexWrap={"wrap"}
+    >
+      <OakRadioAsButton
+        value="art-primary"
+        displayValue="Primary background"
+        icon="subject-art"
+        colorScheme="primary"
+      />
+      <OakRadioAsButton
+        value="biology-decorative1"
+        displayValue="Decorative 1 background"
+        icon="subject-biology"
+        colorScheme="decorative1"
+      />
+      <OakRadioAsButton
+        value="chemistry-decorative2"
+        displayValue="Decorative 2 background"
+        icon="subject-chemistry"
+        colorScheme="decorative2"
+      />
+      <OakRadioAsButton
+        value="physics-decorative3"
+        displayValue="Decorative 3 background"
+        icon="subject-physics"
+        colorScheme="decorative3"
+      />
+      <OakRadioAsButton
+        value="computing-decorative4"
+        displayValue="Decorative 4 background"
+        icon="subject-computing"
+        colorScheme="decorative4"
+      />
+      <OakRadioAsButton
+        value="english-decorative5"
+        displayValue="Decorative 5 background"
+        icon="subject-english"
+        colorScheme="decorative5"
+      />
+      <OakRadioAsButton
+        value="maths-decorative6"
+        displayValue="Decorative 6 background"
+        icon="subject-maths"
+        colorScheme="decorative6"
+      />
+      <OakRadioAsButton
+        value="transparent"
+        displayValue="Transparent"
+        icon="subject-history"
+        colorScheme="transparent"
+      />
+    </OakRadioGroup>
+  ),
+};
+
+export const VariableWidths: Story = {
+  render: (args) => {
+    // This story is specifically for demonstrating `width`, so we ignore any
+    // arg-driven `width`/`colorScheme`/`icon` and render one option per width.
+    const {
+      width: _width,
+      colorScheme: _colorScheme,
+      icon: _icon,
+      displayValue: _displayValue,
+      value: _value,
+      ...restArgs
+    } = args;
+
+    return (
+      <OakRadioGroup
+        name="radio-variant-widths"
+        aria-label="Choose a subject"
+        $flexDirection={"column"}
+        $gap={"spacing-12"}
+      >
+        <OakRadioAsButton
+          {...restArgs}
+          variant="radio"
+          value="w-fit"
+          displayValue="fit-content (longer label to show sizing)"
+          aria-label="Width fit-content"
+          width="fit-content"
+          colorScheme="primary"
+        />
+        <OakRadioAsButton
+          {...restArgs}
+          variant="radio"
+          value="w-160"
+          displayValue="spacing-160 (may wrap)"
+          width="spacing-160"
+          colorScheme="primary"
+        />
+        <OakRadioAsButton
+          {...restArgs}
+          variant="radio"
+          value="w-240"
+          displayValue="spacing-240"
+          width="spacing-240"
+          colorScheme="primary"
+        />
+        <OakRadioAsButton
+          {...restArgs}
+          variant="radio"
+          value="w-responsive"
+          displayValue="Responsive [spacing-160, spacing-240]"
+          aria-label="Width responsive"
+          width={["spacing-160", "spacing-240"]}
+          colorScheme="primary"
+        />
+        <OakRadioAsButton
+          {...restArgs}
+          variant="icon"
+          value="w-fit"
+          displayValue="fit-content (longer label to show sizing)"
+          aria-label="Width fit-content"
+          width="fit-content"
+          colorScheme="primary"
+          icon="subject-art"
+        />
+        <OakRadioAsButton
+          {...restArgs}
+          variant="icon"
+          value="w-160"
+          displayValue="spacing-160 (may wrap)"
+          width="spacing-160"
+          colorScheme="primary"
+          icon="subject-art"
+        />
+        <OakRadioAsButton
+          {...restArgs}
+          variant="icon"
+          value="w-240"
+          displayValue="spacing-240"
+          width="spacing-240"
+          colorScheme="primary"
+          icon="subject-art"
+        />
+        <OakRadioAsButton
+          {...restArgs}
+          variant="icon"
+          value="w-responsive"
+          displayValue="Responsive [spacing-160, spacing-240]"
+          aria-label="Width responsive"
+          width={["spacing-160", "spacing-240"]}
+          colorScheme="primary"
+          icon="subject-art"
         />
       </OakRadioGroup>
     );
@@ -330,63 +492,4 @@ export const KeepIconColor: Story = {
   args: {
     keepIconColor: true,
   },
-};
-
-export const WithDifferentBackgrounds: Story = {
-  render: () => (
-    <OakRadioGroup
-      name="backgrounds"
-      aria-label="Choose a subject"
-      $flexWrap={"wrap"}
-    >
-      <OakRadioAsButton
-        value="art-primary"
-        displayValue="Primary background"
-        icon="subject-art"
-        colorScheme="primary"
-      />
-      <OakRadioAsButton
-        value="biology-decorative1"
-        displayValue="Decorative 1 background"
-        icon="subject-biology"
-        colorScheme="decorative1"
-      />
-      <OakRadioAsButton
-        value="chemistry-decorative2"
-        displayValue="Decorative 2 background"
-        icon="subject-chemistry"
-        colorScheme="decorative2"
-      />
-      <OakRadioAsButton
-        value="physics-decorative3"
-        displayValue="Decorative 3 background"
-        icon="subject-physics"
-        colorScheme="decorative3"
-      />
-      <OakRadioAsButton
-        value="computing-decorative4"
-        displayValue="Decorative 4 background"
-        icon="subject-computing"
-        colorScheme="decorative4"
-      />
-      <OakRadioAsButton
-        value="english-decorative5"
-        displayValue="Decorative 5 background"
-        icon="subject-english"
-        colorScheme="decorative5"
-      />
-      <OakRadioAsButton
-        value="maths-decorative6"
-        displayValue="Decorative 6 background"
-        icon="subject-maths"
-        colorScheme="decorative6"
-      />
-      <OakRadioAsButton
-        value="transparent"
-        displayValue="Transparent"
-        icon="subject-history"
-        colorScheme="transparent"
-      />
-    </OakRadioGroup>
-  ),
 };
