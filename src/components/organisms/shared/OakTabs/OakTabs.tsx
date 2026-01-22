@@ -7,13 +7,14 @@ import { OakCombinedColorToken } from "@/styles";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
+import { ResponsiveValues } from "@/styles/utils/responsiveStyle";
 
-type ColorVariant = "black" | "white";
 export type OakTabsProps = {
-  sizeVariant: "default" | "compact";
-  colorVariant: ColorVariant;
+  sizeVariant: ResponsiveValues<"default" | "compact">;
+  colorVariant: "black" | "white";
   tabs: Array<string>;
   activeTab: string;
+  onTabClick: (tab: string) => void;
 };
 
 const StyledTabButton = styled(InternalButton)<{
@@ -40,6 +41,7 @@ export const OakTabs = ({
   colorVariant,
   tabs,
   activeTab,
+  onTabClick,
 }: OakTabsProps) => {
   const backgroundColor = colorVariant === "black" ? "bg-icon" : "bg-primary";
   const textColor = colorVariant === "black" ? "text-inverted" : "text-primary";
@@ -67,6 +69,7 @@ export const OakTabs = ({
             $color={isSelected ? "text-primary" : textColor}
             $hoverColor={hoverText}
             $hoverBackground={hoverBackground}
+            onClick={() => onTabClick(tab)}
           >
             <OakFlex
               className="focus-outline"
