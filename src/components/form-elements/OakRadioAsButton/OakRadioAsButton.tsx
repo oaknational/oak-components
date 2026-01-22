@@ -18,6 +18,17 @@ import { InternalRadioWrapper } from "@/components/internal-components/InternalR
 import { OakScreenReader } from "@/components/messaging-and-feedback/OakScreenReader";
 import { SizeStyleProps } from "@/styles/utils/sizeStyle";
 
+type DecorativeBackgroundMain = Extract<
+  OakCombinedColorToken,
+  `bg-decorative${number}-main`
+>;
+type DecorativeColorScheme =
+  DecorativeBackgroundMain extends `bg-${infer N}-main` ? N : never;
+type OakRadioAsButtonColorScheme =
+  | DecorativeColorScheme
+  | "primary"
+  | "transparent";
+
 // Converted to styled-component so it can be used in '&:checked:not(:disabled) + ${StyledOakIcon}' to change svg color.
 // Negate the whole component's padding-block so to that the icon variant fits the min-height of 40px.
 // Ensures the padding appears when label is multi line.
@@ -27,19 +38,22 @@ const StyledOakIcon = styled(OakIcon)`
 `;
 
 const StyledFlexBox = styled(OakFlex)<{
-  $hoverBackground: OakUiRoleToken;
+  $colorSchemeTokens: ColorSchemeTokens;
   $keepIconColor?: boolean;
 }>`
-  &:has(input:not(:disabled)) {
-    cursor: pointer;
-  }
+  cursor: pointer;
+  background-color: ${(props) =>
+    parseColor(props.$colorSchemeTokens.background)};
+  border-color: ${(props) => parseColor(props.$colorSchemeTokens.borderColor)};
+  color: ${parseColor("text-primary")};
 
   &:has(input:disabled) {
     pointer-events: none;
     cursor: none;
-
-    background-color: transparent;
-    border-color: transparent;
+    background-color: ${(props) =>
+      parseColor(props.$colorSchemeTokens.disabledBackground)};
+    border-color: ${(props) =>
+      parseColor(props.$colorSchemeTokens.disabledBorderColor)};
     color: ${parseColor("text-disabled")};
   }
 
@@ -48,7 +62,8 @@ const StyledFlexBox = styled(OakFlex)<{
   }
 
   &:hover:has(input:not(:disabled)) {
-    background-color: ${(props) => parseColor(props.$hoverBackground)};
+    background-color: ${(props) =>
+      parseColor(props.$colorSchemeTokens.hoverBackground)};
   }
 
   &:focus-within {
@@ -67,21 +82,12 @@ const StyledFlexBox = styled(OakFlex)<{
   }
 `;
 
-type DecorativeBackgroundMain = Extract<
-  OakCombinedColorToken,
-  `bg-decorative${number}-main`
->;
-type DecorativeColorScheme =
-  DecorativeBackgroundMain extends `bg-${infer N}-main` ? N : never;
-type OakRadioAsButtonColorScheme =
-  | DecorativeColorScheme
-  | "primary"
-  | "transparent";
-
 type ColorSchemeTokens = {
   background: OakUiRoleToken;
   hoverBackground: OakUiRoleToken;
   borderColor: OakUiRoleToken;
+  disabledBackground: OakUiRoleToken;
+  disabledBorderColor: OakUiRoleToken;
 };
 
 const getColorSchemeTokens = (
@@ -93,18 +99,24 @@ const getColorSchemeTokens = (
         background: "bg-primary",
         hoverBackground: "bg-neutral",
         borderColor: "border-neutral-lighter",
+        disabledBackground: "bg-btn-secondary-disabled",
+        disabledBorderColor: "border-neutral-lighter",
       };
     case "transparent":
       return {
         background: "transparent",
         hoverBackground: "transparent",
         borderColor: "transparent",
+        disabledBackground: "transparent",
+        disabledBorderColor: "transparent",
       };
     default:
       return {
         background: `bg-${colorScheme}-main`,
         hoverBackground: `bg-${colorScheme}-very-subdued`,
         borderColor: `border-${colorScheme}`,
+        disabledBackground: "bg-btn-secondary-disabled",
+        disabledBorderColor: "border-neutral-lighter",
       };
   }
 };
@@ -182,8 +194,6 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
     ...rest
   } = props;
 
-  const { background, hoverBackground, borderColor } =
-    getColorSchemeTokens(colorScheme);
   const { name, onValueUpdated, currentValue } = useContext(RadioContext);
   const defaultRef = useRef<HTMLInputElement>(null);
   const inputRef = innerRef ?? defaultRef;
@@ -202,6 +212,7 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
   };
 
   const isChecked = currentValue === value;
+  const colorSchemeTokens = getColorSchemeTokens(colorScheme);
 
   const radio = (
     <InternalRadioWrapper
@@ -230,15 +241,13 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
   return (
     <StyledFlexBox
       $borderRadius={"border-radius-s"}
-      $borderColor={borderColor}
       $ba="border-solid-s"
-      $background={background}
-      $hoverBackground={hoverBackground}
       $pv={"spacing-4"}
       $ph={"spacing-12"}
       $gap={"spacing-8"}
       $alignItems={"center"}
       $keepIconColor={keepIconColor}
+      $colorSchemeTokens={colorSchemeTokens}
       $width={width ?? "fit-content"}
       $minHeight={"spacing-40"}
       onClick={handleContainerClick}
