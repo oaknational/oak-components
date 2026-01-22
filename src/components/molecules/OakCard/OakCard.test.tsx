@@ -15,6 +15,7 @@ const testData = {
   aspectRatio: "4/3" as const,
   subCopy: "Some Test Subcopy",
   tagName: "Test Tag",
+  tagBackground: "bg-decorative5-main" as const,
   linkText: "Test Link Text",
   linkIconName: "chevron-right" as const,
 };
@@ -99,7 +100,17 @@ describe("OakCard", () => {
     expect(screen.getByText(testData.subCopy)).toBeInTheDocument();
   });
 
-  it("renders with tag when provided", () => {
+  it("renders with tag with correct background colour when provided", () => {
+    renderWithTheme(<OakCard
+      {...requiredProps}
+      tagName={testData.tagName}
+      tagBackground={testData.tagBackground}
+    />);
+
+    expect(screen.getByText(testData.tagName)).toBeInTheDocument();
+  });
+
+  it("renders tag with correct default background colour when not provided", () => {
     renderWithTheme(<OakCard {...requiredProps} tagName={testData.tagName} />);
 
     expect(screen.getByText(testData.tagName)).toBeInTheDocument();
@@ -118,7 +129,7 @@ describe("OakCard", () => {
     expect(screen.getByAltText("chevron-right")).toBeInTheDocument();
   });
 
-  it("renders with link text and correct default icon when not provided", () => {
+  it("renders link text with correct default icon when not provided", () => {
     renderWithTheme(
       <OakCard {...requiredProps} linkText={testData.linkText} />,
     );

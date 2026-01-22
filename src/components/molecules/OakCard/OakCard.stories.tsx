@@ -8,12 +8,13 @@ import {
   additionalSpacingTokens,
   oakAllSpacingTokens,
 } from "@/styles/theme/spacing";
+import { oakUiRoleTokens } from "@/styles";
 
-const controlIconNames = [...oakIconNames].sort((a, b) => a.localeCompare(b));
 const controlSpacingNames = [
   ...Object.keys(additionalSpacingTokens),
   ...Object.keys(oakAllSpacingTokens),
 ];
+const controlIconNames = [...oakIconNames].sort((a, b) => a.localeCompare(b));
 
 const meta: Meta<typeof OakCard> = {
   title: "Components/molecules/OakCard",
@@ -29,6 +30,9 @@ const meta: Meta<typeof OakCard> = {
     aspectRatio: {
       options: ["1/1", "4/3"],
     },
+    tagBackground: {
+      options: oakUiRoleTokens,
+    },
     linkIconName: {
       options: controlIconNames,
     },
@@ -43,6 +47,7 @@ const meta: Meta<typeof OakCard> = {
         "aspectRatio",
         "subCopy",
         "tagName",
+        "tagBackground",
         "linkText",
         "linkIconName",
       ],
@@ -66,6 +71,7 @@ export const Default: Story = {
     aspectRatio: "4/3",
     subCopy: "Some subcopy",
     tagName: "Tag Name",
+    tagBackground: "bg-decorative5-main",
     linkText: "Link Text",
     linkIconName: "arrow-right",
   },

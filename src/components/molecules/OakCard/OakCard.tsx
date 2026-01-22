@@ -14,7 +14,7 @@ import {
   OakIcon,
 } from "@/components/atoms";
 import { OakTagFunctional } from "@/components/molecules/OakTagFunctional";
-import { OakCombinedSpacingToken } from "@/styles";
+import { OakCombinedSpacingToken, OakUiRoleToken } from "@/styles";
 
 export type OakCardProps = {
   /**
@@ -53,6 +53,10 @@ export type OakCardProps = {
    * The name of a tag to be displayed in the card.
    */
   tagName?: string;
+  /**
+   * The background colour of the tag.
+   */
+  tagBackground?: OakUiRoleToken;
   /**
    * The text to be displayed next to the link icon in the card.
    */
@@ -116,6 +120,7 @@ export const OakCard = ({
   aspectRatio = "1/1",
   subCopy,
   tagName,
+  tagBackground = "bg-decorative3-very-subdued",
   linkText,
   linkIconName = "arrow-right",
 }: OakCardProps) => {
@@ -163,7 +168,7 @@ export const OakCard = ({
             {tagName && (
               <OakTagFunctional
                 label={tagName}
-                $background={"bg-decorative3-very-subdued"}
+                $background={tagBackground}
               />
             )}
             {linkText && (
