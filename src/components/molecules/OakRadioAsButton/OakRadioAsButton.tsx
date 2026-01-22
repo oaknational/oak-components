@@ -233,18 +233,14 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
       $minHeight={"spacing-40"}
       onClick={handleContainerClick}
     >
-      {variant === "radio" ? (
-        radio
-      ) : (
-        <OakScreenReader>{radio}</OakScreenReader>
-      )}
-    {variant === "icon" && icon && <StyledOakIcon alt="" iconName={icon} />}
-    <InternalCheckBoxLabelHoverDecor
-      pointerEvents="none"
-      htmlFor={id}
-      $font={"heading-7"}
-      disabled={disabled}
-    >
+      {variant === "radio" ? radio : <OakScreenReader>{radio}</OakScreenReader>}
+      {variant === "icon" && icon && <StyledOakIcon alt="" iconName={icon} />}
+      <InternalCheckBoxLabelHoverDecor
+        pointerEvents="none"
+        htmlFor={id}
+        $font={"heading-7"}
+        disabled={disabled}
+      >
         {displayValue}
       </InternalCheckBoxLabelHoverDecor>
     </StyledFlexBox>
