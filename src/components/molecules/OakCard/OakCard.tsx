@@ -63,28 +63,11 @@ export type OakCardProps = {
   linkIconName?: OakIconName;
 };
 
-type StyledImageProps = {
-  $height: OakCombinedSpacingToken;
-  $width: OakCombinedSpacingToken;
-  $aspectRatio: "1/1" | "4/3";
-};
-
 type StyledFlexProps = {
   $flexDirection: "row" | "column";
   $pa: OakCombinedSpacingToken;
   $gap: OakCombinedSpacingToken;
 };
-
-const StyledOakImage = styled(OakImage)<StyledImageProps>`
-  height: ${({ $height }) => parseSpacing($height)};
-  width: ${({ $width }) => $width};
-  aspect-ratio: ${({ $aspectRatio }) => $aspectRatio};
-
-  img {
-    border-radius: ${parseBorderRadius("border-radius-m2")};
-    object-fit: cover;
-  }
-`;
 
 const StyledOakFlex = styled(OakFlex)<StyledFlexProps>`
   flex-direction: ${({ $flexDirection }) => $flexDirection};
@@ -95,6 +78,23 @@ const StyledOakFlex = styled(OakFlex)<StyledFlexProps>`
     h3 {
       text-decoration: underline;
     }
+  }
+`;
+
+type StyledImageProps = {
+  $height: OakCombinedSpacingToken;
+  $width: OakCombinedSpacingToken;
+  $aspectRatio: "1/1" | "4/3";
+};
+
+const StyledOakImage = styled(OakImage)<StyledImageProps>`
+  height: ${({ $height }) => parseSpacing($height)};
+  width: ${({ $width }) => $width};
+  aspect-ratio: ${({ $aspectRatio }) => $aspectRatio};
+
+  img {
+    border-radius: ${parseBorderRadius("border-radius-m2")};
+    object-fit: cover;
   }
 `;
 
