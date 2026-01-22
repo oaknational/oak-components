@@ -117,7 +117,7 @@ export const OakCard = ({
   subCopy,
   tagName,
   linkText,
-  linkIconName,
+  linkIconName = "arrow-right",
 }: OakCardProps) => {
   return (
     <OakFocusIndicator
@@ -166,7 +166,7 @@ export const OakCard = ({
                 $background={"bg-decorative3-very-subdued"}
               />
             )}
-            {href && linkText && linkIconName && (
+            {linkText && (
               <OakFlex $alignItems={"center"}>
                 <OakLabel>{linkText}</OakLabel>
                 <OakIcon

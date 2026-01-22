@@ -84,7 +84,7 @@ export const ColumnOrientationWithSquareImage: Story = {
     imageAlt: "Two pupils laughing in a classroom ",
     aspectRatio: "1/1",
     linkText: "Watch the video",
-    linkIconName: "arrow-right",
+    linkIconName: "chevron-right",
   },
 };
 

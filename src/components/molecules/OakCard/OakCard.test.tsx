@@ -16,7 +16,7 @@ const testData = {
   subCopy: "Some Test Subcopy",
   tagName: "Test Tag",
   linkText: "Test Link Text",
-  linkIconName: "arrow-right" as const,
+  linkIconName: "chevron-right" as const,
 };
 
 describe("OakCard", () => {
@@ -105,12 +105,24 @@ describe("OakCard", () => {
     expect(screen.getByText(testData.tagName)).toBeInTheDocument();
   });
 
-  it("renders with link text and icon when provided", () => {
+  it("renders with link text and correct icon when provided", () => {
     renderWithTheme(
       <OakCard
         {...requiredProps}
         linkText={testData.linkText}
         linkIconName={testData.linkIconName}
+      />,
+    );
+
+    expect(screen.getByText(testData.linkText)).toBeInTheDocument();
+    expect(screen.getByAltText("chevron-right")).toBeInTheDocument();
+  });
+
+  it("renders with link text and correct default icon when not provided", () => {
+    renderWithTheme(
+      <OakCard
+        {...requiredProps}
+        linkText={testData.linkText}
       />,
     );
 
