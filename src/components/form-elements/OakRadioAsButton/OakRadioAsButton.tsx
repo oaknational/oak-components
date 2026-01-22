@@ -97,8 +97,8 @@ const getColorSchemeTokens = (
     case "transparent":
       return {
         background: "transparent",
-        hoverBackground: "bg-neutral",
-        borderColor: "border-neutral-lighter",
+        hoverBackground: "transparent",
+        borderColor: "transparent",
       };
     default:
       return {
@@ -121,6 +121,10 @@ export type OakRadioAsButtonProps = Omit<
   "aria-labelledby"?: React.AriaAttributes["aria-labelledby"];
   "aria-label"?: React.AriaAttributes["aria-label"];
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  /**
+   * Sets the color scheme of the component.
+   * Defaults to `"primary"`.
+   */
   colorScheme?: OakRadioAsButtonColorScheme;
   width?: SizeStyleProps["$width"];
 } & (
