@@ -57,6 +57,11 @@ export type OakInformativeModalProps = {
    * @default false;
    */
   closeOnBackgroundClick?: boolean;
+  /**
+   * Max width for tablet and desktop screens (768px+)
+   * @default 600
+   */
+  largeScreenMaxWidth?: number;
 } & Pick<
   HTMLAttributes<Element>,
   "aria-label" | "aria-description" | "aria-labelledby" | "aria-describedby"
@@ -74,6 +79,7 @@ export const OakInformativeModal = ({
   zIndex,
   isLeftHandSide,
   closeOnBackgroundClick,
+  largeScreenMaxWidth,
   ...rest
 }: OakInformativeModalProps) => {
   const transitionRef = useRef<HTMLDivElement>(null);
@@ -106,6 +112,7 @@ export const OakInformativeModal = ({
         finalZIndex={finalZIndex}
         isLeftHandSide={isLeftHandSide}
         closeOnBackgroundClick={closeOnBackgroundClick}
+        largeScreenMaxWidth={largeScreenMaxWidth}
         {...rest}
       >
         <OakFlex
