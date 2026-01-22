@@ -6,6 +6,10 @@ import { OakRadioAsButton } from "./OakRadioAsButton";
 import { OakRadioGroup } from "@/components/form-elements/OakRadioGroup";
 
 const argTypes: Meta<typeof OakRadioAsButton>["argTypes"] = {
+  variant: {
+    control: { type: "select" },
+    options: ["icon", "radio"],
+  },
   colorScheme: {
     control: { type: "select" },
     options: [
@@ -37,7 +41,14 @@ const meta: Meta<typeof OakRadioAsButton> = {
       default: "light",
     },
     controls: {
-      include: ["colorScheme", "disabled", "displayValue", "value", "icon"],
+      include: [
+        "variant",
+        "colorScheme",
+        "disabled",
+        "displayValue",
+        "value",
+        "icon",
+      ],
     },
   },
 };
@@ -69,6 +80,90 @@ export const NoIcon: Story = {
     value: "a test value",
     displayValue: "Art and design",
     "aria-label": "Art and design",
+  },
+};
+
+export const RadioVariant: Story = {
+  render: (args) => {
+    // This story is specifically for `variant="radio"` so we ignore any
+    // arg-driven `colorScheme` and render one option per scheme instead.
+    const { colorScheme: _colorScheme, icon: _icon, ...restArgs } = args;
+
+    return (
+      <OakRadioGroup
+        name="radio-variant-color-schemes"
+        aria-label="Choose a subject"
+        $flexWrap={"wrap"}
+      >
+        <OakRadioAsButton
+          {...restArgs}
+          variant="radio"
+          value="primary"
+          displayValue="Primary"
+          aria-label="Primary"
+          colorScheme="primary"
+        />
+        <OakRadioAsButton
+          {...restArgs}
+          variant="radio"
+          value="decorative1"
+          displayValue="Decorative 1"
+          aria-label="Decorative 1"
+          colorScheme="decorative1"
+        />
+        <OakRadioAsButton
+          {...restArgs}
+          variant="radio"
+          value="decorative2"
+          displayValue="Decorative 2"
+          aria-label="Decorative 2"
+          colorScheme="decorative2"
+        />
+        <OakRadioAsButton
+          {...restArgs}
+          variant="radio"
+          value="decorative3"
+          displayValue="Decorative 3"
+          aria-label="Decorative 3"
+          colorScheme="decorative3"
+        />
+        <OakRadioAsButton
+          {...restArgs}
+          variant="radio"
+          value="decorative4"
+          displayValue="Decorative 4"
+          aria-label="Decorative 4"
+          colorScheme="decorative4"
+        />
+        <OakRadioAsButton
+          {...restArgs}
+          variant="radio"
+          value="decorative5"
+          displayValue="Decorative 5"
+          aria-label="Decorative 5"
+          colorScheme="decorative5"
+        />
+        <OakRadioAsButton
+          {...restArgs}
+          variant="radio"
+          value="decorative6"
+          displayValue="Decorative 6"
+          aria-label="Decorative 6"
+          colorScheme="decorative6"
+        />
+        <OakRadioAsButton
+          {...restArgs}
+          variant="radio"
+          value="transparent"
+          displayValue="Transparent"
+          aria-label="Transparent"
+          colorScheme="transparent"
+        />
+      </OakRadioGroup>
+    );
+  },
+  args: {
+    variant: "radio",
   },
 };
 
@@ -116,26 +211,31 @@ export const MultipleOptions: Story = {
     >
       <OakRadioAsButton
         value="art"
+        variant="icon"
         displayValue="Art and design"
         icon="subject-art"
       />
       <OakRadioAsButton
         value="biology"
+        variant="icon"
         displayValue="Biology"
         icon="subject-biology"
       />
       <OakRadioAsButton
         value="chemistry"
+        variant="icon"
         displayValue="Chemistry"
         icon="subject-chemistry"
       />
       <OakRadioAsButton
         value="physics"
+        variant="icon"
         displayValue="Physics"
         icon="subject-physics"
       />
       <OakRadioAsButton
         value="computing"
+        variant="icon"
         displayValue="Computing"
         icon="subject-computing"
       />
@@ -191,30 +291,35 @@ export const KeepIconColor: Story = {
       >
         <OakRadioAsButton
           {...restArgs}
+          variant="icon"
           displayValue="Art and design"
           icon="subject-art"
           value="art"
         />
         <OakRadioAsButton
           {...restArgs}
+          variant="icon"
           displayValue="Biology"
           icon="subject-biology"
           value="biology"
         />
         <OakRadioAsButton
           {...restArgs}
+          variant="icon"
           displayValue="Chemistry"
           icon="subject-chemistry"
           value="chemistry"
         />
         <OakRadioAsButton
           {...restArgs}
+          variant="icon"
           displayValue="Physics"
           icon="subject-physics"
           value="physics"
         />
         <OakRadioAsButton
           {...restArgs}
+          variant="icon"
           displayValue="Computing"
           icon="subject-computing"
           value="computing"
