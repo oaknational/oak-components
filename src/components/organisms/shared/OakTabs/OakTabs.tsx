@@ -84,6 +84,7 @@ export function OakTabs<T extends string>(props: Readonly<OakTabsProps<T>>) {
               $pa={"spacing-4"}
               $alignItems={"center"}
               $justifyContent={"center"}
+              $whiteSpace={"nowrap"}
             >
               {tab}
             </OakFlex>
