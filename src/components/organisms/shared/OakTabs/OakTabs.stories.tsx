@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { StoryObj, Meta } from "@storybook/react";
 
 import { OakTabs } from "./OakTabs";
@@ -15,10 +15,6 @@ const meta: Meta<typeof OakTabs> = {
       control: { type: "radio" },
       options: ["white", "black"],
     },
-    activeTab: {
-      control: { type: "radio" },
-      options: ["Unit sequence", "Explainer", "Download"],
-    },
   },
   parameters: {},
 };
@@ -28,11 +24,20 @@ export default meta;
 type Story = StoryObj<typeof OakTabs>;
 
 export const Default: Story = {
-  render: (args) => <OakTabs {...args} />,
+  render: (args) => {
+    const [activeTab, setActiveTab] = useState("Unit sequence");
+
+    return (
+      <OakTabs
+        {...args}
+        onTabClick={(tab) => setActiveTab(tab)}
+        activeTab={activeTab}
+      />
+    );
+  },
   args: {
     sizeVariant: "default",
     colorVariant: "black",
     tabs: ["Unit sequence", "Explainer", "Download"],
-    activeTab: "Unit sequence",
   },
 };
