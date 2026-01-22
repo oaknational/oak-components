@@ -12,13 +12,14 @@ const meta: Meta<typeof OakMultilineText> = {
   tags: ["autodocs"],
   argTypes: {
     charLimit: { control: "number" },
+    initialValue: { control: "text" },
     placeholder: { control: "text" },
     disabled: { control: "boolean" },
     errors: { control: "object" },
     label: { control: "text" },
     $height: sizeArgTypes.$height,
-    $overflowX: { control: "select", options: ["clip", "scroll", null] },
-    $overflowY: { control: "select", options: ["clip", "scroll", null] },
+    $overflowX: { control: "select", options: ["clip", "auto", null] },
+    $overflowY: { control: "select", options: ["clip", "auto", null] },
   },
   parameters: {
     controls: {

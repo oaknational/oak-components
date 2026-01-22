@@ -13,6 +13,9 @@ import {
 import { parseColor } from "@/styles/helpers/parseColor";
 
 export type OakMultilineTextProps = {
+  /**
+   * Set the textarea text on first render when state is controlled internally (i.e. if `value` has not been provided)
+   */
   initialValue?: string;
   /**
    * Maximum number of characters
