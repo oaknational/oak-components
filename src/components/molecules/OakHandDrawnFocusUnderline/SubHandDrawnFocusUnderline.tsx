@@ -5,7 +5,8 @@ import {
   InternalStyledSvgProps,
 } from "@/components/atoms/InternalStyledSvg";
 import { parseColor } from "@/styles/helpers/parseColor";
-import { OakCombinedColorToken, oakDefaultTheme } from "@/index";
+import { OakCombinedColorToken } from "@/styles/theme/color";
+import { oakDefaultTheme } from "@/styles/theme/default.theme";
 
 export const HandDrawnFocusUnderlineSvg = (props: InternalStyledSvgProps) => {
   const fillColor = props.$fill
