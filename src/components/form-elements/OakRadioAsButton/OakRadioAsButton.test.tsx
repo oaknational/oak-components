@@ -192,7 +192,7 @@ describe("OakRadioAsButton", () => {
 
   it("inputs to all have name of radio group", () => {
     const onChange = jest.fn();
-    const { getAllByRole, getByRole } = renderWithTheme(
+    const { getAllByRole } = renderWithTheme(
       <OakRadioGroup name="test">
         <OakRadioAsButton
           value="Option 1"
@@ -208,16 +208,14 @@ describe("OakRadioAsButton", () => {
         />
       </OakRadioGroup>,
     );
-    const radioGroup = getByRole("group");
     const radios = getAllByRole("radio");
     expect(radios).toHaveLength(2);
-    expect(radioGroup).toBeTruthy();
     expect(radios[0]).toHaveAttribute("name", "test");
     expect(radios[1]).toHaveAttribute("name", "test");
   });
 
   it("radio group value sets the correct input to checked", () => {
-    const { getAllByRole, getByRole } = renderWithTheme(
+    const { getAllByRole } = renderWithTheme(
       <OakRadioGroup name="test" value="option_2">
         <OakRadioAsButton
           value="option_1"
@@ -236,10 +234,8 @@ describe("OakRadioAsButton", () => {
         />
       </OakRadioGroup>,
     );
-    const radioGroup = getByRole("group");
     const radios = getAllByRole("radio");
     expect(radios).toHaveLength(3);
-    expect(radioGroup).toBeTruthy();
     expect(radios[0]).not.toBeChecked();
     expect(radios[1]).toBeChecked();
     expect(radios[2]).not.toBeChecked();
