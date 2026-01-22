@@ -20,7 +20,7 @@ const testData = {
 };
 
 describe("OakCard", () => {
-  const allProps: OakCardProps = {...testData };
+  const allProps: OakCardProps = { ...testData };
   const requiredProps: OakCardProps = {
     heading: testData.heading,
     href: testData.href,
@@ -40,22 +40,13 @@ describe("OakCard", () => {
   });
 
   it("renders card with correct orientation when provided", () => {
-    renderWithTheme(
-      <OakCard
-        {...requiredProps}
-        cardOrientation="row"
-      />
-    );
+    renderWithTheme(<OakCard {...requiredProps} cardOrientation="row" />);
 
     expect(screen.getByRole("link")).toHaveStyle("flex-direction: row");
   });
 
   it("renders card with correct default orientation when not provided", () => {
-    renderWithTheme(
-      <OakCard
-        {...requiredProps}
-      />
-    );
+    renderWithTheme(<OakCard {...requiredProps} />);
 
     expect(screen.getByRole("link")).toHaveStyle("flex-direction: column");
   });
@@ -66,7 +57,7 @@ describe("OakCard", () => {
         {...requiredProps}
         imageSrc={testData.imageSrc}
         imageAlt={testData.imageAlt}
-      />
+      />,
     );
 
     expect(screen.getByRole("img")).toBeInTheDocument();
@@ -80,10 +71,12 @@ describe("OakCard", () => {
         imageSrc={testData.imageSrc}
         imageAlt={testData.imageAlt}
         aspectRatio="4/3"
-      />
+      />,
     );
 
-    expect(screen.getByRole("img").parentElement).toHaveStyle("aspect-ratio: 4/3");
+    expect(screen.getByRole("img").parentElement).toHaveStyle(
+      "aspect-ratio: 4/3",
+    );
   });
 
   it("renders image with correct default aspect ratio when not provided", () => {
@@ -92,30 +85,22 @@ describe("OakCard", () => {
         {...requiredProps}
         imageSrc={testData.imageSrc}
         imageAlt={testData.imageAlt}
-      />
+      />,
     );
 
-    expect(screen.getByRole("img").parentElement).toHaveStyle("aspect-ratio: 1/1");
+    expect(screen.getByRole("img").parentElement).toHaveStyle(
+      "aspect-ratio: 1/1",
+    );
   });
 
   it("renders with sub copy when provided", () => {
-    renderWithTheme(
-      <OakCard
-        {...requiredProps}
-        subCopy={testData.subCopy}
-      />
-    );
+    renderWithTheme(<OakCard {...requiredProps} subCopy={testData.subCopy} />);
 
     expect(screen.getByText(testData.subCopy)).toBeInTheDocument();
   });
 
   it("renders with tag when provided", () => {
-    renderWithTheme(
-      <OakCard
-        {...requiredProps}
-        tagName={testData.tagName}
-      />
-    );
+    renderWithTheme(<OakCard {...requiredProps} tagName={testData.tagName} />);
 
     expect(screen.getByText(testData.tagName)).toBeInTheDocument();
   });
@@ -126,7 +111,7 @@ describe("OakCard", () => {
         {...requiredProps}
         linkText={testData.linkText}
         linkIconName={testData.linkIconName}
-      />
+      />,
     );
 
     expect(screen.getByText(testData.linkText)).toBeInTheDocument();
