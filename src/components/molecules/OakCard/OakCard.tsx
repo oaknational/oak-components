@@ -71,7 +71,6 @@ const StyledOakImage = styled(OakImage)<StyledProps>`
   }
 `;
 
-// to do: tests
 // to do: focus and hover state behaviours using wrapper
 // to do: add underline hover behaviour
 
