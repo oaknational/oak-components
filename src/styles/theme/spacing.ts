@@ -68,16 +68,16 @@ export const additionalSpacingTokens = {
   "100%": "100%",
   "-50%": "-50%",
   "50%": "50%",
-  "0": "0",
+  0: "0",
   "100vh": "100vh",
   "100vw": "100vw",
-  "auto": "auto",
+  auto: "auto",
   "fit-content": "fit-content",
   "max-content": "max-content",
   "min-content": "min-content",
-  "inherit": "inherit",
-  "initial": "initial",
-  "unset": "unset",
+  inherit: "inherit",
+  initial: "initial",
+  unset: "unset",
 };
 
 export type AdditionalSpacingTypes = keyof typeof additionalSpacingTokens;
