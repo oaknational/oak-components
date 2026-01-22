@@ -11,7 +11,6 @@ import {
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
-import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { RadioContext } from "@/components/form-elements/OakRadioGroup/OakRadioGroup";
 import { OakCombinedColorToken, OakUiRoleToken } from "@/styles";
 import { InternalRadioWrapper } from "@/components/internal-components/InternalRadioWrapper";
@@ -30,12 +29,7 @@ type OakRadioAsButtonColorScheme =
   | "transparent";
 
 // Converted to styled-component so it can be used in '&:checked:not(:disabled) + ${StyledOakIcon}' to change svg color.
-// Negate the whole component's padding-block so to that the icon variant fits the min-height of 40px.
-// Ensures the padding appears when label is multi line.
-// 32 (icon height) + 8 (padding-block) + 2 (borders) = 42
-const StyledOakIcon = styled(OakIcon)`
-  margin-block: -${parseSpacing("spacing-4")};
-`;
+const StyledOakIcon = styled(OakIcon)``;
 
 const StyledFlexBox = styled(OakFlex)<{
   $colorSchemeTokens: ColorSchemeTokens;
@@ -141,7 +135,7 @@ export type OakRadioAsButtonProps = Omit<
 } & (
     | {
         /**
-         * Controls whether this component displays an icon alongside the label.
+         * Controls whether this component displays an icon alongside the label or a radio.
          * Defaults to `"icon"` for backwards compatibility.
          */
         variant?: "icon";
@@ -227,7 +221,8 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
       $keepIconColor={keepIconColor}
       $colorSchemeTokens={colorSchemeTokens}
       $width={width ?? "fit-content"}
-      $minHeight={"spacing-40"}
+      $minHeight={"spacing-32"}
+      $boxSizing="content-box"
       onClick={handleContainerClick}
     >
       {variant === "radio" ? radio : <OakScreenReader>{radio}</OakScreenReader>}
