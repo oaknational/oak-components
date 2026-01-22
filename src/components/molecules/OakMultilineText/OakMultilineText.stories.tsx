@@ -58,7 +58,7 @@ export const InitialValue: Story = {
     placeholder: "Start typing answer...",
     charLimit: 200,
     disabled: false,
-    initialValue: "Test",
+    initialValue: "This is the initial value.",
   },
 };
 
