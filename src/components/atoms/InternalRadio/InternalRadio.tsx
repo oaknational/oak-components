@@ -38,9 +38,22 @@ export type BaseRadioProps = {
    * Controlled checked state
    */
   checked?: boolean;
+  /**
+   * Called after a mouseEnter and mouseLeave event has happened.
+   * Provides the hovered option's `value`, `id`, and hover `duration` (ms).
+   */
   onHovered?: (value: string, id: string, duration: number) => void;
+  /**
+   * Called when the checked value changes.
+   */
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  /**
+   * Called when the input receives focus.
+   */
   onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
+  /**
+   * Called when the input loses focus.
+   */
   onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
   "aria-label"?: string;
   "aria-labelledby"?: string;
