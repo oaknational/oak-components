@@ -8,6 +8,7 @@ import { OakPrimaryButton } from "@/components/buttons/OakPrimaryButton";
 import { OakPrimaryInvertedButton } from "@/components/buttons/OakPrimaryInvertedButton";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakHeading } from "@/components/typography/OakHeading";
+import { OakIconName } from "@/components/images-and-icons/OakIcon";
 
 export type OakPupilContentGuidance = {
   contentguidanceLabel: string | null;
@@ -48,6 +49,10 @@ export type OakPupilJourneyContentGuidanceProps = {
    * The text to be displayed on the decline button
    */
   declineText?: string;
+  /**
+   * The icon to be displayed on the decline button
+   */
+  declineIcon?: OakIconName;
 };
 
 export const removedGuidanceDuplicates = (
@@ -74,6 +79,7 @@ export const removedGuidanceDuplicates = (
  * - **supervisionLevel** \-        The level of supervision required for the content
  * - **acceptText** \-              The text to be displayed on the accept button
  * - **declineText** \-             The text to be displayed on the decline button
+ * - **declineIcon** \-             The icon to be displayed on the decline button
  */
 export const OakPupilJourneyContentGuidance = ({
   isOpen,
@@ -84,6 +90,7 @@ export const OakPupilJourneyContentGuidance = ({
   supervisionLevel = null,
   acceptText = "I understand, continue",
   declineText = "Take me back to lessons",
+  declineIcon = "arrow-left",
 }: OakPupilJourneyContentGuidanceProps) => {
   return (
     <OakModalCenter
@@ -106,7 +113,7 @@ export const OakPupilJourneyContentGuidance = ({
           </OakPrimaryButton>
           <OakPrimaryInvertedButton
             $font="heading-7"
-            iconName="arrow-left"
+            iconName={declineIcon}
             onClick={onDecline}
             data-testid="declineButton"
           >
