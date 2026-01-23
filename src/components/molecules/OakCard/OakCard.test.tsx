@@ -33,11 +33,14 @@ describe("OakCard", () => {
     expect(container).toMatchSnapshot();
   });
 
-  it("renders correctly with only required props", () => {
+  it("renders card with only heading and href when passed only required props", () => {
     renderWithTheme(<OakCard {...requiredProps} />);
 
     expect(screen.getByText(testData.heading)).toBeInTheDocument();
     expect(screen.getByRole("link")).toHaveAttribute("href", testData.href);
+    expect(screen.queryByRole("img")).not.toBeInTheDocument();
+    expect(screen.queryByRole("paragraph")).not.toBeInTheDocument();
+    expect(screen.queryByAltText("arrow-right")).not.toBeInTheDocument();
   });
 
   it("renders card with correct orientation when provided", () => {
