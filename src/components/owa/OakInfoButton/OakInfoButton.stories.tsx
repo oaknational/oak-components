@@ -1,0 +1,43 @@
+import React from "react";
+import { Meta, StoryObj } from "@storybook/react";
+
+import { OakInfoButton } from "./OakInfoButton";
+
+import { OakBox } from "@/components/layout-and-structure/OakBox";
+
+const meta: Meta<typeof OakInfoButton> = {
+  component: OakInfoButton,
+  tags: ["autodocs"],
+  title: "OWA/OakInfoButton",
+
+  argTypes: {
+    onClick: { action: "clicked" },
+    isLoading: {
+      control: {
+        type: "boolean",
+      },
+    },
+    isOpen: {
+      control: {
+        type: "boolean",
+      },
+    },
+  },
+  decorators: [
+    (Story) => (
+      <OakBox $mt="spacing-72">
+        <Story />
+      </OakBox>
+    ),
+  ],
+  args: {
+    onClick: () => console.log("clicked"),
+  },
+};
+export default meta;
+
+type Story = StoryObj<typeof OakInfoButton>;
+
+export const Default: Story = {
+  render: (args) => <OakInfoButton {...args} />,
+};

@@ -1,0 +1,658 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`OakHeaderHero matches snapshot 1`] = `
+.c0 {
+  overflow-x: hidden;
+  width: 100%;
+  background: #a0b6f2;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c1 {
+  width: 100%;
+  max-width: 30rem;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c3 {
+  min-width: 100%;
+  min-height: 22.5rem;
+  background: #a0b6f2;
+  font-family: --var(google-font),Lexend,sans-serif;
+  z-index: 0;
+}
+
+.c5 {
+  height: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c7 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  display: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c10 {
+  max-width: 40rem;
+  min-height: 0rem;
+  margin-bottom: 0rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c13 {
+  margin-bottom: 1.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c15 {
+  position: relative;
+  width: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c18 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c22 {
+  position: relative;
+  min-height: 11.25rem;
+  margin-bottom: 0rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c24 {
+  position: relative;
+  width: 100%;
+  min-width: 15rem;
+  min-height: 15rem;
+  -webkit-transform: rotate(-2.025deg);
+  -ms-transform: rotate(-2.025deg);
+  transform: rotate(-2.025deg);
+  font-family: --var(google-font),Lexend,sans-serif;
+  z-index: 1;
+}
+
+.c25 {
+  position: absolute;
+  top: 0rem;
+  bottom: 0rem;
+  width: 22.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c27 {
+  position: absolute;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  min-height: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c29 {
+  padding-top: 1.5rem;
+  margin-left: 1.5rem;
+  display: block;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c26 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c30 {
+  display: block;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+.c19 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c20 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c21 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+  margin-bottom: 3rem;
+}
+
+.c12 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+  margin-bottom: 1.5rem;
+  color: #222222;
+}
+
+.c28 {
+  object-fit: contain;
+}
+
+.c17 {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHBhdGggZmlsbD0iIzIyMiIgZD0iTTI4Ljc3OSAxOS4xNzZhMjcuMTkxIDI3LjE5MSAwIDAgMC0zLjggMS42IDE2LjcgMTYuNyAwIDAgMC03LjEgOC40YzAgLjEtLjEuMi0uMS4zLS43IDIuNC0uNiAyIDEuMyAyLjMgMS45LjMgMSAuNSAxIDEuMy0uMSA4LjggNC4xIDE1LjEgMTEuNCAxOS42YTEuNSAxLjUgMCAwIDAgMS43LjJjNS43LTIuNiA5LjMtNyAxMC4zLTEzLjJhMSAxIDAgMCAxIDEtMWwzLS4yYy44IDAgMS4zLjIgMS4yIDEuMmExNy45IDE3LjkgMCAwIDEtMy4yIDkuMiAyMy43IDIzLjcgMCAwIDEtMTAuOSA5LjEgNS40MDEgNS40MDEgMCAwIDEtNC41LS4yIDI2LjI5OCAyNi4yOTggMCAwIDEtOC41LTYuNiAyNS45IDI1LjkgMCAwIDEtNi40LTE0LjRjMC0uNi0uMi0uNy0uOC0uOC0yLjUtLjQtMi41LS4xLTIuMy0yLjlhMTkuMyAxOS4zIDAgMCAxIDEwLjgtMTYuNiAzOC45OTkgMzguOTk5IDAgMCAxIDUuNy0yLjEgMi4xIDIuMSAwIDAgMCAuOS0xLjMgMTQuMSAxNC4xIDAgMCAxIDMuNS02LjNsLjMtLjNjMS45LTIgMi42LTIgNC4zLjJsLjQuNWMxLjEgMS4xIDEgMS41LS4xIDIuNmExMS45IDExLjkgMCAwIDAtMy4yIDQuNCAxNi45IDE2LjkgMCAwIDEgNy41IDIuM2M1LjcgMy41IDkuMiA4LjMgOS45IDE1IC4wMTYuOTAxLS4wMTcgMS44MDItLjEgMi43IDAgLjgtLjYgMS0xLjIgMS4yYTE2LjEgMTYuMSAwIDAgMS0xMS0uNyAxNy45MDEgMTcuOTAxIDAgMCAxLTEwLjktMTMuNiA5Ljc5NiA5Ljc5NiAwIDAgMS0uMS0xLjlabTE4LjEgMTIuMmMuNC01LjUtNi45LTEyLjYtMTMtMTIuMS41IDYuNSA3LjYgMTIuOCAxMyAxMi4xWiIgb3BhY2l0eT0iLjEiLz48L3N2Zz4=);
+  background-color: #e7f6f5;
+  background-size: 4rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: contain;
+}
+
+.c16 {
+  width: 50px;
+  height: 50px;
+  margin-right: 12px;
+}
+
+.c16 img {
+  border-radius: 50%;
+}
+
+.c9 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c8 {
+  display: inline;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.25rem;
+  outline: none;
+  border-radius: 0.375rem;
+  padding: 0.25rem;
+  margin: -0.25rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font: inherit;
+  background: none;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #0d24c4;
+}
+
+.c8:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c8:visited {
+  color: #081676;
+}
+
+.c8:active {
+  color: #081676;
+}
+
+.c8[disabled] {
+  cursor: not-allowed;
+  color: #808080;
+}
+
+@media (min-width:750px) {
+  .c1 {
+    max-width: 80rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c1 {
+    padding-left: 0.75rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c1 {
+    padding-right: 0.75rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c7 {
+    display: none;
+  }
+}
+
+@media (min-width:1280px) {
+  .c7 {
+    display: block;
+  }
+}
+
+@media (min-width:750px) {
+  .c10 {
+    min-height: 0rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c10 {
+    min-height: 22.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c10 {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c10 {
+    margin-bottom: 0rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c22 {
+    min-height: 30rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c22 {
+    min-height: 30rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c22 {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c22 {
+    margin-bottom: 0rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c24 {
+    min-width: 40rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c24 {
+    min-width: 30rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c24 {
+    min-height: 22.5rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c24 {
+    min-height: 22.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c25 {
+    width: 60rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c25 {
+    width: 60rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c29 {
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c29 {
+    display: block;
+  }
+}
+
+@media (min-width:1280px) {
+  .c29 {
+    display: none;
+  }
+}
+
+@media (min-width:750px) {
+  .c4 {
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (min-width:1280px) {
+  .c4 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:750px) {
+
+}
+
+@media (min-width:750px) {
+  .c30 {
+    display: block;
+  }
+}
+
+@media (min-width:1280px) {
+  .c30 {
+    display: none;
+  }
+}
+
+@media (min-width:750px) {
+  .c21 {
+    margin-bottom: 0rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c12 {
+    font-weight: 600;
+  }
+}
+
+@media (min-width:750px) {
+  .c12 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c12 {
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c12 {
+    -webkit-letter-spacing: 0.0115rem;
+    -moz-letter-spacing: 0.0115rem;
+    -ms-letter-spacing: 0.0115rem;
+    letter-spacing: 0.0115rem;
+  }
+}
+
+@media (hover:hover) {
+  .c8:hover,
+  .c8:visited:hover {
+    color: #0a1d9d;
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1 c2"
+    >
+      <div
+        class="c3 c4"
+        data-testid="oak-header-component"
+      >
+        <div
+          class="c5 c6"
+        >
+          <div
+            class="c7"
+          >
+            <a
+              class="c8"
+              href="/home"
+            >
+              <span
+                class="c9"
+              >
+                Home
+              </span>
+            </a>
+          </div>
+          <div
+            class="c10 c11"
+          >
+            <h1
+              class="c12"
+            >
+              How to plan a lesson: a helpful guide for teachers
+            </h1>
+            <div
+              class="c13 c14"
+            >
+              <div
+                class="c15 c16"
+              >
+                <img
+                  alt="Author image"
+                  class="c17"
+                  data-nimg="fill"
+                  decoding="async"
+                  loading="lazy"
+                  sizes="100vw"
+                  src="http://localhost/_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=3840&q=75"
+                  srcset="/_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=3840&q=75 3840w"
+                  style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                />
+              </div>
+              <div
+                class="c18"
+              >
+                <p
+                  class="c19"
+                >
+                  Rachel Storm
+                </p>
+                <p
+                  class="c20"
+                >
+                  Head of School Support
+                </p>
+              </div>
+            </div>
+            <p
+              class="c21"
+            >
+              Body 1 Our guide for teachers, whether you're in your ITT, an ECT or a teacher of many years experience looking for a fresh look on lesson planning, is place to dive into expertise from across the sector.
+            </p>
+          </div>
+        </div>
+        <div
+          class="c22 c23"
+        >
+          <div
+            class="c24"
+          >
+            <img
+              alt="Hero image"
+              class="c17"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              sizes="100vw"
+              src="http://localhost/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336490%2Fsample.jpg&w=3840&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336490%2Fsample.jpg&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336490%2Fsample.jpg&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336490%2Fsample.jpg&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336490%2Fsample.jpg&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336490%2Fsample.jpg&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336490%2Fsample.jpg&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336490%2Fsample.jpg&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336490%2Fsample.jpg&w=3840&q=75 3840w"
+              style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+            />
+          </div>
+          <div
+            class="c25 c26"
+          >
+            <div
+              class="c27"
+            >
+              <img
+                alt="loopdown ui-graphic"
+                class="c28"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699887218/ui-graphics/loopdown.svg"
+                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="c29 c30"
+        >
+          <a
+            class="c8"
+            href="/home"
+          >
+            <span
+              class="c9"
+            >
+              Home
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

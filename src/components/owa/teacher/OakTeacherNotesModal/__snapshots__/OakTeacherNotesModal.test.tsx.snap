@@ -1,0 +1,1208 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`OakTeacherNotesModal matches snapshot 1`] = `
+.c0 {
+  position: fixed;
+  inset: 0rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+  z-index: 300;
+}
+
+.c3 {
+  position: fixed;
+  inset: 0rem;
+  background: #22222240;
+  font-family: --var(google-font),Lexend,sans-serif;
+  z-index: -1;
+}
+
+.c5 {
+  width: 100%;
+  max-width: 60rem;
+  padding: 1.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c7 {
+  position: relative;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 1rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c9 {
+  position: relative;
+  min-height: 3.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c10 {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c11 {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c16 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c18 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  color: transparent;
+  background: transparent;
+  border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c19 {
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c20 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c23 {
+  overflow: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-top: 0rem solid;
+  border-bottom: 0rem solid;
+  border-color: #cacaca;
+  font-family: --var(google-font),Lexend,sans-serif;
+  overflow: auto;
+}
+
+.c24 {
+  padding-bottom: 1.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c27 {
+  padding: 0.75rem;
+  background: #f2f2f2;
+  border-radius: 0.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c29 {
+  overflow-y: scroll;
+  height: 15rem;
+  min-height: 4.5rem;
+  padding: 0.75rem;
+  background: #ffffff;
+  border: 0.125rem solid;
+  border-color: #222222;
+  border-radius: 0.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c36 {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: auto;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c38 {
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c43 {
+  display: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c47 {
+  width: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c51 {
+  position: relative;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  min-height: 1.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c53 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c55 {
+  padding: 1rem;
+  background: #fff7cc;
+  border: 0.063rem solid;
+  border-color: #fbd60e;
+  border-radius: 0.375rem;
+  border-style: solid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c57 {
+  position: relative;
+  width: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c60 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0rem;
+}
+
+.c25 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.c28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  gap: 0.75rem;
+}
+
+.c30 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.c35 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.c41 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.c44 {
+  display: none;
+}
+
+.c48 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.c54 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.c56 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: end;
+}
+
+.c58 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.c59 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  gap: 0.25rem;
+}
+
+.c22 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c42 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+  text-align: left;
+}
+
+.c64 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c14 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+  color: transparent;
+}
+
+.c14:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c39 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+  color: #222222;
+  background: #ffffff;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  border: 0.125rem solid;
+  border-color: #222222;
+  border-radius: 0.25rem;
+}
+
+.c39:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c49 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+  color: #ffffff;
+  background: #222222;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  border: 0.125rem solid;
+  border-color: #222222;
+  border-radius: 0.25rem;
+}
+
+.c49:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c21 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  object-fit: contain;
+}
+
+.c52 {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  object-fit: contain;
+}
+
+.c15 {
+  display: inline-block;
+  position: relative;
+}
+
+.c15:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: transparent;
+}
+
+.c15:hover:not(:active) [data-icon-for="button"] img {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+}
+
+.c15:active {
+  color: transparent;
+}
+
+.c15:disabled {
+  color: transparent;
+}
+
+.c13 > :first-child:focus-visible .shadow {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c13 > :first-child:hover .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c13 > :first-child:active .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+}
+
+.c13 > :first-child:disabled .icon-container {
+  background: transparent;
+}
+
+.c13 > :first-child:hover .icon-container {
+  background: #222222;
+}
+
+.c13 > :first-child:active .icon-container {
+  background: transparent;
+}
+
+.c26 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c63 {
+  display: inline;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.25rem;
+  outline: none;
+  border-radius: 0.375rem;
+  padding: 0.25rem;
+  margin: -0.25rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font: inherit;
+  background: none;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #0d24c4;
+}
+
+.c63:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c63:visited {
+  color: #081676;
+}
+
+.c63:active {
+  color: #081676;
+}
+
+.c63[disabled] {
+  cursor: not-allowed;
+  color: #808080;
+}
+
+.c6 {
+  width: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c4 {
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+
+.c2 {
+  opacity: 1;
+  -webkit-transition: opacity 0s;
+  transition: opacity 0s;
+}
+
+.c40 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.c40:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #222222;
+  background: #f2f2f2;
+  border-color: #222222;
+}
+
+.c40:hover [data-state="selected"] {
+  display: none;
+}
+
+.c40:active {
+  background: #ffffff;
+  border-color: #222222;
+  color: #222222;
+}
+
+.c40:active [data-state="selected"] {
+  display: none;
+}
+
+.c40:disabled {
+  background: #e4e4e4;
+  border-color: #808080;
+  color: #808080;
+}
+
+.c40:disabled [data-state="selected"] {
+  display: none;
+}
+
+.c50 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.c50:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #ffffff;
+  background: #575757;
+  border-color: #575757;
+}
+
+.c50:hover [data-state="selected"] {
+  display: none;
+}
+
+.c50:active {
+  background: #222222;
+  border-color: #222222;
+  color: #ffffff;
+}
+
+.c50:active [data-state="selected"] {
+  display: none;
+}
+
+.c50:disabled {
+  background: #808080;
+  border-color: #808080;
+  color: #ffffff;
+}
+
+.c50:disabled [data-state="selected"] {
+  display: none;
+}
+
+.c37 .grey-shadow:has(+ * + .internal-button:focus-visible) {
+  box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c37 .yellow-shadow:has(+ .internal-button:focus-visible) {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
+}
+
+.c37 .yellow-shadow:has(+ .internal-button:hover),
+.c37 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c37 .grey-shadow:has(+ * + .internal-button:hover) {
+  box-shadow: none;
+}
+
+.c37 .grey-shadow:has(+ * + .internal-button:active) {
+  box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+}
+
+.c37 .yellow-shadow:has(+ .internal-button:active) {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c31 {
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  width: 100%;
+}
+
+.c32 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  grid-column: span 5;
+  grid-row: span undefined;
+  grid-row: span 1;
+}
+
+.c34 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  grid-column: span 7;
+  grid-row: span undefined;
+  grid-row: span 1;
+}
+
+.c45 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  grid-column: span 0;
+  grid-row: span undefined;
+  grid-row: span 1;
+}
+
+.c46 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  grid-column: span 12;
+  grid-row: span undefined;
+  grid-row: span 1;
+}
+
+.c33 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c61 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c62 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+  margin-top: 0.25rem;
+}
+
+@media (min-width:750px) {
+  .c23 {
+    padding-left: 2rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c23 {
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c43 {
+    display: block;
+  }
+}
+
+@media (min-width:750px) {
+  .c53 {
+    display: none;
+  }
+}
+
+@media (min-width:750px) {
+  .c44 {
+    display: block;
+  }
+}
+
+@media (min-width:750px) {
+  .c48 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:750px) {
+  .c48 {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width:750px) {
+  .c54 {
+    display: none;
+  }
+}
+
+@media (hover:hover) {
+  .c63:hover,
+  .c63:visited:hover {
+    color: #0a1d9d;
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+  }
+}
+
+@media (min-width:750px) {
+  .c32 {
+    grid-column: span 6;
+  }
+}
+
+@media (min-width:750px) {
+  .c34 {
+    grid-column: span 6;
+  }
+}
+
+@media (min-width:750px) {
+  .c45 {
+    grid-column: span 6;
+  }
+}
+
+<div>
+  <div
+    class="c0 c1 c2"
+  >
+    <div
+      aria-hidden="true"
+      class="c3 c4"
+      data-focus-on-hidden="true"
+      data-testid="backdrop"
+    />
+    <div
+      class="c5 c1"
+    >
+      <div
+        aria-hidden="true"
+        data-focus-guard="true"
+        data-focus-on-hidden="true"
+        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+        tabindex="0"
+      />
+      <div
+        class="c6"
+        data-focus-lock-disabled="false"
+      >
+        <div
+          aria-describedby="use this dialog enter and to store teacher notes about a lesson"
+          aria-label="teacher notes dialog"
+          class="c7 c8"
+          role="alertdialog"
+          style="max-height: calc(100vh - 3.5rem - 3.5rem);"
+        >
+          <div
+            class="c9"
+          >
+            <div
+              class="c10"
+            >
+              <div
+                class="c11 c12 c13"
+              >
+                <button
+                  aria-label="Close Modal"
+                  class="c14 c15"
+                  data-testid="close-button"
+                >
+                  <div
+                    class="c16 c17"
+                  >
+                    <div
+                      class="c18 c1 icon-container"
+                    >
+                      <div
+                        class="c19 shadow"
+                      />
+                      <div
+                        class="c20"
+                        data-icon-for="button"
+                      >
+                        <img
+                          alt=""
+                          class="c21"
+                          data-nimg="fill"
+                          decoding="async"
+                          loading="lazy"
+                          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
+                          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                        />
+                      </div>
+                    </div>
+                    <span
+                      class="c22"
+                    />
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            data-autofocus-inside="true"
+            style="display: contents;"
+          >
+            <div
+              class="c23 c8"
+              data-testid="modal-main-content"
+            >
+              <div
+                class="c24 c25"
+              >
+                <h1
+                  class="c26"
+                >
+                  Add a teacher note to the page and share the link with your colleague.
+                </h1>
+                <div
+                  class="c27 c28"
+                >
+                  <div
+                    class="c29 c30"
+                  >
+                    <div>
+                      Editor
+                    </div>
+                  </div>
+                  <div
+                    class="c16 c31"
+                  >
+                    <div
+                      class="c16 c12 c32"
+                    >
+                      <p
+                        class="c33"
+                      >
+                        You have 
+                        <b>
+                          100
+                        </b>
+                         characters remaining
+                      </p>
+                    </div>
+                    <div
+                      class="c16 c12 c34"
+                    >
+                      <div
+                        class="c16 c35"
+                      >
+                        <div
+                          class="c36 c37"
+                        >
+                          <div
+                            class="c38 grey-shadow"
+                          />
+                          <div
+                            class="c38 yellow-shadow"
+                          />
+                          <button
+                            aria-pressed="false"
+                            class="c39 c40 internal-button"
+                          >
+                            <div
+                              class="c16 c41"
+                            >
+                              <span
+                                class="c42"
+                              >
+                                Bold
+                              </span>
+                            </div>
+                          </button>
+                        </div>
+                        <div
+                          class="c36 c37"
+                        >
+                          <div
+                            class="c38 grey-shadow"
+                          />
+                          <div
+                            class="c38 yellow-shadow"
+                          />
+                          <button
+                            aria-pressed="false"
+                            class="c39 c40 internal-button"
+                          >
+                            <div
+                              class="c16 c41"
+                            >
+                              <span
+                                class="c42"
+                              >
+                                Bullet List
+                              </span>
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="c16 c31"
+                >
+                  <div
+                    class="c43 c44 c45"
+                  />
+                  <div
+                    class="c16 c12 c46"
+                  >
+                    <div
+                      class="c47 c48"
+                    >
+                      <div
+                        class="c36 c37"
+                      >
+                        <div
+                          class="c38 grey-shadow"
+                        />
+                        <div
+                          class="c38 yellow-shadow"
+                        />
+                        <button
+                          class="c49 c50 internal-button"
+                        >
+                          <div
+                            class="c16 c41"
+                          >
+                            <span
+                              class="c42"
+                            >
+                              Share link
+                            </span>
+                            <div
+                              class="c51"
+                            >
+                              <img
+                                alt=""
+                                class="c52"
+                                data-nimg="fill"
+                                decoding="async"
+                                loading="lazy"
+                                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1727861316/icons/Icon_Copy_qxgynv.svg"
+                                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                              />
+                            </div>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="c53 c54"
+                />
+                <div
+                  class="c55 c56"
+                  data-testid="oak-inline-banner"
+                >
+                  <div
+                    class="c57 c58"
+                  >
+                    <div
+                      class="c16"
+                    >
+                      <div
+                        class="c20"
+                        data-testid="inline-banner-icon"
+                      >
+                        <img
+                          alt=""
+                          class="c21"
+                          data-nimg="fill"
+                          decoding="async"
+                          loading="lazy"
+                          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895207/icons/ecejtvqerx81prxyxh9b.svg"
+                          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c47 c59"
+                    >
+                      <div
+                        class="c60"
+                        data-testid="inline-banner-message"
+                      >
+                        <p
+                          class="c61"
+                        >
+                          Please do not include any personal or sensitive information that could be used to identify, locate, or contact an individual, either directly or indirectly.
+                        </p>
+                        <p
+                          class="c62"
+                        >
+                          Names, email addresses, or other personal information will be redacted from your note to help keep everyone safe. For more guidance, see our
+                           
+                          <a
+                            aria-label="Oak's terms and conditions(opens in a new tab)"
+                            class="c63"
+                            href="https://www.thenational.academy/legal/terms-and-conditions"
+                            target="_blank"
+                          >
+                            <span
+                              class="c64"
+                            >
+                              Terms & conditions
+                            </span>
+                          </a>
+                          .
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-hidden="true"
+        data-focus-guard="true"
+        data-focus-on-hidden="true"
+        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+        tabindex="0"
+      />
+    </div>
+  </div>
+</div>
+`;

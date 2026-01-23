@@ -1,0 +1,400 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`OakCATQuestion matches snapshot 1`] = `
+.c1 {
+  width: 100%;
+  max-width: 60rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem rgba(92,92,92,20%);
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c4 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c5 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c7 {
+  width: 100%;
+  margin-bottom: 0.75rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c9 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c9:hover {
+  cursor: pointer;
+}
+
+.c13 {
+  margin-right: 0.75rem;
+  border-radius: 0.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c14 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c16 {
+  position: relative;
+  overflow: auto;
+  font-family: --var(google-font),Lexend,sans-serif;
+  overflow: auto;
+}
+
+.c17 {
+  width: 100%;
+  margin-top: 1.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c20 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  background: #f2f2f2;
+  border: 0.063rem solid;
+  border-color: #f2f2f2;
+  border-radius: 0.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.c19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.c22 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c24 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c21 {
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  width: 100%;
+  -webkit-column-gap: 1rem;
+  column-gap: 1rem;
+}
+
+.c23 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  grid-column: span 12;
+  grid-row: span undefined;
+  grid-row: span 1;
+}
+
+.c25 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c26 {
+  color: #575757;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c15 {
+  object-fit: contain;
+}
+
+.c11 {
+  font: inherit;
+  color: inherit;
+  border: none;
+  background: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  padding: 0;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c12:hover .chevron-icon {
+  -webkit-filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
+  filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
+}
+
+.c12:focus-visible .focus-outline {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c3 {
+  border-left: 8px solid #cacaca;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.c0 {
+  list-style: none;
+}
+
+@media (min-width:750px) {
+  .c23 {
+    grid-column: span 6;
+  }
+}
+
+@media (min-width:1280px) {
+  .c23 {
+    grid-column: span 6;
+  }
+}
+
+<div>
+  <li
+    class="c0"
+  >
+    <div
+      class="c1 c2 c3"
+    >
+      <div
+        class="c4 c2"
+      >
+        <div
+          class="c5 c6"
+        >
+          <div
+            class="c7 c8"
+          >
+            1.
+            <div>
+              Question Type Input
+            </div>
+          </div>
+          <div
+            class="c5"
+          >
+            <button
+              aria-expanded="false"
+              aria-label="expand question 1"
+              class="c9 c10 c11  c12"
+              id="question-1"
+              type="button"
+            >
+              <div
+                class="c13 focus-outline"
+              >
+                <div
+                  class="c14 chevron-icon"
+                  style="transform: none; transition: all 0.3s ease 0s;"
+                >
+                  <img
+                    alt="An arrow to indicate whether the item is open or closed"
+                    class="c15"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                  />
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div>
+          Question Text Input
+        </div>
+        <div
+          class="c16"
+        >
+          <div
+            aria-labelledby="question-1"
+            class="c5"
+            hidden=""
+            role="region"
+          >
+            <div
+              class="c17 c18"
+            >
+              <div
+                class="c5 c19"
+              >
+                <div>
+                  Answers Section
+                </div>
+              </div>
+              <div
+                class="c20 c21"
+              >
+                <div
+                  class="c5 c22 c23"
+                >
+                  <div
+                    class="c5 c24"
+                  >
+                    <label
+                      class="c25"
+                      for="hintInputId"
+                    >
+                      <span
+                        class="c26"
+                      >
+                        Hint
+                      </span>
+                    </label>
+                    <div>
+                      Hint Input
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="c5 c22 c23"
+                >
+                  <div
+                    class="c5 c24"
+                  >
+                    <label
+                      class="c25"
+                      for="feedbackInputId"
+                    >
+                      <span
+                        class="c26"
+                      >
+                        Feedback
+                      </span>
+                    </label>
+                    <div>
+                      Feedback Input
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</div>
+`;
