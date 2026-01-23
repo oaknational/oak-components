@@ -44,6 +44,8 @@ const meta: Meta<typeof OakCard> = {
         "href",
         "cardOrientation",
         "cardWidth",
+        "imageSrc",
+        "imageAlt",
         "aspectRatio",
         "subCopy",
         "tagName",

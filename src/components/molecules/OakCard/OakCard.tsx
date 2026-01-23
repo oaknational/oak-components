@@ -14,7 +14,12 @@ import {
   OakIcon,
 } from "@/components/atoms";
 import { OakTagFunctional } from "@/components/molecules/OakTagFunctional";
-import { OakCombinedSpacingToken, OakAllSpacingToken, OakInnerPaddingToken, OakUiRoleToken } from "@/styles";
+import {
+  OakCombinedSpacingToken,
+  OakAllSpacingToken,
+  OakInnerPaddingToken,
+  OakUiRoleToken,
+} from "@/styles";
 
 export type OakCardProps = {
   /**
