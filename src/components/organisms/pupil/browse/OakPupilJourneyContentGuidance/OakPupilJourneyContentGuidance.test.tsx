@@ -7,6 +7,7 @@ import {
   OakPupilJourneyContentGuidance,
 } from "./OakPupilJourneyContentGuidance";
 
+import { generateOakIconURL } from "@/components/atoms/OakIcon";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { oakDefaultTheme } from "@/styles";
 
@@ -130,5 +131,20 @@ describe("OakPupilJourneyContentGuidance", () => {
     getByTestId("declineButton").click();
 
     expect(onDecline).toHaveBeenCalled();
+  });
+
+  it("renders custom decline icon when declineIcon prop is provided", () => {
+    const { getByTestId } = renderWithTheme(
+      <ThemeProvider theme={oakDefaultTheme}>
+        <OakPupilJourneyContentGuidance
+          isOpen
+          onAccept={() => {}}
+          onDecline={() => {}}
+          declineIcon="cross"
+        />
+      </ThemeProvider>,
+    );
+    const icon = getByTestId("declineButton").querySelector("img");
+    expect(icon).toHaveAttribute("src", generateOakIconURL("cross"));
   });
 });

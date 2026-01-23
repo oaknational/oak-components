@@ -318,8 +318,8 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   font: inherit;
   background: none;
   border: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   cursor: pointer;
   color: #222222;
 }
@@ -345,6 +345,8 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   .c24:hover,
   .c24:visited:hover {
     color: #222222;
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
   }
 }
 
@@ -788,8 +790,8 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   font: inherit;
   background: none;
   border: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   cursor: pointer;
   color: #222222;
 }
@@ -815,6 +817,8 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   .c25:hover,
   .c25:visited:hover {
     color: #222222;
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
   }
 }
 
@@ -1235,8 +1239,8 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   font: inherit;
   background: none;
   border: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   cursor: pointer;
   color: #222222;
 }
@@ -1262,6 +1266,8 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   .c22:hover,
   .c22:visited:hover {
     color: #222222;
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
   }
 }
 

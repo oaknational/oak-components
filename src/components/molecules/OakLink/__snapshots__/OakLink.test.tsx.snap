@@ -49,6 +49,8 @@ exports[`OakLink matches snapshot 1`] = `
   .c0:hover,
   .c0:visited:hover {
     color: #0a1d9d;
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
   }
 }
 

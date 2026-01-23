@@ -286,8 +286,8 @@ input:checked + .c12 {
   font: inherit;
   background: none;
   border: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   cursor: pointer;
   color: #222222;
 }
@@ -326,8 +326,8 @@ input:checked + .c12 {
   font: inherit;
   background: none;
   border: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   cursor: pointer;
   color: #222222;
 }
@@ -350,8 +350,6 @@ input:checked + .c12 {
 }
 
 .c24 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -360,11 +358,6 @@ input:checked + .c12 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.c24:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
 }
 
 .c2:has(input:focus-visible) {
@@ -401,6 +394,8 @@ input:checked + .c12 {
   .c23:hover,
   .c23:visited:hover {
     color: #222222;
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
   }
 }
 
@@ -408,6 +403,8 @@ input:checked + .c12 {
   .c29:hover,
   .c29:visited:hover {
     color: #222222;
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
   }
 }
 
@@ -571,7 +568,7 @@ input:checked + .c12 {
           />
         </div>
         Edited 
-        2 years ago
+        1 days ago
       </div>
       <div
         class="c21 c32"
@@ -590,7 +587,7 @@ input:checked + .c12 {
           />
         </div>
         Updated 
-        2 years ago
+        1 days ago
       </div>
     </div>
   </div>

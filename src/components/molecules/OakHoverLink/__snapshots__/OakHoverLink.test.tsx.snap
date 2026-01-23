@@ -22,8 +22,8 @@ exports[`OakHoverLink matches snapshot 1`] = `
   font: inherit;
   background: none;
   border: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   cursor: pointer;
   color: #222222;
 }
@@ -46,8 +46,6 @@ exports[`OakHoverLink matches snapshot 1`] = `
 }
 
 .c1 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -58,15 +56,12 @@ exports[`OakHoverLink matches snapshot 1`] = `
   align-items: center;
 }
 
-.c1:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
 @media (hover:hover) {
   .c0:hover,
   .c0:visited:hover {
     color: #222222;
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
   }
 }
 

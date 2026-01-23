@@ -1,6 +1,5 @@
 import React, { HTMLAttributes, ReactNode, useRef } from "react";
 import { createPortal } from "react-dom";
-import styled from "styled-components";
 
 import { InternalShadowRoundButton } from "@/components/molecules/InternalShadowRoundButton";
 import { OakBox, OakFlex, OakHeading } from "@/components/atoms";
@@ -59,14 +58,6 @@ type OakFilterDrawerProps = {
   "aria-label" | "aria-description" | "aria-labelledby" | "aria-describedby"
 >;
 
-const StyledClearButton = styled(OakSecondaryLink)`
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-`;
-
 /**
  *
  * Based on the OakModal component, this component is a filter drawer that slides in from the right side of the screen.
@@ -112,13 +103,13 @@ export const OakFilterDrawer = ({
         $justifyContent="space-between"
         $alignItems="center"
       >
-        <StyledClearButton
+        <OakSecondaryLink
           onClick={clearAllInputs}
           aria-label="Clear"
           element="button"
         >
           Clear
-        </StyledClearButton>
+        </OakSecondaryLink>
         <OakHeading $font={"heading-6"} tag="h3">
           Filters
         </OakHeading>

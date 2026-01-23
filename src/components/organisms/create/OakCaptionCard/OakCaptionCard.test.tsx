@@ -28,14 +28,22 @@ describe("CaptionCard", () => {
   });
 
   it("matches snapshot", () => {
+    const date = new Date();
+    const dateString =
+      date.getFullYear() +
+      "-" +
+      (date.getMonth() + 1) +
+      "-" +
+      (date.getDate() - 1);
+
     const { container } = renderWithTheme(
       <OakCaptionCard
         captionId={"CAP-TEST-01234"}
         videoTitle={"This is a test video title"}
         lessonUid={"LESS-TEST-01234"}
         videoType={"lesson"}
-        lastUpdated={"2023-01-01"}
-        lastEdited={"2023-01-01"}
+        lastUpdated={dateString}
+        lastEdited={dateString}
         checked={false}
         highlighted={false}
         onCheckChanged={() => {}}

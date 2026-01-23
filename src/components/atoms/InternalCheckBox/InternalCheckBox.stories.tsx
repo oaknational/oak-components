@@ -6,6 +6,7 @@ import {
   InternalCheckBoxHover,
   InternalCheckBoxFocus,
   InternalCheckBoxHoverFocus,
+  internalCheckBoxDefaults,
 } from "./InternalCheckBox";
 
 import { OakBox } from "@/components/atoms/OakBox";
@@ -18,6 +19,7 @@ const meta: Meta<typeof InternalCheckBox> = {
   component: InternalCheckBox,
   tags: ["autodocs"],
   title: "components/atoms/InternalCheckBox",
+  args: internalCheckBoxDefaults,
   argTypes: {
     sizeArgTypes,
     borderArgTypes,
