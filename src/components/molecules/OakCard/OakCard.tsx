@@ -14,7 +14,7 @@ import {
   OakIcon,
 } from "@/components/atoms";
 import { OakTagFunctional } from "@/components/molecules/OakTagFunctional";
-import { OakCombinedSpacingToken, OakUiRoleToken } from "@/styles";
+import { OakCombinedSpacingToken, OakAllSpacingToken, OakInnerPaddingToken, OakUiRoleToken } from "@/styles";
 
 export type OakCardProps = {
   /**
@@ -69,8 +69,8 @@ export type OakCardProps = {
 
 type StyledFlexProps = {
   $flexDirection: "row" | "column";
-  $pa: OakCombinedSpacingToken;
-  $gap: OakCombinedSpacingToken;
+  $pa: OakInnerPaddingToken;
+  $gap: OakAllSpacingToken;
 };
 
 const StyledOakFlex = styled(OakFlex)<StyledFlexProps>`
