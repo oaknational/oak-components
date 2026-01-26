@@ -180,7 +180,7 @@ export const OakCard = ({
                 <OakSpan>{linkText}</OakSpan>
                 <OakIcon
                   iconName={linkIconName}
-                  alt={linkIconName}
+                  alt=""
                   $width="spacing-24"
                   $height="spacing-24"
                 />

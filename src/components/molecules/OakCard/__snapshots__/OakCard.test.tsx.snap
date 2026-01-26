@@ -278,7 +278,7 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
               class="c20"
             >
               <img
-                alt="chevron-right"
+                alt=""
                 class="c21"
                 data-nimg="fill"
                 decoding="async"
