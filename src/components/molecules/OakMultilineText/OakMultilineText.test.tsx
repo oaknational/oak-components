@@ -49,6 +49,22 @@ describe("OakMultilineText", () => {
     expect(getByDisplayValue("This is the initial value.")).toBeInTheDocument();
   });
 
+  it("renders externally set value", () => {
+    const { getByDisplayValue } = renderWithTheme(
+      <OakMultilineText
+        charLimit={200}
+        $height="spacing-56"
+        disabled={false}
+        value="This value is controlled externally."
+        id={"1"}
+        name="textarea"
+      ></OakMultilineText>,
+    );
+    expect(
+      getByDisplayValue("This value is controlled externally."),
+    ).toBeInTheDocument();
+  });
+
   it("shows char count on focus", async () => {
     const { getByRole, getByLabelText } = renderWithTheme(
       <OakMultilineText
