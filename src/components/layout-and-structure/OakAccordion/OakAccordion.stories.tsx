@@ -8,7 +8,7 @@ import { OakCheckBox } from "@/components/form-elements/OakCheckBox";
 const meta: Meta<typeof OakAccordion> = {
   component: OakAccordion,
   tags: ["autodocs"],
-  title: "components/Navigation/OakAccordion",
+  title: "components/Layout and structure/OakAccordion",
   parameters: {
     controls: {
       include: ["header", "headerAfterSlot", "children"],

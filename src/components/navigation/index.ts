@@ -1,7 +1,4 @@
 export * from "@/components/navigation/OakAnchorTarget";
-export * from "@/components/navigation/OakAccordion";
-export * from "@/components/navigation/OakBasicAccordion";
-export * from "@/components/navigation/OakCollapsibleContent";
 export * from "@/components/navigation/OakHoverLink";
 export * from "@/components/navigation/OakLink";
 export * from "@/components/navigation/OakPagination";

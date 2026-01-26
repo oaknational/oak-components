@@ -4,7 +4,7 @@ import {
   Consent,
   PolicyConsent,
 } from "@/components/cookies/OakCookieConsentProvider";
-import { OakAccordion } from "@/components/navigation/OakAccordion";
+import { OakAccordion } from "@/components/layout-and-structure/OakAccordion";
 import { OakCheckBox } from "@/components/form-elements/OakCheckBox";
 import {
   OakInformativeModal,
