@@ -131,6 +131,7 @@ export const OakCard = ({
 }: OakCardProps) => {
   return (
     <OakFocusIndicator
+      $background={"bg-primary"}
       hoverBackground={"bg-btn-secondary-hover"}
       $width={cardWidth}
       $borderRadius={"border-radius-m2"}
@@ -143,7 +144,6 @@ export const OakCard = ({
         $pa={"spacing-16"}
         $gap={"spacing-16"}
         $color={"text-primary"}
-        $background={"bg-primary"}
       >
         {imageSrc && (
           <StyledOakImage
