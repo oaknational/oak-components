@@ -77,6 +77,8 @@ export type OakRadioButtonProps = {
  * A radio button component.
  *
  * Use within `OakRadioGroup` component.
+ *
+ * @deprecated This component is deprecated and will be removed in a future release. Prefer `<OakRadioAsButton variant="radio" colorScheme="transparent" />`.
  */
 export const OakRadioButton = forwardRef<HTMLInputElement, OakRadioButtonProps>(
   (props, ref) => {
