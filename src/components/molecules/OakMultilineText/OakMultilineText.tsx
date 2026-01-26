@@ -14,7 +14,7 @@ import { parseColor } from "@/styles/helpers/parseColor";
 
 export type OakMultilineTextProps = {
   /**
-   * Set the textarea text on first render
+   * Set the textarea text on first render when state is controlled internally (i.e. if `value` has not been provided)
    */
   initialValue?: string;
   /**
@@ -27,9 +27,7 @@ export type OakMultilineTextProps = {
    */
   errors?: Array<string>;
   label?: string;
-  onTextAreaChange?: (input: string) => void;
-  onTextAreaBlur?: (input: string) => void;
-} & Omit<OakTextAreaProps, "onChange" | "onBlur" | "$width" | "value">;
+} & Omit<OakTextAreaProps, "$width">;
 
 type StyledOakTextAreaProps = {
   isError?: boolean;
@@ -43,7 +41,8 @@ const StyledOakTextArea = styled(OakTextArea)<StyledOakTextAreaProps>`
 
   &:hover {
     background: ${parseColor("bg-btn-secondary-hover")};
-    border-color: ${parseColor("border-neutral")};
+    border-color: ${(props) =>
+      props.disabled ? "" : parseColor("border-neutral")};
   }
 
   ::placeholder {
@@ -59,9 +58,10 @@ const UnstyledComponent = forwardRef(
       disabled,
       errors,
       ariaLabel,
+      value,
       initialValue,
-      onTextAreaChange,
-      onTextAreaBlur,
+      onChange,
+      onBlur,
       onFocus,
       label,
       id,
@@ -75,10 +75,13 @@ const UnstyledComponent = forwardRef(
     ref?: React.Ref<HTMLTextAreaElement>,
   ) => {
     const [showCharCount, setShowCharCount] = useState(false);
-    const [userText, setUserText] = useState(initialValue);
-    const charCount = userText?.length ?? 0;
+    const [internalValue, setInternalValue] = useState(initialValue);
 
+    const isControlled: boolean = value !== undefined;
     const charCountWidth = charLimit > 99 ? "spacing-56" : "spacing-48";
+    const charCount = isControlled
+      ? value?.toString().length
+      : internalValue?.length ?? 0;
 
     const handleFocus = (e: React.FocusEvent<HTMLTextAreaElement>) => {
       onFocus?.(e);
@@ -86,14 +89,16 @@ const UnstyledComponent = forwardRef(
     };
 
     const handleBlur = (e: React.FocusEvent<HTMLTextAreaElement>) => {
-      setUserText(e.target.value);
-      onTextAreaBlur?.(e.target.value);
+      onBlur?.(e);
       setShowCharCount(false);
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-      setUserText(e.target.value);
-      onTextAreaChange?.(e.target.value);
+      if (!isControlled) {
+        setInternalValue(e.target.value);
+      }
+
+      onChange?.(e);
     };
 
     return (
@@ -111,7 +116,7 @@ const UnstyledComponent = forwardRef(
           ref={ref}
           id={id}
           name={name}
-          value={userText}
+          value={isControlled ? value : internalValue}
           onFocus={handleFocus}
           onChange={handleChange}
           onBlur={handleBlur}
@@ -194,16 +199,15 @@ const UnstyledComponent = forwardRef(
 /**
  *
  * This component wraps OakTextArea and provides the following functionality
- * - Manages its own state
  * - Displays errors passed in as a prop
  * - Displays and updates character count on focus only
- * - Passes stored text to onTextAreaChange and onTextAreaBlur callbacks
- *
+ * - Passes stored text to onChange and onBlur callbacks
+ * - Allows state to be controlled either internally or externally
  *
  * ### Callbacks
  *
- * onTextAreaBlur
- * onTextAreaChange
+ * onBlur
+ * onChange
  * onFocus: display character count
  *
  * ### Notes

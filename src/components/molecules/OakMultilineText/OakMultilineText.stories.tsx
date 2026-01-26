@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { StoryObj, Meta } from "@storybook/react";
 
 import { OakMultilineText } from "./OakMultilineText";
@@ -18,8 +18,8 @@ const meta: Meta<typeof OakMultilineText> = {
     errors: { control: "object" },
     label: { control: "text" },
     $height: sizeArgTypes.$height,
-    $overflowX: { control: "select", options: ["clip", "scroll", null] },
-    $overflowY: { control: "select", options: ["clip", "scroll", null] },
+    $overflowX: { control: "select", options: ["clip", "auto", null] },
+    $overflowY: { control: "select", options: ["clip", "auto", null] },
   },
   parameters: {
     controls: {
@@ -88,4 +88,20 @@ export const Errors: Story = {
     id: "errors",
     label: "Errors",
   },
+};
+
+export const Controlled: Story = {
+  render: (args) => <ControlledOakMultilineText {...args} />,
+};
+
+const ControlledOakMultilineText = () => {
+  const [value, setValue] = useState("");
+
+  return (
+    <OakMultilineText
+      charLimit={200}
+      value={value}
+      onChange={(e) => setValue(e.target.value)}
+    />
+  );
 };
