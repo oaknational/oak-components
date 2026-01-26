@@ -19,3 +19,4 @@ export * from "./OakSideMenuNavLink";
 export * from "./OakSubjectIcon";
 export * from "./OakSubjectIconButton";
 export * from "./OakVideoTranscript";
+export * from "./OakTabs";

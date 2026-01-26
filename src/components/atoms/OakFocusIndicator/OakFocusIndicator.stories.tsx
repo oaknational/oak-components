@@ -15,7 +15,7 @@ const meta: Meta<typeof OakFocusIndicator> = {
   tags: ["autodocs"],
   title: "components/atoms/OakFocusIndicator",
   argTypes: {
-    hoverBackground: { options: [...Object.keys(oakUiRoleTokens), null] },
+    hoverBackground: { options: [...oakUiRoleTokens, null] },
     dropShadow: { options: [...Object.keys(oakDropShadowTokens), null] },
     hoverDropShadow: { options: [...Object.keys(oakDropShadowTokens), null] },
     activeDropShadow: { options: [...Object.keys(oakDropShadowTokens), null] },
