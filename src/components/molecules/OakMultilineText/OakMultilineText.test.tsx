@@ -35,13 +35,13 @@ describe("OakMultilineText", () => {
     expect(container).toMatchSnapshot();
   });
 
-  it("renders given value", () => {
+  it("renders with initial value", () => {
     const { getByDisplayValue } = renderWithTheme(
       <OakMultilineText
         charLimit={200}
         $height="spacing-56"
         disabled={false}
-        value="This is the initial value."
+        initialValue="This is the initial value."
         id={"1"}
         name="textarea"
       ></OakMultilineText>,
