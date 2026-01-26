@@ -143,6 +143,7 @@ export const OakCard = ({
         $pa={"spacing-16"}
         $gap={"spacing-16"}
         $color={"text-primary"}
+        $background={"bg-primary"}
       >
         {imageSrc && (
           <StyledOakImage
