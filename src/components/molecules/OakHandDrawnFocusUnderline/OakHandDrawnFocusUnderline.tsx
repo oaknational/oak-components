@@ -12,6 +12,7 @@ const StyledOakFlex = styled(OakFlex)``;
 
 export type OakHandDrawnFocusUnderlineProps = {
   fill?: InternalStyledSvgProps["$fill"];
+  borderFill?: InternalStyledSvgProps["$fill"];
 } & SpacingStyleProps &
   SizeStyleProps;
 
@@ -25,11 +26,11 @@ export type OakHandDrawnFocusUnderlineProps = {
 export const OakHandDrawnFocusUnderline = (
   props: OakHandDrawnFocusUnderlineProps,
 ) => {
-  const { fill, ...flexProps } = props;
+  const { fill, borderFill, ...flexProps } = props;
 
   return (
     <StyledOakFlex {...flexProps}>
-      <HandDrawnFocusUnderlineSvg $fill={fill} />
+      <HandDrawnFocusUnderlineSvg $fill={fill} borderFill={borderFill} />
     </StyledOakFlex>
   );
 };
