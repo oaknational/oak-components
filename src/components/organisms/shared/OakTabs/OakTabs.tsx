@@ -17,6 +17,8 @@ export type OakTabsProps<T extends string> = {
   onTabClick: (tab: T) => void;
 };
 
+const StyledFocusOutline = styled(OakFlex)``;
+
 const StyledTabButton = styled(InternalButton)<{
   $hoverColor: OakCombinedColorToken;
   $hoverBackground: OakCombinedColorToken;
@@ -30,7 +32,7 @@ const StyledTabButton = styled(InternalButton)<{
   }
   &:focus-visible:not(&:active) {
     box-shadow: ${parseDropShadow("drop-shadow-centered-grey")};
-    .focus-outline {
+    ${StyledFocusOutline} {
       box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")};
     }
   }
@@ -76,8 +78,7 @@ export function OakTabs<T extends string>(props: Readonly<OakTabsProps<T>>) {
             }
             onClick={() => onTabClick(tab)}
           >
-            <OakFlex
-              className="focus-outline"
+            <StyledFocusOutline
               $width={"100%"}
               $height={"100%"}
               $borderRadius={"border-radius-circle"}
@@ -87,7 +88,7 @@ export function OakTabs<T extends string>(props: Readonly<OakTabsProps<T>>) {
               $whiteSpace={"nowrap"}
             >
               {tab}
-            </OakFlex>
+            </StyledFocusOutline>
           </StyledTabButton>
         );
       })}
