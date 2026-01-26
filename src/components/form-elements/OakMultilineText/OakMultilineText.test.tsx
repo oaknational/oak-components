@@ -49,6 +49,22 @@ describe("OakMultilineText", () => {
     expect(getByDisplayValue("This is the initial value.")).toBeInTheDocument();
   });
 
+  it("renders externally set value", () => {
+    const { getByDisplayValue } = renderWithTheme(
+      <OakMultilineText
+        charLimit={200}
+        $height="spacing-56"
+        disabled={false}
+        value="This value is controlled externally."
+        id={"1"}
+        name="textarea"
+      ></OakMultilineText>,
+    );
+    expect(
+      getByDisplayValue("This value is controlled externally."),
+    ).toBeInTheDocument();
+  });
+
   it("shows char count on focus", async () => {
     const { getByRole, getByLabelText } = renderWithTheme(
       <OakMultilineText
@@ -74,9 +90,9 @@ describe("OakMultilineText", () => {
     expect(getByLabelText("character count")).toBeInTheDocument();
   });
 
-  it("calls onTextAreaChange when text is changed", async () => {
+  it("calls onChange when text is changed", async () => {
     const user = userEvent.setup();
-    const onTextAreaChange = jest.fn();
+    const onChange = jest.fn();
     const { getByDisplayValue } = renderWithTheme(
       <OakMultilineText
         charLimit={200}
@@ -84,7 +100,8 @@ describe("OakMultilineText", () => {
         disabled={false}
         id={"1"}
         name="textarea"
-        initialValue="Hello"
+        value="Hello"
+        onChange={onChange}
       />,
     );
     const textArea = getByDisplayValue("Hello");
@@ -92,8 +109,7 @@ describe("OakMultilineText", () => {
     await user.click(textArea);
     expect(textArea).toHaveFocus();
     await user.type(textArea, ", world!");
-    expect(textArea).toHaveValue("Hello, world!");
-    expect(onTextAreaChange).not.toHaveBeenCalled();
+    expect(onChange).toHaveBeenCalled();
   });
 
   it("trims text when pasted text length exceeds character limit", async () => {
@@ -120,20 +136,21 @@ describe("OakMultilineText", () => {
 
   it("counts characters correctly when text is edited", async () => {
     const user = userEvent.setup();
-    const onTextAreaChange = jest.fn();
+    const onChange = jest.fn();
 
     const { getByRole, getByLabelText } = renderWithTheme(
       <OakMultilineText
         charLimit={100}
         $height="spacing-56"
         disabled={false}
-        onTextAreaChange={onTextAreaChange}
+        onChange={onChange}
         id={"1"}
         name="textarea"
       />,
     );
 
     const textArea = getByRole("textbox");
+
     await user.type(textArea, "Hello, world!");
     const charCount = getByLabelText("character count");
 
@@ -146,7 +163,7 @@ describe("OakMultilineText", () => {
     await user.click(textArea);
     expect(textArea).toHaveFocus();
     expect(charCount).toHaveTextContent("12/100");
-    expect(onTextAreaChange).toHaveBeenCalledTimes(14);
+    expect(onChange).toHaveBeenCalledTimes(14);
   });
 
   it("shows errors if errors have been passed in as prop", () => {
@@ -168,16 +185,16 @@ describe("OakMultilineText", () => {
     expect(invalidText).toBeInTheDocument();
   });
 
-  it("calls onTextAreaBlur when blurred", async () => {
+  it("calls onBlur when blurred", async () => {
     const user = userEvent.setup();
-    const onTextAreaBlur = jest.fn();
+    const onBlur = jest.fn();
     const { getByRole, getByText } = renderWithTheme(
       <>
         <OakMultilineText
           charLimit={100}
           $height="spacing-56"
           disabled={false}
-          onTextAreaBlur={onTextAreaBlur}
+          onBlur={onBlur}
           id={"1"}
           name="textarea"
         />
@@ -189,10 +206,9 @@ describe("OakMultilineText", () => {
     const paragraph = getByText("test");
 
     await user.click(textArea);
-    await user.type(textArea, "text");
     await user.click(paragraph);
 
-    expect(onTextAreaBlur).toHaveBeenCalledWith("text");
+    expect(onBlur).toHaveBeenCalled();
   });
 
   it("calls onFocus when focused", async () => {
@@ -232,7 +248,7 @@ describe("OakMultilineText", () => {
         charLimit={100}
         $height="spacing-56"
         disabled={false}
-        initialValue="Test"
+        value="Test"
         id={"1"}
         name="textarea"
       ></OakMultilineText>,
