@@ -13,6 +13,7 @@ const meta: Meta<typeof OakHandDrawnFocusUnderline> = {
   title: "OWA/OakHandDrawnFocusUnderline",
   argTypes: {
     fill: drawingArgTypes["$fill"],
+    borderFill: drawingArgTypes["$fill"],
     ...spacingArgTypes,
     ...sizeArgTypes,
   },
@@ -20,7 +21,7 @@ const meta: Meta<typeof OakHandDrawnFocusUnderline> = {
     controls: {
       include: [
         "fill",
-        "fillColor",
+        "borderFill",
         ...Object.keys(spacingArgTypes),
         ...Object.keys(sizeArgTypes),
       ],
@@ -37,6 +38,7 @@ export const Default: Story = {
   args: {
     $height: "spacing-4",
     fill: "amber",
+    borderFill: "border-primary",
   },
 };
 
@@ -44,5 +46,6 @@ export const Colors: Story = {
   render: (args) => <OakHandDrawnFocusUnderline {...args} />,
   args: {
     fill: "amber",
+    borderFill: "border-primary",
   },
 };
