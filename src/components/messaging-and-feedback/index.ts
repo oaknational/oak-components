@@ -8,3 +8,4 @@ export * from "@/components/messaging-and-feedback/OakTagFunctional";
 export * from "@/components/messaging-and-feedback/OakToast";
 export * from "@/components/messaging-and-feedback/OakTooltip";
 export * from "@/components/messaging-and-feedback/OakFocusIndicator";
+export * from "@/components/messaging-and-feedback/OakHandDrawnFocusUnderline";
