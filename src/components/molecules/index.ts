@@ -4,6 +4,7 @@ export * from "./OakBasicAccordion";
 export * from "./OakBulletList";
 export * from "./OakButtonAsRadioGroup";
 export * from "./OakButtonWithDropdown";
+export * from "./OakCard";
 export * from "./OakCardWithHandDrawnBorder";
 export * from "./OakCarousel";
 export * from "./OakCheckBox";
