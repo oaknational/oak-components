@@ -10,7 +10,7 @@ import {
   OakImage,
   OakP,
   OakIconName,
-  OakLabel,
+  OakSpan,
   OakIcon,
 } from "@/components/atoms";
 import { OakTagFunctional } from "@/components/molecules/OakTagFunctional";
@@ -177,7 +177,7 @@ export const OakCard = ({
             )}
             {linkText && (
               <OakFlex $alignItems={"center"}>
-                <OakLabel>{linkText}</OakLabel>
+                <OakSpan>{linkText}</OakSpan>
                 <OakIcon
                   iconName={linkIconName}
                   alt={linkIconName}
