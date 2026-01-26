@@ -1,0 +1,79 @@
+name: Terraform Drift Detection
+
+on:
+  push:
+    # branches:
+    #   - main
+
+permissions:
+  contents: read
+
+jobs:
+  # check-drift:
+  #   runs-on: ubuntu-latest
+
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v4
+
+  #     - name: Run Drift Detection
+  #       uses: oaknational/oak-terraform-actions/actions/terraform-vercel-drift@main
+  #       with:
+  #         TF_API_TOKEN: ${{ secrets.TF_API_TOKEN }}
+  #         TF_CLOUD_ORGANIZATION: ${{ vars.TF_CLOUD_ORGANIZATION }}
+  #         TF_WORKSPACE:         ${{ vars.TF_WORKSPACE }}
+  #         SLACK_WEBHOOK_URL:   ${{ secrets.SLACK_WEBHOOK_URL }}
+
+  drift-detection:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          TF_API_TOKEN: ${{ secrets.TF_API_TOKEN }}
+
+      - name: Terraform Init
+        working-directory: infrastructure/project
+        env:
+          TF_TOKEN_app_terraform_io: ${{ secrets.TF_API_TOKEN }}
+        run: terraform init
+
+      - name: Terraform Plan
+        working-directory: infrastructure/project
+        env:
+          TF_TOKEN_app_terraform_io: ${{ secrets.TF_API_TOKEN }}
+        run: |
+          terraform plan -out=plan.tfplan -no-color
+          terraform show -json plan.tfplan > plan.json
+          echo "plan.json generated:"
+          cat plan.json
+
+      - name: Filter Deployment Changes
+        id: filter
+        run: |
+          FILTERED_ADD=$(jq '[.resource_changes[]? | select(.change.actions[] == "create" and .type != "vercel_deployment")] | length' infrastructure/project/plan.json)
+          CHANGE=$(jq '[.resource_changes[]? | select(.change.actions[] == "update")] | length' infrastructure/project/plan.json)
+          DESTROY=$(jq '[.resource_changes[]? | select(.change.actions[] == "delete")] | length' infrastructure/project/plan.json)
+
+          echo "Filtered Changes: $FILTERED_ADD"
+          echo "add=$FILTERED_ADD" >> $GITHUB_OUTPUT
+          echo "change=$CHANGE" >> $GITHUB_OUTPUT
+          echo "destroy=$DESTROY" >> $GITHUB_OUTPUT
+      - name: Check for Drift
+        id: check-drift
+        run: |
+          ADD="${{ steps.filter.outputs.add }}"
+          CHANGE="${{ steps.filter.outputs.change }}"
+          DESTROY="${{ steps.filter.outputs.destroy }}"
+          echo "Additions: $ADD, Changes: $CHANGE, Deletions: $DESTROY"
+
+          if [ "$ADD" -gt 0 ] || [ "$CHANGE" -gt 0 ] || [ "$DESTROY" -gt 0 ]; then
+            echo "drift_detected=true" >> $GITHUB_OUTPUT
+            echo "Drift detected! $ADD to add, $CHANGE to change, $DESTROY to destroy"
+          else
+            echo "drift_detected=false" >> $GITHUB_OUTPUT
+            echo "No drift detected"
+          fi
