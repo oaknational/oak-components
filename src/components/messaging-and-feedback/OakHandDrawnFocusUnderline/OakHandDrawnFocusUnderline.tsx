@@ -35,13 +35,14 @@ export const OakHandDrawnFocusUnderline = ({
   lowerFill = "border-decorative5-stronger",
   ...props
 }: HandDrawnFocusUnderlineSvgProps) => {
+  const $height = props.$height || "spacing-8";
   return (
-    <OakFlex {...props}>
+    <OakFlex {...props} $height={$height}>
       <InternalStyledSvg
         xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="none"
         width="100%"
-        height="7"
+        height="100%"
         viewBox="0 0 195 7"
       >
         <UpperStyledUnderline
