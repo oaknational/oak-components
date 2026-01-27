@@ -5,7 +5,7 @@ import { withThemeFromJSXProvider } from "@storybook/addon-themes";
 
 import { oakDefaultTheme } from "../src/styles/theme/default.theme";
 import { oakDarkTheme } from "../src/styles/theme/dark.theme";
-import { OakGlobalStyle } from "../src/components/atoms/OakGlobalStyle/OakGlobalStyle";
+import { OakGlobalStyle } from "../src/components/OakGlobalStyle/OakGlobalStyle";
 import { oakStorybookTheme } from "./oakStorybookTheme";
 
 const globalDecorator: Decorator = (Story, context) => {
@@ -36,6 +36,32 @@ const preview: Preview = {
     },
     docs: {
       theme: oakStorybookTheme,
+    },
+    options: {
+      storySort: {
+        order: [
+          "docs",
+          "components",
+          [
+            "Buttons",
+            "Cookies",
+            "Form elements",
+            "Images and icons",
+            "Layout and structure",
+            "Messaging and feedback",
+            "Navigation",
+            "Presentational",
+            "Typography",
+            "OakThemeProvider",
+          ],
+          "internal components",
+          "OWA",
+          ["pupil", "teacher"],
+          "House CAT",
+          "style tokens",
+          "test helpers",
+        ],
+      },
     },
   },
   decorators: [

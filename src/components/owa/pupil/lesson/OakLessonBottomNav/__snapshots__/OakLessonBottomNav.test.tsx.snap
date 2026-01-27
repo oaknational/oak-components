@@ -1,0 +1,559 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`OakLessonBottomNav matches snapshot 1`] = `
+.c0 {
+  min-height: 3rem;
+  padding: 1rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c3 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c5 {
+  display: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c6 {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c13 {
+  position: relative;
+  width: 2.5rem;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  color: #222222;
+  background: #ffe555;
+  border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c15 {
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c16 {
+  position: relative;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  min-height: 1.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c19 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c22 {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0rem;
+  background: #287c34;
+  border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c23 {
+  position: relative;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  min-height: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c27 {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0rem;
+  background: #dd0035;
+  border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: initial;
+  -webkit-justify-content: initial;
+  -ms-flex-pack: initial;
+  justify-content: initial;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.c18 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c25 {
+  color: #287c34;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c26 {
+  margin-top: 0.75rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c28 {
+  color: #dd0035;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c29 {
+  margin-top: 0.75rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c10 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+  color: #222222;
+}
+
+.c10:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c17 {
+  object-fit: contain;
+}
+
+.c24 {
+  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  object-fit: contain;
+}
+
+.c11 {
+  display: inline-block;
+  position: relative;
+}
+
+.c11:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: #222222;
+}
+
+.c11:active {
+  color: #222222;
+}
+
+.c11:disabled {
+  color: #808080;
+}
+
+.c8 > :first-child:focus-visible .shadow {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c8 > :first-child:hover .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c8 > :first-child:active .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+}
+
+.c8 > :first-child:disabled .icon-container {
+  background: #808080;
+}
+
+.c8 > :first-child:hover .icon-container {
+  background: #ffe555;
+}
+
+.c8 > :first-child:active .icon-container {
+  background: #ffe555;
+}
+
+.c9:hover .shadow {
+  box-shadow: none !important;
+}
+
+.c9:active .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%) !important;
+}
+
+.c2 {
+  box-sizing: content-box;
+}
+
+@media (min-width:750px) {
+  .c19 {
+    width: auto;
+  }
+}
+
+@media (min-width:750px) {
+  .c1 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:750px) {
+  .c20 {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+<div>
+  <div
+    class="c0 c1 c2"
+  >
+    <div
+      class="c3 c4"
+    >
+      <div
+        class="c5"
+        id="quiz-hint"
+      >
+        The answer is right in front of your eyes
+      </div>
+      <div
+        style="display: contents;"
+      >
+        <div
+          class="c6 c7 c8 c9"
+        >
+          <button
+            aria-describedby="quiz-hint"
+            class="c10 c11"
+            data-rac="true"
+          >
+            <div
+              class="c3 c12"
+            >
+              <div
+                class="c13 c14 icon-container"
+              >
+                <div
+                  class="c15 shadow"
+                />
+                <div
+                  class="c16"
+                  data-icon-for="button"
+                >
+                  <img
+                    alt=""
+                    class="c17"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1705078631/icons/zldisxmbff36z68rwcef.svg"
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                  />
+                </div>
+              </div>
+              <span
+                class="c18"
+              >
+                Need a hint?
+              </span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="c19 c20"
+    />
+  </div>
+  <div
+    class="c0 c1 c2"
+  >
+    <div
+      class="c3 c4"
+    >
+      <div
+        aria-live="polite"
+        class="c3"
+      >
+        <div
+          class="c3 c21"
+          role="alert"
+        >
+          <div
+            class="c22"
+          >
+            <div
+              class="c23"
+            >
+              <img
+                alt=""
+                class="c24"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
+                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+              />
+            </div>
+          </div>
+          <span
+            class="c25"
+            role="alert"
+          >
+            Correct
+          </span>
+        </div>
+        <p
+          class="c26"
+          role="alert"
+        >
+          Well done!
+        </p>
+      </div>
+    </div>
+    <div
+      class="c19 c20"
+    />
+  </div>
+  <div
+    class="c0 c1 c2"
+  >
+    <div
+      class="c3 c4"
+    >
+      <div
+        aria-live="polite"
+        class="c3"
+      >
+        <div
+          class="c3 c21"
+          role="alert"
+        >
+          <div
+            class="c27"
+          >
+            <div
+              class="c23"
+            >
+              <img
+                alt=""
+                class="c24"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
+                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+              />
+            </div>
+          </div>
+          <span
+            class="c28"
+            role="alert"
+          >
+            Incorrect
+          </span>
+        </div>
+        <p
+          class="c29"
+          role="alert"
+        >
+          Keep trying
+        </p>
+      </div>
+    </div>
+    <div
+      class="c19 c20"
+    />
+  </div>
+  <div
+    class="c0 c1 c2"
+  >
+    <div
+      class="c3 c4"
+    >
+      <div
+        aria-live="polite"
+        class="c3"
+      >
+        <div
+          class="c3 c21"
+          role="alert"
+        >
+          <div
+            class="c22"
+          >
+            <div
+              class="c23"
+            >
+              <img
+                alt=""
+                class="c24"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
+                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+              />
+            </div>
+          </div>
+          <span
+            class="c25"
+            role="alert"
+          >
+            Correct
+          </span>
+        </div>
+        <p
+          class="c26"
+          role="alert"
+        >
+          Nearly there
+        </p>
+      </div>
+    </div>
+    <div
+      class="c19 c20"
+    />
+  </div>
+</div>
+`;

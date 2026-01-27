@@ -85,45 +85,63 @@ Sometimes it isn't enough to develop entirely inside Storybook and it might be n
    - 🚨 if you're an Oak engineer developing in OWA there is a convenience script and you should use `npm run remove-local-components` instead
      as it will automatically re-install the library from NPM.
 
-## Structure
+## Organisational structure
 
-We're trying to follow the tenets of "Atomic design". [Brad Frost's book](https://atomicdesign.bradfrost.com/) is
-a great resource if you're just starting out building your first component for this library. It's also a great reference
-if you're in doubt as to where a component belongs (it can be a little fuzzy at times!).
+⚠️ When creating a new component and in doubt of which category or folder it should belong to, discuss in #oak-components Slack channel.
 
-Components are organised into a three tier hierarchical structure applying the following rules:
+### Components
 
-### Atoms
+- generic components or components used by more than one repo
+- organised in the subfolders within 'Components' folder
 
-- Can import other atoms
-- Imports from molecules and organisms are forbidden!
-- Generic
-- Unstyled
-- Avoid embedded logic and state
-- No sub-components
-  (eg. `Box`)
+#### Current shared components subfolders
 
-### Molecules
+##### Typography
 
-- Imports from atoms components and other molecules
-- Imports from organisms are forbidden!
-- Generic
-- Styled
-- Avoid embedded logic and state
-- No sub-components
-  (eg. `IconButton`)
+All typography related components
 
-### Organisms
+##### Buttons
 
-- Imports from atoms, molecules and occasionally organisms
-- Combines multiple molecules together
-- Applicable to a limited range of contexts which might occur in multiple apps
-- Styled
-- May contain embedded logic or state
-- May be split into sub-components
-  (eg. `SchoolInputForm`)
+All buttons and icon buttons
 
-  NB. these rules are a work in progress. Modifications may be required as the library builds.
+##### Form elements
+
+Form elements including form elements styled as buttons
+
+##### Images and icons
+
+Components to render icons, images or SVGs
+
+##### Messaging and feedback
+
+Components which role is to display a message or provide feedback to the user
+
+##### Layout and structure
+
+Components which are used for creating layout
+
+##### Navigation
+
+Components which main role is navigation
+
+##### Presentational
+
+Components which main function is presentational
+
+#### Cookies
+
+Cookie related layouts
+
+### Internal components
+
+- an internal component is a non exported component which supports several shared Oak Components
+- organised within 'Internal components' folder
+
+### Squad specific components
+
+- components built to serve a specific repo
+- organised within relevant squad specific folders
+- for new squad specific components, build them directly within a relevant repo; the current caveat is that if squad specific component imports any of the internal components which are not exported, it needs to be built within `oak-components` - in this case build it within squad specific folder
 
 ## External Contributions
 

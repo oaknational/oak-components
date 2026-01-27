@@ -1,0 +1,342 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`OakMediaClipStackListItem matches snapshot 1`] = `
+.c0 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c3 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c4 {
+  position: relative;
+  width: 6.25rem;
+  height: 4rem;
+  margin-bottom: 0rem;
+  border-radius: 0.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c6 {
+  position: relative;
+  width: 100%;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c9 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c11 {
+  margin-bottom: 0rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c13 {
+  color: #575757;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.c10 {
+  object-fit: contain;
+}
+
+.c8 {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHBhdGggZmlsbD0iIzIyMiIgZD0iTTI4Ljc3OSAxOS4xNzZhMjcuMTkxIDI3LjE5MSAwIDAgMC0zLjggMS42IDE2LjcgMTYuNyAwIDAgMC03LjEgOC40YzAgLjEtLjEuMi0uMS4zLS43IDIuNC0uNiAyIDEuMyAyLjMgMS45LjMgMSAuNSAxIDEuMy0uMSA4LjggNC4xIDE1LjEgMTEuNCAxOS42YTEuNSAxLjUgMCAwIDAgMS43LjJjNS43LTIuNiA5LjMtNyAxMC4zLTEzLjJhMSAxIDAgMCAxIDEtMWwzLS4yYy44IDAgMS4zLjIgMS4yIDEuMmExNy45IDE3LjkgMCAwIDEtMy4yIDkuMiAyMy43IDIzLjcgMCAwIDEtMTAuOSA5LjEgNS40MDEgNS40MDEgMCAwIDEtNC41LS4yIDI2LjI5OCAyNi4yOTggMCAwIDEtOC41LTYuNiAyNS45IDI1LjkgMCAwIDEtNi40LTE0LjRjMC0uNi0uMi0uNy0uOC0uOC0yLjUtLjQtMi41LS4xLTIuMy0yLjlhMTkuMyAxOS4zIDAgMCAxIDEwLjgtMTYuNiAzOC45OTkgMzguOTk5IDAgMCAxIDUuNy0yLjEgMi4xIDIuMSAwIDAgMCAuOS0xLjMgMTQuMSAxNC4xIDAgMCAxIDMuNS02LjNsLjMtLjNjMS45LTIgMi42LTIgNC4zLjJsLjQuNWMxLjEgMS4xIDEgMS41LS4xIDIuNmExMS45IDExLjkgMCAwIDAtMy4yIDQuNCAxNi45IDE2LjkgMCAwIDEgNy41IDIuM2M1LjcgMy41IDkuMiA4LjMgOS45IDE1IC4wMTYuOTAxLS4wMTcgMS44MDItLjEgMi43IDAgLjgtLjYgMS0xLjIgMS4yYTE2LjEgMTYuMSAwIDAgMS0xMS0uNyAxNy45MDEgMTcuOTAxIDAgMCAxLTEwLjktMTMuNiA5Ljc5NiA5Ljc5NiAwIDAgMS0uMS0xLjlabTE4LjEgMTIuMmMuNC01LjUtNi45LTEyLjYtMTMtMTIuMS41IDYuNSA3LjYgMTIuOCAxMyAxMi4xWiIgb3BhY2l0eT0iLjEiLz48L3N2Zz4=);
+  background-color: #e7f6f5;
+  background-size: 4rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: contain;
+}
+
+.c14 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c12 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+  color: #222222;
+}
+
+.c2 {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.c2:hover h5 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c2:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c2:hover img,
+.c2:focus-visible img {
+  -webkit-filter: brightness(80%);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.c5 {
+  box-shadow: #808080 8px -6px;
+  margin-top: 10px;
+  margin-right: 15px;
+}
+
+.c5 img {
+  -webkit-filter: brightness(100%);
+}
+
+.c5::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 8px;
+  width: 100%;
+  height: 100%;
+  box-shadow: #cacaca 7px -4px;
+  border-radius: 0.25rem;
+}
+
+.c5 #play-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -16px;
+  margin-top: -16px;
+}
+
+.c7 {
+  background-color: #e7f6f5;
+  background-size: 4rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.c7 img {
+  object-fit: fill;
+  border-radius: 0.25rem;
+}
+
+@media (min-width:750px) {
+  .c4 {
+    width: 6.25rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c4 {
+    width: 11.25rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c4 {
+    height: 4rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c4 {
+    height: 6.25rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c4 {
+    margin-bottom: 0rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c4 {
+    margin-bottom: 0.75rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c11 {
+    margin-bottom: 0rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c11 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c1 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:1280px) {
+  .c1 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (min-width:750px) {
+  .c1 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media (min-width:1280px) {
+  .c1 {
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width:750px) {
+  .c1 {
+    gap: 0.5rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c1 {
+    gap: 0rem;
+  }
+}
+
+@media (max-width:749px) {
+  .c5 {
+    box-shadow: #808080 4px -3px;
+  }
+
+  .c5::after {
+    top: -3px;
+    left: 4px;
+    box-shadow: #cacaca 4px -3px;
+  }
+}
+
+<div>
+  <a
+    class="c0 c1 c2"
+    href=""
+  >
+    <div
+      class="c3"
+    >
+      <div
+        class="c4 c5"
+      >
+        <div
+          class="c6 c7"
+        >
+          <img
+            alt="alt text for the image"
+            class="c8"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            sizes="100vw"
+            src="http://localhost/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336494%2Fsamples%2Flandscapes%2Fnature-mountains.jpg&w=3840&q=75"
+            srcset="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336494%2Fsamples%2Flandscapes%2Fnature-mountains.jpg&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336494%2Fsamples%2Flandscapes%2Fnature-mountains.jpg&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336494%2Fsamples%2Flandscapes%2Fnature-mountains.jpg&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336494%2Fsamples%2Flandscapes%2Fnature-mountains.jpg&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336494%2Fsamples%2Flandscapes%2Fnature-mountains.jpg&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336494%2Fsamples%2Flandscapes%2Fnature-mountains.jpg&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336494%2Fsamples%2Flandscapes%2Fnature-mountains.jpg&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fmock-cloudinary-cloud%2Fimage%2Fupload%2Fv1698336494%2Fsamples%2Flandscapes%2Fnature-mountains.jpg&w=3840&q=75 3840w"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+          />
+        </div>
+        <div
+          class="c9"
+          id="play-icon"
+        >
+          <img
+            alt=""
+            class="c10"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1732099511/icons/g1xehzuhjnb0xeftmdno.svg"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="c11"
+    >
+      <h3
+        class="c12"
+      >
+        Learning cycle 3 videos
+      </h3>
+      <div
+        class="c13 c14"
+      >
+        5
+         
+        clips
+      </div>
+    </div>
+  </a>
+</div>
+`;

@@ -1,0 +1,375 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`OakVideoTranscript matches snapshot 1`] = `
+.c0 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c2 {
+  display: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c3 {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: auto;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c5 {
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c10 {
+  position: relative;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  min-height: 1.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c12 {
+  display: block;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c13 {
+  display: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c14 {
+  max-height: 60rem;
+  padding: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-top: 1rem;
+  color: #222222;
+  background: #e4e4e4;
+  border-radius: 0.375rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+}
+
+.c16 {
+  overflow: auto;
+  width: 100%;
+  max-height: 100%;
+  padding-right: 1rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+  overflow: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c17::-webkit-scrollbar-thumb {
+  border-radius: 0.375rem;
+  background-color: #808080;
+}
+
+.c17::-webkit-scrollbar-track {
+  border-radius: 0.375rem;
+  background-color: #ffffff;
+}
+
+.c17::-webkit-scrollbar {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 0.375rem;
+}
+
+.c9 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+  text-align: left;
+}
+
+.c6 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+  color: #222222;
+  background: #ffffff;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  border: 0.125rem solid;
+  border-color: #222222;
+  border-radius: 0.25rem;
+}
+
+.c6:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c11 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  object-fit: contain;
+}
+
+.c7 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.c7:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #222222;
+  background: #f2f2f2;
+  border-color: #222222;
+}
+
+.c7:hover [data-state="selected"] {
+  display: none;
+}
+
+.c7:active {
+  background: #ffffff;
+  border-color: #222222;
+  color: #222222;
+}
+
+.c7:active [data-state="selected"] {
+  display: none;
+}
+
+.c7:disabled {
+  background: #e4e4e4;
+  border-color: #808080;
+  color: #808080;
+}
+
+.c7:disabled [data-state="selected"] {
+  display: none;
+}
+
+.c4 .grey-shadow:has(+ * + .internal-button:focus-visible) {
+  box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c4 .yellow-shadow:has(+ .internal-button:focus-visible) {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
+}
+
+.c4 .yellow-shadow:has(+ .internal-button:hover),
+.c4 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+.c4 .grey-shadow:has(+ * + .internal-button:hover) {
+  box-shadow: none;
+}
+
+.c4 .grey-shadow:has(+ * + .internal-button:active) {
+  box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+}
+
+.c4 .yellow-shadow:has(+ .internal-button:active) {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+}
+
+@media (min-width:750px) {
+  .c2 {
+    display: block;
+  }
+}
+
+@media (min-width:750px) {
+  .c12 {
+    display: none;
+  }
+}
+
+@media (min-width:750px) {
+  .c14 {
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c1 {
+    gap: 1rem;
+  }
+}
+
+<div>
+  <div
+    class="c0 c1"
+  >
+    <div
+      class="c2"
+    >
+      <div
+        class="c3 c4"
+      >
+        <div
+          class="c5 grey-shadow"
+        />
+        <div
+          class="c5 yellow-shadow"
+        />
+        <button
+          aria-controls="transcript-element"
+          aria-expanded="false"
+          class="c6 c7 internal-button"
+        >
+          <div
+            class="c0 c8"
+          >
+            <span
+              class="c9"
+            >
+              Show transcript
+            </span>
+            <div
+              class="c10"
+            >
+              <img
+                alt=""
+                class="c11"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
+                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+              />
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+    <div
+      class="c12"
+    >
+      <div
+        class="c3 c4"
+      >
+        <div
+          class="c5 grey-shadow"
+        />
+        <div
+          class="c5 yellow-shadow"
+        />
+        <button
+          aria-controls="transcript-element"
+          aria-expanded="false"
+          class="c6 c7 internal-button"
+        >
+          <div
+            class="c0 c8"
+          >
+            <span
+              class="c9"
+            >
+              Show transcript
+            </span>
+          </div>
+        </button>
+      </div>
+    </div>
+    <div
+      class="c0"
+    >
+      <p>
+        copy link control
+      </p>
+    </div>
+    <div
+      class="c0"
+    >
+      <p>
+        sign language control
+      </p>
+    </div>
+  </div>
+  <div
+    class="c13"
+    id="transcript-element"
+  >
+    <div
+      aria-live="polite"
+      class="c14 c15"
+    >
+      <div
+        class="c16 c17"
+      >
+        Transcript goes here
+      </div>
+    </div>
+  </div>
+</div>
+`;
