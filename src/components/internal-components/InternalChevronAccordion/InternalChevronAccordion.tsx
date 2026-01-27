@@ -1,7 +1,7 @@
 import React, { ReactNode, useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 
-import { OakHandDrawnFocusUnderline } from "@/components/owa/OakHandDrawnFocusUnderline";
+import { OakHandDrawnFocusUnderline } from "@/components/messaging-and-feedback/OakHandDrawnFocusUnderline";
 import {
   OakBoxProps,
   OakBox,

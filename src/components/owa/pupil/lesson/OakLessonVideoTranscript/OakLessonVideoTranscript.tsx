@@ -2,7 +2,7 @@ import React, { ReactNode, useState } from "react";
 
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
-import { OakCollapsibleContent } from "@/components/navigation/OakCollapsibleContent";
+import { OakCollapsibleContent } from "@/components/layout-and-structure/OakCollapsibleContent";
 import { OakTertiaryButton } from "@/components/buttons/OakTertiaryButton";
 
 type OakLessonVideoTranscriptProps = {

@@ -13,7 +13,6 @@ export * from "@/components/owa/OakFilterDrawer";
 export * from "@/components/owa/OakFormInputWithLabels";
 export * from "@/components/owa/OakHandDrawnCard";
 export * from "@/components/owa/OakHandDrawnCardWithIcon";
-export * from "@/components/owa/OakHandDrawnFocusUnderline";
 export * from "@/components/owa/OakHandDrawnHR";
 export * from "@/components/owa/OakInfoButton";
 export * from "@/components/owa/OakLessonInfoCard";
