@@ -9,11 +9,11 @@ import { OakHeading } from "@/components/typography/OakHeading";
 import { OakImage } from "@/components/images-and-icons/OakImage";
 import { OakP } from "@/components/typography/OakP";
 import { OakIconName, OakIcon } from "@/components/images-and-icons/OakIcon";
-import { OakLabel } from "@/components/form-elements/OakLabel";
+import { OakSpan } from "@/components/typography/OakSpan";
 import { OakTagFunctional } from "@/components/messaging-and-feedback/OakTagFunctional";
 import {
-  OakCombinedSpacingToken,
   OakAllSpacingToken,
+  OakCombinedSpacingToken,
   OakInnerPaddingToken,
   OakUiRoleToken,
 } from "@/styles";
@@ -128,6 +128,7 @@ export const OakCard = ({
 }: OakCardProps) => {
   return (
     <OakFocusIndicator
+      $background={"bg-primary"}
       hoverBackground={"bg-btn-secondary-hover"}
       $width={cardWidth}
       $borderRadius={"border-radius-m2"}
@@ -173,10 +174,10 @@ export const OakCard = ({
             )}
             {linkText && (
               <OakFlex $alignItems={"center"}>
-                <OakLabel>{linkText}</OakLabel>
+                <OakSpan>{linkText}</OakSpan>
                 <OakIcon
                   iconName={linkIconName}
-                  alt={linkIconName}
+                  alt=""
                   $width="spacing-24"
                   $height="spacing-24"
                 />
