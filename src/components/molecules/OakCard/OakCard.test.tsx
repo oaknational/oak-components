@@ -40,7 +40,6 @@ describe("OakCard", () => {
     expect(screen.getByRole("link")).toHaveAttribute("href", testData.href);
     expect(screen.queryByRole("img")).not.toBeInTheDocument();
     expect(screen.queryByRole("paragraph")).not.toBeInTheDocument();
-    expect(screen.queryByAltText("arrow-right")).not.toBeInTheDocument();
   });
 
   it("renders card with correct orientation when provided", () => {
@@ -121,7 +120,7 @@ describe("OakCard", () => {
     expect(screen.getByText(testData.tagName)).toBeInTheDocument();
   });
 
-  it("renders with link text and correct icon when provided", () => {
+  it("renders with link text and icon when provided", () => {
     renderWithTheme(
       <OakCard
         {...requiredProps}
@@ -131,15 +130,15 @@ describe("OakCard", () => {
     );
 
     expect(screen.getByText(testData.linkText)).toBeInTheDocument();
-    expect(screen.getByAltText("chevron-right")).toBeInTheDocument();
+    expect(screen.getByRole("img")).toBeInTheDocument();
   });
 
-  it("renders link text with correct default icon when not provided", () => {
+  it("renders link text with an icon when not provided", () => {
     renderWithTheme(
       <OakCard {...requiredProps} linkText={testData.linkText} />,
     );
 
     expect(screen.getByText(testData.linkText)).toBeInTheDocument();
-    expect(screen.getByAltText("arrow-right")).toBeInTheDocument();
+    expect(screen.getByRole("img")).toBeInTheDocument();
   });
 });

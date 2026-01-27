@@ -4,6 +4,7 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
 .c0 {
   overflow: hidden;
   width: 22.5rem;
+  background: #ffffff;
   border-radius: 0.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
   overflow: hidden;
@@ -48,7 +49,7 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c19 {
+.c20 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -57,7 +58,7 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c20 {
+.c21 {
   object-fit: contain;
 }
 
@@ -150,6 +151,10 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
+}
+
+.c19 {
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c17 {
@@ -264,17 +269,17 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
           <div
             class="c10 c18"
           >
-            <label
-              class="c17"
-            >
-              Test Link Text
-            </label>
-            <div
+            <span
               class="c19"
             >
+              Test Link Text
+            </span>
+            <div
+              class="c20"
+            >
               <img
-                alt="chevron-right"
-                class="c20"
+                alt=""
+                class="c21"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"
