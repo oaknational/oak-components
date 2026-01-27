@@ -7,7 +7,6 @@ import {
   InternalStyledSvgProps,
 } from "@/components/internal-components/InternalStyledSvg";
 import { SizeStyleProps } from "@/styles/utils/sizeStyle";
-
 import { parseColor } from "@/styles/helpers/parseColor";
 import { responsiveStyle } from "@/styles/utils/responsiveStyle";
 import { SpacingStyleProps } from "@/styles/utils/spacingStyle";
@@ -32,7 +31,7 @@ type HandDrawnFocusUnderlineSvgProps = {
 
 export const OakHandDrawnFocusUnderline = ({
   upperFill = "border-decorative5-stronger",
-  lowerFill = "border-decorative5-stronger",
+  lowerFill = "border-primary",
   ...props
 }: HandDrawnFocusUnderlineSvgProps) => {
   const $height = props.$height || "spacing-8";

@@ -56,10 +56,6 @@ exports[`OakBasicAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c12 {
-  object-fit: contain;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -89,20 +85,16 @@ exports[`OakBasicAccordion matches snapshot 1`] = `
   display: flex;
 }
 
-.c8 {
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c15 {
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
 .c20 {
   fill: #fbd60e;
 }
 
 .c21 {
-  fill: #fbd60e;
+  fill: #222222;
+}
+
+.c12 {
+  object-fit: contain;
 }
 
 .c5 {
@@ -171,6 +163,14 @@ exports[`OakBasicAccordion matches snapshot 1`] = `
 
 .c2 .c6:focus-visible ~ .c18 {
   visibility: visible;
+}
+
+.c15 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c8 {
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 <div>

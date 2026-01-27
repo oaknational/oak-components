@@ -18,7 +18,7 @@ exports[`OakHandDrawnFocusUnderline matches snapshot 1`] = `
 }
 
 .c3 {
-  fill: #fbd60e;
+  fill: #222222;
 }
 
 <div>

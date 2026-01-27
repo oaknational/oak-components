@@ -66,10 +66,6 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c16 {
-  object-fit: contain;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -114,7 +110,11 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
 }
 
 .c22 {
-  fill: #fbd60e;
+  fill: #222222;
+}
+
+.c16 {
+  object-fit: contain;
 }
 
 .c10 {
