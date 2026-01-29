@@ -10,7 +10,7 @@ import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakIcon, OakIconName } from "@/components/images-and-icons/OakIcon";
 import { OakSpan } from "@/components/typography/OakSpan";
 import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
-import { OakColorFilterToken } from "@/styles/theme/color";
+import { OakUiRoleToken } from "@/styles/theme/color";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { OakPromoTag } from "@/components/owa/OakPromoTag";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
@@ -26,7 +26,7 @@ const StyledButton = styled(InternalButton)`
 
   :focus .focusUnderlineSvg {
     display: block;
-    filter: ${parseColorFilter("lemon")}
+    filter: ${parseColorFilter("icon-promo")}
       drop-shadow(${parseDropShadow("drop-shadow-black")});
     transform: rotate(-2deg);
   }
@@ -64,7 +64,7 @@ export const OakHomepageTabButton = <C extends ElementType = "button">(
     ...rest
   } = props;
 
-  const color: OakColorFilterToken = isActive ? "black" : "grey60";
+  const color: OakUiRoleToken = isActive ? "text-primary" : "text-subdued";
 
   return (
     <StyledButton

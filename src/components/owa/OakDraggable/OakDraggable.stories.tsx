@@ -53,6 +53,6 @@ export const WithColors: Story = {
   args: {
     color: "text-inverted",
     background: "bg-btn-primary",
-    iconColor: "icon-main",
+    iconColor: "icon-inverted",
   },
 };

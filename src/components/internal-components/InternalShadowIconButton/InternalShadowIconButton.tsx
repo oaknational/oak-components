@@ -19,7 +19,7 @@ import {
   positionStyle,
 } from "@/styles/utils/positionStyle";
 import { parseColor } from "@/styles/helpers/parseColor";
-import { OakCombinedColorToken } from "@/styles";
+import { OakUiRoleToken } from "@/styles";
 import { SizeStyleProps, sizeStyle } from "@/styles/utils/sizeStyle";
 import { FlexStyleProps } from "@/styles/utils/flexStyle";
 
@@ -36,10 +36,10 @@ export type InternalShadowIconButtonProps = Omit<
 > & {
   iconName?: OakIconName;
   isTrailingIcon?: boolean;
-  defaultTextColor: OakCombinedColorToken;
-  hoverTextColor: OakCombinedColorToken;
-  disabledTextColor: OakCombinedColorToken;
-  hoverIconColor?: OakCombinedColorToken;
+  defaultTextColor: OakUiRoleToken;
+  hoverTextColor: OakUiRoleToken;
+  disabledTextColor: OakUiRoleToken;
+  hoverIconColor?: OakUiRoleToken;
   defaultIconColor?: OakRoundIconProps["$colorFilter"];
   disabledIconColor?: OakRoundIconProps["$colorFilter"];
   width?: SizeStyleProps["$width"];
@@ -133,7 +133,7 @@ export const InternalShadowIconButton = <C extends ElementType = "button">(
         iconName={iconName}
         $width={"spacing-24"}
         $height={"spacing-24"}
-        $colorFilter={props.disabled ? disabledIconColor : "grey60"}
+        $colorFilter={props.disabled ? disabledIconColor : "icon-subdued"}
         $position="absolute"
         $top="spacing-4"
         $left="spacing-4"
@@ -145,7 +145,7 @@ export const InternalShadowIconButton = <C extends ElementType = "button">(
         iconName={iconName}
         $width={"spacing-24"}
         $height={"spacing-24"}
-        $colorFilter={props.disabled ? disabledIconColor : "lemon"}
+        $colorFilter={props.disabled ? disabledIconColor : "icon-promo"}
         $position="absolute"
         $display="none"
         $top="spacing-2"

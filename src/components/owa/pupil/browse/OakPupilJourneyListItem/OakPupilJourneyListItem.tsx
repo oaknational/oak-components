@@ -53,7 +53,7 @@ const hoverIconStyles = css`
     background: ${parseColor("bg-btn-primary")};
 
     img {
-      filter: ${parseColorFilter("icon-main")};
+      filter: ${parseColorFilter("icon-inverted")};
     }
   }
 `;

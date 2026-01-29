@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { InternalButton } from "@/components/internal-components/InternalButton";
-import { OakCombinedColorToken } from "@/styles";
+import { OakUiRoleToken } from "@/styles";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
@@ -20,8 +20,8 @@ export type OakTabsProps<T extends string> = {
 const StyledFocusOutline = styled(OakFlex)``;
 
 const StyledTabButton = styled(InternalButton)<{
-  $hoverColor: OakCombinedColorToken;
-  $hoverBackground: OakCombinedColorToken;
+  $hoverColor: OakUiRoleToken;
+  $hoverBackground: OakUiRoleToken;
 }>`
   width: 100%;
   height: 100%;
@@ -40,12 +40,12 @@ const StyledTabButton = styled(InternalButton)<{
 
 export function OakTabs<T extends string>(props: Readonly<OakTabsProps<T>>) {
   const { colorVariant, sizeVariant, tabs, activeTab, onTabClick } = props;
-  const backgroundColor = colorVariant === "black" ? "bg-icon" : "bg-primary";
+  const backgroundColor =
+    colorVariant === "black" ? "bg-inverted" : "bg-primary";
   const textColor = colorVariant === "black" ? "text-inverted" : "text-primary";
   const hoverBackground =
     colorVariant === "black" ? "bg-btn-primary-hover" : "bg-neutral-stronger";
   const hoverText = colorVariant === "black" ? "text-inverted" : "text-primary";
-
   return (
     <OakFlex
       $height={sizeVariant === "compact" ? "spacing-40" : "spacing-56"}

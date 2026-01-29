@@ -12,7 +12,7 @@ import { OakLoadingSpinner } from "@/components/messaging-and-feedback/OakLoadin
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { positionStyle } from "@/styles/utils/positionStyle";
 import { parseColor } from "@/styles/helpers/parseColor";
-import { OakCombinedColorToken } from "@/styles";
+import { OakUiRoleToken } from "@/styles";
 import { SizeStyleProps, sizeStyle } from "@/styles/utils/sizeStyle";
 import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
 
@@ -36,15 +36,15 @@ export type OakLeftAlignedButtonProps = Omit<
 
 const StyledInternalButton = styled(InternalButton)<
   SizeStyleProps & {
-    $defaultTextColor: OakCombinedColorToken;
-    $defaultBackground: OakCombinedColorToken;
-    $defaultBorderColor: OakCombinedColorToken;
-    $hoverTextColor: OakCombinedColorToken;
-    $hoverBackground: OakCombinedColorToken;
-    $hoverBorderColor: OakCombinedColorToken;
-    $disabledBackground: OakCombinedColorToken;
-    $disabledBorderColor: OakCombinedColorToken;
-    $disabledTextColor: OakCombinedColorToken;
+    $defaultTextColor: OakUiRoleToken;
+    $defaultBackground: OakUiRoleToken;
+    $defaultBorderColor: OakUiRoleToken;
+    $hoverTextColor: OakUiRoleToken;
+    $hoverBackground: OakUiRoleToken;
+    $hoverBorderColor: OakUiRoleToken;
+    $disabledBackground: OakUiRoleToken;
+    $disabledBorderColor: OakUiRoleToken;
+    $disabledTextColor: OakUiRoleToken;
   }
 >`
   ${positionStyle}

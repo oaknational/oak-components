@@ -44,7 +44,7 @@ export const InternalCheckBoxWrapper = (
         iconName="tick"
         $width={"100%"}
         $height={"100%"}
-        $colorFilter={"white"}
+        $colorFilter={"icon-inverted"}
       />
     ),
   } = props;

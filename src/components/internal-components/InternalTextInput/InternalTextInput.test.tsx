@@ -1,6 +1,5 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { render } from "@testing-library/react";
 
 import { InternalTextInput } from "./InternalTextInput";
 
@@ -8,7 +7,9 @@ import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("InternalTextInput", () => {
   it("renders", () => {
-    const { getByTestId } = render(<InternalTextInput data-testid="test" />);
+    const { getByTestId } = renderWithTheme(
+      <InternalTextInput data-testid="test" />,
+    );
     expect(getByTestId("test")).toBeInTheDocument();
   });
 
@@ -18,7 +19,7 @@ describe("InternalTextInput", () => {
   });
 
   it("renders with placeholder", () => {
-    const { getByPlaceholderText } = render(
+    const { getByPlaceholderText } = renderWithTheme(
       <InternalTextInput placeholder="placeholder text" />,
     );
     expect(getByPlaceholderText("placeholder text")).toBeInTheDocument();
@@ -26,7 +27,7 @@ describe("InternalTextInput", () => {
 
   it("calls onFocus when focused", () => {
     const onFocus = jest.fn();
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithTheme(
       <InternalTextInput data-testid="test" onFocus={onFocus} />,
     );
     getByTestId("test").focus();
@@ -39,7 +40,7 @@ describe("InternalTextInput", () => {
 
   it("calls onBlur when blurred", () => {
     const onBlur = jest.fn();
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithTheme(
       <InternalTextInput data-testid="test" onBlur={onBlur} />,
     );
     getByTestId("test").focus();
@@ -49,7 +50,7 @@ describe("InternalTextInput", () => {
 
   it("calls onInitialFocus when focused for the first time", () => {
     const onInitialFocus = jest.fn();
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithTheme(
       <InternalTextInput data-testid="test" onInitialFocus={onInitialFocus} />,
     );
     getByTestId("test").focus();
@@ -59,7 +60,7 @@ describe("InternalTextInput", () => {
   it("calls onFocus when onInitialFocus is also defined", () => {
     const onFocus = jest.fn();
     const onInitialFocus = jest.fn();
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithTheme(
       <InternalTextInput
         data-testid="test"
         onFocus={onFocus}
@@ -72,7 +73,7 @@ describe("InternalTextInput", () => {
 
   it("doesn't call onInitialFocus only when focused for subsequent times", () => {
     const onInitialFocus = jest.fn();
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithTheme(
       <InternalTextInput data-testid="test" onInitialFocus={onInitialFocus} />,
     );
     getByTestId("test").focus();

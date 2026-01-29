@@ -4,7 +4,7 @@ import { Transition, TransitionStatus } from "react-transition-group";
 
 import { InternalShadowIconButton } from "@/components/internal-components/InternalShadowIconButton";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
-import { OakCombinedColorToken } from "@/styles";
+import { OakUiRoleToken } from "@/styles";
 import { parseOpacity } from "@/styles/helpers/parseOpacity";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakIcon } from "@/components/images-and-icons/OakIcon";
@@ -33,9 +33,9 @@ type VariantKey =
 type Variant = Record<
   VariantKey,
   {
-    background: OakCombinedColorToken;
+    background: OakUiRoleToken;
     icon: React.ReactNode;
-    color: OakCombinedColorToken;
+    color: OakUiRoleToken;
   }
 >;
 

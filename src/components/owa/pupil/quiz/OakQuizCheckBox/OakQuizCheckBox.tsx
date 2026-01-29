@@ -17,7 +17,7 @@ import { parseColor } from "@/styles/helpers/parseColor";
 import { parseBorder } from "@/styles/helpers/parseBorder";
 import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
-import { OakCombinedColorToken } from "@/styles";
+import { OakUiRoleToken } from "@/styles";
 
 const StyledInternalCheckBox = styled(InternalCheckBox)`
   &:checked:not(:disabled) {
@@ -38,9 +38,9 @@ const StyledInternalCheckBox = styled(InternalCheckBox)`
 `;
 
 type StyledFlexBoxProps = OakFlexProps & {
-  $overlayBorderColor: OakCombinedColorToken;
-  $feedbackBgColor?: OakCombinedColorToken;
-  $outlineColor: OakCombinedColorToken;
+  $overlayBorderColor: OakUiRoleToken;
+  $feedbackBgColor?: OakUiRoleToken;
+  $outlineColor: OakUiRoleToken;
 };
 
 const StyledFlexBox = styled(OakFlex)<StyledFlexBoxProps>`
@@ -227,7 +227,7 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
             >
               <OakBox
                 $ba={"border-solid-m"}
-                $borderColor={"icon-main"}
+                $borderColor={"icon-inverted"}
                 $width={"100%"}
                 $height={"100%"}
               />

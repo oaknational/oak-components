@@ -5,11 +5,11 @@ import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakP } from "@/components/typography/OakP";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakImage } from "@/components/images-and-icons/OakImage";
-import { OakCombinedColorToken } from "@/styles";
+import { OakUiRoleToken } from "@/styles";
 
 export type OakQuoteProps = {
   quote: string;
-  color?: OakCombinedColorToken;
+  color?: OakUiRoleToken;
   authorName?: string;
   authorTitle?: string;
   authorImageSrc?: string;

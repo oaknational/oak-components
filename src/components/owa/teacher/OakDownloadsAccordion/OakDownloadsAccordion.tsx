@@ -57,7 +57,7 @@ const StyledAccordionButton = styled(InternalAccordionButton)<FlexStyleProps>`
   min-width: 0;
   &:hover {
     .chevron-icon {
-      filter: ${parseColorFilter("grey60")};
+      filter: ${parseColorFilter("icon-subdued")};
     }
   }
   &:focus-visible {

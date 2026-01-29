@@ -111,7 +111,7 @@ export const ContentGuidence: Story = {
       <OakModalCenterBody
         iconName="warning"
         title="This lesson contains conflict or violence."
-        iconOverride={{ $colorFilter: "amber" }}
+        iconOverride={{ $colorFilter: "icon-warning" }}
       >
         <OakHeading
           tag="h2"
@@ -132,7 +132,7 @@ export const WithScrolling: Story = {
       <OakModalCenterBody
         iconName="books"
         title="Modal Title"
-        iconOverride={{ $colorFilter: "black" }}
+        iconOverride={{ $colorFilter: "icon-primary" }}
       >
         {[1, 2, 3].map((i) => (
           <Fragment key={i}>
