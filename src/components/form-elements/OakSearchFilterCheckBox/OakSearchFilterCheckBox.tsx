@@ -25,7 +25,7 @@ const StyledInternalCheckBox = styled(InternalCheckBox)<{
 
   &:checked:not(:disabled) + ${StyledOakIcon} {
     filter: ${(props) =>
-      props.$keepIconColor ? "none" : parseColorFilter("white")};
+      props.$keepIconColor ? "none" : parseColorFilter("icon-inverted")};
   }
 
   &:checked:not(:disabled) {

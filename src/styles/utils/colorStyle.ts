@@ -16,13 +16,13 @@ export type ColorStyleProps = {
   /**
    * Sets the `color` of the element.
    *
-   * Accepts a color token or a responsive array of color tokens.
+   * Accepts a UI role token or a responsive array of UI role tokens.
    */
   $color?: ColorToken;
   /**
    * Sets the `background-color` of the element.
    *
-   * Accepts a color token or a responsive array of color tokens.
+   * Accepts a UI role token or a responsive array of UI role tokens.
    */
   $background?: ColorToken;
 };

@@ -48,7 +48,7 @@ const StyledIcon = styled(OakIcon)<{ disabled: boolean }>`
   ${(props) => {
     if (props.disabled) {
       return css`
-        filter: ${parseColorFilter("grey50")};
+        filter: ${parseColorFilter("icon-disabled")};
       `;
     }
   }}

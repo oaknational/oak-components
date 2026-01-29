@@ -7,28 +7,23 @@ import {
 import { PropsWithTheme } from "@/styles/theme/theme";
 
 /**
- * - takes any of color token
- * - if an OakColor derives and returns the corresponding css value
- * - if an OakUiRole derives returns a function that takes the current theme and returns the corresponding css value
+ * - takes any of OakUiRoleToken or null/undefined
+ * - returns a function that takes the current theme and returns the corresponding css value
  */
 function parseColor(): undefined;
 function parseColor(
-  value?: OakColorToken | OakUiRoleToken | null,
+  value?: OakUiRoleToken | null,
 ): (props: PropsWithTheme) => string;
 function parseColor(
-  value?: OakColorToken | OakUiRoleToken | null,
+  value?: OakUiRoleToken | null,
 ): ((props: PropsWithTheme) => string) | undefined;
-function parseColor(value?: OakColorToken | OakUiRoleToken | null) {
+function parseColor(value?: OakUiRoleToken | null) {
   if (value === undefined || value === null) {
     return undefined;
   }
-  if (value in oakColorTokens) {
-    return oakColorTokens[value as OakColorToken];
-  }
-
-  if (oakUiRoleTokens.includes(value as OakUiRoleToken)) {
+  if (oakUiRoleTokens.includes(value)) {
     return ({ theme }: PropsWithTheme) => {
-      const c = theme.uiColors[value as OakUiRoleToken];
+      const c = theme.uiColors[value];
       return oakColorTokens[c as OakColorToken];
     };
   }

@@ -26,7 +26,7 @@ const StyledButton = styled(InternalButton)`
 
   :focus .focusUnderlineSvg {
     display: block;
-    filter: ${parseColorFilter("lemon")}
+    filter: ${parseColorFilter("icon-promo")}
       drop-shadow(${parseDropShadow("drop-shadow-black")});
     transform: rotate(-2deg);
   }

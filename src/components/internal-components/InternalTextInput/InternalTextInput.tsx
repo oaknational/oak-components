@@ -41,8 +41,7 @@ const StyledInput = styled.input`
   }
 
   ::placeholder {
-    color: ${({ theme }) =>
-      theme && theme.uiColors && parseColor(theme.uiColors["text-subdued"])};
+    color: ${parseColor("text-subdued")};
   }
 
   ::-webkit-search-decoration,

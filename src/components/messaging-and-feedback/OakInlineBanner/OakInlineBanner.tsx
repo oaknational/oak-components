@@ -16,7 +16,6 @@ import {
   OakIconProps,
 } from "@/components/images-and-icons/OakIcon";
 import { OakUiRoleToken } from "@/styles";
-import { OakColorFilterToken } from "@/styles/theme/color";
 import { PaddingStyleProps } from "@/styles/utils/spacingStyle";
 import { FlexStyleProps } from "@/styles/utils/flexStyle";
 
@@ -54,7 +53,7 @@ export type OakInlineBannerProps = OakFlexProps & {
   /**
    * The color filter to apply to the icon
    */
-  iconColorFilter?: OakColorFilterToken;
+  iconColorFilter?: OakUiRoleToken;
   /**
    * The optional call to action to display in the banner
    */
@@ -81,7 +80,7 @@ export type OakInlineBannerProps = OakFlexProps & {
 export type BannerTypes = {
   [key in OakInlineBannerTypes]: {
     icon: OakIconName;
-    iconColorFilter: OakColorFilterToken;
+    iconColorFilter: OakUiRoleToken;
     backgroundColour: OakUiRoleToken;
     borderColour: OakUiRoleToken;
   };
@@ -90,37 +89,37 @@ export type BannerTypes = {
 export const bannerTypes: BannerTypes = {
   info: {
     icon: "info",
-    iconColorFilter: "black",
+    iconColorFilter: "icon-primary",
     backgroundColour: "bg-decorative3-very-subdued",
     borderColour: "border-decorative3",
   },
   neutral: {
     icon: "info",
-    iconColorFilter: "black",
+    iconColorFilter: "icon-primary",
     backgroundColour: "bg-neutral",
     borderColour: "border-neutral-lighter",
   },
   success: {
     icon: "success",
-    iconColorFilter: "black",
+    iconColorFilter: "icon-primary",
     backgroundColour: "bg-decorative1-very-subdued",
     borderColour: "border-decorative1-stronger",
   },
   alert: {
     icon: "bell",
-    iconColorFilter: "black",
+    iconColorFilter: "icon-primary",
     backgroundColour: "bg-decorative5-very-subdued",
     borderColour: "border-decorative5-stronger",
   },
   warning: {
     icon: "warning",
-    iconColorFilter: "amber",
+    iconColorFilter: "icon-warning",
     backgroundColour: "bg-decorative6-very-subdued",
     borderColour: "border-decorative6",
   },
   error: {
     icon: "error",
-    iconColorFilter: "red",
+    iconColorFilter: "icon-error",
     backgroundColour: "bg-incorrect",
     borderColour: "border-error",
   },

@@ -73,7 +73,7 @@ export const StyledWithIconFromLibrary: Story = {
   render: (args) => <OakRoundIcon {...args} />,
   args: {
     $background: "icon-success",
-    $colorFilter: "white",
+    $colorFilter: "icon-inverted",
     $pa: "spacing-0",
     $width: "spacing-24",
     $height: "spacing-24",

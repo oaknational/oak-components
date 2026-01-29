@@ -70,7 +70,7 @@ export type BorderStyleProps = {
   /**
    * Apply a border color to all sides of the element
    *
-   * Accepts a color token or a responsive array of color tokens.
+   * Accepts a UI role token or a responsive array of UI role tokens.
    */
   $borderColor?: BorderColorProps;
   $borderRadius?: BorderRadiusProps;

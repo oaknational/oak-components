@@ -108,7 +108,7 @@ export const OakCaptionCard = (props: OakCaptionCardProps) => {
     lessonHref,
   } = props;
 
-  const filterColor = disabled ? "grey50" : null;
+  const filterColor = disabled ? "icon-disabled" : null;
 
   return (
     <StyledFlexBox
