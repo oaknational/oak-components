@@ -1,0 +1,53 @@
+name: Terraform Drift Detection
+
+on:
+  push:
+    # branches:
+    #   - main
+
+permissions:
+  contents: read
+
+jobs:
+  check-drift:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Upload Configuration
+        uses: hashicorp/tfc-workflows-github/actions/upload-configuration@v1.3.2
+        id: plan-upload
+        with:
+          workspace: ${{ vars.TF_WORKSPACE }}
+          token: ${{ secrets.TF_API_TOKEN }}
+          organization: ${{ vars.TF_CLOUD_ORGANIZATION }}
+          directory: "infrastructure/project"
+          speculative: true
+
+      - name: Create Plan Runs
+        uses: hashicorp/tfc-workflows-github/actions/create-run@v1.3.2
+        id: plan-run
+        with:
+          workspace: ${{ vars.TF_WORKSPACE }}
+          token: ${{ secrets.TF_API_TOKEN }}
+          organization: ${{ vars.TF_CLOUD_ORGANIZATION }}
+          configuration_version: ${{ steps.plan-upload.outputs.configuration_version_id }}
+          plan_only: true
+          message: "Drift detection check from GitHub Actions - Run ${{ github.run_id }}"
+
+      - name: test
+        id: test
+        shell: bash
+        run: |
+          output="${{ steps.plan-run.outputs.payload }}"
+          echo "Output: $output"
+
+      # - name: Run Drift Detection
+      #   uses: oaknational/oak-terraform-actions/actions/terraform-vercel-drift@main
+      #   with:
+      #     TF_API_TOKEN: ${{ secrets.TF_API_TOKEN }}
+      #     TF_CLOUD_ORGANIZATION: ${{ vars.TF_CLOUD_ORGANIZATION }}
+      #     TF_WORKSPACE:         ${{ vars.TF_WORKSPACE }}
+      #     SLACK_WEBHOOK_URL:   ${{ secrets.SLACK_WEBHOOK_URL }}
