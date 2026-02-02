@@ -23,10 +23,19 @@ type DecorativeBackgroundMain = Extract<
 >;
 type DecorativeColorScheme =
   DecorativeBackgroundMain extends `bg-${infer N}-main` ? N : never;
-type OakRadioAsButtonColorScheme =
-  | DecorativeColorScheme
-  | "primary"
-  | "transparent";
+
+export const colorSchemes = [
+  "primary",
+  "decorative1",
+  "decorative2",
+  "decorative3",
+  "decorative4",
+  "decorative5",
+  "decorative6",
+  "transparent",
+] as const satisfies Array<DecorativeColorScheme | "primary" | "transparent">;
+
+type OakRadioAsButtonColorScheme = (typeof colorSchemes)[number];
 
 // Converted to styled-component so it can be used in '&:checked:not(:disabled) + ${StyledOakIcon}' to change svg color.
 const StyledOakIcon = styled(OakIcon)``;
@@ -115,7 +124,7 @@ const getColorSchemeTokens = (
   }
 };
 
-type OakRadioAsButtonProps = Omit<
+export type OakRadioAsButtonProps = Omit<
   BaseRadioProps,
   "defaultChecked" | "id" | "checked" | "variant" | "icon"
 > & {

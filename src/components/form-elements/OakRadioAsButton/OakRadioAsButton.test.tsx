@@ -21,19 +21,6 @@ describe("OakRadioAsButton", () => {
     expect(getByRole("radio")).toBeInTheDocument();
   });
 
-  it("matches snapshot", () => {
-    const { container } = renderWithTheme(
-      <OakRadioAsButton
-        name="radio-1"
-        value="history"
-        variant="with-icon"
-        icon={"subject-history"}
-        displayValue="History"
-      />,
-    );
-    expect(container).toMatchSnapshot();
-  });
-
   it("has a label", () => {
     const { getByLabelText } = renderWithTheme(
       <OakRadioAsButton

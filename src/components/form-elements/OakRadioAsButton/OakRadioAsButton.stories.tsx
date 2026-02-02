@@ -1,7 +1,11 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakRadioAsButton } from "./OakRadioAsButton";
+import {
+  OakRadioAsButton,
+  OakRadioAsButtonProps,
+  colorSchemes,
+} from "./OakRadioAsButton";
 
 import { OakRadioGroup } from "@/components/form-elements/OakRadioGroup";
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
@@ -11,20 +15,11 @@ import { OakBox } from "@/components/layout-and-structure/OakBox";
 const argTypes: Meta<typeof OakRadioAsButton>["argTypes"] = {
   variant: {
     control: { type: "select" },
-    options: ["icon", "radio"],
+    options: ["default", "with-icon", "with-radio"],
   },
   colorScheme: {
     control: { type: "select" },
-    options: [
-      "primary",
-      "decorative1",
-      "decorative2",
-      "decorative3",
-      "decorative4",
-      "decorative5",
-      "decorative6",
-      "transparent",
-    ],
+    options: [...colorSchemes],
   },
   disabled: {
     control: { type: "boolean" },
@@ -53,10 +48,10 @@ const meta: Meta<typeof OakRadioAsButton> = {
         "value",
         "icon",
         "width",
-        'onChange',
-        'onFocus',
-        'onBlur',
-        'onHovered',
+        "onChange",
+        "onFocus",
+        "onBlur",
+        "onHovered",
       ],
     },
   },
@@ -66,7 +61,7 @@ export default meta;
 
 type Story = StoryObj<typeof OakRadioAsButton>;
 
-export const Playground: Story = {
+export const Default: Story = {
   render: (args) => (
     <OakRadioGroup name="test">
       <OakRadioAsButton {...args} />
@@ -79,119 +74,89 @@ export const Playground: Story = {
   },
 };
 
-export const StatesGrid: Story = {
-  parameters: {
-    controls: { disable: true },
-  },
-  render: () => {
-    const colorSchemes = [
-      "transparent",
-      "primary",
-      "decorative1",
-      "decorative2",
-      "decorative3",
-      "decorative4",
-      "decorative5",
-      "decorative6",
-    ] as const;
+function createStatesGridForVariant(
+  variant: NonNullable<OakRadioAsButtonProps["variant"]>,
+): Story {
+  return {
+    parameters: {
+      controls: { disable: true },
+    },
+    render: () => {
+      const states = ["default", "checked", "disabled"] as const;
 
-    const states = ["default", "checked", "disabled"] as const;
+      const renderCell = (opts: {
+        colorScheme: (typeof colorSchemes)[number];
+        state: (typeof states)[number];
+      }) => {
+        const { colorScheme, state } = opts;
+        const props = {
+          value: `${variant}-${colorScheme}-${state}`,
+          displayValue: "Label",
+          colorScheme,
+          disabled: state === "disabled",
+        };
 
-    const variants = ["icon", "radio"] as const;
-
-    const renderCell = (opts: {
-      variant: "icon" | "radio";
-      colorScheme: (typeof colorSchemes)[number];
-      state: (typeof states)[number];
-    }) => {
-      const { variant, colorScheme, state } = opts;
-      const cellValue = `${variant}-${colorScheme}-${state}`;
-      const groupValue = state === "checked" ? cellValue : "__none__";
+        return (
+          <OakRadioGroup
+            name={`oak-radio-as-button-grid-${props.value}`}
+            value={state === "checked" ? props.value : "none"}
+          >
+            {variant === "with-icon" ? (
+              <OakRadioAsButton
+                {...props}
+                variant={variant}
+                icon="subject-art"
+              />
+            ) : (
+              <OakRadioAsButton {...props} variant={variant} />
+            )}
+          </OakRadioGroup>
+        );
+      };
 
       return (
-        <OakRadioGroup
-          name={`oak-radio-as-button-grid-${cellValue}`}
-          aria-label={`OakRadioAsButton ${variant} ${colorScheme} ${state}`}
-          value={groupValue}
+        <OakGrid
+          $maxWidth="spacing-640"
+          $gridTemplateColumns={`minmax(140px, auto) repeat(${states.length}, minmax(140px, 1fr))`}
+          $cg="spacing-16"
+          $rg="spacing-16"
         >
-          {variant === "icon" ? (
-            <OakRadioAsButton
-              variant="with-icon"
-              value={cellValue}
-              displayValue="Label"
-              aria-label={`${variant} ${colorScheme} ${state}`}
-              colorScheme={colorScheme}
-              disabled={state === "disabled"}
-              icon="subject-art"
-            />
-          ) : (
-            <OakRadioAsButton
-              variant="with-radio"
-              value={cellValue}
-              displayValue="Label"
-              aria-label={`${variant} ${colorScheme} ${state}`}
-              colorScheme={colorScheme}
-              disabled={state === "disabled"}
-            />
-          )}
-        </OakRadioGroup>
-      );
-    };
+          <OakBox />
+          {states.map((state) => (
+            <OakBox key={state} $font="body-3-bold">
+              {state}
+            </OakBox>
+          ))}
 
-    return (
-      <OakGrid
-        $gridTemplateColumns={`minmax(140px, auto) repeat(${colorSchemes.length}, minmax(140px, 1fr))`}
-        $cg="spacing-16"
-        $rg="spacing-16"
-      >
-        <OakBox />
-        {colorSchemes.map((colorScheme) => (
-          <OakBox key={colorScheme} $font="body-3-bold">
-            {colorScheme}
-          </OakBox>
-        ))}
-
-        {variants.flatMap((variant) =>
-          states.flatMap((state) => {
-            const rowKey = `${variant}-${state}`;
+          {colorSchemes.flatMap((colorScheme) => {
             return [
               <OakBox
-                key={`${rowKey}-label`}
+                key={colorScheme}
                 $font="body-3-bold"
                 $minHeight="spacing-40"
                 style={{ display: "flex", alignItems: "center" }}
               >
-                {variant} / {state}
+                {colorScheme}
               </OakBox>,
-              ...colorSchemes.map((colorScheme) => (
-                <OakBox key={`${rowKey}-${colorScheme}`}>
+              ...states.map((state) => (
+                <OakBox key={`${colorScheme}-${state}`}>
                   {renderCell({
-                    variant,
                     colorScheme,
                     state,
                   })}
                 </OakBox>
               )),
             ];
-          }),
-        )}
-      </OakGrid>
-    );
-  },
-};
+          })}
+        </OakGrid>
+      );
+    },
+  };
+}
 
-export const NoIcon: Story = {
-  render: (args) => (
-    <OakRadioGroup name="test">
-      <OakRadioAsButton {...args} />
-    </OakRadioGroup>
-  ),
-  args: {
-    value: "a test value",
-    displayValue: "Art and design",
-    "aria-label": "Art and design",
-  },
-};
+export const DefaultVariant: Story = createStatesGridForVariant("default");
+export const WithIconVariant: Story = createStatesGridForVariant("with-icon");
+export const WithRadioVariant: Story = createStatesGridForVariant("with-radio");
 
 export const VariableWidths: Story = {
   render: (args) => {
