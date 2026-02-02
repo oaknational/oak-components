@@ -13,6 +13,7 @@ describe("OakRadioAsButton", () => {
       <OakRadioAsButton
         name="radio-1"
         value="history"
+        variant="with-icon"
         icon={"subject-history"}
         displayValue="History"
       />,
@@ -25,6 +26,7 @@ describe("OakRadioAsButton", () => {
       <OakRadioAsButton
         name="radio-1"
         value="history"
+        variant="with-icon"
         icon={"subject-history"}
         displayValue="History"
       />,
@@ -38,6 +40,7 @@ describe("OakRadioAsButton", () => {
         name="radio-1"
         displayValue="Option 1"
         value="1"
+        variant="with-icon"
         icon={"subject-history"}
       />,
     );
@@ -63,6 +66,7 @@ describe("OakRadioAsButton", () => {
         name="radio-1"
         value="Option 1"
         displayValue="Option 1"
+        variant="with-icon"
         icon="subject-history"
       />,
     );
@@ -77,6 +81,7 @@ describe("OakRadioAsButton", () => {
         name="radio-1"
         value="Option 1"
         displayValue="Display Text"
+        variant="with-icon"
         icon="subject-history"
       />,
     );
@@ -95,12 +100,14 @@ describe("OakRadioAsButton", () => {
         <OakRadioAsButton
           value="Option 1"
           onChange={onChange}
+          variant="with-icon"
           icon={"subject-history"}
           displayValue="Option 1"
         />
         <OakRadioAsButton
           value="Option 2"
           onChange={onChange}
+          variant="with-icon"
           icon={"subject-biology"}
           displayValue="Option 2"
         />
@@ -197,12 +204,14 @@ describe("OakRadioAsButton", () => {
         <OakRadioAsButton
           value="Option 1"
           onChange={onChange}
+          variant="with-icon"
           icon={"subject-history"}
           displayValue="Option 1"
         />
         <OakRadioAsButton
           value="Option 2"
           onChange={onChange}
+          variant="with-icon"
           icon={"subject-biology"}
           displayValue="Option 2"
         />
@@ -219,16 +228,19 @@ describe("OakRadioAsButton", () => {
       <OakRadioGroup name="test" value="option_2">
         <OakRadioAsButton
           value="option_1"
+          variant="with-icon"
           icon={"subject-history"}
           displayValue="Option 1"
         />
         <OakRadioAsButton
           value="option_2"
+          variant="with-icon"
           icon={"subject-biology"}
           displayValue="Option 2"
         />
         <OakRadioAsButton
           value="option_3"
+          variant="with-icon"
           icon={"subject-biology"}
           displayValue="Option 3"
         />
@@ -248,6 +260,7 @@ describe("OakRadioAsButton", () => {
         name="radio-1"
         value="Option 1"
         onFocus={onFocus}
+        variant="with-icon"
         icon={"subject-history"}
         displayValue="Option 1"
       />,
@@ -265,6 +278,7 @@ describe("OakRadioAsButton", () => {
         name="radio-1"
         value="Option 1"
         onBlur={onBlur}
+        variant="with-icon"
         icon={"subject-history"}
         displayValue="Option 1"
       />,
@@ -283,6 +297,7 @@ describe("OakRadioAsButton", () => {
         name="radio-1"
         value="Option 1"
         onHovered={onHovered}
+        variant="with-icon"
         icon={"subject-history"}
         displayValue="Option 1"
       />,
@@ -302,6 +317,7 @@ describe("OakRadioAsButton", () => {
         value="Option 1"
         onChange={onChange}
         disabled
+        variant="with-icon"
         icon={"subject-history"}
         displayValue="Option 1"
       />,
@@ -318,16 +334,19 @@ describe("OakRadioAsButton", () => {
       <OakRadioGroup name="test" onChange={onChange}>
         <OakRadioAsButton
           value="option_1"
+          variant="with-icon"
           icon={"subject-history"}
           displayValue="Option 1"
         />
         <OakRadioAsButton
           value="option_2"
+          variant="with-icon"
           icon={"subject-biology"}
           displayValue="Option 2"
         />
         <OakRadioAsButton
           value="option_3"
+          variant="with-icon"
           icon={"subject-biology"}
           displayValue="Option 3"
         />
@@ -350,6 +369,7 @@ describe("OakRadioAsButton", () => {
         name="radio-1"
         value="history"
         displayValue="History"
+        variant="with-icon"
         icon={"subject-history"}
         aria-label="History"
       />,

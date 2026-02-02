@@ -115,15 +115,15 @@ const getColorSchemeTokens = (
   }
 };
 
-export type OakRadioAsButtonProps = Omit<
+type OakRadioAsButtonProps = Omit<
   BaseRadioProps,
-  "defaultChecked" | "id" | "checked"
+  "defaultChecked" | "id" | "checked" | "variant" | "icon"
 > & {
+  value?: HTMLInputElement["value"];
   innerRef?: React.RefObject<HTMLInputElement>;
   displayValue: string;
   keepIconColor?: boolean;
   disabled?: HTMLInputElement["disabled"];
-  value?: HTMLInputElement["value"];
   "aria-labelledby"?: React.AriaAttributes["aria-labelledby"];
   "aria-label"?: React.AriaAttributes["aria-label"];
   /**
@@ -134,16 +134,20 @@ export type OakRadioAsButtonProps = Omit<
   width?: SizeStyleProps["$width"];
 } & (
     | {
-        /**
-         * Controls whether this component displays an icon alongside the label or a radio.
-         * Defaults to `"icon"` for backwards compatibility.
-         */
-        variant?: "icon";
-        icon?: OakIconName;
+        variant: "with-icon";
+        icon: OakIconName;
       }
     | {
-        variant: "radio";
-        icon?: never;
+        /**
+         * Controls the appearance of the component.
+         *
+         * - `"default"`: Displays as a button
+         * - `"with-icon"`: Displays an icon alongside the label
+         * - `"with-radio"`: Displays a radio button
+         *
+         * @default `"default"`
+         */
+        variant?: "default" | "with-radio";
       }
   );
 
@@ -158,8 +162,6 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
     innerRef,
     displayValue,
     onChange,
-    variant = "icon",
-    icon,
     keepIconColor,
     colorScheme = "primary",
     width,
@@ -186,6 +188,14 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
   const isChecked = currentValue === value;
   const colorSchemeTokens = getColorSchemeTokens(colorScheme);
 
+  const {
+    icon: _icon,
+    variant: _variant,
+    ...restWithoutVariantProps
+  } = rest as typeof rest & {
+    icon?: OakIconName;
+  };
+
   const radio = (
     <InternalRadioWrapper
       radioBorderColor="border-neutral"
@@ -194,7 +204,7 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
       disableFocusRing
       internalRadio={
         <InternalRadio
-          {...rest}
+          {...restWithoutVariantProps}
           id={id}
           value={value}
           disabled={disabled}
@@ -225,8 +235,14 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
       $boxSizing="content-box"
       onClick={handleContainerClick}
     >
-      {variant === "radio" ? radio : <OakScreenReader>{radio}</OakScreenReader>}
-      {variant === "icon" && icon && <StyledOakIcon alt="" iconName={icon} />}
+      {rest.variant === "with-radio" ? (
+        radio
+      ) : (
+        <OakScreenReader>{radio}</OakScreenReader>
+      )}
+      {rest.variant === "with-icon" && (
+        <StyledOakIcon alt="" iconName={rest.icon} />
+      )}
       <InternalCheckBoxLabelHoverDecor
         pointerEvents="none"
         htmlFor={id}

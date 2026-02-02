@@ -116,7 +116,7 @@ export const StatesGrid: Story = {
         >
           {variant === "icon" ? (
             <OakRadioAsButton
-              variant="icon"
+              variant="with-icon"
               value={cellValue}
               displayValue="Label"
               aria-label={`${variant} ${colorScheme} ${state}`}
@@ -126,7 +126,7 @@ export const StatesGrid: Story = {
             />
           ) : (
             <OakRadioAsButton
-              variant="radio"
+              variant="with-radio"
               value={cellValue}
               displayValue="Label"
               aria-label={`${variant} ${colorScheme} ${state}`}
@@ -200,7 +200,6 @@ export const VariableWidths: Story = {
     const {
       width: _width,
       colorScheme: _colorScheme,
-      icon: _icon,
       displayValue: _displayValue,
       value: _value,
       ...restArgs
@@ -215,7 +214,7 @@ export const VariableWidths: Story = {
       >
         <OakRadioAsButton
           {...restArgs}
-          variant="radio"
+          variant="with-radio"
           value="w-fit"
           displayValue="fit-content (longer label to show sizing)"
           aria-label="Width fit-content"
@@ -224,7 +223,7 @@ export const VariableWidths: Story = {
         />
         <OakRadioAsButton
           {...restArgs}
-          variant="radio"
+          variant="with-radio"
           value="w-160"
           displayValue="spacing-160 (may wrap)"
           width="spacing-160"
@@ -232,7 +231,7 @@ export const VariableWidths: Story = {
         />
         <OakRadioAsButton
           {...restArgs}
-          variant="radio"
+          variant="with-radio"
           value="w-240"
           displayValue="spacing-240"
           width="spacing-240"
@@ -240,7 +239,7 @@ export const VariableWidths: Story = {
         />
         <OakRadioAsButton
           {...restArgs}
-          variant="radio"
+          variant="with-radio"
           value="w-responsive"
           displayValue="Responsive [spacing-160, spacing-240]"
           aria-label="Width responsive"
@@ -249,7 +248,7 @@ export const VariableWidths: Story = {
         />
         <OakRadioAsButton
           {...restArgs}
-          variant="icon"
+          variant="with-icon"
           value="w-fit"
           displayValue="fit-content (longer label to show sizing)"
           aria-label="Width fit-content"
@@ -259,7 +258,7 @@ export const VariableWidths: Story = {
         />
         <OakRadioAsButton
           {...restArgs}
-          variant="icon"
+          variant="with-icon"
           value="w-160"
           displayValue="spacing-160 (may wrap)"
           width="spacing-160"
@@ -268,7 +267,7 @@ export const VariableWidths: Story = {
         />
         <OakRadioAsButton
           {...restArgs}
-          variant="icon"
+          variant="with-icon"
           value="w-240"
           displayValue="spacing-240"
           width="spacing-240"
@@ -277,7 +276,7 @@ export const VariableWidths: Story = {
         />
         <OakRadioAsButton
           {...restArgs}
-          variant="icon"
+          variant="with-icon"
           value="w-responsive"
           displayValue="Responsive [spacing-160, spacing-240]"
           aria-label="Width responsive"
@@ -289,7 +288,7 @@ export const VariableWidths: Story = {
     );
   },
   args: {
-    variant: "radio",
+    variant: "default",
   },
 };
 
@@ -313,16 +312,8 @@ export const WithAriaLabelledBy: Story = {
     <>
       <h2 id="subject-label">Choose a subject</h2>
       <OakRadioGroup name="test" aria-labelledby="subject-label">
-        <OakRadioAsButton
-          value="option_1"
-          displayValue="Biology"
-          icon="subject-biology"
-        />
-        <OakRadioAsButton
-          value="option_2"
-          displayValue="Biology"
-          icon="subject-biology"
-        />
+        <OakRadioAsButton value="option_1" displayValue="Biology" />
+        <OakRadioAsButton value="option_2" displayValue="Biology" />
       </OakRadioGroup>
     </>
   ),
@@ -336,31 +327,11 @@ export const MultipleOptionsWithInitialValueSet: Story = {
       $flexWrap={"wrap"}
       defaultValue={"physics"}
     >
-      <OakRadioAsButton
-        value="art"
-        displayValue="Art and design"
-        icon="subject-art"
-      />
-      <OakRadioAsButton
-        value="biology"
-        displayValue="Biology"
-        icon="subject-biology"
-      />
-      <OakRadioAsButton
-        value="chemistry"
-        displayValue="Chemistry"
-        icon="subject-chemistry"
-      />
-      <OakRadioAsButton
-        value="physics"
-        displayValue="Physics"
-        icon="subject-physics"
-      />
-      <OakRadioAsButton
-        value="computing"
-        displayValue="Computing"
-        icon="subject-computing"
-      />
+      <OakRadioAsButton value="art" displayValue="Art and design" />
+      <OakRadioAsButton value="biology" displayValue="Biology" />
+      <OakRadioAsButton value="chemistry" displayValue="Chemistry" />
+      <OakRadioAsButton value="physics" displayValue="Physics" />
+      <OakRadioAsButton value="computing" displayValue="Computing" />
     </OakRadioGroup>
   ),
 };
@@ -377,35 +348,35 @@ export const KeepIconColor: Story = {
       >
         <OakRadioAsButton
           {...restArgs}
-          variant="icon"
+          variant="with-icon"
           displayValue="Art and design"
           icon="subject-art"
           value="art"
         />
         <OakRadioAsButton
           {...restArgs}
-          variant="icon"
+          variant="with-icon"
           displayValue="Biology"
           icon="subject-biology"
           value="biology"
         />
         <OakRadioAsButton
           {...restArgs}
-          variant="icon"
+          variant="with-icon"
           displayValue="Chemistry"
           icon="subject-chemistry"
           value="chemistry"
         />
         <OakRadioAsButton
           {...restArgs}
-          variant="icon"
+          variant="with-icon"
           displayValue="Physics"
           icon="subject-physics"
           value="physics"
         />
         <OakRadioAsButton
           {...restArgs}
-          variant="icon"
+          variant="with-icon"
           displayValue="Computing"
           icon="subject-computing"
           value="computing"
