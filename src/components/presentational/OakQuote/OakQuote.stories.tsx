@@ -70,6 +70,6 @@ export const MintPageBackground: Story = {
     </OakMaxWidth>
   ),
   args: {
-    color: "blackSemiTransparent",
+    color: "primarySemiTransparent",
   },
 };

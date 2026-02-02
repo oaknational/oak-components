@@ -195,7 +195,7 @@ export const OakModalCenter = ({
             $position="fixed"
             $inset="spacing-0"
             $zIndex="behind"
-            $background="blackSemiTransparent"
+            $background="primarySemiTransparent"
             data-testid="backdrop"
             {...backdropFlexProps}
           />

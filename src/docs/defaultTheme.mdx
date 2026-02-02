@@ -6,10 +6,14 @@ import { Meta, ColorPalette, ColorItem } from "@storybook/blocks";
 
 # oakDefaultTheme
 
-### uiColors
+### `OakUiRoleTokens`
 
 <ColorPalette>
   {Object.entries(oakDefaultTheme.uiColors).map((token, i) => (
-    <ColorItem key={i} title={token[0]} colors={[parseColor(token[1])]} />
+    <ColorItem
+      key={i}
+      title={`${token[0]} (${token[1]})`}
+      colors={[parseColor(token[1])]}
+    />
   ))}
 </ColorPalette>
