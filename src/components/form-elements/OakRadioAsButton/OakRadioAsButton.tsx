@@ -12,13 +12,13 @@ import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
 import { RadioContext } from "@/components/form-elements/OakRadioGroup/OakRadioGroup";
-import { OakCombinedColorToken, OakUiRoleToken } from "@/styles";
+import { OakUiRoleToken } from "@/styles";
 import { InternalRadioWrapper } from "@/components/internal-components/InternalRadioWrapper";
 import { OakScreenReader } from "@/components/messaging-and-feedback/OakScreenReader";
 import { SizeStyleProps } from "@/styles/utils/sizeStyle";
 
 type DecorativeBackgroundMain = Extract<
-  OakCombinedColorToken,
+  OakUiRoleToken,
   `bg-decorative${number}-main`
 >;
 type DecorativeColorScheme =
