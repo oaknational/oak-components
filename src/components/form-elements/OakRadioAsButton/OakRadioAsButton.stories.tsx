@@ -344,42 +344,21 @@ export const KeepIconColor: Story = {
         name="test"
         aria-label="Choose a subject"
         $flexWrap={"wrap"}
-        defaultValue="art"
+        defaultValue="1"
       >
         <OakRadioAsButton
           {...restArgs}
           variant="with-icon"
-          displayValue="Art and design"
-          icon="subject-art"
-          value="art"
+          displayValue="Lessons"
+          icon="teacher-unit"
+          value="1"
         />
         <OakRadioAsButton
           {...restArgs}
           variant="with-icon"
-          displayValue="Biology"
-          icon="subject-biology"
-          value="biology"
-        />
-        <OakRadioAsButton
-          {...restArgs}
-          variant="with-icon"
-          displayValue="Chemistry"
-          icon="subject-chemistry"
-          value="chemistry"
-        />
-        <OakRadioAsButton
-          {...restArgs}
-          variant="with-icon"
-          displayValue="Physics"
-          icon="subject-physics"
-          value="physics"
-        />
-        <OakRadioAsButton
-          {...restArgs}
-          variant="with-icon"
-          displayValue="Computing"
-          icon="subject-computing"
-          value="computing"
+          displayValue="Lessons"
+          icon="teacher-unit"
+          value="2"
         />
       </OakRadioGroup>
     );

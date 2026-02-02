@@ -122,6 +122,13 @@ type OakRadioAsButtonProps = Omit<
   value?: HTMLInputElement["value"];
   innerRef?: React.RefObject<HTMLInputElement>;
   displayValue: string;
+  /**
+   * Whether to keep the icon color when the component is checked.
+   *
+   * Useful when the icon has an opinionated color that should be preserved when the component is checked.
+   *
+   * @default `false`
+   */
   keepIconColor?: boolean;
   disabled?: HTMLInputElement["disabled"];
   "aria-labelledby"?: React.AriaAttributes["aria-labelledby"];
