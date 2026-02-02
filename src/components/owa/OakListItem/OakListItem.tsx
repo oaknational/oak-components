@@ -123,6 +123,14 @@ export const OakListItem = (props: OakListItemProps) => {
     defaultChecked,
   } = props;
 
+  const onClickLocal = unavailable ? undefined : onClick;
+  const textColor = unavailable ? "text-disabled" : "text-primary";
+  const background = unavailable
+    ? "bg-neutral-stronger"
+    : isLegacy
+      ? indexLegacyBgColour
+      : indexBgColour;
+
   return (
     <OakLI
       $listStyle={"none"}
@@ -170,16 +178,10 @@ export const OakListItem = (props: OakListItemProps) => {
             $width="100%"
             $height="100%"
             ref={firstItemRef}
-            onClick={unavailable ? undefined : onClick}
+            onClick={onClickLocal}
           >
             <StyledOakIndexBox
-              $background={
-                unavailable
-                  ? "bg-neutral-stronger"
-                  : isLegacy
-                    ? indexLegacyBgColour
-                    : indexBgColour
-              }
+              $background={background}
               $btlr={"border-radius-m"}
               $bblr={isExpanded ? "border-radius-square" : "border-radius-m"}
               $justifyContent={"center"}
@@ -188,17 +190,14 @@ export const OakListItem = (props: OakListItemProps) => {
               $alignSelf="stretch"
               $indexHoverBgColour={indexHoverBgColour}
             >
-              <OakSpan
-                $font={"heading-5"}
-                $color={unavailable ? "text-disabled" : "text-primary"}
-              >
+              <OakSpan $font={"heading-5"} $color={textColor}>
                 {index}
               </OakSpan>
             </StyledOakIndexBox>
             <OakFlex $pv="spacing-20" $pr="spacing-16" $flexGrow={1}>
               <OakP
                 $font={"heading-7"}
-                $color={unavailable ? "text-disabled" : "text-primary"}
+                $color={textColor}
                 className="hover-text"
               >
                 {title}
@@ -208,13 +207,13 @@ export const OakListItem = (props: OakListItemProps) => {
               $minWidth="spacing-80"
               $alignItems="center"
               $justifyContent="end"
-              $color={unavailable ? "text-disabled" : "text-primary"}
+              $color={textColor}
             >
               {middleSlot}
             </OakFlex>
             <OakFlex
               $font={"heading-light-7"}
-              $color={unavailable ? "text-disabled" : "text-primary"}
+              $color={textColor}
               $alignItems="center"
               $justifyContent="end"
               $minWidth={"spacing-160"}
@@ -236,18 +235,12 @@ export const OakListItem = (props: OakListItemProps) => {
           $pa="spacing-16"
           $indexHoverBgColour={indexHoverBgColour}
           $hoverBgColour={hoverBgColour}
-          onClick={unavailable ? undefined : onClick}
+          onClick={onClickLocal}
         >
           <OakFlex $flexDirection="column" $gap="spacing-16" $width="100%">
             <OakFlex $gap="spacing-16">
               <OakFlex
-                $background={
-                  unavailable
-                    ? "bg-neutral-stronger"
-                    : isLegacy
-                      ? indexLegacyBgColour
-                      : indexBgColour
-                }
+                $background={background}
                 $justifyContent={"center"}
                 $alignItems={"center"}
                 $borderRadius="border-radius-m"
@@ -255,19 +248,12 @@ export const OakListItem = (props: OakListItemProps) => {
                 $height="spacing-40"
                 $minWidth="spacing-40"
               >
-                <OakHeading
-                  tag="h3"
-                  $font="heading-5"
-                  $color={unavailable ? "text-disabled" : "text-primary"}
-                >
+                <OakHeading tag="h3" $font="heading-5" $color={textColor}>
                   {index}
                 </OakHeading>
               </OakFlex>
               <OakBox $width="100%">
-                <OakP
-                  $font="heading-7"
-                  $color={unavailable ? "text-disabled" : "text-primary"}
-                >
+                <OakP $font="heading-7" $color={textColor}>
                   {title}
                 </OakP>
               </OakBox>
@@ -275,7 +261,7 @@ export const OakListItem = (props: OakListItemProps) => {
             <OakFlex
               $justifyContent="space-between"
               $alignItems="center"
-              $color={unavailable ? "text-disabled" : "text-primary"}
+              $color={textColor}
             >
               {middleSlot}
               {endSlot}
