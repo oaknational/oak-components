@@ -62,7 +62,9 @@ describe("PupilJourneyUnitsFilter", () => {
         onSkipCallback={() => null}
       />,
     );
-    expect(getAllByText("Biology")[0]?.getAttribute("aria-checked") === "true");
+    expect(
+      getAllByText("Biology")[0]?.getAttribute("aria-checked") === "true",
+    ).toBeTruthy();
   });
   it("calls the onSelected callback when a button is clicked", () => {
     const onSelected = jest.fn();
