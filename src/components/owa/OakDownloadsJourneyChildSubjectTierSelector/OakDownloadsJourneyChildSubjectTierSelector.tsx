@@ -37,7 +37,7 @@ const UnstyledComponent = (
 
   const [childSubjectSelected, setChildSubjectSelected] = useState<
     string | null
-  >(childSubjects && childSubjects[0] ? childSubjects[0]?.subjectSlug : null);
+  >(childSubjects?.[0] ? childSubjects[0]?.subjectSlug : null);
   const [tierSelected, setTierSelected] = useState<string>("foundation");
 
   const tiersAvailable = tiers && tierSelected.length > 0;
