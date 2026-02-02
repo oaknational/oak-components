@@ -53,7 +53,7 @@ export const Color: Story = {
     $pa: "spacing-16",
   },
   parameters: {
-    controls: { include: [...Object.keys(colorArgTypes)] },
+    controls: { include: Object.keys(colorArgTypes) },
   },
 };
 
@@ -126,7 +126,7 @@ export const Borders: Story = {
     $background: "bg-decorative1-main",
   },
   parameters: {
-    controls: { include: [...Object.keys(borderArgTypes)] },
+    controls: { include: Object.keys(borderArgTypes) },
   },
 };
 

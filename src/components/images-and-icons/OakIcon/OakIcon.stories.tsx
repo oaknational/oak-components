@@ -52,7 +52,7 @@ export const AllIcons: Story = {
   args: { $colorFilter: "black" },
   parameters: {
     controls: {
-      include: [...Object.keys(colorFilterArgTypes)],
+      include: Object.keys(colorFilterArgTypes),
       sort: "none",
     },
   },
