@@ -63,7 +63,9 @@ describe("PupilJourneyUnitsFilter", () => {
       />,
     );
     expect(
-      getAllByText("Biology")[0]?.getAttribute("aria-checked") === "true",
+      getAllByText("Biology")[0]?.parentElement?.parentElement?.getAttribute(
+        "aria-checked",
+      ) === "true",
     ).toBeTruthy();
   });
   it("calls the onSelected callback when a button is clicked", () => {
