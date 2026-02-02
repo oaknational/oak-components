@@ -6,6 +6,6 @@ export const parseOpacity = (variant?: OakOpacityToken | null) => {
   }
 
   if (variant in oakOpacityTokens) {
-    return oakOpacityTokens[variant as OakOpacityToken];
+    return oakOpacityTokens[variant];
   }
 };
