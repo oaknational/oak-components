@@ -4,7 +4,6 @@ import { createPortal } from "react-dom";
 type InternalClientPortalInterface = {
   children: React.ReactNode;
   show?: boolean;
-  onClose?: () => void;
 };
 
 export const InternalClientPortal = ({
