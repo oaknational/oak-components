@@ -77,6 +77,7 @@ const StyledFlexBox = styled(OakFlex)<{
   &:has(input:checked:not(:disabled)) {
     background-color: ${parseColor("bg-inverted")};
     color: ${parseColor("text-inverted")};
+    border-color: transparent;
   }
 
   &:has(input:checked:not(:disabled)) ${StyledOakIcon} {
