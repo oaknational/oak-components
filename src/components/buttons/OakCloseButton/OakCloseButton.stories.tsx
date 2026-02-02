@@ -22,11 +22,7 @@ const meta: Meta<typeof OakCloseButton> = {
     onClose: () => {},
   },
   render: (args) => {
-    return (
-      <>
-        <OakCloseButton {...args} />
-      </>
-    );
+    return <OakCloseButton {...args} />;
   },
 };
 
