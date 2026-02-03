@@ -51,10 +51,11 @@ export const OakMediaClipList = ({
   return (
     <OakMediaClipListAccordion
       header={mediaClipListHeader}
-      children={mediaClipListContent}
       id="media-clip-list"
       initialOpen={true}
       $maxHeight={"spacing-480"}
-    />
+    >
+      {mediaClipListContent}
+    </OakMediaClipListAccordion>
   );
 };
