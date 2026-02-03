@@ -77,23 +77,15 @@ const UnstyledComponent = (
           defaultValue={childSubjectSelected || "combined-science"}
           data-testid="child-subject-selector"
         >
-          {childSubjects.map(
-            ({
-              subject,
-              subjectSlug,
-            }: {
-              subject: string;
-              subjectSlug: string;
-            }) => (
-              <OakRadioButton
-                id={subjectSlug}
-                label={subject}
-                value={subjectSlug}
-                data-testid="child-subject-radio-button"
-                key={subjectSlug}
-              />
-            ),
-          )}
+          {childSubjects.map(({ subject, subjectSlug }) => (
+            <OakRadioButton
+              id={subjectSlug}
+              label={subject}
+              value={subjectSlug}
+              data-testid="child-subject-radio-button"
+              key={subjectSlug}
+            />
+          ))}
         </OakRadioGroup>
       )}
       {tiersAvailable && (
@@ -106,17 +98,15 @@ const UnstyledComponent = (
           $gap={"spacing-16"}
           defaultValue={tierSelected}
         >
-          {tiers.map(
-            ({ tier, tierSlug }: { tier: string; tierSlug: string }) => (
-              <OakRadioButton
-                id={tierSlug}
-                label={tier}
-                value={tierSlug}
-                data-testid="tier-radio-button"
-                key={tierSlug}
-              />
-            ),
-          )}
+          {tiers.map(({ tier, tierSlug }) => (
+            <OakRadioButton
+              id={tierSlug}
+              label={tier}
+              value={tierSlug}
+              data-testid="tier-radio-button"
+              key={tierSlug}
+            />
+          ))}
         </OakRadioGroup>
       )}
       <OakPrimaryButton
