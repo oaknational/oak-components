@@ -89,7 +89,7 @@ export default meta;
 
 type Story = StoryObj<typeof OakInlineBanner>;
 
-export const Info: Story = {
+export const InfoNormal: Story = {
   args: {
     type: "info",
     titleTag: "h2",
@@ -120,7 +120,7 @@ export const InfoLarge: Story = {
   },
 };
 
-export const Neutral: Story = {
+export const NeutralNormal: Story = {
   args: {
     type: "neutral",
   },
@@ -150,7 +150,7 @@ export const NeutralLarge: Story = {
   },
 };
 
-export const Success: Story = {
+export const SuccessNormal: Story = {
   args: {
     type: "success",
   },
@@ -180,7 +180,7 @@ export const SuccessLarge: Story = {
   },
 };
 
-export const Alert: Story = {
+export const AlertNormal: Story = {
   args: {
     type: "alert",
   },
@@ -210,7 +210,7 @@ export const AlertLarge: Story = {
   },
 };
 
-export const Warning: Story = {
+export const WarningNormal: Story = {
   args: {
     type: "warning",
   },
@@ -240,7 +240,7 @@ export const WarningLarge: Story = {
   },
 };
 
-export const Error: Story = {
+export const ErrorNormal: Story = {
   args: {
     type: "error",
   },
