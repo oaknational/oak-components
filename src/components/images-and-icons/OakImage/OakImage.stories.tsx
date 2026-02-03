@@ -19,7 +19,7 @@ const meta: Meta<typeof OakImage> = {
   },
   parameters: {
     controls: {
-      include: [...Object.keys(sizeArgTypes)],
+      include: Object.keys(sizeArgTypes),
       sort: "none",
     },
   },

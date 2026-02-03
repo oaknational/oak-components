@@ -18,8 +18,8 @@ const meta: Meta<typeof OakLink> = {
       options: controlIconNames,
     },
     isTrailingIcon: { type: "boolean" },
-    iconHeight: { options: [...Object.keys(oakAllSpacingTokens)] },
-    iconWidth: { options: [...Object.keys(oakAllSpacingTokens)] },
+    iconHeight: { options: Object.keys(oakAllSpacingTokens) },
+    iconWidth: { options: Object.keys(oakAllSpacingTokens) },
   },
   parameters: {
     controls: {

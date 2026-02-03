@@ -14,7 +14,7 @@ import {
 } from "@/styles/theme/color";
 
 const controlIconNames = [...oakIconNames].sort((a, b) => a.localeCompare(b));
-const controlColorTokens = [...Object.keys(oakColorFilterTokens)].sort((a, b) =>
+const controlColorTokens = Object.keys(oakColorFilterTokens).sort((a, b) =>
   a.localeCompare(b),
 );
 const controlIconFillNames = [

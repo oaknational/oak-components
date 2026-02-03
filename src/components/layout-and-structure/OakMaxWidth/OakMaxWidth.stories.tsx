@@ -29,7 +29,7 @@ const meta: Meta<typeof OakMaxWidth> = {
   },
   parameters: {
     controls: {
-      include: [...Object.keys(flexArgTypes)],
+      include: Object.keys(flexArgTypes),
       sort: "none",
     },
   },
