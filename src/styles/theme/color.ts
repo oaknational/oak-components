@@ -44,6 +44,7 @@ export const oakColorTokens = {
   purple: "#845ad9",
   teal: "#037b7d",
   blackSemiTransparent: "#22222240",
+  whiteSemiTransparent: "#ffffff40",
   transparent: "transparent",
   "rpf-syntax-blue": "#9EE8FF",
   "rpf-syntax-green": "#94F9AF",

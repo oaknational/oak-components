@@ -16,7 +16,7 @@ export const oakDarkTheme: OakTheme = {
     "text-promo": "lemon50",
     "bg-primary": "black",
     "bg-inverted": "white",
-    "bg-inverted-semi-transparent": "blackSemiTransparent",
+    "bg-inverted-semi-transparent": "whiteSemiTransparent",
     "bg-neutral": "grey60",
     "bg-neutral-stronger": "grey70",
     "bg-btn-primary": "white",
