@@ -8,7 +8,12 @@ import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 
 function isJSDOM() {
   return globalThis?.navigator?.userAgent?.includes("jsdom/");
-}
+const activeChildren = `a:active, button:active`;
+const hoverChildren = `a:hover, button:hover`;
+const focusVisibleChildren = `
+  a${isJSDOM() ? "" : ":focus-visible"},
+  button${isJSDOM() ? "" : ":focus-visible"}
+`;
 
 export type OakFocusIndicatorProps = {
   hoverBackground?: OakUiRoleToken;
