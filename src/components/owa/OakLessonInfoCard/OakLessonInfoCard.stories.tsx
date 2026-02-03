@@ -106,7 +106,7 @@ export const StaticMessage: Story = (args: OakInfoCardProps) => (
       "Are you sitting in a quiet space away from distractions?",
       "Do you have all the equipment you need?",
     ].map((message) => (
-      <OakP>{message}</OakP>
+      <OakP key={message}>{message}</OakP>
     ))}
   </OakStaticMessageCard>
 );
