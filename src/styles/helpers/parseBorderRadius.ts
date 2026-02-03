@@ -10,8 +10,6 @@ export const parseBorderRadius = (value?: OakBorderRadiusToken | null) => {
     return undefined;
   }
   if (value in oakBorderRadiusTokens) {
-    return `${pxToRem(
-      oakBorderRadiusTokens[value as OakBorderRadiusToken],
-    )}rem`;
+    return `${pxToRem(oakBorderRadiusTokens[value])}rem`;
   }
 };
