@@ -74,15 +74,19 @@ const StyledFlexBox = styled(OakFlex)<{
       ${parseDropShadow("drop-shadow-centered-grey")};
   }
 
+  ${StyledOakIcon} {
+    filter: ${parseColorFilter("icon-primary")};
+  }
+
   &:has(input:checked:not(:disabled)) {
     background-color: ${parseColor("bg-inverted")};
     color: ${parseColor("text-inverted")};
     border-color: transparent;
-  }
 
-  &:has(input:checked:not(:disabled)) ${StyledOakIcon} {
-    filter: ${(props) =>
-      props.$keepIconColor ? "none" : parseColorFilter("white")};
+    ${StyledOakIcon} {
+      filter: ${(props) =>
+        props.$keepIconColor ? "none" : parseColorFilter("text-inverted")};
+    }
   }
 `;
 
