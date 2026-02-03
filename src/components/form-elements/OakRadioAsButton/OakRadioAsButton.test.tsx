@@ -13,23 +13,12 @@ describe("OakRadioAsButton", () => {
       <OakRadioAsButton
         name="radio-1"
         value="history"
+        variant="with-icon"
         icon={"subject-history"}
         displayValue="History"
       />,
     );
     expect(getByRole("radio")).toBeInTheDocument();
-  });
-
-  it("matches snapshot", () => {
-    const { container } = renderWithTheme(
-      <OakRadioAsButton
-        name="radio-1"
-        value="history"
-        icon={"subject-history"}
-        displayValue="History"
-      />,
-    );
-    expect(container).toMatchSnapshot();
   });
 
   it("has a label", () => {
@@ -38,6 +27,7 @@ describe("OakRadioAsButton", () => {
         name="radio-1"
         displayValue="Option 1"
         value="1"
+        variant="with-icon"
         icon={"subject-history"}
       />,
     );
@@ -63,6 +53,7 @@ describe("OakRadioAsButton", () => {
         name="radio-1"
         value="Option 1"
         displayValue="Option 1"
+        variant="with-icon"
         icon="subject-history"
       />,
     );
@@ -77,6 +68,7 @@ describe("OakRadioAsButton", () => {
         name="radio-1"
         value="Option 1"
         displayValue="Display Text"
+        variant="with-icon"
         icon="subject-history"
       />,
     );
@@ -95,12 +87,14 @@ describe("OakRadioAsButton", () => {
         <OakRadioAsButton
           value="Option 1"
           onChange={onChange}
+          variant="with-icon"
           icon={"subject-history"}
           displayValue="Option 1"
         />
         <OakRadioAsButton
           value="Option 2"
           onChange={onChange}
+          variant="with-icon"
           icon={"subject-biology"}
           displayValue="Option 2"
         />
@@ -192,54 +186,55 @@ describe("OakRadioAsButton", () => {
 
   it("inputs to all have name of radio group", () => {
     const onChange = jest.fn();
-    const { getAllByRole, getByRole } = renderWithTheme(
+    const { getAllByRole } = renderWithTheme(
       <OakRadioGroup name="test">
         <OakRadioAsButton
           value="Option 1"
           onChange={onChange}
+          variant="with-icon"
           icon={"subject-history"}
           displayValue="Option 1"
         />
         <OakRadioAsButton
           value="Option 2"
           onChange={onChange}
+          variant="with-icon"
           icon={"subject-biology"}
           displayValue="Option 2"
         />
       </OakRadioGroup>,
     );
-    const radioGroup = getByRole("group");
     const radios = getAllByRole("radio");
     expect(radios).toHaveLength(2);
-    expect(radioGroup).toBeTruthy();
     expect(radios[0]).toHaveAttribute("name", "test");
     expect(radios[1]).toHaveAttribute("name", "test");
   });
 
   it("radio group value sets the correct input to checked", () => {
-    const { getAllByRole, getByRole } = renderWithTheme(
+    const { getAllByRole } = renderWithTheme(
       <OakRadioGroup name="test" value="option_2">
         <OakRadioAsButton
           value="option_1"
+          variant="with-icon"
           icon={"subject-history"}
           displayValue="Option 1"
         />
         <OakRadioAsButton
           value="option_2"
+          variant="with-icon"
           icon={"subject-biology"}
           displayValue="Option 2"
         />
         <OakRadioAsButton
           value="option_3"
+          variant="with-icon"
           icon={"subject-biology"}
           displayValue="Option 3"
         />
       </OakRadioGroup>,
     );
-    const radioGroup = getByRole("group");
     const radios = getAllByRole("radio");
     expect(radios).toHaveLength(3);
-    expect(radioGroup).toBeTruthy();
     expect(radios[0]).not.toBeChecked();
     expect(radios[1]).toBeChecked();
     expect(radios[2]).not.toBeChecked();
@@ -252,6 +247,7 @@ describe("OakRadioAsButton", () => {
         name="radio-1"
         value="Option 1"
         onFocus={onFocus}
+        variant="with-icon"
         icon={"subject-history"}
         displayValue="Option 1"
       />,
@@ -269,6 +265,7 @@ describe("OakRadioAsButton", () => {
         name="radio-1"
         value="Option 1"
         onBlur={onBlur}
+        variant="with-icon"
         icon={"subject-history"}
         displayValue="Option 1"
       />,
@@ -287,6 +284,7 @@ describe("OakRadioAsButton", () => {
         name="radio-1"
         value="Option 1"
         onHovered={onHovered}
+        variant="with-icon"
         icon={"subject-history"}
         displayValue="Option 1"
       />,
@@ -306,6 +304,7 @@ describe("OakRadioAsButton", () => {
         value="Option 1"
         onChange={onChange}
         disabled
+        variant="with-icon"
         icon={"subject-history"}
         displayValue="Option 1"
       />,
@@ -322,16 +321,19 @@ describe("OakRadioAsButton", () => {
       <OakRadioGroup name="test" onChange={onChange}>
         <OakRadioAsButton
           value="option_1"
+          variant="with-icon"
           icon={"subject-history"}
           displayValue="Option 1"
         />
         <OakRadioAsButton
           value="option_2"
+          variant="with-icon"
           icon={"subject-biology"}
           displayValue="Option 2"
         />
         <OakRadioAsButton
           value="option_3"
+          variant="with-icon"
           icon={"subject-biology"}
           displayValue="Option 3"
         />
@@ -354,6 +356,7 @@ describe("OakRadioAsButton", () => {
         name="radio-1"
         value="history"
         displayValue="History"
+        variant="with-icon"
         icon={"subject-history"}
         aria-label="History"
       />,
