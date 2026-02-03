@@ -10,6 +10,7 @@ import {
 import { OakSecondaryLink } from "@/components/navigation/OakSecondaryLink";
 import { oakIconNames } from "@/components/images-and-icons/OakIcon";
 import { OakPrimaryButton } from "@/components/buttons/OakPrimaryButton";
+import { nonCryptoRandom } from "@/storybook-helpers/random";
 
 const meta: Meta<typeof OakInlineBanner> = {
   component: OakInlineBanner,
@@ -70,7 +71,7 @@ const meta: Meta<typeof OakInlineBanner> = {
       <OakSecondaryLink
         iconName="chevron-right"
         isTrailingIcon
-        href={`#${Math.random()}`}
+        href={`#${nonCryptoRandom()}`}
       >
         Link
       </OakSecondaryLink>

@@ -5,6 +5,7 @@ import { OakLink } from "./OakLink";
 
 import { oakIconNames } from "@/components/images-and-icons/OakIcon";
 import { oakAllSpacingTokens } from "@/styles/theme/spacing";
+import { nonCryptoRandom } from "@/storybook-helpers/random";
 
 const controlIconNames = [...oakIconNames].sort((a, b) => a.localeCompare(b));
 
@@ -43,7 +44,7 @@ type Story = StoryObj<typeof OakLink>;
 
 export const Default: Story = {
   args: {
-    href: `#${Math.random()}`,
+    href: `#${nonCryptoRandom()}`,
   },
 };
 
@@ -55,14 +56,14 @@ export const AsAButton: Story = {
 
 export const WithIcon: Story = {
   args: {
-    href: `#${Math.random()}`,
+    href: `#${nonCryptoRandom()}`,
     iconName: "chevron-left",
   },
 };
 
 export const WithTrailingIcon: Story = {
   args: {
-    href: `#${Math.random()}`,
+    href: `#${nonCryptoRandom()}`,
     iconName: "chevron-right",
     isTrailingIcon: true,
   },

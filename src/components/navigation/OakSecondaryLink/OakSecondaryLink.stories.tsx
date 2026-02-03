@@ -3,6 +3,8 @@ import { Meta, StoryObj } from "@storybook/react";
 
 import { OakSecondaryLink } from "./OakSecondaryLink";
 
+import { nonCryptoRandom } from "@/storybook-helpers/random";
+
 const meta: Meta<typeof OakSecondaryLink> = {
   component: OakSecondaryLink,
   tags: ["autodocs"],
@@ -32,7 +34,7 @@ type Story = StoryObj<typeof OakSecondaryLink>;
 
 export const Default: Story = {
   args: {
-    href: `#${Math.random()}`,
+    href: `#${nonCryptoRandom()}`,
   },
 };
 
@@ -44,14 +46,14 @@ export const AsAButton: Story = {
 
 export const WithIcon: Story = {
   args: {
-    href: `#${Math.random()}`,
+    href: `#${nonCryptoRandom()}`,
     iconName: "chevron-left",
   },
 };
 
 export const WithTrailingIcon: Story = {
   args: {
-    href: `#${Math.random()}`,
+    href: `#${nonCryptoRandom()}`,
     iconName: "chevron-right",
     isTrailingIcon: true,
   },
