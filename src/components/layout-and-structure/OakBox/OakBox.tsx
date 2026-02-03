@@ -33,10 +33,6 @@ import {
 } from "@/styles/utils/typographyStyle";
 import { zIndexStyle, ZIndexStyleProps } from "@/styles/utils/zIndexStyle";
 
-// TODO: these are not yet implemented
-// import cover, { CoverProps } from "@/styles/utils/coverStyle";
-// import customScrollbar from "@/styles/utils/customScrollbarStyle";
-
 type HTMLProps = {
   onClick?: MouseEventHandler;
 };
