@@ -4,8 +4,8 @@
  * This is a global mock, so it will affect all tests that run after it is imported.
  */
 export function installMockIntersectionObserver() {
-  global.IntersectionObserver =
-    global.IntersectionObserver ??
+  globalThis.IntersectionObserver =
+    globalThis.IntersectionObserver ??
     class MockIntersectionObserver implements IntersectionObserver {
       private readonly elements: Set<Element> = new Set();
 
