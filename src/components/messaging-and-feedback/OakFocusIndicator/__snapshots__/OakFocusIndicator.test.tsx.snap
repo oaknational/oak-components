@@ -9,22 +9,20 @@ exports[`OakFocusIndicator default render 1`] = `
   box-shadow: none;
 }
 
-.c1:has( a, button ) {
-  z-index: 2;
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
-}
-
-.c1:has(a:hover,button:hover),
-.c1:has(button:hover:not(:active)) {
-  z-index: 1;
-}
-
 .c1:has(a:hover,button:hover) {
   box-shadow: none;
 }
 
+.c1:has( a, button) {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c1:has( a, button)  a,
+.c1:has( a, button) button {
+  outline: none;
+}
+
 .c1:has(a:active,button:active) {
-  z-index: 2;
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%),0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
@@ -46,23 +44,21 @@ exports[`OakFocusIndicator renders correctly with props set 1`] = `
   box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c1:has( a, button ) {
-  z-index: 2;
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
-}
-
-.c1:has(a:hover,button:hover),
-.c1:has(button:hover:not(:active)) {
-  z-index: 1;
-  background-color: #ffffff;
-}
-
 .c1:has(a:hover,button:hover) {
+  background-color: #ffffff;
   box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
+.c1:has( a, button) {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c1:has( a, button)  a,
+.c1:has( a, button) button {
+  outline: none;
+}
+
 .c1:has(a:active,button:active) {
-  z-index: 2;
   box-shadow: none;
 }
 
