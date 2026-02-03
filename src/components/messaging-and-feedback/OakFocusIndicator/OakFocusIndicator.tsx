@@ -15,6 +15,9 @@ const focusVisibleChildren = `
   button${isJSDOM() ? "" : ":focus-visible"}
 `;
 
+const focusShadow = `${parseDropShadow("drop-shadow-centered-lemon")}, ${parseDropShadow("drop-shadow-centered-grey")}`;
+const fallbackActiveShadow = `${parseDropShadow("drop-shadow-lemon")}, ${parseDropShadow("drop-shadow-grey")}`;
+
 export type OakFocusIndicatorProps = {
   hoverBackground?: OakUiRoleToken;
   dropShadow?: OakDropShadowToken;
