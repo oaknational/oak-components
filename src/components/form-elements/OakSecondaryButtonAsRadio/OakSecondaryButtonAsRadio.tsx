@@ -37,7 +37,7 @@ export const OakSecondaryButtonAsRadio = ({
     <OakSecondaryButton
       role="radio"
       aria-checked={checked}
-      onClick={() => onValueUpdated && onValueUpdated(value)}
+      onClick={() => onValueUpdated?.(value)}
     >
       {children}
     </OakSecondaryButton>
