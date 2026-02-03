@@ -25,6 +25,7 @@ export const oakAllSpacingTokens = {
   "spacing-640": 640,
   "spacing-960": 960,
   "spacing-1280": 1280,
+  "spacing-1360": 1360,
 };
 
 export type OakAllSpacingToken = keyof typeof oakAllSpacingTokens;

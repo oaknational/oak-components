@@ -13,6 +13,6 @@ export const parseDropShadow = (variant?: OakDropShadowToken | null) => {
   }
 
   if (variant in oakDropShadowTokens) {
-    return oakDropShadowTokens[variant as OakDropShadowToken];
+    return oakDropShadowTokens[variant];
   }
 };

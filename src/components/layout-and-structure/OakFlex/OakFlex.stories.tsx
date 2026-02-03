@@ -25,7 +25,7 @@ const meta: Meta<typeof OakFlex> = {
   },
   parameters: {
     controls: {
-      include: [...Object.keys(flexArgTypes)],
+      include: Object.keys(flexArgTypes),
       sort: "none",
     },
   },

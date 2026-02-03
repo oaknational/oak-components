@@ -22,7 +22,7 @@ const meta: Meta<typeof OakOL> = {
   },
   parameters: {
     controls: {
-      include: [...Object.keys(typographyArgTypes)],
+      include: Object.keys(typographyArgTypes),
       sort: "none",
     },
   },

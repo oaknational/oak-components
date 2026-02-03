@@ -9,6 +9,6 @@ export const parseTransitions = (variant?: OakTransitionToken | null) => {
   }
 
   if (variant in oakTransitionTokens) {
-    return oakTransitionTokens[variant as OakTransitionToken];
+    return oakTransitionTokens[variant];
   }
 };

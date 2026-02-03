@@ -1,4 +1,4 @@
-import React, { RefObject } from "react";
+import React from "react";
 import styled, { css } from "styled-components";
 
 import { generatePageNumbers } from "./utils";
@@ -16,7 +16,6 @@ import { typographyStyle } from "@/styles/utils/typographyStyle";
 export type OakPaginationProps = {
   currentPage: number;
   totalPages: number;
-  firstItemRef?: RefObject<HTMLAnchorElement> | null;
   nextHref?: string;
   prevHref?: string;
   paginationHref: string;
@@ -27,8 +26,6 @@ export type OakPaginationProps = {
 type OakPageNumberProps = {
   currentPage: number;
   pageNumber: number;
-  totalPages?: number;
-  firstItemRef?: RefObject<HTMLAnchorElement> | null;
   href: string;
   onClick?: (event: React.MouseEvent) => void;
   pageName: string;

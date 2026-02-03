@@ -10,7 +10,7 @@ import { OakP } from "@/components/typography/OakP";
 import { oakColorTokens, oakUiRoleTokens } from "@/styles/theme/color";
 
 const controlIconNames = [...oakIconNames].sort((a, b) => a.localeCompare(b));
-const controlColorTokens = [...Object.keys(oakUiRoleTokens)].sort((a, b) =>
+const controlColorTokens = Object.keys(oakUiRoleTokens).sort((a, b) =>
   a.localeCompare(b),
 );
 const controlIconFillNames = [

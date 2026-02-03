@@ -21,7 +21,7 @@ const meta: Meta<typeof OakP> = {
   },
   parameters: {
     controls: {
-      include: [...Object.keys(typographyArgTypes)],
+      include: Object.keys(typographyArgTypes),
       sort: "none",
     },
   },

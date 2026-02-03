@@ -82,11 +82,7 @@ const meta: Meta<typeof OakInlineBanner> = {
     const [, updateArgs] = useArgs();
     const onDismiss = () => updateArgs({ isOpen: false });
 
-    return (
-      <>
-        <OakInlineBanner {...args} onDismiss={onDismiss} />
-      </>
-    );
+    return <OakInlineBanner {...args} onDismiss={onDismiss} />;
   },
 };
 export default meta;

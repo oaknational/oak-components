@@ -1,4 +1,4 @@
-import React, { ReactElement, ReactNode } from "react";
+import React, { ReactElement } from "react";
 import styled, { css } from "styled-components";
 
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
@@ -20,7 +20,6 @@ export type OakHeaderHeroProps = {
   subHeadingText: string;
   breadcrumbs: ReactElement;
   cmsImage?: ReactElement;
-  children?: ReactNode;
 };
 
 const StyledAuthorImage = styled(OakImage)`

@@ -9,8 +9,6 @@ export const parseBorder = (value?: OakBorderWidthToken | null) => {
     return undefined;
   }
   if (value in oakBorderWidthTokens) {
-    return `${pxToRem(
-      oakBorderWidthTokens[value as OakBorderWidthToken],
-    )}rem solid`;
+    return `${pxToRem(oakBorderWidthTokens[value])}rem solid`;
   }
 };
