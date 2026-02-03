@@ -9,49 +9,55 @@ import {
   InternalRadio,
 } from "@/components/internal-components/InternalRadio/InternalRadio";
 import { parseColor } from "@/styles/helpers/parseColor";
-import { parseBorder } from "@/styles/helpers/parseBorder";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
 import { RadioContext } from "@/components/form-elements/OakRadioGroup/OakRadioGroup";
+import { OakUiRoleToken } from "@/styles";
+import { InternalRadioWrapper } from "@/components/internal-components/InternalRadioWrapper";
+import { OakScreenReader } from "@/components/messaging-and-feedback/OakScreenReader";
+import { SizeStyleProps } from "@/styles/utils/sizeStyle";
+
+type DecorativeBackgroundMain = Extract<
+  OakUiRoleToken,
+  `bg-decorative${number}-main`
+>;
+type DecorativeColorScheme =
+  DecorativeBackgroundMain extends `bg-${infer N}-main` ? N : never;
+
+export const colorSchemes = [
+  "primary",
+  "decorative1",
+  "decorative2",
+  "decorative3",
+  "decorative4",
+  "decorative5",
+  "decorative6",
+  "transparent",
+] as const satisfies Array<DecorativeColorScheme | "primary" | "transparent">;
+
+type OakRadioAsButtonColorScheme = (typeof colorSchemes)[number];
 
 // Converted to styled-component so it can be used in '&:checked:not(:disabled) + ${StyledOakIcon}' to change svg color.
 const StyledOakIcon = styled(OakIcon)``;
 
-const StyledInternalRadio = styled(InternalRadio)<{
+const StyledFlexBox = styled(OakFlex)<{
+  $colorSchemeTokens: ColorSchemeTokens;
   $keepIconColor?: boolean;
 }>`
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-
-  &:checked:not(:disabled) + ${StyledOakIcon} {
-    filter: ${(props) =>
-      props.$keepIconColor ? "none" : parseColorFilter("white")};
-  }
-
-  &:checked:not(:disabled) {
-    border: ${parseBorder("border-solid-l")};
-    border-color: ${parseColor("border-primary")};
-  }
-
-  &:checked:disabled {
-    border: ${parseBorder("border-solid-l")};
-    border-color: ${parseColor("text-disabled")};
-  }
-
-  &:hover:not(:disabled) {
-    background: ${parseColor("bg-primary")};
-  }
-`;
-
-const StyledFlexBox = styled(OakFlex)`
-  &:has(input:not(:disabled)) {
-    cursor: pointer;
-  }
+  cursor: pointer;
+  background-color: ${(props) =>
+    parseColor(props.$colorSchemeTokens.background)};
+  border-color: ${(props) => parseColor(props.$colorSchemeTokens.borderColor)};
+  color: ${parseColor("text-primary")};
 
   &:has(input:disabled) {
     pointer-events: none;
     cursor: none;
+    background-color: ${(props) =>
+      parseColor(props.$colorSchemeTokens.disabledBackground)};
+    border-color: ${(props) =>
+      parseColor(props.$colorSchemeTokens.disabledBorderColor)};
+    color: ${parseColor("text-disabled")};
   }
 
   &:hover:has(input:not(:disabled)) ${InternalCheckBoxLabelHoverDecor} {
@@ -59,7 +65,8 @@ const StyledFlexBox = styled(OakFlex)`
   }
 
   &:hover:has(input:not(:disabled)) {
-    background-color: ${parseColor("bg-neutral")};
+    background-color: ${(props) =>
+      parseColor(props.$colorSchemeTokens.hoverBackground)};
   }
 
   &:focus-within {
@@ -67,50 +74,106 @@ const StyledFlexBox = styled(OakFlex)`
       ${parseDropShadow("drop-shadow-centered-grey")};
   }
 
+  ${StyledOakIcon} {
+    filter: ${parseColorFilter("icon-primary")};
+  }
+
   &:has(input:checked:not(:disabled)) {
     background-color: ${parseColor("bg-inverted")};
     color: ${parseColor("text-inverted")};
+    border-color: transparent;
+
+    ${StyledOakIcon} {
+      filter: ${(props) =>
+        props.$keepIconColor ? "none" : parseColorFilter("text-inverted")};
+    }
   }
 `;
 
-export type OakRadioAsButtonProps = Omit<
-  BaseRadioProps,
-  "defaultChecked" | "id" | "checked"
-> & {
-  innerRef?: React.RefObject<HTMLInputElement>;
-  displayValue: string;
-  icon?: OakIconName;
-  keepIconColor?: boolean;
-  disabled?: HTMLInputElement["disabled"];
-  value?: HTMLInputElement["value"];
-  "aria-labelledby"?: React.AriaAttributes["aria-labelledby"];
-  "aria-label"?: React.AriaAttributes["aria-label"];
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+type ColorSchemeTokens = {
+  background: OakUiRoleToken;
+  hoverBackground: OakUiRoleToken;
+  borderColor: OakUiRoleToken;
+  disabledBackground: OakUiRoleToken;
+  disabledBorderColor: OakUiRoleToken;
 };
 
+const getColorSchemeTokens = (
+  colorScheme: OakRadioAsButtonColorScheme,
+): ColorSchemeTokens => {
+  switch (colorScheme) {
+    case "primary":
+      return {
+        background: "bg-primary",
+        hoverBackground: "bg-neutral",
+        borderColor: "border-neutral-lighter",
+        disabledBackground: "bg-btn-secondary-disabled",
+        disabledBorderColor: "border-neutral-lighter",
+      };
+    case "transparent":
+      return {
+        background: "transparent",
+        hoverBackground: "transparent",
+        borderColor: "transparent",
+        disabledBackground: "transparent",
+        disabledBorderColor: "transparent",
+      };
+    default:
+      return {
+        background: `bg-${colorScheme}-main`,
+        hoverBackground: `bg-${colorScheme}-very-subdued`,
+        borderColor: `border-${colorScheme}`,
+        disabledBackground: "bg-btn-secondary-disabled",
+        disabledBorderColor: "border-neutral-lighter",
+      };
+  }
+};
+
+export type OakRadioAsButtonProps = Omit<
+  BaseRadioProps,
+  "defaultChecked" | "id" | "checked" | "variant" | "icon"
+> & {
+  value?: HTMLInputElement["value"];
+  innerRef?: React.RefObject<HTMLInputElement>;
+  displayValue: string;
+  /**
+   * Whether to keep the icon color when the component is checked.
+   *
+   * Useful when the icon has an opinionated color that should be preserved when the component is checked.
+   *
+   * @default `false`
+   */
+  keepIconColor?: boolean;
+  disabled?: HTMLInputElement["disabled"];
+  "aria-labelledby"?: React.AriaAttributes["aria-labelledby"];
+  "aria-label"?: React.AriaAttributes["aria-label"];
+  /**
+   * Sets the color scheme of the component.
+   * Defaults to `"primary"`.
+   */
+  colorScheme?: OakRadioAsButtonColorScheme;
+  width?: SizeStyleProps["$width"];
+} & (
+    | {
+        variant: "with-icon";
+        icon: OakIconName;
+      }
+    | {
+        /**
+         * Controls the appearance of the component.
+         *
+         * - `"default"`: Displays as a button
+         * - `"with-icon"`: Displays an icon alongside the label
+         * - `"with-radio"`: Displays a radio button
+         *
+         * @default `"default"`
+         */
+        variant?: "default" | "with-radio";
+      }
+  );
+
 /**
- * A radio input styled as a button, to be used within `<OakRadioGroup/>` this is
- * the radio inputs version of `<OakSearchFilterCheckBox/>`
- *
- * ## To be refactored 🔀
- * This component will be refactored to have more variants
- *
- * ## Events
- * The following callbacks are available for tracking focus events:
- *
- * ### onChange
- *  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
- *
- * ### onFocus
- *   onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
- *
- * ### onBlur
- *    onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
- *
- * ### onHovered
- *  `onHovered?: (id, value, duration: number) => void;`<br>
- *  called after a mouseEnter and mouseLeave event has happened
- *
+ * A radio input styled as a button, to be used within `<OakRadioGroup/>`.
  */
 export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
   const id = useId();
@@ -119,13 +182,14 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
     disabled,
     innerRef,
     displayValue,
-    icon,
     onChange,
     keepIconColor,
+    colorScheme = "primary",
+    width,
     ...rest
   } = props;
-  const { name, onValueUpdated, currentValue } = useContext(RadioContext);
 
+  const { name, onValueUpdated, currentValue } = useContext(RadioContext);
   const defaultRef = useRef<HTMLInputElement>(null);
   const inputRef = innerRef ?? defaultRef;
 
@@ -143,22 +207,25 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
   };
 
   const isChecked = currentValue === value;
+  const colorSchemeTokens = getColorSchemeTokens(colorScheme);
 
-  return (
-    <OakFlex $minHeight={"spacing-40"} $position={"relative"}>
-      <StyledFlexBox
-        $borderRadius={"border-radius-s"}
-        $borderColor={"border-neutral-lighter"}
-        $ba="border-solid-s"
-        $background={"bg-primary"}
-        onClick={handleContainerClick}
-        $ph={"spacing-12"}
-        $pv={"spacing-4"}
-        $gap={"spacing-4"}
-      >
-        <StyledInternalRadio
-          {...rest}
-          $keepIconColor={keepIconColor}
+  const {
+    icon: _icon,
+    variant: _variant,
+    ...restWithoutVariantProps
+  } = rest as typeof rest & {
+    icon?: OakIconName;
+  };
+
+  const radio = (
+    <InternalRadioWrapper
+      radioBorderColor="border-neutral"
+      radioOuterSize="spacing-20"
+      size="spacing-20"
+      disableFocusRing
+      internalRadio={
+        <InternalRadio
+          {...restWithoutVariantProps}
           id={id}
           value={value}
           disabled={disabled}
@@ -170,16 +237,41 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
           name={name}
           checked={isChecked}
         />
-        {icon && <StyledOakIcon alt="" iconName={icon} />}
-        <InternalCheckBoxLabelHoverDecor
-          pointerEvents="none"
-          htmlFor={id}
-          $font={"heading-7"}
-          disabled={disabled}
-        >
-          {displayValue}
-        </InternalCheckBoxLabelHoverDecor>
-      </StyledFlexBox>
-    </OakFlex>
+      }
+    />
+  );
+
+  return (
+    <StyledFlexBox
+      $borderRadius={"border-radius-s"}
+      $ba="border-solid-s"
+      $pv={"spacing-4"}
+      $ph={"spacing-12"}
+      $gap={"spacing-8"}
+      $alignItems={"center"}
+      $keepIconColor={keepIconColor}
+      $colorSchemeTokens={colorSchemeTokens}
+      $width={width ?? "fit-content"}
+      $minHeight={"spacing-32"}
+      $boxSizing="content-box"
+      onClick={handleContainerClick}
+    >
+      {rest.variant === "with-radio" ? (
+        radio
+      ) : (
+        <OakScreenReader>{radio}</OakScreenReader>
+      )}
+      {rest.variant === "with-icon" && (
+        <StyledOakIcon alt="" iconName={rest.icon} />
+      )}
+      <InternalCheckBoxLabelHoverDecor
+        pointerEvents="none"
+        htmlFor={id}
+        $font={"heading-7"}
+        disabled={disabled}
+      >
+        {displayValue}
+      </InternalCheckBoxLabelHoverDecor>
+    </StyledFlexBox>
   );
 };
