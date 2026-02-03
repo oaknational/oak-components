@@ -214,7 +214,7 @@ export const AlertLarge: Story = {
   },
 };
 
-export const WarningNormalA: Story = {
+export const WarningNormal: Story = {
   args: {
     type: "warning",
   },
