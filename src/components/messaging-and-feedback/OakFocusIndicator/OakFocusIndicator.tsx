@@ -8,7 +8,7 @@ import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 
 function isJSDOM() {
   return globalThis?.navigator?.userAgent?.includes("jsdom/");
-};
+}
 
 const activeChildren = `a:active, button:active`;
 const hoverChildren = `a:hover, button:hover`;
@@ -17,8 +17,12 @@ const focusVisibleChildren = `
   button${isJSDOM() ? "" : ":focus-visible"}
 `;
 
-const focusShadow = `${parseDropShadow("drop-shadow-centered-lemon")}, ${parseDropShadow("drop-shadow-centered-grey")}`;
-const fallbackActiveShadow = `${parseDropShadow("drop-shadow-lemon")}, ${parseDropShadow("drop-shadow-grey")}`;
+const focusShadow = `${parseDropShadow(
+  "drop-shadow-centered-lemon",
+)}, ${parseDropShadow("drop-shadow-centered-grey")}`;
+const fallbackActiveShadow = `${parseDropShadow(
+  "drop-shadow-lemon",
+)}, ${parseDropShadow("drop-shadow-grey")}`;
 
 export type OakFocusIndicatorProps = {
   hoverBackground?: OakUiRoleToken;
@@ -31,15 +35,25 @@ export type OakFocusIndicatorProps = {
  * Wrap focusable components `<a/>`/`<button/>` and this will add focus styles then the inner element is focused
  */
 export const OakFocusIndicator = styled(OakBox)<OakFocusIndicatorProps>`
-  box-shadow: ${(props) => props.dropShadow ? parseDropShadow(props.dropShadow) : "none"};
+  box-shadow: ${(props) =>
+    props.dropShadow ? parseDropShadow(props.dropShadow) : "none"};
 
-    &:has(${hoverChildren}) {
-    ${responsiveStyle("background-color", (props) => props.hoverBackground, parseColor)}
-    box-shadow: ${(props) => props.hoverDropShadow ? parseDropShadow(props.hoverDropShadow) : "none"};
+  &:has(${hoverChildren}) {
+    ${responsiveStyle(
+      "background-color",
+      (props) => props.hoverBackground,
+      parseColor,
+    )}
+    box-shadow: ${(props) =>
+      props.hoverDropShadow ? parseDropShadow(props.hoverDropShadow) : "none"};
   }
-    
+
   &:has(${focusVisibleChildren}) {
-    ${responsiveStyle("border-radius", (props) => props.$borderRadius, parseBorderRadius)}
+    ${responsiveStyle(
+      "border-radius",
+      (props) => props.$borderRadius,
+      parseBorderRadius,
+    )}
     box-shadow: ${focusShadow};
 
     & ${focusVisibleChildren} {
@@ -48,6 +62,9 @@ export const OakFocusIndicator = styled(OakBox)<OakFocusIndicatorProps>`
   }
 
   &:has(${activeChildren}) {
-    box-shadow: ${(props) => props.activeDropShadow ? parseDropShadow(props.activeDropShadow) : fallbackActiveShadow};
+    box-shadow: ${(props) =>
+      props.activeDropShadow
+        ? parseDropShadow(props.activeDropShadow)
+        : fallbackActiveShadow};
   }
 `;
