@@ -80,6 +80,7 @@ export const Default: Story = {
     showHeader: true,
     unitCards: [
       <OakUnitListItem
+        key={1}
         index={1}
         title={"Lesson 1"}
         lessonCount={"4 lessons"}
@@ -89,6 +90,7 @@ export const Default: Story = {
       />,
 
       <OakUnitListOptionalityItem
+        key={2}
         nullTitle={
           "Numerals 1-10 this is a very long title (unavailable example) "
         }
@@ -123,6 +125,7 @@ export const Default: Story = {
         firstItemRef={undefined}
       />,
       <OakUnitListItem
+        key={3}
         index={3}
         yearTitle={"Year 11"}
         title={"Lesson 3"}
@@ -131,6 +134,7 @@ export const Default: Story = {
         href={"#"}
       />,
       <OakUnitListItem
+        key={4}
         index={4}
         title={
           "Lesson 4 - English  - a lesson with a longer title, a lesson with a longer title"
@@ -141,6 +145,7 @@ export const Default: Story = {
         href={"#"}
       />,
       <OakUnitListItem
+        key={5}
         index={4}
         title={
           "Lesson 4 - English  - a lesson with a longer title, a lesson with a longer title"
