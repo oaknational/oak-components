@@ -21,6 +21,7 @@ module "vercel" {
   project_visibility               = "public"
   git_repo                         = "oaknational/oak-components"
   protection_bypass_for_automation = false
+  
   skew_protection                  = "1 day"
 
   domains = ["components.thenational.academy"]

@@ -19,7 +19,9 @@ locals {
 sensitive_env_vars = {
     shared = {}
     prod    = {}
-    preview = {}
+    preview = {
+      x_vercel_protection_bypass = var.x_vercel_protection_bypass
+    }
   }
 
   sensitive_vars = flatten([

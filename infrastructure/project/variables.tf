@@ -14,3 +14,10 @@ variable "env_vars" {
     preview = object({})
   })
 }
+
+variable "x_vercel_protection_bypass" {
+  description = "A vercel bypass token used in preview deployments for automation"
+  type        = string
+  sensitive   = true
+  nullable    = false
+}
