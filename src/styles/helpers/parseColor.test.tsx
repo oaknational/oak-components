@@ -16,7 +16,7 @@ describe("parseColor", () => {
     expect(parseColor("mint")).toBe("#bef2bd");
   });
 
-  it("should render the correct color if value is a valid OakUiRole", () => {
+  it("should render the correct color if value is a valid OakUiRoleToken", () => {
     const func = parseColor("text-primary");
     expect(func).toBeInstanceOf(Function);
     const cast = func as ({ theme }: ThemeProps<DefaultTheme>) => string;

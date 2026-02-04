@@ -277,7 +277,7 @@ export const OverriddenStyling: Story = {
     icon: "rocket",
     $borderColor: "border-decorative4",
     $background: "bg-decorative4-very-subdued",
-    iconColorFilter: "oakGreen",
+    iconColorFilter: "icon-success",
   },
 };
 
@@ -288,7 +288,7 @@ export const OverriddenStylingSimple: Story = {
     icon: "rocket",
     $borderColor: "border-decorative4",
     $background: "bg-decorative4-very-subdued",
-    iconColorFilter: "oakGreen",
+    iconColorFilter: "icon-success",
     title: undefined,
   },
 };
@@ -300,7 +300,7 @@ export const OverriddenStylingLarge: Story = {
     icon: "rocket",
     $borderColor: "border-decorative4",
     $background: "bg-decorative4-very-subdued",
-    iconColorFilter: "oakGreen",
+    iconColorFilter: "icon-success",
     variant: "large",
     message: `Provide users with clear, timely, and non-disruptive feedback to support 
       their understanding of actions and outcomes without interrupting their 

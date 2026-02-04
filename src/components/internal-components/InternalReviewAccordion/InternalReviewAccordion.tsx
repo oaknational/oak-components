@@ -76,7 +76,7 @@ const Accordion = ({ children, id }: InternalReviewAccordionProps) => {
           disabledIconBackground={"transparent"}
           iconBackgroundSize={"spacing-32"}
           iconSize={"spacing-24"}
-          defaultIconColor={"icon-main"}
+          defaultIconColor={"icon-inverted"}
           isTrailingIcon={true}
         >
           Results

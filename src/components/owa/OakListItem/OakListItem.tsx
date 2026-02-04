@@ -272,7 +272,7 @@ export const OakListItem = (props: OakListItemProps) => {
       {expandedContent && isExpanded && (
         <OakFlex $ml={onCheckedChange && "spacing-24"} $flexGrow={1}>
           <OakFlex
-            $background={"white"}
+            $background={"bg-primary"}
             $pa={"spacing-24"}
             $borderColor={indexBgColour}
             $bt={"border-solid-s"}

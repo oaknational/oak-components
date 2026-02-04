@@ -1,7 +1,7 @@
 import React, { forwardRef, useRef } from "react";
 import styled, { css } from "styled-components";
 
-import { OakBorderRadiusToken, OakCombinedColorToken } from "@/styles";
+import { OakBorderRadiusToken, OakUiRoleToken } from "@/styles";
 import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
@@ -82,9 +82,9 @@ type StyledBaseCheckBoxProps = BaseCheckBoxProps &
   SpacingStyleProps &
   BorderStyleProps &
   SizeStyleProps & {
-    $checkedBackground?: OakCombinedColorToken | null;
-    $checkedBorderColor?: OakCombinedColorToken;
-    $uncheckedBorderColor?: OakCombinedColorToken;
+    $checkedBackground?: OakUiRoleToken | null;
+    $checkedBorderColor?: OakUiRoleToken;
+    $uncheckedBorderColor?: OakUiRoleToken;
   };
 
 type HoverBaseCheckBoxProps = {

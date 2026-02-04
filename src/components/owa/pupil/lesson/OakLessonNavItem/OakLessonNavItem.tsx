@@ -10,7 +10,7 @@ import { OakRoundIcon } from "@/components/images-and-icons/OakRoundIcon";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
-import { OakCombinedColorToken } from "@/styles";
+import { OakUiRoleToken } from "@/styles";
 
 type LessonSectionName = "intro" | "starter-quiz" | "video" | "exit-quiz";
 
@@ -74,7 +74,7 @@ const activeIconStyles = css`
     background: ${parseColor("bg-btn-primary")};
 
     img {
-      filter: ${parseColorFilter("icon-main")};
+      filter: ${parseColorFilter("icon-inverted")};
     }
   }
 `;
@@ -210,9 +210,9 @@ function pickIconForSection(sectionName: LessonSectionName): OakIconName {
 function pickColorsForSection(
   sectionName: LessonSectionName,
 ): [
-  notStartedBackgroundColor: OakCombinedColorToken,
-  backgroundColor: OakCombinedColorToken,
-  borderColor: OakCombinedColorToken,
+  notStartedBackgroundColor: OakUiRoleToken,
+  backgroundColor: OakUiRoleToken,
+  borderColor: OakUiRoleToken,
 ] {
   switch (sectionName) {
     case "intro":

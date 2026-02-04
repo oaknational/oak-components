@@ -6,7 +6,7 @@ import {
   OakFlexProps,
 } from "@/components/layout-and-structure/OakFlex";
 import { parseColor } from "@/styles/helpers/parseColor";
-import { OakCombinedColorToken } from "@/styles";
+import { OakUiRoleToken } from "@/styles";
 import { OakGrid } from "@/components/layout-and-structure/OakGrid";
 import { OakGridArea } from "@/components/layout-and-structure/OakGridArea";
 import { OakLabel } from "@/components/form-elements/OakLabel";
@@ -15,7 +15,7 @@ import { InternalUnstyledChevronAccordion } from "@/components/internal-componen
 import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 
 type StyledOakFlexProps = {
-  $statusColor: OakCombinedColorToken;
+  $statusColor: OakUiRoleToken;
 } & OakFlexProps;
 
 const StyledOakFlex = styled(OakFlex)<StyledOakFlexProps>`
@@ -57,7 +57,7 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
     feedbackInputId,
   } = props;
 
-  const statusColorMap: Record<Status, OakCombinedColorToken> = {
+  const statusColorMap: Record<Status, OakUiRoleToken> = {
     error: "border-error",
     selected: "border-decorative1-stronger",
     neutral: "border-neutral-lighter",

@@ -7,7 +7,7 @@ import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakIcon } from "@/components/images-and-icons/OakIcon";
 import { OakSpan } from "@/components/typography/OakSpan";
 import { OakRoundIcon } from "@/components/images-and-icons/OakRoundIcon";
-import { OakCombinedColorToken } from "@/styles";
+import { OakUiRoleToken } from "@/styles";
 
 type LessonQuizName = "starter-quiz" | "exit-quiz";
 type OakLessonReviewQuizProps = {
@@ -28,8 +28,8 @@ type OakLessonReviewQuizProps = {
 };
 
 type OakLessonReviewItemContainerProps = {
-  $background?: OakCombinedColorToken;
-  $borderColor?: OakCombinedColorToken;
+  $background?: OakUiRoleToken;
+  $borderColor?: OakUiRoleToken;
   children: React.ReactNode;
 };
 
@@ -88,9 +88,9 @@ export const ReviewItemTitleSection = (props: ReviewItemTitleSectionProps) => {
 export const OakLessonReviewQuiz = (props: OakLessonReviewQuizProps) => {
   const { completed, lessonSectionName, resultsSlot, ...rest } = props;
   const [completedBackgroundColor, borderColor, iconBackgroundColor]: [
-    completedBackgroundColor: OakCombinedColorToken,
-    borderColor: OakCombinedColorToken,
-    iconBackgroundColor: OakCombinedColorToken,
+    completedBackgroundColor: OakUiRoleToken,
+    borderColor: OakUiRoleToken,
+    iconBackgroundColor: OakUiRoleToken,
   ] =
     lessonSectionName === "starter-quiz"
       ? [

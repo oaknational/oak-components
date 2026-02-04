@@ -14,7 +14,7 @@ import { parseBorder } from "@/styles/helpers/parseBorder";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { IconName } from "@/image-map";
-import { OakCombinedColorToken } from "@/styles/theme/color";
+import { OakUiRoleToken } from "@/styles/theme/color";
 import { parseBorderWidth } from "@/styles/helpers/parseBorderWidth";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
 
@@ -40,7 +40,7 @@ type OakDraggableProps = {
   /**
    * Icon color when not being dragged or hovered
    */
-  iconColor?: OakCombinedColorToken;
+  iconColor?: OakUiRoleToken;
   /**
    * The alt text for the icon
    */
@@ -48,16 +48,16 @@ type OakDraggableProps = {
   /**
    * The background color of the draggable when not being dragged or hovered
    */
-  background?: OakCombinedColorToken;
+  background?: OakUiRoleToken;
   /**
    * The color of the draggable when not being dragged or hovered
    */
-  color?: OakCombinedColorToken;
+  color?: OakUiRoleToken;
 };
 
 const StyledOakIcon = styled(OakIcon)``;
 
-const StyledDraggable = styled(OakBox)<{ $iconColor: OakCombinedColorToken }>`
+const StyledDraggable = styled(OakBox)<{ $iconColor: OakUiRoleToken }>`
   cursor: grab;
   outline: none;
   user-select: none;

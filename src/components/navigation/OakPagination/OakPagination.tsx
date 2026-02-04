@@ -45,7 +45,7 @@ const StyledIcon = styled(OakIcon)<{ disabled: boolean }>`
   ${(props) => {
     if (props.disabled) {
       return css`
-        filter: ${parseColorFilter("grey50")};
+        filter: ${parseColorFilter("icon-disabled")};
       `;
     }
   }}
@@ -65,7 +65,7 @@ const StyledNumberButton = styled(OakLink)<{ selected: boolean }>`
   ${(props) => css`
     background-color: ${props.selected
       ? parseColor("icon-primary")
-      : parseColor("icon-main")};
+      : parseColor("icon-inverted")};
   `};
 
   ${(props) =>

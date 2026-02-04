@@ -7,7 +7,7 @@ import { OakBoxProps } from "@/components/layout-and-structure/OakBox";
 import { OakP } from "@/components/typography/OakP";
 import { OakUL } from "@/components/typography/OakUL";
 import { OakLI } from "@/components/typography/OakLI";
-import { OakCombinedColorToken } from "@/styles";
+import { OakUiRoleToken } from "@/styles";
 import { TypographyStyleProps } from "@/styles/utils/typographyStyle";
 import { OakInfo } from "@/components/owa/OakInfo/OakInfo";
 
@@ -55,7 +55,7 @@ export const OakCodeRenderer = ({ string, ...rest }: OakCodeRendererProps) => {
 
   const syntaxHighlight = (code: string) => {
     // Define regex patterns for different code parts
-    const patterns: { regex: RegExp; color: OakCombinedColorToken }[] = [
+    const patterns: { regex: RegExp; color: OakUiRoleToken }[] = [
       { regex: /"(.*?)"|'(.*?)'/g, color: "code-green" }, // Strings
       {
         regex:

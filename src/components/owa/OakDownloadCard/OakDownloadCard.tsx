@@ -12,7 +12,7 @@ import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakIcon } from "@/components/images-and-icons/OakIcon";
 import { parseColor } from "@/styles/helpers/parseColor";
-import { OakCombinedColorToken } from "@/styles";
+import { OakUiRoleToken } from "@/styles";
 import { IconName } from "@/image-map";
 import { InternalRadioWrapper } from "@/components/internal-components/InternalRadioWrapper";
 import { InternalRadio } from "@/components/internal-components/InternalRadio/InternalRadio";
@@ -32,7 +32,7 @@ const LabelContainer = styled("label")`
   display: flex;
 `;
 
-const Container = styled(OakFlex)<{ $hoverBackground: OakCombinedColorToken }>`
+const Container = styled(OakFlex)<{ $hoverBackground: OakUiRoleToken }>`
   cursor: pointer;
 
   &:has(input:focus-within) {

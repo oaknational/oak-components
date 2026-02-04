@@ -7,14 +7,10 @@ import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakHeading } from "@/components/typography/OakHeading";
 import { oakIconNames } from "@/components/images-and-icons/OakIcon";
 import { OakP } from "@/components/typography/OakP";
-import {
-  oakColorFilterTokens,
-  oakColorTokens,
-  oakUiRoleTokens,
-} from "@/styles/theme/color";
+import { oakColorTokens, oakUiRoleTokens } from "@/styles/theme/color";
 
 const controlIconNames = [...oakIconNames].sort((a, b) => a.localeCompare(b));
-const controlColorTokens = Object.keys(oakColorFilterTokens).sort((a, b) =>
+const controlColorTokens = Object.keys(oakUiRoleTokens).sort((a, b) =>
   a.localeCompare(b),
 );
 const controlIconFillNames = [

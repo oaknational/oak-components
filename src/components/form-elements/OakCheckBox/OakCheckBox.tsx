@@ -13,7 +13,7 @@ import {
   OakAllSpacingToken,
   OakBorderRadiusToken,
   OakBorderWidthToken,
-  OakCombinedColorToken,
+  OakUiRoleToken,
   OakInnerPaddingToken,
 } from "@/styles";
 
@@ -21,14 +21,14 @@ export type OakCheckBoxProps = BaseCheckBoxProps & {
   checkboxSize?: OakAllSpacingToken;
   checkboxBorder?: OakBorderWidthToken;
   checkboxBorderRadius?: OakBorderRadiusToken;
-  checkedBorderColor?: OakCombinedColorToken;
-  uncheckedBorderColor?: OakCombinedColorToken;
+  checkedBorderColor?: OakUiRoleToken;
+  uncheckedBorderColor?: OakUiRoleToken;
   checkedIcon?: React.JSX.Element;
   checkedBackgroundFill?: boolean;
   hoverBorderRadius?: OakBorderRadiusToken;
   iconPadding?: OakInnerPaddingToken;
-  defaultColor?: OakCombinedColorToken;
-  disabledColor?: OakCombinedColorToken;
+  defaultColor?: OakUiRoleToken;
+  disabledColor?: OakUiRoleToken;
   displayValue?: string;
 } & InternalCheckBoxLabelProps;
 

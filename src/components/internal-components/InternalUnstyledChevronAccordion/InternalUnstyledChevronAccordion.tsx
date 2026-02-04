@@ -57,7 +57,7 @@ const StyledAccordionButton = styled(InternalAccordionButton)<FlexStyleProps>`
   ${oakBoxCss}
   &:hover {
     .chevron-icon {
-      filter: ${parseColorFilter("grey60")};
+      filter: ${parseColorFilter("icon-subdued")};
     }
   }
   &:focus-visible {

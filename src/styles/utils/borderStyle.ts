@@ -4,7 +4,7 @@ import {
   OakBorderRadiusToken,
   OakBorderWidthToken,
 } from "@/styles/theme/borders";
-import { OakCombinedColorToken } from "@/styles/theme/color";
+import { OakUiRoleToken } from "@/styles/theme/color";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseBorder } from "@/styles/helpers/parseBorder";
 import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
@@ -15,7 +15,7 @@ import {
 
 type BorderWidth = ResponsiveValues<OakBorderWidthToken>;
 type _BorderStyleProps = ResponsiveValues<CSSProperties["borderStyle"]>;
-type BorderColorProps = ResponsiveValues<OakCombinedColorToken>;
+type BorderColorProps = ResponsiveValues<OakUiRoleToken>;
 type BorderRadiusProps = ResponsiveValues<OakBorderRadiusToken>;
 
 export type BorderStyleProps = {
@@ -70,7 +70,7 @@ export type BorderStyleProps = {
   /**
    * Apply a border color to all sides of the element
    *
-   * Accepts a color token or a responsive array of color tokens.
+   * Accepts a UI role token or a responsive array of UI role tokens.
    */
   $borderColor?: BorderColorProps;
   $borderRadius?: BorderRadiusProps;

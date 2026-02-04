@@ -24,7 +24,11 @@ export const OakFieldError = (props: OakFieldErrorProps) => {
   return (
     <OakFlex $alignItems={"center"} $flexDirection={"row"}>
       <OakFlex $alignSelf={"flex-start"} $mr={"spacing-16"}>
-        <OakIcon alt="Error" iconName="content-guidance" $colorFilter={"red"} />
+        <OakIcon
+          alt="Error"
+          iconName="content-guidance"
+          $colorFilter={"icon-error"}
+        />
       </OakFlex>
       <OakSpan $color="text-error">{children}</OakSpan>
     </OakFlex>

@@ -49,7 +49,7 @@ export const AllIcons: Story = {
       })}
     </OakFlex>
   ),
-  args: { $colorFilter: "black" },
+  args: { $colorFilter: "icon-primary" },
   parameters: {
     controls: {
       include: Object.keys(colorFilterArgTypes),

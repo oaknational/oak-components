@@ -126,7 +126,7 @@ export const OakPupilJourneyContentGuidance = ({
       <OakModalCenterBody
         iconName="warning"
         iconOverride={{
-          $colorFilter: "amber",
+          $colorFilter: "icon-warning",
         }}
         title={title}
       >

@@ -10,7 +10,7 @@ import { OakLabel, OakLabelProps } from "@/components/form-elements/OakLabel";
 import {
   OakAllSpacingToken,
   OakBorderWidthToken,
-  OakCombinedColorToken,
+  OakUiRoleToken,
 } from "@/styles";
 import { InternalRadioWrapper } from "@/components/internal-components/InternalRadioWrapper";
 import { InternalRadio } from "@/components/internal-components/InternalRadio/InternalRadio";
@@ -61,7 +61,7 @@ export type OakRadioButtonProps = {
   /**
    * Allows the background color of the radio button to be customized.
    */
-  radioBackground?: OakCombinedColorToken;
+  radioBackground?: OakUiRoleToken;
   /**
    * Allows the width of the radio button border to be customized when the radio button is checked.
    */

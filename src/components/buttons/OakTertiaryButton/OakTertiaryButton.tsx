@@ -35,8 +35,8 @@ export const OakTertiaryButton = <C extends ElementType = "button">({
       {...props}
       isTrailingIcon={isTrailingIcon}
       iconName={iconName}
-      defaultIconColor={"icon-main"}
-      disabledIconColor="icon-main"
+      defaultIconColor={"icon-inverted"}
+      disabledIconColor="icon-inverted"
       disabledIconBackground="bg-btn-primary-disabled"
       defaultIconBackground="icon-primary"
       hoverIconBackground="bg-btn-primary-hover"

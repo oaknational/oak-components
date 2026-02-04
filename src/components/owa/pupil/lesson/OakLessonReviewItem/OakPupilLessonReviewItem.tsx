@@ -6,7 +6,7 @@ import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakIcon } from "@/components/images-and-icons/OakIcon";
 import { OakSpan } from "@/components/typography/OakSpan";
 import { OakRoundIcon } from "@/components/images-and-icons/OakRoundIcon";
-import { OakCombinedColorToken } from "@/styles";
+import { OakUiRoleToken } from "@/styles";
 
 type LessonSectionName = "intro" | "starter-quiz" | "video" | "exit-quiz";
 type BaseOakLessonReviewItemProps = {
@@ -124,9 +124,9 @@ const pickLabelForSection = (sectionName: LessonSectionName): string => {
 const pickColorsForSection = (
   sectionName: LessonSectionName,
 ): [
-  completedBackgroundColor: OakCombinedColorToken,
-  borderColor: OakCombinedColorToken,
-  iconBackgroundColor: OakCombinedColorToken,
+  completedBackgroundColor: OakUiRoleToken,
+  borderColor: OakUiRoleToken,
+  iconBackgroundColor: OakUiRoleToken,
 ] => {
   switch (sectionName) {
     case "intro":

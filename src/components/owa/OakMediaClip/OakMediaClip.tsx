@@ -13,7 +13,7 @@ import {
 } from "@/components/images-and-icons/OakImage";
 import { OakP } from "@/components/typography/OakP";
 import { OakLI } from "@/components/typography/OakLI";
-import { OakCombinedColorToken } from "@/styles";
+import { OakUiRoleToken } from "@/styles";
 import { InternalButton } from "@/components/internal-components/InternalButton";
 import { sizeStyle, SizeStyleProps } from "@/styles/utils/sizeStyle";
 import { positionStyle } from "@/styles/utils/positionStyle";
@@ -43,7 +43,7 @@ type MediaClipStyles = {
     | "defaultTextColor"
     | "hoverBackground"
     | "hoverTextColor"
-    | "clipNameTitle"]: OakCombinedColorToken;
+    | "clipNameTitle"]: OakUiRoleToken;
 };
 
 const getButtonStyles = (muxPlayingState: MuxPlayingState): MediaClipStyles => {
@@ -123,15 +123,15 @@ const TextBox = styled(OakFlex)`
 
 const StyledInternalButton = styled(InternalButton)<
   SizeStyleProps & {
-    $defaultTextColor: OakCombinedColorToken;
-    $defaultBackground: OakCombinedColorToken;
-    $defaultBorderColor: OakCombinedColorToken;
-    $hoverTextColor: OakCombinedColorToken;
-    $hoverBackground: OakCombinedColorToken;
-    $hoverBorderColor: OakCombinedColorToken;
-    $disabledBackground: OakCombinedColorToken;
-    $disabledBorderColor: OakCombinedColorToken;
-    $disabledTextColor: OakCombinedColorToken;
+    $defaultTextColor: OakUiRoleToken;
+    $defaultBackground: OakUiRoleToken;
+    $defaultBorderColor: OakUiRoleToken;
+    $hoverTextColor: OakUiRoleToken;
+    $hoverBackground: OakUiRoleToken;
+    $hoverBorderColor: OakUiRoleToken;
+    $disabledBackground: OakUiRoleToken;
+    $disabledBorderColor: OakUiRoleToken;
+    $disabledTextColor: OakUiRoleToken;
   }
 >`
   ${positionStyle}

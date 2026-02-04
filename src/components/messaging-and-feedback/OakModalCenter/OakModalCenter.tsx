@@ -195,7 +195,7 @@ export const OakModalCenter = ({
             $position="fixed"
             $inset="spacing-0"
             $zIndex="behind"
-            $background="blackSemiTransparent"
+            $background="bg-inverted-semi-transparent"
             data-testid="backdrop"
             {...backdropFlexProps}
           />
@@ -244,7 +244,7 @@ export const OakModalCenter = ({
                         hoverTextColor="transparent"
                         disabledTextColor="transparent"
                         hoverIconBackground="icon-primary"
-                        hoverIconColor="icon-main"
+                        hoverIconColor="icon-inverted"
                         disabledIconBackground="transparent"
                         iconBackgroundSize="spacing-32"
                         iconSize="spacing-32"
