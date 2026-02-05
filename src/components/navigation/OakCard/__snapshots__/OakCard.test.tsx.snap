@@ -2,12 +2,10 @@
 
 exports[`OakCard matches snapshot when passed all props 1`] = `
 .c0 {
-  overflow: hidden;
   width: 22.5rem;
   background: #ffffff;
   border-radius: 0.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
-  overflow: hidden;
 }
 
 .c2 {
@@ -133,24 +131,22 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   box-shadow: none;
 }
 
-.c1:has( a, button ) {
-  border-radius: 0.5rem;
-  z-index: 2;
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
-}
-
-.c1:has(a:hover,button:hover),
-.c1:has(button:hover:not(:active)) {
-  z-index: 1;
-  background-color: #f2f2f2;
-}
-
 .c1:has(a:hover,button:hover) {
+  background-color: #f2f2f2;
   box-shadow: none;
 }
 
+.c1:has( a, button) {
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
+}
+
+.c1:has( a, button)  a,
+.c1:has( a, button) button {
+  outline: none;
+}
+
 .c1:has(a:active,button:active) {
-  z-index: 2;
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%),0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 

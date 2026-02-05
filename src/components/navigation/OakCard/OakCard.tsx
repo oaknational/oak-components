@@ -132,7 +132,6 @@ export const OakCard = ({
       hoverBackground={"bg-btn-secondary-hover"}
       $width={cardWidth}
       $borderRadius={"border-radius-m2"}
-      $overflow={"hidden"}
     >
       <StyledOakFlex
         as="a"

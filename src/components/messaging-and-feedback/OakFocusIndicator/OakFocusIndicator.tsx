@@ -10,6 +10,20 @@ function isJSDOM() {
   return globalThis?.navigator?.userAgent?.includes("jsdom/");
 }
 
+const activeChildren = `a:active, button:active`;
+const hoverChildren = `a:hover, button:hover`;
+const focusVisibleChildren = `
+  a${isJSDOM() ? "" : ":focus-visible"},
+  button${isJSDOM() ? "" : ":focus-visible"}
+`;
+
+const focusShadow = `${parseDropShadow(
+  "drop-shadow-centered-lemon",
+)}, ${parseDropShadow("drop-shadow-centered-grey")}`;
+const fallbackActiveShadow = `${parseDropShadow(
+  "drop-shadow-lemon",
+)}, ${parseDropShadow("drop-shadow-grey")}`;
+
 export type OakFocusIndicatorProps = {
   hoverBackground?: OakUiRoleToken;
   dropShadow?: OakDropShadowToken;
@@ -24,42 +38,33 @@ export const OakFocusIndicator = styled(OakBox)<OakFocusIndicatorProps>`
   box-shadow: ${(props) =>
     props.dropShadow ? parseDropShadow(props.dropShadow) : "none"};
 
-  &:has(
-      a${isJSDOM() ? "" : ":focus-visible"},
-        button${isJSDOM() ? "" : ":focus-visible"}
-    ) {
-    ${responsiveStyle(
-      "border-radius",
-      (props) => props.$borderRadius,
-      parseBorderRadius,
-    )}
-    z-index: 2;
-    box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
-      ${parseDropShadow("drop-shadow-centered-grey")};
-  }
-
-  &:has(a:hover, button:hover),
-  &:has(button:hover:not(:active${isJSDOM() ? "" : ", :focus-visible"})) {
-    z-index: 1;
+  &:has(${hoverChildren}) {
     ${responsiveStyle(
       "background-color",
       (props) => props.hoverBackground,
       parseColor,
     )}
-  }
-
-  &:has(a:hover, button:hover) {
     box-shadow: ${(props) =>
       props.hoverDropShadow ? parseDropShadow(props.hoverDropShadow) : "none"};
   }
 
-  &:has(a:active, button:active) {
-    z-index: 2;
+  &:has(${focusVisibleChildren}) {
+    ${responsiveStyle(
+      "border-radius",
+      (props) => props.$borderRadius,
+      parseBorderRadius,
+    )}
+    box-shadow: ${focusShadow};
+
+    & ${focusVisibleChildren} {
+      outline: none;
+    }
+  }
+
+  &:has(${activeChildren}) {
     box-shadow: ${(props) =>
       props.activeDropShadow
         ? parseDropShadow(props.activeDropShadow)
-        : `${parseDropShadow("drop-shadow-lemon")}, ${parseDropShadow(
-            "drop-shadow-grey",
-          )};`};
+        : fallbackActiveShadow};
   }
 `;
