@@ -154,7 +154,7 @@ export const OakCard = ({
         <OakFlex
           $flexDirection="column"
           $justifyContent={"space-between"}
-          $height={"100%"}
+          $height={cardOrientation === "row" ? "auto" : "100%"}
           $pt={cardOrientation === "row" ? "spacing-24" : "spacing-0"}
           $pb={cardOrientation === "row" ? "spacing-24" : "spacing-0"}
           $gap="spacing-16"
