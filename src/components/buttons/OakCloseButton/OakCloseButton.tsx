@@ -14,7 +14,10 @@ export type OakCloseButtonProps = {
  *
  *
  */
-export function OakCloseButton({ onClose, ...rest }: OakCloseButtonProps) {
+export function OakCloseButton({
+  onClose,
+  ...rest
+}: Readonly<OakCloseButtonProps>) {
   return (
     <InternalShadowRoundButton
       onClick={onClose}
