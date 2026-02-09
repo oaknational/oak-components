@@ -40,22 +40,22 @@ export const OakCarousel = ({
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handleFwd = () => {
-    if (!isLooping) {
+    if (isLooping) {
+      setActiveIndex((activeIndex + 1) % content.length);
+    } else {
       if (activeIndex < content.length - 1) {
         setActiveIndex(activeIndex + 1);
       }
-    } else {
-      setActiveIndex((activeIndex + 1) % content.length);
     }
   };
 
   const handleBack = () => {
-    if (!isLooping) {
+    if (isLooping) {
+      setActiveIndex((activeIndex - 1 + content.length) % content.length);
+    } else {
       if (activeIndex > 0) {
         setActiveIndex(activeIndex - 1);
       }
-    } else {
-      setActiveIndex((activeIndex - 1 + content.length) % content.length);
     }
   };
 
