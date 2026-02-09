@@ -130,6 +130,7 @@ export const OakCard = ({
     <OakFocusIndicator
       $background={"bg-primary"}
       hoverBackground={"bg-btn-secondary-hover"}
+      $height={"100%"}
       $width={cardWidth}
       $borderRadius={"border-radius-m2"}
     >
