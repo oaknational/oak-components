@@ -42,20 +42,16 @@ export const OakCarousel = ({
   const handleFwd = () => {
     if (isLooping) {
       setActiveIndex((activeIndex + 1) % content.length);
-    } else {
-      if (activeIndex < content.length - 1) {
-        setActiveIndex(activeIndex + 1);
-      }
+    } else if (activeIndex < content.length - 1) {
+      setActiveIndex(activeIndex + 1);
     }
   };
 
   const handleBack = () => {
     if (isLooping) {
       setActiveIndex((activeIndex - 1 + content.length) % content.length);
-    } else {
-      if (activeIndex > 0) {
-        setActiveIndex(activeIndex - 1);
-      }
+    } else if (activeIndex > 0) {
+      setActiveIndex(activeIndex - 1);
     }
   };
 
