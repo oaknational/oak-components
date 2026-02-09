@@ -130,6 +130,7 @@ export const OakCard = ({
     <OakFocusIndicator
       $background={"bg-primary"}
       hoverBackground={"bg-btn-secondary-hover"}
+      $height={"100%"}
       $width={cardWidth}
       $borderRadius={"border-radius-m2"}
     >
@@ -137,6 +138,7 @@ export const OakCard = ({
         as="a"
         href={href}
         $flexDirection={cardOrientation}
+        $height={"100%"}
         $pa={"spacing-16"}
         $gap={"spacing-16"}
         $color={"text-primary"}
@@ -153,6 +155,7 @@ export const OakCard = ({
         <OakFlex
           $flexDirection="column"
           $justifyContent={"space-between"}
+          $height={cardOrientation === "row" ? "auto" : "100%"}
           $pt={cardOrientation === "row" ? "spacing-24" : "spacing-0"}
           $pb={cardOrientation === "row" ? "spacing-24" : "spacing-0"}
           $gap="spacing-16"
