@@ -78,7 +78,7 @@ const meta: Meta<typeof OakInlineBanner> = {
     canDismiss: true,
     onDismiss: () => console.log("dismissed"),
   },
-  render: (args) => {
+  render: function DefaultStory(args) {
     const [, updateArgs] = useArgs();
     const onDismiss = () => updateArgs({ isOpen: false });
 
