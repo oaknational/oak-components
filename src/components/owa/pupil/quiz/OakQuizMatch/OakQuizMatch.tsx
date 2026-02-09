@@ -28,19 +28,17 @@ export const OakQuizMatchItemId = (id: string) => {
   return `oak-quiz-match-item-${id}`;
 };
 
-type DraggableId = string;
-type DroppableId = string;
 type DraggableItem = {
-  id: DraggableId;
+  id: string;
   label: ReactNode;
   announcement: string;
 };
 type DroppableItem = {
-  id: DroppableId;
+  id: string;
   label: ReactNode;
   announcement: string;
 };
-type Matches = Record<DroppableId, DraggableItem>;
+type Matches = Record<DraggableItem["id"], DraggableItem>;
 
 export type OakQuizMatchProps = {
   /**
@@ -166,7 +164,7 @@ export const OakQuizMatch = ({
   const [matches, setMatches] = useState<Matches>({});
   const [shuffledDraggables, setShuffledDraggables] =
     useState<DraggableItem[]>(initialOptions);
-  const [activeId, setActiveId] = useState<DraggableId | null>(null);
+  const [activeId, setActiveId] = useState<DraggableItem["id"] | null>(null);
   const activeDraggable = initialOptions.find((item) => item.id === activeId);
   const prefersReducedMotion = usePrefersReducedMotion();
   const sensors = useSensors(
