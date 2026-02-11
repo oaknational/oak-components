@@ -11,7 +11,11 @@ const onClickCallback = jest.fn();
 const props: OakTabsProps<string> = {
   sizeVariant: "default",
   colorVariant: "black",
-  tabs: ["Tab one", "Tab two", "Tab three"],
+  tabs: [
+    { type: "button", label: "Tab one" },
+    { type: "button", label: "Tab two" },
+    { type: "button", label: "Tab three" },
+  ],
   activeTab: "Tab one",
   onTabClick: (tab) => onClickCallback(tab),
 };
