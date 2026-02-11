@@ -48,27 +48,16 @@ export const TabsAsButtons: Story = {
 };
 
 export const TabsAsLinks: Story = {
-  render: function TabsAsLinksStoryb(args) {
-    const [activeTab, setActiveTab] = useState("Unit sequence");
-
-    return (
-      <OakTabs
-        {...args}
-        onTabClick={(tab, event) => {
-          event.preventDefault();
-          setActiveTab(tab);
-        }}
-        activeTab={activeTab}
-      />
-    );
+  render: function TabsAsLinksStory(args) {
+    return <OakTabs {...args} activeTab="Unit sequence" />;
   },
   args: {
     sizeVariant: "default",
     colorVariant: "black",
     tabs: [
-      { label: "Unit sequence", type: "link", href: "www.google.com" },
-      { label: "Explainer", type: "link", href: "www.google.com" },
-      { label: "Download", type: "link", href: "www.google.com" },
+      { label: "Unit sequence", type: "link", href: "https://google.com" },
+      { label: "Explainer", type: "link", href: "https://google.com" },
+      { label: "Download", type: "link", href: "https://google.com" },
     ],
   },
 };
