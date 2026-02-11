@@ -62,4 +62,29 @@ describe("OakTabs", () => {
     await user.click(tabTwo);
     expect(onClickCallback).toHaveBeenCalledWith("Tab two");
   });
+  it("renders tabs as links", async () => {
+    renderWithTheme(
+      <OakTabs
+        {...props}
+        tabs={[
+          { label: "Tab one", type: "link", href: "fakeUrl-1.com" },
+          { label: "Tab two", type: "link", href: "fakeUrl-2.com" },
+          { label: "Tab three", type: "link", href: "fakeUrl-3.com" },
+        ]}
+        onTabClick={(tab, event) => {
+          event.preventDefault();
+          onClickCallback(tab);
+        }}
+      />,
+    );
+    const links = screen.getAllByRole("link");
+    expect(links).toHaveLength(3);
+    if (!links[0]) {
+      throw new Error("Cannot find first link");
+    }
+    expect(links[0]).toHaveProperty("href");
+    const user = userEvent.setup();
+    await user.click(links[0]);
+    expect(onClickCallback).toHaveBeenCalledWith("Tab one");
+  });
 });
