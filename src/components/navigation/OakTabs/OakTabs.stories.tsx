@@ -25,7 +25,7 @@ export default meta;
 type Story = StoryObj<typeof OakTabs>;
 
 export const TabsAsButtons: Story = {
-  render: (args) => {
+  render: function TabsAsButtonsStory(args) {
     const [activeTab, setActiveTab] = useState("Unit sequence");
 
     return (
@@ -48,7 +48,7 @@ export const TabsAsButtons: Story = {
 };
 
 export const TabsAsLinks: Story = {
-  render: (args) => {
+  render: function TabsAsLinksStoryb(args) {
     const [activeTab, setActiveTab] = useState("Unit sequence");
 
     return (
