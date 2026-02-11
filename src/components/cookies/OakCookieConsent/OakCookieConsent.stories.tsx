@@ -72,7 +72,13 @@ const meta: Meta<
     ],
     onConsentChange: action("onConsentChange"),
   },
-  render: ({ policyConsents, policyURL, isFixed, innerMaxWidth, zIndex }) => {
+  render: function DefaultStory({
+    policyConsents,
+    policyURL,
+    isFixed,
+    innerMaxWidth,
+    zIndex,
+  }) {
     const [{ onConsentChange }] = useArgs();
 
     return (
