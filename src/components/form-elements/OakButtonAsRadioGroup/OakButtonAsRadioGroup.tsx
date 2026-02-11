@@ -70,7 +70,7 @@ export const OakButtonAsRadioGroup = (props: OakButtonAsRadioGroupProps) => {
     ...rest
   } = props;
 
-  const [currentValue, setValue] = useState(defaultValue);
+  const [currentValue, setCurrentValue] = useState(defaultValue);
 
   if (!label && !ariaLabel && !ariaLabelledby) {
     throw new Error(
@@ -80,7 +80,7 @@ export const OakButtonAsRadioGroup = (props: OakButtonAsRadioGroupProps) => {
 
   const handleValueUpdated = (newValue: string) => {
     if (value === undefined) {
-      setValue(newValue);
+      setCurrentValue(newValue);
     }
     if (onChange) {
       onChange(newValue);
