@@ -4,7 +4,7 @@ import { useMediaQuery } from "./useMediaQuery";
 
 import * as responsiveStyle from "@/styles/utils/responsiveStyle";
 const setMatchMedia = (mediaQuery: string) => {
-  window.matchMedia = jest.fn().mockImplementation((query) => ({
+  globalThis.matchMedia = jest.fn().mockImplementation((query) => ({
     matches: query === mediaQuery,
     media: query,
     addEventListener: jest.fn(),
