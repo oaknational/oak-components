@@ -29,6 +29,7 @@ exports[`OakSmallPrimaryInvertedButton matches snapshot 1`] = `
   min-width: 1.5rem;
   height: 1.5rem;
   min-height: 1.5rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -176,7 +177,7 @@ exports[`OakSmallPrimaryInvertedButton matches snapshot 1`] = `
       <div
         class="c5 c6"
       >
-        <div
+        <span
           class="c7"
         >
           <img
@@ -188,7 +189,7 @@ exports[`OakSmallPrimaryInvertedButton matches snapshot 1`] = `
             src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707149070/icons/fv0z57zerrioft52dd9n.svg"
             style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
           />
-        </div>
+        </span>
         <span
           class="c9"
         >

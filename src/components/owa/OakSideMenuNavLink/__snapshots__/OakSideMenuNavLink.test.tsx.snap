@@ -179,7 +179,7 @@ exports[`OakSideMenuNavLink matches snapshot 1`] = `
         Test Subheading
       </span>
     </div>
-    <div
+    <span
       class="c6"
     >
       <img
@@ -191,7 +191,7 @@ exports[`OakSideMenuNavLink matches snapshot 1`] = `
         src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
         style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
       />
-    </div>
+    </span>
   </a>
 </div>
 `;

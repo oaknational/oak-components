@@ -74,6 +74,7 @@ exports[`OakCheckBox matches snapshot 1`] = `
   min-width: 100%;
   height: 100%;
   min-height: 100%;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -132,7 +133,7 @@ input:checked + .c7 {
       <div
         class="c7 c8 c9"
       >
-        <div
+        <span
           class="c10"
         >
           <img
@@ -144,7 +145,7 @@ input:checked + .c7 {
             src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
             style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
           />
-        </div>
+        </span>
       </div>
     </div>
     Option 1

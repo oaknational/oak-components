@@ -19,6 +19,7 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
 .c5 {
   position: relative;
   width: 100%;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -56,6 +57,7 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   min-width: 1.5rem;
   height: 1.5rem;
   min-height: 1.5rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -221,7 +223,7 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
       class="c2 c3 c4"
       href="https://www.example.com"
     >
-      <div
+      <span
         class="c5 c6"
       >
         <img
@@ -235,7 +237,7 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
           srcset="/_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=3840&q=75 3840w"
           style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
         />
-      </div>
+      </span>
       <div
         class="c8 c9"
       >
@@ -273,7 +275,7 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
             >
               Test Link Text
             </span>
-            <div
+            <span
               class="c20"
             >
               <img
@@ -285,7 +287,7 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
                 src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
                 style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
               />
-            </div>
+            </span>
           </div>
         </div>
       </div>

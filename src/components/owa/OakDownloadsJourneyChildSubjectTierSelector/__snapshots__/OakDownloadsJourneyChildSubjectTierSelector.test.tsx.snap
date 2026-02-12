@@ -32,6 +32,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   min-width: 2rem;
   height: 2rem;
   min-height: 2rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -112,6 +113,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   min-width: 1.5rem;
   height: 1.5rem;
   min-height: 1.5rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -461,7 +463,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
         <div
           class="c0"
         >
-          <div
+          <span
             class="c6"
             data-testid="inline-banner-icon"
           >
@@ -474,7 +476,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
               src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/Icon_Info_vsx3xi.svg"
               style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
             />
-          </div>
+          </span>
         </div>
         <div
           class="c8 c9"
@@ -663,7 +665,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
           >
             Next
           </span>
-          <div
+          <span
             class="c32"
           >
             <img
@@ -675,7 +677,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
               src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707149070/icons/fv0z57zerrioft52dd9n.svg"
               style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
             />
-          </div>
+          </span>
         </div>
       </button>
     </div>

@@ -31,6 +31,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   min-width: 2rem;
   height: 2rem;
   min-height: 2rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -68,6 +69,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   min-width: 1.5rem;
   height: 1.5rem;
   min-height: 1.5rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -361,7 +363,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
       <div
         class="c4"
       >
-        <div
+        <span
           class="c5"
           data-testid="inline-banner-icon"
         >
@@ -374,7 +376,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
             src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/Icon_Info_vsx3xi.svg"
             style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
           />
-        </div>
+        </span>
       </div>
       <div
         class="c4 c7"
@@ -396,7 +398,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
                 <div
                   class="c16 shadow"
                 />
-                <div
+                <span
                   class="c17"
                   data-icon-for="button"
                 >
@@ -409,7 +411,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
                     src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
                     style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                   />
-                </div>
+                </span>
               </div>
               <span
                 class="c18"
@@ -444,7 +446,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
             >
               Link
             </span>
-            <div
+            <span
               class="c17 "
             >
               <img
@@ -456,7 +458,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
                 src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
                 style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
               />
-            </div>
+            </span>
           </a>
         </div>
       </div>
@@ -496,6 +498,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   min-width: 2.5rem;
   height: 2.5rem;
   min-height: 2.5rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -540,6 +543,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   min-width: 1.5rem;
   height: 1.5rem;
   min-height: 1.5rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -833,7 +837,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
       <div
         class="c4"
       >
-        <div
+        <span
           class="c5"
           data-testid="inline-banner-icon"
         >
@@ -846,7 +850,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
             src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/Icon_Info_vsx3xi.svg"
             style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
           />
-        </div>
+        </span>
       </div>
       <div
         class="c7 c8"
@@ -868,7 +872,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
                 <div
                   class="c17 shadow"
                 />
-                <div
+                <span
                   class="c18"
                   data-icon-for="button"
                 >
@@ -881,7 +885,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
                     src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
                     style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                   />
-                </div>
+                </span>
               </div>
               <span
                 class="c19"
@@ -916,7 +920,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
             >
               Link
             </span>
-            <div
+            <span
               class="c18 "
             >
               <img
@@ -928,7 +932,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
                 src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
                 style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
               />
-            </div>
+            </span>
           </a>
         </div>
       </div>
@@ -968,6 +972,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   min-width: 2rem;
   height: 2rem;
   min-height: 2rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -1005,6 +1010,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   min-width: 1.5rem;
   height: 1.5rem;
   min-height: 1.5rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -1282,7 +1288,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
       <div
         class="c4"
       >
-        <div
+        <span
           class="c5"
           data-testid="inline-banner-icon"
         >
@@ -1295,7 +1301,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
             src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/Icon_Info_vsx3xi.svg"
             style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
           />
-        </div>
+        </span>
       </div>
       <div
         class="c4 c7"
@@ -1317,7 +1323,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
                 <div
                   class="c16 shadow"
                 />
-                <div
+                <span
                   class="c17"
                   data-icon-for="button"
                 >
@@ -1330,7 +1336,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
                     src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
                     style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                   />
-                </div>
+                </span>
               </div>
               <span
                 class="c18"
@@ -1359,7 +1365,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
             >
               Link
             </span>
-            <div
+            <span
               class="c17 "
             >
               <img
@@ -1371,7 +1377,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
                 src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
                 style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
               />
-            </div>
+            </span>
           </a>
         </div>
       </div>
