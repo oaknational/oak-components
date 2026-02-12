@@ -12,14 +12,16 @@ const meta: Meta<typeof OakHandDrawnFocusUnderline> = {
   tags: ["autodocs"],
   title: "OWA/OakHandDrawnFocusUnderline",
   argTypes: {
-    FocusUnderlineColor: drawingArgTypes["$fill"],
+    upperFill: drawingArgTypes["$fill"],
+    lowerFill: drawingArgTypes["$fill"],
     ...spacingArgTypes,
     ...sizeArgTypes,
   },
   parameters: {
     controls: {
       include: [
-        "fill",
+        "upperFill",
+        "lowerFill",
         ...Object.keys(spacingArgTypes),
         ...Object.keys(sizeArgTypes),
       ],
@@ -33,7 +35,20 @@ type Story = StoryObj<typeof OakHandDrawnFocusUnderline>;
 
 export const Default: Story = {
   render: (args) => <OakHandDrawnFocusUnderline {...args} />,
+  args: {},
+};
+
+export const Colors: Story = {
+  render: (args) => <OakHandDrawnFocusUnderline {...args} />,
   args: {
-    $height: "spacing-4",
+    upperFill: "amber",
+    lowerFill: "border-success",
+  },
+};
+
+export const Tall: Story = {
+  render: (args) => <OakHandDrawnFocusUnderline {...args} />,
+  args: {
+    $height: "spacing-16",
   },
 };
