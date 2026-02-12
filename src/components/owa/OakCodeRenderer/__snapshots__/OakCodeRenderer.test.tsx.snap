@@ -59,6 +59,7 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
   min-width: 2rem;
   height: 2rem;
   min-height: 2rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -595,7 +596,7 @@ have_homework =
                 <div
                   class="c29 shadow"
                 />
-                <div
+                <span
                   class="c30"
                   data-icon-for="button"
                 >
@@ -608,7 +609,7 @@ have_homework =
                     src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/Icon_Info_vsx3xi.svg"
                     style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                   />
-                </div>
+                </span>
               </div>
               <span
                 class="c19"

@@ -51,6 +51,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   min-width: 2rem;
   height: 2rem;
   min-height: 2rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -553,7 +554,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
             <div
               class="c17 shadow"
             />
-            <div
+            <span
               class="c18"
               style="transform: none; transition: all 0.3s ease 0s;"
             >
@@ -566,7 +567,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
                 src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
                 style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
               />
-            </div>
+            </span>
           </div>
         </button>
         <div

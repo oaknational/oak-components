@@ -74,6 +74,7 @@ exports[`OakUnitsContainer matches snapshot 1`] = `
   min-width: 1.5rem;
   height: 1.5rem;
   min-height: 1.5rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -478,7 +479,7 @@ exports[`OakUnitsContainer matches snapshot 1`] = `
               <div
                 class="c24 shadow"
               />
-              <div
+              <span
                 class="c25"
                 data-icon-for="button"
               >
@@ -491,7 +492,7 @@ exports[`OakUnitsContainer matches snapshot 1`] = `
                   src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
                   style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                 />
-              </div>
+              </span>
             </div>
           </div>
         </a>

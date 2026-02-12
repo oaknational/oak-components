@@ -47,4 +47,19 @@ describe("OakImage", () => {
       height: "auto",
     });
   });
+
+  it("is a valid child of a paragraph", () => {
+    // React dev build will output a `validateDOMNesting` warning if the
+    // image is not phrasing content.
+    const { container } = renderWithTheme(
+      <p>
+        <OakImage
+          data-testid="test"
+          src="/../../../../assets/oak-national-academy-logo-512.png"
+          alt="a test image"
+        />
+      </p>,
+    );
+    expect(container.querySelector("p div")).toBeNull();
+  });
 });

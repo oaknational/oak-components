@@ -128,7 +128,13 @@ export const OakImage = <C extends ElementType = typeof Image>({
   // Use $width and $height to set the width and height of the image container
   if (!width || !height) {
     return (
-      <OakBox $position={$position} $width={$width} {...rest}>
+      <OakBox
+        as="span"
+        $display="block"
+        $position={$position}
+        $width={$width}
+        {...rest}
+      >
         <StyledFillImage
           ref={setImg}
           as={as ?? Image}
@@ -153,7 +159,13 @@ export const OakImage = <C extends ElementType = typeof Image>({
   // Use $minWidth to set the width with auto height
 
   return (
-    <OakBox $maxWidth={"spacing-0"} $position={$position} {...rest}>
+    <OakBox
+      as="span"
+      $display="block"
+      $maxWidth={"spacing-0"}
+      $position={$position}
+      {...rest}
+    >
       <StyledResponsiveImage
         ref={setImg}
         as={as ?? Image}

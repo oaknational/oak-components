@@ -89,6 +89,7 @@ exports[`OakSelect disabled select 1`] = `
   min-width: 2rem;
   height: 2rem;
   min-height: 2rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -213,7 +214,7 @@ exports[`OakSelect disabled select 1`] = `
     <div
       class="c5 c6 c7 c8"
     >
-      <div
+      <span
         class="c9"
       >
         <img
@@ -225,12 +226,12 @@ exports[`OakSelect disabled select 1`] = `
           src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954058/icons/pay71thmhhylj7z28sj1.svg"
           style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
         />
-      </div>
+      </span>
     </div>
     <div
       class="c11 c6 c7 c12"
     >
-      <div
+      <span
         class="c9"
       >
         <img
@@ -242,7 +243,7 @@ exports[`OakSelect disabled select 1`] = `
           src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
           style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
         />
-      </div>
+      </span>
     </div>
   </div>
 </div>
@@ -331,6 +332,7 @@ exports[`OakSelect highlighted select 1`] = `
   min-width: 2rem;
   height: 2rem;
   min-height: 2rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -454,7 +456,7 @@ exports[`OakSelect highlighted select 1`] = `
     <div
       class="c5 c6 c7 c8"
     >
-      <div
+      <span
         class="c9"
       >
         <img
@@ -466,12 +468,12 @@ exports[`OakSelect highlighted select 1`] = `
           src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954058/icons/pay71thmhhylj7z28sj1.svg"
           style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
         />
-      </div>
+      </span>
     </div>
     <div
       class="c11 c6 c7 c12"
     >
-      <div
+      <span
         class="c9"
       >
         <img
@@ -483,7 +485,7 @@ exports[`OakSelect highlighted select 1`] = `
           src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
           style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
         />
-      </div>
+      </span>
     </div>
   </div>
 </div>
@@ -572,6 +574,7 @@ exports[`OakSelect invalid select 1`] = `
   min-width: 2rem;
   height: 2rem;
   min-height: 2rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -695,7 +698,7 @@ exports[`OakSelect invalid select 1`] = `
     <div
       class="c5 c6 c7 c8"
     >
-      <div
+      <span
         class="c9"
       >
         <img
@@ -707,12 +710,12 @@ exports[`OakSelect invalid select 1`] = `
           src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954058/icons/pay71thmhhylj7z28sj1.svg"
           style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
         />
-      </div>
+      </span>
     </div>
     <div
       class="c11 c6 c7 c12"
     >
-      <div
+      <span
         class="c9"
       >
         <img
@@ -724,7 +727,7 @@ exports[`OakSelect invalid select 1`] = `
           src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
           style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
         />
-      </div>
+      </span>
     </div>
   </div>
 </div>
@@ -813,6 +816,7 @@ exports[`OakSelect optgroup select 1`] = `
   min-width: 2rem;
   height: 2rem;
   min-height: 2rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -985,7 +989,7 @@ exports[`OakSelect optgroup select 1`] = `
     <div
       class="c6 c7 c8 c9"
     >
-      <div
+      <span
         class="c10"
       >
         <img
@@ -997,12 +1001,12 @@ exports[`OakSelect optgroup select 1`] = `
           src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954058/icons/pay71thmhhylj7z28sj1.svg"
           style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
         />
-      </div>
+      </span>
     </div>
     <div
       class="c12 c7 c8 c13"
     >
-      <div
+      <span
         class="c10"
       >
         <img
@@ -1014,7 +1018,7 @@ exports[`OakSelect optgroup select 1`] = `
           src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
           style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
         />
-      </div>
+      </span>
     </div>
   </div>
 </div>
@@ -1103,6 +1107,7 @@ exports[`OakSelect plain select 1`] = `
   min-width: 2rem;
   height: 2rem;
   min-height: 2rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -1226,7 +1231,7 @@ exports[`OakSelect plain select 1`] = `
     <div
       class="c5 c6 c7 c8"
     >
-      <div
+      <span
         class="c9"
       >
         <img
@@ -1238,12 +1243,12 @@ exports[`OakSelect plain select 1`] = `
           src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954058/icons/pay71thmhhylj7z28sj1.svg"
           style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
         />
-      </div>
+      </span>
     </div>
     <div
       class="c11 c6 c7 c12"
     >
-      <div
+      <span
         class="c9"
       >
         <img
@@ -1255,7 +1260,7 @@ exports[`OakSelect plain select 1`] = `
           src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
           style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
         />
-      </div>
+      </span>
     </div>
   </div>
 </div>

@@ -39,6 +39,7 @@ exports[`OakLessonVideoTranscript matches snapshot 1`] = `
   min-width: 1.5rem;
   height: 1.5rem;
   min-height: 1.5rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -263,7 +264,7 @@ exports[`OakLessonVideoTranscript matches snapshot 1`] = `
               <div
                 class="c11 shadow"
               />
-              <div
+              <span
                 class="c12"
                 data-icon-for="button"
               >
@@ -276,7 +277,7 @@ exports[`OakLessonVideoTranscript matches snapshot 1`] = `
                   src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
                   style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                 />
-              </div>
+              </span>
             </div>
           </div>
         </button>
