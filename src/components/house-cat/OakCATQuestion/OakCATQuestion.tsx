@@ -36,9 +36,9 @@ export type OakCATQuestionProps = {
   initialOpen?: boolean;
   questionTypeInput: ReactNode;
   questionStem: ReactNode;
+  answersSection: ReactNode;
   hintInput: ReactElement;
   feedbackInput: ReactElement;
-  answersSection: ReactNode;
   hintInputId: string;
   feedbackInputId: string;
 };
@@ -88,15 +88,7 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
         {answersSection}
       </OakFlex>
 
-      <OakGrid
-        $ph="spacing-32"
-        $pv="spacing-24"
-        $background={"bg-neutral"}
-        $borderRadius={"border-radius-m2"}
-        $borderColor={"bg-neutral"}
-        $ba={"border-solid-s"}
-        $cg={"spacing-16"}
-      >
+      <OakGrid $cg={"spacing-16"}>
         <OakGridArea $colSpan={[12, 6, 6]}>
           <OakFlex $flexDirection={"column"} $flexGrow={1}>
             <OakLabel htmlFor={hintInputId}>

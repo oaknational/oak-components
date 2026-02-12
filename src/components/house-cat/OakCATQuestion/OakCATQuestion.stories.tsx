@@ -56,6 +56,15 @@ export const Default: Story = {
         Dummy Question Text Input
       </OakBox>
     ),
+    answersSection: (
+      <OakBox
+        $background={"bg-decorative1-subdued"}
+        $pa="spacing-12"
+        $height={"spacing-360"}
+      >
+        Dummy answers Section
+      </OakBox>
+    ),
     hintInput: (
       <OakBox $background={"bg-decorative2-subdued"}>
         <OakBox
@@ -78,15 +87,6 @@ export const Default: Story = {
           Dummy Feedback Input
         </OakBox>
         <OakP>Character count 0/200</OakP>
-      </OakBox>
-    ),
-    answersSection: (
-      <OakBox
-        $background={"bg-decorative1-subdued"}
-        $pa="spacing-12"
-        $height={"spacing-360"}
-      >
-        Dummy answers Section
       </OakBox>
     ),
   },
@@ -108,6 +108,15 @@ export const InitiallyOpen: Story = {
         Dummy Question Text Input
       </OakBox>
     ),
+    answersSection: (
+      <OakBox
+        $background={"bg-decorative1-subdued"}
+        $pa="spacing-12"
+        $height={"spacing-360"}
+      >
+        Dummy answers Section
+      </OakBox>
+    ),
     hintInput: (
       <OakBox $background={"bg-decorative2-subdued"}>
         <OakBox
@@ -134,15 +143,6 @@ export const InitiallyOpen: Story = {
         <OakP>Character count 0/200</OakP>
       </OakBox>
     ),
-    answersSection: (
-      <OakBox
-        $background={"bg-decorative1-subdued"}
-        $pa="spacing-12"
-        $height={"spacing-360"}
-      >
-        Dummy answers Section
-      </OakBox>
-    ),
   },
 };
 
@@ -161,6 +161,15 @@ export const WithMultilineText: Story = {
         Dummy Question Text Input
       </OakBox>
     ),
+    answersSection: (
+      <OakBox
+        $background={"bg-decorative1-subdued"}
+        $pa="spacing-12"
+        $height={"spacing-360"}
+      >
+        Dummy answers Section
+      </OakBox>
+    ),
     hintInput: (
       <OakMultilineText
         charLimit={100}
@@ -176,15 +185,6 @@ export const WithMultilineText: Story = {
         id="feedbackInput"
         $height={"spacing-120"}
       />
-    ),
-    answersSection: (
-      <OakBox
-        $background={"bg-decorative1-subdued"}
-        $pa="spacing-12"
-        $height={"spacing-360"}
-      >
-        Dummy answers Section
-      </OakBox>
     ),
   },
 };
@@ -210,6 +210,15 @@ export const WithMultilineTextAndStemImage: Story = {
         />
       </OakBox>
     ),
+    answersSection: (
+      <OakBox
+        $background={"bg-decorative1-subdued"}
+        $pa="spacing-12"
+        $height={"spacing-360"}
+      >
+        Dummy answers Section
+      </OakBox>
+    ),
     hintInput: (
       <OakMultilineText
         charLimit={100}
@@ -225,15 +234,6 @@ export const WithMultilineTextAndStemImage: Story = {
         id="feedbackInput"
         $height={"spacing-120"}
       />
-    ),
-    answersSection: (
-      <OakBox
-        $background={"bg-decorative1-subdued"}
-        $pa="spacing-12"
-        $height={"spacing-360"}
-      >
-        Dummy answers Section
-      </OakBox>
     ),
   },
 };
