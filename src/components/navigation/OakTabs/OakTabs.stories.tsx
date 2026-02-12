@@ -24,8 +24,8 @@ export default meta;
 
 type Story = StoryObj<typeof OakTabs>;
 
-export const Default: Story = {
-  render: (args) => {
+export const TabsAsButtons: Story = {
+  render: function TabsAsButtonsStory(args) {
     const [activeTab, setActiveTab] = useState("Unit sequence");
 
     return (
@@ -39,6 +39,25 @@ export const Default: Story = {
   args: {
     sizeVariant: "default",
     colorVariant: "black",
-    tabs: ["Unit sequence", "Explainer", "Download"],
+    tabs: [
+      { label: "Unit sequence", type: "button" },
+      { label: "Explainer", type: "button" },
+      { label: "Download", type: "button" },
+    ],
+  },
+};
+
+export const TabsAsLinks: Story = {
+  render: function TabsAsLinksStory(args) {
+    return <OakTabs {...args} activeTab="Unit sequence" />;
+  },
+  args: {
+    sizeVariant: "default",
+    colorVariant: "black",
+    tabs: [
+      { label: "Unit sequence", type: "link", href: "https://google.com" },
+      { label: "Explainer", type: "link", href: "https://google.com" },
+      { label: "Download", type: "link", href: "https://google.com" },
+    ],
   },
 };
