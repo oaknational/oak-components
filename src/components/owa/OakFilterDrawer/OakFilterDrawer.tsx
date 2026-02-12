@@ -6,8 +6,8 @@ import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakHeading } from "@/components/typography/OakHeading";
 import { OakSecondaryLink } from "@/components/navigation/OakSecondaryLink";
-import useIsScrolled from "@/hooks/useIsScrolled";
-import useMounted from "@/hooks/useMounted";
+import { useIsScrolled } from "@/hooks/useIsScrolled";
+import { useMounted } from "@/hooks/useMounted";
 import InternalModalTransition from "@/components/internal-components/InternalModalTransition/InternalModalTransition";
 
 type OakFilterDrawerProps = {
