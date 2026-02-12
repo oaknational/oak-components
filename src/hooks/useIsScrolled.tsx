@@ -5,7 +5,7 @@ import React, {
   useState,
 } from "react";
 
-const useIsScrolled = () => {
+export const useIsScrolled = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [canaryElement, setCanaryElement] = useState<HTMLDivElement | null>(
     null,
@@ -40,5 +40,3 @@ const useIsScrolled = () => {
 
   return { isScrolled, ObserveScroll };
 };
-
-export default useIsScrolled;
