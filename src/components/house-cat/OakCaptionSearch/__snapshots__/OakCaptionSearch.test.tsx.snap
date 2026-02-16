@@ -67,6 +67,7 @@ exports[`OakCaptionSearch should match snapshot 1`] = `
   min-width: 1.5rem;
   height: 1.5rem;
   min-height: 1.5rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -390,7 +391,7 @@ exports[`OakCaptionSearch should match snapshot 1`] = `
           >
             Search
           </span>
-          <div
+          <span
             class="c19"
           >
             <img
@@ -402,7 +403,7 @@ exports[`OakCaptionSearch should match snapshot 1`] = `
               src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1704901279/icons/canbi3fuz5fanzom2hvi.svg"
               style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
             />
-          </div>
+          </span>
         </div>
       </button>
     </div>

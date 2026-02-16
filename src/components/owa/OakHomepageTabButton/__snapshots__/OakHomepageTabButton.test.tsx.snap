@@ -30,6 +30,7 @@ exports[`OakHomepageTabButton component matches snapshot 1`] = `
   min-width: 3rem;
   height: 3rem;
   min-height: 3rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -220,7 +221,7 @@ exports[`OakHomepageTabButton component matches snapshot 1`] = `
     <div
       class="c2 c3"
     >
-      <div
+      <span
         class="c4"
       >
         <img
@@ -232,7 +233,7 @@ exports[`OakHomepageTabButton component matches snapshot 1`] = `
           src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1734523528/homepage/robot_waving_malpc3.svg"
           style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
         />
-      </div>
+      </span>
       <div
         class="c6 c7"
       >

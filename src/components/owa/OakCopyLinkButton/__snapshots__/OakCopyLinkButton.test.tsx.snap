@@ -34,6 +34,7 @@ exports[`OakCopyLinkButton matches snapshot 1`] = `
   min-width: 1.5rem;
   height: 1.5rem;
   min-height: 1.5rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -207,7 +208,7 @@ exports[`OakCopyLinkButton matches snapshot 1`] = `
           >
             Copy link
           </span>
-          <div
+          <span
             aria-hidden="true"
             class="c9"
           >
@@ -220,7 +221,7 @@ exports[`OakCopyLinkButton matches snapshot 1`] = `
               src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1727861316/icons/Icon_Copy_qxgynv.svg"
               style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
             />
-          </div>
+          </span>
         </div>
       </button>
     </div>

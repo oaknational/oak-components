@@ -33,6 +33,7 @@ exports[`OakQuote component matches snapshot 1`] = `
 .c9 {
   position: relative;
   width: 100%;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -198,7 +199,7 @@ exports[`OakQuote component matches snapshot 1`] = `
       <div
         class="c4 c8"
       >
-        <div
+        <span
           class="c9 c10"
           role="presentation"
         >
@@ -213,7 +214,7 @@ exports[`OakQuote component matches snapshot 1`] = `
             srcset="/_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=3840&q=75 3840w"
             style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
           />
-        </div>
+        </span>
         <div
           class="c4 c12"
         >

@@ -82,6 +82,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   min-width: 2rem;
   height: 2rem;
   min-height: 2rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -154,6 +155,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   min-width: 1.5rem;
   height: 1.5rem;
   min-height: 1.5rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -953,7 +955,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
                       <div
                         class="c19 shadow"
                       />
-                      <div
+                      <span
                         class="c20"
                         data-icon-for="button"
                       >
@@ -966,7 +968,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
                           src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
                           style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                         />
-                      </div>
+                      </span>
                     </div>
                     <span
                       class="c22"
@@ -1108,7 +1110,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
                             >
                               Share link
                             </span>
-                            <div
+                            <span
                               class="c51"
                             >
                               <img
@@ -1120,7 +1122,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
                                 src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1727861316/icons/Icon_Copy_qxgynv.svg"
                                 style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                               />
-                            </div>
+                            </span>
                           </div>
                         </button>
                       </div>
@@ -1140,7 +1142,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
                     <div
                       class="c16"
                     >
-                      <div
+                      <span
                         class="c20"
                         data-testid="inline-banner-icon"
                       >
@@ -1153,7 +1155,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
                           src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895207/icons/ecejtvqerx81prxyxh9b.svg"
                           style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                         />
-                      </div>
+                      </span>
                     </div>
                     <div
                       class="c47 c59"

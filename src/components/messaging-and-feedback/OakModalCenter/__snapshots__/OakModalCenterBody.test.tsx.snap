@@ -14,6 +14,7 @@ exports[`OakModalCenterBody matches snapshot 1`] = `
   height: 6.25rem;
   min-height: 6.25rem;
   margin-bottom: 2rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -110,7 +111,7 @@ exports[`OakModalCenterBody matches snapshot 1`] = `
   <div
     class="c0 c1"
   >
-    <div
+    <span
       class="c2"
       data-testid="icon"
     >
@@ -123,7 +124,7 @@ exports[`OakModalCenterBody matches snapshot 1`] = `
         src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954277/icons/tm3uhcqenaznq4fxys7j.svg"
         style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
       />
-    </div>
+    </span>
     <h1
       class="c4"
       data-testid="OakHeading-id"
