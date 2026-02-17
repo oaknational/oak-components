@@ -21,7 +21,14 @@ type StyledButtonProps = TypographyStyleProps &
   DisplayStyleProps &
   BorderStyleProps &
   DropShadowStyleProps & {
+    /**
+     * Adds loading styles to the button and disables interactions when true
+     */
     isLoading?: boolean;
+    /**
+     * Disables the button and prevents interactions when true, works only if underlying element is a `button`
+     */
+    disabled?: boolean;
   };
 
 const internalButtonCss = css<StyledButtonProps>`
@@ -47,6 +54,9 @@ const internalButtonCss = css<StyledButtonProps>`
 `;
 
 export type InternalButtonProps = StyledButtonProps & {
+  /**
+   * Triggered when the button is hovered
+   */
   onHovered?: (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
     duration: number,

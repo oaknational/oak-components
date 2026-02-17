@@ -46,23 +46,29 @@ export type InternalShadowRectButtonProps = Omit<
   | "$background"
   | "$color"
 > & {
+  /**
+   *  If set, the button will render an icon next to or instead of the text
+   */
   iconName?: OakIconName;
   iconAriaHidden?: boolean;
   /**
-   *  we can set a custom icon if we want different sizes and padding
+   *  Sets a custom icon if we want different sizes and padding
    */
   iconOverride?: React.ReactNode;
+  /**
+   *  Determines whether the icon is placed before or after the text
+   */
   isTrailingIcon?: boolean;
   /**
-   *  we can arrange the icon vertically or horizontally
+   *  Arranges the icon vertically or horizontally
    */
   iconLayout?: FlexStyleProps["$flexDirection"];
   /**
-   *  we can adjust the gap between the icon and the text
+   *  Adjusts the gap between the icon and the text
    */
   loadingSpinnerSize?: OakLoadingSpinnerTokenSubset;
   /**
-   * whether the button should show a selected state
+   * Whether the button should show a selected state
    */
   selected?: boolean;
   iconGap?: FlexStyleProps["$gap"];

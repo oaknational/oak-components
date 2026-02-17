@@ -202,3 +202,19 @@ export type UiRoleMap = Record<
   OakUiRoleToken,
   OakColorToken | null | undefined
 >;
+
+const oakColorSchemeTokens = [
+  "primary",
+  "inverted",
+  "decorative1",
+  "decorative2",
+  "decorative3",
+  "decorative4",
+  "decorative5",
+  "decorative6",
+  "success",
+  "error",
+  "warning",
+  "neutral",
+];
+export type OakColorSchemeToken = (typeof oakColorSchemeTokens)[number];

@@ -33,19 +33,19 @@ export type InternalShadowRoundButtonProps = Omit<
   | "$background"
   | "$color"
 > & {
+  defaultTextColor: OakUiRoleToken;
+  defaultIconColor?: OakRoundIconProps["$colorFilter"];
+  defaultIconBackground: OakUiRoleToken;
+  defaultIconBorderColor?: OakUiRoleToken;
+  hoverTextColor: OakUiRoleToken;
+  hoverIconColor?: OakUiRoleToken;
+  hoverIconBackground: OakUiRoleToken;
+  disabledTextColor: OakUiRoleToken;
+  disabledIconColor?: OakRoundIconProps["$colorFilter"];
+  disabledIconBackground: OakUiRoleToken;
+  disabledIconBorderColor?: OakUiRoleToken;
   iconName?: OakIconName;
   isTrailingIcon?: boolean;
-  defaultTextColor: OakUiRoleToken;
-  hoverTextColor: OakUiRoleToken;
-  disabledTextColor: OakUiRoleToken;
-  defaultIconBackground: OakUiRoleToken;
-  hoverIconBackground: OakUiRoleToken;
-  hoverIconColor?: OakUiRoleToken;
-  disabledIconBackground: OakUiRoleToken;
-  defaultIconColor?: OakRoundIconProps["$colorFilter"];
-  disabledIconColor?: OakRoundIconProps["$colorFilter"];
-  defaultIconBorderColor?: OakUiRoleToken;
-  disabledIconBorderColor?: OakUiRoleToken;
   width?: SizeStyleProps["$width"];
   maxWidth?: SizeStyleProps["$maxWidth"];
   iconBackgroundSize: SizeStyleProps["$width"];
@@ -80,9 +80,10 @@ const StyledInternalButton = styled(InternalButton)<
 `;
 
 const StyledButtonWrapper = styled(OakFlex)<{
-  $disabledIconBackground: OakUiRoleToken;
-  $hoverIconBackground: OakUiRoleToken;
   $defaultIconBackground: OakUiRoleToken;
+  $hoverIconBackground: OakUiRoleToken;
+  $hoverIconBorderColor: OakUiRoleToken;
+  $disabledIconBackground: OakUiRoleToken;
   $hoverDropShadow: OakDropShadowToken | null;
 }>`
   ${(props) => css`
@@ -106,6 +107,9 @@ const StyledButtonWrapper = styled(OakFlex)<{
     }
     > :first-child:hover .icon-container {
       background: ${parseColor(props.$hoverIconBackground)};
+    }
+    > :first-child:hover .icon-container div {
+      border-color: ${parseColor(props.$hoverIconBorderColor)};
     }
     > :first-child:active .icon-container {
       background: ${parseColor(props.$defaultIconBackground)};
@@ -141,17 +145,18 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
     maxWidth,
     iconBackgroundSize,
     iconSize,
-    disabledIconBackground,
-    hoverIconColor,
-    disabledTextColor,
+    defaultTextColor,
     defaultIconColor,
-    hoverIconBackground,
     defaultIconBackground,
     defaultIconBorderColor,
-    disabledIconBorderColor,
-    disabledIconColor,
-    defaultTextColor,
     hoverTextColor,
+    hoverIconColor,
+    hoverIconBackground,
+    hoverIconBorderColor,
+    disabledTextColor,
+    disabledIconColor,
+    disabledIconBackground,
+    disabledIconBorderColor,
     hoverDropShadow = "drop-shadow-lemon",
     className,
     ...rest
@@ -215,17 +220,18 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
       $position={"relative"}
       $width={width}
       $maxWidth={maxWidth}
-      $disabledIconBackground={disabledIconBackground}
-      $hoverIconBackground={hoverIconBackground}
       $defaultIconBackground={defaultIconBackground}
+      $hoverIconBackground={hoverIconBackground}
+      $hoverIconBorderColor={hoverIconBorderColor}
+      $disabledIconBackground={disabledIconBackground}
       $hoverDropShadow={hoverDropShadow}
     >
       <StyledInternalButton
         element={element ?? "button"}
         {...rest}
+        $defaultTextColor={defaultTextColor}
         $hoverTextColor={hoverTextColor}
         $hoverIconColor={hoverIconColor}
-        $defaultTextColor={defaultTextColor}
         $disabledTextColor={disabledTextColor}
         $color={defaultTextColor}
         $position={"relative"}

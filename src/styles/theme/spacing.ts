@@ -88,3 +88,7 @@ export type OakCombinedSpacingToken =
   | OakInnerPaddingToken
   | OakSpaceBetweenToken
   | AdditionalSpacingTypes;
+
+export const oakSizeTokens = ["xs", "sm", "md", "lg", "xl"];
+
+export type OakSizeToken = (typeof oakSizeTokens)[number];
