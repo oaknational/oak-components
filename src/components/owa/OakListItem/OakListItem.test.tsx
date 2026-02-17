@@ -154,12 +154,7 @@ describe("OakListItem", () => {
     it("renders radio when onCheckedChange is provided", () => {
       const { getByRole } = renderWithTheme(
         <OakRadioGroup name="radio-group">
-          <OakListItem
-            {...defaultProps}
-            asRadio
-            id="checkbox-1"
-            value="Option 1"
-          />
+          <OakListItem {...defaultProps} asRadio radioValue="Option 1" />
         </OakRadioGroup>,
       );
       const radios = getByRole("radio", { hidden: true });
@@ -174,8 +169,7 @@ describe("OakListItem", () => {
             {...defaultProps}
             asRadio
             unavailable={true}
-            id="checkbox-1"
-            value="Option 1"
+            radioValue="Option 1"
           />
         </OakRadioGroup>,
       );

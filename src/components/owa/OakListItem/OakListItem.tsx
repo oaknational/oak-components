@@ -93,15 +93,13 @@ export type OakListItemProps = {
   indexLegacyBgColour?: OakUiRoleToken;
   expandedContent?: React.ReactNode;
   isExpanded?: boolean;
-  id: string;
-  asRadio?: true;
-  value?: string;
-  disabled?: boolean;
+  asRadio?: boolean;
+  radioValue?: string;
 };
 
 /**
  * * OakListItem component used as links for unit cards
- * * adding asRadio and value props to allow OakListItem to be used as radio buttons within OakUnitsContainer if the OakUnitsContainer is passed a radioGroupName prop. This allows for better accessibility when OakListItem is used in OakUnitsContainer, as the user can select a unit by clicking anywhere on the card, rather than having to click on a specific radio button.
+ * * adding asRadio and radioValue props to allow OakListItem to be used as radio buttons within OakUnitsContainer if the OakUnitsContainer is passed a radioGroupName prop. This allows for better accessibility when OakListItem is used in OakUnitsContainer, as the user can select a unit by clicking anywhere on the card, rather than having to click on a specific radio button.
  */
 
 export const OakListItem = (props: OakListItemProps) => {
@@ -120,11 +118,8 @@ export const OakListItem = (props: OakListItemProps) => {
     indexLegacyBgColour = "bg-decorative4-subdued",
     expandedContent,
     isExpanded,
-    id,
     asRadio,
-    value,
-    disabled,
-    ...rest
+    radioValue,
   } = props;
 
   const radioContext = useContext(RadioContext);
@@ -142,6 +137,8 @@ export const OakListItem = (props: OakListItemProps) => {
 
   const checkboxSize = "spacing-24";
   const checkedBorderColor = "border-primary";
+  const isExpandedBorderRadius = "border-radius-square";
+  const unavailableBgColor = "bg-neutral";
 
   return (
     <OakLI
@@ -150,11 +147,11 @@ export const OakListItem = (props: OakListItemProps) => {
       $display={"flex"}
       $flexDirection={"column"}
     >
-      <label>
+      <label htmlFor={title}>
         <OakFlex $flexGrow={1} $alignItems={"center"} $columnGap={"spacing-16"}>
-          {asRadio && value && (
+          {asRadio && radioValue && (
             <InternalRadioWrapper
-              checked={value === radioContext.currentValue}
+              checked={radioValue === radioContext.currentValue}
               size={checkboxSize}
               disabled={unavailable}
               radioBorderColor={checkedBorderColor}
@@ -162,11 +159,10 @@ export const OakListItem = (props: OakListItemProps) => {
                 <InternalRadio
                   id={title}
                   name={radioContext.name}
-                  value={value}
+                  value={radioValue}
                   disabled={unavailable}
                   onChange={radioContext.onValueUpdated}
-                  checked={value === radioContext.currentValue}
-                  {...rest}
+                  checked={radioValue === radioContext.currentValue}
                 />
               }
             />
@@ -175,10 +171,10 @@ export const OakListItem = (props: OakListItemProps) => {
           <StyledListItem
             data-testid="OakListItem-id"
             $alignItems={"center"}
-            $background={unavailable ? "bg-neutral" : "bg-primary"}
+            $background={unavailable ? unavailableBgColor : "bg-primary"}
             $borderRadius="border-radius-m"
-            $bbrr={isExpanded ? "border-radius-square" : "border-radius-m"}
-            $bblr={isExpanded ? "border-radius-square" : "border-radius-m"}
+            $bbrr={isExpanded ? isExpandedBorderRadius : "border-radius-m"}
+            $bblr={isExpanded ? isExpandedBorderRadius : "border-radius-m"}
             $disabled={unavailable}
             $pr="spacing-16"
             $width="100%"
@@ -198,7 +194,7 @@ export const OakListItem = (props: OakListItemProps) => {
               <StyledOakIndexBox
                 $background={background}
                 $btlr={"border-radius-m"}
-                $bblr={isExpanded ? "border-radius-square" : "border-radius-m"}
+                $bblr={isExpanded ? isExpandedBorderRadius : "border-radius-m"}
                 $justifyContent={"center"}
                 $alignItems={"center"}
                 $minWidth="spacing-64"
@@ -240,10 +236,10 @@ export const OakListItem = (props: OakListItemProps) => {
           {/* Mobile layout */}
           <StyledListItem
             data-testid="OakListItem-id"
-            $background={unavailable ? "bg-neutral" : "bg-primary"}
+            $background={unavailable ? unavailableBgColor : "bg-primary"}
             $borderRadius="border-radius-m"
-            $bbrr={isExpanded ? "border-radius-square" : "border-radius-m"}
-            $bblr={isExpanded ? "border-radius-square" : "border-radius-m"}
+            $bbrr={isExpanded ? isExpandedBorderRadius : "border-radius-m"}
+            $bblr={isExpanded ? isExpandedBorderRadius : "border-radius-m"}
             $disabled={unavailable}
             $display={["flex", "none"]}
             $width="100%"

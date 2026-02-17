@@ -113,8 +113,6 @@ export const Default: Story = {
     <>
       {unitItems.map((item, index) => (
         <OakListItem
-          id={String(index)}
-          value={String(index)}
           key={index}
           {...item}
           onClick={() => console.log("onClick!")}
@@ -140,8 +138,7 @@ const SelectableComponent = () => {
         <OakListItem
           {...item}
           asRadio
-          id={item.title}
-          value={item.title}
+          radioValue={item.title}
           key={index}
           onClick={() => console.log("onClick!")}
         />
