@@ -14,7 +14,7 @@ const controlIconNames = [
 const meta: Meta<typeof OakPrimaryButton> = {
   component: OakPrimaryButton,
   tags: ["autodocs"],
-  title: "components/Buttons/OakPrimaryButton",
+  title: "components/Buttons/OakPrimaryButton (deprecated)",
   argTypes: {
     iconName: {
       options: controlIconNames,
@@ -53,6 +53,9 @@ export const Default: Story = {
   },
 };
 
+/**
+ * hey
+ */
 export const LinkStyledAsButton: Story = {
   render: (args) => (
     <OakFlex $gap="spacing-24">
@@ -63,5 +66,6 @@ export const LinkStyledAsButton: Story = {
     element: "a",
     href: "/",
     iconName: "arrow-right",
+    disabled: true,
   },
 };

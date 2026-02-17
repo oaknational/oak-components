@@ -19,6 +19,8 @@ type OakTertiaryButtonProps = InternalButtonProps & {
 /**
  * An implementation of InternalShadowRoundButton, its a subtle button with no border and a round icon.
  *
+ * ⚠️ Deprecated - use `<OakButton />` instead
+ * @deprecated Use `<OakButton />` instead
  */
 export const OakTertiaryButton = <C extends ElementType = "button">({
   element,

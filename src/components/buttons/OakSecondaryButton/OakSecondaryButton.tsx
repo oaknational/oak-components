@@ -23,14 +23,8 @@ export type OakSecondaryButtonProps = Omit<
  *
  * A specific implementation of InternalRectButton
  *
- * The following callbacks are available for tracking focus events:
- *
- * ### onClick
- * `onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;`
- *
- * ### onHovered
- *  `onHovered?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, duration: number) => void;`<br>
- *  called after a mouseEnter and mouseLeave event has happened
+ * ⚠️ Deprecated - use `<OakButton />` instead
+ * @deprecated Use `<OakButton />` instead
  */
 export const OakSecondaryButton = <C extends ElementType = "button">({
   element,

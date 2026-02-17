@@ -8,7 +8,7 @@ import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 const meta: Meta<typeof OakTertiaryInvertedButton> = {
   component: OakTertiaryInvertedButton,
   tags: ["autodocs"],
-  title: "components/Buttons/OakTertiaryInvertedButton",
+  title: "components/Buttons/OakTertiaryInvertedButton (deprecated)",
   argTypes: {},
   parameters: {
     controls: {
