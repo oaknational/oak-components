@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { StoryObj, Meta } from "@storybook/react";
 
 import { OakListItem } from "./OakListItem";
@@ -8,6 +8,7 @@ import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakHeading } from "@/components/typography/OakHeading";
 import { OakP } from "@/components/typography/OakP";
 import { OakUiRoleToken } from "@/styles";
+import { OakRadioGroup } from "@/components/form-elements";
 
 const unitItems = [
   {
@@ -112,6 +113,8 @@ export const Default: Story = {
     <>
       {unitItems.map((item, index) => (
         <OakListItem
+          id={String(index)}
+          value={String(index)}
           key={index}
           {...item}
           onClick={() => console.log("onClick!")}
@@ -122,18 +125,32 @@ export const Default: Story = {
   args: {},
 };
 
-export const Selectable: Story = {
-  render: () => (
-    <>
+const SelectableComponent = () => {
+  const [value, setValue] = useState("0");
+  return (
+    <OakRadioGroup
+      name={"as-radio-test"}
+      value={value}
+      onChange={(e) => {
+        console.log("e.target.value:", e.target.value);
+        setValue(e.target.value);
+      }}
+    >
       {unitItems.map((item, index) => (
         <OakListItem
-          key={index}
           {...item}
+          asRadio
+          id={item.title}
+          value={item.title}
+          key={index}
           onClick={() => console.log("onClick!")}
-          onCheckedChange={console.log}
-        ></OakListItem>
+        />
       ))}
-    </>
-  ),
+    </OakRadioGroup>
+  );
+};
+
+export const Selectable: Story = {
+  render: () => <SelectableComponent />,
   args: {},
 };

@@ -99,7 +99,8 @@
     "storybook-react-context": "^0.6.0",
     "ts-jest": "^29.4.5",
     "tsx": "^4.20.5",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "jest-util": "^30.2.0"
   },
   "directories": {
     "example": "examples"

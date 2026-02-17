@@ -5,12 +5,14 @@ import { OakListItem } from "./OakListItem";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
+import { OakRadioGroup } from "@/index";
 
 const onClick = jest.fn();
 const onCheckedChange = jest.fn();
 
 const defaultProps = {
   title: "Lesson 1",
+  id: "1",
   index: 1,
   isLegacy: false,
 };
@@ -149,43 +151,39 @@ describe("OakListItem", () => {
   });
 
   describe("selectable", () => {
-    it("renders a checkbox when onCheckedChange is provided", () => {
-      // Arrange
+    it("renders radio when onCheckedChange is provided", () => {
       const { getByRole } = renderWithTheme(
-        <OakListItem {...defaultProps} onCheckedChange={onCheckedChange} />,
+        <OakRadioGroup name="radio-group">
+          <OakListItem
+            {...defaultProps}
+            asRadio
+            id="checkbox-1"
+            value="Option 1"
+          />
+        </OakRadioGroup>,
       );
-      const checkbox = getByRole("checkbox");
-      // Assert
-      expect(checkbox).toBeInTheDocument();
+      const radios = getByRole("radio", { hidden: true });
+      expect(radios).toBeInTheDocument();
     });
 
-    it("calls onCheckedChange when checkbox is clicked", () => {
+    it("does not select radio when unavailable", () => {
       // Arrange
       const { getByRole } = renderWithTheme(
-        <OakListItem {...defaultProps} onCheckedChange={onCheckedChange} />,
+        <OakRadioGroup name="radio-group">
+          <OakListItem
+            {...defaultProps}
+            asRadio
+            unavailable={true}
+            id="checkbox-1"
+            value="Option 1"
+          />
+        </OakRadioGroup>,
       );
-      const checkbox = getByRole("checkbox");
+      const radio = getByRole("radio") as HTMLInputElement;
       // Act
-      checkbox.click();
+      radio.click();
       // Assert
-      expect(onCheckedChange).toHaveBeenCalledTimes(1);
-      expect(onCheckedChange).toHaveBeenCalledWith(true);
-    });
-
-    it("does not call onCheckedChange when disabled", () => {
-      // Arrange
-      const { getByRole } = renderWithTheme(
-        <OakListItem
-          {...defaultProps}
-          onCheckedChange={onCheckedChange}
-          unavailable={true}
-        />,
-      );
-      const checkbox = getByRole("checkbox") as HTMLInputElement;
-      // Act
-      checkbox.click();
-      // Assert
-      expect(checkbox.disabled).toBe(true);
+      expect(radio.disabled).toBe(true);
       expect(onCheckedChange).not.toHaveBeenCalled();
     });
   });

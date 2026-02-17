@@ -367,77 +367,79 @@ exports[`OakListItem matches snapshot 1`] = `
   <li
     class="c0"
   >
-    <div
-      class="c1 c2"
-    >
+    <label>
       <div
-        class="c3 c4 c5"
-        data-testid="OakListItem-id"
+        class="c1 c2"
       >
         <div
-          class="c6 c7 c8"
+          class="c3 c4 c5"
+          data-testid="OakListItem-id"
         >
           <div
-            class="c9 c10 c11 c12"
-          >
-            <span
-              class="c13"
-            >
-              1
-            </span>
-          </div>
-          <div
-            class="c14 c15"
-          >
-            <p
-              class="c16 hover-text"
-            >
-              Lesson 1
-            </p>
-          </div>
-          <div
-            class="c17 c18"
-          />
-          <div
-            class="c19 c18"
-          />
-        </div>
-      </div>
-      <div
-        class="c20 c21 c5"
-        data-testid="OakListItem-id"
-      >
-        <div
-          class="c22 c23"
-        >
-          <div
-            class="c1 c24"
+            class="c6 c7 c8"
           >
             <div
-              class="c25 c26"
+              class="c9 c10 c11 c12"
             >
-              <h3
-                class="c27"
+              <span
+                class="c13"
               >
                 1
-              </h3>
+              </span>
             </div>
             <div
-              class="c22"
+              class="c14 c15"
             >
               <p
-                class="c16"
+                class="c16 hover-text"
               >
                 Lesson 1
               </p>
             </div>
+            <div
+              class="c17 c18"
+            />
+            <div
+              class="c19 c18"
+            />
           </div>
+        </div>
+        <div
+          class="c20 c21 c5"
+          data-testid="OakListItem-id"
+        >
           <div
-            class="c28 c29"
-          />
+            class="c22 c23"
+          >
+            <div
+              class="c1 c24"
+            >
+              <div
+                class="c25 c26"
+              >
+                <h3
+                  class="c27"
+                >
+                  1
+                </h3>
+              </div>
+              <div
+                class="c22"
+              >
+                <p
+                  class="c16"
+                >
+                  Lesson 1
+                </p>
+              </div>
+            </div>
+            <div
+              class="c28 c29"
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </label>
   </li>
 </div>
 `;
