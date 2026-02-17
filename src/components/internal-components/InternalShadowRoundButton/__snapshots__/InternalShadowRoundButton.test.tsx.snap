@@ -156,8 +156,16 @@ exports[`InternalShadowRoundButton matches snapshot 1`] = `
   background: #bef2bd;
 }
 
+.c2 > :first-child:hover .icon-container div {
+  border-color: #bef2bd;
+}
+
 .c2 > :first-child:active .icon-container {
   background: #bef2bd;
+}
+
+.c2 > :first-child:active .icon-container div {
+  border-color: #bef2bd;
 }
 
 <div>

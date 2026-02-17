@@ -18,9 +18,11 @@ import {
   PositionStyleProps,
   positionStyle,
 } from "@/styles/utils/positionStyle";
+import { FlexStyleProps } from "@/styles/utils/flexStyle";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { OakUiRoleToken, OakDropShadowToken } from "@/styles";
 import { SizeStyleProps, sizeStyle } from "@/styles/utils/sizeStyle";
+import { OakLoadingSpinnerTokenSubset } from "@/styles/theme/spacing";
 
 export type InternalShadowRoundButtonProps = Omit<
   InternalButtonProps,
@@ -40,6 +42,7 @@ export type InternalShadowRoundButtonProps = Omit<
   hoverTextColor: OakUiRoleToken;
   hoverIconColor?: OakUiRoleToken;
   hoverIconBackground: OakUiRoleToken;
+  hoverIconBorderColor?: OakUiRoleToken;
   disabledTextColor: OakUiRoleToken;
   disabledIconColor?: OakRoundIconProps["$colorFilter"];
   disabledIconBackground: OakUiRoleToken;
@@ -50,6 +53,8 @@ export type InternalShadowRoundButtonProps = Omit<
   maxWidth?: SizeStyleProps["$maxWidth"];
   iconBackgroundSize: SizeStyleProps["$width"];
   iconSize: SizeStyleProps["$width"];
+  iconGap?: FlexStyleProps["$gap"];
+  loadingSpinnerSize?: OakLoadingSpinnerTokenSubset;
   hoverDropShadow?: OakDropShadowToken | null;
 } & PositionStyleProps;
 
@@ -81,6 +86,7 @@ const StyledInternalButton = styled(InternalButton)<
 
 const StyledButtonWrapper = styled(OakFlex)<{
   $defaultIconBackground: OakUiRoleToken;
+  $defaultIconBorderColor: OakUiRoleToken;
   $hoverIconBackground: OakUiRoleToken;
   $hoverIconBorderColor: OakUiRoleToken;
   $disabledIconBackground: OakUiRoleToken;
@@ -114,6 +120,9 @@ const StyledButtonWrapper = styled(OakFlex)<{
     > :first-child:active .icon-container {
       background: ${parseColor(props.$defaultIconBackground)};
     }
+    > :first-child:active .icon-container div {
+      border-color: ${parseColor(props.$defaultIconBorderColor)};
+    }
   `}
 `;
 
@@ -145,6 +154,8 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
     maxWidth,
     iconBackgroundSize,
     iconSize,
+    iconGap = "spacing-12",
+    loadingSpinnerSize = iconSize,
     defaultTextColor,
     defaultIconColor,
     defaultIconBackground,
@@ -178,8 +189,8 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
     />
   );
   const loader = (
-    <OakBox $width={iconSize} $height={iconSize}>
-      <OakLoadingSpinner $width={iconSize} loaderColor="bg-primary" />
+    <OakBox $width={loadingSpinnerSize} $height={loadingSpinnerSize}>
+      <OakLoadingSpinner $width={loadingSpinnerSize} loaderColor="bg-primary" />
     </OakBox>
   );
 
@@ -221,8 +232,9 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
       $width={width}
       $maxWidth={maxWidth}
       $defaultIconBackground={defaultIconBackground}
+      $defaultIconBorderColor={defaultIconBorderColor ?? defaultIconBackground}
       $hoverIconBackground={hoverIconBackground}
-      $hoverIconBorderColor={hoverIconBorderColor}
+      $hoverIconBorderColor={hoverIconBorderColor ?? hoverIconBackground}
       $disabledIconBackground={disabledIconBackground}
       $hoverDropShadow={hoverDropShadow}
     >
@@ -240,7 +252,7 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
         <OakFlex
           $flexDirection={"row"}
           $alignItems={"center"}
-          $gap={children ? "spacing-12" : "spacing-0"}
+          $gap={children ? iconGap : "spacing-0"}
           $justifyContent="center"
         >
           {!isTrailingIcon && iconLogic}

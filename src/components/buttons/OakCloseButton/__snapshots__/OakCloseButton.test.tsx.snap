@@ -163,8 +163,16 @@ exports[`OakCloseButton matches snapshot 1`] = `
   background: #f2f2f2;
 }
 
+.c2 > :first-child:hover .icon-container div {
+  border-color: #f2f2f2;
+}
+
 .c2 > :first-child:active .icon-container {
   background: transparent;
+}
+
+.c2 > :first-child:active .icon-container div {
+  border-color: transparent;
 }
 
 <div>

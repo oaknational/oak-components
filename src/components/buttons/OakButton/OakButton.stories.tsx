@@ -278,6 +278,49 @@ export const InvertedSmallTertiaryButton: Story = {
   },
 };
 
+/**
+ * Recommended use: When you want an icon button with a transparent background
+ */
+export const TransparentTertiaryButton: Story = {
+  render: (args) => (
+    <OakFlex $gap={"spacing-24"}>
+      <OakButton {...args} iconName="cross" />
+    </OakFlex>
+  ),
+  parameters: {
+    backgrounds: {
+      default: "light",
+    },
+  },
+  args: {
+    variant: "tertiary",
+    colorScheme: "transparent",
+    iconName: "arrow-right",
+  },
+};
+
+/**
+ * Recommended use: When you want an icon button with a transparent background
+ */
+export const TransparentSmallTertiaryButton: Story = {
+  render: (args) => (
+    <OakFlex $gap={"spacing-24"}>
+      <OakButton {...args} iconName="cross" />
+    </OakFlex>
+  ),
+  parameters: {
+    backgrounds: {
+      default: "light",
+    },
+  },
+  args: {
+    variant: "tertiary",
+    colorScheme: "transparent",
+    size: "sm",
+    iconName: "arrow-right",
+  },
+};
+
 export const LinkStyledAsButton: Story = {
   render: (args) => (
     <OakFlex $gap="spacing-24">

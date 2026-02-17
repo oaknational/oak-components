@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakInlineBanner } from "@/components/messaging-and-feedback/OakInlineBanner";
-import { OakPrimaryButton } from "@/components/buttons/OakPrimaryButton";
+import { OakButton } from "@/components/buttons/OakButton";
 import { OakRadioButton } from "@/components/form-elements/OakRadioButton";
 import { OakRadioGroup } from "@/components/form-elements/OakRadioGroup";
 
@@ -109,13 +109,14 @@ const UnstyledComponent = (
           ))}
         </OakRadioGroup>
       )}
-      <OakPrimaryButton
+      <OakButton
+        variant="primary"
         iconName="arrow-right"
         isTrailingIcon={true}
         onClick={handleNextClick}
       >
         Next
-      </OakPrimaryButton>
+      </OakButton>
     </OakFlex>
   );
 };

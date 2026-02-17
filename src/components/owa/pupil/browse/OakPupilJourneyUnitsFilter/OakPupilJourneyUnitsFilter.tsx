@@ -3,12 +3,12 @@ import styled from "styled-components";
 
 import { OakButtonAsRadioGroup } from "@/components/form-elements/OakButtonAsRadioGroup";
 import { OakSecondaryButtonAsRadio } from "@/components/form-elements/OakSecondaryButtonAsRadio";
-import { OakSecondaryButton } from "@/components/buttons/OakSecondaryButton";
+import { OakButton } from "@/components/buttons/OakButton";
 import { OakOutlineAccordion } from "@/components/owa/OakOutlineAccordion";
 import { OakHeading } from "@/components/typography/OakHeading";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 
-const StyledOakSecondaryButton = styled(OakSecondaryButton)`
+const StyledOakSecondaryButton = styled(OakButton)`
   & > button {
     opacity: 0;
     position: absolute;
@@ -98,7 +98,10 @@ export const OakPupilJourneyUnitsFilter = (
         $alignItems={"end"}
       >
         {menuItems.length > 3 && (
-          <StyledOakSecondaryButton onClick={onSkipCallback}>
+          <StyledOakSecondaryButton
+            onClick={onSkipCallback}
+            variant="secondary"
+          >
             Skip to results
           </StyledOakSecondaryButton>
         )}

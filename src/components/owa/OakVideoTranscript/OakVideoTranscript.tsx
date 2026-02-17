@@ -3,7 +3,7 @@ import React, { ReactNode, useState } from "react";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakCollapsibleContent } from "@/components/layout-and-structure/OakCollapsibleContent";
-import { OakSmallSecondaryButton } from "@/components/buttons/OakSmallSecondaryButton";
+import { OakButton } from "@/components/buttons/OakButton";
 
 type OakVideoTranscriptProps = {
   /**
@@ -60,7 +60,9 @@ export const OakVideoTranscript = ({
 
         {children && (
           <OakBox $display={["none", "block"]}>
-            <OakSmallSecondaryButton
+            <OakButton
+              variant="secondary"
+              size="sm"
               onClick={handleClick}
               iconName={showTranscript ? "chevron-up" : "chevron-down"}
               isTrailingIcon
@@ -68,20 +70,22 @@ export const OakVideoTranscript = ({
               aria-expanded={showTranscript}
             >
               {label}
-            </OakSmallSecondaryButton>
+            </OakButton>
           </OakBox>
         )}
 
         {/* mobile */}
         {children && (
           <OakBox $display={["block", "none"]}>
-            <OakSmallSecondaryButton
+            <OakButton
+              variant="secondary"
+              size="sm"
               onClick={handleClick}
               aria-controls={id}
               aria-expanded={showTranscript}
             >
               {label}
-            </OakSmallSecondaryButton>
+            </OakButton>
           </OakBox>
         )}
         {copyLinkControl && <OakBox>{copyLinkControl}</OakBox>}

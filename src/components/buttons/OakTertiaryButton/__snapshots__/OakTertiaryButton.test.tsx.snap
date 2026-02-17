@@ -108,8 +108,16 @@ exports[`OakTertiaryButton matches snapshot 1`] = `
   background: #575757;
 }
 
+.c2 > :first-child:hover .icon-container div {
+  border-color: #575757;
+}
+
 .c2 > :first-child:active .icon-container {
   background: #222222;
+}
+
+.c2 > :first-child:active .icon-container div {
+  border-color: #222222;
 }
 
 <div>

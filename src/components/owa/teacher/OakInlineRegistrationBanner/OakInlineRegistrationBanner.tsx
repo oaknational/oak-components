@@ -7,7 +7,7 @@ import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakP } from "@/components/typography/OakP";
 import { OakFieldError } from "@/components/form-elements/OakFieldError";
 import { OakJauntyAngleLabel } from "@/components/form-elements/OakJauntyAngleLabel";
-import { OakPrimaryButton } from "@/components/buttons/OakPrimaryButton";
+import { OakButton } from "@/components/buttons/OakButton";
 import { OakTextInput } from "@/components/form-elements/OakTextInput";
 import { ColorStyleProps } from "@/styles/utils/colorStyle";
 import { BorderStyleProps } from "@/styles/utils/borderStyle";
@@ -96,9 +96,9 @@ export const OakInlineRegistrationBanner = (
                   wrapperWidth="100%"
                 />
               </OakBox>
-              <OakPrimaryButton innerWidth="max-content">
+              <OakButton variant="primary" innerWidth="max-content">
                 Sign up
-              </OakPrimaryButton>
+              </OakButton>
             </OakFlex>
             {success && (
               <OakP $font="body-1-bold" $mt="spacing-16">

@@ -1,7 +1,7 @@
 import React from "react";
 
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
-import { OakPrimaryButton } from "@/components/buttons/OakPrimaryButton";
+import { OakButton } from "@/components/buttons/OakButton";
 import { OakFormInputWithLabels } from "@/components/owa/OakFormInputWithLabels/OakFormInputWithLabels";
 
 export interface OakCaptionSearchProps {
@@ -67,14 +67,15 @@ export const OakCaptionSearch = ({
         defaultValue={defaultValue}
         required
       />
-      <OakPrimaryButton
+      <OakButton
+        variant="primary"
         type="submit"
         iconName="search"
         isTrailingIcon
         isLoading={isLoading}
       >
         Search
-      </OakPrimaryButton>
+      </OakButton>
     </OakFlex>
   );
 };

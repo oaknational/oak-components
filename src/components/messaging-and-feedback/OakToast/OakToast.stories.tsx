@@ -4,7 +4,7 @@ import { useArgs } from "@storybook/preview-api";
 
 import { OakToast } from "./OakToast";
 
-import { OakPrimaryButton } from "@/components/buttons/OakPrimaryButton";
+import { OakButton } from "@/components/buttons/OakButton";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 
 const meta: Meta<typeof OakToast> = {
@@ -90,7 +90,9 @@ export const ExtendibleAutoDismiss: Story = {
     };
     return (
       <OakFlex $flexDirection="column" $gap="spacing-20">
-        <OakPrimaryButton onClick={replaceToast}>Update toast</OakPrimaryButton>
+        <OakButton variant="primary" onClick={replaceToast}>
+          Update toast
+        </OakButton>
         <OakToast {...args} />
       </OakFlex>
     );

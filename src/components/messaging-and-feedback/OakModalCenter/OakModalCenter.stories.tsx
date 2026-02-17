@@ -2,9 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { useArgs } from "@storybook/preview-api";
 import React, { Fragment } from "react";
 
-import { OakSecondaryButton } from "@/components/buttons/OakSecondaryButton";
-import { OakPrimaryButton } from "@/components/buttons/OakPrimaryButton";
-import { OakPrimaryInvertedButton } from "@/components/buttons/OakPrimaryInvertedButton";
+import { OakButton } from "@/components/buttons/OakButton";
 import {
   OakModalCenter,
   OakModalCenterBody,
@@ -77,12 +75,14 @@ const meta: Meta<typeof OakModalCenter> = {
         $flexDirection="column"
         $rowGap="spacing-24"
       >
-        <OakPrimaryButton $font="heading-7">
-          I understand, continue
-        </OakPrimaryButton>
-        <OakPrimaryInvertedButton iconName="arrow-left" $font="heading-7">
+        <OakButton variant="primary">I understand, continue</OakButton>
+        <OakButton
+          variant="primary"
+          colorScheme="inverted"
+          iconName="arrow-left"
+        >
           Take me home
-        </OakPrimaryInvertedButton>
+        </OakButton>
       </OakFlex>
     ),
   },
@@ -93,7 +93,9 @@ const meta: Meta<typeof OakModalCenter> = {
 
     return (
       <>
-        <OakSecondaryButton onClick={onOpen}>Open modal</OakSecondaryButton>
+        <OakButton variant="secondary" onClick={onOpen}>
+          Open modal
+        </OakButton>
         <OakModalCenter {...args} onClose={onClose} />
       </>
     );

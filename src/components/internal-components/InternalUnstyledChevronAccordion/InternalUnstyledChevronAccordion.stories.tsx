@@ -85,13 +85,22 @@ export const InputAsHeader: Story = {
     header: (
       <OakBox $background={"bg-decorative6-subdued"} $textAlign={"left"}>
         <OakSmallSecondaryButtonWithDropdown primaryActionText="Click me">
-          <OakSmallSecondaryButtonWithDropdown.Item>
+          <OakSmallSecondaryButtonWithDropdown.Item
+            variant="primary"
+            colorScheme="inverted"
+          >
             Action 1
           </OakSmallSecondaryButtonWithDropdown.Item>
-          <OakSmallSecondaryButtonWithDropdown.Item>
+          <OakSmallSecondaryButtonWithDropdown.Item
+            variant="primary"
+            colorScheme="inverted"
+          >
             Action 2
           </OakSmallSecondaryButtonWithDropdown.Item>
-          <OakSmallSecondaryButtonWithDropdown.Item>
+          <OakSmallSecondaryButtonWithDropdown.Item
+            variant="primary"
+            colorScheme="inverted"
+          >
             Action 3
           </OakSmallSecondaryButtonWithDropdown.Item>
         </OakSmallSecondaryButtonWithDropdown>

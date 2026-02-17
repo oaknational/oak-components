@@ -227,8 +227,16 @@ exports[`OakModalCenter matches snapshot 1`] = `
   background: #222222;
 }
 
+.c13 > :first-child:hover .icon-container div {
+  border-color: #222222;
+}
+
 .c13 > :first-child:active .icon-container {
   background: transparent;
+}
+
+.c13 > :first-child:active .icon-container div {
+  border-color: transparent;
 }
 
 .c6 {

@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/react";
 
 import { OakCollapsibleContent } from "./OakCollapsibleContent";
 
-import { OakTertiaryButton } from "@/components/buttons/OakTertiaryButton";
+import { OakButton } from "@/components/buttons/OakButton";
 import { OakP } from "@/components/typography/OakP";
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 
@@ -63,7 +63,8 @@ export const WithControl: Story = {
     const [isOpen, setIsOpen] = useState(true);
     return (
       <>
-        <OakTertiaryButton
+        <OakButton
+          variant="tertiary"
           onClick={() => setIsOpen(!isOpen)}
           iconName={isOpen ? "chevron-up" : "chevron-down"}
           $mb="spacing-24"
@@ -71,7 +72,7 @@ export const WithControl: Story = {
           aria-controls="collapsible-content"
         >
           {isOpen ? "Close" : "Open"}
-        </OakTertiaryButton>
+        </OakButton>
         <OakCollapsibleContent
           id="collapsible-content"
           {...args}

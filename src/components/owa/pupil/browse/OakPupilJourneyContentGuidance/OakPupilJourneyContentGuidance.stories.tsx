@@ -4,7 +4,7 @@ import { useArgs } from "@storybook/preview-api";
 
 import { OakPupilJourneyContentGuidance } from "./OakPupilJourneyContentGuidance";
 
-import { OakSecondaryButton } from "@/components/buttons/OakSecondaryButton";
+import { OakButton } from "@/components/buttons/OakButton";
 
 const meta: Meta<typeof OakPupilJourneyContentGuidance> = {
   tags: ["autodocs"],
@@ -43,7 +43,9 @@ export const Default: Story = {
 
     return (
       <>
-        <OakSecondaryButton onClick={onOpen}>Open modal</OakSecondaryButton>
+        <OakButton variant="secondary" onClick={onOpen}>
+          Open modal
+        </OakButton>
         <OakPupilJourneyContentGuidance
           {...args}
           onAccept={onClose}

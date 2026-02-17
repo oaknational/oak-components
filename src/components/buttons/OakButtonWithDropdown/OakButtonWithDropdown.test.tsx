@@ -5,12 +5,12 @@ import "@testing-library/jest-dom";
 
 import { OakButtonWithDropdown } from "./OakButtonWithDropdown";
 
-import { OakSecondaryButton } from "@/components/buttons/OakSecondaryButton";
+import { OakButton } from "@/components/buttons/OakButton";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 const defaultProps = {
   primaryActionText: "Actions",
-  buttonComponent: OakSecondaryButton,
+  buttonComponent: OakButton,
 };
 
 const simpleChildren = (

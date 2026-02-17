@@ -1,7 +1,7 @@
 import React from "react";
 
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
-import { OakTertiaryInvertedButton } from "@/components/buttons/OakTertiaryInvertedButton";
+import { OakButton } from "@/components/buttons/OakButton";
 
 export type SubCarouselPositionControlProps = {
   onBack: () => void;
@@ -22,13 +22,17 @@ export const SubCarouselPositionControl = ({
 }: SubCarouselPositionControlProps) => {
   return (
     <OakFlex $gap={"spacing-24"}>
-      <OakTertiaryInvertedButton
+      <OakButton
+        variant="tertiary"
+        colorScheme="inverted"
         onClick={onBack}
         iconName="chevron-left"
         disabled={disableBack}
         aria-label={backLabel}
       />
-      <OakTertiaryInvertedButton
+      <OakButton
+        variant="tertiary"
+        colorScheme="inverted"
         onClick={onFwd}
         iconName="chevron-right"
         disabled={disableFwd}

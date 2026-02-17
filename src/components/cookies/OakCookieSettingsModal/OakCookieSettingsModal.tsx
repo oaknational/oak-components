@@ -12,8 +12,7 @@ import {
   OakInformativeModalProps,
 } from "@/components/messaging-and-feedback/OakInformativeModal";
 import { OakLink } from "@/components/navigation/OakLink";
-import { OakPrimaryButton } from "@/components/buttons/OakPrimaryButton";
-import { OakSecondaryButton } from "@/components/buttons/OakSecondaryButton";
+import { OakButton } from "@/components/buttons";
 import { OakSecondaryLink } from "@/components/navigation/OakSecondaryLink";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakHeading } from "@/components/typography/OakHeading";
@@ -91,16 +90,17 @@ export const OakCookieSettingsModal = ({
       zIndex={zIndex}
       footerSlot={
         <OakInformativeModalFooter>
-          <OakSecondaryButton onClick={onReject} width="100%">
+          <OakButton variant="secondary" onClick={onReject} width="100%">
             Reject non-essential cookies
-          </OakSecondaryButton>
-          <OakPrimaryButton
+          </OakButton>
+          <OakButton
+            variant="primary"
             type="submit"
             form="cookie-settings-form"
             width="100%"
           >
             Confirm my choices
-          </OakPrimaryButton>
+          </OakButton>
         </OakInformativeModalFooter>
       }
     >
@@ -121,9 +121,9 @@ export const OakCookieSettingsModal = ({
           .
         </OakP>
         <OakBox $mb="spacing-56">
-          <OakPrimaryButton onClick={onAccept} width="spacing-180">
+          <OakButton variant="primary" onClick={onAccept} width="spacing-180">
             Allow all
-          </OakPrimaryButton>
+          </OakButton>
         </OakBox>
         <OakBox
           $ph="spacing-8"

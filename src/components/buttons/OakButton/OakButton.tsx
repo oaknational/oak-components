@@ -9,16 +9,15 @@ import {
   InternalShadowRoundButtonProps,
 } from "@/components/internal-components/InternalShadowRoundButton";
 import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
-import {
-  OakUiRoleToken,
-  OakDropShadowToken,
-  OakAllSpacingToken,
-} from "@/styles";
+import { OakUiRoleToken, OakDropShadowToken } from "@/styles";
 import { SizeStyleProps } from "@/styles/utils/sizeStyle";
 import { SpacingStyleProps } from "@/styles/utils/spacingStyle";
 import { FlexStyleProps } from "@/styles/utils/flexStyle";
 import { TypographyStyleProps } from "@/styles/utils/typographyStyle";
-import { OakSizeToken } from "@/styles/theme/spacing";
+import {
+  OakSizeToken,
+  OakLoadingSpinnerTokenSubset,
+} from "@/styles/theme/spacing";
 import { OakColorSchemeToken } from "@/styles/theme/color";
 
 export const oakButtonVariants = ["primary", "secondary", "tertiary"] as const;
@@ -27,6 +26,7 @@ export type OakButtonVariant = (typeof oakButtonVariants)[number];
 export const oakButtonColorSchemes: OakColorSchemeToken[] = [
   "primary",
   "inverted",
+  "transparent",
 ] as const;
 type OakButtonColorScheme = (typeof oakButtonColorSchemes)[number];
 
@@ -75,7 +75,6 @@ export type OakButtonProps = (
 
 type OakButtonVariantsConfig = {
   [key in OakButtonVariant]: {
-    hasRoundIcon: boolean;
     colorSchemes: {
       [key in OakButtonColorScheme]: {
         // default styles
@@ -106,11 +105,6 @@ type OakButtonVariantsConfig = {
   };
 };
 
-type OakLoadingSpinnerTokenSubset = Extract<
-  OakAllSpacingToken,
-  "spacing-20" | "spacing-24"
->;
-
 type OakButtonSizeConfig = {
   [key in OakButtonSize]: {
     font: TypographyStyleProps["$font"];
@@ -125,7 +119,6 @@ type OakButtonSizeConfig = {
 
 const oakButtonVariantConfig: OakButtonVariantsConfig = {
   primary: {
-    hasRoundIcon: false,
     colorSchemes: {
       primary: {
         // default styles
@@ -180,34 +173,9 @@ const oakButtonVariantConfig: OakButtonVariantsConfig = {
     },
   },
   secondary: {
-    hasRoundIcon: false,
     colorSchemes: {
+      // secondary button has only one color scheme
       primary: {
-        // default styles
-        defaultTextColor: "text-primary",
-        defaultBackground: "bg-btn-secondary",
-        defaultBorderColor: "border-primary",
-        defaultIconColor: "icon-primary",
-        defaultIconBackground: "transparent",
-        defaultIconBorderColor: "transparent",
-        // hover styles
-        hoverTextColor: "text-primary",
-        hoverBackground: "bg-btn-secondary-hover",
-        hoverBorderColor: "border-primary",
-        hoverIconColor: "icon-primary",
-        hoverIconBackground: "transparent",
-        hoverIconBorderColor: "transparent",
-        // disabled styles
-        disabledTextColor: "text-disabled",
-        disabledBackground: "bg-btn-secondary-disabled",
-        disabledBorderColor: "border-neutral",
-        disabledIconColor: "icon-disabled",
-        disabledIconBackground: "transparent",
-        disabledIconBorderColor: "transparent",
-        // hover shadow
-        hoverShadow: "drop-shadow-lemon",
-      },
-      inverted: {
         // default styles
         defaultTextColor: "text-primary",
         defaultBackground: "bg-btn-secondary",
@@ -235,7 +203,6 @@ const oakButtonVariantConfig: OakButtonVariantsConfig = {
     },
   },
   tertiary: {
-    hasRoundIcon: true,
     colorSchemes: {
       primary: {
         // default styles
@@ -287,6 +254,31 @@ const oakButtonVariantConfig: OakButtonVariantsConfig = {
         // hover shadow
         hoverShadow: "drop-shadow-lemon",
       },
+      transparent: {
+        // default styles
+        defaultTextColor: "text-primary",
+        defaultBackground: "transparent",
+        defaultBorderColor: "transparent",
+        defaultIconColor: "icon-primary",
+        defaultIconBackground: "transparent",
+        defaultIconBorderColor: "transparent",
+        // hover styles
+        hoverTextColor: "text-primary",
+        hoverBackground: "transparent",
+        hoverBorderColor: "transparent",
+        hoverIconColor: "icon-primary",
+        hoverIconBackground: "transparent",
+        hoverIconBorderColor: "transparent",
+        // disabled styles
+        disabledTextColor: "text-disabled",
+        disabledBackground: "transparent",
+        disabledBorderColor: "transparent",
+        disabledIconColor: "icon-disabled",
+        disabledIconBackground: "transparent",
+        disabledIconBorderColor: "transparent",
+        // other styles
+        hoverShadow: null,
+      },
     },
   },
 };
@@ -332,13 +324,23 @@ export const OakButton = <C extends ElementType = "button">({
 
   if (!colorSchemeConfig) {
     throw new Error(
-      `Invalid variant or colorScheme: ${variant}, ${colorScheme}`,
+      `Color scheme ${colorScheme} missing for: ${variant} variant`,
     );
   }
 
   if (!sizeConfig) {
     throw new Error(`Invalid size: ${size}`);
   }
+
+  const sizeProps = {
+    font: sizeConfig.font,
+    pv: sizeConfig.pv,
+    ph: sizeConfig.ph,
+    loadingSpinnerSize: sizeConfig.loadingSpinnerSize,
+    iconGap: children ? sizeConfig.iconGap : "spacing-0",
+    iconSize: sizeConfig.iconSize,
+    iconBackgroundSize: sizeConfig.iconBackgroundSize,
+  };
 
   switch (variant) {
     case "primary":
@@ -357,11 +359,7 @@ export const OakButton = <C extends ElementType = "button">({
           disabledBorderColor={colorSchemeConfig.disabledBorderColor}
           hoverShadow={colorSchemeConfig.hoverShadow}
           hoverUnderline
-          font={sizeConfig.font}
-          pv={sizeConfig.pv}
-          ph={sizeConfig.ph}
-          loadingSpinnerSize={sizeConfig.loadingSpinnerSize}
-          iconGap={children ? sizeConfig.iconGap : "spacing-0"}
+          {...sizeProps}
           {...rest}
         >
           {children}
@@ -382,13 +380,7 @@ export const OakButton = <C extends ElementType = "button">({
           disabledIconColor={colorSchemeConfig.disabledIconColor}
           disabledIconBackground={colorSchemeConfig.disabledIconBackground}
           disabledIconBorderColor={colorSchemeConfig.disabledIconBorderColor}
-          iconBackgroundSize={sizeConfig.iconBackgroundSize}
-          iconSize={sizeConfig.iconSize}
-          font={sizeConfig.font}
-          pv={sizeConfig.pv}
-          ph={sizeConfig.ph}
-          loadingSpinnerSize={sizeConfig.loadingSpinnerSize}
-          iconGap={children ? sizeConfig.iconGap : "spacing-0"}
+          {...sizeProps}
           {...rest}
         >
           {children}

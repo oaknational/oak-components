@@ -4,7 +4,7 @@ import { useArgs } from "@storybook/preview-api";
 
 import { OakCookieSettingsModal } from "./OakCookieSettingsModal";
 
-import { OakSecondaryButton } from "@/components/buttons/OakSecondaryButton";
+import { OakButton } from "@/components/buttons/OakButton";
 
 const meta: Meta<typeof OakCookieSettingsModal> = {
   component: OakCookieSettingsModal,
@@ -65,7 +65,9 @@ const meta: Meta<typeof OakCookieSettingsModal> = {
 
     return (
       <>
-        <OakSecondaryButton onClick={onOpen}>Open modal</OakSecondaryButton>
+        <OakButton variant="secondary" onClick={onOpen}>
+          Open modal
+        </OakButton>
         <OakCookieSettingsModal {...args} onClose={onClose} />
       </>
     );

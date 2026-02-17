@@ -240,8 +240,16 @@ exports[`OakInformativeModal matches snapshot when mounted 1`] = `
   background: #f2f2f2;
 }
 
+.c10 > :first-child:hover .icon-container div {
+  border-color: #f2f2f2;
+}
+
 .c10 > :first-child:active .icon-container {
   background: transparent;
+}
+
+.c10 > :first-child:active .icon-container div {
+  border-color: transparent;
 }
 
 .c4 {

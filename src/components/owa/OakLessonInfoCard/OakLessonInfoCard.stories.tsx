@@ -10,7 +10,7 @@ import {
 
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakP } from "@/components/typography/OakP";
-import { OakPrimaryInvertedButton } from "@/components/buttons/OakPrimaryInvertedButton";
+import { OakButton } from "@/components/buttons/OakButton";
 
 const meta: Meta<typeof OakLessonInfoCard> = {
   component: OakLessonInfoCard,
@@ -84,14 +84,16 @@ export const Worksheet: Story = (args: OakInfoCardProps) => (
     </OakCardHeader>
     Optional
     <OakFlex $justifyContent={"flex-end"}>
-      <OakPrimaryInvertedButton
+      <OakButton
+        variant="primary"
+        colorScheme="inverted"
         onClick={() => {}}
         iconName="download"
         isTrailingIcon
         $font={"heading-7"}
       >
         Download worksheet
-      </OakPrimaryInvertedButton>
+      </OakButton>
     </OakFlex>
   </OakLessonInfoCard>
 );

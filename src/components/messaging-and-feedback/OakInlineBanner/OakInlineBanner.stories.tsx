@@ -9,7 +9,7 @@ import {
 } from "@/components/messaging-and-feedback/OakInlineBanner";
 import { OakSecondaryLink } from "@/components/navigation/OakSecondaryLink";
 import { oakIconNames } from "@/components/images-and-icons/OakIcon";
-import { OakPrimaryButton } from "@/components/buttons/OakPrimaryButton";
+import { OakButton } from "@/components/buttons/OakButton";
 
 const meta: Meta<typeof OakInlineBanner> = {
   component: OakInlineBanner,
@@ -113,9 +113,9 @@ export const InfoLarge: Story = {
       informing them of a background process, feedback should be subtle and 
       contextual—reinforcing confidence without demanding unnecessary attention.`,
     cta: (
-      <OakPrimaryButton iconName="chevron-right" isTrailingIcon>
+      <OakButton variant="primary" iconName="chevron-right" isTrailingIcon>
         Button
-      </OakPrimaryButton>
+      </OakButton>
     ),
   },
 };
@@ -143,9 +143,9 @@ export const NeutralLarge: Story = {
       informing them of a background process, feedback should be subtle and 
       contextual—reinforcing confidence without demanding unnecessary attention.`,
     cta: (
-      <OakPrimaryButton iconName="chevron-right" isTrailingIcon>
+      <OakButton variant="primary" iconName="chevron-right" isTrailingIcon>
         Button
-      </OakPrimaryButton>
+      </OakButton>
     ),
   },
 };
@@ -173,9 +173,9 @@ export const SuccessLarge: Story = {
       informing them of a background process, feedback should be subtle and 
       contextual—reinforcing confidence without demanding unnecessary attention.`,
     cta: (
-      <OakPrimaryButton iconName="chevron-right" isTrailingIcon>
+      <OakButton variant="primary" iconName="chevron-right" isTrailingIcon>
         Button
-      </OakPrimaryButton>
+      </OakButton>
     ),
   },
 };
@@ -203,9 +203,9 @@ export const AlertLarge: Story = {
       informing them of a background process, feedback should be subtle and 
       contextual—reinforcing confidence without demanding unnecessary attention.`,
     cta: (
-      <OakPrimaryButton iconName="chevron-right" isTrailingIcon>
+      <OakButton variant="primary" iconName="chevron-right" isTrailingIcon>
         Button
-      </OakPrimaryButton>
+      </OakButton>
     ),
   },
 };
@@ -233,9 +233,9 @@ export const WarningLarge: Story = {
       informing them of a background process, feedback should be subtle and 
       contextual—reinforcing confidence without demanding unnecessary attention.`,
     cta: (
-      <OakPrimaryButton iconName="chevron-right" isTrailingIcon>
+      <OakButton variant="primary" iconName="chevron-right" isTrailingIcon>
         Button
-      </OakPrimaryButton>
+      </OakButton>
     ),
   },
 };
@@ -263,9 +263,9 @@ export const ErrorLarge: Story = {
       informing them of a background process, feedback should be subtle and 
       contextual—reinforcing confidence without demanding unnecessary attention.`,
     cta: (
-      <OakPrimaryButton iconName="chevron-right" isTrailingIcon>
+      <OakButton variant="primary" iconName="chevron-right" isTrailingIcon>
         Button
-      </OakPrimaryButton>
+      </OakButton>
     ),
   },
 };
@@ -308,9 +308,9 @@ export const OverriddenStylingLarge: Story = {
       informing them of a background process, feedback should be subtle and 
       contextual—reinforcing confidence without demanding unnecessary attention.`,
     cta: (
-      <OakPrimaryButton iconName="chevron-right" isTrailingIcon>
+      <OakButton variant="primary" iconName="chevron-right" isTrailingIcon>
         Button
-      </OakPrimaryButton>
+      </OakButton>
     ),
   },
 };

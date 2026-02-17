@@ -92,3 +92,8 @@ export type OakCombinedSpacingToken =
 export const oakSizeTokens = ["xs", "sm", "md", "lg", "xl"];
 
 export type OakSizeToken = (typeof oakSizeTokens)[number];
+
+export type OakLoadingSpinnerTokenSubset = Extract<
+  OakAllSpacingToken,
+  "spacing-20" | "spacing-24"
+>;

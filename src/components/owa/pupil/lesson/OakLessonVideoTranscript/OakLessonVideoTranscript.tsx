@@ -3,7 +3,7 @@ import React, { ReactNode, useState } from "react";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakCollapsibleContent } from "@/components/layout-and-structure/OakCollapsibleContent";
-import { OakTertiaryButton } from "@/components/buttons/OakTertiaryButton";
+import { OakButton } from "@/components/buttons/OakButton";
 
 type OakLessonVideoTranscriptProps = {
   /**
@@ -47,7 +47,8 @@ export const OakLessonVideoTranscript = ({
       >
         <OakBox>
           {children && (
-            <OakTertiaryButton
+            <OakButton
+              variant="tertiary"
               onClick={handleClick}
               iconName={showTranscript ? "chevron-up" : "chevron-down"}
               isTrailingIcon
@@ -56,7 +57,7 @@ export const OakLessonVideoTranscript = ({
               $mb="spacing-24"
             >
               {showTranscript ? "Hide transcript" : "Show transcript"}
-            </OakTertiaryButton>
+            </OakButton>
           )}
         </OakBox>
         {signLanguageControl && (

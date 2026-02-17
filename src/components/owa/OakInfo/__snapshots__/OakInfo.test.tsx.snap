@@ -163,8 +163,16 @@ exports[`OakInfo matches snapshot 1`] = `
   background: #ffe555;
 }
 
+.c3 > :first-child:hover .icon-container div {
+  border-color: #ffe555;
+}
+
 .c3 > :first-child:active .icon-container {
   background: #ffe555;
+}
+
+.c3 > :first-child:active .icon-container div {
+  border-color: #ffe555;
 }
 
 .c4:hover .shadow {

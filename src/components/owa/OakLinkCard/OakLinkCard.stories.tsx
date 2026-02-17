@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 import React from "react";
 
-import { OakTertiaryButton } from "@/components/buttons/OakTertiaryButton";
+import { OakButton } from "@/components/buttons/OakButton";
 import { OakLinkCard } from "@/components/owa/OakLinkCard";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakHeading } from "@/components/typography/OakHeading";
@@ -66,9 +66,9 @@ const meta: Meta<typeof OakLinkCard> = {
           A series of lessons offering practical knowledge and skills, developed
           independently of the national curriculum.
         </OakP>
-        <OakTertiaryButton iconName="chevron-right" isTrailingIcon>
+        <OakButton variant="tertiary" iconName="chevron-right" isTrailingIcon>
           Go to new finance lessons
-        </OakTertiaryButton>
+        </OakButton>
       </OakFlex>
     ),
     iconName: "subject-financial-education",
@@ -112,9 +112,9 @@ export const WithLongText: Story = {
           financial literacy program. Learn how to budget, save, and invest your
           money. Get started today!
         </OakP>
-        <OakTertiaryButton iconName="chevron-right" isTrailingIcon>
+        <OakButton variant="tertiary" iconName="chevron-right" isTrailingIcon>
           Start learning
-        </OakTertiaryButton>
+        </OakButton>
       </OakFlex>
     ),
     iconName: "books",
@@ -136,9 +136,9 @@ export const WithAnimation: Story = {
           bg-primary. It eases in an out for a delightful user experience.
           Discover more subtle ways to call attention to components.
         </OakP>
-        <OakTertiaryButton iconName="chevron-right" isTrailingIcon>
+        <OakButton variant="tertiary" iconName="chevron-right" isTrailingIcon>
           Find out more
-        </OakTertiaryButton>
+        </OakButton>
       </OakFlex>
     ),
     iconName: "question-mark",

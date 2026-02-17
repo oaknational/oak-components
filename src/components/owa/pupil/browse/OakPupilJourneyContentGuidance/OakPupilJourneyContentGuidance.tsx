@@ -4,8 +4,7 @@ import {
   OakModalCenter,
   OakModalCenterBody,
 } from "@/components/messaging-and-feedback/OakModalCenter";
-import { OakPrimaryButton } from "@/components/buttons/OakPrimaryButton";
-import { OakPrimaryInvertedButton } from "@/components/buttons/OakPrimaryInvertedButton";
+import { OakButton } from "@/components/buttons/OakButton";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakHeading } from "@/components/typography/OakHeading";
 import { OakIconName } from "@/components/images-and-icons/OakIcon";
@@ -104,21 +103,24 @@ export const OakPupilJourneyContentGuidance = ({
           $pv="spacing-24"
           $rowGap="spacing-24"
         >
-          <OakPrimaryButton
+          <OakButton
+            variant="primary"
             $font="heading-7"
             onClick={onAccept}
             data-testid="acceptButton"
           >
             {acceptText}
-          </OakPrimaryButton>
-          <OakPrimaryInvertedButton
+          </OakButton>
+          <OakButton
+            variant="primary"
+            colorScheme="inverted"
             $font="heading-7"
             iconName={declineIcon}
             onClick={onDecline}
             data-testid="declineButton"
           >
             {declineText}
-          </OakPrimaryInvertedButton>
+          </OakButton>
         </OakFlex>
       }
       hideCloseButton

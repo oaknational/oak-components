@@ -286,8 +286,16 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   background: #222222;
 }
 
+.c10 > :first-child:hover .icon-container div {
+  border-color: #222222;
+}
+
 .c10 > :first-child:active .icon-container {
   background: transparent;
+}
+
+.c10 > :first-child:active .icon-container div {
+  border-color: transparent;
 }
 
 .c21 {
@@ -758,8 +766,16 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   background: #222222;
 }
 
+.c11 > :first-child:hover .icon-container div {
+  border-color: #222222;
+}
+
 .c11 > :first-child:active .icon-container {
   background: transparent;
+}
+
+.c11 > :first-child:active .icon-container div {
+  border-color: transparent;
 }
 
 .c22 {
@@ -1218,8 +1234,16 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   background: #222222;
 }
 
+.c10 > :first-child:hover .icon-container div {
+  border-color: #222222;
+}
+
 .c10 > :first-child:active .icon-container {
   background: transparent;
+}
+
+.c10 > :first-child:active .icon-container div {
+  border-color: transparent;
 }
 
 .c22 {

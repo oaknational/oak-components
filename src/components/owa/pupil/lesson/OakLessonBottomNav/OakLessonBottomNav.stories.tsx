@@ -4,7 +4,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { OakLessonBottomNav } from "./OakLessonBottomNav";
 
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
-import { OakPrimaryButton } from "@/components/buttons/OakPrimaryButton";
+import { OakButton } from "@/components/buttons/OakButton";
 import { OakCodeRenderer } from "@/components/owa/OakCodeRenderer";
 
 const meta: Meta<typeof OakLessonBottomNav> = {
@@ -49,13 +49,14 @@ export const Default: Story = {
 export const WithButton: Story = {
   render: (args) => (
     <OakLessonBottomNav {...args}>
-      <OakPrimaryButton
+      <OakButton
+        variant="primary"
         iconName="arrow-right"
         isTrailingIcon
         width={["100%", "auto"]}
       >
         Next question
-      </OakPrimaryButton>
+      </OakButton>
     </OakLessonBottomNav>
   ),
 };
@@ -63,13 +64,14 @@ export const WithButton: Story = {
 export const WithHintAndButton: Story = {
   render: (args) => (
     <OakLessonBottomNav {...args}>
-      <OakPrimaryButton
+      <OakButton
+        variant="primary"
         iconName="arrow-right"
         isTrailingIcon
         width={["100%", "auto"]}
       >
         Continue
-      </OakPrimaryButton>
+      </OakButton>
     </OakLessonBottomNav>
   ),
   args: {
@@ -81,31 +83,34 @@ export const WithFeedbackAndButton: Story = {
   render: (args) => (
     <>
       <OakLessonBottomNav {...args} feedback="correct">
-        <OakPrimaryButton
+        <OakButton
+          variant="primary"
           iconName="arrow-right"
           isTrailingIcon
           width={["100%", "max-content"]}
         >
           Next question
-        </OakPrimaryButton>
+        </OakButton>
       </OakLessonBottomNav>
       <OakLessonBottomNav {...args} feedback="incorrect">
-        <OakPrimaryButton
+        <OakButton
+          variant="primary"
           iconName="arrow-right"
           isTrailingIcon
           width={["100%", "max-content"]}
         >
           Next question
-        </OakPrimaryButton>
+        </OakButton>
       </OakLessonBottomNav>
       <OakLessonBottomNav {...args} feedback="partially-correct">
-        <OakPrimaryButton
+        <OakButton
+          variant="primary"
           iconName="arrow-right"
           isTrailingIcon
           width={["100%", "max-content"]}
         >
           Next question
-        </OakPrimaryButton>
+        </OakButton>
       </OakLessonBottomNav>
     </>
   ),
@@ -117,13 +122,14 @@ export const WithFeedbackAndButton: Story = {
 export const WithLongFeedbackAndButton: Story = {
   render: (args) => (
     <OakLessonBottomNav {...args}>
-      <OakPrimaryButton
+      <OakButton
+        variant="primary"
         iconName="arrow-right"
         isTrailingIcon
         width={["100%", "max-content"]}
       >
         Next question
-      </OakPrimaryButton>
+      </OakButton>
     </OakLessonBottomNav>
   ),
   args: {
@@ -136,13 +142,14 @@ export const WithLongFeedbackAndButton: Story = {
 export const WithNoAnswerFeedbackAndButton: Story = {
   render: (args) => (
     <OakLessonBottomNav {...args}>
-      <OakPrimaryButton
+      <OakButton
+        variant="primary"
         iconName="arrow-right"
         isTrailingIcon
         width={["100%", "max-content"]}
       >
         Next question
-      </OakPrimaryButton>
+      </OakButton>
     </OakLessonBottomNav>
   ),
   args: {
@@ -153,13 +160,14 @@ export const WithNoAnswerFeedbackAndButton: Story = {
 export const FeedbackWithCode: Story = {
   render: (args) => (
     <OakLessonBottomNav {...args}>
-      <OakPrimaryButton
+      <OakButton
+        variant="primary"
         iconName="arrow-right"
         isTrailingIcon
         width={["100%", "max-content"]}
       >
         Next question
-      </OakPrimaryButton>
+      </OakButton>
     </OakLessonBottomNav>
   ),
   args: {

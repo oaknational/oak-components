@@ -4,7 +4,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { OakLessonVideoTranscript } from "./OakLessonVideoTranscript";
 
 import { OakP } from "@/components/typography/OakP";
-import { OakTertiaryButton } from "@/components/buttons/OakTertiaryButton";
+import { OakButton } from "@/components/buttons/OakButton";
 
 const meta: Meta<typeof OakLessonVideoTranscript> = {
   component: OakLessonVideoTranscript,
@@ -133,9 +133,9 @@ export const WithSignLanguageControl: Story = {
   render: (args) => <OakLessonVideoTranscript {...args} />,
   args: {
     signLanguageControl: (
-      <OakTertiaryButton iconName="sign-language" isTrailingIcon>
+      <OakButton variant="tertiary" iconName="sign-language" isTrailingIcon>
         Show sign language
-      </OakTertiaryButton>
+      </OakButton>
     ),
   },
 };
@@ -145,9 +145,9 @@ export const WithNoTranscript: Story = {
   args: {
     children: null,
     signLanguageControl: (
-      <OakTertiaryButton iconName="sign-language" isTrailingIcon>
+      <OakButton variant="tertiary" iconName="sign-language" isTrailingIcon>
         Show sign language
-      </OakTertiaryButton>
+      </OakButton>
     ),
   },
 };

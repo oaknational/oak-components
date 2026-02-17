@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { OakSmallSecondaryButton } from "@/components/buttons/OakSmallSecondaryButton";
+import { OakButton } from "@/components/buttons/OakButton";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
 
 type OakCopyLinkButtonProps = {
@@ -45,7 +45,9 @@ export const OakCopyLinkButton = ({ href }: OakCopyLinkButtonProps) => {
   return (
     <>
       <OakBox $display={["none", "block"]}>
-        <OakSmallSecondaryButton
+        <OakButton
+          variant="secondary"
+          size="sm"
           iconName={active ? "copy" : "tick"}
           iconAriaHidden={true}
           isTrailingIcon
@@ -53,12 +55,12 @@ export const OakCopyLinkButton = ({ href }: OakCopyLinkButtonProps) => {
           data-testid={"copy-link-desktop-button"}
         >
           {label}
-        </OakSmallSecondaryButton>
+        </OakButton>
       </OakBox>
       <OakBox $display={["block", "none"]}>
-        <OakSmallSecondaryButton onClick={copyLink}>
+        <OakButton variant="secondary" size="sm" onClick={copyLink}>
           {label}
-        </OakSmallSecondaryButton>
+        </OakButton>
       </OakBox>
       {/* Live region for aria-live announcements */}
       {announce && (

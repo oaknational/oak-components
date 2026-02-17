@@ -64,6 +64,8 @@ exports[`OakUnitsContainer matches snapshot 1`] = `
   top: 0rem;
   width: 100%;
   height: 100%;
+  border: 0.125rem solid;
+  border-color: #222222;
   border-radius: 6.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -168,7 +170,7 @@ exports[`OakUnitsContainer matches snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  gap: 0.75rem;
+  gap: 0.5rem;
 }
 
 .c7 {
@@ -284,15 +286,23 @@ exports[`OakUnitsContainer matches snapshot 1`] = `
 }
 
 .c18 > :first-child:disabled .icon-container {
-  background: #808080;
+  background: #22222240;
 }
 
 .c18 > :first-child:hover .icon-container {
   background: #575757;
 }
 
+.c18 > :first-child:hover .icon-container div {
+  border-color: #575757;
+}
+
 .c18 > :first-child:active .icon-container {
   background: #222222;
+}
+
+.c18 > :first-child:active .icon-container div {
+  border-color: #222222;
 }
 
 .c4 {
@@ -462,7 +472,10 @@ exports[`OakUnitsContainer matches snapshot 1`] = `
       >
         <a
           class="c19 c20"
+          font="heading-7"
           href="https://www.thenational.academy"
+          ph="spacing-16"
+          pv="spacing-12"
         >
           <div
             class="c2 c21"

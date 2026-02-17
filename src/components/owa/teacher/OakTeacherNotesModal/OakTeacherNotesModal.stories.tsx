@@ -7,7 +7,7 @@ import StarterKit from "@tiptap/starter-kit";
 
 import { OakTeacherNotesModal } from "./OakTeacherNotesModal";
 
-import { OakSecondaryButton } from "@/components/buttons/OakSecondaryButton";
+import { OakButton } from "@/components/buttons/OakButton";
 import { OakIcon } from "@/components/images-and-icons/OakIcon";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakSpan } from "@/components/typography/OakSpan";
@@ -124,7 +124,9 @@ export const Default: Story = {
 
     return (
       <>
-        <OakSecondaryButton onClick={onOpen}>Open modal</OakSecondaryButton>
+        <OakButton variant="secondary" onClick={onOpen}>
+          Open modal
+        </OakButton>
         <OakTeacherNotesModal
           {...args}
           onClose={onClose}
@@ -169,7 +171,9 @@ export const WithTipTap: Story = {
 
     return (
       <>
-        <OakSecondaryButton onClick={onOpen}>Open modal</OakSecondaryButton>
+        <OakButton variant="secondary" onClick={onOpen}>
+          Open modal
+        </OakButton>
         <OakTeacherNotesModal
           {...args}
           onClose={onClose}

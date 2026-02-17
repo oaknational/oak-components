@@ -1,8 +1,7 @@
 import React, { useContext } from "react";
 
-import { OakSecondaryButton } from "@/components/buttons/OakSecondaryButton";
 import { RadioContext } from "@/components/form-elements/OakButtonAsRadioGroup/OakButtonAsRadioGroup";
-import { OakPrimaryButton } from "@/components/buttons/OakPrimaryButton";
+import { OakButton } from "@/components/buttons/OakButton";
 
 export type OakSecondaryButtonAsRadioProps = {
   children?: React.ReactNode;
@@ -30,16 +29,17 @@ export const OakSecondaryButtonAsRadio = ({
   const checked = currentValue === value;
 
   return checked ? (
-    <OakPrimaryButton role="radio" aria-checked={checked}>
+    <OakButton variant="primary" role="radio" aria-checked={checked}>
       {children}
-    </OakPrimaryButton>
+    </OakButton>
   ) : (
-    <OakSecondaryButton
+    <OakButton
+      variant="secondary"
       role="radio"
       aria-checked={checked}
       onClick={() => onValueUpdated?.(value)}
     >
       {children}
-    </OakSecondaryButton>
+    </OakButton>
   );
 };

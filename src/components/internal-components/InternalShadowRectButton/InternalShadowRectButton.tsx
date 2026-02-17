@@ -17,21 +17,13 @@ import {
   positionStyle,
 } from "@/styles/utils/positionStyle";
 import { parseColor } from "@/styles/helpers/parseColor";
-import {
-  OakAllSpacingToken,
-  OakUiRoleToken,
-  OakDropShadowToken,
-} from "@/styles";
+import { OakUiRoleToken, OakDropShadowToken } from "@/styles";
 import { SizeStyleProps, sizeStyle } from "@/styles/utils/sizeStyle";
 import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
 import { SpacingStyleProps } from "@/styles/utils/spacingStyle";
 import { FlexStyleProps } from "@/styles/utils/flexStyle";
 import { TypographyStyleProps } from "@/styles/utils/typographyStyle";
-
-type OakLoadingSpinnerTokenSubset = Extract<
-  OakAllSpacingToken,
-  "spacing-20" | "spacing-24"
->;
+import { OakLoadingSpinnerTokenSubset } from "@/styles/theme/spacing";
 
 export type InternalShadowRectButtonProps = Omit<
   InternalButtonProps,
@@ -72,6 +64,7 @@ export type InternalShadowRectButtonProps = Omit<
    */
   selected?: boolean;
   iconGap?: FlexStyleProps["$gap"];
+  iconSize?: SizeStyleProps["$width"];
   defaultTextColor: OakUiRoleToken;
   defaultBackground: OakUiRoleToken;
   defaultBorderColor: OakUiRoleToken;
@@ -175,7 +168,7 @@ export const StyledButtonWrapper = styled(OakBox)<
 /**
  *
  * A styled rectangular button, not intended to be used directly. 
- * Instead used by OakPrimaryButton and OakSecondaryButton.
+ * Used by OakButton
  * 
  * The following callbacks are available for tracking focus events:
  *
@@ -220,6 +213,7 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
     pl,
     pr,
     iconLayout = "row",
+    iconSize = "spacing-24",
     iconGap = "spacing-8",
     iconOverride,
     font = "heading-7",
@@ -234,8 +228,8 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
       {iconName && (
         <OakIcon
           iconName={iconName}
-          $width={"spacing-24"}
-          $height={"spacing-24"}
+          $width={iconSize}
+          $height={iconSize}
           $colorFilter={props.disabled ? disabledTextColor : defaultTextColor}
           aria-hidden={iconAriaHidden}
         />

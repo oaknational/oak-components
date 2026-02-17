@@ -206,6 +206,7 @@ export type UiRoleMap = Record<
 const oakColorSchemeTokens = [
   "primary",
   "inverted",
+  "transparent",
   "decorative1",
   "decorative2",
   "decorative3",

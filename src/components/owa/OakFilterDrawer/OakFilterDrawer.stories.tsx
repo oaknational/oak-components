@@ -5,13 +5,12 @@ import styled from "styled-components";
 
 import { OakFilterDrawer } from "./OakFilterDrawer";
 
-import { OakSecondaryButton } from "@/components/buttons/OakSecondaryButton";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakHeading } from "@/components/typography/OakHeading";
 import { OakSearchFilterCheckBox } from "@/components/form-elements";
 import { OakRadioGroup } from "@/components/form-elements/OakRadioGroup";
-import { OakPrimaryButton } from "@/components/buttons/OakPrimaryButton";
+import { OakButton } from "@/components/buttons/OakButton";
 import { OakRadioButton } from "@/components/form-elements/OakRadioButton";
 
 const StyledFieldset = styled.fieldset`
@@ -40,16 +39,16 @@ const meta: Meta<typeof OakFilterDrawer> = {
 
     return (
       <>
-        <OakSecondaryButton onClick={onOpen}>
+        <OakButton variant="secondary" onClick={onOpen}>
           Open filter drawer
-        </OakSecondaryButton>
+        </OakButton>
         <OakFilterDrawer
           {...args}
           onClose={onClose}
           footerSlot={
-            <OakPrimaryButton onClick={onClose}>
+            <OakButton variant="primary" onClick={onClose}>
               Show results (23)
-            </OakPrimaryButton>
+            </OakButton>
           }
         >
           <>

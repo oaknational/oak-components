@@ -193,8 +193,16 @@ exports[`InternalReviewAccordion matches snapshot 1`] = `
   background: #222222;
 }
 
+.c4 > :first-child:hover .icon-container div {
+  border-color: #222222;
+}
+
 .c4 > :first-child:active .icon-container {
   background: #222222;
+}
+
+.c4 > :first-child:active .icon-container div {
+  border-color: #222222;
 }
 
 .c16 {

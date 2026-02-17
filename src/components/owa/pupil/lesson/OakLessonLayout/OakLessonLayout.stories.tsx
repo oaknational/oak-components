@@ -7,7 +7,7 @@ import {
   lessonSectionNames,
 } from "./OakLessonLayout";
 
-import { OakPrimaryButton } from "@/components/buttons/OakPrimaryButton";
+import { OakButton } from "@/components/buttons/OakButton";
 import { OakBackLink } from "@/components/owa/OakBackLink";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakLessonTopNav } from "@/components/owa/pupil/lesson/OakLessonTopNav";
@@ -91,7 +91,9 @@ export const Default: Story = {
       }
       bottomNavSlot={
         <OakLessonBottomNav>
-          <OakPrimaryButton width={["100%", "auto"]}>Button</OakPrimaryButton>
+          <OakButton variant="primary" width={["100%", "auto"]}>
+            Button
+          </OakButton>
         </OakLessonBottomNav>
       }
     >

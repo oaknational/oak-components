@@ -1,12 +1,8 @@
 import React, { ElementType } from "react";
 
 import { OakIconName } from "@/components/images-and-icons";
-import { OakSmallSecondaryButton } from "@/components/buttons/OakSmallSecondaryButton";
 import { OakButtonWithDropdown } from "@/components/buttons/OakButtonWithDropdown";
-import {
-  OakSmallPrimaryInvertedButton,
-  OakSmallPrimaryInvertedButtonProps,
-} from "@/components/buttons/OakSmallPrimaryInvertedButton";
+import { OakButton, OakButtonProps } from "@/components/buttons/OakButton";
 import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
 
 export type OakSmallSecondaryButtonWithDropdownProps = {
@@ -22,6 +18,10 @@ export type OakSmallSecondaryButtonWithDropdownProps = {
   "data-testid"?: string;
 };
 
+const OakButtonSm = (props: Omit<OakButtonProps, "size">) => (
+  <OakButton {...props} size="sm" />
+);
+
 /**
  * A secondary button that allows children to be passed in as a dropdown menu.
  *
@@ -32,7 +32,7 @@ export const OakSmallSecondaryButtonWithDropdown = (
   return (
     <OakButtonWithDropdown
       {...props}
-      buttonComponent={OakSmallSecondaryButton}
+      buttonComponent={OakButtonSm}
       dropdownTopSpacing="spacing-40"
       flexWidth={["100%"]}
     />
@@ -49,14 +49,16 @@ OakSmallSecondaryButtonWithDropdown.Item = <C extends ElementType = "button">({
   ...rest
 }: {
   children: React.ReactNode;
-} & OakSmallPrimaryInvertedButtonProps &
+} & OakButtonProps &
   PolymorphicPropsWithoutRef<C>): React.ReactElement => (
-  <OakSmallPrimaryInvertedButton
+  <OakButton
+    colorScheme="inverted"
+    size="sm"
     element="a"
     role="menuitem"
     isTrailingIcon
     {...rest}
   >
     {children}
-  </OakSmallPrimaryInvertedButton>
+  </OakButton>
 );

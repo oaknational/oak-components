@@ -3,8 +3,7 @@ import React from "react";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakSpan } from "@/components/typography";
-import { OakPrimaryButton } from "@/components/buttons/OakPrimaryButton";
-import { OakSecondaryButton } from "@/components/buttons/OakSecondaryButton";
+import { OakButton } from "@/components/buttons/OakButton";
 import { OakSecondaryLink } from "@/components/navigation/OakSecondaryLink";
 import { OakAllSpacingToken } from "@/styles";
 import { ResponsiveValues } from "@/styles/utils/responsiveStyle";
@@ -124,9 +123,9 @@ export const OakCookieBanner = ({
                       at any time.
                     </OakBox>
                     <OakFlex $justifyContent="flex-end" $flexGrow={1}>
-                      <OakSecondaryButton onClick={onHide}>
+                      <OakButton variant="secondary" onClick={onHide}>
                         Hide this message
-                      </OakSecondaryButton>
+                      </OakButton>
                     </OakFlex>
                   </>
                 );
@@ -166,15 +165,16 @@ export const OakCookieBanner = ({
                           Reject non-essential cookies
                         </OakSecondaryLink>
                       </OakFlex>
-                      <OakSecondaryButton onClick={onOpenSettings}>
+                      <OakButton variant="secondary" onClick={onOpenSettings}>
                         Cookie settings
-                      </OakSecondaryButton>
-                      <OakPrimaryButton
+                      </OakButton>
+                      <OakButton
+                        variant="primary"
                         onClick={onAccept}
                         data-testid="cookie-banner-accept"
                       >
                         Accept all cookies
-                      </OakPrimaryButton>
+                      </OakButton>
                     </OakFlex>
                   </>
                 );

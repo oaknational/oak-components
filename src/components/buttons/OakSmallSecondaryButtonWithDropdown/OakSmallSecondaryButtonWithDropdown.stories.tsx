@@ -6,7 +6,7 @@ import { OakSmallSecondaryButtonWithDropdown } from "./OakSmallSecondaryButtonWi
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakSpan } from "@/components/typography/OakSpan";
 import { OakIcon } from "@/components/images-and-icons/OakIcon";
-import { OakSmallPrimaryInvertedButton } from "@/components/buttons/OakSmallPrimaryInvertedButton";
+import { OakButton } from "@/components/buttons/OakButton";
 
 // Generic Dropdown Navigation Button Stories
 const dropdownNavMeta: Meta<typeof OakSmallSecondaryButtonWithDropdown> = {
@@ -50,21 +50,39 @@ export const ButtonWithDropDown: DropdownNavStory = {
     <OakFlex $height={"spacing-240"}>
       <OakFlex $gap="spacing-24">
         <OakSmallSecondaryButtonWithDropdown {...args}>
-          <OakSmallSecondaryButtonWithDropdown.Item aria-label="Button 1">
+          <OakSmallSecondaryButtonWithDropdown.Item
+            aria-label="Button 1"
+            variant="primary"
+            colorScheme="inverted"
+            size="sm"
+          >
             Button 1
           </OakSmallSecondaryButtonWithDropdown.Item>
 
-          <OakSmallSecondaryButtonWithDropdown.Item aria-label="Longer button 2">
+          <OakSmallSecondaryButtonWithDropdown.Item
+            aria-label="Longer button 2"
+            variant="primary"
+            colorScheme="inverted"
+            size="sm"
+          >
             Longer button 2
           </OakSmallSecondaryButtonWithDropdown.Item>
 
-          <OakSmallSecondaryButtonWithDropdown.Item aria-label="Button 3">
+          <OakSmallSecondaryButtonWithDropdown.Item
+            aria-label="Button 3"
+            variant="primary"
+            colorScheme="inverted"
+            size="sm"
+          >
             Button 3
           </OakSmallSecondaryButtonWithDropdown.Item>
 
           <OakSmallSecondaryButtonWithDropdown.Divider />
 
           <OakSmallSecondaryButtonWithDropdown.Item
+            variant="primary"
+            colorScheme="inverted"
+            size="sm"
             element="a"
             href="#"
             aria-label="Button 4"
@@ -79,7 +97,12 @@ export const ButtonWithDropDown: DropdownNavStory = {
           primaryActionText="Disabled"
           disabled
         >
-          <OakSmallSecondaryButtonWithDropdown.Item aria-label="Button 1">
+          <OakSmallSecondaryButtonWithDropdown.Item
+            aria-label="Button 1"
+            variant="primary"
+            colorScheme="inverted"
+            size="sm"
+          >
             Button 1
           </OakSmallSecondaryButtonWithDropdown.Item>
         </OakSmallSecondaryButtonWithDropdown>
@@ -89,7 +112,12 @@ export const ButtonWithDropDown: DropdownNavStory = {
           primaryActionText="Loading"
           isLoading
         >
-          <OakSmallSecondaryButtonWithDropdown.Item aria-label="Button 1">
+          <OakSmallSecondaryButtonWithDropdown.Item
+            aria-label="Button 1"
+            variant="primary"
+            colorScheme="inverted"
+            size="sm"
+          >
             Button 1
           </OakSmallSecondaryButtonWithDropdown.Item>
         </OakSmallSecondaryButtonWithDropdown>
@@ -103,24 +131,36 @@ export const leadingButtonIcon: DropdownNavStory = {
     <OakFlex $height={"spacing-240"}>
       <OakSmallSecondaryButtonWithDropdown {...args}>
         <OakSmallSecondaryButtonWithDropdown.Item
+          variant="primary"
+          colorScheme="inverted"
+          size="sm"
           iconName="external"
           aria-label="Glossary"
         >
           Glossary
         </OakSmallSecondaryButtonWithDropdown.Item>
         <OakSmallSecondaryButtonWithDropdown.Item
+          variant="primary"
+          colorScheme="inverted"
+          size="sm"
           iconName="external"
           aria-label="Comprehension task"
         >
           Comprehension task
         </OakSmallSecondaryButtonWithDropdown.Item>
         <OakSmallSecondaryButtonWithDropdown.Item
+          variant="primary"
+          colorScheme="inverted"
+          size="sm"
           iconName="external"
           aria-label="More starter quiz questions"
         >
           More starter quiz questions
         </OakSmallSecondaryButtonWithDropdown.Item>
         <OakSmallSecondaryButtonWithDropdown.Item
+          variant="primary"
+          colorScheme="inverted"
+          size="sm"
           iconName="external"
           aria-label="More exit quiz questions"
         >
@@ -129,7 +169,10 @@ export const leadingButtonIcon: DropdownNavStory = {
 
         <OakSmallSecondaryButtonWithDropdown.Divider />
 
-        <OakSmallPrimaryInvertedButton
+        <OakButton
+          variant="primary"
+          colorScheme="inverted"
+          size="sm"
           element="a"
           href="https://www.oaknationalacademy.com/ai"
           target="_blank"
@@ -142,7 +185,7 @@ export const leadingButtonIcon: DropdownNavStory = {
               <OakIcon iconHeight="spacing-24" iconName="external" />
             </OakFlex>
           </OakFlex>
-        </OakSmallPrimaryInvertedButton>
+        </OakButton>
       </OakSmallSecondaryButtonWithDropdown>
     </OakFlex>
   ),

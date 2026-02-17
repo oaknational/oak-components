@@ -1,11 +1,7 @@
 import React, { ElementType } from "react";
 
-import {
-  OakPrimaryInvertedButton,
-  OakPrimaryInvertedButtonProps,
-} from "@/components/buttons/OakPrimaryInvertedButton";
+import { OakButton, OakButtonProps } from "@/components/buttons/OakButton";
 import { OakIconName } from "@/components/images-and-icons/OakIcon";
-import { OakSecondaryButton } from "@/components/buttons/OakSecondaryButton";
 import { OakButtonWithDropdown } from "@/components/buttons/OakButtonWithDropdown";
 import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
 
@@ -32,7 +28,7 @@ export const OakSecondaryButtonWithDropdown = (
   return (
     <OakButtonWithDropdown
       {...props}
-      buttonComponent={OakSecondaryButton}
+      buttonComponent={OakButton}
       dropdownTopSpacing="spacing-56"
     />
   );
@@ -48,14 +44,9 @@ OakSecondaryButtonWithDropdown.Item = <C extends ElementType = "button">({
   ...rest
 }: {
   children: React.ReactNode;
-} & OakPrimaryInvertedButtonProps &
+} & OakButtonProps &
   PolymorphicPropsWithoutRef<C>): React.ReactElement => (
-  <OakPrimaryInvertedButton
-    element="a"
-    role="menuitem"
-    isTrailingIcon
-    {...rest}
-  >
+  <OakButton element="a" role="menuitem" isTrailingIcon {...rest}>
     {children}
-  </OakPrimaryInvertedButton>
+  </OakButton>
 );

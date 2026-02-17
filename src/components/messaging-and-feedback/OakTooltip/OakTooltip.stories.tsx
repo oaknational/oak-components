@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/react";
 
 import { OakTooltip } from "./OakTooltip";
 
-import { OakTertiaryButton } from "@/components/buttons/OakTertiaryButton";
+import { OakButton } from "@/components/buttons/OakButton";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
 
 const meta: Meta<typeof OakTooltip> = {
@@ -33,7 +33,7 @@ const meta: Meta<typeof OakTooltip> = {
     isOpen: true,
     tooltip: "Hello there",
     tooltipPosition: "bottom-left",
-    children: <OakTertiaryButton>Target</OakTertiaryButton>,
+    children: <OakButton variant="tertiary">Target</OakButton>,
   },
 };
 export default meta;

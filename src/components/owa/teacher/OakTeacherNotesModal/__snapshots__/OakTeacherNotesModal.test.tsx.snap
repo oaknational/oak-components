@@ -150,10 +150,10 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
 
 .c51 {
   position: relative;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  height: 1.5rem;
-  min-height: 1.5rem;
+  width: 1.25rem;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  min-height: 1.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -569,8 +569,16 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   background: #222222;
 }
 
+.c13 > :first-child:hover .icon-container div {
+  border-color: #222222;
+}
+
 .c13 > :first-child:active .icon-container {
   background: transparent;
+}
+
+.c13 > :first-child:active .icon-container div {
+  border-color: transparent;
 }
 
 .c26 {
@@ -687,8 +695,8 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
 }
 
 .c50:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
   color: #ffffff;
   background: #575757;
   border-color: #575757;

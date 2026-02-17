@@ -6,8 +6,7 @@ import { OakInformativeModal } from "./OakInformativeModal";
 import { OakInformativeModalFooter } from "./OakInformativeModalFooter";
 import { OakInformativeModalBody } from "./OakInformativeModalBody";
 
-import { OakSecondaryButton } from "@/components/buttons/OakSecondaryButton";
-import { OakPrimaryButton } from "@/components/buttons/OakPrimaryButton";
+import { OakButton } from "@/components/buttons/OakButton";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakP } from "@/components/typography/OakP";
 
@@ -64,7 +63,9 @@ const meta: Meta<typeof OakInformativeModal> = {
 
     return (
       <>
-        <OakSecondaryButton onClick={onOpen}>Open modal</OakSecondaryButton>
+        <OakButton variant="secondary" onClick={onOpen}>
+          Open modal
+        </OakButton>
         <OakInformativeModal {...args} onClose={onClose} />
       </>
     );
@@ -122,8 +123,12 @@ export const WithFooter: Story = {
     "aria-description": "A modal with footer",
     footerSlot: (
       <OakInformativeModalFooter>
-        <OakSecondaryButton width="100%">Secondary action</OakSecondaryButton>
-        <OakPrimaryButton width="100%">Primary action</OakPrimaryButton>
+        <OakButton variant="secondary" width="100%">
+          Secondary action
+        </OakButton>
+        <OakButton variant="primary" width="100%">
+          Primary action
+        </OakButton>
       </OakInformativeModalFooter>
     ),
   },

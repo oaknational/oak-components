@@ -3,8 +3,7 @@ import React from "react";
 
 import { OakInformativeModalFooter } from "./OakInformativeModalFooter";
 
-import { OakSecondaryButton } from "@/components/buttons/OakSecondaryButton";
-import { OakPrimaryButton } from "@/components/buttons/OakPrimaryButton";
+import { OakButton } from "@/components/buttons/OakButton";
 
 const meta: Meta<typeof OakInformativeModalFooter> = {
   component: OakInformativeModalFooter,
@@ -18,8 +17,12 @@ const meta: Meta<typeof OakInformativeModalFooter> = {
   args: {
     children: (
       <>
-        <OakSecondaryButton width="100%">Secondary action</OakSecondaryButton>
-        <OakPrimaryButton width="100%">Primary action</OakPrimaryButton>
+        <OakButton variant="secondary" width="100%">
+          Secondary action
+        </OakButton>
+        <OakButton variant="primary" width="100%">
+          Primary action
+        </OakButton>
       </>
     ),
   },

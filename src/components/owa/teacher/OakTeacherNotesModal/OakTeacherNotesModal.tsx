@@ -3,7 +3,7 @@ import React from "react";
 import { OakInlineBanner } from "@/components/messaging-and-feedback/OakInlineBanner";
 import { OakLink } from "@/components/navigation/OakLink";
 import { OakModalCenter } from "@/components/messaging-and-feedback/OakModalCenter";
-import { OakSmallPrimaryButton } from "@/components/buttons/OakSmallPrimaryButton";
+import { OakButton } from "@/components/buttons/OakButton";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakGrid } from "@/components/layout-and-structure/OakGrid";
 import { OakGridArea } from "@/components/layout-and-structure/OakGridArea";
@@ -171,14 +171,16 @@ export const OakTeacherNotesModal = ({
                   {footer}
                 </OakFlex>
               )}
-              <OakSmallPrimaryButton
+              <OakButton
+                variant="primary"
+                size="sm"
                 onClick={onShareClicked}
                 iconName="copy"
                 isTrailingIcon
                 disabled={shareLinkDisabled}
               >
                 Share link
-              </OakSmallPrimaryButton>
+              </OakButton>
             </OakFlex>
           </OakGridArea>
         </OakGrid>

@@ -10,7 +10,7 @@ import {
   OakCookieConsentProviderProps,
   useCookieConsent,
 } from "@/components/cookies/OakCookieConsentProvider/OakCookieConsentProvider";
-import { OakSecondaryButton } from "@/components/buttons/OakSecondaryButton";
+import { OakButton } from "@/components/buttons/OakButton";
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 
 const meta: Meta<
@@ -102,9 +102,9 @@ function ConsentBannerButton() {
   const { showBanner } = useCookieConsent();
 
   return (
-    <OakSecondaryButton onClick={showBanner}>
+    <OakButton variant="secondary" onClick={showBanner}>
       Start consent flow
-    </OakSecondaryButton>
+    </OakButton>
   );
 }
 

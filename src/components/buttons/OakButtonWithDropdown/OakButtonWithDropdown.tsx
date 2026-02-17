@@ -1,9 +1,6 @@
 import React, { useState, useRef, useEffect, ElementType } from "react";
 
-import {
-  OakSecondaryButton,
-  OakSecondaryButtonProps,
-} from "@/components/buttons/OakSecondaryButton";
+import { OakButton, OakButtonProps } from "@/components/buttons/OakButton";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakIconName } from "@/components/images-and-icons/OakIcon";
@@ -18,8 +15,7 @@ import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
 type ButtonComponent = <C extends React.ElementType = "button">({
   element,
   ...rest
-}: OakSecondaryButtonProps &
-  PolymorphicPropsWithoutRef<C>) => React.JSX.Element;
+}: OakButtonProps & PolymorphicPropsWithoutRef<C>) => React.JSX.Element;
 
 export type OakButtonWithDropdownProps = {
   primaryActionText: string;
@@ -146,6 +142,7 @@ export const OakButtonWithDropdown = ({
       <OakFlex $flexDirection="column" $gap="spacing-12">
         <OakFlex $width={flexWidth} $gap="spacing-12">
           <ButtonComponent
+            variant="secondary"
             iconName={primaryActionIcon}
             isTrailingIcon
             onClick={handlePrimaryAction}
@@ -206,9 +203,9 @@ OakButtonWithDropdown.Item = <C extends ElementType = "button">({
   ...rest
 }: {
   children: React.ReactNode;
-} & OakSecondaryButtonProps &
+} & OakButtonProps &
   PolymorphicPropsWithoutRef<C>): React.ReactElement => (
-  <OakSecondaryButton element="a" role="menuitem" isTrailingIcon {...rest}>
+  <OakButton element="a" role="menuitem" isTrailingIcon {...rest}>
     {children}
-  </OakSecondaryButton>
+  </OakButton>
 );

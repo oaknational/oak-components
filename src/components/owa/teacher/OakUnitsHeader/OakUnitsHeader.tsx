@@ -5,7 +5,7 @@ import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakHeading } from "@/components/typography/OakHeading";
 import { OakTypography } from "@/components/typography/OakTypography";
 import { OakPromoTag } from "@/components/owa/OakPromoTag";
-import { OakTertiaryButton } from "@/components/buttons/OakTertiaryButton";
+import { OakButton } from "@/components/buttons/OakButton";
 import { SizeStyleProps, sizeStyle } from "@/styles/utils/sizeStyle";
 
 export type OakUnitsHeaderProps = {
@@ -26,7 +26,8 @@ const CurriculumDownloadButton = (
   props: Omit<OakUnitsHeaderProps, "subject">,
 ) => {
   return props.curriculumHref ? (
-    <OakTertiaryButton
+    <OakButton
+      variant="tertiary"
       element="a"
       iconName="chevron-right"
       href={props.curriculumHref}
@@ -36,7 +37,7 @@ const CurriculumDownloadButton = (
       {props.isLegacy
         ? "Curriculum download"
         : `Full ${props.phase.toLowerCase()} curriculum`}
-    </OakTertiaryButton>
+    </OakButton>
   ) : null;
 };
 
