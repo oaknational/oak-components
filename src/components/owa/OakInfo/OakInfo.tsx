@@ -32,8 +32,7 @@ export type OakInfoProps = {
 export const OakInfo = (props: OakInfoProps) => {
   const { hint, id, isLoading, disabled, buttonProps, ...tooltipProps } = props;
   const [isOpen, setIsOpen] = useState(false);
-  const handleClick: MouseEventHandler = (e) => {
-    e.preventDefault();
+  const handleClick: MouseEventHandler = () => {
     setIsOpen(!isOpen);
   };
 
