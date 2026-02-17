@@ -367,7 +367,9 @@ exports[`OakListItem matches snapshot 1`] = `
   <li
     class="c0"
   >
-    <label>
+    <label
+      for="Lesson 1"
+    >
       <div
         class="c1 c2"
       >
