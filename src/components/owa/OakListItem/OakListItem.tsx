@@ -142,13 +142,12 @@ export const OakListItem = (props: OakListItemProps) => {
 
   return (
     <OakLI
-      as={asRadio ? "div" : "li"}
       $listStyle={"none"}
       $width={"100%"}
       $display={"flex"}
       $flexDirection={"column"}
     >
-      <label htmlFor={radioValue}>
+      <label htmlFor={radioValue} aria-label={`Select ${title}`}>
         <OakFlex $flexGrow={1} $alignItems={"center"} $columnGap={"spacing-16"}>
           {asRadio && radioValue && (
             <InternalRadioWrapper
@@ -192,7 +191,7 @@ export const OakListItem = (props: OakListItemProps) => {
               $width="100%"
               $height="100%"
               ref={firstItemRef}
-              onClick={asRadio ? undefined : onClickLocal}
+              onClick={onClickLocal}
               aria-hidden="true"
             >
               <StyledOakIndexBox
@@ -251,8 +250,8 @@ export const OakListItem = (props: OakListItemProps) => {
             $pa="spacing-16"
             $indexHoverBgColour={indexHoverBgColour}
             $hoverBgColour={hoverBgColour}
-            onClick={asRadio ? undefined : onClickLocal}
-            // aria-hidden="true"
+            onClick={onClickLocal}
+            aria-hidden="true"
           >
             <OakFlex $flexDirection="column" $gap="spacing-16" $width="100%">
               <OakFlex $gap="spacing-16">
