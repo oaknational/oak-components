@@ -168,6 +168,7 @@ export const OakListItem = (props: OakListItemProps) => {
               }
             />
           )}
+
           {/* Desktop layout */}
           <StyledListItem
             data-testid="OakListItem-id"
@@ -182,6 +183,7 @@ export const OakListItem = (props: OakListItemProps) => {
             $display={["none", "flex"]}
             $indexHoverBgColour={indexHoverBgColour}
             $hoverBgColour={hoverBgColour}
+            aria-hidden="true"
           >
             <FlexWithFocus
               $borderRadius="border-radius-m"
@@ -190,7 +192,8 @@ export const OakListItem = (props: OakListItemProps) => {
               $width="100%"
               $height="100%"
               ref={firstItemRef}
-              onClick={onClickLocal}
+              onClick={asRadio ? undefined : onClickLocal}
+              aria-hidden="true"
             >
               <StyledOakIndexBox
                 $background={background}
@@ -201,6 +204,7 @@ export const OakListItem = (props: OakListItemProps) => {
                 $minWidth="spacing-64"
                 $alignSelf="stretch"
                 $indexHoverBgColour={indexHoverBgColour}
+                aria-hidden="true"
               >
                 <OakSpan $font={"heading-5"} $color={textColor}>
                   {index}
@@ -247,7 +251,8 @@ export const OakListItem = (props: OakListItemProps) => {
             $pa="spacing-16"
             $indexHoverBgColour={indexHoverBgColour}
             $hoverBgColour={hoverBgColour}
-            onClick={onClickLocal}
+            onClick={asRadio ? undefined : onClickLocal}
+            aria-hidden="true"
           >
             <OakFlex $flexDirection="column" $gap="spacing-16" $width="100%">
               <OakFlex $gap="spacing-16">
