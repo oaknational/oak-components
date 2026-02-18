@@ -147,7 +147,7 @@ export const OakListItem = (props: OakListItemProps) => {
       $display={"flex"}
       $flexDirection={"column"}
     >
-      <label htmlFor={radioValue} aria-label={`Select ${title}`}>
+      <label htmlFor={radioValue} aria-label={title}>
         <OakFlex $flexGrow={1} $alignItems={"center"} $columnGap={"spacing-16"}>
           {asRadio && radioValue && (
             <InternalRadioWrapper
