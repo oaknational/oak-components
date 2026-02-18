@@ -142,12 +142,13 @@ export const OakListItem = (props: OakListItemProps) => {
 
   return (
     <OakLI
+      as={asRadio ? "div" : "li"}
       $listStyle={"none"}
       $width={"100%"}
       $display={"flex"}
       $flexDirection={"column"}
     >
-      <label htmlFor={title}>
+      <label htmlFor={radioValue}>
         <OakFlex $flexGrow={1} $alignItems={"center"} $columnGap={"spacing-16"}>
           {asRadio && radioValue && (
             <InternalRadioWrapper
@@ -157,7 +158,7 @@ export const OakListItem = (props: OakListItemProps) => {
               radioBorderColor={checkedBorderColor}
               internalRadio={
                 <InternalRadio
-                  id={title}
+                  id={radioValue}
                   name={radioContext.name}
                   value={radioValue}
                   disabled={unavailable}
