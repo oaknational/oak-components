@@ -252,7 +252,7 @@ export const OakListItem = (props: OakListItemProps) => {
             $indexHoverBgColour={indexHoverBgColour}
             $hoverBgColour={hoverBgColour}
             onClick={asRadio ? undefined : onClickLocal}
-            aria-hidden="true"
+            // aria-hidden="true"
           >
             <OakFlex $flexDirection="column" $gap="spacing-16" $width="100%">
               <OakFlex $gap="spacing-16">
