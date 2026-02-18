@@ -368,19 +368,22 @@ exports[`OakListItem matches snapshot 1`] = `
     class="c0"
   >
     <label
-      for="Lesson 1"
+      aria-label="Lesson 1"
     >
       <div
         class="c1 c2"
       >
         <div
+          aria-hidden="true"
           class="c3 c4 c5"
           data-testid="OakListItem-id"
         >
           <div
+            aria-hidden="true"
             class="c6 c7 c8"
           >
             <div
+              aria-hidden="true"
               class="c9 c10 c11 c12"
             >
               <span
@@ -407,6 +410,7 @@ exports[`OakListItem matches snapshot 1`] = `
           </div>
         </div>
         <div
+          aria-hidden="true"
           class="c20 c21 c5"
           data-testid="OakListItem-id"
         >
