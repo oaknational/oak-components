@@ -84,7 +84,7 @@ export type OakListItemProps = {
     | React.MutableRefObject<HTMLDivElement | null>
     | null
     | undefined;
-  onClick?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
+  onClick?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
   middleSlot?: React.ReactNode;
   endSlot?: React.ReactNode;
   hoverBgColour?: OakUiRoleToken;
@@ -149,14 +149,7 @@ export const OakListItem = (props: OakListItemProps) => {
     >
       <label
         htmlFor={asRadio ? radioValue : undefined}
-        onClick={
-          onClickLocal
-            ? (e) =>
-                onClickLocal(
-                  e as unknown as React.MouseEvent<HTMLDivElement, MouseEvent>,
-                )
-            : undefined
-        }
+        onClick={onClickLocal ?? undefined}
         style={asRadio ? { cursor: "pointer" } : undefined}
       >
         <OakFlex $flexGrow={1} $alignItems={"center"} $columnGap={"spacing-16"}>
