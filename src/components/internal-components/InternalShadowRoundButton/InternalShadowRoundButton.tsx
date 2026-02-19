@@ -1,7 +1,6 @@
 import React, { ElementType } from "react";
 import styled, { css } from "styled-components";
 
-import { OakRoundIconProps } from "@/components/images-and-icons/OakRoundIcon";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
 import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
@@ -36,7 +35,7 @@ export type InternalShadowRoundButtonProps = Omit<
   | "$color"
 > & {
   defaultTextColor: OakUiRoleToken;
-  defaultIconColor?: OakRoundIconProps["$colorFilter"];
+  defaultIconColor?: OakUiRoleToken;
   defaultIconBackground: OakUiRoleToken;
   defaultIconBorderColor?: OakUiRoleToken;
   hoverTextColor: OakUiRoleToken;
@@ -44,7 +43,7 @@ export type InternalShadowRoundButtonProps = Omit<
   hoverIconBackground: OakUiRoleToken;
   hoverIconBorderColor?: OakUiRoleToken;
   disabledTextColor: OakUiRoleToken;
-  disabledIconColor?: OakRoundIconProps["$colorFilter"];
+  disabledIconColor?: OakUiRoleToken;
   disabledIconBackground: OakUiRoleToken;
   disabledIconBorderColor?: OakUiRoleToken;
   iconName?: OakIconName;
@@ -163,9 +162,9 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
     hoverTextColor,
     hoverIconColor,
     hoverIconBackground,
-    hoverIconBorderColor,
+    hoverIconBorderColor = defaultIconBorderColor,
     disabledTextColor,
-    disabledIconColor,
+    disabledIconColor = "icon-inverted",
     disabledIconBackground,
     disabledIconBorderColor,
     hoverDropShadow = "drop-shadow-lemon",
@@ -190,7 +189,10 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
   );
   const loader = (
     <OakBox $width={loadingSpinnerSize} $height={loadingSpinnerSize}>
-      <OakLoadingSpinner $width={loadingSpinnerSize} loaderColor="bg-primary" />
+      <OakLoadingSpinner
+        $width={loadingSpinnerSize}
+        loaderColor={disabledIconColor}
+      />
     </OakBox>
   );
 

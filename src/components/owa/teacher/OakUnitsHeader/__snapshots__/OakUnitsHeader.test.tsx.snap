@@ -264,7 +264,7 @@ exports[`OakUnitsHeader matches snapshot 1`] = `
 }
 
 .c15 > :first-child:disabled .icon-container {
-  background: #22222240;
+  background: #808080;
 }
 
 .c15 > :first-child:hover .icon-container {
@@ -835,7 +835,7 @@ exports[`OakUnitsHeader matches snapshot with banner 1`] = `
 }
 
 .c15 > :first-child:disabled .icon-container {
-  background: #22222240;
+  background: #808080;
 }
 
 .c15 > :first-child:hover .icon-container {

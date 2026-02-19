@@ -217,7 +217,7 @@ exports[`OakLessonVideoTranscript matches snapshot 1`] = `
 }
 
 .c4 > :first-child:disabled .icon-container {
-  background: #22222240;
+  background: #808080;
 }
 
 .c4 > :first-child:hover .icon-container {

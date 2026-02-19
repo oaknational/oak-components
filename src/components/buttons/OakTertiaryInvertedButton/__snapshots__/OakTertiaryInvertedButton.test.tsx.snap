@@ -109,7 +109,7 @@ exports[`OakTertiaryInvertedButton matches snapshot 1`] = `
 }
 
 .c2 > :first-child:hover .icon-container div {
-  border-color: #ffffff;
+  border-color: #222222;
 }
 
 .c2 > :first-child:active .icon-container {

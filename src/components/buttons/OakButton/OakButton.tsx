@@ -72,6 +72,13 @@ export type OakButtonProps = (
  * `OakButton` is a button component that supports multiple variants, color schemes, and sizes. The `OakButton` component takes care of mapping
  * the variant and color scheme props to the appropriate styles defined in the `oakButtonVariants` configuration object.
  * It also allows for polymorphic behavior through the `element` prop, enabling it to render as different HTML elements as needed.
+ *
+ * We currently support the following variants, each with a subset of color schemes:
+ * - `primary`, color schemes: `primary` and `inverted`
+ * - `secondary`, color schemes: `primary`
+ * - `tertiary`, color schemes: `primary`, `inverted` and `transparent`
+ *
+ * There are currently two sizes available across all variants: `sm` and `md`
  */
 export const OakButton = <C extends ElementType = "button">({
   element,
@@ -87,7 +94,7 @@ export const OakButton = <C extends ElementType = "button">({
 
   if (!colorSchemeConfig) {
     throw new Error(
-      `Color scheme ${colorScheme} missing for: ${variant} variant`,
+      `Color scheme "${colorScheme}" is not available fo the "${variant}" variant`,
     );
   }
 
@@ -143,6 +150,7 @@ export const OakButton = <C extends ElementType = "button">({
           disabledIconBackground={colorSchemeConfig.disabledIconBackground}
           disabledIconBorderColor={colorSchemeConfig.disabledIconBorderColor}
           iconBackgroundSize={sizeConfig.iconBackgroundSize}
+          hoverDropShadow={colorSchemeConfig.hoverShadow}
           {...sharedSizeProps}
           {...rest}
         >

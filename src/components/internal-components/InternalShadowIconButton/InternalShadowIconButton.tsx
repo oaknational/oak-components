@@ -116,12 +116,12 @@ export const InternalShadowIconButton = <C extends ElementType = "button">(
     disabled,
     width = "max-content",
     maxWidth,
-    hoverIconColor,
     disabledTextColor,
     defaultIconColor,
     disabledIconColor,
     defaultTextColor,
     hoverTextColor,
+    hoverIconColor = defaultIconColor,
     className,
     $justifyContent,
     ...rest
@@ -201,7 +201,7 @@ export const InternalShadowIconButton = <C extends ElementType = "button">(
         element={element ?? "button"}
         {...rest}
         $hoverTextColor={hoverTextColor}
-        $hoverIconColor={hoverIconColor}
+        $hoverIconColor={hoverIconColor ?? defaultIconColor}
         $defaultTextColor={defaultTextColor}
         $disabledTextColor={disabledTextColor}
         $color={defaultTextColor}

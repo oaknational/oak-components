@@ -286,7 +286,7 @@ exports[`OakUnitsContainer matches snapshot 1`] = `
 }
 
 .c18 > :first-child:disabled .icon-container {
-  background: #22222240;
+  background: #808080;
 }
 
 .c18 > :first-child:hover .icon-container {

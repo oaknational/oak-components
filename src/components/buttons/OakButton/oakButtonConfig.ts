@@ -190,8 +190,8 @@ export const oakButtonVariantConfig: OakButtonVariantConfig = {
         disabledBackground: "transparent",
         disabledBorderColor: "transparent",
         disabledIconColor: "icon-inverted",
-        disabledIconBackground: "bg-inverted-semi-transparent",
-        disabledIconBorderColor: "bg-inverted-semi-transparent",
+        disabledIconBackground: "bg-btn-primary-disabled",
+        disabledIconBorderColor: "bg-btn-primary-disabled",
         /**
          * hover shadow
          */

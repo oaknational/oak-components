@@ -45,6 +45,9 @@ const meta: Meta<typeof OakButton> = {
       control: "select",
       options: oakButtonColorSchemes,
     },
+    children: {
+      control: "text",
+    },
   },
   parameters: {
     actions: { onClick: fn() },
@@ -60,6 +63,7 @@ const meta: Meta<typeof OakButton> = {
         "colorScheme",
         "onClick",
         "onHovered",
+        "children",
       ],
     },
   },
@@ -71,60 +75,60 @@ type Story = StoryObj<typeof OakButton>;
 export const PrimaryButton: Story = {
   render: (args) => (
     <OakFlex $gap={"spacing-24"} $mb={"spacing-24"}>
-      <OakButton {...args}>Button</OakButton>
+      <OakButton {...args} />
       <OakButton {...args} disabled>
         Disabled Button
       </OakButton>
       <OakButton {...args} isLoading>
         Loading Button
       </OakButton>
-      <OakButton {...args} iconName="cross" />
     </OakFlex>
   ),
   args: {
     variant: "primary",
     iconName: "arrow-right",
     onClick: fn(),
+    children: "Button",
   },
 };
 
 export const SmallPrimaryButton: Story = {
   render: (args) => (
     <OakFlex $gap={"spacing-24"}>
-      <OakButton {...args}>Button</OakButton>
+      <OakButton {...args} />
       <OakButton {...args} disabled>
         Disabled Button
       </OakButton>
       <OakButton {...args} size="sm" isLoading>
         Loading Button
       </OakButton>
-      <OakButton {...args} iconName="cross" />
     </OakFlex>
   ),
   args: {
     variant: "primary",
     size: "sm",
     iconName: "arrow-right",
+    children: "Button",
   },
 };
 
 export const InvertedPrimaryButton: Story = {
   render: (args) => (
     <OakFlex $gap={"spacing-24"}>
-      <OakButton {...args}>Button</OakButton>
+      <OakButton {...args} />
       <OakButton {...args} disabled>
         Disabled Button
       </OakButton>
       <OakButton {...args} isLoading>
         Loading Button
       </OakButton>
-      <OakButton {...args} iconName="cross" />
     </OakFlex>
   ),
   args: {
     variant: "primary",
     colorScheme: "inverted",
     iconName: "arrow-right",
+    children: "Button",
   },
   parameters: {
     backgrounds: {
@@ -136,14 +140,13 @@ export const InvertedPrimaryButton: Story = {
 export const InvertedSmallPrimaryButton: Story = {
   render: (args) => (
     <OakFlex $gap={"spacing-24"}>
-      <OakButton {...args}>Button</OakButton>
+      <OakButton {...args} />
       <OakButton {...args} disabled>
         Disabled Button
       </OakButton>
       <OakButton {...args} size="sm" isLoading>
         Loading Button
       </OakButton>
-      <OakButton {...args} iconName="cross" />
     </OakFlex>
   ),
   args: {
@@ -151,6 +154,7 @@ export const InvertedSmallPrimaryButton: Story = {
     colorScheme: "inverted",
     size: "sm",
     iconName: "arrow-right",
+    children: "Button",
   },
   parameters: {
     backgrounds: {
@@ -162,129 +166,132 @@ export const InvertedSmallPrimaryButton: Story = {
 export const SecondaryButton: Story = {
   render: (args) => (
     <OakFlex $gap={"spacing-24"} $mb={"spacing-24"}>
-      <OakButton {...args}>Button</OakButton>
+      <OakButton {...args} />
       <OakButton {...args} disabled>
         Disabled Button
       </OakButton>
       <OakButton {...args} isLoading>
         Loading Button
       </OakButton>
-      <OakButton {...args} iconName="cross" />
     </OakFlex>
   ),
   args: {
     variant: "secondary",
     iconName: "arrow-right",
+    children: "Button",
   },
 };
 
 export const SmallSecondaryButton: Story = {
   render: (args) => (
     <OakFlex $gap={"spacing-24"}>
-      <OakButton {...args}>Button</OakButton>
+      <OakButton {...args} />
       <OakButton {...args} disabled>
         Disabled Button
       </OakButton>
       <OakButton {...args} size="sm" isLoading>
         Loading Button
       </OakButton>
-      <OakButton {...args} iconName="cross" />
     </OakFlex>
   ),
   args: {
     variant: "secondary",
     size: "sm",
     iconName: "arrow-right",
+    children: "Button",
   },
 };
 
 export const TertiaryButton: Story = {
   render: (args) => (
     <OakFlex $gap={"spacing-24"} $mb={"spacing-24"}>
-      <OakButton {...args}>Button</OakButton>
+      <OakButton {...args} />
       <OakButton {...args} disabled>
         Disabled Button
       </OakButton>
       <OakButton {...args} isLoading>
         Loading Button
       </OakButton>
-      <OakButton {...args} iconName="cross" />
     </OakFlex>
   ),
   args: {
     variant: "tertiary",
-    iconName: "arrow-right",
+    iconName: "chevron-right",
+    children: "Button",
   },
 };
 
 export const SmallTertiaryButton: Story = {
   render: (args) => (
     <OakFlex $gap={"spacing-24"}>
-      <OakButton {...args}>Button</OakButton>
+      <OakButton {...args} />
       <OakButton {...args} disabled>
         Disabled Button
       </OakButton>
       <OakButton {...args} size="sm" isLoading>
         Loading Button
       </OakButton>
-      <OakButton {...args} iconName="cross" />
     </OakFlex>
   ),
   args: {
     variant: "tertiary",
     size: "sm",
-    iconName: "arrow-right",
+    iconName: "chevron-right",
+    children: "Button",
   },
 };
 
 export const InvertedTertiaryButton: Story = {
   render: (args) => (
     <OakFlex $gap={"spacing-24"}>
-      <OakButton {...args}>Button</OakButton>
+      <OakButton {...args} />
       <OakButton {...args} disabled>
         Disabled Button
       </OakButton>
       <OakButton {...args} isLoading>
         Loading Button
       </OakButton>
-      <OakButton {...args} iconName="cross" />
     </OakFlex>
   ),
   args: {
     variant: "tertiary",
     colorScheme: "inverted",
-    iconName: "arrow-right",
+    iconName: "chevron-right",
+    children: "Button",
   },
 };
 
 export const InvertedSmallTertiaryButton: Story = {
   render: (args) => (
     <OakFlex $gap={"spacing-24"}>
-      <OakButton {...args}>Button</OakButton>
+      <OakButton {...args} />
       <OakButton {...args} disabled>
         Disabled Button
       </OakButton>
       <OakButton {...args} size="sm" isLoading>
         Loading Button
       </OakButton>
-      <OakButton {...args} iconName="cross" />
     </OakFlex>
   ),
   args: {
     variant: "tertiary",
     colorScheme: "inverted",
     size: "sm",
-    iconName: "arrow-right",
+    iconName: "chevron-right",
+    children: "Button",
   },
 };
 
-/**
- * Recommended use: When you want an icon button with a transparent background
- */
 export const TransparentTertiaryButton: Story = {
   render: (args) => (
     <OakFlex $gap={"spacing-24"}>
-      <OakButton {...args} iconName="cross" />
+      <OakButton {...args} />
+      <OakButton {...args} disabled>
+        Disabled Button
+      </OakButton>
+      <OakButton {...args} size="sm" isLoading>
+        Loading Button
+      </OakButton>
     </OakFlex>
   ),
   parameters: {
@@ -295,17 +302,21 @@ export const TransparentTertiaryButton: Story = {
   args: {
     variant: "tertiary",
     colorScheme: "transparent",
-    iconName: "arrow-right",
+    iconName: "chevron-right",
+    children: "Button",
   },
 };
 
-/**
- * Recommended use: When you want an icon button with a transparent background
- */
 export const TransparentSmallTertiaryButton: Story = {
   render: (args) => (
     <OakFlex $gap={"spacing-24"}>
-      <OakButton {...args} iconName="cross" />
+      <OakButton {...args} />
+      <OakButton {...args} disabled>
+        Disabled Button
+      </OakButton>
+      <OakButton {...args} size="sm" isLoading>
+        Loading Button
+      </OakButton>
     </OakFlex>
   ),
   parameters: {
@@ -317,14 +328,15 @@ export const TransparentSmallTertiaryButton: Story = {
     variant: "tertiary",
     colorScheme: "transparent",
     size: "sm",
-    iconName: "arrow-right",
+    iconName: "chevron-right",
+    children: "Button",
   },
 };
 
 export const LinkStyledAsButton: Story = {
   render: (args) => (
     <OakFlex $gap="spacing-24">
-      <OakButton {...args}>Link element styled as button</OakButton>
+      <OakButton {...args} />
     </OakFlex>
   ),
   argTypes: {
@@ -352,13 +364,14 @@ export const LinkStyledAsButton: Story = {
     element: "a",
     href: "/",
     variant: "primary",
+    children: "Link element styled as button",
   },
 };
 
 export const ButtonWithTrailingIcon: Story = {
   render: (args) => (
     <OakFlex $gap={"spacing-24"} $mb={"spacing-24"}>
-      <OakButton {...args}>Button</OakButton>
+      <OakButton {...args} />
       <OakButton {...args} disabled>
         Disabled Button
       </OakButton>
@@ -371,5 +384,6 @@ export const ButtonWithTrailingIcon: Story = {
     variant: "primary",
     iconName: "arrow-right",
     isTrailingIcon: true,
+    children: "Button",
   },
 };
