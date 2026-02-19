@@ -84,7 +84,7 @@ export type OakListItemProps = {
     | React.MutableRefObject<HTMLDivElement | null>
     | null
     | undefined;
-  onClick?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
+  onClick?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
   middleSlot?: React.ReactNode;
   endSlot?: React.ReactNode;
   hoverBgColour?: OakUiRoleToken;
@@ -147,7 +147,11 @@ export const OakListItem = (props: OakListItemProps) => {
       $display={"flex"}
       $flexDirection={"column"}
     >
-      <label htmlFor={radioValue} aria-label={title}>
+      <label
+        htmlFor={asRadio ? radioValue : undefined}
+        onClick={onClickLocal ?? undefined}
+        style={asRadio ? { cursor: "pointer" } : undefined}
+      >
         <OakFlex $flexGrow={1} $alignItems={"center"} $columnGap={"spacing-16"}>
           {asRadio && radioValue && (
             <InternalRadioWrapper
@@ -163,12 +167,13 @@ export const OakListItem = (props: OakListItemProps) => {
                   disabled={unavailable}
                   onChange={radioContext.onValueUpdated}
                   checked={radioValue === radioContext.currentValue}
+                  aria-label={asRadio ? title : undefined}
                 />
               }
             />
           )}
 
-          {/* Desktop layout */}
+          {/* Desktop layout - aria-hidden when asRadio so only the radio is a swipe stop */}
           <StyledListItem
             data-testid="OakListItem-id"
             $alignItems={"center"}
@@ -182,7 +187,7 @@ export const OakListItem = (props: OakListItemProps) => {
             $display={["none", "flex"]}
             $indexHoverBgColour={indexHoverBgColour}
             $hoverBgColour={hoverBgColour}
-            aria-hidden="true"
+            aria-hidden={asRadio}
           >
             <FlexWithFocus
               $borderRadius="border-radius-m"
@@ -191,8 +196,7 @@ export const OakListItem = (props: OakListItemProps) => {
               $width="100%"
               $height="100%"
               ref={firstItemRef}
-              onClick={onClickLocal}
-              aria-hidden="true"
+              aria-hidden={asRadio}
             >
               <StyledOakIndexBox
                 $background={background}
@@ -250,8 +254,7 @@ export const OakListItem = (props: OakListItemProps) => {
             $pa="spacing-16"
             $indexHoverBgColour={indexHoverBgColour}
             $hoverBgColour={hoverBgColour}
-            onClick={onClickLocal}
-            aria-hidden="true"
+            aria-hidden={asRadio}
           >
             <OakFlex $flexDirection="column" $gap="spacing-16" $width="100%">
               <OakFlex $gap="spacing-16">

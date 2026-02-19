@@ -133,6 +133,7 @@ const SelectableComponent = () => {
   return (
     <OakRadioGroup
       name={"as-radio-test"}
+      label={"Units"}
       value={value}
       onChange={(e) => {
         console.log("e.target.value:", e.target.value);
