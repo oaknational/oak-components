@@ -13,6 +13,7 @@ import { OakUiRoleToken } from "@/styles";
 import { RadioContext } from "@/components/form-elements";
 import { InternalRadioWrapper } from "@/components/internal-components/InternalRadioWrapper";
 import { InternalRadio } from "@/components/internal-components/InternalRadio";
+import { OakScreenReader } from "@/components/messaging-and-feedback/OakScreenReader";
 
 const FlexWithFocus = styled(OakFlex)`
   animation-timing-function: ease-out;
@@ -140,6 +141,13 @@ export const OakListItem = (props: OakListItemProps) => {
   const isExpandedBorderRadius = "border-radius-square";
   const unavailableBgColor = "bg-neutral";
 
+  const handleCardClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (asRadio && radioValue && !unavailable) {
+      document.getElementById(radioValue)?.click();
+    }
+    onClickLocal?.(e);
+  };
+
   return (
     <OakLI
       $listStyle={"none"}
@@ -147,29 +155,32 @@ export const OakListItem = (props: OakListItemProps) => {
       $display={"flex"}
       $flexDirection={"column"}
     >
-      <label htmlFor={radioValue} aria-label={title}>
-        <OakFlex $flexGrow={1} $alignItems={"center"} $columnGap={"spacing-16"}>
-          {asRadio && radioValue && (
-            <InternalRadioWrapper
-              checked={radioValue === radioContext.currentValue}
-              size={checkboxSize}
-              disabled={unavailable}
-              radioBorderColor={checkedBorderColor}
-              internalRadio={
-                <InternalRadio
-                  id={radioValue}
-                  name={radioContext.name}
-                  value={radioValue}
-                  disabled={unavailable}
-                  onChange={radioContext.onValueUpdated}
-                  checked={radioValue === radioContext.currentValue}
-                />
-              }
-            />
-          )}
+      {asRadio && radioValue && (
+        <OakScreenReader id={`${radioValue}-label`}>{title}</OakScreenReader>
+      )}
+      <OakFlex $flexGrow={1} $alignItems={"center"} $columnGap={"spacing-16"}>
+        {asRadio && radioValue && (
+          <InternalRadioWrapper
+            checked={radioValue === radioContext.currentValue}
+            size={checkboxSize}
+            disabled={unavailable}
+            radioBorderColor={checkedBorderColor}
+            internalRadio={
+              <InternalRadio
+                id={radioValue}
+                name={radioContext.name}
+                value={radioValue}
+                disabled={unavailable}
+                onChange={radioContext.onValueUpdated}
+                checked={radioValue === radioContext.currentValue}
+                aria-labelledby={asRadio ? `${radioValue}-label` : undefined}
+              />
+            }
+          />
+        )}
 
-          {/* Desktop layout */}
-          <StyledListItem
+        {/* Desktop layout */}
+        <StyledListItem
             data-testid="OakListItem-id"
             $alignItems={"center"}
             $background={unavailable ? unavailableBgColor : "bg-primary"}
@@ -182,7 +193,7 @@ export const OakListItem = (props: OakListItemProps) => {
             $display={["none", "flex"]}
             $indexHoverBgColour={indexHoverBgColour}
             $hoverBgColour={hoverBgColour}
-            aria-hidden="true"
+            aria-hidden={asRadio}
           >
             <FlexWithFocus
               $borderRadius="border-radius-m"
@@ -191,8 +202,8 @@ export const OakListItem = (props: OakListItemProps) => {
               $width="100%"
               $height="100%"
               ref={firstItemRef}
-              onClick={onClickLocal}
-              aria-hidden="true"
+              onClick={handleCardClick}
+              aria-hidden={asRadio}
             >
               <StyledOakIndexBox
                 $background={background}
@@ -250,8 +261,8 @@ export const OakListItem = (props: OakListItemProps) => {
             $pa="spacing-16"
             $indexHoverBgColour={indexHoverBgColour}
             $hoverBgColour={hoverBgColour}
-            onClick={onClickLocal}
-            aria-hidden="true"
+            onClick={handleCardClick}
+            aria-hidden={asRadio}
           >
             <OakFlex $flexDirection="column" $gap="spacing-16" $width="100%">
               <OakFlex $gap="spacing-16">
@@ -301,7 +312,6 @@ export const OakListItem = (props: OakListItemProps) => {
             </OakFlex>
           </OakFlex>
         )}
-      </label>
     </OakLI>
   );
 };
