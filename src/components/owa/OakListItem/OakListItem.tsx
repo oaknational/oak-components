@@ -141,13 +141,6 @@ export const OakListItem = (props: OakListItemProps) => {
   const isExpandedBorderRadius = "border-radius-square";
   const unavailableBgColor = "bg-neutral";
 
-  const handleCardClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (asRadio && radioValue && !unavailable) {
-      document.getElementById(radioValue)?.click();
-    }
-    onClickLocal?.(e);
-  };
-
   return (
     <OakLI
       $listStyle={"none"}
@@ -155,32 +148,44 @@ export const OakListItem = (props: OakListItemProps) => {
       $display={"flex"}
       $flexDirection={"column"}
     >
-      {asRadio && radioValue && (
-        <OakScreenReader id={`${radioValue}-label`}>{title}</OakScreenReader>
-      )}
-      <OakFlex $flexGrow={1} $alignItems={"center"} $columnGap={"spacing-16"}>
+      <label
+        htmlFor={asRadio ? radioValue : undefined}
+        onClick={
+          onClickLocal
+            ? (e) =>
+                onClickLocal(
+                  e as unknown as React.MouseEvent<HTMLDivElement, MouseEvent>,
+                )
+            : undefined
+        }
+        style={asRadio ? { cursor: "pointer" } : undefined}
+      >
         {asRadio && radioValue && (
-          <InternalRadioWrapper
-            checked={radioValue === radioContext.currentValue}
-            size={checkboxSize}
-            disabled={unavailable}
-            radioBorderColor={checkedBorderColor}
-            internalRadio={
-              <InternalRadio
-                id={radioValue}
-                name={radioContext.name}
-                value={radioValue}
-                disabled={unavailable}
-                onChange={radioContext.onValueUpdated}
-                checked={radioValue === radioContext.currentValue}
-                aria-labelledby={asRadio ? `${radioValue}-label` : undefined}
-              />
-            }
-          />
+          <OakScreenReader id={`${radioValue}-label`}>{title}</OakScreenReader>
         )}
+        <OakFlex $flexGrow={1} $alignItems={"center"} $columnGap={"spacing-16"}>
+          {asRadio && radioValue && (
+            <InternalRadioWrapper
+              checked={radioValue === radioContext.currentValue}
+              size={checkboxSize}
+              disabled={unavailable}
+              radioBorderColor={checkedBorderColor}
+              internalRadio={
+                <InternalRadio
+                  id={radioValue}
+                  name={radioContext.name}
+                  value={radioValue}
+                  disabled={unavailable}
+                  onChange={radioContext.onValueUpdated}
+                  checked={radioValue === radioContext.currentValue}
+                  aria-labelledby={asRadio ? `${radioValue}-label` : undefined}
+                />
+              }
+            />
+          )}
 
-        {/* Desktop layout */}
-        <StyledListItem
+          {/* Desktop layout - aria-hidden when asRadio so only the radio is a swipe stop and label name comes from OakScreenReader only */}
+          <StyledListItem
             data-testid="OakListItem-id"
             $alignItems={"center"}
             $background={unavailable ? unavailableBgColor : "bg-primary"}
@@ -202,7 +207,6 @@ export const OakListItem = (props: OakListItemProps) => {
               $width="100%"
               $height="100%"
               ref={firstItemRef}
-              onClick={handleCardClick}
               aria-hidden={asRadio}
             >
               <StyledOakIndexBox
@@ -261,7 +265,6 @@ export const OakListItem = (props: OakListItemProps) => {
             $pa="spacing-16"
             $indexHoverBgColour={indexHoverBgColour}
             $hoverBgColour={hoverBgColour}
-            onClick={handleCardClick}
             aria-hidden={asRadio}
           >
             <OakFlex $flexDirection="column" $gap="spacing-16" $width="100%">
@@ -312,6 +315,7 @@ export const OakListItem = (props: OakListItemProps) => {
             </OakFlex>
           </OakFlex>
         )}
+      </label>
     </OakLI>
   );
 };
