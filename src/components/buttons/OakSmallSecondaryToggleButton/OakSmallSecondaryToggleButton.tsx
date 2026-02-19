@@ -5,6 +5,7 @@ import {
   InternalShadowRectButtonProps,
 } from "@/components/internal-components/InternalShadowRectButton";
 import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
+import { OakUiRoleToken } from "@/styles";
 
 export type OakSmallSecondaryToggleButtonProps = Omit<
   InternalShadowRectButtonProps,
@@ -22,6 +23,26 @@ export type OakSmallSecondaryToggleButtonProps = Omit<
   | "font"
 > & {
   toggleOn?: boolean;
+  iconOverrideToggleOn?: React.ReactNode;
+  iconOverrideToggleOff?: React.ReactNode;
+  defaultBorderColorToggleOn?: OakUiRoleToken;
+  defaultBorderColorToggleOff?: OakUiRoleToken;
+  defaultBackgroundToggleOn?: OakUiRoleToken;
+  defaultBackgroundToggleOff?: OakUiRoleToken;
+  defaultTextColorToggleOn?: OakUiRoleToken;
+  defaultTextColorToggleOff?: OakUiRoleToken;
+  hoverBackgroundToggleOn?: OakUiRoleToken;
+  hoverBackgroundToggleOff?: OakUiRoleToken;
+  hoverBorderColorToggleOn?: OakUiRoleToken;
+  hoverBorderColorToggleOff?: OakUiRoleToken;
+  hoverTextColorToggleOn?: OakUiRoleToken;
+  hoverTextColorToggleOff?: OakUiRoleToken;
+  disabledBackgroundToggleOn?: OakUiRoleToken;
+  disabledBackgroundToggleOff?: OakUiRoleToken;
+  disabledBorderColorToggleOn?: OakUiRoleToken;
+  disabledBorderColorToggleOff?: OakUiRoleToken;
+  disabledTextColorToggleOn?: OakUiRoleToken;
+  disabledTextColorToggleOff?: OakUiRoleToken;
 };
 
 /**
@@ -44,40 +65,65 @@ export const OakSmallSecondaryToggleButton = <
 >({
   element,
   toggleOn,
+  defaultBorderColorToggleOn = "bg-btn-primary",
+  defaultBorderColorToggleOff = "text-primary",
+  defaultBackgroundToggleOn = "bg-btn-primary",
+  defaultBackgroundToggleOff = "bg-btn-secondary",
+  defaultTextColorToggleOn = "text-inverted",
+  defaultTextColorToggleOff = "text-primary",
+  hoverBackgroundToggleOn = "bg-btn-primary-hover",
+  hoverBackgroundToggleOff = "bg-btn-secondary-hover",
+  hoverBorderColorToggleOn = "bg-btn-primary-hover",
+  hoverBorderColorToggleOff = "text-primary",
+  hoverTextColorToggleOn = "text-inverted",
+  hoverTextColorToggleOff = "text-primary",
+  disabledBackgroundToggleOn = "bg-btn-primary-disabled",
+  disabledBackgroundToggleOff = "bg-btn-secondary-disabled",
+  disabledBorderColorToggleOn = "bg-btn-primary-disabled",
+  disabledBorderColorToggleOff = "text-disabled",
+  disabledTextColorToggleOn = "text-inverted",
+  disabledTextColorToggleOff = "text-disabled",
+  iconOverrideToggleOn,
+  iconOverrideToggleOff,
   ...rest
 }: OakSmallSecondaryToggleButtonProps & PolymorphicPropsWithoutRef<C>) => {
-  const defaultBorderColor = toggleOn ? "bg-btn-primary" : "text-primary";
-  const defaultBackground = toggleOn ? "bg-btn-primary" : "bg-btn-secondary";
-  const defaultTextColor = toggleOn ? "text-inverted" : "text-primary";
-  const hoverBackground = toggleOn
-    ? "bg-btn-primary-hover"
-    : "bg-btn-secondary-hover";
-  const hoverBorderColor = toggleOn ? "bg-btn-primary-hover" : "text-primary";
-  const hoverTextColor = toggleOn ? "text-inverted" : "text-primary";
-  const disabledBackground = toggleOn
-    ? "bg-btn-primary-disabled"
-    : "bg-btn-secondary-disabled";
-
-  const disabledTextColor = toggleOn ? "text-inverted" : "text-disabled";
-
   return (
     <InternalShadowRectButton
       element={element ?? "button"}
-      defaultBorderColor={defaultBorderColor}
-      defaultBackground={defaultBackground}
-      defaultTextColor={defaultTextColor}
-      hoverBackground={hoverBackground}
-      hoverBorderColor={hoverBorderColor}
-      hoverTextColor={hoverTextColor}
-      disabledBackground={disabledBackground}
-      disabledBorderColor="text-disabled"
-      disabledTextColor={disabledTextColor}
+      defaultBorderColor={
+        toggleOn ? defaultBorderColorToggleOn : defaultBorderColorToggleOff
+      }
+      defaultBackground={
+        toggleOn ? defaultBackgroundToggleOn : defaultBackgroundToggleOff
+      }
+      defaultTextColor={
+        toggleOn ? defaultTextColorToggleOn : defaultTextColorToggleOff
+      }
+      hoverBackground={
+        toggleOn ? hoverBackgroundToggleOn : hoverBackgroundToggleOff
+      }
+      hoverBorderColor={
+        toggleOn ? hoverBorderColorToggleOn : hoverBorderColorToggleOff
+      }
+      hoverTextColor={
+        toggleOn ? hoverTextColorToggleOn : hoverTextColorToggleOff
+      }
+      disabledBackground={
+        toggleOn ? disabledBackgroundToggleOn : disabledBackgroundToggleOff
+      }
+      disabledBorderColor={
+        toggleOn ? disabledBorderColorToggleOn : disabledBorderColorToggleOff
+      }
+      disabledTextColor={
+        toggleOn ? disabledTextColorToggleOn : disabledTextColorToggleOff
+      }
       font="body-3-bold"
       pv="spacing-4"
       ph="spacing-8"
       loadingSpinnerSize="spacing-20"
       iconGap="spacing-4"
       aria-pressed={toggleOn}
+      iconOverride={toggleOn ? iconOverrideToggleOn : iconOverrideToggleOff}
       {...rest}
     />
   );

@@ -5,6 +5,7 @@ import { OakSmallSecondaryToggleButton } from "./OakSmallSecondaryToggleButton";
 
 import { oakIconNames } from "@/components/images-and-icons/OakIcon";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
+import { OakBox } from "@/index";
 
 const controlIconNames = [
   null,
@@ -55,5 +56,49 @@ export const Default: Story = {
   ),
   args: {
     toggleOn: false,
+  },
+};
+
+export const GoogleClassroom: Story = {
+  render: (args) => (
+    <OakFlex $gap="spacing-24">
+      <OakSmallSecondaryToggleButton {...args}>
+        Secondary Button
+      </OakSmallSecondaryToggleButton>
+      <OakSmallSecondaryToggleButton {...args} disabled>
+        Disabled Button
+      </OakSmallSecondaryToggleButton>
+      <OakSmallSecondaryToggleButton {...args} isLoading>
+        Loading Button
+      </OakSmallSecondaryToggleButton>
+    </OakFlex>
+  ),
+  args: {
+    toggleOn: false,
+    iconName: "dot",
+    defaultBackgroundToggleOn: "bg-primary",
+    defaultTextColorToggleOn: "text-primary",
+    iconOverrideToggleOn: (
+      <OakBox
+        $borderRadius={"border-radius-circle"}
+        $background={"icon-success"}
+        $ba={"border-solid-m"}
+        $borderColor={"text-primary"}
+        $pa={"spacing-0"}
+        $width={"spacing-24"}
+        $height={"spacing-24"}
+      ></OakBox>
+    ),
+    iconOverrideToggleOff: (
+      <OakBox
+        $borderRadius={"border-radius-circle"}
+        $background={"bg-primary"}
+        $ba={"border-solid-m"}
+        $borderColor={"text-primary"}
+        $pa={"spacing-0"}
+        $width={"spacing-24"}
+        $height={"spacing-24"}
+      ></OakBox>
+    ),
   },
 };
