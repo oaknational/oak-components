@@ -13,7 +13,6 @@ import { OakUiRoleToken } from "@/styles";
 import { RadioContext } from "@/components/form-elements";
 import { InternalRadioWrapper } from "@/components/internal-components/InternalRadioWrapper";
 import { InternalRadio } from "@/components/internal-components/InternalRadio";
-import { OakScreenReader } from "@/components/messaging-and-feedback/OakScreenReader";
 
 const FlexWithFocus = styled(OakFlex)`
   animation-timing-function: ease-out;
@@ -160,9 +159,6 @@ export const OakListItem = (props: OakListItemProps) => {
         }
         style={asRadio ? { cursor: "pointer" } : undefined}
       >
-        {asRadio && radioValue && (
-          <OakScreenReader id={`${radioValue}-label`}>{title}</OakScreenReader>
-        )}
         <OakFlex $flexGrow={1} $alignItems={"center"} $columnGap={"spacing-16"}>
           {asRadio && radioValue && (
             <InternalRadioWrapper
@@ -178,13 +174,13 @@ export const OakListItem = (props: OakListItemProps) => {
                   disabled={unavailable}
                   onChange={radioContext.onValueUpdated}
                   checked={radioValue === radioContext.currentValue}
-                  aria-labelledby={asRadio ? `${radioValue}-label` : undefined}
+                  aria-label={asRadio ? title : undefined}
                 />
               }
             />
           )}
 
-          {/* Desktop layout - aria-hidden when asRadio so only the radio is a swipe stop and label name comes from OakScreenReader only */}
+          {/* Desktop layout - aria-hidden when asRadio so only the radio is a swipe stop */}
           <StyledListItem
             data-testid="OakListItem-id"
             $alignItems={"center"}
