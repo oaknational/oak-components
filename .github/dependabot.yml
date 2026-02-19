@@ -1,0 +1,26 @@
+version: 2
+updates:
+  # Maintain dependencies for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    # check for updates daily, dependabot will decide the exact time
+    schedule:
+      interval: "daily"
+
+  # Maintain dependencies for npm
+  - package-ecosystem: "npm"
+    directory: "/"
+    # Check the npm registry every week on Monday at 02:00
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "02:00"
+      timezone: "Europe/Belfast"
+    groups:
+      # group all minor and patch updates into a single PR
+      minor-and-patch:
+        update-types:
+          - "patch"
+          - "minor"
+      # only group version updates, not security updates
+      applies-to: "version-updates"
