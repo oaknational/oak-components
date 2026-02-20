@@ -252,8 +252,7 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
       $keepIconColor={keepIconColor}
       $colorSchemeTokens={colorSchemeTokens}
       $width={width ?? "fit-content"}
-      $minHeight={"spacing-32"}
-      $boxSizing="content-box"
+      $minHeight={"spacing-40"}
       onClick={handleContainerClick}
     >
       {rest.variant === "with-radio" ? (
