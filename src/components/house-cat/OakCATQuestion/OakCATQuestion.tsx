@@ -80,7 +80,7 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
     <OakFlex
       $flexDirection={"column"}
       $width={"100%"}
-      $gap={"spacing-48"}
+      $gap={"spacing-32"}
       $mt={"spacing-24"}
     >
       {/* this has the effect of stretching the container and the items within */}
