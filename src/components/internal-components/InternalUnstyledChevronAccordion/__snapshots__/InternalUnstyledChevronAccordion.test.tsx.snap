@@ -2,30 +2,24 @@
 
 exports[`InternalUnstyledChevronAccordion matches snapshot 1`] = `
 .c0 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c3 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c4 {
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c4:hover {
+.c3:hover {
   cursor: pointer;
 }
 
-.c8 {
+.c7 {
   margin-right: 0.75rem;
   border-radius: 0.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c9 {
+.c8 {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -35,7 +29,7 @@ exports[`InternalUnstyledChevronAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c11 {
+.c10 {
   position: relative;
   overflow: auto;
   font-family: --var(google-font),Lexend,sans-serif;
@@ -52,7 +46,7 @@ exports[`InternalUnstyledChevronAccordion matches snapshot 1`] = `
   flex-direction: column;
 }
 
-.c3 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -67,7 +61,7 @@ exports[`InternalUnstyledChevronAccordion matches snapshot 1`] = `
   justify-content: space-between;
 }
 
-.c5 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -78,11 +72,11 @@ exports[`InternalUnstyledChevronAccordion matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c10 {
+.c9 {
   object-fit: contain;
 }
 
-.c6 {
+.c5 {
   font: inherit;
   color: inherit;
   border: none;
@@ -94,7 +88,7 @@ exports[`InternalUnstyledChevronAccordion matches snapshot 1`] = `
   padding: 0;
 }
 
-.c7 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -102,12 +96,12 @@ exports[`InternalUnstyledChevronAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c7:hover .chevron-icon {
+.c6:hover .chevron-icon {
   -webkit-filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
   filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
 }
 
-.c7:focus-visible .focus-outline {
+.c6:focus-visible .focus-outline {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
@@ -116,29 +110,29 @@ exports[`InternalUnstyledChevronAccordion matches snapshot 1`] = `
     class="c0 c1"
   >
     <div
-      class="c2 c3"
+      class="c0 c2"
     >
       See more
       <div
-        class="c2"
+        class="c0"
       >
         <button
           aria-expanded="true"
           aria-label="Close accordion"
-          class="c4 c5 c6  c7"
+          class="c3 c4 c5  c6"
           id="see-more"
           type="button"
         >
           <div
-            class="c8 focus-outline"
+            class="c7 focus-outline"
           >
             <span
-              class="c9 chevron-icon"
+              class="c8 chevron-icon"
               style="transform: rotate(180deg); transition: all 0.3s ease 0s;"
             >
               <img
                 alt="An arrow to indicate whether the item is open or closed"
-                class="c10"
+                class="c9"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"
@@ -151,11 +145,11 @@ exports[`InternalUnstyledChevronAccordion matches snapshot 1`] = `
       </div>
     </div>
     <div
-      class="c11"
+      class="c10"
     >
       <div
         aria-labelledby="see-more"
-        class="c2"
+        class="c0"
         role="region"
       >
         <div>
