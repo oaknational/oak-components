@@ -135,7 +135,7 @@ export type OakRadioAsButtonProps = Omit<
 > & {
   value?: HTMLInputElement["value"];
   innerRef?: React.RefObject<HTMLInputElement>;
-  displayValue: string;
+  displayValue: React.ReactNode;
   /**
    * Whether to keep the icon color when the component is checked.
    *
