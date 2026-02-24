@@ -61,7 +61,7 @@ export const OakBreadcrumbs = ({
   breadcrumbs,
 }: Readonly<OakBreadcrumbsProps>) => {
   return (
-    <OakBox as="nav" aria-label="Breadcrumb">
+    <OakBox as="nav" aria-label="Breadcrumb" $color={"text-primary"}>
       <BreadcrumbsUl>
         {breadcrumbs.map((breadcrumb, breadcrumbIndex) => {
           // Last element doesn't have a "href" because it's the current page (typesafe)

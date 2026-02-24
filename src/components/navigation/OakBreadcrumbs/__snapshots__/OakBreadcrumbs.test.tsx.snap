@@ -2,6 +2,7 @@
 
 exports[`OakBreadcrumbs matches snapshot 1`] = `
 .c0 {
+  color: #222222;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
