@@ -6,7 +6,7 @@ exports[`OakBreadcrumbs matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c3 {
+.c5 {
   overflow: hidden;
   min-width: 0rem;
   font-family: --var(google-font),Lexend,sans-serif;
@@ -29,11 +29,11 @@ exports[`OakBreadcrumbs matches snapshot 1`] = `
   object-fit: contain;
 }
 
-.c5 {
+.c4 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c4 {
+.c3 {
   display: inline;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -56,19 +56,19 @@ exports[`OakBreadcrumbs matches snapshot 1`] = `
   color: #222222;
 }
 
-.c4:focus-visible {
+.c3:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c4:visited {
+.c3:visited {
   color: #222222;
 }
 
-.c4:active {
+.c3:active {
   color: #222222;
 }
 
-.c4[disabled] {
+.c3[disabled] {
   cursor: not-allowed;
   color: #808080;
 }
@@ -110,8 +110,8 @@ exports[`OakBreadcrumbs matches snapshot 1`] = `
 }
 
 @media (hover:hover) {
-  .c4:hover,
-  .c4:visited:hover {
+  .c3:hover,
+  .c3:visited:hover {
     color: #222222;
     -webkit-text-decoration: underline;
     text-decoration: underline;
@@ -129,20 +129,21 @@ exports[`OakBreadcrumbs matches snapshot 1`] = `
       <li
         class="c2"
       >
-        <div
-          class="c3"
+        <a
+          class="c3 "
+          href="#test1"
+          style="overflow: hidden;"
         >
-          <a
-            class="c4 "
-            href="#test1"
+          <span
+            class="c4"
           >
-            <span
+            <div
               class="c5"
             >
               Test 1
-            </span>
-          </a>
-        </div>
+            </div>
+          </span>
+        </a>
       </li>
       <li
         class="c2"
@@ -160,20 +161,21 @@ exports[`OakBreadcrumbs matches snapshot 1`] = `
             style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
           />
         </span>
-        <div
-          class="c3"
+        <a
+          class="c3 "
+          href="#test2"
+          style="overflow: hidden;"
         >
-          <a
-            class="c4 "
-            href="#test2"
+          <span
+            class="c4"
           >
-            <span
+            <div
               class="c5"
             >
               Test 2
-            </span>
-          </a>
-        </div>
+            </div>
+          </span>
+        </a>
       </li>
       <li
         class="c2"
@@ -193,7 +195,7 @@ exports[`OakBreadcrumbs matches snapshot 1`] = `
         </span>
         <div
           aria-current="page"
-          class="c3"
+          class="c5"
         >
           Test 3
         </div>
