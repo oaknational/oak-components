@@ -1,11 +1,10 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import styled from "styled-components";
 
 import { OakSecondaryLink } from "@/components/navigation";
 import { OakIcon } from "@/components/images-and-icons";
-import { OakSpan } from "@/components/typography";
 import { parseFontSize, parseSpacing } from "@/styles";
-import { OakBox } from "@/components/layout-and-structure";
+import { OakBox, OakBoxProps } from "@/components/layout-and-structure";
 
 export type OakBreadcrumb = {
   text: string;
@@ -36,8 +35,24 @@ const BreadcrumbsUl = styled("ul")`
 const BreadcrumbsLi = styled("li")`
   display: flex;
   gap: ${parseSpacing("spacing-8")};
-  align-items: top;
+  align-items: center;
+  flex: 0;
+  max-width: 100%;
 `;
+
+function OakBreadcrumbText(props: OakBoxProps & { children: ReactNode }) {
+  return (
+    <OakBox
+      $whiteSpace={"nowrap"}
+      $textOverflow={"ellipsis"}
+      $minWidth={"spacing-0"}
+      $overflow={"hidden"}
+      {...props}
+    >
+      {props.children}
+    </OakBox>
+  );
+}
 
 /**
  * The breadcrumb component helps users to understand where they are within a website’s structure and move between levels.
@@ -58,16 +73,19 @@ export const OakBreadcrumbs = ({
                   $height={"spacing-20"}
                   $width={"spacing-20"}
                   iconName="chevron-right"
-                  style={{ marginTop: 2 }}
                 />
               )}
               {isLast && (
-                <OakSpan aria-current="page">{breadcrumb.text}</OakSpan>
+                <OakBreadcrumbText aria-current="page">
+                  {breadcrumb.text}
+                </OakBreadcrumbText>
               )}
               {!isLast && (
-                <OakSecondaryLink href={breadcrumb.href ?? ""}>
-                  {breadcrumb.text}
-                </OakSecondaryLink>
+                <OakBreadcrumbText>
+                  <OakSecondaryLink href={breadcrumb.href ?? ""}>
+                    {breadcrumb.text}
+                  </OakSecondaryLink>
+                </OakBreadcrumbText>
               )}
             </BreadcrumbsLi>
           );

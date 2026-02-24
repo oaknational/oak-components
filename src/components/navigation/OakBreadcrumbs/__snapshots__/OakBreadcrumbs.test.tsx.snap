@@ -1,7 +1,20 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`OakBreadcrumbs matches snapshot 1`] = `
-.c4 {
+.c0 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c3 {
+  overflow: hidden;
+  min-width: 0rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.c6 {
   position: relative;
   width: 1.25rem;
   min-width: 1.25rem;
@@ -11,15 +24,15 @@ exports[`OakBreadcrumbs matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c5 {
+.c7 {
   object-fit: contain;
 }
 
-.c3 {
+.c5 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c4 {
   display: inline;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -42,24 +55,24 @@ exports[`OakBreadcrumbs matches snapshot 1`] = `
   color: #222222;
 }
 
-.c2:focus-visible {
+.c4:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c2:visited {
+.c4:visited {
   color: #222222;
 }
 
-.c2:active {
+.c4:active {
   color: #222222;
 }
 
-.c2[disabled] {
+.c4[disabled] {
   cursor: not-allowed;
   color: #808080;
 }
 
-.c0 {
+.c1 {
   margin: 0rem;
   padding: 0rem;
   list-style: none;
@@ -79,21 +92,25 @@ exports[`OakBreadcrumbs matches snapshot 1`] = `
   flex-wrap: wrap;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: 0.5rem;
-  -webkit-align-items: top;
-  -webkit-box-align: top;
-  -ms-flex-align: top;
-  align-items: top;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
+  max-width: 100%;
 }
 
 @media (hover:hover) {
-  .c2:hover,
-  .c2:visited:hover {
+  .c4:hover,
+  .c4:visited:hover {
     color: #222222;
     -webkit-text-decoration: underline;
     text-decoration: underline;
@@ -101,75 +118,86 @@ exports[`OakBreadcrumbs matches snapshot 1`] = `
 }
 
 <div>
-  <ul
+  <nav
+    aria-label="Breadcrumb"
     class="c0"
   >
-    <li
+    <ul
       class="c1"
     >
-      <a
-        class="c2 "
-        href="#test1"
+      <li
+        class="c2"
       >
-        <span
+        <div
           class="c3"
         >
-          Test 1
-        </span>
-      </a>
-    </li>
-    <li
-      class="c1"
-    >
-      <span
-        class="c4"
-        style="margin-top: 2px;"
-      >
-        <img
-          alt=""
-          class="c5"
-          data-nimg="fill"
-          decoding="async"
-          loading="lazy"
-          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
-          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
-        />
-      </span>
-      <a
-        class="c2 "
-        href="#test2"
+          <a
+            class="c4 "
+            href="#test1"
+          >
+            <span
+              class="c5"
+            >
+              Test 1
+            </span>
+          </a>
+        </div>
+      </li>
+      <li
+        class="c2"
       >
         <span
+          class="c6"
+        >
+          <img
+            alt=""
+            class="c7"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+          />
+        </span>
+        <div
           class="c3"
         >
-          Test 2
+          <a
+            class="c4 "
+            href="#test2"
+          >
+            <span
+              class="c5"
+            >
+              Test 2
+            </span>
+          </a>
+        </div>
+      </li>
+      <li
+        class="c2"
+      >
+        <span
+          class="c6"
+        >
+          <img
+            alt=""
+            class="c7"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+          />
         </span>
-      </a>
-    </li>
-    <li
-      class="c1"
-    >
-      <span
-        class="c4"
-        style="margin-top: 2px;"
-      >
-        <img
-          alt=""
-          class="c5"
-          data-nimg="fill"
-          decoding="async"
-          loading="lazy"
-          src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
-          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
-        />
-      </span>
-      <span
-        aria-current="page"
-        class="c3"
-      >
-        Test 3
-      </span>
-    </li>
-  </ul>
+        <div
+          aria-current="page"
+          class="c3"
+        >
+          Test 3
+        </div>
+      </li>
+    </ul>
+  </nav>
 </div>
 `;
