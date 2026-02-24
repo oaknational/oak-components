@@ -16,7 +16,7 @@ const meta: Meta<typeof OakBreadcrumbs> = {
         href: "#text1",
       },
       {
-        text: "Test 2",
+        text: "Something really really really really long in this item",
         href: "#text2",
       },
       {
@@ -33,7 +33,6 @@ const meta: Meta<typeof OakBreadcrumbs> = {
       },
       {
         text: "Test 6",
-        href: "#text6",
       },
     ],
   },

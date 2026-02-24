@@ -11,8 +11,13 @@ export type OakBreadcrumb = {
   href?: string;
 };
 
+// Used for the last page
+export type OakBreadcrumbWithoutHref = {
+  text: string;
+};
+
 export type OakBreadcrumbsProps = {
-  breadcrumbs: OakBreadcrumb[];
+  breadcrumbs: [...OakBreadcrumb[], OakBreadcrumbWithoutHref];
 };
 
 const BreadcrumbsUl = styled("ul")`
@@ -30,7 +35,7 @@ const BreadcrumbsUl = styled("ul")`
 const BreadcrumbsLi = styled("li")`
   display: flex;
   gap: ${parseSpacing("spacing-8")};
-  align-items: center;
+  align-items: top;
 `;
 
 /**
@@ -42,20 +47,23 @@ export const OakBreadcrumbs = ({
   return (
     <BreadcrumbsUl>
       {breadcrumbs.map((breadcrumb, breadcrumbIndex) => {
+        // Last element doesn't have a "href" because it's the current page (typesafe)
+        const isLast = !("href" in breadcrumb);
         return (
-          <BreadcrumbsLi key={`${breadcrumb.text}_${breadcrumb.href}`}>
-            {!breadcrumb.href && <OakSpan>{breadcrumb.text}</OakSpan>}
-            {breadcrumb.href && (
-              <OakSecondaryLink href={breadcrumb.href ?? ""}>
-                {breadcrumb.text}
-              </OakSecondaryLink>
-            )}
-            {breadcrumbIndex < breadcrumbs.length - 1 && (
+          <BreadcrumbsLi key={`${breadcrumb.text}`}>
+            {breadcrumbIndex > 0 && (
               <OakIcon
                 $height={"spacing-20"}
                 $width={"spacing-20"}
                 iconName="chevron-right"
+                style={{ marginTop: 2 }}
               />
+            )}
+            {isLast && <OakSpan aria-current="page">{breadcrumb.text}</OakSpan>}
+            {!isLast && (
+              <OakSecondaryLink href={breadcrumb.href ?? ""}>
+                {breadcrumb.text}
+              </OakSecondaryLink>
             )}
           </BreadcrumbsLi>
         );

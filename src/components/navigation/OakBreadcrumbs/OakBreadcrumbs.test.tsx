@@ -12,7 +12,7 @@ describe("OakBreadcrumbs", () => {
         breadcrumbs={[
           { text: "Test 1", href: "#test1" },
           { text: "Test 2", href: "#test2" },
-          { text: "Test 3", href: "#test3" },
+          { text: "Test 3" },
         ]}
       />,
     );

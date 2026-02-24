@@ -85,10 +85,10 @@ exports[`OakBreadcrumbs matches snapshot 1`] = `
   display: -ms-flexbox;
   display: flex;
   gap: 0.5rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: top;
+  -webkit-box-align: top;
+  -ms-flex-align: top;
+  align-items: top;
 }
 
 @media (hover:hover) {
@@ -117,8 +117,13 @@ exports[`OakBreadcrumbs matches snapshot 1`] = `
           Test 1
         </span>
       </a>
+    </li>
+    <li
+      class="c1"
+    >
       <span
         class="c4"
+        style="margin-top: 2px;"
       >
         <img
           alt=""
@@ -130,10 +135,6 @@ exports[`OakBreadcrumbs matches snapshot 1`] = `
           style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
         />
       </span>
-    </li>
-    <li
-      class="c1"
-    >
       <a
         class="c2 "
         href="#test2"
@@ -144,8 +145,13 @@ exports[`OakBreadcrumbs matches snapshot 1`] = `
           Test 2
         </span>
       </a>
+    </li>
+    <li
+      class="c1"
+    >
       <span
         class="c4"
+        style="margin-top: 2px;"
       >
         <img
           alt=""
@@ -157,20 +163,12 @@ exports[`OakBreadcrumbs matches snapshot 1`] = `
           style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
         />
       </span>
-    </li>
-    <li
-      class="c1"
-    >
-      <a
-        class="c2 "
-        href="#test3"
+      <span
+        aria-current="page"
+        class="c3"
       >
-        <span
-          class="c3"
-        >
-          Test 3
-        </span>
-      </a>
+        Test 3
+      </span>
     </li>
   </ul>
 </div>
