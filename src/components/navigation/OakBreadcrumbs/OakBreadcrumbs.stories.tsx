@@ -16,7 +16,7 @@ const meta: Meta<typeof OakBreadcrumbs> = {
         href: "#text1",
       },
       {
-        text: "Something really really really really long in this item",
+        text: "Test 2",
         href: "#text2",
       },
       {
@@ -32,7 +32,7 @@ const meta: Meta<typeof OakBreadcrumbs> = {
         href: "#text5",
       },
       {
-        text: "Something really really really really long in this item",
+        text: "Test 6",
       },
     ],
   },
@@ -58,6 +58,25 @@ export const WithLastLinkDisabled: Story = {
       },
       {
         text: "Chicken Jugs",
+      },
+    ],
+  },
+  render: (args) => <OakBreadcrumbs {...args} />,
+};
+
+export const WithLongTextTruncation: Story = {
+  args: {
+    breadcrumbs: [
+      {
+        text: "Home",
+        href: "#1",
+      },
+      {
+        text: "Something really, really, really long to show off text truncate",
+        href: "#2",
+      },
+      {
+        text: "Hello world",
       },
     ],
   },
