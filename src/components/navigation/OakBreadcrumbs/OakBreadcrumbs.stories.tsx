@@ -46,11 +46,12 @@ export const Default: Story = {
   render: (args) => <OakBreadcrumbs {...args} />,
 };
 
-export const SomeWithHrefs: Story = {
+export const WithLastLinkDisabled: Story = {
   args: {
     breadcrumbs: [
       {
         text: "Home",
+        href: "#home",
       },
       {
         text: "Ceramics",
@@ -58,7 +59,6 @@ export const SomeWithHrefs: Story = {
       },
       {
         text: "Chicken Jugs",
-        href: "#chicken-jugs",
       },
     ],
   },
