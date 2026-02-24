@@ -5,6 +5,7 @@ import { OakSecondaryLink } from "@/components/navigation";
 import { OakIcon } from "@/components/images-and-icons";
 import { OakSpan } from "@/components/typography";
 import { parseFontSize, parseSpacing } from "@/styles";
+import { OakBox } from "@/components/layout-and-structure";
 
 export type OakBreadcrumb = {
   text: string;
@@ -45,29 +46,33 @@ export const OakBreadcrumbs = ({
   breadcrumbs,
 }: Readonly<OakBreadcrumbsProps>) => {
   return (
-    <BreadcrumbsUl>
-      {breadcrumbs.map((breadcrumb, breadcrumbIndex) => {
-        // Last element doesn't have a "href" because it's the current page (typesafe)
-        const isLast = !("href" in breadcrumb);
-        return (
-          <BreadcrumbsLi key={`${breadcrumb.text}`}>
-            {breadcrumbIndex > 0 && (
-              <OakIcon
-                $height={"spacing-20"}
-                $width={"spacing-20"}
-                iconName="chevron-right"
-                style={{ marginTop: 2 }}
-              />
-            )}
-            {isLast && <OakSpan aria-current="page">{breadcrumb.text}</OakSpan>}
-            {!isLast && (
-              <OakSecondaryLink href={breadcrumb.href ?? ""}>
-                {breadcrumb.text}
-              </OakSecondaryLink>
-            )}
-          </BreadcrumbsLi>
-        );
-      })}
-    </BreadcrumbsUl>
+    <OakBox as="nav" aria-label="Breadcrumb">
+      <BreadcrumbsUl>
+        {breadcrumbs.map((breadcrumb, breadcrumbIndex) => {
+          // Last element doesn't have a "href" because it's the current page (typesafe)
+          const isLast = !("href" in breadcrumb);
+          return (
+            <BreadcrumbsLi key={`${breadcrumb.text}`}>
+              {breadcrumbIndex > 0 && (
+                <OakIcon
+                  $height={"spacing-20"}
+                  $width={"spacing-20"}
+                  iconName="chevron-right"
+                  style={{ marginTop: 2 }}
+                />
+              )}
+              {isLast && (
+                <OakSpan aria-current="page">{breadcrumb.text}</OakSpan>
+              )}
+              {!isLast && (
+                <OakSecondaryLink href={breadcrumb.href ?? ""}>
+                  {breadcrumb.text}
+                </OakSecondaryLink>
+              )}
+            </BreadcrumbsLi>
+          );
+        })}
+      </BreadcrumbsUl>
+    </OakBox>
   );
 };
