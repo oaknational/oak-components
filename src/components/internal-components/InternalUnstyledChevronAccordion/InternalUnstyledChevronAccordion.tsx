@@ -84,7 +84,12 @@ const Accordion = ({
   const { isOpen } = useAccordionContext();
 
   return (
-    <OakFlex $flexDirection={"column"} {...styleProps}>
+    <OakFlex
+      $flexDirection={"column"}
+      $pt={isOpen ? "spacing-48" : "spacing-32"}
+      $pb={isOpen ? "spacing-16" : "spacing-0"}
+      {...styleProps}
+    >
       <OakFlex $justifyContent={"space-between"} $alignItems={"center"}>
         {header}
         <OakBox>

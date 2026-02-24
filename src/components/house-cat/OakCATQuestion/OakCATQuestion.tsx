@@ -120,7 +120,6 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
         $width={"100%"}
         $justifyContent={"flex-start"}
         $background={"bg-primary"}
-        $pv={"spacing-48"}
         $ph={"spacing-40"}
         $statusColor={statusColorMap[status]}
         $flexDirection={"column"}
