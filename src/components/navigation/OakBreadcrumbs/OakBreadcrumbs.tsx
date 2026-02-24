@@ -82,7 +82,7 @@ export const OakBreadcrumbs = ({
               )}
               {!isLast && (
                 <OakBreadcrumbText>
-                  <OakSecondaryLink href={breadcrumb.href ?? ""}>
+                  <OakSecondaryLink href={breadcrumb.href}>
                     {breadcrumb.text}
                   </OakSecondaryLink>
                 </OakBreadcrumbText>
