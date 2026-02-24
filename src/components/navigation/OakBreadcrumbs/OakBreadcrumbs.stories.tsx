@@ -45,25 +45,6 @@ export const Default: Story = {
   render: (args) => <OakBreadcrumbs {...args} />,
 };
 
-export const WithLastLinkDisabled: Story = {
-  args: {
-    breadcrumbs: [
-      {
-        text: "Home",
-        href: "#home",
-      },
-      {
-        text: "Ceramics",
-        href: "#ceramics",
-      },
-      {
-        text: "Chicken Jugs",
-      },
-    ],
-  },
-  render: (args) => <OakBreadcrumbs {...args} />,
-};
-
 export const WithLongTextTruncation: Story = {
   args: {
     breadcrumbs: [

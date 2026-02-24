@@ -8,7 +8,7 @@ import { OakBox, OakBoxProps } from "@/components/layout-and-structure";
 
 export type OakBreadcrumb = {
   text: string;
-  href?: string;
+  href: string;
 };
 
 // Used for the last page
@@ -17,6 +17,9 @@ export type OakBreadcrumbWithoutHref = {
 };
 
 export type OakBreadcrumbsProps = {
+  /**
+   * The list of breadcrumbs to display in the UI
+   */
   breadcrumbs: [...OakBreadcrumb[], OakBreadcrumbWithoutHref];
 };
 
