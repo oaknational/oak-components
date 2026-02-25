@@ -85,6 +85,7 @@ export const Default: Story = {
         $background={"bg-decorative1-subdued"}
         $pa="spacing-12"
         $height={"spacing-360"}
+        $mb={"spacing-32"}
       >
         Dummy answers Section
       </OakBox>
@@ -139,6 +140,7 @@ export const InitiallyOpen: Story = {
         $background={"bg-decorative1-subdued"}
         $pa="spacing-12"
         $height={"spacing-360"}
+        $mb={"spacing-32"}
       >
         Dummy answers Section
       </OakBox>
@@ -182,6 +184,7 @@ export const WithMultilineText: Story = {
         $background={"bg-decorative1-subdued"}
         $pa="spacing-12"
         $height={"spacing-360"}
+        $mb={"spacing-32"}
       >
         Dummy answers Section
       </OakBox>
@@ -231,6 +234,7 @@ export const WithMultilineTextAndStemImage: Story = {
         $background={"bg-decorative1-subdued"}
         $pa="spacing-12"
         $height={"spacing-360"}
+        $mb={"spacing-32"}
       >
         Dummy answers Section
       </OakBox>

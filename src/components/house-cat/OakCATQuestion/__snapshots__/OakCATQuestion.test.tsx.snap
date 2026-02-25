@@ -145,7 +145,6 @@ exports[`OakCATQuestion matches snapshot 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 2rem;
 }
 
 .c19 {
