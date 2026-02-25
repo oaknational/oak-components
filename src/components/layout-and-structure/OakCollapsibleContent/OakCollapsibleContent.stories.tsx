@@ -59,7 +59,7 @@ export const Default: Story = {
 };
 
 export const WithControl: Story = {
-  render: (args) => {
+  render: function WithControlStory(args) {
     const [isOpen, setIsOpen] = useState(true);
     return (
       <>

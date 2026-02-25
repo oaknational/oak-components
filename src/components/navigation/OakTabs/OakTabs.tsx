@@ -1,20 +1,33 @@
 import React from "react";
 import styled from "styled-components";
+import Link from "next/link";
 
-import { OakFlex } from "@/components/layout-and-structure/OakFlex";
-import { InternalButton } from "@/components/internal-components/InternalButton";
-import { OakUiRoleToken } from "@/styles";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { ResponsiveValues } from "@/styles/utils/responsiveStyle";
+import { InternalButton } from "@/components/internal-components/InternalButton";
+import { OakFlex } from "@/components/layout-and-structure";
+import { OakUiRoleToken } from "@/styles";
+
+type Tab<T> = {
+  label: T;
+} & ({ type: "button" } | { type: "link"; href: string });
 
 export type OakTabsProps<T extends string> = {
   sizeVariant: ResponsiveValues<"default" | "compact">;
   colorVariant: "black" | "white";
-  tabs: Array<T>;
+  /**
+   * A list of the tabs to be rendered.
+   * Accepts a `label` and a `type` property for each tab. If the type is `link` then a `href` is required.
+   */
+  tabs: Array<Tab<T>>;
   activeTab: T;
-  onTabClick: (tab: T) => void;
+  /**
+   * Optional callback fn for the tab buttons.
+   *
+   */
+  onTabClick?: (tab: T, event: Event) => void;
 };
 
 const StyledFocusOutline = styled(OakFlex)``;
@@ -46,6 +59,7 @@ export function OakTabs<T extends string>(props: Readonly<OakTabsProps<T>>) {
   const hoverBackground =
     colorVariant === "black" ? "bg-btn-primary-hover" : "bg-neutral-stronger";
   const hoverText = colorVariant === "black" ? "text-inverted" : "text-primary";
+
   return (
     <OakFlex
       $height={sizeVariant === "compact" ? "spacing-40" : "spacing-56"}
@@ -61,11 +75,14 @@ export function OakTabs<T extends string>(props: Readonly<OakTabsProps<T>>) {
       }
     >
       {tabs.map((tab) => {
-        const isSelected = activeTab === tab;
+        const { label, type } = tab;
+        const isSelected = activeTab === label;
 
         return (
           <StyledTabButton
-            key={tab}
+            element={type === "link" ? Link : undefined}
+            href={type === "link" ? tab.href : undefined}
+            key={label}
             $background={isSelected ? "bg-decorative1-main" : backgroundColor}
             $color={isSelected ? "text-primary" : textColor}
             $hoverColor={isSelected ? "text-primary" : hoverText}
@@ -76,7 +93,11 @@ export function OakTabs<T extends string>(props: Readonly<OakTabsProps<T>>) {
             $borderColor={
               isSelected ? "border-decorative1-stronger" : backgroundColor
             }
-            onClick={() => onTabClick(tab)}
+            onClick={(event: Event) => {
+              if (onTabClick) {
+                onTabClick(label, event);
+              }
+            }}
           >
             <StyledFocusOutline
               $width={"100%"}
@@ -87,7 +108,7 @@ export function OakTabs<T extends string>(props: Readonly<OakTabsProps<T>>) {
               $justifyContent={"center"}
               $whiteSpace={"nowrap"}
             >
-              {tab}
+              {label}
             </StyledFocusOutline>
           </StyledTabButton>
         );

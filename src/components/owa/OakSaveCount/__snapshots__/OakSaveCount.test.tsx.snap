@@ -27,6 +27,7 @@ exports[`OakSaveCount should match snapshot 1`] = `
   min-width: 1.5rem;
   height: 2rem;
   min-height: 2rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -121,7 +122,7 @@ exports[`OakSaveCount should match snapshot 1`] = `
     <div
       class="c2 c3 oak-save-count"
     >
-      <div
+      <span
         class="c4"
         data-testid="bookmark-outlined"
       >
@@ -134,7 +135,7 @@ exports[`OakSaveCount should match snapshot 1`] = `
           src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1734519491/icons/bookmark-outlined_rxe5v0.svg"
           style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
         />
-      </div>
+      </span>
       <div
         class="c6"
       >

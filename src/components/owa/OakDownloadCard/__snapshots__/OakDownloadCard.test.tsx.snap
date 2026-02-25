@@ -27,6 +27,7 @@ exports[`OakDownloadCard matches snapshot with fileSizeSlot 1`] = `
   min-width: 3rem;
   height: 3rem;
   min-height: 3rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -88,6 +89,7 @@ exports[`OakDownloadCard matches snapshot with fileSizeSlot 1`] = `
   min-width: 100%;
   height: 100%;
   min-height: 100%;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -261,7 +263,7 @@ input:checked + .c21 {
         <div
           class="c6 c7"
         >
-          <div
+          <span
             class="c8"
           >
             <img
@@ -273,7 +275,7 @@ input:checked + .c21 {
               src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953657/icons/hz4l3iq6i68kazvkvorq.svg"
               style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
             />
-          </div>
+          </span>
         </div>
         <div
           class="c10 c11"
@@ -314,7 +316,7 @@ input:checked + .c21 {
             <div
               class="c21 c22 c23"
             >
-              <div
+              <span
                 class="c24"
               >
                 <img
@@ -326,7 +328,7 @@ input:checked + .c21 {
                   src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
                   style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                 />
-              </div>
+              </span>
             </div>
           </div>
         </div>
@@ -363,6 +365,7 @@ exports[`OakDownloadCard matches snapshot without fileSizeSlot 1`] = `
   min-width: 3rem;
   height: 3rem;
   min-height: 3rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -424,6 +427,7 @@ exports[`OakDownloadCard matches snapshot without fileSizeSlot 1`] = `
   min-width: 100%;
   height: 100%;
   min-height: 100%;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -597,7 +601,7 @@ input:checked + .c21 {
         <div
           class="c6 c7"
         >
-          <div
+          <span
             class="c8"
           >
             <img
@@ -609,7 +613,7 @@ input:checked + .c21 {
               src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953657/icons/hz4l3iq6i68kazvkvorq.svg"
               style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
             />
-          </div>
+          </span>
         </div>
         <div
           class="c10 c11"
@@ -645,7 +649,7 @@ input:checked + .c21 {
             <div
               class="c21 c22 c23"
             >
-              <div
+              <span
                 class="c24"
               >
                 <img
@@ -657,7 +661,7 @@ input:checked + .c21 {
                   src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
                   style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                 />
-              </div>
+              </span>
             </div>
           </div>
         </div>

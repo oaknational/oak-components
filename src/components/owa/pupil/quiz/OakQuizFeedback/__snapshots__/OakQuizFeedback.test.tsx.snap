@@ -20,6 +20,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
   min-width: 100%;
   height: 100%;
   min-height: 100%;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -106,7 +107,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
       <div
         class="c2"
       >
-        <div
+        <span
           class="c3"
         >
           <img
@@ -118,7 +119,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
             src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
             style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
           />
-        </div>
+        </span>
       </div>
       <span
         class="c5"
@@ -145,7 +146,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
       <div
         class="c7"
       >
-        <div
+        <span
           class="c3"
         >
           <img
@@ -157,7 +158,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
             src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
             style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
           />
-        </div>
+        </span>
       </div>
       <span
         class="c8"
@@ -184,7 +185,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
       <div
         class="c2"
       >
-        <div
+        <span
           class="c3"
         >
           <img
@@ -196,7 +197,7 @@ exports[`OakQuizFeedback matches snapshot 1`] = `
             src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
             style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
           />
-        </div>
+        </span>
       </div>
       <span
         class="c5"

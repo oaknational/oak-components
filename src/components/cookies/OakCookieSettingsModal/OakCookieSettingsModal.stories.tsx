@@ -58,7 +58,7 @@ const meta: Meta<typeof OakCookieSettingsModal> = {
       },
     ],
   },
-  render: (args) => {
+  render: function DefaultStory(args) {
     const [, updateArgs] = useArgs();
     const onClose = () => updateArgs({ isOpen: false });
     const onOpen = () => updateArgs({ isOpen: true });

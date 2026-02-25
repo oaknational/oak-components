@@ -42,6 +42,7 @@ exports[`OakToast matches snapshot 1`] = `
   min-width: 2rem;
   height: 2rem;
   min-height: 2rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -96,6 +97,7 @@ exports[`OakToast matches snapshot 1`] = `
   min-width: 1.5rem;
   height: 1.5rem;
   min-height: 1.5rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -274,7 +276,7 @@ exports[`OakToast matches snapshot 1`] = `
       <div
         class="c4 c5"
       />
-      <div
+      <span
         class="c6"
       >
         <img
@@ -286,7 +288,7 @@ exports[`OakToast matches snapshot 1`] = `
           src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895534/icons/Icon-Success_aiiprx.svg"
           style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
         />
-      </div>
+      </span>
     </div>
     <span>
       This is a toast message
@@ -307,7 +309,7 @@ exports[`OakToast matches snapshot 1`] = `
             <div
               class="c3"
             >
-              <div
+              <span
                 class="c17 shadow"
               >
                 <img
@@ -319,8 +321,8 @@ exports[`OakToast matches snapshot 1`] = `
                   src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
                   style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                 />
-              </div>
-              <div
+              </span>
+              <span
                 class="c19 highlight"
               >
                 <img
@@ -332,8 +334,8 @@ exports[`OakToast matches snapshot 1`] = `
                   src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
                   style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                 />
-              </div>
-              <div
+              </span>
+              <span
                 class="c21"
                 data-icon-for="button"
               >
@@ -346,7 +348,7 @@ exports[`OakToast matches snapshot 1`] = `
                   src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
                   style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                 />
-              </div>
+              </span>
             </div>
           </div>
           <span

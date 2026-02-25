@@ -3,8 +3,8 @@ import { createPortal } from "react-dom";
 
 import { OakCloseButton } from "@/components/buttons/OakCloseButton";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
-import useIsScrolled from "@/hooks/useIsScrolled";
-import useMounted from "@/hooks/useMounted";
+import { useIsScrolled } from "@/hooks/useIsScrolled";
+import { useMounted } from "@/hooks/useMounted";
 import InternalModalTransition from "@/components/internal-components/InternalModalTransition/InternalModalTransition";
 import { BorderStyleProps } from "@/styles/utils/borderStyle";
 

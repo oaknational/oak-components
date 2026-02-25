@@ -128,7 +128,7 @@ export const Feedback: Story = {
     canvas.getByLabelText("correctly selected").click(); // clicking the answers to select them in the story
     canvas.getByLabelText("incorrectly selected").click();
   },
-  render: (args) => {
+  render: function FeedbackStory(args) {
     // These states are just a way to demonstrate the various feedback states in the story
     const [feedbackCorrect, setFeedbackCorrect] = useState<
       "correct" | "incorrect" | null | undefined

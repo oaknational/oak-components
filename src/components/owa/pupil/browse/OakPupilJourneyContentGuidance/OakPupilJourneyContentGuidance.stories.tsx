@@ -36,7 +36,7 @@ export default meta;
 type Story = StoryObj<typeof OakPupilJourneyContentGuidance>;
 
 export const Default: Story = {
-  render: (args) => {
+  render: function DefaultStory(args) {
     const [, updateArgs] = useArgs();
     const onClose = () => updateArgs({ isOpen: false });
     const onOpen = () => updateArgs({ isOpen: true });

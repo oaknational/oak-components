@@ -66,11 +66,11 @@ export const OakRadioGroup = (props: OakRadioGroupProps) => {
     ...rest
   } = props;
 
-  const [currentValue, setValue] = useState(defaultValue);
+  const [currentValue, setCurrentValue] = useState(defaultValue);
 
   const handleValueUpdated = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (value === undefined) {
-      setValue(event.target.value);
+      setCurrentValue(event.target.value);
     }
     if (onChange) {
       onChange(event);
