@@ -74,10 +74,12 @@ export const OakCookieSettingsModal = ({
     }
 
     for (const policyId of formData.getAll("consent")) {
-      newConsents[policyId.toString()] = {
-        policyId: policyId.toString(),
-        consentState: "granted",
-      };
+      if (typeof policyId === "string") {
+        newConsents[policyId] = {
+          policyId: policyId,
+          consentState: "granted",
+        };
+      }
     }
 
     onConfirm(Object.values(newConsents));
