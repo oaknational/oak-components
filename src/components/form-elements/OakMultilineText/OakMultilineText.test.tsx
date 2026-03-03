@@ -6,6 +6,7 @@ import { OakMultilineText } from "./OakMultilineText";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { OakP } from "@/components/typography/OakP";
+import { getInternalPadding } from "@/styles/helpers/getInternalPadding";
 
 describe("OakMultilineText", () => {
   it("renders", () => {
@@ -132,6 +133,25 @@ describe("OakMultilineText", () => {
     await user.paste("Testing paste");
     expect(textArea).toHaveValue("HelloTesti");
     expect(textArea).toHaveFocus();
+  });
+
+  it("sets the textarea padding to the correct value for a given height and font size", async () => {
+    const height = 80;
+
+    const { getByRole } = renderWithTheme(
+      <OakMultilineText
+        charLimit={10}
+        $height={`spacing-${height}`}
+        disabled={false}
+        id={"1"}
+        name="textarea"
+      />,
+    );
+
+    const expectedPadding = getInternalPadding(`spacing-${height}`);
+
+    const textArea = getByRole("textbox");
+    expect(textArea).toHaveStyle(`padding: ${expectedPadding}`);
   });
 
   it("counts characters correctly when text is edited", async () => {

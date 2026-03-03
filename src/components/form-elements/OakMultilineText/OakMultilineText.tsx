@@ -1,6 +1,7 @@
 import React, { useState, forwardRef } from "react";
 import styled from "styled-components";
 
+import { getInternalPadding } from "@/styles/helpers/getInternalPadding";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import {
   OakTextArea,
@@ -12,6 +13,7 @@ import { OakIcon } from "@/components/images-and-icons/OakIcon";
 import { OakGrid } from "@/components/layout-and-structure/OakGrid";
 import { OakGridArea } from "@/components/layout-and-structure/OakGridArea";
 import { parseColor } from "@/styles/helpers/parseColor";
+import { useMediaQuery } from "@/hooks";
 
 export type OakMultilineTextProps = {
   /**
@@ -102,6 +104,9 @@ const UnstyledComponent = forwardRef(
       onChange?.(e);
     };
 
+    const heightForDevice = getDeviceToken($height);
+    const textAreaPadding = getInternalPadding(heightForDevice);
+
     return (
       <OakFlex
         $flexDirection={["column"]}
@@ -129,7 +134,7 @@ const UnstyledComponent = forwardRef(
           $color={"text-primary"}
           $borderRadius={"border-radius-m"}
           $ba={"border-solid-m"}
-          $pa={"spacing-12"}
+          style={{ padding: textAreaPadding, overscrollBehavior: "none" }}
           $borderColor={
             errors && errors?.length > 0
               ? "border-error"
@@ -216,3 +221,19 @@ const UnstyledComponent = forwardRef(
  *  - useImperativeHandle could be used to expose a clear method
  */
 export const OakMultilineText = UnstyledComponent;
+
+function getDeviceToken<T>(values: T | Array<T>): T {
+  const isDesktop = useMediaQuery("desktop");
+  const isTablet = useMediaQuery("tablet");
+
+  if (Array.isArray(values)) {
+    if (isDesktop) {
+      return values[0] as T;
+    }
+    if (isTablet) {
+      return values[1] || (values[0] as T);
+    }
+    return values[2] || (values[0] as T);
+  }
+  return values;
+}
