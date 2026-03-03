@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 
 import { Device, getMediaQuery } from "@/styles/utils/responsiveStyle";
 
-function getBreakpoint(): Device {
+function singletonMatches() {
   const mediaDesktop = globalThis.matchMedia(getMediaQuery("desktop"));
   const mediaTablet = globalThis.matchMedia(getMediaQuery("tablet"));
-  console.log(getMediaQuery("tablet"));
-  console.log("mediaDesktop.matches=", mediaDesktop);
-  console.log("mediaTablet.matches=", mediaTablet);
+  return { mediaDesktop, mediaTablet };
+}
+
+function matchBreakpoint(): Device {
+  const { mediaDesktop, mediaTablet } = singletonMatches();
   if (mediaDesktop.matches) {
     return "desktop";
   } else if (mediaTablet.matches) {
@@ -17,10 +19,10 @@ function getBreakpoint(): Device {
 }
 
 export const useBreakpoint = () => {
-  const [value, setValue] = useState<Device>(() => getBreakpoint());
+  const [value, setValue] = useState<Device>(() => matchBreakpoint());
 
   useEffect(() => {
-    const listener = () => setValue(getBreakpoint());
+    const listener = () => setValue(matchBreakpoint());
     globalThis.addEventListener("resize", listener);
     return () => {
       globalThis.removeEventListener("resize", listener);
