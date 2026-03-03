@@ -77,7 +77,12 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
   );
 
   const body = (
-    <OakFlex $flexDirection={"column"} $width={"100%"} $mt={"spacing-24"}>
+    <OakFlex
+      $flexDirection={"column"}
+      $width={"100%"}
+      $mt={"spacing-24"}
+      $gap={"spacing-32"}
+    >
       {/* this has the effect of stretching the container and the items within */}
       <OakFlex $alignSelf={"stretch"} $flexDirection={"column"}>
         {answersSection}
