@@ -135,8 +135,8 @@ describe("OakMultilineText", () => {
     expect(textArea).toHaveFocus();
   });
 
-  it("sets the textarea padding to the correct value for a given height and font size", async () => {
-    const height = 80;
+  it("sets the textarea padding to the correct relative value for a given height and font size", async () => {
+    const height = 32;
 
     const { getByRole } = renderWithTheme(
       <OakMultilineText

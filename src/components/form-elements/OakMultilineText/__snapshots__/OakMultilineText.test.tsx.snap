@@ -144,7 +144,7 @@ exports[`OakMultilineText matches snapshot 1`] = `
       id="1"
       maxlength="200"
       name="textarea"
-      style="padding: 14px; overscroll-behavior: none;"
+      style="padding: 12px; overscroll-behavior: none;"
     />
     <div
       class="c4 c5"
