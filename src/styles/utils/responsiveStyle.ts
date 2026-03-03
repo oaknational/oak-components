@@ -29,7 +29,7 @@ export type Device = "mobile" | "tablet" | "desktop";
 
 const mediaQueries: Record<Device, string> = {
   mobile: `(max-width: ${getBreakpoint("small") - 1}px)`,
-  tablet: `(min-width: ${getBreakpoint("small")}px and max-width: ${
+  tablet: `(min-width: ${getBreakpoint("small")}px) and (max-width: ${
     getBreakpoint("large") - 1
   }px)`,
   desktop: `(min-width: ${getBreakpoint("large")}px)`,
