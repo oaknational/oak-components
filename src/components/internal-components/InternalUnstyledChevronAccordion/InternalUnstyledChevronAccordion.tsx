@@ -86,8 +86,8 @@ const Accordion = ({
   return (
     <OakFlex
       $flexDirection={"column"}
-      $pt={isOpen ? "spacing-48" : "spacing-32"}
-      $pb={isOpen ? "spacing-16" : "spacing-0"}
+      $pt={"spacing-40"}
+      $pb={"spacing-40"}
       {...styleProps}
     >
       <OakFlex $justifyContent={"space-between"} $alignItems={"center"}>
@@ -140,7 +140,7 @@ export const InternalUnstyledChevronAccordion = ({
 }: InternalUnstyledChevronAccordionProps) => {
   return (
     <InternalAccordionProvider isInitialOpen={initialOpen}>
-      <Accordion initialOpen {...props} />
+      <Accordion {...props} />
     </InternalAccordionProvider>
   );
 };

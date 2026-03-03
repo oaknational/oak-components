@@ -2,8 +2,8 @@
 
 exports[`InternalUnstyledChevronAccordion matches snapshot 1`] = `
 .c0 {
-  padding-top: 3rem;
-  padding-bottom: 1rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 

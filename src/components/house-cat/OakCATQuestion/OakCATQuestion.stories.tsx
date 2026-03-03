@@ -52,11 +52,7 @@ export const Default: Story = {
       </OakBox>
     ),
     questionStem: (
-      <OakBox
-        $background={"bg-decorative2-subdued"}
-        $pa="spacing-12"
-        $mb="spacing-32"
-      >
+      <OakBox $background={"bg-decorative2-subdued"} $pa="spacing-12">
         Dummy Question Text Input
       </OakBox>
     ),
@@ -165,13 +161,7 @@ export const WithMultilineText: Story = {
       </OakBox>
     ),
     questionStem: (
-      <OakBox
-        $background={"bg-decorative2-subdued"}
-        $pa="spacing-12"
-        $mb="spacing-32"
-      >
-        Dummy Question Text Input
-      </OakBox>
+      <OakMultilineText charLimit={100} name="questionStem" id="questionStem" />
     ),
     answersSection: (
       <OakBox
@@ -201,7 +191,7 @@ export const WithMultilineText: Story = {
   },
 };
 
-export const WithMultilineTextAndStemImage: Story = {
+export const WithStemImage: Story = {
   render: (args) => <OakCATQuestion {...args} />,
   args: {
     questionNumber: 1,
