@@ -32,14 +32,11 @@ export type OakMultilineTextProps = {
   label?: string;
 } & Omit<OakTextAreaProps, "$width">;
 
-type StyledOakTextAreaProps = {
-  isError?: boolean;
-} & OakTextAreaProps;
+type StyledOakTextAreaProps = OakTextAreaProps;
 
 const StyledOakTextArea = styled(OakTextArea)<StyledOakTextAreaProps>`
   &:focus-visible {
-    border-color: ${(props) =>
-      props.isError ? parseColor("icon-error") : parseColor("border-primary")};
+    border-color: ${parseColor("border-primary")};
   }
 
   &:hover {
@@ -104,7 +101,7 @@ const UnstyledComponent = forwardRef(
       onChange?.(e);
     };
 
-    const heightForDevice = getDeviceToken($height);
+    const heightForDevice = useDevice($height);
     const textAreaPadding = getInternalPadding(heightForDevice);
 
     return (
@@ -222,7 +219,8 @@ const UnstyledComponent = forwardRef(
  */
 export const OakMultilineText = UnstyledComponent;
 
-function getDeviceToken<T>(values: T | Array<T>): T {
+// TODO use common hook when implemented
+export function useDevice<T>(values: T | Array<T>): T {
   const isDesktop = useMediaQuery("desktop");
   const isTablet = useMediaQuery("tablet");
 

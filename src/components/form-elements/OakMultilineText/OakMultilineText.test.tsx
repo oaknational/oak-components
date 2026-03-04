@@ -135,6 +135,23 @@ describe("OakMultilineText", () => {
     expect(textArea).toHaveFocus();
   });
 
+  it("uses default height and overflow styling to OakTextInput", async () => {
+    const { getByRole } = renderWithTheme(
+      <OakMultilineText
+        charLimit={10}
+        $height="spacing-56"
+        disabled={false}
+        id={"1"}
+        name="textarea"
+      />,
+    );
+
+    const textArea = getByRole("textbox");
+    expect(window.getComputedStyle(textArea).overflowY).toBe("auto");
+    expect(window.getComputedStyle(textArea).whiteSpace).toBe("wrap");
+    expect(window.getComputedStyle(textArea)[19]).toBe("height");
+  });
+
   it("sets the textarea padding to the correct relative value for a given height and font size", async () => {
     const height = 32;
 
