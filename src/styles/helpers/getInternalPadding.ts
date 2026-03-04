@@ -14,5 +14,5 @@ export function getInternalPadding(
     Math.floor((heightNumber - textLineHeight) / 2) - 1,
     0,
   );
-  return `${padding > MAX_PADDING ? MAX_PADDING : padding}px`;
+  return `${Math.min(padding, MAX_PADDING)}px`;
 }
