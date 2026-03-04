@@ -140,4 +140,18 @@ describe(OakLessonNavItem, () => {
 
     expect(getByTestId("intro").tagName).toBe("DIV");
   });
+
+  it("renders disabled behavior and loading spinner when loading", () => {
+    const { getByTestId, getByText } = renderWithTheme(
+      <OakLessonNavItem
+        data-testid="intro"
+        lessonSectionName="intro"
+        progress="in-progress"
+        isLoading
+      />,
+    );
+
+    expect(getByTestId("intro").tagName).toBe("DIV");
+    expect(getByText("Loading")).toBeInTheDocument();
+  });
 });

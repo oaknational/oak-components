@@ -11,6 +11,7 @@ import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { OakUiRoleToken } from "@/styles";
+import { OakLoadingSpinner } from "@/components/messaging-and-feedback/OakLoadingSpinner";
 
 type LessonSectionName = "intro" | "starter-quiz" | "video" | "exit-quiz";
 
@@ -20,6 +21,10 @@ type BaseOakLessonNavItemProps<C extends ElementType> = {
    * Disable the section preventing navigation to it.
    */
   disabled?: boolean;
+  /**
+   * Display loading state while preserving disabled appearance and behavior.
+   */
+  isLoading?: boolean;
 } & ComponentPropsWithoutRef<C>;
 
 type QuizSectionProps = {
@@ -124,14 +129,23 @@ const FlexedOakBox = styled(OakBox)`
 export const OakLessonNavItem = <C extends ElementType = "a">(
   props: OakLessonNavItemProps<C>,
 ) => {
-  const { as, lessonSectionName, progress, disabled, href, onClick, ...rest } =
-    props;
+  const {
+    as,
+    lessonSectionName,
+    progress,
+    disabled,
+    isLoading,
+    href,
+    onClick,
+    ...rest
+  } = props;
+  const isDisabled = Boolean(disabled || isLoading);
   const [notStartedBackgroundColor, backgroundColor, borderColor] =
     pickColorsForSection(lessonSectionName);
 
   return (
     <StyledLessonNavItem
-      as={disabled ? "div" : as ?? "a"}
+      as={isDisabled ? "div" : as ?? "a"}
       $gap="spacing-24"
       $alignItems="center"
       $background={
@@ -142,10 +156,10 @@ export const OakLessonNavItem = <C extends ElementType = "a">(
       $borderRadius="border-radius-l"
       $borderColor={borderColor}
       $ba="border-solid-l"
-      $disabled={disabled}
+      $disabled={isDisabled}
       $color="text-primary"
-      href={disabled ? undefined : href}
-      onClick={disabled ? undefined : onClick}
+      href={isDisabled ? undefined : href}
+      onClick={isDisabled ? undefined : onClick}
       {...rest}
     >
       <OakFlex $width="spacing-80" $justifyContent="center">
@@ -159,7 +173,7 @@ export const OakLessonNavItem = <C extends ElementType = "a">(
         <StyledLabel
           as="strong"
           $font={["heading-6", "heading-5"]}
-          $color={disabled ? "text-disabled" : "text-primary"}
+          $color={isDisabled ? "text-disabled" : "text-primary"}
         >
           {pickLabelForSection(lessonSectionName)}
         </StyledLabel>
@@ -168,7 +182,18 @@ export const OakLessonNavItem = <C extends ElementType = "a">(
         </OakBox>
       </FlexedOakBox>
       {renderQuestionCounter(props)}
-      <StyledRoundIcon iconName="chevron-right" $disabled={disabled} />
+      {isLoading ? (
+        <OakFlex
+          $width="spacing-40"
+          $height="spacing-40"
+          $alignItems="center"
+          $justifyContent="center"
+        >
+          <OakLoadingSpinner $width="spacing-24" />
+        </OakFlex>
+      ) : (
+        <StyledRoundIcon iconName="chevron-right" $disabled={isDisabled} />
+      )}
     </StyledLessonNavItem>
   );
 };
