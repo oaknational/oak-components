@@ -73,6 +73,12 @@ export const OakButtonWithDropdown = ({
     ) as HTMLElement[];
   };
 
+  const handleCloseOnChange = () => {
+    if (closeOnChange) {
+      setIsOpen(false);
+    }
+  };
+
   // Handle clicks  the dropdown to close it
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -108,9 +114,17 @@ export const OakButtonWithDropdown = ({
         }
 
         case "Enter": {
-          if (closeOnChange) {
-            setIsOpen(false);
-          }
+          handleCloseOnChange();
+          break;
+        }
+
+        case "Return": {
+          handleCloseOnChange();
+          break;
+        }
+
+        case "Space": {
+          handleCloseOnChange();
           break;
         }
       }
