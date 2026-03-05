@@ -158,7 +158,7 @@ export const leadingButtonIcon: OakButtonWithDropdownStory = {
   },
 };
 
-export const ButtonWithDropdownCloseOnClick: OakButtonWithDropdownStory = {
+export const ButtonWithDropdownCloseOnChange: OakButtonWithDropdownStory = {
   render: (args) => (
     <OakFlex $height={"spacing-240"}>
       <OakFlex $gap="spacing-24">
