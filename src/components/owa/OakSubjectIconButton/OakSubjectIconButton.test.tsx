@@ -8,7 +8,7 @@ import { oakDefaultTheme } from "@/styles";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { rgbToHex } from "@/test-helpers";
 
-describe("OakPupilJourneySubjectButton", () => {
+describe("OakSubjectIconButton", () => {
   it("renders", () => {
     const { getByRole } = renderWithTheme(
       <OakSubjectIconButton
@@ -34,7 +34,7 @@ describe("OakPupilJourneySubjectButton", () => {
     );
     expect(container).toMatchSnapshot();
   });
-  describe("OakPupilJourneySubjectButton - Phase Styling", () => {
+  describe("OakSubjectIconButton - Phase Styling", () => {
     it("applies correct styles for primary phase", () => {
       const { getByRole } = renderWithTheme(
         <OakSubjectIconButton

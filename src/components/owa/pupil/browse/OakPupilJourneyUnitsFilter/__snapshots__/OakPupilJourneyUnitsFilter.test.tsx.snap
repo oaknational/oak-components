@@ -211,6 +211,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   padding-right: 1rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+  display: inline-block;
   border: 0.125rem solid;
   border-color: #222222;
   border-radius: 0.25rem;
@@ -238,6 +239,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   padding-right: 1rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+  display: inline-block;
   border: 0.125rem solid;
   border-color: #222222;
   border-radius: 0.25rem;
@@ -256,7 +258,6 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   position: relative;
   width: 100%;
   height: 100%;
-  display: inline-block;
 }
 
 .c25:hover {
@@ -295,7 +296,6 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   position: relative;
   width: 100%;
   height: 100%;
-  display: inline-block;
 }
 
 .c29:hover {

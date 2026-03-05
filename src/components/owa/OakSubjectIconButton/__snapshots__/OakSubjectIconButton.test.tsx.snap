@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`OakPupilJourneySubjectButton matches snapshot 1`] = `
+exports[`OakSubjectIconButton matches snapshot 1`] = `
 .c0 {
   position: relative;
   width: -webkit-max-content;
@@ -81,6 +81,10 @@ exports[`OakPupilJourneySubjectButton matches snapshot 1`] = `
   padding-right: 0.75rem;
   padding-top: 0.75rem;
   padding-bottom: 1.5rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   border: 0.125rem solid;
   border-color: #cf9cc3;
   border-radius: 0.25rem;
@@ -99,7 +103,6 @@ exports[`OakPupilJourneySubjectButton matches snapshot 1`] = `
   position: relative;
   width: 100%;
   height: 100%;
-  display: inline-block;
 }
 
 .c4:hover {
