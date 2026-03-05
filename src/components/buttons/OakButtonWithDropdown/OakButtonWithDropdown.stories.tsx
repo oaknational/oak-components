@@ -166,28 +166,21 @@ export const ButtonWithDropdownCloseOnChange: OakButtonWithDropdownStory = {
     <OakFlex $height={"spacing-240"}>
       <OakFlex $gap="spacing-24">
         <OakButtonWithDropdown closeOnChange={true} {...args}>
-          <OakButtonWithDropdown.Item aria-label="Button 1">
+          <OakSecondaryButton aria-label="Button 1">
             Button 1
-          </OakButtonWithDropdown.Item>
+          </OakSecondaryButton>
 
-          <OakButtonWithDropdown.Item aria-label="Longer button 2">
+          <OakSecondaryButton aria-label="Longer button 2">
             Longer button 2
-          </OakButtonWithDropdown.Item>
+          </OakSecondaryButton>
 
-          <OakButtonWithDropdown.Item aria-label="Button 3">
+          <OakSecondaryButton aria-label="Button 3">
             Button 3
-          </OakButtonWithDropdown.Item>
+          </OakSecondaryButton>
 
-          <OakButtonWithDropdown.Divider />
-
-          <OakButtonWithDropdown.Item
-            element="a"
-            href="#"
-            aria-label="Button 4"
-            iconName="external"
-          >
+          <OakSecondaryButton aria-label="Button 4">
             Button 4
-          </OakButtonWithDropdown.Item>
+          </OakSecondaryButton>
         </OakButtonWithDropdown>
 
         <OakButtonWithDropdown {...args} primaryActionText="Disabled" disabled>

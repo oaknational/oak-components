@@ -106,6 +106,13 @@ export const OakButtonWithDropdown = ({
           focusableElements[nextUpIndex]?.focus();
           break;
         }
+
+        case "Enter": {
+          if (closeOnChange) {
+            setIsOpen(false);
+          }
+          break;
+        }
       }
     };
 
