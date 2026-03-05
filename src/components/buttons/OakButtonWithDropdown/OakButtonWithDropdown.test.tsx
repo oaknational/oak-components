@@ -314,7 +314,7 @@ describe("OakButtonWithDropdown", () => {
     expect(screen.getByRole("menu")).toBeInTheDocument();
   });
 
-  it("closes dropdown on change when closeOnChange is true", async () => {
+  it("closes dropdown on click when closeOnChange is true", async () => {
     const user = userEvent.setup();
 
     renderWithTheme(
@@ -335,7 +335,7 @@ describe("OakButtonWithDropdown", () => {
     expect(screen.queryByRole("menu")).not.toBeInTheDocument();
   });
 
-  it("does not close dropdown on change when closeOnChange is undefined", async () => {
+  it("does not close dropdown on click when closeOnChange is undefined", async () => {
     const user = userEvent.setup();
 
     renderWithTheme(
@@ -352,6 +352,50 @@ describe("OakButtonWithDropdown", () => {
     // Click menu item
     const menuItem = screen.getByText("Edit");
     await user.click(menuItem);
+
+    expect(screen.queryByRole("menu")).toBeInTheDocument();
+  });
+
+  it("closes dropdown on enter when closeOnChange is true", async () => {
+    const user = userEvent.setup();
+
+    renderWithTheme(
+      <OakButtonWithDropdown closeOnChange={true} {...defaultProps}>
+        {simpleChildren}
+      </OakButtonWithDropdown>,
+    );
+
+    const primaryButton = screen.getByRole("button", { name: /actions/i });
+    await user.click(primaryButton);
+
+    expect(screen.getByRole("menu")).toBeInTheDocument();
+
+    // Click menu item
+    await user.tab();
+    expect(screen.getByText("Edit")).toHaveFocus();
+    await user.keyboard("{Enter}");
+
+    expect(screen.queryByRole("menu")).not.toBeInTheDocument();
+  });
+
+  it("does not close dropdown on enter when closeOnChange is undefined", async () => {
+    const user = userEvent.setup();
+
+    renderWithTheme(
+      <OakButtonWithDropdown {...defaultProps}>
+        {simpleChildren}
+      </OakButtonWithDropdown>,
+    );
+
+    const primaryButton = screen.getByRole("button", { name: /actions/i });
+    await user.click(primaryButton);
+
+    expect(screen.getByRole("menu")).toBeInTheDocument();
+
+    // Click menu item
+    await user.tab();
+    expect(screen.getByText("Edit")).toHaveFocus();
+    await user.keyboard("{Enter}");
 
     expect(screen.queryByRole("menu")).toBeInTheDocument();
   });
