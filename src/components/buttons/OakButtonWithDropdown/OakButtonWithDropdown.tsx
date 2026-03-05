@@ -123,7 +123,7 @@ export const OakButtonWithDropdown = ({
           break;
         }
 
-        case "Space": {
+        case " ": {
           handleCloseOnChange();
           break;
         }

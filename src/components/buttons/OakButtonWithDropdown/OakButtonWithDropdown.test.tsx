@@ -461,7 +461,7 @@ describe("OakButtonWithDropdown", () => {
     // Click menu item
     await user.tab();
     expect(screen.getByText("Edit")).toHaveFocus();
-    await user.keyboard("{Space}");
+    await user.keyboard(" ");
 
     expect(screen.queryByRole("menu")).not.toBeInTheDocument();
   });
