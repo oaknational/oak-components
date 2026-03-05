@@ -37,6 +37,7 @@ export type OakButtonWithDropdownProps = {
     OakAllSpacingToken | OakSpaceBetweenToken | null | undefined
   >;
   flexWidth?: ResponsiveValues<OakCombinedSpacingToken | null | undefined>;
+  closeOnChange?: boolean;
 };
 
 /**
@@ -57,6 +58,7 @@ export const OakButtonWithDropdown = ({
   buttonComponent: ButtonComponent,
   dropdownTopSpacing = "spacing-56",
   flexWidth,
+  closeOnChange,
 }: OakButtonWithDropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -71,7 +73,7 @@ export const OakButtonWithDropdown = ({
     ) as HTMLElement[];
   };
 
-  // Handle clicks outside the dropdown to close it
+  // Handle clicks  the dropdown to close it
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (!isOpen) return;
@@ -107,22 +109,22 @@ export const OakButtonWithDropdown = ({
       }
     };
 
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClick = (event: MouseEvent) => {
       if (
         dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
+        (!dropdownRef.current.contains(event.target as Node) || !!closeOnChange)
       ) {
         setIsOpen(false);
       }
     };
 
     if (isOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener("mousedown", handleClick);
       document.addEventListener("keydown", handleKeyDown);
     }
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("mousedown", handleClick);
       document.removeEventListener("keydown", handleKeyDown);
     };
   }, [isOpen, dataTestId]);

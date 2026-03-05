@@ -313,4 +313,25 @@ describe("OakButtonWithDropdown", () => {
 
     expect(screen.getByRole("menu")).toBeInTheDocument();
   });
+
+  it("closes dropdown when closeOnChange is true", async () => {
+    const user = userEvent.setup();
+
+    renderWithTheme(
+      <OakButtonWithDropdown closeOnChange={true} {...defaultProps}>
+        {simpleChildren}
+      </OakButtonWithDropdown>,
+    );
+
+    const primaryButton = screen.getByRole("button", { name: /actions/i });
+    await user.click(primaryButton);
+
+    expect(screen.getByRole("menu")).toBeInTheDocument();
+
+    // Click menu item
+    const menuItem = screen.getByText("Edit");
+    await user.click(menuItem);
+
+    expect(screen.queryByRole("menu")).not.toBeInTheDocument();
+  });
 });
