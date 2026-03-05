@@ -41,6 +41,9 @@ const dropdownNavMeta: Meta<typeof OakButtonWithDropdown> = {
     onPrimaryAction: {
       action: "Primary action clicked",
     },
+    closeOnChange: {
+      control: { type: "boolean" },
+    },
   },
 };
 
