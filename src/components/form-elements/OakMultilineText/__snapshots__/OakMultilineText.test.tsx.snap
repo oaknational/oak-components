@@ -43,7 +43,6 @@ exports[`OakMultilineText matches snapshot 1`] = `
   border: 0.125rem solid;
   border-color: #cacaca;
   border-radius: 0.375rem;
-  padding: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
   white-space: wrap;
   overflow-y: auto;
@@ -145,6 +144,7 @@ exports[`OakMultilineText matches snapshot 1`] = `
       id="1"
       maxlength="200"
       name="textarea"
+      style="padding: 12px; overscroll-behavior: none;"
     />
     <div
       class="c4 c5"
