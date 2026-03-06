@@ -478,6 +478,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   padding-right: 0.5rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+  display: inline-block;
   border: 0.125rem solid;
   border-color: #222222;
   border-radius: 0.25rem;
@@ -505,6 +506,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   padding-right: 0.5rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+  display: inline-block;
   border: 0.125rem solid;
   border-color: #222222;
   border-radius: 0.25rem;
@@ -646,7 +648,6 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   position: relative;
   width: 100%;
   height: 100%;
-  display: inline-block;
 }
 
 .c40:hover {
@@ -685,7 +686,6 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   position: relative;
   width: 100%;
   height: 100%;
-  display: inline-block;
 }
 
 .c50:hover {
