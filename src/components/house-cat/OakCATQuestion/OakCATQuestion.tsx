@@ -69,7 +69,6 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
       $alignItems={"center"}
       $width={"100%"}
       $font={"body-1-bold"}
-      $mb={"spacing-12"}
     >
       {`${questionNumber}.`}
       {questionTypeInput}
@@ -77,12 +76,7 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
   );
 
   const body = (
-    <OakFlex
-      $flexDirection={"column"}
-      $width={"100%"}
-      $mt={"spacing-24"}
-      $gap={"spacing-32"}
-    >
+    <OakFlex $flexDirection={"column"} $width={"100%"} $gap={"spacing-32"}>
       {/* this has the effect of stretching the container and the items within */}
       <OakFlex $alignSelf={"stretch"} $flexDirection={"column"}>
         {answersSection}
@@ -132,11 +126,12 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
           header={header}
           subheader={questionStem}
           content={body}
-          $flexDirection={"column"}
-          $justifyContent={"flex-start"}
           initialOpen={initialOpen}
           ariaLabelClose={`expand question ${questionNumber}`}
           ariaLabelOpen={`collapse question ${questionNumber}`}
+          $flexDirection={"column"}
+          $justifyContent={"flex-start"}
+          $gap={"spacing-12"}
         />
       </StyledOakFlex>
     </UnstyledLI>
