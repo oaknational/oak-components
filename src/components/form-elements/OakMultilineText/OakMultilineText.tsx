@@ -107,7 +107,7 @@ const UnstyledComponent = forwardRef(
     return (
       <OakFlex
         $flexDirection={["column"]}
-        $gap={["spacing-12", null]}
+        $gap={["spacing-8", null]}
         $width={"100%"}
       >
         {label && (
