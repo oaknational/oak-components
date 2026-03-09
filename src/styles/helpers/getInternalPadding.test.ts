@@ -7,9 +7,8 @@ describe("getInternalPadding", () => {
     expect(getInternalPadding(height)).toBe(`${expectedPadding}px`);
   });
 
-  it("returns the padding for a height of 40 when no valid height is provided", () => {
-    const expectedPadding = Math.floor((40 - Math.ceil(18 * 1.4)) / 2) - 1;
-    expect(getInternalPadding(undefined)).toBe(`${expectedPadding}px`);
+  it("returns the max padding when no valid height is provided", () => {
+    expect(getInternalPadding(undefined)).toBe(`${MAX_PADDING}px`);
   });
 
   it("returns the max padding if height is more than line height plus twice the default padding", () => {
