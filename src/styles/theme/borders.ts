@@ -4,7 +4,7 @@ export const oakBorderWidthTokens = {
   "border-solid-m": 2,
   "border-solid-l": 3,
   "border-solid-xl": 4,
-  "border-solid-xxl": 8,
+  "border-solid-xxxl": 8,
 };
 
 export const oakBorderRadiusTokens = {
