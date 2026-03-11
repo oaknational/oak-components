@@ -10,7 +10,7 @@ const meta: Meta<typeof OakQuizPrintableSubHeader> = {
   argTypes: {},
   parameters: {
     controls: {
-      include: ["title"],
+      include: ["title", "grade", "numQuestions", "attempts"],
     },
   },
   args: {
@@ -28,4 +28,11 @@ type Story = StoryObj<typeof OakQuizPrintableSubHeader>;
 export const Default: Story = {
   render: (args) => <OakQuizPrintableSubHeader {...args} />,
   args: {},
+};
+
+export const NoAttempts: Story = {
+  render: (args) => <OakQuizPrintableSubHeader {...args} />,
+  args: {
+    attempts: undefined,
+  },
 };

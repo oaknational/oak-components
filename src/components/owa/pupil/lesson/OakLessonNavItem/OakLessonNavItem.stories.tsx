@@ -112,6 +112,27 @@ export const InProgress: Story = {
   ),
 };
 
+export const Disabled: Story = {
+  render: () => (
+    <>
+      <OakLessonNavItem
+        lessonSectionName="starter-quiz"
+        progress="complete"
+        numQuestions={6}
+        grade={5}
+        disabled
+      />
+      <OakLessonNavItem
+        lessonSectionName="exit-quiz"
+        progress="complete"
+        numQuestions={4}
+        grade={3}
+        disabled
+      />
+    </>
+  ),
+};
+
 export const Complete: Story = {
   render: () => (
     <>
