@@ -60,10 +60,8 @@ export type OakLessonNavItemProps<C extends ElementType> =
 const StyledLabel = styled(OakBox)``;
 
 const StyledIconWrapper = styled(OakFlex)<{ $disabled?: boolean }>`
-  img {
-    filter: ${(props) =>
-      parseColorFilter(props.$disabled ? "icon-disabled" : "icon-primary")};
-  }
+  filter: ${(props) =>
+    parseColorFilter(props.$disabled ? "icon-disabled" : "icon-primary")};
 `;
 
 const StyledRoundIcon = styled(OakRoundIcon)<{
