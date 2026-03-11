@@ -154,18 +154,19 @@ export const OakLessonNavItem = <C extends ElementType = "a">(
     disabledBackgroundColor,
   ] = pickColorsForSection(lessonSectionName);
 
+  const resolvedBackgroundColor =
+    isDisabled && disabledBackgroundColor
+      ? disabledBackgroundColor
+      : progress === "not-started"
+        ? notStartedBackgroundColor
+        : backgroundColor;
+
   return (
     <StyledLessonNavItem
       as={isDisabled ? "div" : as ?? "a"}
       $gap="spacing-24"
       $alignItems="center"
-      $background={
-        isDisabled && disabledBackgroundColor
-          ? disabledBackgroundColor
-          : progress === "not-started"
-            ? notStartedBackgroundColor
-            : backgroundColor
-      }
+      $background={resolvedBackgroundColor}
       $ph={["spacing-16", "spacing-24"]}
       $pv="spacing-20"
       $borderRadius="border-radius-l"
