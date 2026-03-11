@@ -9,7 +9,7 @@ describe("OakRoundIcon", () => {
   it("renders", () => {
     const { getByRole } = renderWithTheme(<OakRoundIcon iconName="home" />);
 
-    expect(getByRole("img")).toBeInTheDocument();
+    expect(getByRole("presentation")).toBeInTheDocument();
   });
 
   it("matches snapshot", () => {
