@@ -103,7 +103,7 @@ exports[`OakLessonNavItem matches snapshot 1`] = `
   object-fit: contain;
 }
 
-.c5 img {
+.c5 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
 }
