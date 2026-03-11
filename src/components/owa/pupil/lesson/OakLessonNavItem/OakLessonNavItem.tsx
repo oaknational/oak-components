@@ -59,6 +59,13 @@ export type OakLessonNavItemProps<C extends ElementType> =
 
 const StyledLabel = styled(OakBox)``;
 
+const StyledIconWrapper = styled(OakFlex)<{ $disabled?: boolean }>`
+  img {
+    filter: ${(props) =>
+      parseColorFilter(props.$disabled ? "icon-disabled" : "icon-primary")};
+  }
+`;
+
 const StyledRoundIcon = styled(OakRoundIcon)<{
   $disabled?: boolean;
 }>`
@@ -140,8 +147,12 @@ export const OakLessonNavItem = <C extends ElementType = "a">(
     ...rest
   } = props;
   const isDisabled = Boolean(disabled || isLoading);
-  const [notStartedBackgroundColor, backgroundColor, borderColor] =
-    pickColorsForSection(lessonSectionName);
+  const [
+    notStartedBackgroundColor,
+    backgroundColor,
+    borderColor,
+    disabledBackgroundColor,
+  ] = pickColorsForSection(lessonSectionName);
 
   return (
     <StyledLessonNavItem
@@ -149,12 +160,16 @@ export const OakLessonNavItem = <C extends ElementType = "a">(
       $gap="spacing-24"
       $alignItems="center"
       $background={
-        progress === "not-started" ? notStartedBackgroundColor : backgroundColor
+        isDisabled && disabledBackgroundColor
+          ? disabledBackgroundColor
+          : progress === "not-started"
+            ? notStartedBackgroundColor
+            : backgroundColor
       }
       $ph={["spacing-16", "spacing-24"]}
       $pv="spacing-20"
       $borderRadius="border-radius-l"
-      $borderColor={borderColor}
+      $borderColor={isDisabled ? "border-neutral-lighter" : borderColor}
       $ba="border-solid-l"
       $disabled={isDisabled}
       $color="text-primary"
@@ -162,13 +177,17 @@ export const OakLessonNavItem = <C extends ElementType = "a">(
       onClick={isDisabled ? undefined : onClick}
       {...rest}
     >
-      <OakFlex $width="spacing-80" $justifyContent="center">
+      <StyledIconWrapper
+        $width="spacing-80"
+        $justifyContent="center"
+        $disabled={isDisabled}
+      >
         <OakIcon
           iconName={pickIconForSection(lessonSectionName)}
           $width="spacing-56"
           $height="spacing-56"
         />
-      </OakFlex>
+      </StyledIconWrapper>
       <FlexedOakBox>
         <StyledLabel
           as="strong"
@@ -177,11 +196,14 @@ export const OakLessonNavItem = <C extends ElementType = "a">(
         >
           {pickLabelForSection(lessonSectionName)}
         </StyledLabel>
-        <OakBox $font={["body-2", "body-1"]}>
-          {pickSummaryForProgress(props)}
+        <OakBox
+          $font={["body-2", "body-1"]}
+          $color={isDisabled ? "text-subdued" : "text-primary"}
+        >
+          {pickSummaryForProgress(props, isDisabled)}
         </OakBox>
       </FlexedOakBox>
-      {renderQuestionCounter(props)}
+      {renderQuestionCounter(props, isDisabled)}
       {isLoading ? (
         <OakFlex
           $width="spacing-40"
@@ -198,7 +220,7 @@ export const OakLessonNavItem = <C extends ElementType = "a">(
   );
 };
 
-function renderQuestionCounter(props: SectionProps) {
+function renderQuestionCounter(props: SectionProps, isDisabled: boolean) {
   if (props.progress !== "complete") {
     return null;
   }
@@ -211,8 +233,18 @@ function renderQuestionCounter(props: SectionProps) {
     case "starter-quiz":
       return (
         <OakBox $display={["none", "block"]} $mr="spacing-24">
-          <OakSpan $font="heading-4">{props.grade}</OakSpan>
-          <OakSpan $font="heading-6">&nbsp;/&nbsp;{props.numQuestions}</OakSpan>
+          <OakSpan
+            $font="heading-4"
+            $color={isDisabled ? "text-subdued" : "text-primary"}
+          >
+            {props.grade}
+          </OakSpan>
+          <OakSpan
+            $font="heading-6"
+            $color={isDisabled ? "text-subdued" : "text-primary"}
+          >
+            &nbsp;/&nbsp;{props.numQuestions}
+          </OakSpan>
         </OakBox>
       );
     default:
@@ -238,6 +270,7 @@ function pickColorsForSection(
   notStartedBackgroundColor: OakUiRoleToken,
   backgroundColor: OakUiRoleToken,
   borderColor: OakUiRoleToken,
+  disabledBackgroundColor: OakUiRoleToken | null,
 ] {
   switch (sectionName) {
     case "intro":
@@ -245,24 +278,28 @@ function pickColorsForSection(
         "bg-decorative2-very-subdued",
         "bg-decorative2-main",
         "border-decorative2-stronger",
+        null,
       ];
     case "starter-quiz":
       return [
         "bg-decorative1-very-subdued",
         "bg-decorative1-main",
         "border-decorative1-stronger",
+        "bg-decorative1-subdued",
       ];
     case "video":
       return [
         "bg-decorative4-very-subdued",
         "bg-decorative4-main",
         "border-decorative4-stronger",
+        null,
       ];
     case "exit-quiz":
       return [
         "bg-decorative5-very-subdued",
         "bg-decorative5-main",
         "border-decorative5-stronger",
+        "bg-decorative5-subdued",
       ];
   }
 }
@@ -280,7 +317,7 @@ function pickLabelForSection(sectionName: LessonSectionName): string {
   }
 }
 
-function pickSummaryForProgress(props: SectionProps) {
+function pickSummaryForProgress(props: SectionProps, isDisabled: boolean) {
   switch (props.progress) {
     case "not-started":
       return pickSummaryForNotStarted(props);
@@ -288,10 +325,14 @@ function pickSummaryForProgress(props: SectionProps) {
       return "In progress...";
     case "complete":
       return (
-        <OakFlex $gap="spacing-4" $alignItems="center">
+        <StyledIconWrapper
+          $gap="spacing-4"
+          $alignItems="center"
+          $disabled={isDisabled}
+        >
           <OakIcon iconName="tick" $width="spacing-24" $height="spacing-24" />
           {pickSummaryForComplete(props)}
-        </OakFlex>
+        </StyledIconWrapper>
       );
   }
 }
