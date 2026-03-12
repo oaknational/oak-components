@@ -131,7 +131,7 @@ describe("OakCard", () => {
     );
 
     expect(screen.getByText(testData.linkText)).toBeInTheDocument();
-    expect(screen.getByRole("img")).toBeInTheDocument();
+    expect(screen.getByRole("presentation")).toBeInTheDocument();
   });
 
   it("renders link text with an icon when not provided", () => {
@@ -140,6 +140,6 @@ describe("OakCard", () => {
     );
 
     expect(screen.getByText(testData.linkText)).toBeInTheDocument();
-    expect(screen.getByRole("img")).toBeInTheDocument();
+    expect(screen.getByRole("presentation")).toBeInTheDocument();
   });
 });

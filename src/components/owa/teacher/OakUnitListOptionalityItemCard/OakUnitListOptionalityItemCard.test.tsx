@@ -37,9 +37,9 @@ describe("OakUnitListOptionalityItemCard", () => {
     const { getByTestId } = renderWithTheme(
       <OakUnitListOptionalityItemCard
         data-testid="unit-card"
-        title={""}
+        title={"Test unit"}
         lessonCount={"0 lessons"}
-        href={""}
+        href={"/test-path"}
         slug="test"
         onSave={() => {}}
         isSaved={false}
