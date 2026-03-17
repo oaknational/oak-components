@@ -66,7 +66,12 @@ const InternalModalTransition: FC<TransitionProps> = ({
       unmountOnExit
     >
       {(state) => (
-        <FocusOn onEscapeKey={onClose} returnFocus autoFocus>
+        <FocusOn
+          onEscapeKey={onClose}
+          returnFocus
+          autoFocus
+          preventScrollOnFocus
+        >
           <FadeOutBox
             $zIndex={finalZIndex}
             $state={state}
