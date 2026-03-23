@@ -6,18 +6,18 @@ exports[`OakHandDrawnCardWithIcon matches snapshot 1`] = `
   width: 5rem;
   height: 5rem;
   padding: 1.5rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c2 {
   position: absolute;
   inset: 0rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c5 {
   position: relative;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c6 {
@@ -27,7 +27,7 @@ exports[`OakHandDrawnCardWithIcon matches snapshot 1`] = `
   height: 4rem;
   min-height: 4rem;
   display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c1 {

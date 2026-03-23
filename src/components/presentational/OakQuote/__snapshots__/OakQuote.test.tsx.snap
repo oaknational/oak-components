@@ -4,23 +4,23 @@ exports[`OakQuote component matches snapshot 1`] = `
 .c0 {
   width: 100%;
   max-width: 40rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c2 {
   width: 0.5rem;
   margin-right: 1.5rem;
   background: #bef2bd;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c4 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c6 {
   color: #222222;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -34,7 +34,7 @@ exports[`OakQuote component matches snapshot 1`] = `
   position: relative;
   width: 100%;
   display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c1 {
@@ -88,7 +88,7 @@ exports[`OakQuote component matches snapshot 1`] = `
 }
 
 .c13 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 700;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -100,7 +100,7 @@ exports[`OakQuote component matches snapshot 1`] = `
 }
 
 .c14 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.5rem;

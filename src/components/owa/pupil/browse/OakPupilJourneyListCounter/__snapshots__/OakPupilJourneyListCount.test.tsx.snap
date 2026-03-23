@@ -2,7 +2,7 @@
 
 exports[`OakPupilJourneyListCount matches snapshot 1`] = `
 .c0 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -13,7 +13,7 @@ exports[`OakPupilJourneyListCount matches snapshot 1`] = `
 }
 
 .c1 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 1.25rem;
   line-height: 1.5rem;

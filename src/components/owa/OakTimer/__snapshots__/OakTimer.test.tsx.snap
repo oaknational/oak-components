@@ -5,7 +5,7 @@ exports[`OakTimer matches snapshot 1`] = `
   color: #ffffff;
   background: #222222;
   border-radius: 0.125rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -16,7 +16,7 @@ exports[`OakTimer matches snapshot 1`] = `
 }
 
 .c2 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c1 {

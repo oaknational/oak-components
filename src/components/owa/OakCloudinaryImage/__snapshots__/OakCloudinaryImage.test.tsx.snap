@@ -5,7 +5,7 @@ exports[`OakCloudinaryImage matches snapshot 1`] = `
   position: relative;
   width: 100%;
   display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c1 {

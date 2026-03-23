@@ -9,7 +9,7 @@ exports[`OakRadioTile matches snapshot 1`] = `
   border: 0.125rem solid;
   border-color: #808080;
   border-radius: 0.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c4 {
@@ -19,7 +19,7 @@ exports[`OakRadioTile matches snapshot 1`] = `
   border: 0.125rem solid;
   border-color: #808080;
   border-radius: 6.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c5 {
@@ -45,7 +45,7 @@ exports[`OakRadioTile matches snapshot 1`] = `
 }
 
 .c1 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c2 {

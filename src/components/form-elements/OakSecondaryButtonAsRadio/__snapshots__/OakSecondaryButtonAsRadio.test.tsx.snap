@@ -7,7 +7,7 @@ exports[`OakSecondaryButtonAsRadio matches snapshot 1`] = `
   width: -moz-max-content;
   width: max-content;
   height: auto;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c2 {
@@ -16,11 +16,11 @@ exports[`OakSecondaryButtonAsRadio matches snapshot 1`] = `
   width: 100%;
   height: 100%;
   border-radius: 0.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c5 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c6 {
@@ -43,7 +43,7 @@ exports[`OakSecondaryButtonAsRadio matches snapshot 1`] = `
 }
 
 .c7 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -64,7 +64,7 @@ exports[`OakSecondaryButtonAsRadio matches snapshot 1`] = `
   text-align: left;
   font-family: unset;
   outline: none;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   color: #222222;
   background: #ffffff;
   padding-left: 1rem;

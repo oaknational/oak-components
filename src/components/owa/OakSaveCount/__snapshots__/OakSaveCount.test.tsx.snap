@@ -11,7 +11,7 @@ exports[`OakSaveCount should match snapshot 1`] = `
   border: 0.063rem solid;
   border-color: #bef2bd;
   border-radius: 0.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -28,12 +28,12 @@ exports[`OakSaveCount should match snapshot 1`] = `
   height: 2rem;
   min-height: 2rem;
   display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c6 {
   display: none;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c3 {
@@ -57,7 +57,7 @@ exports[`OakSaveCount should match snapshot 1`] = `
 }
 
 .c7 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c0 {
@@ -70,7 +70,7 @@ exports[`OakSaveCount should match snapshot 1`] = `
   text-align: left;
   font-family: unset;
   outline: none;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c0:disabled {

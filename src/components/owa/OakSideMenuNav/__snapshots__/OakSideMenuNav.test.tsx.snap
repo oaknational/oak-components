@@ -4,11 +4,11 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
 .c2 {
   padding: 3rem;
   background: #dff9de;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c9 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c13 {
@@ -19,7 +19,7 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
   min-height: 2rem;
   padding-left: 0.75rem;
   display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c3 {
@@ -54,7 +54,7 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
 
 .c11 {
   color: #222222;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -66,7 +66,7 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
 
 .c12 {
   color: #575757;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -121,7 +121,7 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
 }
 
 .c4 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -134,8 +134,8 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
 
 .c6 {
   display: revert;
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   display: revert;
   display: revert;
 }
@@ -149,7 +149,7 @@ exports[`OakSideMenuNav matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

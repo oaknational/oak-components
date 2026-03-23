@@ -8,17 +8,17 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
   border-top: 0.063rem solid;
   border-bottom: 0.063rem solid;
   border-color: #cacaca;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c2 {
   width: 100%;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c5 {
   padding: 0.5rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c5:hover {
@@ -29,7 +29,7 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
   position: relative;
   width: 1.5rem;
   height: 1.5rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c14 {
@@ -39,7 +39,7 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
   width: 1.5rem;
   height: 1.5rem;
   padding: 0rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c16 {
@@ -49,11 +49,11 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
   height: 100%;
   min-height: 100%;
   display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c18 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c18:hover {
@@ -61,18 +61,18 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
 }
 
 .c22 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c26 {
   padding-right: 0.75rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c28 {
   padding: 0.5rem;
   border-radius: 0.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c29 {
@@ -82,19 +82,19 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
   height: 2rem;
   min-height: 2rem;
   display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c31 {
   position: relative;
   overflow: auto;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   overflow: auto;
 }
 
 .c32 {
   padding-top: 1.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c34 {
@@ -103,14 +103,14 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
   background: #ffffff;
   border: 0.125rem solid;
   border-radius: 0.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   overflow: hidden;
 }
 
 .c39 {
   padding: 0.75rem;
   background: #ffe555;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c41 {
@@ -120,7 +120,7 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
   height: 3rem;
   min-height: 3rem;
   display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c42 {
@@ -128,11 +128,11 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
   padding-right: 1rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c44 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 700;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -143,7 +143,7 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
 }
 
 .c45 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -155,7 +155,7 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
 
 .c46 {
   padding-right: 1rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c1 {
@@ -309,7 +309,7 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
 }
 
 .c25 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -323,7 +323,7 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
 }
 
 .c27 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   text-align: left;
 }
 
@@ -369,7 +369,7 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
 }
 
 .c6 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   color: #222222;
 }
 
@@ -416,7 +416,7 @@ input:checked + .c13 {
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-right: 0.75rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   min-width: 0;
 }
 

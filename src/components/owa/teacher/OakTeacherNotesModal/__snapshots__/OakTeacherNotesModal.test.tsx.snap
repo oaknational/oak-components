@@ -4,7 +4,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
 .c0 {
   position: fixed;
   inset: 0rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   z-index: 300;
 }
 
@@ -12,7 +12,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   position: fixed;
   inset: 0rem;
   background: #22222240;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   z-index: -1;
 }
 
@@ -20,7 +20,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   width: 100%;
   max-width: 60rem;
   padding: 1.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c7 {
@@ -28,20 +28,20 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   width: 100%;
   background: #ffffff;
   border-radius: 1rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c9 {
   position: relative;
   min-height: 3.5rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c10 {
   position: absolute;
   top: 0.75rem;
   right: 0.75rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c11 {
@@ -49,11 +49,11 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c16 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c18 {
@@ -64,7 +64,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   color: transparent;
   background: transparent;
   border-radius: 6.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c19 {
@@ -73,7 +73,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   width: 100%;
   height: 100%;
   border-radius: 6.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c20 {
@@ -83,7 +83,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   height: 2rem;
   min-height: 2rem;
   display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c23 {
@@ -93,20 +93,20 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   border-top: 0rem solid;
   border-bottom: 0rem solid;
   border-color: #cacaca;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   overflow: auto;
 }
 
 .c24 {
   padding-bottom: 1.5rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c27 {
   padding: 0.75rem;
   background: #f2f2f2;
   border-radius: 0.5rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c29 {
@@ -118,7 +118,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   border: 0.125rem solid;
   border-color: #222222;
   border-radius: 0.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c36 {
@@ -127,7 +127,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   width: -moz-max-content;
   width: max-content;
   height: auto;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c38 {
@@ -136,17 +136,17 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   width: 100%;
   height: 100%;
   border-radius: 0.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c43 {
   display: none;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c47 {
   width: 100%;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c51 {
@@ -156,7 +156,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   height: 1.5rem;
   min-height: 1.5rem;
   display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c53 {
@@ -164,7 +164,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c55 {
@@ -178,17 +178,17 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c57 {
   position: relative;
   width: 100%;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c60 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -416,7 +416,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
 }
 
 .c22 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -427,7 +427,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
 }
 
 .c42 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -439,7 +439,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
 }
 
 .c64 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c14 {
@@ -452,7 +452,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   text-align: left;
   font-family: unset;
   outline: none;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   color: transparent;
 }
 
@@ -471,7 +471,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   text-align: left;
   font-family: unset;
   outline: none;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   color: #222222;
   background: #ffffff;
   padding-left: 0.5rem;
@@ -499,7 +499,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   text-align: left;
   font-family: unset;
   outline: none;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   color: #ffffff;
   background: #222222;
   padding-left: 0.5rem;
@@ -578,7 +578,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
 }
 
 .c26 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -630,7 +630,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
 
 .c6 {
   width: 100%;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c4 {
@@ -788,7 +788,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
 }
 
 .c33 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -799,7 +799,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
 }
 
 .c61 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -810,7 +810,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
 }
 
 .c62 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.5rem;

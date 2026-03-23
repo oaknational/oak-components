@@ -3,7 +3,7 @@
 exports[`OakMediaClipList matches snapshot 1`] = `
 .c0 {
   position: relative;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c3 {
@@ -15,11 +15,11 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   border-left: 0.125rem solid;
   border-color: #222222;
   border-style: solid;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c6 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c6:hover {
@@ -31,13 +31,13 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   padding-right: 1rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   text-align: left;
 }
 
 .c12 {
   margin-bottom: 0.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -49,7 +49,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
 
 .c14 {
   margin-bottom: 0.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -60,7 +60,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
 }
 
 .c16 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -73,7 +73,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
 .c17 {
   position: relative;
   margin-right: 0.75rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c18 {
@@ -82,7 +82,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   width: 100%;
   height: 100%;
   border-radius: 0.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c19 {
@@ -92,23 +92,23 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   height: 2rem;
   min-height: 2rem;
   display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c21 {
   position: relative;
   overflow: auto;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   overflow: auto;
 }
 
 .c22 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c27 {
   pointer-events: none;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c1 {
@@ -151,7 +151,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
 }
 
 .c13 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -162,7 +162,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
 }
 
 .c15 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -180,7 +180,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   padding-top: 0.5rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c20 {
@@ -219,7 +219,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   position: relative;
 }
 
@@ -241,7 +241,7 @@ exports[`OakMediaClipList matches snapshot 1`] = `
   border-left: 0.125rem solid;
   border-color: #222222;
   border-style: solid;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

@@ -2,7 +2,7 @@
 
 exports[`OakHoverLink matches snapshot 1`] = `
 .c2 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c0 {

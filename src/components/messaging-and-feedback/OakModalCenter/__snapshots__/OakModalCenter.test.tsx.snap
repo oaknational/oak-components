@@ -4,7 +4,7 @@ exports[`OakModalCenter matches snapshot 1`] = `
 .c0 {
   position: fixed;
   inset: 0rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   z-index: 300;
 }
 
@@ -12,7 +12,7 @@ exports[`OakModalCenter matches snapshot 1`] = `
   position: fixed;
   inset: 0rem;
   background: #22222240;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   z-index: -1;
 }
 
@@ -20,7 +20,7 @@ exports[`OakModalCenter matches snapshot 1`] = `
   width: 100%;
   max-width: 60rem;
   padding: 1.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c7 {
@@ -28,20 +28,20 @@ exports[`OakModalCenter matches snapshot 1`] = `
   width: 100%;
   background: #ffffff;
   border-radius: 1rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c9 {
   position: relative;
   min-height: 3.5rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c10 {
   position: absolute;
   top: 0.75rem;
   right: 0.75rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c11 {
@@ -49,11 +49,11 @@ exports[`OakModalCenter matches snapshot 1`] = `
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c16 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c18 {
@@ -64,7 +64,7 @@ exports[`OakModalCenter matches snapshot 1`] = `
   color: transparent;
   background: transparent;
   border-radius: 6.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c19 {
@@ -73,7 +73,7 @@ exports[`OakModalCenter matches snapshot 1`] = `
   width: 100%;
   height: 100%;
   border-radius: 6.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c20 {
@@ -83,7 +83,7 @@ exports[`OakModalCenter matches snapshot 1`] = `
   height: 2rem;
   min-height: 2rem;
   display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c23 {
@@ -93,7 +93,7 @@ exports[`OakModalCenter matches snapshot 1`] = `
   border-top: 0rem solid;
   border-bottom: 0rem solid;
   border-color: #cacaca;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   overflow: auto;
 }
 
@@ -149,7 +149,7 @@ exports[`OakModalCenter matches snapshot 1`] = `
 }
 
 .c22 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -169,7 +169,7 @@ exports[`OakModalCenter matches snapshot 1`] = `
   text-align: left;
   font-family: unset;
   outline: none;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   color: transparent;
 }
 
@@ -234,7 +234,7 @@ exports[`OakModalCenter matches snapshot 1`] = `
 
 .c6 {
   width: 100%;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c4 {
