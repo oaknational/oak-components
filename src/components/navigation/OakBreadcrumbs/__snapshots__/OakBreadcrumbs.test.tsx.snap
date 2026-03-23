@@ -3,13 +3,13 @@
 exports[`OakBreadcrumbs matches snapshot 1`] = `
 .c0 {
   color: #222222;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c5 {
   overflow: hidden;
   min-width: 0rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -22,7 +22,7 @@ exports[`OakBreadcrumbs matches snapshot 1`] = `
   height: 1.25rem;
   min-height: 1.25rem;
   display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c7 {
@@ -30,7 +30,7 @@ exports[`OakBreadcrumbs matches snapshot 1`] = `
 }
 
 .c4 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c3 {

@@ -4,7 +4,7 @@ exports[`OakQuizCheckBox matches snapshot 1`] = `
 .c0 {
   position: relative;
   width: 100%;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c2 {
@@ -12,7 +12,7 @@ exports[`OakQuizCheckBox matches snapshot 1`] = `
   background: #ffffff;
   border-color: #222222;
   border-radius: 0.5rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c2:hover {
@@ -23,7 +23,7 @@ exports[`OakQuizCheckBox matches snapshot 1`] = `
   position: relative;
   width: 2rem;
   height: 2rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c13 {
@@ -33,14 +33,14 @@ exports[`OakQuizCheckBox matches snapshot 1`] = `
   width: 2rem;
   height: 2rem;
   padding: 0.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c15 {
   width: 100%;
   height: 100%;
   background: #222222;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c16 {
@@ -48,7 +48,7 @@ exports[`OakQuizCheckBox matches snapshot 1`] = `
   height: 100%;
   border: 0.125rem solid;
   border-color: #ffffff;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c1 {
@@ -79,7 +79,7 @@ input:checked + .c12 {
 }
 
 .c6 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1.125rem;
   line-height: 1.75rem;

@@ -7,7 +7,7 @@ exports[`OakRoundIcon matches snapshot 1`] = `
   padding: 0.25rem;
   background: #ffe555;
   border-radius: 6.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c1 {
@@ -17,7 +17,7 @@ exports[`OakRoundIcon matches snapshot 1`] = `
   height: 100%;
   min-height: 100%;
   display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c2 {

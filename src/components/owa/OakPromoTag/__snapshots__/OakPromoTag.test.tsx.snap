@@ -8,13 +8,13 @@ exports[`OakPromoTag matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c4 {
   position: absolute;
   inset: 0rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c1 {
@@ -35,7 +35,7 @@ exports[`OakPromoTag matches snapshot 1`] = `
 .c5 {
   color: #ffe555;
   background: #222222;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.25rem;

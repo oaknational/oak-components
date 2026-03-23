@@ -11,7 +11,7 @@ exports[`OakLessonLayout matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c2 {
@@ -21,18 +21,18 @@ exports[`OakLessonLayout matches snapshot 1`] = `
   margin-left: auto;
   margin-right: auto;
   background: #ffffff;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c4 {
   display: none;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c5 {
   min-height: 100%;
   padding-top: 0rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   z-index: 1;
 }
 
@@ -43,11 +43,11 @@ exports[`OakLessonLayout matches snapshot 1`] = `
   padding-right: 1rem;
   margin-right: 0rem;
   background: #ffffff;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c8 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c9 {
@@ -56,7 +56,7 @@ exports[`OakLessonLayout matches snapshot 1`] = `
   background: #ffffff;
   border-top: 0.25rem solid;
   border-color: #a0b6f2;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c3 {

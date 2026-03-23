@@ -3,18 +3,18 @@
 exports[`OakMultilineText matches snapshot 1`] = `
 .c0 {
   width: 100%;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c4 {
   position: relative;
   min-width: 3.5rem;
   padding-bottom: 1.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c6 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c1 {
@@ -43,7 +43,7 @@ exports[`OakMultilineText matches snapshot 1`] = `
   border: 0.125rem solid;
   border-color: #cacaca;
   border-radius: 0.375rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   white-space: wrap;
   overflow-y: auto;
   color: #222222;

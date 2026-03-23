@@ -7,21 +7,21 @@ exports[`OakLinkCard matches snapshot 1`] = `
   background: #ffffff;
   border-radius: 0.5rem;
   box-shadow: 0 0 0.5rem rgba(92,92,92,20%);
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c3 {
   width: 100%;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c4 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c8 {
   position: relative;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c9 {
@@ -29,13 +29,13 @@ exports[`OakLinkCard matches snapshot 1`] = `
   width: 5rem;
   height: 5rem;
   padding: 1.5rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c11 {
   position: absolute;
   inset: 0rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c14 {
@@ -45,7 +45,7 @@ exports[`OakLinkCard matches snapshot 1`] = `
   height: 4rem;
   min-height: 4rem;
   display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c1 {
@@ -129,7 +129,7 @@ exports[`OakLinkCard matches snapshot 1`] = `
 }
 
 .c6 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -140,7 +140,7 @@ exports[`OakLinkCard matches snapshot 1`] = `
 }
 
 .c7 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 @media (min-width:750px) {

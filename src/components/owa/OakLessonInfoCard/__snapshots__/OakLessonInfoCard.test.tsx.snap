@@ -5,11 +5,11 @@ exports[`OakLessonInfoCard component test matches snapshot 1`] = `
   padding: 1.5rem;
   background: #ffffff;
   border-radius: 1rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c2 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c4 {
@@ -19,7 +19,7 @@ exports[`OakLessonInfoCard component test matches snapshot 1`] = `
   height: 2rem;
   min-height: 2rem;
   display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c1 {
@@ -46,7 +46,7 @@ exports[`OakLessonInfoCard component test matches snapshot 1`] = `
 }
 
 .c6 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.5rem;

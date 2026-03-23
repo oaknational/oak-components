@@ -2,14 +2,14 @@
 
 exports[`OakCodeRenderer matches snapshot 1`] = `
 .c0 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c7 {
   padding-right: 0.75rem;
   border-right: 0.063rem solid;
   border-color: #808080;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c12 {
@@ -17,12 +17,12 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
   width: -moz-fit-content;
   width: fit-content;
   margin-top: 1rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c15 {
   display: none;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c20 {
@@ -30,7 +30,7 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c27 {
@@ -41,7 +41,7 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
   color: #222222;
   background: #ffe555;
   border-radius: 6.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c29 {
@@ -50,7 +50,7 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
   width: 100%;
   height: 100%;
   border-radius: 6.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c30 {
@@ -60,7 +60,7 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
   height: 2rem;
   min-height: 2rem;
   display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c1 {
@@ -140,7 +140,7 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
 }
 
 .c2 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c3 {
@@ -151,7 +151,7 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
   padding-top: 0rem;
   padding-bottom: 0rem;
   border-radius: 0.5rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1.125rem;
   line-height: 1.5rem;
@@ -170,7 +170,7 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   border-radius: 0.5rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1.125rem;
   line-height: 1.5rem;
@@ -183,26 +183,26 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
 
 .c8 {
   padding-left: 0.75rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c9 {
   color: #9EE8FF;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c10 {
   color: #EECCFF;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c11 {
   color: #94F9AF;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c14 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -213,7 +213,7 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
 }
 
 .c19 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -224,7 +224,7 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
 }
 
 .c16 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c17 {
@@ -233,13 +233,13 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
   margin: 0;
   display: block;
   padding-left: 0.5rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c18 {
   display: revert;
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   display: revert;
   display: revert;
 }
@@ -254,7 +254,7 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
   text-align: left;
   font-family: unset;
   outline: none;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   color: #222222;
 }
 

@@ -12,17 +12,17 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c2 {
   position: relative;
   width: 100%;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c4 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c5 {
@@ -32,7 +32,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   height: 2rem;
   min-height: 2rem;
   display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c8 {
@@ -40,7 +40,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c14 {
@@ -51,7 +51,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   color: transparent;
   background: transparent;
   border-radius: 6.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c16 {
@@ -60,7 +60,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   width: 100%;
   height: 100%;
   border-radius: 6.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c17 {
@@ -70,16 +70,16 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   height: 1.5rem;
   min-height: 1.5rem;
   display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c19 {
   width: 100%;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c22 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -91,7 +91,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
 
 .c23 {
   margin-top: 0.75rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c1 {
@@ -201,7 +201,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
 }
 
 .c18 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -212,7 +212,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
 }
 
 .c25 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c11 {
@@ -225,7 +225,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   text-align: left;
   font-family: unset;
   outline: none;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   color: transparent;
 }
 
@@ -293,7 +293,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
 }
 
 .c21 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -479,17 +479,17 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c2 {
   position: relative;
   width: 100%;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c4 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c5 {
@@ -499,14 +499,14 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   height: 2.5rem;
   min-height: 2.5rem;
   display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c7 {
   position: absolute;
   top: 0rem;
   right: 0rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c9 {
@@ -514,7 +514,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c15 {
@@ -525,7 +525,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   color: transparent;
   background: transparent;
   border-radius: 6.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c17 {
@@ -534,7 +534,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   width: 100%;
   height: 100%;
   border-radius: 6.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c18 {
@@ -544,16 +544,16 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   height: 1.5rem;
   min-height: 1.5rem;
   display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c20 {
   width: 100%;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c23 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -565,7 +565,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
 
 .c24 {
   margin-top: 0.5rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c1 {
@@ -675,7 +675,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
 }
 
 .c19 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -686,7 +686,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
 }
 
 .c26 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c12 {
@@ -699,7 +699,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   text-align: left;
   font-family: unset;
   outline: none;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   color: transparent;
 }
 
@@ -767,7 +767,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
 }
 
 .c22 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -953,17 +953,17 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c2 {
   position: relative;
   width: 100%;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c4 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c5 {
@@ -973,7 +973,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   height: 2rem;
   min-height: 2rem;
   display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c8 {
@@ -981,7 +981,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c14 {
@@ -992,7 +992,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   color: transparent;
   background: transparent;
   border-radius: 6.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c16 {
@@ -1001,7 +1001,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   width: 100%;
   height: 100%;
   border-radius: 6.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c17 {
@@ -1011,16 +1011,16 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   height: 1.5rem;
   min-height: 1.5rem;
   display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c19 {
   width: 100%;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c21 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1137,7 +1137,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
 }
 
 .c18 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -1148,7 +1148,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
 }
 
 .c23 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c11 {
@@ -1161,7 +1161,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   text-align: left;
   font-family: unset;
   outline: none;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   color: transparent;
 }
 

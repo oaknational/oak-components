@@ -11,7 +11,7 @@ exports[`OakHomepageTabButton component matches snapshot 1`] = `
   text-align: left;
   font-family: unset;
   outline: none;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c0:disabled {
@@ -21,7 +21,7 @@ exports[`OakHomepageTabButton component matches snapshot 1`] = `
 
 .c2 {
   height: 100%;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c4 {
@@ -31,13 +31,13 @@ exports[`OakHomepageTabButton component matches snapshot 1`] = `
   height: 3rem;
   min-height: 3rem;
   display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c6 {
   position: relative;
   padding-bottom: 0.75rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c9 {
@@ -45,7 +45,7 @@ exports[`OakHomepageTabButton component matches snapshot 1`] = `
   bottom: 0rem;
   width: 100%;
   display: none;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c3 {
@@ -91,7 +91,7 @@ exports[`OakHomepageTabButton component matches snapshot 1`] = `
 
 .c8 {
   color: #575757;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.25rem;

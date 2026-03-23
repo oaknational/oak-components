@@ -2,11 +2,11 @@
 
 exports[`OakPupilJourneyHeader matches snapshot 1`] = `
 .c12 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c0 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c2 {
@@ -14,18 +14,18 @@ exports[`OakPupilJourneyHeader matches snapshot 1`] = `
   width: 4rem;
   height: 4rem;
   padding: 1.5rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c4 {
   position: absolute;
   inset: 0rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c7 {
   position: relative;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c8 {
@@ -35,7 +35,7 @@ exports[`OakPupilJourneyHeader matches snapshot 1`] = `
   height: 3rem;
   min-height: 3rem;
   display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c1 {
@@ -98,7 +98,7 @@ exports[`OakPupilJourneyHeader matches snapshot 1`] = `
 }
 
 .c11 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 2rem;

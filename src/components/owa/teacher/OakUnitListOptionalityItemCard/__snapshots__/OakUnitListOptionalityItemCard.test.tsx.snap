@@ -3,7 +3,7 @@
 exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
 .c11 {
   color: #222222;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -18,7 +18,7 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c2 {
@@ -30,17 +30,17 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
   border: 0.125rem solid;
   border-color: #a0b6f2;
   border-radius: 0.375rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c4 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c8 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c12 {
@@ -50,7 +50,7 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
   height: 2rem;
   min-height: 2rem;
   display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c1 {
@@ -109,7 +109,7 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
 }
 
 .c6 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;

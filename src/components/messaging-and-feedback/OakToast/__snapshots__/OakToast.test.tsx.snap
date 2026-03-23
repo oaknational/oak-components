@@ -12,7 +12,7 @@ exports[`OakToast matches snapshot 1`] = `
   background: #bef2bd;
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 0.5rem rgba(92,92,92,20%);
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -24,7 +24,7 @@ exports[`OakToast matches snapshot 1`] = `
 
 .c3 {
   position: relative;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c4 {
@@ -33,7 +33,7 @@ exports[`OakToast matches snapshot 1`] = `
   height: 1.25rem;
   background: #ffffff;
   border-radius: 6.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c6 {
@@ -43,7 +43,7 @@ exports[`OakToast matches snapshot 1`] = `
   height: 2rem;
   min-height: 2rem;
   display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c8 {
@@ -51,20 +51,20 @@ exports[`OakToast matches snapshot 1`] = `
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c13 {
   padding-left: 0rem;
   padding-right: 0.5rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c15 {
   position: relative;
   color: transparent;
   border-radius: 6.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c17 {
@@ -76,7 +76,7 @@ exports[`OakToast matches snapshot 1`] = `
   height: 1.5rem;
   min-height: 1.5rem;
   display: none;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c19 {
@@ -88,7 +88,7 @@ exports[`OakToast matches snapshot 1`] = `
   height: 1.5rem;
   min-height: 1.5rem;
   display: none;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c21 {
@@ -98,7 +98,7 @@ exports[`OakToast matches snapshot 1`] = `
   height: 1.5rem;
   min-height: 1.5rem;
   display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c1 {
@@ -155,7 +155,7 @@ exports[`OakToast matches snapshot 1`] = `
 }
 
 .c23 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -175,7 +175,7 @@ exports[`OakToast matches snapshot 1`] = `
   text-align: left;
   font-family: unset;
   outline: none;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   color: transparent;
   border-radius: 0.25rem;
 }

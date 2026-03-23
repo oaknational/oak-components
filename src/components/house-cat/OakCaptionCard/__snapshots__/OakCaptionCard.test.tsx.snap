@@ -8,12 +8,12 @@ exports[`CaptionCard matches snapshot 1`] = `
   padding: 1rem;
   background: #ffffff;
   border-radius: 0.25rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c3 {
   width: 100%;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -27,7 +27,7 @@ exports[`CaptionCard matches snapshot 1`] = `
   position: relative;
   width: 1.5rem;
   height: 1.5rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c13 {
@@ -37,7 +37,7 @@ exports[`CaptionCard matches snapshot 1`] = `
   width: 1.5rem;
   height: 1.5rem;
   padding: 0rem;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c15 {
@@ -47,11 +47,11 @@ exports[`CaptionCard matches snapshot 1`] = `
   height: 100%;
   min-height: 100%;
   display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c17 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -62,7 +62,7 @@ exports[`CaptionCard matches snapshot 1`] = `
 }
 
 .c21 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c25 {
@@ -72,12 +72,12 @@ exports[`CaptionCard matches snapshot 1`] = `
   height: 1.5rem;
   min-height: 1.5rem;
   display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c27 {
   width: 100%;
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -198,7 +198,7 @@ exports[`CaptionCard matches snapshot 1`] = `
 }
 
 .c19 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -209,11 +209,11 @@ exports[`CaptionCard matches snapshot 1`] = `
 }
 
 .c20 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
 }
 
 .c5 {
-  font-family: --var(google-font),Lexend,sans-serif;
+  font-family: var(--base-font),Lexend,sans-serif;
   color: #222222;
 }
 
