@@ -33,6 +33,7 @@ exports[`OakMediaClip matches snapshot 1`] = `
 .c12 {
   position: relative;
   width: 100%;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -267,7 +268,7 @@ exports[`OakMediaClip matches snapshot 1`] = `
           <div
             class="c9 c10 c11"
           >
-            <div
+            <span
               class="c12 "
             >
               <img
@@ -281,7 +282,7 @@ exports[`OakMediaClip matches snapshot 1`] = `
                 srcset="/_next/image?url=%2Ftest-image.jpg&w=640&q=75 640w, /_next/image?url=%2Ftest-image.jpg&w=750&q=75 750w, /_next/image?url=%2Ftest-image.jpg&w=828&q=75 828w, /_next/image?url=%2Ftest-image.jpg&w=1080&q=75 1080w, /_next/image?url=%2Ftest-image.jpg&w=1200&q=75 1200w, /_next/image?url=%2Ftest-image.jpg&w=1920&q=75 1920w, /_next/image?url=%2Ftest-image.jpg&w=2048&q=75 2048w, /_next/image?url=%2Ftest-image.jpg&w=3840&q=75 3840w"
                 style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
               />
-            </div>
+            </span>
             <div
               class="c14 c15"
             >

@@ -36,9 +36,9 @@ export type OakCATQuestionProps = {
   initialOpen?: boolean;
   questionTypeInput: ReactNode;
   questionStem: ReactNode;
+  answersSection: ReactNode;
   hintInput: ReactElement;
   feedbackInput: ReactElement;
-  answersSection: ReactNode;
   hintInputId: string;
   feedbackInputId: string;
 };
@@ -69,7 +69,6 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
       $alignItems={"center"}
       $width={"100%"}
       $font={"body-1-bold"}
-      $mb={"spacing-12"}
     >
       {`${questionNumber}.`}
       {questionTypeInput}
@@ -77,26 +76,13 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
   );
 
   const body = (
-    <OakFlex
-      $flexDirection={"column"}
-      $width={"100%"}
-      $gap={"spacing-48"}
-      $mt={"spacing-24"}
-    >
+    <OakFlex $flexDirection={"column"} $width={"100%"} $gap={"spacing-32"}>
       {/* this has the effect of stretching the container and the items within */}
       <OakFlex $alignSelf={"stretch"} $flexDirection={"column"}>
         {answersSection}
       </OakFlex>
 
-      <OakGrid
-        $ph="spacing-32"
-        $pv="spacing-24"
-        $background={"bg-neutral"}
-        $borderRadius={"border-radius-m2"}
-        $borderColor={"bg-neutral"}
-        $ba={"border-solid-s"}
-        $cg={"spacing-16"}
-      >
+      <OakGrid $cg={"spacing-16"}>
         <OakGridArea $colSpan={[12, 6, 6]}>
           <OakFlex $flexDirection={"column"} $flexGrow={1}>
             <OakLabel htmlFor={hintInputId}>
@@ -128,7 +114,6 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
         $width={"100%"}
         $justifyContent={"flex-start"}
         $background={"bg-primary"}
-        $pv={"spacing-48"}
         $ph={"spacing-40"}
         $statusColor={statusColorMap[status]}
         $flexDirection={"column"}
@@ -141,11 +126,12 @@ export const OakCATQuestion = (props: OakCATQuestionProps) => {
           header={header}
           subheader={questionStem}
           content={body}
-          $flexDirection={"column"}
-          $justifyContent={"flex-start"}
           initialOpen={initialOpen}
           ariaLabelClose={`expand question ${questionNumber}`}
           ariaLabelOpen={`collapse question ${questionNumber}`}
+          $flexDirection={"column"}
+          $justifyContent={"flex-start"}
+          $gap={"spacing-12"}
         />
       </StyledOakFlex>
     </UnstyledLI>

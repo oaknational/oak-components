@@ -90,6 +90,17 @@ export const Errors: Story = {
   },
 };
 
+export const MultipleTextLines: Story = {
+  render: (args) => <OakMultilineText {...args} />,
+  args: {
+    charLimit: 500,
+    disabled: false,
+    $height: "spacing-80",
+    initialValue:
+      "This is a very long placeholder that should take up multiple lines to show how the internal padding adjusts to keep the text vertically centered.",
+  },
+};
+
 export const Controlled: Story = {
   render: (args) => <ControlledOakMultilineText {...args} />,
 };

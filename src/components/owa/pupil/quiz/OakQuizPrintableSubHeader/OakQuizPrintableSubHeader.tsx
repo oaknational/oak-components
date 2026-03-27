@@ -10,7 +10,7 @@ export type OakQuizPrintableSubHeaderProps = {
   title: string;
   grade: number;
   numQuestions: number;
-  attempts: number;
+  attempts?: number;
 } & FlexStyleProps;
 
 /**
@@ -37,7 +37,7 @@ export const OakQuizPrintableSubHeader = ({
       </OakHeading>
       <OakFlex
         $flexDirection={"row"}
-        $gap={"spacing-24"}
+        $gap={attempts ? "spacing-24" : "spacing-0"}
         $background={"bg-neutral"}
         $pv={"spacing-4"}
         $ph={"spacing-12"}
@@ -52,7 +52,9 @@ export const OakQuizPrintableSubHeader = ({
           $gap={"spacing-12"}
           $justifyContent={"center"}
         >
-          <OakSpan $font="heading-6">Attempts: {attempts}</OakSpan>
+          {attempts !== undefined && (
+            <OakSpan $font="heading-6">Attempts: {attempts}</OakSpan>
+          )}
         </OakFlex>
       </OakFlex>
     </OakFlex>

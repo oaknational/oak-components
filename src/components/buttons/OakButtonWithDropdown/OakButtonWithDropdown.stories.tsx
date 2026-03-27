@@ -24,6 +24,7 @@ const dropdownNavMeta: Meta<typeof OakButtonWithDropdown> = {
         "disabled",
         "ariaLabel",
         "ariaDescription",
+        "closeOnChange",
       ],
     },
   },
@@ -38,6 +39,9 @@ const dropdownNavMeta: Meta<typeof OakButtonWithDropdown> = {
   argTypes: {
     onPrimaryAction: {
       action: "Primary action clicked",
+    },
+    closeOnChange: {
+      control: { type: "boolean" },
     },
   },
 };
@@ -167,4 +171,42 @@ export const leadingButtonIcon: OakButtonWithDropdownStory = {
     ),
     ariaLabel: "Teaching resources hub",
   },
+};
+
+export const ButtonWithDropdownCloseOnChange: OakButtonWithDropdownStory = {
+  render: (args) => (
+    <OakFlex $height={"spacing-240"}>
+      <OakFlex $gap="spacing-24">
+        <OakButtonWithDropdown closeOnChange={true} {...args}>
+          <OakSecondaryButton aria-label="Button 1">
+            Button 1
+          </OakSecondaryButton>
+
+          <OakSecondaryButton aria-label="Longer button 2">
+            Longer button 2
+          </OakSecondaryButton>
+
+          <OakSecondaryButton aria-label="Button 3">
+            Button 3
+          </OakSecondaryButton>
+
+          <OakSecondaryButton aria-label="Button 4">
+            Button 4
+          </OakSecondaryButton>
+        </OakButtonWithDropdown>
+
+        <OakButtonWithDropdown {...args} primaryActionText="Disabled" disabled>
+          <OakButtonWithDropdown.Item aria-label="Button 1">
+            Button 1
+          </OakButtonWithDropdown.Item>
+        </OakButtonWithDropdown>
+
+        <OakButtonWithDropdown {...args} primaryActionText="Loading" isLoading>
+          <OakButtonWithDropdown.Item aria-label="Button 1">
+            Button 1
+          </OakButtonWithDropdown.Item>
+        </OakButtonWithDropdown>
+      </OakFlex>
+    </OakFlex>
+  ),
 };

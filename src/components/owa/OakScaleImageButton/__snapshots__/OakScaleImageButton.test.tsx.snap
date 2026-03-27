@@ -27,6 +27,7 @@ exports[`OakScaleImageButton matches snapshot 1`] = `
   min-width: 1.5rem;
   height: 1.5rem;
   min-height: 1.5rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -78,6 +79,7 @@ exports[`OakScaleImageButton matches snapshot 1`] = `
   padding-right: 0rem;
   padding-top: 0rem;
   padding-bottom: 0rem;
+  display: inline-block;
   border: 0.125rem solid;
   border-color: #f2f2f2;
   border-radius: 0.25rem;
@@ -100,7 +102,6 @@ exports[`OakScaleImageButton matches snapshot 1`] = `
   position: relative;
   width: 100%;
   height: 100%;
-  display: inline-block;
 }
 
 .c4:hover {
@@ -179,7 +180,7 @@ exports[`OakScaleImageButton matches snapshot 1`] = `
       <div
         class="c5 c6"
       >
-        <div
+        <span
           class="c7"
         >
           <img
@@ -191,7 +192,7 @@ exports[`OakScaleImageButton matches snapshot 1`] = `
             src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1730982187/Icon_Expand_arrktl.svg"
             style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
           />
-        </div>
+        </span>
         <span
           class="c9"
         />

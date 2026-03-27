@@ -16,6 +16,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
   min-width: 2rem;
   height: 2rem;
   min-height: 2rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -256,7 +257,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
     <div
       class="c2 c3"
     >
-      <div
+      <span
         class="c4"
       >
         <img
@@ -268,7 +269,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
           src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/hoddjsgpzkszgvnmn91q.svg"
           style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
         />
-      </div>
+      </span>
     </div>
     <div
       class="c6 c7"
@@ -334,7 +335,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
             <div
               class="c2 c18 c19"
             >
-              <div
+              <span
                 class="c4 "
               >
                 <img
@@ -346,7 +347,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
                   src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/hoddjsgpzkszgvnmn91q.svg"
                   style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                 />
-              </div>
+              </span>
               <div
                 class="c20 c21"
               >
@@ -379,7 +380,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
             <div
               class="c2 c18 c19"
             >
-              <div
+              <span
                 class="c4 "
               >
                 <img
@@ -391,7 +392,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
                   src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/hoddjsgpzkszgvnmn91q.svg"
                   style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                 />
-              </div>
+              </span>
               <div
                 class="c20 c21"
               >
@@ -424,7 +425,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
             <div
               class="c2 c18 c19"
             >
-              <div
+              <span
                 class="c4 "
               >
                 <img
@@ -436,7 +437,7 @@ exports[`OakQuizOrder matches snapshot 1`] = `
                   src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1709052869/icons/hoddjsgpzkszgvnmn91q.svg"
                   style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                 />
-              </div>
+              </span>
               <div
                 class="c20 c21"
               >

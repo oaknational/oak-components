@@ -44,6 +44,7 @@ exports[`OakLinkCard matches snapshot 1`] = `
   min-width: 4rem;
   height: 4rem;
   min-height: 4rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -243,7 +244,7 @@ exports[`OakLinkCard matches snapshot 1`] = `
         <div
           class="c8"
         >
-          <div
+          <span
             class="c14"
           >
             <img
@@ -255,7 +256,7 @@ exports[`OakLinkCard matches snapshot 1`] = `
               src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953657/icons/hz4l3iq6i68kazvkvorq.svg"
               style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
             />
-          </div>
+          </span>
         </div>
       </div>
     </div>

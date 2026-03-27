@@ -44,6 +44,7 @@ const meta: Meta<typeof OakLessonNavItem> = {
         "progress",
         "lessonSectionName",
         "disabled",
+        "isLoading",
         "grade",
         "numQuestions",
       ],
@@ -60,6 +61,13 @@ export const Default: Story = {
 
 export const AsAButton: Story = {
   render: (args) => <OakLessonNavItem {...args} as="button" />,
+};
+
+export const Loading: Story = {
+  args: {
+    isLoading: true,
+  },
+  render: (args) => <OakLessonNavItem {...args} />,
 };
 
 export const NotStarted: Story = {
@@ -99,6 +107,27 @@ export const InProgress: Story = {
         progress="in-progress"
         numQuestions={6}
         grade={0}
+      />
+    </>
+  ),
+};
+
+export const Disabled: Story = {
+  render: () => (
+    <>
+      <OakLessonNavItem
+        lessonSectionName="starter-quiz"
+        progress="complete"
+        numQuestions={6}
+        grade={5}
+        disabled
+      />
+      <OakLessonNavItem
+        lessonSectionName="exit-quiz"
+        progress="complete"
+        numQuestions={4}
+        grade={3}
+        disabled
       />
     </>
   ),

@@ -48,6 +48,7 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
   min-width: 100%;
   height: 100%;
   min-height: 100%;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -80,6 +81,7 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
   min-width: 2rem;
   height: 2rem;
   min-height: 2rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -117,6 +119,7 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
   min-width: 3rem;
   height: 3rem;
   min-height: 3rem;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -505,7 +508,7 @@ input:checked + .c13 {
               <div
                 class="c13 c14 c15"
               >
-                <div
+                <span
                   class="c16"
                 >
                   <img
@@ -517,7 +520,7 @@ input:checked + .c13 {
                     src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
                     style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                   />
-                </div>
+                </span>
               </div>
             </div>
           </label>
@@ -554,7 +557,7 @@ input:checked + .c13 {
           <div
             class="c28 focus-outline"
           >
-            <div
+            <span
               class="c29 chevron-icon"
               style="transform: none; transition: all 0.3s ease 0s;"
             >
@@ -567,7 +570,7 @@ input:checked + .c13 {
                 src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953557/icons/botfld6brychmttwtv6u.svg"
                 style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
               />
-            </div>
+            </span>
           </div>
         </button>
       </div>
@@ -596,7 +599,7 @@ input:checked + .c13 {
                 <div
                   class="c39 c40"
                 >
-                  <div
+                  <span
                     class="c41"
                   >
                     <img
@@ -608,7 +611,7 @@ input:checked + .c13 {
                       src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1749034739/icons/book-steps_qwku6h.svg"
                       style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                     />
-                  </div>
+                  </span>
                 </div>
                 <div
                   class="c42 c43"
@@ -649,7 +652,7 @@ input:checked + .c13 {
                     <div
                       class="c13 c14 c15"
                     >
-                      <div
+                      <span
                         class="c16"
                       >
                         <img
@@ -661,7 +664,7 @@ input:checked + .c13 {
                           src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
                           style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                         />
-                      </div>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -680,7 +683,7 @@ input:checked + .c13 {
                 <div
                   class="c39 c40"
                 >
-                  <div
+                  <span
                     class="c41"
                   >
                     <img
@@ -692,7 +695,7 @@ input:checked + .c13 {
                       src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954241/icons/sjjy5f3g4eciwcuxxr33.svg"
                       style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                     />
-                  </div>
+                  </span>
                 </div>
                 <div
                   class="c42 c43"
@@ -733,7 +736,7 @@ input:checked + .c13 {
                     <div
                       class="c13 c14 c15"
                     >
-                      <div
+                      <span
                         class="c16"
                       >
                         <img
@@ -745,7 +748,7 @@ input:checked + .c13 {
                           src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
                           style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                         />
-                      </div>
+                      </span>
                     </div>
                   </div>
                 </div>

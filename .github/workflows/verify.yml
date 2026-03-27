@@ -23,6 +23,7 @@ jobs:
       - run: npm run format:check
       - run: npm run lint
       - run: npm run check-types
+      - run: npm run build
       - run: npm run test:ci
       - name: SonarCloud Scan
         uses: SonarSource/sonarqube-scan-action@v4.2.1
