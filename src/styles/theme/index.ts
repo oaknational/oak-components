@@ -3,6 +3,11 @@ export { oakColorTokens, oakUiRoleTokens } from "./color";
 export type {
   OakColorToken,
   OakUiRoleToken,
+  OakUiTextToken,
+  OakUiBackgroundToken,
+  OakUiIconToken,
+  OakUiBorderToken,
+  OakUiCodeToken,
   OakColorFilterToken,
 } from "./color";
 
