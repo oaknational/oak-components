@@ -1,4 +1,3 @@
-
 import React, { useRef, useEffect, useState } from "react";
 import styled from "styled-components";
 import { Transition, TransitionStatus } from "react-transition-group";
@@ -85,11 +84,11 @@ const ErrorIcon = (
 );
 
 type VariantConfig = {
-  icon: React.ReactNode
-  background?: OakUiBackgroundToken
-  color?: OakUiTextToken
-  text?: string
-  role: "alert" | "status"
+  icon: React.ReactNode;
+  background?: OakUiBackgroundToken;
+  color?: OakUiTextToken;
+  text?: string;
+  role: "alert" | "status";
 };
 
 const variantConfig: Record<
@@ -113,18 +112,15 @@ const variantConfig: Record<
     color: "text-inverted",
     text: "Something went wrong",
     role: "alert",
-  }
+  },
 };
 
 type ColorSchemeConfig = {
-  background: OakUiBackgroundToken
-  color: OakUiTextToken
+  background: OakUiBackgroundToken;
+  color: OakUiTextToken;
 };
 
-const colorSchemeConfig: Record<
-  "primary" | "inverted",
-  ColorSchemeConfig
-> = {
+const colorSchemeConfig: Record<"primary" | "inverted", ColorSchemeConfig> = {
   primary: {
     background: "bg-primary",
     color: "text-primary",
@@ -186,8 +182,11 @@ export const OakToastNew = ({
   const colorSchemeDefinition = colorSchemeConfig[colorScheme];
 
   const icon = variantDefinition.icon;
-  const background = (variantDefinition.background ?? backgroundColor ?? colorSchemeDefinition.background) as OakUiBackgroundToken;
-  const color = (variantDefinition.color ?? colorSchemeDefinition.color) as OakUiTextToken;
+  const background = (variantDefinition.background ??
+    backgroundColor ??
+    colorSchemeDefinition.background) as OakUiBackgroundToken;
+  const color = (variantDefinition.color ??
+    colorSchemeDefinition.color) as OakUiTextToken;
   const text = children ?? variantDefinition.text ?? "";
   const role = variantDefinition.role;
 
