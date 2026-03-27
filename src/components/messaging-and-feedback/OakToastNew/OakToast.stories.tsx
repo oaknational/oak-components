@@ -45,7 +45,7 @@ export default meta;
 
 type Story = StoryObj<typeof OakToastNew>;
 
-export const Informative: Story = {
+export const InformativeVariant: Story = {
   render: (args) => <OakToastNew {...args} />,
   args: {
     children: "This is a toast message",
@@ -56,7 +56,7 @@ export const Informative: Story = {
   },
 };
 
-export const InformativeWithAutoDismissAndNoIcon: Story = {
+export const InformativeVariantWithAutoDismissAndNoIcon: Story = {
   render: (args) => <OakToastNew {...args} />,
   args: {
     children: "This is a toast message",
@@ -67,7 +67,7 @@ export const InformativeWithAutoDismissAndNoIcon: Story = {
   },
 };
 
-export const Success: Story = {
+export const SuccessVariant: Story = {
   render: (args) => <OakToastNew {...args} />,
   args: {
     variant: "success",
@@ -76,7 +76,7 @@ export const Success: Story = {
   },
 };
 
-export const Error: Story = {
+export const ErrorVariant: Story = {
   render: (args) => <OakToastNew {...args} />,
   args: {
     variant: "error",
