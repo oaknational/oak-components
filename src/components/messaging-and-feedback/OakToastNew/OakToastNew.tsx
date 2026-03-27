@@ -11,24 +11,24 @@ import { OakIcon } from "@/components/images-and-icons/OakIcon";
 
 export type OakToastNewProps = {
   /**
-   * The text for the toast notification. Ignored for 'success' and 'error' variants.
+   * The text for the toast notification.
    */
   children?: React.ReactNode;
   /**
-   * The semantic variant of the toast. Controls icon, style, and text.
-   * - 'success': Green background, success icon, "Success" text
-   * - 'error': Red background, alert icon, "Something went wrong" text
-   * - 'informative': Uses children as text
+   * The semantic variant of the toast. Controls icon, colors, default text and role.
+   * - 'success': Success icon, green background, white text, default "Success" text or uses children if provided, role "status"
+   * - 'error': Alert icon, red background, white text, default "Something went wrong" text or uses children if provided, role "alert"
+   * - 'informative': Success icon, uses children as text, role "status"
    * @default 'informative'
    */
   variant?: "success" | "error" | "informative";
   /**
-   * The color scheme for the toast. Only affects 'informative' variant. Controls background, text, and icon color.
+   * The color scheme for the toast. Only affects 'informative' variant. Controls background and text colors.
    * @default 'primary'
    */
   colorScheme?: "primary" | "inverted";
   /**
-   * Custom background color override. Should be an OakUiBackgroundToken.
+   * Custom background color override. Only affects 'informative' variant.
    */
   backgroundColor?: OakUiBackgroundToken;
   /**

@@ -12,38 +12,30 @@ const meta: Meta<typeof OakToastNew> = {
   argTypes: {
     children: {
       control: { type: "text" },
-      description: "The content of the toast notification.",
     },
     variant: {
       options: ["informative", "success", "error"],
       control: { type: "radio" },
-      description: "The semantic variant of the toast.",
     },
     colorScheme: {
       options: ["primary", "inverted"],
       control: { type: "radio" },
-      description: "The color scheme for the toast (informative only).",
     },
     backgroundColor: {
       options: oakUiBackgroundTokens,
       control: { type: "select" },
-      description: "Custom background color override.",
     },
     isAutoDismiss: {
       control: { type: "boolean" },
-      description: "If true, the toast will automatically dismiss.",
     },
     autoDismissDuration: {
       control: { type: "number" },
-      description: "Duration in ms before auto-dismiss.",
     },
     hasIcon: {
       control: { type: "boolean" },
-      description: "If true, shows the icon for the variant.",
     },
     id: {
       control: { type: "number" },
-      description: "Optional id for the toast instance.",
     },
     onClose: { action: "onClose" },
   },
