@@ -74,9 +74,7 @@ describe("OakToastNew", () => {
       const toast = screen.getByTestId("oak-toast");
       const oakBgDecorative1MainRgb = "rgb(190, 242, 189)";
 
-      expect(toast).toHaveStyle(
-        `background-color: ${oakBgDecorative1MainRgb}`,
-      );
+      expect(toast).toHaveStyle(`background-color: ${oakBgDecorative1MainRgb}`);
     });
 
     it("has role 'status' for accessibility", () => {
@@ -94,9 +92,7 @@ describe("OakToastNew", () => {
   describe("Success variant", () => {
     it("renders with children text if provided", () => {
       renderWithTheme(
-        <OakToastNew variant="success">
-          This is a success message
-        </OakToastNew>,
+        <OakToastNew variant="success">This is a success message</OakToastNew>,
       );
 
       expect(screen.getByTestId("oak-toast")).toBeInTheDocument();
@@ -104,9 +100,7 @@ describe("OakToastNew", () => {
     });
 
     it("renders with success text if no children provided", () => {
-      renderWithTheme(
-        <OakToastNew variant="success" />
-      );
+      renderWithTheme(<OakToastNew variant="success" />);
 
       expect(screen.getByTestId("oak-toast")).toBeInTheDocument();
       expect(screen.getByText("Success")).toBeInTheDocument();
@@ -114,9 +108,7 @@ describe("OakToastNew", () => {
 
     it("renders with success icon", () => {
       renderWithTheme(
-        <OakToastNew variant="success">
-          This is a success message
-        </OakToastNew>,
+        <OakToastNew variant="success">This is a success message</OakToastNew>,
       );
 
       expect(screen.getByTestId("oak-toast-success-icon")).toBeInTheDocument();
@@ -145,7 +137,9 @@ describe("OakToastNew", () => {
       const oakBgDecorative1MainRgb = "rgb(190, 242, 189)";
 
       expect(toast).not.toHaveStyle(`background-color: ${oakBgInvertedRgb}`);
-      expect(toast).not.toHaveStyle(`background-color: ${oakBgDecorative1MainRgb}`);
+      expect(toast).not.toHaveStyle(
+        `background-color: ${oakBgDecorative1MainRgb}`,
+      );
     });
 
     it("has role 'status' for accessibility", () => {
@@ -159,9 +153,7 @@ describe("OakToastNew", () => {
   describe("Error variant", () => {
     it("renders with children text if provided", () => {
       renderWithTheme(
-        <OakToastNew variant="error">
-          This is an error message
-        </OakToastNew>,
+        <OakToastNew variant="error">This is an error message</OakToastNew>,
       );
 
       expect(screen.getByTestId("oak-toast")).toBeInTheDocument();
@@ -169,9 +161,7 @@ describe("OakToastNew", () => {
     });
 
     it("renders with error text if no children provided", () => {
-      renderWithTheme(
-        <OakToastNew variant="error" />
-      );
+      renderWithTheme(<OakToastNew variant="error" />);
 
       expect(screen.getByTestId("oak-toast")).toBeInTheDocument();
       expect(screen.getByText("Something went wrong")).toBeInTheDocument();
@@ -179,9 +169,7 @@ describe("OakToastNew", () => {
 
     it("renders with error icon", () => {
       renderWithTheme(
-        <OakToastNew variant="error">
-          This is an error message
-        </OakToastNew>,
+        <OakToastNew variant="error">This is an error message</OakToastNew>,
       );
 
       expect(screen.getByTestId("oak-toast-error-icon")).toBeInTheDocument();
@@ -210,7 +198,9 @@ describe("OakToastNew", () => {
       const oakBgDecorative1MainRgb = "rgb(190, 242, 189)";
 
       expect(toast).not.toHaveStyle(`background-color: ${oakBgInvertedRgb}`);
-      expect(toast).not.toHaveStyle(`background-color: ${oakBgDecorative1MainRgb}`);
+      expect(toast).not.toHaveStyle(
+        `background-color: ${oakBgDecorative1MainRgb}`,
+      );
     });
 
     it("has role 'alert' for accessibility", () => {
@@ -239,7 +229,9 @@ describe("OakToastNew", () => {
         </OakToastNew>,
       );
 
-      expect(screen.queryByTestId("oak-toast-success-icon")).not.toBeInTheDocument();
+      expect(
+        screen.queryByTestId("oak-toast-success-icon"),
+      ).not.toBeInTheDocument();
     });
   });
 
