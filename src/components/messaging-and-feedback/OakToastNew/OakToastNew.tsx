@@ -70,12 +70,13 @@ const SuccessIcon = (
       $borderRadius="border-radius-circle"
       $position="absolute"
     />
-    <OakIcon iconName="success" $width="spacing-32" $height="spacing-32" />
+    <OakIcon data-testid="oak-toast-success-icon" iconName="success" $width="spacing-32" $height="spacing-32" />
   </OakBox>
 );
 
 const ErrorIcon = (
   <OakIcon
+    data-testid="oak-toast-error-icon"
     iconName="warning"
     $colorFilter="text-inverted"
     $height="spacing-32"
