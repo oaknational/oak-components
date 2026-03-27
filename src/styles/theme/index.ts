@@ -8,7 +8,7 @@ export type {
   OakUiIconToken,
   OakUiBackgroundToken,
   OakUiBorderToken,
-  OakUiCodeToken
+  OakUiCodeToken,
 } from "./color";
 
 export {
