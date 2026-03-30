@@ -203,6 +203,7 @@ export const icons = {
   image: "v1763680546/icons/Icon_Image_uatq6d.svg",
   logo: "v1711468346/logo-mark.svg",
   trash: "v1764692488/icons/icon_delete_edzcua.svg",
+  "media-clips": "v1774884267/icons/media-clips_nw3zpt.svg",
 } as const satisfies VersionedSvgMap;
 
 export type IconName = keyof typeof icons;
