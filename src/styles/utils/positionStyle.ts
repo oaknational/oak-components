@@ -90,6 +90,12 @@ export type PositionStyleProps = {
    */
   $objectFit?: ResponsiveValues<CSSProperties["objectFit"]>;
   /**
+   * Sets the `object-position` CSS property of the element.
+   *
+   * Accepts an `object-position` value or a responsive array of `object-position` values.
+   */
+  $objectPosition?: ResponsiveValues<CSSProperties["objectPosition"]>;
+  /**
    * Sets the `pointer-events` CSS property of the element.
    *
    * Accepts a `pointer-events` value or a responsive array of `pointer-events` values.
@@ -120,6 +126,7 @@ export const positionStyle = css<PositionStyleProps>`
   ${responsiveStyle("overflow-x", (props) => props.$overflowX)}
   ${responsiveStyle("overflow-y", (props) => props.$overflowY)}
   ${responsiveStyle("object-fit", (props) => props.$objectFit)}
+  ${responsiveStyle("object-position", (props) => props.$objectPosition)}
   ${responsiveStyle("pointer-events", (props) => props.$pointerEvents)}
   ${responsiveStyle("visibility", (props) => props.$visibility)}
   ${responsiveStyle("vertical-align", (props) => props.$verticalAlign)}

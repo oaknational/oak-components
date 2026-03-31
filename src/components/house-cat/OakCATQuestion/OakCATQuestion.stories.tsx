@@ -104,7 +104,11 @@ export const InitiallyOpen: Story = {
       </OakBox>
     ),
     questionStem: (
-      <OakBox $background={"bg-decorative2-subdued"} $pa="spacing-12">
+      <OakBox
+        $background={"bg-decorative2-subdued"}
+        $pa="spacing-12"
+        $mb="spacing-32"
+      >
         Dummy Question Text Input
       </OakBox>
     ),
@@ -157,9 +161,7 @@ export const WithMultilineText: Story = {
       </OakBox>
     ),
     questionStem: (
-      <OakBox $background={"bg-decorative2-subdued"} $pa="spacing-12">
-        Dummy Question Text Input
-      </OakBox>
+      <OakMultilineText charLimit={100} name="questionStem" id="questionStem" />
     ),
     answersSection: (
       <OakBox
@@ -189,7 +191,7 @@ export const WithMultilineText: Story = {
   },
 };
 
-export const WithMultilineTextAndStemImage: Story = {
+export const WithStemImage: Story = {
   render: (args) => <OakCATQuestion {...args} />,
   args: {
     questionNumber: 1,
@@ -200,7 +202,11 @@ export const WithMultilineTextAndStemImage: Story = {
       </OakBox>
     ),
     questionStem: (
-      <OakBox $background={"bg-decorative2-subdued"} $pa="spacing-12">
+      <OakBox
+        $background={"bg-decorative2-subdued"}
+        $pa="spacing-12"
+        $mb="spacing-32"
+      >
         Dummy Question Text Input
         <OakImage
           src="https://oaknationalacademy-res.cloudinary.com/image/upload/v1755009886/hc2moqkbq4rlsouotg2c.jpg"

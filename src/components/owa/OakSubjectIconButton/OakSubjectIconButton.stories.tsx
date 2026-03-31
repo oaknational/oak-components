@@ -19,6 +19,10 @@ const meta: Meta<typeof OakSubjectIconButton> = {
       control: { type: "radio" },
       options: ["vertical", "horizontal"],
     },
+    element: {
+      control: { type: "radio" },
+      options: ["button", "a"],
+    },
   },
   parameters: {
     controls: {
@@ -28,6 +32,7 @@ const meta: Meta<typeof OakSubjectIconButton> = {
         "disabled",
         "subjectText",
         "variant",
+        "element",
       ],
     },
   },

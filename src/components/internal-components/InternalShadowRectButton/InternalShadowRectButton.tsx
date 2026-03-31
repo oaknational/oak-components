@@ -27,6 +27,7 @@ import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
 import { SpacingStyleProps } from "@/styles/utils/spacingStyle";
 import { FlexStyleProps } from "@/styles/utils/flexStyle";
 import { TypographyStyleProps } from "@/styles/utils/typographyStyle";
+import { DisplayStyleProps } from "@/styles/utils/displayStyle";
 
 type OakLoadingSpinnerTokenSubset = Extract<
   OakAllSpacingToken,
@@ -84,6 +85,7 @@ export type InternalShadowRectButtonProps = Omit<
   font?: TypographyStyleProps["$font"];
   innerWidth?: SizeStyleProps["$width"];
   textAlign?: TypographyStyleProps["$textAlign"];
+  display?: DisplayStyleProps["$display"];
 } & PositionStyleProps;
 
 const StyledInternalButton = styled(InternalButton)<
@@ -102,7 +104,6 @@ const StyledInternalButton = styled(InternalButton)<
 >`
   ${positionStyle}
   ${sizeStyle}
-  display: inline-block;
   ${(props) => css`
     &:hover {
       text-decoration: ${props.$hoverUnderline ? "underline" : "none"};
@@ -219,6 +220,7 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
     font = "heading-7",
     textAlign = "left",
     loadingSpinnerSize = "spacing-24",
+    display = "inline-block",
     selected,
     ...rest
   } = props;
@@ -297,6 +299,7 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
         $disabledTextColor={disabledTextColor}
         $disabledBackground={disabledBackground}
         $disabledBorderColor={disabledBorderColor}
+        $display={display}
         {...rest}
       >
         <OakFlex

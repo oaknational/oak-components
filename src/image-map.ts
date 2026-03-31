@@ -150,6 +150,7 @@ export const icons = {
     "v1706616425/subject-icons/religious-education.svg",
   "subject-rshe-pshe": "v1706616423/subject-icons/rshe-pshe.svg",
   "subject-rshe": "v1706616423/subject-icons/rshe-pshe.svg",
+  "subject-rule-of-law": "v1706616415/subject-icons/citizenship.svg",
   "subject-philosophy": "v1741794495/subject-icons/philosophy.svg",
   "subject-social-science": "v1741794495/subject-icons/social-science.svg",
   "subject-theology": "v1741794496/subject-icons/theology.svg",
@@ -203,6 +204,7 @@ export const icons = {
   logo: "v1711468346/logo-mark.svg",
   trash: "v1764692488/icons/icon_delete_edzcua.svg",
   list: "v1774882349/icons/List.svg",
+  "media-clips": "v1774884267/icons/media-clips_nw3zpt.svg",
 } as const satisfies VersionedSvgMap;
 
 export type IconName = keyof typeof icons;
