@@ -2,17 +2,17 @@ import React from "react";
 import { act, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
-import { InternalUnstyledChevronAccordion } from "./InternalUnstyledChevronAccordion";
+import { OakMinimalAccordion } from "./OakMinimalAccordion";
 
 import { OakThemeProvider } from "@/components/OakThemeProvider";
 import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
-describe(InternalUnstyledChevronAccordion, () => {
+describe(OakMinimalAccordion, () => {
   it("matches snapshot", () => {
     const { container } = renderWithTheme(
       <OakThemeProvider theme={oakDefaultTheme}>
-        <InternalUnstyledChevronAccordion
+        <OakMinimalAccordion
           initialOpen
           header="See more"
           content={<div>Here it is</div>}
@@ -26,7 +26,7 @@ describe(InternalUnstyledChevronAccordion, () => {
 
   it("toggles open and closed", () => {
     const { queryByText, queryByRole, getByRole } = renderWithTheme(
-      <InternalUnstyledChevronAccordion
+      <OakMinimalAccordion
         initialOpen={false}
         header="See more"
         content={<div>Here it is</div>}
@@ -60,7 +60,7 @@ describe(InternalUnstyledChevronAccordion, () => {
 
   it("changes aria-label based on open state", () => {
     const { getByRole } = renderWithTheme(
-      <InternalUnstyledChevronAccordion
+      <OakMinimalAccordion
         initialOpen={false}
         header="See more"
         content={<div>Here it is</div>}

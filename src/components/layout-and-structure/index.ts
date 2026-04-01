@@ -6,3 +6,4 @@ export * from "@/components/layout-and-structure/OakMaxWidth";
 export * from "@/components/layout-and-structure/OakAccordion";
 export * from "@/components/layout-and-structure/OakBasicAccordion";
 export * from "@/components/layout-and-structure/OakCollapsibleContent";
+export * from "@/components/layout-and-structure/OakMinimalAccordion";

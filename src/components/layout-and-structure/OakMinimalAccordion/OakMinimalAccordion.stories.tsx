@@ -1,16 +1,16 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { InternalUnstyledChevronAccordion } from "./InternalUnstyledChevronAccordion";
+import { OakMinimalAccordion } from "./OakMinimalAccordion";
 
 import { OakSmallSecondaryButtonWithDropdown } from "@/components/buttons/OakSmallSecondaryButtonWithDropdown";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakP } from "@/components/typography/OakP";
 
-const meta: Meta<typeof InternalUnstyledChevronAccordion> = {
-  component: InternalUnstyledChevronAccordion,
+const meta: Meta<typeof OakMinimalAccordion> = {
+  component: OakMinimalAccordion,
   tags: ["autodocs"],
-  title: "internal components/InternalUnstyledChevronAccordion",
+  title: "layout and structure/OakMinimalAccordion",
   parameters: {
     controls: {
       include: ["header", "subheader", "content", "initialOpen"],
@@ -60,11 +60,11 @@ const meta: Meta<typeof InternalUnstyledChevronAccordion> = {
       </OakBox>
     ),
   },
-  render: (args) => <InternalUnstyledChevronAccordion {...args} />,
+  render: (args) => <OakMinimalAccordion {...args} />,
 };
 export default meta;
 
-type Story = StoryObj<typeof InternalUnstyledChevronAccordion>;
+type Story = StoryObj<typeof OakMinimalAccordion>;
 
 export const Default: Story = {};
 
