@@ -120,7 +120,7 @@ const Accordion = ({
 
 /**
  * - OakMinimalAccordion has a chevron icon that rotates when the accordion is open.
- * - Unlike OakBasicAccordion, it has no border effects for hover or focus states.
+ * - Unlike InternalChevronAccordion, it has no border effects for hover or focus states.
  * - Only the chevron is interactive so as to allow interactive elements to be placed in the header.
  * - The intention is for these to be added by consuming components as needed.
  */
