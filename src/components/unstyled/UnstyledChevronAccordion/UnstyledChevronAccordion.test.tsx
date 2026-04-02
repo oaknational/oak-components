@@ -2,18 +2,18 @@ import React from "react";
 import { act, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
-import { OakMinimalAccordion } from "./OakMinimalAccordion";
+import { UnstyledChevronAccordion } from "./UnstyledChevronAccordion";
 
 import { OakThemeProvider } from "@/components/OakThemeProvider";
 import { oakDefaultTheme } from "@/styles";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
-describe(OakMinimalAccordion, () => {
+describe(UnstyledChevronAccordion, () => {
   it("matches snapshot", () => {
     const { container } = renderWithTheme(
       <OakThemeProvider theme={oakDefaultTheme}>
-        <OakMinimalAccordion
-          initialOpen
+        <UnstyledChevronAccordion
+          isInitiallyOpen
           header="See more"
           content={<div>Here it is</div>}
           id="see-more"
@@ -26,8 +26,8 @@ describe(OakMinimalAccordion, () => {
 
   it("toggles open and closed", () => {
     const { queryByText, queryByRole, getByRole } = renderWithTheme(
-      <OakMinimalAccordion
-        initialOpen={false}
+      <UnstyledChevronAccordion
+        isInitiallyOpen={false}
         header="See more"
         content={<div>Here it is</div>}
         id="see-more"
@@ -60,8 +60,8 @@ describe(OakMinimalAccordion, () => {
 
   it("changes aria-label based on open state", () => {
     const { getByRole } = renderWithTheme(
-      <OakMinimalAccordion
-        initialOpen={false}
+      <UnstyledChevronAccordion
+        isInitiallyOpen={false}
         header="See more"
         content={<div>Here it is</div>}
         id="see-more"

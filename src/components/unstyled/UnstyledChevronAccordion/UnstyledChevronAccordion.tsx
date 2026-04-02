@@ -19,12 +19,12 @@ import { ColorStyleProps } from "@/styles/utils/colorStyle";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
 
-export type OakMinimalAccordionProps = {
+export type UnstyledChevronAccordionProps = {
   /** The header of the accordion. */
   header: ReactNode;
 
   /** Whether the accordion should be open initially. */
-  initialOpen?: boolean;
+  isInitiallyOpen?: boolean;
 
   /** The content of the accordion. */
   content: ReactNode;
@@ -71,7 +71,7 @@ const Accordion = ({
   ariaLabelOpen = "Close accordion",
   ariaLabelClose = "Open accordion",
   ...styleProps
-}: OakMinimalAccordionProps) => {
+}: UnstyledChevronAccordionProps) => {
   const { isOpen } = useAccordionContext();
 
   return (
@@ -119,17 +119,17 @@ const Accordion = ({
 };
 
 /**
- * - OakMinimalAccordion has a chevron icon that rotates when the accordion is open.
+ * - UnstyledChevronAccordion has a chevron icon that rotates when the accordion is open.
  * - Unlike InternalChevronAccordion, it has no border effects for hover or focus states.
  * - Only the chevron is interactive so as to allow interactive elements to be placed in the header.
  * - The intention is for these to be added by consuming components as needed.
  */
-export const OakMinimalAccordion = ({
-  initialOpen = false,
+export const UnstyledChevronAccordion = ({
+  isInitiallyOpen = false,
   ...props
-}: OakMinimalAccordionProps) => {
+}: UnstyledChevronAccordionProps) => {
   return (
-    <InternalAccordionProvider isInitialOpen={initialOpen}>
+    <InternalAccordionProvider isInitialOpen={isInitiallyOpen}>
       <Accordion {...props} />
     </InternalAccordionProvider>
   );

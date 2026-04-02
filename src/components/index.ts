@@ -9,5 +9,6 @@ export * from "@/components/navigation";
 export * from "@/components/owa";
 export * from "@/components/presentational";
 export * from "@/components/typography";
+export * from "@/components/unstyled";
 export * from "@/components/OakGlobalStyle";
 export * from "@/components/OakThemeProvider";

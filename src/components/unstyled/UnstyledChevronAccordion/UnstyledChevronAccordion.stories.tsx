@@ -1,16 +1,16 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { OakMinimalAccordion } from "./OakMinimalAccordion";
+import { UnstyledChevronAccordion } from "./UnstyledChevronAccordion";
 
 import { OakSmallSecondaryButtonWithDropdown } from "@/components/buttons/OakSmallSecondaryButtonWithDropdown";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakP } from "@/components/typography/OakP";
 
-const meta: Meta<typeof OakMinimalAccordion> = {
-  component: OakMinimalAccordion,
+const meta: Meta<typeof UnstyledChevronAccordion> = {
+  component: UnstyledChevronAccordion,
   tags: ["autodocs"],
-  title: "layout and structure/OakMinimalAccordion",
+  title: "components/Unstyled/UnstyledChevronAccordion",
   parameters: {
     controls: {
       include: ["header", "subheader", "content", "initialOpen"],
@@ -32,7 +32,7 @@ const meta: Meta<typeof OakMinimalAccordion> = {
         type: "text",
       },
     },
-    initialOpen: {
+    isInitiallyOpen: {
       control: {
         type: "boolean",
       },
@@ -53,18 +53,18 @@ const meta: Meta<typeof OakMinimalAccordion> = {
         Content goes here
       </OakBox>
     ),
-    initialOpen: false,
+    isInitiallyOpen: false,
     subheader: (
       <OakBox $background={"bg-decorative5-very-subdued"}>
         Subheader goes here
       </OakBox>
     ),
   },
-  render: (args) => <OakMinimalAccordion {...args} />,
+  render: (args) => <UnstyledChevronAccordion {...args} />,
 };
 export default meta;
 
-type Story = StoryObj<typeof OakMinimalAccordion>;
+type Story = StoryObj<typeof UnstyledChevronAccordion>;
 
 export const Default: Story = {};
 
