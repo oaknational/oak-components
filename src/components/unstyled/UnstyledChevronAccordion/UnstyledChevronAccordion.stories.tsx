@@ -1,16 +1,16 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { InternalUnstyledChevronAccordion } from "./InternalUnstyledChevronAccordion";
+import { UnstyledChevronAccordion } from "./UnstyledChevronAccordion";
 
 import { OakSmallSecondaryButtonWithDropdown } from "@/components/buttons/OakSmallSecondaryButtonWithDropdown";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakP } from "@/components/typography/OakP";
 
-const meta: Meta<typeof InternalUnstyledChevronAccordion> = {
-  component: InternalUnstyledChevronAccordion,
+const meta: Meta<typeof UnstyledChevronAccordion> = {
+  component: UnstyledChevronAccordion,
   tags: ["autodocs"],
-  title: "internal components/InternalUnstyledChevronAccordion",
+  title: "components/Unstyled/UnstyledChevronAccordion",
   parameters: {
     controls: {
       include: ["header", "subheader", "content", "initialOpen"],
@@ -32,7 +32,7 @@ const meta: Meta<typeof InternalUnstyledChevronAccordion> = {
         type: "text",
       },
     },
-    initialOpen: {
+    isInitiallyOpen: {
       control: {
         type: "boolean",
       },
@@ -53,18 +53,18 @@ const meta: Meta<typeof InternalUnstyledChevronAccordion> = {
         Content goes here
       </OakBox>
     ),
-    initialOpen: false,
+    isInitiallyOpen: false,
     subheader: (
       <OakBox $background={"bg-decorative5-very-subdued"}>
         Subheader goes here
       </OakBox>
     ),
   },
-  render: (args) => <InternalUnstyledChevronAccordion {...args} />,
+  render: (args) => <UnstyledChevronAccordion {...args} />,
 };
 export default meta;
 
-type Story = StoryObj<typeof InternalUnstyledChevronAccordion>;
+type Story = StoryObj<typeof UnstyledChevronAccordion>;
 
 export const Default: Story = {};
 

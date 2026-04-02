@@ -11,4 +11,5 @@ export {
   parseLetterSpacing,
   parseLineHeight,
 } from "./parseTypography";
+export { parseBorderRadius } from "./parseBorderRadius";
 export { parseZIndex } from "./parseZIndex";
