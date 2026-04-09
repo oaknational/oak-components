@@ -9,6 +9,7 @@ import { ResponsiveValues } from "@/styles/utils/responsiveStyle";
 import { InternalButton } from "@/components/internal-components/InternalButton";
 import { OakFlex } from "@/components/layout-and-structure";
 import { OakUiRoleToken } from "@/styles";
+import { OakUL } from "@/components/typography";
 
 type Tab<T> = {
   label: T;
@@ -32,7 +33,12 @@ export type OakTabsProps<T extends string> = {
 
 const StyledFocusOutline = styled(OakFlex)``;
 
-const StyledTabButton = styled(InternalButton)<{
+const StyledUnorderedList = styled(OakUL)`
+  display: flex;
+  justify-content: space-around;
+`;
+
+const StyledTabButton = styled(InternalButton) <{
   $hoverColor: OakUiRoleToken;
   $hoverBackground: OakUiRoleToken;
 }>`
@@ -61,7 +67,7 @@ export function OakTabs<T extends string>(props: Readonly<OakTabsProps<T>>) {
   const hoverText = colorVariant === "black" ? "text-inverted" : "text-primary";
 
   return (
-    <OakFlex
+    <StyledUnorderedList
       $height={sizeVariant === "compact" ? "spacing-40" : "spacing-56"}
       $background={backgroundColor}
       $borderRadius={"border-radius-circle"}
@@ -113,6 +119,6 @@ export function OakTabs<T extends string>(props: Readonly<OakTabsProps<T>>) {
           </StyledTabButton>
         );
       })}
-    </OakFlex>
+    </StyledUnorderedList>
   );
 }

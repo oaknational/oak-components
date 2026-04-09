@@ -21,6 +21,16 @@ const props: OakTabsProps<string> = {
 };
 
 describe("OakTabs", () => {
+  it("renders tabs inside a semantic list", () => {
+    renderWithTheme(<OakTabs {...props} />);
+
+    const list = screen.getByRole("list");
+    const items = screen.getAllByRole("button");
+
+    expect(list).toBeInTheDocument();
+    expect(items).toHaveLength(3);
+  });
+
   it("renders tabs with correct styling for black variant", () => {
     renderWithTheme(<OakTabs {...props} />);
     const tabOne = screen.getByRole("button", { name: "Tab one" });
