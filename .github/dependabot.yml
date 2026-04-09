@@ -23,4 +23,4 @@ updates:
           - "patch"
           - "minor"
       # only group version updates, not security updates
-      applies-to: "version-updates"
+      applies-to: version-updates
