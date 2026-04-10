@@ -33,16 +33,6 @@ export type OakTabsProps<T extends string> = {
 
 const StyledFocusOutline = styled(OakFlex)``;
 
-const StyledUnorderedList = styled(OakUL)`
-  display: flex;
-  justify-content: space-around;
-`;
-
-const StyledListItem = styled(OakLI)`
-  list-style: none;
-  width: 100%;
-`;
-
 const StyledTabButton = styled(InternalButton)<{
   $hoverColor: OakUiRoleToken;
   $hoverBackground: OakUiRoleToken;
@@ -72,7 +62,9 @@ export function OakTabs<T extends string>(props: Readonly<OakTabsProps<T>>) {
   const hoverText = colorVariant === "black" ? "text-inverted" : "text-primary";
 
   return (
-    <StyledUnorderedList
+    <OakUL
+      $display={"flex"}
+      $justifyContent={"space-around"}
       $height={sizeVariant === "compact" ? "spacing-40" : "spacing-56"}
       $background={backgroundColor}
       $borderRadius={"border-radius-circle"}
@@ -90,7 +82,7 @@ export function OakTabs<T extends string>(props: Readonly<OakTabsProps<T>>) {
         const isSelected = activeTab === label;
 
         return (
-          <StyledListItem key={label} role="presentation">
+          <OakLI $listStyle={"none"} $width={"100%"} key={label}>
             <StyledTabButton
               element={type === "link" ? Link : undefined}
               href={type === "link" ? tab.href : undefined}
@@ -122,9 +114,9 @@ export function OakTabs<T extends string>(props: Readonly<OakTabsProps<T>>) {
                 {label}
               </StyledFocusOutline>
             </StyledTabButton>
-          </StyledListItem>
+          </OakLI>
         );
       })}
-    </StyledUnorderedList>
+    </OakUL>
   );
 }
