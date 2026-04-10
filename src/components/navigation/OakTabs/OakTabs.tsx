@@ -33,7 +33,7 @@ export type OakTabsProps<T extends string> = {
 
 const StyledFocusOutline = styled(OakFlex)``;
 
-const StyledTabButton = styled(InternalButton)<{
+const StyledTabButton = styled(InternalButton) <{
   $hoverColor: OakUiRoleToken;
   $hoverBackground: OakUiRoleToken;
 }>`
@@ -82,7 +82,12 @@ export function OakTabs<T extends string>(props: Readonly<OakTabsProps<T>>) {
         const isSelected = activeTab === label;
 
         return (
-          <OakLI $listStyle={"none"} $width={"100%"} key={label}>
+          <OakLI
+            $listStyle={"none"}
+            $width={"100%"}
+            $height={"100%"}
+            key={label}
+          >
             <StyledTabButton
               element={type === "link" ? Link : undefined}
               href={type === "link" ? tab.href : undefined}
