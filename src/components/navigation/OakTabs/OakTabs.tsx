@@ -33,7 +33,7 @@ export type OakTabsProps<T extends string> = {
 
 const StyledFocusOutline = styled(OakFlex)``;
 
-const StyledTabButton = styled(InternalButton) <{
+const StyledTabButton = styled(InternalButton)<{
   $hoverColor: OakUiRoleToken;
   $hoverBackground: OakUiRoleToken;
 }>`
