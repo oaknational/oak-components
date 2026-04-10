@@ -9,7 +9,7 @@ import { ResponsiveValues } from "@/styles/utils/responsiveStyle";
 import { InternalButton } from "@/components/internal-components/InternalButton";
 import { OakFlex } from "@/components/layout-and-structure";
 import { OakUiRoleToken } from "@/styles";
-import { OakUL } from "@/components/typography";
+import { OakLI, OakUL } from "@/components/typography";
 
 type Tab<T> = {
   label: T;
@@ -36,6 +36,11 @@ const StyledFocusOutline = styled(OakFlex)``;
 const StyledUnorderedList = styled(OakUL)`
   display: flex;
   justify-content: space-around;
+`;
+
+const StyledListItem = styled(OakLI)`
+  list-style: none;
+  width: 100%;
 `;
 
 const StyledTabButton = styled(InternalButton)<{
@@ -85,38 +90,39 @@ export function OakTabs<T extends string>(props: Readonly<OakTabsProps<T>>) {
         const isSelected = activeTab === label;
 
         return (
-          <StyledTabButton
-            element={type === "link" ? Link : undefined}
-            href={type === "link" ? tab.href : undefined}
-            key={label}
-            $background={isSelected ? "bg-decorative1-main" : backgroundColor}
-            $color={isSelected ? "text-primary" : textColor}
-            $hoverColor={isSelected ? "text-primary" : hoverText}
-            $hoverBackground={
-              isSelected ? "bg-decorative1-main" : hoverBackground
-            }
-            $ba="border-solid-s"
-            $borderColor={
-              isSelected ? "border-decorative1-stronger" : backgroundColor
-            }
-            onClick={(event: Event) => {
-              if (onTabClick) {
-                onTabClick(label, event);
+          <StyledListItem key={label} role="presentation">
+            <StyledTabButton
+              element={type === "link" ? Link : undefined}
+              href={type === "link" ? tab.href : undefined}
+              $background={isSelected ? "bg-decorative1-main" : backgroundColor}
+              $color={isSelected ? "text-primary" : textColor}
+              $hoverColor={isSelected ? "text-primary" : hoverText}
+              $hoverBackground={
+                isSelected ? "bg-decorative1-main" : hoverBackground
               }
-            }}
-          >
-            <StyledFocusOutline
-              $width={"100%"}
-              $height={"100%"}
-              $borderRadius={"border-radius-circle"}
-              $pa={"spacing-4"}
-              $alignItems={"center"}
-              $justifyContent={"center"}
-              $whiteSpace={"nowrap"}
+              $ba="border-solid-s"
+              $borderColor={
+                isSelected ? "border-decorative1-stronger" : backgroundColor
+              }
+              onClick={(event: Event) => {
+                if (onTabClick) {
+                  onTabClick(label, event);
+                }
+              }}
             >
-              {label}
-            </StyledFocusOutline>
-          </StyledTabButton>
+              <StyledFocusOutline
+                $width={"100%"}
+                $height={"100%"}
+                $borderRadius={"border-radius-circle"}
+                $pa={"spacing-4"}
+                $alignItems={"center"}
+                $justifyContent={"center"}
+                $whiteSpace={"nowrap"}
+              >
+                {label}
+              </StyledFocusOutline>
+            </StyledTabButton>
+          </StyledListItem>
         );
       })}
     </StyledUnorderedList>
