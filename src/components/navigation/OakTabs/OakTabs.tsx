@@ -38,7 +38,7 @@ const StyledUnorderedList = styled(OakUL)`
   justify-content: space-around;
 `;
 
-const StyledTabButton = styled(InternalButton) <{
+const StyledTabButton = styled(InternalButton)<{
   $hoverColor: OakUiRoleToken;
   $hoverBackground: OakUiRoleToken;
 }>`
