@@ -1,13 +1,13 @@
 import React, { useRef, useEffect, useState } from "react";
-import styled from "styled-components";
 import { Transition, TransitionStatus } from "react-transition-group";
+import styled from "styled-components";
 
+import { OakIcon } from "@/components/images-and-icons/OakIcon";
 import { InternalShadowIconButton } from "@/components/internal-components/InternalShadowIconButton";
+import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakUiTextToken, OakUiBackgroundToken } from "@/styles";
 import { parseOpacity } from "@/styles/helpers/parseOpacity";
-import { OakBox } from "@/components/layout-and-structure/OakBox";
-import { OakIcon } from "@/components/images-and-icons/OakIcon";
 
 export type OakToastNewProps = {
   /**
