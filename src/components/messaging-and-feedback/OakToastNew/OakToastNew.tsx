@@ -155,6 +155,8 @@ const StyledFlex = styled(OakFlex)<{ $state: TransitionStatus }>`
 `;
 
 /**
+ * Toasts communicate confirmation of an action or a low-priority message.
+ * ## Usage
  * Use this component to show brief, dismissible notifications to users.
  */
 export const OakToastNew = ({
