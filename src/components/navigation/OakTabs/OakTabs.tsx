@@ -86,6 +86,7 @@ export function OakTabs<T extends string>(props: Readonly<OakTabsProps<T>>) {
             $listStyle={"none"}
             $width={"100%"}
             $height={"100%"}
+            $display={"flex"}
             key={label}
           >
             <StyledTabButton
