@@ -6,6 +6,7 @@ import { UnstyledChevronAccordion } from "./UnstyledChevronAccordion";
 import { OakSmallSecondaryButtonWithDropdown } from "@/components/buttons/OakSmallSecondaryButtonWithDropdown";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakP } from "@/components/typography/OakP";
+import { flexArgTypes } from "@/storybook-helpers/flexStyleHelpers";
 
 const meta: Meta<typeof UnstyledChevronAccordion> = {
   component: UnstyledChevronAccordion,
@@ -13,10 +14,11 @@ const meta: Meta<typeof UnstyledChevronAccordion> = {
   title: "components/Unstyled/UnstyledChevronAccordion",
   parameters: {
     controls: {
-      include: ["header", "subheader", "content", "initialOpen"],
+      include: ["header", "subheader", "content", "initialOpen", "$gap"],
     },
   },
   argTypes: {
+    ...flexArgTypes,
     content: {
       control: {
         type: "text",
@@ -59,6 +61,7 @@ const meta: Meta<typeof UnstyledChevronAccordion> = {
         Subheader goes here
       </OakBox>
     ),
+    $gap: "spacing-0",
   },
   render: (args) => <UnstyledChevronAccordion {...args} />,
 };
