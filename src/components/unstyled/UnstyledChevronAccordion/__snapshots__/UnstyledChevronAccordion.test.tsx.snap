@@ -151,16 +151,12 @@ exports[`UnstyledChevronAccordion matches snapshot 1`] = `
       </div>
     </div>
     <div
+      aria-labelledby="see-more"
       class="c11"
+      role="region"
     >
-      <div
-        aria-labelledby="see-more"
-        class="c2"
-        role="region"
-      >
-        <div>
-          Here it is
-        </div>
+      <div>
+        Here it is
       </div>
     </div>
   </div>
