@@ -93,6 +93,7 @@ describe("OakTabs", () => {
       throw new Error("Cannot find first link");
     }
     expect(links[0]).toHaveProperty("href");
+    expect(links[0].ariaCurrent).toBe("page");
     const user = userEvent.setup();
     await user.click(links[0]);
     expect(onClickCallback).toHaveBeenCalledWith("Tab one");
