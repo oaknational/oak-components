@@ -109,11 +109,13 @@ const Accordion = ({
         </OakBox>
       </OakFlex>
       {subheader}
-      <OakBox $position={"relative"} $overflow={"auto"}>
-        <InternalAccordionContent aria-labelledby={id}>
-          {content}
-        </InternalAccordionContent>
-      </OakBox>
+      <InternalAccordionContent
+        $position={"relative"}
+        $overflow={"auto"}
+        aria-labelledby={id}
+      >
+        {content}
+      </InternalAccordionContent>
     </OakFlex>
   );
 };
