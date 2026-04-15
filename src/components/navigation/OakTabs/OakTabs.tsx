@@ -92,7 +92,7 @@ export function OakTabs<T extends string>(props: Readonly<OakTabsProps<T>>) {
             <StyledTabButton
               element={type === "link" ? Link : undefined}
               href={type === "link" ? tab.href : undefined}
-              aria-current={isSelected ? "page" : undefined}
+              aria-current={type === "link" && isSelected ? "page" : undefined}
               $background={isSelected ? "bg-decorative1-main" : backgroundColor}
               $color={isSelected ? "text-primary" : textColor}
               $hoverColor={isSelected ? "text-primary" : hoverText}
