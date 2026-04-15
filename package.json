@@ -105,6 +105,9 @@
     "tsx": "^4.20.5",
     "typescript": "^5.3.3"
   },
+  "overrides": {
+    "cipher-base": "^1.0.7"
+  },
   "directories": {
     "example": "examples"
   },
