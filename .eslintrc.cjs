@@ -31,9 +31,11 @@ const defaultConfig = {
 
 module.exports = {
   root: true,
+
   env: {
     node: true,
   },
+
   parserOptions: {
     ecmaVersion: 2020,
   },
@@ -83,4 +85,6 @@ module.exports = {
       },
     },
   ],
+
+  extends: ["plugin:storybook/recommended"]
 };

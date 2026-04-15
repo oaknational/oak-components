@@ -166,10 +166,6 @@ input:checked + .c12 {
 }
 
 @media (hover:hover) {
-
-}
-
-@media (hover:hover) {
   .c11:hover:not(:disabled) {
     background: #ffffff;
   }

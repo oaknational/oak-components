@@ -1,5 +1,5 @@
 import React from "react";
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/nextjs";
 
 import { OakButtonAsRadioGroup } from "@/components/form-elements/OakButtonAsRadioGroup";
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
