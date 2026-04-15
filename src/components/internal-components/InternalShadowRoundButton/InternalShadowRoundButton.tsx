@@ -87,7 +87,8 @@ const StyledButtonWrapper = styled(OakFlex)<{
 }>`
   ${(props) => css`
     > :first-child:focus-visible .shadow {
-      box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
+      box-shadow:
+        ${parseDropShadow("drop-shadow-centered-lemon")},
         ${parseDropShadow("drop-shadow-centered-grey")};
     }
     > :first-child:hover .shadow {
@@ -96,7 +97,8 @@ const StyledButtonWrapper = styled(OakFlex)<{
       )};
     }
     > :first-child:active .shadow {
-      box-shadow: ${parseDropShadow("drop-shadow-lemon")},
+      box-shadow:
+        ${parseDropShadow("drop-shadow-lemon")},
         ${parseDropShadow("drop-shadow-grey")};
     }
   `}
