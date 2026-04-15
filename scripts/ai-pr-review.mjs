@@ -15,6 +15,21 @@ const maxPromptChars = Number.parseInt(
   process.env.AI_REVIEW_MAX_PROMPT_CHARS ?? "160000",
   10,
 );
+const reviewablePathMatchers = [
+  /^src\/components\//,
+  /^src\/styles\//,
+  /^src\/hooks\//,
+  /^src\/storybook-helpers\//,
+  /^src\/index\.ts$/,
+];
+const ignoredPathMatchers = [
+  /^\.github\//,
+  /^scripts\//,
+  /^dist\//,
+  /^coverage\//,
+  /^README\.md$/,
+  /^package-lock\.json$/,
+];
 
 async function main() {
   const githubToken = process.env.GITHUB_TOKEN;
@@ -59,9 +74,23 @@ async function main() {
     pullRequestNumber,
     githubToken,
   );
+  const relevantFiles = files.filter(isRelevantReviewFile);
 
-  const reviewContext = buildReviewContext(pr, files);
-  const prompt = buildPrompt({ pr, files, reviewContext });
+  if (relevantFiles.length === 0) {
+    console.log(
+      "No standards-relevant component files changed; removing any prior AI review comment.",
+    );
+    await deleteExistingComment({
+      owner,
+      repo,
+      issueNumber: pullRequestNumber,
+      githubToken,
+    });
+    return;
+  }
+
+  const reviewContext = buildReviewContext(relevantFiles);
+  const prompt = buildPrompt({ pr, files: relevantFiles, reviewContext });
   const reviewBody = await createReview({
     model,
     standards,
@@ -87,7 +116,19 @@ async function main() {
   });
 }
 
-function buildReviewContext(pr, files) {
+function isRelevantReviewFile(file) {
+  if (!file?.filename) {
+    return false;
+  }
+
+  if (ignoredPathMatchers.some((matcher) => matcher.test(file.filename))) {
+    return false;
+  }
+
+  return reviewablePathMatchers.some((matcher) => matcher.test(file.filename));
+}
+
+function buildReviewContext(files) {
   const reviewableFiles = files.slice(0, maxFiles);
   let remainingBudget = maxPromptChars;
   const fileBlocks = [];
@@ -159,7 +200,7 @@ function buildPrompt({ pr, files, reviewContext }) {
     "Pull request description:",
     pr.body?.trim() || "[no PR description provided]",
     "",
-    `Changed files: ${files.length}`,
+    `Standards-relevant changed files: ${files.length}`,
     truncatedNotes.length > 0
       ? `Context limits: ${truncatedNotes.join(" ")}`
       : "Context limits: none",
@@ -261,11 +302,12 @@ async function listPullRequestFiles(owner, repo, pullRequestNumber, token) {
 }
 
 async function upsertComment({ owner, repo, issueNumber, githubToken, body }) {
-  const comments = await listIssueComments(owner, repo, issueNumber, githubToken);
-  const existing = comments.find(
-    (comment) =>
-      comment.user?.type === "Bot" && typeof comment.body === "string" && comment.body.includes(commentMarker),
-  );
+  const existing = await findExistingComment({
+    owner,
+    repo,
+    issueNumber,
+    githubToken,
+  });
 
   if (existing) {
     await githubApi(
@@ -285,6 +327,39 @@ async function upsertComment({ owner, repo, issueNumber, githubToken, body }) {
     body: JSON.stringify({ body }),
   });
   console.log("Created new AI review comment.");
+}
+
+async function deleteExistingComment({ owner, repo, issueNumber, githubToken }) {
+  const existing = await findExistingComment({
+    owner,
+    repo,
+    issueNumber,
+    githubToken,
+  });
+
+  if (!existing) {
+    return;
+  }
+
+  await githubApi(
+    `/repos/${owner}/${repo}/issues/comments/${existing.id}`,
+    githubToken,
+    {
+      method: "DELETE",
+    },
+  );
+  console.log(`Deleted existing AI review comment ${existing.id}.`);
+}
+
+async function findExistingComment({ owner, repo, issueNumber, githubToken }) {
+  const comments = await listIssueComments(owner, repo, issueNumber, githubToken);
+
+  return comments.find(
+    (comment) =>
+      comment.user?.type === "Bot" &&
+      typeof comment.body === "string" &&
+      comment.body.includes(commentMarker),
+  );
 }
 
 async function listIssueComments(owner, repo, issueNumber, token) {
