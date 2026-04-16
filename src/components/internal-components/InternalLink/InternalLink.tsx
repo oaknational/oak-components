@@ -41,6 +41,7 @@ const StyledLink = styled.a<{
   text-decoration: ${(props) => props.$textDecoration};
   cursor: pointer;
   color: ${(props) => parseColor(props.$color)};
+  overflow-wrap: break-word;
 
   ${StyledOakIcon} {
     filter: ${(props) => parseColorFilter(props.$color)};
