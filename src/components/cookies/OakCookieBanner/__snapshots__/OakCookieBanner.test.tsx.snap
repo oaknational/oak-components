@@ -340,6 +340,7 @@ exports[`OakCookieBanner matches snapshot 1`] = `
   text-decoration: none;
   cursor: pointer;
   color: #222222;
+  overflow-wrap: break-word;
 }
 
 .c10:focus-visible {

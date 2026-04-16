@@ -324,6 +324,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   text-decoration: none;
   cursor: pointer;
   color: #222222;
+  overflow-wrap: break-word;
 }
 
 .c24:focus-visible {
@@ -798,6 +799,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   text-decoration: none;
   cursor: pointer;
   color: #222222;
+  overflow-wrap: break-word;
 }
 
 .c25:focus-visible {
@@ -1249,6 +1251,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   text-decoration: none;
   cursor: pointer;
   color: #222222;
+  overflow-wrap: break-word;
 }
 
 .c22:focus-visible {

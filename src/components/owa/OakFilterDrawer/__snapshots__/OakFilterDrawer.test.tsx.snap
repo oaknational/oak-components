@@ -300,6 +300,7 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
   text-decoration: none;
   cursor: pointer;
   color: #222222;
+  overflow-wrap: break-word;
 }
 
 .c7:focus-visible {
