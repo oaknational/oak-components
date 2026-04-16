@@ -13,18 +13,17 @@ import {
   InternalAccordionContent,
 } from "@/components/internal-components/InternalAccordion";
 import useAccordionContext from "@/components/internal-components/InternalAccordion/useAccordionContext";
-import InternalAccordionProvider from "@/components/internal-components/InternalAccordion/InternalAccordionProvider";
+import InternalAccordionProvider, {
+  accordionContext,
+} from "@/components/internal-components/InternalAccordion/InternalAccordionProvider";
 import { flexStyle, FlexStyleProps } from "@/styles/utils/flexStyle";
 import { ColorStyleProps } from "@/styles/utils/colorStyle";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
 
-export type UnstyledChevronAccordionProps = {
+type UnstyledChevronAccordionCommonProps = {
   /** The header of the accordion. */
   header: ReactNode;
-
-  /** Whether the accordion should be open initially. */
-  isInitiallyOpen?: boolean;
 
   /** The content of the accordion. */
   content: ReactNode;
@@ -43,6 +42,29 @@ export type UnstyledChevronAccordionProps = {
 } & FlexStyleProps &
   OakBoxProps &
   ColorStyleProps;
+
+type UnstyledChevronAccordionUncontrolledProps = {
+  /** Whether the accordion should be open initially. Uncontrolled usage only. */
+  isInitiallyOpen?: boolean;
+  isOpen?: never;
+  onOpenChange?: never;
+};
+
+type UnstyledChevronAccordionControlledProps = {
+  /** Controlled open state. Must be paired with `onOpenChange`. */
+  isOpen: boolean;
+
+  /** Called when the user toggles the accordion. Required when `isOpen` is provided. */
+  onOpenChange: (open: boolean) => void;
+  isInitiallyOpen?: never;
+};
+
+export type UnstyledChevronAccordionProps =
+  UnstyledChevronAccordionCommonProps &
+    (
+      | UnstyledChevronAccordionUncontrolledProps
+      | UnstyledChevronAccordionControlledProps
+    );
 
 const StyledAccordionButton = styled(InternalAccordionButton)<FlexStyleProps>`
   ${flexStyle}
@@ -72,7 +94,7 @@ const Accordion = ({
   ariaLabelOpen = "Close accordion",
   ariaLabelClose = "Open accordion",
   ...styleProps
-}: UnstyledChevronAccordionProps) => {
+}: UnstyledChevronAccordionCommonProps) => {
   const { isOpen } = useAccordionContext();
 
   return (
@@ -126,14 +148,28 @@ const Accordion = ({
  * - Unlike InternalChevronAccordion, it has no border effects for hover or focus states.
  * - Only the chevron is interactive so as to allow interactive elements to be placed in the header.
  * - The intention is for these to be added by consuming components as needed.
+ * - Can be used as an uncontrolled component (via `isInitiallyOpen`) or as a
+ *   controlled component (via `isOpen` + `onOpenChange`).
  */
-export const UnstyledChevronAccordion = ({
-  isInitiallyOpen = false,
-  ...props
-}: UnstyledChevronAccordionProps) => {
+export const UnstyledChevronAccordion = (
+  props: UnstyledChevronAccordionProps,
+) => {
+  // Is the accordion being used as a controlled component?
+  if (props.isOpen !== undefined) {
+    const { isOpen, onOpenChange, ...accordionProps } = props;
+    return (
+      <accordionContext.Provider
+        value={{ isOpen, setOpen: onOpenChange }}
+      >
+        <Accordion {...accordionProps} />
+      </accordionContext.Provider>
+    );
+  }
+
+  const { isInitiallyOpen = false, ...accordionProps } = props;
   return (
     <InternalAccordionProvider isInitialOpen={isInitiallyOpen}>
-      <Accordion {...props} />
+      <Accordion {...accordionProps} />
     </InternalAccordionProvider>
   );
 };

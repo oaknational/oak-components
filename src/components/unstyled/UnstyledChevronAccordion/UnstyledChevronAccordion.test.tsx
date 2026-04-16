@@ -58,6 +58,41 @@ describe(UnstyledChevronAccordion, () => {
     expect(getByRole("region")).toBeInTheDocument();
   });
 
+  it("operates as a controlled component when isOpen and onOpenChange are provided", () => {
+    const onOpenChange = jest.fn();
+    const { getByRole, queryByRole, rerender } = renderWithTheme(
+      <UnstyledChevronAccordion
+        isOpen={false}
+        onOpenChange={onOpenChange}
+        header="See more"
+        content={<div>Here it is</div>}
+        id="see-more"
+      />,
+    );
+
+    expect(queryByRole("region")).toBeNull();
+
+    act(() => {
+      fireEvent.click(getByRole("button"));
+    });
+
+    // Parent owns state - prop hasn't changed, so content stays hidden
+    expect(queryByRole("region")).toBeNull();
+    expect(onOpenChange).toHaveBeenCalledWith(true);
+
+    rerender(
+      <UnstyledChevronAccordion
+        isOpen={true}
+        onOpenChange={onOpenChange}
+        header="See more"
+        content={<div>Here it is</div>}
+        id="see-more"
+      />,
+    );
+
+    expect(getByRole("region")).toBeVisible();
+  });
+
   it("changes aria-label based on open state", () => {
     const { getByRole } = renderWithTheme(
       <UnstyledChevronAccordion
