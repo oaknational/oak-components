@@ -292,6 +292,7 @@ input:checked + .c12 {
   text-decoration: none;
   cursor: pointer;
   color: #222222;
+  overflow-wrap: break-word;
 }
 
 .c23:focus-visible {
@@ -332,6 +333,7 @@ input:checked + .c12 {
   text-decoration: none;
   cursor: pointer;
   color: #222222;
+  overflow-wrap: break-word;
 }
 
 .c29:focus-visible {
