@@ -54,6 +54,7 @@ exports[`OakBreadcrumbs matches snapshot 1`] = `
   text-decoration: none;
   cursor: pointer;
   color: #222222;
+  overflow-wrap: break-word;
 }
 
 .c3:focus-visible {

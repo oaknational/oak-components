@@ -303,6 +303,7 @@ exports[`OakHeaderHero matches snapshot 1`] = `
   text-decoration: underline;
   cursor: pointer;
   color: #0d24c4;
+  overflow-wrap: break-word;
 }
 
 .c8:focus-visible {
