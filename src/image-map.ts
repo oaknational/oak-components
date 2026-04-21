@@ -86,7 +86,7 @@ export const icons = {
   chatting: "v1763393163/icons/chatting-illustration_l52zaf.svg",
   "snack-break": "v1763393167/icons/snackbreak_illustration_fguw7l.svg",
   "class-grouping": "v1776785621/icons/class-grouping.svg",
-  "strand": "v1776785925/icons/strand.svg",
+  strand: "v1776785925/icons/strand.svg",
   // subject icons
   "subject-art": "v1706616347/subject-icons/art.svg",
   "subject-biology": "v1706616415/subject-icons/biology.svg",
