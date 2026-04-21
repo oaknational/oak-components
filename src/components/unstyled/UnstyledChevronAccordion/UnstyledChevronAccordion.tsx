@@ -78,8 +78,7 @@ const StyledAccordionButton = styled(InternalAccordionButton)<FlexStyleProps>`
   }
   &:focus-visible {
     .focus-outline {
-      box-shadow:
-        ${parseDropShadow("drop-shadow-centered-lemon")},
+      box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
         ${parseDropShadow("drop-shadow-centered-grey")};
     }
   }
@@ -160,9 +159,7 @@ export const UnstyledChevronAccordion = (
   if (props.isOpen !== undefined) {
     const { isOpen, onOpenChange, ...accordionProps } = props;
     return (
-      <accordionContext.Provider
-        value={{ isOpen, setOpen: onOpenChange }}
-      >
+      <accordionContext.Provider value={{ isOpen, setOpen: onOpenChange }}>
         <Accordion {...accordionProps} />
       </accordionContext.Provider>
     );
