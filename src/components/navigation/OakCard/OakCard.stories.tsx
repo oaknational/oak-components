@@ -21,6 +21,9 @@ const meta: Meta<typeof OakCard> = {
   component: OakCard,
   tags: ["autodocs"],
   argTypes: {
+    headingLevel: {
+      options: ["h1", "h2", "h3", "h4", "h5", "h6"],
+    },
     cardOrientation: {
       options: ["row", "column"],
     },
@@ -41,6 +44,7 @@ const meta: Meta<typeof OakCard> = {
     controls: {
       include: [
         "heading",
+        "headingLevel",
         "href",
         "cardOrientation",
         "cardWidth",
@@ -65,6 +69,7 @@ export const Default: Story = {
   render: (args) => <OakCard {...args} />,
   args: {
     heading: "A Heading",
+    headingLevel: "h2",
     href: "https://example.com",
     cardOrientation: "column",
     cardWidth: "fit-content",
@@ -84,6 +89,7 @@ export const ColumnOrientationWithSquareImage: Story = {
   args: {
     heading:
       "Raising ambition and inspiring a love for language with Oak's English curriculum",
+    headingLevel: "h3",
     href: "https://example.com",
     cardOrientation: "column",
     cardWidth: "spacing-360",
@@ -101,6 +107,7 @@ export const RowOrientationWithRectangularImage: Story = {
   args: {
     heading:
       "Building curious, confident historians: inside Oak's history curriculum",
+    headingLevel: "h3",
     href: "https://example.com",
     cardOrientation: "row",
     cardWidth: "100%",
@@ -120,6 +127,7 @@ export const DownloadCard: Story = {
   render: (args) => <OakCard {...args} />,
   args: {
     heading: "Oak's 2022-2025 strategy: April 2024 update",
+    headingLevel: "h3",
     href: "https://example.com/download.pdf",
     cardOrientation: "column",
     cardWidth: "spacing-240",
