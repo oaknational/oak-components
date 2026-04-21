@@ -66,7 +66,7 @@ export function OakViewBySwitcher(props: Readonly<OakViewBySwitcherProps>) {
   return (
     <OakFlex
       as="nav"
-      aria-labelledby="view-by-switcher"
+      aria-labelledby="view-by-switcher-label"
       $flexDirection={"column"}
       $alignItems={"flex-start"}
       $gap={"spacing-4"}
