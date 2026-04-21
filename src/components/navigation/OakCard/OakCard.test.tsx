@@ -8,6 +8,7 @@ import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 const testData = {
   heading: "Test Heading",
+  headingLevel: "h3" as const,
   href: "https://www.example.com",
   cardOrientation: "row" as const,
   cardWidth: "spacing-360" as const,
@@ -41,6 +42,12 @@ describe("OakCard", () => {
     expect(screen.getByRole("link")).toHaveAttribute("href", testData.href);
     expect(screen.queryByRole("img")).not.toBeInTheDocument();
     expect(screen.queryByRole("paragraph")).not.toBeInTheDocument();
+  });
+
+  it("renders card with the correct heading level when provided", () => {
+    renderWithTheme(<OakCard {...requiredProps} headingLevel="h4" />);
+
+    expect(screen.getByRole("heading")).toHaveProperty("tagName", "H4");
   });
 
   it("renders card with correct orientation when provided", () => {
