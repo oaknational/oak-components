@@ -46,17 +46,19 @@ type UnstyledChevronAccordionCommonProps = {
 type UnstyledChevronAccordionUncontrolledProps = {
   /** Whether the accordion should be open initially. Uncontrolled usage only. */
   isInitiallyOpen?: boolean;
+
   isOpen?: never;
   onOpenChange?: never;
 };
 
 type UnstyledChevronAccordionControlledProps = {
+  isInitiallyOpen?: never;
+
   /** Controlled open state. Must be paired with `onOpenChange`. */
   isOpen: boolean;
 
   /** Called when the user toggles the accordion. Required when `isOpen` is provided. */
   onOpenChange: (open: boolean) => void;
-  isInitiallyOpen?: never;
 };
 
 export type UnstyledChevronAccordionProps =
