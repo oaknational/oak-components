@@ -24,6 +24,21 @@ const defaultTabs = [
   { label: "Strand", type: "button" as const, icon: "strand" as const },
 ];
 
+const linkTabs = [
+  {
+    label: "Key stage & year group",
+    type: "link" as const,
+    href: "#key-stage-year-group",
+    icon: "class-grouping" as const,
+  },
+  {
+    label: "Strand",
+    type: "link" as const,
+    href: "#strand",
+    icon: "strand" as const,
+  },
+];
+
 export const Default: Story = {
   render: function DefaultStory(args) {
     const [activeTab, setActiveTab] = useState("Key stage & year group");
@@ -51,6 +66,20 @@ export const Compact: Story = {
           activeTab={activeTab}
           sizeVariant="compact"
           onTabClick={(tab) => setActiveTab(tab)}
+        />
+      </OakFlex>
+    );
+  },
+};
+
+export const Links: Story = {
+  render: function LinksStory(args) {
+    return (
+      <OakFlex $mt={"spacing-24"} $justifyContent={"center"}>
+        <OakViewBySwitcher
+          {...args}
+          tabs={linkTabs}
+          activeTab="Key stage & year group"
         />
       </OakFlex>
     );
