@@ -5,7 +5,7 @@ import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakFocusIndicator } from "@/components/messaging-and-feedback/OakFocusIndicator";
-import { OakHeading } from "@/components/typography/OakHeading";
+import { OakHeading, OakHeadingTag } from "@/components/typography/OakHeading";
 import { OakImage } from "@/components/images-and-icons/OakImage";
 import { OakP } from "@/components/typography/OakP";
 import { OakIconName, OakIcon } from "@/components/images-and-icons/OakIcon";
@@ -23,6 +23,10 @@ export type OakCardProps = {
    * The heading text of the card.
    */
   heading: string;
+  /**
+   * The heading level of the card.
+   */
+  headingLevel?: OakHeadingTag;
   /**
    * The URL that the card links to.
    */
@@ -114,6 +118,7 @@ const StyledOakImage = styled(OakImage)<StyledImageProps>`
  */
 export const OakCard = ({
   heading,
+  headingLevel = "h3",
   href,
   cardOrientation = "column",
   cardWidth,
@@ -161,7 +166,7 @@ export const OakCard = ({
           $gap="spacing-16"
         >
           <OakFlex $flexDirection="column" $gap="spacing-16">
-            <OakHeading tag="h3" $font={"heading-6"}>
+            <OakHeading tag={headingLevel} $font={"heading-6"}>
               {heading}
             </OakHeading>
             {subCopy && <OakP>{subCopy}</OakP>}
