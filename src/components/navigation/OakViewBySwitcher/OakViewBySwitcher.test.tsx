@@ -9,7 +9,13 @@ import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 const onClickCallback = jest.fn();
 
+const defaultTabs: OakViewBySwitcherProps["tabs"] = [
+  { label: "Key stage & year group", type: "button", icon: "class-grouping" },
+  { label: "Strand", type: "button", icon: "strand" },
+];
+
 const props: OakViewBySwitcherProps = {
+  tabs: defaultTabs,
   activeTab: "Key stage & year group",
   onTabClick: (tab) => onClickCallback(tab),
 };
@@ -64,11 +70,16 @@ describe("OakViewBySwitcher", () => {
   });
 
   describe("when rendered as links", () => {
-    const linkProps = {
-      ...props,
-      keyStageYearGroupHref: "#key-stage",
-      strandHref: "#strand",
-    };
+    const linkTabs: OakViewBySwitcherProps["tabs"] = [
+      {
+        label: "Key stage & year group",
+        type: "link",
+        href: "#key-stage",
+        icon: "class-grouping",
+      },
+      { label: "Strand", type: "link", href: "#strand", icon: "strand" },
+    ];
+    const linkProps = { ...props, tabs: linkTabs };
 
     it("renders both tabs as links with correct hrefs", () => {
       renderWithTheme(<OakViewBySwitcher {...linkProps} />);

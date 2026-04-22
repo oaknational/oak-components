@@ -15,16 +15,37 @@ export default meta;
 
 type Story = StoryObj<typeof OakViewBySwitcher>;
 
+const defaultTabs = [
+  { label: "Key stage & year group", type: "button" as const, icon: "class-grouping" as const },
+  { label: "Strand", type: "button" as const, icon: "strand" as const },
+];
+
 export const Default: Story = {
   render: function DefaultStory(args) {
-    const [activeTab, setActiveTab] = useState<
-      "Key stage & year group" | "Strand"
-    >("Key stage & year group");
+    const [activeTab, setActiveTab] = useState("Key stage & year group");
     return (
       <OakFlex $mt={"spacing-24"} $justifyContent={"center"}>
         <OakViewBySwitcher
           {...args}
+          tabs={defaultTabs}
           activeTab={activeTab}
+          onTabClick={(tab) => setActiveTab(tab)}
+        />
+      </OakFlex>
+    );
+  },
+};
+
+export const Compact: Story = {
+  render: function CompactStory(args) {
+    const [activeTab, setActiveTab] = useState("Key stage & year group");
+    return (
+      <OakFlex $mt={"spacing-24"} $justifyContent={"center"}>
+        <OakViewBySwitcher
+          {...args}
+          tabs={defaultTabs}
+          activeTab={activeTab}
+          sizeVariant="compact"
           onTabClick={(tab) => setActiveTab(tab)}
         />
       </OakFlex>

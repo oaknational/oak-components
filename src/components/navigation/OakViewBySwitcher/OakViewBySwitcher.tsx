@@ -12,13 +12,16 @@ import { OakLI, OakUL } from "@/components/typography";
 import { OakIcon, OakIconName } from "@/components/images-and-icons/OakIcon";
 import { OakJauntyAngleLabel } from "@/components/form-elements/OakJauntyAngleLabel";
 
-export type OakViewByTab = "Key stage & year group" | "Strand";
+export type OakViewByTabItem<T extends string = string> = {
+  label: T;
+  icon: OakIconName;
+} & ({ type: "button" } | { type: "link"; href: string });
 
-export type OakViewBySwitcherProps = {
-  activeTab: OakViewByTab;
-  keyStageYearGroupHref?: string;
-  strandHref?: string;
-  onTabClick?: (tab: OakViewByTab, event: Event) => void;
+export type OakViewBySwitcherProps<T extends string = string> = {
+  tabs: Array<OakViewByTabItem<T>>;
+  activeTab: T;
+  sizeVariant?: "default" | "compact";
+  onTabClick?: (tab: T, event: Event) => void;
 };
 
 const StyledFocusOutline = styled(OakFlex)``;
@@ -42,26 +45,12 @@ const StyledTabButton = styled(InternalButton)<{
   }
 `;
 
-const TABS: OakViewByTab[] = ["Key stage & year group", "Strand"];
-
-const iconByTab: Record<OakViewByTab, OakIconName> = {
-  "Key stage & year group": "class-grouping",
-  Strand: "strand",
-};
-
-// "class-grouping" icon is black; "strand" icon is white.
-const iconIsWhiteSource: Record<OakViewByTab, boolean> = {
-  "Key stage & year group": false,
-  Strand: true,
-};
-
-export function OakViewBySwitcher(props: Readonly<OakViewBySwitcherProps>) {
-  const { activeTab, keyStageYearGroupHref, strandHref, onTabClick } = props;
-
-  const hrefByTab: Record<OakViewByTab, string | undefined> = {
-    "Key stage & year group": keyStageYearGroupHref,
-    Strand: strandHref,
-  };
+export function OakViewBySwitcher<T extends string>(
+  props: Readonly<OakViewBySwitcherProps<T>>,
+) {
+  const { tabs, activeTab, sizeVariant = "default", onTabClick } = props;
+  const isCompact = sizeVariant === "compact";
+  const listHeight = isCompact ? "spacing-40" : "spacing-56";
 
   return (
     <OakFlex
@@ -71,7 +60,7 @@ export function OakViewBySwitcher(props: Readonly<OakViewBySwitcherProps>) {
       $alignItems={"flex-start"}
       $gap={"spacing-4"}
       $position={"relative"}
-      $height={"spacing-56"}
+      $height={listHeight}
       $maxWidth={"spacing-360"}
     >
       <OakJauntyAngleLabel
@@ -89,24 +78,20 @@ export function OakViewBySwitcher(props: Readonly<OakViewBySwitcherProps>) {
 
       <OakUL
         $display={"flex"}
-        $height={"spacing-56"}
+        $height={listHeight}
         $background={"bg-inverted"}
         $borderRadius={"border-radius-circle"}
         $gap={"spacing-8"}
         $pa={"spacing-8"}
         $alignItems={"center"}
-        $font={"heading-light-7"}
+        $font={isCompact ? "body-3" : "heading-light-7"}
         $ba={"border-solid-s"}
         $borderColor={"bg-inverted"}
       >
-        {TABS.map((label) => {
+        {tabs.map((tab) => {
+          const { label, type, icon } = tab;
           const isSelected = activeTab === label;
-          const icon = iconByTab[label];
-          const href = hrefByTab[label];
-          const iconColorFilter =
-            iconIsWhiteSource[label] === isSelected
-              ? "icon-inverted"
-              : "icon-primary";
+          const iconColorFilter = isSelected ? "icon-primary" : "icon-inverted";
 
           return (
             <OakLI
@@ -117,8 +102,8 @@ export function OakViewBySwitcher(props: Readonly<OakViewBySwitcherProps>) {
               key={label}
             >
               <StyledTabButton
-                element={href ? Link : undefined}
-                href={href}
+                element={type === "link" ? Link : undefined}
+                href={type === "link" ? tab.href : undefined}
                 aria-current={isSelected ? "true" : undefined}
                 $background={isSelected ? "bg-primary" : "bg-inverted"}
                 $color={isSelected ? "text-primary" : "text-inverted"}
@@ -129,7 +114,7 @@ export function OakViewBySwitcher(props: Readonly<OakViewBySwitcherProps>) {
                 $ba="border-solid-s"
                 $borderColor={isSelected ? "bg-primary" : "bg-inverted"}
                 onClick={(event: Event) => onTabClick?.(label, event)}
-                $font={"heading-light-7"}
+                $font={isCompact ? "body-3" : "heading-light-7"}
               >
                 <StyledFocusOutline
                   $width={"100%"}
@@ -142,10 +127,10 @@ export function OakViewBySwitcher(props: Readonly<OakViewBySwitcherProps>) {
                   $gap={"spacing-4"}
                 >
                   <OakIcon
-                    $display={["none", "block"]}
+                    $display={"block"}
                     iconName={icon}
-                    $width={"spacing-24"}
-                    $height={"spacing-24"}
+                    $width={isCompact ? "spacing-20" : "spacing-24"}
+                    $height={isCompact ? "spacing-20" : "spacing-24"}
                     $colorFilter={iconColorFilter}
                   />
                   {label}
