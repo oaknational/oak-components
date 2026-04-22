@@ -5,7 +5,7 @@ import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakFocusIndicator } from "@/components/messaging-and-feedback/OakFocusIndicator";
-import { OakHeading } from "@/components/typography/OakHeading";
+import { OakHeading, OakHeadingTag } from "@/components/typography/OakHeading";
 import { OakImage } from "@/components/images-and-icons/OakImage";
 import { OakP } from "@/components/typography/OakP";
 import { OakIconName, OakIcon } from "@/components/images-and-icons/OakIcon";
@@ -26,7 +26,7 @@ export type OakCardProps = {
   /**
    * The heading level of the card.
    */
-  headingLevel?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  headingLevel?: OakHeadingTag;
   /**
    * The URL that the card links to.
    */
