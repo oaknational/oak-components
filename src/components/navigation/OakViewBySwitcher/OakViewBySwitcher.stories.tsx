@@ -16,7 +16,11 @@ export default meta;
 type Story = StoryObj<typeof OakViewBySwitcher>;
 
 const defaultTabs = [
-  { label: "Key stage & year group", type: "button" as const, icon: "class-grouping" as const },
+  {
+    label: "Key stage & year group",
+    type: "button" as const,
+    icon: "class-grouping" as const,
+  },
   { label: "Strand", type: "button" as const, icon: "strand" as const },
 ];
 
