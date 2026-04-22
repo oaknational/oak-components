@@ -39,6 +39,9 @@ const meta: Meta<typeof OakCard> = {
     linkIconName: {
       options: controlIconNames,
     },
+    hoverBackground: {
+      options: oakUiRoleTokens,
+    },
   },
   parameters: {
     controls: {
@@ -56,6 +59,7 @@ const meta: Meta<typeof OakCard> = {
         "tagBackground",
         "linkText",
         "linkIconName",
+        "hoverBackground",
       ],
     },
   },
@@ -81,6 +85,7 @@ export const Default: Story = {
     tagBackground: "bg-decorative5-main",
     linkText: "Link Text",
     linkIconName: "arrow-right",
+    hoverBackground: "bg-btn-secondary-hover",
   },
 };
 
@@ -99,6 +104,7 @@ export const ColumnOrientationWithSquareImage: Story = {
     aspectRatio: "1/1",
     linkText: "Watch the video",
     linkIconName: "chevron-right",
+    hoverBackground: "bg-decorative1-main",
   },
 };
 
