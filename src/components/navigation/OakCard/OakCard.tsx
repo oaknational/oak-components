@@ -71,6 +71,10 @@ export type OakCardProps = {
    * The name of the icon to be displayed next to the link text in the card.
    */
   linkIconName?: OakIconName;
+  /**
+   * The background colour of the card on hover.
+   */
+  hoverBackground?: OakUiRoleToken;
 };
 
 type StyledFlexProps = {
@@ -130,11 +134,12 @@ export const OakCard = ({
   tagBackground = "bg-decorative3-very-subdued",
   linkText,
   linkIconName = "arrow-right",
+  hoverBackground = "bg-btn-secondary-hover",
 }: OakCardProps) => {
   return (
     <OakFocusIndicator
       $background={"bg-primary"}
-      hoverBackground={"bg-btn-secondary-hover"}
+      hoverBackground={hoverBackground}
       $height={"100%"}
       $width={cardWidth}
       $borderRadius={"border-radius-m2"}
