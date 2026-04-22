@@ -82,7 +82,7 @@ export function OakViewBySwitcher<T extends string>(
         $background={"bg-inverted"}
         $borderRadius={"border-radius-circle"}
         $gap={"spacing-8"}
-        $pa={"spacing-8"}
+        $pa={isCompact ? "spacing-4" : "spacing-8"}
         $alignItems={"center"}
         $font={isCompact ? "body-3" : "heading-light-7"}
         $ba={"border-solid-s"}
@@ -97,7 +97,7 @@ export function OakViewBySwitcher<T extends string>(
             <OakLI
               $listStyle={"none"}
               $width={"100%"}
-              $height={"100%"}
+              $height={isCompact ? "spacing-32" : "100%"}
               $display={"flex"}
               key={label}
             >
