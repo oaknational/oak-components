@@ -144,6 +144,8 @@ export const OakLessonNavItem = <C extends ElementType = "a">(
     isLoading,
     href,
     onClick,
+    numQuestions,
+    grade,
     ...rest
   } = props;
   const isDisabled = Boolean(disabled || isLoading);
