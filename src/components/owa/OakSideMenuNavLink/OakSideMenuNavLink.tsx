@@ -9,6 +9,8 @@ import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { OakIcon } from "@/components/images-and-icons/OakIcon";
 import { OakSpan } from "@/components/typography/OakSpan";
+import { OakUiRoleToken } from "@/styles/theme/color";
+import { OakFontToken } from "@/styles/theme/typography";
 
 export type MenuItemProps = {
   heading: string;
@@ -17,11 +19,18 @@ export type MenuItemProps = {
 };
 
 const StyledLink = styled("a")<
-  FlexStyleProps & PaddingStyleProps & { isSelected: boolean }
+  FlexStyleProps &
+    PaddingStyleProps & {
+      isSelected: boolean;
+      hoverBorderColor: OakUiRoleToken;
+      selectedBackground?: OakUiRoleToken;
+    }
 >`
   text-decoration: none;
   display: flex;
   outline: none;
+  background-color: ${(props) =>
+    props.isSelected ? parseColor(props.selectedBackground) : undefined};
 
   @media (min-width: ${getBreakpoint("small")}px) {
     border-left: ${(props) =>
@@ -31,7 +40,7 @@ const StyledLink = styled("a")<
       border-color: ${(props) =>
         props.isSelected
           ? parseColor("bg-btn-primary-hover")
-          : parseColor("bg-decorative1-main")};
+          : parseColor(props.hoverBorderColor)};
     }
   }
 
@@ -51,6 +60,9 @@ export type OakSideMenuNavLinkProps = FlexStyleProps &
     item: MenuItemProps;
     isSelected: boolean;
     onClick: () => void;
+    hoverBorderColor?: OakUiRoleToken;
+    selectedBackground?: OakUiRoleToken;
+    selectedHeadingFont?: OakFontToken;
   };
 
 const OakSideMenuNavLinkCss = css<OakSideMenuNavLinkProps>`
@@ -59,7 +71,15 @@ const OakSideMenuNavLinkCss = css<OakSideMenuNavLinkProps>`
 `;
 
 const UnstyledComponent = (props: OakSideMenuNavLinkProps) => {
-  const { item, isSelected, onClick, ...rest } = props;
+  const {
+    item,
+    isSelected,
+    onClick,
+    hoverBorderColor = "bg-decorative1-main",
+    selectedBackground,
+    selectedHeadingFont = "heading-light-7",
+    ...rest
+  } = props;
   return (
     <StyledLink
       $alignItems={["center", "flex-start"]}
@@ -67,6 +87,8 @@ const UnstyledComponent = (props: OakSideMenuNavLinkProps) => {
       href={item.href}
       $ph={["spacing-0", "spacing-12"]}
       isSelected={isSelected}
+      hoverBorderColor={hoverBorderColor}
+      selectedBackground={selectedBackground}
       $flexDirection={["row", "column"]}
       onClick={onClick}
       aria-current={isSelected ? "true" : undefined}
@@ -77,7 +99,10 @@ const UnstyledComponent = (props: OakSideMenuNavLinkProps) => {
         $columnGap={["spacing-16", "spacing-4"]}
         $flexWrap="wrap"
       >
-        <OakSpan $font="heading-light-7" $color="text-primary">
+        <OakSpan
+          $font={isSelected ? selectedHeadingFont : "heading-light-7"}
+          $color="text-primary"
+        >
           {item.heading}
         </OakSpan>
         {item.subheading && (
