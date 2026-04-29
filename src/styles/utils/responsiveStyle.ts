@@ -19,6 +19,7 @@ export const breakpoints = Object.values(breakpointsByName).sort((a, b) =>
 
 export type BreakpointName = keyof typeof breakpointsByName;
 
+/** Get the pixel width for a breakpoint by its name. */
 export const getBreakpoint = (
   breakpointName: keyof typeof breakpointsByName,
 ) => {
@@ -35,6 +36,12 @@ const mediaQueries: Record<Device, string> = {
   desktop: `(min-width: ${getBreakpoint("large")}px)`,
 };
 
+/**
+ * Get a CSS snippet of a media query condition which matches a specific device.
+ *
+ * @example
+ *   `@media ${getMediaQuery("mobile")} { ... }`
+ */
 export const getMediaQuery = (device: Device) => {
   return mediaQueries[device];
 };
@@ -43,6 +50,11 @@ export type ResponsiveValues<Value> = (Value | null) | (Value | null)[];
 
 type Generic = string | number | undefined | null;
 
+/**
+ * Helper for a styled component's styles. Generates CSS to apply a value to a
+ * specific CSS property, including media queries if the value is a responsive
+ * array.
+ */
 export const responsiveStyle =
   <Props, T extends Generic>(
     attr: string,
