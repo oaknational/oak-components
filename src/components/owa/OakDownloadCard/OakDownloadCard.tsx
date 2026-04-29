@@ -136,14 +136,13 @@ export const OakDownloadCard = (props: OakDownloadCardProps) => {
             >
               {iconName.map((name, index) => (
                 <OakFlex
-                  key={index}
+                  key={`${name}-${index}`}
                   $position={"relative"}
                   $alignContent={"center"}
                   $alignItems={"center"}
                   $justifyContent={"center"}
                 >
                   <OakIcon
-                    key={index}
                     iconName={"bubble-1"}
                     $width={"spacing-48"}
                     $height={"spacing-48"}
@@ -154,7 +153,6 @@ export const OakDownloadCard = (props: OakDownloadCardProps) => {
                     $position={"absolute"}
                   />
                   <OakIcon
-                    key={index}
                     iconName={name}
                     $width={"spacing-40"}
                     $height={"spacing-40"}

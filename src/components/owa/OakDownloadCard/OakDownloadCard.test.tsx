@@ -3,6 +3,7 @@ import "@testing-library/jest-dom";
 
 import { OakDownloadCard } from "./OakDownloadCard";
 
+import { generateOakIconURL } from "@/components/images-and-icons/OakIcon";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("OakDownloadCard", () => {
@@ -45,6 +46,32 @@ describe("OakDownloadCard", () => {
       />,
     );
     expect(container).toMatchSnapshot();
+  });
+
+  it("renders multiple icons when iconName is an array", () => {
+    const { container } = renderWithTheme(
+      <OakDownloadCard
+        id="checkbox-1"
+        value="Option 1"
+        title={"TITLE"}
+        format={"FORMAT"}
+        iconName={["books", "slide-deck"]}
+      />,
+    );
+
+    const imageSources = Array.from(container.querySelectorAll("img")).map(
+      (image) => image.getAttribute("src") ?? "",
+    );
+
+    expect(
+      imageSources.filter((src) => src.includes("bubble-1")),
+    ).toHaveLength(2);
+    expect(imageSources).toEqual(
+      expect.arrayContaining([
+        generateOakIconURL("books"),
+        generateOakIconURL("slide-deck"),
+      ]),
+    );
   });
 
   it("has a role of checkbox", () => {
