@@ -1,8 +1,10 @@
 import React from "react";
 import "@testing-library/jest-dom";
+import { act, fireEvent } from "@testing-library/react";
 
 import { OakDownloadCard } from "./OakDownloadCard";
 
+import { OakRadioGroup } from "@/components/form-elements/OakRadioGroup";
 import { generateOakIconURL } from "@/components/images-and-icons/OakIcon";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
@@ -154,5 +156,31 @@ describe("OakDownloadCard", () => {
     );
 
     expect(getByRole("radio")).toBeInTheDocument();
+  });
+
+  it("calls both radio group and card onChange handlers in radio mode", () => {
+    const onGroupChange = jest.fn();
+    const onCardChange = jest.fn();
+
+    const { getByRole } = renderWithTheme(
+      <OakRadioGroup name="download-card-radio-group" onChange={onGroupChange}>
+        <OakDownloadCard
+          id="radio-1"
+          value="Option 1"
+          title={"TITLE"}
+          format={"FORMAT"}
+          iconName={"books"}
+          isRadio={true}
+          onChange={onCardChange}
+        />
+      </OakRadioGroup>,
+    );
+
+    act(() => {
+      fireEvent.click(getByRole("radio"));
+    });
+
+    expect(onGroupChange).toHaveBeenCalledTimes(1);
+    expect(onCardChange).toHaveBeenCalledTimes(1);
   });
 });
