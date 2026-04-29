@@ -3,7 +3,7 @@
 _Leave this text block for the reviewer_
 
 - Check [component hierarchy](https://miro.com/app/board/uXjVNnKBgyk=/?share_link_id=59445593794) is followed correctly
-- Check the design [Heuristics](https://oak-components-storybook-git-fix-add-colour-overrides-to-d62944.vercel.thenational.academy/?path=/docs/docs-how-to-design-components--docs#heuristics-for-component-design) have been followed
+- Check the design [Heuristics](https://components.thenational.academy/?path=/docs/docs-how-to-design-components--docs#heuristics-for-component-design) have been followed
 - Check [naming conventions](https://components.thenational.academy/?path=/docs/docs-naming-conventions--docs) have been applied
 - Check for these gotchyas:
   - Missing exports for Oak components
