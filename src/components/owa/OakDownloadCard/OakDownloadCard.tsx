@@ -15,6 +15,63 @@ import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakUiRoleToken } from "@/styles";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { IconName } from "@/image-map";
+
+const SingleIcon = ({ iconName }: { iconName: IconName }) => {
+  return (
+    <OakFlex
+      $background={"bg-decorative5-main"}
+      $pa={"spacing-12"}
+      $alignItems={"center"}
+      $alignSelf={"stretch"}
+    >
+      <OakIcon
+        iconName={iconName}
+        $width={"spacing-48"}
+        $height={"spacing-48"}
+      />
+    </OakFlex>
+  );
+};
+
+const MultipleIcons = ({ iconName }: { iconName: IconName[] }) => {
+  // This is all your UI code for the multi icon side of the conditional at the moment
+  return (
+    <OakFlex
+      $background={"bg-decorative5-main"}
+      $pa={"spacing-12"}
+      $alignItems={"center"}
+      $flexDirection={"column"}
+      $gap={"spacing-16"}
+      $justifyContent={"center"}
+    >
+      {iconName.map((name, index) => (
+        <OakFlex
+          key={`${name}-${index}`}
+          $position={"relative"}
+          $alignContent={"center"}
+          $alignItems={"center"}
+          $justifyContent={"center"}
+        >
+          <OakIcon
+            iconName={"bubble-1"}
+            $width={"spacing-48"}
+            $height={"spacing-48"}
+            $colorFilter={"icon-inverted"}
+            $mr={index < iconName.length - 1 ? "spacing-8" : "spacing-0"}
+            $position={"absolute"}
+          />
+          <OakIcon
+            iconName={name}
+            $width={"spacing-40"}
+            $height={"spacing-40"}
+            $mr={index < iconName.length - 1 ? "spacing-8" : "spacing-0"}
+          />
+        </OakFlex>
+      ))}
+    </OakFlex>
+  );
+};
+
 export type OakDownloadCardProps = BaseCheckBoxProps & {
   /**
    * The primary title content for the download.
@@ -126,56 +183,9 @@ export const OakDownloadCard = (props: OakDownloadCardProps) => {
       <LabelContainer>
         <OakFlex $alignItems={"stretch"} $flexGrow={1}>
           {isMultipleIcon ? (
-            <OakFlex
-              $background={"bg-decorative5-main"}
-              $pa={"spacing-12"}
-              $alignItems={"center"}
-              $flexDirection={"column"}
-              $gap={"spacing-16"}
-              $justifyContent={"center"}
-            >
-              {iconName.map((name, index) => (
-                <OakFlex
-                  key={`${name}-${index}`}
-                  $position={"relative"}
-                  $alignContent={"center"}
-                  $alignItems={"center"}
-                  $justifyContent={"center"}
-                >
-                  <OakIcon
-                    iconName={"bubble-1"}
-                    $width={"spacing-48"}
-                    $height={"spacing-48"}
-                    $colorFilter={"icon-inverted"}
-                    $mr={
-                      index < iconName.length - 1 ? "spacing-8" : "spacing-0"
-                    }
-                    $position={"absolute"}
-                  />
-                  <OakIcon
-                    iconName={name}
-                    $width={"spacing-40"}
-                    $height={"spacing-40"}
-                    $mr={
-                      index < iconName.length - 1 ? "spacing-8" : "spacing-0"
-                    }
-                  />
-                </OakFlex>
-              ))}
-            </OakFlex>
+            <MultipleIcons iconName={iconName} />
           ) : (
-            <OakFlex
-              $background={"bg-decorative5-main"}
-              $pa={"spacing-12"}
-              $alignItems={"center"}
-              $alignSelf={"stretch"}
-            >
-              <OakIcon
-                iconName={iconName}
-                $width={"spacing-48"}
-                $height={"spacing-48"}
-              />
-            </OakFlex>
+            <SingleIcon iconName={iconName} />
           )}
           <OakFlex
             $flexGrow={1}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Meta, StoryObj } from "@storybook/nextjs";
+import { fn } from "storybook/test";
 
 import { OakDownloadCard } from "./OakDownloadCard";
 
@@ -11,16 +12,26 @@ const meta: Meta<typeof OakDownloadCard> = {
   component: OakDownloadCard,
   tags: ["autodocs"],
   title: "components/OWA/OakDownloadCard",
+  args: { onBlur: fn(), onChange: fn(), onFocus: fn(), onHovered: fn() },
   argTypes: {
-    iconName: { options: oakIconNames, control: { type: "select" } },
-    title: { control: { type: "text" } },
+    checked: { control: { type: "boolean" } },
+    defaultChecked: { control: { type: "boolean" } },
+    disabled: { control: { type: "boolean" } },
     fileSize: { control: { type: "text" } },
     format: { control: { type: "text" } },
+    iconName: { options: oakIconNames, control: { type: "select" } },
+    id: { control: { type: "text" } },
     isRadio: { control: { type: "boolean" } },
-    onBlur: { action: "onBlur" },
-    onChange: { action: "onChange" },
-    onFocus: { action: "onFocus" },
-    onHovered: { action: "onHovered" },
+    name: { control: { type: "text" } },
+    "aria-label": { control: { type: "text" } },
+    "aria-labelledby": { control: { type: "text" } },
+    "data-testid": { control: { type: "text" } },
+    title: { control: { type: "text" } },
+    value: { control: { type: "text" } },
+    onBlur: { control: false },
+    onChange: { control: false },
+    onFocus: { control: false },
+    onHovered: { control: false },
   },
 };
 export default meta;
