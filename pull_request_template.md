@@ -3,8 +3,8 @@
 _Leave this text block for the reviewer_
 
 - Check [component hierarchy](https://miro.com/app/board/uXjVNnKBgyk=/?share_link_id=59445593794) is followed correctly
-- Check the design [Heuristics](https://components.thenational.academy/?path=/docs/docs-howtodesigncomponents--docs#heuristics-for-component-design) have been followed
-- Check [naming conventions](https://components.thenational.academy/?path=/docs/docs-namingconventions--docs) have been applied
+- Check the design [Heuristics](https://components.thenational.academy/?path=/docs/docs-how-to-design-components--docs) have been followed
+- Check [naming conventions](https://components.thenational.academy/?path=/docs/docs-naming-conventions--docs) have been applied
 - Check for these gotchyas:
   - Missing exports for Oak components
   - Accidental export of Internal components
