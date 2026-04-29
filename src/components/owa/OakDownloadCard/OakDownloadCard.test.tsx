@@ -12,8 +12,8 @@ describe("OakDownloadCard", () => {
         id="checkbox-1"
         value="Option 1"
         data-testid="test-1"
-        titleSlot={"TITLE"}
-        formatSlot={"FORMAT"}
+        title={"TITLE"}
+        format={"FORMAT"}
         iconName={"books"}
       />,
     );
@@ -25,8 +25,8 @@ describe("OakDownloadCard", () => {
       <OakDownloadCard
         id="checkbox-1"
         value="Option 1"
-        titleSlot={"TITLE"}
-        formatSlot={"FORMAT"}
+        title={"TITLE"}
+        format={"FORMAT"}
         iconName={"books"}
       />,
     );
@@ -38,10 +38,10 @@ describe("OakDownloadCard", () => {
       <OakDownloadCard
         id="checkbox-1"
         value="Option 1"
-        titleSlot={"TITLE"}
-        formatSlot={"FORMAT"}
+        title={"TITLE"}
+        format={"FORMAT"}
         iconName={"books"}
-        fileSizeSlot={"FILE_SIZE"}
+        fileSize={"FILE_SIZE"}
       />,
     );
     expect(container).toMatchSnapshot();
@@ -52,8 +52,8 @@ describe("OakDownloadCard", () => {
       <OakDownloadCard
         id="checkbox-1"
         value="Option 1"
-        titleSlot={"TITLE"}
-        formatSlot={"FORMAT"}
+        title={"TITLE"}
+        format={"FORMAT"}
         iconName={"books"}
       />,
     );
@@ -66,8 +66,8 @@ describe("OakDownloadCard", () => {
       <OakDownloadCard
         id="checkbox-1"
         value="Option 1"
-        titleSlot={"TITLE"}
-        formatSlot={"FORMAT"}
+        title={"TITLE"}
+        format={"FORMAT"}
         iconName={"books"}
       />,
     );
@@ -84,8 +84,8 @@ describe("OakDownloadCard", () => {
         id="checkbox-1"
         value="Option 1"
         onChange={onChange}
-        titleSlot={"TITLE"}
-        formatSlot={"FORMAT"}
+        title={"TITLE"}
+        format={"FORMAT"}
         iconName={"filter"}
       />,
     );
@@ -103,8 +103,8 @@ describe("OakDownloadCard", () => {
         value="Option 1"
         onFocus={onFocus}
         onBlur={onBlur}
-        titleSlot={"TITLE"}
-        formatSlot={"FORMAT"}
+        title={"TITLE"}
+        format={"FORMAT"}
         iconName={"books"}
       />,
     );
@@ -112,5 +112,20 @@ describe("OakDownloadCard", () => {
     getByRole("checkbox").blur();
     expect(onFocus).toHaveBeenCalledTimes(1);
     expect(onBlur).toHaveBeenCalledTimes(1);
+  });
+
+  it("renders a radio when isRadio is true", () => {
+    const { getByRole } = renderWithTheme(
+      <OakDownloadCard
+        id="radio-1"
+        value="Option 1"
+        title={"TITLE"}
+        format={"FORMAT"}
+        iconName={"books"}
+        isRadio={true}
+      />,
+    );
+
+    expect(getByRole("radio")).toBeInTheDocument();
   });
 });

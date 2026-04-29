@@ -21,17 +21,17 @@ const defaultProps = {
         id="lesson-plan"
         value="lesson-plan"
         iconName="book-steps"
-        titleSlot="Lesson plan"
-        formatSlot="PDF"
-        fileSizeSlot="245KB"
+        title="Lesson plan"
+        format="PDF"
+        fileSize="245KB"
       />
       <OakDownloadCard
         id="presentation"
         value="presentation"
         iconName="slide-deck"
-        titleSlot="Lesson presentation"
-        formatSlot="PPTX"
-        fileSizeSlot="1.2MB"
+        title="Lesson presentation"
+        format="PPTX"
+        fileSize="1.2MB"
       />
     </OakFlex>
   ),
