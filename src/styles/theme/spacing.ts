@@ -32,6 +32,7 @@ export type OakAllSpacingToken = keyof typeof oakAllSpacingTokens;
 
 export const oakInnerPaddingTokens = {
   "spacing-0": "spacing-0",
+  "spacing-2": "spacing-2",
   "spacing-4": "spacing-4",
   "spacing-8": "spacing-8",
   "spacing-12": "spacing-12",
@@ -51,14 +52,18 @@ export type OakInnerPaddingToken = keyof typeof oakInnerPaddingTokens;
 
 export const oakSpaceBetweenTokens = {
   "spacing-0": "spacing-0",
+  "spacing-2": "spacing-2",
   "spacing-4": "spacing-4",
   "spacing-8": "spacing-8",
   "spacing-12": "spacing-12",
   "spacing-16": "spacing-16",
+  "spacing-20": "spacing-20",
   "spacing-24": "spacing-24",
   "spacing-32": "spacing-32",
+  "spacing-40": "spacing-40",
   "spacing-48": "spacing-48",
   "spacing-56": "spacing-56",
+  "spacing-64": "spacing-64",
   "spacing-72": "spacing-72",
   "spacing-80": "spacing-80",
 };
