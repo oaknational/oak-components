@@ -52,6 +52,7 @@ export const WithFileSize: Story = {
 
 export const MultipleIcons: Story = {
   render: (args) => <OakDownloadCard {...args} />,
+  argTypes: { iconName: { control: { type: "object" } } },
   args: {
     iconName: ["quiz", "video", "worksheet", "quiz"],
     id: "download-card-multiple-icons",
@@ -193,5 +194,5 @@ export const SharePage: Story = {
       </OakFlex>
     </OakGrid>
   ),
-  args: {},
+  parameters: { controls: { disable: true } },
 };
