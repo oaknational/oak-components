@@ -61,10 +61,33 @@ describe("OakSideMenuNavLink", () => {
     );
 
     expect(getByTestId("test")).toHaveStyleRule("background-color", "#f2f2f2");
-    expect(getByTestId("test")).toHaveStyleRule("border-color", "#808080", {
+    expect(getByTestId("test")).toHaveStyleRule("border-color", "#575757", {
       media: `(min-width: ${getBreakpoint("small")}px)`,
       modifier: ":hover",
     });
     expect(getByText("Test")).toHaveStyleRule("font-weight", "600");
+  });
+
+  it("uses the custom hover border color when not selected", () => {
+    const { getByTestId } = renderWithTheme(
+      <OakSideMenuNavLink
+        data-testid="test"
+        isSelected={false}
+        item={{
+          heading: "Test",
+          subheading: "Test Subheading",
+          href: "/test",
+        }}
+        hoverBorderColor="border-neutral"
+        onClick={() => {
+          // Do nothing
+        }}
+      />,
+    );
+
+    expect(getByTestId("test")).toHaveStyleRule("border-color", "#808080", {
+      media: `(min-width: ${getBreakpoint("small")}px)`,
+      modifier: ":hover",
+    });
   });
 });

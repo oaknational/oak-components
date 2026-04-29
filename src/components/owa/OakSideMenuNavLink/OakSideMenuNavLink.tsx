@@ -37,7 +37,10 @@ const StyledLink = styled("a")<
       props.isSelected ? "4px solid #222222" : "4px solid transparent"};
     :hover {
       text-decoration: underline;
-      border-color: ${(props) => parseColor(props.hoverBorderColor)};
+      border-color: ${(props) =>
+        props.isSelected
+          ? parseColor("bg-btn-primary-hover")
+          : parseColor(props.hoverBorderColor)};
     }
   }
 
