@@ -34,7 +34,6 @@ const SingleIcon = ({ iconName }: { iconName: IconName }) => {
 };
 
 const MultipleIcons = ({ iconName }: { iconName: IconName[] }) => {
-  // This is all your UI code for the multi icon side of the conditional at the moment
   return (
     <OakFlex
       $background={"bg-decorative5-main"}
