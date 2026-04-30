@@ -65,9 +65,6 @@ describe("OakDownloadCard", () => {
       (image) => image.getAttribute("src") ?? "",
     );
 
-    expect(imageSources.filter((src) => src.includes("bubble-1"))).toHaveLength(
-      2,
-    );
     expect(imageSources).toEqual(
       expect.arrayContaining([
         generateOakIconURL("books"),

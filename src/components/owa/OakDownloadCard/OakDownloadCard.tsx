@@ -52,14 +52,6 @@ const MultipleIcons = ({ iconName }: { iconName: IconName[] }) => {
           $justifyContent={"center"}
         >
           <OakIcon
-            iconName={"bubble-1"}
-            $width={"spacing-48"}
-            $height={"spacing-48"}
-            $colorFilter={"icon-inverted"}
-            $mr={index < iconName.length - 1 ? "spacing-8" : "spacing-0"}
-            $position={"absolute"}
-          />
-          <OakIcon
             iconName={name}
             $width={"spacing-40"}
             $height={"spacing-40"}
