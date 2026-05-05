@@ -172,7 +172,7 @@ describe("OakToastNew", () => {
         <OakToastNew variant="error">This is an error message</OakToastNew>,
       );
 
-      expect(screen.getByTestId("oak-toast-error-icon")).toBeInTheDocument();
+      expect(screen.getByTestId("oak-toast-warning-icon")).toBeInTheDocument();
     });
 
     it("renders with error styling", () => {

@@ -2,7 +2,9 @@ import React, { useRef, useEffect, useState } from "react";
 import { Transition, TransitionStatus } from "react-transition-group";
 import styled from "styled-components";
 
-import { OakIcon } from "@/components/images-and-icons/OakIcon";
+import { colorSchemeConfig, variantConfig } from "./config";
+
+import { OakIcon, OakIconProps } from "@/components/images-and-icons/OakIcon";
 import { InternalShadowIconButton } from "@/components/internal-components/InternalShadowIconButton";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
@@ -56,85 +58,40 @@ export type OakToastNewProps = {
   id?: number;
 };
 
-const SuccessIconBackground = styled(OakBox)`
+const IconBackground = styled(OakBox)`
   top: 6px;
   left: 6px;
 `;
 
-const SuccessIcon = (
-  <OakBox $position="relative">
-    <SuccessIconBackground
-      $width="spacing-20"
-      $height="spacing-20"
-      $background="bg-primary"
-      $borderRadius="border-radius-circle"
-      $position="absolute"
-    />
-    <OakIcon
-      data-testid="oak-toast-success-icon"
-      iconName="success"
-      $width="spacing-32"
-      $height="spacing-32"
-    />
-  </OakBox>
-);
-
-const ErrorIcon = (
-  <OakIcon
-    data-testid="oak-toast-error-icon"
-    iconName="warning"
-    $colorFilter="text-inverted"
-    $height="spacing-32"
-    $width="spacing-32"
-  />
-);
-
-type VariantConfig = {
-  icon: React.ReactNode;
-  background?: OakUiBackgroundToken;
-  color?: OakUiTextToken;
-  text?: string;
-  role: "alert" | "status";
+type ToastIconProps = {
+  iconName: OakIconProps["iconName"];
+  iconBackground?: OakUiBackgroundToken | "transparent";
+  colorFilter?: OakIconProps["$colorFilter"];
 };
 
-const variantConfig: Record<
-  "informative" | "success" | "error",
-  VariantConfig
-> = {
-  informative: {
-    icon: SuccessIcon,
-    role: "status",
-  },
-  success: {
-    icon: SuccessIcon,
-    background: "bg-success",
-    color: "text-inverted",
-    text: "Success",
-    role: "status",
-  },
-  error: {
-    icon: ErrorIcon,
-    background: "bg-error",
-    color: "text-inverted",
-    text: "Something went wrong",
-    role: "alert",
-  },
-};
-
-type ColorSchemeConfig = {
-  background: OakUiBackgroundToken;
-  color: OakUiTextToken;
-};
-
-const colorSchemeConfig: Record<"primary" | "inverted", ColorSchemeConfig> = {
-  primary: {
-    background: "bg-primary",
-    color: "text-primary",
-  },
-  inverted: {
-    background: "bg-inverted",
-    color: "text-inverted",
-  },
+const ToastIcon = ({
+  iconName,
+  iconBackground = "transparent",
+  colorFilter,
+}: ToastIconProps) => {
+  return (
+    <OakBox $position="relative">
+      <IconBackground
+        $width="spacing-20"
+        $height="spacing-20"
+        $background={iconBackground}
+        $borderRadius="border-radius-circle"
+        $position="absolute"
+      />
+      <OakIcon
+        data-testid={`oak-toast-${iconName}-icon`}
+        iconName={iconName}
+        $colorFilter={colorFilter}
+        $width="spacing-32"
+        $height="spacing-32"
+      />
+    </OakBox>
+  );
 };
 
 const StyledFlex = styled(OakFlex)<{ $state: TransitionStatus }>`
@@ -188,8 +145,6 @@ export const OakToastNew = ({
 
   const variantDefinition = variantConfig[variant];
   const colorSchemeDefinition = colorSchemeConfig[colorScheme];
-
-  const icon = variantDefinition.icon;
   const background = (variantDefinition.background ??
     backgroundColor ??
     colorSchemeDefinition.background) as OakUiBackgroundToken;
@@ -223,7 +178,13 @@ export const OakToastNew = ({
           $color={color}
           $position="relative"
         >
-          {hasIcon && icon}
+          {hasIcon && (
+            <ToastIcon
+              iconName={variantDefinition.iconProps.iconName}
+              iconBackground={variantDefinition.iconProps.iconBackground}
+              colorFilter={variantDefinition.iconProps.$colorFilter}
+            />
+          )}
           {text}
           {!isAutoDismiss && (
             <InternalShadowIconButton
