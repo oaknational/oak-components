@@ -85,7 +85,8 @@ const StyledDraggable = styled(OakBox)<{ $iconColor: OakUiRoleToken }>`
   }
 
   &:focus-visible:not([data-dragging="true"]):not([data-disabled="true"]) {
-    box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
+    box-shadow:
+      ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
   }
 
@@ -95,7 +96,8 @@ const StyledDraggable = styled(OakBox)<{ $iconColor: OakUiRoleToken }>`
     color: ${parseColor("text-primary")};
     outline: ${parseBorder("border-solid-xl")} ${parseColor("border-primary")};
     outline-offset: -${parseBorderWidth("border-solid-xl")};
-    box-shadow: ${parseDropShadow("drop-shadow-lemon")},
+    box-shadow:
+      ${parseDropShadow("drop-shadow-lemon")},
       ${parseDropShadow("drop-shadow-grey")};
     text-decoration: underline;
 

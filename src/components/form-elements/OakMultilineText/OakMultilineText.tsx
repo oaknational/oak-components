@@ -81,7 +81,7 @@ const UnstyledComponent = forwardRef(
     const charCountWidth = charLimit > 99 ? "spacing-56" : "spacing-48";
     const charCount = isControlled
       ? value?.toString().length
-      : internalValue?.length ?? 0;
+      : (internalValue?.length ?? 0);
 
     const handleFocus = (e: React.FocusEvent<HTMLTextAreaElement>) => {
       onFocus?.(e);

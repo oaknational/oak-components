@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from "@storybook/react";
-import { useArgs } from "@storybook/preview-api";
+import { Meta, StoryObj } from "@storybook/nextjs";
+import { useArgs } from "storybook/preview-api";
 import React, { Fragment } from "react";
 
 import { OakInformativeModal } from "./OakInformativeModal";

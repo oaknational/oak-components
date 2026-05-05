@@ -1,5 +1,5 @@
 import React from "react";
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/nextjs";
 
 import { OakRadioButton } from "@/components/form-elements/OakRadioButton";
 import { OakRadioGroup } from "@/components/form-elements/OakRadioGroup";

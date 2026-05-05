@@ -41,6 +41,7 @@ const StyledLink = styled.a<{
   text-decoration: ${(props) => props.$textDecoration};
   cursor: pointer;
   color: ${(props) => parseColor(props.$color)};
+  overflow-wrap: break-word;
 
   ${StyledOakIcon} {
     filter: ${(props) => parseColorFilter(props.$color)};
@@ -49,7 +50,8 @@ const StyledLink = styled.a<{
   }
 
   &:focus-visible {
-    box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
+    box-shadow:
+      ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
   }
 

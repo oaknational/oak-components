@@ -30,7 +30,8 @@ const StyledPupilOptionalityListButton = styled(OakFlex)<{
   text-align: initial;
 
   &:focus-visible {
-    box-shadow: ${parseDropShadow("drop-shadow-centered-lemon")},
+    box-shadow:
+      ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
   }
 
@@ -52,7 +53,8 @@ const StyledPupilOptionalityListButton = styled(OakFlex)<{
       }
 
       &:active {
-        box-shadow: ${parseDropShadow("drop-shadow-lemon")},
+        box-shadow:
+          ${parseDropShadow("drop-shadow-lemon")},
           ${parseDropShadow("drop-shadow-grey")};
       }
     `}

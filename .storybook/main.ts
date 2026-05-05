@@ -6,18 +6,21 @@ const config = {
     NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME:
       process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
   }),
+
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+
   addons: [
     "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-interactions",
     "@storybook/addon-a11y",
     "@storybook/addon-themes",
+    "@storybook/addon-docs",
   ],
+
   framework: {
     name: "@storybook/nextjs",
     options: {},
   },
+
   // Config from here https://storybook.js.org/docs/configure/typescript#the-types-are-not-being-generated-for-my-component
   typescript: {
     reactDocgen: "react-docgen-typescript",
@@ -25,9 +28,7 @@ const config = {
     // See https://storybook.js.org/docs/configure/typescript for more information.
     reactDocgenTypescriptOptions: {},
   },
-  docs: {
-    autodocs: "tag",
-  },
+
   staticDirs: ["./public"],
 };
 export default config;

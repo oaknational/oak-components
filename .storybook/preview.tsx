@@ -1,6 +1,6 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
-import type { Decorator, Preview, ReactRenderer } from "@storybook/react";
+import type { Decorator, Preview, ReactRenderer } from "@storybook/nextjs";
 import { withThemeFromJSXProvider } from "@storybook/addon-themes";
 
 import { oakDefaultTheme } from "../src/styles/theme/default.theme";

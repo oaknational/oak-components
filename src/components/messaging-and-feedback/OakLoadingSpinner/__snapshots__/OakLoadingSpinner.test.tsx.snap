@@ -35,8 +35,36 @@ exports[`OakLoadingSpinner matches snapshot 1`] = `
   border-radius: 50%;
   border: var(--thickness) solid currentcolor;
   border-color: currentcolor currentcolor currentcolor transparent;
-  -webkit-animation: epmXAj 1.2s linear infinite;
-  animation: epmXAj 1.2s linear infinite;
+  -webkit-animation: k0 1.2s linear infinite;
+  animation: k0 1.2s linear infinite;
+}
+
+@-webkit-keyframes k0 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes k0 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 <div>

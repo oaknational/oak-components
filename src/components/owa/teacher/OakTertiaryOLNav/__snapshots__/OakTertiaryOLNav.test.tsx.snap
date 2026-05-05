@@ -25,6 +25,7 @@ exports[`Component OakTertiaryOLNav matches snapshot 1`] = `
   -webkit-text-decoration: underline;
   text-decoration: underline;
   cursor: pointer;
+  overflow-wrap: break-word;
 }
 
 .c4:focus-visible {

@@ -8,6 +8,8 @@
 
 import { css } from "styled-components";
 
+import { parseColor } from "@/styles/helpers";
+
 export const oakGlobalCss = css`
   html,
   body {
@@ -25,6 +27,7 @@ export const oakGlobalCss = css`
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    color: ${parseColor("text-primary")};
   }
 
   a {

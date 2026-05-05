@@ -22,5 +22,13 @@ updates:
         update-types:
           - "patch"
           - "minor"
-      # only group version updates, not security updates
-      applies-to: "version-updates"
+        # only group version updates, not security updates
+        applies-to: version-updates
+
+  # Track updates for Terraform modules from oak-terraform-modules repository.
+  - package-ecosystem: "terraform"
+    directories: ["infrastructure/**/*"]
+    allow:
+      - dependency-name: "*::github::oaknational/oak-terraform-modules::*"
+    schedule:
+      interval: "daily"

@@ -91,18 +91,6 @@ exports[`OakMultilineText matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-
-}
-
-@media (min-width:750px) {
-
-}
-
-@media (min-width:750px) {
-
-}
-
-@media (min-width:750px) {
   .c2 {
     white-space: wrap;
   }
@@ -112,10 +100,6 @@ exports[`OakMultilineText matches snapshot 1`] = `
   .c2 {
     white-space: nowrap;
   }
-}
-
-@media (min-width:750px) {
-
 }
 
 @media (min-width:1280px) {
@@ -128,10 +112,6 @@ exports[`OakMultilineText matches snapshot 1`] = `
   .c2 {
     overflow-y: auto;
   }
-}
-
-@media (min-width:1280px) {
-
 }
 
 <div>

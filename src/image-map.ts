@@ -85,6 +85,8 @@ export const icons = {
   data: "v1763393164/icons/data-illustration_ukwdxg.svg",
   chatting: "v1763393163/icons/chatting-illustration_l52zaf.svg",
   "snack-break": "v1763393167/icons/snackbreak_illustration_fguw7l.svg",
+  "class-grouping": "v1776785621/icons/class-grouping.svg",
+  strand: "v1776850533/icons/strand.svg",
   // subject icons
   "subject-art": "v1706616347/subject-icons/art.svg",
   "subject-biology": "v1706616415/subject-icons/biology.svg",
@@ -203,6 +205,10 @@ export const icons = {
   image: "v1763680546/icons/Icon_Image_uatq6d.svg",
   logo: "v1711468346/logo-mark.svg",
   trash: "v1764692488/icons/icon_delete_edzcua.svg",
+  list: "v1774882349/icons/List.svg",
+  "media-clips": "v1774884267/icons/media-clips_nw3zpt.svg",
+  retake: "v1775141914/icons/retake-icon_xgqxzv.svg",
+  globe: "v1776851811/icons/globe.svg",
 } as const satisfies VersionedSvgMap;
 
 export type IconName = keyof typeof icons;

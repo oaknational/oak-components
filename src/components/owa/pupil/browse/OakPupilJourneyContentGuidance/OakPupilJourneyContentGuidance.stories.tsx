@@ -1,6 +1,6 @@
 import React from "react";
-import { StoryObj, Meta } from "@storybook/react";
-import { useArgs } from "@storybook/preview-api";
+import { StoryObj, Meta } from "@storybook/nextjs";
+import { useArgs } from "storybook/preview-api";
 
 import { OakPupilJourneyContentGuidance } from "./OakPupilJourneyContentGuidance";
 

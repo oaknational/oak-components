@@ -21,6 +21,16 @@ const props: OakTabsProps<string> = {
 };
 
 describe("OakTabs", () => {
+  it("renders tabs inside a semantic list", () => {
+    renderWithTheme(<OakTabs {...props} />);
+
+    const list = screen.getByRole("list");
+    const items = screen.getAllByRole("button");
+
+    expect(list).toBeInTheDocument();
+    expect(items).toHaveLength(3);
+  });
+
   it("renders tabs with correct styling for black variant", () => {
     renderWithTheme(<OakTabs {...props} />);
     const tabOne = screen.getByRole("button", { name: "Tab one" });
@@ -83,6 +93,7 @@ describe("OakTabs", () => {
       throw new Error("Cannot find first link");
     }
     expect(links[0]).toHaveProperty("href");
+    expect(links[0].ariaCurrent).toBe("page");
     const user = userEvent.setup();
     await user.click(links[0]);
     expect(onClickCallback).toHaveBeenCalledWith("Tab one");
