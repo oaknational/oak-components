@@ -3,10 +3,9 @@ import { Transition, TransitionStatus } from "react-transition-group";
 import styled from "styled-components";
 
 import { colorSchemeConfig, variantConfig } from "./config";
+import { ToastIcon } from "./ToastIcon";
 
-import { OakIcon, OakIconProps } from "@/components/images-and-icons/OakIcon";
 import { InternalShadowIconButton } from "@/components/internal-components/InternalShadowIconButton";
-import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakUiTextToken, OakUiBackgroundToken } from "@/styles";
 import { parseOpacity } from "@/styles/helpers/parseOpacity";
@@ -56,42 +55,6 @@ export type OakToastNewProps = {
    * Optional id for the toast instance.
    */
   id?: number;
-};
-
-const IconBackground = styled(OakBox)`
-  top: 6px;
-  left: 6px;
-`;
-
-type ToastIconProps = {
-  iconName: OakIconProps["iconName"];
-  iconBackground?: OakUiBackgroundToken | "transparent";
-  colorFilter?: OakIconProps["$colorFilter"];
-};
-
-const ToastIcon = ({
-  iconName,
-  iconBackground = "transparent",
-  colorFilter,
-}: ToastIconProps) => {
-  return (
-    <OakBox $position="relative">
-      <IconBackground
-        $width="spacing-20"
-        $height="spacing-20"
-        $background={iconBackground}
-        $borderRadius="border-radius-circle"
-        $position="absolute"
-      />
-      <OakIcon
-        data-testid={`oak-toast-${iconName}-icon`}
-        iconName={iconName}
-        $colorFilter={colorFilter}
-        $width="spacing-32"
-        $height="spacing-32"
-      />
-    </OakBox>
-  );
 };
 
 const StyledFlex = styled(OakFlex)<{ $state: TransitionStatus }>`
