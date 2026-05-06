@@ -198,6 +198,131 @@ export type OakUiRoleToken = (typeof oakUiRoleTokensConst)[number];
 
 export const oakUiRoleTokens = [...oakUiRoleTokensConst];
 
+const oakUiTextTokensConst = [
+  "text-primary",
+  "text-subdued",
+  "text-error",
+  "text-disabled",
+  "text-link-active",
+  "text-link-hover",
+  "text-link-visited",
+  "text-link-pressed",
+  "text-inverted",
+  "text-success",
+  "text-promo",
+] as const;
+
+export type OakUiTextToken = (typeof oakUiTextTokensConst)[number];
+
+export const oakUiTextTokens = [...oakUiTextTokensConst];
+
+const oakUiBackgroundTokensConst = [
+  "bg-primary",
+  "bg-inverted",
+  "bg-inverted-semi-transparent",
+  "bg-neutral",
+  "bg-neutral-stronger",
+  "bg-btn-primary",
+  "bg-btn-primary-hover",
+  "bg-btn-primary-disabled",
+  "bg-btn-secondary",
+  "bg-btn-secondary-hover",
+  "bg-btn-secondary-disabled",
+  "bg-decorative1-main",
+  "bg-decorative1-subdued",
+  "bg-decorative1-very-subdued",
+  "bg-decorative2-main",
+  "bg-decorative2-subdued",
+  "bg-decorative2-very-subdued",
+  "bg-decorative3-main",
+  "bg-decorative3-subdued",
+  "bg-decorative3-very-subdued",
+  "bg-decorative4-main",
+  "bg-decorative4-subdued",
+  "bg-decorative4-very-subdued",
+  "bg-decorative5-main",
+  "bg-decorative5-subdued",
+  "bg-decorative5-very-subdued",
+  "bg-decorative6-main",
+  "bg-decorative6-subdued",
+  "bg-decorative6-very-subdued",
+  "bg-interactive-element1",
+  "bg-interactive-element2",
+  "bg-correct",
+  "bg-incorrect",
+  "bg-success",
+  "bg-error",
+] as const;
+
+export type OakUiBackgroundToken = (typeof oakUiBackgroundTokensConst)[number];
+
+export const oakUiBackgroundTokens = [...oakUiBackgroundTokensConst];
+
+const oakUiIconTokensConst = [
+  "icon-inverted",
+  "icon-disabled",
+  "icon-brand",
+  "icon-success",
+  "icon-error",
+  "icon-warning",
+  "icon-primary",
+  "icon-subdued",
+  "icon-link-active",
+  "icon-link-hover",
+  "icon-link-pressed",
+  "icon-link-visited",
+  "icon-decorative1",
+  "icon-decorative2",
+  "icon-decorative3",
+  "icon-decorative4",
+  "icon-decorative5",
+  "icon-decorative6",
+  "icon-promo",
+] as const;
+
+export type OakUiIconToken = (typeof oakUiIconTokensConst)[number];
+
+export const oakUiIconTokens = [...oakUiIconTokensConst];
+
+const oakUiBorderTokensConst = [
+  "border-primary",
+  "border-inverted",
+  "border-neutral",
+  "border-neutral-lighter",
+  "border-neutral-stronger",
+  "border-brand",
+  "border-success",
+  "border-error",
+  "border-warning",
+  "border-decorative1",
+  "border-decorative1-stronger",
+  "border-decorative2",
+  "border-decorative2-stronger",
+  "border-decorative3",
+  "border-decorative3-stronger",
+  "border-decorative4",
+  "border-decorative4-stronger",
+  "border-decorative5",
+  "border-decorative5-stronger",
+  "border-decorative6",
+  "border-decorative6-stronger",
+] as const;
+
+export type OakUiBorderToken = (typeof oakUiBorderTokensConst)[number];
+
+export const oakUiBorderTokens = [...oakUiBorderTokensConst];
+
+const oakUiCodeTokensConst = [
+  "code-blue",
+  "code-green",
+  "code-grey",
+  "code-pink",
+] as const;
+
+export type OakUiCodeToken = (typeof oakUiCodeTokensConst)[number];
+
+export const oakUiCodeTokens = [...oakUiCodeTokensConst];
+
 export type UiRoleMap = Record<
   OakUiRoleToken,
   OakColorToken | null | undefined
