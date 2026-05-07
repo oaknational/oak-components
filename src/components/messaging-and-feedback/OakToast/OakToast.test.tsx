@@ -50,6 +50,16 @@ describe("OakToast", () => {
     expect(closeButton).not.toBeInTheDocument();
   });
 
+  it("renders close button when autoDismiss and showClose are true", async () => {
+    renderWithTheme(<OakToast {...defautProps} autoDismiss showClose />);
+    const toast = screen.getByTestId("oak-toast");
+    expect(toast).toBeVisible();
+    const closeButton = screen.getByRole("button");
+    expect(closeButton).toBeVisible();
+    act(() => jest.advanceTimersByTime(5300));
+    await waitFor(() => expect(toast).not.toBeVisible());
+  });
+
   it("extends the autodismiss duration when reopened", async () => {
     const { rerender } = renderWithTheme(
       <OakToast {...defautProps} autoDismiss id={1} />,

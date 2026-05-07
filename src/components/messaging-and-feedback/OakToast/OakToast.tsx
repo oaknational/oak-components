@@ -17,6 +17,7 @@ export type OakToastProps = {
   showIcon: boolean;
   onClose?: () => void;
   id?: number;
+  showClose?: boolean;
 };
 
 type VariantKey =
@@ -137,6 +138,7 @@ export const OakToast = ({
   showIcon,
   onClose,
   id,
+  showClose = false,
 }: OakToastProps) => {
   const [isVisible, setIsVisible] = useState(true);
 
@@ -182,7 +184,7 @@ export const OakToast = ({
         >
           {showIcon && icon}
           {message}
-          {!autoDismiss && (
+          {(!autoDismiss || showClose) && (
             <InternalShadowIconButton
               aria-label={"Dismiss"}
               defaultIconColor={color}
