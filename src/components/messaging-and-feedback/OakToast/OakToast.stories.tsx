@@ -45,6 +45,11 @@ const meta: Meta<typeof OakToast> = {
         "success",
       ],
     },
+    showClose: {
+      control: {
+        type: "boolean",
+      },
+    },
   },
 };
 
