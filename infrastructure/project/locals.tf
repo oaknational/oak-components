@@ -16,8 +16,8 @@ locals {
     ]
   ])
 
-sensitive_env_vars = {
-    shared = {}
+  sensitive_env_vars = {
+    shared  = {}
     prod    = {}
     preview = {}
   }
