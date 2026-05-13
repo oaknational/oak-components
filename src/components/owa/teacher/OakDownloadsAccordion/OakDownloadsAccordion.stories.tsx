@@ -64,25 +64,25 @@ export const Default: Story = {
           id="lesson-plan"
           value="lesson-plan"
           iconName="book-steps"
-          titleSlot="Lesson plan"
-          formatSlot="PDF"
-          fileSizeSlot="245KB"
+          title="Lesson plan"
+          format="PDF"
+          fileSize="245KB"
         />
         <OakDownloadCard
           id="presentation"
           value="presentation"
           iconName="slide-deck"
-          titleSlot="Lesson presentation"
-          formatSlot="PPTX"
-          fileSizeSlot="1.2MB"
+          title="Lesson presentation"
+          format="PPTX"
+          fileSize="1.2MB"
         />
         <OakDownloadCard
           id="worksheet"
           value="worksheet"
           iconName="worksheet"
-          titleSlot="Student worksheet"
-          formatSlot="PDF"
-          fileSizeSlot="180KB"
+          title="Student worksheet"
+          format="PDF"
+          fileSize="180KB"
         />
       </OakFlex>
     ),
