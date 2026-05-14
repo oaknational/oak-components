@@ -7,6 +7,26 @@ const meta: Meta<typeof OakSubjectIconButton> = {
   component: OakSubjectIconButton,
   tags: ["autodocs"],
   title: "OWA/OakSubjectIconButton",
+  argTypes: {
+    phase: {
+      control: { type: "radio" },
+      options: ["primary", "secondary", "non-curriculum"],
+    },
+    subjectIconName: { control: { type: "text" } },
+    disabled: { control: { type: "boolean" } },
+    subjectText: { control: { type: "text" } },
+    variant: {
+      control: { type: "radio" },
+      options: ["vertical", "horizontal"],
+    },
+    element: {
+      control: { type: "radio" },
+      options: ["button", "a"],
+    },
+    selected: {
+      control: "boolean",
+    },
+  },
   parameters: {
     controls: {
       include: [
@@ -36,6 +56,7 @@ export const Default: Story = {
     disabled: false,
     subjectText: "English",
     variant: "vertical",
+    selected: false,
   },
 };
 
