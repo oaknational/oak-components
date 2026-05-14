@@ -126,7 +126,6 @@ exports[`OakBreadcrumbs matches snapshot 1`] = `
   >
     <ul
       class="c1"
-      style="display: flex;"
     >
       <li
         class="c2"
