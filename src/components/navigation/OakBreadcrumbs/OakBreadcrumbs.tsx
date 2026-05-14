@@ -65,7 +65,7 @@ export const OakBreadcrumbs = ({
 }: Readonly<OakBreadcrumbsProps>) => {
   return (
     <OakBox as="nav" aria-label="Breadcrumb" $color={"text-primary"}>
-      <BreadcrumbsUl>
+      <BreadcrumbsUl style={{ display: "flex" }}>
         {breadcrumbs.map((breadcrumb, breadcrumbIndex) => {
           // Last element doesn't have a "href" because it's the current page (typesafe)
           const isLast = !("href" in breadcrumb);
