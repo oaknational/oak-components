@@ -23,6 +23,9 @@ const meta: Meta<typeof OakSubjectIconButton> = {
       control: { type: "radio" },
       options: ["button", "a"],
     },
+    selected: {
+      control: "boolean",
+    },
   },
   parameters: {
     controls: {
@@ -33,6 +36,7 @@ const meta: Meta<typeof OakSubjectIconButton> = {
         "subjectText",
         "variant",
         "element",
+        "selected",
       ],
     },
   },
@@ -52,6 +56,7 @@ export const Default: Story = {
     disabled: false,
     subjectText: "English",
     variant: "vertical",
+    selected: false,
   },
 };
 

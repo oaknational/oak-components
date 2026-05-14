@@ -12,6 +12,7 @@ export type OakSubjectIconButtonProps = {
   phase: "primary" | "secondary" | "non-curriculum";
   subjectIconName: OakIconName;
   variant: "vertical" | "horizontal";
+  selected?: boolean;
 } & Omit<
   InternalShadowRectButtonProps,
   | "defaultBorderColor"
@@ -48,28 +49,18 @@ export const OakSubjectIconButton = <C extends ElementType = "button">({
   element,
   subjectIconName,
   variant,
+  selected,
   ...rest
 }: OakSubjectIconButtonProps & PolymorphicPropsWithoutRef<C>) => {
-  let defaultBackground: OakUiRoleToken,
-    hoverBackground: OakUiRoleToken,
-    borderColor: OakUiRoleToken;
-  switch (phase) {
-    case "primary":
-      defaultBackground = "bg-decorative4-very-subdued";
-      hoverBackground = "bg-decorative4-main";
-      borderColor = "border-decorative4-stronger";
-      break;
-    case "non-curriculum":
-      defaultBackground = "bg-decorative1-very-subdued";
-      hoverBackground = "bg-decorative1-main";
-      borderColor = "border-decorative1-stronger";
-      break;
-    default:
-      defaultBackground = "bg-decorative3-very-subdued";
-      hoverBackground = "bg-decorative3-main";
-      borderColor = "border-decorative3-stronger";
-      break;
-  }
+  const backgroundColourLevel = getBackgroundColourLevel(phase);
+  const defaultBackground: OakUiRoleToken = `bg-decorative${backgroundColourLevel}-${
+    selected ? "subdued" : "very-subdued"
+  }`;
+  const hoverBackground: OakUiRoleToken = `bg-decorative${backgroundColourLevel}-main`;
+  const borderColor: OakUiRoleToken = `border-decorative${backgroundColourLevel}-stronger`;
+  const horizontalVariantBorderWidth = selected
+    ? "border-solid-xl"
+    : "border-solid-s";
 
   const isVerticalVariant = variant === "vertical";
 
@@ -109,9 +100,22 @@ export const OakSubjectIconButton = <C extends ElementType = "button">({
       innerWidth={isVerticalVariant ? "spacing-120" : "auto"}
       hoverUnderline
       height={isVerticalVariant ? null : "spacing-48"}
-      $ba={isVerticalVariant ? "border-solid-m" : "border-solid-s"}
+      $ba={isVerticalVariant ? "border-solid-m" : horizontalVariantBorderWidth}
       $display="inline-flex"
       {...rest}
     />
   );
+};
+
+const getBackgroundColourLevel = (
+  phase: OakSubjectIconButtonProps["phase"],
+) => {
+  switch (phase) {
+    case "primary":
+      return 4;
+    case "secondary":
+      return 3;
+    case "non-curriculum":
+      return 1;
+  }
 };

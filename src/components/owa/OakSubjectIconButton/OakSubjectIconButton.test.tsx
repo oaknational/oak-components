@@ -100,5 +100,28 @@ describe("OakSubjectIconButton", () => {
         parseColor("border-decorative1-stronger")({ theme: oakDefaultTheme }),
       );
     });
+    it("applies selected styles", () => {
+      const { getByRole } = renderWithTheme(
+        <OakSubjectIconButton
+          phase="secondary"
+          subjectIconName="subject-music"
+          variant="horizontal"
+          selected
+        >
+          Music
+        </OakSubjectIconButton>,
+      );
+
+      const button = getByRole("button", { name: /Music/ });
+      const styles = getComputedStyle(button);
+
+      expect(rgbToHex(styles.backgroundColor)).toBe(
+        parseColor("bg-decorative3-subdued")({ theme: oakDefaultTheme }),
+      );
+      expect(rgbToHex(styles.borderColor)).toBe(
+        parseColor("border-decorative3-stronger")({ theme: oakDefaultTheme }),
+      );
+      expect(styles.borderWidth).toBe("0.25rem");
+    });
   });
 });
