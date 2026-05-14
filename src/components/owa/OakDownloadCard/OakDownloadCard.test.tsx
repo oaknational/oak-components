@@ -1,11 +1,8 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { act, fireEvent } from "@testing-library/react";
 
 import { OakDownloadCard } from "./OakDownloadCard";
 
-import { OakRadioGroup } from "@/components/form-elements/OakRadioGroup";
-import { generateOakIconURL } from "@/components/images-and-icons/OakIcon";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("OakDownloadCard", () => {
@@ -15,8 +12,8 @@ describe("OakDownloadCard", () => {
         id="checkbox-1"
         value="Option 1"
         data-testid="test-1"
-        title={"TITLE"}
-        format={"FORMAT"}
+        titleSlot={"TITLE"}
+        formatSlot={"FORMAT"}
         iconName={"books"}
       />,
     );
@@ -28,8 +25,8 @@ describe("OakDownloadCard", () => {
       <OakDownloadCard
         id="checkbox-1"
         value="Option 1"
-        title={"TITLE"}
-        format={"FORMAT"}
+        titleSlot={"TITLE"}
+        formatSlot={"FORMAT"}
         iconName={"books"}
       />,
     );
@@ -41,36 +38,13 @@ describe("OakDownloadCard", () => {
       <OakDownloadCard
         id="checkbox-1"
         value="Option 1"
-        title={"TITLE"}
-        format={"FORMAT"}
+        titleSlot={"TITLE"}
+        formatSlot={"FORMAT"}
         iconName={"books"}
-        fileSize={"FILE_SIZE"}
+        fileSizeSlot={"FILE_SIZE"}
       />,
     );
     expect(container).toMatchSnapshot();
-  });
-
-  it("renders multiple icons when iconName is an array", () => {
-    const { container } = renderWithTheme(
-      <OakDownloadCard
-        id="checkbox-1"
-        value="Option 1"
-        title={"TITLE"}
-        format={"FORMAT"}
-        iconName={["books", "slide-deck"]}
-      />,
-    );
-
-    const imageSources = Array.from(container.querySelectorAll("img")).map(
-      (image) => image.getAttribute("src") ?? "",
-    );
-
-    expect(imageSources).toEqual(
-      expect.arrayContaining([
-        generateOakIconURL("books"),
-        generateOakIconURL("slide-deck"),
-      ]),
-    );
   });
 
   it("has a role of checkbox", () => {
@@ -78,8 +52,8 @@ describe("OakDownloadCard", () => {
       <OakDownloadCard
         id="checkbox-1"
         value="Option 1"
-        title={"TITLE"}
-        format={"FORMAT"}
+        titleSlot={"TITLE"}
+        formatSlot={"FORMAT"}
         iconName={"books"}
       />,
     );
@@ -92,8 +66,8 @@ describe("OakDownloadCard", () => {
       <OakDownloadCard
         id="checkbox-1"
         value="Option 1"
-        title={"TITLE"}
-        format={"FORMAT"}
+        titleSlot={"TITLE"}
+        formatSlot={"FORMAT"}
         iconName={"books"}
       />,
     );
@@ -110,8 +84,8 @@ describe("OakDownloadCard", () => {
         id="checkbox-1"
         value="Option 1"
         onChange={onChange}
-        title={"TITLE"}
-        format={"FORMAT"}
+        titleSlot={"TITLE"}
+        formatSlot={"FORMAT"}
         iconName={"filter"}
       />,
     );
@@ -129,8 +103,8 @@ describe("OakDownloadCard", () => {
         value="Option 1"
         onFocus={onFocus}
         onBlur={onBlur}
-        title={"TITLE"}
-        format={"FORMAT"}
+        titleSlot={"TITLE"}
+        formatSlot={"FORMAT"}
         iconName={"books"}
       />,
     );
@@ -138,46 +112,5 @@ describe("OakDownloadCard", () => {
     getByRole("checkbox").blur();
     expect(onFocus).toHaveBeenCalledTimes(1);
     expect(onBlur).toHaveBeenCalledTimes(1);
-  });
-
-  it("renders a radio when isRadio is true", () => {
-    const { getByRole } = renderWithTheme(
-      <OakDownloadCard
-        id="radio-1"
-        value="Option 1"
-        title={"TITLE"}
-        format={"FORMAT"}
-        iconName={"books"}
-        isRadio={true}
-      />,
-    );
-
-    expect(getByRole("radio")).toBeInTheDocument();
-  });
-
-  it("calls both radio group and card onChange handlers in radio mode", () => {
-    const onGroupChange = jest.fn();
-    const onCardChange = jest.fn();
-
-    const { getByRole } = renderWithTheme(
-      <OakRadioGroup name="download-card-radio-group" onChange={onGroupChange}>
-        <OakDownloadCard
-          id="radio-1"
-          value="Option 1"
-          title={"TITLE"}
-          format={"FORMAT"}
-          iconName={"books"}
-          isRadio={true}
-          onChange={onCardChange}
-        />
-      </OakRadioGroup>,
-    );
-
-    act(() => {
-      fireEvent.click(getByRole("radio"));
-    });
-
-    expect(onGroupChange).toHaveBeenCalledTimes(1);
-    expect(onCardChange).toHaveBeenCalledTimes(1);
   });
 });

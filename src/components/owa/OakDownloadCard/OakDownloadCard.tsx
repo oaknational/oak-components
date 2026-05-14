@@ -6,87 +6,25 @@ import {
   BaseCheckBoxProps,
   InternalCheckBoxHoverFocus,
 } from "@/components/internal-components/InternalCheckBox/InternalCheckBox";
+import { InternalCheckBoxLabelProps } from "@/components/internal-components/InternalCheckBoxLabel";
 import { InternalCheckBoxWrapper } from "@/components/internal-components/InternalCheckBoxWrapper";
-import { InternalRadio } from "@/components/internal-components/InternalRadio/InternalRadio";
-import { InternalRadioWrapper } from "@/components/internal-components/InternalRadioWrapper";
-import { OakIcon } from "@/components/images-and-icons/OakIcon";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
-import { OakUiRoleToken } from "@/styles";
+import { OakIcon } from "@/components/images-and-icons/OakIcon";
 import { parseColor } from "@/styles/helpers/parseColor";
+import { OakUiRoleToken } from "@/styles";
 import { IconName } from "@/image-map";
-
-const SingleIcon = ({ iconName }: { iconName: IconName }) => {
-  return (
-    <OakFlex
-      $background={"bg-decorative5-main"}
-      $pa={"spacing-12"}
-      $alignItems={"center"}
-      $alignSelf={"stretch"}
-    >
-      <OakIcon
-        iconName={iconName}
-        $width={"spacing-48"}
-        $height={"spacing-48"}
-      />
-    </OakFlex>
-  );
-};
-
-const MultipleIcons = ({ iconName }: { iconName: IconName[] }) => {
-  return (
-    <OakFlex
-      $background={"bg-decorative5-main"}
-      $pa={"spacing-12"}
-      $alignItems={"center"}
-      $flexDirection={"column"}
-      $gap={"spacing-16"}
-      $justifyContent={"center"}
-    >
-      {iconName.map((name, index) => (
-        <OakFlex
-          key={`${name}-${index}`}
-          $position={"relative"}
-          $alignContent={"center"}
-          $alignItems={"center"}
-          $justifyContent={"center"}
-        >
-          <OakIcon
-            iconName={name}
-            $width={"spacing-40"}
-            $height={"spacing-40"}
-            $mr={index < iconName.length - 1 ? "spacing-8" : "spacing-0"}
-          />
-        </OakFlex>
-      ))}
-    </OakFlex>
-  );
-};
+import { InternalRadioWrapper } from "@/components/internal-components/InternalRadioWrapper";
+import { InternalRadio } from "@/components/internal-components/InternalRadio/InternalRadio";
 
 export type OakDownloadCardProps = BaseCheckBoxProps & {
-  /**
-   * The primary title content for the download.
-   */
-  title: React.ReactNode;
-  /**
-   * Optional file size content shown beneath the title.
-   */
-  fileSize?: React.ReactNode;
-  /**
-   * The file format or secondary metadata shown beneath the title.
-   */
-  format: React.ReactNode;
-  /**
-   * The icon used to represent the download type.
-   */
-  iconName: IconName | IconName[];
-  /**
-   * If true, renders the selection control as a radio button instead of a checkbox.
-   *
-   * @default false
-   */
-  isRadio?: boolean;
-};
+  titleSlot: React.ReactNode;
+  fileSizeSlot?: React.ReactNode;
+  formatSlot: React.ReactNode;
+  iconName: IconName;
+  displayValue?: string;
+  asRadio?: boolean;
+} & InternalCheckBoxLabelProps;
 
 const LabelContainer = styled("label")`
   flex: 1;
@@ -113,18 +51,18 @@ const Container = styled(OakFlex)<{ $hoverBackground: OakUiRoleToken }>`
 `;
 
 /**
- * Download cards present a downloadable resource with metadata and a selectable control.
- * ## Usage
- * Use this component when users need to select one or more downloadable resources,
- * such as lesson plans, slide decks, or worksheets.
+ *
+ * Used for choosing teaching resources, curriculum maps, or any downloadable items.
+ *
  * Design document: <https://www.figma.com/design/YcWQMMhHPVVmc47cHHEEAl/Oak-Design-Kit?node-id=14795-5603>
+ *
  */
 export const OakDownloadCard = (props: OakDownloadCardProps) => {
   const radioContext = useContext(RadioContext);
   const {
-    title,
-    fileSize,
-    format,
+    titleSlot,
+    fileSizeSlot,
+    formatSlot,
     iconName,
     value,
     disabled = false,
@@ -134,7 +72,7 @@ export const OakDownloadCard = (props: OakDownloadCardProps) => {
     onFocus,
     onBlur,
     onHovered,
-    isRadio = false,
+    asRadio = false,
     "data-testid": dataTestId,
     ...rest
   } = props;
@@ -150,15 +88,6 @@ export const OakDownloadCard = (props: OakDownloadCardProps) => {
     ? disabledColor
     : checkedBorderColor;
   const anyDisabled = disabled || radioContext.disabled;
-  const isChecked = value === radioContext.currentValue;
-  const radioChecked = checked ?? isChecked;
-
-  const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    radioContext.onValueUpdated?.(event);
-    onChange?.(event);
-  };
-
-  const isMultipleIcon = Array.isArray(iconName);
 
   return (
     <Container
@@ -169,54 +98,54 @@ export const OakDownloadCard = (props: OakDownloadCardProps) => {
       $overflow={"hidden"}
       $hoverBackground="bg-btn-secondary-hover"
       $color={"text-primary"}
-      $width={"100%"}
     >
       <LabelContainer>
-        <OakFlex $alignItems={"stretch"} $flexGrow={1}>
-          {isMultipleIcon ? (
-            <MultipleIcons iconName={iconName} />
-          ) : (
-            <SingleIcon iconName={iconName} />
-          )}
+        <OakFlex $alignItems={"flex-start"} $flexGrow={1}>
+          <OakFlex
+            $background={"bg-decorative5-main"}
+            $pa={"spacing-12"}
+            $alignItems={"center"}
+            $alignSelf={"stretch"}
+          >
+            <OakIcon
+              iconName={iconName}
+              $width={"spacing-48"}
+              $height={"spacing-48"}
+            />
+          </OakFlex>
           <OakFlex
             $flexGrow={1}
             $flexDirection={"column"}
-            $justifyContent={"center"}
             $gap="spacing-4"
             $pv="spacing-12"
             $ph="spacing-16"
           >
-            <OakBox $font={"body-2-bold"}>{title}</OakBox>
-            {fileSize && <OakBox $font={"body-3"}>{fileSize}</OakBox>}
-            <OakBox $font={"body-3"}>{format}</OakBox>
+            <OakBox $font={"body-2-bold"}>{titleSlot}</OakBox>
+            {fileSizeSlot && <OakBox $font={"body-3"}>{fileSizeSlot}</OakBox>}
+            <OakBox $font={"body-3"}>{formatSlot}</OakBox>
           </OakFlex>
         </OakFlex>
         <OakFlex>
           <OakFlex $alignItems={"center"} $pr={"spacing-16"}>
-            {isRadio && (
+            {asRadio && (
               <InternalRadioWrapper
-                checked={isChecked}
+                checked={value === radioContext.currentValue}
                 size={checkboxSize}
                 disabled={anyDisabled}
                 radioBorderColor={checkedBorderColor}
                 internalRadio={
                   <InternalRadio
                     {...rest}
-                    id={props.id}
-                    name={props.name ?? radioContext.name}
+                    name={radioContext.name}
                     value={value}
                     disabled={anyDisabled}
-                    onHovered={onHovered}
-                    onChange={handleRadioChange}
-                    onFocus={onFocus}
-                    onBlur={onBlur}
-                    defaultChecked={defaultChecked}
-                    checked={radioChecked}
+                    onChange={radioContext.onValueUpdated}
+                    checked={value === radioContext.currentValue}
                   />
                 }
               />
             )}
-            {!isRadio && (
+            {!asRadio && (
               <InternalCheckBoxWrapper
                 size={checkboxSize}
                 internalCheckbox={
@@ -232,13 +161,12 @@ export const OakDownloadCard = (props: OakDownloadCardProps) => {
                     $checkedBorderColor={currentCheckedBorderColor}
                     $uncheckedBorderColor={"border-neutral"}
                     $hoverBorderRadius={"border-radius-xs"}
-                    onHovered={onHovered}
                     onChange={onChange}
                     onFocus={onFocus}
                     onBlur={onBlur}
                     defaultChecked={defaultChecked}
                     checked={checked}
-                    disabled={anyDisabled}
+                    disabled={disabled}
                     {...rest}
                   />
                 }
