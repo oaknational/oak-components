@@ -313,6 +313,7 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
 
 .c7:active {
   color: #222222;
+  outline: 1px solid #222222;
 }
 
 .c7[disabled] {
@@ -356,6 +357,8 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
     color: #222222;
     -webkit-text-decoration: underline;
     text-decoration: underline;
+    -webkit-text-decoration-thickness: 18%;
+    text-decoration-thickness: 18%;
   }
 }
 

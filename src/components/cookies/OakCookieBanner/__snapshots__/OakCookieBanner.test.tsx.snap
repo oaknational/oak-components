@@ -353,6 +353,7 @@ exports[`OakCookieBanner matches snapshot 1`] = `
 
 .c10:active {
   color: #222222;
+  outline: 1px solid #222222;
 }
 
 .c10[disabled] {
@@ -520,6 +521,8 @@ exports[`OakCookieBanner matches snapshot 1`] = `
     color: #222222;
     -webkit-text-decoration: underline;
     text-decoration: underline;
+    -webkit-text-decoration-thickness: 18%;
+    text-decoration-thickness: 18%;
   }
 }
 

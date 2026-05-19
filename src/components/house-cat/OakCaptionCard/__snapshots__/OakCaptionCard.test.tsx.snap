@@ -305,6 +305,7 @@ input:checked + .c12 {
 
 .c23:active {
   color: #222222;
+  outline: 1px solid #222222;
 }
 
 .c23[disabled] {
@@ -346,6 +347,7 @@ input:checked + .c12 {
 
 .c29:active {
   color: #222222;
+  outline: 1px solid #222222;
 }
 
 .c29[disabled] {
@@ -400,6 +402,8 @@ input:checked + .c12 {
     color: #222222;
     -webkit-text-decoration: underline;
     text-decoration: underline;
+    -webkit-text-decoration-thickness: 18%;
+    text-decoration-thickness: 18%;
   }
 }
 
@@ -409,6 +413,8 @@ input:checked + .c12 {
     color: #222222;
     -webkit-text-decoration: underline;
     text-decoration: underline;
+    -webkit-text-decoration-thickness: 18%;
+    text-decoration-thickness: 18%;
   }
 }
 

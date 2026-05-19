@@ -71,11 +71,13 @@ const StyledLink = styled.a<{
         filter: ${(props) => parseColorFilter(props.$hoverColor)};
       }
       text-decoration: underline;
+      text-decoration-thickness: 18%;
     }
   }
 
   &:active {
     color: ${(props) => parseColor(props.$activeColor)};
+    outline: 1px solid ${(props) => parseColor(props.$activeColor)};
     ${StyledOakIcon} {
       filter: ${(props) => parseColorFilter(props.$activeColor)};
     }
