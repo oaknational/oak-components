@@ -279,6 +279,22 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
   letter-spacing: 0.0115rem;
 }
 
+.c4 {
+  max-width: 100vw;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.c1 {
+  opacity: 0.25;
+  background-color: black;
+  position: fixed;
+  inset: 0;
+  -webkit-transition: ease;
+  transition: ease;
+}
+
 .c7 {
   display: inline;
   -webkit-align-items: center;
@@ -321,22 +337,6 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
   color: #808080;
 }
 
-.c4 {
-  max-width: 100vw;
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
-  transform: translateX(0);
-}
-
-.c1 {
-  opacity: 0.25;
-  background-color: black;
-  position: fixed;
-  inset: 0;
-  -webkit-transition: ease;
-  transition: ease;
-}
-
 @media (min-width:750px) {
   .c27 {
     -webkit-flex-direction: row;
@@ -351,6 +351,12 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
   }
 }
 
+@media (min-width:768px) {
+  .c4 {
+    max-width: 600px;
+  }
+}
+
 @media (hover:hover) {
   .c7:hover,
   .c7:visited:hover {
@@ -359,12 +365,6 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
     text-decoration: underline;
     -webkit-text-decoration-thickness: 18%;
     text-decoration-thickness: 18%;
-  }
-}
-
-@media (min-width:768px) {
-  .c4 {
-    max-width: 600px;
   }
 }
 
@@ -392,7 +392,7 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
       >
         <button
           aria-label="Clear"
-          class="c7 "
+          class="c7"
         >
           <span
             class="c8"

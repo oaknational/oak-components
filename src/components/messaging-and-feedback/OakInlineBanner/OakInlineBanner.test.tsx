@@ -3,7 +3,7 @@ import "@testing-library/jest-dom";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { OakInlineBanner } from "@/components/messaging-and-feedback/OakInlineBanner";
-import { OakSecondaryLink } from "@/components/navigation/OakSecondaryLink";
+import { OakLink } from "@/components/navigation/OakLink";
 
 jest.mock("react-dom", () => {
   return {
@@ -18,9 +18,9 @@ describe(OakInlineBanner, () => {
       <OakInlineBanner
         canDismiss
         cta={
-          <OakSecondaryLink iconName="chevron-right" isTrailingIcon>
+          <OakLink variant="secondary" iconName="chevron-right" isTrailingIcon>
             Link
-          </OakSecondaryLink>
+          </OakLink>
         }
         isOpen
         message="Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet."
@@ -38,9 +38,9 @@ describe(OakInlineBanner, () => {
       <OakInlineBanner
         canDismiss
         cta={
-          <OakSecondaryLink iconName="chevron-right" isTrailingIcon>
+          <OakLink variant="secondary" iconName="chevron-right" isTrailingIcon>
             Link
-          </OakSecondaryLink>
+          </OakLink>
         }
         isOpen
         message="Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet."
@@ -57,9 +57,9 @@ describe(OakInlineBanner, () => {
       <OakInlineBanner
         canDismiss
         cta={
-          <OakSecondaryLink iconName="chevron-right" isTrailingIcon>
+          <OakLink variant="secondary" iconName="chevron-right" isTrailingIcon>
             Link
-          </OakSecondaryLink>
+          </OakLink>
         }
         isOpen
         message="Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet."
@@ -78,9 +78,9 @@ describe(OakInlineBanner, () => {
       <OakInlineBanner
         canDismiss
         cta={
-          <OakSecondaryLink iconName="chevron-right" isTrailingIcon>
+          <OakLink variant="secondary" iconName="chevron-right" isTrailingIcon>
             Link
-          </OakSecondaryLink>
+          </OakLink>
         }
         isOpen
         message="Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet."
@@ -98,9 +98,9 @@ describe(OakInlineBanner, () => {
       <OakInlineBanner
         canDismiss
         cta={
-          <OakSecondaryLink iconName="chevron-right" isTrailingIcon>
+          <OakLink variant="secondary" iconName="chevron-right" isTrailingIcon>
             Link
-          </OakSecondaryLink>
+          </OakLink>
         }
         isOpen
         message="Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet."
@@ -122,9 +122,9 @@ describe(OakInlineBanner, () => {
         canDismiss
         onDismiss={onDismissSpy}
         cta={
-          <OakSecondaryLink iconName="chevron-right" isTrailingIcon>
+          <OakLink variant="secondary" iconName="chevron-right" isTrailingIcon>
             Link
-          </OakSecondaryLink>
+          </OakLink>
         }
         isOpen
         message="Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet."
@@ -143,9 +143,9 @@ describe(OakInlineBanner, () => {
       <OakInlineBanner
         canDismiss={false}
         cta={
-          <OakSecondaryLink iconName="chevron-right" isTrailingIcon>
+          <OakLink variant="secondary" iconName="chevron-right" isTrailingIcon>
             Link
-          </OakSecondaryLink>
+          </OakLink>
         }
         isOpen
         message="Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet."
@@ -162,13 +162,14 @@ describe(OakInlineBanner, () => {
       <OakInlineBanner
         canDismiss
         cta={
-          <OakSecondaryLink
+          <OakLink
+            variant="secondary"
             iconName="chevron-right"
             isTrailingIcon
             data-testid="this-link"
           >
             Link
-          </OakSecondaryLink>
+          </OakLink>
         }
         isOpen
         message="Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet."
@@ -186,9 +187,9 @@ describe(OakInlineBanner, () => {
       <OakInlineBanner
         canDismiss={false}
         cta={
-          <OakSecondaryLink iconName="chevron-right" isTrailingIcon>
+          <OakLink variant="secondary" iconName="chevron-right" isTrailingIcon>
             Link
-          </OakSecondaryLink>
+          </OakLink>
         }
         isOpen
         message="Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet."
@@ -210,9 +211,9 @@ describe(OakInlineBanner, () => {
       <OakInlineBanner
         canDismiss={false}
         cta={
-          <OakSecondaryLink iconName="chevron-right" isTrailingIcon>
+          <OakLink variant="secondary" iconName="chevron-right" isTrailingIcon>
             Link
-          </OakSecondaryLink>
+          </OakLink>
         }
         isOpen
         message="Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet."
@@ -235,9 +236,9 @@ describe(OakInlineBanner, () => {
       <OakInlineBanner
         canDismiss={false}
         cta={
-          <OakSecondaryLink iconName="chevron-right" isTrailingIcon>
+          <OakLink variant="secondary" iconName="chevron-right" isTrailingIcon>
             Link
-          </OakSecondaryLink>
+          </OakLink>
         }
         isOpen
         message="Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet."
@@ -254,9 +255,9 @@ describe(OakInlineBanner, () => {
       <OakInlineBanner
         canDismiss
         cta={
-          <OakSecondaryLink iconName="chevron-right" isTrailingIcon>
+          <OakLink variant="secondary" iconName="chevron-right" isTrailingIcon>
             Link
-          </OakSecondaryLink>
+          </OakLink>
         }
         isOpen
         message="Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet."
@@ -277,9 +278,9 @@ describe(OakInlineBanner, () => {
       <OakInlineBanner
         canDismiss
         cta={
-          <OakSecondaryLink iconName="chevron-right" isTrailingIcon>
+          <OakLink variant="secondary" iconName="chevron-right" isTrailingIcon>
             Link
-          </OakSecondaryLink>
+          </OakLink>
         }
         isOpen
         message="Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet."
@@ -296,9 +297,9 @@ describe(OakInlineBanner, () => {
       <OakInlineBanner
         canDismiss
         cta={
-          <OakSecondaryLink iconName="chevron-right" isTrailingIcon>
+          <OakLink variant="secondary" iconName="chevron-right" isTrailingIcon>
             Link
-          </OakSecondaryLink>
+          </OakLink>
         }
         isOpen
         message="Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet."

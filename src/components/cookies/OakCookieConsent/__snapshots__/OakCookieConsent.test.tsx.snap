@@ -40,13 +40,6 @@ exports[`OakCookieConsent matches snapshot 1`] = `
 
 .c8 {
   font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
-  letter-spacing: 0.0115rem;
   white-space: nowrap;
 }
 
@@ -232,7 +225,16 @@ exports[`OakCookieConsent matches snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  font: inherit;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   background: none;
   border: none;
   -webkit-text-decoration: none;
@@ -555,7 +557,7 @@ exports[`OakCookieConsent matches snapshot 1`] = `
             class="c8 c9"
           >
             <button
-              class="c10 "
+              class="c10"
               data-testid="cookie-banner-reject"
               type="button"
             >

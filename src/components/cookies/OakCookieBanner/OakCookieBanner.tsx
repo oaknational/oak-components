@@ -5,9 +5,9 @@ import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakSpan } from "@/components/typography";
 import { OakPrimaryButton } from "@/components/buttons/OakPrimaryButton";
 import { OakSecondaryButton } from "@/components/buttons/OakSecondaryButton";
-import { OakSecondaryLink } from "@/components/navigation/OakSecondaryLink";
 import { OakAllSpacingToken } from "@/styles";
 import { ResponsiveValues } from "@/styles/utils/responsiveStyle";
+import { OakLink } from "@/components/navigation/OakLink";
 
 export type OakCookieBannerProps = {
   /**
@@ -115,12 +115,13 @@ export const OakCookieBanner = ({
                         {state}
                       </OakSpan>{" "}
                       additional cookies. You can{" "}
-                      <OakSecondaryLink
+                      <OakLink
+                        variant="secondary"
                         element="button"
                         onClick={onOpenSettings}
                       >
                         change your cookie settings
-                      </OakSecondaryLink>{" "}
+                      </OakLink>{" "}
                       at any time.
                     </OakBox>
                     <OakFlex $justifyContent="flex-end" $flexGrow={1}>
@@ -152,19 +153,16 @@ export const OakCookieBanner = ({
                       $flexWrap={["wrap", "wrap", "nowrap"]}
                       $flexGrow={1}
                     >
-                      <OakFlex
-                        $font="heading-7"
-                        $whiteSpace="nowrap"
-                        $alignItems="center"
-                      >
-                        <OakSecondaryLink
+                      <OakFlex $whiteSpace="nowrap" $alignItems="center">
+                        <OakLink
+                          variant="secondary-strong"
                           element="button"
                           type="button"
                           onClick={onReject}
                           data-testid="cookie-banner-reject"
                         >
                           Reject non-essential cookies
-                        </OakSecondaryLink>
+                        </OakLink>
                       </OakFlex>
                       <OakSecondaryButton onClick={onOpenSettings}>
                         Cookie settings
