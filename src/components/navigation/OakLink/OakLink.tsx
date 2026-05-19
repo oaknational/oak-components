@@ -1,5 +1,7 @@
 import React, { ElementType, forwardRef } from "react";
 
+import { Variant, variantConfig } from "./config";
+
 import { OakAllSpacingToken } from "@/styles";
 import {
   InternalLink,
@@ -16,6 +18,12 @@ export type OakLinkProps = Pick<
 > & {
   iconWidth?: OakAllSpacingToken;
   iconHeight?: OakAllSpacingToken;
+  /**
+   * Style variant of the OakLink component: "primary" | "secondary" | "secondary-strong"
+   *
+   * @default "primary"
+   */
+  variant?: Variant;
 };
 
 type OakLinkComponent = <C extends React.ElementType = "a">(
@@ -23,23 +31,27 @@ type OakLinkComponent = <C extends React.ElementType = "a">(
 ) => React.ReactNode;
 
 /**
- * A blue link with an optional icon and loading state.
+ * A link with an optional icon and loading state.
  *
  * Defaulting to a `HTMLAnchorElement` this component is polymorphic and can be rendered as a button or any other element.
- * ą
  */
 export const OakLink: OakLinkComponent = forwardRef(
   <C extends ElementType = "a">(
     props: PolymorphicPropsWithRef<C> & OakLinkProps,
     ref: PolymorphicRef<C>,
   ) => {
+    const { variant = "primary" } = props;
+    const variantDefinition = variantConfig[variant];
+
     return (
       <InternalLink
-        color="text-link-active"
-        hoverColor="text-link-hover"
-        activeColor="text-link-pressed"
-        disabledColor="text-disabled"
-        visitedColor="text-link-visited"
+        color={variantDefinition.color}
+        hoverColor={variantDefinition.hoverColor}
+        activeColor={variantDefinition.activeColor}
+        disabledColor={variantDefinition.disabledColor}
+        visitedColor={variantDefinition.visitedColor}
+        textDecoration={variantDefinition.textDecoration}
+        font={variantDefinition.font}
         {...props}
         ref={ref}
       />

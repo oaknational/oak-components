@@ -2,6 +2,7 @@ import React from "react";
 import { Meta, StoryObj } from "@storybook/nextjs";
 
 import { OakLink } from "./OakLink";
+import { variantConfig } from "./config";
 
 import { oakIconNames } from "@/components/images-and-icons/OakIcon";
 import { oakAllSpacingTokens } from "@/styles/theme/spacing";
@@ -20,6 +21,7 @@ const meta: Meta<typeof OakLink> = {
     isTrailingIcon: { type: "boolean" },
     iconHeight: { options: Object.keys(oakAllSpacingTokens) },
     iconWidth: { options: Object.keys(oakAllSpacingTokens) },
+    variant: { options: Object.keys(variantConfig) },
   },
   parameters: {
     controls: {
@@ -29,6 +31,7 @@ const meta: Meta<typeof OakLink> = {
         "isTrailingIcon",
         "iconHeight",
         "iconWidth",
+        "variant",
       ],
     },
   },
@@ -41,9 +44,21 @@ export default meta;
 
 type Story = StoryObj<typeof OakLink>;
 
-export const Default: Story = {
+export const DefaultPrimary: Story = {
   args: {
     href: `#${Math.random()}`,
+  },
+};
+
+export const Secondary: Story = {
+  args: {
+    variant: "secondary",
+  },
+};
+
+export const SecondaryStrong: Story = {
+  args: {
+    variant: "secondary-strong",
   },
 };
 

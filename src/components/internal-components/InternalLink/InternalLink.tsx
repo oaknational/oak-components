@@ -15,7 +15,8 @@ import { OakIcon, OakIconProps } from "@/components/images-and-icons/OakIcon";
 import { OakSpan } from "@/components/typography/OakSpan";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
 import { OakAllSpacingToken, OakUiRoleToken } from "@/styles";
-import { OakTextDecoration } from "@/styles/theme/typography";
+import { OakFontToken, OakTextDecoration } from "@/styles/theme/typography";
+import { typographyStyle } from "@/styles/utils/typographyStyle";
 
 const StyledOakIcon = styled(OakIcon)``;
 
@@ -26,6 +27,7 @@ const StyledLink = styled.a<{
   $activeColor: OakUiRoleToken;
   $disabledColor: OakUiRoleToken;
   $textDecoration: OakTextDecoration;
+  $font?: OakFontToken;
 }>`
   display: inline;
   align-items: center;
@@ -35,7 +37,7 @@ const StyledLink = styled.a<{
   padding: ${parseSpacing("spacing-4")};
   margin: -${parseSpacing("spacing-4")};
   appearance: none;
-  font: inherit;
+  ${(props) => (props.$font ? typographyStyle : "font: inherit;")}
   background: none;
   border: none;
   text-decoration: ${(props) => props.$textDecoration};
@@ -144,6 +146,7 @@ export const InternalLink: InternalLinkComponent = forwardRef(
       iconWidth = "spacing-24",
       iconHeight = "spacing-24",
       textDecoration = "underline",
+      font,
       ...rest
     } = props;
 
@@ -193,6 +196,7 @@ export const InternalLink: InternalLinkComponent = forwardRef(
         $hoverColor={hoverColor}
         $activeColor={activeColor}
         $textDecoration={textDecoration}
+        $font={font}
         {...rest}
       >
         {!isTrailingIcon && icon}
