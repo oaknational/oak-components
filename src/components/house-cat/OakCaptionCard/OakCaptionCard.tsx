@@ -10,8 +10,8 @@ import { InternalCheckBoxLabelHoverDecor } from "@/components/internal-component
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { OakCheckBox } from "@/components/form-elements/OakCheckBox";
-import { OakHoverLink } from "@/components/navigation/OakHoverLink";
 import { OakSecondaryLink } from "@/components/navigation/OakSecondaryLink";
+import { OakLink } from "@/components/navigation";
 
 interface StyledFlexBoxWrapperProps {
   $minHeight: string;
@@ -156,7 +156,8 @@ export const OakCaptionCard = (props: OakCaptionCardProps) => {
         </OakFlex>
 
         <OakFlex $flexGrow={10} $justifyContent={"flex-end"}>
-          <OakHoverLink
+          <OakLink
+            variant="secondary"
             href={editHref}
             iconName="external"
             isTrailingIcon
@@ -167,7 +168,7 @@ export const OakCaptionCard = (props: OakCaptionCardProps) => {
             }}
           >
             Edit
-          </OakHoverLink>
+          </OakLink>
         </OakFlex>
       </OakFlex>
       <OakFlex

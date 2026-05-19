@@ -36,6 +36,9 @@ const StyleInternalLink = styled(InternalLink)`
 `;
 
 /**
+ * deprecated - use `<OakLink />` instead
+ * @deprecated
+ *
  * A link with an optional icon where underline is shown on hover.
  *
  * Defaulting to a `HTMLAnchorElement` this component is polymorphic and can be rendered as a button or any other element.
