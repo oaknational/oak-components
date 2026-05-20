@@ -120,6 +120,9 @@ importers:
       '@typescript-eslint/parser':
         specifier: ^6.18.1
         version: 6.21.0(eslint@8.56.0)(typescript@5.9.3)
+      assert:
+        specifier: ^2.1.0
+        version: 2.1.0
       eslint:
         specifier: ^8.56.0
         version: 8.56.0
