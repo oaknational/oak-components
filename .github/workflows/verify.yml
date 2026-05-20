@@ -19,12 +19,12 @@ jobs:
         with:
           node-version: 24.x
           cache: "npm"
-      - run: npm ci
-      - run: npm run format:check
-      - run: npm run lint
-      - run: npm run check-types
-      - run: npm run build
-      - run: npm run test:ci
+      - run: pnpm ci
+      - run: pnpm run format:check
+      - run: pnpm run lint
+      - run: pnpm run check-types
+      - run: pnpm run build
+      - run: pnpm run test:ci
       - name: SonarCloud Scan
         uses: SonarSource/sonarqube-scan-action@v4.2.1
         env:
