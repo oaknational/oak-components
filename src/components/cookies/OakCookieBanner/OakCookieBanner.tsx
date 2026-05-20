@@ -155,7 +155,8 @@ export const OakCookieBanner = ({
                     >
                       <OakFlex $whiteSpace="nowrap" $alignItems="center">
                         <OakLink
-                          variant="secondary-strong"
+                          variant="secondary"
+                          $font={"heading-7"}
                           element="button"
                           type="button"
                           onClick={onReject}

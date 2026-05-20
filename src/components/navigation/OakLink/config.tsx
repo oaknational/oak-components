@@ -1,7 +1,7 @@
 import { OakUiRoleToken } from "@/styles";
 import { OakFontToken, OakTextDecoration } from "@/styles/theme/typography";
 
-export type Variant = "primary" | "secondary" | "secondary-strong";
+export type Variant = "primary" | "secondary";
 
 export type VariantConfig = {
   color: OakUiRoleToken;
@@ -28,15 +28,6 @@ export const variantConfig: Record<Variant, VariantConfig> = {
     activeColor: "text-primary",
     disabledColor: "text-disabled",
     visitedColor: "text-primary",
-    textDecoration: "none",
-  },
-  "secondary-strong": {
-    color: "text-primary",
-    hoverColor: "text-primary",
-    activeColor: "text-primary",
-    disabledColor: "text-disabled",
-    visitedColor: "text-primary",
-    font: "heading-7",
     textDecoration: "none",
   },
 };

@@ -11,6 +11,7 @@ import {
   PolymorphicPropsWithRef,
   PolymorphicRef,
 } from "@/components/polymorphic";
+import { TypographyStyleProps } from "@/styles/utils/typographyStyle";
 
 export type OakLinkProps = Pick<
   InternalLinkProps,
@@ -19,12 +20,12 @@ export type OakLinkProps = Pick<
   iconWidth?: OakAllSpacingToken;
   iconHeight?: OakAllSpacingToken;
   /**
-   * Style variant of the OakLink component: "primary" | "secondary" | "secondary-strong"
+   * Style variant of the OakLink component: "primary" | "secondary"
    *
    * @default "primary"
    */
   variant?: Variant;
-};
+} & Pick<TypographyStyleProps, "$font">;
 
 type OakLinkComponent = <C extends React.ElementType = "a">(
   props: PolymorphicPropsWithRef<C> & OakLinkProps,
@@ -51,7 +52,6 @@ export const OakLink: OakLinkComponent = forwardRef(
         disabledColor={variantDefinition.disabledColor}
         visitedColor={variantDefinition.visitedColor}
         textDecoration={variantDefinition.textDecoration}
-        font={variantDefinition.font}
         {...props}
         ref={ref}
       />

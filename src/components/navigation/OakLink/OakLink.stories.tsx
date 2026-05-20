@@ -56,12 +56,6 @@ export const Secondary: Story = {
   },
 };
 
-export const SecondaryStrong: Story = {
-  args: {
-    variant: "secondary-strong",
-  },
-};
-
 export const AsAButton: Story = {
   args: {
     element: "button",

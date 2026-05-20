@@ -196,7 +196,6 @@ export const InternalLink: InternalLinkComponent = forwardRef(
         $hoverColor={hoverColor}
         $activeColor={activeColor}
         $textDecoration={textDecoration}
-        $font={font}
         {...rest}
       >
         {!isTrailingIcon && icon}
