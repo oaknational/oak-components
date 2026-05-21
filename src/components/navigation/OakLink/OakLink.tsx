@@ -49,9 +49,9 @@ export const OakLink: OakLinkComponent = forwardRef(
         color={variantDefinition.color}
         hoverColor={variantDefinition.hoverColor}
         activeColor={variantDefinition.activeColor}
-        disabledColor={variantDefinition.disabledColor}
         visitedColor={variantDefinition.visitedColor}
         textDecoration={variantDefinition.textDecoration}
+        disabledColor={"text-disabled"}
         {...props}
         ref={ref}
       />
