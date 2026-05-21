@@ -132,8 +132,8 @@ export const bannerTypes: BannerTypes = {
 
 export type OakInlineBannerVariantProps = {
   [key in OakInlineBannerVariants]: {
-    iconArea: Partial<SizeStyleProps>;
-    loadingSpinner: Partial<OakLoadingSpinnerProps>;
+    defaultIconDimensions: Partial<SizeStyleProps>;
+    loadingSpinnerDimensions: Partial<OakLoadingSpinnerProps>;
     heading: Partial<OakHeadingProps>;
     closeButtonWrapper?: Partial<OakBoxProps>;
     ctaWrapper?: Partial<OakBoxProps>;
@@ -145,11 +145,11 @@ export type OakInlineBannerVariantProps = {
 
 export const bannerVariants: OakInlineBannerVariantProps = {
   regular: {
-    iconArea: {
+    defaultIconDimensions: {
       $width: "spacing-32",
       $height: "spacing-32",
     },
-    loadingSpinner: {
+    loadingSpinnerDimensions: {
       $width: "spacing-24",
     },
     heading: {
@@ -163,11 +163,11 @@ export const bannerVariants: OakInlineBannerVariantProps = {
     textContentGap: "spacing-4",
   },
   large: {
-    iconArea: {
+    defaultIconDimensions: {
       $width: "spacing-40",
       $height: "spacing-40",
     },
-    loadingSpinner: {
+    loadingSpinnerDimensions: {
       $width: "spacing-32",
     },
     heading: {
@@ -227,7 +227,7 @@ export const OakInlineBanner = ({
       <OakIcon
         iconName={icon ?? bannerTypes[type]?.icon ?? "info"}
         $colorFilter={iconColorFilter ?? bannerTypes[type]?.iconColorFilter}
-        {...bannerVariants[variant].iconArea}
+        {...bannerVariants[variant].defaultIconDimensions}
         data-testid="inline-banner-icon"
       />
     </OakBox>
@@ -235,13 +235,13 @@ export const OakInlineBanner = ({
 
   const loader = (
     <OakFlex
-      {...bannerVariants[variant].iconArea}
+      {...bannerVariants[variant].defaultIconDimensions}
       $flexShrink={0}
       $justifyContent="center"
       $alignItems="center"
     >
       <OakLoadingSpinner
-        {...bannerVariants[variant].loadingSpinner}
+        {...bannerVariants[variant].loadingSpinnerDimensions}
         data-testid="inline-banner-loading-spinner"
       />
     </OakFlex>
