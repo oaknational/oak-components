@@ -45,6 +45,11 @@ const meta: Meta<typeof OakInlineBanner> = {
     icon: {
       options: [undefined, ...oakIconNames],
     },
+    isLoading: {
+      control: {
+        type: "boolean",
+      },
+    },
   },
   parameters: {
     controls: {
@@ -302,6 +307,39 @@ export const OverriddenStylingLarge: Story = {
     $borderColor: "border-decorative4",
     $background: "bg-decorative4-very-subdued",
     iconColorFilter: "icon-success",
+    variant: "large",
+    message: `Provide users with clear, timely, and non-disruptive feedback to support 
+      their understanding of actions and outcomes without interrupting their 
+      flow. Whether confirming a successful task, alerting them to an error, or 
+      informing them of a background process, feedback should be subtle and 
+      contextual—reinforcing confidence without demanding unnecessary attention.`,
+    cta: (
+      <OakPrimaryButton iconName="chevron-right" isTrailingIcon>
+        Button
+      </OakPrimaryButton>
+    ),
+  },
+};
+
+export const LoadingSpinnerNormal: Story = {
+  args: {
+    isLoading: true,
+    type: "neutral",
+  },
+};
+
+export const LoadingSpinnerSimple: Story = {
+  args: {
+    isLoading: true,
+    type: "neutral",
+    title: undefined,
+  },
+};
+
+export const LoadingSpinnerLarge: Story = {
+  args: {
+    isLoading: true,
+    type: "neutral",
     variant: "large",
     message: `Provide users with clear, timely, and non-disruptive feedback to support 
       their understanding of actions and outcomes without interrupting their 

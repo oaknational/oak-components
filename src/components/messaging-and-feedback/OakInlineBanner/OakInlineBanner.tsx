@@ -1,5 +1,9 @@
 import React, { ReactNode } from "react";
 
+import {
+  OakLoadingSpinner,
+  OakLoadingSpinnerProps,
+} from "@/components/messaging-and-feedback/OakLoadingSpinner";
 import { InternalShadowRoundButton } from "@/components/internal-components/InternalShadowRoundButton";
 import { OakBox, OakBoxProps } from "@/components/layout-and-structure/OakBox";
 import {
@@ -10,14 +14,11 @@ import {
   OakHeading,
   OakHeadingProps,
 } from "@/components/typography/OakHeading";
-import {
-  OakIcon,
-  OakIconName,
-  OakIconProps,
-} from "@/components/images-and-icons/OakIcon";
+import { OakIcon, OakIconName } from "@/components/images-and-icons/OakIcon";
 import { OakUiRoleToken } from "@/styles";
 import { PaddingStyleProps } from "@/styles/utils/spacingStyle";
 import { FlexStyleProps } from "@/styles/utils/flexStyle";
+import { SizeStyleProps } from "@/styles/utils/sizeStyle";
 
 export type OakInlineBannerTypes =
   | "info"
@@ -54,6 +55,10 @@ export type OakInlineBannerProps = OakFlexProps & {
    * The color filter to apply to the icon
    */
   iconColorFilter?: OakUiRoleToken;
+  /**
+   * If true show a loading spinner instead of an icon
+   */
+  isLoading?: boolean;
   /**
    * The optional call to action to display in the banner
    */
@@ -127,7 +132,8 @@ export const bannerTypes: BannerTypes = {
 
 export type OakInlineBannerVariantProps = {
   [key in OakInlineBannerVariants]: {
-    icon: Partial<OakIconProps>;
+    iconArea: Partial<SizeStyleProps>;
+    loadingSpinner: Partial<OakLoadingSpinnerProps>;
     heading: Partial<OakHeadingProps>;
     closeButtonWrapper?: Partial<OakBoxProps>;
     ctaWrapper?: Partial<OakBoxProps>;
@@ -139,9 +145,12 @@ export type OakInlineBannerVariantProps = {
 
 export const bannerVariants: OakInlineBannerVariantProps = {
   regular: {
-    icon: {
+    iconArea: {
       $width: "spacing-32",
       $height: "spacing-32",
+    },
+    loadingSpinner: {
+      $width: "spacing-24",
     },
     heading: {
       $font: ["heading-7"],
@@ -154,9 +163,12 @@ export const bannerVariants: OakInlineBannerVariantProps = {
     textContentGap: "spacing-4",
   },
   large: {
-    icon: {
+    iconArea: {
       $width: "spacing-40",
       $height: "spacing-40",
+    },
+    loadingSpinner: {
+      $width: "spacing-32",
     },
     heading: {
       $font: ["heading-6"],
@@ -186,6 +198,7 @@ export const bannerVariants: OakInlineBannerVariantProps = {
  * - **type?** \-                       Optional type of banner to display (info, neutral, success, alert, error, warning) (default: info)
  * - **icon?** \-                       Optional icon to display in the banner
  * - **iconColorFilter?** \-            Optional color filter to apply to the icon
+ * - **isLoading?** \-                  If true show a loading spinner instead of an icon
  * - **cta?** \-                        Optional call to action to display in the banner (ReactNode)
  * - **canDismiss?** \-                 If true the banner can be dismissed (show close icon) (default: false)
  * - **onDismiss?** \-                  Function called when the banner is dismissed
@@ -198,20 +211,43 @@ export const OakInlineBanner = ({
   title,
   message,
   type = "info",
+  icon,
+  iconColorFilter,
+  isLoading,
   cta,
   canDismiss = false,
   onDismiss = () => {},
-  icon,
-  iconColorFilter,
   closeButtonOverrideProps,
   variant = "regular",
   titleTag = "h1",
   ...props
 }: OakInlineBannerProps) => {
-  const iconResult = icon || bannerTypes[type]?.icon;
-  const iconColorFilterResult =
-    iconColorFilter || bannerTypes[type]?.iconColorFilter;
+  const iconElement = (
+    <OakBox>
+      <OakIcon
+        iconName={icon ?? bannerTypes[type]?.icon ?? "info"}
+        $colorFilter={iconColorFilter ?? bannerTypes[type]?.iconColorFilter}
+        {...bannerVariants[variant].iconArea}
+        data-testid="inline-banner-icon"
+      />
+    </OakBox>
+  );
 
+  const loader = (
+    <OakFlex
+      {...bannerVariants[variant].iconArea}
+      $flexShrink={0}
+      $justifyContent="center"
+      $alignItems="center"
+    >
+      <OakLoadingSpinner
+        {...bannerVariants[variant].loadingSpinner}
+        data-testid="inline-banner-loading-spinner"
+      />
+    </OakFlex>
+  );
+
+  const iconLogic = isLoading ? loader : iconElement;
   return (
     <OakFlex
       data-testid="oak-inline-banner"
@@ -234,14 +270,7 @@ export const OakInlineBanner = ({
         $gap={"spacing-12"}
         $width={"100%"}
       >
-        <OakBox>
-          <OakIcon
-            iconName={iconResult || "info"}
-            $colorFilter={iconColorFilterResult}
-            {...bannerVariants[variant].icon}
-            data-testid="inline-banner-icon"
-          />
-        </OakBox>
+        {iconLogic}
         {canDismiss && (
           <OakFlex $order={2} {...bannerVariants[variant].closeButtonWrapper}>
             <InternalShadowRoundButton
