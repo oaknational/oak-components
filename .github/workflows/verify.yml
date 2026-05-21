@@ -25,6 +25,7 @@ jobs:
         with:
           node-version: 24.x
           cache: "pnpm"
+          
       - run: pnpm ci
       - run: pnpm run format:check
       - run: pnpm run lint
