@@ -10,6 +10,7 @@ export const icons = {
   "ai-quiz": "v1756224440/icons/AI_quiz_eivb2s.svg",
   "ai-slide-deck": "v1756224440/icons/Ai_slidedeck_xuo49n.svg",
   "ai-worksheet": "v1756224441/icons/AI_worksheet_cm4f0q.svg",
+  "ai-teaching-resources": "v1779438987/icons/ai-teaching-resources.svg",
   home: "v1699887218/icons/gvqxjxcw07ei2kkmwnes.svg",
   send: "v1699893673/icons/rmvytilpjgvh3pgwc8ph.svg",
   rocket: "v1699894015/icons/u26xm5hteot875ozfnk9.svg",
