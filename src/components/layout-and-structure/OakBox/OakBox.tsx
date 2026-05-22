@@ -32,6 +32,10 @@ import {
   TypographyStyleProps,
 } from "@/styles/utils/typographyStyle";
 import { zIndexStyle, ZIndexStyleProps } from "@/styles/utils/zIndexStyle";
+import {
+  scrollSnapStyle,
+  ScrollSnapStyleProps,
+} from "@/styles/utils/scrollSnapStyle";
 
 type HTMLProps = {
   onClick?: MouseEventHandler;
@@ -51,7 +55,8 @@ export type OakBoxProps = {
   TransitionStyleProps &
   TypographyStyleProps &
   ZIndexStyleProps &
-  HTMLProps;
+  HTMLProps &
+  ScrollSnapStyleProps;
 
 export const oakBoxCss = css<OakBoxProps>`
   ${positionStyle}
@@ -66,6 +71,7 @@ export const oakBoxCss = css<OakBoxProps>`
   ${transitionStyle}
   ${typographyStyle}
   ${zIndexStyle}
+  ${scrollSnapStyle}
   ${(props) =>
     /* onClick might be passed in the useClickableCard pattern */
     props.onClick &&
@@ -90,6 +96,7 @@ export const oakBoxCss = css<OakBoxProps>`
  * - transition
  * - transform
  * - drop-shadow
+ * - scroll-margin-top/left
  *
  */
 export const OakBox = styled.div<OakBoxProps>`
