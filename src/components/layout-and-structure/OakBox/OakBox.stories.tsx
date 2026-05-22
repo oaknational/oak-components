@@ -14,30 +14,42 @@ import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";
 import { opacityArgTypes } from "@/storybook-helpers/opacityStyleHelpers";
 import { zIndexArgTypes } from "@/storybook-helpers/zIndexStyleHelpers";
 import { transitionArgTypes } from "@/storybook-helpers/transitionStyleHelpers";
+import { scrollSnapArgTypes } from "@/storybook-helpers/scrollSnapStyleHelpers";
+
+const argTypes = {
+  ...colorArgTypes,
+  ...sizeArgTypes,
+  ...spacingArgTypes,
+  ...positionArgTypes,
+  ...borderArgTypes,
+  ...opacityArgTypes,
+  ...zIndexArgTypes,
+  ...transitionArgTypes,
+  ...scrollSnapArgTypes,
+};
 
 const meta: Meta<typeof OakBox> = {
   component: OakBox,
   tags: ["autodocs"],
   title: "components/Layout and structure/OakBox",
-  argTypes: {
-    ...colorArgTypes,
-    ...sizeArgTypes,
-    ...spacingArgTypes,
-    ...positionArgTypes,
-    ...borderArgTypes,
-    ...opacityArgTypes,
-    ...zIndexArgTypes,
-    ...transitionArgTypes,
-  },
+  argTypes,
   parameters: {
     controls: {
-      include: [],
+      include: Object.keys(argTypes),
     },
   },
 };
 export default meta;
 
 type Story = StoryObj<typeof OakBox>;
+
+export const Default: Story = {
+  render: (args) => (
+    <OakBox data-testId="box-id" {...args}>
+      Default box
+    </OakBox>
+  ),
+};
 
 export const Color: Story = {
   render: (args) => (
