@@ -10,7 +10,7 @@ import { OakAllSpacingToken } from "@/styles/theme/spacing";
 type ScrollMarginValue = OakAllSpacingToken | null | undefined;
 type ScrollMarginValues = ResponsiveValues<ScrollMarginValue>;
 
-type ScrollMarginStyleProps = {
+export type ScrollSnapStyleProps = {
   /**
    * Applies `scroll-margin-top` to the element
    *
@@ -40,13 +40,7 @@ const scrollMarginLeft = css<{ $scrollMarginLeft?: ScrollMarginValues }>`
   )}
 `;
 
-export const scrollMarginStyle = css<ScrollMarginStyleProps>`
+export const scrollSnapStyle = css<ScrollSnapStyleProps>`
   ${scrollMarginTop}
   ${scrollMarginLeft}
-`;
-
-export type ScrollSnapStyleProps = ScrollMarginStyleProps;
-
-export const scrollSnapStyle = css<ScrollSnapStyleProps>`
-  ${scrollMarginStyle}
 `;
