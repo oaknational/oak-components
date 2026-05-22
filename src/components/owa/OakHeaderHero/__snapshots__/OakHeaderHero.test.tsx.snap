@@ -316,6 +316,7 @@ exports[`OakHeaderHero matches snapshot 1`] = `
 
 .c8:active {
   color: #081676;
+  outline: 1px solid #081676;
 }
 
 .c8[disabled] {
@@ -522,6 +523,8 @@ exports[`OakHeaderHero matches snapshot 1`] = `
     color: #0a1d9d;
     -webkit-text-decoration: underline;
     text-decoration: underline;
+    -webkit-text-decoration-thickness: 18%;
+    text-decoration-thickness: 18%;
   }
 }
 

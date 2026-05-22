@@ -32,6 +32,10 @@ exports[`Component OakTertiaryOLNav matches snapshot 1`] = `
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
+.c4:active {
+  outline: 1px solid;
+}
+
 .c4[disabled] {
   cursor: not-allowed;
 }
@@ -149,6 +153,8 @@ exports[`Component OakTertiaryOLNav matches snapshot 1`] = `
   .c4:visited:hover {
     -webkit-text-decoration: underline;
     text-decoration: underline;
+    -webkit-text-decoration-thickness: 18%;
+    text-decoration-thickness: 18%;
   }
 }
 

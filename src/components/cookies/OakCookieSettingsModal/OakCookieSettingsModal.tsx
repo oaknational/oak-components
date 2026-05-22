@@ -14,7 +14,6 @@ import {
 import { OakLink } from "@/components/navigation/OakLink";
 import { OakPrimaryButton } from "@/components/buttons/OakPrimaryButton";
 import { OakSecondaryButton } from "@/components/buttons/OakSecondaryButton";
-import { OakSecondaryLink } from "@/components/navigation/OakSecondaryLink";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakHeading } from "@/components/typography/OakHeading";
 import { OakP } from "@/components/typography/OakP";
@@ -169,13 +168,14 @@ export const OakCookieSettingsModal = ({
                         <OakUL $reset>
                           {policy.policyParties.map((party, index, all) => (
                             <OakBox as="li" key={index} $display="inline">
-                              <OakSecondaryLink
+                              <OakLink
+                                variant="secondary"
                                 href={party.url}
                                 target="_blank"
                                 rel="external nofollow"
                               >
                                 {party.name}
-                              </OakSecondaryLink>
+                              </OakLink>
                               {index < all.length - 1 && ", "}
                             </OakBox>
                           ))}

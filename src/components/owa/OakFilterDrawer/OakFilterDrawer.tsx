@@ -5,10 +5,10 @@ import { InternalShadowRoundButton } from "@/components/internal-components/Inte
 import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakHeading } from "@/components/typography/OakHeading";
-import { OakSecondaryLink } from "@/components/navigation/OakSecondaryLink";
 import { useIsScrolled } from "@/hooks/useIsScrolled";
 import { useMounted } from "@/hooks/useMounted";
 import InternalModalTransition from "@/components/internal-components/InternalModalTransition/InternalModalTransition";
+import { OakLink } from "@/components/navigation/OakLink";
 
 type OakFilterDrawerProps = {
   /**
@@ -105,13 +105,14 @@ export const OakFilterDrawer = ({
         $justifyContent="space-between"
         $alignItems="center"
       >
-        <OakSecondaryLink
+        <OakLink
+          variant="secondary"
           onClick={clearAllInputs}
           aria-label="Clear"
           element="button"
         >
           Clear
-        </OakSecondaryLink>
+        </OakLink>
         <OakHeading $font={"heading-6"} tag="h3">
           Filters
         </OakHeading>

@@ -1,10 +1,10 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
 
-import { OakSecondaryLink } from "@/components/navigation";
 import { OakIcon } from "@/components/images-and-icons";
 import { parseFontSize, parseSpacing } from "@/styles";
 import { OakBox, OakBoxProps } from "@/components/layout-and-structure";
+import { OakLink } from "@/components/navigation/OakLink";
 
 export type OakBreadcrumb = {
   text: string;
@@ -84,12 +84,13 @@ export const OakBreadcrumbs = ({
                 </OakBreadcrumbText>
               )}
               {!isLast && (
-                <OakSecondaryLink
+                <OakLink
+                  variant="secondary"
                   href={breadcrumb.href}
                   style={{ overflow: "hidden" }}
                 >
                   <OakBreadcrumbText>{breadcrumb.text}</OakBreadcrumbText>
-                </OakSecondaryLink>
+                </OakLink>
               )}
             </BreadcrumbsLi>
           );

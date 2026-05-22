@@ -7,9 +7,9 @@ import {
   bannerTypes,
   bannerVariants,
 } from "@/components/messaging-and-feedback/OakInlineBanner";
-import { OakSecondaryLink } from "@/components/navigation/OakSecondaryLink";
 import { oakIconNames } from "@/components/images-and-icons/OakIcon";
 import { OakPrimaryButton } from "@/components/buttons/OakPrimaryButton";
+import { OakLink } from "@/components/navigation/OakLink";
 
 const meta: Meta<typeof OakInlineBanner> = {
   component: OakInlineBanner,
@@ -67,13 +67,14 @@ const meta: Meta<typeof OakInlineBanner> = {
     title: "Information",
     message: `Provide users with non-disruptive feedback`,
     cta: (
-      <OakSecondaryLink
+      <OakLink
+        variant="secondary"
         iconName="chevron-right"
         isTrailingIcon
         href={`#${Math.random()}`}
       >
         Link
-      </OakSecondaryLink>
+      </OakLink>
     ),
     canDismiss: true,
     onDismiss: () => console.log("dismissed"),

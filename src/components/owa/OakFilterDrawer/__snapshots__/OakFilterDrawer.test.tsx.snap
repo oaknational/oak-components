@@ -279,6 +279,22 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
   letter-spacing: 0.0115rem;
 }
 
+.c4 {
+  max-width: 100vw;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.c1 {
+  opacity: 0.25;
+  background-color: black;
+  position: fixed;
+  inset: 0;
+  -webkit-transition: ease;
+  transition: ease;
+}
+
 .c7 {
   display: inline;
   -webkit-align-items: center;
@@ -313,27 +329,12 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
 
 .c7:active {
   color: #222222;
+  outline: 1px solid #222222;
 }
 
 .c7[disabled] {
   cursor: not-allowed;
   color: #808080;
-}
-
-.c4 {
-  max-width: 100vw;
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
-  transform: translateX(0);
-}
-
-.c1 {
-  opacity: 0.25;
-  background-color: black;
-  position: fixed;
-  inset: 0;
-  -webkit-transition: ease;
-  transition: ease;
 }
 
 @media (min-width:750px) {
@@ -350,18 +351,20 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
   }
 }
 
+@media (min-width:768px) {
+  .c4 {
+    max-width: 600px;
+  }
+}
+
 @media (hover:hover) {
   .c7:hover,
   .c7:visited:hover {
     color: #222222;
     -webkit-text-decoration: underline;
     text-decoration: underline;
-  }
-}
-
-@media (min-width:768px) {
-  .c4 {
-    max-width: 600px;
+    -webkit-text-decoration-thickness: 18%;
+    text-decoration-thickness: 18%;
   }
 }
 
@@ -389,7 +392,7 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
       >
         <button
           aria-label="Clear"
-          class="c7 "
+          class="c7"
         >
           <span
             class="c8"

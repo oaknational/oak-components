@@ -26,6 +26,9 @@ type OakLinkComponent = <C extends React.ElementType = "a">(
 const StyledInternalLink = styled(InternalLink)``;
 
 /**
+ * deprecated - use `<OakLink variant="secondary"/>` instead
+ * @deprecated
+ *
  * A black link with an optional icon and loading state.
  *
  * Defaulting to a `HTMLAnchorElement` this component is polymorphic and can be rendered as a button or any other element.

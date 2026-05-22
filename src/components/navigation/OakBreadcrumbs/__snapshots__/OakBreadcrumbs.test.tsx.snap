@@ -67,6 +67,7 @@ exports[`OakBreadcrumbs matches snapshot 1`] = `
 
 .c3:active {
   color: #222222;
+  outline: 1px solid #222222;
 }
 
 .c3[disabled] {
@@ -116,6 +117,8 @@ exports[`OakBreadcrumbs matches snapshot 1`] = `
     color: #222222;
     -webkit-text-decoration: underline;
     text-decoration: underline;
+    -webkit-text-decoration-thickness: 18%;
+    text-decoration-thickness: 18%;
   }
 }
 
@@ -131,7 +134,7 @@ exports[`OakBreadcrumbs matches snapshot 1`] = `
         class="c2"
       >
         <a
-          class="c3 "
+          class="c3"
           href="#test1"
           style="overflow: hidden;"
         >
@@ -163,7 +166,7 @@ exports[`OakBreadcrumbs matches snapshot 1`] = `
           />
         </span>
         <a
-          class="c3 "
+          class="c3"
           href="#test2"
           style="overflow: hidden;"
         >

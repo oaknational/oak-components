@@ -10,8 +10,7 @@ import { InternalCheckBoxLabelHoverDecor } from "@/components/internal-component
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { OakCheckBox } from "@/components/form-elements/OakCheckBox";
-import { OakHoverLink } from "@/components/navigation/OakHoverLink";
-import { OakSecondaryLink } from "@/components/navigation/OakSecondaryLink";
+import { OakLink } from "@/components/navigation/OakLink";
 
 interface StyledFlexBoxWrapperProps {
   $minHeight: string;
@@ -156,7 +155,8 @@ export const OakCaptionCard = (props: OakCaptionCardProps) => {
         </OakFlex>
 
         <OakFlex $flexGrow={10} $justifyContent={"flex-end"}>
-          <OakHoverLink
+          <OakLink
+            variant="secondary"
             href={editHref}
             iconName="external"
             isTrailingIcon
@@ -167,7 +167,7 @@ export const OakCaptionCard = (props: OakCaptionCardProps) => {
             }}
           >
             Edit
-          </OakHoverLink>
+          </OakLink>
         </OakFlex>
       </OakFlex>
       <OakFlex
@@ -177,7 +177,8 @@ export const OakCaptionCard = (props: OakCaptionCardProps) => {
         $gap={"spacing-32"}
         $font={"body-2"}
       >
-        <OakSecondaryLink
+        <OakLink
+          variant="secondary"
           href={lessonHref}
           aria-label={`view lesson ${lessonUid} in a new tab`}
           data-testid="lesson_uid"
@@ -189,7 +190,7 @@ export const OakCaptionCard = (props: OakCaptionCardProps) => {
           }}
         >
           {lessonUid}
-        </OakSecondaryLink>
+        </OakLink>
 
         <OakFlex $alignItems={"center"} $gap={"spacing-4"}>
           {" "}
