@@ -312,4 +312,26 @@ describe(OakInlineBanner, () => {
 
     expect(getByTestId("inline-banner-title").tagName).toBe("H3");
   });
+
+  it("shows loading spinner instead of icon when configured by props", () => {
+    const { queryByTestId, getByTestId } = renderWithTheme(
+      <OakInlineBanner
+        canDismiss
+        cta={
+          <OakLink variant="secondary" iconName="chevron-right" isTrailingIcon>
+            Link
+          </OakLink>
+        }
+        isOpen
+        message="Lorem ipsum dolor sit amet consectetur. Arcu proin rhoncus eget aliquet."
+        onDismiss={() => {}}
+        title="Information"
+        type="info"
+        isLoading
+      />,
+    );
+
+    expect(getByTestId("inline-banner-loading-spinner")).toBeInTheDocument();
+    expect(queryByTestId("inline-banner-icon")).not.toBeInTheDocument();
+  });
 });
