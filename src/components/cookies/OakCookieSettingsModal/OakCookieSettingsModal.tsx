@@ -11,6 +11,7 @@ import {
   OakInformativeModalFooter,
   OakInformativeModalProps,
 } from "@/components/messaging-and-feedback/OakInformativeModal";
+import { OakHoverLink } from "@/components/navigation/OakHoverLink";
 import { OakLink } from "@/components/navigation/OakLink";
 import { OakPrimaryButton } from "@/components/buttons/OakPrimaryButton";
 import { OakSecondaryButton } from "@/components/buttons/OakSecondaryButton";
@@ -114,9 +115,9 @@ export const OakCookieSettingsModal = ({
 
         <OakP $mb="spacing-48">
           For more information, view our{" "}
-          <OakLink href={policyURL} target="_blank">
+          <OakHoverLink href={policyURL} target="_blank">
             cookie policy
-          </OakLink>
+          </OakHoverLink>
           .
         </OakP>
         <OakBox $mb="spacing-56">
