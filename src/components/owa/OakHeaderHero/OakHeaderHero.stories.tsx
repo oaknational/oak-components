@@ -3,6 +3,7 @@ import { StoryObj, Meta } from "@storybook/nextjs";
 
 import { OakHeaderHero } from "./OakHeaderHero";
 
+import { OakHoverLink } from "@/components/navigation/OakHoverLink";
 import { OakLink } from "@/components/navigation/OakLink";
 
 const meta: Meta<typeof OakHeaderHero> = {
@@ -38,7 +39,7 @@ const meta: Meta<typeof OakHeaderHero> = {
     //Breadcrumb component doesn't exist in the storybook/component library
     breadcrumbs: (
       <>
-        <OakLink href="/home">Home</OakLink> {">"}
+        <OakHoverLink href="/home">Home</OakHoverLink> {">"}
         <OakLink href="/lessons">Lessons</OakLink>
       </>
     ),
