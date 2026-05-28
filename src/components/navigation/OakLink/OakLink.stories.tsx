@@ -12,7 +12,7 @@ const controlIconNames = [...oakIconNames].sort((a, b) => a.localeCompare(b));
 const meta: Meta<typeof OakLink> = {
   component: OakLink,
   tags: ["autodocs"],
-  title: "components/Navigation/OakLink",
+  title: "components/Navigation/OakLink (deprecated)",
   argTypes: {
     children: { type: "string" },
     iconName: {
