@@ -2,6 +2,7 @@
   "name": "@oaknational/oak-components",
   "version": "2.33.0",
   "licence": "MIT",
+  "packageManager": "pnpm@11.2.0",
   "description": "Shared components for Oak applications",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -24,7 +25,7 @@
     "build-storybook": "storybook build",
     "prepare": "husky install",
     "prepublishOnly": "./scripts/prepublish.sh",
-    "publish:local": "npm run build && yalc publish --no-scripts",
+    "publish:local": "pnpm build && yalc publish --no-scripts",
     "outdated": "bash scripts/outdated.sh",
     "audit": "bash scripts/audit.sh",
     "knip": "knip"
@@ -37,11 +38,16 @@
     "react-dom": ">=18.2.0",
     "styled-components": ">=5.3.11"
   },
+  "engines": {
+    "node": "24",
+    "pnpm": ">=11"
+  },
   "devDependencies": {
     "@commitlint/cli": "^18.4.4",
     "@commitlint/config-conventional": "^18.4.4",
     "@dnd-kit/core": "^6.3.1",
     "@dnd-kit/sortable": "^10.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
     "@rollup/plugin-commonjs": "^29.0.2",
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^16.0.3",
@@ -68,8 +74,10 @@
     "@types/react-test-renderer": "^18.0.7",
     "@types/react-transition-group": "^4.4.12",
     "@types/styled-components": "^5.1.36",
+    "@types/yargs": "^17.0.35",
     "@typescript-eslint/eslint-plugin": "^6.18.1",
     "@typescript-eslint/parser": "^6.18.1",
+    "assert": "^2.1.0",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.1",
@@ -101,7 +109,8 @@
     "storybook-react-context": "^0.8.0",
     "ts-jest": "^29.4.9",
     "tsx": "^4.21.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "yargs": "^18.0.0"
   },
   "directories": {
     "example": "examples"

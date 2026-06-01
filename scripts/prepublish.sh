@@ -11,7 +11,7 @@ fi
 
 # If we're not on CI, run the tests
 if [ "$CI" != "true" ]; then
-  npm run test:ci
+  pnpm test:ci
 fi;
 
-npm run build
+pnpm build

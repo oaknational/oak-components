@@ -12,7 +12,7 @@ This is a React Typescript components library which supports React and Next appl
 
 This library is suitable for use in an app using React 18 and Next.js 13.5+
 
-You can install it using `npm i @oaknational/oak-components` or any other package manager that supports the NPM registry.
+You can install it using `pnpm i @oaknational/oak-components` or any other package manager that supports the NPM registry.
 
 👉 You'll need two environment variables to enable images `NEXT_PUBLIC_OAK_ASSETS_HOST` and `NEXT_PUBLIC_OAK_ASSETS_PATH`. Values for these can be obtained from the `.env` config from OWA or from a fellow engineer.
 
@@ -43,17 +43,15 @@ export default function RootLayout({ children }) {
 
 To enable SSR of styles and avoid a flicker of unstyled content you'll need to configure your Next.js app to support [styled-components](https://nextjs.org/docs/app/building-your-application/styling/css-in-js#styled-components)
 
-### TypeScript
-
-If you're using TypeScript you might want to add `@types/styled-components` to your development dependencies (`npm i -D @types/styled-components`). This will ensure that all components are properly type hinted in your IDE.
 
 ## Development
 
 1. Copy the example env config `cp .env.example .env`
 2. Populate `.env` with values from the 1Password developer vault, search for: "Oak components .env"
-3. run `nvm use`
-4. run `npm install`
-5. To view the storybook run `npm run storybook`
+3. run `corepack enable && corepack install`
+4. run `nvm use`
+5. run `pnpm install`
+6. To view the storybook run `pnpm storybook`
 
 ## Making changes
 
@@ -75,14 +73,14 @@ Commit messages that begin with `chore`, `refactor` or `docs`, etc. will not tri
 
 Sometimes it isn't enough to develop entirely inside Storybook and it might be necessary to try local changes inside a target app. You can do this with [yalc](https://github.com/wclr/yalc)
 
-1. Install yalc `npm i yalc -g`
-2. Run `npm run publish:local` to add the package to yalc's local registry.
+1. Install yalc `pnpm i yalc -g`
+2. Run `pnpm run publish:local` to add the package to yalc's local registry.
 3. Inside the target app run `yalc add @oaknational/oak-components` — this will install the package from the local registry like it would from NPM
-   - 🚨 if you're an Oak engineer developing in OWA there is a convenience script and you should use `npm run use-local-components` instead
+   - 🚨 if you're an Oak engineer developing in OWA there is a convenience script and you should use `pnpm run use-local-components` instead
      as it will perform some additional work to remove any existing installation of the package.
 4. Now when you start your target app you should have access to the locally packaged version of the library
 5. To uninstall the local package you can run `yalc remove @oaknational/oak-components` inside the target app
-   - 🚨 if you're an Oak engineer developing in OWA there is a convenience script and you should use `npm run remove-local-components` instead
+   - 🚨 if you're an Oak engineer developing in OWA there is a convenience script and you should use `pnpm run remove-local-components` instead
      as it will automatically re-install the library from NPM.
 
 ## Organisational structure
