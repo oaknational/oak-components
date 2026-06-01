@@ -28,13 +28,8 @@ describe("CaptionCard", () => {
   });
 
   it("matches snapshot", () => {
-    const date = new Date();
-    const dateString =
-      date.getFullYear() +
-      "-" +
-      (date.getMonth() + 1) +
-      "-" +
-      (date.getDate() - 1);
+    const date = new Date(Date.now() - 1000 * 60 * 60 * 24); // 1 day ago
+    const dateString = date.toISOString();
 
     const { container } = renderWithTheme(
       <OakCaptionCard
