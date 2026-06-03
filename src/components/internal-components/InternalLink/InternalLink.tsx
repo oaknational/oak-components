@@ -48,7 +48,7 @@ const StyledLink = styled.a<{
   ${StyledOakIcon} {
     filter: ${(props) => parseColorFilter(props.$color)};
     display: inline-block;
-    vertical-align: bottom;
+    vertical-align: middle;
   }
 
   &:focus-visible {
