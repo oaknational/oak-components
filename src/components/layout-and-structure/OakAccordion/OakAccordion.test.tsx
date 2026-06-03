@@ -22,6 +22,51 @@ describe(OakAccordion, () => {
     expect(container).toMatchSnapshot();
   });
 
+  it("matches snapshot with chevronPosition right", () => {
+    const { container } = renderWithTheme(
+      <OakAccordion
+        initialOpen
+        header="See more"
+        id="see-more"
+        chevronPosition="right"
+      >
+        Here it is
+      </OakAccordion>,
+    );
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it("matches snapshot with custom openBackground", () => {
+    const { container } = renderWithTheme(
+      <OakAccordion
+        initialOpen
+        header="See more"
+        id="see-more"
+        openBackground="bg-decorative1-main"
+      >
+        Here it is
+      </OakAccordion>,
+    );
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it("matches snapshot with custom $color", () => {
+    const { container } = renderWithTheme(
+      <OakAccordion
+        initialOpen
+        header="See more"
+        id="see-more"
+        $color="text-inverted"
+      >
+        Here it is
+      </OakAccordion>,
+    );
+
+    expect(container).toMatchSnapshot();
+  });
+
   it("toggles open and closed", () => {
     const { queryByRole, queryByText, getByText } = renderWithTheme(
       <OakAccordion header="See more" id="see-more">
@@ -44,4 +89,5 @@ describe(OakAccordion, () => {
 
     expect(queryByRole("region")).not.toBeInTheDocument();
   });
+
 });

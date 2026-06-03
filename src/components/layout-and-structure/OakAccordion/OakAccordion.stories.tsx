@@ -11,7 +11,13 @@ const meta: Meta<typeof OakAccordion> = {
   title: "components/Layout and structure/OakAccordion",
   parameters: {
     controls: {
-      include: ["header", "headerAfterSlot", "children"],
+      include: [
+        "header",
+        "headerAfterSlot",
+        "children",
+        "chevronPosition",
+        "openBackground",
+      ],
     },
   },
   argTypes: {
@@ -30,6 +36,17 @@ const meta: Meta<typeof OakAccordion> = {
         type: "text",
       },
     },
+    chevronPosition: {
+      control: {
+        type: "radio",
+      },
+      options: ["left", "right"],
+    },
+    openBackground: {
+      control: {
+        type: "text",
+      },
+    },
   },
   args: {
     id: "accordion-1",
@@ -44,6 +61,31 @@ export default meta;
 type Story = StoryObj<typeof OakAccordion>;
 
 export const Default: Story = {};
+
+export const ChevronRight: Story = {
+  args: {
+    chevronPosition: "right",
+  },
+};
+
+export const WithOpenBackground: Story = {
+  args: {
+    initialOpen: true,
+    openBackground: "bg-decorative1-main",
+  },
+};
+
+export const WithCustomColor: Story = {
+  args: {
+    $color: "text-link-active",
+  },
+};
+
+export const NoBorder: Story = {
+  args: {
+    $ba: "border-solid-none",
+  },
+};
 
 export const WithHeaderAfterSlot: Story = {
   args: {
