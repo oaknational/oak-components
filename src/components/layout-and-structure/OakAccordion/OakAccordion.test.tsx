@@ -89,5 +89,4 @@ describe(OakAccordion, () => {
 
     expect(queryByRole("region")).not.toBeInTheDocument();
   });
-
 });
