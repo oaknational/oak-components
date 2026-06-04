@@ -14,6 +14,7 @@ import InternalAccordionProvider from "@/components/internal-components/Internal
 import { OakUiRoleToken } from "@/styles/theme/color";
 import { BorderStyleProps } from "@/styles/utils/borderStyle";
 import { FlexStyleProps } from "@/styles/utils/flexStyle";
+import { SpacingStyleProps } from "@/styles/utils/spacingStyle";
 
 export type OakAccordionProps = {
   /**
@@ -56,7 +57,8 @@ export type OakAccordionProps = {
    */
   $color?: OakUiRoleToken;
 } & BorderStyleProps &
-  FlexStyleProps;
+  FlexStyleProps &
+  SpacingStyleProps;
 
 const StyledOakFlex = styled(InternalAccordionButton)`
   font: inherit;
