@@ -33,6 +33,9 @@ const meta: Meta<typeof OakCard> = {
     aspectRatio: {
       options: ["1/1", "4/3"],
     },
+    subCopyColor: {
+      options: oakUiRoleTokens,
+    },
     tagBackground: {
       options: oakUiRoleTokens,
     },
@@ -55,6 +58,7 @@ const meta: Meta<typeof OakCard> = {
         "imageAlt",
         "aspectRatio",
         "subCopy",
+        "subCopyColor",
         "tagName",
         "tagBackground",
         "linkText",
@@ -81,6 +85,7 @@ export const Default: Story = {
     imageAlt: "Example Image Alt",
     aspectRatio: "4/3",
     subCopy: "Some subcopy",
+    subCopyColor: "text-subdued",
     tagName: "Tag Name",
     tagBackground: "bg-decorative5-main",
     linkText: "Link Text",

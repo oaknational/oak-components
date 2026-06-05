@@ -56,6 +56,10 @@ export type OakCardProps = {
    */
   subCopy?: string;
   /**
+   * The color of the subcopy text.
+   */
+  subCopyColor?: OakUiRoleToken;
+  /**
    * The name of a tag to be displayed in the card.
    */
   tagName?: string;
@@ -130,6 +134,7 @@ export const OakCard = ({
   imageAlt,
   aspectRatio = "1/1",
   subCopy,
+  subCopyColor = "text-primary",
   tagName,
   tagBackground = "bg-decorative3-very-subdued",
   linkText,
@@ -174,7 +179,7 @@ export const OakCard = ({
             <OakHeading tag={headingLevel} $font={"heading-6"}>
               {heading}
             </OakHeading>
-            {subCopy && <OakP>{subCopy}</OakP>}
+            {subCopy && <OakP $color={subCopyColor}>{subCopy}</OakP>}
           </OakFlex>
           <OakFlex
             $flexDirection="row"
