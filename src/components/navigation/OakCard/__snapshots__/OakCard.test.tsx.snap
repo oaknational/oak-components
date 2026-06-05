@@ -181,6 +181,7 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
 
 .c13 {
   font-family: --var(google-font),Lexend,sans-serif;
+  color: #222222;
 }
 
 .c19 {
