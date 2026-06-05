@@ -93,8 +93,18 @@ const StyledOakFlex = styled(OakFlex)<StyledFlexProps>`
   gap: ${({ $gap }) => parseSpacing($gap)};
 
   &:hover {
-    h3 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    span {
       text-decoration: underline;
+    }
+
+    span {
+      text-decoration-thickness: 18%;
     }
   }
 `;
@@ -191,7 +201,7 @@ export const OakCard = ({
             )}
             {linkText && (
               <OakFlex $alignItems={"center"}>
-                <OakSpan>{linkText}</OakSpan>
+                <OakSpan $font={"heading-light-7"}>{linkText}</OakSpan>
                 <OakIcon
                   iconName={linkIconName}
                   alt=""

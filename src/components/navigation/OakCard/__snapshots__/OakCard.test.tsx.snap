@@ -186,6 +186,13 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
 
 .c19 {
   font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
 }
 
 .c17 {
@@ -200,9 +207,20 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   gap: 1rem;
 }
 
-.c4:hover h3 {
+.c4:hover h1,
+.c4:hover h2,
+.c4:hover h3,
+.c4:hover h4,
+.c4:hover h5,
+.c4:hover h6,
+.c4:hover span {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+.c4:hover span {
+  -webkit-text-decoration-thickness: 18%;
+  text-decoration-thickness: 18%;
 }
 
 .c6 {
