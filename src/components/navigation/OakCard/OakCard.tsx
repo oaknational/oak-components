@@ -56,6 +56,10 @@ export type OakCardProps = {
    */
   subCopy?: string;
   /**
+   * The color of the subcopy text.
+   */
+  subCopyColor?: OakUiRoleToken;
+  /**
    * The name of a tag to be displayed in the card.
    */
   tagName?: string;
@@ -89,8 +93,18 @@ const StyledOakFlex = styled(OakFlex)<StyledFlexProps>`
   gap: ${({ $gap }) => parseSpacing($gap)};
 
   &:hover {
-    h3 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    span {
       text-decoration: underline;
+    }
+
+    span {
+      text-decoration-thickness: 18%;
     }
   }
 `;
@@ -130,6 +144,7 @@ export const OakCard = ({
   imageAlt,
   aspectRatio = "1/1",
   subCopy,
+  subCopyColor = "text-primary",
   tagName,
   tagBackground = "bg-decorative3-very-subdued",
   linkText,
@@ -174,7 +189,7 @@ export const OakCard = ({
             <OakHeading tag={headingLevel} $font={"heading-6"}>
               {heading}
             </OakHeading>
-            {subCopy && <OakP>{subCopy}</OakP>}
+            {subCopy && <OakP $color={subCopyColor}>{subCopy}</OakP>}
           </OakFlex>
           <OakFlex
             $flexDirection="row"
@@ -186,7 +201,7 @@ export const OakCard = ({
             )}
             {linkText && (
               <OakFlex $alignItems={"center"}>
-                <OakSpan>{linkText}</OakSpan>
+                <OakSpan $font={"heading-light-7"}>{linkText}</OakSpan>
                 <OakIcon
                   iconName={linkIconName}
                   alt=""
