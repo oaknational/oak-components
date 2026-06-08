@@ -94,6 +94,16 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
+.c26 {
+  position: relative;
+  width: 1.25em;
+  min-width: 1.25em;
+  height: 1.25em;
+  min-height: 1.25em;
+  display: block;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -240,7 +250,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   object-fit: contain;
 }
 
-.c26 {
+.c27 {
   object-fit: contain;
 }
 
@@ -451,11 +461,11 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
               Link
             </span>
             <span
-              class="c17 "
+              class="c26 "
             >
               <img
                 alt=""
-                class="c26"
+                class="c27"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"
@@ -569,6 +579,16 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
 
 .c24 {
   margin-top: 0.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c27 {
+  position: relative;
+  width: 1.25em;
+  min-width: 1.25em;
+  height: 1.25em;
+  min-height: 1.25em;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -718,7 +738,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   object-fit: contain;
 }
 
-.c27 {
+.c28 {
   object-fit: contain;
 }
 
@@ -929,11 +949,11 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
               Link
             </span>
             <span
-              class="c18 "
+              class="c27 "
             >
               <img
                 alt=""
-                class="c27"
+                class="c28"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"
@@ -1036,6 +1056,16 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   -moz-letter-spacing: -0.005rem;
   -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
+}
+
+.c24 {
+  position: relative;
+  width: 1.25em;
+  min-width: 1.25em;
+  height: 1.25em;
+  min-height: 1.25em;
+  display: block;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c1 {
@@ -1184,7 +1214,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   object-fit: contain;
 }
 
-.c24 {
+.c25 {
   object-fit: contain;
 }
 
@@ -1378,11 +1408,11 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
               Link
             </span>
             <span
-              class="c17 "
+              class="c24 "
             >
               <img
                 alt=""
-                class="c24"
+                class="c25"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"

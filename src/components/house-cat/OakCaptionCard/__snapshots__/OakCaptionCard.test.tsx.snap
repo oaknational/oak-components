@@ -67,10 +67,10 @@ exports[`CaptionCard matches snapshot 1`] = `
 
 .c24 {
   position: relative;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  height: 1.5rem;
-  min-height: 1.5rem;
+  width: 1.25em;
+  min-width: 1.25em;
+  height: 1.25em;
+  min-height: 1.25em;
   display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -85,6 +85,16 @@ exports[`CaptionCard matches snapshot 1`] = `
   -moz-letter-spacing: -0.005rem;
   -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
+}
+
+.c29 {
+  position: relative;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  min-height: 1.5rem;
+  display: block;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c1 {
@@ -172,7 +182,7 @@ exports[`CaptionCard matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c30 {
+.c31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -193,7 +203,7 @@ exports[`CaptionCard matches snapshot 1`] = `
   object-fit: contain;
 }
 
-.c29 {
+.c30 {
   object-fit: contain;
 }
 
@@ -483,11 +493,11 @@ input:checked + .c12 {
       >
          
         <span
-          class="c24"
+          class="c29"
         >
           <img
             alt=""
-            class="c29"
+            class="c30"
             data-nimg="fill"
             decoding="async"
             loading="lazy"
@@ -498,14 +508,14 @@ input:checked + .c12 {
         Lesson video
       </div>
       <div
-        class="c21 c30"
+        class="c21 c31"
       >
         <span
-          class="c24"
+          class="c29"
         >
           <img
             alt=""
-            class="c29"
+            class="c30"
             data-nimg="fill"
             decoding="async"
             loading="lazy"
@@ -517,14 +527,14 @@ input:checked + .c12 {
         1 days ago
       </div>
       <div
-        class="c21 c30"
+        class="c21 c31"
       >
         <span
-          class="c24"
+          class="c29"
         >
           <img
             alt=""
-            class="c29"
+            class="c30"
             data-nimg="fill"
             decoding="async"
             loading="lazy"
