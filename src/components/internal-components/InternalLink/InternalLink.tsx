@@ -48,7 +48,7 @@ const StyledLink = styled.a<{
   ${StyledOakIcon} {
     filter: ${(props) => parseColorFilter(props.$color)};
     display: inline-block;
-    vertical-align: bottom;
+    vertical-align: text-top;
   }
 
   &:focus-visible {
@@ -143,10 +143,7 @@ export const InternalLink: InternalLinkComponent = forwardRef(
       visitedColor,
       hoverColor,
       activeColor,
-      iconWidth = "spacing-24",
-      iconHeight = "spacing-24",
       textDecoration = "underline",
-      font,
       ...rest
     } = props;
 
@@ -166,8 +163,8 @@ export const InternalLink: InternalLinkComponent = forwardRef(
           return (
             <StyledOakIcon
               iconName={iconName}
-              iconWidth={iconWidth}
-              iconHeight={iconHeight}
+              iconWidth={"1.25em"}
+              iconHeight={"1.25em"}
             />
           );
         default:
