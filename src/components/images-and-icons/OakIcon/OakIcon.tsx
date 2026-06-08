@@ -1,6 +1,6 @@
 import React from "react";
 
-import { OakCombinedSpacingToken } from "@/styles";
+import { OakAllSpacingToken } from "@/styles";
 import { IconName, icons } from "@/image-map";
 import {
   OakImage,
@@ -19,8 +19,8 @@ export type OakIconProps = Omit<OakImageProps, "alt" | "src"> & {
    */
   iconName: OakIconName;
   alt?: string;
-  iconWidth?: OakCombinedSpacingToken;
-  iconHeight?: OakCombinedSpacingToken;
+  iconWidth?: OakAllSpacingToken;
+  iconHeight?: OakAllSpacingToken;
 };
 
 /**

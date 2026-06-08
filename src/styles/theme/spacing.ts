@@ -84,7 +84,6 @@ export const additionalSpacingTokens = {
   inherit: "inherit",
   initial: "initial",
   unset: "unset",
-  "1.25em": "1.25em",
 };
 
 export type AdditionalSpacingTypes = keyof typeof additionalSpacingTokens;

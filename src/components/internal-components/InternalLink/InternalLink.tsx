@@ -14,11 +14,16 @@ import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakIcon, OakIconProps } from "@/components/images-and-icons/OakIcon";
 import { OakSpan } from "@/components/typography/OakSpan";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
-import { OakAllSpacingToken, OakUiRoleToken } from "@/styles";
+import { OakUiRoleToken } from "@/styles";
 import { OakFontToken, OakTextDecoration } from "@/styles/theme/typography";
 import { typographyStyle } from "@/styles/utils/typographyStyle";
 
-const StyledOakIcon = styled(OakIcon)``;
+const StyledOakIcon = styled(OakIcon)`
+  width: 1.25em;
+  min-width: 1.25em;
+  height: 1.25em;
+  min-height: 1.25em;
+`;
 
 const StyledLink = styled.a<{
   $color: OakUiRoleToken;
@@ -113,8 +118,6 @@ export type InternalLinkProps = {
   hoverColor: OakUiRoleToken;
   activeColor: OakUiRoleToken;
   disabledColor: OakUiRoleToken;
-  iconWidth?: OakAllSpacingToken;
-  iconHeight?: OakAllSpacingToken;
   textDecoration?: OakTextDecoration;
 };
 
@@ -160,13 +163,7 @@ export const InternalLink: InternalLinkComponent = forwardRef(
             </OakBox>
           );
         case !!iconName:
-          return (
-            <StyledOakIcon
-              iconName={iconName}
-              iconWidth={"1.25em"}
-              iconHeight={"1.25em"}
-            />
-          );
+          return <StyledOakIcon iconName={iconName} />;
         default:
           return null;
       }
