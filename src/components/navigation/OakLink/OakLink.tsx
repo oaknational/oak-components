@@ -2,7 +2,6 @@ import React, { ElementType, forwardRef } from "react";
 
 import { Variant, variantConfig } from "./config";
 
-import { OakAllSpacingToken } from "@/styles";
 import {
   InternalLink,
   InternalLinkProps,
@@ -17,8 +16,6 @@ export type OakLinkProps = Pick<
   InternalLinkProps,
   "iconName" | "isTrailingIcon" | "isLoading"
 > & {
-  iconWidth?: OakAllSpacingToken;
-  iconHeight?: OakAllSpacingToken;
   /**
    * Style variant of the OakLink component: "primary" | "secondary"
    *
