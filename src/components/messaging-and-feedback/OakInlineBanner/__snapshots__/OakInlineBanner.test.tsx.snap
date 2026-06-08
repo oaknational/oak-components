@@ -94,16 +94,6 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c26 {
-  position: relative;
-  width: 1.25em;
-  min-width: 1.25em;
-  height: 1.25em;
-  min-height: 1.25em;
-  display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -250,7 +240,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   object-fit: contain;
 }
 
-.c27 {
+.c28 {
   object-fit: contain;
 }
 
@@ -313,6 +303,13 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   letter-spacing: 0.0115rem;
 }
 
+.c27 {
+  width: 1.25em;
+  min-width: 1.25em;
+  height: 1.25em;
+  min-height: 1.25em;
+}
+
 .c24 {
   display: inline;
   -webkit-align-items: center;
@@ -337,6 +334,13 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   overflow-wrap: break-word;
 }
 
+.c24 .c26 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  display: inline-block;
+  vertical-align: text-top;
+}
+
 .c24:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
@@ -345,14 +349,29 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   color: #222222;
 }
 
+.c24:visited .c26 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+}
+
 .c24:active {
   color: #222222;
   outline: 1px solid #222222;
 }
 
+.c24:active .c26 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+}
+
 .c24[disabled] {
   cursor: not-allowed;
   color: #808080;
+}
+
+.c24[disabled] .c26 {
+  -webkit-filter: invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%);
+  filter: invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%);
 }
 
 @media (hover:hover) {
@@ -363,6 +382,12 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
     text-decoration: underline;
     -webkit-text-decoration-thickness: 18%;
     text-decoration-thickness: 18%;
+  }
+
+  .c24:hover .c26,
+  .c24:visited:hover .c26 {
+    -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+    filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   }
 }
 
@@ -461,11 +486,11 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
               Link
             </span>
             <span
-              class="c26 "
+              class="c5 c26 c27"
             >
               <img
                 alt=""
-                class="c27"
+                class="c28"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"
@@ -584,10 +609,10 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
 
 .c27 {
   position: relative;
-  width: 1.25em;
-  min-width: 1.25em;
-  height: 1.25em;
-  min-height: 1.25em;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
   display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -738,7 +763,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   object-fit: contain;
 }
 
-.c28 {
+.c30 {
   object-fit: contain;
 }
 
@@ -801,6 +826,13 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   letter-spacing: 0.0115rem;
 }
 
+.c29 {
+  width: 1.25em;
+  min-width: 1.25em;
+  height: 1.25em;
+  min-height: 1.25em;
+}
+
 .c25 {
   display: inline;
   -webkit-align-items: center;
@@ -825,6 +857,13 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   overflow-wrap: break-word;
 }
 
+.c25 .c28 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  display: inline-block;
+  vertical-align: text-top;
+}
+
 .c25:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
@@ -833,14 +872,29 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   color: #222222;
 }
 
+.c25:visited .c28 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+}
+
 .c25:active {
   color: #222222;
   outline: 1px solid #222222;
 }
 
+.c25:active .c28 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+}
+
 .c25[disabled] {
   cursor: not-allowed;
   color: #808080;
+}
+
+.c25[disabled] .c28 {
+  -webkit-filter: invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%);
+  filter: invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%);
 }
 
 @media (hover:hover) {
@@ -851,6 +905,12 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
     text-decoration: underline;
     -webkit-text-decoration-thickness: 18%;
     text-decoration-thickness: 18%;
+  }
+
+  .c25:hover .c28,
+  .c25:visited:hover .c28 {
+    -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+    filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   }
 }
 
@@ -949,11 +1009,11 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
               Link
             </span>
             <span
-              class="c27 "
+              class="c27 c28 c29"
             >
               <img
                 alt=""
-                class="c28"
+                class="c30"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"
@@ -1056,16 +1116,6 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   -moz-letter-spacing: -0.005rem;
   -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
-}
-
-.c24 {
-  position: relative;
-  width: 1.25em;
-  min-width: 1.25em;
-  height: 1.25em;
-  min-height: 1.25em;
-  display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c1 {
@@ -1214,7 +1264,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   object-fit: contain;
 }
 
-.c25 {
+.c26 {
   object-fit: contain;
 }
 
@@ -1266,6 +1316,13 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   background: transparent;
 }
 
+.c25 {
+  width: 1.25em;
+  min-width: 1.25em;
+  height: 1.25em;
+  min-height: 1.25em;
+}
+
 .c22 {
   display: inline;
   -webkit-align-items: center;
@@ -1290,6 +1347,13 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   overflow-wrap: break-word;
 }
 
+.c22 .c24 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  display: inline-block;
+  vertical-align: text-top;
+}
+
 .c22:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
@@ -1298,14 +1362,29 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   color: #222222;
 }
 
+.c22:visited .c24 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+}
+
 .c22:active {
   color: #222222;
   outline: 1px solid #222222;
 }
 
+.c22:active .c24 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+}
+
 .c22[disabled] {
   cursor: not-allowed;
   color: #808080;
+}
+
+.c22[disabled] .c24 {
+  -webkit-filter: invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%);
+  filter: invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%);
 }
 
 @media (hover:hover) {
@@ -1316,6 +1395,12 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
     text-decoration: underline;
     -webkit-text-decoration-thickness: 18%;
     text-decoration-thickness: 18%;
+  }
+
+  .c22:hover .c24,
+  .c22:visited:hover .c24 {
+    -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+    filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   }
 }
 
@@ -1408,11 +1493,11 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
               Link
             </span>
             <span
-              class="c24 "
+              class="c5 c24 c25"
             >
               <img
                 alt=""
-                class="c25"
+                class="c26"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"

@@ -67,15 +67,15 @@ exports[`CaptionCard matches snapshot 1`] = `
 
 .c24 {
   position: relative;
-  width: 1.25em;
-  min-width: 1.25em;
-  height: 1.25em;
-  min-height: 1.25em;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
   display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c26 {
+.c28 {
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
@@ -87,7 +87,7 @@ exports[`CaptionCard matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c29 {
+.c31 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -154,7 +154,7 @@ exports[`CaptionCard matches snapshot 1`] = `
   flex-grow: 10;
 }
 
-.c27 {
+.c29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -170,7 +170,7 @@ exports[`CaptionCard matches snapshot 1`] = `
   gap: 2rem;
 }
 
-.c28 {
+.c30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -182,7 +182,7 @@ exports[`CaptionCard matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c31 {
+.c33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -199,11 +199,11 @@ exports[`CaptionCard matches snapshot 1`] = `
   object-fit: contain;
 }
 
-.c25 {
+.c27 {
   object-fit: contain;
 }
 
-.c30 {
+.c32 {
   object-fit: contain;
 }
 
@@ -281,6 +281,13 @@ input:checked + .c12 {
   opacity: 1;
 }
 
+.c26 {
+  width: 1.25em;
+  min-width: 1.25em;
+  height: 1.25em;
+  min-height: 1.25em;
+}
+
 .c23 {
   display: inline;
   -webkit-align-items: center;
@@ -305,6 +312,13 @@ input:checked + .c12 {
   overflow-wrap: break-word;
 }
 
+.c23 .c25 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  display: inline-block;
+  vertical-align: text-top;
+}
+
 .c23:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
@@ -313,14 +327,29 @@ input:checked + .c12 {
   color: #222222;
 }
 
+.c23:visited .c25 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+}
+
 .c23:active {
   color: #222222;
   outline: 1px solid #222222;
 }
 
+.c23:active .c25 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+}
+
 .c23[disabled] {
   cursor: not-allowed;
   color: #808080;
+}
+
+.c23[disabled] .c25 {
+  -webkit-filter: invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%);
+  filter: invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%);
 }
 
 .c2:has(input:focus-visible) {
@@ -361,6 +390,12 @@ input:checked + .c12 {
     text-decoration: underline;
     -webkit-text-decoration-thickness: 18%;
     text-decoration-thickness: 18%;
+  }
+
+  .c23:hover .c25,
+  .c23:visited:hover .c25 {
+    -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+    filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   }
 }
 
@@ -444,11 +479,11 @@ input:checked + .c12 {
             Edit
           </span>
           <span
-            class="c24 "
+            class="c24 c25 c26"
           >
             <img
               alt=""
-              class="c25"
+              class="c27"
               data-nimg="fill"
               decoding="async"
               loading="lazy"
@@ -460,7 +495,7 @@ input:checked + .c12 {
       </div>
     </div>
     <div
-      class="c26 c27"
+      class="c28 c29"
     >
       <a
         aria-label="view lesson LESS-TEST-01234 in a new tab"
@@ -475,11 +510,11 @@ input:checked + .c12 {
           LESS-TEST-01234
         </span>
         <span
-          class="c24 "
+          class="c24 c25 c26"
         >
           <img
             alt=""
-            class="c25"
+            class="c27"
             data-nimg="fill"
             decoding="async"
             loading="lazy"
@@ -489,15 +524,15 @@ input:checked + .c12 {
         </span>
       </a>
       <div
-        class="c21 c28"
+        class="c21 c30"
       >
          
         <span
-          class="c29"
+          class="c31"
         >
           <img
             alt=""
-            class="c30"
+            class="c32"
             data-nimg="fill"
             decoding="async"
             loading="lazy"
@@ -508,14 +543,14 @@ input:checked + .c12 {
         Lesson video
       </div>
       <div
-        class="c21 c31"
+        class="c21 c33"
       >
         <span
-          class="c29"
+          class="c31"
         >
           <img
             alt=""
-            class="c30"
+            class="c32"
             data-nimg="fill"
             decoding="async"
             loading="lazy"
@@ -527,14 +562,14 @@ input:checked + .c12 {
         1 days ago
       </div>
       <div
-        class="c21 c31"
+        class="c21 c33"
       >
         <span
-          class="c29"
+          class="c31"
         >
           <img
             alt=""
-            class="c30"
+            class="c32"
             data-nimg="fill"
             decoding="async"
             loading="lazy"
