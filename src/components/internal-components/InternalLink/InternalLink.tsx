@@ -1,5 +1,5 @@
 import React, { ElementType, forwardRef } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { OakLoadingSpinner } from "@/components/messaging-and-feedback/OakLoadingSpinner";
 import {
@@ -23,6 +23,12 @@ const StyledOakIcon = styled(OakIcon)`
   min-width: 1.25em;
   height: 1.25em;
   min-height: 1.25em;
+`;
+
+const StyledOakLoadingSpinner = styled(OakLoadingSpinner)`
+  ${css`
+    --width: 1.25em;
+  `}
 `;
 
 const StyledLink = styled.a<{
@@ -155,11 +161,11 @@ export const InternalLink: InternalLinkComponent = forwardRef(
         case isLoading:
           return (
             <OakBox
-              $width="spacing-24"
-              $height="spacing-24"
+              $pl={isTrailingIcon ? "spacing-4" : undefined}
+              $pr={isTrailingIcon ? undefined : "spacing-4"}
               $display={"inline-block"}
             >
-              <OakLoadingSpinner $width="spacing-16" $color="icon-primary" />
+              <StyledOakLoadingSpinner $color="icon-primary" />
             </OakBox>
           );
         case !!iconName:
