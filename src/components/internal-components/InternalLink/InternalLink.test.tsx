@@ -14,6 +14,7 @@ describe("InternalLink", () => {
         activeColor="text-link-pressed"
         disabledColor="text-disabled"
         visitedColor="text-link-visited"
+        iconName="external"
       >
         Content goes here
       </InternalLink>,
