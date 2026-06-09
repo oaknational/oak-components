@@ -163,7 +163,15 @@ export const InternalLink: InternalLinkComponent = forwardRef(
             </OakBox>
           );
         case !!iconName:
-          return <StyledOakIcon iconName={iconName} />;
+          return (
+            <OakBox
+              $pl={isTrailingIcon ? "spacing-4" : undefined}
+              $pr={isTrailingIcon ? undefined : "spacing-4"}
+              $display={"inline-block"}
+            >
+              <StyledOakIcon iconName={iconName} />
+            </OakBox>
+          );
         default:
           return null;
       }
