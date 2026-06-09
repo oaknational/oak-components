@@ -66,6 +66,12 @@ exports[`CaptionCard matches snapshot 1`] = `
 }
 
 .c24 {
+  padding-left: 0.25rem;
+  display: inline-block;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c25 {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -75,7 +81,7 @@ exports[`CaptionCard matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c28 {
+.c29 {
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
@@ -87,7 +93,7 @@ exports[`CaptionCard matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c31 {
+.c32 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -154,7 +160,7 @@ exports[`CaptionCard matches snapshot 1`] = `
   flex-grow: 10;
 }
 
-.c29 {
+.c30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -170,7 +176,7 @@ exports[`CaptionCard matches snapshot 1`] = `
   gap: 2rem;
 }
 
-.c30 {
+.c31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -182,7 +188,7 @@ exports[`CaptionCard matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c33 {
+.c34 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -199,11 +205,11 @@ exports[`CaptionCard matches snapshot 1`] = `
   object-fit: contain;
 }
 
-.c27 {
+.c28 {
   object-fit: contain;
 }
 
-.c32 {
+.c33 {
   object-fit: contain;
 }
 
@@ -281,7 +287,7 @@ input:checked + .c12 {
   opacity: 1;
 }
 
-.c26 {
+.c27 {
   width: 1.25em;
   min-width: 1.25em;
   height: 1.25em;
@@ -312,7 +318,7 @@ input:checked + .c12 {
   overflow-wrap: break-word;
 }
 
-.c23 .c25 {
+.c23 .c26 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   display: inline-block;
@@ -327,7 +333,7 @@ input:checked + .c12 {
   color: #222222;
 }
 
-.c23:visited .c25 {
+.c23:visited .c26 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
 }
@@ -337,7 +343,7 @@ input:checked + .c12 {
   outline: 1px solid #222222;
 }
 
-.c23:active .c25 {
+.c23:active .c26 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
 }
@@ -347,7 +353,7 @@ input:checked + .c12 {
   color: #808080;
 }
 
-.c23[disabled] .c25 {
+.c23[disabled] .c26 {
   -webkit-filter: invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%);
   filter: invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%);
 }
@@ -392,8 +398,8 @@ input:checked + .c12 {
     text-decoration-thickness: 18%;
   }
 
-  .c23:hover .c25,
-  .c23:visited:hover .c25 {
+  .c23:hover .c26,
+  .c23:visited:hover .c26 {
     -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
     filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   }
@@ -478,24 +484,28 @@ input:checked + .c12 {
           >
             Edit
           </span>
-          <span
-            class="c24 c25 c26"
+          <div
+            class="c24"
           >
-            <img
-              alt=""
-              class="c27"
-              data-nimg="fill"
-              decoding="async"
-              loading="lazy"
-              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953892/icons/hlxmejse3mcr4tqo6t8u.svg"
-              style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
-            />
-          </span>
+            <span
+              class="c25 c26 c27"
+            >
+              <img
+                alt=""
+                class="c28"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953892/icons/hlxmejse3mcr4tqo6t8u.svg"
+                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+              />
+            </span>
+          </div>
         </a>
       </div>
     </div>
     <div
-      class="c28 c29"
+      class="c29 c30"
     >
       <a
         aria-label="view lesson LESS-TEST-01234 in a new tab"
@@ -509,30 +519,34 @@ input:checked + .c12 {
         >
           LESS-TEST-01234
         </span>
-        <span
-          class="c24 c25 c26"
+        <div
+          class="c24"
         >
-          <img
-            alt=""
-            class="c27"
-            data-nimg="fill"
-            decoding="async"
-            loading="lazy"
-            src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953892/icons/hlxmejse3mcr4tqo6t8u.svg"
-            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
-          />
-        </span>
+          <span
+            class="c25 c26 c27"
+          >
+            <img
+              alt=""
+              class="c28"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953892/icons/hlxmejse3mcr4tqo6t8u.svg"
+              style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+            />
+          </span>
+        </div>
       </a>
       <div
-        class="c21 c30"
+        class="c21 c31"
       >
          
         <span
-          class="c31"
+          class="c32"
         >
           <img
             alt=""
-            class="c32"
+            class="c33"
             data-nimg="fill"
             decoding="async"
             loading="lazy"
@@ -543,14 +557,14 @@ input:checked + .c12 {
         Lesson video
       </div>
       <div
-        class="c21 c33"
+        class="c21 c34"
       >
         <span
-          class="c31"
+          class="c32"
         >
           <img
             alt=""
-            class="c32"
+            class="c33"
             data-nimg="fill"
             decoding="async"
             loading="lazy"
@@ -562,14 +576,14 @@ input:checked + .c12 {
         1 days ago
       </div>
       <div
-        class="c21 c33"
+        class="c21 c34"
       >
         <span
-          class="c31"
+          class="c32"
         >
           <img
             alt=""
-            class="c32"
+            class="c33"
             data-nimg="fill"
             decoding="async"
             loading="lazy"

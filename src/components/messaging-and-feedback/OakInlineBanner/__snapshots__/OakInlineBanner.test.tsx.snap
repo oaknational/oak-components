@@ -94,6 +94,12 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
+.c26 {
+  padding-left: 0.25rem;
+  display: inline-block;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -240,7 +246,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   object-fit: contain;
 }
 
-.c28 {
+.c29 {
   object-fit: contain;
 }
 
@@ -303,7 +309,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c27 {
+.c28 {
   width: 1.25em;
   min-width: 1.25em;
   height: 1.25em;
@@ -334,7 +340,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   overflow-wrap: break-word;
 }
 
-.c24 .c26 {
+.c24 .c27 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   display: inline-block;
@@ -349,7 +355,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   color: #222222;
 }
 
-.c24:visited .c26 {
+.c24:visited .c27 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
 }
@@ -359,7 +365,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   outline: 1px solid #222222;
 }
 
-.c24:active .c26 {
+.c24:active .c27 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
 }
@@ -369,7 +375,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
   color: #808080;
 }
 
-.c24[disabled] .c26 {
+.c24[disabled] .c27 {
   -webkit-filter: invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%);
   filter: invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%);
 }
@@ -384,8 +390,8 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
     text-decoration-thickness: 18%;
   }
 
-  .c24:hover .c26,
-  .c24:visited:hover .c26 {
+  .c24:hover .c27,
+  .c24:visited:hover .c27 {
     -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
     filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   }
@@ -485,19 +491,23 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
             >
               Link
             </span>
-            <span
-              class="c5 c26 c27"
+            <div
+              class="c26"
             >
-              <img
-                alt=""
-                class="c28"
-                data-nimg="fill"
-                decoding="async"
-                loading="lazy"
-                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
-                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
-              />
-            </span>
+              <span
+                class="c5 c27 c28"
+              >
+                <img
+                  alt=""
+                  class="c29"
+                  data-nimg="fill"
+                  decoding="async"
+                  loading="lazy"
+                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
+                  style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                />
+              </span>
+            </div>
           </a>
         </div>
       </div>
@@ -608,6 +618,12 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
 }
 
 .c27 {
+  padding-left: 0.25rem;
+  display: inline-block;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c28 {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -763,7 +779,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   object-fit: contain;
 }
 
-.c30 {
+.c31 {
   object-fit: contain;
 }
 
@@ -826,7 +842,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c29 {
+.c30 {
   width: 1.25em;
   min-width: 1.25em;
   height: 1.25em;
@@ -857,7 +873,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   overflow-wrap: break-word;
 }
 
-.c25 .c28 {
+.c25 .c29 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   display: inline-block;
@@ -872,7 +888,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   color: #222222;
 }
 
-.c25:visited .c28 {
+.c25:visited .c29 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
 }
@@ -882,7 +898,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   outline: 1px solid #222222;
 }
 
-.c25:active .c28 {
+.c25:active .c29 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
 }
@@ -892,7 +908,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
   color: #808080;
 }
 
-.c25[disabled] .c28 {
+.c25[disabled] .c29 {
   -webkit-filter: invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%);
   filter: invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%);
 }
@@ -907,8 +923,8 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
     text-decoration-thickness: 18%;
   }
 
-  .c25:hover .c28,
-  .c25:visited:hover .c28 {
+  .c25:hover .c29,
+  .c25:visited:hover .c29 {
     -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
     filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   }
@@ -1008,19 +1024,23 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
             >
               Link
             </span>
-            <span
-              class="c27 c28 c29"
+            <div
+              class="c27"
             >
-              <img
-                alt=""
-                class="c30"
-                data-nimg="fill"
-                decoding="async"
-                loading="lazy"
-                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
-                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
-              />
-            </span>
+              <span
+                class="c28 c29 c30"
+              >
+                <img
+                  alt=""
+                  class="c31"
+                  data-nimg="fill"
+                  decoding="async"
+                  loading="lazy"
+                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
+                  style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                />
+              </span>
+            </div>
           </a>
         </div>
       </div>
@@ -1116,6 +1136,12 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   -moz-letter-spacing: -0.005rem;
   -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
+}
+
+.c24 {
+  padding-left: 0.25rem;
+  display: inline-block;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c1 {
@@ -1264,7 +1290,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   object-fit: contain;
 }
 
-.c26 {
+.c27 {
   object-fit: contain;
 }
 
@@ -1316,7 +1342,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   background: transparent;
 }
 
-.c25 {
+.c26 {
   width: 1.25em;
   min-width: 1.25em;
   height: 1.25em;
@@ -1347,7 +1373,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   overflow-wrap: break-word;
 }
 
-.c22 .c24 {
+.c22 .c25 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   display: inline-block;
@@ -1362,7 +1388,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   color: #222222;
 }
 
-.c22:visited .c24 {
+.c22:visited .c25 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
 }
@@ -1372,7 +1398,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   outline: 1px solid #222222;
 }
 
-.c22:active .c24 {
+.c22:active .c25 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
 }
@@ -1382,7 +1408,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   color: #808080;
 }
 
-.c22[disabled] .c24 {
+.c22[disabled] .c25 {
   -webkit-filter: invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%);
   filter: invert(54%) sepia(0%) saturate(38%) hue-rotate(176deg) brightness(92%) contrast(91%);
 }
@@ -1397,8 +1423,8 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
     text-decoration-thickness: 18%;
   }
 
-  .c22:hover .c24,
-  .c22:visited:hover .c24 {
+  .c22:hover .c25,
+  .c22:visited:hover .c25 {
     -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
     filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   }
@@ -1492,19 +1518,23 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
             >
               Link
             </span>
-            <span
-              class="c5 c24 c25"
+            <div
+              class="c24"
             >
-              <img
-                alt=""
-                class="c26"
-                data-nimg="fill"
-                decoding="async"
-                loading="lazy"
-                src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
-                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
-              />
-            </span>
+              <span
+                class="c5 c25 c26"
+              >
+                <img
+                  alt=""
+                  class="c27"
+                  data-nimg="fill"
+                  decoding="async"
+                  loading="lazy"
+                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
+                  style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                />
+              </span>
+            </div>
           </a>
         </div>
       </div>
