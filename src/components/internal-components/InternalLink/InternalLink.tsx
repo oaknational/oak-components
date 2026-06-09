@@ -1,5 +1,5 @@
 import React, { ElementType, forwardRef } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 import { OakLoadingSpinner } from "@/components/messaging-and-feedback/OakLoadingSpinner";
 import {
@@ -26,9 +26,7 @@ const StyledOakIcon = styled(OakIcon)`
 `;
 
 const StyledOakLoadingSpinner = styled(OakLoadingSpinner)`
-  ${css`
-    --width: 1.25em;
-  `}
+  --width: 1.25em;
 `;
 
 const StyledLink = styled.a<{
