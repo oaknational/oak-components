@@ -14,11 +14,20 @@ import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakIcon, OakIconProps } from "@/components/images-and-icons/OakIcon";
 import { OakSpan } from "@/components/typography/OakSpan";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
-import { OakAllSpacingToken, OakUiRoleToken } from "@/styles";
+import { OakUiRoleToken } from "@/styles";
 import { OakFontToken, OakTextDecoration } from "@/styles/theme/typography";
 import { typographyStyle } from "@/styles/utils/typographyStyle";
 
-const StyledOakIcon = styled(OakIcon)``;
+const StyledOakIcon = styled(OakIcon)`
+  width: 1.25em;
+  min-width: 1.25em;
+  height: 1.25em;
+  min-height: 1.25em;
+`;
+
+const StyledOakLoadingSpinner = styled(OakLoadingSpinner)`
+  --width: 1.25em;
+`;
 
 const StyledLink = styled.a<{
   $color: OakUiRoleToken;
@@ -48,7 +57,7 @@ const StyledLink = styled.a<{
   ${StyledOakIcon} {
     filter: ${(props) => parseColorFilter(props.$color)};
     display: inline-block;
-    vertical-align: bottom;
+    vertical-align: text-top;
   }
 
   &:focus-visible {
@@ -113,8 +122,6 @@ export type InternalLinkProps = {
   hoverColor: OakUiRoleToken;
   activeColor: OakUiRoleToken;
   disabledColor: OakUiRoleToken;
-  iconWidth?: OakAllSpacingToken;
-  iconHeight?: OakAllSpacingToken;
   textDecoration?: OakTextDecoration;
 };
 
@@ -143,10 +150,7 @@ export const InternalLink: InternalLinkComponent = forwardRef(
       visitedColor,
       hoverColor,
       activeColor,
-      iconWidth = "spacing-24",
-      iconHeight = "spacing-24",
       textDecoration = "underline",
-      font,
       ...rest
     } = props;
 
@@ -155,20 +159,22 @@ export const InternalLink: InternalLinkComponent = forwardRef(
         case isLoading:
           return (
             <OakBox
-              $width="spacing-24"
-              $height="spacing-24"
+              $pl={isTrailingIcon ? "spacing-4" : undefined}
+              $pr={isTrailingIcon ? undefined : "spacing-4"}
               $display={"inline-block"}
             >
-              <OakLoadingSpinner $width="spacing-16" $color="icon-primary" />
+              <StyledOakLoadingSpinner $color="icon-primary" />
             </OakBox>
           );
         case !!iconName:
           return (
-            <StyledOakIcon
-              iconName={iconName}
-              iconWidth={iconWidth}
-              iconHeight={iconHeight}
-            />
+            <OakBox
+              $pl={isTrailingIcon ? "spacing-4" : undefined}
+              $pr={isTrailingIcon ? undefined : "spacing-4"}
+              $display={"inline-block"}
+            >
+              <StyledOakIcon iconName={iconName} />
+            </OakBox>
           );
         default:
           return null;

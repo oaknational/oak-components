@@ -5,7 +5,6 @@ import { OakLink } from "./OakLink";
 import { variantConfig } from "./config";
 
 import { oakIconNames } from "@/components/images-and-icons/OakIcon";
-import { oakAllSpacingTokens } from "@/styles/theme/spacing";
 
 const controlIconNames = [...oakIconNames].sort((a, b) => a.localeCompare(b));
 
@@ -19,20 +18,11 @@ const meta: Meta<typeof OakLink> = {
       options: controlIconNames,
     },
     isTrailingIcon: { type: "boolean" },
-    iconHeight: { options: Object.keys(oakAllSpacingTokens) },
-    iconWidth: { options: Object.keys(oakAllSpacingTokens) },
     variant: { options: Object.keys(variantConfig) },
   },
   parameters: {
     controls: {
-      include: [
-        "children",
-        "iconName",
-        "isTrailingIcon",
-        "iconHeight",
-        "iconWidth",
-        "variant",
-      ],
+      include: ["children", "iconName", "isTrailingIcon", "variant"],
     },
   },
   args: {
@@ -93,13 +83,33 @@ export const Loading: Story = {
   },
 };
 
-export const WithIconSizeProps: Story = {
+export const WithFontProp: Story = {
   args: {
     element: "a",
-    children: "External link with icon size props",
+    children: "External link with font prop",
     isTrailingIcon: true,
-    iconName: "external",
-    iconHeight: "spacing-24",
-    iconWidth: "spacing-24",
+    variant: "secondary",
+    iconName: "chevron-right",
+    $font: "heading-3",
   },
+};
+
+export const WithSurroundingText: Story = {
+  args: {
+    iconName: "chevron-right",
+    isTrailingIcon: true,
+  },
+  render: (args) => (
+    <p>
+      This is a paragraph with a wrapped link. This a paragraph with an This is
+      a paragraph with a wrapped link. This is a paragraph with a wrapped link.
+      This a paragraph with a wrapped link. This is a paragraph with a wrapped
+      link.{" "}
+      <OakLink {...args}>
+        link here link here link here link here link here link here link here{" "}
+        link here link here link here link here link here link here link here
+      </OakLink>{" "}
+      This is a paragraph with a wrapped link.{" "}
+    </p>
+  ),
 };
