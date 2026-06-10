@@ -67,47 +67,48 @@ const parseSpanStart = (value?: string | null) => {
   return `span ${span}`;
 };
 
+const resolveResponsiveValue = <T,>(
+  value: ResponsiveValues<T> | undefined,
+  index: number,
+): T | undefined => {
+  return Array.isArray(value) ? value[index] : value;
+};
+
 const gridArea = css<OakGridAreaProps>`
   flex-direction: column;
   ${responsiveStyle(
     "grid-column",
     (props) => {
-      return Array.isArray(props.$colSpan)
-        ? props.$colSpan.map((span, index) =>
-            combineSpanStart(
-              Array.isArray(props.$colStart)
-                ? props.$colStart[index]
-                : props.$colStart,
-              span,
-            ),
-          )
-        : combineSpanStart(
-            Array.isArray(props.$colStart)
-              ? props.$colStart[0]
-              : props.$colStart,
-            props.$colSpan,
-          );
+      if (Array.isArray(props.$colSpan)) {
+        return props.$colSpan.map((span, index) =>
+          combineSpanStart(
+            resolveResponsiveValue(props.$colStart, index),
+            span,
+          ),
+        );
+      }
+      return combineSpanStart(
+        resolveResponsiveValue(props.$colStart, 0),
+        props.$colSpan,
+      );
     },
     (value) => parseSpanStart(value),
   )};
   ${responsiveStyle(
     "grid-row",
     (props) => {
-      return Array.isArray(props.$rowSpan)
-        ? props.$rowSpan.map((span, index) =>
-            combineSpanStart(
-              Array.isArray(props.$rowStart)
-                ? props.$rowStart[index]
-                : props.$rowStart,
-              span,
-            ),
-          )
-        : combineSpanStart(
-            Array.isArray(props.$rowStart)
-              ? props.$rowStart[0]
-              : props.$rowStart,
-            props.$rowSpan,
-          );
+      if (Array.isArray(props.$rowSpan)) {
+        return props.$rowSpan.map((span, index) =>
+          combineSpanStart(
+            resolveResponsiveValue(props.$rowStart, index),
+            span,
+          ),
+        );
+      }
+      return combineSpanStart(
+        resolveResponsiveValue(props.$rowStart, 0),
+        props.$rowSpan,
+      );
     },
     (value) => parseSpanStart(value),
   )};

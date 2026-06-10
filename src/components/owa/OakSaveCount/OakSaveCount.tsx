@@ -49,8 +49,9 @@ export const OakSaveCount = ({
   const iconName =
     hasCount && count > 0 ? "bookmark-filled" : "bookmark-outlined";
   const showTruncatedCount = hasCount && count > 99;
+  const unitSuffix = hasCount && count === 1 ? "" : "s";
   const ariaLabel = hasCount
-    ? `${label}: ${count} saved unit${count === 1 ? "" : "s"}`
+    ? `${label}: ${count} saved unit${unitSuffix}`
     : label;
 
   return (

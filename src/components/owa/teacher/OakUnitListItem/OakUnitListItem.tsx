@@ -108,6 +108,15 @@ export const OakUnitListItem = <element extends ElementType = "a">(
     ...rest
   } = props;
 
+  let indexBoxBackground: "bg-neutral-stronger" | "bg-decorative3-subdued" | "bg-decorative3-main";
+  if (unavailable) {
+    indexBoxBackground = "bg-neutral-stronger";
+  } else if (isLegacy) {
+    indexBoxBackground = "bg-decorative3-subdued";
+  } else {
+    indexBoxBackground = "bg-decorative3-main";
+  }
+
   return (
     <OakLI $listStyle={"none"} $width={"100%"}>
       {/* Desktop layout */}
@@ -134,13 +143,7 @@ export const OakUnitListItem = <element extends ElementType = "a">(
           onClick={unavailable ? undefined : onClick}
         >
           <StyledOakIndexBox
-            $background={
-              unavailable
-                ? "bg-neutral-stronger"
-                : isLegacy
-                  ? "bg-decorative3-subdued"
-                  : "bg-decorative3-main"
-            }
+            $background={indexBoxBackground}
             $justifyContent={"center"}
             $alignItems={"center"}
             $minWidth="spacing-64"
@@ -221,13 +224,7 @@ export const OakUnitListItem = <element extends ElementType = "a">(
             href={unavailable ? undefined : href}
           >
             <OakFlex
-              $background={
-                unavailable
-                  ? "bg-neutral-stronger"
-                  : isLegacy
-                    ? "bg-decorative3-subdued"
-                    : "bg-decorative3-main"
-              }
+              $background={indexBoxBackground}
               $justifyContent={"center"}
               $alignItems={"center"}
               $borderRadius="border-radius-m"
