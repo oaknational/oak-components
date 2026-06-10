@@ -10,11 +10,10 @@ import {
 } from "@/components/internal-components/InternalCheckBoxLabel";
 import { InternalCheckBoxWrapper } from "@/components/internal-components/InternalCheckBoxWrapper";
 import {
-  OakAllSpacingToken,
   OakBorderRadiusToken,
   OakBorderWidthToken,
   OakUiRoleToken,
-  OakInnerPaddingToken,
+  OakAllSpacingToken,
 } from "@/styles";
 
 export type OakCheckBoxProps = BaseCheckBoxProps & {
@@ -26,7 +25,7 @@ export type OakCheckBoxProps = BaseCheckBoxProps & {
   checkedIcon?: React.JSX.Element;
   checkedBackgroundFill?: boolean;
   hoverBorderRadius?: OakBorderRadiusToken;
-  iconPadding?: OakInnerPaddingToken;
+  iconPadding?: OakAllSpacingToken;
   defaultColor?: OakUiRoleToken;
   disabledColor?: OakUiRoleToken;
   displayValue?: string;

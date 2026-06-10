@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { OakBox, OakBoxProps } from "@/components/layout-and-structure/OakBox";
 import { OakIcon } from "@/components/images-and-icons/OakIcon";
-import { OakAllSpacingToken, OakInnerPaddingToken } from "@/styles";
+import { OakAllSpacingToken } from "@/styles";
 import { ResponsiveValues } from "@/styles/utils/responsiveStyle";
 
 const StyledIconContainer = styled(OakBox)<
@@ -20,7 +20,7 @@ const StyledIconContainer = styled(OakBox)<
 export type InternalCheckBoxWrapperProps = {
   size?: ResponsiveValues<OakAllSpacingToken>;
   internalCheckbox: React.JSX.Element;
-  iconPadding?: OakInnerPaddingToken;
+  iconPadding?: OakAllSpacingToken;
   checkedIcon?: React.JSX.Element;
 };
 

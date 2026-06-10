@@ -1,10 +1,10 @@
 import {
-  oakInnerPaddingTokens,
+  oakAllSpacingTokens,
   oakSpaceBetweenTokens,
 } from "@/styles/theme/spacing";
 
 export const paddingCtl = {
-  options: Object.keys(oakInnerPaddingTokens),
+  options: Object.keys(oakAllSpacingTokens),
 };
 
 export const marginCtl = {

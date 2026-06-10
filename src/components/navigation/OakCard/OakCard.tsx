@@ -12,9 +12,8 @@ import { OakIconName, OakIcon } from "@/components/images-and-icons/OakIcon";
 import { OakSpan } from "@/components/typography/OakSpan";
 import { OakTagFunctional } from "@/components/messaging-and-feedback/OakTagFunctional";
 import {
-  OakAllSpacingToken,
   OakCombinedSpacingToken,
-  OakInnerPaddingToken,
+  OakAllSpacingToken,
   OakUiRoleToken,
 } from "@/styles";
 
@@ -83,7 +82,7 @@ export type OakCardProps = {
 
 type StyledFlexProps = {
   $flexDirection: "row" | "column";
-  $pa: OakInnerPaddingToken;
+  $pa: OakAllSpacingToken;
   $gap: OakAllSpacingToken;
 };
 
