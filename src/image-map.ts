@@ -107,6 +107,7 @@ export const icons = {
   "subject-creative-arts": "v1706616415/subject-icons/creative-arts.svg",
   "subject-design-technology":
     "v1706616417/subject-icons/design-technology.svg",
+  "subject-digital-literacy": "v1729171080/subject-icons/computing.svg",
   "subject-drama": "v1706616417/subject-icons/drama.svg",
   "subject-english": "v1706616417/subject-icons/english.svg",
   "subject-english-language": "v1706616419/subject-icons/language.svg",
