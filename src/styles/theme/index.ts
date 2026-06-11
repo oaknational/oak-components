@@ -6,16 +6,11 @@ export type {
   OakColorFilterToken,
 } from "./color";
 
-export {
-  oakAllSpacingTokens,
-  oakInnerPaddingTokens,
-  oakSpaceBetweenTokens,
-} from "./spacing";
+export { oakAllSpacingTokens, oakSpaceBetweenTokens } from "./spacing";
 
 export type {
   OakAllSpacingToken,
   OakCombinedSpacingToken,
-  OakInnerPaddingToken,
   OakSpaceBetweenToken,
 } from "./spacing";
 

@@ -1,11 +1,9 @@
 import pxToRem from "@/styles/helpers/pxToRem";
 import {
   OakAllSpacingToken,
-  OakInnerPaddingToken,
   OakSpaceBetweenToken,
   OakCombinedSpacingToken,
   oakAllSpacingTokens,
-  oakInnerPaddingTokens,
   oakSpaceBetweenTokens,
 } from "@/styles/theme/spacing";
 
@@ -25,9 +23,8 @@ export function parseSpacing(value?: OakCombinedSpacingToken | null) {
     return `${pxToRem(oakAllSpacingTokens[value as OakAllSpacingToken])}rem`; // NB. type assertion is necessary because the OakAllSpacing type is dervied from oakAllSpacingPx
   }
 
-  if (value in oakInnerPaddingTokens) {
-    const v = oakInnerPaddingTokens[value as OakInnerPaddingToken];
-    return `${pxToRem(oakAllSpacingTokens[v as OakAllSpacingToken])}rem`;
+  if (value in oakAllSpacingTokens) {
+    return `${pxToRem(oakAllSpacingTokens[value as OakAllSpacingToken])}rem`;
   }
 
   if (value in oakSpaceBetweenTokens) {

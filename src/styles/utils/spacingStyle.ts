@@ -6,11 +6,11 @@ import {
 } from "@/styles/utils/responsiveStyle";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import {
-  OakInnerPaddingToken,
+  OakAllSpacingToken,
   OakSpaceBetweenToken,
 } from "@/styles/theme/spacing";
 
-type PaddingValues = ResponsiveValues<OakInnerPaddingToken | null | undefined>;
+type PaddingValues = ResponsiveValues<OakAllSpacingToken | null | undefined>;
 
 export type PaddingStyleProps = {
   /**
