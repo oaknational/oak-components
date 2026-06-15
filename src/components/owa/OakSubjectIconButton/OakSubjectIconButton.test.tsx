@@ -14,7 +14,7 @@ describe("OakSubjectIconButton", () => {
       <OakSubjectIconButton
         colorScheme="primary"
         subjectIconName="subject-english"
-        variant="vertical"
+        orientation="vertical"
       >
         English
       </OakSubjectIconButton>,
@@ -27,7 +27,7 @@ describe("OakSubjectIconButton", () => {
       <OakSubjectIconButton
         colorScheme="primary"
         subjectIconName="subject-english"
-        variant="vertical"
+        orientation="vertical"
       >
         English
       </OakSubjectIconButton>,
@@ -40,7 +40,7 @@ describe("OakSubjectIconButton", () => {
         <OakSubjectIconButton
           colorScheme="primary"
           subjectIconName="subject-science"
-          variant="vertical"
+          orientation="vertical"
         >
           Science
         </OakSubjectIconButton>,
@@ -62,7 +62,7 @@ describe("OakSubjectIconButton", () => {
         <OakSubjectIconButton
           colorScheme="secondary"
           subjectIconName="subject-maths"
-          variant="vertical"
+          orientation="vertical"
         >
           Math
         </OakSubjectIconButton>,
@@ -84,7 +84,7 @@ describe("OakSubjectIconButton", () => {
         <OakSubjectIconButton
           colorScheme="non-curriculum"
           subjectIconName="subject-music"
-          variant="vertical"
+          orientation="vertical"
         >
           Music
         </OakSubjectIconButton>,
@@ -105,7 +105,7 @@ describe("OakSubjectIconButton", () => {
         <OakSubjectIconButton
           colorScheme="secondary"
           subjectIconName="subject-music"
-          variant="horizontal"
+          orientation="horizontal"
           isSelected
         >
           Music

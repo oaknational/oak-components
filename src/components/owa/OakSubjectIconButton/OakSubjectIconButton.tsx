@@ -11,7 +11,7 @@ import { OakUiRoleToken } from "@/styles";
 export type OakSubjectIconButtonProps = {
   colorScheme: "primary" | "secondary" | "non-curriculum";
   subjectIconName: OakIconName;
-  variant: "vertical" | "horizontal";
+  orientation: "vertical" | "horizontal";
   isSelected?: boolean;
 } & Omit<
   InternalShadowRectButtonProps,
@@ -48,7 +48,7 @@ export const OakSubjectIconButton = <C extends ElementType = "button">({
   colorScheme,
   element,
   subjectIconName,
-  variant,
+  orientation,
   isSelected,
   ...props
 }: OakSubjectIconButtonProps & PolymorphicPropsWithoutRef<C>) => {
@@ -62,7 +62,7 @@ export const OakSubjectIconButton = <C extends ElementType = "button">({
     ? "border-solid-xl"
     : "border-solid-s";
 
-  const isVerticalVariant = variant === "vertical";
+  const isVerticalVariant = orientation === "vertical";
 
   const iconOverride = (
     <OakIcon
