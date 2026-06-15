@@ -141,7 +141,7 @@ describe("InternalShadowRectButton", () => {
   });
   it("renders a selected state", () => {
     const { getByTestId } = renderWithTheme(
-      <InternalShadowRectButton {...defaultArgs} selected>
+      <InternalShadowRectButton {...defaultArgs} isSelected>
         Primary
       </InternalShadowRectButton>,
     );
@@ -151,7 +151,7 @@ describe("InternalShadowRectButton", () => {
   });
   it("hides selected state on hover", () => {
     const { getByTestId } = renderWithTheme(
-      <InternalShadowRectButton data-testid="test" {...defaultArgs} selected>
+      <InternalShadowRectButton data-testid="test" {...defaultArgs} isSelected>
         Primary
       </InternalShadowRectButton>,
     );

@@ -9,10 +9,10 @@ import { OakIcon, OakIconName } from "@/components/images-and-icons/OakIcon";
 import { OakUiRoleToken } from "@/styles";
 
 export type OakSubjectIconButtonProps = {
-  phase: "primary" | "secondary" | "non-curriculum";
+  colorScheme: "primary" | "secondary" | "non-curriculum";
   subjectIconName: OakIconName;
   variant: "vertical" | "horizontal";
-  selected?: boolean;
+  isSelected?: boolean;
 } & Omit<
   InternalShadowRectButtonProps,
   | "defaultBorderColor"
@@ -31,9 +31,9 @@ export type OakSubjectIconButtonProps = {
 
 /**
  *
- * A specific implementation of InternalRectButton
+ * OakSubjectIconButton is a component that allows users to select a subject.
  *
- * Changes colour according to the phase prop. Can be used as a link or a button.
+ * Changes colour according to the colorScheme prop. Can be used as a link or a button.
  * The following callbacks are available for tracking focus events:
  *
  * ### onClick
@@ -45,20 +45,20 @@ export type OakSubjectIconButtonProps = {
  */
 
 export const OakSubjectIconButton = <C extends ElementType = "button">({
-  phase,
+  colorScheme,
   element,
   subjectIconName,
   variant,
-  selected,
-  ...rest
+  isSelected,
+  ...props
 }: OakSubjectIconButtonProps & PolymorphicPropsWithoutRef<C>) => {
-  const backgroundColourLevel = getBackgroundColourLevel(phase);
+  const backgroundColourLevel = getBackgroundColourLevel(colorScheme);
   const defaultBackground: OakUiRoleToken = `bg-decorative${backgroundColourLevel}-${
-    selected ? "subdued" : "very-subdued"
+    isSelected ? "subdued" : "very-subdued"
   }`;
   const hoverBackground: OakUiRoleToken = `bg-decorative${backgroundColourLevel}-main`;
   const borderColor: OakUiRoleToken = `border-decorative${backgroundColourLevel}-stronger`;
-  const horizontalVariantBorderWidth = selected
+  const horizontalVariantBorderWidth = isSelected
     ? "border-solid-xl"
     : "border-solid-s";
 
@@ -102,13 +102,13 @@ export const OakSubjectIconButton = <C extends ElementType = "button">({
       height={isVerticalVariant ? null : "spacing-48"}
       $ba={isVerticalVariant ? "border-solid-m" : horizontalVariantBorderWidth}
       $display="inline-flex"
-      {...rest}
+      {...props}
     />
   );
 };
 
 const getBackgroundColourLevel = (
-  phase: OakSubjectIconButtonProps["phase"],
+  phase: OakSubjectIconButtonProps["colorScheme"],
 ) => {
   switch (phase) {
     case "primary":

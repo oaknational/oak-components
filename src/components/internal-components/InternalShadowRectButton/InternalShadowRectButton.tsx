@@ -65,7 +65,7 @@ export type InternalShadowRectButtonProps = Omit<
   /**
    * whether the button should show a selected state
    */
-  selected?: boolean;
+  isSelected?: boolean;
   iconGap?: FlexStyleProps["$gap"];
   defaultTextColor: OakUiRoleToken;
   defaultBackground: OakUiRoleToken;
@@ -221,7 +221,7 @@ export const InternalShadowRectButton = <C extends ElementType = "button">(
     textAlign = "left",
     loadingSpinnerSize = "spacing-24",
     display = "inline-block",
-    selected,
+    isSelected: selected,
     ...rest
   } = props;
 

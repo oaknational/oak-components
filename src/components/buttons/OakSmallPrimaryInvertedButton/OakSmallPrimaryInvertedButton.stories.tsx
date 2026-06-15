@@ -25,7 +25,7 @@ const meta: Meta<typeof OakSmallPrimaryInvertedButton> = {
     isLoading: {
       control: "boolean",
     },
-    selected: {
+    isSelected: {
       control: "boolean",
     },
   },
@@ -48,7 +48,7 @@ export const Default: Story = {
       <OakSmallPrimaryInvertedButton {...args}>
         Primary Inverted Button
       </OakSmallPrimaryInvertedButton>
-      <OakSmallPrimaryInvertedButton {...args} selected>
+      <OakSmallPrimaryInvertedButton {...args} isSelected>
         Selected Inverted Button
       </OakSmallPrimaryInvertedButton>
       <OakSmallPrimaryInvertedButton {...args} disabled>
@@ -76,6 +76,6 @@ export const LinkStyledAsButton: Story = {
     element: "a",
     href: "/",
     iconName: "arrow-right",
-    selected: false,
+    isSelected: false,
   },
 };

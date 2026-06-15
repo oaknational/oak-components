@@ -12,7 +12,7 @@ describe("OakSubjectIconButton", () => {
   it("renders", () => {
     const { getByRole } = renderWithTheme(
       <OakSubjectIconButton
-        phase="primary"
+        colorScheme="primary"
         subjectIconName="subject-english"
         variant="vertical"
       >
@@ -25,7 +25,7 @@ describe("OakSubjectIconButton", () => {
   it("matches snapshot", () => {
     const { container } = renderWithTheme(
       <OakSubjectIconButton
-        phase="primary"
+        colorScheme="primary"
         subjectIconName="subject-english"
         variant="vertical"
       >
@@ -38,7 +38,7 @@ describe("OakSubjectIconButton", () => {
     it("applies correct styles for primary phase", () => {
       const { getByRole } = renderWithTheme(
         <OakSubjectIconButton
-          phase="primary"
+          colorScheme="primary"
           subjectIconName="subject-science"
           variant="vertical"
         >
@@ -60,7 +60,7 @@ describe("OakSubjectIconButton", () => {
     it("applies correct styles for secondary phase", () => {
       const { getByRole } = renderWithTheme(
         <OakSubjectIconButton
-          phase="secondary"
+          colorScheme="secondary"
           subjectIconName="subject-maths"
           variant="vertical"
         >
@@ -82,7 +82,7 @@ describe("OakSubjectIconButton", () => {
     it("applies correct styles for non-curriculum phase", () => {
       const { getByRole } = renderWithTheme(
         <OakSubjectIconButton
-          phase="non-curriculum"
+          colorScheme="non-curriculum"
           subjectIconName="subject-music"
           variant="vertical"
         >
@@ -103,10 +103,10 @@ describe("OakSubjectIconButton", () => {
     it("applies selected styles", () => {
       const { getByRole } = renderWithTheme(
         <OakSubjectIconButton
-          phase="secondary"
+          colorScheme="secondary"
           subjectIconName="subject-music"
           variant="horizontal"
-          selected
+          isSelected
         >
           Music
         </OakSubjectIconButton>,

@@ -44,7 +44,7 @@ const meta: Meta<typeof InternalShadowRectButton> = {
     disabledBorderColor: colorArgTypes.$color,
     disabledTextColor: colorArgTypes.$color,
     width: sizeArgTypes["$width"],
-    selected: { control: { type: "boolean" } },
+    isSelected: { control: { type: "boolean" } },
   },
   parameters: {
     controls: {
@@ -108,7 +108,7 @@ export const Selected: Story = {
     </InternalShadowRectButton>
   ),
   args: {
-    selected: true,
+    isSelected: true,
     iconName: "arrow-right",
     isTrailingIcon: true,
   },

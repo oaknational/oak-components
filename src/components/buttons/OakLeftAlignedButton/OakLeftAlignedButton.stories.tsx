@@ -28,7 +28,7 @@ const meta: Meta<typeof OakLeftAlignedButton> = {
     isLoading: {
       control: "boolean",
     },
-    selected: {
+    isSelected: {
       control: "boolean",
     },
   },
@@ -58,7 +58,7 @@ export const Default: Story = {
       <OakLeftAlignedButton width="spacing-240" {...args}>
         Button
       </OakLeftAlignedButton>
-      <OakLeftAlignedButton width="spacing-240" {...args} selected>
+      <OakLeftAlignedButton width="spacing-240" {...args} isSelected>
         Selected Button
       </OakLeftAlignedButton>
       <OakLeftAlignedButton width="spacing-240" {...args} disabled>

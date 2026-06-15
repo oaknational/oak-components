@@ -8,7 +8,7 @@ const meta: Meta<typeof OakSubjectIconButton> = {
   tags: ["autodocs"],
   title: "OWA/OakSubjectIconButton",
   argTypes: {
-    phase: {
+    colorScheme: {
       control: { type: "radio" },
       options: ["primary", "secondary", "non-curriculum"],
     },
@@ -23,7 +23,7 @@ const meta: Meta<typeof OakSubjectIconButton> = {
       control: { type: "radio" },
       options: ["button", "a"],
     },
-    selected: {
+    isSelected: {
       control: "boolean",
     },
   },
@@ -51,12 +51,12 @@ export const Default: Story = {
     <OakSubjectIconButton {...args}>{args.subjectText}</OakSubjectIconButton>
   ),
   args: {
-    phase: "primary",
+    colorScheme: "primary",
     subjectIconName: "subject-english",
     disabled: false,
     subjectText: "English",
     variant: "vertical",
-    selected: false,
+    isSelected: false,
   },
 };
 
@@ -67,8 +67,9 @@ export const Disabled: Story = {
   args: {
     disabled: true,
     subjectIconName: "subject-english",
-    phase: "primary",
+    colorScheme: "primary",
     subjectText: "English",
     variant: "vertical",
+    isSelected: false,
   },
 };

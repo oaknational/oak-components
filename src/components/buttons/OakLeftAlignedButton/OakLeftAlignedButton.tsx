@@ -130,7 +130,7 @@ export const OakLeftAlignedButton = <C extends ElementType = "button">(
     maxWidth,
     innerWidth,
     className,
-    selected,
+    isSelected: selected,
     rightAlignIcon = false,
     ...rest
   } = props;
