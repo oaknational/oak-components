@@ -146,7 +146,7 @@ export const OakLessonReviewQuiz = (props: OakLessonReviewQuizProps) => {
       {completed && (
         <InternalReviewAccordion
           initialOpen={false}
-          id="quiz-review-accordion"
+          id={`quiz-review-accordion-${lessonSectionName}`}
           toggleButtonAriaLabel={resultsToggleAriaLabel}
         >
           {resultsSlot}
