@@ -19,6 +19,22 @@ describe(OakLessonReviewQuiz, () => {
     expect(container).toMatchSnapshot();
   });
 
+  it("gives the results button an accessible name including the section", () => {
+    const { getByRole } = renderWithTheme(
+      <OakLessonReviewQuiz
+        lessonSectionName="starter-quiz"
+        completed={true}
+        numQuestions={6}
+        grade={0}
+        resultsSlot={<div>Starter quiz results content</div>}
+      />,
+    );
+
+    expect(
+      getByRole("button", { name: "Starter quiz results" }),
+    ).toBeInTheDocument();
+  });
+
   it("renders copy for each lesson section that has not been completed", () => {
     const { getByTestId } = renderWithTheme(
       <>

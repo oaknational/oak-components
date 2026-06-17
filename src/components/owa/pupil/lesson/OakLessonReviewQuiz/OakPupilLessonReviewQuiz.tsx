@@ -109,6 +109,11 @@ export const OakLessonReviewQuiz = (props: OakLessonReviewQuizProps) => {
       ? `Activate - ${props.numQuestions} questions`
       : `Check - ${props.numQuestions} questions`;
 
+  const resultsToggleAriaLabel =
+    lessonSectionName === "starter-quiz"
+      ? "Starter quiz results"
+      : "Exit quiz results";
+
   return (
     <ReviewItemContainer
       $background={completed ? completedBackgroundColor : "bg-primary"}
@@ -139,7 +144,11 @@ export const OakLessonReviewQuiz = (props: OakLessonReviewQuizProps) => {
         )}
       </OakFlex>
       {completed && (
-        <InternalReviewAccordion initialOpen={false} id="quiz-review-accordion">
+        <InternalReviewAccordion
+          initialOpen={false}
+          id="quiz-review-accordion"
+          toggleButtonAriaLabel={resultsToggleAriaLabel}
+        >
           {resultsSlot}
         </InternalReviewAccordion>
       )}
