@@ -21,11 +21,6 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
 }
 
 .c15 {
-  display: none;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c20 {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -33,7 +28,7 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c27 {
+.c22 {
   position: relative;
   width: 2.5rem;
   min-width: 2.5rem;
@@ -44,7 +39,7 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c29 {
+.c24 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -53,7 +48,7 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c30 {
+.c25 {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -98,14 +93,14 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
   gap: 0.75rem;
 }
 
-.c21 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c26 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -124,7 +119,7 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
   gap: 0rem;
 }
 
-.c28 {
+.c23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -212,7 +207,7 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c19 {
+.c27 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -223,28 +218,7 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c16 {
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c17 {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: block;
-  padding-left: 0.5rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c18 {
-  display: revert;
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-family: --var(google-font),Lexend,sans-serif;
-  display: revert;
-  display: revert;
-}
-
-.c24 {
+.c19 {
   background: none;
   color: inherit;
   border: none;
@@ -258,65 +232,65 @@ exports[`OakCodeRenderer matches snapshot 1`] = `
   color: #222222;
 }
 
-.c24:disabled {
+.c19:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c31 {
+.c26 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
 }
 
-.c25 {
+.c20 {
   display: inline-block;
   position: relative;
 }
 
-.c25:hover {
+.c20:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #222222;
 }
 
-.c25:active {
+.c20:active {
   color: #222222;
 }
 
-.c25:disabled {
+.c20:disabled {
   color: #808080;
 }
 
-.c22 > :first-child:focus-visible .shadow {
+.c17 > :first-child:focus-visible .shadow {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c22 > :first-child:hover .shadow {
+.c17 > :first-child:hover .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c22 > :first-child:active .shadow {
+.c17 > :first-child:active .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c22 > :first-child:disabled .icon-container {
+.c17 > :first-child:disabled .icon-container {
   background: #808080;
 }
 
-.c22 > :first-child:hover .icon-container {
+.c17 > :first-child:hover .icon-container {
   background: #ffe555;
 }
 
-.c22 > :first-child:active .icon-container {
+.c17 > :first-child:active .icon-container {
   background: #ffe555;
 }
 
-.c23:hover .shadow {
+.c18:hover .shadow {
   box-shadow: none !important;
 }
 
-.c23:active .shadow {
+.c18:active .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%) !important;
 }
 
@@ -514,95 +488,34 @@ have_homework =
         Code colour
       </span>
       <div
-        class="c15"
-        id="oak-code-renderer-tooltip"
-      >
-        <div
-          class="c0 c1"
-        >
-          <p
-            class="c16"
-          >
-            When programmers write code, they use a special tool called an IDE (Integrated Development Environment). In an IDE, different colours are used to help programmers understand the code:
-          </p>
-          <br />
-          <ul
-            class="c17"
-          >
-            <li
-              class="c18"
-            >
-              <span
-                class="c19"
-              >
-                • Blue
-              </span>
-              <span
-                class="c14"
-              >
-                 - numbers and boolean values
-              </span>
-            </li>
-            <li
-              class="c18"
-            >
-              <span
-                class="c19"
-              >
-                • Green
-              </span>
-              <span
-                class="c14"
-              >
-                 - strings
-              </span>
-            </li>
-            <li
-              class="c18"
-            >
-              <span
-                class="c19"
-              >
-                • Purple
-              </span>
-              <span
-                class="c14"
-              >
-                 - keywords
-              </span>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div
         style="display: contents;"
       >
         <div
-          class="c20 c21 c22 c23"
+          class="c15 c16 c17 c18"
         >
           <button
-            aria-describedby="oak-code-renderer-tooltip"
+            aria-expanded="false"
             aria-label="open info tooltip"
-            class="c24 c25"
+            class="c19 c20"
             data-rac="true"
             type="button"
           >
             <div
-              class="c0 c26"
+              class="c0 c21"
             >
               <div
-                class="c27 c28 icon-container"
+                class="c22 c23 icon-container"
               >
                 <div
-                  class="c29 shadow"
+                  class="c24 shadow"
                 />
                 <span
-                  class="c30"
+                  class="c25"
                   data-icon-for="button"
                 >
                   <img
                     alt=""
-                    class="c31"
+                    class="c26"
                     data-nimg="fill"
                     decoding="async"
                     loading="lazy"
@@ -612,7 +525,7 @@ have_homework =
                 </span>
               </div>
               <span
-                class="c19"
+                class="c27"
               />
             </div>
           </button>
