@@ -128,6 +128,10 @@ export const InternalShadowIconButton = <C extends ElementType = "button">(
     ...rest
   } = props;
 
+  const defaultColorFilter = props.disabled
+    ? disabledIconColor
+    : defaultIconColor || null;
+
   const icon = iconName && (
     <OakBox $position="relative">
       <OakIcon
@@ -158,13 +162,7 @@ export const InternalShadowIconButton = <C extends ElementType = "button">(
         iconName={iconName}
         $width={"spacing-24"}
         $height={"spacing-24"}
-        $colorFilter={
-          props.disabled
-            ? disabledIconColor
-            : defaultIconColor
-              ? defaultIconColor
-              : null
-        }
+        $colorFilter={defaultColorFilter}
         data-icon-for="button"
         alt=""
       />
