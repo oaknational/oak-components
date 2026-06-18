@@ -54,7 +54,7 @@ describe(OakQuizHint, () => {
     expect(button).not.toHaveAttribute("aria-describedby");
   });
 
-  it("announces tooltip content when opened", async () => {
+  it("associates tooltip content with the trigger when opened", async () => {
     const { getByRole, getByTestId } = renderWithTheme(
       <OakQuizHint
         hint="The answer is right in front of your eyes"
@@ -69,9 +69,8 @@ describe(OakQuizHint, () => {
     expect(button).toHaveAttribute("aria-expanded", "true");
     expect(button).toHaveAttribute("aria-describedby", "quiz-hint");
 
-    const announcement = getByTestId("quiz-hint-announcement");
-    expect(announcement).toHaveAttribute("aria-live", "polite");
-    expect(announcement).toHaveTextContent(
+    const description = getByTestId("quiz-hint-description");
+    expect(description).toHaveTextContent(
       "The answer is right in front of your eyes",
     );
   });

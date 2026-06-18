@@ -39,10 +39,8 @@ export const OakQuizHint = ({ hint, id, hintToggled }: OakQuizHintProps) => {
       {isOpen && (
         <div
           id={id}
-          aria-live="polite"
-          aria-relevant="all"
           style={{ position: "absolute", left: "-9999px" }}
-          data-testid={`${id}-announcement`}
+          data-testid={`${id}-description`}
         >
           {hint}
         </div>
