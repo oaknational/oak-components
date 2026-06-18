@@ -1,5 +1,6 @@
 import React from "react";
 import "@testing-library/jest-dom";
+import userEvent from "@testing-library/user-event";
 
 import { OakInfo } from "./OakInfo";
 
@@ -22,5 +23,40 @@ describe("OakInfo", () => {
     );
 
     expect(container).toMatchSnapshot();
+  });
+
+  it("does not associate tooltip content with the trigger before it is opened", () => {
+    const { getByRole } = renderWithTheme(
+      <OakInfo
+        hint="The answer is right in front of your eyes"
+        id="info-tooltip"
+      />,
+    );
+
+    const button = getByRole("button", { name: "open info tooltip" });
+    expect(button).toHaveAttribute("aria-expanded", "false");
+    expect(button).not.toHaveAttribute("aria-describedby");
+  });
+
+  it("announces tooltip content when opened", async () => {
+    const { getByRole, getByTestId } = renderWithTheme(
+      <OakInfo
+        hint="The answer is right in front of your eyes"
+        id="info-tooltip"
+      />,
+    );
+    const user = userEvent.setup();
+
+    await user.click(getByRole("button", { name: "open info tooltip" }));
+
+    const button = getByRole("button", { name: "close info tooltip" });
+    expect(button).toHaveAttribute("aria-expanded", "true");
+    expect(button).toHaveAttribute("aria-describedby", "info-tooltip");
+
+    const announcement = getByTestId("info-tooltip-announcement");
+    expect(announcement).toHaveAttribute("aria-live", "polite");
+    expect(announcement).toHaveTextContent(
+      "The answer is right in front of your eyes",
+    );
   });
 });
