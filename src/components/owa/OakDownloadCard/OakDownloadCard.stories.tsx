@@ -83,7 +83,7 @@ export const MultipleIcons: Story = {
     id: "download-card-multiple-icons",
     value: "a test value",
     title: "Resource bundle",
-    format: "PPTX + PDF",
+    format: ["PPTX", "PDF", "XLSX"],
     fileSize: "1.4MB",
   },
 };

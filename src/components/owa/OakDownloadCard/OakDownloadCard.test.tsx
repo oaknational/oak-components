@@ -49,6 +49,21 @@ describe("OakDownloadCard", () => {
     );
     expect(container).toMatchSnapshot();
   });
+
+  it("renders a list of formats when format is an array", () => {
+    const { getByText } = renderWithTheme(
+      <OakDownloadCard
+        id="checkbox-1"
+        value="Option 1"
+        title={"TITLE"}
+        format={["FORMAT1", "FORMAT2"]}
+        iconName={"books"}
+      />,
+    );
+    expect(getByText("FORMAT1")).toHaveRole("listitem");
+    expect(getByText("FORMAT2")).toHaveRole("listitem");
+  });
+
   it("renders an editable tag when isEditable is true", () => {
     const { container, getByText } = renderWithTheme(
       <OakDownloadCard

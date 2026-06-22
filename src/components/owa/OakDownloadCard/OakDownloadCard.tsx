@@ -15,6 +15,8 @@ import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakUiRoleToken } from "@/styles";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { IconName } from "@/image-map";
+import { OakTagFunctional } from "@/components/messaging-and-feedback/OakTagFunctional";
+import { OakLI, OakUL } from "@/components/typography";
 
 const SingleIcon = ({ iconName }: { iconName: IconName }) => {
   return (
@@ -75,7 +77,7 @@ export type OakDownloadCardProps = BaseCheckBoxProps & {
   /**
    * The file format or secondary metadata shown beneath the title.
    */
-  format: React.ReactNode;
+  format: React.ReactNode | React.ReactNode[];
   /**
    * The icon used to represent the download type.
    */
@@ -193,6 +195,26 @@ export const OakDownloadCard = (props: OakDownloadCardProps) => {
             $pv="spacing-12"
             $ph="spacing-16"
           >
+            <OakBox id="download-card-title" $font={"body-2-bold"}>
+              {title}
+            </OakBox>
+            {fileSize && (
+              <OakBox $font={"body-3"} $color={"text-subdued"}>
+                {fileSize}
+              </OakBox>
+            )}
+            <OakFlex $alignItems={"center"} $gap={"spacing-8"}>
+              <OakBox $font={"body-3"} $color={"text-subdued"}>
+                {Array.isArray(format) ? (
+                  <OakUL $pl="spacing-20">
+                    {format.map((item, index) => (
+                      <OakLI key={index}>{item}</OakLI>
+                    ))}
+                  </OakUL>
+                ) : (
+                  format
+                )}
+              </OakBox>
               {isEditable && (
                 <OakTagFunctional
                   $alignSelf={"flex-end"}
@@ -201,6 +223,7 @@ export const OakDownloadCard = (props: OakDownloadCardProps) => {
                   $background={"bg-decorative2-main"}
                 />
               )}
+            </OakFlex>
           </OakFlex>
         </OakFlex>
         <OakFlex>
