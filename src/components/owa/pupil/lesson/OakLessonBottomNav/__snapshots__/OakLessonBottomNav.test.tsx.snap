@@ -12,11 +12,6 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 }
 
 .c5 {
-  display: none;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c6 {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -24,7 +19,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c13 {
+.c12 {
   position: relative;
   width: 2.5rem;
   min-width: 2.5rem;
@@ -35,7 +30,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c15 {
+.c14 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -44,7 +39,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c16 {
+.c15 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -54,7 +49,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c19 {
+.c18 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -62,7 +57,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c22 {
+.c21 {
   width: 1.5rem;
   height: 1.5rem;
   padding: 0rem;
@@ -71,7 +66,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c23 {
+.c22 {
   position: relative;
   width: 100%;
   min-width: 100%;
@@ -81,7 +76,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c27 {
+.c26 {
   width: 1.5rem;
   height: 1.5rem;
   padding: 0rem;
@@ -112,14 +107,14 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   align-items: center;
 }
 
-.c7 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c12 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -138,7 +133,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   gap: 0.75rem;
 }
 
-.c14 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -153,7 +148,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   justify-content: center;
 }
 
-.c20 {
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -171,7 +166,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c21 {
+.c20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -179,7 +174,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   gap: 0.75rem;
 }
 
-.c18 {
+.c17 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -190,7 +185,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c25 {
+.c24 {
   color: #287c34;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
@@ -202,7 +197,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c26 {
+.c25 {
   margin-top: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 700;
@@ -214,7 +209,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c28 {
+.c27 {
   color: #dd0035;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
@@ -226,7 +221,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c29 {
+.c28 {
   margin-top: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
@@ -238,7 +233,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c10 {
+.c9 {
   background: none;
   color: inherit;
   border: none;
@@ -252,69 +247,69 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   color: #222222;
 }
 
-.c10:disabled {
+.c9:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c17 {
+.c16 {
   object-fit: contain;
 }
 
-.c24 {
+.c23 {
   -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   object-fit: contain;
 }
 
-.c11 {
+.c10 {
   display: inline-block;
   position: relative;
 }
 
-.c11:hover {
+.c10:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #222222;
 }
 
-.c11:active {
+.c10:active {
   color: #222222;
 }
 
-.c11:disabled {
+.c10:disabled {
   color: #808080;
 }
 
-.c8 > :first-child:focus-visible .shadow {
+.c7 > :first-child:focus-visible .shadow {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c8 > :first-child:hover .shadow {
+.c7 > :first-child:hover .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c8 > :first-child:active .shadow {
+.c7 > :first-child:active .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c8 > :first-child:disabled .icon-container {
+.c7 > :first-child:disabled .icon-container {
   background: #808080;
 }
 
-.c8 > :first-child:hover .icon-container {
+.c7 > :first-child:hover .icon-container {
   background: #ffe555;
 }
 
-.c8 > :first-child:active .icon-container {
+.c7 > :first-child:active .icon-container {
   background: #ffe555;
 }
 
-.c9:hover .shadow {
+.c8:hover .shadow {
   box-shadow: none !important;
 }
 
-.c9:active .shadow {
+.c8:active .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%) !important;
 }
 
@@ -323,7 +318,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c19 {
+  .c18 {
     width: auto;
   }
 }
@@ -337,7 +332,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c20 {
+  .c19 {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
@@ -353,38 +348,32 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
       class="c3 c4"
     >
       <div
-        class="c5"
-        id="quiz-hint"
-      >
-        The answer is right in front of your eyes
-      </div>
-      <div
         style="display: contents;"
       >
         <div
-          class="c6 c7 c8 c9"
+          class="c5 c6 c7 c8"
         >
           <button
-            aria-describedby="quiz-hint"
-            class="c10 c11"
+            aria-expanded="false"
+            class="c9 c10"
             data-rac="true"
           >
             <div
-              class="c3 c12"
+              class="c3 c11"
             >
               <div
-                class="c13 c14 icon-container"
+                class="c12 c13 icon-container"
               >
                 <div
-                  class="c15 shadow"
+                  class="c14 shadow"
                 />
                 <span
-                  class="c16"
+                  class="c15"
                   data-icon-for="button"
                 >
                   <img
                     alt=""
-                    class="c17"
+                    class="c16"
                     data-nimg="fill"
                     decoding="async"
                     loading="lazy"
@@ -394,7 +383,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
                 </span>
               </div>
               <span
-                class="c18"
+                class="c17"
               >
                 Need a hint?
               </span>
@@ -404,7 +393,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
       </div>
     </div>
     <div
-      class="c19 c20"
+      class="c18 c19"
     />
   </div>
   <div
@@ -418,18 +407,18 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
         class="c3"
       >
         <div
-          class="c3 c21"
+          class="c3 c20"
           role="alert"
         >
           <div
-            class="c22"
+            class="c21"
           >
             <span
-              class="c23"
+              class="c22"
             >
               <img
                 alt=""
-                class="c24"
+                class="c23"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"
@@ -439,14 +428,14 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
             </span>
           </div>
           <span
-            class="c25"
+            class="c24"
             role="alert"
           >
             Correct
           </span>
         </div>
         <p
-          class="c26"
+          class="c25"
           role="alert"
         >
           Well done!
@@ -454,7 +443,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
       </div>
     </div>
     <div
-      class="c19 c20"
+      class="c18 c19"
     />
   </div>
   <div
@@ -468,18 +457,18 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
         class="c3"
       >
         <div
-          class="c3 c21"
+          class="c3 c20"
           role="alert"
         >
           <div
-            class="c27"
+            class="c26"
           >
             <span
-              class="c23"
+              class="c22"
             >
               <img
                 alt=""
-                class="c24"
+                class="c23"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"
@@ -489,14 +478,14 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
             </span>
           </div>
           <span
-            class="c28"
+            class="c27"
             role="alert"
           >
             Incorrect
           </span>
         </div>
         <p
-          class="c29"
+          class="c28"
           role="alert"
         >
           Keep trying
@@ -504,7 +493,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
       </div>
     </div>
     <div
-      class="c19 c20"
+      class="c18 c19"
     />
   </div>
   <div
@@ -518,18 +507,18 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
         class="c3"
       >
         <div
-          class="c3 c21"
+          class="c3 c20"
           role="alert"
         >
           <div
-            class="c22"
+            class="c21"
           >
             <span
-              class="c23"
+              class="c22"
             >
               <img
                 alt=""
-                class="c24"
+                class="c23"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"
@@ -539,14 +528,14 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
             </span>
           </div>
           <span
-            class="c25"
+            class="c24"
             role="alert"
           >
             Correct
           </span>
         </div>
         <p
-          class="c26"
+          class="c25"
           role="alert"
         >
           Nearly there
@@ -554,7 +543,7 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
       </div>
     </div>
     <div
-      class="c19 c20"
+      class="c18 c19"
     />
   </div>
 </div>
