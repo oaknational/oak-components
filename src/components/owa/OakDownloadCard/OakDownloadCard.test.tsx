@@ -49,6 +49,20 @@ describe("OakDownloadCard", () => {
     );
     expect(container).toMatchSnapshot();
   });
+  it("renders an editable tag when isEditable is true", () => {
+    const { container, getByText } = renderWithTheme(
+      <OakDownloadCard
+        id="checkbox-1"
+        value="Option 1"
+        title={"TITLE"}
+        format={"FORMAT"}
+        iconName={"books"}
+        isEditable={true}
+      />,
+    );
+    expect(container).toMatchSnapshot();
+    expect(getByText("Editable")).toBeInTheDocument();
+  });
 
   it("renders multiple icons when iconName is an array", () => {
     const { container } = renderWithTheme(

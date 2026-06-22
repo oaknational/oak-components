@@ -86,6 +86,12 @@ export type OakDownloadCardProps = BaseCheckBoxProps & {
    * @default false
    */
   isRadio?: boolean;
+  /**
+   * If true, adds an informational `Editable` tag to the download card.
+   *
+   * @default false
+   */
+  isEditable?: boolean;
 };
 
 const LabelContainer = styled("label")`
@@ -136,6 +142,7 @@ export const OakDownloadCard = (props: OakDownloadCardProps) => {
     onHovered,
     isRadio = false,
     "data-testid": dataTestId,
+    isEditable = false,
     ...rest
   } = props;
 
@@ -186,9 +193,14 @@ export const OakDownloadCard = (props: OakDownloadCardProps) => {
             $pv="spacing-12"
             $ph="spacing-16"
           >
-            <OakBox $font={"body-2-bold"}>{title}</OakBox>
-            {fileSize && <OakBox $font={"body-3"}>{fileSize}</OakBox>}
-            <OakBox $font={"body-3"}>{format}</OakBox>
+              {isEditable && (
+                <OakTagFunctional
+                  $alignSelf={"flex-end"}
+                  $font={"heading-light-7"}
+                  label="Editable"
+                  $background={"bg-decorative2-main"}
+                />
+              )}
           </OakFlex>
         </OakFlex>
         <OakFlex>

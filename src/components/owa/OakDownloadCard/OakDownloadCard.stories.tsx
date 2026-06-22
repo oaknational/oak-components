@@ -22,6 +22,7 @@ const meta: Meta<typeof OakDownloadCard> = {
     iconName: { options: oakIconNames, control: { type: "select" } },
     id: { control: { type: "text" } },
     isRadio: { control: { type: "boolean" } },
+    isEditable: { control: { type: "boolean" } },
     name: { control: { type: "text" } },
     "aria-label": { control: { type: "text" } },
     "aria-labelledby": { control: { type: "text" } },
@@ -58,6 +59,19 @@ export const WithFileSize: Story = {
     title: "Fancy presentation",
     format: "PPTX",
     fileSize: "200KB",
+  },
+};
+
+export const IsEditable: Story = {
+  render: (args) => <OakDownloadCard {...args} />,
+  args: {
+    iconName: "book-steps",
+    id: "download-card-file-size",
+    value: "a test value",
+    title: "Fancy presentation",
+    format: "PPTX",
+    fileSize: "200KB",
+    isEditable: true,
   },
 };
 
