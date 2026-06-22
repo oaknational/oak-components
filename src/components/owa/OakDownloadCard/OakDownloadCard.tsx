@@ -12,7 +12,7 @@ import { InternalRadioWrapper } from "@/components/internal-components/InternalR
 import { OakIcon } from "@/components/images-and-icons/OakIcon";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
-import { OakUiRoleToken } from "@/styles";
+import { OakUiRoleToken, parseDropShadow } from "@/styles";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { IconName } from "@/image-map";
 import { OakTagFunctional } from "@/components/messaging-and-feedback/OakTagFunctional";
@@ -100,22 +100,37 @@ const LabelContainer = styled("label")`
   flex: 1;
   cursor: pointer;
   display: flex;
-`;
 
-const Container = styled(OakFlex)<{ $hoverBackground: OakUiRoleToken }>`
-  cursor: pointer;
-
-  &:has(input:focus-within) {
-    &:focus-visible {
-      box-shadow:
-        0px 0px 0px 2px ${parseColor("bg-decorative5-main")},
-        0px 0px 0px 5px ${parseColor("bg-btn-primary-hover")};
+  &:has(input:disabled) {
+    cursor: default;
+    #download-card-title {
+      text-decoration: none;
     }
   }
+`;
+
+const Container = styled(OakFlex)<{
+  $hoverBackground: OakUiRoleToken;
+}>`
+  &:has(input:focus-visible) {
+    box-shadow:
+      ${parseDropShadow("drop-shadow-centered-lemon")},
+      ${parseDropShadow("drop-shadow-centered-grey")};
+  }
+
   @media (hover: hover) {
-    &:hover:not(:disabled, :active) {
+    &:hover:not(:has(input:disabled), :active) {
       background: ${(props) =>
         props.$hoverBackground ? parseColor(props.$hoverBackground) : null};
+      #download-card-title {
+        text-decoration: underline;
+      }
+    }
+
+    &:active:not(:has(input:disabled)) {
+      #download-card-title {
+        text-decoration: underline;
+      }
     }
   }
 `;
