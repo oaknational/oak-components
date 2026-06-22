@@ -38,29 +38,20 @@ describe("OakInfo", () => {
     expect(button).not.toHaveAttribute("aria-describedby");
   });
 
-  it("does not allow buttonProps to override controlled ARIA attributes", async () => {
+  it("allows buttonProps to override default ARIA attributes", () => {
     const { getByRole } = renderWithTheme(
       <OakInfo
         hint="The answer is right in front of your eyes"
         id="info-tooltip"
         buttonProps={{
-          "aria-describedby": "consumer-override",
-          "aria-expanded": true,
-          "aria-label": "consumer label",
+          "aria-label": "custom info label",
         }}
       />,
     );
-    const user = userEvent.setup();
 
-    const closedButton = getByRole("button", { name: "open info tooltip" });
-    expect(closedButton).toHaveAttribute("aria-expanded", "false");
-    expect(closedButton).not.toHaveAttribute("aria-describedby");
-
-    await user.click(closedButton);
-
-    const openButton = getByRole("button", { name: "close info tooltip" });
-    expect(openButton).toHaveAttribute("aria-expanded", "true");
-    expect(openButton).toHaveAttribute("aria-describedby", "info-tooltip");
+    expect(
+      getByRole("button", { name: "custom info label" }),
+    ).toBeInTheDocument();
   });
 
   it("associates tooltip content with the trigger when opened", async () => {

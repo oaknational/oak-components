@@ -45,10 +45,10 @@ export const OakInfo = (props: OakInfoProps) => {
           isLoading={isLoading}
           disabled={disabled}
           buttonProps={{
-            ...buttonProps,
             "aria-expanded": isOpen,
             "aria-describedby": isOpen ? id : undefined,
             "aria-label": isOpen ? "close info tooltip" : "open info tooltip",
+            ...buttonProps,
           }}
         />
       </OakTooltip>
