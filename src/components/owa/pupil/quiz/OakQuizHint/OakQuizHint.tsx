@@ -1,6 +1,7 @@
 import React, { MouseEventHandler, ReactNode, useState } from "react";
 
 import { OakTooltip } from "@/components/messaging-and-feedback/OakTooltip";
+import { OakScreenReader } from "@/components/messaging-and-feedback/OakScreenReader";
 import { OakHintButton } from "@/components/owa/pupil/quiz/OakHintButton";
 
 export type OakQuizHintProps = {
@@ -37,13 +38,9 @@ export const OakQuizHint = ({ hint, id, hintToggled }: OakQuizHintProps) => {
         />
       </OakTooltip>
       {isOpen && (
-        <div
-          id={id}
-          style={{ position: "absolute", left: "-9999px" }}
-          data-testid={`${id}-description`}
-        >
+        <OakScreenReader as="div" id={id} data-testid={`${id}-description`}>
           {hint}
-        </div>
+        </OakScreenReader>
       )}
     </>
   );

@@ -9,6 +9,7 @@ import {
   OakTooltip,
   OakTooltipProps,
 } from "@/components/messaging-and-feedback/OakTooltip";
+import { OakScreenReader } from "@/components/messaging-and-feedback/OakScreenReader";
 import { OakInfoButton } from "@/components/owa/OakInfoButton";
 import { InternalShadowRoundButtonProps } from "@/components/internal-components/InternalShadowRoundButton";
 
@@ -52,13 +53,9 @@ export const OakInfo = (props: OakInfoProps) => {
         />
       </OakTooltip>
       {isOpen && (
-        <div
-          id={id}
-          style={{ position: "absolute", left: "-9999px" }}
-          data-testid={`${id}-description`}
-        >
+        <OakScreenReader as="div" id={id} data-testid={`${id}-description`}>
           {hint}
-        </div>
+        </OakScreenReader>
       )}
     </>
   );
