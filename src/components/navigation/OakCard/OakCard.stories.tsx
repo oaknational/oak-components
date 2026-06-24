@@ -3,18 +3,26 @@ import { StoryObj, Meta } from "@storybook/nextjs";
 
 import { OakCard } from "./OakCard";
 
-import { oakIconNames } from "@/components/images-and-icons/OakIcon";
+import {
+  generateOakIconURL,
+  oakIconNames,
+} from "@/components/images-and-icons/OakIcon";
+import { OakBox } from "@/components/layout-and-structure/OakBox";
 import {
   additionalSpacingTokens,
   oakAllSpacingTokens,
 } from "@/styles/theme/spacing";
 import { oakUiRoleTokens } from "@/styles";
+import { oakColorTokens } from "@/styles/theme/color";
 
 const controlSpacingNames = [
   ...Object.keys(additionalSpacingTokens),
   ...Object.keys(oakAllSpacingTokens),
 ];
 const controlIconNames = [...oakIconNames].sort((a, b) => a.localeCompare(b));
+const controlColorNames = Object.keys(oakColorTokens).sort((a, b) =>
+  a.localeCompare(b),
+);
 
 const meta: Meta<typeof OakCard> = {
   title: "Components/Navigation/OakCard",
@@ -32,6 +40,9 @@ const meta: Meta<typeof OakCard> = {
     },
     aspectRatio: {
       options: ["1/1", "4/3"],
+    },
+    imageBackgroundColor: {
+      options: controlColorNames,
     },
     subCopyColor: {
       options: oakUiRoleTokens,
@@ -57,6 +68,7 @@ const meta: Meta<typeof OakCard> = {
         "imageSrc",
         "imageAlt",
         "aspectRatio",
+        "imageBackgroundColor",
         "subCopy",
         "subCopyColor",
         "tagName",
@@ -131,6 +143,31 @@ export const RowOrientationWithRectangularImage: Story = {
     tagName: "Curriculum planning",
     linkText: "Read more",
     linkIconName: "arrow-right",
+  },
+};
+
+export const OakSubjectLinkCard: Story = {
+  render: ({ href = "https://example.com" }) => (
+    <OakBox>
+      <OakCard
+        heading="Check out our new digital literacy lessons!"
+        headingLevel="h1"
+        href={href}
+        cardWidth="100%"
+        imageSrc={generateOakIconURL("subject-digital-literacy")}
+        imageAlt="Illustration representing digital literacy"
+        imageBackgroundColor="bg-decorative1-main"
+        subCopy="Lessons offering practical knowledge and skills, developed independently of the national curriculum."
+        subCopyColor="text-primary"
+        tagBackground="bg-decorative1-main"
+        linkText="New digital literacy lessons"
+        linkIconName="chevron-right"
+        cardOrientation="row"
+      />
+    </OakBox>
+  ),
+  args: {
+    href: "https://example.com",
   },
 };
 

@@ -104,6 +104,21 @@ describe("OakCard", () => {
     );
   });
 
+  it("renders image with the provided background colour", () => {
+    renderWithTheme(
+      <OakCard
+        {...requiredProps}
+        imageSrc={testData.imageSrc}
+        imageAlt={testData.imageAlt}
+        imageBackgroundColor="bg-decorative1-main"
+      />,
+    );
+
+    expect(screen.getByRole("img").parentElement).toHaveStyle(
+      "background-color: #bef2bd",
+    );
+  });
+
   it("renders with sub copy when provided", () => {
     renderWithTheme(<OakCard {...requiredProps} subCopy={testData.subCopy} />);
 
