@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+import { parseColor } from "@/styles/helpers/parseColor";
 import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
@@ -46,10 +47,15 @@ export type OakCardProps = {
    * The alternative text for the image, used for accessibility.
    */
   imageAlt?: string;
+
   /**
    * The aspect ratio of the image.
    */
   aspectRatio?: "1/1" | "4/3";
+  /**
+   * The background colour behind the image.
+   */
+  imageBackgroundColor?: OakUiRoleToken;
   /**
    * The subcopy text of the card.
    */
@@ -112,6 +118,7 @@ type StyledImageProps = {
   $height: OakCombinedSpacingToken;
   $width: OakCombinedSpacingToken;
   $aspectRatio: "1/1" | "4/3";
+  $backgroundColor?: OakUiRoleToken;
 };
 
 const StyledOakImage = styled(OakImage)<StyledImageProps>`
@@ -122,6 +129,7 @@ const StyledOakImage = styled(OakImage)<StyledImageProps>`
   img {
     border-radius: ${parseBorderRadius("border-radius-m2")};
     object-fit: cover;
+    background-color: ${({ $backgroundColor }) => parseColor($backgroundColor)};
   }
 `;
 
@@ -142,6 +150,7 @@ export const OakCard = ({
   imageSrc,
   imageAlt,
   aspectRatio = "1/1",
+  imageBackgroundColor = "bg-neutral",
   subCopy,
   subCopyColor = "text-primary",
   tagName,
@@ -174,6 +183,7 @@ export const OakCard = ({
             $height={cardOrientation === "row" ? "spacing-240" : "auto"}
             $width={"auto"}
             $aspectRatio={aspectRatio}
+            $backgroundColor={imageBackgroundColor}
           />
         )}
         <OakFlex
