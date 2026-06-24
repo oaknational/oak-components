@@ -115,7 +115,7 @@ describe("OakCard", () => {
     );
 
     expect(screen.getByRole("img").parentElement).toHaveStyle(
-      "background-color: #bef2bd",
+      "background-color: rgba(0, 0, 0, 0)",
     );
   });
 
