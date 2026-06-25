@@ -200,10 +200,13 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
 }
 
 .c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  pa: 1rem;
   gap: 1rem;
 }
 
@@ -224,14 +227,15 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
 }
 
 .c6 {
-  height: 15rem;
   width: auto;
+  height: 15rem;
   aspect-ratio: 4/3;
 }
 
 .c6 img {
   border-radius: 0.5rem;
   object-fit: cover;
+  background-color: #f2f2f2;
 }
 
 <div>
