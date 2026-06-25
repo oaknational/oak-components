@@ -75,9 +75,9 @@ export type OakDownloadCardProps = BaseCheckBoxProps & {
    */
   fileSize?: React.ReactNode;
   /**
-   * The file format or secondary metadata shown beneath the title.
+   * The file format(s) or secondary metadata shown beneath the title.
    */
-  format: React.ReactNode | React.ReactNode[];
+  format: string | string[];
   /**
    * The icon used to represent the download type.
    */
@@ -222,8 +222,8 @@ export const OakDownloadCard = (props: OakDownloadCardProps) => {
               <OakBox $font={"body-3"} $color={"text-subdued"}>
                 {Array.isArray(format) ? (
                   <OakUL $pl="spacing-20">
-                    {format.map((item, index) => (
-                      <OakLI key={index}>{item}</OakLI>
+                    {format.map((item) => (
+                      <OakLI key={item}>{item}</OakLI>
                     ))}
                   </OakUL>
                 ) : (
