@@ -81,7 +81,6 @@ export type OakLinkCardProps = {
 };
 
 /**
- * @deprecated Use `<OakCard />` instead
  *
  * A card component that displays an icon, text content, and an external link.
  *
