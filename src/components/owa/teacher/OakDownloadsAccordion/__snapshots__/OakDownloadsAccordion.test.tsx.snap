@@ -87,9 +87,9 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
 
 .c31 {
   position: relative;
-  overflow: auto;
+  overflow: visible;
   font-family: --var(google-font),Lexend,sans-serif;
-  overflow: auto;
+  overflow: visible;
 }
 
 .c32 {
@@ -144,6 +144,7 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
 }
 
 .c45 {
+  color: #575757;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
@@ -154,7 +155,7 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c46 {
+.c47 {
   padding-right: 1rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -303,6 +304,18 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
   gap: 0.25rem;
 }
 
+.c46 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .c17 {
   -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
@@ -445,12 +458,17 @@ input:checked + .c13 {
   display: flex;
 }
 
-.c36 {
-  cursor: pointer;
+.c37:has(input:disabled) {
+  cursor: default;
 }
 
-.c36:has(input:focus-within):focus-visible {
-  box-shadow: 0px 0px 0px 2px #ffe555, 0px 0px 0px 5px #575757;
+.c37:has(input:disabled) #download-card-title {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c36:has(input:focus-visible) {
+  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
 @media (hover:hover) {
@@ -476,8 +494,18 @@ input:checked + .c13 {
 }
 
 @media (hover:hover) {
-  .c36:hover:not(:disabled,:active) {
+  .c36:hover:not(:has(input:disabled),:active) {
     background: #f2f2f2;
+  }
+
+  .c36:hover:not(:has(input:disabled),:active) #download-card-title {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+  }
+
+  .c36:active:not(:has(input:disabled)) #download-card-title {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
   }
 }
 
@@ -623,6 +651,7 @@ input:checked + .c13 {
                 >
                   <div
                     class="c44"
+                    id="download-card-title"
                   >
                     Lesson plan
                   </div>
@@ -632,9 +661,13 @@ input:checked + .c13 {
                     245KB
                   </div>
                   <div
-                    class="c45"
+                    class="c22 c46"
                   >
-                    PDF
+                    <div
+                      class="c45"
+                    >
+                      PDF
+                    </div>
                   </div>
                 </div>
               </div>
@@ -642,7 +675,7 @@ input:checked + .c13 {
                 class="c22 c35"
               >
                 <div
-                  class="c46 c3"
+                  class="c47 c3"
                 >
                   <div
                     class="c8"
@@ -707,6 +740,7 @@ input:checked + .c13 {
                 >
                   <div
                     class="c44"
+                    id="download-card-title"
                   >
                     Lesson presentation
                   </div>
@@ -716,9 +750,13 @@ input:checked + .c13 {
                     1.2MB
                   </div>
                   <div
-                    class="c45"
+                    class="c22 c46"
                   >
-                    PPTX
+                    <div
+                      class="c45"
+                    >
+                      PPTX
+                    </div>
                   </div>
                 </div>
               </div>
@@ -726,7 +764,7 @@ input:checked + .c13 {
                 class="c22 c35"
               >
                 <div
-                  class="c46 c3"
+                  class="c47 c3"
                 >
                   <div
                     class="c8"
