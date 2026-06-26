@@ -230,12 +230,13 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   width: auto;
   height: 15rem;
   aspect-ratio: 4/3;
+  background: #f2f2f2;
+  border-radius: 0.5rem;
 }
 
 .c6 img {
-  border-radius: 0.5rem;
+  border-radius: inherit;
   object-fit: cover;
-  background-color: #f2f2f2;
 }
 
 <div>

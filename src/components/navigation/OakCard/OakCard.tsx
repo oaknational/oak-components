@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 import {
   OakFlex,
   OakFlexProps,
@@ -17,10 +16,11 @@ import {
   OakCombinedSpacingToken,
   OakAllSpacingToken,
   OakUiRoleToken,
-  parseColor,
 } from "@/styles";
 import { sizeStyle, SizeStyleProps } from "@/styles/utils/sizeStyle";
 import { flexStyle } from "@/styles/utils/flexStyle";
+import { colorStyle, ColorStyleProps } from "@/styles/utils/colorStyle";
+import { borderStyle, BorderStyleProps } from "@/styles/utils/borderStyle";
 
 export type OakCardProps = {
   /**
@@ -115,17 +115,16 @@ const StyledOakFlex = styled(OakFlex)<StyledFlexProps>`
   }
 `;
 
-type StyledImageProps = SizeStyleProps & {
-  backgroundColor: OakUiRoleToken;
-};
+type StyledImageProps = SizeStyleProps & ColorStyleProps & BorderStyleProps;
 
 const StyledOakImage = styled(OakImage)<StyledImageProps>`
   ${sizeStyle}
+  ${colorStyle}
+  ${borderStyle}
 
   img {
-    border-radius: ${parseBorderRadius("border-radius-m2")};
+    border-radius: inherit;
     object-fit: cover;
-    background-color: ${(props) => parseColor(props.backgroundColor)};
   }
 `;
 
@@ -232,7 +231,8 @@ export const OakCard = ({
             $height={ImageHeight}
             $width={"auto"}
             $aspectRatio={aspectRatio}
-            backgroundColor={imageBackgroundColor}
+            $background={imageBackgroundColor}
+            $borderRadius={"border-radius-m2"}
           />
         )}
         <OakFlex
