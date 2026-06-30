@@ -31,9 +31,6 @@ const meta: Meta<typeof OakCard> = {
     cardOrientation: {
       options: ["row", "column"],
     },
-    smallScreenOrientation: {
-      options: ["row", "column"],
-    },
     cardWidth: {
       options: controlSpacingNames,
     },
@@ -157,8 +154,7 @@ export const OakSubjectLinkCard: Story = {
         tagBackground="bg-decorative1-main"
         linkText="Go to new digital literacy lessons"
         linkIconName="chevron-right"
-        cardOrientation="row"
-        smallScreenOrientation="column"
+        cardOrientation={["column", "row"]}
         imageBackgroundColor="bg-decorative1-main"
       />
     </OakBox>

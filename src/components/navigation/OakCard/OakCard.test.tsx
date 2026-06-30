@@ -59,11 +59,7 @@ describe("OakCard", () => {
 
   it("renders card with small screen orientation when provided", () => {
     renderWithTheme(
-      <OakCard
-        {...requiredProps}
-        cardOrientation="row"
-        smallScreenOrientation="column"
-      />,
+      <OakCard {...requiredProps} cardOrientation={["column", "row"]} />,
     );
 
     expect(screen.getByRole("link")).toHaveStyleRule(

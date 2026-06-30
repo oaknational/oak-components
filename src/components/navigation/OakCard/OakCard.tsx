@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import {
   OakFlex,
@@ -14,13 +14,17 @@ import { OakSpan } from "@/components/typography/OakSpan";
 import { OakTagFunctional } from "@/components/messaging-and-feedback/OakTagFunctional";
 import {
   OakCombinedSpacingToken,
-  OakAllSpacingToken,
   OakUiRoleToken,
+  parseSpacing,
 } from "@/styles";
 import { sizeStyle, SizeStyleProps } from "@/styles/utils/sizeStyle";
 import { flexStyle } from "@/styles/utils/flexStyle";
 import { colorStyle, ColorStyleProps } from "@/styles/utils/colorStyle";
 import { borderStyle, BorderStyleProps } from "@/styles/utils/borderStyle";
+import {
+  getBreakpoint,
+  ResponsiveValues,
+} from "@/styles/utils/responsiveStyle";
 
 export type OakCardProps = {
   /**
@@ -38,15 +42,11 @@ export type OakCardProps = {
   /**
    * The orientation of the card.
    */
+  cardOrientation?: ResponsiveValues<"row" | "column">;
   /**
    * The background colour behind the image.
    */
   imageBackgroundColor?: OakUiRoleToken;
-  cardOrientation?: "row" | "column";
-  /**
-   * The orientation of the card on small screens.
-   */
-  smallScreenOrientation?: "row" | "column";
   /**
    * The width of the card.
    */
@@ -93,10 +93,77 @@ export type OakCardProps = {
   hoverBackground?: OakUiRoleToken;
 };
 
-type StyledFlexProps = OakFlexProps;
+const CardContent = styled(OakFlex)``;
+type StyledImageProps = SizeStyleProps & ColorStyleProps & BorderStyleProps;
 
+const StyledOakImage = styled(OakImage)<StyledImageProps>`
+  ${sizeStyle}
+  ${colorStyle}
+  ${borderStyle}
+
+  img {
+    border-radius: inherit;
+    object-fit: cover;
+  }
+`;
+
+const rowStyles = css`
+  flex-direction: row;
+
+  ${StyledOakImage} {
+    height: ${parseSpacing("spacing-240")};
+  }
+
+  ${CardContent} {
+    height: auto;
+    padding-top: ${parseSpacing("spacing-24")};
+    padding-bottom: ${parseSpacing("spacing-24")};
+  }
+`;
+
+const columnStyles = css`
+  flex-direction: column;
+
+  ${StyledOakImage} {
+    height: auto;
+  }
+
+  ${CardContent} {
+    height: 100%;
+    padding-top: ${parseSpacing("spacing-0")};
+    padding-bottom: ${parseSpacing("spacing-0")};
+  }
+`;
+
+const getCardOrientationStyles = (orientation?: "row" | "column" | null) =>
+  orientation === "row" ? rowStyles : columnStyles;
+
+const getResponsiveCardOrientationStyles = (
+  cardOrientation: ResponsiveValues<"row" | "column">,
+) => {
+  if (!Array.isArray(cardOrientation)) {
+    return getCardOrientationStyles(cardOrientation);
+  }
+
+  const [smallOrientation, largeOrientation] = cardOrientation;
+
+  return css`
+    ${getCardOrientationStyles(smallOrientation)};
+
+    @media (min-width: ${getBreakpoint("small")}px) {
+      ${getCardOrientationStyles(largeOrientation)}
+    }
+  `;
+};
+
+type StyledFlexProps = OakFlexProps & {
+  $cardOrientation: ResponsiveValues<"row" | "column">;
+};
 const StyledOakFlex = styled(OakFlex)<StyledFlexProps>`
   ${flexStyle}
+
+  ${({ $cardOrientation }) =>
+    getResponsiveCardOrientationStyles($cardOrientation)}
 
   &:hover {
     h1,
@@ -115,19 +182,6 @@ const StyledOakFlex = styled(OakFlex)<StyledFlexProps>`
   }
 `;
 
-type StyledImageProps = SizeStyleProps & ColorStyleProps & BorderStyleProps;
-
-const StyledOakImage = styled(OakImage)<StyledImageProps>`
-  ${sizeStyle}
-  ${colorStyle}
-  ${borderStyle}
-
-  img {
-    border-radius: inherit;
-    object-fit: cover;
-  }
-`;
-
 /**
  * A highly customisable card component that displays a heading and takes a href at minimum.
  *
@@ -141,7 +195,6 @@ export const OakCard = ({
   headingLevel = "h3",
   href,
   cardOrientation = "column",
-  smallScreenOrientation,
   cardWidth,
   imageSrc,
   imageAlt,
@@ -155,58 +208,6 @@ export const OakCard = ({
   hoverBackground = "bg-btn-secondary-hover",
   imageBackgroundColor = "bg-neutral",
 }: OakCardProps) => {
-  const flexDirection = smallScreenOrientation
-    ? [smallScreenOrientation, cardOrientation]
-    : cardOrientation;
-
-  const getImageHeight = (
-    orientation: "row" | "column",
-  ): OakCombinedSpacingToken => {
-    if (orientation === "row") {
-      return "spacing-240";
-    } else {
-      return "auto";
-    }
-  };
-
-  const ImageHeight = smallScreenOrientation
-    ? [getImageHeight(smallScreenOrientation), getImageHeight(cardOrientation)]
-    : getImageHeight(cardOrientation);
-
-  const getOakFlexHeight = (
-    orientation: "row" | "column",
-  ): OakCombinedSpacingToken => {
-    if (orientation === "row") {
-      return "auto";
-    } else {
-      return "100%";
-    }
-  };
-
-  const OakFlexHeight = smallScreenOrientation
-    ? [
-        getOakFlexHeight(smallScreenOrientation),
-        getOakFlexHeight(cardOrientation),
-      ]
-    : getOakFlexHeight(cardOrientation);
-
-  const getOakFlexPadding = (
-    orientation: "row" | "column",
-  ): OakAllSpacingToken => {
-    if (orientation === "row") {
-      return "spacing-24";
-    } else {
-      return "spacing-0";
-    }
-  };
-
-  const OakFlexPadding = smallScreenOrientation
-    ? [
-        getOakFlexPadding(smallScreenOrientation),
-        getOakFlexPadding(cardOrientation),
-      ]
-    : getOakFlexPadding(cardOrientation);
-
   return (
     <OakFocusIndicator
       $background={"bg-primary"}
@@ -218,29 +219,24 @@ export const OakCard = ({
       <StyledOakFlex
         as="a"
         href={href}
-        $flexDirection={flexDirection}
+        $cardOrientation={cardOrientation}
         $height={"100%"}
         $pa={"spacing-16"}
         $gap={"spacing-16"}
-        $color={"text-primary"}
       >
         {imageSrc && (
           <StyledOakImage
             src={imageSrc || ""}
             alt={imageAlt || ""}
-            $height={ImageHeight}
             $width={"auto"}
             $aspectRatio={aspectRatio}
             $background={imageBackgroundColor}
             $borderRadius={"border-radius-m2"}
           />
         )}
-        <OakFlex
+        <CardContent
           $flexDirection="column"
           $justifyContent={"space-between"}
-          $height={OakFlexHeight}
-          $pt={OakFlexPadding}
-          $pb={OakFlexPadding}
           $gap="spacing-16"
         >
           <OakFlex $flexDirection="column" $gap="spacing-16">
@@ -269,7 +265,7 @@ export const OakCard = ({
               </OakFlex>
             )}
           </OakFlex>
-        </OakFlex>
+        </CardContent>
       </StyledOakFlex>
     </OakFocusIndicator>
   );
