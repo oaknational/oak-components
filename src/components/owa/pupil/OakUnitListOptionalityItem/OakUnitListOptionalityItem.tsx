@@ -1,7 +1,6 @@
 import React, { MutableRefObject } from "react";
 import styled from "styled-components";
 
-import { OakUnitListOptionalityItemCard } from "@/components/owa/teacher/OakUnitListOptionalityItemCard";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakHeading } from "@/components/typography/OakHeading";
@@ -11,6 +10,7 @@ import { OakGrid } from "@/components/layout-and-structure/OakGrid";
 import { OakGridArea } from "@/components/layout-and-structure/OakGridArea";
 import { FlexStyleProps } from "@/styles/utils/flexStyle";
 import { BorderStyleProps } from "@/styles/utils/borderStyle";
+import { OakUnitListOptionalityItemCard } from "@/components/owa/pupil/OakUnitListOptionalityItemCard/OakUnitListOptionalityItemCard";
 
 const StyledYearAndOptionFlex = styled(OakFlex)`
   @media (min-width: 356px) {

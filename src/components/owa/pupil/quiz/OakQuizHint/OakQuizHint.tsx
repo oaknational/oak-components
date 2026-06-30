@@ -1,8 +1,8 @@
 import React, { MouseEventHandler, ReactNode, useState } from "react";
 
 import { OakTooltip } from "@/components/messaging-and-feedback/OakTooltip";
+import { OakScreenReader } from "@/components/messaging-and-feedback/OakScreenReader";
 import { OakHintButton } from "@/components/owa/pupil/quiz/OakHintButton";
-import { OakBox } from "@/components/layout-and-structure/OakBox";
 
 export type OakQuizHintProps = {
   /**
@@ -27,16 +27,21 @@ export const OakQuizHint = ({ hint, id, hintToggled }: OakQuizHintProps) => {
 
   return (
     <>
-      <OakBox $display="none" id={id}>
-        {hint}
-      </OakBox>
       <OakTooltip tooltip={hint} isOpen={isOpen} tooltipPosition="top-left">
         <OakHintButton
           isOpen={isOpen}
           onClick={handleClick}
-          buttonProps={{ "aria-describedby": id }}
+          buttonProps={{
+            "aria-expanded": isOpen,
+            "aria-describedby": isOpen ? id : undefined,
+          }}
         />
       </OakTooltip>
+      {isOpen && (
+        <OakScreenReader as="div" id={id} data-testid={`${id}-description`}>
+          {hint}
+        </OakScreenReader>
+      )}
     </>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import "@testing-library/jest-dom";
+import userEvent from "@testing-library/user-event";
 
 import { OakInfo } from "./OakInfo";
 
@@ -22,5 +23,55 @@ describe("OakInfo", () => {
     );
 
     expect(container).toMatchSnapshot();
+  });
+
+  it("does not associate tooltip content with the trigger before it is opened", () => {
+    const { getByRole } = renderWithTheme(
+      <OakInfo
+        hint="The answer is right in front of your eyes"
+        id="info-tooltip"
+      />,
+    );
+
+    const button = getByRole("button", { name: "open info tooltip" });
+    expect(button).toHaveAttribute("aria-expanded", "false");
+    expect(button).not.toHaveAttribute("aria-describedby");
+  });
+
+  it("allows buttonProps to override default ARIA attributes", () => {
+    const { getByRole } = renderWithTheme(
+      <OakInfo
+        hint="The answer is right in front of your eyes"
+        id="info-tooltip"
+        buttonProps={{
+          "aria-label": "custom info label",
+        }}
+      />,
+    );
+
+    expect(
+      getByRole("button", { name: "custom info label" }),
+    ).toBeInTheDocument();
+  });
+
+  it("associates tooltip content with the trigger when opened", async () => {
+    const { getByRole, getByTestId } = renderWithTheme(
+      <OakInfo
+        hint="The answer is right in front of your eyes"
+        id="info-tooltip"
+      />,
+    );
+    const user = userEvent.setup();
+
+    await user.click(getByRole("button", { name: "open info tooltip" }));
+
+    const button = getByRole("button", { name: "close info tooltip" });
+    expect(button).toHaveAttribute("aria-expanded", "true");
+    expect(button).toHaveAttribute("aria-describedby", "info-tooltip");
+
+    const description = getByTestId("info-tooltip-description");
+    expect(description).toHaveTextContent(
+      "The answer is right in front of your eyes",
+    );
   });
 });
