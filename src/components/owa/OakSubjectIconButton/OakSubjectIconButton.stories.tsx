@@ -15,7 +15,7 @@ const meta: Meta<typeof OakSubjectIconButton> = {
     subjectIconName: { control: { type: "text" } },
     disabled: { control: { type: "boolean" } },
     subjectText: { control: { type: "text" } },
-    orientation: {
+    variant: {
       control: { type: "radio" },
       options: ["vertical", "horizontal"],
     },
@@ -34,7 +34,7 @@ const meta: Meta<typeof OakSubjectIconButton> = {
         "subjectIconName",
         "disabled",
         "subjectText",
-        "orientation",
+        "variant",
         "element",
         "isSelected",
       ],
@@ -55,7 +55,7 @@ export const Default: Story = {
     subjectIconName: "subject-english",
     disabled: false,
     subjectText: "English",
-    orientation: "vertical",
+    variant: "vertical",
     isSelected: false,
   },
 };
@@ -69,7 +69,7 @@ export const Disabled: Story = {
     subjectIconName: "subject-english",
     colorScheme: "primary",
     subjectText: "English",
-    orientation: "vertical",
+    variant: "vertical",
     isSelected: false,
   },
 };
