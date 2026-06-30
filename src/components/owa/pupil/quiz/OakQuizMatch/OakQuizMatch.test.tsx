@@ -57,6 +57,10 @@ describe(OakQuizMatch, () => {
     }
   });
 
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
   it("matches snapshot", () => {
     const { container } = renderWithTheme(
       <OakQuizMatch initialOptions={options} initialSlots={slots} />,
