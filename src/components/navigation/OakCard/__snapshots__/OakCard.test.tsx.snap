@@ -12,7 +12,6 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
 .c2 {
   height: 100%;
   padding: 1rem;
-  color: #222222;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -23,14 +22,7 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
-  height: auto;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c10 {
+.c9 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -66,13 +58,10 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   gap: 1rem;
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -170,7 +159,7 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   object-fit: contain;
 }
 
-.c7 {
+.c8 {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHBhdGggZmlsbD0iIzIyMiIgZD0iTTI4Ljc3OSAxOS4xNzZhMjcuMTkxIDI3LjE5MSAwIDAgMC0zLjggMS42IDE2LjcgMTYuNyAwIDAgMC03LjEgOC40YzAgLjEtLjEuMi0uMS4zLS43IDIuNC0uNiAyIDEuMyAyLjMgMS45LjMgMSAuNSAxIDEuMy0uMSA4LjggNC4xIDE1LjEgMTEuNCAxOS42YTEuNSAxLjUgMCAwIDAgMS43LjJjNS43LTIuNiA5LjMtNyAxMC4zLTEzLjJhMSAxIDAgMCAxIDEtMWwzLS4yYy44IDAgMS4zLjIgMS4yIDEuMmExNy45IDE3LjkgMCAwIDEtMy4yIDkuMiAyMy43IDIzLjcgMCAwIDEtMTAuOSA5LjEgNS40MDEgNS40MDEgMCAwIDEtNC41LS4yIDI2LjI5OCAyNi4yOTggMCAwIDEtOC41LTYuNiAyNS45IDI1LjkgMCAwIDEtNi40LTE0LjRjMC0uNi0uMi0uNy0uOC0uOC0yLjUtLjQtMi41LS4xLTIuMy0yLjlhMTkuMyAxOS4zIDAgMCAxIDEwLjgtMTYuNiAzOC45OTkgMzguOTk5IDAgMCAxIDUuNy0yLjEgMi4xIDIuMSAwIDAgMCAuOS0xLjMgMTQuMSAxNC4xIDAgMCAxIDMuNS02LjNsLjMtLjNjMS45LTIgMi42LTIgNC4zLjJsLjQuNWMxLjEgMS4xIDEgMS41LS4xIDIuNmExMS45IDExLjkgMCAwIDAtMy4yIDQuNCAxNi45IDE2LjkgMCAwIDEgNy41IDIuM2M1LjcgMy41IDkuMiA4LjMgOS45IDE1IC4wMTYuOTAxLS4wMTcgMS44MDItLjEgMi43IDAgLjgtLjYgMS0xLjIgMS4yYTE2LjEgMTYuMSAwIDAgMS0xMS0uNyAxNy45MDEgMTcuOTAxIDAgMCAxLTEwLjktMTMuNiA5Ljc5NiA5Ljc5NiAwIDAgMS0uMS0xLjlabTE4LjEgMTIuMmMuNC01LjUtNi45LTEyLjYtMTMtMTIuMS41IDYuNSA3LjYgMTIuOCAxMyAxMi4xWiIgb3BhY2l0eT0iLjEiLz48L3N2Zz4=);
   background-color: #e7f6f5;
   background-size: 4rem;
@@ -199,15 +188,31 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
+.c7 {
+  width: auto;
+  aspect-ratio: 4/3;
+  background: #f2f2f2;
+  border-radius: 0.5rem;
+}
+
+.c7 img {
+  border-radius: inherit;
+  object-fit: cover;
+}
+
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 1rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 1rem;
+}
+
+.c4 .c6 {
+  height: 15rem;
 }
 
 .c4:hover h1,
@@ -226,19 +231,6 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   text-decoration-thickness: 18%;
 }
 
-.c6 {
-  width: auto;
-  height: 15rem;
-  aspect-ratio: 4/3;
-  background: #f2f2f2;
-  border-radius: 0.5rem;
-}
-
-.c6 img {
-  border-radius: inherit;
-  object-fit: cover;
-}
-
 <div>
   <div
     class="c0 c1"
@@ -248,11 +240,11 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
       href="https://www.example.com"
     >
       <span
-        class="c5 c6"
+        class="c5 c6 c7"
       >
         <img
           alt="Test image"
-          class="c7"
+          class="c8"
           data-nimg="fill"
           decoding="async"
           loading="lazy"
@@ -263,10 +255,10 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
         />
       </span>
       <div
-        class="c8 c9"
+        class="c9 c10"
       >
         <div
-          class="c10 c11"
+          class="c9 c11"
         >
           <h3
             class="c12"
@@ -280,7 +272,7 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
           </p>
         </div>
         <div
-          class="c10 c14"
+          class="c9 c14"
         >
           <div
             class="c15 c16"
@@ -292,7 +284,7 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
             </label>
           </div>
           <div
-            class="c10 c18"
+            class="c9 c18"
           >
             <span
               class="c19"
