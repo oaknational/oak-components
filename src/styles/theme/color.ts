@@ -74,6 +74,10 @@ export const oakColorTokens = {
   "dark-amber110": "#85441B",
   "dark-amber50": "#503220",
   "dark-amber30": "#482F20",
+  "dark-rpf-syntax-blue": "#0080A8",
+  "dark-rpf-syntax-green": "#08892A",
+  "dark-rpf-syntax-grey": "#272727",
+  "dark-rpf-syntax-pink": "#630592",
 };
 
 export type OakColorToken = keyof typeof oakColorTokens;
