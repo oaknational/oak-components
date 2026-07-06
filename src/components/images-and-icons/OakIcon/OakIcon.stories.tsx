@@ -7,6 +7,7 @@ import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakTypography } from "@/components/typography/OakTypography";
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 import { colorFilterArgTypes } from "@/storybook-helpers/colorFilterStyleHelpers";
+import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 
 const controlIconNames = [...oakIconNames].sort((a, b) => a.localeCompare(b));
 
@@ -19,16 +20,13 @@ const meta: Meta<typeof OakIcon> = {
       options: controlIconNames,
     },
     ...sizeArgTypes,
-    ...colorFilterArgTypes,
+    $colorFilter: {
+      options: colorArgTypes.$color.options,
+    },
   },
   parameters: {
     controls: {
-      include: [
-        "iconName",
-        "$width",
-        "$height",
-        ...Object.keys(colorFilterArgTypes),
-      ],
+      include: ["iconName", "$width", "$height", "$colorFilter"],
     },
   },
 };
@@ -67,12 +65,7 @@ export const PickIcon: Story = {
   },
   parameters: {
     controls: {
-      include: [
-        "iconName",
-        "$width",
-        "$height",
-        ...Object.keys(colorFilterArgTypes),
-      ],
+      include: ["iconName", "$width", "$height", "$colorFilter"],
     },
   },
 };
