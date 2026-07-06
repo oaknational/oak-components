@@ -29,12 +29,14 @@ export default [
       {
         dir: join(outputDir, "cjs"),
         format: "cjs",
+        interop: "auto",
       },
     ],
     plugins: [
       resolve(),
       commonjs({
-        requireReturnsDefault: "auto",
+        esmExternals: true,
+        requireReturnsDefault: "preferred",
       }),
       typescript(),
       json(),
