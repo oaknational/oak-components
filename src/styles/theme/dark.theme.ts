@@ -95,14 +95,14 @@ export const oakDarkTheme: OakTheme = {
     "code-grey": "dark-rpf-syntax-grey",
     "code-pink": "dark-rpf-syntax-pink",
     "border-text-link-pressed": "lavender30",
-    "drop-shadow-standard": "rpf-syntax-green",
-    "drop-shadow-lemon": `rpf-syntax-green`,
-    "drop-shadow-wide-lemon": `rpf-syntax-green`,
-    "drop-shadow-centered-lemon": `rpf-syntax-green`,
-    "drop-shadow-grey": "rpf-syntax-green",
-    "drop-shadow-centered-grey": "rpf-syntax-green",
-    "drop-shadow-black": "rpf-syntax-green",
-    "drop-shadow-centred-standard": `rpf-syntax-green`,
+    "drop-shadow-standard": "transparent", // TODO
+    "drop-shadow-lemon": "dark-lemon",
+    "drop-shadow-wide-lemon": "dark-lemon",
+    "drop-shadow-centered-lemon": "dark-lemon",
+    "drop-shadow-grey": "grey30",
+    "drop-shadow-centered-grey": "grey30",
+    "drop-shadow-black": "white",
+    "drop-shadow-centred-standard": "transparent", // TODO
     "drop-shadow-none": `transparent`,
   },
 };
