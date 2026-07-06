@@ -111,6 +111,9 @@ importers:
       '@types/react-transition-group':
         specifier: ^4.4.12
         version: 4.4.12(@types/react@18.2.47)
+      '@types/rollup-plugin-peer-deps-external':
+        specifier: ^2.2.6
+        version: 2.2.6(rollup@4.60.1)
       '@types/styled-components':
         specifier: ^5.1.36
         version: 5.1.36
@@ -2796,6 +2799,11 @@ packages:
 
   '@types/resolve@1.20.2':
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
+
+  '@types/rollup-plugin-peer-deps-external@2.2.6':
+    resolution: {integrity: sha512-rR0p2+VZ5+RTyTA+MemzE7RQs3vkGNsYsEZIl+RahwrJOtEDEg+a5RCnigSwPkBtu4H7dyVHXyUZfiZU2dwjdw==}
+    peerDependencies:
+      rollup: '*'
 
   '@types/scheduler@0.16.5':
     resolution: {integrity: sha512-s/FPdYRmZR8SjLWGMCuax7r3qCWQw9QKHzXVukAuuIJkXkDRwp+Pu5LMIVFi0Fxbav35WURicYr8u1QsoybnQw==}
@@ -10502,6 +10510,10 @@ snapshots:
       csstype: 3.2.3
 
   '@types/resolve@1.20.2': {}
+
+  '@types/rollup-plugin-peer-deps-external@2.2.6(rollup@4.60.1)':
+    dependencies:
+      rollup: 4.60.1
 
   '@types/scheduler@0.16.5': {}
 

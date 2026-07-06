@@ -7,7 +7,7 @@
   "exports": {
     ".": {
       "import": {
-        "default": "./dist/npm/es/src/index.js",
+        "default": "./dist/npm/es/index.js",
         "types": "./dist/npm/es/types.d.ts"
       },
       "require": {
@@ -55,11 +55,13 @@
     "pnpm": ">=11"
   },
   "dependencies": {
-    "url": "^0.11.4",
-    "@tiptap/react": "^2.11.0",
     "@dnd-kit/core": "^6.3.1",
     "@dnd-kit/sortable": "^10.0.0",
-    "@dnd-kit/utilities": "^3.2.2"
+    "@dnd-kit/utilities": "^3.2.2",
+    "@tiptap/react": "^2.11.0",
+    "url": "^0.11.4",
+    "react-focus-on": "^3.10.2",
+    "react-transition-group": "^4.4.5"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.4",
@@ -88,6 +90,7 @@
     "@types/react-dom": "^18.3.7",
     "@types/react-test-renderer": "^18.0.7",
     "@types/react-transition-group": "^4.4.12",
+    "@types/rollup-plugin-peer-deps-external": "^2.2.6",
     "@types/styled-components": "^5.1.36",
     "@types/yargs": "^17.0.35",
     "@typescript-eslint/eslint-plugin": "^6.18.1",
@@ -113,8 +116,6 @@
     "prettier": "^3.8.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-focus-on": "^3.10.2",
-    "react-transition-group": "^4.4.5",
     "rollup": "^4.60.1",
     "rollup-plugin-dts": "^6.4.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
