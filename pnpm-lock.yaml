@@ -26,6 +26,12 @@ importers:
       next-cloudinary:
         specifier: '>=6.16.0'
         version: 6.16.0(next@15.5.15(@babel/core@7.28.4)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react@18.2.0)
+      react-focus-on:
+        specifier: ^3.10.2
+        version: 3.10.2(@types/react@18.2.47)(react@18.2.0)
+      react-transition-group:
+        specifier: ^4.4.5
+        version: 4.4.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       styled-components:
         specifier: '>=5.3.11'
         version: 5.3.11(@babel/core@7.28.4)(react-dom@18.2.0(react@18.2.0))(react-is@18.3.1)(react@18.2.0)
@@ -189,12 +195,6 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
-      react-focus-on:
-        specifier: ^3.10.2
-        version: 3.10.2(@types/react@18.2.47)(react@18.2.0)
-      react-transition-group:
-        specifier: ^4.4.5
-        version: 4.4.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       rollup:
         specifier: ^4.60.1
         version: 4.60.1
