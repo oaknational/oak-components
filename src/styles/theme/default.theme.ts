@@ -99,8 +99,8 @@ export const oakDefaultTheme: OakTheme = {
     "drop-shadow-lemon": "lemon",
     "drop-shadow-wide-lemon": "lemon",
     "drop-shadow-centered-lemon": "lemon",
-    "drop-shadow-grey": "grey30",
-    "drop-shadow-centered-grey": "grey30",
+    "drop-shadow-grey": "grey60",
+    "drop-shadow-centered-grey": "grey60",
     "drop-shadow-black": "black",
     "drop-shadow-centred-standard": "transparent", // TODO
     "drop-shadow-none": `transparent`,
