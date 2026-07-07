@@ -32,15 +32,14 @@ const TightLetterSpacing = styled(OakBox)`
   }
 `;
 
-export const OakQuote = (props: OakQuoteProps) => {
-  const {
-    quote,
-    color = "bg-decorative1-main",
-    authorName,
-    authorTitle,
-    authorImageSrc,
-    hasLeftBorder = true,
-  } = props;
+export const OakQuote = ({
+  quote,
+  color = "bg-decorative1-main",
+  authorName,
+  authorTitle,
+  authorImageSrc,
+  hasLeftBorder = true,
+}: OakQuoteProps) => {
 
   return (
     <OakFlex $width={"100%"} $maxWidth={"spacing-640"}>
