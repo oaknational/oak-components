@@ -34,6 +34,7 @@ const meta: Meta<typeof OakQuote> = {
     quote:
       "Using AI to support my planning and teaching wasn’t something I’d really considered until I came across Aila. To say I was blown away would be an understatement!",
     color: "bg-decorative1-main",
+    hasLeftBorder: true,
   },
 };
 

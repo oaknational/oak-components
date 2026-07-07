@@ -40,7 +40,6 @@ export const OakQuote = ({
   authorImageSrc,
   hasLeftBorder = true,
 }: OakQuoteProps) => {
-
   return (
     <OakFlex $width={"100%"} $maxWidth={"spacing-640"}>
       {hasLeftBorder && (
