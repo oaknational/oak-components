@@ -13,7 +13,7 @@ export type OakQuoteProps = {
   authorName?: string;
   authorTitle?: string;
   authorImageSrc?: string;
-  showLeftBorder?: boolean;
+  hasLeftBorder?: boolean;
 };
 
 const StyledAuthorImage = styled(OakImage)`
@@ -39,12 +39,12 @@ export const OakQuote = (props: OakQuoteProps) => {
     authorName,
     authorTitle,
     authorImageSrc,
-    showLeftBorder = true,
+    hasLeftBorder = true,
   } = props;
 
   return (
     <OakFlex $width={"100%"} $maxWidth={"spacing-640"}>
-      {showLeftBorder && (
+      {hasLeftBorder && (
         <OakFlex
           $width={"spacing-8"}
           $background={color}

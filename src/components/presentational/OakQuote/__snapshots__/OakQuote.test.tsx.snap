@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`OakQuote component matches snapshot (showLeftBorder=false) 1`] = `
+exports[`OakQuote component matches snapshot (hasLeftBorder=false) 1`] = `
 .c0 {
   width: 100%;
   max-width: 40rem;

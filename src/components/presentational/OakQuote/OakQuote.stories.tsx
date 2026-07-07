@@ -15,7 +15,7 @@ const meta: Meta<typeof OakQuote> = {
     authorName: { type: "string" },
     authorTitle: { type: "string" },
     authorImageSrc: { type: "string" },
-    showLeftBorder: { type: "boolean" },
+    hasLeftBorder: { type: "boolean" },
   },
   parameters: {
     controls: {
@@ -25,7 +25,7 @@ const meta: Meta<typeof OakQuote> = {
         "authorName",
         "authorTitle",
         "authorImageSrc",
-        "showLeftBorder",
+        "hasLeftBorder",
       ],
     },
   },
@@ -83,7 +83,7 @@ export const HiddenLeftBorder: Story = {
     </OakMaxWidth>
   ),
   args: {
-    showLeftBorder: false,
+    hasLeftBorder: false,
     authorName: "Suzanne",
     authorTitle: "Headteacher at Maple Grove Primary School",
     authorImageSrc: `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/test-images/test_quote_author.jpg`,
