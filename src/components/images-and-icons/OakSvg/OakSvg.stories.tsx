@@ -6,6 +6,7 @@ import { OakSvg, OakSvgProps } from "./OakSvg";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
+import { HeaderUnderline as HeaderUnderlineComponent } from "@/svgs";
 
 const meta: Meta<typeof OakSvg> = {
   component: OakSvg,
@@ -31,7 +32,7 @@ export const HeaderUnderline: Story = {
       <OakSvg {...args} />
     </OakFlex>
   ),
-  args: { $color: "text-primary", name: "header-underline" },
+  args: { $color: "text-primary", svg: <HeaderUnderlineComponent /> },
   parameters: {
     controls: {
       include: ["name", "$width", "$height", ...Object.keys(colorArgTypes)],

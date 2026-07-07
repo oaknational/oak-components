@@ -15,6 +15,7 @@ import { parseColor } from "@/styles/helpers/parseColor";
 import { OakUiRoleToken } from "@/styles";
 import { SizeStyleProps, sizeStyle } from "@/styles/utils/sizeStyle";
 import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
+import { Underline } from "@/svgs";
 
 export type OakLeftAlignedButtonProps = Omit<
   InternalShadowRectButtonProps,
@@ -230,7 +231,7 @@ const TextWithUnderline = ({ children }: { children: ReactNode }) => (
   <OakBox $position={"relative"} $textAlign={"left"}>
     <OakSpan $font={"body-3-bold"}>{children}</OakSpan>
     <StyledOakSvg
-      name="underline"
+      svg={<Underline />}
       data-state="selected"
       data-testid="selected-underline"
     />
