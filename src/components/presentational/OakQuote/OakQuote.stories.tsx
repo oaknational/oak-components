@@ -4,6 +4,7 @@ import { StoryObj, Meta } from "@storybook/nextjs";
 import { OakQuote } from "./OakQuote";
 
 import { OakMaxWidth } from "@/components/layout-and-structure/OakMaxWidth";
+import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 
 const meta: Meta<typeof OakQuote> = {
   component: OakQuote,
@@ -11,7 +12,7 @@ const meta: Meta<typeof OakQuote> = {
   title: "components/Presentational/OakQuote",
   argTypes: {
     quote: { type: "string" },
-    color: { type: "string" },
+    color: { options: colorArgTypes.$color.options },
     authorName: { type: "string" },
     authorTitle: { type: "string" },
     authorImageSrc: { type: "string" },
