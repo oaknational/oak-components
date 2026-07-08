@@ -78,6 +78,37 @@ export const MintPageBackground: Story = {
   },
 };
 
+export const MultilineQuote: Story = {
+  render: (args) => (
+    <OakMaxWidth>
+      <OakQuote {...args} />
+    </OakMaxWidth>
+  ),
+  args: {
+    quote: [
+      "Using AI to support my planning and teaching wasn’t something I’d really considered until I came across Aila.",
+      "To say I was blown away would be an understatement!",
+    ],
+  },
+};
+
+export const MultilineQuoteWithAuthor: Story = {
+  render: (args) => (
+    <OakMaxWidth>
+      <OakQuote {...args} />
+    </OakMaxWidth>
+  ),
+  args: {
+    quote: [
+      "Using AI to support my planning and teaching wasn’t something I’d really considered until I came across Aila.",
+      "To say I was blown away would be an understatement!",
+    ],
+    authorName: "Suzanne",
+    authorTitle: "Headteacher at Maple Grove Primary School",
+    authorImageSrc: `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/test-images/test_quote_author.jpg`,
+  },
+};
+
 export const HiddenLeftBorder: Story = {
   render: (args) => (
     <OakMaxWidth>
