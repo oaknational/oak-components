@@ -50,16 +50,6 @@ exports[`OakUnitListItem matches snapshot 1`] = `
 }
 
 .c20 {
-  position: relative;
-  width: 2rem;
-  min-width: 2rem;
-  height: 2rem;
-  min-height: 2rem;
-  display: block;
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
-.c22 {
   width: 100%;
   padding: 1rem;
   background: #ffffff;
@@ -71,16 +61,16 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c24 {
+.c22 {
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c26 {
+.c24 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c28 {
+.c26 {
   width: 2.5rem;
   min-width: 2.5rem;
   height: 2.5rem;
@@ -153,14 +143,14 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   justify-content: end;
 }
 
-.c23 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c25 {
+.c23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -171,7 +161,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   gap: 1rem;
 }
 
-.c27 {
+.c25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -179,7 +169,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   gap: 1rem;
 }
 
-.c29 {
+.c27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -194,7 +184,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   justify-content: center;
 }
 
-.c31 {
+.c29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -239,7 +229,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   white-space: nowrap;
 }
 
-.c32 {
+.c30 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -251,7 +241,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   color: #222222;
 }
 
-.c30 {
+.c28 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
@@ -283,12 +273,6 @@ exports[`OakUnitListItem matches snapshot 1`] = `
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
-}
-
-.c21 {
-  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-  object-fit: contain;
 }
 
 .c6 {
@@ -335,7 +319,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c22 {
+  .c20 {
     display: none;
   }
 }
@@ -350,7 +334,7 @@ exports[`OakUnitListItem matches snapshot 1`] = `
 }
 
 @media (min-width:750px) {
-  .c23 {
+  .c21 {
     display: none;
   }
 }
@@ -416,44 +400,31 @@ exports[`OakUnitListItem matches snapshot 1`] = `
           >
             0 lessons
           </p>
-          <span
-            class="c20"
-          >
-            <img
-              alt=""
-              class="c21"
-              data-nimg="fill"
-              decoding="async"
-              loading="lazy"
-              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1707752509/icons/vk9xxxhnsltsickom6q9.svg"
-              style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
-            />
-          </span>
         </div>
       </a>
     </div>
     <div
-      class="c22 c23 c3"
+      class="c20 c21 c3"
       title="Lesson 1"
     >
       <div
-        class="c24 c25"
+        class="c22 c23"
       >
         <a
-          class="c26 c27"
+          class="c24 c25"
           href=""
         >
           <div
-            class="c28 c29"
+            class="c26 c27"
           >
             <h3
-              class="c30"
+              class="c28"
             >
               1
             </h3>
           </div>
           <div
-            class="c24"
+            class="c22"
           >
             <p
               class="c14"
@@ -463,13 +434,13 @@ exports[`OakUnitListItem matches snapshot 1`] = `
           </div>
         </a>
         <div
-          class="c26 c31"
+          class="c24 c29"
         >
           <p
-            class="c32"
+            class="c30"
           />
           <p
-            class="c32"
+            class="c30"
           >
             0 lessons
           </p>
