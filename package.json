@@ -1,6 +1,6 @@
 {
   "name": "@oaknational/oak-components",
-  "version": "2.42.0",
+  "version": "2.43.0",
   "licence": "MIT",
   "packageManager": "pnpm@11.2.0",
   "description": "Shared components for Oak applications",
