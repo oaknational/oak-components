@@ -7,7 +7,6 @@ import { OakHeading } from "@/components/typography/OakHeading";
 import { OakIcon } from "@/components/images-and-icons/OakIcon";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
-import { OakSaveButton } from "@/components/owa/OakSaveButton/OakSaveButton";
 
 const StyledOptionalityListItem = styled(OakFlex)<{ $disabled?: boolean }>`
   outline: none;
@@ -162,16 +161,6 @@ export const OakUnitListOptionalityItemCard = (
                 />
               )}
             </OakFlex>
-            {onSave && (
-              <OakSaveButton
-                isSaved={isSaved ?? false}
-                isLoading={isSaving ?? false}
-                onSave={() => onSave(props.slug)}
-                unavailable={unavailable}
-                saveButtonId={`save-button-${props.slug}`}
-                title={props.title}
-              />
-            )}
           </OakFlex>
         </OakFlex>
       </StyledOptionalityListItem>

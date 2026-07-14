@@ -7,10 +7,8 @@ import { OakHeading } from "@/components/typography/OakHeading";
 import { OakLI } from "@/components/typography/OakLI";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakSpan } from "@/components/typography/OakSpan";
-import { OakIcon } from "@/components/images-and-icons/OakIcon";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
-import { OakSaveButton } from "@/components/owa/OakSaveButton/OakSaveButton";
 
 const FlexWithFocus = styled(OakFlex)`
   animation-timing-function: ease-out;
@@ -78,10 +76,6 @@ export type OakUnitListItemProps<element extends ElementType> = {
   href: string;
   firstItemRef?: MutableRefObject<HTMLAnchorElement | null> | null | undefined;
   onClick?: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
-  onSave?: () => void;
-  isSaved?: boolean;
-  isSaving?: boolean;
-  saveButtonId?: string;
   as?: element;
 };
 
@@ -99,11 +93,7 @@ export const OakUnitListItem = <element extends ElementType = "a">(
     onClick,
     index,
     isLegacy,
-    onSave,
-    isSaved,
-    isSaving,
     firstItemRef,
-    saveButtonId,
     as = "a",
     ...rest
   } = props;
@@ -122,7 +112,7 @@ export const OakUnitListItem = <element extends ElementType = "a">(
         {...rest}
       >
         <FlexWithFocus
-          $pr={onSave ? "spacing-8" : "spacing-0"}
+          $pr="spacing-0"
           $borderRadius="border-radius-m"
           $gap="spacing-16"
           $alignItems="center"
@@ -180,29 +170,11 @@ export const OakUnitListItem = <element extends ElementType = "a">(
             $color={unavailable ? "text-disabled" : "text-primary"}
             $alignItems="center"
             $justifyContent="end"
-            $minWidth={onSave ? "spacing-100" : "spacing-160"}
+            $minWidth="spacing-160"
           >
             <OakP $whiteSpace="nowrap">{lessonCount}</OakP>
-
-            {!onSave && (
-              <OakIcon
-                iconName="chevron-right"
-                iconWidth="spacing-32"
-                $colorFilter={unavailable ? "text-disabled" : "text-primary"}
-              />
-            )}
           </OakFlex>
         </FlexWithFocus>
-        {onSave && (
-          <OakSaveButton
-            onSave={onSave}
-            isSaved={isSaved ?? false}
-            isLoading={isSaving ?? false}
-            unavailable={unavailable}
-            saveButtonId={saveButtonId}
-            title={props.title}
-          />
-        )}
       </StyledUnitListItem>
       {/* Mobile layout */}
       <StyledUnitListItem
@@ -265,15 +237,6 @@ export const OakUnitListItem = <element extends ElementType = "a">(
             >
               {lessonCount}
             </OakP>
-            {onSave && (
-              <OakSaveButton
-                onSave={onSave}
-                isSaved={isSaved ?? false}
-                isLoading={isSaving ?? false}
-                unavailable={unavailable}
-                title={props.title}
-              />
-            )}
           </OakFlex>
         </OakFlex>
       </StyledUnitListItem>
