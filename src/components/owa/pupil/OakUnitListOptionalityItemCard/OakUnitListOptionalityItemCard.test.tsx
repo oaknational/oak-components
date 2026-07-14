@@ -33,7 +33,7 @@ describe("OakUnitListOptionalityItemCard", () => {
     expect(container).toMatchSnapshot();
   });
 
-  it("renders an anchor when the item is not disabled", () => {
+  it("renders an heading when the item is not disabled", () => {
     const { getByTestId } = renderWithTheme(
       <OakUnitListOptionalityItemCard
         data-testid="unit-card"

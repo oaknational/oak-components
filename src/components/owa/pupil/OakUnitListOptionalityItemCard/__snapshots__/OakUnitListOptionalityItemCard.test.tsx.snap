@@ -136,10 +136,6 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
   transition-duration: 300ms;
 }
 
-.c3:hover {
-  cursor: default;
-}
-
 .c3:hover .hover-text {
   -webkit-text-decoration: underline;
   text-decoration: underline;

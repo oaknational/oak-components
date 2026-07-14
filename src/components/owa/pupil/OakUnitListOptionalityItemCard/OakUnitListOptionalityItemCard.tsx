@@ -14,10 +14,6 @@ const StyledOptionalityListItem = styled(OakFlex)<{ $disabled?: boolean }>`
   animation-timing-function: ease-out;
   transition-duration: 300ms;
 
-  &:hover {
-    cursor: default;
-  }
-
   &:hover .hover-text {
     text-decoration: underline;
   }
@@ -108,7 +104,7 @@ export const OakUnitListOptionalityItemCard = (
         as={unavailable ? "div" : "a"}
         href={unavailable ? undefined : href}
         onClick={unavailable ? undefined : onClick}
-        ref={firstItemRef}
+        ref={unavailable ? undefined : (firstItemRef ?? undefined)}
         $ph="spacing-12"
         $pv="spacing-16"
         $background={"bg-decorative3-very-subdued"}
