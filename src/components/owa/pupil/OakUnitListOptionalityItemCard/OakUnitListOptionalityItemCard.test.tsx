@@ -41,12 +41,10 @@ describe("OakUnitListOptionalityItemCard", () => {
         lessonCount={"0 lessons"}
         href={"/test-path"}
         slug="test"
-        onSave={() => {}}
-        isSaved={false}
       />,
     );
 
-    const link = within(getByTestId("unit-card")).getByRole("link");
+    const link = within(getByTestId("unit-card")).getByRole("heading");
     expect(link).toBeInTheDocument();
   });
 

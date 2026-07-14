@@ -9,6 +9,7 @@ import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakSpan } from "@/components/typography/OakSpan";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
+import { OakIcon } from "@/components/images-and-icons";
 
 const FlexWithFocus = styled(OakFlex)`
   animation-timing-function: ease-out;
@@ -173,6 +174,11 @@ export const OakUnitListItem = <element extends ElementType = "a">(
             $minWidth="spacing-160"
           >
             <OakP $whiteSpace="nowrap">{lessonCount}</OakP>
+            <OakIcon
+              iconName="chevron-right"
+              iconWidth="spacing-32"
+              $colorFilter={unavailable ? "text-disabled" : "text-primary"}
+            />
           </OakFlex>
         </FlexWithFocus>
       </StyledUnitListItem>
