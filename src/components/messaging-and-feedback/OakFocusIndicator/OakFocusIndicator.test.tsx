@@ -35,7 +35,6 @@ describe("OakFocusIndicator", () => {
       />,
     );
 
-    // expect(container.tagName).toBe("LI");
     expect(container.firstElementChild!.tagName).toBe("LI");
     expect(container).toMatchSnapshot();
   });
