@@ -25,6 +25,10 @@ const meta: Meta<typeof OakCard> = {
   component: OakCard,
   tags: ["autodocs"],
   argTypes: {
+    as: {
+      options: ["div", "li"],
+      defaultValue: "div",
+    },
     headingLevel: {
       options: ["h1", "h2", "h3", "h4", "h5", "h6"],
     },
@@ -53,6 +57,7 @@ const meta: Meta<typeof OakCard> = {
   parameters: {
     controls: {
       include: [
+        "as",
         "heading",
         "headingLevel",
         "href",
