@@ -145,27 +145,26 @@ export const RowOrientationWithRectangularImage: Story = {
 };
 
 export const OakSubjectLinkCard: Story = {
-  render: ({ href = "https://example.com" }) => (
+  render: (args) => (
     <OakBox>
-      <OakCard
-        heading="Check out our new digital literacy lessons!"
-        headingLevel="h1"
-        href={href}
-        cardWidth="100%"
-        imageSrc={generateOakIconURL("subject-digital-literacy")}
-        imageAlt="Illustration representing digital literacy"
-        subCopy="Lessons offering practical knowledge and skills, developed independently of the national curriculum."
-        subCopyColor="text-subdued"
-        tagBackground="bg-decorative1-main"
-        linkText="Go to new digital literacy lessons"
-        linkIconName="chevron-right"
-        cardOrientation={["column", "row"]}
-        imageBackgroundColor="bg-decorative1-main"
-      />
+      <OakCard {...args} />
     </OakBox>
   ),
   args: {
     href: "https://example.com",
+    heading: "Check out our new digital literacy lessons!",
+    headingLevel: "h1",
+    cardWidth: "100%",
+    imageSrc: generateOakIconURL("subject-digital-literacy"),
+    imageAlt: "Illustration representing digital literacy",
+    subCopy:
+      "Lessons offering practical knowledge and skills, developed independently of the national curriculum.",
+    subCopyColor: "text-subdued",
+    tagBackground: "bg-decorative1-main",
+    linkText: "Go to new digital literacy lessons",
+    linkIconName: "chevron-right",
+    cardOrientation: ["column", "row"],
+    imageBackgroundColor: "bg-decorative1-main",
   },
 };
 
