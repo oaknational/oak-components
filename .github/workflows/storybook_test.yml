@@ -25,7 +25,7 @@ jobs:
       - run: pnpm install --verbose
 
       - name: Install Playwright
-        run: npx playwright install --with-deps
+        run: pnpm exec playwright install --with-deps
 
       - name: Run Storybook tests
         run: pnpm run test:storybook
