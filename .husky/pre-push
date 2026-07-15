@@ -10,6 +10,7 @@ if [ "$branch" = "main" ]; then
   exit 1
 fi
 
-npm run check-types
-npm run test:ci
-npm run build
+pnpm run check-types
+pnpm run test:storybook
+pnpm run test:ci
+pnpm run build
