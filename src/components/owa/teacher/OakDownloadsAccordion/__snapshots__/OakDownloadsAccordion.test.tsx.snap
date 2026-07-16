@@ -134,7 +134,7 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
 
 .c44 {
   font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1rem;
   line-height: 1.5rem;
   -webkit-letter-spacing: -0.005rem;

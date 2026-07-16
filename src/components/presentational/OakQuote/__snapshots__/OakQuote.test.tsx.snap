@@ -87,7 +87,7 @@ exports[`OakQuote component matches snapshot (hasLeftBorder=false) 1`] = `
 
 .c13 {
   font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1rem;
   line-height: 1.5rem;
   -webkit-letter-spacing: -0.005rem;
@@ -338,7 +338,7 @@ exports[`OakQuote component matches snapshot 1`] = `
 
 .c15 {
   font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1rem;
   line-height: 1.5rem;
   -webkit-letter-spacing: -0.005rem;
