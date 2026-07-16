@@ -84,7 +84,7 @@ describe("RadioGroup", () => {
     const radio1 = getAllByTestId("radio-1");
     const firstRadio = radio1[0] as HTMLElement;
 
-    expect(firstRadio).toHaveStyle("font-weight: 700");
+    expect(firstRadio).toHaveStyle("font-weight: 500");
     expect(firstRadio).toHaveStyle("font-size: 1.125rem");
     expect(firstRadio).toHaveStyle("line-height: 1.75rem");
     expect(firstRadio).toHaveStyle("letter-spacing: -0.005rem");

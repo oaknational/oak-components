@@ -36,7 +36,7 @@ exports[`OakPromoTag matches snapshot 1`] = `
   color: #ffe555;
   background: #222222;
   font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 0.875rem;
   line-height: 1.25rem;
   -webkit-letter-spacing: -0.005rem;
@@ -67,7 +67,7 @@ exports[`OakPromoTag matches snapshot 1`] = `
 
 @media (min-width:750px) {
   .c5 {
-    font-weight: 700;
+    font-weight: 500;
   }
 }
 
