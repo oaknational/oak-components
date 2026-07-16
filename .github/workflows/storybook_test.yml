@@ -2,6 +2,9 @@ name: Storybook Test
 
 on: deployment_status
 
+permissions:
+  contents: read
+
 jobs:
   storybook-tests:
     if: github.event.deployment_status.state == 'success'
