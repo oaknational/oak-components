@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`OakCopyLinkButton matches snapshot 1`] = `
-.c0 {
+.c1 {
   display: none;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c1 {
+.c2 {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -15,7 +15,7 @@ exports[`OakCopyLinkButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c3 {
+.c4 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -24,11 +24,11 @@ exports[`OakCopyLinkButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c6 {
+.c7 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c9 {
+.c10 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -38,12 +38,12 @@ exports[`OakCopyLinkButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c11 {
+.c12 {
   display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -62,7 +62,7 @@ exports[`OakCopyLinkButton matches snapshot 1`] = `
   gap: 0.25rem;
 }
 
-.c8 {
+.c9 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 700;
   font-size: 0.875rem;
@@ -74,7 +74,7 @@ exports[`OakCopyLinkButton matches snapshot 1`] = `
   text-align: left;
 }
 
-.c4 {
+.c5 {
   background: none;
   color: inherit;
   border: none;
@@ -97,24 +97,37 @@ exports[`OakCopyLinkButton matches snapshot 1`] = `
   border-radius: 0.25rem;
 }
 
-.c4:disabled {
+.c5:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c10 {
+.c11 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
 }
 
-.c5 {
+.c0 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.c6 {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-.c5:hover {
+.c6:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #222222;
@@ -122,99 +135,104 @@ exports[`OakCopyLinkButton matches snapshot 1`] = `
   border-color: #222222;
 }
 
-.c5:hover [data-state="selected"] {
+.c6:hover [data-state="selected"] {
   display: none;
 }
 
-.c5:active {
+.c6:active {
   background: #ffffff;
   border-color: #222222;
   color: #222222;
 }
 
-.c5:active [data-state="selected"] {
+.c6:active [data-state="selected"] {
   display: none;
 }
 
-.c5:disabled {
+.c6:disabled {
   background: #e4e4e4;
   border-color: #808080;
   color: #808080;
 }
 
-.c5:disabled [data-state="selected"] {
+.c6:disabled [data-state="selected"] {
   display: none;
 }
 
-.c2 .grey-shadow:has(+ * + .internal-button:focus-visible) {
+.c3 .grey-shadow:has(+ * + .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c2 .yellow-shadow:has(+ .internal-button:focus-visible) {
+.c3 .yellow-shadow:has(+ .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
 }
 
-.c2 .yellow-shadow:has(+ .internal-button:hover),
-.c2 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
+.c3 .yellow-shadow:has(+ .internal-button:hover),
+.c3 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c2 .grey-shadow:has(+ * + .internal-button:hover) {
+.c3 .grey-shadow:has(+ * + .internal-button:hover) {
   box-shadow: none;
 }
 
-.c2 .grey-shadow:has(+ * + .internal-button:active) {
+.c3 .grey-shadow:has(+ * + .internal-button:active) {
   box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c2 .yellow-shadow:has(+ .internal-button:active) {
+.c3 .yellow-shadow:has(+ .internal-button:active) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
 @media (min-width:750px) {
-  .c0 {
+  .c1 {
     display: block;
   }
 }
 
 @media (min-width:750px) {
-  .c11 {
+  .c12 {
     display: none;
   }
 }
 
 <div>
-  <div
+  <span
     class="c0"
+    data-testid="announce"
+    role="status"
+  />
+  <div
+    class="c1"
   >
     <div
-      class="c1 c2"
+      class="c2 c3"
     >
       <div
-        class="c3 grey-shadow"
+        class="c4 grey-shadow"
       />
       <div
-        class="c3 yellow-shadow"
+        class="c4 yellow-shadow"
       />
       <button
-        class="c4 c5 internal-button"
+        class="c5 c6 internal-button"
         data-testid="copy-link-desktop-button"
       >
         <div
-          class="c6 c7"
+          class="c7 c8"
         >
           <span
-            class="c8"
+            class="c9"
           >
             Copy link
           </span>
           <span
             aria-hidden="true"
-            class="c9"
+            class="c10"
           >
             <img
               alt=""
-              class="c10"
+              class="c11"
               data-nimg="fill"
               decoding="async"
               loading="lazy"
@@ -227,25 +245,25 @@ exports[`OakCopyLinkButton matches snapshot 1`] = `
     </div>
   </div>
   <div
-    class="c11"
+    class="c12"
   >
     <div
-      class="c1 c2"
+      class="c2 c3"
     >
       <div
-        class="c3 grey-shadow"
+        class="c4 grey-shadow"
       />
       <div
-        class="c3 yellow-shadow"
+        class="c4 yellow-shadow"
       />
       <button
-        class="c4 c5 internal-button"
+        class="c5 c6 internal-button"
       >
         <div
-          class="c6 c7"
+          class="c7 c8"
         >
           <span
-            class="c8"
+            class="c9"
           >
             Copy link
           </span>

@@ -45,7 +45,9 @@ export const OakCopyLinkButton = ({ href }: OakCopyLinkButtonProps) => {
 
   return (
     <>
-      <OakScreenReader role="status">{announce}</OakScreenReader>
+      <OakScreenReader role="status" data-testid="announce">
+        {announce}
+      </OakScreenReader>
       <OakBox $display={["none", "block"]}>
         <OakSmallSecondaryButton
           iconName={active ? "copy" : "tick"}

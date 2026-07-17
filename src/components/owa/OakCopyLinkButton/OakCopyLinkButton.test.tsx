@@ -78,6 +78,6 @@ describe(OakCopyLinkButton, () => {
 
     const anouncement = getByTestId("announce");
     expect(anouncement).toBeInTheDocument();
-    expect(anouncement).toHaveAttribute("aria-live", "polite");
+    expect(anouncement).toHaveAttribute("role", "status");
   });
 });
