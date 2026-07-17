@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { OakSmallSecondaryButton } from "@/components/buttons/OakSmallSecondaryButton";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
+import { OakScreenReader } from "@/components/messaging-and-feedback";
 
 type OakCopyLinkButtonProps = {
   /**
@@ -44,6 +45,7 @@ export const OakCopyLinkButton = ({ href }: OakCopyLinkButtonProps) => {
 
   return (
     <>
+      <OakScreenReader role="status">{announce}</OakScreenReader>
       <OakBox $display={["none", "block"]}>
         <OakSmallSecondaryButton
           iconName={active ? "copy" : "tick"}
@@ -60,17 +62,6 @@ export const OakCopyLinkButton = ({ href }: OakCopyLinkButtonProps) => {
           {label}
         </OakSmallSecondaryButton>
       </OakBox>
-      {/* Live region for aria-live announcements */}
-      {announce && (
-        <div
-          aria-relevant="all"
-          aria-live="polite"
-          style={{ position: "absolute", left: "-9999px" }}
-          data-testid="announce"
-        >
-          {announce}
-        </div>
-      )}
     </>
   );
 };
