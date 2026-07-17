@@ -1,6 +1,5 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { within } from "@testing-library/react";
 
 import { OakUnitListOptionalityItemCard } from "./OakUnitListOptionalityItemCard";
 
@@ -33,7 +32,7 @@ describe("OakUnitListOptionalityItemCard", () => {
     expect(container).toMatchSnapshot();
   });
 
-  it("renders an anchor when the item is not disabled", () => {
+  it("renders a link when the item is not disabled", () => {
     const { getByTestId } = renderWithTheme(
       <OakUnitListOptionalityItemCard
         data-testid="unit-card"
@@ -41,13 +40,27 @@ describe("OakUnitListOptionalityItemCard", () => {
         lessonCount={"0 lessons"}
         href={"/test-path"}
         slug="test"
-        onSave={() => {}}
-        isSaved={false}
       />,
     );
 
-    const link = within(getByTestId("unit-card")).getByRole("link");
-    expect(link).toBeInTheDocument();
+    const link = getByTestId("unit-card");
+    expect(link).toHaveRole("link");
+  });
+
+  it("does not render a link when the item is disabled", () => {
+    const { getByTestId } = renderWithTheme(
+      <OakUnitListOptionalityItemCard
+        data-testid="unit-card"
+        title={"Test unit"}
+        lessonCount={"0 lessons"}
+        href={"/test-path"}
+        unavailable
+        slug="test"
+      />,
+    );
+
+    const link = getByTestId("unit-card");
+    expect(link).not.toHaveAttribute("href");
   });
 
   it("renders the number of lessons when provided", () => {

@@ -136,7 +136,6 @@ export const componentImportMap: Record<string, string> = {
   "components/molecules/OakPromoTag": "components/owa/OakPromoTag",
   "components/molecules/OakRadioTile": "components/owa/OakRadioTile",
   "components/molecules/OakRoundIcon": "components/owa/OakRoundIcon",
-  "components/molecules/OakSaveButton": "components/owa/OakSaveButton",
   "components/molecules/OakSaveCount": "components/owa/OakSaveCount",
   "components/molecules/OakScaleImageButton":
     "components/owa/OakScaleImageButton",
