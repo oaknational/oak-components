@@ -1,18 +1,6 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
-.c11 {
-  color: #222222;
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
-  letter-spacing: 0.0115rem;
-}
-
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -51,6 +39,12 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
   min-height: 2rem;
   display: block;
   font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c13 {
+  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  object-fit: contain;
 }
 
 .c1 {
@@ -108,6 +102,18 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
   justify-content: flex-end;
 }
 
+.c11 {
+  color: #222222;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  -webkit-letter-spacing: 0.0115rem;
+  -moz-letter-spacing: 0.0115rem;
+  -ms-letter-spacing: 0.0115rem;
+  letter-spacing: 0.0115rem;
+}
+
 .c6 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
@@ -119,12 +125,6 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
   margin-bottom: 0.75rem;
   color: #222222;
-}
-
-.c13 {
-  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
-  object-fit: contain;
 }
 
 .c3 {
@@ -175,18 +175,22 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
   <div
     class="c0 c1"
   >
-    <div
+    <a
       class="c2 c1 c3"
+      href=""
       title="Lesson 1"
     >
       <div
         class="c4 c5"
       >
         <h3
-          class="c6 c7 hover-text"
-          href=""
+          class="c6 c7"
         >
-          Lesson 1
+          <span
+            class="hover-text"
+          >
+            Lesson 1
+          </span>
         </h3>
         <div
           class="c8 c9"
@@ -215,7 +219,7 @@ exports[`OakUnitListOptionalityItemCard matches snapshot 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </a>
   </div>
 </div>
 `;

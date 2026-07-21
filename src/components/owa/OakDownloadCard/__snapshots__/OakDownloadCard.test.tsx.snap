@@ -42,7 +42,7 @@ exports[`OakDownloadCard matches snapshot with fileSizeSlot 1`] = `
 
 .c12 {
   font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1rem;
   line-height: 1.5rem;
   -webkit-letter-spacing: -0.005rem;
@@ -385,7 +385,7 @@ exports[`OakDownloadCard matches snapshot without fileSizeSlot 1`] = `
 
 .c12 {
   font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1rem;
   line-height: 1.5rem;
   -webkit-letter-spacing: -0.005rem;

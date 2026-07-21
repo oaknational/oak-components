@@ -36,6 +36,13 @@ describe("OakCard", () => {
     expect(container).toMatchSnapshot();
   });
 
+  it("matches snapshot when passed as='li'", () => {
+    const { container } = renderWithTheme(<OakCard {...allProps} as="li" />);
+
+    expect(container.firstElementChild!.tagName).toBe("LI");
+    expect(container).toMatchSnapshot();
+  });
+
   it("renders card with only heading and href when passed only required props", () => {
     renderWithTheme(<OakCard {...requiredProps} />);
 

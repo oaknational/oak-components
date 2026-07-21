@@ -29,7 +29,7 @@ exports[`OakDraggable matches snapshot 1`] = `
 
 .c7 {
   font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.125rem;
   line-height: 1.75rem;
   -webkit-letter-spacing: -0.005rem;

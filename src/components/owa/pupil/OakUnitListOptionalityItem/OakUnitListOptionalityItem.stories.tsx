@@ -120,23 +120,3 @@ export const Default: Story = {
   ),
   args: {},
 };
-
-export const WithSave: Story = {
-  render: (args) => (
-    <>
-      <OakUnitListOptionalityItem {...args} />
-      {optionalityItemData.map((item) => (
-        <OakUnitListOptionalityItem
-          {...item}
-          firstItemRef={undefined}
-          onSave={() => console.log("onSave!")}
-          getIsSaved={() => Math.random() > 0.5}
-        />
-      ))}
-    </>
-  ),
-  args: {
-    onSave: () => console.log("onSave!"),
-    getIsSaved: () => Math.random() > 0.5,
-  },
-};

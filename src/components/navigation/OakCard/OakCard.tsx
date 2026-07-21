@@ -27,6 +27,7 @@ import {
 } from "@/styles/utils/responsiveStyle";
 
 export type OakCardProps = {
+  as?: "div" | "li";
   /**
    * The heading text of the card.
    */
@@ -191,6 +192,7 @@ const StyledOakFlex = styled(OakFlex)<StyledFlexProps>`
  * The image aspect ratio can be set to either 1:1 or 4:3.
  */
 export const OakCard = ({
+  as = "div",
   heading,
   headingLevel = "h3",
   href,
@@ -210,6 +212,7 @@ export const OakCard = ({
 }: OakCardProps) => {
   return (
     <OakFocusIndicator
+      as={as}
       $background={"bg-primary"}
       hoverBackground={hoverBackground}
       $height={"100%"}
