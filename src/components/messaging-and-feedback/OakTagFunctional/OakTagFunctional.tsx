@@ -1,11 +1,11 @@
 import React from "react";
 
+import { OakBox } from "@/components/layout-and-structure/OakBox";
 import {
   OakFlex,
   OakFlexProps,
 } from "@/components/layout-and-structure/OakFlex";
 import { OakIcon, OakIconName } from "@/components/images-and-icons/OakIcon";
-import { OakLabel } from "@/components/form-elements/OakLabel";
 
 export type OakTagFunctionalProps = {
   label: string;
@@ -35,7 +35,7 @@ export const OakTagFunctional = (props: OakTagFunctionalProps) => {
       {...oakFlexProps}
     >
       {leadingIcon}
-      <OakLabel as={useSpan ? "span" : undefined}>{label}</OakLabel>
+      <OakBox as={useSpan ? "span" : undefined}>{label}</OakBox>
       {trailingIcon}
     </OakFlex>
   );
