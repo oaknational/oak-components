@@ -43,7 +43,6 @@ export default function RootLayout({ children }) {
 
 To enable SSR of styles and avoid a flicker of unstyled content you'll need to configure your Next.js app to support [styled-components](https://nextjs.org/docs/app/building-your-application/styling/css-in-js#styled-components)
 
-
 ## Development
 
 1. Copy the example env config `cp .env.example .env`
@@ -82,6 +81,13 @@ Sometimes it isn't enough to develop entirely inside Storybook and it might be n
 5. To uninstall the local package you can run `yalc remove @oaknational/oak-components` inside the target app
    - 🚨 if you're an Oak engineer developing in OWA there is a convenience script and you should use `pnpm run remove-local-components` instead
      as it will automatically re-install the library from NPM.
+
+## Testing Stories
+
+To check that all stories render successfully, you can use [@storybook/test-runner](https://storybook.js.org/docs/writing-tests/integrations/test-runner). These tests will also run as part of the pre-push hook and against the deployed preview on PRs. To run locally:
+
+1. Ensure browsers are installed once: `pnpm rexec playwright install`
+2. Run tests with `pnpm run test:storybook`
 
 ## Organisational structure
 
