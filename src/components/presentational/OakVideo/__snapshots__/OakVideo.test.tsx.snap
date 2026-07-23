@@ -6,11 +6,17 @@ exports[`OakVideo renders correctly 1`] = `
 }
 
 .c2 {
+  border: 0.125rem solid;
+  border-color: #222222;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c3 {
   aspect-ratio: 30/17;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c8 {
+.c9 {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -19,7 +25,7 @@ exports[`OakVideo renders correctly 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c10 {
+.c11 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -28,7 +34,7 @@ exports[`OakVideo renders correctly 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c14 {
+.c16 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -38,7 +44,7 @@ exports[`OakVideo renders correctly 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c17 {
+.c18 {
   height: 22.5rem;
   padding: 1rem;
   background: #e4e4e4;
@@ -47,7 +53,7 @@ exports[`OakVideo renders correctly 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c19 {
+.c20 {
   overflow-y: auto;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -63,7 +69,7 @@ exports[`OakVideo renders correctly 1`] = `
   gap: 1.5rem;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -74,7 +80,7 @@ exports[`OakVideo renders correctly 1`] = `
   gap: 0.5rem;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -85,7 +91,7 @@ exports[`OakVideo renders correctly 1`] = `
   gap: 1rem;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -97,7 +103,7 @@ exports[`OakVideo renders correctly 1`] = `
   gap: 1rem;
 }
 
-.c13 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -113,27 +119,27 @@ exports[`OakVideo renders correctly 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.25rem;
 }
 
-.c18 {
+.c19 {
   display: none;
   gap: 2rem;
 }
 
-.c16 {
+.c15 {
   font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: 500;
+  font-size: 0.875rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
-  letter-spacing: 0.0115rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
   text-align: left;
 }
 
-.c11 {
+.c12 {
   background: none;
   color: inherit;
   border: none;
@@ -146,91 +152,91 @@ exports[`OakVideo renders correctly 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
   color: #222222;
   background: #ffffff;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
   display: inline-block;
   border: 0.125rem solid;
   border-color: #222222;
   border-radius: 0.25rem;
 }
 
-.c11:disabled {
+.c12:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c15 {
+.c17 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
 }
 
-.c12 {
+.c13 {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-.c12:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.c13:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #222222;
   background: #f2f2f2;
   border-color: #222222;
 }
 
-.c12:hover [data-state="selected"] {
+.c13:hover [data-state="selected"] {
   display: none;
 }
 
-.c12:active {
+.c13:active {
   background: #ffffff;
   border-color: #222222;
   color: #222222;
 }
 
-.c12:active [data-state="selected"] {
+.c13:active [data-state="selected"] {
   display: none;
 }
 
-.c12:disabled {
+.c13:disabled {
   background: #e4e4e4;
   border-color: #808080;
   color: #808080;
 }
 
-.c12:disabled [data-state="selected"] {
+.c13:disabled [data-state="selected"] {
   display: none;
 }
 
-.c9 .grey-shadow:has(+ * + .internal-button:focus-visible) {
+.c10 .grey-shadow:has(+ * + .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c9 .yellow-shadow:has(+ .internal-button:focus-visible) {
+.c10 .yellow-shadow:has(+ .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
 }
 
-.c9 .yellow-shadow:has(+ .internal-button:hover),
-.c9 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
+.c10 .yellow-shadow:has(+ .internal-button:hover),
+.c10 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c9 .grey-shadow:has(+ * + .internal-button:hover) {
+.c10 .grey-shadow:has(+ * + .internal-button:hover) {
   box-shadow: none;
 }
 
-.c9 .grey-shadow:has(+ * + .internal-button:active) {
+.c10 .grey-shadow:has(+ * + .internal-button:active) {
   box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c9 .yellow-shadow:has(+ .internal-button:active) {
+.c10 .yellow-shadow:has(+ .internal-button:active) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
 }
 
-.c4 {
+.c5 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
@@ -242,7 +248,7 @@ exports[`OakVideo renders correctly 1`] = `
   color: #222222;
 }
 
-.c5 {
+.c6 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1rem;
@@ -254,7 +260,7 @@ exports[`OakVideo renders correctly 1`] = `
   color: #222222;
 }
 
-.c20 {
+.c21 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1.125rem;
@@ -266,7 +272,7 @@ exports[`OakVideo renders correctly 1`] = `
 }
 
 @media (min-width:750px) {
-  .c6 {
+  .c7 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -274,7 +280,7 @@ exports[`OakVideo renders correctly 1`] = `
 }
 
 @media (min-width:1280px) {
-  .c6 {
+  .c7 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -282,43 +288,43 @@ exports[`OakVideo renders correctly 1`] = `
 }
 
 @media (min-width:750px) {
-  .c4 {
+  .c5 {
     font-weight: 600;
   }
 }
 
 @media (min-width:1280px) {
-  .c4 {
+  .c5 {
     font-weight: 600;
   }
 }
 
 @media (min-width:750px) {
-  .c4 {
+  .c5 {
     font-size: 2rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c4 {
+  .c5 {
     font-size: 2rem;
   }
 }
 
 @media (min-width:750px) {
-  .c4 {
+  .c5 {
     line-height: 2.5rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c4 {
+  .c5 {
     line-height: 2.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c4 {
+  .c5 {
     -webkit-letter-spacing: 0.0115rem;
     -moz-letter-spacing: 0.0115rem;
     -ms-letter-spacing: 0.0115rem;
@@ -327,7 +333,7 @@ exports[`OakVideo renders correctly 1`] = `
 }
 
 @media (min-width:1280px) {
-  .c4 {
+  .c5 {
     -webkit-letter-spacing: 0.0115rem;
     -moz-letter-spacing: 0.0115rem;
     -ms-letter-spacing: 0.0115rem;
@@ -336,43 +342,43 @@ exports[`OakVideo renders correctly 1`] = `
 }
 
 @media (min-width:750px) {
-  .c5 {
+  .c6 {
     font-weight: 300;
   }
 }
 
 @media (min-width:1280px) {
-  .c5 {
+  .c6 {
     font-weight: 300;
   }
 }
 
 @media (min-width:750px) {
-  .c5 {
+  .c6 {
     font-size: 1.125rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c5 {
+  .c6 {
     font-size: 1.125rem;
   }
 }
 
 @media (min-width:750px) {
-  .c5 {
+  .c6 {
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:1280px) {
-  .c5 {
+  .c6 {
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:750px) {
-  .c5 {
+  .c6 {
     -webkit-letter-spacing: -0.005rem;
     -moz-letter-spacing: -0.005rem;
     -ms-letter-spacing: -0.005rem;
@@ -381,7 +387,7 @@ exports[`OakVideo renders correctly 1`] = `
 }
 
 @media (min-width:1280px) {
-  .c5 {
+  .c6 {
     -webkit-letter-spacing: -0.005rem;
     -moz-letter-spacing: -0.005rem;
     -ms-letter-spacing: -0.005rem;
@@ -395,10 +401,10 @@ exports[`OakVideo renders correctly 1`] = `
       class="c0 c1"
     >
       <div
-        class="c0 c1"
+        class="c2 c1"
       >
         <div
-          class="c2"
+          class="c3"
         >
           <div>
             TEST_VIDEO
@@ -406,48 +412,53 @@ exports[`OakVideo renders correctly 1`] = `
         </div>
       </div>
       <div
-        class="c0 c3"
+        class="c0 c4"
       >
         <h1
-          class="c4"
+          class="c5"
         >
           TEST_HEADING
         </h1>
         <p
-          class="c5"
+          class="c6"
         >
           TEST_BODY
         </p>
       </div>
       <div
-        class="c0 c6"
+        class="c0 c7"
       >
         <div
-          class="c0 c7"
+          class="c0 c8"
         >
           <div
-            class="c8 c9"
+            class="c9 c10"
           >
             <div
-              class="c10 grey-shadow"
+              class="c11 grey-shadow"
             />
             <div
-              class="c10 yellow-shadow"
+              class="c11 yellow-shadow"
             />
             <button
               aria-controls="react-use-id-test-result"
               aria-expanded="false"
-              class="c11 c12 internal-button"
+              class="c12 c13 internal-button"
             >
               <div
-                class="c0 c13"
+                class="c0 c14"
               >
                 <span
-                  class="c14"
+                  class="c15"
+                >
+                  Show transcript
+                </span>
+                <span
+                  class="c16"
                 >
                   <img
                     alt=""
-                    class="c15"
+                    class="c17"
                     data-nimg="fill"
                     decoding="async"
                     loading="lazy"
@@ -455,35 +466,35 @@ exports[`OakVideo renders correctly 1`] = `
                     style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                   />
                 </span>
-                <span
-                  class="c16"
-                >
-                  Show transcript
-                </span>
               </div>
             </button>
           </div>
           <div
-            class="c8 c9"
+            class="c9 c10"
           >
             <div
-              class="c10 grey-shadow"
+              class="c11 grey-shadow"
             />
             <div
-              class="c10 yellow-shadow"
+              class="c11 yellow-shadow"
             />
             <button
-              class="c11 c12 internal-button"
+              class="c12 c13 internal-button"
             >
               <div
-                class="c0 c13"
+                class="c0 c14"
               >
                 <span
-                  class="c14"
+                  class="c15"
+                >
+                  Copy link
+                </span>
+                <span
+                  class="c16"
                 >
                   <img
                     alt=""
-                    class="c15"
+                    class="c17"
                     data-nimg="fill"
                     decoding="async"
                     loading="lazy"
@@ -491,36 +502,36 @@ exports[`OakVideo renders correctly 1`] = `
                     style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                   />
                 </span>
-                <span
-                  class="c16"
-                >
-                  Copy link
-                </span>
               </div>
             </button>
           </div>
         </div>
         <div
-          class="c8 c9"
+          class="c9 c10"
         >
           <div
-            class="c10 grey-shadow"
+            class="c11 grey-shadow"
           />
           <div
-            class="c10 yellow-shadow"
+            class="c11 yellow-shadow"
           />
           <button
-            class="c11 c12 internal-button"
+            class="c12 c13 internal-button"
           >
             <div
-              class="c0 c13"
+              class="c0 c14"
             >
               <span
-                class="c14"
+                class="c15"
+              >
+                Show sign language
+              </span>
+              <span
+                class="c16"
               >
                 <img
                   alt=""
-                  class="c15"
+                  class="c17"
                   data-nimg="fill"
                   decoding="async"
                   loading="lazy"
@@ -528,34 +539,29 @@ exports[`OakVideo renders correctly 1`] = `
                   style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                 />
               </span>
-              <span
-                class="c16"
-              >
-                Show sign language
-              </span>
             </div>
           </button>
         </div>
       </div>
       <div
-        class="c17 c18"
+        class="c18 c19"
         id="react-use-id-test-result"
       >
         <div
-          class="c19 c3"
+          class="c20 c4"
         >
           <p
-            class="c20"
+            class="c21"
           >
             TEST_1
           </p>
           <p
-            class="c20"
+            class="c21"
           >
             TEST_2
           </p>
           <p
-            class="c20"
+            class="c21"
           >
             TEST_3
           </p>
