@@ -36,7 +36,6 @@
     "lint:precommit": "eslint 'src/**/*' --fix",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "install:browsers": "playwright install --with-deps",
     "prepare": "husky install",
     "prepublishOnly": "./scripts/prepublish.sh",
     "publish:local": "pnpm build && yalc publish --no-scripts",
