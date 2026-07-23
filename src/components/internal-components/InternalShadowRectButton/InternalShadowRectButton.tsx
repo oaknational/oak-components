@@ -337,7 +337,7 @@ const TextWithUnderline = ({
   <OakBox $position={"relative"} $textAlign={textAlign}>
     <OakSpan $font={font}>{children}</OakSpan>
     <StyledOakSvg
-      svg={<Underline />}
+      svg={Underline}
       data-state="selected"
       data-testid="selected-underline"
     />

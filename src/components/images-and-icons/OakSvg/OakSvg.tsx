@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { ComponentType, FC } from "react";
 import styled from "styled-components";
 
 import { OakColorToken } from "@/styles";
@@ -17,7 +17,7 @@ export type OakSvgProps = OakBoxProps & {
    * The name of the svg to render
    * Accepts an svg name token from the svgMap
    */
-  svg: React.ReactElement<React.SVGProps<SVGSVGElement>, "svg">;
+  svg: ComponentType<React.SVGProps<SVGSVGElement>>;
   color?: OakColorToken;
 };
 
@@ -25,7 +25,7 @@ export type OakSvgProps = OakBoxProps & {
  * This is component used for rendering SVGs that don't belong to be rendered with OakIcon component
  * ie. UI elements that are not icons/illustratons but are part of the design system (underline, etc)
  */
-export const OakSvg: FC<OakSvgProps> = (props) => {
+export const OakSvg: FC<OakSvgProps> = ({ svg: Svg, ...props }) => {
   return (
     <StyledSvg
       aria-hidden={true}
@@ -34,7 +34,7 @@ export const OakSvg: FC<OakSvgProps> = (props) => {
       height="100%"
       {...props}
     >
-      {props.svg}
+      <Svg {...props} />
     </StyledSvg>
   );
 };

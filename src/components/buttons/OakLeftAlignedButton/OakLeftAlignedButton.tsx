@@ -231,7 +231,7 @@ const TextWithUnderline = ({ children }: { children: ReactNode }) => (
   <OakBox $position={"relative"} $textAlign={"left"}>
     <OakSpan $font={"body-3-bold"}>{children}</OakSpan>
     <StyledOakSvg
-      svg={<Underline />}
+      svg={Underline}
       data-state="selected"
       data-testid="selected-underline"
     />

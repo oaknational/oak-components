@@ -9,12 +9,12 @@ import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("OakSvg", () => {
   it("renders", () => {
-    const { container } = render(<OakSvg svg={<HeaderUnderline />} />);
+    const { container } = render(<OakSvg svg={HeaderUnderline} />);
     expect(container.querySelector("svg")).toBeInTheDocument();
   });
 
   it("matches snapshot", () => {
-    const { container } = renderWithTheme(<OakSvg svg={<HeaderUnderline />} />);
+    const { container } = renderWithTheme(<OakSvg svg={HeaderUnderline} />);
     expect(container).toMatchSnapshot();
   });
 });
