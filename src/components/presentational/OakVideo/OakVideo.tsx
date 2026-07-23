@@ -101,6 +101,7 @@ export function OakVideo({
       )}
       {transcriptEnabled && (
         <OakFlex
+          data-testid={"oak-video-transcript-container"}
           id={transcriptId}
           $display={!isTranscriptOpen ? "none" : undefined}
           $height="spacing-360"

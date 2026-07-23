@@ -545,6 +545,7 @@ exports[`OakVideo renders correctly with all controls 1`] = `
       </div>
       <div
         class="c18 c19"
+        data-testid="oak-video-transcript-container"
         id="react-use-id-test-result"
       >
         <div
