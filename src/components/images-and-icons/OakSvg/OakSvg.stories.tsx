@@ -6,6 +6,7 @@ import { OakSvg, OakSvgProps } from "./OakSvg";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { sizeArgTypes } from "@/storybook-helpers/sizeStyleHelpers";
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
+import * as svgs from "@/svgs";
 
 const meta: Meta<typeof OakSvg> = {
   component: OakSvg,
@@ -14,10 +15,17 @@ const meta: Meta<typeof OakSvg> = {
   argTypes: {
     ...colorArgTypes,
     ...sizeArgTypes,
+    svg: {
+      options: Object.keys(svgs),
+      mapping: svgs,
+      control: {
+        type: "select",
+      },
+    },
   },
   parameters: {
     controls: {
-      include: ["$width", "$height", ...Object.keys(colorArgTypes)],
+      include: ["$width", "$height", "svg", ...Object.keys(colorArgTypes)],
     },
   },
 };
@@ -31,11 +39,5 @@ export const HeaderUnderline: Story = {
       <OakSvg {...args} />
     </OakFlex>
   ),
-  args: { $color: "text-primary", name: "header-underline" },
-  parameters: {
-    controls: {
-      include: ["name", "$width", "$height", ...Object.keys(colorArgTypes)],
-      sort: "none",
-    },
-  },
+  args: { $color: "text-primary", svg: svgs.HeaderUnderline },
 };
