@@ -15,6 +15,10 @@ const meta: Meta<typeof OakFocusIndicator> = {
   tags: ["autodocs"],
   title: "components/Messaging and feedback/OakFocusIndicator",
   argTypes: {
+    as: {
+      options: ["div", "li"],
+      defaultValue: "div",
+    },
     hoverBackground: { options: [...oakUiRoleTokens, null] },
     dropShadow: { options: [...Object.keys(oakDropShadowTokens), null] },
     hoverDropShadow: { options: [...Object.keys(oakDropShadowTokens), null] },
@@ -24,6 +28,7 @@ const meta: Meta<typeof OakFocusIndicator> = {
   parameters: {
     controls: {
       include: [
+        "as",
         "hoverBackground",
         "dropShadow",
         "hoverDropShadow",

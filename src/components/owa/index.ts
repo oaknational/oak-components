@@ -21,7 +21,6 @@ export * from "@/components/owa/OakMediaClipListAccordion";
 export * from "@/components/owa/OakOutlineAccordion";
 export * from "@/components/owa/OakPromoTag";
 export * from "@/components/owa/OakRadioTile";
-export * from "@/components/owa/OakSaveButton";
 export * from "@/components/owa/OakSaveCount";
 export * from "@/components/owa/OakScaleImageButton";
 export * from "@/components/owa/OakSignLanguageButton";

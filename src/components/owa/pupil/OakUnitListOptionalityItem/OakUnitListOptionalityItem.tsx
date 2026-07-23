@@ -229,9 +229,6 @@ export const OakUnitListOptionalityItem = (
                 {...unit}
                 firstItemRef={index === 0 ? firstItemRef : null}
                 unavailable={unavailable}
-                onSave={onSave ?? undefined}
-                isSaved={getIsSaved ? getIsSaved(unit.slug) : undefined}
-                isSaving={getIsSaving ? getIsSaving(unit.slug) : undefined}
               />
             </OakGridArea>
           ))}

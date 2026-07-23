@@ -1,13 +1,12 @@
 import React, { MutableRefObject } from "react";
 import styled, { css } from "styled-components";
 
-import { OakSpan } from "@/components/typography/OakSpan";
-import { OakFlex } from "@/components/layout-and-structure/OakFlex";
-import { OakHeading } from "@/components/typography/OakHeading";
 import { OakIcon } from "@/components/images-and-icons/OakIcon";
+import { OakFlex } from "@/components/layout-and-structure/OakFlex";
+import { OakSpan } from "@/components/typography/OakSpan";
+import { OakHeading } from "@/components/typography/OakHeading";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
-import { OakSaveButton } from "@/components/owa/OakSaveButton/OakSaveButton";
 
 const StyledOptionalityListItem = styled(OakFlex)<{ $disabled?: boolean }>`
   outline: none;
@@ -67,11 +66,8 @@ export type OakUnitListOptionalityItemCardProps = {
   lessonCount: string | null;
   href: string;
   slug: string;
-  firstItemRef?: MutableRefObject<HTMLAnchorElement | null> | null | undefined;
+  firstItemRef?: MutableRefObject<HTMLAnchorElement | null> | null;
   onClick?: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
-  onSave?: (unitSlug: string) => void;
-  isSaved?: boolean;
-  isSaving?: boolean;
 };
 
 const HeadingWithFocus = styled(OakHeading)`
@@ -99,21 +95,16 @@ const HeadingWithFocus = styled(OakHeading)`
 export const OakUnitListOptionalityItemCard = (
   props: OakUnitListOptionalityItemCardProps,
 ) => {
-  const {
-    lessonCount,
-    href,
-    unavailable,
-    firstItemRef,
-    onClick,
-    isSaved,
-    isSaving,
-    onSave,
-    ...rest
-  } = props;
+  const { lessonCount, href, unavailable, firstItemRef, onClick, ...rest } =
+    props;
 
   return (
     <OakFlex $display={"flex"} $flexGrow={1}>
       <StyledOptionalityListItem
+        as={unavailable ? "div" : "a"}
+        href={unavailable ? undefined : href}
+        onClick={unavailable ? undefined : onClick}
+        ref={unavailable ? undefined : (firstItemRef ?? undefined)}
         $ph="spacing-12"
         $pv="spacing-16"
         $background={"bg-decorative3-very-subdued"}
@@ -134,44 +125,24 @@ export const OakUnitListOptionalityItemCard = (
             $color={unavailable ? "text-disabled" : "text-primary"}
             tag={"h3"}
             $mb={"spacing-12"}
-            as={onSave ? "a" : "h3"}
-            onClick={unavailable ? undefined : onClick}
-            href={unavailable ? undefined : href}
-            ref={firstItemRef}
-            className={onSave ? undefined : "hover-text"}
           >
-            {props.title}
+            <span className="hover-text">{props.title}</span>
           </HeadingWithFocus>
-          <OakFlex
-            $justifyContent={onSave ? "space-between" : "flex-end"}
-            $ph="spacing-4"
-          >
+          <OakFlex $justifyContent="flex-end" $ph="spacing-4">
             <OakFlex $alignItems={"center"} $justifyContent={"flex-end"}>
               <OakSpan
                 $color={unavailable ? "text-disabled" : "text-primary"}
                 $font={"heading-light-7"}
-                className={onSave ? undefined : "hover-text"}
+                className="hover-text"
               >
                 {lessonCount}
               </OakSpan>
 
-              {!onSave && (
-                <OakIcon
-                  iconName="chevron-right"
-                  $colorFilter={unavailable ? "text-disabled" : "text-primary"}
-                />
-              )}
-            </OakFlex>
-            {onSave && (
-              <OakSaveButton
-                isSaved={isSaved ?? false}
-                isLoading={isSaving ?? false}
-                onSave={() => onSave(props.slug)}
-                unavailable={unavailable}
-                saveButtonId={`save-button-${props.slug}`}
-                title={props.title}
+              <OakIcon
+                iconName="chevron-right"
+                $colorFilter={unavailable ? "text-disabled" : "text-primary"}
               />
-            )}
+            </OakFlex>
           </OakFlex>
         </OakFlex>
       </StyledOptionalityListItem>

@@ -84,8 +84,6 @@ const meta: Meta<typeof OakUnitListItem> = {
     lessonCount: "10 lessons",
     isLegacy: false,
     onClick: () => console.log("onClick!"),
-    isSaved: false,
-    onSave: () => console.log("onSave!"),
   },
   argTypes: {
     title: { control: { type: "text" } },
@@ -94,7 +92,6 @@ const meta: Meta<typeof OakUnitListItem> = {
     lessonCount: { control: { type: "number" } },
     unavailable: { control: { type: "boolean" } },
     isLegacy: { control: { type: "boolean" } },
-    isSaved: { control: { type: "boolean" } },
   },
   decorators: [
     (Story) => {
@@ -135,24 +132,6 @@ export const Default: Story = {
           {...item}
           onClick={() => console.log("onClick!")}
           href=""
-        ></OakUnitListItem>
-      ))}
-    </>
-  ),
-  args: {},
-};
-
-export const WithSave: Story = {
-  render: () => (
-    <>
-      {unitItems.map((item, index) => (
-        <OakUnitListItem
-          key={index}
-          {...item}
-          onClick={() => console.log("onClick!")}
-          href=""
-          isSaved={Math.random() > 0.5}
-          onSave={() => console.log("onSave!")}
         ></OakUnitListItem>
       ))}
     </>

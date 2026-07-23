@@ -17,6 +17,10 @@ exports[`OakTagFunctional matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
+.c2 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -25,19 +29,15 @@ exports[`OakTagFunctional matches snapshot 1`] = `
   gap: 0.5rem;
 }
 
-.c2 {
-  font-family: --var(google-font),Lexend,sans-serif;
-}
-
 <div>
   <div
     class="c0 c1"
   >
-    <label
+    <div
       class="c2"
     >
       Select one answer
-    </label>
+    </div>
   </div>
 </div>
 `;
