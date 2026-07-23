@@ -1,5 +1,5 @@
 module.exports = {
-  async preVisit(page) {
+  async prepare(page) {
     const bypass = process.env.VERCEL_AUTOMATION_BYPASS_SECRET;
     if (bypass) {
       await page.setExtraHTTPHeaders({
