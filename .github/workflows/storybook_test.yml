@@ -30,7 +30,7 @@ jobs:
       - name: Get Playwright version
         id: playwright-version
         run: |
-          PLAYWRIGHT_VERSION="$(node -p "require('./node_modules/@playwright/test/package.json').version")"
+          PLAYWRIGHT_VERSION="$(node -p "require('./node_modules/playwright/package.json').version")"
           echo "version=${PLAYWRIGHT_VERSION}" >> "$GITHUB_OUTPUT"
 
       - name: Cache Playwright browsers
