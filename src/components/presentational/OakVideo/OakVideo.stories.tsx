@@ -27,63 +27,41 @@ const meta: Meta<typeof OakVideo> = {
   component: OakVideo,
   title: "components/Presentational/OakVideo",
   tags: ["autodocs"],
-  argTypes: {},
-  parameters: {},
+  argTypes: {
+    heading: {
+      control: "text",
+    },
+    body: {
+      control: "text",
+    },
+    showTranscript: {
+      control: "boolean",
+    },
+    showSignLanguage: {
+      control: "boolean",
+    },
+    showCopyLink: {
+      control: "boolean",
+    },
+  },
+  parameters: {
+    controls: {
+      include: [
+        "heading",
+        "body",
+        "showTranscript",
+        "showSignLanguage",
+        "showCopyLink",
+      ],
+    },
+  },
 };
 
 export default meta;
 
 type Story = StoryObj<typeof OakVideo>;
 
-export const OnlyVideo: Story = {
-  render: (args) => {
-    return <OakVideo {...args} />;
-  },
-  args: {
-    videoSlot: ARGS.videoSlot,
-  },
-};
-
-export const WithHeadingAndBody: Story = {
-  render: (args) => {
-    return <OakVideo {...args} />;
-  },
-  args: {
-    videoSlot: ARGS.videoSlot,
-    heading: ARGS.heading,
-    body: ARGS.body,
-    showTranscript: ARGS.showTranscript,
-  },
-};
-
-export const WithTranscript: Story = {
-  render: (args) => {
-    return <OakVideo {...args} />;
-  },
-  args: {
-    videoSlot: ARGS.videoSlot,
-    heading: ARGS.heading,
-    body: ARGS.body,
-    transcript: ARGS.transcript,
-    showTranscript: ARGS.showTranscript,
-  },
-};
-
-export const WithSignLanguage: Story = {
-  render: (args) => {
-    return <OakVideo {...args} />;
-  },
-  args: {
-    videoSlot: ARGS.videoSlot,
-    heading: ARGS.heading,
-    body: ARGS.body,
-    transcript: ARGS.transcript,
-    showTranscript: ARGS.showTranscript,
-    showSignLanguage: ARGS.showSignLanguage,
-  },
-};
-
-export const WithCopyLink: Story = {
+export const AllEnabled: Story = {
   render: (args) => {
     return <OakVideo {...args} />;
   },
@@ -95,5 +73,14 @@ export const WithCopyLink: Story = {
     showTranscript: ARGS.showTranscript,
     showSignLanguage: ARGS.showSignLanguage,
     showCopyLink: ARGS.showCopyLink,
+  },
+};
+
+export const OnlyVideo: Story = {
+  render: (args) => {
+    return <OakVideo {...args} />;
+  },
+  args: {
+    videoSlot: ARGS.videoSlot,
   },
 };

@@ -31,8 +31,6 @@ export function OakVideo({
   const [isTranscriptOpen, setIsTranscriptOpen] = useState(false);
   const transcriptEnabled =
     showTranscript && transcript && transcript.length > 0;
-  const copyLinkEnabled = showCopyLink && onCopyLink;
-  const signLanguageEnabled = showSignLanguage && onShowSignLanguage;
 
   return (
     <OakFlex $flexDirection={"column"} $gap={"spacing-24"}>
@@ -67,13 +65,13 @@ export function OakVideo({
               Show transcript
             </OakSecondaryButton>
           )}
-          {copyLinkEnabled && (
+          {showCopyLink && (
             <OakSecondaryButton onClick={onCopyLink} iconName={"copy"}>
               Copy link
             </OakSecondaryButton>
           )}
         </OakFlex>
-        {signLanguageEnabled && (
+        {showSignLanguage && (
           <OakSecondaryButton
             onClick={onShowSignLanguage}
             iconName={"sign-language"}
