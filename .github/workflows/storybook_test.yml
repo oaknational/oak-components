@@ -48,7 +48,7 @@ jobs:
         run: pnpm exec playwright install chromium
 
       - name: Run Storybook tests
-        run: pnpm run test:storybook
+        run: pnpm run test:storybook -- --no-index-json
         env:
           TARGET_URL: "${{ github.event.deployment_status.target_url }}"
           VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
