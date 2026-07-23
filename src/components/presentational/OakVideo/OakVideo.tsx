@@ -32,6 +32,9 @@ export function OakVideo({
   const transcriptEnabled =
     showTranscript && transcript && transcript.length > 0;
 
+  const hasButtonsEnabled =
+    transcriptEnabled || showCopyLink || showSignLanguage;
+
   return (
     <OakFlex $flexDirection={"column"} $gap={"spacing-24"}>
       <OakFlex $flexDirection={"column"} $gap={"spacing-24"}>
@@ -53,33 +56,38 @@ export function OakVideo({
           </OakP>
         )}
       </OakFlex>
-      <OakFlex $flexDirection={["column", "row", "row"]} $gap={["spacing-16"]}>
-        <OakFlex $gap={"spacing-16"} $flexGrow={1}>
-          {transcriptEnabled && (
+      {hasButtonsEnabled && (
+        <OakFlex
+          $flexDirection={["column", "row", "row"]}
+          $gap={["spacing-16"]}
+        >
+          <OakFlex $gap={"spacing-16"} $flexGrow={1}>
+            {transcriptEnabled && (
+              <OakSecondaryButton
+                iconName={isTranscriptOpen ? "chevron-up" : "chevron-down"}
+                onClick={() => setIsTranscriptOpen(!isTranscriptOpen)}
+                aria-controls={transcriptId}
+                aria-expanded={isTranscriptOpen}
+              >
+                Show transcript
+              </OakSecondaryButton>
+            )}
+            {showCopyLink && (
+              <OakSecondaryButton onClick={onCopyLink} iconName={"copy"}>
+                Copy link
+              </OakSecondaryButton>
+            )}
+          </OakFlex>
+          {showSignLanguage && (
             <OakSecondaryButton
-              iconName={isTranscriptOpen ? "chevron-up" : "chevron-down"}
-              onClick={() => setIsTranscriptOpen(!isTranscriptOpen)}
-              aria-controls={transcriptId}
-              aria-expanded={isTranscriptOpen}
+              onClick={onShowSignLanguage}
+              iconName={"sign-language"}
             >
-              Show transcript
-            </OakSecondaryButton>
-          )}
-          {showCopyLink && (
-            <OakSecondaryButton onClick={onCopyLink} iconName={"copy"}>
-              Copy link
+              Show sign language
             </OakSecondaryButton>
           )}
         </OakFlex>
-        {showSignLanguage && (
-          <OakSecondaryButton
-            onClick={onShowSignLanguage}
-            iconName={"sign-language"}
-          >
-            Show sign language
-          </OakSecondaryButton>
-        )}
-      </OakFlex>
+      )}
       {transcriptEnabled && (
         <OakFlex
           id={transcriptId}
