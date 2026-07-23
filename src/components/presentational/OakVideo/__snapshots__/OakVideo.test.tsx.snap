@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`OakVideo renders correctly 1`] = `
+exports[`OakVideo renders correctly with all controls 1`] = `
 .c0 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -567,6 +567,68 @@ exports[`OakVideo renders correctly 1`] = `
           </p>
         </div>
       </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`OakVideo renders correctly with just video 1`] = `
+.c0 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c2 {
+  border: 0.125rem solid;
+  border-color: #222222;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c3 {
+  aspect-ratio: 30/17;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+<body>
+  <div>
+    <div
+      class="c0 c1"
+    >
+      <div
+        class="c2 c1"
+      >
+        <div
+          class="c3"
+        >
+          <div>
+            TEST_VIDEO
+          </div>
+        </div>
+      </div>
+      <div
+        class="c0 c4"
+      />
     </div>
   </div>
 </body>
