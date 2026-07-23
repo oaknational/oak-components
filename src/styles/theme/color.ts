@@ -221,6 +221,15 @@ const oakUiRoleTokensConst = [
   "code-green",
   "code-grey",
   "code-pink",
+  "drop-shadow-standard",
+  "drop-shadow-lemon",
+  "drop-shadow-wide-lemon",
+  "drop-shadow-centered-lemon",
+  "drop-shadow-grey",
+  "drop-shadow-centered-grey",
+  "drop-shadow-black",
+  "drop-shadow-centred-standard",
+  "drop-shadow-none",
 ] as const;
 
 export type OakUiRoleToken = (typeof oakUiRoleTokensConst)[number];
