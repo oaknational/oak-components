@@ -1,6 +1,4 @@
-import type { TestRunnerConfig } from "@storybook/test-runner";
-
-const config: TestRunnerConfig = {
+module.exports = {
   async preVisit(page) {
     const bypass = process.env.VERCEL_AUTOMATION_BYPASS_SECRET;
     if (bypass) {
@@ -10,5 +8,3 @@ const config: TestRunnerConfig = {
     }
   },
 };
-
-export default config;
