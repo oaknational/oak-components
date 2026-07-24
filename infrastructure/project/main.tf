@@ -20,7 +20,7 @@ module "vercel" {
   framework                        = "storybook"
   project_visibility               = "public"
   git_repo                         = "oaknational/oak-components"
-  protection_bypass_for_automation = false
+  protection_bypass_for_automation = true
   skew_protection                  = "1 day"
 
   domains = ["components.thenational.academy"]

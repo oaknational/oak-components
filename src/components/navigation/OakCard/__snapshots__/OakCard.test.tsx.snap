@@ -43,7 +43,7 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c20 {
+.c19 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -110,7 +110,7 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   gap: 0.5rem;
 }
 
-.c18 {
+.c17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -155,7 +155,7 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c21 {
+.c20 {
   object-fit: contain;
 }
 
@@ -173,7 +173,7 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   color: #222222;
 }
 
-.c19 {
+.c18 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -182,10 +182,6 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
-}
-
-.c17 {
-  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c7 {
@@ -277,26 +273,26 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
           <div
             class="c15 c16"
           >
-            <label
-              class="c17"
+            <div
+              class="c9"
             >
               Test Tag
-            </label>
+            </div>
           </div>
           <div
-            class="c9 c18"
+            class="c9 c17"
           >
             <span
-              class="c19"
+              class="c18"
             >
               Test Link Text
             </span>
             <span
-              class="c20"
+              class="c19"
             >
               <img
                 alt=""
-                class="c21"
+                class="c20"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"
@@ -355,7 +351,7 @@ exports[`OakCard matches snapshot when passed as='li' 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c20 {
+.c19 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -422,7 +418,7 @@ exports[`OakCard matches snapshot when passed as='li' 1`] = `
   gap: 0.5rem;
 }
 
-.c18 {
+.c17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -470,7 +466,7 @@ exports[`OakCard matches snapshot when passed as='li' 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c21 {
+.c20 {
   object-fit: contain;
 }
 
@@ -488,7 +484,7 @@ exports[`OakCard matches snapshot when passed as='li' 1`] = `
   color: #222222;
 }
 
-.c19 {
+.c18 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -497,10 +493,6 @@ exports[`OakCard matches snapshot when passed as='li' 1`] = `
   -moz-letter-spacing: 0.0115rem;
   -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
-}
-
-.c17 {
-  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c7 {
@@ -592,26 +584,26 @@ exports[`OakCard matches snapshot when passed as='li' 1`] = `
           <div
             class="c15 c16"
           >
-            <label
-              class="c17"
+            <div
+              class="c9"
             >
               Test Tag
-            </label>
+            </div>
           </div>
           <div
-            class="c9 c18"
+            class="c9 c17"
           >
             <span
-              class="c19"
+              class="c18"
             >
               Test Link Text
             </span>
             <span
-              class="c20"
+              class="c19"
             >
               <img
                 alt=""
-                class="c21"
+                class="c20"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"
