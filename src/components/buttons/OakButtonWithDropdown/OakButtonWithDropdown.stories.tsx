@@ -200,7 +200,7 @@ export const CloseOnChange: OakButtonWithDropdownStory = {
   ),
 };
 
-export const HandleCloseExternally: OakButtonWithDropdownStory = {
+export const CloseHandledByChildren: OakButtonWithDropdownStory = {
   render: (args) => (
     <OakButtonWithDropdown {...args}>
       {(close) => (
