@@ -8,6 +8,7 @@ import { OakIcon } from "@/components/images-and-icons/OakIcon";
 import { OakSpan } from "@/components/typography/OakSpan";
 import { OakSmallPrimaryInvertedButton } from "@/components/buttons/OakSmallPrimaryInvertedButton";
 import { OakSecondaryButton } from "@/components/buttons/OakSecondaryButton";
+import { OakCheckBox } from "@/components/form-elements";
 
 // Generic Dropdown Navigation Button Stories
 const dropdownNavMeta: Meta<typeof OakButtonWithDropdown> = {
@@ -161,7 +162,7 @@ export const leadingButtonIcon: OakButtonWithDropdownStory = {
   },
 };
 
-export const ButtonWithDropdownCloseOnChange: OakButtonWithDropdownStory = {
+export const CloseOnChange: OakButtonWithDropdownStory = {
   render: (args) => (
     <OakFlex $height={"spacing-240"}>
       <OakFlex $gap="spacing-24">
@@ -196,5 +197,30 @@ export const ButtonWithDropdownCloseOnChange: OakButtonWithDropdownStory = {
         </OakButtonWithDropdown>
       </OakFlex>
     </OakFlex>
+  ),
+};
+
+export const HandleCloseExternally: OakButtonWithDropdownStory = {
+  render: (args) => (
+    <OakButtonWithDropdown {...args}>
+      {(close) => (
+        <>
+          <OakFlex
+            $gap={"spacing-16"}
+            $flexDirection={"column"}
+            $font={"heading-light-7"}
+            $pa={"spacing-4"}
+          >
+            <OakCheckBox id={"1"} value={"1"} displayValue={"1"} />
+            <OakCheckBox id={"2"} value={"2"} displayValue={"2"} />
+            <OakCheckBox id={"3"} value={"3"} displayValue={"3"} />
+          </OakFlex>
+          <OakButtonWithDropdown.Divider />
+          <OakSecondaryButton iconName="plus" onClick={close}>
+            Add
+          </OakSecondaryButton>
+        </>
+      )}
+    </OakButtonWithDropdown>
   ),
 };

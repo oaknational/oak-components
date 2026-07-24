@@ -7,6 +7,7 @@ import { OakButtonWithDropdown } from "./OakButtonWithDropdown";
 
 import { OakSecondaryButton } from "@/components/buttons/OakSecondaryButton";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
+import { OakCheckBox } from "@/components/form-elements";
 
 const defaultProps = {
   primaryActionText: "Actions",
@@ -356,78 +357,76 @@ describe("OakButtonWithDropdown", () => {
     expect(screen.queryByRole("menu")).toBeInTheDocument();
   });
 
-  it("closes dropdown on enter when closeOnChange is true", async () => {
+  it.each([
+    ["enter", "{Enter}"],
+    ["return", "{Return}"],
+    ["space", " "],
+  ])(
+    "closes dropdown on %s pressed when closeOnChange is true",
+    async (_, keyPressed) => {
+      const user = userEvent.setup();
+
+      renderWithTheme(
+        <OakButtonWithDropdown closeOnChange={true} {...defaultProps}>
+          {simpleChildren}
+        </OakButtonWithDropdown>,
+      );
+
+      const primaryButton = screen.getByRole("button", { name: /actions/i });
+      await user.click(primaryButton);
+
+      expect(screen.getByRole("menu")).toBeInTheDocument();
+
+      // Click menu item
+      await user.tab();
+      expect(screen.getByText("Edit")).toHaveFocus();
+      await user.keyboard(keyPressed);
+
+      expect(screen.queryByRole("menu")).not.toBeInTheDocument();
+    },
+  );
+
+  it.each([
+    ["enter", "{Enter}"],
+    ["return", "{Return}"],
+    ["space", " "],
+  ])(
+    "does not close dropdown on %s pressed when closeOnChange is undefined",
+    async (keyPressed) => {
+      const user = userEvent.setup();
+
+      renderWithTheme(
+        <OakButtonWithDropdown {...defaultProps}>
+          {simpleChildren}
+        </OakButtonWithDropdown>,
+      );
+
+      const primaryButton = screen.getByRole("button", { name: /actions/i });
+      await user.click(primaryButton);
+
+      expect(screen.getByRole("menu")).toBeInTheDocument();
+
+      // Click menu item
+      await user.tab();
+      expect(screen.getByText("Edit")).toHaveFocus();
+      await user.keyboard(keyPressed);
+
+      expect(screen.queryByRole("menu")).toBeInTheDocument();
+    },
+  );
+
+  it("allows close to be handled by children", async () => {
     const user = userEvent.setup();
-
-    renderWithTheme(
-      <OakButtonWithDropdown closeOnChange={true} {...defaultProps}>
-        {simpleChildren}
-      </OakButtonWithDropdown>,
-    );
-
-    const primaryButton = screen.getByRole("button", { name: /actions/i });
-    await user.click(primaryButton);
-
-    expect(screen.getByRole("menu")).toBeInTheDocument();
-
-    // Click menu item
-    await user.tab();
-    expect(screen.getByText("Edit")).toHaveFocus();
-    await user.keyboard("{Enter}");
-
-    expect(screen.queryByRole("menu")).not.toBeInTheDocument();
-  });
-
-  it("does not close dropdown on enter when closeOnChange is undefined", async () => {
-    const user = userEvent.setup();
-
-    renderWithTheme(
-      <OakButtonWithDropdown {...defaultProps}>
-        {simpleChildren}
-      </OakButtonWithDropdown>,
-    );
-
-    const primaryButton = screen.getByRole("button", { name: /actions/i });
-    await user.click(primaryButton);
-
-    expect(screen.getByRole("menu")).toBeInTheDocument();
-
-    // Click menu item
-    await user.tab();
-    expect(screen.getByText("Edit")).toHaveFocus();
-    await user.keyboard("{Enter}");
-
-    expect(screen.queryByRole("menu")).toBeInTheDocument();
-  });
-
-  it("closes dropdown on return pressed when closeOnChange is true", async () => {
-    const user = userEvent.setup();
-
-    renderWithTheme(
-      <OakButtonWithDropdown closeOnChange={true} {...defaultProps}>
-        {simpleChildren}
-      </OakButtonWithDropdown>,
-    );
-
-    const primaryButton = screen.getByRole("button", { name: /actions/i });
-    await user.click(primaryButton);
-
-    expect(screen.getByRole("menu")).toBeInTheDocument();
-
-    // Click menu item
-    await user.tab();
-    expect(screen.getByText("Edit")).toHaveFocus();
-    await user.keyboard("{Return}");
-
-    expect(screen.queryByRole("menu")).not.toBeInTheDocument();
-  });
-
-  it("does not close dropdown on return pressed when closeOnChange is undefined", async () => {
-    const user = userEvent.setup();
-
     renderWithTheme(
       <OakButtonWithDropdown {...defaultProps}>
-        {simpleChildren}
+        {(close) => (
+          <>
+            <OakCheckBox id="1" value="1" displayValue="1" />
+            <OakCheckBox id="2" value="2" displayValue="2" />
+            <OakCheckBox id="3" value="3" displayValue="3" />
+            <OakSecondaryButton onClick={close}>Add</OakSecondaryButton>
+          </>
+        )}
       </OakButtonWithDropdown>,
     );
 
@@ -436,55 +435,11 @@ describe("OakButtonWithDropdown", () => {
 
     expect(screen.getByRole("menu")).toBeInTheDocument();
 
-    // Click menu item
-    await user.tab();
-    expect(screen.getByText("Edit")).toHaveFocus();
-    await user.keyboard("{Return}");
+    await user.click(screen.getByDisplayValue("1"));
+    await user.click(screen.getByDisplayValue("2"));
 
-    expect(screen.queryByRole("menu")).toBeInTheDocument();
-  });
-
-  it("closes dropdown on space pressed when closeOnChange is true", async () => {
-    const user = userEvent.setup();
-
-    renderWithTheme(
-      <OakButtonWithDropdown closeOnChange={true} {...defaultProps}>
-        {simpleChildren}
-      </OakButtonWithDropdown>,
-    );
-
-    const primaryButton = screen.getByRole("button", { name: /actions/i });
-    await user.click(primaryButton);
-
-    expect(screen.getByRole("menu")).toBeInTheDocument();
-
-    // Click menu item
-    await user.tab();
-    expect(screen.getByText("Edit")).toHaveFocus();
-    await user.keyboard(" ");
+    await user.click(screen.getByText("Add"));
 
     expect(screen.queryByRole("menu")).not.toBeInTheDocument();
-  });
-
-  it("does not close dropdown on space pressed when closeOnChange is undefined", async () => {
-    const user = userEvent.setup();
-
-    renderWithTheme(
-      <OakButtonWithDropdown {...defaultProps}>
-        {simpleChildren}
-      </OakButtonWithDropdown>,
-    );
-
-    const primaryButton = screen.getByRole("button", { name: /actions/i });
-    await user.click(primaryButton);
-
-    expect(screen.getByRole("menu")).toBeInTheDocument();
-
-    // Click menu item
-    await user.tab();
-    expect(screen.getByText("Edit")).toHaveFocus();
-    await user.keyboard("{Space}");
-
-    expect(screen.queryByRole("menu")).toBeInTheDocument();
   });
 });

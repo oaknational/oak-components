@@ -25,7 +25,7 @@ export type OakButtonWithDropdownProps = {
   primaryActionText: string;
   primaryActionIcon?: OakIconName;
   onPrimaryAction?: () => void;
-  children?: React.ReactNode;
+  children?: React.ReactNode | ((close: () => void) => React.ReactNode);
   isLoading?: boolean;
   disabled?: boolean;
   ariaLabel?: string;
@@ -38,6 +38,12 @@ export type OakButtonWithDropdownProps = {
   >;
   flexWidth?: ResponsiveValues<OakCombinedSpacingToken | null | undefined>;
   closeOnChange?: boolean;
+
+  /** The ARIA role for the dropdown panel. Defaults to "menu". */
+  dropdownRole?: React.AriaRole;
+
+  /** The ARIA label for the dropdown panel. Defaults to undefined (no label). */
+  dropdownAriaLabel?: string;
 };
 
 /**
@@ -59,8 +65,12 @@ export const OakButtonWithDropdown = ({
   dropdownTopSpacing = "spacing-56",
   flexWidth,
   closeOnChange,
+  dropdownRole = "menu",
+  dropdownAriaLabel,
 }: OakButtonWithDropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const close = () => setIsOpen(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Get all focusable elements within the dropdown
@@ -199,12 +209,15 @@ export const OakButtonWithDropdown = ({
             $position="absolute"
             $top={dropdownTopSpacing}
             $zIndex="modal-close-button"
-            role="menu"
-            aria-label="Dropdown menu. Use arrow keys to navigate, Tab to cycle through items, Escape to close."
+            role={dropdownRole}
+            aria-label={
+              dropdownAriaLabel ??
+              "Dropdown menu. Use arrow keys to navigate, Tab to cycle through items, Escape to close."
+            }
             data-testid={dataTestId ? `${dataTestId}-dropdown` : undefined}
           >
             <OakFlex $flexDirection="column" $gap={"spacing-8"}>
-              {children}
+              {typeof children === "function" ? children(close) : children}
             </OakFlex>
           </OakBox>
         )}
