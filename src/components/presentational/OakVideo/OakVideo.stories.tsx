@@ -32,14 +32,10 @@ const meta: Meta<typeof OakVideo> = {
     showCopyLink: {
       control: "boolean",
     },
-    transcript: {
-      control: "object",
-    },
   },
   parameters: {
     controls: {
       include: [
-        "transcript",
         "headingTag",
         "heading",
         "body",
