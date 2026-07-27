@@ -50,6 +50,9 @@ export type OakVideoProps = {
   onShowSignLanguage?: () => void;
 };
 
+/**
+ * Video component with controls to standardise layout across use
+ */
 export function OakVideo({
   headingTag = "h1",
   heading,
