@@ -63,11 +63,12 @@ export function OakVideo({
       </OakFlex>
       {hasButtonsEnabled && (
         <OakFlex
-          $flexDirection={["column", "row", "row"]}
+          $flexDirection={["row", "row", "row"]}
           $gap={["spacing-16"]}
+          $flexWrap={["wrap", "nowrap", "nowrap"]}
         >
-          <OakFlex $gap={"spacing-16"} $flexGrow={1}>
-            {transcriptEnabled && (
+          {transcriptEnabled && (
+            <OakFlex $order={["2", "1", "1"]}>
               <OakSmallSecondaryButton
                 isTrailingIcon={true}
                 iconName={isTranscriptOpen ? "chevron-up" : "chevron-down"}
@@ -75,10 +76,16 @@ export function OakVideo({
                 aria-controls={transcriptId}
                 aria-expanded={isTranscriptOpen}
               >
-                Show transcript
+                {isTranscriptOpen ? "Hide" : "Show"} transcript
               </OakSmallSecondaryButton>
-            )}
-            {showCopyLink && (
+            </OakFlex>
+          )}
+          {showCopyLink && (
+            <OakFlex
+              $order={["3", "2", "2"]}
+              $flexGrow={1}
+              $justifyContent={["flex-start", "flex-start", "flex-start"]}
+            >
               <OakSmallSecondaryButton
                 isTrailingIcon={true}
                 onClick={onCopyLink}
@@ -86,16 +93,18 @@ export function OakVideo({
               >
                 Copy link
               </OakSmallSecondaryButton>
-            )}
-          </OakFlex>
+            </OakFlex>
+          )}
           {showSignLanguage && (
-            <OakSmallSecondaryButton
-              isTrailingIcon={true}
-              onClick={onShowSignLanguage}
-              iconName={"sign-language"}
-            >
-              Show sign language
-            </OakSmallSecondaryButton>
+            <OakFlex $order={["1", "3", "3"]} $width={["100%", "auto", "auto"]}>
+              <OakSmallSecondaryButton
+                isTrailingIcon={true}
+                onClick={onShowSignLanguage}
+                iconName={"sign-language"}
+              >
+                Show sign language
+              </OakSmallSecondaryButton>
+            </OakFlex>
           )}
         </OakFlex>
       )}
