@@ -32,10 +32,28 @@ const meta: Meta<typeof OakVideo> = {
     showCopyLink: {
       control: "boolean",
     },
+    transcript: {
+      options: ["undefined", "short_text", "long_text"],
+      mapping: {
+        undefined: undefined,
+        short_text: ["Short text", "Short text", "Short text"],
+        long_text: [longText, longText, longText],
+      },
+      control: {
+        type: "select", // Type 'select' is automatically inferred when 'options' is defined
+        labels: {
+          // 'labels' maps option values to string labels
+          undefined: "Undefined",
+          short_text: "Short text example",
+          long_text: "Long text example",
+        },
+      },
+    },
   },
   parameters: {
     controls: {
       include: [
+        "transcript",
         "headingTag",
         "heading",
         "body",

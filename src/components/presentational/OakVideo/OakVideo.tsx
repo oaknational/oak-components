@@ -6,15 +6,47 @@ import { OakFlex, OakBox } from "@/components/layout-and-structure";
 import { OakHeading, OakP } from "@/components/typography";
 
 export type OakVideoProps = {
+  /**
+   * The heading tag to use for the heading text. Defaults to "h1".
+   * This is used to ensure proper semantic structure of the page.
+   * For example, if the heading is a subheading of an h2, it should be an h3.
+   */
   headingTag?: OakHeadingProps["tag"];
+  /**
+   * The heading text to display above the video.
+   */
   heading?: string;
+  /**
+   * The body text to display below the heading and above the video.
+   */
   body?: string;
+  /**
+   * The video slot to display. This is a React node that can be any valid React element.
+   */
   videoSlot: React.ReactNode;
+  /**
+   * The transcript to display below the video.
+   */
   transcript?: string[];
+  /**
+   * Whether to show the transcript button.
+   */
   showTranscript?: boolean;
+  /**
+   * Whether to show the sign language button.
+   */
   showCopyLink?: boolean;
+  /**
+   * Whether to show the copy link button.
+   */
   showSignLanguage?: boolean;
+  /**
+   * Callback function to be called when the copy link button is clicked.
+   */
   onCopyLink?: () => void;
+  /**
+   * Callback function to be called when the sign language button is clicked.
+   */
   onShowSignLanguage?: () => void;
 };
 
