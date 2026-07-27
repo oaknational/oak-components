@@ -46,16 +46,12 @@ describe("OakVideo", () => {
     await user.click(showSignLanguageButton);
     expect(onShowSignLanguage).toHaveBeenCalled();
 
-    expect(getByTestId("oak-video-transcript-container")).toHaveStyle(
-      "display: none",
-    );
+    expect(getByTestId("oak-video-transcript-container")).not.toBeVisible();
     const showTranscriptButton = getByRole("button", {
       name: "Show transcript",
     });
     await user.click(showTranscriptButton);
-    expect(getByTestId("oak-video-transcript-container")).not.toHaveStyle(
-      "display: none",
-    );
+    expect(getByTestId("oak-video-transcript-container")).toBeVisible();
   });
 
   it("renders correctly with just video", () => {
