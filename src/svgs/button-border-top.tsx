@@ -1,6 +1,9 @@
 import React from "react";
 
-export const ButtonBorderTop = () => (
+export const ButtonBorderTop = (): React.ReactElement<
+  React.SVGProps<SVGSVGElement>,
+  "svg"
+> => (
   <svg
     preserveAspectRatio="none"
     fill="none"

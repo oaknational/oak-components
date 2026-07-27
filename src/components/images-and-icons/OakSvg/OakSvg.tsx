@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { ComponentType, FC } from "react";
 import styled from "styled-components";
 
 import { OakColorToken } from "@/styles";
@@ -6,38 +6,6 @@ import {
   oakBoxCss,
   OakBoxProps,
 } from "@/components/layout-and-structure/OakBox";
-import {
-  HeaderUnderline,
-  Underline,
-  HorizontalRule,
-  Underline3,
-  ButtonBorderTop,
-  ButtonBorderBottom,
-  ButtonBorderLeft,
-  ButtonBorderRight,
-  IconBackground,
-  Scribble,
-} from "@/svgs";
-
-/**
- * Map of the svg names to the actual svg components
- * Only components that are used in the OakSvg component should be added here
- * Should be used only in cases where OakIcon can't be used and if this list grows much bigger in the future we should consider refactoring
- */
-const svgMap = {
-  "header-underline": HeaderUnderline,
-  underline: Underline,
-  "horizontal-rule": HorizontalRule,
-  "underline-3": Underline3,
-  "button-border-top": ButtonBorderTop,
-  "button-border-bottom": ButtonBorderBottom,
-  "button-border-left": ButtonBorderLeft,
-  "button-border-right": ButtonBorderRight,
-  "icon-background": IconBackground,
-  scribble: Scribble,
-};
-
-export type OakSvgNames = keyof typeof svgMap;
 
 const StyledSvg = styled.svg<OakBoxProps>`
   ${oakBoxCss};
@@ -49,7 +17,7 @@ export type OakSvgProps = OakBoxProps & {
    * The name of the svg to render
    * Accepts an svg name token from the svgMap
    */
-  name: OakSvgNames;
+  svg: ComponentType<React.SVGProps<SVGSVGElement>>;
   color?: OakColorToken;
 };
 
@@ -57,12 +25,7 @@ export type OakSvgProps = OakBoxProps & {
  * This is component used for rendering SVGs that don't belong to be rendered with OakIcon component
  * ie. UI elements that are not icons/illustratons but are part of the design system (underline, etc)
  */
-export const OakSvg: FC<OakSvgProps> = (props) => {
-  const getSvgByName = (name: OakSvgNames) => {
-    const SvgComponent = svgMap[name];
-    return <SvgComponent />;
-  };
-
+export const OakSvg: FC<OakSvgProps> = ({ svg: Svg, ...props }) => {
   return (
     <StyledSvg
       aria-hidden={true}
@@ -71,7 +34,7 @@ export const OakSvg: FC<OakSvgProps> = (props) => {
       height="100%"
       {...props}
     >
-      {getSvgByName(props.name)}
+      <Svg {...props} />
     </StyledSvg>
   );
 };

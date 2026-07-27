@@ -28,6 +28,7 @@ import { SpacingStyleProps } from "@/styles/utils/spacingStyle";
 import { FlexStyleProps } from "@/styles/utils/flexStyle";
 import { TypographyStyleProps } from "@/styles/utils/typographyStyle";
 import { DisplayStyleProps } from "@/styles/utils/displayStyle";
+import { Underline } from "@/svgs";
 
 type OakLoadingSpinnerTokenSubset = Extract<
   OakAllSpacingToken,
@@ -336,7 +337,7 @@ const TextWithUnderline = ({
   <OakBox $position={"relative"} $textAlign={textAlign}>
     <OakSpan $font={font}>{children}</OakSpan>
     <StyledOakSvg
-      name="underline"
+      svg={Underline}
       data-state="selected"
       data-testid="selected-underline"
     />

@@ -1,6 +1,9 @@
 import React from "react";
 
-export const Underline3 = () => (
+export const Underline3 = (): React.ReactElement<
+  React.SVGProps<SVGSVGElement>,
+  "svg"
+> => (
   <svg
     fill="none"
     viewBox="0 0 147 9"
