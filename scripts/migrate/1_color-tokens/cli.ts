@@ -1,46 +1,8 @@
-import { join, relative, resolve } from "node:path";
+import { relative } from "node:path";
 import process from "node:process";
-
-import { glob } from "glob";
-import { Options } from "jscodeshift";
-import { run as jscodeshift } from "jscodeshift/src/Runner";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
-
-async function run({
-  path,
-  dry,
-  restrictToOakImports,
-  transformParseColor,
-}: {
-  path: string;
-  dry: boolean;
-  restrictToOakImports?: boolean;
-  transformParseColor?: boolean;
-}) {
-  const transformPath = transformParseColor
-    ? resolve(__dirname + "/transformParseColor.ts")
-    : resolve(__dirname + "/transform.ts");
-
-  const options: Options = {
-    dry,
-    // print: true,
-    verbose: 1,
-    parser: "tsx",
-    restrictToOakImports,
-  };
-  const searchPath = join(process.cwd(), path);
-  const paths = await glob(
-    searchPath.match(/\.(ts|tsx)$/)
-      ? searchPath
-      : `${searchPath}/**/*.{ts,tsx}`,
-  );
-  const pathsFiltered = paths.filter(
-    (path) => !path.match(/fixture.ts$|theme.ts$|sdk.ts$/),
-  );
-  const res = await jscodeshift(transformPath, pathsFiltered, options);
-  console.log(res);
-}
+import { run } from "./index";
 
 async function parse() {
   const argv = (await yargs(hideBin(process.argv))
@@ -77,11 +39,12 @@ async function parse() {
     transformParseColor?: boolean;
   };
 
-  run({
+  const res = run({
     path: argv.path,
     dry: argv.dry ?? false,
     restrictToOakImports: argv.restrictToOakImports ?? false,
     transformParseColor: argv.transformParseColor ?? false,
   });
+  console.log(res);
 }
 parse();
