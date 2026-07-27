@@ -45,7 +45,7 @@ export function OakVideo({
       >
         <OakBox $aspectRatio={"30/17"}>{videoSlot}</OakBox>
       </OakFlex>
-      <OakFlex $flexDirection={"column"} $gap={"spacing-8"}>
+      <OakFlex $flexDirection={"column"} $gap={"spacing-8"} $display={!(heading && body) ? "none" : undefined}>
         {heading && (
           <OakHeading
             tag={"h1"}
