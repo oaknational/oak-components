@@ -70,7 +70,7 @@ export function OakVideo({
       </OakFlex>
       {hasButtonsEnabled && (
         <OakFlex
-          $flexDirection={["row", "row", "row"]}
+          $flexDirection={"row"}
           $gap={["spacing-16"]}
           $flexWrap={["wrap", "nowrap", "nowrap"]}
         >
