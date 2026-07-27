@@ -1,10 +1,12 @@
 import React, { useState, useId } from "react";
 
+import type { OakHeadingProps } from "@/components/typography";
 import { OakSmallSecondaryButton } from "@/components/buttons";
 import { OakFlex, OakBox } from "@/components/layout-and-structure";
 import { OakHeading, OakP } from "@/components/typography";
 
 export type OakVideoProps = {
+  headingTag?: OakHeadingProps["tag"];
   heading?: string;
   body?: string;
   videoSlot: React.ReactNode;
@@ -17,6 +19,7 @@ export type OakVideoProps = {
 };
 
 export function OakVideo({
+  headingTag = "h1",
   heading,
   body,
   videoSlot,
@@ -45,10 +48,14 @@ export function OakVideo({
       >
         <OakBox $aspectRatio={"30/17"}>{videoSlot}</OakBox>
       </OakFlex>
-      <OakFlex $flexDirection={"column"} $gap={"spacing-8"} $display={!(heading && body) ? "none" : undefined}>
+      <OakFlex
+        $flexDirection={"column"}
+        $gap={"spacing-8"}
+        $display={!(heading && body) ? "none" : undefined}
+      >
         {heading && (
           <OakHeading
-            tag={"h1"}
+            tag={headingTag}
             $color={"text-primary"}
             $font={["heading-5", "heading-4", "heading-4"]}
           >

@@ -31,6 +31,10 @@ const meta: Meta<typeof OakVideo> = {
     heading: {
       control: "text",
     },
+    headingTag: {
+      options: ["h1", "h2", "h3", "h4", "h5", "h6"],
+      control: "select",
+    },
     body: {
       control: "text",
     },
@@ -47,6 +51,7 @@ const meta: Meta<typeof OakVideo> = {
   parameters: {
     controls: {
       include: [
+        "headingTag",
         "heading",
         "body",
         "showTranscript",
