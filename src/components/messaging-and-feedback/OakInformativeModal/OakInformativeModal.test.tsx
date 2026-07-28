@@ -68,4 +68,25 @@ describe(OakInformativeModal, () => {
 
     expect(getByRole("textbox")).toHaveFocus();
   });
+
+  it("calls onActionClick when the action button is clicked", () => {
+    const onActionClickSpy = jest.fn();
+
+    const { getByText } = renderWithTheme(
+      <OakInformativeModal
+        isOpen
+        onClose={jest.fn()}
+        actionLabel="Action"
+        onActionClick={onActionClickSpy}
+      >
+        Modal content
+      </OakInformativeModal>,
+    );
+
+    act(() => {
+      fireEvent.click(getByText("Action"));
+    });
+
+    expect(onActionClickSpy).toHaveBeenCalled();
+  });
 });

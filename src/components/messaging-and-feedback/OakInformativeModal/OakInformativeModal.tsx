@@ -7,6 +7,7 @@ import { useIsScrolled } from "@/hooks/useIsScrolled";
 import { useMounted } from "@/hooks/useMounted";
 import InternalModalTransition from "@/components/internal-components/InternalModalTransition/InternalModalTransition";
 import { BorderStyleProps } from "@/styles/utils/borderStyle";
+import { OakLink } from "@/components/navigation/OakLink";
 
 export const OakInformativeModalBorderColor = createContext<
   BorderStyleProps["$borderColor"]
@@ -33,6 +34,14 @@ export type OakInformativeModalProps = {
    * Called when the modal is closed
    */
   onClose: (action?: OakInformativeModalCloseAction) => void;
+  /**
+   * Optional text to show as an action button
+   */
+  actionLabel?: string;
+  /**
+   * Called when the action button is clicked
+   */
+  onActionClick?: () => void;
   /**
    * The DOM container to render the modal portal into.
    *
@@ -76,6 +85,8 @@ export const OakInformativeModal = ({
   domContainer,
   isOpen,
   onClose,
+  actionLabel,
+  onActionClick,
   zIndex,
   isLeftHandSide,
   closeOnBackgroundClick,
@@ -122,9 +133,18 @@ export const OakInformativeModal = ({
         >
           <OakFlex
             $pa="spacing-16"
-            $justifyContent={"flex-end"}
+            $justifyContent={actionLabel ? "space-between" : "flex-end"}
             $alignItems="center"
           >
+            {actionLabel && (
+              <OakLink
+                variant="secondary"
+                element="button"
+                onClick={onActionClick}
+              >
+                {actionLabel}
+              </OakLink>
+            )}
             <OakCloseButton onClose={onCloseButton} />
           </OakFlex>
           <div style={{ display: "contents" }} data-autofocus-inside>
