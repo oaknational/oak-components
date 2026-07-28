@@ -8,7 +8,6 @@ import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("OakVideo", () => {
   it("renders correctly with all controls", async () => {
-    const user = userEvent.setup();
     const args = {
       videoSlot: <div>TEST_VIDEO</div>,
       transcript: ["TEST_1", "TEST_2", "TEST_3"],
@@ -19,23 +18,34 @@ describe("OakVideo", () => {
       showCopyLink: true,
     };
 
-    const onCopyLink = jest.fn();
-    const onShowSignLanguage = jest.fn();
-
-    const { baseElement, getByRole, getAllByRole, getByTestId } =
-      renderWithTheme(
-        <OakVideo
-          {...args}
-          onCopyLink={onCopyLink}
-          onShowSignLanguage={onShowSignLanguage}
-        />,
-      );
+    const { baseElement, getByRole, getAllByRole } = renderWithTheme(
+      <OakVideo {...args} />,
+    );
 
     expect(baseElement).toMatchSnapshot();
     expect(getByRole("heading")).toHaveTextContent("TEST_HEADING");
     expect(getByRole("paragraph")).toHaveTextContent("TEST_BODY");
     expect(getAllByRole("button")).toHaveLength(3);
+  });
 
+  it("buttons should trigger events", async () => {
+    const user = userEvent.setup();
+    const args = {
+      videoSlot: <div>TEST_VIDEO</div>,
+      showSignLanguage: true,
+      showCopyLink: true,
+    };
+
+    const onCopyLink = jest.fn();
+    const onShowSignLanguage = jest.fn();
+
+    const { getByRole } = renderWithTheme(
+      <OakVideo
+        {...args}
+        onCopyLink={onCopyLink}
+        onShowSignLanguage={onShowSignLanguage}
+      />,
+    );
     const copyLinkButton = getByRole("button", { name: "Copy link" });
     await user.click(copyLinkButton);
     expect(onCopyLink).toHaveBeenCalled();
@@ -45,6 +55,17 @@ describe("OakVideo", () => {
     });
     await user.click(showSignLanguageButton);
     expect(onShowSignLanguage).toHaveBeenCalled();
+  });
+
+  it("clicking show/hide transcript button", async () => {
+    const user = userEvent.setup();
+    const args = {
+      videoSlot: <div>TEST_VIDEO</div>,
+      transcript: ["TEST_1", "TEST_2", "TEST_3"],
+      showTranscript: true,
+    };
+
+    const { getByRole, getByTestId } = renderWithTheme(<OakVideo {...args} />);
 
     expect(getByTestId("oak-video-transcript-container")).not.toBeVisible();
     const showTranscriptButton = getByRole("button", {
