@@ -33,11 +33,11 @@ export type OakVideoProps = {
    */
   showTranscript?: boolean;
   /**
-   * Whether to show the sign language button.
+   * Whether to show the copy link button.
    */
   showCopyLink?: boolean;
   /**
-   * Whether to show the copy link button.
+   * Whether to show the sign language button.
    */
   showSignLanguage?: boolean;
   /**
