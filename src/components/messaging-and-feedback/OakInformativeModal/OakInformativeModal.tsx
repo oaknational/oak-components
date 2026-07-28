@@ -8,6 +8,7 @@ import { useMounted } from "@/hooks/useMounted";
 import InternalModalTransition from "@/components/internal-components/InternalModalTransition/InternalModalTransition";
 import { BorderStyleProps } from "@/styles/utils/borderStyle";
 import { OakLink } from "@/components/navigation/OakLink";
+import { OakHeading, OakHeadingTag } from "@/components/typography/OakHeading";
 
 export const OakInformativeModalBorderColor = createContext<
   BorderStyleProps["$borderColor"]
@@ -42,6 +43,15 @@ export type OakInformativeModalProps = {
    * Called when the action button is clicked
    */
   onActionClick?: () => void;
+  /**
+   * Optional title for the header of the modal
+   */
+  title?: string;
+  /**
+   * Heading level for the title
+   * @default "h1"
+   */
+  titleTag?: OakHeadingTag;
   /**
    * The DOM container to render the modal portal into.
    *
@@ -87,6 +97,8 @@ export const OakInformativeModal = ({
   onClose,
   actionLabel,
   onActionClick,
+  title,
+  titleTag = "h1",
   zIndex,
   isLeftHandSide,
   closeOnBackgroundClick,
@@ -144,6 +156,11 @@ export const OakInformativeModal = ({
               >
                 {actionLabel}
               </OakLink>
+            )}
+            {title && (
+              <OakHeading tag={titleTag} $font="heading-6" $mh="auto">
+                {title}
+              </OakHeading>
             )}
             <OakCloseButton onClose={onCloseButton} />
           </OakFlex>

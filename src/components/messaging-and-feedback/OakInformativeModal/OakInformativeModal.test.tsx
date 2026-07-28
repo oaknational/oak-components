@@ -75,7 +75,7 @@ describe(OakInformativeModal, () => {
     const { getByText } = renderWithTheme(
       <OakInformativeModal
         isOpen
-        onClose={jest.fn()}
+        onClose={() => {}}
         actionLabel="Action"
         onActionClick={onActionClickSpy}
       >
@@ -88,5 +88,15 @@ describe(OakInformativeModal, () => {
     });
 
     expect(onActionClickSpy).toHaveBeenCalled();
+  });
+
+  it("renders title when provided", () => {
+    const { getByText } = renderWithTheme(
+      <OakInformativeModal title="Example modal" isOpen onClose={() => {}}>
+        Modal content
+      </OakInformativeModal>,
+    );
+
+    expect(getByText("Example modal")).toBeVisible();
   });
 });

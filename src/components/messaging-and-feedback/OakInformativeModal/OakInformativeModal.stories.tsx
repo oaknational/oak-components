@@ -42,6 +42,8 @@ const meta: Meta<typeof OakInformativeModal> = {
         "onClose",
         "actionLabel",
         "onActionClick",
+        "title",
+        "titleTag",
         "isLeftHandSide",
         "closeOnBackgroundClick",
       ],
@@ -154,6 +156,20 @@ export const CloseOnBackgroundClick: Story = {
 
 export const WithAction: Story = {
   args: {
+    actionLabel: "Action",
+    onActionClick: fn(),
+  },
+};
+
+export const WithTitle: Story = {
+  args: {
+    title: "Modal title",
+  },
+};
+
+export const WithTitleAndAction: Story = {
+  args: {
+    title: "Modal title",
     actionLabel: "Action",
     onActionClick: fn(),
   },
