@@ -99,4 +99,14 @@ describe(OakInformativeModal, () => {
 
     expect(getByText("Example modal")).toBeVisible();
   });
+
+  it("uses the title as the dialog's accessible label", () => {
+    const { getByRole } = renderWithTheme(
+      <OakInformativeModal title="Example modal" isOpen onClose={() => {}}>
+        Modal content
+      </OakInformativeModal>,
+    );
+
+    expect(getByRole("dialog")).toHaveAccessibleName("Example modal");
+  });
 });

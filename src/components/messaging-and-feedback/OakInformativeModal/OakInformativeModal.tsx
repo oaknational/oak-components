@@ -1,4 +1,10 @@
-import React, { createContext, HTMLAttributes, ReactNode, useRef } from "react";
+import React, {
+  createContext,
+  HTMLAttributes,
+  ReactNode,
+  useId,
+  useRef,
+} from "react";
 import { createPortal } from "react-dom";
 
 import { OakCloseButton } from "@/components/buttons/OakCloseButton";
@@ -112,6 +118,8 @@ export const OakInformativeModal = ({
   // `createPortal` is not supported in SSR so we can only render when mounted on the client
   const isMounted = useMounted();
 
+  const titleId = useId();
+
   if (!isMounted) {
     return null;
   }
@@ -136,6 +144,7 @@ export const OakInformativeModal = ({
         isLeftHandSide={isLeftHandSide}
         closeOnBackgroundClick={closeOnBackgroundClick}
         largeScreenMaxWidth={largeScreenMaxWidth}
+        aria-labelledby={title ? titleId : undefined}
         {...rest}
       >
         <OakFlex
@@ -158,7 +167,12 @@ export const OakInformativeModal = ({
               </OakLink>
             )}
             {title && (
-              <OakHeading tag={titleTag} $font="heading-6" $mh="auto">
+              <OakHeading
+                id={titleId}
+                tag={titleTag}
+                $font="heading-6"
+                $mh="auto"
+              >
                 {title}
               </OakHeading>
             )}
