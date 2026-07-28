@@ -17,7 +17,7 @@ const meta: Meta<typeof OakVideo> = {
       control: "text",
     },
     headingTag: {
-      options: ["h1", "h2", "h3", "h4", "h5", "h6"],
+      options: ["h1", "h2", "h3", "h4", "h5", "h6", "div"],
       control: "select",
     },
     body: {
