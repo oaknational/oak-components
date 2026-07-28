@@ -153,7 +153,8 @@ export const OakInformativeModal = ({
           $height={"100%"}
         >
           <OakFlex
-            $pa="spacing-16"
+            $pt="spacing-16"
+            $ph="spacing-24"
             $justifyContent={actionLabel ? "space-between" : "flex-end"}
             $alignItems="center"
           >
