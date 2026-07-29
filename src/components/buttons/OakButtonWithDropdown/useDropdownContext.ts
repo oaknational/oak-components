@@ -1,9 +1,9 @@
 import { useContext } from "react";
 
-import { dropdownContext } from "./OakButtonWithDropdownProvider";
+import { DropdownContext } from "./OakButtonWithDropdownProvider";
 
 export const useDropdownContext = () => {
-  const dropdownValue = useContext(dropdownContext);
+  const dropdownValue = useContext(DropdownContext);
 
   if (!dropdownValue) {
     throw new Error("useDropdownContext() called outside of provider");

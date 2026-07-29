@@ -1,10 +1,10 @@
-import React, { createContext } from "react";
+import React, { createContext, useMemo } from "react";
 
 type DropdownContextType = {
   close: () => void;
 };
 
-export const dropdownContext = createContext<DropdownContextType | null>(null);
+export const DropdownContext = createContext<DropdownContextType | null>(null);
 
 export const OakButtonWithDropdownProvider = ({
   close,
@@ -13,13 +13,11 @@ export const OakButtonWithDropdownProvider = ({
   close: () => void;
   children: React.ReactNode;
 }) => {
-  const context: DropdownContextType = {
-    close,
-  };
+  const context: DropdownContextType = useMemo(() => ({ close }), [close]);
 
   return (
-    <dropdownContext.Provider value={context}>
+    <DropdownContext.Provider value={context}>
       {children}
-    </dropdownContext.Provider>
+    </DropdownContext.Provider>
   );
 };
