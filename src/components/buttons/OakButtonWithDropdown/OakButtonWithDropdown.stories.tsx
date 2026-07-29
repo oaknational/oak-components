@@ -1,7 +1,11 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/nextjs";
+import { withReactContext } from "storybook-react-context";
+import { fn } from "storybook/internal/test";
 
 import { OakButtonWithDropdown } from "./OakButtonWithDropdown";
+import { dropdownContext } from "./OakButtonWithDropdownProvider";
+import { useDropdownContext } from "./useDropdownContext";
 
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakIcon } from "@/components/images-and-icons/OakIcon";
@@ -166,7 +170,7 @@ export const CloseOnChange: OakButtonWithDropdownStory = {
   render: (args) => (
     <OakFlex $height={"spacing-240"}>
       <OakFlex $gap="spacing-24">
-        <OakButtonWithDropdown closeOnChange={true} {...args}>
+        <OakButtonWithDropdown closeOnChange {...args}>
           <OakSecondaryButton aria-label="Button 1">
             Button 1
           </OakSecondaryButton>
@@ -201,26 +205,28 @@ export const CloseOnChange: OakButtonWithDropdownStory = {
 };
 
 export const CloseHandledByChildren: OakButtonWithDropdownStory = {
+  decorators: [withReactContext],
+  parameters: {
+    reactContext: {
+      context: dropdownContext,
+      contextValue: { close: () => fn() },
+    },
+  },
   render: (args) => (
     <OakButtonWithDropdown {...args}>
-      {(close) => (
-        <>
-          <OakFlex
-            $gap={"spacing-16"}
-            $flexDirection={"column"}
-            $font={"heading-light-7"}
-            $pa={"spacing-4"}
-          >
-            <OakCheckBox id={"1"} value={"1"} displayValue={"1"} />
-            <OakCheckBox id={"2"} value={"2"} displayValue={"2"} />
-            <OakCheckBox id={"3"} value={"3"} displayValue={"3"} />
-          </OakFlex>
-          <OakButtonWithDropdown.Divider />
-          <OakSecondaryButton iconName="plus" onClick={close}>
-            Add
-          </OakSecondaryButton>
-        </>
-      )}
+      <ChildrenUsingContext />
     </OakButtonWithDropdown>
   ),
+};
+
+const ChildrenUsingContext = () => {
+  const { close } = useDropdownContext();
+  return (
+    <>
+      <OakCheckBox id="1" value="1" displayValue="1" />
+      <OakCheckBox id="2" value="2" displayValue="2" />
+      <OakCheckBox id="3" value="3" displayValue="3" />
+      <OakSecondaryButton onClick={close}>Add</OakSecondaryButton>
+    </>
+  );
 };

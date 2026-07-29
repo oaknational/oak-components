@@ -4,6 +4,7 @@ import userEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom";
 
 import { OakButtonWithDropdown } from "./OakButtonWithDropdown";
+import { useDropdownContext } from "./useDropdownContext";
 
 import { OakSecondaryButton } from "@/components/buttons/OakSecondaryButton";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
@@ -24,6 +25,18 @@ const simpleChildren = (
     </button>
   </>
 );
+
+const ChildrenUsingContext = () => {
+  const { close } = useDropdownContext();
+  return (
+    <>
+      <OakCheckBox id="1" value="1" displayValue="1" />
+      <OakCheckBox id="2" value="2" displayValue="2" />
+      <OakCheckBox id="3" value="3" displayValue="3" />
+      <OakSecondaryButton onClick={close}>Add</OakSecondaryButton>
+    </>
+  );
+};
 
 describe("OakButtonWithDropdown", () => {
   beforeEach(() => {
@@ -417,16 +430,10 @@ describe("OakButtonWithDropdown", () => {
 
   it("allows close to be handled by children", async () => {
     const user = userEvent.setup();
+
     renderWithTheme(
       <OakButtonWithDropdown {...defaultProps}>
-        {(close) => (
-          <>
-            <OakCheckBox id="1" value="1" displayValue="1" />
-            <OakCheckBox id="2" value="2" displayValue="2" />
-            <OakCheckBox id="3" value="3" displayValue="3" />
-            <OakSecondaryButton onClick={close}>Add</OakSecondaryButton>
-          </>
-        )}
+        <ChildrenUsingContext />
       </OakButtonWithDropdown>,
     );
 
