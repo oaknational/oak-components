@@ -1,10 +1,7 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/nextjs";
-import { withReactContext } from "storybook-react-context";
-import { fn } from "storybook/internal/test";
 
 import { OakButtonWithDropdown } from "./OakButtonWithDropdown";
-import { dropdownContext } from "./OakButtonWithDropdownProvider";
 import { useDropdownContext } from "./useDropdownContext";
 
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
@@ -205,13 +202,6 @@ export const CloseOnChange: OakButtonWithDropdownStory = {
 };
 
 export const CloseHandledByChildren: OakButtonWithDropdownStory = {
-  decorators: [withReactContext],
-  parameters: {
-    reactContext: {
-      context: dropdownContext,
-      contextValue: { close: () => fn() },
-    },
-  },
   render: (args) => (
     <OakButtonWithDropdown {...args}>
       <ChildrenUsingContext />

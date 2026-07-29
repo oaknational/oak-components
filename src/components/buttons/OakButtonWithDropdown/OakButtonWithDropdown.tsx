@@ -42,7 +42,7 @@ export type OakButtonWithDropdownProps = {
   closeOnChange?: boolean;
   dropdownProps?: {
     /** The ARIA role for the dropdown panel. Defaults to "menu". */
-    "aria-role"?: React.AriaRole;
+    role?: React.AriaRole;
     /** The ARIA label for the dropdown panel. Defaults to undefined (no label). */
     "aria-label"?: string;
   };
@@ -68,7 +68,7 @@ export const OakButtonWithDropdown = ({
   flexWidth,
   closeOnChange,
   dropdownProps = {
-    "aria-role": "menu",
+    role: "menu",
   },
 }: OakButtonWithDropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -211,7 +211,7 @@ export const OakButtonWithDropdown = ({
             $position="absolute"
             $top={dropdownTopSpacing}
             $zIndex="modal-close-button"
-            role={dropdownProps?.["aria-role"] ?? "menu"}
+            role={dropdownProps?.["role"] ?? "menu"}
             aria-label={
               dropdownProps["aria-label"] ??
               "Dropdown menu. Use arrow keys to navigate, Tab to cycle through items, Escape to close."
