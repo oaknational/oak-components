@@ -27,13 +27,13 @@ const simpleChildren = (
 );
 
 const ChildrenUsingContext = () => {
-  const { close } = useDropdownContext();
+  const { onClose } = useDropdownContext();
   return (
     <>
       <OakCheckBox id="1" value="1" displayValue="1" />
       <OakCheckBox id="2" value="2" displayValue="2" />
       <OakCheckBox id="3" value="3" displayValue="3" />
-      <OakSecondaryButton onClick={close}>Add</OakSecondaryButton>
+      <OakSecondaryButton onClick={onClose}>Add</OakSecondaryButton>
     </>
   );
 };

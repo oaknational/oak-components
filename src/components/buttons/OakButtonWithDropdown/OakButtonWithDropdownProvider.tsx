@@ -1,19 +1,19 @@
 import React, { createContext, useMemo } from "react";
 
 type DropdownContextType = {
-  close: () => void;
+  onClose: () => void;
 };
 
 export const DropdownContext = createContext<DropdownContextType | null>(null);
 
 export const OakButtonWithDropdownProvider = ({
-  close,
+  onClose,
   children,
 }: {
-  close: () => void;
+  onClose: () => void;
   children: React.ReactNode;
 }) => {
-  const context: DropdownContextType = useMemo(() => ({ close }), [close]);
+  const context: DropdownContextType = useMemo(() => ({ onClose }), [onClose]);
 
   return (
     <DropdownContext.Provider value={context}>

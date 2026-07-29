@@ -219,7 +219,7 @@ export const OakButtonWithDropdown = ({
             data-testid={dataTestId ? `${dataTestId}-dropdown` : undefined}
           >
             <OakFlex $flexDirection="column" $gap={"spacing-8"}>
-              <OakButtonWithDropdownProvider close={() => setIsOpen(false)}>
+              <OakButtonWithDropdownProvider onClose={() => setIsOpen(false)}>
                 {children}
               </OakButtonWithDropdownProvider>
             </OakFlex>
