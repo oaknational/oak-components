@@ -1,5 +1,5 @@
 import React from "react";
-import { screen } from "@testing-library/react";
+import { screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom";
 
@@ -29,12 +29,13 @@ const simpleChildren = (
 const ChildrenUsingContext = () => {
   const { onClose } = useDropdownContext();
   return (
-    <>
+    <fieldset>
+      <legend>Resources available to add</legend>
       <OakCheckBox id="1" value="1" displayValue="1" />
       <OakCheckBox id="2" value="2" displayValue="2" />
       <OakCheckBox id="3" value="3" displayValue="3" />
       <OakSecondaryButton onClick={onClose}>Add</OakSecondaryButton>
-    </>
+    </fieldset>
   );
 };
 
@@ -165,6 +166,7 @@ describe("OakButtonWithDropdown", () => {
     await user.click(outsideButton);
 
     expect(screen.queryByRole("menu")).not.toBeInTheDocument();
+    expect(outsideButton).toHaveFocus();
   });
 
   it("toggles dropdown open/closed state", async () => {
@@ -328,6 +330,25 @@ describe("OakButtonWithDropdown", () => {
     expect(screen.getByRole("menu")).toBeInTheDocument();
   });
 
+  it("runs menu item onClick before closing when closeOnChange is true", async () => {
+    const user = userEvent.setup();
+    const onEdit = jest.fn();
+
+    renderWithTheme(
+      <OakButtonWithDropdown closeOnChange={true} {...defaultProps}>
+        <button role="menuitem" aria-label="Edit" onClick={onEdit}>
+          Edit
+        </button>
+      </OakButtonWithDropdown>,
+    );
+
+    await user.click(screen.getByRole("button", { name: /actions/i }));
+    await user.click(screen.getByText("Edit"));
+
+    expect(onEdit).toHaveBeenCalledTimes(1);
+    expect(screen.queryByRole("menu")).not.toBeInTheDocument();
+  });
+
   it("closes dropdown on click when closeOnChange is true", async () => {
     const user = userEvent.setup();
 
@@ -372,29 +393,27 @@ describe("OakButtonWithDropdown", () => {
 
   it.each([
     ["enter", "{Enter}"],
-    ["return", "{Return}"],
     ["space", " "],
   ])(
-    "closes dropdown on %s pressed when closeOnChange is true",
+    "runs menu item onClick before closing on %s when closeOnChange is true",
     async (_, keyPressed) => {
       const user = userEvent.setup();
+      const onEdit = jest.fn();
 
       renderWithTheme(
         <OakButtonWithDropdown closeOnChange={true} {...defaultProps}>
-          {simpleChildren}
+          <button role="menuitem" aria-label="Edit" onClick={onEdit}>
+            Edit
+          </button>
         </OakButtonWithDropdown>,
       );
 
-      const primaryButton = screen.getByRole("button", { name: /actions/i });
-      await user.click(primaryButton);
-
-      expect(screen.getByRole("menu")).toBeInTheDocument();
-
-      // Click menu item
+      await user.click(screen.getByRole("button", { name: /actions/i }));
       await user.tab();
       expect(screen.getByText("Edit")).toHaveFocus();
       await user.keyboard(keyPressed);
 
+      expect(onEdit).toHaveBeenCalledTimes(1);
       expect(screen.queryByRole("menu")).not.toBeInTheDocument();
     },
   );
@@ -432,7 +451,7 @@ describe("OakButtonWithDropdown", () => {
     const user = userEvent.setup();
 
     renderWithTheme(
-      <OakButtonWithDropdown {...defaultProps}>
+      <OakButtonWithDropdown {...defaultProps} dropdownType="disclosure">
         <ChildrenUsingContext />
       </OakButtonWithDropdown>,
     );
@@ -440,13 +459,103 @@ describe("OakButtonWithDropdown", () => {
     const primaryButton = screen.getByRole("button", { name: /actions/i });
     await user.click(primaryButton);
 
-    expect(screen.getByRole("menu")).toBeInTheDocument();
+    expect(screen.getByRole("group")).toBeInTheDocument();
 
     await user.click(screen.getByDisplayValue("1"));
     await user.click(screen.getByDisplayValue("2"));
 
     await user.click(screen.getByText("Add"));
 
+    expect(screen.queryByRole("group")).not.toBeInTheDocument();
+    await waitFor(() => {
+      expect(primaryButton).toHaveFocus();
+    });
+  });
+
+  it("returns focus to the trigger when closed with Escape", async () => {
+    const user = userEvent.setup();
+
+    renderWithTheme(
+      <OakButtonWithDropdown {...defaultProps} dropdownType="disclosure">
+        <ChildrenUsingContext />
+      </OakButtonWithDropdown>,
+    );
+
+    const primaryButton = screen.getByRole("button", { name: /actions/i });
+    await user.click(primaryButton);
+
+    await user.tab();
+    expect(screen.getByDisplayValue("1")).toHaveFocus();
+
+    await user.keyboard("{Escape}");
+
+    expect(screen.queryByRole("group")).not.toBeInTheDocument();
+    await waitFor(() => {
+      expect(primaryButton).toHaveFocus();
+    });
+  });
+
+  it("uses disclosure semantics when dropdownType is disclosure", async () => {
+    const user = userEvent.setup();
+
+    renderWithTheme(
+      <OakButtonWithDropdown {...defaultProps} dropdownType="disclosure">
+        <ChildrenUsingContext />
+      </OakButtonWithDropdown>,
+    );
+
+    const primaryButton = screen.getByRole("button", { name: /actions/i });
+    expect(primaryButton).not.toHaveAttribute("aria-haspopup");
+    expect(primaryButton).not.toHaveAttribute("aria-controls");
+
+    await user.click(primaryButton);
+
+    const panelId = primaryButton.getAttribute("aria-controls");
+    expect(panelId).toBeTruthy();
+    expect(document.getElementById(panelId!)).toBeInTheDocument();
     expect(screen.queryByRole("menu")).not.toBeInTheDocument();
+
+    await user.click(primaryButton);
+
+    expect(primaryButton).not.toHaveAttribute("aria-controls");
+  });
+
+  it("provides a default aria-label for menu mode", async () => {
+    const user = userEvent.setup();
+
+    renderWithTheme(
+      <OakButtonWithDropdown {...defaultProps}>
+        {simpleChildren}
+      </OakButtonWithDropdown>,
+    );
+
+    await user.click(screen.getByRole("button", { name: /actions/i }));
+
+    expect(screen.getByRole("menu")).toHaveAttribute(
+      "aria-label",
+      "Dropdown menu. Use arrow keys to navigate, Tab to cycle through items, Escape to close.",
+    );
+  });
+
+  it("does not close disclosure panel on checkbox interaction when closeOnChange is true", async () => {
+    const user = userEvent.setup();
+
+    renderWithTheme(
+      <OakButtonWithDropdown
+        {...defaultProps}
+        dropdownType="disclosure"
+        closeOnChange
+      >
+        <ChildrenUsingContext />
+      </OakButtonWithDropdown>,
+    );
+
+    await user.click(screen.getByRole("button", { name: /actions/i }));
+    expect(screen.getByRole("group")).toBeInTheDocument();
+
+    await user.click(screen.getByDisplayValue("1"));
+    await user.click(screen.getByDisplayValue("2"));
+
+    expect(screen.getByRole("group")).toBeInTheDocument();
   });
 });

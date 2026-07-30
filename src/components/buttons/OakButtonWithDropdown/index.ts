@@ -1,5 +1,8 @@
 export { OakButtonWithDropdown } from "./OakButtonWithDropdown";
-export type { OakButtonWithDropdownProps } from "./OakButtonWithDropdown";
+export type {
+  OakButtonWithDropdownProps,
+  OakButtonWithDropdownType,
+} from "./OakButtonWithDropdown";
 export {
   DropdownContext,
   OakButtonWithDropdownProvider,

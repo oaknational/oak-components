@@ -9,7 +9,9 @@ import { OakIcon } from "@/components/images-and-icons/OakIcon";
 import { OakSpan } from "@/components/typography/OakSpan";
 import { OakSmallPrimaryInvertedButton } from "@/components/buttons/OakSmallPrimaryInvertedButton";
 import { OakSecondaryButton } from "@/components/buttons/OakSecondaryButton";
-import { OakCheckBox } from "@/components/form-elements";
+import { OakPrimaryButton } from "@/components/buttons/OakPrimaryButton";
+import { OakCheckBox, OakFieldset } from "@/components/form-elements";
+import { OakHeading } from "@/components/typography/OakHeading";
 
 // Generic Dropdown Navigation Button Stories
 const dropdownNavMeta: Meta<typeof OakButtonWithDropdown> = {
@@ -28,6 +30,7 @@ const dropdownNavMeta: Meta<typeof OakButtonWithDropdown> = {
         "ariaLabel",
         "ariaDescription",
         "closeOnChange",
+        "dropdownType",
       ],
     },
   },
@@ -203,7 +206,7 @@ export const CloseOnChange: OakButtonWithDropdownStory = {
 
 export const CloseHandledByChildren: OakButtonWithDropdownStory = {
   render: (args) => (
-    <OakButtonWithDropdown {...args}>
+    <OakButtonWithDropdown {...args} dropdownType="disclosure">
       <ChildrenUsingContext />
     </OakButtonWithDropdown>
   ),
@@ -212,11 +215,21 @@ export const CloseHandledByChildren: OakButtonWithDropdownStory = {
 const ChildrenUsingContext = () => {
   const { onClose } = useDropdownContext();
   return (
-    <>
-      <OakCheckBox id="1" value="1" displayValue="1" />
-      <OakCheckBox id="2" value="2" displayValue="2" />
-      <OakCheckBox id="3" value="3" displayValue="3" />
-      <OakSecondaryButton onClick={onClose}>Close</OakSecondaryButton>
-    </>
+    <OakFieldset $width="spacing-240">
+      <OakFlex $flexDirection="column" $gap="spacing-12">
+        <OakFlex $flexDirection="column" $gap="spacing-16">
+          <OakHeading as="legend" $font="heading-7" tag="h3">
+            Resources available to add
+          </OakHeading>
+          <OakCheckBox id="1" value="1" displayValue="1" />
+          <OakCheckBox id="2" value="2" displayValue="2" />
+          <OakCheckBox id="3" value="3" displayValue="3" />
+        </OakFlex>
+        <OakButtonWithDropdown.Divider />
+        <OakFlex $justifyContent="flex-end">
+          <OakPrimaryButton onClick={onClose}>Add</OakPrimaryButton>
+        </OakFlex>
+      </OakFlex>
+    </OakFieldset>
   );
 };
