@@ -91,7 +91,7 @@ export const OakButtonWithDropdown = ({
   const generatedPanelId = useId();
   const dropdownPanelId = dataTestId
     ? `${dataTestId}-dropdown`
-    : generatedPanelId.replace(/:/g, "");
+    : generatedPanelId.replaceAll(":", "");
 
   const isMenuDropdown = dropdownType === "menu";
 
@@ -226,6 +226,13 @@ export const OakButtonWithDropdown = ({
       "Dropdown menu. Use arrow keys to navigate, Tab to cycle through items, Escape to close.")
     : dropdownProps?.["aria-label"];
 
+  let triggerAriaProps: Record<string, string> = {};
+  if (isMenuDropdown) {
+    triggerAriaProps = { "aria-haspopup": "menu" };
+  } else if (isOpen) {
+    triggerAriaProps = { "aria-controls": dropdownPanelId };
+  }
+
   return (
     <OakBox
       as="section"
@@ -247,11 +254,7 @@ export const OakButtonWithDropdown = ({
             disabled={disabled}
             width="max-content"
             aria-expanded={isOpen}
-            {...(isMenuDropdown
-              ? { "aria-haspopup": "menu" as const }
-              : isOpen
-                ? { "aria-controls": dropdownPanelId }
-                : {})}
+            {...triggerAriaProps}
             aria-label={primaryActionText}
             data-testid={
               dataTestId ? `${dataTestId}-primary-action` : undefined
