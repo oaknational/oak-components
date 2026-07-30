@@ -340,6 +340,14 @@ exports[`OakLessonBottomNav matches snapshot 1`] = `
   }
 }
 
+@media (min-aspect-ratio:1/1) {
+  .c2 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
 <div>
   <div
     class="c0 c1 c2"
