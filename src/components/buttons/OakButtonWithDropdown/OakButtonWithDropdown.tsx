@@ -74,6 +74,7 @@ export const OakButtonWithDropdown = ({
   const [isOpen, setIsOpen] = useState(false);
 
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const wasOpen = useRef(false);
 
   // Get all focusable elements within the dropdown
   const getFocusableElements = () => {
@@ -91,7 +92,7 @@ export const OakButtonWithDropdown = ({
     }
   };
 
-  // Handle clicks  the dropdown to close it
+  // Handle clicks on the dropdown to close it
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (!isOpen) return;
@@ -156,6 +157,13 @@ export const OakButtonWithDropdown = ({
       document.addEventListener("keydown", handleKeyDown);
     }
 
+    if (wasOpen.current && !isOpen) {
+      const timeoutId = setTimeout(() => getFocusableElements()[0]?.focus(), 0);
+      wasOpen.current = isOpen;
+      return () => clearTimeout(timeoutId);
+    }
+    wasOpen.current = isOpen;
+
     return () => {
       document.removeEventListener("mousedown", handleClick);
       document.removeEventListener("keydown", handleKeyDown);
@@ -188,7 +196,7 @@ export const OakButtonWithDropdown = ({
             disabled={disabled}
             width="max-content"
             aria-expanded={isOpen}
-            aria-haspopup="menu"
+            aria-haspopup={dropdownProps.role === "menu" ? "menu" : undefined}
             aria-label={primaryActionText}
             data-testid={
               dataTestId ? `${dataTestId}-primary-action` : undefined

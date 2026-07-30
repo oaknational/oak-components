@@ -9,7 +9,8 @@ import { OakIcon } from "@/components/images-and-icons/OakIcon";
 import { OakSpan } from "@/components/typography/OakSpan";
 import { OakSmallPrimaryInvertedButton } from "@/components/buttons/OakSmallPrimaryInvertedButton";
 import { OakSecondaryButton } from "@/components/buttons/OakSecondaryButton";
-import { OakCheckBox } from "@/components/form-elements";
+import { OakCheckBox, OakFieldset } from "@/components/form-elements";
+import { OakHeading } from "@/components/typography";
 
 // Generic Dropdown Navigation Button Stories
 const dropdownNavMeta: Meta<typeof OakButtonWithDropdown> = {
@@ -203,7 +204,7 @@ export const CloseOnChange: OakButtonWithDropdownStory = {
 
 export const CloseHandledByChildren: OakButtonWithDropdownStory = {
   render: (args) => (
-    <OakButtonWithDropdown {...args}>
+    <OakButtonWithDropdown dropdownProps={{ role: "group" }} {...args}>
       <ChildrenUsingContext />
     </OakButtonWithDropdown>
   ),
@@ -212,11 +213,17 @@ export const CloseHandledByChildren: OakButtonWithDropdownStory = {
 const ChildrenUsingContext = () => {
   const { onClose } = useDropdownContext();
   return (
-    <>
-      <OakCheckBox id="1" value="1" displayValue="1" />
-      <OakCheckBox id="2" value="2" displayValue="2" />
-      <OakCheckBox id="3" value="3" displayValue="3" />
-      <OakSecondaryButton onClick={onClose}>Close</OakSecondaryButton>
-    </>
+    <OakFieldset>
+      <OakHeading as={"legend"} tag="h1" $mb={"spacing-4"}>
+        Options
+      </OakHeading>
+      <OakFlex $gap={"spacing-12"} $flexDirection={"column"}>
+        <OakCheckBox id="1" value="1" displayValue="1" />
+        <OakCheckBox id="2" value="2" displayValue="2" />
+        <OakCheckBox id="3" value="3" displayValue="3" />
+
+        <OakSecondaryButton onClick={onClose}>Close</OakSecondaryButton>
+      </OakFlex>
+    </OakFieldset>
   );
 };

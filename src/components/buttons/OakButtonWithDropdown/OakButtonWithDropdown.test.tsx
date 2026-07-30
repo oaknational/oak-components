@@ -192,7 +192,7 @@ describe("OakButtonWithDropdown", () => {
   it("sets proper ARIA attributes", async () => {
     const user = userEvent.setup();
     renderWithTheme(
-      <OakButtonWithDropdown {...defaultProps}>
+      <OakButtonWithDropdown {...defaultProps} dropdownProps={undefined}>
         {simpleChildren}
       </OakButtonWithDropdown>,
     );
@@ -375,7 +375,7 @@ describe("OakButtonWithDropdown", () => {
     ["return", "{Return}"],
     ["space", " "],
   ])(
-    "closes dropdown on %s pressed when closeOnChange is true",
+    "closes and focuses dropdown on %s pressed when closeOnChange is true",
     async (_, keyPressed) => {
       const user = userEvent.setup();
 
@@ -396,6 +396,7 @@ describe("OakButtonWithDropdown", () => {
       await user.keyboard(keyPressed);
 
       expect(screen.queryByRole("menu")).not.toBeInTheDocument();
+      expect(primaryButton).toHaveFocus();
     },
   );
 
@@ -448,5 +449,6 @@ describe("OakButtonWithDropdown", () => {
     await user.click(screen.getByText("Add"));
 
     expect(screen.queryByRole("menu")).not.toBeInTheDocument();
+    expect(primaryButton).toHaveFocus();
   });
 });
