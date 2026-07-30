@@ -21,6 +21,54 @@ const longText: PortableTextBlock[] = new Array(20).fill(true).map(() => ({
   style: "normal",
 }));
 
+const portableTextShortBody: PortableTextBlock[] = [
+  {
+    _key: "1",
+    _type: "block",
+    children: [
+      {
+        _key: "1a",
+        _type: "span",
+        marks: [],
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      },
+    ],
+    markDefs: [],
+    style: "normal",
+  },
+];
+
+const portableTextLongBody: PortableTextBlock[] = [
+  {
+    _key: "1",
+    _type: "block",
+    children: [
+      {
+        _key: "1a",
+        _type: "span",
+        marks: [],
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      },
+    ],
+    markDefs: [],
+    style: "normal",
+  },
+  {
+    _key: "2",
+    _type: "block",
+    children: [
+      {
+        _key: "2a",
+        _type: "span",
+        marks: [],
+        text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      },
+    ],
+    markDefs: [],
+    style: "normal",
+  },
+];
+
 const meta: Meta<typeof OakVideo> = {
   component: OakVideo,
   title: "components/Presentational/OakVideo",
@@ -34,7 +82,19 @@ const meta: Meta<typeof OakVideo> = {
       control: "select",
     },
     body: {
-      control: "text",
+      options: ["short_body", "long_body"],
+      mapping: {
+        short_body: portableTextShortBody,
+        long_body: portableTextLongBody,
+      },
+      control: {
+        type: "select", // Type 'select' is automatically inferred when 'options' is defined
+        labels: {
+          // 'labels' maps option values to string labels
+          short_body: "Short",
+          long_body: "Long",
+        },
+      },
     },
     showTranscript: {
       control: "boolean",
