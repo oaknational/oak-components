@@ -1,12 +1,25 @@
 import React from "react";
 import { StoryObj, Meta } from "@storybook/nextjs";
+import { PortableTextBlock } from "@portabletext/react";
 
 import { OakVideo } from "./OakVideo";
 
 import { OakBox } from "@/components/layout-and-structure";
 
-const longText =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales ";
+const longText: PortableTextBlock[] = new Array(20).fill(true).map(() => ({
+  _key: "1",
+  _type: "block",
+  children: [
+    {
+      _key: "1a",
+      _type: "span",
+      marks: [],
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    },
+  ],
+  markDefs: [],
+  style: "normal",
+}));
 
 const meta: Meta<typeof OakVideo> = {
   component: OakVideo,
@@ -79,10 +92,39 @@ export const AllEnabled: Story = {
         Placeholder
       </OakBox>
     ),
-    transcript: [longText, longText, longText],
+    transcript: longText,
     heading:
       "Building a research informed curriculum by adopting Oak’s foreign languages model",
-    body: "A couple of lines of supporting copy about the video to explain who is in the video and what they discuss.",
+    body: [
+      {
+        _key: "1",
+        _type: "block",
+        children: [
+          {
+            _key: "1a",
+            _type: "span",
+            marks: [],
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          },
+        ],
+        markDefs: [],
+        style: "normal",
+      },
+      {
+        _key: "1",
+        _type: "block",
+        children: [
+          {
+            _key: "1a",
+            _type: "span",
+            marks: [],
+            text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          },
+        ],
+        markDefs: [],
+        style: "normal",
+      },
+    ],
     showTranscript: true,
     showSignLanguage: true,
     showCopyLink: true,

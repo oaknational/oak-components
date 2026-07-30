@@ -1,9 +1,11 @@
 import React, { useState, useId } from "react";
+import type { PortableTextBlock } from "@portabletext/react";
 
 import type { OakHeadingProps } from "@/components/typography";
 import { OakSmallSecondaryButton } from "@/components/buttons";
 import { OakFlex, OakBox } from "@/components/layout-and-structure";
 import { OakHeading, OakP } from "@/components/typography";
+import { OakPortableText } from "@/components/layout-and-structure/OakPortableText/OakPortableText";
 
 export type OakVideoProps = {
   /**
@@ -19,7 +21,7 @@ export type OakVideoProps = {
   /**
    * The body text to display below the heading and above the video.
    */
-  body?: string;
+  body?: string | PortableTextBlock[];
   /**
    * The video slot to display. This is a React node that can be any valid React element.
    */
@@ -27,7 +29,7 @@ export type OakVideoProps = {
   /**
    * The transcript to display below the video.
    */
-  transcript?: string[];
+  transcript?: PortableTextBlock[];
   /**
    * Whether to show the transcript button.
    */
@@ -97,7 +99,22 @@ export function OakVideo({
             {heading}
           </OakHeading>
         )}
-        {body && (
+        {Array.isArray(body) && (
+          <OakPortableText
+            value={body}
+            components={{
+              paragraph: ({ children }) => (
+                <OakP
+                  $color={"text-primary"}
+                  $font={["body-2", "body-1", "body-1"]}
+                >
+                  {children}
+                </OakP>
+              ),
+            }}
+          />
+        )}
+        {!Array.isArray(body) && (
           <OakP $color={"text-primary"} $font={["body-2", "body-1", "body-1"]}>
             {body}
           </OakP>
@@ -167,13 +184,16 @@ export function OakVideo({
             $overflowY={"auto"}
             $flexDirection={"column"}
           >
-            {transcript.map((transcriptLine, transcriptIndex) => {
-              return (
-                <OakP key={transcriptIndex} $font={"body-1"}>
-                  {transcriptLine}
-                </OakP>
-              );
-            })}
+            <OakPortableText
+              value={transcript}
+              components={{
+                paragraph: ({ children }) => (
+                  <OakP $color={"text-primary"} $font={"body-1"}>
+                    {children}
+                  </OakP>
+                ),
+              }}
+            />
           </OakFlex>
         </OakFlex>
       )}
