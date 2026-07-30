@@ -12,7 +12,7 @@ exports[`OakVideo renders correctly with all controls 1`] = `
 }
 
 .c3 {
-  aspect-ratio: 30/17;
+  aspect-ratio: 16/9;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -158,6 +158,9 @@ exports[`OakVideo renders correctly with all controls 1`] = `
 
 .c22 {
   display: none;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 2rem;
 }
 
@@ -706,7 +709,7 @@ exports[`OakVideo renders correctly with just video 1`] = `
 }
 
 .c3 {
-  aspect-ratio: 30/17;
+  aspect-ratio: 16/9;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 

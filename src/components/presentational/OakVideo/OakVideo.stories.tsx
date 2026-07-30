@@ -36,8 +36,8 @@ const meta: Meta<typeof OakVideo> = {
       options: ["undefined", "short_text", "long_text"],
       mapping: {
         undefined: undefined,
-        short_text: ["Short text", "Short text", "Short text"],
-        long_text: [longText, longText, longText],
+        short_text: new Array(20).fill("Short text"),
+        long_text: new Array(20).fill(longText),
       },
       control: {
         type: "select", // Type 'select' is automatically inferred when 'options' is defined
