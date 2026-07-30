@@ -57,7 +57,11 @@ export type OakButtonWithDropdownProps = {
   dropdownProps?: {
     /** The ARIA role for the dropdown panel. Defaults to "menu" in menu mode. Omitted in disclosure mode. */
     role?: React.AriaRole;
-    /** The ARIA label for the dropdown panel. Omitted by default; prefer a visible legend in disclosure mode. */
+    /**
+     * Accessible name for the dropdown panel.
+     * Menu mode: optional; falls back to default keyboard-instruction label if omitted.
+     * Disclosure mode: omitted unless provided; prefer a visible legend instead.
+     */
     "aria-label"?: string;
   };
 };

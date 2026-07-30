@@ -414,7 +414,9 @@ describe("OakButtonWithDropdown", () => {
       await user.keyboard(keyPressed);
 
       expect(onEdit).toHaveBeenCalledTimes(1);
-      expect(screen.queryByRole("menu")).not.toBeInTheDocument();
+      await waitFor(() => {
+        expect(screen.queryByRole("menu")).not.toBeInTheDocument();
+      });
     },
   );
 
