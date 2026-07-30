@@ -23,6 +23,7 @@ export const oakAllSpacingTokens = {
   "spacing-360": 360,
   "spacing-480": 480,
   "spacing-640": 640,
+  "spacing-800": 800,
   "spacing-960": 960,
   "spacing-1280": 1280,
   "spacing-1360": 1360,
