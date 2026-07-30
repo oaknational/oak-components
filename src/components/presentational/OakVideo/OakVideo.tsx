@@ -81,12 +81,12 @@ export function OakVideo({
         $ba="border-solid-m"
         $borderColor="border-primary"
       >
-        <OakBox $aspectRatio={"30/17"}>{videoSlot}</OakBox>
+        <OakBox $aspectRatio={"16/9"}>{videoSlot}</OakBox>
       </OakFlex>
       <OakFlex
         $flexDirection={"column"}
         $gap={"spacing-8"}
-        $display={!(heading && body) ? "none" : undefined}
+        $display={!heading && !body ? "none" : undefined}
       >
         {heading && (
           <OakHeading
@@ -160,6 +160,7 @@ export function OakVideo({
           $pa={"spacing-16"}
           $borderRadius={"border-radius-s"}
           $gap={"spacing-32"}
+          $flexDirection={"column"}
         >
           <OakFlex
             $gap={"spacing-8"}
