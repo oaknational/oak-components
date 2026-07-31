@@ -22,6 +22,8 @@ jobs:
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
 
       - name: setup pnpm
         uses: pnpm/action-setup@08c4be7e2e672a47d11bd04269e27e5f3e8529cb
@@ -65,6 +67,6 @@ jobs:
           timeout: 1200
 
       - name: Run Storybook tests
-        run: pnpm exec test-storybook --url "${{ steps.deployment.outputs.deployment-url }}" --no-index-json
+        run: pnpm exec test-storybook --url "${{ steps.deployment.outputs.deployment-url }}"
         env:
           VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
