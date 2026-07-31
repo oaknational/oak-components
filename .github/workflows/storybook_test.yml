@@ -1,13 +1,22 @@
 name: Storybook Test
 
-on: deployment_status
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+  push:
+    branches: [main]
 
 permissions:
   contents: read
+  deployments: read
+  statuses: read
+
+concurrency:
+  group: storybook-test-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   storybook-tests:
-    if: github.event.deployment_status.state == 'success'
     name: Storybook Tests
     runs-on: ubuntu-latest
     timeout-minutes: 60
@@ -47,7 +56,15 @@ jobs:
         if: steps.playwright-cache.outputs.cache-hit != 'true'
         run: pnpm exec playwright install chromium
 
+      - name: Wait for Vercel deployment
+        id: deployment
+        uses: vercel/wait-for-deployment-action@0e2b0c5c5cce31f1648108aeec56467187aca037
+        with:
+          environment: ${{ github.ref == 'refs/heads/main' && 'production' || 'preview' }}
+          require-deployment-id: false
+          timeout: 1200
+
       - name: Run Storybook tests
-        run: pnpm exec test-storybook --url "${{ github.event.deployment_status.target_url }}" --no-index-json
+        run: pnpm exec test-storybook --url "${{ steps.deployment.outputs.deployment-url }}" --no-index-json
         env:
           VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
