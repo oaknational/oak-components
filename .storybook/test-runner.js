@@ -1,10 +1,9 @@
 module.exports = {
-  async prepare({ browserContext }) {
+  async getHttpHeaders({ browserContext }) {
     const bypass = process.env.VERCEL_AUTOMATION_BYPASS_SECRET;
     if (bypass) {
-      await browserContext.setExtraHTTPHeaders({
-        "x-vercel-protection-bypass": bypass,
-      });
+      return { "x-vercel-protection-bypass": bypass };
     }
+    return {};
   },
 };
