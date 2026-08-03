@@ -11,6 +11,5 @@ if [ "$branch" = "main" ]; then
 fi
 
 pnpm run check-types
-pnpm run test:storybook
 pnpm run test:ci
 pnpm run build

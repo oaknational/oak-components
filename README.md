@@ -84,9 +84,9 @@ Sometimes it isn't enough to develop entirely inside Storybook and it might be n
 
 ## Testing Stories
 
-To check that all stories render successfully, you can use [@storybook/test-runner](https://storybook.js.org/docs/writing-tests/integrations/test-runner). These tests will also run as part of the pre-push hook and against the deployed preview on PRs. To run locally:
+To check that all stories render successfully, you can use [@storybook/test-runner](https://storybook.js.org/docs/writing-tests/integrations/test-runner). These tests will also run against the deployed preview on PRs. To run locally:
 
-1. Ensure browsers are installed once: `pnpm rexec playwright install`
+1. Ensure browsers are installed once: `pnpm exec playwright install`
 2. Run tests with `pnpm run test:storybook`
 
 ## Organisational structure
