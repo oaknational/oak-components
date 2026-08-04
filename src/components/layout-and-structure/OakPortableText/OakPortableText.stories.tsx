@@ -3,8 +3,8 @@ import { Meta, StoryObj } from "@storybook/nextjs";
 
 import { OakPortableText, OakPortableTextProps } from "./OakPortableText";
 
-import { OakP } from "@/components/typography/OakP/OakP";
-import { OakSpan } from "@/index";
+import { OakP } from "@/components/typography/OakP";
+import { OakSpan } from "@/components/typography/OakSpan";
 
 const portableTextWithOnlyNewlines = [
   {
@@ -113,9 +113,8 @@ const meta: Meta<OakPortableTextProps> = {
         with_marks_and_new_lines: portableTextWithMarksAndNewLines,
       },
       control: {
-        type: "select", // Type 'select' is automatically inferred when 'options' is defined
+        type: "select",
         labels: {
-          // 'labels' maps option values to string labels
           new_lines_only: "New lines only",
           with_marks_and_new_lines: "With marks and new lines",
         },
