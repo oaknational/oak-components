@@ -306,6 +306,7 @@ exports[`OakVideo renders correctly with all controls 1`] = `
   -moz-letter-spacing: -0.005rem;
   -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
+  color: #222222;
 }
 
 @media (min-width:750px) {
@@ -678,17 +679,7 @@ exports[`OakVideo renders correctly with all controls 1`] = `
           <p
             class="c24"
           >
-            TEST_1
-          </p>
-          <p
-            class="c24"
-          >
-            TEST_2
-          </p>
-          <p
-            class="c24"
-          >
-            TEST_3
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
       </div>
@@ -737,6 +728,72 @@ exports[`OakVideo renders correctly with just video 1`] = `
   gap: 0.5rem;
 }
 
+.c6 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-letter-spacing: -0.005rem;
+  -moz-letter-spacing: -0.005rem;
+  -ms-letter-spacing: -0.005rem;
+  letter-spacing: -0.005rem;
+  color: #222222;
+}
+
+@media (min-width:750px) {
+  .c6 {
+    font-weight: 300;
+  }
+}
+
+@media (min-width:1280px) {
+  .c6 {
+    font-weight: 300;
+  }
+}
+
+@media (min-width:750px) {
+  .c6 {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c6 {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c6 {
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c6 {
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c6 {
+    -webkit-letter-spacing: -0.005rem;
+    -moz-letter-spacing: -0.005rem;
+    -ms-letter-spacing: -0.005rem;
+    letter-spacing: -0.005rem;
+  }
+}
+
+@media (min-width:1280px) {
+  .c6 {
+    -webkit-letter-spacing: -0.005rem;
+    -moz-letter-spacing: -0.005rem;
+    -ms-letter-spacing: -0.005rem;
+    letter-spacing: -0.005rem;
+  }
+}
+
 <body>
   <div>
     <div
@@ -755,7 +812,11 @@ exports[`OakVideo renders correctly with just video 1`] = `
       </div>
       <div
         class="c4 c5"
-      />
+      >
+        <p
+          class="c6"
+        />
+      </div>
     </div>
   </div>
 </body>

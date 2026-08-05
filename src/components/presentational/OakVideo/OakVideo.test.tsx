@@ -29,11 +29,11 @@ describe("OakVideo", () => {
       heading: "TEST_HEADING",
       body: [
         {
-          _key: "1",
+          _key: "2",
           _type: "block",
           children: [
             {
-              _key: "1a",
+              _key: "2a",
               _type: "span",
               marks: [],
               text: "TEST_BODY",
@@ -93,11 +93,11 @@ describe("OakVideo", () => {
       videoSlot: <div>TEST_VIDEO</div>,
       transcript: [
         ...new Array(3).fill(true).map((_, index: number) => ({
-          _key: "1",
+          _key: String(index),
           _type: "block",
           children: [
             {
-              _key: "1a",
+              _key: `${index}a`,
               _type: "span",
               marks: [],
               text: `TEST ${index}`,
