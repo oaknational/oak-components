@@ -10,9 +10,39 @@ describe("OakVideo", () => {
   it("renders correctly with all controls", async () => {
     const args = {
       videoSlot: <div>TEST_VIDEO</div>,
-      transcript: ["TEST_1", "TEST_2", "TEST_3"],
+      transcript: [
+        {
+          _key: "1",
+          _type: "block",
+          children: [
+            {
+              _key: "1a",
+              _type: "span",
+              marks: [],
+              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            },
+          ],
+          markDefs: [],
+          style: "normal",
+        },
+      ],
       heading: "TEST_HEADING",
-      body: "TEST_BODY",
+      body: [
+        {
+          _key: "2",
+          _type: "block",
+          children: [
+            {
+              _key: "2a",
+              _type: "span",
+              marks: [],
+              text: "TEST_BODY",
+            },
+          ],
+          markDefs: [],
+          style: "normal",
+        },
+      ],
       showTranscript: true,
       showSignLanguage: true,
       showCopyLink: true,
@@ -61,7 +91,22 @@ describe("OakVideo", () => {
     const user = userEvent.setup();
     const args = {
       videoSlot: <div>TEST_VIDEO</div>,
-      transcript: ["TEST_1", "TEST_2", "TEST_3"],
+      transcript: [
+        ...new Array(3).fill(true).map((_, index: number) => ({
+          _key: String(index),
+          _type: "block",
+          children: [
+            {
+              _key: `${index}a`,
+              _type: "span",
+              marks: [],
+              text: `TEST ${index}`,
+            },
+          ],
+          markDefs: [],
+          style: "normal",
+        })),
+      ],
       showTranscript: true,
     };
 
