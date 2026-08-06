@@ -1,4 +1,10 @@
-import React, { createContext, HTMLAttributes, ReactNode, useRef } from "react";
+import React, {
+  createContext,
+  HTMLAttributes,
+  ReactNode,
+  useId,
+  useRef,
+} from "react";
 import { createPortal } from "react-dom";
 
 import { OakCloseButton } from "@/components/buttons/OakCloseButton";
@@ -7,6 +13,8 @@ import { useIsScrolled } from "@/hooks/useIsScrolled";
 import { useMounted } from "@/hooks/useMounted";
 import InternalModalTransition from "@/components/internal-components/InternalModalTransition/InternalModalTransition";
 import { BorderStyleProps } from "@/styles/utils/borderStyle";
+import { OakLink } from "@/components/navigation/OakLink";
+import { OakHeading, OakHeadingTag } from "@/components/typography/OakHeading";
 
 export const OakInformativeModalBorderColor = createContext<
   BorderStyleProps["$borderColor"]
@@ -33,6 +41,23 @@ export type OakInformativeModalProps = {
    * Called when the modal is closed
    */
   onClose: (action?: OakInformativeModalCloseAction) => void;
+  /**
+   * Optional text to show as an action button
+   */
+  actionLabel?: string;
+  /**
+   * Called when the action button is clicked
+   */
+  onActionClick?: () => void;
+  /**
+   * Optional title for the header of the modal
+   */
+  title?: string;
+  /**
+   * Heading level for the title
+   * @default "h1"
+   */
+  titleTag?: OakHeadingTag;
   /**
    * The DOM container to render the modal portal into.
    *
@@ -76,6 +101,10 @@ export const OakInformativeModal = ({
   domContainer,
   isOpen,
   onClose,
+  actionLabel,
+  onActionClick,
+  title,
+  titleTag = "h1",
   zIndex,
   isLeftHandSide,
   closeOnBackgroundClick,
@@ -88,6 +117,8 @@ export const OakInformativeModal = ({
 
   // `createPortal` is not supported in SSR so we can only render when mounted on the client
   const isMounted = useMounted();
+
+  const titleId = useId();
 
   if (!isMounted) {
     return null;
@@ -113,6 +144,7 @@ export const OakInformativeModal = ({
         isLeftHandSide={isLeftHandSide}
         closeOnBackgroundClick={closeOnBackgroundClick}
         largeScreenMaxWidth={largeScreenMaxWidth}
+        aria-labelledby={title ? titleId : undefined}
         {...rest}
       >
         <OakFlex
@@ -121,10 +153,30 @@ export const OakInformativeModal = ({
           $height={"100%"}
         >
           <OakFlex
-            $pa="spacing-16"
-            $justifyContent={"flex-end"}
+            $pt="spacing-16"
+            $ph="spacing-24"
+            $justifyContent={actionLabel ? "space-between" : "flex-end"}
             $alignItems="center"
           >
+            {actionLabel && (
+              <OakLink
+                variant="secondary"
+                element="button"
+                onClick={onActionClick}
+              >
+                {actionLabel}
+              </OakLink>
+            )}
+            {title && (
+              <OakHeading
+                id={titleId}
+                tag={titleTag}
+                $font="heading-6"
+                $mh="auto"
+              >
+                {title}
+              </OakHeading>
+            )}
             <OakCloseButton onClose={onCloseButton} />
           </OakFlex>
           <div style={{ display: "contents" }} data-autofocus-inside>
