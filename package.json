@@ -1,6 +1,6 @@
 {
   "name": "@oaknational/oak-components",
-  "version": "3.1.1",
+  "version": "3.6.1",
   "licence": "MIT",
   "packageManager": "pnpm@11.2.0",
   "description": "Shared components for Oak applications",
@@ -18,9 +18,9 @@
   },
   "sideEffects": false,
   "files": [
-    "./dist",
-    "./package.json",
-    "./README.md"
+    "dist",
+    "package.json",
+    "README.md"
   ],
   "scripts": {
     "build": "rollup -c rollup.config.ts --configPlugin typescript",
@@ -49,7 +49,8 @@
     "next-cloudinary": ">=6.16.0",
     "react": ">=18.2.0",
     "react-dom": ">=18.2.0",
-    "styled-components": ">=5.3.11"
+    "styled-components": ">=5.3.11",
+    "@portabletext/react": ">=4.0.1"
   },
   "engines": {
     "node": "24",
@@ -60,11 +61,16 @@
     "@dnd-kit/sortable": "^10.0.0",
     "@dnd-kit/utilities": "^3.2.2",
     "@tiptap/react": "^2.11.0",
-    "url": "^0.11.4",
     "react-focus-on": "^3.10.2",
-    "react-transition-group": "^4.4.5"
+    "react-transition-group": "^4.4.5",
+    "url": "^0.11.4"
   },
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^8.0.1",
+    "@babel/preset-env": "^8.0.2",
+    "@babel/preset-react": "^8.0.1",
+    "@babel/preset-typescript": "^8.0.1",
+    "@babel/runtime": "^8.0.0",
     "@commitlint/cli": "^18.4.4",
     "@commitlint/config-conventional": "^18.4.4",
     "@rollup/plugin-commonjs": "^29.0.2",
@@ -98,6 +104,8 @@
     "@typescript-eslint/eslint-plugin": "^6.18.1",
     "@typescript-eslint/parser": "^6.18.1",
     "assert": "^2.1.0",
+    "babel-jest": "^30.4.1",
+    "babel-plugin-module-resolver": "^5.0.3",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.1",
@@ -118,6 +126,7 @@
     "playwright": "^1.61.1",
     "prettier": "^3.8.3",
     "react": "^18.2.0",
+    "react-compiler-runtime": "^1.0.0",
     "react-dom": "^18.2.0",
     "rollup": "^4.60.1",
     "rollup-plugin-dts": "^6.4.1",

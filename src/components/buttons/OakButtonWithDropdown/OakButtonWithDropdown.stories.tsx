@@ -2,12 +2,15 @@ import React from "react";
 import { Meta, StoryObj } from "@storybook/nextjs";
 
 import { OakButtonWithDropdown } from "./OakButtonWithDropdown";
+import { useDropdownContext } from "./useDropdownContext";
 
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakIcon } from "@/components/images-and-icons/OakIcon";
 import { OakSpan } from "@/components/typography/OakSpan";
 import { OakSmallPrimaryInvertedButton } from "@/components/buttons/OakSmallPrimaryInvertedButton";
 import { OakSecondaryButton } from "@/components/buttons/OakSecondaryButton";
+import { OakCheckBox, OakFieldset } from "@/components/form-elements";
+import { OakHeading } from "@/components/typography";
 
 // Generic Dropdown Navigation Button Stories
 const dropdownNavMeta: Meta<typeof OakButtonWithDropdown> = {
@@ -96,7 +99,7 @@ export const ButtonWithDropdown: OakButtonWithDropdownStory = {
   ),
 };
 
-export const leadingButtonIcon: OakButtonWithDropdownStory = {
+export const LeadingButtonIcon: OakButtonWithDropdownStory = {
   render: (args) => (
     <OakFlex $height={"spacing-240"}>
       <OakButtonWithDropdown {...args}>
@@ -161,11 +164,11 @@ export const leadingButtonIcon: OakButtonWithDropdownStory = {
   },
 };
 
-export const ButtonWithDropdownCloseOnChange: OakButtonWithDropdownStory = {
+export const CloseOnChange: OakButtonWithDropdownStory = {
   render: (args) => (
     <OakFlex $height={"spacing-240"}>
       <OakFlex $gap="spacing-24">
-        <OakButtonWithDropdown closeOnChange={true} {...args}>
+        <OakButtonWithDropdown closeOnChange {...args}>
           <OakSecondaryButton aria-label="Button 1">
             Button 1
           </OakSecondaryButton>
@@ -197,4 +200,30 @@ export const ButtonWithDropdownCloseOnChange: OakButtonWithDropdownStory = {
       </OakFlex>
     </OakFlex>
   ),
+};
+
+export const CloseHandledByChildren: OakButtonWithDropdownStory = {
+  render: (args) => (
+    <OakButtonWithDropdown dropdownProps={{ role: "group" }} {...args}>
+      <ChildrenUsingContext />
+    </OakButtonWithDropdown>
+  ),
+};
+
+const ChildrenUsingContext = () => {
+  const { onClose } = useDropdownContext();
+  return (
+    <OakFieldset>
+      <OakHeading as={"legend"} tag="h1" $mb={"spacing-4"}>
+        Options
+      </OakHeading>
+      <OakFlex $gap={"spacing-12"} $flexDirection={"column"}>
+        <OakCheckBox id="1" value="1" displayValue="1" />
+        <OakCheckBox id="2" value="2" displayValue="2" />
+        <OakCheckBox id="3" value="3" displayValue="3" />
+
+        <OakSecondaryButton onClick={onClose}>Close</OakSecondaryButton>
+      </OakFlex>
+    </OakFieldset>
+  );
 };
