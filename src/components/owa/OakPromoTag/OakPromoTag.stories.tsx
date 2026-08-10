@@ -7,11 +7,24 @@ const meta: Meta<typeof OakPromoTag> = {
   component: OakPromoTag,
   tags: ["autodocs"],
   title: "OWA/OakPromoTag",
+  argTypes: {
+    variant: {
+      control: { type: "radio" },
+      options: ["default", "inverted"],
+    },
+  },
 };
 export default meta;
 
 type Story = StoryObj<typeof OakPromoTag>;
 
 export const Default: Story = {
-  render: () => <OakPromoTag />,
+  render: (args) => <OakPromoTag {...args} />,
+};
+
+export const VariantInverted: Story = {
+  render: (args) => <OakPromoTag {...args} />,
+  args: {
+    variant: "inverted",
+  },
 };
