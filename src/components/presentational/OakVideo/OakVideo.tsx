@@ -127,7 +127,7 @@ export function OakVideo({
           $flexWrap={["wrap", "nowrap", "nowrap"]}
         >
           {transcriptEnabled && (
-            <OakFlex $order={["2", "1", "1"]}>
+            <OakFlex $order={["3", "1", "1"]}>
               <OakSmallSecondaryButton
                 isTrailingIcon={true}
                 iconName={isTranscriptOpen ? "chevron-up" : "chevron-down"}
@@ -141,7 +141,7 @@ export function OakVideo({
           )}
           {showCopyLink && (
             <OakFlex
-              $order={["3", "2", "2"]}
+              $order={["2", "2", "2"]}
               $flexGrow={1}
               $justifyContent={["flex-start", "flex-start", "flex-start"]}
             >

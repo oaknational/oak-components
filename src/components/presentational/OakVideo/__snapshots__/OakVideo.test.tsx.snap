@@ -104,9 +104,9 @@ exports[`OakVideo renders correctly with all controls 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2;
+  -webkit-order: 3;
+  -ms-flex-order: 3;
+  order: 3;
 }
 
 .c14 {
@@ -137,9 +137,9 @@ exports[`OakVideo renders correctly with all controls 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  -webkit-order: 3;
-  -ms-flex-order: 3;
-  order: 3;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
