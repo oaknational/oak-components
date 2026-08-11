@@ -142,7 +142,7 @@ export function OakVideo({
           {showCopyLink && (
             <OakFlex
               $order={["2", "2", "2"]}
-              $flexGrow={1}
+              $flexGrow={[0, 1, 1]}
               $justifyContent={["flex-start", "flex-start", "flex-start"]}
             >
               <OakSmallSecondaryButton
@@ -155,7 +155,7 @@ export function OakVideo({
             </OakFlex>
           )}
           {showSignLanguage && (
-            <OakFlex $order={["1", "3", "3"]} $width={["100%", "auto", "auto"]}>
+            <OakFlex $order={["1", "3", "3"]} $width={["auto", "auto", "auto"]}>
               <OakSmallSecondaryButton
                 isTrailingIcon={true}
                 onClick={onShowSignLanguage}
