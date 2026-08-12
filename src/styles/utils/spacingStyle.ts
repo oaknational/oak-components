@@ -10,7 +10,9 @@ import {
   OakSpaceBetweenToken,
 } from "@/styles/theme/spacing";
 
-type PaddingValues = ResponsiveValues<OakAllSpacingToken | null | undefined>;
+export type PaddingValues = ResponsiveValues<
+  OakAllSpacingToken | null | undefined
+>;
 
 export type PaddingStyleProps = {
   /**

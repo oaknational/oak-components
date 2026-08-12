@@ -18,4 +18,18 @@ describe("OakQuote component", () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  it("matches snapshot (hasLeftBorder=false)", () => {
+    const { container } = renderWithTheme(
+      <OakQuote
+        quote="This is a quote"
+        authorName="Author Name"
+        authorTitle="Author Title"
+        authorImageSrc="https://via.placeholder.com/150"
+        hasLeftBorder={false}
+      />,
+    );
+
+    expect(container).toMatchSnapshot();
+  });
 });

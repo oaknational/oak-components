@@ -3,7 +3,11 @@ import { StoryObj, Meta } from "@storybook/nextjs";
 
 import { OakCard } from "./OakCard";
 
-import { oakIconNames } from "@/components/images-and-icons/OakIcon";
+import {
+  generateOakIconURL,
+  oakIconNames,
+} from "@/components/images-and-icons/OakIcon";
+import { OakBox } from "@/components/layout-and-structure/OakBox";
 import {
   additionalSpacingTokens,
   oakAllSpacingTokens,
@@ -21,6 +25,10 @@ const meta: Meta<typeof OakCard> = {
   component: OakCard,
   tags: ["autodocs"],
   argTypes: {
+    as: {
+      options: ["div", "li"],
+      defaultValue: "div",
+    },
     headingLevel: {
       options: ["h1", "h2", "h3", "h4", "h5", "h6"],
     },
@@ -49,10 +57,12 @@ const meta: Meta<typeof OakCard> = {
   parameters: {
     controls: {
       include: [
+        "as",
         "heading",
         "headingLevel",
         "href",
         "cardOrientation",
+        "smallScreenOrientation",
         "cardWidth",
         "imageSrc",
         "imageAlt",
@@ -131,6 +141,30 @@ export const RowOrientationWithRectangularImage: Story = {
     tagName: "Curriculum planning",
     linkText: "Read more",
     linkIconName: "arrow-right",
+  },
+};
+
+export const OakSubjectLinkCard: Story = {
+  render: (args) => (
+    <OakBox>
+      <OakCard {...args} />
+    </OakBox>
+  ),
+  args: {
+    href: "https://example.com",
+    heading: "Check out our new digital literacy lessons!",
+    headingLevel: "h1",
+    cardWidth: "100%",
+    imageSrc: generateOakIconURL("subject-digital-literacy"),
+    imageAlt: "Illustration representing digital literacy",
+    subCopy:
+      "Lessons offering practical knowledge and skills, developed independently of the national curriculum.",
+    subCopyColor: "text-subdued",
+    tagBackground: "bg-decorative1-main",
+    linkText: "Go to new digital literacy lessons",
+    linkIconName: "chevron-right",
+    cardOrientation: ["column", "row"],
+    imageBackgroundColor: "bg-decorative1-main",
   },
 };
 

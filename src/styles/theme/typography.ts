@@ -12,7 +12,7 @@ export const oakFontSizeTokens = {
 };
 export type OakFontSizeToken = keyof typeof oakFontSizeTokens;
 
-const fontWeights = [300, 400, 600, 700] as const;
+const fontWeights = [300, 400, 500, 600, 700] as const;
 type FontWeight = (typeof fontWeights)[number];
 const lineHeights = [16, 20, 24, 28, 32, 40, 48, 56, 64] as const;
 type LineHeight = (typeof lineHeights)[number];
@@ -45,9 +45,9 @@ export const oakFontTokens = {
   "body-2": ["font-size-3", 24, 300, "-0.005rem"],
   "body-3": ["font-size-2", 20, 300, "-0.005rem"],
   "body-4": ["font-size-1", 16, 300, "-0.005rem"],
-  "body-1-bold": ["font-size-4", 28, 700, "-0.005rem"],
-  "body-2-bold": ["font-size-3", 24, 700, "-0.005rem"],
-  "body-3-bold": ["font-size-2", 20, 700, "-0.005rem"],
+  "body-1-bold": ["font-size-4", 28, 500, "-0.005rem"],
+  "body-2-bold": ["font-size-3", 24, 500, "-0.005rem"],
+  "body-3-bold": ["font-size-2", 20, 500, "-0.005rem"],
   "list-item-1": ["font-size-4", 32, 300, "-0.005rem"],
   "list-item-2": ["font-size-3", 24, 300, "-0.005rem"],
   "code-1": ["font-size-6", 32, 300, "0.0115rem"],

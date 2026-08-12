@@ -5,6 +5,7 @@ import { screen } from "@testing-library/react";
 import { OakCard, OakCardProps } from "./OakCard";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
+import { getBreakpoint } from "@/styles/utils/responsiveStyle";
 
 const testData = {
   heading: "Test Heading",
@@ -35,6 +36,13 @@ describe("OakCard", () => {
     expect(container).toMatchSnapshot();
   });
 
+  it("matches snapshot when passed as='li'", () => {
+    const { container } = renderWithTheme(<OakCard {...allProps} as="li" />);
+
+    expect(container.firstElementChild!.tagName).toBe("LI");
+    expect(container).toMatchSnapshot();
+  });
+
   it("renders card with only heading and href when passed only required props", () => {
     renderWithTheme(<OakCard {...requiredProps} />);
 
@@ -54,6 +62,20 @@ describe("OakCard", () => {
     renderWithTheme(<OakCard {...requiredProps} cardOrientation="row" />);
 
     expect(screen.getByRole("link")).toHaveStyle("flex-direction: row");
+  });
+
+  it("renders card with small screen orientation when provided", () => {
+    renderWithTheme(
+      <OakCard {...requiredProps} cardOrientation={["column", "row"]} />,
+    );
+
+    expect(screen.getByRole("link")).toHaveStyleRule(
+      "flex-direction",
+      "column",
+    );
+    expect(screen.getByRole("link")).toHaveStyleRule("flex-direction", "row", {
+      media: `(min-width: ${getBreakpoint("small")}px)`,
+    });
   });
 
   it("renders card with correct default orientation when not provided", () => {

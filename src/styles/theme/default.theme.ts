@@ -60,7 +60,7 @@ export const oakDefaultTheme: OakTheme = {
     "icon-link-active": "navy",
     "icon-link-hover": "navy110",
     "icon-link-pressed": "navy120",
-    "icon-link-visited": "lavender110",
+    "icon-link-visited": "navy120",
     "icon-decorative1": "mint110",
     "icon-decorative2": "aqua110",
     "icon-decorative3": "lavender110",
@@ -94,5 +94,6 @@ export const oakDefaultTheme: OakTheme = {
     "code-green": "rpf-syntax-green",
     "code-grey": "rpf-syntax-grey",
     "code-pink": "rpf-syntax-pink",
+    "border-text-link-pressed": "navy120",
   },
 };

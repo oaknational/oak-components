@@ -89,6 +89,7 @@ export const icons = {
   "class-grouping": "v1776785621/icons/class-grouping.svg",
   strand: "v1776850533/icons/strand.svg",
   plus: "v1781533362/icons/plus.svg",
+  hide: "v1785931149/icons/Icon_Hide_r1q6se.svg",
   // subject icons
   "subject-art": "v1706616347/subject-icons/art.svg",
   "subject-biology": "v1706616415/subject-icons/biology.svg",

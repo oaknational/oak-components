@@ -29,6 +29,7 @@ const meta: Meta<typeof OakInfo> = {
   ],
   args: {
     hint: "We've put the lessons in order helping you build on what you've learned before so it’s best to start with the first lesson of a unit.",
+    id: "info-tooltip",
     tooltipPosition: "top-left",
   },
 };

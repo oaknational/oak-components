@@ -1,16 +1,14 @@
 import React from "react";
 
+import { generateOakIconURL, OakIconName } from "./helpers";
+
 import { OakAllSpacingToken } from "@/styles";
-import { IconName, icons } from "@/image-map";
 import {
   OakImage,
   OakImageProps,
 } from "@/components/images-and-icons/OakImage";
 
-export const oakIconNames = Object.keys(icons) as IconName[];
-
-export type OakIconName = IconName;
-
+export * from "./helpers";
 export type OakIconProps = Omit<OakImageProps, "alt" | "src"> & {
   /**
    * The name of the icon to display
@@ -22,27 +20,6 @@ export type OakIconProps = Omit<OakImageProps, "alt" | "src"> & {
   iconWidth?: OakAllSpacingToken;
   iconHeight?: OakAllSpacingToken;
 };
-
-/**
- * returns true if the given string is a valid `OakIconName`
- */
-export function isValidIconName(iconName: string): iconName is OakIconName {
-  return oakIconNames.includes(iconName as OakIconName);
-}
-
-/**
- * returns a Icon URL from Cloudinary if is a valid icon, otherwise returns undefined
- */
-export function generateOakIconURL(iconName: string) {
-  const urlPath = `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}`;
-  if (isValidIconName(iconName)) {
-    return `${urlPath}/${icons[iconName]}`;
-  } else if (iconName.includes("subject")) {
-    return `${urlPath}/${icons["books"]}`;
-  } else {
-    return `${urlPath}/${icons["question-mark"]}`;
-  }
-}
 
 /**
  * A wrapper around OakImage which uses the image-map.json file to map icon names to image paths.

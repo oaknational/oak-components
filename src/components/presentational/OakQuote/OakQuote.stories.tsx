@@ -4,6 +4,7 @@ import { StoryObj, Meta } from "@storybook/nextjs";
 import { OakQuote } from "./OakQuote";
 
 import { OakMaxWidth } from "@/components/layout-and-structure/OakMaxWidth";
+import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 
 const meta: Meta<typeof OakQuote> = {
   component: OakQuote,
@@ -11,10 +12,11 @@ const meta: Meta<typeof OakQuote> = {
   title: "components/Presentational/OakQuote",
   argTypes: {
     quote: { type: "string" },
-    color: { type: "string" },
+    color: { options: colorArgTypes.$color.options },
     authorName: { type: "string" },
     authorTitle: { type: "string" },
     authorImageSrc: { type: "string" },
+    hasLeftBorder: { type: "boolean" },
   },
   parameters: {
     controls: {
@@ -24,6 +26,7 @@ const meta: Meta<typeof OakQuote> = {
         "authorName",
         "authorTitle",
         "authorImageSrc",
+        "hasLeftBorder",
       ],
     },
   },
@@ -31,6 +34,7 @@ const meta: Meta<typeof OakQuote> = {
     quote:
       "Using AI to support my planning and teaching wasn’t something I’d really considered until I came across Aila. To say I was blown away would be an understatement!",
     color: "bg-decorative1-main",
+    hasLeftBorder: true,
   },
 };
 
@@ -71,5 +75,50 @@ export const MintPageBackground: Story = {
   ),
   args: {
     color: "bg-decorative1-subdued",
+  },
+};
+
+export const MultilineQuote: Story = {
+  render: (args) => (
+    <OakMaxWidth>
+      <OakQuote {...args} />
+    </OakMaxWidth>
+  ),
+  args: {
+    quote: [
+      "Using AI to support my planning and teaching wasn’t something I’d really considered until I came across Aila.",
+      "To say I was blown away would be an understatement!",
+    ],
+  },
+};
+
+export const MultilineQuoteWithAuthor: Story = {
+  render: (args) => (
+    <OakMaxWidth>
+      <OakQuote {...args} />
+    </OakMaxWidth>
+  ),
+  args: {
+    quote: [
+      "Using AI to support my planning and teaching wasn’t something I’d really considered until I came across Aila.",
+      "To say I was blown away would be an understatement!",
+    ],
+    authorName: "Suzanne",
+    authorTitle: "Headteacher at Maple Grove Primary School",
+    authorImageSrc: `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/test-images/test_quote_author.jpg`,
+  },
+};
+
+export const HiddenLeftBorder: Story = {
+  render: (args) => (
+    <OakMaxWidth>
+      <OakQuote {...args} />
+    </OakMaxWidth>
+  ),
+  args: {
+    hasLeftBorder: false,
+    authorName: "Suzanne",
+    authorTitle: "Headteacher at Maple Grove Primary School",
+    authorImageSrc: `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/v1698336490/test-images/test_quote_author.jpg`,
   },
 };

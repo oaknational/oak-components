@@ -16,6 +16,9 @@ import { OakFlex } from "@/components/layout-and-structure/OakFlex";
  */
 const StyledOakFlex = styled(OakFlex)`
   box-sizing: content-box;
+  @media (min-aspect-ratio: 1/1) {
+    flex-direction: row;
+  }
 `;
 
 export type OakLessonBottomNavProps = {

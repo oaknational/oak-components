@@ -1,5 +1,4 @@
-import React from "react";
-import { ThemeProvider } from "styled-components";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
 import type { Decorator, Preview, ReactRenderer } from "@storybook/nextjs";
 import { withThemeFromJSXProvider } from "@storybook/addon-themes";
 
@@ -7,6 +6,15 @@ import { oakDefaultTheme } from "../src/styles/theme/default.theme";
 import { oakDarkTheme } from "../src/styles/theme/dark.theme";
 import { OakGlobalStyle } from "../src/components/OakGlobalStyle/OakGlobalStyle";
 import { oakStorybookTheme } from "./oakStorybookTheme";
+import { parseColor } from "../src/styles/helpers/parseColor";
+
+export const OakThemeStyle = createGlobalStyle<{ theme: string }>`
+  body, .sbdocs-preview {
+    background-color: ${({ theme }) => {
+      return parseColor(theme === "dark" ? "black" : "white");
+    }}
+  }
+`;
 
 const globalDecorator: Decorator = (Story, context) => {
   return (
@@ -20,6 +28,7 @@ const globalDecorator: Decorator = (Story, context) => {
         rel="stylesheet"
       />
       <OakGlobalStyle />
+      <OakThemeStyle theme={context.globals.theme} />
       <Story {...context} />
     </ThemeProvider>
   );

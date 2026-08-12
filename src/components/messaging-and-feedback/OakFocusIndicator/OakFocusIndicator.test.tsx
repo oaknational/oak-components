@@ -12,7 +12,7 @@ describe("OakFocusIndicator", () => {
   });
 
   test("renders correctly with props set", () => {
-    const { baseElement } = renderWithTheme(
+    const { container } = renderWithTheme(
       <OakFocusIndicator
         hoverBackground="bg-btn-secondary"
         dropShadow="drop-shadow-centered-grey"
@@ -21,6 +21,21 @@ describe("OakFocusIndicator", () => {
       />,
     );
 
-    expect(baseElement).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
+  });
+
+  test("renders correctly with props as='li'", () => {
+    const { container } = renderWithTheme(
+      <OakFocusIndicator
+        as="li"
+        hoverBackground="bg-btn-secondary"
+        dropShadow="drop-shadow-centered-grey"
+        hoverDropShadow="drop-shadow-centered-grey"
+        activeDropShadow="drop-shadow-none"
+      />,
+    );
+
+    expect(container.firstElementChild!.tagName).toBe("LI");
+    expect(container).toMatchSnapshot();
   });
 });

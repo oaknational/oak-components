@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { OakBox } from "@/components/layout-and-structure/OakBox";
+import { OakBox, OakBoxProps } from "@/components/layout-and-structure/OakBox";
 import { OakDropShadowToken, OakUiRoleToken, parseColor } from "@/styles";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { responsiveStyle } from "@/styles/utils/responsiveStyle";
@@ -24,7 +24,8 @@ const fallbackActiveShadow = `${parseDropShadow(
   "drop-shadow-lemon",
 )}, ${parseDropShadow("drop-shadow-grey")}`;
 
-export type OakFocusIndicatorProps = {
+export type OakFocusIndicatorProps = OakBoxProps & {
+  as?: "div" | "li";
   hoverBackground?: OakUiRoleToken;
   dropShadow?: OakDropShadowToken;
   hoverDropShadow?: OakDropShadowToken;
@@ -35,6 +36,15 @@ export type OakFocusIndicatorProps = {
  * Wrap focusable components `<a/>`/`<button/>` and this will add focus styles then the inner element is focused
  */
 export const OakFocusIndicator = styled(OakBox)<OakFocusIndicatorProps>`
+  ${(props) => {
+    if (props.as === "li") {
+      return `
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      `;
+    }
+  }}
   box-shadow: ${(props) =>
     props.dropShadow ? parseDropShadow(props.dropShadow) : "none"};
 

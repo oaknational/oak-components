@@ -26,6 +26,11 @@ export type InternalReviewAccordionProps = {
    * The id of the accordion
    */
   id: string;
+  /**
+   * Accessible name for the toggle button.
+   * If omitted, the visible text ("Results") will be used as the accessible name.
+   */
+  toggleButtonAriaLabel?: string;
 } & FlexStyleProps &
   OakBoxProps &
   ColorStyleProps;
@@ -51,7 +56,11 @@ export const StyledAccordionButton = styled(InternalShadowRoundButton)<
  * An accordion component that can be used to show/hide content
  */
 
-const Accordion = ({ children, id }: InternalReviewAccordionProps) => {
+const Accordion = ({
+  children,
+  id,
+  toggleButtonAriaLabel,
+}: InternalReviewAccordionProps) => {
   const { isOpen, setOpen } = useAccordionContext();
 
   return (
@@ -66,6 +75,7 @@ const Accordion = ({ children, id }: InternalReviewAccordionProps) => {
           $isOpen={isOpen}
           onClick={() => setOpen(!isOpen)}
           aria-expanded={isOpen}
+          aria-label={toggleButtonAriaLabel}
           id={id}
           iconName={"chevron-down"}
           defaultTextColor={"text-primary"}
