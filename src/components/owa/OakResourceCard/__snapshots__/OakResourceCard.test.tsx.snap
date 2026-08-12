@@ -329,7 +329,9 @@ input:checked + .c22 {
           >
             <div
               class="c13"
-            />
+            >
+              DESCRIPTION
+            </div>
           </div>
         </div>
       </div>
@@ -344,7 +346,6 @@ input:checked + .c22 {
           >
             <input
               class="c18 c19 c20 c21"
-              format="FORMAT"
               id="checkbox-1"
               name="default"
               type="checkbox"
@@ -788,7 +789,7 @@ exports[`OakResourceCard renders an editable tag when isEditable is true 1`] = `
 
 .c12 {
   font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1rem;
   line-height: 1.5rem;
   -webkit-letter-spacing: -0.005rem;
@@ -826,19 +827,19 @@ exports[`OakResourceCard renders an editable tag when isEditable is true 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c18 {
+.c17 {
   padding-right: 1rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c20 {
+.c19 {
   position: relative;
   width: 1.5rem;
   height: 1.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c26 {
+.c25 {
   position: absolute;
   top: 0rem;
   left: 0rem;
@@ -848,7 +849,7 @@ exports[`OakResourceCard renders an editable tag when isEditable is true 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c28 {
+.c27 {
   position: relative;
   width: 100%;
   min-width: 100%;
@@ -936,7 +937,7 @@ exports[`OakResourceCard renders an editable tag when isEditable is true 1`] = `
   gap: 0.5rem;
 }
 
-.c19 {
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -947,7 +948,7 @@ exports[`OakResourceCard renders an editable tag when isEditable is true 1`] = `
   align-items: center;
 }
 
-.c22 {
+.c21 {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -963,16 +964,16 @@ exports[`OakResourceCard renders an editable tag when isEditable is true 1`] = `
   border-color: #808080;
 }
 
-.c22:checked {
+.c21:checked {
   background: #222222;
   border-color: #222222;
 }
 
-.c22:disabled {
+.c21:disabled {
   pointer-events: none;
 }
 
-.c24:focus-visible {
+.c23:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
 }
 
@@ -980,23 +981,19 @@ exports[`OakResourceCard renders an editable tag when isEditable is true 1`] = `
   object-fit: contain;
 }
 
-.c29 {
+.c28 {
   -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   object-fit: contain;
 }
 
-.c27 {
+.c26 {
   pointer-events: none;
   opacity: 0;
 }
 
-input:checked + .c25 {
+input:checked + .c24 {
   opacity: 1;
-}
-
-.c17 {
-  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c3 {
@@ -1024,13 +1021,13 @@ input:checked + .c25 {
 }
 
 @media (hover:hover) {
-  .c22:hover:not(:disabled) {
+  .c21:hover:not(:disabled) {
     border-color: #222222;
   }
 }
 
 @media (hover:hover) {
-  .c23:hover:not(.c21:checked):not(.c21:disabled)::after {
+  .c22:hover:not(.c20:checked):not(.c20:disabled)::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -1108,11 +1105,11 @@ input:checked + .c25 {
             <div
               class="c15 c16"
             >
-              <label
-                class="c17"
+              <div
+                class="c4"
               >
                 Editable
-              </label>
+              </div>
             </div>
           </div>
         </div>
@@ -1121,27 +1118,27 @@ input:checked + .c25 {
         class="c4 c1"
       >
         <div
-          class="c18 c19"
+          class="c17 c18"
         >
           <div
-            class="c20"
+            class="c19"
           >
             <input
-              class="c21 c22 c23 c24"
+              class="c20 c21 c22 c23"
               id="checkbox-1"
               name="default"
               type="checkbox"
               value="Option 1"
             />
             <div
-              class="c25 c26 c27"
+              class="c24 c25 c26"
             >
               <span
-                class="c28"
+                class="c27"
               >
                 <img
                   alt=""
-                  class="c29"
+                  class="c28"
                   data-nimg="fill"
                   decoding="async"
                   loading="lazy"
