@@ -236,7 +236,7 @@ input:checked + .c22 {
   cursor: default;
 }
 
-.c3:has(input:disabled) #download-card-title {
+.c3:has(input:disabled) #resource-card-title {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -272,12 +272,12 @@ input:checked + .c22 {
     background: #f2f2f2;
   }
 
-  .c2:hover:not(:has(input:disabled),:active) #download-card-title {
+  .c2:hover:not(:has(input:disabled),:active) #resource-card-title {
     -webkit-text-decoration: underline;
     text-decoration: underline;
   }
 
-  .c2:active:not(:has(input:disabled)) #download-card-title {
+  .c2:active:not(:has(input:disabled)) #resource-card-title {
     -webkit-text-decoration: underline;
     text-decoration: underline;
   }
@@ -315,7 +315,7 @@ input:checked + .c22 {
         >
           <div
             class="c12"
-            id="download-card-title"
+            id="resource-card-title"
           >
             TITLE
           </div>
@@ -329,9 +329,7 @@ input:checked + .c22 {
           >
             <div
               class="c13"
-            >
-              FORMAT
-            </div>
+            />
           </div>
         </div>
       </div>
@@ -346,6 +344,7 @@ input:checked + .c22 {
           >
             <input
               class="c18 c19 c20 c21"
+              format="FORMAT"
               id="checkbox-1"
               name="default"
               type="checkbox"
@@ -612,7 +611,7 @@ input:checked + .c22 {
   cursor: default;
 }
 
-.c3:has(input:disabled) #download-card-title {
+.c3:has(input:disabled) #resource-card-title {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -648,12 +647,12 @@ input:checked + .c22 {
     background: #f2f2f2;
   }
 
-  .c2:hover:not(:has(input:disabled),:active) #download-card-title {
+  .c2:hover:not(:has(input:disabled),:active) #resource-card-title {
     -webkit-text-decoration: underline;
     text-decoration: underline;
   }
 
-  .c2:active:not(:has(input:disabled)) #download-card-title {
+  .c2:active:not(:has(input:disabled)) #resource-card-title {
     -webkit-text-decoration: underline;
     text-decoration: underline;
   }
@@ -691,7 +690,7 @@ input:checked + .c22 {
         >
           <div
             class="c12"
-            id="download-card-title"
+            id="resource-card-title"
           >
             TITLE
           </div>
@@ -701,7 +700,7 @@ input:checked + .c22 {
             <div
               class="c14"
             >
-              FORMAT
+              DESCRIPTION
             </div>
           </div>
         </div>
@@ -1015,7 +1014,7 @@ input:checked + .c25 {
   cursor: default;
 }
 
-.c3:has(input:disabled) #download-card-title {
+.c3:has(input:disabled) #resource-card-title {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -1051,12 +1050,12 @@ input:checked + .c25 {
     background: #f2f2f2;
   }
 
-  .c2:hover:not(:has(input:disabled),:active) #download-card-title {
+  .c2:hover:not(:has(input:disabled),:active) #resource-card-title {
     -webkit-text-decoration: underline;
     text-decoration: underline;
   }
 
-  .c2:active:not(:has(input:disabled)) #download-card-title {
+  .c2:active:not(:has(input:disabled)) #resource-card-title {
     -webkit-text-decoration: underline;
     text-decoration: underline;
   }
@@ -1094,7 +1093,7 @@ input:checked + .c25 {
         >
           <div
             class="c12"
-            id="download-card-title"
+            id="resource-card-title"
           >
             TITLE
           </div>
@@ -1104,7 +1103,7 @@ input:checked + .c25 {
             <div
               class="c14"
             >
-              FORMAT
+              DESCRIPTION
             </div>
             <div
               class="c15 c16"

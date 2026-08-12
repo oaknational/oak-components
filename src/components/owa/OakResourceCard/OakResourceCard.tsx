@@ -67,19 +67,19 @@ const MultipleIcons = ({ iconName }: { iconName: IconName[] }) => {
 
 export type OakResourceCardProps = BaseCheckBoxProps & {
   /**
-   * The primary title content for the download.
+   * The primary title content for the resource.
    */
-  title: React.ReactNode;
+  title: string;
   /**
    * Optional file size content shown beneath the title.
    */
-  fileSize?: React.ReactNode;
+  fileSize?: string;
   /**
-   * The file format(s) or secondary metadata shown beneath the title.
+   * The file format(s) or description shown beneath the title.
    */
-  format: string | string[];
+  description: string | string[];
   /**
-   * The icon used to represent the download type.
+   * The icon used to represent the resource type.
    */
   iconName: IconName | IconName[];
   /**
@@ -89,7 +89,7 @@ export type OakResourceCardProps = BaseCheckBoxProps & {
    */
   isRadio?: boolean;
   /**
-   * If true, adds an informational `Editable` tag to the download card.
+   * If true, adds an informational `Editable` tag to the resource card.
    *
    * @default false
    */
@@ -103,7 +103,7 @@ const LabelContainer = styled("label")`
 
   &:has(input:disabled) {
     cursor: default;
-    #download-card-title {
+    #resource-card-title {
       text-decoration: none;
     }
   }
@@ -122,13 +122,13 @@ const Container = styled(OakFlex)<{
     &:hover:not(:has(input:disabled), :active) {
       background: ${(props) =>
         props.$hoverBackground ? parseColor(props.$hoverBackground) : null};
-      #download-card-title {
+      #resource-card-title {
         text-decoration: underline;
       }
     }
 
     &:active:not(:has(input:disabled)) {
-      #download-card-title {
+      #resource-card-title {
         text-decoration: underline;
       }
     }
@@ -149,7 +149,7 @@ export const OakResourceCard = (props: OakResourceCardProps) => {
   const {
     title,
     fileSize,
-    format,
+    description,
     iconName,
     value,
     disabled = false,
@@ -212,7 +212,7 @@ export const OakResourceCard = (props: OakResourceCardProps) => {
             $pv="spacing-12"
             $ph="spacing-16"
           >
-            <OakBox id="download-card-title" $font={"body-2-bold"}>
+            <OakBox id="resource-card-title" $font={"body-2-bold"}>
               {title}
             </OakBox>
             {fileSize && (
@@ -222,14 +222,14 @@ export const OakResourceCard = (props: OakResourceCardProps) => {
             )}
             <OakFlex $alignItems={"center"} $gap={"spacing-8"}>
               <OakBox $font={"body-3"} $color={"text-subdued"}>
-                {Array.isArray(format) ? (
+                {Array.isArray(description) ? (
                   <OakUL $pl="spacing-20">
-                    {format.map((item) => (
+                    {description.map((item) => (
                       <OakLI key={item}>{item}</OakLI>
                     ))}
                   </OakUL>
                 ) : (
-                  format
+                  description
                 )}
               </OakBox>
               {isEditable && (

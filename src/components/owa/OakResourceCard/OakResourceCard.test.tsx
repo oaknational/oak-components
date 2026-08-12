@@ -16,7 +16,7 @@ describe("OakResourceCard", () => {
         value="Option 1"
         data-testid="test-1"
         title={"TITLE"}
-        format={"FORMAT"}
+        description={"DESCRIPTION"}
         iconName={"books"}
       />,
     );
@@ -29,7 +29,7 @@ describe("OakResourceCard", () => {
         id="checkbox-1"
         value="Option 1"
         title={"TITLE"}
-        format={"FORMAT"}
+        description={"DESCRIPTION"}
         iconName={"books"}
       />,
     );
@@ -42,7 +42,7 @@ describe("OakResourceCard", () => {
         id="checkbox-1"
         value="Option 1"
         title={"TITLE"}
-        format={"FORMAT"}
+        description={"DESCRIPTION"}
         iconName={"books"}
         fileSize={"FILE_SIZE"}
       />,
@@ -50,13 +50,13 @@ describe("OakResourceCard", () => {
     expect(container).toMatchSnapshot();
   });
 
-  it("renders a list of formats when format is an array", () => {
+  it("renders a list of formats when description is an array", () => {
     const { getByText } = renderWithTheme(
       <OakResourceCard
         id="checkbox-1"
         value="Option 1"
         title={"TITLE"}
-        format={["FORMAT1", "FORMAT2"]}
+        description={["FORMAT1", "FORMAT2"]}
         iconName={"books"}
       />,
     );
@@ -70,7 +70,7 @@ describe("OakResourceCard", () => {
         id="checkbox-1"
         value="Option 1"
         title={"TITLE"}
-        format={"FORMAT"}
+        description={"DESCRIPTION"}
         iconName={"books"}
         isEditable={true}
       />,
@@ -85,7 +85,7 @@ describe("OakResourceCard", () => {
         id="checkbox-1"
         value="Option 1"
         title={"TITLE"}
-        format={"FORMAT"}
+        description={"DESCRIPTION"}
         iconName={["books", "slide-deck"]}
       />,
     );
@@ -108,7 +108,7 @@ describe("OakResourceCard", () => {
         id="checkbox-1"
         value="Option 1"
         title={"TITLE"}
-        format={"FORMAT"}
+        description={"DESCRIPTION"}
         iconName={"books"}
       />,
     );
@@ -122,7 +122,7 @@ describe("OakResourceCard", () => {
         id="checkbox-1"
         value="Option 1"
         title={"TITLE"}
-        format={"FORMAT"}
+        description={"DESCRIPTION"}
         iconName={"books"}
       />,
     );
@@ -140,7 +140,7 @@ describe("OakResourceCard", () => {
         value="Option 1"
         onChange={onChange}
         title={"TITLE"}
-        format={"FORMAT"}
+        description={"DESCRIPTION"}
         iconName={"filter"}
       />,
     );
@@ -159,7 +159,7 @@ describe("OakResourceCard", () => {
         onFocus={onFocus}
         onBlur={onBlur}
         title={"TITLE"}
-        format={"FORMAT"}
+        description={"DESCRIPTION"}
         iconName={"books"}
       />,
     );
@@ -175,7 +175,7 @@ describe("OakResourceCard", () => {
         id="radio-1"
         value="Option 1"
         title={"TITLE"}
-        format={"FORMAT"}
+        description={"DESCRIPTION"}
         iconName={"books"}
         isRadio={true}
       />,
@@ -194,7 +194,7 @@ describe("OakResourceCard", () => {
           id="radio-1"
           value="Option 1"
           title={"TITLE"}
-          format={"FORMAT"}
+          description={"DESCRIPTION"}
           iconName={"books"}
           isRadio={true}
           onChange={onCardChange}

@@ -26,7 +26,7 @@ export type OakResourcesAccordionProps = {
   /**
    * Text to render in the subheading
    */
-  downloadsText: string;
+  subheading: string;
   /**
    * Event handler for select all checkbox
    */
@@ -76,7 +76,7 @@ const Accordion = ({
   children,
   id,
   selectAllChecked,
-  downloadsText,
+  subheading,
   handleToggleSelectAll,
   ...styleProps
 }: OakResourcesAccordionProps) => {
@@ -105,7 +105,7 @@ const Accordion = ({
               id="select-all"
               name="select-all"
               value={""}
-              aria-labelledby="downloads-accordion-heading"
+              aria-labelledby="resources-accordion-heading"
             />
           </OakBox>
           <StyledAccordionButton
@@ -127,7 +127,7 @@ const Accordion = ({
               >
                 <OakHeading
                   $textAlign={"left"}
-                  id="downloads-accordion-heading"
+                  id="resources-accordion-heading"
                   $color={"text-primary"}
                   $font={"heading-6"}
                   $mr={"spacing-16"}
@@ -138,7 +138,7 @@ const Accordion = ({
                     : "Select all resources"}
                 </OakHeading>
                 <OakBox $pr={"spacing-12"}>
-                  <OakP $textAlign={"left"}>{downloadsText}</OakP>
+                  <OakP $textAlign={"left"}>{subheading}</OakP>
                 </OakBox>
               </OakFlex>
             </OakFlex>

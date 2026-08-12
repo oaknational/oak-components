@@ -57,7 +57,7 @@ const WithState = (args: OakResourcesAccordionProps) => {
 export const Default: Story = {
   args: {
     id: "oak-downloads-accordion",
-    downloadsText: "Slides, quizzes, worksheet, additional materials",
+    subheading: "Slides, quizzes, worksheet, additional materials",
     children: (
       <OakFlex $flexDirection="column" $gap="spacing-16">
         <OakResourceCard
@@ -65,7 +65,7 @@ export const Default: Story = {
           value="lesson-plan"
           iconName="book-steps"
           title="Lesson plan"
-          format="PDF"
+          description="PDF"
           fileSize="245KB"
         />
         <OakResourceCard
@@ -73,7 +73,7 @@ export const Default: Story = {
           value="presentation"
           iconName="slide-deck"
           title="Lesson presentation"
-          format="PPTX"
+          description="PPTX"
           fileSize="1.2MB"
         />
         <OakResourceCard
@@ -81,7 +81,7 @@ export const Default: Story = {
           value="worksheet"
           iconName="worksheet"
           title="Student worksheet"
-          format="PDF"
+          description="PDF"
           fileSize="180KB"
         />
       </OakFlex>

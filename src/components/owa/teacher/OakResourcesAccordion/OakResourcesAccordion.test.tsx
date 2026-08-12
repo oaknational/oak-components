@@ -12,7 +12,7 @@ const mockHandleToggleSelectAll = jest.fn();
 
 const defaultProps = {
   id: "test-downloads-accordion",
-  downloadsText: "Slides, quizzes, worksheet, additional materials",
+  subheading: "Slides, quizzes, worksheet, additional materials",
   handleToggleSelectAll: mockHandleToggleSelectAll,
   selectAllChecked: false,
   children: (
@@ -22,7 +22,7 @@ const defaultProps = {
         value="lesson-plan"
         iconName="book-steps"
         title="Lesson plan"
-        format="PDF"
+        description="PDF"
         fileSize="245KB"
       />
       <OakResourceCard
@@ -30,7 +30,7 @@ const defaultProps = {
         value="presentation"
         iconName="slide-deck"
         title="Lesson presentation"
-        format="PPTX"
+        description="PPTX"
         fileSize="1.2MB"
       />
     </OakFlex>
@@ -173,7 +173,7 @@ describe("OakResourcesAccordion", () => {
     expect(checkbox).toHaveAttribute("name", "select-all");
     expect(checkbox).toHaveAttribute(
       "aria-labelledby",
-      "downloads-accordion-heading",
+      "resources-accordion-heading",
     );
   });
 

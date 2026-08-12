@@ -87,9 +87,9 @@ exports[`OakResourcesAccordion matches snapshot when closed 1`] = `
 
 .c31 {
   position: relative;
-  overflow: visible;
+  overflow: overflow;
   font-family: --var(google-font),Lexend,sans-serif;
-  overflow: visible;
+  overflow: overflow;
 }
 
 .c32 {
@@ -462,7 +462,7 @@ input:checked + .c13 {
   cursor: default;
 }
 
-.c37:has(input:disabled) #download-card-title {
+.c37:has(input:disabled) #resource-card-title {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -498,12 +498,12 @@ input:checked + .c13 {
     background: #f2f2f2;
   }
 
-  .c36:hover:not(:has(input:disabled),:active) #download-card-title {
+  .c36:hover:not(:has(input:disabled),:active) #resource-card-title {
     -webkit-text-decoration: underline;
     text-decoration: underline;
   }
 
-  .c36:active:not(:has(input:disabled)) #download-card-title {
+  .c36:active:not(:has(input:disabled)) #resource-card-title {
     -webkit-text-decoration: underline;
     text-decoration: underline;
   }
@@ -531,7 +531,7 @@ input:checked + .c13 {
               class="c8"
             >
               <input
-                aria-labelledby="downloads-accordion-heading"
+                aria-labelledby="resources-accordion-heading"
                 class="c9 c10 c11 c12"
                 id="select-all"
                 name="select-all"
@@ -572,7 +572,7 @@ input:checked + .c13 {
             >
               <h2
                 class="c25"
-                id="downloads-accordion-heading"
+                id="resources-accordion-heading"
               >
                 Select all resources
               </h2>
@@ -651,7 +651,7 @@ input:checked + .c13 {
                 >
                   <div
                     class="c44"
-                    id="download-card-title"
+                    id="resource-card-title"
                   >
                     Lesson plan
                   </div>
@@ -740,7 +740,7 @@ input:checked + .c13 {
                 >
                   <div
                     class="c44"
-                    id="download-card-title"
+                    id="resource-card-title"
                   >
                     Lesson presentation
                   </div>

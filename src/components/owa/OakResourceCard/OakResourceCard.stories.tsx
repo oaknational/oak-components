@@ -1,40 +1,25 @@
 import React, { useState } from "react";
 import { Meta, StoryObj } from "@storybook/nextjs";
-import { fn } from "storybook/test";
 
 import { OakResourceCard } from "./OakResourceCard";
 
 import { OakRadioGroup } from "@/components/form-elements/OakRadioGroup";
-import { oakIconNames } from "@/components/images-and-icons/OakIcon";
-import { OakFlex, OakGrid } from "@/index";
+import { OakFlex, OakGrid, oakIconNames } from "@/index";
 
-const meta: Meta<typeof OakResourceCard> = {
+const meta = {
   component: OakResourceCard,
   tags: ["autodocs"],
   title: "components/OWA/OakResourceCard",
-  args: { onBlur: fn(), onChange: fn(), onFocus: fn(), onHovered: fn() },
   argTypes: {
     checked: { control: { type: "boolean" } },
     defaultChecked: { control: { type: "boolean" } },
     disabled: { control: { type: "boolean" } },
-    fileSize: { control: { type: "text" } },
-    format: { control: { type: "text" } },
     iconName: { options: oakIconNames, control: { type: "select" } },
-    id: { control: { type: "text" } },
     isRadio: { control: { type: "boolean" } },
     isEditable: { control: { type: "boolean" } },
-    name: { control: { type: "text" } },
-    "aria-label": { control: { type: "text" } },
-    "aria-labelledby": { control: { type: "text" } },
-    "data-testid": { control: { type: "text" } },
-    title: { control: { type: "text" } },
-    value: { control: { type: "text" } },
-    onBlur: { control: false },
-    onChange: { control: false },
-    onFocus: { control: false },
-    onHovered: { control: false },
   },
-};
+} satisfies Meta<typeof OakResourceCard>;
+
 export default meta;
 
 type Story = StoryObj<typeof OakResourceCard>;
@@ -46,7 +31,8 @@ export const Default: Story = {
     id: "download-card-default",
     value: "a test value",
     title: "Fancy presentation",
-    format: "PPTX",
+    description: "PPTX",
+    fileSize: "1MB",
   },
 };
 
@@ -57,7 +43,7 @@ export const WithFileSize: Story = {
     id: "download-card-file-size",
     value: "a test value",
     title: "Fancy presentation",
-    format: "PPTX",
+    description: "PPTX",
     fileSize: "200KB",
   },
 };
@@ -69,7 +55,7 @@ export const IsEditable: Story = {
     id: "download-card-file-size",
     value: "a test value",
     title: "Fancy presentation",
-    format: "PPTX",
+    description: "PPTX",
     fileSize: "200KB",
     isEditable: true,
   },
@@ -83,7 +69,7 @@ export const MultipleIcons: Story = {
     id: "download-card-multiple-icons",
     value: "a test value",
     title: "Resource bundle",
-    format: ["PPTX", "PDF", "XLSX"],
+    description: ["PPTX", "PDF", "XLSX"],
     fileSize: "1.4MB",
   },
 };
@@ -110,7 +96,7 @@ export const RadioGroup: Story = {
   args: {
     iconName: "book-steps",
     title: "Fancy presentation",
-    format: "PPTX",
+    description: "PPTX",
     fileSize: "200KB",
     isRadio: true,
   },
@@ -130,7 +116,7 @@ export const DisabledRadioGroup: Story = {
   args: {
     iconName: "book-steps",
     title: "Fancy presentation",
-    format: "PPTX",
+    description: "PPTX",
     fileSize: "200KB",
     isRadio: true,
   },
@@ -143,7 +129,7 @@ export const DisabledCheckbox: Story = {
     id: "download-card-disabled",
     value: "a test value",
     title: "Fancy presentation",
-    format: "PPTX",
+    description: "PPTX",
     fileSize: "200KB",
     disabled: true,
     checked: true,
@@ -168,7 +154,7 @@ export const WrappingHeight: Story = {
   args: {
     iconName: "book-steps",
     value: "a test value",
-    format: "PPTX",
+    description: "PPTX",
     fileSize: "200KB",
   },
 };
