@@ -13,7 +13,7 @@ const meta = {
   argTypes: {
     checked: { control: { type: "boolean" } },
     defaultChecked: { control: { type: "boolean" } },
-    disabled: { control: { type: "boolean" } },
+    disabled: { control: false },
     iconName: { options: oakIconNames, control: { type: "select" } },
     isRadio: { control: { type: "boolean" } },
     isEditable: { control: { type: "boolean" } },
@@ -99,40 +99,6 @@ export const RadioGroup: Story = {
     description: "PPTX",
     fileSize: "200KB",
     isRadio: true,
-  },
-};
-
-export const DisabledRadioGroup: Story = {
-  render: (args) => (
-    <OakRadioGroup
-      name={"download-card-radio-disabled-test"}
-      value="one"
-      disabled={true}
-    >
-      <OakResourceCard {...args} id="download-card-disabled-one" value="one" />
-      <OakResourceCard {...args} id="download-card-disabled-two" value="two" />
-    </OakRadioGroup>
-  ),
-  args: {
-    iconName: "book-steps",
-    title: "Fancy presentation",
-    description: "PPTX",
-    fileSize: "200KB",
-    isRadio: true,
-  },
-};
-
-export const DisabledCheckbox: Story = {
-  render: (args) => <OakResourceCard {...args} />,
-  args: {
-    iconName: "book-steps",
-    id: "download-card-disabled",
-    value: "a test value",
-    title: "Fancy presentation",
-    description: "PPTX",
-    fileSize: "200KB",
-    disabled: true,
-    checked: true,
   },
 };
 
