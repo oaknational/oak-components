@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import { Meta, StoryObj } from "@storybook/nextjs";
 import { fn } from "storybook/test";
 
-import { OakDownloadCard } from "./OakDownloadCard";
+import { OakResourceCard } from "./OakResourceCard";
 
 import { OakRadioGroup } from "@/components/form-elements/OakRadioGroup";
 import { oakIconNames } from "@/components/images-and-icons/OakIcon";
 import { OakFlex, OakGrid } from "@/index";
 
-const meta: Meta<typeof OakDownloadCard> = {
-  component: OakDownloadCard,
+const meta: Meta<typeof OakResourceCard> = {
+  component: OakResourceCard,
   tags: ["autodocs"],
-  title: "components/OWA/OakDownloadCard",
+  title: "components/OWA/OakResourceCard",
   args: { onBlur: fn(), onChange: fn(), onFocus: fn(), onHovered: fn() },
   argTypes: {
     checked: { control: { type: "boolean" } },
@@ -37,10 +37,10 @@ const meta: Meta<typeof OakDownloadCard> = {
 };
 export default meta;
 
-type Story = StoryObj<typeof OakDownloadCard>;
+type Story = StoryObj<typeof OakResourceCard>;
 
 export const Default: Story = {
-  render: (args) => <OakDownloadCard {...args} />,
+  render: (args) => <OakResourceCard {...args} />,
   args: {
     iconName: "book-steps",
     id: "download-card-default",
@@ -51,7 +51,7 @@ export const Default: Story = {
 };
 
 export const WithFileSize: Story = {
-  render: (args) => <OakDownloadCard {...args} />,
+  render: (args) => <OakResourceCard {...args} />,
   args: {
     iconName: "book-steps",
     id: "download-card-file-size",
@@ -63,7 +63,7 @@ export const WithFileSize: Story = {
 };
 
 export const IsEditable: Story = {
-  render: (args) => <OakDownloadCard {...args} />,
+  render: (args) => <OakResourceCard {...args} />,
   args: {
     iconName: "book-steps",
     id: "download-card-file-size",
@@ -76,7 +76,7 @@ export const IsEditable: Story = {
 };
 
 export const MultipleIcons: Story = {
-  render: (args) => <OakDownloadCard {...args} />,
+  render: (args) => <OakResourceCard {...args} />,
   argTypes: { iconName: { control: { type: "object" } } },
   args: {
     iconName: ["quiz", "video", "worksheet", "quiz"],
@@ -102,8 +102,8 @@ export const RadioGroup: Story = {
         value={value}
         onChange={handleChange}
       >
-        <OakDownloadCard {...args} id="download-card-radio-one" value="one" />
-        <OakDownloadCard {...args} id="download-card-radio-two" value="two" />
+        <OakResourceCard {...args} id="download-card-radio-one" value="one" />
+        <OakResourceCard {...args} id="download-card-radio-two" value="two" />
       </OakRadioGroup>
     );
   },
@@ -123,8 +123,8 @@ export const DisabledRadioGroup: Story = {
       value="one"
       disabled={true}
     >
-      <OakDownloadCard {...args} id="download-card-disabled-one" value="one" />
-      <OakDownloadCard {...args} id="download-card-disabled-two" value="two" />
+      <OakResourceCard {...args} id="download-card-disabled-one" value="one" />
+      <OakResourceCard {...args} id="download-card-disabled-two" value="two" />
     </OakRadioGroup>
   ),
   args: {
@@ -137,7 +137,7 @@ export const DisabledRadioGroup: Story = {
 };
 
 export const DisabledCheckbox: Story = {
-  render: (args) => <OakDownloadCard {...args} />,
+  render: (args) => <OakResourceCard {...args} />,
   args: {
     iconName: "book-steps",
     id: "download-card-disabled",
@@ -153,12 +153,12 @@ export const DisabledCheckbox: Story = {
 export const WrappingHeight: Story = {
   render: (args) => (
     <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
-      <OakDownloadCard
+      <OakResourceCard
         {...args}
         id="download-card-wrapping-long"
         title="A very very very very very long title on in the card so it wraps"
       />
-      <OakDownloadCard
+      <OakResourceCard
         {...args}
         id="download-card-wrapping-short"
         title="Short title"
@@ -186,7 +186,7 @@ export const SharePage: Story = {
         $gap={"spacing-16"}
         $justifyContent={"stretch"}
       >
-        <OakDownloadCard
+        <OakResourceCard
           {...args}
           iconName={["quiz", "video", "worksheet", "quiz"]}
           title="Full online lesson"
@@ -195,21 +195,21 @@ export const SharePage: Story = {
         />
       </OakFlex>
       <OakFlex $flexDirection={"column"} $gap={"spacing-32"}>
-        <OakDownloadCard
+        <OakResourceCard
           {...args}
           iconName={"quiz"}
           id="download-card-wrapping-short"
           title="Prior knowledge starter quiz"
           fileSize="Check prior knowledge (6 questions)"
         />
-        <OakDownloadCard
+        <OakResourceCard
           {...args}
           iconName={"video"}
           id="download-card-wrapping-short"
           title="Lesson video"
           fileSize="Support independent learning (38 mins)"
         />
-        <OakDownloadCard
+        <OakResourceCard
           {...args}
           iconName={"quiz"}
           id="download-card-wrapping-short"

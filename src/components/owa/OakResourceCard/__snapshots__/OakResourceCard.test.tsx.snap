@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`OakDownloadCard matches snapshot with fileSizeSlot 1`] = `
+exports[`OakResourceCard matches snapshot with fileSizeSlot 1`] = `
 .c0 {
   overflow: hidden;
   width: 100%;
@@ -376,7 +376,7 @@ input:checked + .c22 {
 </div>
 `;
 
-exports[`OakDownloadCard matches snapshot without fileSizeSlot 1`] = `
+exports[`OakResourceCard matches snapshot without fileSizeSlot 1`] = `
 .c0 {
   overflow: hidden;
   width: 100%;
@@ -747,7 +747,7 @@ input:checked + .c22 {
 </div>
 `;
 
-exports[`OakDownloadCard renders an editable tag when isEditable is true 1`] = `
+exports[`OakResourceCard renders an editable tag when isEditable is true 1`] = `
 .c0 {
   overflow: hidden;
   width: 100%;

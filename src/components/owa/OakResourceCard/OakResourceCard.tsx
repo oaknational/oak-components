@@ -65,7 +65,7 @@ const MultipleIcons = ({ iconName }: { iconName: IconName[] }) => {
   );
 };
 
-export type OakDownloadCardProps = BaseCheckBoxProps & {
+export type OakResourceCardProps = BaseCheckBoxProps & {
   /**
    * The primary title content for the download.
    */
@@ -136,13 +136,15 @@ const Container = styled(OakFlex)<{
 `;
 
 /**
- * Download cards present a downloadable resource with metadata and a selectable control.
+ * Resource cards present a downloadable/shareable resource with metadata and a selectable control.
+ * This component has been renamed from OakDownloadCard.
  * ## Usage
- * Use this component when users need to select one or more downloadable resources,
+ * Use this component when users need to select one or more downloadable/shareable resources,
  * such as lesson plans, slide decks, or worksheets.
- * Design document: <https://www.figma.com/design/YcWQMMhHPVVmc47cHHEEAl/Oak-Design-Kit?node-id=14795-5603>
+ * Design document: <https://www.figma.com/design/YcWQMMhHPVVmc47cHHEEAl/Oak-Design-Kit?node-id=14795-5603>\
+ * Updated with new standards: <https://www.figma.com/design/xIIH1NUk2IHKxgh5BW5gOd/Test-Oak-Component-Standards?node-id=66-905&p=f&m=dev>
  */
-export const OakDownloadCard = (props: OakDownloadCardProps) => {
+export const OakResourceCard = (props: OakResourceCardProps) => {
   const radioContext = useContext(RadioContext);
   const {
     title,

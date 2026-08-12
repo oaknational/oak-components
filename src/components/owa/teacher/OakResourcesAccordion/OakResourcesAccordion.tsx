@@ -22,7 +22,7 @@ import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
 import { OakCheckBox } from "@/components/form-elements/OakCheckBox";
 
-export type OakDownloadsAccordionProps = {
+export type OakResourcesAccordionProps = {
   /**
    * Text to render in the subheading
    */
@@ -79,7 +79,7 @@ const Accordion = ({
   downloadsText,
   handleToggleSelectAll,
   ...styleProps
-}: OakDownloadsAccordionProps) => {
+}: OakResourcesAccordionProps) => {
   const { isOpen } = useAccordionContext();
 
   return (
@@ -163,7 +163,7 @@ const Accordion = ({
         </OakFlex>
       </OakFlex>
       {/* Accordion content */}
-      <OakBox $position={"relative"} $overflow={"visible"}>
+      <OakBox $position={"relative"} $overflow={"overflow"}>
         <InternalAccordionContent $pt={"spacing-20"} aria-labelledby={id}>
           {children}
         </InternalAccordionContent>
@@ -173,13 +173,13 @@ const Accordion = ({
 };
 
 /**
- * OakDownloadsAccordion
+ * OakResourcesAccordion renamed from OakDownloadsAccordion.
  *
  */
-export const OakDownloadsAccordion = ({
+export const OakResourcesAccordion = ({
   initialOpen = false,
   ...props
-}: OakDownloadsAccordionProps) => {
+}: OakResourcesAccordionProps) => {
   return (
     <InternalAccordionProvider isInitialOpen={initialOpen}>
       <Accordion {...props} />

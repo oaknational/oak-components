@@ -2,11 +2,11 @@ import React from "react";
 import "@testing-library/jest-dom";
 import { act, fireEvent } from "@testing-library/react";
 
-import { OakDownloadsAccordion } from "./OakDownloadsAccordion";
+import { OakResourcesAccordion } from "./OakResourcesAccordion";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
-import { OakDownloadCard } from "@/components/owa/OakDownloadCard";
+import { OakResourceCard } from "@/components/owa/OakResourceCard";
 
 const mockHandleToggleSelectAll = jest.fn();
 
@@ -17,7 +17,7 @@ const defaultProps = {
   selectAllChecked: false,
   children: (
     <OakFlex $flexDirection="column" $gap="spacing-16">
-      <OakDownloadCard
+      <OakResourceCard
         id="lesson-plan"
         value="lesson-plan"
         iconName="book-steps"
@@ -25,7 +25,7 @@ const defaultProps = {
         format="PDF"
         fileSize="245KB"
       />
-      <OakDownloadCard
+      <OakResourceCard
         id="presentation"
         value="presentation"
         iconName="slide-deck"
@@ -37,21 +37,21 @@ const defaultProps = {
   ),
 };
 
-describe("OakDownloadsAccordion", () => {
+describe("OakResourcesAccordion", () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
 
   it("matches snapshot when closed", () => {
     const { container } = renderWithTheme(
-      <OakDownloadsAccordion {...defaultProps} />,
+      <OakResourcesAccordion {...defaultProps} />,
     );
     expect(container).toMatchSnapshot();
   });
 
   it("displays correct heading when selectAllChecked is false", () => {
     const { getByText } = renderWithTheme(
-      <OakDownloadsAccordion {...defaultProps} selectAllChecked={false} />,
+      <OakResourcesAccordion {...defaultProps} selectAllChecked={false} />,
     );
 
     expect(getByText("Select all resources")).toBeInTheDocument();
@@ -59,7 +59,7 @@ describe("OakDownloadsAccordion", () => {
 
   it("displays correct heading when selectAllChecked is true", () => {
     const { getByText } = renderWithTheme(
-      <OakDownloadsAccordion {...defaultProps} selectAllChecked={true} />,
+      <OakResourcesAccordion {...defaultProps} selectAllChecked={true} />,
     );
 
     expect(getByText("All resources selected")).toBeInTheDocument();
@@ -67,7 +67,7 @@ describe("OakDownloadsAccordion", () => {
 
   it("displays the downloads text", () => {
     const { getByText } = renderWithTheme(
-      <OakDownloadsAccordion {...defaultProps} />,
+      <OakResourcesAccordion {...defaultProps} />,
     );
 
     expect(
@@ -77,7 +77,7 @@ describe("OakDownloadsAccordion", () => {
 
   it("starts closed by default", () => {
     const { queryByRole } = renderWithTheme(
-      <OakDownloadsAccordion {...defaultProps} />,
+      <OakResourcesAccordion {...defaultProps} />,
     );
 
     expect(queryByRole("region")).not.toBeInTheDocument();
@@ -85,7 +85,7 @@ describe("OakDownloadsAccordion", () => {
 
   it("starts open when initialOpen is true", () => {
     const { getByRole, getByText } = renderWithTheme(
-      <OakDownloadsAccordion {...defaultProps} initialOpen={true} />,
+      <OakResourcesAccordion {...defaultProps} initialOpen={true} />,
     );
 
     expect(getByRole("region")).toBeInTheDocument();
@@ -95,7 +95,7 @@ describe("OakDownloadsAccordion", () => {
 
   it("toggles open and closed when accordion button is clicked", () => {
     const { queryByRole, getByRole, getByText } = renderWithTheme(
-      <OakDownloadsAccordion {...defaultProps} initialOpen={false} />,
+      <OakResourcesAccordion {...defaultProps} initialOpen={false} />,
     );
 
     expect(queryByRole("region")).not.toBeInTheDocument();
@@ -116,7 +116,7 @@ describe("OakDownloadsAccordion", () => {
 
   it("calls handleToggleSelectAll when select all checkbox clicked", () => {
     const { getByRole } = renderWithTheme(
-      <OakDownloadsAccordion {...defaultProps} />,
+      <OakResourcesAccordion {...defaultProps} />,
     );
 
     act(() => {
@@ -128,7 +128,7 @@ describe("OakDownloadsAccordion", () => {
 
   it("calls handleToggleSelectAll when select all wrapper is clicked", () => {
     const { container } = renderWithTheme(
-      <OakDownloadsAccordion {...defaultProps} />,
+      <OakResourcesAccordion {...defaultProps} />,
     );
 
     const selectAllWrapper = container.querySelector("#select-all-wrapper");
@@ -147,14 +147,14 @@ describe("OakDownloadsAccordion", () => {
 
   it("reflects the checked state of the select all checkbox", () => {
     const { getByRole, rerender } = renderWithTheme(
-      <OakDownloadsAccordion {...defaultProps} selectAllChecked={false} />,
+      <OakResourcesAccordion {...defaultProps} selectAllChecked={false} />,
     );
 
     const checkbox = getByRole("checkbox");
     expect(checkbox).not.toBeChecked();
 
     rerender(
-      <OakDownloadsAccordion {...defaultProps} selectAllChecked={true} />,
+      <OakResourcesAccordion {...defaultProps} selectAllChecked={true} />,
     );
 
     expect(checkbox).toBeChecked();
@@ -162,7 +162,7 @@ describe("OakDownloadsAccordion", () => {
 
   it("has correct accessibility attributes", () => {
     const { getByRole } = renderWithTheme(
-      <OakDownloadsAccordion {...defaultProps} />,
+      <OakResourcesAccordion {...defaultProps} />,
     );
 
     const button = getByRole("button");
@@ -179,7 +179,7 @@ describe("OakDownloadsAccordion", () => {
 
   it("displays chevron icon that rotates when accordion opens", () => {
     const { getByRole } = renderWithTheme(
-      <OakDownloadsAccordion {...defaultProps} initialOpen={false} />,
+      <OakResourcesAccordion {...defaultProps} initialOpen={false} />,
     );
 
     const chevronIcon = document.querySelector(".chevron-icon");
@@ -195,7 +195,7 @@ describe("OakDownloadsAccordion", () => {
 
   it("renders children content when open", () => {
     const { getByText } = renderWithTheme(
-      <OakDownloadsAccordion {...defaultProps} initialOpen={true} />,
+      <OakResourcesAccordion {...defaultProps} initialOpen={true} />,
     );
 
     expect(getByText("Lesson plan")).toBeInTheDocument();
