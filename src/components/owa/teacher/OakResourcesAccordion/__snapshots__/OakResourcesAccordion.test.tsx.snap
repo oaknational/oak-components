@@ -87,9 +87,9 @@ exports[`OakResourcesAccordion matches snapshot when closed 1`] = `
 
 .c31 {
   position: relative;
-  overflow: overflow;
+  overflow: visible;
   font-family: --var(google-font),Lexend,sans-serif;
-  overflow: overflow;
+  overflow: visible;
 }
 
 .c32 {
