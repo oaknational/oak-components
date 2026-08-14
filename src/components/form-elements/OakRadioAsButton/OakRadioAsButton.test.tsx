@@ -387,4 +387,35 @@ describe("OakRadioAsButton", () => {
     const radios2 = getAllByRole("radio") as HTMLInputElement[];
     expect(radios2[1]).toBeChecked();
   });
+
+  it("uses the main background and matching border by default", () => {
+    const { container } = renderWithTheme(
+      <OakRadioAsButton
+        value="option1"
+        displayValue="Option 1"
+        colorScheme="decorative1"
+      />,
+    );
+
+    expect(container.firstChild).toHaveStyle({
+      "background-color": "#bef2bd",
+      "border-color": "#bef2bd",
+    });
+  });
+
+  it("uses the very subdued background and a neutral border when subdued", () => {
+    const { container } = renderWithTheme(
+      <OakRadioAsButton
+        value="option1"
+        displayValue="Option 1"
+        colorScheme="decorative1"
+        isSubdued
+      />,
+    );
+
+    expect(container.firstChild).toHaveStyle({
+      "background-color": "#ebfbeb",
+      "border-color": "#cacaca",
+    });
+  });
 });

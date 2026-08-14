@@ -101,6 +101,7 @@ type ColorSchemeTokens = {
 
 const getColorSchemeTokens = (
   colorScheme: OakRadioAsButtonColorScheme,
+  isSubdued?: boolean,
 ): ColorSchemeTokens => {
   switch (colorScheme) {
     case "primary":
@@ -121,9 +122,13 @@ const getColorSchemeTokens = (
       };
     default:
       return {
-        background: `bg-${colorScheme}-main`,
+        background: isSubdued
+          ? `bg-${colorScheme}-very-subdued`
+          : `bg-${colorScheme}-main`,
         hoverBackground: `bg-${colorScheme}-very-subdued`,
-        borderColor: `border-${colorScheme}`,
+        borderColor: isSubdued
+          ? "border-neutral-lighter"
+          : `border-${colorScheme}`,
         disabledBackground: "bg-btn-secondary-disabled",
         disabledBorderColor: "border-neutral-lighter",
       };
@@ -146,6 +151,7 @@ export type OakRadioAsButtonProps = Omit<
    */
   keepIconColor?: boolean;
   disabled?: HTMLInputElement["disabled"];
+  isSubdued?: boolean;
   "aria-labelledby"?: React.AriaAttributes["aria-labelledby"];
   "aria-label"?: React.AriaAttributes["aria-label"];
   /**
@@ -181,6 +187,7 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
   const {
     value,
     disabled,
+    isSubdued,
     innerRef,
     displayValue,
     onChange,
@@ -208,7 +215,7 @@ export const OakRadioAsButton = (props: OakRadioAsButtonProps) => {
   };
 
   const isChecked = currentValue === value;
-  const colorSchemeTokens = getColorSchemeTokens(colorScheme);
+  const colorSchemeTokens = getColorSchemeTokens(colorScheme, isSubdued);
 
   const {
     icon: _icon,
