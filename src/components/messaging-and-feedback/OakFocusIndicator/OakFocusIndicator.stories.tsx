@@ -73,7 +73,7 @@ export const Square: Story = {
     </OakFocusIndicator>
   ),
   args: {
-    $borderRadius: "border-radius-none",
+    $borderRadius: "border-radius-square",
   },
 };
 
