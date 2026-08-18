@@ -129,9 +129,7 @@ const StyledFlex = styled(OakFlex)`
  * The component has no intrinsic draggable functionality.
  * It is intended to be used with `useDraggable` from `@dnd-kit/core`
  */
-export const OakDraggable: FC<
-  ComponentPropsWithRef<OakDraggableProps & typeof OakBox>
-> = forwardRef<
+export const OakDraggable = forwardRef<
   HTMLDivElement,
   OakDraggableProps & ComponentPropsWithoutRef<typeof OakBox>
 >(
