@@ -1,10 +1,11 @@
+import { DefaultTheme } from "styled-components";
+
 import {
   OakColorToken,
   OakUiRoleToken,
   oakColorTokens,
   oakUiRoleTokens,
 } from "@/styles/theme/color";
-import { PropsWithTheme } from "@/styles/theme/theme";
 
 /**
  * - takes OakColorToken, OakUiRoleToken, null or undefined
@@ -15,10 +16,10 @@ import { PropsWithTheme } from "@/styles/theme/theme";
 function parseColor(): undefined;
 function parseColor(
   value?: OakColorToken | OakUiRoleToken | null,
-): (props: PropsWithTheme) => string;
+): (props: { theme: DefaultTheme }) => string;
 function parseColor(
   value?: OakUiRoleToken | null,
-): ((props: PropsWithTheme) => string) | undefined;
+): ((props: { theme: DefaultTheme }) => string) | undefined;
 function parseColor(value?: OakColorToken | OakUiRoleToken | null) {
   if (value === undefined || value === null) {
     return undefined;
@@ -27,7 +28,7 @@ function parseColor(value?: OakColorToken | OakUiRoleToken | null) {
     return oakColorTokens[value as OakColorToken];
   }
   if (oakUiRoleTokens.includes(value as OakUiRoleToken)) {
-    return ({ theme }: PropsWithTheme) => {
+    return ({ theme }: { theme: DefaultTheme }) => {
       const c = theme.uiColors[value as OakUiRoleToken];
       return oakColorTokens[c as OakColorToken];
     };
