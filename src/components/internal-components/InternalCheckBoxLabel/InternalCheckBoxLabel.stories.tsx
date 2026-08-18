@@ -33,6 +33,5 @@ export const Default: Story = {
   ),
   args: {
     htmlFor: "test",
-    value: "a test value",
   },
 };
