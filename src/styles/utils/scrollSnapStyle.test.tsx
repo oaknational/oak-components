@@ -3,11 +3,11 @@ import styled from "styled-components";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 
-import { scrollSnapStyle } from "./scrollSnapStyle";
+import { scrollSnapStyle, ScrollSnapStyleProps } from "./scrollSnapStyle";
 
 describe("scrollSnapStyle", () => {
   test("should correctly handle prop 'scrollMarginTop'", async () => {
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<ScrollSnapStyleProps>`
       ${scrollSnapStyle}
     `;
     const { getByTestId } = render(
@@ -18,7 +18,7 @@ describe("scrollSnapStyle", () => {
   });
 
   test("should correctly handle prop 'scrollMarginLeft'", async () => {
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<ScrollSnapStyleProps>`
       ${scrollSnapStyle}
     `;
     const { getByTestId } = render(

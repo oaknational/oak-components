@@ -12,13 +12,14 @@ import {
   parseFontSize,
   parseFontWeight,
 } from "@/styles/helpers/parseTypography";
-import { colorStyle } from "@/styles/utils/colorStyle";
+import { colorStyle, ColorStyleProps } from "@/styles/utils/colorStyle";
 
 export const NativeOption = styled("option")<
-  PaddingStyleProps & {
-    $focusRingDropShadows?: OakDropShadowToken[];
-    $asDefault?: boolean;
-  }
+  PaddingStyleProps &
+    ColorStyleProps & {
+      $focusRingDropShadows?: OakDropShadowToken[];
+      $asDefault?: boolean;
+    }
 >`
   cursor: pointer;
   border: none;

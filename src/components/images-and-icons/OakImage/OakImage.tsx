@@ -40,7 +40,7 @@ export type OakImageProps<C extends ElementType = typeof Image> = Omit<
     imageProps?: Partial<ComponentPropsWithoutRef<C>>;
   };
 
-type StyledImageProps = Omit<OakImageProps, "as"> & {
+export type StyledImageProps = Omit<OakImageProps, "as"> & {
   $showOakPlaceholder: boolean;
 };
 
