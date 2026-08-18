@@ -6,8 +6,8 @@ import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 
 type InternalSlideInFlexProps = {
-  finalZIndex: number;
-  transitionRef: React.RefObject<HTMLDivElement>;
+  finalZIndex?: number;
+  transitionRef?: React.RefObject<HTMLDivElement>;
   state: TransitionStatus;
   isLeftHandSide: boolean;
   children: React.ReactNode;
@@ -44,7 +44,7 @@ const SlideInFlex = styled(OakFlex)<{
 `;
 
 const InternalSlideInFlex: FC<
-  ComponentPropsWithRef<InternalSlideInFlexProps & typeof OakFlex>
+  ComponentPropsWithRef<typeof OakFlex> & InternalSlideInFlexProps
 > = forwardRef<
   HTMLDivElement,
   InternalSlideInFlexProps & ComponentPropsWithRef<typeof OakFlex>
