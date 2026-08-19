@@ -52,7 +52,7 @@ export const OakFocusIndicator = styled(OakBox)<OakFocusIndicatorProps>`
     ${responsiveStyle(
       "background-color",
       (props) => props.hoverBackground,
-      parseColor,
+      (value) => parseColor(value),
     )}
     box-shadow: ${(props) =>
       props.hoverDropShadow ? parseDropShadow(props.hoverDropShadow) : "none"};
