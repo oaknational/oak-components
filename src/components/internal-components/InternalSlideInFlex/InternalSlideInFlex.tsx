@@ -20,25 +20,25 @@ type InternalSlideInFlexProps = {
 
 const SlideInFlex = styled(OakFlex)<{
   $state: TransitionStatus;
-  isLeftHandSide: boolean;
-  largeScreenMaxWidth: number;
+  $isLeftHandSide: boolean;
+  $largeScreenMaxWidth: number;
 }>`
-  max-width: ${({ isLeftHandSide }) =>
-    isLeftHandSide ? `calc(100vw - ${parseSpacing("spacing-20")})` : "100vw"};
-  transform: ${({ $state, isLeftHandSide }) => {
+  max-width: ${({ $isLeftHandSide }) =>
+    $isLeftHandSide ? `calc(100vw - ${parseSpacing("spacing-20")})` : "100vw"};
+  transform: ${({ $state, $isLeftHandSide }) => {
     switch ($state) {
       case "entered":
       case "entering":
         return "translateX(0)";
       default:
-        return isLeftHandSide ? "translateX(-100%)" : "translateX(100%)";
+        return $isLeftHandSide ? "translateX(-100%)" : "translateX(100%)";
     }
   }};
-  ${({ isLeftHandSide, largeScreenMaxWidth }) =>
-    !isLeftHandSide &&
+  ${({ $isLeftHandSide, $largeScreenMaxWidth }) =>
+    !$isLeftHandSide &&
     `
       @media (min-width: 768px) {
-        max-width: ${largeScreenMaxWidth}px;
+        max-width: ${$largeScreenMaxWidth}px;
       }
     `}
 `;
@@ -74,8 +74,8 @@ const InternalSlideInFlex: FC<
       $state={state}
       $color="text-primary"
       role="dialog"
-      isLeftHandSide={isLeftHandSide}
-      largeScreenMaxWidth={largeScreenMaxWidth}
+      $isLeftHandSide={isLeftHandSide}
+      $largeScreenMaxWidth={largeScreenMaxWidth}
       {...rest}
     >
       {children}

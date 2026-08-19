@@ -6,8 +6,8 @@ import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { FlexStyleProps } from "@/styles/utils/flexStyle";
 
 export type InternalCheckBoxLabelProps = {
-  labelAlignItems?: FlexStyleProps["$alignItems"];
-  labelGap?: FlexStyleProps["$gap"];
+  $labelAlignItems?: FlexStyleProps["$alignItems"];
+  $labelGap?: FlexStyleProps["$gap"];
   disabled?: boolean;
   pointerEvents?: CSSProperties["pointerEvents"];
   "data-testid"?: string;
@@ -23,8 +23,8 @@ export const InternalCheckBoxLabel = styled(
 )<InternalCheckBoxLabelProps>`
   display: flex;
   align-items: center;
-  ${responsiveStyle("gap", (props) => props.labelGap, parseSpacing)}
-  ${responsiveStyle("align-items", (props) => props.labelAlignItems)}
+  ${responsiveStyle("gap", (props) => props.$labelGap, parseSpacing)}
+  ${responsiveStyle("align-items", (props) => props.$labelAlignItems)}
 `;
 
 export const InternalCheckBoxLabelHoverDecor = styled(InternalCheckBoxLabel)`
