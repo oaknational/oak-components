@@ -1,5 +1,6 @@
 import React from "react";
 import "@testing-library/jest-dom";
+import { act } from "@testing-library/react";
 
 import { OakErrorBoundary } from "./OakErrorBoundary";
 
@@ -7,7 +8,7 @@ import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 function InnerComponent({ shouldThrow }: { shouldThrow: boolean }) {
   if (shouldThrow) {
-    throw new Error("Arrrgh");
+    throw new Error("TEST_ERROR");
   }
   return <div>TEST_CONTENT</div>;
 }
@@ -89,5 +90,57 @@ describe("OakErrorBoundary", () => {
 
     retryButtonEl.click();
     expect(onRetry).toHaveBeenCalledTimes(1);
+  });
+
+  it("onRetry calling clearError resets state", async () => {
+    let clearError: () => void | undefined;
+    const shouldThrowRef = { current: true };
+    const onRetry = ({
+      clearError: localClearError,
+    }: {
+      clearError: () => void;
+    }) => {
+      clearError = localClearError;
+      shouldThrowRef.current = false;
+    };
+    const { container, getByRole, rerender } = renderWithTheme(
+      <OakErrorBoundary sectionName="video" onRetry={onRetry}>
+        <InnerComponent shouldThrow={shouldThrowRef.current} />
+      </OakErrorBoundary>,
+    );
+
+    const retryButtonEl = getByRole("button", { name: "Retry" });
+    expect(retryButtonEl).toBeInTheDocument();
+
+    expect(container).toHaveTextContent(
+      "Something unexpected happened loading “video”",
+    );
+
+    retryButtonEl.click();
+
+    act(() => {
+      clearError();
+      rerender(
+        <OakErrorBoundary sectionName="video" onRetry={onRetry}>
+          <InnerComponent shouldThrow={shouldThrowRef.current} />
+        </OakErrorBoundary>,
+      );
+    });
+
+    expect(container).toHaveTextContent("TEST_CONTENT");
+  });
+
+  it("calls onError", async () => {
+    const onError = jest.fn();
+    const { container } = renderWithTheme(
+      <OakErrorBoundary sectionName="video" onError={onError}>
+        <InnerComponent shouldThrow={true} />
+      </OakErrorBoundary>,
+    );
+
+    expect(container).toHaveTextContent(
+      "Something unexpected happened loading “video”",
+    );
+    expect(onError).toHaveBeenCalledTimes(1);
   });
 });
