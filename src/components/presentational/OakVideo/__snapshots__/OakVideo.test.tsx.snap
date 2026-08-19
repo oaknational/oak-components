@@ -18,8 +18,6 @@ exports[`OakVideo renders correctly with all controls 1`] = `
 
 .c9 {
   position: relative;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   height: auto;
   font-family: --var(google-font),Lexend,sans-serif;
@@ -64,102 +62,51 @@ exports[`OakVideo renders correctly with all controls 1`] = `
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 1.5rem;
 }
 
 .c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 0.5rem;
 }
 
 .c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 1rem;
 }
 
 .c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-order: 2;
-  -ms-flex-order: 2;
   order: 2;
 }
 
 .c14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   gap: 0.25rem;
 }
 
 .c18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
-  -webkit-order: 3;
-  -ms-flex-order: 3;
   order: 3;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
 .c20 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
   order: 1;
 }
 
 .c22 {
   display: none;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 2rem;
 }
@@ -169,9 +116,6 @@ exports[`OakVideo renders correctly with all controls 1`] = `
   font-weight: 500;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
   text-align: left;
 }
@@ -205,7 +149,6 @@ exports[`OakVideo renders correctly with all controls 1`] = `
 }
 
 .c17 {
-  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
 }
@@ -217,7 +160,6 @@ exports[`OakVideo renders correctly with all controls 1`] = `
 }
 
 .c13:hover {
-  -webkit-text-decoration: none;
   text-decoration: none;
   color: #222222;
   background: #f2f2f2;
@@ -249,16 +191,16 @@ exports[`OakVideo renders correctly with all controls 1`] = `
 }
 
 .c10 .grey-shadow:has(+ * + .internal-button:focus-visible) {
-  box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 .c10 .yellow-shadow:has(+ .internal-button:focus-visible) {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%);
 }
 
 .c10 .yellow-shadow:has(+ .internal-button:hover),
-.c10 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
-  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+.c10 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible, :active)) {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%);
 }
 
 .c10 .grey-shadow:has(+ * + .internal-button:hover) {
@@ -266,11 +208,11 @@ exports[`OakVideo renders correctly with all controls 1`] = `
 }
 
 .c10 .grey-shadow:has(+ * + .internal-button:active) {
-  box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+  box-shadow: 0.25rem 0.25rem 0 rgba(87, 87, 87, 100%);
 }
 
 .c10 .yellow-shadow:has(+ .internal-button:active) {
-  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+  box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%);
 }
 
 .c5 {
@@ -278,9 +220,6 @@ exports[`OakVideo renders correctly with all controls 1`] = `
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 2rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
   color: #222222;
 }
@@ -290,9 +229,6 @@ exports[`OakVideo renders correctly with all controls 1`] = `
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.5rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
   color: #222222;
 }
@@ -302,211 +238,174 @@ exports[`OakVideo renders correctly with all controls 1`] = `
   font-weight: 300;
   font-size: 1.125rem;
   line-height: 1.75rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
   color: #222222;
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c19 {
     width: auto;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c19 {
     width: auto;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c7 {
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c7 {
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c8 {
-    -webkit-order: 1;
-    -ms-flex-order: 1;
     order: 1;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c8 {
-    -webkit-order: 1;
-    -ms-flex-order: 1;
     order: 1;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c18 {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
     justify-content: flex-start;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c18 {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
     justify-content: flex-start;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c18 {
-    -webkit-order: 2;
-    -ms-flex-order: 2;
     order: 2;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c18 {
-    -webkit-order: 2;
-    -ms-flex-order: 2;
     order: 2;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c20 {
-    -webkit-order: 3;
-    -ms-flex-order: 3;
     order: 3;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c20 {
-    -webkit-order: 3;
-    -ms-flex-order: 3;
     order: 3;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c5 {
     font-weight: 600;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c5 {
     font-weight: 600;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c5 {
     font-size: 2rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c5 {
     font-size: 2rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c5 {
     line-height: 2.5rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c5 {
     line-height: 2.5rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c5 {
-    -webkit-letter-spacing: 0.0115rem;
-    -moz-letter-spacing: 0.0115rem;
-    -ms-letter-spacing: 0.0115rem;
     letter-spacing: 0.0115rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c5 {
-    -webkit-letter-spacing: 0.0115rem;
-    -moz-letter-spacing: 0.0115rem;
-    -ms-letter-spacing: 0.0115rem;
     letter-spacing: 0.0115rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c6 {
     font-weight: 300;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c6 {
     font-weight: 300;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c6 {
     font-size: 1.125rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c6 {
     font-size: 1.125rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c6 {
     line-height: 1.75rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c6 {
     line-height: 1.75rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c6 {
-    -webkit-letter-spacing: -0.005rem;
-    -moz-letter-spacing: -0.005rem;
-    -ms-letter-spacing: -0.005rem;
     letter-spacing: -0.005rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c6 {
-    -webkit-letter-spacing: -0.005rem;
-    -moz-letter-spacing: -0.005rem;
-    -ms-letter-spacing: -0.005rem;
     letter-spacing: -0.005rem;
   }
 }
@@ -710,20 +609,13 @@ exports[`OakVideo renders correctly with just video 1`] = `
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 1.5rem;
 }
 
 .c5 {
   display: none;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 0.5rem;
 }
@@ -733,63 +625,54 @@ exports[`OakVideo renders correctly with just video 1`] = `
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.5rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
   color: #222222;
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c6 {
     font-weight: 300;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c6 {
     font-weight: 300;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c6 {
     font-size: 1.125rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c6 {
     font-size: 1.125rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c6 {
     line-height: 1.75rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c6 {
     line-height: 1.75rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c6 {
-    -webkit-letter-spacing: -0.005rem;
-    -moz-letter-spacing: -0.005rem;
-    -ms-letter-spacing: -0.005rem;
     letter-spacing: -0.005rem;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c6 {
-    -webkit-letter-spacing: -0.005rem;
-    -moz-letter-spacing: -0.005rem;
-    -ms-letter-spacing: -0.005rem;
     letter-spacing: -0.005rem;
   }
 }

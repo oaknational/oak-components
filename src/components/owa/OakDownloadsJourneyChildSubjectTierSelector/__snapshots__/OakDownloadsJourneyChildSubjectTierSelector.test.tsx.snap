@@ -13,9 +13,6 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   border-color: #a0b6f2;
   border-radius: 0.375rem;
   border-style: solid;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -46,9 +43,6 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.5rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
@@ -64,9 +58,6 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   font-weight: 500;
   font-size: 1.125rem;
   line-height: 1.75rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
@@ -77,7 +68,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c22 {
+.c21 {
   position: absolute;
   top: 0rem;
   left: 0rem;
@@ -89,16 +80,14 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c25 {
+.c24 {
   position: relative;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   height: auto;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c27 {
+.c26 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -107,7 +96,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c32 {
+.c31 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -118,154 +107,73 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 1.5rem;
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: end;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
   align-items: end;
 }
 
 .c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   gap: 0.75rem;
 }
 
 .c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
   order: 1;
   gap: 0.25rem;
 }
 
 .c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 1rem;
 }
 
 .c18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
 }
 
-.c23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+.c22 {
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
   flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
 }
 
-.c30 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+.c29 {
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   gap: 0.5rem;
 }
 
-.c31 {
+.c30 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
   text-align: left;
 }
 
-.c28 {
+.c27 {
   background: none;
   color: inherit;
   border: none;
@@ -288,84 +196,81 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   border-radius: 0.25rem;
 }
 
-.c28:disabled {
+.c27:disabled {
   pointer-events: none;
   cursor: default;
 }
 
 .c7 {
-  -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
 }
 
-.c33 {
-  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+.c32 {
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   object-fit: contain;
 }
 
-.c29 {
+.c28 {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-.c29:hover {
-  -webkit-text-decoration: underline;
+.c28:hover {
   text-decoration: underline;
   color: #ffffff;
   background: #575757;
   border-color: #575757;
 }
 
-.c29:hover [data-state="selected"] {
+.c28:hover [data-state="selected"] {
   display: none;
 }
 
-.c29:active {
+.c28:active {
   background: #222222;
   border-color: #222222;
   color: #ffffff;
 }
 
-.c29:active [data-state="selected"] {
+.c28:active [data-state="selected"] {
   display: none;
 }
 
-.c29:disabled {
+.c28:disabled {
   background: #808080;
   border-color: #808080;
   color: #ffffff;
 }
 
-.c29:disabled [data-state="selected"] {
+.c28:disabled [data-state="selected"] {
   display: none;
 }
 
-.c26 .grey-shadow:has(+ * + .internal-button:focus-visible) {
-  box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
+.c25 .grey-shadow:has(+ * + .internal-button:focus-visible) {
+  box-shadow: 0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
-.c26 .yellow-shadow:has(+ .internal-button:focus-visible) {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
+.c25 .yellow-shadow:has(+ .internal-button:focus-visible) {
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%);
 }
 
-.c26 .yellow-shadow:has(+ .internal-button:hover),
-.c26 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
-  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+.c25 .yellow-shadow:has(+ .internal-button:hover),
+.c25 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible, :active)) {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%);
 }
 
-.c26 .grey-shadow:has(+ * + .internal-button:hover) {
+.c25 .grey-shadow:has(+ * + .internal-button:hover) {
   box-shadow: none;
 }
 
-.c26 .grey-shadow:has(+ * + .internal-button:active) {
-  box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+.c25 .grey-shadow:has(+ * + .internal-button:active) {
+  box-shadow: 0.25rem 0.25rem 0 rgba(87, 87, 87, 100%);
 }
 
-.c26 .yellow-shadow:has(+ .internal-button:active) {
-  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+.c25 .yellow-shadow:has(+ .internal-button:active) {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%);
 }
 
 .c13 {
@@ -377,16 +282,11 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   font-weight: 300;
   font-size: 1.125rem;
   line-height: 1.75rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
 .c20 {
   -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   cursor: pointer;
   margin: 0;
@@ -404,11 +304,11 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   pointer-events: none;
 }
 
-.c24 {
+.c23 {
   border-radius: 50%;
 }
 
-.c19:focus-visible ~ .c21::before {
+.c19:focus-visible~.c23::before {
   content: "";
   height: 2rem;
   width: 2rem;
@@ -420,7 +320,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   box-shadow: inset 0 0 0 0.13rem #ffe555;
 }
 
-.c19:checked ~ .c21::after {
+.c19:checked~.c23::after {
   content: "";
   height: 1rem;
   width: 1rem;
@@ -432,18 +332,12 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
 
 .c16 {
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   gap: 0.5rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
-@media (hover:hover) {
+@media (hover: hover) {
   .c20:hover:not(:disabled) {
     border-color: #222222;
   }
@@ -523,7 +417,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
               value="biology"
             />
             <div
-              class="c21 c22 c23 c24"
+              class="c21 c22 c23"
             />
           </div>
           Biology
@@ -548,7 +442,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
               value="physics"
             />
             <div
-              class="c21 c22 c23 c24"
+              class="c21 c22 c23"
             />
           </div>
           Physics
@@ -573,7 +467,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
               value="chemistry"
             />
             <div
-              class="c21 c22 c23 c24"
+              class="c21 c22 c23"
             />
           </div>
           Chemistry
@@ -613,7 +507,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
               value="foundation"
             />
             <div
-              class="c21 c22 c23 c24"
+              class="c21 c22 c23"
             />
           </div>
           Foundation
@@ -638,7 +532,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
               value="higher"
             />
             <div
-              class="c21 c22 c23 c24"
+              class="c21 c22 c23"
             />
           </div>
           Higher
@@ -646,31 +540,31 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
       </div>
     </fieldset>
     <div
-      class="c25 c26"
+      class="c24 c25"
     >
       <div
-        class="c27 grey-shadow"
+        class="c26 grey-shadow"
       />
       <div
-        class="c27 yellow-shadow"
+        class="c26 yellow-shadow"
       />
       <button
-        class="c28 c29 internal-button"
+        class="c27 c28 internal-button"
       >
         <div
-          class="c0 c30"
+          class="c0 c29"
         >
           <span
-            class="c31"
+            class="c30"
           >
             Next
           </span>
           <span
-            class="c32"
+            class="c31"
           >
             <img
               alt=""
-              class="c33"
+              class="c32"
               data-nimg="fill"
               decoding="async"
               loading="lazy"
