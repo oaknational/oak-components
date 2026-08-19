@@ -1,10 +1,10 @@
+import { PropsWithTheme } from "@/styles/theme/theme";
 import {
   OakColorToken,
   OakUiRoleToken,
   oakColorTokens,
   oakUiRoleTokens,
 } from "@/styles/theme/color";
-import { PropsWithTheme } from "../theme/theme";
 
 /**
  * - takes OakColorToken, OakUiRoleToken, null or undefined

@@ -1,4 +1,5 @@
 import { DefaultTheme } from "styled-components";
+
 import { UiRoleMap } from "./color";
 
 export type OakTheme = {

@@ -1,6 +1,6 @@
+import { PropsWithTheme } from "@/styles/theme/theme";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { oakDefaultTheme } from "@/styles/theme/default.theme";
-import { PropsWithTheme } from "../theme/theme";
 
 describe("parseColor", () => {
   it("should return undefined if value is undefined", () => {
