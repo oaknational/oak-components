@@ -13,7 +13,7 @@ import { spacingArgTypes } from "@/storybook-helpers/spacingStyleHelpers";
  *
  */
 
-const meta: Meta<typeof OakUL> = {
+const meta: Meta<typeof OakLI> = {
   component: OakLI,
   tags: ["autodocs"],
   title: "components/Typography/OakLI",
