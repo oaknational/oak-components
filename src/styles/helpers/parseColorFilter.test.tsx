@@ -1,8 +1,9 @@
-import { DefaultTheme, ThemeProps } from "styled-components";
+import { DefaultTheme } from "styled-components";
 
 import { parseColorFilter } from "./parseColorFilter";
 
 import { oakDefaultTheme } from "@/styles/theme/default.theme";
+import { PropsWithTheme } from "../theme/theme";
 
 describe("parseColor", () => {
   it("should return undefined if value is undefined", () => {
@@ -16,7 +17,7 @@ describe("parseColor", () => {
   it("should return the correct filter if value is a valid OakUiRoleToken", () => {
     const func = parseColorFilter("icon-error");
     expect(func).toBeInstanceOf(Function);
-    const cast = func as ({ theme }: ThemeProps<DefaultTheme>) => string;
+    const cast = func as ({ theme }: PropsWithTheme) => string;
     oakDefaultTheme.uiColors["icon-error"] = "red";
     const res = cast({ theme: oakDefaultTheme });
     expect(res).toBe(
