@@ -34,14 +34,8 @@ type OakPageNumberProps = {
   pageName: string;
 };
 
-const StyledChevronButton = styled(OakLink)<{ disabledColor: string }>`
+const StyledChevronButton = styled(OakLink)`
   display: inline-block;
-  ${(props) => css`
-    &:disabled {
-      color: ${props.disabledColor};
-      cursor: pointer;
-    }
-  `}
 `;
 
 const StyledIcon = styled(OakIcon)<{ disabled: boolean }>`
