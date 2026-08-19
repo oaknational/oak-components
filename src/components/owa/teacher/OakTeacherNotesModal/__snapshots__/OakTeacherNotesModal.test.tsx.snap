@@ -187,7 +187,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c60 {
+.c61 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1rem;
@@ -398,6 +398,24 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  gap: 0.75rem;
+}
+
+.c60 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -409,9 +427,6 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
   gap: 0.25rem;
 }
 
@@ -438,7 +453,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   text-align: left;
 }
 
-.c64 {
+.c65 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -588,7 +603,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c63 {
+.c64 {
   display: inline;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -612,20 +627,20 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   overflow-wrap: break-word;
 }
 
-.c63:focus-visible {
+.c64:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c63:visited {
+.c64:visited {
   color: #081676;
 }
 
-.c63:active {
+.c64:active {
   color: #081676;
   outline: 1px solid #081676;
 }
 
-.c63[disabled] {
+.c64[disabled] {
   cursor: not-allowed;
   color: #808080;
 }
@@ -800,7 +815,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c61 {
+.c62 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -811,7 +826,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c62 {
+.c63 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1rem;
@@ -876,9 +891,32 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   }
 }
 
+@media (min-width:750px) {
+  .c59 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:750px) {
+  .c59 {
+    -webkit-align-items: start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+  }
+}
+
+@media (min-width:750px) {
+  .c59 {
+    gap: 1.5rem;
+  }
+}
+
 @media (hover:hover) {
-  .c63:hover,
-  .c63:visited:hover {
+  .c64:hover,
+  .c64:visited:hover {
     color: #0a1d9d;
     -webkit-text-decoration: underline;
     text-decoration: underline;
@@ -1165,33 +1203,37 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
                       class="c47 c59"
                     >
                       <div
-                        class="c60"
-                        data-testid="inline-banner-message"
+                        class="c47 c60"
                       >
-                        <p
+                        <div
                           class="c61"
+                          data-testid="inline-banner-message"
                         >
-                          Please do not include any personal or sensitive information that could be used to identify, locate, or contact an individual, either directly or indirectly.
-                        </p>
-                        <p
-                          class="c62"
-                        >
-                          Names, email addresses, or other personal information will be redacted from your note to help keep everyone safe. For more guidance, see our
-                           
-                          <a
-                            aria-label="Oak's terms and conditions(opens in a new tab)"
-                            class="c63"
-                            href="https://www.thenational.academy/legal/terms-and-conditions"
-                            target="_blank"
+                          <p
+                            class="c62"
                           >
-                            <span
+                            Please do not include any personal or sensitive information that could be used to identify, locate, or contact an individual, either directly or indirectly.
+                          </p>
+                          <p
+                            class="c63"
+                          >
+                            Names, email addresses, or other personal information will be redacted from your note to help keep everyone safe. For more guidance, see our
+                             
+                            <a
+                              aria-label="Oak's terms and conditions(opens in a new tab)"
                               class="c64"
+                              href="https://www.thenational.academy/legal/terms-and-conditions"
+                              target="_blank"
                             >
-                              Terms & conditions
-                            </span>
-                          </a>
-                          .
-                        </p>
+                              <span
+                                class="c65"
+                              >
+                                Terms & conditions
+                              </span>
+                            </a>
+                            .
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
