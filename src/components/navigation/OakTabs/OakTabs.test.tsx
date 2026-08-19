@@ -98,4 +98,26 @@ describe("OakTabs", () => {
     await user.click(links[0]);
     expect(onClickCallback).toHaveBeenCalledWith("Tab one");
   });
+  it("renders with showPromo", async () => {
+    renderWithTheme(
+      <OakTabs
+        {...props}
+        tabs={[
+          { label: "Tab one", type: "link", href: "fakeUrl-1.com" },
+          {
+            label: "Tab two",
+            showPromo: true,
+            type: "link",
+            href: "fakeUrl-2.com",
+          },
+          { label: "Tab three", type: "link", href: "fakeUrl-3.com" },
+        ]}
+      />,
+    );
+    const links = screen.getAllByRole("link");
+    expect(links).toHaveLength(3);
+    expect(links[0]).not.toHaveTextContent("New");
+    expect(links[1]).toHaveTextContent("New");
+    expect(links[2]).not.toHaveTextContent("New");
+  });
 });

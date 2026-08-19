@@ -9,10 +9,12 @@ import { ResponsiveValues } from "@/styles/utils/responsiveStyle";
 import { InternalButton } from "@/components/internal-components/InternalButton";
 import { OakFlex } from "@/components/layout-and-structure";
 import { OakUiRoleToken } from "@/styles";
-import { OakLI, OakUL } from "@/components/typography";
+import { OakLI, OakSpan, OakUL } from "@/components/typography";
+import { OakPromoTag } from "@/index";
 
 type Tab<T> = {
   label: T;
+  showPromo?: boolean;
 } & ({ type: "button" } | { type: "link"; href: string });
 
 export type OakTabsProps<T extends string> = {
@@ -78,7 +80,7 @@ export function OakTabs<T extends string>(props: Readonly<OakTabsProps<T>>) {
       }
     >
       {tabs.map((tab) => {
-        const { label, type } = tab;
+        const { label, type, showPromo } = tab;
         const isSelected = activeTab === label;
 
         return (
@@ -118,7 +120,16 @@ export function OakTabs<T extends string>(props: Readonly<OakTabsProps<T>>) {
                 $justifyContent={"center"}
                 $whiteSpace={"nowrap"}
               >
-                {label}
+                <OakFlex $alignItems="center" $gap="spacing-8">
+                  <OakSpan>{label}</OakSpan>
+                  {showPromo && (
+                    <OakPromoTag
+                      variant={
+                        colorVariant === "black" ? "inverted" : "default"
+                      }
+                    />
+                  )}
+                </OakFlex>
               </StyledFocusOutline>
             </StyledTabButton>
           </OakLI>

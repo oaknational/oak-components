@@ -75,6 +75,47 @@ export function OakVideo({
   const hasButtonsEnabled =
     transcriptEnabled || showCopyLink || showSignLanguage;
 
+  const transcriptButton = transcriptEnabled && (
+    <OakFlex>
+      <OakSmallSecondaryButton
+        isTrailingIcon={true}
+        iconName={isTranscriptOpen ? "chevron-up" : "chevron-down"}
+        onClick={() => setIsTranscriptOpen(!isTranscriptOpen)}
+        aria-controls={transcriptId}
+        aria-expanded={isTranscriptOpen}
+      >
+        {isTranscriptOpen ? "Hide" : "Show"} transcript
+      </OakSmallSecondaryButton>
+    </OakFlex>
+  );
+
+  const showLinkButton = showCopyLink && (
+    <OakFlex
+      $flexGrow={[0, 1, 1]}
+      $justifyContent={["flex-start", "flex-start", "flex-start"]}
+    >
+      <OakSmallSecondaryButton
+        isTrailingIcon={true}
+        onClick={onCopyLink}
+        iconName={"copy"}
+      >
+        Copy link
+      </OakSmallSecondaryButton>
+    </OakFlex>
+  );
+
+  const showSignLanguageButton = showSignLanguage && (
+    <OakFlex $width={["auto", "auto", "auto"]}>
+      <OakSmallSecondaryButton
+        isTrailingIcon={true}
+        onClick={onShowSignLanguage}
+        iconName={"sign-language"}
+      >
+        Show sign language
+      </OakSmallSecondaryButton>
+    </OakFlex>
+  );
+
   return (
     <OakFlex $flexDirection={"column"} $gap={"spacing-24"}>
       <OakFlex
@@ -121,51 +162,30 @@ export function OakVideo({
         )}
       </OakFlex>
       {hasButtonsEnabled && (
-        <OakFlex
-          $flexDirection={"row"}
-          $gap={["spacing-16"]}
-          $flexWrap={["wrap", "nowrap", "nowrap"]}
-        >
-          {transcriptEnabled && (
-            <OakFlex $order={["2", "1", "1"]}>
-              <OakSmallSecondaryButton
-                isTrailingIcon={true}
-                iconName={isTranscriptOpen ? "chevron-up" : "chevron-down"}
-                onClick={() => setIsTranscriptOpen(!isTranscriptOpen)}
-                aria-controls={transcriptId}
-                aria-expanded={isTranscriptOpen}
-              >
-                {isTranscriptOpen ? "Hide" : "Show"} transcript
-              </OakSmallSecondaryButton>
-            </OakFlex>
-          )}
-          {showCopyLink && (
-            <OakFlex
-              $order={["3", "2", "2"]}
-              $flexGrow={1}
-              $justifyContent={["flex-start", "flex-start", "flex-start"]}
-            >
-              <OakSmallSecondaryButton
-                isTrailingIcon={true}
-                onClick={onCopyLink}
-                iconName={"copy"}
-              >
-                Copy link
-              </OakSmallSecondaryButton>
-            </OakFlex>
-          )}
-          {showSignLanguage && (
-            <OakFlex $order={["1", "3", "3"]} $width={["100%", "auto", "auto"]}>
-              <OakSmallSecondaryButton
-                isTrailingIcon={true}
-                onClick={onShowSignLanguage}
-                iconName={"sign-language"}
-              >
-                Show sign language
-              </OakSmallSecondaryButton>
-            </OakFlex>
-          )}
-        </OakFlex>
+        // Note: We have two flex containers here to allow for a different layouts while keeping tabindex correct
+        <>
+          {/* Mobile layout */}
+          <OakFlex
+            $flexDirection={"row"}
+            $gap={["spacing-16"]}
+            $flexWrap={["wrap"]}
+            $display={["flex", "none", "none"]}
+          >
+            {showSignLanguageButton}
+            {showLinkButton}
+            {transcriptButton}
+          </OakFlex>
+          {/* Desktop layout */}
+          <OakFlex
+            $flexDirection={"row"}
+            $gap={["spacing-16"]}
+            $display={["none", "flex", "flex"]}
+          >
+            {transcriptButton}
+            {showLinkButton}
+            {showSignLanguageButton}
+          </OakFlex>
+        </>
       )}
       {transcriptEnabled && (
         <OakFlex

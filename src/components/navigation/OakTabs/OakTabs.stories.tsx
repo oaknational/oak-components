@@ -42,7 +42,7 @@ export const TabsAsButtons: Story = {
     tabs: [
       { label: "Unit sequence", type: "button" },
       { label: "Explainer", type: "button" },
-      { label: "Download", type: "button" },
+      { label: "Download", showPromo: true, type: "button" },
     ],
   },
 };
@@ -58,6 +58,26 @@ export const TabsAsLinks: Story = {
       { label: "Unit sequence", type: "link", href: "https://google.com" },
       { label: "Explainer", type: "link", href: "https://google.com" },
       { label: "Download", type: "link", href: "https://google.com" },
+    ],
+  },
+};
+
+export const WithPromo: Story = {
+  render: function WithPromoStory(args) {
+    return <OakTabs {...args} activeTab="Unit sequence" />;
+  },
+  args: {
+    sizeVariant: "default",
+    colorVariant: "black",
+    tabs: [
+      { label: "Unit sequence", type: "link", href: "https://google.com" },
+      { label: "Explainer", type: "link", href: "https://google.com" },
+      {
+        label: "Download",
+        showPromo: true,
+        type: "link",
+        href: "https://google.com",
+      },
     ],
   },
 };

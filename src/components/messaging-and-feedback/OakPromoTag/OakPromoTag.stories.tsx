@@ -1,0 +1,30 @@
+import React from "react";
+import { Meta, StoryObj } from "@storybook/nextjs";
+
+import { OakPromoTag } from "./OakPromoTag";
+
+const meta: Meta<typeof OakPromoTag> = {
+  component: OakPromoTag,
+  tags: ["autodocs"],
+  title: "components/Messaging and feedback/OakPromoTag",
+  argTypes: {
+    variant: {
+      control: { type: "radio" },
+      options: ["default", "inverted"],
+    },
+  },
+};
+export default meta;
+
+type Story = StoryObj<typeof OakPromoTag>;
+
+export const Default: Story = {
+  render: (args) => <OakPromoTag {...args} />,
+};
+
+export const VariantInverted: Story = {
+  render: (args) => <OakPromoTag {...args} />,
+  args: {
+    variant: "inverted",
+  },
+};

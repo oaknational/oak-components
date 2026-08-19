@@ -2,8 +2,6 @@
 
 exports[`OakSaveCount should match snapshot 1`] = `
 .c2 {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   min-width: 2rem;
   height: 2rem;
@@ -15,9 +13,6 @@ exports[`OakSaveCount should match snapshot 1`] = `
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
 }
 
@@ -37,17 +32,8 @@ exports[`OakSaveCount should match snapshot 1`] = `
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   gap: 0.25rem;
 }
@@ -78,37 +64,34 @@ exports[`OakSaveCount should match snapshot 1`] = `
   cursor: default;
 }
 
-.c1:hover .oak-save-count {
+.c1 :hover .oak-save-count {
   background-color: #bef2bd;
 }
 
-.c1:focus-visible .oak-save-count {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+.c1 :focus-visible .oak-save-count {
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c2 {
     padding-left: 0.25rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c2 {
     padding-right: 0.5rem;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c6 {
     display: contents;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c3 {
-    -webkit-box-pack: initial;
-    -webkit-justify-content: initial;
-    -ms-flex-pack: initial;
     justify-content: initial;
   }
 }

@@ -4,7 +4,7 @@ import {
   OakHandDrawnBoxWithIconProps,
   OakHandDrawnCardWithIcon,
 } from "@/components/owa/OakHandDrawnCardWithIcon";
-import { OakPromoTag } from "@/components/owa/OakPromoTag";
+import { OakPromoTag } from "@/components/messaging-and-feedback/OakPromoTag";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
 
 export type OakSubjectIconProps = Pick<

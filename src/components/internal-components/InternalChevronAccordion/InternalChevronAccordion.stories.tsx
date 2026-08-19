@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 import { InternalChevronAccordion } from "./InternalChevronAccordion";
 
-import { OakHandDrawnHR } from "@/components/owa/OakHandDrawnHR";
+import { OakHandDrawnHR } from "@/components/images-and-icons/OakHandDrawnHR";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { PositionStyleProps } from "@/styles/utils/positionStyle";
 import { SizeStyleProps } from "@/styles/utils/sizeStyle";

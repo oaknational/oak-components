@@ -3,3 +3,4 @@ export * from "@/components/images-and-icons/OakIcon";
 export * from "@/components/images-and-icons/OakImage";
 export * from "@/components/images-and-icons/OakSvg";
 export * from "@/components/images-and-icons/OakRoundIcon";
+export * from "@/components/images-and-icons/OakHandDrawnHR";

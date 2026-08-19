@@ -18,20 +18,12 @@ exports[`OakMultilineText matches snapshot 1`] = `
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 0.5rem;
 }
 
 .c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -52,13 +44,11 @@ exports[`OakMultilineText matches snapshot 1`] = `
 
 .c5 {
   display: grid;
-  grid-template-columns: repeat(12,1fr);
+  grid-template-columns: repeat(12, 1fr);
   width: 100%;
 }
 
 .c8 {
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   grid-column: span 2;
   grid-row: span undefined;
@@ -74,41 +64,29 @@ exports[`OakMultilineText matches snapshot 1`] = `
   border-color: #808080;
 }
 
-.c3::-webkit-input-placeholder {
+.c3 ::placeholder {
   color: #575757;
 }
 
-.c3::-moz-placeholder {
-  color: #575757;
-}
-
-.c3:-ms-input-placeholder {
-  color: #575757;
-}
-
-.c3::placeholder {
-  color: #575757;
-}
-
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c2 {
     white-space: wrap;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c2 {
     white-space: nowrap;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c2 {
     overflow-x: auto;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c2 {
     overflow-y: auto;
   }
