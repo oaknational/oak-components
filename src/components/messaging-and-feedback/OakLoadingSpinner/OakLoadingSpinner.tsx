@@ -60,30 +60,37 @@ const StyledLoadingSpinner = styled.span<OakLoadingSpinnerProps>`
   --thickness: calc(var(--width) / 12);
 
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: var(--width);
   height: var(--width);
-
-  ::after {
-    content: " ";
-    display: block;
-    width: var(--inner-width);
-    height: var(--inner-width);
-    margin: var(--thickness);
-    border-radius: 50%;
-    border: var(--thickness) solid currentcolor;
-    ${(props) =>
-      props.loaderColor
-        ? css`
-            border-color: ${parseColor(props.loaderColor)}
-              ${parseColor(props.loaderColor)} ${parseColor(props.loaderColor)}
-              transparent;
-          `
-        : css`
-            border-color: currentcolor currentcolor currentcolor transparent;
-          `}
-    animation: ${SpinnerKeyframe} 1.2s linear infinite;
-  }
   ${colorStyle}
+`;
+
+type StyledSpinnerRingProps = {
+  loaderColor?: OakUiRoleToken;
+};
+
+const StyledSpinnerRing = styled.div<StyledSpinnerRingProps>`
+  width: var(--inner-width);
+  height: var(--inner-width);
+  border-radius: 50%;
+  border: var(--thickness) solid;
+  ${(props) => {
+    if (props.loaderColor) {
+      const colorVal = parseColor(props.loaderColor);
+      const resolvedColor =
+        typeof colorVal === "function" ? colorVal(props) : colorVal;
+      return css`
+        border-color: ${resolvedColor} ${resolvedColor} ${resolvedColor}
+          transparent;
+      `;
+    }
+    return css`
+      border-color: currentcolor currentcolor currentcolor transparent;
+    `;
+  }}
+  animation: ${SpinnerKeyframe} 1.2s linear infinite;
 `;
 
 /**
@@ -94,5 +101,6 @@ const StyledLoadingSpinner = styled.span<OakLoadingSpinnerProps>`
 export const OakLoadingSpinner = (props: OakLoadingSpinnerProps) => (
   <StyledLoadingSpinner {...props}>
     <OakScreenReader>Loading</OakScreenReader>
+    <StyledSpinnerRing loaderColor={props.loaderColor} />
   </StyledLoadingSpinner>
 );
