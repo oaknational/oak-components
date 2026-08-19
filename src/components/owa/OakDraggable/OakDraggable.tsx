@@ -1,9 +1,4 @@
-import React, {
-  ComponentPropsWithRef,
-  ComponentPropsWithoutRef,
-  FC,
-  forwardRef,
-} from "react";
+import React, { ComponentPropsWithoutRef, forwardRef } from "react";
 import styled from "styled-components";
 
 import { OakBox } from "@/components/layout-and-structure/OakBox";

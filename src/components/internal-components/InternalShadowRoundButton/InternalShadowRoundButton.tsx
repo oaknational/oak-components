@@ -17,7 +17,7 @@ import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { positionStyle } from "@/styles/utils/positionStyle";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { OakUiRoleToken, OakDropShadowToken } from "@/styles";
-import { SizeStyleProps, sizeStyle } from "@/styles/utils/sizeStyle";
+import { SizeStyleProps } from "@/styles/utils/sizeStyle";
 
 export type InternalShadowRoundButtonProps = Omit<
   InternalButtonProps,

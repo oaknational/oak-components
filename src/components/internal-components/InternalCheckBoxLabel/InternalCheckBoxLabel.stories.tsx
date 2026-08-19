@@ -14,8 +14,8 @@ const meta: Meta<typeof InternalCheckBoxLabel> = {
       control: "boolean",
     },
 
-    labelGap: flexArgTypes.$gap,
-    labelAlignItems: flexArgTypes.$alignItems,
+    $labelGap: flexArgTypes.$gap,
+    $labelAlignItems: flexArgTypes.$alignItems,
   },
   parameters: {
     controls: {

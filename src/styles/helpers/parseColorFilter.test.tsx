@@ -1,5 +1,3 @@
-import { DefaultTheme } from "styled-components";
-
 import { parseColorFilter } from "./parseColorFilter";
 
 import { PropsWithTheme } from "@/styles/theme/theme";

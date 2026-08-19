@@ -10,7 +10,6 @@ import {
   oakPlaceholder,
   placeholderStyles,
   OakImage,
-  OakImageProps,
   StyledImageProps,
 } from "@/components/images-and-icons/OakImage";
 import { OakP } from "@/components/typography/OakP";
