@@ -113,7 +113,6 @@ export const WithRetry: Story = {
   args: {
     onRetry: mockOnRetryFunction,
     sectionName: "video",
-    message: "An error occurred while loading the video.",
   },
 };
 
