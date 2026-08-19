@@ -1,7 +1,6 @@
-import { DefaultTheme } from "styled-components";
-
 import { parseColor } from "@/styles/helpers/parseColor";
 import { oakDefaultTheme } from "@/styles/theme/default.theme";
+import { PropsWithTheme } from "../theme/theme";
 
 describe("parseColor", () => {
   it("should return undefined if value is undefined", () => {
@@ -19,7 +18,7 @@ describe("parseColor", () => {
   it("should render the correct color if value is a valid OakUiRoleToken", () => {
     const func = parseColor("text-primary");
     expect(func).toBeInstanceOf(Function);
-    const cast = func as (props: { theme: DefaultTheme }) => string;
+    const cast = func as (props: PropsWithTheme) => string;
     oakDefaultTheme.uiColors["text-primary"] = "mint";
     const res = cast({ theme: oakDefaultTheme });
     expect(res).toBe("#bef2bd");
