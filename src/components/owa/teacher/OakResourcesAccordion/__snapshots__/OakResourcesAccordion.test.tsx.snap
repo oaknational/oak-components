@@ -595,7 +595,7 @@ input:checked + .c13 {
               style="transform: none; transition: all 0.3s ease 0s;"
             >
               <img
-                alt="An arrow to indicate whether the item is open or closed"
+                alt="Show all resources"
                 class="c30"
                 data-nimg="fill"
                 decoding="async"
@@ -612,7 +612,7 @@ input:checked + .c13 {
       class="c31"
     >
       <div
-        aria-labelledby="test-downloads-accordion"
+        aria-label="Resource list"
         class="c32"
         hidden=""
         role="region"

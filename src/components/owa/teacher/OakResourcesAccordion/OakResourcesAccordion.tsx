@@ -152,7 +152,7 @@ const Accordion = ({
                 iconName="chevron-down"
                 $width="spacing-32"
                 $height="spacing-32"
-                alt="An arrow to indicate whether the item is open or closed"
+                alt={isOpen ? "Hide all resources" : "Show all resources"}
                 style={{
                   transform: isOpen ? "rotate(180deg)" : "none",
                   transition: "all 0.3s ease 0s",
@@ -164,7 +164,7 @@ const Accordion = ({
       </OakFlex>
       {/* Accordion content */}
       <OakBox $position={"relative"} $overflow={"visible"}>
-        <InternalAccordionContent $pt={"spacing-20"} aria-labelledby={id}>
+        <InternalAccordionContent $pt={"spacing-20"} aria-label="Resource list">
           {children}
         </InternalAccordionContent>
       </OakBox>
