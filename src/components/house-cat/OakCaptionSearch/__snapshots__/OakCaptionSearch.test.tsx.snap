@@ -34,7 +34,7 @@ exports[`OakCaptionSearch should match snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c8 :hover {
+.c8:hover {
   cursor: pointer;
 }
 
@@ -211,18 +211,18 @@ exports[`OakCaptionSearch should match snapshot 1`] = `
   width: 100%;
 }
 
-.c11 ::placeholder {
+.c11::placeholder {
   color: #575757;
 }
 
-.c11 ::-webkit-search-decoration,
-.c11 ::-webkit-search-cancel-button,
-.c11 ::-webkit-search-results-button,
-.c11 ::-webkit-search-results-decoration {
+.c11::-webkit-search-decoration,
+.c11::-webkit-search-cancel-button,
+.c11::-webkit-search-results-button,
+.c11::-webkit-search-results-decoration {
   appearance: none;
 }
 
-.c11 :disabled {
+.c11:disabled {
   cursor: not-allowed;
 }
 

@@ -97,6 +97,7 @@ export const OakUnitListItem = <element extends ElementType = "a">(
     isLegacy,
     firstItemRef,
     as = "a",
+    yearTitle,
     ...rest
   } = props;
 

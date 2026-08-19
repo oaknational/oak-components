@@ -26,10 +26,10 @@ const fallbackActiveShadow = `${parseDropShadow(
 
 export type OakFocusIndicatorProps = OakBoxProps & {
   as?: "div" | "li";
-  hoverBackground?: OakUiRoleToken;
-  dropShadow?: OakDropShadowToken;
-  hoverDropShadow?: OakDropShadowToken;
-  activeDropShadow?: OakDropShadowToken;
+  $hoverBackground?: OakUiRoleToken;
+  $dropShadow?: OakDropShadowToken;
+  $hoverDropShadow?: OakDropShadowToken;
+  $activeDropShadow?: OakDropShadowToken;
 };
 
 /**
@@ -46,16 +46,18 @@ export const OakFocusIndicator = styled(OakBox)<OakFocusIndicatorProps>`
     }
   }}
   box-shadow: ${(props) =>
-    props.dropShadow ? parseDropShadow(props.dropShadow) : "none"};
+    props.$dropShadow ? parseDropShadow(props.$dropShadow) : "none"};
 
   &:has(${hoverChildren}) {
     ${responsiveStyle(
       "background-color",
-      (props) => props.hoverBackground,
+      (props) => props.$hoverBackground,
       (value) => parseColor(value),
     )}
     box-shadow: ${(props) =>
-      props.hoverDropShadow ? parseDropShadow(props.hoverDropShadow) : "none"};
+      props.$hoverDropShadow
+        ? parseDropShadow(props.$hoverDropShadow)
+        : "none"};
   }
 
   &:has(${focusVisibleChildren}) {
@@ -73,8 +75,8 @@ export const OakFocusIndicator = styled(OakBox)<OakFocusIndicatorProps>`
 
   &:has(${activeChildren}) {
     box-shadow: ${(props) =>
-      props.activeDropShadow
-        ? parseDropShadow(props.activeDropShadow)
+      props.$activeDropShadow
+        ? parseDropShadow(props.$activeDropShadow)
         : fallbackActiveShadow};
   }
 `;

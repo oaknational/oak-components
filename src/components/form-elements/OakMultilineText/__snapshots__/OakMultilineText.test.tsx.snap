@@ -64,7 +64,7 @@ exports[`OakMultilineText matches snapshot 1`] = `
   border-color: #808080;
 }
 
-.c3 ::placeholder {
+.c3::placeholder {
   color: #575757;
 }
 

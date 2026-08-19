@@ -17,18 +17,18 @@ exports[`OakTextInput matches snapshot 1`] = `
   height: 4.5rem;
 }
 
-.c5 ::placeholder {
+.c5::placeholder {
   color: #575757;
 }
 
-.c5 ::-webkit-search-decoration,
-.c5 ::-webkit-search-cancel-button,
-.c5 ::-webkit-search-results-button,
-.c5 ::-webkit-search-results-decoration {
+.c5::-webkit-search-decoration,
+.c5::-webkit-search-cancel-button,
+.c5::-webkit-search-results-button,
+.c5::-webkit-search-results-decoration {
   appearance: none;
 }
 
-.c5 :disabled {
+.c5:disabled {
   cursor: not-allowed;
 }
 
@@ -45,7 +45,7 @@ exports[`OakTextInput matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c0 :hover {
+.c0:hover {
   cursor: pointer;
 }
 

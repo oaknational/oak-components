@@ -59,7 +59,7 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c13 :hover {
+.c13:hover {
   cursor: pointer;
 }
 
@@ -249,18 +249,18 @@ exports[`OakInlineRegistrationBanner matches snapshot 1`] = `
   max-height: 3.5rem;
 }
 
-.c17 ::placeholder {
+.c17::placeholder {
   color: #575757;
 }
 
-.c17 ::-webkit-search-decoration,
-.c17 ::-webkit-search-cancel-button,
-.c17 ::-webkit-search-results-button,
-.c17 ::-webkit-search-results-decoration {
+.c17::-webkit-search-decoration,
+.c17::-webkit-search-cancel-button,
+.c17::-webkit-search-results-button,
+.c17::-webkit-search-results-decoration {
   appearance: none;
 }
 
-.c17 :disabled {
+.c17:disabled {
   cursor: not-allowed;
 }
 

@@ -21,7 +21,7 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c5 :hover {
+.c5:hover {
   cursor: pointer;
 }
 
@@ -56,7 +56,7 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c16 :hover {
+.c16:hover {
   cursor: pointer;
 }
 

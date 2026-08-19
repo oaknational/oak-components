@@ -15,7 +15,7 @@ exports[`UnstyledChevronAccordion matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c4 :hover {
+.c4:hover {
   cursor: pointer;
 }
 

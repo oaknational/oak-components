@@ -16,7 +16,7 @@ exports[`OakQuizRadioButton matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 :hover {
+.c2:hover {
   cursor: pointer;
 }
 
