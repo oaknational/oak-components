@@ -66,7 +66,7 @@ export const Default: Story = {
           iconName="book-steps"
           title="Lesson plan"
           description="PDF"
-          fileSize="245KB"
+          fileSize="245 KB"
         />
         <OakResourceCard
           id="presentation"
@@ -74,7 +74,7 @@ export const Default: Story = {
           iconName="slide-deck"
           title="Lesson presentation"
           description="PPTX"
-          fileSize="1.2MB"
+          fileSize="1.2 MB"
         />
         <OakResourceCard
           id="worksheet"
@@ -82,7 +82,7 @@ export const Default: Story = {
           iconName="worksheet"
           title="Student worksheet"
           description="PDF"
-          fileSize="180KB"
+          fileSize="180 KB"
         />
       </OakFlex>
     ),

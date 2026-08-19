@@ -32,7 +32,7 @@ export const Default: Story = {
     value: "a test value",
     title: "Fancy presentation",
     description: "PPTX",
-    fileSize: "1MB",
+    fileSize: "1 MB",
   },
 };
 
@@ -44,7 +44,7 @@ export const WithFileSize: Story = {
     value: "a test value",
     title: "Fancy presentation",
     description: "PPTX",
-    fileSize: "200KB",
+    fileSize: "200 KB",
   },
 };
 
@@ -56,7 +56,7 @@ export const IsEditable: Story = {
     value: "a test value",
     title: "Fancy presentation",
     description: "PPTX",
-    fileSize: "200KB",
+    fileSize: "200 KB",
     isEditable: true,
   },
 };
@@ -70,7 +70,7 @@ export const MultipleIcons: Story = {
     value: "a test value",
     title: "Resource bundle",
     description: ["PPTX", "PDF", "XLSX"],
-    fileSize: "1.4MB",
+    fileSize: "1.4 MB",
   },
 };
 
@@ -97,7 +97,7 @@ export const RadioGroup: Story = {
     iconName: "book-steps",
     title: "Fancy presentation",
     description: "PPTX",
-    fileSize: "200KB",
+    fileSize: "200 KB",
     isRadio: true,
   },
 };
@@ -121,7 +121,7 @@ export const WrappingHeight: Story = {
     iconName: "book-steps",
     value: "a test value",
     description: "PPTX",
-    fileSize: "200KB",
+    fileSize: "200 KB",
   },
 };
 
@@ -143,7 +143,7 @@ export const SharePage: Story = {
           iconName={["quiz", "video", "worksheet", "quiz"]}
           title="Full online lesson"
           id="download-card-wrapping-long"
-          fileSize="Best for homework, revision, or when pupils are learning independently"
+          description="Best for homework, revision, or when pupils are learning independently"
         />
       </OakFlex>
       <OakFlex $flexDirection={"column"} $gap={"spacing-32"}>
@@ -152,21 +152,21 @@ export const SharePage: Story = {
           iconName={"quiz"}
           id="download-card-wrapping-short"
           title="Prior knowledge starter quiz"
-          fileSize="Check prior knowledge (6 questions)"
+          description="Check prior knowledge (6 questions)"
         />
         <OakResourceCard
           {...args}
           iconName={"video"}
           id="download-card-wrapping-short"
           title="Lesson video"
-          fileSize="Support independent learning (38 mins)"
+          description="Support independent learning (38 mins)"
         />
         <OakResourceCard
           {...args}
           iconName={"quiz"}
           id="download-card-wrapping-short"
           title="Assessment exit quiz"
-          fileSize="Check understanding (6 questions)"
+          description="Check understanding (6 questions)"
         />
       </OakFlex>
     </OakGrid>
