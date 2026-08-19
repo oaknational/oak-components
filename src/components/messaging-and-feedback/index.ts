@@ -10,3 +10,4 @@ export * from "@/components/messaging-and-feedback/OakTooltip";
 export * from "@/components/messaging-and-feedback/OakFocusIndicator";
 export * from "@/components/messaging-and-feedback/OakHandDrawnFocusUnderline";
 export * from "@/components/messaging-and-feedback/OakPromoTag";
+export * from "@/components/messaging-and-feedback/OakErrorBoundary";
