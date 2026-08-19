@@ -2,8 +2,8 @@ import { DefaultTheme } from "styled-components";
 
 import { parseColorFilter } from "./parseColorFilter";
 
+import { PropsWithTheme } from "@/styles/theme/theme";
 import { oakDefaultTheme } from "@/styles/theme/default.theme";
-import { PropsWithTheme } from "../theme/theme";
 
 describe("parseColor", () => {
   it("should return undefined if value is undefined", () => {
