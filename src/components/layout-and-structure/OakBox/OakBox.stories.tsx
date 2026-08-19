@@ -204,7 +204,12 @@ export const TransitionAndTransform: Story = {
     const HoverBox = styled(OakBox)<OakBoxProps>`
       &:hover {
         transform: ${() => args.$transform};
-        background-color: ${() => parseColor(args.$background)};
+        background-color: ${() => {
+          const bg = Array.isArray(args.$background)
+            ? args.$background[0]
+            : args.$background;
+          return parseColor(bg);
+        }};
       }
     `;
     return (
