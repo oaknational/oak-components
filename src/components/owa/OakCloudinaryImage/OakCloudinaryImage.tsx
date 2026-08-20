@@ -30,7 +30,9 @@ const cloudinaryConfigContext = createContext<
  * See https://cloudinary.com/documentation/cloudinary_sdks#configuration_parameters
  * for documentation of the config object.
  */
-export const OakCloudinaryConfigProvider = cloudinaryConfigContext.Provider;
+export const OakCloudinaryConfigProvider: React.Provider<
+  CldImageProps["config"] | undefined
+> = cloudinaryConfigContext.Provider;
 
 /**
  * OakCloudinaryImage wraps OakImage providing responsive images from Cloudinary
