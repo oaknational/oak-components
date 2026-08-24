@@ -53,7 +53,7 @@ export default [
       resolve(),
       json(),
       typescriptPaths({ preserveExtensions: true }),
-      dts({ compilerOptions: { preserveSymlinks: false } }),
+      dts(),
     ],
     external: ["next", "next/image", "react", "react-dom", "styled-components"],
   },
