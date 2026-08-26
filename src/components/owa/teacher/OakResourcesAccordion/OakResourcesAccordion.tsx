@@ -22,11 +22,11 @@ import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
 import { OakCheckBox } from "@/components/form-elements/OakCheckBox";
 
-export type OakDownloadsAccordionProps = {
+export type OakResourcesAccordionProps = {
   /**
    * Text to render in the subheading
    */
-  downloadsText: string;
+  subheading: string;
   /**
    * Event handler for select all checkbox
    */
@@ -76,10 +76,10 @@ const Accordion = ({
   children,
   id,
   selectAllChecked,
-  downloadsText,
+  subheading,
   handleToggleSelectAll,
   ...styleProps
-}: OakDownloadsAccordionProps) => {
+}: OakResourcesAccordionProps) => {
   const { isOpen } = useAccordionContext();
 
   return (
@@ -105,7 +105,7 @@ const Accordion = ({
               id="select-all"
               name="select-all"
               value={""}
-              aria-labelledby="downloads-accordion-heading"
+              aria-labelledby="resources-accordion-heading"
             />
           </OakBox>
           <StyledAccordionButton
@@ -127,7 +127,7 @@ const Accordion = ({
               >
                 <OakHeading
                   $textAlign={"left"}
-                  id="downloads-accordion-heading"
+                  id="resources-accordion-heading"
                   $color={"text-primary"}
                   $font={"heading-6"}
                   $mr={"spacing-16"}
@@ -138,7 +138,7 @@ const Accordion = ({
                     : "Select all resources"}
                 </OakHeading>
                 <OakBox $pr={"spacing-12"}>
-                  <OakP $textAlign={"left"}>{downloadsText}</OakP>
+                  <OakP $textAlign={"left"}>{subheading}</OakP>
                 </OakBox>
               </OakFlex>
             </OakFlex>
@@ -152,7 +152,7 @@ const Accordion = ({
                 iconName="chevron-down"
                 $width="spacing-32"
                 $height="spacing-32"
-                alt="An arrow to indicate whether the item is open or closed"
+                alt={isOpen ? "Hide all resources" : "Show all resources"}
                 style={{
                   transform: isOpen ? "rotate(180deg)" : "none",
                   transition: "all 0.3s ease 0s",
@@ -163,8 +163,8 @@ const Accordion = ({
         </OakFlex>
       </OakFlex>
       {/* Accordion content */}
-      <OakBox $position={"relative"} $overflow={"auto"}>
-        <InternalAccordionContent $pt={"spacing-20"} aria-labelledby={id}>
+      <OakBox $position={"relative"} $overflow={"visible"}>
+        <InternalAccordionContent $pt={"spacing-20"} aria-label="Resource list">
           {children}
         </InternalAccordionContent>
       </OakBox>
@@ -173,13 +173,13 @@ const Accordion = ({
 };
 
 /**
- * OakDownloadsAccordion
+ * OakResourcesAccordion renamed from OakDownloadsAccordion.
  *
  */
-export const OakDownloadsAccordion = ({
+export const OakResourcesAccordion = ({
   initialOpen = false,
   ...props
-}: OakDownloadsAccordionProps) => {
+}: OakResourcesAccordionProps) => {
   return (
     <InternalAccordionProvider isInitialOpen={initialOpen}>
       <Accordion {...props} />

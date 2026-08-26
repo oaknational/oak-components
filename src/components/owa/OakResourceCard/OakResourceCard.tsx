@@ -12,9 +12,11 @@ import { InternalRadioWrapper } from "@/components/internal-components/InternalR
 import { OakIcon } from "@/components/images-and-icons/OakIcon";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
-import { OakUiRoleToken } from "@/styles";
+import { OakUiRoleToken, parseDropShadow } from "@/styles";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { IconName } from "@/image-map";
+import { OakTagFunctional } from "@/components/messaging-and-feedback/OakTagFunctional";
+import { OakLI, OakUL } from "@/components/typography";
 
 const SingleIcon = ({ iconName }: { iconName: IconName }) => {
   return (
@@ -63,21 +65,21 @@ const MultipleIcons = ({ iconName }: { iconName: IconName[] }) => {
   );
 };
 
-export type OakDownloadCardProps = BaseCheckBoxProps & {
+export type OakResourceCardProps = BaseCheckBoxProps & {
   /**
-   * The primary title content for the download.
+   * The primary title content for the resource.
    */
-  title: React.ReactNode;
+  title: string;
   /**
    * Optional file size content shown beneath the title.
    */
-  fileSize?: React.ReactNode;
+  fileSize?: string;
   /**
-   * The file format or secondary metadata shown beneath the title.
+   * The file format(s) or description shown beneath the title.
    */
-  format: React.ReactNode;
+  description: string | string[];
   /**
-   * The icon used to represent the download type.
+   * The icon used to represent the resource type.
    */
   iconName: IconName | IconName[];
   /**
@@ -86,45 +88,68 @@ export type OakDownloadCardProps = BaseCheckBoxProps & {
    * @default false
    */
   isRadio?: boolean;
+  /**
+   * If true, adds an informational `Editable` tag to the resource card.
+   *
+   * @default false
+   */
+  isEditable?: boolean;
 };
 
 const LabelContainer = styled("label")`
   flex: 1;
   cursor: pointer;
   display: flex;
-`;
 
-const Container = styled(OakFlex)<{ $hoverBackground: OakUiRoleToken }>`
-  cursor: pointer;
-
-  &:has(input:focus-within) {
-    &:focus-visible {
-      box-shadow:
-        0px 0px 0px 2px ${parseColor("bg-decorative5-main")},
-        0px 0px 0px 5px ${parseColor("bg-btn-primary-hover")};
+  &:has(input:disabled) {
+    cursor: default;
+    #resource-card-title {
+      text-decoration: none;
     }
   }
+`;
+
+const Container = styled(OakFlex)<{
+  $hoverBackground: OakUiRoleToken;
+}>`
+  &:has(input:focus-visible) {
+    box-shadow:
+      ${parseDropShadow("drop-shadow-centered-lemon")},
+      ${parseDropShadow("drop-shadow-centered-grey")};
+  }
+
   @media (hover: hover) {
-    &:hover:not(:disabled, :active) {
+    &:hover:not(:has(input:disabled), :active) {
       background: ${(props) =>
         props.$hoverBackground ? parseColor(props.$hoverBackground) : null};
+      #resource-card-title {
+        text-decoration: underline;
+      }
+    }
+
+    &:active:not(:has(input:disabled)) {
+      #resource-card-title {
+        text-decoration: underline;
+      }
     }
   }
 `;
 
 /**
- * Download cards present a downloadable resource with metadata and a selectable control.
+ * Resource cards present a downloadable/shareable resource with metadata and a selectable control.
+ * This component has been renamed from OakDownloadCard.
  * ## Usage
- * Use this component when users need to select one or more downloadable resources,
+ * Use this component when users need to select one or more downloadable/shareable resources,
  * such as lesson plans, slide decks, or worksheets.
- * Design document: <https://www.figma.com/design/YcWQMMhHPVVmc47cHHEEAl/Oak-Design-Kit?node-id=14795-5603>
+ * Design document: <https://www.figma.com/design/YcWQMMhHPVVmc47cHHEEAl/Oak-Design-Kit?node-id=14795-5603>\
+ * Updated with new standards: <https://www.figma.com/design/xIIH1NUk2IHKxgh5BW5gOd/Test-Oak-Component-Standards?node-id=66-905&p=f&m=dev>
  */
-export const OakDownloadCard = (props: OakDownloadCardProps) => {
+export const OakResourceCard = (props: OakResourceCardProps) => {
   const radioContext = useContext(RadioContext);
   const {
     title,
     fileSize,
-    format,
+    description,
     iconName,
     value,
     disabled = false,
@@ -136,6 +161,7 @@ export const OakDownloadCard = (props: OakDownloadCardProps) => {
     onHovered,
     isRadio = false,
     "data-testid": dataTestId,
+    isEditable = false,
     ...rest
   } = props;
 
@@ -186,9 +212,35 @@ export const OakDownloadCard = (props: OakDownloadCardProps) => {
             $pv="spacing-12"
             $ph="spacing-16"
           >
-            <OakBox $font={"body-2-bold"}>{title}</OakBox>
-            {fileSize && <OakBox $font={"body-3"}>{fileSize}</OakBox>}
-            <OakBox $font={"body-3"}>{format}</OakBox>
+            <OakBox id="resource-card-title" $font={"body-2-bold"}>
+              {title}
+            </OakBox>
+            {fileSize && (
+              <OakBox $font={"body-3"} $color={"text-subdued"}>
+                {fileSize}
+              </OakBox>
+            )}
+            <OakFlex $alignItems={"center"} $gap={"spacing-8"}>
+              <OakBox $font={"body-3"} $color={"text-subdued"}>
+                {Array.isArray(description) ? (
+                  <OakUL $pl="spacing-20">
+                    {description.map((item) => (
+                      <OakLI key={item}>{item}</OakLI>
+                    ))}
+                  </OakUL>
+                ) : (
+                  description
+                )}
+              </OakBox>
+              {isEditable && (
+                <OakTagFunctional
+                  $alignSelf={"flex-end"}
+                  $font={"heading-light-7"}
+                  label="Editable"
+                  $background={"bg-decorative2-main"}
+                />
+              )}
+            </OakFlex>
           </OakFlex>
         </OakFlex>
         <OakFlex>
