@@ -1284,10 +1284,10 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   -webkit-order: 1;
   -ms-flex-order: 1;
   order: 1;
@@ -1491,15 +1491,6 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-  }
-}
-
-@media (min-width:750px) {
-  .c20 {
-    -webkit-align-items: start;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: start;
   }
 }
 
