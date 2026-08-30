@@ -183,6 +183,7 @@ function pickSectionColours(
 ] {
   switch (sectionName) {
     case "overview":
+    case "review":
       return phase === "secondary"
         ? [
             "bg-decorative3-subdued",
@@ -224,20 +225,6 @@ function pickSectionColours(
         "border-inverted",
         "bg-decorative5-subdued",
       ];
-    case "review":
-      return phase === "secondary"
-        ? [
-            "bg-decorative3-subdued",
-            "bg-primary",
-            "border-decorative3",
-            "bg-primary",
-          ]
-        : [
-            "bg-decorative4-subdued",
-            "bg-primary",
-            "border-decorative4",
-            "bg-primary",
-          ];
     default:
       return [
         "bg-decorative3-subdued",
