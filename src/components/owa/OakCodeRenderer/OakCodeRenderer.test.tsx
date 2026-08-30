@@ -20,7 +20,7 @@ describe("OakCodeRenderer", () => {
     const { getByText } = renderWithTheme(
       <OakCodeRenderer string={mockString} />,
     );
-    expect(getByText("output")).toBeInTheDocument;
+    expect(getByText("output")).toBeInTheDocument();
   });
 
   it("matches snapshot", () => {

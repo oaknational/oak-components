@@ -159,18 +159,16 @@ export const InternalShadowRoundButton = <C extends ElementType = "button">(
     ...rest
   } = props;
 
+  const iconColorFilter = disabled
+    ? disabledIconColor
+    : defaultIconColor ?? null;
+
   const icon = iconName && (
     <OakIcon
       iconName={iconName}
       $width={iconSize}
       $height={iconSize}
-      $colorFilter={
-        props.disabled
-          ? disabledIconColor
-          : defaultIconColor
-            ? defaultIconColor
-            : null
-      }
+      $colorFilter={iconColorFilter}
       data-icon-for="button"
     />
   );
