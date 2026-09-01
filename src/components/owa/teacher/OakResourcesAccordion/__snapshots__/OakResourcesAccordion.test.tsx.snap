@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
+exports[`OakResourcesAccordion matches snapshot when closed 1`] = `
 .c0 {
   width: 100%;
   padding-top: 0.75rem;
@@ -87,9 +87,9 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
 
 .c29 {
   position: relative;
-  overflow: auto;
+  overflow: visible;
   font-family: --var(google-font),Lexend,sans-serif;
-  overflow: auto;
+  overflow: visible;
 }
 
 .c30 {
@@ -141,6 +141,7 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
 }
 
 .c43 {
+  color: #575757;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
@@ -148,7 +149,7 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c44 {
+.c45 {
   padding-right: 1rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
@@ -216,6 +217,12 @@ exports[`OakDownloadsAccordion matches snapshot when closed 1`] = `
   justify-content: center;
   flex-grow: 1;
   gap: 0.25rem;
+}
+
+.c44 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .c15 {
@@ -325,12 +332,16 @@ input:checked+.c13 {
   display: flex;
 }
 
-.c34 {
-  cursor: pointer;
+.c35:has(input:disabled) {
+  cursor: default;
 }
 
-.c34:has(input:focus-within):focus-visible {
-  box-shadow: 0px 0px 0px 2px #ffe555,0px 0px 0px 5px #575757;
+.c35:has(input:disabled) #resource-card-title {
+  text-decoration: none;
+}
+
+.c34:has(input:focus-visible) {
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 @media (hover: hover) {
@@ -354,8 +365,16 @@ input:checked+.c13 {
 }
 
 @media (hover: hover) {
-  .c34:hover:not(:disabled, :active) {
+  .c34:hover:not(:has(input:disabled), :active) {
     background: #f2f2f2;
+  }
+
+  .c34:hover:not(:has(input:disabled), :active) #resource-card-title {
+    text-decoration: underline;
+  }
+
+  .c34:active:not(:has(input:disabled)) #resource-card-title {
+    text-decoration: underline;
   }
 }
 
@@ -381,7 +400,7 @@ input:checked+.c13 {
               class="c8"
             >
               <input
-                aria-labelledby="downloads-accordion-heading"
+                aria-labelledby="resources-accordion-heading"
                 class="c9 c10 c11"
                 id="select-all"
                 name="select-all"
@@ -422,7 +441,7 @@ input:checked+.c13 {
             >
               <h2
                 class="c23"
-                id="downloads-accordion-heading"
+                id="resources-accordion-heading"
               >
                 Select all resources
               </h2>
@@ -445,7 +464,7 @@ input:checked+.c13 {
               style="transform: none; transition: all 0.3s ease 0s;"
             >
               <img
-                alt="An arrow to indicate whether the item is open or closed"
+                alt="Show all resources"
                 class="c28"
                 data-nimg="fill"
                 decoding="async"
@@ -462,7 +481,7 @@ input:checked+.c13 {
       class="c29"
     >
       <div
-        aria-labelledby="test-downloads-accordion"
+        aria-label="Resource list"
         class="c30"
         hidden=""
         role="region"
@@ -501,6 +520,7 @@ input:checked+.c13 {
                 >
                   <div
                     class="c42"
+                    id="resource-card-title"
                   >
                     Lesson plan
                   </div>
@@ -510,9 +530,13 @@ input:checked+.c13 {
                     245KB
                   </div>
                   <div
-                    class="c43"
+                    class="c20 c44"
                   >
-                    PDF
+                    <div
+                      class="c43"
+                    >
+                      PDF
+                    </div>
                   </div>
                 </div>
               </div>
@@ -520,7 +544,7 @@ input:checked+.c13 {
                 class="c20 c33"
               >
                 <div
-                  class="c44 c3"
+                  class="c45 c3"
                 >
                   <div
                     class="c8"
@@ -585,6 +609,7 @@ input:checked+.c13 {
                 >
                   <div
                     class="c42"
+                    id="resource-card-title"
                   >
                     Lesson presentation
                   </div>
@@ -594,9 +619,13 @@ input:checked+.c13 {
                     1.2MB
                   </div>
                   <div
-                    class="c43"
+                    class="c20 c44"
                   >
-                    PPTX
+                    <div
+                      class="c43"
+                    >
+                      PPTX
+                    </div>
                   </div>
                 </div>
               </div>
@@ -604,7 +633,7 @@ input:checked+.c13 {
                 class="c20 c33"
               >
                 <div
-                  class="c44 c3"
+                  class="c45 c3"
                 >
                   <div
                     class="c8"

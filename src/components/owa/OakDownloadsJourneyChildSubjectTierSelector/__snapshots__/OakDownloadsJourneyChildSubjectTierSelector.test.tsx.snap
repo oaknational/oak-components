@@ -38,7 +38,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c10 {
+.c11 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1rem;
@@ -46,14 +46,14 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c11 {
+.c12 {
   padding: 0rem;
   margin: 0rem;
   border-style: none;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c14 {
+.c15 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 500;
   font-size: 1.125rem;
@@ -61,14 +61,14 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c17 {
+.c18 {
   position: relative;
   width: 1.5rem;
   height: 1.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c21 {
+.c22 {
   position: absolute;
   top: 0rem;
   left: 0rem;
@@ -80,14 +80,14 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c24 {
+.c25 {
   position: relative;
   width: max-content;
   height: auto;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c26 {
+.c27 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -96,7 +96,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c31 {
+.c32 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -128,27 +128,34 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
 
 .c9 {
   display: flex;
+  flex-direction: column;
+  align-items: start;
+  order: 1;
+  gap: 0.75rem;
+}
+
+.c10 {
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  order: 1;
   gap: 0.25rem;
 }
 
-.c12 {
+.c13 {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.c18 {
+.c19 {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 
-.c22 {
+.c23 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -156,7 +163,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   flex-shrink: 0;
 }
 
-.c29 {
+.c30 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -164,7 +171,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   gap: 0.5rem;
 }
 
-.c30 {
+.c31 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -173,7 +180,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   text-align: left;
 }
 
-.c27 {
+.c28 {
   background: none;
   color: inherit;
   border: none;
@@ -196,7 +203,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   border-radius: 0.25rem;
 }
 
-.c27:disabled {
+.c28:disabled {
   pointer-events: none;
   cursor: default;
 }
@@ -206,78 +213,78 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   object-fit: contain;
 }
 
-.c32 {
+.c33 {
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   object-fit: contain;
 }
 
-.c28 {
+.c29 {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-.c28:hover {
+.c29:hover {
   text-decoration: underline;
   color: #ffffff;
   background: #575757;
   border-color: #575757;
 }
 
-.c28:hover [data-state="selected"] {
+.c29:hover [data-state="selected"] {
   display: none;
 }
 
-.c28:active {
+.c29:active {
   background: #222222;
   border-color: #222222;
   color: #ffffff;
 }
 
-.c28:active [data-state="selected"] {
+.c29:active [data-state="selected"] {
   display: none;
 }
 
-.c28:disabled {
+.c29:disabled {
   background: #808080;
   border-color: #808080;
   color: #ffffff;
 }
 
-.c28:disabled [data-state="selected"] {
+.c29:disabled [data-state="selected"] {
   display: none;
 }
 
-.c25 .grey-shadow:has(+ * + .internal-button:focus-visible) {
+.c26 .grey-shadow:has(+ * + .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
-.c25 .yellow-shadow:has(+ .internal-button:focus-visible) {
+.c26 .yellow-shadow:has(+ .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%);
 }
 
-.c25 .yellow-shadow:has(+ .internal-button:hover),
-.c25 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible, :active)) {
+.c26 .yellow-shadow:has(+ .internal-button:hover),
+.c26 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible, :active)) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%);
 }
 
-.c25 .grey-shadow:has(+ * + .internal-button:hover) {
+.c26 .grey-shadow:has(+ * + .internal-button:hover) {
   box-shadow: none;
 }
 
-.c25 .grey-shadow:has(+ * + .internal-button:active) {
+.c26 .grey-shadow:has(+ * + .internal-button:active) {
   box-shadow: 0.25rem 0.25rem 0 rgba(87, 87, 87, 100%);
 }
 
-.c25 .yellow-shadow:has(+ .internal-button:active) {
+.c26 .yellow-shadow:has(+ .internal-button:active) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%);
 }
 
-.c13 {
+.c14 {
   display: contents;
 }
 
-.c15 {
+.c16 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 1.125rem;
@@ -285,7 +292,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c20 {
+.c21 {
   -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
@@ -296,19 +303,19 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   border-radius: 0.125rem;
 }
 
-.c20:checked {
+.c21:checked {
   background: #222222;
 }
 
-.c20:disabled {
+.c21:disabled {
   pointer-events: none;
 }
 
-.c23 {
+.c24 {
   border-radius: 50%;
 }
 
-.c19:focus-visible~.c23::before {
+.c20:focus-visible~.c24::before {
   content: "";
   height: 2rem;
   width: 2rem;
@@ -320,7 +327,7 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   box-shadow: inset 0 0 0 0.13rem #ffe555;
 }
 
-.c19:checked~.c23::after {
+.c20:checked~.c24::after {
   content: "";
   height: 1rem;
   width: 1rem;
@@ -330,15 +337,27 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
   border: 0.125rem solid #ffffff;
 }
 
-.c16 {
+.c17 {
   cursor: pointer;
   display: flex;
   gap: 0.5rem;
   align-items: center;
 }
 
+@media (min-width: 750px) {
+  .c9 {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 750px) {
+  .c9 {
+    gap: 1.5rem;
+  }
+}
+
 @media (hover: hover) {
-  .c20:hover:not(:disabled) {
+  .c21:hover:not(:disabled) {
     border-color: #222222;
   }
 }
@@ -376,23 +395,27 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
           class="c8 c9"
         >
           <div
-            class="c10"
-            data-testid="inline-banner-message"
+            class="c8 c10"
           >
-            Before downloading, choose options for KS4. The document will still display both KS3 and KS4.
+            <div
+              class="c11"
+              data-testid="inline-banner-message"
+            >
+              Before downloading, choose options for KS4. The document will still display both KS3 and KS4.
+            </div>
           </div>
         </div>
       </div>
     </div>
     <fieldset
-      class="c11 c12"
+      class="c12 c13"
       data-testid="child-subject-selector"
     >
       <legend
-        class="c13"
+        class="c14"
       >
         <div
-          class="c14"
+          class="c15"
         >
           Choose subject for KS4 units
         </div>
@@ -401,23 +424,23 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
         class="c0"
       >
         <label
-          class="c15 c16"
+          class="c16 c17"
           data-testid="child-subject-radio-button"
           for="biology"
         >
           <div
-            class="c17 c18"
+            class="c18 c19"
           >
             <input
               checked=""
-              class="c19 c20"
+              class="c20 c21"
               id="biology"
               name="childSubjectRadio"
               type="radio"
               value="biology"
             />
             <div
-              class="c21 c22 c23"
+              class="c22 c23 c24"
             />
           </div>
           Biology
@@ -427,22 +450,22 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
         class="c0"
       >
         <label
-          class="c15 c16"
+          class="c16 c17"
           data-testid="child-subject-radio-button"
           for="physics"
         >
           <div
-            class="c17 c18"
+            class="c18 c19"
           >
             <input
-              class="c19 c20"
+              class="c20 c21"
               id="physics"
               name="childSubjectRadio"
               type="radio"
               value="physics"
             />
             <div
-              class="c21 c22 c23"
+              class="c22 c23 c24"
             />
           </div>
           Physics
@@ -452,22 +475,22 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
         class="c0"
       >
         <label
-          class="c15 c16"
+          class="c16 c17"
           data-testid="child-subject-radio-button"
           for="chemistry"
         >
           <div
-            class="c17 c18"
+            class="c18 c19"
           >
             <input
-              class="c19 c20"
+              class="c20 c21"
               id="chemistry"
               name="childSubjectRadio"
               type="radio"
               value="chemistry"
             />
             <div
-              class="c21 c22 c23"
+              class="c22 c23 c24"
             />
           </div>
           Chemistry
@@ -475,14 +498,14 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
       </div>
     </fieldset>
     <fieldset
-      class="c11 c12"
+      class="c12 c13"
       data-testid="tier-selector"
     >
       <legend
-        class="c13"
+        class="c14"
       >
         <div
-          class="c14"
+          class="c15"
         >
           Choose learning tier for KS4 units
         </div>
@@ -491,23 +514,23 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
         class="c0"
       >
         <label
-          class="c15 c16"
+          class="c16 c17"
           data-testid="tier-radio-button"
           for="foundation"
         >
           <div
-            class="c17 c18"
+            class="c18 c19"
           >
             <input
               checked=""
-              class="c19 c20"
+              class="c20 c21"
               id="foundation"
               name="tierRadio"
               type="radio"
               value="foundation"
             />
             <div
-              class="c21 c22 c23"
+              class="c22 c23 c24"
             />
           </div>
           Foundation
@@ -517,22 +540,22 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
         class="c0"
       >
         <label
-          class="c15 c16"
+          class="c16 c17"
           data-testid="tier-radio-button"
           for="higher"
         >
           <div
-            class="c17 c18"
+            class="c18 c19"
           >
             <input
-              class="c19 c20"
+              class="c20 c21"
               id="higher"
               name="tierRadio"
               type="radio"
               value="higher"
             />
             <div
-              class="c21 c22 c23"
+              class="c22 c23 c24"
             />
           </div>
           Higher
@@ -540,31 +563,31 @@ exports[`OakDownloadsJourneyChildSubjectTierSelector matches snapshot 1`] = `
       </div>
     </fieldset>
     <div
-      class="c24 c25"
+      class="c25 c26"
     >
       <div
-        class="c26 grey-shadow"
+        class="c27 grey-shadow"
       />
       <div
-        class="c26 yellow-shadow"
+        class="c27 yellow-shadow"
       />
       <button
-        class="c27 c28 internal-button"
+        class="c28 c29 internal-button"
       >
         <div
-          class="c0 c29"
+          class="c0 c30"
         >
           <span
-            class="c30"
+            class="c31"
           >
             Next
           </span>
           <span
-            class="c31"
+            class="c32"
           >
             <img
               alt=""
-              class="c32"
+              class="c33"
               data-nimg="fill"
               decoding="async"
               loading="lazy"

@@ -4,7 +4,7 @@ export * from "@/components/owa/OakBackLink";
 export * from "@/components/owa/OakBulletList";
 export * from "@/components/owa/OakCardWithHandDrawnBorder";
 export * from "@/components/owa/OakCopyLinkButton";
-export * from "@/components/owa/OakDownloadCard";
+export * from "@/components/owa/OakResourceCard";
 export * from "@/components/owa/OakDragAndDropInstructions";
 export * from "@/components/owa/OakDraggable";
 export * from "@/components/owa/OakDraggableFeedback";

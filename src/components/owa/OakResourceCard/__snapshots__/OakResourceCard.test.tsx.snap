@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`OakDownloadCard matches snapshot with fileSizeSlot 1`] = `
+exports[`OakResourceCard matches snapshot with fileSizeSlot 1`] = `
 .c0 {
   overflow: hidden;
   width: 100%;
@@ -49,6 +49,7 @@ exports[`OakDownloadCard matches snapshot with fileSizeSlot 1`] = `
 }
 
 .c13 {
+  color: #575757;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
@@ -56,19 +57,19 @@ exports[`OakDownloadCard matches snapshot with fileSizeSlot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c14 {
+.c15 {
   padding-right: 1rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c16 {
+.c17 {
   position: relative;
   width: 1.5rem;
   height: 1.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c20 {
+.c21 {
   position: absolute;
   top: 0rem;
   left: 0rem;
@@ -78,7 +79,7 @@ exports[`OakDownloadCard matches snapshot with fileSizeSlot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c22 {
+.c23 {
   position: relative;
   width: 100%;
   min-width: 100%;
@@ -112,12 +113,18 @@ exports[`OakDownloadCard matches snapshot with fileSizeSlot 1`] = `
   gap: 0.25rem;
 }
 
-.c15 {
+.c14 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.c16 {
   display: flex;
   align-items: center;
 }
 
-.c17 {
+.c18 {
   -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
@@ -131,16 +138,16 @@ exports[`OakDownloadCard matches snapshot with fileSizeSlot 1`] = `
   border-color: #808080;
 }
 
-.c17:checked {
+.c18:checked {
   background: #222222;
   border-color: #222222;
 }
 
-.c17:disabled {
+.c18:disabled {
   pointer-events: none;
 }
 
-.c19:focus-visible {
+.c20:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%);
 }
 
@@ -148,17 +155,17 @@ exports[`OakDownloadCard matches snapshot with fileSizeSlot 1`] = `
   object-fit: contain;
 }
 
-.c23 {
+.c24 {
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   object-fit: contain;
 }
 
-.c21 {
+.c22 {
   pointer-events: none;
   opacity: 0;
 }
 
-input:checked+.c21 {
+input:checked+.c22 {
   opacity: 1;
 }
 
@@ -168,22 +175,26 @@ input:checked+.c21 {
   display: flex;
 }
 
-.c2 {
-  cursor: pointer;
+.c3:has(input:disabled) {
+  cursor: default;
 }
 
-.c2:has(input:focus-within):focus-visible {
-  box-shadow: 0px 0px 0px 2px #ffe555,0px 0px 0px 5px #575757;
+.c3:has(input:disabled) #resource-card-title {
+  text-decoration: none;
+}
+
+.c2:has(input:focus-visible) {
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 @media (hover: hover) {
-  .c17:hover:not(:disabled) {
+  .c18:hover:not(:disabled) {
     border-color: #222222;
   }
 }
 
 @media (hover: hover) {
-  .c18:hover:not(.c18:checked):not(.c18:disabled)::after {
+  .c19:hover:not(.c19:checked):not(.c19:disabled)::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -197,8 +208,16 @@ input:checked+.c21 {
 }
 
 @media (hover: hover) {
-  .c2:hover:not(:disabled, :active) {
+  .c2:hover:not(:has(input:disabled), :active) {
     background: #f2f2f2;
+  }
+
+  .c2:hover:not(:has(input:disabled), :active) #resource-card-title {
+    text-decoration: underline;
+  }
+
+  .c2:active:not(:has(input:disabled)) #resource-card-title {
+    text-decoration: underline;
   }
 }
 
@@ -234,6 +253,7 @@ input:checked+.c21 {
         >
           <div
             class="c12"
+            id="resource-card-title"
           >
             TITLE
           </div>
@@ -243,9 +263,13 @@ input:checked+.c21 {
             FILE_SIZE
           </div>
           <div
-            class="c13"
+            class="c4 c14"
           >
-            FORMAT
+            <div
+              class="c13"
+            >
+              DESCRIPTION
+            </div>
           </div>
         </div>
       </div>
@@ -253,27 +277,27 @@ input:checked+.c21 {
         class="c4 c1"
       >
         <div
-          class="c14 c15"
+          class="c15 c16"
         >
           <div
-            class="c16"
+            class="c17"
           >
             <input
-              class="c17 c18 c19"
+              class="c18 c19 c20"
               id="checkbox-1"
               name="default"
               type="checkbox"
               value="Option 1"
             />
             <div
-              class="c20 c21"
+              class="c21 c22"
             >
               <span
-                class="c22"
+                class="c23"
               >
                 <img
                   alt=""
-                  class="c23"
+                  class="c24"
                   data-nimg="fill"
                   decoding="async"
                   loading="lazy"
@@ -290,7 +314,7 @@ input:checked+.c21 {
 </div>
 `;
 
-exports[`OakDownloadCard matches snapshot without fileSizeSlot 1`] = `
+exports[`OakResourceCard matches snapshot without fileSizeSlot 1`] = `
 .c0 {
   overflow: hidden;
   width: 100%;
@@ -338,7 +362,8 @@ exports[`OakDownloadCard matches snapshot without fileSizeSlot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c13 {
+.c14 {
+  color: #575757;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
@@ -346,19 +371,19 @@ exports[`OakDownloadCard matches snapshot without fileSizeSlot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c14 {
+.c15 {
   padding-right: 1rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c16 {
+.c17 {
   position: relative;
   width: 1.5rem;
   height: 1.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c20 {
+.c21 {
   position: absolute;
   top: 0rem;
   left: 0rem;
@@ -368,7 +393,7 @@ exports[`OakDownloadCard matches snapshot without fileSizeSlot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c22 {
+.c23 {
   position: relative;
   width: 100%;
   min-width: 100%;
@@ -402,12 +427,18 @@ exports[`OakDownloadCard matches snapshot without fileSizeSlot 1`] = `
   gap: 0.25rem;
 }
 
-.c15 {
+.c13 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.c16 {
   display: flex;
   align-items: center;
 }
 
-.c17 {
+.c18 {
   -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
@@ -421,16 +452,16 @@ exports[`OakDownloadCard matches snapshot without fileSizeSlot 1`] = `
   border-color: #808080;
 }
 
-.c17:checked {
+.c18:checked {
   background: #222222;
   border-color: #222222;
 }
 
-.c17:disabled {
+.c18:disabled {
   pointer-events: none;
 }
 
-.c19:focus-visible {
+.c20:focus-visible {
   box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%);
 }
 
@@ -438,17 +469,17 @@ exports[`OakDownloadCard matches snapshot without fileSizeSlot 1`] = `
   object-fit: contain;
 }
 
-.c23 {
+.c24 {
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   object-fit: contain;
 }
 
-.c21 {
+.c22 {
   pointer-events: none;
   opacity: 0;
 }
 
-input:checked+.c21 {
+input:checked+.c22 {
   opacity: 1;
 }
 
@@ -458,22 +489,26 @@ input:checked+.c21 {
   display: flex;
 }
 
-.c2 {
-  cursor: pointer;
+.c3:has(input:disabled) {
+  cursor: default;
 }
 
-.c2:has(input:focus-within):focus-visible {
-  box-shadow: 0px 0px 0px 2px #ffe555,0px 0px 0px 5px #575757;
+.c3:has(input:disabled) #resource-card-title {
+  text-decoration: none;
+}
+
+.c2:has(input:focus-visible) {
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 @media (hover: hover) {
-  .c17:hover:not(:disabled) {
+  .c18:hover:not(:disabled) {
     border-color: #222222;
   }
 }
 
 @media (hover: hover) {
-  .c18:hover:not(.c18:checked):not(.c18:disabled)::after {
+  .c19:hover:not(.c19:checked):not(.c19:disabled)::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -487,8 +522,16 @@ input:checked+.c21 {
 }
 
 @media (hover: hover) {
-  .c2:hover:not(:disabled, :active) {
+  .c2:hover:not(:has(input:disabled), :active) {
     background: #f2f2f2;
+  }
+
+  .c2:hover:not(:has(input:disabled), :active) #resource-card-title {
+    text-decoration: underline;
+  }
+
+  .c2:active:not(:has(input:disabled)) #resource-card-title {
+    text-decoration: underline;
   }
 }
 
@@ -524,13 +567,18 @@ input:checked+.c21 {
         >
           <div
             class="c12"
+            id="resource-card-title"
           >
             TITLE
           </div>
           <div
-            class="c13"
+            class="c4 c13"
           >
-            FORMAT
+            <div
+              class="c14"
+            >
+              DESCRIPTION
+            </div>
           </div>
         </div>
       </div>
@@ -538,27 +586,365 @@ input:checked+.c21 {
         class="c4 c1"
       >
         <div
-          class="c14 c15"
+          class="c15 c16"
         >
           <div
-            class="c16"
+            class="c17"
           >
             <input
-              class="c17 c18 c19"
+              class="c18 c19 c20"
               id="checkbox-1"
               name="default"
               type="checkbox"
               value="Option 1"
             />
             <div
-              class="c20 c21"
+              class="c21 c22"
             >
               <span
-                class="c22"
+                class="c23"
               >
                 <img
                   alt=""
-                  class="c23"
+                  class="c24"
+                  data-nimg="fill"
+                  decoding="async"
+                  loading="lazy"
+                  src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699954310/icons/efd3esaor6zqk7seh6kt.svg"
+                  style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                />
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`OakResourceCard renders an editable tag when isEditable is true 1`] = `
+.c0 {
+  overflow: hidden;
+  width: 100%;
+  color: #222222;
+  background: #ffffff;
+  border: 0.125rem solid;
+  border-radius: 0.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+  overflow: hidden;
+}
+
+.c4 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c6 {
+  padding: 0.75rem;
+  background: #ffe555;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c8 {
+  position: relative;
+  width: 3rem;
+  min-width: 3rem;
+  height: 3rem;
+  min-height: 3rem;
+  display: block;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c10 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c12 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.005rem;
+}
+
+.c14 {
+  color: #575757;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: -0.005rem;
+}
+
+.c15 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  background: #b0e2de;
+  border-radius: 0.375rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c17 {
+  padding-right: 1rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c19 {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c23 {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c25 {
+  position: relative;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  min-height: 100%;
+  display: block;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c1 {
+  display: flex;
+}
+
+.c5 {
+  display: flex;
+  align-items: stretch;
+  flex-grow: 1;
+}
+
+.c7 {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+}
+
+.c11 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 0.25rem;
+}
+
+.c13 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.c16 {
+  display: flex;
+  align-self: flex-end;
+  gap: 0.5rem;
+}
+
+.c18 {
+  display: flex;
+  align-items: center;
+}
+
+.c20 {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  margin: 0;
+  outline: none;
+  border: 0.125rem solid;
+  border-color: #222222;
+  border-radius: 0.125rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-color: #808080;
+}
+
+.c20:checked {
+  background: #222222;
+  border-color: #222222;
+}
+
+.c20:disabled {
+  pointer-events: none;
+}
+
+.c22:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%);
+}
+
+.c9 {
+  object-fit: contain;
+}
+
+.c26 {
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  object-fit: contain;
+}
+
+.c24 {
+  pointer-events: none;
+  opacity: 0;
+}
+
+input:checked+.c24 {
+  opacity: 1;
+}
+
+.c3 {
+  flex: 1;
+  cursor: pointer;
+  display: flex;
+}
+
+.c3:has(input:disabled) {
+  cursor: default;
+}
+
+.c3:has(input:disabled) #resource-card-title {
+  text-decoration: none;
+}
+
+.c2:has(input:focus-visible) {
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
+}
+
+@media (hover: hover) {
+  .c20:hover:not(:disabled) {
+    border-color: #222222;
+  }
+}
+
+@media (hover: hover) {
+  .c21:hover:not(.c21:checked):not(.c21:disabled)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 60%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.125rem;
+    background: #222222;
+  }
+}
+
+@media (hover: hover) {
+  .c2:hover:not(:has(input:disabled), :active) {
+    background: #f2f2f2;
+  }
+
+  .c2:hover:not(:has(input:disabled), :active) #resource-card-title {
+    text-decoration: underline;
+  }
+
+  .c2:active:not(:has(input:disabled)) #resource-card-title {
+    text-decoration: underline;
+  }
+}
+
+<div>
+  <div
+    class="c0 c1 c2"
+  >
+    <label
+      class="c3"
+    >
+      <div
+        class="c4 c5"
+      >
+        <div
+          class="c6 c7"
+        >
+          <span
+            class="c8"
+          >
+            <img
+              alt=""
+              class="c9"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699953657/icons/hz4l3iq6i68kazvkvorq.svg"
+              style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+            />
+          </span>
+        </div>
+        <div
+          class="c10 c11"
+        >
+          <div
+            class="c12"
+            id="resource-card-title"
+          >
+            TITLE
+          </div>
+          <div
+            class="c4 c13"
+          >
+            <div
+              class="c14"
+            >
+              DESCRIPTION
+            </div>
+            <div
+              class="c15 c16"
+            >
+              <div
+                class="c4"
+              >
+                Editable
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="c4 c1"
+      >
+        <div
+          class="c17 c18"
+        >
+          <div
+            class="c19"
+          >
+            <input
+              class="c20 c21 c22"
+              id="checkbox-1"
+              name="default"
+              type="checkbox"
+              value="Option 1"
+            />
+            <div
+              class="c23 c24"
+            >
+              <span
+                class="c25"
+              >
+                <img
+                  alt=""
+                  class="c26"
                   data-nimg="fill"
                   decoding="async"
                   loading="lazy"

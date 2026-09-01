@@ -136,7 +136,6 @@ export type OakInlineBannerVariantProps = {
     loadingSpinnerDimensions: Partial<OakLoadingSpinnerProps>;
     heading: Partial<OakHeadingProps>;
     closeButtonWrapper?: Partial<OakBoxProps>;
-    ctaWrapper?: Partial<OakBoxProps>;
     flexDirection: FlexStyleProps["$flexDirection"];
     bannerPadding: PaddingStyleProps["$pa"];
     textContentGap?: FlexStyleProps["$gap"];
@@ -155,9 +154,6 @@ export const bannerVariants: OakInlineBannerVariantProps = {
     heading: {
       $font: ["heading-7"],
     },
-    ctaWrapper: {
-      $mt: "spacing-12",
-    },
     flexDirection: "row",
     bannerPadding: "spacing-16",
     textContentGap: "spacing-4",
@@ -172,9 +168,6 @@ export const bannerVariants: OakInlineBannerVariantProps = {
     },
     heading: {
       $font: ["heading-6"],
-    },
-    ctaWrapper: {
-      $mt: "spacing-8",
     },
     closeButtonWrapper: {
       $position: "absolute",
@@ -294,29 +287,32 @@ export const OakInlineBanner = ({
         )}
         <OakFlex
           $order={1}
+          $flexDirection={title ? "column" : ["column", "row"]}
+          $gap={title ? "spacing-24" : ["spacing-12", "spacing-24"]}
           $width={"100%"}
-          $flexDirection={title ? "column" : "row"}
-          $justifyContent={title ? "center" : "space-between"}
-          $alignItems={title ? "start" : "center"}
-          $gap={bannerVariants[variant].textContentGap}
+          $alignItems={"start"}
         >
-          {title && (
-            <OakHeading
-              data-testid="inline-banner-title"
-              tag={titleTag}
-              {...bannerVariants[variant].heading}
-            >
-              {title}
-            </OakHeading>
-          )}
-          <OakBox $font={"body-2"} data-testid="inline-banner-message">
-            {message}
-          </OakBox>
-          {cta && (
-            <OakFlex {...(title ? bannerVariants[variant].ctaWrapper : {})}>
-              {cta}
-            </OakFlex>
-          )}
+          <OakFlex
+            $width={"100%"}
+            $flexDirection={title ? "column" : "row"}
+            $justifyContent={title ? "center" : "space-between"}
+            $alignItems={title ? "start" : "center"}
+            $gap={bannerVariants[variant].textContentGap}
+          >
+            {title && (
+              <OakHeading
+                data-testid="inline-banner-title"
+                tag={titleTag}
+                {...bannerVariants[variant].heading}
+              >
+                {title}
+              </OakHeading>
+            )}
+            <OakBox $font={"body-2"} data-testid="inline-banner-message">
+              {message}
+            </OakBox>
+          </OakFlex>
+          {cta && <OakFlex $flexShrink={0}>{cta}</OakFlex>}
         </OakFlex>
       </OakFlex>
     </OakFlex>

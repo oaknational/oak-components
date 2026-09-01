@@ -170,9 +170,6 @@ exports[`OakSelect disabled select 1`] = `
       class="c3"
       disabled=""
     >
-      <button>
-        <selectedcontent />
-      </button>
       <option
         class="c4"
       >
@@ -390,9 +387,6 @@ exports[`OakSelect highlighted select 1`] = `
     <select
       class="c3"
     >
-      <button>
-        <selectedcontent />
-      </button>
       <option
         class="c4"
       >
@@ -610,9 +604,6 @@ exports[`OakSelect invalid select 1`] = `
     <select
       class="c3"
     >
-      <button>
-        <selectedcontent />
-      </button>
       <option
         class="c4"
       >
@@ -844,9 +835,6 @@ exports[`OakSelect optgroup select 1`] = `
     <select
       class="c3"
     >
-      <button>
-        <selectedcontent />
-      </button>
       <optgroup
         class=""
         label="Group 1"
@@ -1099,9 +1087,6 @@ exports[`OakSelect plain select 1`] = `
     <select
       class="c3"
     >
-      <button>
-        <selectedcontent />
-      </button>
       <option
         class="c4"
       >
