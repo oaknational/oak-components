@@ -124,9 +124,7 @@ export function OakTabs<T extends string>(props: Readonly<OakTabsProps<T>>) {
                   <OakSpan>{label}</OakSpan>
                   {showPromo && (
                     <OakPromoTag
-                      variant={
-                        colorVariant === "black" ? "inverted" : "default"
-                      }
+                      variant={isSelected ? "default" : "inverted"}
                     />
                   )}
                 </OakFlex>
