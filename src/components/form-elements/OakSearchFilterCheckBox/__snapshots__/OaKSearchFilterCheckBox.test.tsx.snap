@@ -89,7 +89,7 @@ exports[`OakSearchFilterCheckBox matches snapshot 1`] = `
   pointer-events: none;
 }
 
-.c6:checked:not(:disabled)+.{
+.c6:checked:not(:disabled)+span {
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
 }
 
