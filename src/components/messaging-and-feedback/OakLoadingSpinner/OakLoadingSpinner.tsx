@@ -68,7 +68,7 @@ const StyledLoadingSpinner = styled.span<OakLoadingSpinnerProps>`
 `;
 
 type StyledSpinnerRingProps = {
-  loaderColor?: OakUiRoleToken;
+  $loaderColor?: OakUiRoleToken;
 };
 
 const StyledSpinnerRing = styled.div<StyledSpinnerRingProps>`
@@ -77,8 +77,8 @@ const StyledSpinnerRing = styled.div<StyledSpinnerRingProps>`
   border-radius: 50%;
   border: var(--thickness) solid;
   ${(props) => {
-    if (props.loaderColor) {
-      const colorVal = parseColor(props.loaderColor);
+    if (props.$loaderColor) {
+      const colorVal = parseColor(props.$loaderColor);
       const resolvedColor =
         typeof colorVal === "function" ? colorVal(props) : colorVal;
       return css`
@@ -101,6 +101,6 @@ const StyledSpinnerRing = styled.div<StyledSpinnerRingProps>`
 export const OakLoadingSpinner = (props: OakLoadingSpinnerProps) => (
   <StyledLoadingSpinner {...props}>
     <OakScreenReader>Loading</OakScreenReader>
-    <StyledSpinnerRing loaderColor={props.loaderColor} />
+    <StyledSpinnerRing $loaderColor={props.loaderColor} />
   </StyledLoadingSpinner>
 );
