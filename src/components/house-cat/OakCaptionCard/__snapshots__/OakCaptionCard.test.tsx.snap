@@ -384,10 +384,9 @@ input:checked+.c12 {
       >
         <a
           aria-label="edit caption CAP-TEST-01234 in a new tab in rev"
-          class="c21"
+          class="c21 "
           href="#}"
           target="_blank"
-          variant="secondary"
         >
           <span
             class="c18"
@@ -419,11 +418,10 @@ input:checked+.c12 {
     >
       <a
         aria-label="view lesson LESS-TEST-01234 in a new tab"
-        class="c21"
+        class="c21 "
         data-testid="lesson_uid"
         href="#"
         target="_blank"
-        variant="secondary"
       >
         <span
           class="c18"

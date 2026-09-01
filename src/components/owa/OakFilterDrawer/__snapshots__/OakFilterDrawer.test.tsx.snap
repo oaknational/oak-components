@@ -317,8 +317,7 @@ exports[`OakFilterDrawer matches snapshot when mounted 1`] = `
       >
         <button
           aria-label="Clear"
-          class="c7"
-          variant="secondary"
+          class="c7 "
         >
           <span
             class="c8"

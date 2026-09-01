@@ -461,7 +461,7 @@ exports[`OakHeaderHero matches snapshot 1`] = `
             class="c7"
           >
             <a
-              class="c8"
+              class="c8 "
               href="/home"
             >
               <span
@@ -559,7 +559,7 @@ exports[`OakHeaderHero matches snapshot 1`] = `
           class="c29 c30"
         >
           <a
-            class="c8"
+            class="c8 "
             href="/home"
           >
             <span

@@ -110,10 +110,9 @@ exports[`OakBreadcrumbs matches snapshot 1`] = `
         class="c2"
       >
         <a
-          class="c3"
+          class="c3 "
           href="#test1"
           style="overflow: hidden;"
-          variant="secondary"
         >
           <span
             class="c4"
@@ -143,10 +142,9 @@ exports[`OakBreadcrumbs matches snapshot 1`] = `
           />
         </span>
         <a
-          class="c3"
+          class="c3 "
           href="#test2"
           style="overflow: hidden;"
-          variant="secondary"
         >
           <span
             class="c4"

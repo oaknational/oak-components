@@ -52,7 +52,7 @@ exports[`OakLink matches snapshot 1`] = `
 
 <div>
   <a
-    class="c0"
+    class="c0 "
   >
     <span
       class="c1"

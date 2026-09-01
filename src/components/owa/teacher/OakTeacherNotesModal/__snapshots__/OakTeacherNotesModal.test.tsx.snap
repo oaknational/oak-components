@@ -1023,7 +1023,7 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
                              
                             <a
                               aria-label="Oak's terms and conditions(opens in a new tab)"
-                              class="c64"
+                              class="c64 "
                               href="https://www.thenational.academy/legal/terms-and-conditions"
                               target="_blank"
                             >

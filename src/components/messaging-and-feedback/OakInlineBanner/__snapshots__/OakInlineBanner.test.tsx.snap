@@ -405,8 +405,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
           class="c4 c24"
         >
           <a
-            class="c25"
-            variant="secondary"
+            class="c25 "
           >
             <span
               class="c26"
@@ -860,8 +859,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
           class="c4 c25"
         >
           <a
-            class="c26"
-            variant="secondary"
+            class="c26 "
           >
             <span
               class="c27"
@@ -1296,8 +1294,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
           class="c4 c23"
         >
           <a
-            class="c24"
-            variant="secondary"
+            class="c24 "
           >
             <span
               class="c25"
