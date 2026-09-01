@@ -49,7 +49,7 @@ const StyledIcon = styled(OakIcon)<{ disabled: boolean }>`
 `;
 
 const StyledNumberButton = styled(OakLink)<
-  { selected: boolean } & TypographyStyleProps
+  { $selected: boolean } & TypographyStyleProps
 >`
   height: 30px;
   width: 30px;
@@ -68,7 +68,7 @@ const StyledNumberButton = styled(OakLink)<
   `};
 
   ${(props) =>
-    props.selected &&
+    props.$selected &&
     css`
       color: ${parseColor("text-inverted")};
       &:visited {
@@ -111,7 +111,7 @@ const OakPageNumber = ({
       aria-current={isActive ? "page" : false}
       $font={"heading-7"}
       onClick={onClick}
-      selected={isActive}
+      $selected={isActive}
       href={href}
     >
       {pageNumber}

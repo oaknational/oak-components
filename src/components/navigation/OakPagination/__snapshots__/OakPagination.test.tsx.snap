@@ -109,12 +109,16 @@ exports[`OakPagination Component matches snapshot 1`] = `
   line-height: 1.25rem;
   letter-spacing: 0.0115rem;
   color: #222222;
-  background-color: #222222;
+  background-color: #ffffff;
   color: #ffffff;
 }
 
 .c10:visited {
   color: #ffffff;
+}
+
+.c10:hover {
+  text-decoration: underline;
 }
 
 .c11 {
