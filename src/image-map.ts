@@ -90,6 +90,12 @@ export const icons = {
   strand: "v1776850533/icons/strand.svg",
   plus: "v1781533362/icons/plus.svg",
   hide: "v1785931149/icons/Icon_Hide_r1q6se.svg",
+  //learning cycle icons
+  "lc-explanation": "v1788336387/icons/lc-explanation.svg",
+  "lc-check-for-understanding":
+    "v1788336388/icons/lc-check-for-understanding.svg",
+  "lc-practice": "v1788336389/icons/lc-practice.svg",
+  "lc-feedback": "v1788336388/icons/lc-feedback.svg",
   // subject icons
   "subject-art": "v1706616347/subject-icons/art.svg",
   "subject-biology": "v1706616415/subject-icons/biology.svg",
