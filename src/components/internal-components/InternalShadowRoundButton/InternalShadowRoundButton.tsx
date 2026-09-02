@@ -14,7 +14,10 @@ import {
 import { OakIcon, OakIconName } from "@/components/images-and-icons/OakIcon";
 import { OakLoadingSpinner } from "@/components/messaging-and-feedback/OakLoadingSpinner";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
-import { positionStyle } from "@/styles/utils/positionStyle";
+import {
+  positionStyle,
+  PositionStyleProps,
+} from "@/styles/utils/positionStyle";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { OakUiRoleToken, OakDropShadowToken } from "@/styles";
 import { SizeStyleProps } from "@/styles/utils/sizeStyle";
@@ -46,7 +49,7 @@ export type InternalShadowRoundButtonProps = Omit<
   iconBackgroundSize: SizeStyleProps["$width"];
   iconSize: SizeStyleProps["$width"];
   hoverDropShadow?: OakDropShadowToken | null;
-};
+} & PositionStyleProps;
 
 const StyledInternalButton = styled(InternalButton)<
   Partial<InternalShadowRoundButtonProps>
