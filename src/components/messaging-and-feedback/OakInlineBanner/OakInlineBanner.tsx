@@ -290,7 +290,7 @@ export const OakInlineBanner = ({
           $flexDirection={title ? "column" : ["column", "row"]}
           $gap={title ? "spacing-24" : ["spacing-12", "spacing-24"]}
           $width={"100%"}
-          $alignItems={"start"}
+          $alignItems={title ? "start" : ["start", "center"]}
         >
           <OakFlex
             $width={"100%"}
