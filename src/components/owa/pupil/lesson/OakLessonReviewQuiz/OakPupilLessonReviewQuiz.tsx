@@ -25,12 +25,14 @@ type OakLessonReviewQuizProps = {
    * You MUST use the OakLessonExpandableReviewItem as the container component for this slot
    */
   resultsSlot?: React.ReactNode;
+  "data-testid"?: string;
 };
 
 type OakLessonReviewItemContainerProps = {
   $background?: OakUiRoleToken;
   $borderColor?: OakUiRoleToken;
   children: React.ReactNode;
+  "data-testid"?: string;
 };
 
 const StyledLessonReviewItem = styled(OakFlex)`
@@ -41,7 +43,7 @@ const StyledLessonReviewItem = styled(OakFlex)`
 export const ReviewItemContainer = (
   props: OakLessonReviewItemContainerProps,
 ) => {
-  const { children, ...rest } = props;
+  const { children, "data-testid": dataTestId, ...rest } = props;
 
   return (
     <StyledLessonReviewItem
@@ -52,6 +54,7 @@ export const ReviewItemContainer = (
       $pv="spacing-20"
       $borderRadius="border-radius-l"
       $ba="border-solid-l"
+      data-testid={dataTestId}
       {...rest}
     >
       {children}
@@ -86,7 +89,14 @@ export const ReviewItemTitleSection = (props: ReviewItemTitleSectionProps) => {
 };
 
 export const OakLessonReviewQuiz = (props: OakLessonReviewQuizProps) => {
-  const { completed, lessonSectionName, resultsSlot, ...rest } = props;
+  const {
+    completed,
+    lessonSectionName,
+    resultsSlot,
+    numQuestions,
+    grade,
+    "data-testid": dataTestId,
+  } = props;
   const [completedBackgroundColor, borderColor, iconBackgroundColor]: [
     completedBackgroundColor: OakUiRoleToken,
     borderColor: OakUiRoleToken,
@@ -106,8 +116,8 @@ export const OakLessonReviewQuiz = (props: OakLessonReviewQuizProps) => {
 
   const summaryForIncomplete =
     lessonSectionName === "starter-quiz"
-      ? `Activate - ${props.numQuestions} questions`
-      : `Check - ${props.numQuestions} questions`;
+      ? `Activate - ${numQuestions} questions`
+      : `Check - ${numQuestions} questions`;
 
   const resultsToggleAriaLabel =
     lessonSectionName === "starter-quiz"
@@ -118,7 +128,7 @@ export const OakLessonReviewQuiz = (props: OakLessonReviewQuizProps) => {
     <ReviewItemContainer
       $background={completed ? completedBackgroundColor : "bg-primary"}
       $borderColor={completed ? completedBackgroundColor : borderColor}
-      {...rest}
+      data-testid={dataTestId}
     >
       <OakFlex $gap="spacing-24" $alignItems="center">
         <OakRoundIcon
@@ -136,10 +146,8 @@ export const OakLessonReviewQuiz = (props: OakLessonReviewQuizProps) => {
         />
         {completed && (
           <OakBox>
-            <OakSpan $font="heading-4">{props.grade}</OakSpan>
-            <OakSpan $font="heading-6">
-              &nbsp;/&nbsp;{props.numQuestions}
-            </OakSpan>
+            <OakSpan $font="heading-4">{grade}</OakSpan>
+            <OakSpan $font="heading-6">&nbsp;/&nbsp;{numQuestions}</OakSpan>
           </OakBox>
         )}
       </OakFlex>

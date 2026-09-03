@@ -3,11 +3,14 @@ import styled from "styled-components";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 
-import { transitionStyle } from "@/styles/utils/transitionStyle";
+import {
+  transitionStyle,
+  TransitionStyleProps,
+} from "@/styles/utils/transitionStyle";
 
 describe("transitionStyle", () => {
   test('should correctly handle prop "transition" as string', async () => {
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<TransitionStyleProps>`
       ${transitionStyle}
     `;
     const { getByTestId } = render(
@@ -16,7 +19,7 @@ describe("transitionStyle", () => {
     expect(getByTestId("test")).toHaveStyle("transition: all 0.3s ease");
   });
   test('should correctly handle prop "transition" as array', async () => {
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<TransitionStyleProps>`
       ${transitionStyle}
     `;
     const { getByTestId } = render(
@@ -31,7 +34,7 @@ describe("transitionStyle", () => {
         [prop]: value,
       };
 
-      const StyledComponent = styled.div`
+      const StyledComponent = styled.div<TransitionStyleProps>`
         ${transitionStyle}
       `;
       const { getByTestId } = render(

@@ -214,7 +214,7 @@ export const OakCard = ({
     <OakFocusIndicator
       as={as}
       $background={"bg-primary"}
-      hoverBackground={hoverBackground}
+      $hoverBackground={hoverBackground}
       $height={"100%"}
       $width={cardWidth}
       $borderRadius={"border-radius-m2"}

@@ -11,7 +11,10 @@ import { InternalButton } from "@/components/internal-components/InternalButton"
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { OakLink } from "@/components/navigation/OakLink";
-import { typographyStyle } from "@/styles/utils/typographyStyle";
+import {
+  typographyStyle,
+  TypographyStyleProps,
+} from "@/styles/utils/typographyStyle";
 
 export type OakPaginationProps = {
   currentPage: number;
@@ -31,14 +34,8 @@ type OakPageNumberProps = {
   pageName: string;
 };
 
-const StyledChevronButton = styled(OakLink)<{ disabledColor: string }>`
+const StyledChevronButton = styled(OakLink)`
   display: inline-block;
-  ${(props) => css`
-    &:disabled {
-      color: ${props.disabledColor};
-      cursor: pointer;
-    }
-  `}
 `;
 
 const StyledIcon = styled(OakIcon)<{ disabled: boolean }>`
@@ -51,7 +48,9 @@ const StyledIcon = styled(OakIcon)<{ disabled: boolean }>`
   }}
 `;
 
-const StyledNumberButton = styled(OakLink)<{ selected: boolean }>`
+const StyledNumberButton = styled(OakLink)<
+  { $selected: boolean } & TypographyStyleProps
+>`
   height: 30px;
   width: 30px;
   border-radius: 100px;
@@ -69,7 +68,7 @@ const StyledNumberButton = styled(OakLink)<{ selected: boolean }>`
   `};
 
   ${(props) =>
-    props.selected &&
+    props.$selected &&
     css`
       color: ${parseColor("text-inverted")};
       &:visited {
@@ -112,7 +111,7 @@ const OakPageNumber = ({
       aria-current={isActive ? "page" : false}
       $font={"heading-7"}
       onClick={onClick}
-      selected={isActive}
+      $selected={isActive}
       href={href}
     >
       {pageNumber}

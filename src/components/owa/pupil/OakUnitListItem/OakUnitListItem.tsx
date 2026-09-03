@@ -1,4 +1,4 @@
-import React, { ElementType, MutableRefObject } from "react";
+import React, { ElementType } from "react";
 import styled, { css } from "styled-components";
 
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
@@ -75,7 +75,8 @@ export type OakUnitListItemProps<element extends ElementType> = {
   lessonCount: string | null;
   isLegacy: boolean;
   href: string;
-  firstItemRef?: MutableRefObject<HTMLAnchorElement | null> | null | undefined;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  firstItemRef?: React.Ref<any>;
   onClick?: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
   as?: element;
 };
@@ -96,6 +97,7 @@ export const OakUnitListItem = <element extends ElementType = "a">(
     isLegacy,
     firstItemRef,
     as = "a",
+    yearTitle,
     ...rest
   } = props;
 
@@ -119,7 +121,8 @@ export const OakUnitListItem = <element extends ElementType = "a">(
           $alignItems="center"
           $width="100%"
           $height="100%"
-          as={as}
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          as={as as any}
           href={unavailable ? undefined : href}
           ref={firstItemRef}
           onClick={unavailable ? undefined : onClick}
@@ -195,7 +198,8 @@ export const OakUnitListItem = <element extends ElementType = "a">(
         <OakFlex $flexDirection="column" $gap="spacing-16" $width="100%">
           <OakFlex
             $gap="spacing-16"
-            as={as}
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            as={as as any}
             href={unavailable ? undefined : href}
           >
             <OakFlex

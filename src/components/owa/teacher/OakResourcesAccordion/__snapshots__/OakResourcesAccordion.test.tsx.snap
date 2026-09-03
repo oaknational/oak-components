@@ -32,7 +32,7 @@ exports[`OakResourcesAccordion matches snapshot when closed 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c14 {
+.c12 {
   position: absolute;
   top: 0rem;
   left: 0rem;
@@ -42,7 +42,7 @@ exports[`OakResourcesAccordion matches snapshot when closed 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c16 {
+.c14 {
   position: relative;
   width: 100%;
   min-width: 100%;
@@ -52,30 +52,30 @@ exports[`OakResourcesAccordion matches snapshot when closed 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c18 {
+.c16 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c18:hover {
+.c16:hover {
   cursor: pointer;
 }
 
-.c22 {
+.c20 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c26 {
+.c24 {
   padding-right: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c28 {
+.c26 {
   padding: 0.5rem;
   border-radius: 0.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c29 {
+.c27 {
   position: relative;
   width: 2rem;
   min-width: 2rem;
@@ -85,19 +85,19 @@ exports[`OakResourcesAccordion matches snapshot when closed 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c31 {
+.c29 {
   position: relative;
   overflow: visible;
   font-family: --var(google-font),Lexend,sans-serif;
   overflow: visible;
 }
 
-.c32 {
+.c30 {
   padding-top: 1.25rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c34 {
+.c32 {
   overflow: hidden;
   width: 100%;
   color: #222222;
@@ -108,13 +108,13 @@ exports[`OakResourcesAccordion matches snapshot when closed 1`] = `
   overflow: hidden;
 }
 
-.c39 {
+.c37 {
   padding: 0.75rem;
   background: #ffe555;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c41 {
+.c39 {
   position: relative;
   width: 3rem;
   min-width: 3rem;
@@ -124,7 +124,7 @@ exports[`OakResourcesAccordion matches snapshot when closed 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c42 {
+.c40 {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.75rem;
@@ -132,235 +132,136 @@ exports[`OakResourcesAccordion matches snapshot when closed 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c44 {
+.c42 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.5rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
-.c45 {
+.c43 {
   color: #575757;
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
-.c47 {
+.c45 {
   padding-right: 1rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
 .c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 1rem;
 }
 
-.c19 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+.c17 {
   display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
-.c23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+.c21 {
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   gap: 0.75rem;
 }
 
-.c24 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+.c22 {
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
   align-items: start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 
-.c33 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+.c31 {
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 1rem;
 }
 
-.c35 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+.c33 {
   display: flex;
 }
 
-.c38 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+.c36 {
   display: flex;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
   align-items: stretch;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
-.c40 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+.c38 {
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
   align-self: stretch;
 }
 
-.c43 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+.c41 {
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   gap: 0.25rem;
 }
 
-.c46 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+.c44 {
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 0.5rem;
 }
 
-.c17 {
-  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+.c15 {
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   object-fit: contain;
 }
 
-.c30 {
+.c28 {
   object-fit: contain;
 }
 
-.c25 {
+.c23 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.5rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
   text-align: left;
   margin-right: 1rem;
   color: #222222;
 }
 
-.c27 {
+.c25 {
   font-family: --var(google-font),Lexend,sans-serif;
   text-align: left;
 }
 
-.c20 {
+.c18 {
   font: inherit;
   color: inherit;
   border: none;
   background: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   outline: none;
   padding: 0;
 }
 
-.c10 {
+.c9 {
   -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   cursor: pointer;
   margin: 0;
@@ -373,17 +274,17 @@ exports[`OakResourcesAccordion matches snapshot when closed 1`] = `
   border-color: #808080;
 }
 
-.c10:checked {
+.c9:checked {
   background: #222222;
   border-color: #222222;
 }
 
-.c10:disabled {
+.c9:disabled {
   pointer-events: none;
 }
 
-.c12:focus-visible {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
+.c11:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%);
 }
 
 .c6 {
@@ -392,119 +293,87 @@ exports[`OakResourcesAccordion matches snapshot when closed 1`] = `
 }
 
 .c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 1rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
-.c15 {
+.c13 {
   pointer-events: none;
   opacity: 0;
 }
 
-input:checked + .c13 {
+input:checked+.c13 {
   opacity: 1;
 }
 
-.c21 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+.c19 {
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   margin-right: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
   min-width: 0;
 }
 
-.c21:hover .chevron-icon {
-  -webkit-filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
+.c19:hover .chevron-icon {
   filter: invert(34%) sepia(0%) saturate(698%) hue-rotate(158deg) brightness(95%) contrast(89%);
 }
 
-.c21:focus-visible .focus-outline {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+.c19:focus-visible .focus-outline {
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
-.c37 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
+.c35 {
   flex: 1;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
-.c37:has(input:disabled) {
+.c35:has(input:disabled) {
   cursor: default;
 }
 
-.c37:has(input:disabled) #resource-card-title {
-  -webkit-text-decoration: none;
+.c35:has(input:disabled) #resource-card-title {
   text-decoration: none;
 }
 
-.c36:has(input:focus-visible) {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+.c34:has(input:focus-visible) {
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
-@media (hover:hover) {
-  .c10:hover:not(:disabled) {
+@media (hover: hover) {
+  .c9:hover:not(:disabled) {
     border-color: #222222;
   }
 }
 
-@media (hover:hover) {
-  .c11:hover:not(.c9:checked):not(.c9:disabled)::after {
+@media (hover: hover) {
+  .c10:hover:not(.c10:checked):not(.c10:disabled)::after {
     content: "";
     position: absolute;
     top: 50%;
     left: 50%;
     width: 60%;
     height: 60%;
-    -webkit-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     border-radius: 0.125rem;
     background: #222222;
   }
 }
 
-@media (hover:hover) {
-  .c36:hover:not(:has(input:disabled),:active) {
+@media (hover: hover) {
+  .c34:hover:not(:has(input:disabled), :active) {
     background: #f2f2f2;
   }
 
-  .c36:hover:not(:has(input:disabled),:active) #resource-card-title {
-    -webkit-text-decoration: underline;
+  .c34:hover:not(:has(input:disabled), :active) #resource-card-title {
     text-decoration: underline;
   }
 
-  .c36:active:not(:has(input:disabled)) #resource-card-title {
-    -webkit-text-decoration: underline;
+  .c34:active:not(:has(input:disabled)) #resource-card-title {
     text-decoration: underline;
   }
 }
@@ -532,21 +401,21 @@ input:checked + .c13 {
             >
               <input
                 aria-labelledby="resources-accordion-heading"
-                class="c9 c10 c11 c12"
+                class="c9 c10 c11"
                 id="select-all"
                 name="select-all"
                 type="checkbox"
                 value=""
               />
               <div
-                class="c13 c14 c15"
+                class="c12 c13"
               >
                 <span
-                  class="c16"
+                  class="c14"
                 >
                   <img
                     alt=""
-                    class="c17"
+                    class="c15"
                     data-nimg="fill"
                     decoding="async"
                     loading="lazy"
@@ -560,27 +429,27 @@ input:checked + .c13 {
         </div>
         <button
           aria-expanded="false"
-          class="c18 c19 c20  c21"
+          class="c16 c17 c18 c19"
           id="test-downloads-accordion"
           type="button"
         >
           <div
-            class="c22 c23"
+            class="c20 c21"
           >
             <div
-              class="c22 c24"
+              class="c20 c22"
             >
               <h2
-                class="c25"
+                class="c23"
                 id="resources-accordion-heading"
               >
                 Select all resources
               </h2>
               <div
-                class="c26"
+                class="c24"
               >
                 <p
-                  class="c27"
+                  class="c25"
                 >
                   Slides, quizzes, worksheet, additional materials
                 </p>
@@ -588,15 +457,15 @@ input:checked + .c13 {
             </div>
           </div>
           <div
-            class="c28 focus-outline"
+            class="c26 focus-outline"
           >
             <span
-              class="c29 chevron-icon"
+              class="c27 chevron-icon"
               style="transform: none; transition: all 0.3s ease 0s;"
             >
               <img
                 alt="Show all resources"
-                class="c30"
+                class="c28"
                 data-nimg="fill"
                 decoding="async"
                 loading="lazy"
@@ -609,35 +478,35 @@ input:checked + .c13 {
       </div>
     </div>
     <div
-      class="c31"
+      class="c29"
     >
       <div
         aria-label="Resource list"
-        class="c32"
+        class="c30"
         hidden=""
         role="region"
       >
         <div
-          class="c22 c33"
+          class="c20 c31"
         >
           <div
-            class="c34 c35 c36"
+            class="c32 c33 c34"
           >
             <label
-              class="c37"
+              class="c35"
             >
               <div
-                class="c22 c38"
+                class="c20 c36"
               >
                 <div
-                  class="c39 c40"
+                  class="c37 c38"
                 >
                   <span
-                    class="c41"
+                    class="c39"
                   >
                     <img
                       alt=""
-                      class="c30"
+                      class="c28"
                       data-nimg="fill"
                       decoding="async"
                       loading="lazy"
@@ -647,24 +516,24 @@ input:checked + .c13 {
                   </span>
                 </div>
                 <div
-                  class="c42 c43"
+                  class="c40 c41"
                 >
                   <div
-                    class="c44"
+                    class="c42"
                     id="resource-card-title"
                   >
                     Lesson plan
                   </div>
                   <div
-                    class="c45"
+                    class="c43"
                   >
                     245KB
                   </div>
                   <div
-                    class="c22 c46"
+                    class="c20 c44"
                   >
                     <div
-                      class="c45"
+                      class="c43"
                     >
                       PDF
                     </div>
@@ -672,30 +541,30 @@ input:checked + .c13 {
                 </div>
               </div>
               <div
-                class="c22 c35"
+                class="c20 c33"
               >
                 <div
-                  class="c47 c3"
+                  class="c45 c3"
                 >
                   <div
                     class="c8"
                   >
                     <input
-                      class="c9 c10 c11 c12"
+                      class="c9 c10 c11"
                       id="lesson-plan"
                       name="default"
                       type="checkbox"
                       value="lesson-plan"
                     />
                     <div
-                      class="c13 c14 c15"
+                      class="c12 c13"
                     >
                       <span
-                        class="c16"
+                        class="c14"
                       >
                         <img
                           alt=""
-                          class="c17"
+                          class="c15"
                           data-nimg="fill"
                           decoding="async"
                           loading="lazy"
@@ -710,23 +579,23 @@ input:checked + .c13 {
             </label>
           </div>
           <div
-            class="c34 c35 c36"
+            class="c32 c33 c34"
           >
             <label
-              class="c37"
+              class="c35"
             >
               <div
-                class="c22 c38"
+                class="c20 c36"
               >
                 <div
-                  class="c39 c40"
+                  class="c37 c38"
                 >
                   <span
-                    class="c41"
+                    class="c39"
                   >
                     <img
                       alt=""
-                      class="c30"
+                      class="c28"
                       data-nimg="fill"
                       decoding="async"
                       loading="lazy"
@@ -736,24 +605,24 @@ input:checked + .c13 {
                   </span>
                 </div>
                 <div
-                  class="c42 c43"
+                  class="c40 c41"
                 >
                   <div
-                    class="c44"
+                    class="c42"
                     id="resource-card-title"
                   >
                     Lesson presentation
                   </div>
                   <div
-                    class="c45"
+                    class="c43"
                   >
                     1.2MB
                   </div>
                   <div
-                    class="c22 c46"
+                    class="c20 c44"
                   >
                     <div
-                      class="c45"
+                      class="c43"
                     >
                       PPTX
                     </div>
@@ -761,30 +630,30 @@ input:checked + .c13 {
                 </div>
               </div>
               <div
-                class="c22 c35"
+                class="c20 c33"
               >
                 <div
-                  class="c47 c3"
+                  class="c45 c3"
                 >
                   <div
                     class="c8"
                   >
                     <input
-                      class="c9 c10 c11 c12"
+                      class="c9 c10 c11"
                       id="presentation"
                       name="default"
                       type="checkbox"
                       value="presentation"
                     />
                     <div
-                      class="c13 c14 c15"
+                      class="c12 c13"
                     >
                       <span
-                        class="c16"
+                        class="c14"
                       >
                         <img
                           alt=""
-                          class="c17"
+                          class="c15"
                           data-nimg="fill"
                           decoding="async"
                           loading="lazy"

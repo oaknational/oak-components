@@ -147,6 +147,7 @@ export const OakUnitListOptionalityItem = (
     onSave,
     getIsSaved,
     getIsSaving,
+    yearTitle,
     ...rest
   } = props;
 

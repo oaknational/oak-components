@@ -3,12 +3,12 @@ import styled from "styled-components";
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
-import { borderStyle } from "@/styles/utils/borderStyle";
+import { borderStyle, BorderStyleProps } from "@/styles/utils/borderStyle";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("borderStyle", () => {
   test("should correctly handle prop 'borderStyle' as string", async () => {
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<BorderStyleProps>`
       ${borderStyle}
     `;
     const { getByTestId } = render(
@@ -17,7 +17,7 @@ describe("borderStyle", () => {
     expect(getByTestId("test")).toHaveStyle("border: 0.063rem solid;");
   });
   test("should correctly handle prop 'bv'", async () => {
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<BorderStyleProps>`
       ${borderStyle}
     `;
     const { getByTestId } = render(
@@ -27,7 +27,7 @@ describe("borderStyle", () => {
     expect(getByTestId("test")).toHaveStyle("border-bottom: 0.063rem solid;");
   });
   test("should correctly handle prop 'bh'", async () => {
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<BorderStyleProps>`
       ${borderStyle}
     `;
     const { getByTestId } = render(
@@ -58,7 +58,7 @@ describe("borderStyle", () => {
       [prop]: value,
     };
 
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<BorderStyleProps>`
       ${borderStyle}
     `;
     const { getByTestId } = render(
@@ -68,7 +68,7 @@ describe("borderStyle", () => {
     expect(getByTestId("test")).toHaveStyle(expected);
   });
   test("should correctly handle prop 'borderColor'", async () => {
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<BorderStyleProps>`
       ${borderStyle}
     `;
     const { getByTestId } = renderWithTheme(
@@ -83,7 +83,7 @@ describe("borderStyle", () => {
     expect(getByTestId("test")).toHaveStyle("border-color: #222222");
   });
   test("should correctly handle prop 'borderRadius'", async () => {
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<BorderStyleProps>`
       ${borderStyle}
     `;
     const { getByTestId } = renderWithTheme(

@@ -15,12 +15,12 @@ import { OakIcon, OakIconName } from "@/components/images-and-icons/OakIcon";
 import { OakLoadingSpinner } from "@/components/messaging-and-feedback/OakLoadingSpinner";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import {
-  PositionStyleProps,
   positionStyle,
+  PositionStyleProps,
 } from "@/styles/utils/positionStyle";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { OakUiRoleToken, OakDropShadowToken } from "@/styles";
-import { SizeStyleProps, sizeStyle } from "@/styles/utils/sizeStyle";
+import { SizeStyleProps } from "@/styles/utils/sizeStyle";
 
 export type InternalShadowRoundButtonProps = Omit<
   InternalButtonProps,
@@ -46,19 +46,16 @@ export type InternalShadowRoundButtonProps = Omit<
   disabledIconColor?: OakRoundIconProps["$colorFilter"];
   defaultIconBorderColor?: OakUiRoleToken;
   disabledIconBorderColor?: OakUiRoleToken;
-  width?: SizeStyleProps["$width"];
-  maxWidth?: SizeStyleProps["$maxWidth"];
   iconBackgroundSize: SizeStyleProps["$width"];
   iconSize: SizeStyleProps["$width"];
   hoverDropShadow?: OakDropShadowToken | null;
 } & PositionStyleProps;
 
 const StyledInternalButton = styled(InternalButton)<
-  InternalShadowRoundButtonProps & SizeStyleProps
+  Partial<InternalShadowRoundButtonProps>
 >`
   display: inline-block;
   ${positionStyle}
-  ${sizeStyle}
   ${(props) => css`
     &:hover {
       text-decoration: underline;
@@ -86,30 +83,30 @@ const StyledButtonWrapper = styled(OakFlex)<{
   $hoverDropShadow: OakDropShadowToken | null;
 }>`
   ${(props) => css`
-    > :first-child:focus-visible .shadow {
+    > :first-of-type:focus-visible .shadow {
       box-shadow:
         ${parseDropShadow("drop-shadow-centered-lemon")},
         ${parseDropShadow("drop-shadow-centered-grey")};
     }
-    > :first-child:hover .shadow {
+    > :first-of-type:hover .shadow {
       box-shadow: ${parseDropShadow(
         props.$hoverDropShadow /*"drop-shadow-lemon"*/,
       )};
     }
-    > :first-child:active .shadow {
+    > :first-of-type:active .shadow {
       box-shadow:
         ${parseDropShadow("drop-shadow-lemon")},
         ${parseDropShadow("drop-shadow-grey")};
     }
   `}
   ${(props) => css`
-    > :first-child:disabled .icon-container {
+    > :first-of-type:disabled .icon-container {
       background: ${parseColor(props.$disabledIconBackground)};
     }
-    > :first-child:hover .icon-container {
+    > :first-of-type:hover .icon-container {
       background: ${parseColor(props.$hoverIconBackground)};
     }
-    > :first-child:active .icon-container {
+    > :first-of-type:active .icon-container {
       background: ${parseColor(props.$defaultIconBackground)};
     }
   `}

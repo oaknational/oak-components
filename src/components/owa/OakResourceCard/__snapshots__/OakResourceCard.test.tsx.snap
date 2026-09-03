@@ -45,9 +45,6 @@ exports[`OakResourceCard matches snapshot with fileSizeSlot 1`] = `
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.5rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
@@ -57,9 +54,6 @@ exports[`OakResourceCard matches snapshot with fileSizeSlot 1`] = `
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
@@ -75,7 +69,7 @@ exports[`OakResourceCard matches snapshot with fileSizeSlot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c23 {
+.c21 {
   position: absolute;
   top: 0rem;
   left: 0rem;
@@ -85,7 +79,7 @@ exports[`OakResourceCard matches snapshot with fileSizeSlot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c25 {
+.c23 {
   position: relative;
   width: 100%;
   min-width: 100%;
@@ -96,87 +90,42 @@ exports[`OakResourceCard matches snapshot with fileSizeSlot 1`] = `
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
   align-items: stretch;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
 .c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
   align-self: stretch;
 }
 
 .c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   gap: 0.25rem;
 }
 
 .c14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 0.5rem;
 }
 
 .c16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
-.c19 {
+.c18 {
   -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   cursor: pointer;
   margin: 0;
@@ -189,46 +138,40 @@ exports[`OakResourceCard matches snapshot with fileSizeSlot 1`] = `
   border-color: #808080;
 }
 
-.c19:checked {
+.c18:checked {
   background: #222222;
   border-color: #222222;
 }
 
-.c19:disabled {
+.c18:disabled {
   pointer-events: none;
 }
 
-.c21:focus-visible {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
+.c20:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%);
 }
 
 .c9 {
   object-fit: contain;
 }
 
-.c26 {
-  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+.c24 {
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   object-fit: contain;
 }
 
-.c24 {
+.c22 {
   pointer-events: none;
   opacity: 0;
 }
 
-input:checked + .c22 {
+input:checked+.c22 {
   opacity: 1;
 }
 
 .c3 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
   flex: 1;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -237,48 +180,43 @@ input:checked + .c22 {
 }
 
 .c3:has(input:disabled) #resource-card-title {
-  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c2:has(input:focus-visible) {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
-@media (hover:hover) {
-  .c19:hover:not(:disabled) {
+@media (hover: hover) {
+  .c18:hover:not(:disabled) {
     border-color: #222222;
   }
 }
 
-@media (hover:hover) {
-  .c20:hover:not(.c18:checked):not(.c18:disabled)::after {
+@media (hover: hover) {
+  .c19:hover:not(.c19:checked):not(.c19:disabled)::after {
     content: "";
     position: absolute;
     top: 50%;
     left: 50%;
     width: 60%;
     height: 60%;
-    -webkit-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     border-radius: 0.125rem;
     background: #222222;
   }
 }
 
-@media (hover:hover) {
-  .c2:hover:not(:has(input:disabled),:active) {
+@media (hover: hover) {
+  .c2:hover:not(:has(input:disabled), :active) {
     background: #f2f2f2;
   }
 
-  .c2:hover:not(:has(input:disabled),:active) #resource-card-title {
-    -webkit-text-decoration: underline;
+  .c2:hover:not(:has(input:disabled), :active) #resource-card-title {
     text-decoration: underline;
   }
 
   .c2:active:not(:has(input:disabled)) #resource-card-title {
-    -webkit-text-decoration: underline;
     text-decoration: underline;
   }
 }
@@ -345,21 +283,21 @@ input:checked + .c22 {
             class="c17"
           >
             <input
-              class="c18 c19 c20 c21"
+              class="c18 c19 c20"
               id="checkbox-1"
               name="default"
               type="checkbox"
               value="Option 1"
             />
             <div
-              class="c22 c23 c24"
+              class="c21 c22"
             >
               <span
-                class="c25"
+                class="c23"
               >
                 <img
                   alt=""
-                  class="c26"
+                  class="c24"
                   data-nimg="fill"
                   decoding="async"
                   loading="lazy"
@@ -421,9 +359,6 @@ exports[`OakResourceCard matches snapshot without fileSizeSlot 1`] = `
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.5rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
@@ -433,9 +368,6 @@ exports[`OakResourceCard matches snapshot without fileSizeSlot 1`] = `
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
@@ -451,7 +383,7 @@ exports[`OakResourceCard matches snapshot without fileSizeSlot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c23 {
+.c21 {
   position: absolute;
   top: 0rem;
   left: 0rem;
@@ -461,7 +393,7 @@ exports[`OakResourceCard matches snapshot without fileSizeSlot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c25 {
+.c23 {
   position: relative;
   width: 100%;
   min-width: 100%;
@@ -472,87 +404,42 @@ exports[`OakResourceCard matches snapshot without fileSizeSlot 1`] = `
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
   align-items: stretch;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
 .c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
   align-self: stretch;
 }
 
 .c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   gap: 0.25rem;
 }
 
 .c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 0.5rem;
 }
 
 .c16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
-.c19 {
+.c18 {
   -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   cursor: pointer;
   margin: 0;
@@ -565,46 +452,40 @@ exports[`OakResourceCard matches snapshot without fileSizeSlot 1`] = `
   border-color: #808080;
 }
 
-.c19:checked {
+.c18:checked {
   background: #222222;
   border-color: #222222;
 }
 
-.c19:disabled {
+.c18:disabled {
   pointer-events: none;
 }
 
-.c21:focus-visible {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
+.c20:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%);
 }
 
 .c9 {
   object-fit: contain;
 }
 
-.c26 {
-  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+.c24 {
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   object-fit: contain;
 }
 
-.c24 {
+.c22 {
   pointer-events: none;
   opacity: 0;
 }
 
-input:checked + .c22 {
+input:checked+.c22 {
   opacity: 1;
 }
 
 .c3 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
   flex: 1;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -613,48 +494,43 @@ input:checked + .c22 {
 }
 
 .c3:has(input:disabled) #resource-card-title {
-  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c2:has(input:focus-visible) {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
-@media (hover:hover) {
-  .c19:hover:not(:disabled) {
+@media (hover: hover) {
+  .c18:hover:not(:disabled) {
     border-color: #222222;
   }
 }
 
-@media (hover:hover) {
-  .c20:hover:not(.c18:checked):not(.c18:disabled)::after {
+@media (hover: hover) {
+  .c19:hover:not(.c19:checked):not(.c19:disabled)::after {
     content: "";
     position: absolute;
     top: 50%;
     left: 50%;
     width: 60%;
     height: 60%;
-    -webkit-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     border-radius: 0.125rem;
     background: #222222;
   }
 }
 
-@media (hover:hover) {
-  .c2:hover:not(:has(input:disabled),:active) {
+@media (hover: hover) {
+  .c2:hover:not(:has(input:disabled), :active) {
     background: #f2f2f2;
   }
 
-  .c2:hover:not(:has(input:disabled),:active) #resource-card-title {
-    -webkit-text-decoration: underline;
+  .c2:hover:not(:has(input:disabled), :active) #resource-card-title {
     text-decoration: underline;
   }
 
   .c2:active:not(:has(input:disabled)) #resource-card-title {
-    -webkit-text-decoration: underline;
     text-decoration: underline;
   }
 }
@@ -716,21 +592,21 @@ input:checked + .c22 {
             class="c17"
           >
             <input
-              class="c18 c19 c20 c21"
+              class="c18 c19 c20"
               id="checkbox-1"
               name="default"
               type="checkbox"
               value="Option 1"
             />
             <div
-              class="c22 c23 c24"
+              class="c21 c22"
             >
               <span
-                class="c25"
+                class="c23"
               >
                 <img
                   alt=""
-                  class="c26"
+                  class="c24"
                   data-nimg="fill"
                   decoding="async"
                   loading="lazy"
@@ -792,9 +668,6 @@ exports[`OakResourceCard renders an editable tag when isEditable is true 1`] = `
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.5rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
@@ -804,9 +677,6 @@ exports[`OakResourceCard renders an editable tag when isEditable is true 1`] = `
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
@@ -821,9 +691,6 @@ exports[`OakResourceCard renders an editable tag when isEditable is true 1`] = `
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
 }
 
@@ -839,7 +706,7 @@ exports[`OakResourceCard renders an editable tag when isEditable is true 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c25 {
+.c23 {
   position: absolute;
   top: 0rem;
   left: 0rem;
@@ -849,7 +716,7 @@ exports[`OakResourceCard renders an editable tag when isEditable is true 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c27 {
+.c25 {
   position: relative;
   width: 100%;
   min-width: 100%;
@@ -860,98 +727,48 @@ exports[`OakResourceCard renders an editable tag when isEditable is true 1`] = `
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
   align-items: stretch;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
 .c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
   align-self: stretch;
 }
 
 .c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   gap: 0.25rem;
 }
 
 .c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 0.5rem;
 }
 
 .c16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-self: flex-end;
-  -ms-flex-item-align: end;
   align-self: flex-end;
   gap: 0.5rem;
 }
 
 .c18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
-.c21 {
+.c20 {
   -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   cursor: pointer;
   margin: 0;
@@ -964,46 +781,40 @@ exports[`OakResourceCard renders an editable tag when isEditable is true 1`] = `
   border-color: #808080;
 }
 
-.c21:checked {
+.c20:checked {
   background: #222222;
   border-color: #222222;
 }
 
-.c21:disabled {
+.c20:disabled {
   pointer-events: none;
 }
 
-.c23:focus-visible {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
+.c22:focus-visible {
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%);
 }
 
 .c9 {
   object-fit: contain;
 }
 
-.c28 {
-  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+.c26 {
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   object-fit: contain;
 }
 
-.c26 {
+.c24 {
   pointer-events: none;
   opacity: 0;
 }
 
-input:checked + .c24 {
+input:checked+.c24 {
   opacity: 1;
 }
 
 .c3 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
   flex: 1;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -1012,48 +823,43 @@ input:checked + .c24 {
 }
 
 .c3:has(input:disabled) #resource-card-title {
-  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c2:has(input:focus-visible) {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
-@media (hover:hover) {
-  .c21:hover:not(:disabled) {
+@media (hover: hover) {
+  .c20:hover:not(:disabled) {
     border-color: #222222;
   }
 }
 
-@media (hover:hover) {
-  .c22:hover:not(.c20:checked):not(.c20:disabled)::after {
+@media (hover: hover) {
+  .c21:hover:not(.c21:checked):not(.c21:disabled)::after {
     content: "";
     position: absolute;
     top: 50%;
     left: 50%;
     width: 60%;
     height: 60%;
-    -webkit-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     border-radius: 0.125rem;
     background: #222222;
   }
 }
 
-@media (hover:hover) {
-  .c2:hover:not(:has(input:disabled),:active) {
+@media (hover: hover) {
+  .c2:hover:not(:has(input:disabled), :active) {
     background: #f2f2f2;
   }
 
-  .c2:hover:not(:has(input:disabled),:active) #resource-card-title {
-    -webkit-text-decoration: underline;
+  .c2:hover:not(:has(input:disabled), :active) #resource-card-title {
     text-decoration: underline;
   }
 
   .c2:active:not(:has(input:disabled)) #resource-card-title {
-    -webkit-text-decoration: underline;
     text-decoration: underline;
   }
 }
@@ -1124,21 +930,21 @@ input:checked + .c24 {
             class="c19"
           >
             <input
-              class="c20 c21 c22 c23"
+              class="c20 c21 c22"
               id="checkbox-1"
               name="default"
               type="checkbox"
               value="Option 1"
             />
             <div
-              class="c24 c25 c26"
+              class="c23 c24"
             >
               <span
-                class="c27"
+                class="c25"
               >
                 <img
                   alt=""
-                  class="c28"
+                  class="c26"
                   data-nimg="fill"
                   decoding="async"
                   loading="lazy"

@@ -15,7 +15,7 @@ const childSubjects = [
   { subject: "Biology", subjectSlug: "biology" },
 ];
 
-function getTierSubjectValues(tier: string, childSubject?: string): void {
+function getTierSubjectValues(tier: string, childSubject: string | null): void {
   // This is for James to test!
   console.log({ tier, childSubject });
 }
