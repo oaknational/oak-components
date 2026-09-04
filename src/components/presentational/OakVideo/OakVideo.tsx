@@ -29,7 +29,7 @@ export type OakVideoProps = {
   /**
    * The transcript to display below the video.
    */
-  transcript?: PortableTextBlock[];
+  transcript?: PortableTextBlock[] | null;
   /**
    * Whether to show the transcript button.
    */
