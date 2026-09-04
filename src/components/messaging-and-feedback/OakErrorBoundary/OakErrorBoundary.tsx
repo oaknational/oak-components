@@ -3,7 +3,8 @@ import React, { Component, createContext, HTMLAttributes } from "react";
 import { BorderStyleProps } from "@/styles/utils/borderStyle";
 import { OakFlex } from "@/components/layout-and-structure";
 import { OakIcon } from "@/components/images-and-icons";
-import { OakHeading, OakP, OakSecondaryButton } from "@/index";
+import { OakHeading, OakP } from "@/components/typography";
+import { OakSecondaryButton } from "@/components/buttons";
 
 export const OakErrorBoundaryBorderColor = createContext<
   BorderStyleProps["$borderColor"]
