@@ -68,4 +68,45 @@ describe(OakInformativeModal, () => {
 
     expect(getByRole("textbox")).toHaveFocus();
   });
+
+  it("calls onActionClick when the action button is clicked", () => {
+    const onActionClickSpy = jest.fn();
+
+    const { getByText } = renderWithTheme(
+      <OakInformativeModal
+        isOpen
+        onClose={() => {}}
+        actionLabel="Action"
+        onActionClick={onActionClickSpy}
+      >
+        Modal content
+      </OakInformativeModal>,
+    );
+
+    act(() => {
+      fireEvent.click(getByText("Action"));
+    });
+
+    expect(onActionClickSpy).toHaveBeenCalled();
+  });
+
+  it("renders title when provided", () => {
+    const { getByText } = renderWithTheme(
+      <OakInformativeModal title="Example modal" isOpen onClose={() => {}}>
+        Modal content
+      </OakInformativeModal>,
+    );
+
+    expect(getByText("Example modal")).toBeVisible();
+  });
+
+  it("uses the title as the dialog's accessible label", () => {
+    const { getByRole } = renderWithTheme(
+      <OakInformativeModal title="Example modal" isOpen onClose={() => {}}>
+        Modal content
+      </OakInformativeModal>,
+    );
+
+    expect(getByRole("dialog")).toHaveAccessibleName("Example modal");
+  });
 });

@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from "@storybook/nextjs";
 import { useArgs } from "storybook/preview-api";
 import React, { Fragment } from "react";
+import { fn } from "storybook/test";
 
 import { OakInformativeModal } from "./OakInformativeModal";
 import { OakInformativeModalFooter } from "./OakInformativeModalFooter";
@@ -39,6 +40,10 @@ const meta: Meta<typeof OakInformativeModal> = {
         "footerSlot",
         "isOpen",
         "onClose",
+        "actionLabel",
+        "onActionClick",
+        "title",
+        "titleTag",
         "isLeftHandSide",
         "closeOnBackgroundClick",
       ],
@@ -146,5 +151,26 @@ export const LeftHandSide: Story = {
 export const CloseOnBackgroundClick: Story = {
   args: {
     closeOnBackgroundClick: true,
+  },
+};
+
+export const WithAction: Story = {
+  args: {
+    actionLabel: "Action",
+    onActionClick: fn(),
+  },
+};
+
+export const WithTitle: Story = {
+  args: {
+    title: "Modal title",
+  },
+};
+
+export const WithTitleAndAction: Story = {
+  args: {
+    title: "Modal title",
+    actionLabel: "Action",
+    onActionClick: fn(),
   },
 };
