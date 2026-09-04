@@ -4,7 +4,8 @@ import { Meta, StoryObj } from "@storybook/nextjs";
 import { OakResourceCard } from "./OakResourceCard";
 
 import { OakRadioGroup } from "@/components/form-elements/OakRadioGroup";
-import { OakFlex, OakGrid, oakIconNames } from "@/index";
+import { oakIconNames } from "@/components/images-and-icons";
+import { OakFlex, OakGrid } from "@/components/layout-and-structure";
 
 const meta = {
   component: OakResourceCard,
