@@ -40,7 +40,7 @@ export const Default: Story = {
   ),
 };
 
-export const withImage: Story = {
+export const WithImage: Story = {
   render: (args) => {
     return (
       <OakFlex

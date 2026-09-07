@@ -1,6 +1,6 @@
 {
   "name": "@oaknational/oak-components",
-  "version": "3.1.1",
+  "version": "3.14.3",
   "licence": "MIT",
   "packageManager": "pnpm@11.2.0",
   "description": "Shared components for Oak applications",
@@ -21,15 +21,16 @@
   },
   "sideEffects": false,
   "files": [
-    "./dist",
-    "./package.json",
-    "./README.md"
+    "dist",
+    "package.json",
+    "README.md"
   ],
   "scripts": {
     "build": "rollup -c rollup.config.ts --configPlugin typescript",
     "test": "jest --watch --collectCoverage=false",
     "test:snapshot": "jest --collectCoverage=false --updateSnapshot",
     "test:ci": "jest",
+    "test:storybook": "test-storybook",
     "check-types": "tsc",
     "format": "prettier '**/*.{j,t}{s,sx}' --write",
     "format:precommit": "prettier '**/*.{j,t}{s,sx}' --write",
@@ -51,7 +52,8 @@
     "next-cloudinary": ">=6.16.0",
     "react": ">=18.2.0",
     "react-dom": ">=18.2.0",
-    "styled-components": ">=5.3.11"
+    "styled-components": ">=5.3.11",
+    "@portabletext/react": ">=4.0.1"
   },
   "engines": {
     "node": "24",
@@ -68,6 +70,11 @@
     "url": "^0.11.4"
   },
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^8.0.1",
+    "@babel/preset-env": "^8.0.2",
+    "@babel/preset-react": "^8.0.1",
+    "@babel/preset-typescript": "^8.0.1",
+    "@babel/runtime": "^8.0.0",
     "@commitlint/cli": "^18.4.4",
     "@commitlint/config-conventional": "^18.4.4",
     "@rollup/plugin-commonjs": "^29.0.2",
@@ -83,6 +90,7 @@
     "@storybook/addon-onboarding": "9.1.20",
     "@storybook/addon-themes": "9.1.20",
     "@storybook/nextjs": "9.1.20",
+    "@storybook/test-runner": "^0.24.4",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",
@@ -100,6 +108,8 @@
     "@typescript-eslint/eslint-plugin": "^6.18.1",
     "@typescript-eslint/parser": "^6.18.1",
     "assert": "^2.1.0",
+    "babel-jest": "^30.4.1",
+    "babel-plugin-module-resolver": "^5.0.3",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.1",
@@ -117,8 +127,10 @@
     "jest-util": "^30.3.0",
     "jscodeshift": "^17.3.0",
     "knip": "^6.4.1",
+    "playwright": "^1.61.1",
     "prettier": "^3.8.3",
     "react": "^18.2.0",
+    "react-compiler-runtime": "^1.0.0",
     "react-dom": "^18.2.0",
     "rollup": "^4.60.1",
     "rollup-plugin-dts": "^6.4.1",

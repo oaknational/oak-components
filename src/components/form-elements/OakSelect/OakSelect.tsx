@@ -153,9 +153,6 @@ export function OakSelect({
         onChange={onChange}
         value={props.value}
       >
-        <button>
-          <selectedcontent></selectedcontent>
-        </button>
         {children}
       </NativeSelect>
       <IconUp

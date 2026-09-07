@@ -19,6 +19,10 @@ const FlexWithReset = styled(OakFlex)`
   padding: 0;
 `;
 
+type AccordionContentLabellingProps =
+  | { "aria-label": string; "aria-labelledby"?: never }
+  | { "aria-labelledby": string; "aria-label"?: never };
+
 /**
  *
  * Content which will appear and disappear
@@ -32,11 +36,11 @@ export const InternalAccordionContent = ({
   onScroll,
   ref,
   ...rest
-}: OakBoxProps & {
-  "aria-labelledby": string;
-  onScroll?: () => void;
-  ref?: React.MutableRefObject<null | HTMLDivElement>;
-}) => {
+}: OakBoxProps &
+  AccordionContentLabellingProps & {
+    onScroll?: () => void;
+    ref?: React.MutableRefObject<null | HTMLDivElement>;
+  }) => {
   const { isOpen } = useAccordionContext();
 
   return (

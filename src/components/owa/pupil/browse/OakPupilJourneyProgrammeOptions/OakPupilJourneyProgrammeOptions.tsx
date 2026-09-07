@@ -1,7 +1,7 @@
 import React from "react";
 
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
-import { OakHandDrawnHR } from "@/components/owa/OakHandDrawnHR";
+import { OakHandDrawnHR } from "@/components/images-and-icons/OakHandDrawnHR";
 
 export type OakPupilJourneyProgrammeOptionsProps = {
   children: React.ReactNode;

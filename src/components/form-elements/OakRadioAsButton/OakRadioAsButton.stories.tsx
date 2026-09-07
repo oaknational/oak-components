@@ -24,6 +24,9 @@ const argTypes: Meta<typeof OakRadioAsButton>["argTypes"] = {
   disabled: {
     control: { type: "boolean" },
   },
+  isSubdued: {
+    control: { type: "boolean" },
+  },
   displayValue: {
     control: { type: "text" },
   },
@@ -44,6 +47,7 @@ const meta: Meta<typeof OakRadioAsButton> = {
         "variant",
         "colorScheme",
         "disabled",
+        "isSubdued",
         "displayValue",
         "value",
         "icon",
@@ -82,7 +86,7 @@ function createStatesGridForVariant(
       controls: { disable: true },
     },
     render: () => {
-      const states = ["default", "checked", "disabled"] as const;
+      const states = ["default", "subdued", "checked", "disabled"] as const;
 
       const renderCell = (opts: {
         colorScheme: (typeof colorSchemes)[number];
@@ -94,6 +98,7 @@ function createStatesGridForVariant(
           displayValue: "Label",
           colorScheme,
           disabled: state === "disabled",
+          isSubdued: state === "subdued",
         };
 
         return (

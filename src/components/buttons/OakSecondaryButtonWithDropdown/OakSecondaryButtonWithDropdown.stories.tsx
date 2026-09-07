@@ -109,7 +109,7 @@ export const ButtonWithDropDown: DropdownNavStory = {
   ),
 };
 
-export const withIcons: DropdownNavStory = {
+export const WithIcons: DropdownNavStory = {
   render: (args) => (
     <OakBox $height={"spacing-240"}>
       <OakSecondaryButtonWithDropdown {...args}>

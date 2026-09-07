@@ -12,7 +12,7 @@ import { OakSpan } from "@/components/typography/OakSpan";
 import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
 import { OakUiRoleToken } from "@/styles/theme/color";
 import { parseColor } from "@/styles/helpers/parseColor";
-import { OakPromoTag } from "@/components/owa/OakPromoTag";
+import { OakPromoTag } from "@/components/messaging-and-feedback/OakPromoTag";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { InternalStyledSvg } from "@/components/internal-components/InternalStyledSvg";

@@ -1,6 +1,7 @@
 # Node files
 node_modules
 package-lock.json
+pnpm-lock.yaml
 
 # Generated files
 storybook-static

@@ -2,19 +2,19 @@ import React, { useState } from "react";
 import { Meta, StoryObj } from "@storybook/nextjs";
 
 import {
-  OakDownloadsAccordion,
-  OakDownloadsAccordionProps,
-} from "./OakDownloadsAccordion";
+  OakResourcesAccordion,
+  OakResourcesAccordionProps,
+} from "./OakResourcesAccordion";
 
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
-import { OakDownloadCard } from "@/components/owa/OakDownloadCard";
+import { OakResourceCard } from "@/components/owa/OakResourceCard";
 import { colorArgTypes } from "@/storybook-helpers/colorStyleHelpers";
 import { borderArgTypes } from "@/storybook-helpers/borderStyleHelpers";
 
-const meta: Meta<typeof OakDownloadsAccordion> = {
-  component: OakDownloadsAccordion,
+const meta: Meta<typeof OakResourcesAccordion> = {
+  component: OakResourcesAccordion,
   tags: ["autodocs"],
-  title: "OWA/teacher/OakDownloadsAccordion",
+  title: "OWA/teacher/OakResourcesAccordion",
   parameters: {
     controls: {
       include: ["initialOpen"],
@@ -38,15 +38,15 @@ const meta: Meta<typeof OakDownloadsAccordion> = {
 
 export default meta;
 
-type Story = StoryObj<typeof OakDownloadsAccordion>;
+type Story = StoryObj<typeof OakResourcesAccordion>;
 
-const WithState = (args: OakDownloadsAccordionProps) => {
+const WithState = (args: OakResourcesAccordionProps) => {
   const [checked, setChecked] = useState(false);
   const handleChecked = () => {
     setChecked((prev) => !prev);
   };
   return (
-    <OakDownloadsAccordion
+    <OakResourcesAccordion
       {...args}
       selectAllChecked={checked}
       handleToggleSelectAll={handleChecked}
@@ -57,32 +57,32 @@ const WithState = (args: OakDownloadsAccordionProps) => {
 export const Default: Story = {
   args: {
     id: "oak-downloads-accordion",
-    downloadsText: "Slides, quizzes, worksheet, additional materials",
+    subheading: "Slides, quizzes, worksheet, additional materials",
     children: (
       <OakFlex $flexDirection="column" $gap="spacing-16">
-        <OakDownloadCard
+        <OakResourceCard
           id="lesson-plan"
           value="lesson-plan"
           iconName="book-steps"
           title="Lesson plan"
-          format="PDF"
-          fileSize="245KB"
+          description="PDF"
+          fileSize="245 KB"
         />
-        <OakDownloadCard
+        <OakResourceCard
           id="presentation"
           value="presentation"
           iconName="slide-deck"
           title="Lesson presentation"
-          format="PPTX"
-          fileSize="1.2MB"
+          description="PPTX"
+          fileSize="1.2 MB"
         />
-        <OakDownloadCard
+        <OakResourceCard
           id="worksheet"
           value="worksheet"
           iconName="worksheet"
           title="Student worksheet"
-          format="PDF"
-          fileSize="180KB"
+          description="PDF"
+          fileSize="180 KB"
         />
       </OakFlex>
     ),

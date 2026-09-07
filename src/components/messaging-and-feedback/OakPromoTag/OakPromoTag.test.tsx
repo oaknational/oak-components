@@ -11,4 +11,10 @@ describe(OakPromoTag, () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  it("matches snapshot for inverted variant", () => {
+    const { container } = renderWithTheme(<OakPromoTag variant="inverted" />);
+
+    expect(container).toMatchSnapshot();
+  });
 });

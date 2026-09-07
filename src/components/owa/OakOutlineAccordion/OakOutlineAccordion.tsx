@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
 
-import { OakHandDrawnHR } from "@/components/owa/OakHandDrawnHR";
+import { OakHandDrawnHR } from "@/components/images-and-icons/OakHandDrawnHR";
 import { InternalChevronAccordion } from "@/components/internal-components/InternalChevronAccordion";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { PositionStyleProps } from "@/styles/utils/positionStyle";

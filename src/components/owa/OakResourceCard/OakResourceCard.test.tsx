@@ -2,21 +2,21 @@ import React from "react";
 import "@testing-library/jest-dom";
 import { act, fireEvent } from "@testing-library/react";
 
-import { OakDownloadCard } from "./OakDownloadCard";
+import { OakResourceCard } from "./OakResourceCard";
 
 import { OakRadioGroup } from "@/components/form-elements/OakRadioGroup";
 import { generateOakIconURL } from "@/components/images-and-icons/OakIcon";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
-describe("OakDownloadCard", () => {
+describe("OakResourceCard", () => {
   it("renders a checkbox", () => {
     const { getByTestId } = renderWithTheme(
-      <OakDownloadCard
+      <OakResourceCard
         id="checkbox-1"
         value="Option 1"
         data-testid="test-1"
         title={"TITLE"}
-        format={"FORMAT"}
+        description={"DESCRIPTION"}
         iconName={"books"}
       />,
     );
@@ -25,11 +25,11 @@ describe("OakDownloadCard", () => {
 
   it("matches snapshot without fileSizeSlot", () => {
     const { container } = renderWithTheme(
-      <OakDownloadCard
+      <OakResourceCard
         id="checkbox-1"
         value="Option 1"
         title={"TITLE"}
-        format={"FORMAT"}
+        description={"DESCRIPTION"}
         iconName={"books"}
       />,
     );
@@ -38,11 +38,11 @@ describe("OakDownloadCard", () => {
 
   it("matches snapshot with fileSizeSlot", () => {
     const { container } = renderWithTheme(
-      <OakDownloadCard
+      <OakResourceCard
         id="checkbox-1"
         value="Option 1"
         title={"TITLE"}
-        format={"FORMAT"}
+        description={"DESCRIPTION"}
         iconName={"books"}
         fileSize={"FILE_SIZE"}
       />,
@@ -50,13 +50,42 @@ describe("OakDownloadCard", () => {
     expect(container).toMatchSnapshot();
   });
 
-  it("renders multiple icons when iconName is an array", () => {
-    const { container } = renderWithTheme(
-      <OakDownloadCard
+  it("renders a list of formats when description is an array", () => {
+    const { getByText } = renderWithTheme(
+      <OakResourceCard
         id="checkbox-1"
         value="Option 1"
         title={"TITLE"}
-        format={"FORMAT"}
+        description={["FORMAT1", "FORMAT2"]}
+        iconName={"books"}
+      />,
+    );
+    expect(getByText("FORMAT1")).toHaveRole("listitem");
+    expect(getByText("FORMAT2")).toHaveRole("listitem");
+  });
+
+  it("renders an editable tag when isEditable is true", () => {
+    const { container, getByText } = renderWithTheme(
+      <OakResourceCard
+        id="checkbox-1"
+        value="Option 1"
+        title={"TITLE"}
+        description={"DESCRIPTION"}
+        iconName={"books"}
+        isEditable={true}
+      />,
+    );
+    expect(container).toMatchSnapshot();
+    expect(getByText("Editable")).toBeInTheDocument();
+  });
+
+  it("renders multiple icons when iconName is an array", () => {
+    const { container } = renderWithTheme(
+      <OakResourceCard
+        id="checkbox-1"
+        value="Option 1"
+        title={"TITLE"}
+        description={"DESCRIPTION"}
         iconName={["books", "slide-deck"]}
       />,
     );
@@ -75,11 +104,11 @@ describe("OakDownloadCard", () => {
 
   it("has a role of checkbox", () => {
     const { getByRole } = renderWithTheme(
-      <OakDownloadCard
+      <OakResourceCard
         id="checkbox-1"
         value="Option 1"
         title={"TITLE"}
-        format={"FORMAT"}
+        description={"DESCRIPTION"}
         iconName={"books"}
       />,
     );
@@ -89,11 +118,11 @@ describe("OakDownloadCard", () => {
 
   it("can be checked and unchecked through clicking", () => {
     const { getByRole } = renderWithTheme(
-      <OakDownloadCard
+      <OakResourceCard
         id="checkbox-1"
         value="Option 1"
         title={"TITLE"}
-        format={"FORMAT"}
+        description={"DESCRIPTION"}
         iconName={"books"}
       />,
     );
@@ -106,12 +135,12 @@ describe("OakDownloadCard", () => {
   it("calls onChange method when checked and unchecked", () => {
     const onChange = jest.fn();
     const { getByRole } = renderWithTheme(
-      <OakDownloadCard
+      <OakResourceCard
         id="checkbox-1"
         value="Option 1"
         onChange={onChange}
         title={"TITLE"}
-        format={"FORMAT"}
+        description={"DESCRIPTION"}
         iconName={"filter"}
       />,
     );
@@ -124,13 +153,13 @@ describe("OakDownloadCard", () => {
     const onFocus = jest.fn();
     const onBlur = jest.fn();
     const { getByRole } = renderWithTheme(
-      <OakDownloadCard
+      <OakResourceCard
         id="checkbox-1"
         value="Option 1"
         onFocus={onFocus}
         onBlur={onBlur}
         title={"TITLE"}
-        format={"FORMAT"}
+        description={"DESCRIPTION"}
         iconName={"books"}
       />,
     );
@@ -142,11 +171,11 @@ describe("OakDownloadCard", () => {
 
   it("renders a radio when isRadio is true", () => {
     const { getByRole } = renderWithTheme(
-      <OakDownloadCard
+      <OakResourceCard
         id="radio-1"
         value="Option 1"
         title={"TITLE"}
-        format={"FORMAT"}
+        description={"DESCRIPTION"}
         iconName={"books"}
         isRadio={true}
       />,
@@ -161,11 +190,11 @@ describe("OakDownloadCard", () => {
 
     const { getByRole } = renderWithTheme(
       <OakRadioGroup name="download-card-radio-group" onChange={onGroupChange}>
-        <OakDownloadCard
+        <OakResourceCard
           id="radio-1"
           value="Option 1"
           title={"TITLE"}
-          format={"FORMAT"}
+          description={"DESCRIPTION"}
           iconName={"books"}
           isRadio={true}
           onChange={onCardChange}

@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect, ElementType } from "react";
 
+import { OakButtonWithDropdownProvider } from "./OakButtonWithDropdownProvider";
+
 import {
   OakSecondaryButton,
   OakSecondaryButtonProps,
@@ -38,6 +40,12 @@ export type OakButtonWithDropdownProps = {
   >;
   flexWidth?: ResponsiveValues<OakCombinedSpacingToken | null | undefined>;
   closeOnChange?: boolean;
+  dropdownProps?: {
+    /** The ARIA role for the dropdown panel. Defaults to "menu". */
+    role?: React.AriaRole;
+    /** The ARIA label for the dropdown panel. Defaults to undefined (no label). */
+    "aria-label"?: string;
+  };
 };
 
 /**
@@ -59,9 +67,14 @@ export const OakButtonWithDropdown = ({
   dropdownTopSpacing = "spacing-56",
   flexWidth,
   closeOnChange,
+  dropdownProps = {
+    role: "menu",
+  },
 }: OakButtonWithDropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
+
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const wasOpen = useRef(false);
 
   // Get all focusable elements within the dropdown
   const getFocusableElements = () => {
@@ -79,7 +92,7 @@ export const OakButtonWithDropdown = ({
     }
   };
 
-  // Handle clicks  the dropdown to close it
+  // Handle clicks on the dropdown to close it
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (!isOpen) return;
@@ -144,6 +157,13 @@ export const OakButtonWithDropdown = ({
       document.addEventListener("keydown", handleKeyDown);
     }
 
+    if (wasOpen.current && !isOpen) {
+      const timeoutId = setTimeout(() => getFocusableElements()[0]?.focus(), 0);
+      wasOpen.current = isOpen;
+      return () => clearTimeout(timeoutId);
+    }
+    wasOpen.current = isOpen;
+
     return () => {
       document.removeEventListener("mousedown", handleClick);
       document.removeEventListener("keydown", handleKeyDown);
@@ -176,7 +196,7 @@ export const OakButtonWithDropdown = ({
             disabled={disabled}
             width="max-content"
             aria-expanded={isOpen}
-            aria-haspopup="menu"
+            aria-haspopup={dropdownProps.role === "menu" ? "menu" : undefined}
             aria-label={primaryActionText}
             data-testid={
               dataTestId ? `${dataTestId}-primary-action` : undefined
@@ -199,12 +219,17 @@ export const OakButtonWithDropdown = ({
             $position="absolute"
             $top={dropdownTopSpacing}
             $zIndex="modal-close-button"
-            role="menu"
-            aria-label="Dropdown menu. Use arrow keys to navigate, Tab to cycle through items, Escape to close."
+            role={dropdownProps?.["role"] ?? "menu"}
+            aria-label={
+              dropdownProps["aria-label"] ??
+              "Dropdown menu. Use arrow keys to navigate, Tab to cycle through items, Escape to close."
+            }
             data-testid={dataTestId ? `${dataTestId}-dropdown` : undefined}
           >
             <OakFlex $flexDirection="column" $gap={"spacing-8"}>
-              {children}
+              <OakButtonWithDropdownProvider onClose={() => setIsOpen(false)}>
+                {children}
+              </OakButtonWithDropdownProvider>
             </OakFlex>
           </OakBox>
         )}
