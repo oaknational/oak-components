@@ -53,6 +53,9 @@ const meta: Meta<typeof OakCard> = {
     hoverBackground: {
       options: oakUiRoleTokens,
     },
+    showImage: {
+      type: "boolean",
+    },
   },
   parameters: {
     controls: {
@@ -74,6 +77,7 @@ const meta: Meta<typeof OakCard> = {
         "linkText",
         "linkIconName",
         "hoverBackground",
+        "showImage",
       ],
     },
   },
