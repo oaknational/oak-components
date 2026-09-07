@@ -2,9 +2,7 @@
 
 exports[`InternalTextInput matches snapshot 1`] = `
 .c0 {
-  -webkit-appearance: none !important;
-  -moz-appearance: none !important;
-  appearance: none !important;
+  appearance: none!important;
   border: 0;
   border-radius: 0;
   border-color: transparent;
@@ -15,18 +13,6 @@ exports[`InternalTextInput matches snapshot 1`] = `
   color: inherit;
 }
 
-.c0::-webkit-input-placeholder {
-  color: #575757;
-}
-
-.c0::-moz-placeholder {
-  color: #575757;
-}
-
-.c0:-ms-input-placeholder {
-  color: #575757;
-}
-
 .c0::placeholder {
   color: #575757;
 }
@@ -35,8 +21,6 @@ exports[`InternalTextInput matches snapshot 1`] = `
 .c0::-webkit-search-cancel-button,
 .c0::-webkit-search-results-button,
 .c0::-webkit-search-results-decoration {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 
@@ -44,7 +28,7 @@ exports[`InternalTextInput matches snapshot 1`] = `
   cursor: not-allowed;
 }
 
-@media (max-width:750px) {
+@media (max-width: 750px) {
   .c0 {
     font-size: 16px;
   }

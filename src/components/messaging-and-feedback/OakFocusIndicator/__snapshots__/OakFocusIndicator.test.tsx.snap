@@ -9,21 +9,21 @@ exports[`OakFocusIndicator default render 1`] = `
   box-shadow: none;
 }
 
-.c1:has(a:hover,button:hover) {
+.c1:has(a:hover, button:hover) {
   box-shadow: none;
 }
 
-.c1:has( a, button) {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
+.c1:has(   a,   button ) {
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
-.c1:has( a, button)  a,
-.c1:has( a, button) button {
+.c1:has(   a,   button ) a,
+.c1:has(   a,   button ) button {
   outline: none;
 }
 
-.c1:has(a:active,button:active) {
-  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%),0.25rem 0.25rem 0 rgba(87,87,87,100%);
+.c1:has(a:active, button:active) {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%),0.25rem 0.25rem 0 rgba(87, 87, 87, 100%);
 }
 
 <body>
@@ -37,6 +37,7 @@ exports[`OakFocusIndicator default render 1`] = `
 
 exports[`OakFocusIndicator renders correctly with props as='li' 1`] = `
 .c0 {
+  box-shadow: 0 0 0 0.3rem rgba(87, 87, 87, 100%);
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -44,24 +45,24 @@ exports[`OakFocusIndicator renders correctly with props as='li' 1`] = `
   list-style: none;
   margin: 0;
   padding: 0;
-  box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
-.c1:has(a:hover,button:hover) {
+.c1:has(a:hover, button:hover) {
   background-color: #ffffff;
-  box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
-.c1:has( a, button) {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
+.c1:has(   a,   button ) {
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
-.c1:has( a, button)  a,
-.c1:has( a, button) button {
+.c1:has(   a,   button ) a,
+.c1:has(   a,   button ) button {
   outline: none;
 }
 
-.c1:has(a:active,button:active) {
+.c1:has(a:active, button:active) {
   box-shadow: none;
 }
 
@@ -74,28 +75,29 @@ exports[`OakFocusIndicator renders correctly with props as='li' 1`] = `
 
 exports[`OakFocusIndicator renders correctly with props set 1`] = `
 .c0 {
+  box-shadow: 0 0 0 0.3rem rgba(87, 87, 87, 100%);
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c1 {
-  box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
-.c1:has(a:hover,button:hover) {
+.c1:has(a:hover, button:hover) {
   background-color: #ffffff;
-  box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
-.c1:has( a, button) {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
+.c1:has(   a,   button ) {
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
-.c1:has( a, button)  a,
-.c1:has( a, button) button {
+.c1:has(   a,   button ) a,
+.c1:has(   a,   button ) button {
   outline: none;
 }
 
-.c1:has(a:active,button:active) {
+.c1:has(a:active, button:active) {
   box-shadow: none;
 }
 

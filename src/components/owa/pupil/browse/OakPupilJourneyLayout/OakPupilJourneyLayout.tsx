@@ -23,14 +23,14 @@ export type OakPupilJourneyLayoutProps = {
 };
 
 const StyledLayoutBox = styled(OakFlex)<{
-  sectionName: PupilJourneySectionName;
-  phase?: Phase;
+  $sectionName: PupilJourneySectionName;
+  $phase?: Phase;
 }>`
   @media (min-width: ${getBreakpoint("large")}px) {
     ${(props) => css`
       background-image: url(${getBackgroundUrlForSection(
-        props.sectionName,
-        props?.phase,
+        props.$sectionName,
+        props?.$phase,
       )});
       background-repeat: no-repeat;
       background-position-x: center;
@@ -78,8 +78,8 @@ export const OakPupilJourneyLayout = ({
       $flexDirection="column"
       $alignItems={"center"}
       $ph={["spacing-12", "spacing-24"]}
-      sectionName={sectionName}
-      phase={phase}
+      $sectionName={sectionName}
+      $phase={phase}
     >
       {topNavSlot && (
         <OakFlex

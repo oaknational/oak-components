@@ -3,11 +3,14 @@ import styled from "styled-components";
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
-import { positionStyle } from "@/styles/utils/positionStyle";
+import {
+  positionStyle,
+  PositionStyleProps,
+} from "@/styles/utils/positionStyle";
 
 describe("positionStyle", () => {
   test("should correctly handle prop 'position' as string", async () => {
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<PositionStyleProps>`
       ${positionStyle}
     `;
     const { getByTestId } = render(
@@ -18,7 +21,7 @@ describe("positionStyle", () => {
   });
 
   test("should correctly handle prop 'position' as array", async () => {
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<PositionStyleProps>`
       ${positionStyle}
     `;
     const { getByTestId } = render(
@@ -45,7 +48,7 @@ describe("positionStyle", () => {
       [prop]: value,
     };
 
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<PositionStyleProps>`
       ${positionStyle}
     `;
     const { getByTestId } = render(

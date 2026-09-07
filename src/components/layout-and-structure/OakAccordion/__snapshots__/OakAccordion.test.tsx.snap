@@ -14,11 +14,7 @@ exports[`OakAccordion matches snapshot 1`] = `
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
-  -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
@@ -54,27 +50,15 @@ exports[`OakAccordion matches snapshot 1`] = `
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
 .c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
@@ -87,8 +71,6 @@ exports[`OakAccordion matches snapshot 1`] = `
   color: inherit;
   border: none;
   background: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   outline: none;
   padding: 0;
@@ -99,14 +81,12 @@ exports[`OakAccordion matches snapshot 1`] = `
   color: inherit;
   border: none;
   background: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   outline: none;
 }
 
 .c6:focus-visible {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 <div>
@@ -119,7 +99,7 @@ exports[`OakAccordion matches snapshot 1`] = `
     >
       <button
         aria-expanded="true"
-        class="c3 c4 c5  c6"
+        class="c3 c4 c5 c6"
         id="see-more"
         type="button"
       >
@@ -170,11 +150,7 @@ exports[`OakAccordion matches snapshot with chevronPosition right 1`] = `
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
-  -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
@@ -205,27 +181,15 @@ exports[`OakAccordion matches snapshot with chevronPosition right 1`] = `
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
 .c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
@@ -238,8 +202,6 @@ exports[`OakAccordion matches snapshot with chevronPosition right 1`] = `
   color: inherit;
   border: none;
   background: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   outline: none;
   padding: 0;
@@ -250,14 +212,12 @@ exports[`OakAccordion matches snapshot with chevronPosition right 1`] = `
   color: inherit;
   border: none;
   background: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   outline: none;
 }
 
 .c6:focus-visible {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 <div>
@@ -270,7 +230,7 @@ exports[`OakAccordion matches snapshot with chevronPosition right 1`] = `
     >
       <button
         aria-expanded="true"
-        class="c3 c4 c5  c6"
+        class="c3 c4 c5 c6"
         id="see-more"
         type="button"
       >
@@ -317,11 +277,7 @@ exports[`OakAccordion matches snapshot with custom $color 1`] = `
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
-  -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
@@ -352,32 +308,19 @@ exports[`OakAccordion matches snapshot with custom $color 1`] = `
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
 .c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
 .c8 {
-  -webkit-filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
   object-fit: contain;
 }
@@ -387,8 +330,6 @@ exports[`OakAccordion matches snapshot with custom $color 1`] = `
   color: inherit;
   border: none;
   background: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   outline: none;
   padding: 0;
@@ -399,14 +340,12 @@ exports[`OakAccordion matches snapshot with custom $color 1`] = `
   color: inherit;
   border: none;
   background: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   outline: none;
 }
 
 .c6:focus-visible {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 <div>
@@ -419,7 +358,7 @@ exports[`OakAccordion matches snapshot with custom $color 1`] = `
     >
       <button
         aria-expanded="true"
-        class="c3 c4 c5  c6"
+        class="c3 c4 c5 c6"
         id="see-more"
         type="button"
       >
@@ -465,11 +404,7 @@ exports[`OakAccordion matches snapshot with custom openBackground 1`] = `
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
-  -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
@@ -500,27 +435,15 @@ exports[`OakAccordion matches snapshot with custom openBackground 1`] = `
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
 .c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
@@ -533,8 +456,6 @@ exports[`OakAccordion matches snapshot with custom openBackground 1`] = `
   color: inherit;
   border: none;
   background: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   outline: none;
   padding: 0;
@@ -545,14 +466,12 @@ exports[`OakAccordion matches snapshot with custom openBackground 1`] = `
   color: inherit;
   border: none;
   background: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   outline: none;
 }
 
 .c6:focus-visible {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 <div>
@@ -565,7 +484,7 @@ exports[`OakAccordion matches snapshot with custom openBackground 1`] = `
     >
       <button
         aria-expanded="true"
-        class="c3 c4 c5  c6"
+        class="c3 c4 c5 c6"
         id="see-more"
         type="button"
       >

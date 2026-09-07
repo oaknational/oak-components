@@ -21,30 +21,30 @@ export type MenuItemProps = {
 const StyledLink = styled("a")<
   FlexStyleProps &
     PaddingStyleProps & {
-      isSelected: boolean;
-      hoverBorderColor: OakUiRoleToken;
-      selectedBackground?: OakUiRoleToken;
+      $isSelected: boolean;
+      $hoverBorderColor: OakUiRoleToken;
+      $selectedBackground?: OakUiRoleToken;
     }
 >`
   text-decoration: none;
   display: flex;
   outline: none;
   background-color: ${(props) =>
-    props.isSelected ? parseColor(props.selectedBackground) : undefined};
+    props.$isSelected ? parseColor(props.$selectedBackground) : undefined};
 
   @media (min-width: ${getBreakpoint("small")}px) {
     border-left: ${(props) =>
-      props.isSelected ? "4px solid #222222" : "4px solid transparent"};
-    :hover {
+      props.$isSelected ? "4px solid #222222" : "4px solid transparent"};
+    &:hover {
       text-decoration: underline;
       border-color: ${(props) =>
-        props.isSelected
+        props.$isSelected
           ? parseColor("bg-btn-primary-hover")
-          : parseColor(props.hoverBorderColor)};
+          : parseColor(props.$hoverBorderColor)};
     }
   }
 
-  :focus-visible {
+  &:focus-visible {
     box-shadow:
       ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
@@ -86,9 +86,9 @@ const UnstyledComponent = (props: OakSideMenuNavLinkProps) => {
       $columnGap="spacing-16"
       href={item.href}
       $ph={["spacing-0", "spacing-12"]}
-      isSelected={isSelected}
-      hoverBorderColor={hoverBorderColor}
-      selectedBackground={selectedBackground}
+      $isSelected={isSelected}
+      $hoverBorderColor={hoverBorderColor}
+      $selectedBackground={selectedBackground}
       $flexDirection={["row", "column"]}
       onClick={onClick}
       aria-current={isSelected ? "true" : undefined}

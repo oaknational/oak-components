@@ -136,7 +136,11 @@ const borderVertical = css<{ $bv?: BorderWidth }>`
   ${responsiveStyle("border-bottom", (props) => props.$bv, parseBorder)}
 `;
 const borderColor = css<{ $borderColor?: BorderColorProps }>`
-  ${responsiveStyle("border-color", (props) => props.$borderColor, parseColor)}
+  ${responsiveStyle(
+    "border-color",
+    (props) => props.$borderColor,
+    (value) => parseColor(value),
+  )}
 `;
 const borderRadius = css<{ $borderRadius?: BorderRadiusProps }>`
   ${responsiveStyle(

@@ -24,7 +24,7 @@ type StyledInputProps = Omit<
  * E.g. ios and rounded borders (which border-radius doesn't fix without
  * appearance: none)
  */
-const StyledInput = styled.input`
+const StyledInput = styled.input<SpacingStyleProps & SizeStyleProps>`
   appearance: none !important;
   border: 0;
   border-radius: 0;
@@ -40,18 +40,18 @@ const StyledInput = styled.input`
     font-size: 16px;
   }
 
-  ::placeholder {
+  &::placeholder {
     color: ${parseColor("text-subdued")};
   }
 
-  ::-webkit-search-decoration,
-  ::-webkit-search-cancel-button,
-  ::-webkit-search-results-button,
-  ::-webkit-search-results-decoration {
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
     appearance: none;
   }
 
-  :disabled {
+  &:disabled {
     cursor: not-allowed;
   }
 

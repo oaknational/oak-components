@@ -53,31 +53,17 @@ exports[`OakBasicAccordion matches snapshot 1`] = `
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 0.25rem;
 }
 
 .c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
 .c16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -90,8 +76,6 @@ exports[`OakBasicAccordion matches snapshot 1`] = `
   color: inherit;
   border: none;
   background: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   outline: none;
   padding: 0;
@@ -104,17 +88,8 @@ exports[`OakBasicAccordion matches snapshot 1`] = `
 }
 
 .c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
@@ -122,12 +97,11 @@ exports[`OakBasicAccordion matches snapshot 1`] = `
 }
 
 .c7:hover {
-  -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
 .c7:focus-visible .shadow {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 .c2 {
@@ -135,12 +109,7 @@ exports[`OakBasicAccordion matches snapshot 1`] = `
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 0.25rem;
 }
@@ -149,7 +118,7 @@ exports[`OakBasicAccordion matches snapshot 1`] = `
   visibility: hidden;
 }
 
-.c2 .c6:focus-visible ~ .c17 {
+.c2 .c6:focus-visible~.c17 {
   visibility: visible;
 }
 
@@ -168,7 +137,7 @@ exports[`OakBasicAccordion matches snapshot 1`] = `
   >
     <button
       aria-expanded="false"
-      class="c3 c4 c5 c6  c7"
+      class="c3 c4 c5 c6 c7"
       id="1"
       type="button"
     >

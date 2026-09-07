@@ -1,13 +1,9 @@
 import React from "react";
-import styled, {
-  css,
-  DefaultTheme,
-  FlattenSimpleInterpolation,
-  Interpolation,
-  ThemedStyledProps,
-} from "styled-components";
+import styled, { css } from "styled-components";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
+
+import { PaddingStyleProps } from "./spacingStyle";
 
 import { responsiveStyle } from "@/styles/utils/responsiveStyle";
 import {
@@ -27,11 +23,7 @@ type TestProps = {
  * For this reason we need to "stringify" (and minify) the css that we get from responsive
  * in order to compare it with the expected css values.
  */
-const stringify = (
-  cssArray:
-    | FlattenSimpleInterpolation
-    | Interpolation<ThemedStyledProps<TestProps, DefaultTheme>>,
-) =>
+const stringify = (cssArray: unknown) =>
   (Array.isArray(cssArray) ? cssArray : [cssArray])
     ?.flatMap((str: unknown) => (typeof str === "string" ? str.trim() : str))
     .flat()
@@ -55,11 +47,11 @@ describe("responsiveStyle", () => {
       (props: TestProps) => props.pl,
       pxOrUndefined,
     )(props);
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<PaddingStyleProps>`
       ${styles}
     `;
     const { getByTestId } = render(
-      <StyledComponent data-testid="test" $pl={12} />,
+      <StyledComponent data-testid="test" $pl={"spacing-12"} />,
     );
 
     expect(getByTestId("test")).toHaveStyle("padding-left: 12px");

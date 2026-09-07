@@ -210,8 +210,8 @@ export const OakQuizCheckBox = (props: OakQuizCheckBoxProps) => {
       <InternalCheckBoxLabelHoverDecor
         pointerEvents="none"
         htmlFor={id}
-        labelGap={"spacing-16"}
-        labelAlignItems={"center"}
+        $labelGap={"spacing-16"}
+        $labelAlignItems={"center"}
         $color={disabled && !isFeedback ? "text-disabled" : "text-primary"}
         $font={"body-1"}
         disabled={disabled}

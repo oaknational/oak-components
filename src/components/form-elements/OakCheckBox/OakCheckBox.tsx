@@ -82,8 +82,8 @@ export const OakCheckBox = (props: OakCheckBoxProps) => {
      */
     checkedBorderColor = "border-primary",
     disabledColor = "text-disabled",
-    labelGap = "spacing-16",
-    labelAlignItems = "center",
+    $labelGap = "spacing-16",
+    $labelAlignItems = "center",
     checkedBackgroundFill = true,
     checkedIcon,
     "data-testid": dataTestId,
@@ -114,8 +114,8 @@ export const OakCheckBox = (props: OakCheckBoxProps) => {
   return (
     <InternalCheckBoxLabel
       htmlFor={id}
-      labelGap={labelGap}
-      labelAlignItems={labelAlignItems}
+      $labelGap={$labelGap}
+      $labelAlignItems={$labelAlignItems}
       $color={currentColor}
       disabled={disabled}
       onMouseEnter={handleMouseEnter}

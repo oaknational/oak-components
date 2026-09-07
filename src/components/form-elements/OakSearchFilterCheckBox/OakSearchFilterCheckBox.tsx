@@ -13,7 +13,6 @@ import { parseBorder } from "@/styles/helpers/parseBorder";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 import { parseColorFilter } from "@/styles/helpers/parseColorFilter";
 
-// Converted to styled-component so it can be used in '&:checked:not(:disabled) + ${StyledOakIcon}' to change svg color.
 const StyledOakIcon = styled(OakIcon)``;
 
 const StyledInternalCheckBox = styled(InternalCheckBox)<{
@@ -23,7 +22,7 @@ const StyledInternalCheckBox = styled(InternalCheckBox)<{
   opacity: 0;
   pointer-events: none;
 
-  &:checked:not(:disabled) + ${StyledOakIcon} {
+  &:checked:not(:disabled) + span {
     filter: ${(props) =>
       props.$keepIconColor ? "none" : parseColorFilter("icon-inverted")};
   }

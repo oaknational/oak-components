@@ -5,11 +5,7 @@ exports[`OakSelect disabled select 1`] = `
   border: none;
   outline: none;
   width: 100%;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
-  -webkit-appearance: base-select;
-  -moz-appearance: base-select;
   appearance: base-select;
   background: #f2f2f2;
   color: #808080;
@@ -28,15 +24,11 @@ exports[`OakSelect disabled select 1`] = `
 }
 
 .c3:focus {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 .c3::picker(select) {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
-  -webkit-appearance: base-select;
-  -moz-appearance: base-select;
   appearance: base-select;
   border-bottom-left-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
@@ -49,12 +41,12 @@ exports[`OakSelect disabled select 1`] = `
   border-top: none;
 }
 
-.c3::picker(select) {
+.c3 ::picker(select) {
   top: calc(anchor(bottom) - 2px);
   left: anchor(0);
 }
 
-.c3::picker-icon {
+.c3 ::picker-icon {
   display: none;
 }
 
@@ -63,7 +55,7 @@ exports[`OakSelect disabled select 1`] = `
   border-bottom-right-radius: 0px;
 }
 
-.c3:open::picker(select) {
+.c3:open ::picker(select) {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
 }
@@ -95,20 +87,12 @@ exports[`OakSelect disabled select 1`] = `
 
 .c1 {
   display: inline-block;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 1rem;
 }
 
 .c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
   align-content: center;
 }
 
@@ -117,32 +101,26 @@ exports[`OakSelect disabled select 1`] = `
 }
 
 .c8 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
 .c12 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
-.c2 select ~ .c11 {
+.c2 select~.c11 {
   display: block;
 }
 
-.c2 select:open ~ .c11 {
+.c2 select:open~.c11 {
   display: none;
 }
 
-.c2 select ~ .c5 {
+.c2 select~.c5 {
   display: none;
 }
 
-.c2 select:open ~ .c5 {
+.c2 select:open~.c5 {
   display: block;
 }
 
@@ -161,7 +139,7 @@ exports[`OakSelect disabled select 1`] = `
 }
 
 .c4:focus {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 .c4:disabled {
@@ -178,7 +156,7 @@ exports[`OakSelect disabled select 1`] = `
   display: none;
 }
 
-@media (hover:hover) {
+@media (hover: hover) {
   .c3:hover:not(:focus-within) {
     background: #f2f2f2;
   }
@@ -251,11 +229,7 @@ exports[`OakSelect highlighted select 1`] = `
   border: none;
   outline: none;
   width: 100%;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
-  -webkit-appearance: base-select;
-  -moz-appearance: base-select;
   appearance: base-select;
   border-radius: 0.25rem;
   padding: 1rem;
@@ -268,15 +242,11 @@ exports[`OakSelect highlighted select 1`] = `
 }
 
 .c3:focus {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 .c3::picker(select) {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
-  -webkit-appearance: base-select;
-  -moz-appearance: base-select;
   appearance: base-select;
   border-bottom-left-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
@@ -289,12 +259,12 @@ exports[`OakSelect highlighted select 1`] = `
   border-top: none;
 }
 
-.c3::picker(select) {
+.c3 ::picker(select) {
   top: calc(anchor(bottom) - 2px);
   left: anchor(0);
 }
 
-.c3::picker-icon {
+.c3 ::picker-icon {
   display: none;
 }
 
@@ -303,7 +273,7 @@ exports[`OakSelect highlighted select 1`] = `
   border-bottom-right-radius: 0px;
 }
 
-.c3:open::picker(select) {
+.c3:open ::picker(select) {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
 }
@@ -335,20 +305,12 @@ exports[`OakSelect highlighted select 1`] = `
 
 .c1 {
   display: inline-block;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 1rem;
 }
 
 .c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
   align-content: center;
 }
 
@@ -357,32 +319,26 @@ exports[`OakSelect highlighted select 1`] = `
 }
 
 .c8 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
 .c12 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
-.c2 select ~ .c11 {
+.c2 select~.c11 {
   display: block;
 }
 
-.c2 select:open ~ .c11 {
+.c2 select:open~.c11 {
   display: none;
 }
 
-.c2 select ~ .c5 {
+.c2 select~.c5 {
   display: none;
 }
 
-.c2 select:open ~ .c5 {
+.c2 select:open~.c5 {
   display: block;
 }
 
@@ -401,7 +357,7 @@ exports[`OakSelect highlighted select 1`] = `
 }
 
 .c4:focus {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 .c4:disabled {
@@ -418,7 +374,7 @@ exports[`OakSelect highlighted select 1`] = `
   display: none;
 }
 
-@media (hover:hover) {
+@media (hover: hover) {
   .c3:hover:not(:focus-within) {
     background: #f2f2f2;
   }
@@ -490,11 +446,7 @@ exports[`OakSelect invalid select 1`] = `
   border: none;
   outline: none;
   width: 100%;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
-  -webkit-appearance: base-select;
-  -moz-appearance: base-select;
   appearance: base-select;
   border-radius: 0.25rem;
   padding: 1rem;
@@ -507,15 +459,11 @@ exports[`OakSelect invalid select 1`] = `
 }
 
 .c3:focus {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 .c3::picker(select) {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
-  -webkit-appearance: base-select;
-  -moz-appearance: base-select;
   appearance: base-select;
   border-bottom-left-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
@@ -528,12 +476,12 @@ exports[`OakSelect invalid select 1`] = `
   border-top: none;
 }
 
-.c3::picker(select) {
+.c3 ::picker(select) {
   top: calc(anchor(bottom) - 2px);
   left: anchor(0);
 }
 
-.c3::picker-icon {
+.c3 ::picker-icon {
   display: none;
 }
 
@@ -542,7 +490,7 @@ exports[`OakSelect invalid select 1`] = `
   border-bottom-right-radius: 0px;
 }
 
-.c3:open::picker(select) {
+.c3:open ::picker(select) {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
 }
@@ -574,20 +522,12 @@ exports[`OakSelect invalid select 1`] = `
 
 .c1 {
   display: inline-block;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 1rem;
 }
 
 .c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
   align-content: center;
 }
 
@@ -596,32 +536,26 @@ exports[`OakSelect invalid select 1`] = `
 }
 
 .c8 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
 .c12 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
-.c2 select ~ .c11 {
+.c2 select~.c11 {
   display: block;
 }
 
-.c2 select:open ~ .c11 {
+.c2 select:open~.c11 {
   display: none;
 }
 
-.c2 select ~ .c5 {
+.c2 select~.c5 {
   display: none;
 }
 
-.c2 select:open ~ .c5 {
+.c2 select:open~.c5 {
   display: block;
 }
 
@@ -640,7 +574,7 @@ exports[`OakSelect invalid select 1`] = `
 }
 
 .c4:focus {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 .c4:disabled {
@@ -657,7 +591,7 @@ exports[`OakSelect invalid select 1`] = `
   display: none;
 }
 
-@media (hover:hover) {
+@media (hover: hover) {
   .c3:hover:not(:focus-within) {
     background: #f2f2f2;
   }
@@ -729,11 +663,7 @@ exports[`OakSelect optgroup select 1`] = `
   border: none;
   outline: none;
   width: 100%;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
-  -webkit-appearance: base-select;
-  -moz-appearance: base-select;
   appearance: base-select;
   border-radius: 0.25rem;
   padding: 1rem;
@@ -746,15 +676,11 @@ exports[`OakSelect optgroup select 1`] = `
 }
 
 .c3:focus {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 .c3::picker(select) {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
-  -webkit-appearance: base-select;
-  -moz-appearance: base-select;
   appearance: base-select;
   border-bottom-left-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
@@ -767,12 +693,12 @@ exports[`OakSelect optgroup select 1`] = `
   border-top: none;
 }
 
-.c3::picker(select) {
+.c3 ::picker(select) {
   top: calc(anchor(bottom) - 2px);
   left: anchor(0);
 }
 
-.c3::picker-icon {
+.c3 ::picker-icon {
   display: none;
 }
 
@@ -781,7 +707,7 @@ exports[`OakSelect optgroup select 1`] = `
   border-bottom-right-radius: 0px;
 }
 
-.c3:open::picker(select) {
+.c3:open ::picker(select) {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
 }
@@ -813,20 +739,12 @@ exports[`OakSelect optgroup select 1`] = `
 
 .c1 {
   display: inline-block;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 1rem;
 }
 
 .c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
   align-content: center;
 }
 
@@ -835,32 +753,26 @@ exports[`OakSelect optgroup select 1`] = `
 }
 
 .c9 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
 .c13 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
-.c2 select ~ .c12 {
+.c2 select~.c12 {
   display: block;
 }
 
-.c2 select:open ~ .c12 {
+.c2 select:open~.c12 {
   display: none;
 }
 
-.c2 select ~ .c6 {
+.c2 select~.c6 {
   display: none;
 }
 
-.c2 select:open ~ .c6 {
+.c2 select:open~.c6 {
   display: block;
 }
 
@@ -879,7 +791,7 @@ exports[`OakSelect optgroup select 1`] = `
 }
 
 .c5:focus {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 .c5:disabled {
@@ -910,7 +822,7 @@ exports[`OakSelect optgroup select 1`] = `
   display: none;
 }
 
-@media (hover:hover) {
+@media (hover: hover) {
   .c3:hover:not(:focus-within) {
     background: #f2f2f2;
   }
@@ -1017,11 +929,7 @@ exports[`OakSelect plain select 1`] = `
   border: none;
   outline: none;
   width: 100%;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
-  -webkit-appearance: base-select;
-  -moz-appearance: base-select;
   appearance: base-select;
   border-radius: 0.25rem;
   padding: 1rem;
@@ -1034,15 +942,11 @@ exports[`OakSelect plain select 1`] = `
 }
 
 .c3:focus {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 .c3::picker(select) {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
-  -webkit-appearance: base-select;
-  -moz-appearance: base-select;
   appearance: base-select;
   border-bottom-left-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
@@ -1055,12 +959,12 @@ exports[`OakSelect plain select 1`] = `
   border-top: none;
 }
 
-.c3::picker(select) {
+.c3 ::picker(select) {
   top: calc(anchor(bottom) - 2px);
   left: anchor(0);
 }
 
-.c3::picker-icon {
+.c3 ::picker-icon {
   display: none;
 }
 
@@ -1069,7 +973,7 @@ exports[`OakSelect plain select 1`] = `
   border-bottom-right-radius: 0px;
 }
 
-.c3:open::picker(select) {
+.c3:open ::picker(select) {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
 }
@@ -1101,20 +1005,12 @@ exports[`OakSelect plain select 1`] = `
 
 .c1 {
   display: inline-block;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 1rem;
 }
 
 .c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
   align-content: center;
 }
 
@@ -1123,32 +1019,26 @@ exports[`OakSelect plain select 1`] = `
 }
 
 .c8 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
 .c12 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
-.c2 select ~ .c11 {
+.c2 select~.c11 {
   display: block;
 }
 
-.c2 select:open ~ .c11 {
+.c2 select:open~.c11 {
   display: none;
 }
 
-.c2 select ~ .c5 {
+.c2 select~.c5 {
   display: none;
 }
 
-.c2 select:open ~ .c5 {
+.c2 select:open~.c5 {
   display: block;
 }
 
@@ -1167,7 +1057,7 @@ exports[`OakSelect plain select 1`] = `
 }
 
 .c4:focus {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 .c4:disabled {
@@ -1184,7 +1074,7 @@ exports[`OakSelect plain select 1`] = `
   display: none;
 }
 
-@media (hover:hover) {
+@media (hover: hover) {
   .c3:hover:not(:focus-within) {
     background: #f2f2f2;
   }

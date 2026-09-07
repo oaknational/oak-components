@@ -1,10 +1,14 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/nextjs";
 import { useArgs } from "storybook/preview-api";
+import styled from "styled-components";
 
 import { OakSelect, OakOptGroup, OakOption } from ".";
 
-import { OakJauntyAngleLabel } from "@/components/form-elements/OakJauntyAngleLabel";
+import {
+  OakJauntyAngleLabel,
+  OakJauntyAngleLabelProps,
+} from "@/components/form-elements/OakJauntyAngleLabel";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
 
 const meta: Meta<typeof OakSelect> = {
@@ -80,10 +84,16 @@ export const DisabledOption: Story = {
   args: {},
 };
 
+const LabelWithNegativePosition = styled(
+  OakJauntyAngleLabel,
+)<OakJauntyAngleLabelProps>`
+  top: -20px;
+`;
+
 export const WithLabel: Story = {
   render: (args) => (
     <OakBox $position={"relative"}>
-      <OakJauntyAngleLabel
+      <LabelWithNegativePosition
         label={"Test"}
         $color={"text-primary"}
         htmlFor={"test"}
@@ -92,8 +102,7 @@ export const WithLabel: Story = {
         $background={"bg-decorative5-main"}
         $zIndex="in-front"
         $position="absolute"
-        $top={"-20px"}
-        $left={"5px"}
+        $left={"spacing-4"}
         $borderRadius="border-radius-square"
         data-testid="jaunty-label"
       />

@@ -116,6 +116,7 @@ export const OakPupilJourneyListItem = <C extends ElementType = "a">(
     href,
     unavailable,
     onClick,
+    numberOfLessons,
     ...rest
   } = props;
 

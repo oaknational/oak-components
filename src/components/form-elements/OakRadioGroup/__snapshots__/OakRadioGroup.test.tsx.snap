@@ -20,7 +20,7 @@ exports[`RadioGroup matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c10 {
+.c9 {
   position: absolute;
   top: 0rem;
   left: 0rem;
@@ -33,53 +33,23 @@ exports[`RadioGroup matches snapshot 1`] = `
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 1rem;
 }
 
 .c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
 }
 
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+.c10 {
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
   flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
 }
 
@@ -88,16 +58,11 @@ exports[`RadioGroup matches snapshot 1`] = `
   font-weight: 500;
   font-size: 1.125rem;
   line-height: 1.75rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
 .c8 {
   -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   cursor: pointer;
   margin: 0;
@@ -116,11 +81,11 @@ exports[`RadioGroup matches snapshot 1`] = `
   pointer-events: none;
 }
 
-.c12 {
+.c11 {
   border-radius: 50%;
 }
 
-.c7:focus-visible ~ .c9::before {
+.c7:focus-visible~.c11::before {
   content: "";
   height: 2rem;
   width: 2rem;
@@ -132,7 +97,7 @@ exports[`RadioGroup matches snapshot 1`] = `
   box-shadow: inset 0 0 0 0.13rem #ffe555;
 }
 
-.c7:checked ~ .c9::after {
+.c7:checked~.c11::after {
   content: "";
   height: 1rem;
   width: 1rem;
@@ -144,18 +109,12 @@ exports[`RadioGroup matches snapshot 1`] = `
 
 .c4 {
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   gap: 1.5rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
-@media (hover:hover) {
+@media (hover: hover) {
   .c8:hover:not(:disabled) {
     border-color: #222222;
   }
@@ -184,7 +143,7 @@ exports[`RadioGroup matches snapshot 1`] = `
             value="1"
           />
           <div
-            class="c9 c10 c11 c12"
+            class="c9 c10 c11"
           />
         </div>
         Option 1
@@ -208,7 +167,7 @@ exports[`RadioGroup matches snapshot 1`] = `
             value="2"
           />
           <div
-            class="c9 c10 c11 c12"
+            class="c9 c10 c11"
           />
         </div>
         Option 2
@@ -232,7 +191,7 @@ exports[`RadioGroup matches snapshot 1`] = `
             value="3"
           />
           <div
-            class="c9 c10 c11 c12"
+            class="c9 c10 c11"
           />
         </div>
         Option 3

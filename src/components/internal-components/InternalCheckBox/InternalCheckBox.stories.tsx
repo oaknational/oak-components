@@ -21,10 +21,10 @@ const meta: Meta<typeof InternalCheckBox> = {
   title: "internal components/InternalCheckBox",
   args: internalCheckBoxDefaults,
   argTypes: {
-    sizeArgTypes,
-    borderArgTypes,
-    colorArgTypes,
-    spacingArgTypes,
+    ...sizeArgTypes,
+    ...borderArgTypes,
+    ...colorArgTypes,
+    ...spacingArgTypes,
     disabled: {
       control: "boolean",
     },
@@ -48,14 +48,13 @@ const meta: Meta<typeof InternalCheckBox> = {
 };
 export default meta;
 
-type Story = StoryObj<
-  | typeof InternalCheckBox
-  | typeof InternalCheckBoxHover
-  | typeof InternalCheckBoxFocus
-  | typeof InternalCheckBoxHoverFocus
+type InternalCheckBoxStory = StoryObj<typeof InternalCheckBox>;
+type InternalCheckBoxFocusStory = StoryObj<typeof InternalCheckBoxFocus>;
+type InternalCheckBoxHoverFocusStory = StoryObj<
+  typeof InternalCheckBoxHoverFocus
 >;
 
-export const Default: Story = {
+export const Default: InternalCheckBoxStory = {
   render: (args) => <InternalCheckBox {...args} />,
   args: {
     id: "checkbox-test-default-1",
@@ -65,7 +64,7 @@ export const Default: Story = {
   },
 };
 
-export const Hover: Story = {
+export const Hover: InternalCheckBoxStory = {
   render: (args) => (
     <OakBox $position="relative" $width={args.$width} $height={args.$height}>
       <InternalCheckBoxHover {...args} />
@@ -79,7 +78,7 @@ export const Hover: Story = {
   },
 };
 
-export const Focus: Story = {
+export const Focus: InternalCheckBoxFocusStory = {
   render: (args) => (
     <OakBox $position="relative" $width={args.$width} $height={args.$height}>
       <InternalCheckBoxFocus {...args} />
@@ -93,7 +92,7 @@ export const Focus: Story = {
   },
 };
 
-export const HoverFocus: Story = {
+export const HoverFocus: InternalCheckBoxHoverFocusStory = {
   render: (args) => (
     <OakBox $position="relative" $width={args.$width} $height={args.$height}>
       <InternalCheckBoxHoverFocus {...args} />

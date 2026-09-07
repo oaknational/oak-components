@@ -64,8 +64,6 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 
 .c22 {
   position: relative;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   height: auto;
   font-family: --var(google-font),Lexend,sans-serif;
@@ -83,102 +81,53 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 
 .c1 {
   display: block;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 
 .c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 1.5rem;
 }
 
 .c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
 .c21 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: start;
-  -ms-flex-pack: start;
   justify-content: start;
   gap: 1rem;
 }
 
 .c26 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   gap: 0.5rem;
 }
 
 .c34 {
   display: none;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: end;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
   align-items: end;
   gap: 1.5rem;
 }
 
 .c37 {
   display: block;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
@@ -187,9 +136,6 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
   text-align: left;
 }
@@ -261,7 +207,6 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 }
 
 .c25:hover {
-  -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #ffffff;
   background: #575757;
@@ -299,7 +244,6 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 }
 
 .c29:hover {
-  -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #222222;
   background: #f2f2f2;
@@ -331,16 +275,16 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 }
 
 .c23 .grey-shadow:has(+ * + .internal-button:focus-visible) {
-  box-shadow: 0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 .c23 .yellow-shadow:has(+ .internal-button:focus-visible) {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%);
 }
 
 .c23 .yellow-shadow:has(+ .internal-button:hover),
-.c23 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible,:active)) {
-  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+.c23 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible, :active)) {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%);
 }
 
 .c23 .grey-shadow:has(+ * + .internal-button:hover) {
@@ -348,11 +292,11 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 }
 
 .c23 .grey-shadow:has(+ * + .internal-button:active) {
-  box-shadow: 0.25rem 0.25rem 0 rgba(87,87,87,100%);
+  box-shadow: 0.25rem 0.25rem 0 rgba(87, 87, 87, 100%);
 }
 
 .c23 .yellow-shadow:has(+ .internal-button:active) {
-  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%);
+  box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%);
 }
 
 .c12 {
@@ -360,8 +304,6 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   color: inherit;
   border: none;
   background: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   outline: none;
   padding: 0;
@@ -374,17 +316,8 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 }
 
 .c14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
   font-family: --var(google-font),Lexend,sans-serif;
@@ -392,12 +325,11 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
 }
 
 .c14:hover {
-  -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
 .c14:focus-visible .shadow {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 .c9 {
@@ -405,12 +337,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 1.5rem;
 }
@@ -419,7 +346,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   visibility: hidden;
 }
 
-.c9 .c13:focus-visible ~ .c30 {
+.c9 .c13:focus-visible~.c30 {
   visibility: visible;
 }
 
@@ -441,66 +368,51 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 2rem;
-  -webkit-letter-spacing: 0.0115rem;
-  -moz-letter-spacing: 0.0115rem;
-  -ms-letter-spacing: 0.0115rem;
   letter-spacing: 0.0115rem;
 }
 
-.c35 > button {
+.c35>button {
   opacity: 0;
   position: absolute;
 }
 
-.c35 > button:focus-visible {
+.c35>button:focus-visible {
   opacity: 1;
   position: relative;
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c0 {
     display: none;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c33 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c1 {
     display: none;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c21 {
-    -webkit-box-pack: start;
-    -webkit-justify-content: start;
-    -ms-flex-pack: start;
     justify-content: start;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c21 {
-    -webkit-box-pack: end;
-    -webkit-justify-content: end;
-    -ms-flex-pack: end;
     justify-content: end;
   }
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c34 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
   }
 }
@@ -539,7 +451,7 @@ exports[`PupilJourneyUnitsFilter matches snapshot 1`] = `
       >
         <button
           aria-expanded="false"
-          class="c10 c11 c12 c13  c14"
+          class="c10 c11 c12 c13 c14"
           id="mobile-unit-filter-accordion"
           type="button"
         >
