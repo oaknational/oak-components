@@ -12,7 +12,6 @@ exports[`OakSvg matches snapshot 1`] = `
     aria-hidden="true"
     class="c0"
     height="100%"
-    name="header-underline"
     width="100%"
     xmlns="http://www.w3.org/2000/svg"
   >
