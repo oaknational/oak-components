@@ -14,8 +14,7 @@ const StyledSvg = styled.svg<OakBoxProps>`
 
 export type OakSvgProps = OakBoxProps & {
   /**
-   * The name of the svg to render
-   * Accepts an svg name token from the svgMap
+   * The SVG source to render
    */
   svg: ComponentType<React.SVGProps<SVGSVGElement>>;
   color?: OakColorToken;

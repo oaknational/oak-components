@@ -12,7 +12,7 @@ import { run as transformTreeShakable } from "./3_svg-tree-shakable/index";
 
 async function parse() {
   const argv = (await yargs(hideBin(process.argv))
-    .usage("$0 <path>", "Migrate to the new spacing tokens.", (yargs) => {
+    .usage("$0 <path>", "Apply migrations", (yargs) => {
       return yargs.positional("path", {
         type: "string",
         describe: "place to search for files",
