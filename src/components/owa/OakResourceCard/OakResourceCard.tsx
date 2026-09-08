@@ -83,6 +83,12 @@ export type OakResourceCardProps = BaseCheckBoxProps & {
    */
   iconName: IconName | IconName[];
   /**
+   * Whether to show the selection control (checkbox or radio button).
+   *
+   * @default true
+   */
+  showSelectionControl?: boolean;
+  /**
    * If true, renders the selection control as a radio button instead of a checkbox.
    *
    * @default false
@@ -110,7 +116,7 @@ const LabelContainer = styled("label")`
 `;
 
 const Container = styled(OakFlex)<{
-  $hoverBackground: OakUiRoleToken;
+  $hoverBackground?: OakUiRoleToken;
 }>`
   &:has(input:focus-visible) {
     box-shadow:
@@ -159,6 +165,7 @@ export const OakResourceCard = (props: OakResourceCardProps) => {
     onFocus,
     onBlur,
     onHovered,
+    showSelectionControl = true,
     isRadio = false,
     "data-testid": dataTestId,
     isEditable = false,
@@ -193,7 +200,9 @@ export const OakResourceCard = (props: OakResourceCardProps) => {
       $ba={"border-solid-m"}
       $borderRadius={"border-radius-s"}
       $overflow={"hidden"}
-      $hoverBackground="bg-btn-secondary-hover"
+      $hoverBackground={
+        showSelectionControl ? "bg-btn-secondary-hover" : undefined
+      }
       $color={"text-primary"}
       $width={"100%"}
     >
@@ -245,7 +254,7 @@ export const OakResourceCard = (props: OakResourceCardProps) => {
         </OakFlex>
         <OakFlex>
           <OakFlex $alignItems={"center"} $pr={"spacing-16"}>
-            {isRadio && (
+            {showSelectionControl && isRadio && (
               <InternalRadioWrapper
                 checked={isChecked}
                 size={checkboxSize}
@@ -268,7 +277,7 @@ export const OakResourceCard = (props: OakResourceCardProps) => {
                 }
               />
             )}
-            {!isRadio && (
+            {showSelectionControl && !isRadio && (
               <InternalCheckBoxWrapper
                 size={checkboxSize}
                 internalCheckbox={
