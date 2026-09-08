@@ -99,12 +99,12 @@ const Accordion = ({
     >
       <OakFlex $alignItems={"center"} $width={"100%"}>
         <OakFlex $alignItems={"center"} $width={"100%"} $gap={"spacing-16"}>
-          <OakBox
-            id="select-all-wrapper"
-            $pa={"spacing-8"}
-            onClick={handleToggleSelectAll}
-          >
-            {showCheckbox ? (
+          {showCheckbox ? (
+            <OakBox
+              id="select-all-wrapper"
+              $pa={"spacing-8"}
+              onClick={handleToggleSelectAll}
+            >
               <OakCheckBox
                 onChange={() => undefined}
                 checked={selectAllChecked}
@@ -113,8 +113,8 @@ const Accordion = ({
                 value={""}
                 aria-labelledby="resources-accordion-heading"
               />
-            ) : null}
-          </OakBox>
+            </OakBox>
+          ) : null}
           <StyledAccordionButton
             $justifyContent={"space-between"}
             $flexGrow={1}

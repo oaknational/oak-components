@@ -201,7 +201,7 @@ export const OakResourceCard = (props: OakResourceCardProps) => {
       $borderRadius={"border-radius-s"}
       $overflow={"hidden"}
       $hoverBackground={
-        showSelectionControl ? "bg-btn-secondary-hover" : undefined
+        showSelectionControl ? "bg-btn-secondary-hover" : "bg-primary"
       }
       $color={"text-primary"}
       $width={"100%"}
