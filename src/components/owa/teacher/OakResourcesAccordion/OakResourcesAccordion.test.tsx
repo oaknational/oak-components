@@ -203,4 +203,12 @@ describe("OakResourcesAccordion", () => {
     expect(getByText("PDF")).toBeInTheDocument();
     expect(getByText("PPTX")).toBeInTheDocument();
   });
+
+  it("renders without checkbox", () => {
+    const { queryByRole } = renderWithTheme(
+      <OakResourcesAccordion {...defaultProps} showCheckbox={false} />,
+    );
+
+    expect(queryByRole("checkbox")).not.toBeInTheDocument();
+  });
 });

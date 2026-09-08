@@ -17,7 +17,7 @@ const meta: Meta<typeof OakResourcesAccordion> = {
   title: "OWA/teacher/OakResourcesAccordion",
   parameters: {
     controls: {
-      include: ["initialOpen"],
+      include: ["initialOpen", "showCheckbox"],
     },
   },
   argTypes: {
@@ -27,6 +27,11 @@ const meta: Meta<typeof OakResourcesAccordion> = {
       },
     },
     initialOpen: {
+      control: {
+        type: "boolean",
+      },
+    },
+    showCheckbox: {
       control: {
         type: "boolean",
       },
@@ -87,6 +92,7 @@ export const Default: Story = {
       </OakFlex>
     ),
     initialOpen: false,
+    showCheckbox: true,
     $width: "100%",
   },
   render: (args) => <WithState {...args} />,

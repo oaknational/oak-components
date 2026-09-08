@@ -47,6 +47,10 @@ export type OakResourcesAccordionProps = {
    * Whether the accordion starts in the open state, defaults to false
    */
   initialOpen?: boolean;
+  /**
+   * Whether to show the select all checkbox
+   */
+  showCheckbox?: boolean;
 } & FlexStyleProps &
   OakBoxProps &
   ColorStyleProps;
@@ -77,6 +81,7 @@ const Accordion = ({
   id,
   selectAllChecked,
   subheading,
+  showCheckbox = true,
   handleToggleSelectAll,
   ...styleProps
 }: OakResourcesAccordionProps) => {
@@ -99,14 +104,16 @@ const Accordion = ({
             $pa={"spacing-8"}
             onClick={handleToggleSelectAll}
           >
-            <OakCheckBox
-              onChange={() => undefined}
-              checked={selectAllChecked}
-              id="select-all"
-              name="select-all"
-              value={""}
-              aria-labelledby="resources-accordion-heading"
-            />
+            {showCheckbox ? (
+              <OakCheckBox
+                onChange={() => undefined}
+                checked={selectAllChecked}
+                id="select-all"
+                name="select-all"
+                value={""}
+                aria-labelledby="resources-accordion-heading"
+              />
+            ) : null}
           </OakBox>
           <StyledAccordionButton
             $justifyContent={"space-between"}
