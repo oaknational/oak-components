@@ -174,20 +174,16 @@ describe("OakCard", () => {
   });
 
   it("renders card with the correct background colour when provided", () => {
-    renderWithTheme(
+    const { container } = renderWithTheme(
       <OakCard {...requiredProps} background={testData.background} />,
     );
 
-    expect(screen.getByRole("link")).toHaveStyle(
-      "background: rgb(223, 249, 222)",
-    );
+    expect(container.firstChild).toHaveStyle("background: rgb(223, 249, 222)");
   });
 
   it("renders card with the correct default background colour when not provided", () => {
-    renderWithTheme(<OakCard {...requiredProps} />);
+    const { container } = renderWithTheme(<OakCard {...requiredProps} />);
 
-    expect(screen.getByRole("link")).toHaveStyle(
-      "background: rgb(255, 255, 255)",
-    );
+    expect(container.firstChild).toHaveStyle("background: rgb(255, 255, 255)");
   });
 });

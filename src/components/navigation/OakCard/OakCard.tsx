@@ -218,7 +218,7 @@ export const OakCard = ({
   return (
     <OakFocusIndicator
       as={as}
-      $background={"bg-primary"}
+      $background={background}
       hoverBackground={hoverBackground}
       $height={"100%"}
       $width={cardWidth}
@@ -230,7 +230,6 @@ export const OakCard = ({
         $cardOrientation={cardOrientation}
         $height={"100%"}
         $pa={"spacing-16"}
-        $background={background}
         $gap={"spacing-16"}
       >
         {imageSrc && (
