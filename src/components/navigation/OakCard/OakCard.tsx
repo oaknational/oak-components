@@ -25,6 +25,7 @@ import {
   getBreakpoint,
   ResponsiveValues,
 } from "@/styles/utils/responsiveStyle";
+import { OakBox } from "@/components/layout-and-structure";
 
 export type OakCardProps = {
   as?: "div" | "li";
@@ -92,6 +93,10 @@ export type OakCardProps = {
    * The background colour of the card on hover.
    */
   hoverBackground?: OakUiRoleToken;
+  /**
+   * Whether to show the image or not
+   */
+  showImage?: ResponsiveValues<boolean>;
 };
 
 const CardContent = styled(OakFlex)``;
@@ -183,6 +188,11 @@ const StyledOakFlex = styled(OakFlex)<StyledFlexProps>`
   }
 `;
 
+function boolAsDisplay(input: boolean | null | undefined) {
+  if (input === undefined) return;
+  return input ? "block" : "none";
+}
+
 /**
  * A highly customisable card component that displays a heading and takes a href at minimum.
  *
@@ -209,7 +219,12 @@ export const OakCard = ({
   linkIconName = "arrow-right",
   hoverBackground = "bg-btn-secondary-hover",
   imageBackgroundColor = "bg-neutral",
+  showImage,
 }: OakCardProps) => {
+  const displayImage = Array.isArray(showImage)
+    ? showImage.map((value) => boolAsDisplay(value))
+    : boolAsDisplay(showImage);
+
   return (
     <OakFocusIndicator
       as={as}
@@ -228,14 +243,16 @@ export const OakCard = ({
         $gap={"spacing-16"}
       >
         {imageSrc && (
-          <StyledOakImage
-            src={imageSrc || ""}
-            alt={imageAlt || ""}
-            $width={"auto"}
-            $aspectRatio={aspectRatio}
-            $background={imageBackgroundColor}
-            $borderRadius={"border-radius-m2"}
-          />
+          <OakBox $display={displayImage}>
+            <StyledOakImage
+              src={imageSrc || ""}
+              alt={imageAlt || ""}
+              $width={"auto"}
+              $aspectRatio={aspectRatio}
+              $background={imageBackgroundColor}
+              $borderRadius={"border-radius-m2"}
+            />
+          </OakBox>
         )}
         <CardContent
           $flexDirection="column"

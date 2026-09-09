@@ -16,13 +16,13 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
 }
 
 .c5 {
-  position: relative;
-  width: 100%;
-  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c9 {
+.c6 {
+  position: relative;
+  width: 100%;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -159,7 +159,7 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   object-fit: contain;
 }
 
-.c8 {
+.c9 {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHBhdGggZmlsbD0iIzIyMiIgZD0iTTI4Ljc3OSAxOS4xNzZhMjcuMTkxIDI3LjE5MSAwIDAgMC0zLjggMS42IDE2LjcgMTYuNyAwIDAgMC03LjEgOC40YzAgLjEtLjEuMi0uMS4zLS43IDIuNC0uNiAyIDEuMyAyLjMgMS45LjMgMSAuNSAxIDEuMy0uMSA4LjggNC4xIDE1LjEgMTEuNCAxOS42YTEuNSAxLjUgMCAwIDAgMS43LjJjNS43LTIuNiA5LjMtNyAxMC4zLTEzLjJhMSAxIDAgMCAxIDEtMWwzLS4yYy44IDAgMS4zLjIgMS4yIDEuMmExNy45IDE3LjkgMCAwIDEtMy4yIDkuMiAyMy43IDIzLjcgMCAwIDEtMTAuOSA5LjEgNS40MDEgNS40MDEgMCAwIDEtNC41LS4yIDI2LjI5OCAyNi4yOTggMCAwIDEtOC41LTYuNiAyNS45IDI1LjkgMCAwIDEtNi40LTE0LjRjMC0uNi0uMi0uNy0uOC0uOC0yLjUtLjQtMi41LS4xLTIuMy0yLjlhMTkuMyAxOS4zIDAgMCAxIDEwLjgtMTYuNiAzOC45OTkgMzguOTk5IDAgMCAxIDUuNy0yLjEgMi4xIDIuMSAwIDAgMCAuOS0xLjMgMTQuMSAxNC4xIDAgMCAxIDMuNS02LjNsLjMtLjNjMS45LTIgMi42LTIgNC4zLjJsLjQuNWMxLjEgMS4xIDEgMS41LS4xIDIuNmExMS45IDExLjkgMCAwIDAtMy4yIDQuNCAxNi45IDE2LjkgMCAwIDEgNy41IDIuM2M1LjcgMy41IDkuMiA4LjMgOS45IDE1IC4wMTYuOTAxLS4wMTcgMS44MDItLjEgMi43IDAgLjgtLjYgMS0xLjIgMS4yYTE2LjEgMTYuMSAwIDAgMS0xMS0uNyAxNy45MDEgMTcuOTAxIDAgMCAxLTEwLjktMTMuNiA5Ljc5NiA5Ljc5NiAwIDAgMS0uMS0xLjlabTE4LjEgMTIuMmMuNC01LjUtNi45LTEyLjYtMTMtMTIuMS41IDYuNSA3LjYgMTIuOCAxMyAxMi4xWiIgb3BhY2l0eT0iLjEiLz48L3N2Zz4=);
   background-color: #e7f6f5;
   background-size: 4rem;
@@ -184,14 +184,14 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c7 {
+.c8 {
   width: auto;
   aspect-ratio: 4/3;
   background: #f2f2f2;
   border-radius: 0.5rem;
 }
 
-.c7 img {
+.c8 img {
   border-radius: inherit;
   object-fit: cover;
 }
@@ -207,7 +207,7 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
   flex-direction: row;
 }
 
-.c4 .c6 {
+.c4 .c7 {
   height: 15rem;
 }
 
@@ -235,26 +235,30 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
       class="c2 c3 c4"
       href="https://www.example.com"
     >
-      <span
-        class="c5 c6 c7"
-      >
-        <img
-          alt="Test image"
-          class="c8"
-          data-nimg="fill"
-          decoding="async"
-          loading="lazy"
-          sizes="100vw"
-          src="http://localhost/_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=3840&q=75"
-          srcset="/_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=3840&q=75 3840w"
-          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
-        />
-      </span>
       <div
-        class="c9 c10"
+        class="c5"
+      >
+        <span
+          class="c6 c7 c8"
+        >
+          <img
+            alt="Test image"
+            class="c9"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            sizes="100vw"
+            src="http://localhost/_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=3840&q=75"
+            srcset="/_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=3840&q=75 3840w"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+          />
+        </span>
+      </div>
+      <div
+        class="c5 c10"
       >
         <div
-          class="c9 c11"
+          class="c5 c11"
         >
           <h3
             class="c12"
@@ -268,19 +272,19 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
           </p>
         </div>
         <div
-          class="c9 c14"
+          class="c5 c14"
         >
           <div
             class="c15 c16"
           >
             <div
-              class="c9"
+              class="c5"
             >
               Test Tag
             </div>
           </div>
           <div
-            class="c9 c17"
+            class="c5 c17"
           >
             <span
               class="c18"
@@ -324,13 +328,13 @@ exports[`OakCard matches snapshot when passed as='li' 1`] = `
 }
 
 .c5 {
-  position: relative;
-  width: 100%;
-  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c9 {
+.c6 {
+  position: relative;
+  width: 100%;
+  display: block;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -470,7 +474,7 @@ exports[`OakCard matches snapshot when passed as='li' 1`] = `
   object-fit: contain;
 }
 
-.c8 {
+.c9 {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHBhdGggZmlsbD0iIzIyMiIgZD0iTTI4Ljc3OSAxOS4xNzZhMjcuMTkxIDI3LjE5MSAwIDAgMC0zLjggMS42IDE2LjcgMTYuNyAwIDAgMC03LjEgOC40YzAgLjEtLjEuMi0uMS4zLS43IDIuNC0uNiAyIDEuMyAyLjMgMS45LjMgMSAuNSAxIDEuMy0uMSA4LjggNC4xIDE1LjEgMTEuNCAxOS42YTEuNSAxLjUgMCAwIDAgMS43LjJjNS43LTIuNiA5LjMtNyAxMC4zLTEzLjJhMSAxIDAgMCAxIDEtMWwzLS4yYy44IDAgMS4zLjIgMS4yIDEuMmExNy45IDE3LjkgMCAwIDEtMy4yIDkuMiAyMy43IDIzLjcgMCAwIDEtMTAuOSA5LjEgNS40MDEgNS40MDEgMCAwIDEtNC41LS4yIDI2LjI5OCAyNi4yOTggMCAwIDEtOC41LTYuNiAyNS45IDI1LjkgMCAwIDEtNi40LTE0LjRjMC0uNi0uMi0uNy0uOC0uOC0yLjUtLjQtMi41LS4xLTIuMy0yLjlhMTkuMyAxOS4zIDAgMCAxIDEwLjgtMTYuNiAzOC45OTkgMzguOTk5IDAgMCAxIDUuNy0yLjEgMi4xIDIuMSAwIDAgMCAuOS0xLjMgMTQuMSAxNC4xIDAgMCAxIDMuNS02LjNsLjMtLjNjMS45LTIgMi42LTIgNC4zLjJsLjQuNWMxLjEgMS4xIDEgMS41LS4xIDIuNmExMS45IDExLjkgMCAwIDAtMy4yIDQuNCAxNi45IDE2LjkgMCAwIDEgNy41IDIuM2M1LjcgMy41IDkuMiA4LjMgOS45IDE1IC4wMTYuOTAxLS4wMTcgMS44MDItLjEgMi43IDAgLjgtLjYgMS0xLjIgMS4yYTE2LjEgMTYuMSAwIDAgMS0xMS0uNyAxNy45MDEgMTcuOTAxIDAgMCAxLTEwLjktMTMuNiA5Ljc5NiA5Ljc5NiAwIDAgMS0uMS0xLjlabTE4LjEgMTIuMmMuNC01LjUtNi45LTEyLjYtMTMtMTIuMS41IDYuNSA3LjYgMTIuOCAxMyAxMi4xWiIgb3BhY2l0eT0iLjEiLz48L3N2Zz4=);
   background-color: #e7f6f5;
   background-size: 4rem;
@@ -495,14 +499,14 @@ exports[`OakCard matches snapshot when passed as='li' 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c7 {
+.c8 {
   width: auto;
   aspect-ratio: 4/3;
   background: #f2f2f2;
   border-radius: 0.5rem;
 }
 
-.c7 img {
+.c8 img {
   border-radius: inherit;
   object-fit: cover;
 }
@@ -518,7 +522,7 @@ exports[`OakCard matches snapshot when passed as='li' 1`] = `
   flex-direction: row;
 }
 
-.c4 .c6 {
+.c4 .c7 {
   height: 15rem;
 }
 
@@ -546,26 +550,30 @@ exports[`OakCard matches snapshot when passed as='li' 1`] = `
       class="c2 c3 c4"
       href="https://www.example.com"
     >
-      <span
-        class="c5 c6 c7"
-      >
-        <img
-          alt="Test image"
-          class="c8"
-          data-nimg="fill"
-          decoding="async"
-          loading="lazy"
-          sizes="100vw"
-          src="http://localhost/_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=3840&q=75"
-          srcset="/_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=3840&q=75 3840w"
-          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
-        />
-      </span>
       <div
-        class="c9 c10"
+        class="c5"
+      >
+        <span
+          class="c6 c7 c8"
+        >
+          <img
+            alt="Test image"
+            class="c9"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            sizes="100vw"
+            src="http://localhost/_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=3840&q=75"
+            srcset="/_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fwww.example.com%2Fimage.jpg&w=3840&q=75 3840w"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+          />
+        </span>
+      </div>
+      <div
+        class="c5 c10"
       >
         <div
-          class="c9 c11"
+          class="c5 c11"
         >
           <h3
             class="c12"
@@ -579,19 +587,19 @@ exports[`OakCard matches snapshot when passed as='li' 1`] = `
           </p>
         </div>
         <div
-          class="c9 c14"
+          class="c5 c14"
         >
           <div
             class="c15 c16"
           >
             <div
-              class="c9"
+              class="c5"
             >
               Test Tag
             </div>
           </div>
           <div
-            class="c9 c17"
+            class="c5 c17"
           >
             <span
               class="c18"
