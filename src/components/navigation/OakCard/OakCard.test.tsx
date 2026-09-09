@@ -172,7 +172,7 @@ describe("OakCard", () => {
     expect(screen.getByRole("presentation")).toBeInTheDocument();
   });
 
-  it("doesn'render image when showImage is false", () => {
+  it("doesn't render image when showImage is false", () => {
     renderWithTheme(<OakCard {...testData} showImage={false} />);
 
     expect(screen.queryByRole("img")).not.toBeInTheDocument();
