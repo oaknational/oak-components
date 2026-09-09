@@ -92,6 +92,10 @@ export type OakCardProps = {
    * The background colour of the card on hover.
    */
   hoverBackground?: OakUiRoleToken;
+  /**
+   * The background colour of the card.
+   */
+  background?: OakUiRoleToken;
 };
 
 const CardContent = styled(OakFlex)``;
@@ -209,6 +213,7 @@ export const OakCard = ({
   linkIconName = "arrow-right",
   hoverBackground = "bg-btn-secondary-hover",
   imageBackgroundColor = "bg-neutral",
+  background = "bg-primary",
 }: OakCardProps) => {
   return (
     <OakFocusIndicator
@@ -225,6 +230,7 @@ export const OakCard = ({
         $cardOrientation={cardOrientation}
         $height={"100%"}
         $pa={"spacing-16"}
+        $background={background}
         $gap={"spacing-16"}
       >
         {imageSrc && (

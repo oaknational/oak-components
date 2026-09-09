@@ -21,6 +21,7 @@ const testData = {
   tagBackground: "bg-decorative5-main" as const,
   linkText: "Test Link Text",
   linkIconName: "chevron-right" as const,
+  background: "bg-decorative1-subdued" as const,
 };
 
 describe("OakCard", () => {
@@ -170,5 +171,23 @@ describe("OakCard", () => {
 
     expect(screen.getByText(testData.linkText)).toBeInTheDocument();
     expect(screen.getByRole("presentation")).toBeInTheDocument();
+  });
+
+  it("renders card with the correct background colour when provided", () => {
+    renderWithTheme(
+      <OakCard {...requiredProps} background={testData.background} />,
+    );
+
+    expect(screen.getByRole("link")).toHaveStyle(
+      "background: rgb(223, 249, 222)",
+    );
+  });
+
+  it("renders card with the correct default background colour when not provided", () => {
+    renderWithTheme(<OakCard {...requiredProps} />);
+
+    expect(screen.getByRole("link")).toHaveStyle(
+      "background: rgb(255, 255, 255)",
+    );
   });
 });

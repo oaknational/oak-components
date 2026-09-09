@@ -53,6 +53,9 @@ const meta: Meta<typeof OakCard> = {
     hoverBackground: {
       options: oakUiRoleTokens,
     },
+    background: {
+      options: oakUiRoleTokens,
+    },
   },
   parameters: {
     controls: {
@@ -74,6 +77,7 @@ const meta: Meta<typeof OakCard> = {
         "linkText",
         "linkIconName",
         "hoverBackground",
+        "background",
       ],
     },
   },
@@ -101,6 +105,7 @@ export const Default: Story = {
     linkText: "Link Text",
     linkIconName: "arrow-right",
     hoverBackground: "bg-btn-secondary-hover",
+    background: "bg-primary",
   },
 };
 
@@ -179,5 +184,6 @@ export const DownloadCard: Story = {
     subCopy: "PDF, 4.8MB",
     linkText: "Download",
     linkIconName: "download",
+    background: "bg-decorative1-subdued",
   },
 };

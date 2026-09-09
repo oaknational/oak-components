@@ -12,6 +12,7 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
 .c2 {
   height: 100%;
   padding: 1rem;
+  background: #dff9de;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -320,6 +321,7 @@ exports[`OakCard matches snapshot when passed as='li' 1`] = `
 .c2 {
   height: 100%;
   padding: 1rem;
+  background: #dff9de;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
