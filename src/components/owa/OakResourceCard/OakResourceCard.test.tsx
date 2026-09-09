@@ -209,4 +209,19 @@ describe("OakResourceCard", () => {
     expect(onGroupChange).toHaveBeenCalledTimes(1);
     expect(onCardChange).toHaveBeenCalledTimes(1);
   });
+
+  it("renders without selection control when showSelectionControl is false", () => {
+    const { queryByRole } = renderWithTheme(
+      <OakResourceCard
+        id="checkbox-1"
+        value="Option 1"
+        title={"TITLE"}
+        description={"DESCRIPTION"}
+        iconName={"books"}
+        showSelectionControl={false}
+      />,
+    );
+
+    expect(queryByRole("checkbox")).not.toBeInTheDocument();
+  });
 });

@@ -503,7 +503,7 @@ input:checked + .c13 {
     text-decoration: underline;
   }
 
-  .c36:active:not(:has(input:disabled)) #resource-card-title {
+  .c36:hover:active:not(:has(input:disabled)) #resource-card-title {
     -webkit-text-decoration: underline;
     text-decoration: underline;
   }

@@ -12,7 +12,7 @@ import { InternalRadioWrapper } from "@/components/internal-components/InternalR
 import { OakIcon } from "@/components/images-and-icons/OakIcon";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
-import { OakUiRoleToken, parseDropShadow } from "@/styles";
+import { parseDropShadow } from "@/styles";
 import { parseColor } from "@/styles/helpers/parseColor";
 import { IconName } from "@/image-map";
 import { OakTagFunctional } from "@/components/messaging-and-feedback/OakTagFunctional";
@@ -83,6 +83,12 @@ export type OakResourceCardProps = BaseCheckBoxProps & {
    */
   iconName: IconName | IconName[];
   /**
+   * Whether to show the selection control (checkbox or radio button).
+   *
+   * @default true
+   */
+  showSelectionControl?: boolean;
+  /**
    * If true, renders the selection control as a radio button instead of a checkbox.
    *
    * @default false
@@ -96,9 +102,11 @@ export type OakResourceCardProps = BaseCheckBoxProps & {
   isEditable?: boolean;
 };
 
-const LabelContainer = styled("label")`
+const LabelContainer = styled("label")<{
+  $showSelectionControl?: boolean;
+}>`
   flex: 1;
-  cursor: pointer;
+  cursor: ${(props) => (props.$showSelectionControl ? "pointer" : "default")};
   display: flex;
 
   &:has(input:disabled) {
@@ -110,7 +118,7 @@ const LabelContainer = styled("label")`
 `;
 
 const Container = styled(OakFlex)<{
-  $hoverBackground: OakUiRoleToken;
+  $showSelectionControl?: boolean;
 }>`
   &:has(input:focus-visible) {
     box-shadow:
@@ -121,15 +129,19 @@ const Container = styled(OakFlex)<{
   @media (hover: hover) {
     &:hover:not(:has(input:disabled), :active) {
       background: ${(props) =>
-        props.$hoverBackground ? parseColor(props.$hoverBackground) : null};
+        props.$showSelectionControl
+          ? parseColor("bg-btn-secondary-hover")
+          : parseColor("bg-primary")};
       #resource-card-title {
-        text-decoration: underline;
+        text-decoration: ${(props) =>
+          props.$showSelectionControl ? "underline" : "none"};
       }
     }
 
-    &:active:not(:has(input:disabled)) {
+    &:hover:active:not(:has(input:disabled)) {
       #resource-card-title {
-        text-decoration: underline;
+        text-decoration: ${(props) =>
+          props.$showSelectionControl ? "underline" : "none"};
       }
     }
   }
@@ -159,6 +171,7 @@ export const OakResourceCard = (props: OakResourceCardProps) => {
     onFocus,
     onBlur,
     onHovered,
+    showSelectionControl = true,
     isRadio = false,
     "data-testid": dataTestId,
     isEditable = false,
@@ -193,11 +206,11 @@ export const OakResourceCard = (props: OakResourceCardProps) => {
       $ba={"border-solid-m"}
       $borderRadius={"border-radius-s"}
       $overflow={"hidden"}
-      $hoverBackground="bg-btn-secondary-hover"
+      $showSelectionControl={showSelectionControl}
       $color={"text-primary"}
       $width={"100%"}
     >
-      <LabelContainer>
+      <LabelContainer $showSelectionControl={showSelectionControl}>
         <OakFlex $alignItems={"stretch"} $flexGrow={1}>
           {isMultipleIcon ? (
             <MultipleIcons iconName={iconName} />
@@ -245,7 +258,7 @@ export const OakResourceCard = (props: OakResourceCardProps) => {
         </OakFlex>
         <OakFlex>
           <OakFlex $alignItems={"center"} $pr={"spacing-16"}>
-            {isRadio && (
+            {showSelectionControl && isRadio && (
               <InternalRadioWrapper
                 checked={isChecked}
                 size={checkboxSize}
@@ -268,7 +281,7 @@ export const OakResourceCard = (props: OakResourceCardProps) => {
                 }
               />
             )}
-            {!isRadio && (
+            {showSelectionControl && !isRadio && (
               <InternalCheckBoxWrapper
                 size={checkboxSize}
                 internalCheckbox={
