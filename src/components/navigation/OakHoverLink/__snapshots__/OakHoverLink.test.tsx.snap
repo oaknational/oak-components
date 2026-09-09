@@ -7,6 +7,7 @@ exports[`OakHoverLink matches snapshot 1`] = `
 
 .c0 {
   display: inline;
+  text-align: left;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
