@@ -181,12 +181,12 @@ describe("OakCard", () => {
   it("render image when showImage is true", () => {
     renderWithTheme(<OakCard {...testData} showImage={true} />);
 
-    expect(screen.queryByRole("img")).toBeInTheDocument();
+    expect(screen.getByRole("img")).toBeInTheDocument();
   });
 
   it("render image by default", () => {
     renderWithTheme(<OakCard {...testData} />);
 
-    expect(screen.queryByRole("img")).toBeInTheDocument();
+    expect(screen.getByRole("img")).toBeInTheDocument();
   });
 });
