@@ -67,7 +67,7 @@ exports[`CaptionCard matches snapshot 1`] = `
 
 .c24 {
   padding-left: 0.25rem;
-  display: inline-block;
+  display: inline;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
