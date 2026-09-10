@@ -90,6 +90,7 @@ export const icons = {
   strand: "v1776850533/icons/strand.svg",
   plus: "v1781533362/icons/plus.svg",
   hide: "v1785931149/icons/Icon_Hide_r1q6se.svg",
+  clock: "v1789035961/icons/clock.svg",
   //learning cycle icons
   "lc-explanation": "v1788336387/icons/lc-explanation.svg",
   "lc-check-for-understanding":
