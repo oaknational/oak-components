@@ -12,13 +12,14 @@ import {
   additionalSpacingTokens,
   oakAllSpacingTokens,
 } from "@/styles/theme/spacing";
-import { oakUiRoleTokens } from "@/styles";
+import { oakBorderRadiusTokens, oakUiRoleTokens } from "@/styles";
 
 const controlSpacingNames = [
   ...Object.keys(additionalSpacingTokens),
   ...Object.keys(oakAllSpacingTokens),
 ];
 const controlIconNames = [...oakIconNames].sort((a, b) => a.localeCompare(b));
+const controlBorderRadiusNames = Object.keys(oakBorderRadiusTokens);
 
 const meta: Meta<typeof OakCard> = {
   title: "Components/Navigation/OakCard",
@@ -53,8 +54,23 @@ const meta: Meta<typeof OakCard> = {
     hoverBackground: {
       options: oakUiRoleTokens,
     },
-    background: {
+    $background: {
       options: oakUiRoleTokens,
+    },
+    $borderRadius: {
+      options: controlBorderRadiusNames,
+    },
+    $btlr: {
+      options: controlBorderRadiusNames,
+    },
+    $btrr: {
+      options: controlBorderRadiusNames,
+    },
+    $bblr: {
+      options: controlBorderRadiusNames,
+    },
+    $bbrr: {
+      options: controlBorderRadiusNames,
     },
   },
   parameters: {
@@ -77,7 +93,12 @@ const meta: Meta<typeof OakCard> = {
         "linkText",
         "linkIconName",
         "hoverBackground",
-        "background",
+        "$background",
+        "$borderRadius",
+        "$btlr",
+        "$btrr",
+        "$bblr",
+        "$bbrr",
       ],
     },
   },
@@ -105,7 +126,7 @@ export const Default: Story = {
     linkText: "Link Text",
     linkIconName: "arrow-right",
     hoverBackground: "bg-btn-secondary-hover",
-    background: "bg-primary",
+    $background: "bg-primary",
   },
 };
 
@@ -184,6 +205,24 @@ export const DownloadCard: Story = {
     subCopy: "PDF, 4.8MB",
     linkText: "Download",
     linkIconName: "download",
-    background: "bg-decorative1-subdued",
+    $background: "bg-decorative1-subdued",
+  },
+};
+
+export const CustomCornerRadii: Story = {
+  render: (args) => <OakCard {...args} />,
+  args: {
+    heading: "Oak's 2022-2025 strategy: April 2024 update",
+    headingLevel: "h3",
+    href: "https://example.com/download.pdf",
+    cardOrientation: "column",
+    cardWidth: "spacing-240",
+    subCopy: "PDF, 4.8MB",
+    linkText: "Download",
+    linkIconName: "download",
+    $background: "bg-decorative1-subdued",
+    $borderRadius: "border-radius-xl",
+    $bblr: "border-radius-square",
+    $btrr: "border-radius-square",
   },
 };

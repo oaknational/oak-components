@@ -15,6 +15,7 @@ import { OakTagFunctional } from "@/components/messaging-and-feedback/OakTagFunc
 import {
   OakCombinedSpacingToken,
   OakUiRoleToken,
+  parseColor,
   parseSpacing,
 } from "@/styles";
 import { sizeStyle, SizeStyleProps } from "@/styles/utils/sizeStyle";
@@ -23,10 +24,15 @@ import { colorStyle, ColorStyleProps } from "@/styles/utils/colorStyle";
 import { borderStyle, BorderStyleProps } from "@/styles/utils/borderStyle";
 import {
   getBreakpoint,
+  responsiveStyle,
   ResponsiveValues,
 } from "@/styles/utils/responsiveStyle";
 
-export type OakCardProps = {
+/**
+ * Style props forwarded to the card's `<a>` element, letting consumers restyle
+ * the card without OakCard needing a bespoke prop for each style.
+ */
+export type OakCardProps = Omit<OakFlexProps, "children"> & {
   as?: "div" | "li";
   /**
    * The heading text of the card.
@@ -92,10 +98,6 @@ export type OakCardProps = {
    * The background colour of the card on hover.
    */
   hoverBackground?: OakUiRoleToken;
-  /**
-   * The background colour of the card.
-   */
-  background?: OakUiRoleToken;
 };
 
 const CardContent = styled(OakFlex)``;
@@ -163,6 +165,7 @@ const getResponsiveCardOrientationStyles = (
 
 type StyledFlexProps = OakFlexProps & {
   $cardOrientation: ResponsiveValues<"row" | "column">;
+  $hoverBackground?: OakUiRoleToken;
 };
 const StyledOakFlex = styled(OakFlex)<StyledFlexProps>`
   ${flexStyle}
@@ -171,6 +174,12 @@ const StyledOakFlex = styled(OakFlex)<StyledFlexProps>`
     getResponsiveCardOrientationStyles($cardOrientation)}
 
   &:hover {
+    ${responsiveStyle<StyledFlexProps, OakUiRoleToken>(
+      "background",
+      (props) => props.$hoverBackground,
+      parseColor,
+    )}
+
     h1,
     h2,
     h3,
@@ -194,6 +203,9 @@ const StyledOakFlex = styled(OakFlex)<StyledFlexProps>`
  *
  * The card can be oriented in a row or column layout and its width can be adjusted using spacing tokens.
  * The image aspect ratio can be set to either 1:1 or 4:3.
+ *
+ * Any `OakFlex` style prop is forwarded to the card's `<a>` element, so the
+ * background, border radii, spacing etc. can be overridden directly.
  */
 export const OakCard = ({
   as = "div",
@@ -213,16 +225,34 @@ export const OakCard = ({
   linkIconName = "arrow-right",
   hoverBackground = "bg-btn-secondary-hover",
   imageBackgroundColor = "bg-neutral",
-  background = "bg-primary",
+  $background = "bg-primary",
+  $borderRadius = "border-radius-m2",
+  $btlr,
+  $btrr,
+  $bblr,
+  $bbrr,
+  $btr,
+  $bbr,
+  ...flexProps
 }: OakCardProps) => {
+  // The focus indicator draws its ring with a box-shadow, so it needs to match
+  // the shape of the card it wraps.
+  const borderRadii = {
+    $borderRadius,
+    $btlr,
+    $btrr,
+    $bblr,
+    $bbrr,
+    $btr,
+    $bbr,
+  };
+
   return (
     <OakFocusIndicator
       as={as}
-      $background={background}
-      hoverBackground={hoverBackground}
       $height={"100%"}
       $width={cardWidth}
-      $borderRadius={"border-radius-m2"}
+      {...borderRadii}
     >
       <StyledOakFlex
         as="a"
@@ -231,6 +261,10 @@ export const OakCard = ({
         $height={"100%"}
         $pa={"spacing-16"}
         $gap={"spacing-16"}
+        $background={$background}
+        $hoverBackground={hoverBackground}
+        {...borderRadii}
+        {...flexProps}
       >
         {imageSrc && (
           <StyledOakImage
