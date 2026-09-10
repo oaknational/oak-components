@@ -10,7 +10,7 @@ import { OakFlex, OakGrid } from "@/components/layout-and-structure";
 const meta = {
   component: OakResourceCard,
   tags: ["autodocs"],
-  title: "components/OWA/OakResourceCard",
+  title: "OWA/OakResourceCard",
   argTypes: {
     checked: { control: { type: "boolean" } },
     defaultChecked: { control: { type: "boolean" } },
