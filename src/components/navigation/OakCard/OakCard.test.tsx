@@ -246,4 +246,21 @@ describe("OakCard", () => {
 
     expect(screen.getByRole("link")).toHaveStyle("padding: 2rem");
   });
+  it("doesn't render image when showImage is false", () => {
+    renderWithTheme(<OakCard {...testData} showImage={false} />);
+
+    expect(screen.queryByRole("img")).not.toBeInTheDocument();
+  });
+
+  it("render image when showImage is true", () => {
+    renderWithTheme(<OakCard {...testData} showImage={true} />);
+
+    expect(screen.getByRole("img")).toBeInTheDocument();
+  });
+
+  it("render image by default", () => {
+    renderWithTheme(<OakCard {...testData} />);
+
+    expect(screen.getByRole("img")).toBeInTheDocument();
+  });
 });

@@ -71,6 +71,9 @@ const meta: Meta<typeof OakCard> = {
     },
     $bbrr: {
       options: controlBorderRadiusNames,
+      showImage: {
+        type: "boolean",
+      },
     },
   },
   parameters: {
@@ -99,6 +102,7 @@ const meta: Meta<typeof OakCard> = {
         "$btrr",
         "$bblr",
         "$bbrr",
+        "showImage",
       ],
     },
   },
