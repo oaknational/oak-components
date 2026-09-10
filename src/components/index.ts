@@ -1,7 +1,6 @@
 export * from "@/components/buttons";
 export * from "@/components/cookies";
 export * from "@/components/form-elements";
-export * from "@/components/house-cat";
 export * from "@/components/images-and-icons";
 export * from "@/components/layout-and-structure";
 export * from "@/components/messaging-and-feedback";
