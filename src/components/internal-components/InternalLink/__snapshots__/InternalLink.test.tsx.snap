@@ -3,7 +3,7 @@
 exports[`InternalLink matches snapshot 1`] = `
 .c1 {
   padding-right: 0.25rem;
-  display: inline-block;
+  display: inline;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -184,7 +184,7 @@ exports[`InternalLink matches snapshot with loading spinner 1`] = `
 
 .c1 {
   padding-right: 0.25rem;
-  display: inline-block;
+  display: inline;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
