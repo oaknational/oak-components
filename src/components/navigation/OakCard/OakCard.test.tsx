@@ -241,11 +241,6 @@ describe("OakCard", () => {
     expect(link).toHaveStyleRule("border-bottom-right-radius", "1rem");
   });
 
-  it("forwards arbitrary flex style props to the card link", () => {
-    renderWithTheme(<OakCard {...requiredProps} $pa="spacing-32" />);
-
-    expect(screen.getByRole("link")).toHaveStyle("padding: 2rem");
-  });
   it("doesn't render image when showImage is false", () => {
     renderWithTheme(<OakCard {...testData} showImage={false} />);
 

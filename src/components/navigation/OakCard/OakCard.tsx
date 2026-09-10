@@ -30,10 +30,9 @@ import {
 import { OakBox } from "@/components/layout-and-structure";
 
 /**
- * Style props forwarded to the card's `<a>` element, letting consumers restyle
- * the card without OakCard needing a bespoke prop for each style.
+ * Border and colour style props are forwarded to the card's `<a>` element.
  */
-export type OakCardProps = Omit<OakFlexProps, "children"> & {
+export type OakCardProps = {
   as?: "div" | "li";
   /**
    * The heading text of the card.
@@ -103,7 +102,8 @@ export type OakCardProps = Omit<OakFlexProps, "children"> & {
    * Whether to show the image or not
    */
   showImage?: ResponsiveValues<boolean>;
-};
+} & BorderStyleProps &
+  ColorStyleProps;
 
 const CardContent = styled(OakFlex)``;
 type StyledImageProps = SizeStyleProps & ColorStyleProps & BorderStyleProps;
@@ -214,8 +214,8 @@ function boolAsDisplay(input: boolean | null | undefined) {
  * The card can be oriented in a row or column layout and its width can be adjusted using spacing tokens.
  * The image aspect ratio can be set to either 1:1 or 4:3.
  *
- * Any `OakFlex` style prop is forwarded to the card's `<a>` element, so the
- * background, border radii, spacing etc. can be overridden directly.
+ * Border and colour style props are forwarded to the card's `<a>` element, so the
+ * background, border radii, borders etc. can be overridden directly.
  */
 export const OakCard = ({
   as = "div",
@@ -237,38 +237,15 @@ export const OakCard = ({
   imageBackgroundColor = "bg-neutral",
   $background = "bg-primary",
   $borderRadius = "border-radius-m2",
-  $btlr,
-  $btrr,
-  $bblr,
-  $bbrr,
-  $btr,
-  $bbr,
   showImage,
-  ...flexProps
+  ...styleProps
 }: OakCardProps) => {
-  // The focus indicator draws its ring with a box-shadow, so it needs to match
-  // the shape of the card it wraps.
-  const borderRadii = {
-    $borderRadius,
-    $btlr,
-    $btrr,
-    $bblr,
-    $bbrr,
-    $btr,
-    $bbr,
-  };
-
   const displayImage = Array.isArray(showImage)
     ? showImage.map((value) => boolAsDisplay(value))
     : boolAsDisplay(showImage);
 
   return (
-    <OakFocusIndicator
-      as={as}
-      $height={"100%"}
-      $width={cardWidth}
-      {...borderRadii}
-    >
+    <OakFocusIndicator as={as} $height={"100%"} $width={cardWidth}>
       <StyledOakFlex
         as="a"
         href={href}
@@ -276,10 +253,10 @@ export const OakCard = ({
         $height={"100%"}
         $pa={"spacing-16"}
         $gap={"spacing-16"}
-        $background={$background}
         $hoverBackground={hoverBackground}
-        {...borderRadii}
-        {...flexProps}
+        $background={$background}
+        $borderRadius={$borderRadius}
+        {...styleProps}
       >
         {imageSrc && (
           <OakBox $display={displayImage}>
