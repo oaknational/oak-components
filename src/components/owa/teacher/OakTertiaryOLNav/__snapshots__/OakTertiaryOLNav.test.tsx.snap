@@ -7,6 +7,7 @@ exports[`Component OakTertiaryOLNav matches snapshot 1`] = `
 
 .c4 {
   display: inline;
+  text-align: left;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
