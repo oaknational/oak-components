@@ -4,14 +4,15 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
 .c0 {
   width: 22.5rem;
   height: 100%;
-  background: #ffffff;
-  border-radius: 0.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c2 {
   height: 100%;
   padding: 1rem;
+  background: #dff9de;
+  border-radius: 1.5rem;
+  border-bottom-left-radius: 0rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -126,12 +127,10 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
 }
 
 .c1:has(a:hover,button:hover) {
-  background-color: #f2f2f2;
   box-shadow: none;
 }
 
 .c1:has( a, button) {
-  border-radius: 0.5rem;
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
@@ -209,6 +208,10 @@ exports[`OakCard matches snapshot when passed all props 1`] = `
 
 .c4 .c7 {
   height: 15rem;
+}
+
+.c4:hover {
+  background: #f2f2f2;
 }
 
 .c4:hover h1,
@@ -316,14 +319,15 @@ exports[`OakCard matches snapshot when passed as='li' 1`] = `
 .c0 {
   width: 22.5rem;
   height: 100%;
-  background: #ffffff;
-  border-radius: 0.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c2 {
   height: 100%;
   padding: 1rem;
+  background: #dff9de;
+  border-radius: 1.5rem;
+  border-bottom-left-radius: 0rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -441,12 +445,10 @@ exports[`OakCard matches snapshot when passed as='li' 1`] = `
 }
 
 .c1:has(a:hover,button:hover) {
-  background-color: #f2f2f2;
   box-shadow: none;
 }
 
 .c1:has( a, button) {
-  border-radius: 0.5rem;
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%),0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
@@ -524,6 +526,10 @@ exports[`OakCard matches snapshot when passed as='li' 1`] = `
 
 .c4 .c7 {
   height: 15rem;
+}
+
+.c4:hover {
+  background: #f2f2f2;
 }
 
 .c4:hover h1,
