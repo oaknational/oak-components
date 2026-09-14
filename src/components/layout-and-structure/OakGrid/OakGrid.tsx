@@ -14,9 +14,9 @@ const gridStyle = css<OakGridProps>`
   ${responsiveStyle("grid-auto-rows", (props) => props.$gridAutoRows)}
   ${responsiveStyle("grid-template-areas", (props) => props.$gridTemplateAreas)}
   ${responsiveStyle(
-  "grid-template-columns",
-  (props) => props.$gridTemplateColumns,
-)}
+    "grid-template-columns",
+    (props) => props.$gridTemplateColumns,
+  )}
   ${responsiveStyle("grid-template-rows", (props) => props.$gridTemplateRows)}
   ${responsiveStyle("align-items", (props) => props.$alignItems)}
 `;
@@ -71,7 +71,7 @@ export type OakGridProps = OakBoxProps & {
  *
  * Defaults to a 12 column grid
  */
-export const OakGrid = styled(OakBox) <OakGridProps>`
+export const OakGrid = styled(OakBox)<OakGridProps>`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   width: 100%;

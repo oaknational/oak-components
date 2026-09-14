@@ -41,12 +41,12 @@ exports[`OakSelect disabled select 1`] = `
   border-top: none;
 }
 
-.c3 ::picker(select) {
+.c3::picker(select) {
   top: calc(anchor(bottom) - 2px);
   left: anchor(0);
 }
 
-.c3 ::picker-icon {
+.c3::picker-icon {
   display: none;
 }
 
@@ -259,12 +259,12 @@ exports[`OakSelect highlighted select 1`] = `
   border-top: none;
 }
 
-.c3 ::picker(select) {
+.c3::picker(select) {
   top: calc(anchor(bottom) - 2px);
   left: anchor(0);
 }
 
-.c3 ::picker-icon {
+.c3::picker-icon {
   display: none;
 }
 
@@ -476,12 +476,12 @@ exports[`OakSelect invalid select 1`] = `
   border-top: none;
 }
 
-.c3 ::picker(select) {
+.c3::picker(select) {
   top: calc(anchor(bottom) - 2px);
   left: anchor(0);
 }
 
-.c3 ::picker-icon {
+.c3::picker-icon {
   display: none;
 }
 
@@ -693,12 +693,12 @@ exports[`OakSelect optgroup select 1`] = `
   border-top: none;
 }
 
-.c3 ::picker(select) {
+.c3::picker(select) {
   top: calc(anchor(bottom) - 2px);
   left: anchor(0);
 }
 
-.c3 ::picker-icon {
+.c3::picker-icon {
   display: none;
 }
 
@@ -959,12 +959,12 @@ exports[`OakSelect plain select 1`] = `
   border-top: none;
 }
 
-.c3 ::picker(select) {
+.c3::picker(select) {
   top: calc(anchor(bottom) - 2px);
   left: anchor(0);
 }
 
-.c3 ::picker-icon {
+.c3::picker-icon {
   display: none;
 }
 
