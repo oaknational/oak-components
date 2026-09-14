@@ -14,10 +14,11 @@ const gridStyle = css<OakGridProps>`
   ${responsiveStyle("grid-auto-rows", (props) => props.$gridAutoRows)}
   ${responsiveStyle("grid-template-areas", (props) => props.$gridTemplateAreas)}
   ${responsiveStyle(
-    "grid-template-columns",
-    (props) => props.$gridTemplateColumns,
-  )}
-    ${responsiveStyle("grid-template-rows", (props) => props.$gridTemplateRows)}
+  "grid-template-columns",
+  (props) => props.$gridTemplateColumns,
+)}
+  ${responsiveStyle("grid-template-rows", (props) => props.$gridTemplateRows)}
+  ${responsiveStyle("align-items", (props) => props.$alignItems)}
 `;
 
 export type OakGridProps = OakBoxProps & {
@@ -57,6 +58,12 @@ export type OakGridProps = OakBoxProps & {
    * Accepts a `grid-template-rows` value or a responsive array of `grid-template-rows` values.
    */
   $gridTemplateRows?: ResponsiveValues<CSSProperties["gridTemplateRows"]>;
+  /**
+   * Applies `align-items` to the grid
+   *
+   * Accepts a `align-items` value or a responsive array of `align-items` values.
+   */
+  $alignItems?: ResponsiveValues<CSSProperties["alignItems"]>;
 };
 
 /**
@@ -64,7 +71,7 @@ export type OakGridProps = OakBoxProps & {
  *
  * Defaults to a 12 column grid
  */
-export const OakGrid = styled(OakBox)<OakGridProps>`
+export const OakGrid = styled(OakBox) <OakGridProps>`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   width: 100%;
