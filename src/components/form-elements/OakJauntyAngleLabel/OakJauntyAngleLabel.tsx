@@ -4,9 +4,8 @@ import { OakBox } from "@/components/layout-and-structure/OakBox";
 
 export type OakJauntyAngleLabelProps = {
   label: string;
-  // The following should only used when as="label"
+  // Should only used when as="label"
   htmlFor?: string;
-  required?: boolean;
 } & ComponentProps<typeof OakBox>; // Adding div type for OakBox for aria features
 export const OakJauntyAngleLabel = (props: OakJauntyAngleLabelProps) => {
   const { label, ...oakBoxProps } = props;
