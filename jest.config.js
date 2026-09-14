@@ -14,7 +14,7 @@ const config = {
   // The directory where Jest should output its coverage files
   coverageDirectory: "coverage",
 
-  moduleDirectories: ["<rootDir>", "node_modules", "src", "src/styles"],
+  moduleDirectories: ["<rootDir>", "node_modules", "bin", "src", "src/styles"],
 
   // An array of file extensions your modules use
   // moduleFileExtensions: [
