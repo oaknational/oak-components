@@ -26,9 +26,6 @@ exports[`OakCollapsibleContent matches snapshot 1`] = `
 }
 
 .c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 

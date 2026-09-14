@@ -85,7 +85,7 @@ const StyledContainer = styled(OakFlex)`
 `;
 
 type BottomBoxShadowProps = {
-  shouldDisplayShadow: boolean;
+  $shouldDisplayShadow: boolean;
 };
 
 export const BottomBoxShadow = styled(OakBox)<BottomBoxShadowProps>`
@@ -94,7 +94,7 @@ export const BottomBoxShadow = styled(OakBox)<BottomBoxShadowProps>`
   width: 100%;
   height: 50px;
   opacity: ${(props) =>
-    props.shouldDisplayShadow
+    props.$shouldDisplayShadow
       ? parseOpacity("opaque")
       : parseOpacity("transparent")};
   z-index: 100;
@@ -113,6 +113,7 @@ const Accordion = ({
   children,
   id,
   subheading,
+  initialOpen,
   ...styleProps
 }: InternalChevronAccordionProps) => {
   const [shouldDisplayShadow, setShouldDisplayShadow] = useState(false);
@@ -199,7 +200,7 @@ const Accordion = ({
       <StyledAccordionUnderline $fill={"border-decorative5-stronger"} />
       {isOpen && (
         <BottomBoxShadow
-          shouldDisplayShadow={shouldDisplayShadow}
+          $shouldDisplayShadow={shouldDisplayShadow}
           data-testid="bottom-box-shadow"
           $pointerEvents="none"
         />

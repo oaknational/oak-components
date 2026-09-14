@@ -44,7 +44,7 @@ type InternalDroppableHoldingPenProps = {
  * It is intended to be used with `useDroppable` from `@dnd-kit/core`
  */
 export const InternalDroppableHoldingPen: FC<
-  ComponentPropsWithRef<typeof OakFlex>
+  ComponentPropsWithRef<typeof OakFlex> & InternalDroppableHoldingPenProps
 > = forwardRef<
   HTMLDivElement,
   InternalDroppableHoldingPenProps & ComponentPropsWithoutRef<typeof OakFlex>

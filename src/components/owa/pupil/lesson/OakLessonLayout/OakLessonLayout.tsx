@@ -36,9 +36,9 @@ export type OakLessonLayoutProps = {
  * set it here to apply appropriate padding to the top of the content.
  */
 const StyledLayoutBox = styled(OakBox)<{
-  sectionName: LessonSectionName;
-  phase: Phase;
-  celebrate: boolean;
+  $sectionName: LessonSectionName;
+  $phase: Phase;
+  $celebrate: boolean;
 }>`
   @media (min-width: ${getBreakpoint("small")}px) {
     padding-top: ${parseSpacing("spacing-56")};
@@ -46,9 +46,9 @@ const StyledLayoutBox = styled(OakBox)<{
   @media (min-width: ${getBreakpoint("large")}px) {
     ${(props) => css`
       ${getBackgroundUrlForLesson(
-        props.sectionName,
-        props.phase,
-        props.celebrate,
+        props.$sectionName,
+        props.$phase,
+        props.$celebrate,
       )}
     `}
     background-repeat: no-repeat;
@@ -88,9 +88,9 @@ export const OakLessonLayout = ({
       $minHeight={"100%"}
       $ph={["spacing-0", "spacing-24"]}
       $background={pageBackgroundColor}
-      sectionName={lessonSectionName}
-      celebrate={celebrate}
-      phase={phase}
+      $sectionName={lessonSectionName}
+      $celebrate={celebrate}
+      $phase={phase}
     >
       <OakFlex
         $flexDirection="column"

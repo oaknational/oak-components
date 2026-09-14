@@ -7,7 +7,7 @@ exports[`OakGrid matches snapshot 1`] = `
 
 .c1 {
   display: grid;
-  grid-template-columns: repeat(12,1fr);
+  grid-template-columns: repeat(12, 1fr);
   width: 100%;
 }
 

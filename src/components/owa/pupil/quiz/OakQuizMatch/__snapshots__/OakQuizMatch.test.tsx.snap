@@ -25,9 +25,6 @@ exports[`OakQuizMatch matches snapshot 1`] = `
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.5rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
@@ -60,9 +57,6 @@ exports[`OakQuizMatch matches snapshot 1`] = `
   font-weight: 500;
   font-size: 1.125rem;
   line-height: 1.75rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
@@ -99,122 +93,68 @@ exports[`OakQuizMatch matches snapshot 1`] = `
   font-weight: 300;
   font-size: 1.125rem;
   line-height: 1.75rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   gap: 0.5rem;
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
   flex-grow: 0;
 }
 
 .c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
   align-items: flex-start;
   gap: 0.75rem;
 }
 
 .c15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 1rem;
 }
 
 .c18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .c19 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 1rem;
 }
 
 .c21 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 1rem;
 }
 
 .c23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
 }
 
 .c27 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
   align-self: center;
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
 }
 
 .c10 {
   background-color: #f2f2f2;
-  background-color: color-mix( in lch, #222222 5%, transparent );
+  background-color: color-mix(     in lch,     #222222 5%,     transparent   );
 }
 
 .c10[data-over="true"] {
   background-color: #ffffff;
-  background-color: color-mix( in lch, #ffffff 60%, transparent );
+  background-color: color-mix(       in lch,       #ffffff 60%,       transparent     );
 }
 
 .c5 {
@@ -234,9 +174,6 @@ exports[`OakQuizMatch matches snapshot 1`] = `
   font-weight: 500;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  -webkit-letter-spacing: -0.005rem;
-  -moz-letter-spacing: -0.005rem;
-  -ms-letter-spacing: -0.005rem;
   letter-spacing: -0.005rem;
   white-space: nowrap;
 }
@@ -247,18 +184,13 @@ exports[`OakQuizMatch matches snapshot 1`] = `
 }
 
 .c14 {
-  cursor: -webkit-grab;
-  cursor: -moz-grab;
   cursor: grab;
   outline: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
 .c14:focus-visible:not([data-dragging="true"]):not([data-disabled="true"]) {
-  box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
 .c14[data-dragging="true"] {
@@ -267,8 +199,7 @@ exports[`OakQuizMatch matches snapshot 1`] = `
   color: #222222;
   outline: 0.25rem solid #222222;
   outline-offset: -0.25rem;
-  box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
-  -webkit-text-decoration: underline;
+  box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%),0.25rem 0.25rem 0 rgba(87, 87, 87, 100%);
   text-decoration: underline;
 }
 
@@ -295,30 +226,25 @@ exports[`OakQuizMatch matches snapshot 1`] = `
   outline-color: #808080;
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .c21 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .c21 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
   }
 }
 
-@media (hover:hover) {
-  .c14:hover:not([data-dragging="true"]):not([data-disabled="true"]):not( [data-readonly="true"] ) {
+@media (hover: hover) {
+  .c14:hover:not([data-dragging="true"]):not([data-disabled="true"]):not(         [data-readonly="true"]       ) {
     background-color: #dff9de;
     color: #222222;
-    box-shadow: 0 0.5rem 0.5rem rgba(92,92,92,20%);
+    box-shadow: 0 0.5rem 0.5rem rgba(92, 92, 92, 20%);
     border-bottom: 0.25rem solid #222222;
     padding-bottom: 1rem;
-    -webkit-text-decoration: underline;
     text-decoration: underline;
   }
 }

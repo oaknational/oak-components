@@ -1,4 +1,5 @@
 import React, { ElementType, forwardRef } from "react";
+import styled from "styled-components";
 
 import { Variant, variantConfig } from "./config";
 
@@ -28,6 +29,8 @@ type OakLinkComponent = <C extends React.ElementType = "a">(
   props: PolymorphicPropsWithRef<C> & OakLinkProps,
 ) => React.ReactNode;
 
+const StyledInternalLink = styled(InternalLink)``;
+
 /**
  * A link with an optional icon and loading state.
  *
@@ -38,18 +41,18 @@ export const OakLink: OakLinkComponent = forwardRef(
     props: PolymorphicPropsWithRef<C> & OakLinkProps,
     ref: PolymorphicRef<C>,
   ) => {
-    const { variant = "primary" } = props;
+    const { variant = "primary", ...restProps } = props;
     const variantDefinition = variantConfig[variant];
 
     return (
-      <InternalLink
+      <StyledInternalLink
         color={variantDefinition.color}
         hoverColor={variantDefinition.hoverColor}
         activeColor={variantDefinition.activeColor}
         visitedColor={variantDefinition.visitedColor}
         textDecoration={variantDefinition.textDecoration}
         disabledColor={"text-disabled"}
-        {...props}
+        {...restProps}
         ref={ref}
       />
     );

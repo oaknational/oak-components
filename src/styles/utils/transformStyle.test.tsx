@@ -3,11 +3,14 @@ import styled from "styled-components";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 
-import { transformStyle } from "@/styles/utils/transformStyle";
+import {
+  transformStyle,
+  TransformStyleProps,
+} from "@/styles/utils/transformStyle";
 
 describe("transformStyle", () => {
   test('should correctly handle prop "transform" as string', async () => {
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<TransformStyleProps>`
       ${transformStyle}
     `;
     const { getByTestId } = render(
@@ -16,7 +19,7 @@ describe("transformStyle", () => {
     expect(getByTestId("test")).toHaveStyle("transform: rotate(90deg)");
   });
   test('should correctly handle prop "transform" as array', async () => {
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<TransformStyleProps>`
       ${transformStyle}
     `;
     const { getByTestId } = render(
@@ -32,7 +35,7 @@ describe("transformStyle", () => {
       [prop]: value,
     };
 
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<TransformStyleProps>`
       ${transformStyle}
     `;
     const { getByTestId } = render(

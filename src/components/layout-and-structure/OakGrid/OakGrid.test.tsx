@@ -28,7 +28,7 @@ describe("OakGrid", () => {
   it("has 12 columns", () => {
     const { getByTestId } = render(<OakGrid data-testid="oak-grid" />);
     expect(getByTestId("oak-grid")).toHaveStyle(
-      "grid-template-columns: repeat(12,1fr);",
+      "grid-template-columns: repeat(12, 1fr);",
     );
   });
 

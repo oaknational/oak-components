@@ -52,7 +52,6 @@ export const DraggingOver: Story = {
 
 export const Occupied: Story = {
   args: {
-    canDrop: true,
     children: <OakDraggable>Elephant</OakDraggable>,
   },
 };
@@ -65,14 +64,12 @@ export const Highlighted: Story = {
 
 export const WithSlotLabel: Story = {
   args: {
-    canDrop: true,
     labelSlot: "never forgets",
   },
 };
 
 export const OccupiedWithSlotLabel: Story = {
   args: {
-    canDrop: true,
     labelSlot: "never forgets",
     children: <OakDraggable>Elephant</OakDraggable>,
   },
@@ -82,7 +79,6 @@ export const OccupiedWithSlotLabel: Story = {
  */
 export const DraggingOverWithSlotLabel: Story = {
   args: {
-    canDrop: true,
     isOver: true,
     labelSlot: "never forgets",
   },
@@ -90,7 +86,6 @@ export const DraggingOverWithSlotLabel: Story = {
 
 export const WithLongSlotLabel: Story = {
   args: {
-    canDrop: true,
     labelSlot:
       "which animal never forgets and is the largest land animal on earth?",
   },
@@ -98,7 +93,6 @@ export const WithLongSlotLabel: Story = {
 
 export const WithAVeryLongSlotLabel: Story = {
   args: {
-    canDrop: true,
     labelSlot:
       "which animal is the largest land mammal with a long trunk, large ears, and tusks? Known for intelligence and social behavior, it symbolizes strength and conservation efforts worldwide.",
   },

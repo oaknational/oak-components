@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { DisplayStyleProps } from "@/styles/utils/displayStyle";
-import { sizeStyle } from "@/styles/utils/sizeStyle";
+import { sizeStyle, SizeStyleProps } from "@/styles/utils/sizeStyle";
 
-const StyledSvg = styled.svg`
+const StyledSvg = styled.svg<SizeStyleProps>`
   ${sizeStyle}
 `;
 
