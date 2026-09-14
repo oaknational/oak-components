@@ -44,6 +44,33 @@ export default [
     ],
   },
   {
+    input: "./scripts/migrate/migrate.ts",
+    external,
+    output: [
+      {
+        dir: join(outputDir, "es/scripts/migrate"),
+        format: "es",
+        preserveModules: true,
+        preserveModulesRoot: "scripts/migrate",
+      },
+      {
+        dir: join(outputDir, "cjs/scripts/migrate"),
+        format: "cjs",
+        interop: "auto",
+      },
+    ],
+    plugins: [
+      resolve(),
+      commonjs({
+        esmExternals: true,
+        requireReturnsDefault: "preferred",
+      }),
+      typescript(),
+      json(),
+      peerDepsExternal(),
+    ],
+  },
+  {
     input: "./src/index.ts",
     output: [
       { file: `${outputDir}/es/types.d.ts`, format: "es" },

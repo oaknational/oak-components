@@ -1,6 +1,9 @@
 import React from "react";
 
-export const Scribble = () => (
+export const Scribble = (): React.ReactElement<
+  React.SVGProps<SVGSVGElement>,
+  "svg"
+> => (
   <svg
     width="241"
     height="42"

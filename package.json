@@ -4,6 +4,9 @@
   "licence": "MIT",
   "packageManager": "pnpm@11.2.0",
   "description": "Shared components for Oak applications",
+  "bin": {
+    "oak-components-migrate": "./dist/npm/es/scripts/migrate/migrate.js"
+  },
   "exports": {
     ".": {
       "import": {
