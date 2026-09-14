@@ -122,7 +122,10 @@ const config = {
         },
       },
     ],
-    "^.+\\.(js|jsx)$": "babel-jest",
+    "^.+\\.(js|jsx)$": [
+      "babel-jest",
+      { configFile: require.resolve("./babel.config.jest.js") },
+    ],
   },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
