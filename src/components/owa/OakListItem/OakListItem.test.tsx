@@ -5,7 +5,7 @@ import { OakListItem } from "./OakListItem";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
-import { OakRadioGroup } from "@/index";
+import { OakRadioGroup } from "@/components/form-elements/OakRadioGroup";
 
 const onClick = jest.fn();
 const onCheckedChange = jest.fn();

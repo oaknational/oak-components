@@ -216,7 +216,7 @@ input:checked+.c22 {
     text-decoration: underline;
   }
 
-  .c2:active:not(:has(input:disabled)) #resource-card-title {
+  .c2:hover:active:not(:has(input:disabled)) #resource-card-title {
     text-decoration: underline;
   }
 }
@@ -530,7 +530,7 @@ input:checked+.c22 {
     text-decoration: underline;
   }
 
-  .c2:active:not(:has(input:disabled)) #resource-card-title {
+  .c2:hover:active:not(:has(input:disabled)) #resource-card-title {
     text-decoration: underline;
   }
 }
@@ -859,7 +859,7 @@ input:checked+.c24 {
     text-decoration: underline;
   }
 
-  .c2:active:not(:has(input:disabled)) #resource-card-title {
+  .c2:hover:active:not(:has(input:disabled)) #resource-card-title {
     text-decoration: underline;
   }
 }

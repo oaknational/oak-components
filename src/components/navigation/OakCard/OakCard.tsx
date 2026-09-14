@@ -15,6 +15,7 @@ import { OakTagFunctional } from "@/components/messaging-and-feedback/OakTagFunc
 import {
   OakCombinedSpacingToken,
   OakUiRoleToken,
+  parseColor,
   parseSpacing,
 } from "@/styles";
 import { sizeStyle, SizeStyleProps } from "@/styles/utils/sizeStyle";
@@ -23,9 +24,14 @@ import { colorStyle, ColorStyleProps } from "@/styles/utils/colorStyle";
 import { borderStyle, BorderStyleProps } from "@/styles/utils/borderStyle";
 import {
   getBreakpoint,
+  responsiveStyle,
   ResponsiveValues,
 } from "@/styles/utils/responsiveStyle";
+import { OakBox } from "@/components/layout-and-structure";
 
+/**
+ * Border and colour style props are forwarded to the card's `<a>` element.
+ */
 export type OakCardProps = {
   as?: "div" | "li";
   /**
@@ -92,7 +98,12 @@ export type OakCardProps = {
    * The background colour of the card on hover.
    */
   hoverBackground?: OakUiRoleToken;
-};
+  /**
+   * Whether to show the image or not
+   */
+  showImage?: ResponsiveValues<boolean>;
+} & BorderStyleProps &
+  ColorStyleProps;
 
 const CardContent = styled(OakFlex)``;
 type StyledImageProps = SizeStyleProps & ColorStyleProps & BorderStyleProps;
@@ -159,6 +170,7 @@ const getResponsiveCardOrientationStyles = (
 
 type StyledFlexProps = OakFlexProps & {
   $cardOrientation: ResponsiveValues<"row" | "column">;
+  $hoverBackground?: OakUiRoleToken;
 };
 const StyledOakFlex = styled(OakFlex)<StyledFlexProps>`
   ${flexStyle}
@@ -167,6 +179,12 @@ const StyledOakFlex = styled(OakFlex)<StyledFlexProps>`
     getResponsiveCardOrientationStyles($cardOrientation)}
 
   &:hover {
+    ${responsiveStyle<StyledFlexProps, OakUiRoleToken>(
+      "background",
+      (props) => props.$hoverBackground,
+      parseColor,
+    )}
+
     h1,
     h2,
     h3,
@@ -183,6 +201,11 @@ const StyledOakFlex = styled(OakFlex)<StyledFlexProps>`
   }
 `;
 
+function boolAsDisplay(input: boolean | null | undefined) {
+  if (input === undefined) return;
+  return input ? "block" : "none";
+}
+
 /**
  * A highly customisable card component that displays a heading and takes a href at minimum.
  *
@@ -190,6 +213,9 @@ const StyledOakFlex = styled(OakFlex)<StyledFlexProps>`
  *
  * The card can be oriented in a row or column layout and its width can be adjusted using spacing tokens.
  * The image aspect ratio can be set to either 1:1 or 4:3.
+ *
+ * Border and colour style props are forwarded to the card's `<a>` element, so the
+ * background, border radii, borders etc. can be overridden directly.
  */
 export const OakCard = ({
   as = "div",
@@ -209,16 +235,17 @@ export const OakCard = ({
   linkIconName = "arrow-right",
   hoverBackground = "bg-btn-secondary-hover",
   imageBackgroundColor = "bg-neutral",
+  $background = "bg-primary",
+  $borderRadius = "border-radius-m2",
+  showImage,
+  ...styleProps
 }: OakCardProps) => {
+  const displayImage = Array.isArray(showImage)
+    ? showImage.map((value) => boolAsDisplay(value))
+    : boolAsDisplay(showImage);
+
   return (
-    <OakFocusIndicator
-      as={as}
-      $background={"bg-primary"}
-      $hoverBackground={hoverBackground}
-      $height={"100%"}
-      $width={cardWidth}
-      $borderRadius={"border-radius-m2"}
-    >
+    <OakFocusIndicator as={as} $height={"100%"} $width={cardWidth}>
       <StyledOakFlex
         as="a"
         href={href}
@@ -226,16 +253,22 @@ export const OakCard = ({
         $height={"100%"}
         $pa={"spacing-16"}
         $gap={"spacing-16"}
+        $hoverBackground={hoverBackground}
+        $background={$background}
+        $borderRadius={$borderRadius}
+        {...styleProps}
       >
         {imageSrc && (
-          <StyledOakImage
-            src={imageSrc || ""}
-            alt={imageAlt || ""}
-            $width={"auto"}
-            $aspectRatio={aspectRatio}
-            $background={imageBackgroundColor}
-            $borderRadius={"border-radius-m2"}
-          />
+          <OakBox $display={displayImage}>
+            <StyledOakImage
+              src={imageSrc || ""}
+              alt={imageAlt || ""}
+              $width={"auto"}
+              $aspectRatio={aspectRatio}
+              $background={imageBackgroundColor}
+              $borderRadius={"border-radius-m2"}
+            />
+          </OakBox>
         )}
         <CardContent
           $flexDirection="column"

@@ -38,6 +38,9 @@ importers:
       styled-components:
         specifier: '>=6.3.0'
         version: 6.5.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      tslib:
+        specifier: ^2.8.1
+        version: 2.8.1
       url:
         specifier: ^0.11.4
         version: 0.11.4

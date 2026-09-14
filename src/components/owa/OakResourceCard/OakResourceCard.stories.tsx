@@ -4,7 +4,8 @@ import { Meta, StoryObj } from "@storybook/nextjs";
 import { OakResourceCard } from "./OakResourceCard";
 
 import { OakRadioGroup } from "@/components/form-elements/OakRadioGroup";
-import { OakFlex, OakGrid, oakIconNames } from "@/index";
+import { oakIconNames } from "@/components/images-and-icons";
+import { OakFlex, OakGrid } from "@/components/layout-and-structure";
 
 const meta = {
   component: OakResourceCard,
@@ -15,6 +16,7 @@ const meta = {
     defaultChecked: { control: { type: "boolean" } },
     disabled: { control: false },
     iconName: { options: oakIconNames, control: { type: "select" } },
+    showSelectionControl: { control: { type: "boolean" } },
     isRadio: { control: { type: "boolean" } },
     isEditable: { control: { type: "boolean" } },
   },
@@ -172,4 +174,21 @@ export const SharePage: Story = {
     </OakGrid>
   ),
   parameters: { controls: { disable: true } },
+};
+
+export const WithoutSelectionControl: Story = {
+  render: (args) => (
+    <OakResourceCard
+      {...args}
+      id="download-card-without-selection-control"
+      title="Card without selection control"
+    />
+  ),
+  args: {
+    iconName: "book-steps",
+    value: "a test value",
+    description: "PPTX",
+    fileSize: "200 KB",
+    showSelectionControl: false,
+  },
 };

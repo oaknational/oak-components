@@ -10,7 +10,7 @@ import { InternalButton } from "@/components/internal-components/InternalButton"
 import { OakFlex } from "@/components/layout-and-structure";
 import { OakUiRoleToken } from "@/styles";
 import { OakLI, OakSpan, OakUL } from "@/components/typography";
-import { OakPromoTag } from "@/index";
+import { OakPromoTag } from "@/components/messaging-and-feedback";
 
 type Tab<T> = {
   label: T;
@@ -124,9 +124,8 @@ export function OakTabs<T extends string>(props: Readonly<OakTabsProps<T>>) {
                   <OakSpan>{label}</OakSpan>
                   {showPromo && (
                     <OakPromoTag
-                      variant={
-                        colorVariant === "black" ? "inverted" : "default"
-                      }
+                      display={["none", "flex", "flex"]}
+                      variant={isSelected ? "default" : "inverted"}
                     />
                   )}
                 </OakFlex>

@@ -1191,6 +1191,12 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
 
 @media (min-width: 750px) {
   .c20 {
+    align-items: center;
+  }
+}
+
+@media (min-width: 750px) {
+  .c20 {
     gap: 1.5rem;
   }
 }
