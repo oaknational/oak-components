@@ -213,6 +213,7 @@ exports[`OakCookieConsent matches snapshot 1`] = `
 
 .c10 {
   display: inline;
+  text-align: left;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
