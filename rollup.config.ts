@@ -18,8 +18,6 @@ const binInput = Object.fromEntries(
   ]),
 );
 
-console.log(binInput);
-
 const external = (id: string) =>
   !id.startsWith(".") &&
   !id.startsWith("/") &&
