@@ -39,6 +39,7 @@ const StyledLink = styled.a<{
   $font?: OakFontToken;
 }>`
   display: inline;
+  text-align: left;
   align-items: center;
   gap: ${parseSpacing("spacing-4")};
   outline: none;

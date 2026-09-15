@@ -34,6 +34,7 @@ exports[`InternalLink matches snapshot 1`] = `
 
 .c0 {
   display: inline;
+  text-align: left;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -198,6 +199,7 @@ exports[`InternalLink matches snapshot with loading spinner 1`] = `
 
 .c0 {
   display: inline;
+  text-align: left;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
