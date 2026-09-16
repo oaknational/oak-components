@@ -43,9 +43,7 @@ const meta: Meta<typeof OakModalFullScreen> = {
     title: "Add extra scaffolding",
     disableEscapeKey: false,
     children: (
-      <OakP>
-        A task surface fills the viewport, so the content owns its own layout.
-      </OakP>
+      <OakP>Choose how much extra support to add to this worksheet.</OakP>
     ),
   },
   render: function DefaultStory(args) {
