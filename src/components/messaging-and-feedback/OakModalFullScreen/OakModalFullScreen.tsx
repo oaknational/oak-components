@@ -31,7 +31,7 @@ export type OakModalFullScreenProps = {
    */
   onClose: () => void;
   /**
-   * Names the dialog and titles it. Rendered in the header.
+   * The title of the modal, rendered in the header and used to name the dialog
    */
   title: string;
   /**
@@ -84,13 +84,7 @@ const FadeInFlex = styled(OakFlex)<{ $state: TransitionStatus }>`
 `;
 
 /**
- *
- * A dialog that covers the whole viewport in durable task situations.
- *
- * The dialog names itself from `title`, so it needs no `aria-label` unless you
- * want a name that differs from the visible one. Nothing of the page remains visible
- * behind this surface.
- *
+ * Full screen modal dialog with trapped focus, close button, and escape key handling.
  */
 export const OakModalFullScreen = ({
   children,
@@ -116,7 +110,7 @@ export const OakModalFullScreen = ({
   const [isScrollable, setIsScrollable] = useState(false);
 
   useEffect(() => {
-    // The content area is only a tab stop while it has something to scroll
+    // To let keyboard users scroll the content when it overflows
     const checkIsScrollable = () => {
       const scrollBox = scrollBoxRef.current;
 

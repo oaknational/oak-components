@@ -47,7 +47,7 @@ describe(OakModalFullScreen, () => {
     expect(queryByRole("dialog")).not.toBeInTheDocument();
   });
 
-  it("unmounts the dialog once it has transitioned out", async () => {
+  it("unmounts the modal after closing", async () => {
     const { queryByRole, rerender } = renderWithTheme(
       <OakModalFullScreen isOpen onClose={() => {}} title="Worksheet">
         Modal content
@@ -77,7 +77,7 @@ describe(OakModalFullScreen, () => {
     { description: "missing", ariaLabelledBy: undefined },
     { description: "empty", ariaLabelledBy: "" },
   ])(
-    "uses the title as the dialog name when the heading reference is $description",
+    "uses the title as the dialog name when aria-labelledby is $description",
     ({ ariaLabelledBy }) => {
       const { getByRole } = renderWithTheme(
         <OakModalFullScreen
@@ -94,7 +94,7 @@ describe(OakModalFullScreen, () => {
     },
   );
 
-  it("lets a consumer name the dialog differently from its title", () => {
+  it("uses aria-label as the dialog name when provided", () => {
     const { getByRole } = renderWithTheme(
       <OakModalFullScreen
         isOpen
@@ -111,7 +111,7 @@ describe(OakModalFullScreen, () => {
     ).toBeInTheDocument();
   });
 
-  it("uses the supplied label when no heading reference is provided", () => {
+  it("uses aria-label when aria-labelledby is undefined", () => {
     const { getByRole } = renderWithTheme(
       <OakModalFullScreen
         isOpen
@@ -129,7 +129,7 @@ describe(OakModalFullScreen, () => {
     ).toBeInTheDocument();
   });
 
-  it("uses a consumer aria-labelledby ahead of aria-label and the title", () => {
+  it("prefers aria-labelledby over aria-label and the title", () => {
     const { getByRole } = renderWithTheme(
       <OakModalFullScreen
         isOpen
@@ -147,7 +147,7 @@ describe(OakModalFullScreen, () => {
     ).toBeInTheDocument();
   });
 
-  it("titles itself at heading level 2 by default", () => {
+  it("renders the title as an h2 by default", () => {
     const { getByRole } = renderWithTheme(
       <OakModalFullScreen isOpen onClose={() => {}} title="Worksheet">
         Modal content
@@ -159,7 +159,7 @@ describe(OakModalFullScreen, () => {
     ).toBeInTheDocument();
   });
 
-  it("takes a heading level for hosts with a different hierarchy", () => {
+  it("renders the title at the level given by headingTag", () => {
     const { getByRole } = renderWithTheme(
       <OakModalFullScreen
         isOpen
@@ -176,7 +176,7 @@ describe(OakModalFullScreen, () => {
     ).toBeInTheDocument();
   });
 
-  it("labels the close button Close", () => {
+  it("labels the close button Close by default", () => {
     const { getByRole } = renderWithTheme(
       <OakModalFullScreen isOpen onClose={() => {}} title="Worksheet">
         Modal content
@@ -186,7 +186,7 @@ describe(OakModalFullScreen, () => {
     expect(getByRole("button", { name: "Close" })).toBeInTheDocument();
   });
 
-  it("takes an override for the close button label", () => {
+  it("labels the close button with closeButtonLabel when provided", () => {
     const { getByRole } = renderWithTheme(
       <OakModalFullScreen
         isOpen
@@ -250,7 +250,7 @@ describe(OakModalFullScreen, () => {
     expect(onCloseSpy).not.toHaveBeenCalled();
   });
 
-  it("leaves the content region out of the tab order when it fits", () => {
+  it("does not make the content area tabbable when it does not scroll", () => {
     const { getByTestId } = renderWithTheme(
       <OakModalFullScreen isOpen onClose={() => {}} title="Worksheet">
         Modal content
@@ -262,7 +262,7 @@ describe(OakModalFullScreen, () => {
     );
   });
 
-  it("gives the content region a tab stop when it scrolls", () => {
+  it("makes the content area tabbable when it scrolls", () => {
     const { getByTestId } = renderWithTheme(
       <OakModalFullScreen isOpen onClose={() => {}} title="Worksheet">
         Modal content
