@@ -1,6 +1,15 @@
-import React, { HTMLAttributes, ReactNode, useId } from "react";
+import React, {
+  HTMLAttributes,
+  ReactNode,
+  useEffect,
+  useId,
+  useRef,
+  useState,
+} from "react";
 import { createPortal } from "react-dom";
 import { FocusOn } from "react-focus-on";
+import { Transition, TransitionStatus } from "react-transition-group";
+import styled from "styled-components";
 
 import { OakCloseButton } from "@/components/buttons/OakCloseButton";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
@@ -69,6 +78,11 @@ export type OakModalFullScreenProps = {
   "aria-label" | "aria-description" | "aria-labelledby" | "aria-describedby"
 >;
 
+const FadeInFlex = styled(OakFlex)<{ $state: TransitionStatus }>`
+  opacity: ${({ $state }) =>
+    $state === "entering" || $state === "entered" ? 1 : 0};
+`;
+
 /**
  *
  * A dialog that covers the whole viewport in durable task situations.
@@ -97,83 +111,125 @@ export const OakModalFullScreen = ({
   const { isScrolled, ObserveScroll } = useIsScrolled();
   const isMounted = useMounted();
   const headingId = useId();
+  const transitionRef = useRef<HTMLDivElement>(null);
+  const scrollBoxRef = useRef<HTMLDivElement>(null);
+  const [isScrollable, setIsScrollable] = useState(false);
 
-  if (!isMounted || !isOpen) {
+  useEffect(() => {
+    // The content area is only a tab stop while it has something to scroll
+    const checkIsScrollable = () => {
+      const scrollBox = scrollBoxRef.current;
+
+      setIsScrollable(
+        !!scrollBox && scrollBox.scrollHeight > scrollBox.clientHeight,
+      );
+    };
+
+    checkIsScrollable();
+    window.addEventListener("resize", checkIsScrollable);
+
+    return () => window.removeEventListener("resize", checkIsScrollable);
+  }, [isOpen, children]);
+
+  if (!isMounted) {
     return null;
   }
 
   const finalZIndex = typeof zIndex === "number" ? zIndex : "modal-dialog";
 
   return createPortal(
-    <FocusOn
-      onEscapeKey={() => !disableEscapeKey && onClose()}
-      returnFocus={returnFocus ?? true}
-      autoFocus
-      preventScrollOnFocus
+    <Transition
+      in={isOpen}
+      nodeRef={transitionRef}
+      addEndListener={(done) => {
+        transitionRef.current?.addEventListener("transitionend", done);
+      }}
+      timeout={300}
+      mountOnEnter
+      unmountOnExit
     >
-      <OakFlex
-        role="dialog"
-        aria-modal={true}
-        $position="fixed"
-        $inset="spacing-0"
-        $zIndex={finalZIndex}
-        $background="bg-primary"
-        $color="text-primary"
-        $flexDirection="column"
-        data-testid="modal-full-screen"
-        {...rest}
-        aria-label={ariaLabel}
-        aria-labelledby={ariaLabelledBy || (ariaLabel ? undefined : headingId)}
-      >
-        <OakFlex
-          $alignItems="center"
-          $justifyContent="space-between"
-          $gap="spacing-16"
-          $pa={["spacing-12", "spacing-16"]}
+      {(state) => (
+        <FocusOn
+          onEscapeKey={() => !disableEscapeKey && onClose()}
+          returnFocus={returnFocus ?? true}
+          autoFocus
+          preventScrollOnFocus
         >
-          <OakHeading
-            id={headingId}
-            tag={headingTag}
-            $font={["heading-6", "heading-5"]}
+          <FadeInFlex
+            ref={transitionRef}
+            $state={state}
+            role="dialog"
+            aria-modal={true}
+            $position="fixed"
+            $inset="spacing-0"
+            $zIndex={finalZIndex}
+            $background="bg-primary"
+            $color="text-primary"
+            $flexDirection="column"
+            $transition="standard-ease"
+            data-testid="modal-full-screen"
+            {...rest}
+            aria-label={ariaLabel}
+            aria-labelledby={
+              ariaLabelledBy || (ariaLabel ? undefined : headingId)
+            }
           >
-            {title}
-          </OakHeading>
-          <OakCloseButton onClose={onClose} aria-label={closeButtonLabel} />
-        </OakFlex>
-        <OakFlex
-          $flexGrow={1}
-          $flexDirection="column"
-          $overflow="auto"
-          $ph={["spacing-16", "spacing-24"]}
-          $pb={["spacing-16", "spacing-24"]}
-          $bt="border-solid-s"
-          $borderColor={isScrolled ? "border-neutral-lighter" : "transparent"}
-          tabIndex={0}
-          style={{ scrollbarGutter: "stable" }}
-          data-testid="modal-full-screen-content"
-        >
-          <ObserveScroll>
-            <div data-autofocus-inside tabIndex={-2}>
-              {children}
-            </div>
-          </ObserveScroll>
-        </OakFlex>
-        {footerSlot && (
-          <OakFlex
-            $flexDirection={["column", "row"]}
-            $alignItems="center"
-            $justifyContent="flex-end"
-            $gap={["spacing-16", "spacing-24"]}
-            $pa="spacing-12"
-            $width="100%"
-            $bt="border-solid-s"
-            $borderColor="border-neutral-lighter"
-          >
-            {footerSlot}
-          </OakFlex>
-        )}
-      </OakFlex>
-    </FocusOn>,
+            <OakFlex
+              $alignItems="center"
+              $justifyContent="space-between"
+              $gap="spacing-16"
+              $pv={["spacing-12", "spacing-16"]}
+              $ph={["spacing-16", "spacing-24"]}
+            >
+              <OakHeading
+                id={headingId}
+                tag={headingTag}
+                $font={["heading-6", "heading-5"]}
+              >
+                {title}
+              </OakHeading>
+              <OakCloseButton onClose={onClose} aria-label={closeButtonLabel} />
+            </OakFlex>
+            <OakFlex
+              ref={scrollBoxRef}
+              $flexGrow={1}
+              $flexDirection="column"
+              $overflow="auto"
+              $ph={["spacing-16", "spacing-24"]}
+              $pb={["spacing-16", "spacing-24"]}
+              $bt="border-solid-s"
+              $borderColor={
+                isScrolled ? "border-neutral-lighter" : "transparent"
+              }
+              tabIndex={isScrollable ? 0 : undefined}
+              style={{ scrollbarGutter: "stable" }}
+              data-testid="modal-full-screen-content"
+            >
+              <ObserveScroll>
+                <div style={{ display: "contents" }} data-autofocus-inside>
+                  {children}
+                </div>
+              </ObserveScroll>
+            </OakFlex>
+            {footerSlot && (
+              <OakFlex
+                $flexDirection={["column", "row"]}
+                $alignItems="center"
+                $justifyContent="flex-end"
+                $gap={["spacing-16", "spacing-24"]}
+                $pv="spacing-12"
+                $ph={["spacing-16", "spacing-24"]}
+                $width="100%"
+                $bt="border-solid-s"
+                $borderColor="border-neutral-lighter"
+              >
+                {footerSlot}
+              </OakFlex>
+            )}
+          </FadeInFlex>
+        </FocusOn>
+      )}
+    </Transition>,
     domContainer ?? document.body,
   );
 };

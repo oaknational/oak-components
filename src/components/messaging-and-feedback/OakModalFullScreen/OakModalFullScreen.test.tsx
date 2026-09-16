@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import "@testing-library/jest-dom";
-import { act, fireEvent } from "@testing-library/react";
+import { fireEvent, waitFor } from "@testing-library/react";
 
 import { OakModalFullScreen } from ".";
 
@@ -45,6 +45,22 @@ describe(OakModalFullScreen, () => {
     );
 
     expect(queryByRole("dialog")).not.toBeInTheDocument();
+  });
+
+  it("unmounts the dialog once it has transitioned out", async () => {
+    const { queryByRole, rerender } = renderWithTheme(
+      <OakModalFullScreen isOpen onClose={() => {}} title="Worksheet">
+        Modal content
+      </OakModalFullScreen>,
+    );
+
+    rerender(
+      <OakModalFullScreen isOpen={false} onClose={() => {}} title="Worksheet">
+        Modal content
+      </OakModalFullScreen>,
+    );
+
+    await waitFor(() => expect(queryByRole("dialog")).not.toBeInTheDocument());
   });
 
   it("names the dialog with its title", () => {
@@ -196,9 +212,7 @@ describe(OakModalFullScreen, () => {
       </OakModalFullScreen>,
     );
 
-    act(() => {
-      fireEvent.click(getByRole("button", { name: "Close" }));
-    });
+    fireEvent.click(getByRole("button", { name: "Close" }));
 
     expect(onCloseSpy).toHaveBeenCalled();
   });
@@ -212,9 +226,7 @@ describe(OakModalFullScreen, () => {
       </OakModalFullScreen>,
     );
 
-    act(() => {
-      fireEvent.keyDown(document, { key: "Escape" });
-    });
+    fireEvent.keyDown(document, { key: "Escape" });
 
     expect(onCloseSpy).toHaveBeenCalled();
   });
@@ -233,24 +245,42 @@ describe(OakModalFullScreen, () => {
       </OakModalFullScreen>,
     );
 
-    act(() => {
-      fireEvent.keyDown(document, { key: "Escape" });
-    });
+    fireEvent.keyDown(document, { key: "Escape" });
 
     expect(onCloseSpy).not.toHaveBeenCalled();
   });
 
-  it("gives the scrollable content region a tab stop", () => {
+  it("leaves the content region out of the tab order when it fits", () => {
     const { getByTestId } = renderWithTheme(
       <OakModalFullScreen isOpen onClose={() => {}} title="Worksheet">
         Modal content
       </OakModalFullScreen>,
     );
 
-    expect(getByTestId("modal-full-screen-content")).toHaveAttribute(
+    expect(getByTestId("modal-full-screen-content")).not.toHaveAttribute(
       "tabindex",
-      "0",
     );
+  });
+
+  it("gives the content region a tab stop when it scrolls", () => {
+    const { getByTestId } = renderWithTheme(
+      <OakModalFullScreen isOpen onClose={() => {}} title="Worksheet">
+        Modal content
+      </OakModalFullScreen>,
+    );
+    const content = getByTestId("modal-full-screen-content");
+
+    Object.defineProperty(content, "scrollHeight", {
+      configurable: true,
+      value: 500,
+    });
+    Object.defineProperty(content, "clientHeight", {
+      configurable: true,
+      value: 100,
+    });
+    fireEvent.resize(window);
+
+    expect(content).toHaveAttribute("tabindex", "0");
   });
 
   it("shows the footer slot", () => {

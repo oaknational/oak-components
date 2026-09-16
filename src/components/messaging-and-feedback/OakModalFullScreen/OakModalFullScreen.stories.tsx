@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from "@storybook/nextjs";
-import React, { Fragment, useState } from "react";
+import { useArgs } from "storybook/preview-api";
+import React, { Fragment } from "react";
 
 import { OakModalFullScreen } from "@/components/messaging-and-feedback/OakModalFullScreen";
 import { OakSecondaryButton } from "@/components/buttons/OakSecondaryButton";
@@ -41,7 +42,6 @@ const meta: Meta<typeof OakModalFullScreen> = {
     isOpen: false,
     title: "Add extra scaffolding",
     disableEscapeKey: false,
-    domContainer: document.body,
     children: (
       <OakP>
         A task surface fills the viewport, so the content owns its own layout.
@@ -49,20 +49,19 @@ const meta: Meta<typeof OakModalFullScreen> = {
     ),
   },
   render: function DefaultStory(args) {
-    const [isOpen, setIsOpen] = useState(args.isOpen);
+    const [, updateArgs] = useArgs();
 
     return (
       <>
         <OakHeading tag="h1" $font="heading-4" $mb="spacing-16">
           Host page
         </OakHeading>
-        <OakSecondaryButton onClick={() => setIsOpen(true)}>
+        <OakSecondaryButton onClick={() => updateArgs({ isOpen: true })}>
           Open modal
         </OakSecondaryButton>
         <OakModalFullScreen
           {...args}
-          isOpen={isOpen}
-          onClose={() => setIsOpen(false)}
+          onClose={() => updateArgs({ isOpen: false })}
         />
       </>
     );

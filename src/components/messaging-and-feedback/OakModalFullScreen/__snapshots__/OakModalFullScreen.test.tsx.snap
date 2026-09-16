@@ -6,16 +6,21 @@ exports[`OakModalFullScreen matches snapshot 1`] = `
   inset: 0rem;
   color: #222222;
   background: #ffffff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   font-family: --var(google-font),Lexend,sans-serif;
   z-index: 300;
 }
 
-.c2 {
-  padding: 0.75rem;
+.c3 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c5 {
+.c6 {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -23,11 +28,11 @@ exports[`OakModalFullScreen matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c10 {
+.c11 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c12 {
+.c13 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -38,7 +43,7 @@ exports[`OakModalFullScreen matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c14 {
+.c15 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -47,7 +52,7 @@ exports[`OakModalFullScreen matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c15 {
+.c16 {
   position: relative;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -57,7 +62,7 @@ exports[`OakModalFullScreen matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c18 {
+.c19 {
   overflow: auto;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -78,7 +83,7 @@ exports[`OakModalFullScreen matches snapshot 1`] = `
   flex-direction: column;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -94,14 +99,14 @@ exports[`OakModalFullScreen matches snapshot 1`] = `
   gap: 1rem;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c11 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -120,7 +125,7 @@ exports[`OakModalFullScreen matches snapshot 1`] = `
   gap: 0rem;
 }
 
-.c13 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -135,7 +140,7 @@ exports[`OakModalFullScreen matches snapshot 1`] = `
   justify-content: center;
 }
 
-.c19 {
+.c20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -149,7 +154,7 @@ exports[`OakModalFullScreen matches snapshot 1`] = `
   flex-grow: 1;
 }
 
-.c17 {
+.c18 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -160,7 +165,7 @@ exports[`OakModalFullScreen matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-.c8 {
+.c9 {
   background: none;
   color: inherit;
   border: none;
@@ -174,66 +179,66 @@ exports[`OakModalFullScreen matches snapshot 1`] = `
   color: transparent;
 }
 
-.c8:disabled {
+.c9:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c16 {
+.c17 {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   object-fit: contain;
 }
 
-.c9 {
+.c10 {
   display: inline-block;
   position: relative;
 }
 
-.c9:hover {
+.c10:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   color: transparent;
 }
 
-.c9:hover:not(:active) [data-icon-for="button"] img {
+.c10:hover:not(:active) [data-icon-for="button"] img {
   -webkit-filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
   filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
 }
 
-.c9:active {
+.c10:active {
   color: transparent;
 }
 
-.c9:disabled {
+.c10:disabled {
   color: transparent;
 }
 
-.c7 > :first-child:focus-visible .shadow {
+.c8 > :first-child:focus-visible .shadow {
   box-shadow: 0 0 0 0.125rem rgba(255,229,85,100%), 0 0 0 0.3rem rgba(87,87,87,100%);
 }
 
-.c7 > :first-child:hover .shadow {
+.c8 > :first-child:hover .shadow {
   box-shadow: none;
 }
 
-.c7 > :first-child:active .shadow {
+.c8 > :first-child:active .shadow {
   box-shadow: 0.125rem 0.125rem 0 rgba(255,229,85,100%), 0.25rem 0.25rem 0 rgba(87,87,87,100%);
 }
 
-.c7 > :first-child:disabled .icon-container {
+.c8 > :first-child:disabled .icon-container {
   background: transparent;
 }
 
-.c7 > :first-child:hover .icon-container {
+.c8 > :first-child:hover .icon-container {
   background: #f2f2f2;
 }
 
-.c7 > :first-child:active .icon-container {
+.c8 > :first-child:active .icon-container {
   background: transparent;
 }
 
-.c4 {
+.c5 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1.25rem;
@@ -244,50 +249,72 @@ exports[`OakModalFullScreen matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
 }
 
-@media (min-width:750px) {
-  .c2 {
-    padding: 1rem;
-  }
+.c2 {
+  opacity: 1;
 }
 
 @media (min-width:750px) {
-  .c18 {
+  .c3 {
     padding-left: 1.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c18 {
+  .c3 {
     padding-right: 1.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c18 {
+  .c3 {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c3 {
+    padding-bottom: 1rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c19 {
+    padding-left: 1.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c19 {
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .c19 {
     padding-bottom: 1.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c4 {
+  .c5 {
     font-weight: 600;
   }
 }
 
 @media (min-width:750px) {
-  .c4 {
+  .c5 {
     font-size: 1.5rem;
   }
 }
 
 @media (min-width:750px) {
-  .c4 {
+  .c5 {
     line-height: 2rem;
   }
 }
 
 @media (min-width:750px) {
-  .c4 {
+  .c5 {
     -webkit-letter-spacing: 0.0115rem;
     -moz-letter-spacing: 0.0115rem;
     -ms-letter-spacing: 0.0115rem;
@@ -309,42 +336,42 @@ exports[`OakModalFullScreen matches snapshot 1`] = `
     <div
       aria-labelledby="react-use-id-test-result"
       aria-modal="true"
-      class="c0 c1"
+      class="c0 c1 c2"
       data-testid="modal-full-screen"
       role="dialog"
     >
       <div
-        class="c2 c3"
+        class="c3 c4"
       >
         <h2
-          class="c4"
+          class="c5"
           id="react-use-id-test-result"
         >
           Worksheet
         </h2>
         <div
-          class="c5 c6 c7"
+          class="c6 c7 c8"
         >
           <button
             aria-label="Close"
-            class="c8 c9"
+            class="c9 c10"
           >
             <div
-              class="c10 c11"
+              class="c11 c12"
             >
               <div
-                class="c12 c13 icon-container"
+                class="c13 c14 icon-container"
               >
                 <div
-                  class="c14 shadow"
+                  class="c15 shadow"
                 />
                 <span
-                  class="c15"
+                  class="c16"
                   data-icon-for="button"
                 >
                   <img
                     alt=""
-                    class="c16"
+                    class="c17"
                     data-nimg="fill"
                     decoding="async"
                     loading="lazy"
@@ -354,22 +381,21 @@ exports[`OakModalFullScreen matches snapshot 1`] = `
                 </span>
               </div>
               <span
-                class="c17"
+                class="c18"
               />
             </div>
           </button>
         </div>
       </div>
       <div
-        class="c18 c19"
+        class="c19 c20"
         data-testid="modal-full-screen-content"
         style="scrollbar-gutter: stable;"
-        tabindex="0"
       >
         <div />
         <div
           data-autofocus-inside="true"
-          tabindex="-2"
+          style="display: contents;"
         >
           Modal content
         </div>
