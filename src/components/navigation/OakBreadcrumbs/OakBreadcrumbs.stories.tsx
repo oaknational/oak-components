@@ -14,6 +14,7 @@ const meta: Meta<typeof OakBreadcrumbs> = {
       {
         text: "Test 1",
         href: "#text1",
+        onClick: () => console.log("Test 1 clicked"),
       },
       {
         text: "Test 2",
