@@ -28,11 +28,11 @@ export default function (fileInfo: FileInfo, api: API) {
       const openingElement = j.jsxOpeningElement(
         j.jsxIdentifier("OakLink"),
         [
-          ...existingAttributes,
           j.jsxAttribute(
             j.jsxIdentifier("variant"),
             j.stringLiteral("secondary"),
           ),
+          ...existingAttributes,
         ],
         value.openingElement.selfClosing,
       );

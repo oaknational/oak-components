@@ -10,7 +10,7 @@ const oaksecondarylinkContentInput = `
 import { OakSecondaryLink } from "@oaknational/oak-components";
 
 function Main () {
-    return <OakSecondaryLink />;
+    return <OakSecondaryLink iconName="audio"  />;
 }
 `.trim();
 
@@ -18,7 +18,7 @@ const oaksecondarylinkContentOutput = `
 import { OakLink } from "@oaknational/oak-components";
 
 function Main () {
-    return <OakLink variant="secondary" />;
+    return <OakLink variant="secondary" iconName="audio" />;
 }
 `.trim();
 
