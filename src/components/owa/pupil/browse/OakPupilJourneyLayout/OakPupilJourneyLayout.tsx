@@ -36,6 +36,7 @@ const StyledLayoutBox = styled(OakFlex)<{
       background-position-x: center;
       background-size: 100%;
     `}
+  }
 `;
 
 /**
@@ -99,6 +100,7 @@ export function getBackgroundUrlForSection(
   sectionName: PupilJourneySectionName,
   phase?: Phase,
 ) {
+  console.log("diego", { sectionName, phase });
   const prefix = `https://${process.env.NEXT_PUBLIC_OAK_ASSETS_HOST}/${process.env.NEXT_PUBLIC_OAK_ASSETS_PATH}/`;
   switch (sectionName) {
     case "lesson-listing":
