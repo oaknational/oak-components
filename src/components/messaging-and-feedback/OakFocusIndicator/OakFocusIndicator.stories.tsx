@@ -107,7 +107,11 @@ export const ChangeHoverBackgroundAndHover: Story = {
 export const FakingFocus: Story = {
   render: (args) => (
     <OakFocusIndicator {...args}>
-      <OakBox $overflow={"hidden"} $ba={"border-solid-m"} {...args}>
+      <OakBox
+        $overflow={"hidden"}
+        $ba={"border-solid-m"}
+        $borderRadius={args.$borderRadius}
+      >
         <UnStyledButton>Test</UnStyledButton>
       </OakBox>
     </OakFocusIndicator>
