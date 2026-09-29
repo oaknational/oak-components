@@ -9,6 +9,7 @@ import { OakLink } from "@/components/navigation/OakLink";
 export type OakBreadcrumb = {
   text: string;
   href: string;
+  onClick?: () => void;
 };
 
 // Used for the last page
@@ -88,6 +89,7 @@ export const OakBreadcrumbs = ({
                   variant="secondary"
                   href={breadcrumb.href}
                   style={{ overflow: "hidden" }}
+                  onClick={breadcrumb.onClick}
                 >
                   <OakBreadcrumbText>{breadcrumb.text}</OakBreadcrumbText>
                 </OakLink>

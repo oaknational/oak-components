@@ -39,6 +39,7 @@ const StyledLink = styled.a<{
   $font?: OakFontToken;
 }>`
   display: inline;
+  text-align: left;
   align-items: center;
   gap: ${parseSpacing("spacing-4")};
   outline: none;
@@ -161,7 +162,7 @@ export const InternalLink: InternalLinkComponent = forwardRef(
             <OakBox
               $pl={isTrailingIcon ? "spacing-4" : undefined}
               $pr={isTrailingIcon ? undefined : "spacing-4"}
-              $display={"inline-block"}
+              $display={"inline"}
             >
               <StyledOakLoadingSpinner $color="icon-primary" />
             </OakBox>
@@ -171,7 +172,7 @@ export const InternalLink: InternalLinkComponent = forwardRef(
             <OakBox
               $pl={isTrailingIcon ? "spacing-4" : undefined}
               $pr={isTrailingIcon ? undefined : "spacing-4"}
-              $display={"inline-block"}
+              $display={"inline"}
             >
               <StyledOakIcon iconName={iconName} />
             </OakBox>

@@ -83,7 +83,7 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
 
 .c27 {
   padding-left: 0.25rem;
-  display: inline-block;
+  display: inline;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -248,6 +248,13 @@ exports[`OakInlineBanner matches snapshot for banner with title 1`] = `
 
 .c25 {
   display: inline;
+<<<<<<< HEAD
+=======
+  text-align: left;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+>>>>>>> d0222257e743530fba24f36e3cab9a8db6cc1197
   align-items: center;
   gap: 0.25rem;
   outline: none;
@@ -527,7 +534,7 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
 
 .c28 {
   padding-left: 0.25rem;
-  display: inline-block;
+  display: inline;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -702,6 +709,13 @@ exports[`OakInlineBanner matches snapshot for large variant banner 1`] = `
 
 .c26 {
   display: inline;
+<<<<<<< HEAD
+=======
+  text-align: left;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+>>>>>>> d0222257e743530fba24f36e3cab9a8db6cc1197
   align-items: center;
   gap: 0.25rem;
   outline: none;
@@ -974,7 +988,7 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
 
 .c26 {
   padding-left: 0.25rem;
-  display: inline-block;
+  display: inline;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
@@ -1131,6 +1145,13 @@ exports[`OakInlineBanner matches snapshot for simple banner without title 1`] = 
 
 .c24 {
   display: inline;
+<<<<<<< HEAD
+=======
+  text-align: left;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+>>>>>>> d0222257e743530fba24f36e3cab9a8db6cc1197
   align-items: center;
   gap: 0.25rem;
   outline: none;
