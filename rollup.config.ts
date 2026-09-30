@@ -1,3 +1,4 @@
+import shebang from "rollup-plugin-preserve-shebang";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 import { typescriptPaths } from "rollup-plugin-typescript-paths";
@@ -77,6 +78,9 @@ export default [
       },
     ],
     plugins: [
+      shebang({
+        shebang: "#!/usr/bin/env node",
+      }),
       resolve(),
       commonjs({
         esmExternals: true,
