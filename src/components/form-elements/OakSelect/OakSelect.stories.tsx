@@ -10,6 +10,7 @@ import {
   OakJauntyAngleLabelProps,
 } from "@/components/form-elements/OakJauntyAngleLabel";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
+import { parseSpacing } from "@/styles";
 
 const meta: Meta<typeof OakSelect> = {
   component: OakSelect,
@@ -84,16 +85,10 @@ export const DisabledOption: Story = {
   args: {},
 };
 
-const LabelWithNegativePosition = styled(
-  OakJauntyAngleLabel,
-)<OakJauntyAngleLabelProps>`
-  top: -20px;
-`;
-
 export const WithLabel: Story = {
   render: (args) => (
     <OakBox $position={"relative"}>
-      <LabelWithNegativePosition
+      <OakJauntyAngleLabel
         label={"Test"}
         $color={"text-primary"}
         htmlFor={"test"}
@@ -105,6 +100,7 @@ export const WithLabel: Story = {
         $left={"spacing-4"}
         $borderRadius="border-radius-square"
         data-testid="jaunty-label"
+        style={{ top: `-${parseSpacing("spacing-20")}` }}
       />
       <OakSelect {...args} $display={"block"} id="test">
         <OakOption>one</OakOption>
