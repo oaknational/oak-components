@@ -40,14 +40,14 @@ exports[`OakCookieConsent matches snapshot 1`] = `
   white-space: nowrap;
 }
 
-.c12 {
+.c13 {
   position: relative;
   width: max-content;
   height: auto;
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c14 {
+.c15 {
   position: absolute;
   top: 0rem;
   width: 100%;
@@ -77,7 +77,7 @@ exports[`OakCookieConsent matches snapshot 1`] = `
   align-items: center;
 }
 
-.c17 {
+.c18 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -93,11 +93,11 @@ exports[`OakCookieConsent matches snapshot 1`] = `
   letter-spacing: -0.005rem;
 }
 
-.c11 {
+.c12 {
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c18 {
+.c19 {
   font-family: --var(google-font),Lexend,sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -106,7 +106,7 @@ exports[`OakCookieConsent matches snapshot 1`] = `
   text-align: left;
 }
 
-.c15 {
+.c16 {
   background: none;
   color: inherit;
   border: none;
@@ -129,12 +129,12 @@ exports[`OakCookieConsent matches snapshot 1`] = `
   border-radius: 0.25rem;
 }
 
-.c15:disabled {
+.c16:disabled {
   pointer-events: none;
   cursor: default;
 }
 
-.c19 {
+.c20 {
   background: none;
   color: inherit;
   border: none;
@@ -157,7 +157,7 @@ exports[`OakCookieConsent matches snapshot 1`] = `
   border-radius: 0.25rem;
 }
 
-.c19:disabled {
+.c20:disabled {
   pointer-events: none;
   cursor: default;
 }
@@ -199,102 +199,110 @@ exports[`OakCookieConsent matches snapshot 1`] = `
   color: #808080;
 }
 
-.c16 {
+.c11 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c17 {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-.c16:hover {
+.c17:hover {
   text-decoration: underline;
   color: #222222;
   background: #f2f2f2;
   border-color: #222222;
 }
 
-.c16:hover [data-state="selected"] {
+.c17:hover [data-state="selected"] {
   display: none;
 }
 
-.c16:active {
+.c17:active {
   background: #ffffff;
   border-color: #222222;
   color: #222222;
 }
 
-.c16:active [data-state="selected"] {
+.c17:active [data-state="selected"] {
   display: none;
 }
 
-.c16:disabled {
+.c17:disabled {
   background: #e4e4e4;
   border-color: #808080;
   color: #808080;
 }
 
-.c16:disabled [data-state="selected"] {
+.c17:disabled [data-state="selected"] {
   display: none;
 }
 
-.c20 {
+.c21 {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-.c20:hover {
+.c21:hover {
   text-decoration: underline;
   color: #ffffff;
   background: #575757;
   border-color: #575757;
 }
 
-.c20:hover [data-state="selected"] {
+.c21:hover [data-state="selected"] {
   display: none;
 }
 
-.c20:active {
+.c21:active {
   background: #222222;
   border-color: #222222;
   color: #ffffff;
 }
 
-.c20:active [data-state="selected"] {
+.c21:active [data-state="selected"] {
   display: none;
 }
 
-.c20:disabled {
+.c21:disabled {
   background: #808080;
   border-color: #808080;
   color: #ffffff;
 }
 
-.c20:disabled [data-state="selected"] {
+.c21:disabled [data-state="selected"] {
   display: none;
 }
 
-.c13 .grey-shadow:has(+ * + .internal-button:focus-visible) {
+.c14 .grey-shadow:has(+ * + .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.3rem rgba(87, 87, 87, 100%);
 }
 
-.c13 .yellow-shadow:has(+ .internal-button:focus-visible) {
+.c14 .yellow-shadow:has(+ .internal-button:focus-visible) {
   box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%);
 }
 
-.c13 .yellow-shadow:has(+ .internal-button:hover),
-.c13 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible, :active)) {
+.c14 .yellow-shadow:has(+ .internal-button:hover),
+.c14 .yellow-shadow:has(+ .internal-button:hover:not(:focus-visible, :active)) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%);
 }
 
-.c13 .grey-shadow:has(+ * + .internal-button:hover) {
+.c14 .grey-shadow:has(+ * + .internal-button:hover) {
   box-shadow: none;
 }
 
-.c13 .grey-shadow:has(+ * + .internal-button:active) {
+.c14 .grey-shadow:has(+ * + .internal-button:active) {
   box-shadow: 0.25rem 0.25rem 0 rgba(87, 87, 87, 100%);
 }
 
-.c13 .yellow-shadow:has(+ .internal-button:active) {
+.c14 .yellow-shadow:has(+ .internal-button:active) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%);
 }
 
@@ -468,34 +476,34 @@ exports[`OakCookieConsent matches snapshot 1`] = `
             class="c8 c9"
           >
             <button
-              class="c10 "
+              class="c10 c11"
               data-testid="cookie-banner-reject"
               type="button"
             >
               <span
-                class="c11"
+                class="c12"
               >
                 Reject non-essential cookies
               </span>
             </button>
           </div>
           <div
-            class="c12 c13"
+            class="c13 c14"
           >
             <div
-              class="c14 grey-shadow"
+              class="c15 grey-shadow"
             />
             <div
-              class="c14 yellow-shadow"
+              class="c15 yellow-shadow"
             />
             <button
-              class="c15 c16 internal-button"
+              class="c16 c17 internal-button"
             >
               <div
-                class="c6 c17"
+                class="c6 c18"
               >
                 <span
-                  class="c18"
+                  class="c19"
                 >
                   Cookie settings
                 </span>
@@ -503,23 +511,23 @@ exports[`OakCookieConsent matches snapshot 1`] = `
             </button>
           </div>
           <div
-            class="c12 c13"
+            class="c13 c14"
           >
             <div
-              class="c14 grey-shadow"
+              class="c15 grey-shadow"
             />
             <div
-              class="c14 yellow-shadow"
+              class="c15 yellow-shadow"
             />
             <button
-              class="c19 c20 internal-button"
+              class="c20 c21 internal-button"
               data-testid="cookie-banner-accept"
             >
               <div
-                class="c6 c17"
+                class="c6 c18"
               >
                 <span
-                  class="c18"
+                  class="c19"
                 >
                   Accept all cookies
                 </span>

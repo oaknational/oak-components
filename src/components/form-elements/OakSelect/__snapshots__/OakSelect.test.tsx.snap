@@ -55,7 +55,7 @@ exports[`OakSelect disabled select 1`] = `
   border-bottom-right-radius: 0px;
 }
 
-.c3:open ::picker(select) {
+.c3:open::picker(select) {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
 }
@@ -273,7 +273,7 @@ exports[`OakSelect highlighted select 1`] = `
   border-bottom-right-radius: 0px;
 }
 
-.c3:open ::picker(select) {
+.c3:open::picker(select) {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
 }
@@ -490,7 +490,7 @@ exports[`OakSelect invalid select 1`] = `
   border-bottom-right-radius: 0px;
 }
 
-.c3:open ::picker(select) {
+.c3:open::picker(select) {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
 }
@@ -707,7 +707,7 @@ exports[`OakSelect optgroup select 1`] = `
   border-bottom-right-radius: 0px;
 }
 
-.c3:open ::picker(select) {
+.c3:open::picker(select) {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
 }
@@ -973,7 +973,7 @@ exports[`OakSelect plain select 1`] = `
   border-bottom-right-radius: 0px;
 }
 
-.c3:open ::picker(select) {
+.c3:open::picker(select) {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
 }
