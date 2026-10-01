@@ -110,16 +110,12 @@ exports[`OakPagination Component matches snapshot 1`] = `
   line-height: 1.25rem;
   letter-spacing: 0.0115rem;
   color: #222222;
-  background-color: #ffffff;
+  background-color: #222222;
   color: #ffffff;
 }
 
 .c10:visited {
   color: #ffffff;
-}
-
-.c10:hover {
-  text-decoration: underline;
 }
 
 .c11 {
@@ -137,10 +133,6 @@ exports[`OakPagination Component matches snapshot 1`] = `
   letter-spacing: 0.0115rem;
   color: #222222;
   background-color: #ffffff;
-}
-
-.c11:hover {
-  text-decoration: underline;
 }
 
 @media (min-width: 750px) {
@@ -185,6 +177,22 @@ exports[`OakPagination Component matches snapshot 1`] = `
     color: #0a1d9d;
     text-decoration: underline;
     text-decoration-thickness: 18%;
+  }
+}
+
+@media (hover: hover) {
+  .c10:hover,
+  .c10:visited:hover {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+}
+
+@media (hover: hover) {
+  .c11:hover,
+  .c11:visited:hover {
+    color: #222222;
+    text-decoration: underline;
   }
 }
 

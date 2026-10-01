@@ -53,6 +53,23 @@ describe("OakPagination Component", () => {
     expect(getAllByTestId("page-number-component")).toHaveLength(7);
   });
 
+  it("renders the current page with the primary background", () => {
+    const { getByLabelText } = renderWithTheme(
+      <OakPagination
+        paginationHref={""}
+        onPageChange={() => {}}
+        pageName={"test"}
+        currentPage={1}
+        totalPages={7}
+      />,
+    );
+
+    expect(getByLabelText("test page 1")).toHaveStyleRule(
+      "background-color",
+      "#222222",
+    );
+  });
+
   it("disables the backwards button when on the first page", () => {
     const { getByTestId } = renderWithTheme(
       <OakPagination

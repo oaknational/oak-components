@@ -62,7 +62,7 @@ const StyledNumberButton = styled(OakLink)<
   color: ${parseColor("text-primary")};
 
   ${(props) => css`
-    background-color: ${props.selected
+    background-color: ${props.$selected
       ? parseColor("icon-primary")
       : parseColor("icon-inverted")};
   `};
@@ -76,17 +76,13 @@ const StyledNumberButton = styled(OakLink)<
       }
     `}
 
-  &:hover {
-    text-decoration: underline;
-    ${(props) =>
-      props.selected &&
-      css`
-        color: ${parseColor("text-inverted")};
-        @media (hover: hover) {
-    &:hover:not(:disabled) {
-      color: ${parseColor("text-inverted")};
+  @media (hover: hover) {
+    &:hover,
+    &:visited:hover {
+      color: ${(props) =>
+        parseColor(props.$selected ? "text-inverted" : "text-primary")};
+      text-decoration: underline;
     }
-      `}
   }
 `;
 
