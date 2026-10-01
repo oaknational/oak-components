@@ -11,7 +11,10 @@ import {
   PolymorphicPropsWithRef,
   PolymorphicRef,
 } from "@/components/polymorphic";
-import { TypographyStyleProps } from "@/styles/utils/typographyStyle";
+import {
+  typographyStyle,
+  TypographyStyleProps,
+} from "@/styles/utils/typographyStyle";
 
 export type OakLinkProps = Pick<
   InternalLinkProps,
@@ -29,7 +32,9 @@ type OakLinkComponent = <C extends React.ElementType = "a">(
   props: PolymorphicPropsWithRef<C> & OakLinkProps,
 ) => React.ReactNode;
 
-const StyledInternalLink = styled(InternalLink)``;
+const StyledInternalLink = styled(InternalLink)<TypographyStyleProps>`
+  ${(props) => props.$font && typographyStyle}
+`;
 
 /**
  * A link with an optional icon and loading state.
