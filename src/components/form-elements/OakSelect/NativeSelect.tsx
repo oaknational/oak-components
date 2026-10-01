@@ -93,7 +93,7 @@ export const NativeSelect = styled("select")<
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
 
-    ::picker(select) {
+    &::picker(select) {
       border-top-left-radius: 0px;
       border-top-right-radius: 0px;
     }

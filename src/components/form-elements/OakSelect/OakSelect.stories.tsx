@@ -1,14 +1,10 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/nextjs";
 import { useArgs } from "storybook/preview-api";
-import styled from "styled-components";
 
 import { OakSelect, OakOptGroup, OakOption } from ".";
 
-import {
-  OakJauntyAngleLabel,
-  OakJauntyAngleLabelProps,
-} from "@/components/form-elements/OakJauntyAngleLabel";
+import { OakJauntyAngleLabel } from "@/components/form-elements/OakJauntyAngleLabel";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
 import { parseSpacing } from "@/styles";
 
