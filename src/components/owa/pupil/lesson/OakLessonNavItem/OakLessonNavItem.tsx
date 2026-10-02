@@ -156,12 +156,14 @@ export const OakLessonNavItem = <C extends ElementType = "a">(
     disabledBackgroundColor,
   ] = pickColorsForSection(lessonSectionName);
 
-  const resolvedBackgroundColor =
-    isDisabled && disabledBackgroundColor
-      ? disabledBackgroundColor
-      : progress === "not-started"
-        ? notStartedBackgroundColor
-        : backgroundColor;
+  let resolvedBackgroundColor;
+  if (isDisabled && disabledBackgroundColor) {
+    resolvedBackgroundColor = disabledBackgroundColor;
+  } else if (progress === "not-started") {
+    resolvedBackgroundColor = notStartedBackgroundColor;
+  } else {
+    resolvedBackgroundColor = backgroundColor;
+  }
 
   return (
     <StyledLessonNavItem

@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useMemo } from "react";
 import styled from "styled-components";
 
 import {
@@ -145,6 +145,22 @@ const Accordion = ({
   );
 };
 
+const ControlledAccordion = (
+  props: UnstyledChevronAccordionCommonProps &
+    UnstyledChevronAccordionControlledProps,
+) => {
+  const { isOpen, onOpenChange, ...accordionProps } = props;
+  const contextValue = useMemo(
+    () => ({ isOpen, setOpen: onOpenChange }),
+    [isOpen, onOpenChange],
+  );
+  return (
+    <accordionContext.Provider value={contextValue}>
+      <Accordion {...accordionProps} />
+    </accordionContext.Provider>
+  );
+};
+
 /**
  * - UnstyledChevronAccordion has a chevron icon that rotates when the accordion is open.
  * - Unlike InternalChevronAccordion, it has no border effects for hover or focus states.
@@ -158,12 +174,7 @@ export const UnstyledChevronAccordion = (
 ) => {
   // Is the accordion being used as a controlled component?
   if (props.isOpen !== undefined) {
-    const { isOpen, onOpenChange, ...accordionProps } = props;
-    return (
-      <accordionContext.Provider value={{ isOpen, setOpen: onOpenChange }}>
-        <Accordion {...accordionProps} />
-      </accordionContext.Provider>
-    );
+    return <ControlledAccordion {...props} />;
   }
 
   const { isInitiallyOpen = false, ...accordionProps } = props;
