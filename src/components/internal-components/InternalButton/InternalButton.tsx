@@ -58,7 +58,7 @@ const UnstyledInternalButton = <C extends ElementType = "button">(
 ) => {
   const { onClick, onHovered, element: Component = "button", ...rest } = props;
 
-  const hoverStart = useRef(Date.now());
+  const hoverStart = useRef<number | null>(null);
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     if (onClick) {
@@ -66,12 +66,16 @@ const UnstyledInternalButton = <C extends ElementType = "button">(
     }
   };
 
-  const handleMouseEnter = () => {
-    hoverStart.current = Date.now();
+  const handleMouseEnter = (event: React.MouseEvent<HTMLButtonElement>) => {
+    hoverStart.current = event.timeStamp;
   };
 
   const handleMouseLeave = (event: React.MouseEvent<HTMLButtonElement>) => {
-    const delta = Date.now() - hoverStart.current;
+    if (hoverStart.current === null) {
+      return;
+    }
+    const delta = event.timeStamp - hoverStart.current;
+    hoverStart.current = null;
     if (onHovered) {
       onHovered(event, delta);
     }
