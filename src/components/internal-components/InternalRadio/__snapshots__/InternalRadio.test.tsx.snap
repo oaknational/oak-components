@@ -3,8 +3,6 @@
 exports[`InternalRadio matches snapshot 1`] = `
 .c0 {
   -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   cursor: pointer;
   margin: 0;
@@ -22,7 +20,7 @@ exports[`InternalRadio matches snapshot 1`] = `
   pointer-events: none;
 }
 
-@media (hover:hover) {
+@media (hover: hover) {
   .c0:hover:not(:disabled) {
     border-color: #222222;
   }

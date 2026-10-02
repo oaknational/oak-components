@@ -45,7 +45,7 @@ const StyledOakTextArea = styled(OakTextArea)<StyledOakTextAreaProps>`
       props.disabled ? "" : parseColor("border-neutral")};
   }
 
-  ::placeholder {
+  &::placeholder {
     color: ${parseColor("text-subdued")};
   }
 `;

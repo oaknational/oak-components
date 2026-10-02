@@ -19,10 +19,10 @@ const meta: Meta<typeof OakFocusIndicator> = {
       options: ["div", "li"],
       defaultValue: "div",
     },
-    hoverBackground: { options: [...oakUiRoleTokens, null] },
-    dropShadow: { options: [...Object.keys(oakDropShadowTokens), null] },
-    hoverDropShadow: { options: [...Object.keys(oakDropShadowTokens), null] },
-    activeDropShadow: { options: [...Object.keys(oakDropShadowTokens), null] },
+    $hoverBackground: { options: [...oakUiRoleTokens, null] },
+    $dropShadow: { options: [...Object.keys(oakDropShadowTokens), null] },
+    $hoverDropShadow: { options: [...Object.keys(oakDropShadowTokens), null] },
+    $activeDropShadow: { options: [...Object.keys(oakDropShadowTokens), null] },
     $borderRadius: { options: [...Object.keys(oakBorderRadiusTokens), null] },
   },
   parameters: {
@@ -73,7 +73,7 @@ export const Square: Story = {
     </OakFocusIndicator>
   ),
   args: {
-    $borderRadius: "border-radius-none",
+    $borderRadius: "border-radius-square",
   },
 };
 
@@ -99,7 +99,7 @@ export const ChangeHoverBackgroundAndHover: Story = {
     </OakFocusIndicator>
   ),
   args: {
-    hoverBackground: "bg-decorative1-subdued",
+    $hoverBackground: "bg-decorative1-subdued",
     $borderRadius: "border-radius-m",
   },
 };
@@ -107,15 +107,19 @@ export const ChangeHoverBackgroundAndHover: Story = {
 export const FakingFocus: Story = {
   render: (args) => (
     <OakFocusIndicator {...args}>
-      <OakBox $overflow={"hidden"} $ba={"border-solid-m"} {...args}>
+      <OakBox
+        $overflow={"hidden"}
+        $ba={"border-solid-m"}
+        $borderRadius={args.$borderRadius}
+      >
         <UnStyledButton>Test</UnStyledButton>
       </OakBox>
     </OakFocusIndicator>
   ),
   args: {
-    dropShadow: "drop-shadow-centered-grey",
-    hoverDropShadow: "drop-shadow-centered-grey",
-    activeDropShadow: "drop-shadow-none",
+    $dropShadow: "drop-shadow-centered-grey",
+    $hoverDropShadow: "drop-shadow-centered-grey",
+    $activeDropShadow: "drop-shadow-none",
     $borderRadius: "border-radius-m",
   },
 };

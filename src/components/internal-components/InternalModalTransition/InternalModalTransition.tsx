@@ -49,7 +49,7 @@ const InternalModalTransition: FC<TransitionProps> = ({
   transitionRef,
   onClose,
   finalZIndex,
-  isLeftHandSide,
+  isLeftHandSide = false,
   closeOnBackgroundClick = false,
   largeScreenMaxWidth,
   ...rest
@@ -81,7 +81,7 @@ const InternalModalTransition: FC<TransitionProps> = ({
             isLeftHandSide={isLeftHandSide}
             ref={transitionRef}
             $zIndex={finalZIndex}
-            $state={state}
+            state={state}
             aria-modal={true}
             largeScreenMaxWidth={largeScreenMaxWidth}
             {...rest}

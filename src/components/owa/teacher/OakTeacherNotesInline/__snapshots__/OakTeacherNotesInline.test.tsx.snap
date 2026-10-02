@@ -21,19 +21,15 @@ exports[`OakTeacherNotesInline matches snapshot 1`] = `
 
 .c2 {
   direction: rtl;
-  -webkit-scrollbar-color: #b0e2de #fff;
-  -moz-scrollbar-color: #b0e2de #fff;
-  -ms-scrollbar-color: #b0e2de #fff;
   scrollbar-color: #b0e2de #fff;
 }
 
-.c2 > * {
+.c2>* {
   direction: ltr;
 }
 
 .c2 a {
   color: #0d24c4;
-  -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 

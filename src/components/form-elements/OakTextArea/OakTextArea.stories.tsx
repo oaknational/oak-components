@@ -25,7 +25,6 @@ type Story = StoryObj<typeof OakTextArea>;
 export const Default: Story = {
   render: (args) => <OakTextArea {...args} />,
   args: {
-    allowCarriageReturn: true,
     placeholder: "Start typing answer...",
     disabled: false,
   },

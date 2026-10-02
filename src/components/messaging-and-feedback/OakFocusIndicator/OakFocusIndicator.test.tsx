@@ -14,10 +14,10 @@ describe("OakFocusIndicator", () => {
   test("renders correctly with props set", () => {
     const { container } = renderWithTheme(
       <OakFocusIndicator
-        hoverBackground="bg-btn-secondary"
-        dropShadow="drop-shadow-centered-grey"
-        hoverDropShadow="drop-shadow-centered-grey"
-        activeDropShadow="drop-shadow-none"
+        $hoverBackground="bg-btn-secondary"
+        $dropShadow="drop-shadow-centered-grey"
+        $hoverDropShadow="drop-shadow-centered-grey"
+        $activeDropShadow="drop-shadow-none"
       />,
     );
 
@@ -28,10 +28,10 @@ describe("OakFocusIndicator", () => {
     const { container } = renderWithTheme(
       <OakFocusIndicator
         as="li"
-        hoverBackground="bg-btn-secondary"
-        dropShadow="drop-shadow-centered-grey"
-        hoverDropShadow="drop-shadow-centered-grey"
-        activeDropShadow="drop-shadow-none"
+        $hoverBackground="bg-btn-secondary"
+        $dropShadow="drop-shadow-centered-grey"
+        $hoverDropShadow="drop-shadow-centered-grey"
+        $activeDropShadow="drop-shadow-none"
       />,
     );
 

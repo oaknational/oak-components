@@ -6,6 +6,7 @@ import { OakSelect, OakOptGroup, OakOption } from ".";
 
 import { OakJauntyAngleLabel } from "@/components/form-elements/OakJauntyAngleLabel";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
+import { parseSpacing } from "@/styles";
 
 const meta: Meta<typeof OakSelect> = {
   component: OakSelect,
@@ -92,10 +93,10 @@ export const WithLabel: Story = {
         $background={"bg-decorative5-main"}
         $zIndex="in-front"
         $position="absolute"
-        $top={"-20px"}
-        $left={"5px"}
+        $left={"spacing-4"}
         $borderRadius="border-radius-square"
         data-testid="jaunty-label"
+        style={{ top: `-${parseSpacing("spacing-20")}` }}
       />
       <OakSelect {...args} $display={"block"} id="test">
         <OakOption>one</OakOption>

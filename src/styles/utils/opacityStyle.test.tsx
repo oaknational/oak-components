@@ -3,7 +3,7 @@ import styled from "styled-components";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 
-import { opacityStyle } from "@/styles/utils/opacityStyle";
+import { opacityStyle, OpacityStyleProps } from "@/styles/utils/opacityStyle";
 import { OakOpacityToken } from "@/styles/theme";
 
 describe("opacityStyle", () => {
@@ -15,7 +15,7 @@ describe("opacityStyle", () => {
       $opacity: value as OakOpacityToken,
     };
 
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<OpacityStyleProps>`
       ${opacityStyle}
     `;
 

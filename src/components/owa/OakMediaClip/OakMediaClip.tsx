@@ -10,6 +10,7 @@ import {
   oakPlaceholder,
   placeholderStyles,
   OakImage,
+  StyledImageProps,
 } from "@/components/images-and-icons/OakImage";
 import { OakP } from "@/components/typography/OakP";
 import { OakLI } from "@/components/typography/OakLI";
@@ -79,7 +80,7 @@ const MediaButtonWrapper = styled(StyledButtonWrapper)`
   width: 100%;
 `;
 
-export const StyledMediaClipImage = styled(OakImage)`
+export const StyledMediaClipImage = styled(OakImage)<StyledImageProps>`
   ${placeholderStyles}
 `;
 
@@ -212,6 +213,8 @@ export const OakMediaClip = ({
           $width={"100%"}
           $height={"100%"}
           $background={buttonStyles.defaultBackground}
+          $defaultTextColor={buttonStyles.defaultTextColor}
+          $defaultBackground={buttonStyles.defaultBackground}
           $borderColor="transparent"
           $borderRadius={"border-radius-s"}
           $position={"relative"}

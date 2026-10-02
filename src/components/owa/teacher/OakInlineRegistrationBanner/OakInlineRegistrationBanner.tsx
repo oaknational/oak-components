@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styled from "styled-components";
 
 import { SurfingStudentSVG } from "./SurfingStudentSVG";
 
@@ -18,6 +19,10 @@ export type OakInlineRegistrationBannerProps = {
   bodyText: React.ReactNode;
 } & ColorStyleProps &
   BorderStyleProps;
+
+const NegativeSpacingJauntyAngleLabel = styled(OakJauntyAngleLabel)`
+  top: -15px;
+`;
 
 export const OakInlineRegistrationBanner = (
   props: OakInlineRegistrationBannerProps,
@@ -73,7 +78,7 @@ export const OakInlineRegistrationBanner = (
               $mt="spacing-24"
             >
               <OakBox $position="relative" $width="100%">
-                <OakJauntyAngleLabel
+                <NegativeSpacingJauntyAngleLabel
                   label="Email"
                   $position="absolute"
                   $zIndex="in-front"
@@ -82,8 +87,7 @@ export const OakInlineRegistrationBanner = (
                   $width="max-content"
                   $ph="spacing-16"
                   $font="heading-7"
-                  $top="-15px"
-                  $left="8px"
+                  $left="spacing-8"
                 />
 
                 <OakTextInput

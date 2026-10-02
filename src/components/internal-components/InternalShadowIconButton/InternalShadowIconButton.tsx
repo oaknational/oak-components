@@ -36,9 +36,9 @@ export type InternalShadowIconButtonProps = Omit<
 > & {
   iconName?: OakIconName;
   isTrailingIcon?: boolean;
-  defaultTextColor: OakUiRoleToken;
-  hoverTextColor: OakUiRoleToken;
-  disabledTextColor: OakUiRoleToken;
+  defaultTextColor?: OakUiRoleToken;
+  hoverTextColor?: OakUiRoleToken;
+  disabledTextColor?: OakUiRoleToken;
   hoverIconColor?: OakUiRoleToken;
   defaultIconColor?: OakRoundIconProps["$colorFilter"];
   disabledIconColor?: OakRoundIconProps["$colorFilter"];
@@ -74,16 +74,16 @@ const StyledInternalButton = styled(InternalButton)<
 `;
 
 const StyledButtonWrapper = styled(OakFlex)`
-  > :first-child:hover .highlight {
+  > :first-of-type:hover .highlight {
     display: block;
   }
-  > :first-child:active .highlight {
+  > :first-of-type:active .highlight {
     display: block;
   }
-  > :first-child:active .shadow {
+  > :first-of-type:active .shadow {
     display: block;
   }
-  > :first-child:focus-visible {
+  > :first-of-type:focus-visible {
     box-shadow:
       ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};

@@ -18,9 +18,9 @@ export type ColorFilterStyleProps = {
   $colorFilter?: ColorFilterToken;
 };
 export const colorFilterStyle = css<ColorFilterStyleProps>`
-  ${responsiveStyle<ColorFilterStyleProps, OakUiRoleToken>(
+  ${responsiveStyle(
     "filter",
     (props) => props.$colorFilter,
-    parseColorFilter,
+    (value) => parseColorFilter(value),
   )}
 `;

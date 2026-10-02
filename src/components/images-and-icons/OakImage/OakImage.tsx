@@ -40,7 +40,7 @@ export type OakImageProps<C extends ElementType = typeof Image> = Omit<
     imageProps?: Partial<ComponentPropsWithoutRef<C>>;
   };
 
-type StyledImageProps = Omit<OakImageProps, "as"> & {
+export type StyledImageProps = Omit<OakImageProps, "as"> & {
   $showOakPlaceholder: boolean;
 };
 
@@ -52,7 +52,7 @@ const clickStyles = css<{ onClick?: MouseEventHandler }>`
     /* onClick might be passed in the useClickableCard pattern */
     props.onClick &&
     css`
-      :hover {
+      &:hover {
         cursor: pointer;
       }
     `}

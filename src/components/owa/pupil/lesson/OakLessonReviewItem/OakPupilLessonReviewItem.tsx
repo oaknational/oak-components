@@ -11,6 +11,7 @@ import { OakUiRoleToken } from "@/styles";
 type LessonSectionName = "intro" | "starter-quiz" | "video" | "exit-quiz";
 type BaseOakLessonReviewItemProps = {
   completed: boolean;
+  "data-testid"?: string;
 };
 type QuizSectionProps = {
   lessonSectionName: "starter-quiz" | "exit-quiz";
@@ -34,13 +35,13 @@ type IntroSectionProps = {
 export type OakLessonReviewItemProps = BaseOakLessonReviewItemProps &
   (IntroSectionProps | QuizSectionProps | VideoSectionProps);
 
-const StyledLessonReviewItem = styled(OakFlex)<{ completed: boolean }>`
+const StyledLessonReviewItem = styled(OakFlex)<{ $completed: boolean }>`
   outline: none;
   text-align: initial;
 `;
 
 export const OakLessonReviewItem = (props: OakLessonReviewItemProps) => {
-  const { completed, lessonSectionName, ...rest } = props;
+  const { completed, lessonSectionName } = props;
   const [completedBackgroundColor, borderColor, iconBackgroundColor] =
     pickColorsForSection(lessonSectionName);
   const lessonSectionNameToIconMap = new Map();
@@ -52,7 +53,7 @@ export const OakLessonReviewItem = (props: OakLessonReviewItemProps) => {
 
   return (
     <StyledLessonReviewItem
-      completed={completed}
+      $completed={completed}
       $gap="spacing-24"
       $alignItems="center"
       $background={completed ? completedBackgroundColor : "bg-primary"}
@@ -61,7 +62,7 @@ export const OakLessonReviewItem = (props: OakLessonReviewItemProps) => {
       $borderRadius="border-radius-l"
       $borderColor={completed ? completedBackgroundColor : borderColor}
       $ba="border-solid-l"
-      {...rest}
+      data-testid={props["data-testid"]}
     >
       <OakRoundIcon
         iconName={lessonSectionNameToIconMap.get(lessonSectionName)}

@@ -76,12 +76,12 @@ export const NativeSelect = styled("select")<
     border-top: none;
   }
 
-  ::picker(select) {
+  &::picker(select) {
     top: calc(anchor(bottom) - 2px);
     left: anchor(0);
   }
 
-  ::picker-icon {
+  &::picker-icon {
     display: none;
   }
 
@@ -93,7 +93,7 @@ export const NativeSelect = styled("select")<
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
 
-    ::picker(select) {
+    &::picker(select) {
       border-top-left-radius: 0px;
       border-top-right-radius: 0px;
     }

@@ -6,15 +6,10 @@ exports[`OakGrid matches snapshot 1`] = `
 }
 
 .c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .c3 {
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   grid-column: span 1;
   grid-row: span undefined;
@@ -23,7 +18,7 @@ exports[`OakGrid matches snapshot 1`] = `
 
 .c1 {
   display: grid;
-  grid-template-columns: repeat(12,1fr);
+  grid-template-columns: repeat(12, 1fr);
   width: 100%;
 }
 

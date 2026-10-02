@@ -14,17 +14,13 @@ export type OakTagFunctionalProps = {
   useSpan?: boolean;
 } & Omit<OakFlexProps, "onClick" | "label">;
 export const OakTagFunctional = (props: OakTagFunctionalProps) => {
-  const { label, useSpan, ...oakFlexProps } = props;
-  const icon = props.iconName && (
-    <OakIcon
-      $height={"spacing-20"}
-      $width={"spacing-20"}
-      iconName={props.iconName}
-    />
+  const { label, useSpan, isTrailingIcon, iconName, ...oakFlexProps } = props;
+  const icon = iconName && (
+    <OakIcon $height={"spacing-20"} $width={"spacing-20"} iconName={iconName} />
   );
 
-  const trailingIcon = props.isTrailingIcon && icon;
-  const leadingIcon = !props.isTrailingIcon && icon;
+  const trailingIcon = isTrailingIcon && icon;
+  const leadingIcon = !isTrailingIcon && icon;
   return (
     <OakFlex
       $borderRadius={"border-radius-m"}

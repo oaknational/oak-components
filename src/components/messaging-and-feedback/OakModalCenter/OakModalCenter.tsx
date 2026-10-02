@@ -13,7 +13,11 @@ import { Transition, TransitionStatus } from "react-transition-group";
 import styled from "styled-components";
 
 import { InternalShadowRoundButton } from "@/components/internal-components/InternalShadowRoundButton";
-import { OakBox, oakBoxCss } from "@/components/layout-and-structure/OakBox";
+import {
+  OakBox,
+  oakBoxCss,
+  OakBoxProps,
+} from "@/components/layout-and-structure/OakBox";
 import {
   OakFlex,
   OakFlexProps,
@@ -75,7 +79,7 @@ export type OakModalCenterProps = {
   returnFocus?: (returnTo: Element) => boolean | FocusOptions;
 };
 
-const FocusOnBox = styled(FocusOn)`
+const FocusOnBox = styled(FocusOn)<OakBoxProps>`
   ${oakBoxCss}
 `;
 

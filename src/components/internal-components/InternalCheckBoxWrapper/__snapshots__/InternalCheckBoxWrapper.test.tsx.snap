@@ -8,7 +8,7 @@ exports[`InternalCheckBoxWrapper matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c2 {
+.c1 {
   position: absolute;
   top: 0rem;
   left: 0rem;
@@ -18,12 +18,12 @@ exports[`InternalCheckBoxWrapper matches snapshot 1`] = `
   font-family: --var(google-font),Lexend,sans-serif;
 }
 
-.c3 {
+.c2 {
   pointer-events: none;
   opacity: 0;
 }
 
-input:checked + .c1 {
+input:checked+.c2 {
   opacity: 1;
 }
 
@@ -38,7 +38,7 @@ input:checked + .c1 {
       value="Option 1"
     />
     <div
-      class="c1 c2 c3"
+      class="c1 c2"
     >
       <div
         data-testid="test-icon"

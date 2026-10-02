@@ -3,11 +3,11 @@ import styled from "styled-components";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 
-import { zIndexStyle } from "@/styles/utils/zIndexStyle";
+import { zIndexStyle, ZIndexStyleProps } from "@/styles/utils/zIndexStyle";
 
 describe("zIndexStyle", () => {
   test("should correctly handle prop 'zIndex' as string", async () => {
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<ZIndexStyleProps>`
       ${zIndexStyle}
     `;
     const { getByTestId } = render(
@@ -16,7 +16,7 @@ describe("zIndexStyle", () => {
     expect(getByTestId("test")).toHaveStyle("zIndex: -1");
   });
   test("should correctly handle prop 'zIndex' as array", async () => {
-    const StyledComponent = styled.div`
+    const StyledComponent = styled.div<ZIndexStyleProps>`
       ${zIndexStyle}
     `;
     const { getByTestId } = render(

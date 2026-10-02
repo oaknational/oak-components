@@ -17,11 +17,11 @@ import { parseColor } from "@/styles/helpers/parseColor";
 import { parseDropShadow } from "@/styles/helpers/parseDropShadow";
 
 type OakFlexPropsWithAnimation = OakFlexProps & {
-  hasAnimation?: boolean;
+  $hasAnimation?: boolean;
 };
 const StyledOakFlexAsLink = styled(OakFlex)<OakFlexPropsWithAnimation>`
-  animation: ${({ hasAnimation }) =>
-    hasAnimation ? "background-fade 2s ease-in-out" : "none"};
+  animation: ${({ $hasAnimation }) =>
+    $hasAnimation ? "background-fade 2s ease-in-out" : "none"};
   animation-delay: 0.5s;
   cursor: pointer;
   outline: none;
@@ -109,7 +109,7 @@ export const OakLinkCard = ({
 }: OakLinkCardProps) => {
   return (
     <StyledOakFlexAsLink
-      hasAnimation={hasAnimation}
+      $hasAnimation={hasAnimation}
       as="a"
       href={href}
       $flexDirection={narrow ? "column-reverse" : ["column-reverse", "row"]}
