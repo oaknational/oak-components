@@ -1,0 +1,42 @@
+name: AI PR Standards Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: ai-pr-standards-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  ai-standards-review:
+    name: Review PR against Oak standards
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24.x
+
+      - name: Run standards-based AI review
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_PR_REVIEW_MODEL || 'gpt-5.4-mini' }}
+          REVIEW_STANDARDS_FILE: .github/ai-review/oak-components-standards.md
+          AI_REVIEW_COMMENT_MARKER: '<!-- oak-ai-standards-review -->'
+          AI_REVIEW_MAX_FILES: '80'
+          AI_REVIEW_MAX_PATCH_CHARS_PER_FILE: '8000'
+          AI_REVIEW_MAX_PROMPT_CHARS: '160000'
+        run: node scripts/ai-pr-review.mjs
