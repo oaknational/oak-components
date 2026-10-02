@@ -1,12 +1,25 @@
 import React, { createRef } from "react";
 import "@testing-library/jest-dom";
-import { fireEvent } from "@testing-library/react";
+import { createEvent, fireEvent } from "@testing-library/react";
 
 import { InternalRadio } from "./InternalRadio";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("InternalRadio", () => {
+  it("does not read Date.now during rendering or rerendering", () => {
+    const dateNow = jest.spyOn(Date, "now");
+    try {
+      const { rerender } = renderWithTheme(
+        <InternalRadio id="radio-1" value="Option 1" />,
+      );
+      rerender(<InternalRadio id="radio-1" value="Option 2" />);
+      expect(dateNow).not.toHaveBeenCalled();
+    } finally {
+      dateNow.mockRestore();
+    }
+  });
+
   it("renders a radio", () => {
     const { getByRole } = renderWithTheme(
       <InternalRadio id="radio-1" value="Option 1" data-testid="test-1" />,
@@ -98,6 +111,45 @@ describe("InternalRadio", () => {
     );
     fireEvent.mouseEnter(getByRole("radio"));
     fireEvent.mouseLeave(getByRole("radio"));
+    expect(onHovered).toHaveBeenCalledTimes(1);
+  });
+
+  it("captures event timestamp durations across repeated hovers", () => {
+    const onHovered = jest.fn();
+    const { getByRole } = renderWithTheme(
+      <InternalRadio id="radio-1" value="Option 1" onHovered={onHovered} />,
+    );
+    const radio = getByRole("radio");
+
+    for (const [start, end] of [
+      [100, 1100],
+      [2000, 2250],
+    ] as const) {
+      const mouseEnter = createEvent.mouseOver(radio);
+      const mouseLeave = createEvent.mouseOut(radio);
+      Object.defineProperty(mouseEnter, "timeStamp", { value: start });
+      Object.defineProperty(mouseLeave, "timeStamp", { value: end });
+      fireEvent(radio, mouseEnter);
+      fireEvent(radio, mouseLeave);
+    }
+
+    expect(onHovered).toHaveBeenCalledTimes(2);
+    expect(onHovered).toHaveBeenNthCalledWith(1, "Option 1", "radio-1", 1000);
+    expect(onHovered).toHaveBeenNthCalledWith(2, "Option 1", "radio-1", 250);
+  });
+
+  it("ignores mouse-leave events without a matching mouse-enter", () => {
+    const onHovered = jest.fn();
+    const { getByRole } = renderWithTheme(
+      <InternalRadio id="radio-1" value="Option 1" onHovered={onHovered} />,
+    );
+    const radio = getByRole("radio");
+
+    fireEvent.mouseLeave(radio);
+    expect(onHovered).not.toHaveBeenCalled();
+    fireEvent.mouseEnter(radio);
+    fireEvent.mouseLeave(radio);
+    fireEvent.mouseLeave(radio);
     expect(onHovered).toHaveBeenCalledTimes(1);
   });
 });

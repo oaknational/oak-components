@@ -1,6 +1,6 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { render, fireEvent } from "@testing-library/react";
+import { render, fireEvent, createEvent } from "@testing-library/react";
 
 import { InternalButton } from "./InternalButton";
 
@@ -21,6 +21,17 @@ describe("InternalButton", () => {
       <InternalButton data-testid="test">Click</InternalButton>,
     );
     expect(getByTestId("test")).toBeInTheDocument();
+  });
+
+  it("does not read Date.now during rendering or rerendering", () => {
+    const dateNow = jest.spyOn(Date, "now");
+    try {
+      const { rerender } = render(<InternalButton>Click</InternalButton>);
+      rerender(<InternalButton>Updated</InternalButton>);
+      expect(dateNow).not.toHaveBeenCalled();
+    } finally {
+      dateNow.mockRestore();
+    }
   });
 
   it("matches snapshot", () => {
@@ -78,10 +89,40 @@ describe("InternalButton", () => {
         Click
       </InternalButton>,
     );
-    fireEvent.mouseEnter(getByTestId("test"));
-    jest.advanceTimersByTime(1000);
-    fireEvent.mouseLeave(getByTestId("test"));
-    expect(onHovered).toHaveBeenCalledWith(expect.anything(), 1000);
+    const button = getByTestId("test");
+    const mouseEnter = createEvent.mouseOver(button);
+    const mouseLeave = createEvent.mouseOut(button);
+    Object.defineProperty(mouseEnter, "timeStamp", { value: 100 });
+    Object.defineProperty(mouseLeave, "timeStamp", { value: 1100 });
+
+    fireEvent(button, mouseEnter);
+    fireEvent(button, mouseLeave);
+    expect(onHovered).toHaveBeenNthCalledWith(1, expect.anything(), 1000);
+
+    const nextMouseEnter = createEvent.mouseOver(button);
+    const nextMouseLeave = createEvent.mouseOut(button);
+    Object.defineProperty(nextMouseEnter, "timeStamp", { value: 2000 });
+    Object.defineProperty(nextMouseLeave, "timeStamp", { value: 2250 });
+
+    fireEvent(button, nextMouseEnter);
+    fireEvent(button, nextMouseLeave);
+    expect(onHovered).toHaveBeenNthCalledWith(2, expect.anything(), 250);
+  });
+
+  it("does not call onHovered without a matching mouse-enter event", () => {
+    const onHovered = jest.fn();
+    const { getByRole } = render(
+      <InternalButton onHovered={onHovered}>Click</InternalButton>,
+    );
+    const button = getByRole("button");
+
+    fireEvent.mouseLeave(button);
+    expect(onHovered).not.toHaveBeenCalled();
+
+    fireEvent.mouseEnter(button);
+    fireEvent.mouseLeave(button);
+    fireEvent.mouseLeave(button);
+    expect(onHovered).toHaveBeenCalledTimes(1);
   });
 
   it("correctly fires for a form matching the id from its form props", () => {
