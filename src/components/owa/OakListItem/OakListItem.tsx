@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { ReactNode, useCallback, useContext } from "react";
 import styled, { css } from "styled-components";
 
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
@@ -76,6 +76,13 @@ const StyledOakIndexBox = styled(OakFlex)<{
   }
 `;
 
+const StyledButton = styled.button`
+  all: unset;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+`;
+
 export type OakListItemProps = {
   unavailable?: boolean;
   index: number;
@@ -127,6 +134,16 @@ export const OakListItem = (props: OakListItemProps) => {
   const onClickLocal = unavailable ? undefined : onClick;
   const textColor = unavailable ? "text-disabled" : "text-primary";
 
+  const handleKeyDown = useCallback(
+    (event: React.KeyboardEvent<HTMLButtonElement>) => {
+      if (onClickLocal && (event.key === "Enter" || event.key === " ")) {
+        event.preventDefault();
+        onClickLocal(event as unknown as React.MouseEvent<HTMLElement, MouseEvent>);
+      }
+    },
+    [onClickLocal],
+  );
+
   let background: OakUiRoleToken;
   if (unavailable) {
     background = "bg-neutral-stronger";
@@ -141,6 +158,187 @@ export const OakListItem = (props: OakListItemProps) => {
   const isExpandedBorderRadius = "border-radius-square";
   const unavailableBgColor = "bg-neutral";
 
+  const innerContent = (
+    <>
+      <OakFlex $flexGrow={1} $alignItems={"center"} $columnGap={"spacing-16"}>
+        {asRadio && radioValue && (
+          <InternalRadioWrapper
+            checked={radioValue === radioContext.currentValue}
+            size={checkboxSize}
+            disabled={unavailable}
+            radioBorderColor={checkedBorderColor}
+            internalRadio={
+              <InternalRadio
+                id={radioValue}
+                name={radioContext.name}
+                value={radioValue}
+                disabled={unavailable}
+                onChange={radioContext.onValueUpdated}
+                checked={radioValue === radioContext.currentValue}
+                aria-label={asRadio ? title : undefined}
+              />
+            }
+          />
+        )}
+
+        {/* Desktop layout - aria-hidden when asRadio so only the radio is a swipe stop */}
+        <StyledListItem
+          data-testid="OakListItem-id"
+          $alignItems={"center"}
+          $background={unavailable ? unavailableBgColor : "bg-primary"}
+          $borderRadius="border-radius-m"
+          $bbrr={isExpanded ? isExpandedBorderRadius : "border-radius-m"}
+          $bblr={isExpanded ? isExpandedBorderRadius : "border-radius-m"}
+          $disabled={unavailable}
+          $pr="spacing-16"
+          $width="100%"
+          $display={["none", "flex"]}
+          $indexHoverBgColour={indexHoverBgColour}
+          $hoverBgColour={hoverBgColour}
+          aria-hidden={asRadio}
+        >
+          <FlexWithFocus
+            $borderRadius="border-radius-m"
+            $gap="spacing-16"
+            $alignItems="center"
+            $width="100%"
+            $height="100%"
+            ref={firstItemRef}
+            aria-hidden={asRadio}
+          >
+            <StyledOakIndexBox
+              $background={background}
+              $btlr={"border-radius-m"}
+              $bblr={isExpanded ? isExpandedBorderRadius : "border-radius-m"}
+              $justifyContent={"center"}
+              $alignItems={"center"}
+              $minWidth="spacing-64"
+              $alignSelf="stretch"
+              $indexHoverBgColour={indexHoverBgColour}
+              aria-hidden="true"
+            >
+              <OakSpan $font={"heading-5"} $color={textColor}>
+                {index}
+              </OakSpan>
+            </StyledOakIndexBox>
+            <OakFlex $pv="spacing-20" $pr="spacing-16" $flexGrow={1}>
+              <OakP
+                $font={"heading-7"}
+                $color={textColor}
+                className="hover-text"
+              >
+                {title}
+              </OakP>
+            </OakFlex>
+            <OakFlex
+              $minWidth="spacing-80"
+              $alignItems="center"
+              $justifyContent="end"
+              $color={textColor}
+            >
+              {middleSlot}
+            </OakFlex>
+            <OakFlex
+              $font={"heading-light-7"}
+              $color={textColor}
+              $alignItems="center"
+              $justifyContent="end"
+              $minWidth={"spacing-160"}
+            >
+              {endSlot}
+            </OakFlex>
+          </FlexWithFocus>
+        </StyledListItem>
+        {/* Mobile layout */}
+        <StyledListItem
+          data-testid="OakListItem-id"
+          $background={unavailable ? unavailableBgColor : "bg-primary"}
+          $borderRadius="border-radius-m"
+          $bbrr={isExpanded ? isExpandedBorderRadius : "border-radius-m"}
+          $bblr={isExpanded ? isExpandedBorderRadius : "border-radius-m"}
+          $disabled={unavailable}
+          $display={["flex", "none"]}
+          $width="100%"
+          $pa="spacing-16"
+          $indexHoverBgColour={indexHoverBgColour}
+          $hoverBgColour={hoverBgColour}
+          aria-hidden={asRadio}
+        >
+          <OakFlex $flexDirection="column" $gap="spacing-16" $width="100%">
+            <OakFlex $gap="spacing-16">
+              <OakFlex
+                $background={background}
+                $justifyContent={"center"}
+                $alignItems={"center"}
+                $borderRadius="border-radius-m"
+                $width="spacing-40"
+                $height="spacing-40"
+                $minWidth="spacing-40"
+              >
+                <OakHeading tag="h3" $font="heading-5" $color={textColor}>
+                  {index}
+                </OakHeading>
+              </OakFlex>
+              <OakBox $width="100%">
+                <OakP $font="heading-7" $color={textColor}>
+                  {title}
+                </OakP>
+              </OakBox>
+            </OakFlex>
+            <OakFlex
+              $justifyContent="space-between"
+              $alignItems="center"
+              $color={textColor}
+            >
+              {middleSlot}
+              {endSlot}
+            </OakFlex>
+          </OakFlex>
+        </StyledListItem>
+      </OakFlex>
+      {expandedContent && isExpanded && (
+        <OakFlex $ml={"spacing-24"} $flexGrow={1}>
+          <OakFlex
+            $background={"bg-primary"}
+            $pa={"spacing-24"}
+            $borderColor={indexBgColour}
+            $bt={"border-solid-s"}
+            $bbrr={"border-radius-m"}
+            $bblr={"border-radius-m"}
+            $ml={"spacing-16"}
+            $flexGrow={1}
+          >
+            {expandedContent}
+          </OakFlex>
+        </OakFlex>
+      )}
+    </>
+  );
+
+  const renderWrapper = (children: ReactNode) => {
+    if (asRadio) {
+      return (
+        <label
+          htmlFor={radioValue}
+          style={{ cursor: "pointer" }}
+        >
+          {children}
+        </label>
+      );
+    }
+    if (onClickLocal) {
+      return (
+        <StyledButton
+          onClick={onClickLocal}
+          onKeyDown={handleKeyDown}
+        >
+          {children}
+        </StyledButton>
+      );
+    }
+    return <div>{children}</div>;
+  };
+
   return (
     <OakLI
       $listStyle={"none"}
@@ -148,164 +346,7 @@ export const OakListItem = (props: OakListItemProps) => {
       $display={"flex"}
       $flexDirection={"column"}
     >
-      <label
-        htmlFor={asRadio ? radioValue : undefined}
-        onClick={onClickLocal ?? undefined}
-        style={asRadio ? { cursor: "pointer" } : undefined}
-      >
-        <OakFlex $flexGrow={1} $alignItems={"center"} $columnGap={"spacing-16"}>
-          {asRadio && radioValue && (
-            <InternalRadioWrapper
-              checked={radioValue === radioContext.currentValue}
-              size={checkboxSize}
-              disabled={unavailable}
-              radioBorderColor={checkedBorderColor}
-              internalRadio={
-                <InternalRadio
-                  id={radioValue}
-                  name={radioContext.name}
-                  value={radioValue}
-                  disabled={unavailable}
-                  onChange={radioContext.onValueUpdated}
-                  checked={radioValue === radioContext.currentValue}
-                  aria-label={asRadio ? title : undefined}
-                />
-              }
-            />
-          )}
-
-          {/* Desktop layout - aria-hidden when asRadio so only the radio is a swipe stop */}
-          <StyledListItem
-            data-testid="OakListItem-id"
-            $alignItems={"center"}
-            $background={unavailable ? unavailableBgColor : "bg-primary"}
-            $borderRadius="border-radius-m"
-            $bbrr={isExpanded ? isExpandedBorderRadius : "border-radius-m"}
-            $bblr={isExpanded ? isExpandedBorderRadius : "border-radius-m"}
-            $disabled={unavailable}
-            $pr="spacing-16"
-            $width="100%"
-            $display={["none", "flex"]}
-            $indexHoverBgColour={indexHoverBgColour}
-            $hoverBgColour={hoverBgColour}
-            aria-hidden={asRadio}
-          >
-            <FlexWithFocus
-              $borderRadius="border-radius-m"
-              $gap="spacing-16"
-              $alignItems="center"
-              $width="100%"
-              $height="100%"
-              ref={firstItemRef}
-              aria-hidden={asRadio}
-            >
-              <StyledOakIndexBox
-                $background={background}
-                $btlr={"border-radius-m"}
-                $bblr={isExpanded ? isExpandedBorderRadius : "border-radius-m"}
-                $justifyContent={"center"}
-                $alignItems={"center"}
-                $minWidth="spacing-64"
-                $alignSelf="stretch"
-                $indexHoverBgColour={indexHoverBgColour}
-                aria-hidden="true"
-              >
-                <OakSpan $font={"heading-5"} $color={textColor}>
-                  {index}
-                </OakSpan>
-              </StyledOakIndexBox>
-              <OakFlex $pv="spacing-20" $pr="spacing-16" $flexGrow={1}>
-                <OakP
-                  $font={"heading-7"}
-                  $color={textColor}
-                  className="hover-text"
-                >
-                  {title}
-                </OakP>
-              </OakFlex>
-              <OakFlex
-                $minWidth="spacing-80"
-                $alignItems="center"
-                $justifyContent="end"
-                $color={textColor}
-              >
-                {middleSlot}
-              </OakFlex>
-              <OakFlex
-                $font={"heading-light-7"}
-                $color={textColor}
-                $alignItems="center"
-                $justifyContent="end"
-                $minWidth={"spacing-160"}
-              >
-                {endSlot}
-              </OakFlex>
-            </FlexWithFocus>
-          </StyledListItem>
-          {/* Mobile layout */}
-          <StyledListItem
-            data-testid="OakListItem-id"
-            $background={unavailable ? unavailableBgColor : "bg-primary"}
-            $borderRadius="border-radius-m"
-            $bbrr={isExpanded ? isExpandedBorderRadius : "border-radius-m"}
-            $bblr={isExpanded ? isExpandedBorderRadius : "border-radius-m"}
-            $disabled={unavailable}
-            $display={["flex", "none"]}
-            $width="100%"
-            $pa="spacing-16"
-            $indexHoverBgColour={indexHoverBgColour}
-            $hoverBgColour={hoverBgColour}
-            aria-hidden={asRadio}
-          >
-            <OakFlex $flexDirection="column" $gap="spacing-16" $width="100%">
-              <OakFlex $gap="spacing-16">
-                <OakFlex
-                  $background={background}
-                  $justifyContent={"center"}
-                  $alignItems={"center"}
-                  $borderRadius="border-radius-m"
-                  $width="spacing-40"
-                  $height="spacing-40"
-                  $minWidth="spacing-40"
-                >
-                  <OakHeading tag="h3" $font="heading-5" $color={textColor}>
-                    {index}
-                  </OakHeading>
-                </OakFlex>
-                <OakBox $width="100%">
-                  <OakP $font="heading-7" $color={textColor}>
-                    {title}
-                  </OakP>
-                </OakBox>
-              </OakFlex>
-              <OakFlex
-                $justifyContent="space-between"
-                $alignItems="center"
-                $color={textColor}
-              >
-                {middleSlot}
-                {endSlot}
-              </OakFlex>
-            </OakFlex>
-          </StyledListItem>
-        </OakFlex>
-        {expandedContent && isExpanded && (
-          <OakFlex $ml={"spacing-24"} $flexGrow={1}>
-            <OakFlex
-              $background={"bg-primary"}
-              $pa={"spacing-24"}
-              $borderColor={indexBgColour}
-              $bt={"border-solid-s"}
-              $bbrr={"border-radius-m"}
-              $bblr={"border-radius-m"}
-              $ml={"spacing-16"}
-              $flexGrow={1}
-            >
-              {expandedContent}
-            </OakFlex>
-          </OakFlex>
-        )}
-      </label>
+      {renderWrapper(innerContent)}
     </OakLI>
   );
 };
