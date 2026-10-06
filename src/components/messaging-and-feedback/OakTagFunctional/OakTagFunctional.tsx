@@ -12,6 +12,7 @@ export type OakTagFunctionalProps = {
   iconName?: OakIconName;
   isTrailingIcon?: boolean;
   useSpan?: boolean;
+  as?: "span" | "div";
 } & Omit<OakFlexProps, "onClick" | "label">;
 export const OakTagFunctional = (props: OakTagFunctionalProps) => {
   const { label, useSpan, isTrailingIcon, iconName, ...oakFlexProps } = props;
