@@ -1,6 +1,7 @@
-import React, { forwardRef, useRef } from "react";
+import React, { forwardRef } from "react";
 import styled, { css } from "styled-components";
 
+import { useHoverDuration } from "@/hooks/useHoverDuration";
 import { OakBorderRadiusToken, OakUiRoleToken } from "@/styles";
 import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 import { parseColor } from "@/styles/helpers/parseColor";
@@ -51,22 +52,11 @@ const BaseCheckBox = forwardRef(
   (props: BaseCheckBoxProps, ref?: React.Ref<HTMLInputElement>) => {
     const { onHovered, ...rest } = props;
 
-    const hoverStart = useRef<number | null>(null);
-
-    const handleMouseEnter = (event: React.MouseEvent<HTMLInputElement>) => {
-      hoverStart.current = event.timeStamp;
-    };
-
-    const handleMouseLeave = (event: React.MouseEvent<HTMLInputElement>) => {
-      if (hoverStart.current === null) {
-        return;
-      }
-      const delta = event.timeStamp - hoverStart.current;
-      hoverStart.current = null;
-      if (onHovered) {
-        onHovered(props.value, props.id, delta);
-      }
-    };
+    const { handleMouseEnter, handleMouseLeave } = useHoverDuration(
+      props.value,
+      props.id,
+      onHovered,
+    );
 
     return (
       <input
