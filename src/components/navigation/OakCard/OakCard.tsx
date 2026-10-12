@@ -245,7 +245,12 @@ export const OakCard = ({
     : boolAsDisplay(showImage);
 
   return (
-    <OakFocusIndicator as={as} $height={"100%"} $width={cardWidth}>
+    <OakFocusIndicator
+      as={as}
+      $height={"100%"}
+      $width={cardWidth}
+      $borderRadius={$borderRadius}
+    >
       <StyledOakFlex
         as="a"
         href={href}
