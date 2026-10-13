@@ -1,6 +1,7 @@
-import React, { forwardRef, useRef } from "react";
+import React, { forwardRef } from "react";
 import styled, { css } from "styled-components";
 
+import { useHoverDuration } from "@/hooks/useHoverDuration";
 import { OakBorderRadiusToken, OakUiRoleToken } from "@/styles";
 import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
 import { parseColor } from "@/styles/helpers/parseColor";
@@ -64,18 +65,11 @@ const BaseRadio = forwardRef(
   (props: BaseRadioProps, ref?: React.Ref<HTMLInputElement>) => {
     const { onHovered, ...rest } = props;
 
-    const hoverStart = useRef(Date.now());
-
-    const handleMouseEnter = () => {
-      hoverStart.current = Date.now();
-    };
-
-    const handleMouseLeave = () => {
-      const delta = Date.now() - hoverStart.current;
-      if (onHovered) {
-        onHovered(props.value, props.id, delta);
-      }
-    };
+    const { handleMouseEnter, handleMouseLeave } = useHoverDuration(
+      props.value,
+      props.id,
+      onHovered,
+    );
 
     return (
       <input

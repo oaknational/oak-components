@@ -1,6 +1,6 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { fireEvent } from "@testing-library/react";
+import { createEvent, fireEvent } from "@testing-library/react";
 
 import {
   InternalShadowIconButton,
@@ -112,9 +112,13 @@ describe("InternalShadowIconButton", () => {
         Click
       </InternalShadowIconButton>,
     );
-    fireEvent.mouseEnter(getByTestId("test"));
-    jest.advanceTimersByTime(1000);
-    fireEvent.mouseLeave(getByTestId("test"));
+    const button = getByTestId("test");
+    const mouseEnter = createEvent.mouseOver(button);
+    const mouseLeave = createEvent.mouseOut(button);
+    Object.defineProperty(mouseEnter, "timeStamp", { value: 100 });
+    Object.defineProperty(mouseLeave, "timeStamp", { value: 1100 });
+    fireEvent(button, mouseEnter);
+    fireEvent(button, mouseLeave);
     expect(onHovered).toHaveBeenCalledWith(expect.anything(), 1000);
   });
 });

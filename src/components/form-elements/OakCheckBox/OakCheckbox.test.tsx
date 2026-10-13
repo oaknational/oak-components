@@ -1,12 +1,25 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { fireEvent } from "@testing-library/react";
+import { createEvent, fireEvent } from "@testing-library/react";
 
 import { OakCheckBox } from "./OakCheckBox";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
 describe("OakCheckBox", () => {
+  it("does not read Date.now during rendering or rerendering", () => {
+    const dateNow = jest.spyOn(Date, "now");
+    try {
+      const { rerender } = renderWithTheme(
+        <OakCheckBox id="checkbox-1" value="Option 1" />,
+      );
+      rerender(<OakCheckBox id="checkbox-1" value="Option 2" />);
+      expect(dateNow).not.toHaveBeenCalled();
+    } finally {
+      dateNow.mockRestore();
+    }
+  });
+
   it("renders a checkbox", () => {
     const { getByTestId } = renderWithTheme(
       <OakCheckBox id="checkbox-1" value="Option 1" data-testid="test-1" />,
@@ -97,6 +110,50 @@ describe("OakCheckBox", () => {
     );
     fireEvent.mouseEnter(getByLabelText("Option 1"));
     fireEvent.mouseLeave(getByLabelText("Option 1"));
+    expect(onHovered).toHaveBeenCalledTimes(1);
+  });
+
+  it("captures event timestamp durations across repeated hovers", () => {
+    const onHovered = jest.fn();
+    const { getByText } = renderWithTheme(
+      <OakCheckBox id="checkbox-1" value="Option 1" onHovered={onHovered} />,
+    );
+    const label = getByText("Option 1");
+
+    for (const [start, end] of [
+      [100, 1100],
+      [2000, 2250],
+    ] as const) {
+      const mouseEnter = createEvent.mouseOver(label);
+      const mouseLeave = createEvent.mouseOut(label);
+      Object.defineProperty(mouseEnter, "timeStamp", { value: start });
+      Object.defineProperty(mouseLeave, "timeStamp", { value: end });
+      fireEvent(label, mouseEnter);
+      fireEvent(label, mouseLeave);
+    }
+
+    expect(onHovered).toHaveBeenCalledTimes(2);
+    expect(onHovered).toHaveBeenNthCalledWith(
+      1,
+      "Option 1",
+      "checkbox-1",
+      1000,
+    );
+    expect(onHovered).toHaveBeenNthCalledWith(2, "Option 1", "checkbox-1", 250);
+  });
+
+  it("ignores mouse-leave events without a matching mouse-enter", () => {
+    const onHovered = jest.fn();
+    const { getByText } = renderWithTheme(
+      <OakCheckBox id="checkbox-1" value="Option 1" onHovered={onHovered} />,
+    );
+    const label = getByText("Option 1");
+
+    fireEvent.mouseLeave(label);
+    expect(onHovered).not.toHaveBeenCalled();
+    fireEvent.mouseEnter(label);
+    fireEvent.mouseLeave(label);
+    fireEvent.mouseLeave(label);
     expect(onHovered).toHaveBeenCalledTimes(1);
   });
 });

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Meta, StoryObj } from "@storybook/nextjs";
 
 import {
@@ -97,5 +97,37 @@ export const HoverFocus: StoryObj<typeof InternalRadioHoverFocus> = {
     value: "a test value",
     $width: "spacing-24",
     $height: "spacing-24",
+  },
+};
+
+const HoverDurationDemo = () => {
+  const [hoverDuration, setHoverDuration] = useState<number | null>(null);
+
+  return (
+    <>
+      <OakBox $position="relative" $width="spacing-24" $height="spacing-24">
+        <InternalRadioHoverFocus
+          id="hover-duration-radio"
+          value="hover-duration-option"
+          $width="spacing-24"
+          $height="spacing-24"
+          $hoverBorderRadius="border-radius-xs"
+          onHovered={(_value, _id, duration) => setHoverDuration(duration)}
+          aria-label="Hover duration demonstration radio"
+        />
+      </OakBox>
+      <p aria-live="polite">
+        {hoverDuration === null
+          ? "Hover over the radio and move away to measure the duration."
+          : `Last hover duration: ${hoverDuration} ms`}
+      </p>
+    </>
+  );
+};
+
+export const HoverDuration: StoryObj<typeof InternalRadioHoverFocus> = {
+  render: () => <HoverDurationDemo />,
+  parameters: {
+    controls: { disable: true },
   },
 };

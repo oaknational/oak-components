@@ -90,14 +90,18 @@ export const OakCheckBox = (props: OakCheckBoxProps) => {
     ...rest
   } = props;
 
-  const hoverStart = useRef(Date.now());
+  const hoverStart = useRef<number | null>(null);
 
-  const handleMouseEnter = () => {
-    hoverStart.current = Date.now();
+  const handleMouseEnter = (event: React.MouseEvent<HTMLLabelElement>) => {
+    hoverStart.current = event.timeStamp;
   };
 
-  const handleMouseLeave = () => {
-    const delta = Date.now() - hoverStart.current;
+  const handleMouseLeave = (event: React.MouseEvent<HTMLLabelElement>) => {
+    if (hoverStart.current === null) {
+      return;
+    }
+    const delta = event.timeStamp - hoverStart.current;
+    hoverStart.current = null;
     if (onHovered) {
       onHovered(value, id, delta);
     }
