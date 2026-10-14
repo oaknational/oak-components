@@ -53,13 +53,13 @@ describe(OakModalCenter, () => {
   it("hides close button when hideCloseButton is true", () => {
     const onCloseSpy = jest.fn();
 
-    const { queryAllByTestId } = renderWithTheme(
+    const { queryByTestId } = renderWithTheme(
       <OakModalCenter isOpen onClose={onCloseSpy} hideCloseButton={true}>
         Modal content
       </OakModalCenter>,
     );
 
-    expect(queryAllByTestId("close-button")).toBeNull;
+    expect(queryByTestId("close-button")).toBeNull();
   });
 
   it("calls onClose when the backdrop is clicked", () => {
