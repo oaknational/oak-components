@@ -16,19 +16,35 @@ const meta: Meta<typeof OakIconButton> = {
   tags: ["autodocs"],
   title: "components/Buttons/OakIconButton",
   argTypes: {
+    isLoading: {
+      control: "boolean",
+    },
     iconName: {
       options: controlIconNames,
     },
-    isTrailingIcon: {
-      control: "boolean",
+    $colorScheme: {
+      options: ["primary", "inverted"],
     },
-    isLoading: {
+    $size: {
+      options: ["sm", "md"],
+    },
+    $variant: {
+      options: ["primary", "secondary"],
+    },
+    $disabled: {
       control: "boolean",
     },
   },
   parameters: {
     controls: {
-      include: ["iconName", "isTrailingIcon", "isLoading", "type"],
+      include: [
+        "isLoading",
+        "iconName",
+        "$colorScheme",
+        "$size",
+        "$variant",
+        "$disabled",
+      ],
     },
   },
 };
