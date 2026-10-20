@@ -64,6 +64,7 @@
     "@dnd-kit/sortable": "^10.0.0",
     "@dnd-kit/utilities": "^3.2.2",
     "@tiptap/react": "^2.11.0",
+    "fast-json-stable-stringify": "^2.1.0",
     "react-focus-on": "^3.10.2",
     "react-transition-group": "^4.4.5",
     "rollup-plugin-preserve-shebang": "^1.0.1",
