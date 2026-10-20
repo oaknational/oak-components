@@ -17,7 +17,9 @@ export function buildLookup<TKey extends object, TValue>(
       throw new Error("Lookup keys must be unique");
     }
     valuesByKey.set(serializedKey, value);
-    const fields = Object.keys(key).sort();
+    const fields = Object.keys(key).toSorted((left, right) =>
+      left.localeCompare(right),
+    );
     const fieldSet = JSON.stringify(fields);
     if (!uniqueKeyFields.has(fieldSet)) {
       uniqueKeyFields.set(fieldSet, fields);
