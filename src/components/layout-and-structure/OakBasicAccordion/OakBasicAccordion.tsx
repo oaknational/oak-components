@@ -3,6 +3,7 @@ import React, { ReactNode } from "react";
 import { InternalChevronAccordion } from "@/components/internal-components/InternalChevronAccordion";
 import { FlexStyleProps } from "@/styles/utils/flexStyle";
 import { BorderStyleProps } from "@/styles/utils/borderStyle";
+import { SpacingStyleProps } from "@/styles/utils/spacingStyle";
 
 export type OakBasicAccordionProps = {
   /**
@@ -26,7 +27,8 @@ export type OakBasicAccordionProps = {
    */
   id: string;
 } & BorderStyleProps &
-  FlexStyleProps;
+  FlexStyleProps &
+  SpacingStyleProps;
 
 export const OakBasicAccordion = ({
   header,

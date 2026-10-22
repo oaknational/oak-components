@@ -21,6 +21,7 @@ import { FlexStyleProps, flexStyle } from "@/styles/utils/flexStyle";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { parseOpacity } from "@/styles/helpers/parseOpacity";
 import { ColorStyleProps } from "@/styles/utils/colorStyle";
+import { spacingStyle, SpacingStyleProps } from "@/styles/utils/spacingStyle";
 
 export type InternalChevronAccordionProps = {
   /**
@@ -45,7 +46,8 @@ export type InternalChevronAccordionProps = {
   id: string;
 } & FlexStyleProps &
   OakBoxProps &
-  ColorStyleProps;
+  ColorStyleProps &
+  SpacingStyleProps;
 
 const StyledAccordionUnderline = styled(
   OakHandDrawnFocusUnderline,
@@ -82,6 +84,7 @@ const StyledContainer = styled(OakFlex)`
   }
   ${oakBoxCss}
   ${flexStyle}
+  ${spacingStyle}
 `;
 
 type BottomBoxShadowProps = {
