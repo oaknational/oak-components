@@ -127,6 +127,8 @@ exports[`OakOutlineAccordion matches snapshot 1`] = `
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .c7 .c18 {
