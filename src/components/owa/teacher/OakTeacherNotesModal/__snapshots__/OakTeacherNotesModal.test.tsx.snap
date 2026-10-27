@@ -1,6 +1,18 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`OakTeacherNotesModal matches snapshot 1`] = `
+.c66 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .c0 {
   position: fixed;
   inset: 0rem;
@@ -501,6 +513,65 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
   transition: opacity 0s;
 }
 
+.c31 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: 100%;
+}
+
+.c32 {
+  flex-direction: column;
+  grid-column: span 5;
+  grid-row: span undefined;
+  grid-row: span 1;
+}
+
+.c34 {
+  flex-direction: column;
+  grid-column: span 7;
+  grid-row: span undefined;
+  grid-row: span 1;
+}
+
+.c45 {
+  flex-direction: column;
+  grid-column: span 0;
+  grid-row: span undefined;
+  grid-row: span 1;
+}
+
+.c46 {
+  flex-direction: column;
+  grid-column: span 12;
+  grid-row: span undefined;
+  grid-row: span 1;
+}
+
+.c33 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: -0.005rem;
+}
+
+.c62 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c63 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.005rem;
+  margin-top: 0.25rem;
+}
+
 .c40 {
   position: relative;
   width: 100%;
@@ -598,65 +669,6 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
 
 .c37 .yellow-shadow:has(+ .internal-button:active) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%);
-}
-
-.c31 {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  width: 100%;
-}
-
-.c32 {
-  flex-direction: column;
-  grid-column: span 5;
-  grid-row: span undefined;
-  grid-row: span 1;
-}
-
-.c34 {
-  flex-direction: column;
-  grid-column: span 7;
-  grid-row: span undefined;
-  grid-row: span 1;
-}
-
-.c45 {
-  flex-direction: column;
-  grid-column: span 0;
-  grid-row: span undefined;
-  grid-row: span 1;
-}
-
-.c46 {
-  flex-direction: column;
-  grid-column: span 12;
-  grid-row: span undefined;
-  grid-row: span 1;
-}
-
-.c33 {
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 300;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  letter-spacing: -0.005rem;
-}
-
-.c62 {
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  letter-spacing: 0.0115rem;
-}
-
-.c63 {
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 300;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  letter-spacing: -0.005rem;
-  margin-top: 0.25rem;
 }
 
 @media (min-width: 750px) {
@@ -1029,7 +1041,6 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
                             Names, email addresses, or other personal information will be redacted from your note to help keep everyone safe. For more guidance, see our
                              
                             <a
-                              aria-label="Oak's terms and conditions(opens in a new tab)"
                               class="c64 "
                               href="https://www.thenational.academy/legal/terms-and-conditions"
                               target="_blank"
@@ -1038,6 +1049,11 @@ exports[`OakTeacherNotesModal matches snapshot 1`] = `
                                 class="c65"
                               >
                                 Terms & conditions
+                                <span
+                                  class="c66"
+                                >
+                                   (opens in a new tab)
+                                </span>
                               </span>
                             </a>
                             .

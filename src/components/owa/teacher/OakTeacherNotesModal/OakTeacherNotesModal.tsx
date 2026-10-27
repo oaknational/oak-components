@@ -206,7 +206,6 @@ export const OakTeacherNotesModal = ({
                 <OakLink
                   target={"_blank"}
                   href="https://www.thenational.academy/legal/terms-and-conditions"
-                  aria-label="Oak's terms and conditions(opens in a new tab)"
                 >
                   Terms & conditions
                 </OakLink>
