@@ -120,7 +120,7 @@ export const WithSurroundingText: Story = {
 
 export const WithScreenreaderText: Story = {
   args: {
-    children: "There screenreader only text after this link",
+    children: "There is screen reader only text after this link",
     target: "_blank",
   },
 };
