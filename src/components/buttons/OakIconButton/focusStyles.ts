@@ -29,7 +29,7 @@ export const focusStyles = css<OakFocusStyleProps>`
     let focusStyles = css<OakFocusStyleProps>``;
     if (!props.$disabled) {
       focusStyles = css<OakFocusStyleProps>`
-        &:hover: {
+        &:hover {
           ${responsiveStyle(
             "background-color",
             (props) => props.$hoverBackground,
