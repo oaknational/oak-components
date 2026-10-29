@@ -19,10 +19,14 @@ const meta: Meta<typeof OakLink> = {
     },
     isTrailingIcon: { type: "boolean" },
     variant: { options: Object.keys(variantConfig) },
+    target: {
+      control: { type: "select" },
+      options: ["_self", "_blank", "_parent", "_top"],
+    },
   },
   parameters: {
     controls: {
-      include: ["children", "iconName", "isTrailingIcon", "variant"],
+      include: ["children", "iconName", "isTrailingIcon", "variant", "target"],
     },
   },
   args: {
@@ -112,4 +116,11 @@ export const WithSurroundingText: Story = {
       This is a paragraph with a wrapped link.{" "}
     </p>
   ),
+};
+
+export const WithScreenreaderText: Story = {
+  args: {
+    children: "There is screen reader only text after this link",
+    target: "_blank",
+  },
 };
