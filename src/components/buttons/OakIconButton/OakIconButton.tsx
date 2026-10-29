@@ -161,7 +161,7 @@ export const OakIconButton = <C extends ElementType = "button">(
     <Button $hoverBackground={lookupHoverBackground(props)} {...props}>
       {isLoading && (
         <OakLoadingSpinner
-          $width={"spacing-24"}
+          $width={lookupSize(props)}
           loaderColor={lookupLoadingColor(props)}
         />
       )}
