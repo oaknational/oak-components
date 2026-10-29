@@ -38,7 +38,7 @@
     "lint": "eslint 'src/**/*'",
     "lint:precommit": "eslint 'src/**/*' --fix",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "build-storybook": "node scripts/startup-log.js && storybook build",
     "prepare": "husky install",
     "prepublishOnly": "./scripts/prepublish.sh",
     "publish:local": "pnpm build && yalc publish --no-scripts",
