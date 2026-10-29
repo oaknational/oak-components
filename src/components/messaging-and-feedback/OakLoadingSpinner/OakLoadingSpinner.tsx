@@ -98,9 +98,12 @@ const StyledSpinnerRing = styled.div<StyledSpinnerRingProps>`
  * A loading spinner of variable size.
  *
  */
-export const OakLoadingSpinner = (props: OakLoadingSpinnerProps) => (
+export const OakLoadingSpinner = ({
+  loaderColor,
+  ...props
+}: OakLoadingSpinnerProps) => (
   <StyledLoadingSpinner {...props}>
     <OakScreenReader>Loading</OakScreenReader>
-    <StyledSpinnerRing $loaderColor={props.loaderColor} />
+    <StyledSpinnerRing $loaderColor={loaderColor} />
   </StyledLoadingSpinner>
 );
