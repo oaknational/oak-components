@@ -11,6 +11,10 @@ import { globSync } from "glob";
 
 const outputDir = join(import.meta.dirname, "/dist/npm/");
 
+if (typeof process !== "undefined") {
+  console.log("using node.js version:", process.version);
+}
+
 const binInput = Object.fromEntries(
   globSync(`./bin/migrate/**/*.ts`).map((file) => [
     // bin/migrate/migrations/foo.ts -> migrations/foo
