@@ -85,6 +85,7 @@ export const icons = {
   "curriculum-plan": "v1754386969/icons/curriculum-plan_qygyuo.svg",
   data: "v1763393164/icons/data-illustration_ukwdxg.svg",
   chatting: "v1763393163/icons/chatting-illustration_l52zaf.svg",
+  "teacher-group": "v1793641849/icons/teacher-group.svg",
   "snack-break": "v1763393167/icons/snackbreak_illustration_fguw7l.svg",
   "class-grouping": "v1776785621/icons/class-grouping.svg",
   strand: "v1776850533/icons/strand.svg",
