@@ -121,6 +121,7 @@ export const WithSurroundingText: Story = {
 export const WithScreenreaderText: Story = {
   args: {
     children: "There screenreader only text after this link",
+    href: "http://github.com/oaknational",
     target: "_blank",
   },
 };
