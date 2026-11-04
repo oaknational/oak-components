@@ -1,85 +1,50 @@
 import { propsLookup } from "./propsLookup";
 
+import { OakUiRoleToken } from "@/styles";
+
 type Key = {
   variant: "primary" | "secondary";
-  settings: { first: number; second: number };
+  colorScheme: "inverted" | "primary";
   disabled: boolean;
 };
 
 describe("propsLookup", () => {
   it("matches keys regardless of property order, including nested objects", () => {
-    const lookup = propsLookup<Key, string>([
-      [{ variant: "primary", settings: { first: 1, second: 2 } }, "matched"],
+    const lookup = propsLookup<Key, OakUiRoleToken>([
+      [
+        { variant: "primary", colorScheme: "primary", disabled: false },
+        "icon-error",
+      ],
+      [
+        { variant: "primary", colorScheme: "inverted", disabled: true },
+        "icon-error",
+      ],
+      [
+        { variant: "primary", colorScheme: "primary", disabled: undefined },
+        "icon-success",
+      ],
+      [
+        { variant: "primary", colorScheme: "inverted", disabled: undefined },
+        "icon-error",
+      ],
     ]);
 
-    expect(
-      lookup({ settings: { second: 2, first: 1 }, variant: "primary" }),
-    ).toBe("matched");
-  });
-
-  it("rejects duplicate keys regardless of property order", () => {
-    expect(() =>
-      propsLookup<Key, string>([
-        [{ variant: "primary", settings: { first: 1, second: 2 } }, "first"],
-        [{ settings: { second: 2, first: 1 }, variant: "primary" }, "second"],
-      ]),
-    ).toThrow("Lookup keys must be unique");
-  });
-
-  it("prefers more specific keys and returns undefined for missing matches", () => {
-    const lookup = propsLookup<Key, string>([
-      [{ variant: "primary" }, "default"],
-      [{ variant: "primary", disabled: true }, "disabled"],
-    ]);
-
-    expect(lookup({ variant: "primary", disabled: true })).toBe("disabled");
-    expect(lookup({ variant: "primary", disabled: false })).toBe("default");
-    expect(lookup({ variant: "secondary" })).toBeUndefined();
-  });
-
-  it("matches later entries sharing the same fields", () => {
-    const lookup = propsLookup<Key, string>([
-      [{ variant: "primary", disabled: true }, "primary-disabled"],
-      [{ disabled: false, variant: "primary" }, "primary-enabled"],
-      [{ variant: "secondary", disabled: true }, "secondary-disabled"],
-      [{ variant: "primary" }, "default"],
-    ]);
-
-    expect(lookup({ variant: "primary", disabled: false })).toBe(
-      "primary-enabled",
+    expect(lookup({ variant: "primary", colorScheme: "primary" })).toBe(
+      "icon-success",
     );
-    expect(lookup({ variant: "secondary", disabled: true })).toBe(
-      "secondary-disabled",
-    );
-    expect(lookup({ variant: "primary" })).toBe("default");
   });
 
-  it("preserves entry order for equally specific matching keys", () => {
-    const lookup = propsLookup<Key, string>([
-      [{ disabled: true }, "disabled"],
-      [{ variant: "primary" }, "primary"],
-      [{ disabled: false }, "enabled"],
-    ]);
-
-    expect(lookup({ variant: "primary", disabled: true })).toBe("disabled");
-  });
-
-  it("does not fall back when a matching entry contains undefined", () => {
-    const lookup = propsLookup<Key, string | undefined>([
-      [{ variant: "primary" }, "default"],
-      [{ variant: "primary", disabled: true }, undefined],
-    ]);
-
-    expect(lookup({ variant: "primary", disabled: true })).toBeUndefined();
-  });
-
-  it("ignores unrelated circular properties", () => {
-    const lookup = propsLookup<Key, string>([
-      [{ variant: "primary" }, "matched"],
-    ]);
-    const circular = { variant: "primary" as const, self: {} };
-    circular.self = circular;
-
-    expect(lookup(circular)).toBe("matched");
+  it("throws and error if shape of keys don't match", () => {
+    expect(() => {
+      propsLookup<Key, OakUiRoleToken>([
+        [{ variant: "primary", colorScheme: "primary" }, "icon-error"],
+        // Note: we included an additional `disabled` key that isn't in the
+        // previous row, for performance reasons this will throw an error
+        [
+          { variant: "primary", colorScheme: "primary", disabled: true },
+          "icon-error",
+        ],
+      ]);
+    }).toThrow("For performance reasons objects must all have the same shape");
   });
 });

@@ -1,52 +1,45 @@
 import stringify from "fast-json-stable-stringify";
+import { pick, isEqual } from "lodash";
 
 type LookupEntry<TKey extends object, TValue> = readonly [
   Partial<TKey>,
   TValue,
 ];
 
+/**
+ * Lookup a value for the set of props, ideal for complex matrices of values
+ * @param entries
+ * @returns
+ */
 export function propsLookup<TKey extends object, TValue>(
   entries: readonly LookupEntry<TKey, TValue>[],
 ) {
   const valuesByKey = new Map<string, TValue>();
-  const uniqueKeyFields = new Map<string, string[]>();
 
-  entries.forEach(([key, value]) => {
-    const serializedKey = stringify(key);
+  if (entries.length < 1) {
+    throw new Error("Must provide lookup");
+  }
+
+  const expectedKeys = Object.keys(entries[0]![0]).toSorted();
+
+  entries.forEach(([obj, value]) => {
+    const sortedKey = Object.keys(obj).toSorted();
+    if (!isEqual(sortedKey, expectedKeys)) {
+      throw new Error(
+        "For performance reasons objects must all have the same shape",
+      );
+    }
+
+    const serializedKey = stringify(obj);
     if (valuesByKey.has(serializedKey)) {
       throw new Error("Lookup keys must be unique");
     }
     valuesByKey.set(serializedKey, value);
-    const fields = Object.keys(key).toSorted((left, right) =>
-      left.localeCompare(right),
-    );
-    const fieldSet = JSON.stringify(fields);
-    if (!uniqueKeyFields.has(fieldSet)) {
-      uniqueKeyFields.set(fieldSet, fields);
-    }
   });
-  const keyFields = [...uniqueKeyFields.values()].sort(
-    (left, right) => right.length - left.length,
-  );
 
-  return (key: Partial<TKey>): TValue | undefined => {
-    const keyValues = key as Record<string, unknown>;
-    for (const fields of keyFields) {
-      if (!fields.every((field) => field in keyValues)) {
-        continue;
-      }
-
-      const projectedKey: Record<string, unknown> = Object.create(null);
-      for (const field of fields) {
-        projectedKey[field] = keyValues[field];
-      }
-
-      const serializedKey = stringify(projectedKey);
-      if (valuesByKey.has(serializedKey)) {
-        return valuesByKey.get(serializedKey)!;
-      }
-    }
-
-    return undefined;
+  return (obj: Partial<TKey>): TValue | undefined => {
+    const key = pick(obj, expectedKeys);
+    const serializedKey = stringify(key);
+    return valuesByKey.get(serializedKey)!;
   };
 }
