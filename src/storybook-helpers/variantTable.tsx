@@ -29,7 +29,11 @@ export function VariantTable<T extends ElementType>({
     >
       <thead>
         <tr>
-          <th style={{ fontWeight: "normal" }}></th>
+          <th style={{ fontWeight: "normal" }}>
+            <pre>
+              <code>Props</code>
+            </pre>
+          </th>
           {states.map((state) => {
             return (
               <th key={state.name} style={{ fontWeight: "normal" }}>
