@@ -1,12 +1,10 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/nextjs";
 
-import type { OakIconButtonProps } from "./OakIconButton";
 import { OakIconButton } from "./OakIconButton";
 
 import { oakIconNames } from "@/components/images-and-icons/OakIcon";
-import { OakFlex } from "@/components/layout-and-structure/OakFlex";
-import { parseSpacing } from "@/index";
+import { generateVariantTableStory } from "@/storybook-helpers/variantTable";
 
 const controlIconNames = [
   null,
@@ -64,92 +62,22 @@ export const Default: Story = {
   },
 };
 
-export const StateGrid: Story = {
-  render: () => {
-    const states = [
-      { $colorScheme: "primary", $size: "md", $variant: "primary" },
-      { $colorScheme: "primary", $size: "sm", $variant: "primary" },
-      { $colorScheme: "inverted", $size: "md", $variant: "primary" },
-      { $colorScheme: "inverted", $size: "sm", $variant: "primary" },
-      { $colorScheme: "primary", $size: "md", $variant: "secondary" },
-      { $colorScheme: "primary", $size: "sm", $variant: "secondary" },
-    ] as const;
-
-    return (
-      <table
-        style={{
-          borderSpacing: `${parseSpacing("spacing-24")} ${parseSpacing("spacing-16")}`,
-        }}
-      >
-        <thead>
-          <tr>
-            <th style={{ fontWeight: "normal" }}></th>
-            <th style={{ fontWeight: "normal" }}>
-              <code>default</code>
-            </th>
-            <th style={{ fontWeight: "normal" }}>
-              <code>disabled</code>
-            </th>
-            <th style={{ fontWeight: "normal" }}>
-              <code>loading</code>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {states.map(
-            (
-              args: Pick<
-                OakIconButtonProps,
-                "$colorScheme" | "$size" | "$variant"
-              >,
-            ) => {
-              const { $variant, $colorScheme, $size } = args;
-              const argsAsString = JSON.stringify(args, null, 2);
-              return (
-                <tr key={argsAsString}>
-                  <th style={{ textAlign: "left", fontWeight: "normal" }}>
-                    <pre>
-                      <code>{argsAsString}</code>
-                    </pre>
-                  </th>
-                  <td>
-                    <OakFlex $justifyContent="center" $alignItems="center">
-                      <OakIconButton
-                        $variant={$variant}
-                        iconName="arrow-right"
-                        $colorScheme={$colorScheme}
-                        $size={$size}
-                      />
-                    </OakFlex>
-                  </td>
-                  <td>
-                    <OakFlex $justifyContent="center" $alignItems="center">
-                      <OakIconButton
-                        $variant={$variant}
-                        $disabled
-                        iconName="arrow-right"
-                        $colorScheme={$colorScheme}
-                        $size={$size}
-                      />
-                    </OakFlex>
-                  </td>
-                  <td>
-                    <OakFlex $justifyContent="center" $alignItems="center">
-                      <OakIconButton
-                        $variant={$variant}
-                        isLoading
-                        iconName="arrow-right"
-                        $colorScheme={$colorScheme}
-                        $size={$size}
-                      />
-                    </OakFlex>
-                  </td>
-                </tr>
-              );
-            },
-          )}
-        </tbody>
-      </table>
-    );
+export const VariantGrid = generateVariantTableStory({
+  component: OakIconButton,
+  defaultProps: {
+    iconName: "arrow-right",
   },
-};
+  states: [
+    { name: "default", props: {} },
+    { name: "disabled", props: { $disabled: true } },
+    { name: "loading", props: { isLoading: true } },
+  ],
+  variants: [
+    { $colorScheme: "primary", $size: "md", $variant: "primary" },
+    { $colorScheme: "primary", $size: "sm", $variant: "primary" },
+    { $colorScheme: "inverted", $size: "md", $variant: "primary" },
+    { $colorScheme: "inverted", $size: "sm", $variant: "primary" },
+    { $colorScheme: "primary", $size: "md", $variant: "secondary" },
+    { $colorScheme: "primary", $size: "sm", $variant: "secondary" },
+  ],
+});
