@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`OakIconButton renders correctly 1`] = `
+.c1 {
+  position: relative;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  min-height: 1.5rem;
+  display: block;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c2 {
+  filter: invert(98%) sepia(98%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+  object-fit: contain;
+}
+
+.c0 {
+  outline: none;
+  border: none;
+  display: flex;
+  cursor: pointer;
+  background: #222222;
+  padding: 0.75rem;
+  border-radius: 6.25rem;
+  border-style: solid;
+  border-width: 0rem;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
+}
+
+.c0:focus a,
+.c0:focus button {
+  outline: none;
+}
+
+.c0:hover {
+  background-color: #575757;
+  box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%);
+}
+
+.c0:active {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%),0.25rem 0.25rem 0 rgba(87, 87, 87, 100%);
+}
+
+<div>
+  <button
+    class="c0"
+  >
+    <span
+      class="c1"
+    >
+      <img
+        alt=""
+        class="c2"
+        data-nimg="fill"
+        decoding="async"
+        loading="lazy"
+        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1706872277/icons/question-mark.svg"
+        style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+      />
+    </span>
+  </button>
+</div>
+`;

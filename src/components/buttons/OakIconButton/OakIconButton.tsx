@@ -155,9 +155,9 @@ export const OakIconButton = <C extends ElementType = "button">(
   rawProps: OakIconButtonProps & PolymorphicPropsWithoutRef<C>,
 ) => {
   const props = defaultProps(rawProps);
-  const { iconName, isLoading } = props;
+  const { iconName, isLoading, ...rest } = props;
   return (
-    <Button $hoverBackground={lookupHoverBackground(props)} {...props}>
+    <Button $hoverBackground={lookupHoverBackground(props)} {...rest}>
       {isLoading && (
         <OakLoadingSpinner
           $width={lookupSize(props)}
