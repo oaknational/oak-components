@@ -20,10 +20,12 @@ export function propsLookup<TKey extends object, TValue>(
     throw new Error("Must provide lookup");
   }
 
-  const expectedKeys = Object.keys(entries[0]![0]).toSorted();
+  const expectedKeys = Object.keys(entries[0]![0]).toSorted((a, b) =>
+    a.localeCompare(b),
+  );
 
   entries.forEach(([obj, value]) => {
-    const sortedKey = Object.keys(obj).toSorted();
+    const sortedKey = Object.keys(obj).toSorted((a, b) => a.localeCompare(b));
     if (!isEqual(sortedKey, expectedKeys)) {
       throw new Error(
         "For performance reasons objects must all have the same shape",
