@@ -5,7 +5,7 @@ type LookupEntry<TKey extends object, TValue> = readonly [
   TValue,
 ];
 
-export function buildLookup<TKey extends object, TValue>(
+export function propsLookup<TKey extends object, TValue>(
   entries: readonly LookupEntry<TKey, TValue>[],
 ) {
   const valuesByKey = new Map<string, TValue>();

@@ -16,7 +16,6 @@ const focusVisibleChildren = `
 `;
 
 export type OakFocusStyleProps = OakBoxProps & {
-  as?: "div" | "li";
   $hoverBackground?: OakUiRoleToken;
   $disabled?: boolean;
 };

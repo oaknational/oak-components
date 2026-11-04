@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`focusStyles can set $hoverBackground 1`] = `
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
+}
+
+.c0:focus a,
+.c0:focus button {
+  outline: none;
+}
+
+.c0:hover {
+  background-color: #dd0035;
+  box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%);
+}
+
+.c0:active {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%),0.25rem 0.25rem 0 rgba(87, 87, 87, 100%);
+}
+
+<button
+  class="c0"
+/>
+`;
+
+exports[`focusStyles returns correct CSS 1`] = `
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
+}
+
+.c0:focus a,
+.c0:focus button {
+  outline: none;
+}
+
+.c0:hover {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%);
+}
+
+.c0:active {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%),0.25rem 0.25rem 0 rgba(87, 87, 87, 100%);
+}
+
+<div>
+  <button
+    class="c0"
+  />
+</div>
+`;

@@ -1,9 +1,8 @@
 import React, { ElementType } from "react";
 import styled from "styled-components";
 
-import { focusStyles, OakFocusStyleProps } from "./focusStyles";
-import { buildLookup } from "./lookup";
-
+import { focusStyles, OakFocusStyleProps } from "@/utils/focusStyles";
+import { propsLookup } from "@/utils/propsLookup";
 import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
 import { OakIcon } from "@/components/images-and-icons";
 import {
@@ -32,18 +31,18 @@ export type OakIconButtonProps = {
   $disabled?: boolean;
 };
 
-const lookupPadding = buildLookup<OakIconButtonProps, OakCombinedSpacingToken>([
+const lookupPadding = propsLookup<OakIconButtonProps, OakCombinedSpacingToken>([
   [{ $size: "sm" }, "spacing-8"],
   [{ $size: "md" }, "spacing-12"],
 ]);
 
 // size
-const lookupSize = buildLookup<OakIconButtonProps, OakCombinedSpacingToken>([
+const lookupSize = propsLookup<OakIconButtonProps, OakCombinedSpacingToken>([
   [{ $size: "sm" }, "spacing-20"],
   [{ $size: "md" }, "spacing-24"],
 ]);
 
-const lookupBackground = buildLookup<OakIconButtonProps, OakUiRoleToken>([
+const lookupBackground = propsLookup<OakIconButtonProps, OakUiRoleToken>([
   [{ $variant: "primary", $colorScheme: "primary" }, "bg-btn-primary"],
   [{ $variant: "primary", $colorScheme: "inverted" }, "bg-btn-secondary"],
   [{ $variant: "secondary", $colorScheme: "primary" }, "bg-btn-secondary"],
@@ -61,7 +60,7 @@ const lookupBackground = buildLookup<OakIconButtonProps, OakUiRoleToken>([
   ],
 ]);
 
-const lookupLoadingColor = buildLookup<OakIconButtonProps, OakUiRoleToken>([
+const lookupLoadingColor = propsLookup<OakIconButtonProps, OakUiRoleToken>([
   [{ $variant: "primary", $colorScheme: "primary" }, "icon-inverted"],
   [{ $variant: "primary", $colorScheme: "inverted" }, "icon-primary"],
   [{ $variant: "secondary", $colorScheme: "primary" }, "icon-primary"],
@@ -79,7 +78,7 @@ const lookupLoadingColor = buildLookup<OakIconButtonProps, OakUiRoleToken>([
   ],
 ]);
 
-const lookupTextColor = buildLookup<OakIconButtonProps, OakUiRoleToken>([
+const lookupTextColor = propsLookup<OakIconButtonProps, OakUiRoleToken>([
   [{ $variant: "primary", $colorScheme: "primary" }, "icon-inverted"],
   [{ $variant: "primary", $colorScheme: "inverted" }, "icon-primary"],
   [{ $variant: "secondary", $colorScheme: "primary" }, "icon-primary"],
@@ -97,7 +96,7 @@ const lookupTextColor = buildLookup<OakIconButtonProps, OakUiRoleToken>([
   ],
 ]);
 
-const lookupHoverBackground = buildLookup<OakIconButtonProps, OakUiRoleToken>([
+const lookupHoverBackground = propsLookup<OakIconButtonProps, OakUiRoleToken>([
   [{ $variant: "primary", $colorScheme: "primary" }, "bg-btn-primary-hover"],
   [{ $variant: "primary", $colorScheme: "inverted" }, "bg-btn-secondary-hover"],
   [
@@ -107,12 +106,12 @@ const lookupHoverBackground = buildLookup<OakIconButtonProps, OakUiRoleToken>([
   [{ $variant: "secondary", $colorScheme: "inverted" }, "bg-btn-primary-hover"],
 ]);
 
-const lookupBorderWidth = buildLookup<OakIconButtonProps, OakBorderWidthToken>([
+const lookupBorderWidth = propsLookup<OakIconButtonProps, OakBorderWidthToken>([
   [{ $variant: "primary" }, "border-solid-none"],
   [{ $variant: "secondary" }, "border-solid-m"],
 ]);
 
-const lookupBorderColor = buildLookup<OakIconButtonProps, OakUiRoleToken>([
+const lookupBorderColor = propsLookup<OakIconButtonProps, OakUiRoleToken>([
   [{ $variant: "secondary" }, "border-primary"],
   [{ $variant: "secondary", $disabled: true }, "border-neutral"],
 ]);

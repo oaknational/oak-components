@@ -1,4 +1,4 @@
-import { buildLookup } from "./lookup";
+import { propsLookup } from "./propsLookup";
 
 type Key = {
   variant: "primary" | "secondary";
@@ -6,9 +6,9 @@ type Key = {
   disabled: boolean;
 };
 
-describe("buildLookup", () => {
+describe("propsLookup", () => {
   it("matches keys regardless of property order, including nested objects", () => {
-    const lookup = buildLookup<Key, string>([
+    const lookup = propsLookup<Key, string>([
       [{ variant: "primary", settings: { first: 1, second: 2 } }, "matched"],
     ]);
 
@@ -19,7 +19,7 @@ describe("buildLookup", () => {
 
   it("rejects duplicate keys regardless of property order", () => {
     expect(() =>
-      buildLookup<Key, string>([
+      propsLookup<Key, string>([
         [{ variant: "primary", settings: { first: 1, second: 2 } }, "first"],
         [{ settings: { second: 2, first: 1 }, variant: "primary" }, "second"],
       ]),
@@ -27,7 +27,7 @@ describe("buildLookup", () => {
   });
 
   it("prefers more specific keys and returns undefined for missing matches", () => {
-    const lookup = buildLookup<Key, string>([
+    const lookup = propsLookup<Key, string>([
       [{ variant: "primary" }, "default"],
       [{ variant: "primary", disabled: true }, "disabled"],
     ]);
@@ -38,7 +38,7 @@ describe("buildLookup", () => {
   });
 
   it("matches later entries sharing the same fields", () => {
-    const lookup = buildLookup<Key, string>([
+    const lookup = propsLookup<Key, string>([
       [{ variant: "primary", disabled: true }, "primary-disabled"],
       [{ disabled: false, variant: "primary" }, "primary-enabled"],
       [{ variant: "secondary", disabled: true }, "secondary-disabled"],
@@ -55,7 +55,7 @@ describe("buildLookup", () => {
   });
 
   it("preserves entry order for equally specific matching keys", () => {
-    const lookup = buildLookup<Key, string>([
+    const lookup = propsLookup<Key, string>([
       [{ disabled: true }, "disabled"],
       [{ variant: "primary" }, "primary"],
       [{ disabled: false }, "enabled"],
@@ -65,7 +65,7 @@ describe("buildLookup", () => {
   });
 
   it("does not fall back when a matching entry contains undefined", () => {
-    const lookup = buildLookup<Key, string | undefined>([
+    const lookup = propsLookup<Key, string | undefined>([
       [{ variant: "primary" }, "default"],
       [{ variant: "primary", disabled: true }, undefined],
     ]);
@@ -74,7 +74,7 @@ describe("buildLookup", () => {
   });
 
   it("ignores unrelated circular properties", () => {
-    const lookup = buildLookup<Key, string>([
+    const lookup = propsLookup<Key, string>([
       [{ variant: "primary" }, "matched"],
     ]);
     const circular = { variant: "primary" as const, self: {} };
