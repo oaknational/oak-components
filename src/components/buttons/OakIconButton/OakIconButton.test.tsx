@@ -19,6 +19,7 @@ describe("OakIconButton", () => {
   it("renders correctly", () => {
     const { container } = renderWithTheme(
       <OakIconButton
+        aria-label="help"
         iconName="question-mark"
         $colorScheme="primary"
         $size="md"
@@ -32,6 +33,7 @@ describe("OakIconButton", () => {
     const fn = jest.fn();
     const { getByRole } = renderWithTheme(
       <OakIconButton
+        aria-label="help"
         iconName="question-mark"
         $colorScheme="primary"
         $size="md"

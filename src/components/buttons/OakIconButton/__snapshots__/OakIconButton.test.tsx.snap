@@ -48,6 +48,7 @@ exports[`OakIconButton renders correctly 1`] = `
 
 <div>
   <button
+    aria-label="help"
     class="c0"
   >
     <span

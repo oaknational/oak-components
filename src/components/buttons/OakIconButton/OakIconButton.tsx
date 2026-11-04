@@ -22,6 +22,7 @@ type OakIconButtonSize = "sm" | "md";
 type OakIconButtonVariant = "primary" | "secondary";
 
 export type OakIconButtonProps = {
+  "aria-label": string;
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   isLoading?: boolean;
   iconName: IconName;

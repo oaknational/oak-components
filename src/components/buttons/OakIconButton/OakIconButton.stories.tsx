@@ -55,17 +55,19 @@ type Story = StoryObj<typeof OakIconButton>;
 export const Default: Story = {
   render: (args) => <OakIconButton {...args}>Primary Button</OakIconButton>,
   args: {
-    iconName: "arrow-right",
+    iconName: "question-mark",
     $colorScheme: "primary",
     $size: "md",
     $variant: "primary",
+    "aria-label": "help",
   },
 };
 
 export const VariantGrid = generateVariantTableStory({
   component: OakIconButton,
   defaultProps: {
-    iconName: "arrow-right",
+    iconName: "question-mark",
+    "aria-label": "help",
   },
   states: [
     { name: "default", props: {} },

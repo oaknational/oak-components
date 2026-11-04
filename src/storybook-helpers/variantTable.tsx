@@ -67,7 +67,7 @@ export function VariantTable<T extends ElementType>({
 }
 
 export function generateVariantTableStory<T extends ElementType>(
-  props: VariantTableProps<T>,
+  props: Readonly<VariantTableProps<T>>,
 ) {
   const TableStory = {
     parameters: {
