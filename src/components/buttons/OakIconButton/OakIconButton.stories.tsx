@@ -28,7 +28,7 @@ const meta: Meta<typeof OakIconButton> = {
     $size: {
       options: ["sm", "md"],
     },
-    $variant: {
+    $type: {
       options: ["primary", "secondary"],
     },
     disabled: {
@@ -42,7 +42,7 @@ const meta: Meta<typeof OakIconButton> = {
         "iconName",
         "$colorScheme",
         "$size",
-        "$variant",
+        "$type",
         "disabled",
       ],
     },
@@ -58,7 +58,7 @@ export const Default: Story = {
     iconName: "question-mark",
     $colorScheme: "primary",
     $size: "md",
-    $variant: "primary",
+    $type: "primary",
     "aria-label": "help",
   },
 };
@@ -69,7 +69,7 @@ export const Disabled: Story = {
     iconName: "question-mark",
     $colorScheme: "primary",
     $size: "md",
-    $variant: "primary",
+    $type: "primary",
     disabled: true,
     "aria-label": "help",
   },
@@ -87,11 +87,11 @@ export const VariantGrid = generateVariantTableStory({
     { name: "loading", props: { isLoading: true } },
   ],
   variants: [
-    { $colorScheme: "primary", $size: "md", $variant: "primary" },
-    { $colorScheme: "primary", $size: "sm", $variant: "primary" },
-    { $colorScheme: "inverted", $size: "md", $variant: "primary" },
-    { $colorScheme: "inverted", $size: "sm", $variant: "primary" },
-    { $colorScheme: "primary", $size: "md", $variant: "secondary" },
-    { $colorScheme: "primary", $size: "sm", $variant: "secondary" },
+    { $colorScheme: "primary", $size: "md", $type: "primary" },
+    { $colorScheme: "primary", $size: "sm", $type: "primary" },
+    { $colorScheme: "inverted", $size: "md", $type: "primary" },
+    { $colorScheme: "inverted", $size: "sm", $type: "primary" },
+    { $colorScheme: "primary", $size: "md", $type: "secondary" },
+    { $colorScheme: "primary", $size: "sm", $type: "secondary" },
   ],
 });

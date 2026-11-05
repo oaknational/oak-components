@@ -23,7 +23,7 @@ describe("OakIconButton", () => {
         iconName="question-mark"
         $colorScheme="primary"
         $size="md"
-        $variant="primary"
+        $type="primary"
       />,
     );
     expect(container).toMatchSnapshot();
@@ -36,7 +36,7 @@ describe("OakIconButton", () => {
         iconName="question-mark"
         $colorScheme="primary"
         $size="md"
-        $variant="primary"
+        $type="primary"
         disabled={true}
       />,
     );
@@ -52,7 +52,7 @@ describe("OakIconButton", () => {
         iconName="question-mark"
         $colorScheme="primary"
         $size="md"
-        $variant="primary"
+        $type="primary"
         onClick={fn}
       />,
     );

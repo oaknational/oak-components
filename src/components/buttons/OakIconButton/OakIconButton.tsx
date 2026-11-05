@@ -26,7 +26,7 @@ import { IconName } from "@/image-map";
 
 type OakIconButtonColorScheme = "primary" | "inverted";
 type OakIconButtonSize = "sm" | "md";
-type OakIconButtonVariant = "primary" | "secondary";
+type OakIconButtonType = "primary" | "secondary";
 
 export type OakIconButtonProps = {
   "aria-label": string;
@@ -35,15 +35,12 @@ export type OakIconButtonProps = {
   iconName: IconName;
   $colorScheme: OakIconButtonColorScheme;
   $size: OakIconButtonSize;
-  $variant: OakIconButtonVariant;
+  $type: OakIconButtonType;
   disabled?: boolean;
 };
 
 const Button = styled.button<
-  Pick<
-    OakIconButtonProps,
-    "$colorScheme" | "$size" | "$variant" | "isLoading"
-  > &
+  Pick<OakIconButtonProps, "$colorScheme" | "$size" | "$type" | "isLoading"> &
     OakFocusStyleProps
 >`
   outline: none;
