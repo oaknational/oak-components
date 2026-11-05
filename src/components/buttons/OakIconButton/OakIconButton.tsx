@@ -66,7 +66,7 @@ function defaultProps(props: OakIconButtonProps) {
 
 /**
  *
- * OakIconButton is a button component that displays an icon and can show a loading spinner.
+ * Icon Buttons allow users to take actions, navigate, and make choices, with a single tap.
  *
  * ### onClick
  * `onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;`
