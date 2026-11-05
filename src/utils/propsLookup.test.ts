@@ -47,4 +47,19 @@ describe("propsLookup", () => {
       ]);
     }).toThrow("For performance reasons objects must all have the same shape");
   });
+
+  it("throws error if no entries", () => {
+    expect(() => {
+      propsLookup<Key, OakUiRoleToken>([]);
+    }).toThrow("Must provide entries for lookup");
+  });
+
+  it("throws if keys are not unique", () => {
+    expect(() => {
+      propsLookup<Key, OakUiRoleToken>([
+        [{ variant: "primary", colorScheme: "primary" }, "icon-error"],
+        [{ variant: "primary", colorScheme: "primary" }, "icon-error"],
+      ]);
+    }).toThrow("Keys must be unique");
+  });
 });
