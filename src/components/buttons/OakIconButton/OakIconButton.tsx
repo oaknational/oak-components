@@ -29,7 +29,7 @@ export type OakIconButtonProps = {
   $colorScheme: OakIconButtonColorScheme;
   $size: OakIconButtonSize;
   $variant: OakIconButtonVariant;
-  $disabled?: boolean;
+  disabled?: boolean;
 };
 
 const lookupPadding = propsLookup<OakIconButtonProps, OakCombinedSpacingToken>([
@@ -45,81 +45,81 @@ const lookupSize = propsLookup<OakIconButtonProps, OakCombinedSpacingToken>([
 
 const lookupBackground = propsLookup<OakIconButtonProps, OakUiRoleToken>([
   [
-    { $variant: "primary", $colorScheme: "primary", $disabled: undefined },
+    { $variant: "primary", $colorScheme: "primary", disabled: undefined },
     "bg-btn-primary",
   ],
   [
-    { $variant: "primary", $colorScheme: "inverted", $disabled: undefined },
+    { $variant: "primary", $colorScheme: "inverted", disabled: undefined },
     "bg-btn-secondary",
   ],
   [
-    { $variant: "secondary", $colorScheme: "primary", $disabled: undefined },
+    { $variant: "secondary", $colorScheme: "primary", disabled: undefined },
     "bg-btn-secondary",
   ],
   [
-    { $variant: "primary", $colorScheme: "primary", $disabled: true },
+    { $variant: "primary", $colorScheme: "primary", disabled: true },
     "bg-btn-primary-disabled",
   ],
   [
-    { $variant: "primary", $colorScheme: "inverted", $disabled: true },
+    { $variant: "primary", $colorScheme: "inverted", disabled: true },
     "bg-btn-secondary-disabled",
   ],
   [
-    { $variant: "secondary", $colorScheme: "primary", $disabled: true },
+    { $variant: "secondary", $colorScheme: "primary", disabled: true },
     "bg-btn-secondary-disabled",
   ],
 ]);
 
 const lookupLoadingColor = propsLookup<OakIconButtonProps, OakUiRoleToken>([
   [
-    { $variant: "primary", $colorScheme: "primary", $disabled: undefined },
+    { $variant: "primary", $colorScheme: "primary", disabled: undefined },
     "icon-inverted",
   ],
   [
-    { $variant: "primary", $colorScheme: "inverted", $disabled: undefined },
+    { $variant: "primary", $colorScheme: "inverted", disabled: undefined },
     "icon-primary",
   ],
   [
-    { $variant: "secondary", $colorScheme: "primary", $disabled: undefined },
+    { $variant: "secondary", $colorScheme: "primary", disabled: undefined },
     "icon-primary",
   ],
   [
-    { $variant: "primary", $colorScheme: "primary", $disabled: true },
+    { $variant: "primary", $colorScheme: "primary", disabled: true },
     "icon-inverted",
   ],
   [
-    { $variant: "primary", $colorScheme: "inverted", $disabled: true },
+    { $variant: "primary", $colorScheme: "inverted", disabled: true },
     "icon-disabled",
   ],
   [
-    { $variant: "secondary", $colorScheme: "primary", $disabled: true },
+    { $variant: "secondary", $colorScheme: "primary", disabled: true },
     "icon-disabled",
   ],
 ]);
 
 const lookupTextColor = propsLookup<OakIconButtonProps, OakUiRoleToken>([
   [
-    { $variant: "primary", $colorScheme: "primary", $disabled: undefined },
+    { $variant: "primary", $colorScheme: "primary", disabled: undefined },
     "icon-inverted",
   ],
   [
-    { $variant: "primary", $colorScheme: "inverted", $disabled: undefined },
+    { $variant: "primary", $colorScheme: "inverted", disabled: undefined },
     "icon-primary",
   ],
   [
-    { $variant: "secondary", $colorScheme: "primary", $disabled: undefined },
+    { $variant: "secondary", $colorScheme: "primary", disabled: undefined },
     "icon-primary",
   ],
   [
-    { $variant: "primary", $colorScheme: "primary", $disabled: true },
+    { $variant: "primary", $colorScheme: "primary", disabled: true },
     "icon-inverted",
   ],
   [
-    { $variant: "primary", $colorScheme: "inverted", $disabled: true },
+    { $variant: "primary", $colorScheme: "inverted", disabled: true },
     "icon-disabled",
   ],
   [
-    { $variant: "secondary", $colorScheme: "primary", $disabled: true },
+    { $variant: "secondary", $colorScheme: "primary", disabled: true },
     "icon-disabled",
   ],
 ]);
@@ -140,8 +140,8 @@ const lookupBorderWidth = propsLookup<OakIconButtonProps, OakBorderWidthToken>([
 ]);
 
 const lookupBorderColor = propsLookup<OakIconButtonProps, OakUiRoleToken>([
-  [{ $variant: "secondary", $disabled: undefined }, "border-primary"],
-  [{ $variant: "secondary", $disabled: true }, "border-neutral"],
+  [{ $variant: "secondary", disabled: undefined }, "border-primary"],
+  [{ $variant: "secondary", disabled: true }, "border-neutral"],
 ]);
 
 const Button = styled.button<
@@ -155,7 +155,7 @@ const Button = styled.button<
   border: none;
   display: flex;
   ${focusStyles}
-  cursor: ${(props) => (props.$disabled ? "not-allowed" : "pointer")};
+  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
   background: ${(props) => parseColor(lookupBackground(props))};
   padding: ${(props) => parseSpacing(lookupPadding(props))};
   border-radius: ${parseBorderRadius("border-radius-circle")};
@@ -167,7 +167,7 @@ const Button = styled.button<
 function defaultProps(props: OakIconButtonProps) {
   return {
     // loading assumes the button is disabled
-    $disabled: props.$disabled || props.isLoading,
+    disabled: props.disabled || props.isLoading,
     ...props,
   };
 }

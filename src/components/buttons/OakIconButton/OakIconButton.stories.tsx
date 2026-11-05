@@ -31,7 +31,7 @@ const meta: Meta<typeof OakIconButton> = {
     $variant: {
       options: ["primary", "secondary"],
     },
-    $disabled: {
+    disabled: {
       control: "boolean",
     },
   },
@@ -43,7 +43,7 @@ const meta: Meta<typeof OakIconButton> = {
         "$colorScheme",
         "$size",
         "$variant",
-        "$disabled",
+        "disabled",
       ],
     },
   },
@@ -63,6 +63,18 @@ export const Default: Story = {
   },
 };
 
+export const Disabled: Story = {
+  render: (args) => <OakIconButton {...args}>Primary Button</OakIconButton>,
+  args: {
+    iconName: "question-mark",
+    $colorScheme: "primary",
+    $size: "md",
+    $variant: "primary",
+    disabled: true,
+    "aria-label": "help",
+  },
+};
+
 export const VariantGrid = generateVariantTableStory({
   component: OakIconButton,
   defaultProps: {
@@ -71,7 +83,7 @@ export const VariantGrid = generateVariantTableStory({
   },
   states: [
     { name: "default", props: {} },
-    { name: "disabled", props: { $disabled: true } },
+    { name: "disabled", props: { disabled: true } },
     { name: "loading", props: { isLoading: true } },
   ],
   variants: [

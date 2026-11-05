@@ -17,7 +17,7 @@ const focusVisibleChildren = `
 
 export type OakFocusStyleProps = OakBoxProps & {
   $hoverBackground?: OakUiRoleToken;
-  $disabled?: boolean;
+  disabled?: boolean;
 };
 
 /**
@@ -26,7 +26,7 @@ export type OakFocusStyleProps = OakBoxProps & {
 export const focusStyles = css<OakFocusStyleProps>`
   ${(props) => {
     let focusStyles = css<OakFocusStyleProps>``;
-    if (!props.$disabled) {
+    if (!props.disabled) {
       focusStyles = css<OakFocusStyleProps>`
         &:hover {
           ${responsiveStyle(

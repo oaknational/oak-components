@@ -29,6 +29,21 @@ describe("OakIconButton", () => {
     expect(container).toMatchSnapshot();
   });
 
+  it("button should be disabled when disabled prop passed", () => {
+    const { container, getByRole } = renderWithTheme(
+      <OakIconButton
+        aria-label="help"
+        iconName="question-mark"
+        $colorScheme="primary"
+        $size="md"
+        $variant="primary"
+        disabled={true}
+      />,
+    );
+    expect(getByRole("button")).toBeDisabled();
+    expect(container).toMatchSnapshot();
+  });
+
   it("responds to click events", () => {
     const fn = jest.fn();
     const { getByRole } = renderWithTheme(
