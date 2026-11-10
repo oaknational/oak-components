@@ -75,7 +75,7 @@ export const Disabled: Story = {
   },
 };
 
-export const VariantGrid = generateVariantTableStory({
+export const VariantTable = generateVariantTableStory({
   component: OakIconButton,
   defaultProps: {
     iconName: "question-mark",
