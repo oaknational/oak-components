@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Meta, StoryObj } from "@storybook/nextjs";
 
 import { OakDialog, OakDialogProps } from "./OakDialog";
@@ -11,6 +11,7 @@ import { OakLink } from "@/components/navigation/OakLink";
 import { OakHeading } from "@/components/typography/OakHeading";
 import { OakP } from "@/components/typography/OakP";
 import { oakAllSpacingTokens } from "@/styles/theme/spacing";
+import { useStoryOpenState } from "@/storybook-helpers/useStoryOpenState";
 
 const spacingOptions = Object.keys(oakAllSpacingTokens);
 
@@ -49,15 +50,6 @@ const footer = (layout: OakDialogFooterLayout, onAction: () => void) => (
     <OakPrimaryButton onClick={onAction}>Primary</OakPrimaryButton>
   </OakDialogFooter>
 );
-
-// Open state lives in the story, not in Storybook args: on the Docs page,
-// updateArgs only re-renders the primary story, so the other stories' buttons
-// would do nothing. It still follows the isOpen control.
-const useStoryOpenState = (isOpenArg: boolean) => {
-  const [isOpen, setIsOpen] = useState(isOpenArg);
-  useEffect(() => setIsOpen(isOpenArg), [isOpenArg]);
-  return [isOpen, setIsOpen] as const;
-};
 
 const DialogStory = ({
   args,
