@@ -7,7 +7,7 @@ import {
   OakUiRoleToken,
 } from "@/index";
 
-export const lookupPadding = propsLookup<
+export const lookupButtonPadding = propsLookup<
   OakIconButtonProps,
   OakCombinedSpacingToken
 >([
@@ -15,7 +15,7 @@ export const lookupPadding = propsLookup<
   [{ $size: "md" }, "spacing-12"],
 ]);
 
-export const lookupSize = propsLookup<
+export const lookupIconSize = propsLookup<
   OakIconButtonProps,
   OakCombinedSpacingToken
 >([
@@ -23,36 +23,37 @@ export const lookupSize = propsLookup<
   [{ $size: "md" }, "spacing-24"],
 ]);
 
-export const lookupBackground = propsLookup<OakIconButtonProps, OakUiRoleToken>(
+export const lookupButtonBackground = propsLookup<
+  OakIconButtonProps,
+  OakUiRoleToken
+>([
   [
-    [
-      { $type: "primary", $colorScheme: "primary", disabled: undefined },
-      "bg-btn-primary",
-    ],
-    [
-      { $type: "primary", $colorScheme: "inverted", disabled: undefined },
-      "bg-btn-secondary",
-    ],
-    [
-      { $type: "secondary", $colorScheme: "primary", disabled: undefined },
-      "bg-btn-secondary",
-    ],
-    [
-      { $type: "primary", $colorScheme: "primary", disabled: true },
-      "bg-btn-primary-disabled",
-    ],
-    [
-      { $type: "primary", $colorScheme: "inverted", disabled: true },
-      "bg-btn-secondary-disabled",
-    ],
-    [
-      { $type: "secondary", $colorScheme: "primary", disabled: true },
-      "bg-btn-secondary-disabled",
-    ],
+    { $type: "primary", $colorScheme: "primary", disabled: undefined },
+    "bg-btn-primary",
   ],
-);
+  [
+    { $type: "primary", $colorScheme: "inverted", disabled: undefined },
+    "bg-btn-secondary",
+  ],
+  [
+    { $type: "secondary", $colorScheme: "primary", disabled: undefined },
+    "bg-btn-secondary",
+  ],
+  [
+    { $type: "primary", $colorScheme: "primary", disabled: true },
+    "bg-btn-primary-disabled",
+  ],
+  [
+    { $type: "primary", $colorScheme: "inverted", disabled: true },
+    "bg-btn-secondary-disabled",
+  ],
+  [
+    { $type: "secondary", $colorScheme: "primary", disabled: true },
+    "bg-btn-secondary-disabled",
+  ],
+]);
 
-export const lookupLoadingColor = propsLookup<
+export const lookupIconLoadingColor = propsLookup<
   OakIconButtonProps,
   OakUiRoleToken
 >([
@@ -82,7 +83,7 @@ export const lookupLoadingColor = propsLookup<
   ],
 ]);
 
-export const lookupTextColor = propsLookup<OakIconButtonProps, OakUiRoleToken>([
+export const lookupIconColor = propsLookup<OakIconButtonProps, OakUiRoleToken>([
   [
     { $type: "primary", $colorScheme: "primary", disabled: undefined },
     "icon-inverted",
@@ -109,7 +110,7 @@ export const lookupTextColor = propsLookup<OakIconButtonProps, OakUiRoleToken>([
   ],
 ]);
 
-export const lookupHoverBackground = propsLookup<
+export const lookupButtonHoverBackground = propsLookup<
   OakIconButtonProps,
   OakUiRoleToken
 >([
@@ -119,7 +120,7 @@ export const lookupHoverBackground = propsLookup<
   [{ $type: "secondary", $colorScheme: "inverted" }, "bg-btn-primary-hover"],
 ]);
 
-export const lookupBorderWidth = propsLookup<
+export const lookupButtonBorderWidth = propsLookup<
   OakIconButtonProps,
   OakBorderWidthToken
 >([
@@ -127,7 +128,7 @@ export const lookupBorderWidth = propsLookup<
   [{ $type: "secondary" }, "border-solid-m"],
 ]);
 
-export const lookupBorderColor = propsLookup<
+export const lookupButtonBorderColor = propsLookup<
   OakIconButtonProps,
   OakUiRoleToken
 >([

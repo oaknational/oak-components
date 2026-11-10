@@ -2,14 +2,14 @@ import React, { ElementType } from "react";
 import styled from "styled-components";
 
 import {
-  lookupBackground,
-  lookupBorderColor,
-  lookupBorderWidth,
-  lookupHoverBackground,
-  lookupLoadingColor,
-  lookupPadding,
-  lookupSize,
-  lookupTextColor,
+  lookupButtonBackground,
+  lookupButtonBorderColor,
+  lookupButtonBorderWidth,
+  lookupButtonHoverBackground,
+  lookupIconLoadingColor,
+  lookupButtonPadding,
+  lookupIconSize,
+  lookupIconColor,
 } from "./variant.config";
 
 import { focusStyles, OakFocusStyleProps } from "@/utils/focusStyles";
@@ -48,12 +48,12 @@ const Button = styled.button<
   display: flex;
   ${focusStyles}
   cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
-  background: ${(props) => parseColor(lookupBackground(props))};
-  padding: ${(props) => parseSpacing(lookupPadding(props))};
+  background: ${(props) => parseColor(lookupButtonBackground(props))};
+  padding: ${(props) => parseSpacing(lookupButtonPadding(props))};
   border-radius: ${parseBorderRadius("border-radius-circle")};
   border-style: solid;
-  border-color: ${(props) => parseColor(lookupBorderColor(props))};
-  border-width: ${(props) => parseBorderWidth(lookupBorderWidth(props))};
+  border-color: ${(props) => parseColor(lookupButtonBorderColor(props))};
+  border-width: ${(props) => parseBorderWidth(lookupButtonBorderWidth(props))};
 `;
 
 function defaultProps(props: OakIconButtonProps) {
@@ -74,18 +74,18 @@ export const OakIconButton = <C extends ElementType = "button">(
   const props = defaultProps(rawProps);
   const { iconName, isLoading, ...rest } = props;
   return (
-    <Button $hoverBackground={lookupHoverBackground(props)} {...rest}>
+    <Button $hoverBackground={lookupButtonHoverBackground(props)} {...rest}>
       {isLoading && (
         <OakLoadingSpinner
-          $width={lookupSize(props)}
-          loaderColor={lookupLoadingColor(props)}
+          $width={lookupIconSize(props)}
+          loaderColor={lookupIconLoadingColor(props)}
         />
       )}
       {!isLoading && (
         <OakIcon
-          $width={lookupSize(props)}
-          $height={lookupSize(props)}
-          $colorFilter={lookupTextColor(props)}
+          $width={lookupIconSize(props)}
+          $height={lookupIconSize(props)}
+          $colorFilter={lookupIconColor(props)}
           iconName={iconName}
         />
       )}
