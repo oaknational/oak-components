@@ -67,9 +67,6 @@ function defaultProps(props: OakIconButtonProps) {
 /**
  *
  * Icon Buttons allow users to take actions, navigate, and make choices, with a single tap.
- *
- * ### onClick
- * `onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;`
  */
 export const OakIconButton = <C extends ElementType = "button">(
   rawProps: OakIconButtonProps & PolymorphicPropsWithoutRef<C>,
