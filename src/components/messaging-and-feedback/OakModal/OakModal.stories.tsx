@@ -2,8 +2,11 @@ import React, { ReactNode } from "react";
 import { Meta, StoryObj } from "@storybook/nextjs";
 
 import { OakModal, OakModalProps } from "./OakModal";
-import { OakModalFooter, OakModalFooterLayout } from "./OakModalFooter";
 
+import {
+  OakModalFooter,
+  OakModalFooterLayout,
+} from "@/components/messaging-and-feedback/OakModalFooter";
 import { OakPrimaryButton } from "@/components/buttons/OakPrimaryButton";
 import { OakSecondaryButton } from "@/components/buttons/OakSecondaryButton";
 import { OakIcon } from "@/components/images-and-icons/OakIcon";

@@ -8,7 +8,7 @@ import { OakPrimaryButton } from "@/components/buttons/OakPrimaryButton";
 import { OakHeading } from "@/components/typography/OakHeading";
 import { OakP } from "@/components/typography/OakP";
 import { OakSecondaryButton } from "@/components/buttons/OakSecondaryButton";
-import { OakModalFooter } from "@/components/messaging-and-feedback/OakModal/OakModalFooter";
+import { InternalModalFooter } from "@/components/internal-components/InternalModalFooter";
 
 const meta: Meta<typeof InternalModalBase> = {
   component: InternalModalBase,
@@ -102,10 +102,10 @@ function AutoFocusContentDemo(args: InternalModalBaseProps) {
         isOpen={isOpen}
         onDismiss={close}
         footerSlot={
-          <OakModalFooter layout="horizontal">
+          <InternalModalFooter layout="horizontal">
             <OakSecondaryButton onClick={close}>Secondary</OakSecondaryButton>
             <OakPrimaryButton onClick={close}>Primary</OakPrimaryButton>
-          </OakModalFooter>
+          </InternalModalFooter>
         }
       >
         <OakHeading tag="h2" id="internal-modal-base-title" $font="heading-5">

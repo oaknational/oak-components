@@ -1,24 +1,27 @@
 import React from "react";
 import "@testing-library/jest-dom";
 
-import { OakDialogFooter, OakDialogFooterLayout } from "./OakDialogFooter";
+import {
+  InternalModalFooter,
+  InternalModalFooterLayout,
+} from "./InternalModalFooter";
 
 import { OakPrimaryButton } from "@/components/buttons/OakPrimaryButton";
 import { OakSecondaryButton } from "@/components/buttons/OakSecondaryButton";
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
-const renderFooter = (layout: OakDialogFooterLayout) =>
+const renderFooter = (layout: InternalModalFooterLayout) =>
   renderWithTheme(
-    <OakDialogFooter layout={layout}>
+    <InternalModalFooter layout={layout}>
       <OakSecondaryButton>Cancel</OakSecondaryButton>
       <OakPrimaryButton>Save</OakPrimaryButton>
-    </OakDialogFooter>,
+    </InternalModalFooter>,
   );
 
 const footerOf = (container: HTMLElement) =>
   container.firstElementChild as HTMLElement;
 
-describe("OakDialogFooter", () => {
+describe("InternalModalFooter", () => {
   it("matches snapshot", () => {
     const { container } = renderFooter("horizontal");
     expect(container).toMatchSnapshot();

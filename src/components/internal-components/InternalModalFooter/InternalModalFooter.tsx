@@ -3,26 +3,30 @@ import styled, { css } from "styled-components";
 
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 
-export type OakDialogFooterLayout =
+export type InternalModalFooterLayout =
   | "horizontal"
   | "vertical"
   | "left"
   | "right";
 
-export type OakDialogFooterProps = {
+export type InternalModalFooterProps = {
   /**
-   * `horizontal` shares the width, `vertical` stacks full width,
-   * `left` / `right` align buttons at natural width.
+   * How the buttons are arranged.
+   *
+   * - `horizontal`: buttons side by side, sharing the width equally
+   * - `vertical`: buttons stacked, each full width
+   * - `left` / `right`: buttons at their natural width, aligned to that side
    */
-  layout: OakDialogFooterLayout;
+  layout: InternalModalFooterLayout;
   /**
    * The footer actions, usually `OakSecondaryButton` then `OakPrimaryButton`
    */
   children: ReactNode;
 };
 
-// `&&` raises specificity to beat Oak buttons' `width: max-content`
-const StyledFooter = styled(OakFlex)<{ $layout: OakDialogFooterLayout }>`
+// `&&` doubles the class so these rules beat the `width: max-content` that
+// Oak buttons set on their own wrapper
+const StyledFooter = styled(OakFlex)<{ $layout: InternalModalFooterLayout }>`
   ${({ $layout }) =>
     $layout === "horizontal" &&
     css`
@@ -40,13 +44,17 @@ const StyledFooter = styled(OakFlex)<{ $layout: OakDialogFooterLayout }>`
 `;
 
 /**
- * Footer for `OakDialog`'s `footerSlot`, in the Figma footer layouts.
+ * The Figma footer layouts shared by `OakModalFooter` and `OakDialogFooter`.
  *
- * NB keep in sync with `OakModalFooter`.
+ * Renders a `div`, not a `<footer>`: inside a dialog a `<footer>` would
+ * become an extra `contentinfo` landmark.
  *
  * Design system: <https://www.figma.com/design/YcWQMMhHPVVmc47cHHEEAl/Oak-Design-Kit?node-id=25437-6560>
  */
-export const OakDialogFooter = ({ layout, children }: OakDialogFooterProps) => (
+export const InternalModalFooter = ({
+  layout,
+  children,
+}: InternalModalFooterProps) => (
   <StyledFooter
     $layout={layout}
     $flexDirection={layout === "vertical" ? "column" : "row"}

@@ -2,8 +2,11 @@ import React from "react";
 import { Meta, StoryObj } from "@storybook/nextjs";
 
 import { OakDialog, OakDialogProps } from "./OakDialog";
-import { OakDialogFooter, OakDialogFooterLayout } from "./OakDialogFooter";
 
+import {
+  OakDialogFooter,
+  OakDialogFooterLayout,
+} from "@/components/messaging-and-feedback/OakDialogFooter";
 import { OakPrimaryButton } from "@/components/buttons/OakPrimaryButton";
 import { OakSecondaryButton } from "@/components/buttons/OakSecondaryButton";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
