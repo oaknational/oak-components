@@ -18,7 +18,7 @@ export function VariantTable<T extends ElementType>({
   component,
   states,
   variants,
-}: VariantTableProps<T>) {
+}: Readonly<VariantTableProps<T>>) {
   const Component = component as ElementType;
 
   return (

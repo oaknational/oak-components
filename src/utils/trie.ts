@@ -5,7 +5,7 @@ class TrieNode<K, V> {
 }
 
 export class Trie<K, V> {
-  private root = new TrieNode<K, V>();
+  private readonly root = new TrieNode<K, V>();
 
   set(path: readonly K[], value: V): this {
     let node = this.root;
