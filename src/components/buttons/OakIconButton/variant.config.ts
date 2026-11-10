@@ -15,7 +15,6 @@ export const lookupPadding = propsLookup<
   [{ $size: "md" }, "spacing-12"],
 ]);
 
-// size
 export const lookupSize = propsLookup<
   OakIconButtonProps,
   OakCombinedSpacingToken
