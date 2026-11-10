@@ -14,7 +14,7 @@ import { OakP } from "@/components/typography/OakP";
 const meta: Meta<typeof OakInformativeModal> = {
   component: OakInformativeModal,
   tags: ["autodocs"],
-  title: "components/Messaging and feedback/OakInformativeModal",
+  title: "components/Messaging and feedback/OakInformativeModal (deprecated)",
   argTypes: {
     children: {
       control: "text",

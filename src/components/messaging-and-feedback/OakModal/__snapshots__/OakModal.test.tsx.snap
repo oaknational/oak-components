@@ -1,0 +1,1688 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`OakModal matches snapshot for bottom 1`] = `
+.c0 {
+  position: relative;
+  transition: all 0.3s ease;
+  font-family: --var(google-font),Lexend,sans-serif;
+  z-index: 300;
+}
+
+.c2 {
+  position: fixed;
+  inset: 0rem;
+  background: #22222240;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c4 {
+  color: #222222;
+  background: #ffffff;
+  box-shadow: 0 0 0.5rem rgba(92, 92, 92, 20%);
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c7 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c9 {
+  width: 100%;
+  min-height: 4rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c11 {
+  min-height: 2rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c13 {
+  position: relative;
+  width: max-content;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c19 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  color: transparent;
+  background: transparent;
+  border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c21 {
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c22 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  display: block;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c25 {
+  overflow: auto;
+  min-height: 0rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+  overflow: auto;
+}
+
+.c5 {
+  display: flex;
+  flex-direction: column;
+}
+
+.c8 {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.c10 {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.c12 {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.c14 {
+  display: flex;
+}
+
+.c18 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0rem;
+}
+
+.c20 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c26 {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.c24 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c16 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+  color: transparent;
+}
+
+.c16:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c23 {
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  object-fit: contain;
+}
+
+.c17 {
+  display: inline-block;
+  position: relative;
+}
+
+.c17:hover {
+  text-decoration: underline;
+  color: transparent;
+}
+
+.c17:hover:not(:active) [data-icon-for="button"] img {
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+}
+
+.c17:active {
+  color: transparent;
+}
+
+.c17:disabled {
+  color: transparent;
+}
+
+.c15 >:first-of-type:focus-visible .shadow {
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
+}
+
+.c15 >:first-of-type:hover .shadow {
+  box-shadow: none;
+}
+
+.c15 >:first-of-type:active .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%),0.25rem 0.25rem 0 rgba(87, 87, 87, 100%);
+}
+
+.c15 >:first-of-type:disabled .icon-container {
+  background: transparent;
+}
+
+.c15 >:first-of-type:hover .icon-container {
+  background: #f2f2f2;
+}
+
+.c15 >:first-of-type:active .icon-container {
+  background: transparent;
+}
+
+.c6 {
+  position: fixed;
+  overflow: clip;
+  left: 0rem;
+  right: 0rem;
+  bottom: 0rem;
+  height: 40rem;
+  max-height: 100%;
+}
+
+.c1 {
+  opacity: 1;
+}
+
+@media (max-width: 749px) {
+  .c6 {
+    inset: 0rem;
+    width: auto;
+    height: auto;
+    max-width: none;
+    max-height: none;
+  }
+}
+
+@media (max-width: 749px) {
+  .c3 {
+    display: none;
+  }
+}
+
+<body
+  data-scroll-locked="1"
+>
+  <div
+    aria-hidden="true"
+    data-focus-on-hidden="true"
+  />
+  <div
+    class="c0 c1"
+    data-testid="modal-root"
+  >
+    <div
+      aria-hidden="true"
+      class="c2 c3"
+      data-focus-on-hidden="true"
+      data-testid="modal-backdrop"
+    />
+    <div
+      aria-hidden="true"
+      data-focus-guard="true"
+      data-focus-on-hidden="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="0"
+    />
+    <div
+      data-focus-lock-disabled="false"
+    >
+      <div
+        aria-label="Filters"
+        aria-modal="true"
+        class="c4 c5 c6"
+        role="dialog"
+      >
+        <div
+          class="c7 c8"
+        >
+          <div
+            class="c9 c10"
+            data-testid="modal-header"
+          >
+            <div
+              class="c11 c12"
+            />
+            <div
+              class="c13 c14 c15"
+            >
+              <button
+                aria-label="Close"
+                class="c16 c17"
+                data-autofocus="true"
+              >
+                <div
+                  class="c7 c18"
+                >
+                  <div
+                    class="c19 c20 icon-container"
+                  >
+                    <div
+                      class="c21 shadow"
+                    />
+                    <span
+                      class="c22"
+                      data-icon-for="button"
+                    >
+                      <img
+                        alt=""
+                        class="c23"
+                        data-nimg="fill"
+                        decoding="async"
+                        loading="lazy"
+                        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
+                        style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                      />
+                    </span>
+                  </div>
+                  <span
+                    class="c24"
+                  />
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="c25 c26"
+          data-testid="modal-content"
+          style="scrollbar-gutter: stable;"
+        >
+          Modal content
+        </div>
+      </div>
+    </div>
+    <div
+      aria-hidden="true"
+      data-focus-guard="true"
+      data-focus-on-hidden="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="0"
+    />
+  </div>
+</body>
+`;
+
+exports[`OakModal matches snapshot for fullscreen 1`] = `
+.c0 {
+  position: relative;
+  transition: all 0.3s ease;
+  font-family: --var(google-font),Lexend,sans-serif;
+  z-index: 300;
+}
+
+.c2 {
+  color: #222222;
+  background: #ffffff;
+  box-shadow: 0 0 0.5rem rgba(92, 92, 92, 20%);
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c5 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c7 {
+  width: 100%;
+  min-height: 4rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c9 {
+  min-height: 2rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c11 {
+  position: relative;
+  width: max-content;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c17 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  color: transparent;
+  background: transparent;
+  border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c19 {
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c20 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  display: block;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c23 {
+  overflow: auto;
+  min-height: 0rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+  overflow: auto;
+}
+
+.c3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.c6 {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.c8 {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.c10 {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.c12 {
+  display: flex;
+}
+
+.c16 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0rem;
+}
+
+.c18 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c24 {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.c22 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c14 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+  color: transparent;
+}
+
+.c14:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c21 {
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  object-fit: contain;
+}
+
+.c15 {
+  display: inline-block;
+  position: relative;
+}
+
+.c15:hover {
+  text-decoration: underline;
+  color: transparent;
+}
+
+.c15:hover:not(:active) [data-icon-for="button"] img {
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+}
+
+.c15:active {
+  color: transparent;
+}
+
+.c15:disabled {
+  color: transparent;
+}
+
+.c13 >:first-of-type:focus-visible .shadow {
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
+}
+
+.c13 >:first-of-type:hover .shadow {
+  box-shadow: none;
+}
+
+.c13 >:first-of-type:active .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%),0.25rem 0.25rem 0 rgba(87, 87, 87, 100%);
+}
+
+.c13 >:first-of-type:disabled .icon-container {
+  background: transparent;
+}
+
+.c13 >:first-of-type:hover .icon-container {
+  background: #f2f2f2;
+}
+
+.c13 >:first-of-type:active .icon-container {
+  background: transparent;
+}
+
+.c4 {
+  position: fixed;
+  overflow: clip;
+  inset: 0rem;
+}
+
+.c1 {
+  opacity: 1;
+}
+
+<body
+  data-scroll-locked="1"
+>
+  <div
+    aria-hidden="true"
+    data-focus-on-hidden="true"
+  />
+  <div
+    class="c0 c1"
+    data-testid="modal-root"
+  >
+    <div
+      aria-hidden="true"
+      data-focus-guard="true"
+      data-focus-on-hidden="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="0"
+    />
+    <div
+      data-focus-lock-disabled="false"
+    >
+      <div
+        aria-label="Filters"
+        aria-modal="true"
+        class="c2 c3 c4"
+        role="dialog"
+      >
+        <div
+          class="c5 c6"
+        >
+          <div
+            class="c7 c8"
+            data-testid="modal-header"
+          >
+            <div
+              class="c9 c10"
+            />
+            <div
+              class="c11 c12 c13"
+            >
+              <button
+                aria-label="Close"
+                class="c14 c15"
+                data-autofocus="true"
+              >
+                <div
+                  class="c5 c16"
+                >
+                  <div
+                    class="c17 c18 icon-container"
+                  >
+                    <div
+                      class="c19 shadow"
+                    />
+                    <span
+                      class="c20"
+                      data-icon-for="button"
+                    >
+                      <img
+                        alt=""
+                        class="c21"
+                        data-nimg="fill"
+                        decoding="async"
+                        loading="lazy"
+                        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
+                        style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                      />
+                    </span>
+                  </div>
+                  <span
+                    class="c22"
+                  />
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="c23 c24"
+          data-testid="modal-content"
+          style="scrollbar-gutter: stable;"
+        >
+          Modal content
+        </div>
+      </div>
+    </div>
+    <div
+      aria-hidden="true"
+      data-focus-guard="true"
+      data-focus-on-hidden="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="0"
+    />
+  </div>
+</body>
+`;
+
+exports[`OakModal matches snapshot for left 1`] = `
+.c0 {
+  position: relative;
+  transition: all 0.3s ease;
+  font-family: --var(google-font),Lexend,sans-serif;
+  z-index: 300;
+}
+
+.c2 {
+  position: fixed;
+  inset: 0rem;
+  background: #22222240;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c4 {
+  color: #222222;
+  background: #ffffff;
+  box-shadow: 0 0 0.5rem rgba(92, 92, 92, 20%);
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c7 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c9 {
+  width: 100%;
+  min-height: 4rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c11 {
+  min-height: 2rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c13 {
+  position: relative;
+  width: max-content;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c19 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  color: transparent;
+  background: transparent;
+  border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c21 {
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c22 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  display: block;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c25 {
+  overflow: auto;
+  min-height: 0rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+  overflow: auto;
+}
+
+.c5 {
+  display: flex;
+  flex-direction: column;
+}
+
+.c8 {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.c10 {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.c12 {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.c14 {
+  display: flex;
+}
+
+.c18 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0rem;
+}
+
+.c20 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c26 {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.c24 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c16 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+  color: transparent;
+}
+
+.c16:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c23 {
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  object-fit: contain;
+}
+
+.c17 {
+  display: inline-block;
+  position: relative;
+}
+
+.c17:hover {
+  text-decoration: underline;
+  color: transparent;
+}
+
+.c17:hover:not(:active) [data-icon-for="button"] img {
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+}
+
+.c17:active {
+  color: transparent;
+}
+
+.c17:disabled {
+  color: transparent;
+}
+
+.c15 >:first-of-type:focus-visible .shadow {
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
+}
+
+.c15 >:first-of-type:hover .shadow {
+  box-shadow: none;
+}
+
+.c15 >:first-of-type:active .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%),0.25rem 0.25rem 0 rgba(87, 87, 87, 100%);
+}
+
+.c15 >:first-of-type:disabled .icon-container {
+  background: transparent;
+}
+
+.c15 >:first-of-type:hover .icon-container {
+  background: #f2f2f2;
+}
+
+.c15 >:first-of-type:active .icon-container {
+  background: transparent;
+}
+
+.c6 {
+  position: fixed;
+  overflow: clip;
+  top: 0rem;
+  bottom: 0rem;
+  left: 0rem;
+  width: 40rem;
+  max-width: 100%;
+}
+
+.c1 {
+  opacity: 1;
+}
+
+@media (max-width: 749px) {
+  .c6 {
+    inset: 0rem;
+    width: auto;
+    height: auto;
+    max-width: none;
+    max-height: none;
+  }
+}
+
+@media (max-width: 749px) {
+  .c3 {
+    display: none;
+  }
+}
+
+<body
+  data-scroll-locked="1"
+>
+  <div
+    aria-hidden="true"
+    data-focus-on-hidden="true"
+  />
+  <div
+    class="c0 c1"
+    data-testid="modal-root"
+  >
+    <div
+      aria-hidden="true"
+      class="c2 c3"
+      data-focus-on-hidden="true"
+      data-testid="modal-backdrop"
+    />
+    <div
+      aria-hidden="true"
+      data-focus-guard="true"
+      data-focus-on-hidden="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="0"
+    />
+    <div
+      data-focus-lock-disabled="false"
+    >
+      <div
+        aria-label="Filters"
+        aria-modal="true"
+        class="c4 c5 c6"
+        role="dialog"
+      >
+        <div
+          class="c7 c8"
+        >
+          <div
+            class="c9 c10"
+            data-testid="modal-header"
+          >
+            <div
+              class="c11 c12"
+            />
+            <div
+              class="c13 c14 c15"
+            >
+              <button
+                aria-label="Close"
+                class="c16 c17"
+                data-autofocus="true"
+              >
+                <div
+                  class="c7 c18"
+                >
+                  <div
+                    class="c19 c20 icon-container"
+                  >
+                    <div
+                      class="c21 shadow"
+                    />
+                    <span
+                      class="c22"
+                      data-icon-for="button"
+                    >
+                      <img
+                        alt=""
+                        class="c23"
+                        data-nimg="fill"
+                        decoding="async"
+                        loading="lazy"
+                        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
+                        style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                      />
+                    </span>
+                  </div>
+                  <span
+                    class="c24"
+                  />
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="c25 c26"
+          data-testid="modal-content"
+          style="scrollbar-gutter: stable;"
+        >
+          Modal content
+        </div>
+      </div>
+    </div>
+    <div
+      aria-hidden="true"
+      data-focus-guard="true"
+      data-focus-on-hidden="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="0"
+    />
+  </div>
+</body>
+`;
+
+exports[`OakModal matches snapshot for right 1`] = `
+.c0 {
+  position: relative;
+  transition: all 0.3s ease;
+  font-family: --var(google-font),Lexend,sans-serif;
+  z-index: 300;
+}
+
+.c2 {
+  position: fixed;
+  inset: 0rem;
+  background: #22222240;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c4 {
+  color: #222222;
+  background: #ffffff;
+  box-shadow: 0 0 0.5rem rgba(92, 92, 92, 20%);
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c7 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c9 {
+  width: 100%;
+  min-height: 4rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c11 {
+  min-height: 2rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c13 {
+  position: relative;
+  width: max-content;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c19 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  color: transparent;
+  background: transparent;
+  border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c21 {
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c22 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  display: block;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c25 {
+  overflow: auto;
+  min-height: 0rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+  overflow: auto;
+}
+
+.c5 {
+  display: flex;
+  flex-direction: column;
+}
+
+.c8 {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.c10 {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.c12 {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.c14 {
+  display: flex;
+}
+
+.c18 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0rem;
+}
+
+.c20 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c26 {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.c24 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c16 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+  color: transparent;
+}
+
+.c16:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c23 {
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  object-fit: contain;
+}
+
+.c17 {
+  display: inline-block;
+  position: relative;
+}
+
+.c17:hover {
+  text-decoration: underline;
+  color: transparent;
+}
+
+.c17:hover:not(:active) [data-icon-for="button"] img {
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+}
+
+.c17:active {
+  color: transparent;
+}
+
+.c17:disabled {
+  color: transparent;
+}
+
+.c15 >:first-of-type:focus-visible .shadow {
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
+}
+
+.c15 >:first-of-type:hover .shadow {
+  box-shadow: none;
+}
+
+.c15 >:first-of-type:active .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%),0.25rem 0.25rem 0 rgba(87, 87, 87, 100%);
+}
+
+.c15 >:first-of-type:disabled .icon-container {
+  background: transparent;
+}
+
+.c15 >:first-of-type:hover .icon-container {
+  background: #f2f2f2;
+}
+
+.c15 >:first-of-type:active .icon-container {
+  background: transparent;
+}
+
+.c6 {
+  position: fixed;
+  overflow: clip;
+  top: 0rem;
+  bottom: 0rem;
+  right: 0rem;
+  width: 40rem;
+  max-width: 100%;
+}
+
+.c1 {
+  opacity: 1;
+}
+
+@media (max-width: 749px) {
+  .c6 {
+    inset: 0rem;
+    width: auto;
+    height: auto;
+    max-width: none;
+    max-height: none;
+  }
+}
+
+@media (max-width: 749px) {
+  .c3 {
+    display: none;
+  }
+}
+
+<body
+  data-scroll-locked="1"
+>
+  <div
+    aria-hidden="true"
+    data-focus-on-hidden="true"
+  />
+  <div
+    class="c0 c1"
+    data-testid="modal-root"
+  >
+    <div
+      aria-hidden="true"
+      class="c2 c3"
+      data-focus-on-hidden="true"
+      data-testid="modal-backdrop"
+    />
+    <div
+      aria-hidden="true"
+      data-focus-guard="true"
+      data-focus-on-hidden="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="0"
+    />
+    <div
+      data-focus-lock-disabled="false"
+    >
+      <div
+        aria-label="Filters"
+        aria-modal="true"
+        class="c4 c5 c6"
+        role="dialog"
+      >
+        <div
+          class="c7 c8"
+        >
+          <div
+            class="c9 c10"
+            data-testid="modal-header"
+          >
+            <div
+              class="c11 c12"
+            />
+            <div
+              class="c13 c14 c15"
+            >
+              <button
+                aria-label="Close"
+                class="c16 c17"
+                data-autofocus="true"
+              >
+                <div
+                  class="c7 c18"
+                >
+                  <div
+                    class="c19 c20 icon-container"
+                  >
+                    <div
+                      class="c21 shadow"
+                    />
+                    <span
+                      class="c22"
+                      data-icon-for="button"
+                    >
+                      <img
+                        alt=""
+                        class="c23"
+                        data-nimg="fill"
+                        decoding="async"
+                        loading="lazy"
+                        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
+                        style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                      />
+                    </span>
+                  </div>
+                  <span
+                    class="c24"
+                  />
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="c25 c26"
+          data-testid="modal-content"
+          style="scrollbar-gutter: stable;"
+        >
+          Modal content
+        </div>
+      </div>
+    </div>
+    <div
+      aria-hidden="true"
+      data-focus-guard="true"
+      data-focus-on-hidden="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="0"
+    />
+  </div>
+</body>
+`;
+
+exports[`OakModal matches snapshot for top 1`] = `
+.c0 {
+  position: relative;
+  transition: all 0.3s ease;
+  font-family: --var(google-font),Lexend,sans-serif;
+  z-index: 300;
+}
+
+.c2 {
+  position: fixed;
+  inset: 0rem;
+  background: #22222240;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c4 {
+  color: #222222;
+  background: #ffffff;
+  box-shadow: 0 0 0.5rem rgba(92, 92, 92, 20%);
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c7 {
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c9 {
+  width: 100%;
+  min-height: 4rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c11 {
+  min-height: 2rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c13 {
+  position: relative;
+  width: max-content;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c19 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  color: transparent;
+  background: transparent;
+  border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c21 {
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 6.25rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c22 {
+  position: relative;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  display: block;
+  font-family: --var(google-font),Lexend,sans-serif;
+}
+
+.c25 {
+  overflow: auto;
+  min-height: 0rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  font-family: --var(google-font),Lexend,sans-serif;
+  overflow: auto;
+}
+
+.c5 {
+  display: flex;
+  flex-direction: column;
+}
+
+.c8 {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.c10 {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.c12 {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.c14 {
+  display: flex;
+}
+
+.c18 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0rem;
+}
+
+.c20 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c26 {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.c24 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.0115rem;
+}
+
+.c16 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: unset;
+  outline: none;
+  font-family: --var(google-font),Lexend,sans-serif;
+  color: transparent;
+}
+
+.c16:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c23 {
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+  object-fit: contain;
+}
+
+.c17 {
+  display: inline-block;
+  position: relative;
+}
+
+.c17:hover {
+  text-decoration: underline;
+  color: transparent;
+}
+
+.c17:hover:not(:active) [data-icon-for="button"] img {
+  filter: invert(10%) sepia(1%) saturate(236%) hue-rotate(314deg) brightness(95%) contrast(91%);
+}
+
+.c17:active {
+  color: transparent;
+}
+
+.c17:disabled {
+  color: transparent;
+}
+
+.c15 >:first-of-type:focus-visible .shadow {
+  box-shadow: 0 0 0 0.125rem rgba(255, 229, 85, 100%),0 0 0 0.3rem rgba(87, 87, 87, 100%);
+}
+
+.c15 >:first-of-type:hover .shadow {
+  box-shadow: none;
+}
+
+.c15 >:first-of-type:active .shadow {
+  box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%),0.25rem 0.25rem 0 rgba(87, 87, 87, 100%);
+}
+
+.c15 >:first-of-type:disabled .icon-container {
+  background: transparent;
+}
+
+.c15 >:first-of-type:hover .icon-container {
+  background: #f2f2f2;
+}
+
+.c15 >:first-of-type:active .icon-container {
+  background: transparent;
+}
+
+.c6 {
+  position: fixed;
+  overflow: clip;
+  left: 0rem;
+  right: 0rem;
+  top: 0rem;
+  height: 40rem;
+  max-height: 100%;
+}
+
+.c1 {
+  opacity: 1;
+}
+
+@media (max-width: 749px) {
+  .c6 {
+    inset: 0rem;
+    width: auto;
+    height: auto;
+    max-width: none;
+    max-height: none;
+  }
+}
+
+@media (max-width: 749px) {
+  .c3 {
+    display: none;
+  }
+}
+
+<body
+  data-scroll-locked="1"
+>
+  <div
+    aria-hidden="true"
+    data-focus-on-hidden="true"
+  />
+  <div
+    class="c0 c1"
+    data-testid="modal-root"
+  >
+    <div
+      aria-hidden="true"
+      class="c2 c3"
+      data-focus-on-hidden="true"
+      data-testid="modal-backdrop"
+    />
+    <div
+      aria-hidden="true"
+      data-focus-guard="true"
+      data-focus-on-hidden="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="0"
+    />
+    <div
+      data-focus-lock-disabled="false"
+    >
+      <div
+        aria-label="Filters"
+        aria-modal="true"
+        class="c4 c5 c6"
+        role="dialog"
+      >
+        <div
+          class="c7 c8"
+        >
+          <div
+            class="c9 c10"
+            data-testid="modal-header"
+          >
+            <div
+              class="c11 c12"
+            />
+            <div
+              class="c13 c14 c15"
+            >
+              <button
+                aria-label="Close"
+                class="c16 c17"
+                data-autofocus="true"
+              >
+                <div
+                  class="c7 c18"
+                >
+                  <div
+                    class="c19 c20 icon-container"
+                  >
+                    <div
+                      class="c21 shadow"
+                    />
+                    <span
+                      class="c22"
+                      data-icon-for="button"
+                    >
+                      <img
+                        alt=""
+                        class="c23"
+                        data-nimg="fill"
+                        decoding="async"
+                        loading="lazy"
+                        src="https://res.cloudinary.com/mock-cloudinary-cloud/image/upload/v1699895179/icons/xigimrbivcaxt4omxamp.svg"
+                        style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                      />
+                    </span>
+                  </div>
+                  <span
+                    class="c24"
+                  />
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="c25 c26"
+          data-testid="modal-content"
+          style="scrollbar-gutter: stable;"
+        >
+          Modal content
+        </div>
+      </div>
+    </div>
+    <div
+      aria-hidden="true"
+      data-focus-guard="true"
+      data-focus-on-hidden="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="0"
+    />
+  </div>
+</body>
+`;

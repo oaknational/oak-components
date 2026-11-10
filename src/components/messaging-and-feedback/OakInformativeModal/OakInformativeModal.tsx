@@ -8,12 +8,27 @@ import { useMounted } from "@/hooks/useMounted";
 import InternalModalTransition from "@/components/internal-components/InternalModalTransition/InternalModalTransition";
 import { BorderStyleProps } from "@/styles/utils/borderStyle";
 
+/**
+ * ⚠️ To be deprecated
+ * Use `<OakModal />` instead (it has no border colour context)
+ * @deprecated Use `<OakModal />` instead (it has no border colour context)
+ */
 export const OakInformativeModalBorderColor = createContext<
   BorderStyleProps["$borderColor"]
 >("border-neutral-lighter");
 
+/**
+ * ⚠️ To be deprecated
+ * Use `<OakModal />` instead (its `onClose` takes no arguments)
+ * @deprecated Use `<OakModal />` instead (its `onClose` takes no arguments)
+ */
 export type OakInformativeModalCloseAction = "close_button" | undefined;
 
+/**
+ * ⚠️ To be deprecated
+ * Use `OakModalProps` instead
+ * @deprecated Use `OakModalProps` instead
+ */
 export type OakInformativeModalProps = {
   /**
    * The content of the modal.
@@ -69,6 +84,12 @@ export type OakInformativeModalProps = {
 
 /**
  * Modal dialog with trapped focus and a close button. See the [design specification](https://www.figma.com/design/YcWQMMhHPVVmc47cHHEEAl/Oak-Design-Kit?node-id=15135-2063)
+ *
+ * ⚠️ To be deprecated
+ * Use `<OakModal position="right" />` (or `position="left"`) instead
+ * `zIndex` and `domContainer` carry over unchanged.
+ * Figma: <https://www.figma.com/design/YcWQMMhHPVVmc47cHHEEAl/Oak-Design-Kit?node-id=25437-6465>
+ * @deprecated Use `<OakModal position="right" />` (or `position="left"`) instead
  */
 export const OakInformativeModal = ({
   children,

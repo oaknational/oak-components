@@ -5,7 +5,7 @@ import { OakModalCenterBody } from "./OakModalCenterBody";
 const meta: Meta<typeof OakModalCenterBody> = {
   component: OakModalCenterBody,
   tags: ["autodocs"],
-  title: "components/Messaging and feedback/OakModalCenterBody",
+  title: "components/Messaging and feedback/OakModalCenterBody (deprecated)",
   argTypes: {
     children: {
       control: "text",

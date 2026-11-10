@@ -4,6 +4,8 @@ export * from "@/components/messaging-and-feedback/OakInformativeModal";
 export * from "@/components/messaging-and-feedback/OakInlineBanner";
 export * from "@/components/messaging-and-feedback/OakLoadingSpinner";
 export * from "@/components/messaging-and-feedback/OakModalCenter";
+export * from "@/components/messaging-and-feedback/OakDialog";
+export * from "@/components/messaging-and-feedback/OakModal";
 export * from "@/components/messaging-and-feedback/OakTagFunctional";
 export * from "@/components/messaging-and-feedback/OakToast";
 export * from "@/components/messaging-and-feedback/OakTooltip";

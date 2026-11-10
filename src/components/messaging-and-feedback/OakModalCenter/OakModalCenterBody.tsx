@@ -19,6 +19,11 @@ import {
   OakIconProps,
 } from "@/components/images-and-icons/OakIcon";
 
+/**
+ * ⚠️ To be deprecated
+ * Use `<OakDialog />` with `OakHeading` and `OakP` in its content instead
+ * @deprecated Use `<OakDialog />` with `OakHeading` and `OakP` in its content instead
+ */
 export type OakModalCenterBodyProps = {
   /**
    * The name of the icon to display. Accepts an icon name token
@@ -59,6 +64,10 @@ export type OakModalCenterBodyProps = {
  * - **children** \-            The content of the modal body
  * - **headingOverride** \-     Override HTMLAttributes & OakHEading props for the heading
  * - **iconOverride** \-        Override HTMLAttributes & OakIcon props for the icon
+ *
+ * ⚠️ To be deprecated
+ * Use `<OakDialog />` with `OakHeading` and `OakP` in its content instead
+ * @deprecated Use `<OakDialog />` with `OakHeading` and `OakP` in its content instead
  */
 export const OakModalCenterBody = ({
   children,
