@@ -6,7 +6,11 @@ import { OakDialog } from "./OakDialog";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 
-const Harness = () => {
+const Harness = ({
+  returnFocus,
+}: {
+  returnFocus?: (returnTo: Element) => boolean | FocusOptions;
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
@@ -14,6 +18,7 @@ const Harness = () => {
       <OakDialog
         isOpen={isOpen}
         aria-labelledby="dialog-title"
+        returnFocus={returnFocus}
         footerSlot={
           <button onClick={() => setIsOpen(false)}>I understand</button>
         }
@@ -230,6 +235,24 @@ describe("OakDialog", () => {
         expect(queryByRole("alertdialog")).not.toBeInTheDocument(),
       );
       await waitFor(() => expect(trigger).toHaveFocus());
+    });
+
+    it("passes returnFocus through", async () => {
+      const returnFocus = jest.fn(() => false);
+      const { getByRole, queryByRole } = renderWithTheme(
+        <Harness returnFocus={returnFocus} />,
+      );
+      const trigger = getByRole("button", { name: "Open" });
+      trigger.focus();
+      fireEvent.click(trigger);
+      await waitFor(() => expect(getByRole("alertdialog")).toBeInTheDocument());
+
+      fireEvent.click(getByRole("button", { name: "I understand" }));
+      await waitFor(() =>
+        expect(queryByRole("alertdialog")).not.toBeInTheDocument(),
+      );
+      await waitFor(() => expect(returnFocus).toHaveBeenCalledWith(trigger));
+      expect(trigger).not.toHaveFocus();
     });
   });
 });

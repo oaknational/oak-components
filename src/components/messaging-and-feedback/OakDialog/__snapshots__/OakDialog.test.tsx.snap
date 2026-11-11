@@ -26,13 +26,17 @@ exports[`OakDialog matches snapshot 1`] = `
 .c6 {
   overflow: auto;
   min-height: 0rem;
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
   margin: 0.5rem;
   font-family: --var(google-font),Lexend,sans-serif;
   overflow: auto;
+}
+
+.c8 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  font-family: --var(google-font),Lexend,sans-serif;
 }
 
 .c4 {
@@ -59,6 +63,30 @@ exports[`OakDialog matches snapshot 1`] = `
 
 .c1 {
   opacity: 1;
+}
+
+@media (min-width: 750px) {
+  .c8 {
+    padding-left: 3.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .c8 {
+    padding-left: 3.5rem;
+  }
+}
+
+@media (min-width: 750px) {
+  .c8 {
+    padding-right: 3.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .c8 {
+    padding-right: 3.5rem;
+  }
 }
 
 <body
@@ -101,7 +129,12 @@ exports[`OakDialog matches snapshot 1`] = `
           style="scrollbar-gutter: stable;"
           tabindex="-1"
         >
-          Dialog content
+          <div
+            class="c8 c4"
+            data-testid="modal-content-inner"
+          >
+            Dialog content
+          </div>
         </div>
       </div>
     </div>

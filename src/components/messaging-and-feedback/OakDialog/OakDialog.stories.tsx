@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useId } from "react";
 import { Meta, StoryObj } from "@storybook/nextjs";
 
 import { OakDialog, OakDialogProps } from "./OakDialog";
@@ -188,5 +188,60 @@ function FocusButtonOnOpenDemo(args: OakDialogProps) {
         </OakFlex>
       </OakDialog>
     </>
+  );
+}
+
+export const ReturnFocus: Story = {
+  name: "Return focus to another element",
+  parameters: {
+    controls: {
+      include: ["width", "maxHeight"],
+    },
+    docs: {
+      description: {
+        story: `By default, focus goes back to the button that opened the dialog when it
+closes. To send it somewhere else, pass a \`returnFocus\` function that focuses
+the element you want and returns \`false\`, so focus isn't also moved back to
+the trigger.
+
+Open the dialog, then choose an option: focus moves to "View lesson".`,
+      },
+    },
+  },
+  render: (args) => <ReturnFocusDemo {...args} />,
+};
+
+function ReturnFocusDemo(args: OakDialogProps) {
+  const [isOpen, setIsOpen] = useStoryOpenState(args.isOpen);
+  const lessonId = useId();
+  const close = () => setIsOpen(false);
+  const returnFocus = () => {
+    document.getElementById(lessonId)?.focus();
+    return false;
+  };
+
+  return (
+    <OakFlex $gap="spacing-16">
+      <OakSecondaryButton onClick={() => setIsOpen(true)}>
+        Open dialog
+      </OakSecondaryButton>
+      <OakSecondaryButton id={lessonId}>View lesson</OakSecondaryButton>
+      <OakDialog
+        {...args}
+        isOpen={isOpen}
+        returnFocus={returnFocus}
+        footerSlot={footer("horizontal", close)}
+      >
+        <OakFlex $flexDirection="column" $gap="spacing-20">
+          <OakHeading tag="h2" id="oak-dialog-title" $font="heading-5">
+            This lesson contains conflict or violence
+          </OakHeading>
+          <OakP id="oak-dialog-description" $font="body-2">
+            When this dialog closes, focus moves to &quot;View lesson&quot;
+            instead of the button that opened it.
+          </OakP>
+        </OakFlex>
+      </OakDialog>
+    </OakFlex>
   );
 }

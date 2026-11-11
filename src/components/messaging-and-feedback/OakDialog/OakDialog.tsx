@@ -46,6 +46,12 @@ export type OakDialogProps = {
    * Overrides the `modal-dialog` z-index token. Only for consumers not using Oak z-index tokens.
    */
   zIndex?: number;
+  /**
+   * Override for the `returnFocus` behaviour of `FocusOn`.
+   *
+   * By default focus returns to the element that was focused before the dialog opened.
+   */
+  returnFocus?: (returnTo: Element) => boolean | FocusOptions;
 } & InternalModalAccessibleName;
 
 /**
@@ -73,11 +79,8 @@ export const OakDialog = ({
   "aria-describedby": ariaDescribedBy,
   domContainer,
   zIndex,
+  returnFocus,
 }: OakDialogProps) => {
-  const accessibleName: InternalModalAccessibleName = ariaLabelledBy
-    ? { "aria-labelledby": ariaLabelledBy }
-    : { "aria-label": ariaLabel ?? "" };
-
   return (
     <InternalModalBase
       isOpen={isOpen}
@@ -91,7 +94,9 @@ export const OakDialog = ({
       aria-describedby={ariaDescribedBy}
       domContainer={domContainer}
       zIndex={zIndex}
-      {...accessibleName}
+      returnFocus={returnFocus}
+      aria-label={ariaLabel}
+      aria-labelledby={ariaLabelledBy}
     >
       {children}
     </InternalModalBase>
