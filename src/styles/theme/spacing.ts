@@ -70,6 +70,4 @@ export const additionalSpacingTokens = {
 export type AdditionalSpacingTypes = keyof typeof additionalSpacingTokens;
 
 export type OakCombinedSpacingToken =
-  | OakAllSpacingToken
-  | OakSpaceBetweenToken
-  | AdditionalSpacingTypes;
+  OakAllSpacingToken | OakSpaceBetweenToken | AdditionalSpacingTypes;

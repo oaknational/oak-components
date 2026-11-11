@@ -39,12 +39,14 @@ export type OakMediaClipProps = {
 };
 
 type MediaClipStyles = {
-  [K in
-    | "defaultBackground"
-    | "defaultTextColor"
-    | "hoverBackground"
-    | "hoverTextColor"
-    | "clipNameTitle"]: OakUiRoleToken;
+  [
+    K in
+      | "defaultBackground"
+      | "defaultTextColor"
+      | "hoverBackground"
+      | "hoverTextColor"
+      | "clipNameTitle"
+  ]: OakUiRoleToken;
 };
 
 const getButtonStyles = (muxPlayingState: MuxPlayingState): MediaClipStyles => {
@@ -142,9 +144,9 @@ const StyledInternalButton = styled(InternalButton)<
   ${(props) => css`
     &:hover {
       h4 {
-        text-decoration: ${props.$muxPlayingState === "standard"
-          ? "underline"
-          : "none"};
+        text-decoration: ${
+          props.$muxPlayingState === "standard" ? "underline" : "none"
+        };
       }
       color: ${parseColor(props.$hoverTextColor)};
       background: ${parseColor(props.$hoverBackground)};
