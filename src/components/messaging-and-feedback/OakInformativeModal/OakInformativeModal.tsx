@@ -19,8 +19,8 @@ export const OakInformativeModalBorderColor = createContext<
 
 /**
  * ⚠️ To be deprecated
- * Use `<OakModal />` instead (its `onClose` takes no arguments)
- * @deprecated Use `<OakModal />` instead (its `onClose` takes no arguments)
+ * Use `OakModalCloseAction` instead
+ * @deprecated Use `OakModalCloseAction` instead
  */
 export type OakInformativeModalCloseAction = "close_button" | undefined;
 
