@@ -1,6 +1,6 @@
 {
   "name": "@oaknational/oak-components",
-  "version": "3.25.0",
+  "version": "3.26.0",
   "licence": "MIT",
   "packageManager": "pnpm@11.2.0",
   "description": "Shared components for Oak applications",
@@ -64,6 +64,7 @@
     "@dnd-kit/sortable": "^10.0.0",
     "@dnd-kit/utilities": "^3.2.2",
     "@tiptap/react": "^2.11.0",
+    "lodash": "^4.18.1",
     "react-focus-on": "^3.10.2",
     "react-transition-group": "^4.4.5",
     "rollup-plugin-preserve-shebang": "^1.0.1",
@@ -78,6 +79,7 @@
     "@babel/runtime": "^7.28.4",
     "@commitlint/cli": "^18.4.4",
     "@commitlint/config-conventional": "^18.4.4",
+    "@types/lodash": "^4.17.27",
     "@rollup/plugin-commonjs": "^29.0.2",
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^16.0.3",

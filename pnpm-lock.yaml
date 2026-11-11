@@ -23,6 +23,9 @@ importers:
       '@tiptap/react':
         specifier: ^2.11.0
         version: 2.11.0(@tiptap/core@2.11.0(@tiptap/pm@2.11.0))(@tiptap/pm@2.11.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      lodash:
+        specifier: ^4.18.1
+        version: 4.18.1
       next-cloudinary:
         specifier: '>=6.16.0'
         version: 6.16.0(next@15.5.29(@babel/core@7.29.7)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react@18.2.0)
@@ -104,7 +107,7 @@ importers:
         version: 10.6.6(storybook@10.6.6(@types/react@18.2.47)(prettier@3.8.3)(react@18.2.0))
       '@storybook/nextjs':
         specifier: 10.6.6
-        version: 10.6.6(@swc/core@1.15.43)(@types/react-dom@18.3.7(@types/react@18.2.47))(@types/react@18.2.47)(next@15.5.15(@babel/core@7.29.7)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@10.6.6(@types/react@18.2.47)(prettier@3.8.3)(react@18.2.0))(type-fest@4.41.0)(typescript@5.9.3)(webpack-hot-middleware@2.26.1)(webpack@5.106.2(@swc/core@1.15.43))
+        version: 10.6.6(@swc/core@1.15.43)(@types/react-dom@18.3.7(@types/react@18.2.47))(@types/react@18.2.47)(next@15.5.29(@babel/core@7.29.7)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@10.6.6(@types/react@18.2.47)(prettier@3.8.3)(react@18.2.0))(type-fest@4.41.0)(typescript@5.9.3)(webpack-hot-middleware@2.26.1)(webpack@5.106.2(@swc/core@1.15.43))
       '@storybook/test-runner':
         specifier: ^0.24.5
         version: 0.24.5(@types/node@25.6.0)(storybook@10.6.6(@types/react@18.2.47)(prettier@3.8.3)(react@18.2.0))
@@ -126,6 +129,9 @@ importers:
       '@types/jscodeshift':
         specifier: ^17.3.0
         version: 17.3.0
+      '@types/lodash':
+        specifier: ^4.17.27
+        version: 4.17.27
       '@types/node':
         specifier: ^25.6.0
         version: 25.6.0
@@ -3167,6 +3173,9 @@ packages:
 
   '@types/linkify-it@5.0.0':
     resolution: {integrity: sha512-sVDA58zAw4eWAffKOaQH5/5j3XeayukzDk+ewSsnv3p4yJEZHCCzMDiZM8e0OUrRvmpGZ85jf4yDHkHsgBNr9Q==}
+
+  '@types/lodash@4.17.27':
+    resolution: {integrity: sha512-VenMRv/eKNrspX9v3H4dbmjsrnCOYdYBG3kxXKk3dG6X+urBGcj2Prww3xw1U5K4FV/mE4h5GbWd0szEKf+9ew==}
 
   '@types/markdown-it@14.1.2':
     resolution: {integrity: sha512-promo4eFwuiW+TfGxhi+0x3czqTYJkG8qB17ZUJiVF10Xm7NLVRSLUsfRTU/6h1e24VvRnXCx+hG7li58lkzog==}
@@ -6499,6 +6508,7 @@ packages:
 
   node-abort-controller@3.1.1:
     resolution: {integrity: sha512-AGK2yQKIjRuqnc6VkX2Xj5d+QW8xZ87pa1UK6yA6ouUyuxfHuMP6umE5QK7UmTeOAymo+Zx1Fxiuw9rVx8taHQ==}
+    deprecated: This package is no longer needed on supported Node.js versions. Node.js 16+ includes AbortController and AbortSignal as built-in globals. All Node.js versions requiring this polyfill are end-of-life. Use the built-in globals instead.
 
   node-emoji@2.2.0:
     resolution: {integrity: sha512-Z3lTE9pLaJF47NyMhd4ww1yFTAP8YhYI8SleJiHzM46Fgpm5cnNzSl9XfzFNqbaz+VlJrIj3fXQ4DeN1Rjm6cw==}
@@ -11280,7 +11290,7 @@ snapshots:
     dependencies:
       react: 18.2.0
 
-  '@storybook/nextjs@10.6.6(@swc/core@1.15.43)(@types/react-dom@18.3.7(@types/react@18.2.47))(@types/react@18.2.47)(next@15.5.15(@babel/core@7.29.7)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@10.6.6(@types/react@18.2.47)(prettier@3.8.3)(react@18.2.0))(type-fest@4.41.0)(typescript@5.9.3)(webpack-hot-middleware@2.26.1)(webpack@5.106.2(@swc/core@1.15.43))':
+  '@storybook/nextjs@10.6.6(@swc/core@1.15.43)(@types/react-dom@18.3.7(@types/react@18.2.47))(@types/react@18.2.47)(next@15.5.29(@babel/core@7.29.7)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@10.6.6(@types/react@18.2.47)(prettier@3.8.3)(react@18.2.0))(type-fest@4.41.0)(typescript@5.9.3)(webpack-hot-middleware@2.26.1)(webpack@5.106.2(@swc/core@1.15.43))':
     dependencies:
       '@babel/core': 7.29.7
       '@babel/plugin-syntax-bigint': 7.8.3(@babel/core@7.29.7)
@@ -11819,6 +11829,8 @@ snapshots:
   '@types/json5@0.0.29': {}
 
   '@types/linkify-it@5.0.0': {}
+
+  '@types/lodash@4.17.27': {}
 
   '@types/markdown-it@14.1.2':
     dependencies:
