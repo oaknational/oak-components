@@ -1,7 +1,12 @@
 engineStrict: true
+minimumReleaseAge: 10080
 allowBuilds:
+  "@parcel/watcher": false
   "@swc/core": false
   core-js-pure: false
   esbuild: false
   sharp: false
   unrs-resolver: false
+overrides:
+  # 18.3 ref types break polymorphic forwardRef components; a second copy also conflicts
+  "@types/react": 18.2.47

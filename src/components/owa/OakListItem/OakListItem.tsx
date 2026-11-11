@@ -82,9 +82,7 @@ export type OakListItemProps = {
   title: string;
   isLegacy: boolean;
   firstItemRef?:
-    | React.MutableRefObject<HTMLDivElement | null>
-    | null
-    | undefined;
+    React.MutableRefObject<HTMLDivElement | null> | null | undefined;
   onClick?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
   middleSlot?: React.ReactNode;
   endSlot?: React.ReactNode;

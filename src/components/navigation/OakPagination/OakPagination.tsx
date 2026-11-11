@@ -62,9 +62,9 @@ const StyledNumberButton = styled(OakLink)<
   color: ${parseColor("text-primary")};
 
   ${(props) => css`
-    background-color: ${props.$selected
-      ? parseColor("icon-primary")
-      : parseColor("icon-inverted")};
+    background-color: ${
+      props.$selected ? parseColor("icon-primary") : parseColor("icon-inverted")
+    };
   `};
 
   ${(props) =>

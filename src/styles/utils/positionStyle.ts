@@ -12,12 +12,7 @@ import {
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 
 type PositionSpacing =
-  | OakAllSpacingToken
-  | OakSpaceBetweenToken
-  | "-50%"
-  | "50%"
-  | null
-  | undefined;
+  OakAllSpacingToken | OakSpaceBetweenToken | "-50%" | "50%" | null | undefined;
 
 export type PositionStyleProps = {
   /**
