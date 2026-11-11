@@ -23,6 +23,7 @@ export type InternalModalPlacement =
 /**
  * A modal must have an accessible name. Exactly one of `aria-label` or
  * `aria-labelledby` is required: passing neither, or both, is a type error.
+ * For the public modal components' props.
  */
 export type InternalModalAccessibleName =
   | { "aria-label": string; "aria-labelledby"?: never }
@@ -96,7 +97,20 @@ export type InternalModalBaseProps = {
    * Optional z-index override. Defaults to token: `modal-dialog`
    */
   zIndex?: number;
-} & InternalModalAccessibleName;
+  /**
+   * Override for the `returnFocus` behaviour of `FocusOn`.
+   *
+   * By default focus returns to the element that was focused before the modal opened.
+   */
+  returnFocus?: (returnTo: Element) => boolean | FocusOptions;
+  /**
+   * Loosely typed so wrappers can pass both props straight through. Public
+   * components enforce exactly one with `InternalModalAccessibleName`.
+   * `aria-labelledby` wins if both are given.
+   */
+  "aria-label"?: string;
+  "aria-labelledby"?: string;
+};
 
 /**
  * How long the fade in and out takes. Matches the `standard-ease` transition token.
@@ -229,11 +243,13 @@ export const InternalModalBase = ({
   "aria-describedby": ariaDescribedBy,
   domContainer,
   zIndex,
+  returnFocus,
 }: InternalModalBaseProps) => {
   // `createPortal` is not supported in SSR so we only render once mounted on the client
   const isMounted = useMounted();
   const fadeRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
+  const contentInnerRef = useRef<HTMLDivElement>(null);
 
   const [isScrollable, setIsScrollable] = useState(false);
 
@@ -246,30 +262,29 @@ export const InternalModalBase = ({
 
     checkIsScrollable();
 
-    // Re-check whenever the content or anything inside it changes size,
-    // e.g. the window resizes, images load or an accordion opens
+    // Re-check whenever the scroll area or its content changes size, e.g. the
+    // window resizes, images load, an accordion opens or a child adds content
     const content = contentRef.current;
-    if (!content || typeof ResizeObserver === "undefined") {
+    const contentInner = contentInnerRef.current;
+    if (!content || !contentInner || typeof ResizeObserver === "undefined") {
       return;
     }
     const resizeObserver = new ResizeObserver(checkIsScrollable);
     resizeObserver.observe(content);
-    Array.from(content.children).forEach((child) =>
-      resizeObserver.observe(child),
-    );
+    resizeObserver.observe(contentInner);
 
     return () => resizeObserver.disconnect();
-  }, [isOpen, isMounted, children]);
+  }, [isOpen, isMounted]);
 
   if (!isMounted) {
     return null;
   }
 
   const finalZIndex = zIndex ?? "modal-dialog";
-  // Rounded corners would clip a scrollbar at the panel's edge, so the
-  // scrolling area is moved 8px in from the edges, as in Figma. Its padding is
-  // 8px smaller to match, so the content stays 56px / 64px from the edges.
-  const hasRoundedCorners = borderRadius !== undefined;
+  // Rounded corners would clip a scrollbar at the panel's edge, so the centred
+  // panel's scrolling area is moved 8px in from the edges, as in Figma. Its
+  // padding is 8px smaller to match, so the content stays 56px / 64px from the edges.
+  const isCentre = placement === "centre";
 
   let contentTabIndex: 0 | -1 | undefined;
   if (isScrollable) {
@@ -309,7 +324,7 @@ export const InternalModalBase = ({
             // Only while open, so a closing modal can't be dismissed twice
             onEscapeKey={isOpen ? onDismiss : undefined}
             onClickOutside={isOpen ? onDismiss : undefined}
-            returnFocus
+            returnFocus={returnFocus ?? true}
             autoFocus
             preventScrollOnFocus
           >
@@ -324,7 +339,7 @@ export const InternalModalBase = ({
               $borderRadius={borderRadius}
               role={role}
               aria-modal={true}
-              aria-label={ariaLabel}
+              aria-label={ariaLabelledBy ? undefined : ariaLabel}
               aria-labelledby={ariaLabelledBy}
               aria-describedby={ariaDescribedBy}
             >
@@ -336,9 +351,7 @@ export const InternalModalBase = ({
                 // Lets the content shrink and scroll instead of pushing the footer off-screen
                 $minHeight="spacing-0"
                 $overflow="auto"
-                $ma={hasRoundedCorners ? "spacing-8" : undefined}
-                $pv={hasRoundedCorners ? "spacing-48" : "spacing-56"}
-                $ph={hasRoundedCorners ? "spacing-56" : "spacing-64"}
+                $ma={isCentre ? "spacing-8" : undefined}
                 // Stops the content shifting sideways when a scrollbar appears
                 style={{ scrollbarGutter: "stable" }}
                 tabIndex={contentTabIndex}
@@ -346,7 +359,19 @@ export const InternalModalBase = ({
                 data-autofocus={autoFocusContent || undefined}
                 data-testid="modal-content"
               >
-                {children}
+                <OakFlex
+                  ref={contentInnerRef}
+                  $flexDirection="column"
+                  $pv={isCentre ? "spacing-48" : "spacing-56"}
+                  $ph={
+                    isCentre
+                      ? ["spacing-16", "spacing-56", "spacing-56"]
+                      : ["spacing-16", "spacing-64", "spacing-64"]
+                  }
+                  data-testid="modal-content-inner"
+                >
+                  {children}
+                </OakFlex>
               </OakFlex>
               {footerSlot && (
                 <OakFlex $flexShrink={0} $flexDirection="column">

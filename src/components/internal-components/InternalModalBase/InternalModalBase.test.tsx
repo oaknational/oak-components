@@ -20,9 +20,7 @@ const defaultProps: InternalModalBaseProps = {
   children: "Modal content",
 };
 
-type Overrides = Partial<
-  Omit<InternalModalBaseProps, "aria-label" | "aria-labelledby">
->;
+type Overrides = Partial<InternalModalBaseProps>;
 
 const renderBase = (props: Overrides = {}) =>
   renderWithTheme(<InternalModalBase {...defaultProps} {...props} />);
@@ -79,27 +77,19 @@ describe("InternalModalBase", () => {
     expect(getByRole("dialog", { name: "A title" })).toBeInTheDocument();
   });
 
-  it("requires exactly one of aria-label or aria-labelledby", () => {
-    // These are type checks: `pnpm check-types` fails if the errors go away
-    const neither = (
-      // @ts-expect-error - an accessible name is required
-      <InternalModalBase isOpen placement="centre">
-        Content
-      </InternalModalBase>
-    );
-    const both = (
-      // @ts-expect-error - only one accessible name may be given
+  it("prefers aria-labelledby when both names are given", () => {
+    const { getByRole } = renderWithTheme(
       <InternalModalBase
         isOpen
         placement="centre"
         aria-label="Label"
         aria-labelledby="title"
       >
-        Content
-      </InternalModalBase>
+        <h2 id="title">A title</h2>
+      </InternalModalBase>,
     );
-    expect(neither).toBeDefined();
-    expect(both).toBeDefined();
+    const dialog = getByRole("dialog", { name: "A title" });
+    expect(dialog).not.toHaveAttribute("aria-label");
   });
 
   it("uses the given role", () => {
@@ -282,22 +272,37 @@ describe("InternalModalBase", () => {
   });
 
   describe("content spacing", () => {
-    it("runs to the panel's edges when the corners are square", () => {
-      const { getByTestId } = renderBase();
-      const content = getByTestId("modal-content");
-      expect(content).not.toHaveStyleRule("margin", expect.anything());
-      expect(content).toHaveStyleRule("padding-top", "3.5rem");
-      expect(content).toHaveStyleRule("padding-left", "4rem");
+    const tabletUp = { media: "(min-width: 750px)" };
+
+    it("runs to the panel's edges when not centred", () => {
+      const { getByTestId } = renderBase({ placement: "right" });
+      expect(getByTestId("modal-content")).not.toHaveStyleRule(
+        "margin",
+        expect.anything(),
+      );
+      const inner = getByTestId("modal-content-inner");
+      expect(inner).toHaveStyleRule("padding-top", "3.5rem");
+      expect(inner).toHaveStyleRule("padding-left", "1rem");
+      expect(inner).toHaveStyleRule("padding-left", "4rem", tabletUp);
     });
 
-    it("is inset from rounded corners so they don't clip the scrollbar, keeping the content in place", () => {
-      const { getByTestId } = renderBase({ borderRadius: "border-radius-xl" });
-      const content = getByTestId("modal-content");
+    it("is inset when centred so the rounded corners don't clip the scrollbar, keeping the content in place", () => {
+      const { getByTestId } = renderBase({ placement: "centre" });
       // 8px in from the panel's edges...
-      expect(content).toHaveStyleRule("margin", "0.5rem");
+      expect(getByTestId("modal-content")).toHaveStyleRule("margin", "0.5rem");
       // ...and 8px less padding, so the content is still 56px / 64px from the edges
-      expect(content).toHaveStyleRule("padding-top", "3rem");
-      expect(content).toHaveStyleRule("padding-left", "3.5rem");
+      const inner = getByTestId("modal-content-inner");
+      expect(inner).toHaveStyleRule("padding-top", "3rem");
+      expect(inner).toHaveStyleRule("padding-left", "1rem");
+      expect(inner).toHaveStyleRule("padding-left", "3.5rem", tabletUp);
+    });
+
+    it("keeps the padding off the scroll area so it can shrink on short screens", () => {
+      const { getByTestId } = renderBase();
+      expect(getByTestId("modal-content")).not.toHaveStyleRule(
+        "padding-top",
+        expect.anything(),
+      );
     });
   });
 
@@ -324,6 +329,65 @@ describe("InternalModalBase", () => {
         expect(content).not.toHaveAttribute("tabindex");
 
         // e.g. images load or an accordion opens without `children` changing
+        Object.defineProperty(content, "scrollHeight", {
+          configurable: true,
+          value: 500,
+        });
+        Object.defineProperty(content, "clientHeight", {
+          configurable: true,
+          value: 100,
+        });
+        act(() => {
+          callbacks.forEach((callback) => callback([], {} as ResizeObserver));
+        });
+
+        expect(content).toHaveAttribute("tabindex", "0");
+      } finally {
+        globalThis.ResizeObserver = original;
+      }
+    });
+
+    it("is tabbable once a stateful child adds enough content to scroll", () => {
+      const callbacks: ResizeObserverCallback[] = [];
+      const observed: Element[] = [];
+      const original = globalThis.ResizeObserver;
+      globalThis.ResizeObserver = class {
+        constructor(callback: ResizeObserverCallback) {
+          callbacks.push(callback);
+        }
+        observe(target: Element) {
+          observed.push(target);
+        }
+        unobserve() {}
+        disconnect() {}
+      };
+
+      // Adds paragraphs through its own state, so the parent's `children` never change
+      const GrowingContent = () => {
+        const [count, setCount] = useState(1);
+        return (
+          <>
+            {Array.from({ length: count }, (_, i) => (
+              <p key={i}>Paragraph {i + 1}</p>
+            ))}
+            <button onClick={() => setCount((c) => c + 5)}>Add more</button>
+          </>
+        );
+      };
+
+      try {
+        const { getByTestId, getByRole, getByText } = renderBase({
+          children: <GrowingContent />,
+        });
+        const content = getByTestId("modal-content");
+        expect(content).not.toHaveAttribute("tabindex");
+
+        fireEvent.click(getByRole("button", { name: "Add more" }));
+        expect(getByText("Paragraph 6")).toBeInTheDocument();
+
+        // The wrapper around the children grows, so it must be observed
+        expect(observed).toContain(getByTestId("modal-content-inner"));
+
         Object.defineProperty(content, "scrollHeight", {
           configurable: true,
           value: 500,
@@ -427,6 +491,41 @@ describe("InternalModalBase", () => {
         expect(queryByRole("dialog")).not.toBeInTheDocument(),
       );
       await waitFor(() => expect(trigger).toHaveFocus());
+    });
+
+    it("lets returnFocus override where focus goes after closing", async () => {
+      // Returning false stops focus going back to the trigger
+      const returnFocus = jest.fn(() => false);
+      const Harness = () => {
+        const [isOpen, setIsOpen] = useState(false);
+        return (
+          <>
+            <button onClick={() => setIsOpen(true)}>Open</button>
+            <InternalModalBase
+              isOpen={isOpen}
+              placement="centre"
+              aria-label="Test modal"
+              onDismiss={() => setIsOpen(false)}
+              returnFocus={returnFocus}
+            >
+              <button>Inside</button>
+            </InternalModalBase>
+          </>
+        );
+      };
+      const { getByRole, queryByRole } = renderWithTheme(<Harness />);
+      const trigger = getByRole("button", { name: "Open" });
+      trigger.focus();
+      fireEvent.click(trigger);
+      await waitFor(() =>
+        expect(getByRole("button", { name: "Inside" })).toHaveFocus(),
+      );
+      fireEvent.keyDown(document, { key: "Escape" });
+      await waitFor(() =>
+        expect(queryByRole("dialog")).not.toBeInTheDocument(),
+      );
+      await waitFor(() => expect(returnFocus).toHaveBeenCalledWith(trigger));
+      expect(trigger).not.toHaveFocus();
     });
   });
 });
