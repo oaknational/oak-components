@@ -49,14 +49,23 @@ export default meta;
 type Story = StoryObj<typeof OakModal>;
 
 // Two buttons for horizontal / vertical, one for left / right, as in Figma
-const footer = (layout: OakModalFooterLayout, onAction: () => void) => (
-  <OakModalFooter layout={layout}>
-    {(layout === "horizontal" || layout === "vertical") && (
-      <OakSecondaryButton onClick={onAction}>Secondary</OakSecondaryButton>
-    )}
-    <OakPrimaryButton onClick={onAction}>Primary</OakPrimaryButton>
-  </OakModalFooter>
-);
+// Buttons fill the footer for horizontal / vertical, as in Figma
+const footer = (layout: OakModalFooterLayout, onAction: () => void) => {
+  const isFullWidth = layout === "horizontal" || layout === "vertical";
+  const width = isFullWidth ? "100%" : undefined;
+  return (
+    <OakModalFooter layout={layout}>
+      {isFullWidth && (
+        <OakSecondaryButton onClick={onAction} width={width}>
+          Secondary
+        </OakSecondaryButton>
+      )}
+      <OakPrimaryButton onClick={onAction} width={width}>
+        Primary
+      </OakPrimaryButton>
+    </OakModalFooter>
+  );
+};
 
 const ModalStory = ({
   args,

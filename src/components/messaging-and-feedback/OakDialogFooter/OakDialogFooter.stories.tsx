@@ -26,16 +26,22 @@ const meta: Meta<typeof OakDialogFooter> = {
     layout: "horizontal",
   },
   // Shown at a typical dialog width so the layouts are easy to compare
-  render: (args: OakDialogFooterProps) => (
-    <OakBox $width="spacing-480">
-      <OakDialogFooter {...args}>
-        {(args.layout === "horizontal" || args.layout === "vertical") && (
-          <OakSecondaryButton>Secondary</OakSecondaryButton>
-        )}
-        <OakPrimaryButton>Primary</OakPrimaryButton>
-      </OakDialogFooter>
-    </OakBox>
-  ),
+  render: (args: OakDialogFooterProps) => {
+    // Buttons fill the footer for horizontal / vertical, as in Figma
+    const isFullWidth =
+      args.layout === "horizontal" || args.layout === "vertical";
+    const width = isFullWidth ? "100%" : undefined;
+    return (
+      <OakBox $width="spacing-480">
+        <OakDialogFooter {...args}>
+          {isFullWidth && (
+            <OakSecondaryButton width={width}>Secondary</OakSecondaryButton>
+          )}
+          <OakPrimaryButton width={width}>Primary</OakPrimaryButton>
+        </OakDialogFooter>
+      </OakBox>
+    );
+  },
 };
 
 export default meta;

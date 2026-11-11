@@ -45,14 +45,23 @@ export default meta;
 type Story = StoryObj<typeof OakDialog>;
 
 // Two buttons for horizontal / vertical, one for left / right, as in Figma
-const footer = (layout: OakDialogFooterLayout, onAction: () => void) => (
-  <OakDialogFooter layout={layout}>
-    {(layout === "horizontal" || layout === "vertical") && (
-      <OakSecondaryButton onClick={onAction}>Secondary</OakSecondaryButton>
-    )}
-    <OakPrimaryButton onClick={onAction}>Primary</OakPrimaryButton>
-  </OakDialogFooter>
-);
+// Buttons fill the footer for horizontal / vertical, as in Figma
+const footer = (layout: OakDialogFooterLayout, onAction: () => void) => {
+  const isFullWidth = layout === "horizontal" || layout === "vertical";
+  const width = isFullWidth ? "100%" : undefined;
+  return (
+    <OakDialogFooter layout={layout}>
+      {isFullWidth && (
+        <OakSecondaryButton onClick={onAction} width={width}>
+          Secondary
+        </OakSecondaryButton>
+      )}
+      <OakPrimaryButton onClick={onAction} width={width}>
+        Primary
+      </OakPrimaryButton>
+    </OakDialogFooter>
+  );
+};
 
 const DialogStory = ({
   args,

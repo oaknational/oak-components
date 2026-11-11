@@ -29,16 +29,22 @@ const meta: Meta<typeof InternalModalFooter> = {
     layout: "horizontal",
   },
   // Shown at a typical drawer width so the layouts are easy to compare
-  render: (args: InternalModalFooterProps) => (
-    <OakBox $width="spacing-480">
-      <InternalModalFooter {...args}>
-        {(args.layout === "horizontal" || args.layout === "vertical") && (
-          <OakSecondaryButton>Secondary</OakSecondaryButton>
-        )}
-        <OakPrimaryButton>Primary</OakPrimaryButton>
-      </InternalModalFooter>
-    </OakBox>
-  ),
+  render: (args: InternalModalFooterProps) => {
+    // Buttons fill the footer for horizontal / vertical, as in Figma
+    const isFullWidth =
+      args.layout === "horizontal" || args.layout === "vertical";
+    const width = isFullWidth ? "100%" : undefined;
+    return (
+      <OakBox $width="spacing-480">
+        <InternalModalFooter {...args}>
+          {isFullWidth && (
+            <OakSecondaryButton width={width}>Secondary</OakSecondaryButton>
+          )}
+          <OakPrimaryButton width={width}>Primary</OakPrimaryButton>
+        </InternalModalFooter>
+      </OakBox>
+    );
+  },
 };
 
 export default meta;

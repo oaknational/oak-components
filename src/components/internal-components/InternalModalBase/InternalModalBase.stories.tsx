@@ -103,8 +103,12 @@ function AutoFocusContentDemo(args: InternalModalBaseProps) {
         onDismiss={close}
         footerSlot={
           <InternalModalFooter layout="horizontal">
-            <OakSecondaryButton onClick={close}>Secondary</OakSecondaryButton>
-            <OakPrimaryButton onClick={close}>Primary</OakPrimaryButton>
+            <OakSecondaryButton onClick={close} width="100%">
+              Secondary
+            </OakSecondaryButton>
+            <OakPrimaryButton onClick={close} width="100%">
+              Primary
+            </OakPrimaryButton>
           </InternalModalFooter>
         }
       >
