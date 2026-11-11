@@ -15,6 +15,12 @@ export type OakModalPosition =
   | "top"
   | "bottom";
 
+/**
+ * `close_button` when the close button was used, otherwise `undefined`
+ * (Escape key or backdrop click)
+ */
+export type OakModalCloseAction = "close_button" | undefined;
+
 export type OakModalProps = {
   /**
    * Whether the modal is open
@@ -22,9 +28,11 @@ export type OakModalProps = {
   isOpen: boolean;
   /**
    * Called when the user closes the modal with the close button,
-   * the Escape key or a backdrop click
+   * the Escape key or a backdrop click.
+   *
+   * Receives `"close_button"` when the close button was used, e.g. for tracking.
    */
-  onClose: () => void;
+  onClose: (action?: OakModalCloseAction) => void;
   /**
    * Where the modal is placed.
    *
@@ -86,6 +94,12 @@ export type OakModalProps = {
    * NB *The modal is rendered inside a portal so it will not respect the stacking context of its parent component*.
    */
   zIndex?: number;
+  /**
+   * Override for the `returnFocus` behaviour of `FocusOn`.
+   *
+   * By default focus returns to the element that was focused before the modal opened.
+   */
+  returnFocus?: (returnTo: Element) => boolean | FocusOptions;
 } & InternalModalAccessibleName;
 
 /**
@@ -116,11 +130,8 @@ export const OakModal = ({
   "aria-describedby": ariaDescribedBy,
   domContainer,
   zIndex,
+  returnFocus,
 }: OakModalProps) => {
-  const accessibleName: InternalModalAccessibleName = ariaLabelledBy
-    ? { "aria-labelledby": ariaLabelledBy }
-    : { "aria-label": ariaLabel ?? "" };
-
   const isVerticalDrawer = position === "top" || position === "bottom";
   const isHeaderInverted = headerVariant === "inverted";
 
@@ -139,13 +150,11 @@ export const OakModal = ({
       $color={isHeaderInverted ? "text-inverted" : undefined}
       data-testid="modal-header"
     >
-      {/* Same height as the close button so short content (e.g. an action
-          link) is vertically centred against it, as in Figma */}
       <OakFlex $flexGrow={1} $minHeight="spacing-32" $alignItems="center">
         {headerSlot}
       </OakFlex>
       <OakCloseButton
-        onClose={onClose}
+        onClose={() => onClose("close_button")}
         size="spacing-32"
         variant={headerVariant}
         data-autofocus
@@ -157,7 +166,7 @@ export const OakModal = ({
     <InternalModalBase
       isOpen={isOpen}
       placement={position}
-      onDismiss={onClose}
+      onDismiss={() => onClose()}
       width={isVerticalDrawer ? undefined : size}
       height={isVerticalDrawer ? size : undefined}
       header={header}
@@ -165,7 +174,9 @@ export const OakModal = ({
       aria-describedby={ariaDescribedBy}
       domContainer={domContainer}
       zIndex={zIndex}
-      {...accessibleName}
+      returnFocus={returnFocus}
+      aria-label={ariaLabel}
+      aria-labelledby={ariaLabelledBy}
     >
       {children}
     </InternalModalBase>

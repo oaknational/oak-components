@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useId } from "react";
 import { Meta, StoryObj } from "@storybook/nextjs";
 
 import { OakModal, OakModalProps } from "./OakModal";
@@ -202,3 +202,62 @@ export const HeaderInverted: Story = {
     footerLayout: "horizontal",
   }),
 };
+
+export const ReturnFocus: Story = {
+  name: "Return focus to another element",
+  parameters: {
+    controls: {
+      include: ["position"],
+    },
+    docs: {
+      description: {
+        story: `By default, focus goes back to the button that opened the modal when it
+closes. To send it somewhere else, pass a \`returnFocus\` function that focuses
+the element you want and returns \`false\`, so focus isn't also moved back to
+the trigger.
+
+Open the modal, then close it: focus moves to "View results".`,
+      },
+    },
+  },
+  render: (args) => <ReturnFocusDemo {...args} />,
+};
+
+function ReturnFocusDemo(args: OakModalProps) {
+  const [isOpen, setIsOpen] = useStoryOpenState(args.isOpen);
+  const resultsId = useId();
+  const close = () => {
+    args.onClose?.();
+    setIsOpen(false);
+  };
+  const returnFocus = () => {
+    document.getElementById(resultsId)?.focus();
+    return false;
+  };
+
+  return (
+    <OakFlex $gap="spacing-16">
+      <OakSecondaryButton onClick={() => setIsOpen(true)}>
+        Open modal
+      </OakSecondaryButton>
+      <OakSecondaryButton id={resultsId}>View results</OakSecondaryButton>
+      <OakModal
+        {...args}
+        isOpen={isOpen}
+        onClose={close}
+        returnFocus={returnFocus}
+        footerSlot={footer("right", close)}
+      >
+        <OakFlex $flexDirection="column" $gap="spacing-20">
+          <OakHeading tag="h2" id="oak-modal-title" $font="heading-5">
+            Filters
+          </OakHeading>
+          <OakP $font="body-2">
+            When this modal closes, focus moves to &quot;View results&quot;
+            instead of the button that opened it.
+          </OakP>
+        </OakFlex>
+      </OakModal>
+    </OakFlex>
+  );
+}

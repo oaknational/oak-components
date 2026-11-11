@@ -20,7 +20,12 @@ const positions: OakModalPosition[] = [
   "bottom",
 ];
 
-const Harness = ({ position = "right" }: { position?: OakModalPosition }) => {
+type HarnessProps = {
+  position?: OakModalPosition;
+  returnFocus?: (returnTo: Element) => boolean | FocusOptions;
+};
+
+const Harness = ({ position = "right", returnFocus }: HarnessProps) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
@@ -30,6 +35,7 @@ const Harness = ({ position = "right" }: { position?: OakModalPosition }) => {
         onClose={() => setIsOpen(false)}
         position={position}
         aria-label="Filters"
+        returnFocus={returnFocus}
       >
         Modal content
       </OakModal>
@@ -95,6 +101,21 @@ describe("OakModal", () => {
     expect(getByTestId("child")).toHaveTextContent("Hello");
   });
 
+  it("passes the close action to onClose", () => {
+    const onClose = jest.fn();
+    const { getByRole } = renderWithTheme(
+      <OakModal isOpen onClose={onClose} position="right" aria-label="Filters">
+        Modal content
+      </OakModal>,
+    );
+
+    fireEvent.click(getByRole("button", { name: "Close" }));
+    expect(onClose).toHaveBeenLastCalledWith("close_button");
+
+    fireEvent.keyDown(document, { key: "Escape" });
+    expect(onClose).toHaveBeenLastCalledWith();
+  });
+
   it("requires exactly one of aria-label or aria-labelledby", () => {
     // These are type checks: `pnpm check-types` fails if the errors go away
     const neither = (
@@ -156,6 +177,24 @@ describe("OakModal", () => {
         expect(queryByRole("dialog")).not.toBeInTheDocument(),
       );
       await waitFor(() => expect(trigger).toHaveFocus());
+    });
+
+    it("passes returnFocus through", async () => {
+      const returnFocus = jest.fn(() => false);
+      const utils = renderWithTheme(<Harness returnFocus={returnFocus} />);
+      const trigger = utils.getByRole("button", { name: "Open" });
+      trigger.focus();
+      fireEvent.click(trigger);
+      await waitFor(() =>
+        expect(utils.getByRole("dialog")).toBeInTheDocument(),
+      );
+
+      fireEvent.click(utils.getByRole("button", { name: "Close" }));
+      await waitFor(() =>
+        expect(utils.queryByRole("dialog")).not.toBeInTheDocument(),
+      );
+      await waitFor(() => expect(returnFocus).toHaveBeenCalledWith(trigger));
+      expect(trigger).not.toHaveFocus();
     });
 
     it("has a 32px close button named 'Close'", () => {
