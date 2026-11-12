@@ -90,7 +90,7 @@ With a screen reader on, setting it to on should make reading start at the headi
 
 // Uses local state rather than useArgs: on the Docs page, updateArgs only
 // re-renders the primary story, so this story's Open button would do nothing.
-function AutoFocusContentDemo(args: InternalModalBaseProps) {
+function AutoFocusContentDemo(args: Readonly<InternalModalBaseProps>) {
   const [isOpen, setIsOpen] = useState(false);
   const close = () => setIsOpen(false);
 

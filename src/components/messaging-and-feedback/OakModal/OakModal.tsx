@@ -74,6 +74,13 @@ export type OakModalProps = {
    */
   footerSlot?: ReactNode;
   /**
+   * Whether to focus the close button on open.
+   * Set to `false` and add `data-autofocus` to another element to focus that instead.
+   *
+   * @default true
+   */
+  focusCloseButtonOnOpen?: boolean;
+  /**
    * Id of an element that describes the modal
    */
   "aria-describedby"?: string;
@@ -107,7 +114,10 @@ export type OakModalProps = {
  * to a task. Don't use it for marketing or advertising.
  *
  * It can be closed with the close button, the Escape key, or by clicking the
- * backdrop. The close button gets focus when the modal opens.
+ * backdrop. By default, the close button gets focus when the modal opens.
+ *
+ * To focus a different element instead, set `focusCloseButtonOnOpen={false}` and
+ * add `data-autofocus` to the element you want focused (e.g. an action link).
  *
  * An accessible name is required: pass either `aria-label` or `aria-labelledby`.
  *
@@ -125,6 +135,7 @@ export const OakModal = ({
   headerSlot,
   headerVariant = "default",
   footerSlot,
+  focusCloseButtonOnOpen = true,
   "aria-label": ariaLabel,
   "aria-labelledby": ariaLabelledBy,
   "aria-describedby": ariaDescribedBy,
@@ -136,8 +147,8 @@ export const OakModal = ({
   const isHeaderInverted = headerVariant === "inverted";
 
   // DOM order matches visual order (headerSlot, then the close button) so Tab
-  // order follows what the user sees. `data-autofocus` gives the close button
-  // initial focus regardless of what is in headerSlot.
+  // order follows what the user sees. When focusCloseButtonOnOpen is true,
+  // `data-autofocus` gives the close button initial focus regardless of what is in headerSlot.
   const header = (
     <OakFlex
       $width="100%"
@@ -157,7 +168,7 @@ export const OakModal = ({
         onClose={() => onClose("close_button")}
         size="spacing-32"
         variant={headerVariant}
-        data-autofocus
+        data-autofocus={focusCloseButtonOnOpen || undefined}
       />
     </OakFlex>
   );

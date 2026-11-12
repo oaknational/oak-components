@@ -185,15 +185,59 @@ export const FooterRight: Story = {
 
 export const HeaderActionLink: Story = {
   name: "Header: action link",
-  render: renderModal({
-    headerSlot: (
-      <OakLink variant="secondary" href="#">
-        Action
-      </OakLink>
-    ),
-    footerLayout: "horizontal",
-  }),
+  parameters: {
+    controls: {
+      include: ["position"],
+    },
+    docs: {
+      description: {
+        story: `When a modal has an action link in the header, you can set
+\`focusCloseButtonOnOpen={false}\` and add \`data-autofocus\` to the link so it
+receives focus when the modal opens instead of the close button.`,
+      },
+    },
+  },
+  render: (args) => <HeaderActionLinkDemo {...args} />,
 };
+
+function HeaderActionLinkDemo(args: OakModalProps) {
+  const [isOpen, setIsOpen] = useStoryOpenState(args.isOpen);
+  const close = () => {
+    args.onClose?.();
+    setIsOpen(false);
+  };
+
+  return (
+    <>
+      <OakSecondaryButton onClick={() => setIsOpen(true)}>
+        Open modal
+      </OakSecondaryButton>
+      <OakModal
+        {...args}
+        isOpen={isOpen}
+        onClose={close}
+        focusCloseButtonOnOpen={false}
+        headerSlot={
+          <OakLink variant="secondary" href="#" data-autofocus>
+            Action
+          </OakLink>
+        }
+        footerSlot={footer("horizontal", close)}
+      >
+        <OakFlex $flexDirection="column" $gap="spacing-20">
+          <OakHeading tag="h2" id="oak-modal-title" $font="heading-5">
+            Modal title
+          </OakHeading>
+          <OakP $font="body-2">
+            Modals are for actions or notifications that give critical
+            information related to a task. Close this one with the close
+            button, the Escape key, or by clicking the backdrop.
+          </OakP>
+        </OakFlex>
+      </OakModal>
+    </>
+  );
+}
 
 export const HeaderLogoAndTitle: Story = {
   name: "Header: logo and title",

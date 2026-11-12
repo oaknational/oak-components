@@ -253,6 +253,24 @@ describe("OakModal", () => {
       );
     });
 
+    it("focuses a headerSlot element with data-autofocus when focusCloseButtonOnOpen is false", async () => {
+      const { getByRole } = renderWithTheme(
+        <OakModal
+          isOpen
+          onClose={() => {}}
+          position="right"
+          aria-label="Filters"
+          focusCloseButtonOnOpen={false}
+          headerSlot={<a href="#action" data-autofocus>Back</a>}
+        >
+          <button>Inside content</button>
+        </OakModal>,
+      );
+      await waitFor(() =>
+        expect(getByRole("link", { name: "Back" })).toHaveFocus(),
+      );
+    });
+
     it("has no background and a dark close button by default", () => {
       const { getByTestId, getByRole } = renderWithTheme(
         <OakModal isOpen onClose={() => {}} position="right" aria-label="F">
