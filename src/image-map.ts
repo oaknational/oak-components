@@ -224,7 +224,7 @@ export const icons = {
   "video-2": "v1787662089/icons/video-2.svg",
   audio: "v1787662158/icons/audio.svg",
   "video-3": "v1788369484/icons/video-3.svg",
-  "sound-low": "v1794418270/icons/sound-low.svg",
+  "sound-low": "v1794496997/icons/sound-low.svg",
   "move-up-down": "v1794418662/icons/move-up-down.svg",
 } as const satisfies VersionedSvgMap;
 
