@@ -267,7 +267,7 @@ const groups = [
       pick("subject-swimming"),
       pick("subject-theology"),
       pick("subject-therapy"),
-      pick("subject-understanding-the-role"),
+      pick("subject-understanding-the-world"),
       pick("subject-vocabulary"),
     ],
   },
