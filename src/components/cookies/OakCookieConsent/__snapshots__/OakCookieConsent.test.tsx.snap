@@ -199,14 +199,6 @@ exports[`OakCookieConsent matches snapshot 1`] = `
   color: #808080;
 }
 
-.c11 {
-  font-family: --var(google-font),Lexend,sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  letter-spacing: 0.0115rem;
-}
-
 .c17 {
   position: relative;
   width: 100%;
@@ -304,6 +296,14 @@ exports[`OakCookieConsent matches snapshot 1`] = `
 
 .c14 .yellow-shadow:has(+ .internal-button:active) {
   box-shadow: 0.125rem 0.125rem 0 rgba(255, 229, 85, 100%);
+}
+
+.c11 {
+  font-family: --var(google-font),Lexend,sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.0115rem;
 }
 
 @media (min-width: 750px) {
