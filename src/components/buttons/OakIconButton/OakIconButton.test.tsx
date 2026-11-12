@@ -1,0 +1,62 @@
+import React from "react";
+import "@testing-library/jest-dom";
+import { fireEvent } from "@testing-library/react";
+
+import { OakIconButton } from "./OakIconButton";
+
+import renderWithTheme from "@/test-helpers/renderWithTheme";
+
+describe("OakIconButton", () => {
+  beforeEach(() => {
+    jest.useFakeTimers();
+  });
+
+  afterEach(() => {
+    jest.runOnlyPendingTimers();
+    jest.useRealTimers();
+  });
+
+  it("renders correctly", () => {
+    const { container } = renderWithTheme(
+      <OakIconButton
+        aria-label="help"
+        iconName="question-mark"
+        $colorScheme="primary"
+        $size="md"
+        $type="primary"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
+
+  it("button should be disabled when disabled prop passed", () => {
+    const { container, getByRole } = renderWithTheme(
+      <OakIconButton
+        aria-label="help"
+        iconName="question-mark"
+        $colorScheme="primary"
+        $size="md"
+        $type="primary"
+        disabled={true}
+      />,
+    );
+    expect(getByRole("button")).toBeDisabled();
+    expect(container).toMatchSnapshot();
+  });
+
+  it("responds to click events", () => {
+    const fn = jest.fn();
+    const { getByRole } = renderWithTheme(
+      <OakIconButton
+        aria-label="help"
+        iconName="question-mark"
+        $colorScheme="primary"
+        $size="md"
+        $type="primary"
+        onClick={fn}
+      />,
+    );
+    fireEvent.click(getByRole("button"));
+    expect(fn).toHaveBeenCalledTimes(1);
+  });
+});

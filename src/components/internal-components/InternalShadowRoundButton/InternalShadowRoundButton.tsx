@@ -62,9 +62,11 @@ const StyledInternalButton = styled(InternalButton)<
       color: ${parseColor(props.$hoverTextColor)};
 
       &:not(:active) [data-icon-for="button"] img {
-        filter: ${props.$hoverIconColor
-          ? parseColorFilter(props.$hoverIconColor)
-          : undefined};
+        filter: ${
+          props.$hoverIconColor
+            ? parseColorFilter(props.$hoverIconColor)
+            : undefined
+        };
       }
     }
     &:active {

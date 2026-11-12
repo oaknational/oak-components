@@ -15,6 +15,7 @@ import {
   typographyStyle,
   TypographyStyleProps,
 } from "@/styles/utils/typographyStyle";
+import { OakScreenReader } from "@/components/messaging-and-feedback";
 
 export type OakLinkProps = Pick<
   InternalLinkProps,
@@ -46,7 +47,7 @@ export const OakLink: OakLinkComponent = forwardRef(
     props: PolymorphicPropsWithRef<C> & OakLinkProps,
     ref: PolymorphicRef<C>,
   ) => {
-    const { variant = "primary", ...restProps } = props;
+    const { variant = "primary", children, ...restProps } = props;
     const variantDefinition = variantConfig[variant];
 
     return (
@@ -59,7 +60,12 @@ export const OakLink: OakLinkComponent = forwardRef(
         disabledColor={"text-disabled"}
         {...restProps}
         ref={ref}
-      />
+      >
+        {children}
+        {restProps.target === "_blank" && (
+          <OakScreenReader> (opens in a new tab)</OakScreenReader>
+        )}
+      </StyledInternalLink>
     );
   },
 );

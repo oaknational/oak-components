@@ -21,12 +21,7 @@ import { FlexStyleProps } from "@/styles/utils/flexStyle";
 import { SizeStyleProps } from "@/styles/utils/sizeStyle";
 
 export type OakInlineBannerTypes =
-  | "info"
-  | "neutral"
-  | "success"
-  | "alert"
-  | "error"
-  | "warning";
+  "info" | "neutral" | "success" | "alert" | "error" | "warning";
 
 export type OakInlineBannerVariants = "regular" | "large";
 
