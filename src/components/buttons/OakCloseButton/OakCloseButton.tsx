@@ -1,10 +1,28 @@
 import React from "react";
 
 import { InternalShadowRoundButton } from "@/components/internal-components/InternalShadowRoundButton";
+import { OakAllSpacingToken } from "@/styles/theme/spacing";
 
 export type OakCloseButtonProps = {
   onClose: () => void;
+  /**
+   * Size of the button and its icon
+   *
+   * @default spacing-24
+   */
+  size?: OakAllSpacingToken;
+  /**
+   * Use `inverted` on dark backgrounds, e.g. a black modal header
+   *
+   * @default default
+   */
+  variant?: "default" | "inverted";
 };
+
+const variantColours = {
+  default: { icon: "icon-primary", hoverBackground: "bg-neutral" },
+  inverted: { icon: "icon-inverted", hoverBackground: "bg-btn-primary-hover" },
+} as const;
 
 /**
  *
@@ -16,22 +34,26 @@ export type OakCloseButtonProps = {
  */
 export function OakCloseButton({
   onClose,
+  size = "spacing-24",
+  variant = "default",
   ...rest
 }: Readonly<OakCloseButtonProps>) {
+  const colours = variantColours[variant];
+
   return (
     <InternalShadowRoundButton
       onClick={onClose}
       aria-label="Close"
       defaultIconBackground="transparent"
-      defaultIconColor="icon-primary"
+      defaultIconColor={colours.icon}
       defaultTextColor="transparent"
       hoverTextColor="transparent"
       disabledTextColor="transparent"
-      hoverIconBackground="bg-neutral"
-      hoverIconColor="icon-primary"
+      hoverIconBackground={colours.hoverBackground}
+      hoverIconColor={colours.icon}
       disabledIconBackground="transparent"
-      iconBackgroundSize="spacing-24"
-      iconSize="spacing-24"
+      iconBackgroundSize={size}
+      iconSize={size}
       iconName="cross"
       hoverDropShadow={null}
       {...rest}

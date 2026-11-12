@@ -24,6 +24,11 @@ import {
 } from "@/components/layout-and-structure/OakFlex";
 import { parseSpacing } from "@/styles/helpers/parseSpacing";
 
+/**
+ * ⚠️ To be deprecated
+ * Use `OakDialogProps` or `OakModalProps` instead
+ * @deprecated Use `OakDialogProps` or `OakModalProps` instead
+ */
 export type OakModalCenterProps = {
   /**
    * The content of the modal. Use with `<OakModalCenterBody>` for best results.
@@ -117,6 +122,12 @@ const FadeInFlex = styled(OakFlex)<{ $state: TransitionStatus }>`
  * - **modalInnerFlexProps?** \-    Override HTMLAttributes & OakFlex props for the inner modal container
  * - **backdropFlexProps?** \-      Override HTMLAttributes & OakFlex props for the backdrop container
  * - **footerSlot?** \-             Fixed area at the bottom of the modal, this will remain fixed in view if the content is scrollable
+ *
+ * ⚠️ To be deprecated
+ * Use `<OakDialog />` (not dismissible) or `<OakModal />` (dismissible) instead
+ * `OakDialog` is for blocking choices, e.g. content guidance.
+ * Figma: <https://www.figma.com/design/YcWQMMhHPVVmc47cHHEEAl/Oak-Design-Kit?node-id=25437-6387>
+ * @deprecated Use `<OakDialog />` (not dismissible) or `<OakModal />` (dismissible) instead
  */
 export const OakModalCenter = ({
   children,
