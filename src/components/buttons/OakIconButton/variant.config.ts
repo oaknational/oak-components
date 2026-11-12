@@ -5,7 +5,7 @@ import {
   OakBorderWidthToken,
   OakCombinedSpacingToken,
   OakUiRoleToken,
-} from "@/index";
+} from "@/styles/theme";
 
 export const lookupButtonPadding = propsLookup<
   OakIconButtonProps,

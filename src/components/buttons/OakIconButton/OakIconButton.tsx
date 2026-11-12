@@ -15,13 +15,11 @@ import {
 import { focusStyles, OakFocusStyleProps } from "@/utils/focusStyles";
 import { PolymorphicPropsWithoutRef } from "@/components/polymorphic";
 import { OakIcon } from "@/components/images-and-icons";
-import {
-  OakLoadingSpinner,
-  parseBorderRadius,
-  parseBorderWidth,
-  parseColor,
-  parseSpacing,
-} from "@/index";
+import { OakLoadingSpinner } from "@/components/messaging-and-feedback/OakLoadingSpinner";
+import { parseBorderRadius } from "@/styles/helpers/parseBorderRadius";
+import { parseBorderWidth } from "@/styles/helpers/parseBorderWidth";
+import { parseColor } from "@/styles/helpers/parseColor";
+import { parseSpacing } from "@/styles/helpers/parseSpacing";
 import { IconName } from "@/image-map";
 
 type OakIconButtonColorScheme = "primary" | "inverted";
