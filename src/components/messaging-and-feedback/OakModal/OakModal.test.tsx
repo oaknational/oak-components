@@ -261,7 +261,11 @@ describe("OakModal", () => {
           position="right"
           aria-label="Filters"
           focusCloseButtonOnOpen={false}
-          headerSlot={<a href="#action" data-autofocus>Back</a>}
+          headerSlot={
+            <a href="#action" data-autofocus>
+              Back
+            </a>
+          }
         >
           <button>Inside content</button>
         </OakModal>,

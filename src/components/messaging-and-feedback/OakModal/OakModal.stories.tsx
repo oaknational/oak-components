@@ -230,8 +230,8 @@ function HeaderActionLinkDemo(args: OakModalProps) {
           </OakHeading>
           <OakP $font="body-2">
             Modals are for actions or notifications that give critical
-            information related to a task. Close this one with the close
-            button, the Escape key, or by clicking the backdrop.
+            information related to a task. Close this one with the close button,
+            the Escape key, or by clicking the backdrop.
           </OakP>
         </OakFlex>
       </OakModal>
