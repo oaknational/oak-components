@@ -4,7 +4,7 @@ exports[`OakToast matches snapshot 1`] = `
 .c0 {
   position: relative;
   width: max-content;
-  max-width: 15rem;
+  max-width: 100%;
   padding: 1rem;
   color: #222222;
   background: #bef2bd;
