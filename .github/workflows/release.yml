@@ -45,4 +45,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.RELEASE_GITHUB_TOKEN }}
           HUSKY: 0
           CI: true
-        run: pnpx semantic-release
+        run: pnpm exec semantic-release
