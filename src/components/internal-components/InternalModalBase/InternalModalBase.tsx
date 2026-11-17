@@ -13,12 +13,7 @@ import { OakBorderRadiusToken } from "@/styles/theme/borders";
 import { getMediaQuery } from "@/styles/utils/responsiveStyle";
 
 export type InternalModalPlacement =
-  | "fullscreen"
-  | "left"
-  | "right"
-  | "top"
-  | "bottom"
-  | "centre";
+  "fullscreen" | "left" | "right" | "top" | "bottom" | "centre";
 
 /**
  * A modal must have an accessible name. Exactly one of `aria-label` or
@@ -252,6 +247,8 @@ export const InternalModalBase = ({
   const contentInnerRef = useRef<HTMLDivElement>(null);
 
   const [isScrollable, setIsScrollable] = useState(false);
+  // Shows a line at the top of the content once it is scrolled,
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     // Let keyboard users scroll the content when it overflows
@@ -261,6 +258,8 @@ export const InternalModalBase = ({
     };
 
     checkIsScrollable();
+    // Reset the line when the modal reopens, as its content starts at the top
+    setIsScrolled((contentRef.current?.scrollTop ?? 0) > 0);
 
     // Re-check whenever the scroll area or its content changes size, e.g. the
     // window resizes, images load, an accordion opens or a child adds content
@@ -352,6 +351,14 @@ export const InternalModalBase = ({
                 $minHeight="spacing-0"
                 $overflow="auto"
                 $ma={isCentre ? "spacing-8" : undefined}
+                // Always 1px so the content doesn't move when the line appears
+                $bt="border-solid-s"
+                $borderColor={
+                  isScrolled ? "border-neutral-lighter" : "transparent"
+                }
+                onScroll={(e: React.UIEvent<HTMLDivElement>) =>
+                  setIsScrolled(e.currentTarget.scrollTop > 0)
+                }
                 // Stops the content shifting sideways when a scrollbar appears
                 style={{ scrollbarGutter: "stable" }}
                 tabIndex={contentTabIndex}
@@ -363,10 +370,12 @@ export const InternalModalBase = ({
                   ref={contentInnerRef}
                   $flexDirection="column"
                   $pv={isCentre ? "spacing-48" : "spacing-56"}
+                  // On mobile the modal content lines up with the header (24px in).
+                  // The centre panel's 8px margin plus 16px padding also puts it 24px in.
                   $ph={
                     isCentre
                       ? ["spacing-16", "spacing-56", "spacing-56"]
-                      : ["spacing-16", "spacing-64", "spacing-64"]
+                      : ["spacing-24", "spacing-64", "spacing-64"]
                   }
                   data-testid="modal-content-inner"
                 >

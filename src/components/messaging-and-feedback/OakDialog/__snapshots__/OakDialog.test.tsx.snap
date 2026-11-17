@@ -27,6 +27,8 @@ exports[`OakDialog matches snapshot 1`] = `
   overflow: auto;
   min-height: 0rem;
   margin: 0.5rem;
+  border-top: 0.063rem solid;
+  border-color: transparent;
   font-family: --var(google-font),Lexend,sans-serif;
   overflow: auto;
 }

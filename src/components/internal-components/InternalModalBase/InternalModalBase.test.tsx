@@ -282,7 +282,8 @@ describe("InternalModalBase", () => {
       );
       const inner = getByTestId("modal-content-inner");
       expect(inner).toHaveStyleRule("padding-top", "3.5rem");
-      expect(inner).toHaveStyleRule("padding-left", "1rem");
+      // 24px on mobile so it lines up with the header
+      expect(inner).toHaveStyleRule("padding-left", "1.5rem");
       expect(inner).toHaveStyleRule("padding-left", "4rem", tabletUp);
     });
 
@@ -303,6 +304,28 @@ describe("InternalModalBase", () => {
         "padding-top",
         expect.anything(),
       );
+    });
+  });
+
+  describe("scroll line", () => {
+    it("is always 1px but transparent until the content is scrolled", () => {
+      const { getByTestId } = renderBase();
+      const content = getByTestId("modal-content");
+      expect(content).toHaveStyleRule("border-top", "0.063rem solid");
+      expect(content).toHaveStyleRule("border-color", "transparent");
+    });
+
+    it("shows when the content is scrolled and hides when back at the top", () => {
+      const { getByTestId } = renderBase();
+      const content = getByTestId("modal-content");
+
+      content.scrollTop = 40;
+      fireEvent.scroll(content);
+      expect(content).toHaveStyleRule("border-color", "#cacaca");
+
+      content.scrollTop = 0;
+      fireEvent.scroll(content);
+      expect(content).toHaveStyleRule("border-color", "transparent");
     });
   });
 
