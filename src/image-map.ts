@@ -8,16 +8,16 @@ export const icons = {
   "ai-additional-material":
     "v1756224441/icons/AI_additional_material_oopjax.svg",
   "ai-quiz": "v1756224440/icons/AI_quiz_eivb2s.svg",
-  "ai-slide-deck": "v1756224440/icons/Ai_slidedeck_xuo49n.svg",
+  "ai-slidedeck": "v1756224440/icons/Ai_slidedeck_xuo49n.svg",
   "ai-worksheet": "v1756224441/icons/AI_worksheet_cm4f0q.svg",
-  "ai-teaching-resources": "v1779438987/icons/ai-teaching-resources.svg",
+  "ai-lesson-plan": "v1779438987/icons/ai-teaching-resources.svg",
   home: "v1699887218/icons/gvqxjxcw07ei2kkmwnes.svg",
   send: "v1699893673/icons/rmvytilpjgvh3pgwc8ph.svg",
   rocket: "v1699894015/icons/u26xm5hteot875ozfnk9.svg",
   edit: "v1699894149/icons/qxlunbg5tfrdherzsvlt.svg",
   expand: "v1730982187/Icon_Expand_arrktl.svg",
   minimise: "v1730982213/Icon_Minimise_btcdbz.svg",
-  hamburger: "v1699895123/icons/jaqdnomtbhqvjcap962u.svg",
+  "hamburger-menu": "v1699895123/icons/jaqdnomtbhqvjcap962u.svg",
   cross: "v1699895179/icons/xigimrbivcaxt4omxamp.svg",
   copy: "v1727861316/icons/Icon_Copy_qxgynv.svg",
   bell: "v1699895207/icons/ecejtvqerx81prxyxh9b.svg",
@@ -181,7 +181,7 @@ export const icons = {
   "subject-occupational-therapy": "v1706616424/subject-icons/therapy.svg",
   "subject-understanding-the-world":
     "v1706616425/subject-icons/understanding-the-world.svg",
-  swimming: "v1728649514/subject-icons/swimming.svg",
+  "subject-swimming": "v1728649514/subject-icons/swimming.svg",
   // homepage icons
   "homepage-robot-waving": "v1734523528/homepage/robot_waving_malpc3.svg",
   "homepage-three-pupils": "v1734523221/homepage/image-students_g0jtxe.svg",
@@ -218,7 +218,7 @@ export const icons = {
   logo: "v1711468346/logo-mark.svg",
   trash: "v1764692488/icons/icon_delete_edzcua.svg",
   list: "v1774882349/icons/List.svg",
-  "media-clips": "v1774884267/icons/media-clips_nw3zpt.svg",
+  media: "v1774884267/icons/media-clips_nw3zpt.svg",
   retake: "v1775141914/icons/retake-icon_xgqxzv.svg",
   globe: "v1776851811/icons/globe.svg",
   "video-2": "v1787662089/icons/video-2.svg",
@@ -226,6 +226,325 @@ export const icons = {
   "video-3": "v1788369484/icons/video-3.svg",
   "sound-low": "v1794496997/icons/sound-low.svg",
   "move-up-down": "v1794418662/icons/move-up-down.svg",
+
+  // ------
+  // ai
+  /*NEW*/ "ai-auto-evaluation":
+    "v1794928539/design-kit/icons/ai/ai-auto-evaluation_tnd7ni.svg",
+  /*NEW*/ "ai-based-on-oak-content":
+    "v1794928539/design-kit/icons/ai/ai-based-on-oak-content_pjuykq.svg",
+  /*NEW*/ "ai-bias": "v1794928539/design-kit/icons/ai/ai-bias_lj1mxw.svg",
+  /*NEW*/ "ai-content-guidance-required":
+    "v1794928539/design-kit/icons/ai/ai-content-guidance-required_bilp7e.svg",
+  /*NEW*/ "ai-doing-the-heavy-lifting":
+    "v1794928539/design-kit/icons/ai/ai-doing-the-heavy-lifting_raocie.svg",
+  /*NEW*/ "ai-generated-image":
+    "v1794928539/design-kit/icons/ai/ai-generated-image_tlcz9z.svg",
+  /*NEW*/ "ai-hallucinations":
+    "v1794928539/design-kit/icons/ai/ai-hallucinations_dst348.svg",
+  /*NEW*/ "ai-icon": "v1794928539/design-kit/icons/ai/ai-icon_cgk81d.svg",
+  /*NEW*/ "ai-idea-generation":
+    "v1794928539/design-kit/icons/ai/ai-idea-generation_lim6df.svg",
+  /*NEW*/ "ai-lesson": "v1794928539/design-kit/icons/ai/ai-lesson_awmayw.svg",
+  /*NEW*/ "ai-lesson-history":
+    "v1794928539/design-kit/icons/ai/ai-lesson-history_t3kmlh.svg",
+  /*NEW*/ "ai-no-image-found":
+    "v1794928539/design-kit/icons/ai/ai-no-image-found_iajffw.svg",
+  /*NEW*/ "ai-prompt": "v1794928539/design-kit/icons/ai/ai-prompt_ykvqi8.svg",
+  /*NEW*/ "ai-safe": "v1794928539/design-kit/icons/ai/ai-safe_uby4sk.svg",
+  /*NEW*/ "ai-safety": "v1794928539/design-kit/icons/ai/ai-safety_f6q9uo.svg",
+  /*NEW*/ "ai-safety-rails-around-ai":
+    "v1794928539/design-kit/icons/ai/ai-safety-rails-around-ai_xfuvow.svg",
+  /*NEW*/ "ai-teacher-in-the-loop":
+    "v1794928539/design-kit/icons/ai/ai-teacher-in-the-loop_u4enmm.svg",
+  /*NEW*/ "ai-threats": "v1794928539/design-kit/icons/ai/ai-threats_j8py5f.svg",
+  /*NEW*/ "ai-toxic": "v1794928539/design-kit/icons/ai/ai-toxic_oj9wwm.svg",
+  // ai-resources
+  "ai-additional-material":
+    "v1794928568/design-kit/icons/ai-resources/ai-additional-material_gmhgks.svg",
+  "ai-quiz": "v1794928568/design-kit/icons/ai-resources/ai-quiz_txtzy1.svg",
+  "ai-slidedeck":
+    "v1794928568/design-kit/icons/ai-resources/ai-slidedeck_hjiar6.svg",
+  "ai-worksheet":
+    "v1794928568/design-kit/icons/ai-resources/ai-worksheet_le230h.svg",
+  // learning-cycle
+  /*NEW*/ book: "v1794928604/design-kit/icons/learning-cycle/book_sunpwn.svg",
+  /*NEW*/ "book-a":
+    "v1794928604/design-kit/icons/learning-cycle/book-a_eqiocw.svg",
+  /*NEW*/ "book-b":
+    "v1794928604/design-kit/icons/learning-cycle/book-b_snnfu6.svg",
+  /*NEW*/ "book-c":
+    "v1794928604/design-kit/icons/learning-cycle/book-c_iqxq0w.svg",
+  /*NEW*/ "book-d":
+    "v1794928604/design-kit/icons/learning-cycle/book-d_rvfolb.svg",
+  /*NEW*/ "book-e":
+    "v1794928604/design-kit/icons/learning-cycle/book-e_moraru.svg",
+  /*NEW*/ "book-f":
+    "v1794928604/design-kit/icons/learning-cycle/book-f_dyn8dw.svg",
+  /*NEW*/ "book-g":
+    "v1794928604/design-kit/icons/learning-cycle/book-g_ozrwhg.svg",
+  /*NEW*/ "book-h":
+    "v1794928604/design-kit/icons/learning-cycle/book-h_rk1qut.svg",
+  /*NEW*/ "book-t":
+    "v1794928604/design-kit/icons/learning-cycle/book-t_ndoaqw.svg",
+  /*NEW*/ "check-for-understanding":
+    "v1794928604/design-kit/icons/learning-cycle/check-for-understanding_w4v0ij.svg",
+  /*NEW*/ explanation:
+    "v1794928604/design-kit/icons/learning-cycle/explanation_sgjdrz.svg",
+  /*NEW*/ feedback:
+    "v1794928604/design-kit/icons/learning-cycle/feedback_ttvgpj.svg",
+  /*NEW*/ practice:
+    "v1794928604/design-kit/icons/learning-cycle/practice_ir71pv.svg",
+  // media
+  /*NEW*/ "back-10": "v1794928622/design-kit/icons/media/back-10_fiqqyp.svg",
+  /*NEW*/ captions: "v1794928622/design-kit/icons/media/captions_blqqb6.svg",
+  /*NEW*/ "forward-10":
+    "v1794928622/design-kit/icons/media/forward-10_vge5id.svg",
+  /*NEW*/ "full-screen":
+    "v1794928622/design-kit/icons/media/full-screen_ev3z2p.svg",
+  go: "v1794928622/design-kit/icons/media/go_f3fuv7.svg",
+  /*NEW*/ grid: "v1794928622/design-kit/icons/media/grid_c23edt.svg",
+  /*NEW*/ "out-of-window":
+    "v1794928622/design-kit/icons/media/out-of-window_ydsj1e.svg",
+  /*NEW*/ pause: "v1794928622/design-kit/icons/media/pause_jfc4rd.svg",
+  play: "v1794928622/design-kit/icons/media/play_jckdwq.svg",
+  /*NEW*/ "playback-0.5x":
+    "v1794928622/design-kit/icons/media/playback-0.5x_hl9wpf.svg",
+  /*NEW*/ "playback-0.75x":
+    "v1794928622/design-kit/icons/media/playback-0.75x_wcul8v.svg",
+  /*NEW*/ "playback-1.5x":
+    "v1794928622/design-kit/icons/media/playback-1.5x_hyamsz.svg",
+  /*NEW*/ "playback-1x":
+    "v1794928622/design-kit/icons/media/playback-1x_ecx94b.svg",
+  /*NEW*/ "playback-2.5x":
+    "v1794928622/design-kit/icons/media/playback-2.5x_mqwlqd.svg",
+  /*NEW*/ "playback-2x":
+    "v1794928622/design-kit/icons/media/playback-2x_cs7d7s.svg",
+  /*NEW*/ "playback-3x":
+    "v1794928622/design-kit/icons/media/playback-3x_rc9k74.svg",
+  "sign-language":
+    "v1794928622/design-kit/icons/media/sign-language_pdvped.svg",
+  /*NEW*/ "sound-high":
+    "v1794928622/design-kit/icons/media/sound-high_c8auu1.svg",
+  "sound-low": "v1794928622/design-kit/icons/media/sound-low_eszgyp.svg",
+  /*NEW*/ "sound-off":
+    "v1794928622/design-kit/icons/media/sound-off_jlue8d.svg",
+  /*NEW*/ transcript:
+    "v1794928622/design-kit/icons/media/transcript_hibacv.svg",
+  // social
+  facebook: "v1794928629/design-kit/icons/social/facebook_xwgh46.svg",
+  instagram: "v1794928629/design-kit/icons/social/instagram_ocpsoi.svg",
+  linkedin: "v1794928629/design-kit/icons/social/linkedin_zx6cqe.svg",
+  x: "v1794928629/design-kit/icons/social/x_gxu3x4.svg",
+  // sound
+  /*NEW*/ "sound-a": "v1794928646/design-kit/icons/sound/sound-a_dztskr.svg",
+  /*NEW*/ "sound-b": "v1794928646/design-kit/icons/sound/sound-b_urqpif.svg",
+  /*NEW*/ "sound-c": "v1794928646/design-kit/icons/sound/sound-c_lbcdml.svg",
+  /*NEW*/ "sound-d": "v1794928646/design-kit/icons/sound/sound-d_o03lb1.svg",
+  /*NEW*/ "sound-e": "v1794928646/design-kit/icons/sound/sound-e_pwm6zj.svg",
+  /*NEW*/ "sound-f": "v1794928646/design-kit/icons/sound/sound-f_cepxnb.svg",
+  /*NEW*/ "sound-g": "v1794928646/design-kit/icons/sound/sound-g_vwczdg.svg",
+  /*NEW*/ "sound-h": "v1794928646/design-kit/icons/sound/sound-h_okwrhd.svg",
+  /*NEW*/ "sound-i": "v1794928646/design-kit/icons/sound/sound-i_vf4otb.svg",
+  /*NEW*/ "sound-j": "v1794928646/design-kit/icons/sound/sound-j_chgzz4.svg",
+  // subject
+  /*NEW*/ "subject-art-and-design":
+    "v1794928694/design-kit/icons/subject/subject-art-and-design_bmlh07.svg",
+  "subject-biology":
+    "v1794928694/design-kit/icons/subject/subject-biology_rh9mdl.svg",
+  "subject-chemistry":
+    "v1794928694/design-kit/icons/subject/subject-chemistry_tezqn6.svg",
+  "subject-citizenship":
+    "v1794928694/design-kit/icons/subject/subject-citizenship_yyasm0.svg",
+  "subject-communication-and-language":
+    "v1794928694/design-kit/icons/subject/subject-communication-and-language_yrjx5d.svg",
+  "subject-computing":
+    "v1794928694/design-kit/icons/subject/subject-computing_g9pirp.svg",
+  /*NEW*/ "subject-cooking-and-nutrition":
+    "v1794928694/design-kit/icons/subject/subject-cooking-and-nutrition_lsv0gu.svg",
+  /*NEW*/ "subject-design-and-technology":
+    "v1794928694/design-kit/icons/subject/subject-design-and-technology_vssm6x.svg",
+  "subject-drama":
+    "v1794928694/design-kit/icons/subject/subject-drama_ogbqoz.svg",
+  "subject-english":
+    "v1794928694/design-kit/icons/subject/subject-english_dejl5k.svg",
+  "subject-expressive-arts-and-design":
+    "v1794928694/design-kit/icons/subject/subject-expressive-arts-and-design_ya7rif.svg",
+  "subject-financial-education":
+    "v1794928694/design-kit/icons/subject/subject-financial-education_e5rwee.svg",
+  "subject-french":
+    "v1794928694/design-kit/icons/subject/subject-french_c7egfr.svg",
+  "subject-geography":
+    "v1794928694/design-kit/icons/subject/subject-geography_cmican.svg",
+  "subject-german":
+    "v1794928694/design-kit/icons/subject/subject-german_eormb2.svg",
+  /*NEW*/ "subject-grammar":
+    "v1794928694/design-kit/icons/subject/subject-grammar_ztslvl.svg",
+  /*NEW*/ "subject-handwriting":
+    "v1794928694/design-kit/icons/subject/subject-handwriting_jjmwc1.svg",
+  "subject-history":
+    "v1794928694/design-kit/icons/subject/subject-history_zc1elx.svg",
+  "subject-independent-living":
+    "v1794928694/design-kit/icons/subject/subject-independent-living_vrey2e.svg",
+  /*NEW*/ "subject-language":
+    "v1794928694/design-kit/icons/subject/subject-language_pjovjb.svg",
+  "subject-latin":
+    "v1794928694/design-kit/icons/subject/subject-latin_pcfgpn.svg",
+  /*NEW*/ "subject-literature":
+    "v1794928694/design-kit/icons/subject/subject-literature_dytwrh.svg",
+  "subject-maths":
+    "v1794928694/design-kit/icons/subject/subject-maths_trwqmm.svg",
+  "subject-music":
+    "v1794928694/design-kit/icons/subject/subject-music_sbue7c.svg",
+  "subject-numeracy":
+    "v1794928694/design-kit/icons/subject/subject-numeracy_tf2ogh.svg",
+  /*NEW*/ "subject-pe":
+    "v1794928694/design-kit/icons/subject/subject-pe_qqf5sy.svg",
+  "subject-philosophy":
+    "v1794928694/design-kit/icons/subject/subject-philosophy_rpjv7z.svg",
+  "subject-physical-development":
+    "v1794928694/design-kit/icons/subject/subject-physical-development_w1l8ud.svg",
+  "subject-physical-therapy":
+    "v1794928694/design-kit/icons/subject/subject-physical-therapy_jge6w3.svg",
+  "subject-physics":
+    "v1794928694/design-kit/icons/subject/subject-physics_evlj2z.svg",
+  /*NEW*/ "subject-reading-writing-and-oracy":
+    "v1794928694/design-kit/icons/subject/subject-reading-writing-and-oracy_dwl6wf.svg",
+  "subject-religious-education":
+    "v1794928694/design-kit/icons/subject/subject-religious-education_jom1xw.svg",
+  "subject-rshe-pshe":
+    "v1794928694/design-kit/icons/subject/subject-rshe-pshe_xqqfbm.svg",
+  "subject-science":
+    "v1794928694/design-kit/icons/subject/subject-science_ojg9fx.svg",
+  /*NEW*/ "subject-sensory":
+    "v1794928694/design-kit/icons/subject/subject-sensory_biuhii.svg",
+  /*NEW*/ "subject-social-sciences":
+    "v1794928694/design-kit/icons/subject/subject-social-sciences_i7nzay.svg",
+  "subject-spanish":
+    "v1794928694/design-kit/icons/subject/subject-spanish_eemqar.svg",
+  /*NEW*/ "subject-speech-and-language":
+    "v1794928694/design-kit/icons/subject/subject-speech-and-language_or5tra.svg",
+  /*NEW*/ "subject-spelling":
+    "v1794928694/design-kit/icons/subject/subject-spelling_veiz7q.svg",
+  "subject-swimming":
+    "v1794928694/design-kit/icons/subject/subject-swimming_wwzlew.svg",
+  "subject-theology":
+    "v1794928694/design-kit/icons/subject/subject-theology_prwe4f.svg",
+  "subject-therapy":
+    "v1794928694/design-kit/icons/subject/subject-therapy_anwrxh.svg",
+  "subject-understanding-the-world":
+    "v1794928694/design-kit/icons/subject/subject-understanding-the-world_whjwqs.svg",
+  /*NEW*/ "subject-vocabulary":
+    "v1794928694/design-kit/icons/subject/subject-vocabulary_mwecnb.svg",
+  // system
+  ai: "v1794928758/design-kit/icons/system/ai_yipylf.svg",
+  "arrow-down": "v1794928758/design-kit/icons/system/arrow-down_t1n9kt.svg",
+  "arrow-left": "v1794928758/design-kit/icons/system/arrow-left_ydkpbi.svg",
+  "arrow-right": "v1794928758/design-kit/icons/system/arrow-right_m4bvjy.svg",
+  "arrow-up": "v1794928758/design-kit/icons/system/arrow-up_urk4y3.svg",
+  bell: "v1794928758/design-kit/icons/system/bell_lf1fbm.svg",
+  /*NEW*/ bookmark: "v1794928703/design-kit/icons/system/bookmark_ttgjmx.svg",
+  "bookmark-filled":
+    "v1794928758/design-kit/icons/system/bookmark-filled_y4x8i4.svg",
+  /*NEW*/ branch: "v1794928758/design-kit/icons/system/branch_eiyg6u.svg",
+  "chevron-down": "v1794928758/design-kit/icons/system/chevron-down_ewzk8n.svg",
+  "chevron-left": "v1794928758/design-kit/icons/system/chevron-left_b5qgjy.svg",
+  "chevron-right":
+    "v1794928758/design-kit/icons/system/chevron-right_qizi0v.svg",
+  "chevron-up": "v1794928758/design-kit/icons/system/chevron-up_fwo6ej.svg",
+  /*NEW*/ circle: "v1794928758/design-kit/icons/system/circle_rvzw0v.svg",
+  /*NEW*/ "circle-filled":
+    "v1794928758/design-kit/icons/system/circle-filled_qbqxzn.svg",
+  clock: "v1794928758/design-kit/icons/system/clock_fbpopz.svg",
+  /*NEW*/ comment: "v1794928758/design-kit/icons/system/comment_mq9uva.svg",
+  /*NEW*/ cookie: "v1794928758/design-kit/icons/system/cookie_ww8cpg.svg",
+  copy: "v1794928758/design-kit/icons/system/copy_qplnmr.svg",
+  cross: "v1794928758/design-kit/icons/system/cross_owmtup.svg",
+  download: "v1794928758/design-kit/icons/system/download_ykxlzd.svg",
+  /*NEW*/ drag: "v1794928758/design-kit/icons/system/drag_qx5jsx.svg",
+  edit: "v1794928758/design-kit/icons/system/edit_evrkvo.svg",
+  error: "v1794928758/design-kit/icons/system/error_k5xd2y.svg",
+  expand: "v1794928758/design-kit/icons/system/expand_scmipq.svg",
+  external: "v1794928758/design-kit/icons/system/external_d30t4s.svg",
+  filter: "v1794928758/design-kit/icons/system/filter_w9cruv.svg",
+  /*NEW*/ "flag-filled":
+    "v1794928758/design-kit/icons/system/flag-filled_t3rf3k.svg",
+  /*NEW*/ "flag-outline":
+    "v1794928758/design-kit/icons/system/flag-outline_hbhrct.svg",
+  globe: "v1794928758/design-kit/icons/system/globe_smhagd.svg",
+  "google-classroom":
+    "v1794928758/design-kit/icons/system/google-classroom_qb3pol.svg",
+  "hamburger-menu":
+    "v1794928758/design-kit/icons/system/hamburger-menu_nq1gzo.svg",
+  hide: "v1794928758/design-kit/icons/system/hide_f5sbrj.svg",
+  home: "v1794928758/design-kit/icons/system/home_sfbt4e.svg",
+  image: "v1794928758/design-kit/icons/system/image_ghvyfk.svg",
+  info: "v1794928758/design-kit/icons/system/info_onh2qk.svg",
+  /*NEW*/ license: "v1794928758/design-kit/icons/system/license_ix05o2.svg",
+  list: "v1794928758/design-kit/icons/system/list_vegvqj.svg",
+  /*NEW*/ loading: "v1794928758/design-kit/icons/system/loading_z85pyt.svg",
+  /*NEW*/ lock: "v1794928758/design-kit/icons/system/lock_ymmza3.svg",
+  "microsoft-teams":
+    "v1794928758/design-kit/icons/system/microsoft-teams_xkzl8d.svg",
+  "mini-menu": "v1794928758/design-kit/icons/system/mini-menu_gy4w37.svg",
+  minimise: "v1794928758/design-kit/icons/system/minimise_swrcod.svg",
+  /*NEW*/ minus: "v1794928758/design-kit/icons/system/minus_v4rbza.svg",
+  /*NEW*/ "move-all": "v1794928758/design-kit/icons/system/move-all_um91wo.svg",
+  /*NEW*/ "move-left-right":
+    "v1794928758/design-kit/icons/system/move-left-right_vwf9ux.svg",
+  "move-up-down": "v1794928758/design-kit/icons/system/move-up-down_vusqj2.svg",
+  plus: "v1794928758/design-kit/icons/system/plus_km2h6e.svg",
+  /*NEW*/ preview: "v1794928758/design-kit/icons/system/preview_xhxzpw.svg",
+  /*NEW*/ print: "v1794928758/design-kit/icons/system/print_t252xq.svg",
+  "question-mark":
+    "v1794928758/design-kit/icons/system/question-mark_fp8l8r.svg",
+  /*NEW*/ "question-mark-outlined":
+    "v1794928758/design-kit/icons/system/question-mark-outlined_eqqseo.svg",
+  retake: "v1794928758/design-kit/icons/system/retake_rui57o.svg",
+  save: "v1794928758/design-kit/icons/system/save_dnn0nb.svg",
+  /*NEW*/ scissors: "v1794928758/design-kit/icons/system/scissors_rx1r3q.svg",
+  search: "v1794928758/design-kit/icons/system/search_nwrlv6.svg",
+  send: "v1794928758/design-kit/icons/system/send_t1dfkd.svg",
+  share: "v1794928758/design-kit/icons/system/share_kyy0t6.svg",
+  /*NEW*/ "star-filled":
+    "v1794928758/design-kit/icons/system/star-filled_a3pqxy.svg",
+  /*NEW*/ "star-outline":
+    "v1794928758/design-kit/icons/system/star-outline_youf0l.svg",
+  success: "v1794928758/design-kit/icons/system/success_uyvqm8.svg",
+  /*NEW*/ supervision:
+    "v1794928758/design-kit/icons/system/supervision_wrcqeq.svg",
+  tick: "v1794928758/design-kit/icons/system/tick_c8472u.svg",
+  /*NEW*/ trashcan: "v1794928758/design-kit/icons/system/trashcan_tsyfw5.svg",
+  /*NEW*/ unlock: "v1794928758/design-kit/icons/system/unlock_noqejd.svg",
+  /*NEW*/ upload: "v1794928758/design-kit/icons/system/upload_slqubh.svg",
+  video: "v1794928756/design-kit/icons/system/video_yyznwc.svg",
+  warning: "v1794928758/design-kit/icons/system/warning_xpmfqk.svg",
+  // teaching-resources
+  "additional-material":
+    "v1794928770/design-kit/icons/teaching-resources/additional-material_mlzpji.svg",
+  /*NEW*/ "ai-creation":
+    "v1794928770/design-kit/icons/teaching-resources/ai-creation_lv1qc6.svg",
+  "ai-lesson-plan":
+    "v1794928770/design-kit/icons/teaching-resources/ai-lesson-plan_cv0vgs.svg",
+  /*NEW*/ "curriculum-aligned":
+    "v1794928770/design-kit/icons/teaching-resources/curriculum-aligned_whyfhl.svg",
+  "curriculum-plan":
+    "v1794928770/design-kit/icons/teaching-resources/curriculum-plan_zx0bk8.svg",
+  /*NEW*/ "lesson-files":
+    "v1794928770/design-kit/icons/teaching-resources/lesson-files_wbvnrt.svg",
+  /*NEW*/ "lesson-plan":
+    "v1794928770/design-kit/icons/teaching-resources/lesson-plan_fo18u1.svg",
+  media: "v1794928770/design-kit/icons/teaching-resources/media_leqrpi.svg",
+  quiz: "v1794928770/design-kit/icons/teaching-resources/quiz_u4dbuj.svg",
+  /*NEW*/ "resources-folder":
+    "v1794928770/design-kit/icons/teaching-resources/resources-folder_nsbqwq.svg",
+  /*NEW*/ "signed-video":
+    "v1794928770/design-kit/icons/teaching-resources/signed-video_qpysz4.svg",
+  "slide-deck":
+    "v1794928770/design-kit/icons/teaching-resources/slide-deck_nfzkfs.svg",
+  video: "v1794928770/design-kit/icons/teaching-resources/video_wsrlac.svg",
+  worksheet:
+    "v1794928770/design-kit/icons/teaching-resources/worksheet_swqy15.svg",
 } as const satisfies VersionedSvgMap;
 
 export type IconName = keyof typeof icons;
