@@ -497,7 +497,7 @@ export const icons = {
   /*NEW*/ trashcan: "v1794928758/design-kit/icons/system/trashcan_tsyfw5.svg",
   /*NEW*/ unlock: "v1794928758/design-kit/icons/system/unlock_noqejd.svg",
   /*NEW*/ upload: "v1794928758/design-kit/icons/system/upload_slqubh.svg",
-  video: "v1794928758/design-kit/icons/system/video_yyznwc.svg",
+  video: "v1794928756/design-kit/icons/system/video_yyznwc.svg",
   warning: "v1794928758/design-kit/icons/system/warning_xpmfqk.svg",
   // teaching-resources
   "additional-material":
