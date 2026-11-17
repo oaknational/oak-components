@@ -9,6 +9,28 @@ const meta = {
 
 export default meta;
 
-export const Default: StoryObj<typeof OakBio> = {
-  args: {},
+export const Default: StoryObj<typeof meta> = {
+  args: {
+    name: "Mr teacher",
+    role: "Teacher",
+    organisationName: "Oak National Academy",
+    imageSrc:
+      "https://www.thenational.academy/images/oak-national-academy-logo-512.png",
+  },
+};
+
+export const WithoutRole: StoryObj<typeof meta> = {
+  args: {
+    name: "sarah jane sarah janesarah janesarah janesarah janesarah janesarah janesarah janesarah jane",
+    imageSrc:
+      "https://www.thenational.academy/images/oak-national-academy-logo-512.png",
+    organisationName: "Oak National Academy",
+  },
+};
+
+export const WithoutImage: StoryObj<typeof meta> = {
+  args: {
+    name: "Luke Triton",
+    role: "Teacher",
+  },
 };
