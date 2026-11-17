@@ -437,6 +437,27 @@ export const icons = {
   /*NEW*/ "subject-vocabulary":
     "v1794928694/design-kit/icons/subject/subject-vocabulary_mwecnb.svg",
   // system
+  ai: "v1794928758/design-kit/icons/system/ai_yipylf.svg",
+  "arrow-down": "v1794928758/design-kit/icons/system/arrow-down_t1n9kt.svg",
+  "arrow-left": "v1794928758/design-kit/icons/system/arrow-left_ydkpbi.svg",
+  "arrow-right": "v1794928758/design-kit/icons/system/arrow-right_m4bvjy.svg",
+  "arrow-up": "v1794928758/design-kit/icons/system/arrow-up_urk4y3.svg",
+  bell: "v1794928758/design-kit/icons/system/bell_lf1fbm.svg",
+  /*NEW*/ bookmark: "v1794928703/design-kit/icons/system/bookmark_ttgjmx.svg",
+  "bookmark-filled":
+    "v1794928758/design-kit/icons/system/bookmark-filled_y4x8i4.svg",
+  /*NEW*/ branch: "v1794928758/design-kit/icons/system/branch_eiyg6u.svg",
+  "chevron-down": "v1794928758/design-kit/icons/system/chevron-down_ewzk8n.svg",
+  "chevron-left": "v1794928758/design-kit/icons/system/chevron-left_b5qgjy.svg",
+  "chevron-right":
+    "v1794928758/design-kit/icons/system/chevron-right_qizi0v.svg",
+  "chevron-up": "v1794928758/design-kit/icons/system/chevron-up_fwo6ej.svg",
+  /*NEW*/ circle: "v1794928758/design-kit/icons/system/circle_rvzw0v.svg",
+  /*NEW*/ "circle-filled":
+    "v1794928758/design-kit/icons/system/circle-filled_qbqxzn.svg",
+  clock: "v1794928758/design-kit/icons/system/clock_fbpopz.svg",
+  /*NEW*/ comment: "v1794928758/design-kit/icons/system/comment_mq9uva.svg",
+  /*NEW*/ cookie: "v1794928758/design-kit/icons/system/cookie_ww8cpg.svg",
   copy: "v1794928758/design-kit/icons/system/copy_qplnmr.svg",
   cross: "v1794928758/design-kit/icons/system/cross_owmtup.svg",
   download: "v1794928758/design-kit/icons/system/download_ykxlzd.svg",
@@ -465,8 +486,7 @@ export const icons = {
   /*NEW*/ lock: "v1794928758/design-kit/icons/system/lock_ymmza3.svg",
   "microsoft-teams":
     "v1794928758/design-kit/icons/system/microsoft-teams_xkzl8d.svg",
-  /*NEW*/ "mini-menu":
-    "v1794928758/design-kit/icons/system/mini-menu_gy4w37.svg",
+  "mini-menu": "v1794928758/design-kit/icons/system/mini-menu_gy4w37.svg",
   minimise: "v1794928758/design-kit/icons/system/minimise_swrcod.svg",
   /*NEW*/ minus: "v1794928758/design-kit/icons/system/minus_v4rbza.svg",
   /*NEW*/ "move-all": "v1794928758/design-kit/icons/system/move-all_um91wo.svg",
