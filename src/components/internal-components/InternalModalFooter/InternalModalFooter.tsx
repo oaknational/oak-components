@@ -3,10 +3,7 @@ import React, { ReactNode } from "react";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 
 export type InternalModalFooterLayout =
-  | "horizontal"
-  | "vertical"
-  | "left"
-  | "right";
+  "horizontal" | "vertical" | "left" | "right";
 
 export type InternalModalFooterProps = {
   /**

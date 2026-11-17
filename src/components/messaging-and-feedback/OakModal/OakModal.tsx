@@ -9,11 +9,7 @@ import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakAllSpacingToken } from "@/styles/theme/spacing";
 
 export type OakModalPosition =
-  | "fullscreen"
-  | "left"
-  | "right"
-  | "top"
-  | "bottom";
+  "fullscreen" | "left" | "right" | "top" | "bottom";
 
 /**
  * `close_button` when the close button was used, otherwise `undefined`
