@@ -280,7 +280,7 @@ export const OverriddenStyling: Story = {
   args: {
     type: undefined,
     canDismiss: false,
-    icon: "rocket",
+    icon: "success",
     $borderColor: "border-decorative4",
     $background: "bg-decorative4-very-subdued",
     iconColorFilter: "icon-success",
@@ -291,7 +291,7 @@ export const OverriddenStylingSimple: Story = {
   args: {
     type: undefined,
     canDismiss: false,
-    icon: "rocket",
+    icon: "success",
     $borderColor: "border-decorative4",
     $background: "bg-decorative4-very-subdued",
     iconColorFilter: "icon-success",
@@ -303,7 +303,7 @@ export const OverriddenStylingLarge: Story = {
   args: {
     type: undefined,
     canDismiss: false,
-    icon: "rocket",
+    icon: "success",
     $borderColor: "border-decorative4",
     $background: "bg-decorative4-very-subdued",
     iconColorFilter: "icon-success",
