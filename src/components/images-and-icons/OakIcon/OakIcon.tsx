@@ -38,6 +38,8 @@ export const OakIcon = (props: OakIconProps) => {
     ...rest
   } = props;
 
+  console.log({ props });
+
   return (
     <OakImage
       src={generateOakIconURL(iconName)}
