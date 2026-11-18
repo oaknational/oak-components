@@ -69,7 +69,7 @@ const StyledFlexBox = styled(OakFlex)<{
       parseColor(props.$colorSchemeTokens.hoverBackground)};
   }
 
-  &:focus-within {
+  &:has(input:focus-visible) {
     box-shadow:
       ${parseDropShadow("drop-shadow-centered-lemon")},
       ${parseDropShadow("drop-shadow-centered-grey")};
