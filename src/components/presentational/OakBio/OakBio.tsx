@@ -4,7 +4,6 @@ import { OakP } from "@/components/typography";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakImage } from "@/components/images-and-icons";
 
-
 export type OakBioProps = {
   imageSrc?: string;
   name: string;
@@ -15,7 +14,6 @@ export default function OakBio({
   imageSrc,
   name,
   title,
-
 }: Readonly<OakBioProps>) {
   return (
     <OakFlex $gap="spacing-12" $alignItems="center">
