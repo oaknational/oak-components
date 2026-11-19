@@ -10,8 +10,7 @@ describe("OakBio", () => {
     const { container } = renderWithTheme(
       <OakBio
         name="Luke triton"
-        role="Teacher"
-        organisationName="Oak National Academy"
+        title="Teacher"
         imageSrc="https://www.thenational.academy/images/oak-national-academy-logo-512.png"
       />,
     );
@@ -22,8 +21,7 @@ describe("OakBio", () => {
     const { getByText } = renderWithTheme(
       <OakBio
         name="Luke triton"
-        role="Teacher"
-        organisationName="Oak National Academy"
+        title="Teacher at Oak National Academy"
         imageSrc="https://www.thenational.academy/images/oak-national-academy-logo-512.png"
       />,
     );

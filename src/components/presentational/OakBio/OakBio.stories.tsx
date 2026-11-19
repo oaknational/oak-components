@@ -5,6 +5,12 @@ import OakBio from "./OakBio";
 const meta = {
   component: OakBio,
   title: "components/Presentational/OakBio",
+  tags: ["autodocs"],
+  argTypes: {
+    imageSrc: { type: "string" },
+    name: { type: "string" },
+    title: { type: "string" },
+  },
 } satisfies Meta<typeof OakBio>;
 
 export default meta;
@@ -12,8 +18,7 @@ export default meta;
 export const Default: StoryObj<typeof meta> = {
   args: {
     name: "Mr teacher",
-    role: "Teacher",
-    organisationName: "Oak National Academy",
+    title: "Teacher at Oak National Academy",
     imageSrc:
       "https://www.thenational.academy/images/oak-national-academy-logo-512.png",
   },
@@ -21,16 +26,16 @@ export const Default: StoryObj<typeof meta> = {
 
 export const WithoutRole: StoryObj<typeof meta> = {
   args: {
-    name: "sarah jane sarah janesarah janesarah janesarah janesarah janesarah janesarah janesarah jane",
+    name: "sarah jane",
     imageSrc:
       "https://www.thenational.academy/images/oak-national-academy-logo-512.png",
-    organisationName: "Oak National Academy",
+    title: " Oak National Academy",
   },
 };
 
 export const WithoutImage: StoryObj<typeof meta> = {
   args: {
     name: "Luke Triton",
-    role: "Teacher",
+    title: "Teacher",
   },
 };
