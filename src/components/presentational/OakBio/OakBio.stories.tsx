@@ -6,6 +6,14 @@ const meta = {
   component: OakBio,
   title: "components/Presentational/OakBio",
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "Displays a person's image, name and role in a compact layout. Can be used on it’s own or nested in other components, such as quotes.",
+      },
+    },
+  },
   argTypes: {
     imageSrc: { type: "string" },
     name: { type: "string" },
