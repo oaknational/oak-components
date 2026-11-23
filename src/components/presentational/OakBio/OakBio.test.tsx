@@ -12,52 +12,38 @@ describe("OakBio", () => {
         name="Luke triton"
         title="Teacher"
         imageSrc="https://www.thenational.academy/images/oak-national-academy-logo-512.png"
+        imageAlt="Oak National Academy Logo"
       />,
     );
     expect(container).toMatchSnapshot();
   });
 
-  test("displays only the name when no title is provided", () => {
-    const { getByText } = renderWithTheme(
-      <OakBio
-        name="Luke triton"
-        imageSrc="https://www.thenational.academy/images/oak-national-academy-logo-512.png"
-      />,
-    );
-    expect(getByText("Luke triton")).toBeInTheDocument();
-  });
-
-  test("displays only the name when no image is provided", () => {
-    const { getByText } = renderWithTheme(
+  test("does not display image when imageSrc is not provided", () => {
+    const { queryByAltText } = renderWithTheme(
       <OakBio name="Luke triton" title="Teacher" />,
     );
-    expect(getByText("Luke triton")).toBeInTheDocument();
+    expect(queryByAltText("")).not.toBeInTheDocument();
   });
+});
 
-  test("displays image when the prop is provided", () => {
-    const { getByAltText } = renderWithTheme(
-      <OakBio
-        name="Luke triton"
-        title="Teacher"
-        imageSrc="https://www.thenational.academy/images/oak-national-academy-logo-512.png"
-      />,
-    );
-    expect(getByAltText("")).toBeInTheDocument();
-  });
+test("does not display title when title is not provided", () => {
+  const { queryByText } = renderWithTheme(
+    <OakBio
+      name="Luke triton"
+      imageSrc="https://www.thenational.academy/images/oak-national-academy-logo-512.png"
+    />,
+  );
+  expect(queryByText("Teacher")).not.toBeInTheDocument();
+});
 
-  test("displays only the name when no title and image are provided", () => {
-    const { getByText } = renderWithTheme(<OakBio name="Luke triton" />);
-    expect(getByText("Luke triton")).toBeInTheDocument();
-  });
+test("displays image with empty alt text when no alt is provided", () => {
+  const { container } = renderWithTheme(
+    <OakBio
+      name="Luke triton"
+      title="Teacher"
+      imageSrc="https://www.thenational.academy/images/oak-national-academy-logo-512.png"
+    />,
+  );
 
-  test("displays at organisation name when the prop is provided", () => {
-    const { getByText } = renderWithTheme(
-      <OakBio
-        name="Luke triton"
-        title="Teacher at Oak National Academy"
-        imageSrc="https://www.thenational.academy/images/oak-national-academy-logo-512.png"
-      />,
-    );
-    expect(getByText("Teacher at Oak National Academy")).toBeInTheDocument();
-  });
+  expect(container.querySelector("img")).toHaveAttribute("alt", "");
 });

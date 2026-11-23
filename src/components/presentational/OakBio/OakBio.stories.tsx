@@ -18,6 +18,7 @@ const meta = {
     imageSrc: { type: "string" },
     name: { type: "string" },
     title: { type: "string" },
+    imageAlt: { type: "string" },
   },
 } satisfies Meta<typeof OakBio>;
 
@@ -29,6 +30,7 @@ export const Default: StoryObj<typeof meta> = {
     title: "Teacher at Oak National Academy",
     imageSrc:
       "https://www.thenational.academy/images/oak-national-academy-logo-512.png",
+    imageAlt: "Oak National Academy Logo",
   },
 };
 
@@ -38,6 +40,7 @@ export const WithoutRole: StoryObj<typeof meta> = {
     imageSrc:
       "https://www.thenational.academy/images/oak-national-academy-logo-512.png",
     title: " Oak National Academy",
+    imageAlt: "Oak National Academy Logo",
   },
 };
 
@@ -45,5 +48,6 @@ export const WithoutImage: StoryObj<typeof meta> = {
   args: {
     name: "Luke Triton",
     title: "Teacher",
+    imageAlt: "",
   },
 };
