@@ -48,6 +48,6 @@ export const WithoutImage: StoryObj<typeof meta> = {
   args: {
     name: "Luke Triton",
     title: "Teacher",
-    imageAlt: "",
+    imageAlt: "test comment",
   },
 };
