@@ -4,8 +4,8 @@ import React from "react";
 import { OakFlex } from "@/components/layout-and-structure/OakFlex";
 import { OakP } from "@/components/typography/OakP";
 import { OakBox } from "@/components/layout-and-structure/OakBox";
-import { OakImage } from "@/components/images-and-icons/OakImage";
 import { OakUiRoleToken } from "@/styles";
+import { OakBio } from "@/components/presentational/OakBio";
 
 export type OakQuoteProps = {
   quote: string | string[];
@@ -15,15 +15,6 @@ export type OakQuoteProps = {
   authorImageSrc?: string;
   hasLeftBorder?: boolean;
 };
-
-const StyledAuthorImage = styled(OakImage)`
-  width: 54px;
-  height: 54px;
-  flex-shrink: 0;
-  img {
-    border-radius: 50%;
-  }
-`;
 
 const TightLetterSpacing = styled(OakFlex)`
   letter-spacing: -0.01em;
@@ -68,28 +59,7 @@ export const OakQuote = ({
             })}
           </TightLetterSpacing>
         </OakBox>
-
-        {authorName ? (
-          <OakFlex $gap={"spacing-16"} $alignItems={"center"}>
-            {authorImageSrc ? (
-              <StyledAuthorImage
-                alt={""}
-                role={"presentation"}
-                src={authorImageSrc}
-              />
-            ) : null}
-            <OakFlex $flexDirection={"column"}>
-              <OakP $font={"body-2-bold"} $color={"text-primary"}>
-                {authorName}
-              </OakP>
-              {authorTitle ? (
-                <OakP $font={"body-2"} $color={"text-primary"}>
-                  {authorTitle}
-                </OakP>
-              ) : null}
-            </OakFlex>
-          </OakFlex>
-        ) : null}
+        {authorName && <OakBio name={authorName} title={authorTitle} imageSrc={authorImageSrc} />}
       </OakFlex>
     </OakFlex>
   );
