@@ -13,7 +13,7 @@ export type OakBioProps = {
 /**
  * Displays a person's image, name and role in a compact layout. Can be used on it’s own or nested in other components, such as quotes.
  */
-export default function OakBio({
+export function OakBio({
   imageSrc,
   name,
   title,

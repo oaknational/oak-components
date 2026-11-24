@@ -59,7 +59,13 @@ export const OakQuote = ({
             })}
           </TightLetterSpacing>
         </OakBox>
-        {authorName && <OakBio name={authorName} title={authorTitle} imageSrc={authorImageSrc} />}
+        {authorName && (
+          <OakBio
+            name={authorName}
+            title={authorTitle}
+            imageSrc={authorImageSrc}
+          />
+        )}
       </OakFlex>
     </OakFlex>
   );

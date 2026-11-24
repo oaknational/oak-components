@@ -1,2 +1,2 @@
-export { default } from "./OakBio";
+export * from "./OakBio";
 export { generateBioTitle } from "./helpers";
