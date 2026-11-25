@@ -1,9 +1,18 @@
+import { parseColor } from "./parseColor";
+
 import {
   OakDropShadowToken,
   oakDropShadowTokens,
 } from "@/styles/theme/dropShadow";
+import { PropsWithTheme } from "@/styles/theme/theme";
 
-export const parseDropShadow = (variant?: OakDropShadowToken | null) => {
+function parseDropShadow(
+  variant?: OakDropShadowToken | null,
+): (props: PropsWithTheme) => string;
+function parseDropShadow(
+  variant?: OakDropShadowToken | null,
+): ((props: PropsWithTheme) => string) | undefined;
+function parseDropShadow(variant?: OakDropShadowToken | null) {
   if (variant === null) {
     return "none";
   }
@@ -13,6 +22,16 @@ export const parseDropShadow = (variant?: OakDropShadowToken | null) => {
   }
 
   if (variant in oakDropShadowTokens) {
-    return oakDropShadowTokens[variant];
+    const borderCss = oakDropShadowTokens[variant];
+    if (borderCss !== "none") {
+      const out = (props: PropsWithTheme) => {
+        const c = parseColor(variant)(props) ?? "transparent";
+        return `${borderCss} ${c}`;
+      };
+      return out;
+    }
+    return borderCss;
   }
-};
+}
+
+export { parseDropShadow };
