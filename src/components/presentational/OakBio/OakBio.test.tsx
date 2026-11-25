@@ -1,7 +1,7 @@
 import React from "react";
 import "@testing-library/jest-dom";
 
-import OakBio from "./OakBio";
+import { OakBio } from "./OakBio";
 
 import renderWithTheme from "@/test-helpers/renderWithTheme";
 

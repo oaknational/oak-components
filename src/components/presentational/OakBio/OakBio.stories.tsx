@@ -1,6 +1,6 @@
 import { StoryObj, Meta } from "@storybook/nextjs";
 
-import OakBio from "./OakBio";
+import { OakBio } from "./OakBio";
 
 const meta = {
   component: OakBio,
