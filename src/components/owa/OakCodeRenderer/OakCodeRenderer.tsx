@@ -33,7 +33,7 @@ export const OakCodeRenderer = ({ string, ...rest }: OakCodeRendererProps) => {
             // Remove backticks and style the content
             return (
               <StyledCodeContainer
-                key={index}
+                key={`${part}-${index}`}
                 $background={"bg-inverted"}
                 $color={"text-inverted"}
                 $pv={["spacing-0", "spacing-4"]}
@@ -59,9 +59,14 @@ export const OakCodeRenderer = ({ string, ...rest }: OakCodeRendererProps) => {
       { regex: /"(.*?)"|'(.*?)'/g, color: "code-green" }, // Strings
       {
         regex:
-          /\b(and|as|assert|async|await|break|class|continue|def|del|elif|else|except|finally|for|from|global|if|import|in|is|lambda|nonlocal|not|or|pass|raise|return|try|while|with|yield)\b/g,
+          /\b(and|as|assert|async|await|break|class|continue|def|del|elif|else|except|finally|for|from)\b/g,
         color: "code-pink",
       }, // Keywords
+      {
+        regex:
+          /\b(global|if|import|in|is|lambda|nonlocal|not|or|pass|raise|return|try|while|with|yield)\b/g,
+        color: "code-pink",
+      },
       {
         regex: /\b(False|None|True)\b/g,
         color: "code-blue",
@@ -74,8 +79,7 @@ export const OakCodeRenderer = ({ string, ...rest }: OakCodeRendererProps) => {
 
     // Apply syntax highlighting by replacing matches with styled spans
     const parts: (string | ReactElement)[] = [code];
-    let isCheckingMatches = true;
-    while (isCheckingMatches) {
+    while (true) {
       let matchFound = false;
       parts.forEach((part, index) => {
         for (const { regex, color } of patterns) {
@@ -104,7 +108,6 @@ export const OakCodeRenderer = ({ string, ...rest }: OakCodeRendererProps) => {
         }
       });
       if (!matchFound) {
-        isCheckingMatches = false;
         return parts;
       }
     }
