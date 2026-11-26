@@ -79,6 +79,7 @@
     "@babel/runtime": "^7.28.4",
     "@commitlint/cli": "^18.4.4",
     "@commitlint/config-conventional": "^18.4.4",
+    "@oaknational/oak-agent-skills": "^0.3.0",
     "@types/lodash": "^4.17.27",
     "@rollup/plugin-commonjs": "^29.0.2",
     "@rollup/plugin-json": "^6.1.0",
@@ -180,5 +181,13 @@
         }
       ]
     ]
+  },
+  "oakSkills": {
+    "profiles": [
+      "base",
+      "frontend"
+    ],
+    "include": [],
+    "exclude": []
   }
 }

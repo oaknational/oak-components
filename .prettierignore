@@ -5,6 +5,7 @@ pnpm-lock.yaml
 
 # Generated files
 storybook-static
+.agents/skills/
 
 # Test coverage
 coverage

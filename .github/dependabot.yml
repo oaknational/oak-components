@@ -17,11 +17,16 @@ updates:
       time: "02:00"
       timezone: "Europe/Belfast"
     groups:
+      oak-agent-skills:
+        patterns:
+          - "@oaknational/oak-agent-skills"
       # group all minor and patch updates into a single PR
       minor-and-patch:
         update-types:
           - "patch"
           - "minor"
+        exclude-patterns:
+          - "@oaknational/oak-agent-skills"
         # only group version updates, not security updates
         applies-to: version-updates
 

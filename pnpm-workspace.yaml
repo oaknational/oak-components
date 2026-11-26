@@ -1,5 +1,7 @@
 engineStrict: true
 minimumReleaseAge: 10080
+minimumReleaseAgeExclude:
+  - "@oaknational/oak-agent-skills"
 allowBuilds:
   "@parcel/watcher": false
   "@swc/core": false

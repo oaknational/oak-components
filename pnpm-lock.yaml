@@ -69,6 +69,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: ^18.4.4
         version: 18.6.3
+      '@oaknational/oak-agent-skills':
+        specifier: ^0.3.0
+        version: 0.3.0
       '@rollup/plugin-commonjs':
         specifier: ^29.0.2
         version: 29.0.3(rollup@4.67.5)
@@ -1730,6 +1733,11 @@ packages:
   '@npmcli/name-from-folder@2.0.0':
     resolution: {integrity: sha512-pwK+BfEBZJbKdNYpHHRTNBwBoqrN/iIMO0AiGvYsp3Hoaq0WbgGSWQR6SCldZovoDpY3yje5lkFUe6gsDgJ2vg==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
+
+  '@oaknational/oak-agent-skills@0.3.0':
+    resolution: {integrity: sha512-1Ih8XDrUtXJK0txTdMJxKiTFbBvA4cDB16GKRuYxwObdfDsML8WHe649dQVOih67akI0Eqchxmh+HbKIdAgAKg==}
+    engines: {node: '>=24.22.1 <25'}
+    hasBin: true
 
   '@octokit/auth-token@6.0.0':
     resolution: {integrity: sha512-P4YJBPdPSpWTQ1NU4XYdvHvXJJDxM6YwpS0FZHRgP7YFkdVxsWcpWGy/NVqlAA7PcPCnMacXlRm1y2PFZRWL/w==}
@@ -10455,6 +10463,8 @@ snapshots:
       read-package-json-fast: 3.0.2
 
   '@npmcli/name-from-folder@2.0.0': {}
+
+  '@oaknational/oak-agent-skills@0.3.0': {}
 
   '@octokit/auth-token@6.0.0': {}
 
